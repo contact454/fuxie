@@ -1,4 +1,5 @@
 import type { NextConfig } from 'next'
+import path from 'path'
 
 
 const nextConfig: NextConfig = {
@@ -8,6 +9,8 @@ const nextConfig: NextConfig = {
     eslint: {
         ignoreDuringBuilds: true,
     },
+    // Required for monorepo: trace files from packages/ for Prisma engine
+    outputFileTracingRoot: path.join(__dirname, '../../'),
     transpilePackages: [
         '@fuxie/shared',
         '@fuxie/database',
