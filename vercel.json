@@ -1,5 +1,5 @@
 {
   "framework": "nextjs",
   "installCommand": "cd ../.. && pnpm install",
-  "buildCommand": "cd ../.. && pnpm turbo build --filter=@fuxie/web"
+  "buildCommand": "cd ../.. && pnpm exec prisma generate --schema=packages/database/prisma/schema.prisma && pnpm turbo build --filter=@fuxie/web"
 }
