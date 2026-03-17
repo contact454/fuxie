@@ -1,19 +1,38 @@
 /**
  * Firebase service account credentials for server-side auth.
  *
- * NOTE: These are imported directly (not from env vars) because
- * Next.js Edge Runtime middleware cannot access process.env for
- * non-NEXT_PUBLIC_ variables. The .env file's server-only vars
- * are NOT available in Edge middleware context.
+ * Uses environment variables for production deployment.
+ * Falls back to inline credentials for local development.
  *
- * In production, replace with proper secret management.
+ * NOTE: Edge Runtime middleware CAN access env vars if they are
+ * explicitly exposed in next.config.ts env{} block.
  */
+
+function getServiceAccount() {
+    const envKey = process.env.FIREBASE_SERVICE_ACCOUNT_KEY
+    if (envKey) {
+        try {
+            const parsed = JSON.parse(envKey)
+            return {
+                projectId: parsed.project_id,
+                clientEmail: parsed.client_email,
+                privateKey: parsed.private_key,
+            }
+        } catch {
+            console.error('[Fuxie] Failed to parse FIREBASE_SERVICE_ACCOUNT_KEY')
+        }
+    }
+
+    // Fallback for local development
+    return {
+        projectId: 'fuxie-490502',
+        clientEmail: 'firebase-adminsdk-fbsvc@fuxie-490502.iam.gserviceaccount.com',
+        privateKey: '-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDDy3yaC1s+xdGD\nT7/Ioqhin58apzYaUW/b6/YoToEjngg86Kzve7cfulUmvtldiZS9t9CrhdxdjSY1\nC4Mgju7FrWk/f6PZWb//YJx0b/8qirB2DSy6k9vkNi+FUlPbJz9v2/APVvvCBae4\nf7dkLqk4xxWqrwFFp+xO/cgR/JeP5hl5Q4JL1XMQjfewzW5vYb2dk/ppxm9m571G\nPgdwsaRawz8PkgIT9a7G8bXwt8Pdv+W4ndNzeb1HwVD91vb49HkhoZ2TvWYFPrAe\n+tDxwEuYRsFHZefEhT5Ublrqj1i3hPVPlvKOD8qcKdFXuSkzg1KIUqi7nriTMEmg\nqNd7tCRbAgMBAAECggEAFBsvXnpQEnAqBbwIy8e4VvhhVFFbgvRd8k2W56i4Jjoy\nSl7yc11W/tEZsXLjy3E3bwwTR6nlaU33YHcgLhW/e1lFd5nZ75YB223GY0alA29e\nk6DiuP46FINj+eLsbZLoNsp1Kn4aOGBwSsgCwyzvf78iAHccQFTwNWRmSUKRJduj\nOzKfrr8RGPM5ek6Lad2KtgChwoFEkDy1WoCH3KayMO+s4PK4fVUkLUwBsMLBcblv\nKcVnHV518oDF/lqwFtgPHAUPTd5oysYLkTq+GLoDd7ZMra4VsogtrYq2pm7+Edbx\nXUlMFebk7C+rEfXOfYUfqn+qJ8D689QghZ1xEATkcQKBgQDoBf1F+9WaFEl/RnQx\nyT6lWmnisxd+yi2/V1eQkl8yqlxiBVZHTN+5fEGO0xNjC7dllgqPKev21AN/nQe9\nSVfseHI3o39674WyjF/T0fZFwjlPwm2jyhkcqsS3+TITvGfShfuh9/C0UqXaOaCW\nNcCJZVvDHm7mKbJFZgmWDOIQNQKBgQDYBxkWmiVviqv+ySPXX+GleqZV+kbm0Svl\nKXvxO1fjvi1HrTTAe0AzIDrhUuEUfybSVCf2z7G1ra9YJOkmm7/tWiJqKdffoNYK\nADiSBw9SYVvdPt+j42At6/y0oA0kFXlfLyUJ3XHT6B02lIPTdE3PUC4HL6sdxh0B\nMhpSpZkUTwKBgFVXBp48D4e5mILovgol1BXrmHCaoLSw1ny/OmThgYRYJtyiy+Yz\nv0IxEsfemQ3gHFeQBVg8+h5yQssoTdVwaZd/gbs3NsdX3BwdB44YdvWXh47vm3YX\n+n6RzQNB9ApQTPug7jnXwUAB+iC2+3rkUGn4zvSIeA/OHFTsP/Bh0rBVAoGAdr6w\nE7R3j3BySoLVqLWTmxpoBCqmfonLzxOWhWtRTGZlDVkv/f3BtFirBOBByLp75HFN\n5mUUEgF+uLzRS9+hCB7be++0McB+5tBoSByJV4ccr+i3laaOX6+wILk5f/Qt2xxX\nB60pvImCRVYtgDYV7zbrlhelv5/+oYGg5n0QQBECgYEA1UQQTcgmX+QhUupomrSX\nAsuqwp5XCWQ0vUYrLrVieoCMUSbDke3W6qADD2bFXgt+WiyXHeeNL30aHnh+Dzt+\n6/bsXI7lZEyUhR2ShA9CcpgCt6IaZDsP6MIIAEePBBZN+HCADLuBliczEFgZrFnZ\n9MflATGLwzRWnWcJXa742R0=\n-----END PRIVATE KEY-----\n',
+    }
+}
+
 export const serverCredentials = {
-    serviceAccount: {
-        projectId: 'dmf-elearning',
-        clientEmail: 'firebase-adminsdk-fbsvc@dmf-elearning.iam.gserviceaccount.com',
-        privateKey: '-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQC6lchUvwu+/U5R\ncl4xu87SmLqaHyMKiiuIMDQudcOWG3t26sUVIYmJx5CMIutGrg+C2ueaksD18oL+\nktNnDIyD8PuLMKw0TEJDcU1Jg3N8xDBl9j5dSXmwLT5IBLP4O6yQUrys2M0IBCrP\nTEtkOKc8gMQ/RvGhW4EJA1opO187dZlJecTjeo0jnB7c49lXx7T2p7h42sy0nvjy\nYiLRKT0I8U/6IYJBlSo2LYYToEDs2yEZhHuUU9bJ4pv5n8dgyVBw0wO4xf3RORA/\nb5tSLEULrhrV+dpzOqRwXlxZdYMGDfhGYX39Yb+vQ478xZnuviZDLhovC03IhlIF\n6mm/gjXvAgMBAAECggEAB+DvQUotOswDae5ZtTaS+H2OfkI2U+mbBk3SxkDJbiXh\nmWyMaeStTsNognevAPW0nffps7M4BqqjhrsNxi+CIh144bBqdRg17BcgBldQocIU\nW8SBbvr9R8fWoL/iFudI1XHzmZuF/NgANBn/96QUxmSW5NJ1aDTZnAHSOs97qU0E\nIawjtrakkNxTOmS3wzpBARZpT37FZdcupB2lu1Qd9aR6oI05UU6LdRsNPI4vOWvD\nn1XeBkLOAk+5OLyVfNsjXgElbOGZ+zaKhnatamMSoqIJ459fvXe77o2hNYUytk81\ngdOYFCaQIwAeU1yD+F1sNYO5vBw8Xlq7oWTCiqyBoQKBgQDg2cRJcQJ9uexnjyaD\nUYOYFs2B7vHETr/BbnQzxJWAp1PcyuXwGEwyIstDx3HgjubE71aO1lLjQX0FdZL5\n3DNgxsqFe0HGWRPT5Nkdybh/H977Wtk2nHfhw5qRRvrdIA7FLcikwAc8dXx1IL+o\n6QALi2to5FyquCilED0NbXm2BwKBgQDUbvGbf9Gc31Xp3qxsaprNUSLTYQOndG88\n4lKI5FHASfRCToOdpRLAHCfivhS9xlXUE5fQHVVa6juxu3MItosvQ/r6Yh3C9Rsl\nUahTIKzJZufOGvzOUIy60OIoZhGJoveB8LeCHvOeCBu3K7+yh27dVEoxhdQHCodO\nOE7ya6dG2QKBgQDMBm2ookW7ZZhQg8FTiQSaXZ6OVw3Drh0rXJlOXAO4YJylDOrG\nCJYjLBU65F+9fo2BhxcItwsxMLxL1trNo/RuzRL5OdV+MFfgfphQAjlKCNZhR5cv\niZzyG3ZGepypRyx/2MJmU+R9BLIw6c1fbEThNNn6rLQ1KLOgy3JKm9rDwwKBgDZL\nPLkPjBVaB21EmjEDdhkvuYTo8LQl0CBxf8K5CCPrQuCHjKAIBqjPCWqsRkTSojEX\n6N8qABzCbQtZ62a4sQ4dg9HmrdCcMJnzKuBEI6U+BdTplN9uOumsZYEJxUW2PygY\ny+4X1w/25o6EQfRxJOawml3Z5H0ANeDKB3NyDEjRAoGBALNjrzpP+88IHGFltu/e\nOQJ5sYX5ifjWUQqQBfn/g/gqggv603I/lXTrcCSkoP3Verr4UQw6Tig1YsuUiX0a\ncNTqBTrbkCGVh3WHG970g8debcaOgGEmsml66+WiBrm7tywtQVRL1wYIEfFfqQ5+\nS7uLdkl1ixNzSvdRRPayG50V\n-----END PRIVATE KEY-----\n',
-    },
-    projectId: 'dmf-elearning',
-    apiKey: 'AIzaSyBWLgTv4MCJmRaiSazubXTPTaPZNvGKamo',
+    serviceAccount: getServiceAccount(),
+    projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID || 'fuxie-490502',
+    apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY || 'AIzaSyDs4bD5V4AHZLXIKi5Qs7n2ggP9KSh_fs8',
 }
