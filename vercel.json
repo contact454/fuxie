@@ -1,6 +1,5 @@
 {
   "framework": "nextjs",
-  "buildCommand": "pnpm turbo build --filter=@fuxie/web",
-  "installCommand": "pnpm install",
-  "outputDirectory": "apps/web/.next"
+  "installCommand": "cd ../.. && pnpm install",
+  "buildCommand": "cd ../.. && pnpm turbo build --filter=@fuxie/web"
 }
