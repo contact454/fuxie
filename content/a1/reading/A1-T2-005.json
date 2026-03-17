@@ -1,0 +1,177 @@
+{
+  "id": "A1-T2-005",
+  "level": "A1",
+  "teil": 2,
+  "teil_name": "Anzeigen zuordnen",
+  "topic": "Wohnung suchen",
+  "topic_id": "005",
+  "metadata": {
+    "generated_at": "2026-03-09T02:30:00+07:00",
+    "version": 1
+  },
+  "anzeigen": [
+    {
+      "id": "AnzeigeA",
+      "title": "2-Zimmer-Wohnung Stadtmitte",
+      "details": {
+        "name": "Wohnung Stadtmitte",
+        "address": "Rosenthaler Straße 30, 10178 Berlin",
+        "hours": "Besichtigung: Sa 10:00–12:00 Uhr",
+        "price": "650 € warm, 2 Monatsmieten Kaution",
+        "contact": "Tel: 030-5556677",
+        "target_audience": "Einzelperson oder Paar",
+        "extra_info": "45 m², 3. Stock, kein Aufzug, Balkon, U-Bahn 2 Minuten."
+      }
+    },
+    {
+      "id": "AnzeigeB",
+      "title": "3-Zimmer-Wohnung mit Garten",
+      "details": {
+        "name": "Familienwohnung Vorort",
+        "address": "Ahornweg 12, 12555 Berlin-Köpenick",
+        "hours": "Besichtigung: Mi 15:00–17:00 Uhr",
+        "price": "850 € warm, 1 Monatsmiete Kaution",
+        "contact": "Tel: 030-8889900",
+        "target_audience": "Familien, Haustiere erlaubt",
+        "extra_info": "75 m², Erdgeschoss, Garten, Garage, ruhige Lage. 20 Min. zur S-Bahn."
+      }
+    }
+  ],
+  "images": [
+    {
+      "id": "IMG1",
+      "type": "anzeige",
+      "linked_anzeige": "AnzeigeA",
+      "prompt": "Cartoon-style apartment rental poster: '2-Zimmer-Wohnung Stadtmitte'. Shows small cozy apartment, balcony, 45m², 650€, 3rd floor, near U-Bahn. Fuxie cartoon, urban colors, legible font.",
+      "filename": "A1-T2-005_anzeige_a.png",
+      "placement": "anzeige_a",
+      "alt_text": "Werbung für 2-Zimmer-Wohnung Stadtmitte",
+      "dimensions": "512x600"
+    },
+    {
+      "id": "IMG2",
+      "type": "anzeige",
+      "linked_anzeige": "AnzeigeB",
+      "prompt": "Cartoon-style family apartment poster: '3-Zimmer-Wohnung mit Garten'. Shows spacious apartment, garden, garage, 75m², 850€, pets allowed. Fuxie cartoon, green suburban colors, legible font.",
+      "filename": "A1-T2-005_anzeige_b.png",
+      "placement": "anzeige_b",
+      "alt_text": "Werbung für 3-Zimmer-Wohnung mit Garten",
+      "dimensions": "512x600"
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q6",
+      "teil": 2,
+      "type": "matching_ab",
+      "situation": "Herr Braun hat einen Hund. Er sucht eine Wohnung.",
+      "answer": "B",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "3-Zimmer-Wohnung mit Garten",
+        "reasoning": "Die Situation passt zu Anzeige B, weil die genannten Anforderungen dort erfüllt werden."
+      }
+    },
+    {
+      "id": "Q7",
+      "teil": 2,
+      "type": "matching_ab",
+      "situation": "Frau Klein arbeitet in der Stadtmitte. Sie braucht einen kurzen Weg zur Arbeit.",
+      "answer": "A",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "2-Zimmer-Wohnung Stadtmitte",
+        "reasoning": "Die Situation passt zu Anzeige A, weil die genannten Anforderungen dort erfüllt werden."
+      }
+    },
+    {
+      "id": "Q8",
+      "teil": 2,
+      "type": "matching_ab",
+      "situation": "Familie Müller braucht drei Zimmer für ihre zwei Kinder.",
+      "answer": "B",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "3-Zimmer-Wohnung mit Garten; Familien, Haustiere erlaubt",
+        "reasoning": "Die Situation passt zu Anzeige B, weil die genannten Anforderungen dort erfüllt werden."
+      }
+    },
+    {
+      "id": "Q9",
+      "teil": 2,
+      "type": "matching_ab",
+      "situation": "Studentin Anna hat nicht viel Geld. Sie sucht eine günstige Wohnung.",
+      "answer": "A",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "2-Zimmer-Wohnung Stadtmitte",
+        "reasoning": "Die Situation passt zu Anzeige A, weil die genannten Anforderungen dort erfüllt werden."
+      }
+    },
+    {
+      "id": "Q10",
+      "teil": 2,
+      "type": "matching_ab",
+      "situation": "Herr Fischer hat ein Auto. Er braucht einen Platz für das Auto.",
+      "answer": "B",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "3-Zimmer-Wohnung mit Garten",
+        "reasoning": "Die Situation passt zu Anzeige B, weil die genannten Anforderungen dort erfüllt werden."
+      }
+    }
+  ],
+  "scoring": {
+    "total_points": 5,
+    "pass_threshold": 3,
+    "grading": [
+      {
+        "range": [
+          5,
+          5
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          4,
+          4
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          3,
+          3
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          1,
+          2
+        ],
+        "label": "Noch üben!",
+        "emoji": "📝"
+      },
+      {
+        "range": [
+          0,
+          0
+        ],
+        "label": "Mehr Übung nötig",
+        "emoji": "💪"
+      }
+    ]
+  },
+  "qa": {
+    "anzeigen_different_enough": true,
+    "anzeigen_same_category": true,
+    "all_situations_unambiguous": true,
+    "image_text_matches_json": false,
+    "passed": false
+  }
+}

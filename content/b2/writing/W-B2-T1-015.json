@@ -1,0 +1,64 @@
+{
+  "id": "W-B2-T1-015",
+  "cefrLevel": "B2",
+  "teil": 1,
+  "teilName": "Forumsbeitrag",
+  "textType": "Forumsbeitrag",
+  "register": "neutral",
+  "topic": "Gesundheitssystem",
+  "instruction": "Sie schreiben einen Forumsbeitrag zur aktuellen Diskussion über die Zukunft und Finanzierung des Gesundheitssystems. Äußern Sie sich zu den folgenden Punkten und beziehen Sie den Artikel sowie die Expertenmeinungen kurz mit ein.",
+  "instructionVi": "Viết một bài đăng trên diễn đàn về cuộc thảo luận hiện nay về tương lai và tài chính của hệ thống y tế. Hãy nêu ý kiến về các điểm dưới đây, có kết hợp ngắn gọn thông tin từ bài báo và ý kiến chuyên gia.",
+  "situation": "In einem Online-Magazin haben Sie einen Artikel über die Herausforderungen des modernen Gesundheitssystems gelesen. Da dieses Thema viele Menschen betrifft und kontrovers diskutiert wird, möchten Sie im Forum Ihre Meinung dazu mitteilen.",
+  "contentPoints": [
+    "Äußern Sie Ihre Meinung zur zunehmenden Digitalisierung im Gesundheitswesen (z. B. Videosprechstunden).",
+    "Nennen Sie Gründe, warum die Kosten für die medizinische Versorgung immer weiter steigen.",
+    "Erläutern Sie die Vor- und Nachteile von privaten Zusatzversicherungen.",
+    "Machen Sie einen Vorschlag, wie man dem Ärztemangel in ländlichen Regionen entgegenwirken könnte."
+  ],
+  "sourceText": "Das deutsche Gesundheitssystem steht vor gewaltigen Herausforderungen. Während der medizinische Fortschritt immer teurere Behandlungen ermöglicht, altert die Gesellschaft stetig, was die Krankenkassen finanziell stark belastet. Ein zentrales Thema der aktuellen Debatte ist die Digitalisierung: Elektronische Patientenakten und Videosprechstunden sollen Prozesse effizienter gestalten und Kosten senken. Doch Kritiker warnen vor dem Verlust der persönlichen Arzt-Patient-Beziehung sowie vor Sicherheitsrisiken beim Datenschutz. Zudem verschärft sich der Ärztemangel in ländlichen Regionen drastisch. Dr. Klaus Müller meint dazu: 'Ohne digitale Vernetzung wird unser System in zehn Jahren kollabieren.' Sabine Weber von der Patientenberatung betont hingegen: 'Der Mensch muss im Mittelpunkt stehen, nicht nur die reine Kosteneffizienz.'",
+  "sourceTextType": "Zeitungsartikel aus der 'Gesundheits-Woche'",
+  "minWords": 150,
+  "maxWords": 250,
+  "timeMinutes": 35,
+  "rubric": {
+    "criteria": [
+      {
+        "id": "inhalt",
+        "name": "Inhalt",
+        "nameVi": "Nội dung",
+        "maxScore": 5,
+        "weight": 25
+      },
+      {
+        "id": "angemessenheit",
+        "name": "Kommunikative Angemessenheit",
+        "nameVi": "Phù hợp giao tiếp",
+        "maxScore": 5,
+        "weight": 20
+      },
+      {
+        "id": "korrektheit",
+        "name": "Korrektheit",
+        "nameVi": "Chính xác ngữ pháp & chính tả",
+        "maxScore": 5,
+        "weight": 25
+      },
+      {
+        "id": "spektrum",
+        "name": "Wortschatz & Strukturen",
+        "nameVi": "Đa dạng từ vựng & cấu trúc",
+        "maxScore": 5,
+        "weight": 15
+      },
+      {
+        "id": "kohaerenz",
+        "name": "Kohaerenz & Kohaesion",
+        "nameVi": "Mạch lạc & liên kết",
+        "maxScore": 5,
+        "weight": 15
+      }
+    ],
+    "maxScore": 25
+  },
+  "maxScore": 25
+}

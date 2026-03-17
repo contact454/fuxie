@@ -1,0 +1,49 @@
+{
+  "id": "W-A2-T1-013",
+  "cefrLevel": "A2",
+  "teil": 1,
+  "teilName": "E-Mail-Antwort",
+  "textType": "E-Mail",
+  "register": "informell",
+  "topic": "Fahrrad kaufen",
+  "instruction": "Sie haben eine E-Mail von Ihrem Freund Lukas bekommen. Er möchte sich ein neues Fahrrad kaufen und bittet Sie um Hilfe. Schreiben Sie ihm eine Antwort.",
+  "instructionVi": "Bạn nhận được một email từ người bạn tên Lukas. Anh ấy muốn mua một chiếc xe đạp mới và nhờ bạn giúp đỡ. Hãy viết thư trả lời cho anh ấy.",
+  "situation": "Ihr Freund Lukas möchte nächste Woche ein Fahrrad kaufen, ist aber unsicher, welches Modell er wählen soll. Er hat Sie gefragt, ob Sie ihn begleiten können.",
+  "contentPoints": [
+    "Bedanken Sie sich für die Nachricht.",
+    "Sagen Sie, wann Sie nächste Woche Zeit haben (Tag und Uhrzeit).",
+    "Geben Sie einen Rat, welcher Fahrradtyp (z.B. Stadtrad oder Mountainbike) besser ist."
+  ],
+  "sourceText": "Hallo! Wie geht es dir? Ich möchte mir endlich ein neues Fahrrad kaufen, weil mein altes kaputt ist. Kannst du mir helfen? Welches Fahrrad ist besser: ein Mountainbike oder ein Stadtrad? Hast du nächste Woche Zeit, mit mir in den Laden zu gehen? Viele Grüße, Lukas",
+  "sourceTextType": "E-Mail",
+  "minWords": 40,
+  "maxWords": 70,
+  "timeMinutes": 15,
+  "rubric": {
+    "criteria": [
+      {
+        "id": "inhalt",
+        "name": "Inhalt",
+        "nameVi": "Nội dung",
+        "maxScore": 5,
+        "weight": 30
+      },
+      {
+        "id": "korrektheit",
+        "name": "Korrektheit",
+        "nameVi": "Chính xác ngữ pháp & chính tả",
+        "maxScore": 5,
+        "weight": 35
+      },
+      {
+        "id": "angemessenheit",
+        "name": "Kommunikative Angemessenheit",
+        "nameVi": "Phù hợp giao tiếp",
+        "maxScore": 5,
+        "weight": 35
+      }
+    ],
+    "maxScore": 15
+  },
+  "maxScore": 15
+}

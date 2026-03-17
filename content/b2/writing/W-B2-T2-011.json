@@ -1,0 +1,64 @@
+{
+  "id": "W-B2-T2-011",
+  "cefrLevel": "B2",
+  "teil": 2,
+  "teilName": "Nachricht/E-Mail",
+  "textType": "E-Mail",
+  "register": "formell",
+  "topic": "Bewerbungsabsage",
+  "instruction": "Sie arbeiten in der Personalabteilung der Firma 'MediaTech GmbH'. Ein Bewerber, Herr Lukas Meyer, hat Ihnen eine E-Mail geschrieben und sich nach dem Stand seiner Bewerbung erkundigt. Reagieren Sie auf seine Anfrage und verfassen Sie eine formelle Antwort.",
+  "instructionVi": "Bạn làm việc tại phòng nhân sự của công ty 'MediaTech GmbH'. Một ứng viên, ông Lukas Meyer, đã gửi email hỏi về trạng thái hồ sơ của mình. Hãy phản hồi yêu cầu này bằng một email trang trọng.",
+  "situation": "Sie haben die Bewerbungsunterlagen von Herrn Meyer für die Stelle als Marketing-Assistent sorgfältig geprüft. Trotz seiner guten Qualifikationen hat sich die Geschäftsführung für einen Mitbewerber entschieden, der bereits über spezifischere Branchenerfahrung verfügt. Sie müssen ihm nun schriftlich absagen.",
+  "contentPoints": [
+    "Bedanken Sie sich für das Interesse am Unternehmen und das geführte Gespräch.",
+    "Teilen Sie die Entscheidung über die Besetzung der Stelle mit.",
+    "Geben Sie eine sachliche Begründung für die Absage an (z. B. Qualifikationsprofil anderer Bewerber).",
+    "Wünschen Sie dem Bewerber alles Gute für seinen weiteren beruflichen Weg."
+  ],
+  "sourceText": "Sehr geehrte Damen und Herren, am 15. des letzten Monats hatte ich ein sehr interessantes Vorstellungsgespräch in Ihrem Haus für die Position als Marketing-Assistent. Da ich bisher noch keine Rückmeldung von Ihnen erhalten habe, wollte ich mich kurz nach dem aktuellen Stand des Auswahlverfahrens erkundigen. Ich bin nach wie vor sehr an dieser Stelle interessiert und freue mich auf Ihre Rückmeldung. Mit freundlichen Grüßen, Lukas Meyer",
+  "sourceTextType": "E-Mail",
+  "minWords": 100,
+  "maxWords": 150,
+  "timeMinutes": 25,
+  "rubric": {
+    "criteria": [
+      {
+        "id": "inhalt",
+        "name": "Inhalt",
+        "nameVi": "Nội dung",
+        "maxScore": 5,
+        "weight": 25
+      },
+      {
+        "id": "angemessenheit",
+        "name": "Kommunikative Angemessenheit",
+        "nameVi": "Phù hợp giao tiếp",
+        "maxScore": 5,
+        "weight": 20
+      },
+      {
+        "id": "korrektheit",
+        "name": "Korrektheit",
+        "nameVi": "Chính xác ngữ pháp & chính tả",
+        "maxScore": 5,
+        "weight": 25
+      },
+      {
+        "id": "spektrum",
+        "name": "Wortschatz & Strukturen",
+        "nameVi": "Đa dạng từ vựng & cấu trúc",
+        "maxScore": 5,
+        "weight": 15
+      },
+      {
+        "id": "kohaerenz",
+        "name": "Kohaerenz & Kohaesion",
+        "nameVi": "Mạch lạc & liên kết",
+        "maxScore": 5,
+        "weight": 15
+      }
+    ],
+    "maxScore": 25
+  },
+  "maxScore": 25
+}

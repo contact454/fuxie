@@ -1,0 +1,49 @@
+{
+  "id": "W-A1-T2-011",
+  "cefrLevel": "A1",
+  "teil": 2,
+  "teilName": "Kurze E-Mail",
+  "textType": "E-Mail",
+  "register": "informell",
+  "topic": "Essen gehen",
+  "instruction": "Schreiben Sie eine E-Mail an Ihren Freund Lukas.",
+  "instructionVi": "Viết một email cho người bạn tên là Lukas của bạn.",
+  "situation": "Ihr Freund Lukas möchte mit Ihnen am Samstagabend essen gehen. Er hat Ihnen eine kurze Nachricht geschickt. Sie haben Zeit und möchten mitkommen.",
+  "contentPoints": [
+    "Sagen Sie, dass Sie Zeit haben.",
+    "Machen Sie einen Vorschlag für ein Restaurant (z.B. Pizza oder Sushi).",
+    "Fragen Sie nach der Uhrzeit oder dem Treffpunkt."
+  ],
+  "sourceText": "Hallo! Hast du am Samstagabend Zeit? Wollen wir zusammen essen gehen? Viele Grüße, Lukas",
+  "sourceTextType": "E-Mail",
+  "minWords": 20,
+  "maxWords": 40,
+  "timeMinutes": 10,
+  "rubric": {
+    "criteria": [
+      {
+        "id": "inhalt",
+        "name": "Inhalt",
+        "nameVi": "Nội dung",
+        "maxScore": 5,
+        "weight": 30
+      },
+      {
+        "id": "korrektheit",
+        "name": "Korrektheit",
+        "nameVi": "Chính xác ngữ pháp & chính tả",
+        "maxScore": 5,
+        "weight": 40
+      },
+      {
+        "id": "angemessenheit",
+        "name": "Angemessenheit",
+        "nameVi": "Tính phù hợp",
+        "maxScore": 5,
+        "weight": 30
+      }
+    ],
+    "maxScore": 15
+  },
+  "maxScore": 15
+}

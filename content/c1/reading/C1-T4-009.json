@@ -1,0 +1,196 @@
+{
+  "id": "C1-T4-009",
+  "level": "C1",
+  "teil": 4,
+  "teil_name": "Meinungen zuordnen",
+  "topic": "Kunst & Ästhetik",
+  "topic_id": "009",
+  "metadata": {
+    "word_count": 102,
+    "target_grammar": [
+      "Nominalisierung",
+      "Partizipialkonstruktionen",
+      "Konjunktiv I/II",
+      "Passiversatzformen"
+    ],
+    "target_vocabulary": [],
+    "generated_at": "2026-03-11T23:18:54.731267",
+    "version": 1
+  },
+  "opinion_texts": {
+    "question": "Welche gesellschaftliche Funktion haben Museen heute?",
+    "texts": [
+      {
+        "name": "Museumsdirektorin Dr. Karin Vogel",
+        "text": "Museen müssen sich vom elitären Tempel der Hochkultur zum offenen Forum für alle wandeln. Partizipative Formate, in denen Besucher aktiv mitgestalten, sind der Schlüssel zur gesellschaftlichen Relevanz.",
+        "label": "A"
+      },
+      {
+        "name": "Kunstkritiker Ralf Meinhardt",
+        "text": "Die Kernaufgabe des Museums bleibt die Bewahrung und Vermittlung kulturellen Erbes. Wenn Museen zu Eventlocations und Instagram-Kulissen verkommen, verlieren sie ihre eigentliche Bestimmung.",
+        "label": "B"
+      },
+      {
+        "name": "Kunstvermittlerin Yasemin Batur",
+        "text": "Museen müssen postkoloniale Perspektiven ernst nehmen und sich aktiv mit der Herkunftsgeschichte ihrer Sammlungen auseinandersetzen. Die Restitutionsdebatte hat gezeigt, dass Museen sich ihrer historischen Verantwortung stellen müssen.",
+        "label": "C"
+      },
+      {
+        "name": "Kulturmanager Stefan Lenz",
+        "text": "Museen sind wirtschaftliche Faktoren. Als Touristenmagneten und Arbeitgeber tragen sie erheblich zur lokalen Wertschöpfung bei. Ihre Finanzierung muss als Investition, nicht als Subvention verstanden werden.",
+        "label": "D"
+      }
+    ]
+  },
+  "images": [
+    {
+      "id": "IMG1",
+      "type": "scene",
+      "prompt": "Cute cartoon illustration of experts discussing Kunst & Ästhetik. Fuxie cartoon style, flat illustration, warm pastel colors, no text.",
+      "filename": "C1-T4-009_scene.png",
+      "placement": "header",
+      "alt_text": "Welche gesellschaftliche Funktion haben Museen heu",
+      "dimensions": "768x512"
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q1",
+      "teil": 4,
+      "type": "matching",
+      "stem": "Die These, dass museen sollten sich zu offenen Foren für alle Bevölkerungsschichten entwickeln, wird durch folgende Argumentation gestützt:",
+      "answer": "A",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Text/Beitrag A",
+        "reasoning": "[Inferential] Die Aussage 'Museen sollten sich zu offenen Foren für alle Bevö...' entspricht der Position von A."
+      }
+    },
+    {
+      "id": "Q2",
+      "teil": 4,
+      "type": "matching",
+      "stem": "Die These, dass Die Bewahrung kulturellen Erbes ist die zentrale Aufgabe von Museen, wird durch folgende Argumentation gestützt:",
+      "answer": "B",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Text/Beitrag B",
+        "reasoning": "[Inferential] Die Aussage 'Die Bewahrung kulturellen Erbes ist die zentrale A...' entspricht der Position von B."
+      }
+    },
+    {
+      "id": "Q3",
+      "teil": 4,
+      "type": "matching",
+      "stem": "Museen müssen sich mit der kolonialen Herkunft ihrer Sammlungen befassen.",
+      "answer": "C",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Text/Beitrag C",
+        "reasoning": "Die Aussage 'Museen müssen sich mit der kolonialen Herkunft ihr...' entspricht der Position von C."
+      }
+    },
+    {
+      "id": "Q4",
+      "teil": 4,
+      "type": "matching",
+      "stem": "Die grundlegende Prämisse, dass museen sind wichtige wirtschaftliche Faktoren für Städte, liegt der Position zugrunde:",
+      "answer": "D",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Text/Beitrag D",
+        "reasoning": "[Inferential] Die Aussage 'Museen sind wichtige wirtschaftliche Faktoren für ...' entspricht der Position von D."
+      }
+    },
+    {
+      "id": "Q5",
+      "teil": 4,
+      "type": "matching",
+      "stem": "Die grundlegende Prämisse, dass partizipative Formate steigern die gesellschaftliche Relevanz, liegt der Position zugrunde:",
+      "answer": "A",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Text/Beitrag A",
+        "reasoning": "[Inferential] Die Aussage 'Partizipative Formate steigern die gesellschaftlic...' entspricht der Position von A."
+      }
+    },
+    {
+      "id": "Q6",
+      "teil": 4,
+      "type": "matching",
+      "stem": "Die grundlegende Prämisse, dass events und Instagram-Inszenierung bedrohen die eigentliche Museumsmission, liegt der Position zugrunde:",
+      "answer": "B",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Text/Beitrag B",
+        "reasoning": "[Inferential] Die Aussage 'Events und Instagram-Inszenierung bedrohen die eig...' entspricht der Position von B."
+      }
+    },
+    {
+      "id": "Q7",
+      "teil": 4,
+      "type": "matching",
+      "stem": "Kulturfinanzierung sollte als Investition betrachtet werden.",
+      "answer": "D",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Text/Beitrag D",
+        "reasoning": "Die Aussage 'Kulturfinanzierung sollte als Investition betracht...' entspricht der Position von D."
+      }
+    }
+  ],
+  "scoring": {
+    "total_points": 7,
+    "pass_threshold": 5,
+    "grading": [
+      {
+        "range": [
+          6,
+          7
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          4,
+          5
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          3,
+          3
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          1,
+          2
+        ],
+        "label": "Noch üben!",
+        "emoji": "📝"
+      },
+      {
+        "range": [
+          0,
+          0
+        ],
+        "label": "Mehr Übung nötig",
+        "emoji": "💪"
+      }
+    ]
+  },
+  "qa": {
+    "vocab_in_c1_list": true,
+    "grammar_c1_appropriate": true,
+    "word_count_in_range": true,
+    "all_answers_verifiable": true,
+    "image_count": 1,
+    "passed": true
+  }
+}

@@ -1,0 +1,185 @@
+{
+  "id": "C2-T4-002",
+  "level": "C2",
+  "teil": 4,
+  "teil_name": "Meinungen zuordnen",
+  "topic": "Klassische Literatur",
+  "topic_id": "002",
+  "metadata": {
+    "word_count": 135,
+    "target_grammar": [
+      "Alle Strukturen",
+      "Konjunktiv I/II",
+      "Erweiterte Partizipialkonstruktionen",
+      "Nominalisierung",
+      "Akademischer Stil"
+    ],
+    "target_vocabulary": [],
+    "generated_at": "2026-03-12T00:00:04.735012",
+    "version": 1
+  },
+  "opinion_texts": {
+    "question": "Hat Literatur eine politische Verantwortung?",
+    "texts": [
+      {
+        "name": "Schriftstellerin Dr. Maren Voss",
+        "label": "A",
+        "text": "Literatur, die sich ausschließlich als ästhetisches Phänomen begreift, verfehlt ihre gesellschaftliche Funktion. Jeder Text ist politisch, bewusst oder unbewusst. Die Frage ist nicht, ob Literatur politisch ist, sondern ob sie sich dieser Dimension bewusst stellt."
+      },
+      {
+        "name": "Literaturkritiker Prof. Dr. Jens Meier",
+        "label": "B",
+        "text": "Die Instrumentalisierung der Literatur für politische Zwecke hat historisch stets zu einer Verarmung des Ästhetischen geführt. Große Literatur zeichnet sich gerade dadurch aus, dass sie sich eindeutigen politischen Zuordnungen entzieht."
+      },
+      {
+        "name": "Kulturwissenschaftlerin Dr. Amira Fadel",
+        "label": "C",
+        "text": "Die Forderung nach politischem Engagement darf nicht dazu führen, dass nur noch Literatur als wertvoll gilt, die explizit politische Themen behandelt. Die subversive Kraft der Literatur liegt oft gerade in ihrer Mehrdeutigkeit."
+      },
+      {
+        "name": "Verleger Thomas Becker",
+        "label": "D",
+        "text": "Der Markt zeigt, dass gesellschaftlich relevante Literatur nachgefragt wird. Leser erwarten, dass Autoren zu den drängenden Fragen der Zeit Stellung beziehen. Eskapistische Unterhaltungsliteratur hat ihre Berechtigung, aber sie ist nicht das, worin die kulturelle Bedeutung der Literatur liegt."
+      }
+    ]
+  },
+  "images": [
+    {
+      "id": "IMG1",
+      "type": "scene",
+      "prompt": "Sophisticated cartoon of experts discussing Klassische Literatur. Fuxie cartoon style, flat illustration, warm pastel colors, no text.",
+      "filename": "C2-T4-002_scene.png",
+      "placement": "header",
+      "alt_text": "Hat Literatur eine politische Verantwortung?",
+      "dimensions": "768x512"
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q1",
+      "teil": 4,
+      "type": "matching",
+      "stem": "Die epistemologische Überzeugung, dass jeder Text ist politisch, ob bewusst oder unbewusst, manifestiert sich in der Argumentation von:",
+      "answer": "A",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Text/Beitrag A",
+        "reasoning": "[Inferential] Die Aussage 'Jeder Text ist politisch, ob bewusst oder unbewuss...' entspricht der Position von A."
+      }
+    },
+    {
+      "id": "Q2",
+      "teil": 4,
+      "type": "matching",
+      "stem": "Die epistemologische Überzeugung, dass politische Instrumentalisierung verarmt das Ästhetische, manifestiert sich in der Argumentation von:",
+      "answer": "B",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Text/Beitrag B",
+        "reasoning": "[Inferential] Die Aussage 'Politische Instrumentalisierung verarmt das Ästhet...' entspricht der Position von B."
+      }
+    },
+    {
+      "id": "Q3",
+      "teil": 4,
+      "type": "matching",
+      "stem": "Die epistemologische Überzeugung, dass Die subversive Kraft der Literatur liegt in ihrer Mehrdeutigkeit, manifestiert sich in der Argumentation von:",
+      "answer": "C",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Text/Beitrag C",
+        "reasoning": "[Inferential] Die Aussage 'Die subversive Kraft der Literatur liegt in ihrer ...' entspricht der Position von C."
+      }
+    },
+    {
+      "id": "Q4",
+      "teil": 4,
+      "type": "matching",
+      "stem": "Die methodologische Annahme, dass leser erwarten Stellungnahme zu drängenden Zeitfragen, prägt die Analyse von:",
+      "answer": "D",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Text/Beitrag D",
+        "reasoning": "[Inferential] Die Aussage 'Leser erwarten Stellungnahme zu drängenden Zeitfra...' entspricht der Position von D."
+      }
+    },
+    {
+      "id": "Q5",
+      "teil": 4,
+      "type": "matching",
+      "stem": "Große Literatur entzieht sich eindeutigen politischen Zuordnungen.",
+      "answer": "B",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Text/Beitrag B",
+        "reasoning": "Die Aussage 'Große Literatur entzieht sich eindeutigen politisc...' entspricht der Position von B."
+      }
+    },
+    {
+      "id": "Q6",
+      "teil": 4,
+      "type": "matching",
+      "stem": "Die epistemologische Überzeugung, dass nicht nur explizit politische Literatur ist wertvoll, manifestiert sich in der Argumentation von:",
+      "answer": "C",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Text/Beitrag C",
+        "reasoning": "[Inferential] Die Aussage 'Nicht nur explizit politische Literatur ist wertvo...' entspricht der Position von C."
+      }
+    }
+  ],
+  "scoring": {
+    "total_points": 6,
+    "pass_threshold": 4,
+    "grading": [
+      {
+        "range": [
+          5,
+          6
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          4,
+          4
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          3,
+          3
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          1,
+          2
+        ],
+        "label": "Noch üben!",
+        "emoji": "📝"
+      },
+      {
+        "range": [
+          0,
+          0
+        ],
+        "label": "Mehr Übung nötig",
+        "emoji": "💪"
+      }
+    ]
+  },
+  "qa": {
+    "vocab_in_c2_list": true,
+    "grammar_c2_appropriate": true,
+    "word_count_in_range": true,
+    "all_answers_verifiable": true,
+    "image_count": 1,
+    "passed": true
+  }
+}

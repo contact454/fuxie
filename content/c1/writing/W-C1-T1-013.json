@@ -1,0 +1,87 @@
+{
+  "id": "W-C1-T1-013",
+  "cefrLevel": "C1",
+  "teil": 1,
+  "teilName": "Argumentativer Text",
+  "textType": "Argumentation",
+  "register": "sachlich",
+  "topic": "Konsumkritik",
+  "instruction": "Verfassen Sie einen argumentativen Text zum Thema 'Bewusster Konsum vs. Massenkonsum'. Gehen Sie dabei auf die ökologischen und sozialen Folgen unseres Einkaufsverhaltens ein und nutzen Sie die bereitgestellten Daten und Expertenmeinungen zur Untermauerung Ihrer Argumente.",
+  "instructionVi": "Viết một bài nghị luận về chủ đề 'Tiêu dùng có ý thức và Tiêu dùng đại chúng'. Hãy phân tích các hệ lụy về sinh thái và xã hội của hành vi mua sắm, đồng thời sử dụng dữ liệu và ý kiến chuyên gia được cung cấp để củng cố lập luận.",
+  "situation": "In der heutigen Gesellschaft gilt Shopping oft als Freizeitbeschäftigung, während die ökologischen Belastungen durch Produktion und Logistik stetig wachsen. Im Rahmen eines Seminars für Wirtschaftsethik sollen Sie einen Beitrag verfassen, der die Notwendigkeit einer Kehrtwende im Konsumverhalten kritisch beleuchtet.",
+  "contentPoints": [
+    "Analysieren Sie die Ursachen für das aktuelle Überangebot und das daraus resultierende Kaufverhalten.",
+    "Werten Sie die beigefügte Grafik zur Entwicklung des Online-Handels und der Retourenquote aus.",
+    "Erörtern Sie die Vor- und Nachteile eines minimalistischen Lebensstils im Hinblick auf die Wirtschaft.",
+    "Nehmen Sie Stellung zu der Frage, inwieweit staatliche Regulierungen (z. B. eine CO2-Steuer auf Produkte) sinnvoll sind."
+  ],
+  "sourceText": "Prof. Dr. Hartmut Rosa: 'Die Logik der Steigerung führt dazu, dass wir immer mehr konsumieren müssen, nur um unseren Status quo zu erhalten, was zu einer tiefen Entfremdung führt.' | Dr. Elena Müller: 'Nachhaltiger Konsum darf kein Privileg der Elite sein; wir benötigen Preistransparenz, die die ökologischen Kosten wahrheitsgemäß widerspiegelt.'",
+  "sourceTextType": "Expert Quotes",
+  "grafikDesc": "Die vorliegende Statistik illustriert das Wachstum des Versandhandelsvolumens in Deutschland und den gleichzeitigen Anstieg der Retourenquote im Zeitraum von 2015 bis 2023.",
+  "grafikData": [
+    {
+      "label": "Paketvolumen 2015",
+      "value": 2.9,
+      "unit": "Milliarden Stück"
+    },
+    {
+      "label": "Paketvolumen 2023",
+      "value": 4.5,
+      "unit": "Milliarden Stück"
+    },
+    {
+      "label": "Retourenquote 2015",
+      "value": 11,
+      "unit": "Prozent"
+    },
+    {
+      "label": "Retourenquote 2023",
+      "value": 19,
+      "unit": "Prozent"
+    }
+  ],
+  "minWords": 250,
+  "maxWords": 400,
+  "timeMinutes": 50,
+  "rubric": {
+    "criteria": [
+      {
+        "id": "inhalt",
+        "name": "Inhalt",
+        "nameVi": "Nội dung",
+        "maxScore": 5,
+        "weight": 20
+      },
+      {
+        "id": "angemessenheit",
+        "name": "Kommunikative Angemessenheit",
+        "nameVi": "Phù hợp giao tiếp",
+        "maxScore": 5,
+        "weight": 20
+      },
+      {
+        "id": "korrektheit",
+        "name": "Korrektheit",
+        "nameVi": "Chính xác ngữ pháp & chính tả",
+        "maxScore": 5,
+        "weight": 20
+      },
+      {
+        "id": "spektrum",
+        "name": "Wortschatz & Strukturen",
+        "nameVi": "Đa dạng từ vựng & cấu trúc",
+        "maxScore": 5,
+        "weight": 20
+      },
+      {
+        "id": "kohaerenz",
+        "name": "Kohaerenz & Kohaesion",
+        "nameVi": "Mạch lạc & liên kết",
+        "maxScore": 5,
+        "weight": 20
+      }
+    ],
+    "maxScore": 25
+  },
+  "maxScore": 25
+}

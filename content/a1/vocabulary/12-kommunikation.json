@@ -1,0 +1,428 @@
+{
+    "theme": {
+        "slug": "a1-kommunikation",
+        "name": "Kommunikation",
+        "nameVi": "Giao tiếp",
+        "nameEn": "Communication",
+        "sortOrder": 12,
+        "imageUrl": "/images/themes/a1-kommunikation.png"
+    },
+    "words": [
+        {
+            "word": "Handy",
+            "article": "NEUTRUM",
+            "plural": "die Handys",
+            "wordType": "NOMEN",
+            "meaningVi": "điện thoại di động",
+            "meaningEn": "mobile phone, cell phone",
+            "exampleSentence1": "Ich habe ein Handy.",
+            "exampleTranslation1": "Tôi có điện thoại.",
+            "exampleSentence2": "Das Handy klingelt.",
+            "exampleTranslation2": "Điện thoại reo.",
+            "imageUrl": "/images/vocab/a1-kommunikation/handy.png"
+        },
+        {
+            "word": "Telefon",
+            "article": "NEUTRUM",
+            "plural": "die Telefone",
+            "wordType": "NOMEN",
+            "meaningVi": "điện thoại",
+            "meaningEn": "telephone",
+            "exampleSentence1": "Haben Sie ein Telefon?",
+            "exampleTranslation1": "Anh/chị có điện thoại không?",
+            "exampleSentence2": "Das Telefon klingelt.",
+            "exampleTranslation2": "Điện thoại reo.",
+            "imageUrl": "/images/vocab/a1-kommunikation/telefon.png"
+        },
+        {
+            "word": "Internet",
+            "article": "NEUTRUM",
+            "plural": "-",
+            "wordType": "NOMEN",
+            "meaningVi": "internet",
+            "meaningEn": "internet",
+            "exampleSentence1": "Ich brauche Internet.",
+            "exampleTranslation1": "Tôi cần internet.",
+            "exampleSentence2": "Haben Sie Internet?",
+            "exampleTranslation2": "Anh/chị có internet không?",
+            "imageUrl": "/images/vocab/a1-kommunikation/internet.png"
+        },
+        {
+            "word": "Nachricht",
+            "article": "FEMININ",
+            "plural": "die Nachrichten",
+            "wordType": "NOMEN",
+            "meaningVi": "tin nhắn; tin tức",
+            "meaningEn": "message; news",
+            "exampleSentence1": "Ich schreibe eine Nachricht.",
+            "exampleTranslation1": "Tôi viết tin nhắn.",
+            "exampleSentence2": "Ich habe eine Nachricht.",
+            "exampleTranslation2": "Tôi có tin nhắn.",
+            "imageUrl": "/images/vocab/a1-kommunikation/nachricht.png"
+        },
+        {
+            "word": "Zeitung",
+            "article": "FEMININ",
+            "plural": "die Zeitungen",
+            "wordType": "NOMEN",
+            "meaningVi": "báo",
+            "meaningEn": "newspaper",
+            "exampleSentence1": "Ich lese die Zeitung.",
+            "exampleTranslation1": "Tôi đọc báo.",
+            "exampleSentence2": "Die Zeitung ist von heute.",
+            "exampleTranslation2": "Báo hôm nay.",
+            "imageUrl": "/images/vocab/a1-kommunikation/zeitung.png"
+        },
+        {
+            "word": "Fernsehen",
+            "article": "NEUTRUM",
+            "plural": "-",
+            "wordType": "NOMEN",
+            "meaningVi": "truyền hình, tivi",
+            "meaningEn": "television, TV",
+            "exampleSentence1": "Ich sehe gern Fernsehen.",
+            "exampleTranslation1": "Tôi thích xem tivi.",
+            "exampleSentence2": "Was kommt im Fernsehen?",
+            "exampleTranslation2": "Trên tivi có gì?",
+            "imageUrl": "/images/vocab/a1-kommunikation/fernsehen.png"
+        },
+        {
+            "word": "Fernseher",
+            "article": "MASKULIN",
+            "plural": "die Fernseher",
+            "wordType": "NOMEN",
+            "meaningVi": "tivi (thiết bị)",
+            "meaningEn": "TV set",
+            "exampleSentence1": "Der Fernseher ist neu.",
+            "exampleTranslation1": "Cái tivi mới.",
+            "exampleSentence2": "Mach den Fernseher an!",
+            "exampleTranslation2": "Bật tivi lên!",
+            "imageUrl": "/images/vocab/a1-kommunikation/fernseher.png"
+        },
+        {
+            "word": "Radio",
+            "article": "NEUTRUM",
+            "plural": "die Radios",
+            "wordType": "NOMEN",
+            "meaningVi": "radio",
+            "meaningEn": "radio",
+            "exampleSentence1": "Ich höre Radio.",
+            "exampleTranslation1": "Tôi nghe radio.",
+            "exampleSentence2": "Das Radio ist laut.",
+            "exampleTranslation2": "Radio to.",
+            "imageUrl": "/images/vocab/a1-kommunikation/radio.png"
+        },
+        {
+            "word": "Postkarte",
+            "article": "FEMININ",
+            "plural": "die Postkarten",
+            "wordType": "NOMEN",
+            "meaningVi": "bưu thiếp",
+            "meaningEn": "postcard",
+            "exampleSentence1": "Ich schreibe eine Postkarte.",
+            "exampleTranslation1": "Tôi viết bưu thiếp.",
+            "exampleSentence2": "Die Postkarte ist schön.",
+            "exampleTranslation2": "Bưu thiếp đẹp.",
+            "imageUrl": "/images/vocab/a1-kommunikation/postkarte.png"
+        },
+        {
+            "word": "anrufen",
+            "wordType": "VERB",
+            "meaningVi": "gọi điện",
+            "meaningEn": "to call (phone)",
+            "conjugation": {
+                "praesens": {
+                    "ich": "rufe an",
+                    "du": "rufst an",
+                    "er_sie_es": "ruft an",
+                    "wir": "rufen an",
+                    "ihr": "ruft an",
+                    "sie_Sie": "rufen an"
+                },
+                "isIrregular": true,
+                "isSeparable": true,
+                "separablePrefix": "an"
+            },
+            "exampleSentence1": "Ich rufe dich an.",
+            "exampleTranslation1": "Tôi gọi điện cho bạn.",
+            "exampleSentence2": "Ruf mich bitte an!",
+            "exampleTranslation2": "Xin gọi điện cho tôi!",
+            "imageUrl": "/images/vocab/a1-kommunikation/anrufen.png"
+        },
+        {
+            "word": "telefonieren",
+            "wordType": "VERB",
+            "meaningVi": "nói chuyện điện thoại",
+            "meaningEn": "to make a phone call",
+            "conjugation": {
+                "praesens": {
+                    "ich": "telefoniere",
+                    "du": "telefonierst",
+                    "er_sie_es": "telefoniert",
+                    "wir": "telefonieren",
+                    "ihr": "telefoniert",
+                    "sie_Sie": "telefonieren"
+                },
+                "isIrregular": false,
+                "isSeparable": false
+            },
+            "exampleSentence1": "Ich telefoniere mit meiner Mutter.",
+            "exampleTranslation1": "Tôi nói chuyện điện thoại với mẹ.",
+            "exampleSentence2": "Er telefoniert gerade.",
+            "exampleTranslation2": "Anh ấy đang nói điện thoại.",
+            "imageUrl": "/images/vocab/a1-kommunikation/telefonieren.png"
+        },
+        {
+            "word": "sagen",
+            "wordType": "VERB",
+            "meaningVi": "nói, bảo",
+            "meaningEn": "to say, to tell",
+            "conjugation": {
+                "praesens": {
+                    "ich": "sage",
+                    "du": "sagst",
+                    "er_sie_es": "sagt",
+                    "wir": "sagen",
+                    "ihr": "sagt",
+                    "sie_Sie": "sagen"
+                },
+                "isIrregular": false,
+                "isSeparable": false
+            },
+            "exampleSentence1": "Was sagst du?",
+            "exampleTranslation1": "Bạn nói gì?",
+            "exampleSentence2": "Können Sie das bitte noch einmal sagen?",
+            "exampleTranslation2": "Anh/chị nói lại được không?",
+            "imageUrl": "/images/vocab/a1-kommunikation/sagen.png"
+        },
+        {
+            "word": "fragen",
+            "wordType": "VERB",
+            "meaningVi": "hỏi",
+            "meaningEn": "to ask",
+            "conjugation": {
+                "praesens": {
+                    "ich": "frage",
+                    "du": "fragst",
+                    "er_sie_es": "fragt",
+                    "wir": "fragen",
+                    "ihr": "fragt",
+                    "sie_Sie": "fragen"
+                },
+                "isIrregular": false,
+                "isSeparable": false
+            },
+            "exampleSentence1": "Ich frage den Lehrer.",
+            "exampleTranslation1": "Tôi hỏi giáo viên.",
+            "exampleSentence2": "Darf ich fragen?",
+            "exampleTranslation2": "Tôi được phép hỏi không?",
+            "imageUrl": "/images/vocab/a1-kommunikation/fragen.png"
+        },
+        {
+            "word": "antworten",
+            "wordType": "VERB",
+            "meaningVi": "trả lời",
+            "meaningEn": "to answer",
+            "conjugation": {
+                "praesens": {
+                    "ich": "antworte",
+                    "du": "antwortest",
+                    "er_sie_es": "antwortet",
+                    "wir": "antworten",
+                    "ihr": "antwortet",
+                    "sie_Sie": "antworten"
+                },
+                "isIrregular": false,
+                "isSeparable": false
+            },
+            "exampleSentence1": "Bitte antworten Sie.",
+            "exampleTranslation1": "Xin hãy trả lời.",
+            "exampleSentence2": "Ich antworte sofort.",
+            "exampleTranslation2": "Tôi trả lời ngay.",
+            "imageUrl": "/images/vocab/a1-kommunikation/antworten.png"
+        },
+        {
+            "word": "erklären",
+            "wordType": "VERB",
+            "meaningVi": "giải thích",
+            "meaningEn": "to explain",
+            "conjugation": {
+                "praesens": {
+                    "ich": "erkläre",
+                    "du": "erklärst",
+                    "er_sie_es": "erklärt",
+                    "wir": "erklären",
+                    "ihr": "erklärt",
+                    "sie_Sie": "erklären"
+                },
+                "isIrregular": false,
+                "isSeparable": false
+            },
+            "exampleSentence1": "Können Sie das erklären?",
+            "exampleTranslation1": "Anh/chị giải thích được không?",
+            "exampleSentence2": "Der Lehrer erklärt gut.",
+            "exampleTranslation2": "Giáo viên giải thích hay.",
+            "imageUrl": "/images/vocab/a1-kommunikation/erklaeren.png"
+        },
+        {
+            "word": "wiederholen",
+            "wordType": "VERB",
+            "meaningVi": "nhắc lại, ôn tập",
+            "meaningEn": "to repeat, to review",
+            "conjugation": {
+                "praesens": {
+                    "ich": "wiederhole",
+                    "du": "wiederholst",
+                    "er_sie_es": "wiederholt",
+                    "wir": "wiederholen",
+                    "ihr": "wiederholt",
+                    "sie_Sie": "wiederholen"
+                },
+                "isIrregular": false,
+                "isSeparable": false
+            },
+            "exampleSentence1": "Können Sie bitte wiederholen?",
+            "exampleTranslation1": "Xin nhắc lại được không?",
+            "exampleSentence2": "Ich wiederhole die Wörter.",
+            "exampleTranslation2": "Tôi ôn lại từ vựng.",
+            "imageUrl": "/images/vocab/a1-kommunikation/wiederholen.png"
+        },
+        {
+            "word": "langsam",
+            "wordType": "ADJEKTIV",
+            "meaningVi": "chậm",
+            "meaningEn": "slow, slowly",
+            "exampleSentence1": "Bitte sprechen Sie langsam.",
+            "exampleTranslation1": "Xin nói chậm.",
+            "exampleSentence2": "Das ist zu langsam.",
+            "exampleTranslation2": "Chậm quá.",
+            "imageUrl": "/images/vocab/a1-kommunikation/langsam.png"
+        },
+        {
+            "word": "schnell",
+            "wordType": "ADJEKTIV",
+            "meaningVi": "nhanh",
+            "meaningEn": "fast, quickly",
+            "exampleSentence1": "Er spricht schnell.",
+            "exampleTranslation1": "Anh ấy nói nhanh.",
+            "exampleSentence2": "Das geht schnell.",
+            "exampleTranslation2": "Nhanh thôi.",
+            "imageUrl": "/images/vocab/a1-kommunikation/schnell.png"
+        },
+        {
+            "word": "Unterschrift",
+            "article": "FEMININ",
+            "plural": "die Unterschriften",
+            "wordType": "NOMEN",
+            "meaningVi": "chữ ký",
+            "meaningEn": "signature",
+            "exampleSentence1": "Ihre Unterschrift, bitte.",
+            "exampleTranslation1": "Xin anh/chị ký.",
+            "exampleSentence2": "Ich brauche Ihre Unterschrift.",
+            "exampleTranslation2": "Tôi cần chữ ký của anh/chị.",
+            "imageUrl": "/images/vocab/a1-kommunikation/unterschrift.png"
+        },
+        {
+            "word": "Gespräch",
+            "article": "NEUTRUM",
+            "plural": "die Gespräche",
+            "wordType": "NOMEN",
+            "meaningVi": "cuộc trò chuyện",
+            "meaningEn": "conversation",
+            "exampleSentence1": "Das Gespräch war interessant.",
+            "exampleTranslation1": "Cuộc trò chuyện thú vị.",
+            "exampleSentence2": "Ich führe ein Gespräch.",
+            "exampleTranslation2": "Tôi có một cuộc trò chuyện.",
+            "imageUrl": "/images/vocab/a1-kommunikation/gespraech.png"
+        },
+        {
+            "word": "Frage",
+            "article": "FEMININ",
+            "plural": "die Fragen",
+            "wordType": "NOMEN",
+            "meaningVi": "câu hỏi",
+            "meaningEn": "question",
+            "exampleSentence1": "Ich habe eine Frage.",
+            "exampleTranslation1": "Tôi có một câu hỏi.",
+            "exampleSentence2": "Die Frage ist schwer.",
+            "exampleTranslation2": "Câu hỏi khó.",
+            "imageUrl": "/images/vocab/a1-kommunikation/frage.png"
+        },
+        {
+            "word": "Antwort",
+            "article": "FEMININ",
+            "plural": "die Antworten",
+            "wordType": "NOMEN",
+            "meaningVi": "câu trả lời",
+            "meaningEn": "answer",
+            "exampleSentence1": "Die Antwort ist richtig.",
+            "exampleTranslation1": "Câu trả lời đúng.",
+            "exampleSentence2": "Ich weiß die Antwort nicht.",
+            "exampleTranslation2": "Tôi không biết câu trả lời.",
+            "imageUrl": "/images/vocab/a1-kommunikation/antwort.png"
+        },
+        {
+            "word": "Information",
+            "article": "FEMININ",
+            "plural": "die Informationen",
+            "wordType": "NOMEN",
+            "meaningVi": "thông tin",
+            "meaningEn": "information",
+            "exampleSentence1": "Ich brauche eine Information.",
+            "exampleTranslation1": "Tôi cần thông tin.",
+            "exampleSentence2": "Wo bekomme ich Informationen?",
+            "exampleTranslation2": "Tôi lấy thông tin ở đâu?",
+            "imageUrl": "/images/vocab/a1-kommunikation/information.png"
+        },
+        {
+            "word": "verstehen",
+            "wordType": "VERB",
+            "meaningVi": "hiểu",
+            "meaningEn": "to understand",
+            "conjugation": {
+                "praesens": {
+                    "ich": "verstehe",
+                    "du": "verstehst",
+                    "er_sie_es": "versteht",
+                    "wir": "verstehen",
+                    "ihr": "versteht",
+                    "sie_Sie": "verstehen"
+                },
+                "perfekt": "hat verstanden",
+                "isIrregular": true,
+                "isSeparable": false
+            },
+            "exampleSentence1": "Ich verstehe nicht.",
+            "exampleTranslation1": "Tôi không hiểu.",
+            "exampleSentence2": "Verstehen Sie Deutsch?",
+            "exampleTranslation2": "Bạn hiểu tiếng Đức không?",
+            "imageUrl": "/images/vocab/a1-kommunikation/verstehen.png"
+        },
+        {
+            "word": "Meinung",
+            "article": "FEMININ",
+            "plural": "die Meinungen",
+            "wordType": "NOMEN",
+            "meaningVi": "ý kiến",
+            "meaningEn": "opinion",
+            "exampleSentence1": "Was ist Ihre Meinung?",
+            "exampleTranslation1": "Ý kiến của bạn là gì?",
+            "exampleSentence2": "Meiner Meinung nach ist das gut.",
+            "exampleTranslation2": "Theo ý kiến tôi, điều đó tốt.",
+            "imageUrl": "/images/vocab/a1-kommunikation/meinung.png"
+        },
+        {
+            "word": "Vorschlag",
+            "article": "MASKULIN",
+            "plural": "die Vorschläge",
+            "wordType": "NOMEN",
+            "meaningVi": "đề xuất",
+            "meaningEn": "suggestion",
+            "exampleSentence1": "Ich habe einen Vorschlag.",
+            "exampleTranslation1": "Tôi có một đề xuất.",
+            "exampleSentence2": "Das ist ein guter Vorschlag.",
+            "exampleTranslation2": "Đó là đề xuất tốt.",
+            "imageUrl": "/images/vocab/a1-kommunikation/vorschlag.png"
+        }
+    ]
+}

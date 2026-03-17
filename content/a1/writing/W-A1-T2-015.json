@@ -1,0 +1,49 @@
+{
+  "id": "W-A1-T2-015",
+  "cefrLevel": "A1",
+  "teil": 2,
+  "teilName": "Kurze E-Mail",
+  "textType": "E-Mail",
+  "register": "informell",
+  "topic": "Bücherbestellung",
+  "instruction": "Sie möchten ein Buch für Ihren Deutschkurs bestellen. Schreiben Sie eine E-Mail an Ihren Freund Marc, der in einer Buchhandlung arbeitet.",
+  "instructionVi": "Bạn muốn đặt một cuốn sách cho khóa học tiếng Đức. Hãy viết một email cho người bạn tên Marc đang làm việc ở hiệu sách.",
+  "situation": "Ihr Freund Marc arbeitet in der Buchhandlung „Lesewelt“. Sie brauchen dringend das Lehrbuch „Netzwerk A1“ für Ihren Unterricht am Montag. Schreiben Sie ihm eine kurze Nachricht.",
+  "contentPoints": [
+    "Welches Buch brauchen Sie?",
+    "Fragen Sie nach dem Preis.",
+    "Wann kommen Sie in die Buchhandlung?"
+  ],
+  "sourceText": "Hallo! Ich arbeite jetzt bei 'Lesewelt'. Wenn du Bücher brauchst, sag mir einfach Bescheid! Bis bald, Marc.",
+  "sourceTextType": "SMS von Marc",
+  "minWords": 20,
+  "maxWords": 40,
+  "timeMinutes": 10,
+  "rubric": {
+    "criteria": [
+      {
+        "id": "inhalt",
+        "name": "Inhalt",
+        "nameVi": "Nội dung",
+        "maxScore": 5,
+        "weight": 30
+      },
+      {
+        "id": "korrektheit",
+        "name": "Korrektheit",
+        "nameVi": "Chính xác ngữ pháp & chính tả",
+        "maxScore": 5,
+        "weight": 40
+      },
+      {
+        "id": "angemessenheit",
+        "name": "Angemessenheit",
+        "nameVi": "Tính phù hợp",
+        "maxScore": 5,
+        "weight": 30
+      }
+    ],
+    "maxScore": 15
+  },
+  "maxScore": 15
+}

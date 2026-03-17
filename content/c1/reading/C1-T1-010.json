@@ -1,0 +1,171 @@
+{
+  "id": "C1-T1-010",
+  "level": "C1",
+  "teil": 1,
+  "teil_name": "Lückentext (Wörter)",
+  "topic": "Bildungsforschung",
+  "topic_id": "010",
+  "metadata": {
+    "word_count": 230,
+    "target_grammar": [
+      "Nominalisierung",
+      "Partizipialkonstruktionen",
+      "Konjunktiv I/II",
+      "Passiversatzformen"
+    ],
+    "target_vocabulary": [],
+    "generated_at": "2026-03-11T22:50:15.527648",
+    "version": 1
+  },
+  "cloze": {
+    "title": "Neuroplastizität und ihre Implikationen für das Lernen",
+    "text": "Die Entdeckung der Neuroplastizität hat das Verständnis des menschlichen Gehirns grundlegend {1}. Lange galt das erwachsene Gehirn als weitgehend statisches Organ, dessen neuronale Strukturen nach der Kindheit kaum noch veränderbar seien. Die moderne Hirnforschung hat dieses Dogma widerlegt: Das Gehirn ist zeitlebens in der Lage, neue neuronale Verbindungen zu {2} und bestehende umzuorganisieren.\n\nFür die Bildungswissenschaft ergeben sich daraus weitreichende Konsequenzen. Die Vorstellung, dass bestimmte kognitive Fähigkeiten nur in definierten sensiblen Phasen der Kindheit {3} werden können, muss relativiert werden. Zwar ist die Neuroplastizität in jungen Jahren tatsächlich besonders ausgeprägt, doch Studien zeigen, dass auch Erwachsene durch gezieltes Training erhebliche kognitive Fortschritte {4} können.\n\nEin eindrucksvolles Beispiel liefert eine Londoner Studie über Taxifahrer. Hirnscans zeigten, dass der Hippocampus, eine für die räumliche Orientierung zentrale Hirnregion, bei erfahrenen Taxifahrern signifikant {5} war als bei Kontrollpersonen. Die intensive Auseinandersetzung mit dem Londoner Straßennetz hatte die Hirnstruktur messbar {6}.\n\nGleichzeitig warnen Neurowissenschaftler vor einer Überinterpretation dieser Befunde. Die populäre Vorstellung, das Gehirn sei beliebig formbar, sei ebenso falsch wie das alte Dogma der Unveränderlichkeit. Genetische Prädispositionen setzen {7} für die individuelle Lernfähigkeit, die durch Training zwar erweitert, aber nicht vollständig aufgehoben werden können.\n\nFür die Unterrichtspraxis bedeutet dies, dass die herkömmliche Unterscheidung in begabte und unbegabte Schüler einer differenzierteren Betrachtung weichen sollte. Lernfähigkeit ist keine fixe Eigenschaft, sondern ein dynamischer Prozess, der durch geeignete Methoden, Motivation und beharrliches Üben maßgeblich {8} werden kann.",
+    "gaps": [
+      {
+        "pos": 1,
+        "options": {
+          "a": "verändert",
+          "b": "revolutioniert",
+          "c": "erweitert",
+          "d": "gewandelt"
+        },
+        "answer": "a"
+      },
+      {
+        "pos": 2,
+        "options": {
+          "a": "bilden",
+          "b": "schaffen",
+          "c": "knüpfen",
+          "d": "herstellen"
+        },
+        "answer": "a"
+      },
+      {
+        "pos": 3,
+        "options": {
+          "a": "ausgebildet",
+          "b": "erworben",
+          "c": "erlernt",
+          "d": "entwickelt"
+        },
+        "answer": "b"
+      },
+      {
+        "pos": 4,
+        "options": {
+          "a": "erreichen",
+          "b": "erzielen",
+          "c": "schaffen",
+          "d": "erlangen"
+        },
+        "answer": "b"
+      },
+      {
+        "pos": 5,
+        "options": {
+          "a": "größer",
+          "b": "stärker",
+          "c": "aktiver",
+          "d": "dichter"
+        },
+        "answer": "a"
+      },
+      {
+        "pos": 6,
+        "options": {
+          "a": "gewandelt",
+          "b": "verändert",
+          "c": "umgestaltet",
+          "d": "geprägt"
+        },
+        "answer": "b"
+      },
+      {
+        "pos": 7,
+        "options": {
+          "a": "Grenzen",
+          "b": "Rahmen",
+          "c": "Maßstäbe",
+          "d": "Standards"
+        },
+        "answer": "a"
+      },
+      {
+        "pos": 8,
+        "options": {
+          "a": "gesteuert",
+          "b": "beeinflusst",
+          "c": "gelenkt",
+          "d": "bestimmt"
+        },
+        "answer": "b"
+      }
+    ]
+  },
+  "images": [
+    {
+      "id": "IMG1",
+      "type": "scene",
+      "prompt": "Cute cartoon illustration related to Bildungsforschung, showing an academic/intellectual scene. Fuxie cartoon style, flat illustration, warm pastel colors, no text.",
+      "filename": "C1-T1-010_scene.png",
+      "placement": "header",
+      "alt_text": "Neuroplastizität und ihre Implikationen für das Le",
+      "dimensions": "768x512"
+    }
+  ],
+  "scoring": {
+    "total_points": 8,
+    "pass_threshold": 5,
+    "grading": [
+      {
+        "range": [
+          7,
+          8
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          5,
+          6
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          4,
+          4
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          1,
+          3
+        ],
+        "label": "Noch üben!",
+        "emoji": "📝"
+      },
+      {
+        "range": [
+          0,
+          0
+        ],
+        "label": "Mehr Übung nötig",
+        "emoji": "💪"
+      }
+    ]
+  },
+  "qa": {
+    "vocab_in_c1_list": true,
+    "grammar_c1_appropriate": true,
+    "word_count_in_range": true,
+    "all_gaps_have_4_options": true,
+    "image_count": 1,
+    "passed": true
+  }
+}

@@ -1,0 +1,100 @@
+{
+  "id": "W-C2-T1-005",
+  "cefrLevel": "C2",
+  "teil": 1,
+  "teilName": "Akademischer Text",
+  "textType": "Eroerterung",
+  "register": "akademisch",
+  "topic": "Bioethik",
+  "instruction": "Eroerterung: Genome Editing - Fortschritt oder Tabu?. Schreiben Sie einen akademischen Text (mind. 350 Woerter).",
+  "instructionVi": "Viet bai hoc thuat >=350 tu: Bioethik.",
+  "situation": "Eroerterung: Genome Editing - Fortschritt oder Tabu?",
+  "contentPoints": [
+    "These klar formulieren",
+    "Hintergrund skizzieren",
+    "Argumente entwickeln",
+    "Gegenposition widerlegen",
+    "Synthese und Schlussfolgerung",
+    "Ausblick"
+  ],
+  "minWords": 350,
+  "maxWords": 600,
+  "timeMinutes": 50,
+  "rubric": {
+    "criteria": [
+      {
+        "id": "inhalt",
+        "name": "Inhalt",
+        "nameVi": "Noi dung",
+        "maxScore": 5,
+        "weight": 20
+      },
+      {
+        "id": "angemessenheit",
+        "name": "Kommunikative Angemessenheit",
+        "nameVi": "Phu hop giao tiep",
+        "maxScore": 5,
+        "weight": 20
+      },
+      {
+        "id": "korrektheit",
+        "name": "Korrektheit",
+        "nameVi": "Chinh xac ngu phap",
+        "maxScore": 5,
+        "weight": 20
+      },
+      {
+        "id": "spektrum",
+        "name": "Wortschatz & Strukturen",
+        "nameVi": "Da dang tu vung",
+        "maxScore": 5,
+        "weight": 20
+      },
+      {
+        "id": "kohaerenz",
+        "name": "Kohaerenz & Kohaesion",
+        "nameVi": "Mach lac & lien ket",
+        "maxScore": 5,
+        "weight": 20
+      }
+    ],
+    "maxScore": 25
+  },
+  "maxScore": 25,
+  "sourceText": "Text 1: Frankfurter Allgemeine Zeitung (FAZ), 14. September 2023\nAutor: Dr. h.c. Ludger Weishaupt\nTitel: Der optimierte Mensch: Deutschlands biotechnologische Zauderkultur\n\nIn einer Ära, in der biotechnologische Innovationen die Grenzen des medizinisch Machbaren rasant verschieben, darf sich die Bundesrepublik nicht hinter moralinsauren Bedenken verschanzen. Die Genom-Editierung mittels CRISPR-Cas9 bietet nicht nur das Potenzial, monogenetische Erbkrankheiten endgültig zu eliminieren, sondern stellt auch einen entscheidenden ökonomischen Standortfaktor dar. Während Nationen wie China oder die USA den therapeutischen Einsatz vorantreiben, verharrt der deutsche Diskurs in einer defensiven Haltung, die Ethik oft mit Innovationsfeindlichkeit verwechselt. Eine liberale Gesellschaft sollte das Recht des Einzelnen auf genetische Selbstbestimmung und die Heilungschancen künftiger Generationen über abstrakte Prinzipien der Natürlichkeit stellen. Wer den Fortschritt aus Angst vor einer fiktiven Eugenik blockiert, handelt verantwortungslos gegenüber jenen, deren Leiden durch moderne Bioethik gelindert werden könnte.\n\nText 2: Jahrbuch für Wissenschaft und Ethik, Band 27, 2022\nAutorin: Prof. Dr. Elena Maric\nTitel: Die Ontologie des Unverfügbaren: Zur Kritik der Keimbahnintervention\n\nDie aktuelle Debatte um die Modifikation des menschlichen Erbguts leidet unter einer gefährlichen Verkürzung auf utilitaristische Zweck-Mittel-Relationen. Eine Intervention in die Keimbahn überschreitet die Grenze von der kurativen Medizin zur biotechnischen Gestaltung des Menschen. Damit droht die fundamentale Unverfügbarkeit des menschlichen Daseins verloren zu gehen. Sobald das Leben zum Gegenstand technischer Planung wird, wandelt sich die Eltern-Kind-Beziehung von einer bedingungslosen Annahme hin zu einem Produktverhältnis. Die vermeintliche Freiheit der genetischen Optimierung ist de facto ein Unterwerfungsakt unter sozioökonomische Leistungsnormen. Zudem lässt sich die Grenze zwischen therapeutischer Heilung und dem Wunsch nach Enhancement – etwa der Steigerung kognitiver Kapazitäten – diskursiv kaum stabilisieren. Die daraus resultierenden sozialen Disparitäten würden die Solidargemeinschaft in ihrem Kern erschüttern und eine neue biologische Klassengesellschaft zementieren.",
+  "sourceTextType": "Multiperspektivische Textgrundlage für einen akademischen Essay",
+  "stimulusSender": "Prüfungsausschuss für fortgeschrittene Sprachwissenschaften / C2-Zertifizierungskommission",
+  "grafikDesc": "Das Säulendiagramm illustriert die differenzierte Akzeptanz der Genom-Editierung in der deutschen Bevölkerung über einen Zeitraum von fünf Jahren. Es zeigt eine signifikante Diskrepanz zwischen medizinisch indizierten Eingriffen und optativen Optimierungsmaßnahmen sowie die Entwicklung der allgemeinen Skepsis gegenüber biotechnologischen Eingriffen in die menschliche Natur.",
+  "grafikData": [
+    {
+      "Kategorie": "Heilung schwerer Erbkrankheiten",
+      "Zustimmung_2018": "72%",
+      "Zustimmung_2023": "78%"
+    },
+    {
+      "Kategorie": "Prävention von Volkskrankheiten (z.B. Diabetes)",
+      "Zustimmung_2018": "45%",
+      "Zustimmung_2023": "51%"
+    },
+    {
+      "Kategorie": "Steigerung kognitiver Fähigkeiten (Enhancement)",
+      "Zustimmung_2018": "8%",
+      "Zustimmung_2023": "12%"
+    },
+    {
+      "Kategorie": "Selektion ästhetischer Merkmale",
+      "Zustimmung_2018": "3%",
+      "Zustimmung_2023": "4%"
+    },
+    {
+      "Kategorie": "Furcht vor unvorhersehbaren Langzeitfolgen",
+      "Zustimmung_2018": "64%",
+      "Zustimmung_2023": "69%"
+    },
+    {
+      "Kategorie": "Forderung nach striktem staatlichem Verbot",
+      "Zustimmung_2018": "22%",
+      "Zustimmung_2023": "19%"
+    }
+  ]
+}

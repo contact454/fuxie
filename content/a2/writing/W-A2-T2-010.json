@@ -1,0 +1,51 @@
+{
+  "id": "W-A2-T2-010",
+  "cefrLevel": "A2",
+  "teil": 2,
+  "teilName": "Persoenliche Mitteilung",
+  "textType": "Mitteilung",
+  "register": "halbformell",
+  "topic": "Entschuldigung",
+  "instruction": "Schreiben Sie eine kurze Mitteilung (ca. 40-60 Woerter).",
+  "instructionVi": "Viet tin nhan: Entschuldigung.",
+  "situation": "Waschmaschine kaputt, Wasser im Keller. Schreiben Sie Nachbarn.",
+  "contentPoints": [
+    "sich entschuldigen",
+    "erklaeren was passiert",
+    "Loesung anbieten"
+  ],
+  "minWords": 40,
+  "maxWords": 70,
+  "timeMinutes": 15,
+  "rubric": {
+    "criteria": [
+      {
+        "id": "inhalt",
+        "name": "Inhalt",
+        "nameVi": "Noi dung",
+        "maxScore": 5,
+        "weight": 30
+      },
+      {
+        "id": "korrektheit",
+        "name": "Korrektheit",
+        "nameVi": "Chinh xac",
+        "maxScore": 5,
+        "weight": 35
+      },
+      {
+        "id": "angemessenheit",
+        "name": "Kommunikative Angemessenheit",
+        "nameVi": "Phu hop giao tiep",
+        "maxScore": 5,
+        "weight": 35
+      }
+    ],
+    "maxScore": 15
+  },
+  "maxScore": 15,
+  "sourceText": "Sie haben am 15. Oktober den Termin bei Professor Dr. Weber im Von-Melle-Park 5 verpasst. Wegen einer Verspätung des ICE 789 kamen Sie nicht rechtzeitig zum Projektgespräch „Städteplanung“ um 10:00 Uhr. Schreiben Sie eine E-Mail, um sich förmlich zu entschuldigen und einen neuen Termin vorzuschlagen.",
+  "sourceTextType": "Situationsbeschreibung",
+  "stimulusSender": "Prof. Dr. Weber",
+  "grafikData": []
+}

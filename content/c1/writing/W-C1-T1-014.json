@@ -1,0 +1,87 @@
+{
+  "id": "W-C1-T1-014",
+  "cefrLevel": "C1",
+  "teil": 1,
+  "teilName": "Argumentativer Text",
+  "textType": "Argumentation",
+  "register": "sachlich",
+  "topic": "Datensouveraenitaet",
+  "instruction": "Schreiben Sie einen zusammenhängenden argumentativen Text zum Thema 'Datensouveränität – Wem gehören unsere Daten?'. Beziehen Sie dabei die Aussagen der Experten sowie die vorliegenden Statistikdaten in Ihre Argumentation ein. Achten Sie auf eine klare Strukturierung und einen sachlichen Stil.",
+  "instructionVi": "Viết một bài văn nghị luận mạch lạc về chủ đề 'Quyền tự chủ dữ liệu - Dữ liệu của chúng ta thuộc về ai?'. Hãy đưa các ý kiến chuyên gia và dữ liệu thống kê đã cho vào lập luận của bạn. Chú ý cấu trúc rõ ràng và văn phong khách quan.",
+  "situation": "Im Rahmen Ihres Studiums der Medienwissenschaften nehmen Sie an einer Online-Diskussion über digitale Ethik teil. Sie sollen einen schriftlichen Beitrag verfassen, der die aktuelle Situation der Datenhoheit kritisch beleuchtet und zukünftige Herausforderungen analysiert.",
+  "contentPoints": [
+    "Fassen Sie die wesentlichen Aussagen der Experten und die Ergebnisse der Grafik kurz zusammen.",
+    "Erläutern Sie die Bedeutung der Datensouveränität für die persönliche Freiheit im digitalen Raum.",
+    "Diskutieren Sie die Diskrepanz zwischen dem Wunsch nach Datenschutz und der tatsächlichen Preisgabe von Daten für komfortable Dienste.",
+    "Bewerten Sie, inwiefern staatliche Regulierungen im Vergleich zur individuellen Medienkompetenz die Datensouveränität stärken können."
+  ],
+  "sourceText": "1. Prof. Dr. Elena Meyer: 'Daten sind das Öl des 21. Jahrhunderts, doch im Gegensatz zu fossilen Brennstoffen haben wir als Individuen die Kontrolle über die Raffinerien – also die Verarbeitungsalgorithmen – längst verloren.' \n2. Marc Schneider (IT-Ethiker): 'Echte Datensouveränität bedeutet nicht nur den Schutz vor Missbrauch, sondern die aktive Gestaltungsfreiheit und Transparenz darüber, welche digitalen Spuren wir zu welchem Zweck hinterlassen.'",
+  "sourceTextType": "Expertenzitate",
+  "grafikDesc": "Die Grafik 'Vertrauen der Bürger in den verantwortungsvollen Umgang mit persönlichen Daten (2023)' zeigt den prozentualen Anteil der Befragten, die verschiedenen Institutionen beim Datenschutz vertrauen.",
+  "grafikData": [
+    {
+      "label": "Banken und Kreditinstitute",
+      "value": 68,
+      "unit": "%"
+    },
+    {
+      "label": "Staatliche Behörden / Ämter",
+      "value": 45,
+      "unit": "%"
+    },
+    {
+      "label": "Online-Versandhandel",
+      "value": 22,
+      "unit": "%"
+    },
+    {
+      "label": "Soziale Netzwerke",
+      "value": 9,
+      "unit": "%"
+    }
+  ],
+  "minWords": 250,
+  "maxWords": 400,
+  "timeMinutes": 50,
+  "rubric": {
+    "criteria": [
+      {
+        "id": "inhalt",
+        "name": "Inhalt",
+        "nameVi": "Nội dung",
+        "maxScore": 5,
+        "weight": 20
+      },
+      {
+        "id": "angemessenheit",
+        "name": "Kommunikative Angemessenheit",
+        "nameVi": "Phù hợp giao tiếp",
+        "maxScore": 5,
+        "weight": 20
+      },
+      {
+        "id": "korrektheit",
+        "name": "Korrektheit",
+        "nameVi": "Chính xác ngữ pháp & chính tả",
+        "maxScore": 5,
+        "weight": 20
+      },
+      {
+        "id": "spektrum",
+        "name": "Wortschatz & Strukturen",
+        "nameVi": "Đa dạng từ vựng & cấu trúc",
+        "maxScore": 5,
+        "weight": 20
+      },
+      {
+        "id": "kohaerenz",
+        "name": "Kohaerenz & Kohaesion",
+        "nameVi": "Mạch lạc & liên kết",
+        "maxScore": 5,
+        "weight": 20
+      }
+    ],
+    "maxScore": 25
+  },
+  "maxScore": 25
+}

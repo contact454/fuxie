@@ -1,0 +1,185 @@
+{
+  "id": "C2-T4-005",
+  "level": "C2",
+  "teil": 4,
+  "teil_name": "Meinungen zuordnen",
+  "topic": "Internationale Beziehungen",
+  "topic_id": "005",
+  "metadata": {
+    "word_count": 109,
+    "target_grammar": [
+      "Alle Strukturen",
+      "Konjunktiv I/II",
+      "Erweiterte Partizipialkonstruktionen",
+      "Nominalisierung",
+      "Akademischer Stil"
+    ],
+    "target_vocabulary": [],
+    "generated_at": "2026-03-12T00:00:04.735012",
+    "version": 1
+  },
+  "opinion_texts": {
+    "question": "Sind internationale Institutionen noch reformierbar?",
+    "texts": [
+      {
+        "name": "Diplomatin Dr. Petra Schäfer",
+        "label": "A",
+        "text": "Die Vereinten Nationen und die Bretton-Woods-Institutionen spiegeln eine Weltordnung wider, die 1945 geschaffen wurde und den heutigen geopolitischen Realitäten nicht mehr entspricht. Eine grundlegende Reform des Sicherheitsrats ist überfällig, scheitert aber am Vetorecht der ständigen Mitglieder."
+      },
+      {
+        "name": "Prof. Dr. Robert Kim, Politologe",
+        "label": "B",
+        "text": "Trotz aller Schwächen haben multilaterale Institutionen in den vergangenen acht Jahrzehnten einen historisch beispiellosen Beitrag zur Friedenssicherung geleistet. Ihre Abschaffung oder Marginalisierung würde ein gefährliches Machtvakuum schaffen."
+      },
+      {
+        "name": "Außenpolitik-Analystin Dr. Fatima Al-Rashid",
+        "label": "C",
+        "text": "Die wirkungsvollsten internationalen Kooperationsformen entstehen heute außerhalb der traditionellen Institutionen: Städtenetzwerke, transnationale zivilgesellschaftliche Organisationen und Ad-hoc-Koalitionen zu spezifischen Themen."
+      },
+      {
+        "name": "Wirtschaftswissenschaftler Prof. Dr. Hans Weber",
+        "label": "D",
+        "text": "Die internationalen Finanzinstitutionen haben durch ihre neoliberale Konditionierungspolitik in Entwicklungsländern mehr Schaden angerichtet als Nutzen gestiftet. Eine Reform muss die Machtverhältnisse grundlegend zugunsten des Globalen Südens verschieben."
+      }
+    ]
+  },
+  "images": [
+    {
+      "id": "IMG1",
+      "type": "scene",
+      "prompt": "Sophisticated cartoon of experts discussing Internationale Beziehungen. Fuxie cartoon style, flat illustration, warm pastel colors, no text.",
+      "filename": "C2-T4-005_scene.png",
+      "placement": "header",
+      "alt_text": "Sind internationale Institutionen noch reformierba",
+      "dimensions": "768x512"
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q1",
+      "teil": 4,
+      "type": "matching",
+      "stem": "Die Weltordnung von 1945 entspricht nicht mehr den heutigen Realitäten.",
+      "answer": "A",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Text/Beitrag A",
+        "reasoning": "Die Aussage 'Die Weltordnung von 1945 entspricht nicht mehr den...' entspricht der Position von A."
+      }
+    },
+    {
+      "id": "Q2",
+      "teil": 4,
+      "type": "matching",
+      "stem": "Die methodologische Annahme, dass multilaterale Institutionen haben historisch zur Friedenssicherung beigetragen, prägt die Analyse von:",
+      "answer": "B",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Text/Beitrag B",
+        "reasoning": "[Inferential] Die Aussage 'Multilaterale Institutionen haben historisch zur F...' entspricht der Position von B."
+      }
+    },
+    {
+      "id": "Q3",
+      "teil": 4,
+      "type": "matching",
+      "stem": "Die epistemologische Überzeugung, dass Die wirkungsvollsten Kooperationen entstehen außerhalb traditioneller Institutionen, manifestiert sich in der Argumentation von:",
+      "answer": "C",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Text/Beitrag C",
+        "reasoning": "[Inferential] Die Aussage 'Die wirkungsvollsten Kooperationen entstehen außer...' entspricht der Position von C."
+      }
+    },
+    {
+      "id": "Q4",
+      "teil": 4,
+      "type": "matching",
+      "stem": "Die epistemologische Überzeugung, dass internationale Finanzinstitutionen haben in Entwicklungsländern Schaden angerichtet, manifestiert sich in der Argumentation von:",
+      "answer": "D",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Text/Beitrag D",
+        "reasoning": "[Inferential] Die Aussage 'Internationale Finanzinstitutionen haben in Entwic...' entspricht der Position von D."
+      }
+    },
+    {
+      "id": "Q5",
+      "teil": 4,
+      "type": "matching",
+      "stem": "Die epistemologische Überzeugung, dass Das Vetorecht blockiert die Reform des Sicherheitsrats, manifestiert sich in der Argumentation von:",
+      "answer": "A",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Text/Beitrag A",
+        "reasoning": "[Inferential] Die Aussage 'Das Vetorecht blockiert die Reform des Sicherheits...' entspricht der Position von A."
+      }
+    },
+    {
+      "id": "Q6",
+      "teil": 4,
+      "type": "matching",
+      "stem": "Die methodologische Annahme, dass städtenetzwerke und zivilgesellschaftliche Organisationen sind effektiver, prägt die Analyse von:",
+      "answer": "C",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Text/Beitrag C",
+        "reasoning": "[Inferential] Die Aussage 'Städtenetzwerke und zivilgesellschaftliche Organis...' entspricht der Position von C."
+      }
+    }
+  ],
+  "scoring": {
+    "total_points": 6,
+    "pass_threshold": 4,
+    "grading": [
+      {
+        "range": [
+          5,
+          6
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          4,
+          4
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          3,
+          3
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          1,
+          2
+        ],
+        "label": "Noch üben!",
+        "emoji": "📝"
+      },
+      {
+        "range": [
+          0,
+          0
+        ],
+        "label": "Mehr Übung nötig",
+        "emoji": "💪"
+      }
+    ]
+  },
+  "qa": {
+    "vocab_in_c2_list": true,
+    "grammar_c2_appropriate": true,
+    "word_count_in_range": true,
+    "all_answers_verifiable": true,
+    "image_count": 1,
+    "passed": true
+  }
+}

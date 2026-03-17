@@ -1,0 +1,64 @@
+{
+  "id": "W-B2-T2-018",
+  "cefrLevel": "B2",
+  "teil": 2,
+  "teilName": "Nachricht/E-Mail",
+  "textType": "E-Mail",
+  "register": "formell",
+  "topic": "Weiterbildungsantrag",
+  "instruction": "Sie arbeiten in einer Marketing-Agentur. Ihre Abteilungsleiterin, Frau Dr. Weber, hat eine E-Mail bezüglich des jährlichen Weiterbildungsbudgets geschickt. Schreiben Sie eine Antwort, in der Sie einen konkreten Kurs vorschlagen und dessen Relevanz für Ihre Arbeit begründen. Gehen Sie auf die unten genannten Punkte ein.",
+  "instructionVi": "Bạn đang làm việc tại một công ty Marketing. Trưởng phòng của bạn, bà Tiến sĩ Weber, đã gửi một email về ngân sách đào tạo thường niên. Hãy viết phản hồi đề xuất một khóa học cụ thể và giải thích tầm quan trọng của nó đối với công việc của bạn.",
+  "situation": "In Ihrem Unternehmen wird großen Wert auf kontinuierliche Fortbildung gelegt. Da für das laufende Quartal noch Budget zur Verfügung steht, möchte Ihre Vorgesetzte Vorschläge von den Mitarbeitern erhalten. Sie haben ein passendes Seminar gefunden, das perfekt zu Ihren aktuellen Projekten passt.",
+  "contentPoints": [
+    "Grund des Schreibens und Dank für das Angebot",
+    "Präsentation der gewählten Fortbildung (Thema, Dauer und Kosten)",
+    "Detaillierte Begründung, warum dieser Kurs für Ihre aktuellen Projekte wichtig ist",
+    "Vorschlag zur Arbeitsorganisation während Ihrer Abwesenheit"
+  ],
+  "sourceText": "Betreff: Fortbildungsbudget für das laufende Jahr\n\nLiebe Mitarbeiterinnen und Mitarbeiter,\n\nwir freuen uns, Ihnen mitteilen zu können, dass für das restliche Jahr noch Mittel für Ihre berufliche Weiterentwicklung bereitstehen. Falls Sie Interesse an einem Workshop oder Seminar haben, das Ihre Fachkompetenzen erweitert, senden Sie mir bitte bis Ende der Woche einen kurzen Antrag zu. Bitte begründen Sie darin kurz den Nutzen für unser Team.\n\nMit freundlichen Grüßen\n\nDr. Susanne Weber\nAbteilungsleitung",
+  "sourceTextType": "E-Mail",
+  "minWords": 100,
+  "maxWords": 150,
+  "timeMinutes": 25,
+  "rubric": {
+    "criteria": [
+      {
+        "id": "inhalt",
+        "name": "Inhalt",
+        "nameVi": "Nội dung",
+        "maxScore": 5,
+        "weight": 25
+      },
+      {
+        "id": "angemessenheit",
+        "name": "Kommunikative Angemessenheit",
+        "nameVi": "Phù hợp giao tiếp",
+        "maxScore": 5,
+        "weight": 20
+      },
+      {
+        "id": "korrektheit",
+        "name": "Korrektheit",
+        "nameVi": "Chính xác ngữ pháp & chính tả",
+        "maxScore": 5,
+        "weight": 25
+      },
+      {
+        "id": "spektrum",
+        "name": "Wortschatz & Strukturen",
+        "nameVi": "Đa dạng từ vựng & cấu trúc",
+        "maxScore": 5,
+        "weight": 15
+      },
+      {
+        "id": "kohaerenz",
+        "name": "Kohaerenz & Kohaesion",
+        "nameVi": "Mạch lạc & liên kết",
+        "maxScore": 5,
+        "weight": 15
+      }
+    ],
+    "maxScore": 25
+  },
+  "maxScore": 25
+}

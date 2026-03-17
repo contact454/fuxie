@@ -1,0 +1,31 @@
+# ===== Fuxie AI Service — Hono =====
+FROM node:22-alpine AS base
+
+RUN corepack enable && corepack prepare pnpm@9.15.4 --activate
+
+# ===== Dependencies =====
+FROM base AS deps
+WORKDIR /app
+COPY package.json pnpm-workspace.yaml pnpm-lock.yaml .npmrc ./
+COPY apps/ai-service/package.json ./apps/ai-service/
+COPY packages/database/package.json ./packages/database/
+COPY packages/shared/package.json ./packages/shared/
+COPY packages/srs-engine/package.json ./packages/srs-engine/
+COPY packages/typescript-config/package.json ./packages/typescript-config/
+RUN pnpm install --frozen-lockfile --prod
+
+# ===== Production =====
+FROM base AS runner
+WORKDIR /app
+ENV NODE_ENV=production PORT=8080
+
+RUN addgroup --system --gid 1001 hono
+RUN adduser --system --uid 1001 fuxie
+
+COPY --from=deps /app/node_modules ./node_modules
+COPY --from=deps /app/apps/ai-service/node_modules ./apps/ai-service/node_modules
+COPY . .
+
+USER fuxie
+EXPOSE 8080
+CMD ["node", "--import", "tsx", "apps/ai-service/src/index.ts"]

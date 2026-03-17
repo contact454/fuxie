@@ -1,0 +1,51 @@
+{
+  "id": "W-A2-T1-010",
+  "cefrLevel": "A2",
+  "teil": 1,
+  "teilName": "E-Mail-Antwort",
+  "textType": "E-Mail",
+  "register": "informell",
+  "topic": "Wochenende",
+  "instruction": "Schreiben Sie eine Antwort-E-Mail (ca. 40-60 Woerter). Schreiben Sie zu allen drei Punkten.",
+  "instructionVi": "Tra loi email: Wochenende.",
+  "situation": "Ihre Freundin fragt: Was machen wir am Wochenende?",
+  "contentPoints": [
+    "Aktivitaet vorschlagen",
+    "Treffpunkt nennen",
+    "Alternative anbieten"
+  ],
+  "minWords": 40,
+  "maxWords": 70,
+  "timeMinutes": 15,
+  "rubric": {
+    "criteria": [
+      {
+        "id": "inhalt",
+        "name": "Inhalt",
+        "nameVi": "Noi dung",
+        "maxScore": 5,
+        "weight": 30
+      },
+      {
+        "id": "korrektheit",
+        "name": "Korrektheit",
+        "nameVi": "Chinh xac",
+        "maxScore": 5,
+        "weight": 35
+      },
+      {
+        "id": "angemessenheit",
+        "name": "Kommunikative Angemessenheit",
+        "nameVi": "Phu hop giao tiep",
+        "maxScore": 5,
+        "weight": 35
+      }
+    ],
+    "maxScore": 15
+  },
+  "maxScore": 15,
+  "sourceText": "Hallo! Wie geht es dir? Ich freue mich schon sehr auf das Wochenende. Hast du Zeit? Ich möchte gerne etwas mit dir unternehmen, habe aber noch keinen Plan. Was könnten wir machen? Wo treffen wir uns am besten? Und was machen wir, wenn es regnet? Hast du eine andere Idee? Melde dich! Liebe Grüße, Lukas",
+  "sourceTextType": "E-Mail",
+  "stimulusSender": "Lukas",
+  "grafikData": []
+}

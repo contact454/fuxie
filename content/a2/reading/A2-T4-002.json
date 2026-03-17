@@ -1,0 +1,285 @@
+{
+  "id": "A2-T4-002",
+  "level": "A2",
+  "teil": 4,
+  "teil_name": "Fahrpläne und Kalender lesen",
+  "topic": "Meine Familie",
+  "topic_id": "002",
+  "metadata": {
+    "word_count": 82,
+    "target_grammar": [
+      "Modalverben",
+      "Zeitangaben"
+    ],
+    "target_vocabulary": [
+      "Kursplan",
+      "Eltern-Kind",
+      "Turnen",
+      "Babymassage",
+      "Musikgarten",
+      "Kursleiter",
+      "Altersgruppe",
+      "Anmeldung",
+      "Teilnahme",
+      "Gebühr"
+    ],
+    "generated_at": "2026-03-09T22:45:00+07:00",
+    "version": 1
+  },
+  "schedule": {
+    "title": "Familienzentrum Sonnenschein — Eltern-Kind-Kursplan",
+    "type": "course_schedule",
+    "columns": [
+      "Kurs",
+      "Tag",
+      "Uhrzeit",
+      "Alter",
+      "Kursleiter/in",
+      "Gebühr"
+    ],
+    "rows": [
+      [
+        "Babymassage",
+        "Montag",
+        "10:00–11:00",
+        "0–6 Monate",
+        "Frau Berger",
+        "8 €"
+      ],
+      [
+        "Krabbelgruppe",
+        "Dienstag",
+        "9:30–11:00",
+        "6–18 Monate",
+        "Frau Weber",
+        "kostenlos"
+      ],
+      [
+        "Musikgarten",
+        "Mittwoch",
+        "10:00–10:45",
+        "1–3 Jahre",
+        "Herr Richter",
+        "10 €"
+      ],
+      [
+        "Eltern-Kind-Turnen",
+        "Donnerstag",
+        "15:00–16:00",
+        "2–4 Jahre",
+        "Frau Hartmann",
+        "6 €"
+      ],
+      [
+        "Kreativ-Werkstatt",
+        "Freitag",
+        "10:00–11:30",
+        "3–6 Jahre",
+        "Frau Nowak",
+        "8 €"
+      ],
+      [
+        "Familiencafé",
+        "Samstag",
+        "10:00–14:00",
+        "alle",
+        "Frau Weber",
+        "kostenlos"
+      ]
+    ],
+    "footnote": "Anmeldung für alle Kurse am Empfang oder online. Krabbelgruppe und Familiencafé ohne Anmeldung. Bitte bequeme Kleidung und Socken mitbringen."
+  },
+  "images": [
+    {
+      "id": "IMG1",
+      "type": "schedule",
+      "prompt": "Cute cartoon illustration of a bright family center with parents and toddlers doing activities together — baby massage, music class, tumbling. Colorful room with mats and toys. Fuxie cartoon style, flat illustration, warm pastel colors, no text.",
+      "filename": "A2-T4-002_schedule.png",
+      "placement": "header",
+      "alt_text": "Eltern-Kind-Kursplan",
+      "dimensions": "768x512"
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q1",
+      "teil": 4,
+      "type": "detail_extraction",
+      "stem": "Welcher Kurs ist für Babys unter 6 Monaten?",
+      "options": {
+        "a": "Krabbelgruppe.",
+        "b": "Babymassage.",
+        "c": "Musikgarten."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Die Babymassage ist für 0–6 Monate.",
+        "key_evidence": "Babymassage: Alter 0–6 Monate",
+        "key_vocabulary": [
+          {
+            "word": "Babymassage",
+            "type": "Nomen",
+            "meaning": "baby massage"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q2",
+      "teil": 4,
+      "type": "detail_extraction",
+      "stem": "Welche Kurse sind kostenlos?",
+      "options": {
+        "a": "Babymassage und Musikgarten.",
+        "b": "Krabbelgruppe und Familiencafé.",
+        "c": "Eltern-Kind-Turnen und Kreativ-Werkstatt."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Krabbelgruppe und Familiencafé sind kostenlos.",
+        "key_evidence": "Krabbelgruppe: kostenlos / Familiencafé: kostenlos",
+        "key_vocabulary": [
+          {
+            "word": "kostenlos",
+            "type": "Adjektiv",
+            "meaning": "free of charge"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q3",
+      "teil": 4,
+      "type": "detail_extraction",
+      "stem": "Wer leitet den Musikgarten?",
+      "options": {
+        "a": "Frau Berger.",
+        "b": "Frau Weber.",
+        "c": "Herr Richter."
+      },
+      "answer": "c",
+      "points": 1,
+      "explanation": {
+        "de": "Herr Richter leitet den Musikgarten.",
+        "key_evidence": "Musikgarten: Kursleiter/in Herr Richter",
+        "key_vocabulary": [
+          {
+            "word": "Kursleiter",
+            "type": "Nomen",
+            "meaning": "course instructor"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q4",
+      "teil": 4,
+      "type": "detail_extraction",
+      "stem": "Für welche Kurse braucht man keine Anmeldung?",
+      "options": {
+        "a": "Babymassage und Musikgarten.",
+        "b": "Krabbelgruppe und Familiencafé.",
+        "c": "Eltern-Kind-Turnen und Kreativ-Werkstatt."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Krabbelgruppe und Familiencafé sind ohne Anmeldung.",
+        "key_evidence": "Krabbelgruppe und Familiencafé ohne Anmeldung",
+        "key_vocabulary": [
+          {
+            "word": "Anmeldung",
+            "type": "Nomen",
+            "meaning": "registration"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q5",
+      "teil": 4,
+      "type": "detail_extraction",
+      "stem": "Was soll man zum Kurs mitbringen?",
+      "options": {
+        "a": "Sportschuhe und eine Matte.",
+        "b": "Bequeme Kleidung und Socken.",
+        "c": "Handtuch und Trinkflasche."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Man soll bequeme Kleidung und Socken mitbringen.",
+        "key_evidence": "Bitte bequeme Kleidung und Socken mitbringen",
+        "key_vocabulary": [
+          {
+            "word": "bequem",
+            "type": "Adjektiv",
+            "meaning": "comfortable"
+          },
+          {
+            "word": "Socken",
+            "type": "Nomen",
+            "meaning": "socks"
+          }
+        ]
+      }
+    }
+  ],
+  "scoring": {
+    "total_points": 5,
+    "pass_threshold": 3,
+    "grading": [
+      {
+        "range": [
+          5,
+          5
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          4,
+          4
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          3,
+          3
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          1,
+          2
+        ],
+        "label": "Noch üben!",
+        "emoji": "📝"
+      },
+      {
+        "range": [
+          0,
+          0
+        ],
+        "label": "Mehr Übung nötig",
+        "emoji": "💪"
+      }
+    ]
+  },
+  "qa": {
+    "vocab_in_a2_list": true,
+    "grammar_a2_only": true,
+    "word_count_in_range": true,
+    "all_answers_verifiable": true,
+    "schedule_data_consistent": true,
+    "image_count": 1,
+    "passed": true
+  }
+}

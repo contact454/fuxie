@@ -1,0 +1,64 @@
+{
+  "id": "W-B1-T3-014",
+  "cefrLevel": "B1",
+  "teil": 3,
+  "teilName": "Formelle E-Mail",
+  "textType": "Formeller Brief",
+  "register": "formell",
+  "topic": "Stromrechnung-Widerspruch",
+  "instruction": "Sie haben Ihre aktuelle Jahresabrechnung für Strom erhalten und sind mit dem hohen Betrag nicht einverstanden. Schreiben Sie eine E-Mail an den Kundenservice der Stadtwerke, um Widerspruch einzulegen.",
+  "instructionVi": "Bạn nhận được hóa đơn tiền điện hàng năm và không đồng ý với số tiền quá cao. Hãy viết email cho bộ phận chăm sóc khách hàng để khiếu nại.",
+  "situation": "In Ihrer aktuellen Stromrechnung wird eine Nachzahlung von über 400 Euro gefordert. Dies erscheint Ihnen sehr unplausibel, da Sie in den Sommermonaten zwei Monate lang im Ausland waren und die Wohnung leer stand.",
+  "contentPoints": [
+    "Nennen Sie den Grund für Ihr Schreiben und die Rechnungsnummer.",
+    "Schildern Sie Ihre Situation (Abwesenheit im Sommer) als Grund für den Widerspruch.",
+    "Bitten Sie um eine Überprüfung des Stromzählers oder der Abrechnungsdaten.",
+    "Fragen Sie nach dem weiteren Vorgehen bezüglich der Zahlungsfrist."
+  ],
+  "sourceText": "STADTWERKE MUSTERSTADT\nAbteilung: Kundenservice\nRechnungsnummer: ST-99283-2023\nDatum: 12.11.2023\nIhre neue Abrechnung: 1.250,00 €\nBisher bezahlt: 835,00 €\nOffener Betrag (Nachzahlung): 415,00 €\nFällig am: 30.11.2023",
+  "sourceTextType": "Rechnungsbeleg / Mitteilung",
+  "minWords": 80,
+  "maxWords": 120,
+  "timeMinutes": 25,
+  "rubric": {
+    "criteria": [
+      {
+        "id": "inhalt",
+        "name": "Inhalt",
+        "nameVi": "Nội dung",
+        "maxScore": 5,
+        "weight": 25
+      },
+      {
+        "id": "angemessenheit",
+        "name": "Kommunikative Angemessenheit",
+        "nameVi": "Phù hợp giao tiếp",
+        "maxScore": 5,
+        "weight": 20
+      },
+      {
+        "id": "korrektheit",
+        "name": "Korrektheit",
+        "nameVi": "Chính xác ngữ pháp & chính tả",
+        "maxScore": 5,
+        "weight": 25
+      },
+      {
+        "id": "spektrum",
+        "name": "Wortschatz & Strukturen",
+        "nameVi": "Đa dạng từ vựng & cấu trúc",
+        "maxScore": 5,
+        "weight": 15
+      },
+      {
+        "id": "kohaerenz",
+        "name": "Kohaerenz & Kohaesion",
+        "nameVi": "Mạch lạc & liên kết",
+        "maxScore": 5,
+        "weight": 15
+      }
+    ],
+    "maxScore": 25
+  },
+  "maxScore": 25
+}

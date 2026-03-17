@@ -1,0 +1,171 @@
+{
+  "id": "C1-T1-001",
+  "level": "C1",
+  "teil": 1,
+  "teil_name": "Lückentext (Wörter)",
+  "topic": "Philosophie & Ethik",
+  "topic_id": "001",
+  "metadata": {
+    "word_count": 228,
+    "target_grammar": [
+      "Nominalisierung",
+      "Partizipialkonstruktionen",
+      "Konjunktiv I/II",
+      "Passiversatzformen"
+    ],
+    "target_vocabulary": [],
+    "generated_at": "2026-03-11T22:50:15.527648",
+    "version": 1
+  },
+  "cloze": {
+    "title": "Die Trolley-Dilemma-Debatte in der modernen Ethik",
+    "text": "Das sogenannte Trolley-Dilemma gehört zu den bekanntesten {1} der Moralphilosophie. In seiner Grundform steht ein Beobachter vor der Entscheidung, ob er eine Weiche {2} soll, um einen außer Kontrolle geratenen Straßenbahnwagen von fünf auf einem Gleis befindlichen Personen abzulenken — auf ein anderes Gleis, auf dem sich jedoch eine einzelne Person befindet. Die Frage, ob es moralisch {3} ist, einen Menschen zu opfern, um fünf zu retten, spaltet Philosophen seit Jahrzehnten.\n\nDie utilitaristische Position, die von Jeremy Bentham und John Stuart Mill begründet wurde, beantwortet die Frage eindeutig: Da das {4} aller Beteiligten maximiert werden soll, ist das Umstellen der Weiche die richtige Handlung. Aus dieser Perspektive zählt ausschließlich das Ergebnis einer Handlung, nicht die Absicht des Handelnden.\n\nImmanuel Kants kategorischer Imperativ hingegen verbietet es grundsätzlich, einen Menschen als bloßes {5} für einen Zweck zu benutzen. Nach dieser Auffassung wäre das aktive Umlenken des Wagens — und damit das bewusste Herbeiführen des Todes einer Person — moralisch verwerflich, unabhängig davon, wie viele Leben dadurch gerettet werden {6}.\n\nNeuere Forschungen aus der experimentellen Philosophie zeigen, dass die moralischen Intuitionen der meisten Menschen weder rein utilitaristisch noch rein deontologisch sind, sondern von zahlreichen situativen Faktoren {7}. Die physische Nähe zum potenziellen Opfer, die Unmittelbarkeit der Handlung und sogar kulturelle Prägungen beeinflussen die moralische Bewertung signifikant. Diese Erkenntnisse stellen die klassische Annahme infrage, dass moralische Urteile primär auf rationalen Prinzipien {8}.",
+    "gaps": [
+      {
+        "pos": 1,
+        "options": {
+          "a": "Gedankenexperimente",
+          "b": "Untersuchungen",
+          "c": "Begründungen",
+          "d": "Schlussfolgerungen"
+        },
+        "answer": "a"
+      },
+      {
+        "pos": 2,
+        "options": {
+          "a": "betätigen",
+          "b": "umstellen",
+          "c": "bewegen",
+          "d": "verändern"
+        },
+        "answer": "b"
+      },
+      {
+        "pos": 3,
+        "options": {
+          "a": "vertretbar",
+          "b": "möglich",
+          "c": "verständlich",
+          "d": "nachvollziehbar"
+        },
+        "answer": "a"
+      },
+      {
+        "pos": 4,
+        "options": {
+          "a": "Einkommen",
+          "b": "Wohlergehen",
+          "c": "Verhalten",
+          "d": "Interesse"
+        },
+        "answer": "b"
+      },
+      {
+        "pos": 5,
+        "options": {
+          "a": "Werkzeug",
+          "b": "Instrument",
+          "c": "Mittel",
+          "d": "Objekt"
+        },
+        "answer": "c"
+      },
+      {
+        "pos": 6,
+        "options": {
+          "a": "könnten",
+          "b": "sollten",
+          "c": "möchten",
+          "d": "müssten"
+        },
+        "answer": "a"
+      },
+      {
+        "pos": 7,
+        "options": {
+          "a": "abhängen",
+          "b": "bestimmen",
+          "c": "resultieren",
+          "d": "folgen"
+        },
+        "answer": "a"
+      },
+      {
+        "pos": 8,
+        "options": {
+          "a": "aufbauen",
+          "b": "basieren",
+          "c": "gründen",
+          "d": "stützen"
+        },
+        "answer": "b"
+      }
+    ]
+  },
+  "images": [
+    {
+      "id": "IMG1",
+      "type": "scene",
+      "prompt": "Cute cartoon illustration related to Philosophie & Ethik, showing an academic/intellectual scene. Fuxie cartoon style, flat illustration, warm pastel colors, no text.",
+      "filename": "C1-T1-001_scene.png",
+      "placement": "header",
+      "alt_text": "Die Trolley-Dilemma-Debatte in der modernen Ethik",
+      "dimensions": "768x512"
+    }
+  ],
+  "scoring": {
+    "total_points": 8,
+    "pass_threshold": 5,
+    "grading": [
+      {
+        "range": [
+          7,
+          8
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          5,
+          6
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          4,
+          4
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          1,
+          3
+        ],
+        "label": "Noch üben!",
+        "emoji": "📝"
+      },
+      {
+        "range": [
+          0,
+          0
+        ],
+        "label": "Mehr Übung nötig",
+        "emoji": "💪"
+      }
+    ]
+  },
+  "qa": {
+    "vocab_in_c1_list": true,
+    "grammar_c1_appropriate": true,
+    "word_count_in_range": true,
+    "all_gaps_have_4_options": true,
+    "image_count": 1,
+    "passed": true
+  }
+}

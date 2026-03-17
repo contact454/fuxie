@@ -1,0 +1,64 @@
+{
+  "id": "W-C2-T2-017",
+  "cefrLevel": "C2",
+  "teil": 2,
+  "teilName": "Textumwandlung",
+  "textType": "Sachtext",
+  "register": "sachlich",
+  "topic": "Gesundheitswesen",
+  "instruction": "Verfassen Sie auf der Grundlage der vorliegenden Notizen einen zusammenhängenden, sachlichen Artikel für ein Fachmagazin für Gesundheitspolitik. Gehen Sie auf die aktuelle Situation, die Ursachen der Krise sowie die vorgeschlagenen Lösungsansätze ein und formulieren Sie eine abschließende Einschätzung zur Zukunft des Sektors. Ihr Text sollte gut strukturiert sein und dem Register eines Fachartikels entsprechen.",
+  "instructionVi": "Dựa trên các ghi chú đã cho, hãy viết một bài báo khách quan và mạch lạc cho một tạp chí chuyên ngành về chính sách y tế. Hãy đề cập đến tình hình hiện tại, nguyên nhân của cuộc khủng hoảng cũng như các giải pháp được đề xuất và đưa ra đánh giá cuối cùng về tương lai của ngành này. Văn bản cần được cấu trúc chặt chẽ và phù hợp với văn phong của một bài báo chuyên ngành.",
+  "situation": "Sie arbeiten als Referent für eine renommierte gesundheitspolitische Stiftung. Im Rahmen eines internationalen Symposiums zum Thema 'Zukunft der Pflege' haben Sie sich detaillierte Notizen gemacht, die Sie nun für die Veröffentlichung in einem Fachorgan aufbereiten müssen.",
+  "contentPoints": [
+    "Detaillierte Darstellung der aktuellen personellen Situation und der demografischen Herausforderungen im Pflegebereich.",
+    "Kritische Analyse der Arbeitsbedingungen und administrativen Hürden als Hauptursachen für den Fachkräftemangel.",
+    "Erörterung und Bewertung der technologischen und akademischen Lösungsansätze zur Attraktivitätssteigerung des Berufsfeldes.",
+    "Formulierung eines Ausblicks auf notwendige strukturelle Reformen und die gesellschaftliche Wertschätzung des Gesundheitssektors."
+  ],
+  "sourceText": "Notizen zum Symposium 'Herausforderungen im modernen Gesundheitswesen'\n\nAktuelle Lage: Die demografische Entwicklung in Deutschland führt zu einer rasant steigenden Zahl an Pflegebedürftigen. Gleichzeitig herrscht ein massiver Mangel an qualifiziertem Personal. Viele Pflegekräfte leiden unter chronischer Überlastung und verlassen den Sektor bereits nach kurzer Zeit, was oft als 'Pflexit' bezeichnet wird.\n\nHintergründe der Misere: Die Vergütung ist oft nicht angemessen, doch die Hauptursache liegt in den prekären Arbeitsbedingungen. Starre Schichtmodelle verhindern die Work-Life-Balance. Hinzu kommt eine ausufernde Dokumentationspflicht, die wertvolle Zeit am Patienten raubt. Die Hierarchien in Kliniken werden oft als hinderlich empfunden, da Eigenverantwortung kaum möglich ist.\n\nStrategien zur Besserung:\n1. Technologische Innovation: Einsatz von KI und Robotik zur Unterstützung bei körperlich schweren Arbeiten oder zur Automatisierung der Verwaltungsprozesse.\n2. Migration: Gezielte Anwerbung internationaler Fachkräfte, wobei die bürokratischen Hürden bei der Anerkennung von Qualifikationen drastisch gesenkt werden müssen.\n3. Akademisierung des Berufs: Durch universitäre Abschlüsse soll die Autonomie der Pflege gestärkt und das Image des Berufsstands nachhaltig verbessert werden.\n\nZukunftsvision: Das System benötigt eine fundamentale Strukturreform. Weg von der reinen Gewinnorientierung in Krankenhäusern (Fallpauschalen-Problematik), hin zu einer patientenzentrierten Versorgung. Die Finanzierung muss auf eine breitere Basis gestellt werden, um die Versorgungsqualität langfristig zu sichern.",
+  "sourceTextType": "Notizen",
+  "minWords": 250,
+  "maxWords": null,
+  "timeMinutes": 45,
+  "rubric": {
+    "criteria": [
+      {
+        "id": "inhalt",
+        "name": "Inhalt",
+        "nameVi": "Nội dung",
+        "maxScore": 5,
+        "weight": 20
+      },
+      {
+        "id": "angemessenheit",
+        "name": "Kommunikative Angemessenheit",
+        "nameVi": "Phù hợp giao tiếp",
+        "maxScore": 5,
+        "weight": 20
+      },
+      {
+        "id": "korrektheit",
+        "name": "Korrektheit",
+        "nameVi": "Chính xác ngữ pháp & chính tả",
+        "maxScore": 5,
+        "weight": 20
+      },
+      {
+        "id": "spektrum",
+        "name": "Wortschatz & Strukturen",
+        "nameVi": "Đa dạng từ vựng & cấu trúc",
+        "maxScore": 5,
+        "weight": 20
+      },
+      {
+        "id": "kohaerenz",
+        "name": "Kohaerenz & Kohaesion",
+        "nameVi": "Mạch lạc & liên kết",
+        "maxScore": 5,
+        "weight": 20
+      }
+    ],
+    "maxScore": 25
+  },
+  "maxScore": 25
+}

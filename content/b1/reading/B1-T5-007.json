@@ -1,0 +1,243 @@
+{
+  "id": "B1-T5-007",
+  "level": "B1",
+  "teil": 5,
+  "teil_name": "Informationsblatt lesen",
+  "topic": "Kultur & Gesellschaft",
+  "topic_id": "007",
+  "metadata": {
+    "word_count": 275,
+    "target_grammar": [
+      "Passiv",
+      "Modalverben",
+      "Nebensatz mit wenn/dass"
+    ],
+    "target_vocabulary": [
+      "Ehrenamt",
+      "Verein",
+      "Engagement",
+      "Versicherung",
+      "Aufwandsentschädigung",
+      "Freiwillige",
+      "Steuerfreibetrag",
+      "sozial"
+    ],
+    "generated_at": "2026-03-10T23:50:00+07:00",
+    "version": 1
+  },
+  "infotext": {
+    "source": "Bundesministerium für Familie",
+    "title": "Ehrenamt in Deutschland: Was Sie wissen sollten",
+    "format": "Informationsblatt",
+    "sections": [
+      {
+        "heading": "Was ist ein Ehrenamt?",
+        "text": "Ein Ehrenamt ist eine freiwillige, unbezahlte Tätigkeit für das Gemeinwohl. In Deutschland engagieren sich rund 29 Millionen Menschen ehrenamtlich — in Sportvereinen, bei der Feuerwehr, in sozialen Einrichtungen, Kulturvereinen oder in der Flüchtlingshilfe."
+      },
+      {
+        "heading": "Rechte und Pflichten",
+        "text": "Ehrenamtliche arbeiten freiwillig und können ihr Engagement jederzeit beenden. Sie haben jedoch eine Sorgfaltspflicht: Was Sie im Ehrenamt erfahren, müssen Sie vertraulich behandeln. Bei regelmäßigem Engagement muss der Verein Sie gegen Unfälle versichern."
+      },
+      {
+        "heading": "Aufwandsentschädigung",
+        "text": "Ein Ehrenamt ist grundsätzlich unbezahlt. Allerdings können Vereine eine Aufwandsentschädigung zahlen — die sogenannte Ehrenamtspauschale. Diese beträgt maximal 840 Euro pro Jahr und ist steuerfrei. Für Übungsleiter (z.B. Sporttrainer, Musiklehrer) beträgt der Freibetrag sogar 3.000 Euro pro Jahr."
+      },
+      {
+        "heading": "Versicherung",
+        "text": "Ehrenamtliche sind über den Verein oder über die gesetzliche Unfallversicherung geschützt, wenn sie sich während der Tätigkeit verletzen. Für Haftpflichtschäden gibt es in vielen Bundesländern eine Sammelversicherung."
+      },
+      {
+        "heading": "Wo engagieren?",
+        "text": "Sie möchten sich ehrenamtlich engagieren, wissen aber nicht wo? Die Freiwilligenagenturen in Ihrer Stadt helfen Ihnen, das passende Ehrenamt zu finden. Online: www.ehrenamt.de. Oder fragen Sie direkt bei Vereinen, Kirchen oder sozialen Einrichtungen in Ihrer Nähe."
+      }
+    ]
+  },
+  "images": [
+    {
+      "id": "IMG1",
+      "type": "scene",
+      "prompt": "Cute cartoon illustration of diverse volunteers doing community work: coaching kids in sports, helping at a food bank, firefighting, tutoring. Fuxie cartoon style, flat illustration, warm pastel colors, no text.",
+      "filename": "B1-T5-007_scene.png",
+      "placement": "header",
+      "alt_text": "Ehrenamt in Deutschland",
+      "dimensions": "768x512"
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q1",
+      "teil": 5,
+      "type": "multiple_choice",
+      "stem": "Was ist die Hauptaussage des Textes zu viele Menschen engagieren sich in Deutschland ehrenamtlich?",
+      "options": {
+        "a": "Rund 15 Millionen.",
+        "b": "Rund 29 Millionen.",
+        "c": "Rund 40 Millionen."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Rund 29 Millionen Menschen sind ehrenamtlich aktiv.",
+        "key_evidence": "rund 29 Millionen Menschen ehrenamtlich",
+        "key_vocabulary": [
+          {
+            "word": "ehrenamtlich",
+            "type": "Adjektiv",
+            "meaning": "voluntary / honorary"
+          }
+        ],
+        "reasoning": "[Inferential] "
+      }
+    },
+    {
+      "id": "Q2",
+      "teil": 5,
+      "type": "multiple_choice",
+      "stem": "Wie hoch ist die steuerfreie Ehrenamtspauschale pro Jahr?",
+      "options": {
+        "a": "Maximal 500 Euro.",
+        "b": "Maximal 840 Euro.",
+        "c": "Maximal 1.200 Euro."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Die Ehrenamtspauschale beträgt maximal 840 Euro pro Jahr.",
+        "key_evidence": "maximal 840 Euro pro Jahr und ist steuerfrei",
+        "key_vocabulary": [
+          {
+            "word": "Ehrenamtspauschale",
+            "type": "Nomen",
+            "meaning": "volunteer allowance"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q3",
+      "teil": 5,
+      "type": "multiple_choice",
+      "stem": "Wie hoch ist der Freibetrag für Übungsleiter?",
+      "options": {
+        "a": "840 Euro.",
+        "b": "2.000 Euro.",
+        "c": "3.000 Euro."
+      },
+      "answer": "c",
+      "points": 1,
+      "explanation": {
+        "de": "Für Übungsleiter beträgt der Freibetrag 3.000 Euro pro Jahr.",
+        "key_evidence": "Übungsleiter: Freibetrag 3.000 Euro pro Jahr",
+        "key_vocabulary": [
+          {
+            "word": "Übungsleiter",
+            "type": "Nomen",
+            "meaning": "trainer / instructor"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q4",
+      "teil": 5,
+      "type": "multiple_choice",
+      "stem": "Was müssen Ehrenamtliche vertraulich behandeln?",
+      "options": {
+        "a": "Ihre eigene Arbeitszeit.",
+        "b": "Informationen, die sie im Ehrenamt erfahren.",
+        "c": "Die Höhe der Aufwandsentschädigung."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Was man im Ehrenamt erfährt, muss vertraulich behandelt werden.",
+        "key_evidence": "Was Sie im Ehrenamt erfahren, müssen Sie vertraulich behandeln",
+        "key_vocabulary": [
+          {
+            "word": "vertraulich",
+            "type": "Adjektiv",
+            "meaning": "confidential"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q5",
+      "teil": 5,
+      "type": "multiple_choice",
+      "stem": "Wo findet man ein passendes Ehrenamt?",
+      "options": {
+        "a": "Beim Arbeitsamt.",
+        "b": "Bei Freiwilligenagenturen.",
+        "c": "Bei der Krankenkasse."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Freiwilligenagenturen helfen, das passende Ehrenamt zu finden.",
+        "key_evidence": "Die Freiwilligenagenturen in Ihrer Stadt helfen Ihnen",
+        "key_vocabulary": [
+          {
+            "word": "Freiwilligenagentur",
+            "type": "Nomen",
+            "meaning": "volunteer agency"
+          }
+        ]
+      }
+    }
+  ],
+  "scoring": {
+    "total_points": 5,
+    "pass_threshold": 3,
+    "grading": [
+      {
+        "range": [
+          5,
+          5
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          4,
+          4
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          3,
+          3
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          1,
+          2
+        ],
+        "label": "Noch üben!",
+        "emoji": "📝"
+      },
+      {
+        "range": [
+          0,
+          0
+        ],
+        "label": "Mehr Übung nötig",
+        "emoji": "💪"
+      }
+    ]
+  },
+  "qa": {
+    "vocab_in_b1_list": true,
+    "grammar_b1_appropriate": true,
+    "word_count_in_range": true,
+    "all_answers_verifiable": true,
+    "image_count": 1,
+    "passed": true
+  }
+}

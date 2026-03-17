@@ -1,0 +1,244 @@
+{
+  "id": "A2-T3-009",
+  "level": "A2",
+  "teil": 3,
+  "teil_name": "Kleinanzeigen zuordnen",
+  "topic": "Arbeit & Beruf",
+  "topic_id": "009",
+  "metadata": {
+    "word_count": 180,
+    "target_grammar": [
+      "Modalverben",
+      "Nebensatz mit weil"
+    ],
+    "target_vocabulary": [
+      "Verkäufer",
+      "Bürohilfe",
+      "Praktikum",
+      "Computerkurs",
+      "Bewerbungstraining",
+      "Minijob",
+      "Teilzeit",
+      "Gehalt",
+      "Berufserfahrung",
+      "Arbeitsvertrag"
+    ],
+    "generated_at": "2026-03-09T22:40:00+07:00",
+    "version": 1
+  },
+  "anzeigen": [
+    {
+      "id": "A",
+      "text": "Verkäufer/in gesucht! Bäckerei in Moabit. Teilzeit, 20 Std./Woche. Mo–Fr morgens 6:00–10:00. Freundlichkeit wichtig. 12,50 €/Stunde. Bewerbung: Bäckerei Sonnenkorn, Turmstraße 30."
+    },
+    {
+      "id": "B",
+      "text": "Bürohilfe für Anwaltskanzlei. E-Mails schreiben, Termine planen, Telefon. 15 Std./Woche, Di + Do. Gute Deutschkenntnisse (B2). 14 €/Stunde. Bewerbung: kanzlei-schmidt@mail.de"
+    },
+    {
+      "id": "C",
+      "text": "Praktikum im Kindergarten! 3 Monate, ab September. Ideal für Erziehungsstudenten. Kein Gehalt, aber Zeugnis und Erfahrung. Kita Regenbogen, Frau Lorenz, 030-1234567."
+    },
+    {
+      "id": "D",
+      "text": "Computerkurs für Senioren: Word, E-Mail, Internet. 6 Termine, montags 10:00–12:00. Laptop wird gestellt. 60 €. Max. 8 Teilnehmer. Im Nachbarschaftshaus. Anmeldung: 030-9876543."
+    },
+    {
+      "id": "E",
+      "text": "Bewerbungstraining für Migranten. Lebenslauf schreiben, Vorstellungsgespräch üben, Zeugnisse verstehen. Kostenlos! Jeden 2. Samstag 10:00–13:00. Integration durch Arbeit e.V."
+    },
+    {
+      "id": "F",
+      "text": "Minijob: Zeitungen austragen! Früh morgens, 3x pro Woche (Di, Do, Sa). Ca. 2 Stunden pro Tag. 520 €/Monat. Fahrrad nötig. Melden: Berliner Kurier, vertrieb@berliner-kurier.de"
+    }
+  ],
+  "images": [
+    {
+      "id": "IMG1",
+      "type": "scene",
+      "prompt": "Cute cartoon illustration of a community notice board with six colorful job-themed classified ads — bakery sales, office assistant, kindergarten internship, computer course, job training, newspaper delivery. Fuxie cartoon style, flat illustration, warm pastel colors, no readable text.",
+      "filename": "A2-T3-009_scene.png",
+      "placement": "header",
+      "alt_text": "Kleinanzeigen zum Thema Arbeit und Beruf",
+      "dimensions": "768x512"
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q1",
+      "teil": 3,
+      "type": "matching",
+      "situation": "Ahmed ist vor 2 Jahren nach Deutschland gekommen. Er möchte lernen, wie man eine gute Bewerbung schreibt.",
+      "answer": "E",
+      "points": 1,
+      "explanation": {
+        "de": "Anzeige E bietet kostenloses Bewerbungstraining für Migranten.",
+        "key_evidence": "Bewerbungstraining für Migranten. Lebenslauf schreiben, Vorstellungsgespräch üben. Kostenlos!",
+        "key_vocabulary": [
+          {
+            "word": "Bewerbungstraining",
+            "type": "Nomen",
+            "meaning": "application training"
+          },
+          {
+            "word": "Vorstellungsgespräch",
+            "type": "Nomen",
+            "meaning": "job interview"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q2",
+      "teil": 3,
+      "type": "matching",
+      "situation": "Anna studiert Erziehungswissenschaft und sucht praktische Erfahrung mit Kindern.",
+      "answer": "C",
+      "points": 1,
+      "explanation": {
+        "de": "Anzeige C bietet ein Praktikum im Kindergarten, ideal für Erziehungsstudenten.",
+        "key_evidence": "Praktikum im Kindergarten! Ideal für Erziehungsstudenten",
+        "key_vocabulary": [
+          {
+            "word": "Praktikum",
+            "type": "Nomen",
+            "meaning": "internship"
+          },
+          {
+            "word": "Erfahrung",
+            "type": "Nomen",
+            "meaning": "experience"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q3",
+      "teil": 3,
+      "type": "matching",
+      "situation": "Herr Braun ist 70 Jahre alt. Er möchte lernen, wie man E-Mails schreibt und im Internet surft.",
+      "answer": "D",
+      "points": 1,
+      "explanation": {
+        "de": "Anzeige D bietet einen Computerkurs für Senioren: Word, E-Mail, Internet.",
+        "key_evidence": "Computerkurs für Senioren: Word, E-Mail, Internet",
+        "key_vocabulary": [
+          {
+            "word": "Senioren",
+            "type": "Nomen",
+            "meaning": "senior citizens"
+          },
+          {
+            "word": "Computerkurs",
+            "type": "Nomen",
+            "meaning": "computer course"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q4",
+      "teil": 3,
+      "type": "matching",
+      "situation": "Maria sucht einen kleinen Job am Morgen. Sie steht gern früh auf und hat ein Fahrrad.",
+      "answer": "F",
+      "points": 1,
+      "explanation": {
+        "de": "Anzeige F ist ein Minijob: Zeitungen austragen, früh morgens, Fahrrad nötig.",
+        "key_evidence": "Minijob: Zeitungen austragen! Früh morgens. Fahrrad nötig",
+        "key_vocabulary": [
+          {
+            "word": "Minijob",
+            "type": "Nomen",
+            "meaning": "mini-job (low-income part-time)"
+          },
+          {
+            "word": "austragen",
+            "type": "Verb",
+            "meaning": "to deliver (newspapers)"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q5",
+      "teil": 3,
+      "type": "matching",
+      "situation": "Frau Kaya kann gut organisieren und telefonieren. Sie sucht eine Teilzeitstelle im Büro.",
+      "answer": "B",
+      "points": 1,
+      "explanation": {
+        "de": "Anzeige B sucht eine Bürohilfe: E-Mails, Termine, Telefon, 15 Std./Woche.",
+        "key_evidence": "Bürohilfe. E-Mails schreiben, Termine planen, Telefon. 15 Std./Woche",
+        "key_vocabulary": [
+          {
+            "word": "Bürohilfe",
+            "type": "Nomen",
+            "meaning": "office assistant"
+          },
+          {
+            "word": "Teilzeit",
+            "type": "Nomen",
+            "meaning": "part-time"
+          }
+        ]
+      }
+    }
+  ],
+  "scoring": {
+    "total_points": 5,
+    "pass_threshold": 3,
+    "grading": [
+      {
+        "range": [
+          5,
+          5
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          4,
+          4
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          3,
+          3
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          1,
+          2
+        ],
+        "label": "Noch üben!",
+        "emoji": "📝"
+      },
+      {
+        "range": [
+          0,
+          0
+        ],
+        "label": "Mehr Übung nötig",
+        "emoji": "💪"
+      }
+    ]
+  },
+  "qa": {
+    "vocab_in_a2_list": true,
+    "grammar_a2_only": true,
+    "word_count_in_range": true,
+    "all_answers_verifiable": true,
+    "matching_no_duplicate_answers": true,
+    "six_ads_present": true,
+    "image_count": 1,
+    "passed": true
+  }
+}

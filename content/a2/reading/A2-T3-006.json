@@ -1,0 +1,244 @@
+{
+  "id": "A2-T3-006",
+  "level": "A2",
+  "teil": 3,
+  "teil_name": "Kleinanzeigen zuordnen",
+  "topic": "Im Restaurant",
+  "topic_id": "006",
+  "metadata": {
+    "word_count": 179,
+    "target_grammar": [
+      "Modalverben",
+      "Nebensatz mit wenn"
+    ],
+    "target_vocabulary": [
+      "Koch",
+      "Brunch",
+      "Catering",
+      "Kochkurs",
+      "Food-Truck",
+      "Lieferdienst",
+      "Bewerbung",
+      "Kellner",
+      "Speisekarte",
+      "Trinkgeld"
+    ],
+    "generated_at": "2026-03-09T22:38:00+07:00",
+    "version": 1
+  },
+  "anzeigen": [
+    {
+      "id": "A",
+      "text": "Koch/Köchin gesucht! Italienisches Restaurant in Mitte. Vollzeit, Mo–Fr. Erfahrung nötig. Gutes Gehalt + Trinkgeld. Bewerbung an: info@trattoria-bella.de"
+    },
+    {
+      "id": "B",
+      "text": "Sonntagsbrunch im Hotel Seeblick! Jeden Sonntag 10:00–14:00. Großes Buffet: Eier, Lachs, Müsli, Kuchen, Saft und Kaffee. 19,90 € pro Person. Kinder bis 6 gratis. Reservierung: 040-3344556."
+    },
+    {
+      "id": "C",
+      "text": "Catering für Ihre Feier! Geburtstag, Hochzeit, Firmenfeier — wir kochen für Sie. Ab 15 € pro Person. Vegetarisch und vegan möglich. www.catering-hamburg.de"
+    },
+    {
+      "id": "D",
+      "text": "Kochkurs: Thailändisch kochen! Samstag, 22. März, 16:00–20:00. Wir kochen 4 Gerichte zusammen. 45 € inkl. Zutaten und Getränke. Max. 10 Teilnehmer. Anmeldung: thai-kochen@mail.de"
+    },
+    {
+      "id": "E",
+      "text": "Food-Truck „Burger & More“ jetzt auch in Ottensen! Burger, Pommes, Wraps. Di–Sa 11:30–20:00. Mittagsmenü (Burger + Getränk) 8,50 €. Instagram: @burgermore_hh"
+    },
+    {
+      "id": "F",
+      "text": "Pizza-Lieferdienst „Napoli Express“. Bestellung ab 10 €. Lieferung in 30 Minuten oder gratis! Täglich 17:00–23:00. Bestellen: www.napoli-express.de oder Tel: 040-7788990."
+    }
+  ],
+  "images": [
+    {
+      "id": "IMG1",
+      "type": "scene",
+      "prompt": "Cute cartoon illustration of a community notice board with six colorful restaurant-themed classified ads — job posting for cook, brunch event, catering service, cooking class, food truck, pizza delivery. Fuxie cartoon style, flat illustration, warm pastel colors, no readable text.",
+      "filename": "A2-T3-006_scene.png",
+      "placement": "header",
+      "alt_text": "Kleinanzeigen zum Thema Restaurant und Essen",
+      "dimensions": "768x512"
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q1",
+      "teil": 3,
+      "type": "matching",
+      "situation": "Tina plant eine große Geburtstagsfeier zu Hause. Sie möchte das Essen nicht selbst kochen.",
+      "answer": "C",
+      "points": 1,
+      "explanation": {
+        "de": "Anzeige C bietet Catering für Feiern ab 15 € pro Person.",
+        "key_evidence": "Catering für Ihre Feier! Geburtstag, Hochzeit, Firmenfeier",
+        "key_vocabulary": [
+          {
+            "word": "Catering",
+            "type": "Nomen",
+            "meaning": "catering service"
+          },
+          {
+            "word": "Feier",
+            "type": "Nomen",
+            "meaning": "celebration / party"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q2",
+      "teil": 3,
+      "type": "matching",
+      "situation": "Am Sonntagmorgen möchte Max mit seiner Familie gemütlich frühstücken gehen.",
+      "answer": "B",
+      "points": 1,
+      "explanation": {
+        "de": "Anzeige B bietet einen Sonntagsbrunch mit großem Buffet.",
+        "key_evidence": "Sonntagsbrunch im Hotel Seeblick! Jeden Sonntag 10:00–14:00. Großes Buffet",
+        "key_vocabulary": [
+          {
+            "word": "Brunch",
+            "type": "Nomen",
+            "meaning": "brunch"
+          },
+          {
+            "word": "Buffet",
+            "type": "Nomen",
+            "meaning": "buffet"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q3",
+      "teil": 3,
+      "type": "matching",
+      "situation": "Ali hat am Abend keine Lust zu kochen. Er möchte Pizza bestellen und nach Hause liefern lassen.",
+      "answer": "F",
+      "points": 1,
+      "explanation": {
+        "de": "Anzeige F ist ein Pizza-Lieferdienst, täglich 17:00–23:00.",
+        "key_evidence": "Pizza-Lieferdienst. Lieferung in 30 Minuten oder gratis",
+        "key_vocabulary": [
+          {
+            "word": "Lieferdienst",
+            "type": "Nomen",
+            "meaning": "delivery service"
+          },
+          {
+            "word": "bestellen",
+            "type": "Verb",
+            "meaning": "to order"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q4",
+      "teil": 3,
+      "type": "matching",
+      "situation": "Laura interessiert sich für asiatisches Essen und möchte lernen, selbst Thai-Gerichte zu kochen.",
+      "answer": "D",
+      "points": 1,
+      "explanation": {
+        "de": "Anzeige D bietet einen Kochkurs: Thailändisch kochen, 4 Gerichte zusammen kochen.",
+        "key_evidence": "Kochkurs: Thailändisch kochen! Wir kochen 4 Gerichte zusammen",
+        "key_vocabulary": [
+          {
+            "word": "Kochkurs",
+            "type": "Nomen",
+            "meaning": "cooking course"
+          },
+          {
+            "word": "Gericht",
+            "type": "Nomen",
+            "meaning": "dish"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q5",
+      "teil": 3,
+      "type": "matching",
+      "situation": "Stefan ist Koch und sucht eine neue Stelle in einem Restaurant.",
+      "answer": "A",
+      "points": 1,
+      "explanation": {
+        "de": "Anzeige A sucht Koch/Köchin für ein italienisches Restaurant, Vollzeit.",
+        "key_evidence": "Koch/Köchin gesucht! Italienisches Restaurant. Vollzeit",
+        "key_vocabulary": [
+          {
+            "word": "Koch",
+            "type": "Nomen",
+            "meaning": "cook / chef"
+          },
+          {
+            "word": "Bewerbung",
+            "type": "Nomen",
+            "meaning": "application"
+          }
+        ]
+      }
+    }
+  ],
+  "scoring": {
+    "total_points": 5,
+    "pass_threshold": 3,
+    "grading": [
+      {
+        "range": [
+          5,
+          5
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          4,
+          4
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          3,
+          3
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          1,
+          2
+        ],
+        "label": "Noch üben!",
+        "emoji": "📝"
+      },
+      {
+        "range": [
+          0,
+          0
+        ],
+        "label": "Mehr Übung nötig",
+        "emoji": "💪"
+      }
+    ]
+  },
+  "qa": {
+    "vocab_in_a2_list": true,
+    "grammar_a2_only": true,
+    "word_count_in_range": true,
+    "all_answers_verifiable": true,
+    "matching_no_duplicate_answers": true,
+    "six_ads_present": true,
+    "image_count": 1,
+    "passed": true
+  }
+}

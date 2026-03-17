@@ -1,0 +1,64 @@
+{
+  "id": "W-C2-T2-013",
+  "cefrLevel": "C2",
+  "teil": 2,
+  "teilName": "Textumwandlung",
+  "textType": "Feuilleton-Beitrag",
+  "register": "sachlich",
+  "topic": "Sportjournalismus",
+  "instruction": "Verfassen Sie einen Feuilleton-Beitrag zum Thema „Wandel und Herausforderungen des modernen Sportjournalismus“. Nutzen Sie die Informationen aus dem vorliegenden Interviewtranskript und transformieren Sie die eher umgangssprachlichen Aussagen in eine gehobene, sachlich-analytische Schriftsprache.",
+  "instructionVi": "Viết một bài tiểu luận văn hóa (Feuilleton) về chủ đề \"Sự thay đổi và thách thức của báo chí thể thao hiện đại\". Sử dụng thông tin từ bản thảo phỏng vấn và chuyển đổi các phát biểu có tính chất khẩu ngữ sang ngôn ngữ viết phân tích, khách quan và cao cấp.",
+  "situation": "Sie arbeiten als freier Kulturjournalist für eine renommierte Wochenzeitung. Anlässlich einer Fachtagung zum Thema „Medien und Sport“ sollen Sie die dort geäußerte Kritik eines erfahrenen Brancheninsiders aufgreifen und in einem reflektierten Beitrag für das Feuilleton aufbereiten.",
+  "contentPoints": [
+    "Erläutern Sie den im Text beschriebenen Paradigmenwechsel von der fachlichen Berichterstattung hin zum sogenannten Infotainment.",
+    "Analysieren Sie die Konsequenzen der zunehmenden Abhängigkeit von Klickzahlen und der Logik sozialer Medien für die Qualität der Beiträge.",
+    "Setzen Sie sich kritisch mit der Frage auseinander, inwieweit die notwendige journalistische Distanz durch die Nähe zu Sportverbänden und Vereinen gefährdet ist.",
+    "Entwerfen Sie eine Zukunftsperspektive für den Sportjournalismus als ernstzunehmendes Kulturgut."
+  ],
+  "sourceText": "„Wissen Sie, früher ging es beim Sportjournalismus primär um die Sache. Wir saßen im Stadion, haben das Spiel analysiert und die Taktik hinterfragt. Heute? Heute geht es fast nur noch um Show. Wenn ich mir ansehe, was da auf den Portalen passiert: Da zählt nur noch das Klick-Potenzial. Wer hat die buntesten Schuhe? Welcher Star hat was auf Instagram gepostet? Das ist kein Journalismus mehr, das ist reines Entertainment, so eine Art 'Infotainment'.\n\nDas Problem ist der enorme Zeitdruck. Keiner hat mehr Zeit für eine tiefgehende Recherche. Die Redaktionen schrumpfen, und die jungen Kollegen müssen am Tag fünf Eilmeldungen raushauen, die eigentlich gar keine Meldungen sind. Wir werden fast schon zu PR-Agenten der großen Vereine und Verbände, weil wir den Zugang brauchen. Wenn du zu kritisch berichtest, bist du ganz schnell raus vom Fenster. Die kritische Distanz fehlt völlig.\n\nUnd dann diese Social-Media-Sache. Alles muss häppchenweise serviert werden. Ein Video von 15 Sekunden zählt mehr als eine fundierte Analyse der finanziellen Strukturen eines Vereins. Wir verlieren den Blick für das Große und Ganze. Der Sport ist doch ein Kulturgut, kein bloßes Produkt für die Werbeunterbrechung. Wenn wir so weitermachen, schaffen wir uns als ernstzunehmende Instanz selbst ab.“",
+  "sourceTextType": "Interviewtranskript (mündlicher Entwurf)",
+  "minWords": 250,
+  "maxWords": null,
+  "timeMinutes": 45,
+  "rubric": {
+    "criteria": [
+      {
+        "id": "inhalt",
+        "name": "Inhalt",
+        "nameVi": "Nội dung",
+        "maxScore": 5,
+        "weight": 20
+      },
+      {
+        "id": "angemessenheit",
+        "name": "Kommunikative Angemessenheit",
+        "nameVi": "Phù hợp giao tiếp",
+        "maxScore": 5,
+        "weight": 20
+      },
+      {
+        "id": "korrektheit",
+        "name": "Korrektheit",
+        "nameVi": "Chính xác ngữ pháp & chính tả",
+        "maxScore": 5,
+        "weight": 20
+      },
+      {
+        "id": "spektrum",
+        "name": "Wortschatz & Strukturen",
+        "nameVi": "Đa dạng từ vựng & cấu trúc",
+        "maxScore": 5,
+        "weight": 20
+      },
+      {
+        "id": "kohaerenz",
+        "name": "Kohaerenz & Kohaesion",
+        "nameVi": "Mạch lạc & liên kết",
+        "maxScore": 5,
+        "weight": 20
+      }
+    ],
+    "maxScore": 25
+  },
+  "maxScore": 25
+}

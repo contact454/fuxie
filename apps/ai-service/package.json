@@ -1,0 +1,27 @@
+{
+    "name": "@fuxie/ai-service",
+    "version": "0.0.1",
+    "private": true,
+    "type": "module",
+    "scripts": {
+        "dev": "tsx watch src/index.ts",
+        "build": "tsx src/index.ts",
+        "start": "node dist/index.js",
+        "typecheck": "tsc --noEmit",
+        "clean": "rm -rf dist .turbo"
+    },
+    "dependencies": {
+        "@fuxie/database": "workspace:*",
+        "@fuxie/shared": "workspace:*",
+        "@fuxie/srs-engine": "workspace:*",
+        "@hono/node-server": "^1.14.0",
+        "@hono/zod-validator": "^0.4.2",
+        "hono": "^4.7.2",
+        "zod": "^3.24.1"
+    },
+    "devDependencies": {
+        "@fuxie/typescript-config": "workspace:*",
+        "tsx": "^4.19.2",
+        "typescript": "^5.7.3"
+    }
+}

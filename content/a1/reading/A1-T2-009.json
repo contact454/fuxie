@@ -1,0 +1,177 @@
+{
+  "id": "A1-T2-009",
+  "level": "A1",
+  "teil": 2,
+  "teil_name": "Anzeigen zuordnen",
+  "topic": "Arbeit und Beruf",
+  "topic_id": "009",
+  "metadata": {
+    "generated_at": "2026-03-09T02:30:00+07:00",
+    "version": 1
+  },
+  "anzeigen": [
+    {
+      "id": "AnzeigeA",
+      "title": "Verkäufer/in gesucht – Teilzeit",
+      "details": {
+        "name": "Schuhgeschäft Müller",
+        "address": "Alexanderplatz 3, 10178 Berlin",
+        "hours": "Mo–Fr: 10:00–14:00 Uhr (20 Stunden/Woche)",
+        "price": "12 € pro Stunde",
+        "contact": "Bewerbung an: jobs@schuhe-mueller.de",
+        "target_audience": "Ab 18 Jahre, Deutsch B1",
+        "extra_info": "Keine Erfahrung nötig. Einarbeitung 2 Wochen. Samstags frei."
+      }
+    },
+    {
+      "id": "AnzeigeB",
+      "title": "Bürohelfer/in – Minijob",
+      "details": {
+        "name": "Versicherung Schmidt GmbH",
+        "address": "Potsdamer Platz 1, 10785 Berlin",
+        "hours": "Mo + Mi + Fr: 8:00–12:00 Uhr (12 Stunden/Woche)",
+        "price": "520 € pro Monat (Minijob)",
+        "contact": "Tel: 030-1112233, Herr Fischer",
+        "target_audience": "Studenten willkommen, Deutsch A2",
+        "extra_info": "Computer-Kenntnisse nötig. Kaffeeküche. Gute Anbindung U-Bahn."
+      }
+    }
+  ],
+  "images": [
+    {
+      "id": "IMG1",
+      "type": "anzeige",
+      "linked_anzeige": "AnzeigeA",
+      "prompt": "Cartoon-style job posting poster: 'Verkäufer/in gesucht - Teilzeit'. Shows shoe shop, Mo-Fr 10-14 Uhr, 12€/hour, no experience needed. Fuxie cartoon, professional warm colors, legible font.",
+      "filename": "A1-T2-009_anzeige_a.png",
+      "placement": "anzeige_a",
+      "alt_text": "Stellenanzeige Verkäufer/in Teilzeit",
+      "dimensions": "512x600"
+    },
+    {
+      "id": "IMG2",
+      "type": "anzeige",
+      "linked_anzeige": "AnzeigeB",
+      "prompt": "Cartoon-style mini job posting: 'Bürohelfer/in Minijob'. Shows office, computer, Mo+Mi+Fr 8-12 Uhr, 520€/month, students welcome. Fuxie cartoon, office blue colors, legible font.",
+      "filename": "A1-T2-009_anzeige_b.png",
+      "placement": "anzeige_b",
+      "alt_text": "Stellenanzeige Bürohelfer/in Minijob",
+      "dimensions": "512x600"
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q6",
+      "teil": 2,
+      "type": "matching_ab",
+      "situation": "Herr Petrov spricht nur wenig Deutsch (Niveau A2). Er sucht Arbeit.",
+      "answer": "B",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Bürohelfer/in – Minijob; Studenten willkommen, Deutsch A2",
+        "reasoning": "Die Situation passt zu Anzeige B, weil die genannten Anforderungen dort erfüllt werden."
+      }
+    },
+    {
+      "id": "Q7",
+      "teil": 2,
+      "type": "matching_ab",
+      "situation": "Frau Klein hat keine Berufserfahrung. Sie sucht eine einfache Arbeit.",
+      "answer": "A",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Verkäufer/in gesucht – Teilzeit; Keine Erfahrung nötig. Einarbeitung 2 Wochen. Samstags frei.",
+        "reasoning": "Die Situation passt zu Anzeige A, weil die genannten Anforderungen dort erfüllt werden."
+      }
+    },
+    {
+      "id": "Q8",
+      "teil": 2,
+      "type": "matching_ab",
+      "situation": "Student Max hat am Dienstag und Donnerstag Vorlesungen an der Uni.",
+      "answer": "B",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Bürohelfer/in – Minijob; Studenten willkommen, Deutsch A2",
+        "reasoning": "Die Situation passt zu Anzeige B, weil die genannten Anforderungen dort erfüllt werden."
+      }
+    },
+    {
+      "id": "Q9",
+      "teil": 2,
+      "type": "matching_ab",
+      "situation": "Frau Weber möchte am Samstag nie arbeiten.",
+      "answer": "A",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Verkäufer/in gesucht – Teilzeit; Keine Erfahrung nötig. Einarbeitung 2 Wochen. Samstags frei.",
+        "reasoning": "Die Situation passt zu Anzeige A, weil die genannten Anforderungen dort erfüllt werden."
+      }
+    },
+    {
+      "id": "Q10",
+      "teil": 2,
+      "type": "matching_ab",
+      "situation": "Herr Braun kann gut mit dem Computer arbeiten.",
+      "answer": "B",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Bürohelfer/in – Minijob; Computer-Kenntnisse nötig. Kaffeeküche. Gute Anbindung U-Bahn.",
+        "reasoning": "Die Situation passt zu Anzeige B, weil die genannten Anforderungen dort erfüllt werden."
+      }
+    }
+  ],
+  "scoring": {
+    "total_points": 5,
+    "pass_threshold": 3,
+    "grading": [
+      {
+        "range": [
+          5,
+          5
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          4,
+          4
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          3,
+          3
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          1,
+          2
+        ],
+        "label": "Noch üben!",
+        "emoji": "📝"
+      },
+      {
+        "range": [
+          0,
+          0
+        ],
+        "label": "Mehr Übung nötig",
+        "emoji": "💪"
+      }
+    ]
+  },
+  "qa": {
+    "anzeigen_different_enough": true,
+    "anzeigen_same_category": true,
+    "all_situations_unambiguous": true,
+    "image_text_matches_json": false,
+    "passed": false
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "id": "W-A2-T1-009",
+  "cefrLevel": "A2",
+  "teil": 1,
+  "teilName": "E-Mail-Antwort",
+  "textType": "E-Mail",
+  "register": "informell",
+  "topic": "Gesundheit",
+  "instruction": "Schreiben Sie eine Antwort-E-Mail (ca. 40-60 Woerter). Schreiben Sie zu allen drei Punkten.",
+  "instructionVi": "Tra loi email: Gesundheit.",
+  "situation": "Ihr Freund ist seit einer Woche krank.",
+  "contentPoints": [
+    "Ratschlaege geben",
+    "Arzt empfehlen",
+    "Hilfe anbieten"
+  ],
+  "minWords": 40,
+  "maxWords": 70,
+  "timeMinutes": 15,
+  "rubric": {
+    "criteria": [
+      {
+        "id": "inhalt",
+        "name": "Inhalt",
+        "nameVi": "Noi dung",
+        "maxScore": 5,
+        "weight": 30
+      },
+      {
+        "id": "korrektheit",
+        "name": "Korrektheit",
+        "nameVi": "Chinh xac",
+        "maxScore": 5,
+        "weight": 35
+      },
+      {
+        "id": "angemessenheit",
+        "name": "Kommunikative Angemessenheit",
+        "nameVi": "Phu hop giao tiep",
+        "maxScore": 5,
+        "weight": 35
+      }
+    ],
+    "maxScore": 15
+  },
+  "maxScore": 15,
+  "sourceText": "Hallo Lukas, ich bin leider seit drei Tagen krank. Ich habe Husten und Fieber. Was soll ich jetzt machen? Hast du gute Ratschläge für mich? Kennst du vielleicht einen netten Arzt in der Stadt? Kannst du mir beim Einkaufen helfen oder etwas aus der Apotheke holen? Ich freue mich auf deine Antwort. Liebe Grüße, Sarah",
+  "sourceTextType": "E-Mail",
+  "stimulusSender": "Sarah",
+  "grafikData": []
+}

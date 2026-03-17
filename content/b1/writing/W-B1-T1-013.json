@@ -1,0 +1,63 @@
+{
+  "id": "W-B1-T1-013",
+  "cefrLevel": "B1",
+  "teil": 1,
+  "teilName": "Persoenliche E-Mail",
+  "textType": "E-Mail",
+  "register": "informell",
+  "topic": "Internetanbieter-Wechsel",
+  "instruction": "Sie haben eine E-Mail von Ihrem Freund Lukas erhalten. Schreiben Sie ihm eine Antwort und gehen Sie auf alle drei Inhaltspunkte ein.",
+  "instructionVi": "Bạn nhận được một email từ người bạn tên Lukas. Hãy viết email trả lời và đề cập đến cả 3 ý nội dung được yêu cầu.",
+  "situation": "Sie haben vor Kurzem Ihren Internetanbieter gewechselt, weil Sie mit dem alten Vertrag unzufrieden waren. Ihr Freund Lukas hat davon gehört und möchte nun auch wechseln, da sein Internet zu langsam ist und er oft Probleme mit der Verbindung hat.",
+  "contentPoints": [
+    "Beschreiben Sie, warum Sie mit Ihrem alten Anbieter unzufrieden waren.",
+    "Berichten Sie, wie der Wechsel funktioniert hat und ob Sie mit dem neuen Anbieter zufrieden sind.",
+    "Geben Sie Lukas einen Rat, worauf er beim neuen Vertrag besonders achten sollte."
+  ],
+  "sourceText": "Hallo! Ich habe gehört, dass du jetzt einen neuen Internetanbieter hast. Mein Internet zu Hause ist momentan so schrecklich langsam und ständig gibt es Störungen beim Streamen. Ich überlege deshalb auch zu kündigen. War der Wechsel bei dir eigentlich kompliziert? Und bist du mit der neuen Leitung jetzt wirklich zufrieden? Vielleicht kannst du mir ja etwas empfehlen. Melde dich doch mal! Liebe Grüße, Lukas",
+  "sourceTextType": "E-Mail eines Freundes",
+  "minWords": 80,
+  "maxWords": 120,
+  "timeMinutes": 20,
+  "rubric": {
+    "criteria": [
+      {
+        "id": "inhalt",
+        "name": "Inhalt",
+        "nameVi": "Nội dung",
+        "maxScore": 5,
+        "weight": 25
+      },
+      {
+        "id": "angemessenheit",
+        "name": "Kommunikative Angemessenheit",
+        "nameVi": "Phù hợp giao tiếp",
+        "maxScore": 5,
+        "weight": 20
+      },
+      {
+        "id": "korrektheit",
+        "name": "Korrektheit",
+        "nameVi": "Chính xác ngữ pháp & chính tả",
+        "maxScore": 5,
+        "weight": 25
+      },
+      {
+        "id": "spektrum",
+        "name": "Wortschatz & Strukturen",
+        "nameVi": "Đa dạng từ vựng & cấu trúc",
+        "maxScore": 5,
+        "weight": 15
+      },
+      {
+        "id": "kohaerenz",
+        "name": "Kohaerenz & Kohaesion",
+        "nameVi": "Mạch lạc & liên kết",
+        "maxScore": 5,
+        "weight": 15
+      }
+    ],
+    "maxScore": 25
+  },
+  "maxScore": 25
+}

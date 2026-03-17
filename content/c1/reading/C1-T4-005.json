@@ -1,0 +1,196 @@
+{
+  "id": "C1-T4-005",
+  "level": "C1",
+  "teil": 4,
+  "teil_name": "Meinungen zuordnen",
+  "topic": "Psychologie & Gesellschaft",
+  "topic_id": "005",
+  "metadata": {
+    "word_count": 99,
+    "target_grammar": [
+      "Nominalisierung",
+      "Partizipialkonstruktionen",
+      "Konjunktiv I/II",
+      "Passiversatzformen"
+    ],
+    "target_vocabulary": [],
+    "generated_at": "2026-03-11T23:18:54.731267",
+    "version": 1
+  },
+  "opinion_texts": {
+    "question": "Macht uns die ständige Selbstoptimierung krank?",
+    "texts": [
+      {
+        "name": "Psychologin Dr. Nora Kempf",
+        "text": "Der Optimierungsdruck ist eine der Hauptursachen für Burnout und Erschöpfungsdepressionen. Die Botschaft, man müsse ständig an sich arbeiten, erzeugt ein Grundgefühl des Nicht-Genügens, das psychisch destabilisierend wirkt.",
+        "label": "A"
+      },
+      {
+        "name": "Life-Coach Michael Sander",
+        "text": "Selbstoptimierung ist nicht per se schädlich. Wer sich Ziele setzt und an seiner persönlichen Entwicklung arbeitet, lebt nachweislich zufriedener. Das Problem entsteht erst, wenn Optimierung zum Selbstzweck wird.",
+        "label": "B"
+      },
+      {
+        "name": "Soziologin Prof. Dr. Andrea Fischer",
+        "text": "Der Selbstoptimierungstrend ist Ausdruck eines neoliberalen Menschenbildes, das Erfolg und Misserfolg vollständig individualisiert. Strukturelle Probleme wie Ungleichheit und Diskriminierung werden so zur persönlichen Verantwortung umgedeutet.",
+        "label": "C"
+      },
+      {
+        "name": "Fitness-Unternehmer Jan Löhner",
+        "text": "Gesundheitsbewusstsein und Eigenverantwortung sind positive Werte. Regelmäßiger Sport, gesunde Ernährung und Stressmanagement sind kein pathologischer Optimierungswahn, sondern vernünftige Lebensführung.",
+        "label": "D"
+      }
+    ]
+  },
+  "images": [
+    {
+      "id": "IMG1",
+      "type": "scene",
+      "prompt": "Cute cartoon illustration of experts discussing Psychologie & Gesellschaft. Fuxie cartoon style, flat illustration, warm pastel colors, no text.",
+      "filename": "C1-T4-005_scene.png",
+      "placement": "header",
+      "alt_text": "Macht uns die ständige Selbstoptimierung krank?",
+      "dimensions": "768x512"
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q1",
+      "teil": 4,
+      "type": "matching",
+      "stem": "Die grundlegende Prämisse, dass ständiger Optimierungsdruck führt zu psychischen Erkrankungen, liegt der Position zugrunde:",
+      "answer": "A",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Text/Beitrag A",
+        "reasoning": "[Inferential] Die Aussage 'Ständiger Optimierungsdruck führt zu psychischen E...' entspricht der Position von A."
+      }
+    },
+    {
+      "id": "Q2",
+      "teil": 4,
+      "type": "matching",
+      "stem": "Selbstoptimierung wird erst problematisch, wenn sie zum Selbstzweck wird.",
+      "answer": "B",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Text/Beitrag B",
+        "reasoning": "Die Aussage 'Selbstoptimierung wird erst problematisch, wenn si...' entspricht der Position von B."
+      }
+    },
+    {
+      "id": "Q3",
+      "teil": 4,
+      "type": "matching",
+      "stem": "Das Konzept individualisiert strukturelle Probleme.",
+      "answer": "C",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Text/Beitrag C",
+        "reasoning": "Die Aussage 'Das Konzept individualisiert strukturelle Probleme...' entspricht der Position von C."
+      }
+    },
+    {
+      "id": "Q4",
+      "teil": 4,
+      "type": "matching",
+      "stem": "Die grundlegende Prämisse, dass gesundheitsbewusstsein und Sport sind keine pathologische Optimierung, liegt der Position zugrunde:",
+      "answer": "D",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Text/Beitrag D",
+        "reasoning": "[Inferential] Die Aussage 'Gesundheitsbewusstsein und Sport sind keine pathol...' entspricht der Position von D."
+      }
+    },
+    {
+      "id": "Q5",
+      "teil": 4,
+      "type": "matching",
+      "stem": "Die grundlegende Prämisse, dass Die Botschaft, ständig an sich arbeiten zu müssen, erzeugt ein Gefühl des Nicht-Genügens, liegt der Position zugrunde:",
+      "answer": "A",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Text/Beitrag A",
+        "reasoning": "[Inferential] Die Aussage 'Die Botschaft, ständig an sich arbeiten zu müssen,...' entspricht der Position von A."
+      }
+    },
+    {
+      "id": "Q6",
+      "teil": 4,
+      "type": "matching",
+      "stem": "Die grundlegende Prämisse, dass neoliberales Denken macht strukturelle Probleme zur persönlichen Verantwortung, liegt der Position zugrunde:",
+      "answer": "C",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Text/Beitrag C",
+        "reasoning": "[Inferential] Die Aussage 'Neoliberales Denken macht strukturelle Probleme zu...' entspricht der Position von C."
+      }
+    },
+    {
+      "id": "Q7",
+      "teil": 4,
+      "type": "matching",
+      "stem": "Die grundlegende Prämisse, dass persönliche Entwicklung und Zielsetzung fördern Zufriedenheit, liegt der Position zugrunde:",
+      "answer": "B",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Text/Beitrag B",
+        "reasoning": "[Inferential] Die Aussage 'Persönliche Entwicklung und Zielsetzung fördern Zu...' entspricht der Position von B."
+      }
+    }
+  ],
+  "scoring": {
+    "total_points": 7,
+    "pass_threshold": 5,
+    "grading": [
+      {
+        "range": [
+          6,
+          7
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          4,
+          5
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          3,
+          3
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          1,
+          2
+        ],
+        "label": "Noch üben!",
+        "emoji": "📝"
+      },
+      {
+        "range": [
+          0,
+          0
+        ],
+        "label": "Mehr Übung nötig",
+        "emoji": "💪"
+      }
+    ]
+  },
+  "qa": {
+    "vocab_in_c1_list": true,
+    "grammar_c1_appropriate": true,
+    "word_count_in_range": true,
+    "all_answers_verifiable": true,
+    "image_count": 1,
+    "passed": true
+  }
+}

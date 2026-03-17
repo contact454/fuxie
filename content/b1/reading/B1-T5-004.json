@@ -1,0 +1,243 @@
+{
+  "id": "B1-T5-004",
+  "level": "B1",
+  "teil": 5,
+  "teil_name": "Informationsblatt lesen",
+  "topic": "Medien & Kommunikation",
+  "topic_id": "004",
+  "metadata": {
+    "word_count": 278,
+    "target_grammar": [
+      "Passiv",
+      "Modalverben",
+      "Nebensatz mit wenn/damit"
+    ],
+    "target_vocabulary": [
+      "Bibliothek",
+      "Ausweis",
+      "ausleihen",
+      "verlängern",
+      "Gebühr",
+      "Rückgabe",
+      "Fernleihe",
+      "E-Book"
+    ],
+    "generated_at": "2026-03-10T23:47:00+07:00",
+    "version": 1
+  },
+  "infotext": {
+    "source": "Hamburger Bücherhallen",
+    "title": "Ihr Bibliotheksausweis: Alles, was Sie wissen müssen",
+    "format": "Informationsblatt",
+    "sections": [
+      {
+        "heading": "Anmeldung",
+        "text": "Für die Anmeldung bringen Sie bitte Ihren Personalausweis oder Reisepass mit Meldebescheinigung mit. Kinder und Jugendliche unter 18 brauchen die Unterschrift eines Erziehungsberechtigten. Die Anmeldung dauert nur wenige Minuten."
+      },
+      {
+        "heading": "Gebühren",
+        "text": "Jahresgebühr Erwachsene: 30 Euro. Ermäßigt (Schüler, Studenten, Rentner, Empfänger von Sozialleistungen): 15 Euro. Kinder und Jugendliche bis 17 Jahre: kostenlos. Familienkarte (2 Erwachsene + Kinder): 45 Euro."
+      },
+      {
+        "heading": "Ausleihe und Rückgabe",
+        "text": "Bücher und CDs: 4 Wochen Leihfrist. DVDs und Spiele: 2 Wochen Leihfrist. Verlängerung ist einmal möglich (online, per App oder telefonisch), wenn das Medium nicht von jemand anderem vorbestellt wurde. Die Rückgabe ist in jeder Filiale möglich, nicht nur in der Filiale, in der Sie ausgeliehen haben."
+      },
+      {
+        "heading": "Digitale Angebote",
+        "text": "Mit Ihrem Ausweis können Sie auch E-Books, Hörbücher und digitale Zeitschriften über die Onleihe-App ausleihen. Das digitale Angebot umfasst über 80.000 Titel. Die Medien werden nach Ablauf der Leihfrist automatisch zurückgegeben."
+      },
+      {
+        "heading": "Gebühren bei Verspätung",
+        "text": "Bei verspäteter Rückgabe fallen Gebühren an: 0,20 Euro pro Tag und Medium (Bücher, CDs). 0,50 Euro pro Tag und Medium (DVDs, Spiele). Maximale Gebühr: 10 Euro pro Medium. Bei Verlust oder Beschädigung müssen die Kosten für eine Neuanschaffung erstattet werden."
+      }
+    ]
+  },
+  "images": [
+    {
+      "id": "IMG1",
+      "type": "scene",
+      "prompt": "Cute cartoon illustration of a German public library with bookshelves, a friendly librarian at a desk, and a person getting a library card. Fuxie cartoon style, flat illustration, warm pastel colors, no text.",
+      "filename": "B1-T5-004_scene.png",
+      "placement": "header",
+      "alt_text": "Bibliotheksausweis",
+      "dimensions": "768x512"
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q1",
+      "teil": 5,
+      "type": "multiple_choice",
+      "stem": "Wie lange darf man Bücher ausleihen?",
+      "options": {
+        "a": "2 Wochen.",
+        "b": "4 Wochen.",
+        "c": "6 Wochen."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Bücher und CDs haben eine Leihfrist von 4 Wochen.",
+        "key_evidence": "Bücher und CDs: 4 Wochen Leihfrist",
+        "key_vocabulary": [
+          {
+            "word": "Leihfrist",
+            "type": "Nomen",
+            "meaning": "lending period"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q2",
+      "teil": 5,
+      "type": "multiple_choice",
+      "stem": "Wie viel kostet der Ausweis für eine 15-jährige Schülerin?",
+      "options": {
+        "a": "15 Euro.",
+        "b": "30 Euro.",
+        "c": "Kostenlos."
+      },
+      "answer": "c",
+      "points": 1,
+      "explanation": {
+        "de": "Kinder und Jugendliche bis 17 Jahre zahlen nichts.",
+        "key_evidence": "Kinder und Jugendliche bis 17 Jahre: kostenlos",
+        "key_vocabulary": [
+          {
+            "word": "Jahresgebühr",
+            "type": "Nomen",
+            "meaning": "annual fee"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q3",
+      "teil": 5,
+      "type": "multiple_choice",
+      "stem": "Wann kann man die Leihfrist NICHT verlängern?",
+      "options": {
+        "a": "Wenn man die App nicht hat.",
+        "b": "Wenn das Medium vorbestellt wurde.",
+        "c": "Wenn man nicht in derselben Filiale ist."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Verlängerung ist möglich, wenn das Medium nicht vorbestellt wurde.",
+        "key_evidence": "wenn das Medium nicht von jemand anderem vorbestellt wurde",
+        "key_vocabulary": [
+          {
+            "word": "vorbestellen",
+            "type": "Verb",
+            "meaning": "to reserve / pre-order"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q4",
+      "teil": 5,
+      "type": "multiple_choice",
+      "stem": "Warum wird passiert mit digitalen Medien nach Ablauf der Leihfrist im Text erwähnt?",
+      "options": {
+        "a": "Man muss sie manuell zurückgeben.",
+        "b": "Sie werden automatisch zurückgegeben.",
+        "c": "Man muss sie in der Filiale abgeben."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Digitale Medien werden automatisch zurückgegeben.",
+        "key_evidence": "nach Ablauf der Leihfrist automatisch zurückgegeben",
+        "key_vocabulary": [
+          {
+            "word": "Ablauf",
+            "type": "Nomen",
+            "meaning": "expiration"
+          }
+        ],
+        "reasoning": "[Inferential] "
+      }
+    },
+    {
+      "id": "Q5",
+      "teil": 5,
+      "type": "multiple_choice",
+      "stem": "Wie hoch ist die Verspätungsgebühr für DVDs pro Tag?",
+      "options": {
+        "a": "0,20 Euro.",
+        "b": "0,50 Euro.",
+        "c": "1,00 Euro."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "DVDs kosten 0,50 Euro pro Tag bei Verspätung.",
+        "key_evidence": "0,50 Euro pro Tag und Medium (DVDs, Spiele)",
+        "key_vocabulary": [
+          {
+            "word": "Verspätung",
+            "type": "Nomen",
+            "meaning": "delay / late return"
+          }
+        ]
+      }
+    }
+  ],
+  "scoring": {
+    "total_points": 5,
+    "pass_threshold": 3,
+    "grading": [
+      {
+        "range": [
+          5,
+          5
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          4,
+          4
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          3,
+          3
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          1,
+          2
+        ],
+        "label": "Noch üben!",
+        "emoji": "📝"
+      },
+      {
+        "range": [
+          0,
+          0
+        ],
+        "label": "Mehr Übung nötig",
+        "emoji": "💪"
+      }
+    ]
+  },
+  "qa": {
+    "vocab_in_b1_list": true,
+    "grammar_b1_appropriate": true,
+    "word_count_in_range": true,
+    "all_answers_verifiable": true,
+    "image_count": 1,
+    "passed": true
+  }
+}

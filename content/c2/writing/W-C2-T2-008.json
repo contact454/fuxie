@@ -1,0 +1,65 @@
+{
+  "id": "W-C2-T2-008",
+  "cefrLevel": "C2",
+  "teil": 2,
+  "teilName": "Textumwandlung",
+  "textType": "Zeitungskommentar",
+  "register": "variiert",
+  "topic": "Medienrecht",
+  "instruction": "Wandeln Sie den Urteilsbegruendung zum Thema 'Medienrecht' in einen Zeitungskommentar um (mind. 200 Woerter).",
+  "instructionVi": "Chuyen doi: Urteilsbegruendung -> Zeitungskommentar ve Medienrecht.",
+  "situation": "Lesen Sie den Urteilsbegruendung zum Thema 'Medienrecht' und schreiben Sie daraus einen Zeitungskommentar.",
+  "contentPoints": [
+    "Kernaussagen erfassen",
+    "In Textsorte 'Zeitungskommentar' umwandeln",
+    "Register und Stil anpassen",
+    "Kohaerenten Text verfassen"
+  ],
+  "minWords": 200,
+  "maxWords": 350,
+  "timeMinutes": 30,
+  "rubric": {
+    "criteria": [
+      {
+        "id": "inhalt",
+        "name": "Inhalt",
+        "nameVi": "Noi dung",
+        "maxScore": 5,
+        "weight": 20
+      },
+      {
+        "id": "angemessenheit",
+        "name": "Kommunikative Angemessenheit",
+        "nameVi": "Phu hop giao tiep",
+        "maxScore": 5,
+        "weight": 20
+      },
+      {
+        "id": "korrektheit",
+        "name": "Korrektheit",
+        "nameVi": "Chinh xac ngu phap",
+        "maxScore": 5,
+        "weight": 20
+      },
+      {
+        "id": "spektrum",
+        "name": "Wortschatz & Strukturen",
+        "nameVi": "Da dang tu vung",
+        "maxScore": 5,
+        "weight": 20
+      },
+      {
+        "id": "kohaerenz",
+        "name": "Kohaerenz & Kohaesion",
+        "nameVi": "Mach lac & lien ket",
+        "maxScore": 5,
+        "weight": 20
+      }
+    ],
+    "maxScore": 25
+  },
+  "maxScore": 25,
+  "sourceTextType": "Zeitungskommentar",
+  "sourceText": "Digitales Medienrecht im Zangengriff: Zwischen Freiheit und Kontrolle\nVon Dr. Helena von Soden, Institut für Informationsethik\n\nIn einer Ära, in der digitale Plattformen das Primat der Informationshoheit übernommen haben, steht das Medienrecht vor einer tiefgreifenden Zäsur. Der Gesetzgeber sieht sich zunehmend gezwungen, das fragile Gleichgewicht zwischen dem Schutz der freien Meinungsäußerung und der konsequenten Eindämmung manipulativer Desinformation neu zu justieren. Laut jüngsten Erhebungen des Bundeskriminalamts verzeichnete die Internetkriminalität im Bereich der Hassrede einen besorgniserregenden Anstieg von etwa 42 Prozent innerhalb des letzten Kalenderjahres.\n\nDer Digital Services Act (DSA) der Europäischen Union markiert hierbei zwar einen regulatorischen Meilenstein, doch renommierte Experten wie Prof. Dr. Arndt Müller mahnen zur Vorsicht: 'Die rein reaktive Natur der aktuellen Gesetzgebung hinkt der rasanten technologischen Dynamik, insbesondere bei KI-generierten Deepfakes, substanziell hinterher.' Ein eklatantes Beispiel ist die inkonsistente Moderationspraxis auf globalen Netzwerken wie Meta oder X, wo algorithmische Filter oft satirische Diskurse fälschlicherweise zensieren, während systemische Hetze in geschlossenen Gruppen oft ungestört persistiert.\n\nEs bedarf einer grundlegenden Reform, die nicht nur auf starren Verboten fußt, sondern die algorithmische Transparenz und die Verantwortung der Betreiber ins Zentrum rückt. Ohne eine stringente Haftung für systemische Risiken erodiert das medienrechtliche Fundament unserer demokratischen Gesellschaft. Das Recht muss als proaktives Instrument agieren, um der schleichenden Verrohung des digitalen Raums wirksam zu begegnen.",
+  "grafikData": []
+}

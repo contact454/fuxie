@@ -1,0 +1,244 @@
+{
+  "id": "A2-T3-005",
+  "level": "A2",
+  "teil": 3,
+  "teil_name": "Kleinanzeigen zuordnen",
+  "topic": "Wohnung suchen",
+  "topic_id": "005",
+  "metadata": {
+    "word_count": 182,
+    "target_grammar": [
+      "Modalverben",
+      "Nebensatz mit weil"
+    ],
+    "target_vocabulary": [
+      "Wohnung",
+      "WG-Zimmer",
+      "Möbel",
+      "Umzug",
+      "Renovierung",
+      "Miete",
+      "Kaution",
+      "Nebenkosten",
+      "Quadratmeter",
+      "möbliert"
+    ],
+    "generated_at": "2026-03-09T22:38:00+07:00",
+    "version": 1
+  },
+  "anzeigen": [
+    {
+      "id": "A",
+      "text": "2-Zimmer-Wohnung in Prenzlauer Berg. 55 qm, 3. OG, Balkon. 650 € warm. Küche vorhanden. Ab 1. Mai frei. Besichtigung nach Vereinbarung. Kontakt: wohnung-pb@gmx.de"
+    },
+    {
+      "id": "B",
+      "text": "WG-Zimmer frei! 18 qm in netter 3er-WG. Nähe Uni. 320 € warm. Möbliert. Waschmaschine vorhanden. Wir suchen eine ruhige Person (20–30 Jahre). Einzug: sofort. Jan, 0176-5566778."
+    },
+    {
+      "id": "C",
+      "text": "Möbel zu verschenken! Sofa (grau, guter Zustand), Esstisch mit 4 Stühlen, Bücherregal. Abholung in Neukölln bis 20. März. Bilder per WhatsApp: 0157-3344556."
+    },
+    {
+      "id": "D",
+      "text": "Maler & Renovierung — schnell und günstig! Wände streichen, Tapeten, Böden. Kostenloser Kostenvoranschlag. Erfahrung: 10 Jahre. Auch am Wochenende. Tel: 030-8877665."
+    },
+    {
+      "id": "E",
+      "text": "Umzugshelfer gesucht! Am Samstag, 25. März. 3. OG ohne Aufzug. Nur 2–3 Stunden. 15 €/Stunde + Pizza und Getränke. Bitte melden: Lisa, 0170-1122334."
+    },
+    {
+      "id": "F",
+      "text": "Garagenplatz zu vermieten. Nähe S-Bahn Südkreuz. Trocken und sicher. 60 €/Monat. Auch für Motorrad oder Fahrräder. Sofort frei. Herr Brandt, 030-6655443."
+    }
+  ],
+  "images": [
+    {
+      "id": "IMG1",
+      "type": "scene",
+      "prompt": "Cute cartoon illustration of a community notice board with six colorful housing-themed classified ads — apartment rental, shared flat, free furniture, painter, moving help, garage. Fuxie cartoon style, flat illustration, warm pastel colors, no readable text.",
+      "filename": "A2-T3-005_scene.png",
+      "placement": "header",
+      "alt_text": "Kleinanzeigen zum Thema Wohnen",
+      "dimensions": "768x512"
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q1",
+      "teil": 3,
+      "type": "matching",
+      "situation": "Marco studiert und sucht ein günstiges Zimmer in der Nähe der Universität. Er hat keine Möbel.",
+      "answer": "B",
+      "points": 1,
+      "explanation": {
+        "de": "Anzeige B bietet ein möbliertes WG-Zimmer in der Nähe der Uni für 320 € warm.",
+        "key_evidence": "WG-Zimmer frei! Nähe Uni. 320 € warm. Möbliert",
+        "key_vocabulary": [
+          {
+            "word": "möbliert",
+            "type": "Adjektiv",
+            "meaning": "furnished"
+          },
+          {
+            "word": "WG-Zimmer",
+            "type": "Nomen",
+            "meaning": "shared flat room"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q2",
+      "teil": 3,
+      "type": "matching",
+      "situation": "Familie Hoffmann zieht am Samstag um. Sie brauchen Hilfe beim Tragen.",
+      "answer": "E",
+      "points": 1,
+      "explanation": {
+        "de": "Anzeige E sucht Umzugshelfer am Samstag für 2–3 Stunden.",
+        "key_evidence": "Umzugshelfer gesucht! Am Samstag. Nur 2–3 Stunden. 15 €/Stunde",
+        "key_vocabulary": [
+          {
+            "word": "Umzugshelfer",
+            "type": "Nomen",
+            "meaning": "moving helper"
+          },
+          {
+            "word": "tragen",
+            "type": "Verb",
+            "meaning": "to carry"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q3",
+      "teil": 3,
+      "type": "matching",
+      "situation": "Klara braucht einen Esstisch und Stühle. Sie möchte kein Geld ausgeben.",
+      "answer": "C",
+      "points": 1,
+      "explanation": {
+        "de": "Anzeige C verschenkt Möbel: Sofa, Esstisch mit Stühlen und Bücherregal.",
+        "key_evidence": "Möbel zu verschenken! Esstisch mit 4 Stühlen",
+        "key_vocabulary": [
+          {
+            "word": "verschenken",
+            "type": "Verb",
+            "meaning": "to give away for free"
+          },
+          {
+            "word": "Esstisch",
+            "type": "Nomen",
+            "meaning": "dining table"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q4",
+      "teil": 3,
+      "type": "matching",
+      "situation": "Herr Weber hat ein Auto, aber keinen Parkplatz. Er sucht etwas in der Nähe einer S-Bahn-Station.",
+      "answer": "F",
+      "points": 1,
+      "explanation": {
+        "de": "Anzeige F bietet einen Garagenplatz nahe S-Bahn Südkreuz.",
+        "key_evidence": "Garagenplatz zu vermieten. Nähe S-Bahn Südkreuz",
+        "key_vocabulary": [
+          {
+            "word": "Garagenplatz",
+            "type": "Nomen",
+            "meaning": "garage space"
+          },
+          {
+            "word": "vermieten",
+            "type": "Verb",
+            "meaning": "to rent out"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q5",
+      "teil": 3,
+      "type": "matching",
+      "situation": "Frau und Herr Schmidt möchten ihre neue Wohnung streichen lassen, bevor sie einziehen.",
+      "answer": "D",
+      "points": 1,
+      "explanation": {
+        "de": "Anzeige D bietet Maler & Renovierung: Wände streichen, auch am Wochenende.",
+        "key_evidence": "Maler & Renovierung. Wände streichen, Tapeten, Böden",
+        "key_vocabulary": [
+          {
+            "word": "streichen",
+            "type": "Verb",
+            "meaning": "to paint (walls)"
+          },
+          {
+            "word": "Renovierung",
+            "type": "Nomen",
+            "meaning": "renovation"
+          }
+        ]
+      }
+    }
+  ],
+  "scoring": {
+    "total_points": 5,
+    "pass_threshold": 3,
+    "grading": [
+      {
+        "range": [
+          5,
+          5
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          4,
+          4
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          3,
+          3
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          1,
+          2
+        ],
+        "label": "Noch üben!",
+        "emoji": "📝"
+      },
+      {
+        "range": [
+          0,
+          0
+        ],
+        "label": "Mehr Übung nötig",
+        "emoji": "💪"
+      }
+    ]
+  },
+  "qa": {
+    "vocab_in_a2_list": true,
+    "grammar_a2_only": true,
+    "word_count_in_range": true,
+    "all_answers_verifiable": true,
+    "matching_no_duplicate_answers": true,
+    "six_ads_present": true,
+    "image_count": 1,
+    "passed": true
+  }
+}

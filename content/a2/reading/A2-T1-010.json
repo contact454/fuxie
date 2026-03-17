@@ -1,0 +1,249 @@
+{
+  "id": "A2-T1-010",
+  "level": "A2",
+  "teil": 1,
+  "teil_name": "Zeitungsartikel lesen",
+  "topic": "Feste & Feiertage",
+  "topic_id": "010",
+  "metadata": {
+    "word_count": 180,
+    "target_grammar": [
+      "Perfekt",
+      "Modalverben",
+      "Nebensatz mit weil/dass"
+    ],
+    "target_vocabulary": [
+      "Stadtfest",
+      "Bühne",
+      "Konzert",
+      "Flohmarkt",
+      "Feuerwerk",
+      "Getränk",
+      "Programm",
+      "Eintritt",
+      "Veranstaltung",
+      "Höhepunkt"
+    ],
+    "generated_at": "2026-03-09T21:45:00+07:00",
+    "version": 1
+  },
+  "text": {
+    "title": "Großes Stadtfest am Wochenende — Musik, Essen und Feuerwerk",
+    "subtitle": "Drei Tage Programm auf dem Marktplatz",
+    "body": "Das beliebte Berliner Stadtfest findet dieses Jahr vom 15. bis 17. Juni auf dem Marktplatz in Charlottenburg statt. Das Fest dauert drei Tage und beginnt jeden Tag um 11 Uhr.\n\nAuf zwei Bühnen spielen verschiedene Bands und Musiker. Am Freitag gibt es Rock- und Popmusik, am Samstag internationale Musik und am Sonntag Kinderkonzerte und Volksmusik. Insgesamt treten über 30 Bands auf.\n\nNeben der Musik gibt es einen großen Flohmarkt mit über 100 Ständen. Man kann dort Kleidung, Bücher, Spielzeug und Möbel kaufen. Außerdem bieten 25 Essensstände Gerichte aus aller Welt an: deutsche Bratwurst, türkisches Döner, japanisches Sushi und italienische Pasta.\n\nDer Höhepunkt des Festes ist das große Feuerwerk am Samstagabend um 22 Uhr. Letztes Jahr haben über 20.000 Menschen das Feuerwerk gesehen.\n\nDer Eintritt zum Fest ist kostenlos. Die Stadt empfiehlt, dass Besucher mit der U-Bahn oder dem Bus kommen, weil es nur wenige Parkplätze gibt.",
+    "source": "Berlin Live"
+  },
+  "images": [
+    {
+      "id": "IMG1",
+      "type": "scene",
+      "prompt": "Cute cartoon illustration of a vibrant German city festival on a town square. Two music stages, food stalls with international cuisine, a flea market with colorful stands, string lights, balloons, happy crowds. Evening atmosphere with hints of fireworks. Fuxie cartoon style, flat illustration, warm pastel colors, no text.",
+      "filename": "A2-T1-010_scene.png",
+      "placement": "header",
+      "alt_text": "Großes Stadtfest auf dem Marktplatz",
+      "dimensions": "768x512"
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q1",
+      "teil": 1,
+      "type": "multiple_choice",
+      "stem": "Wie lange dauert das Stadtfest?",
+      "options": {
+        "a": "Zwei Tage.",
+        "b": "Drei Tage.",
+        "c": "Vier Tage."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Im Text steht: 'Das Fest dauert drei Tage und beginnt jeden Tag um 11 Uhr.'",
+        "key_evidence": "Das Fest dauert drei Tage",
+        "key_vocabulary": [
+          {
+            "word": "dauern",
+            "type": "Verb",
+            "meaning": "to last"
+          },
+          {
+            "word": "Stadtfest",
+            "type": "Nomen",
+            "meaning": "city festival"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q2",
+      "teil": 1,
+      "type": "multiple_choice",
+      "stem": "Was gibt es am Sonntag auf der Bühne?",
+      "options": {
+        "a": "Rock- und Popmusik.",
+        "b": "Internationale Musik.",
+        "c": "Kinderkonzerte und Volksmusik."
+      },
+      "answer": "c",
+      "points": 1,
+      "explanation": {
+        "de": "Im Text steht: 'am Sonntag Kinderkonzerte und Volksmusik.'",
+        "key_evidence": "am Sonntag Kinderkonzerte und Volksmusik",
+        "key_vocabulary": [
+          {
+            "word": "Bühne",
+            "type": "Nomen",
+            "meaning": "stage"
+          },
+          {
+            "word": "Volksmusik",
+            "type": "Nomen",
+            "meaning": "folk music"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q3",
+      "teil": 1,
+      "type": "multiple_choice",
+      "stem": "Was kann man auf dem Flohmarkt kaufen?",
+      "options": {
+        "a": "Nur Kleidung und Schuhe.",
+        "b": "Kleidung, Bücher, Spielzeug und Möbel.",
+        "c": "Essen und Getränke."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Im Text steht: 'Man kann dort Kleidung, Bücher, Spielzeug und Möbel kaufen.'",
+        "key_evidence": "Kleidung, Bücher, Spielzeug und Möbel",
+        "key_vocabulary": [
+          {
+            "word": "Flohmarkt",
+            "type": "Nomen",
+            "meaning": "flea market"
+          },
+          {
+            "word": "Stand",
+            "type": "Nomen",
+            "meaning": "stall/booth"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q4",
+      "teil": 1,
+      "type": "multiple_choice",
+      "stem": "Wann ist das Feuerwerk?",
+      "options": {
+        "a": "Am Freitagabend um 21 Uhr.",
+        "b": "Am Samstagabend um 22 Uhr.",
+        "c": "Am Sonntagabend um 23 Uhr."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Im Text steht: 'das große Feuerwerk am Samstagabend um 22 Uhr.'",
+        "key_evidence": "am Samstagabend um 22 Uhr",
+        "key_vocabulary": [
+          {
+            "word": "Feuerwerk",
+            "type": "Nomen",
+            "meaning": "fireworks"
+          },
+          {
+            "word": "Höhepunkt",
+            "type": "Nomen",
+            "meaning": "highlight"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q5",
+      "teil": 1,
+      "type": "multiple_choice",
+      "stem": "Warum soll man mit der U-Bahn kommen?",
+      "options": {
+        "a": "Weil der Eintritt dann billiger ist.",
+        "b": "Weil es nur wenige Parkplätze gibt.",
+        "c": "Weil die Straßen gesperrt sind."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Im Text steht: 'Die Stadt empfiehlt, dass Besucher mit der U-Bahn kommen, weil es nur wenige Parkplätze gibt.'",
+        "key_evidence": "weil es nur wenige Parkplätze gibt",
+        "key_vocabulary": [
+          {
+            "word": "Parkplatz",
+            "type": "Nomen",
+            "meaning": "parking space"
+          },
+          {
+            "word": "empfehlen",
+            "type": "Verb",
+            "meaning": "to recommend"
+          }
+        ]
+      }
+    }
+  ],
+  "scoring": {
+    "total_points": 5,
+    "pass_threshold": 3,
+    "grading": [
+      {
+        "range": [
+          5,
+          5
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          4,
+          4
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          3,
+          3
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          1,
+          2
+        ],
+        "label": "Noch üben!",
+        "emoji": "📝"
+      },
+      {
+        "range": [
+          0,
+          0
+        ],
+        "label": "Mehr Übung nötig",
+        "emoji": "💪"
+      }
+    ]
+  },
+  "qa": {
+    "vocab_in_a2_list": true,
+    "grammar_a2_only": true,
+    "word_count_in_range": true,
+    "all_answers_verifiable": true,
+    "mc_distractors_plausible": true,
+    "image_count": 1,
+    "passed": true
+  }
+}

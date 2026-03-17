@@ -1,0 +1,104 @@
+{
+  "id": "W-C1-T1-008",
+  "cefrLevel": "C1",
+  "teil": 1,
+  "teilName": "Argumentativer Text",
+  "textType": "Argumentation",
+  "register": "sachlich",
+  "topic": "Mobilitaet",
+  "instruction": "Schreiben Sie einen argumentativen Text zum Thema 'Mobilitaet' (mind. 250 Woerter). Beschreiben Sie die Grafik.",
+  "instructionVi": "Viet bai lap luan >=250 tu: Mobilitaet.",
+  "situation": "Schreiben Sie zu dem Thema 'Mobilitaet'. Die Grafik zeigt: Verkehrsmittelwahl Stadtverkehr (Tortendiagramm).",
+  "contentPoints": [
+    "Grafik beschreiben",
+    "Ursachen analysieren",
+    "Situation im Heimatland vergleichen",
+    "Konsequenzen diskutieren",
+    "Eigene Meinung und Loesungsvorschlag"
+  ],
+  "minWords": 250,
+  "maxWords": 400,
+  "timeMinutes": 50,
+  "rubric": {
+    "criteria": [
+      {
+        "id": "inhalt",
+        "name": "Inhalt",
+        "nameVi": "Noi dung",
+        "maxScore": 5,
+        "weight": 20
+      },
+      {
+        "id": "angemessenheit",
+        "name": "Kommunikative Angemessenheit",
+        "nameVi": "Phu hop giao tiep",
+        "maxScore": 5,
+        "weight": 20
+      },
+      {
+        "id": "korrektheit",
+        "name": "Korrektheit",
+        "nameVi": "Chinh xac ngu phap",
+        "maxScore": 5,
+        "weight": 20
+      },
+      {
+        "id": "spektrum",
+        "name": "Wortschatz & Strukturen",
+        "nameVi": "Da dang tu vung",
+        "maxScore": 5,
+        "weight": 20
+      },
+      {
+        "id": "kohaerenz",
+        "name": "Kohaerenz & Kohaesion",
+        "nameVi": "Mach lac & lien ket",
+        "maxScore": 5,
+        "weight": 20
+      }
+    ],
+    "maxScore": 25
+  },
+  "maxScore": 25,
+  "grafikDesc": "Das vorliegende Säulendiagramm mit dem Titel 'Modal Split in deutschen Großstädten (2010–2022)' illustriert die Veränderung der Anteile verschiedener Verkehrsmittel an den täglich zurückgelegten Wegen. Die Daten zeigen eine schrittweise Transformation des Mobilitätsverhaltens über einen Zeitraum von zwölf Jahren. Quelle: Statistisches Bundesamt (Destatis), fiktive Datenzusammenstellung.",
+  "sourceText": "Schreiben Sie einen zusammenhängenden Text zum Thema 'Mobilität der Zukunft: Urbane Herausforderungen und individuelle Freiheit'. Bearbeiten Sie dabei die folgenden Punkte: 1. Beschreiben Sie die vorliegende Grafik und fassen Sie die wesentlichen Entwicklungen im Zeitverlauf zusammen. 2. Analysieren Sie die Ursachen für die Verschiebung des Modal Splits in urbanen Räumen. 3. Vergleichen Sie die dargestellte Situation in Deutschland mit den Gegebenheiten in Ihrem Heimatland. 4. Diskutieren Sie die ökologischen und sozialen Konsequenzen einer verstärkten Förderung des öffentlichen Personennahverkehrs (ÖPNV) gegenüber dem Individualverkehr. 5. Nehmen Sie persönlich Stellung zur Debatte und unterbreiten Sie einen konkreten Lösungsvorschlag für eine nachhaltige Verkehrspolitik. \n\nZusätzlich liegen Ihnen zwei Expertenmeinungen vor:\n\nDr. h.c. Markus Weber, Leiter des Instituts für Verkehrsökonomie: 'Der individuelle Personenverkehr ist ein Ausdruck persönlicher Freiheit und ein unverzichtbarer Motor für wirtschaftliche Flexibilität. Durch die konsequente Elektrifizierung und Automatisierung des Automobils können wir ambitionierte Klimaziele erreichen, ohne die Bürger zur Nutzung unflexibler und oft überlasteter Massentransportmittel zu zwingen.'\n\nProf. Dr. Elena Schneider, Lehrstuhl für nachhaltige Stadtentwicklung: 'Eine echte Verkehrswende lässt sich nicht allein durch einen bloßen Antriebswechsel vollziehen, da die massive Flächenknappheit in urbanen Zentren das Kernproblem bleibt. Wir benötigen eine radikale Priorisierung des Schienenverkehrs sowie des Rad- und Fußverkehrs, um die Lebensqualität und Klimaresilienz unserer Städte für die Zukunft zu sichern.'",
+  "sourceTextType": "Erörterung / Argumentative Essay Stimulus",
+  "stimulusSender": "Redaktion für Stadtentwicklung und Mobilität",
+  "grafikData": [
+    {
+      "jahr": "2010",
+      "verkehrsmittel": "Pkw (Individualverkehr)",
+      "wert": "45%"
+    },
+    {
+      "jahr": "2010",
+      "verkehrsmittel": "ÖPNV",
+      "wert": "18%"
+    },
+    {
+      "jahr": "2016",
+      "verkehrsmittel": "Pkw (Individualverkehr)",
+      "wert": "41%"
+    },
+    {
+      "jahr": "2016",
+      "verkehrsmittel": "ÖPNV",
+      "wert": "21%"
+    },
+    {
+      "jahr": "2022",
+      "verkehrsmittel": "Pkw (Individualverkehr)",
+      "wert": "36%"
+    },
+    {
+      "jahr": "2022",
+      "verkehrsmittel": "ÖPNV",
+      "wert": "25%"
+    },
+    {
+      "jahr": "2022",
+      "verkehrsmittel": "Fahrrad / Mikro-Mobilität",
+      "wert": "19%"
+    }
+  ]
+}

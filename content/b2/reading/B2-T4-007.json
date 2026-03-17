@@ -1,0 +1,172 @@
+{
+  "id": "B2-T4-007",
+  "level": "B2",
+  "teil": 4,
+  "teil_name": "Kommentare lesen",
+  "topic": "Gesundheit & Medizin",
+  "topic_id": "007",
+  "metadata": {
+    "word_count": 124,
+    "target_grammar": [
+      "Konjunktiv II",
+      "Passiv",
+      "Nominalisierung",
+      "Relativsatze"
+    ],
+    "target_vocabulary": [],
+    "generated_at": "2026-03-11T22:37:08.661642",
+    "version": 1
+  },
+  "forum": {
+    "question": "Sollten Krankenkassen alternative Heilmethoden bezahlen?",
+    "comments": [
+      {
+        "name": "Heilpraktikerin Susanne Meier",
+        "position": "ja",
+        "text": "Viele meiner Patienten kommen zu mir, weil die Schulmedizin ihnen nicht helfen konnte. Akupunktur, Homoopathie und Osteopathie haben sich bei vielen Beschwerden bewahrt. Es ist ungerecht, dass Patienten diese wirksamen Behandlungen selbst bezahlen mussen."
+      },
+      {
+        "name": "Prof. Dr. Andreas Becker",
+        "position": "nein",
+        "text": "Als Mediziner bestehe ich darauf, dass Krankenkassen nur Therapien finanzieren, deren Wirksamkeit wissenschaftlich nachgewiesen ist. Fur die meisten alternativen Heilmethoden fehlt dieser Nachweis. Beitragsgelder fur unwirksame Behandlungen auszugeben, ware Verschwendung."
+      },
+      {
+        "name": "Patientin Monika Fritz",
+        "position": "ja",
+        "text": "Nach Jahren chronischer Ruckenschmerzen hat mir Osteopathie endlich geholfen. Die Schulmedizin bot nur Schmerzmittel an. Warum zahlt meine Krankenkasse teure Operationen, aber nicht eine Therapie, die mir tatsachlich hilft?"
+      },
+      {
+        "name": "Okonom Dr. Lars Fischer",
+        "position": "nein",
+        "text": "Die Beitrage zur gesetzlichen Krankenversicherung steigen ohnehin standig. Die Aufnahme alternativer Heilmethoden in den Leistungskatalog wurde die Kosten weiter in die Hohe treiben. Die Finanzierbarkeit des Gesundheitssystems darf nicht gefahrdet werden."
+      }
+    ]
+  },
+  "images": [
+    {
+      "id": "IMG1",
+      "type": "scene",
+      "prompt": "Cute cartoon illustration of people having a discussion forum about Gesundheit & Medizin, showing speech bubbles with different opinions. Fuxie cartoon style, flat illustration, warm pastel colors, no text.",
+      "filename": "B2-T4-007_scene.png",
+      "placement": "header",
+      "alt_text": "Sollten Krankenkassen alternative Heilmethoden bez",
+      "dimensions": "768x512"
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q1",
+      "teil": 4,
+      "type": "ja_nein",
+      "stem": "Susanne Meier findet, dass alternative Heilmethoden von Krankenkassen bezahlt werden sollten.",
+      "answer": "ja",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Susanne Meier findet, dass alternative Heilmethoden von Krankenkassen bezahlt we",
+        "reasoning": "Die richtige Antwort ergibt sich aus dem Text."
+      }
+    },
+    {
+      "id": "Q2",
+      "teil": 4,
+      "type": "ja_nein",
+      "stem": "Der Text legt nahe, dass prof. Becker halt die wissenschaftliche Evidenz fur alternative Methoden fur ausreichend.",
+      "answer": "nein",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Prof. Becker halt die wissenschaftliche Evidenz fur alternative Methoden fur aus",
+        "reasoning": "[Inferential] Die richtige Antwort ergibt sich aus dem Text."
+      }
+    },
+    {
+      "id": "Q3",
+      "teil": 4,
+      "type": "ja_nein",
+      "stem": "Der Autor ist der Meinung, dass monika Fritz berichtet, dass Schulmedizin ihr bei Ruckenschmerzen geholfen hat.",
+      "answer": "nein",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Monika Fritz berichtet, dass Schulmedizin ihr bei Ruckenschmerzen geholfen hat.",
+        "reasoning": "[Inferential] Die richtige Antwort ergibt sich aus dem Text."
+      }
+    },
+    {
+      "id": "Q4",
+      "teil": 4,
+      "type": "ja_nein",
+      "stem": "Der Autor ist der Meinung, dass dr. Fischer macht sich Sorgen um die Finanzierbarkeit des Gesundheitssystems.",
+      "answer": "ja",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Dr. Fischer macht sich Sorgen um die Finanzierbarkeit des Gesundheitssystems.",
+        "reasoning": "[Inferential] Die richtige Antwort ergibt sich aus dem Text."
+      }
+    },
+    {
+      "id": "Q5",
+      "teil": 4,
+      "type": "ja_nein",
+      "stem": "Alle Kommentatoren stimmen zu, dass alternative Heilmethoden wirksam sind.",
+      "answer": "nein",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Alle Kommentatoren stimmen zu, dass alternative Heilmethoden wirksam sind.",
+        "reasoning": "Die richtige Antwort ergibt sich aus dem Text."
+      }
+    }
+  ],
+  "scoring": {
+    "total_points": 5,
+    "pass_threshold": 3,
+    "grading": [
+      {
+        "range": [
+          5,
+          5
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          4,
+          4
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          3,
+          3
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          1,
+          2
+        ],
+        "label": "Noch uben!",
+        "emoji": "📝"
+      },
+      {
+        "range": [
+          0,
+          0
+        ],
+        "label": "Mehr Ubung notig",
+        "emoji": "💪"
+      }
+    ]
+  },
+  "qa": {
+    "vocab_in_b2_list": true,
+    "grammar_b2_appropriate": true,
+    "word_count_in_range": true,
+    "all_answers_verifiable": true,
+    "image_count": 1,
+    "passed": true
+  }
+}

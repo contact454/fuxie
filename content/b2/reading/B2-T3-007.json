@@ -1,0 +1,222 @@
+{
+  "id": "B2-T3-007",
+  "level": "B2",
+  "teil": 3,
+  "teil_name": "Anzeigen zuordnen",
+  "topic": "Gesundheit & Medizin",
+  "topic_id": "007",
+  "metadata": {
+    "word_count": 145,
+    "target_grammar": [
+      "Konjunktiv II",
+      "Passiv",
+      "Modalverben",
+      "Relativsätze"
+    ],
+    "target_vocabulary": [],
+    "generated_at": "2026-03-11T22:34:38.583025",
+    "version": 1
+  },
+  "anzeigen": [
+    {
+      "id": "A",
+      "text": "Gesundheits-App Vitality: Schrittzähler, Ernährungstagebuch, Schlafanalyse. Kostenlos für AOK-Versicherte. Bonuspunkte sammeln. Download im App-Store."
+    },
+    {
+      "id": "B",
+      "text": "Klinikvergleich online: Finden Sie die beste Klinik für Ihre Behandlung. Qualitätsberichte, Patientenbewertungen, Wartezeiten. Unabhängig und kostenlos. www.klinikcheck.de"
+    },
+    {
+      "id": "C",
+      "text": "Rehabilitationszentrum Schwarzwald: Kardiologische und orthopädische Reha. 3-4 Wochen stationär. Modernste Ausstattung, eigener Therapiepool. Kostenübernahme durch Renten- oder Krankenversicherung."
+    },
+    {
+      "id": "D",
+      "text": "Präventionskurs Rückengesundheit: 10 Einheiten, immer dienstags 18 Uhr. Von den Krankenkassen bezuschusst. Physiotherapiepraxis am Marktplatz. Anmeldung: 030-5544332."
+    },
+    {
+      "id": "E",
+      "text": "Erste-Hilfe-Kurs Auffrischung: 4 Stunden am Samstag. Besonders für Eltern, Betreuer und Führerscheininhaber. 35 Euro. DRK-Kreisverband. Jeden Monat neuer Termin."
+    },
+    {
+      "id": "F",
+      "text": "Psychologische Online-Beratung: Anonyme Gespräche mit zertifizierten Therapeuten. Flexible Termine, auch abends und am Wochenende. Ab 80 Euro pro Sitzung. www.therapie-online.de"
+    },
+    {
+      "id": "G",
+      "text": "Blutspende-Aktion: Dienstag, 15. April, 14-19 Uhr im Bürgerhaus. Keine Anmeldung nötig. Imbiss und Getränke gratis. DRK bittet um Mithilfe — jede Spende zählt!"
+    },
+    {
+      "id": "H",
+      "text": "Ernährungsmedizin-Sprechstunde: Individuelle Beratung bei Diabetes, Adipositas und Nahrungsmittelunverträglichkeiten. Dr. med. Fischer, Facharzt für Innere Medizin. Privatpatienten und Selbstzahler."
+    }
+  ],
+  "situationen": [
+    {
+      "id": "S1",
+      "text": "Jemand sucht nach einer Herzoperation eine stationäre Rehabilitationseinrichtung im Grünen.",
+      "answer": "C"
+    },
+    {
+      "id": "S2",
+      "text": "Eine berufstätige Frau leidet unter Angstzuständen und sucht flexible therapeutische Unterstützung.",
+      "answer": "F"
+    },
+    {
+      "id": "S3",
+      "text": "Ein Vater möchte seine Erste-Hilfe-Kenntnisse auffrischen.",
+      "answer": "E"
+    },
+    {
+      "id": "S4",
+      "text": "Eine AOK-Versicherte möchte ihre täglichen Schritte zählen und Bonuspunkte sammeln.",
+      "answer": "A"
+    },
+    {
+      "id": "S5",
+      "text": "Jemand hat chronische Rückenprobleme und sucht einen Kurs, den die Krankenkasse bezuschusst.",
+      "answer": "D"
+    }
+  ],
+  "null_matches": [
+    "B",
+    "G",
+    "H"
+  ],
+  "images": [
+    {
+      "id": "IMG1",
+      "type": "scene",
+      "prompt": "Cute cartoon illustration of a bulletin board with various professional advertisements related to Gesundheit & Medizin. Fuxie cartoon style, flat illustration, warm pastel colors, no text.",
+      "filename": "B2-T3-007_scene.png",
+      "placement": "header",
+      "alt_text": "Anzeigen: Gesundheit & Medizin",
+      "dimensions": "768x512"
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q1",
+      "teil": 3,
+      "type": "matching",
+      "stem": "Aus der Argumentation lässt sich ableiten, dass jemand sucht nach einer Herzoperation eine stationäre Rehabilitationseinrichtung im Grünen. Diese Position vertritt:",
+      "answer": "C",
+      "points": 1,
+      "explanation": {
+        "de": "Anzeige C passt, weil sie das beschriebene Bedürfnis erfüllt.",
+        "key_evidence": "Anzeige C",
+        "key_vocabulary": [],
+        "reasoning": "[Inferential] "
+      }
+    },
+    {
+      "id": "Q2",
+      "teil": 3,
+      "type": "matching",
+      "stem": "Eine berufstätige Frau leidet unter Angstzuständen und sucht flexible therapeutische Unterstützung.",
+      "answer": "F",
+      "points": 1,
+      "explanation": {
+        "de": "Anzeige F passt, weil sie das beschriebene Bedürfnis erfüllt.",
+        "key_evidence": "Anzeige F",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q3",
+      "teil": 3,
+      "type": "matching",
+      "stem": "Aus der Argumentation lässt sich ableiten, dass Ein Vater möchte seine Erste-Hilfe-Kenntnisse auffrischen. Diese Position vertritt:",
+      "answer": "E",
+      "points": 1,
+      "explanation": {
+        "de": "Anzeige E passt, weil sie das beschriebene Bedürfnis erfüllt.",
+        "key_evidence": "Anzeige E",
+        "key_vocabulary": [],
+        "reasoning": "[Inferential] "
+      }
+    },
+    {
+      "id": "Q4",
+      "teil": 3,
+      "type": "matching",
+      "stem": "Die implizite Annahme, dass eine AOK-Versicherte möchte ihre täglichen Schritte zählen und Bonuspunkte sammeln, liegt dem Beitrag zugrunde:",
+      "answer": "A",
+      "points": 1,
+      "explanation": {
+        "de": "Anzeige A passt, weil sie das beschriebene Bedürfnis erfüllt.",
+        "key_evidence": "Anzeige A",
+        "key_vocabulary": [],
+        "reasoning": "[Inferential] "
+      }
+    },
+    {
+      "id": "Q5",
+      "teil": 3,
+      "type": "matching",
+      "stem": "Jemand hat chronische Rückenprobleme und sucht einen Kurs, den die Krankenkasse bezuschusst.",
+      "answer": "D",
+      "points": 1,
+      "explanation": {
+        "de": "Anzeige D passt, weil sie das beschriebene Bedürfnis erfüllt.",
+        "key_evidence": "Anzeige D",
+        "key_vocabulary": []
+      }
+    }
+  ],
+  "scoring": {
+    "total_points": 5,
+    "pass_threshold": 3,
+    "grading": [
+      {
+        "range": [
+          5,
+          5
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          4,
+          4
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          3,
+          3
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          1,
+          2
+        ],
+        "label": "Noch üben!",
+        "emoji": "📝"
+      },
+      {
+        "range": [
+          0,
+          0
+        ],
+        "label": "Mehr Übung nötig",
+        "emoji": "💪"
+      }
+    ]
+  },
+  "qa": {
+    "vocab_in_b2_list": true,
+    "grammar_b2_appropriate": true,
+    "word_count_in_range": true,
+    "all_answers_verifiable": true,
+    "null_matches_correct": true,
+    "image_count": 1,
+    "passed": true
+  }
+}

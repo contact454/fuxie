@@ -1,0 +1,49 @@
+{
+  "id": "W-A2-T2-019",
+  "cefrLevel": "A2",
+  "teil": 2,
+  "teilName": "Persoenliche Mitteilung",
+  "textType": "Mitteilung",
+  "register": "halbformell",
+  "topic": "Wohnung renovieren",
+  "instruction": "Sie renovieren am nächsten Samstag Ihre Wohnung. Schreiben Sie eine Mitteilung an Ihren Nachbarn, Herrn Wagner.",
+  "instructionVi": "Bạn sẽ sửa sang lại căn hộ của mình vào thứ Bảy tới. Hãy viết một thông báo cho người hàng xóm của bạn, ông Wagner.",
+  "situation": "Sie sind vor kurzem umgezogen und möchten am kommenden Wochenende Ihre neue Wohnung renovieren. Da Sie Wände streichen und Regale anbringen müssen, wird es am Samstag tagsüber laut sein.",
+  "contentPoints": [
+    "Informieren Sie Herrn Wagner über die Renovierung.",
+    "Geben Sie an, von wann bis wann die Arbeiten dauern.",
+    "Bitten Sie um Entschuldigung für den eventuellen Lärm."
+  ],
+  "sourceText": "Termin: Samstag, 20. Mai. Tätigkeit: Wände streichen und Bohrarbeiten für Regale. Zeitplan: 08:30 Uhr bis ca. 17:00 Uhr. Ort: Wohnung 3. Etage links.",
+  "sourceTextType": "Notizkalender",
+  "minWords": 40,
+  "maxWords": 70,
+  "timeMinutes": 15,
+  "rubric": {
+    "criteria": [
+      {
+        "id": "inhalt",
+        "name": "Inhalt",
+        "nameVi": "Nội dung",
+        "maxScore": 5,
+        "weight": 30
+      },
+      {
+        "id": "korrektheit",
+        "name": "Korrektheit",
+        "nameVi": "Chính xác ngữ pháp & chính tả",
+        "maxScore": 5,
+        "weight": 35
+      },
+      {
+        "id": "angemessenheit",
+        "name": "Kommunikative Angemessenheit",
+        "nameVi": "Phù hợp giao tiếp",
+        "maxScore": 5,
+        "weight": 35
+      }
+    ],
+    "maxScore": 15
+  },
+  "maxScore": 15
+}

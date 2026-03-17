@@ -1,0 +1,49 @@
+{
+  "id": "W-A2-T1-011",
+  "cefrLevel": "A2",
+  "teil": 1,
+  "teilName": "E-Mail-Antwort",
+  "textType": "E-Mail",
+  "register": "informell",
+  "topic": "Konzert",
+  "instruction": "Sie haben eine E-Mail von Ihrem Freund Max erhalten. Antworten Sie ihm und schreiben Sie etwas zu allen drei Punkten.",
+  "instructionVi": "Bạn nhận được một email từ người bạn tên là Max. Hãy trả lời email đó và viết về cả ba gợi ý dưới đây.",
+  "situation": "Ihr Freund Max war am Wochenende auf einem Konzert und hat Ihnen davon berichtet. Da Sie nicht dabei sein konnten, schreiben Sie ihm nun eine Antwort.",
+  "contentPoints": [
+    "Bedanken Sie sich für seine Nachricht.",
+    "Erklären Sie, warum Sie nicht zum Konzert kommen konnten.",
+    "Fragen Sie nach Details (Wie war die Band? Wie viele Leute waren da?)."
+  ],
+  "sourceText": "Hallo! Wie geht's? Am Samstagabend war ich auf dem Konzert von der Band 'Supernova'. Es war einfach toll! Schade, dass du nicht kommen konntest. Wir müssen uns bald mal wieder treffen und ich erzähle dir alles. Hast du nächsten Freitagabend Zeit? Viele Grüße, Max",
+  "sourceTextType": "E-Mail",
+  "minWords": 40,
+  "maxWords": 70,
+  "timeMinutes": 15,
+  "rubric": {
+    "criteria": [
+      {
+        "id": "inhalt",
+        "name": "Inhalt",
+        "nameVi": "Nội dung",
+        "maxScore": 5,
+        "weight": 30
+      },
+      {
+        "id": "korrektheit",
+        "name": "Korrektheit",
+        "nameVi": "Chính xác ngữ pháp & chính tả",
+        "maxScore": 5,
+        "weight": 35
+      },
+      {
+        "id": "angemessenheit",
+        "name": "Kommunikative Angemessenheit",
+        "nameVi": "Phù hợp giao tiếp",
+        "maxScore": 5,
+        "weight": 35
+      }
+    ],
+    "maxScore": 15
+  },
+  "maxScore": 15
+}

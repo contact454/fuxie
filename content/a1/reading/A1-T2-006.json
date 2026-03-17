@@ -1,0 +1,177 @@
+{
+  "id": "A1-T2-006",
+  "level": "A1",
+  "teil": 2,
+  "teil_name": "Anzeigen zuordnen",
+  "topic": "Im Restaurant",
+  "topic_id": "006",
+  "metadata": {
+    "generated_at": "2026-03-09T02:30:00+07:00",
+    "version": 1
+  },
+  "anzeigen": [
+    {
+      "id": "AnzeigeA",
+      "title": "Pizzeria Roma – Italienisch essen",
+      "details": {
+        "name": "Pizzeria Roma",
+        "address": "Schillerstraße 15, 10625 Berlin",
+        "hours": "Di–So: 17:00–23:00 Uhr, Montag Ruhetag",
+        "price": "Pizza 8–12 €, Pasta 9–14 €, Salat 6 €",
+        "contact": "Tel: 030-2223344, Reservierung möglich",
+        "target_audience": "Alle",
+        "extra_info": "Biergarten im Sommer. Live-Musik am Freitag. Kein Mittagessen."
+      }
+    },
+    {
+      "id": "AnzeigeB",
+      "title": "Café Sonnenschein – Frühstück & Kuchen",
+      "details": {
+        "name": "Café Sonnenschein",
+        "address": "Bergmannstraße 8, 10961 Berlin",
+        "hours": "Mo–Sa: 8:00–16:00 Uhr, Sonntag geschlossen",
+        "price": "Frühstück 5–9 €, Kuchen 3 €, Kaffee 2,50 €",
+        "contact": "Tel: 030-5566778",
+        "target_audience": "Frühstücksliebhaber, Familien",
+        "extra_info": "Spielecke für Kinder. Vegane Optionen. Wi-Fi kostenlos."
+      }
+    }
+  ],
+  "images": [
+    {
+      "id": "IMG1",
+      "type": "anzeige",
+      "linked_anzeige": "AnzeigeA",
+      "prompt": "Cartoon-style Italian restaurant poster: 'Pizzeria Roma'. Shows pizza, pasta, wine glass, Di-So 17-23 Uhr, pizza 8-12€, beer garden, live music Friday. Fuxie cartoon, Italian red/green colors, legible font.",
+      "filename": "A1-T2-006_anzeige_a.png",
+      "placement": "anzeige_a",
+      "alt_text": "Werbung für Pizzeria Roma",
+      "dimensions": "512x600"
+    },
+    {
+      "id": "IMG2",
+      "type": "anzeige",
+      "linked_anzeige": "AnzeigeB",
+      "prompt": "Cartoon-style German café poster: 'Café Sonnenschein - Frühstück & Kuchen'. Shows coffee cup, croissant, cake, Mo-Sa 8-16 Uhr, breakfast 5-9€, cake 3€, Wi-Fi. Fuxie cartoon, warm yellow/orange colors, legible font.",
+      "filename": "A1-T2-006_anzeige_b.png",
+      "placement": "anzeige_b",
+      "alt_text": "Werbung für Café Sonnenschein",
+      "dimensions": "512x600"
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q6",
+      "teil": 2,
+      "type": "matching_ab",
+      "situation": "Frau Meier möchte am Sonntagabend Pizza essen.",
+      "answer": "A",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Pizzeria Roma – Italienisch essen; Pizza 8–12 €, Pasta 9–14 €, Salat 6 €; Biergarten im Sommer. Live-Musik am Freitag. Kein Mittagessen.",
+        "reasoning": "Die Situation passt zu Anzeige A, weil die genannten Anforderungen dort erfüllt werden."
+      }
+    },
+    {
+      "id": "Q7",
+      "teil": 2,
+      "type": "matching_ab",
+      "situation": "Tom möchte morgens einen Kaffee trinken und Kuchen essen.",
+      "answer": "B",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Café Sonnenschein – Frühstück & Kuchen; Frühstück 5–9 €, Kuchen 3 €, Kaffee 2,50 €",
+        "reasoning": "Die Situation passt zu Anzeige B, weil die genannten Anforderungen dort erfüllt werden."
+      }
+    },
+    {
+      "id": "Q8",
+      "teil": 2,
+      "type": "matching_ab",
+      "situation": "Herr Braun isst kein Fleisch und keine Milchprodukte. Er sucht ein Restaurant.",
+      "answer": "B",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Café Sonnenschein – Frühstück & Kuchen",
+        "reasoning": "Die Situation passt zu Anzeige B, weil die genannten Anforderungen dort erfüllt werden."
+      }
+    },
+    {
+      "id": "Q9",
+      "teil": 2,
+      "type": "matching_ab",
+      "situation": "Sophie möchte am Freitagabend Musik hören und essen.",
+      "answer": "A",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Pizzeria Roma – Italienisch essen; Biergarten im Sommer. Live-Musik am Freitag. Kein Mittagessen.",
+        "reasoning": "Die Situation passt zu Anzeige A, weil die genannten Anforderungen dort erfüllt werden."
+      }
+    },
+    {
+      "id": "Q10",
+      "teil": 2,
+      "type": "matching_ab",
+      "situation": "Frau Weber hat kleine Kinder. Sie sucht ein Café mit Spielbereich.",
+      "answer": "B",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Café Sonnenschein – Frühstück & Kuchen; Spielecke für Kinder. Vegane Optionen. Wi-Fi kostenlos.",
+        "reasoning": "Die Situation passt zu Anzeige B, weil die genannten Anforderungen dort erfüllt werden."
+      }
+    }
+  ],
+  "scoring": {
+    "total_points": 5,
+    "pass_threshold": 3,
+    "grading": [
+      {
+        "range": [
+          5,
+          5
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          4,
+          4
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          3,
+          3
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          1,
+          2
+        ],
+        "label": "Noch üben!",
+        "emoji": "📝"
+      },
+      {
+        "range": [
+          0,
+          0
+        ],
+        "label": "Mehr Übung nötig",
+        "emoji": "💪"
+      }
+    ]
+  },
+  "qa": {
+    "anzeigen_different_enough": true,
+    "anzeigen_same_category": true,
+    "all_situations_unambiguous": true,
+    "image_text_matches_json": false,
+    "passed": false
+  }
+}

@@ -1,0 +1,196 @@
+{
+  "id": "C1-T4-001",
+  "level": "C1",
+  "teil": 4,
+  "teil_name": "Meinungen zuordnen",
+  "topic": "Philosophie & Ethik",
+  "topic_id": "001",
+  "metadata": {
+    "word_count": 117,
+    "target_grammar": [
+      "Nominalisierung",
+      "Partizipialkonstruktionen",
+      "Konjunktiv I/II",
+      "Passiversatzformen"
+    ],
+    "target_vocabulary": [],
+    "generated_at": "2026-03-11T23:18:54.731267",
+    "version": 1
+  },
+  "opinion_texts": {
+    "question": "Wie weit darf Künstliche Intelligenz in moralischen Entscheidungen gehen?",
+    "texts": [
+      {
+        "name": "Prof. Dr. Anna Schuster, Ethikerin",
+        "text": "KI kann moralische Entscheidungen unterstützen, aber niemals ersetzen. Moralisches Handeln erfordert Empathie, Kontextverständnis und das Bewusstsein für die eigene Fehlbarkeit. Diese Fähigkeiten sind maschinell nicht abbildbar.",
+        "label": "A"
+      },
+      {
+        "name": "Dr. Tobias Reinhard, KI-Forscher",
+        "text": "KI-Systeme können in bestimmten Bereichen konsistentere und weniger vorurteilsbehaftete Entscheidungen treffen als Menschen. In der medizinischen Diagnostik oder der Risikobewertung zeigen Algorithmen bereits heute teilweise bessere Ergebnisse als menschliche Experten.",
+        "label": "B"
+      },
+      {
+        "name": "Maja Kolbe, Philosophiestudentin",
+        "text": "Die Frage ist nicht ob, sondern wie wir KI in moralische Entscheidungen einbeziehen. Wir brauchen einen interdisziplinären Dialog zwischen Informatik, Philosophie und Gesellschaft, um ethische Leitlinien zu entwickeln.",
+        "label": "C"
+      },
+      {
+        "name": "Dr. Friedrich Walser, Jurist",
+        "text": "Die zentrale Frage ist die der Verantwortung. Wenn eine KI eine fehlerhafte moralische Entscheidung trifft, wer haftet? Der Entwickler? Der Nutzer? Das Unternehmen? Ohne klare Haftungsregeln dürfen KI-Systeme keine autonomen moralischen Entscheidungen treffen.",
+        "label": "D"
+      }
+    ]
+  },
+  "images": [
+    {
+      "id": "IMG1",
+      "type": "scene",
+      "prompt": "Cute cartoon illustration of experts discussing Philosophie & Ethik. Fuxie cartoon style, flat illustration, warm pastel colors, no text.",
+      "filename": "C1-T4-001_scene.png",
+      "placement": "header",
+      "alt_text": "Wie weit darf Künstliche Intelligenz in moralische",
+      "dimensions": "768x512"
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q1",
+      "teil": 4,
+      "type": "matching",
+      "stem": "Moralisches Handeln erfordert menschliche Fähigkeiten wie Empathie.",
+      "answer": "A",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Text/Beitrag A",
+        "reasoning": "Die Aussage 'Moralisches Handeln erfordert menschliche Fähigkei...' entspricht der Position von A."
+      }
+    },
+    {
+      "id": "Q2",
+      "teil": 4,
+      "type": "matching",
+      "stem": "Die These, dass in manchen Bereichen entscheiden Algorithmen bereits besser als Menschen, wird durch folgende Argumentation gestützt:",
+      "answer": "B",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Text/Beitrag B",
+        "reasoning": "[Inferential] Die Aussage 'In manchen Bereichen entscheiden Algorithmen berei...' entspricht der Position von B."
+      }
+    },
+    {
+      "id": "Q3",
+      "teil": 4,
+      "type": "matching",
+      "stem": "Die These, dass Ein interdisziplinärer Dialog ist notwendig, wird durch folgende Argumentation gestützt:",
+      "answer": "C",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Text/Beitrag C",
+        "reasoning": "[Inferential] Die Aussage 'Ein interdisziplinärer Dialog ist notwendig....' entspricht der Position von C."
+      }
+    },
+    {
+      "id": "Q4",
+      "teil": 4,
+      "type": "matching",
+      "stem": "Die grundlegende Prämisse, dass Die Haftungsfrage muss vorrangig geklärt werden, liegt der Position zugrunde:",
+      "answer": "D",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Text/Beitrag D",
+        "reasoning": "[Inferential] Die Aussage 'Die Haftungsfrage muss vorrangig geklärt werden....' entspricht der Position von D."
+      }
+    },
+    {
+      "id": "Q5",
+      "teil": 4,
+      "type": "matching",
+      "stem": "Die grundlegende Prämisse, dass kI kann Vorurteile in Entscheidungsprozessen reduzieren, liegt der Position zugrunde:",
+      "answer": "B",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Text/Beitrag B",
+        "reasoning": "[Inferential] Die Aussage 'KI kann Vorurteile in Entscheidungsprozessen reduz...' entspricht der Position von B."
+      }
+    },
+    {
+      "id": "Q6",
+      "teil": 4,
+      "type": "matching",
+      "stem": "Die grundlegende Prämisse, dass ethische Leitlinien müssen gemeinsam entwickelt werden, liegt der Position zugrunde:",
+      "answer": "C",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Text/Beitrag C",
+        "reasoning": "[Inferential] Die Aussage 'Ethische Leitlinien müssen gemeinsam entwickelt we...' entspricht der Position von C."
+      }
+    },
+    {
+      "id": "Q7",
+      "teil": 4,
+      "type": "matching",
+      "stem": "Maschinen können keine echte moralische Verantwortung übernehmen.",
+      "answer": "A",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Text/Beitrag A",
+        "reasoning": "Die Aussage 'Maschinen können keine echte moralische Verantwort...' entspricht der Position von A."
+      }
+    }
+  ],
+  "scoring": {
+    "total_points": 7,
+    "pass_threshold": 5,
+    "grading": [
+      {
+        "range": [
+          6,
+          7
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          4,
+          5
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          3,
+          3
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          1,
+          2
+        ],
+        "label": "Noch üben!",
+        "emoji": "📝"
+      },
+      {
+        "range": [
+          0,
+          0
+        ],
+        "label": "Mehr Übung nötig",
+        "emoji": "💪"
+      }
+    ]
+  },
+  "qa": {
+    "vocab_in_c1_list": true,
+    "grammar_c1_appropriate": true,
+    "word_count_in_range": true,
+    "all_answers_verifiable": true,
+    "image_count": 1,
+    "passed": true
+  }
+}

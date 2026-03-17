@@ -1,0 +1,243 @@
+{
+  "id": "B1-T5-008",
+  "level": "B1",
+  "teil": 5,
+  "teil_name": "Informationsblatt lesen",
+  "topic": "Sport & Fitness",
+  "topic_id": "008",
+  "metadata": {
+    "word_count": 278,
+    "target_grammar": [
+      "Passiv",
+      "Modalverben",
+      "Nebensatz mit wenn/damit"
+    ],
+    "target_vocabulary": [
+      "Schwimmbad",
+      "Hallenbad",
+      "Tarif",
+      "Öffnungszeit",
+      "Badeordnung",
+      "Schließfach",
+      "Sauna",
+      "Jahreskarte"
+    ],
+    "generated_at": "2026-03-10T23:50:00+07:00",
+    "version": 1
+  },
+  "infotext": {
+    "source": "Stadtbäder München GmbH",
+    "title": "Olympia-Schwimmhalle: Preise, Öffnungszeiten und Regeln",
+    "format": "Informationsblatt",
+    "sections": [
+      {
+        "heading": "Öffnungszeiten",
+        "text": "Montag–Freitag: 6:30–22:00 Uhr. Samstag, Sonntag und Feiertage: 8:00–20:00 Uhr. Frühschwimmen (Mo–Fr 6:30–8:00 Uhr): Nur für Erwachsene. Am 24. und 31. Dezember geschlossen. Wartungsschließung: 2 Wochen im September (genaue Termine auf der Website)."
+      },
+      {
+        "heading": "Eintrittspreise",
+        "text": "Einzelkarte Erwachsene: 6,50 Euro. Ermäßigt (Schüler, Studenten, Rentner): 4,00 Euro. Kinder unter 6: kostenlos. Familienkarte (2 Erw. + Kinder): 15 Euro. 10er-Karte Erwachsene: 55 Euro. Jahreskarte Erwachsene: 480 Euro. Frühschwimmen (bis 8 Uhr): 4,00 Euro."
+      },
+      {
+        "heading": "Sauna",
+        "text": "Die Sauna ist im Eintrittspreis nicht enthalten. Sauna-Zuschlag: 8 Euro. Saunaöffnungszeiten: täglich 10–21 Uhr. Dienstag ist Frauentag in der Sauna (nur für Frauen). Badetücher können für 3 Euro ausgeliehen werden."
+      },
+      {
+        "heading": "Badeordnung",
+        "text": "Vor dem Schwimmen bitte duschen. Straßenkleidung ist im Schwimmbereich nicht erlaubt. Kinder unter 8 Jahren dürfen nur in Begleitung eines Erwachsenen ins Schwimmbad. Springen vom Beckenrand ist nur im Springbecken erlaubt. Fotografieren ist verboten."
+      },
+      {
+        "heading": "Service",
+        "text": "Schließfächer: Münzschließfächer (1 Euro, wird zurückgegeben). Ein kleines Café mit Snacks und Getränken befindet sich im Eingangsbereich. Kostenlose Parkplätze sind vorhanden. Das Schwimmbad ist barrierefrei."
+      }
+    ]
+  },
+  "images": [
+    {
+      "id": "IMG1",
+      "type": "scene",
+      "prompt": "Cute cartoon illustration of the entrance to a German public swimming pool with price list, opening hours, and families arriving. Fuxie cartoon style, flat illustration, warm pastel colors, no text.",
+      "filename": "B1-T5-008_scene.png",
+      "placement": "header",
+      "alt_text": "Schwimmbad-Info",
+      "dimensions": "768x512"
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q1",
+      "teil": 5,
+      "type": "multiple_choice",
+      "stem": "Wie viel kostet die Einzelkarte für Studenten?",
+      "options": {
+        "a": "3,00 Euro.",
+        "b": "4,00 Euro.",
+        "c": "6,50 Euro."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Der ermäßigte Preis (Schüler, Studenten, Rentner) beträgt 4,00 Euro.",
+        "key_evidence": "Ermäßigt: 4,00 Euro",
+        "key_vocabulary": [
+          {
+            "word": "Einzelkarte",
+            "type": "Nomen",
+            "meaning": "single ticket"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q2",
+      "teil": 5,
+      "type": "multiple_choice",
+      "stem": "Wann ist der Frauentag in der Sauna?",
+      "options": {
+        "a": "Montag.",
+        "b": "Dienstag.",
+        "c": "Samstag."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Am Dienstag ist Frauentag in der Sauna.",
+        "key_evidence": "Dienstag ist Frauentag in der Sauna",
+        "key_vocabulary": [
+          {
+            "word": "Frauentag",
+            "type": "Nomen",
+            "meaning": "women's day"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q3",
+      "teil": 5,
+      "type": "multiple_choice",
+      "stem": "Ab welchem Alter dürfen Kinder allein ins Schwimmbad?",
+      "options": {
+        "a": "Ab 6 Jahren.",
+        "b": "Ab 8 Jahren.",
+        "c": "Ab 10 Jahren."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Kinder unter 8 dürfen nur in Begleitung eines Erwachsenen kommen.",
+        "key_evidence": "Kinder unter 8 Jahren dürfen nur in Begleitung eines Erwachsenen",
+        "key_vocabulary": [
+          {
+            "word": "Begleitung",
+            "type": "Nomen",
+            "meaning": "accompaniment"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q4",
+      "teil": 5,
+      "type": "multiple_choice",
+      "stem": "Was kostet das Frühschwimmen?",
+      "options": {
+        "a": "3,00 Euro.",
+        "b": "4,00 Euro.",
+        "c": "6,50 Euro."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Frühschwimmen bis 8 Uhr kostet 4,00 Euro.",
+        "key_evidence": "Frühschwimmen (bis 8 Uhr): 4,00 Euro",
+        "key_vocabulary": [
+          {
+            "word": "Frühschwimmen",
+            "type": "Nomen",
+            "meaning": "early morning swim"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q5",
+      "teil": 5,
+      "type": "multiple_choice",
+      "stem": "Was ist die Hauptaussage des Textes zu im Schwimmbereich verboten?",
+      "options": {
+        "a": "Schwimmbrillen tragen.",
+        "b": "Fotografieren.",
+        "c": "Badekappen tragen."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Fotografieren ist im Schwimmbereich verboten.",
+        "key_evidence": "Fotografieren ist verboten",
+        "key_vocabulary": [
+          {
+            "word": "Badeordnung",
+            "type": "Nomen",
+            "meaning": "pool rules"
+          }
+        ],
+        "reasoning": "[Inferential] "
+      }
+    }
+  ],
+  "scoring": {
+    "total_points": 5,
+    "pass_threshold": 3,
+    "grading": [
+      {
+        "range": [
+          5,
+          5
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          4,
+          4
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          3,
+          3
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          1,
+          2
+        ],
+        "label": "Noch üben!",
+        "emoji": "📝"
+      },
+      {
+        "range": [
+          0,
+          0
+        ],
+        "label": "Mehr Übung nötig",
+        "emoji": "💪"
+      }
+    ]
+  },
+  "qa": {
+    "vocab_in_b1_list": true,
+    "grammar_b1_appropriate": true,
+    "word_count_in_range": true,
+    "all_answers_verifiable": true,
+    "image_count": 1,
+    "passed": true
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "id": "W-A2-T2-011",
+  "cefrLevel": "A2",
+  "teil": 2,
+  "teilName": "Persoenliche Mitteilung",
+  "textType": "Mitteilung",
+  "register": "halbformell",
+  "topic": "Geburtstagessen",
+  "instruction": "Sie möchten Ihren Kollegen, Herrn Weber, zu Ihrem Geburtstagsessen einladen. Schreiben Sie eine Mitteilung (E-Mail oder SMS) an ihn.",
+  "instructionVi": "Bạn muốn mời đồng nghiệp của mình, ông Weber, đến dự tiệc tối mừng sinh nhật. Hãy viết một tin nhắn (Email hoặc SMS) cho ông ấy.",
+  "situation": "Nächste Woche haben Sie Geburtstag und möchten diesen Anlass feiern. Sie haben einen Tisch in einem Restaurant reserviert und laden dazu einige Kollegen ein, mit denen Sie gut zusammenarbeiten.",
+  "contentPoints": [
+    "Sagen Sie, warum Sie schreiben.",
+    "Nennen Sie Zeit und Ort des Essens.",
+    "Fragen Sie nach einer Antwort bis zu einem bestimmten Datum."
+  ],
+  "sourceText": "Termin: Freitag, 25. November, um 19:00 Uhr. Ort: Restaurant 'Zum Goldenen Hirsch'. Bitte bis Dienstag Bescheid geben.",
+  "sourceTextType": "Notiz",
+  "minWords": 40,
+  "maxWords": 70,
+  "timeMinutes": 15,
+  "rubric": {
+    "criteria": [
+      {
+        "id": "inhalt",
+        "name": "Inhalt",
+        "nameVi": "Nội dung",
+        "maxScore": 5,
+        "weight": 30
+      },
+      {
+        "id": "korrektheit",
+        "name": "Korrektheit",
+        "nameVi": "Chính xác ngữ pháp & chính tả",
+        "maxScore": 5,
+        "weight": 35
+      },
+      {
+        "id": "angemessenheit",
+        "name": "Kommunikative Angemessenheit",
+        "nameVi": "Phù hợp giao tiếp",
+        "maxScore": 5,
+        "weight": 35
+      }
+    ],
+    "maxScore": 15
+  },
+  "maxScore": 15
+}

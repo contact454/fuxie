@@ -1,0 +1,92 @@
+{
+  "id": "W-C1-T1-015",
+  "cefrLevel": "C1",
+  "teil": 1,
+  "teilName": "Argumentativer Text",
+  "textType": "Argumentation",
+  "register": "sachlich",
+  "topic": "Tourismusethik",
+  "instruction": "Schreiben Sie einen zusammenhängenden argumentativen Text zum Thema 'Ethik im Tourismus – Zwischen Fernweh und Verantwortung'. Bearbeiten Sie alle unten aufgeführten Inhaltspunkte. Integrieren Sie dabei die Informationen aus der Grafik und die Aussagen der Experten in Ihre Argumentation.",
+  "instructionVi": "Viết một bài văn nghị luận mạch lạc về chủ đề 'Đạo đức trong du lịch - Giữa niềm đam mê xê dịch và trách nhiệm'. Hãy giải quyết tất cả các ý chính dưới đây, kết hợp thông tin từ biểu đồ và các ý kiến chuyên gia vào bài làm của bạn.",
+  "situation": "Im Rahmen Ihres Studiums der Kulturwissenschaften nehmen Sie an einem Kolloquium zum Thema 'Globaler Konsum' teil. Sie wurden gebeten, einen Fachbeitrag für das Semestermagazin zu verfassen, der die moralischen Dilemmata des modernen Reisens kritisch beleuchtet.",
+  "contentPoints": [
+    "Fassen Sie die zentralen Ergebnisse der Grafik zur Reiseselbstverständlichkeit zusammen.",
+    "Erläutern und vergleichen Sie die zwei vorliegenden Expertenmeinungen zur Tourismusethik.",
+    "Diskutieren Sie die Auswirkungen des Massentourismus auf die lokale Identität und die Umwelt.",
+    "Nehmen Sie fundiert Stellung zur Frage, inwieweit Reisende persönlich für die Folgen ihres Urlaubs verantwortlich gemacht werden können."
+  ],
+  "sourceText": "Dr. Elena Vogel, Tourismusökonomin: 'Der Tourismus stellt für viele strukturschwache Regionen die einzige lebenswichtige Einnahmequelle dar. Ein Rückzug aus ethischen Gründen würde die Armut vor Ort verschärfen und Entwicklungschancen zunichtemachen.' --- Lukas Weber, Umweltsoziologe: 'Wir konsumieren fremde Länder wie Wegwerfprodukte. Die ökologischen Kosten des Flugverkehrs und die soziale Entfremdung in den Zielgebieten stehen in keinem Verhältnis zum individuellen Erholungswert.'",
+  "sourceTextType": "Expertenzitate",
+  "grafikDesc": "Die Grafik 'Prioritäten bei der Urlaubsplanung 2023' illustriert die Kriterien, nach denen Reisende ihr Ziel und ihre Art des Reisens wählen. Die Daten zeigen eine deutliche Diskrepanz zwischen ökonomischen Interessen und ökologischem Bewusstsein.",
+  "grafikData": [
+    {
+      "label": "Günstiger Reisepreis",
+      "value": 68,
+      "unit": "%"
+    },
+    {
+      "label": "Sicherheit im Reiseland",
+      "value": 55,
+      "unit": "%"
+    },
+    {
+      "label": "Authentisches Erleben der Kultur",
+      "value": 34,
+      "unit": "%"
+    },
+    {
+      "label": "Ökologische Nachhaltigkeit (CO2-Kompensation etc.)",
+      "value": 15,
+      "unit": "%"
+    },
+    {
+      "label": "Faire Arbeitsbedingungen vor Ort",
+      "value": 9,
+      "unit": "%"
+    }
+  ],
+  "minWords": 250,
+  "maxWords": 400,
+  "timeMinutes": 50,
+  "rubric": {
+    "criteria": [
+      {
+        "id": "inhalt",
+        "name": "Inhalt",
+        "nameVi": "Nội dung",
+        "maxScore": 5,
+        "weight": 20
+      },
+      {
+        "id": "angemessenheit",
+        "name": "Kommunikative Angemessenheit",
+        "nameVi": "Phù hợp giao tiếp",
+        "maxScore": 5,
+        "weight": 20
+      },
+      {
+        "id": "korrektheit",
+        "name": "Korrektheit",
+        "nameVi": "Chính xác ngữ pháp & chính tả",
+        "maxScore": 5,
+        "weight": 20
+      },
+      {
+        "id": "spektrum",
+        "name": "Wortschatz & Strukturen",
+        "nameVi": "Đa dạng từ vựng & cấu trúc",
+        "maxScore": 5,
+        "weight": 20
+      },
+      {
+        "id": "kohaerenz",
+        "name": "Kohaerenz & Kohaesion",
+        "nameVi": "Mạch lạc & liên kết",
+        "maxScore": 5,
+        "weight": 20
+      }
+    ],
+    "maxScore": 25
+  },
+  "maxScore": 25
+}

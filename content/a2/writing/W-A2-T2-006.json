@@ -1,0 +1,51 @@
+{
+  "id": "W-A2-T2-006",
+  "cefrLevel": "A2",
+  "teil": 2,
+  "teilName": "Persoenliche Mitteilung",
+  "textType": "Mitteilung",
+  "register": "halbformell",
+  "topic": "Putzdienst",
+  "instruction": "Schreiben Sie eine kurze Mitteilung (ca. 40-60 Woerter).",
+  "instructionVi": "Viet tin nhan: Putzdienst.",
+  "situation": "Neuer Putzplan im Haus. Informieren Sie die Nachbarn.",
+  "contentPoints": [
+    "ueber neuen Plan informieren",
+    "Aufgaben erklaeren",
+    "fragen bei Problemen"
+  ],
+  "minWords": 40,
+  "maxWords": 70,
+  "timeMinutes": 15,
+  "rubric": {
+    "criteria": [
+      {
+        "id": "inhalt",
+        "name": "Inhalt",
+        "nameVi": "Noi dung",
+        "maxScore": 5,
+        "weight": 30
+      },
+      {
+        "id": "korrektheit",
+        "name": "Korrektheit",
+        "nameVi": "Chinh xac",
+        "maxScore": 5,
+        "weight": 35
+      },
+      {
+        "id": "angemessenheit",
+        "name": "Kommunikative Angemessenheit",
+        "nameVi": "Phu hop giao tiep",
+        "maxScore": 5,
+        "weight": 35
+      }
+    ],
+    "maxScore": 15
+  },
+  "maxScore": 15,
+  "sourceText": "Frau Weber aus der Schillerstraße 12 beschwert sich: Am 14. Oktober war Ihr Team für den Putzdienst eingeteilt, aber das Treppenhaus ist immer noch voller Schlamm vom Garten. Da Sie die Reinigungskraft sind, müssen Sie erklären, warum die Arbeit nicht erledigt wurde und wann nachgeputzt wird.",
+  "sourceTextType": "E-Mail einer Nachbarin",
+  "stimulusSender": "Frau Weber",
+  "grafikData": []
+}

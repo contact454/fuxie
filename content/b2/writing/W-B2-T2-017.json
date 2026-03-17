@@ -1,0 +1,64 @@
+{
+  "id": "W-B2-T2-017",
+  "cefrLevel": "B2",
+  "teil": 2,
+  "teilName": "Nachricht/E-Mail",
+  "textType": "E-Mail",
+  "register": "formell",
+  "topic": "Datenschutzanfrage",
+  "instruction": "Sie haben eine E-Mail von der Firma 'MediaWorld Digital' erhalten, in der es um die Nutzung Ihrer persönlichen Daten geht. Sie können sich jedoch nicht erinnern, diesem Dienst jemals zugestimmt zu haben. Schreiben Sie eine Antwort an die Datenschutzabteilung der Firma.",
+  "instructionVi": "Bạn nhận được email từ công ty 'MediaWorld Digital' về việc sử dụng dữ liệu cá nhân dù chưa hề đăng ký. Hãy viết email phản hồi cho bộ phận bảo mật dữ liệu của họ.",
+  "situation": "Sie haben eine automatisierte Nachricht erhalten, die bestätigt, dass Ihr Profil für personalisierte Werbung aktiviert wurde. Da Sie großen Wert auf Ihre Privatsphäre legen, möchten Sie klären, woher die Firma Ihre Informationen hat und die sofortige Löschung verlangen.",
+  "contentPoints": [
+    "Geben Sie den Grund für Ihr Schreiben an.",
+    "Bitten Sie um Auskunft über die Herkunft und den Umfang der gespeicherten Daten.",
+    "Verlangen Sie die sofortige Löschung aller personenbezogenen Daten.",
+    "Bitten Sie um eine schriftliche Bestätigung der durchgeführten Löschung."
+  ],
+  "sourceText": "Sehr geehrte Kundin, sehr geehrter Kunde, vielen Dank für Ihr Interesse an unserem neuen digitalen Premium-Paket. Wir haben Ihr Profil erfolgreich erstellt und nutzen Ihre Daten nun, um Ihnen maßgeschneiderte Werbeangebote unserer Partnerunternehmen zuzusenden. Ihre E-Mail-Adresse wurde zudem in unseren Newsletter-Verteiler aufgenommen. Falls Sie Fragen zur Speicherung oder Verarbeitung Ihrer Daten haben, steht Ihnen unser Datenschutzteam jederzeit gerne zur Verfügung. Mit freundlichen Grüßen, Ihr MediaWorld-Team.",
+  "sourceTextType": "E-Mail",
+  "minWords": 100,
+  "maxWords": 150,
+  "timeMinutes": 25,
+  "rubric": {
+    "criteria": [
+      {
+        "id": "inhalt",
+        "name": "Inhalt",
+        "nameVi": "Nội dung",
+        "maxScore": 5,
+        "weight": 25
+      },
+      {
+        "id": "angemessenheit",
+        "name": "Kommunikative Angemessenheit",
+        "nameVi": "Phù hợp giao tiếp",
+        "maxScore": 5,
+        "weight": 20
+      },
+      {
+        "id": "korrektheit",
+        "name": "Korrektheit",
+        "nameVi": "Chính xác ngữ pháp & chính tả",
+        "maxScore": 5,
+        "weight": 25
+      },
+      {
+        "id": "spektrum",
+        "name": "Wortschatz & Strukturen",
+        "nameVi": "Đa dạng từ vựng & cấu trúc",
+        "maxScore": 5,
+        "weight": 15
+      },
+      {
+        "id": "kohaerenz",
+        "name": "Kohaerenz & Kohaesion",
+        "nameVi": "Mạch lạc & liên kết",
+        "maxScore": 5,
+        "weight": 15
+      }
+    ],
+    "maxScore": 25
+  },
+  "maxScore": 25
+}

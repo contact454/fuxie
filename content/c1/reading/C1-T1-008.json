@@ -1,0 +1,171 @@
+{
+  "id": "C1-T1-008",
+  "level": "C1",
+  "teil": 1,
+  "teil_name": "Lückentext (Wörter)",
+  "topic": "Recht & Justiz",
+  "topic_id": "008",
+  "metadata": {
+    "word_count": 224,
+    "target_grammar": [
+      "Nominalisierung",
+      "Partizipialkonstruktionen",
+      "Konjunktiv I/II",
+      "Passiversatzformen"
+    ],
+    "target_vocabulary": [],
+    "generated_at": "2026-03-11T22:50:15.527648",
+    "version": 1
+  },
+  "cloze": {
+    "title": "Der schmale Grat zwischen Whistleblowing und Geheimnisverrat",
+    "text": "Die Frage, ob ein Arbeitnehmer interne Missstände {1} machen darf oder sogar muss, gehört zu den komplexesten Spannungsfeldern des modernen Arbeitsrechts. Auf der einen Seite steht die arbeitsvertragliche Treuepflicht, die Beschäftigte zur Verschwiegenheit über Betriebs- und Geschäftsgeheimnisse {2}. Auf der anderen Seite stehen das öffentliche Interesse an der Aufdeckung von Missständen und der Schutz der Allgemeinheit.\n\nDie EU-Whistleblower-Richtlinie, die in Deutschland durch das Hinweisgeberschutzgesetz {3} wurde, stellt einen wichtigen Meilenstein dar. Sie schützt Personen, die Verstöße gegen EU-Recht melden, vor arbeitsrechtlichen Repressalien wie Kündigung, Degradierung oder Mobbing. Der Schutz greift jedoch nur unter bestimmten {4}: Der Hinweisgeber muss zunächst den internen Meldeweg nutzen, bevor er sich an externe Stellen wendet.\n\nDie Geschichte des Whistleblowings ist reich an Fällen, die die Ambivalenz des Phänomens illustrieren. Edward Snowden, der 2013 die umfassende Überwachung durch die NSA {5}, wird von den einen als mutiger Verteidiger der Bürgerrechte gefeiert, von den anderen als Verräter betrachtet. Ähnlich kontrovers wurde die Veröffentlichung der Panama Papers bewertet, die zwar massive Steuerhinterziehung aufdeckte, aber gleichzeitig die Frage nach der Legitimität des {6} gestohlener Daten aufwarf.\n\nKritiker des erweiterten Whistleblower-Schutzes warnen vor einer Kultur des Misstrauens und der Denunziation. Wenn Mitarbeiter jede Beschwerde als potenzielles Whistleblowing {7} könnten, leide die offene Kommunikationskultur in Unternehmen. Befürworter halten dagegen, dass wirksamer Schutz von Hinweisgebern eine unverzichtbare Voraussetzung für die Bekämpfung von Korruption und Wirtschaftskriminalität {8}.",
+    "gaps": [
+      {
+        "pos": 1,
+        "options": {
+          "a": "bekannt",
+          "b": "publik",
+          "c": "öffentlich",
+          "d": "sichtbar"
+        },
+        "answer": "c"
+      },
+      {
+        "pos": 2,
+        "options": {
+          "a": "verpflichtet",
+          "b": "zwingt",
+          "c": "nötigt",
+          "d": "anhält"
+        },
+        "answer": "a"
+      },
+      {
+        "pos": 3,
+        "options": {
+          "a": "eingeführt",
+          "b": "umgesetzt",
+          "c": "angewandt",
+          "d": "durchgesetzt"
+        },
+        "answer": "b"
+      },
+      {
+        "pos": 4,
+        "options": {
+          "a": "Voraussetzungen",
+          "b": "Bedingungen",
+          "c": "Umständen",
+          "d": "Verhältnissen"
+        },
+        "answer": "a"
+      },
+      {
+        "pos": 5,
+        "options": {
+          "a": "enthüllte",
+          "b": "entdeckte",
+          "c": "aufdeckte",
+          "d": "offenlegte"
+        },
+        "answer": "a"
+      },
+      {
+        "pos": 6,
+        "options": {
+          "a": "Gebrauchs",
+          "b": "Einsatzes",
+          "c": "Verwendens",
+          "d": "Nutzens"
+        },
+        "answer": "a"
+      },
+      {
+        "pos": 7,
+        "options": {
+          "a": "definieren",
+          "b": "darstellen",
+          "c": "bezeichnen",
+          "d": "instrumentalisieren"
+        },
+        "answer": "d"
+      },
+      {
+        "pos": 8,
+        "options": {
+          "a": "bleibt",
+          "b": "ist",
+          "c": "darstellt",
+          "d": "gilt"
+        },
+        "answer": "c"
+      }
+    ]
+  },
+  "images": [
+    {
+      "id": "IMG1",
+      "type": "scene",
+      "prompt": "Cute cartoon illustration related to Recht & Justiz, showing an academic/intellectual scene. Fuxie cartoon style, flat illustration, warm pastel colors, no text.",
+      "filename": "C1-T1-008_scene.png",
+      "placement": "header",
+      "alt_text": "Der schmale Grat zwischen Whistleblowing und Gehei",
+      "dimensions": "768x512"
+    }
+  ],
+  "scoring": {
+    "total_points": 8,
+    "pass_threshold": 5,
+    "grading": [
+      {
+        "range": [
+          7,
+          8
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          5,
+          6
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          4,
+          4
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          1,
+          3
+        ],
+        "label": "Noch üben!",
+        "emoji": "📝"
+      },
+      {
+        "range": [
+          0,
+          0
+        ],
+        "label": "Mehr Übung nötig",
+        "emoji": "💪"
+      }
+    ]
+  },
+  "qa": {
+    "vocab_in_c1_list": true,
+    "grammar_c1_appropriate": true,
+    "word_count_in_range": true,
+    "all_gaps_have_4_options": true,
+    "image_count": 1,
+    "passed": true
+  }
+}

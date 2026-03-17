@@ -1,0 +1,64 @@
+{
+  "id": "W-B1-T3-017",
+  "cefrLevel": "B1",
+  "teil": 3,
+  "teilName": "Formelle E-Mail",
+  "textType": "Formeller Brief",
+  "register": "formell",
+  "topic": "Arzttermin verschieben",
+  "instruction": "Sie haben für nächste Woche einen wichtigen Termin in der Zahnarztpraxis Dr. Müller vereinbart. Da Sie jedoch kurzfristig auf eine Dienstreise gehen müssen, können Sie diesen Termin nicht wahrnehmen. Schreiben Sie eine E-Mail an die Praxis, um den Termin abzusagen und zu verschieben.",
+  "instructionVi": "Bạn có một cuộc hẹn quan trọng tại phòng khám nha khoa của bác sĩ Müller vào tuần tới. Tuy nhiên, vì phải đi công tác đột xuất, bạn không thể đến đúng hẹn. Hãy viết một email cho phòng khám để hủy và dời lịch hẹn.",
+  "situation": "Sie haben eine Terminbestätigung für Dienstag, den 15. Oktober um 14:30 Uhr erhalten. Ihr Arbeitgeber hat Sie jedoch informiert, dass Sie von Montag bis Mittwoch in einer anderen Stadt sein müssen. Sie müssen nun höflich um eine Terminänderung bitten.",
+  "contentPoints": [
+    "Nennen Sie den Grund für Ihr Schreiben und beziehen Sie sich auf den ursprünglichen Termin.",
+    "Erklären Sie höflich, warum Sie den Termin absagen müssen.",
+    "Bitten Sie um einen neuen Termin in der darauffolgenden Woche.",
+    "Machen Sie zwei konkrete Vorschläge, wann Sie Zeit für den Ersatztermin hätten."
+  ],
+  "sourceText": "Terminbestätigung\nPatient: [Ihr Name]\nDatum: Dienstag, 15. Oktober\nUhrzeit: 14:30 Uhr\nOrt: Zahnarztpraxis Dr. Markus Müller, Sonnenstraße 12, 80331 München",
+  "sourceTextType": "E-Mail-Bestätigung",
+  "minWords": 80,
+  "maxWords": 120,
+  "timeMinutes": 25,
+  "rubric": {
+    "criteria": [
+      {
+        "id": "inhalt",
+        "name": "Inhalt",
+        "nameVi": "Nội dung",
+        "maxScore": 5,
+        "weight": 25
+      },
+      {
+        "id": "angemessenheit",
+        "name": "Kommunikative Angemessenheit",
+        "nameVi": "Phù hợp giao tiếp",
+        "maxScore": 5,
+        "weight": 20
+      },
+      {
+        "id": "korrektheit",
+        "name": "Korrektheit",
+        "nameVi": "Chính xác ngữ pháp & chính tả",
+        "maxScore": 5,
+        "weight": 25
+      },
+      {
+        "id": "spektrum",
+        "name": "Wortschatz & Strukturen",
+        "nameVi": "Đa dạng từ vựng & cấu trúc",
+        "maxScore": 5,
+        "weight": 15
+      },
+      {
+        "id": "kohaerenz",
+        "name": "Kohaerenz & Kohaesion",
+        "nameVi": "Mạch lạc & liên kết",
+        "maxScore": 5,
+        "weight": 15
+      }
+    ],
+    "maxScore": 25
+  },
+  "maxScore": 25
+}

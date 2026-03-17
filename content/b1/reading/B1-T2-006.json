@@ -1,0 +1,224 @@
+{
+  "id": "B1-T2-006",
+  "level": "B1",
+  "teil": 2,
+  "teil_name": "Pressebericht lesen",
+  "topic": "Wohnen & Zusammenleben",
+  "topic_id": "006",
+  "metadata": {
+    "word_count": 291,
+    "target_grammar": [
+      "Nebensatz mit weil/dass/obwohl",
+      "Passiv",
+      "Konjunktiv II"
+    ],
+    "target_vocabulary": [
+      "Wohnungsnot",
+      "Mietpreis",
+      "Sozialwohnung",
+      "Baugenehmigung",
+      "Stadtrand",
+      "Pendler",
+      "Quadratmeter",
+      "Vermieter",
+      "Einkommen",
+      "bezahlbar"
+    ],
+    "generated_at": "2026-03-10T22:58:00+07:00",
+    "version": 1
+  },
+  "article": {
+    "source": "Münchner Merkur",
+    "date": "22. September 2025",
+    "title": "Wohnungsnot in deutschen Großstädten",
+    "subtitle": "München, Berlin und Hamburg besonders betroffen — neue Maßnahmen geplant",
+    "text": "Die Wohnungsnot in deutschen Großstädten spitzt sich weiter zu. In München kostet ein Quadratmeter Wohnfläche im Durchschnitt 20 Euro kalt — doppelt so viel wie vor zehn Jahren. In Berlin und Hamburg sind die Mieten ebenfalls stark gestiegen, obwohl die Einkommen nicht im gleichen Maß gewachsen sind.\n\nBesonders betroffen sind Familien, Studenten und Geringverdiener. Eine alleinerziehende Mutter berichtet: „Ich suche seit über einem Jahr eine bezahlbare Drei-Zimmer-Wohnung in Berlin. Auf jede Anzeige melden sich über 200 Interessenten. Das ist frustrierend.“\n\nDie Bundesregierung hat ein neues Bauprogramm angekündigt. Bis 2028 sollen 400.000 neue Wohnungen pro Jahr gebaut werden, davon ein Viertel als Sozialwohnungen. Die Baugenehmigungen sollen schneller erteilt werden, und es gibt Förderprogramme für gemeinnützige Wohnungsbaugesellschaften.\n\nKritiker bezweifeln jedoch, dass diese Ziele erreicht werden können. „Material- und Fachkräftemangel machen den Bau teurer und langsamer“, erklärt Bauexperte Thomas Wendt. Im letzten Jahr wurden nur 250.000 neue Wohnungen fertiggestellt.\n\nEine Alternative ist der Umzug an den Stadtrand oder ins Umland. Dort sind die Mieten deutlich günstiger. Allerdings müssen die Bewohner dann längere Pendelzeiten in Kauf nehmen, was wiederum die Verkehrsinfrastruktur belastet.\n\nStadtplanerin Maria Berger fordert deshalb ein Umdenken: „Wir brauchen nicht nur neue Wohnungen, sondern auch gemischte Stadtteile, in denen Wohnen, Arbeiten und Freizeit miteinander verbunden sind.“"
+  },
+  "images": [
+    {
+      "id": "IMG1",
+      "type": "scene",
+      "prompt": "Cute cartoon illustration of a dense German cityscape with apartment buildings, a 'Wohnung gesucht' sign, and people looking at apartment listings. Fuxie cartoon style, flat illustration, warm pastel colors, no text.",
+      "filename": "B1-T2-006_scene.png",
+      "placement": "header",
+      "alt_text": "Wohnungsnot in der Großstadt",
+      "dimensions": "768x512"
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q1",
+      "teil": 2,
+      "type": "multiple_choice",
+      "stem": "Wie viel kostet ein Quadratmeter in München im Durchschnitt?",
+      "options": {
+        "a": "10 Euro.",
+        "b": "15 Euro.",
+        "c": "20 Euro."
+      },
+      "answer": "c",
+      "points": 1,
+      "explanation": {
+        "de": "Ein Quadratmeter kostet im Durchschnitt 20 Euro kalt.",
+        "key_evidence": "20 Euro kalt",
+        "key_vocabulary": [
+          {
+            "word": "Quadratmeter",
+            "type": "Nomen",
+            "meaning": "square meter"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q2",
+      "teil": 2,
+      "type": "multiple_choice",
+      "stem": "Wie viele neue Wohnungen sollen pro Jahr gebaut werden?",
+      "options": {
+        "a": "250.000.",
+        "b": "400.000.",
+        "c": "500.000."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Bis 2028 sollen 400.000 neue Wohnungen pro Jahr gebaut werden.",
+        "key_evidence": "400.000 neue Wohnungen pro Jahr",
+        "key_vocabulary": [
+          {
+            "word": "Bauprogramm",
+            "type": "Nomen",
+            "meaning": "construction program"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q3",
+      "teil": 2,
+      "type": "multiple_choice",
+      "stem": "Warum bezweifeln Kritiker den Erfolg des Programms?",
+      "options": {
+        "a": "Weil die Grundstücke zu teuer sind.",
+        "b": "Weil es an Material und Fachkräften fehlt.",
+        "c": "Weil zu wenige Wohnungen geplant sind."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Material- und Fachkräftemangel machen den Bau teurer und langsamer.",
+        "key_evidence": "Material- und Fachkräftemangel",
+        "key_vocabulary": [
+          {
+            "word": "Fachkräftemangel",
+            "type": "Nomen",
+            "meaning": "skilled labor shortage"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q4",
+      "teil": 2,
+      "type": "multiple_choice",
+      "stem": "Was ist ein Nachteil des Umzugs an den Stadtrand?",
+      "options": {
+        "a": "Es gibt dort keine Schulen.",
+        "b": "Längere Pendelzeiten.",
+        "c": "Höhere Mieten."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Am Stadtrand sind die Mieten günstiger, aber man hat längere Pendelzeiten.",
+        "key_evidence": "längere Pendelzeiten in Kauf nehmen",
+        "key_vocabulary": [
+          {
+            "word": "Pendelzeit",
+            "type": "Nomen",
+            "meaning": "commute time"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q5",
+      "teil": 2,
+      "type": "multiple_choice",
+      "stem": "Was fordert Stadtplanerin Maria Berger?",
+      "options": {
+        "a": "Mehr Hochhäuser.",
+        "b": "Gemischte Stadtteile mit Wohnen, Arbeiten und Freizeit.",
+        "c": "Günstigere Baumaterialien."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Sie fordert gemischte Stadtteile, in denen Wohnen, Arbeiten und Freizeit verbunden sind.",
+        "key_evidence": "gemischte Stadtteile, in denen Wohnen, Arbeiten und Freizeit miteinander verbunden sind",
+        "key_vocabulary": [
+          {
+            "word": "gemischt",
+            "type": "Adjektiv",
+            "meaning": "mixed"
+          }
+        ]
+      }
+    }
+  ],
+  "scoring": {
+    "total_points": 5,
+    "pass_threshold": 3,
+    "grading": [
+      {
+        "range": [
+          5,
+          5
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          4,
+          4
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          3,
+          3
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          1,
+          2
+        ],
+        "label": "Noch üben!",
+        "emoji": "📝"
+      },
+      {
+        "range": [
+          0,
+          0
+        ],
+        "label": "Mehr Übung nötig",
+        "emoji": "💪"
+      }
+    ]
+  },
+  "qa": {
+    "vocab_in_b1_list": true,
+    "grammar_b1_appropriate": true,
+    "word_count_in_range": true,
+    "all_answers_verifiable": true,
+    "image_count": 1,
+    "passed": true
+  }
+}

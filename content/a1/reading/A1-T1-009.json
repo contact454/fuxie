@@ -1,0 +1,239 @@
+{
+  "id": "A1-T1-009",
+  "level": "A1",
+  "teil": 1,
+  "teil_name": "Kurze Texte lesen",
+  "topic": "Arbeit und Beruf",
+  "topic_id": "009",
+  "metadata": {
+    "word_count_text_a": 42,
+    "word_count_text_b": 46,
+    "target_grammar": [
+      "Präsens",
+      "Akkusativ",
+      "Modalverb müssen"
+    ],
+    "target_vocabulary": [
+      "Arbeit",
+      "Büro",
+      "Chef",
+      "Kollege",
+      "Urlaub",
+      "krank",
+      "Besprechung",
+      "Montag",
+      "Freitag",
+      "arbeiten"
+    ],
+    "generated_at": "2026-03-09T02:15:00+07:00",
+    "version": 1
+  },
+  "texts": [
+    {
+      "id": "TextA",
+      "type": "email",
+      "sender": "Markus",
+      "receiver": "Herr Fischer",
+      "content": "Sehr geehrter Herr Fischer,\nich bin leider krank und kann heute nicht ins Büro kommen. Ich habe Fieber und Husten. Ich bin morgen wahrscheinlich wieder da. Meine Kollegin Frau Schneider hat meine Unterlagen für die Besprechung heute.\nMit freundlichen Grüßen,\nMarkus Braun"
+    },
+    {
+      "id": "TextB",
+      "type": "email",
+      "sender": "Herr Fischer",
+      "receiver": "Markus",
+      "content": "Lieber Herr Braun,\ngute Besserung! Bleiben Sie zu Hause und werden Sie gesund. Die Besprechung ist jetzt am Donnerstag um 10 Uhr. Frau Schneider macht Ihre Arbeit heute. Bringen Sie bitte ein Attest vom Arzt mit. Und ruhen Sie sich gut aus!\nFreundliche Grüße,\nJ. Fischer"
+    }
+  ],
+  "images": [
+    {
+      "id": "IMG1",
+      "type": "scene",
+      "prompt": "Cute cartoon illustration of a modern German office workspace with desks, computers, and a person working at a desk while another desk is empty. Fuxie cartoon style, flat illustration, warm pastel colors, no text.",
+      "filename": "A1-T1-009_scene.png",
+      "placement": "header",
+      "alt_text": "Modernes Büro mit leerem Arbeitsplatz",
+      "dimensions": "768x512"
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q1",
+      "teil": 1,
+      "linked_text": "TextA",
+      "type": "richtig_falsch",
+      "statement": "Markus ist heute im Büro.",
+      "answer": "falsch",
+      "points": 1,
+      "explanation": {
+        "de": "Im Text steht: 'ich bin leider krank und kann heute nicht ins Büro kommen'. Markus ist nicht im Büro.",
+        "key_evidence": "kann heute nicht ins Büro kommen",
+        "key_vocabulary": [
+          {
+            "word": "Büro",
+            "type": "Nomen",
+            "meaning": "office"
+          },
+          {
+            "word": "krank",
+            "type": "Adjektiv",
+            "meaning": "sick"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q2",
+      "teil": 1,
+      "linked_text": "TextA",
+      "type": "richtig_falsch",
+      "statement": "Frau Schneider hat die Unterlagen für die Besprechung.",
+      "answer": "richtig",
+      "points": 1,
+      "explanation": {
+        "de": "Im Text steht: 'Meine Kollegin Frau Schneider hat meine Unterlagen für die Besprechung heute.'",
+        "key_evidence": "Frau Schneider hat meine Unterlagen",
+        "key_vocabulary": [
+          {
+            "word": "Unterlagen",
+            "type": "Nomen",
+            "meaning": "documents"
+          },
+          {
+            "word": "Besprechung",
+            "type": "Nomen",
+            "meaning": "meeting"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q3",
+      "teil": 1,
+      "linked_text": "TextB",
+      "type": "richtig_falsch",
+      "statement": "Die Besprechung ist am Mittwoch.",
+      "answer": "falsch",
+      "points": 1,
+      "explanation": {
+        "de": "Im Text steht: 'Die Besprechung ist jetzt am Donnerstag um 10 Uhr.' Die Besprechung ist am Donnerstag, nicht am Mittwoch.",
+        "key_evidence": "am Donnerstag um 10 Uhr",
+        "key_vocabulary": [
+          {
+            "word": "Donnerstag",
+            "type": "Nomen",
+            "meaning": "Thursday"
+          },
+          {
+            "word": "Mittwoch",
+            "type": "Nomen",
+            "meaning": "Wednesday"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q4",
+      "teil": 1,
+      "linked_text": "TextB",
+      "type": "richtig_falsch",
+      "statement": "Markus muss ein Attest mitbringen.",
+      "answer": "richtig",
+      "points": 1,
+      "explanation": {
+        "de": "Im Text steht: 'Bringen Sie bitte ein Attest vom Arzt mit.'",
+        "key_evidence": "Bringen Sie bitte ein Attest vom Arzt mit",
+        "key_vocabulary": [
+          {
+            "word": "Attest",
+            "type": "Nomen",
+            "meaning": "medical certificate"
+          },
+          {
+            "word": "Arzt",
+            "type": "Nomen",
+            "meaning": "doctor"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q5",
+      "teil": 1,
+      "linked_text": "TextB",
+      "type": "richtig_falsch",
+      "statement": "Der Chef ist böse auf Markus.",
+      "answer": "falsch",
+      "points": 1,
+      "explanation": {
+        "de": "Im Text steht: 'Gute Besserung!' und 'ruhen Sie sich gut aus!' Der Chef ist freundlich, nicht böse.",
+        "key_evidence": "Gute Besserung",
+        "key_vocabulary": [
+          {
+            "word": "Besserung",
+            "type": "Nomen",
+            "meaning": "recovery"
+          },
+          {
+            "word": "böse",
+            "type": "Adjektiv",
+            "meaning": "angry"
+          }
+        ]
+      }
+    }
+  ],
+  "scoring": {
+    "total_points": 5,
+    "pass_threshold": 3,
+    "grading": [
+      {
+        "range": [
+          5,
+          5
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          4,
+          4
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          3,
+          3
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          1,
+          2
+        ],
+        "label": "Noch üben!",
+        "emoji": "📝"
+      },
+      {
+        "range": [
+          0,
+          0
+        ],
+        "label": "Mehr Übung nötig",
+        "emoji": "💪"
+      }
+    ]
+  },
+  "qa": {
+    "vocab_in_a1_list": true,
+    "grammar_a1_only": true,
+    "word_count_in_range": true,
+    "all_answers_verifiable": true,
+    "image_count": 1,
+    "passed": false
+  }
+}

@@ -1,0 +1,258 @@
+{
+  "id": "B1-T3-005",
+  "level": "B1",
+  "teil": 3,
+  "teil_name": "Anzeigen zuordnen",
+  "topic": "Ausbildung & Karriere",
+  "topic_id": "005",
+  "metadata": {
+    "word_count": 232,
+    "target_grammar": [
+      "Nebensatz mit dass/wenn",
+      "Modalverben",
+      "Passiv"
+    ],
+    "target_vocabulary": [
+      "Stellenangebot",
+      "Weiterbildung",
+      "Praktikum",
+      "Bewerbung",
+      "Teilzeit",
+      "Qualifikation",
+      "Branche",
+      "Gehalt"
+    ],
+    "generated_at": "2026-03-10T23:30:00+07:00",
+    "version": 1
+  },
+  "anzeigen": [
+    {
+      "id": "A",
+      "text": "Verkäufer/in gesucht — Bioladen Mitte. Teilzeit (20 Std./Woche), Mo–Fr. Erfahrung im Einzelhandel erwünscht. Freundliches Auftreten und Teamfähigkeit. 13 €/Std. Bewerbung an: bio@laden-mitte.de"
+    },
+    {
+      "id": "B",
+      "text": "IT-Praktikum — 6 Monate bei TechStart GmbH. Programmierung, Datenbanken, Webdesign. Für Studenten der Informatik. 800 €/Monat. Beginn: September 2026. Bewerbung: hr@techstart.de"
+    },
+    {
+      "id": "C",
+      "text": "Weiterbildung: Projektmanagement-Zertifikat. 10 Wochen, berufsbegleitend (Fr 14–18 + Sa 9–13). Anerkanntes Zertifikat. 1.200 €. IHK Köln. Auch online möglich. Info: ihk-koeln.de/pm"
+    },
+    {
+      "id": "D",
+      "text": "Koch/Köchin für italienisches Restaurant — Vollzeit, Erfahrung in der italienischen Küche erforderlich. Gutes Gehalt + Trinkgeld. Sofort verfügbar. Ristorante Bella, Schanzenviertel. Tel: 040-5566778."
+    },
+    {
+      "id": "E",
+      "text": "Deutschkurs B2 für den Beruf — Intensivkurs Mo–Fr, 9–13 Uhr. 12 Wochen. Schwerpunkt: Geschäftskommunikation, E-Mails, Telefonieren. Für Migranten mit B1-Niveau. Kostenlos mit Bildungsgutschein. VHS Hamburg."
+    },
+    {
+      "id": "F",
+      "text": "Minijob: Zeitungszustellung — Frühmorgens (5–7 Uhr), Mo–Sa. Eigenes Fahrrad erforderlich. 520 €/Monat. Für Studenten und Rentner ideal. Bewerbung: zustellung@morgenpost.de"
+    },
+    {
+      "id": "G",
+      "text": "Ausbildung zum/zur Erzieher/in — 3-jährige Ausbildung ab August 2026. Voraussetzung: mittlerer Schulabschluss. Praxis in Kindertagesstätten. Bewerbung bis 30. April. Fachschule Pädagogik München."
+    },
+    {
+      "id": "H",
+      "text": "Freiberufliche Übersetzer/innen gesucht — Sprachen: Türkisch, Arabisch, Vietnamesisch. Für Behörden und Ärzte. Flexible Zeiten. Honorar: 35–45 €/Std. Erfahrung und Zertifizierung nötig. bewerbung@dolmetsch-zentrum.de"
+    }
+  ],
+  "situationen": [
+    {
+      "id": "S1",
+      "text": "Ahmed hat das B1-Niveau in Deutsch und braucht einen Kurs, um berufliches Deutsch zu lernen. Er hat einen Bildungsgutschein.",
+      "answer": "E"
+    },
+    {
+      "id": "S2",
+      "text": "Claudia studiert Informatik und sucht ein bezahltes Praktikum in der IT-Branche.",
+      "answer": "B"
+    },
+    {
+      "id": "S3",
+      "text": "Herr Nguyen spricht Vietnamesisch und Deutsch und möchte flexibel als Übersetzer arbeiten.",
+      "answer": "H"
+    },
+    {
+      "id": "S4",
+      "text": "Markus arbeitet als Ingenieur und möchte sich neben dem Job im Bereich Projektmanagement weiterbilden.",
+      "answer": "C"
+    },
+    {
+      "id": "S5",
+      "text": "Jana ist Studentin und sucht einen einfachen Nebenjob am frühen Morgen.",
+      "answer": "F"
+    }
+  ],
+  "null_matches": [
+    "A",
+    "D",
+    "G"
+  ],
+  "images": [
+    {
+      "id": "IMG1",
+      "type": "scene",
+      "prompt": "Cute cartoon illustration of a job board with various career ads — IT jobs, cooking, translation, courses, internships. Fuxie cartoon style, flat illustration, warm pastel colors, no text.",
+      "filename": "B1-T3-005_scene.png",
+      "placement": "header",
+      "alt_text": "Stellenanzeigen und Weiterbildung",
+      "dimensions": "768x512"
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q1",
+      "teil": 3,
+      "type": "matching",
+      "stem": "Ahmed braucht berufliches Deutsch (B2) und hat einen Bildungsgutschein.",
+      "answer": "E",
+      "points": 1,
+      "explanation": {
+        "de": "Der B2-Deutschkurs ist für Migranten mit B1-Niveau und kostenlos mit Bildungsgutschein.",
+        "key_evidence": "Deutschkurs B2 für den Beruf / Kostenlos mit Bildungsgutschein",
+        "key_vocabulary": [
+          {
+            "word": "Bildungsgutschein",
+            "type": "Nomen",
+            "meaning": "education voucher"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q2",
+      "teil": 3,
+      "type": "matching",
+      "stem": "Claudia sucht ein bezahltes IT-Praktikum als Informatik-Studentin.",
+      "answer": "B",
+      "points": 1,
+      "explanation": {
+        "de": "TechStart bietet ein 6-monatiges IT-Praktikum für Informatik-Studenten.",
+        "key_evidence": "IT-Praktikum / Für Studenten der Informatik / 800 €/Monat",
+        "key_vocabulary": [
+          {
+            "word": "Praktikum",
+            "type": "Nomen",
+            "meaning": "internship"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q3",
+      "teil": 3,
+      "type": "matching",
+      "stem": "Herr Nguyen möchte flexibel als Vietnamesisch-Übersetzer arbeiten.",
+      "answer": "H",
+      "points": 1,
+      "explanation": {
+        "de": "Freiberufliche Übersetzer werden für Vietnamesisch gesucht, mit flexiblen Zeiten.",
+        "key_evidence": "Vietnamesisch / Flexible Zeiten / Freiberufliche Übersetzer",
+        "key_vocabulary": [
+          {
+            "word": "freiberuflich",
+            "type": "Adjektiv",
+            "meaning": "freelance"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q4",
+      "teil": 3,
+      "type": "matching",
+      "stem": "Markus will sich neben dem Job im Projektmanagement weiterbilden.",
+      "answer": "C",
+      "points": 1,
+      "explanation": {
+        "de": "Die IHK bietet berufsbegleitendes Projektmanagement-Zertifikat an.",
+        "key_evidence": "berufsbegleitend / Projektmanagement-Zertifikat",
+        "key_vocabulary": [
+          {
+            "word": "berufsbegleitend",
+            "type": "Adjektiv",
+            "meaning": "alongside one's job"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q5",
+      "teil": 3,
+      "type": "matching",
+      "stem": "Die Position, dass jana sucht einen einfachen Nebenjob am frühen Morgen als Studentin, findet sich bei:",
+      "answer": "F",
+      "points": 1,
+      "explanation": {
+        "de": "Die Zeitungszustellung ist frühmorgens, ideal für Studenten.",
+        "key_evidence": "Frühmorgens 5–7 Uhr / Für Studenten ideal",
+        "key_vocabulary": [
+          {
+            "word": "Minijob",
+            "type": "Nomen",
+            "meaning": "mini job (marginal employment)"
+          }
+        ],
+        "reasoning": "[Inferential] "
+      }
+    }
+  ],
+  "scoring": {
+    "total_points": 5,
+    "pass_threshold": 3,
+    "grading": [
+      {
+        "range": [
+          5,
+          5
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          4,
+          4
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          3,
+          3
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          1,
+          2
+        ],
+        "label": "Noch üben!",
+        "emoji": "📝"
+      },
+      {
+        "range": [
+          0,
+          0
+        ],
+        "label": "Mehr Übung nötig",
+        "emoji": "💪"
+      }
+    ]
+  },
+  "qa": {
+    "vocab_in_b1_list": true,
+    "grammar_b1_appropriate": true,
+    "word_count_in_range": true,
+    "all_answers_verifiable": true,
+    "null_matches_correct": true,
+    "image_count": 1,
+    "passed": true
+  }
+}

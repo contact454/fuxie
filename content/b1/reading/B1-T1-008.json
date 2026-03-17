@@ -1,0 +1,200 @@
+{
+  "id": "B1-T1-008",
+  "level": "B1",
+  "teil": 1,
+  "teil_name": "Blog-Eintrag lesen",
+  "topic": "Sport & Fitness",
+  "topic_id": "008",
+  "metadata": {
+    "word_count": 263,
+    "target_grammar": [
+      "Nebensatz mit obwohl/als/dass",
+      "Konjunktiv II",
+      "Perfekt"
+    ],
+    "target_vocabulary": [
+      "Marathon",
+      "Training",
+      "Ausdauer",
+      "Strecke",
+      "Kilometer",
+      "Ziel",
+      "aufgeben",
+      "Laufgruppe",
+      "Muskelkater",
+      "Motivation"
+    ],
+    "generated_at": "2026-03-10T22:52:00+07:00",
+    "version": 1
+  },
+  "blog": {
+    "title": "Wie ich Marathon gelaufen bin",
+    "author": "RunnerChris",
+    "date": "12. Oktober 2025",
+    "text": "Letztes Wochenende habe ich meinen ersten Marathon geschafft! 42 Kilometer in vier Stunden und zwanzig Minuten. Ich kann es immer noch nicht glauben. Vor einem Jahr hätte ich nie gedacht, dass ich das schaffen könnte.\n\nAlles hat angefangen, als mein bester Freund gesagt hat, dass er sich für den Berlin-Marathon anmelden will. Er hat mich gefragt, ob ich mitmachen möchte. Zuerst habe ich gelacht, weil ich damals nicht einmal fünf Kilometer laufen konnte. Aber dann dachte ich: Warum nicht?\n\nIch habe einen Trainingsplan aus dem Internet heruntergeladen und angefangen, dreimal pro Woche zu laufen. Am Anfang war es furchtbar — nach zehn Minuten hatte ich schon Seitenstechen. Aber Woche für Woche wurde es besser. Nach drei Monaten konnte ich schon zehn Kilometer am Stück laufen.\n\nAm wichtigsten war meine Laufgruppe. Jeden Samstagmorgen sind wir zusammen gelaufen. Wenn einer keine Motivation hatte, haben die anderen ihn mitgezogen. Ohne diese Gruppe hätte ich wahrscheinlich aufgegeben.\n\nDer Marathon selbst war das härteste, was ich je gemacht habe. Bei Kilometer 35 wollte ich aufhören. Meine Beine brannten, und ich konnte kaum noch atmen. Aber die Zuschauer am Rand haben mich angefeuert, und irgendwie habe ich es ins Ziel geschafft.\n\nJetzt erholt sich mein Körper, und ich habe den schlimmsten Muskelkater meines Lebens. Aber ich bin unglaublich stolz."
+  },
+  "images": [
+    {
+      "id": "IMG1",
+      "type": "scene",
+      "prompt": "Cute cartoon illustration of a man crossing the finish line of a marathon with arms up, crowd cheering, city backdrop with buildings and trees. Fuxie cartoon style, flat illustration, warm pastel colors, no text.",
+      "filename": "B1-T1-008_scene.png",
+      "placement": "header",
+      "alt_text": "Chris läuft Marathon",
+      "dimensions": "768x512"
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q1",
+      "teil": 1,
+      "type": "richtig_falsch",
+      "stem": "Der Autor deutet an, dass chris konnte vor einem Jahr schon gut laufen.",
+      "answer": "falsch",
+      "points": 1,
+      "explanation": {
+        "de": "Er konnte damals nicht einmal fünf Kilometer laufen.",
+        "key_evidence": "weil ich damals nicht einmal fünf Kilometer laufen konnte",
+        "key_vocabulary": [
+          {
+            "word": "Ausdauer",
+            "type": "Nomen",
+            "meaning": "endurance"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q2",
+      "teil": 1,
+      "type": "richtig_falsch",
+      "stem": "Chris ist dreimal pro Woche gelaufen, um sich vorzubereiten.",
+      "answer": "richtig",
+      "points": 1,
+      "explanation": {
+        "de": "Er hat angefangen, dreimal pro Woche zu laufen.",
+        "key_evidence": "angefangen, dreimal pro Woche zu laufen",
+        "key_vocabulary": [
+          {
+            "word": "Trainingsplan",
+            "type": "Nomen",
+            "meaning": "training plan"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q3",
+      "teil": 1,
+      "type": "richtig_falsch",
+      "stem": "Chris hat ganz allein trainiert, ohne Hilfe von anderen.",
+      "answer": "falsch",
+      "points": 1,
+      "explanation": {
+        "de": "Er hatte eine Laufgruppe, die ihm sehr geholfen hat.",
+        "key_evidence": "Am wichtigsten war meine Laufgruppe",
+        "key_vocabulary": [
+          {
+            "word": "Laufgruppe",
+            "type": "Nomen",
+            "meaning": "running group"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q4",
+      "teil": 1,
+      "type": "richtig_falsch",
+      "stem": "Bei Kilometer 35 wollte Chris aufhören.",
+      "answer": "richtig",
+      "points": 1,
+      "explanation": {
+        "de": "Er wollte bei Kilometer 35 aufhören, aber die Zuschauer haben ihn angefeuert.",
+        "key_evidence": "Bei Kilometer 35 wollte ich aufhören",
+        "key_vocabulary": [
+          {
+            "word": "aufgeben",
+            "type": "Verb",
+            "meaning": "to give up"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q5",
+      "teil": 1,
+      "type": "richtig_falsch",
+      "stem": "Laut dem Text gilt: chris hat den Marathon in unter vier Stunden geschafft.",
+      "answer": "falsch",
+      "points": 1,
+      "explanation": {
+        "de": "Er hat ihn in vier Stunden und zwanzig Minuten geschafft.",
+        "key_evidence": "42 Kilometer in vier Stunden und zwanzig Minuten",
+        "key_vocabulary": [
+          {
+            "word": "Strecke",
+            "type": "Nomen",
+            "meaning": "distance / route"
+          }
+        ],
+        "reasoning": "[Inferential] "
+      }
+    }
+  ],
+  "scoring": {
+    "total_points": 5,
+    "pass_threshold": 3,
+    "grading": [
+      {
+        "range": [
+          5,
+          5
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          4,
+          4
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          3,
+          3
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          1,
+          2
+        ],
+        "label": "Noch üben!",
+        "emoji": "📝"
+      },
+      {
+        "range": [
+          0,
+          0
+        ],
+        "label": "Mehr Übung nötig",
+        "emoji": "💪"
+      }
+    ]
+  },
+  "qa": {
+    "vocab_in_b1_list": true,
+    "grammar_b1_appropriate": true,
+    "word_count_in_range": true,
+    "all_answers_verifiable": true,
+    "richtig_falsch_balanced": true,
+    "image_count": 1,
+    "passed": true
+  }
+}

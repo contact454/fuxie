@@ -1,0 +1,49 @@
+{
+  "id": "W-A2-T2-020",
+  "cefrLevel": "A2",
+  "teil": 2,
+  "teilName": "Persoenliche Mitteilung",
+  "textType": "Mitteilung",
+  "register": "halbformell",
+  "topic": "Stadtteilfest",
+  "instruction": "Sie haben einen Aushang über das Stadtteilfest in Ihrem Viertel gelesen. Schreiben Sie eine Mitteilung an Ihre Nachbarin, Frau Müller, und laden Sie sie ein.",
+  "instructionVi": "Bạn vừa đọc một thông báo về lễ hội khu phố. Hãy viết một tin nhắn cho hàng xóm của bạn, bà Müller, và mời bà ấy đi cùng.",
+  "situation": "In Ihrem Wohnviertel findet diesen Samstag ein großes Stadtteilfest statt. Da Sie ein gutes Verhältnis zu Ihrer Nachbarin Frau Müller haben, möchten Sie sie fragen, ob sie gemeinsam mit Ihnen dorthin gehen möchte.",
+  "contentPoints": [
+    "Grund für Ihr Schreiben (Einladung zum Stadtteilfest).",
+    "Informationen zum Fest (Zeit und Ort).",
+    "Vorschlag für einen Treffpunkt."
+  ],
+  "sourceText": "STADTTEILFEST IN GOHLIS: Diesen Samstag, 15. Juni, ab 15:00 Uhr auf dem Kirchplatz. Musik, Spezialitäten aus aller Welt und Flohmarkt. Der Eintritt ist frei!",
+  "sourceTextType": "Aushang",
+  "minWords": 40,
+  "maxWords": 70,
+  "timeMinutes": 15,
+  "rubric": {
+    "criteria": [
+      {
+        "id": "inhalt",
+        "name": "Inhalt",
+        "nameVi": "Nội dung",
+        "maxScore": 5,
+        "weight": 30
+      },
+      {
+        "id": "korrektheit",
+        "name": "Korrektheit",
+        "nameVi": "Chính xác ngữ pháp & chính tả",
+        "maxScore": 5,
+        "weight": 35
+      },
+      {
+        "id": "angemessenheit",
+        "name": "Kommunikative Angemessenheit",
+        "nameVi": "Phù hợp giao tiếp",
+        "maxScore": 5,
+        "weight": 35
+      }
+    ],
+    "maxScore": 15
+  },
+  "maxScore": 15
+}

@@ -1,0 +1,172 @@
+{
+  "id": "B2-T4-004",
+  "level": "B2",
+  "teil": 4,
+  "teil_name": "Kommentare lesen",
+  "topic": "Beruf & Karriere",
+  "topic_id": "004",
+  "metadata": {
+    "word_count": 149,
+    "target_grammar": [
+      "Konjunktiv II",
+      "Passiv",
+      "Nominalisierung",
+      "Relativsatze"
+    ],
+    "target_vocabulary": [],
+    "generated_at": "2026-03-11T22:37:08.661642",
+    "version": 1
+  },
+  "forum": {
+    "question": "Sollte das Recht auf Homeoffice gesetzlich verankert werden?",
+    "comments": [
+      {
+        "name": "Sandra Muller",
+        "position": "ja",
+        "text": "Als berufstatige Mutter hat mir das Homeoffice ermoglicht, Beruf und Familie endlich unter einen Hut zu bringen. Ein gesetzliches Recht auf Homeoffice wurde die Vereinbarkeit fur Millionen Beschaftigte verbessern und die Gleichstellung der Geschlechter fordern."
+      },
+      {
+        "name": "Peter Hamann",
+        "position": "nein",
+        "text": "Ich leite einen Handwerksbetrieb mit 25 Mitarbeitern. Wie soll denn ein Elektriker oder eine Schreinerin von zu Hause arbeiten? Ein allgemeines Recht auf Homeoffice ware fur viele Branchen vollig realitatsfremd und wurde nur zu Neid und Unzufriedenheit fuhren."
+      },
+      {
+        "name": "Anna-Lena Koch",
+        "position": "ja",
+        "text": "In den Niederlanden gibt es seit 2023 ein Recht auf ortsflexibles Arbeiten, und die Erfahrungen sind uberwiegend positiv. Die Produktivitat ist gestiegen, die Mitarbeiterfluktuation gesunken. Deutschland muss hier nachziehen, um als Arbeitgeber attraktiv zu bleiben."
+      },
+      {
+        "name": "Thomas Bergmann",
+        "position": "nein",
+        "text": "Homeoffice klingt verlockend, aber ich habe bei meinen Mitarbeitern beobachtet, dass der Teamgeist und die Innovationskraft leiden, wenn alle nur noch zu Hause sitzen. Ein gesetzliches Recht wurde den Arbeitgebern die Flexibilitat nehmen, das fur ihren Betrieb beste Modell zu wahlen."
+      }
+    ]
+  },
+  "images": [
+    {
+      "id": "IMG1",
+      "type": "scene",
+      "prompt": "Cute cartoon illustration of people having a discussion forum about Beruf & Karriere, showing speech bubbles with different opinions. Fuxie cartoon style, flat illustration, warm pastel colors, no text.",
+      "filename": "B2-T4-004_scene.png",
+      "placement": "header",
+      "alt_text": "Sollte das Recht auf Homeoffice gesetzlich veranke",
+      "dimensions": "768x512"
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q1",
+      "teil": 4,
+      "type": "ja_nein",
+      "stem": "Sandra Muller sieht im Homeoffice eine Chance fur die Gleichstellung.",
+      "answer": "ja",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Sandra Muller sieht im Homeoffice eine Chance fur die Gleichstellung.",
+        "reasoning": "Die richtige Antwort ergibt sich aus dem Text."
+      }
+    },
+    {
+      "id": "Q2",
+      "teil": 4,
+      "type": "ja_nein",
+      "stem": "Der Text legt nahe, dass peter Hamann halt ein Recht auf Homeoffice in allen Branchen fur umsetzbar.",
+      "answer": "nein",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Peter Hamann halt ein Recht auf Homeoffice in allen Branchen fur umsetzbar.",
+        "reasoning": "[Inferential] Die richtige Antwort ergibt sich aus dem Text."
+      }
+    },
+    {
+      "id": "Q3",
+      "teil": 4,
+      "type": "ja_nein",
+      "stem": "Anna-Lena Koch berichtet von negativen Erfahrungen aus den Niederlanden.",
+      "answer": "nein",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Anna-Lena Koch berichtet von negativen Erfahrungen aus den Niederlanden.",
+        "reasoning": "Die richtige Antwort ergibt sich aus dem Text."
+      }
+    },
+    {
+      "id": "Q4",
+      "teil": 4,
+      "type": "ja_nein",
+      "stem": "Aus dem Text lässt sich schließen, dass thomas Bergmann befurchtet, dass die Innovationskraft im Homeoffice leidet.",
+      "answer": "ja",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Thomas Bergmann befurchtet, dass die Innovationskraft im Homeoffice leidet.",
+        "reasoning": "[Inferential] Die richtige Antwort ergibt sich aus dem Text."
+      }
+    },
+    {
+      "id": "Q5",
+      "teil": 4,
+      "type": "ja_nein",
+      "stem": "Aus dem Text lässt sich schließen, dass Die Mehrheit der Kommentatoren befurwortet ein gesetzliches Recht auf Homeoffice.",
+      "answer": "nein",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Die Mehrheit der Kommentatoren befurwortet ein gesetzliches Recht auf Homeoffice",
+        "reasoning": "[Inferential] Die richtige Antwort ergibt sich aus dem Text."
+      }
+    }
+  ],
+  "scoring": {
+    "total_points": 5,
+    "pass_threshold": 3,
+    "grading": [
+      {
+        "range": [
+          5,
+          5
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          4,
+          4
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          3,
+          3
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          1,
+          2
+        ],
+        "label": "Noch uben!",
+        "emoji": "📝"
+      },
+      {
+        "range": [
+          0,
+          0
+        ],
+        "label": "Mehr Ubung notig",
+        "emoji": "💪"
+      }
+    ]
+  },
+  "qa": {
+    "vocab_in_b2_list": true,
+    "grammar_b2_appropriate": true,
+    "word_count_in_range": true,
+    "all_answers_verifiable": true,
+    "image_count": 1,
+    "passed": true
+  }
+}

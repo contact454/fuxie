@@ -1,0 +1,243 @@
+{
+  "id": "B1-T5-009",
+  "level": "B1",
+  "teil": 5,
+  "teil_name": "Informationsblatt lesen",
+  "topic": "Einkaufen & Konsum",
+  "topic_id": "009",
+  "metadata": {
+    "word_count": 276,
+    "target_grammar": [
+      "Passiv",
+      "Modalverben",
+      "Nebensatz mit wenn/falls/damit"
+    ],
+    "target_vocabulary": [
+      "Umtausch",
+      "Rückgabe",
+      "Garantie",
+      "Gewährleistung",
+      "Kassenbon",
+      "Widerruf",
+      "Online-Kauf",
+      "Frist"
+    ],
+    "generated_at": "2026-03-10T23:50:00+07:00",
+    "version": 1
+  },
+  "infotext": {
+    "source": "Verbraucherzentrale NRW",
+    "title": "Umtausch und Rückgabe: Ihre Rechte beim Einkaufen",
+    "format": "Informationsblatt",
+    "sections": [
+      {
+        "heading": "Umtausch im Geschäft",
+        "text": "Im stationären Handel (Geschäft) gibt es kein gesetzliches Recht auf Umtausch, wenn Ihnen die Ware einfach nicht gefällt. Viele Geschäfte bieten aber freiwillig einen Umtausch an, meistens innerhalb von 14 Tagen und nur mit Kassenbon. Fragen Sie vor dem Kauf nach der Umtauschpolitik."
+      },
+      {
+        "heading": "Online-Einkauf: 14 Tage Widerrufsrecht",
+        "text": "Bei Online-Käufen haben Sie ein gesetzliches Widerrufsrecht von 14 Tagen. Sie können die Ware ohne Angabe von Gründen zurückschicken. Die Frist beginnt ab dem Tag, an dem Sie die Ware erhalten. Die Rücksendung muss der Anbieter bezahlen, wenn der Warenwert über 40 Euro liegt."
+      },
+      {
+        "heading": "Gewährleistung bei Mängeln",
+        "text": "Wenn ein Produkt defekt ist oder einen Mangel hat, haben Sie Recht auf Gewährleistung — egal ob im Laden oder online gekauft. Die Gewährleistungsfrist beträgt 2 Jahre ab Kaufdatum. In den ersten 12 Monaten muss der Verkäufer beweisen, dass der Mangel nicht schon beim Kauf vorhanden war."
+      },
+      {
+        "heading": "Garantie vs. Gewährleistung",
+        "text": "Die Garantie ist eine freiwillige Leistung des Herstellers. Sie kommt zusätzlich zur gesetzlichen Gewährleistung. Garantiebedingungen variieren — manche Hersteller bieten 3 Jahre, andere 5 Jahre. Lesen Sie die Garantiebedingungen sorgfältig."
+      },
+      {
+        "heading": "Tipps",
+        "text": "Bewahren Sie den Kassenbon und die Originalverpackung immer auf. Machen Sie bei teuren Käufen ein Foto mit Datum. Reklamieren Sie Mängel sofort schriftlich (E-Mail reicht). Bei Problemen hilft Ihnen die Verbraucherzentrale: Tel. 0211-38090 oder www.verbraucherzentrale.nrw"
+      }
+    ]
+  },
+  "images": [
+    {
+      "id": "IMG1",
+      "type": "scene",
+      "prompt": "Cute cartoon illustration of a consumer rights info sheet with icons for online shopping returns, store exchange, warranty certificate, and receipt. Fuxie cartoon style, flat illustration, warm pastel colors, no text.",
+      "filename": "B1-T5-009_scene.png",
+      "placement": "header",
+      "alt_text": "Umtausch und Rückgabe",
+      "dimensions": "768x512"
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q1",
+      "teil": 5,
+      "type": "multiple_choice",
+      "stem": "Wie lange hat man beim Online-Kauf Widerrufsrecht?",
+      "options": {
+        "a": "7 Tage.",
+        "b": "14 Tage.",
+        "c": "30 Tage."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Das gesetzliche Widerrufsrecht bei Online-Käufen beträgt 14 Tage.",
+        "key_evidence": "gesetzliches Widerrufsrecht von 14 Tagen",
+        "key_vocabulary": [
+          {
+            "word": "Widerrufsrecht",
+            "type": "Nomen",
+            "meaning": "right of withdrawal"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q2",
+      "teil": 5,
+      "type": "multiple_choice",
+      "stem": "Gibt es ein gesetzliches Umtauschrecht im Geschäft?",
+      "options": {
+        "a": "Ja, innerhalb von 14 Tagen.",
+        "b": "Nein, Umtausch ist freiwillig.",
+        "c": "Ja, innerhalb von 30 Tagen."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Im Geschäft gibt es kein gesetzliches Umtauschrecht; Geschäfte bieten es freiwillig an.",
+        "key_evidence": "kein gesetzliches Recht auf Umtausch / Viele Geschäfte bieten freiwillig",
+        "key_vocabulary": [
+          {
+            "word": "freiwillig",
+            "type": "Adjektiv",
+            "meaning": "voluntary"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q3",
+      "teil": 5,
+      "type": "multiple_choice",
+      "stem": "Wie lange gilt die Gewährleistung?",
+      "options": {
+        "a": "1 Jahr.",
+        "b": "2 Jahre.",
+        "c": "3 Jahre."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Die Gewährleistungsfrist beträgt 2 Jahre ab Kaufdatum.",
+        "key_evidence": "Gewährleistungsfrist beträgt 2 Jahre",
+        "key_vocabulary": [
+          {
+            "word": "Gewährleistung",
+            "type": "Nomen",
+            "meaning": "warranty (legal)"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q4",
+      "teil": 5,
+      "type": "multiple_choice",
+      "stem": "Was möchte der Autor mit der Unterschied zwischen Garantie und Gewährleistung verdeutlichen?",
+      "options": {
+        "a": "Garantie ist gesetzlich, Gewährleistung freiwillig.",
+        "b": "Garantie ist freiwillig vom Hersteller, Gewährleistung ist gesetzlich.",
+        "c": "Es gibt keinen Unterschied."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Die Garantie ist freiwillig vom Hersteller, die Gewährleistung ist gesetzlich.",
+        "key_evidence": "Die Garantie ist eine freiwillige Leistung des Herstellers / zusätzlich zur gesetzlichen Gewährleistung",
+        "key_vocabulary": [
+          {
+            "word": "Hersteller",
+            "type": "Nomen",
+            "meaning": "manufacturer"
+          }
+        ],
+        "reasoning": "[Inferential] "
+      }
+    },
+    {
+      "id": "Q5",
+      "teil": 5,
+      "type": "multiple_choice",
+      "stem": "Was soll man bei Mängeln sofort tun?",
+      "options": {
+        "a": "Die Polizei rufen.",
+        "b": "Schriftlich reklamieren.",
+        "c": "Das Produkt wegwerfen."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Man sollte Mängel sofort schriftlich reklamieren (E-Mail reicht).",
+        "key_evidence": "Reklamieren Sie Mängel sofort schriftlich",
+        "key_vocabulary": [
+          {
+            "word": "reklamieren",
+            "type": "Verb",
+            "meaning": "to make a complaint"
+          }
+        ]
+      }
+    }
+  ],
+  "scoring": {
+    "total_points": 5,
+    "pass_threshold": 3,
+    "grading": [
+      {
+        "range": [
+          5,
+          5
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          4,
+          4
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          3,
+          3
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          1,
+          2
+        ],
+        "label": "Noch üben!",
+        "emoji": "📝"
+      },
+      {
+        "range": [
+          0,
+          0
+        ],
+        "label": "Mehr Übung nötig",
+        "emoji": "💪"
+      }
+    ]
+  },
+  "qa": {
+    "vocab_in_b1_list": true,
+    "grammar_b1_appropriate": true,
+    "word_count_in_range": true,
+    "all_answers_verifiable": true,
+    "image_count": 1,
+    "passed": true
+  }
+}

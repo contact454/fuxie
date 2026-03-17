@@ -1,0 +1,171 @@
+{
+  "id": "C1-T1-011",
+  "level": "C1",
+  "teil": 1,
+  "teil_name": "Lückentext (Wörter)",
+  "topic": "Umweltpolitik & Klima",
+  "topic_id": "011",
+  "metadata": {
+    "word_count": 215,
+    "target_grammar": [
+      "Nominalisierung",
+      "Partizipialkonstruktionen",
+      "Konjunktiv I/II",
+      "Passiversatzformen"
+    ],
+    "target_vocabulary": [],
+    "generated_at": "2026-03-11T22:50:15.527648",
+    "version": 1
+  },
+  "cloze": {
+    "title": "CO2-Bepreisung als klimapolitisches Steuerungsinstrument",
+    "text": "Die Einführung eines Preises für den Ausstoß von Kohlendioxid gilt unter Ökonomen als eines der wirksamsten {1} zur Bekämpfung des Klimawandels. Die Grundidee ist bestechend einfach: Wer CO2 emittiert, soll die gesellschaftlichen Kosten dieser Emissionen, die sogenannten externen Kosten, in seine wirtschaftlichen Entscheidungen einbeziehen {2}.\n\nIn der Europäischen Union existiert seit 2005 das Emissionshandelssystem ETS, das einen Markt für CO2-Zertifikate {3}. Unternehmen aus energieintensiven Branchen müssen für jede emittierte Tonne CO2 ein Zertifikat vorweisen. Die Gesamtmenge der Zertifikate wird politisch festgelegt und kontinuierlich reduziert, sodass der Preis mit zunehmender Knappheit {4}.\n\nErgänzend hat Deutschland 2021 einen nationalen CO2-Preis für die Sektoren Verkehr und Gebäude eingeführt, die vom europäischen Emissionshandel nicht erfasst werden. Der Preis stieg von anfänglich 25 Euro pro Tonne auf mittlerweile 55 Euro und soll weiter {5}.\n\nKritiker bemängeln, dass ein CO2-Preis einkommensschwache Haushalte überproportional belaste, da diese einen größeren Anteil ihres Einkommens für Energie und Mobilität {6}. Als Ausgleich haben einige Länder ein Klimageld eingeführt, bei dem die Einnahmen aus der CO2-Bepreisung als Pro-Kopf-Pauschale an die Bevölkerung zurückfließen.\n\nBefürworter betonen, dass die CO2-Bepreisung ihre Wirkung bereits {7}: In Schweden, das bereits 1991 eine CO2-Steuer einführte, sanken die Emissionen um 27 Prozent, während die Wirtschaft gleichzeitig um 83 Prozent wuchs. Dieses Beispiel widerlegt die verbreitete Annahme, dass ambitionierter Klimaschutz zwangsläufig wirtschaftliches Wachstum {8}.",
+    "gaps": [
+      {
+        "pos": 1,
+        "options": {
+          "a": "Werkzeuge",
+          "b": "Instrumente",
+          "c": "Methoden",
+          "d": "Maßnahmen"
+        },
+        "answer": "b"
+      },
+      {
+        "pos": 2,
+        "options": {
+          "a": "müssen",
+          "b": "sollen",
+          "c": "können",
+          "d": "dürfen"
+        },
+        "answer": "a"
+      },
+      {
+        "pos": 3,
+        "options": {
+          "a": "bildet",
+          "b": "darstellt",
+          "c": "errichtet",
+          "d": "schafft"
+        },
+        "answer": "d"
+      },
+      {
+        "pos": 4,
+        "options": {
+          "a": "sinkt",
+          "b": "steigt",
+          "c": "wächst",
+          "d": "zunimmt"
+        },
+        "answer": "b"
+      },
+      {
+        "pos": 5,
+        "options": {
+          "a": "ansteigen",
+          "b": "steigen",
+          "c": "zunehmen",
+          "d": "wachsen"
+        },
+        "answer": "a"
+      },
+      {
+        "pos": 6,
+        "options": {
+          "a": "verbrauchen",
+          "b": "ausgeben",
+          "c": "aufwenden",
+          "d": "einsetzen"
+        },
+        "answer": "c"
+      },
+      {
+        "pos": 7,
+        "options": {
+          "a": "zeigt",
+          "b": "beweist",
+          "c": "entfaltet",
+          "d": "offenbart"
+        },
+        "answer": "c"
+      },
+      {
+        "pos": 8,
+        "options": {
+          "a": "verhindert",
+          "b": "hemmt",
+          "c": "bremst",
+          "d": "ausschließt"
+        },
+        "answer": "c"
+      }
+    ]
+  },
+  "images": [
+    {
+      "id": "IMG1",
+      "type": "scene",
+      "prompt": "Cute cartoon illustration related to Umweltpolitik & Klima, showing an academic/intellectual scene. Fuxie cartoon style, flat illustration, warm pastel colors, no text.",
+      "filename": "C1-T1-011_scene.png",
+      "placement": "header",
+      "alt_text": "CO2-Bepreisung als klimapolitisches Steuerungsinst",
+      "dimensions": "768x512"
+    }
+  ],
+  "scoring": {
+    "total_points": 8,
+    "pass_threshold": 5,
+    "grading": [
+      {
+        "range": [
+          7,
+          8
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          5,
+          6
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          4,
+          4
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          1,
+          3
+        ],
+        "label": "Noch üben!",
+        "emoji": "📝"
+      },
+      {
+        "range": [
+          0,
+          0
+        ],
+        "label": "Mehr Übung nötig",
+        "emoji": "💪"
+      }
+    ]
+  },
+  "qa": {
+    "vocab_in_c1_list": true,
+    "grammar_c1_appropriate": true,
+    "word_count_in_range": true,
+    "all_gaps_have_4_options": true,
+    "image_count": 1,
+    "passed": true
+  }
+}

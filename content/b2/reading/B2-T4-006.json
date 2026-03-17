@@ -1,0 +1,172 @@
+{
+  "id": "B2-T4-006",
+  "level": "B2",
+  "teil": 4,
+  "teil_name": "Kommentare lesen",
+  "topic": "Bildung & Erziehung",
+  "topic_id": "006",
+  "metadata": {
+    "word_count": 143,
+    "target_grammar": [
+      "Konjunktiv II",
+      "Passiv",
+      "Nominalisierung",
+      "Relativsatze"
+    ],
+    "target_vocabulary": [],
+    "generated_at": "2026-03-11T22:37:08.661642",
+    "version": 1
+  },
+  "forum": {
+    "question": "Brauchen Kinder Hausaufgaben?",
+    "comments": [
+      {
+        "name": "Grundschullehrerin Martina Gross",
+        "position": "ja",
+        "text": "Hausaufgaben sind ein wichtiger Teil des Lernprozesses. Sie helfen Kindern, den Unterrichtsstoff zu Hause zu vertiefen und selbstandiges Arbeiten zu uben. Ohne Hausaufgaben wurde ein wesentlicher Bestandteil der Lernkette fehlen."
+      },
+      {
+        "name": "Vater Stefan Berger",
+        "position": "nein",
+        "text": "Jeden Nachmittag Tranen und Streit wegen der Hausaufgaben. Mein Sohn ist nach 6 Stunden Schule erschopft und hat keine Energie mehr zum Lernen. Die Hausaufgaben vergiften unsere gemeinsame Familienzeit und machen Kindern den Spass am Lernen kaputt."
+      },
+      {
+        "name": "Padagogin Dr. Andrea Schulz",
+        "position": "nein",
+        "text": "Studien zeigen, dass Hausaufgaben in der Grundschule keinen messbaren Lerneffekt haben. In Finnland, dem PISA-Vorbild, gibt es kaum Hausaufgaben, und die Schulsysteme schneiden trotzdem hervorragend ab. Wir sollten Kindern mehr Freizeit zum Spielen und Entdecken lassen."
+      },
+      {
+        "name": "Mutter Regina Wolf",
+        "position": "ja",
+        "text": "Ich sehe es positiv, dass meine Tochter Hausaufgaben bekommt. Es gibt mir als Mutter die Moglichkeit zu sehen, was in der Schule gemacht wird, und mein Kind gezielt zu unterstutzen. Ohne Hausaufgaben hatte ich viel weniger Einblick in den Lernstand."
+      }
+    ]
+  },
+  "images": [
+    {
+      "id": "IMG1",
+      "type": "scene",
+      "prompt": "Cute cartoon illustration of people having a discussion forum about Bildung & Erziehung, showing speech bubbles with different opinions. Fuxie cartoon style, flat illustration, warm pastel colors, no text.",
+      "filename": "B2-T4-006_scene.png",
+      "placement": "header",
+      "alt_text": "Brauchen Kinder Hausaufgaben?",
+      "dimensions": "768x512"
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q1",
+      "teil": 4,
+      "type": "ja_nein",
+      "stem": "Martina Gross sieht Hausaufgaben als wichtigen Teil des Lernprozesses.",
+      "answer": "ja",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Martina Gross sieht Hausaufgaben als wichtigen Teil des Lernprozesses.",
+        "reasoning": "Die richtige Antwort ergibt sich aus dem Text."
+      }
+    },
+    {
+      "id": "Q2",
+      "teil": 4,
+      "type": "ja_nein",
+      "stem": "Stefan Berger findet die Hausaufgabenzeit bereichernd fur die Familie.",
+      "answer": "nein",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Stefan Berger findet die Hausaufgabenzeit bereichernd fur die Familie.",
+        "reasoning": "Die richtige Antwort ergibt sich aus dem Text."
+      }
+    },
+    {
+      "id": "Q3",
+      "teil": 4,
+      "type": "ja_nein",
+      "stem": "Der Autor ist der Meinung, dass dr. Schulz berichtet von Studien, die einen grossen Lerneffekt von Hausaufgaben belegen.",
+      "answer": "nein",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Dr. Schulz berichtet von Studien, die einen grossen Lerneffekt von Hausaufgaben ",
+        "reasoning": "[Inferential] Die richtige Antwort ergibt sich aus dem Text."
+      }
+    },
+    {
+      "id": "Q4",
+      "teil": 4,
+      "type": "ja_nein",
+      "stem": "Der Text legt nahe, dass regina Wolf schätzt die Hausaufgaben als Einblick in den Schulalltag ihres Kindes.",
+      "answer": "ja",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Regina Wolf schätzt die Hausaufgaben als Einblick in den Schulalltag ihres Kinde",
+        "reasoning": "[Inferential] Die richtige Antwort ergibt sich aus dem Text."
+      }
+    },
+    {
+      "id": "Q5",
+      "teil": 4,
+      "type": "ja_nein",
+      "stem": "Der Text legt nahe, dass Die Mehrzahl der Kommentatoren meint, Hausaufgaben seien uberflussig.",
+      "answer": "nein",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Die Mehrzahl der Kommentatoren meint, Hausaufgaben seien uberflussig.",
+        "reasoning": "[Inferential] Die richtige Antwort ergibt sich aus dem Text."
+      }
+    }
+  ],
+  "scoring": {
+    "total_points": 5,
+    "pass_threshold": 3,
+    "grading": [
+      {
+        "range": [
+          5,
+          5
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          4,
+          4
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          3,
+          3
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          1,
+          2
+        ],
+        "label": "Noch uben!",
+        "emoji": "📝"
+      },
+      {
+        "range": [
+          0,
+          0
+        ],
+        "label": "Mehr Ubung notig",
+        "emoji": "💪"
+      }
+    ]
+  },
+  "qa": {
+    "vocab_in_b2_list": true,
+    "grammar_b2_appropriate": true,
+    "word_count_in_range": true,
+    "all_answers_verifiable": true,
+    "image_count": 1,
+    "passed": true
+  }
+}

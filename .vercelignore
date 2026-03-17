@@ -1,0 +1,22 @@
+# Large content directories (not needed for web build)
+content/
+docs/
+scripts/
+services/
+infra/
+Fuxie/
+.gemini/
+.agents/
+
+# Build artifacts
+.turbo/
+coverage/
+
+# Dev files
+docker-compose.yml
+docker-compose.override.yml
+*.md
+!README.md
+
+# OS files
+.DS_Store

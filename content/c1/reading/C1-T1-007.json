@@ -1,0 +1,171 @@
+{
+  "id": "C1-T1-007",
+  "level": "C1",
+  "teil": 1,
+  "teil_name": "Lückentext (Wörter)",
+  "topic": "Medien & Kommunikation",
+  "topic_id": "007",
+  "metadata": {
+    "word_count": 226,
+    "target_grammar": [
+      "Nominalisierung",
+      "Partizipialkonstruktionen",
+      "Konjunktiv I/II",
+      "Passiversatzformen"
+    ],
+    "target_vocabulary": [],
+    "generated_at": "2026-03-11T22:50:15.527648",
+    "version": 1
+  },
+  "cloze": {
+    "title": "Algorithmische Nachrichtenauswahl und ihre Folgen",
+    "text": "In einer zunehmend digitalisierten Medienlandschaft {1} Algorithmen eine Schlüsselrolle bei der Auswahl und Gewichtung von Nachrichten. Mehr als 60 Prozent der Deutschen informieren sich mittlerweile über soziale Medien und Nachrichtenaggregatoren, deren Inhalte von Algorithmen kuratiert werden, die das individuelle Nutzerverhalten {2}.\n\nDiese algorithmische Personalisierung verfolgt ein konkretes Geschäftsinteresse: Je relevanter die angezeigten Inhalte für den einzelnen Nutzer erscheinen, desto länger verweilt dieser auf der Plattform und desto mehr Werbung kann ihm {3} werden. Die Folge ist eine systematische Verengung des Informationsspektrums, die als Filterblase bezeichnet wird.\n\nBesonders problematisch ist die Tendenz der Algorithmen, emotionalisierende und polarisierende Inhalte zu {4}, da diese mehr Klicks, Kommentare und Interaktionen generieren. Studien des MIT Media Lab zeigen, dass sich Falschnachrichten auf Twitter sechsmal schneller verbreiten als {5} Meldungen, weil sie stärkere emotionale Reaktionen hervorrufen und damit vom Algorithmus bevorzugt werden.\n\nDie gesellschaftlichen Konsequenzen sind tiefgreifend. Wenn Bürger in unterschiedlichen Informationswelten leben, wird der demokratische Diskurs, der auf einem geteilten Verständnis von Fakten {6}, zunehmend erschwert. Die Polarisierung der politischen Debatte, die in vielen westlichen Demokratien beobachtet wird, steht in unmittelbarem Zusammenhang mit der algorithmischen Fragmentierung der Öffentlichkeit.\n\nExperten fordern daher eine stärkere Regulierung algorithmischer Systeme. Der Digital Services Act der EU verpflichtet große Plattformen bereits zur Offenlegung ihrer Empfehlungsalgorithmen. Darüber hinaus plädieren Medienwissenschaftler für eine Stärkung öffentlich-rechtlicher digitaler {7}, die unabhängig von kommerziellen Interessen eine vielfältige und ausgewogene Berichterstattung {8}.",
+    "gaps": [
+      {
+        "pos": 1,
+        "options": {
+          "a": "spielen",
+          "b": "übernehmen",
+          "c": "bekommen",
+          "d": "erhalten"
+        },
+        "answer": "a"
+      },
+      {
+        "pos": 2,
+        "options": {
+          "a": "untersuchen",
+          "b": "analysieren",
+          "c": "beobachten",
+          "d": "verfolgen"
+        },
+        "answer": "b"
+      },
+      {
+        "pos": 3,
+        "options": {
+          "a": "gezeigt",
+          "b": "präsentiert",
+          "c": "ausgespielt",
+          "d": "vorgeführt"
+        },
+        "answer": "c"
+      },
+      {
+        "pos": 4,
+        "options": {
+          "a": "bevorzugen",
+          "b": "fördern",
+          "c": "unterstützen",
+          "d": "begünstigen"
+        },
+        "answer": "a"
+      },
+      {
+        "pos": 5,
+        "options": {
+          "a": "wahre",
+          "b": "korrekte",
+          "c": "wahrheitsgemäße",
+          "d": "faktentreue"
+        },
+        "answer": "c"
+      },
+      {
+        "pos": 6,
+        "options": {
+          "a": "aufbaut",
+          "b": "beruht",
+          "c": "basiert",
+          "d": "fußt"
+        },
+        "answer": "b"
+      },
+      {
+        "pos": 7,
+        "options": {
+          "a": "Plattformen",
+          "b": "Angebote",
+          "c": "Kanäle",
+          "d": "Medien"
+        },
+        "answer": "b"
+      },
+      {
+        "pos": 8,
+        "options": {
+          "a": "sicherstellen",
+          "b": "gewährleisten",
+          "c": "garantieren",
+          "d": "ermöglichen"
+        },
+        "answer": "b"
+      }
+    ]
+  },
+  "images": [
+    {
+      "id": "IMG1",
+      "type": "scene",
+      "prompt": "Cute cartoon illustration related to Medien & Kommunikation, showing an academic/intellectual scene. Fuxie cartoon style, flat illustration, warm pastel colors, no text.",
+      "filename": "C1-T1-007_scene.png",
+      "placement": "header",
+      "alt_text": "Algorithmische Nachrichtenauswahl und ihre Folgen",
+      "dimensions": "768x512"
+    }
+  ],
+  "scoring": {
+    "total_points": 8,
+    "pass_threshold": 5,
+    "grading": [
+      {
+        "range": [
+          7,
+          8
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          5,
+          6
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          4,
+          4
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          1,
+          3
+        ],
+        "label": "Noch üben!",
+        "emoji": "📝"
+      },
+      {
+        "range": [
+          0,
+          0
+        ],
+        "label": "Mehr Übung nötig",
+        "emoji": "💪"
+      }
+    ]
+  },
+  "qa": {
+    "vocab_in_c1_list": true,
+    "grammar_c1_appropriate": true,
+    "word_count_in_range": true,
+    "all_gaps_have_4_options": true,
+    "image_count": 1,
+    "passed": true
+  }
+}

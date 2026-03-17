@@ -1,0 +1,23 @@
+{
+    "name": "@fuxie/shared",
+    "version": "0.0.1",
+    "private": true,
+    "type": "module",
+    "exports": {
+        "./types": "./src/types/index.ts",
+        "./constants": "./src/constants/index.ts",
+        "./validators": "./src/validators/index.ts",
+        "./utils": "./src/utils/index.ts"
+    },
+    "scripts": {
+        "typecheck": "tsc --noEmit",
+        "clean": "rm -rf dist .turbo"
+    },
+    "dependencies": {
+        "zod": "^3.24.1"
+    },
+    "devDependencies": {
+        "@fuxie/typescript-config": "workspace:*",
+        "typescript": "^5.7.3"
+    }
+}

@@ -1,0 +1,260 @@
+{
+  "id": "A2-T2-007",
+  "level": "A2",
+  "teil": 2,
+  "teil_name": "Informationstafeln verstehen",
+  "topic": "Unterwegs",
+  "topic_id": "007",
+  "metadata": {
+    "word_count": 91,
+    "target_grammar": [
+      "Modalverben",
+      "Präpositionen mit Dativ"
+    ],
+    "target_vocabulary": [
+      "Hauptbahnhof",
+      "Gleis",
+      "Fahrkarte",
+      "Schließfach",
+      "Reisezentrum",
+      "Gepäck",
+      "Abfahrt",
+      "Ankunft",
+      "Bahnsteig",
+      "Fahrstuhl"
+    ],
+    "generated_at": "2026-03-09T22:34:00+07:00",
+    "version": 1
+  },
+  "infotafel": {
+    "title": "Hauptbahnhof Frankfurt — Wegweiser",
+    "location": "Am Hauptbahnhof 1, 60329 Frankfurt am Main",
+    "rows": [
+      {
+        "floor": "UG",
+        "items": "S-Bahn Gleise 1–4 · U-Bahn Linien U4, U5 · Fahrradparkplatz"
+      },
+      {
+        "floor": "EG",
+        "items": "Reisezentrum · Fahrkartenautomat · Schließfächer · WC · Polizei"
+      },
+      {
+        "floor": "1. OG",
+        "items": "Fernzüge Gleise 5–16 · Wartesaal · Bäckerei · Kiosk"
+      },
+      {
+        "floor": "2. OG",
+        "items": "Food Court · Buchhandlung · Apotheke · Drogerie"
+      }
+    ],
+    "extra_info": "Reisezentrum: täglich 6:00–22:00 Uhr. Schließfächer: 3 € (klein) / 5 € (groß) pro Tag. Fahrstuhl und Rolltreppe zu allen Gleisen. Kostenloses WLAN im ganzen Bahnhof. Fundbüro: Raum 012, EG."
+  },
+  "images": [
+    {
+      "id": "IMG1",
+      "type": "info_board",
+      "prompt": "Cute cartoon illustration of a large modern German train station main hall with a big departure board, platforms visible through glass walls, travelers with suitcases, a ticket machine. Fuxie cartoon style, flat illustration, warm pastel colors, no text.",
+      "filename": "A2-T2-007_board.png",
+      "placement": "header",
+      "alt_text": "Hauptbahnhof Frankfurt Wegweiser",
+      "dimensions": "768x512"
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q1",
+      "teil": 2,
+      "type": "multiple_choice",
+      "stem": "Wo kann man eine Fahrkarte kaufen?",
+      "options": {
+        "a": "Im Untergeschoss.",
+        "b": "Im Erdgeschoss.",
+        "c": "Im 2. Obergeschoss."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Das Reisezentrum und der Fahrkartenautomat sind im EG.",
+        "key_evidence": "EG: Reisezentrum · Fahrkartenautomat · Schließfächer · WC · Polizei",
+        "key_vocabulary": [
+          {
+            "word": "Fahrkarte",
+            "type": "Nomen",
+            "meaning": "ticket"
+          },
+          {
+            "word": "Reisezentrum",
+            "type": "Nomen",
+            "meaning": "travel center"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q2",
+      "teil": 2,
+      "type": "multiple_choice",
+      "stem": "Von welchem Gleis fahren die Fernzüge ab?",
+      "options": {
+        "a": "Gleise 1–4 im Untergeschoss.",
+        "b": "Gleise 5–16 im 1. Obergeschoss.",
+        "c": "Gleise 1–16 im Erdgeschoss."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Die Fernzüge fahren von Gleisen 5–16 im 1. OG ab.",
+        "key_evidence": "1. OG: Fernzüge Gleise 5–16",
+        "key_vocabulary": [
+          {
+            "word": "Fernzug",
+            "type": "Nomen",
+            "meaning": "long-distance train"
+          },
+          {
+            "word": "Gleis",
+            "type": "Nomen",
+            "meaning": "platform / track"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q3",
+      "teil": 2,
+      "type": "multiple_choice",
+      "stem": "Wie viel kostet ein großes Schließfach pro Tag?",
+      "options": {
+        "a": "3 Euro.",
+        "b": "5 Euro.",
+        "c": "7 Euro."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Ein großes Schließfach kostet 5 € pro Tag.",
+        "key_evidence": "Schließfächer: 3 € (klein) / 5 € (groß) pro Tag",
+        "key_vocabulary": [
+          {
+            "word": "Schließfach",
+            "type": "Nomen",
+            "meaning": "locker"
+          },
+          {
+            "word": "pro Tag",
+            "type": "Phrase",
+            "meaning": "per day"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q4",
+      "teil": 2,
+      "type": "multiple_choice",
+      "stem": "Wo kann man etwas essen?",
+      "options": {
+        "a": "Nur im Erdgeschoss.",
+        "b": "Im 1. OG und im 2. OG.",
+        "c": "Nur im 2. Obergeschoss."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Im 1. OG gibt es eine Bäckerei und im 2. OG gibt es den Food Court.",
+        "key_evidence": "1. OG: Bäckerei · Kiosk / 2. OG: Food Court",
+        "key_vocabulary": [
+          {
+            "word": "Bäckerei",
+            "type": "Nomen",
+            "meaning": "bakery"
+          },
+          {
+            "word": "Food Court",
+            "type": "Nomen",
+            "meaning": "food court"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q5",
+      "teil": 2,
+      "type": "multiple_choice",
+      "stem": "Wo ist das Fundbüro?",
+      "options": {
+        "a": "Im 1. Obergeschoss, Raum 102.",
+        "b": "Im Erdgeschoss, Raum 012.",
+        "c": "Im Untergeschoss, Raum 001."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Das Fundbüro ist in Raum 012 im EG.",
+        "key_evidence": "Fundbüro: Raum 012, EG",
+        "key_vocabulary": [
+          {
+            "word": "Fundbüro",
+            "type": "Nomen",
+            "meaning": "lost and found office"
+          }
+        ]
+      }
+    }
+  ],
+  "scoring": {
+    "total_points": 5,
+    "pass_threshold": 3,
+    "grading": [
+      {
+        "range": [
+          5,
+          5
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          4,
+          4
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          3,
+          3
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          1,
+          2
+        ],
+        "label": "Noch üben!",
+        "emoji": "📝"
+      },
+      {
+        "range": [
+          0,
+          0
+        ],
+        "label": "Mehr Übung nötig",
+        "emoji": "💪"
+      }
+    ]
+  },
+  "qa": {
+    "vocab_in_a2_list": true,
+    "grammar_a2_only": true,
+    "word_count_in_range": true,
+    "all_answers_verifiable": true,
+    "mc_distractors_plausible": true,
+    "image_count": 1,
+    "passed": true
+  }
+}

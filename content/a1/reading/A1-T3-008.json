@@ -1,0 +1,276 @@
+{
+  "id": "A1-T3-008",
+  "level": "A1",
+  "teil": 3,
+  "teil_name": "Schilder und Aushänge",
+  "topic": "Freizeit und Hobby",
+  "topic_id": "008",
+  "metadata": {
+    "generated_at": "2026-03-09T02:45:00+07:00",
+    "version": 1
+  },
+  "schilder": [
+    {
+      "id": "Schild1",
+      "type": "Regel",
+      "text": "Freibad: Vor dem Schwimmen bitte duschen. Dusche neben dem Eingang.",
+      "icon": "🚿"
+    },
+    {
+      "id": "Schild2",
+      "type": "Information",
+      "text": "Kino: Neuer Film 'Sommertage' ab Freitag! Vorstellungen um 15, 18 und 20:30 Uhr.",
+      "icon": "🎬"
+    },
+    {
+      "id": "Schild3",
+      "type": "Regel",
+      "text": "Fahrradweg: Nur für Fahrräder! Fußgänger bitte den Gehweg benutzen.",
+      "icon": "🚲"
+    },
+    {
+      "id": "Schild4",
+      "type": "Warnung",
+      "text": "Spielplatz gesperrt! Reparaturarbeiten bis Montag. Bitte den Spielplatz in der Parkstraße benutzen.",
+      "icon": "⚠️"
+    },
+    {
+      "id": "Schild5",
+      "type": "Regel",
+      "text": "Hunde verboten! In der Grünanlage und auf dem Sportplatz keine Hunde erlaubt.",
+      "icon": "🐕‍🦺"
+    }
+  ],
+  "images": [
+    {
+      "id": "IMG1",
+      "type": "schild",
+      "linked_schild": "Schild1",
+      "prompt": "Cartoon pool shower sign: 'Vor dem Schwimmen bitte duschen.' Blue/white pool sign with shower icon. Fuxie cartoon.",
+      "filename": "A1-T3-008_schild_1.png",
+      "placement": "schild_1",
+      "alt_text": "Duschpflicht-Schild Freibad",
+      "dimensions": "400x300"
+    },
+    {
+      "id": "IMG2",
+      "type": "schild",
+      "linked_schild": "Schild2",
+      "prompt": "Cartoon cinema sign: 'Neuer Film Sommertage ab Freitag! 15, 18, 20:30 Uhr.' Red/gold cinema marquee. Fuxie cartoon.",
+      "filename": "A1-T3-008_schild_2.png",
+      "placement": "schild_2",
+      "alt_text": "Kino-Programmschild",
+      "dimensions": "400x300"
+    },
+    {
+      "id": "IMG3",
+      "type": "schild",
+      "linked_schild": "Schild3",
+      "prompt": "Cartoon bike lane sign: 'Fahrradweg - Nur für Fahrräder!' Blue/white bike sign. Fuxie cartoon.",
+      "filename": "A1-T3-008_schild_3.png",
+      "placement": "schild_3",
+      "alt_text": "Fahrradweg-Schild",
+      "dimensions": "400x300"
+    },
+    {
+      "id": "IMG4",
+      "type": "schild",
+      "linked_schild": "Schild4",
+      "prompt": "Cartoon playground closed sign: 'Spielplatz gesperrt! Reparatur bis Montag.' Orange warning sign. Fuxie cartoon.",
+      "filename": "A1-T3-008_schild_4.png",
+      "placement": "schild_4",
+      "alt_text": "Spielplatz-gesperrt-Schild",
+      "dimensions": "400x300"
+    },
+    {
+      "id": "IMG5",
+      "type": "schild",
+      "linked_schild": "Schild5",
+      "prompt": "Cartoon no dogs sign: 'Hunde verboten - Grünanlage und Sportplatz.' Red prohibition sign with dog icon. Fuxie cartoon.",
+      "filename": "A1-T3-008_schild_5.png",
+      "placement": "schild_5",
+      "alt_text": "Hunde-verboten-Schild",
+      "dimensions": "400x300"
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q11",
+      "teil": 3,
+      "linked_schild": "Schild1",
+      "type": "richtig_falsch",
+      "statement": "Man muss vor dem Schwimmen duschen.",
+      "answer": "richtig",
+      "points": 1,
+      "explanation": {
+        "de": "Auf dem Schild steht: 'Vor dem Schwimmen bitte duschen.'",
+        "key_evidence": "Vor dem Schwimmen bitte duschen",
+        "key_vocabulary": [
+          {
+            "word": "duschen",
+            "type": "Verb",
+            "meaning": "to shower"
+          },
+          {
+            "word": "schwimmen",
+            "type": "Verb",
+            "meaning": "to swim"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q12",
+      "teil": 3,
+      "linked_schild": "Schild2",
+      "type": "richtig_falsch",
+      "statement": "Der Film 'Sommertage' läuft schon seit Montag.",
+      "answer": "falsch",
+      "points": 1,
+      "explanation": {
+        "de": "Auf dem Schild steht: 'ab Freitag!' Der Film startet am Freitag, nicht am Montag.",
+        "key_evidence": "ab Freitag",
+        "key_vocabulary": [
+          {
+            "word": "Film",
+            "type": "Nomen",
+            "meaning": "movie"
+          },
+          {
+            "word": "Vorstellung",
+            "type": "Nomen",
+            "meaning": "showing"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q13",
+      "teil": 3,
+      "linked_schild": "Schild3",
+      "type": "richtig_falsch",
+      "statement": "Fußgänger dürfen den Fahrradweg benutzen.",
+      "answer": "falsch",
+      "points": 1,
+      "explanation": {
+        "de": "Auf dem Schild steht: 'Nur für Fahrräder! Fußgänger bitte den Gehweg benutzen.'",
+        "key_evidence": "Nur für Fahrräder! Fußgänger bitte den Gehweg benutzen",
+        "key_vocabulary": [
+          {
+            "word": "Fahrradweg",
+            "type": "Nomen",
+            "meaning": "bike path"
+          },
+          {
+            "word": "Gehweg",
+            "type": "Nomen",
+            "meaning": "sidewalk"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q14",
+      "teil": 3,
+      "linked_schild": "Schild4",
+      "type": "richtig_falsch",
+      "statement": "Der Spielplatz ist bis Montag geschlossen.",
+      "answer": "richtig",
+      "points": 1,
+      "explanation": {
+        "de": "Auf dem Schild steht: 'Reparaturarbeiten bis Montag.'",
+        "key_evidence": "Reparaturarbeiten bis Montag",
+        "key_vocabulary": [
+          {
+            "word": "gesperrt",
+            "type": "Adjektiv",
+            "meaning": "closed/blocked"
+          },
+          {
+            "word": "Reparatur",
+            "type": "Nomen",
+            "meaning": "repair"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q15",
+      "teil": 3,
+      "linked_schild": "Schild5",
+      "type": "richtig_falsch",
+      "statement": "Man darf mit dem Hund auf den Sportplatz gehen.",
+      "answer": "falsch",
+      "points": 1,
+      "explanation": {
+        "de": "Auf dem Schild steht: 'auf dem Sportplatz keine Hunde erlaubt.'",
+        "key_evidence": "auf dem Sportplatz keine Hunde erlaubt",
+        "key_vocabulary": [
+          {
+            "word": "Hund",
+            "type": "Nomen",
+            "meaning": "dog"
+          },
+          {
+            "word": "Sportplatz",
+            "type": "Nomen",
+            "meaning": "sports field"
+          }
+        ]
+      }
+    }
+  ],
+  "scoring": {
+    "total_points": 5,
+    "pass_threshold": 3,
+    "grading": [
+      {
+        "range": [
+          5,
+          5
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          4,
+          4
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          3,
+          3
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          1,
+          2
+        ],
+        "label": "Noch üben!",
+        "emoji": "📝"
+      },
+      {
+        "range": [
+          0,
+          0
+        ],
+        "label": "Mehr Übung nötig",
+        "emoji": "💪"
+      }
+    ]
+  },
+  "qa": {
+    "all_signs_different_types": true,
+    "word_count_per_sign_valid": true,
+    "image_text_matches_sign": false,
+    "all_answers_verifiable": true,
+    "passed": false
+  }
+}

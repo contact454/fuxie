@@ -1,0 +1,222 @@
+{
+  "id": "B1-T4-001",
+  "level": "B1",
+  "teil": 4,
+  "teil_name": "Leserbriefe lesen",
+  "topic": "Gesundheit & Ernährung",
+  "topic_id": "001",
+  "metadata": {
+    "word_count": 280,
+    "target_grammar": [
+      "Nebensatz mit weil/dass/obwohl",
+      "Konjunktiv II",
+      "Modalverben"
+    ],
+    "target_vocabulary": [
+      "Kantine",
+      "Ernährung",
+      "verbieten",
+      "Angebot",
+      "Verantwortung",
+      "Auswahl",
+      "Gesundheit",
+      "Entscheidung"
+    ],
+    "generated_at": "2026-03-10T23:38:00+07:00",
+    "version": 1
+  },
+  "debate": {
+    "topic": "Soll man in der Schule nur gesundes Essen verkaufen?",
+    "context": "In vielen Schulkantinen gibt es Pommes, Pizza und Süßigkeiten. Einige Eltern und Politiker fordern, dass nur noch gesundes Essen angeboten wird. Was meinen die Leser?",
+    "letters": [
+      {
+        "author": "Petra M., München",
+        "text": "Ich finde das eine tolle Idee! Kinder essen in der Schule oft nur Pommes und Schokoriegel, weil es billiger ist. Wenn es nur gesunde Sachen gibt, lernen sie von klein auf, sich gut zu ernähren. Die Schule hat auch eine Verantwortung für die Gesundheit der Kinder.",
+        "position": "ja"
+      },
+      {
+        "author": "Thomas K., Hamburg",
+        "text": "Das ist doch Unsinn! Man kann den Schülern nicht vorschreiben, was sie essen sollen. Jugendliche sind alt genug, um selbst zu entscheiden. Außerdem bringen viele ihr eigenes Essen mit. Ein Verbot führt nur dazu, dass die Schüler sich Süßigkeiten heimlich von draußen mitbringen.",
+        "position": "nein"
+      },
+      {
+        "author": "Fatima A., Köln",
+        "text": "Als Mutter von drei Kindern unterstütze ich diese Idee. Meine Tochter hat früher jeden Tag Cola und Chips in der Schule gekauft. Seit die Kantine auf gesundes Essen umgestellt hat, isst sie viel besser. Kinder brauchen klare Regeln — auch beim Essen.",
+        "position": "ja"
+      },
+      {
+        "author": "Jan P., Berlin",
+        "text": "Ich bin dagegen. Es gibt schon genug Verbote und Regeln. Statt Essen zu verbieten, sollte man Kinder lieber über gesunde Ernährung aufklären. Dann können sie selbst kluge Entscheidungen treffen. Außerdem: Was ist schon ungesund? Auch ein Stück Kuchen ab und zu ist völlig okay.",
+        "position": "nein"
+      },
+      {
+        "author": "Claudia R., Stuttgart",
+        "text": "Ja, unbedingt! In Frankreich und Schweden funktioniert das schon seit Jahren. Dort gibt es in Schulen frisch gekochte Mahlzeiten mit Gemüse, Salat und Obst. Die Kinder sind gesünder und konzentrierter im Unterricht. Deutschland sollte diesem Beispiel folgen.",
+        "position": "ja"
+      }
+    ]
+  },
+  "images": [
+    {
+      "id": "IMG1",
+      "type": "scene",
+      "prompt": "Cute cartoon illustration of a school cafeteria with a debate: one side has healthy salads and fruits, the other has pizza and fries, students discussing. Fuxie cartoon style, flat illustration, warm pastel colors, no text.",
+      "filename": "B1-T4-001_scene.png",
+      "placement": "header",
+      "alt_text": "Debatte: Gesundes Essen in der Schule",
+      "dimensions": "768x512"
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q1",
+      "teil": 4,
+      "type": "ja_nein",
+      "stem": "Petra M. findet, dass Schulen nur gesundes Essen anbieten sollten.",
+      "answer": "ja",
+      "points": 1,
+      "explanation": {
+        "de": "Petra findet die Idee toll und sagt, die Schule hat Verantwortung für die Gesundheit.",
+        "key_evidence": "Ich finde das eine tolle Idee / Die Schule hat auch eine Verantwortung",
+        "key_vocabulary": [
+          {
+            "word": "Verantwortung",
+            "type": "Nomen",
+            "meaning": "responsibility"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q2",
+      "teil": 4,
+      "type": "ja_nein",
+      "stem": "Thomas K. ist für ein Verbot von ungesundem Essen in der Schule.",
+      "answer": "nein",
+      "points": 1,
+      "explanation": {
+        "de": "Thomas findet das Unsinn und meint, Schüler sollen selbst entscheiden.",
+        "key_evidence": "Das ist doch Unsinn / Man kann den Schülern nicht vorschreiben",
+        "key_vocabulary": [
+          {
+            "word": "vorschreiben",
+            "type": "Verb",
+            "meaning": "to dictate / prescribe"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q3",
+      "teil": 4,
+      "type": "ja_nein",
+      "stem": "Fatima A. unterstützt die Idee, nur gesundes Essen in Schulen anzubieten.",
+      "answer": "ja",
+      "points": 1,
+      "explanation": {
+        "de": "Als Mutter unterstützt sie die Idee, weil ihre Tochter jetzt besser isst.",
+        "key_evidence": "unterstütze ich diese Idee / isst sie viel besser",
+        "key_vocabulary": [
+          {
+            "word": "umstellen",
+            "type": "Verb",
+            "meaning": "to switch / change over"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q4",
+      "teil": 4,
+      "type": "ja_nein",
+      "stem": "Jan P. meint, dass man Kinder lieber aufklären statt Essen verbieten sollte.",
+      "answer": "ja",
+      "points": 1,
+      "explanation": {
+        "de": "Jan ist gegen ein Verbot und findet, man sollte Kinder aufklären.",
+        "key_evidence": "sollte man Kinder lieber über gesunde Ernährung aufklären",
+        "key_vocabulary": [
+          {
+            "word": "aufklären",
+            "type": "Verb",
+            "meaning": "to educate / inform"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q5",
+      "teil": 4,
+      "type": "ja_nein",
+      "stem": "Claudia R. ist gegen die Idee, weil sie findet, dass Kinder selbst entscheiden sollen.",
+      "answer": "nein",
+      "points": 1,
+      "explanation": {
+        "de": "Claudia ist dafür und nennt Frankreich und Schweden als positive Beispiele.",
+        "key_evidence": "Ja, unbedingt! In Frankreich und Schweden funktioniert das schon",
+        "key_vocabulary": [
+          {
+            "word": "Beispiel",
+            "type": "Nomen",
+            "meaning": "example"
+          }
+        ]
+      }
+    }
+  ],
+  "scoring": {
+    "total_points": 5,
+    "pass_threshold": 3,
+    "grading": [
+      {
+        "range": [
+          5,
+          5
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          4,
+          4
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          3,
+          3
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          1,
+          2
+        ],
+        "label": "Noch üben!",
+        "emoji": "📝"
+      },
+      {
+        "range": [
+          0,
+          0
+        ],
+        "label": "Mehr Übung nötig",
+        "emoji": "💪"
+      }
+    ]
+  },
+  "qa": {
+    "vocab_in_b1_list": true,
+    "grammar_b1_appropriate": true,
+    "word_count_in_range": true,
+    "all_answers_verifiable": true,
+    "ja_nein_balanced": true,
+    "image_count": 1,
+    "passed": true
+  }
+}

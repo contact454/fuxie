@@ -1,0 +1,222 @@
+{
+  "id": "B1-T4-009",
+  "level": "B1",
+  "teil": 4,
+  "teil_name": "Leserbriefe lesen",
+  "topic": "Einkaufen & Konsum",
+  "topic_id": "009",
+  "metadata": {
+    "word_count": 274,
+    "target_grammar": [
+      "Nebensatz mit weil/dass/ob",
+      "Konjunktiv II",
+      "Passiv"
+    ],
+    "target_vocabulary": [
+      "Sonntag",
+      "Ladenoeffnungszeit",
+      "Einzelhandel",
+      "Öffnungszeit",
+      "Tradition",
+      "Freizeit",
+      "Arbeitnehmer",
+      "Konkurrenz"
+    ],
+    "generated_at": "2026-03-10T23:40:00+07:00",
+    "version": 1
+  },
+  "debate": {
+    "topic": "Sollen Supermärkte am Sonntag öffnen dürfen?",
+    "context": "In Deutschland sind Geschäfte am Sonntag geschlossen. Manche fordern, dass Supermärkte auch sonntags öffnen dürfen. Andere wollen den Sonntag als Ruhetag behalten.",
+    "letters": [
+      {
+        "author": "Nicole T., Wiesbaden",
+        "text": "Ja, warum nicht? Ich arbeite die ganze Woche und habe oft keine Zeit zum Einkaufen. Der Sonntag wäre perfekt, um in Ruhe einzukaufen. In den Niederlanden und Frankreich sind Geschäfte sonntags offen, und die Welt geht davon nicht unter.",
+        "position": "ja"
+      },
+      {
+        "author": "Pfarrer Andreas B., Bamberg",
+        "text": "Der Sonntag ist ein wichtiger Ruhetag für die ganze Gesellschaft. Familien brauchen gemeinsame freie Zeit. Wenn alles immer geöffnet hat, gibt es keinen gemeinsamen Rhythmus mehr. Der Sonntag schützt auch die Arbeitnehmer vor Überlastung.",
+        "position": "nein"
+      },
+      {
+        "author": "Tina M., Potsdam",
+        "text": "Ich bin dafür. Als alleinerziehende Mutter muss ich unter der Woche arbeiten und die Kinder betreuen. Samstag ist der einzige Tag, und die Läden sind überfüllt. Ein offener Sonntag würde mir sehr helfen.",
+        "position": "ja"
+      },
+      {
+        "author": "Werner G., Regensburg",
+        "text": "Nein! Ich habe 30 Jahre im Einzelhandel gearbeitet. Die Mitarbeiter haben ein Recht auf freie Sonntage. Außerdem: Braucht man wirklich sieben Tage zum Einkaufen? Wer sich gut organisiert, schafft es auch in sechs Tagen.",
+        "position": "nein"
+      },
+      {
+        "author": "Sven K., Rostock",
+        "text": "Ja, aber freiwillig und mit Extra-Bezahlung für die Mitarbeiter. Wer sonntags arbeiten will, sollte dürfen. Wer nicht will, muss nicht. Ein Kompromiss wäre besser als ein totales Verbot.",
+        "position": "ja"
+      }
+    ]
+  },
+  "images": [
+    {
+      "id": "IMG1",
+      "type": "scene",
+      "prompt": "Cute cartoon illustration of a German supermarket on Sunday: closed doors on one side, open doors with happy shoppers on the other, church in background. Fuxie cartoon style, flat illustration, warm pastel colors, no text.",
+      "filename": "B1-T4-009_scene.png",
+      "placement": "header",
+      "alt_text": "Debatte: Sonntagsöffnung?",
+      "dimensions": "768x512"
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q1",
+      "teil": 4,
+      "type": "ja_nein",
+      "stem": "Nicole T. möchte, dass Supermärkte sonntags öffnen.",
+      "answer": "ja",
+      "points": 1,
+      "explanation": {
+        "de": "Nicole sagt Ja, weil sie unter der Woche keine Zeit hat.",
+        "key_evidence": "Ja, warum nicht? / Der Sonntag wäre perfekt",
+        "key_vocabulary": [
+          {
+            "word": "Öffnungszeit",
+            "type": "Nomen",
+            "meaning": "opening hours"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q2",
+      "teil": 4,
+      "type": "ja_nein",
+      "stem": "Pfarrer Andreas B. ist für eine Sonntagsöffnung der Supermärkte.",
+      "answer": "nein",
+      "points": 1,
+      "explanation": {
+        "de": "Der Pfarrer will den Sonntag als Ruhetag behalten, für Familien und Arbeitnehmer.",
+        "key_evidence": "Der Sonntag ist ein wichtiger Ruhetag / schützt auch die Arbeitnehmer",
+        "key_vocabulary": [
+          {
+            "word": "Ruhetag",
+            "type": "Nomen",
+            "meaning": "day of rest"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q3",
+      "teil": 4,
+      "type": "ja_nein",
+      "stem": "Tina M. würde von einem offenen Sonntag profitieren.",
+      "answer": "ja",
+      "points": 1,
+      "explanation": {
+        "de": "Tina ist dafür, weil sie als alleinerziehende Mutter den Sonntag braucht.",
+        "key_evidence": "Ich bin dafür / Ein offener Sonntag würde mir sehr helfen",
+        "key_vocabulary": [
+          {
+            "word": "alleinerziehend",
+            "type": "Adjektiv",
+            "meaning": "single parent"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q4",
+      "teil": 4,
+      "type": "ja_nein",
+      "stem": "Der Text impliziert, dass werner G. findet, dass Mitarbeiter sonntags arbeiten sollten.",
+      "answer": "nein",
+      "points": 1,
+      "explanation": {
+        "de": "Werner sagt Nein und betont das Recht auf freie Sonntage.",
+        "key_evidence": "Nein! / Mitarbeiter haben ein Recht auf freie Sonntage",
+        "key_vocabulary": [
+          {
+            "word": "Einzelhandel",
+            "type": "Nomen",
+            "meaning": "retail"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q5",
+      "teil": 4,
+      "type": "ja_nein",
+      "stem": "Sven K. schlägt einen Kompromiss vor.",
+      "answer": "ja",
+      "points": 1,
+      "explanation": {
+        "de": "Sven ist dafür, aber freiwillig und mit Extra-Bezahlung.",
+        "key_evidence": "Ja, aber freiwillig und mit Extra-Bezahlung / Ein Kompromiss wäre besser",
+        "key_vocabulary": [
+          {
+            "word": "Kompromiss",
+            "type": "Nomen",
+            "meaning": "compromise"
+          }
+        ]
+      }
+    }
+  ],
+  "scoring": {
+    "total_points": 5,
+    "pass_threshold": 3,
+    "grading": [
+      {
+        "range": [
+          5,
+          5
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          4,
+          4
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          3,
+          3
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          1,
+          2
+        ],
+        "label": "Noch üben!",
+        "emoji": "📝"
+      },
+      {
+        "range": [
+          0,
+          0
+        ],
+        "label": "Mehr Übung nötig",
+        "emoji": "💪"
+      }
+    ]
+  },
+  "qa": {
+    "vocab_in_b1_list": true,
+    "grammar_b1_appropriate": true,
+    "word_count_in_range": true,
+    "all_answers_verifiable": true,
+    "ja_nein_balanced": true,
+    "image_count": 1,
+    "passed": true
+  }
+}

@@ -1,0 +1,172 @@
+{
+  "id": "B2-T4-001",
+  "level": "B2",
+  "teil": 4,
+  "teil_name": "Kommentare lesen",
+  "topic": "Wissenschaft & Forschung",
+  "topic_id": "001",
+  "metadata": {
+    "word_count": 145,
+    "target_grammar": [
+      "Konjunktiv II",
+      "Passiv",
+      "Nominalisierung",
+      "Relativsatze"
+    ],
+    "target_vocabulary": [],
+    "generated_at": "2026-03-11T22:37:08.661642",
+    "version": 1
+  },
+  "forum": {
+    "question": "Sollte der Staat mehr in Grundlagenforschung investieren?",
+    "comments": [
+      {
+        "name": "Prof. Dr. Heike Neuhaus",
+        "position": "ja",
+        "text": "Grundlagenforschung ist das Fundament aller technologischen Innovationen. Das Internet, GPS und selbst die mRNA-Impfstoffe basieren auf Erkenntnissen, die zunachst ohne konkreten Anwendungsbezug gewonnen wurden. Ohne langfristige staatliche Investitionen in die Grundlagenforschung werden wir die Herausforderungen der Zukunft nicht bewaltigen konnen."
+      },
+      {
+        "name": "Thomas Richter",
+        "position": "nein",
+        "text": "In Zeiten angespannter Haushalte mussen wir Prioritaten setzen. Die angewandte Forschung bringt schnellere und greifbarere Ergebnisse. Grundlagenforschung ist wichtig, aber die Privatwirtschaft und internationale Kooperationen konnen hier einen grosseren Beitrag leisten als der Staat."
+      },
+      {
+        "name": "Dr. Lena Kramer",
+        "position": "ja",
+        "text": "Als Forscherin erlebe ich taglich, wie schwierig es ist, Fordermittel fur Grundlagenforschung zu erhalten. Wahrend die USA und China massiv investieren, spart Deutschland an der falschen Stelle. Wir riskieren, den Anschluss in Schlusselechnologien zu verlieren."
+      },
+      {
+        "name": "Markus Weber",
+        "position": "nein",
+        "text": "Ich bin Steuerzahler und mochte wissen, wofur mein Geld ausgegeben wird. Bei der Grundlagenforschung ist der Nutzen oft unklar und die Ergebnisse liegen Jahrzehnte in der Zukunft. Der Staat sollte lieber in Bildung und Infrastruktur investieren."
+      }
+    ]
+  },
+  "images": [
+    {
+      "id": "IMG1",
+      "type": "scene",
+      "prompt": "Cute cartoon illustration of people having a discussion forum about Wissenschaft & Forschung, showing speech bubbles with different opinions. Fuxie cartoon style, flat illustration, warm pastel colors, no text.",
+      "filename": "B2-T4-001_scene.png",
+      "placement": "header",
+      "alt_text": "Sollte der Staat mehr in Grundlagenforschung inves",
+      "dimensions": "768x512"
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q1",
+      "teil": 4,
+      "type": "ja_nein",
+      "stem": "Prof. Neuhaus halt Grundlagenforschung fur die Basis technologischer Innovationen.",
+      "answer": "ja",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Prof. Neuhaus halt Grundlagenforschung fur die Basis technologischer Innovatione",
+        "reasoning": "Die richtige Antwort ergibt sich aus dem Text."
+      }
+    },
+    {
+      "id": "Q2",
+      "teil": 4,
+      "type": "ja_nein",
+      "stem": "Thomas Richter mochte, dass der Staat mehr in Grundlagenforschung investiert.",
+      "answer": "nein",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Thomas Richter mochte, dass der Staat mehr in Grundlagenforschung investiert.",
+        "reasoning": "Die richtige Antwort ergibt sich aus dem Text."
+      }
+    },
+    {
+      "id": "Q3",
+      "teil": 4,
+      "type": "ja_nein",
+      "stem": "Der Text legt nahe, dass dr. Kramer findet es leicht, Fordermittel fur ihre Forschung zu bekommen.",
+      "answer": "nein",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Dr. Kramer findet es leicht, Fordermittel fur ihre Forschung zu bekommen.",
+        "reasoning": "[Inferential] Die richtige Antwort ergibt sich aus dem Text."
+      }
+    },
+    {
+      "id": "Q4",
+      "teil": 4,
+      "type": "ja_nein",
+      "stem": "Aus dem Text lässt sich schließen, dass markus Weber bevorzugt Investitionen in Bildung und Infrastruktur.",
+      "answer": "ja",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Markus Weber bevorzugt Investitionen in Bildung und Infrastruktur.",
+        "reasoning": "[Inferential] Die richtige Antwort ergibt sich aus dem Text."
+      }
+    },
+    {
+      "id": "Q5",
+      "teil": 4,
+      "type": "ja_nein",
+      "stem": "Aus dem Text lässt sich schließen, dass alle Kommentatoren sind sich einig, dass der Staat mehr investieren sollte.",
+      "answer": "nein",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Alle Kommentatoren sind sich einig, dass der Staat mehr investieren sollte.",
+        "reasoning": "[Inferential] Die richtige Antwort ergibt sich aus dem Text."
+      }
+    }
+  ],
+  "scoring": {
+    "total_points": 5,
+    "pass_threshold": 3,
+    "grading": [
+      {
+        "range": [
+          5,
+          5
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          4,
+          4
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          3,
+          3
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          1,
+          2
+        ],
+        "label": "Noch uben!",
+        "emoji": "📝"
+      },
+      {
+        "range": [
+          0,
+          0
+        ],
+        "label": "Mehr Ubung notig",
+        "emoji": "💪"
+      }
+    ]
+  },
+  "qa": {
+    "vocab_in_b2_list": true,
+    "grammar_b2_appropriate": true,
+    "word_count_in_range": true,
+    "all_answers_verifiable": true,
+    "image_count": 1,
+    "passed": true
+  }
+}

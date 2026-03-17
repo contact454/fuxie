@@ -1,0 +1,249 @@
+{
+  "id": "A2-T1-004",
+  "level": "A2",
+  "teil": 1,
+  "teil_name": "Zeitungsartikel lesen",
+  "topic": "In der Schule",
+  "topic_id": "004",
+  "metadata": {
+    "word_count": 170,
+    "target_grammar": [
+      "Perfekt",
+      "Modalverben",
+      "Nebensatz mit dass/weil"
+    ],
+    "target_vocabulary": [
+      "Arbeitsgemeinschaft",
+      "Roboter",
+      "programmieren",
+      "Grundschule",
+      "Schüler",
+      "anmelden",
+      "Nachmittag",
+      "Technik",
+      "Lehrerin",
+      "begeistert"
+    ],
+    "generated_at": "2026-03-09T21:40:00+07:00",
+    "version": 1
+  },
+  "text": {
+    "title": "Roboter-AG an der Grundschule begeistert Kinder",
+    "subtitle": "Schüler lernen Technik und Programmierung",
+    "body": "An der Grundschule am Stadtpark gibt es seit September eine neue Arbeitsgemeinschaft. In der Roboter-AG können Schüler kleine Roboter bauen und programmieren. Die AG findet jeden Donnerstag von 14 bis 16 Uhr statt.\n\nDie Lehrerin Frau Hoffmann hat die AG gegründet, weil sie findet, dass Kinder früh Technik lernen sollen. „Die Kinder sind total begeistert\", sagt sie. „Sie arbeiten in kleinen Gruppen und helfen sich gegenseitig.\"\n\nAktuell nehmen 18 Schüler an der AG teil. Sie kommen aus den Klassen 3 und 4. Die Kinder haben schon drei kleine Roboter gebaut. Ein Roboter kann sogar Musik spielen.\n\nDie Schule hat für die AG neue Computer und Baukästen gekauft. Das Geld dafür kam von einem Elternverein. Eltern können ihre Kinder noch bis Ende Oktober anmelden. Es gibt noch fünf freie Plätze. Die Teilnahme ist kostenlos.",
+    "source": "Schulnews Berlin"
+  },
+  "images": [
+    {
+      "id": "IMG1",
+      "type": "scene",
+      "prompt": "Cute cartoon illustration of children in a bright classroom building small colorful robots. A friendly teacher helps them. Computer screens, tools, and robot parts on the tables. German school setting. Fuxie cartoon style, flat illustration, warm pastel colors, no text.",
+      "filename": "A2-T1-004_scene.png",
+      "placement": "header",
+      "alt_text": "Kinder bauen Roboter in der Schule",
+      "dimensions": "768x512"
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q1",
+      "teil": 1,
+      "type": "multiple_choice",
+      "stem": "Wann findet die Roboter-AG statt?",
+      "options": {
+        "a": "Jeden Mittwoch von 14 bis 16 Uhr.",
+        "b": "Jeden Donnerstag von 14 bis 16 Uhr.",
+        "c": "Jeden Freitag von 15 bis 17 Uhr."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Im Text steht: 'Die AG findet jeden Donnerstag von 14 bis 16 Uhr statt.'",
+        "key_evidence": "jeden Donnerstag von 14 bis 16 Uhr",
+        "key_vocabulary": [
+          {
+            "word": "stattfinden",
+            "type": "Verb",
+            "meaning": "to take place"
+          },
+          {
+            "word": "Donnerstag",
+            "type": "Nomen",
+            "meaning": "Thursday"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q2",
+      "teil": 1,
+      "type": "multiple_choice",
+      "stem": "Warum hat Frau Hoffmann die AG gegründet?",
+      "options": {
+        "a": "Weil die Schule neue Computer hat.",
+        "b": "Weil Kinder früh Technik lernen sollen.",
+        "c": "Weil die Eltern es gewünscht haben."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Im Text steht: 'weil sie findet, dass Kinder früh Technik lernen sollen.'",
+        "key_evidence": "weil sie findet, dass Kinder früh Technik lernen sollen",
+        "key_vocabulary": [
+          {
+            "word": "gründen",
+            "type": "Verb",
+            "meaning": "to found/establish"
+          },
+          {
+            "word": "Technik",
+            "type": "Nomen",
+            "meaning": "technology"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q3",
+      "teil": 1,
+      "type": "multiple_choice",
+      "stem": "Wie viele Roboter haben die Schüler schon gebaut?",
+      "options": {
+        "a": "Zwei.",
+        "b": "Drei.",
+        "c": "Fünf."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Im Text steht: 'Die Kinder haben schon drei kleine Roboter gebaut.'",
+        "key_evidence": "drei kleine Roboter gebaut",
+        "key_vocabulary": [
+          {
+            "word": "bauen",
+            "type": "Verb",
+            "meaning": "to build"
+          },
+          {
+            "word": "Roboter",
+            "type": "Nomen",
+            "meaning": "robot"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q4",
+      "teil": 1,
+      "type": "multiple_choice",
+      "stem": "Woher kam das Geld für die Computer?",
+      "options": {
+        "a": "Von der Stadt Berlin.",
+        "b": "Von einem Elternverein.",
+        "c": "Von einer Firma."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Im Text steht: 'Das Geld dafür kam von einem Elternverein.'",
+        "key_evidence": "Das Geld dafür kam von einem Elternverein",
+        "key_vocabulary": [
+          {
+            "word": "Elternverein",
+            "type": "Nomen",
+            "meaning": "parents' association"
+          },
+          {
+            "word": "Baukasten",
+            "type": "Nomen",
+            "meaning": "construction kit"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q5",
+      "teil": 1,
+      "type": "multiple_choice",
+      "stem": "Wie viele Plätze sind noch frei?",
+      "options": {
+        "a": "Drei.",
+        "b": "Fünf.",
+        "c": "Zehn."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Im Text steht: 'Es gibt noch fünf freie Plätze.'",
+        "key_evidence": "noch fünf freie Plätze",
+        "key_vocabulary": [
+          {
+            "word": "anmelden",
+            "type": "Verb",
+            "meaning": "to register"
+          },
+          {
+            "word": "Platz",
+            "type": "Nomen",
+            "meaning": "place/spot"
+          }
+        ]
+      }
+    }
+  ],
+  "scoring": {
+    "total_points": 5,
+    "pass_threshold": 3,
+    "grading": [
+      {
+        "range": [
+          5,
+          5
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          4,
+          4
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          3,
+          3
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          1,
+          2
+        ],
+        "label": "Noch üben!",
+        "emoji": "📝"
+      },
+      {
+        "range": [
+          0,
+          0
+        ],
+        "label": "Mehr Übung nötig",
+        "emoji": "💪"
+      }
+    ]
+  },
+  "qa": {
+    "vocab_in_a2_list": true,
+    "grammar_a2_only": true,
+    "word_count_in_range": true,
+    "all_answers_verifiable": true,
+    "mc_distractors_plausible": true,
+    "image_count": 1,
+    "passed": true
+  }
+}

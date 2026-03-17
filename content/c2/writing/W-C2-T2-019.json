@@ -1,0 +1,64 @@
+{
+  "id": "W-C2-T2-019",
+  "cefrLevel": "C2",
+  "teil": 2,
+  "teilName": "Textumwandlung",
+  "textType": "Akademischer Aufsatz",
+  "register": "akademisch",
+  "topic": "Bildungsfinanzierung",
+  "instruction": "Verfassen Sie auf der Grundlage des vorliegenden journalistischen Kommentars einen akademischen Aufsatz. Transformieren Sie dabei die subjektive, teilweise polemische Argumentation des Quelltextes in eine sachliche, wissenschaftlich-distanzierte Form. Erörtern Sie die Vor- und Nachteile verschiedener Finanzierungsmodelle für Hochschulen und nehmen Sie begründet Stellung.",
+  "instructionVi": "Viết một bài luận học thuật dựa trên bài bình luận báo chí cho sẵn. Chuyển đổi các lập luận chủ quan và mang tính công kích của văn bản nguồn sang phong cách khách quan, học thuật. Thảo luận về ưu nhược điểm của các mô hình tài chính đại học khác nhau và đưa ra quan điểm cá nhân có lập luận.",
+  "situation": "Sie nehmen an einem interdisziplinären Universitätstutorium zum Thema 'Ökonomisierung der Bildung' teil. Im Rahmen der Leistungsüberprüfung sollen Sie einen vorliegenden Gastbeitrag aus einer Tageszeitung kritisch aufarbeiten und in eine wissenschaftliche Argumentation überführen, die als Grundlage für eine Fachzeitschrift dienen könnte.",
+  "contentPoints": [
+    "Zusammenfassung der zentralen Thesen des Quelltextes unter Verwendung eines angemessenen wissenschaftlichen Registers.",
+    "Detaillierte Analyse des Spannungsfeldes zwischen staatlicher Vollfinanzierung und individueller Kostenbeteiligung.",
+    "Kritische Bewertung der Auswirkungen von Studiengebühren auf die soziale Mobilität und die Chancengerechtigkeit.",
+    "Ableitung einer fundierten Schlussfolgerung hinsichtlich eines nachhaltigen Finanzierungsmodells für den deutschen Hochschulsektor."
+  ],
+  "sourceText": "Die aktuelle Debatte um die Beteiligung von Studierenden an den Kosten ihrer akademischen Ausbildung ist von einer erschreckenden Kurzsichtigkeit geprägt. Kritiker gebührenfreier Bildung verkennen fundamental, dass der freie Zugang zum Hochschulsystem nicht bloß ein karitatives Entgegenkommen des Staates darstellt, sondern das Rückgrat einer demokratischen Wissensgesellschaft bildet. Wer Studiengebühren – unter welchem Euphemismus auch immer – fordert, nimmt billigend in Kauf, dass ökonomische Herkunft über intellektuelle Laufbahnen entscheidet. Dies ist nicht nur sozialpolitisch fatal, sondern auch ökonomisch widersinnig. In einer Ära des globalen Fachkräftemangels kann es sich eine Volkswirtschaft schlichtweg nicht leisten, Potenziale brachliegen zu lassen, nur weil die Hürde der Finanzierbarkeit zu hoch liegt. Das Argument, nachgelagerte Studiengebühren oder Darlehensmodelle würden die soziale Selektion abmildern, ist ein gefährlicher Trugschluss. Die Angst vor massiver Verschuldung wirkt gerade auf bildungsferne Schichten sowie einkommensschwache Familien massiv abschreckend und zementiert bestehende Ungleichheiten. Stattdessen muss die öffentliche Hand Bildung als essenzielle Investition in die Zukunftsfähigkeit des Standorts begreifen. Eine progressive Besteuerung der späteren Spitzenverdiener durch das allgemeine Steuersystem ist das einzig legitime Instrument der Refinanzierung, nicht der diskriminierende Wegzoll am Eingang des universitären Hörsaals. Nur durch staatliche Vollfinanzierung kann das Ideal der Chancengleichheit in der Praxis realisiert werden.",
+  "sourceTextType": "Journalistischer Kommentar",
+  "minWords": 250,
+  "maxWords": null,
+  "timeMinutes": 45,
+  "rubric": {
+    "criteria": [
+      {
+        "id": "inhalt",
+        "name": "Inhalt",
+        "nameVi": "Nội dung",
+        "maxScore": 5,
+        "weight": 20
+      },
+      {
+        "id": "angemessenheit",
+        "name": "Kommunikative Angemessenheit",
+        "nameVi": "Phù hợp giao tiếp",
+        "maxScore": 5,
+        "weight": 20
+      },
+      {
+        "id": "korrektheit",
+        "name": "Korrektheit",
+        "nameVi": "Chính xác ngữ pháp & chính tả",
+        "maxScore": 5,
+        "weight": 20
+      },
+      {
+        "id": "spektrum",
+        "name": "Wortschatz & Strukturen",
+        "nameVi": "Đa dạng từ vựng & cấu trúc",
+        "maxScore": 5,
+        "weight": 20
+      },
+      {
+        "id": "kohaerenz",
+        "name": "Kohaerenz & Kohaesion",
+        "nameVi": "Mạch lạc & liên kết",
+        "maxScore": 5,
+        "weight": 20
+      }
+    ],
+    "maxScore": 25
+  },
+  "maxScore": 25
+}

@@ -1,0 +1,222 @@
+{
+  "id": "B1-T4-008",
+  "level": "B1",
+  "teil": 4,
+  "teil_name": "Leserbriefe lesen",
+  "topic": "Sport & Fitness",
+  "topic_id": "008",
+  "metadata": {
+    "word_count": 272,
+    "target_grammar": [
+      "Nebensatz mit weil/dass/obwohl",
+      "Konjunktiv II",
+      "Modalverben"
+    ],
+    "target_vocabulary": [
+      "Sportunterricht",
+      "Schule",
+      "Bewegung",
+      "Stundenplan",
+      "Fächer",
+      "Gesundheit",
+      "Leistung",
+      "Körper"
+    ],
+    "generated_at": "2026-03-10T23:40:00+07:00",
+    "version": 1
+  },
+  "debate": {
+    "topic": "Soll man an Schulen mehr Sportunterricht haben?",
+    "context": "Experten fordern mehr Sportunterricht an deutschen Schulen, weil Kinder sich zu wenig bewegen. Andere meinen, akademische Fächer seien wichtiger.",
+    "letters": [
+      {
+        "author": "Christine L., Mainz",
+        "text": "Ja! Kinder sitzen viel zu viel in der Schule. Zwei Stunden Sport pro Woche reichen nicht. Studien zeigen, dass Bewegung die Konzentration verbessert. Mehr Sport würde den Kindern helfen, auch in anderen Fächern besser zu werden.",
+        "position": "ja"
+      },
+      {
+        "author": "Dr. Patrick H., Bonn",
+        "text": "Der Stundenplan ist schon jetzt übervoll. Wenn man mehr Sportunterricht einführt, muss man andere Fächer kürzen — Mathematik, Physik oder Sprachen. Das können wir uns in einer Wissensgesellschaft nicht leisten.",
+        "position": "nein"
+      },
+      {
+        "author": "Zeynep A., Hannover",
+        "text": "Unbedingt! Als Sportlehrerin sehe ich jeden Tag, wie gut Bewegung den Kindern tut. Viele Schüler können nicht einmal einen Purzelbaum oder zehn Hampelmänner. Die Gesundheit unserer Kinder muss Priorität haben.",
+        "position": "ja"
+      },
+      {
+        "author": "Oliver M., Dresden",
+        "text": "Sport ist wichtig, aber nicht für jeden. Mein Sohn hasst Sportunterricht, weil er immer als Letzter gewählt wird. Statt mehr Pflichtstunden brauchen wir besseren Sportunterricht, der alle Kinder einbezieht — nicht nur die sportlichen.",
+        "position": "nein"
+      },
+      {
+        "author": "Maria G., Freiburg",
+        "text": "Ja, dringend! Immer mehr Kinder haben Übergewicht. Täglicher Sportunterricht wäre ideal, wie in Finnland. Dort bewegen sich die Kinder jeden Tag und sind trotzdem bei PISA-Studien vorne. Sport und gute Noten schließen sich nicht aus.",
+        "position": "ja"
+      }
+    ]
+  },
+  "images": [
+    {
+      "id": "IMG1",
+      "type": "scene",
+      "prompt": "Cute cartoon illustration of a school gymnasium debate: children exercising on one side, textbooks and math equations on the other. Fuxie cartoon style, flat illustration, warm pastel colors, no text.",
+      "filename": "B1-T4-008_scene.png",
+      "placement": "header",
+      "alt_text": "Debatte: Mehr Sportunterricht?",
+      "dimensions": "768x512"
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q1",
+      "teil": 4,
+      "type": "ja_nein",
+      "stem": "Aus dem Text lässt sich schließen, dass christine L. will mehr Sportunterricht an Schulen.",
+      "answer": "ja",
+      "points": 1,
+      "explanation": {
+        "de": "Christine sagt Ja und findet, zwei Stunden pro Woche reichen nicht.",
+        "key_evidence": "Ja! / Zwei Stunden Sport pro Woche reichen nicht",
+        "key_vocabulary": [
+          {
+            "word": "Konzentration",
+            "type": "Nomen",
+            "meaning": "concentration"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q2",
+      "teil": 4,
+      "type": "ja_nein",
+      "stem": "Dr. Patrick H. ist für mehr Sportstunden im Stundenplan.",
+      "answer": "nein",
+      "points": 1,
+      "explanation": {
+        "de": "Patrick will keine anderen Fächer kürzen, der Stundenplan sei schon übervoll.",
+        "key_evidence": "Der Stundenplan ist schon jetzt übervoll / muss man andere Fächer kürzen",
+        "key_vocabulary": [
+          {
+            "word": "Wissensgesellschaft",
+            "type": "Nomen",
+            "meaning": "knowledge society"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q3",
+      "teil": 4,
+      "type": "ja_nein",
+      "stem": "Zeynep A. findet, die Gesundheit der Kinder muss Priorität haben.",
+      "answer": "ja",
+      "points": 1,
+      "explanation": {
+        "de": "Sie sagt unbedingt und sieht als Sportlehrerin, wie gut Bewegung den Kindern tut.",
+        "key_evidence": "Unbedingt! / Die Gesundheit unserer Kinder muss Priorität haben",
+        "key_vocabulary": [
+          {
+            "word": "Priorität",
+            "type": "Nomen",
+            "meaning": "priority"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q4",
+      "teil": 4,
+      "type": "ja_nein",
+      "stem": "Oliver M. möchte mehr Pflichtstunden Sport.",
+      "answer": "nein",
+      "points": 1,
+      "explanation": {
+        "de": "Oliver will nicht mehr Pflichtstunden, sondern besseren Sportunterricht für alle.",
+        "key_evidence": "Statt mehr Pflichtstunden brauchen wir besseren Sportunterricht",
+        "key_vocabulary": [
+          {
+            "word": "einbeziehen",
+            "type": "Verb",
+            "meaning": "to include"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q5",
+      "teil": 4,
+      "type": "ja_nein",
+      "stem": "Maria G. findet täglichen Sportunterricht ideal.",
+      "answer": "ja",
+      "points": 1,
+      "explanation": {
+        "de": "Maria sagt Ja und findet täglichen Sport ideal, wie in Finnland.",
+        "key_evidence": "Täglicher Sportunterricht wäre ideal, wie in Finnland",
+        "key_vocabulary": [
+          {
+            "word": "Übergewicht",
+            "type": "Nomen",
+            "meaning": "overweight"
+          }
+        ]
+      }
+    }
+  ],
+  "scoring": {
+    "total_points": 5,
+    "pass_threshold": 3,
+    "grading": [
+      {
+        "range": [
+          5,
+          5
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          4,
+          4
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          3,
+          3
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          1,
+          2
+        ],
+        "label": "Noch üben!",
+        "emoji": "📝"
+      },
+      {
+        "range": [
+          0,
+          0
+        ],
+        "label": "Mehr Übung nötig",
+        "emoji": "💪"
+      }
+    ]
+  },
+  "qa": {
+    "vocab_in_b1_list": true,
+    "grammar_b1_appropriate": true,
+    "word_count_in_range": true,
+    "all_answers_verifiable": true,
+    "ja_nein_balanced": true,
+    "image_count": 1,
+    "passed": true
+  }
+}

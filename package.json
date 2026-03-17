@@ -1,0 +1,31 @@
+{
+  "name": "fuxie",
+  "private": true,
+  "packageManager": "pnpm@9.15.4",
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev",
+    "dev:web": "turbo run dev --filter=@fuxie/web",
+    "dev:ai": "turbo run dev --filter=@fuxie/ai-service",
+    "lint": "turbo run lint",
+    "typecheck": "turbo run typecheck",
+    "format": "prettier --write \"**/*.{ts,tsx,md,json,css}\"",
+    "clean": "turbo run clean && rm -rf node_modules",
+    "db:generate": "pnpm --filter=@fuxie/database prisma generate",
+    "db:push": "pnpm --filter=@fuxie/database prisma db push",
+    "db:migrate": "pnpm --filter=@fuxie/database prisma migrate dev",
+    "db:studio": "pnpm --filter=@fuxie/database prisma studio"
+  },
+  "devDependencies": {
+    "@google-cloud/storage": "^7.19.0",
+    "@google-cloud/text-to-speech": "^6.4.0",
+    "@google/genai": "^1.43.0",
+    "dotenv": "^17.3.1",
+    "prettier": "^3.4.2",
+    "tsx": "^4.19.2",
+    "turbo": "^2.3.4"
+  },
+  "dependencies": {
+    "@google/generative-ai": "^0.24.1"
+  }
+}

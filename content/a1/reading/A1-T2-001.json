@@ -1,0 +1,177 @@
+{
+  "id": "A1-T2-001",
+  "level": "A1",
+  "teil": 2,
+  "teil_name": "Anzeigen zuordnen",
+  "topic": "Im Supermarkt",
+  "topic_id": "001",
+  "metadata": {
+    "generated_at": "2026-03-09T02:30:00+07:00",
+    "version": 1
+  },
+  "anzeigen": [
+    {
+      "id": "AnzeigeA",
+      "title": "Supermarkt REWE – Wochenangebot",
+      "details": {
+        "name": "REWE Markt",
+        "address": "Hauptstraße 12, 10115 Berlin",
+        "hours": "Mo–Sa: 7:00–21:00 Uhr",
+        "price": "Äpfel 1,29 €/kg, Milch 0,89 €, Brot 1,99 €",
+        "contact": "Tel: 030-1234567",
+        "target_audience": "Alle Kunden",
+        "extra_info": "Parkplatz vorhanden. Lieferservice ab 30 € Einkauf."
+      }
+    },
+    {
+      "id": "AnzeigeB",
+      "title": "Bio-Laden Grüne Wiese",
+      "details": {
+        "name": "Bio-Laden Grüne Wiese",
+        "address": "Gartenweg 5, 10117 Berlin",
+        "hours": "Mo–Fr: 9:00–18:00 Uhr, Sa: 9:00–14:00 Uhr",
+        "price": "Äpfel 2,49 €/kg, Milch 1,59 €, Brot 3,49 €",
+        "contact": "Tel: 030-9876543",
+        "target_audience": "Bio-Kunden, Familien",
+        "extra_info": "Nur Bio-Produkte. Kein Parkplatz. Kinderecke vorhanden."
+      }
+    }
+  ],
+  "images": [
+    {
+      "id": "IMG1",
+      "type": "anzeige",
+      "linked_anzeige": "AnzeigeA",
+      "prompt": "Cartoon-style German supermarket advertisement poster: Title 'REWE - Wochenangebot' in large bold text. Shows: Hauptstraße 12, Mo-Sa 7-21 Uhr, apples 1.29€, milk 0.89€, bread 1.99€, parking available, delivery from 30€. Fuxie cartoon style, clean layout, warm bright colors, legible sans-serif font.",
+      "filename": "A1-T2-001_anzeige_a.png",
+      "placement": "anzeige_a",
+      "alt_text": "Werbung für Supermarkt REWE mit Wochenangeboten",
+      "dimensions": "512x600"
+    },
+    {
+      "id": "IMG2",
+      "type": "anzeige",
+      "linked_anzeige": "AnzeigeB",
+      "prompt": "Cartoon-style German organic food store poster: Title 'Bio-Laden Grüne Wiese' in large bold text. Shows: Gartenweg 5, Mo-Fr 9-18 Uhr Sa 9-14 Uhr, organic apples 2.49€, milk 1.59€, bread 3.49€, children's corner. Fuxie cartoon style, green nature colors, clean layout, legible sans-serif font.",
+      "filename": "A1-T2-001_anzeige_b.png",
+      "placement": "anzeige_b",
+      "alt_text": "Werbung für Bio-Laden Grüne Wiese",
+      "dimensions": "512x600"
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q6",
+      "teil": 2,
+      "type": "matching_ab",
+      "situation": "Frau Meier arbeitet bis 20 Uhr. Sie möchte nach der Arbeit noch einkaufen.",
+      "answer": "A",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Supermarkt REWE – Wochenangebot",
+        "reasoning": "Die Situation passt zu Anzeige A, weil die genannten Anforderungen dort erfüllt werden."
+      }
+    },
+    {
+      "id": "Q7",
+      "teil": 2,
+      "type": "matching_ab",
+      "situation": "Herr Braun möchte nur Bio-Produkte kaufen.",
+      "answer": "B",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Bio-Laden Grüne Wiese; Nur Bio-Produkte. Kein Parkplatz. Kinderecke vorhanden.",
+        "reasoning": "Die Situation passt zu Anzeige B, weil die genannten Anforderungen dort erfüllt werden."
+      }
+    },
+    {
+      "id": "Q8",
+      "teil": 2,
+      "type": "matching_ab",
+      "situation": "Familie Schmidt kommt mit dem Auto. Sie brauchen einen Parkplatz.",
+      "answer": "A",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Supermarkt REWE – Wochenangebot; Parkplatz vorhanden. Lieferservice ab 30 € Einkauf.",
+        "reasoning": "Die Situation passt zu Anzeige A, weil die genannten Anforderungen dort erfüllt werden."
+      }
+    },
+    {
+      "id": "Q9",
+      "teil": 2,
+      "type": "matching_ab",
+      "situation": "Frau Weber hat zwei kleine Kinder. Sie möchte in Ruhe einkaufen.",
+      "answer": "B",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Bio-Laden Grüne Wiese; Nur Bio-Produkte. Kein Parkplatz. Kinderecke vorhanden.",
+        "reasoning": "Die Situation passt zu Anzeige B, weil die genannten Anforderungen dort erfüllt werden."
+      }
+    },
+    {
+      "id": "Q10",
+      "teil": 2,
+      "type": "matching_ab",
+      "situation": "Herr Yilmaz möchte billige Milch kaufen.",
+      "answer": "A",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Supermarkt REWE – Wochenangebot; Äpfel 1,29 €/kg, Milch 0,89 €, Brot 1,99 €",
+        "reasoning": "Die Situation passt zu Anzeige A, weil die genannten Anforderungen dort erfüllt werden."
+      }
+    }
+  ],
+  "scoring": {
+    "total_points": 5,
+    "pass_threshold": 3,
+    "grading": [
+      {
+        "range": [
+          5,
+          5
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          4,
+          4
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          3,
+          3
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          1,
+          2
+        ],
+        "label": "Noch üben!",
+        "emoji": "📝"
+      },
+      {
+        "range": [
+          0,
+          0
+        ],
+        "label": "Mehr Übung nötig",
+        "emoji": "💪"
+      }
+    ]
+  },
+  "qa": {
+    "anzeigen_different_enough": true,
+    "anzeigen_same_category": true,
+    "all_situations_unambiguous": true,
+    "image_text_matches_json": false,
+    "passed": false
+  }
+}

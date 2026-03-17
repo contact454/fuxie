@@ -1,0 +1,65 @@
+{
+  "id": "W-B1-T3-019",
+  "cefrLevel": "B1",
+  "teil": 3,
+  "teilName": "Formelle E-Mail",
+  "textType": "Formeller Brief",
+  "register": "formell",
+  "topic": "Theaterabonnement",
+  "instruction": "Sie haben ein Theaterabonnement beim Stadttheater abgeschlossen. Es gibt jedoch Unstimmigkeiten in Ihrer Bestätigung. Schreiben Sie eine E-Mail an den Besucherservice des Theaters.",
+  "instructionVi": "Bạn đã đăng ký mua gói thuê bao xem kịch tại nhà hát thành phố. Tuy nhiên, có một số sai sót trong thư xác nhận của bạn. Hãy viết một email gửi bộ phận chăm sóc khách hàng của nhà hát.",
+  "situation": "Sie haben vor Kurzem die schriftliche Bestätigung für Ihr neues Theaterabonnement 'Kultur Pur' erhalten. Dabei haben Sie festgestellt, dass die gewählte Sitzplatzkategorie nicht korrekt ist und Sie an einem der genannten Termine bereits eine andere Verpflichtung haben.",
+  "contentPoints": [
+    "Schreiben Sie einen passenden Betreff.",
+    "Beziehen Sie sich auf Ihre Kundennummer und erklären Sie den Grund für Ihr Schreiben.",
+    "Bitten Sie um die Änderung der Sitzplatzkategorie von Kategorie 3 (Rang) auf Kategorie 1 (Parkett).",
+    "Erklären Sie, warum Sie am 05.12. nicht kommen können und bitten Sie um einen Ersatztermin.",
+    "Fragen Sie nach den Versandmodalitäten der Tickets (Post oder Abendkasse)."
+  ],
+  "sourceText": "Bestätigung Abonnement 'Kultur Pur'\nKundennummer: 88210\nGebuchte Kategorie: 3 (Rang)\nTermine: 12.11., 05.12., 15.01.\nGesamtpreis: 120,00 Euro",
+  "sourceTextType": "Buchungsbestätigung",
+  "minWords": 80,
+  "maxWords": 120,
+  "timeMinutes": 25,
+  "rubric": {
+    "criteria": [
+      {
+        "id": "inhalt",
+        "name": "Inhalt",
+        "nameVi": "Nội dung",
+        "maxScore": 5,
+        "weight": 25
+      },
+      {
+        "id": "angemessenheit",
+        "name": "Kommunikative Angemessenheit",
+        "nameVi": "Phù hợp giao tiếp",
+        "maxScore": 5,
+        "weight": 20
+      },
+      {
+        "id": "korrektheit",
+        "name": "Korrektheit",
+        "nameVi": "Chính xác ngữ pháp & chính tả",
+        "maxScore": 5,
+        "weight": 25
+      },
+      {
+        "id": "spektrum",
+        "name": "Wortschatz & Strukturen",
+        "nameVi": "Đa dạng từ vựng & cấu trúc",
+        "maxScore": 5,
+        "weight": 15
+      },
+      {
+        "id": "kohaerenz",
+        "name": "Kohaerenz & Kohaesion",
+        "nameVi": "Mạch lạc & liên kết",
+        "maxScore": 5,
+        "weight": 15
+      }
+    ],
+    "maxScore": 25
+  },
+  "maxScore": 25
+}

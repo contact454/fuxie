@@ -1,0 +1,196 @@
+{
+  "id": "C1-T4-010",
+  "level": "C1",
+  "teil": 4,
+  "teil_name": "Meinungen zuordnen",
+  "topic": "Bildungsforschung",
+  "topic_id": "010",
+  "metadata": {
+    "word_count": 107,
+    "target_grammar": [
+      "Nominalisierung",
+      "Partizipialkonstruktionen",
+      "Konjunktiv I/II",
+      "Passiversatzformen"
+    ],
+    "target_vocabulary": [],
+    "generated_at": "2026-03-11T23:18:54.731267",
+    "version": 1
+  },
+  "opinion_texts": {
+    "question": "Wird KI Lehrkräfte ersetzen?",
+    "texts": [
+      {
+        "name": "Grundschullehrerin Maria Vogt",
+        "text": "Kein Algorithmus kann die emotionale Beziehung zwischen Lehrkraft und Kind ersetzen. Lernen ist ein sozialer Prozess, der Vertrauen, Empathie und individuelle Zuwendung erfordert.",
+        "label": "A"
+      },
+      {
+        "name": "EdTech-Gründer Alex Krone",
+        "text": "KI wird repetitive Aufgaben wie Korrekturen und Leistungsdokumentation übernehmen und Lehrern Zeit für das schenken, was wirklich zählt: die persönliche Begleitung der Schüler. KI ersetzt nicht, sie befreit.",
+        "label": "B"
+      },
+      {
+        "name": "Bildungsforscher Prof. Dr. Lutz Hartmann",
+        "text": "Die empirische Forschung zeigt eindeutig: Die Qualität der Lehrkraft ist der größte Einflussfaktor auf den Lernerfolg. Technologie kann unterstützen, aber eine herausragende Lehrkraft ist durch nichts zu ersetzen.",
+        "label": "C"
+      },
+      {
+        "name": "Studentin Paula Werner, 22",
+        "text": "Ich hätte mir an der Uni mehr KI-gestützte Lerntools gewünscht. Adaptive Übungsplattformen, die sich an mein Lerntempo anpassen, hätten mir vieles erleichtert. Die Vorlesungen waren oft zu standardisiert.",
+        "label": "D"
+      }
+    ]
+  },
+  "images": [
+    {
+      "id": "IMG1",
+      "type": "scene",
+      "prompt": "Cute cartoon illustration of experts discussing Bildungsforschung. Fuxie cartoon style, flat illustration, warm pastel colors, no text.",
+      "filename": "C1-T4-010_scene.png",
+      "placement": "header",
+      "alt_text": "Wird KI Lehrkräfte ersetzen?",
+      "dimensions": "768x512"
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q1",
+      "teil": 4,
+      "type": "matching",
+      "stem": "Die grundlegende Prämisse, dass Die emotionale Beziehung zwischen Lehrkraft und Kind ist unersetzlich, liegt der Position zugrunde:",
+      "answer": "A",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Text/Beitrag A",
+        "reasoning": "[Inferential] Die Aussage 'Die emotionale Beziehung zwischen Lehrkraft und Ki...' entspricht der Position von A."
+      }
+    },
+    {
+      "id": "Q2",
+      "teil": 4,
+      "type": "matching",
+      "stem": "KI befreit Lehrkräfte von Routinearbeiten für mehr persönliche Begleitung.",
+      "answer": "B",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Text/Beitrag B",
+        "reasoning": "Die Aussage 'KI befreit Lehrkräfte von Routinearbeiten für mehr...' entspricht der Position von B."
+      }
+    },
+    {
+      "id": "Q3",
+      "teil": 4,
+      "type": "matching",
+      "stem": "Die Qualität der Lehrkraft ist laut Forschung der wichtigste Erfolgsfaktor.",
+      "answer": "C",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Text/Beitrag C",
+        "reasoning": "Die Aussage 'Die Qualität der Lehrkraft ist laut Forschung der ...' entspricht der Position von C."
+      }
+    },
+    {
+      "id": "Q4",
+      "teil": 4,
+      "type": "matching",
+      "stem": "Die These, dass adaptive Lernplattformen passen sich individuellen Lerntempi an, wird durch folgende Argumentation gestützt:",
+      "answer": "D",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Text/Beitrag D",
+        "reasoning": "[Inferential] Die Aussage 'Adaptive Lernplattformen passen sich individuellen...' entspricht der Position von D."
+      }
+    },
+    {
+      "id": "Q5",
+      "teil": 4,
+      "type": "matching",
+      "stem": "Die These, dass lernen ist ein sozialer Prozess, der Empathie erfordert, wird durch folgende Argumentation gestützt:",
+      "answer": "A",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Text/Beitrag A",
+        "reasoning": "[Inferential] Die Aussage 'Lernen ist ein sozialer Prozess, der Empathie erfo...' entspricht der Position von A."
+      }
+    },
+    {
+      "id": "Q6",
+      "teil": 4,
+      "type": "matching",
+      "stem": "Die These, dass kI kann repetitive Aufgaben wie Korrekturen übernehmen, wird durch folgende Argumentation gestützt:",
+      "answer": "B",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Text/Beitrag B",
+        "reasoning": "[Inferential] Die Aussage 'KI kann repetitive Aufgaben wie Korrekturen überne...' entspricht der Position von B."
+      }
+    },
+    {
+      "id": "Q7",
+      "teil": 4,
+      "type": "matching",
+      "stem": "Die These, dass standardisierte Vorlesungen werden den individuellen Bedürfnissen nicht gerecht, wird durch folgende Argumentation gestützt:",
+      "answer": "D",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Text/Beitrag D",
+        "reasoning": "[Inferential] Die Aussage 'Standardisierte Vorlesungen werden den individuell...' entspricht der Position von D."
+      }
+    }
+  ],
+  "scoring": {
+    "total_points": 7,
+    "pass_threshold": 5,
+    "grading": [
+      {
+        "range": [
+          6,
+          7
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          4,
+          5
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          3,
+          3
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          1,
+          2
+        ],
+        "label": "Noch üben!",
+        "emoji": "📝"
+      },
+      {
+        "range": [
+          0,
+          0
+        ],
+        "label": "Mehr Übung nötig",
+        "emoji": "💪"
+      }
+    ]
+  },
+  "qa": {
+    "vocab_in_c1_list": true,
+    "grammar_c1_appropriate": true,
+    "word_count_in_range": true,
+    "all_answers_verifiable": true,
+    "image_count": 1,
+    "passed": true
+  }
+}

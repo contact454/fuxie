@@ -1,0 +1,52 @@
+{
+  "id": "W-A1-T2-020",
+  "cefrLevel": "A1",
+  "teil": 2,
+  "teilName": "Kurze E-Mail",
+  "textType": "E-Mail",
+  "register": "informell",
+  "topic": "Museumbesuch",
+  "instruction": "Schreiben Sie eine E-Mail an Ihren Freund Max. Sie waren gestern im Museum. Schreiben Sie etwas zu den folgenden drei Punkten:",
+  "instructionVi": "Viết một email cho người bạn tên là Max. Bạn đã đi bảo tàng vào ngày hôm qua. Hãy viết về 3 ý sau đây:",
+  "situation": "Gestern haben Sie ein interessantes Museum besucht. Jetzt möchten Sie Ihrem Freund Max davon erzählen und ihn fragen, ob er nächste Woche mit Ihnen ins Museum gehen möchte.",
+  "contentPoints": [
+    "Warum schreiben Sie?",
+    "Wie war das Museum (toll/langweilig)?",
+    "Nächste Woche zusammen gehen?"
+  ],
+  "sourceText": null,
+  "sourceTextType": null,
+  "grafikDesc": null,
+  "grafikData": null,
+  "formFields": null,
+  "minWords": 20,
+  "maxWords": 40,
+  "timeMinutes": 10,
+  "rubric": {
+    "criteria": [
+      {
+        "id": "inhalt",
+        "name": "Inhalt",
+        "nameVi": "Nội dung",
+        "maxScore": 5,
+        "weight": 30
+      },
+      {
+        "id": "korrektheit",
+        "name": "Korrektheit",
+        "nameVi": "Chính xác ngữ pháp & chính tả",
+        "maxScore": 5,
+        "weight": 40
+      },
+      {
+        "id": "angemessenheit",
+        "name": "Angemessenheit",
+        "nameVi": "Tính phù hợp",
+        "maxScore": 5,
+        "weight": 30
+      }
+    ],
+    "maxScore": 15
+  },
+  "maxScore": 15
+}

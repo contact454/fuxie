@@ -1,0 +1,63 @@
+{
+  "id": "W-B1-T1-014",
+  "cefrLevel": "B1",
+  "teil": 1,
+  "teilName": "Persoenliche E-Mail",
+  "textType": "E-Mail",
+  "register": "informell",
+  "topic": "Umzugsplanung",
+  "instruction": "Sie haben eine E-Mail von Ihrem Freund Lukas erhalten. Er plant seinen Umzug und hat Sie um Hilfe gebeten. Antworten Sie ihm.",
+  "instructionVi": "Bạn nhận được một email từ người bạn tên Lukas. Anh ấy đang lên kế hoạch chuyển nhà và nhờ bạn giúp đỡ. Hãy trả lời anh ấy.",
+  "situation": "Ihr Freund Lukas zieht nächsten Monat in eine neue Wohnung um. Er hat Sie per E-Mail gefragt, ob Sie ihm beim Packen und beim Transport der Möbel helfen können, da er momentan sehr viel Stress hat.",
+  "contentPoints": [
+    "Geben Sie einen Grund an, warum Sie erst jetzt auf seine E-Mail antworten.",
+    "Sagen Sie Ihre Hilfe zu und fragen Sie nach dem genauen Tag und der Uhrzeit.",
+    "Machen Sie einen Vorschlag, was Sie zum Umzug mitbringen können (z. B. Werkzeug, Essen oder Getränke)."
+  ],
+  "sourceText": "Hallo! Wie geht es dir? Bei mir ist gerade viel los. Ich habe endlich eine neue Wohnung gefunden und ziehe nächsten Monat um! Das ist zwar toll, aber auch super stressig. Ich muss noch so viele Kartons packen und Möbel abbauen. Hättest du vielleicht Zeit, mir am nächsten Wochenende beim Umzug zu helfen? Danach lade ich dich auch zum Pizzaessen ein! Sag mir bitte bald Bescheid. Liebe Grüße, Lukas",
+  "sourceTextType": "E-Mail",
+  "minWords": 80,
+  "maxWords": 120,
+  "timeMinutes": 20,
+  "rubric": {
+    "criteria": [
+      {
+        "id": "inhalt",
+        "name": "Inhalt",
+        "nameVi": "Nội dung",
+        "maxScore": 5,
+        "weight": 25
+      },
+      {
+        "id": "angemessenheit",
+        "name": "Kommunikative Angemessenheit",
+        "nameVi": "Phù hợp giao tiếp",
+        "maxScore": 5,
+        "weight": 20
+      },
+      {
+        "id": "korrektheit",
+        "name": "Korrektheit",
+        "nameVi": "Chính xác ngữ pháp & chính tả",
+        "maxScore": 5,
+        "weight": 25
+      },
+      {
+        "id": "spektrum",
+        "name": "Wortschatz & Strukturen",
+        "nameVi": "Đa dạng từ vựng & cấu trúc",
+        "maxScore": 5,
+        "weight": 15
+      },
+      {
+        "id": "kohaerenz",
+        "name": "Kohaerenz & Kohaesion",
+        "nameVi": "Mạch lạc & liên kết",
+        "maxScore": 5,
+        "weight": 15
+      }
+    ],
+    "maxScore": 25
+  },
+  "maxScore": 25
+}

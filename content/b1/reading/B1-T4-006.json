@@ -1,0 +1,222 @@
+{
+  "id": "B1-T4-006",
+  "level": "B1",
+  "teil": 4,
+  "teil_name": "Leserbriefe lesen",
+  "topic": "Wohnen & Zusammenleben",
+  "topic_id": "006",
+  "metadata": {
+    "word_count": 275,
+    "target_grammar": [
+      "Nebensatz mit weil/dass/obwohl",
+      "Konjunktiv II",
+      "Passiv"
+    ],
+    "target_vocabulary": [
+      "Sozialwohnung",
+      "Staat",
+      "Miete",
+      "Steuergeld",
+      "Eigenverantwortung",
+      "Wohnungsmarkt",
+      "Gerechtigkeit",
+      "bauen"
+    ],
+    "generated_at": "2026-03-10T23:40:00+07:00",
+    "version": 1
+  },
+  "debate": {
+    "topic": "Sollte der Staat mehr Sozialwohnungen bauen?",
+    "context": "Die Mieten steigen, und viele Menschen finden keine bezahlbare Wohnung. Manche fordern, dass der Staat mehr Sozialwohnungen bauen soll. Andere sehen das kritisch.",
+    "letters": [
+      {
+        "author": "Katharina B., Berlin",
+        "text": "Ja, das ist dringend nötig! In Berlin warte ich seit über zwei Jahren auf eine Sozialwohnung. Es kann nicht sein, dass in einem reichen Land wie Deutschland Familien in zu kleinen Wohnungen leben müssen, weil sie sich nichts anderes leisten können.",
+        "position": "ja"
+      },
+      {
+        "author": "Friedrich W., München",
+        "text": "Nein, der Staat ist kein guter Bauherr. Staatliche Bauprojekte sind langsam, teuer und bürokratisch. Besser wäre es, private Investoren zu unterstützen und Bürokratie abzubauen. Der Markt regelt das effizienter als der Staat.",
+        "position": "nein"
+      },
+      {
+        "author": "Olga P., Düsseldorf",
+        "text": "Als alleinerziehende Mutter brauche ich dringend eine günstige Wohnung. Der freie Markt hilft mir nicht — ich kann mir die Preise einfach nicht leisten. Der Staat muss eingreifen und für bezahlbaren Wohnraum sorgen. Das ist eine Frage der Gerechtigkeit.",
+        "position": "ja"
+      },
+      {
+        "author": "Hans M., Lübeck",
+        "text": "Wo soll das Geld denn herkommen? Sozialwohnungen kosten Milliarden an Steuergeldern. Diese Mittel fehlen dann bei Bildung, Gesundheit und Infrastruktur. Statt immer neue Ausgaben zu fordern, sollten wir sparsamer mit Steuergeldern umgehen.",
+        "position": "nein"
+      },
+      {
+        "author": "Amira S., Frankfurt",
+        "text": "Absolut! Wohnen ist ein Grundrecht. Der Staat hat die Pflicht, dafür zu sorgen, dass jeder ein Dach über dem Kopf hat. Andere Länder wie Österreich zeigen, dass es funktioniert: In Wien ist ein Drittel aller Wohnungen sozial gefördert.",
+        "position": "ja"
+      }
+    ]
+  },
+  "images": [
+    {
+      "id": "IMG1",
+      "type": "scene",
+      "prompt": "Cute cartoon illustration of a debate about social housing: apartment buildings under construction on one side, a person looking at high rent prices on the other. Fuxie cartoon style, flat illustration, warm pastel colors, no text.",
+      "filename": "B1-T4-006_scene.png",
+      "placement": "header",
+      "alt_text": "Debatte: Sozialwohnungen",
+      "dimensions": "768x512"
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q1",
+      "teil": 4,
+      "type": "ja_nein",
+      "stem": "Katharina B. findet, dass der Staat mehr Sozialwohnungen bauen sollte.",
+      "answer": "ja",
+      "points": 1,
+      "explanation": {
+        "de": "Katharina sagt, das ist dringend nötig, weil sie selbst seit zwei Jahren wartet.",
+        "key_evidence": "Ja, das ist dringend nötig!",
+        "key_vocabulary": [
+          {
+            "word": "Sozialwohnung",
+            "type": "Nomen",
+            "meaning": "social housing"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q2",
+      "teil": 4,
+      "type": "ja_nein",
+      "stem": "Friedrich W. meint, der Staat sollte selbst mehr Wohnungen bauen.",
+      "answer": "nein",
+      "points": 1,
+      "explanation": {
+        "de": "Friedrich meint, der Staat ist kein guter Bauherr und private Investoren sind effizienter.",
+        "key_evidence": "Nein, der Staat ist kein guter Bauherr / Der Markt regelt das effizienter",
+        "key_vocabulary": [
+          {
+            "word": "Bürokratie",
+            "type": "Nomen",
+            "meaning": "bureaucracy"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q3",
+      "teil": 4,
+      "type": "ja_nein",
+      "stem": "Olga P. glaubt, der freie Markt löst das Wohnungsproblem.",
+      "answer": "nein",
+      "points": 1,
+      "explanation": {
+        "de": "Olga sagt, der freie Markt hilft ihr nicht und der Staat muss eingreifen.",
+        "key_evidence": "Der freie Markt hilft mir nicht / Der Staat muss eingreifen",
+        "key_vocabulary": [
+          {
+            "word": "Gerechtigkeit",
+            "type": "Nomen",
+            "meaning": "justice / fairness"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q4",
+      "teil": 4,
+      "type": "ja_nein",
+      "stem": "Hans M. ist für mehr staatliche Ausgaben für Sozialwohnungen.",
+      "answer": "nein",
+      "points": 1,
+      "explanation": {
+        "de": "Hans fragt, wo das Geld herkommen soll und will sparsamer mit Steuern umgehen.",
+        "key_evidence": "Wo soll das Geld denn herkommen / sollten wir sparsamer umgehen",
+        "key_vocabulary": [
+          {
+            "word": "Steuergeld",
+            "type": "Nomen",
+            "meaning": "tax money"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q5",
+      "teil": 4,
+      "type": "ja_nein",
+      "stem": "Amira S. sieht Wohnen als Grundrecht an.",
+      "answer": "ja",
+      "points": 1,
+      "explanation": {
+        "de": "Amira sagt, Wohnen ist ein Grundrecht und nennt Wien als positives Beispiel.",
+        "key_evidence": "Wohnen ist ein Grundrecht / Der Staat hat die Pflicht",
+        "key_vocabulary": [
+          {
+            "word": "Grundrecht",
+            "type": "Nomen",
+            "meaning": "fundamental right"
+          }
+        ]
+      }
+    }
+  ],
+  "scoring": {
+    "total_points": 5,
+    "pass_threshold": 3,
+    "grading": [
+      {
+        "range": [
+          5,
+          5
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          4,
+          4
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          3,
+          3
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          1,
+          2
+        ],
+        "label": "Noch üben!",
+        "emoji": "📝"
+      },
+      {
+        "range": [
+          0,
+          0
+        ],
+        "label": "Mehr Übung nötig",
+        "emoji": "💪"
+      }
+    ]
+  },
+  "qa": {
+    "vocab_in_b1_list": true,
+    "grammar_b1_appropriate": true,
+    "word_count_in_range": true,
+    "all_answers_verifiable": true,
+    "ja_nein_balanced": true,
+    "image_count": 1,
+    "passed": true
+  }
+}

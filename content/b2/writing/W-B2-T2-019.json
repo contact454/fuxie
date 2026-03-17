@@ -1,0 +1,64 @@
+{
+  "id": "W-B2-T2-019",
+  "cefrLevel": "B2",
+  "teil": 2,
+  "teilName": "Nachricht/E-Mail",
+  "textType": "E-Mail",
+  "register": "formell",
+  "topic": "Gesundheitsvorsorge",
+  "instruction": "Sie arbeiten in der Personalabteilung der Firma 'TechSolutions'. Ihre Vorgesetzte, Frau Dr. Weber, hat Ihnen eine E-Mail bezüglich einer geplanten Gesundheitswoche geschickt. Antworten Sie auf diese E-Mail und gehen Sie dabei auf alle unten genannten Punkte ein.",
+  "instructionVi": "Bạn làm việc tại phòng nhân sự của công ty 'TechSolutions'. Cấp trên của bạn, bà Tiến sĩ Weber, đã gửi cho bạn một email về tuần lễ chăm sóc sức khỏe dự kiến. Hãy trả lời email này và đề cập đến tất cả các điểm dưới đây.",
+  "situation": "Ihr Unternehmen möchte die Gesundheitsvorsorge der Mitarbeiter fördern. Frau Dr. Weber plant eine Aktionswoche und benötigt Ihre Unterstützung bei der inhaltlichen Ausgestaltung sowie der organisatorischen Umsetzung der Workshops vor Ort.",
+  "contentPoints": [
+    "Bedanken Sie sich für die Einbeziehung in das Projekt und bestätigen Sie Ihre Unterstützung.",
+    "Machen Sie Vorschläge für zusätzliche Workshop-Themen (z. B. gesunde Ernährung oder Stressmanagement).",
+    "Äußern Sie sich dazu, wie man die Mitarbeiter am besten zur Teilnahme motivieren kann.",
+    "Machen Sie einen konkreten Vorschlag zur Nutzung der Besprechungsräume während dieser Woche."
+  ],
+  "sourceText": "Betreff: Planung der Gesundheitswoche im nächsten Monat\n\nSehr geehrte(r) Kollege/Kollegin,\n\nwie besprochen, möchten wir im nächsten Monat eine Gesundheitswoche für unsere Belegschaft organisieren. Ziel ist es, das Bewusstsein für Rückengesundheit zu stärken. Ich bitte Sie, Vorschläge für externe Referenten einzuholen und einen Zeitplan zu erstellen. Außerdem müssten wir klären, welche Räumlichkeiten zur Verfügung stehen. Bitte teilen Sie mir bis Freitag Ihre ersten Ideen mit.\n\nMit freundlichen Grüßen,\n\nDr. Susanne Weber",
+  "sourceTextType": "E-Mail von der Vorgesetzten",
+  "minWords": 100,
+  "maxWords": 150,
+  "timeMinutes": 25,
+  "rubric": {
+    "criteria": [
+      {
+        "id": "inhalt",
+        "name": "Inhalt",
+        "nameVi": "Nội dung",
+        "maxScore": 5,
+        "weight": 25
+      },
+      {
+        "id": "angemessenheit",
+        "name": "Kommunikative Angemessenheit",
+        "nameVi": "Phù hợp giao tiếp",
+        "maxScore": 5,
+        "weight": 20
+      },
+      {
+        "id": "korrektheit",
+        "name": "Korrektheit",
+        "nameVi": "Chính xác ngữ pháp & chính tả",
+        "maxScore": 5,
+        "weight": 25
+      },
+      {
+        "id": "spektrum",
+        "name": "Wortschatz & Strukturen",
+        "nameVi": "Đa dạng từ vựng & cấu trúc",
+        "maxScore": 5,
+        "weight": 15
+      },
+      {
+        "id": "kohaerenz",
+        "name": "Kohaerenz & Kohaesion",
+        "nameVi": "Mạch lạc & liên kết",
+        "maxScore": 5,
+        "weight": 15
+      }
+    ],
+    "maxScore": 25
+  },
+  "maxScore": 25
+}

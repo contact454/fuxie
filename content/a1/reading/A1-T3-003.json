@@ -1,0 +1,276 @@
+{
+  "id": "A1-T3-003",
+  "level": "A1",
+  "teil": 3,
+  "teil_name": "Schilder und Aushänge",
+  "topic": "Beim Arzt",
+  "topic_id": "003",
+  "metadata": {
+    "generated_at": "2026-03-09T02:45:00+07:00",
+    "version": 1
+  },
+  "schilder": [
+    {
+      "id": "Schild1",
+      "type": "Öffnungszeiten",
+      "text": "Sprechzeiten: Mo, Di, Do 8–12 Uhr und 14–18 Uhr. Mi, Fr 8–12 Uhr. Termine nur mit Anmeldung.",
+      "icon": "🕐"
+    },
+    {
+      "id": "Schild2",
+      "type": "Warnung",
+      "text": "Rauchverbot! Rauchen ist im gesamten Gebäude und auf dem Gelände verboten.",
+      "icon": "🚭"
+    },
+    {
+      "id": "Schild3",
+      "type": "Information",
+      "text": "Bitte melden Sie sich an der Rezeption an. Nehmen Sie dann im Wartezimmer Platz.",
+      "icon": "ℹ️"
+    },
+    {
+      "id": "Schild4",
+      "type": "Regel",
+      "text": "Bitte schalten Sie Ihr Handy im Wartezimmer auf lautlos. Danke!",
+      "icon": "📱"
+    },
+    {
+      "id": "Schild5",
+      "type": "Information",
+      "text": "Apotheke im Erdgeschoss. Öffnungszeiten: Mo–Fr 8–19 Uhr, Sa 9–14 Uhr.",
+      "icon": "💊"
+    }
+  ],
+  "images": [
+    {
+      "id": "IMG1",
+      "type": "schild",
+      "linked_schild": "Schild1",
+      "prompt": "Cartoon doctor office hours sign: 'Sprechzeiten: Mo,Di,Do 8-12 + 14-18. Mi,Fr 8-12.' Blue/white medical sign. Fuxie cartoon, legible font.",
+      "filename": "A1-T3-003_schild_1.png",
+      "placement": "schild_1",
+      "alt_text": "Sprechzeiten-Schild",
+      "dimensions": "400x300"
+    },
+    {
+      "id": "IMG2",
+      "type": "schild",
+      "linked_schild": "Schild2",
+      "prompt": "Cartoon no smoking sign: 'Rauchverbot! Rauchen ist verboten.' Red/white prohibition sign. Fuxie cartoon, legible font.",
+      "filename": "A1-T3-003_schild_2.png",
+      "placement": "schild_2",
+      "alt_text": "Rauchverbot-Schild",
+      "dimensions": "400x300"
+    },
+    {
+      "id": "IMG3",
+      "type": "schild",
+      "linked_schild": "Schild3",
+      "prompt": "Cartoon reception sign: 'Bitte melden Sie sich an der Rezeption an.' Light blue info sign. Fuxie cartoon, legible font.",
+      "filename": "A1-T3-003_schild_3.png",
+      "placement": "schild_3",
+      "alt_text": "Rezeption-Hinweisschild",
+      "dimensions": "400x300"
+    },
+    {
+      "id": "IMG4",
+      "type": "schild",
+      "linked_schild": "Schild4",
+      "prompt": "Cartoon phone silent sign: 'Handy auf lautlos.' Gray/blue rule sign with phone icon. Fuxie cartoon, legible font.",
+      "filename": "A1-T3-003_schild_4.png",
+      "placement": "schild_4",
+      "alt_text": "Handy-lautlos-Schild",
+      "dimensions": "400x300"
+    },
+    {
+      "id": "IMG5",
+      "type": "schild",
+      "linked_schild": "Schild5",
+      "prompt": "Cartoon pharmacy sign: 'Apotheke im Erdgeschoss. Mo-Fr 8-19, Sa 9-14.' Green/white pharmacy sign with pill icon. Fuxie cartoon, legible font.",
+      "filename": "A1-T3-003_schild_5.png",
+      "placement": "schild_5",
+      "alt_text": "Apotheke-Informationsschild",
+      "dimensions": "400x300"
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q11",
+      "teil": 3,
+      "linked_schild": "Schild1",
+      "type": "richtig_falsch",
+      "statement": "Am Mittwochnachmittag kann man zum Arzt gehen.",
+      "answer": "falsch",
+      "points": 1,
+      "explanation": {
+        "de": "Auf dem Schild steht: 'Mi, Fr 8–12 Uhr.' Am Mittwoch ist nur vormittags offen, nicht nachmittags.",
+        "key_evidence": "Mi, Fr 8–12 Uhr",
+        "key_vocabulary": [
+          {
+            "word": "Nachmittag",
+            "type": "Nomen",
+            "meaning": "afternoon"
+          },
+          {
+            "word": "Sprechzeiten",
+            "type": "Nomen",
+            "meaning": "office hours"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q12",
+      "teil": 3,
+      "linked_schild": "Schild2",
+      "type": "richtig_falsch",
+      "statement": "Man darf im Gebäude nicht rauchen.",
+      "answer": "richtig",
+      "points": 1,
+      "explanation": {
+        "de": "Auf dem Schild steht: 'Rauchen ist im gesamten Gebäude verboten.'",
+        "key_evidence": "Rauchen ist im gesamten Gebäude verboten",
+        "key_vocabulary": [
+          {
+            "word": "Rauchverbot",
+            "type": "Nomen",
+            "meaning": "smoking ban"
+          },
+          {
+            "word": "verboten",
+            "type": "Adjektiv",
+            "meaning": "forbidden"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q13",
+      "teil": 3,
+      "linked_schild": "Schild3",
+      "type": "richtig_falsch",
+      "statement": "Man kann direkt zum Arzt gehen, ohne sich anzumelden.",
+      "answer": "falsch",
+      "points": 1,
+      "explanation": {
+        "de": "Auf dem Schild steht: 'Bitte melden Sie sich an der Rezeption an.' Man muss sich zuerst anmelden.",
+        "key_evidence": "Bitte melden Sie sich an der Rezeption an",
+        "key_vocabulary": [
+          {
+            "word": "Rezeption",
+            "type": "Nomen",
+            "meaning": "reception"
+          },
+          {
+            "word": "anmelden",
+            "type": "Verb",
+            "meaning": "to register"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q14",
+      "teil": 3,
+      "linked_schild": "Schild4",
+      "type": "richtig_falsch",
+      "statement": "Das Handy soll im Wartezimmer leise sein.",
+      "answer": "richtig",
+      "points": 1,
+      "explanation": {
+        "de": "Auf dem Schild steht: 'Bitte schalten Sie Ihr Handy auf lautlos.' Lautlos bedeutet leise/still.",
+        "key_evidence": "Handy im Wartezimmer auf lautlos",
+        "key_vocabulary": [
+          {
+            "word": "lautlos",
+            "type": "Adjektiv",
+            "meaning": "silent"
+          },
+          {
+            "word": "Handy",
+            "type": "Nomen",
+            "meaning": "mobile phone"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q15",
+      "teil": 3,
+      "linked_schild": "Schild5",
+      "type": "richtig_falsch",
+      "statement": "Die Apotheke ist am Samstag bis 19 Uhr offen.",
+      "answer": "falsch",
+      "points": 1,
+      "explanation": {
+        "de": "Auf dem Schild steht: 'Sa 9–14 Uhr.' Am Samstag ist die Apotheke nur bis 14 Uhr offen, nicht bis 19 Uhr.",
+        "key_evidence": "Sa 9–14 Uhr",
+        "key_vocabulary": [
+          {
+            "word": "Apotheke",
+            "type": "Nomen",
+            "meaning": "pharmacy"
+          },
+          {
+            "word": "Samstag",
+            "type": "Nomen",
+            "meaning": "Saturday"
+          }
+        ]
+      }
+    }
+  ],
+  "scoring": {
+    "total_points": 5,
+    "pass_threshold": 3,
+    "grading": [
+      {
+        "range": [
+          5,
+          5
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          4,
+          4
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          3,
+          3
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          1,
+          2
+        ],
+        "label": "Noch üben!",
+        "emoji": "📝"
+      },
+      {
+        "range": [
+          0,
+          0
+        ],
+        "label": "Mehr Übung nötig",
+        "emoji": "💪"
+      }
+    ]
+  },
+  "qa": {
+    "all_signs_different_types": true,
+    "word_count_per_sign_valid": true,
+    "image_text_matches_sign": false,
+    "all_answers_verifiable": true,
+    "passed": false
+  }
+}

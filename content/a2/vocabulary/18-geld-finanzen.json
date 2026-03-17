@@ -1,0 +1,290 @@
+{
+  "theme": {
+    "slug": "a2-geld-finanzen",
+    "name": "Geld & Finanzen",
+    "nameVi": "Tiền & Tài chính",
+    "nameEn": "Money & Finance",
+    "sortOrder": 18,
+    "imageUrl": "/images/themes/a2-geld-finanzen.png"
+  },
+  "words": [
+    {
+      "word": "Bargeld",
+      "article": "NEUTRUM",
+      "plural": "-",
+      "wordType": "NOMEN",
+      "meaningVi": "tiền mặt",
+      "meaningEn": "cash",
+      "exampleSentence1": "Haben Sie Bargeld?",
+      "exampleTranslation1": "Bạn có tiền mặt không?",
+      "exampleSentence2": "Ich bezahle mit Bargeld.",
+      "exampleTranslation2": "Tôi trả tiền mặt.",
+      "imageUrl": "/images/vocab/a2-geld-finanzen/bargeld.png"
+    },
+    {
+      "word": "Kredit",
+      "article": "MASKULIN",
+      "plural": "die Kredite",
+      "wordType": "NOMEN",
+      "meaningVi": "khoản vay",
+      "meaningEn": "credit, loan",
+      "exampleSentence1": "Er hat einen Kredit aufgenommen.",
+      "exampleTranslation1": "Anh ấy đã vay.",
+      "exampleSentence2": "Der Kredit ist teuer.",
+      "exampleTranslation2": "Khoản vay đắt.",
+      "imageUrl": "/images/vocab/a2-geld-finanzen/kredit.png"
+    },
+    {
+      "word": "Schulden",
+      "plural": "die Schulden",
+      "wordType": "NOMEN",
+      "meaningVi": "nợ",
+      "meaningEn": "debts",
+      "notes": "Nur Plural",
+      "exampleSentence1": "Er hat Schulden.",
+      "exampleTranslation1": "Anh ấy nợ.",
+      "exampleSentence2": "Keine Schulden machen.",
+      "exampleTranslation2": "Đừng mắc nợ.",
+      "imageUrl": "/images/vocab/a2-geld-finanzen/schulden.png"
+    },
+    {
+      "word": "sparen",
+      "wordType": "VERB",
+      "meaningVi": "tiết kiệm",
+      "meaningEn": "to save (money)",
+      "conjugation": {
+        "praesens": {
+          "ich": "spare",
+          "du": "sparst",
+          "er_sie_es": "spart",
+          "wir": "sparen",
+          "ihr": "spart",
+          "sie_Sie": "sparen"
+        },
+        "isIrregular": false,
+        "isSeparable": false
+      },
+      "exampleSentence1": "Ich spare für den Urlaub.",
+      "exampleTranslation1": "Tôi tiết kiệm cho kỳ nghỉ.",
+      "exampleSentence2": "Wir müssen Geld sparen.",
+      "exampleTranslation2": "Chúng tôi phải tiết kiệm.",
+      "imageUrl": "/images/vocab/a2-geld-finanzen/sparen.png"
+    },
+    {
+      "word": "ausgeben",
+      "wordType": "VERB",
+      "meaningVi": "tiêu (tiền)",
+      "meaningEn": "to spend (money)",
+      "conjugation": {
+        "praesens": {
+          "ich": "gebe aus",
+          "du": "gibst aus",
+          "er_sie_es": "gibt aus",
+          "wir": "geben aus",
+          "ihr": "gebt aus",
+          "sie_Sie": "geben aus"
+        },
+        "isIrregular": true,
+        "isSeparable": true
+      },
+      "exampleSentence1": "Ich gebe zu viel Geld aus.",
+      "exampleTranslation1": "Tôi tiêu quá nhiều tiền.",
+      "exampleSentence2": "Wofür gibst du Geld aus?",
+      "exampleTranslation2": "Bạn tiêu tiền vào gì?",
+      "imageUrl": "/images/vocab/a2-geld-finanzen/ausgeben.png"
+    },
+    {
+      "word": "Preis",
+      "article": "MASKULIN",
+      "plural": "die Preise",
+      "wordType": "NOMEN",
+      "meaningVi": "giá",
+      "meaningEn": "price",
+      "exampleSentence1": "Der Preis ist hoch.",
+      "exampleTranslation1": "Giá cao.",
+      "exampleSentence2": "Was ist der Preis?",
+      "exampleTranslation2": "Giá bao nhiêu?",
+      "imageUrl": "/images/vocab/a2-geld-finanzen/preis.png"
+    },
+    {
+      "word": "leisten",
+      "wordType": "VERB",
+      "meaningVi": "chi trả được",
+      "meaningEn": "to afford",
+      "conjugation": {
+        "praesens": {
+          "ich": "leiste",
+          "du": "leistest",
+          "er_sie_es": "leistet",
+          "wir": "leisten",
+          "ihr": "leistet",
+          "sie_Sie": "leisten"
+        },
+        "isIrregular": false,
+        "isSeparable": false
+      },
+      "exampleSentence1": "Ich kann mir das nicht leisten.",
+      "exampleTranslation1": "Tôi không đủ điều kiện.",
+      "exampleSentence2": "Das können wir uns leisten.",
+      "exampleTranslation2": "Chúng tôi đủ điều kiện.",
+      "imageUrl": "/images/vocab/a2-geld-finanzen/leisten.png"
+    },
+    {
+      "word": "günstig",
+      "wordType": "ADJEKTIV",
+      "meaningVi": "rẻ, thuận lợi",
+      "meaningEn": "affordable, favorable",
+      "exampleSentence1": "Das ist günstig.",
+      "exampleTranslation1": "Rẻ.",
+      "exampleSentence2": "Ein günstiges Angebot.",
+      "exampleTranslation2": "Ưu đãi hời.",
+      "imageUrl": "/images/vocab/a2-geld-finanzen/guenstig.png"
+    },
+    {
+      "word": "teuer",
+      "wordType": "ADJEKTIV",
+      "meaningVi": "đắt",
+      "meaningEn": "expensive",
+      "exampleSentence1": "Das ist zu teuer.",
+      "exampleTranslation1": "Quá đắt.",
+      "exampleSentence2": "Die Miete ist teuer.",
+      "exampleTranslation2": "Tiền thuê nhà đắt.",
+      "imageUrl": "/images/vocab/a2-geld-finanzen/teuer.png"
+    },
+    {
+      "word": "gratis",
+      "wordType": "ADJEKTIV",
+      "meaningVi": "miễn phí",
+      "meaningEn": "free, gratis",
+      "exampleSentence1": "Das Frühstück ist gratis.",
+      "exampleTranslation1": "Ăn sáng miễn phí.",
+      "exampleSentence2": "Gratis testen.",
+      "exampleTranslation2": "Dùng thử miễn phí.",
+      "imageUrl": "/images/vocab/a2-geld-finanzen/gratis.png"
+    },
+    {
+      "word": "Steuererklärung",
+      "article": "FEMININ",
+      "plural": "die Steuererklärungen",
+      "wordType": "NOMEN",
+      "meaningVi": "khai thuế",
+      "meaningEn": "tax return",
+      "exampleSentence1": "Ich mache die Steuererklärung.",
+      "exampleTranslation1": "Tôi làm khai thuế.",
+      "exampleSentence2": "Die Frist für die Steuererklärung.",
+      "exampleTranslation2": "Hạn khai thuế.",
+      "imageUrl": "/images/vocab/a2-geld-finanzen/steuererklaerung.png"
+    },
+    {
+      "word": "Einkommen",
+      "article": "NEUTRUM",
+      "plural": "die Einkommen",
+      "wordType": "NOMEN",
+      "meaningVi": "thu nhập",
+      "meaningEn": "income",
+      "exampleSentence1": "Das Einkommen ist gut.",
+      "exampleTranslation1": "Thu nhập tốt.",
+      "exampleSentence2": "Hohes Einkommen.",
+      "exampleTranslation2": "Thu nhập cao.",
+      "imageUrl": "/images/vocab/a2-geld-finanzen/einkommen.png"
+    },
+    {
+      "word": "Bank",
+      "article": "FEMININ",
+      "plural": "die Banken",
+      "wordType": "NOMEN",
+      "meaningVi": "ngân hàng",
+      "meaningEn": "bank",
+      "exampleSentence1": "Ich muss zur Bank gehen.",
+      "exampleTranslation1": "Tôi phải đi đến ngân hàng.",
+      "exampleSentence2": "Die Bank ist um 17 Uhr geschlossen.",
+      "exampleTranslation2": "Ngân hàng đóng cửa lúc 5 giờ chiều.",
+      "imageUrl": "/images/vocab/a2-geld-finanzen/bank.png"
+    },
+    {
+      "word": "Taschengeld",
+      "article": "NEUTRUM",
+      "plural": "die Taschengelder",
+      "wordType": "NOMEN",
+      "meaningVi": "tiền tiêu vặt",
+      "meaningEn": "pocket money",
+      "exampleSentence1": "Kinder bekommen oft Taschengeld.",
+      "exampleTranslation1": "Trẻ em thường nhận được tiền tiêu vặt.",
+      "exampleSentence2": "Mein Taschengeld ist schon weg.",
+      "exampleTranslation2": "Tiền tiêu vặt của tôi đã hết rồi.",
+      "imageUrl": "/images/vocab/a2-geld-finanzen/taschengeld.png"
+    },
+    {
+      "word": "reich",
+      "wordType": "ADJEKTIV",
+      "meaningVi": "giàu có",
+      "meaningEn": "rich",
+      "exampleSentence1": "Er ist ein reicher Mann.",
+      "exampleTranslation1": "Anh ấy là một người đàn ông giàu có.",
+      "exampleSentence2": "Ich möchte reich sein.",
+      "exampleTranslation2": "Tôi muốn trở nên giàu có.",
+      "imageUrl": "/images/vocab/a2-geld-finanzen/reich.png"
+    },
+    {
+      "word": "arm",
+      "wordType": "ADJEKTIV",
+      "meaningVi": "nghèo khó",
+      "meaningEn": "poor",
+      "exampleSentence1": "Viele Menschen sind arm.",
+      "exampleTranslation1": "Nhiều người nghèo khó.",
+      "exampleSentence2": "Die Familie ist sehr arm.",
+      "exampleTranslation2": "Gia đình đó rất nghèo.",
+      "imageUrl": "/images/vocab/a2-geld-finanzen/arm.png"
+    },
+    {
+      "word": "wertvoll",
+      "wordType": "ADJEKTIV",
+      "meaningVi": "có giá trị",
+      "meaningEn": "valuable",
+      "exampleSentence1": "Das ist ein sehr wertvolles Geschenk.",
+      "exampleTranslation1": "Đó là một món quà rất có giá trị.",
+      "exampleSentence2": "Zeit ist oft wertvoller als Geld.",
+      "exampleTranslation2": "Thời gian thường có giá trị hơn tiền bạc.",
+      "imageUrl": "/images/vocab/a2-geld-finanzen/wertvoll.png"
+    },
+    {
+      "word": "Bankkarte",
+      "article": "FEMININ",
+      "plural": "die Bankkarten",
+      "wordType": "NOMEN",
+      "meaningVi": "thẻ ngân hàng",
+      "meaningEn": "bank card (debit card)",
+      "exampleSentence1": "Ich bezahle mit meiner Bankkarte.",
+      "exampleTranslation1": "Tôi thanh toán bằng thẻ ngân hàng của mình.",
+      "exampleSentence2": "Hast du deine Bankkarte dabei?",
+      "exampleTranslation2": "Bạn có mang theo thẻ ngân hàng không?",
+      "imageUrl": "/images/vocab/a2-geld-finanzen/bankkarte.png"
+    },
+    {
+      "word": "Budget",
+      "article": "NEUTRUM",
+      "plural": "die Budgets",
+      "wordType": "NOMEN",
+      "meaningVi": "ngân sách",
+      "meaningEn": "budget",
+      "exampleSentence1": "Wir müssen unser Budget planen.",
+      "exampleTranslation1": "Chúng ta phải lập kế hoạch ngân sách của mình.",
+      "exampleSentence2": "Das Budget für diesen Monat ist klein.",
+      "exampleTranslation2": "Ngân sách cho tháng này nhỏ.",
+      "imageUrl": "/images/vocab/a2-geld-finanzen/budget.png"
+    },
+    {
+      "word": "Zins",
+      "article": "MASKULIN",
+      "plural": "die Zinsen",
+      "wordType": "NOMEN",
+      "meaningVi": "lãi suất",
+      "meaningEn": "interest (on money)",
+      "exampleSentence1": "Die Bank bietet gute Zinsen an.",
+      "exampleTranslation1": "Ngân hàng đưa ra lãi suất tốt.",
+      "exampleSentence2": "Der Zins für das Darlehen ist hoch.",
+      "exampleTranslation2": "Lãi suất cho khoản vay rất cao.",
+      "imageUrl": "/images/vocab/a2-geld-finanzen/zins.png"
+    }
+  ]
+}

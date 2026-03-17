@@ -1,0 +1,63 @@
+{
+  "id": "W-B1-T1-015",
+  "cefrLevel": "B1",
+  "teil": 1,
+  "teilName": "Persoenliche E-Mail",
+  "textType": "E-Mail",
+  "register": "informell",
+  "topic": "Restaurantreservierung",
+  "instruction": "Sie haben eine E-Mail von Ihrer Freundin Anna erhalten. Schreiben Sie eine Antwort (80–120 Wörter). Gehen Sie auf alle drei Inhaltspunkte ein.",
+  "instructionVi": "Bạn nhận được một email từ người bạn tên Anna. Hãy viết thư trả lời (80-120 từ), đảm bảo đề cập đến cả 3 gợi ý nội dung.",
+  "situation": "Ihre Freundin Anna hat Sie eingeladen, nächste Woche ein neues Restaurant auszuprobieren. Da das Restaurant sehr beliebt ist, muss sie frühzeitig reservieren und wartet auf Ihre Rückmeldung.",
+  "contentPoints": [
+    "Bedanken Sie sich für die Einladung und sagen Sie zu.",
+    "Fragen Sie nach der genauen Uhrzeit und dem Treffpunkt.",
+    "Machen Sie einen Vorschlag, was Sie nach dem Essen noch machen könnten."
+  ],
+  "sourceText": "Hallo! Wie geht es dir? Ich habe gehört, dass in der Innenstadt ein neues italienisches Restaurant eröffnet hat. Es soll dort fantastische Pasta geben! Hast du Lust, nächsten Freitagabend dort mit mir gemeinsam essen zu gehen? Ich müsste aber bald einen Tisch reservieren, weil es dort am Wochenende immer sehr voll ist. Sag mir bitte schnell Bescheid, ob du Zeit hast. Liebe Grüße, Anna.",
+  "sourceTextType": "E-Mail einer Freundin",
+  "minWords": 80,
+  "maxWords": 120,
+  "timeMinutes": 20,
+  "rubric": {
+    "criteria": [
+      {
+        "id": "inhalt",
+        "name": "Inhalt",
+        "nameVi": "Nội dung",
+        "maxScore": 5,
+        "weight": 25
+      },
+      {
+        "id": "angemessenheit",
+        "name": "Kommunikative Angemessenheit",
+        "nameVi": "Phù hợp giao tiếp",
+        "maxScore": 5,
+        "weight": 20
+      },
+      {
+        "id": "korrektheit",
+        "name": "Korrektheit",
+        "nameVi": "Chính xác ngữ pháp & chính tả",
+        "maxScore": 5,
+        "weight": 25
+      },
+      {
+        "id": "spektrum",
+        "name": "Wortschatz & Strukturen",
+        "nameVi": "Đa dạng từ vựng & cấu trúc",
+        "maxScore": 5,
+        "weight": 15
+      },
+      {
+        "id": "kohaerenz",
+        "name": "Kohaerenz & Kohaesion",
+        "nameVi": "Mạch lạc & liên kết",
+        "maxScore": 5,
+        "weight": 15
+      }
+    ],
+    "maxScore": 25
+  },
+  "maxScore": 25
+}

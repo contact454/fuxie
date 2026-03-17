@@ -1,0 +1,196 @@
+{
+  "id": "C1-T4-006",
+  "level": "C1",
+  "teil": 4,
+  "teil_name": "Meinungen zuordnen",
+  "topic": "Wissenschaftstheorie",
+  "topic_id": "006",
+  "metadata": {
+    "word_count": 110,
+    "target_grammar": [
+      "Nominalisierung",
+      "Partizipialkonstruktionen",
+      "Konjunktiv I/II",
+      "Passiversatzformen"
+    ],
+    "target_vocabulary": [],
+    "generated_at": "2026-03-11T23:18:54.731267",
+    "version": 1
+  },
+  "opinion_texts": {
+    "question": "Wie soll die Wissenschaft mit Desinformation umgehen?",
+    "texts": [
+      {
+        "name": "Virologe Prof. Dr. Lars Weber",
+        "text": "Wissenschaftler müssen aktiver kommunizieren und sich nicht hinter Fachsprache verstecken. Die Pandemie hat gezeigt, dass die Wissenschaft ihre Elfenbeinturm-Mentalität aufgeben muss, um im öffentlichen Diskurs gehört zu werden.",
+        "label": "A"
+      },
+      {
+        "name": "Philosophin Dr. Eva Richter",
+        "text": "Die Wissenschaft darf sich nicht auf das Niveau der Desinformation herablassen. Strenge methodische Standards und die ehrliche Kommunikation von Unsicherheiten sind die stärksten Waffen gegen populistische Vereinfachung.",
+        "label": "B"
+      },
+      {
+        "name": "Medienwissenschaftler Dr. Kai Bergmann",
+        "text": "Die Hauptverantwortung liegt bei den Plattformbetreibern. Solange Algorithmen Sensationalismus und Falschinformation belohnen, kann die Wissenschaft kommunizieren, so viel sie will, sie wird gegen die digitale Aufmerksamkeitsökonomie nicht ankommen.",
+        "label": "C"
+      },
+      {
+        "name": "Science-Influencerin Nina Kraus",
+        "text": "Wir müssen die Wissenschaft dahin bringen, wo die Menschen sind: auf TikTok, Instagram und YouTube. Kurze, unterhaltsame Formate können komplexe Themen zugänglich machen, ohne sie zu verfälschen.",
+        "label": "D"
+      }
+    ]
+  },
+  "images": [
+    {
+      "id": "IMG1",
+      "type": "scene",
+      "prompt": "Cute cartoon illustration of experts discussing Wissenschaftstheorie. Fuxie cartoon style, flat illustration, warm pastel colors, no text.",
+      "filename": "C1-T4-006_scene.png",
+      "placement": "header",
+      "alt_text": "Wie soll die Wissenschaft mit Desinformation umgeh",
+      "dimensions": "768x512"
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q1",
+      "teil": 4,
+      "type": "matching",
+      "stem": "Die grundlegende Prämisse, dass wissenschaftler müssen verständlicher kommunizieren und die Elfenbeinturm-Mentalität aufgeben, liegt der Position zugrunde:",
+      "answer": "A",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Text/Beitrag A",
+        "reasoning": "[Inferential] Die Aussage 'Wissenschaftler müssen verständlicher kommuniziere...' entspricht der Position von A."
+      }
+    },
+    {
+      "id": "Q2",
+      "teil": 4,
+      "type": "matching",
+      "stem": "Die These, dass methodische Strenge und transparente Kommunikation von Unsicherheiten sind die besten Mittel, wird durch folgende Argumentation gestützt:",
+      "answer": "B",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Text/Beitrag B",
+        "reasoning": "[Inferential] Die Aussage 'Methodische Strenge und transparente Kommunikation...' entspricht der Position von B."
+      }
+    },
+    {
+      "id": "Q3",
+      "teil": 4,
+      "type": "matching",
+      "stem": "Die Plattformbetreiber tragen die Hauptverantwortung für die Verbreitung von Desinformation.",
+      "answer": "C",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Text/Beitrag C",
+        "reasoning": "Die Aussage 'Die Plattformbetreiber tragen die Hauptverantwortu...' entspricht der Position von C."
+      }
+    },
+    {
+      "id": "Q4",
+      "teil": 4,
+      "type": "matching",
+      "stem": "Die These, dass wissenschaft muss auf populären Social-Media-Plattformen präsent sein, wird durch folgende Argumentation gestützt:",
+      "answer": "D",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Text/Beitrag D",
+        "reasoning": "[Inferential] Die Aussage 'Wissenschaft muss auf populären Social-Media-Platt...' entspricht der Position von D."
+      }
+    },
+    {
+      "id": "Q5",
+      "teil": 4,
+      "type": "matching",
+      "stem": "Die These, dass algorithmen belohnen Sensationalismus stärker als seriöse Information, wird durch folgende Argumentation gestützt:",
+      "answer": "C",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Text/Beitrag C",
+        "reasoning": "[Inferential] Die Aussage 'Algorithmen belohnen Sensationalismus stärker als ...' entspricht der Position von C."
+      }
+    },
+    {
+      "id": "Q6",
+      "teil": 4,
+      "type": "matching",
+      "stem": "Kurze, unterhaltsame Formate können Wissenschaft zugänglich machen.",
+      "answer": "D",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Text/Beitrag D",
+        "reasoning": "Die Aussage 'Kurze, unterhaltsame Formate können Wissenschaft z...' entspricht der Position von D."
+      }
+    },
+    {
+      "id": "Q7",
+      "teil": 4,
+      "type": "matching",
+      "stem": "Die These, dass Die ehrliche Kommunikation von Unsicherheiten ist eine Stärke, keine Schwäche, wird durch folgende Argumentation gestützt:",
+      "answer": "B",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Text/Beitrag B",
+        "reasoning": "[Inferential] Die Aussage 'Die ehrliche Kommunikation von Unsicherheiten ist ...' entspricht der Position von B."
+      }
+    }
+  ],
+  "scoring": {
+    "total_points": 7,
+    "pass_threshold": 5,
+    "grading": [
+      {
+        "range": [
+          6,
+          7
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          4,
+          5
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          3,
+          3
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          1,
+          2
+        ],
+        "label": "Noch üben!",
+        "emoji": "📝"
+      },
+      {
+        "range": [
+          0,
+          0
+        ],
+        "label": "Mehr Übung nötig",
+        "emoji": "💪"
+      }
+    ]
+  },
+  "qa": {
+    "vocab_in_c1_list": true,
+    "grammar_c1_appropriate": true,
+    "word_count_in_range": true,
+    "all_answers_verifiable": true,
+    "image_count": 1,
+    "passed": true
+  }
+}

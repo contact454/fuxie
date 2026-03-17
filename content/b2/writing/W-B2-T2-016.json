@@ -1,0 +1,64 @@
+{
+  "id": "W-B2-T2-016",
+  "cefrLevel": "B2",
+  "teil": 2,
+  "teilName": "Nachricht/E-Mail",
+  "textType": "E-Mail",
+  "register": "formell",
+  "topic": "Reisestornierung",
+  "instruction": "Sie haben eine Pauschalreise gebucht, können diese jedoch aus dringenden persönlichen Gründen nicht antreten. Reagieren Sie auf die Buchungsbestätigung des Reisebüros und schreiben Sie eine formelle E-Mail, um die Reise zu stornieren.",
+  "instructionVi": "Viết một email trang trọng gửi cho văn phòng lữ hành để hủy chuyến du lịch trọn gói đã đặt do lý do cá nhân đột xuất.",
+  "situation": "Vor einer Woche haben Sie eine Reise in die Toskana für den nächsten Monat gebucht. Aufgrund einer unerwarteten beruflichen Projektverschiebung oder eines familiären Notfalls müssen Sie die gesamte Reise absagen. Sie beziehen sich dabei auf die erhaltene Bestätigungs-E-Mail.",
+  "contentPoints": [
+    "Grund für die Stornierung der Reise erläutern",
+    "Nach der Höhe der anfallenden Stornogebühren fragen",
+    "Um eine schriftliche Bestätigung der Stornierung bitten",
+    "Vorschlag bezüglich eines Gutscheins oder einer Umbuchung machen"
+  ],
+  "sourceText": "Sehr geehrte Damen und Herren, vielen Dank für Ihre Buchung der Reise 'Toskana-Traum' vom 15.09. bis 22.09. Wir freuen uns, Ihnen die Buchungsnummer 4592-XK bestätigen zu können. Die Gesamtkosten belaufen sich auf 1.250 Euro. Bitte beachten Sie, dass die Restzahlung bis spätestens vier Wochen vor Reiseantritt fällig ist. Bei Fragen zu Ihrer Reise oder eventuellen Änderungswünschen stehen wir Ihnen jederzeit gerne zur Verfügung. Mit freundlichen Grüßen, Ihr Team von Global-Travel.",
+  "sourceTextType": "Bestätigungs-E-Mail vom Reisebüro",
+  "minWords": 100,
+  "maxWords": 150,
+  "timeMinutes": 25,
+  "rubric": {
+    "criteria": [
+      {
+        "id": "inhalt",
+        "name": "Inhalt",
+        "nameVi": "Nội dung",
+        "maxScore": 5,
+        "weight": 25
+      },
+      {
+        "id": "angemessenheit",
+        "name": "Kommunikative Angemessenheit",
+        "nameVi": "Phù hợp giao tiếp",
+        "maxScore": 5,
+        "weight": 20
+      },
+      {
+        "id": "korrektheit",
+        "name": "Korrektheit",
+        "nameVi": "Chính xác ngữ pháp & chính tả",
+        "maxScore": 5,
+        "weight": 25
+      },
+      {
+        "id": "spektrum",
+        "name": "Wortschatz & Strukturen",
+        "nameVi": "Đa dạng từ vựng & cấu trúc",
+        "maxScore": 5,
+        "weight": 15
+      },
+      {
+        "id": "kohaerenz",
+        "name": "Kohaerenz & Kohaesion",
+        "nameVi": "Mạch lạc & liên kết",
+        "maxScore": 5,
+        "weight": 15
+      }
+    ],
+    "maxScore": 25
+  },
+  "maxScore": 25
+}

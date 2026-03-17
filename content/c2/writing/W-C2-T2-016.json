@@ -1,0 +1,64 @@
+{
+  "id": "W-C2-T2-016",
+  "cefrLevel": "C2",
+  "teil": 2,
+  "teilName": "Textumwandlung",
+  "textType": "Zeitungskommentar",
+  "register": "sachlich",
+  "topic": "Integrationspolitik",
+  "instruction": "Verfassen Sie auf Grundlage des vorliegenden Berichts einen Kommentar für die Rubrik 'Politik und Gesellschaft' einer überregionalen Tageszeitung. Nehmen Sie kritisch Stellung zu den Thesen des Textes und entwickeln Sie eigene Argumentationslinien.",
+  "instructionVi": "Dựa trên báo cáo được cung cấp, hãy viết một bài bình luận cho chuyên mục 'Chính trị và Xã hội' của một tờ báo ngày trên toàn quốc. Hãy đưa ra quan điểm phản biện về các luận điểm trong văn bản và phát triển các hướng lập luận riêng của bạn.",
+  "situation": "Die Debatte um die Neuausrichtung der staatlichen Integrationspolitik wird derzeit hitzig geführt. Ein aktuelles Expertengutachten zur Wirksamkeit von Fördermaßnahmen dient als Grundlage für Ihren Kommentar, in dem Sie die aktuelle Lage für ein anspruchsvolles Lesepublikum analysieren.",
+  "contentPoints": [
+    "Fassen Sie die im Ausgangstext genannten Defizite der aktuellen Integrationspolitik prägnant zusammen.",
+    "Erörtern Sie die im Text angesprochene Problematik der Dequalifizierung durch bürokratische Hürden.",
+    "Nehmen Sie Stellung zur Forderung nach einer stärkeren Verzahnung von Spracherwerb und Berufspraxis.",
+    "Formulieren Sie eigene Vorschläge für eine ganzheitliche Integrationsstrategie, die über rein staatliche Maßnahmen hinausgeht."
+  ],
+  "sourceText": "Die deutsche Integrationspolitik steht vor signifikanten Herausforderungen. Trotz beträchtlicher finanzieller Aufwendungen für Sprach- und Orientierungskurse zeigen aktuelle Daten, dass die nachhaltige Eingliederung in den Arbeitsmarkt stagniert. Ein zentrales Hindernis ist die mangelnde Verzahnung von theoretischem Spracherwerb und praktischer Anwendung. Viele Migranten beherrschen zwar die Grammatik, scheitern jedoch an der fachspezifischen Kommunikation im beruflichen Kontext. Ein weiteres Defizit liegt in der bürokratischen Trägheit bei der Anerkennung ausländischer Qualifikationen. Dieser Prozess der Dequalifizierung führt nicht nur zu individuellem Frust, sondern entzieht der Volkswirtschaft dringend benötigte Fachkräfte. Experten plädieren für eine Abkehr von starren Programmen hin zu einer flexiblen, modularisierten Förderung, die die individuellen Biografien stärker berücksichtigt. Zudem wird die soziale Segregation in Ballungsräumen als Integrationshemmnis unterschätzt. Die Konzentration von Zuwanderern in prekären Wohnverhältnissen erschwert den interkulturellen Austausch und fördert die Entstehung von Parallelstrukturen. Eine zukunftsorientierte Integrationspolitik muss daher stadtplanerische, bildungspolitische und ökonomische Maßnahmen bündeln. Nur wenn Integration als gesamtgesellschaftliche Aufgabe begriffen wird, bei der sowohl der Staat als auch die Zivilgesellschaft und die Zuwanderer selbst aktiv mitwirken, kann der soziale Zusammenhalt langfristig gewährleistet werden.",
+  "sourceTextType": "Bericht / Expertengutachten",
+  "minWords": 250,
+  "maxWords": null,
+  "timeMinutes": 45,
+  "rubric": {
+    "criteria": [
+      {
+        "id": "inhalt",
+        "name": "Inhalt",
+        "nameVi": "Nội dung",
+        "maxScore": 5,
+        "weight": 20
+      },
+      {
+        "id": "angemessenheit",
+        "name": "Kommunikative Angemessenheit",
+        "nameVi": "Phù hợp giao tiếp",
+        "maxScore": 5,
+        "weight": 20
+      },
+      {
+        "id": "korrektheit",
+        "name": "Korrektheit",
+        "nameVi": "Chính xác ngữ pháp & chính tả",
+        "maxScore": 5,
+        "weight": 20
+      },
+      {
+        "id": "spektrum",
+        "name": "Wortschatz & Strukturen",
+        "nameVi": "Đa dạng từ vựng & cấu trúc",
+        "maxScore": 5,
+        "weight": 20
+      },
+      {
+        "id": "kohaerenz",
+        "name": "Kohaerenz & Kohaesion",
+        "nameVi": "Mạch lạc & liên kết",
+        "maxScore": 5,
+        "weight": 20
+      }
+    ],
+    "maxScore": 25
+  },
+  "maxScore": 25
+}

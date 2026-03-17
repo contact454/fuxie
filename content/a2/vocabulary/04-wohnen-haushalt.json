@@ -1,0 +1,531 @@
+{
+    "theme": {
+        "slug": "a2-wohnen-haushalt",
+        "name": "Wohnen & Haushalt",
+        "nameVi": "Nhà ở & Gia đình",
+        "nameEn": "Housing & Household",
+        "sortOrder": 4,
+        "imageUrl": "/images/themes/a2-wohnen-haushalt.png"
+    },
+    "words": [
+        {
+            "word": "Miete",
+            "article": "FEMININ",
+            "plural": "die Mieten",
+            "wordType": "NOMEN",
+            "meaningVi": "tiền thuê nhà",
+            "meaningEn": "rent",
+            "exampleSentence1": "Die Miete ist hoch.",
+            "exampleTranslation1": "Tiền thuê nhà cao.",
+            "exampleSentence2": "Ich bezahle 800 Euro Miete.",
+            "exampleTranslation2": "Tôi trả 800 Euro tiền thuê.",
+            "imageUrl": "/images/vocab/a2-wohnen-haushalt/miete.png"
+        },
+        {
+            "word": "Vermieter",
+            "article": "MASKULIN",
+            "plural": "die Vermieter",
+            "wordType": "NOMEN",
+            "meaningVi": "chủ nhà (cho thuê)",
+            "meaningEn": "landlord",
+            "exampleSentence1": "Der Vermieter ist freundlich.",
+            "exampleTranslation1": "Chủ nhà thân thiện.",
+            "exampleSentence2": "Fragen Sie den Vermieter.",
+            "exampleTranslation2": "Hãy hỏi chủ nhà.",
+            "imageUrl": "/images/vocab/a2-wohnen-haushalt/vermieter.png"
+        },
+        {
+            "word": "Mieter",
+            "article": "MASKULIN",
+            "plural": "die Mieter",
+            "wordType": "NOMEN",
+            "meaningVi": "người thuê nhà",
+            "meaningEn": "tenant",
+            "exampleSentence1": "Der Mieter bezahlt pünktlich.",
+            "exampleTranslation1": "Người thuê nhà trả đúng hạn.",
+            "exampleSentence2": "Die Mieter beschweren sich.",
+            "exampleTranslation2": "Người thuê phàn nàn.",
+            "imageUrl": "/images/vocab/a2-wohnen-haushalt/mieter.png"
+        },
+        {
+            "word": "Mietvertrag",
+            "article": "MASKULIN",
+            "plural": "die Mietverträge",
+            "wordType": "NOMEN",
+            "meaningVi": "hợp đồng thuê nhà",
+            "meaningEn": "rental contract",
+            "exampleSentence1": "Unterschreiben Sie den Mietvertrag.",
+            "exampleTranslation1": "Ký hợp đồng thuê nhà.",
+            "exampleSentence2": "Der Mietvertrag läuft ein Jahr.",
+            "exampleTranslation2": "Hợp đồng thuê 1 năm.",
+            "imageUrl": "/images/vocab/a2-wohnen-haushalt/mietvertrag.png"
+        },
+        {
+            "word": "Nebenkosten",
+            "plural": "die Nebenkosten",
+            "wordType": "NOMEN",
+            "meaningVi": "chi phí phụ",
+            "meaningEn": "utilities, additional costs",
+            "notes": "Nur Plural",
+            "exampleSentence1": "Die Nebenkosten sind extra.",
+            "exampleTranslation1": "Chi phí phụ tính riêng.",
+            "exampleSentence2": "Wie hoch sind die Nebenkosten?",
+            "exampleTranslation2": "Chi phí phụ bao nhiêu?",
+            "imageUrl": "/images/vocab/a2-wohnen-haushalt/nebenkosten.png"
+        },
+        {
+            "word": "Kaution",
+            "article": "FEMININ",
+            "plural": "die Kautionen",
+            "wordType": "NOMEN",
+            "meaningVi": "tiền đặt cọc",
+            "meaningEn": "deposit",
+            "exampleSentence1": "Die Kaution beträgt zwei Monatsmieten.",
+            "exampleTranslation1": "Tiền cọc bằng 2 tháng tiền thuê.",
+            "exampleSentence2": "Ich bekomme die Kaution zurück.",
+            "exampleTranslation2": "Tôi nhận lại tiền cọc.",
+            "imageUrl": "/images/vocab/a2-wohnen-haushalt/kaution.png"
+        },
+        {
+            "word": "Umzug",
+            "article": "MASKULIN",
+            "plural": "die Umzüge",
+            "wordType": "NOMEN",
+            "meaningVi": "việc chuyển nhà",
+            "meaningEn": "move (relocation)",
+            "exampleSentence1": "Der Umzug ist nächste Woche.",
+            "exampleTranslation1": "Chuyển nhà tuần sau.",
+            "exampleSentence2": "Der Umzug war stressig.",
+            "exampleTranslation2": "Chuyển nhà rất căng thẳng.",
+            "imageUrl": "/images/vocab/a2-wohnen-haushalt/umzug.png"
+        },
+        {
+            "word": "umziehen",
+            "wordType": "VERB",
+            "meaningVi": "chuyển nhà",
+            "meaningEn": "to move (relocate)",
+            "conjugation": {
+                "praesens": {
+                    "ich": "ziehe um",
+                    "du": "ziehst um",
+                    "er_sie_es": "zieht um",
+                    "wir": "ziehen um",
+                    "ihr": "zieht um",
+                    "sie_Sie": "ziehen um"
+                },
+                "isIrregular": true,
+                "isSeparable": true
+            },
+            "exampleSentence1": "Wir ziehen nächsten Monat um.",
+            "exampleTranslation1": "Chúng tôi chuyển nhà tháng sau.",
+            "exampleSentence2": "Er ist nach Berlin umgezogen.",
+            "exampleTranslation2": "Anh ấy chuyển đến Berlin.",
+            "imageUrl": "/images/vocab/a2-wohnen-haushalt/umziehen.png"
+        },
+        {
+            "word": "einrichten",
+            "wordType": "VERB",
+            "meaningVi": "sắp xếp, trang trí",
+            "meaningEn": "to furnish, set up",
+            "conjugation": {
+                "praesens": {
+                    "ich": "richte ein",
+                    "du": "richtest ein",
+                    "er_sie_es": "richtet ein",
+                    "wir": "richten ein",
+                    "ihr": "richtet ein",
+                    "sie_Sie": "richten ein"
+                },
+                "isIrregular": false,
+                "isSeparable": true
+            },
+            "exampleSentence1": "Wir richten die Wohnung ein.",
+            "exampleTranslation1": "Chúng tôi trang trí căn hộ.",
+            "exampleSentence2": "Die Küche ist modern eingerichtet.",
+            "exampleTranslation2": "Bếp được trang trí hiện đại.",
+            "imageUrl": "/images/vocab/a2-wohnen-haushalt/einrichten.png"
+        },
+        {
+            "word": "renovieren",
+            "wordType": "VERB",
+            "meaningVi": "sửa sang, cải tạo",
+            "meaningEn": "to renovate",
+            "conjugation": {
+                "praesens": {
+                    "ich": "renoviere",
+                    "du": "renovierst",
+                    "er_sie_es": "renoviert",
+                    "wir": "renovieren",
+                    "ihr": "renoviert",
+                    "sie_Sie": "renovieren"
+                },
+                "isIrregular": false,
+                "isSeparable": false
+            },
+            "exampleSentence1": "Wir renovieren die Wohnung.",
+            "exampleTranslation1": "Chúng tôi sửa sang căn hộ.",
+            "exampleSentence2": "Das Haus wird renoviert.",
+            "exampleTranslation2": "Nhà đang được sửa sang.",
+            "imageUrl": "/images/vocab/a2-wohnen-haushalt/renovieren.png"
+        },
+        {
+            "word": "Strom",
+            "article": "MASKULIN",
+            "plural": "-",
+            "wordType": "NOMEN",
+            "meaningVi": "điện",
+            "meaningEn": "electricity",
+            "exampleSentence1": "Der Strom ist teuer.",
+            "exampleTranslation1": "Điện đắt.",
+            "exampleSentence2": "Es gibt keinen Strom.",
+            "exampleTranslation2": "Không có điện.",
+            "imageUrl": "/images/vocab/a2-wohnen-haushalt/strom.png"
+        },
+        {
+            "word": "Heizung",
+            "article": "FEMININ",
+            "plural": "die Heizungen",
+            "wordType": "NOMEN",
+            "meaningVi": "lò sưởi",
+            "meaningEn": "heating",
+            "exampleSentence1": "Die Heizung funktioniert nicht.",
+            "exampleTranslation1": "Lò sưởi không hoạt động.",
+            "exampleSentence2": "Mach die Heizung an!",
+            "exampleTranslation2": "Bật lò sưởi lên!",
+            "imageUrl": "/images/vocab/a2-wohnen-haushalt/heizung.png"
+        },
+        {
+            "word": "Waschmaschine",
+            "article": "FEMININ",
+            "plural": "die Waschmaschinen",
+            "wordType": "NOMEN",
+            "meaningVi": "máy giặt",
+            "meaningEn": "washing machine",
+            "exampleSentence1": "Die Waschmaschine ist kaputt.",
+            "exampleTranslation1": "Máy giặt hỏng.",
+            "exampleSentence2": "Ich brauche eine Waschmaschine.",
+            "exampleTranslation2": "Tôi cần máy giặt.",
+            "imageUrl": "/images/vocab/a2-wohnen-haushalt/waschmaschine.png"
+        },
+        {
+            "word": "Spülmaschine",
+            "article": "FEMININ",
+            "plural": "die Spülmaschinen",
+            "wordType": "NOMEN",
+            "meaningVi": "máy rửa bát",
+            "meaningEn": "dishwasher",
+            "exampleSentence1": "Die Spülmaschine ist voll.",
+            "exampleTranslation1": "Máy rửa bát đầy.",
+            "exampleSentence2": "Räume die Spülmaschine aus!",
+            "exampleTranslation2": "Dọn máy rửa bát!",
+            "imageUrl": "/images/vocab/a2-wohnen-haushalt/spuelmaschine.png"
+        },
+        {
+            "word": "Staubsauger",
+            "article": "MASKULIN",
+            "plural": "die Staubsauger",
+            "wordType": "NOMEN",
+            "meaningVi": "máy hút bụi",
+            "meaningEn": "vacuum cleaner",
+            "exampleSentence1": "Der Staubsauger ist laut.",
+            "exampleTranslation1": "Máy hút bụi ồn.",
+            "exampleSentence2": "Wo ist der Staubsauger?",
+            "exampleTranslation2": "Máy hút bụi ở đâu?",
+            "imageUrl": "/images/vocab/a2-wohnen-haushalt/staubsauger.png"
+        },
+        {
+            "word": "putzen",
+            "wordType": "VERB",
+            "meaningVi": "lau chùi",
+            "meaningEn": "to clean",
+            "conjugation": {
+                "praesens": {
+                    "ich": "putze",
+                    "du": "putzt",
+                    "er_sie_es": "putzt",
+                    "wir": "putzen",
+                    "ihr": "putzt",
+                    "sie_Sie": "putzen"
+                },
+                "isIrregular": false,
+                "isSeparable": false
+            },
+            "exampleSentence1": "Ich putze das Bad.",
+            "exampleTranslation1": "Tôi lau phòng tắm.",
+            "exampleSentence2": "Wer putzt heute?",
+            "exampleTranslation2": "Ai lau dọn hôm nay?",
+            "imageUrl": "/images/vocab/a2-wohnen-haushalt/putzen.png"
+        },
+        {
+            "word": "aufräumen",
+            "wordType": "VERB",
+            "meaningVi": "dọn dẹp",
+            "meaningEn": "to tidy up",
+            "conjugation": {
+                "praesens": {
+                    "ich": "räume auf",
+                    "du": "räumst auf",
+                    "er_sie_es": "räumt auf",
+                    "wir": "räumen auf",
+                    "ihr": "räumt auf",
+                    "sie_Sie": "räumen auf"
+                },
+                "isIrregular": false,
+                "isSeparable": true
+            },
+            "exampleSentence1": "Räum dein Zimmer auf!",
+            "exampleTranslation1": "Dọn phòng đi!",
+            "exampleSentence2": "Ich muss aufräumen.",
+            "exampleTranslation2": "Tôi phải dọn dẹp.",
+            "imageUrl": "/images/vocab/a2-wohnen-haushalt/aufraeumen.png"
+        },
+        {
+            "word": "waschen",
+            "wordType": "VERB",
+            "meaningVi": "giặt",
+            "meaningEn": "to wash",
+            "conjugation": {
+                "praesens": {
+                    "ich": "wasche",
+                    "du": "wäschst",
+                    "er_sie_es": "wäscht",
+                    "wir": "waschen",
+                    "ihr": "wascht",
+                    "sie_Sie": "waschen"
+                },
+                "isIrregular": true,
+                "isSeparable": false
+            },
+            "exampleSentence1": "Ich wasche die Wäsche.",
+            "exampleTranslation1": "Tôi giặt quần áo.",
+            "exampleSentence2": "Wäschst du das Geschirr?",
+            "exampleTranslation2": "Bạn rửa bát à?",
+            "imageUrl": "/images/vocab/a2-wohnen-haushalt/waschen.png"
+        },
+        {
+            "word": "Müll",
+            "article": "MASKULIN",
+            "plural": "-",
+            "wordType": "NOMEN",
+            "meaningVi": "rác",
+            "meaningEn": "garbage, trash",
+            "exampleSentence1": "Bring den Müll raus!",
+            "exampleTranslation1": "Mang rác đi!",
+            "exampleSentence2": "Der Müll wird getrennt.",
+            "exampleTranslation2": "Rác được phân loại.",
+            "imageUrl": "/images/vocab/a2-wohnen-haushalt/muell.png"
+        },
+        {
+            "word": "Reparatur",
+            "article": "FEMININ",
+            "plural": "die Reparaturen",
+            "wordType": "NOMEN",
+            "meaningVi": "sửa chữa",
+            "meaningEn": "repair",
+            "exampleSentence1": "Die Reparatur kostet 200 Euro.",
+            "exampleTranslation1": "Sửa chữa tốn 200 Euro.",
+            "exampleSentence2": "Wir brauchen eine Reparatur.",
+            "exampleTranslation2": "Chúng tôi cần sửa chữa.",
+            "imageUrl": "/images/vocab/a2-wohnen-haushalt/reparatur.png"
+        },
+        {
+            "word": "reparieren",
+            "wordType": "VERB",
+            "meaningVi": "sửa chữa",
+            "meaningEn": "to repair",
+            "conjugation": {
+                "praesens": {
+                    "ich": "repariere",
+                    "du": "reparierst",
+                    "er_sie_es": "repariert",
+                    "wir": "reparieren",
+                    "ihr": "repariert",
+                    "sie_Sie": "reparieren"
+                },
+                "isIrregular": false,
+                "isSeparable": false
+            },
+            "exampleSentence1": "Kannst du das reparieren?",
+            "exampleTranslation1": "Bạn sửa được không?",
+            "exampleSentence2": "Die Heizung muss repariert werden.",
+            "exampleTranslation2": "Lò sưởi phải được sửa.",
+            "imageUrl": "/images/vocab/a2-wohnen-haushalt/reparieren.png"
+        },
+        {
+            "word": "Möbel",
+            "plural": "die Möbel",
+            "wordType": "NOMEN",
+            "meaningVi": "đồ nội thất",
+            "meaningEn": "furniture",
+            "notes": "Nur Plural",
+            "exampleSentence1": "Wir kaufen neue Möbel.",
+            "exampleTranslation1": "Chúng tôi mua đồ nội thất mới.",
+            "exampleSentence2": "Die Möbel sind alt.",
+            "exampleTranslation2": "Đồ nội thất cũ.",
+            "imageUrl": "/images/vocab/a2-wohnen-haushalt/moebel.png"
+        },
+        {
+            "word": "Teppich",
+            "article": "MASKULIN",
+            "plural": "die Teppiche",
+            "wordType": "NOMEN",
+            "meaningVi": "thảm",
+            "meaningEn": "carpet, rug",
+            "exampleSentence1": "Der Teppich ist schmutzig.",
+            "exampleTranslation1": "Thảm bẩn.",
+            "exampleSentence2": "Ein neuer Teppich fürs Wohnzimmer.",
+            "exampleTranslation2": "Thảm mới cho phòng khách.",
+            "imageUrl": "/images/vocab/a2-wohnen-haushalt/teppich.png"
+        },
+        {
+            "word": "Vorhang",
+            "article": "MASKULIN",
+            "plural": "die Vorhänge",
+            "wordType": "NOMEN",
+            "meaningVi": "rèm cửa",
+            "meaningEn": "curtain",
+            "exampleSentence1": "Mach die Vorhänge zu!",
+            "exampleTranslation1": "Kéo rèm cửa lại!",
+            "exampleSentence2": "Die Vorhänge sind schön.",
+            "exampleTranslation2": "Rèm cửa đẹp.",
+            "imageUrl": "/images/vocab/a2-wohnen-haushalt/vorhang.png"
+        },
+        {
+            "word": "Keller",
+            "article": "MASKULIN",
+            "plural": "die Keller",
+            "wordType": "NOMEN",
+            "meaningVi": "tầng hầm",
+            "meaningEn": "basement, cellar",
+            "exampleSentence1": "Der Keller ist feucht.",
+            "exampleTranslation1": "Tầng hầm ẩm.",
+            "exampleSentence2": "Wir lagern Sachen im Keller.",
+            "exampleTranslation2": "Chúng tôi cất đồ ở tầng hầm.",
+            "imageUrl": "/images/vocab/a2-wohnen-haushalt/keller.png"
+        },
+        {
+            "word": "Dach",
+            "article": "NEUTRUM",
+            "plural": "die Dächer",
+            "wordType": "NOMEN",
+            "meaningVi": "mái nhà",
+            "meaningEn": "roof",
+            "exampleSentence1": "Das Dach ist undicht.",
+            "exampleTranslation1": "Mái nhà bị dột.",
+            "exampleSentence2": "Wir renovieren das Dach.",
+            "exampleTranslation2": "Chúng tôi sửa mái nhà.",
+            "imageUrl": "/images/vocab/a2-wohnen-haushalt/dach.png"
+        },
+        {
+            "word": "Balkon",
+            "article": "MASKULIN",
+            "plural": "die Balkone",
+            "wordType": "NOMEN",
+            "meaningVi": "ban công",
+            "meaningEn": "balcony",
+            "exampleSentence1": "Wir sitzen auf dem Balkon.",
+            "exampleTranslation1": "Chúng tôi ngồi trên ban công.",
+            "exampleSentence2": "Der Balkon ist groß.",
+            "exampleTranslation2": "Ban công rộng.",
+            "imageUrl": "/images/vocab/a2-wohnen-haushalt/balkon.png"
+        },
+        {
+            "word": "Stockwerk",
+            "article": "NEUTRUM",
+            "plural": "die Stockwerke",
+            "wordType": "NOMEN",
+            "meaningVi": "tầng lầu",
+            "meaningEn": "floor, story",
+            "exampleSentence1": "Wir wohnen im dritten Stockwerk.",
+            "exampleTranslation1": "Chúng tôi ở tầng 3.",
+            "exampleSentence2": "Das Gebäude hat fünf Stockwerke.",
+            "exampleTranslation2": "Tòa nhà có 5 tầng.",
+            "imageUrl": "/images/vocab/a2-wohnen-haushalt/stockwerk.png"
+        },
+        {
+            "word": "Aufzug",
+            "article": "MASKULIN",
+            "plural": "die Aufzüge",
+            "wordType": "NOMEN",
+            "meaningVi": "thang máy",
+            "meaningEn": "elevator",
+            "exampleSentence1": "Nehmen Sie den Aufzug.",
+            "exampleTranslation1": "Đi thang máy.",
+            "exampleSentence2": "Der Aufzug ist kaputt.",
+            "exampleTranslation2": "Thang máy hỏng.",
+            "imageUrl": "/images/vocab/a2-wohnen-haushalt/aufzug.png"
+        },
+        {
+            "word": "Eingang",
+            "article": "MASKULIN",
+            "plural": "die Eingänge",
+            "wordType": "NOMEN",
+            "meaningVi": "lối vào",
+            "meaningEn": "entrance",
+            "exampleSentence1": "Der Eingang ist rechts.",
+            "exampleTranslation1": "Lối vào bên phải.",
+            "exampleSentence2": "Wo ist der Eingang?",
+            "exampleTranslation2": "Lối vào ở đâu?",
+            "imageUrl": "/images/vocab/a2-wohnen-haushalt/eingang.png"
+        },
+        {
+            "word": "Ausgang",
+            "article": "MASKULIN",
+            "plural": "die Ausgänge",
+            "wordType": "NOMEN",
+            "meaningVi": "lối ra",
+            "meaningEn": "exit",
+            "exampleSentence1": "Der Ausgang ist dort.",
+            "exampleTranslation1": "Lối ra ở kia.",
+            "exampleSentence2": "Notausgang benutzen!",
+            "exampleTranslation2": "Sử dụng lối thoát hiểm!",
+            "imageUrl": "/images/vocab/a2-wohnen-haushalt/ausgang.png"
+        },
+        {
+            "word": "Garage",
+            "article": "FEMININ",
+            "plural": "die Garagen",
+            "wordType": "NOMEN",
+            "meaningVi": "nhà xe",
+            "meaningEn": "garage",
+            "exampleSentence1": "Das Auto steht in der Garage.",
+            "exampleTranslation1": "Xe ở trong nhà xe.",
+            "exampleSentence2": "Wir bauen eine Garage.",
+            "exampleTranslation2": "Chúng tôi xây nhà xe.",
+            "imageUrl": "/images/vocab/a2-wohnen-haushalt/garage.png"
+        },
+        {
+            "word": "gemütlich",
+            "wordType": "ADJEKTIV",
+            "meaningVi": "ấm cúng",
+            "meaningEn": "cozy, comfortable",
+            "exampleSentence1": "Die Wohnung ist sehr gemütlich.",
+            "exampleTranslation1": "Căn hộ rất ấm cúng.",
+            "exampleSentence2": "Mach es dir gemütlich!",
+            "exampleTranslation2": "Hãy thoải mái!",
+            "imageUrl": "/images/vocab/a2-wohnen-haushalt/gemuetlich.png"
+        },
+        {
+            "word": "geräumig",
+            "wordType": "ADJEKTIV",
+            "meaningVi": "rộng rãi",
+            "meaningEn": "spacious",
+            "exampleSentence1": "Die Wohnung ist geräumig.",
+            "exampleTranslation1": "Căn hộ rộng rãi.",
+            "exampleSentence2": "Das Zimmer ist nicht geräumig.",
+            "exampleTranslation2": "Phòng không rộng.",
+            "imageUrl": "/images/vocab/a2-wohnen-haushalt/geraeumig.png"
+        },
+        {
+            "word": "möbliert",
+            "wordType": "ADJEKTIV",
+            "meaningVi": "có nội thất",
+            "meaningEn": "furnished",
+            "exampleSentence1": "Die Wohnung ist möbliert.",
+            "exampleTranslation1": "Căn hộ có nội thất.",
+            "exampleSentence2": "Ich suche eine möblierte Wohnung.",
+            "exampleTranslation2": "Tôi tìm căn hộ có nội thất.",
+            "imageUrl": "/images/vocab/a2-wohnen-haushalt/moebliert.png"
+        }
+    ]
+}

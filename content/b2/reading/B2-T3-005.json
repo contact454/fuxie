@@ -1,0 +1,222 @@
+{
+  "id": "B2-T3-005",
+  "level": "B2",
+  "teil": 3,
+  "teil_name": "Anzeigen zuordnen",
+  "topic": "Umwelt & Nachhaltigkeit",
+  "topic_id": "005",
+  "metadata": {
+    "word_count": 158,
+    "target_grammar": [
+      "Konjunktiv II",
+      "Passiv",
+      "Modalverben",
+      "Relativsätze"
+    ],
+    "target_vocabulary": [],
+    "generated_at": "2026-03-11T22:34:38.583025",
+    "version": 1
+  },
+  "anzeigen": [
+    {
+      "id": "A",
+      "text": "EMAS-Zertifizierung: Umweltmanagementsystem für Ihr Unternehmen. Beratung, Implementierung und Auditbegleitung. TÜV-zertifiziert. Erstgespräch kostenlos. www.emas-beratung.de"
+    },
+    {
+      "id": "B",
+      "text": "Umweltberatung für Privathaushalte: Energiesparen, Müllvermeidung, nachhaltiger Konsum. Individuelle Beratung (60 Min.) für 30 Euro. Verbraucherzentrale NRW. Termine online buchbar."
+    },
+    {
+      "id": "C",
+      "text": "Solaranlage für Ihr Dach: Beratung, Planung und Installation aus einer Hand. Aktuelle Förderung bis 25 % der Kosten. Unverbindliches Angebot in 48 Stunden. SolarProfi GmbH."
+    },
+    {
+      "id": "D",
+      "text": "Energieaudit nach DIN EN 16247: Pflicht für große Unternehmen, empfohlen für KMU. Aufdeckung von Einsparpotenzialen. Förderung durch BAFA möglich. GreenEnergy Consulting."
+    },
+    {
+      "id": "E",
+      "text": "Nachhaltigkeitsbericht erstellen: Workshop für CSR-Beauftragte. GRI-Standards verstehen und anwenden. 1 Tag in Köln, 490 Euro. Nächster Termin: 12. Juni."
+    },
+    {
+      "id": "F",
+      "text": "Bio-Bauernhof sucht WWOOFer: Mitarbeit gegen Kost und Logis. 4-8 Wochen Gartenbau, Tierpflege, Hofarbeit im Allgäu. Keine Erfahrung nötig. www.wwoof-allgaeu.de"
+    },
+    {
+      "id": "G",
+      "text": "Waldpädagogik-Fortbildung: Naturerlebnisse für Kinder gestalten. 3-Tages-Seminar für Erzieher und Lehrer. Im Nationalpark Harz. 280 Euro inkl. Verpflegung."
+    },
+    {
+      "id": "H",
+      "text": "Repair-Café im Stadtteilzentrum: Bringen Sie kaputte Geräte mit — unsere ehrenamtlichen Experten reparieren Elektrogeräte, Fahrräder und Textilien. Jeden 1. Samstag im Monat, 10-14 Uhr. Kostenlos."
+    }
+  ],
+  "situationen": [
+    {
+      "id": "S1",
+      "text": "Ein mittelständisches Unternehmen muss ein Energieaudit durchführen und sucht einen zertifizierten Berater.",
+      "answer": "D"
+    },
+    {
+      "id": "S2",
+      "text": "Eine Familie möchte eine Solaranlage installieren und staatliche Förderung nutzen.",
+      "answer": "C"
+    },
+    {
+      "id": "S3",
+      "text": "Eine Erzieherin möchte lernen, wie sie Kindern die Natur näherbringen kann.",
+      "answer": "G"
+    },
+    {
+      "id": "S4",
+      "text": "Ein Student möchte einige Wochen auf einem Biohof arbeiten und dabei Unterkunft und Essen erhalten.",
+      "answer": "F"
+    },
+    {
+      "id": "S5",
+      "text": "Jemand hat einen kaputten Toaster und möchte ihn reparieren lassen, ohne dafür zu bezahlen.",
+      "answer": "H"
+    }
+  ],
+  "null_matches": [
+    "A",
+    "B",
+    "E"
+  ],
+  "images": [
+    {
+      "id": "IMG1",
+      "type": "scene",
+      "prompt": "Cute cartoon illustration of a bulletin board with various professional advertisements related to Umwelt & Nachhaltigkeit. Fuxie cartoon style, flat illustration, warm pastel colors, no text.",
+      "filename": "B2-T3-005_scene.png",
+      "placement": "header",
+      "alt_text": "Anzeigen: Umwelt & Nachhaltigkeit",
+      "dimensions": "768x512"
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q1",
+      "teil": 3,
+      "type": "matching",
+      "stem": "Ein mittelständisches Unternehmen muss ein Energieaudit durchführen und sucht einen zertifizierten Berater.",
+      "answer": "D",
+      "points": 1,
+      "explanation": {
+        "de": "Anzeige D passt, weil sie das beschriebene Bedürfnis erfüllt.",
+        "key_evidence": "Anzeige D",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q2",
+      "teil": 3,
+      "type": "matching",
+      "stem": "Die implizite Annahme, dass eine Familie möchte eine Solaranlage installieren und staatliche Förderung nutzen, liegt dem Beitrag zugrunde:",
+      "answer": "C",
+      "points": 1,
+      "explanation": {
+        "de": "Anzeige C passt, weil sie das beschriebene Bedürfnis erfüllt.",
+        "key_evidence": "Anzeige C",
+        "key_vocabulary": [],
+        "reasoning": "[Inferential] "
+      }
+    },
+    {
+      "id": "Q3",
+      "teil": 3,
+      "type": "matching",
+      "stem": "Eine Erzieherin möchte lernen, wie sie Kindern die Natur näherbringen kann.",
+      "answer": "G",
+      "points": 1,
+      "explanation": {
+        "de": "Anzeige G passt, weil sie das beschriebene Bedürfnis erfüllt.",
+        "key_evidence": "Anzeige G",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q4",
+      "teil": 3,
+      "type": "matching",
+      "stem": "Aus der Argumentation lässt sich ableiten, dass Ein Student möchte einige Wochen auf einem Biohof arbeiten und dabei Unterkunft und Essen erhalten. Diese Position vertritt:",
+      "answer": "F",
+      "points": 1,
+      "explanation": {
+        "de": "Anzeige F passt, weil sie das beschriebene Bedürfnis erfüllt.",
+        "key_evidence": "Anzeige F",
+        "key_vocabulary": [],
+        "reasoning": "[Inferential] "
+      }
+    },
+    {
+      "id": "Q5",
+      "teil": 3,
+      "type": "matching",
+      "stem": "Die implizite Annahme, dass jemand hat einen kaputten Toaster und möchte ihn reparieren lassen, ohne dafür zu bezahlen, liegt dem Beitrag zugrunde:",
+      "answer": "H",
+      "points": 1,
+      "explanation": {
+        "de": "Anzeige H passt, weil sie das beschriebene Bedürfnis erfüllt.",
+        "key_evidence": "Anzeige H",
+        "key_vocabulary": [],
+        "reasoning": "[Inferential] "
+      }
+    }
+  ],
+  "scoring": {
+    "total_points": 5,
+    "pass_threshold": 3,
+    "grading": [
+      {
+        "range": [
+          5,
+          5
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          4,
+          4
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          3,
+          3
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          1,
+          2
+        ],
+        "label": "Noch üben!",
+        "emoji": "📝"
+      },
+      {
+        "range": [
+          0,
+          0
+        ],
+        "label": "Mehr Übung nötig",
+        "emoji": "💪"
+      }
+    ]
+  },
+  "qa": {
+    "vocab_in_b2_list": true,
+    "grammar_b2_appropriate": true,
+    "word_count_in_range": true,
+    "all_answers_verifiable": true,
+    "null_matches_correct": true,
+    "image_count": 1,
+    "passed": true
+  }
+}

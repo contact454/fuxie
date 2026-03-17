@@ -1,0 +1,73 @@
+{
+  "id": "W-A1-T1-013",
+  "cefrLevel": "A1",
+  "teil": 1,
+  "teilName": "Formular ausfuellen",
+  "textType": "Formular",
+  "register": "neutral",
+  "topic": "Supermarkt-Kundenkarte",
+  "instruction": "Ihre Bekannte, Sarah Müller, möchte eine Kundenkarte für den Supermarkt 'Bio-Markt' beantragen. Helfen Sie ihr und füllen Sie das Formular aus.",
+  "instructionVi": "Người quen của bạn, Sarah Müller, muốn đăng ký thẻ khách hàng cho siêu thị 'Bio-Markt'. Hãy giúp cô ấy điền vào mẫu đơn.",
+  "situation": "Sarah Müller wohnt in der Kantstraße 5, 10115 Berlin. Sie arbeitet als Lehrerin und möchte Punkte beim Einkaufen sammeln. Ihre E-Mail-Adresse ist sarah.m@gmx.de. Sie ist verheiratet.",
+  "contentPoints": [
+    "Familienname und Vorname",
+    "Straße und Hausnummer",
+    "Postleitzahl und Wohnort",
+    "Beruf",
+    "E-Mail-Adresse"
+  ],
+  "sourceText": "Sarah Müller, Kantstraße 5, 10115 Berlin. Beruf: Lehrerin. E-Mail: sarah.m@gmx.de. Ziel: Kundenkarte für Bio-Markt.",
+  "sourceTextType": "Notiz",
+  "formFields": [
+    {
+      "label": "Name, Vorname",
+      "type": "text"
+    },
+    {
+      "label": "Straße / Hausnummer",
+      "type": "text"
+    },
+    {
+      "label": "PLZ / Ort",
+      "type": "text"
+    },
+    {
+      "label": "Beruf",
+      "type": "text"
+    },
+    {
+      "label": "E-Mail",
+      "type": "email"
+    }
+  ],
+  "minWords": 15,
+  "maxWords": 30,
+  "timeMinutes": 5,
+  "rubric": {
+    "criteria": [
+      {
+        "id": "inhalt",
+        "name": "Inhalt",
+        "nameVi": "Nội dung",
+        "maxScore": 5,
+        "weight": 30
+      },
+      {
+        "id": "korrektheit",
+        "name": "Korrektheit",
+        "nameVi": "Chính xác ngữ pháp & chính tả",
+        "maxScore": 5,
+        "weight": 40
+      },
+      {
+        "id": "angemessenheit",
+        "name": "Angemessenheit",
+        "nameVi": "Tính phù hợp",
+        "maxScore": 5,
+        "weight": 30
+      }
+    ],
+    "maxScore": 15
+  },
+  "maxScore": 15
+}

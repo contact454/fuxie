@@ -1,0 +1,258 @@
+{
+  "id": "B1-T3-003",
+  "level": "B1",
+  "teil": 3,
+  "teil_name": "Anzeigen zuordnen",
+  "topic": "Umwelt & Natur",
+  "topic_id": "003",
+  "metadata": {
+    "word_count": 230,
+    "target_grammar": [
+      "Nebensatz mit wenn/weil",
+      "Modalverben",
+      "Passiv"
+    ],
+    "target_vocabulary": [
+      "Recycling",
+      "Naturschutz",
+      "Freiwillige",
+      "Pflanzen",
+      "Upcycling",
+      "Solar",
+      "Gemeinschaftsgarten",
+      "Workshop"
+    ],
+    "generated_at": "2026-03-10T23:30:00+07:00",
+    "version": 1
+  },
+  "anzeigen": [
+    {
+      "id": "A",
+      "text": "Naturschutzverein sucht Freiwillige! Jeden Sa, 9–13 Uhr: Vogelbeobachtung, Bäume pflanzen, Wege pflegen. Keine Vorkenntnisse nötig. Treffpunkt: Parkplatz Stadtwald. Info: naturschutz-verein@mail.de"
+    },
+    {
+      "id": "B",
+      "text": "Reparatur-Café — Kaputte Geräte reparieren statt wegwerfen! Jeden 2. Samstag, 14–18 Uhr. Ehrenamtliche Techniker helfen kostenlos. Bitte Gerät mitbringen. Nachbarschaftshaus Kreuzberg."
+    },
+    {
+      "id": "C",
+      "text": "Solar-Workshop für Balkone — Lernen Sie, wie Sie mit einem Balkonkraftwerk eigenen Strom erzeugen. Samstag, 3. Mai, 10–14 Uhr. 45 € inkl. Material. VHS Tempelhof. Anmeldung online."
+    },
+    {
+      "id": "D",
+      "text": "Gemeinschaftsgarten „Grüne Oase“ sucht neue Mitgärtner! Eigenes Beet (4 qm) für 30 €/Jahr. Wasser und Werkzeug vorhanden. Hinterhof Weserstraße 12. Infotreffen: 10. April, 17 Uhr."
+    },
+    {
+      "id": "E",
+      "text": "Müllsammelaktion am Rheinufer — Gemeinsam für ein sauberes Ufer! Sonntag, 20. April, 10–13 Uhr. Handschuhe und Säcke werden gestellt. Treffpunkt: Rheinterrassen Düsseldorf. Für alle Altersgruppen!"
+    },
+    {
+      "id": "F",
+      "text": "Upcycling-Kurs: Aus alten Möbeln Neues machen! 3 Abende (Mi, 18–21 Uhr). Farben, Werkzeug und Material inklusive. 85 €. Kreativwerkstatt Ehrenfeld. Max. 8 Teilnehmer."
+    },
+    {
+      "id": "G",
+      "text": "Fahrrad-Selbsthilfe-Werkstatt — Repariere dein Rad selbst! Werkzeug und Hilfe von Experten vorhanden. Öffnungszeiten: Di + Do, 16–20 Uhr. Spende erwünscht. Jugendzentrum Altona."
+    },
+    {
+      "id": "H",
+      "text": "Vortrag: Klimawandel und was wir tun können. Prof. Dr. Müller (Uni Hamburg). Donnerstag, 24. April, 19 Uhr. Eintritt frei. Aula der VHS Barmbek. Diskussion im Anschluss."
+    }
+  ],
+  "situationen": [
+    {
+      "id": "S1",
+      "text": "Peter möchte am Wochenende etwas für die Natur tun und draußen aktiv sein — ohne Kosten.",
+      "answer": "A"
+    },
+    {
+      "id": "S2",
+      "text": "Lisa hat eine kaputte Kaffeemaschine und sucht jemanden, der ihr hilft, sie kostenlos zu reparieren.",
+      "answer": "B"
+    },
+    {
+      "id": "S3",
+      "text": "Herr und Frau Yilmaz möchten auf ihrem Balkon Strom produzieren und suchen einen Kurs dafür.",
+      "answer": "C"
+    },
+    {
+      "id": "S4",
+      "text": "Jana möchte in der Stadt eigenes Gemüse anbauen, hat aber keinen Garten.",
+      "answer": "D"
+    },
+    {
+      "id": "S5",
+      "text": "Familie Berg sucht eine Aktion, bei der auch Kinder mitmachen können, um die Umwelt sauber zu halten.",
+      "answer": "E"
+    }
+  ],
+  "null_matches": [
+    "F",
+    "G",
+    "H"
+  ],
+  "images": [
+    {
+      "id": "IMG1",
+      "type": "scene",
+      "prompt": "Cute cartoon illustration of an outdoor community bulletin board with environmental ads — tree planting, repair cafe, solar panels, community garden. Fuxie cartoon style, flat illustration, warm pastel colors, no text.",
+      "filename": "B1-T3-003_scene.png",
+      "placement": "header",
+      "alt_text": "Umwelt-Anzeigen",
+      "dimensions": "768x512"
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q1",
+      "teil": 3,
+      "type": "matching",
+      "stem": "Peter möchte am Wochenende etwas für die Natur tun, draußen, kostenlos.",
+      "answer": "A",
+      "points": 1,
+      "explanation": {
+        "de": "Der Naturschutzverein sucht Freiwillige für Samstag — draussen, keine Kosten.",
+        "key_evidence": "Jeden Sa / Vogelbeobachtung, Bäume pflanzen / Keine Vorkenntnisse nötig",
+        "key_vocabulary": [
+          {
+            "word": "Freiwillige",
+            "type": "Nomen",
+            "meaning": "volunteers"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q2",
+      "teil": 3,
+      "type": "matching",
+      "stem": "Lisa hat eine kaputte Kaffeemaschine und sucht kostenlose Reparaturhilfe.",
+      "answer": "B",
+      "points": 1,
+      "explanation": {
+        "de": "Im Reparatur-Café helfen ehrenamtliche Techniker kostenlos bei kaputten Geräten.",
+        "key_evidence": "Kaputte Geräte reparieren / Ehrenamtliche Techniker helfen kostenlos",
+        "key_vocabulary": [
+          {
+            "word": "ehrenamtlich",
+            "type": "Adjektiv",
+            "meaning": "voluntary / unpaid"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q3",
+      "teil": 3,
+      "type": "matching",
+      "stem": "Die Position, dass Die Yilmaz' möchten auf ihrem Balkon eigenen Strom produzieren, findet sich bei:",
+      "answer": "C",
+      "points": 1,
+      "explanation": {
+        "de": "Der Solar-Workshop zeigt, wie man mit einem Balkonkraftwerk Strom erzeugt.",
+        "key_evidence": "Solar-Workshop für Balkone / Balkonkraftwerk",
+        "key_vocabulary": [
+          {
+            "word": "Balkonkraftwerk",
+            "type": "Nomen",
+            "meaning": "balcony power plant"
+          }
+        ],
+        "reasoning": "[Inferential] "
+      }
+    },
+    {
+      "id": "Q4",
+      "teil": 3,
+      "type": "matching",
+      "stem": "Jana möchte in der Stadt Gemüse anbauen, hat aber keinen eigenen Garten.",
+      "answer": "D",
+      "points": 1,
+      "explanation": {
+        "de": "Der Gemeinschaftsgarten bietet eigene Beete in der Stadt.",
+        "key_evidence": "Eigenes Beet (4 qm) / Hinterhof",
+        "key_vocabulary": [
+          {
+            "word": "Gemeinschaftsgarten",
+            "type": "Nomen",
+            "meaning": "community garden"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q5",
+      "teil": 3,
+      "type": "matching",
+      "stem": "Familie Berg sucht eine Familien-Aktion für saubere Umwelt.",
+      "answer": "E",
+      "points": 1,
+      "explanation": {
+        "de": "Die Müllsammelaktion ist für alle Altersgruppen und räumt das Rheinufer auf.",
+        "key_evidence": "Für alle Altersgruppen / Gemeinsam für ein sauberes Ufer",
+        "key_vocabulary": [
+          {
+            "word": "Müllsammelaktion",
+            "type": "Nomen",
+            "meaning": "litter collection event"
+          }
+        ]
+      }
+    }
+  ],
+  "scoring": {
+    "total_points": 5,
+    "pass_threshold": 3,
+    "grading": [
+      {
+        "range": [
+          5,
+          5
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          4,
+          4
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          3,
+          3
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          1,
+          2
+        ],
+        "label": "Noch üben!",
+        "emoji": "📝"
+      },
+      {
+        "range": [
+          0,
+          0
+        ],
+        "label": "Mehr Übung nötig",
+        "emoji": "💪"
+      }
+    ]
+  },
+  "qa": {
+    "vocab_in_b1_list": true,
+    "grammar_b1_appropriate": true,
+    "word_count_in_range": true,
+    "all_answers_verifiable": true,
+    "null_matches_correct": true,
+    "image_count": 1,
+    "passed": true
+  }
+}

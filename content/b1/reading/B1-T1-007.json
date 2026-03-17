@@ -1,0 +1,200 @@
+{
+  "id": "B1-T1-007",
+  "level": "B1",
+  "teil": 1,
+  "teil_name": "Blog-Eintrag lesen",
+  "topic": "Kultur & Gesellschaft",
+  "topic_id": "007",
+  "metadata": {
+    "word_count": 255,
+    "target_grammar": [
+      "Nebensatz mit als/weil/dass",
+      "Konjunktiv II",
+      "Perfekt"
+    ],
+    "target_vocabulary": [
+      "Theater",
+      "Aufführung",
+      "Bühne",
+      "Schauspieler",
+      "Vorstellung",
+      "Klassiker",
+      "beeindrucken",
+      "Kultur",
+      "Publikum",
+      "Applaus"
+    ],
+    "generated_at": "2026-03-10T22:52:00+07:00",
+    "version": 1
+  },
+  "blog": {
+    "title": "Mein erstes Mal im deutschen Theater",
+    "author": "YumiInDeutschland",
+    "date": "18. Januar 2026",
+    "text": "Letzte Woche war ich zum ersten Mal in einem deutschen Theater. Eine Kollegin hatte mir eine Karte für eine Aufführung von Goethes „Faust“ geschenkt. Ehrlich gesagt war ich zuerst nervös, weil ich dachte, dass ich den Text nicht verstehen würde. Goethe hat ja vor über 200 Jahren geschrieben!\n\nAber es war ganz anders, als ich erwartet hatte. Die Schauspieler waren fantastisch und haben die alten Texte sehr modern und lebendig gespielt. Außerdem gab es Untertitel auf einem kleinen Bildschirm, was mir sehr geholfen hat. Nach der Pause habe ich die Untertitel kaum noch gebraucht, weil ich mich an die Sprache gewöhnt hatte.\n\nWas mich am meisten beeindruckt hat, war die Atmosphäre. Das Theater war klein und gemütlich, und man konnte die Schauspieler direkt vor sich sehen. Am Ende hat das ganze Publikum aufgestanden und lange geklatscht. Dieser Moment war wirklich besonders.\n\nNach der Vorstellung habe ich mit meiner Kollegin noch ein Glas Wein getrunken, und wir haben über das Stück gesprochen. Sie hat mir erklärt, dass Theater in Deutschland eine lange Tradition hat und dass viele Städte ein eigenes Stadttheater haben.\n\nJetzt möchte ich öfter ins Theater gehen. Nächsten Monat gibt es eine moderne Komödie — darauf freue ich mich schon! Kultur verstehen heißt auch, das Land besser zu verstehen."
+  },
+  "images": [
+    {
+      "id": "IMG1",
+      "type": "scene",
+      "prompt": "Cute cartoon illustration of a woman watching a theater performance from the audience, actors on stage in dramatic poses under spotlight, intimate theater setting. Fuxie cartoon style, flat illustration, warm pastel colors, no text.",
+      "filename": "B1-T1-007_scene.png",
+      "placement": "header",
+      "alt_text": "Yumi im Theater",
+      "dimensions": "768x512"
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q1",
+      "teil": 1,
+      "type": "richtig_falsch",
+      "stem": "Aus dem Text lässt sich schließen, dass im Text wird erwähnt, dass yumi hat sich selbst die Theaterkarte gekauft.",
+      "answer": "falsch",
+      "points": 1,
+      "explanation": {
+        "de": "Eine Kollegin hat ihr die Karte geschenkt.",
+        "key_evidence": "Eine Kollegin hatte mir eine Karte geschenkt",
+        "key_vocabulary": [
+          {
+            "word": "Aufführung",
+            "type": "Nomen",
+            "meaning": "performance"
+          }
+        ],
+        "reasoning": "[Inferential] "
+      }
+    },
+    {
+      "id": "Q2",
+      "teil": 1,
+      "type": "richtig_falsch",
+      "stem": "Es gab Untertitel während der Aufführung.",
+      "answer": "richtig",
+      "points": 1,
+      "explanation": {
+        "de": "Es gab Untertitel auf einem kleinen Bildschirm.",
+        "key_evidence": "es gab Untertitel auf einem kleinen Bildschirm",
+        "key_vocabulary": [
+          {
+            "word": "Untertitel",
+            "type": "Nomen",
+            "meaning": "subtitles"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q3",
+      "teil": 1,
+      "type": "richtig_falsch",
+      "stem": "Die Aufführung war in einem großen, modernen Theater.",
+      "answer": "falsch",
+      "points": 1,
+      "explanation": {
+        "de": "Das Theater war klein und gemütlich.",
+        "key_evidence": "Das Theater war klein und gemütlich",
+        "key_vocabulary": [
+          {
+            "word": "gemütlich",
+            "type": "Adjektiv",
+            "meaning": "cozy"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q4",
+      "teil": 1,
+      "type": "richtig_falsch",
+      "stem": "Das Publikum hat am Ende lange geklatscht.",
+      "answer": "richtig",
+      "points": 1,
+      "explanation": {
+        "de": "Das ganze Publikum hat aufgestanden und lange geklatscht.",
+        "key_evidence": "hat das ganze Publikum aufgestanden und lange geklatscht",
+        "key_vocabulary": [
+          {
+            "word": "Applaus",
+            "type": "Nomen",
+            "meaning": "applause"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q5",
+      "teil": 1,
+      "type": "richtig_falsch",
+      "stem": "Yumi möchte nicht noch einmal ins Theater gehen.",
+      "answer": "falsch",
+      "points": 1,
+      "explanation": {
+        "de": "Sie möchte öfter ins Theater gehen und freut sich auf eine moderne Komödie.",
+        "key_evidence": "Jetzt möchte ich öfter ins Theater gehen",
+        "key_vocabulary": [
+          {
+            "word": "Komödie",
+            "type": "Nomen",
+            "meaning": "comedy"
+          }
+        ]
+      }
+    }
+  ],
+  "scoring": {
+    "total_points": 5,
+    "pass_threshold": 3,
+    "grading": [
+      {
+        "range": [
+          5,
+          5
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          4,
+          4
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          3,
+          3
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          1,
+          2
+        ],
+        "label": "Noch üben!",
+        "emoji": "📝"
+      },
+      {
+        "range": [
+          0,
+          0
+        ],
+        "label": "Mehr Übung nötig",
+        "emoji": "💪"
+      }
+    ]
+  },
+  "qa": {
+    "vocab_in_b1_list": true,
+    "grammar_b1_appropriate": true,
+    "word_count_in_range": true,
+    "all_answers_verifiable": true,
+    "richtig_falsch_balanced": true,
+    "image_count": 1,
+    "passed": true
+  }
+}

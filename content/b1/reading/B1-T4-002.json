@@ -1,0 +1,222 @@
+{
+  "id": "B1-T4-002",
+  "level": "B1",
+  "teil": 4,
+  "teil_name": "Leserbriefe lesen",
+  "topic": "Reisen & Tourismus",
+  "topic_id": "002",
+  "metadata": {
+    "word_count": 275,
+    "target_grammar": [
+      "Nebensatz mit weil/dass/obwohl",
+      "Konjunktiv II",
+      "Passiv"
+    ],
+    "target_vocabulary": [
+      "Flugreise",
+      "Klimaschutz",
+      "Steuer",
+      "Fernreise",
+      "Verzicht",
+      "Alternative",
+      "Urlaub",
+      "Verantwortung"
+    ],
+    "generated_at": "2026-03-10T23:38:00+07:00",
+    "version": 1
+  },
+  "debate": {
+    "topic": "Soll man Flugreisen teurer machen?",
+    "context": "Fliegen ist oft billiger als Zugfahren. Umweltschützer fordern höhere Steuern auf Flugtickets, damit weniger Menschen fliegen. Was meinen die Leser?",
+    "letters": [
+      {
+        "author": "Markus W., Frankfurt",
+        "text": "Ja, Fliegen muss teurer werden! Ein Flug nach Mallorca für 29 Euro ist absurd, wenn man an den CO2-Ausstoß denkt. Höhere Preise würden die Leute dazu bringen, Alternativen wie die Bahn zu nutzen. Das wäre ein wichtiger Schritt für den Klimaschutz.",
+        "position": "ja"
+      },
+      {
+        "author": "Sandra L., Dresden",
+        "text": "Ich bin dagegen. Nicht jeder kann sich teure Zugtickets leisten. Für viele Familien sind günstige Flüge die einzige Möglichkeit, in den Urlaub zu fahren. Eine Steuer auf Flugtickets würde vor allem ärmere Menschen treffen, während Reiche weiter fliegen können.",
+        "position": "nein"
+      },
+      {
+        "author": "Dr. Heinz B., Freiburg",
+        "text": "Absolut! Die wahren Kosten des Fliegens — Klimaschäden, Lärm, Luftverschmutzung — werden bisher nicht in den Ticketpreis eingerechnet. Wenn wir die Umweltkosten einbeziehen, wäre Fliegen automatisch teurer. Das ist nur fair.",
+        "position": "ja"
+      },
+      {
+        "author": "Elif T., Düsseldorf",
+        "text": "In meiner Familie leben viele Verwandte in der Türkei. Wir fliegen zweimal im Jahr dorthin, weil es mit dem Zug nicht machbar ist. Höhere Flugpreise würden bedeuten, dass wir unsere Familie seltener sehen können. Das finde ich ungerecht.",
+        "position": "nein"
+      },
+      {
+        "author": "Jonas M., Leipzig",
+        "text": "Die Idee ist richtig, aber man muss gleichzeitig die Bahn günstiger und besser machen. In Deutschland sind Züge oft teuer, überfüllt und unpünktlich. Erst wenn es gute Alternativen gibt, kann man das Fliegen teurer machen. Beides muss zusammen passieren.",
+        "position": "ja"
+      }
+    ]
+  },
+  "images": [
+    {
+      "id": "IMG1",
+      "type": "scene",
+      "prompt": "Cute cartoon illustration of a debate about flying vs. train travel, with an airplane and train side by side, people discussing with speech bubbles. Fuxie cartoon style, flat illustration, warm pastel colors, no text.",
+      "filename": "B1-T4-002_scene.png",
+      "placement": "header",
+      "alt_text": "Debatte: Flugreisen teurer machen?",
+      "dimensions": "768x512"
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q1",
+      "teil": 4,
+      "type": "ja_nein",
+      "stem": "Markus W. findet, dass Fliegen teurer werden sollte.",
+      "answer": "ja",
+      "points": 1,
+      "explanation": {
+        "de": "Markus sagt klar: Fliegen muss teurer werden.",
+        "key_evidence": "Ja, Fliegen muss teurer werden",
+        "key_vocabulary": [
+          {
+            "word": "CO2-Ausstoß",
+            "type": "Nomen",
+            "meaning": "CO2 emissions"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q2",
+      "teil": 4,
+      "type": "ja_nein",
+      "stem": "Sandra L. unterstützt höhere Steuern auf Flugtickets.",
+      "answer": "nein",
+      "points": 1,
+      "explanation": {
+        "de": "Sandra ist dagegen, weil es vor allem ärmere Menschen treffen würde.",
+        "key_evidence": "Ich bin dagegen / würde vor allem ärmere Menschen treffen",
+        "key_vocabulary": [
+          {
+            "word": "leisten",
+            "type": "Verb",
+            "meaning": "to afford"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q3",
+      "teil": 4,
+      "type": "ja_nein",
+      "stem": "Dr. Heinz B. meint, die Umweltkosten sollten im Ticketpreis enthalten sein.",
+      "answer": "ja",
+      "points": 1,
+      "explanation": {
+        "de": "Er findet es fair, die wahren Umweltkosten einzubeziehen.",
+        "key_evidence": "Absolut! / Wenn wir die Umweltkosten einbeziehen, wäre Fliegen automatisch teurer",
+        "key_vocabulary": [
+          {
+            "word": "einbeziehen",
+            "type": "Verb",
+            "meaning": "to include"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q4",
+      "teil": 4,
+      "type": "ja_nein",
+      "stem": "Elif T. ist für teurere Flugtickets.",
+      "answer": "nein",
+      "points": 1,
+      "explanation": {
+        "de": "Elif ist dagegen, weil sie ihre Familie in der Türkei seltener sehen könnte.",
+        "key_evidence": "Höhere Flugpreise würden bedeuten, dass wir unsere Familie seltener sehen / Das finde ich ungerecht",
+        "key_vocabulary": [
+          {
+            "word": "ungerecht",
+            "type": "Adjektiv",
+            "meaning": "unfair"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q5",
+      "teil": 4,
+      "type": "ja_nein",
+      "stem": "Jonas M. findet die Idee grundsätzlich richtig, hält aber bessere Bahn-Alternativen für notwendig.",
+      "answer": "ja",
+      "points": 1,
+      "explanation": {
+        "de": "Jonas stimmt zu, sagt aber, dass gleichzeitig die Bahn verbessert werden muss.",
+        "key_evidence": "Die Idee ist richtig, aber man muss gleichzeitig die Bahn günstiger und besser machen",
+        "key_vocabulary": [
+          {
+            "word": "gleichzeitig",
+            "type": "Adverb",
+            "meaning": "at the same time"
+          }
+        ]
+      }
+    }
+  ],
+  "scoring": {
+    "total_points": 5,
+    "pass_threshold": 3,
+    "grading": [
+      {
+        "range": [
+          5,
+          5
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          4,
+          4
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          3,
+          3
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          1,
+          2
+        ],
+        "label": "Noch üben!",
+        "emoji": "📝"
+      },
+      {
+        "range": [
+          0,
+          0
+        ],
+        "label": "Mehr Übung nötig",
+        "emoji": "💪"
+      }
+    ]
+  },
+  "qa": {
+    "vocab_in_b1_list": true,
+    "grammar_b1_appropriate": true,
+    "word_count_in_range": true,
+    "all_answers_verifiable": true,
+    "ja_nein_balanced": true,
+    "image_count": 1,
+    "passed": true
+  }
+}

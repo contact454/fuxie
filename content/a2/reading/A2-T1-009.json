@@ -1,0 +1,249 @@
+{
+  "id": "A2-T1-009",
+  "level": "A2",
+  "teil": 1,
+  "teil_name": "Zeitungsartikel lesen",
+  "topic": "Arbeit & Beruf",
+  "topic_id": "009",
+  "metadata": {
+    "word_count": 178,
+    "target_grammar": [
+      "Perfekt",
+      "Modalverben",
+      "Nebensatz mit weil/dass/wenn"
+    ],
+    "target_vocabulary": [
+      "Jobmesse",
+      "Unternehmen",
+      "Bewerbung",
+      "Lebenslauf",
+      "Rathaus",
+      "Beruf",
+      "Ausbildung",
+      "Stelle",
+      "Praktikum",
+      "Beratung"
+    ],
+    "generated_at": "2026-03-09T21:45:00+07:00",
+    "version": 1
+  },
+  "text": {
+    "title": "Große Jobmesse im Rathaus — über 50 Firmen dabei",
+    "subtitle": "Chance für Jobsuchende: Bewerbungsgespräche vor Ort",
+    "body": "Am kommenden Samstag findet im Rathaus Schöneberg eine große Jobmesse statt. Über 50 Unternehmen aus Berlin und Brandenburg nehmen teil. Die Messe ist von 10 bis 17 Uhr geöffnet. Der Eintritt ist frei.\n\nAuf der Messe kann man sich direkt bei den Firmen vorstellen. Viele Unternehmen suchen Mitarbeiter für verschiedene Berufe: Verkäufer, Bürokaufleute, Handwerker, Pfleger und IT-Fachleute. Es gibt auch Angebote für Praktika und Ausbildungsplätze.\n\nBesonders interessant: Die Arbeitsagentur bietet kostenlose Beratung an. Experten helfen beim Lebenslauf und geben Tipps für Bewerbungsgespräche. Man kann seinen Lebenslauf mitbringen und ihn sofort prüfen lassen.\n\nDie Organisatorin Frau Berger hat erklärt, dass die Messe besonders für Menschen gedacht ist, die einen neuen Beruf suchen oder eine Ausbildung beginnen möchten. „Letztes Jahr haben über 200 Menschen auf der Messe eine Stelle gefunden\", hat sie gesagt.\n\nWer teilnehmen möchte, soll sich online anmelden, aber man kann auch ohne Anmeldung kommen.",
+    "source": "Berliner Woche"
+  },
+  "images": [
+    {
+      "id": "IMG1",
+      "type": "scene",
+      "prompt": "Cute cartoon illustration of a busy job fair in a German town hall building. People in professional attire visiting company booths, exchanging business cards, having conversations. Banners, information stands, a friendly career counselor. Fuxie cartoon style, flat illustration, warm pastel colors, no text.",
+      "filename": "A2-T1-009_scene.png",
+      "placement": "header",
+      "alt_text": "Jobmesse im Rathaus Schöneberg",
+      "dimensions": "768x512"
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q1",
+      "teil": 1,
+      "type": "multiple_choice",
+      "stem": "Wann findet die Jobmesse statt?",
+      "options": {
+        "a": "Am Freitag.",
+        "b": "Am Samstag.",
+        "c": "Am Sonntag."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Im Text steht: 'Am kommenden Samstag findet im Rathaus Schöneberg eine große Jobmesse statt.'",
+        "key_evidence": "Am kommenden Samstag",
+        "key_vocabulary": [
+          {
+            "word": "Jobmesse",
+            "type": "Nomen",
+            "meaning": "job fair"
+          },
+          {
+            "word": "Rathaus",
+            "type": "Nomen",
+            "meaning": "town hall"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q2",
+      "teil": 1,
+      "type": "multiple_choice",
+      "stem": "Wie viele Unternehmen nehmen an der Messe teil?",
+      "options": {
+        "a": "Über 30.",
+        "b": "Über 50.",
+        "c": "Über 100."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Im Text steht: 'Über 50 Unternehmen aus Berlin und Brandenburg nehmen teil.'",
+        "key_evidence": "Über 50 Unternehmen",
+        "key_vocabulary": [
+          {
+            "word": "Unternehmen",
+            "type": "Nomen",
+            "meaning": "company"
+          },
+          {
+            "word": "teilnehmen",
+            "type": "Verb",
+            "meaning": "to participate"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q3",
+      "teil": 1,
+      "type": "multiple_choice",
+      "stem": "Was bietet die Arbeitsagentur auf der Messe an?",
+      "options": {
+        "a": "Kostenlose Deutschkurse.",
+        "b": "Kostenlose Beratung und Hilfe beim Lebenslauf.",
+        "c": "Kostenlose Computer-Schulungen."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Im Text steht: 'Die Arbeitsagentur bietet kostenlose Beratung an. Experten helfen beim Lebenslauf.'",
+        "key_evidence": "kostenlose Beratung an. Experten helfen beim Lebenslauf",
+        "key_vocabulary": [
+          {
+            "word": "Beratung",
+            "type": "Nomen",
+            "meaning": "consultation/advice"
+          },
+          {
+            "word": "Lebenslauf",
+            "type": "Nomen",
+            "meaning": "resume/CV"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q4",
+      "teil": 1,
+      "type": "multiple_choice",
+      "stem": "Wie viele Menschen haben letztes Jahr eine Stelle gefunden?",
+      "options": {
+        "a": "Über 100.",
+        "b": "Über 200.",
+        "c": "Über 500."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Im Text steht: 'Letztes Jahr haben über 200 Menschen auf der Messe eine Stelle gefunden.'",
+        "key_evidence": "über 200 Menschen auf der Messe eine Stelle gefunden",
+        "key_vocabulary": [
+          {
+            "word": "Stelle",
+            "type": "Nomen",
+            "meaning": "position/job"
+          },
+          {
+            "word": "finden",
+            "type": "Verb",
+            "meaning": "to find"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q5",
+      "teil": 1,
+      "type": "multiple_choice",
+      "stem": "Muss man sich vorher anmelden?",
+      "options": {
+        "a": "Ja, nur mit Anmeldung.",
+        "b": "Man soll sich anmelden, aber es geht auch ohne.",
+        "c": "Nein, man braucht keine Anmeldung."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Im Text steht: 'Wer teilnehmen möchte, soll sich online anmelden, aber man kann auch ohne Anmeldung kommen.'",
+        "key_evidence": "soll sich online anmelden, aber man kann auch ohne Anmeldung kommen",
+        "key_vocabulary": [
+          {
+            "word": "Anmeldung",
+            "type": "Nomen",
+            "meaning": "registration"
+          },
+          {
+            "word": "anmelden",
+            "type": "Verb",
+            "meaning": "to register"
+          }
+        ]
+      }
+    }
+  ],
+  "scoring": {
+    "total_points": 5,
+    "pass_threshold": 3,
+    "grading": [
+      {
+        "range": [
+          5,
+          5
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          4,
+          4
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          3,
+          3
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          1,
+          2
+        ],
+        "label": "Noch üben!",
+        "emoji": "📝"
+      },
+      {
+        "range": [
+          0,
+          0
+        ],
+        "label": "Mehr Übung nötig",
+        "emoji": "💪"
+      }
+    ]
+  },
+  "qa": {
+    "vocab_in_a2_list": true,
+    "grammar_a2_only": true,
+    "word_count_in_range": true,
+    "all_answers_verifiable": true,
+    "mc_distractors_plausible": true,
+    "image_count": 1,
+    "passed": true
+  }
+}

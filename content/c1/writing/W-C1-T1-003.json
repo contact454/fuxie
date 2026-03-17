@@ -1,0 +1,97 @@
+{
+  "id": "W-C1-T1-003",
+  "cefrLevel": "C1",
+  "teil": 1,
+  "teilName": "Argumentativer Text",
+  "textType": "Argumentation",
+  "register": "sachlich",
+  "topic": "Umwelt & Konsum",
+  "instruction": "Schreiben Sie einen argumentativen Text zum Thema 'Umwelt & Konsum' (mind. 250 Woerter). Beschreiben Sie die Grafik.",
+  "instructionVi": "Viet bai lap luan >=250 tu: Umwelt & Konsum.",
+  "situation": "Schreiben Sie zu dem Thema 'Umwelt & Konsum'. Die Grafik zeigt: CO2-Ausstoss pro Kopf (Liniendiagramm).",
+  "contentPoints": [
+    "Grafik beschreiben",
+    "Ursachen analysieren",
+    "Situation im Heimatland vergleichen",
+    "Konsequenzen diskutieren",
+    "Eigene Meinung und Loesungsvorschlag"
+  ],
+  "minWords": 250,
+  "maxWords": 400,
+  "timeMinutes": 50,
+  "rubric": {
+    "criteria": [
+      {
+        "id": "inhalt",
+        "name": "Inhalt",
+        "nameVi": "Noi dung",
+        "maxScore": 5,
+        "weight": 20
+      },
+      {
+        "id": "angemessenheit",
+        "name": "Kommunikative Angemessenheit",
+        "nameVi": "Phu hop giao tiep",
+        "maxScore": 5,
+        "weight": 20
+      },
+      {
+        "id": "korrektheit",
+        "name": "Korrektheit",
+        "nameVi": "Chinh xac ngu phap",
+        "maxScore": 5,
+        "weight": 20
+      },
+      {
+        "id": "spektrum",
+        "name": "Wortschatz & Strukturen",
+        "nameVi": "Da dang tu vung",
+        "maxScore": 5,
+        "weight": 20
+      },
+      {
+        "id": "kohaerenz",
+        "name": "Kohaerenz & Kohaesion",
+        "nameVi": "Mach lac & lien ket",
+        "maxScore": 5,
+        "weight": 20
+      }
+    ],
+    "maxScore": 25
+  },
+  "maxScore": 25,
+  "grafikDesc": "Balkendiagramm: Jährliches Pro-Kopf-Aufkommen von Verpackungsabfällen in der Europäischen Union im Zeitraum von 2016 bis 2022 (Angaben in Kilogramm). Quelle: Statistisches Bundesamt (Destatis) / Eurostat.",
+  "sourceText": "Thema: Nachhaltiger Konsum – Eine Herausforderung für die moderne Gesellschaft. In der aktuellen Debatte über die ökologischen Auswirkungen unseres Lebensstils stehen sich zwei konträre Positionen gegenüber. Dr. Elena von Weber, Professorin für Umweltökonomie, konstatiert: 'Die Reduktion des ökologischen Fußabdrucks erfordert eine radikale Abkehr vom Dogma des grenzenlosen Wachstums. Nur durch strikte gesetzliche Regulierungen und die konsequente Besteuerung von Ressourcenverbrauch kann ein nachhaltiger Konsum dauerhaft etabliert werden.' Im Gegensatz dazu betont Prof. Dr. h.c. Markus Lindner, Experte für Kreislaufwirtschaft: 'Verbote führen lediglich zu Verzichtsdiskussionen, welche die gesellschaftliche Akzeptanz für den Umweltschutz gefährden. Der Schlüssel liegt vielmehr in technologischen Innovationen und einer effizienten Kreislaufwirtschaft, die den Konsum vollständig vom Ressourcenverbrauch entkoppelt.' Schreiben Sie eine Erörterung zum Thema 'Umwelt und Konsum' und bearbeiten Sie dabei folgende Aspekte: 1. Beschreiben Sie die vorliegende Grafik. 2. Analysieren Sie die Ursachen für das kontinuierlich steigende Abfallaufkommen. 3. Vergleichen Sie die Situation in der EU mit der Situation in Ihrem Heimatland. 4. Diskutieren Sie mögliche ökologische und gesellschaftliche Konsequenzen der aktuellen Entwicklung. 5. Formulieren Sie Ihre eigene Meinung und unterbreiten Sie einen konkreten Lösungsvorschlag für eine nachhaltigere Zukunft.",
+  "sourceTextType": "Argumentativer Essay-Stimulus",
+  "stimulusSender": "Redaktion der Fachzeitschrift 'Globaler Fokus'",
+  "grafikData": [
+    {
+      "Jahr": "2016",
+      "Wert": "167 kg"
+    },
+    {
+      "Jahr": "2017",
+      "Wert": "171 kg"
+    },
+    {
+      "Jahr": "2018",
+      "Wert": "174 kg"
+    },
+    {
+      "Jahr": "2019",
+      "Wert": "178 kg"
+    },
+    {
+      "Jahr": "2020",
+      "Wert": "183 kg"
+    },
+    {
+      "Jahr": "2021",
+      "Wert": "189 kg"
+    },
+    {
+      "Jahr": "2022",
+      "Wert": "195 kg"
+    }
+  ]
+}

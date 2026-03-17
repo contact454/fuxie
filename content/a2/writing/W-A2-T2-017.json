@@ -1,0 +1,49 @@
+{
+  "id": "W-A2-T2-017",
+  "cefrLevel": "A2",
+  "teil": 2,
+  "teilName": "Persoenliche Mitteilung",
+  "textType": "Mitteilung",
+  "register": "halbformell",
+  "topic": "Neues Handy",
+  "instruction": "Sie haben sich ein neues Handy gekauft. Schreiben Sie eine Mitteilung an Ihren Kollegen, Herrn Wagner.",
+  "instructionVi": "Bạn vừa mua một chiếc điện thoại mới. Hãy viết một tin nhắn cho đồng nghiệp của bạn, ông Wagner.",
+  "situation": "Ihr altes Handy war kaputt, deshalb haben Sie gestern ein neues Modell gekauft. Sie freuen sich über das Gerät, verstehen aber eine bestimmte Funktion noch nicht ganz. Schreiben Sie Herrn Wagner eine kurze Nachricht darüber.",
+  "contentPoints": [
+    "Sagen Sie, warum Sie ein neues Handy gekauft haben.",
+    "Beschreiben Sie, was Ihnen an dem neuen Handy besonders gefällt (z.B. Kamera, Design).",
+    "Fragen Sie Herrn Wagner, ob er Ihnen bei einer App oder Einstellung helfen kann."
+  ],
+  "sourceText": "Mein altes Handy ist leider kaputtgegangen. Gestern war ich im Elektronikgeschäft und habe mir ein modernes Smartphone ausgesucht. Es hat ein sehr großes Display und eine tolle Farbe.",
+  "sourceTextType": "Kontextbeschreibung",
+  "minWords": 40,
+  "maxWords": 70,
+  "timeMinutes": 15,
+  "rubric": {
+    "criteria": [
+      {
+        "id": "inhalt",
+        "name": "Inhalt",
+        "nameVi": "Nội dung",
+        "maxScore": 5,
+        "weight": 30
+      },
+      {
+        "id": "korrektheit",
+        "name": "Korrektheit",
+        "nameVi": "Chính xác ngữ pháp & chính tả",
+        "maxScore": 5,
+        "weight": 35
+      },
+      {
+        "id": "angemessenheit",
+        "name": "Kommunikative Angemessenheit",
+        "nameVi": "Phù hợp giao tiếp",
+        "maxScore": 5,
+        "weight": 35
+      }
+    ],
+    "maxScore": 15
+  },
+  "maxScore": 15
+}

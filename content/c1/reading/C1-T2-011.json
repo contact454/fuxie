@@ -1,0 +1,211 @@
+{
+  "id": "C1-T2-011",
+  "level": "C1",
+  "teil": 2,
+  "teil_name": "Sachtext verstehen",
+  "topic": "Umweltpolitik & Klima",
+  "topic_id": "011",
+  "metadata": {
+    "word_count": 242,
+    "target_grammar": [
+      "Nominalisierung",
+      "Partizipialkonstruktionen",
+      "Konjunktiv I/II",
+      "Passiversatzformen"
+    ],
+    "target_vocabulary": [],
+    "generated_at": "2026-03-11T23:00:46.154030",
+    "version": 1
+  },
+  "article": {
+    "title": "Biodiversitätsverlust: Die stille Krise unserer Zeit",
+    "source": "Wissenschaftliches Fachmagazin",
+    "text": "Während der Klimawandel die öffentliche Debatte dominiert, vollzieht sich eine mindestens ebenso bedrohliche Krise weitgehend unbemerkt: der dramatische Verlust der biologischen Vielfalt. Der Weltbiodiversitätsrat schätzt, dass weltweit rund eine Million Tier- und Pflanzenarten vom Aussterben bedroht sind, viele davon innerhalb der kommenden Jahrzehnte.\n\nDie Geschwindigkeit des Artensterbens liegt nach Berechnungen von Wissenschaftlern bei dem 100- bis 1.000-Fachen der natürlichen Aussterberate. In Deutschland ist die Biomasse der Fluginsekten zwischen 1989 und 2017 um 75 Prozent zurückgegangen, was als Insektensterben weltweit Schlagzeilen machte und eine breite Debatte über die Intensivierung der Landwirtschaft auslöste.\n\nDie Ursachen des Biodiversitätsverlusts sind vielfältig und wechselseitig verstärkend. Die Umwandlung natürlicher Lebensräume in landwirtschaftliche Nutzflächen gilt als Haupttreiber. Weltweit wurden bereits 75 Prozent der Landoberfläche und 66 Prozent der Meeresfläche signifikant verändert. Hinzu kommen Umweltverschmutzung, invasive Arten, Übernutzung natürlicher Ressourcen und der Klimawandel selbst.\n\nDie wirtschaftlichen Folgen sind beträchtlich. Das Weltwirtschaftsforum beziffert die ökonomische Wertschöpfung, die direkt von intakten Ökosystemen abhängt, auf 44 Billionen Dollar pro Jahr, das entspricht mehr als der Hälfte des globalen Bruttoinlandsprodukts. Bestäubung durch Insekten, natürliche Wasserreinigung, Bodenbildung und Kohlenstoffspeicherung sind Ökosystemdienstleistungen, für die es keinen technischen Ersatz gibt.\n\nAuf internationaler Ebene wurde 2022 in Montreal das Kunming-Montreal-Abkommen beschlossen, das die Unterschutzstellung von 30 Prozent der Land- und Meeresfläche bis 2030 vorsieht. Kritiker bemängeln allerdings, dass das Abkommen keine verbindlichen Sanktionsmechanismen enthält und die Erfolgsbilanz früherer Biodiversitätsabkommen ernüchternd ist.\n\nUm den Biodiversitätsverlust wirksam zu bekämpfen, fordern Wissenschaftler einen systemischen Ansatz, der Landwirtschafts-, Handels- und Klimapolitik integriert."
+  },
+  "images": [
+    {
+      "id": "IMG1",
+      "type": "scene",
+      "prompt": "Cute cartoon illustration related to Umweltpolitik & Klima. Fuxie cartoon style, flat illustration, warm pastel colors, no text.",
+      "filename": "C1-T2-011_scene.png",
+      "placement": "header",
+      "alt_text": "Biodiversitätsverlust: Die stille Krise unserer Ze",
+      "dimensions": "768x512"
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q1",
+      "teil": 2,
+      "type": "multiple_choice",
+      "stem": "Was lässt sich aus der Argumentation über viele Arten sind weltweit vom Aussterben bedroht ableiten?",
+      "options": {
+        "a": "100.000.",
+        "b": "Rund eine Million.",
+        "c": "10 Millionen."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Der Weltbiodiversitätsrat schätzt, dass weltweit rund eine Million Tier- und Pflanzenarten vom Aussterben bedroht sind, viele davon innerhalb der k...",
+        "reasoning": "[Inferential] Die richtige Antwort (b) ergibt sich aus dem Textkontext."
+      }
+    },
+    {
+      "id": "Q2",
+      "teil": 2,
+      "type": "multiple_choice",
+      "stem": "Um wie viel Prozent ging die Biomasse der Fluginsekten in Deutschland zurück?",
+      "options": {
+        "a": "50 Prozent.",
+        "b": "75 Prozent.",
+        "c": "90 Prozent."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "In Deutschland ist die Biomasse der Fluginsekten zwischen 1989 und 2017 um 75 Prozent zurückgegangen, was als Insektensterben weltweit Schlagzeilen...",
+        "reasoning": "Die richtige Antwort (b) ergibt sich aus dem Textkontext."
+      }
+    },
+    {
+      "id": "Q3",
+      "teil": 2,
+      "type": "multiple_choice",
+      "stem": "Was impliziert die Darstellung von gilt als Haupttreiber des Biodiversitätsverlusts für die Gesamtthese?",
+      "options": {
+        "a": "Tourismus.",
+        "b": "Umwandlung natürlicher Lebensräume in landwirtschaftliche Flächen.",
+        "c": "Urbanisierung."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Die Umwandlung natürlicher Lebensräume in landwirtschaftliche Nutzflächen gilt als Haupttreiber.",
+        "reasoning": "[Inferential] Die richtige Antwort (b) ergibt sich aus dem Textkontext."
+      }
+    },
+    {
+      "id": "Q4",
+      "teil": 2,
+      "type": "multiple_choice",
+      "stem": "Welche Gegenposition zu hoch beziffert das Weltwirtschaftsforum die ökosystemabhängige Wertschöpfung wird im Text nicht berücksichtigt?",
+      "options": {
+        "a": "10 Billionen Dollar.",
+        "b": "44 Billionen Dollar.",
+        "c": "100 Billionen Dollar."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Das Weltwirtschaftsforum beziffert die ökonomische Wertschöpfung, die direkt von intakten Ökosystemen abhängt, auf 44 Billionen Dollar pro Jahr, da...",
+        "reasoning": "[Critical] Die richtige Antwort (b) ergibt sich aus dem Textkontext."
+      }
+    },
+    {
+      "id": "Q5",
+      "teil": 2,
+      "type": "multiple_choice",
+      "stem": "Wie überzeugend ist die Beweisführung bezüglich sieht das Kunming-Montreal-Abkommen vor?",
+      "options": {
+        "a": "Verbot aller Pestizide.",
+        "b": "Unterschutzstellung von 30 Prozent der Land- und Meeresfläche bis 2030.",
+        "c": "Stopp des internationalen Handels."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Auf internationaler Ebene wurde 2022 in Montreal das Kunming-Montreal-Abkommen beschlossen, das die Unterschutzstellung von 30 Prozent der Land- un...",
+        "reasoning": "[Critical] Die richtige Antwort (b) ergibt sich aus dem Textkontext."
+      }
+    },
+    {
+      "id": "Q6",
+      "teil": 2,
+      "type": "multiple_choice",
+      "stem": "Welche implizite Annahme liegt der Darstellung von hoch ist die Aussterberate im Vergleich zur natürlichen Rate zugrunde?",
+      "options": {
+        "a": "10-fach.",
+        "b": "100- bis 1.000-fach.",
+        "c": "10.000-fach."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Die Geschwindigkeit des Artensterbens liegt nach Berechnungen von Wissenschaftlern bei dem 100- bis 1.000-Fachen der natürlichen Aussterberate.",
+        "reasoning": "[Inferential] Die richtige Antwort (b) ergibt sich aus dem Textkontext."
+      }
+    },
+    {
+      "id": "Q7",
+      "teil": 2,
+      "type": "multiple_choice",
+      "stem": "Was fordern Wissenschaftler zur Bekämpfung?",
+      "options": {
+        "a": "Nur mehr Naturschutzgebiete.",
+        "b": "Einen systemischen Ansatz, der verschiedene Politikfelder integriert.",
+        "c": "Rückkehr zur vorindustriellen Landwirtschaft."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Um den Biodiversitätsverlust wirksam zu bekämpfen, fordern Wissenschaftler einen systemischen Ansatz, der Landwirtschafts-, Handels- und Klimapolit...",
+        "reasoning": "Die richtige Antwort (b) ergibt sich aus dem Textkontext."
+      }
+    }
+  ],
+  "scoring": {
+    "total_points": 7,
+    "pass_threshold": 5,
+    "grading": [
+      {
+        "range": [
+          6,
+          7
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          4,
+          5
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          3,
+          3
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          1,
+          2
+        ],
+        "label": "Noch üben!",
+        "emoji": "📝"
+      },
+      {
+        "range": [
+          0,
+          0
+        ],
+        "label": "Mehr Übung nötig",
+        "emoji": "💪"
+      }
+    ]
+  },
+  "qa": {
+    "vocab_in_c1_list": true,
+    "grammar_c1_appropriate": true,
+    "word_count_in_range": true,
+    "all_answers_verifiable": true,
+    "image_count": 1,
+    "passed": true
+  }
+}

@@ -1,0 +1,172 @@
+{
+  "id": "B2-T4-009",
+  "level": "B2",
+  "teil": 4,
+  "teil_name": "Kommentare lesen",
+  "topic": "Migration & Integration",
+  "topic_id": "009",
+  "metadata": {
+    "word_count": 146,
+    "target_grammar": [
+      "Konjunktiv II",
+      "Passiv",
+      "Nominalisierung",
+      "Relativsatze"
+    ],
+    "target_vocabulary": [],
+    "generated_at": "2026-03-11T22:37:08.661642",
+    "version": 1
+  },
+  "forum": {
+    "question": "Braucht Deutschland eine Obergrenze fur Zuwanderung?",
+    "comments": [
+      {
+        "name": "Politikerin Maria Conradi",
+        "position": "ja",
+        "text": "Wir brauchen eine geordnete und begrenzte Zuwanderung, damit Integration gelingen kann. Wenn mehr Menschen kommen, als Schulen, Wohnungen und Sprachkurse aufnehmen konnen, schadet das allen, auch den Zugewanderten selbst. Eine Obergrenze ware ein pragmatischer Ansatz."
+      },
+      {
+        "name": "Fluchtlingshelfer Ahmed Hassan",
+        "position": "nein",
+        "text": "Das Recht auf Asyl ist ein Menschenrecht und darf nicht durch eine willkurliche Zahl begrenzt werden. Wer vor Krieg und Verfolgung flieht, hat Anspruch auf Schutz, egal ob das die Nummer 199.000 oder 201.000 ist. Menschenrechte sind nicht verhandelbar."
+      },
+      {
+        "name": "Burgermeisterin Petra Lang",
+        "position": "ja",
+        "text": "Meine Kommune platzt aus allen Nahten. Wir haben keine freien Unterkunfte, die Schulen sind uberfullt, und die Verwaltung ist am Limit. Ohne eine Steuerung der Zuwanderung konnen wir unserer Verantwortung gegenuber den bereits hier lebenden Menschen nicht mehr gerecht werden."
+      },
+      {
+        "name": "Wirtschaftsprofessor Dr. Klaus Engel",
+        "position": "nein",
+        "text": "Deutschland braucht angesichts des Fachkraftemangels und des demografischen Wandels dringend Zuwanderung. Eine Obergrenze wurde das vollig falsche Signal senden und qualifizierte Arbeitskrafte abschrecken. Wir sollten Zuwanderung als Chance begreifen, nicht als Bedrohung."
+      }
+    ]
+  },
+  "images": [
+    {
+      "id": "IMG1",
+      "type": "scene",
+      "prompt": "Cute cartoon illustration of people having a discussion forum about Migration & Integration, showing speech bubbles with different opinions. Fuxie cartoon style, flat illustration, warm pastel colors, no text.",
+      "filename": "B2-T4-009_scene.png",
+      "placement": "header",
+      "alt_text": "Braucht Deutschland eine Obergrenze fur Zuwanderun",
+      "dimensions": "768x512"
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q1",
+      "teil": 4,
+      "type": "ja_nein",
+      "stem": "Maria Conradi sieht eine Obergrenze als Voraussetzung fur gelingende Integration.",
+      "answer": "ja",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Maria Conradi sieht eine Obergrenze als Voraussetzung fur gelingende Integration",
+        "reasoning": "Die richtige Antwort ergibt sich aus dem Text."
+      }
+    },
+    {
+      "id": "Q2",
+      "teil": 4,
+      "type": "ja_nein",
+      "stem": "Der Autor ist der Meinung, dass ahmed Hassan findet eine Obergrenze mit dem Asylrecht vereinbar.",
+      "answer": "nein",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Ahmed Hassan findet eine Obergrenze mit dem Asylrecht vereinbar.",
+        "reasoning": "[Inferential] Die richtige Antwort ergibt sich aus dem Text."
+      }
+    },
+    {
+      "id": "Q3",
+      "teil": 4,
+      "type": "ja_nein",
+      "stem": "Der Text legt nahe, dass petra Lang berichtet von ausreichenden Kapazitaten in ihrer Kommune.",
+      "answer": "nein",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Petra Lang berichtet von ausreichenden Kapazitaten in ihrer Kommune.",
+        "reasoning": "[Inferential] Die richtige Antwort ergibt sich aus dem Text."
+      }
+    },
+    {
+      "id": "Q4",
+      "teil": 4,
+      "type": "ja_nein",
+      "stem": "Der Autor ist der Meinung, dass prof. Engel halt Zuwanderung angesichts des Fachkraftemangels fur notwendig.",
+      "answer": "ja",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Prof. Engel halt Zuwanderung angesichts des Fachkraftemangels fur notwendig.",
+        "reasoning": "[Inferential] Die richtige Antwort ergibt sich aus dem Text."
+      }
+    },
+    {
+      "id": "Q5",
+      "teil": 4,
+      "type": "ja_nein",
+      "stem": "Alle Kommentatoren sind sich einig, dass eine Obergrenze sinnvoll ware.",
+      "answer": "nein",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Alle Kommentatoren sind sich einig, dass eine Obergrenze sinnvoll ware.",
+        "reasoning": "Die richtige Antwort ergibt sich aus dem Text."
+      }
+    }
+  ],
+  "scoring": {
+    "total_points": 5,
+    "pass_threshold": 3,
+    "grading": [
+      {
+        "range": [
+          5,
+          5
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          4,
+          4
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          3,
+          3
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          1,
+          2
+        ],
+        "label": "Noch uben!",
+        "emoji": "📝"
+      },
+      {
+        "range": [
+          0,
+          0
+        ],
+        "label": "Mehr Ubung notig",
+        "emoji": "💪"
+      }
+    ]
+  },
+  "qa": {
+    "vocab_in_b2_list": true,
+    "grammar_b2_appropriate": true,
+    "word_count_in_range": true,
+    "all_answers_verifiable": true,
+    "image_count": 1,
+    "passed": true
+  }
+}

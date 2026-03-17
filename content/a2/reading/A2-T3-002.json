@@ -1,0 +1,239 @@
+{
+  "id": "A2-T3-002",
+  "level": "A2",
+  "teil": 3,
+  "teil_name": "Kleinanzeigen zuordnen",
+  "topic": "Meine Familie",
+  "topic_id": "002",
+  "metadata": {
+    "word_count": 175,
+    "target_grammar": [
+      "Modalverben",
+      "Nebensatz mit dass"
+    ],
+    "target_vocabulary": [
+      "Babysitter",
+      "Tagesmutter",
+      "Spielgruppe",
+      "Kindergeburtstag",
+      "Elterntreff",
+      "Au-pair",
+      "Krabbelgruppe",
+      "Nachmittag",
+      "Betreuung",
+      "Erzieherin"
+    ],
+    "generated_at": "2026-03-09T22:36:00+07:00",
+    "version": 1
+  },
+  "anzeigen": [
+    {
+      "id": "A",
+      "text": "Erfahrene Tagesmutter hat ab April einen Platz frei. Kinder 1–3 Jahre. Mo–Fr 8:00–15:00. Großer Garten vorhanden. Kontakt: Frau Schmitt, Tel: 0173-2233445."
+    },
+    {
+      "id": "B",
+      "text": "Babysitter gesucht! Für zwei Kinder (4 und 7 Jahre), samstags 18–22 Uhr. 13 €/Stunde. Nähe U-Bahn Leopoldplatz. Bitte per SMS: 0157-8899001."
+    },
+    {
+      "id": "C",
+      "text": "Krabbelgruppe „Kleine Sterne“ für Babys 6–18 Monate. Jeden Dienstag 10: 00–11: 30 im Gemeindehaus. Kostenlos. Einfach vorbeikommen! Leitung: Frau Weber."
+    },
+    {
+      "id": "D",
+      "text": "Kindergeburtstag im Kindercafé „Kunterbunt“! Tolle Pakete ab 89 €: Kuchen, Getränke, Spiele, Dekoration. Für Kinder 4–10 Jahre. Buchung: www.cafe-kunterbunt.de"
+    },
+    {
+      "id": "E",
+      "text": "Elterntreff für Alleinerziehende. Jeden 1. und 3. Mittwoch, 19:00–21:00, im Familienzentrum Nord. Austausch, Beratung, Kaffee. Kinderbetreuung vorhanden. Kontakt: info@famz-nord.de"
+    },
+    {
+      "id": "F",
+      "text": "Au-pair aus Frankreich sucht Gastfamilie in Berlin! Léa, 20 Jahre, spricht Deutsch (B1). Kann ab September für 12 Monate kommen. Erfahrung mit Kindern. E-Mail: lea.paris@mail.com"
+    }
+  ],
+  "images": [
+    {
+      "id": "IMG1",
+      "type": "scene",
+      "prompt": "Cute cartoon illustration of a community notice board with six colorful family-themed classified ads — babysitter, daycare, play group, birthday party, parent meetup, au pair. Fuxie cartoon style, flat illustration, warm pastel colors, no readable text.",
+      "filename": "A2-T3-002_scene.png",
+      "placement": "header",
+      "alt_text": "Kleinanzeigen zum Thema Familie",
+      "dimensions": "768x512"
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q1",
+      "teil": 3,
+      "type": "matching",
+      "situation": "Frau Meier hat ein Baby (10 Monate) und möchte andere Mütter mit Babys treffen.",
+      "answer": "C",
+      "points": 1,
+      "explanation": {
+        "de": "Anzeige C ist für die Krabbelgruppe für Babys 6–18 Monate.",
+        "key_evidence": "Krabbelgruppe für Babys 6–18 Monate. Jeden Dienstag",
+        "key_vocabulary": [
+          {
+            "word": "Krabbelgruppe",
+            "type": "Nomen",
+            "meaning": "crawling group (baby play group)"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q2",
+      "teil": 3,
+      "type": "matching",
+      "situation": "Herr und Frau Klein möchten am Samstagabend ausgehen. Jemand soll auf ihre Kinder aufpassen.",
+      "answer": "B",
+      "points": 1,
+      "explanation": {
+        "de": "Anzeige B sucht einen Babysitter für samstags 18–22 Uhr.",
+        "key_evidence": "Babysitter gesucht! samstags 18–22 Uhr",
+        "key_vocabulary": [
+          {
+            "word": "Babysitter",
+            "type": "Nomen",
+            "meaning": "babysitter"
+          },
+          {
+            "word": "aufpassen",
+            "type": "Verb",
+            "meaning": "to look after"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q3",
+      "teil": 3,
+      "type": "matching",
+      "situation": "Anna ist alleinerziehend und möchte andere Eltern in der gleichen Situation kennenlernen.",
+      "answer": "E",
+      "points": 1,
+      "explanation": {
+        "de": "Anzeige E ist der Elterntreff für Alleinerziehende.",
+        "key_evidence": "Elterntreff für Alleinerziehende",
+        "key_vocabulary": [
+          {
+            "word": "alleinerziehend",
+            "type": "Adjektiv",
+            "meaning": "single parent"
+          },
+          {
+            "word": "Austausch",
+            "type": "Nomen",
+            "meaning": "exchange / sharing"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q4",
+      "teil": 3,
+      "type": "matching",
+      "situation": "Lisa sucht eine Betreuung für ihre kleine Tochter (2 Jahre), weil sie wieder arbeiten möchte.",
+      "answer": "A",
+      "points": 1,
+      "explanation": {
+        "de": "Anzeige A ist eine Tagesmutter für Kinder 1–3 Jahre, Mo–Fr 8:00–15:00.",
+        "key_evidence": "Tagesmutter hat ab April einen Platz frei. Kinder 1–3 Jahre. Mo–Fr 8:00–15:00",
+        "key_vocabulary": [
+          {
+            "word": "Tagesmutter",
+            "type": "Nomen",
+            "meaning": "childminder / day nanny"
+          },
+          {
+            "word": "Betreuung",
+            "type": "Nomen",
+            "meaning": "care / supervision"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q5",
+      "teil": 3,
+      "type": "matching",
+      "situation": "Familie Müller sucht eine junge Person aus dem Ausland, die ein Jahr bei ihnen wohnt und bei den Kindern hilft.",
+      "answer": "F",
+      "points": 1,
+      "explanation": {
+        "de": "Anzeige F ist ein Au-pair aus Frankreich, das eine Gastfamilie sucht.",
+        "key_evidence": "Au-pair aus Frankreich sucht Gastfamilie. Kann ab September für 12 Monate kommen",
+        "key_vocabulary": [
+          {
+            "word": "Au-pair",
+            "type": "Nomen",
+            "meaning": "au pair"
+          },
+          {
+            "word": "Gastfamilie",
+            "type": "Nomen",
+            "meaning": "host family"
+          }
+        ]
+      }
+    }
+  ],
+  "scoring": {
+    "total_points": 5,
+    "pass_threshold": 3,
+    "grading": [
+      {
+        "range": [
+          5,
+          5
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          4,
+          4
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          3,
+          3
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          1,
+          2
+        ],
+        "label": "Noch üben!",
+        "emoji": "📝"
+      },
+      {
+        "range": [
+          0,
+          0
+        ],
+        "label": "Mehr Übung nötig",
+        "emoji": "💪"
+      }
+    ]
+  },
+  "qa": {
+    "vocab_in_a2_list": true,
+    "grammar_a2_only": true,
+    "word_count_in_range": true,
+    "all_answers_verifiable": true,
+    "matching_no_duplicate_answers": true,
+    "six_ads_present": true,
+    "image_count": 1,
+    "passed": true
+  }
+}

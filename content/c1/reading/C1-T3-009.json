@@ -1,0 +1,145 @@
+{
+  "id": "C1-T3-009",
+  "level": "C1",
+  "teil": 3,
+  "teil_name": "Lückentext (Sätze)",
+  "topic": "Kunst & Ästhetik",
+  "topic_id": "009",
+  "metadata": {
+    "word_count": 200,
+    "target_grammar": [
+      "Nominalisierung",
+      "Partizipialkonstruktionen",
+      "Konjunktiv I/II",
+      "Passiversatzformen"
+    ],
+    "target_vocabulary": [],
+    "generated_at": "2026-03-11T23:15:03.315013",
+    "version": 1
+  },
+  "sentence_cloze": {
+    "title": "Kulturelle Aneignung versus kultureller Austausch",
+    "text": "Die Debatte um kulturelle Aneignung hat in den vergangenen Jahren an Intensität gewonnen. {1} Die zentrale Frage lautet: Wo endet der bereichernde kulturelle Austausch, und wo beginnt die respektlose Übernahme kultureller Elemente?\n\nDer Begriff cultural appropriation stammt aus der postkolonialen Theorie. {2} Er beschreibt die Übernahme kultureller Praktiken, Symbole oder Ausdrucksformen durch Angehörige einer dominanten Kultur, ohne den Ursprungskontext angemessen zu würdigen.\n\nKritiker der kulturellen Aneignung verweisen auf historische Machtasymmetrien. {3} Wenn eine ehemalige Kolonialmacht kulturelle Elemente kolonialisierter Völker kommerzialisiert, perpetuiert dies bestehende Ungleichheitsverhältnisse.\n\nBefürworter des kulturellen Austauschs argumentieren, dass Kulturen sich schon immer gegenseitig beeinflusst haben. {4} Jazz, Yoga und Sushi sind Beispiele für kulturelle Praktiken, die längst globale Verbreitung gefunden haben.\n\nDie Musik bietet besonders anschauliche Beispiele. {5} Die Geschichte der Rockmusik ist ohne die Aneignung afroamerikanischer Blues-Traditionen durch weiße Musiker nicht denkbar.\n\nIm Modebereich entzündet sich die Debatte regelmäßig. {6} Wenn Luxusmarken indigene Muster verwenden, ohne die Ursprungsgemeinschaften zu beteiligen, sehen Kritiker darin einen Fall ökonomischer Ausbeutung.\n\nWissenschaftler plädieren für eine differenzierte Betrachtung. {7} Entscheidend sei nicht die bloße Übernahme, sondern der Kontext: Wer eignet sich was an, zu welchem Zweck, und wie wird die Herkunft gewürdigt?\n\nLetztlich braucht es einen reflektierten Umgang mit kultureller Vielfalt. {8}",
+    "sentences": [
+      {
+        "id": "A",
+        "text": "Pauschale Verbote oder Freigaben werden der Komplexität des Themas nicht gerecht."
+      },
+      {
+        "id": "B",
+        "text": "Im Zentrum stehen Fragen von Respekt, Macht und Zugehörigkeit."
+      },
+      {
+        "id": "C",
+        "text": "Die Grenze zwischen Inspiration und Diebstahl ist dabei oft fließend und kontextabhängig."
+      },
+      {
+        "id": "D",
+        "text": "Die australische Flaggendebatte zeigt, wie emotional das Thema sein kann."
+      },
+      {
+        "id": "E",
+        "text": "Die Frage der Profitbeteiligung und der Anerkennung der Ursprungskultur steht dabei im Mittelpunkt."
+      },
+      {
+        "id": "F",
+        "text": "Anerkennung, Respekt und wo möglich die Beteiligung der Herkunftskulturen sollten die Grundprinzipien jeder interkulturellen Begegnung sein."
+      },
+      {
+        "id": "G",
+        "text": "Kulinarische Fusion-Küche wird selten als kulturelle Aneignung kritisiert."
+      },
+      {
+        "id": "H",
+        "text": "Die vollständige Abgrenzung kultureller Sphären sei weder möglich noch wünschenswert."
+      },
+      {
+        "id": "I",
+        "text": "Die Profitverteilung spiegelt häufig kolonialen Strukturen wider, in denen kulturelle Ressourcen ohne Gegenleistung extrahiert werden."
+      },
+      {
+        "id": "J",
+        "text": "Er wurde in den 1980er Jahren geprägt und fand zunächst in der akademischen Diskussion Verwendung."
+      }
+    ],
+    "answers": {
+      "1": "B",
+      "2": "J",
+      "3": "I",
+      "4": "H",
+      "5": "C",
+      "6": "E",
+      "7": "A",
+      "8": "F"
+    },
+    "distractors": [
+      "D",
+      "G"
+    ]
+  },
+  "images": [
+    {
+      "id": "IMG1",
+      "type": "scene",
+      "prompt": "Cute cartoon illustration related to Kunst & Ästhetik. Fuxie cartoon style, flat illustration, warm pastel colors, no text.",
+      "filename": "C1-T3-009_scene.png",
+      "placement": "header",
+      "alt_text": "Kulturelle Aneignung versus kultureller Austausch",
+      "dimensions": "768x512"
+    }
+  ],
+  "scoring": {
+    "total_points": 8,
+    "pass_threshold": 5,
+    "grading": [
+      {
+        "range": [
+          7,
+          8
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          5,
+          6
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          4,
+          4
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          1,
+          3
+        ],
+        "label": "Noch üben!",
+        "emoji": "📝"
+      },
+      {
+        "range": [
+          0,
+          0
+        ],
+        "label": "Mehr Übung nötig",
+        "emoji": "💪"
+      }
+    ]
+  },
+  "qa": {
+    "vocab_in_c1_list": true,
+    "grammar_c1_appropriate": true,
+    "word_count_in_range": true,
+    "all_gaps_match": true,
+    "image_count": 1,
+    "passed": true
+  }
+}

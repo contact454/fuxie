@@ -1,0 +1,239 @@
+{
+  "id": "A1-T1-007",
+  "level": "A1",
+  "teil": 1,
+  "teil_name": "Kurze Texte lesen",
+  "topic": "Unterwegs",
+  "topic_id": "007",
+  "metadata": {
+    "word_count_text_a": 40,
+    "word_count_text_b": 46,
+    "target_grammar": [
+      "Präsens",
+      "Akkusativ",
+      "Modalverb müssen"
+    ],
+    "target_vocabulary": [
+      "Zug",
+      "Bahnhof",
+      "Gleis",
+      "Fahrkarte",
+      "Abfahrt",
+      "Ankunft",
+      "umsteigen",
+      "Verspätung",
+      "Bus",
+      "Haltestelle"
+    ],
+    "generated_at": "2026-03-09T02:15:00+07:00",
+    "version": 1
+  },
+  "texts": [
+    {
+      "id": "TextA",
+      "type": "sms",
+      "sender": "Sophie",
+      "receiver": "Jan",
+      "content": "Hallo Jan! Ich bin am Bahnhof. Mein Zug nach München fährt um 11:30 Uhr von Gleis 5. Ich habe schon eine Fahrkarte. Die Fahrt dauert drei Stunden. Ich muss in Frankfurt umsteigen. Kann ich dich morgen in München treffen?"
+    },
+    {
+      "id": "TextB",
+      "type": "sms",
+      "sender": "Jan",
+      "receiver": "Sophie",
+      "content": "Hallo Sophie! Super, ich freue mich! Ich hole dich am Bahnhof ab. Dein Zug kommt dann um 14:30 Uhr an, oder? Ich warte am Ausgang. Nimm bitte den Bus Linie 8 zum Hotel, falls ich zu spät komme. Die Haltestelle ist direkt vor dem Bahnhof."
+    }
+  ],
+  "images": [
+    {
+      "id": "IMG1",
+      "type": "scene",
+      "prompt": "Cute cartoon illustration of a modern German train station platform with a red DB train, a young woman with a suitcase looking at the departure board. Fuxie cartoon style, flat illustration, warm pastel colors, no text.",
+      "filename": "A1-T1-007_scene.png",
+      "placement": "header",
+      "alt_text": "Frau am Bahnhof mit Koffer",
+      "dimensions": "768x512"
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q1",
+      "teil": 1,
+      "linked_text": "TextA",
+      "type": "richtig_falsch",
+      "statement": "Sophies Zug fährt von Gleis 3.",
+      "answer": "falsch",
+      "points": 1,
+      "explanation": {
+        "de": "Im Text steht: 'Mein Zug nach München fährt um 11:30 Uhr von Gleis 5.' Der Zug fährt von Gleis 5, nicht Gleis 3.",
+        "key_evidence": "von Gleis 5",
+        "key_vocabulary": [
+          {
+            "word": "Gleis",
+            "type": "Nomen",
+            "meaning": "platform/track"
+          },
+          {
+            "word": "fahren",
+            "type": "Verb",
+            "meaning": "to go/drive"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q2",
+      "teil": 1,
+      "linked_text": "TextA",
+      "type": "richtig_falsch",
+      "statement": "Sophie muss in Frankfurt umsteigen.",
+      "answer": "richtig",
+      "points": 1,
+      "explanation": {
+        "de": "Im Text steht: 'Ich muss in Frankfurt umsteigen.'",
+        "key_evidence": "Ich muss in Frankfurt umsteigen",
+        "key_vocabulary": [
+          {
+            "word": "umsteigen",
+            "type": "Verb",
+            "meaning": "to change (trains)"
+          },
+          {
+            "word": "Frankfurt",
+            "type": "Nomen",
+            "meaning": "Frankfurt"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q3",
+      "teil": 1,
+      "linked_text": "TextA",
+      "type": "richtig_falsch",
+      "statement": "Die Fahrt dauert zwei Stunden.",
+      "answer": "falsch",
+      "points": 1,
+      "explanation": {
+        "de": "Im Text steht: 'Die Fahrt dauert drei Stunden.' Die Fahrt dauert drei Stunden, nicht zwei.",
+        "key_evidence": "Die Fahrt dauert drei Stunden",
+        "key_vocabulary": [
+          {
+            "word": "Fahrt",
+            "type": "Nomen",
+            "meaning": "trip/journey"
+          },
+          {
+            "word": "Stunde",
+            "type": "Nomen",
+            "meaning": "hour"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q4",
+      "teil": 1,
+      "linked_text": "TextB",
+      "type": "richtig_falsch",
+      "statement": "Jan holt Sophie am Bahnhof ab.",
+      "answer": "richtig",
+      "points": 1,
+      "explanation": {
+        "de": "Im Text steht: 'Ich hole dich am Bahnhof ab.'",
+        "key_evidence": "Ich hole dich am Bahnhof ab",
+        "key_vocabulary": [
+          {
+            "word": "abholen",
+            "type": "Verb",
+            "meaning": "to pick up"
+          },
+          {
+            "word": "Bahnhof",
+            "type": "Nomen",
+            "meaning": "train station"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q5",
+      "teil": 1,
+      "linked_text": "TextB",
+      "type": "richtig_falsch",
+      "statement": "Die Bushaltestelle ist weit vom Bahnhof.",
+      "answer": "falsch",
+      "points": 1,
+      "explanation": {
+        "de": "Im Text steht: 'Die Haltestelle ist direkt vor dem Bahnhof.' Die Haltestelle ist direkt vor dem Bahnhof, nicht weit weg.",
+        "key_evidence": "direkt vor dem Bahnhof",
+        "key_vocabulary": [
+          {
+            "word": "Haltestelle",
+            "type": "Nomen",
+            "meaning": "bus stop"
+          },
+          {
+            "word": "direkt",
+            "type": "Adverb",
+            "meaning": "directly"
+          }
+        ]
+      }
+    }
+  ],
+  "scoring": {
+    "total_points": 5,
+    "pass_threshold": 3,
+    "grading": [
+      {
+        "range": [
+          5,
+          5
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          4,
+          4
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          3,
+          3
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          1,
+          2
+        ],
+        "label": "Noch üben!",
+        "emoji": "📝"
+      },
+      {
+        "range": [
+          0,
+          0
+        ],
+        "label": "Mehr Übung nötig",
+        "emoji": "💪"
+      }
+    ]
+  },
+  "qa": {
+    "vocab_in_a1_list": true,
+    "grammar_a1_only": true,
+    "word_count_in_range": true,
+    "all_answers_verifiable": true,
+    "image_count": 1,
+    "passed": false
+  }
+}

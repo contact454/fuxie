@@ -1,0 +1,200 @@
+{
+  "id": "B1-T1-006",
+  "level": "B1",
+  "teil": 1,
+  "teil_name": "Blog-Eintrag lesen",
+  "topic": "Wohnen & Zusammenleben",
+  "topic_id": "006",
+  "metadata": {
+    "word_count": 262,
+    "target_grammar": [
+      "Nebensatz mit obwohl/weil/dass",
+      "Konjunktiv II",
+      "Perfekt"
+    ],
+    "target_vocabulary": [
+      "WG",
+      "Mitbewohner",
+      "Putzplan",
+      "Kompromiss",
+      "Streit",
+      "einziehen",
+      "Mietvertrag",
+      "gemeinsam",
+      "Küche",
+      "Rücksicht"
+    ],
+    "generated_at": "2026-03-10T22:52:00+07:00",
+    "version": 1
+  },
+  "blog": {
+    "title": "Mein Leben in einer WG",
+    "author": "AnnaWG",
+    "date": "5. Dezember 2025",
+    "text": "Vor sechs Monaten bin ich in eine WG gezogen. Vorher habe ich allein in einer kleinen Wohnung gewohnt, aber die Miete wurde zu teuer. In der WG teile ich mir jetzt eine große Wohnung mit zwei anderen Leuten: Lisa studiert Medizin, und Kerem arbeitet als Programmierer.\n\nAm Anfang mussten wir ein paar Regeln aufstellen. Wir haben einen Putzplan gemacht, weil sonst niemand die Küche sauber gemacht hätte. Außerdem haben wir besprochen, wann man abends laut Musik hören darf und wann nicht. Das war zuerst etwas unangenehm, aber diese Gespräche waren wichtig.\n\nDas Beste am WG-Leben ist, dass man nicht allein ist. Wenn ich abends nach Hause komme, sitzt meistens jemand in der Küche und wir kochen zusammen oder reden einfach. An Wochenenden machen wir manchmal Filmabende oder laden Freunde ein.\n\nNatürlich gibt es auch Probleme. Kerem lässt manchmal sein schmutziges Geschirr in der Spüle stehen, und Lisa duscht morgens sehr lange, obwohl ich auch ins Bad muss. Einmal hatten wir sogar einen richtigen Streit über die Heizkosten. Aber wir haben gelernt, dass Kompromisse wichtig sind.\n\nInsgesamt bin ich froh, dass ich den Schritt gewagt habe. Allein wohnen ist bequemer, aber in einer WG lernt man viel über sich selbst und über das Zusammenleben. Ich würde es jedem empfehlen, der offen für Neues ist."
+  },
+  "images": [
+    {
+      "id": "IMG1",
+      "type": "scene",
+      "prompt": "Cute cartoon illustration of three young adults in a cozy shared apartment kitchen, cooking together and chatting, colorful dishes and plants around. Fuxie cartoon style, flat illustration, warm pastel colors, no text.",
+      "filename": "B1-T1-006_scene.png",
+      "placement": "header",
+      "alt_text": "WG-Leben in der Küche",
+      "dimensions": "768x512"
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q1",
+      "teil": 1,
+      "type": "richtig_falsch",
+      "stem": "Aus dem Text lässt sich schließen, dass anna ist in eine WG gezogen, weil sie neue Leute kennenlernen wollte.",
+      "answer": "falsch",
+      "points": 1,
+      "explanation": {
+        "de": "Sie ist in die WG gezogen, weil die Miete ihrer alten Wohnung zu teuer wurde.",
+        "key_evidence": "die Miete wurde zu teuer",
+        "key_vocabulary": [
+          {
+            "word": "Miete",
+            "type": "Nomen",
+            "meaning": "rent"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q2",
+      "teil": 1,
+      "type": "richtig_falsch",
+      "stem": "Die WG hat einen Putzplan erstellt.",
+      "answer": "richtig",
+      "points": 1,
+      "explanation": {
+        "de": "Sie haben einen Putzplan gemacht, damit die Küche sauber bleibt.",
+        "key_evidence": "Wir haben einen Putzplan gemacht",
+        "key_vocabulary": [
+          {
+            "word": "Putzplan",
+            "type": "Nomen",
+            "meaning": "cleaning schedule"
+          }
+        ],
+        "reasoning": "[Inferential] "
+      }
+    },
+    {
+      "id": "Q3",
+      "teil": 1,
+      "type": "richtig_falsch",
+      "stem": "In der WG gibt es nie Probleme zwischen den Mitbewohnern.",
+      "answer": "falsch",
+      "points": 1,
+      "explanation": {
+        "de": "Es gibt Probleme: Kerem lässt Geschirr stehen, Lisa duscht zu lange, und es gab Streit über Heizkosten.",
+        "key_evidence": "Natürlich gibt es auch Probleme",
+        "key_vocabulary": [
+          {
+            "word": "Streit",
+            "type": "Nomen",
+            "meaning": "argument / dispute"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q4",
+      "teil": 1,
+      "type": "richtig_falsch",
+      "stem": "Die Mitbewohner kochen manchmal zusammen und machen Filmabende.",
+      "answer": "richtig",
+      "points": 1,
+      "explanation": {
+        "de": "Sie kochen zusammen und machen am Wochenende manchmal Filmabende.",
+        "key_evidence": "wir kochen zusammen oder reden einfach. An Wochenenden machen wir manchmal Filmabende",
+        "key_vocabulary": [
+          {
+            "word": "Filmabend",
+            "type": "Nomen",
+            "meaning": "movie night"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q5",
+      "teil": 1,
+      "type": "richtig_falsch",
+      "stem": "Anna bereut ihre Entscheidung, in die WG gezogen zu sein.",
+      "answer": "falsch",
+      "points": 1,
+      "explanation": {
+        "de": "Anna ist froh und würde es jedem empfehlen.",
+        "key_evidence": "Insgesamt bin ich froh, dass ich den Schritt gewagt habe",
+        "key_vocabulary": [
+          {
+            "word": "wagen",
+            "type": "Verb",
+            "meaning": "to dare / venture"
+          }
+        ]
+      }
+    }
+  ],
+  "scoring": {
+    "total_points": 5,
+    "pass_threshold": 3,
+    "grading": [
+      {
+        "range": [
+          5,
+          5
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          4,
+          4
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          3,
+          3
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          1,
+          2
+        ],
+        "label": "Noch üben!",
+        "emoji": "📝"
+      },
+      {
+        "range": [
+          0,
+          0
+        ],
+        "label": "Mehr Übung nötig",
+        "emoji": "💪"
+      }
+    ]
+  },
+  "qa": {
+    "vocab_in_b1_list": true,
+    "grammar_b1_appropriate": true,
+    "word_count_in_range": true,
+    "all_answers_verifiable": true,
+    "richtig_falsch_balanced": true,
+    "image_count": 1,
+    "passed": true
+  }
+}

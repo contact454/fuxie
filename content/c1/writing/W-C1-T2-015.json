@@ -1,0 +1,64 @@
+{
+  "id": "W-C1-T2-015",
+  "cefrLevel": "C1",
+  "teil": 2,
+  "teilName": "Textumwandlung",
+  "textType": "Formeller Brief",
+  "register": "formell",
+  "topic": "Arbeitnehmerrechte",
+  "instruction": "Sie haben einen Vortrag zum Thema 'Rechte und Pflichten im Arbeitsverhältnis' gehört. Schreiben Sie nun einen formellen Brief an die Personalabteilung Ihres Unternehmens, in dem Sie Ihre aktuelle Arbeitssituation thematisieren. Nutzen Sie die Informationen aus dem Vortrag, um Ihre Ansprüche geltend zu machen.",
+  "instructionVi": "Bạn đã nghe một bài thuyết trình về chủ đề 'Quyền và nghĩa vụ trong quan hệ lao động'. Hãy viết một lá thư trang trọng gửi cho phòng nhân sự của công ty bạn để thảo luận về tình hình công việc hiện tại. Sử dụng thông tin từ bài thuyết trình để khẳng định quyền lợi của mình.",
+  "situation": "Sie arbeiten seit zwei Jahren in einer Marketing-Agentur. In den letzten sechs Monaten haben Sie monatlich über 30 Überstunden geleistet, ohne einen Freizeitausgleich oder eine Vergütung zu erhalten. Zudem wurde Ihr Antrag auf zwei Wochen Sommerurlaub ohne Angabe von Gründen abgelehnt, obwohl keine betrieblichen Notfälle vorliegen.",
+  "contentPoints": [
+    "Bezugnahme auf die rechtlichen Grundlagen des Arbeitszeitgesetzes (aus dem Vortrag).",
+    "Darlegung der eigenen Situation bezüglich der geleisteten Mehrarbeit und fehlendem Ausgleich.",
+    "Argumentation gegen die unbegründete Ablehnung des Urlaubsantrags unter Verweis auf das Bundesurlaubsgesetz.",
+    "Aufforderung zur Korrektur der Arbeitszeitdokumentation und Genehmigung des Urlaubs bis zu einer bestimmten Frist."
+  ],
+  "sourceText": "Guten Tag zusammen. Heute sprechen wir über die gesetzlichen Rahmenbedingungen des Arbeitszeitgesetzes in Deutschland. Ein wesentlicher Punkt ist, dass die werktägliche Arbeitszeit acht Stunden grundsätzlich nicht überschreiten darf. Eine Verlängerung auf bis zu zehn Stunden ist zwar möglich, aber nur, wenn innerhalb von sechs Monaten ein Ausgleich erfolgt, sodass der Durchschnitt wieder bei acht Stunden liegt. Viele Arbeitnehmer wissen zudem nicht, dass Überstunden nur dann verpflichtend sind, wenn dies im Arbeitsvertrag oder Tarifvertrag explizit geregelt ist. Ohne solche Klauseln darf der Arbeitgeber nicht eigenmächtig Mehrarbeit anordnen. Ein weiterer Aspekt ist der Urlaubsanspruch. Laut Bundesurlaubsgesetz hat jeder Arbeitnehmer Anspruch auf bezahlten Erholungsurlaub. Der Arbeitgeber muss die Urlaubswünsche berücksichtigen, es sei denn, dringende betriebliche Belange oder Urlaubswünsche anderer Arbeitnehmer, die unter sozialen Gesichtspunkten Vorrang verdienen, stehen dem entgegen. Eine pauschale Ablehnung ohne sachliche Begründung ist rechtlich nicht haltbar. Arbeitnehmer sollten bei Verstößen schriftlich ihre Ansprüche geltend machen, um ihre Rechte zu wahren.",
+  "sourceTextType": "Muendlicher Vortrag",
+  "minWords": 200,
+  "maxWords": 300,
+  "timeMinutes": 40,
+  "rubric": {
+    "criteria": [
+      {
+        "id": "inhalt",
+        "name": "Inhalt",
+        "nameVi": "Nội dung",
+        "maxScore": 5,
+        "weight": 20
+      },
+      {
+        "id": "angemessenheit",
+        "name": "Kommunikative Angemessenheit",
+        "nameVi": "Phù hợp giao tiếp",
+        "maxScore": 5,
+        "weight": 20
+      },
+      {
+        "id": "korrektheit",
+        "name": "Korrektheit",
+        "nameVi": "Chính xác ngữ pháp & chính tả",
+        "maxScore": 5,
+        "weight": 20
+      },
+      {
+        "id": "spektrum",
+        "name": "Wortschatz & Strukturen",
+        "nameVi": "Đa dạng từ vựng & cấu trúc",
+        "maxScore": 5,
+        "weight": 20
+      },
+      {
+        "id": "kohaerenz",
+        "name": "Kohaerenz & Kohaesion",
+        "nameVi": "Mạch lạc & liên kết",
+        "maxScore": 5,
+        "weight": 20
+      }
+    ],
+    "maxScore": 25
+  },
+  "maxScore": 25
+}

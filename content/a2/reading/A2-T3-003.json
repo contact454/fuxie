@@ -1,0 +1,244 @@
+{
+  "id": "A2-T3-003",
+  "level": "A2",
+  "teil": 3,
+  "teil_name": "Kleinanzeigen zuordnen",
+  "topic": "Beim Arzt",
+  "topic_id": "003",
+  "metadata": {
+    "word_count": 178,
+    "target_grammar": [
+      "Modalverben",
+      "Nebensatz mit weil"
+    ],
+    "target_vocabulary": [
+      "Zahnarzt",
+      "Augenarzt",
+      "Physiotherapie",
+      "Yoga-Kurs",
+      "Apotheke",
+      "Impfaktion",
+      "Sprechstunde",
+      "Termin",
+      "Krankenkasse",
+      "Vorsorge"
+    ],
+    "generated_at": "2026-03-09T22:36:00+07:00",
+    "version": 1
+  },
+  "anzeigen": [
+    {
+      "id": "A",
+      "text": "Zahnarztpraxis Dr. Petersen. Neue Patienten willkommen! Sprechstunden: Mo–Fr 8:00–17:00. Samstag 9:00–13:00. Auch Kinderbehandlung. Alle Kassen. Marienplatz 7."
+    },
+    {
+      "id": "B",
+      "text": "Physiotherapie & Massage „Fit & Gesund“. Rückenprobleme? Wir helfen! Termine auch abends bis 20 Uhr. Hausbesuche möglich. Tel: 0221-4455667."
+    },
+    {
+      "id": "C",
+      "text": "Kostenlose Grippeschutzimpfung! Am 15. Oktober, 10:00–16:00 im Bürgerhaus. Für alle ab 60 Jahren und chronisch Kranke. Bitte Versichertenkarte mitbringen."
+    },
+    {
+      "id": "D",
+      "text": "Yoga für Anfänger — gut für Körper und Geist! Jeden Donnerstag 18:30–19:30, Turnhalle Goethe-Schule. 8 € pro Stunde. Keine Vorkenntnisse nötig. Matte bitte mitbringen."
+    },
+    {
+      "id": "E",
+      "text": "Augenarzt Dr. Sommer. Sehtest, Brillenberatung, Kontaktlinsen. Termine online: www.augen-sommer.de. Wartezeit aktuell ca. 2 Wochen. Kinder ab 3 Jahren."
+    },
+    {
+      "id": "F",
+      "text": "Neue Apotheke am Bahnhof! Montag bis Samstag 7:00–21:00. Medikamentenlieferung nach Hause (ab 20 € gratis). Beratung auf Deutsch, Türkisch und Arabisch."
+    }
+  ],
+  "images": [
+    {
+      "id": "IMG1",
+      "type": "scene",
+      "prompt": "Cute cartoon illustration of a community notice board with six colorful health-themed classified ads — dentist, physiotherapy, flu shot, yoga class, eye doctor, pharmacy. Fuxie cartoon style, flat illustration, warm pastel colors, no readable text.",
+      "filename": "A2-T3-003_scene.png",
+      "placement": "header",
+      "alt_text": "Kleinanzeigen zum Thema Gesundheit",
+      "dimensions": "768x512"
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q1",
+      "teil": 3,
+      "type": "matching",
+      "situation": "Herr Kramer, 65 Jahre, möchte sich gegen Grippe impfen lassen.",
+      "answer": "C",
+      "points": 1,
+      "explanation": {
+        "de": "Anzeige C bietet eine kostenlose Grippeschutzimpfung für alle ab 60 Jahren.",
+        "key_evidence": "Kostenlose Grippeschutzimpfung! Für alle ab 60 Jahren",
+        "key_vocabulary": [
+          {
+            "word": "Grippeschutzimpfung",
+            "type": "Nomen",
+            "meaning": "flu vaccination"
+          },
+          {
+            "word": "kostenlos",
+            "type": "Adjektiv",
+            "meaning": "free of charge"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q2",
+      "teil": 3,
+      "type": "matching",
+      "situation": "Saras Rücken tut weh. Sie kann aber erst nach 18 Uhr einen Termin machen.",
+      "answer": "B",
+      "points": 1,
+      "explanation": {
+        "de": "Anzeige B bietet Physiotherapie auch abends bis 20 Uhr.",
+        "key_evidence": "Rückenprobleme? Wir helfen! Termine auch abends bis 20 Uhr",
+        "key_vocabulary": [
+          {
+            "word": "Physiotherapie",
+            "type": "Nomen",
+            "meaning": "physiotherapy"
+          },
+          {
+            "word": "Rücken",
+            "type": "Nomen",
+            "meaning": "back"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q3",
+      "teil": 3,
+      "type": "matching",
+      "situation": "Frau Yilmaz braucht eine neue Brille. Ihr Kind (5 Jahre) braucht auch einen Sehtest.",
+      "answer": "E",
+      "points": 1,
+      "explanation": {
+        "de": "Anzeige E ist ein Augenarzt mit Sehtest und Brillenberatung, auch für Kinder ab 3 Jahren.",
+        "key_evidence": "Sehtest, Brillenberatung, Kontaktlinsen. Kinder ab 3 Jahren",
+        "key_vocabulary": [
+          {
+            "word": "Sehtest",
+            "type": "Nomen",
+            "meaning": "eye test"
+          },
+          {
+            "word": "Brillenberatung",
+            "type": "Nomen",
+            "meaning": "glasses consultation"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q4",
+      "teil": 3,
+      "type": "matching",
+      "situation": "Paul möchte etwas für seine Gesundheit tun. Er hat noch nie Sport gemacht und möchte etwas Ruhiges ausprobieren.",
+      "answer": "D",
+      "points": 1,
+      "explanation": {
+        "de": "Anzeige D ist Yoga für Anfänger, keine Vorkenntnisse nötig.",
+        "key_evidence": "Yoga für Anfänger — gut für Körper und Geist! Keine Vorkenntnisse nötig",
+        "key_vocabulary": [
+          {
+            "word": "Anfänger",
+            "type": "Nomen",
+            "meaning": "beginner"
+          },
+          {
+            "word": "Vorkenntnisse",
+            "type": "Nomen",
+            "meaning": "prior knowledge/experience"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q5",
+      "teil": 3,
+      "type": "matching",
+      "situation": "Frau Al-Hassan braucht Medikamente und spricht nicht so gut Deutsch. Sie möchte Beratung auf Arabisch.",
+      "answer": "F",
+      "points": 1,
+      "explanation": {
+        "de": "Anzeige F ist die Apotheke mit Beratung auf Deutsch, Türkisch und Arabisch.",
+        "key_evidence": "Beratung auf Deutsch, Türkisch und Arabisch",
+        "key_vocabulary": [
+          {
+            "word": "Beratung",
+            "type": "Nomen",
+            "meaning": "consultation / advice"
+          },
+          {
+            "word": "Medikament",
+            "type": "Nomen",
+            "meaning": "medicine"
+          }
+        ]
+      }
+    }
+  ],
+  "scoring": {
+    "total_points": 5,
+    "pass_threshold": 3,
+    "grading": [
+      {
+        "range": [
+          5,
+          5
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          4,
+          4
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          3,
+          3
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          1,
+          2
+        ],
+        "label": "Noch üben!",
+        "emoji": "📝"
+      },
+      {
+        "range": [
+          0,
+          0
+        ],
+        "label": "Mehr Übung nötig",
+        "emoji": "💪"
+      }
+    ]
+  },
+  "qa": {
+    "vocab_in_a2_list": true,
+    "grammar_a2_only": true,
+    "word_count_in_range": true,
+    "all_answers_verifiable": true,
+    "matching_no_duplicate_answers": true,
+    "six_ads_present": true,
+    "image_count": 1,
+    "passed": true
+  }
+}

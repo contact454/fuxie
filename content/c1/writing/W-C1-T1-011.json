@@ -1,0 +1,92 @@
+{
+  "id": "W-C1-T1-011",
+  "cefrLevel": "C1",
+  "teil": 1,
+  "teilName": "Argumentativer Text",
+  "textType": "Argumentation",
+  "register": "sachlich",
+  "topic": "Kulturfoerderung",
+  "instruction": "Verfassen Sie einen zusammenhängenden argumentativen Text für das Online-Dossier Ihrer Universität zum Thema 'Staatliche Kulturförderung im 21. Jahrhundert'. Nehmen Sie Bezug auf die Grafik und die vorliegenden Expertenmeinungen.",
+  "instructionVi": "Viết một văn bản nghị luận mạch lạc cho hồ sơ trực tuyến của trường đại học về chủ đề 'Hỗ trợ văn hóa từ nhà nước trong thế kỷ 21'. Hãy tham chiếu đến biểu đồ và các ý kiến chuyên gia đã cho.",
+  "situation": "In Zeiten knapper öffentlicher Kassen wird in vielen Kommunen über die Kürzung von Geldern für Museen, Theater und Bibliotheken debattiert. Befürworter fordern eine stärkere marktwirtschaftliche Orientierung der Kultur, während Kritiker den Verlust der gesellschaftlichen Identität befürchten.",
+  "contentPoints": [
+    "Werten Sie die Informationen der Grafik zur Verteilung der Kulturausgaben aus.",
+    "Diskutieren Sie die Bedeutung staatlicher Subventionen für die Vielfalt des kulturellen Angebots.",
+    "Wägen Sie die Vor- und Nachteile von privatem Sponsoring im Kulturbereich ab.",
+    "Formulieren Sie eine begründete Stellungnahme zur Frage, ob Kultur eine staatliche Pflichtaufgabe bleiben muss."
+  ],
+  "sourceText": "Dr. Helena Weber: 'Kultur ist kein verzichtbarer Luxus, sondern das Fundament einer demokratischen Gesellschaft. Eine rein marktorientierte Finanzierung würde Nischenkunst und experimentelle Formate, die keinen unmittelbaren Profit abwerfen, unwiederbringlich verdrängen.' --- Prof. Mark Solms: 'Staatliche Subventionen führen oft zu Ineffizienz und einer Entfremdung vom Publikum. Nur durch eine stärkere Einbindung privater Geldgeber und eine wettbewerbsorientierte Ausrichtung bleibt die Kulturlandschaft dynamisch und für breite Bevölkerungsschichten relevant.'",
+  "sourceTextType": "Expert Quotes",
+  "grafikDesc": "Die vorliegende Grafik illustriert die prozentuale Verteilung der öffentlichen Kulturausgaben in Deutschland nach verschiedenen Sparten.",
+  "grafikData": [
+    {
+      "label": "Theater und Oper",
+      "value": 35,
+      "unit": "%"
+    },
+    {
+      "label": "Museen und Ausstellungen",
+      "value": 25,
+      "unit": "%"
+    },
+    {
+      "label": "Bibliotheken",
+      "value": 20,
+      "unit": "%"
+    },
+    {
+      "label": "Musikschulen",
+      "value": 15,
+      "unit": "%"
+    },
+    {
+      "label": "Sonstige (z.B. Filmförderung)",
+      "value": 5,
+      "unit": "%"
+    }
+  ],
+  "minWords": 250,
+  "maxWords": 400,
+  "timeMinutes": 50,
+  "rubric": {
+    "criteria": [
+      {
+        "id": "inhalt",
+        "name": "Inhalt",
+        "nameVi": "Nội dung",
+        "maxScore": 5,
+        "weight": 20
+      },
+      {
+        "id": "angemessenheit",
+        "name": "Kommunikative Angemessenheit",
+        "nameVi": "Phù hợp giao tiếp",
+        "maxScore": 5,
+        "weight": 20
+      },
+      {
+        "id": "korrektheit",
+        "name": "Korrektheit",
+        "nameVi": "Chính xác ngữ pháp & chính tả",
+        "maxScore": 5,
+        "weight": 20
+      },
+      {
+        "id": "spektrum",
+        "name": "Wortschatz & Strukturen",
+        "nameVi": "Đa dạng từ vựng & cấu trúc",
+        "maxScore": 5,
+        "weight": 20
+      },
+      {
+        "id": "kohaerenz",
+        "name": "Kohaerenz & Kohaesion",
+        "nameVi": "Mạch lạc & liên kết",
+        "maxScore": 5,
+        "weight": 20
+      }
+    ],
+    "maxScore": 25
+  },
+  "maxScore": 25
+}

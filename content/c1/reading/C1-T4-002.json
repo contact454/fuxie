@@ -1,0 +1,196 @@
+{
+  "id": "C1-T4-002",
+  "level": "C1",
+  "teil": 4,
+  "teil_name": "Meinungen zuordnen",
+  "topic": "Wirtschaft & Finanzen",
+  "topic_id": "002",
+  "metadata": {
+    "word_count": 112,
+    "target_grammar": [
+      "Nominalisierung",
+      "Partizipialkonstruktionen",
+      "Konjunktiv I/II",
+      "Passiversatzformen"
+    ],
+    "target_vocabulary": [],
+    "generated_at": "2026-03-11T23:18:54.731267",
+    "version": 1
+  },
+  "opinion_texts": {
+    "question": "Ist das bedingungslose Grundeinkommen die richtige Antwort auf die Automatisierung?",
+    "texts": [
+      {
+        "name": "Prof. Dr. Claudia Kessler, Volkswirtin",
+        "text": "Ein Grundeinkommen wäre ein fundamentaler Systemwechsel, der die gesamte Sozial- und Steuerpolitik neu ordnen würde. Die Finanzierungsfrage ist keineswegs gelöst, und die Annahme, dass Automatisierung massenhaft Arbeitsplätze vernichtet, ist empirisch umstritten.",
+        "label": "A"
+      },
+      {
+        "name": "Lukas Brenner, Startup-Gründer",
+        "text": "Als Unternehmer sehe ich täglich, wie schnell Technologie Berufsbilder verändert. Ein Grundeinkommen würde Menschen die Sicherheit geben, Risiken einzugehen, sich umzuqualifizieren oder kreative Projekte zu verfolgen.",
+        "label": "B"
+      },
+      {
+        "name": "Susanne Hartl, Gewerkschafterin",
+        "text": "Ich fürchte, dass ein Grundeinkommen den Sozialstaat aushöhlt. Anstatt jeden mit einem Pauschalbetrag abzuspeisen, brauchen wir maßgeschneiderte soziale Sicherungssysteme und eine Stärkung der Arbeitnehmerrechte.",
+        "label": "C"
+      },
+      {
+        "name": "Dr. Patrick Vogt, Sozialwissenschaftler",
+        "text": "Pilotprojekte in Finnland, Kenia und den USA liefern erste empirische Daten. Die bisherigen Ergebnisse zeigen: Ein Grundeinkommen verbessert die psychische Gesundheit und senkt Stress, hat aber wenig Einfluss auf die Arbeitsbereitschaft.",
+        "label": "D"
+      }
+    ]
+  },
+  "images": [
+    {
+      "id": "IMG1",
+      "type": "scene",
+      "prompt": "Cute cartoon illustration of experts discussing Wirtschaft & Finanzen. Fuxie cartoon style, flat illustration, warm pastel colors, no text.",
+      "filename": "C1-T4-002_scene.png",
+      "placement": "header",
+      "alt_text": "Ist das bedingungslose Grundeinkommen die richtige",
+      "dimensions": "768x512"
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q1",
+      "teil": 4,
+      "type": "matching",
+      "stem": "Die grundlegende Prämisse, dass Die Finanzierung des Grundeinkommens ist nicht gesichert, liegt der Position zugrunde:",
+      "answer": "A",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Text/Beitrag A",
+        "reasoning": "[Inferential] Die Aussage 'Die Finanzierung des Grundeinkommens ist nicht ges...' entspricht der Position von A."
+      }
+    },
+    {
+      "id": "Q2",
+      "teil": 4,
+      "type": "matching",
+      "stem": "Ein Grundeinkommen fördert Risikobereitschaft und Umqualifizierung.",
+      "answer": "B",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Text/Beitrag B",
+        "reasoning": "Die Aussage 'Ein Grundeinkommen fördert Risikobereitschaft und ...' entspricht der Position von B."
+      }
+    },
+    {
+      "id": "Q3",
+      "teil": 4,
+      "type": "matching",
+      "stem": "Die These, dass maßgeschneiderte Sozialsysteme sind besser als Pauschalbeträge, wird durch folgende Argumentation gestützt:",
+      "answer": "C",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Text/Beitrag C",
+        "reasoning": "[Inferential] Die Aussage 'Maßgeschneiderte Sozialsysteme sind besser als Pau...' entspricht der Position von C."
+      }
+    },
+    {
+      "id": "Q4",
+      "teil": 4,
+      "type": "matching",
+      "stem": "Die grundlegende Prämisse, dass pilotprojekte zeigen positive Effekte auf die psychische Gesundheit, liegt der Position zugrunde:",
+      "answer": "D",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Text/Beitrag D",
+        "reasoning": "[Inferential] Die Aussage 'Pilotprojekte zeigen positive Effekte auf die psyc...' entspricht der Position von D."
+      }
+    },
+    {
+      "id": "Q5",
+      "teil": 4,
+      "type": "matching",
+      "stem": "Die grundlegende Prämisse, dass Die massenhafte Vernichtung von Arbeitsplätzen durch Automatisierung ist umstritten, liegt der Position zugrunde:",
+      "answer": "A",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Text/Beitrag A",
+        "reasoning": "[Inferential] Die Aussage 'Die massenhafte Vernichtung von Arbeitsplätzen dur...' entspricht der Position von A."
+      }
+    },
+    {
+      "id": "Q6",
+      "teil": 4,
+      "type": "matching",
+      "stem": "Die These, dass Der Sozialstaat könnte durch ein Grundeinkommen geschwächt werden, wird durch folgende Argumentation gestützt:",
+      "answer": "C",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Text/Beitrag C",
+        "reasoning": "[Inferential] Die Aussage 'Der Sozialstaat könnte durch ein Grundeinkommen ge...' entspricht der Position von C."
+      }
+    },
+    {
+      "id": "Q7",
+      "teil": 4,
+      "type": "matching",
+      "stem": "Die Arbeitsbereitschaft bleibt durch ein Grundeinkommen weitgehend unverändert.",
+      "answer": "D",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Text/Beitrag D",
+        "reasoning": "Die Aussage 'Die Arbeitsbereitschaft bleibt durch ein Grundeink...' entspricht der Position von D."
+      }
+    }
+  ],
+  "scoring": {
+    "total_points": 7,
+    "pass_threshold": 5,
+    "grading": [
+      {
+        "range": [
+          6,
+          7
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          4,
+          5
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          3,
+          3
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          1,
+          2
+        ],
+        "label": "Noch üben!",
+        "emoji": "📝"
+      },
+      {
+        "range": [
+          0,
+          0
+        ],
+        "label": "Mehr Übung nötig",
+        "emoji": "💪"
+      }
+    ]
+  },
+  "qa": {
+    "vocab_in_c1_list": true,
+    "grammar_c1_appropriate": true,
+    "word_count_in_range": true,
+    "all_answers_verifiable": true,
+    "image_count": 1,
+    "passed": true
+  }
+}

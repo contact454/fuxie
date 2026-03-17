@@ -1,0 +1,77 @@
+{
+  "id": "W-C2-T1-003",
+  "cefrLevel": "C2",
+  "teil": 1,
+  "teilName": "Akademischer Text",
+  "textType": "Eroerterung",
+  "register": "akademisch",
+  "topic": "Wissenschaftsfreiheit",
+  "instruction": "Analysieren Sie die Grenzen der Wissenschaftsfreiheit. Schreiben Sie einen akademischen Text (mind. 350 Woerter).",
+  "instructionVi": "Viet bai hoc thuat >=350 tu: Wissenschaftsfreiheit.",
+  "situation": "Analysieren Sie die Grenzen der Wissenschaftsfreiheit",
+  "contentPoints": [
+    "These klar formulieren",
+    "Hintergrund skizzieren",
+    "Argumente entwickeln",
+    "Gegenposition widerlegen",
+    "Synthese und Schlussfolgerung",
+    "Ausblick"
+  ],
+  "minWords": 350,
+  "maxWords": 600,
+  "timeMinutes": 50,
+  "rubric": {
+    "criteria": [
+      {
+        "id": "inhalt",
+        "name": "Inhalt",
+        "nameVi": "Noi dung",
+        "maxScore": 5,
+        "weight": 20
+      },
+      {
+        "id": "angemessenheit",
+        "name": "Kommunikative Angemessenheit",
+        "nameVi": "Phu hop giao tiep",
+        "maxScore": 5,
+        "weight": 20
+      },
+      {
+        "id": "korrektheit",
+        "name": "Korrektheit",
+        "nameVi": "Chinh xac ngu phap",
+        "maxScore": 5,
+        "weight": 20
+      },
+      {
+        "id": "spektrum",
+        "name": "Wortschatz & Strukturen",
+        "nameVi": "Da dang tu vung",
+        "maxScore": 5,
+        "weight": 20
+      },
+      {
+        "id": "kohaerenz",
+        "name": "Kohaerenz & Kohaesion",
+        "nameVi": "Mach lac & lien ket",
+        "maxScore": 5,
+        "weight": 20
+      }
+    ],
+    "maxScore": 25
+  },
+  "maxScore": 25,
+  "sourceText": "Text 1: 'Das Schweigen der Hörsäle', Dr. Maximilian von Arnim, Frankfurter Allgemeine Zeitung (FAZ), 14.03.2023.\nDie Erosion der Debattenkultur an deutschen Universitäten ist kein bloßes Schreckgespenst konservativer Feuilletonisten mehr, sondern eine manifeste Bedrohung der grundgesetzlich garantierten Wissenschaftsfreiheit. Immer häufiger weicht der herrschaftsfreie Diskurs einem moralisierenden Konformitätsdruck. Wer heute unzeitgemäße Thesen zu soziopolitischen Reizthemen vertritt, riskiert nicht selten seine akademische Reputation oder sieht sich konfrontativ mit Boykottaufrufen konfrontiert. Wenn das Ideal der wertneutralen Erkenntnissuche der 'Political Correctness' geopfert wird, verliert die Universität ihre genuine Funktion als Korrektiv der Gesellschaft. Ein Klima der antizipatorischen Selbstzensur breitet sich aus, in dem Forscher potenzielle Kontroversen meiden, um ihre Karrierechancen nicht zu gefährden. Der Schutz der Freiheit von Forschung und Lehre bedarf einer dringenden Revitalisierung gegen die Übergriffigkeit ideologischer Gatekeeper.\n\nText 2: 'Verantwortung statt Beliebigkeit', Prof. Dr. Elena Marquardt, Kölner Zeitschrift für Soziologie und Sozialpsychologie, 12.11.2023.\nDie aktuelle Debatte um die vermeintliche Gefährdung der Wissenschaftsfreiheit verkennt oft den epistemischen Kern des Problems. Wissenschaft existiert nicht im luftleeren Raum, sondern ist stets in gesellschaftliche Machtstrukturen eingebettet. Die Forderung nach einer inklusiven und diskriminierungsfreien Lehre stellt keine Beschneidung der Freiheit dar, sondern ist deren notwendige ethische Fundierung. Wissenschaftliche Integrität erfordert heute, hegemoniale Diskurse kritisch zu hinterfragen und die Perspektiven marginalisierter Gruppen methodisch zu integrieren. Es handelt sich hierbei nicht um eine Zensur, sondern um einen Prozess der Qualitätssicherung und sozialen Verantwortlichkeit. Freiheit ohne Rückkopplung an gesellschaftliche Realitäten führt zur Perpetuierung von Vorurteilen unter dem Deckmantel der Objektivität. Eine moderne Wissenschaft muss sich an ihrem Beitrag zum sozialen Fortschritt messen lassen, statt sich hinter einem abstrakten Absolutheitsanspruch zu verschanzen.",
+  "sourceTextType": "Zweiteiliges Textdossier (Journalistischer Kommentar vs. Fachwissenschaftlicher Essay)",
+  "stimulusSender": "Prüfungskommission für wissenschaftliches Schreiben (C2)",
+  "grafikDesc": "Das Säulendiagramm illustriert die subjektive Einschätzung der Wissenschaftsfreiheit durch Lehrpersonal an staatlichen Universitäten im Zeitraum von 2018 bis 2023. Dargestellt ist der prozentuale Anteil derer, die sich in ihrer Forschung und Lehre 'vollständig frei' fühlen.",
+  "grafikData": [
+    "Jahr 2018: 82 Prozent fühlen sich vollständig frei",
+    "Jahr 2019: 79 Prozent fühlen sich vollständig frei",
+    "Jahr 2020: 74 Prozent fühlen sich vollständig frei",
+    "Jahr 2021: 68 Prozent fühlen sich vollständig frei",
+    "Jahr 2022: 61 Prozent fühlen sich vollständig frei",
+    "Jahr 2023: 54 Prozent fühlen sich vollständig frei",
+    "Quelle: Institut für Hochschulforschung (IfH), Erhebung zur akademischen Freiheit 2023"
+  ]
+}

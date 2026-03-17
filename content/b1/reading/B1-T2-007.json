@@ -1,0 +1,224 @@
+{
+  "id": "B1-T2-007",
+  "level": "B1",
+  "teil": 2,
+  "teil_name": "Pressebericht lesen",
+  "topic": "Kultur & Gesellschaft",
+  "topic_id": "007",
+  "metadata": {
+    "word_count": 287,
+    "target_grammar": [
+      "Nebensatz mit dass/weil/wenn",
+      "Passiv",
+      "Konjunktiv II"
+    ],
+    "target_vocabulary": [
+      "Kulturfestival",
+      "Wirtschaft",
+      "Tourismus",
+      "Veranstaltung",
+      "Besucher",
+      "Einnahme",
+      "Sponsor",
+      "Bühne",
+      "Programm",
+      "Vielfalt"
+    ],
+    "generated_at": "2026-03-10T22:58:00+07:00",
+    "version": 1
+  },
+  "article": {
+    "source": "Kölner Stadt-Anzeiger",
+    "date": "30. Juni 2026",
+    "title": "Kulturfestivals: Warum sie für Städte wichtig sind",
+    "subtitle": "Das Kölner Sommerfest bringt 180.000 Besucher und Millionen-Einnahmen",
+    "text": "Das Kölner Sommerfest hat in diesem Jahr einen neuen Besucherrekord aufgestellt. Über 180.000 Menschen kamen an drei Tagen in die Innenstadt, um Musik, Theater und Kunst zu erleben. Für die Stadt bedeutet das nicht nur kulturelles Leben, sondern auch wirtschaftlichen Gewinn.\n\nLaut einer Analyse der IHK Köln haben die Besucher des Festivals rund 12 Millionen Euro in Hotels, Restaurants und Geschäften ausgegeben. „Kulturfestivals sind ein wichtiger Wirtschaftsfaktor“, erklärt IHK-Präsidentin Sandra Möller. „Sie bringen Touristen in die Stadt und stärken den lokalen Handel.“\n\nAber der Wert von Festivals geht über die Wirtschaft hinaus. Festivalleiterin Dr. Lisa Brandt betont den sozialen Aspekt: „Festivals bringen Menschen zusammen, die sich sonst nie begegnen würden. Auf unserem Festival stehen Bands aus Kolumbien neben einer türkischen Theatergruppe und einem deutschen Kinderchor. Diese kulturelle Vielfalt ist einzigartig.“\n\nAllerdings stehen viele Festivals unter finanziellem Druck. Die Kosten für Sicherheit, Technik und Künstlergagen sind in den letzten Jahren stark gestiegen. Ohne Sponsoren und öffentliche Förderung könnten viele kleinere Festivals nicht überleben.\n\nDie Stadt Köln hat deshalb einen neuen Kulturfonds eingerichtet, der kleinere Veranstaltungen mit bis zu 50.000 Euro unterstützt. Oberbürgermeisterin Eva Klein sagt: „Kultur ist kein Luxus, sondern eine Investition in den Zusammenhalt unserer Gesellschaft.“\n\nDas nächste große Event ist das Winterlichterfest im Dezember."
+  },
+  "images": [
+    {
+      "id": "IMG1",
+      "type": "scene",
+      "prompt": "Cute cartoon illustration of a bustling city cultural festival with outdoor stages, food stalls, diverse performers and happy crowds in a German city square. Fuxie cartoon style, flat illustration, warm pastel colors, no text.",
+      "filename": "B1-T2-007_scene.png",
+      "placement": "header",
+      "alt_text": "Kölner Kulturfestival",
+      "dimensions": "768x512"
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q1",
+      "teil": 2,
+      "type": "multiple_choice",
+      "stem": "Wie viele Besucher kamen zum Kölner Sommerfest?",
+      "options": {
+        "a": "Über 100.000.",
+        "b": "Über 180.000.",
+        "c": "Über 250.000."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Über 180.000 Menschen kamen an drei Tagen.",
+        "key_evidence": "Über 180.000 Menschen",
+        "key_vocabulary": [
+          {
+            "word": "Besucherrekord",
+            "type": "Nomen",
+            "meaning": "visitor record"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q2",
+      "teil": 2,
+      "type": "multiple_choice",
+      "stem": "Wie viel Geld haben die Besucher laut IHK ausgegeben?",
+      "options": {
+        "a": "5 Millionen Euro.",
+        "b": "12 Millionen Euro.",
+        "c": "20 Millionen Euro."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Die Besucher haben rund 12 Millionen Euro ausgegeben.",
+        "key_evidence": "rund 12 Millionen Euro",
+        "key_vocabulary": [
+          {
+            "word": "Einnahme",
+            "type": "Nomen",
+            "meaning": "revenue"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q3",
+      "teil": 2,
+      "type": "multiple_choice",
+      "stem": "Was betont die Festivalleiterin Dr. Brandt?",
+      "options": {
+        "a": "Das Festival bringt der Stadt Geld.",
+        "b": "Festivals bringen unterschiedliche Menschen zusammen.",
+        "c": "Festivals sind zu teuer geworden."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Festivals bringen Menschen zusammen, die sich sonst nie begegnen würden.",
+        "key_evidence": "Festivals bringen Menschen zusammen, die sich sonst nie begegnen würden",
+        "key_vocabulary": [
+          {
+            "word": "Vielfalt",
+            "type": "Nomen",
+            "meaning": "diversity"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q4",
+      "teil": 2,
+      "type": "multiple_choice",
+      "stem": "Warum haben viele kleinere Festivals finanzielle Probleme?",
+      "options": {
+        "a": "Weil weniger Besucher kommen.",
+        "b": "Weil Sicherheit, Technik und Künstlergagen teurer geworden sind.",
+        "c": "Weil die Stadt keine Genehmigungen gibt."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Die Kosten für Sicherheit, Technik und Gagen sind stark gestiegen.",
+        "key_evidence": "Die Kosten für Sicherheit, Technik und Künstlergagen sind stark gestiegen",
+        "key_vocabulary": [
+          {
+            "word": "Sponsor",
+            "type": "Nomen",
+            "meaning": "sponsor"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q5",
+      "teil": 2,
+      "type": "multiple_choice",
+      "stem": "Wie viel Geld können kleine Festivals aus dem neuen Kulturfonds bekommen?",
+      "options": {
+        "a": "Bis zu 20.000 Euro.",
+        "b": "Bis zu 50.000 Euro.",
+        "c": "Bis zu 100.000 Euro."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Der Kulturfonds unterstützt kleinere Veranstaltungen mit bis zu 50.000 Euro.",
+        "key_evidence": "mit bis zu 50.000 Euro unterstützt",
+        "key_vocabulary": [
+          {
+            "word": "Kulturfonds",
+            "type": "Nomen",
+            "meaning": "culture fund"
+          }
+        ]
+      }
+    }
+  ],
+  "scoring": {
+    "total_points": 5,
+    "pass_threshold": 3,
+    "grading": [
+      {
+        "range": [
+          5,
+          5
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          4,
+          4
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          3,
+          3
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          1,
+          2
+        ],
+        "label": "Noch üben!",
+        "emoji": "📝"
+      },
+      {
+        "range": [
+          0,
+          0
+        ],
+        "label": "Mehr Übung nötig",
+        "emoji": "💪"
+      }
+    ]
+  },
+  "qa": {
+    "vocab_in_b1_list": true,
+    "grammar_b1_appropriate": true,
+    "word_count_in_range": true,
+    "all_answers_verifiable": true,
+    "image_count": 1,
+    "passed": true
+  }
+}

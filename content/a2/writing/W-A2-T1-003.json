@@ -1,0 +1,51 @@
+{
+  "id": "W-A2-T1-003",
+  "cefrLevel": "A2",
+  "teil": 1,
+  "teilName": "E-Mail-Antwort",
+  "textType": "E-Mail",
+  "register": "informell",
+  "topic": "Urlaub",
+  "instruction": "Schreiben Sie eine Antwort-E-Mail (ca. 40-60 Woerter). Schreiben Sie zu allen drei Punkten.",
+  "instructionVi": "Tra loi email: Urlaub.",
+  "situation": "Elke plant eine Reise nach Berlin und bittet um Tipps.",
+  "contentPoints": [
+    "Sehenswuerdigkeiten empfehlen",
+    "Hotel-Tipps geben",
+    "Wetter empfehlen"
+  ],
+  "minWords": 40,
+  "maxWords": 70,
+  "timeMinutes": 15,
+  "rubric": {
+    "criteria": [
+      {
+        "id": "inhalt",
+        "name": "Inhalt",
+        "nameVi": "Noi dung",
+        "maxScore": 5,
+        "weight": 30
+      },
+      {
+        "id": "korrektheit",
+        "name": "Korrektheit",
+        "nameVi": "Chinh xac",
+        "maxScore": 5,
+        "weight": 35
+      },
+      {
+        "id": "angemessenheit",
+        "name": "Kommunikative Angemessenheit",
+        "nameVi": "Phu hop giao tiep",
+        "maxScore": 5,
+        "weight": 35
+      }
+    ],
+    "maxScore": 15
+  },
+  "maxScore": 15,
+  "sourceText": "Hallo! Wie geht es dir? Ich plane gerade meinen Urlaub in deiner Stadt. Kannst du mir vielleicht helfen? Welches Hotel ist gut und nicht zu teuer? Welche Sehenswürdigkeiten muss ich unbedingt sehen? Und wann ist das Wetter am besten für eine Reise? Ich freue mich auf deine Antwort! Viele Grüße, Lucas",
+  "sourceTextType": "Email",
+  "stimulusSender": "Lucas",
+  "grafikData": []
+}

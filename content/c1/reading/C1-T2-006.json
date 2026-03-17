@@ -1,0 +1,211 @@
+{
+  "id": "C1-T2-006",
+  "level": "C1",
+  "teil": 2,
+  "teil_name": "Sachtext verstehen",
+  "topic": "Wissenschaftstheorie",
+  "topic_id": "006",
+  "metadata": {
+    "word_count": 262,
+    "target_grammar": [
+      "Nominalisierung",
+      "Partizipialkonstruktionen",
+      "Konjunktiv I/II",
+      "Passiversatzformen"
+    ],
+    "target_vocabulary": [],
+    "generated_at": "2026-03-11T23:00:46.154030",
+    "version": 1
+  },
+  "article": {
+    "title": "Der Peer-Review-Prozess: Garant oder Bremse der Wissenschaft?",
+    "source": "Wissenschaftliches Fachmagazin",
+    "text": "Der Peer-Review-Prozess, bei dem eingereichte Fachaufsätze von unabhängigen Experten des gleichen Fachgebiets begutachtet werden, gilt als Goldstandard der wissenschaftlichen Qualitätssicherung. Doch der Mechanismus, der seit mehr als 300 Jahren die Grundlage des wissenschaftlichen Publikationssystems bildet, steht zunehmend in der Kritik.\n\nDie Stärken des Peer Reviews sind unbestritten. Es filtert methodisch fehlerhafte Arbeiten, identifiziert logische Schwächen in der Argumentation und stellt sicher, dass der aktuelle Forschungsstand angemessen berücksichtigt wird. Ohne diese Qualitätskontrolle wäre es für Wissenschaftler und Praktiker kaum möglich, die Zuverlässigkeit publizierter Ergebnisse einzuschätzen.\n\nAllerdings weist das System erhebliche Schwachstellen auf. Studien zeigen, dass die Übereinstimmung zwischen verschiedenen Gutachtern desselben Manuskripts überraschend gering ist: Zwei unabhängige Reviewer kommen nur in etwa 20 Prozent der Fälle zum gleichen Ergebnis. Die Bewertung eines Manuskripts hängt damit in erheblichem Maße vom Zufall der Gutachterzuweisung ab.\n\nDarüber hinaus sind Gutachter nachweislich anfällig für Voreingenommenheit. Renommierte Autoren und Forscher prestigeträchtiger Institutionen werden tendenziell milder bewertet, während Einreichungen unbekannter Autoren oder aus weniger angesehenen Einrichtungen strengeren Maßstäben unterliegen. Doppelblind-Verfahren, bei denen weder Autoren noch Gutachter die Identität des jeweils anderen kennen, können diese Verzerrung reduzieren, werden aber nur von einer Minderheit der Fachzeitschriften praktiziert.\n\nEin weiterer Kritikpunkt betrifft die Dauer des Verfahrens. Vom Einreichen eines Manuskripts bis zur Publikation vergehen durchschnittlich sechs bis zwölf Monate, in manchen Fachgebieten sogar deutlich länger. In schnelllebigen Forschungsfeldern wie der Virologie oder der KI-Forschung ist diese Geschwindigkeit unzureichend.\n\nAls Alternative haben sich Preprint-Server wie arXiv und medRxiv etabliert, auf denen Forschungsergebnisse ohne vorherige Begutachtung veröffentlicht werden. Befürworter sehen darin eine Demokratisierung der Wissenschaft; Kritiker warnen vor der unkontrollierten Verbreitung nicht geprüfter Ergebnisse."
+  },
+  "images": [
+    {
+      "id": "IMG1",
+      "type": "scene",
+      "prompt": "Cute cartoon illustration related to Wissenschaftstheorie. Fuxie cartoon style, flat illustration, warm pastel colors, no text.",
+      "filename": "C1-T2-006_scene.png",
+      "placement": "header",
+      "alt_text": "Der Peer-Review-Prozess: Garant oder Bremse der Wi",
+      "dimensions": "768x512"
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q1",
+      "teil": 2,
+      "type": "multiple_choice",
+      "stem": "Welche Funktion hat hoch ist die Übereinstimmung zwischen zwei unabhängigen Gutachtern im Gesamtargument des Textes?",
+      "options": {
+        "a": "Etwa 20 Prozent.",
+        "b": "Etwa 50 Prozent.",
+        "c": "Etwa 80 Prozent."
+      },
+      "answer": "a",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Studien zeigen, dass die Übereinstimmung zwischen verschiedenen Gutachtern desselben Manuskripts überraschend gering ist: Zwei unabhängige Reviewer...",
+        "reasoning": "[Inferential] Die richtige Antwort (a) ergibt sich aus dem Textkontext."
+      }
+    },
+    {
+      "id": "Q2",
+      "teil": 2,
+      "type": "multiple_choice",
+      "stem": "Welche Gegenposition zu Vorurteil betrifft den Peer-Review-Prozess wird im Text nicht berücksichtigt?",
+      "options": {
+        "a": "Neue Methoden werden bevorzugt.",
+        "b": "Renommierte Autoren werden milder bewertet.",
+        "c": "Kürzere Papers werden bevorzugt."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Renommierte Autoren und Forscher prestigeträchtiger Institutionen werden tendenziell milder bewertet, während Einreichungen unbekannter Autoren ode...",
+        "reasoning": "[Critical] Die richtige Antwort (b) ergibt sich aus dem Textkontext."
+      }
+    },
+    {
+      "id": "Q3",
+      "teil": 2,
+      "type": "multiple_choice",
+      "stem": "Wie lange dauert es durchschnittlich von der Einreichung bis zur Publikation?",
+      "options": {
+        "a": "Zwei bis drei Monate.",
+        "b": "Sechs bis zwölf Monate.",
+        "c": "Ein bis zwei Jahre."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Vom Einreichen eines Manuskripts bis zur Publikation vergehen durchschnittlich sechs bis zwölf Monate, in manchen Fachgebieten sogar deutlich länger.",
+        "reasoning": "Die richtige Antwort (b) ergibt sich aus dem Textkontext."
+      }
+    },
+    {
+      "id": "Q4",
+      "teil": 2,
+      "type": "multiple_choice",
+      "stem": "Was lässt sich aus der Argumentation über Preprint-Server ableiten?",
+      "options": {
+        "a": "Kostenpflichtige Datenbanken.",
+        "b": "Plattformen für Veröffentlichungen ohne vorherige Begutachtung.",
+        "c": "Newsletter für Forscher."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Als Alternative haben sich Preprint-Server wie arXiv und medRxiv etabliert, auf denen Forschungsergebnisse ohne vorherige Begutachtung veröffentlic...",
+        "reasoning": "[Inferential] Die richtige Antwort (b) ergibt sich aus dem Textkontext."
+      }
+    },
+    {
+      "id": "Q5",
+      "teil": 2,
+      "type": "multiple_choice",
+      "stem": "Wie überzeugend ist die Beweisführung bezüglich können Doppelblind-Verfahren erreichen?",
+      "options": {
+        "a": "Schnellere Publikation.",
+        "b": "Reduzierung von Voreingenommenheit.",
+        "c": "Höhere Zitationsraten."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Doppelblind-Verfahren, bei denen weder Autoren noch Gutachter die Identität des jeweils anderen kennen, können diese Verzerrung reduzieren, werden ...",
+        "reasoning": "[Critical] Die richtige Antwort (b) ergibt sich aus dem Textkontext."
+      }
+    },
+    {
+      "id": "Q6",
+      "teil": 2,
+      "type": "multiple_choice",
+      "stem": "Seit wann gibt es den Peer-Review-Prozess ungefähr?",
+      "options": {
+        "a": "Seit 100 Jahren.",
+        "b": "Seit mehr als 300 Jahren.",
+        "c": "Seit 50 Jahren."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Der Peer-Review-Prozess, bei dem eingereichte Fachaufsätze von unabhängigen Experten des gleichen Fachgebiets begutachtet werden, gilt als Goldstan...",
+        "reasoning": "Die richtige Antwort (b) ergibt sich aus dem Textkontext."
+      }
+    },
+    {
+      "id": "Q7",
+      "teil": 2,
+      "type": "multiple_choice",
+      "stem": "Was impliziert die Darstellung von Warum ist das Verfahren für schnelllebige für die Gesamtthese?",
+      "options": {
+        "a": "Weil es zu teuer ist.",
+        "b": "Weil die Geschwindigkeit unzureichend ist.",
+        "c": "Weil zu wenige Gutachter verfügbar sind."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "In schnelllebigen Forschungsfeldern wie der Virologie oder der KI-Forschung ist diese Geschwindigkeit unzureichend.",
+        "reasoning": "[Inferential] Die richtige Antwort (b) ergibt sich aus dem Textkontext."
+      }
+    }
+  ],
+  "scoring": {
+    "total_points": 7,
+    "pass_threshold": 5,
+    "grading": [
+      {
+        "range": [
+          6,
+          7
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          4,
+          5
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          3,
+          3
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          1,
+          2
+        ],
+        "label": "Noch üben!",
+        "emoji": "📝"
+      },
+      {
+        "range": [
+          0,
+          0
+        ],
+        "label": "Mehr Übung nötig",
+        "emoji": "💪"
+      }
+    ]
+  },
+  "qa": {
+    "vocab_in_c1_list": true,
+    "grammar_c1_appropriate": true,
+    "word_count_in_range": true,
+    "all_answers_verifiable": true,
+    "image_count": 1,
+    "passed": true
+  }
+}

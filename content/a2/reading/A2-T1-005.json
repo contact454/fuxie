@@ -1,0 +1,249 @@
+{
+  "id": "A2-T1-005",
+  "level": "A2",
+  "teil": 1,
+  "teil_name": "Zeitungsartikel lesen",
+  "topic": "Wohnung suchen",
+  "topic_id": "005",
+  "metadata": {
+    "word_count": 178,
+    "target_grammar": [
+      "Perfekt",
+      "Modalverben",
+      "Nebensatz mit weil/dass"
+    ],
+    "target_vocabulary": [
+      "Neubaugebiet",
+      "Wohnung",
+      "Miete",
+      "Quadratmeter",
+      "Balkon",
+      "Spielplatz",
+      "Bewerbung",
+      "einziehen",
+      "Stadtrand",
+      "bezahlbar"
+    ],
+    "generated_at": "2026-03-09T21:40:00+07:00",
+    "version": 1
+  },
+  "text": {
+    "title": "Bezahlbare Wohnungen am Stadtrand",
+    "subtitle": "120 neue Wohnungen im Neubaugebiet Grüne Aue",
+    "body": "Im Stadtteil Lichtenberg entsteht ein neues Wohngebiet. Es heißt „Grüne Aue\" und liegt am Stadtrand, direkt neben einem Park. Dort werden 120 neue Wohnungen gebaut. Die ersten Familien können im März nächsten Jahres einziehen.\n\nDie Wohnungen haben zwei, drei oder vier Zimmer. Eine 3-Zimmer-Wohnung mit 75 Quadratmetern kostet 650 Euro Miete pro Monat. Alle Wohnungen haben einen Balkon und eine moderne Küche. Im Erdgeschoss gibt es auch barrierefreie Wohnungen für ältere Menschen.\n\nBesonders gut: Das Wohngebiet hat einen eigenen Spielplatz, einen kleinen Supermarkt und eine Bushaltestelle direkt vor der Tür. Die U-Bahn-Station ist nur 10 Minuten zu Fuß entfernt.\n\nDie Stadtverwaltung hat gesagt, dass die Mieten niedrig bleiben sollen, weil viele Familien Probleme haben, eine bezahlbare Wohnung zu finden. Man kann sich ab November online bewerben. Familien mit Kindern bekommen bei der Vergabe einen Vorteil.",
+    "source": "Berliner Zeitung"
+  },
+  "images": [
+    {
+      "id": "IMG1",
+      "type": "scene",
+      "prompt": "Cute cartoon illustration of modern apartment buildings in a green German neighborhood. New colorful buildings with balconies, a playground, families walking, a bus stop nearby, trees and a park in background. Fuxie cartoon style, flat illustration, warm pastel colors, no text.",
+      "filename": "A2-T1-005_scene.png",
+      "placement": "header",
+      "alt_text": "Neubaugebiet Grüne Aue am Stadtrand",
+      "dimensions": "768x512"
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q1",
+      "teil": 1,
+      "type": "multiple_choice",
+      "stem": "Wo liegt das neue Wohngebiet?",
+      "options": {
+        "a": "Im Stadtzentrum.",
+        "b": "Am Stadtrand neben einem Park.",
+        "c": "In der Nähe vom Flughafen."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Im Text steht: 'Es liegt am Stadtrand, direkt neben einem Park.'",
+        "key_evidence": "am Stadtrand, direkt neben einem Park",
+        "key_vocabulary": [
+          {
+            "word": "Stadtrand",
+            "type": "Nomen",
+            "meaning": "outskirts/edge of city"
+          },
+          {
+            "word": "Wohngebiet",
+            "type": "Nomen",
+            "meaning": "residential area"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q2",
+      "teil": 1,
+      "type": "multiple_choice",
+      "stem": "Wie viel kostet eine 3-Zimmer-Wohnung pro Monat?",
+      "options": {
+        "a": "550 Euro.",
+        "b": "650 Euro.",
+        "c": "750 Euro."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Im Text steht: 'Eine 3-Zimmer-Wohnung mit 75 Quadratmetern kostet 650 Euro Miete pro Monat.'",
+        "key_evidence": "650 Euro Miete pro Monat",
+        "key_vocabulary": [
+          {
+            "word": "Miete",
+            "type": "Nomen",
+            "meaning": "rent"
+          },
+          {
+            "word": "Quadratmeter",
+            "type": "Nomen",
+            "meaning": "square meter"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q3",
+      "teil": 1,
+      "type": "multiple_choice",
+      "stem": "Was haben alle Wohnungen?",
+      "options": {
+        "a": "Einen Garten und eine Garage.",
+        "b": "Einen Balkon und eine moderne Küche.",
+        "c": "Ein Arbeitszimmer und einen Keller."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Im Text steht: 'Alle Wohnungen haben einen Balkon und eine moderne Küche.'",
+        "key_evidence": "einen Balkon und eine moderne Küche",
+        "key_vocabulary": [
+          {
+            "word": "Balkon",
+            "type": "Nomen",
+            "meaning": "balcony"
+          },
+          {
+            "word": "modern",
+            "type": "Adjektiv",
+            "meaning": "modern"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q4",
+      "teil": 1,
+      "type": "multiple_choice",
+      "stem": "Wie weit ist die U-Bahn-Station entfernt?",
+      "options": {
+        "a": "5 Minuten zu Fuß.",
+        "b": "10 Minuten zu Fuß.",
+        "c": "15 Minuten zu Fuß."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Im Text steht: 'Die U-Bahn-Station ist nur 10 Minuten zu Fuß entfernt.'",
+        "key_evidence": "10 Minuten zu Fuß entfernt",
+        "key_vocabulary": [
+          {
+            "word": "entfernt",
+            "type": "Adjektiv",
+            "meaning": "away/distant"
+          },
+          {
+            "word": "zu Fuß",
+            "type": "Adverb",
+            "meaning": "on foot"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q5",
+      "teil": 1,
+      "type": "multiple_choice",
+      "stem": "Wer bekommt einen Vorteil bei der Bewerbung?",
+      "options": {
+        "a": "Studenten.",
+        "b": "Familien mit Kindern.",
+        "c": "Ältere Menschen."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Im Text steht: 'Familien mit Kindern bekommen bei der Vergabe einen Vorteil.'",
+        "key_evidence": "Familien mit Kindern bekommen bei der Vergabe einen Vorteil",
+        "key_vocabulary": [
+          {
+            "word": "Vorteil",
+            "type": "Nomen",
+            "meaning": "advantage"
+          },
+          {
+            "word": "Vergabe",
+            "type": "Nomen",
+            "meaning": "allocation"
+          }
+        ]
+      }
+    }
+  ],
+  "scoring": {
+    "total_points": 5,
+    "pass_threshold": 3,
+    "grading": [
+      {
+        "range": [
+          5,
+          5
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          4,
+          4
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          3,
+          3
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          1,
+          2
+        ],
+        "label": "Noch üben!",
+        "emoji": "📝"
+      },
+      {
+        "range": [
+          0,
+          0
+        ],
+        "label": "Mehr Übung nötig",
+        "emoji": "💪"
+      }
+    ]
+  },
+  "qa": {
+    "vocab_in_a2_list": true,
+    "grammar_a2_only": true,
+    "word_count_in_range": true,
+    "all_answers_verifiable": true,
+    "mc_distractors_plausible": true,
+    "image_count": 1,
+    "passed": true
+  }
+}

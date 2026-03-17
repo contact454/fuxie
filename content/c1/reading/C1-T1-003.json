@@ -1,0 +1,171 @@
+{
+  "id": "C1-T1-003",
+  "level": "C1",
+  "teil": 1,
+  "teil_name": "Lückentext (Wörter)",
+  "topic": "Literatur & Sprache",
+  "topic_id": "003",
+  "metadata": {
+    "word_count": 240,
+    "target_grammar": [
+      "Nominalisierung",
+      "Partizipialkonstruktionen",
+      "Konjunktiv I/II",
+      "Passiversatzformen"
+    ],
+    "target_vocabulary": [],
+    "generated_at": "2026-03-11T22:50:15.527648",
+    "version": 1
+  },
+  "cloze": {
+    "title": "Die Kunst des literarischen Übersetzens",
+    "text": "Literarisches Übersetzen ist weit mehr als die bloße Übertragung von Wörtern aus einer Sprache in eine andere. Es handelt sich um einen komplexen kreativen Prozess, bei dem der Übersetzer nicht nur den Inhalt, sondern auch den Stil, den Rhythmus und die kulturellen {1} eines Textes in der Zielsprache reproduzieren muss.\n\nDie Herausforderungen beginnen bereits auf der lexikalischen Ebene. Viele Sprachen verfügen über Begriffe, die in anderen Sprachen kein exaktes {2} haben. Das portugiesische Wort saudade, das ein tiefes Gefühl der Sehnsucht und des Vermissens beschreibt, lässt sich beispielsweise nicht mit einem einzigen deutschen Wort wiedergeben. Der Übersetzer muss hier kreative Lösungen finden, die den emotionalen Gehalt des Originals {3}, ohne den Text zu verfremden.\n\nAuf syntaktischer Ebene stellt sich die Frage, inwieweit die Satzstruktur des Originals beibehalten werden sollte. Im Deutschen ermöglichen die flexible Wortstellung und die Möglichkeit {4} Schachtelsätze eine gewisse Spiegelung komplexer Satzgefüge anderer Sprachen. Gleichzeitig besteht die Gefahr, dass eine zu wörtliche Übernahme der Originalstruktur zu einem holprigen, unnatürlichen Lesefluss führt.\n\nBesonders anspruchsvoll ist die Übersetzung von Wortspielen, Reimen und kulturspezifischen Anspielungen. Hier ist der Übersetzer gezwungen, {5} zu gehen und funktional äquivalente Lösungen zu finden, die in der Zielsprache eine vergleichbare Wirkung {6}.\n\nÜber die rein sprachlichen Herausforderungen hinaus stellt sich die grundsätzliche Frage nach der {7} des Übersetzers. Während manche Übersetzer eine möglichst unsichtbare Rolle anstreben, plädieren andere dafür, die übersetzerische Leistung als eigenständige kreative Arbeit {8} und den Übersetzer als gleichberechtigten Autor zu betrachten.",
+    "gaps": [
+      {
+        "pos": 1,
+        "options": {
+          "a": "Bedeutungen",
+          "b": "Nuancen",
+          "c": "Auswirkungen",
+          "d": "Bedingungen"
+        },
+        "answer": "b"
+      },
+      {
+        "pos": 2,
+        "options": {
+          "a": "Äquivalent",
+          "b": "Gegenstück",
+          "c": "Synonym",
+          "d": "Pendant"
+        },
+        "answer": "a"
+      },
+      {
+        "pos": 3,
+        "options": {
+          "a": "erhält",
+          "b": "bewahrt",
+          "c": "schützt",
+          "d": "sichert"
+        },
+        "answer": "b"
+      },
+      {
+        "pos": 4,
+        "options": {
+          "a": "langer",
+          "b": "komplexer",
+          "c": "verschachtelter",
+          "d": "mehrfacher"
+        },
+        "answer": "b"
+      },
+      {
+        "pos": 5,
+        "options": {
+          "a": "Umwege",
+          "b": "Abwege",
+          "c": "Sonderwege",
+          "d": "Kompromisse"
+        },
+        "answer": "d"
+      },
+      {
+        "pos": 6,
+        "options": {
+          "a": "auslösen",
+          "b": "entfalten",
+          "c": "erzielen",
+          "d": "erreichen"
+        },
+        "answer": "c"
+      },
+      {
+        "pos": 7,
+        "options": {
+          "a": "Sichtbarkeit",
+          "b": "Leistung",
+          "c": "Aufgabe",
+          "d": "Bedeutung"
+        },
+        "answer": "a"
+      },
+      {
+        "pos": 8,
+        "options": {
+          "a": "anerkennen",
+          "b": "anzuerkennen",
+          "c": "erkennen",
+          "d": "zu würdigen"
+        },
+        "answer": "b"
+      }
+    ]
+  },
+  "images": [
+    {
+      "id": "IMG1",
+      "type": "scene",
+      "prompt": "Cute cartoon illustration related to Literatur & Sprache, showing an academic/intellectual scene. Fuxie cartoon style, flat illustration, warm pastel colors, no text.",
+      "filename": "C1-T1-003_scene.png",
+      "placement": "header",
+      "alt_text": "Die Kunst des literarischen Übersetzens",
+      "dimensions": "768x512"
+    }
+  ],
+  "scoring": {
+    "total_points": 8,
+    "pass_threshold": 5,
+    "grading": [
+      {
+        "range": [
+          7,
+          8
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          5,
+          6
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          4,
+          4
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          1,
+          3
+        ],
+        "label": "Noch üben!",
+        "emoji": "📝"
+      },
+      {
+        "range": [
+          0,
+          0
+        ],
+        "label": "Mehr Übung nötig",
+        "emoji": "💪"
+      }
+    ]
+  },
+  "qa": {
+    "vocab_in_c1_list": true,
+    "grammar_c1_appropriate": true,
+    "word_count_in_range": true,
+    "all_gaps_have_4_options": true,
+    "image_count": 1,
+    "passed": true
+  }
+}

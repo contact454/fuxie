@@ -1,0 +1,112 @@
+import { redirect } from 'next/navigation'
+import { prisma } from '@fuxie/database'
+import { getServerUser } from '@/lib/auth/server-auth'
+import { GrammarClient } from '@/components/grammar/GrammarClient'
+
+export const dynamic = 'force-dynamic'
+
+export const metadata = {
+    title: 'Fuxie 🦊 — Grammatik',
+    description: 'Deutsche Grammatik — Luyện ngữ pháp tiếng Đức từ A1 đến C2',
+}
+
+type CefrLevel = 'A1' | 'A2' | 'B1' | 'B2' | 'C1' | 'C2'
+
+async function getGrammarData(userId: string | null, level: CefrLevel) {
+    // Query topics and lessons separately to avoid Prisma include issues
+    const topics = await (prisma as any).grammarTopic.findMany({
+        where: { cefrLevel: level },
+        orderBy: { sortOrder: 'asc' },
+    }) as any[]
+
+    // Get all lessons for this level (use topicId to group)
+    const topicIds = topics.map((t: any) => t.id)
+    const lessons = topicIds.length > 0
+        ? await (prisma as any).grammarLesson.findMany({
+            where: { topicId: { in: topicIds } },
+            orderBy: { sortOrder: 'asc' },
+        }) as any[]
+        : []
+
+    // Group lessons by topicId
+    const lessonsByTopic: Record<string, any[]> = {}
+    for (const l of lessons) {
+        if (!lessonsByTopic[l.topicId]) lessonsByTopic[l.topicId] = []
+        lessonsByTopic[l.topicId].push(l)
+    }
+
+    // Get user progress
+    let progressMap: Record<string, { score: number; stars: number; completed: boolean }> = {}
+    if (userId && lessons.length > 0) {
+        const lessonIds = lessons.map((l: any) => l.id)
+        const progressRows = await (prisma as any).grammarProgress.findMany({
+            where: { userId, lessonId: { in: lessonIds } },
+        }) as any[]
+        for (const p of progressRows) {
+            progressMap[p.lessonId] = {
+                score: p.score ?? 0,
+                stars: p.stars ?? 0,
+                completed: p.completed,
+            }
+        }
+    }
+
+    const topicsWithProgress = topics.map((t: any) => {
+        const topicLessons = lessonsByTopic[t.id] || []
+        return {
+            id: t.id,
+            slug: t.slug,
+            titleDe: t.titleDe ?? t.title ?? '',
+            titleVi: t.titleVi ?? '',
+            cefrLevel: t.cefrLevel,
+            lessons: topicLessons.map((l: any) => ({
+                id: l.id,
+                lessonType: l.lessonType,
+                lessonNumber: l.lessonNumber,
+                titleVi: l.titleVi,
+                estimatedMin: l.estimatedMin,
+                progress: progressMap[l.id] ?? null,
+            })),
+            totalStars: topicLessons.reduce((sum: number, l: any) => sum + (progressMap[l.id]?.stars ?? 0), 0),
+            maxStars: topicLessons.length * 3,
+            completedLessons: topicLessons.filter((l: any) => progressMap[l.id]?.completed).length,
+        }
+    })
+
+    return {
+        topics: topicsWithProgress,
+        totalTopics: topicsWithProgress.length,
+        totalCompleted: topicsWithProgress.filter((t: any) => t.completedLessons === t.lessons.length).length,
+    }
+}
+
+async function getAvailableLevels(): Promise<CefrLevel[]> {
+    const levels = await (prisma as any).grammarTopic.findMany({
+        select: { cefrLevel: true },
+        distinct: ['cefrLevel'],
+        orderBy: { cefrLevel: 'asc' },
+    }) as any[]
+    if (levels.length === 0) return ['A1']
+    return levels.map((l: any) => l.cefrLevel as CefrLevel)
+}
+
+export default async function GrammarPage() {
+    const serverUser = await getServerUser()
+    if (!serverUser) redirect('/login')
+
+    const availableLevels = await getAvailableLevels()
+    const defaultLevel: CefrLevel = availableLevels[0] || 'A1'
+    const data = await getGrammarData(serverUser.userId, defaultLevel)
+
+    return (
+        <div className="max-w-5xl mx-auto px-4 py-8">
+            <GrammarClient
+                topics={data.topics}
+                totalTopics={data.totalTopics}
+                totalCompleted={data.totalCompleted}
+                availableLevels={availableLevels}
+                initialLevel={defaultLevel}
+            />
+        </div>
+    )
+}

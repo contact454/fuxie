@@ -1,0 +1,260 @@
+{
+  "id": "A2-T4-003",
+  "level": "A2",
+  "teil": 4,
+  "teil_name": "Fahrpläne und Kalender lesen",
+  "topic": "Beim Arzt",
+  "topic_id": "003",
+  "metadata": {
+    "word_count": 80,
+    "target_grammar": [
+      "Modalverben",
+      "Zeitangaben"
+    ],
+    "target_vocabulary": [
+      "Sprechstunde",
+      "Facharzt",
+      "Allgemeinmedizin",
+      "Kinderheilkunde",
+      "Termin",
+      "Notfall",
+      "Blutabnahme",
+      "Vertretung",
+      "Praxis",
+      "Behandlung"
+    ],
+    "generated_at": "2026-03-09T22:45:00+07:00",
+    "version": 1
+  },
+  "schedule": {
+    "title": "Gemeinschaftspraxis Dr. Müller & Dr. Fischer — Sprechzeiten",
+    "type": "office_hours",
+    "columns": [
+      "Tag",
+      "Dr. Müller (Allgemein)",
+      "Dr. Fischer (Kinder)",
+      "Labor / Blutabnahme"
+    ],
+    "rows": [
+      [
+        "Montag",
+        "8:00–12:00 + 14:00–18:00",
+        "9:00–12:00",
+        "7:30–10:00"
+      ],
+      [
+        "Dienstag",
+        "8:00–12:00",
+        "8:00–12:00 + 14:00–17:00",
+        "7:30–10:00"
+      ],
+      [
+        "Mittwoch",
+        "8:00–13:00",
+        "— (geschlossen)",
+        "7:30–10:00"
+      ],
+      [
+        "Donnerstag",
+        "8:00–12:00 + 14:00–18:00",
+        "9:00–12:00",
+        "7:30–10:00"
+      ],
+      [
+        "Freitag",
+        "8:00–13:00",
+        "8:00–12:00",
+        "—"
+      ]
+    ],
+    "footnote": "Termine bitte telefonisch oder online vereinbaren. Notfälle ohne Termin: bitte direkt zur Rezeption. Am Mittwochnachmittag Vertretung: Dr. Berger, Hauptstr. 5. Blutabnahme nur nüchtern (bitte nichts essen)."
+  },
+  "images": [
+    {
+      "id": "IMG1",
+      "type": "schedule",
+      "prompt": "Cute cartoon illustration of a German medical practice reception with a friendly receptionist, an appointment board on the wall, patients waiting. Fuxie cartoon style, flat illustration, warm pastel colors, no text.",
+      "filename": "A2-T4-003_schedule.png",
+      "placement": "header",
+      "alt_text": "Sprechzeiten der Gemeinschaftspraxis",
+      "dimensions": "768x512"
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q1",
+      "teil": 4,
+      "type": "detail_extraction",
+      "stem": "Wann hat Dr. Fischer am Dienstag Sprechstunde?",
+      "options": {
+        "a": "Nur 8:00–12:00 Uhr.",
+        "b": "8:00–12:00 und 14:00–17:00 Uhr.",
+        "c": "9:00–12:00 Uhr."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Am Dienstag hat Dr. Fischer von 8:00–12:00 und 14:00–17:00 Uhr Sprechstunde.",
+        "key_evidence": "Dienstag: Dr. Fischer 8:00–12:00 + 14:00–17:00",
+        "key_vocabulary": [
+          {
+            "word": "Sprechstunde",
+            "type": "Nomen",
+            "meaning": "office hours / consultation"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q2",
+      "teil": 4,
+      "type": "detail_extraction",
+      "stem": "An welchem Tag ist Dr. Fischers Praxis geschlossen?",
+      "options": {
+        "a": "Am Dienstag.",
+        "b": "Am Freitag.",
+        "c": "Am Mittwoch."
+      },
+      "answer": "c",
+      "points": 1,
+      "explanation": {
+        "de": "Am Mittwoch ist Dr. Fischer geschlossen.",
+        "key_evidence": "Mittwoch: Dr. Fischer — (geschlossen)",
+        "key_vocabulary": [
+          {
+            "word": "geschlossen",
+            "type": "Partizip II",
+            "meaning": "closed"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q3",
+      "teil": 4,
+      "type": "detail_extraction",
+      "stem": "Wann kann man zur Blutabnahme kommen?",
+      "options": {
+        "a": "Täglich 7:30–10:00 Uhr.",
+        "b": "Montag bis Donnerstag 7:30–10:00 Uhr.",
+        "c": "Nur Montag und Freitag."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Blutabnahme ist Montag bis Donnerstag 7:30–10:00. Am Freitag gibt es keine.",
+        "key_evidence": "Mo–Do: Labor 7:30–10:00 / Freitag: —",
+        "key_vocabulary": [
+          {
+            "word": "Blutabnahme",
+            "type": "Nomen",
+            "meaning": "blood draw"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q4",
+      "teil": 4,
+      "type": "detail_extraction",
+      "stem": "Was muss man vor der Blutabnahme beachten?",
+      "options": {
+        "a": "Man muss einen Termin haben.",
+        "b": "Man darf vorher nichts essen.",
+        "c": "Man muss seine Versichertenkarte mitbringen."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Blutabnahme nur nüchtern — bitte nichts essen.",
+        "key_evidence": "Blutabnahme nur nüchtern (bitte nichts essen)",
+        "key_vocabulary": [
+          {
+            "word": "nüchtern",
+            "type": "Adjektiv",
+            "meaning": "on an empty stomach"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q5",
+      "teil": 4,
+      "type": "detail_extraction",
+      "stem": "Wer vertritt die Praxis am Mittwochnachmittag?",
+      "options": {
+        "a": "Dr. Müller.",
+        "b": "Dr. Fischer.",
+        "c": "Dr. Berger."
+      },
+      "answer": "c",
+      "points": 1,
+      "explanation": {
+        "de": "Am Mittwochnachmittag ist Dr. Berger die Vertretung.",
+        "key_evidence": "Am Mittwochnachmittag Vertretung: Dr. Berger",
+        "key_vocabulary": [
+          {
+            "word": "Vertretung",
+            "type": "Nomen",
+            "meaning": "substitute / deputy"
+          }
+        ]
+      }
+    }
+  ],
+  "scoring": {
+    "total_points": 5,
+    "pass_threshold": 3,
+    "grading": [
+      {
+        "range": [
+          5,
+          5
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          4,
+          4
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          3,
+          3
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          1,
+          2
+        ],
+        "label": "Noch üben!",
+        "emoji": "📝"
+      },
+      {
+        "range": [
+          0,
+          0
+        ],
+        "label": "Mehr Übung nötig",
+        "emoji": "💪"
+      }
+    ]
+  },
+  "qa": {
+    "vocab_in_a2_list": true,
+    "grammar_a2_only": true,
+    "word_count_in_range": true,
+    "all_answers_verifiable": true,
+    "schedule_data_consistent": true,
+    "image_count": 1,
+    "passed": true
+  }
+}

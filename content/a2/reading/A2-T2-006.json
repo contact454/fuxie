@@ -1,0 +1,265 @@
+{
+  "id": "A2-T2-006",
+  "level": "A2",
+  "teil": 2,
+  "teil_name": "Informationstafeln verstehen",
+  "topic": "Im Restaurant",
+  "topic_id": "006",
+  "metadata": {
+    "word_count": 96,
+    "target_grammar": [
+      "Modalverben",
+      "Nebensatz mit wenn"
+    ],
+    "target_vocabulary": [
+      "Speisekarte",
+      "Vorspeise",
+      "Hauptgericht",
+      "Nachspeise",
+      "Getränkekarte",
+      "Tagesgericht",
+      "vegetarisch",
+      "Reservierung",
+      "Bedienung",
+      "Trinkgeld"
+    ],
+    "generated_at": "2026-03-09T22:34:00+07:00",
+    "version": 1
+  },
+  "infotafel": {
+    "title": "Gasthof zum Goldenen Hirsch — Speisekarte & Information",
+    "location": "Marktplatz 5, 69117 Heidelberg",
+    "rows": [
+      {
+        "label": "Vorspeisen",
+        "items": "Tomatensuppe 4,50 € · Gemischter Salat 5,90 € · Bruschetta 6,20 €"
+      },
+      {
+        "label": "Hauptgerichte",
+        "items": "Wiener Schnitzel mit Kartoffelsalat 13,90 € · Gemüse-Pasta (vegetarisch) 10,50 € · Lachs mit Reis 14,80 €"
+      },
+      {
+        "label": "Nachspeisen",
+        "items": "Apfelstrudel mit Vanilleeis 5,50 € · Schokoladenkuchen 4,90 € · Obstsalat 4,20 €"
+      },
+      {
+        "label": "Getränke",
+        "items": "Wasser 0,3l 2,50 € · Apfelsaft 0,3l 3,20 € · Kaffee 2,80 € · Bier 0,5l 4,50 €"
+      }
+    ],
+    "extra_info": "Tagesgericht (Mo–Fr): Suppe + Hauptgericht für 9,90 €. Kinder unter 6 Jahren essen gratis. Reservierung ab 6 Personen nötig. Hunde im Garten erlaubt. Kreditkarten werden akzeptiert. Mittwoch Ruhetag."
+  },
+  "images": [
+    {
+      "id": "IMG1",
+      "type": "info_board",
+      "prompt": "Cute cartoon illustration of a cozy traditional German restaurant (Gasthof) with a chalkboard menu on the wall, wooden tables, candles, a friendly waiter bringing food. Fuxie cartoon style, flat illustration, warm pastel colors, no text.",
+      "filename": "A2-T2-006_board.png",
+      "placement": "header",
+      "alt_text": "Gasthof zum Goldenen Hirsch Speisekarte",
+      "dimensions": "768x512"
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q1",
+      "teil": 2,
+      "type": "multiple_choice",
+      "stem": "Was kostet das Wiener Schnitzel?",
+      "options": {
+        "a": "10,50 €.",
+        "b": "13,90 €.",
+        "c": "14,80 €."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Das Wiener Schnitzel mit Kartoffelsalat kostet 13,90 €.",
+        "key_evidence": "Wiener Schnitzel mit Kartoffelsalat 13,90 €",
+        "key_vocabulary": [
+          {
+            "word": "Hauptgericht",
+            "type": "Nomen",
+            "meaning": "main course"
+          },
+          {
+            "word": "kosten",
+            "type": "Verb",
+            "meaning": "to cost"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q2",
+      "teil": 2,
+      "type": "multiple_choice",
+      "stem": "Welches Gericht ist vegetarisch?",
+      "options": {
+        "a": "Lachs mit Reis.",
+        "b": "Wiener Schnitzel.",
+        "c": "Gemüse-Pasta."
+      },
+      "answer": "c",
+      "points": 1,
+      "explanation": {
+        "de": "Die Gemüse-Pasta ist als vegetarisch markiert.",
+        "key_evidence": "Gemüse-Pasta (vegetarisch) 10,50 €",
+        "key_vocabulary": [
+          {
+            "word": "vegetarisch",
+            "type": "Adjektiv",
+            "meaning": "vegetarian"
+          },
+          {
+            "word": "Gericht",
+            "type": "Nomen",
+            "meaning": "dish"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q3",
+      "teil": 2,
+      "type": "multiple_choice",
+      "stem": "Was bekommt man beim Tagesgericht?",
+      "options": {
+        "a": "Nur eine Suppe.",
+        "b": "Suppe und Hauptgericht.",
+        "c": "Hauptgericht und Nachspeise."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Das Tagesgericht beinhaltet Suppe + Hauptgericht für 9,90 €.",
+        "key_evidence": "Tagesgericht (Mo–Fr): Suppe + Hauptgericht für 9,90 €",
+        "key_vocabulary": [
+          {
+            "word": "Tagesgericht",
+            "type": "Nomen",
+            "meaning": "daily special"
+          },
+          {
+            "word": "beinhalten",
+            "type": "Verb",
+            "meaning": "to include"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q4",
+      "teil": 2,
+      "type": "multiple_choice",
+      "stem": "An welchem Tag ist das Restaurant geschlossen?",
+      "options": {
+        "a": "Am Montag.",
+        "b": "Am Sonntag.",
+        "c": "Am Mittwoch."
+      },
+      "answer": "c",
+      "points": 1,
+      "explanation": {
+        "de": "Am Mittwoch ist Ruhetag.",
+        "key_evidence": "Mittwoch Ruhetag",
+        "key_vocabulary": [
+          {
+            "word": "Ruhetag",
+            "type": "Nomen",
+            "meaning": "closing day / day off"
+          },
+          {
+            "word": "geschlossen",
+            "type": "Partizip II",
+            "meaning": "closed"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q5",
+      "teil": 2,
+      "type": "multiple_choice",
+      "stem": "Ab wie vielen Personen muss man reservieren?",
+      "options": {
+        "a": "Ab 4 Personen.",
+        "b": "Ab 6 Personen.",
+        "c": "Ab 8 Personen."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Ab 6 Personen braucht man eine Reservierung.",
+        "key_evidence": "Reservierung ab 6 Personen nötig",
+        "key_vocabulary": [
+          {
+            "word": "Reservierung",
+            "type": "Nomen",
+            "meaning": "reservation"
+          },
+          {
+            "word": "nötig",
+            "type": "Adjektiv",
+            "meaning": "necessary"
+          }
+        ]
+      }
+    }
+  ],
+  "scoring": {
+    "total_points": 5,
+    "pass_threshold": 3,
+    "grading": [
+      {
+        "range": [
+          5,
+          5
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          4,
+          4
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          3,
+          3
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          1,
+          2
+        ],
+        "label": "Noch üben!",
+        "emoji": "📝"
+      },
+      {
+        "range": [
+          0,
+          0
+        ],
+        "label": "Mehr Übung nötig",
+        "emoji": "💪"
+      }
+    ]
+  },
+  "qa": {
+    "vocab_in_a2_list": true,
+    "grammar_a2_only": true,
+    "word_count_in_range": true,
+    "all_answers_verifiable": true,
+    "mc_distractors_plausible": true,
+    "image_count": 1,
+    "passed": true
+  }
+}

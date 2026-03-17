@@ -1,0 +1,64 @@
+{
+  "id": "W-B2-T1-020",
+  "cefrLevel": "B2",
+  "teil": 1,
+  "teilName": "Forumsbeitrag",
+  "textType": "Forumsbeitrag",
+  "register": "neutral",
+  "topic": "Wissenschaft und Gesellschaft",
+  "instruction": "Sie schreiben einen Beitrag für ein Online-Forum zum Thema „Wissenschaftskommunikation – Forschung für alle?“. Äußern Sie Ihre Meinung und gehen Sie auf die unten genannten Punkte ein.",
+  "instructionVi": "Viết một bài đăng trên diễn đàn trực tuyến về chủ đề \"Truyền thông khoa học - Nghiên cứu dành cho tất cả mọi người?\". Hãy nêu ý kiến của bạn và đề cập đến các điểm dưới đây.",
+  "situation": "In einem Online-Diskussionsforum lesen Sie einen Artikel über die wachsende Distanz zwischen der Wissenschaft und der breiten Öffentlichkeit. Da Sie sich für die gesellschaftliche Bedeutung von Forschung interessieren, möchten Sie Ihre Sichtweise zu diesem Thema darlegen.",
+  "contentPoints": [
+    "Nehmen Sie Stellung zur Bedeutung von verständlicher Wissenschaft für die Gesellschaft.",
+    "Nennen Sie Gründe, warum wissenschaftliche Erkenntnisse oft schwer zugänglich für Laien sind.",
+    "Machen Sie Vorschläge, wie Forscher ihre Ergebnisse besser vermitteln könnten.",
+    "Erläutern Sie die Vorteile einer gut informierten Öffentlichkeit für den demokratischen Prozess."
+  ],
+  "sourceText": "Wissenschaft im Elfenbeinturm? Eine aktuelle Studie der Universität Hamburg zeigt, dass sich fast 60 Prozent der Bevölkerung von der modernen Forschung abgehängt fühlen. Während wissenschaftliche Erkenntnisse unseren Alltag in Medizin und Technik massiv beeinflussen, bleibt die Sprache der Forscher oft kryptisch. Komplexe Fachbegriffe und abstrakte Statistiken in Fachzeitschriften erreichen die breite Masse kaum. Die Soziologin Dr. Elena Meyer betont: „Wissenschaftler müssen aus ihrem Elfenbeinturm herauskommen. Nur wenn die Menschen verstehen, woran geforscht wird, kann langfristig Vertrauen in den Fortschritt entstehen.“ Es braucht dringend neue Wege der Kommunikation, von populärwissenschaftlichen Podcasts bis hin zu offenen Bürgerdialogen.",
+  "sourceTextType": "Artikel aus der Online-Zeitung „Wissen Heute“",
+  "minWords": 150,
+  "maxWords": 250,
+  "timeMinutes": 35,
+  "rubric": {
+    "criteria": [
+      {
+        "id": "inhalt",
+        "name": "Inhalt",
+        "nameVi": "Nội dung",
+        "maxScore": 5,
+        "weight": 25
+      },
+      {
+        "id": "angemessenheit",
+        "name": "Kommunikative Angemessenheit",
+        "nameVi": "Phù hợp giao tiếp",
+        "maxScore": 5,
+        "weight": 20
+      },
+      {
+        "id": "korrektheit",
+        "name": "Korrektheit",
+        "nameVi": "Chính xác ngữ pháp & chính tả",
+        "maxScore": 5,
+        "weight": 25
+      },
+      {
+        "id": "spektrum",
+        "name": "Wortschatz & Strukturen",
+        "nameVi": "Đa dạng từ vựng & cấu trúc",
+        "maxScore": 5,
+        "weight": 15
+      },
+      {
+        "id": "kohaerenz",
+        "name": "Kohaerenz & Kohaesion",
+        "nameVi": "Mạch lạc & liên kết",
+        "maxScore": 5,
+        "weight": 15
+      }
+    ],
+    "maxScore": 25
+  },
+  "maxScore": 25
+}

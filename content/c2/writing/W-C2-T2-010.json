@@ -1,0 +1,65 @@
+{
+  "id": "W-C2-T2-010",
+  "cefrLevel": "C2",
+  "teil": 2,
+  "teilName": "Textumwandlung",
+  "textType": "Zeitungskritik",
+  "register": "variiert",
+  "topic": "Kunstkritik",
+  "instruction": "Wandeln Sie den Ausstellungskatalog zum Thema 'Kunstkritik' in einen Zeitungskritik um (mind. 200 Woerter).",
+  "instructionVi": "Chuyen doi: Ausstellungskatalog -> Zeitungskritik ve Kunstkritik.",
+  "situation": "Lesen Sie den Ausstellungskatalog zum Thema 'Kunstkritik' und schreiben Sie daraus einen Zeitungskritik.",
+  "contentPoints": [
+    "Kernaussagen erfassen",
+    "In Textsorte 'Zeitungskritik' umwandeln",
+    "Register und Stil anpassen",
+    "Kohaerenten Text verfassen"
+  ],
+  "minWords": 200,
+  "maxWords": 350,
+  "timeMinutes": 30,
+  "rubric": {
+    "criteria": [
+      {
+        "id": "inhalt",
+        "name": "Inhalt",
+        "nameVi": "Noi dung",
+        "maxScore": 5,
+        "weight": 20
+      },
+      {
+        "id": "angemessenheit",
+        "name": "Kommunikative Angemessenheit",
+        "nameVi": "Phu hop giao tiep",
+        "maxScore": 5,
+        "weight": 20
+      },
+      {
+        "id": "korrektheit",
+        "name": "Korrektheit",
+        "nameVi": "Chinh xac ngu phap",
+        "maxScore": 5,
+        "weight": 20
+      },
+      {
+        "id": "spektrum",
+        "name": "Wortschatz & Strukturen",
+        "nameVi": "Da dang tu vung",
+        "maxScore": 5,
+        "weight": 20
+      },
+      {
+        "id": "kohaerenz",
+        "name": "Kohaerenz & Kohaesion",
+        "nameVi": "Mach lac & lien ket",
+        "maxScore": 5,
+        "weight": 20
+      }
+    ],
+    "maxScore": 25
+  },
+  "maxScore": 25,
+  "sourceTextType": "Feuilleton-Artikel / Zeitungskritik",
+  "sourceText": "Die Krise der Urteilskraft: Wohin steuert die moderne Kunstkritik?\nVon Dr. Maximilian von Arnim, Frankfurter Kulturspiegel\n\nIn einer Ära der algorithmisch gesteuerten Aufmerksamkeitsökonomie steht die klassische Kunstkritik vor einem beispiellosen Paradigmenwechsel. Eine aktuelle Studie des Instituts für Kunstwissenschaften belegt, dass die Anzahl festangestellter Rezensenten in überregionalen Tageszeitungen seit 2010 um signifikante 42 Prozent gesunken ist. Dr. Elena Marwitz, renommierte Kuratorin an der Pinakothek der Moderne, warnt eindringlich: „Die fundierte Analyse weicht einer flüchtigen Like-Kultur, die ästhetische Tiefe gegen sofortige Gratifikation eintauscht.“\n\nEin exemplarisches Beispiel liefert die jüngste Retrospektive von Anselm Kiefer im Grand Palais. Während Fachkritiker die komplexe Materialität und die historische Referentialität seiner Bleiskulpturen akribisch sezierten, dominierten in den sozialen Netzwerken rein visuelle Oberflächenreize und Selfies vor monumentaler Kulisse. Diese Diskrepanz verdeutlicht das Schwinden einer gemeinsamen diskursiven Basis. Statistisch gesehen vertrauen nur noch 15 Prozent der unter 30-Jährigen auf das Urteil etablierter Institutionen; stattdessen gewinnen digitale Influencer an Deutungshoheit, deren Expertise oft im Schatten kommerzieller Kooperationen steht.\n\nKritik darf jedoch kein elitärer Monolog bleiben. Sie muss sich als Brücke zwischen Werk und Rezipient neu erfinden, ohne dabei den analytischen Rigorismus preiszugeben. Wenn die Kritik ihre Funktion als Korrektiv des überhitzten Marktes behauptet, bleibt sie ein unverzichtbarer Bestandteil einer vitalen Demokratie. Ohne professionelles Korrektiv verkommt Kunst zum bloßen Konsumgut.",
+  "grafikData": []
+}

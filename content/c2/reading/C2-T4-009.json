@@ -1,0 +1,185 @@
+{
+  "id": "C2-T4-009",
+  "level": "C2",
+  "teil": 4,
+  "teil_name": "Meinungen zuordnen",
+  "topic": "Medizinethik",
+  "topic_id": "009",
+  "metadata": {
+    "word_count": 141,
+    "target_grammar": [
+      "Alle Strukturen",
+      "Konjunktiv I/II",
+      "Erweiterte Partizipialkonstruktionen",
+      "Nominalisierung",
+      "Akademischer Stil"
+    ],
+    "target_vocabulary": [],
+    "generated_at": "2026-03-12T00:00:04.735012",
+    "version": 1
+  },
+  "opinion_texts": {
+    "question": "Informed Consent und Patientenautonomie",
+    "texts": [
+      {
+        "name": "Befürworter/in A",
+        "label": "A",
+        "text": "Die Analyse des Themas 'Informed Consent und Patientenautonomie' zeigt, dass ein paradigmatischer Wandel unausweichlich ist. Die bestehenden Strukturen und Denkmodelle reichen nicht mehr aus, um den Herausforderungen gerecht zu werden. Es bedarf eines grundlegenden Neuansatzes, der traditionelle Grenzen überwindet."
+      },
+      {
+        "name": "Kritiker/in B",
+        "label": "B",
+        "text": "Die Forderung nach radikaler Erneuerung im Bereich 'Informed Consent und Patientenautonomie' überschätzt die Notwendigkeit eines Bruchs. Bewährte Ansätze und Institutionen bieten nach wie vor tragfähige Grundlagen, die durch behutsame Reform an neue Gegebenheiten angepasst werden können."
+      },
+      {
+        "name": "Vermittler/in C",
+        "label": "C",
+        "text": "Eine differenzierte Betrachtung des Themas ergibt, dass weder radikale Erneuerung noch bloße Bewahrung dem Gegenstand gerecht werden. Die produktivsten Entwicklungen ergeben sich aus der kritischen Aneignung und Weiterentwicklung bestehender Traditionen im Lichte neuer Erkenntnisse."
+      },
+      {
+        "name": "Praktiker/in D",
+        "label": "D",
+        "text": "Die akademische Debatte um 'Informed Consent und Patientenautonomie' vernachlässigt häufig die praktischen Implikationen. Die Umsetzung theoretischer Konzepte in konkrete Handlungsstrategien erfordert einen pragmatischen Zugang, der die Kluft zwischen Theorie und Praxis überbrückt."
+      }
+    ]
+  },
+  "images": [
+    {
+      "id": "IMG1",
+      "type": "scene",
+      "prompt": "Sophisticated cartoon of experts discussing Medizinethik. Fuxie cartoon style, flat illustration, warm pastel colors, no text.",
+      "filename": "C2-T4-009_scene.png",
+      "placement": "header",
+      "alt_text": "Informed Consent und Patientenautonomie",
+      "dimensions": "768x512"
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q1",
+      "teil": 4,
+      "type": "matching",
+      "stem": "Ein paradigmatischer Wandel ist unausweichlich.",
+      "answer": "A",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Text/Beitrag A",
+        "reasoning": "Die Aussage 'Ein paradigmatischer Wandel ist unausweichlich....' entspricht der Position von A."
+      }
+    },
+    {
+      "id": "Q2",
+      "teil": 4,
+      "type": "matching",
+      "stem": "Die methodologische Annahme, dass bewährte Ansätze bieten nach wie vor tragfähige Grundlagen, prägt die Analyse von:",
+      "answer": "B",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Text/Beitrag B",
+        "reasoning": "[Inferential] Die Aussage 'Bewährte Ansätze bieten nach wie vor tragfähige Gr...' entspricht der Position von B."
+      }
+    },
+    {
+      "id": "Q3",
+      "teil": 4,
+      "type": "matching",
+      "stem": "Die methodologische Annahme, dass weder radikale Erneuerung noch bloße Bewahrung genügen, prägt die Analyse von:",
+      "answer": "C",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Text/Beitrag C",
+        "reasoning": "[Inferential] Die Aussage 'Weder radikale Erneuerung noch bloße Bewahrung gen...' entspricht der Position von C."
+      }
+    },
+    {
+      "id": "Q4",
+      "teil": 4,
+      "type": "matching",
+      "stem": "Die methodologische Annahme, dass Die akademische Debatte vernachlässigt die praktischen Implikationen, prägt die Analyse von:",
+      "answer": "D",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Text/Beitrag D",
+        "reasoning": "[Inferential] Die Aussage 'Die akademische Debatte vernachlässigt die praktis...' entspricht der Position von D."
+      }
+    },
+    {
+      "id": "Q5",
+      "teil": 4,
+      "type": "matching",
+      "stem": "Die methodologische Annahme, dass bestehende Strukturen reichen nicht mehr aus, prägt die Analyse von:",
+      "answer": "A",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Text/Beitrag A",
+        "reasoning": "[Inferential] Die Aussage 'Bestehende Strukturen reichen nicht mehr aus....' entspricht der Position von A."
+      }
+    },
+    {
+      "id": "Q6",
+      "teil": 4,
+      "type": "matching",
+      "stem": "Die methodologische Annahme, dass Die produktivsten Entwicklungen verbinden Tradition und neue Erkenntnisse, prägt die Analyse von:",
+      "answer": "C",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Text/Beitrag C",
+        "reasoning": "[Inferential] Die Aussage 'Die produktivsten Entwicklungen verbinden Traditio...' entspricht der Position von C."
+      }
+    }
+  ],
+  "scoring": {
+    "total_points": 6,
+    "pass_threshold": 4,
+    "grading": [
+      {
+        "range": [
+          5,
+          6
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          4,
+          4
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          3,
+          3
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          1,
+          2
+        ],
+        "label": "Noch üben!",
+        "emoji": "📝"
+      },
+      {
+        "range": [
+          0,
+          0
+        ],
+        "label": "Mehr Übung nötig",
+        "emoji": "💪"
+      }
+    ]
+  },
+  "qa": {
+    "vocab_in_c2_list": true,
+    "grammar_c2_appropriate": true,
+    "word_count_in_range": true,
+    "all_answers_verifiable": true,
+    "image_count": 1,
+    "passed": true
+  }
+}

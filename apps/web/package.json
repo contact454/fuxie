@@ -1,0 +1,38 @@
+{
+    "name": "@fuxie/web",
+    "version": "0.0.1",
+    "private": true,
+    "type": "module",
+    "scripts": {
+        "dev": "next dev --turbopack",
+        "build": "next build",
+        "start": "next start",
+        "lint": "next lint",
+        "typecheck": "tsc --noEmit",
+        "clean": "rm -rf .next .turbo"
+    },
+    "dependencies": {
+        "@fuxie/database": "workspace:*",
+        "@fuxie/shared": "workspace:*",
+        "@fuxie/srs-engine": "workspace:*",
+        "@fuxie/ui": "workspace:*",
+        "@google/generative-ai": "^0.24.1",
+        "firebase": "^12.10.0",
+        "next": "^15.1.6",
+        "next-firebase-auth-edge": "^1.12.0",
+        "react": "^19.0.0",
+        "react-dom": "^19.0.0",
+        "zod": "^3.24.1",
+        "zustand": "^5.0.3"
+    },
+    "devDependencies": {
+        "@fuxie/typescript-config": "workspace:*",
+        "@tailwindcss/postcss": "^4.0.9",
+        "@types/node": "^22.12.0",
+        "@types/react": "^19.0.8",
+        "@types/react-dom": "^19.0.3",
+        "postcss": "^8.5.1",
+        "tailwindcss": "^4.0.9",
+        "typescript": "^5.7.3"
+    }
+}

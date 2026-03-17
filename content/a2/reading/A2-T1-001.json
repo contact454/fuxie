@@ -1,0 +1,249 @@
+{
+  "id": "A2-T1-001",
+  "level": "A2",
+  "teil": 1,
+  "teil_name": "Zeitungsartikel lesen",
+  "topic": "Im Supermarkt",
+  "topic_id": "001",
+  "metadata": {
+    "word_count": 172,
+    "target_grammar": [
+      "Perfekt",
+      "Nebensatz mit weil",
+      "Modalverben"
+    ],
+    "target_vocabulary": [
+      "eröffnen",
+      "Bio-Produkte",
+      "Bauernhof",
+      "Angebot",
+      "Lieferservice",
+      "Kunde",
+      "Obst",
+      "Gemüse",
+      "Öffnungszeiten",
+      "günstig"
+    ],
+    "generated_at": "2026-03-09T21:40:00+07:00",
+    "version": 1
+  },
+  "text": {
+    "title": "Neuer Bio-Markt in der Gartenstraße",
+    "subtitle": "Frische Produkte direkt vom Bauernhof",
+    "body": "Seit Montag gibt es einen neuen Bio-Markt in der Gartenstraße 15 in Berlin-Mitte. Der Laden heißt „Grüner Korb\" und verkauft frisches Obst, Gemüse, Brot und Milchprodukte. Alle Produkte kommen direkt von Bauernhöfen aus Brandenburg.\n\nDie Inhaberin Frau Keller hat den Laden eröffnet, weil sie gesundes Essen für alle Menschen möchte. „Bio-Essen muss nicht teuer sein\", sagt sie. Ein Kilo Äpfel kostet zum Beispiel nur 1,89 Euro.\n\nDer Markt ist von Montag bis Samstag von 8 bis 20 Uhr geöffnet. Am Mittwoch gibt es einen besonderen Familientag: Kinder bekommen dann ein Stück Obst gratis. Außerdem bietet der Laden einen Lieferservice an. Man kann online bestellen und bekommt die Produkte am nächsten Tag nach Hause geliefert. Die Lieferung ist ab 25 Euro Bestellung kostenlos.\n\nIn der ersten Woche sind schon über 300 Kunden gekommen. „Die Leute sind sehr zufrieden\", freut sich Frau Keller.",
+    "source": "Berliner Morgenpost"
+  },
+  "images": [
+    {
+      "id": "IMG1",
+      "type": "scene",
+      "prompt": "Cute cartoon illustration of a bright, modern organic food store on a German city street. A friendly shop owner waves from the doorway, baskets of colorful fruits and vegetables displayed outside, a green storefront with plants. Fuxie cartoon style, flat illustration, warm pastel colors, no text.",
+      "filename": "A2-T1-001_scene.png",
+      "placement": "header",
+      "alt_text": "Neuer Bio-Markt in der Gartenstraße",
+      "dimensions": "768x512"
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q1",
+      "teil": 1,
+      "type": "multiple_choice",
+      "stem": "Woher kommen die Produkte im „Grünen Korb\"?",
+      "options": {
+        "a": "Aus dem Ausland.",
+        "b": "Von Bauernhöfen aus Brandenburg.",
+        "c": "Aus anderen Supermärkten."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Im Text steht: 'Alle Produkte kommen direkt von Bauernhöfen aus Brandenburg.'",
+        "key_evidence": "Alle Produkte kommen direkt von Bauernhöfen aus Brandenburg",
+        "key_vocabulary": [
+          {
+            "word": "Bauernhof",
+            "type": "Nomen",
+            "meaning": "farm"
+          },
+          {
+            "word": "direkt",
+            "type": "Adverb",
+            "meaning": "directly"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q2",
+      "teil": 1,
+      "type": "multiple_choice",
+      "stem": "Warum hat Frau Keller den Laden eröffnet?",
+      "options": {
+        "a": "Weil sie viel Geld verdienen möchte.",
+        "b": "Weil sie gesundes Essen für alle möchte.",
+        "c": "Weil es keinen Supermarkt in der Straße gibt."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Im Text steht: 'Frau Keller hat den Laden eröffnet, weil sie gesundes Essen für alle Menschen möchte.'",
+        "key_evidence": "weil sie gesundes Essen für alle Menschen möchte",
+        "key_vocabulary": [
+          {
+            "word": "eröffnen",
+            "type": "Verb",
+            "meaning": "to open (a store)"
+          },
+          {
+            "word": "gesund",
+            "type": "Adjektiv",
+            "meaning": "healthy"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q3",
+      "teil": 1,
+      "type": "multiple_choice",
+      "stem": "Was passiert am Mittwoch?",
+      "options": {
+        "a": "Der Laden ist geschlossen.",
+        "b": "Kinder bekommen Obst gratis.",
+        "c": "Alle Produkte sind billiger."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Im Text steht: 'Am Mittwoch gibt es einen besonderen Familientag: Kinder bekommen dann ein Stück Obst gratis.'",
+        "key_evidence": "Kinder bekommen dann ein Stück Obst gratis",
+        "key_vocabulary": [
+          {
+            "word": "gratis",
+            "type": "Adverb",
+            "meaning": "free (of charge)"
+          },
+          {
+            "word": "Familientag",
+            "type": "Nomen",
+            "meaning": "family day"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q4",
+      "teil": 1,
+      "type": "multiple_choice",
+      "stem": "Ab welchem Betrag ist die Lieferung kostenlos?",
+      "options": {
+        "a": "Ab 15 Euro.",
+        "b": "Ab 25 Euro.",
+        "c": "Ab 30 Euro."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Im Text steht: 'Die Lieferung ist ab 25 Euro Bestellung kostenlos.'",
+        "key_evidence": "Die Lieferung ist ab 25 Euro Bestellung kostenlos",
+        "key_vocabulary": [
+          {
+            "word": "Lieferung",
+            "type": "Nomen",
+            "meaning": "delivery"
+          },
+          {
+            "word": "kostenlos",
+            "type": "Adjektiv",
+            "meaning": "free of charge"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q5",
+      "teil": 1,
+      "type": "multiple_choice",
+      "stem": "Wie finden die Kunden den neuen Laden?",
+      "options": {
+        "a": "Sie sind nicht zufrieden.",
+        "b": "Sie finden ihn zu teuer.",
+        "c": "Sie sind sehr zufrieden."
+      },
+      "answer": "c",
+      "points": 1,
+      "explanation": {
+        "de": "Im Text steht: '„Die Leute sind sehr zufrieden\", freut sich Frau Keller.'",
+        "key_evidence": "Die Leute sind sehr zufrieden",
+        "key_vocabulary": [
+          {
+            "word": "zufrieden",
+            "type": "Adjektiv",
+            "meaning": "satisfied"
+          },
+          {
+            "word": "Kunde",
+            "type": "Nomen",
+            "meaning": "customer"
+          }
+        ]
+      }
+    }
+  ],
+  "scoring": {
+    "total_points": 5,
+    "pass_threshold": 3,
+    "grading": [
+      {
+        "range": [
+          5,
+          5
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          4,
+          4
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          3,
+          3
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          1,
+          2
+        ],
+        "label": "Noch üben!",
+        "emoji": "📝"
+      },
+      {
+        "range": [
+          0,
+          0
+        ],
+        "label": "Mehr Übung nötig",
+        "emoji": "💪"
+      }
+    ]
+  },
+  "qa": {
+    "vocab_in_a2_list": true,
+    "grammar_a2_only": true,
+    "word_count_in_range": true,
+    "all_answers_verifiable": true,
+    "mc_distractors_plausible": true,
+    "image_count": 1,
+    "passed": true
+  }
+}

@@ -1,0 +1,260 @@
+{
+  "id": "A2-T4-007",
+  "level": "A2",
+  "teil": 4,
+  "teil_name": "Fahrpläne und Kalender lesen",
+  "topic": "Unterwegs",
+  "topic_id": "007",
+  "metadata": {
+    "word_count": 82,
+    "target_grammar": [
+      "Modalverben",
+      "Zeitangaben"
+    ],
+    "target_vocabulary": [
+      "Fahrplan",
+      "Haltestelle",
+      "Abfahrt",
+      "Ankunft",
+      "Linie",
+      "Umsteigen",
+      "Fahrzeit",
+      "Wochentag",
+      "Wochenende",
+      "Feiertag"
+    ],
+    "generated_at": "2026-03-09T22:46:00+07:00",
+    "version": 1
+  },
+  "schedule": {
+    "title": "Fahrplan Regionalbus Linie 42 — Richtung Stadtzentrum",
+    "type": "bus_timetable",
+    "columns": [
+      "Haltestelle",
+      "Mo–Fr",
+      "Samstag",
+      "Sonn-/Feiertag"
+    ],
+    "rows": [
+      [
+        "Am Waldrand",
+        "6:15 / 7:15 / 8:15",
+        "8:15 / 10:15",
+        "9:30 / 11:30"
+      ],
+      [
+        "Schule Birkenweg",
+        "6:22 / 7:22 / 8:22",
+        "8:22 / 10:22",
+        "9:37 / 11:37"
+      ],
+      [
+        "Marktplatz",
+        "6:30 / 7:30 / 8:30",
+        "8:30 / 10:30",
+        "9:45 / 11:45"
+      ],
+      [
+        "Krankenhaus",
+        "6:38 / 7:38 / 8:38",
+        "8:38 / 10:38",
+        "9:53 / 11:53"
+      ],
+      [
+        "Hauptbahnhof (ZOB)",
+        "6:45 / 7:45 / 8:45",
+        "8:45 / 10:45",
+        "10:00 / 12:00"
+      ]
+    ],
+    "footnote": "Weiter Abfahrten: Mo–Fr stündlich bis 20:15. Sa stündlich bis 18:15. So alle 2 Stunden bis 17:30. An Feiertagen gilt der Sonntagsfahrplan. Fahrschein: 2,80 € Einzelfahrt / 22 € Wochenkarte. Kinder unter 6 fahren kostenlos."
+  },
+  "images": [
+    {
+      "id": "IMG1",
+      "type": "schedule",
+      "prompt": "Cute cartoon illustration of a German regional bus at a bus stop in a small town, trees and houses in background, passengers waiting, a timetable board at the stop. Fuxie cartoon style, flat illustration, warm pastel colors, no text.",
+      "filename": "A2-T4-007_schedule.png",
+      "placement": "header",
+      "alt_text": "Fahrplan Regionalbus Linie 42",
+      "dimensions": "768x512"
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q1",
+      "teil": 4,
+      "type": "detail_extraction",
+      "stem": "Wann fährt der erste Bus am Montag von Am Waldrand ab?",
+      "options": {
+        "a": "Um 6:00 Uhr.",
+        "b": "Um 6:15 Uhr.",
+        "c": "Um 7:15 Uhr."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Der erste Bus Mo–Fr von Am Waldrand fährt um 6:15 ab.",
+        "key_evidence": "Am Waldrand: Mo–Fr 6:15",
+        "key_vocabulary": [
+          {
+            "word": "Abfahrt",
+            "type": "Nomen",
+            "meaning": "departure"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q2",
+      "teil": 4,
+      "type": "detail_extraction",
+      "stem": "Wie lange dauert die Fahrt von Am Waldrand bis zum Hauptbahnhof?",
+      "options": {
+        "a": "20 Minuten.",
+        "b": "30 Minuten.",
+        "c": "45 Minuten."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Von 6:15 bis 6:45 sind es 30 Minuten.",
+        "key_evidence": "Am Waldrand 6:15 → Hauptbahnhof 6:45",
+        "key_vocabulary": [
+          {
+            "word": "Fahrzeit",
+            "type": "Nomen",
+            "meaning": "travel time"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q3",
+      "teil": 4,
+      "type": "detail_extraction",
+      "stem": "Wie viel kostet eine Einzelfahrt?",
+      "options": {
+        "a": "2,20 €.",
+        "b": "2,80 €.",
+        "c": "3,50 €."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Eine Einzelfahrt kostet 2,80 €.",
+        "key_evidence": "Fahrschein: 2,80 € Einzelfahrt",
+        "key_vocabulary": [
+          {
+            "word": "Einzelfahrt",
+            "type": "Nomen",
+            "meaning": "single trip"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q4",
+      "teil": 4,
+      "type": "detail_extraction",
+      "stem": "Wann kommt der Bus am Sonntag am Marktplatz an?",
+      "options": {
+        "a": "Um 8:30 und 10:30.",
+        "b": "Um 9:45 und 11:45.",
+        "c": "Um 10:00 und 12:00."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Am Sonntag hält der Bus am Marktplatz um 9:45 und 11:45.",
+        "key_evidence": "Marktplatz: Sonn-/Feiertag 9:45 / 11:45",
+        "key_vocabulary": [
+          {
+            "word": "Haltestelle",
+            "type": "Nomen",
+            "meaning": "bus stop"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q5",
+      "teil": 4,
+      "type": "detail_extraction",
+      "stem": "Welcher Fahrplan gilt an Feiertagen?",
+      "options": {
+        "a": "Der Samstagsfahrplan.",
+        "b": "Der Sonntagsfahrplan.",
+        "c": "Es gibt keinen Bus."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "An Feiertagen gilt der Sonntagsfahrplan.",
+        "key_evidence": "An Feiertagen gilt der Sonntagsfahrplan",
+        "key_vocabulary": [
+          {
+            "word": "Feiertag",
+            "type": "Nomen",
+            "meaning": "public holiday"
+          }
+        ]
+      }
+    }
+  ],
+  "scoring": {
+    "total_points": 5,
+    "pass_threshold": 3,
+    "grading": [
+      {
+        "range": [
+          5,
+          5
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          4,
+          4
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          3,
+          3
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          1,
+          2
+        ],
+        "label": "Noch üben!",
+        "emoji": "📝"
+      },
+      {
+        "range": [
+          0,
+          0
+        ],
+        "label": "Mehr Übung nötig",
+        "emoji": "💪"
+      }
+    ]
+  },
+  "qa": {
+    "vocab_in_a2_list": true,
+    "grammar_a2_only": true,
+    "word_count_in_range": true,
+    "all_answers_verifiable": true,
+    "schedule_data_consistent": true,
+    "image_count": 1,
+    "passed": true
+  }
+}

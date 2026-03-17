@@ -1,0 +1,901 @@
+{
+  "theme": {
+    "slug": "c1-bioethik-gentechnik",
+    "name": "Bioethik & Gentechnik",
+    "nameVi": "Đạo đức sinh học & Công nghệ gen",
+    "nameEn": "Bioethics & Genetic Engineering",
+    "sortOrder": 3,
+    "imageUrl": "/images/themes/c1-bioethik-gentechnik.png"
+  },
+  "words": [
+    {
+      "word": "Eingriff",
+      "article": "MASKULIN",
+      "plural": "die Eingriffe",
+      "wordType": "NOMEN",
+      "meaningVi": "sự can thiệp (y tế), thủ thuật",
+      "meaningEn": "intervention, procedure (medical)",
+      "exampleSentence1": "Medizinische Eingriffe, die potenziell die Keimbahn verändern, werfen komplexe ethische Fragen auf.",
+      "exampleTranslation1": "Các can thiệp y tế có khả năng thay đổi dòng tế bào mầm đặt ra những câu hỏi đạo đức phức tạp.",
+      "exampleSentence2": "Der chirurgische Eingriff verlief komplikationslos, doch die Langzeitfolgen sind noch ungewiss.",
+      "exampleTranslation2": "Thủ thuật phẫu thuật diễn ra không biến chứng, nhưng hậu quả lâu dài vẫn chưa chắc chắn.",
+      "notes": "Fachsprachlich/bildungssprachlich. Bezieht sich oft auf medizinische, aber auch rechtliche oder politische Interventionen. Kollokation: einen Eingriff vornehmen.",
+      "imageUrl": "/images/vocab/c1-bioethik-gentechnik/der-eingriff.png"
+    },
+    {
+      "word": "Stammzelle",
+      "article": "FEMININ",
+      "plural": "die Stammzellen",
+      "wordType": "NOMEN",
+      "meaningVi": "tế bào gốc",
+      "meaningEn": "stem cell",
+      "exampleSentence1": "Die Forschung an embryonalen Stammzellen ist aufgrund ihres ethischen Potenzials weltweit kontrovers diskutiert.",
+      "exampleTranslation1": "Nghiên cứu về tế bào gốc phôi thai được tranh luận gay gắt trên toàn thế giới do tiềm năng đạo đức của chúng.",
+      "exampleSentence2": "Adulte Stammzellen bieten eine vielversprechende Alternative für die regenerative Medizin, ohne die gleichen ethischen Bedenken hervorzurufen.",
+      "exampleTranslation2": "Tế bào gốc trưởng thành mang lại một giải pháp thay thế đầy hứa hẹn cho y học tái tạo, mà không gây ra những lo ngại đạo đức tương tự.",
+      "notes": "Fachsprachlich. Wichtig im Kontext von Gentechnik und Bioethik. Es gibt embryonale und adulte Stammzellen.",
+      "imageUrl": "/images/vocab/c1-bioethik-gentechnik/die-stammzelle.png"
+    },
+    {
+      "word": "Gensequenzierung",
+      "article": "FEMININ",
+      "plural": "die Gensequenzierungen",
+      "wordType": "NOMEN",
+      "meaningVi": "giải trình tự gen",
+      "meaningEn": "gene sequencing",
+      "exampleSentence1": "Fortschritte in der Gensequenzierung ermöglichen es nun, individuelle Risiken für bestimmte Krankheiten präziser zu bestimmen.",
+      "exampleTranslation1": "Những tiến bộ trong giải trình tự gen hiện cho phép xác định chính xác hơn các rủi ro cá nhân đối với một số bệnh nhất định.",
+      "exampleSentence2": "Die umfassende Gensequenzierung eines Organismus kann tiefgreifende Einblicke in seine biologischen Funktionen liefern.",
+      "exampleTranslation2": "Việc giải trình tự gen toàn diện của một sinh vật có thể cung cấp những hiểu biết sâu sắc về các chức năng sinh học của nó.",
+      "notes": "Fachsprachlich. Beschreibt den Prozess der Bestimmung der Reihenfolge von Nukleotiden in einem DNA-Molekül. Oft auch als 'Genomsequenzierung' bezeichnet.",
+      "imageUrl": "/images/vocab/c1-bioethik-gentechnik/die-gensequenzierung.png"
+    },
+    {
+      "word": "Reproduktionsmedizin",
+      "article": "FEMININ",
+      "plural": null,
+      "wordType": "NOMEN",
+      "meaningVi": "y học sinh sản",
+      "meaningEn": "reproductive medicine",
+      "exampleSentence1": "Die Reproduktionsmedizin bietet Paaren mit unerfülltem Kinderwunsch vielfältige Möglichkeiten, wirft jedoch auch ethische Fragen auf.",
+      "exampleTranslation1": "Y học sinh sản mang đến nhiều lựa chọn cho các cặp vợ chồng hiếm muộn, nhưng cũng đặt ra những câu hỏi đạo đức.",
+      "exampleSentence2": "Die Debatte über die Grenzen der Reproduktionsmedizin betrifft Aspekte wie Leihmutterschaft und die Nutzung von Spenderkeimzellen.",
+      "exampleTranslation2": "Cuộc tranh luận về giới hạn của y học sinh sản liên quan đến các khía cạnh như mang thai hộ và việc sử dụng tế bào mầm hiến tặng.",
+      "notes": "Fachsprachlich. Ein Teilgebiet der Medizin, das sich mit der Fortpflanzung und deren Störungen befasst. Wichtiger Bereich der Bioethik.",
+      "imageUrl": "/images/vocab/c1-bioethik-gentechnik/die-reproduktionsmedizin.png"
+    },
+    {
+      "word": "Vererbung",
+      "article": "FEMININ",
+      "plural": null,
+      "wordType": "NOMEN",
+      "meaningVi": "sự di truyền",
+      "meaningEn": "heredity, inheritance",
+      "exampleSentence1": "Die Gesetzmäßigkeiten der Vererbung sind grundlegend für das Verständnis genetischer Krankheiten und ihrer Prävention.",
+      "exampleTranslation1": "Các quy luật di truyền là cơ sở để hiểu về các bệnh di truyền và cách phòng ngừa chúng.",
+      "exampleSentence2": "Bestimmte Merkmale werden dominant vererbt, während andere rezessiv sind und nur unter bestimmten Bedingungen zum Ausdruck kommen.",
+      "exampleTranslation2": "Một số đặc điểm được di truyền trội, trong khi những đặc điểm khác là lặn và chỉ biểu hiện trong những điều kiện nhất định.",
+      "notes": "Bildungssprachlich/Fachsprachlich. Beschreibt den Prozess der Übertragung von genetischen Merkmalen von Eltern auf Nachkommen. Nicht zu verwechseln mit 'das Erbe' (legacy).",
+      "imageUrl": "/images/vocab/c1-bioethik-gentechnik/die-vererbung.png"
+    },
+    {
+      "word": "Prädisposition",
+      "article": "FEMININ",
+      "plural": "die Prädispositionen",
+      "wordType": "NOMEN",
+      "meaningVi": "khuynh hướng, sự dễ mắc bệnh",
+      "meaningEn": "predisposition, susceptibility",
+      "exampleSentence1": "Eine genetische Prädisposition für bestimmte Krankheiten bedeutet nicht zwangsläufig deren Ausbruch, sondern erhöht lediglich das Risiko.",
+      "exampleTranslation1": "Khuynh hướng di truyền đối với một số bệnh nhất định không nhất thiết có nghĩa là bệnh sẽ bùng phát, mà chỉ làm tăng nguy cơ.",
+      "exampleSentence2": "Die Forschung versucht, die genauen Mechanismen zu entschlüsseln, die einer erblichen Prädisposition zugrunde liegen.",
+      "exampleTranslation2": "Nghiên cứu đang cố gắng giải mã các cơ chế chính xác làm nền tảng cho một khuynh hướng di truyền.",
+      "notes": "Fachsprachlich/bildungssprachlich. Beschreibt eine erhöhte Anfälligkeit oder Veranlagung für etwas, oft im medizinischen Kontext. Synonym: die Anfälligkeit.",
+      "imageUrl": "/images/vocab/c1-bioethik-gentechnik/die-praedisposition.png"
+    },
+    {
+      "word": "Konsens",
+      "article": "MASKULIN",
+      "plural": "die Konsense",
+      "wordType": "NOMEN",
+      "meaningVi": "sự đồng thuận",
+      "meaningEn": "consensus",
+      "exampleSentence1": "Ein breiter gesellschaftlicher Konsens über die ethischen Grenzen der Gentechnik ist für eine verantwortungsvolle Regulierung unerlässlich.",
+      "exampleTranslation1": "Một sự đồng thuận xã hội rộng rãi về giới hạn đạo đức của kỹ thuật di truyền là không thể thiếu cho một sự điều chỉnh có trách nhiệm.",
+      "exampleSentence2": "Trotz intensiver Diskussionen konnte kein Konsens bezüglich der Legalisierung der Keimbahntherapie erzielt werden.",
+      "exampleTranslation2": "Mặc dù đã có những cuộc thảo luận gay gắt, vẫn không đạt được sự đồng thuận về việc hợp pháp hóa liệu pháp tế bào mầm.",
+      "notes": "Bildungssprachlich. Beschreibt eine übereinstimmende Meinung oder Einigung. Kollokation: einen Konsens erzielen/finden.",
+      "imageUrl": "/images/vocab/c1-bioethik-gentechnik/der-konsens.png"
+    },
+    {
+      "word": "Abwägung",
+      "article": "FEMININ",
+      "plural": "die Abwägungen",
+      "wordType": "NOMEN",
+      "meaningVi": "sự cân nhắc, đánh giá",
+      "meaningEn": "weighing, consideration (of pros and cons)",
+      "exampleSentence1": "Bei bioethischen Fragestellungen ist eine sorgfältige Abwägung von Nutzen und Risiken stets von höchster Priorität.",
+      "exampleTranslation1": "Trong các vấn đề đạo đức sinh học, việc cân nhắc kỹ lưỡng giữa lợi ích và rủi ro luôn là ưu tiên hàng đầu.",
+      "exampleSentence2": "Die gerichtliche Entscheidung erforderte eine komplexe Abwägung der Rechte des Individuums gegenüber dem Schutz der Gesellschaft.",
+      "exampleTranslation2": "Quyết định của tòa án đòi hỏi một sự cân nhắc phức tạp giữa quyền của cá nhân và sự bảo vệ của xã hội.",
+      "notes": "Bildungssprachlich. Bezieht sich auf den Prozess des sorgfältigen Überlegens verschiedener Argumente oder Aspekte. Kollokation: eine Abwägung treffen.",
+      "imageUrl": "/images/vocab/c1-bioethik-gentechnik/die-abwaegung.png"
+    },
+    {
+      "word": "Implikation",
+      "article": "FEMININ",
+      "plural": "die Implikationen",
+      "wordType": "NOMEN",
+      "meaningVi": "hàm ý, hệ quả",
+      "meaningEn": "implication",
+      "exampleSentence1": "Die langfristigen Implikationen der Genom-Editierung für die menschliche Spezies sind Gegenstand intensiver Forschung und Debatte.",
+      "exampleTranslation1": "Những hàm ý dài hạn của việc chỉnh sửa bộ gen đối với loài người là đối tượng của nghiên cứu và tranh luận chuyên sâu.",
+      "exampleSentence2": "Jede technologische Neuerung birgt unweigerlich ethische und soziale Implikationen, die es zu berücksichtigen gilt.",
+      "exampleTranslation2": "Mỗi đổi mới công nghệ tất yếu mang theo những hàm ý đạo đức và xã hội cần được xem xét.",
+      "notes": "Bildungssprachlich. Beschreibt die Folgerungen, Konsequenzen oder stillschweigenden Bedeutungen einer Aussage oder Handlung.",
+      "imageUrl": "/images/vocab/c1-bioethik-gentechnik/die-implikation.png"
+    },
+    {
+      "word": "Klonierung",
+      "article": "FEMININ",
+      "plural": "die Klonierungen",
+      "wordType": "NOMEN",
+      "meaningVi": "sự nhân bản vô tính",
+      "meaningEn": "cloning",
+      "exampleSentence1": "Die Klonierung von Nutztieren zu Forschungszwecken ist in vielen Ländern erlaubt, die Klonierung des Menschen jedoch weltweit verboten.",
+      "exampleTranslation1": "Việc nhân bản vô tính động vật nuôi vì mục đích nghiên cứu được phép ở nhiều quốc gia, nhưng việc nhân bản vô tính con người bị cấm trên toàn thế giới.",
+      "exampleSentence2": "Therapeutische Klonierung zielt darauf ab, Stammzellen für medizinische Behandlungen zu gewinnen, ohne einen ganzen Organismus zu erzeugen.",
+      "exampleTranslation2": "Nhân bản vô tính trị liệu nhằm mục đích thu thập tế bào gốc để điều trị y tế, mà không tạo ra một sinh vật hoàn chỉnh.",
+      "notes": "Fachsprachlich. Bezeichnet den Vorgang der Erzeugung genetisch identischer Kopien von Zellen oder Organismen. Wird unterschieden in reproduktive und therapeutische Klonierung.",
+      "imageUrl": "/images/vocab/c1-bioethik-gentechnik/die-klonierung.png"
+    },
+    {
+      "word": "Diskurs",
+      "article": "MASKULIN",
+      "plural": "die Diskurse",
+      "wordType": "NOMEN",
+      "meaningVi": "diễn ngôn, cuộc thảo luận chuyên sâu",
+      "meaningEn": "discourse, in-depth discussion",
+      "exampleSentence1": "Der öffentliche Diskurs über die ethischen Grenzen der pränatalen Diagnostik ist von großer Komplexität geprägt.",
+      "exampleTranslation1": "Diễn ngôn công khai về giới hạn đạo đức của chẩn đoán trước sinh được đặc trưng bởi sự phức tạp lớn.",
+      "exampleSentence2": "Ein fruchtbarer Diskurs erfordert die Bereitschaft aller Beteiligten, unterschiedliche Perspektiven zu berücksichtigen und abzuwägen.",
+      "exampleTranslation2": "Một diễn ngôn hiệu quả đòi hỏi sự sẵn lòng của tất cả các bên liên quan để xem xét và cân nhắc các quan điểm khác nhau.",
+      "notes": "Bildungssprachlich/fachsprachlich. Bezeichnet eine umfassende, strukturierte Auseinandersetzung mit einem Thema, oft im wissenschaftlichen oder politischen Kontext.",
+      "imageUrl": "/images/vocab/c1-bioethik-gentechnik/der-diskurs.png"
+    },
+    {
+      "word": "Ethos",
+      "article": "NEUTRUM",
+      "plural": null,
+      "wordType": "NOMEN",
+      "meaningVi": "đạo đức, đặc tính đạo đức",
+      "meaningEn": "ethos, moral character",
+      "exampleSentence1": "Das wissenschaftliche Ethos verlangt von Forschenden, ihre Arbeit transparent und nachvollziehbar zu gestalten.",
+      "exampleTranslation1": "Đặc tính đạo đức khoa học đòi hỏi các nhà nghiên cứu phải làm cho công việc của họ minh bạch và có thể hiểu được.",
+      "exampleSentence2": "Ein starkes berufliches Ethos ist unabdingbar, um in ethisch sensiblen Bereichen wie der Gentechnik verantwortungsvoll handeln zu können.",
+      "exampleTranslation2": "Một đặc tính đạo đức nghề nghiệp vững chắc là không thể thiếu để có thể hành động có trách nhiệm trong các lĩnh vực nhạy cảm về đạo đức như kỹ thuật di truyền.",
+      "notes": "Bildungssprachlich/gehoben. Beschreibt die grundlegende Haltung, die moralischen Prinzipien und Werte einer Person, Gruppe oder Kultur. Plural 'die Ethe' ist selten.",
+      "imageUrl": "/images/vocab/c1-bioethik-gentechnik/das-ethos.png"
+    },
+    {
+      "word": "Dignität",
+      "article": "FEMININ",
+      "plural": null,
+      "wordType": "NOMEN",
+      "meaningVi": "phẩm giá",
+      "meaningEn": "dignity",
+      "exampleSentence1": "Der Schutz der menschlichen Dignität ist ein zentraler Grundsatz in der Bioethik und limitiert die Möglichkeiten genetischer Interventionen.",
+      "exampleTranslation1": "Bảo vệ phẩm giá con người là một nguyên tắc cốt lõi trong đạo đức sinh học và giới hạn các khả năng can thiệp di truyền.",
+      "exampleSentence2": "Jeder Patient hat das Recht auf Respekt seiner Dignität, unabhängig von seinem Gesundheitszustand oder seiner sozialen Stellung.",
+      "exampleTranslation2": "Mỗi bệnh nhân có quyền được tôn trọng phẩm giá của mình, bất kể tình trạng sức khỏe hay địa vị xã hội.",
+      "notes": "Gehoben/bildungssprachlich. Bezeichnet den inneren Wert und die Würde des Menschen, die unantastbar sind. Synonym: die Würde.",
+      "imageUrl": "/images/vocab/c1-bioethik-gentechnik/die-dignitaet.png"
+    },
+    {
+      "word": "Eugenik",
+      "article": "FEMININ",
+      "plural": null,
+      "wordType": "NOMEN",
+      "meaningVi": "thuyết ưu sinh",
+      "meaningEn": "eugenics",
+      "exampleSentence1": "Die historischen Verbrechen im Namen der Eugenik mahnen uns, die ethischen Grenzen der Gentechnik niemals zu überschreiten.",
+      "exampleTranslation1": "Những tội ác lịch sử dưới danh nghĩa thuyết ưu sinh nhắc nhở chúng ta không bao giờ được vượt quá giới hạn đạo đức của kỹ thuật di truyền.",
+      "exampleSentence2": "Moderne Formen der Eugenik könnten sich durch die gezielte Auswahl von Embryonen mit 'gewünschten' Eigenschaften manifestieren.",
+      "exampleTranslation2": "Các hình thức ưu sinh hiện đại có thể biểu hiện thông qua việc lựa chọn phôi thai có chủ đích với các đặc tính 'mong muốn'.",
+      "notes": "Fachsprachlich/bildungssprachlich. Eine umstrittene Bewegung, die darauf abzielt, die menschliche Spezies durch selektive Züchtung zu verbessern. Historisch stark belastet.",
+      "imageUrl": "/images/vocab/c1-bioethik-gentechnik/die-eugenik.png"
+    },
+    {
+      "word": "Autonomie",
+      "article": "FEMININ",
+      "plural": null,
+      "wordType": "NOMEN",
+      "meaningVi": "quyền tự chủ, tự quyết",
+      "meaningEn": "autonomy",
+      "exampleSentence1": "Das Prinzip der Patientenautonomie ist in der medizinischen Ethik von zentraler Bedeutung und erfordert eine umfassende Aufklärung über Behandlungsoptionen.",
+      "exampleTranslation1": "Nguyên tắc tự chủ của bệnh nhân có ý nghĩa trung tâm trong đạo đức y học và đòi hỏi phải cung cấp thông tin toàn diện về các lựa chọn điều trị.",
+      "exampleSentence2": "Die rechtliche Anerkennung der reproduktiven Autonomie ermöglicht es Individuen, über ihre Familienplanung selbst zu entscheiden.",
+      "exampleTranslation2": "Sự công nhận pháp lý về quyền tự chủ sinh sản cho phép các cá nhân tự quyết định kế hoạch hóa gia đình của mình.",
+      "notes": "Bildungssprachlich. Bezeichnet das Recht und die Fähigkeit eines Individuums, selbstbestimmt Entscheidungen zu treffen und zu handeln. Gegenteil: Heteronomie.",
+      "imageUrl": "/images/vocab/c1-bioethik-gentechnik/die-autonomie.png"
+    },
+    {
+      "word": "Genom-Editierung",
+      "article": "FEMININ",
+      "plural": null,
+      "wordType": "NOMEN",
+      "meaningVi": "chỉnh sửa bộ gen",
+      "meaningEn": "genome editing",
+      "exampleSentence1": "Die Genom-Editierung mittels CRISPR/Cas9-Technologie eröffnet revolutionäre Möglichkeiten zur Heilung genetisch bedingter Krankheiten.",
+      "exampleTranslation1": "Chỉnh sửa bộ gen bằng công nghệ CRISPR/Cas9 mở ra những khả năng cách mạng để chữa trị các bệnh di truyền.",
+      "exampleSentence2": "Die ethische Debatte um die Genom-Editierung konzentriert sich auf die Frage, ob solche Eingriffe an menschlichen Keimzellen zulässig sein sollten.",
+      "exampleTranslation2": "Cuộc tranh luận đạo đức xung quanh việc chỉnh sửa bộ gen tập trung vào câu hỏi liệu những can thiệp như vậy trên tế bào mầm người có nên được phép hay không.",
+      "notes": "Fachsprachlich. Ein Verfahren, bei dem gezielt Veränderungen im Genom eines Organismus vorgenommen werden. Auch 'Genomeditierung' oder 'Geneditierung'.",
+      "imageUrl": "/images/vocab/c1-bioethik-gentechnik/die-genom-editierung.png"
+    },
+    {
+      "word": "Patentrecht",
+      "article": "NEUTRUM",
+      "plural": "die Patentrechte",
+      "wordType": "NOMEN",
+      "meaningVi": "luật bằng sáng chế",
+      "meaningEn": "patent law",
+      "exampleSentence1": "Das Patentrecht spielt eine entscheidende Rolle bei der Regulierung von biotechnologischen Innovationen und dem Schutz geistigen Eigentums.",
+      "exampleTranslation1": "Luật bằng sáng chế đóng vai trò quyết định trong việc điều chỉnh các đổi mới công nghệ sinh học và bảo vệ quyền sở hữu trí tuệ.",
+      "exampleSentence2": "Die Frage der Patentierbarkeit von Genen und Lebewesen hat im Rahmen des Patentrechts intensive Diskussionen ausgelöst.",
+      "exampleTranslation2": "Vấn đề về khả năng cấp bằng sáng chế cho gen và sinh vật đã gây ra những cuộc thảo luận gay gắt trong khuôn khổ luật bằng sáng chế.",
+      "notes": "Fachsprachlich. Bezieht sich auf die rechtlichen Bestimmungen, die die Vergabe und den Schutz von Patenten regeln. Besonders relevant für Pharma- und Biotechnologie.",
+      "imageUrl": "/images/vocab/c1-bioethik-gentechnik/das-patentrecht.png"
+    },
+    {
+      "word": "modifizieren",
+      "article": null,
+      "plural": null,
+      "wordType": "VERB",
+      "meaningVi": "sửa đổi, điều chỉnh",
+      "meaningEn": "to modify, to adjust",
+      "exampleSentence1": "Wissenschaftler versuchen, Pflanzen gentechnisch zu modifizieren, um sie widerstandsfähiger gegen Schädlinge zu machen.",
+      "exampleTranslation1": "Các nhà khoa học đang cố gắng sửa đổi gen thực vật để làm cho chúng kháng sâu bệnh tốt hơn.",
+      "exampleSentence2": "Die Fähigkeit, das menschliche Genom zu modifizieren, birgt immense Chancen, aber auch erhebliche ethische Risiken.",
+      "exampleTranslation2": "Khả năng sửa đổi bộ gen người mang lại những cơ hội to lớn, nhưng cũng tiềm ẩn những rủi ro đạo đức đáng kể.",
+      "notes": "Fachsprachlich/bildungssprachlich. Bedeutet, etwas in seiner Form, Beschaffenheit oder Funktion zu ändern. Synonym: verändern (aber 'modifizieren' ist formeller).",
+      "imageUrl": "/images/vocab/c1-bioethik-gentechnik/modifizieren.png",
+      "conjugation": {
+        "praesens": {
+          "ich": "modifiziere",
+          "du": "modifizierst",
+          "er/sie/es": "modifiziert",
+          "wir": "modifizieren",
+          "ihr": "modifiziert",
+          "sie/Sie": "modifizieren"
+        },
+        "praeteritum": {
+          "ich": "modifizierte",
+          "du": "modifiziertest",
+          "er/sie/es": "modifizierte",
+          "wir": "modifizierten",
+          "ihr": "modifiziertet",
+          "sie/Sie": "modifizierten"
+        },
+        "perfekt": {
+          "hilfsverb": "haben",
+          "partizip2": "modifiziert"
+        },
+        "konjunktiv2": {
+          "ich": "modifizierte",
+          "du": "modifiziertest",
+          "er/sie/es": "modifizierte",
+          "wir": "modifizierten",
+          "ihr": "modifiziertet",
+          "sie/Sie": "modifizierten"
+        },
+        "imperativ": {
+          "du": "modifiziere",
+          "ihr": "modifiziert",
+          "Sie": "modifizieren Sie"
+        }
+      }
+    },
+    {
+      "word": "manipulieren",
+      "article": null,
+      "plural": null,
+      "wordType": "VERB",
+      "meaningVi": "thao túng, điều khiển",
+      "meaningEn": "to manipulate",
+      "exampleSentence1": "Die Angst, dass die Gentechnik dazu missbraucht werden könnte, menschliche Eigenschaften zu manipulieren, ist weit verbreitet.",
+      "exampleTranslation1": "Nỗi sợ rằng kỹ thuật di truyền có thể bị lạm dụng để thao túng các đặc điểm của con người là phổ biến.",
+      "exampleSentence2": "Es ist entscheidend, genetische Daten nicht zu manipulieren, um Forschungsergebnisse zu verfälschen.",
+      "exampleTranslation2": "Điều quan trọng là không được thao túng dữ liệu di truyền để làm sai lệch kết quả nghiên cứu.",
+      "notes": "C1. Kann sowohl im neutralen Sinne (technisch) als auch im negativen Sinne (täuschen, beeinflussen) verwendet werden. Hier oft im negativen ethischen Kontext.",
+      "imageUrl": "/images/vocab/c1-bioethik-gentechnik/manipulieren.png",
+      "conjugation": {
+        "praesens": {
+          "ich": "manipuliere",
+          "du": "manipulierst",
+          "er/sie/es": "manipuliert",
+          "wir": "manipulieren",
+          "ihr": "manipuliert",
+          "sie/Sie": "manipulieren"
+        },
+        "praeteritum": {
+          "ich": "manipulierte",
+          "du": "manipuliertest",
+          "er/sie/es": "manipulierte",
+          "wir": "manipulierten",
+          "ihr": "manipuliertet",
+          "sie/Sie": "manipulierten"
+        },
+        "perfekt": {
+          "hilfsverb": "haben",
+          "partizip2": "manipuliert"
+        },
+        "konjunktiv2": {
+          "ich": "manipulierte",
+          "du": "manipuliertest",
+          "er/sie/es": "manipulierte",
+          "wir": "manipulierten",
+          "ihr": "manipuliertet",
+          "sie/Sie": "manipulierten"
+        },
+        "imperativ": {
+          "du": "manipuliere",
+          "ihr": "manipuliert",
+          "Sie": "manipulieren Sie"
+        }
+      }
+    },
+    {
+      "word": "erörtern",
+      "article": null,
+      "plural": null,
+      "wordType": "VERB",
+      "meaningVi": "thảo luận, bàn bạc kỹ lưỡng",
+      "meaningEn": "to discuss, to debate, to deliberate",
+      "exampleSentence1": "Die ethischen Aspekte der pränatalen Diagnostik müssen in einem breiten gesellschaftlichen Diskurs erörtert werden.",
+      "exampleTranslation1": "Các khía cạnh đạo đức của chẩn đoán trước sinh cần được thảo luận kỹ lưỡng trong một diễn ngôn xã hội rộng rãi.",
+      "exampleSentence2": "Der Ausschuss wird die potenziellen Auswirkungen der neuen Gesetzgebung auf die Forschung ausführlich erörtern.",
+      "exampleTranslation2": "Ủy ban sẽ thảo luận chi tiết về những tác động tiềm tàng của luật mới đối với nghiên cứu.",
+      "notes": "Bildungssprachlich. Bedeutet, ein Thema ausführlich und kritisch zu besprechen, oft mit dem Ziel, eine Lösung oder ein Verständnis zu finden. Synonym: besprechen, diskutieren (aber formeller).",
+      "imageUrl": "/images/vocab/c1-bioethik-gentechnik/eroertern.png",
+      "conjugation": {
+        "praesens": {
+          "ich": "erörtere",
+          "du": "erörterst",
+          "er/sie/es": "erörtert",
+          "wir": "erörtern",
+          "ihr": "erörtert",
+          "sie/Sie": "erörtern"
+        },
+        "praeteritum": {
+          "ich": "erörterte",
+          "du": "erörtertest",
+          "er/sie/es": "erörterte",
+          "wir": "erörterten",
+          "ihr": "erörtetet",
+          "sie/Sie": "erörterten"
+        },
+        "perfekt": {
+          "hilfsverb": "haben",
+          "partizip2": "erörtert"
+        },
+        "konjunktiv2": {
+          "ich": "erörterte",
+          "du": "erörtertest",
+          "er/sie/es": "erörterte",
+          "wir": "erörterten",
+          "ihr": "erörtetet",
+          "sie/Sie": "erörterten"
+        },
+        "imperativ": {
+          "du": "erörtere",
+          "ihr": "erörtert",
+          "Sie": "erörtern Sie"
+        }
+      }
+    },
+    {
+      "word": "abwägen",
+      "article": null,
+      "plural": null,
+      "wordType": "VERB",
+      "meaningVi": "cân nhắc, đánh giá",
+      "meaningEn": "to weigh (up), to consider (pros and cons)",
+      "exampleSentence1": "Politiker müssen die Interessen der Wirtschaft gegen die ethischen Bedenken der Bevölkerung abwägen, wenn sie über Gentechnik entscheiden.",
+      "exampleTranslation1": "Các chính trị gia phải cân nhắc lợi ích kinh tế với những lo ngại về đạo đức của người dân khi quyết định về kỹ thuật di truyền.",
+      "exampleSentence2": "Vor einer schwerwiegenden Entscheidung sollte man stets alle Vor- und Nachteile sorgfältig abwägen.",
+      "exampleTranslation2": "Trước một quyết định quan trọng, người ta luôn phải cân nhắc cẩn thận tất cả các ưu và nhược điểm.",
+      "notes": "Bildungssprachlich. Beschreibt den Prozess des Vergleichens und Bewertens verschiedener Optionen oder Argumente. Konjugation: wägt ab, wog ab, hat abgewogen.",
+      "imageUrl": "/images/vocab/c1-bioethik-gentechnik/abwaegen.png",
+      "conjugation": {
+        "praesens": {
+          "ich": "wäge ab",
+          "du": "wägst ab",
+          "er/sie/es": "wägt ab",
+          "wir": "wägen ab",
+          "ihr": "wägt ab",
+          "sie/Sie": "wägen ab"
+        },
+        "praeteritum": {
+          "ich": "wog ab",
+          "du": "wogst ab",
+          "er/sie/es": "wog ab",
+          "wir": "wogen ab",
+          "ihr": "wogt ab",
+          "sie/Sie": "wogen ab"
+        },
+        "perfekt": {
+          "hilfsverb": "haben",
+          "partizip2": "abgewogen"
+        },
+        "konjunktiv2": {
+          "ich": "wöge ab",
+          "du": "wögest ab",
+          "er/sie/es": "wöge ab",
+          "wir": "wögen ab",
+          "ihr": "wöget ab",
+          "sie/Sie": "wögen ab"
+        },
+        "imperativ": {
+          "du": "wäge ab",
+          "ihr": "wägt ab",
+          "Sie": "wägen Sie ab"
+        }
+      }
+    },
+    {
+      "word": "implizieren",
+      "article": null,
+      "plural": null,
+      "wordType": "VERB",
+      "meaningVi": "ngụ ý, hàm ý",
+      "meaningEn": "to imply, to entail",
+      "exampleSentence1": "Die Möglichkeit, genetische Defekte zu korrigieren, impliziert die Notwendigkeit einer klaren ethischen Richtlinie.",
+      "exampleTranslation1": "Khả năng khắc phục các khuyết tật di truyền ngụ ý sự cần thiết của một hướng dẫn đạo đức rõ ràng.",
+      "exampleSentence2": "Seine Aussage impliziert, dass es noch unentdeckte Risiken in der Anwendung der Technologie gibt.",
+      "exampleTranslation2": "Tuyên bố của ông ngụ ý rằng vẫn còn những rủi ro chưa được phát hiện trong việc áp dụng công nghệ này.",
+      "notes": "Bildungssprachlich. Bedeutet, etwas indirekt anzudeuten oder als logische Konsequenz nach sich zu ziehen. Nicht verwechseln mit 'interpretieren'.",
+      "imageUrl": "/images/vocab/c1-bioethik-gentechnik/implizieren.png",
+      "conjugation": {
+        "praesens": {
+          "ich": "impliziere",
+          "du": "implizierst",
+          "er/sie/es": "impliziert",
+          "wir": "implizieren",
+          "ihr": "impliziert",
+          "sie/Sie": "implizieren"
+        },
+        "praeteritum": {
+          "ich": "implizierte",
+          "du": "impliziertest",
+          "er/sie/es": "implizierte",
+          "wir": "implizierten",
+          "ihr": "impliziertet",
+          "sie/Sie": "implizierten"
+        },
+        "perfekt": {
+          "hilfsverb": "haben",
+          "partizip2": "impliziert"
+        },
+        "konjunktiv2": {
+          "ich": "implizierte",
+          "du": "impliziertest",
+          "er/sie/es": "implizierte",
+          "wir": "implizierten",
+          "ihr": "impliziertet",
+          "sie/Sie": "implizierten"
+        },
+        "imperativ": {
+          "du": "impliziere",
+          "ihr": "impliziert",
+          "Sie": "implizieren Sie"
+        }
+      }
+    },
+    {
+      "word": "legitimieren",
+      "article": null,
+      "plural": null,
+      "wordType": "VERB",
+      "meaningVi": "hợp pháp hóa, chứng minh tính hợp pháp",
+      "meaningEn": "to legitimize, to justify",
+      "exampleSentence1": "Die wissenschaftliche Forschung muss sich stets durch ihren Beitrag zum Wohle der Menschheit legitimieren.",
+      "exampleTranslation1": "Nghiên cứu khoa học luôn phải tự chứng minh tính hợp pháp của mình thông qua đóng góp vào lợi ích của nhân loại.",
+      "exampleSentence2": "Manche Kritiker befürchten, dass die Freigabe bestimmter gentechnischer Verfahren die Tür für ethisch fragwürdige Praktiken legitimieren könnte.",
+      "exampleTranslation2": "Một số nhà phê bình lo ngại rằng việc cho phép một số quy trình kỹ thuật di truyền nhất định có thể hợp pháp hóa các thực hành đáng ngờ về mặt đạo đức.",
+      "notes": "Bildungssprachlich/fachsprachlich. Bedeutet, etwas als rechtmäßig, gerechtfertigt oder moralisch vertretbar anzuerkennen oder zu machen.",
+      "imageUrl": "/images/vocab/c1-bioethik-gentechnik/legitimieren.png",
+      "conjugation": {
+        "praesens": {
+          "ich": "legitimiere",
+          "du": "legitimierst",
+          "er/sie/es": "legitimiert",
+          "wir": "legitimieren",
+          "ihr": "legitimiert",
+          "sie/Sie": "legitimieren"
+        },
+        "praeteritum": {
+          "ich": "legitimierte",
+          "du": "legitimiertest",
+          "er/sie/es": "legitimierte",
+          "wir": "legitimierten",
+          "ihr": "legitimiertet",
+          "sie/Sie": "legitimierten"
+        },
+        "perfekt": {
+          "hilfsverb": "haben",
+          "partizip2": "legitimiert"
+        },
+        "konjunktiv2": {
+          "ich": "legitimierte",
+          "du": "legitimiertest",
+          "er/sie/es": "legitimierte",
+          "wir": "legitimierten",
+          "ihr": "legitimiertet",
+          "sie/Sie": "legitimierten"
+        },
+        "imperativ": {
+          "du": "legitimiere",
+          "ihr": "legitimiert",
+          "Sie": "legitimieren Sie"
+        }
+      }
+    },
+    {
+      "word": "determinieren",
+      "article": null,
+      "plural": null,
+      "wordType": "VERB",
+      "meaningVi": "quyết định, xác định",
+      "meaningEn": "to determine, to predetermine",
+      "exampleSentence1": "Es ist eine philosophische Frage, inwieweit unsere Gene unser Schicksal determinieren oder ob wir einen freien Willen besitzen.",
+      "exampleTranslation1": "Đây là một câu hỏi triết học về mức độ gen của chúng ta quyết định số phận hay liệu chúng ta có ý chí tự do hay không.",
+      "exampleSentence2": "Umweltfaktoren können die Expression von Genen determinieren und somit die Entwicklung von Merkmalen beeinflussen.",
+      "exampleTranslation2": "Các yếu tố môi trường có thể xác định sự biểu hiện của gen và do đó ảnh hưởng đến sự phát triển của các đặc điểm.",
+      "notes": "Fachsprachlich/bildungssprachlich. Bedeutet, etwas festlegen, bestimmen oder ursächlich bedingen. Synonym: bestimmen, festlegen (aber 'determinieren' betont oft eine zwingende Ursächlichkeit).",
+      "imageUrl": "/images/vocab/c1-bioethik-gentechnik/determinieren.png",
+      "conjugation": {
+        "praesens": {
+          "ich": "determiniere",
+          "du": "determinierst",
+          "er/sie/es": "determiniert",
+          "wir": "determinieren",
+          "ihr": "determiniert",
+          "sie/Sie": "determinieren"
+        },
+        "praeteritum": {
+          "ich": "determinierte",
+          "du": "determiniertest",
+          "er/sie/es": "determinierte",
+          "wir": "determinierten",
+          "ihr": "determiniertet",
+          "sie/Sie": "determinierten"
+        },
+        "perfekt": {
+          "hilfsverb": "haben",
+          "partizip2": "determiniert"
+        },
+        "konjunktiv2": {
+          "ich": "determinierte",
+          "du": "determiniertest",
+          "er/sie/es": "determinierte",
+          "wir": "determinierten",
+          "ihr": "determiniertet",
+          "sie/Sie": "determinierten"
+        },
+        "imperativ": {
+          "du": "determiniere",
+          "ihr": "determiniert",
+          "Sie": "determinieren Sie"
+        }
+      }
+    },
+    {
+      "word": "verankern",
+      "article": null,
+      "plural": null,
+      "wordType": "VERB",
+      "meaningVi": "neo giữ, cố định, thiết lập vững chắc",
+      "meaningEn": "to anchor, to embed, to enshrine",
+      "exampleSentence1": "Ethische Prinzipien sollten fest in der Gesetzgebung verankert sein, um den Missbrauch neuer Technologien zu verhindern.",
+      "exampleTranslation1": "Các nguyên tắc đạo đức nên được thiết lập vững chắc trong luật pháp để ngăn chặn việc lạm dụng các công nghệ mới.",
+      "exampleSentence2": "Das Recht auf informationelle Selbstbestimmung ist im Grundgesetz verankert und schützt die persönlichen Daten der Bürger.",
+      "exampleTranslation2": "Quyền tự quyết thông tin được thiết lập vững chắc trong Luật cơ bản và bảo vệ dữ liệu cá nhân của công dân.",
+      "notes": "C1. Bedeutet, etwas sicher oder fest an einem Ort oder in einem System zu befestigen, im übertragenen Sinne auch in Gesetzen oder Prinzipien.",
+      "imageUrl": "/images/vocab/c1-bioethik-gentechnik/verankern.png",
+      "conjugation": {
+        "praesens": {
+          "ich": "verankere",
+          "du": "verankerst",
+          "er/sie/es": "verankert",
+          "wir": "verankern",
+          "ihr": "verankert",
+          "sie/Sie": "verankern"
+        },
+        "praeteritum": {
+          "ich": "verankerte",
+          "du": "verankertest",
+          "er/sie/es": "verankerte",
+          "wir": "verankerten",
+          "ihr": "verankertet",
+          "sie/Sie": "verankerten"
+        },
+        "perfekt": {
+          "hilfsverb": "haben",
+          "partizip2": "verankert"
+        },
+        "konjunktiv2": {
+          "ich": "verankerte",
+          "du": "verankertest",
+          "er/sie/es": "verankerte",
+          "wir": "verankerten",
+          "ihr": "verankertet",
+          "sie/Sie": "verankerten"
+        },
+        "imperativ": {
+          "du": "verankere",
+          "ihr": "verankert",
+          "Sie": "verankern Sie"
+        }
+      }
+    },
+    {
+      "word": "reglementieren",
+      "article": null,
+      "plural": null,
+      "wordType": "VERB",
+      "meaningVi": "quy định, điều chỉnh",
+      "meaningEn": "to regulate, to control by rules",
+      "exampleSentence1": "Die Forschung im Bereich der Gentechnik muss streng reglementiert werden, um unkontrollierte Risiken zu vermeiden.",
+      "exampleTranslation1": "Nghiên cứu trong lĩnh vực kỹ thuật di truyền phải được quy định chặt chẽ để tránh những rủi ro không kiểm soát được.",
+      "exampleSentence2": "Es ist schwierig, Innovationen zu fördern und gleichzeitig alle potenziellen Gefahren umfassend zu reglementieren.",
+      "exampleTranslation2": "Thật khó để thúc đẩy đổi mới đồng thời điều chỉnh toàn diện tất cả các mối nguy hiểm tiềm tàng.",
+      "notes": "Fachsprachlich/bildungssprachlich. Bedeutet, etwas durch Regeln oder Vorschriften zu ordnen oder zu beschränken. Synonym: regulieren, vorschreiben.",
+      "imageUrl": "/images/vocab/c1-bioethik-gentechnik/reglementieren.png",
+      "conjugation": {
+        "praesens": {
+          "ich": "reglementiere",
+          "du": "reglementierst",
+          "er/sie/es": "reglementiert",
+          "wir": "reglementieren",
+          "ihr": "reglementiert",
+          "sie/Sie": "reglementieren"
+        },
+        "praeteritum": {
+          "ich": "reglementierte",
+          "du": "reglementiertest",
+          "er/sie/es": "reglementierte",
+          "wir": "reglementierten",
+          "ihr": "reglementiertet",
+          "sie/Sie": "reglementierten"
+        },
+        "perfekt": {
+          "hilfsverb": "haben",
+          "partizip2": "reglementiert"
+        },
+        "konjunktiv2": {
+          "ich": "reglementierte",
+          "du": "reglementiertest",
+          "er/sie/es": "reglementierte",
+          "wir": "reglementierten",
+          "ihr": "reglementiertet",
+          "sie/Sie": "reglementierten"
+        },
+        "imperativ": {
+          "du": "reglementiere",
+          "ihr": "reglementiert",
+          "Sie": "reglementieren Sie"
+        }
+      }
+    },
+    {
+      "word": "intervenieren",
+      "article": null,
+      "plural": null,
+      "wordType": "VERB",
+      "meaningVi": "can thiệp",
+      "meaningEn": "to intervene",
+      "exampleSentence1": "Der Staat sollte nur in Ausnahmefällen in die Fortpflanzungsfreiheit seiner Bürger intervenieren.",
+      "exampleTranslation1": "Nhà nước chỉ nên can thiệp vào quyền tự do sinh sản của công dân trong những trường hợp đặc biệt.",
+      "exampleSentence2": "Ohne rechtzeitig zu intervenieren, könnte die Situation außer Kontrolle geraten und gravierende Folgen haben.",
+      "exampleTranslation2": "Nếu không can thiệp kịp thời, tình hình có thể vượt khỏi tầm kiểm soát và gây ra những hậu quả nghiêm trọng.",
+      "notes": "Bildungssprachlich. Bedeutet, zwischen zwei Parteien oder in einen Prozess einzugreifen, oft um zu helfen oder zu steuern. Synonym: eingreifen (aber 'intervenieren' ist formeller).",
+      "imageUrl": "/images/vocab/c1-bioethik-gentechnik/intervenieren.png",
+      "conjugation": {
+        "praesens": {
+          "ich": "interveniere",
+          "du": "intervenierst",
+          "er/sie/es": "interveniert",
+          "wir": "intervenieren",
+          "ihr": "interveniert",
+          "sie/Sie": "intervenieren"
+        },
+        "praeteritum": {
+          "ich": "intervenierte",
+          "du": "interveniertest",
+          "er/sie/es": "intervenierte",
+          "wir": "intervenierten",
+          "ihr": "interveniertet",
+          "sie/Sie": "intervenierten"
+        },
+        "perfekt": {
+          "hilfsverb": "haben",
+          "partizip2": "interveniert"
+        },
+        "konjunktiv2": {
+          "ich": "intervenierte",
+          "du": "interveniertest",
+          "er/sie/es": "intervenierte",
+          "wir": "intervenierten",
+          "ihr": "interveniertet",
+          "sie/Sie": "intervenierten"
+        },
+        "imperativ": {
+          "du": "interveniere",
+          "ihr": "interveniert",
+          "Sie": "intervenieren Sie"
+        }
+      }
+    },
+    {
+      "word": "reproduzieren",
+      "article": null,
+      "plural": null,
+      "wordType": "VERB",
+      "meaningVi": "tái tạo, sinh sản",
+      "meaningEn": "to reproduce",
+      "exampleSentence1": "Die Fähigkeit von Zellen, sich zu reproduzieren, ist grundlegend für das Wachstum und die Heilung von Organismen.",
+      "exampleTranslation1": "Khả năng sinh sản của tế bào là cơ bản cho sự phát triển và chữa lành của các sinh vật.",
+      "exampleSentence2": "Bestimmte Tierarten reproduzieren sich ausschließlich asexuell, was genetische Vielfalt einschränkt.",
+      "exampleTranslation2": "Một số loài động vật chỉ sinh sản vô tính, điều này hạn chế sự đa dạng di truyền.",
+      "notes": "Fachsprachlich/bildungssprachlich. Bedeutet, etwas zu wiederholen, nachzubilden oder biologisch Nachkommen zu zeugen. Nicht nur im Sinne von 'fotokopieren', sondern auch biologisch.",
+      "imageUrl": "/images/vocab/c1-bioethik-gentechnik/reproduzieren.png",
+      "conjugation": {
+        "praesens": {
+          "ich": "reproduziere",
+          "du": "reproduzierst",
+          "er/sie/es": "reproduziert",
+          "wir": "reproduzieren",
+          "ihr": "reproduziert",
+          "sie/Sie": "reproduzieren"
+        },
+        "praeteritum": {
+          "ich": "reproduzierte",
+          "du": "reproduziertest",
+          "er/sie/es": "reproduzierte",
+          "wir": "reproduzierten",
+          "ihr": "reproduziertet",
+          "sie/Sie": "reproduzierten"
+        },
+        "perfekt": {
+          "hilfsverb": "haben",
+          "partizip2": "reproduziert"
+        },
+        "konjunktiv2": {
+          "ich": "reproduzierte",
+          "du": "reproduziertest",
+          "er/sie/es": "reproduzierte",
+          "wir": "reproduzierten",
+          "ihr": "reproduziertet",
+          "sie/Sie": "reproduzierten"
+        },
+        "imperativ": {
+          "du": "reproduziere",
+          "ihr": "reproduziert",
+          "Sie": "reproduzieren Sie"
+        }
+      }
+    },
+    {
+      "word": "kontrovers",
+      "article": null,
+      "plural": null,
+      "wordType": "ADJEKTIV",
+      "meaningVi": "gây tranh cãi",
+      "meaningEn": "controversial",
+      "exampleSentence1": "Die Frage der Designerbabys ist hochgradig kontrovers und spaltet die Gesellschaft in Befürworter und Kritiker.",
+      "exampleTranslation1": "Vấn đề 'em bé thiết kế' gây tranh cãi gay gắt và chia rẽ xã hội thành những người ủng hộ và phản đối.",
+      "exampleSentence2": "Obwohl die Ergebnisse vielversprechend sind, bleibt die Methode aufgrund ihrer ethischen Implikationen kontrovers.",
+      "exampleTranslation2": "Mặc dù kết quả đầy hứa hẹn, phương pháp này vẫn còn gây tranh cãi do những hàm ý đạo đức của nó.",
+      "notes": "C1. Beschreibt etwas, das Gegenstand einer öffentlichen Auseinandersetzung ist und unterschiedliche, oft entgegengesetzte Meinungen hervorruft. Synonym: umstritten.",
+      "imageUrl": "/images/vocab/c1-bioethik-gentechnik/kontrovers.png"
+    },
+    {
+      "word": "unabdingbar",
+      "article": null,
+      "plural": null,
+      "wordType": "ADJEKTIV",
+      "meaningVi": "không thể thiếu, cần thiết",
+      "meaningEn": "indispensable, essential",
+      "exampleSentence1": "Eine transparente Kommunikation über die Risiken und Chancen der Gentechnik ist für die Akzeptanz in der Bevölkerung unabdingbar.",
+      "exampleTranslation1": "Giao tiếp minh bạch về rủi ro và cơ hội của kỹ thuật di truyền là không thể thiếu để được công chúng chấp nhận.",
+      "exampleSentence2": "Für die Entwicklung neuer Therapien ist eine enge Zusammenarbeit zwischen Wissenschaft und Ethikkommissionen unabdingbar.",
+      "exampleTranslation2": "Để phát triển các liệu pháp mới, sự hợp tác chặt chẽ giữa khoa học và các ủy ban đạo đức là không thể thiếu.",
+      "notes": "C1. Bedeutet, absolut notwendig oder unverzichtbar. Gehobener als 'notwendig' oder 'erforderlich'.",
+      "imageUrl": "/images/vocab/c1-bioethik-gentechnik/unabdingbar.png"
+    },
+    {
+      "word": "irreversibel",
+      "article": null,
+      "plural": null,
+      "wordType": "ADJEKTIV",
+      "meaningVi": "không thể đảo ngược",
+      "meaningEn": "irreversible",
+      "exampleSentence1": "Veränderungen an der menschlichen Keimbahn sind irreversibel und könnten Auswirkungen auf zukünftige Generationen haben.",
+      "exampleTranslation1": "Những thay đổi trên dòng tế bào mầm người là không thể đảo ngược và có thể có tác động đến các thế hệ tương lai.",
+      "exampleSentence2": "Ein einmal eingeleiteter Prozess kann sich als irreversibel erweisen, was die Notwendigkeit sorgfältiger Planung unterstreicht.",
+      "exampleTranslation2": "Một quá trình đã bắt đầu có thể trở nên không thể đảo ngược, điều này nhấn mạnh sự cần thiết của việc lập kế hoạch cẩn thận.",
+      "notes": "Fachsprachlich/bildungssprachlich. Bedeutet, dass etwas nicht rückgängig gemacht oder in seinen ursprünglichen Zustand zurückversetzt werden kann. Gegenteil: reversibel.",
+      "imageUrl": "/images/vocab/c1-bioethik-gentechnik/irreversibel.png"
+    },
+    {
+      "word": "fragwürdig",
+      "article": null,
+      "plural": null,
+      "wordType": "ADJEKTIV",
+      "meaningVi": "đáng ngờ, có vấn đề",
+      "meaningEn": "questionable, dubious",
+      "exampleSentence1": "Die moralische Legitimität bestimmter Forschungspraktiken bleibt fragwürdig, solange keine klaren ethischen Leitlinien existieren.",
+      "exampleTranslation1": "Tính hợp pháp đạo đức của một số thực hành nghiên cứu vẫn đáng ngờ chừng nào chưa có các hướng dẫn đạo đức rõ ràng.",
+      "exampleSentence2": "Seine Argumentation erschien vielen Zuhörern fragwürdig, da sie auf unzureichenden Beweisen basierte.",
+      "exampleTranslation2": "Lập luận của ông ấy có vẻ đáng ngờ đối với nhiều người nghe, vì nó dựa trên bằng chứng không đủ.",
+      "notes": "C1. Beschreibt etwas, dessen Wert, Richtigkeit oder moralische Vertretbarkeit angezweifelt werden kann. Synonym: zweifelhaft.",
+      "imageUrl": "/images/vocab/c1-bioethik-gentechnik/fragwuerdig.png"
+    },
+    {
+      "word": "diffizil",
+      "article": null,
+      "plural": null,
+      "wordType": "ADJEKTIV",
+      "meaningVi": "khó khăn, tinh tế, phức tạp",
+      "meaningEn": "difficult, delicate, intricate",
+      "exampleSentence1": "Die Abwägung zwischen wissenschaftlichem Fortschritt und ethischen Bedenken ist eine diffizile Aufgabe für Gesetzgeber.",
+      "exampleTranslation1": "Việc cân nhắc giữa tiến bộ khoa học và những lo ngại về đạo đức là một nhiệm vụ khó khăn đối với các nhà lập pháp.",
+      "exampleSentence2": "Die Durchführung solcher Experimente erfordert ein diffiziles Vorgehen und höchste Präzision.",
+      "exampleTranslation2": "Việc thực hiện các thí nghiệm như vậy đòi hỏi một phương pháp tinh tế và độ chính xác cao nhất.",
+      "notes": "Gehoben/bildungssprachlich. Beschreibt etwas, das schwierig, kompliziert oder fein nuanciert ist und besondere Sorgfalt erfordert. Synonym: schwierig, heikel.",
+      "imageUrl": "/images/vocab/c1-bioethik-gentechnik/diffizil.png"
+    },
+    {
+      "word": "gravierend",
+      "article": null,
+      "plural": null,
+      "wordType": "ADJEKTIV",
+      "meaningVi": "nghiêm trọng, trầm trọng",
+      "meaningEn": "serious, grave, severe",
+      "exampleSentence1": "Die potenziellen gravierenden Auswirkungen unkontrollierter Gentechnik auf die Umwelt sind ein großes Anliegen der Öffentlichkeit.",
+      "exampleTranslation1": "Những tác động nghiêm trọng tiềm tàng của kỹ thuật di truyền không kiểm soát đối với môi trường là một mối quan tâm lớn của công chúng.",
+      "exampleSentence2": "Fehler in der Genom-Editierung können gravierende und irreversible Folgen für den behandelten Organismus haben.",
+      "exampleTranslation2": "Sai sót trong việc chỉnh sửa bộ gen có thể gây ra những hậu quả nghiêm trọng và không thể đảo ngược đối với sinh vật được điều trị.",
+      "notes": "Bildungssprachlich. Beschreibt etwas von großer Bedeutung oder Schwere, oft im negativen Sinne von Konsequenzen oder Problemen. Synonym: schwerwiegend.",
+      "imageUrl": "/images/vocab/c1-bioethik-gentechnik/gravierend.png"
+    },
+    {
+      "word": "hinsichtlich",
+      "article": null,
+      "plural": null,
+      "wordType": "PRAEPOSITION",
+      "meaningVi": "liên quan đến, xét về",
+      "meaningEn": "with regard to, concerning",
+      "exampleSentence1": "Hinsichtlich der ethischen Vertretbarkeit der Keimbahntherapie bestehen noch erhebliche Meinungsverschiedenheiten.",
+      "exampleTranslation1": "Liên quan đến tính hợp lý về mặt đạo đức của liệu pháp tế bào mầm, vẫn còn tồn tại những bất đồng quan điểm đáng kể.",
+      "exampleSentence2": "Die neue Studie liefert wichtige Erkenntnisse hinsichtlich der genetischen Ursachen von Autoimmunerkrankungen.",
+      "exampleTranslation2": "Nghiên cứu mới cung cấp những hiểu biết quan trọng liên quan đến nguyên nhân di truyền của các bệnh tự miễn.",
+      "notes": "Formal/schriftsprachlich. Leitet eine Ergänzung ein, die den Bereich oder Aspekt angibt, auf den sich eine Aussage bezieht. Steht mit Genitiv. Synonym: bezüglich, in Bezug auf.",
+      "imageUrl": "/images/vocab/c1-bioethik-gentechnik/hinsichtlich.png"
+    },
+    {
+      "word": "im Spannungsfeld",
+      "article": null,
+      "plural": null,
+      "wordType": "PHRASE",
+      "meaningVi": "trong vùng căng thẳng/giằng co (giữa hai hoặc nhiều yếu tố)",
+      "meaningEn": "in the area of tension (between two or more factors), caught between",
+      "exampleSentence1": "Die Bioethik bewegt sich oft im Spannungsfeld zwischen wissenschaftlichem Fortschritt und moralischen Grenzen.",
+      "exampleTranslation1": "Đạo đức sinh học thường vận động trong vùng căng thẳng giữa tiến bộ khoa học và các giới hạn đạo đức.",
+      "exampleSentence2": "Die Gesellschaft muss lernen, im Spannungsfeld von individueller Freiheit und kollektiver Verantwortung zu agieren.",
+      "exampleTranslation2": "Xã hội phải học cách hành động trong vùng căng thẳng giữa tự do cá nhân và trách nhiệm tập thể.",
+      "notes": "Bildungssprachlich. Beschreibt eine Situation, in der gegensätzliche Kräfte, Interessen oder Werte aufeinandertreffen und eine Balance gefunden werden muss. Wird oft mit 'zwischen X und Y' verwendet.",
+      "imageUrl": "/images/vocab/c1-bioethik-gentechnik/im-spannungsfeld.png"
+    }
+  ]
+}

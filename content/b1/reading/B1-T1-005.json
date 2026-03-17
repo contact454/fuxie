@@ -1,0 +1,200 @@
+{
+  "id": "B1-T1-005",
+  "level": "B1",
+  "teil": 1,
+  "teil_name": "Blog-Eintrag lesen",
+  "topic": "Ausbildung & Karriere",
+  "topic_id": "005",
+  "metadata": {
+    "word_count": 268,
+    "target_grammar": [
+      "Nebensatz mit ob/weil/dass",
+      "Konjunktiv II",
+      "Plusquamperfekt"
+    ],
+    "target_vocabulary": [
+      "Ausbildung",
+      "Studium",
+      "Bewerbung",
+      "Betrieb",
+      "Gehalt",
+      "Theorie",
+      "Praxis",
+      "Abschluss",
+      "Zukunft",
+      "bereuen"
+    ],
+    "generated_at": "2026-03-10T22:50:00+07:00",
+    "version": 1
+  },
+  "blog": {
+    "title": "Nach der Schule: Ausbildung oder Studium?",
+    "author": "SarahLernt",
+    "date": "28. September 2025",
+    "text": "Letztes Jahr stand ich vor der schwierigsten Entscheidung meines Lebens: Soll ich studieren oder eine Ausbildung machen? Viele meiner Klassenkameraden haben sich für ein Studium entschieden, weil sie dachten, dass man damit bessere Chancen auf dem Arbeitsmarkt hat. Aber ich war mir nicht sicher, ob das auch für mich der richtige Weg ist.\n\nIch habe mich dann für eine Ausbildung zur Mediengestalterin entschieden. Im Betrieb lerne ich alles über Grafikdesign, Webseiten und Werbung. Gleichzeitig besuche ich zweimal pro Woche die Berufsschule. Das Beste ist, dass ich von Anfang an Geld verdiene — nicht viel, aber genug für meine Miete und etwas Freizeit.\n\nManche Leute haben mich gefragt, ob ich meine Entscheidung bereue, weil ein Studium bessere Karrierechancen bieten würde. Aber ich glaube, das stimmt so nicht. Mit einer guten Ausbildung kann man auch Karriere machen. Außerdem lerne ich hier sehr viel Praktisches, was man an der Universität nie lernen würde.\n\nNatürlich gibt es auch Nachteile. Die Arbeitszeiten sind manchmal anstrengend, und das Gehalt in der Ausbildung ist niedrig. Aber nach drei Jahren habe ich einen Abschluss und kann sofort arbeiten. Vielleicht mache ich danach noch ein Studium — aber erst mal sammle ich Berufserfahrung.\n\nWas ist eure Meinung: Ausbildung oder Studium? Schreibt mir!"
+  },
+  "images": [
+    {
+      "id": "IMG1",
+      "type": "scene",
+      "prompt": "Cute cartoon illustration of a young woman at a desk with a computer showing graphic design work, with a split scene showing university graduation on one side and workplace training on the other. Fuxie cartoon style, flat illustration, warm pastel colors, no text.",
+      "filename": "B1-T1-005_scene.png",
+      "placement": "header",
+      "alt_text": "Sarah macht eine Ausbildung",
+      "dimensions": "768x512"
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q1",
+      "teil": 1,
+      "type": "richtig_falsch",
+      "stem": "Der Autor deutet an, dass Die meisten Klassenkameraden von Sarah haben sich für eine Ausbildung entschieden.",
+      "answer": "falsch",
+      "points": 1,
+      "explanation": {
+        "de": "Viele Klassenkameraden haben sich für ein Studium entschieden.",
+        "key_evidence": "Viele meiner Klassenkameraden haben sich für ein Studium entschieden",
+        "key_vocabulary": [
+          {
+            "word": "Klassenkamerad",
+            "type": "Nomen",
+            "meaning": "classmate"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q2",
+      "teil": 1,
+      "type": "richtig_falsch",
+      "stem": "Sarah macht eine Ausbildung zur Mediengestalterin.",
+      "answer": "richtig",
+      "points": 1,
+      "explanation": {
+        "de": "Sie hat sich für eine Ausbildung zur Mediengestalterin entschieden.",
+        "key_evidence": "Ich habe mich dann für eine Ausbildung zur Mediengestalterin entschieden",
+        "key_vocabulary": [
+          {
+            "word": "Mediengestalterin",
+            "type": "Nomen",
+            "meaning": "media designer"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q3",
+      "teil": 1,
+      "type": "richtig_falsch",
+      "stem": "Laut dem Text gilt: sarah verdient in der Ausbildung kein Geld.",
+      "answer": "falsch",
+      "points": 1,
+      "explanation": {
+        "de": "Sie verdient von Anfang an Geld, nicht viel, aber genug.",
+        "key_evidence": "Das Beste ist, dass ich von Anfang an Geld verdiene",
+        "key_vocabulary": [
+          {
+            "word": "Gehalt",
+            "type": "Nomen",
+            "meaning": "salary"
+          }
+        ],
+        "reasoning": "[Inferential] "
+      }
+    },
+    {
+      "id": "Q4",
+      "teil": 1,
+      "type": "richtig_falsch",
+      "stem": "Sarah glaubt, dass man nur mit einem Studium Karriere machen kann.",
+      "answer": "falsch",
+      "points": 1,
+      "explanation": {
+        "de": "Sarah glaubt, dass man auch mit einer guten Ausbildung Karriere machen kann.",
+        "key_evidence": "Mit einer guten Ausbildung kann man auch Karriere machen",
+        "key_vocabulary": [
+          {
+            "word": "Karriere",
+            "type": "Nomen",
+            "meaning": "career"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q5",
+      "teil": 1,
+      "type": "richtig_falsch",
+      "stem": "Sarah will nach der Ausbildung vielleicht noch studieren.",
+      "answer": "richtig",
+      "points": 1,
+      "explanation": {
+        "de": "Sie will vielleicht danach noch ein Studium machen.",
+        "key_evidence": "Vielleicht mache ich danach noch ein Studium",
+        "key_vocabulary": [
+          {
+            "word": "Berufserfahrung",
+            "type": "Nomen",
+            "meaning": "work experience"
+          }
+        ]
+      }
+    }
+  ],
+  "scoring": {
+    "total_points": 5,
+    "pass_threshold": 3,
+    "grading": [
+      {
+        "range": [
+          5,
+          5
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          4,
+          4
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          3,
+          3
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          1,
+          2
+        ],
+        "label": "Noch üben!",
+        "emoji": "📝"
+      },
+      {
+        "range": [
+          0,
+          0
+        ],
+        "label": "Mehr Übung nötig",
+        "emoji": "💪"
+      }
+    ]
+  },
+  "qa": {
+    "vocab_in_b1_list": true,
+    "grammar_b1_appropriate": true,
+    "word_count_in_range": true,
+    "all_answers_verifiable": true,
+    "richtig_falsch_balanced": true,
+    "image_count": 1,
+    "passed": true
+  }
+}

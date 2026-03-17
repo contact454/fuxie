@@ -1,0 +1,222 @@
+{
+  "id": "B2-T3-010",
+  "level": "B2",
+  "teil": 3,
+  "teil_name": "Anzeigen zuordnen",
+  "topic": "Mobilität & Verkehr",
+  "topic_id": "010",
+  "metadata": {
+    "word_count": 160,
+    "target_grammar": [
+      "Konjunktiv II",
+      "Passiv",
+      "Modalverben",
+      "Relativsätze"
+    ],
+    "target_vocabulary": [],
+    "generated_at": "2026-03-11T22:34:38.583025",
+    "version": 1
+  },
+  "anzeigen": [
+    {
+      "id": "A",
+      "text": "ShareNow Carsharing: Autos in ganz Berlin per App mieten. Ab 0,26 Euro/Minute. Keine monatlichen Kosten. Registrierung online, Führerschein hochladen, losfahren."
+    },
+    {
+      "id": "B",
+      "text": "JobRad Fahrradleasing: Wunschrad über den Arbeitgeber leasen und bis zu 40 % sparen. E-Bikes, Rennräder, Lastenräder. Wartung und Versicherung inklusive. www.jobrad.org"
+    },
+    {
+      "id": "C",
+      "text": "Pendlerberatung der Verkehrsverbünde: Welches Ticket passt zu Ihrem Arbeitsweg? Individuelle Beratung zu Zeitkarten, Deutschlandticket und Jobticket. Kostenlos, telefonisch oder vor Ort."
+    },
+    {
+      "id": "D",
+      "text": "Verkehrssicherheitskurs ADAC: Fahrsicherheitstraining auf dem Übungsplatz. Bremsen, Ausweichen, Kurvenfahren. 4 Stunden, 129 Euro. Eigenes Auto mitbringen. Termine samstags."
+    },
+    {
+      "id": "E",
+      "text": "Lastenrad-Verleih Köln: Transportfahrräder für Einkäufe und Kindertransport. 4 Stunden kostenlos, danach 1 Euro/Stunde. 12 Stationen in der Stadt. App kastenrad-koeln.de"
+    },
+    {
+      "id": "F",
+      "text": "Mitfahrzentrale BlaBlaCar: Lange Strecken günstig mit anderen teilen. München-Berlin ab 25 Euro. Bewertungssystem für Sicherheit. Zahlung über die App."
+    },
+    {
+      "id": "G",
+      "text": "E-Scooter-Abo TIER: Unbegrenzt E-Scooter fahren für 39 Euro/Monat. Keine Entsperrgebühr. In 35 deutschen Städten verfügbar. Erste Woche kostenlos testen."
+    },
+    {
+      "id": "H",
+      "text": "Führerschein mit 17: Begleitetes Fahren ab 17 Jahren. Anmeldung in der Fahrschule Central. Theorie: 14 Doppelstunden, Praxis: individuell. Komplettpreis ab 2.800 Euro."
+    }
+  ],
+  "situationen": [
+    {
+      "id": "S1",
+      "text": "Ein Angestellter möchte sich über das günstigste Ticket für seinen täglichen Arbeitsweg beraten lassen.",
+      "answer": "C"
+    },
+    {
+      "id": "S2",
+      "text": "Jemand möchte ein E-Bike über den Arbeitgeber leasen und dabei Geld sparen.",
+      "answer": "B"
+    },
+    {
+      "id": "S3",
+      "text": "Eine Studentin sucht eine günstige Möglichkeit, am Wochenende von Hamburg nach München zu fahren.",
+      "answer": "F"
+    },
+    {
+      "id": "S4",
+      "text": "Eine junge Familie braucht regelmäßig ein Lastenrad für Großeinkäufe.",
+      "answer": "E"
+    },
+    {
+      "id": "S5",
+      "text": "Ein Fahranfänger möchte seine Fahrfähigkeiten auf einem Übungsplatz verbessern.",
+      "answer": "D"
+    }
+  ],
+  "null_matches": [
+    "A",
+    "G",
+    "H"
+  ],
+  "images": [
+    {
+      "id": "IMG1",
+      "type": "scene",
+      "prompt": "Cute cartoon illustration of a bulletin board with various professional advertisements related to Mobilität & Verkehr. Fuxie cartoon style, flat illustration, warm pastel colors, no text.",
+      "filename": "B2-T3-010_scene.png",
+      "placement": "header",
+      "alt_text": "Anzeigen: Mobilität & Verkehr",
+      "dimensions": "768x512"
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q1",
+      "teil": 3,
+      "type": "matching",
+      "stem": "Die implizite Annahme, dass Ein Angestellter möchte sich über das günstigste Ticket für seinen täglichen Arbeitsweg beraten lassen, liegt dem Beitrag zugrunde:",
+      "answer": "C",
+      "points": 1,
+      "explanation": {
+        "de": "Anzeige C passt, weil sie das beschriebene Bedürfnis erfüllt.",
+        "key_evidence": "Anzeige C",
+        "key_vocabulary": [],
+        "reasoning": "[Inferential] "
+      }
+    },
+    {
+      "id": "Q2",
+      "teil": 3,
+      "type": "matching",
+      "stem": "Die implizite Annahme, dass jemand möchte ein E-Bike über den Arbeitgeber leasen und dabei Geld sparen, liegt dem Beitrag zugrunde:",
+      "answer": "B",
+      "points": 1,
+      "explanation": {
+        "de": "Anzeige B passt, weil sie das beschriebene Bedürfnis erfüllt.",
+        "key_evidence": "Anzeige B",
+        "key_vocabulary": [],
+        "reasoning": "[Inferential] "
+      }
+    },
+    {
+      "id": "Q3",
+      "teil": 3,
+      "type": "matching",
+      "stem": "Eine Studentin sucht eine günstige Möglichkeit, am Wochenende von Hamburg nach München zu fahren.",
+      "answer": "F",
+      "points": 1,
+      "explanation": {
+        "de": "Anzeige F passt, weil sie das beschriebene Bedürfnis erfüllt.",
+        "key_evidence": "Anzeige F",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q4",
+      "teil": 3,
+      "type": "matching",
+      "stem": "Eine junge Familie braucht regelmäßig ein Lastenrad für Großeinkäufe.",
+      "answer": "E",
+      "points": 1,
+      "explanation": {
+        "de": "Anzeige E passt, weil sie das beschriebene Bedürfnis erfüllt.",
+        "key_evidence": "Anzeige E",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q5",
+      "teil": 3,
+      "type": "matching",
+      "stem": "Die implizite Annahme, dass Ein Fahranfänger möchte seine Fahrfähigkeiten auf einem Übungsplatz verbessern, liegt dem Beitrag zugrunde:",
+      "answer": "D",
+      "points": 1,
+      "explanation": {
+        "de": "Anzeige D passt, weil sie das beschriebene Bedürfnis erfüllt.",
+        "key_evidence": "Anzeige D",
+        "key_vocabulary": [],
+        "reasoning": "[Inferential] "
+      }
+    }
+  ],
+  "scoring": {
+    "total_points": 5,
+    "pass_threshold": 3,
+    "grading": [
+      {
+        "range": [
+          5,
+          5
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          4,
+          4
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          3,
+          3
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          1,
+          2
+        ],
+        "label": "Noch üben!",
+        "emoji": "📝"
+      },
+      {
+        "range": [
+          0,
+          0
+        ],
+        "label": "Mehr Übung nötig",
+        "emoji": "💪"
+      }
+    ]
+  },
+  "qa": {
+    "vocab_in_b2_list": true,
+    "grammar_b2_appropriate": true,
+    "word_count_in_range": true,
+    "all_answers_verifiable": true,
+    "null_matches_correct": true,
+    "image_count": 1,
+    "passed": true
+  }
+}

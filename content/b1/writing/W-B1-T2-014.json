@@ -1,0 +1,64 @@
+{
+  "id": "W-B1-T2-014",
+  "cefrLevel": "B1",
+  "teil": 2,
+  "teilName": "Meinungsaeusserung",
+  "textType": "Forumsbeitrag",
+  "register": "informell",
+  "topic": "Online-Shopping",
+  "instruction": "Sie haben im Internet ein Forum zum Thema „Online-Shopping“ gefunden. Schreiben Sie einen Beitrag dazu und äußern Sie Ihre Meinung zu diesem Thema.",
+  "instructionVi": "Bạn tìm thấy một diễn đàn trên mạng về chủ đề \"Mua sắm trực tuyến\". Hãy viết một bài thảo luận và bày tỏ ý kiến của mình về chủ đề này.",
+  "situation": "In einem Online-Magazin für junge Erwachsene gibt es einen Diskussionsbereich über das Einkaufsverhalten im digitalen Zeitalter. Es wird darüber debattiert, ob der Online-Handel den klassischen Einzelhandel in der Stadt komplett ersetzen wird oder ob die Nachteile überwiegen.",
+  "contentPoints": [
+    "Äußern Sie Ihre Meinung zum Online-Shopping allgemein.",
+    "Nennen Sie Gründe, warum Online-Shopping heutzutage so beliebt ist.",
+    "Nennen Sie Nachteile, die das Einkaufen im Internet mit sich bringt.",
+    "Berichten Sie kurz von einem persönlichen Erlebnis beim Online-Kauf."
+  ],
+  "sourceText": "Moderator: Herzlich willkommen in unserem Forum! Heute diskutieren wir über Online-Shopping. Ist es ein Segen oder ein Fluch?\n\nLukas: Ich kaufe fast alles im Internet. Es ist einfach bequem, man kann rund um die Uhr bestellen und die Auswahl ist riesig. Außerdem sind die Preise oft günstiger als im Laden.\n\nSarah: Ich sehe das kritisch. Wenn wir nur noch online bestellen, sterben die kleinen Läden in unseren Städten aus. Außerdem mag ich es nicht, dass man die Kleidung vorher nicht anprobieren kann. Oft sehen die Sachen auf den Fotos viel besser aus als in der Realität.",
+  "sourceTextType": "Forumspost mit Kommentaren",
+  "minWords": 80,
+  "maxWords": 120,
+  "timeMinutes": 20,
+  "rubric": {
+    "criteria": [
+      {
+        "id": "inhalt",
+        "name": "Inhalt",
+        "nameVi": "Nội dung",
+        "maxScore": 5,
+        "weight": 25
+      },
+      {
+        "id": "angemessenheit",
+        "name": "Kommunikative Angemessenheit",
+        "nameVi": "Phù hợp giao tiếp",
+        "maxScore": 5,
+        "weight": 20
+      },
+      {
+        "id": "korrektheit",
+        "name": "Korrektheit",
+        "nameVi": "Chính xác ngữ pháp & chính tả",
+        "maxScore": 5,
+        "weight": 25
+      },
+      {
+        "id": "spektrum",
+        "name": "Wortschatz & Strukturen",
+        "nameVi": "Đa dạng từ vựng & cấu trúc",
+        "maxScore": 5,
+        "weight": 15
+      },
+      {
+        "id": "kohaerenz",
+        "name": "Kohaerenz & Kohaesion",
+        "nameVi": "Mạch lạc & liên kết",
+        "maxScore": 5,
+        "weight": 15
+      }
+    ],
+    "maxScore": 25
+  },
+  "maxScore": 25
+}

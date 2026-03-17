@@ -1,0 +1,224 @@
+{
+  "id": "B1-T2-009",
+  "level": "B1",
+  "teil": 2,
+  "teil_name": "Pressebericht lesen",
+  "topic": "Einkaufen & Konsum",
+  "topic_id": "009",
+  "metadata": {
+    "word_count": 294,
+    "target_grammar": [
+      "Nebensatz mit dass/weil/obwohl",
+      "Passiv",
+      "Konjunktiv II"
+    ],
+    "target_vocabulary": [
+      "Online-Shopping",
+      "Einzelhandel",
+      "Umsatz",
+      "Innenstadt",
+      "Filiale",
+      "Konkurrenz",
+      "Lieferung",
+      "Retoure",
+      "Geschäftsmodell",
+      "Einkaufserlebnis"
+    ],
+    "generated_at": "2026-03-10T22:58:00+07:00",
+    "version": 1
+  },
+  "article": {
+    "source": "Handelsblatt",
+    "date": "17. Mai 2026",
+    "title": "Online-Shopping verändert den Einzelhandel",
+    "subtitle": "Immer mehr Geschäfte in Innenstädten schließen — aber es gibt auch Gewinner",
+    "text": "Der Online-Handel in Deutschland hat im letzten Jahr einen Umsatz von über 90 Milliarden Euro erzielt — ein Plus von acht Prozent gegenüber dem Vorjahr. Gleichzeitig haben rund 6.000 stationäre Geschäfte in deutschen Innenstädten geschlossen. Experten sprechen von einem fundamentalen Wandel im Einkaufsverhalten.\n\nBesonders betroffen sind Buchhandlungen, Bekleidungsgeschäfte und Elektronikläden. „Viele Kunden kommen zwar noch ins Geschäft, um Produkte anzuschauen und anzuprobieren, bestellen dann aber online, weil es dort günstiger ist“, erklärt Handelsexpertin Prof. Karin Schulz. Dieses Phänomen wird als „Showrooming“ bezeichnet.\n\nAllerdings sind nicht alle Branchen gleich betroffen. Lebensmittel werden nach wie vor überwiegend im Laden gekauft. Auch Geschäfte, die ein besonderes Einkaufserlebnis bieten — zum Beispiel mit persönlicher Beratung oder Events — können sich gegen die Online-Konkurrenz behaupten.\n\nDie Bundesregierung unterstützt den stationären Handel mit einem Förderprogramm „Starke Innenstädte“. Damit können Einzelhändler Zuschüsse für die Digitalisierung ihrer Geschäfte beantragen, etwa für Online-Shops, Click-and-Collect-Systeme oder digitale Schaufenster.\n\nEinen interessanten Trend beobachtet man bei jungen Konsumenten: Obwohl sie die meisten Dinge online kaufen, gehen sie gern in sogenannte „Concept Stores“ — Geschäfte, die Kaffee, Mode und Kunst verbinden. „Die Zukunft des Einzelhandels liegt im Erlebnis, nicht im reinen Verkauf“, sagt Schulz.\n\nKlar ist: Die Innenstadt der Zukunft wird anders aussehen als heute. Aber tot ist sie noch lange nicht."
+  },
+  "images": [
+    {
+      "id": "IMG1",
+      "type": "scene",
+      "prompt": "Cute cartoon illustration showing contrast between online shopping (person on laptop with packages) and a charming German city center shopping street with boutiques. Fuxie cartoon style, flat illustration, warm pastel colors, no text.",
+      "filename": "B1-T2-009_scene.png",
+      "placement": "header",
+      "alt_text": "Online vs. Einzelhandel",
+      "dimensions": "768x512"
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q1",
+      "teil": 2,
+      "type": "multiple_choice",
+      "stem": "Wie hoch war der Online-Umsatz im letzten Jahr?",
+      "options": {
+        "a": "Über 60 Milliarden Euro.",
+        "b": "Über 90 Milliarden Euro.",
+        "c": "Über 120 Milliarden Euro."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Der Online-Handel erzielte über 90 Milliarden Euro Umsatz.",
+        "key_evidence": "über 90 Milliarden Euro",
+        "key_vocabulary": [
+          {
+            "word": "Umsatz",
+            "type": "Nomen",
+            "meaning": "revenue / turnover"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q2",
+      "teil": 2,
+      "type": "multiple_choice",
+      "stem": "Was bedeutet Showrooming?",
+      "options": {
+        "a": "Kunden kaufen nur im Geschäft.",
+        "b": "Kunden schauen im Geschäft, bestellen aber online.",
+        "c": "Kunden kaufen nur online ohne vorher anzuschauen."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Kunden schauen im Geschäft und bestellen dann online.",
+        "key_evidence": "kommen zwar noch ins Geschäft, um Produkte anzuschauen, bestellen dann aber online",
+        "key_vocabulary": [
+          {
+            "word": "Showrooming",
+            "type": "Nomen",
+            "meaning": "showrooming"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q3",
+      "teil": 2,
+      "type": "multiple_choice",
+      "stem": "Welche Branche ist vom Online-Handel am wenigsten betroffen?",
+      "options": {
+        "a": "Buchhandlungen.",
+        "b": "Elektronikmärkte.",
+        "c": "Lebensmittelgeschäfte."
+      },
+      "answer": "c",
+      "points": 1,
+      "explanation": {
+        "de": "Lebensmittel werden überwiegend im Laden gekauft.",
+        "key_evidence": "Lebensmittel werden nach wie vor überwiegend im Laden gekauft",
+        "key_vocabulary": [
+          {
+            "word": "überwiegend",
+            "type": "Adverb",
+            "meaning": "predominantly"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q4",
+      "teil": 2,
+      "type": "multiple_choice",
+      "stem": "Was fördert das Programm Starke Innenstädte?",
+      "options": {
+        "a": "Neue Parkplätze für Kunden.",
+        "b": "Die Digitalisierung von Geschäften.",
+        "c": "Günstigere Mieten für Händler."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Einzelhändler können Zuschüsse für Digitalisierung beantragen.",
+        "key_evidence": "Zuschüsse für die Digitalisierung ihrer Geschäfte",
+        "key_vocabulary": [
+          {
+            "word": "Digitalisierung",
+            "type": "Nomen",
+            "meaning": "digitalization"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q5",
+      "teil": 2,
+      "type": "multiple_choice",
+      "stem": "Wohin gehen junge Konsumenten gern?",
+      "options": {
+        "a": "In große Kaufhäuser.",
+        "b": "In Concept Stores.",
+        "c": "Auf Flohmärkte."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Junge Konsumenten gehen gern in Concept Stores, die Kaffee, Mode und Kunst verbinden.",
+        "key_evidence": "sogenannte Concept Stores",
+        "key_vocabulary": [
+          {
+            "word": "Einkaufserlebnis",
+            "type": "Nomen",
+            "meaning": "shopping experience"
+          }
+        ]
+      }
+    }
+  ],
+  "scoring": {
+    "total_points": 5,
+    "pass_threshold": 3,
+    "grading": [
+      {
+        "range": [
+          5,
+          5
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          4,
+          4
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          3,
+          3
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          1,
+          2
+        ],
+        "label": "Noch üben!",
+        "emoji": "📝"
+      },
+      {
+        "range": [
+          0,
+          0
+        ],
+        "label": "Mehr Übung nötig",
+        "emoji": "💪"
+      }
+    ]
+  },
+  "qa": {
+    "vocab_in_b1_list": true,
+    "grammar_b1_appropriate": true,
+    "word_count_in_range": true,
+    "all_answers_verifiable": true,
+    "image_count": 1,
+    "passed": true
+  }
+}

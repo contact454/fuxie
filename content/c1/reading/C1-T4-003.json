@@ -1,0 +1,196 @@
+{
+  "id": "C1-T4-003",
+  "level": "C1",
+  "teil": 4,
+  "teil_name": "Meinungen zuordnen",
+  "topic": "Literatur & Sprache",
+  "topic_id": "003",
+  "metadata": {
+    "word_count": 109,
+    "target_grammar": [
+      "Nominalisierung",
+      "Partizipialkonstruktionen",
+      "Konjunktiv I/II",
+      "Passiversatzformen"
+    ],
+    "target_vocabulary": [],
+    "generated_at": "2026-03-11T23:18:54.731267",
+    "version": 1
+  },
+  "opinion_texts": {
+    "question": "Können KI-generierte Texte als Literatur gelten?",
+    "texts": [
+      {
+        "name": "Autorin Sarah Berg",
+        "text": "Literatur entsteht aus menschlicher Erfahrung, aus Schmerz, Freude und Sehnsucht. Ein Algorithmus kann Wörter kombinieren, aber er hat keine Erfahrung, die er teilen könnte. KI-Texte sind Simulation, nicht Ausdruck.",
+        "label": "A"
+      },
+      {
+        "name": "Literaturwissenschaftler Prof. Dr. Hans Roth",
+        "text": "Wenn ein Text beim Leser eine ästhetische Erfahrung auslöst, ist die Frage nach dem Autor zweitrangig. Die Literaturtheorie hat den Tod des Autors schon vor Jahrzehnten verkündet, die Bedeutung liegt im Text selbst.",
+        "label": "B"
+      },
+      {
+        "name": "Verlegerin Dr. Mona Falk",
+        "text": "Die Verlagswelt steht vor einem Tsunami an KI-generierten Manuskripten. Wir brauchen Standards und Kennzeichnungspflichten, sonst verliert der Literaturbetrieb seine Glaubwürdigkeit.",
+        "label": "C"
+      },
+      {
+        "name": "KI-Entwickler Martin Scholz",
+        "text": "Die Kreativität von KI sollte als Werkzeug verstanden werden, ähnlich wie die Druckerpresse oder die Textverarbeitung. Co-kreative Prozesse zwischen Mensch und KI werden neue literarische Formen hervorbringen.",
+        "label": "D"
+      }
+    ]
+  },
+  "images": [
+    {
+      "id": "IMG1",
+      "type": "scene",
+      "prompt": "Cute cartoon illustration of experts discussing Literatur & Sprache. Fuxie cartoon style, flat illustration, warm pastel colors, no text.",
+      "filename": "C1-T4-003_scene.png",
+      "placement": "header",
+      "alt_text": "Können KI-generierte Texte als Literatur gelten?",
+      "dimensions": "768x512"
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q1",
+      "teil": 4,
+      "type": "matching",
+      "stem": "Literatur erfordert authentische menschliche Erfahrung.",
+      "answer": "A",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Text/Beitrag A",
+        "reasoning": "Die Aussage 'Literatur erfordert authentische menschliche Erfah...' entspricht der Position von A."
+      }
+    },
+    {
+      "id": "Q2",
+      "teil": 4,
+      "type": "matching",
+      "stem": "Die These, dass Die ästhetische Wirkung eines Textes ist wichtiger als die Authorfrage, wird durch folgende Argumentation gestützt:",
+      "answer": "B",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Text/Beitrag B",
+        "reasoning": "[Inferential] Die Aussage 'Die ästhetische Wirkung eines Textes ist wichtiger...' entspricht der Position von B."
+      }
+    },
+    {
+      "id": "Q3",
+      "teil": 4,
+      "type": "matching",
+      "stem": "Die grundlegende Prämisse, dass Der Literaturbetrieb braucht Kennzeichnungspflichten für KI-Texte, liegt der Position zugrunde:",
+      "answer": "C",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Text/Beitrag C",
+        "reasoning": "[Inferential] Die Aussage 'Der Literaturbetrieb braucht Kennzeichnungspflicht...' entspricht der Position von C."
+      }
+    },
+    {
+      "id": "Q4",
+      "teil": 4,
+      "type": "matching",
+      "stem": "Die These, dass mensch-KI-Kooperation kann neue literarische Formen schaffen, wird durch folgende Argumentation gestützt:",
+      "answer": "D",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Text/Beitrag D",
+        "reasoning": "[Inferential] Die Aussage 'Mensch-KI-Kooperation kann neue literarische Forme...' entspricht der Position von D."
+      }
+    },
+    {
+      "id": "Q5",
+      "teil": 4,
+      "type": "matching",
+      "stem": "Die grundlegende Prämisse, dass Ein Algorithmus kann keine echten Erfahrungen teilen, liegt der Position zugrunde:",
+      "answer": "A",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Text/Beitrag A",
+        "reasoning": "[Inferential] Die Aussage 'Ein Algorithmus kann keine echten Erfahrungen teil...' entspricht der Position von A."
+      }
+    },
+    {
+      "id": "Q6",
+      "teil": 4,
+      "type": "matching",
+      "stem": "Die These, dass Der Verlagsbetrieb wird von KI-generierten Texten überflutet, wird durch folgende Argumentation gestützt:",
+      "answer": "C",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Text/Beitrag C",
+        "reasoning": "[Inferential] Die Aussage 'Der Verlagsbetrieb wird von KI-generierten Texten ...' entspricht der Position von C."
+      }
+    },
+    {
+      "id": "Q7",
+      "teil": 4,
+      "type": "matching",
+      "stem": "KI ist ein Werkzeug, vergleichbar mit früheren technologischen Innovationen.",
+      "answer": "D",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Text/Beitrag D",
+        "reasoning": "Die Aussage 'KI ist ein Werkzeug, vergleichbar mit früheren tec...' entspricht der Position von D."
+      }
+    }
+  ],
+  "scoring": {
+    "total_points": 7,
+    "pass_threshold": 5,
+    "grading": [
+      {
+        "range": [
+          6,
+          7
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          4,
+          5
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          3,
+          3
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          1,
+          2
+        ],
+        "label": "Noch üben!",
+        "emoji": "📝"
+      },
+      {
+        "range": [
+          0,
+          0
+        ],
+        "label": "Mehr Übung nötig",
+        "emoji": "💪"
+      }
+    ]
+  },
+  "qa": {
+    "vocab_in_c1_list": true,
+    "grammar_c1_appropriate": true,
+    "word_count_in_range": true,
+    "all_answers_verifiable": true,
+    "image_count": 1,
+    "passed": true
+  }
+}

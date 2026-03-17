@@ -1,0 +1,177 @@
+{
+  "id": "A1-T2-010",
+  "level": "A1",
+  "teil": 2,
+  "teil_name": "Anzeigen zuordnen",
+  "topic": "Feste und Feiertage",
+  "topic_id": "010",
+  "metadata": {
+    "generated_at": "2026-03-09T02:30:00+07:00",
+    "version": 1
+  },
+  "anzeigen": [
+    {
+      "id": "AnzeigeA",
+      "title": "Weihnachtsmarkt am Rathausplatz",
+      "details": {
+        "name": "Berliner Weihnachtsmarkt",
+        "address": "Rathausplatz, 10178 Berlin",
+        "hours": "25. Nov. – 23. Dez., täglich 11:00–21:00 Uhr",
+        "price": "Eintritt frei! Glühwein 3 €, Bratwurst 4 €",
+        "contact": "www.weihnachtsmarkt-berlin.de",
+        "target_audience": "Familien, Touristen, alle",
+        "extra_info": "200 Stände. Karussell für Kinder. Live-Musik. Draußen."
+      }
+    },
+    {
+      "id": "AnzeigeB",
+      "title": "Sommerfest im Stadtpark",
+      "details": {
+        "name": "Stadtpark Sommerfest",
+        "address": "Stadtpark, 10249 Berlin",
+        "hours": "15. Juli, 14:00–22:00 Uhr (nur 1 Tag!)",
+        "price": "Eintritt 5 €, Kinder bis 10 frei. Essen 3–8 €",
+        "contact": "Tel: 030-7778899",
+        "target_audience": "Familien, Musikfans",
+        "extra_info": "3 Bands live. Hüpfburg für Kinder. Feuerwerk um 22 Uhr. Draußen."
+      }
+    }
+  ],
+  "images": [
+    {
+      "id": "IMG1",
+      "type": "anzeige",
+      "linked_anzeige": "AnzeigeA",
+      "prompt": "Cartoon-style Christmas market poster: 'Weihnachtsmarkt am Rathausplatz'. Shows Christmas stalls, tree, lights, 25 Nov-23 Dec, free entry, Glühwein 3€. Fuxie cartoon, festive red/green/gold, legible font.",
+      "filename": "A1-T2-010_anzeige_a.png",
+      "placement": "anzeige_a",
+      "alt_text": "Werbung für Weihnachtsmarkt am Rathausplatz",
+      "dimensions": "512x600"
+    },
+    {
+      "id": "IMG2",
+      "type": "anzeige",
+      "linked_anzeige": "AnzeigeB",
+      "prompt": "Cartoon-style summer festival poster: 'Sommerfest im Stadtpark'. Shows outdoor stage, bands, bouncy castle, fireworks, 15 July 14-22 Uhr, entry 5€. Fuxie cartoon, summer green/yellow/orange, legible font.",
+      "filename": "A1-T2-010_anzeige_b.png",
+      "placement": "anzeige_b",
+      "alt_text": "Werbung für Sommerfest im Stadtpark",
+      "dimensions": "512x600"
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q6",
+      "teil": 2,
+      "type": "matching_ab",
+      "situation": "Frau Meier möchte im Dezember etwas Schönes draußen machen.",
+      "answer": "A",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Weihnachtsmarkt am Rathausplatz; 200 Stände. Karussell für Kinder. Live-Musik. Draußen.",
+        "reasoning": "Die Situation passt zu Anzeige A, weil die genannten Anforderungen dort erfüllt werden."
+      }
+    },
+    {
+      "id": "Q7",
+      "teil": 2,
+      "type": "matching_ab",
+      "situation": "Tom möchte abends ein Feuerwerk sehen.",
+      "answer": "B",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Sommerfest im Stadtpark; 3 Bands live. Hüpfburg für Kinder. Feuerwerk um 22 Uhr. Draußen.",
+        "reasoning": "Die Situation passt zu Anzeige B, weil die genannten Anforderungen dort erfüllt werden."
+      }
+    },
+    {
+      "id": "Q8",
+      "teil": 2,
+      "type": "matching_ab",
+      "situation": "Familie Schmidt hat kein Geld für Eintritt. Sie möchte kostenlos hingehen.",
+      "answer": "A",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Weihnachtsmarkt am Rathausplatz; Eintritt frei! Glühwein 3 €, Bratwurst 4 €; Familien, Touristen, alle",
+        "reasoning": "Die Situation passt zu Anzeige A, weil die genannten Anforderungen dort erfüllt werden."
+      }
+    },
+    {
+      "id": "Q9",
+      "teil": 2,
+      "type": "matching_ab",
+      "situation": "Sophie möchte Live-Bands hören und tanzen.",
+      "answer": "B",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Sommerfest im Stadtpark; 3 Bands live. Hüpfburg für Kinder. Feuerwerk um 22 Uhr. Draußen.",
+        "reasoning": "Die Situation passt zu Anzeige B, weil die genannten Anforderungen dort erfüllt werden."
+      }
+    },
+    {
+      "id": "Q10",
+      "teil": 2,
+      "type": "matching_ab",
+      "situation": "Herr Braun möchte an mehreren Tagen kommen und Glühwein trinken.",
+      "answer": "A",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Weihnachtsmarkt am Rathausplatz; Eintritt frei! Glühwein 3 €, Bratwurst 4 €",
+        "reasoning": "Die Situation passt zu Anzeige A, weil die genannten Anforderungen dort erfüllt werden."
+      }
+    }
+  ],
+  "scoring": {
+    "total_points": 5,
+    "pass_threshold": 3,
+    "grading": [
+      {
+        "range": [
+          5,
+          5
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          4,
+          4
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          3,
+          3
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          1,
+          2
+        ],
+        "label": "Noch üben!",
+        "emoji": "📝"
+      },
+      {
+        "range": [
+          0,
+          0
+        ],
+        "label": "Mehr Übung nötig",
+        "emoji": "💪"
+      }
+    ]
+  },
+  "qa": {
+    "anzeigen_different_enough": true,
+    "anzeigen_same_category": true,
+    "all_situations_unambiguous": true,
+    "image_text_matches_json": false,
+    "passed": false
+  }
+}

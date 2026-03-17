@@ -1,0 +1,265 @@
+{
+  "id": "A2-T2-005",
+  "level": "A2",
+  "teil": 2,
+  "teil_name": "Informationstafeln verstehen",
+  "topic": "Wohnung suchen",
+  "topic_id": "005",
+  "metadata": {
+    "word_count": 94,
+    "target_grammar": [
+      "Modalverben",
+      "Nebensatz mit dass"
+    ],
+    "target_vocabulary": [
+      "Hausverwaltung",
+      "Mieter",
+      "Hausmeister",
+      "Mülltonnen",
+      "Ruhezeiten",
+      "Treppenhaus",
+      "Haustier",
+      "Reparatur",
+      "Briefkasten",
+      "Hausordnung"
+    ],
+    "generated_at": "2026-03-09T22:32:00+07:00",
+    "version": 1
+  },
+  "infotafel": {
+    "title": "Hausverwaltung Weber — Aushang für Mieter",
+    "location": "Bergmannstraße 14, 10961 Berlin-Kreuzberg",
+    "rows": [
+      {
+        "label": "Hausmeister",
+        "items": "Herr Yilmaz · Tel: 030-5551234 · Sprechzeit: Mo & Do 9:00–11:00 Uhr"
+      },
+      {
+        "label": "Mülltonnen",
+        "items": "Restmüll (grau): Montag · Papier (blau): Mittwoch · Gelber Sack: Freitag · Bio (braun): Dienstag & Donnerstag"
+      },
+      {
+        "label": "Ruhezeiten",
+        "items": "22:00–7:00 Uhr Nachtruhe · 13:00–15:00 Uhr Mittagsruhe · Sonntags ganztägig"
+      },
+      {
+        "label": "Reparatur melden",
+        "items": "E-Mail: reparatur@weber-hausverwaltung.de · oder direkt beim Hausmeister"
+      }
+    ],
+    "extra_info": "Haustiere: Kleine Haustiere (Katzen, Hamster) sind erlaubt. Hunde nur mit Genehmigung der Hausverwaltung. Fahrräder bitte im Fahrradkeller abstellen, nicht im Treppenhaus. Briefkästen bitte regelmäßig leeren."
+  },
+  "images": [
+    {
+      "id": "IMG1",
+      "type": "info_board",
+      "prompt": "Cute cartoon illustration of a German apartment building entrance hallway (Hausflur) with a notice board on the wall, mailboxes, a staircase, and a recycling bin area visible through a side door. Fuxie cartoon style, flat illustration, warm pastel colors, no text.",
+      "filename": "A2-T2-005_board.png",
+      "placement": "header",
+      "alt_text": "Hausverwaltung Aushang für Mieter",
+      "dimensions": "768x512"
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q1",
+      "teil": 2,
+      "type": "multiple_choice",
+      "stem": "Wann kann man den Hausmeister sprechen?",
+      "options": {
+        "a": "Montag und Freitag, 9:00–11:00 Uhr.",
+        "b": "Montag und Donnerstag, 9:00–11:00 Uhr.",
+        "c": "Jeden Tag von 8:00–12:00 Uhr."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Der Hausmeister hat Sprechzeit am Mo & Do 9:00–11:00 Uhr.",
+        "key_evidence": "Sprechzeit: Mo & Do 9:00–11:00 Uhr",
+        "key_vocabulary": [
+          {
+            "word": "Hausmeister",
+            "type": "Nomen",
+            "meaning": "caretaker / janitor"
+          },
+          {
+            "word": "Sprechzeit",
+            "type": "Nomen",
+            "meaning": "office hours"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q2",
+      "teil": 2,
+      "type": "multiple_choice",
+      "stem": "An welchem Tag wird das Altpapier abgeholt?",
+      "options": {
+        "a": "Am Montag.",
+        "b": "Am Mittwoch.",
+        "c": "Am Freitag."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Papier (blau) wird am Mittwoch abgeholt.",
+        "key_evidence": "Papier (blau): Mittwoch",
+        "key_vocabulary": [
+          {
+            "word": "Altpapier",
+            "type": "Nomen",
+            "meaning": "waste paper"
+          },
+          {
+            "word": "Mülltonne",
+            "type": "Nomen",
+            "meaning": "trash bin"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q3",
+      "teil": 2,
+      "type": "multiple_choice",
+      "stem": "Was ist am Sonntag nicht erlaubt?",
+      "options": {
+        "a": "Man darf keinen Besuch haben.",
+        "b": "Man darf den ganzen Tag keinen Lärm machen.",
+        "c": "Man darf nicht kochen."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Sonntags ist ganztägig Ruhezeit.",
+        "key_evidence": "Sonntags ganztägig",
+        "key_vocabulary": [
+          {
+            "word": "Ruhezeit",
+            "type": "Nomen",
+            "meaning": "quiet hours"
+          },
+          {
+            "word": "ganztägig",
+            "type": "Adverb",
+            "meaning": "all day"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q4",
+      "teil": 2,
+      "type": "multiple_choice",
+      "stem": "Darf man einen Hund in der Wohnung haben?",
+      "options": {
+        "a": "Ja, immer.",
+        "b": "Nein, keine Haustiere erlaubt.",
+        "c": "Nur mit Genehmigung der Hausverwaltung."
+      },
+      "answer": "c",
+      "points": 1,
+      "explanation": {
+        "de": "Hunde sind nur mit Genehmigung der Hausverwaltung erlaubt.",
+        "key_evidence": "Hunde nur mit Genehmigung der Hausverwaltung",
+        "key_vocabulary": [
+          {
+            "word": "Genehmigung",
+            "type": "Nomen",
+            "meaning": "permission / approval"
+          },
+          {
+            "word": "Haustier",
+            "type": "Nomen",
+            "meaning": "pet"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q5",
+      "teil": 2,
+      "type": "multiple_choice",
+      "stem": "Wo soll man sein Fahrrad abstellen?",
+      "options": {
+        "a": "Im Treppenhaus.",
+        "b": "Vor dem Haus.",
+        "c": "Im Fahrradkeller."
+      },
+      "answer": "c",
+      "points": 1,
+      "explanation": {
+        "de": "Fahrräder soll man im Fahrradkeller abstellen, nicht im Treppenhaus.",
+        "key_evidence": "Fahrräder bitte im Fahrradkeller abstellen, nicht im Treppenhaus",
+        "key_vocabulary": [
+          {
+            "word": "Fahrradkeller",
+            "type": "Nomen",
+            "meaning": "bicycle basement / storage"
+          },
+          {
+            "word": "abstellen",
+            "type": "Verb",
+            "meaning": "to park / store"
+          }
+        ]
+      }
+    }
+  ],
+  "scoring": {
+    "total_points": 5,
+    "pass_threshold": 3,
+    "grading": [
+      {
+        "range": [
+          5,
+          5
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          4,
+          4
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          3,
+          3
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          1,
+          2
+        ],
+        "label": "Noch üben!",
+        "emoji": "📝"
+      },
+      {
+        "range": [
+          0,
+          0
+        ],
+        "label": "Mehr Übung nötig",
+        "emoji": "💪"
+      }
+    ]
+  },
+  "qa": {
+    "vocab_in_a2_list": true,
+    "grammar_a2_only": true,
+    "word_count_in_range": true,
+    "all_answers_verifiable": true,
+    "mc_distractors_plausible": true,
+    "image_count": 1,
+    "passed": true
+  }
+}

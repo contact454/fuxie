@@ -1,0 +1,261 @@
+{
+  "id": "A2-T2-003",
+  "level": "A2",
+  "teil": 2,
+  "teil_name": "Informationstafeln verstehen",
+  "topic": "Beim Arzt",
+  "topic_id": "003",
+  "metadata": {
+    "word_count": 92,
+    "target_grammar": [
+      "Modalverben",
+      "Imperativ"
+    ],
+    "target_vocabulary": [
+      "Sprechstunde",
+      "Notaufnahme",
+      "Wartezimmer",
+      "Rezeption",
+      "Röntgen",
+      "Labor",
+      "Apotheke",
+      "Versichertenkarte",
+      "Termin",
+      "Facharzt"
+    ],
+    "generated_at": "2026-03-09T22:32:00+07:00",
+    "version": 1
+  },
+  "infotafel": {
+    "title": "Gemeinschaftspraxis Dr. Müller & Dr. Fischer — Wegweiser",
+    "location": "Lindenstraße 22, 50667 Köln",
+    "rows": [
+      {
+        "floor": "EG",
+        "items": "Rezeption · Wartezimmer · WC · Garderobe"
+      },
+      {
+        "floor": "1. OG",
+        "items": "Dr. Müller (Allgemeinmedizin) · Dr. Fischer (Kinderheilkunde) · Untersuchungsräume 1–3"
+      },
+      {
+        "floor": "2. OG",
+        "items": "Labor · Röntgen · EKG · Ruheraum"
+      }
+    ],
+    "extra_info": "Sprechzeiten: Mo, Di, Do 8:00–12:00 und 14:00–18:00 Uhr. Mi, Fr 8:00–13:00 Uhr. Bitte bringen Sie Ihre Versichertenkarte mit. Termine können Sie telefonisch oder online vereinbaren. Notfälle ohne Termin: bitte direkt zur Rezeption."
+  },
+  "images": [
+    {
+      "id": "IMG1",
+      "type": "info_board",
+      "prompt": "Cute cartoon illustration of a German medical clinic reception area with a friendly receptionist, directory board on the wall, a waiting room with chairs visible, a plant and a water dispenser. Fuxie cartoon style, flat illustration, warm pastel colors, no text.",
+      "filename": "A2-T2-003_board.png",
+      "placement": "header",
+      "alt_text": "Gemeinschaftspraxis Wegweiser",
+      "dimensions": "768x512"
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q1",
+      "teil": 2,
+      "type": "multiple_choice",
+      "stem": "Wo ist das Wartezimmer?",
+      "options": {
+        "a": "Im 1. Obergeschoss.",
+        "b": "Im 2. Obergeschoss.",
+        "c": "Im Erdgeschoss."
+      },
+      "answer": "c",
+      "points": 1,
+      "explanation": {
+        "de": "Das Wartezimmer ist im EG (Erdgeschoss).",
+        "key_evidence": "EG: Rezeption · Wartezimmer · WC · Garderobe",
+        "key_vocabulary": [
+          {
+            "word": "Wartezimmer",
+            "type": "Nomen",
+            "meaning": "waiting room"
+          },
+          {
+            "word": "Rezeption",
+            "type": "Nomen",
+            "meaning": "reception"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q2",
+      "teil": 2,
+      "type": "multiple_choice",
+      "stem": "Welcher Arzt ist für Kinder zuständig?",
+      "options": {
+        "a": "Dr. Müller.",
+        "b": "Dr. Fischer.",
+        "c": "Beide Ärzte."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Dr. Fischer ist für Kinderheilkunde zuständig.",
+        "key_evidence": "Dr. Fischer (Kinderheilkunde)",
+        "key_vocabulary": [
+          {
+            "word": "Kinderheilkunde",
+            "type": "Nomen",
+            "meaning": "pediatrics"
+          },
+          {
+            "word": "zuständig",
+            "type": "Adjektiv",
+            "meaning": "responsible"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q3",
+      "teil": 2,
+      "type": "multiple_choice",
+      "stem": "Wo kann man ein Röntgenbild machen lassen?",
+      "options": {
+        "a": "Im Erdgeschoss.",
+        "b": "Im 1. Obergeschoss.",
+        "c": "Im 2. Obergeschoss."
+      },
+      "answer": "c",
+      "points": 1,
+      "explanation": {
+        "de": "Röntgen ist im 2. OG.",
+        "key_evidence": "2. OG: Labor · Röntgen · EKG · Ruheraum",
+        "key_vocabulary": [
+          {
+            "word": "Röntgen",
+            "type": "Nomen",
+            "meaning": "X-ray"
+          },
+          {
+            "word": "Labor",
+            "type": "Nomen",
+            "meaning": "laboratory"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q4",
+      "teil": 2,
+      "type": "multiple_choice",
+      "stem": "Was muss man zur Praxis mitbringen?",
+      "options": {
+        "a": "Einen Ausweis.",
+        "b": "Die Versichertenkarte.",
+        "c": "Ein Rezept."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Man soll die Versichertenkarte mitbringen.",
+        "key_evidence": "Bitte bringen Sie Ihre Versichertenkarte mit",
+        "key_vocabulary": [
+          {
+            "word": "Versichertenkarte",
+            "type": "Nomen",
+            "meaning": "health insurance card"
+          },
+          {
+            "word": "mitbringen",
+            "type": "Verb",
+            "meaning": "to bring along"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q5",
+      "teil": 2,
+      "type": "multiple_choice",
+      "stem": "Was soll man bei einem Notfall tun?",
+      "options": {
+        "a": "Online einen Termin machen.",
+        "b": "Am nächsten Tag kommen.",
+        "c": "Direkt zur Rezeption gehen."
+      },
+      "answer": "c",
+      "points": 1,
+      "explanation": {
+        "de": "Bei Notfällen soll man direkt zur Rezeption gehen.",
+        "key_evidence": "Notfälle ohne Termin: bitte direkt zur Rezeption",
+        "key_vocabulary": [
+          {
+            "word": "Notfall",
+            "type": "Nomen",
+            "meaning": "emergency"
+          },
+          {
+            "word": "direkt",
+            "type": "Adverb",
+            "meaning": "directly"
+          }
+        ]
+      }
+    }
+  ],
+  "scoring": {
+    "total_points": 5,
+    "pass_threshold": 3,
+    "grading": [
+      {
+        "range": [
+          5,
+          5
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          4,
+          4
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          3,
+          3
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          1,
+          2
+        ],
+        "label": "Noch üben!",
+        "emoji": "📝"
+      },
+      {
+        "range": [
+          0,
+          0
+        ],
+        "label": "Mehr Übung nötig",
+        "emoji": "💪"
+      }
+    ]
+  },
+  "qa": {
+    "vocab_in_a2_list": true,
+    "grammar_a2_only": true,
+    "word_count_in_range": true,
+    "all_answers_verifiable": true,
+    "mc_distractors_plausible": true,
+    "image_count": 1,
+    "passed": true
+  }
+}

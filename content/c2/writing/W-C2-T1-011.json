@@ -1,0 +1,92 @@
+{
+  "id": "W-C2-T1-011",
+  "cefrLevel": "C2",
+  "teil": 1,
+  "teilName": "Akademischer Text",
+  "textType": "Eroerterung",
+  "register": "akademisch",
+  "topic": "Kulturphilosophie",
+  "instruction": "Verfassen Sie eine wissenschaftliche Erörterung zum Thema 'Kultur im Spannungsfeld zwischen Kommerzialisierung und Bildungsideal'. Nutzen Sie die Informationen aus den Quellentexten und der Grafik, um Ihre Argumentation zu stützen. Diskutieren Sie die soziokulturellen Auswirkungen des digitalen Wandels auf den klassischen Kulturbegriff.",
+  "instructionVi": "Viết một bài nghị luận khoa học về chủ đề 'Văn hóa trong sự giằng co giữa thương mại hóa và lý tưởng giáo dục'. Sử dụng thông tin từ các văn bản nguồn và biểu đồ để củng cố lập luận của bạn. Thảo luận về những tác động văn hóa - xã hội của sự chuyển đổi số đối với khái niệm văn hóa cổ điển.",
+  "situation": "Im Rahmen Ihres Masterstudiums der Kulturwissenschaften nehmen Sie an einem interdisziplinären Kolloquium teil. Sie wurden gebeten, einen ausführlichen Essay einzureichen, der die Transformation der Kulturlandschaft unter Berücksichtigung ökonomischer und technologischer Faktoren kritisch hinterfragt.",
+  "contentPoints": [
+    "Zusammenfassung der gegensätzlichen Positionen zur Kulturindustrie und digitalen Partizipation aus den Quellentexten.",
+    "Auswertung und Interpretation der Trends im Kulturkonsum basierend auf der vorliegenden Grafik.",
+    "Eingehende Erörterung des Spannungsverhältnisses zwischen kulturellem Bildungswert und marktwirtschaftlicher Verwertbarkeit.",
+    "Persönliche Stellungnahme zur Frage, ob die Digitalisierung eine Demokratisierung oder eine Entwertung der Kultur darstellt."
+  ],
+  "sourceText": "Text 1: 'Kultur als Ware' (Frankfurter Allgemeine Post) – Der klassische Kulturbegriff, geprägt durch die ästhetische Erziehung des Individuums, erodiert zusehends. In der heutigen 'Kulturindustrie' wird Kunst auf ihren Tauschwert reduziert. Kritiker mahnen, dass die Standardisierung kultureller Güter zu einer intellektuellen Regression führt. Wenn Kultur nur noch zur Unterhaltung dient, verliert sie ihre gesellschaftskritische Funktion. Die Ökonomisierung zwingt Institutionen wie Theater und Museen dazu, Quote vor Qualität zu setzen, wodurch Nischenprodukte und anspruchsvolle Werke verdrängt werden.\n\nText 2: 'Digitale Renaissance' (Kultur-Magazin Online) – Die Digitalisierung hat den Elfenbeinturm der Hochkultur eingerissen. Noch nie war der Zugang zu Wissen und Kunst so niederschwellig wie heute. Streaming-Plattformen und soziale Medien ermöglichen eine Demokratisierung der Produktion: Jede Person kann Schöpfer kultureller Inhalte sein. Dieser Pluralismus bricht alte Machtstrukturen auf und fördert eine partizipative Kultur, die sich organisch weiterentwickelt. Anstatt den Niedergang zu beklagen, sollte man die neuen hybriden Formen der Kultur als Chance für globale Vernetzung und Diversität begreifen.",
+  "sourceTextType": "Zeitungsartikel und Fachkommentar",
+  "grafikDesc": "Die Grafik zeigt die prozentuale Veränderung des Kulturkonsums in Deutschland zwischen 2010 und 2023, aufgeteilt in verschiedene Segmente.",
+  "grafikData": [
+    {
+      "label": "Streaming (Musik & Film)",
+      "value": 310,
+      "unit": "%"
+    },
+    {
+      "label": "Besuch klassischer Konzerte/Opern",
+      "value": -25,
+      "unit": "%"
+    },
+    {
+      "label": "Kauf von physischen Büchern",
+      "value": -12,
+      "unit": "%"
+    },
+    {
+      "label": "Nutzung von Gaming-Angeboten",
+      "value": 185,
+      "unit": "%"
+    },
+    {
+      "label": "Museums- und Galeriebesuche",
+      "value": 5,
+      "unit": "%"
+    }
+  ],
+  "minWords": 350,
+  "maxWords": null,
+  "timeMinutes": 60,
+  "rubric": {
+    "criteria": [
+      {
+        "id": "inhalt",
+        "name": "Inhalt",
+        "nameVi": "Nội dung",
+        "maxScore": 5,
+        "weight": 20
+      },
+      {
+        "id": "angemessenheit",
+        "name": "Kommunikative Angemessenheit",
+        "nameVi": "Phù hợp giao tiếp",
+        "maxScore": 5,
+        "weight": 20
+      },
+      {
+        "id": "korrektheit",
+        "name": "Korrektheit",
+        "nameVi": "Chính xác ngữ pháp & chính tả",
+        "maxScore": 5,
+        "weight": 20
+      },
+      {
+        "id": "spektrum",
+        "name": "Wortschatz & Strukturen",
+        "nameVi": "Đa dạng từ vựng & cấu trúc",
+        "maxScore": 5,
+        "weight": 20
+      },
+      {
+        "id": "kohaerenz",
+        "name": "Kohaerenz & Kohaesion",
+        "nameVi": "Mạch lạc & liên kết",
+        "maxScore": 5,
+        "weight": 20
+      }
+    ],
+    "maxScore": 25
+  },
+  "maxScore": 25
+}

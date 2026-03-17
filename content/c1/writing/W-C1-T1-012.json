@@ -1,0 +1,92 @@
+{
+  "id": "W-C1-T1-012",
+  "cefrLevel": "C1",
+  "teil": 1,
+  "teilName": "Argumentativer Text",
+  "textType": "Argumentation",
+  "register": "sachlich",
+  "topic": "Ernaehrungspolitik",
+  "instruction": "Verfassen Sie einen zusammenhängenden argumentativen Text zum Thema 'Staatliche Eingriffe in die Ernährung: Notwendigkeit oder Bevormundung?'. Gehen Sie dabei auf alle unten genannten Inhaltspunkte ein und integrieren Sie die Informationen aus der Grafik sowie die Expertenmeinungen.",
+  "instructionVi": "Viết một bài văn nghị luận về chủ đề 'Sự can thiệp của nhà nước vào chế độ ăn uống: Sự cần thiết hay sự áp đặt?'. Hãy giải quyết tất cả các ý chính, kết hợp thông tin từ biểu đồ và ý kiến chuyên gia.",
+  "situation": "In der aktuellen gesellschaftspolitischen Debatte wird verstärkt darüber diskutiert, ob der Staat durch regulatorische Maßnahmen wie Steuern oder Werbeverbote die Ernährungsgewohnheiten der Bevölkerung beeinflussen sollte. Sie nehmen an einem studentischen Schreibwettbewerb Ihrer Universität teil, der sich mit den ökonomischen und ethischen Aspekten einer aktiven Ernährungspolitik befasst.",
+  "contentPoints": [
+    "Werten Sie die vorliegende Grafik zum Konsum von zuckerhaltigen Erfrischungsgetränken aus.",
+    "Stellen Sie die gegensätzlichen Positionen der Experten zum Thema staatliche Intervention dar.",
+    "Diskutieren Sie Vor- und Nachteile von Maßnahmen wie einer Zuckersteuer oder Werbebeschränkungen für Kinderlebensmittel.",
+    "Nehmen Sie fundiert Stellung zur Frage, wo die Grenze zwischen staatlicher Fürsorgepflicht und individueller Freiheit liegen sollte."
+  ],
+  "sourceText": "Dr. med. Elena Schneider: 'Die rasant steigenden Kosten für das Gesundheitssystem durch Adipositas und Diabetes sind für die Solidargemeinschaft kaum noch tragbar. Eine Lenkungssteuer auf Zucker ist kein Eingriff in die Freiheit, sondern ein notwendiges Instrument der Prävention.' --- Prof. Dr. Lukas Weber: 'Ernährung ist eine höchst private Angelegenheit. Staatliche Bevormundung durch Verbote führt nicht zu einer nachhaltigen Verhaltensänderung, sondern schränkt lediglich die soziale Teilhabe und die individuelle Souveränität ein.'",
+  "sourceTextType": "Expertenzitate",
+  "grafikDesc": "Die Grafik illustriert die Entwicklung des jährlichen Pro-Kopf-Verbrauchs von zuckerhaltigen Erfrischungsgetränken in Deutschland zwischen 2014 und 2022.",
+  "grafikData": [
+    {
+      "label": "2014",
+      "value": 128,
+      "unit": "Liter"
+    },
+    {
+      "label": "2016",
+      "value": 122,
+      "unit": "Liter"
+    },
+    {
+      "label": "2018",
+      "value": 115,
+      "unit": "Liter"
+    },
+    {
+      "label": "2020",
+      "value": 105,
+      "unit": "Liter"
+    },
+    {
+      "label": "2022",
+      "value": 98,
+      "unit": "Liter"
+    }
+  ],
+  "minWords": 250,
+  "maxWords": 400,
+  "timeMinutes": 50,
+  "rubric": {
+    "criteria": [
+      {
+        "id": "inhalt",
+        "name": "Inhalt",
+        "nameVi": "Nội dung",
+        "maxScore": 5,
+        "weight": 20
+      },
+      {
+        "id": "angemessenheit",
+        "name": "Kommunikative Angemessenheit",
+        "nameVi": "Phù hợp giao tiếp",
+        "maxScore": 5,
+        "weight": 20
+      },
+      {
+        "id": "korrektheit",
+        "name": "Korrektheit",
+        "nameVi": "Chính xác ngữ pháp & chính tả",
+        "maxScore": 5,
+        "weight": 20
+      },
+      {
+        "id": "spektrum",
+        "name": "Wortschatz & Strukturen",
+        "nameVi": "Đa dạng từ vựng & cấu trúc",
+        "maxScore": 5,
+        "weight": 20
+      },
+      {
+        "id": "kohaerenz",
+        "name": "Kohaerenz & Kohaesion",
+        "nameVi": "Mạch lạc & liên kết",
+        "maxScore": 5,
+        "weight": 20
+      }
+    ],
+    "maxScore": 25
+  },
+  "maxScore": 25
+}

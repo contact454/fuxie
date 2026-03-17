@@ -1,0 +1,64 @@
+{
+  "id": "W-C2-T2-020",
+  "cefrLevel": "C2",
+  "teil": 2,
+  "teilName": "Textumwandlung",
+  "textType": "Sachtext",
+  "register": "sachlich",
+  "topic": "Arbeitsmarktreform",
+  "instruction": "Verfassen Sie basierend auf den Informationen des vorliegenden Quelltextes eine formale Analyse in Form eines Fachartikels für eine wirtschaftswissenschaftliche Publikation. Transformieren Sie die eher deskriptiven Inhalte in eine sachliche, differenzierte und fachsprachlich angemessene Darstellung.",
+  "instructionVi": "Dựa trên thông tin từ văn bản nguồn, hãy viết một bài phân tích chính thức dưới dạng một bài báo chuyên ngành cho một ấn phẩm kinh tế. Chuyển đổi các nội dung mang tính mô tả thành một bài trình bày khách quan, có chiều sâu và sử dụng ngôn ngữ chuyên ngành phù hợp.",
+  "situation": "Sie arbeiten als wissenschaftlicher Mitarbeiter an einem Institut für Arbeitsmarktforschung. Im Rahmen einer Fachpublikation zum Thema 'Strukturwandel der Arbeit' sollen Sie die aktuellen Reformbestrebungen der Regierung analysieren und die Perspektiven verschiedener Akteure wissenschaftlich-distantiert zusammenfassen.",
+  "contentPoints": [
+    "Analysieren Sie die Ursachen und Ziele der vorgeschlagenen Arbeitsmarktreform 'Arbeitswelt 4.0'.",
+    "Erläutern Sie die Ambivalenz der Arbeitszeitflexibilisierung aus Sicht der Arbeitnehmer und Arbeitgeber.",
+    "Beurteilen Sie die geplanten Maßnahmen zur sozialen Absicherung und Qualifizierung im Kontext der Digitalisierung.",
+    "Nehmen Sie kritisch Stellung zu den möglichen Auswirkungen auf die internationale Wettbewerbsfähigkeit."
+  ],
+  "sourceText": "Die gegenwärtige Debatte um die umfassende Arbeitsmarktreform 'Arbeitswelt 4.0' gewinnt zunehmend an Schärfe. Experten prognostizieren, dass die fortschreitende Digitalisierung und der Einsatz künstlicher Intelligenz herkömmliche Berufsbilder fundamental verändern oder gar obsolet machen werden. Vor diesem Hintergrund sieht der vorliegende Regierungsentwurf eine verpflichtende kontinuierliche Weiterbildung für Beschäftigte vor, um deren Beschäftigungsfähigkeit langfristig zu sichern. Ein zentraler, jedoch hochumstrittener Pfeiler der Reform ist die Flexibilisierung des Arbeitszeitgesetzes. Während Befürworter eine bessere Vereinbarkeit von Erwerbsarbeit und Privatleben durch individuelle Zeitmodelle betonen, mahnen Gewerkschaften vor einer schleichenden Entgrenzung und ständigen Erreichbarkeit. Parallel dazu wird eine signifikante Anhebung des gesetzlichen Mindestlohns sowie eine Ausweitung der Sozialversicherungspflicht auf Soloselbstständige diskutiert. Ziel ist es, prekäre Beschäftigungsverhältnisse einzudämmen und die soziale Absicherung an moderne Arbeitsformen anzupassen. Arbeitgeberverbände hingegen warnen vor steigenden Lohnnebenkosten und bürokratischem Mehraufwand, der die internationale Wettbewerbsfähigkeit schwächen könnte. In diesem Spannungsfeld zwischen ökonomischer Effizienz und sozialer Sicherung müssen tragfähige Lösungen gefunden werden, die den strukturellen Wandel nicht nur begleiten, sondern aktiv gestalten.",
+  "sourceTextType": "Sachtext",
+  "minWords": 250,
+  "maxWords": null,
+  "timeMinutes": 45,
+  "rubric": {
+    "criteria": [
+      {
+        "id": "inhalt",
+        "name": "Inhalt",
+        "nameVi": "Nội dung",
+        "maxScore": 5,
+        "weight": 20
+      },
+      {
+        "id": "angemessenheit",
+        "name": "Kommunikative Angemessenheit",
+        "nameVi": "Phù hợp giao tiếp",
+        "maxScore": 5,
+        "weight": 20
+      },
+      {
+        "id": "korrektheit",
+        "name": "Korrektheit",
+        "nameVi": "Chính xác ngữ pháp & chính tả",
+        "maxScore": 5,
+        "weight": 20
+      },
+      {
+        "id": "spektrum",
+        "name": "Wortschatz & Strukturen",
+        "nameVi": "Đa dạng từ vựng & cấu trúc",
+        "maxScore": 5,
+        "weight": 20
+      },
+      {
+        "id": "kohaerenz",
+        "name": "Kohaerenz & Kohaesion",
+        "nameVi": "Mạch lạc & liên kết",
+        "maxScore": 5,
+        "weight": 20
+      }
+    ],
+    "maxScore": 25
+  },
+  "maxScore": 25
+}

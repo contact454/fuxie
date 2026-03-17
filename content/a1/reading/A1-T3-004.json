@@ -1,0 +1,276 @@
+{
+  "id": "A1-T3-004",
+  "level": "A1",
+  "teil": 3,
+  "teil_name": "Schilder und Aushänge",
+  "topic": "In der Schule",
+  "topic_id": "004",
+  "metadata": {
+    "generated_at": "2026-03-09T02:45:00+07:00",
+    "version": 1
+  },
+  "schilder": [
+    {
+      "id": "Schild1",
+      "type": "Öffnungszeiten",
+      "text": "Bibliothek: Montag bis Freitag 9–17 Uhr. In den Ferien geschlossen.",
+      "icon": "📚"
+    },
+    {
+      "id": "Schild2",
+      "type": "Information",
+      "text": "Mensa: Mittagessen von 12:00 bis 14:00 Uhr. Tagesmenü 4,50 €.",
+      "icon": "🍽️"
+    },
+    {
+      "id": "Schild3",
+      "type": "Regel",
+      "text": "Computerraum: Bitte nur leise sprechen. Essen und Trinken verboten.",
+      "icon": "💻"
+    },
+    {
+      "id": "Schild4",
+      "type": "Information",
+      "text": "Sekretariat: Raum 101, Erdgeschoss. Termine bitte vorher per E-Mail.",
+      "icon": "📧"
+    },
+    {
+      "id": "Schild5",
+      "type": "Warnung",
+      "text": "Sporthalle: Nur mit Sportschuhen! Keine Straßenschuhe in der Halle.",
+      "icon": "👟"
+    }
+  ],
+  "images": [
+    {
+      "id": "IMG1",
+      "type": "schild",
+      "linked_schild": "Schild1",
+      "prompt": "Cartoon library sign: 'Bibliothek: Mo-Fr 9-17 Uhr. In den Ferien geschlossen.' Blue academic sign with book icon. Fuxie cartoon.",
+      "filename": "A1-T3-004_schild_1.png",
+      "placement": "schild_1",
+      "alt_text": "Bibliothek-Öffnungszeiten",
+      "dimensions": "400x300"
+    },
+    {
+      "id": "IMG2",
+      "type": "schild",
+      "linked_schild": "Schild2",
+      "prompt": "Cartoon cafeteria sign: 'Mensa: Mittagessen 12-14 Uhr. Tagesmenü 4,50€.' Orange/warm sign with plate icon. Fuxie cartoon.",
+      "filename": "A1-T3-004_schild_2.png",
+      "placement": "schild_2",
+      "alt_text": "Mensa-Informationsschild",
+      "dimensions": "400x300"
+    },
+    {
+      "id": "IMG3",
+      "type": "schild",
+      "linked_schild": "Schild3",
+      "prompt": "Cartoon computer room sign: 'Nur leise sprechen. Essen und Trinken verboten.' Blue/gray rule sign. Fuxie cartoon.",
+      "filename": "A1-T3-004_schild_3.png",
+      "placement": "schild_3",
+      "alt_text": "Computerraum-Regelschild",
+      "dimensions": "400x300"
+    },
+    {
+      "id": "IMG4",
+      "type": "schild",
+      "linked_schild": "Schild4",
+      "prompt": "Cartoon office sign: 'Sekretariat Raum 101. Termine per E-Mail.' Neutral info sign. Fuxie cartoon.",
+      "filename": "A1-T3-004_schild_4.png",
+      "placement": "schild_4",
+      "alt_text": "Sekretariat-Hinweisschild",
+      "dimensions": "400x300"
+    },
+    {
+      "id": "IMG5",
+      "type": "schild",
+      "linked_schild": "Schild5",
+      "prompt": "Cartoon gym sign: 'Sporthalle: Nur mit Sportschuhen!' Red/yellow warning with shoe icon. Fuxie cartoon.",
+      "filename": "A1-T3-004_schild_5.png",
+      "placement": "schild_5",
+      "alt_text": "Sporthalle-Schuhschild",
+      "dimensions": "400x300"
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q11",
+      "teil": 3,
+      "linked_schild": "Schild1",
+      "type": "richtig_falsch",
+      "statement": "Die Bibliothek ist in den Ferien offen.",
+      "answer": "falsch",
+      "points": 1,
+      "explanation": {
+        "de": "Auf dem Schild steht: 'In den Ferien geschlossen.'",
+        "key_evidence": "In den Ferien geschlossen",
+        "key_vocabulary": [
+          {
+            "word": "Ferien",
+            "type": "Nomen",
+            "meaning": "holidays"
+          },
+          {
+            "word": "Bibliothek",
+            "type": "Nomen",
+            "meaning": "library"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q12",
+      "teil": 3,
+      "linked_schild": "Schild2",
+      "type": "richtig_falsch",
+      "statement": "Das Mittagessen in der Mensa kostet 4,50 €.",
+      "answer": "richtig",
+      "points": 1,
+      "explanation": {
+        "de": "Auf dem Schild steht: 'Tagesmenü 4,50 €.'",
+        "key_evidence": "Tagesmenü 4,50 €",
+        "key_vocabulary": [
+          {
+            "word": "Mensa",
+            "type": "Nomen",
+            "meaning": "cafeteria"
+          },
+          {
+            "word": "Tagesmenü",
+            "type": "Nomen",
+            "meaning": "daily menu"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q13",
+      "teil": 3,
+      "linked_schild": "Schild3",
+      "type": "richtig_falsch",
+      "statement": "Im Computerraum darf man essen.",
+      "answer": "falsch",
+      "points": 1,
+      "explanation": {
+        "de": "Auf dem Schild steht: 'Essen und Trinken verboten.'",
+        "key_evidence": "Essen und Trinken verboten",
+        "key_vocabulary": [
+          {
+            "word": "verboten",
+            "type": "Adjektiv",
+            "meaning": "forbidden"
+          },
+          {
+            "word": "Computerraum",
+            "type": "Nomen",
+            "meaning": "computer room"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q14",
+      "teil": 3,
+      "linked_schild": "Schild4",
+      "type": "richtig_falsch",
+      "statement": "Für einen Termin im Sekretariat soll man eine E-Mail schreiben.",
+      "answer": "richtig",
+      "points": 1,
+      "explanation": {
+        "de": "Auf dem Schild steht: 'Termine bitte vorher per E-Mail.'",
+        "key_evidence": "Termine bitte vorher per E-Mail",
+        "key_vocabulary": [
+          {
+            "word": "Sekretariat",
+            "type": "Nomen",
+            "meaning": "secretary's office"
+          },
+          {
+            "word": "Termin",
+            "type": "Nomen",
+            "meaning": "appointment"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q15",
+      "teil": 3,
+      "linked_schild": "Schild5",
+      "type": "richtig_falsch",
+      "statement": "In der Sporthalle kann man normale Schuhe tragen.",
+      "answer": "falsch",
+      "points": 1,
+      "explanation": {
+        "de": "Auf dem Schild steht: 'Nur mit Sportschuhen! Keine Straßenschuhe in der Halle.'",
+        "key_evidence": "Nur mit Sportschuhen! Keine Straßenschuhe",
+        "key_vocabulary": [
+          {
+            "word": "Sportschuhe",
+            "type": "Nomen",
+            "meaning": "sports shoes"
+          },
+          {
+            "word": "Straßenschuhe",
+            "type": "Nomen",
+            "meaning": "street shoes"
+          }
+        ]
+      }
+    }
+  ],
+  "scoring": {
+    "total_points": 5,
+    "pass_threshold": 3,
+    "grading": [
+      {
+        "range": [
+          5,
+          5
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          4,
+          4
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          3,
+          3
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          1,
+          2
+        ],
+        "label": "Noch üben!",
+        "emoji": "📝"
+      },
+      {
+        "range": [
+          0,
+          0
+        ],
+        "label": "Mehr Übung nötig",
+        "emoji": "💪"
+      }
+    ]
+  },
+  "qa": {
+    "all_signs_different_types": true,
+    "word_count_per_sign_valid": true,
+    "image_text_matches_sign": false,
+    "all_answers_verifiable": true,
+    "passed": false
+  }
+}

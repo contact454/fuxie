@@ -1,0 +1,171 @@
+{
+  "id": "C1-T1-006",
+  "level": "C1",
+  "teil": 1,
+  "teil_name": "Lückentext (Wörter)",
+  "topic": "Wissenschaftstheorie",
+  "topic_id": "006",
+  "metadata": {
+    "word_count": 215,
+    "target_grammar": [
+      "Nominalisierung",
+      "Partizipialkonstruktionen",
+      "Konjunktiv I/II",
+      "Passiversatzformen"
+    ],
+    "target_vocabulary": [],
+    "generated_at": "2026-03-11T22:50:15.527648",
+    "version": 1
+  },
+  "cloze": {
+    "title": "Die Reproduzierbarkeitskrise in den Wissenschaften",
+    "text": "Die Glaubwürdigkeit der Wissenschaft beruht auf einem fundamentalen {1}: Jedes Forschungsergebnis muss von unabhängigen Forschern unter vergleichbaren Bedingungen reproduziert werden können. Doch eine zunehmende Zahl von Replikationsstudien zeigt, dass viele publizierte Ergebnisse dieser Anforderung nicht {2}.\n\nEine aufsehenerregende Untersuchung der Open Science Collaboration versuchte, hundert prominente psychologische Studien zu replizieren. Das Ergebnis war erschütternd: Nur bei 39 Prozent der Studien konnten die ursprünglichen Befunde {3} werden. In der Krebsforschung lag die Replikationsrate sogar bei nur 11 Prozent, wie eine Studie der Firma Amgen {4}.\n\nDie Ursachen sind vielfältig. Ein zentraler Faktor ist der Publikationsdruck im akademischen System. Da vor allem neue und überraschende Ergebnisse in renommierten Fachzeitschriften veröffentlicht werden, besteht ein starker Anreiz, Daten so lange zu analysieren, bis sich ein statistisch signifikantes Ergebnis {5}. Diese als P-Hacking bezeichnete Praxis verzerrt die wissenschaftliche Erkenntnislage systematisch.\n\nDarüber hinaus werden Studien mit negativen oder nicht signifikanten Ergebnissen deutlich seltener {6}, was als Schubladenproblem bekannt ist. Die Konsequenz: Die publizierte Literatur zeichnet ein geschöntes Bild der Forschungslandschaft, in dem positive Befunde überrepräsentiert sind.\n\nAls Gegenmaßnahme setzen sich immer mehr Forscher für Open Science ein: die Vorregistrierung von Studienprotokollen, die öffentliche Bereitstellung von Rohdaten und die {7} von Replikationsstudien durch Fachzeitschriften. Diese Maßnahmen sollen die Transparenz erhöhen und die wissenschaftliche Selbstkorrektur stärken, die als {8} des wissenschaftlichen Fortschritts gilt.",
+    "gaps": [
+      {
+        "pos": 1,
+        "options": {
+          "a": "Grundsatz",
+          "b": "Anforderung",
+          "c": "Gesetz",
+          "d": "Prinzip"
+        },
+        "answer": "d"
+      },
+      {
+        "pos": 2,
+        "options": {
+          "a": "standhalten",
+          "b": "entsprechen",
+          "c": "genügen",
+          "d": "folgen"
+        },
+        "answer": "a"
+      },
+      {
+        "pos": 3,
+        "options": {
+          "a": "wiederholt",
+          "b": "überprüft",
+          "c": "bestätigt",
+          "d": "nachgewiesen"
+        },
+        "answer": "c"
+      },
+      {
+        "pos": 4,
+        "options": {
+          "a": "belegte",
+          "b": "zeigte",
+          "c": "bewies",
+          "d": "ergab"
+        },
+        "answer": "a"
+      },
+      {
+        "pos": 5,
+        "options": {
+          "a": "zeigt",
+          "b": "ergibt",
+          "c": "findet",
+          "d": "herausstellt"
+        },
+        "answer": "b"
+      },
+      {
+        "pos": 6,
+        "options": {
+          "a": "veröffentlicht",
+          "b": "publiziert",
+          "c": "verbreitet",
+          "d": "berichtet"
+        },
+        "answer": "b"
+      },
+      {
+        "pos": 7,
+        "options": {
+          "a": "Anerkennung",
+          "b": "Förderung",
+          "c": "Akzeptanz",
+          "d": "Wertschätzung"
+        },
+        "answer": "c"
+      },
+      {
+        "pos": 8,
+        "options": {
+          "a": "Basis",
+          "b": "Motor",
+          "c": "Kern",
+          "d": "Ursprung"
+        },
+        "answer": "b"
+      }
+    ]
+  },
+  "images": [
+    {
+      "id": "IMG1",
+      "type": "scene",
+      "prompt": "Cute cartoon illustration related to Wissenschaftstheorie, showing an academic/intellectual scene. Fuxie cartoon style, flat illustration, warm pastel colors, no text.",
+      "filename": "C1-T1-006_scene.png",
+      "placement": "header",
+      "alt_text": "Die Reproduzierbarkeitskrise in den Wissenschaften",
+      "dimensions": "768x512"
+    }
+  ],
+  "scoring": {
+    "total_points": 8,
+    "pass_threshold": 5,
+    "grading": [
+      {
+        "range": [
+          7,
+          8
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          5,
+          6
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          4,
+          4
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          1,
+          3
+        ],
+        "label": "Noch üben!",
+        "emoji": "📝"
+      },
+      {
+        "range": [
+          0,
+          0
+        ],
+        "label": "Mehr Übung nötig",
+        "emoji": "💪"
+      }
+    ]
+  },
+  "qa": {
+    "vocab_in_c1_list": true,
+    "grammar_c1_appropriate": true,
+    "word_count_in_range": true,
+    "all_gaps_have_4_options": true,
+    "image_count": 1,
+    "passed": true
+  }
+}

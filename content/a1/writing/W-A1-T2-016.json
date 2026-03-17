@@ -1,0 +1,49 @@
+{
+  "id": "W-A1-T2-016",
+  "cefrLevel": "A1",
+  "teil": 2,
+  "teilName": "Kurze E-Mail",
+  "textType": "E-Mail",
+  "register": "informell",
+  "topic": "Sport im Park",
+  "instruction": "Schreiben Sie eine E-Mail an Ihren Freund Tim. Antworten Sie auf seine Nachricht.",
+  "instructionVi": "Viết một email cho bạn của bạn là Tim. Hãy trả lời tin nhắn của anh ấy.",
+  "situation": "Ihr Freund Tim hat Ihnen eine E-Mail geschrieben. Er möchte am Samstag mit Ihnen im Park Sport machen. Sie finden die Idee gut und möchten mitgehen.",
+  "contentPoints": [
+    "Sagen Sie, dass Sie Zeit haben.",
+    "Fragen Sie nach der Uhrzeit.",
+    "Fragen Sie: Was machen wir? (z.B. Fußball oder Jogging)"
+  ],
+  "sourceText": "Hallo! Hast du am Samstag Zeit? Wollen wir zusammen im Park Sport machen? Sag mir bitte Bescheid. Viele Grüße, Tim",
+  "sourceTextType": "E-Mail",
+  "minWords": 20,
+  "maxWords": 40,
+  "timeMinutes": 10,
+  "rubric": {
+    "criteria": [
+      {
+        "id": "inhalt",
+        "name": "Inhalt",
+        "nameVi": "Nội dung",
+        "maxScore": 5,
+        "weight": 30
+      },
+      {
+        "id": "korrektheit",
+        "name": "Korrektheit",
+        "nameVi": "Chính xác ngữ pháp & chính tả",
+        "maxScore": 5,
+        "weight": 40
+      },
+      {
+        "id": "angemessenheit",
+        "name": "Angemessenheit",
+        "nameVi": "Tính phù hợp",
+        "maxScore": 5,
+        "weight": 30
+      }
+    ],
+    "maxScore": 15
+  },
+  "maxScore": 15
+}

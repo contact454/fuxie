@@ -1,0 +1,64 @@
+{
+  "id": "W-C1-T2-013",
+  "cefrLevel": "C1",
+  "teil": 2,
+  "teilName": "Textumwandlung",
+  "textType": "Formeller Brief",
+  "register": "formell",
+  "topic": "Gesundheitsmanagement",
+  "instruction": "Sie haben einen Vortrag zum Thema 'Modernes betriebliches Gesundheitsmanagement' gehört und Notizen gemacht. Schreiben Sie nun einen formellen Vorschlagsbrief an Ihre Geschäftsleitung, in dem Sie die Kernaussagen des Vortrags zusammenfassen und konkrete Schritte für Ihr Unternehmen vorschlagen.",
+  "instructionVi": "Bạn đã nghe một bài thuyết trình về chủ đề 'Quản lý sức khỏe doanh nghiệp hiện đại' và đã ghi chép lại. Hãy viết một thư đề xuất chính thức gửi ban giám đốc, tóm tắt các ý chính của bài thuyết trình và đề xuất các bước đi cụ thể cho công ty của bạn.",
+  "situation": "In Ihrem Unternehmen ist der Krankenstand in den letzten zwei Jahren spürbar gestiegen. Nach dem Besuch einer Fachkonferenz zum Thema Gesundheitsmanagement sollen Sie die Geschäftsleitung davon überzeugen, in präventive Maßnahmen zu investieren und dabei die im Vortrag genannten Argumente nutzen.",
+  "contentPoints": [
+    "Analysieren Sie die im Vortrag genannten Ursachen für die Zunahme arbeitsbedingter Erkrankungen.",
+    "Erläutern Sie die vorgeschlagenen präventiven Maßnahmen (Ergonomie, psychische Gesundheit, Pausenkultur).",
+    "Argumentieren Sie, warum diese Investitionen langfristig die Produktivität des Unternehmens sichern.",
+    "Formulieren Sie eine Bitte um ein persönliches Gespräch zur weiteren Planung."
+  ],
+  "sourceText": "Meine Damen und Herren, wir müssen der Realität ins Auge blicken: Die Arbeitswelt hat sich fundamental gewandelt. Während wir früher vor allem mit körperlichen Belastungen zu kämpfen hatten, sind es heute die psychischen Faktoren, die den Krankenstand nach oben treiben. Dauernde Erreichbarkeit und Zeitdruck führen zu chronischem Stress. Ein modernes Gesundheitsmanagement darf deshalb nicht beim kostenlosen Obstkorb stehen bleiben. Wir brauchen erstens ergonomische Arbeitsplatzgestaltung, um physischen Langzeitschäden vorzubeugen. Zweitens müssen wir in die psychische Resilienz investieren – durch Workshops zur Stressbewältigung und flexible Arbeitszeitmodelle, die eine echte Work-Life-Balance ermöglichen. Ein oft unterschätzter Punkt ist die aktive Pausenkultur; kurze, angeleitete Bewegungseinheiten können Wunder wirken. Kritiker führen oft die Kosten an, aber lassen Sie mich eines betonen: Jeder Euro, den Sie in die Prävention investieren, spart Ihnen später das Dreifache durch geringere Ausfallzeiten und eine höhere Mitarbeiterbindung. Gesunde Mitarbeiter sind das wertvollste Kapital eines Unternehmens in Zeiten des Fachkräftemangels. Es geht hierbei nicht um Wellness, sondern um eine strategische Notwendigkeit für die Zukunftsfähigkeit Ihres Betriebs.",
+  "sourceTextType": "Muendlicher Vortrag",
+  "minWords": 200,
+  "maxWords": 300,
+  "timeMinutes": 40,
+  "rubric": {
+    "criteria": [
+      {
+        "id": "inhalt",
+        "name": "Inhalt",
+        "nameVi": "Nội dung",
+        "maxScore": 5,
+        "weight": 20
+      },
+      {
+        "id": "angemessenheit",
+        "name": "Kommunikative Angemessenheit",
+        "nameVi": "Phù hợp giao tiếp",
+        "maxScore": 5,
+        "weight": 20
+      },
+      {
+        "id": "korrektheit",
+        "name": "Korrektheit",
+        "nameVi": "Chính xác ngữ pháp & chính tả",
+        "maxScore": 5,
+        "weight": 20
+      },
+      {
+        "id": "spektrum",
+        "name": "Wortschatz & Strukturen",
+        "nameVi": "Đa dạng từ vựng & cấu trúc",
+        "maxScore": 5,
+        "weight": 20
+      },
+      {
+        "id": "kohaerenz",
+        "name": "Kohaerenz & Kohaesion",
+        "nameVi": "Mạch lạc & liên kết",
+        "maxScore": 5,
+        "weight": 20
+      }
+    ],
+    "maxScore": 25
+  },
+  "maxScore": 25
+}

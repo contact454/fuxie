@@ -1,0 +1,64 @@
+{
+  "id": "W-B2-T1-018",
+  "cefrLevel": "B2",
+  "teil": 1,
+  "teilName": "Forumsbeitrag",
+  "textType": "Forumsbeitrag",
+  "register": "neutral",
+  "topic": "Wohnungsmarkt-Krise",
+  "instruction": "Sie schreiben einen Forumsbeitrag für das Online-Magazin 'Stadtraum Heute' zum Thema Wohnungsnot und steigende Mieten. Diskutieren Sie die aktuelle Situation, analysieren Sie die Ursachen und schlagen Sie Lösungsansätze vor.",
+  "instructionVi": "Bạn viết một bài đăng diễn đàn cho tạp chí trực tuyến 'Stadtraum Heute' về chủ đề thiếu hụt nhà ở và giá thuê tăng cao. Hãy thảo luận về tình hình hiện tại, phân tích nguyên nhân và đề xuất các giải pháp.",
+  "situation": "In einem Online-Forum für Stadtentwicklung wird derzeit intensiv über die Wohnungsmarkt-Krise in deutschen Metropolen debattiert. Viele junge Menschen und Familien berichten, dass sie trotz festem Einkommen keine angemessene Wohnung finden können, da die Konkurrenz zu groß und die Preise zu hoch sind.",
+  "contentPoints": [
+    "Äußern Sie Ihre Meinung zur aktuellen Situation auf dem Wohnungsmarkt in Großstädten.",
+    "Nennen Sie Gründe, warum es heutzutage so schwierig ist, bezahlbaren Wohnraum zu finden.",
+    "Schlagen Sie Maßnahmen vor, wie Städte das Problem der Wohnungsnot lösen könnten.",
+    "Beschreiben Sie die Situation auf dem Wohnungsmarkt in Ihrem Heimatland."
+  ],
+  "sourceText": "Immer mehr Menschen zieht es in die Metropolen, doch der Wohnungsmarkt ist fast überall erschöpft. In Städten wie München, Berlin oder Hamburg übersteigt die Nachfrage das Angebot bei weitem. Die Folge: Mietpreise schießen in die Höhe, und bezahlbarer Wohnraum für Geringverdiener oder Familien wird zur Mangelware. Experten warnen vor einer sozialen Spaltung der Stadtgesellschaft. 'Wir bauen zu wenig und oft am Bedarf vorbei', erklärt der Stadtplaner Dr. Klaus Weber. 'Anstatt luxuriöser Eigentumswohnungen benötigen wir mehr staatlich geförderten Sozialbau und eine strengere Mietpreisbremse, um den Markt zu regulieren.'",
+  "sourceTextType": "Online-Artikel der 'Tageszeitung Aktuell'",
+  "minWords": 150,
+  "maxWords": 250,
+  "timeMinutes": 35,
+  "rubric": {
+    "criteria": [
+      {
+        "id": "inhalt",
+        "name": "Inhalt",
+        "nameVi": "Nội dung",
+        "maxScore": 5,
+        "weight": 25
+      },
+      {
+        "id": "angemessenheit",
+        "name": "Kommunikative Angemessenheit",
+        "nameVi": "Phù hợp giao tiếp",
+        "maxScore": 5,
+        "weight": 20
+      },
+      {
+        "id": "korrektheit",
+        "name": "Korrektheit",
+        "nameVi": "Chính xác ngữ pháp & chính tả",
+        "maxScore": 5,
+        "weight": 25
+      },
+      {
+        "id": "spektrum",
+        "name": "Wortschatz & Strukturen",
+        "nameVi": "Đa dạng từ vựng & cấu trúc",
+        "maxScore": 5,
+        "weight": 15
+      },
+      {
+        "id": "kohaerenz",
+        "name": "Kohaerenz & Kohaesion",
+        "nameVi": "Mạch lạc & liên kết",
+        "maxScore": 5,
+        "weight": 15
+      }
+    ],
+    "maxScore": 25
+  },
+  "maxScore": 25
+}

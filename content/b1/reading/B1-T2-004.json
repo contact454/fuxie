@@ -1,0 +1,224 @@
+{
+  "id": "B1-T2-004",
+  "level": "B1",
+  "teil": 2,
+  "teil_name": "Pressebericht lesen",
+  "topic": "Medien & Kommunikation",
+  "topic_id": "004",
+  "metadata": {
+    "word_count": 292,
+    "target_grammar": [
+      "Nebensatz mit dass/obwohl/weil",
+      "Passiv",
+      "Konjunktiv II"
+    ],
+    "target_vocabulary": [
+      "Smartphone",
+      "Jugendliche",
+      "Bildschirmzeit",
+      "Online",
+      "Sucht",
+      "Studie",
+      "Experte",
+      "Medienkompetenz",
+      "Eltern",
+      "Regelung"
+    ],
+    "generated_at": "2026-03-10T22:57:00+07:00",
+    "version": 1
+  },
+  "article": {
+    "source": "Frankfurter Allgemeine",
+    "date": "5. Januar 2026",
+    "title": "Smartphone-Nutzung bei Jugendlichen steigt weiter",
+    "subtitle": "Neue Studie: 14- bis 17-Jährige verbringen über vier Stunden täglich am Handy",
+    "text": "Deutsche Jugendliche verbringen im Durchschnitt mehr als vier Stunden pro Tag am Smartphone. Das zeigt eine neue Studie des Deutschen Instituts für Medienforschung. Im Vergleich zu 2020 ist die tägliche Bildschirmzeit um fast eine Stunde gestiegen.\n\nBesonders beliebt sind soziale Netzwerke und Videoplattformen. 78 Prozent der befragten Jugendlichen gaben an, dass sie täglich TikTok oder Instagram nutzen. Messaging-Dienste wie WhatsApp werden von 92 Prozent täglich verwendet. Zum Lesen von Nachrichten oder für schulische Zwecke wird das Smartphone dagegen nur selten genutzt.\n\nDie Ergebnisse beunruhigen Experten. Psychologin Dr. Martina Bauer warnt: „Wenn Jugendliche mehr als drei Stunden am Tag passive Medien konsumieren, steigt das Risiko für Schlafprobleme, Konzentrationsschwierigkeiten und Angststörungen.“ Sie empfiehlt Eltern, klare Regeln für die Handynutzung aufzustellen.\n\nAllerdings sehen nicht alle Fachleute die Entwicklung negativ. Medienpädagoge Jan Schulze betont, dass digitale Medien auch wichtige soziale Funktionen erfüllen: „Für viele Jugendliche ist das Smartphone das wichtigste Werkzeug, um Freundschaften zu pflegen und sich kreativ auszudrücken. Statt die Nutzung zu verbieten, sollten wir die Medienkompetenz der jungen Menschen stärken.“\n\nEinige Schulen reagieren bereits mit Programmen zur digitalen Bildung. An der Gesamtschule Köln-Mülheim gibt es seit diesem Schuljahr ein Fach namens „Digitale Welten“, in dem Schüler den bewussten Umgang mit Medien lernen.\n\nDie Debatte wird weitergehen, denn die Digitalisierung schreitet unaufhaltsam voran."
+  },
+  "images": [
+    {
+      "id": "IMG1",
+      "type": "scene",
+      "prompt": "Cute cartoon illustration of teenagers with smartphones, some scrolling social media, one reading, with a school building in the background. Fuxie cartoon style, flat illustration, warm pastel colors, no text.",
+      "filename": "B1-T2-004_scene.png",
+      "placement": "header",
+      "alt_text": "Jugendliche mit Smartphones",
+      "dimensions": "768x512"
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q1",
+      "teil": 2,
+      "type": "multiple_choice",
+      "stem": "Wie viele Stunden pro Tag verbringen Jugendliche am Smartphone?",
+      "options": {
+        "a": "Mehr als zwei Stunden.",
+        "b": "Mehr als drei Stunden.",
+        "c": "Mehr als vier Stunden."
+      },
+      "answer": "c",
+      "points": 1,
+      "explanation": {
+        "de": "Jugendliche verbringen mehr als vier Stunden pro Tag am Smartphone.",
+        "key_evidence": "mehr als vier Stunden pro Tag am Smartphone",
+        "key_vocabulary": [
+          {
+            "word": "Bildschirmzeit",
+            "type": "Nomen",
+            "meaning": "screen time"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q2",
+      "teil": 2,
+      "type": "multiple_choice",
+      "stem": "Wofür wird das Smartphone am wenigsten genutzt?",
+      "options": {
+        "a": "Für soziale Netzwerke.",
+        "b": "Für Messaging.",
+        "c": "Für Nachrichten und Schule."
+      },
+      "answer": "c",
+      "points": 1,
+      "explanation": {
+        "de": "Für Nachrichten und schulische Zwecke wird das Smartphone selten genutzt.",
+        "key_evidence": "Zum Lesen von Nachrichten oder für schulische Zwecke wird das Smartphone dagegen nur selten genutzt",
+        "key_vocabulary": [
+          {
+            "word": "schulisch",
+            "type": "Adjektiv",
+            "meaning": "school-related"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q3",
+      "teil": 2,
+      "type": "multiple_choice",
+      "stem": "Was empfiehlt Psychologin Dr. Bauer den Eltern?",
+      "options": {
+        "a": "Smartphones komplett zu verbieten.",
+        "b": "Klare Regeln für die Handynutzung aufzustellen.",
+        "c": "Nur bestimmte Apps zu erlauben."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Sie empfiehlt Eltern, klare Regeln aufzustellen.",
+        "key_evidence": "empfiehlt Eltern, klare Regeln für die Handynutzung aufzustellen",
+        "key_vocabulary": [
+          {
+            "word": "Regelung",
+            "type": "Nomen",
+            "meaning": "regulation / rule"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q4",
+      "teil": 2,
+      "type": "multiple_choice",
+      "stem": "Was meint Jan Schulze zur Smartphone-Nutzung?",
+      "options": {
+        "a": "Sie sollte bei Jugendlichen verboten werden.",
+        "b": "Man sollte die Medienkompetenz der Jugendlichen stärken.",
+        "c": "Sie hat keine negativen Auswirkungen."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Er meint, man sollte die Medienkompetenz stärken statt die Nutzung zu verbieten.",
+        "key_evidence": "sollten wir die Medienkompetenz der jungen Menschen stärken",
+        "key_vocabulary": [
+          {
+            "word": "Medienkompetenz",
+            "type": "Nomen",
+            "meaning": "media literacy"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q5",
+      "teil": 2,
+      "type": "multiple_choice",
+      "stem": "Was hat die Gesamtschule Köln-Mülheim eingeführt?",
+      "options": {
+        "a": "Ein Handyverbot.",
+        "b": "Ein neues Schulfach über digitale Medien.",
+        "c": "Einen Elternabend über Medien."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Die Schule hat ein Fach namens „Digitale Welten“ eingeführt.",
+        "key_evidence": "ein Fach namens \"Digitale Welten\"",
+        "key_vocabulary": [
+          {
+            "word": "bewusst",
+            "type": "Adjektiv",
+            "meaning": "conscious / mindful"
+          }
+        ]
+      }
+    }
+  ],
+  "scoring": {
+    "total_points": 5,
+    "pass_threshold": 3,
+    "grading": [
+      {
+        "range": [
+          5,
+          5
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          4,
+          4
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          3,
+          3
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          1,
+          2
+        ],
+        "label": "Noch üben!",
+        "emoji": "📝"
+      },
+      {
+        "range": [
+          0,
+          0
+        ],
+        "label": "Mehr Übung nötig",
+        "emoji": "💪"
+      }
+    ]
+  },
+  "qa": {
+    "vocab_in_b1_list": true,
+    "grammar_b1_appropriate": true,
+    "word_count_in_range": true,
+    "all_answers_verifiable": true,
+    "image_count": 1,
+    "passed": true
+  }
+}

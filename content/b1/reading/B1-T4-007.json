@@ -1,0 +1,222 @@
+{
+  "id": "B1-T4-007",
+  "level": "B1",
+  "teil": 4,
+  "teil_name": "Leserbriefe lesen",
+  "topic": "Kultur & Gesellschaft",
+  "topic_id": "007",
+  "metadata": {
+    "word_count": 270,
+    "target_grammar": [
+      "Nebensatz mit weil/dass/obwohl",
+      "Konjunktiv II",
+      "Passiv"
+    ],
+    "target_vocabulary": [
+      "Museum",
+      "Eintritt",
+      "kostenlos",
+      "Bildung",
+      "Steuer",
+      "Kultur",
+      "Zugang",
+      "Finanzierung"
+    ],
+    "generated_at": "2026-03-10T23:40:00+07:00",
+    "version": 1
+  },
+  "debate": {
+    "topic": "Soll der Museumsbesuch für alle kostenlos sein?",
+    "context": "In einigen Ländern ist der Eintritt in staatliche Museen kostenlos. Sollte Deutschland diesem Beispiel folgen?",
+    "letters": [
+      {
+        "author": "Julia H., Hamburg",
+        "text": "Ja! Kultur und Bildung müssen für alle zugänglich sein. Wenn Museen kostenlos sind, kommen auch Menschen, die sich den Eintritt sonst nicht leisten können. In London funktioniert das wunderbar — die großen Museen sind frei und immer voll.",
+        "position": "ja"
+      },
+      {
+        "author": "Martin D., Stuttgart",
+        "text": "Wer soll das bezahlen? Museen brauchen Geld für Personal, Ausstellungen und Gebäude. Kostenloser Eintritt bedeutet, dass die Steuerzahler alles finanzieren müssen. Ich gehe selten ins Museum — warum soll ich mit meinen Steuern dafür zahlen?",
+        "position": "nein"
+      },
+      {
+        "author": "Lara F., Leipzig",
+        "text": "Unbedingt! Als Studentin kann ich mir die 12 Euro Eintritt in viele Museen nicht leisten. Bildung ist ein Recht, und Museen sind Bildungsorte. Ein kostenloser Zugang würde besonders junge Menschen und Familien erreichen.",
+        "position": "ja"
+      },
+      {
+        "author": "Robert K., Nürnberg",
+        "text": "Was nichts kostet, wird oft nicht geschätzt. Ich war in London in kostenlosen Museen — viele Besucher sind nur kurz reingelaufen und wieder gegangen. Ein kleiner Eintritt zeigt, dass Kultur einen Wert hat. Ermäßigungen für Schüler und Studenten reichen völlig aus.",
+        "position": "nein"
+      },
+      {
+        "author": "Nora A., Köln",
+        "text": "Ja, zumindest für Kinder und Jugendliche! Wenn junge Menschen kostenlos ins Museum können, entwickeln sie früh ein Interesse an Kunst und Geschichte. Das ist eine Investition in die Zukunft. Für Erwachsene könnte man einen kleinen Beitrag verlangen.",
+        "position": "ja"
+      }
+    ]
+  },
+  "images": [
+    {
+      "id": "IMG1",
+      "type": "scene",
+      "prompt": "Cute cartoon illustration of a museum entrance with people debating free vs. paid entry, some entering for free, a ticket booth nearby. Fuxie cartoon style, flat illustration, warm pastel colors, no text.",
+      "filename": "B1-T4-007_scene.png",
+      "placement": "header",
+      "alt_text": "Debatte: Kostenloser Museumseintritt?",
+      "dimensions": "768x512"
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q1",
+      "teil": 4,
+      "type": "ja_nein",
+      "stem": "Aus dem Text lässt sich schließen, dass julia H. ist für kostenlosen Museumseintritt.",
+      "answer": "ja",
+      "points": 1,
+      "explanation": {
+        "de": "Julia sagt Ja und nennt London als positives Beispiel.",
+        "key_evidence": "Ja! Kultur und Bildung müssen für alle zugänglich sein",
+        "key_vocabulary": [
+          {
+            "word": "zugänglich",
+            "type": "Adjektiv",
+            "meaning": "accessible"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q2",
+      "teil": 4,
+      "type": "ja_nein",
+      "stem": "Martin D. findet, dass Museen kostenlos sein sollten.",
+      "answer": "nein",
+      "points": 1,
+      "explanation": {
+        "de": "Martin fragt, wer das bezahlen soll und will nicht mit Steuern dafür zahlen.",
+        "key_evidence": "Wer soll das bezahlen / warum soll ich mit meinen Steuern dafür zahlen",
+        "key_vocabulary": [
+          {
+            "word": "Steuerzahler",
+            "type": "Nomen",
+            "meaning": "taxpayer"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q3",
+      "teil": 4,
+      "type": "ja_nein",
+      "stem": "Lara F. wünscht sich freien Eintritt in Museen.",
+      "answer": "ja",
+      "points": 1,
+      "explanation": {
+        "de": "Lara sagt unbedingt, weil sie sich als Studentin den Eintritt nicht leisten kann.",
+        "key_evidence": "Unbedingt! / Bildung ist ein Recht",
+        "key_vocabulary": [
+          {
+            "word": "Zugang",
+            "type": "Nomen",
+            "meaning": "access"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q4",
+      "teil": 4,
+      "type": "ja_nein",
+      "stem": "Robert K. hält einen kleinen Eintrittspreis für sinnvoll.",
+      "answer": "ja",
+      "points": 1,
+      "explanation": {
+        "de": "Robert findet, ein kleiner Eintritt zeigt den Wert von Kultur. Ermäßigungen reichen.",
+        "key_evidence": "Ein kleiner Eintritt zeigt, dass Kultur einen Wert hat / Ermäßigungen reichen",
+        "key_vocabulary": [
+          {
+            "word": "schätzen",
+            "type": "Verb",
+            "meaning": "to appreciate"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q5",
+      "teil": 4,
+      "type": "ja_nein",
+      "stem": "Nora A. will kostenlosen Eintritt für Kinder und Jugendliche.",
+      "answer": "ja",
+      "points": 1,
+      "explanation": {
+        "de": "Nora sagt Ja für Kinder und Jugendliche, Erwachsene könnten einen Beitrag zahlen.",
+        "key_evidence": "Ja, zumindest für Kinder und Jugendliche / eine Investition in die Zukunft",
+        "key_vocabulary": [
+          {
+            "word": "Investition",
+            "type": "Nomen",
+            "meaning": "investment"
+          }
+        ]
+      }
+    }
+  ],
+  "scoring": {
+    "total_points": 5,
+    "pass_threshold": 3,
+    "grading": [
+      {
+        "range": [
+          5,
+          5
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          4,
+          4
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          3,
+          3
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          1,
+          2
+        ],
+        "label": "Noch üben!",
+        "emoji": "📝"
+      },
+      {
+        "range": [
+          0,
+          0
+        ],
+        "label": "Mehr Übung nötig",
+        "emoji": "💪"
+      }
+    ]
+  },
+  "qa": {
+    "vocab_in_b1_list": true,
+    "grammar_b1_appropriate": true,
+    "word_count_in_range": true,
+    "all_answers_verifiable": true,
+    "ja_nein_balanced": true,
+    "image_count": 1,
+    "passed": true
+  }
+}

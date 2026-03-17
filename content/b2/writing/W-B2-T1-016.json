@@ -1,0 +1,64 @@
+{
+  "id": "W-B2-T1-016",
+  "cefrLevel": "B2",
+  "teil": 1,
+  "teilName": "Forumsbeitrag",
+  "textType": "Forumsbeitrag",
+  "register": "neutral",
+  "topic": "Nachhaltiger Konsum",
+  "instruction": "Sie schreiben einen Forumsbeitrag zum Thema „Nachhaltiger Konsum“. Nehmen Sie Stellung zu den Aussagen im Artikel und gehen Sie auf die unten genannten Punkte ein.",
+  "instructionVi": "Bạn hãy viết một bài đăng trên diễn đàn về chủ đề \"Tiêu dùng bền vững\". Hãy đưa ra quan điểm về các nội dung trong bài báo và đề cập đến các ý dưới đây.",
+  "situation": "Sie haben im Internet einen Artikel zum Thema „Bewusster einkaufen – Besser leben?“ gelesen. In einem Online-Forum für Umwelt und Gesellschaft diskutieren Sie nun mit anderen Teilnehmern über die Umsetzbarkeit eines ökologischen Lebensstils und dessen Herausforderungen.",
+  "contentPoints": [
+    "Äußern Sie Ihre Meinung zum Thema nachhaltiger Konsum im Alltag.",
+    "Nennen Sie Gründe, warum viele Menschen trotz guten Willens nicht nachhaltig einkaufen.",
+    "Erläutern Sie Möglichkeiten, wie man den eigenen Konsum reduzieren kann (z. B. Second-Hand, Verzicht).",
+    "Diskutieren Sie die Vor- und Nachteile von regionalen Produkten."
+  ],
+  "sourceText": "Immer mehr Menschen in Deutschland legen Wert auf nachhaltigen Konsum. Laut einer aktuellen Studie der Umweltstiftung achten fast 60 % der Befragten beim Einkauf auf ökologische Kriterien. Besonders im Trend liegen regionale Lebensmittel und Kleidung aus fairem Handel. Doch Experten wie Dr. Markus Weber warnen: 'Bewusster Konsum allein reicht nicht aus, wenn die Gesamtmenge an verbrauchten Ressourcen weiter steigt.' Viele Verbraucher fühlen sich zudem durch die Vielzahl an Bio-Siegeln überfordert. Oft scheitert das nachhaltige Vorhaben auch am höheren Preis der Produkte im Vergleich zu konventioneller Ware.",
+  "sourceTextType": "Zeitungsartikel aus „Umwelt Heute“",
+  "minWords": 150,
+  "maxWords": 250,
+  "timeMinutes": 35,
+  "rubric": {
+    "criteria": [
+      {
+        "id": "inhalt",
+        "name": "Inhalt",
+        "nameVi": "Nội dung",
+        "maxScore": 5,
+        "weight": 25
+      },
+      {
+        "id": "angemessenheit",
+        "name": "Kommunikative Angemessenheit",
+        "nameVi": "Phù hợp giao tiếp",
+        "maxScore": 5,
+        "weight": 20
+      },
+      {
+        "id": "korrektheit",
+        "name": "Korrektheit",
+        "nameVi": "Chính xác ngữ pháp & chính tả",
+        "maxScore": 5,
+        "weight": 25
+      },
+      {
+        "id": "spektrum",
+        "name": "Wortschatz & Strukturen",
+        "nameVi": "Đa dạng từ vựng & cấu trúc",
+        "maxScore": 5,
+        "weight": 15
+      },
+      {
+        "id": "kohaerenz",
+        "name": "Kohaerenz & Kohaesion",
+        "nameVi": "Mạch lạc & liên kết",
+        "maxScore": 5,
+        "weight": 15
+      }
+    ],
+    "maxScore": 25
+  },
+  "maxScore": 25
+}

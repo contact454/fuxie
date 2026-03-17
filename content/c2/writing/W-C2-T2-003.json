@@ -1,0 +1,82 @@
+{
+  "id": "W-C2-T2-003",
+  "cefrLevel": "C2",
+  "teil": 2,
+  "teilName": "Textumwandlung",
+  "textType": "Feuilleton-Beitrag",
+  "register": "variiert",
+  "topic": "Kulturkritik",
+  "instruction": "Wandeln Sie den Blogpost zum Thema 'Kulturkritik' in einen Feuilleton-Beitrag um (mind. 200 Woerter).",
+  "instructionVi": "Chuyen doi: Blogpost -> Feuilleton-Beitrag ve Kulturkritik.",
+  "situation": "Lesen Sie den Blogpost zum Thema 'Kulturkritik' und schreiben Sie daraus einen Feuilleton-Beitrag.",
+  "contentPoints": [
+    "Kernaussagen erfassen",
+    "In Textsorte 'Feuilleton-Beitrag' umwandeln",
+    "Register und Stil anpassen",
+    "Kohaerenten Text verfassen"
+  ],
+  "minWords": 200,
+  "maxWords": 350,
+  "timeMinutes": 30,
+  "rubric": {
+    "criteria": [
+      {
+        "id": "inhalt",
+        "name": "Inhalt",
+        "nameVi": "Noi dung",
+        "maxScore": 5,
+        "weight": 20
+      },
+      {
+        "id": "angemessenheit",
+        "name": "Kommunikative Angemessenheit",
+        "nameVi": "Phu hop giao tiep",
+        "maxScore": 5,
+        "weight": 20
+      },
+      {
+        "id": "korrektheit",
+        "name": "Korrektheit",
+        "nameVi": "Chinh xac ngu phap",
+        "maxScore": 5,
+        "weight": 20
+      },
+      {
+        "id": "spektrum",
+        "name": "Wortschatz & Strukturen",
+        "nameVi": "Da dang tu vung",
+        "maxScore": 5,
+        "weight": 20
+      },
+      {
+        "id": "kohaerenz",
+        "name": "Kohaerenz & Kohaesion",
+        "nameVi": "Mach lac & lien ket",
+        "maxScore": 5,
+        "weight": 20
+      }
+    ],
+    "maxScore": 25
+  },
+  "maxScore": 25,
+  "sourceTextType": "Feuilleton-Beitrag (Zeitungsartikel)",
+  "sourceText": "Die Agonie der Kritik? Über den Relevanzverlust ästhetischer Urteilsbildung\nVon Dr. Maximilian von Arnim, Kulturkorrespondent\n\nIn einer Ära, in der Algorithmen den Kanon diktieren, stellt sich die fundamentale Frage: Ist die klassische Kulturkritik lediglich ein preziöses Relikt des 20. Jahrhunderts? Laut einer aktuellen Erhebung des Instituts für Medienanalyse verlassen sich mittlerweile 72 % der Rezipienten unter 30 Jahren primär auf die aggregierten Sterne-Bewertungen kommerzieller Plattformen statt auf fundierte journalistische Rezensionen. Professorin Elena Merkert von der Universität Heidelberg warnt in diesem Zusammenhang vor einer „Demokratisierung der Beliebigkeit“. Während früher der Kritiker als intellektueller Gatekeeper fungierte, der ästhetische Innovationen von bloßem Kitsch trennte, dominiert heute das Diktat der Klicks.\n\nBetrachtet man das Phänomen „BookTok“, so wird die Diskrepanz deutlich: Während ein Verriss in der „Zeit“ früher über den Erfolg eines Romans entschied, generieren heute virale Kurzvideos Millionenumsätze, oft völlig losgelöst von literarischer Qualität. Die statistische Korrelation zwischen Reichweite und ästhetischem Gehalt tendiert zunehmend gegen null. Diese Erosion der Urteilskraft führt zu einer gefährlichen Verflachung des kulturellen Diskurses. Wenn das subjektive Wohlfühlen das objektive Urteil ersetzt, verliert die Gesellschaft ihre Fähigkeit zur kritischen Distanz. Die Kulturkritik muss sich daher als streitbare Analyse gesellschaftlicher Verhältnisse neu erfinden, um nicht endgültig in der digitalen Bedeutungslosigkeit zu versinken.",
+  "grafikDesc": "Eine Infografik zur Vertrauenswürdigkeit von Informationsquellen im Kulturbereich (Vergleich 2010 vs. 2023).",
+  "grafikData": [
+    {
+      "2010": "65%",
+      "2023": "24%",
+      "Quelle": "Fachkritik/Journalismus"
+    },
+    {
+      "2010": "12%",
+      "2023": "58%",
+      "Quelle": "Soziale Medien/Influencer"
+    },
+    {
+      "2010": "23%",
+      "2023": "18%",
+      "Quelle": "Persönliche Empfehlungen"
+    }
+  ]
+}

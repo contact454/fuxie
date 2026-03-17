@@ -1,0 +1,65 @@
+{
+  "id": "W-B2-T1-010",
+  "cefrLevel": "B2",
+  "teil": 1,
+  "teilName": "Forumsbeitrag",
+  "textType": "Forumsbeitrag",
+  "register": "neutral",
+  "topic": "Tierversuche",
+  "instruction": "Schreiben Sie einen Forumsbeitrag (mind. 150 Woerter): Sind Tierversuche ethisch vertretbar?",
+  "instructionVi": "Viet bai forum >=150 tu: Tierversuche.",
+  "situation": "In einem Online-Forum wird diskutiert: Sind Tierversuche ethisch vertretbar? Schreiben Sie einen Beitrag.",
+  "contentPoints": [
+    "Einleitung: Thema und These",
+    "Argumente dafuer",
+    "Argumente dagegen",
+    "eigene Stellungnahme und Loesungsvorschlag"
+  ],
+  "minWords": 150,
+  "maxWords": 250,
+  "timeMinutes": 35,
+  "rubric": {
+    "criteria": [
+      {
+        "id": "inhalt",
+        "name": "Inhalt",
+        "nameVi": "Noi dung",
+        "maxScore": 5,
+        "weight": 25
+      },
+      {
+        "id": "angemessenheit",
+        "name": "Kommunikative Angemessenheit",
+        "nameVi": "Phu hop giao tiep",
+        "maxScore": 5,
+        "weight": 20
+      },
+      {
+        "id": "korrektheit",
+        "name": "Korrektheit",
+        "nameVi": "Chinh xac ngu phap",
+        "maxScore": 5,
+        "weight": 25
+      },
+      {
+        "id": "spektrum",
+        "name": "Wortschatz & Strukturen",
+        "nameVi": "Da dang tu vung",
+        "maxScore": 5,
+        "weight": 15
+      },
+      {
+        "id": "kohaerenz",
+        "name": "Kohaerenz & Kohaesion",
+        "nameVi": "Mach lac & lien ket",
+        "maxScore": 5,
+        "weight": 15
+      }
+    ],
+    "maxScore": 25
+  },
+  "maxScore": 25,
+  "sourceText": "Süddeutsche Zeitung, 14. September 2023: In Deutschland werden jährlich fast drei Millionen Tiere für Forschungszwecke eingesetzt. Während Befürworter betonen, dass Tierversuche für den medizinischen Fortschritt, insbesondere bei der Entwicklung von Impfstoffen und Medikamenten, unverzichtbar seien, wächst die Kritik in der Bevölkerung. Tierschutzorganisationen weisen darauf hin, dass viele Ergebnisse nicht direkt auf den Menschen übertragbar sind und fordern verstärkte Investitionen in Alternativmethoden wie Computersimulationen oder Zellkulturen. Die Debatte bleibt hitzig, da ethische Bedenken gegen das Ziel der Heilung schwerer Krankheiten abgewogen werden müssen.\n\nDr. Martina Weber, Biologin: „Ohne Tierversuche wäre die moderne Medizin nicht auf dem heutigen Stand; sie sind ein notwendiges Übel, um die Sicherheit neuer Therapien zu garantieren.“\n\nLukas Schmidt, Tierschutzaktivist: „Es ist moralisch nicht vertretbar, fühlende Lebewesen für menschliche Zwecke leiden zu lassen, besonders wenn moderne Technik bereits tierfreie Alternativen bietet.“\n\nWas ist Ihre Meinung zu diesem Thema? Sind Tierversuche heute noch zeitgemäß oder sollten sie verboten werden?",
+  "sourceTextType": "Zeitungsartikel mit Expertenkommentaren",
+  "grafikData": []
+}

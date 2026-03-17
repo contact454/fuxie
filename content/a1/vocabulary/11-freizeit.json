@@ -1,0 +1,617 @@
+{
+    "theme": {
+        "slug": "a1-freizeit",
+        "name": "Freizeit",
+        "nameVi": "Giải trí",
+        "nameEn": "Leisure, Free Time",
+        "sortOrder": 11,
+        "imageUrl": "/images/themes/a1-freizeit.png"
+    },
+    "words": [
+        {
+            "word": "Sport",
+            "article": "MASKULIN",
+            "plural": "-",
+            "wordType": "NOMEN",
+            "meaningVi": "thể thao",
+            "meaningEn": "sport",
+            "exampleSentence1": "Ich mache Sport.",
+            "exampleTranslation1": "Tôi chơi thể thao.",
+            "exampleSentence2": "Sport ist gesund.",
+            "exampleTranslation2": "Thể thao tốt cho sức khỏe.",
+            "imageUrl": "/images/vocab/a1-freizeit/sport.png"
+        },
+        {
+            "word": "Fußball",
+            "article": "MASKULIN",
+            "plural": "-",
+            "wordType": "NOMEN",
+            "meaningVi": "bóng đá",
+            "meaningEn": "football, soccer",
+            "exampleSentence1": "Ich spiele Fußball.",
+            "exampleTranslation1": "Tôi chơi bóng đá.",
+            "exampleSentence2": "Fußball ist popular in Deutschland.",
+            "exampleTranslation2": "Bóng đá phổ biến ở Đức.",
+            "imageUrl": "/images/vocab/a1-freizeit/fussball.png"
+        },
+        {
+            "word": "Schwimmbad",
+            "article": "NEUTRUM",
+            "plural": "die Schwimmbäder",
+            "wordType": "NOMEN",
+            "meaningVi": "hồ bơi",
+            "meaningEn": "swimming pool",
+            "exampleSentence1": "Ich gehe ins Schwimmbad.",
+            "exampleTranslation1": "Tôi đi hồ bơi.",
+            "exampleSentence2": "Das Schwimmbad ist groß.",
+            "exampleTranslation2": "Hồ bơi lớn.",
+            "imageUrl": "/images/vocab/a1-freizeit/schwimmbad.png"
+        },
+        {
+            "word": "Fahrrad",
+            "article": "NEUTRUM",
+            "plural": "die Fahrräder",
+            "wordType": "NOMEN",
+            "meaningVi": "xe đạp",
+            "meaningEn": "bicycle",
+            "exampleSentence1": "Ich fahre Fahrrad.",
+            "exampleTranslation1": "Tôi đi xe đạp.",
+            "exampleSentence2": "Das Fahrrad ist neu.",
+            "exampleTranslation2": "Xe đạp mới.",
+            "imageUrl": "/images/vocab/a1-freizeit/fahrrad.png"
+        },
+        {
+            "word": "Kino",
+            "article": "NEUTRUM",
+            "plural": "die Kinos",
+            "wordType": "NOMEN",
+            "meaningVi": "rạp chiếu phim",
+            "meaningEn": "cinema",
+            "exampleSentence1": "Wir gehen ins Kino.",
+            "exampleTranslation1": "Chúng tôi đi rạp phim.",
+            "exampleSentence2": "Das Kino ist in der Stadtmitte.",
+            "exampleTranslation2": "Rạp phim ở trung tâm.",
+            "imageUrl": "/images/vocab/a1-freizeit/kino.png"
+        },
+        {
+            "word": "Theater",
+            "article": "NEUTRUM",
+            "plural": "die Theater",
+            "wordType": "NOMEN",
+            "meaningVi": "nhà hát",
+            "meaningEn": "theater",
+            "exampleSentence1": "Wir gehen ins Theater.",
+            "exampleTranslation1": "Chúng tôi đi nhà hát.",
+            "exampleSentence2": "Das Theater ist schön.",
+            "exampleTranslation2": "Nhà hát đẹp.",
+            "imageUrl": "/images/vocab/a1-freizeit/theater.png"
+        },
+        {
+            "word": "Musik",
+            "article": "FEMININ",
+            "plural": "-",
+            "wordType": "NOMEN",
+            "meaningVi": "âm nhạc",
+            "meaningEn": "music",
+            "exampleSentence1": "Ich höre Musik.",
+            "exampleTranslation1": "Tôi nghe nhạc.",
+            "exampleSentence2": "Ich mag Musik.",
+            "exampleTranslation2": "Tôi thích nhạc.",
+            "imageUrl": "/images/vocab/a1-freizeit/musik.png"
+        },
+        {
+            "word": "Film",
+            "article": "MASKULIN",
+            "plural": "die Filme",
+            "wordType": "NOMEN",
+            "meaningVi": "phim",
+            "meaningEn": "film, movie",
+            "exampleSentence1": "Der Film ist gut.",
+            "exampleTranslation1": "Phim hay.",
+            "exampleSentence2": "Wir sehen einen Film.",
+            "exampleTranslation2": "Chúng tôi xem phim.",
+            "imageUrl": "/images/vocab/a1-freizeit/film.png"
+        },
+        {
+            "word": "Foto",
+            "article": "NEUTRUM",
+            "plural": "die Fotos",
+            "wordType": "NOMEN",
+            "meaningVi": "ảnh",
+            "meaningEn": "photo",
+            "exampleSentence1": "Ich mache ein Foto.",
+            "exampleTranslation1": "Tôi chụp ảnh.",
+            "exampleSentence2": "Das Foto ist schön.",
+            "exampleTranslation2": "Ảnh đẹp.",
+            "imageUrl": "/images/vocab/a1-freizeit/foto.png"
+        },
+        {
+            "word": "Hobby",
+            "article": "NEUTRUM",
+            "plural": "die Hobbys",
+            "wordType": "NOMEN",
+            "meaningVi": "sở thích",
+            "meaningEn": "hobby",
+            "exampleSentence1": "Mein Hobby ist Lesen.",
+            "exampleTranslation1": "Sở thích của tôi là đọc sách.",
+            "exampleSentence2": "Was ist dein Hobby?",
+            "exampleTranslation2": "Sở thích của bạn là gì?",
+            "imageUrl": "/images/vocab/a1-freizeit/hobby.png"
+        },
+        {
+            "word": "Spiel",
+            "article": "NEUTRUM",
+            "plural": "die Spiele",
+            "wordType": "NOMEN",
+            "meaningVi": "trò chơi",
+            "meaningEn": "game",
+            "exampleSentence1": "Das Spiel ist lustig.",
+            "exampleTranslation1": "Trò chơi vui.",
+            "exampleSentence2": "Wir spielen ein Spiel.",
+            "exampleTranslation2": "Chúng tôi chơi một trò.",
+            "imageUrl": "/images/vocab/a1-freizeit/spiel.png"
+        },
+        {
+            "word": "Konzert",
+            "article": "NEUTRUM",
+            "plural": "die Konzerte",
+            "wordType": "NOMEN",
+            "meaningVi": "buổi hòa nhạc",
+            "meaningEn": "concert",
+            "exampleSentence1": "Ich gehe ins Konzert.",
+            "exampleTranslation1": "Tôi đi buổi hòa nhạc.",
+            "exampleSentence2": "Das Konzert ist am Samstag.",
+            "exampleTranslation2": "Buổi hòa nhạc vào thứ Bảy.",
+            "imageUrl": "/images/vocab/a1-freizeit/konzert.png"
+        },
+        {
+            "word": "Fest",
+            "article": "NEUTRUM",
+            "plural": "die Feste",
+            "wordType": "NOMEN",
+            "meaningVi": "lễ hội, tiệc",
+            "meaningEn": "festival, party",
+            "exampleSentence1": "Wir feiern ein Fest.",
+            "exampleTranslation1": "Chúng tôi tổ chức tiệc.",
+            "exampleSentence2": "Das Fest ist lustig.",
+            "exampleTranslation2": "Tiệc vui.",
+            "imageUrl": "/images/vocab/a1-freizeit/fest.png"
+        },
+        {
+            "word": "Party",
+            "article": "FEMININ",
+            "plural": "die Partys",
+            "wordType": "NOMEN",
+            "meaningVi": "tiệc",
+            "meaningEn": "party",
+            "exampleSentence1": "Ich gehe auf eine Party.",
+            "exampleTranslation1": "Tôi đi tiệc.",
+            "exampleSentence2": "Die Party ist am Samstag.",
+            "exampleTranslation2": "Tiệc vào thứ Bảy.",
+            "imageUrl": "/images/vocab/a1-freizeit/party.png"
+        },
+        {
+            "word": "spielen",
+            "wordType": "VERB",
+            "meaningVi": "chơi",
+            "meaningEn": "to play",
+            "conjugation": {
+                "praesens": {
+                    "ich": "spiele",
+                    "du": "spielst",
+                    "er_sie_es": "spielt",
+                    "wir": "spielen",
+                    "ihr": "spielt",
+                    "sie_Sie": "spielen"
+                },
+                "isIrregular": false,
+                "isSeparable": false
+            },
+            "exampleSentence1": "Ich spiele Fußball.",
+            "exampleTranslation1": "Tôi chơi bóng đá.",
+            "exampleSentence2": "Die Kinder spielen im Park.",
+            "exampleTranslation2": "Bọn trẻ chơi trong công viên.",
+            "imageUrl": "/images/vocab/a1-freizeit/spielen.png"
+        },
+        {
+            "word": "schwimmen",
+            "wordType": "VERB",
+            "meaningVi": "bơi",
+            "meaningEn": "to swim",
+            "conjugation": {
+                "praesens": {
+                    "ich": "schwimme",
+                    "du": "schwimmst",
+                    "er_sie_es": "schwimmt",
+                    "wir": "schwimmen",
+                    "ihr": "schwimmt",
+                    "sie_Sie": "schwimmen"
+                },
+                "perfekt": "ist geschwommen",
+                "isIrregular": true,
+                "isSeparable": false
+            },
+            "exampleSentence1": "Ich schwimme gern.",
+            "exampleTranslation1": "Tôi thích bơi.",
+            "exampleSentence2": "Kannst du schwimmen?",
+            "exampleTranslation2": "Bạn biết bơi không?",
+            "imageUrl": "/images/vocab/a1-freizeit/schwimmen.png"
+        },
+        {
+            "word": "tanzen",
+            "wordType": "VERB",
+            "meaningVi": "nhảy, khiêu vũ",
+            "meaningEn": "to dance",
+            "conjugation": {
+                "praesens": {
+                    "ich": "tanze",
+                    "du": "tanzt",
+                    "er_sie_es": "tanzt",
+                    "wir": "tanzen",
+                    "ihr": "tanzt",
+                    "sie_Sie": "tanzen"
+                },
+                "isIrregular": false,
+                "isSeparable": false
+            },
+            "exampleSentence1": "Ich tanze gern.",
+            "exampleTranslation1": "Tôi thích nhảy.",
+            "exampleSentence2": "Wir tanzen auf der Party.",
+            "exampleTranslation2": "Chúng tôi nhảy ở tiệc.",
+            "imageUrl": "/images/vocab/a1-freizeit/tanzen.png"
+        },
+        {
+            "word": "singen",
+            "wordType": "VERB",
+            "meaningVi": "hát",
+            "meaningEn": "to sing",
+            "conjugation": {
+                "praesens": {
+                    "ich": "singe",
+                    "du": "singst",
+                    "er_sie_es": "singt",
+                    "wir": "singen",
+                    "ihr": "singt",
+                    "sie_Sie": "singen"
+                },
+                "perfekt": "hat gesungen",
+                "isIrregular": true,
+                "isSeparable": false
+            },
+            "exampleSentence1": "Ich singe gern.",
+            "exampleTranslation1": "Tôi thích hát.",
+            "exampleSentence2": "Sie singt schön.",
+            "exampleTranslation2": "Cô ấy hát hay.",
+            "imageUrl": "/images/vocab/a1-freizeit/singen.png"
+        },
+        {
+            "word": "malen",
+            "wordType": "VERB",
+            "meaningVi": "vẽ",
+            "meaningEn": "to paint, to draw",
+            "conjugation": {
+                "praesens": {
+                    "ich": "male",
+                    "du": "malst",
+                    "er_sie_es": "malt",
+                    "wir": "malen",
+                    "ihr": "malt",
+                    "sie_Sie": "malen"
+                },
+                "isIrregular": false,
+                "isSeparable": false
+            },
+            "exampleSentence1": "Ich male gern.",
+            "exampleTranslation1": "Tôi thích vẽ.",
+            "exampleSentence2": "Das Kind malt ein Bild.",
+            "exampleTranslation2": "Đứa trẻ vẽ một bức tranh.",
+            "imageUrl": "/images/vocab/a1-freizeit/malen.png"
+        },
+        {
+            "word": "fernsehen",
+            "wordType": "VERB",
+            "meaningVi": "xem tivi",
+            "meaningEn": "to watch TV",
+            "conjugation": {
+                "praesens": {
+                    "ich": "sehe fern",
+                    "du": "siehst fern",
+                    "er_sie_es": "sieht fern",
+                    "wir": "sehen fern",
+                    "ihr": "seht fern",
+                    "sie_Sie": "sehen fern"
+                },
+                "isIrregular": true,
+                "isSeparable": true,
+                "separablePrefix": "fern"
+            },
+            "exampleSentence1": "Ich sehe abends fern.",
+            "exampleTranslation1": "Tôi xem tivi buổi tối.",
+            "exampleSentence2": "Siehst du viel fern?",
+            "exampleTranslation2": "Bạn xem tivi nhiều không?",
+            "notes": "Trennbares Verb. Vokaländerung: e → ie",
+            "imageUrl": "/images/vocab/a1-freizeit/fernsehen.png"
+        },
+        {
+            "word": "spazieren gehen",
+            "wordType": "VERB",
+            "meaningVi": "đi dạo",
+            "meaningEn": "to go for a walk",
+            "conjugation": {
+                "praesens": {
+                    "ich": "gehe spazieren",
+                    "du": "gehst spazieren",
+                    "er_sie_es": "geht spazieren",
+                    "wir": "gehen spazieren",
+                    "ihr": "geht spazieren",
+                    "sie_Sie": "gehen spazieren"
+                },
+                "isIrregular": true,
+                "isSeparable": false
+            },
+            "exampleSentence1": "Ich gehe spazieren.",
+            "exampleTranslation1": "Tôi đi dạo.",
+            "exampleSentence2": "Wir gehen im Park spazieren.",
+            "exampleTranslation2": "Chúng tôi đi dạo trong công viên.",
+            "imageUrl": "/images/vocab/a1-freizeit/spazieren-gehen.png"
+        },
+        {
+            "word": "gern",
+            "wordType": "ADVERB",
+            "meaningVi": "thích (làm gì)",
+            "meaningEn": "gladly, to like doing",
+            "exampleSentence1": "Ich schwimme gern.",
+            "exampleTranslation1": "Tôi thích bơi.",
+            "exampleSentence2": "Liest du gern?",
+            "exampleTranslation2": "Bạn thích đọc không?",
+            "imageUrl": "/images/vocab/a1-freizeit/gern.png"
+        },
+        {
+            "word": "interessant",
+            "wordType": "ADJEKTIV",
+            "meaningVi": "thú vị",
+            "meaningEn": "interesting",
+            "exampleSentence1": "Das Buch ist interessant.",
+            "exampleTranslation1": "Cuốn sách thú vị.",
+            "exampleSentence2": "Der Film ist interessant.",
+            "exampleTranslation2": "Phim thú vị.",
+            "imageUrl": "/images/vocab/a1-freizeit/interessant.png"
+        },
+        {
+            "word": "langweilig",
+            "wordType": "ADJEKTIV",
+            "meaningVi": "nhàm chán",
+            "meaningEn": "boring",
+            "exampleSentence1": "Der Film ist langweilig.",
+            "exampleTranslation1": "Phim nhàm chán.",
+            "exampleSentence2": "Das ist langweilig.",
+            "exampleTranslation2": "Cái đó nhàm chán.",
+            "imageUrl": "/images/vocab/a1-freizeit/langweilig.png"
+        },
+        {
+            "word": "lustig",
+            "wordType": "ADJEKTIV",
+            "meaningVi": "vui, hài hước",
+            "meaningEn": "funny",
+            "exampleSentence1": "Das Spiel ist lustig.",
+            "exampleTranslation1": "Trò chơi vui.",
+            "exampleSentence2": "Er ist lustig.",
+            "exampleTranslation2": "Anh ấy hài hước.",
+            "imageUrl": "/images/vocab/a1-freizeit/lustig.png"
+        },
+        {
+            "word": "Garten",
+            "article": "MASKULIN",
+            "plural": "die Gärten",
+            "wordType": "NOMEN",
+            "meaningVi": "vườn",
+            "meaningEn": "garden",
+            "exampleSentence1": "Wir haben einen Garten.",
+            "exampleTranslation1": "Chúng tôi có một vườn.",
+            "exampleSentence2": "Die Kinder spielen im Garten.",
+            "exampleTranslation2": "Bọn trẻ chơi ngoài vườn.",
+            "imageUrl": "/images/vocab/a1-freizeit/garten.png"
+        },
+        {
+            "word": "Karte",
+            "article": "FEMININ",
+            "plural": "die Karten",
+            "wordType": "NOMEN",
+            "meaningVi": "vé, thẻ, bản đồ",
+            "meaningEn": "ticket, card, map",
+            "exampleSentence1": "Ich brauche eine Karte.",
+            "exampleTranslation1": "Tôi cần một tấm vé.",
+            "exampleSentence2": "Haben Sie noch Karten?",
+            "exampleTranslation2": "Bạn còn vé không?",
+            "imageUrl": "/images/vocab/a1-freizeit/karte.png"
+        },
+        {
+            "word": "Museum",
+            "article": "NEUTRUM",
+            "plural": "die Museen",
+            "wordType": "NOMEN",
+            "meaningVi": "bảo tàng",
+            "meaningEn": "museum",
+            "exampleSentence1": "Das Museum ist interessant.",
+            "exampleTranslation1": "Bảo tàng thú vị.",
+            "exampleSentence2": "Wir gehen ins Museum.",
+            "exampleTranslation2": "Chúng tôi đi bảo tàng.",
+            "imageUrl": "/images/vocab/a1-freizeit/museum.png"
+        },
+        {
+            "word": "Verein",
+            "article": "MASKULIN",
+            "plural": "die Vereine",
+            "wordType": "NOMEN",
+            "meaningVi": "câu lạc bộ, hội",
+            "meaningEn": "club, association",
+            "exampleSentence1": "Ich bin im Sportverein.",
+            "exampleTranslation1": "Tôi ở trong câu lạc bộ thể thao.",
+            "exampleSentence2": "Der Verein hat viele Mitglieder.",
+            "exampleTranslation2": "Câu lạc bộ có nhiều thành viên.",
+            "imageUrl": "/images/vocab/a1-freizeit/verein.png"
+        },
+        {
+            "word": "wandern",
+            "wordType": "VERB",
+            "meaningVi": "đi bộ đường dài",
+            "meaningEn": "to hike",
+            "conjugation": {
+                "praesens": {
+                    "ich": "wandere",
+                    "du": "wanderst",
+                    "er_sie_es": "wandert",
+                    "wir": "wandern",
+                    "ihr": "wandert",
+                    "sie_Sie": "wandern"
+                },
+                "isIrregular": false,
+                "isSeparable": false
+            },
+            "exampleSentence1": "Am Wochenende wandern wir.",
+            "exampleTranslation1": "Cuối tuần chúng tôi đi bộ đường dài.",
+            "exampleSentence2": "Ich wandere gern in den Bergen.",
+            "exampleTranslation2": "Tôi thích đi bộ đường dài trên núi.",
+            "imageUrl": "/images/vocab/a1-freizeit/wandern.png"
+        },
+        {
+            "word": "kochen",
+            "wordType": "VERB",
+            "meaningVi": "nấu ăn",
+            "meaningEn": "to cook",
+            "conjugation": {
+                "praesens": {
+                    "ich": "koche",
+                    "du": "kochst",
+                    "er_sie_es": "kocht",
+                    "wir": "kochen",
+                    "ihr": "kocht",
+                    "sie_Sie": "kochen"
+                },
+                "isIrregular": false,
+                "isSeparable": false
+            },
+            "exampleSentence1": "Ich koche gern.",
+            "exampleTranslation1": "Tôi thích nấu ăn.",
+            "exampleSentence2": "Wir kochen zusammen Abendessen.",
+            "exampleTranslation2": "Chúng tôi nấu bữa tối cùng nhau.",
+            "imageUrl": "/images/vocab/a1-freizeit/kochen.png"
+        },
+        {
+            "word": "Spaß",
+            "article": "MASKULIN",
+            "plural": "-",
+            "wordType": "NOMEN",
+            "meaningVi": "sự vui, niềm vui",
+            "meaningEn": "fun",
+            "exampleSentence1": "Das macht Spaß!",
+            "exampleTranslation1": "Cái đó vui!",
+            "exampleSentence2": "Viel Spaß!",
+            "exampleTranslation2": "Chúc vui!",
+            "imageUrl": "/images/vocab/a1-freizeit/spass.png"
+        },
+        {
+            "word": "Zeitung",
+            "article": "FEMININ",
+            "plural": "die Zeitungen",
+            "wordType": "NOMEN",
+            "meaningVi": "báo",
+            "meaningEn": "newspaper",
+            "exampleSentence1": "Ich lese die Zeitung.",
+            "exampleTranslation1": "Tôi đọc báo.",
+            "exampleSentence2": "Die Zeitung ist von heute.",
+            "exampleTranslation2": "Báo của hôm nay.",
+            "imageUrl": "/images/vocab/a1-freizeit/zeitung.png"
+        },
+        {
+            "word": "Zeitschrift",
+            "article": "FEMININ",
+            "plural": "die Zeitschriften",
+            "wordType": "NOMEN",
+            "meaningVi": "tạp chí",
+            "meaningEn": "magazine",
+            "exampleSentence1": "Ich lese eine Zeitschrift.",
+            "exampleTranslation1": "Tôi đọc tạp chí.",
+            "exampleSentence2": "Die Zeitschrift ist interessant.",
+            "exampleTranslation2": "Tạp chí thú vị.",
+            "imageUrl": "/images/vocab/a1-freizeit/zeitschrift.png"
+        },
+        {
+            "word": "Einladung",
+            "article": "FEMININ",
+            "plural": "die Einladungen",
+            "wordType": "NOMEN",
+            "meaningVi": "lời mời",
+            "meaningEn": "invitation",
+            "exampleSentence1": "Danke für die Einladung!",
+            "exampleTranslation1": "Cảm ơn lời mời!",
+            "exampleSentence2": "Ich schreibe eine Einladung.",
+            "exampleTranslation2": "Tôi viết thư mời.",
+            "imageUrl": "/images/vocab/a1-freizeit/einladung.png"
+        },
+        {
+            "word": "Geschenk",
+            "article": "NEUTRUM",
+            "plural": "die Geschenke",
+            "wordType": "NOMEN",
+            "meaningVi": "quà tặng",
+            "meaningEn": "gift, present",
+            "exampleSentence1": "Das Geschenk ist für dich.",
+            "exampleTranslation1": "Quà cho bạn.",
+            "exampleSentence2": "Ich kaufe ein Geschenk.",
+            "exampleTranslation2": "Tôi mua quà.",
+            "imageUrl": "/images/vocab/a1-freizeit/geschenk.png"
+        },
+        {
+            "word": "Ausflug",
+            "article": "MASKULIN",
+            "plural": "die Ausflüge",
+            "wordType": "NOMEN",
+            "meaningVi": "chuyến đi chơi",
+            "meaningEn": "excursion, trip",
+            "exampleSentence1": "Wir machen einen Ausflug.",
+            "exampleTranslation1": "Chúng tôi đi chơi.",
+            "exampleSentence2": "Der Ausflug war toll.",
+            "exampleTranslation2": "Chuyến đi tuyệt vời.",
+            "imageUrl": "/images/vocab/a1-freizeit/ausflug.png"
+        },
+        {
+            "word": "Wochenende",
+            "article": "NEUTRUM",
+            "plural": "die Wochenenden",
+            "wordType": "NOMEN",
+            "meaningVi": "cuối tuần",
+            "meaningEn": "weekend",
+            "exampleSentence1": "Am Wochenende schlafe ich lang.",
+            "exampleTranslation1": "Cuối tuần tôi ngủ dài.",
+            "exampleSentence2": "Was machst du am Wochenende?",
+            "exampleTranslation2": "Cuối tuần bạn làm gì?",
+            "imageUrl": "/images/vocab/a1-freizeit/wochenende.png"
+        },
+        {
+            "word": "Ferien",
+            "plural": "die Ferien",
+            "wordType": "NOMEN",
+            "meaningVi": "kỳ nghỉ (học)",
+            "meaningEn": "holidays, school vacation",
+            "exampleSentence1": "Die Ferien beginnen morgen.",
+            "exampleTranslation1": "Kỳ nghỉ bắt đầu ngày mai.",
+            "exampleSentence2": "In den Ferien fahre ich nach Hause.",
+            "exampleTranslation2": "Trong kỳ nghỉ tôi về nhà.",
+            "imageUrl": "/images/vocab/a1-freizeit/ferien.png"
+        },
+        {
+            "word": "Geburtstag",
+            "article": "MASKULIN",
+            "plural": "die Geburtstage",
+            "wordType": "NOMEN",
+            "meaningVi": "sinh nhật",
+            "meaningEn": "birthday",
+            "exampleSentence1": "Herzlichen Glückwunsch zum Geburtstag!",
+            "exampleTranslation1": "Chúc mừng sinh nhật!",
+            "exampleSentence2": "Mein Geburtstag ist im Mai.",
+            "exampleTranslation2": "Sinh nhật tôi vào tháng 5.",
+            "imageUrl": "/images/vocab/a1-freizeit/geburtstag.png"
+        }
+    ]
+}

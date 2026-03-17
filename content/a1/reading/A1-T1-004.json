@@ -1,0 +1,239 @@
+{
+  "id": "A1-T1-004",
+  "level": "A1",
+  "teil": 1,
+  "teil_name": "Kurze Texte lesen",
+  "topic": "In der Schule",
+  "topic_id": "004",
+  "metadata": {
+    "word_count_text_a": 46,
+    "word_count_text_b": 45,
+    "target_grammar": [
+      "Präsens",
+      "Akkusativ",
+      "Modalverb müssen"
+    ],
+    "target_vocabulary": [
+      "Schule",
+      "Kurs",
+      "Lehrer",
+      "Hausaufgabe",
+      "Klassenraum",
+      "lernen",
+      "Prüfung",
+      "Montag",
+      "Freitag",
+      "Stunde"
+    ],
+    "generated_at": "2026-03-09T02:15:00+07:00",
+    "version": 1
+  },
+  "texts": [
+    {
+      "id": "TextA",
+      "type": "email",
+      "sender": "Frau Müller",
+      "receiver": "Eltern",
+      "content": "Liebe Eltern,\nam Freitag schreiben wir eine Prüfung in Deutsch. Die Prüfung beginnt um 9 Uhr im Klassenraum 204. Die Kinder müssen einen Stift und ein Wörterbuch mitbringen. Bitte üben Sie zu Hause mit Ihrem Kind. Die Prüfung dauert 45 Minuten.\nMit freundlichen Grüßen,\nFrau Müller"
+    },
+    {
+      "id": "TextB",
+      "type": "notiz",
+      "sender": "Max",
+      "receiver": "Mama",
+      "content": "Mama, ich habe heute neue Hausaufgaben. Ich muss 10 neue Wörter lernen und einen kurzen Text schreiben. Der Text ist über meine Familie. Ich brauche Hilfe mit den Wörtern. Kannst du mir heute Abend helfen? Ich muss die Hausaufgaben bis Mittwoch fertig machen. Danke, Mama!"
+    }
+  ],
+  "images": [
+    {
+      "id": "IMG1",
+      "type": "scene",
+      "prompt": "Cute cartoon illustration of a bright, cheerful classroom with desks, a blackboard, books, and a friendly teacher at the front. Fuxie cartoon style, flat illustration, warm pastel colors, no text.",
+      "filename": "A1-T1-004_scene.png",
+      "placement": "header",
+      "alt_text": "Klassenzimmer in der Schule",
+      "dimensions": "768x512"
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q1",
+      "teil": 1,
+      "linked_text": "TextA",
+      "type": "richtig_falsch",
+      "statement": "Die Prüfung ist am Montag.",
+      "answer": "falsch",
+      "points": 1,
+      "explanation": {
+        "de": "Im Text steht: 'am Freitag schreiben wir eine Prüfung'. Die Prüfung ist am Freitag, nicht am Montag.",
+        "key_evidence": "am Freitag schreiben wir eine Prüfung",
+        "key_vocabulary": [
+          {
+            "word": "Freitag",
+            "type": "Nomen",
+            "meaning": "Friday"
+          },
+          {
+            "word": "Prüfung",
+            "type": "Nomen",
+            "meaning": "exam"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q2",
+      "teil": 1,
+      "linked_text": "TextA",
+      "type": "richtig_falsch",
+      "statement": "Die Kinder müssen ein Wörterbuch mitbringen.",
+      "answer": "richtig",
+      "points": 1,
+      "explanation": {
+        "de": "Im Text steht: 'Die Kinder müssen einen Stift und ein Wörterbuch mitbringen.' Ein Wörterbuch ist auf der Liste.",
+        "key_evidence": "Die Kinder müssen einen Stift und ein Wörterbuch mitbringen",
+        "key_vocabulary": [
+          {
+            "word": "Wörterbuch",
+            "type": "Nomen",
+            "meaning": "dictionary"
+          },
+          {
+            "word": "mitbringen",
+            "type": "Verb",
+            "meaning": "to bring along"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q3",
+      "teil": 1,
+      "linked_text": "TextA",
+      "type": "richtig_falsch",
+      "statement": "Die Prüfung dauert eine Stunde.",
+      "answer": "falsch",
+      "points": 1,
+      "explanation": {
+        "de": "Im Text steht: 'Die Prüfung dauert 45 Minuten.' 45 Minuten sind nicht eine Stunde (60 Minuten).",
+        "key_evidence": "Die Prüfung dauert 45 Minuten",
+        "key_vocabulary": [
+          {
+            "word": "dauern",
+            "type": "Verb",
+            "meaning": "to last"
+          },
+          {
+            "word": "Minute",
+            "type": "Nomen",
+            "meaning": "minute"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q4",
+      "teil": 1,
+      "linked_text": "TextB",
+      "type": "richtig_falsch",
+      "statement": "Max muss einen Text über seine Schule schreiben.",
+      "answer": "falsch",
+      "points": 1,
+      "explanation": {
+        "de": "Im Text steht: 'Der Text ist über meine Familie.' Max schreibt über seine Familie, nicht über seine Schule.",
+        "key_evidence": "Der Text ist über meine Familie",
+        "key_vocabulary": [
+          {
+            "word": "Familie",
+            "type": "Nomen",
+            "meaning": "family"
+          },
+          {
+            "word": "schreiben",
+            "type": "Verb",
+            "meaning": "to write"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q5",
+      "teil": 1,
+      "linked_text": "TextB",
+      "type": "richtig_falsch",
+      "statement": "Max braucht Hilfe bei den Hausaufgaben.",
+      "answer": "richtig",
+      "points": 1,
+      "explanation": {
+        "de": "Im Text steht: 'Ich brauche Hilfe. Kannst du mir heute Abend helfen?' Max braucht Hilfe.",
+        "key_evidence": "Ich brauche Hilfe",
+        "key_vocabulary": [
+          {
+            "word": "Hilfe",
+            "type": "Nomen",
+            "meaning": "help"
+          },
+          {
+            "word": "Hausaufgabe",
+            "type": "Nomen",
+            "meaning": "homework"
+          }
+        ]
+      }
+    }
+  ],
+  "scoring": {
+    "total_points": 5,
+    "pass_threshold": 3,
+    "grading": [
+      {
+        "range": [
+          5,
+          5
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          4,
+          4
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          3,
+          3
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          1,
+          2
+        ],
+        "label": "Noch üben!",
+        "emoji": "📝"
+      },
+      {
+        "range": [
+          0,
+          0
+        ],
+        "label": "Mehr Übung nötig",
+        "emoji": "💪"
+      }
+    ]
+  },
+  "qa": {
+    "vocab_in_a1_list": true,
+    "grammar_a1_only": true,
+    "word_count_in_range": true,
+    "all_answers_verifiable": true,
+    "image_count": 1,
+    "passed": false
+  }
+}

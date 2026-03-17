@@ -1,0 +1,49 @@
+{
+  "id": "W-A2-T2-015",
+  "cefrLevel": "A2",
+  "teil": 2,
+  "teilName": "Persoenliche Mitteilung",
+  "textType": "Mitteilung",
+  "register": "halbformell",
+  "topic": "Zugticket",
+  "instruction": "Sie haben online ein Zugticket für sich und Ihren Kollegen, Herrn Müller, gekauft. Schreiben Sie ihm eine Nachricht.",
+  "instructionVi": "Bạn đã mua vé tàu trực tuyến cho mình và đồng nghiệp, ông Müller. Hãy viết một tin nhắn cho ông ấy.",
+  "situation": "Sie und Ihr Kollege fahren nächste Woche zusammen zu einer Konferenz nach Berlin. Sie haben die Fahrkarten bereits reserviert und müssen ihm nun die Details zur Reise mitteilen.",
+  "contentPoints": [
+    "Informieren Sie ihn über den Ticketkauf.",
+    "Nennen Sie die Abfahrtszeit und den Treffpunkt am Bahnhof.",
+    "Fragen Sie, ob Sie ihm die Buchungsbestätigung per E-Mail schicken sollen."
+  ],
+  "sourceText": "Buchungsbestätigung: Zug ICE 543 nach Berlin Hbf. Datum: Nächster Montag. Abfahrt: 10:30 Uhr von Gleis 7. Preis für 2 Personen: 89,00 Euro.",
+  "sourceTextType": "Buchungsbestätigung",
+  "minWords": 40,
+  "maxWords": 70,
+  "timeMinutes": 15,
+  "rubric": {
+    "criteria": [
+      {
+        "id": "inhalt",
+        "name": "Inhalt",
+        "nameVi": "Nội dung",
+        "maxScore": 5,
+        "weight": 30
+      },
+      {
+        "id": "korrektheit",
+        "name": "Korrektheit",
+        "nameVi": "Chính xác ngữ pháp & chính tả",
+        "maxScore": 5,
+        "weight": 35
+      },
+      {
+        "id": "angemessenheit",
+        "name": "Kommunikative Angemessenheit",
+        "nameVi": "Phù hợp giao tiếp",
+        "maxScore": 5,
+        "weight": 35
+      }
+    ],
+    "maxScore": 15
+  },
+  "maxScore": 15
+}

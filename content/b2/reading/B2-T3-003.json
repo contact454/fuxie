@@ -1,0 +1,222 @@
+{
+  "id": "B2-T3-003",
+  "level": "B2",
+  "teil": 3,
+  "teil_name": "Anzeigen zuordnen",
+  "topic": "Kultur & Kunst",
+  "topic_id": "003",
+  "metadata": {
+    "word_count": 167,
+    "target_grammar": [
+      "Konjunktiv II",
+      "Passiv",
+      "Modalverben",
+      "Relativsätze"
+    ],
+    "target_vocabulary": [],
+    "generated_at": "2026-03-11T22:34:38.583025",
+    "version": 1
+  },
+  "anzeigen": [
+    {
+      "id": "A",
+      "text": "Kunststipendium der Stadt München: 6 Monate Atelier und 1.500 Euro/Monat für bildende Künstler. Bewerbung mit Portfolio bis 15. Mai. www.muenchen.de/kulturreferat"
+    },
+    {
+      "id": "B",
+      "text": "Sonderausstellung Expressionismus in der Neuen Nationalgalerie Berlin. Noch bis 30. Juni. Di-So 10-18 Uhr. Eintritt: 14 Euro, ermäßigt 7 Euro. Führungen samstags 14 Uhr."
+    },
+    {
+      "id": "C",
+      "text": "Theaterabonnement Staatstheater Stuttgart: 8 Vorstellungen pro Saison zum Vorzugspreis. Ab 180 Euro. Freie Platzwahl. Inkl. Programmheft und Getränk in der Pause."
+    },
+    {
+      "id": "D",
+      "text": "Kulturreise Toskana: 7 Tage Florenz, Siena, Pisa. Besuch von Museen, Kirchen und Ateliers. Reiseleitung durch Kunsthistorikerin. 1.890 Euro inkl. Flug und HP. Oktober 2026."
+    },
+    {
+      "id": "E",
+      "text": "Mal-Workshop für Erwachsene: Acrylmalerei von Anfang an. 6 Samstage, 10-13 Uhr. Max. 8 Teilnehmer. Material inkl. 240 Euro. Atelier Farbenwelt, Köln-Ehrenfeld."
+    },
+    {
+      "id": "F",
+      "text": "Jazzclub Blue Note Berlin sucht ehrenamtliche Helfer für Festival-Organisation. 3 Tage im August. Freier Eintritt und Verpflegung. Kontakt: info@bluenote-berlin.de"
+    },
+    {
+      "id": "G",
+      "text": "Fotografie-Ausstellung einreichen: Galerie Lichtblick zeigt Arbeiten aufstrebender Fotografen. Bewerbung mit 10 Bildern und Konzeptbeschreibung. Keine Teilnahmegebühr."
+    },
+    {
+      "id": "H",
+      "text": "Literaturkreis Buchfink: Wir lesen und diskutieren jeden Monat ein neues Buch. Nächstes Treffen: 20. April, 19 Uhr, Café Blattgold. Alle sind willkommen!"
+    }
+  ],
+  "situationen": [
+    {
+      "id": "S1",
+      "text": "Eine junge Malerin sucht ein Atelier und finanzielle Unterstützung für ihre künstlerische Arbeit.",
+      "answer": "A"
+    },
+    {
+      "id": "S2",
+      "text": "Ein Rentnerehepaar möchte eine kulturell anspruchsvolle Reise nach Italien machen.",
+      "answer": "D"
+    },
+    {
+      "id": "S3",
+      "text": "Jemand möchte Malen lernen und sucht einen Kurs für absolute Anfänger.",
+      "answer": "E"
+    },
+    {
+      "id": "S4",
+      "text": "Eine Fotografin möchte ihre Arbeiten in einer Galerie ausstellen.",
+      "answer": "G"
+    },
+    {
+      "id": "S5",
+      "text": "Ein Theaterliebhaber möchte regelmäßig Vorstellungen besuchen und dabei Geld sparen.",
+      "answer": "C"
+    }
+  ],
+  "null_matches": [
+    "B",
+    "F",
+    "H"
+  ],
+  "images": [
+    {
+      "id": "IMG1",
+      "type": "scene",
+      "prompt": "Cute cartoon illustration of a bulletin board with various professional advertisements related to Kultur & Kunst. Fuxie cartoon style, flat illustration, warm pastel colors, no text.",
+      "filename": "B2-T3-003_scene.png",
+      "placement": "header",
+      "alt_text": "Anzeigen: Kultur & Kunst",
+      "dimensions": "768x512"
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q1",
+      "teil": 3,
+      "type": "matching",
+      "stem": "Eine junge Malerin sucht ein Atelier und finanzielle Unterstützung für ihre künstlerische Arbeit.",
+      "answer": "A",
+      "points": 1,
+      "explanation": {
+        "de": "Anzeige A passt, weil sie das beschriebene Bedürfnis erfüllt.",
+        "key_evidence": "Anzeige A",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q2",
+      "teil": 3,
+      "type": "matching",
+      "stem": "Aus der Argumentation lässt sich ableiten, dass Ein Rentnerehepaar möchte eine kulturell anspruchsvolle Reise nach Italien machen. Diese Position vertritt:",
+      "answer": "D",
+      "points": 1,
+      "explanation": {
+        "de": "Anzeige D passt, weil sie das beschriebene Bedürfnis erfüllt.",
+        "key_evidence": "Anzeige D",
+        "key_vocabulary": [],
+        "reasoning": "[Inferential] "
+      }
+    },
+    {
+      "id": "Q3",
+      "teil": 3,
+      "type": "matching",
+      "stem": "Aus der Argumentation lässt sich ableiten, dass jemand möchte Malen lernen und sucht einen Kurs für absolute Anfänger. Diese Position vertritt:",
+      "answer": "E",
+      "points": 1,
+      "explanation": {
+        "de": "Anzeige E passt, weil sie das beschriebene Bedürfnis erfüllt.",
+        "key_evidence": "Anzeige E",
+        "key_vocabulary": [],
+        "reasoning": "[Inferential] "
+      }
+    },
+    {
+      "id": "Q4",
+      "teil": 3,
+      "type": "matching",
+      "stem": "Eine Fotografin möchte ihre Arbeiten in einer Galerie ausstellen.",
+      "answer": "G",
+      "points": 1,
+      "explanation": {
+        "de": "Anzeige G passt, weil sie das beschriebene Bedürfnis erfüllt.",
+        "key_evidence": "Anzeige G",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q5",
+      "teil": 3,
+      "type": "matching",
+      "stem": "Die implizite Annahme, dass Ein Theaterliebhaber möchte regelmäßig Vorstellungen besuchen und dabei Geld sparen, liegt dem Beitrag zugrunde:",
+      "answer": "C",
+      "points": 1,
+      "explanation": {
+        "de": "Anzeige C passt, weil sie das beschriebene Bedürfnis erfüllt.",
+        "key_evidence": "Anzeige C",
+        "key_vocabulary": [],
+        "reasoning": "[Inferential] "
+      }
+    }
+  ],
+  "scoring": {
+    "total_points": 5,
+    "pass_threshold": 3,
+    "grading": [
+      {
+        "range": [
+          5,
+          5
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          4,
+          4
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          3,
+          3
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          1,
+          2
+        ],
+        "label": "Noch üben!",
+        "emoji": "📝"
+      },
+      {
+        "range": [
+          0,
+          0
+        ],
+        "label": "Mehr Übung nötig",
+        "emoji": "💪"
+      }
+    ]
+  },
+  "qa": {
+    "vocab_in_b2_list": true,
+    "grammar_b2_appropriate": true,
+    "word_count_in_range": true,
+    "all_answers_verifiable": true,
+    "null_matches_correct": true,
+    "image_count": 1,
+    "passed": true
+  }
+}

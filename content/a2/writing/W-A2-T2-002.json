@@ -1,0 +1,51 @@
+{
+  "id": "W-A2-T2-002",
+  "cefrLevel": "A2",
+  "teil": 2,
+  "teilName": "Persoenliche Mitteilung",
+  "textType": "Mitteilung",
+  "register": "halbformell",
+  "topic": "Reparatur",
+  "instruction": "Schreiben Sie eine kurze Mitteilung (ca. 40-60 Woerter).",
+  "instructionVi": "Viet tin nhan: Reparatur.",
+  "situation": "Heizung kaputt. Schreiben Sie dem Vermieter.",
+  "contentPoints": [
+    "Problem nennen",
+    "seit wann kaputt",
+    "Termin vorschlagen"
+  ],
+  "minWords": 40,
+  "maxWords": 70,
+  "timeMinutes": 15,
+  "rubric": {
+    "criteria": [
+      {
+        "id": "inhalt",
+        "name": "Inhalt",
+        "nameVi": "Noi dung",
+        "maxScore": 5,
+        "weight": 30
+      },
+      {
+        "id": "korrektheit",
+        "name": "Korrektheit",
+        "nameVi": "Chinh xac",
+        "maxScore": 5,
+        "weight": 35
+      },
+      {
+        "id": "angemessenheit",
+        "name": "Kommunikative Angemessenheit",
+        "nameVi": "Phu hop giao tiep",
+        "maxScore": 5,
+        "weight": 35
+      }
+    ],
+    "maxScore": 15
+  },
+  "maxScore": 15,
+  "sourceText": "Herr Wagner von der „Hausfix GmbH“ schreibt Ihnen bezüglich der Reparatur Ihrer Waschmaschine in der Schillerstraße 12 am 15. Oktober. Da das Gerät Wasser verliert und die Tür klemmt, bittet er um Bestätigung des Termins um 14:00 Uhr und Details zum genauen Modell für Ersatzteile.",
+  "sourceTextType": "E-Mail eines Handwerkers",
+  "stimulusSender": "Herr Wagner (Hausfix GmbH)",
+  "grafikData": []
+}

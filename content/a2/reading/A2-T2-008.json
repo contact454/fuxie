@@ -1,0 +1,260 @@
+{
+  "id": "A2-T2-008",
+  "level": "A2",
+  "teil": 2,
+  "teil_name": "Informationstafeln verstehen",
+  "topic": "Freizeit & Hobby",
+  "topic_id": "008",
+  "metadata": {
+    "word_count": 93,
+    "target_grammar": [
+      "Modalverben",
+      "Zeitangaben"
+    ],
+    "target_vocabulary": [
+      "Schwimmbad",
+      "Sauna",
+      "Fitnessstudio",
+      "Mitgliedschaft",
+      "Tageskarte",
+      "Umkleidekabine",
+      "Sprungbrett",
+      "Rutsche",
+      "Becken",
+      "Liegewiese"
+    ],
+    "generated_at": "2026-03-09T22:34:00+07:00",
+    "version": 1
+  },
+  "infotafel": {
+    "title": "Freizeitzentrum Aqua Fun — Angebotsübersicht",
+    "location": "Seeuferweg 10, 70173 Stuttgart",
+    "rows": [
+      {
+        "label": "Schwimmbad",
+        "items": "Sportbecken (25m) · Kinderbecken · Wasserrutsche · Sprungbrett (1m, 3m)"
+      },
+      {
+        "label": "Wellness",
+        "items": "Sauna · Dampfbad · Ruheraum · Massage (nach Termin)"
+      },
+      {
+        "label": "Fitness",
+        "items": "Fitnessstudio · Yoga-Kursraum · Spinning-Raum · Getränkeautomat"
+      },
+      {
+        "label": "Außenbereich",
+        "items": "Liegewiese · Beach-Volleyball · Café mit Terrasse · Spielplatz"
+      }
+    ],
+    "extra_info": "Öffnungszeiten: Mo–Fr 6:30–22:00 Uhr, Sa–So 8:00–20:00 Uhr. Eintritt: Erwachsene 8,50 €, Kinder (4–14) 4,50 €, Kinder unter 4 gratis. Familienkarte (2 Erw. + 2 Kinder): 20 €. Wellness-Bereich ab 16 Jahren. Badekappen-Pflicht im Sportbecken."
+  },
+  "images": [
+    {
+      "id": "IMG1",
+      "type": "info_board",
+      "prompt": "Cute cartoon illustration of a colorful German leisure center with swimming pool, water slide, sauna area and outdoor terrace visible. Families and children playing, lifeguard in red. Fuxie cartoon style, flat illustration, warm pastel colors, no text.",
+      "filename": "A2-T2-008_board.png",
+      "placement": "header",
+      "alt_text": "Freizeitzentrum Aqua Fun Angebotsübersicht",
+      "dimensions": "768x512"
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q1",
+      "teil": 2,
+      "type": "multiple_choice",
+      "stem": "Wie viel kostet der Eintritt für ein Kind von 8 Jahren?",
+      "options": {
+        "a": "Gratis.",
+        "b": "4,50 €.",
+        "c": "8,50 €."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Kinder von 4–14 Jahren zahlen 4,50 €.",
+        "key_evidence": "Kinder (4–14) 4,50 €",
+        "key_vocabulary": [
+          {
+            "word": "Eintritt",
+            "type": "Nomen",
+            "meaning": "admission / entrance fee"
+          },
+          {
+            "word": "Erwachsene",
+            "type": "Nomen",
+            "meaning": "adults"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q2",
+      "teil": 2,
+      "type": "multiple_choice",
+      "stem": "Ab welchem Alter darf man in den Wellness-Bereich?",
+      "options": {
+        "a": "Ab 14 Jahren.",
+        "b": "Ab 16 Jahren.",
+        "c": "Ab 18 Jahren."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Der Wellness-Bereich ist ab 16 Jahren.",
+        "key_evidence": "Wellness-Bereich ab 16 Jahren",
+        "key_vocabulary": [
+          {
+            "word": "Wellness-Bereich",
+            "type": "Nomen",
+            "meaning": "wellness area"
+          },
+          {
+            "word": "Alter",
+            "type": "Nomen",
+            "meaning": "age"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q3",
+      "teil": 2,
+      "type": "multiple_choice",
+      "stem": "Was gibt es im Außenbereich?",
+      "options": {
+        "a": "Fitnessstudio und Yoga.",
+        "b": "Sauna und Dampfbad.",
+        "c": "Liegewiese und Beach-Volleyball."
+      },
+      "answer": "c",
+      "points": 1,
+      "explanation": {
+        "de": "Im Außenbereich gibt es Liegewiese, Beach-Volleyball, Café und Spielplatz.",
+        "key_evidence": "Außenbereich: Liegewiese · Beach-Volleyball · Café mit Terrasse · Spielplatz",
+        "key_vocabulary": [
+          {
+            "word": "Liegewiese",
+            "type": "Nomen",
+            "meaning": "sunbathing lawn"
+          },
+          {
+            "word": "Außenbereich",
+            "type": "Nomen",
+            "meaning": "outdoor area"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q4",
+      "teil": 2,
+      "type": "multiple_choice",
+      "stem": "Was braucht man im Sportbecken?",
+      "options": {
+        "a": "Eine Badekappe.",
+        "b": "Schwimmflügel.",
+        "c": "Badeschuhe."
+      },
+      "answer": "a",
+      "points": 1,
+      "explanation": {
+        "de": "Im Sportbecken gibt es eine Badekappen-Pflicht.",
+        "key_evidence": "Badekappen-Pflicht im Sportbecken",
+        "key_vocabulary": [
+          {
+            "word": "Badekappe",
+            "type": "Nomen",
+            "meaning": "swimming cap"
+          },
+          {
+            "word": "Pflicht",
+            "type": "Nomen",
+            "meaning": "obligation / requirement"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q5",
+      "teil": 2,
+      "type": "multiple_choice",
+      "stem": "Wie viel kostet die Familienkarte?",
+      "options": {
+        "a": "17 €.",
+        "b": "20 €.",
+        "c": "26 €."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Die Familienkarte (2 Erw. + 2 Kinder) kostet 20 €.",
+        "key_evidence": "Familienkarte (2 Erw. + 2 Kinder): 20 €",
+        "key_vocabulary": [
+          {
+            "word": "Familienkarte",
+            "type": "Nomen",
+            "meaning": "family ticket"
+          }
+        ]
+      }
+    }
+  ],
+  "scoring": {
+    "total_points": 5,
+    "pass_threshold": 3,
+    "grading": [
+      {
+        "range": [
+          5,
+          5
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          4,
+          4
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          3,
+          3
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          1,
+          2
+        ],
+        "label": "Noch üben!",
+        "emoji": "📝"
+      },
+      {
+        "range": [
+          0,
+          0
+        ],
+        "label": "Mehr Übung nötig",
+        "emoji": "💪"
+      }
+    ]
+  },
+  "qa": {
+    "vocab_in_a2_list": true,
+    "grammar_a2_only": true,
+    "word_count_in_range": true,
+    "all_answers_verifiable": true,
+    "mc_distractors_plausible": true,
+    "image_count": 1,
+    "passed": true
+  }
+}

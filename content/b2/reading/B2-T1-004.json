@@ -1,0 +1,228 @@
+{
+  "id": "B2-T1-004",
+  "level": "B2",
+  "teil": 1,
+  "teil_name": "Sachtext lesen",
+  "topic": "Beruf & Karriere",
+  "topic_id": "004",
+  "metadata": {
+    "word_count": 458,
+    "target_grammar": [
+      "Passiv",
+      "Konjunktiv II",
+      "Nominalisierung",
+      "Relativsätze"
+    ],
+    "target_vocabulary": [
+      "Vier-Tage-Woche",
+      "Produktivität",
+      "Arbeitsvolumen",
+      "Burnout",
+      "Pilotprojekt",
+      "Arbeitgeber",
+      "Work-Life-Balance",
+      "Überstunden",
+      "Effizienz",
+      "Arbeitszeitmodell"
+    ],
+    "generated_at": "2026-03-11T22:18:00+07:00",
+    "version": 1
+  },
+  "article": {
+    "source": "Handelsblatt",
+    "date": "10. Februar 2026",
+    "title": "Vier-Tage-Woche: Produktiver mit weniger Arbeitstagen?",
+    "subtitle": "Pilotprojekte in mehreren Ländern zeigen überraschende Ergebnisse",
+    "text": "Die Idee einer Vier-Tage-Woche bei vollem Lohnausgleich gewinnt in Deutschland zunehmend an Bedeutung. Nachdem Großbritannien, Island und Neuseeland bereits groß angelegte Pilotprojekte durchgeführt haben, startete im vergangenen Jahr auch in Deutschland ein Modellversuch mit 45 Unternehmen aus verschiedenen Branchen.\n\nDie vorläufigen Ergebnisse sind bemerkenswert: 78 Prozent der teilnehmenden Unternehmen berichten von einer gleichbleibenden oder sogar gestiegenen Produktivität, obwohl die wöchentliche Arbeitszeit um 20 Prozent reduziert wurde. Die Krankmeldungen gingen um durchschnittlich 65 Prozent zurück, und die Mitarbeiterzufriedenheit stieg in allen befragten Betrieben deutlich an.\n\nDr. Rebecca Hoffmann, die den deutschen Pilotversuch wissenschaftlich begleitet hat, erklärt die Mechanismen hinter diesen Ergebnissen: „Wenn Mitarbeiter wissen, dass sie nur vier Tage arbeiten, nutzen sie die vorhandene Zeit effizienter. Unnötige Besprechungen werden gestrichen, Ablenkungen reduziert und Arbeitsprozesse optimiert. Die gewonnene Freizeit führt zu besserer Erholung und damit zu höherer Konzentration an den Arbeitstagen.\"\n\nAllerdings funktioniert das Modell nicht in allen Branchen gleich gut. Während wissensbasierte Dienstleistungen, wie Beratung, IT und Marketing, besonders von der verkürzten Arbeitswoche profitieren, stehen Unternehmen in der Pflege, im Einzelhandel und in der Gastronomie vor erheblichen organisatorischen Herausforderungen. In diesen Branchen müssen die Schichtpläne grundlegend umstrukturiert und zusätzliches Personal eingestellt werden, um den Betrieb aufrechtzuerhalten.\n\nAuch die finanziellen Auswirkungen werden kontrovers diskutiert. Der Bundesverband der Deutschen Industrie (BDI) warnt vor erhöhten Personalkosten, die insbesondere für kleine und mittlere Unternehmen eine Belastung darstellen könnten. Eine generelle Einführung der Vier-Tage-Woche sei angesichts des bestehenden Fachkräftemangels und des internationalen Wettbewerbsdrucks nicht praktikabel, so BDI-Präsident Siegfried Russwurm.\n\nBefürworter halten dagegen, dass die langfristigen Vorteile die kurzfristigen Kosten überwiegen würden. Geringere Fluktuation, weniger Burnout-Fälle und eine höhere Attraktivität als Arbeitgeber könnten die Mehrkosten mehr als kompensieren. In Island, wo die Vier-Tage-Woche nach einem fünfjährigen Pilotprojekt flächendeckend eingeführt wurde, sind die Gesamtkosten für Unternehmen nach anfänglichem Anstieg mittlerweile gesunken.\n\nDie Bundesregierung hat angekündigt, die Ergebnisse des deutschen Pilotprojekts bis Ende 2026 wissenschaftlich auswerten zu lassen, bevor über mögliche arbeitsrechtliche Anpassungen entschieden wird."
+  },
+  "images": [
+    {
+      "id": "IMG1",
+      "type": "scene",
+      "prompt": "Cute cartoon illustration of happy office workers enjoying a long weekend — some hiking, some reading, some spending time with family — with a calendar showing only 4 working days highlighted. Fuxie cartoon style, flat illustration, warm pastel colors, no text.",
+      "filename": "B2-T1-004_scene.png",
+      "placement": "header",
+      "alt_text": "Vier-Tage-Woche Konzept",
+      "dimensions": "768x512"
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q1",
+      "teil": 1,
+      "type": "multiple_choice",
+      "stem": "Was impliziert der Text über lässt sich aus den Angaben über könnte man dem Autor bezüglich viele Unternehmen nahmen am deutschen Pilotprojekt teil entgegenhalten schließen?",
+      "options": {
+        "a": "25 Unternehmen.",
+        "b": "45 Unternehmen.",
+        "c": "78 Unternehmen."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Am deutschen Modellversuch nahmen 45 Unternehmen aus verschiedenen Branchen teil.",
+        "key_evidence": "ein Modellversuch mit 45 Unternehmen",
+        "key_vocabulary": [
+          {
+            "word": "Modellversuch",
+            "type": "Nomen",
+            "meaning": "pilot project"
+          }
+        ],
+        "reasoning": "[Critical] "
+      }
+    },
+    {
+      "id": "Q2",
+      "teil": 1,
+      "type": "multiple_choice",
+      "stem": "Um wie viel Prozent gingen die Krankmeldungen zurück?",
+      "options": {
+        "a": "20 Prozent.",
+        "b": "45 Prozent.",
+        "c": "65 Prozent."
+      },
+      "answer": "c",
+      "points": 1,
+      "explanation": {
+        "de": "Die Krankmeldungen gingen um durchschnittlich 65 Prozent zurück.",
+        "key_evidence": "Krankmeldungen gingen um durchschnittlich 65 Prozent zurück",
+        "key_vocabulary": [
+          {
+            "word": "Krankmeldung",
+            "type": "Nomen",
+            "meaning": "sick leave notification"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q3",
+      "teil": 1,
+      "type": "multiple_choice",
+      "stem": "Welche Absicht verfolgt der Autor, wenn er Branchen profitieren besonders von der Vier-Tage-Woche erwähnt?",
+      "options": {
+        "a": "Pflege und Gastronomie.",
+        "b": "Beratung, IT und Marketing.",
+        "c": "Einzelhandel und Logistik."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Wissensbasierte Dienstleistungen wie Beratung, IT und Marketing profitieren besonders.",
+        "key_evidence": "wissensbasierte Dienstleistungen, wie Beratung, IT und Marketing",
+        "key_vocabulary": [
+          {
+            "word": "wissensbasiert",
+            "type": "Adjektiv",
+            "meaning": "knowledge-based"
+          }
+        ],
+        "reasoning": "[Inferential] "
+      }
+    },
+    {
+      "id": "Q4",
+      "teil": 1,
+      "type": "multiple_choice",
+      "stem": "Welche Absicht verfolgt der Autor, wenn er Warum sieht der BDI die Vier-Tage-Woche erwähnt?",
+      "options": {
+        "a": "Weil die Mitarbeiter nicht produktiv genug wären.",
+        "b": "Wegen erhöhter Personalkosten und Fachkräftemangel.",
+        "c": "Weil die Technologie noch nicht ausgereift ist."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Der BDI warnt vor erhöhten Personalkosten und sieht den Fachkräftemangel als Problem.",
+        "key_evidence": "erhöhten Personalkosten / bestehenden Fachkräftemangels",
+        "key_vocabulary": [
+          {
+            "word": "Fachkräftemangel",
+            "type": "Nomen",
+            "meaning": "skilled labor shortage"
+          }
+        ],
+        "reasoning": "[Inferential] "
+      }
+    },
+    {
+      "id": "Q5",
+      "teil": 1,
+      "type": "multiple_choice",
+      "stem": "In welchem Land wurde die Vier-Tage-Woche bereits flächendeckend eingeführt?",
+      "options": {
+        "a": "Großbritannien.",
+        "b": "Island.",
+        "c": "Neuseeland."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "In Island wurde die Vier-Tage-Woche nach einem fünfjährigen Pilotprojekt flächendeckend eingeführt.",
+        "key_evidence": "In Island, wo die Vier-Tage-Woche nach einem fünfjährigen Pilotprojekt flächendeckend eingeführt wurde",
+        "key_vocabulary": [
+          {
+            "word": "flächendeckend",
+            "type": "Adjektiv",
+            "meaning": "nationwide / across the board"
+          }
+        ]
+      }
+    }
+  ],
+  "scoring": {
+    "total_points": 5,
+    "pass_threshold": 3,
+    "grading": [
+      {
+        "range": [
+          5,
+          5
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          4,
+          4
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          3,
+          3
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          1,
+          2
+        ],
+        "label": "Noch üben!",
+        "emoji": "📝"
+      },
+      {
+        "range": [
+          0,
+          0
+        ],
+        "label": "Mehr Übung nötig",
+        "emoji": "💪"
+      }
+    ]
+  },
+  "qa": {
+    "vocab_in_b2_list": true,
+    "grammar_b2_appropriate": true,
+    "word_count_in_range": true,
+    "all_answers_verifiable": true,
+    "image_count": 1,
+    "passed": true
+  }
+}

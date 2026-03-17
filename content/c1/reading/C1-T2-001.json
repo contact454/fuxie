@@ -1,0 +1,211 @@
+{
+  "id": "C1-T2-001",
+  "level": "C1",
+  "teil": 2,
+  "teil_name": "Sachtext verstehen",
+  "topic": "Philosophie & Ethik",
+  "topic_id": "001",
+  "metadata": {
+    "word_count": 286,
+    "target_grammar": [
+      "Nominalisierung",
+      "Partizipialkonstruktionen",
+      "Konjunktiv I/II",
+      "Passiversatzformen"
+    ],
+    "target_vocabulary": [],
+    "generated_at": "2026-03-11T23:00:46.154030",
+    "version": 1
+  },
+  "article": {
+    "title": "Die Grenzen der Künstlichen Intelligenz in moralischen Entscheidungen",
+    "source": "Wissenschaftliches Fachmagazin",
+    "text": "Die Fähigkeit Künstlicher Intelligenz, komplexe Aufgaben zu bewältigen, hat in den vergangenen Jahren enorme Fortschritte gemacht. Doch die Frage, ob Maschinen auch moralische Entscheidungen treffen können, stellt die Forschung vor grundsätzliche Herausforderungen. Anders als bei logischen oder mathematischen Problemen gibt es bei ethischen Dilemmata häufig keine eindeutig richtige Lösung.\n\nPhilosophen unterscheiden grundsätzlich zwischen zwei ethischen Denkschulen, die zu unterschiedlichen Ergebnissen kommen. Die konsequentialistische Ethik, zu der der Utilitarismus zählt, bewertet Handlungen ausschließlich nach ihren Folgen. Eine Handlung gilt als moralisch richtig, wenn sie das größtmögliche Wohlergehen für die größtmögliche Zahl von Betroffenen herbeiführt. Die deontologische Ethik hingegen, die auf Immanuel Kant zurückgeht, beurteilt Handlungen nach ihrer Übereinstimmung mit universellen Prinzipien, unabhängig von den Konsequenzen.\n\nFür die Programmierung moralischer Algorithmen stellt diese Pluralität ein fundamentales Problem dar. Welchem ethischen System soll eine KI folgen? Die Entscheidung darüber kann nicht an die Maschine delegiert werden, sondern muss von Menschen getroffen werden, was die vermeintliche Objektivität der KI-Entscheidung als Illusion entlarvt.\n\nHinzu kommt das Problem der kontextuellen Sensibilität. Moralische Urteile sind in hohem Maße von kulturellen, historischen und individuellen Faktoren abhängig. Eine KI, die in einem westlichen Wertesystem trainiert wurde, trifft möglicherweise Entscheidungen, die in anderen kulturellen Kontexten als zutiefst problematisch empfunden werden.\n\nDie Entwicklung sogenannter maschineller Ethik befindet sich noch in einem frühen Stadium. Forscher am MIT haben mit der Moral Machine eine Plattform geschaffen, die moralische Präferenzen von Millionen Nutzern weltweit erfasst. Die Daten zeigen signifikante kulturelle Unterschiede: Während in westlichen Ländern tendenziell junge Leben priorisiert werden, legen ostasiatische Gesellschaften größeren Wert auf den Schutz älterer Personen.\n\nExperten warnen davor, moralische Entscheidungen unkritisch an KI-Systeme zu delegieren. Stattdessen sollten KI-Systeme als Unterstützungswerkzeuge dienen, die menschlichen Entscheidungsträgern relevante Informationen bereitstellen, die endgültige moralische Verantwortung jedoch beim Menschen belassen."
+  },
+  "images": [
+    {
+      "id": "IMG1",
+      "type": "scene",
+      "prompt": "Cute cartoon illustration related to Philosophie & Ethik. Fuxie cartoon style, flat illustration, warm pastel colors, no text.",
+      "filename": "C1-T2-001_scene.png",
+      "placement": "header",
+      "alt_text": "Die Grenzen der Künstlichen Intelligenz in moralis",
+      "dimensions": "768x512"
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q1",
+      "teil": 2,
+      "type": "multiple_choice",
+      "stem": "Was impliziert die Darstellung von das grundsätzliche Problem bei der Programmierung moralischer Algorithmen für die Gesamtthese?",
+      "options": {
+        "a": "Die technische Komplexität.",
+        "b": "Die Pluralität ethischer Systeme.",
+        "c": "Der Mangel an Daten."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Für die Programmierung moralischer Algorithmen stellt diese Pluralität ein fundamentales Problem dar.",
+        "reasoning": "[Inferential] Die richtige Antwort (b) ergibt sich aus dem Textkontext."
+      }
+    },
+    {
+      "id": "Q2",
+      "teil": 2,
+      "type": "multiple_choice",
+      "stem": "Welche implizite Annahme liegt der Darstellung von bewertet die konsequentialistische Ethik Handlungen zugrunde?",
+      "options": {
+        "a": "Nach ihrer Übereinstimmung mit Prinzipien.",
+        "b": "Nach ihren Folgen für das Wohlergehen.",
+        "c": "Nach der Absicht des Handelnden."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Die konsequentialistische Ethik, zu der der Utilitarismus zählt, bewertet Handlungen ausschließlich nach ihren Folgen.",
+        "reasoning": "[Inferential] Die richtige Antwort (b) ergibt sich aus dem Textkontext."
+      }
+    },
+    {
+      "id": "Q3",
+      "teil": 2,
+      "type": "multiple_choice",
+      "stem": "Welche Gegenposition zu zeigen die Daten der Moral Machine wird im Text nicht berücksichtigt?",
+      "options": {
+        "a": "Alle Kulturen haben die gleichen moralischen Präferenzen.",
+        "b": "Es gibt signifikante kulturelle Unterschiede bei moralischen Urteilen.",
+        "c": "Maschinen treffen bessere moralische Entscheidungen."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Die Daten zeigen signifikante kulturelle Unterschiede: Während in westlichen Ländern tendenziell junge Leben priorisiert werden, legen ostasiatisch...",
+        "reasoning": "[Critical] Die richtige Antwort (b) ergibt sich aus dem Textkontext."
+      }
+    },
+    {
+      "id": "Q4",
+      "teil": 2,
+      "type": "multiple_choice",
+      "stem": "Warum ist die vermeintliche Objektivität von KI-Entscheidungen eine Illusion?",
+      "options": {
+        "a": "Weil KI technisch fehlerhaft ist.",
+        "b": "Weil Menschen das zugrundeliegende ethische System auswählen.",
+        "c": "Weil KI nicht schnell genug rechnet."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Die Entscheidung darüber kann nicht an die Maschine delegiert werden, sondern muss von Menschen getroffen werden, was die vermeintliche Objektivitä...",
+        "reasoning": "Die richtige Antwort (b) ergibt sich aus dem Textkontext."
+      }
+    },
+    {
+      "id": "Q5",
+      "teil": 2,
+      "type": "multiple_choice",
+      "stem": "Welche Gegenposition zu fordern Experten bezüglich moralischer KI-Entscheidungen wird im Text nicht berücksichtigt?",
+      "options": {
+        "a": "Vollständige Autonomie der KI.",
+        "b": "KI als Unterstützung, Verantwortung beim Menschen.",
+        "c": "Verbot aller KI-gestützten Entscheidungen."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Stattdessen sollten KI-Systeme als Unterstützungswerkzeuge dienen, die menschlichen Entscheidungsträgern relevante Informationen bereitstellen, die...",
+        "reasoning": "[Critical] Die richtige Antwort (b) ergibt sich aus dem Textkontext."
+      }
+    },
+    {
+      "id": "Q6",
+      "teil": 2,
+      "type": "multiple_choice",
+      "stem": "Was lässt sich aus der Argumentation über Problem ergibt sich aus dem kulturellen Kontext ableiten?",
+      "options": {
+        "a": "KI-Systeme sind zu teuer.",
+        "b": "In einem Wertesystem trainierte KI kann in anderen Kontexten problematisch sein.",
+        "c": "Kulturelle Unterschiede existieren nicht."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Eine KI, die in einem westlichen Wertesystem trainiert wurde, trifft möglicherweise Entscheidungen, die in anderen kulturellen Kontexten als zutief...",
+        "reasoning": "[Inferential] Die richtige Antwort (b) ergibt sich aus dem Textkontext."
+      }
+    },
+    {
+      "id": "Q7",
+      "teil": 2,
+      "type": "multiple_choice",
+      "stem": "Welche Denkschule geht auf Immanuel Kant zurück?",
+      "options": {
+        "a": "Der Utilitarismus.",
+        "b": "Die deontologische Ethik.",
+        "c": "Der Konsequentialismus."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Die deontologische Ethik hingegen, die auf Immanuel Kant zurückgeht, beurteilt Handlungen nach ihrer Übereinstimmung mit universellen Prinzipien, u...",
+        "reasoning": "Die richtige Antwort (b) ergibt sich aus dem Textkontext."
+      }
+    }
+  ],
+  "scoring": {
+    "total_points": 7,
+    "pass_threshold": 5,
+    "grading": [
+      {
+        "range": [
+          6,
+          7
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          4,
+          5
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          3,
+          3
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          1,
+          2
+        ],
+        "label": "Noch üben!",
+        "emoji": "📝"
+      },
+      {
+        "range": [
+          0,
+          0
+        ],
+        "label": "Mehr Übung nötig",
+        "emoji": "💪"
+      }
+    ]
+  },
+  "qa": {
+    "vocab_in_c1_list": true,
+    "grammar_c1_appropriate": true,
+    "word_count_in_range": true,
+    "all_answers_verifiable": true,
+    "image_count": 1,
+    "passed": true
+  }
+}

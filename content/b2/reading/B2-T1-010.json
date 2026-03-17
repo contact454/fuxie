@@ -1,0 +1,228 @@
+{
+  "id": "B2-T1-010",
+  "level": "B2",
+  "teil": 1,
+  "teil_name": "Sachtext lesen",
+  "topic": "Mobilität & Verkehr",
+  "topic_id": "010",
+  "metadata": {
+    "word_count": 455,
+    "target_grammar": [
+      "Passiv",
+      "Konjunktiv II",
+      "Partizipialstrukturen",
+      "Nominalisierung"
+    ],
+    "target_vocabulary": [
+      "Elektromobilität",
+      "CO2-Bilanz",
+      "Ladeinfrastruktur",
+      "Reichweite",
+      "Kaufprämie",
+      "Batterie",
+      "Rohstoff",
+      "Lithium",
+      "Emissionsfrei",
+      "Verbrennermotor"
+    ],
+    "generated_at": "2026-03-11T22:24:00+07:00",
+    "version": 1
+  },
+  "article": {
+    "source": "ADAC Motorwelt",
+    "date": "22. Februar 2026",
+    "title": "Elektromobilität: Sind E-Autos wirklich umweltfreundlich?",
+    "subtitle": "Eine differenzierte Betrachtung der Ökobilanz von Elektrofahrzeugen",
+    "text": "Die Bundesregierung hält an ihrem Ziel fest, bis 2030 mindestens 15 Millionen Elektroautos auf deutsche Straßen zu bringen. Ende 2025 waren es jedoch erst 3,4 Millionen — deutlich weniger als erhofft. Während Befürworter Elektroautos als Schlüsseltechnologie für den Klimaschutz preisen, mehren sich kritische Stimmen, die die tatsächliche Umweltbilanz der Fahrzeuge infrage stellen.\n\nEine aktuelle Lebenszyklusanalyse des Fraunhofer-Instituts für System- und Innovationsforschung kommt zu einem differenzierten Ergebnis: Über die gesamte Lebensdauer betrachtet verursacht ein Elektroauto in Deutschland durchschnittlich 40 Prozent weniger CO2 als ein vergleichbarer Verbrenner. Allerdings entfällt ein erheblicher Teil der Emissionen auf die Produktion der Batterie. Die Herstellung einer 60-kWh-Batterie belastet das Klima mit etwa acht Tonnen CO2 — ein ökologischer Rucksack, den das E-Auto erst nach 30.000 bis 50.000 gefahrenen Kilometern gegenüber einem Diesel ausgeglichen hat.\n\nEin zentrales Problem bleibt die Herkunft der Rohstoffe. Für Lithium-Ionen-Batterien werden Lithium, Kobalt und Nickel benötigt, deren Abbau in Ländern wie dem Kongo, Chile und Australien erhebliche ökologische und soziale Probleme verursacht. In den Kobaltminen des Kongo werden nach wie vor Kinderarbeit und gesundheitsgefährdende Arbeitsbedingungen dokumentiert.\n\nDie Ladeinfrastruktur stellt ein weiteres Hindernis dar. Obwohl die Zahl der öffentlichen Ladepunkte in Deutschland im vergangenen Jahr um 35 Prozent auf rund 130.000 gestiegen ist, liegt die Versorgungsdichte weit unter dem von der EU geforderten Mindestwert. Besonders auf dem Land und an Autobahnen kommt es regelmäßig zu langen Wartezeiten an Ladesäulen. Der ADAC fordert deshalb den Ausbau der Schnelllade-Infrastruktur an allen Raststätten bis spätestens 2028.\n\nDennoch zeigt sich ein klarer Trend: Die technologische Entwicklung schreitet rasant voran. Neue Batteriegeneration auf Feststoffbasis, die ab 2027 in Serie gehen sollen, versprechen eine Reichweite von über 800 Kilometern bei halbierter Ladezeit und deutlich geringerem Rohstoffbedarf. Gleichzeitig sinken die Preise für Elektroautos kontinuierlich — erstmals sind mehrere Modelle unter 25.000 Euro erhältlich.\n\nUmweltverbände betonen, dass die Elektromobilität trotz ihrer Defizite die klimafreundlichste verfügbare Antriebstechnologie sei. „Die Frage ist nicht, ob E-Autos perfekt sind, sondern ob sie besser als die Alternative sind — und das sind sie eindeutig\", erklärt Greenpeace-Verkehrsexperte Tobias Austrup. „Entscheidend ist, dass wir gleichzeitig den Ausbau erneuerbarer Energien vorantreiben, denn ein E-Auto ist nur so sauber wie der Strom, mit dem es geladen wird.\"\n\nDie Debatte um die Elektromobilität verdeutlicht: Einfache Antworten gibt es bei komplexen Umweltfragen selten."
+  },
+  "images": [
+    {
+      "id": "IMG1",
+      "type": "scene",
+      "prompt": "Cute cartoon illustration showing an electric car being charged at a charging station with wind turbines and solar panels in the background, alongside a traditional gas-powered car at a gas station for comparison. Fuxie cartoon style, flat illustration, warm pastel colors, no text.",
+      "filename": "B2-T1-010_scene.png",
+      "placement": "header",
+      "alt_text": "Elektromobilität vs. Verbrenner",
+      "dimensions": "768x512"
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q1",
+      "teil": 1,
+      "type": "multiple_choice",
+      "stem": "Was könnte man dem Autor bezüglich viele Elektroautos waren Ende 2025 in Deutschland zugelassen entgegenhalten?",
+      "options": {
+        "a": "1,4 Millionen.",
+        "b": "3,4 Millionen.",
+        "c": "15 Millionen."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Ende 2025 waren 3,4 Millionen Elektroautos zugelassen.",
+        "key_evidence": "3,4 Millionen",
+        "key_vocabulary": [
+          {
+            "word": "zugelassen",
+            "type": "Partizip II",
+            "meaning": "registered"
+          }
+        ],
+        "reasoning": "[Critical] "
+      }
+    },
+    {
+      "id": "Q2",
+      "teil": 1,
+      "type": "multiple_choice",
+      "stem": "Wie viel Prozent weniger CO2 verursacht ein E-Auto über seine Lebensdauer?",
+      "options": {
+        "a": "20 Prozent.",
+        "b": "40 Prozent.",
+        "c": "60 Prozent."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Ein E-Auto verursacht durchschnittlich 40 Prozent weniger CO2 als ein Verbrenner.",
+        "key_evidence": "durchschnittlich 40 Prozent weniger CO2",
+        "key_vocabulary": [
+          {
+            "word": "Lebenszyklusanalyse",
+            "type": "Nomen",
+            "meaning": "life cycle analysis"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q3",
+      "teil": 1,
+      "type": "multiple_choice",
+      "stem": "Welche Absicht verfolgt der Autor bezüglich Schlussfolgerung über viele öffentliche Ladepunkte gibt es in Deutschland legt der Text nahe?",
+      "options": {
+        "a": "80.000.",
+        "b": "130.000.",
+        "c": "200.000."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Die Zahl stieg auf rund 130.000 Ladepunkte.",
+        "key_evidence": "rund 130.000",
+        "key_vocabulary": [
+          {
+            "word": "Ladepunkt",
+            "type": "Nomen",
+            "meaning": "charging point"
+          }
+        ],
+        "reasoning": "[Inferential] "
+      }
+    },
+    {
+      "id": "Q4",
+      "teil": 1,
+      "type": "multiple_choice",
+      "stem": "Was impliziert der Text über versprechen die neuen Feststoffbatterien?",
+      "options": {
+        "a": "Eine Reichweite von 400 Kilometern.",
+        "b": "Eine Reichweite von über 800 Kilometern bei halbierter Ladezeit.",
+        "c": "Kostenlose Ladung an allen Stationen."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Feststoffbatterien versprechen über 800 km Reichweite bei halbierter Ladezeit.",
+        "key_evidence": "Reichweite von über 800 Kilometern bei halbierter Ladezeit",
+        "key_vocabulary": [
+          {
+            "word": "Feststoffbasis",
+            "type": "Nomen",
+            "meaning": "solid-state basis"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q5",
+      "teil": 1,
+      "type": "multiple_choice",
+      "stem": "Welche Absicht verfolgt der Autor bezüglich Schlussfolgerung über betont der Greenpeace-Experte als entscheidend für die Klimabilanz legt der Text nahe?",
+      "options": {
+        "a": "Mehr Subventionen für E-Autos.",
+        "b": "Den Ausbau erneuerbarer Energien.",
+        "c": "Ein Verbot von Verbrennern."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Austrup betont, dass der Ausbau erneuerbarer Energien entscheidend ist.",
+        "key_evidence": "den Ausbau erneuerbarer Energien vorantreiben",
+        "key_vocabulary": [
+          {
+            "word": "erneuerbar",
+            "type": "Adjektiv",
+            "meaning": "renewable"
+          }
+        ],
+        "reasoning": "[Inferential] "
+      }
+    }
+  ],
+  "scoring": {
+    "total_points": 5,
+    "pass_threshold": 3,
+    "grading": [
+      {
+        "range": [
+          5,
+          5
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          4,
+          4
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          3,
+          3
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          1,
+          2
+        ],
+        "label": "Noch üben!",
+        "emoji": "📝"
+      },
+      {
+        "range": [
+          0,
+          0
+        ],
+        "label": "Mehr Übung nötig",
+        "emoji": "💪"
+      }
+    ]
+  },
+  "qa": {
+    "vocab_in_b2_list": true,
+    "grammar_b2_appropriate": true,
+    "word_count_in_range": true,
+    "all_answers_verifiable": true,
+    "image_count": 1,
+    "passed": true
+  }
+}

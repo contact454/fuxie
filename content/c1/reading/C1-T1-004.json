@@ -1,0 +1,171 @@
+{
+  "id": "C1-T1-004",
+  "level": "C1",
+  "teil": 1,
+  "teil_name": "Lückentext (Wörter)",
+  "topic": "Architektur & Stadtplanung",
+  "topic_id": "004",
+  "metadata": {
+    "word_count": 217,
+    "target_grammar": [
+      "Nominalisierung",
+      "Partizipialkonstruktionen",
+      "Konjunktiv I/II",
+      "Passiversatzformen"
+    ],
+    "target_vocabulary": [],
+    "generated_at": "2026-03-11T22:50:15.527648",
+    "version": 1
+  },
+  "cloze": {
+    "title": "Die 15-Minuten-Stadt als Planungsideal",
+    "text": "Das Konzept der 15-Minuten-Stadt, das der Urbanist Carlos Moreno {1} hat, verfolgt ein ebenso simples wie revolutionäres Ziel: Alle wesentlichen Einrichtungen des täglichen Bedarfs, von der Schule über den Supermarkt bis zum Arbeitsplatz, sollen innerhalb von 15 Minuten zu Fuß oder mit dem Fahrrad {2} sein.\n\nDer Ansatz stellt eine radikale Abkehr von der autogerechten Stadt dar, die die Stadtplanung des 20. Jahrhunderts {3} hat. In der funktional getrennten Stadt, wie sie Le Corbusier propagierte, sind Wohnen, Arbeiten, Einkaufen und Freizeit in unterschiedlichen Stadtteilen angesiedelt, die nur über {4} erreichbar sind. Die Folgen sind bekannt: Staus, hoher Flächenverbrauch für Straßen und Parkplätze sowie soziale Isolation in reinen Wohn- oder Gewerbegebieten.\n\nParis gilt als Vorreiterin des 15-Minuten-Konzepts. Unter Bürgermeisterin Anne Hidalgo wurden seit 2020 zahlreiche Fahrspuren in Radwege umgewandelt, Schulhöfe zu begrünten Nachbarschaftsräumen {5} und dezentrale Coworking-Spaces gefördert, um die Notwendigkeit des Pendelns zu reduzieren.\n\nKritiker {6} ein, dass das Konzept vor allem in dicht besiedelten europäischen Innenstädten funktioniere, aber für Vorstädte und ländliche Räume kaum übertragbar sei. Zudem bestehe die Gefahr, dass die Aufwertung innerstädtischer Quartiere zu steigenden Mieten und Verdrängung einkommensschwacher Bevölkerungsgruppen {7}.\n\nDennoch hat das Konzept international eine intensive Debatte über die Zukunft urbaner Räume angestoßen und das Bewusstsein dafür geschärft, dass die Art unserer Stadtplanung unmittelbare Auswirkungen auf Lebensqualität, Klimaschutz und sozialen {8} hat.",
+    "gaps": [
+      {
+        "pos": 1,
+        "options": {
+          "a": "erfunden",
+          "b": "entwickelt",
+          "c": "entworfen",
+          "d": "konzipiert"
+        },
+        "answer": "b"
+      },
+      {
+        "pos": 2,
+        "options": {
+          "a": "erreichbar",
+          "b": "verfügbar",
+          "c": "zugänglich",
+          "d": "vorhanden"
+        },
+        "answer": "a"
+      },
+      {
+        "pos": 3,
+        "options": {
+          "a": "beeinflusst",
+          "b": "geprägt",
+          "c": "bestimmt",
+          "d": "gesteuert"
+        },
+        "answer": "b"
+      },
+      {
+        "pos": 4,
+        "options": {
+          "a": "Autobahnen",
+          "b": "Distanzen",
+          "c": "Autofahrten",
+          "d": "Wege"
+        },
+        "answer": "c"
+      },
+      {
+        "pos": 5,
+        "options": {
+          "a": "umgestaltet",
+          "b": "verändert",
+          "c": "renoviert",
+          "d": "erneuert"
+        },
+        "answer": "a"
+      },
+      {
+        "pos": 6,
+        "options": {
+          "a": "merken",
+          "b": "wenden",
+          "c": "geben",
+          "d": "setzen"
+        },
+        "answer": "b"
+      },
+      {
+        "pos": 7,
+        "options": {
+          "a": "leitet",
+          "b": "bringt",
+          "c": "führt",
+          "d": "folgt"
+        },
+        "answer": "c"
+      },
+      {
+        "pos": 8,
+        "options": {
+          "a": "Zusammenhalt",
+          "b": "Austausch",
+          "c": "Umgang",
+          "d": "Kontakt"
+        },
+        "answer": "a"
+      }
+    ]
+  },
+  "images": [
+    {
+      "id": "IMG1",
+      "type": "scene",
+      "prompt": "Cute cartoon illustration related to Architektur & Stadtplanung, showing an academic/intellectual scene. Fuxie cartoon style, flat illustration, warm pastel colors, no text.",
+      "filename": "C1-T1-004_scene.png",
+      "placement": "header",
+      "alt_text": "Die 15-Minuten-Stadt als Planungsideal",
+      "dimensions": "768x512"
+    }
+  ],
+  "scoring": {
+    "total_points": 8,
+    "pass_threshold": 5,
+    "grading": [
+      {
+        "range": [
+          7,
+          8
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          5,
+          6
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          4,
+          4
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          1,
+          3
+        ],
+        "label": "Noch üben!",
+        "emoji": "📝"
+      },
+      {
+        "range": [
+          0,
+          0
+        ],
+        "label": "Mehr Übung nötig",
+        "emoji": "💪"
+      }
+    ]
+  },
+  "qa": {
+    "vocab_in_c1_list": true,
+    "grammar_c1_appropriate": true,
+    "word_count_in_range": true,
+    "all_gaps_have_4_options": true,
+    "image_count": 1,
+    "passed": true
+  }
+}

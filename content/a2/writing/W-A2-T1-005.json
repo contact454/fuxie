@@ -1,0 +1,51 @@
+{
+  "id": "W-A2-T1-005",
+  "cefrLevel": "A2",
+  "teil": 1,
+  "teilName": "E-Mail-Antwort",
+  "textType": "E-Mail",
+  "register": "informell",
+  "topic": "Neue Arbeit",
+  "instruction": "Schreiben Sie eine Antwort-E-Mail (ca. 40-60 Woerter). Schreiben Sie zu allen drei Punkten.",
+  "instructionVi": "Tra loi email: Neue Arbeit.",
+  "situation": "Ihr Freund Max hat einen neuen Job. Antworten Sie.",
+  "contentPoints": [
+    "sich freuen",
+    "Fragen stellen",
+    "eigene Erfahrung teilen"
+  ],
+  "minWords": 40,
+  "maxWords": 70,
+  "timeMinutes": 15,
+  "rubric": {
+    "criteria": [
+      {
+        "id": "inhalt",
+        "name": "Inhalt",
+        "nameVi": "Noi dung",
+        "maxScore": 5,
+        "weight": 30
+      },
+      {
+        "id": "korrektheit",
+        "name": "Korrektheit",
+        "nameVi": "Chinh xac",
+        "maxScore": 5,
+        "weight": 35
+      },
+      {
+        "id": "angemessenheit",
+        "name": "Kommunikative Angemessenheit",
+        "nameVi": "Phu hop giao tiep",
+        "maxScore": 5,
+        "weight": 35
+      }
+    ],
+    "maxScore": 15
+  },
+  "maxScore": 15,
+  "sourceText": "Hallo! Rate mal: Ich habe endlich eine neue Arbeit gefunden. Ich arbeite jetzt in einem kleinen Café in der Stadt. Die Kollegen sind super und der Kaffee schmeckt toll. Ich bin so glücklich! Wie geht es dir? Hast du auch schon mal in einem Café gearbeitet? Schreib mir bald! Liebe Grüße, Marc",
+  "sourceTextType": "E-Mail",
+  "stimulusSender": "Marc",
+  "grafikData": []
+}

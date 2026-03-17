@@ -1,0 +1,64 @@
+{
+  "id": "W-B1-T3-016",
+  "cefrLevel": "B1",
+  "teil": 3,
+  "teilName": "Formelle E-Mail",
+  "textType": "Formeller Brief",
+  "register": "formell",
+  "topic": "Produktreklamation",
+  "instruction": "Sie haben online ein Gerät gekauft, das defekt geliefert wurde. Schreiben Sie eine Reklamations-E-Mail an den Kundenservice des Händlers.",
+  "instructionVi": "Bạn đã mua một thiết bị trực tuyến nhưng bị giao hàng lỗi. Hãy viết một email khiếu nại tới bộ phận chăm sóc khách hàng của người bán.",
+  "situation": "Vor einer Woche haben Sie bei der Firma 'Elektro-Welt' einen neuen Kaffeevollautomaten bestellt. Das Paket kam gestern an, aber beim Auspacken haben Sie festgestellt, dass das Gerät beschädigt ist und nicht funktioniert.",
+  "contentPoints": [
+    "Geben Sie die Bestellnummer und das Kaufdatum an.",
+    "Beschreiben Sie genau, was an dem Gerät defekt ist.",
+    "Schlagen Sie eine Lösung vor (z. B. Ersatzlieferung oder Reparatur).",
+    "Bitten Sie um eine Bestätigung und eine schnelle Rückmeldung."
+  ],
+  "sourceText": "Bestelldetails:\nFirma: Elektro-Welt GmbH\nKundennummer: KD-88210\nBestellnummer: EW-2023-9941\nProdukt: Kaffeevollautomat 'AromaMaster 3000'\nPreis: 449,00 EUR\nKaufdatum: 10. Oktober\nLieferdatum: 14. Oktober",
+  "sourceTextType": "Bestellbestätigung",
+  "minWords": 80,
+  "maxWords": 120,
+  "timeMinutes": 25,
+  "rubric": {
+    "criteria": [
+      {
+        "id": "inhalt",
+        "name": "Inhalt",
+        "nameVi": "Nội dung",
+        "maxScore": 5,
+        "weight": 25
+      },
+      {
+        "id": "angemessenheit",
+        "name": "Kommunikative Angemessenheit",
+        "nameVi": "Phù hợp giao tiếp",
+        "maxScore": 5,
+        "weight": 20
+      },
+      {
+        "id": "korrektheit",
+        "name": "Korrektheit",
+        "nameVi": "Chính xác ngữ pháp & chính tả",
+        "maxScore": 5,
+        "weight": 25
+      },
+      {
+        "id": "spektrum",
+        "name": "Wortschatz & Strukturen",
+        "nameVi": "Đa dạng từ vựng & cấu trúc",
+        "maxScore": 5,
+        "weight": 15
+      },
+      {
+        "id": "kohaerenz",
+        "name": "Kohaerenz & Kohaesion",
+        "nameVi": "Mạch lạc & liên kết",
+        "maxScore": 5,
+        "weight": 15
+      }
+    ],
+    "maxScore": 25
+  },
+  "maxScore": 25
+}

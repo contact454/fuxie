@@ -1,0 +1,172 @@
+{
+  "id": "B2-T4-008",
+  "level": "B2",
+  "teil": 4,
+  "teil_name": "Kommentare lesen",
+  "topic": "Digitalisierung & Technik",
+  "topic_id": "008",
+  "metadata": {
+    "word_count": 132,
+    "target_grammar": [
+      "Konjunktiv II",
+      "Passiv",
+      "Nominalisierung",
+      "Relativsatze"
+    ],
+    "target_vocabulary": [],
+    "generated_at": "2026-03-11T22:37:08.661642",
+    "version": 1
+  },
+  "forum": {
+    "question": "Sollten soziale Medien fur Kinder unter 16 verboten werden?",
+    "comments": [
+      {
+        "name": "Medienpadagoge Dr. Bernd Willms",
+        "position": "nein",
+        "text": "Ein Verbot ware weder technisch durchsetzbar noch padagogisch sinnvoll. Kinder brauchen Medienkompetenz, und die lernt man nur durch Nutzung mit Begleitung. Verbote machen das Verbotene nur attraktiver und treiben die Nutzung in unkontrollierte Bereiche."
+      },
+      {
+        "name": "Mutter Katja Neumann",
+        "position": "ja",
+        "text": "Meine 13-jahrige Tochter verbringt taglich 4 Stunden auf TikTok und Instagram. Ihre Noten sind eingebrochen, sie schlaft schlecht und vergleicht sich standig mit unrealistischen Schonheitsidealen. Ich ware dankbar fur ein gesetzliches Verbot, das mich als Mutter unterstutzt."
+      },
+      {
+        "name": "Psychologin Dr. Eva Roth",
+        "position": "ja",
+        "text": "Die neuesten Studien zeigen eindeutig, dass intensiver Social-Media-Konsum bei Minderjahrigen zu Angststorungen, Depressionen und einem negativen Korperbild fuhrt. Das Gehirn von Kindern und Jugendlichen ist besonders anfaumllig fur die manipulativen Mechanismen dieser Plattformen."
+      },
+      {
+        "name": "IT-Unternehmer Jens Krause",
+        "position": "nein",
+        "text": "Statt Verbote zu erlassen, sollten wir die Plattformbetreiber in die Pflicht nehmen. Bessere Jugendschutzeinstellungen, keine personalisierte Werbung fur Minderjaehrige und transparente Algorithmen waren effektiver als ein pauschales Verbot."
+      }
+    ]
+  },
+  "images": [
+    {
+      "id": "IMG1",
+      "type": "scene",
+      "prompt": "Cute cartoon illustration of people having a discussion forum about Digitalisierung & Technik, showing speech bubbles with different opinions. Fuxie cartoon style, flat illustration, warm pastel colors, no text.",
+      "filename": "B2-T4-008_scene.png",
+      "placement": "header",
+      "alt_text": "Sollten soziale Medien fur Kinder unter 16 verbote",
+      "dimensions": "768x512"
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q1",
+      "teil": 4,
+      "type": "ja_nein",
+      "stem": "Dr. Willms halt ein Verbot fur technisch leicht umsetzbar.",
+      "answer": "nein",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Dr. Willms halt ein Verbot fur technisch leicht umsetzbar.",
+        "reasoning": "Die richtige Antwort ergibt sich aus dem Text."
+      }
+    },
+    {
+      "id": "Q2",
+      "teil": 4,
+      "type": "ja_nein",
+      "stem": "Aus dem Text lässt sich schließen, dass katja Neumann beobachtet negative Auswirkungen sozialer Medien auf ihre Tochter.",
+      "answer": "ja",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Katja Neumann beobachtet negative Auswirkungen sozialer Medien auf ihre Tochter.",
+        "reasoning": "[Inferential] Die richtige Antwort ergibt sich aus dem Text."
+      }
+    },
+    {
+      "id": "Q3",
+      "teil": 4,
+      "type": "ja_nein",
+      "stem": "Aus dem Text lässt sich schließen, dass dr. Roth berichtet von Studien, die Social-Media-Konsum bei Minderjahrigen fur unbedenklich halten.",
+      "answer": "nein",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Dr. Roth berichtet von Studien, die Social-Media-Konsum bei Minderjahrigen fur u",
+        "reasoning": "[Inferential] Die richtige Antwort ergibt sich aus dem Text."
+      }
+    },
+    {
+      "id": "Q4",
+      "teil": 4,
+      "type": "ja_nein",
+      "stem": "Jens Krause mochte die Plattformbetreiber starker regulieren.",
+      "answer": "ja",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Jens Krause mochte die Plattformbetreiber starker regulieren.",
+        "reasoning": "Die richtige Antwort ergibt sich aus dem Text."
+      }
+    },
+    {
+      "id": "Q5",
+      "teil": 4,
+      "type": "ja_nein",
+      "stem": "Der Text legt nahe, dass Die Mehrzahl der Kommentatoren ist fur ein Verbot sozialer Medien fur Kinder.",
+      "answer": "nein",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Die Mehrzahl der Kommentatoren ist fur ein Verbot sozialer Medien fur Kinder.",
+        "reasoning": "[Inferential] Die richtige Antwort ergibt sich aus dem Text."
+      }
+    }
+  ],
+  "scoring": {
+    "total_points": 5,
+    "pass_threshold": 3,
+    "grading": [
+      {
+        "range": [
+          5,
+          5
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          4,
+          4
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          3,
+          3
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          1,
+          2
+        ],
+        "label": "Noch uben!",
+        "emoji": "📝"
+      },
+      {
+        "range": [
+          0,
+          0
+        ],
+        "label": "Mehr Ubung notig",
+        "emoji": "💪"
+      }
+    ]
+  },
+  "qa": {
+    "vocab_in_b2_list": true,
+    "grammar_b2_appropriate": true,
+    "word_count_in_range": true,
+    "all_answers_verifiable": true,
+    "image_count": 1,
+    "passed": true
+  }
+}

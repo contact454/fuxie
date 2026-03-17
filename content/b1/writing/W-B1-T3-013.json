@@ -1,0 +1,64 @@
+{
+  "id": "W-B1-T3-013",
+  "cefrLevel": "B1",
+  "teil": 3,
+  "teilName": "Formelle E-Mail",
+  "textType": "Formeller Brief",
+  "register": "formell",
+  "topic": "Hotelbeschwerde",
+  "instruction": "Sie haben letzte Woche in einem Hotel übernachtet, aber Sie waren mit dem Service und dem Zimmer unzufrieden. Schreiben Sie eine Beschwerde-E-Mail an die Hotelleitung.",
+  "instructionVi": "Bạn đã ở tại một khách sạn vào tuần trước nhưng không hài lòng với dịch vụ và phòng ở. Hãy viết một email khiếu nại trang trọng gửi cho ban quản lý khách sạn.",
+  "situation": "Vom 12. bis zum 15. Oktober waren Sie Gast im 'Hotel Seeufer' in Konstanz. Sie hatten ein Premium-Zimmer gebucht, aber die Realität entsprach nicht der Beschreibung in der Buchungsbestätigung.",
+  "contentPoints": [
+    "Nennen Sie den Grund für Ihr Schreiben und Ihre Buchungsdaten.",
+    "Beschreiben Sie genau, was an dem Zimmer nicht in Ordnung war.",
+    "Berichten Sie über Ihre negativen Erfahrungen mit dem Personal.",
+    "Machen Sie einen Vorschlag für eine Entschädigung (z.B. Rückzahlung)."
+  ],
+  "sourceText": "Hotel Seeufer - BUCHUNGSBESTÄTIGUNG\nBuchungsnummer: HS-7721\nGast: [Ihr Name]\nZeitraum: 12.10. – 15.10.\nZimmertyp: Premium Doppelzimmer mit Seeblick und Balkon\nPreis: 450,00 EUR (im Voraus bezahlt)\nBesonderheiten: Täglicher Reinigungsservice, 24h-Rezeption.",
+  "sourceTextType": "Buchungsbestätigung",
+  "minWords": 80,
+  "maxWords": 120,
+  "timeMinutes": 25,
+  "rubric": {
+    "criteria": [
+      {
+        "id": "inhalt",
+        "name": "Inhalt",
+        "nameVi": "Nội dung",
+        "maxScore": 5,
+        "weight": 25
+      },
+      {
+        "id": "angemessenheit",
+        "name": "Kommunikative Angemessenheit",
+        "nameVi": "Phù hợp giao tiếp",
+        "maxScore": 5,
+        "weight": 20
+      },
+      {
+        "id": "korrektheit",
+        "name": "Korrektheit",
+        "nameVi": "Chính xác ngữ pháp & chính tả",
+        "maxScore": 5,
+        "weight": 25
+      },
+      {
+        "id": "spektrum",
+        "name": "Wortschatz & Strukturen",
+        "nameVi": "Đa dạng từ vựng & cấu trúc",
+        "maxScore": 5,
+        "weight": 15
+      },
+      {
+        "id": "kohaerenz",
+        "name": "Kohaerenz & Kohaesion",
+        "nameVi": "Mạch lạc & liên kết",
+        "maxScore": 5,
+        "weight": 15
+      }
+    ],
+    "maxScore": 25
+  },
+  "maxScore": 25
+}

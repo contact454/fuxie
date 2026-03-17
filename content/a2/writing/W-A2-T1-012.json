@@ -1,0 +1,49 @@
+{
+  "id": "W-A2-T1-012",
+  "cefrLevel": "A2",
+  "teil": 1,
+  "teilName": "E-Mail-Antwort",
+  "textType": "E-Mail",
+  "register": "informell",
+  "topic": "Arztbesuch",
+  "instruction": "Sie haben eine E-Mail von Ihrem Freund Marco erhalten. Antworten Sie ihm. Schreiben Sie zu jedem Punkt ein bis zwei Sätze.",
+  "instructionVi": "Bạn nhận được một email từ người bạn Marco. Hãy trả lời anh ấy. Viết từ một đến hai câu cho mỗi ý.",
+  "situation": "Sie waren gestern beim Arzt, weil Sie Halsschmerzen und Fieber hatten. Ihr Freund Marco schreibt Ihnen, weil er sich Sorgen macht und wissen möchte, wie es Ihnen geht.",
+  "contentPoints": [
+    "Beschreiben Sie, warum Sie beim Arzt waren.",
+    "Schreiben Sie, was der Arzt gesagt hat (Medikamente, Bettruhe).",
+    "Machen Sie einen Vorschlag für ein Treffen, wenn Sie wieder gesund sind."
+  ],
+  "sourceText": "Hallo! Ich habe gehört, dass du gestern beim Arzt warst. Was ist passiert? Geht es dir schon besser? Musst du Medikamente nehmen oder im Bett bleiben? Ich hoffe, es ist nichts Schlimmes. Melde dich bald! Gute Besserung, Marco.",
+  "sourceTextType": "E-Mail",
+  "minWords": 40,
+  "maxWords": 70,
+  "timeMinutes": 15,
+  "rubric": {
+    "criteria": [
+      {
+        "id": "inhalt",
+        "name": "Inhalt",
+        "nameVi": "Nội dung",
+        "maxScore": 5,
+        "weight": 30
+      },
+      {
+        "id": "korrektheit",
+        "name": "Korrektheit",
+        "nameVi": "Chính xác ngữ pháp & chính tả",
+        "maxScore": 5,
+        "weight": 35
+      },
+      {
+        "id": "angemessenheit",
+        "name": "Kommunikative Angemessenheit",
+        "nameVi": "Phù hợp giao tiếp",
+        "maxScore": 5,
+        "weight": 35
+      }
+    ],
+    "maxScore": 15
+  },
+  "maxScore": 15
+}

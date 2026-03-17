@@ -1,0 +1,224 @@
+{
+  "id": "B1-T2-008",
+  "level": "B1",
+  "teil": 2,
+  "teil_name": "Pressebericht lesen",
+  "topic": "Sport & Fitness",
+  "topic_id": "008",
+  "metadata": {
+    "word_count": 289,
+    "target_grammar": [
+      "Nebensatz mit dass/obwohl/weil",
+      "Passiv",
+      "Komparativ"
+    ],
+    "target_vocabulary": [
+      "E-Sport",
+      "Wettkampf",
+      "Profi-Spieler",
+      "Turnier",
+      "Zuschauer",
+      "Preispool",
+      "Anerkennung",
+      "Disziplin",
+      "Sportverband",
+      "Training"
+    ],
+    "generated_at": "2026-03-10T22:58:00+07:00",
+    "version": 1
+  },
+  "article": {
+    "source": "Spiegel Online",
+    "date": "3. August 2025",
+    "title": "E-Sport: Digitaler Wettkampf wird immer populärer",
+    "subtitle": "Deutsche Liga wächst — Debatte über Anerkennung als Sportart",
+    "text": "E-Sport boomt in Deutschland. Die deutsche E-Sport-Liga hat in dieser Saison erstmals über eine Million Zuschauer bei einem einzelnen Online-Turnier erreicht. Professionelle Gamer verdienen mittlerweile sechsstellige Gehälter, und Sponsoren aus der Wirtschaft investieren Millionen.\n\nBeim Finale der Strasbourg Open im Juli traten Teams aus zwölf Ländern in den Spielen „League of Legends“ und „Counter-Strike“ gegeneinander an. Der Preispool betrug insgesamt 500.000 Euro. Das deutsche Team „Berlin Wolves“ belegte den dritten Platz.\n\nDer Deutsche E-Sport-Bund fordert seit Jahren, dass E-Sport offiziell als Sportart anerkannt wird. Verbandspräsident Kevin Hartmann erklärt: „Unsere Spieler trainieren bis zu acht Stunden am Tag. Sie brauchen Konzentration, Reaktionsfähigkeit und Teamwork — genau wie in traditionellen Sportarten.“\n\nDer Deutsche Olympische Sportbund lehnt die Anerkennung bisher ab. Vizepräsidentin Monika Fischer argumentiert, dass E-Sport keine körperliche Aktivität erfordere und deshalb kein Sport im klassischen Sinne sei. „Videospiele zu spielen ist nicht dasselbe wie Fußball oder Schwimmen“, sagt sie.\n\nInteressant ist, dass viele E-Sportler auch klassischen Sport betreiben. Eine Umfrage zeigt, dass 65 Prozent der Profi-Spieler regelmäßig joggen, schwimmen oder ins Fitnessstudio gehen, weil sie wissen, dass körperliche Fitness ihre geistige Leistung verbessert.\n\nOb E-Sport jemals olympisch wird, bleibt offen. Klar ist: Die Branche wächst, und das Interesse steigt — besonders bei der jungen Generation."
+  },
+  "images": [
+    {
+      "id": "IMG1",
+      "type": "scene",
+      "prompt": "Cute cartoon illustration of an e-sports arena with young gamers at PCs competing on stage, big screens showing gameplay, excited audience. Fuxie cartoon style, flat illustration, warm pastel colors, no text.",
+      "filename": "B1-T2-008_scene.png",
+      "placement": "header",
+      "alt_text": "E-Sport Turnier",
+      "dimensions": "768x512"
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q1",
+      "teil": 2,
+      "type": "multiple_choice",
+      "stem": "Wie viele Zuschauer hatte das Online-Turnier der deutschen Liga?",
+      "options": {
+        "a": "Über 500.000.",
+        "b": "Über eine Million.",
+        "c": "Über zwei Millionen."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Die Liga hat erstmals über eine Million Zuschauer erreicht.",
+        "key_evidence": "über eine Million Zuschauer",
+        "key_vocabulary": [
+          {
+            "word": "Zuschauer",
+            "type": "Nomen",
+            "meaning": "viewer / spectator"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q2",
+      "teil": 2,
+      "type": "multiple_choice",
+      "stem": "Wie hoch war der Preispool bei der Strasbourg Open?",
+      "options": {
+        "a": "250.000 Euro.",
+        "b": "500.000 Euro.",
+        "c": "1 Million Euro."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Der Preispool betrug 500.000 Euro.",
+        "key_evidence": "Der Preispool betrug insgesamt 500.000 Euro",
+        "key_vocabulary": [
+          {
+            "word": "Preispool",
+            "type": "Nomen",
+            "meaning": "prize pool"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q3",
+      "teil": 2,
+      "type": "multiple_choice",
+      "stem": "Warum lehnt der Olympische Sportbund E-Sport ab?",
+      "options": {
+        "a": "Weil E-Sport zu teuer ist.",
+        "b": "Weil E-Sport keine körperliche Aktivität erfordert.",
+        "c": "Weil es zu gefährlich ist."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Die Vizepräsidentin sagt, E-Sport erfordere keine körperliche Aktivität.",
+        "key_evidence": "dass E-Sport keine körperliche Aktivität erfordere",
+        "key_vocabulary": [
+          {
+            "word": "Anerkennung",
+            "type": "Nomen",
+            "meaning": "recognition"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q4",
+      "teil": 2,
+      "type": "multiple_choice",
+      "stem": "Wie viele Profi-Spieler treiben regelmäßig klassischen Sport?",
+      "options": {
+        "a": "40 Prozent.",
+        "b": "55 Prozent.",
+        "c": "65 Prozent."
+      },
+      "answer": "c",
+      "points": 1,
+      "explanation": {
+        "de": "65 Prozent der Profi-Spieler treiben regelmäßig Sport.",
+        "key_evidence": "65 Prozent der Profi-Spieler",
+        "key_vocabulary": [
+          {
+            "word": "Fitness",
+            "type": "Nomen",
+            "meaning": "fitness"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q5",
+      "teil": 2,
+      "type": "multiple_choice",
+      "stem": "Wie viele Stunden am Tag trainieren E-Sportler?",
+      "options": {
+        "a": "Bis zu vier Stunden.",
+        "b": "Bis zu sechs Stunden.",
+        "c": "Bis zu acht Stunden."
+      },
+      "answer": "c",
+      "points": 1,
+      "explanation": {
+        "de": "E-Sportler trainieren bis zu acht Stunden am Tag.",
+        "key_evidence": "trainieren bis zu acht Stunden am Tag",
+        "key_vocabulary": [
+          {
+            "word": "Reaktionsfähigkeit",
+            "type": "Nomen",
+            "meaning": "reaction speed"
+          }
+        ]
+      }
+    }
+  ],
+  "scoring": {
+    "total_points": 5,
+    "pass_threshold": 3,
+    "grading": [
+      {
+        "range": [
+          5,
+          5
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          4,
+          4
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          3,
+          3
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          1,
+          2
+        ],
+        "label": "Noch üben!",
+        "emoji": "📝"
+      },
+      {
+        "range": [
+          0,
+          0
+        ],
+        "label": "Mehr Übung nötig",
+        "emoji": "💪"
+      }
+    ]
+  },
+  "qa": {
+    "vocab_in_b1_list": true,
+    "grammar_b1_appropriate": true,
+    "word_count_in_range": true,
+    "all_answers_verifiable": true,
+    "image_count": 1,
+    "passed": true
+  }
+}

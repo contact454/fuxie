@@ -1,0 +1,47 @@
+{
+  "id": "W-A1-T2-013",
+  "cefrLevel": "A1",
+  "teil": 2,
+  "teilName": "Kurze E-Mail",
+  "textType": "E-Mail",
+  "register": "informell",
+  "topic": "Neue Wohnung",
+  "instruction": "Schreiben Sie eine E-Mail an Ihren Freund Markus. Schreiben Sie 20 bis 40 Wörter. Schreiben Sie zu allen drei Punkten.",
+  "instructionVi": "Viết một email cho người bạn tên Markus (khoảng 20-40 từ). Hãy viết đầy đủ cả 3 ý được yêu cầu.",
+  "situation": "Sie sind letzte Woche in eine neue Wohnung eingezogen. Die Wohnung ist sehr schön und hell. Sie möchten Ihren Freund Markus einladen.",
+  "contentPoints": [
+    "Informieren Sie Markus über den Umzug.",
+    "Beschreiben Sie die Wohnung (wie viele Zimmer? hell?).",
+    "Fragen Sie Markus: Wann hat er Zeit für einen Besuch?"
+  ],
+  "minWords": 20,
+  "maxWords": 40,
+  "timeMinutes": 10,
+  "rubric": {
+    "criteria": [
+      {
+        "id": "inhalt",
+        "name": "Inhalt",
+        "nameVi": "Nội dung",
+        "maxScore": 5,
+        "weight": 30
+      },
+      {
+        "id": "korrektheit",
+        "name": "Korrektheit",
+        "nameVi": "Chính xác ngữ pháp & chính tả",
+        "maxScore": 5,
+        "weight": 40
+      },
+      {
+        "id": "angemessenheit",
+        "name": "Angemessenheit",
+        "nameVi": "Tính phù hợp",
+        "maxScore": 5,
+        "weight": 30
+      }
+    ],
+    "maxScore": 15
+  },
+  "maxScore": 15
+}

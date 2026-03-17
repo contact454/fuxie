@@ -1,0 +1,23 @@
+{
+    "name": "@fuxie/srs-engine",
+    "version": "0.0.1",
+    "private": true,
+    "type": "module",
+    "exports": {
+        ".": "./src/index.ts"
+    },
+    "scripts": {
+        "typecheck": "tsc --noEmit",
+        "test": "vitest run",
+        "test:watch": "vitest",
+        "clean": "rm -rf dist .turbo"
+    },
+    "dependencies": {
+        "@fuxie/shared": "workspace:*"
+    },
+    "devDependencies": {
+        "@fuxie/typescript-config": "workspace:*",
+        "typescript": "^5.7.3",
+        "vitest": "^3.0.5"
+    }
+}

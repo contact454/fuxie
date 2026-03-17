@@ -1,0 +1,479 @@
+{
+  "theme": {
+    "slug": "a2-essen-restaurant",
+    "name": "Essen & Restaurant",
+    "nameVi": "Ăn uống & Nhà hàng",
+    "nameEn": "Food & Restaurant",
+    "sortOrder": 6,
+    "imageUrl": "/images/themes/a2-essen-restaurant.png"
+  },
+  "words": [
+    {
+      "word": "Gericht",
+      "article": "NEUTRUM",
+      "plural": "die Gerichte",
+      "wordType": "NOMEN",
+      "meaningVi": "món ăn",
+      "meaningEn": "dish, course",
+      "exampleSentence1": "Was ist Ihr Lieblingsgericht?",
+      "exampleTranslation1": "Món ăn yêu thích của bạn?",
+      "exampleSentence2": "Das Gericht schmeckt gut.",
+      "exampleTranslation2": "Món ăn ngon.",
+      "imageUrl": "/images/vocab/a2-essen-restaurant/gericht.png"
+    },
+    {
+      "word": "Vorspeise",
+      "article": "FEMININ",
+      "plural": "die Vorspeisen",
+      "wordType": "NOMEN",
+      "meaningVi": "món khai vị",
+      "meaningEn": "appetizer, starter",
+      "exampleSentence1": "Als Vorspeise nehme ich Suppe.",
+      "exampleTranslation1": "Món khai vị tôi chọn súp.",
+      "exampleSentence2": "Die Vorspeise war lecker.",
+      "exampleTranslation2": "Món khai vị ngon.",
+      "imageUrl": "/images/vocab/a2-essen-restaurant/vorspeise.png"
+    },
+    {
+      "word": "Hauptgericht",
+      "article": "NEUTRUM",
+      "plural": "die Hauptgerichte",
+      "wordType": "NOMEN",
+      "meaningVi": "món chính",
+      "meaningEn": "main course",
+      "exampleSentence1": "Als Hauptgericht nehme ich Fisch.",
+      "exampleTranslation1": "Món chính tôi chọn cá.",
+      "exampleSentence2": "Das Hauptgericht ist Fleisch.",
+      "exampleTranslation2": "Món chính là thịt.",
+      "imageUrl": "/images/vocab/a2-essen-restaurant/hauptgericht.png"
+    },
+    {
+      "word": "Nachspeise",
+      "article": "FEMININ",
+      "plural": "die Nachspeisen",
+      "wordType": "NOMEN",
+      "meaningVi": "món tráng miệng",
+      "meaningEn": "dessert",
+      "exampleSentence1": "Möchten Sie eine Nachspeise?",
+      "exampleTranslation1": "Bạn muốn tráng miệng không?",
+      "exampleSentence2": "Die Nachspeise ist Eis.",
+      "exampleTranslation2": "Tráng miệng là kem.",
+      "imageUrl": "/images/vocab/a2-essen-restaurant/nachspeise.png"
+    },
+    {
+      "word": "Speisekarte",
+      "article": "FEMININ",
+      "plural": "die Speisekarten",
+      "wordType": "NOMEN",
+      "meaningVi": "thực đơn",
+      "meaningEn": "menu",
+      "exampleSentence1": "Die Speisekarte, bitte.",
+      "exampleTranslation1": "Cho xin thực đơn.",
+      "exampleSentence2": "Was steht auf der Speisekarte?",
+      "exampleTranslation2": "Thực đơn có gì?",
+      "imageUrl": "/images/vocab/a2-essen-restaurant/speisekarte.png"
+    },
+    {
+      "word": "Rechnung",
+      "article": "FEMININ",
+      "plural": "die Rechnungen",
+      "wordType": "NOMEN",
+      "meaningVi": "hóa đơn",
+      "meaningEn": "bill, invoice",
+      "exampleSentence1": "Die Rechnung, bitte.",
+      "exampleTranslation1": "Cho xin hóa đơn.",
+      "exampleSentence2": "Wir möchten die Rechnung.",
+      "exampleTranslation2": "Chúng tôi muốn tính tiền.",
+      "imageUrl": "/images/vocab/a2-essen-restaurant/rechnung.png"
+    },
+    {
+      "word": "Trinkgeld",
+      "article": "NEUTRUM",
+      "plural": "die Trinkgelder",
+      "wordType": "NOMEN",
+      "meaningVi": "tiền tip",
+      "meaningEn": "tip",
+      "exampleSentence1": "Geben Sie Trinkgeld?",
+      "exampleTranslation1": "Bạn có cho tip không?",
+      "exampleSentence2": "10% Trinkgeld ist üblich.",
+      "exampleTranslation2": "10% tip là bình thường.",
+      "imageUrl": "/images/vocab/a2-essen-restaurant/trinkgeld.png"
+    },
+    {
+      "word": "bestellen",
+      "wordType": "VERB",
+      "meaningVi": "gọi (món), đặt hàng",
+      "meaningEn": "to order",
+      "conjugation": {
+        "praesens": {
+          "ich": "bestelle",
+          "du": "bestellst",
+          "er_sie_es": "bestellt",
+          "wir": "bestellen",
+          "ihr": "bestellt",
+          "sie_Sie": "bestellen"
+        },
+        "isIrregular": false,
+        "isSeparable": false
+      },
+      "exampleSentence1": "Ich möchte bestellen.",
+      "exampleTranslation1": "Tôi muốn gọi món.",
+      "exampleSentence2": "Haben Sie schon bestellt?",
+      "exampleTranslation2": "Bạn gọi món chưa?",
+      "imageUrl": "/images/vocab/a2-essen-restaurant/bestellen.png"
+    },
+    {
+      "word": "empfehlen",
+      "wordType": "VERB",
+      "meaningVi": "giới thiệu, khuyên",
+      "meaningEn": "to recommend",
+      "conjugation": {
+        "praesens": {
+          "ich": "empfehle",
+          "du": "empfiehlst",
+          "er_sie_es": "empfiehlt",
+          "wir": "empfehlen",
+          "ihr": "empfehlt",
+          "sie_Sie": "empfehlen"
+        },
+        "isIrregular": true,
+        "isSeparable": false
+      },
+      "exampleSentence1": "Was empfehlen Sie?",
+      "exampleTranslation1": "Bạn gợi ý gì?",
+      "exampleSentence2": "Ich empfehle den Fisch.",
+      "exampleTranslation2": "Tôi giới thiệu món cá.",
+      "imageUrl": "/images/vocab/a2-essen-restaurant/empfehlen.png"
+    },
+    {
+      "word": "reservieren",
+      "wordType": "VERB",
+      "meaningVi": "đặt chỗ",
+      "meaningEn": "to reserve",
+      "conjugation": {
+        "praesens": {
+          "ich": "reserviere",
+          "du": "reservierst",
+          "er_sie_es": "reserviert",
+          "wir": "reservieren",
+          "ihr": "reserviert",
+          "sie_Sie": "reservieren"
+        },
+        "isIrregular": false,
+        "isSeparable": false
+      },
+      "exampleSentence1": "Ich möchte einen Tisch reservieren.",
+      "exampleTranslation1": "Tôi muốn đặt bàn.",
+      "exampleSentence2": "Haben Sie reserviert?",
+      "exampleTranslation2": "Bạn đã đặt chỗ chưa?",
+      "imageUrl": "/images/vocab/a2-essen-restaurant/reservieren.png"
+    },
+    {
+      "word": "schmecken",
+      "wordType": "VERB",
+      "meaningVi": "có vị, ngon",
+      "meaningEn": "to taste",
+      "conjugation": {
+        "praesens": {
+          "ich": "schmecke",
+          "du": "schmeckst",
+          "er_sie_es": "schmeckt",
+          "wir": "schmecken",
+          "ihr": "schmeckt",
+          "sie_Sie": "schmecken"
+        },
+        "isIrregular": false,
+        "isSeparable": false
+      },
+      "exampleSentence1": "Das Essen schmeckt gut.",
+      "exampleTranslation1": "Đồ ăn ngon.",
+      "exampleSentence2": "Schmeckt es dir?",
+      "exampleTranslation2": "Bạn thấy ngon không?",
+      "imageUrl": "/images/vocab/a2-essen-restaurant/schmecken.png"
+    },
+    {
+      "word": "Zutat",
+      "article": "FEMININ",
+      "plural": "die Zutaten",
+      "wordType": "NOMEN",
+      "meaningVi": "nguyên liệu",
+      "meaningEn": "ingredient",
+      "exampleSentence1": "Welche Zutaten brauchen wir?",
+      "exampleTranslation1": "Cần nguyên liệu gì?",
+      "exampleSentence2": "Frische Zutaten sind wichtig.",
+      "exampleTranslation2": "Nguyên liệu tươi quan trọng.",
+      "imageUrl": "/images/vocab/a2-essen-restaurant/zutat.png"
+    },
+    {
+      "word": "Gewürz",
+      "article": "NEUTRUM",
+      "plural": "die Gewürze",
+      "wordType": "NOMEN",
+      "meaningVi": "gia vị",
+      "meaningEn": "spice",
+      "exampleSentence1": "Das Essen braucht mehr Gewürze.",
+      "exampleTranslation1": "Đồ ăn cần thêm gia vị.",
+      "exampleSentence2": "Welche Gewürze magst du?",
+      "exampleTranslation2": "Bạn thích gia vị nào?",
+      "imageUrl": "/images/vocab/a2-essen-restaurant/gewuerz.png"
+    },
+    {
+      "word": "Soße",
+      "article": "FEMININ",
+      "plural": "die Soßen",
+      "wordType": "NOMEN",
+      "meaningVi": "nước sốt",
+      "meaningEn": "sauce",
+      "exampleSentence1": "Die Soße ist lecker.",
+      "exampleTranslation1": "Nước sốt ngon.",
+      "exampleSentence2": "Möchten Sie Soße dazu?",
+      "exampleTranslation2": "Bạn muốn thêm sốt không?",
+      "imageUrl": "/images/vocab/a2-essen-restaurant/sosse.png"
+    },
+    {
+      "word": "Braten",
+      "article": "MASKULIN",
+      "plural": "die Braten",
+      "wordType": "NOMEN",
+      "meaningVi": "món nướng/quay",
+      "meaningEn": "roast",
+      "exampleSentence1": "Der Braten ist fertig.",
+      "exampleTranslation1": "Món nướng xong.",
+      "exampleSentence2": "Schweinebraten ist typisch deutsch.",
+      "exampleTranslation2": "Thịt heo nướng đặc trưng Đức.",
+      "imageUrl": "/images/vocab/a2-essen-restaurant/braten.png"
+    },
+    {
+      "word": "backen",
+      "wordType": "VERB",
+      "meaningVi": "nướng (bánh)",
+      "meaningEn": "to bake",
+      "conjugation": {
+        "praesens": {
+          "ich": "backe",
+          "du": "bäckst",
+          "er_sie_es": "bäckt",
+          "wir": "backen",
+          "ihr": "backt",
+          "sie_Sie": "backen"
+        },
+        "isIrregular": true,
+        "isSeparable": false
+      },
+      "exampleSentence1": "Ich backe einen Kuchen.",
+      "exampleTranslation1": "Tôi nướng bánh.",
+      "exampleSentence2": "Wir backen Brot.",
+      "exampleTranslation2": "Chúng tôi nướng bánh mì.",
+      "imageUrl": "/images/vocab/a2-essen-restaurant/backen.png"
+    },
+    {
+      "word": "kochen",
+      "wordType": "VERB",
+      "meaningVi": "nấu ăn",
+      "meaningEn": "to cook",
+      "conjugation": {
+        "praesens": {
+          "ich": "koche",
+          "du": "kochst",
+          "er_sie_es": "kocht",
+          "wir": "kochen",
+          "ihr": "kocht",
+          "sie_Sie": "kochen"
+        },
+        "isIrregular": false,
+        "isSeparable": false
+      },
+      "exampleSentence1": "Ich koche gern.",
+      "exampleTranslation1": "Tôi thích nấu ăn.",
+      "exampleSentence2": "Was kochst du heute?",
+      "exampleTranslation2": "Hôm nay bạn nấu gì?",
+      "imageUrl": "/images/vocab/a2-essen-restaurant/kochen.png"
+    },
+    {
+      "word": "vegetarisch",
+      "wordType": "ADJEKTIV",
+      "meaningVi": "ăn chay",
+      "meaningEn": "vegetarian",
+      "exampleSentence1": "Haben Sie vegetarische Gerichte?",
+      "exampleTranslation1": "Bạn có món chay không?",
+      "exampleSentence2": "Ich esse vegetarisch.",
+      "exampleTranslation2": "Tôi ăn chay.",
+      "imageUrl": "/images/vocab/a2-essen-restaurant/vegetarisch.png"
+    },
+    {
+      "word": "lecker",
+      "wordType": "ADJEKTIV",
+      "meaningVi": "ngon",
+      "meaningEn": "delicious",
+      "exampleSentence1": "Das Essen ist lecker!",
+      "exampleTranslation1": "Đồ ăn ngon!",
+      "exampleSentence2": "Sehr lecker!",
+      "exampleTranslation2": "Rất ngon!",
+      "imageUrl": "/images/vocab/a2-essen-restaurant/lecker.png"
+    },
+    {
+      "word": "scharf",
+      "wordType": "ADJEKTIV",
+      "meaningVi": "cay",
+      "meaningEn": "spicy, sharp",
+      "exampleSentence1": "Das Essen ist zu scharf.",
+      "exampleTranslation1": "Đồ ăn quá cay.",
+      "exampleSentence2": "Magst du scharfes Essen?",
+      "exampleTranslation2": "Bạn thích đồ cay không?",
+      "imageUrl": "/images/vocab/a2-essen-restaurant/scharf.png"
+    },
+    {
+      "word": "süß",
+      "wordType": "ADJEKTIV",
+      "meaningVi": "ngọt",
+      "meaningEn": "sweet",
+      "exampleSentence1": "Der Kuchen ist süß.",
+      "exampleTranslation1": "Bánh ngọt.",
+      "exampleSentence2": "Zu süß für mich.",
+      "exampleTranslation2": "Quá ngọt với tôi.",
+      "imageUrl": "/images/vocab/a2-essen-restaurant/suess.png"
+    },
+    {
+      "word": "sauer",
+      "wordType": "ADJEKTIV",
+      "meaningVi": "chua",
+      "meaningEn": "sour",
+      "exampleSentence1": "Die Zitrone ist sauer.",
+      "exampleTranslation1": "Chanh chua.",
+      "exampleSentence2": "Das schmeckt sauer.",
+      "exampleTranslation2": "Vị chua.",
+      "imageUrl": "/images/vocab/a2-essen-restaurant/sauer.png"
+    },
+    {
+      "word": "bitter",
+      "wordType": "ADJEKTIV",
+      "meaningVi": "đắng",
+      "meaningEn": "bitter",
+      "exampleSentence1": "Der Kaffee ist bitter.",
+      "exampleTranslation1": "Cà phê đắng.",
+      "exampleSentence2": "Bittere Schokolade.",
+      "exampleTranslation2": "Sô-cô-la đắng.",
+      "imageUrl": "/images/vocab/a2-essen-restaurant/bitter.png"
+    },
+    {
+      "word": "salzig",
+      "wordType": "ADJEKTIV",
+      "meaningVi": "mặn",
+      "meaningEn": "salty",
+      "exampleSentence1": "Die Suppe ist zu salzig.",
+      "exampleTranslation1": "Súp quá mặn.",
+      "exampleSentence2": "Salzige Chips.",
+      "exampleTranslation2": "Khoai tây chiên mặn.",
+      "imageUrl": "/images/vocab/a2-essen-restaurant/salzig.png"
+    },
+    {
+      "word": "Bedienung",
+      "article": "FEMININ",
+      "plural": "die Bedienungen",
+      "wordType": "NOMEN",
+      "meaningVi": "nhân viên phục vụ",
+      "meaningEn": "waiter/waitress, service",
+      "exampleSentence1": "Die Bedienung war gut.",
+      "exampleTranslation1": "Phục vụ tốt.",
+      "exampleSentence2": "Bedienung, bitte!",
+      "exampleTranslation2": "Phục vụ ơi!",
+      "imageUrl": "/images/vocab/a2-essen-restaurant/bedienung.png"
+    },
+    {
+      "word": "Kellner",
+      "article": "MASKULIN",
+      "plural": "die Kellner",
+      "wordType": "NOMEN",
+      "meaningVi": "bồi bàn",
+      "meaningEn": "waiter",
+      "exampleSentence1": "Der Kellner kommt gleich.",
+      "exampleTranslation1": "Bồi bàn sắp đến.",
+      "exampleSentence2": "Fragen Sie den Kellner.",
+      "exampleTranslation2": "Hỏi bồi bàn.",
+      "imageUrl": "/images/vocab/a2-essen-restaurant/kellner.png"
+    },
+    {
+      "word": "Portion",
+      "article": "FEMININ",
+      "plural": "die Portionen",
+      "wordType": "NOMEN",
+      "meaningVi": "phần ăn",
+      "meaningEn": "portion",
+      "exampleSentence1": "Eine große Portion, bitte.",
+      "exampleTranslation1": "Một phần lớn.",
+      "exampleSentence2": "Die Portion ist klein.",
+      "exampleTranslation2": "Phần ăn nhỏ.",
+      "imageUrl": "/images/vocab/a2-essen-restaurant/portion.png"
+    },
+    {
+      "word": "essen",
+      "wordType": "VERB",
+      "meaningVi": "ăn",
+      "meaningEn": "to eat",
+      "exampleSentence1": "Was möchten Sie essen?",
+      "exampleTranslation1": "Bạn muốn ăn gì?",
+      "exampleSentence2": "Ich esse gerne Pizza.",
+      "exampleTranslation2": "Tôi thích ăn pizza.",
+      "imageUrl": "/images/vocab/a2-essen-restaurant/essen.png"
+    },
+    {
+      "word": "trinken",
+      "wordType": "VERB",
+      "meaningVi": "uống",
+      "meaningEn": "to drink",
+      "exampleSentence1": "Was möchten Sie trinken?",
+      "exampleTranslation1": "Bạn muốn uống gì?",
+      "exampleSentence2": "Ich trinke gerne Wasser.",
+      "exampleTranslation2": "Tôi thích uống nước.",
+      "imageUrl": "/images/vocab/a2-essen-restaurant/trinken.png"
+    },
+    {
+      "word": "bezahlen",
+      "wordType": "VERB",
+      "meaningVi": "thanh toán",
+      "meaningEn": "to pay",
+      "exampleSentence1": "Kann ich bitte bezahlen?",
+      "exampleTranslation1": "Tôi có thể thanh toán được không?",
+      "exampleSentence2": "Wir müssen die Rechnung bezahlen.",
+      "exampleTranslation2": "Chúng ta phải thanh toán hóa đơn.",
+      "imageUrl": "/images/vocab/a2-essen-restaurant/bezahlen.png"
+    },
+    {
+      "word": "Gast",
+      "article": "MASKULIN",
+      "plural": "die Gäste",
+      "wordType": "NOMEN",
+      "meaningVi": "khách",
+      "meaningEn": "guest",
+      "exampleSentence1": "Der Gast wartet auf das Essen.",
+      "exampleTranslation1": "Vị khách đang chờ món ăn.",
+      "exampleSentence2": "Wir haben heute viele Gäste.",
+      "exampleTranslation2": "Hôm nay chúng tôi có nhiều khách.",
+      "imageUrl": "/images/vocab/a2-essen-restaurant/gast.png"
+    },
+    {
+      "word": "Getränk",
+      "article": "NEUTRUM",
+      "plural": "die Getränke",
+      "wordType": "NOMEN",
+      "meaningVi": "đồ uống",
+      "meaningEn": "drink, beverage",
+      "exampleSentence1": "Möchten Sie ein Getränk bestellen?",
+      "exampleTranslation1": "Bạn có muốn gọi đồ uống không?",
+      "exampleSentence2": "Dieses Getränk ist sehr erfrischend.",
+      "exampleTranslation2": "Đồ uống này rất sảng khoái.",
+      "imageUrl": "/images/vocab/a2-essen-restaurant/getraenk.png"
+    },
+    {
+      "word": "hungrig",
+      "wordType": "ADJEKTIV",
+      "meaningVi": "đói",
+      "meaningEn": "hungry",
+      "exampleSentence1": "Ich bin sehr hungrig.",
+      "exampleTranslation1": "Tôi rất đói.",
+      "exampleSentence2": "Bist du hungrig?",
+      "exampleTranslation2": "Bạn có đói không?",
+      "imageUrl": "/images/vocab/a2-essen-restaurant/hungrig.png"
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "id": "W-A1-T1-015",
+  "cefrLevel": "A1",
+  "teil": 1,
+  "teilName": "Formular ausfuellen",
+  "textType": "Formular",
+  "register": "neutral",
+  "topic": "Umzugsmeldung",
+  "instruction": "Sie ziehen um und müssen ein Formular für das Bürgeramt ausfüllen. Ergänzen Sie die fehlenden Informationen (1-5) im Formular.",
+  "instructionVi": "Bạn chuyển nhà và cần điền vào một mẫu đơn tại Văn phòng Đăng ký Cư trú. Hãy hoàn thành các thông tin còn thiếu (1-5) trong mẫu đơn.",
+  "situation": "Sie heißen Maria Müller, geboren am 25.03.1992. Sie ziehen am 1. November von München nach Berlin um. Ihre neue Wohnung liegt in der Kantstraße 45, 10625 Berlin. Füllen Sie das Anmeldeformular aus.",
+  "contentPoints": [
+    "Familienname",
+    "Vorname",
+    "Geburtsdatum",
+    "Neue Straße und Hausnummer",
+    "Postleitzahl und Wohnort"
+  ],
+  "sourceText": "Anmeldung bei der Meldebehörde. Name: Müller, Maria. Geboren: 25. März 1992. Umzug von München nach Berlin (Kantstraße 45, 10625 Berlin). Einzugsdatum: 01.11.",
+  "sourceTextType": "Notiz",
+  "formFields": [
+    {
+      "label": "1. Familienname",
+      "type": "text"
+    },
+    {
+      "label": "2. Vorname",
+      "type": "text"
+    },
+    {
+      "label": "3. Geburtsdatum",
+      "type": "text"
+    },
+    {
+      "label": "4. Neue Anschrift (Straße, Hausnummer)",
+      "type": "text"
+    },
+    {
+      "label": "5. PLZ, Wohnort",
+      "type": "text"
+    }
+  ],
+  "minWords": 15,
+  "maxWords": 30,
+  "timeMinutes": 5,
+  "rubric": {
+    "criteria": [
+      {
+        "id": "inhalt",
+        "name": "Inhalt",
+        "nameVi": "Nội dung",
+        "maxScore": 5,
+        "weight": 30
+      },
+      {
+        "id": "korrektheit",
+        "name": "Korrektheit",
+        "nameVi": "Chính xác ngữ pháp & chính tả",
+        "maxScore": 5,
+        "weight": 40
+      },
+      {
+        "id": "angemessenheit",
+        "name": "Angemessenheit",
+        "nameVi": "Tính phù hợp",
+        "maxScore": 5,
+        "weight": 30
+      }
+    ],
+    "maxScore": 15
+  },
+  "maxScore": 15
+}

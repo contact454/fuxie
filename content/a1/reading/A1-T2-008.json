@@ -1,0 +1,177 @@
+{
+  "id": "A1-T2-008",
+  "level": "A1",
+  "teil": 2,
+  "teil_name": "Anzeigen zuordnen",
+  "topic": "Freizeit und Hobby",
+  "topic_id": "008",
+  "metadata": {
+    "generated_at": "2026-03-09T02:30:00+07:00",
+    "version": 1
+  },
+  "anzeigen": [
+    {
+      "id": "AnzeigeA",
+      "title": "Schwimmbad Aqua Fun",
+      "details": {
+        "name": "Schwimmbad Aqua Fun",
+        "address": "Seestraße 20, 13353 Berlin",
+        "hours": "Mo–Fr: 6:00–22:00 Uhr, Sa–So: 8:00–20:00 Uhr",
+        "price": "Erwachsene 5 €, Kinder 3 €, Monatskarte 40 €",
+        "contact": "Tel: 030-6667788",
+        "target_audience": "Alle Altersgruppen",
+        "extra_info": "50-Meter-Becken, Sauna, Warmwasser, Rutsche für Kinder."
+      }
+    },
+    {
+      "id": "AnzeigeB",
+      "title": "Sportverein FC Mitte – Fußball",
+      "details": {
+        "name": "FC Mitte e.V.",
+        "address": "Sportplatz Chausseestraße 100, 10115 Berlin",
+        "hours": "Training: Mi 17:00–19:00 Uhr, So 10:00–12:00 Uhr",
+        "price": "Mitgliedschaft 15 € pro Monat, Kinder 8 €",
+        "contact": "Tel: 030-9990011, fcmitte@email.de",
+        "target_audience": "Kinder und Erwachsene",
+        "extra_info": "Mannschaftssport. Turniere im Sommer. Trikot inklusive. Draußen."
+      }
+    }
+  ],
+  "images": [
+    {
+      "id": "IMG1",
+      "type": "anzeige",
+      "linked_anzeige": "AnzeigeA",
+      "prompt": "Cartoon-style swimming pool poster: 'Schwimmbad Aqua Fun'. Shows pool, water slide, sauna icon, Mo-Fr 6-22, adults 5€, children 3€. Fuxie cartoon, blue water colors, legible font.",
+      "filename": "A1-T2-008_anzeige_a.png",
+      "placement": "anzeige_a",
+      "alt_text": "Werbung für Schwimmbad Aqua Fun",
+      "dimensions": "512x600"
+    },
+    {
+      "id": "IMG2",
+      "type": "anzeige",
+      "linked_anzeige": "AnzeigeB",
+      "prompt": "Cartoon-style football club poster: 'FC Mitte - Fußball'. Shows football, goal, jersey, training Wed+Sun, membership 15€/month, summer tournaments. Fuxie cartoon, green field colors, legible font.",
+      "filename": "A1-T2-008_anzeige_b.png",
+      "placement": "anzeige_b",
+      "alt_text": "Werbung für Sportverein FC Mitte",
+      "dimensions": "512x600"
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q6",
+      "teil": 2,
+      "type": "matching_ab",
+      "situation": "Herr Fischer möchte früh morgens um 6:30 Uhr Sport machen.",
+      "answer": "A",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Schwimmbad Aqua Fun",
+        "reasoning": "Die Situation passt zu Anzeige A, weil die genannten Anforderungen dort erfüllt werden."
+      }
+    },
+    {
+      "id": "Q7",
+      "teil": 2,
+      "type": "matching_ab",
+      "situation": "Tom möchte in einer Mannschaft spielen und am Turnier teilnehmen.",
+      "answer": "B",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Sportverein FC Mitte – Fußball; Mannschaftssport. Turniere im Sommer. Trikot inklusive. Draußen.",
+        "reasoning": "Die Situation passt zu Anzeige B, weil die genannten Anforderungen dort erfüllt werden."
+      }
+    },
+    {
+      "id": "Q8",
+      "teil": 2,
+      "type": "matching_ab",
+      "situation": "Frau Klein möchte nach dem Schwimmen in die Sauna gehen.",
+      "answer": "A",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Schwimmbad Aqua Fun; 50-Meter-Becken, Sauna, Warmwasser, Rutsche für Kinder.",
+        "reasoning": "Die Situation passt zu Anzeige A, weil die genannten Anforderungen dort erfüllt werden."
+      }
+    },
+    {
+      "id": "Q9",
+      "teil": 2,
+      "type": "matching_ab",
+      "situation": "Emma ist 10 Jahre alt und möchte Fußball spielen lernen.",
+      "answer": "B",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Sportverein FC Mitte – Fußball",
+        "reasoning": "Die Situation passt zu Anzeige B, weil die genannten Anforderungen dort erfüllt werden."
+      }
+    },
+    {
+      "id": "Q10",
+      "teil": 2,
+      "type": "matching_ab",
+      "situation": "Es regnet. Frau Weber möchte trotzdem Sport machen.",
+      "answer": "A",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Schwimmbad Aqua Fun",
+        "reasoning": "Die Situation passt zu Anzeige A, weil die genannten Anforderungen dort erfüllt werden."
+      }
+    }
+  ],
+  "scoring": {
+    "total_points": 5,
+    "pass_threshold": 3,
+    "grading": [
+      {
+        "range": [
+          5,
+          5
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          4,
+          4
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          3,
+          3
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          1,
+          2
+        ],
+        "label": "Noch üben!",
+        "emoji": "📝"
+      },
+      {
+        "range": [
+          0,
+          0
+        ],
+        "label": "Mehr Übung nötig",
+        "emoji": "💪"
+      }
+    ]
+  },
+  "qa": {
+    "anzeigen_different_enough": true,
+    "anzeigen_same_category": true,
+    "all_situations_unambiguous": true,
+    "image_text_matches_json": false,
+    "passed": false
+  }
+}

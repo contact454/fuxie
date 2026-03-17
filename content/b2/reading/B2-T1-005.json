@@ -1,0 +1,228 @@
+{
+  "id": "B2-T1-005",
+  "level": "B2",
+  "teil": 1,
+  "teil_name": "Sachtext lesen",
+  "topic": "Umwelt & Nachhaltigkeit",
+  "topic_id": "005",
+  "metadata": {
+    "word_count": 465,
+    "target_grammar": [
+      "Passiv",
+      "Konjunktiv I (indirekte Rede)",
+      "Partizipialstrukturen",
+      "Nominalisierung"
+    ],
+    "target_vocabulary": [
+      "Mikroplastik",
+      "Gewässer",
+      "Verschmutzung",
+      "Ökosystem",
+      "Nahrungskette",
+      "Trinkwasser",
+      "Filtration",
+      "Schadstoff",
+      "Kläranlage",
+      "biologisch abbaubar"
+    ],
+    "generated_at": "2026-03-11T22:19:00+07:00",
+    "version": 1
+  },
+  "article": {
+    "source": "Spektrum der Wissenschaft",
+    "date": "5. Februar 2026",
+    "title": "Mikroplastik in Gewässern: Unsichtbare Gefahr für die Umwelt",
+    "subtitle": "Neue Studien belegen alarmierende Konzentrationen in deutschen Flüssen und Seen",
+    "text": "Winzige Kunststoffpartikel, die mit bloßem Auge kaum zu erkennen sind, entwickeln sich zu einer der größten Umweltherausforderungen unserer Zeit. Eine umfassende Untersuchung des Helmholtz-Zentrums für Umweltforschung hat erstmals die Mikroplastikbelastung aller großen deutschen Fließgewässer systematisch erfasst. Die Ergebnisse sind besorgniserregend: In jedem untersuchten Fluss wurden Mikroplastikpartikel nachgewiesen, wobei der Rhein mit durchschnittlich 892 Partikeln pro Kubikmeter Wasser die höchste Konzentration aufwies.\n\nMikroplastik gelangt über verschiedene Wege in die Umwelt. Ein erheblicher Anteil stammt aus dem Abrieb von Autoreifen, der über den Straßenabfluss in die Kanalisation und von dort in Flüsse gespült wird. Weitere Quellen sind synthetische Textilien, die beim Waschen Mikroförmige Fasern abgeben, sowie Kosmetikprodukte, die bewusst zugesetzte Plastikpartikel enthalten. Schätzungen zufolge gelangen in Deutschland jährlich rund 330.000 Tonnen Mikroplastik in die Umwelt.\n\nDie gesundheitlichen Auswirkungen auf den Menschen sind Gegenstand intensiver Forschung. Dr. Sarah Klein vom Bundesinstitut für Risikobewertung erklärt: „Wir wissen mittlerweile, dass Mikroplastik über die Nahrungskette in den menschlichen Körper gelangt. In einer aktuellen Studie wurden Plastikpartikel im Blut von 77 Prozent der untersuchten Probanden nachgewiesen. Die langfristigen gesundheitlichen Folgen sind jedoch noch nicht ausreichend erforscht.\"\n\nBesonders problematisch ist die Fähigkeit von Mikroplastik, Schadstoffe aus der Umgebung an sich zu binden und zu transportieren. Dadurch können Pestizide, Schwermetalle und andere giftige Substanzen konzentriert in die Nahrungskette eingetragen werden, was das Gesundheitsrisiko erheblich verstärkt.\n\nDie Klärwerke stoßen bei der Filterung von Mikroplastik an ihre Grenzen. Herkömmliche Kläranlagen können zwar etwa 95 Prozent der größeren Partikel zurückhalten, doch die besonders kleinen Partikel unter fünf Mikrometer passieren die Filtrationssysteme nahezu ungehindert. Neue Technologien wie Membranfiltration und ozonbasierte Verfahren versprechen hier Abhilfe, sind jedoch kostspielig und energieintensiv.\n\nAuf politischer Ebene hat die Europäische Union im vergangenen Jahr ein Verbot von bewusst zugesetztem Mikroplastik in Kosmetik- und Reinigungsprodukten beschlossen, das stufenweise bis 2030 in Kraft treten wird. Umweltverbände begrüßen diesen Schritt, kritisieren ihn jedoch als unzureichend, da die Hauptquellen — Reifenabrieb und Textilfasern — von der Regelung nicht erfasst werden.\n\nForscherinnen und Forscher weltweit arbeiten unterdessen an biologisch abbaubaren Kunststoffalternativen, die das Problem langfristig an der Wurzel packen könnten."
+  },
+  "images": [
+    {
+      "id": "IMG1",
+      "type": "scene",
+      "prompt": "Cute cartoon illustration showing a magnifying glass revealing tiny colorful plastic particles in clear river water, with fish and aquatic plants in the background. Fuxie cartoon style, flat illustration, warm pastel colors, no text.",
+      "filename": "B2-T1-005_scene.png",
+      "placement": "header",
+      "alt_text": "Mikroplastik in Gewässern",
+      "dimensions": "768x512"
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q1",
+      "teil": 1,
+      "type": "multiple_choice",
+      "stem": "Was impliziert der Text über Fluss weist die höchste Mikroplastikkonzentration auf?",
+      "options": {
+        "a": "Die Elbe.",
+        "b": "Der Rhein.",
+        "c": "Die Donau."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Der Rhein wies mit 892 Partikeln pro Kubikmeter die höchste Konzentration auf.",
+        "key_evidence": "der Rhein mit durchschnittlich 892 Partikeln pro Kubikmeter",
+        "key_vocabulary": [
+          {
+            "word": "Konzentration",
+            "type": "Nomen",
+            "meaning": "concentration"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q2",
+      "teil": 1,
+      "type": "multiple_choice",
+      "stem": "Wie viel Tonnen Mikroplastik gelangen jährlich in die Umwelt in Deutschland?",
+      "options": {
+        "a": "33.000 Tonnen.",
+        "b": "130.000 Tonnen.",
+        "c": "330.000 Tonnen."
+      },
+      "answer": "c",
+      "points": 1,
+      "explanation": {
+        "de": "Schätzungen zufolge gelangen jährlich rund 330.000 Tonnen Mikroplastik in die Umwelt.",
+        "key_evidence": "330.000 Tonnen Mikroplastik",
+        "key_vocabulary": [
+          {
+            "word": "Schätzung",
+            "type": "Nomen",
+            "meaning": "estimate"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q3",
+      "teil": 1,
+      "type": "multiple_choice",
+      "stem": "Welche Absicht verfolgt der Autor, wenn er Bei wie viel Prozent der Probanden erwähnt?",
+      "options": {
+        "a": "57 Prozent.",
+        "b": "77 Prozent.",
+        "c": "95 Prozent."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Bei 77 Prozent der Probanden wurden Plastikpartikel im Blut nachgewiesen.",
+        "key_evidence": "77 Prozent der untersuchten Probanden",
+        "key_vocabulary": [
+          {
+            "word": "Proband",
+            "type": "Nomen",
+            "meaning": "test subject"
+          }
+        ],
+        "reasoning": "[Inferential] "
+      }
+    },
+    {
+      "id": "Q4",
+      "teil": 1,
+      "type": "multiple_choice",
+      "stem": "Welche Schwäche hat die Argumentation bezüglich viel Prozent der größeren Partikel können Kläranlagen zurückhalten?",
+      "options": {
+        "a": "75 Prozent.",
+        "b": "85 Prozent.",
+        "c": "95 Prozent."
+      },
+      "answer": "c",
+      "points": 1,
+      "explanation": {
+        "de": "Herkömmliche Kläranlagen können etwa 95 Prozent der größeren Partikel zurückhalten.",
+        "key_evidence": "etwa 95 Prozent der größeren Partikel zurückhalten",
+        "key_vocabulary": [
+          {
+            "word": "Kläranlage",
+            "type": "Nomen",
+            "meaning": "wastewater treatment plant"
+          }
+        ],
+        "reasoning": "[Critical] "
+      }
+    },
+    {
+      "id": "Q5",
+      "teil": 1,
+      "type": "multiple_choice",
+      "stem": "Was impliziert der Text über die EU bezüglich Mikroplastik beschlossen?",
+      "options": {
+        "a": "Ein Verbot aller Kunststoffprodukte bis 2030.",
+        "b": "Ein Verbot von bewusst zugesetztem Mikroplastik in Kosmetik und Reinigungsprodukten.",
+        "c": "Eine Steuer auf alle Plastikverpackungen."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Die EU hat ein Verbot von bewusst zugesetztem Mikroplastik in Kosmetik- und Reinigungsprodukten beschlossen.",
+        "key_evidence": "Verbot von bewusst zugesetztem Mikroplastik in Kosmetik- und Reinigungsprodukten",
+        "key_vocabulary": [
+          {
+            "word": "stufenweise",
+            "type": "Adverb",
+            "meaning": "gradually / step by step"
+          }
+        ],
+        "reasoning": "[Inferential] "
+      }
+    }
+  ],
+  "scoring": {
+    "total_points": 5,
+    "pass_threshold": 3,
+    "grading": [
+      {
+        "range": [
+          5,
+          5
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          4,
+          4
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          3,
+          3
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          1,
+          2
+        ],
+        "label": "Noch üben!",
+        "emoji": "📝"
+      },
+      {
+        "range": [
+          0,
+          0
+        ],
+        "label": "Mehr Übung nötig",
+        "emoji": "💪"
+      }
+    ]
+  },
+  "qa": {
+    "vocab_in_b2_list": true,
+    "grammar_b2_appropriate": true,
+    "word_count_in_range": true,
+    "all_answers_verifiable": true,
+    "image_count": 1,
+    "passed": true
+  }
+}

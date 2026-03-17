@@ -1,0 +1,51 @@
+{
+  "id": "W-A2-T2-007",
+  "cefrLevel": "A2",
+  "teil": 2,
+  "teilName": "Persoenliche Mitteilung",
+  "textType": "Mitteilung",
+  "register": "halbformell",
+  "topic": "Haustier",
+  "instruction": "Schreiben Sie eine kurze Mitteilung (ca. 40-60 Woerter).",
+  "instructionVi": "Viet tin nhan: Haustier.",
+  "situation": "Sie fahren weg. Bitten Sie Nachbarin auf Katze aufzupassen.",
+  "contentPoints": [
+    "bitten auf Katze aufzupassen",
+    "Fuetterungsplan erklaeren",
+    "Notfallkontakt geben"
+  ],
+  "minWords": 40,
+  "maxWords": 70,
+  "timeMinutes": 15,
+  "rubric": {
+    "criteria": [
+      {
+        "id": "inhalt",
+        "name": "Inhalt",
+        "nameVi": "Noi dung",
+        "maxScore": 5,
+        "weight": 30
+      },
+      {
+        "id": "korrektheit",
+        "name": "Korrektheit",
+        "nameVi": "Chinh xac",
+        "maxScore": 5,
+        "weight": 35
+      },
+      {
+        "id": "angemessenheit",
+        "name": "Kommunikative Angemessenheit",
+        "nameVi": "Phu hop giao tiep",
+        "maxScore": 5,
+        "weight": 35
+      }
+    ],
+    "maxScore": 15
+  },
+  "maxScore": 15,
+  "sourceText": "Deine Nachbarin Frau Müller aus der Goethestraße 12 fährt vom 15. bis 20. August in den Urlaub. Sie bittet dich, auf ihren Hund Bello aufzupassen. Bello muss täglich Tabletten gegen seine Allergie nehmen und darf nicht mit anderen Hunden spielen. Kannst du helfen?",
+  "sourceTextType": "E-Mail einer Nachbarin",
+  "stimulusSender": "Frau Müller",
+  "grafikData": []
+}

@@ -1,0 +1,226 @@
+{
+  "id": "B2-T2-001",
+  "level": "B2",
+  "teil": 2,
+  "teil_name": "Meinungsäußerung lesen",
+  "topic": "Wissenschaft & Forschung",
+  "topic_id": "001",
+  "metadata": {
+    "word_count": 266,
+    "target_grammar": [
+      "Konjunktiv II",
+      "Passiv",
+      "Nominalisierung",
+      "erweiterte Adjektivattribute"
+    ],
+    "target_vocabulary": [
+      "Tierversuch",
+      "Alternativmethode",
+      "Organoid",
+      "In-vitro",
+      "Toxikologie",
+      "Grundlagenforschung",
+      "Übertragbarkeit",
+      "Versuchstier",
+      "ethisch",
+      "Ausstieg"
+    ],
+    "generated_at": "2026-03-11T22:31:29.476828",
+    "version": 1
+  },
+  "essay": {
+    "title": "Sollten Tierversuche in der Forschung verboten werden?",
+    "author": "Gastbeitrag",
+    "text": "Die Frage, ob Tierversuche in der wissenschaftlichen Forschung verboten werden sollten, wird seit Jahrzehnten kontrovers diskutiert. Auf der einen Seite stehen Tierschutzorganisationen, die auf das immense Leid der Versuchstiere hinweisen und die Entwicklung tierfreier Alternativmethoden fordern. Auf der anderen Seite betonen Wissenschaftler, dass viele medizinische Durchbrüche ohne Tierversuche nicht möglich gewesen wären.\n\nIn Deutschland werden jährlich rund 1,9 Millionen Tiere in Versuchen eingesetzt, wobei Mäuse und Ratten den weitaus größten Anteil ausmachen. Trotz des gesetzlich verankerten Prinzips, Tierversuche nur dann durchzuführen, wenn keine Alternativen verfügbar sind, steigt die Anzahl der Versuche in einigen Bereichen sogar an. Besonders in der Grundlagenforschung und der Toxikologie gelten Tiermodelle nach wie vor als unverzichtbar.\n\nBefürworter eines Verbots argumentieren, dass die rasante Entwicklung von Organoiden, Computermodellen und In-vitro-Verfahren viele Tierversuche überflüssig gemacht habe. Studien zeigen zudem, dass die Übertragbarkeit von Tierversuchsergebnissen auf den Menschen oft begrenzt ist. Etwa 95 Prozent der Medikamente, die im Tierversuch vielversprechend erscheinen, scheitern in klinischen Studien am Menschen.\n\nGegen ein generelles Verbot spricht jedoch, dass bestimmte biologische Zusammenhänge, etwa die Wechselwirkung zwischen Organsystemen, mit den derzeit verfügbaren Alternativmethoden nicht vollständig abgebildet werden können. Ohne Tierversuche wären wegweisende Entwicklungen wie Insulin, Impfstoffe und Antibiotika nicht möglich gewesen.\n\nMeiner Ansicht nach liegt die Lösung in einem differenzierten Ansatz. Ein sofortiges vollständiges Verbot wäre angesichts des aktuellen Stands der Alternativmethoden unverantwortlich, da es die medizinische Forschung in wichtigen Bereichen zum Stillstand bringen könnte. Gleichzeitig halte ich es für dringend notwendig, die Entwicklung von Alternativmethoden massiv zu fördern und verbindliche Fristen für den Ausstieg aus bestimmten Versuchskategorien festzulegen. Nur so kann das langfristige Ziel einer tierversuchsfreien Forschung realistisch erreicht werden."
+  },
+  "images": [
+    {
+      "id": "IMG1",
+      "type": "scene",
+      "prompt": "Cute cartoon illustration of a laboratory scene with scientists looking at computer simulations and 3D organ models on screens, with a small mouse watching from outside through a window. Fuxie cartoon style, flat illustration, warm pastel colors, no text.",
+      "filename": "B2-T2-001_scene.png",
+      "placement": "header",
+      "alt_text": "Sollten Tierversuche in der Forschung verboten wer",
+      "dimensions": "768x512"
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q1",
+      "teil": 2,
+      "type": "multiple_choice",
+      "stem": "Was impliziert der Text über viele Tiere werden in Deutschland jährlich in Versuchen eingesetzt?",
+      "options": {
+        "a": "500.000.",
+        "b": "1,9 Millionen.",
+        "c": "3 Millionen."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "rund 1,9 Millionen Tiere",
+        "key_evidence": "rund 1,9 Millionen Tiere",
+        "key_vocabulary": [
+          {
+            "word": "Tierversuch",
+            "type": "Nomen",
+            "meaning": ""
+          }
+        ],
+        "reasoning": "[Inferential] "
+      }
+    },
+    {
+      "id": "Q2",
+      "teil": 2,
+      "type": "multiple_choice",
+      "stem": "Was könnte man dem Autor bezüglich hoch ist die Durchfallquote von Medikamenten, die im Tierversuch vielversprechend waren entgegenhalten?",
+      "options": {
+        "a": "75 Prozent.",
+        "b": "85 Prozent.",
+        "c": "95 Prozent."
+      },
+      "answer": "c",
+      "points": 1,
+      "explanation": {
+        "de": "95 Prozent der Medikamente scheitern",
+        "key_evidence": "95 Prozent der Medikamente scheitern",
+        "key_vocabulary": [
+          {
+            "word": "Alternativmethode",
+            "type": "Nomen",
+            "meaning": ""
+          }
+        ],
+        "reasoning": "[Critical] "
+      }
+    },
+    {
+      "id": "Q3",
+      "teil": 2,
+      "type": "multiple_choice",
+      "stem": "Welche alternativen Methoden werden im Text genannt?",
+      "options": {
+        "a": "Roboter und KI.",
+        "b": "Organoide, Computermodelle und In-vitro-Verfahren.",
+        "c": "Virtuelle Realität."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Organoiden, Computermodellen und In-vitro-Verfahren",
+        "key_evidence": "Organoiden, Computermodellen und In-vitro-Verfahren",
+        "key_vocabulary": [
+          {
+            "word": "Organoid",
+            "type": "Nomen",
+            "meaning": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q4",
+      "teil": 2,
+      "type": "multiple_choice",
+      "stem": "Was lässt sich aus den Angaben über Warum sind Tierversuche laut dem Text schließen?",
+      "options": {
+        "a": "Weil sie billiger sind.",
+        "b": "Weil Wechselwirkungen zwischen Organsystemen nicht anders abgebildet werden können.",
+        "c": "Weil es gesetzlich vorgeschrieben ist."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Wechselwirkung zwischen Organsystemen",
+        "key_evidence": "Wechselwirkung zwischen Organsystemen",
+        "key_vocabulary": [
+          {
+            "word": "In-vitro",
+            "type": "Nomen",
+            "meaning": ""
+          }
+        ],
+        "reasoning": "[Inferential] "
+      }
+    },
+    {
+      "id": "Q5",
+      "teil": 2,
+      "type": "multiple_choice",
+      "stem": "Welche Position vertritt der Autor?",
+      "options": {
+        "a": "Ein sofortiges vollständiges Verbot.",
+        "b": "Einen differenzierten Ansatz mit gezielter Förderung von Alternativen.",
+        "c": "Keine Veränderung der aktuellen Situation."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "differenzierten Ansatz",
+        "key_evidence": "differenzierten Ansatz",
+        "key_vocabulary": [
+          {
+            "word": "Toxikologie",
+            "type": "Nomen",
+            "meaning": ""
+          }
+        ]
+      }
+    }
+  ],
+  "scoring": {
+    "total_points": 5,
+    "pass_threshold": 3,
+    "grading": [
+      {
+        "range": [
+          5,
+          5
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          4,
+          4
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          3,
+          3
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          1,
+          2
+        ],
+        "label": "Noch üben!",
+        "emoji": "📝"
+      },
+      {
+        "range": [
+          0,
+          0
+        ],
+        "label": "Mehr Übung nötig",
+        "emoji": "💪"
+      }
+    ]
+  },
+  "qa": {
+    "vocab_in_b2_list": true,
+    "grammar_b2_appropriate": true,
+    "word_count_in_range": true,
+    "all_answers_verifiable": true,
+    "image_count": 1,
+    "passed": true
+  }
+}

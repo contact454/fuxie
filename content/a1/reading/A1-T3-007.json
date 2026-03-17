@@ -1,0 +1,276 @@
+{
+  "id": "A1-T3-007",
+  "level": "A1",
+  "teil": 3,
+  "teil_name": "Schilder und Aushänge",
+  "topic": "Unterwegs",
+  "topic_id": "007",
+  "metadata": {
+    "generated_at": "2026-03-09T02:45:00+07:00",
+    "version": 1
+  },
+  "schilder": [
+    {
+      "id": "Schild1",
+      "type": "Information",
+      "text": "Gleis 3: Regionalexpress nach München. Abfahrt 11:35 Uhr. Bitte einsteigen!",
+      "icon": "🚂"
+    },
+    {
+      "id": "Schild2",
+      "type": "Information",
+      "text": "Bushaltestelle Linie 8. Richtung Hauptbahnhof. Nächster Bus in 5 Minuten.",
+      "icon": "🚌"
+    },
+    {
+      "id": "Schild3",
+      "type": "Warnung",
+      "text": "Taxistand: Bitte in der Reihe warten. Nicht vor anderen Gästen einsteigen.",
+      "icon": "🚕"
+    },
+    {
+      "id": "Schild4",
+      "type": "Regel",
+      "text": "Parkverbot! Hier dürfen keine Autos parken. Abschleppzone von 7 bis 19 Uhr.",
+      "icon": "🚫"
+    },
+    {
+      "id": "Schild5",
+      "type": "Warnung",
+      "text": "Achtung Baustelle! Fußgänger bitte die andere Straßenseite benutzen.",
+      "icon": "🚧"
+    }
+  ],
+  "images": [
+    {
+      "id": "IMG1",
+      "type": "schild",
+      "linked_schild": "Schild1",
+      "prompt": "Cartoon train platform sign: 'Gleis 3 - RE nach München, Abfahrt 11:35.' Blue/white DB-style sign. Fuxie cartoon.",
+      "filename": "A1-T3-007_schild_1.png",
+      "placement": "schild_1",
+      "alt_text": "Gleisanzeige Zug nach München",
+      "dimensions": "400x300"
+    },
+    {
+      "id": "IMG2",
+      "type": "schild",
+      "linked_schild": "Schild2",
+      "prompt": "Cartoon bus stop sign: 'Linie 8, Richtung Hauptbahnhof. Nächster Bus in 5 Min.' Green/yellow transit sign. Fuxie cartoon.",
+      "filename": "A1-T3-007_schild_2.png",
+      "placement": "schild_2",
+      "alt_text": "Bushaltestelle-Schild",
+      "dimensions": "400x300"
+    },
+    {
+      "id": "IMG3",
+      "type": "schild",
+      "linked_schild": "Schild3",
+      "prompt": "Cartoon taxi stand sign: 'Taxistand - Bitte in der Reihe warten.' Yellow/black taxi sign. Fuxie cartoon.",
+      "filename": "A1-T3-007_schild_3.png",
+      "placement": "schild_3",
+      "alt_text": "Taxistand-Schild",
+      "dimensions": "400x300"
+    },
+    {
+      "id": "IMG4",
+      "type": "schild",
+      "linked_schild": "Schild4",
+      "prompt": "Cartoon no parking sign: 'Parkverbot! Abschleppzone 7-19 Uhr.' Red/white prohibition sign. Fuxie cartoon.",
+      "filename": "A1-T3-007_schild_4.png",
+      "placement": "schild_4",
+      "alt_text": "Parkverbot-Schild",
+      "dimensions": "400x300"
+    },
+    {
+      "id": "IMG5",
+      "type": "schild",
+      "linked_schild": "Schild5",
+      "prompt": "Cartoon construction warning sign: 'Achtung Baustelle! Fußgänger andere Seite.' Orange/black construction sign. Fuxie cartoon.",
+      "filename": "A1-T3-007_schild_5.png",
+      "placement": "schild_5",
+      "alt_text": "Baustelle-Warnschild",
+      "dimensions": "400x300"
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q11",
+      "teil": 3,
+      "linked_schild": "Schild1",
+      "type": "richtig_falsch",
+      "statement": "Der Zug nach München fährt von Gleis 5.",
+      "answer": "falsch",
+      "points": 1,
+      "explanation": {
+        "de": "Auf dem Schild steht: 'Gleis 3.' Der Zug fährt von Gleis 3, nicht Gleis 5.",
+        "key_evidence": "Gleis 3",
+        "key_vocabulary": [
+          {
+            "word": "Gleis",
+            "type": "Nomen",
+            "meaning": "platform"
+          },
+          {
+            "word": "Abfahrt",
+            "type": "Nomen",
+            "meaning": "departure"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q12",
+      "teil": 3,
+      "linked_schild": "Schild2",
+      "type": "richtig_falsch",
+      "statement": "Der nächste Bus kommt in 5 Minuten.",
+      "answer": "richtig",
+      "points": 1,
+      "explanation": {
+        "de": "Auf dem Schild steht: 'Nächster Bus in 5 Minuten.'",
+        "key_evidence": "Nächster Bus in 5 Minuten",
+        "key_vocabulary": [
+          {
+            "word": "nächster",
+            "type": "Adjektiv",
+            "meaning": "next"
+          },
+          {
+            "word": "Minute",
+            "type": "Nomen",
+            "meaning": "minute"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q13",
+      "teil": 3,
+      "linked_schild": "Schild3",
+      "type": "richtig_falsch",
+      "statement": "Am Taxistand kann man sofort einsteigen.",
+      "answer": "falsch",
+      "points": 1,
+      "explanation": {
+        "de": "Auf dem Schild steht: 'Bitte in der Reihe warten. Nicht vor anderen Gästen einsteigen.' Man muss warten.",
+        "key_evidence": "Bitte in der Reihe warten",
+        "key_vocabulary": [
+          {
+            "word": "Reihe",
+            "type": "Nomen",
+            "meaning": "queue/line"
+          },
+          {
+            "word": "warten",
+            "type": "Verb",
+            "meaning": "to wait"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q14",
+      "teil": 3,
+      "linked_schild": "Schild4",
+      "type": "richtig_falsch",
+      "statement": "Hier darf man sein Auto abstellen.",
+      "answer": "falsch",
+      "points": 1,
+      "explanation": {
+        "de": "Auf dem Schild steht: 'Parkverbot! Hier dürfen keine Autos parken.'",
+        "key_evidence": "Parkverbot! Hier dürfen keine Autos parken",
+        "key_vocabulary": [
+          {
+            "word": "Parkverbot",
+            "type": "Nomen",
+            "meaning": "no parking"
+          },
+          {
+            "word": "parken",
+            "type": "Verb",
+            "meaning": "to park"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q15",
+      "teil": 3,
+      "linked_schild": "Schild5",
+      "type": "richtig_falsch",
+      "statement": "Fußgänger müssen die andere Straßenseite nehmen.",
+      "answer": "richtig",
+      "points": 1,
+      "explanation": {
+        "de": "Auf dem Schild steht: 'Fußgänger bitte die andere Straßenseite benutzen.'",
+        "key_evidence": "Fußgänger bitte die andere Straßenseite benutzen",
+        "key_vocabulary": [
+          {
+            "word": "Fußgänger",
+            "type": "Nomen",
+            "meaning": "pedestrian"
+          },
+          {
+            "word": "Baustelle",
+            "type": "Nomen",
+            "meaning": "construction site"
+          }
+        ]
+      }
+    }
+  ],
+  "scoring": {
+    "total_points": 5,
+    "pass_threshold": 3,
+    "grading": [
+      {
+        "range": [
+          5,
+          5
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          4,
+          4
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          3,
+          3
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          1,
+          2
+        ],
+        "label": "Noch üben!",
+        "emoji": "📝"
+      },
+      {
+        "range": [
+          0,
+          0
+        ],
+        "label": "Mehr Übung nötig",
+        "emoji": "💪"
+      }
+    ]
+  },
+  "qa": {
+    "all_signs_different_types": true,
+    "word_count_per_sign_valid": true,
+    "image_text_matches_sign": false,
+    "all_answers_verifiable": true,
+    "passed": false
+  }
+}

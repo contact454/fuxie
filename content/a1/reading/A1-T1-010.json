@@ -1,0 +1,239 @@
+{
+  "id": "A1-T1-010",
+  "level": "A1",
+  "teil": 1,
+  "teil_name": "Kurze Texte lesen",
+  "topic": "Feste und Feiertage",
+  "topic_id": "010",
+  "metadata": {
+    "word_count_text_a": 46,
+    "word_count_text_b": 47,
+    "target_grammar": [
+      "Präsens",
+      "Akkusativ",
+      "Imperativ"
+    ],
+    "target_vocabulary": [
+      "Weihnachten",
+      "Silvester",
+      "Party",
+      "Feuerwerk",
+      "Geschenk",
+      "feiern",
+      "einladen",
+      "Fest",
+      "Musik",
+      "tanzen"
+    ],
+    "generated_at": "2026-03-09T02:15:00+07:00",
+    "version": 1
+  },
+  "texts": [
+    {
+      "id": "TextA",
+      "type": "einladung",
+      "sender": "Familie Weber",
+      "receiver": "Nachbarn",
+      "content": "Liebe Nachbarn,\nwir machen eine Silvesterparty! Die Party ist am 31. Dezember bei uns im Garten. Wir beginnen um 20 Uhr. Es gibt Essen, Musik und um Mitternacht Feuerwerk. Bitte bringen Sie Getränke mit. Kinder sind herzlich willkommen! Sagen Sie bitte bis Freitag Bescheid.\nFamilie Weber"
+    },
+    {
+      "id": "TextB",
+      "type": "sms",
+      "sender": "Frau Schulz",
+      "receiver": "Familie Weber",
+      "content": "Liebe Frau Weber, vielen Dank für die Einladung! Wir kommen gern. Mein Mann und ich bringen Salat und Saft mit. Unsere Tochter Emma kommt auch. Sie ist 8 Jahre alt. Gibt es ein Programm für Kinder? Wir freuen uns sehr auf die Party! Herzliche Grüße, Frau Schulz"
+    }
+  ],
+  "images": [
+    {
+      "id": "IMG1",
+      "type": "scene",
+      "prompt": "Cute cartoon illustration of a New Year's Eve garden party with fireworks in the night sky, fairy lights, a family celebration with food table and happy neighbors. Fuxie cartoon style, flat illustration, warm festive colors, no text.",
+      "filename": "A1-T1-010_scene.png",
+      "placement": "header",
+      "alt_text": "Silvesterparty im Garten mit Feuerwerk",
+      "dimensions": "768x512"
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q1",
+      "teil": 1,
+      "linked_text": "TextA",
+      "type": "richtig_falsch",
+      "statement": "Die Party ist an Weihnachten.",
+      "answer": "falsch",
+      "points": 1,
+      "explanation": {
+        "de": "Im Text steht: 'Die Party ist am 31. Dezember.' Das ist Silvester, nicht Weihnachten (25. Dezember).",
+        "key_evidence": "am 31. Dezember",
+        "key_vocabulary": [
+          {
+            "word": "Silvester",
+            "type": "Nomen",
+            "meaning": "New Year's Eve"
+          },
+          {
+            "word": "Weihnachten",
+            "type": "Nomen",
+            "meaning": "Christmas"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q2",
+      "teil": 1,
+      "linked_text": "TextA",
+      "type": "richtig_falsch",
+      "statement": "Die Party beginnt um 20 Uhr.",
+      "answer": "richtig",
+      "points": 1,
+      "explanation": {
+        "de": "Im Text steht: 'Wir beginnen um 20 Uhr.'",
+        "key_evidence": "Wir beginnen um 20 Uhr",
+        "key_vocabulary": [
+          {
+            "word": "beginnen",
+            "type": "Verb",
+            "meaning": "to begin"
+          },
+          {
+            "word": "Uhr",
+            "type": "Nomen",
+            "meaning": "o'clock"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q3",
+      "teil": 1,
+      "linked_text": "TextA",
+      "type": "richtig_falsch",
+      "statement": "Die Gäste sollen Essen mitbringen.",
+      "answer": "falsch",
+      "points": 1,
+      "explanation": {
+        "de": "Im Text steht: 'Bitte bringen Sie Getränke mit.' Die Gäste sollen Getränke mitbringen, nicht Essen. Essen gibt es schon.",
+        "key_evidence": "Bitte bringen Sie Getränke mit",
+        "key_vocabulary": [
+          {
+            "word": "Getränke",
+            "type": "Nomen",
+            "meaning": "drinks"
+          },
+          {
+            "word": "Essen",
+            "type": "Nomen",
+            "meaning": "food"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q4",
+      "teil": 1,
+      "linked_text": "TextB",
+      "type": "richtig_falsch",
+      "statement": "Frau Schulz bringt Salat und Saft mit.",
+      "answer": "richtig",
+      "points": 1,
+      "explanation": {
+        "de": "Im Text steht: 'Mein Mann und ich bringen Salat und Saft mit.'",
+        "key_evidence": "bringen Salat und Saft mit",
+        "key_vocabulary": [
+          {
+            "word": "Salat",
+            "type": "Nomen",
+            "meaning": "salad"
+          },
+          {
+            "word": "Saft",
+            "type": "Nomen",
+            "meaning": "juice"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q5",
+      "teil": 1,
+      "linked_text": "TextB",
+      "type": "richtig_falsch",
+      "statement": "Emma ist zehn Jahre alt.",
+      "answer": "falsch",
+      "points": 1,
+      "explanation": {
+        "de": "Im Text steht: 'Sie ist 8 Jahre alt.' Emma ist 8 Jahre alt, nicht 10.",
+        "key_evidence": "Sie ist 8 Jahre alt",
+        "key_vocabulary": [
+          {
+            "word": "Jahre",
+            "type": "Nomen",
+            "meaning": "years"
+          },
+          {
+            "word": "alt",
+            "type": "Adjektiv",
+            "meaning": "old"
+          }
+        ]
+      }
+    }
+  ],
+  "scoring": {
+    "total_points": 5,
+    "pass_threshold": 3,
+    "grading": [
+      {
+        "range": [
+          5,
+          5
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          4,
+          4
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          3,
+          3
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          1,
+          2
+        ],
+        "label": "Noch üben!",
+        "emoji": "📝"
+      },
+      {
+        "range": [
+          0,
+          0
+        ],
+        "label": "Mehr Übung nötig",
+        "emoji": "💪"
+      }
+    ]
+  },
+  "qa": {
+    "vocab_in_a1_list": true,
+    "grammar_a1_only": true,
+    "word_count_in_range": true,
+    "all_answers_verifiable": true,
+    "image_count": 1,
+    "passed": false
+  }
+}

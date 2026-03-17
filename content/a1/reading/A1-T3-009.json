@@ -1,0 +1,276 @@
+{
+  "id": "A1-T3-009",
+  "level": "A1",
+  "teil": 3,
+  "teil_name": "Schilder und Aushänge",
+  "topic": "Arbeit und Beruf",
+  "topic_id": "009",
+  "metadata": {
+    "generated_at": "2026-03-09T02:45:00+07:00",
+    "version": 1
+  },
+  "schilder": [
+    {
+      "id": "Schild1",
+      "type": "Öffnungszeiten",
+      "text": "Bürozeiten: Montag bis Freitag 8:00–17:00 Uhr. Am Wochenende geschlossen.",
+      "icon": "🏢"
+    },
+    {
+      "id": "Schild2",
+      "type": "Information",
+      "text": "Besprechungsraum belegt. Nächste freie Zeit: 14:00 Uhr. Bitte nicht stören.",
+      "icon": "🚫"
+    },
+    {
+      "id": "Schild3",
+      "type": "Warnung",
+      "text": "Notausgang! Bitte diesen Weg freihalten. Keine Gegenstände vor der Tür.",
+      "icon": "🚪"
+    },
+    {
+      "id": "Schild4",
+      "type": "Information",
+      "text": "Besucher: Bitte am Empfang anmelden und einen Besucherausweis abholen.",
+      "icon": "🪪"
+    },
+    {
+      "id": "Schild5",
+      "type": "Information",
+      "text": "Kantine: Mittagessen 12–14 Uhr. Freitag: Schnitzel-Tag! Nur 5,90 €.",
+      "icon": "🍽️"
+    }
+  ],
+  "images": [
+    {
+      "id": "IMG1",
+      "type": "schild",
+      "linked_schild": "Schild1",
+      "prompt": "Cartoon office hours sign: 'Bürozeiten Mo-Fr 8-17 Uhr. Wochenende geschlossen.' Professional blue sign. Fuxie cartoon.",
+      "filename": "A1-T3-009_schild_1.png",
+      "placement": "schild_1",
+      "alt_text": "Bürozeiten-Schild",
+      "dimensions": "400x300"
+    },
+    {
+      "id": "IMG2",
+      "type": "schild",
+      "linked_schild": "Schild2",
+      "prompt": "Cartoon meeting room sign: 'Besprechungsraum belegt. Nächste freie Zeit 14 Uhr.' Red busy sign. Fuxie cartoon.",
+      "filename": "A1-T3-009_schild_2.png",
+      "placement": "schild_2",
+      "alt_text": "Besprechungsraum-belegt-Schild",
+      "dimensions": "400x300"
+    },
+    {
+      "id": "IMG3",
+      "type": "schild",
+      "linked_schild": "Schild3",
+      "prompt": "Cartoon emergency exit sign: 'Notausgang! Weg freihalten.' Green/white emergency sign. Fuxie cartoon.",
+      "filename": "A1-T3-009_schild_3.png",
+      "placement": "schild_3",
+      "alt_text": "Notausgang-Schild",
+      "dimensions": "400x300"
+    },
+    {
+      "id": "IMG4",
+      "type": "schild",
+      "linked_schild": "Schild4",
+      "prompt": "Cartoon visitor sign: 'Besucher bitte am Empfang anmelden.' Blue/white visitor badge sign. Fuxie cartoon.",
+      "filename": "A1-T3-009_schild_4.png",
+      "placement": "schild_4",
+      "alt_text": "Besucher-Anmeldeschild",
+      "dimensions": "400x300"
+    },
+    {
+      "id": "IMG5",
+      "type": "schild",
+      "linked_schild": "Schild5",
+      "prompt": "Cartoon canteen sign: 'Kantine Mittagessen 12-14 Uhr. Freitag Schnitzel-Tag 5,90€.' Warm orange menu sign. Fuxie cartoon.",
+      "filename": "A1-T3-009_schild_5.png",
+      "placement": "schild_5",
+      "alt_text": "Kantine-Angebotsschild",
+      "dimensions": "400x300"
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q11",
+      "teil": 3,
+      "linked_schild": "Schild1",
+      "type": "richtig_falsch",
+      "statement": "Das Büro ist am Samstag offen.",
+      "answer": "falsch",
+      "points": 1,
+      "explanation": {
+        "de": "Auf dem Schild steht: 'Am Wochenende geschlossen.' Samstag ist Wochenende.",
+        "key_evidence": "Am Wochenende geschlossen",
+        "key_vocabulary": [
+          {
+            "word": "Wochenende",
+            "type": "Nomen",
+            "meaning": "weekend"
+          },
+          {
+            "word": "Büro",
+            "type": "Nomen",
+            "meaning": "office"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q12",
+      "teil": 3,
+      "linked_schild": "Schild2",
+      "type": "richtig_falsch",
+      "statement": "Der Besprechungsraum ist ab 14 Uhr frei.",
+      "answer": "richtig",
+      "points": 1,
+      "explanation": {
+        "de": "Auf dem Schild steht: 'Nächste freie Zeit: 14:00 Uhr.'",
+        "key_evidence": "Nächste freie Zeit: 14:00 Uhr",
+        "key_vocabulary": [
+          {
+            "word": "Besprechungsraum",
+            "type": "Nomen",
+            "meaning": "meeting room"
+          },
+          {
+            "word": "frei",
+            "type": "Adjektiv",
+            "meaning": "free/available"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q13",
+      "teil": 3,
+      "linked_schild": "Schild3",
+      "type": "richtig_falsch",
+      "statement": "Man darf Dinge vor den Notausgang stellen.",
+      "answer": "falsch",
+      "points": 1,
+      "explanation": {
+        "de": "Auf dem Schild steht: 'Keine Gegenstände vor der Tür.' Man darf nichts vor den Notausgang stellen.",
+        "key_evidence": "Keine Gegenstände vor der Tür",
+        "key_vocabulary": [
+          {
+            "word": "Notausgang",
+            "type": "Nomen",
+            "meaning": "emergency exit"
+          },
+          {
+            "word": "freihalten",
+            "type": "Verb",
+            "meaning": "to keep clear"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q14",
+      "teil": 3,
+      "linked_schild": "Schild4",
+      "type": "richtig_falsch",
+      "statement": "Besucher müssen sich am Empfang anmelden.",
+      "answer": "richtig",
+      "points": 1,
+      "explanation": {
+        "de": "Auf dem Schild steht: 'Bitte am Empfang anmelden und einen Besucherausweis abholen.'",
+        "key_evidence": "Bitte am Empfang anmelden",
+        "key_vocabulary": [
+          {
+            "word": "Besucher",
+            "type": "Nomen",
+            "meaning": "visitor"
+          },
+          {
+            "word": "Empfang",
+            "type": "Nomen",
+            "meaning": "reception"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q15",
+      "teil": 3,
+      "linked_schild": "Schild5",
+      "type": "richtig_falsch",
+      "statement": "Am Freitag gibt es Schnitzel für 7,90 €.",
+      "answer": "falsch",
+      "points": 1,
+      "explanation": {
+        "de": "Auf dem Schild steht: 'Nur 5,90 €.' Das Schnitzel kostet 5,90 €, nicht 7,90 €.",
+        "key_evidence": "Nur 5,90 €",
+        "key_vocabulary": [
+          {
+            "word": "Schnitzel",
+            "type": "Nomen",
+            "meaning": "schnitzel"
+          },
+          {
+            "word": "Kantine",
+            "type": "Nomen",
+            "meaning": "canteen"
+          }
+        ]
+      }
+    }
+  ],
+  "scoring": {
+    "total_points": 5,
+    "pass_threshold": 3,
+    "grading": [
+      {
+        "range": [
+          5,
+          5
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          4,
+          4
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          3,
+          3
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          1,
+          2
+        ],
+        "label": "Noch üben!",
+        "emoji": "📝"
+      },
+      {
+        "range": [
+          0,
+          0
+        ],
+        "label": "Mehr Übung nötig",
+        "emoji": "💪"
+      }
+    ]
+  },
+  "qa": {
+    "all_signs_different_types": true,
+    "word_count_per_sign_valid": true,
+    "image_text_matches_sign": false,
+    "all_answers_verifiable": true,
+    "passed": false
+  }
+}

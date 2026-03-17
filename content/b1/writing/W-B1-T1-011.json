@@ -1,0 +1,64 @@
+{
+  "id": "W-B1-T1-011",
+  "cefrLevel": "B1",
+  "teil": 1,
+  "teilName": "Persoenliche E-Mail",
+  "textType": "E-Mail",
+  "register": "informell",
+  "topic": "Fitnessstudio-Vertrag",
+  "instruction": "Sie haben eine E-Mail von Ihrem Freund Lukas erhalten. Antworten Sie ihm und gehen Sie dabei auf alle vier Punkte der Aufgabenstellung ein.",
+  "instructionVi": "Bạn nhận được một email từ người bạn tên Lukas. Hãy trả lời anh ấy và đề cập đến tất cả 4 ý chính trong phần yêu cầu.",
+  "situation": "Ihr Freund Lukas möchte fitter werden und hat Sie gefragt, ob Sie gemeinsam einen Vertrag in einem Fitnessstudio unterschreiben wollen. Sie haben sich bereits über verschiedene Studios informiert und antworten ihm nun auf seinen Vorschlag.",
+  "contentPoints": [
+    "Drücken Sie Ihre Freude über den Vorschlag aus.",
+    "Machen Sie einen Vorschlag, welches Fitnessstudio am besten geeignet ist.",
+    "Erklären Sie, warum dieses Studio gut ist (z.B. Preis, Lage oder Geräte).",
+    "Schlagen Sie einen Termin für die Anmeldung und das erste Training vor."
+  ],
+  "sourceText": "Hallo! Wie geht's? Ich habe mir überlegt, dass wir endlich etwas für unsere Gesundheit tun sollten. Ich habe ein tolles Angebot vom Studio 'FitLife' gesehen: Wenn wir uns zu zweit anmelden, sparen wir 20% bei der monatlichen Gebühr. Hast du Lust? Welches Studio findest du eigentlich am besten und wann hätten wir Zeit zum Trainieren? Sag mir bitte bald Bescheid. Viele Grüße, Lukas",
+  "sourceTextType": "E-Mail",
+  "minWords": 80,
+  "maxWords": 120,
+  "timeMinutes": 20,
+  "rubric": {
+    "criteria": [
+      {
+        "id": "inhalt",
+        "name": "Inhalt",
+        "nameVi": "Nội dung",
+        "maxScore": 5,
+        "weight": 25
+      },
+      {
+        "id": "angemessenheit",
+        "name": "Kommunikative Angemessenheit",
+        "nameVi": "Phù hợp giao tiếp",
+        "maxScore": 5,
+        "weight": 20
+      },
+      {
+        "id": "korrektheit",
+        "name": "Korrektheit",
+        "nameVi": "Chính xác ngữ pháp & chính tả",
+        "maxScore": 5,
+        "weight": 25
+      },
+      {
+        "id": "spektrum",
+        "name": "Wortschatz & Strukturen",
+        "nameVi": "Đa dạng từ vựng & cấu trúc",
+        "maxScore": 5,
+        "weight": 15
+      },
+      {
+        "id": "kohaerenz",
+        "name": "Kohaerenz & Kohaesion",
+        "nameVi": "Mạch lạc & liên kết",
+        "maxScore": 5,
+        "weight": 15
+      }
+    ],
+    "maxScore": 25
+  },
+  "maxScore": 25
+}

@@ -1,0 +1,51 @@
+{
+  "id": "W-A2-T1-008",
+  "cefrLevel": "A2",
+  "teil": 1,
+  "teilName": "E-Mail-Antwort",
+  "textType": "E-Mail",
+  "register": "informell",
+  "topic": "Schule",
+  "instruction": "Schreiben Sie eine Antwort-E-Mail (ca. 40-60 Woerter). Schreiben Sie zu allen drei Punkten.",
+  "instructionVi": "Tra loi email: Schule.",
+  "situation": "Ihre Bekannte fragt nach einer guten Schule fuer ihre Tochter.",
+  "contentPoints": [
+    "Schule empfehlen",
+    "Erfahrung teilen",
+    "Vor- und Nachteile nennen"
+  ],
+  "minWords": 40,
+  "maxWords": 70,
+  "timeMinutes": 15,
+  "rubric": {
+    "criteria": [
+      {
+        "id": "inhalt",
+        "name": "Inhalt",
+        "nameVi": "Noi dung",
+        "maxScore": 5,
+        "weight": 30
+      },
+      {
+        "id": "korrektheit",
+        "name": "Korrektheit",
+        "nameVi": "Chinh xac",
+        "maxScore": 5,
+        "weight": 35
+      },
+      {
+        "id": "angemessenheit",
+        "name": "Kommunikative Angemessenheit",
+        "nameVi": "Phu hop giao tiep",
+        "maxScore": 5,
+        "weight": 35
+      }
+    ],
+    "maxScore": 15
+  },
+  "maxScore": 15,
+  "sourceText": "Hallo! Wie geht es dir? Ich suche gerade eine neue Schule für meinen Bruder. Kannst du mir deine Schule empfehlen? Wie sind deine Erfahrungen dort? Was findest du gut und was sind die Nachteile? Es wäre toll, wenn du mir bald antwortest. Ich freue mich auf deine Nachricht! Viele Grüße, Lukas",
+  "sourceTextType": "Email",
+  "stimulusSender": "Lukas",
+  "grafikData": []
+}

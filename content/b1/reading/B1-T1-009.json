@@ -1,0 +1,200 @@
+{
+  "id": "B1-T1-009",
+  "level": "B1",
+  "teil": 1,
+  "teil_name": "Blog-Eintrag lesen",
+  "topic": "Einkaufen & Konsum",
+  "topic_id": "009",
+  "metadata": {
+    "word_count": 261,
+    "target_grammar": [
+      "Nebensatz mit seitdem/weil/dass",
+      "Konjunktiv II",
+      "Perfekt"
+    ],
+    "target_vocabulary": [
+      "Second-Hand",
+      "Kleidung",
+      "Nachhaltigkeit",
+      "Konsum",
+      "Qualität",
+      "Schnäppchen",
+      "Flohmarkt",
+      "Mode",
+      "wegwerfen",
+      "Trend"
+    ],
+    "generated_at": "2026-03-10T22:52:00+07:00",
+    "version": 1
+  },
+  "blog": {
+    "title": "Warum ich nur noch Second-Hand kaufe",
+    "author": "NinaVintage",
+    "date": "7. April 2025",
+    "text": "Seit ungefähr einem Jahr kaufe ich meine Kleidung nur noch Second-Hand. Es hat angefangen, als ich gelesen habe, wie viel Wasser und Energie für die Produktion eines einzigen T-Shirts gebraucht wird. Seitdem denke ich über jeden Kauf genauer nach.\n\nAm Anfang war ich skeptisch. Ich dachte, Second-Hand-Kleidung wäre alt und hässlich. Aber das stimmt überhaupt nicht! In den Läden und auf Online-Plattformen findet man tolle Sachen — manchmal sogar Markenkleidung für einen Bruchteil des Originalpreises. Letzten Samstag habe ich zum Beispiel eine fast neue Winterjacke für nur 15 Euro gefunden.\n\nIch gehe jetzt regelmäßig auf Flohmärkte und in Second-Hand-Läden. Das Schöne daran ist, dass jedes Stück einzigartig ist. Man trägt nicht das Gleiche wie alle anderen. Und wenn mir etwas nicht mehr gefällt, bringe ich es zurück in den Laden oder tausche es mit Freunden.\n\nManche Leute sagen, dass sie Kleidung von anderen Leuten eklig finden. Aber alles wird vorher gewaschen und geprüft. Außerdem ist es doch viel schlimmer, dass in der Modeindustrie Millionen Tonnen Kleidung jedes Jahr weggeworfen werden.\n\nIch spare nicht nur Geld, sondern tue auch etwas Gutes für die Umwelt. Natürlich kaufe ich einige Dinge wie Unterwäsche und Sportschuhe noch neu. Aber insgesamt hat sich mein Konsumverhalten komplett verändert. Ich kann es nur empfehlen!"
+  },
+  "images": [
+    {
+      "id": "IMG1",
+      "type": "scene",
+      "prompt": "Cute cartoon illustration of a young woman happily browsing through colorful clothes racks at a vintage/second-hand shop, trying on a hat. Fuxie cartoon style, flat illustration, warm pastel colors, no text.",
+      "filename": "B1-T1-009_scene.png",
+      "placement": "header",
+      "alt_text": "Nina kauft Second-Hand ein",
+      "dimensions": "768x512"
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q1",
+      "teil": 1,
+      "type": "richtig_falsch",
+      "stem": "Der Text impliziert, dass nina kauft seit über zwei Jahren Second-Hand-Kleidung.",
+      "answer": "falsch",
+      "points": 1,
+      "explanation": {
+        "de": "Sie kauft seit ungefähr einem Jahr Second-Hand.",
+        "key_evidence": "Seit ungefähr einem Jahr",
+        "key_vocabulary": [
+          {
+            "word": "Second-Hand",
+            "type": "Adjektiv/Nomen",
+            "meaning": "second-hand"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q2",
+      "teil": 1,
+      "type": "richtig_falsch",
+      "stem": "Nina war am Anfang der Meinung, dass Second-Hand-Kleidung nicht schön ist.",
+      "answer": "richtig",
+      "points": 1,
+      "explanation": {
+        "de": "Sie dachte, Second-Hand-Kleidung wäre alt und hässlich.",
+        "key_evidence": "Ich dachte, Second-Hand-Kleidung wäre alt und hässlich",
+        "key_vocabulary": [
+          {
+            "word": "skeptisch",
+            "type": "Adjektiv",
+            "meaning": "skeptical"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q3",
+      "teil": 1,
+      "type": "richtig_falsch",
+      "stem": "Nina findet, dass Second-Hand-Kleidung immer teuer ist.",
+      "answer": "falsch",
+      "points": 1,
+      "explanation": {
+        "de": "Man findet Markenkleidung für einen Bruchteil des Preises — z.B. eine Winterjacke für 15 Euro.",
+        "key_evidence": "eine fast neue Winterjacke für nur 15 Euro",
+        "key_vocabulary": [
+          {
+            "word": "Schnäppchen",
+            "type": "Nomen",
+            "meaning": "bargain"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q4",
+      "teil": 1,
+      "type": "richtig_falsch",
+      "stem": "Nina gefällt an Second-Hand, dass die Kleidungsstücke einzigartig sind.",
+      "answer": "richtig",
+      "points": 1,
+      "explanation": {
+        "de": "Sie findet es schön, dass jedes Stück einzigartig ist.",
+        "key_evidence": "Das Schöne daran ist, dass jedes Stück einzigartig ist",
+        "key_vocabulary": [
+          {
+            "word": "einzigartig",
+            "type": "Adjektiv",
+            "meaning": "unique"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q5",
+      "teil": 1,
+      "type": "richtig_falsch",
+      "stem": "Im Text wird erwähnt, dass nina kauft alle Sachen Second-Hand, auch Unterwäsche.",
+      "answer": "falsch",
+      "points": 1,
+      "explanation": {
+        "de": "Unterwäsche und Sportschuhe kauft sie noch neu.",
+        "key_evidence": "Natürlich kaufe ich einige Dinge wie Unterwäsche und Sportschuhe noch neu",
+        "key_vocabulary": [
+          {
+            "word": "Konsumverhalten",
+            "type": "Nomen",
+            "meaning": "consumer behavior"
+          }
+        ],
+        "reasoning": "[Inferential] "
+      }
+    }
+  ],
+  "scoring": {
+    "total_points": 5,
+    "pass_threshold": 3,
+    "grading": [
+      {
+        "range": [
+          5,
+          5
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          4,
+          4
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          3,
+          3
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          1,
+          2
+        ],
+        "label": "Noch üben!",
+        "emoji": "📝"
+      },
+      {
+        "range": [
+          0,
+          0
+        ],
+        "label": "Mehr Übung nötig",
+        "emoji": "💪"
+      }
+    ]
+  },
+  "qa": {
+    "vocab_in_b1_list": true,
+    "grammar_b1_appropriate": true,
+    "word_count_in_range": true,
+    "all_answers_verifiable": true,
+    "richtig_falsch_balanced": true,
+    "image_count": 1,
+    "passed": true
+  }
+}

@@ -1,0 +1,200 @@
+{
+  "id": "B1-T1-001",
+  "level": "B1",
+  "teil": 1,
+  "teil_name": "Blog-Eintrag lesen",
+  "topic": "Gesundheit & Ernährung",
+  "topic_id": "001",
+  "metadata": {
+    "word_count": 265,
+    "target_grammar": [
+      "Nebensatz mit weil/dass/obwohl",
+      "Konjunktiv II",
+      "Perfekt"
+    ],
+    "target_vocabulary": [
+      "Ernährung",
+      "vegetarisch",
+      "Rezept",
+      "Gewohnheit",
+      "verzichten",
+      "Fleisch",
+      "Zutat",
+      "ausprobieren",
+      "Kalorie",
+      "bewusst"
+    ],
+    "generated_at": "2026-03-10T22:50:00+07:00",
+    "version": 1
+  },
+  "blog": {
+    "title": "Mein Weg zu gesunder Ernährung",
+    "author": "JuliaK_Berlin",
+    "date": "15. Februar 2026",
+    "text": "Letztes Jahr habe ich beschlossen, meine Ernährung komplett zu ändern. Ich habe nämlich gemerkt, dass ich mich oft müde und schlapp gefühlt habe, obwohl ich genug geschlafen habe. Eine Freundin hat mir dann erzählt, dass sie seit einem Jahr vegetarisch isst und sich viel besser fühlt.\n\nAm Anfang dachte ich, dass es sehr schwer wäre, auf Fleisch zu verzichten. Ich habe immer gern Würstchen und Schnitzel gegessen! Aber dann habe ich angefangen, neue Rezepte auszuprobieren, und war überrascht, wie lecker vegetarisches Essen sein kann. Besonders indische und thailändische Gerichte mit viel Gemüse und Gewürzen schmecken mir jetzt sehr gut.\n\nNach drei Monaten habe ich gemerkt, dass sich vieles verändert hat. Ich habe mehr Energie, schlafe besser und bin seltener krank. Außerdem habe ich gelernt, bewusster einzukaufen. Ich gehe jetzt öfter auf den Wochenmarkt, weil das Gemüse dort frischer ist als im Supermarkt.\n\nNatürlich esse ich nicht perfekt. Manchmal vermisse ich einen guten Burger, und ab und zu esse ich auch mal Fisch. Aber insgesamt bin ich sehr zufrieden mit meiner Entscheidung. Ich würde jedem empfehlen, es wenigstens einen Monat lang auszuprobieren.\n\nHabt ihr ähnliche Erfahrungen gemacht? Schreibt mir gern in die Kommentare!"
+  },
+  "images": [
+    {
+      "id": "IMG1",
+      "type": "scene",
+      "prompt": "Cute cartoon illustration of a young woman in a modern kitchen happily cooking with lots of colorful vegetables — peppers, tomatoes, broccoli. A recipe book is open on the counter. Fuxie cartoon style, flat illustration, warm pastel colors, no text.",
+      "filename": "B1-T1-001_scene.png",
+      "placement": "header",
+      "alt_text": "Julia kocht gesundes Essen",
+      "dimensions": "768x512"
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q1",
+      "teil": 1,
+      "type": "richtig_falsch",
+      "stem": "Die Hauptaussage des Textes ist, dass Der Text sagt, dass julia hat ihre Ernährung geändert, weil sie zu wenig geschlafen hat.",
+      "answer": "falsch",
+      "points": 1,
+      "explanation": {
+        "de": "Julia hat genug geschlafen, aber sich trotzdem müde gefühlt. Der Grund war die Ernährung, nicht der Schlaf.",
+        "key_evidence": "obwohl ich genug geschlafen habe",
+        "key_vocabulary": [
+          {
+            "word": "schlapp",
+            "type": "Adjektiv",
+            "meaning": "sluggish / weak"
+          }
+        ],
+        "reasoning": "[Inferential] "
+      }
+    },
+    {
+      "id": "Q2",
+      "teil": 1,
+      "type": "richtig_falsch",
+      "stem": "Eine Freundin hat Julia auf die Idee gebracht, vegetarisch zu essen.",
+      "answer": "richtig",
+      "points": 1,
+      "explanation": {
+        "de": "Eine Freundin hat erzählt, dass sie seit einem Jahr vegetarisch isst und sich besser fühlt.",
+        "key_evidence": "Eine Freundin hat mir dann erzählt, dass sie seit einem Jahr vegetarisch isst",
+        "key_vocabulary": [
+          {
+            "word": "vegetarisch",
+            "type": "Adjektiv",
+            "meaning": "vegetarian"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q3",
+      "teil": 1,
+      "type": "richtig_falsch",
+      "stem": "Julia fand es von Anfang an leicht, auf Fleisch zu verzichten.",
+      "answer": "falsch",
+      "points": 1,
+      "explanation": {
+        "de": "Julia dachte am Anfang, es wäre sehr schwer. Sie hat immer gern Fleisch gegessen.",
+        "key_evidence": "Am Anfang dachte ich, dass es sehr schwer wäre, auf Fleisch zu verzichten",
+        "key_vocabulary": [
+          {
+            "word": "verzichten",
+            "type": "Verb",
+            "meaning": "to give up / do without"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q4",
+      "teil": 1,
+      "type": "richtig_falsch",
+      "stem": "Julia kauft jetzt öfter auf dem Wochenmarkt ein, weil das Gemüse dort frischer ist.",
+      "answer": "richtig",
+      "points": 1,
+      "explanation": {
+        "de": "Sie geht öfter auf den Wochenmarkt, weil das Gemüse dort frischer ist als im Supermarkt.",
+        "key_evidence": "Ich gehe jetzt öfter auf den Wochenmarkt, weil das Gemüse dort frischer ist",
+        "key_vocabulary": [
+          {
+            "word": "Wochenmarkt",
+            "type": "Nomen",
+            "meaning": "weekly market"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q5",
+      "teil": 1,
+      "type": "richtig_falsch",
+      "stem": "Julia isst heute überhaupt kein Fleisch und keinen Fisch mehr.",
+      "answer": "falsch",
+      "points": 1,
+      "explanation": {
+        "de": "Julia isst ab und zu noch Fisch und vermisst manchmal einen Burger.",
+        "key_evidence": "ab und zu esse ich auch mal Fisch",
+        "key_vocabulary": [
+          {
+            "word": "ab und zu",
+            "type": "Adverb",
+            "meaning": "now and then"
+          }
+        ]
+      }
+    }
+  ],
+  "scoring": {
+    "total_points": 5,
+    "pass_threshold": 3,
+    "grading": [
+      {
+        "range": [
+          5,
+          5
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          4,
+          4
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          3,
+          3
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          1,
+          2
+        ],
+        "label": "Noch üben!",
+        "emoji": "📝"
+      },
+      {
+        "range": [
+          0,
+          0
+        ],
+        "label": "Mehr Übung nötig",
+        "emoji": "💪"
+      }
+    ]
+  },
+  "qa": {
+    "vocab_in_b1_list": true,
+    "grammar_b1_appropriate": true,
+    "word_count_in_range": true,
+    "all_answers_verifiable": true,
+    "richtig_falsch_balanced": true,
+    "image_count": 1,
+    "passed": true
+  }
+}

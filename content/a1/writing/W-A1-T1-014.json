@@ -1,0 +1,73 @@
+{
+  "id": "W-A1-T1-014",
+  "cefrLevel": "A1",
+  "teil": 1,
+  "teilName": "Formular ausfuellen",
+  "textType": "Formular",
+  "register": "neutral",
+  "topic": "Malkurs",
+  "instruction": "Ihre Freundin Sarah möchte einen Malkurs besuchen. Lesen Sie die Informationen und füllen Sie das Formular für sie aus.",
+  "instructionVi": "Bạn của bạn, Sarah, muốn tham gia một khóa học vẽ. Hãy đọc thông tin và điền vào biểu mẫu đăng ký giúp cô ấy.",
+  "situation": "Sarah Miller wohnt in der Goethestraße 12, 80331 München. Sie arbeitet als Lehrerin und möchte ab Oktober am Malkurs für Anfänger teilnehmen. Sie bezahlt den Kurs per Banküberweisung.",
+  "contentPoints": [
+    "Name der Person",
+    "Straße und Hausnummer",
+    "Wohnort",
+    "Beruf",
+    "Zahlungsweise"
+  ],
+  "sourceText": "Name: Sarah Miller, Adresse: Goethestraße 12, 80331 München, Beruf: Lehrerin, Kursstart: Oktober, Bezahlung: Überweisung.",
+  "sourceTextType": "Steckbrief",
+  "formFields": [
+    {
+      "label": "Name",
+      "type": "text"
+    },
+    {
+      "label": "Straße/Nr.",
+      "type": "text"
+    },
+    {
+      "label": "PLZ/Ort",
+      "type": "text"
+    },
+    {
+      "label": "Beruf",
+      "type": "text"
+    },
+    {
+      "label": "Bezahlung",
+      "type": "text"
+    }
+  ],
+  "minWords": 15,
+  "maxWords": 30,
+  "timeMinutes": 5,
+  "rubric": {
+    "criteria": [
+      {
+        "id": "inhalt",
+        "name": "Inhalt",
+        "nameVi": "Nội dung",
+        "maxScore": 5,
+        "weight": 30
+      },
+      {
+        "id": "korrektheit",
+        "name": "Korrektheit",
+        "nameVi": "Chính xác ngữ pháp & chính tả",
+        "maxScore": 5,
+        "weight": 40
+      },
+      {
+        "id": "angemessenheit",
+        "name": "Angemessenheit",
+        "nameVi": "Tính phù hợp",
+        "maxScore": 5,
+        "weight": 30
+      }
+    ],
+    "maxScore": 15
+  },
+  "maxScore": 15
+}

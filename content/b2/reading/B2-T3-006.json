@@ -1,0 +1,222 @@
+{
+  "id": "B2-T3-006",
+  "level": "B2",
+  "teil": 3,
+  "teil_name": "Anzeigen zuordnen",
+  "topic": "Bildung & Erziehung",
+  "topic_id": "006",
+  "metadata": {
+    "word_count": 160,
+    "target_grammar": [
+      "Konjunktiv II",
+      "Passiv",
+      "Modalverben",
+      "Relativsätze"
+    ],
+    "target_vocabulary": [],
+    "generated_at": "2026-03-11T22:34:38.583025",
+    "version": 1
+  },
+  "anzeigen": [
+    {
+      "id": "A",
+      "text": "Fernstudium Bildungswissenschaft: Bachelor in 6 Semestern. Flexibles Lernen neben dem Beruf. Monatlich 250 Euro. FernUni Hagen. Einschreibung bis 31. Juli."
+    },
+    {
+      "id": "B",
+      "text": "Cambridge Certificate (C1 Advanced): Vorbereitungskurs 12 Wochen, 2x abends. Prüfungstermin November 2026. Kursgebühr 580 Euro, Prüfungsgebühr 210 Euro. British Council München."
+    },
+    {
+      "id": "C",
+      "text": "Lehrerfortbildung Inklusion: Wie gelingt inklusiver Unterricht? 2-Tages-Seminar mit Praxisbeispielen. Für alle Schulformen. Landesinstitut für Lehrerbildung, Hamburg. Kostenlos für Lehrkräfte."
+    },
+    {
+      "id": "D",
+      "text": "E-Learning-Plattform StudyNet: Über 3.000 Online-Kurse in Wirtschaft, IT und Sprachen. Monatlich 14,90 Euro. 7 Tage kostenlos testen. Zertifikate für den Lebenslauf."
+    },
+    {
+      "id": "E",
+      "text": "Montessori-Diplom: Berufsbegleitende Ausbildung in 18 Monaten. Für Erzieher und Pädagogen. Praxisphase in Montessori-Einrichtungen. 3.800 Euro Gesamtkosten. Start: September 2026."
+    },
+    {
+      "id": "F",
+      "text": "Nachhilfe-Institut Lernfuchs: Einzel- und Gruppenunterricht in allen Fächern. Klasse 5-13. Ab 22 Euro/Stunde. Probestunde kostenlos. 15 Standorte in Berlin."
+    },
+    {
+      "id": "G",
+      "text": "Medienpädagogik-Zertifikat: Kinder und Jugendliche kompetent im Umgang mit digitalen Medien begleiten. Online-Kurs, 6 Module. 320 Euro. Universität Augsburg."
+    },
+    {
+      "id": "H",
+      "text": "Eltern-Kind-Kurs Spielend lernen: Für Kinder von 1-3 Jahren mit einer Bezugsperson. Singen, Basteln, Bewegung. Montags 9:30-11 Uhr. 12 Treffen, 96 Euro. Familienzentrum Sonnenblume."
+    }
+  ],
+  "situationen": [
+    {
+      "id": "S1",
+      "text": "Eine Erzieherin möchte sich in der Montessori-Pädagogik weiterbilden.",
+      "answer": "E"
+    },
+    {
+      "id": "S2",
+      "text": "Ein Berufstätiger möchte flexibel Online-Kurse belegen und Zertifikate erhalten.",
+      "answer": "D"
+    },
+    {
+      "id": "S3",
+      "text": "Eine Grundschullehrerin sucht eine kostenlose Fortbildung zum Thema Inklusion.",
+      "answer": "C"
+    },
+    {
+      "id": "S4",
+      "text": "Eine junge Mutter möchte mit ihrem Kleinkind an einem gemeinsamen Kurs teilnehmen.",
+      "answer": "H"
+    },
+    {
+      "id": "S5",
+      "text": "Jemand möchte berufsbegleitend ein Studium in Bildungswissenschaft beginnen.",
+      "answer": "A"
+    }
+  ],
+  "null_matches": [
+    "B",
+    "F",
+    "G"
+  ],
+  "images": [
+    {
+      "id": "IMG1",
+      "type": "scene",
+      "prompt": "Cute cartoon illustration of a bulletin board with various professional advertisements related to Bildung & Erziehung. Fuxie cartoon style, flat illustration, warm pastel colors, no text.",
+      "filename": "B2-T3-006_scene.png",
+      "placement": "header",
+      "alt_text": "Anzeigen: Bildung & Erziehung",
+      "dimensions": "768x512"
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q1",
+      "teil": 3,
+      "type": "matching",
+      "stem": "Eine Erzieherin möchte sich in der Montessori-Pädagogik weiterbilden.",
+      "answer": "E",
+      "points": 1,
+      "explanation": {
+        "de": "Anzeige E passt, weil sie das beschriebene Bedürfnis erfüllt.",
+        "key_evidence": "Anzeige E",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q2",
+      "teil": 3,
+      "type": "matching",
+      "stem": "Aus der Argumentation lässt sich ableiten, dass Ein Berufstätiger möchte flexibel Online-Kurse belegen und Zertifikate erhalten. Diese Position vertritt:",
+      "answer": "D",
+      "points": 1,
+      "explanation": {
+        "de": "Anzeige D passt, weil sie das beschriebene Bedürfnis erfüllt.",
+        "key_evidence": "Anzeige D",
+        "key_vocabulary": [],
+        "reasoning": "[Inferential] "
+      }
+    },
+    {
+      "id": "Q3",
+      "teil": 3,
+      "type": "matching",
+      "stem": "Aus der Argumentation lässt sich ableiten, dass eine Grundschullehrerin sucht eine kostenlose Fortbildung zum Thema Inklusion. Diese Position vertritt:",
+      "answer": "C",
+      "points": 1,
+      "explanation": {
+        "de": "Anzeige C passt, weil sie das beschriebene Bedürfnis erfüllt.",
+        "key_evidence": "Anzeige C",
+        "key_vocabulary": [],
+        "reasoning": "[Inferential] "
+      }
+    },
+    {
+      "id": "Q4",
+      "teil": 3,
+      "type": "matching",
+      "stem": "Aus der Argumentation lässt sich ableiten, dass eine junge Mutter möchte mit ihrem Kleinkind an einem gemeinsamen Kurs teilnehmen. Diese Position vertritt:",
+      "answer": "H",
+      "points": 1,
+      "explanation": {
+        "de": "Anzeige H passt, weil sie das beschriebene Bedürfnis erfüllt.",
+        "key_evidence": "Anzeige H",
+        "key_vocabulary": [],
+        "reasoning": "[Inferential] "
+      }
+    },
+    {
+      "id": "Q5",
+      "teil": 3,
+      "type": "matching",
+      "stem": "Jemand möchte berufsbegleitend ein Studium in Bildungswissenschaft beginnen.",
+      "answer": "A",
+      "points": 1,
+      "explanation": {
+        "de": "Anzeige A passt, weil sie das beschriebene Bedürfnis erfüllt.",
+        "key_evidence": "Anzeige A",
+        "key_vocabulary": []
+      }
+    }
+  ],
+  "scoring": {
+    "total_points": 5,
+    "pass_threshold": 3,
+    "grading": [
+      {
+        "range": [
+          5,
+          5
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          4,
+          4
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          3,
+          3
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          1,
+          2
+        ],
+        "label": "Noch üben!",
+        "emoji": "📝"
+      },
+      {
+        "range": [
+          0,
+          0
+        ],
+        "label": "Mehr Übung nötig",
+        "emoji": "💪"
+      }
+    ]
+  },
+  "qa": {
+    "vocab_in_b2_list": true,
+    "grammar_b2_appropriate": true,
+    "word_count_in_range": true,
+    "all_answers_verifiable": true,
+    "null_matches_correct": true,
+    "image_count": 1,
+    "passed": true
+  }
+}

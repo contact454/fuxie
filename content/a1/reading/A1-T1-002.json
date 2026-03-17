@@ -1,0 +1,239 @@
+{
+  "id": "A1-T1-002",
+  "level": "A1",
+  "teil": 1,
+  "teil_name": "Kurze Texte lesen",
+  "topic": "Meine Familie",
+  "topic_id": "002",
+  "metadata": {
+    "word_count_text_a": 42,
+    "word_count_text_b": 45,
+    "target_grammar": [
+      "Präsens",
+      "Akkusativ",
+      "Possessivartikel"
+    ],
+    "target_vocabulary": [
+      "Familie",
+      "Bruder",
+      "Schwester",
+      "Eltern",
+      "Geburtstag",
+      "Party",
+      "einladen",
+      "Kuchen",
+      "Geschenk",
+      "kommen"
+    ],
+    "generated_at": "2026-03-09T02:15:00+07:00",
+    "version": 1
+  },
+  "texts": [
+    {
+      "id": "TextA",
+      "type": "einladung",
+      "sender": "Anna",
+      "receiver": "Maria",
+      "content": "Liebe Maria,\nam Samstag habe ich Geburtstag! Ich mache eine Party bei mir zu Hause. Die Party beginnt um 15 Uhr. Meine Schwester Lisa kommt auch. Wir essen Kuchen und spielen Spiele. Kannst du kommen? Bring bitte Musik mit!\nLiebe Grüße,\nAnna"
+    },
+    {
+      "id": "TextB",
+      "type": "sms",
+      "sender": "Maria",
+      "receiver": "Anna",
+      "content": "Hallo Anna! Herzlichen Glückwunsch zum Geburtstag! Ich komme gern zu deiner Party am Samstag. Ich bringe ein Geschenk und Orangensaft mit. Mein Bruder Tom möchte auch kommen. Ist das okay? Er ist sehr nett und lustig. Wir freuen uns sehr! Bis Samstag um 15 Uhr!"
+    }
+  ],
+  "images": [
+    {
+      "id": "IMG1",
+      "type": "scene",
+      "prompt": "Cute cartoon illustration of a birthday party at home with children, balloons, a birthday cake with candles, and wrapped presents. Fuxie cartoon style, flat illustration, warm pastel colors, no text.",
+      "filename": "A1-T1-002_scene.png",
+      "placement": "header",
+      "alt_text": "Geburtstagsparty zu Hause",
+      "dimensions": "768x512"
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q1",
+      "teil": 1,
+      "linked_text": "TextA",
+      "type": "richtig_falsch",
+      "statement": "Anna hat am Sonntag Geburtstag.",
+      "answer": "falsch",
+      "points": 1,
+      "explanation": {
+        "de": "Im Text steht: 'am Samstag habe ich Geburtstag!' Anna hat am Samstag Geburtstag, nicht am Sonntag.",
+        "key_evidence": "am Samstag habe ich Geburtstag",
+        "key_vocabulary": [
+          {
+            "word": "Samstag",
+            "type": "Nomen",
+            "meaning": "Saturday"
+          },
+          {
+            "word": "Geburtstag",
+            "type": "Nomen",
+            "meaning": "birthday"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q2",
+      "teil": 1,
+      "linked_text": "TextA",
+      "type": "richtig_falsch",
+      "statement": "Die Party beginnt um 15 Uhr.",
+      "answer": "richtig",
+      "points": 1,
+      "explanation": {
+        "de": "Im Text steht: 'Die Party beginnt um 15 Uhr.' Das ist genau die gleiche Information.",
+        "key_evidence": "Die Party beginnt um 15 Uhr",
+        "key_vocabulary": [
+          {
+            "word": "beginnen",
+            "type": "Verb",
+            "meaning": "to begin"
+          },
+          {
+            "word": "Uhr",
+            "type": "Nomen",
+            "meaning": "o'clock"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q3",
+      "teil": 1,
+      "linked_text": "TextA",
+      "type": "richtig_falsch",
+      "statement": "Anna möchte Essen mitbringen.",
+      "answer": "falsch",
+      "points": 1,
+      "explanation": {
+        "de": "Im Text steht: 'Bring bitte Musik mit!' Anna bittet Maria, Musik mitzubringen, nicht Essen.",
+        "key_evidence": "Bring bitte Musik mit",
+        "key_vocabulary": [
+          {
+            "word": "mitbringen",
+            "type": "Verb",
+            "meaning": "to bring along"
+          },
+          {
+            "word": "Musik",
+            "type": "Nomen",
+            "meaning": "music"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q4",
+      "teil": 1,
+      "linked_text": "TextB",
+      "type": "richtig_falsch",
+      "statement": "Maria bringt ein Geschenk mit.",
+      "answer": "richtig",
+      "points": 1,
+      "explanation": {
+        "de": "Im Text steht: 'Ich bringe ein Geschenk und Orangensaft mit.' Maria bringt ein Geschenk mit.",
+        "key_evidence": "Ich bringe ein Geschenk und Orangensaft mit",
+        "key_vocabulary": [
+          {
+            "word": "Geschenk",
+            "type": "Nomen",
+            "meaning": "gift"
+          },
+          {
+            "word": "Orangensaft",
+            "type": "Nomen",
+            "meaning": "orange juice"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q5",
+      "teil": 1,
+      "linked_text": "TextB",
+      "type": "richtig_falsch",
+      "statement": "Marias Schwester möchte auch zur Party kommen.",
+      "answer": "falsch",
+      "points": 1,
+      "explanation": {
+        "de": "Im Text steht: 'Mein Bruder Tom möchte auch kommen.' Es ist Marias Bruder, nicht ihre Schwester.",
+        "key_evidence": "Mein Bruder Tom möchte auch kommen",
+        "key_vocabulary": [
+          {
+            "word": "Bruder",
+            "type": "Nomen",
+            "meaning": "brother"
+          },
+          {
+            "word": "Schwester",
+            "type": "Nomen",
+            "meaning": "sister"
+          }
+        ]
+      }
+    }
+  ],
+  "scoring": {
+    "total_points": 5,
+    "pass_threshold": 3,
+    "grading": [
+      {
+        "range": [
+          5,
+          5
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          4,
+          4
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          3,
+          3
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          1,
+          2
+        ],
+        "label": "Noch üben!",
+        "emoji": "📝"
+      },
+      {
+        "range": [
+          0,
+          0
+        ],
+        "label": "Mehr Übung nötig",
+        "emoji": "💪"
+      }
+    ]
+  },
+  "qa": {
+    "vocab_in_a1_list": true,
+    "grammar_a1_only": true,
+    "word_count_in_range": true,
+    "all_answers_verifiable": true,
+    "image_count": 1,
+    "passed": false
+  }
+}

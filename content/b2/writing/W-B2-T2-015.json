@@ -1,0 +1,64 @@
+{
+  "id": "W-B2-T2-015",
+  "cefrLevel": "B2",
+  "teil": 2,
+  "teilName": "Nachricht/E-Mail",
+  "textType": "E-Mail",
+  "register": "formell",
+  "topic": "Restaurantbeschwerde",
+  "instruction": "Sie haben gestern Abend mit Geschäftspartnern im Restaurant „Zum Goldenen Hirsch“ gegessen. Leider waren Sie mit der Qualität der Speisen und dem Service überhaupt nicht zufrieden. Schreiben Sie eine formelle E-Mail an die Geschäftsleitung, um sich zu beschweren.",
+  "instructionVi": "Viết email trang trọng gửi ban quản lý nhà hàng để khiếu nại về chất lượng món ăn và dịch vụ không tốt trong buổi tiếp đãi đối tác tối qua.",
+  "situation": "Sie hatten extra einen Tisch für eine wichtige Geschäftsbesprechung reserviert, da Ihnen erstklassiger Service versprochen wurde. Vor Ort kam es jedoch zu erheblichen Verzögerungen, das Essen entsprach nicht der Beschreibung und das Personal reagierte unprofessionell auf Ihre Hinweise.",
+  "contentPoints": [
+    "Nennen Sie den Grund für Ihr Schreiben und beziehen Sie sich auf die Reservierung.",
+    "Beschreiben Sie detailliert die Mängel beim Service und die Qualität des Essens.",
+    "Erläutern Sie, warum dieser Vorfall für Sie und Ihre Geschäftspartner besonders unangenehm war.",
+    "Formulieren Sie eine klare Erwartung bezüglich einer Entschädigung oder einer Stellungnahme."
+  ],
+  "sourceText": "Sehr geehrte Damen und Herren, wir freuen uns sehr auf Ihren geplanten Besuch im Restaurant 'Zum Goldenen Hirsch'. Ihre Reservierung für 4 Personen am 15. Oktober um 19:00 Uhr wurde erfolgreich bestätigt. Wir garantieren Ihnen einen ruhigen Tisch in unserer VIP-Lounge für Ihre Geschäftsbesprechung sowie einen erstklassigen Service durch unser Fachpersonal. Unser Küchenchef empfiehlt Ihnen besonders das frische Rinderfilet als Tagesspezialität. Mit freundlichen Grüßen, Ihr Restaurant-Team.",
+  "sourceTextType": "Bestätigungs-E-Mail des Restaurants",
+  "minWords": 100,
+  "maxWords": 150,
+  "timeMinutes": 25,
+  "rubric": {
+    "criteria": [
+      {
+        "id": "inhalt",
+        "name": "Inhalt",
+        "nameVi": "Nội dung",
+        "maxScore": 5,
+        "weight": 25
+      },
+      {
+        "id": "angemessenheit",
+        "name": "Kommunikative Angemessenheit",
+        "nameVi": "Phù hợp giao tiếp",
+        "maxScore": 5,
+        "weight": 20
+      },
+      {
+        "id": "korrektheit",
+        "name": "Korrektheit",
+        "nameVi": "Chính xác ngữ pháp & chính tả",
+        "maxScore": 5,
+        "weight": 25
+      },
+      {
+        "id": "spektrum",
+        "name": "Wortschatz & Strukturen",
+        "nameVi": "Đa dạng từ vựng & cấu trúc",
+        "maxScore": 5,
+        "weight": 15
+      },
+      {
+        "id": "kohaerenz",
+        "name": "Kohaerenz & Kohaesion",
+        "nameVi": "Mạch lạc & liên kết",
+        "maxScore": 5,
+        "weight": 15
+      }
+    ],
+    "maxScore": 25
+  },
+  "maxScore": 25
+}

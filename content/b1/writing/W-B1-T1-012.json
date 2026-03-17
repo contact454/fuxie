@@ -1,0 +1,63 @@
+{
+  "id": "W-B1-T1-012",
+  "cefrLevel": "B1",
+  "teil": 1,
+  "teilName": "Persoenliche E-Mail",
+  "textType": "E-Mail",
+  "register": "informell",
+  "topic": "Konzertticket-Reklamation",
+  "instruction": "Sie haben mit Ihrem Freund Lukas Tickets für ein Konzert gekauft. Es gibt jedoch Probleme mit der Lieferung der Tickets. Lukas hat Ihnen eine E-Mail geschrieben. Antworten Sie ihm.",
+  "instructionVi": "Bạn đã mua vé xem hòa nhạc cùng với người bạn tên Lukas. Tuy nhiên, có vấn đề với việc giao vé. Lukas đã viết cho bạn một email. Hãy trả lời anh ấy.",
+  "situation": "Sie und Lukas wollten am kommenden Wochenende ein Konzert besuchen. Die Tickets wurden online bestellt und bezahlt, sind aber nach zwei Wochen immer noch nicht angekommen. Sie müssen nun reagieren und Lukas antworten.",
+  "contentPoints": [
+    "Schreiben Sie, dass Sie Ihre Tickets ebenfalls noch nicht erhalten haben.",
+    "Machen Sie einen Vorschlag, wie Sie beim Veranstalter reklamieren (z. B. anrufen oder eine E-Mail schreiben).",
+    "Schlagen Sie eine andere Aktivität vor, falls das mit dem Konzert nicht klappt."
+  ],
+  "sourceText": "Hallo! Hast du schon etwas vom Konzertveranstalter gehört? Ich warte immer noch auf meine Tickets per Post, aber das Konzert ist schon in drei Tagen. Ich mache mir langsam Sorgen, dass etwas schiefgelaufen ist. Hast du deine Tickets schon bekommen oder weißt du mehr? Was sollen wir jetzt machen? Schreib mir bitte schnell! Bis bald, Lukas",
+  "sourceTextType": "E-Mail von einem Freund",
+  "minWords": 80,
+  "maxWords": 120,
+  "timeMinutes": 20,
+  "rubric": {
+    "criteria": [
+      {
+        "id": "inhalt",
+        "name": "Inhalt",
+        "nameVi": "Nội dung",
+        "maxScore": 5,
+        "weight": 25
+      },
+      {
+        "id": "angemessenheit",
+        "name": "Kommunikative Angemessenheit",
+        "nameVi": "Phù hợp giao tiếp",
+        "maxScore": 5,
+        "weight": 20
+      },
+      {
+        "id": "korrektheit",
+        "name": "Korrektheit",
+        "nameVi": "Chính xác ngữ pháp & chính tả",
+        "maxScore": 5,
+        "weight": 25
+      },
+      {
+        "id": "spektrum",
+        "name": "Wortschatz & Strukturen",
+        "nameVi": "Đa dạng từ vựng & cấu trúc",
+        "maxScore": 5,
+        "weight": 15
+      },
+      {
+        "id": "kohaerenz",
+        "name": "Kohaerenz & Kohaesion",
+        "nameVi": "Mạch lạc & liên kết",
+        "maxScore": 5,
+        "weight": 15
+      }
+    ],
+    "maxScore": 25
+  },
+  "maxScore": 25
+}

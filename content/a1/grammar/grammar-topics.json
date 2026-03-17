@@ -1,0 +1,864 @@
+{
+    "topics": [
+        {
+            "slug": "a1-g01-alphabet-aussprache",
+            "title": "Das Alphabet und Aussprache",
+            "titleDe": "Das Alphabet und die Aussprache",
+            "description": "Bảng chữ cái tiếng Đức, phát âm Umlaute (ä, ö, ü), ß, và các quy tắc phát âm cơ bản.",
+            "cefrLevel": "A1",
+            "sortOrder": 1,
+            "rules": [
+                {
+                    "title": "Das deutsche Alphabet",
+                    "titleDe": "Das deutsche Alphabet",
+                    "ruleText": "26 chữ cái cơ bản + 4 ký tự đặc biệt: Ä/ä, Ö/ö, Ü/ü, ß. Danh từ luôn viết hoa chữ cái đầu.",
+                    "examples": [
+                        "A, B, C, D... = giống tiếng Anh nhưng phát âm khác",
+                        "Ä = ae sound (Bär, Äpfel)",
+                        "Ö = oe sound (schön, Köln)",
+                        "Ü = ue sound (über, Tür)",
+                        "ß = ss sound (Straße, heißen)"
+                    ],
+                    "sortOrder": 1
+                },
+                {
+                    "title": "Quy tắc phát âm cơ bản",
+                    "ruleText": "W phát âm /v/ (wie, wir). V phát âm /f/ (Vater) nhưng đôi khi /v/ (Verb). Z phát âm /ts/ (Zug, zehn). Ch phát âm /ç/ sau e, i hoặc /x/ sau a, o, u. Sch phát âm /ʃ/ (Schule). Sp-, St- ở đầu từ phát âm /ʃp/, /ʃt/.",
+                    "examples": [
+                        "W: Wasser /ˈvasɐ/",
+                        "Z: Zug /tsuːk/",
+                        "Sch: Schule /ˈʃuːlə/",
+                        "Ch: ich /ɪç/, auch /aʊx/",
+                        "Sp: sprechen /ˈʃpʁɛçən/"
+                    ],
+                    "sortOrder": 2
+                }
+            ],
+            "formula": null,
+            "mnemonicTip": "W = V, V = F, Z = TS — nghĩ ngược lại so với tiếng Anh!"
+        },
+        {
+            "slug": "a1-g02-personalpronomen-sein-haben",
+            "title": "Đại từ nhân xưng, sein & haben",
+            "titleDe": "Personalpronomen, sein und haben",
+            "description": "6 ngôi đại từ nhân xưng và cách chia 2 động từ quan trọng nhất: sein (to be) và haben (to have).",
+            "cefrLevel": "A1",
+            "sortOrder": 2,
+            "rules": [
+                {
+                    "title": "Personalpronomen",
+                    "ruleText": "ich (tôi), du (bạn), er (anh ấy), sie (cô ấy), es (nó), wir (chúng tôi), ihr (các bạn), sie (họ), Sie (anh/chị — lịch sự).",
+                    "examples": [
+                        "Ich bin Student.",
+                        "Du bist nett.",
+                        "Er kommt aus Berlin.",
+                        "Wir lernen Deutsch.",
+                        "Sie kommen aus Vietnam."
+                    ],
+                    "tableData": {
+                        "columns": [
+                            "Pronomen",
+                            "Deutsch",
+                            "Việt",
+                            "English"
+                        ],
+                        "rows": [
+                            [
+                                "ich",
+                                "ich",
+                                "tôi",
+                                "I"
+                            ],
+                            [
+                                "du",
+                                "du",
+                                "bạn",
+                                "you (informal)"
+                            ],
+                            [
+                                "er",
+                                "er",
+                                "anh ấy",
+                                "he"
+                            ],
+                            [
+                                "sie",
+                                "sie",
+                                "cô ấy",
+                                "she"
+                            ],
+                            [
+                                "es",
+                                "es",
+                                "nó",
+                                "it"
+                            ],
+                            [
+                                "wir",
+                                "wir",
+                                "chúng tôi",
+                                "we"
+                            ],
+                            [
+                                "ihr",
+                                "ihr",
+                                "các bạn",
+                                "you (pl.)"
+                            ],
+                            [
+                                "sie",
+                                "sie",
+                                "họ",
+                                "they"
+                            ],
+                            [
+                                "Sie",
+                                "Sie",
+                                "anh/chị",
+                                "you (formal)"
+                            ]
+                        ]
+                    },
+                    "sortOrder": 1
+                },
+                {
+                    "title": "Das Verb 'sein'",
+                    "ruleText": "sein = to be. Rất bất quy tắc, phải học thuộc.",
+                    "examples": [
+                        "Ich bin Lehrer.",
+                        "Du bist müde.",
+                        "Er ist groß.",
+                        "Wir sind Studenten.",
+                        "Sie sind nett."
+                    ],
+                    "tableData": {
+                        "columns": [
+                            "Pronomen",
+                            "sein"
+                        ],
+                        "rows": [
+                            [
+                                "ich",
+                                "bin"
+                            ],
+                            [
+                                "du",
+                                "bist"
+                            ],
+                            [
+                                "er/sie/es",
+                                "ist"
+                            ],
+                            [
+                                "wir",
+                                "sind"
+                            ],
+                            [
+                                "ihr",
+                                "seid"
+                            ],
+                            [
+                                "sie/Sie",
+                                "sind"
+                            ]
+                        ]
+                    },
+                    "sortOrder": 2
+                },
+                {
+                    "title": "Das Verb 'haben'",
+                    "ruleText": "haben = to have. Bất quy tắc: du hast, er/sie/es hat.",
+                    "examples": [
+                        "Ich habe eine Frage.",
+                        "Du hast Kinder.",
+                        "Er hat ein Auto.",
+                        "Wir haben Zeit.",
+                        "Haben Sie einen Stift?"
+                    ],
+                    "tableData": {
+                        "columns": [
+                            "Pronomen",
+                            "haben"
+                        ],
+                        "rows": [
+                            [
+                                "ich",
+                                "habe"
+                            ],
+                            [
+                                "du",
+                                "hast"
+                            ],
+                            [
+                                "er/sie/es",
+                                "hat"
+                            ],
+                            [
+                                "wir",
+                                "haben"
+                            ],
+                            [
+                                "ihr",
+                                "habt"
+                            ],
+                            [
+                                "sie/Sie",
+                                "haben"
+                            ]
+                        ]
+                    },
+                    "sortOrder": 3
+                }
+            ],
+            "formula": "sein: bin/bist/ist/sind/seid/sind | haben: habe/hast/hat/haben/habt/haben",
+            "mnemonicTip": "sein: Bist du es? Wir sind! | haben: HAst du? er HAt."
+        },
+        {
+            "slug": "a1-g03-regelmaessige-verben",
+            "title": "Chia động từ quy tắc (Präsens)",
+            "titleDe": "Regelmäßige Verben im Präsens",
+            "description": "Cách chia động từ quy tắc ở thì hiện tại: bỏ -en, thêm đuôi -e, -st, -t, -en, -t, -en.",
+            "cefrLevel": "A1",
+            "sortOrder": 3,
+            "rules": [
+                {
+                    "title": "Endungen der regelmäßigen Verben",
+                    "ruleText": "Lấy gốc từ (bỏ -en), thêm đuôi: ich -e, du -st, er/sie/es -t, wir -en, ihr -t, sie/Sie -en.",
+                    "examples": [
+                        "lernen → ich lerne, du lernst, er lernt, wir lernen, ihr lernt, sie lernen",
+                        "wohnen → ich wohne, du wohnst, er wohnt",
+                        "spielen → ich spiele, du spielst, er spielt",
+                        "kaufen → ich kaufe, du kaufst, er kauft"
+                    ],
+                    "tableData": {
+                        "columns": [
+                            "Pronomen",
+                            "Endung",
+                            "lernen",
+                            "wohnen"
+                        ],
+                        "rows": [
+                            [
+                                "ich",
+                                "-e",
+                                "lerne",
+                                "wohne"
+                            ],
+                            [
+                                "du",
+                                "-st",
+                                "lernst",
+                                "wohnst"
+                            ],
+                            [
+                                "er/sie/es",
+                                "-t",
+                                "lernt",
+                                "wohnt"
+                            ],
+                            [
+                                "wir",
+                                "-en",
+                                "lernen",
+                                "wohnen"
+                            ],
+                            [
+                                "ihr",
+                                "-t",
+                                "lernt",
+                                "wohnt"
+                            ],
+                            [
+                                "sie/Sie",
+                                "-en",
+                                "lernen",
+                                "wohnen"
+                            ]
+                        ]
+                    },
+                    "sortOrder": 1
+                },
+                {
+                    "title": "Besonderheiten: -ten, -den, -nen",
+                    "ruleText": "Nếu gốc từ kết thúc bằng -t, -d, -n (trước đó là phụ âm): thêm -e- trước đuôi ở du, er, ihr.",
+                    "examples": [
+                        "arbeiten → du arbeitest, er arbeitet, ihr arbeitet",
+                        "finden → du findest, er findet",
+                        "öffnen → du öffnest, er öffnet"
+                    ],
+                    "sortOrder": 2
+                }
+            ],
+            "formula": "Stamm + e/st/t/en/t/en (đuôi -t, -d: thêm -e-)",
+            "mnemonicTip": "e-ST-T-en-T-en: 'Essen Sie Tee? Tanzen einfach nett!' (e-st-t-en-t-en)"
+        },
+        {
+            "slug": "a1-g04-satzbau-fragen",
+            "title": "Trật tự từ và câu hỏi",
+            "titleDe": "Satzbau und Fragen",
+            "description": "Vị trí thứ 2 của động từ (V2), câu hỏi W-Fragen và Ja/Nein-Fragen.",
+            "cefrLevel": "A1",
+            "sortOrder": 4,
+            "rules": [
+                {
+                    "title": "Verb auf Position 2",
+                    "ruleText": "Trong câu trần thuật, động từ LUÔN ở vị trí thứ 2.",
+                    "examples": [
+                        "Ich lerne Deutsch.",
+                        "Heute lerne ich Deutsch. (Heute = vị trí 1, lerne = vị trí 2)",
+                        "Am Montag gehe ich ins Kino."
+                    ],
+                    "sortOrder": 1
+                },
+                {
+                    "title": "W-Fragen",
+                    "ruleText": "Câu hỏi bắt đầu bằng từ hỏi (W-Wort): Wer, Was, Wo, Woher, Wohin, Wann, Wie, Warum, Wie viel. Rồi đến động từ (V2).",
+                    "examples": [
+                        "Wo wohnst du?",
+                        "Was machst du?",
+                        "Wann kommst du?",
+                        "Wie heißen Sie?",
+                        "Woher kommen Sie?"
+                    ],
+                    "sortOrder": 2
+                },
+                {
+                    "title": "Ja/Nein-Fragen",
+                    "ruleText": "Câu hỏi có/không: Động từ ở vị trí 1.",
+                    "examples": [
+                        "Bist du müde?",
+                        "Hast du Kinder?",
+                        "Sprechen Sie Deutsch?",
+                        "Lernst du Deutsch?"
+                    ],
+                    "sortOrder": 3
+                }
+            ],
+            "formula": "Aussage: S-V(2)-O | W-Frage: W-V-S-O | Ja/Nein: V(1)-S-O?",
+            "mnemonicTip": "Động từ luôn ở VỊ TRÍ 2 — đó là quy tắc vàng!"
+        },
+        {
+            "slug": "a1-g05-artikel",
+            "title": "Mạo từ xác định & bất định",
+            "titleDe": "Bestimmter und unbestimmter Artikel",
+            "description": "der/die/das (xác định), ein/eine/ein (bất định) trong Nominativ.",
+            "cefrLevel": "A1",
+            "sortOrder": 5,
+            "rules": [
+                {
+                    "title": "Bestimmter Artikel",
+                    "ruleText": "der (Maskulin), die (Feminin), das (Neutrum), die (Plural). Phải học thuộc mạo từ cùng với danh từ.",
+                    "examples": [
+                        "der Tisch (bàn)",
+                        "die Lampe (đèn)",
+                        "das Buch (sách)",
+                        "die Bücher (những cuốn sách)"
+                    ],
+                    "tableData": {
+                        "columns": [
+                            "Genus",
+                            "Artikel",
+                            "Beispiel"
+                        ],
+                        "rows": [
+                            [
+                                "Maskulin",
+                                "der",
+                                "der Mann"
+                            ],
+                            [
+                                "Feminin",
+                                "die",
+                                "die Frau"
+                            ],
+                            [
+                                "Neutrum",
+                                "das",
+                                "das Kind"
+                            ],
+                            [
+                                "Plural",
+                                "die",
+                                "die Kinder"
+                            ]
+                        ]
+                    },
+                    "sortOrder": 1
+                },
+                {
+                    "title": "Unbestimmter Artikel",
+                    "ruleText": "ein (Maskulin), eine (Feminin), ein (Neutrum). Không có dạng Plural → dùng kein- hoặc không mạo từ.",
+                    "examples": [
+                        "ein Tisch",
+                        "eine Lampe",
+                        "ein Buch",
+                        "Ich habe Bücher. (Plural — không mạo từ)"
+                    ],
+                    "tableData": {
+                        "columns": [
+                            "Genus",
+                            "bestimmt",
+                            "unbestimmt"
+                        ],
+                        "rows": [
+                            [
+                                "Maskulin",
+                                "der",
+                                "ein"
+                            ],
+                            [
+                                "Feminin",
+                                "die",
+                                "eine"
+                            ],
+                            [
+                                "Neutrum",
+                                "das",
+                                "ein"
+                            ],
+                            [
+                                "Plural",
+                                "die",
+                                "— (Ø)"
+                            ]
+                        ]
+                    },
+                    "sortOrder": 2
+                }
+            ],
+            "formula": "M: der/ein | F: die/eine | N: das/ein | Pl: die/—",
+            "mnemonicTip": "Der Mann, die Frau, das Kind — MFK = 'Mein Freund kommt!'"
+        },
+        {
+            "slug": "a1-g06-verneinung",
+            "title": "Phủ định: nicht & kein",
+            "titleDe": "Verneinung: nicht und kein",
+            "description": "nicht để phủ định tính từ/trạng từ/động từ, kein để phủ định danh từ.",
+            "cefrLevel": "A1",
+            "sortOrder": 6,
+            "rules": [
+                {
+                    "title": "nicht",
+                    "ruleText": "Dùng nicht để phủ định: (1) động từ, (2) tính từ, (3) trạng từ, (4) giới từ. Vị trí: cuối câu hoặc trước phần bị phủ định.",
+                    "examples": [
+                        "Ich komme nicht.",
+                        "Er ist nicht müde.",
+                        "Das ist nicht richtig.",
+                        "Ich wohne nicht in Berlin."
+                    ],
+                    "sortOrder": 1
+                },
+                {
+                    "title": "kein/keine",
+                    "ruleText": "Dùng kein/keine để phủ định danh từ có ein/eine hoặc không mạo từ. kein chia giống ein.",
+                    "examples": [
+                        "Ich habe kein Auto. (← ein Auto)",
+                        "Ich habe keine Kinder. (← Kinder)",
+                        "Das ist kein Problem. (← ein Problem)",
+                        "Ich trinke keinen Kaffee. (Akk.)"
+                    ],
+                    "tableData": {
+                        "columns": [
+                            "Genus",
+                            "ein → kein"
+                        ],
+                        "rows": [
+                            [
+                                "Maskulin (Nom.)",
+                                "ein → kein"
+                            ],
+                            [
+                                "Feminin (Nom.)",
+                                "eine → keine"
+                            ],
+                            [
+                                "Neutrum (Nom.)",
+                                "ein → kein"
+                            ],
+                            [
+                                "Plural",
+                                "— → keine"
+                            ]
+                        ]
+                    },
+                    "sortOrder": 2
+                }
+            ],
+            "formula": "nicht + Verb/Adj/Adv | kein + Nomen (thay ein/eine)",
+            "mnemonicTip": "ein Auto → KEIN Auto | er IST → er ist NICHT"
+        },
+        {
+            "slug": "a1-g07-nomen-genus-plural",
+            "title": "Danh từ: giống, số nhiều, viết hoa",
+            "titleDe": "Nomen: Genus, Plural, Großschreibung",
+            "description": "Quy tắc xác định giống (Gender), 5 dạng số nhiều, và quy tắc viết hoa danh từ.",
+            "cefrLevel": "A1",
+            "sortOrder": 7,
+            "rules": [
+                {
+                    "title": "Genus-Regeln",
+                    "ruleText": "Maskulin: ngày, tháng, mùa, hướng. Feminin: -ung, -heit, -keit, -tion, -ie, -e (nhiều). Neutrum: Ge-, -chen, -lein, -ment, -um.",
+                    "examples": [
+                        "der Montag, der Januar, der Sommer (M: thời gian)",
+                        "die Wohnung, die Gesundheit, die Information (F: -ung/-heit/-tion)",
+                        "das Mädchen, das Dokument (N: -chen/-ment)"
+                    ],
+                    "sortOrder": 1
+                },
+                {
+                    "title": "Pluralformen",
+                    "ruleText": "5 dạng: (1) -e (Tisch→Tische), (2) -er (Kind→Kinder), (3) -en/-n (Frau→Frauen), (4) -s (Auto→Autos), (5) - (Lehrer→Lehrer). Nhiều từ có Umlaut.",
+                    "examples": [
+                        "die Tische (-e)",
+                        "die Kinder (-er)",
+                        "die Frauen (-en)",
+                        "die Autos (-s)",
+                        "die Lehrer (-)"
+                    ],
+                    "sortOrder": 2
+                },
+                {
+                    "title": "Großschreibung",
+                    "ruleText": "Danh từ tiếng Đức LUÔN viết hoa chữ cái đầu. Đây là quy tắc bắt buộc.",
+                    "examples": [
+                        "der Tisch (đúng) ≠ der tisch (sai)",
+                        "die Schule, das Buch, der Computer"
+                    ],
+                    "sortOrder": 3
+                }
+            ],
+            "formula": null,
+            "mnemonicTip": "Danh từ viết HOA — không như tiếng Anh!"
+        },
+        {
+            "slug": "a1-g08-unregelmaessige-verben",
+            "title": "Động từ bất quy tắc (Vokalwechsel)",
+            "titleDe": "Unregelmäßige Verben mit Vokalwechsel",
+            "description": "Động từ đổi nguyên âm ở ngôi du và er/sie/es: e→i/ie, a→ä.",
+            "cefrLevel": "A1",
+            "sortOrder": 8,
+            "rules": [
+                {
+                    "title": "e → i",
+                    "ruleText": "Một số động từ đổi e → i ở du và er/sie/es.",
+                    "examples": [
+                        "sprechen → du sprichst, er spricht",
+                        "essen → du isst, er isst",
+                        "nehmen → du nimmst, er nimmt",
+                        "geben → du gibst, er gibt"
+                    ],
+                    "tableData": {
+                        "columns": [
+                            "Infinitiv",
+                            "du",
+                            "er/sie/es"
+                        ],
+                        "rows": [
+                            [
+                                "sprechen",
+                                "sprichst",
+                                "spricht"
+                            ],
+                            [
+                                "essen",
+                                "isst",
+                                "isst"
+                            ],
+                            [
+                                "nehmen",
+                                "nimmst",
+                                "nimmt"
+                            ],
+                            [
+                                "geben",
+                                "gibst",
+                                "gibt"
+                            ]
+                        ]
+                    },
+                    "sortOrder": 1
+                },
+                {
+                    "title": "e → ie",
+                    "ruleText": "Một số động từ đổi e → ie ở du và er/sie/es.",
+                    "examples": [
+                        "lesen → du liest, er liest",
+                        "sehen → du siehst, er sieht"
+                    ],
+                    "sortOrder": 2
+                },
+                {
+                    "title": "a → ä",
+                    "ruleText": "Một số động từ đổi a → ä ở du và er/sie/es.",
+                    "examples": [
+                        "fahren → du fährst, er fährt",
+                        "schlafen → du schläfst, er schläft",
+                        "tragen → du trägst, er trägt"
+                    ],
+                    "sortOrder": 3
+                }
+            ],
+            "formula": "e→i/ie, a→ä (chỉ ở du + er/sie/es)",
+            "mnemonicTip": "e→i: SPRICHst du? Er ISST! | a→ä: FÄHRST du? Er SCHLÄFT!"
+        },
+        {
+            "slug": "a1-g09-modalverben",
+            "title": "Động từ khiếm khuyết (Modalverben)",
+            "titleDe": "Modalverben",
+            "description": "können, müssen, möchten, wollen, dürfen, sollen — chia và cách dùng.",
+            "cefrLevel": "A1",
+            "sortOrder": 9,
+            "rules": [
+                {
+                    "title": "Modalverben und Satzklammer",
+                    "ruleText": "Modalverb chia ở vị trí 2, động từ chính ở cuối câu (infinitiv).",
+                    "examples": [
+                        "Ich kann Deutsch sprechen.",
+                        "Du musst arbeiten.",
+                        "Er möchte einen Kaffee trinken.",
+                        "Wir wollen ins Kino gehen.",
+                        "Darf ich fragen?"
+                    ],
+                    "tableData": {
+                        "columns": [
+                            "Pronomen",
+                            "können",
+                            "müssen",
+                            "möchten",
+                            "wollen",
+                            "dürfen"
+                        ],
+                        "rows": [
+                            [
+                                "ich",
+                                "kann",
+                                "muss",
+                                "möchte",
+                                "will",
+                                "darf"
+                            ],
+                            [
+                                "du",
+                                "kannst",
+                                "musst",
+                                "möchtest",
+                                "willst",
+                                "darfst"
+                            ],
+                            [
+                                "er/sie/es",
+                                "kann",
+                                "muss",
+                                "möchte",
+                                "will",
+                                "darf"
+                            ],
+                            [
+                                "wir",
+                                "können",
+                                "müssen",
+                                "möchten",
+                                "wollen",
+                                "dürfen"
+                            ],
+                            [
+                                "ihr",
+                                "könnt",
+                                "müsst",
+                                "möchtet",
+                                "wollt",
+                                "dürft"
+                            ],
+                            [
+                                "sie/Sie",
+                                "können",
+                                "müssen",
+                                "möchten",
+                                "wollen",
+                                "dürfen"
+                            ]
+                        ]
+                    },
+                    "sortOrder": 1
+                }
+            ],
+            "formula": "Modalverb (V2) + ... + Infinitiv (Ende)",
+            "mnemonicTip": "Satzklammer = cái kẹp: Modalverb ↔ Infinitiv kẹp phần còn lại!"
+        },
+        {
+            "slug": "a1-g10-akkusativ",
+            "title": "Cách Akkusativ",
+            "titleDe": "Der Akkusativ",
+            "description": "Cách 4 (Akkusativ): chỉ thay đổi ở giống đực (der→den, ein→einen, kein→keinen).",
+            "cefrLevel": "A1",
+            "sortOrder": 10,
+            "rules": [
+                {
+                    "title": "Artikel im Akkusativ",
+                    "ruleText": "Chỉ giống ĐỰC thay đổi: der→den, ein→einen, kein→keinen. Feminin, Neutrum, Plural giữ nguyên.",
+                    "examples": [
+                        "Ich sehe den Mann. (M: der→den)",
+                        "Ich habe einen Bruder. (M: ein→einen)",
+                        "Ich trinke die Milch. (F: không đổi)",
+                        "Ich lese das Buch. (N: không đổi)"
+                    ],
+                    "tableData": {
+                        "columns": [
+                            "Genus",
+                            "Nom. best.",
+                            "Akk. best.",
+                            "Nom. unbest.",
+                            "Akk. unbest."
+                        ],
+                        "rows": [
+                            [
+                                "Maskulin",
+                                "der",
+                                "den",
+                                "ein",
+                                "einen"
+                            ],
+                            [
+                                "Feminin",
+                                "die",
+                                "die",
+                                "eine",
+                                "eine"
+                            ],
+                            [
+                                "Neutrum",
+                                "das",
+                                "das",
+                                "ein",
+                                "ein"
+                            ],
+                            [
+                                "Plural",
+                                "die",
+                                "die",
+                                "—",
+                                "—"
+                            ]
+                        ]
+                    },
+                    "sortOrder": 1
+                },
+                {
+                    "title": "Akkusativ-Verben",
+                    "ruleText": "Các động từ thường dùng với Akkusativ: haben, brauchen, kaufen, essen, trinken, sehen, lesen, nehmen, möchten, suchen.",
+                    "examples": [
+                        "Ich habe einen Hund.",
+                        "Ich kaufe einen Tisch.",
+                        "Ich brauche einen Stift.",
+                        "Ich suche eine Wohnung."
+                    ],
+                    "sortOrder": 2
+                }
+            ],
+            "formula": "Nur Maskulin ändert sich: der/ein → den/einen",
+            "mnemonicTip": "Akk = chỉ NAM thay đổi: der → dEN, ein → einEN (thêm -en)"
+        },
+        {
+            "slug": "a1-g11-possessivpronomen",
+            "title": "Đại từ sở hữu",
+            "titleDe": "Possessivpronomen",
+            "description": "mein, dein, sein, ihr, unser, euer, ihr, Ihr — chia theo giống, số, và cách.",
+            "cefrLevel": "A1",
+            "sortOrder": 11,
+            "rules": [
+                {
+                    "title": "Possessivpronomen",
+                    "ruleText": "ich→mein, du→dein, er→sein, sie→ihr, es→sein, wir→unser, ihr→euer, sie→ihr, Sie→Ihr. Chia đuôi giống ein/kein.",
+                    "examples": [
+                        "mein Bruder (M), meine Schwester (F), mein Kind (N)",
+                        "dein Buch, deine Tasche, dein Haus",
+                        "sein Auto, seine Mutter, sein Handy",
+                        "ihr Mann, ihre Kinder"
+                    ],
+                    "tableData": {
+                        "columns": [
+                            "Pronomen",
+                            "Possessiv"
+                        ],
+                        "rows": [
+                            [
+                                "ich",
+                                "mein"
+                            ],
+                            [
+                                "du",
+                                "dein"
+                            ],
+                            [
+                                "er",
+                                "sein"
+                            ],
+                            [
+                                "sie",
+                                "ihr"
+                            ],
+                            [
+                                "es",
+                                "sein"
+                            ],
+                            [
+                                "wir",
+                                "unser"
+                            ],
+                            [
+                                "ihr",
+                                "euer"
+                            ],
+                            [
+                                "sie (Pl.)",
+                                "ihr"
+                            ],
+                            [
+                                "Sie",
+                                "Ihr"
+                            ]
+                        ]
+                    },
+                    "sortOrder": 1
+                }
+            ],
+            "formula": "Possessiv + Endung wie ein/kein (M:-/en, F:-e, N:-, Pl:-e)",
+            "mnemonicTip": "mein = my, dein = your, sein = his, ihr = her"
+        },
+        {
+            "slug": "a1-g12-trennbare-verben",
+            "title": "Động từ tách (Trennbare Verben)",
+            "titleDe": "Trennbare Verben",
+            "description": "Động từ có prefix tách ra cuối câu: aufstehen, einkaufen, anfangen, etc.",
+            "cefrLevel": "A1",
+            "sortOrder": 12,
+            "rules": [
+                {
+                    "title": "Trennbare Verben und Satzklammer",
+                    "ruleText": "Prefix tách ra và đứng cuối câu. Gốc từ chia ở vị trí 2. Prefix phổ biến: ab-, an-, auf-, aus-, ein-, mit-, vor-, zu-, zurück-.",
+                    "examples": [
+                        "aufstehen → Ich stehe um 7 Uhr auf.",
+                        "einkaufen → Ich kaufe im Supermarkt ein.",
+                        "anfangen → Der Kurs fängt um 9 Uhr an.",
+                        "fernsehen → Ich sehe abends fern.",
+                        "anrufen → Ich rufe dich morgen an."
+                    ],
+                    "sortOrder": 1
+                },
+                {
+                    "title": "Trennbar vs. Untrennbar",
+                    "ruleText": "Trennbar (betont): ab-, an-, auf-, aus-, bei-, ein-, los-, mit-, nach-, vor-, weg-, zu-, zurück-. Untrennbar (unbetont): be-, emp-, ent-, er-, ge-, miss-, ver-, zer-.",
+                    "examples": [
+                        "aufstehen (trennbar) → Ich stehe auf.",
+                        "verstehen (untrennbar) → Ich verstehe.",
+                        "einkaufen (trennbar) → Ich kaufe ein.",
+                        "bezahlen (untrennbar) → Ich bezahle."
+                    ],
+                    "sortOrder": 2
+                }
+            ],
+            "formula": "Stamm(V2) + ... + Prefix(Ende)",
+            "mnemonicTip": "Prefix bay đi cuối câu: Ich STEHE um 7 Uhr AUF! ✈️"
+        }
+    ]
+}

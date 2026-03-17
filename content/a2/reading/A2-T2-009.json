@@ -1,0 +1,265 @@
+{
+  "id": "A2-T2-009",
+  "level": "A2",
+  "teil": 2,
+  "teil_name": "Informationstafeln verstehen",
+  "topic": "Arbeit & Beruf",
+  "topic_id": "009",
+  "metadata": {
+    "word_count": 89,
+    "target_grammar": [
+      "Modalverben",
+      "Nebensatz mit wenn"
+    ],
+    "target_vocabulary": [
+      "Arbeitsagentur",
+      "Beratung",
+      "Stellenangebot",
+      "Bewerbung",
+      "Lebenslauf",
+      "Sprechstunde",
+      "Wartenummer",
+      "Arbeitnehmer",
+      "Weiterbildung",
+      "Arbeitslosengeld"
+    ],
+    "generated_at": "2026-03-09T22:34:00+07:00",
+    "version": 1
+  },
+  "infotafel": {
+    "title": "Agentur für Arbeit Düsseldorf — Informationsübersicht",
+    "location": "Grafenberger Allee 300, 40237 Düsseldorf",
+    "rows": [
+      {
+        "floor": "EG",
+        "items": "Empfang · Wartenummern-Automat · Stellenangebote (Aushang) · WC"
+      },
+      {
+        "floor": "1. OG",
+        "items": "Berufsberatung · Bewerbungstraining · Computerarbeitsplätze"
+      },
+      {
+        "floor": "2. OG",
+        "items": "Arbeitslosen-Beratung · Anträge & Formulare · Weiterbildungsberatung"
+      },
+      {
+        "floor": "3. OG",
+        "items": "Jugendberufsagentur (unter 25 Jahre) · Praktikumsbörse · Ausbildungsberatung"
+      }
+    ],
+    "extra_info": "Öffnungszeiten: Mo–Fr 8:00–12:30 Uhr, Do auch 14:00–18:00 Uhr. Bitte ziehen Sie eine Wartenummer am Automaten im EG. Termin-Beratung: online oder Tel. 0800-4555500 (kostenlos). Bitte bringen Sie Ihren Personalausweis und Lebenslauf mit."
+  },
+  "images": [
+    {
+      "id": "IMG1",
+      "type": "info_board",
+      "prompt": "Cute cartoon illustration of a German employment agency (Arbeitsagentur) lobby with people waiting, a ticket number machine, job postings on a board, a reception counter with a friendly clerk. Fuxie cartoon style, flat illustration, warm pastel colors, no text.",
+      "filename": "A2-T2-009_board.png",
+      "placement": "header",
+      "alt_text": "Agentur für Arbeit Informationsübersicht",
+      "dimensions": "768x512"
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q1",
+      "teil": 2,
+      "type": "multiple_choice",
+      "stem": "Wo ist das Bewerbungstraining?",
+      "options": {
+        "a": "Im Erdgeschoss.",
+        "b": "Im 1. Obergeschoss.",
+        "c": "Im 3. Obergeschoss."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Das Bewerbungstraining ist im 1. OG.",
+        "key_evidence": "1. OG: Berufsberatung · Bewerbungstraining · Computerarbeitsplätze",
+        "key_vocabulary": [
+          {
+            "word": "Bewerbungstraining",
+            "type": "Nomen",
+            "meaning": "application training"
+          },
+          {
+            "word": "Berufsberatung",
+            "type": "Nomen",
+            "meaning": "career counseling"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q2",
+      "teil": 2,
+      "type": "multiple_choice",
+      "stem": "Was soll man am Eingang tun?",
+      "options": {
+        "a": "Sich am Empfang anmelden.",
+        "b": "Eine Wartenummer ziehen.",
+        "c": "Direkt in den 1. Stock gehen."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Man soll eine Wartenummer am Automaten ziehen.",
+        "key_evidence": "Bitte ziehen Sie eine Wartenummer am Automaten im EG",
+        "key_vocabulary": [
+          {
+            "word": "Wartenummer",
+            "type": "Nomen",
+            "meaning": "waiting number"
+          },
+          {
+            "word": "ziehen",
+            "type": "Verb",
+            "meaning": "to pull / take"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q3",
+      "teil": 2,
+      "type": "multiple_choice",
+      "stem": "Welches Stockwerk ist für junge Leute unter 25?",
+      "options": {
+        "a": "Das 1. Obergeschoss.",
+        "b": "Das 2. Obergeschoss.",
+        "c": "Das 3. Obergeschoss."
+      },
+      "answer": "c",
+      "points": 1,
+      "explanation": {
+        "de": "Die Jugendberufsagentur (unter 25 Jahre) ist im 3. OG.",
+        "key_evidence": "3. OG: Jugendberufsagentur (unter 25 Jahre)",
+        "key_vocabulary": [
+          {
+            "word": "Jugendberufsagentur",
+            "type": "Nomen",
+            "meaning": "youth employment agency"
+          },
+          {
+            "word": "Ausbildung",
+            "type": "Nomen",
+            "meaning": "vocational training"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q4",
+      "teil": 2,
+      "type": "multiple_choice",
+      "stem": "An welchem Tag hat die Agentur auch am Nachmittag geöffnet?",
+      "options": {
+        "a": "Am Montag.",
+        "b": "Am Mittwoch.",
+        "c": "Am Donnerstag."
+      },
+      "answer": "c",
+      "points": 1,
+      "explanation": {
+        "de": "Am Donnerstag ist auch von 14:00–18:00 Uhr geöffnet.",
+        "key_evidence": "Do auch 14:00–18:00 Uhr",
+        "key_vocabulary": [
+          {
+            "word": "Nachmittag",
+            "type": "Nomen",
+            "meaning": "afternoon"
+          },
+          {
+            "word": "geöffnet",
+            "type": "Partizip II",
+            "meaning": "open"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q5",
+      "teil": 2,
+      "type": "multiple_choice",
+      "stem": "Was soll man zum Termin mitbringen?",
+      "options": {
+        "a": "Zeugnisse und Fotos.",
+        "b": "Personalausweis und Lebenslauf.",
+        "c": "Arbeitsvertrag und Gehaltsabrechnung."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Man soll Personalausweis und Lebenslauf mitbringen.",
+        "key_evidence": "Bitte bringen Sie Ihren Personalausweis und Lebenslauf mit",
+        "key_vocabulary": [
+          {
+            "word": "Personalausweis",
+            "type": "Nomen",
+            "meaning": "ID card"
+          },
+          {
+            "word": "Lebenslauf",
+            "type": "Nomen",
+            "meaning": "curriculum vitae / resume"
+          }
+        ]
+      }
+    }
+  ],
+  "scoring": {
+    "total_points": 5,
+    "pass_threshold": 3,
+    "grading": [
+      {
+        "range": [
+          5,
+          5
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          4,
+          4
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          3,
+          3
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          1,
+          2
+        ],
+        "label": "Noch üben!",
+        "emoji": "📝"
+      },
+      {
+        "range": [
+          0,
+          0
+        ],
+        "label": "Mehr Übung nötig",
+        "emoji": "💪"
+      }
+    ]
+  },
+  "qa": {
+    "vocab_in_a2_list": true,
+    "grammar_a2_only": true,
+    "word_count_in_range": true,
+    "all_answers_verifiable": true,
+    "mc_distractors_plausible": true,
+    "image_count": 1,
+    "passed": true
+  }
+}

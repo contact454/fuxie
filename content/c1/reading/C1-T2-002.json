@@ -1,0 +1,211 @@
+{
+  "id": "C1-T2-002",
+  "level": "C1",
+  "teil": 2,
+  "teil_name": "Sachtext verstehen",
+  "topic": "Wirtschaft & Finanzen",
+  "topic_id": "002",
+  "metadata": {
+    "word_count": 300,
+    "target_grammar": [
+      "Nominalisierung",
+      "Partizipialkonstruktionen",
+      "Konjunktiv I/II",
+      "Passiversatzformen"
+    ],
+    "target_vocabulary": [],
+    "generated_at": "2026-03-11T23:00:46.154030",
+    "version": 1
+  },
+  "article": {
+    "title": "Die Zukunft des Bargelds in einer zunehmend digitalen Gesellschaft",
+    "source": "Wissenschaftliches Fachmagazin",
+    "text": "Schweden gilt als Vorreiter der bargeldlosen Gesellschaft. In dem skandinavischen Land werden nur noch rund zwei Prozent aller Transaktionen mit Bargeld abgewickelt, und zahlreiche Geschäfte, Restaurants und selbst Kirchen akzeptieren keine Münzen und Scheine mehr. Mit der Bezahl-App Swish, die von den größten schwedischen Banken entwickelt wurde, können Beträge in Echtzeit von einem Konto zum anderen übertragen werden — selbst der Eintritt für den Flohmarkt wird per Smartphone bezahlt.\n\nDeutschland hingegen zeigt sich deutlich bargeldaffiner. Obwohl der Anteil bargeldloser Zahlungen auch hierzulande steigt, werden immer noch rund 58 Prozent aller Transaktionen an der Ladenkasse mit Scheinen und Münzen beglichen. Die Bundesbank beobachtet zwar einen stetigen Rückgang, betont aber, dass Bargeld auch in absehbarer Zukunft eine wichtige Rolle spielen werde.\n\nDie Vorteile digitaler Zahlungssysteme liegen auf der Hand: Sie sind schneller, hygienischer und reduzieren die Kosten für den Umgang mit physischem Geld. Unternehmen sparen die aufwendige und teure Bargeldlogistik, und der Staat profitiert von einer lückenloseren Erfassung wirtschaftlicher Aktivitäten, die Steuerhinterziehung und Schwarzarbeit erschwert.\n\nDoch die Abschaffung des Bargelds birgt auch erhebliche Risiken. Datenschützer warnen, dass ein vollständig digitales Zahlungssystem dem Staat und privaten Unternehmen einen beispiellosen Einblick in das Konsumverhalten der Bürger ermöglichen würde. Jeder Einkauf, jede Spende, jeder Arztbesuch wäre nachvollziehbar und potenziell auswertbar.\n\nZudem droht der digitale Zahlungsverkehr bestimmte Bevölkerungsgruppen auszuschließen: ältere Menschen, die mit digitaler Technologie weniger vertraut sind, Wohnungslose ohne Bankkonto und Menschen in ländlichen Gebieten mit schlechter Netzabdeckung. Die digitale Spaltung der Gesellschaft würde sich vertiefen.\n\nEine vollständig bargeldlose Gesellschaft wäre darüber hinaus verwundbar gegenüber technischen Störungen und Cyberangriffen. Ein großflächiger Stromausfall oder ein gezielter Hackerangriff auf die Zahlungsinfrastruktur könnte das gesamte Wirtschaftsleben zum Erliegen bringen.\n\nDie Europäische Zentralbank arbeitet unterdessen am digitalen Euro, der als offizielle Digitalwährung die Vorteile beider Welten vereinen soll: die Effizienz digitaler Zahlungen mit der Anonymität und Unabhängigkeit von Bargeld."
+  },
+  "images": [
+    {
+      "id": "IMG1",
+      "type": "scene",
+      "prompt": "Cute cartoon illustration related to Wirtschaft & Finanzen. Fuxie cartoon style, flat illustration, warm pastel colors, no text.",
+      "filename": "C1-T2-002_scene.png",
+      "placement": "header",
+      "alt_text": "Die Zukunft des Bargelds in einer zunehmend digita",
+      "dimensions": "768x512"
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q1",
+      "teil": 2,
+      "type": "multiple_choice",
+      "stem": "Wie viel Prozent der Transaktionen werden in Schweden noch bar bezahlt?",
+      "options": {
+        "a": "Zwei Prozent.",
+        "b": "15 Prozent.",
+        "c": "30 Prozent."
+      },
+      "answer": "a",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "In dem skandinavischen Land werden nur noch rund zwei Prozent aller Transaktionen mit Bargeld abgewickelt, und zahlreiche Geschäfte, Restaurants un...",
+        "reasoning": "Die richtige Antwort (a) ergibt sich aus dem Textkontext."
+      }
+    },
+    {
+      "id": "Q2",
+      "teil": 2,
+      "type": "multiple_choice",
+      "stem": "Welche implizite Annahme liegt der Darstellung von hoch ist der Bargeldanteil an Ladenkassen in Deutschland zugrunde?",
+      "options": {
+        "a": "38 Prozent.",
+        "b": "58 Prozent.",
+        "c": "78 Prozent."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "In dem skandinavischen Land werden nur noch rund zwei Prozent aller Transaktionen mit Bargeld abgewickelt, und zahlreiche Geschäfte, Restaurants un...",
+        "reasoning": "[Inferential] Die richtige Antwort (b) ergibt sich aus dem Textkontext."
+      }
+    },
+    {
+      "id": "Q3",
+      "teil": 2,
+      "type": "multiple_choice",
+      "stem": "Inwiefern ist die Darstellung von Bevölkerungsgruppen könnten durch bargeldlosen Verkehr benachteiligt werden problematisch?",
+      "options": {
+        "a": "Studenten und Berufseinsteiger.",
+        "b": "Ältere Menschen, Wohnungslose und Menschen in ländlichen Gebieten.",
+        "c": "Unternehmer und Selbständige."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Zudem droht der digitale Zahlungsverkehr bestimmte Bevölkerungsgruppen auszuschließen: ältere Menschen, die mit digitaler Technologie weniger vertr...",
+        "reasoning": "[Critical] Die richtige Antwort (b) ergibt sich aus dem Textkontext."
+      }
+    },
+    {
+      "id": "Q4",
+      "teil": 2,
+      "type": "multiple_choice",
+      "stem": "Welche implizite Annahme liegt der Darstellung von Datenschützer zugrunde?",
+      "options": {
+        "a": "Bargeld ist nicht sicher genug.",
+        "b": "Digitale Systeme ermöglichen beispiellosen Einblick ins Konsumverhalten.",
+        "c": "Banken verdienen zu wenig."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Datenschützer warnen, dass ein vollständig digitales Zahlungssystem dem Staat und privaten Unternehmen einen beispiellosen Einblick in das Konsumve...",
+        "reasoning": "[Inferential] Die richtige Antwort (b) ergibt sich aus dem Textkontext."
+      }
+    },
+    {
+      "id": "Q5",
+      "teil": 2,
+      "type": "multiple_choice",
+      "stem": "Welche Gegenposition zu Risiko besteht bei einem vollständig bargeldlosen System wird im Text nicht berücksichtigt?",
+      "options": {
+        "a": "Zinsverluste.",
+        "b": "Verwundbarkeit gegenüber Stromausfällen und Cyberangriffen.",
+        "c": "Sinkende Wirtschaftsleistung."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Eine vollständig bargeldlose Gesellschaft wäre darüber hinaus verwundbar gegenüber technischen Störungen und Cyberangriffen.",
+        "reasoning": "[Critical] Die richtige Antwort (b) ergibt sich aus dem Textkontext."
+      }
+    },
+    {
+      "id": "Q6",
+      "teil": 2,
+      "type": "multiple_choice",
+      "stem": "Welche Funktion hat ist Swish im Gesamtargument des Textes?",
+      "options": {
+        "a": "Eine schwedische Kryptowährung.",
+        "b": "Eine Bezahl-App für Echtzeit-Überweisungen.",
+        "c": "Ein Kreditkartensystem."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Mit der Bezahl-App Swish, die von den größten schwedischen Banken entwickelt wurde, können Beträge in Echtzeit von einem Konto zum anderen übertrag...",
+        "reasoning": "[Inferential] Die richtige Antwort (b) ergibt sich aus dem Textkontext."
+      }
+    },
+    {
+      "id": "Q7",
+      "teil": 2,
+      "type": "multiple_choice",
+      "stem": "Was soll der digitale Euro vereinen?",
+      "options": {
+        "a": "Dollar und Euro.",
+        "b": "Effizienz digitaler Zahlungen mit der Anonymität von Bargeld.",
+        "c": "Schwedische und deutsche Zahlungssysteme."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Die Europäische Zentralbank arbeitet unterdessen am digitalen Euro, der als offizielle Digitalwährung die Vorteile beider Welten vereinen soll: die...",
+        "reasoning": "Die richtige Antwort (b) ergibt sich aus dem Textkontext."
+      }
+    }
+  ],
+  "scoring": {
+    "total_points": 7,
+    "pass_threshold": 5,
+    "grading": [
+      {
+        "range": [
+          6,
+          7
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          4,
+          5
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          3,
+          3
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          1,
+          2
+        ],
+        "label": "Noch üben!",
+        "emoji": "📝"
+      },
+      {
+        "range": [
+          0,
+          0
+        ],
+        "label": "Mehr Übung nötig",
+        "emoji": "💪"
+      }
+    ]
+  },
+  "qa": {
+    "vocab_in_c1_list": true,
+    "grammar_c1_appropriate": true,
+    "word_count_in_range": true,
+    "all_answers_verifiable": true,
+    "image_count": 1,
+    "passed": true
+  }
+}

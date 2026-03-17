@@ -1,0 +1,222 @@
+{
+  "id": "B2-T3-004",
+  "level": "B2",
+  "teil": 3,
+  "teil_name": "Anzeigen zuordnen",
+  "topic": "Beruf & Karriere",
+  "topic_id": "004",
+  "metadata": {
+    "word_count": 155,
+    "target_grammar": [
+      "Konjunktiv II",
+      "Passiv",
+      "Modalverben",
+      "Relativsätze"
+    ],
+    "target_vocabulary": [],
+    "generated_at": "2026-03-11T22:34:38.583025",
+    "version": 1
+  },
+  "anzeigen": [
+    {
+      "id": "A",
+      "text": "Führungskräfteseminar: Agiles Management in Zeiten des Wandels. 3-tägiges Intensivtraining in Frankfurt. Für Abteilungsleiter und Teamleiter. 2.400 Euro inkl. Unterkunft."
+    },
+    {
+      "id": "B",
+      "text": "MBA-Programm WHU Otto Beisheim: Berufsbegleitend in 24 Monaten. AACSB-akkreditiert. Unterricht freitags/samstags. Infoveranstaltung am 8. Mai. www.whu.edu/mba"
+    },
+    {
+      "id": "C",
+      "text": "Karrieremesse ConNext: 120 Aussteller aus Wirtschaft und Industrie. 22.-23. April, Messe Hamburg. Vorträge, CV-Check, Speed-Interviews. Eintritt frei für Studierende."
+    },
+    {
+      "id": "D",
+      "text": "Executive Coaching: Individuelle Begleitung für Führungskräfte in Veränderungsprozessen. 10 Sitzungen, 150 Euro/Stunde. Erstgespräch kostenlos. Coach Dr. Meier, zertifiziert (ICF)."
+    },
+    {
+      "id": "E",
+      "text": "Sprachkurs Business-Englisch: Intensivwoche Mo-Fr, 9-15 Uhr. Niveau B2-C1. Max. 6 Teilnehmer. 690 Euro. Inlingua Düsseldorf. Nächster Kurs: Juni 2026."
+    },
+    {
+      "id": "F",
+      "text": "Remote-Arbeit im Ausland: Coworking und Networking in Lissabon. 4 Wochen Arbeiten und Leben in Portugal. Workspace, Unterkunft, Community-Events. Ab 1.200 Euro. www.remoteyear.de"
+    },
+    {
+      "id": "G",
+      "text": "Bewerbungstraining für Akademiker: Anschreiben optimieren, Vorstellungsgespräche üben, LinkedIn-Profil professionalisieren. Einzelcoaching, 3 Sitzungen à 90 Min. 360 Euro."
+    },
+    {
+      "id": "H",
+      "text": "Existenzgründerseminar der IHK: Von der Idee zum Businessplan. 2 Abende, 18-21 Uhr. Für alle, die sich selbständig machen wollen. 80 Euro. Anmeldung unter www.ihk.de"
+    }
+  ],
+  "situationen": [
+    {
+      "id": "S1",
+      "text": "Ein Teamleiter möchte moderne Managementmethoden erlernen.",
+      "answer": "A"
+    },
+    {
+      "id": "S2",
+      "text": "Eine Ingenieurin plant den Schritt in die Selbständigkeit und braucht Hilfe bei der Planung.",
+      "answer": "H"
+    },
+    {
+      "id": "S3",
+      "text": "Ein Berufseinsteiger möchte seine Bewerbungsunterlagen professionell überarbeiten lassen.",
+      "answer": "G"
+    },
+    {
+      "id": "S4",
+      "text": "Eine Marketingmanagerin sucht ein berufsbegleitendes Aufbaustudium.",
+      "answer": "B"
+    },
+    {
+      "id": "S5",
+      "text": "Ein Softwareentwickler möchte für einige Wochen im Ausland arbeiten und Gleichgesinnte treffen.",
+      "answer": "F"
+    }
+  ],
+  "null_matches": [
+    "C",
+    "D",
+    "E"
+  ],
+  "images": [
+    {
+      "id": "IMG1",
+      "type": "scene",
+      "prompt": "Cute cartoon illustration of a bulletin board with various professional advertisements related to Beruf & Karriere. Fuxie cartoon style, flat illustration, warm pastel colors, no text.",
+      "filename": "B2-T3-004_scene.png",
+      "placement": "header",
+      "alt_text": "Anzeigen: Beruf & Karriere",
+      "dimensions": "768x512"
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q1",
+      "teil": 3,
+      "type": "matching",
+      "stem": "Ein Teamleiter möchte moderne Managementmethoden erlernen.",
+      "answer": "A",
+      "points": 1,
+      "explanation": {
+        "de": "Anzeige A passt, weil sie das beschriebene Bedürfnis erfüllt.",
+        "key_evidence": "Anzeige A",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q2",
+      "teil": 3,
+      "type": "matching",
+      "stem": "Aus der Argumentation lässt sich ableiten, dass eine Ingenieurin plant den Schritt in die Selbständigkeit und braucht Hilfe bei der Planung. Diese Position vertritt:",
+      "answer": "H",
+      "points": 1,
+      "explanation": {
+        "de": "Anzeige H passt, weil sie das beschriebene Bedürfnis erfüllt.",
+        "key_evidence": "Anzeige H",
+        "key_vocabulary": [],
+        "reasoning": "[Inferential] "
+      }
+    },
+    {
+      "id": "Q3",
+      "teil": 3,
+      "type": "matching",
+      "stem": "Ein Berufseinsteiger möchte seine Bewerbungsunterlagen professionell überarbeiten lassen.",
+      "answer": "G",
+      "points": 1,
+      "explanation": {
+        "de": "Anzeige G passt, weil sie das beschriebene Bedürfnis erfüllt.",
+        "key_evidence": "Anzeige G",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q4",
+      "teil": 3,
+      "type": "matching",
+      "stem": "Aus der Argumentation lässt sich ableiten, dass eine Marketingmanagerin sucht ein berufsbegleitendes Aufbaustudium. Diese Position vertritt:",
+      "answer": "B",
+      "points": 1,
+      "explanation": {
+        "de": "Anzeige B passt, weil sie das beschriebene Bedürfnis erfüllt.",
+        "key_evidence": "Anzeige B",
+        "key_vocabulary": [],
+        "reasoning": "[Inferential] "
+      }
+    },
+    {
+      "id": "Q5",
+      "teil": 3,
+      "type": "matching",
+      "stem": "Die implizite Annahme, dass Ein Softwareentwickler möchte für einige Wochen im Ausland arbeiten und Gleichgesinnte treffen, liegt dem Beitrag zugrunde:",
+      "answer": "F",
+      "points": 1,
+      "explanation": {
+        "de": "Anzeige F passt, weil sie das beschriebene Bedürfnis erfüllt.",
+        "key_evidence": "Anzeige F",
+        "key_vocabulary": [],
+        "reasoning": "[Inferential] "
+      }
+    }
+  ],
+  "scoring": {
+    "total_points": 5,
+    "pass_threshold": 3,
+    "grading": [
+      {
+        "range": [
+          5,
+          5
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          4,
+          4
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          3,
+          3
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          1,
+          2
+        ],
+        "label": "Noch üben!",
+        "emoji": "📝"
+      },
+      {
+        "range": [
+          0,
+          0
+        ],
+        "label": "Mehr Übung nötig",
+        "emoji": "💪"
+      }
+    ]
+  },
+  "qa": {
+    "vocab_in_b2_list": true,
+    "grammar_b2_appropriate": true,
+    "word_count_in_range": true,
+    "all_answers_verifiable": true,
+    "null_matches_correct": true,
+    "image_count": 1,
+    "passed": true
+  }
+}

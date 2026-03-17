@@ -1,0 +1,224 @@
+{
+  "id": "B1-T2-010",
+  "level": "B1",
+  "teil": 2,
+  "teil_name": "Pressebericht lesen",
+  "topic": "Familie & Beziehungen",
+  "topic_id": "010",
+  "metadata": {
+    "word_count": 290,
+    "target_grammar": [
+      "Nebensatz mit dass/weil/wenn",
+      "Passiv",
+      "Konjunktiv II"
+    ],
+    "target_vocabulary": [
+      "Familienmodell",
+      "Patchwork",
+      "Co-Parenting",
+      "alleinerziehend",
+      "Statistik",
+      "Rollenverteilung",
+      "traditionell",
+      "Lebensform",
+      "Gesellschaft",
+      "Gleichberechtigung"
+    ],
+    "generated_at": "2026-03-10T22:58:00+07:00",
+    "version": 1
+  },
+  "article": {
+    "source": "Der Tagesspiegel",
+    "date": "15. Mai 2026",
+    "title": "Neue Familienmodelle: Patchwork und Co-Parenting",
+    "subtitle": "Die klassische Familie ist nicht mehr die Norm — neue Formen des Zusammenlebens",
+    "text": "Die deutsche Familie verändert sich. Laut dem Statistischen Bundesamt leben heute nur noch 70 Prozent der Kinder mit beiden leiblichen Eltern zusammen. Vor 30 Jahren waren es noch über 85 Prozent. Sogenannte Patchwork-Familien, in denen Kinder aus verschiedenen Beziehungen zusammenleben, werden immer häufiger.\n\nEin relativ neues Phänomen ist das Co-Parenting. Dabei entscheiden sich zwei Menschen bewusst dafür, gemeinsam ein Kind zu bekommen und aufzuziehen, obwohl sie kein Paar sind. Sie teilen sich die Erziehung und die Kosten, leben aber in getrennten Wohnungen. Online-Plattformen, auf denen man einen Co-Parenting-Partner finden kann, verzeichnen steigende Nutzerzahlen.\n\nFamiliensoziologin Prof. Katrin Meier von der FU Berlin erklärt: „Es gibt heute keine einzige richtige Art, Familie zu sein. Jede Lebensform hat ihre Vorteile und Herausforderungen. Wichtig ist, dass die Kinder stabile Beziehungen und verlässliche Bezugspersonen haben.“\n\nAuch die Rollenverteilung innerhalb der Familie wandelt sich. In einer aktuellen Umfrage gaben 43 Prozent der Väter an, dass sie mehr Zeit mit ihren Kindern verbringen möchten. Die Zahl der Väter, die Elternzeit nehmen, ist in den letzten fünf Jahren um 25 Prozent gestiegen.\n\nKonservative Familienpolitiker sehen die Entwicklung kritisch. Sie betonen, dass ein traditionelles Familienmodell mit Mutter, Vater und Kindern das beste Umfeld für die Entwicklung von Kindern biete.\n\nDie gesellschaftliche Debatte darüber, was Familie heute bedeutet, wird wohl noch lange weitergehen."
+  },
+  "images": [
+    {
+      "id": "IMG1",
+      "type": "scene",
+      "prompt": "Cute cartoon illustration showing diverse family models side by side: traditional family, single parent with child, patchwork family with multiple children, two friends co-parenting. Fuxie cartoon style, flat illustration, warm pastel colors, no text.",
+      "filename": "B1-T2-010_scene.png",
+      "placement": "header",
+      "alt_text": "Verschiedene Familienmodelle",
+      "dimensions": "768x512"
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q1",
+      "teil": 2,
+      "type": "multiple_choice",
+      "stem": "Wie viel Prozent der Kinder leben heute mit beiden leiblichen Eltern?",
+      "options": {
+        "a": "55 Prozent.",
+        "b": "70 Prozent.",
+        "c": "85 Prozent."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Heute leben 70 Prozent der Kinder mit beiden leiblichen Eltern zusammen.",
+        "key_evidence": "nur noch 70 Prozent der Kinder mit beiden leiblichen Eltern",
+        "key_vocabulary": [
+          {
+            "word": "leiblich",
+            "type": "Adjektiv",
+            "meaning": "biological"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q2",
+      "teil": 2,
+      "type": "multiple_choice",
+      "stem": "Was ist Co-Parenting?",
+      "options": {
+        "a": "Wenn Großeltern die Erziehung übernehmen.",
+        "b": "Wenn zwei Menschen ein Kind gemeinsam aufziehen, ohne ein Paar zu sein.",
+        "c": "Wenn ein Elternteil allein erzieht."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Beim Co-Parenting bekommen zwei Menschen gemeinsam ein Kind, ohne ein Paar zu sein.",
+        "key_evidence": "gemeinsam ein Kind zu bekommen und aufzuziehen, obwohl sie kein Paar sind",
+        "key_vocabulary": [
+          {
+            "word": "Co-Parenting",
+            "type": "Nomen",
+            "meaning": "co-parenting"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q3",
+      "teil": 2,
+      "type": "multiple_choice",
+      "stem": "Was ist laut Prof. Meier das Wichtigste für Kinder?",
+      "options": {
+        "a": "Dass sie mit beiden Eltern zusammenleben.",
+        "b": "Dass sie stabile Beziehungen und verlässliche Bezugspersonen haben.",
+        "c": "Dass sie viele Geschwister haben."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Wichtig sind stabile Beziehungen und verlässliche Bezugspersonen.",
+        "key_evidence": "stabile Beziehungen und verlässliche Bezugspersonen",
+        "key_vocabulary": [
+          {
+            "word": "Bezugsperson",
+            "type": "Nomen",
+            "meaning": "reference person / caregiver"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q4",
+      "teil": 2,
+      "type": "multiple_choice",
+      "stem": "Wie hat sich die Zahl der Väter in Elternzeit verändert?",
+      "options": {
+        "a": "Sie ist um 10 Prozent gestiegen.",
+        "b": "Sie ist um 25 Prozent gestiegen.",
+        "c": "Sie ist gleich geblieben."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Die Zahl der Väter in Elternzeit ist um 25 Prozent gestiegen.",
+        "key_evidence": "um 25 Prozent gestiegen",
+        "key_vocabulary": [
+          {
+            "word": "Elternzeit",
+            "type": "Nomen",
+            "meaning": "parental leave"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q5",
+      "teil": 2,
+      "type": "multiple_choice",
+      "stem": "Was meinen konservative Politiker?",
+      "options": {
+        "a": "Alle Familienformen sind gleich gut.",
+        "b": "Das traditionelle Familienmodell ist am besten für Kinder.",
+        "c": "Co-Parenting sollte verboten werden."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Sie betonen, dass ein traditionelles Familienmodell das beste Umfeld biete.",
+        "key_evidence": "ein traditionelles Familienmodell mit Mutter, Vater und Kindern das beste Umfeld",
+        "key_vocabulary": [
+          {
+            "word": "traditionell",
+            "type": "Adjektiv",
+            "meaning": "traditional"
+          }
+        ]
+      }
+    }
+  ],
+  "scoring": {
+    "total_points": 5,
+    "pass_threshold": 3,
+    "grading": [
+      {
+        "range": [
+          5,
+          5
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          4,
+          4
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          3,
+          3
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          1,
+          2
+        ],
+        "label": "Noch üben!",
+        "emoji": "📝"
+      },
+      {
+        "range": [
+          0,
+          0
+        ],
+        "label": "Mehr Übung nötig",
+        "emoji": "💪"
+      }
+    ]
+  },
+  "qa": {
+    "vocab_in_b1_list": true,
+    "grammar_b1_appropriate": true,
+    "word_count_in_range": true,
+    "all_answers_verifiable": true,
+    "image_count": 1,
+    "passed": true
+  }
+}

@@ -1,0 +1,196 @@
+{
+  "id": "C1-T4-012",
+  "level": "C1",
+  "teil": 4,
+  "teil_name": "Meinungen zuordnen",
+  "topic": "Soziologie & Demografie",
+  "topic_id": "012",
+  "metadata": {
+    "word_count": 123,
+    "target_grammar": [
+      "Nominalisierung",
+      "Partizipialkonstruktionen",
+      "Konjunktiv I/II",
+      "Passiversatzformen"
+    ],
+    "target_vocabulary": [],
+    "generated_at": "2026-03-11T23:18:54.731267",
+    "version": 1
+  },
+  "opinion_texts": {
+    "question": "Sollte das Rentenalter weiter angehoben werden?",
+    "texts": [
+      {
+        "name": "Wirtschaftsweiser Prof. Dr. Klaus Berger",
+        "text": "Angesichts der steigenden Lebenserwartung und des sinkenden Verhältnisses von Beitragszahlern zu Rentnern ist eine Anhebung des Rentenalters auf 70 Jahre unvermeidlich. Die Alternative wäre ein drastischer Anstieg der Beiträge oder eine Absenkung des Rentenniveaus.",
+        "label": "A"
+      },
+      {
+        "name": "Gewerkschaftschefin Andrea Baumann",
+        "text": "Die Forderung nach einer Rente mit 70 ignoriert die Realität der Arbeitswelt. Pflegekräfte, Bauarbeiter und Fabrikarbeiter sind mit 67 oft schon körperlich am Ende. Eine einheitliche Anhebung wäre sozial zutiefst ungerecht.",
+        "label": "B"
+      },
+      {
+        "name": "Sozialwissenschaftler Dr. Henrik Paul",
+        "text": "Statt das Rentenalter zu erhöhen, sollten wir die Erwerbsbeteiligung älterer Arbeitnehmer fördern. Flexible Übergangsmodelle, Teilrentenoptionen und altersgerechte Arbeitsplätze können die Erwerbstätigkeit verlängern, ohne einen starren Stichtag festzulegen.",
+        "label": "C"
+      },
+      {
+        "name": "Rentnerin Ingrid Schulze, 72",
+        "text": "Ich habe 45 Jahre gearbeitet und mir meine Rente verdient. Die junge Generation will immer mehr Freiheiten, aber die Kosten sollen wir Alten tragen. Das Rentenversprechen des Staates muss eingehalten werden.",
+        "label": "D"
+      }
+    ]
+  },
+  "images": [
+    {
+      "id": "IMG1",
+      "type": "scene",
+      "prompt": "Cute cartoon illustration of experts discussing Soziologie & Demografie. Fuxie cartoon style, flat illustration, warm pastel colors, no text.",
+      "filename": "C1-T4-012_scene.png",
+      "placement": "header",
+      "alt_text": "Sollte das Rentenalter weiter angehoben werden?",
+      "dimensions": "768x512"
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q1",
+      "teil": 4,
+      "type": "matching",
+      "stem": "Die Anhebung des Rentenalters auf 70 ist demografisch unvermeidlich.",
+      "answer": "A",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Text/Beitrag A",
+        "reasoning": "Die Aussage 'Die Anhebung des Rentenalters auf 70 ist demografi...' entspricht der Position von A."
+      }
+    },
+    {
+      "id": "Q2",
+      "teil": 4,
+      "type": "matching",
+      "stem": "Körperliche Berufe machen eine einheitliche Anhebung unmöglich.",
+      "answer": "B",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Text/Beitrag B",
+        "reasoning": "Die Aussage 'Körperliche Berufe machen eine einheitliche Anhebu...' entspricht der Position von B."
+      }
+    },
+    {
+      "id": "Q3",
+      "teil": 4,
+      "type": "matching",
+      "stem": "Die These, dass flexible Übergangsmodelle sind besser als ein starrer Stichtag, wird durch folgende Argumentation gestützt:",
+      "answer": "C",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Text/Beitrag C",
+        "reasoning": "[Inferential] Die Aussage 'Flexible Übergangsmodelle sind besser als ein star...' entspricht der Position von C."
+      }
+    },
+    {
+      "id": "Q4",
+      "teil": 4,
+      "type": "matching",
+      "stem": "Die grundlegende Prämisse, dass Das Rentenversprechen des Staates muss eingehalten werden, liegt der Position zugrunde:",
+      "answer": "D",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Text/Beitrag D",
+        "reasoning": "[Inferential] Die Aussage 'Das Rentenversprechen des Staates muss eingehalten...' entspricht der Position von D."
+      }
+    },
+    {
+      "id": "Q5",
+      "teil": 4,
+      "type": "matching",
+      "stem": "Die grundlegende Prämisse, dass ohne steigende Beiträge oder sinkende Renten bleibt nur das höhere Rentenalter, liegt der Position zugrunde:",
+      "answer": "A",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Text/Beitrag A",
+        "reasoning": "[Inferential] Die Aussage 'Ohne steigende Beiträge oder sinkende Renten bleib...' entspricht der Position von A."
+      }
+    },
+    {
+      "id": "Q6",
+      "teil": 4,
+      "type": "matching",
+      "stem": "Die These, dass altersgerechte Arbeitsplätze können die Erwerbstätigkeit verlängern, wird durch folgende Argumentation gestützt:",
+      "answer": "C",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Text/Beitrag C",
+        "reasoning": "[Inferential] Die Aussage 'Altersgerechte Arbeitsplätze können die Erwerbstät...' entspricht der Position von C."
+      }
+    },
+    {
+      "id": "Q7",
+      "teil": 4,
+      "type": "matching",
+      "stem": "Die These, dass Die Lasten werden unfair auf ältere Generationen verteilt, wird durch folgende Argumentation gestützt:",
+      "answer": "D",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Text/Beitrag D",
+        "reasoning": "[Inferential] Die Aussage 'Die Lasten werden unfair auf ältere Generationen v...' entspricht der Position von D."
+      }
+    }
+  ],
+  "scoring": {
+    "total_points": 7,
+    "pass_threshold": 5,
+    "grading": [
+      {
+        "range": [
+          6,
+          7
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          4,
+          5
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          3,
+          3
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          1,
+          2
+        ],
+        "label": "Noch üben!",
+        "emoji": "📝"
+      },
+      {
+        "range": [
+          0,
+          0
+        ],
+        "label": "Mehr Übung nötig",
+        "emoji": "💪"
+      }
+    ]
+  },
+  "qa": {
+    "vocab_in_c1_list": true,
+    "grammar_c1_appropriate": true,
+    "word_count_in_range": true,
+    "all_answers_verifiable": true,
+    "image_count": 1,
+    "passed": true
+  }
+}

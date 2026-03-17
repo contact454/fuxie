@@ -1,0 +1,224 @@
+{
+  "id": "B1-T2-005",
+  "level": "B1",
+  "teil": 2,
+  "teil_name": "Pressebericht lesen",
+  "topic": "Ausbildung & Karriere",
+  "topic_id": "005",
+  "metadata": {
+    "word_count": 293,
+    "target_grammar": [
+      "Nebensatz mit dass/obwohl/wenn",
+      "Passiv",
+      "Konjunktiv II"
+    ],
+    "target_vocabulary": [
+      "Homeoffice",
+      "produktiv",
+      "Arbeitnehmer",
+      "Arbeitgeber",
+      "Studie",
+      "Pendelzeit",
+      "Teamarbeit",
+      "flexibel",
+      "Büro",
+      "Regelung"
+    ],
+    "generated_at": "2026-03-10T22:57:00+07:00",
+    "version": 1
+  },
+  "article": {
+    "source": "Die Zeit",
+    "date": "11. November 2025",
+    "title": "Neue Studie: Homeoffice macht produktiver",
+    "subtitle": "Aber Experten warnen auch vor Risiken der Fernarbeit",
+    "text": "Eine neue Studie der Technischen Universität München zeigt, dass Arbeitnehmer im Homeoffice im Durchschnitt 13 Prozent produktiver sind als im Büro. Für die Untersuchung wurden 2.500 Beschäftigte aus verschiedenen Branchen über einen Zeitraum von sechs Monaten beobachtet.\n\nDie Vorteile sind deutlich: Mitarbeiter im Homeoffice sparen die tägliche Pendelzeit, können sich ihre Arbeitszeit flexibler einteilen und werden weniger durch Kollegen unterbrochen. 67 Prozent der Befragten gaben an, dass sie im Homeoffice zufriedener sind als im Büro.\n\nAllerdings zeigt die Studie auch Nachteile. Viele Arbeitnehmer arbeiten zu Hause mehr als im Büro, weil die Grenze zwischen Arbeit und Freizeit verschwimmt. 38 Prozent berichteten, dass sie abends Schwierigkeiten haben, den Computer auszuschalten. Außerdem vermissen viele den persönlichen Kontakt zu Kollegen.\n\nProfessor Dr. Markus Klein, Leiter der Studie, empfiehlt ein hybrides Modell: „Das ideale Verhältnis liegt bei zwei bis drei Tagen Homeoffice und zwei bis drei Tagen im Büro. So profitiert man von der Ruhe zu Hause und gleichzeitig von der Teamarbeit vor Ort.“\n\nArbeitgeber reagieren unterschiedlich. Während große Unternehmen wie SAP und Siemens flexible Homeoffice-Regelungen eingeführt haben, bestehen viele kleinere Firmen darauf, dass ihre Mitarbeiter täglich ins Büro kommen.\n\nDie Debatte zeigt: Die Arbeitswelt verändert sich grundlegend. Die Frage ist nicht mehr, ob Homeoffice funktioniert, sondern wie man es am besten organisiert."
+  },
+  "images": [
+    {
+      "id": "IMG1",
+      "type": "scene",
+      "prompt": "Cute cartoon illustration of a person working productively at a home desk with a laptop, coffee, and plants, with a split view showing a busy office, showing the contrast. Fuxie cartoon style, flat illustration, warm pastel colors, no text.",
+      "filename": "B1-T2-005_scene.png",
+      "placement": "header",
+      "alt_text": "Homeoffice vs. Büro",
+      "dimensions": "768x512"
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q1",
+      "teil": 2,
+      "type": "multiple_choice",
+      "stem": "Um wie viel Prozent sind Homeoffice-Arbeiter laut der Studie produktiver?",
+      "options": {
+        "a": "8 Prozent.",
+        "b": "13 Prozent.",
+        "c": "20 Prozent."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Arbeitnehmer im Homeoffice sind 13 Prozent produktiver.",
+        "key_evidence": "13 Prozent produktiver",
+        "key_vocabulary": [
+          {
+            "word": "produktiv",
+            "type": "Adjektiv",
+            "meaning": "productive"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q2",
+      "teil": 2,
+      "type": "multiple_choice",
+      "stem": "Welches Problem nennen viele Arbeitnehmer im Homeoffice?",
+      "options": {
+        "a": "Zu wenig Arbeit.",
+        "b": "Die Grenze zwischen Arbeit und Freizeit verschwimmt.",
+        "c": "Zu viele Videokonferenzen."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Die Grenze zwischen Arbeit und Freizeit verschwimmt.",
+        "key_evidence": "die Grenze zwischen Arbeit und Freizeit verschwimmt",
+        "key_vocabulary": [
+          {
+            "word": "verschwimmen",
+            "type": "Verb",
+            "meaning": "to blur"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q3",
+      "teil": 2,
+      "type": "multiple_choice",
+      "stem": "Was empfiehlt Professor Klein?",
+      "options": {
+        "a": "100 Prozent Homeoffice.",
+        "b": "Ein hybrides Modell mit 2-3 Tagen Homeoffice.",
+        "c": "Homeoffice nur für Manager."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Er empfiehlt 2-3 Tage Homeoffice und 2-3 Tage Büro.",
+        "key_evidence": "zwei bis drei Tagen Homeoffice und zwei bis drei Tagen im Büro",
+        "key_vocabulary": [
+          {
+            "word": "hybrid",
+            "type": "Adjektiv",
+            "meaning": "hybrid"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q4",
+      "teil": 2,
+      "type": "multiple_choice",
+      "stem": "Wie reagieren kleinere Firmen auf Homeoffice?",
+      "options": {
+        "a": "Sie führen flexible Regelungen ein.",
+        "b": "Sie bestehen darauf, dass Mitarbeiter ins Büro kommen.",
+        "c": "Sie erlauben nur freitags Homeoffice."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Viele kleinere Firmen bestehen darauf, dass Mitarbeiter täglich ins Büro kommen.",
+        "key_evidence": "bestehen viele kleinere Firmen darauf, dass ihre Mitarbeiter täglich ins Büro kommen",
+        "key_vocabulary": [
+          {
+            "word": "bestehen auf",
+            "type": "Verb",
+            "meaning": "to insist on"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q5",
+      "teil": 2,
+      "type": "multiple_choice",
+      "stem": "Wie viele Beschäftigte wurden für die Studie untersucht?",
+      "options": {
+        "a": "1.000.",
+        "b": "2.500.",
+        "c": "5.000."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Es wurden 2.500 Beschäftigte untersucht.",
+        "key_evidence": "2.500 Beschäftigte aus verschiedenen Branchen",
+        "key_vocabulary": [
+          {
+            "word": "Beschäftigte",
+            "type": "Nomen",
+            "meaning": "employee"
+          }
+        ]
+      }
+    }
+  ],
+  "scoring": {
+    "total_points": 5,
+    "pass_threshold": 3,
+    "grading": [
+      {
+        "range": [
+          5,
+          5
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          4,
+          4
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          3,
+          3
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          1,
+          2
+        ],
+        "label": "Noch üben!",
+        "emoji": "📝"
+      },
+      {
+        "range": [
+          0,
+          0
+        ],
+        "label": "Mehr Übung nötig",
+        "emoji": "💪"
+      }
+    ]
+  },
+  "qa": {
+    "vocab_in_b1_list": true,
+    "grammar_b1_appropriate": true,
+    "word_count_in_range": true,
+    "all_answers_verifiable": true,
+    "image_count": 1,
+    "passed": true
+  }
+}

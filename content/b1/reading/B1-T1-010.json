@@ -1,0 +1,200 @@
+{
+  "id": "B1-T1-010",
+  "level": "B1",
+  "teil": 1,
+  "teil_name": "Blog-Eintrag lesen",
+  "topic": "Familie & Beziehungen",
+  "topic_id": "010",
+  "metadata": {
+    "word_count": 267,
+    "target_grammar": [
+      "Nebensatz mit als/wenn/dass",
+      "Konjunktiv II",
+      "Perfekt/Plusquamperfekt"
+    ],
+    "target_vocabulary": [
+      "Großeltern",
+      "Enkel",
+      "Erinnerung",
+      "Generation",
+      "Tradition",
+      "erzählen",
+      "Kindheit",
+      "Beziehung",
+      "vermissen",
+      "dankbar"
+    ],
+    "generated_at": "2026-03-10T22:52:00+07:00",
+    "version": 1
+  },
+  "blog": {
+    "title": "Großeltern und Enkel — eine besondere Beziehung",
+    "author": "EmmaHerz",
+    "date": "20. Mai 2025",
+    "text": "Letzte Woche ist meine Oma 80 Jahre alt geworden. Wir haben ein großes Familienfest organisiert, und dabei sind mir viele schöne Erinnerungen an meine Kindheit eingefallen. Ich möchte heute darüber schreiben, warum Großeltern so wichtig sind.\n\nAls ich klein war, habe ich jedes Wochenende bei meinen Großeltern verbracht. Mein Opa hat mir das Fahrradfahren beigebracht, und meine Oma hat mir gezeigt, wie man Apfelkuchen backt. Es waren die glücklichsten Tage meiner Kindheit. Anders als meine Eltern, die immer gestresst von der Arbeit waren, hatten meine Großeltern immer Zeit für mich.\n\nBesonders schön fand ich, wenn meine Oma mir Geschichten von früher erzählt hat — wie sie als junge Frau nach Deutschland gekommen ist, wie sie meinen Opa kennengelernt hat. Diese Geschichten haben mir geholfen, meine Familie besser zu verstehen.\n\nLeider wohnen wir jetzt weit voneinander entfernt. Ich lebe in München, und meine Großeltern wohnen in einem kleinen Dorf in der Nähe von Dresden. Wir telefonieren jeden Sonntag, aber ich vermisse die gemeinsamen Nachmittage sehr. Wenn ich könnte, würde ich sie viel öfter besuchen.\n\nIch glaube, dass die Beziehung zwischen Großeltern und Enkeln etwas ganz Besonderes ist. Großeltern geben uns Wurzeln und Geschichten. Dafür bin ich sehr dankbar.\n\nWie ist eure Beziehung zu euren Großeltern? Erzählt mir davon!"
+  },
+  "images": [
+    {
+      "id": "IMG1",
+      "type": "scene",
+      "prompt": "Cute cartoon illustration of a grandmother and granddaughter baking apple cake together in a cozy kitchen, flour on their aprons, smiling. Family photos on the wall. Fuxie cartoon style, flat illustration, warm pastel colors, no text.",
+      "filename": "B1-T1-010_scene.png",
+      "placement": "header",
+      "alt_text": "Emma und ihre Oma backen zusammen",
+      "dimensions": "768x512"
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q1",
+      "teil": 1,
+      "type": "richtig_falsch",
+      "stem": "Die Hauptaussage des Textes ist, dass emmas Oma ist 70 Jahre alt geworden.",
+      "answer": "falsch",
+      "points": 1,
+      "explanation": {
+        "de": "Emmas Oma ist 80 Jahre alt geworden.",
+        "key_evidence": "meine Oma 80 Jahre alt geworden",
+        "key_vocabulary": [
+          {
+            "word": "Familienfest",
+            "type": "Nomen",
+            "meaning": "family celebration"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q2",
+      "teil": 1,
+      "type": "richtig_falsch",
+      "stem": "Emma hat als Kind jedes Wochenende bei ihren Großeltern verbracht.",
+      "answer": "richtig",
+      "points": 1,
+      "explanation": {
+        "de": "Sie hat jedes Wochenende bei ihnen verbracht.",
+        "key_evidence": "habe ich jedes Wochenende bei meinen Großeltern verbracht",
+        "key_vocabulary": [
+          {
+            "word": "Kindheit",
+            "type": "Nomen",
+            "meaning": "childhood"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q3",
+      "teil": 1,
+      "type": "richtig_falsch",
+      "stem": "Emmas Eltern hatten immer viel Zeit für sie.",
+      "answer": "falsch",
+      "points": 1,
+      "explanation": {
+        "de": "Ihre Eltern waren immer gestresst von der Arbeit.",
+        "key_evidence": "meine Eltern, die immer gestresst von der Arbeit waren",
+        "key_vocabulary": [
+          {
+            "word": "gestresst",
+            "type": "Adjektiv",
+            "meaning": "stressed"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q4",
+      "teil": 1,
+      "type": "richtig_falsch",
+      "stem": "Emma und ihre Großeltern wohnen in der gleichen Stadt.",
+      "answer": "falsch",
+      "points": 1,
+      "explanation": {
+        "de": "Emma lebt in München, ihre Großeltern in der Nähe von Dresden.",
+        "key_evidence": "Ich lebe in München, und meine Großeltern wohnen in einem kleinen Dorf in der Nähe von Dresden",
+        "key_vocabulary": [
+          {
+            "word": "entfernt",
+            "type": "Adjektiv",
+            "meaning": "far away"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q5",
+      "teil": 1,
+      "type": "richtig_falsch",
+      "stem": "Der Text sagt, dass emma telefoniert jeden Sonntag mit ihren Großeltern.",
+      "answer": "richtig",
+      "points": 1,
+      "explanation": {
+        "de": "Sie telefonieren jeden Sonntag.",
+        "key_evidence": "Wir telefonieren jeden Sonntag",
+        "key_vocabulary": [
+          {
+            "word": "vermissen",
+            "type": "Verb",
+            "meaning": "to miss"
+          }
+        ],
+        "reasoning": "[Inferential] "
+      }
+    }
+  ],
+  "scoring": {
+    "total_points": 5,
+    "pass_threshold": 3,
+    "grading": [
+      {
+        "range": [
+          5,
+          5
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          4,
+          4
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          3,
+          3
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          1,
+          2
+        ],
+        "label": "Noch üben!",
+        "emoji": "📝"
+      },
+      {
+        "range": [
+          0,
+          0
+        ],
+        "label": "Mehr Übung nötig",
+        "emoji": "💪"
+      }
+    ]
+  },
+  "qa": {
+    "vocab_in_b1_list": true,
+    "grammar_b1_appropriate": true,
+    "word_count_in_range": true,
+    "all_answers_verifiable": true,
+    "richtig_falsch_balanced": true,
+    "image_count": 1,
+    "passed": true
+  }
+}

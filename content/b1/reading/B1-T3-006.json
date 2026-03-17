@@ -1,0 +1,258 @@
+{
+  "id": "B1-T3-006",
+  "level": "B1",
+  "teil": 3,
+  "teil_name": "Anzeigen zuordnen",
+  "topic": "Wohnen & Zusammenleben",
+  "topic_id": "006",
+  "metadata": {
+    "word_count": 228,
+    "target_grammar": [
+      "Nebensatz mit weil/dass",
+      "Modalverben",
+      "Passiv"
+    ],
+    "target_vocabulary": [
+      "Wohnung",
+      "Möbel",
+      "Umzug",
+      "Handwerker",
+      "Kaution",
+      "Nebenkosten",
+      "möbliert",
+      "WG-Zimmer"
+    ],
+    "generated_at": "2026-03-10T23:32:00+07:00",
+    "version": 1
+  },
+  "anzeigen": [
+    {
+      "id": "A",
+      "text": "2-Zimmer-Wohnung in Friedrichshain — 55 qm, Altbau, 3. OG, Balkon. 680 € kalt + 180 € NK. Frei ab 1. Juli. Keine Haustiere. Besichtigung nach Vereinbarung. Kontakt: immobilien-fh@mail.de"
+    },
+    {
+      "id": "B",
+      "text": "Umzugshilfe zum kleinen Preis! Transporter + 2 Helfer: 80 €/Std. Auch am Wochenende. Kurzfristige Buchung möglich. Berlin, Potsdam und Umgebung. Tel: 030-7788990 oder www.umzugfix.de"
+    },
+    {
+      "id": "C",
+      "text": "Möbliertes WG-Zimmer frei — 18 qm in netter 3er-WG, Altbau Prenzlauer Berg. 420 € warm. Befristet: Juli–Dezember 2026. Perfekt für Studenten oder Praktikanten. Schreib uns: wg-prenzl@mail.de"
+    },
+    {
+      "id": "D",
+      "text": "IKEA-Möbel Aufbauservice — Schrank, Küche, Regal: Wir bauen alles auf! Ab 40 € pro Möbelstück. Schnell und zuverlässig. Online-Buchung: www.moebelaufbau-berlin.de"
+    },
+    {
+      "id": "E",
+      "text": "Flohmarkt im Mauerpark — Jeden Sonntag, 10–17 Uhr. Verkäufer gesucht! Standgebühr: 15 €. Alte Möbel, Kleidung, Geschirr, Bücher. Info: flohmarkt@mauerpark.de"
+    },
+    {
+      "id": "F",
+      "text": "Maler und Renovierung — Wände streichen, Tapete entfernen, Laminat verlegen. Faire Preise, kostenloser Kostenvoranschlag. Auch für Mieter bei Auszug! Tel: 030-4433221."
+    },
+    {
+      "id": "G",
+      "text": "Nachmieter gesucht! 3-Zi.-Wohnung, 78 qm, Neukölln. EBK, Parkett, ruhiger Hof. 820 € kalt + 220 € NK. Frei ab sofort. Bitte mit Schufa-Auskunft melden. Tel: 0170-9988776."
+    },
+    {
+      "id": "H",
+      "text": "Lagerraum zu vermieten — Verschiedene Größen (5–30 qm). Trocken, sicher, 24h-Zugang. Ab 49 €/Monat. Ideal für Umzug, Renovierung oder Saisonware. www.lagerbox-berlin.de"
+    }
+  ],
+  "situationen": [
+    {
+      "id": "S1",
+      "text": "Selina studiert für ein Semester in Berlin und braucht ein Zimmer mit Möbeln für 6 Monate.",
+      "answer": "C"
+    },
+    {
+      "id": "S2",
+      "text": "Herr Kim zieht nächsten Monat um und braucht einen Transporter mit Helfern.",
+      "answer": "B"
+    },
+    {
+      "id": "S3",
+      "text": "Frau Müller zieht aus ihrer Mietwohnung aus und muss die Wände vorher streichen.",
+      "answer": "F"
+    },
+    {
+      "id": "S4",
+      "text": "Familie Winkler hat bei IKEA ein neues Regal und einen Kleiderschrank gekauft und braucht Hilfe beim Aufbauen.",
+      "answer": "D"
+    },
+    {
+      "id": "S5",
+      "text": "Marco renoviert und braucht einen Ort, wo er seine Möbel für einige Wochen lagern kann.",
+      "answer": "H"
+    }
+  ],
+  "null_matches": [
+    "A",
+    "E",
+    "G"
+  ],
+  "images": [
+    {
+      "id": "IMG1",
+      "type": "scene",
+      "prompt": "Cute cartoon illustration of a community notice board with ads for apartments, moving services, furniture assembly, storage rooms, and painters. Fuxie cartoon style, flat illustration, warm pastel colors, no text.",
+      "filename": "B1-T3-006_scene.png",
+      "placement": "header",
+      "alt_text": "Wohnung-Anzeigen",
+      "dimensions": "768x512"
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q1",
+      "teil": 3,
+      "type": "matching",
+      "stem": "Selina braucht ein möbliertes Zimmer für 6 Monate als Studentin.",
+      "answer": "C",
+      "points": 1,
+      "explanation": {
+        "de": "Das WG-Zimmer ist möbliert, befristet Juli–Dezember, perfekt für Studenten.",
+        "key_evidence": "Möbliertes WG-Zimmer / Befristet Juli–Dezember / Perfekt für Studenten",
+        "key_vocabulary": [
+          {
+            "word": "möbliert",
+            "type": "Adjektiv",
+            "meaning": "furnished"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q2",
+      "teil": 3,
+      "type": "matching",
+      "stem": "Herr Kim braucht einen Transporter mit Helfern für den Umzug.",
+      "answer": "B",
+      "points": 1,
+      "explanation": {
+        "de": "Umzugfix bietet Transporter + 2 Helfer für 80 €/Stunde.",
+        "key_evidence": "Transporter + 2 Helfer / 80 €/Std.",
+        "key_vocabulary": [
+          {
+            "word": "Umzugshilfe",
+            "type": "Nomen",
+            "meaning": "moving help"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q3",
+      "teil": 3,
+      "type": "matching",
+      "stem": "Frau Müller muss vor dem Auszug die Wände streichen.",
+      "answer": "F",
+      "points": 1,
+      "explanation": {
+        "de": "Der Maler-Service bietet Wände streichen, auch für Mieter bei Auszug.",
+        "key_evidence": "Wände streichen / Auch für Mieter bei Auszug",
+        "key_vocabulary": [
+          {
+            "word": "Auszug",
+            "type": "Nomen",
+            "meaning": "moving out"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q4",
+      "teil": 3,
+      "type": "matching",
+      "stem": "Die Ansicht, dass Die Ansicht, dass familie Winkler braucht Hilfe beim IKEA-Möbel aufbauen, wird vertreten von:, wird vertreten von:",
+      "answer": "D",
+      "points": 1,
+      "explanation": {
+        "de": "Der Aufbauservice baut Möbel auf, ab 40 € pro Stück.",
+        "key_evidence": "IKEA-Möbel Aufbauservice / Ab 40 € pro Möbelstück",
+        "key_vocabulary": [
+          {
+            "word": "Aufbauservice",
+            "type": "Nomen",
+            "meaning": "assembly service"
+          }
+        ],
+        "reasoning": "[Inferential] "
+      }
+    },
+    {
+      "id": "Q5",
+      "teil": 3,
+      "type": "matching",
+      "stem": "Marco braucht einen Lagerraum für Möbel während der Renovierung.",
+      "answer": "H",
+      "points": 1,
+      "explanation": {
+        "de": "Lagerbox vermietet Lagerflächen, ideal für Renovierung.",
+        "key_evidence": "Ideal für Umzug, Renovierung",
+        "key_vocabulary": [
+          {
+            "word": "Lagerraum",
+            "type": "Nomen",
+            "meaning": "storage room"
+          }
+        ]
+      }
+    }
+  ],
+  "scoring": {
+    "total_points": 5,
+    "pass_threshold": 3,
+    "grading": [
+      {
+        "range": [
+          5,
+          5
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          4,
+          4
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          3,
+          3
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          1,
+          2
+        ],
+        "label": "Noch üben!",
+        "emoji": "📝"
+      },
+      {
+        "range": [
+          0,
+          0
+        ],
+        "label": "Mehr Übung nötig",
+        "emoji": "💪"
+      }
+    ]
+  },
+  "qa": {
+    "vocab_in_b1_list": true,
+    "grammar_b1_appropriate": true,
+    "word_count_in_range": true,
+    "all_answers_verifiable": true,
+    "null_matches_correct": true,
+    "image_count": 1,
+    "passed": true
+  }
+}

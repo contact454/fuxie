@@ -1,0 +1,50 @@
+{
+  "id": "W-A2-T1-006",
+  "cefrLevel": "A2",
+  "teil": 1,
+  "teilName": "E-Mail-Antwort",
+  "textType": "E-Mail",
+  "register": "informell",
+  "topic": "Restaurant",
+  "instruction": "Schreiben Sie eine Antwort-E-Mail (ca. 40-60 Woerter). Schreiben Sie zu allen drei Punkten.",
+  "instructionVi": "Tra loi email: Restaurant.",
+  "situation": "Eine Freundin laedt Sie zum Essen ein.",
+  "contentPoints": [
+    "sich bedanken",
+    "Restaurant vorschlagen",
+    "besondere Wuensche nennen"
+  ],
+  "minWords": 40,
+  "maxWords": 70,
+  "timeMinutes": 15,
+  "rubric": {
+    "criteria": [
+      {
+        "id": "inhalt",
+        "name": "Inhalt",
+        "nameVi": "Noi dung",
+        "maxScore": 5,
+        "weight": 30
+      },
+      {
+        "id": "korrektheit",
+        "name": "Korrektheit",
+        "nameVi": "Chinh xac",
+        "maxScore": 5,
+        "weight": 35
+      },
+      {
+        "id": "angemessenheit",
+        "name": "Kommunikative Angemessenheit",
+        "nameVi": "Phu hop giao tiep",
+        "maxScore": 5,
+        "weight": 35
+      }
+    ],
+    "maxScore": 15
+  },
+  "maxScore": 15,
+  "sourceText": "Hallo! Wie geht es dir? Ich möchte dich nächste Woche gerne zum Essen einladen. Welches Restaurant in der Stadt gefällt dir am besten? Hast du vielleicht besondere Wünsche oder gibt es etwas, das du gar nicht magst? Sag mir bitte Bescheid, damit ich reservieren kann. Ich freue mich!\n\nLiebe Grüße,\nSarah",
+  "sourceTextType": "E-Mail",
+  "stimulusSender": "Sarah"
+}

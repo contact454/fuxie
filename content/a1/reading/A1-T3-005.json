@@ -1,0 +1,276 @@
+{
+  "id": "A1-T3-005",
+  "level": "A1",
+  "teil": 3,
+  "teil_name": "Schilder und Aushänge",
+  "topic": "Wohnung suchen",
+  "topic_id": "005",
+  "metadata": {
+    "generated_at": "2026-03-09T02:45:00+07:00",
+    "version": 1
+  },
+  "schilder": [
+    {
+      "id": "Schild1",
+      "type": "Regel",
+      "text": "Hausordnung: Ruhezeiten von 22:00 bis 6:00 Uhr und von 13:00 bis 15:00 Uhr.",
+      "icon": "🔇"
+    },
+    {
+      "id": "Schild2",
+      "type": "Information",
+      "text": "Klingel defekt! Bitte beim Hausmeister melden. Büro im Erdgeschoss, Tür links.",
+      "icon": "🔔"
+    },
+    {
+      "id": "Schild3",
+      "type": "Regel",
+      "text": "Mülltonnen: Gelb für Plastik, Blau für Papier, Schwarz für Restmüll. Bitte trennen!",
+      "icon": "♻️"
+    },
+    {
+      "id": "Schild4",
+      "type": "Warnung",
+      "text": "Aufzug außer Betrieb! Bitte benutzen Sie die Treppe. Wir reparieren so schnell wie möglich.",
+      "icon": "⚠️"
+    },
+    {
+      "id": "Schild5",
+      "type": "Information",
+      "text": "Briefkasten: Bitte den Namen auf den Briefkasten schreiben. Sonst kommt keine Post.",
+      "icon": "📬"
+    }
+  ],
+  "images": [
+    {
+      "id": "IMG1",
+      "type": "schild",
+      "linked_schild": "Schild1",
+      "prompt": "Cartoon house rules sign: 'Ruhezeiten 22-6 Uhr und 13-15 Uhr.' Blue/gray quiet hours sign. Fuxie cartoon, legible font.",
+      "filename": "A1-T3-005_schild_1.png",
+      "placement": "schild_1",
+      "alt_text": "Hausordnung Ruhezeiten",
+      "dimensions": "400x300"
+    },
+    {
+      "id": "IMG2",
+      "type": "schild",
+      "linked_schild": "Schild2",
+      "prompt": "Cartoon broken doorbell sign: 'Klingel defekt! Bitte beim Hausmeister melden.' Yellow info sign with bell icon. Fuxie cartoon.",
+      "filename": "A1-T3-005_schild_2.png",
+      "placement": "schild_2",
+      "alt_text": "Klingel-defekt-Schild",
+      "dimensions": "400x300"
+    },
+    {
+      "id": "IMG3",
+      "type": "schild",
+      "linked_schild": "Schild3",
+      "prompt": "Cartoon recycling sign: 'Gelb=Plastik, Blau=Papier, Schwarz=Restmüll. Bitte trennen!' Green recycling sign with colored bins. Fuxie cartoon.",
+      "filename": "A1-T3-005_schild_3.png",
+      "placement": "schild_3",
+      "alt_text": "Mülltrennung-Schild",
+      "dimensions": "400x300"
+    },
+    {
+      "id": "IMG4",
+      "type": "schild",
+      "linked_schild": "Schild4",
+      "prompt": "Cartoon elevator out of order sign: 'Aufzug außer Betrieb! Bitte Treppe benutzen.' Red/orange warning sign. Fuxie cartoon.",
+      "filename": "A1-T3-005_schild_4.png",
+      "placement": "schild_4",
+      "alt_text": "Aufzug-außer-Betrieb-Schild",
+      "dimensions": "400x300"
+    },
+    {
+      "id": "IMG5",
+      "type": "schild",
+      "linked_schild": "Schild5",
+      "prompt": "Cartoon mailbox sign: 'Bitte Namen auf den Briefkasten schreiben.' Blue info sign with mailbox icon. Fuxie cartoon.",
+      "filename": "A1-T3-005_schild_5.png",
+      "placement": "schild_5",
+      "alt_text": "Briefkasten-Hinweisschild",
+      "dimensions": "400x300"
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q11",
+      "teil": 3,
+      "linked_schild": "Schild1",
+      "type": "richtig_falsch",
+      "statement": "Man darf um 14 Uhr laut Musik hören.",
+      "answer": "falsch",
+      "points": 1,
+      "explanation": {
+        "de": "Auf dem Schild steht: 'Ruhezeiten von 13:00 bis 15:00 Uhr.' Um 14 Uhr ist Ruhezeit.",
+        "key_evidence": "Ruhezeiten von 13:00 bis 15:00 Uhr",
+        "key_vocabulary": [
+          {
+            "word": "Ruhezeit",
+            "type": "Nomen",
+            "meaning": "quiet hours"
+          },
+          {
+            "word": "laut",
+            "type": "Adjektiv",
+            "meaning": "loud"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q12",
+      "teil": 3,
+      "linked_schild": "Schild2",
+      "type": "richtig_falsch",
+      "statement": "Die Klingel funktioniert nicht.",
+      "answer": "richtig",
+      "points": 1,
+      "explanation": {
+        "de": "Auf dem Schild steht: 'Klingel defekt!' Defekt bedeutet kaputt/funktioniert nicht.",
+        "key_evidence": "Klingel defekt",
+        "key_vocabulary": [
+          {
+            "word": "defekt",
+            "type": "Adjektiv",
+            "meaning": "broken"
+          },
+          {
+            "word": "Klingel",
+            "type": "Nomen",
+            "meaning": "doorbell"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q13",
+      "teil": 3,
+      "linked_schild": "Schild3",
+      "type": "richtig_falsch",
+      "statement": "Papier kommt in die gelbe Tonne.",
+      "answer": "falsch",
+      "points": 1,
+      "explanation": {
+        "de": "Auf dem Schild steht: 'Blau für Papier.' Papier kommt in die blaue Tonne, nicht in die gelbe.",
+        "key_evidence": "Blau für Papier",
+        "key_vocabulary": [
+          {
+            "word": "Papier",
+            "type": "Nomen",
+            "meaning": "paper"
+          },
+          {
+            "word": "Mülltonne",
+            "type": "Nomen",
+            "meaning": "trash bin"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q14",
+      "teil": 3,
+      "linked_schild": "Schild4",
+      "type": "richtig_falsch",
+      "statement": "Der Aufzug funktioniert heute nicht.",
+      "answer": "richtig",
+      "points": 1,
+      "explanation": {
+        "de": "Auf dem Schild steht: 'Aufzug außer Betrieb!' Außer Betrieb heißt: Er funktioniert nicht.",
+        "key_evidence": "Aufzug außer Betrieb",
+        "key_vocabulary": [
+          {
+            "word": "Aufzug",
+            "type": "Nomen",
+            "meaning": "elevator"
+          },
+          {
+            "word": "außer Betrieb",
+            "type": "Phrase",
+            "meaning": "out of order"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q15",
+      "teil": 3,
+      "linked_schild": "Schild5",
+      "type": "richtig_falsch",
+      "statement": "Man braucht keinen Namen auf dem Briefkasten.",
+      "answer": "falsch",
+      "points": 1,
+      "explanation": {
+        "de": "Auf dem Schild steht: 'Bitte den Namen auf den Briefkasten schreiben. Sonst kommt keine Post.'",
+        "key_evidence": "Bitte den Namen auf den Briefkasten schreiben",
+        "key_vocabulary": [
+          {
+            "word": "Briefkasten",
+            "type": "Nomen",
+            "meaning": "mailbox"
+          },
+          {
+            "word": "Post",
+            "type": "Nomen",
+            "meaning": "mail"
+          }
+        ]
+      }
+    }
+  ],
+  "scoring": {
+    "total_points": 5,
+    "pass_threshold": 3,
+    "grading": [
+      {
+        "range": [
+          5,
+          5
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          4,
+          4
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          3,
+          3
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          1,
+          2
+        ],
+        "label": "Noch üben!",
+        "emoji": "📝"
+      },
+      {
+        "range": [
+          0,
+          0
+        ],
+        "label": "Mehr Übung nötig",
+        "emoji": "💪"
+      }
+    ]
+  },
+  "qa": {
+    "all_signs_different_types": true,
+    "word_count_per_sign_valid": true,
+    "image_text_matches_sign": false,
+    "all_answers_verifiable": true,
+    "passed": false
+  }
+}

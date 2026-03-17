@@ -1,0 +1,278 @@
+{
+  "id": "A2-T4-001",
+  "level": "A2",
+  "teil": 4,
+  "teil_name": "Fahrpläne und Kalender lesen",
+  "topic": "Im Supermarkt",
+  "topic_id": "001",
+  "metadata": {
+    "word_count": 85,
+    "target_grammar": [
+      "Modalverben",
+      "Zeitangaben"
+    ],
+    "target_vocabulary": [
+      "Lieferservice",
+      "Bestellung",
+      "Mindestbestellwert",
+      "Liefergebiet",
+      "Zustellung",
+      "kostenlos",
+      "Gebühr",
+      "Wochentag",
+      "Feiertag",
+      "Stadtteil"
+    ],
+    "generated_at": "2026-03-09T22:45:00+07:00",
+    "version": 1
+  },
+  "schedule": {
+    "title": "EDEKA Lieferservice — Lieferzeiten & Gebiete",
+    "type": "delivery_schedule",
+    "columns": [
+      "Tag",
+      "Uhrzeit",
+      "Liefergebiet",
+      "Mindestbestellwert",
+      "Liefergebühr"
+    ],
+    "rows": [
+      [
+        "Montag",
+        "10:00–14:00",
+        "Mitte, Prenzlauer Berg",
+        "25 €",
+        "3,50 €"
+      ],
+      [
+        "Dienstag",
+        "10:00–14:00",
+        "Kreuzberg, Neukölln",
+        "25 €",
+        "3,50 €"
+      ],
+      [
+        "Mittwoch",
+        "10:00–14:00",
+        "Charlottenburg, Wilmersdorf",
+        "25 €",
+        "3,50 €"
+      ],
+      [
+        "Donnerstag",
+        "10:00–18:00",
+        "Alle Gebiete",
+        "20 €",
+        "kostenlos"
+      ],
+      [
+        "Freitag",
+        "10:00–14:00",
+        "Mitte, Kreuzberg",
+        "25 €",
+        "3,50 €"
+      ],
+      [
+        "Samstag",
+        "9:00–13:00",
+        "Alle Gebiete",
+        "30 €",
+        "4,50 €"
+      ]
+    ],
+    "footnote": "Sonntag und Feiertage: keine Lieferung. Bestellung online bis 20:00 am Vortag. Bei Bestellung ab 50 € ist die Lieferung immer kostenlos."
+  },
+  "images": [
+    {
+      "id": "IMG1",
+      "type": "schedule",
+      "prompt": "Cute cartoon illustration of a German grocery delivery van driving through a city neighborhood with colorful houses, a delivery person carrying grocery bags to a door. Fuxie cartoon style, flat illustration, warm pastel colors, no text.",
+      "filename": "A2-T4-001_schedule.png",
+      "placement": "header",
+      "alt_text": "EDEKA Lieferservice",
+      "dimensions": "768x512"
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q1",
+      "teil": 4,
+      "type": "detail_extraction",
+      "stem": "Wann kann man eine Lieferung nach Kreuzberg bekommen?",
+      "options": {
+        "a": "Am Montag und Mittwoch.",
+        "b": "Am Dienstag, Donnerstag und Freitag.",
+        "c": "Nur am Samstag."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Kreuzberg wird am Dienstag, Donnerstag (alle Gebiete) und Freitag beliefert.",
+        "key_evidence": "Dienstag: Kreuzberg, Neukölln / Donnerstag: Alle Gebiete / Freitag: Mitte, Kreuzberg",
+        "key_vocabulary": [
+          {
+            "word": "Liefergebiet",
+            "type": "Nomen",
+            "meaning": "delivery area"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q2",
+      "teil": 4,
+      "type": "detail_extraction",
+      "stem": "An welchem Tag ist die Lieferung kostenlos?",
+      "options": {
+        "a": "Am Montag.",
+        "b": "Am Donnerstag.",
+        "c": "Am Samstag."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Am Donnerstag ist die Liefergebühr kostenlos.",
+        "key_evidence": "Donnerstag: Liefergebühr kostenlos",
+        "key_vocabulary": [
+          {
+            "word": "kostenlos",
+            "type": "Adjektiv",
+            "meaning": "free of charge"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q3",
+      "teil": 4,
+      "type": "detail_extraction",
+      "stem": "Wie hoch ist der Mindestbestellwert am Samstag?",
+      "options": {
+        "a": "20 €.",
+        "b": "25 €.",
+        "c": "30 €."
+      },
+      "answer": "c",
+      "points": 1,
+      "explanation": {
+        "de": "Am Samstag beträgt der Mindestbestellwert 30 €.",
+        "key_evidence": "Samstag: Mindestbestellwert 30 €",
+        "key_vocabulary": [
+          {
+            "word": "Mindestbestellwert",
+            "type": "Nomen",
+            "meaning": "minimum order value"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q4",
+      "teil": 4,
+      "type": "detail_extraction",
+      "stem": "Bis wann muss man am Vortag bestellen?",
+      "options": {
+        "a": "Bis 18:00 Uhr.",
+        "b": "Bis 20:00 Uhr.",
+        "c": "Bis 22:00 Uhr."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Man muss online bis 20:00 am Vortag bestellen.",
+        "key_evidence": "Bestellung online bis 20:00 am Vortag",
+        "key_vocabulary": [
+          {
+            "word": "Vortag",
+            "type": "Nomen",
+            "meaning": "the day before"
+          },
+          {
+            "word": "Bestellung",
+            "type": "Nomen",
+            "meaning": "order"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q5",
+      "teil": 4,
+      "type": "detail_extraction",
+      "stem": "Ab welchem Betrag ist die Lieferung immer kostenlos?",
+      "options": {
+        "a": "Ab 30 €.",
+        "b": "Ab 40 €.",
+        "c": "Ab 50 €."
+      },
+      "answer": "c",
+      "points": 1,
+      "explanation": {
+        "de": "Ab 50 € Bestellung ist die Lieferung immer kostenlos.",
+        "key_evidence": "Bei Bestellung ab 50 € ist die Lieferung immer kostenlos",
+        "key_vocabulary": [
+          {
+            "word": "Lieferung",
+            "type": "Nomen",
+            "meaning": "delivery"
+          }
+        ]
+      }
+    }
+  ],
+  "scoring": {
+    "total_points": 5,
+    "pass_threshold": 3,
+    "grading": [
+      {
+        "range": [
+          5,
+          5
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          4,
+          4
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          3,
+          3
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          1,
+          2
+        ],
+        "label": "Noch üben!",
+        "emoji": "📝"
+      },
+      {
+        "range": [
+          0,
+          0
+        ],
+        "label": "Mehr Übung nötig",
+        "emoji": "💪"
+      }
+    ]
+  },
+  "qa": {
+    "vocab_in_a2_list": true,
+    "grammar_a2_only": true,
+    "word_count_in_range": true,
+    "all_answers_verifiable": true,
+    "schedule_data_consistent": true,
+    "image_count": 1,
+    "passed": true
+  }
+}

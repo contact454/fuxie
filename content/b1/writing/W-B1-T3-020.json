@@ -1,0 +1,64 @@
+{
+  "id": "W-B1-T3-020",
+  "cefrLevel": "B1",
+  "teil": 3,
+  "teilName": "Formelle E-Mail",
+  "textType": "Formeller Brief",
+  "register": "formell",
+  "topic": "Handyreparatur",
+  "instruction": "Sie haben Ihr Smartphone vor zwei Wochen zur Reparatur beim 'Smart-Fix Service' abgegeben. Die Reparatur sollte laut Beleg nur drei Tage dauern, aber Sie haben bisher keine Informationen erhalten. Schreiben Sie eine E-Mail an den Kundenservice.",
+  "instructionVi": "Bạn đã gửi điện thoại thông minh của mình để sửa chữa tại 'Smart-Fix Service' cách đây hai tuần. Theo biên lai, việc sửa chữa chỉ mất ba ngày, nhưng cho đến nay bạn vẫn chưa nhận được thông tin nào. Hãy viết một email gửi cho bộ phận chăm sóc khách hàng.",
+  "situation": "Ihr Handy ist für Ihre tägliche Arbeit absolut notwendig. Da Sie telefonisch niemanden im Geschäft erreichen konnten, schreiben Sie nun diese formelle Nachricht, um den Status Ihrer Reparatur (Auftragsnummer SF-9921) zu klären.",
+  "contentPoints": [
+    "Geben Sie den Grund für Ihr Schreiben an und nennen Sie die Auftragsnummer.",
+    "Beschreiben Sie das Problem (Verzögerung der Reparatur).",
+    "Erklären Sie, warum Sie das Gerät dringend benötigen.",
+    "Setzen Sie eine Frist für eine Rückmeldung oder die Fertigstellung."
+  ],
+  "sourceText": "Smart-Fix Service – REPARATUR-AUFTRAG Nr. SF-9921 | Annahmedatum: 05.05. | Gerät: iPhone 13 Pro | Schaden: Display-Schaden | Kostenvoranschlag: 180 € | Voraussichtliche Dauer: 3-4 Werktage | Techniker: Herr Wagner",
+  "sourceTextType": "Reparatur-Beleg",
+  "minWords": 80,
+  "maxWords": 120,
+  "timeMinutes": 25,
+  "rubric": {
+    "criteria": [
+      {
+        "id": "inhalt",
+        "name": "Inhalt",
+        "nameVi": "Nội dung",
+        "maxScore": 5,
+        "weight": 25
+      },
+      {
+        "id": "angemessenheit",
+        "name": "Kommunikative Angemessenheit",
+        "nameVi": "Phù hợp giao tiếp",
+        "maxScore": 5,
+        "weight": 20
+      },
+      {
+        "id": "korrektheit",
+        "name": "Korrektheit",
+        "nameVi": "Chính xác ngữ pháp & chính tả",
+        "maxScore": 5,
+        "weight": 25
+      },
+      {
+        "id": "spektrum",
+        "name": "Wortschatz & Strukturen",
+        "nameVi": "Đa dạng từ vựng & cấu trúc",
+        "maxScore": 5,
+        "weight": 15
+      },
+      {
+        "id": "kohaerenz",
+        "name": "Kohaerenz & Kohaesion",
+        "nameVi": "Mạch lạc & liên kết",
+        "maxScore": 5,
+        "weight": 15
+      }
+    ],
+    "maxScore": 25
+  },
+  "maxScore": 25
+}

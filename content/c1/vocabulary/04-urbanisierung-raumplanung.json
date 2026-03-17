@@ -1,0 +1,943 @@
+{
+  "theme": {
+    "slug": "c1-urbanisierung-raumplanung",
+    "name": "Urbanisierung & Raumplanung",
+    "nameVi": "Đô thị hóa & Quy hoạch không gian",
+    "nameEn": "Urbanization & Spatial Planning",
+    "sortOrder": 4,
+    "imageUrl": "/images/themes/c1-urbanisierung-raumplanung.png"
+  },
+  "words": [
+    {
+      "word": "Verstädterung",
+      "article": "FEMININ",
+      "plural": "die Verstädterungen",
+      "wordType": "NOMEN",
+      "meaningVi": "sự đô thị hóa",
+      "meaningEn": "urbanization",
+      "exampleSentence1": "Die rasante Verstädterung in vielen Entwicklungsländern führt zu erheblichen Herausforderungen bei der Bereitstellung angemessener Infrastruktur.",
+      "exampleTranslation1": "Sự đô thị hóa nhanh chóng ở nhiều nước đang phát triển dẫn đến những thách thức đáng kể trong việc cung cấp hạ tầng phù hợp.",
+      "exampleSentence2": "Um den negativen Folgen der unkontrollierten Verstädterung entgegenzuwirken, bedarf es einer vorausschauenden Raumplanung und nachhaltiger Konzepte.",
+      "exampleTranslation2": "Để chống lại những hậu quả tiêu cực của sự đô thị hóa không kiểm soát, cần có quy hoạch không gian mang tính dự báo và các khái niệm bền vững.",
+      "notes": "Bildungssprachlich/fachsprachlich. Beschreibt den Prozess des Wachstums von Städten und der Zunahme des Anteils der Stadtbevölkerung.",
+      "imageUrl": "/images/vocab/c1-urbanisierung-raumplanung/die-verstaedterung.png"
+    },
+    {
+      "word": "Gentrifizierung",
+      "article": "FEMININ",
+      "plural": "die Gentrifizierungen",
+      "wordType": "NOMEN",
+      "meaningVi": "sự chỉnh trang đô thị (dẫn đến tăng giá và thay đổi dân cư)",
+      "meaningEn": "gentrification",
+      "exampleSentence1": "Die Gentrifizierung innerstädtischer Viertel ist oft mit steigenden Mieten und der Verdrängung einkommensschwacher Bewohner verbunden.",
+      "exampleTranslation1": "Sự chỉnh trang đô thị ở các khu phố nội thành thường đi kèm với việc tăng giá thuê nhà và sự di dời của cư dân có thu nhập thấp.",
+      "exampleSentence2": "Städtische Entwicklungsprojekte müssen Mechanismen zur sozialen Abfederung implementieren, um der Gentrifizierung und ihren negativen Auswirkungen entgegenzuwirken.",
+      "exampleTranslation2": "Các dự án phát triển đô thị cần triển khai các cơ chế hỗ trợ xã hội để chống lại sự chỉnh trang đô thị và những tác động tiêu cực của nó.",
+      "notes": "Fachsprachlich/bildungssprachlich. Beschreibt den Prozess der sozioökonomischen Aufwertung eines Stadtteils, der oft zur Verdrängung der ursprünglichen Bewohner führt.",
+      "imageUrl": "/images/vocab/c1-urbanisierung-raumplanung/die-gentrifizierung.png"
+    },
+    {
+      "word": "Zersiedelung",
+      "article": "FEMININ",
+      "plural": "die Zersiedelungen",
+      "wordType": "NOMEN",
+      "meaningVi": "sự phân tán đô thị, sự phát triển đô thị dàn trải",
+      "meaningEn": "urban sprawl, urban fragmentation",
+      "exampleSentence1": "Die zunehmende Zersiedelung der Landschaft stellt eine große Herausforderung für den Schutz natürlicher Lebensräume und die Effizienz der Infrastruktur dar.",
+      "exampleTranslation1": "Sự phát triển đô thị dàn trải ngày càng tăng của cảnh quan đặt ra một thách thức lớn đối với việc bảo vệ môi trường sống tự nhiên và hiệu quả của cơ sở hạ tầng.",
+      "exampleSentence2": "Um die Zersiedelung einzudämmen, plädieren Raumplaner für eine stärkere Innenentwicklung und die Nachverdichtung bestehender Siedlungsgebiete.",
+      "exampleTranslation2": "Để kiềm chế sự phát triển đô thị dàn trải, các nhà quy hoạch không gian ủng hộ việc phát triển nội bộ mạnh mẽ hơn và tăng mật độ xây dựng ở các khu dân cư hiện có.",
+      "notes": "Fachsprachlich/bildungssprachlich. Beschreibt die Ausbreitung von Siedlungen in die freie Landschaft, oft ohne klare Strukturen und mit hohem Flächenverbrauch.",
+      "imageUrl": "/images/vocab/c1-urbanisierung-raumplanung/die-zersiedelung.png"
+    },
+    {
+      "word": "Bodenversiegelung",
+      "article": "FEMININ",
+      "plural": "die Bodenversiegelungen",
+      "wordType": "NOMEN",
+      "meaningVi": "sự bê tông hóa đất, sự phủ kín đất",
+      "meaningEn": "soil sealing, land sealing",
+      "exampleSentence1": "Die fortschreitende Bodenversiegelung durch Bebauung und Infrastrukturprojekte reduziert die natürlichen Funktionen des Bodens wie Wasserspeicherung und CO2-Bindung.",
+      "exampleTranslation1": "Sự bê tông hóa đất ngày càng tăng do xây dựng và các dự án hạ tầng làm giảm các chức năng tự nhiên của đất như lưu trữ nước và hấp thụ CO2.",
+      "exampleSentence2": "Maßnahmen zur Reduzierung der Bodenversiegelung sind essenziell für den Hochwasserschutz und die Förderung der Biodiversität in urbanen Räumen.",
+      "exampleTranslation2": "Các biện pháp giảm thiểu sự bê tông hóa đất là rất cần thiết cho việc chống lũ lụt và thúc đẩy đa dạng sinh học trong các khu vực đô thị.",
+      "notes": "Fachsprachlich. Bezeichnet das Bedecken von Bodenflächen mit undurchlässigen Materialien wie Asphalt oder Beton, was ökologische Folgen hat.",
+      "imageUrl": "/images/vocab/c1-urbanisierung-raumplanung/die-bodenversiegelung.png"
+    },
+    {
+      "word": "Infrastruktur",
+      "article": "FEMININ",
+      "plural": "die Infrastrukturen",
+      "wordType": "NOMEN",
+      "meaningVi": "cơ sở hạ tầng",
+      "meaningEn": "infrastructure",
+      "exampleSentence1": "Eine leistungsfähige Infrastruktur, die Verkehrswege, Energieversorgung und digitale Netze umfasst, ist grundlegend für die wirtschaftliche Entwicklung einer Region.",
+      "exampleTranslation1": "Một cơ sở hạ tầng hiệu quả, bao gồm đường giao thông, cung cấp năng lượng và mạng lưới kỹ thuật số, là nền tảng cho sự phát triển kinh tế của một khu vực.",
+      "exampleSentence2": "Die Modernisierung der öffentlichen Infrastruktur muss vorangetrieben werden, um den Anforderungen einer wachsenden Bevölkerung gerecht zu werden und die Lebensqualität zu sichern.",
+      "exampleTranslation2": "Việc hiện đại hóa cơ sở hạ tầng công cộng cần được đẩy mạnh để đáp ứng nhu cầu của dân số ngày càng tăng và đảm bảo chất lượng cuộc sống.",
+      "notes": "Fachsprachlich/bildungssprachlich. Sammelbegriff für die grundlegenden Einrichtungen und Anlagen eines Landes oder einer Region.",
+      "imageUrl": "/images/vocab/c1-urbanisierung-raumplanung/die-infrastruktur.png"
+    },
+    {
+      "word": "Quartiersentwicklung",
+      "article": "FEMININ",
+      "plural": "die Quartiersentwicklungen",
+      "wordType": "NOMEN",
+      "meaningVi": "phát triển khu dân cư/khu phố",
+      "meaningEn": "neighborhood development, district development",
+      "exampleSentence1": "Im Rahmen der Quartiersentwicklung werden umfassende Konzepte erarbeitet, um die Lebensqualität in bestehenden Wohngebieten zu verbessern.",
+      "exampleTranslation1": "Trong khuôn khổ phát triển khu dân cư, các khái niệm toàn diện được xây dựng để cải thiện chất lượng cuộc sống ở các khu dân cư hiện có.",
+      "exampleSentence2": "Eine erfolgreiche Quartiersentwicklung erfordert die aktive Beteiligung der Bewohner und eine integrierte Betrachtung sozialer, ökologischer und wirtschaftlicher Aspekte.",
+      "exampleTranslation2": "Phát triển khu dân cư thành công đòi hỏi sự tham gia tích cực của cư dân và việc xem xét tích hợp các khía cạnh xã hội, sinh thái và kinh tế.",
+      "notes": "Fachsprachlich. Bezieht sich auf die Planung, Gestaltung und Verbesserung von Stadtteilen oder Wohnvierteln.",
+      "imageUrl": "/images/vocab/c1-urbanisierung-raumplanung/die-quartiersentwicklung.png"
+    },
+    {
+      "word": "Partizipation",
+      "article": "FEMININ",
+      "plural": null,
+      "wordType": "NOMEN",
+      "meaningVi": "sự tham gia, sự đóng góp",
+      "meaningEn": "participation, involvement",
+      "exampleSentence1": "Die Einbindung der Bürger durch Partizipation ist ein zentrales Element moderner Stadtplanung, um Projekte bedarfsgerecht und akzeptiert umzusetzen.",
+      "exampleTranslation1": "Việc thu hút người dân thông qua sự tham gia là một yếu tố trung tâm của quy hoạch đô thị hiện đại, nhằm thực hiện các dự án đúng nhu cầu và được chấp nhận.",
+      "exampleSentence2": "Effektive Partizipationsprozesse können dazu beitragen, Konflikte zu minimieren und die Identifikation der Bewohner mit ihrem Lebensraum zu stärken.",
+      "exampleTranslation2": "Các quy trình tham gia hiệu quả có thể góp phần giảm thiểu xung đột và tăng cường sự gắn bó của cư dân với không gian sống của họ.",
+      "notes": "Bildungssprachlich/fachsprachlich. Bezeichnet die aktive Beteiligung von Individuen oder Gruppen an Entscheidungsprozessen.",
+      "imageUrl": "/images/vocab/c1-urbanisierung-raumplanung/die-partizipation.png"
+    },
+    {
+      "word": "Nachverdichtung",
+      "article": "FEMININ",
+      "plural": "die Nachverdichtungen",
+      "wordType": "NOMEN",
+      "meaningVi": "sự tăng mật độ xây dựng (trong khu vực đã có)",
+      "meaningEn": "infill development, densification (within existing areas)",
+      "exampleSentence1": "Die Nachverdichtung bestehender Siedlungsgebiete gilt als Schlüsselstrategie, um den Flächenverbrauch im Außenbereich zu reduzieren und die Infrastruktur effizienter zu nutzen.",
+      "exampleTranslation1": "Việc tăng mật độ xây dựng trong các khu dân cư hiện có được coi là chiến lược then chốt để giảm tiêu thụ đất ở khu vực ngoại ô và sử dụng cơ sở hạ tầng hiệu quả hơn.",
+      "exampleSentence2": "Trotz ihrer ökologischen Vorteile stößt die Nachverdichtung oft auf Widerstand in der Bevölkerung, die eine Verschlechterung der Wohnqualität befürchtet.",
+      "exampleTranslation2": "Mặc dù có những lợi ích về môi trường, việc tăng mật độ xây dựng thường vấp phải sự phản đối từ người dân, những người lo ngại về sự suy giảm chất lượng sống.",
+      "notes": "Fachsprachlich. Bezeichnet die Bebauung von freien Flächen innerhalb bereits erschlossener Siedlungsgebiete, um die bauliche Dichte zu erhöhen.",
+      "imageUrl": "/images/vocab/c1-urbanisierung-raumplanung/die-nachverdichtung.png"
+    },
+    {
+      "word": "Flächennutzungsplan",
+      "article": "MASKULIN",
+      "plural": "die Flächennutzungspläne",
+      "wordType": "NOMEN",
+      "meaningVi": "kế hoạch sử dụng đất",
+      "meaningEn": "land-use plan, general land-use plan",
+      "exampleSentence1": "Der Flächennutzungsplan legt die Grundzüge der Bodennutzung für das gesamte Gemeindegebiet fest und ist die Grundlage für nachfolgende Bebauungspläne.",
+      "exampleTranslation1": "Kế hoạch sử dụng đất quy định các nguyên tắc cơ bản về sử dụng đất cho toàn bộ khu vực đô thị và là cơ sở cho các kế hoạch xây dựng tiếp theo.",
+      "exampleSentence2": "Im Rahmen der Aufstellung des Flächennutzungsplans müssen die öffentlichen und privaten Belange umfassend abgewogen werden, um eine ausgewogene Entwicklung zu gewährleisten.",
+      "exampleTranslation2": "Trong quá trình lập kế hoạch sử dụng đất, các lợi ích công cộng và tư nhân phải được cân nhắc toàn diện để đảm bảo sự phát triển cân bằng.",
+      "notes": "Fachsprachlich (Baurecht/Raumplanung). Ein übergeordneter Plan, der die Art der Bodennutzung (z.B. Wohnen, Gewerbe, Grünflächen) einer Gemeinde darstellt.",
+      "imageUrl": "/images/vocab/c1-urbanisierung-raumplanung/der-flaechennutzungsplan.png"
+    },
+    {
+      "word": "demografische Wandel",
+      "article": "MASKULIN",
+      "plural": null,
+      "wordType": "NOMEN",
+      "meaningVi": "sự biến đổi dân số",
+      "meaningEn": "demographic change",
+      "exampleSentence1": "Der demografische Wandel mit einer alternden Gesellschaft und sinkenden Geburtenraten beeinflusst maßgeblich die Anforderungen an Wohnraum und soziale Infrastruktur.",
+      "exampleTranslation1": "Sự biến đổi dân số với một xã hội già hóa và tỷ lệ sinh giảm ảnh hưởng đáng kể đến các yêu cầu về nhà ở và cơ sở hạ tầng xã hội.",
+      "exampleSentence2": "Städte und Gemeinden müssen ihre Planungsstrategien an den demografischen Wandel anpassen, um zukunftsfähig zu bleiben und die Versorgung der Bevölkerung zu sichern.",
+      "exampleTranslation2": "Các thành phố và cộng đồng phải điều chỉnh chiến lược quy hoạch của mình để phù hợp với sự biến đổi dân số, nhằm duy trì khả năng phát triển trong tương lai và đảm bảo cung cấp dịch vụ cho người dân.",
+      "notes": "Bildungssprachlich/fachsprachlich. Beschreibt langfristige Veränderungen in der Bevölkerungsstruktur (z.B. Altersverteilung, Geburten-/Sterberaten, Migration).",
+      "imageUrl": "/images/vocab/c1-urbanisierung-raumplanung/der-demografische-wandel.png"
+    },
+    {
+      "word": "Daseinsvorsorge",
+      "article": "FEMININ",
+      "plural": null,
+      "wordType": "NOMEN",
+      "meaningVi": "cung cấp dịch vụ công cộng cơ bản",
+      "meaningEn": "public services, services of general interest",
+      "exampleSentence1": "Die Sicherstellung der Daseinsvorsorge, wie die Versorgung mit Wasser, Energie und Bildung, ist eine Kernaufgabe des Staates und der Kommunen.",
+      "exampleTranslation1": "Đảm bảo cung cấp dịch vụ công cộng cơ bản, như cung cấp nước, năng lượng và giáo dục, là một nhiệm vụ cốt lõi của nhà nước và các chính quyền địa phương.",
+      "exampleSentence2": "Im ländlichen Raum ist es zunehmend eine Herausforderung, die Qualität und Erreichbarkeit der Daseinsvorsorge angesichts sinkender Bevölkerungszahlen aufrechtzuerhalten.",
+      "exampleTranslation2": "Ở khu vực nông thôn, việc duy trì chất lượng và khả năng tiếp cận các dịch vụ công cộng cơ bản đang ngày càng trở thành một thách thức do dân số giảm.",
+      "notes": "Fachsprachlich (Verwaltungsrecht/Raumplanung). Bezeichnet die Bereitstellung grundlegender Güter und Dienstleistungen, die für ein menschenwürdiges Leben notwendig sind.",
+      "imageUrl": "/images/vocab/c1-urbanisierung-raumplanung/die-daseinsvorsorge.png"
+    },
+    {
+      "word": "Ressourcenschonung",
+      "article": "FEMININ",
+      "plural": null,
+      "wordType": "NOMEN",
+      "meaningVi": "tiết kiệm tài nguyên, bảo tồn tài nguyên",
+      "meaningEn": "resource conservation, resource efficiency",
+      "exampleSentence1": "Die Ressourcenschonung ist ein zentrales Leitprinzip für nachhaltige Stadtentwicklung, um ökologische Fußabdrücke zu minimieren und zukünftigen Generationen Chancen zu erhalten.",
+      "exampleTranslation1": "Tiết kiệm tài nguyên là một nguyên tắc chỉ đạo trung tâm cho phát triển đô thị bền vững, nhằm giảm thiểu dấu chân sinh thái và bảo toàn cơ hội cho các thế hệ tương lai.",
+      "exampleSentence2": "Innovative Technologien und kreislaufwirtschaftliche Ansätze tragen maßgeblich zur Ressourcenschonung in Bau und Betrieb von Gebäuden bei.",
+      "exampleTranslation2": "Các công nghệ đổi mới và cách tiếp cận kinh tế tuần hoàn đóng góp đáng kể vào việc tiết kiệm tài nguyên trong xây dựng và vận hành các tòa nhà.",
+      "notes": "Fachsprachlich/bildungssprachlich. Bezeichnet den sparsamen und effizienten Umgang mit natürlichen Ressourcen.",
+      "imageUrl": "/images/vocab/c1-urbanisierung-raumplanung/die-ressourcenschonung.png"
+    },
+    {
+      "word": "urbane Resilienz",
+      "article": "FEMININ",
+      "plural": null,
+      "wordType": "NOMEN",
+      "meaningVi": "khả năng phục hồi đô thị",
+      "meaningEn": "urban resilience",
+      "exampleSentence1": "Die Stärkung der urbanen Resilienz ist entscheidend, damit Städte widerstandsfähiger gegenüber Klimawandel, Naturkatastrophen und sozialen Krisen werden.",
+      "exampleTranslation1": "Việc tăng cường khả năng phục hồi đô thị là rất quan trọng để các thành phố trở nên kiên cường hơn trước biến đổi khí hậu, thiên tai và khủng hoảng xã hội.",
+      "exampleSentence2": "Konzepte zur urbanen Resilienz umfassen oft die Diversifizierung der Wirtschaft, die Verbesserung der Infrastruktur und die Förderung des sozialen Zusammenhalts.",
+      "exampleTranslation2": "Các khái niệm về khả năng phục hồi đô thị thường bao gồm việc đa dạng hóa kinh tế, cải thiện cơ sở hạ tầng và thúc đẩy sự gắn kết xã hội.",
+      "notes": "Fachsprachlich/bildungssprachlich. Beschreibt die Fähigkeit einer Stadt, auf Schocks und Stress (z.B. Klimawandel, Wirtschaftskrisen) zu reagieren und sich anzupassen.",
+      "imageUrl": "/images/vocab/c1-urbanisierung-raumplanung/die-urbane-resilienz.png"
+    },
+    {
+      "word": "Mischnutzung",
+      "article": "FEMININ",
+      "plural": "die Mischnutzungen",
+      "wordType": "NOMEN",
+      "meaningVi": "sử dụng hỗn hợp (đất đai/tòa nhà)",
+      "meaningEn": "mixed use (land/building)",
+      "exampleSentence1": "Die Förderung der Mischnutzung in neuen Baugebieten kann dazu beitragen, lebendige Stadtviertel zu schaffen und unnötige Pendelverkehre zu reduzieren.",
+      "exampleTranslation1": "Việc thúc đẩy sử dụng hỗn hợp trong các khu vực xây dựng mới có thể giúp tạo ra các khu phố sống động và giảm thiểu việc đi lại không cần thiết.",
+      "exampleSentence2": "Gebäude mit Mischnutzung, die Wohnen, Arbeiten und Freizeitangebote integrieren, erhöhen die Attraktivität und Funktionalität des städtischen Raums.",
+      "exampleTranslation2": "Các tòa nhà sử dụng hỗn hợp, tích hợp nhà ở, làm việc và các dịch vụ giải trí, làm tăng sức hấp dẫn và tính năng của không gian đô thị.",
+      "notes": "Fachsprachlich (Raumplanung). Bezeichnet die Nutzung von Flächen oder Gebäuden für verschiedene Zwecke (z.B. Wohnen, Gewerbe, Kultur) gleichzeitig oder nebeneinander.",
+      "imageUrl": "/images/vocab/c1-urbanisierung-raumplanung/die-mischnutzung.png"
+    },
+    {
+      "word": "Leerstand",
+      "article": "MASKULIN",
+      "plural": "die Leerstände",
+      "wordType": "NOMEN",
+      "meaningVi": "tình trạng bỏ trống, nhà trống",
+      "meaningEn": "vacancy, unoccupied property",
+      "exampleSentence1": "Ein hoher Leerstand in Innenstädten kann zu einer Verödung des öffentlichen Raums führen und die Attraktivität für Bewohner und Geschäfte mindern.",
+      "exampleTranslation1": "Tình trạng bỏ trống cao ở các trung tâm thành phố có thể dẫn đến sự hoang vắng của không gian công cộng và làm giảm sức hấp dẫn đối với cư dân và doanh nghiệp.",
+      "exampleSentence2": "Kommunale Strategien zur Aktivierung von Leerstand umfassen oft Förderprogramme für Umnutzungen oder Zwischennutzungen, um brachliegende Potenziale zu mobilisieren.",
+      "exampleTranslation2": "Các chiến lược của thành phố nhằm kích hoạt các tài sản bỏ trống thường bao gồm các chương trình khuyến khích việc chuyển đổi hoặc sử dụng tạm thời, để huy động tiềm năng chưa được khai thác.",
+      "notes": "Fachsprachlich/allgemeinsprachlich. Bezeichnet ungenutzte Gebäude oder Wohnungen.",
+      "imageUrl": "/images/vocab/c1-urbanisierung-raumplanung/der-leerstand.png"
+    },
+    {
+      "word": "Brachfläche",
+      "article": "FEMININ",
+      "plural": "die Brachflächen",
+      "wordType": "NOMEN",
+      "meaningVi": "đất bỏ hoang, đất hoang hóa",
+      "meaningEn": "brownfield, fallow land",
+      "exampleSentence1": "Die Revitalisierung von innerstädtischen Brachflächen bietet enormes Potenzial für die Schaffung neuer Wohn- und Arbeitsquartiere ohne weiteren Flächenverbrauch.",
+      "exampleTranslation1": "Việc hồi sinh các khu đất bỏ hoang trong nội thành mang lại tiềm năng to lớn để tạo ra các khu dân cư và làm việc mới mà không cần tiêu tốn thêm diện tích đất.",
+      "exampleSentence2": "Oft sind Brachflächen mit Altlasten kontaminiert, deren Sanierung hohe Kosten verursacht und die Entwicklung verzögern kann.",
+      "exampleTranslation2": "Các khu đất bỏ hoang thường bị ô nhiễm bởi các chất thải cũ, việc cải tạo chúng gây ra chi phí cao và có thể làm chậm quá trình phát triển.",
+      "notes": "Fachsprachlich. Bezeichnet eine ehemals genutzte, nun aber ungenutzte und oft verfallene Fläche, insbesondere in städtischen Gebieten.",
+      "imageUrl": "/images/vocab/c1-urbanisierung-raumplanung/die-brachflaeche.png"
+    },
+    {
+      "word": "Umnutzung",
+      "article": "FEMININ",
+      "plural": "die Umnutzungen",
+      "wordType": "NOMEN",
+      "meaningVi": "chuyển đổi mục đích sử dụng",
+      "meaningEn": "repurposing, conversion (of use)",
+      "exampleSentence1": "Die Umnutzung ehemaliger Industriegebäude zu Lofts oder Büroflächen ist ein häufiger Ansatz, um historische Bausubstanz zu erhalten und neue Funktionen zu integrieren.",
+      "exampleTranslation1": "Việc chuyển đổi mục đích sử dụng các tòa nhà công nghiệp cũ thành căn hộ gác mái hoặc không gian văn phòng là một cách tiếp cận phổ biến để bảo tồn kiến trúc lịch sử và tích hợp các chức năng mới.",
+      "exampleSentence2": "Bei der Umnutzung von Immobilien sind komplexe baurechtliche und denkmalpflegerische Anforderungen zu beachten, um eine nachhaltige Transformation zu gewährleisten.",
+      "exampleTranslation2": "Khi chuyển đổi mục đích sử dụng bất động sản, cần tuân thủ các yêu cầu pháp lý về xây dựng và bảo tồn di tích phức tạp để đảm bảo sự chuyển đổi bền vững.",
+      "notes": "Fachsprachlich. Beschreibt die Änderung des Verwendungszwecks eines Gebäudes oder einer Fläche.",
+      "imageUrl": "/images/vocab/c1-urbanisierung-raumplanung/die-umnutzung.png"
+    },
+    {
+      "word": "Gebietskulisse",
+      "article": "FEMININ",
+      "plural": "die Gebietskulissen",
+      "wordType": "NOMEN",
+      "meaningVi": "khu vực quy hoạch, bối cảnh khu vực",
+      "meaningEn": "area context, regional setting (for planning)",
+      "exampleSentence1": "Die Festlegung einer geeigneten Gebietskulisse ist der erste Schritt bei der Erstellung von Förderprogrammen für die Regionalentwicklung.",
+      "exampleTranslation1": "Việc xác định một khu vực quy hoạch phù hợp là bước đầu tiên trong việc xây dựng các chương trình hỗ trợ phát triển khu vực.",
+      "exampleSentence2": "Innerhalb der definierten Gebietskulisse werden spezifische Maßnahmen zur Stärkung der lokalen Wirtschaft und zur Verbesserung der Lebensbedingungen umgesetzt.",
+      "exampleTranslation2": "Trong phạm vi khu vực quy hoạch đã được xác định, các biện pháp cụ thể nhằm củng cố kinh tế địa phương và cải thiện điều kiện sống sẽ được triển khai.",
+      "notes": "Fachsprachlich (Raumplanung/Verwaltung). Bezeichnet ein räumlich abgegrenztes Gebiet, das für bestimmte Planungs- oder Fördermaßnahmen relevant ist.",
+      "imageUrl": "/images/vocab/c1-urbanisierung-raumplanung/die-gebietskulisse.png"
+    },
+    {
+      "word": "verdichten",
+      "article": null,
+      "plural": null,
+      "wordType": "VERB",
+      "meaningVi": "làm tăng mật độ, làm dày đặc",
+      "meaningEn": "to densify, to condense",
+      "exampleSentence1": "Angesichts des knappen Baulands versuchen viele Städte, ihre bestehenden Siedlungsgebiete durch Nachverdichtung zu verdichten.",
+      "exampleTranslation1": "Trong bối cảnh đất xây dựng khan hiếm, nhiều thành phố đang cố gắng làm tăng mật độ các khu dân cư hiện có thông qua việc xây dựng lấp đầy.",
+      "exampleSentence2": "Das Verdichten urbaner Räume soll nicht nur Wohnraum schaffen, sondern auch die Nutzung der Infrastruktur optimieren und den Flächenverbrauch reduzieren.",
+      "exampleTranslation2": "Việc làm tăng mật độ không gian đô thị không chỉ nhằm tạo ra nhà ở mà còn tối ưu hóa việc sử dụng cơ sở hạ tầng và giảm tiêu thụ đất đai.",
+      "notes": "Fachsprachlich. Im Kontext der Raumplanung: die bauliche Dichte erhöhen.",
+      "imageUrl": "/images/vocab/c1-urbanisierung-raumplanung/verdichten.png",
+      "conjugation": {
+        "praesens": {
+          "ich": "ich verdichte",
+          "du": "du verdichtest",
+          "er/sie/es": "er/sie/es verdichtet",
+          "wir": "wir verdichten",
+          "ihr": "ihr verdichtet",
+          "sie/Sie": "sie/Sie verdichten"
+        },
+        "praeteritum": {
+          "ich": "ich verdichtete",
+          "du": "du verdichtetest",
+          "er/sie/es": "er/sie/es verdichtete",
+          "wir": "wir verdichteten",
+          "ihr": "ihr verdichtetet",
+          "sie/Sie": "sie/Sie verdichteten"
+        },
+        "perfekt": {
+          "hilfsverb": "haben",
+          "partizip2": "verdichtet"
+        },
+        "konjunktiv2": {
+          "ich": "ich verdichtete",
+          "du": "du verdichtetest",
+          "er/sie/es": "er/sie/es verdichtete",
+          "wir": "wir verdichteten",
+          "ihr": "ihr verdichtetet",
+          "sie/Sie": "sie/Sie verdichteten"
+        },
+        "imperativ": {
+          "du": "verdichte",
+          "ihr": "verdichtet",
+          "Sie": "verdichten Sie"
+        }
+      }
+    },
+    {
+      "word": "revitalisieren",
+      "article": null,
+      "plural": null,
+      "wordType": "VERB",
+      "meaningVi": "hồi sinh, tái sinh",
+      "meaningEn": "to revitalize, to regenerate",
+      "exampleSentence1": "Es ist das Ziel der Stadtplaner, brachliegende Industrieareale zu revitalisieren und ihnen neue Funktionen zuzuführen.",
+      "exampleTranslation1": "Mục tiêu của các nhà quy hoạch đô thị là hồi sinh các khu công nghiệp bỏ hoang và mang lại cho chúng những chức năng mới.",
+      "exampleSentence2": "Durch gezielte Investitionen in die öffentliche Infrastruktur und Kulturangebote lässt sich ein vernachlässigtes Stadtviertel erfolgreich revitalisieren.",
+      "exampleTranslation2": "Thông qua các khoản đầu tư có mục tiêu vào cơ sở hạ tầng công cộng và các dịch vụ văn hóa, một khu phố bị bỏ quên có thể được hồi sinh thành công.",
+      "notes": "Bildungssprachlich/fachsprachlich. Etwas (z.B. ein Stadtteil, ein Gebäude) wiederbeleben, ihm neue Attraktivität oder Funktion verleihen.",
+      "imageUrl": "/images/vocab/c1-urbanisierung-raumplanung/revitalisieren.png",
+      "conjugation": {
+        "praesens": {
+          "ich": "ich revitalisiere",
+          "du": "du revitalisierst",
+          "er/sie/es": "er/sie/es revitalisiert",
+          "wir": "wir revitalisieren",
+          "ihr": "ihr revitalisiert",
+          "sie/Sie": "sie/Sie revitalisieren"
+        },
+        "praeteritum": {
+          "ich": "ich revitalisierte",
+          "du": "du revitalisiertest",
+          "er/sie/es": "er/sie/es revitalisierte",
+          "wir": "wir revitalisierten",
+          "ihr": "ihr revitalisiertet",
+          "sie/Sie": "sie/Sie revitalisierten"
+        },
+        "perfekt": {
+          "hilfsverb": "haben",
+          "partizip2": "revitalisiert"
+        },
+        "konjunktiv2": {
+          "ich": "ich revitalisierte",
+          "du": "du revitalisiertest",
+          "er/sie/es": "er/sie/es revitalisierte",
+          "wir": "wir revitalisierten",
+          "ihr": "ihr revitalisiertet",
+          "sie/Sie": "sie/Sie revitalisierten"
+        },
+        "imperativ": {
+          "du": "revitalisiere",
+          "ihr": "revitalisiert",
+          "Sie": "revitalisieren Sie"
+        }
+      }
+    },
+    {
+      "word": "erschließen",
+      "article": null,
+      "plural": null,
+      "wordType": "VERB",
+      "meaningVi": "khai thác, mở đường (cho khu vực)",
+      "meaningEn": "to develop (land), to open up (an area)",
+      "exampleSentence1": "Neue Wohngebiete müssen durch den Bau von Straßen, Leitungen und Anschlüssen erschlossen werden, bevor sie bebaut werden können.",
+      "exampleTranslation1": "Các khu dân cư mới cần được khai thác bằng cách xây dựng đường xá, đường ống và kết nối trước khi có thể xây dựng.",
+      "exampleSentence2": "Die Erschließung bislang unzugänglicher Naturräume für den Tourismus muss unter strengen Umweltauflagen erfolgen, um die Biodiversität zu schützen.",
+      "exampleTranslation2": "Việc khai thác các khu vực tự nhiên trước đây không thể tiếp cận cho du lịch phải tuân thủ các quy định môi trường nghiêm ngặt để bảo vệ đa dạng sinh học.",
+      "notes": "Fachsprachlich (Bau-/Raumplanung). Ein Gebiet durch Infrastrukturmaßnahmen für eine Nutzung zugänglich machen.",
+      "imageUrl": "/images/vocab/c1-urbanisierung-raumplanung/erschliessen.png",
+      "conjugation": {
+        "praesens": {
+          "ich": "ich erschließe",
+          "du": "du erschließt",
+          "er/sie/es": "er/sie/es erschließt",
+          "wir": "wir erschließen",
+          "ihr": "ihr erschließt",
+          "sie/Sie": "sie/Sie erschließen"
+        },
+        "praeteritum": {
+          "ich": "ich erschloss",
+          "du": "du erschlossest",
+          "er/sie/es": "er/sie/es erschloss",
+          "wir": "wir erschlossen",
+          "ihr": "ihr erschlosst",
+          "sie/Sie": "sie/Sie erschlossen"
+        },
+        "perfekt": {
+          "hilfsverb": "haben",
+          "partizip2": "erschlossen"
+        },
+        "konjunktiv2": {
+          "ich": "ich erschlösse",
+          "du": "du erschlössest",
+          "er/sie/es": "er/sie/es erschlösse",
+          "wir": "wir erschlössen",
+          "ihr": "ihr erschlösset",
+          "sie/Sie": "sie/Sie erschlössen"
+        },
+        "imperativ": {
+          "du": "erschließ",
+          "ihr": "erschließt",
+          "Sie": "erschließen Sie"
+        }
+      }
+    },
+    {
+      "word": "partizipieren",
+      "article": null,
+      "plural": null,
+      "wordType": "VERB",
+      "meaningVi": "tham gia, đóng góp",
+      "meaningEn": "to participate, to be involved",
+      "exampleSentence1": "Die Bürger sollen aktiv an der Gestaltung ihres Lebensraums partizipieren können, um die Akzeptanz von Planungsprojekten zu erhöhen.",
+      "exampleTranslation1": "Người dân nên có thể tích cực tham gia vào việc định hình không gian sống của họ, để tăng cường sự chấp nhận các dự án quy hoạch.",
+      "exampleSentence2": "Nur wenn alle Interessengruppen an Entscheidungsprozessen partizipieren, kann eine ausgewogene und zukunftsfähige Entwicklung gewährleistet werden.",
+      "exampleTranslation2": "Chỉ khi tất cả các bên liên quan tham gia vào các quy trình ra quyết định, sự phát triển cân bằng và bền vững mới có thể được đảm bảo.",
+      "notes": "Bildungssprachlich. Synonyme: teilnehmen, sich beteiligen. Oft mit Präposition 'an' + Dativ.",
+      "imageUrl": "/images/vocab/c1-urbanisierung-raumplanung/partizipieren.png",
+      "conjugation": {
+        "praesens": {
+          "ich": "ich partizipiere",
+          "du": "du partizipierst",
+          "er/sie/es": "er/sie/es partizipiert",
+          "wir": "wir partizipieren",
+          "ihr": "ihr partizipiert",
+          "sie/Sie": "sie/Sie partizipieren"
+        },
+        "praeteritum": {
+          "ich": "ich partizipierte",
+          "du": "du partizipiertest",
+          "er/sie/es": "er/sie/es partizipierte",
+          "wir": "wir partizipierten",
+          "ihr": "ihr partizipiertet",
+          "sie/Sie": "sie/Sie partizipierten"
+        },
+        "perfekt": {
+          "hilfsverb": "haben",
+          "partizip2": "partizipiert"
+        },
+        "konjunktiv2": {
+          "ich": "ich partizipierte",
+          "du": "du partizipiertest",
+          "er/sie/es": "er/sie/es partizipierte",
+          "wir": "wir partizipierten",
+          "ihr": "ihr partizipiertet",
+          "sie/Sie": "sie/Sie partizipierten"
+        },
+        "imperativ": {
+          "du": "partizipiere",
+          "ihr": "partizipiert",
+          "Sie": "partizipieren Sie"
+        }
+      }
+    },
+    {
+      "word": "versiegeln",
+      "article": null,
+      "plural": null,
+      "wordType": "VERB",
+      "meaningVi": "bê tông hóa, phủ kín (đất)",
+      "meaningEn": "to seal (soil/surface)",
+      "exampleSentence1": "Jede neue Bebauung birgt das Risiko, weitere Flächen zu versiegeln und damit natürliche Wasserabflüsse zu beeinträchtigen.",
+      "exampleTranslation1": "Mỗi công trình xây dựng mới đều tiềm ẩn nguy cơ bê tông hóa thêm các khu đất và do đó làm ảnh hưởng đến dòng chảy tự nhiên của nước.",
+      "exampleSentence2": "Um die Klimaanpassung zu fördern, sollten Kommunen darauf achten, möglichst wenig Boden zu versiegeln und stattdessen Gründächer oder wasserdurchlässige Beläge zu nutzen.",
+      "exampleTranslation2": "Để thúc đẩy thích ứng với biến đổi khí hậu, các chính quyền địa phương nên chú ý hạn chế tối đa việc bê tông hóa đất và thay vào đó sử dụng mái xanh hoặc vật liệu lát có khả năng thấm nước.",
+      "notes": "Fachsprachlich. Im Kontext der Raumplanung: Boden mit undurchlässigen Materialien bedecken.",
+      "imageUrl": "/images/vocab/c1-urbanisierung-raumplanung/versiegeln.png",
+      "conjugation": {
+        "praesens": {
+          "ich": "ich versiegle",
+          "du": "du versiegelst",
+          "er/sie/es": "er/sie/es versiegelt",
+          "wir": "wir versiegeln",
+          "ihr": "ihr versiegelt",
+          "sie/Sie": "sie/Sie versiegeln"
+        },
+        "praeteritum": {
+          "ich": "ich versiegelte",
+          "du": "du versiegeltest",
+          "er/sie/es": "er/sie/es versiegelte",
+          "wir": "wir versiegelten",
+          "ihr": "ihr versiegeltet",
+          "sie/Sie": "sie/Sie versiegelten"
+        },
+        "perfekt": {
+          "hilfsverb": "haben",
+          "partizip2": "versiegelt"
+        },
+        "konjunktiv2": {
+          "ich": "ich versiegelte",
+          "du": "du versiegeltest",
+          "er/sie/es": "er/sie/es versiegelte",
+          "wir": "wir versiegelten",
+          "ihr": "ihr versiegeltet",
+          "sie/Sie": "sie/Sie versiegelten"
+        },
+        "imperativ": {
+          "du": "versiegle",
+          "ihr": "versiegelt",
+          "Sie": "versiegeln Sie"
+        }
+      }
+    },
+    {
+      "word": "entgegenwirken",
+      "article": null,
+      "plural": null,
+      "wordType": "VERB",
+      "meaningVi": "chống lại, ngăn chặn",
+      "meaningEn": "to counteract, to counter, to oppose",
+      "exampleSentence1": "Die Stadtverwaltung ergreift Maßnahmen, um der fortschreitenden Verödung der Innenstadt entgegenzuwirken und neue Impulse zu setzen.",
+      "exampleTranslation1": "Chính quyền thành phố đang thực hiện các biện pháp để chống lại sự hoang vắng ngày càng tăng của trung tâm thành phố và tạo ra những động lực mới.",
+      "exampleSentence2": "Um dem Fachkräftemangel entgegenzuwirken, sind attraktive Wohn- und Arbeitsbedingungen in der Region unerlässlich.",
+      "exampleTranslation2": "Để chống lại tình trạng thiếu hụt lao động có tay nghề, điều kiện sống và làm việc hấp dẫn trong khu vực là không thể thiếu.",
+      "notes": "Bildungssprachlich/gehoben. Oft mit Dativ. Beschreibt das Handeln gegen eine unerwünschte Entwicklung oder Tendenz.",
+      "imageUrl": "/images/vocab/c1-urbanisierung-raumplanung/entgegenwirken.png",
+      "conjugation": {
+        "praesens": {
+          "ich": "ich wirke entgegen",
+          "du": "du wirkst entgegen",
+          "er/sie/es": "er/sie/es wirkt entgegen",
+          "wir": "wir wirken entgegen",
+          "ihr": "ihr wirkt entgegen",
+          "sie/Sie": "sie/Sie wirken entgegen"
+        },
+        "praeteritum": {
+          "ich": "ich wirkte entgegen",
+          "du": "du wirktest entgegen",
+          "er/sie/es": "er/sie/es wirkte entgegen",
+          "wir": "wir wirkten entgegen",
+          "ihr": "ihr wirktet entgegen",
+          "sie/Sie": "sie/Sie wirkten entgegen"
+        },
+        "perfekt": {
+          "hilfsverb": "haben",
+          "partizip2": "entgegengewirkt"
+        },
+        "konjunktiv2": {
+          "ich": "ich wirkte entgegen",
+          "du": "du wirktest entgegen",
+          "er/sie/es": "er/sie/es wirkte entgegen",
+          "wir": "wir wirkten entgegen",
+          "ihr": "ihr wirktet entgegen",
+          "sie/Sie": "sie/Sie wirkten entgegen"
+        },
+        "imperativ": {
+          "du": "wirk entgegen",
+          "ihr": "wirkt entgegen",
+          "Sie": "wirken Sie entgegen"
+        }
+      }
+    },
+    {
+      "word": "sanieren",
+      "article": null,
+      "plural": null,
+      "wordType": "VERB",
+      "meaningVi": "cải tạo, phục hồi, sửa chữa lớn",
+      "meaningEn": "to renovate, to rehabilitate, to redevelop",
+      "exampleSentence1": "Historische Gebäude im Stadtkern sollen denkmalgerecht saniert werden, um ihren ursprünglichen Charakter zu bewahren.",
+      "exampleTranslation1": "Các tòa nhà lịch sử ở trung tâm thành phố sẽ được cải tạo theo đúng quy định bảo tồn di tích để giữ gìn nét đặc trưng ban đầu của chúng.",
+      "exampleSentence2": "Die energetische Sanierung von Wohnkomplexen trägt maßgeblich zur Reduzierung des CO2-Ausstoßes und zur Senkung der Heizkosten bei.",
+      "exampleTranslation2": "Việc cải tạo năng lượng các khu chung cư đóng góp đáng kể vào việc giảm lượng khí thải CO2 và giảm chi phí sưởi ấm.",
+      "notes": "Fachsprachlich. Umfassende Erneuerung oder Instandsetzung von Gebäuden oder ganzen Stadtgebieten, oft mit dem Ziel der Modernisierung oder Erhaltung.",
+      "imageUrl": "/images/vocab/c1-urbanisierung-raumplanung/sanieren.png",
+      "conjugation": {
+        "praesens": {
+          "ich": "ich saniere",
+          "du": "du sanierst",
+          "er/sie/es": "er/sie/es saniert",
+          "wir": "wir sanieren",
+          "ihr": "ihr saniert",
+          "sie/Sie": "sie/Sie sanieren"
+        },
+        "praeteritum": {
+          "ich": "ich sanierte",
+          "du": "du saniertest",
+          "er/sie/es": "er/sie/es sanierte",
+          "wir": "wir sanierten",
+          "ihr": "ihr saniertet",
+          "sie/Sie": "sie/Sie sanierten"
+        },
+        "perfekt": {
+          "hilfsverb": "haben",
+          "partizip2": "saniert"
+        },
+        "konjunktiv2": {
+          "ich": "ich sanierte",
+          "du": "du saniertest",
+          "er/sie/es": "er/sie/es sanierte",
+          "wir": "wir sanierten",
+          "ihr": "ihr saniertet",
+          "sie/Sie": "sie/Sie sanierten"
+        },
+        "imperativ": {
+          "du": "saniere",
+          "ihr": "saniert",
+          "Sie": "sanieren Sie"
+        }
+      }
+    },
+    {
+      "word": "aufwerten",
+      "article": null,
+      "plural": null,
+      "wordType": "VERB",
+      "meaningVi": "nâng cấp, làm tăng giá trị",
+      "meaningEn": "to upgrade, to enhance, to appreciate",
+      "exampleSentence1": "Durch die Neugestaltung des öffentlichen Raums versucht die Stadt, das Quartier visuell und funktional aufzuwerten.",
+      "exampleTranslation1": "Thông qua việc tái thiết không gian công cộng, thành phố cố gắng nâng cấp khu phố về mặt thị giác và chức năng.",
+      "exampleSentence2": "Die Aufwertung eines Stadtteils kann leider auch zu steigenden Mieten und damit zur Verdrängung weniger wohlhabender Bewohner führen.",
+      "exampleTranslation2": "Việc nâng cấp một khu phố đáng tiếc cũng có thể dẫn đến việc tăng giá thuê và do đó đẩy những cư dân ít khá giả hơn ra khỏi khu vực.",
+      "notes": "Bildungssprachlich. Den Wert, die Attraktivität oder die Qualität von etwas erhöhen. Kollokation: ein Gebiet aufwerten.",
+      "imageUrl": "/images/vocab/c1-urbanisierung-raumplanung/aufwerten.png",
+      "conjugation": {
+        "praesens": {
+          "ich": "ich werte auf",
+          "du": "du wertest auf",
+          "er/sie/es": "er/sie/es wertet auf",
+          "wir": "wir werten auf",
+          "ihr": "ihr wertet auf",
+          "sie/Sie": "sie/Sie werten auf"
+        },
+        "praeteritum": {
+          "ich": "ich wertete auf",
+          "du": "du wertetest auf",
+          "er/sie/es": "er/sie/es wertete auf",
+          "wir": "wir werteten auf",
+          "ihr": "ihr wertetet auf",
+          "sie/Sie": "sie/Sie werteten auf"
+        },
+        "perfekt": {
+          "hilfsverb": "haben",
+          "partizip2": "aufgewertet"
+        },
+        "konjunktiv2": {
+          "ich": "ich wertete auf",
+          "du": "du wertetest auf",
+          "er/sie/es": "er/sie/es wertete auf",
+          "wir": "wir werteten auf",
+          "ihr": "ihr wertetet auf",
+          "sie/Sie": "sie/Sie werteten auf"
+        },
+        "imperativ": {
+          "du": "werte auf",
+          "ihr": "wertet auf",
+          "Sie": "werten Sie auf"
+        }
+      }
+    },
+    {
+      "word": "verdrängen",
+      "article": null,
+      "plural": null,
+      "wordType": "VERB",
+      "meaningVi": "di dời, đẩy ra, loại bỏ",
+      "meaningEn": "to displace, to push out, to oust",
+      "exampleSentence1": "Im Zuge der Gentrifizierung werden oft einkommensschwache Familien aus ihren angestammten Wohnvierteln verdrängt, da sie sich die Mieten nicht mehr leisten können.",
+      "exampleTranslation1": "Trong quá trình chỉnh trang đô thị, các gia đình có thu nhập thấp thường bị di dời khỏi khu phố quen thuộc của họ, vì họ không còn đủ khả năng chi trả tiền thuê nhà.",
+      "exampleSentence2": "Neue, großflächige Einzelhandelszentren auf der grünen Wiese verdrängen oft kleinere Geschäfte in den Innenstädten.",
+      "exampleTranslation2": "Các trung tâm bán lẻ quy mô lớn, mới mọc lên ở ngoại ô thường đẩy các cửa hàng nhỏ hơn ra khỏi trung tâm thành phố.",
+      "notes": "Bildungssprachlich. Jemanden oder etwas von seinem Platz oder aus seiner Position drängen.",
+      "imageUrl": "/images/vocab/c1-urbanisierung-raumplanung/verdraengen.png",
+      "conjugation": {
+        "praesens": {
+          "ich": "ich verdränge",
+          "du": "du verdrängst",
+          "er/sie/es": "er/sie/es verdrängt",
+          "wir": "wir verdrängen",
+          "ihr": "ihr verdrängt",
+          "sie/Sie": "sie/Sie verdrängen"
+        },
+        "praeteritum": {
+          "ich": "ich verdrängte",
+          "du": "du verdrängtest",
+          "er/sie/es": "er/sie/es verdrängte",
+          "wir": "wir verdrängten",
+          "ihr": "ihr verdrängtet",
+          "sie/Sie": "sie/Sie verdrängten"
+        },
+        "perfekt": {
+          "hilfsverb": "haben",
+          "partizip2": "verdrängt"
+        },
+        "konjunktiv2": {
+          "ich": "ich verdrängte",
+          "du": "du verdrängtest",
+          "er/sie/es": "er/sie/es verdrängte",
+          "wir": "wir verdrängten",
+          "ihr": "ihr verdrängtet",
+          "sie/Sie": "sie/Sie verdrängten"
+        },
+        "imperativ": {
+          "du": "verdränge",
+          "ihr": "verdrängt",
+          "Sie": "verdrängen Sie"
+        }
+      }
+    },
+    {
+      "word": "konsolidieren",
+      "article": null,
+      "plural": null,
+      "wordType": "VERB",
+      "meaningVi": "củng cố, hợp nhất",
+      "meaningEn": "to consolidate, to strengthen",
+      "exampleSentence1": "Um die städtische Entwicklung zu steuern, ist es wichtig, die Siedlungsstrukturen zu konsolidieren und eine weitere Zersiedelung zu vermeiden.",
+      "exampleTranslation1": "Để định hướng phát triển đô thị, điều quan trọng là phải củng cố các cấu trúc khu dân cư và tránh sự phân tán đô thị tiếp tục.",
+      "exampleSentence2": "Nach einer Phase des schnellen Wachstums muss das Unternehmen seine Marktposition konsolidieren und interne Abläufe optimieren.",
+      "exampleTranslation2": "Sau một giai đoạn tăng trưởng nhanh chóng, công ty phải củng cố vị thế thị trường và tối ưu hóa các quy trình nội bộ.",
+      "notes": "Bildungssprachlich/fachsprachlich. Etwas festigen, stabilisieren oder zusammenführen.",
+      "imageUrl": "/images/vocab/c1-urbanisierung-raumplanung/konsolidieren.png",
+      "conjugation": {
+        "praesens": {
+          "ich": "ich konsolidiere",
+          "du": "du konsolidierst",
+          "er/sie/es": "er/sie/es konsolidiert",
+          "wir": "wir konsolidieren",
+          "ihr": "ihr konsolidiert",
+          "sie/Sie": "sie/Sie konsolidieren"
+        },
+        "praeteritum": {
+          "ich": "ich konsolidierte",
+          "du": "du konsolidiertest",
+          "er/sie/es": "er/sie/es konsolidierte",
+          "wir": "wir konsolidierten",
+          "ihr": "ihr konsolidiertet",
+          "sie/Sie": "sie/Sie konsolidierten"
+        },
+        "perfekt": {
+          "hilfsverb": "haben",
+          "partizip2": "konsolidiert"
+        },
+        "konjunktiv2": {
+          "ich": "ich konsolidierte",
+          "du": "du konsolidiertest",
+          "er/sie/es": "er/sie/es konsolidierte",
+          "wir": "wir konsolidierten",
+          "ihr": "ihr konsolidiertet",
+          "sie/Sie": "sie/Sie konsolidierten"
+        },
+        "imperativ": {
+          "du": "konsolidiere",
+          "ihr": "konsolidiert",
+          "Sie": "konsolidieren Sie"
+        }
+      }
+    },
+    {
+      "word": "veröden",
+      "article": null,
+      "plural": null,
+      "wordType": "VERB",
+      "meaningVi": "trở nên hoang vắng, tiêu điều",
+      "meaningEn": "to become desolate, to decline, to waste away",
+      "exampleSentence1": "Ohne gezielte Fördermaßnahmen drohen viele ländliche Regionen aufgrund von Abwanderung und fehlender Infrastruktur zu veröden.",
+      "exampleTranslation1": "Nếu không có các biện pháp hỗ trợ có mục tiêu, nhiều khu vực nông thôn có nguy cơ trở nên hoang vắng do di cư và thiếu cơ sở hạ tầng.",
+      "exampleSentence2": "Die Innenstädte kleinerer Kommunen veröden zunehmend, da der Einzelhandel in größere Einkaufszentren abwandert.",
+      "exampleTranslation2": "Các trung tâm thành phố của các đô thị nhỏ ngày càng trở nên hoang vắng, do các cửa hàng bán lẻ di chuyển đến các trung tâm mua sắm lớn hơn.",
+      "notes": "Bildungssprachlich. Beschreibt einen Prozess des Verfalls, des Leerstands und des Verlusts an Vitalität, oft in Bezug auf Städte oder Landschaften.",
+      "imageUrl": "/images/vocab/c1-urbanisierung-raumplanung/veroeden.png",
+      "conjugation": {
+        "praesens": {
+          "ich": "ich veröde",
+          "du": "du verödest",
+          "er/sie/es": "er/sie/es verödet",
+          "wir": "wir veröden",
+          "ihr": "ihr verödet",
+          "sie/Sie": "sie/Sie veröden"
+        },
+        "praeteritum": {
+          "ich": "ich verödete",
+          "du": "du verödetest",
+          "er/sie/es": "er/sie/es verödete",
+          "wir": "wir verödeten",
+          "ihr": "ihr verödetet",
+          "sie/Sie": "sie/Sie verödeten"
+        },
+        "perfekt": {
+          "hilfsverb": "sein",
+          "partizip2": "verödet"
+        },
+        "konjunktiv2": {
+          "ich": "ich verödete",
+          "du": "du verödetest",
+          "er/sie/es": "er/sie/es verödete",
+          "wir": "wir verödeten",
+          "ihr": "ihr verödetet",
+          "sie/Sie": "sie/Sie verödeten"
+        },
+        "imperativ": {
+          "du": "veröde",
+          "ihr": "verödet",
+          "Sie": "veröden Sie"
+        }
+      }
+    },
+    {
+      "word": "nachhaltig",
+      "article": null,
+      "plural": null,
+      "wordType": "ADJEKTIV",
+      "meaningVi": "bền vững",
+      "meaningEn": "sustainable",
+      "exampleSentence1": "Eine nachhaltige Stadtentwicklung integriert ökologische, soziale und ökonomische Aspekte, um die Lebensqualität langfristig zu sichern.",
+      "exampleTranslation1": "Phát triển đô thị bền vững tích hợp các khía cạnh sinh thái, xã hội và kinh tế để đảm bảo chất lượng cuộc sống lâu dài.",
+      "exampleSentence2": "Um die Klimaziele zu erreichen, sind nachhaltige Mobilitätskonzepte und der Einsatz erneuerbarer Energien von entscheidender Bedeutung.",
+      "exampleTranslation2": "Để đạt được các mục tiêu về khí hậu, các khái niệm di chuyển bền vững và việc sử dụng năng lượng tái tạo là vô cùng quan trọng.",
+      "notes": "Bildungssprachlich/fachsprachlich. Bezieht sich auf eine Entwicklung, die die Bedürfnisse der Gegenwart befriedigt, ohne die Fähigkeit zukünftiger Generationen zu gefährden, ihre eigenen Bedürfnisse zu befriedigen.",
+      "imageUrl": "/images/vocab/c1-urbanisierung-raumplanung/nachhaltig.png"
+    },
+    {
+      "word": "raumwirksam",
+      "article": null,
+      "plural": null,
+      "wordType": "ADJEKTIV",
+      "meaningVi": "có tác động đến không gian",
+      "meaningEn": "having spatial impact, spatially effective",
+      "exampleSentence1": "Alle Planungen und Maßnahmen, die die Nutzung oder Gestaltung von Flächen betreffen, sind als raumwirksam zu bewerten.",
+      "exampleTranslation1": "Tất cả các quy hoạch và biện pháp liên quan đến việc sử dụng hoặc thiết kế không gian đều phải được đánh giá là có tác động đến không gian.",
+      "exampleSentence2": "Großflächige Infrastrukturprojekte haben eine erhebliche raumwirksame Dimension, die in der Regionalplanung berücksichtigt werden muss.",
+      "exampleTranslation2": "Các dự án hạ tầng quy mô lớn có một chiều kích tác động không gian đáng kể, cần được xem xét trong quy hoạch vùng.",
+      "notes": "Fachsprachlich (Raumplanung). Beschreibt etwas, das Auswirkungen auf die räumliche Struktur oder Nutzung eines Gebiets hat.",
+      "imageUrl": "/images/vocab/c1-urbanisierung-raumplanung/raumwirksam.png"
+    },
+    {
+      "word": "sozialverträglich",
+      "article": null,
+      "plural": null,
+      "wordType": "ADJEKTIV",
+      "meaningVi": "tương thích xã hội, được xã hội chấp nhận",
+      "meaningEn": "socially compatible, socially acceptable",
+      "exampleSentence1": "Entwicklungsprojekte müssen so gestaltet werden, dass sie sozialverträglich sind und keine negativen Auswirkungen auf die lokale Bevölkerung haben.",
+      "exampleTranslation1": "Các dự án phát triển phải được thiết kế sao cho tương thích xã hội và không gây ra tác động tiêu cực đến dân cư địa phương.",
+      "exampleSentence2": "Die Sicherstellung bezahlbaren Wohnraums ist ein zentrales Anliegen, um eine sozialverträgliche Stadtentwicklung zu gewährleisten und Segregation zu vermeiden.",
+      "exampleTranslation2": "Đảm bảo nhà ở giá cả phải chăng là một mối quan tâm trung tâm để đảm bảo phát triển đô thị tương thích xã hội và tránh phân hóa xã hội.",
+      "notes": "Bildungssprachlich/fachsprachlich. Beschreibt etwas, das mit den sozialen Gegebenheiten und Bedürfnissen einer Gesellschaft vereinbar ist und keine sozialen Konflikte hervorruft.",
+      "imageUrl": "/images/vocab/c1-urbanisierung-raumplanung/sozialvertraeglich.png"
+    },
+    {
+      "word": "interdisziplinär",
+      "article": null,
+      "plural": null,
+      "wordType": "ADJEKTIV",
+      "meaningVi": "liên ngành",
+      "meaningEn": "interdisciplinary",
+      "exampleSentence1": "Komplexe Herausforderungen der Stadtentwicklung erfordern einen interdisziplinären Ansatz, der Expertise aus Architektur, Soziologie und Ökologie vereint.",
+      "exampleTranslation1": "Những thách thức phức tạp của phát triển đô thị đòi hỏi một cách tiếp cận liên ngành, kết hợp chuyên môn từ kiến trúc, xã hội học và sinh thái học.",
+      "exampleSentence2": "Die Zusammenarbeit in interdisziplinären Teams ermöglicht es, umfassende Lösungen zu entwickeln, die alle relevanten Perspektiven berücksichtigen.",
+      "exampleTranslation2": "Sự hợp tác trong các nhóm liên ngành cho phép phát triển các giải pháp toàn diện, xem xét tất cả các khía cạnh liên quan.",
+      "notes": "Bildungssprachlich. Bezieht sich auf die Zusammenarbeit oder die Integration von Wissen aus verschiedenen Fachgebieten.",
+      "imageUrl": "/images/vocab/c1-urbanisierung-raumplanung/interdisziplinaer.png"
+    },
+    {
+      "word": "vorausschauend",
+      "article": null,
+      "plural": null,
+      "wordType": "ADJEKTIV",
+      "meaningVi": "có tầm nhìn xa, dự đoán trước",
+      "meaningEn": "forward-looking, proactive, anticipatory",
+      "exampleSentence1": "Eine vorausschauende Raumplanung antizipiert zukünftige Entwicklungen und schafft Rahmenbedingungen für eine langfristig positive Gestaltung der Lebensräume.",
+      "exampleTranslation1": "Quy hoạch không gian có tầm nhìn xa dự đoán các phát triển trong tương lai và tạo ra các khuôn khổ để định hình tích cực không gian sống về lâu dài.",
+      "exampleSentence2": "Vorausschauendes Handeln ist unerlässlich, um den Herausforderungen des Klimawandels und des demografischen Wandels erfolgreich begegnen zu können.",
+      "exampleTranslation2": "Hành động có tầm nhìn xa là điều cần thiết để có thể đối phó thành công với những thách thức của biến đổi khí hậu và biến đổi dân số.",
+      "notes": "Bildungssprachlich. Beschreibt eine Denk- oder Handlungsweise, die zukünftige Ereignisse oder Entwicklungen berücksichtigt und darauf reagiert.",
+      "imageUrl": "/images/vocab/c1-urbanisierung-raumplanung/vorausschauend.png"
+    },
+    {
+      "word": "integrativ",
+      "article": null,
+      "plural": null,
+      "wordType": "ADJEKTIV",
+      "meaningVi": "tích hợp, hòa nhập",
+      "meaningEn": "integrative, holistic",
+      "exampleSentence1": "Ein integrativer Planungsansatz berücksichtigt die Bedürfnisse aller Bevölkerungsgruppen und fördert den sozialen Zusammenhalt im Quartier.",
+      "exampleTranslation1": "Một cách tiếp cận quy hoạch tích hợp xem xét nhu cầu của tất cả các nhóm dân cư và thúc đẩy sự gắn kết xã hội trong khu phố.",
+      "exampleSentence2": "Die Entwicklung einer integrativen Stadt erfordert die Verknüpfung von Wohnen, Arbeiten, Bildung und Freizeitangeboten zu einem kohärenten Ganzen.",
+      "exampleTranslation2": "Sự phát triển của một thành phố tích hợp đòi hỏi sự kết nối giữa nhà ở, làm việc, giáo dục và các dịch vụ giải trí thành một tổng thể mạch lạc.",
+      "notes": "Bildungssprachlich. Beschreibt einen Ansatz, der verschiedene Teile, Aspekte oder Gruppen zusammenführt und als Ganzes betrachtet.",
+      "imageUrl": "/images/vocab/c1-urbanisierung-raumplanung/integrativ.png"
+    },
+    {
+      "word": "Landflucht",
+      "article": "FEMININ",
+      "plural": null,
+      "wordType": "NOMEN",
+      "meaningVi": "sự di cư từ nông thôn ra thành thị",
+      "meaningEn": "rural exodus, rural-to-urban migration",
+      "exampleSentence1": "Die Landflucht führt in vielen ländlichen Regionen zu einer Überalterung der Bevölkerung und dem Verlust von Infrastruktur und Dienstleistungen.",
+      "exampleTranslation1": "Sự di cư từ nông thôn ra thành thị ở nhiều vùng nông thôn dẫn đến tình trạng dân số già hóa quá mức và mất mát cơ sở hạ tầng cũng như dịch vụ.",
+      "exampleSentence2": "Um der Landflucht entgegenzuwirken, sind attraktive Arbeitsplätze, Bildungsmöglichkeiten und eine gute digitale Anbindung im ländlichen Raum entscheidend.",
+      "exampleTranslation2": "Để chống lại sự di cư từ nông thôn ra thành thị, việc có việc làm hấp dẫn, cơ hội giáo dục và kết nối kỹ thuật số tốt ở khu vực nông thôn là rất quan trọng.",
+      "notes": "Bildungssprachlich. Beschreibt die Abwanderung der Bevölkerung vom Land in die Städte.",
+      "imageUrl": "/images/vocab/c1-urbanisierung-raumplanung/die-landflucht.png"
+    },
+    {
+      "word": "Siedlungsentwicklung",
+      "article": "FEMININ",
+      "plural": "die Siedlungsentwicklungen",
+      "wordType": "NOMEN",
+      "meaningVi": "phát triển khu dân cư/đô thị",
+      "meaningEn": "settlement development, urban development",
+      "exampleSentence1": "Die Steuerung der Siedlungsentwicklung ist eine zentrale Aufgabe der Raumordnung, um eine nachhaltige Nutzung der Flächen zu gewährleisten.",
+      "exampleTranslation1": "Việc điều tiết phát triển khu dân cư là một nhiệm vụ trung tâm của quy hoạch không gian, nhằm đảm bảo việc sử dụng đất bền vững.",
+      "exampleSentence2": "Eine kompakte Siedlungsentwicklung reduziert den Flächenverbrauch und erleichtert die Bereitstellung effizienter öffentlicher Verkehrsmittel.",
+      "exampleTranslation2": "Phát triển khu dân cư nhỏ gọn giúp giảm tiêu thụ đất đai và tạo điều kiện thuận lợi cho việc cung cấp các phương tiện giao thông công cộng hiệu quả.",
+      "notes": "Fachsprachlich (Raumplanung). Bezeichnet die Planung und Gestaltung der Ausdehnung und Struktur von Siedlungen.",
+      "imageUrl": "/images/vocab/c1-urbanisierung-raumplanung/die-siedlungsentwicklung.png"
+    },
+    {
+      "word": "Nutzungsdruck",
+      "article": "MASKULIN",
+      "plural": null,
+      "wordType": "NOMEN",
+      "meaningVi": "áp lực sử dụng",
+      "meaningEn": "pressure of use, utilization pressure",
+      "exampleSentence1": "Aufgrund des Bevölkerungswachstums und der wirtschaftlichen Entwicklung steigt der Nutzungsdruck auf die begrenzten Flächen im urbanen Raum.",
+      "exampleTranslation1": "Do tăng trưởng dân số và phát triển kinh tế, áp lực sử dụng đối với các diện tích đất hạn chế trong không gian đô thị ngày càng tăng.",
+      "exampleSentence2": "Um den Nutzungsdruck zu mindern, sind Konzepte der Mischnutzung und Nachverdichtung von großer Bedeutung.",
+      "exampleTranslation2": "Để giảm bớt áp lực sử dụng, các khái niệm về sử dụng hỗn hợp và tăng mật độ xây dựng là rất quan trọng.",
+      "notes": "Fachsprachlich. Bezeichnet die Belastung oder Beanspruchung von Flächen oder Ressourcen durch verschiedene Nutzungsinteressen.",
+      "imageUrl": "/images/vocab/c1-urbanisierung-raumplanung/der-nutzungsdruck.png"
+    },
+    {
+      "word": "Überbauung",
+      "article": "FEMININ",
+      "plural": "die Überbauungen",
+      "wordType": "NOMEN",
+      "meaningVi": "sự xây dựng quá mức, sự phủ kín (bằng công trình)",
+      "meaningEn": "overbuilding, construction (on a specific area)",
+      "exampleSentence1": "Die Überbauung von Grünflächen führt zu einem Verlust an Erholungsräumen und beeinträchtigt das Mikroklima in der Stadt.",
+      "exampleTranslation1": "Việc xây dựng quá mức trên các không gian xanh dẫn đến mất đi các khu vực giải trí và ảnh hưởng đến khí hậu vi mô trong thành phố.",
+      "exampleSentence2": "Die Bürgerinitiative protestiert gegen die geplante Überbauung des ehemaligen Sportplatzes, um den Freiraum zu erhalten.",
+      "exampleTranslation2": "Sáng kiến của công dân phản đối việc xây dựng dự kiến trên sân thể thao cũ để bảo tồn không gian mở.",
+      "notes": "Fachsprachlich (Bau-/Raumplanung). Bezeichnet das Bebauen einer Fläche oder auch die Ausdehnung von Bebauung.",
+      "imageUrl": "/images/vocab/c1-urbanisierung-raumplanung/die-ueberbauung.png"
+    }
+  ]
+}

@@ -1,0 +1,211 @@
+{
+  "id": "C1-T2-009",
+  "level": "C1",
+  "teil": 2,
+  "teil_name": "Sachtext verstehen",
+  "topic": "Kunst & Ästhetik",
+  "topic_id": "009",
+  "metadata": {
+    "word_count": 315,
+    "target_grammar": [
+      "Nominalisierung",
+      "Partizipialkonstruktionen",
+      "Konjunktiv I/II",
+      "Passiversatzformen"
+    ],
+    "target_vocabulary": [],
+    "generated_at": "2026-03-11T23:00:46.154030",
+    "version": 1
+  },
+  "article": {
+    "title": "Digitale Kunst und die Neudefinition des Originals",
+    "source": "Wissenschaftliches Fachmagazin",
+    "text": "Die Frage, was ein Kunstwerk zu einem Original macht, beschäftigt die Ästhetik seit Jahrhunderten. Mit dem Aufkommen digitaler Kunst hat diese Debatte eine neue Dringlichkeit erlangt, denn im digitalen Raum ist eine perfekte Kopie vom vermeintlichen Original technisch nicht zu unterscheiden.\n\nWalter Benjamin beschrieb bereits 1935 den Verlust der Aura des Kunstwerks im Zeitalter seiner technischen Reproduzierbarkeit. Was für Fotografie und Film galt, potenziert sich in der digitalen Welt ins Extreme: Eine Bilddatei kann beliebig oft kopiert werden, ohne dass die Kopie qualitativ vom Original abweicht. Der Begriff der Einzigartigkeit, der den Wert traditioneller Kunst maßgeblich bestimmt, verliert in diesem Kontext seine materielle Grundlage.\n\nDie Einführung von Non-Fungible Tokens schien eine technologische Lösung für dieses Problem zu bieten. NFTs ermöglichen es, ein spezifisches digitales Werk auf einer Blockchain als Original zu zertifizieren und damit künstliche Knappheit zu erzeugen. Der Höhepunkt des NFT-Booms im Frühjahr 2021, als digitale Werke für zweistellige Millionenbeträge versteigert wurden, demonstrierte die Bereitschaft des Marktes, für digitale Originalität zu zahlen.\n\nDoch die anschließende Ernüchterung war ebenso drastisch. Der Wert vieler NFT-Kunstwerke stürzte um 90 Prozent und mehr ab, und Kritiker wiesen darauf hin, dass ein NFT lediglich einen Eigentumstitel auf der Blockchain darstellt, nicht aber die Kontrolle über das Werk selbst. Die Bilddatei kann weiterhin beliebig kopiert und verbreitet werden; der NFT-Besitzer hat lediglich ein digitales Echtheitszertifikat erworben.\n\nAuf einer tieferen Ebene berührt die Debatte fundamentale Fragen der Ästhetik. Liegt der Wert eines Kunstwerks in seiner physischen Einzigartigkeit, in der kreativen Vision des Künstlers oder in der Erfahrung des Betrachters? Die Konzeptkunst hat bereits in den 1960er Jahren argumentiert, dass die Idee hinter einem Werk wichtiger ist als seine materielle Manifestation.\n\nMuseumskuratoren experimentieren zunehmend mit digitalen Ausstellungsformaten, die diese Fragen aufgreifen. Immersive Installationen, die den Betrachter in digitale Kunstwelten eintauchen lassen, schaffen einzigartige Erlebnisse, die per Definition nicht reproduzierbar sind — auch wenn das zugrundeliegende Werk selbst digital und damit kopierbar ist."
+  },
+  "images": [
+    {
+      "id": "IMG1",
+      "type": "scene",
+      "prompt": "Cute cartoon illustration related to Kunst & Ästhetik. Fuxie cartoon style, flat illustration, warm pastel colors, no text.",
+      "filename": "C1-T2-009_scene.png",
+      "placement": "header",
+      "alt_text": "Digitale Kunst und die Neudefinition des Originals",
+      "dimensions": "768x512"
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q1",
+      "teil": 2,
+      "type": "multiple_choice",
+      "stem": "Welche implizite Annahme liegt der Darstellung von in der digitalen Welt vom Original technisch nicht zu unterscheiden zugrunde?",
+      "options": {
+        "a": "Die Signatur des Künstlers.",
+        "b": "Eine perfekte Kopie.",
+        "c": "Der Rahmen."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Mit dem Aufkommen digitaler Kunst hat diese Debatte eine neue Dringlichkeit erlangt, denn im digitalen Raum ist eine perfekte Kopie vom vermeintlic...",
+        "reasoning": "[Inferential] Die richtige Antwort (b) ergibt sich aus dem Textkontext."
+      }
+    },
+    {
+      "id": "Q2",
+      "teil": 2,
+      "type": "multiple_choice",
+      "stem": "Wer beschrieb den Verlust der Aura des Kunstwerks?",
+      "options": {
+        "a": "Martin Heidegger.",
+        "b": "Walter Benjamin.",
+        "c": "Theodor Adorno."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Walter Benjamin beschrieb bereits 1935 den Verlust der Aura des Kunstwerks im Zeitalter seiner technischen Reproduzierbarkeit.",
+        "reasoning": "Die richtige Antwort (b) ergibt sich aus dem Textkontext."
+      }
+    },
+    {
+      "id": "Q3",
+      "teil": 2,
+      "type": "multiple_choice",
+      "stem": "Um wie viel Prozent fiel der Wert vieler NFT-Kunstwerke?",
+      "options": {
+        "a": "50 Prozent.",
+        "b": "90 Prozent und mehr.",
+        "c": "30 Prozent."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Der Wert vieler NFT-Kunstwerke stürzte um 90 Prozent und mehr ab, und Kritiker wiesen darauf hin, dass ein NFT lediglich einen Eigentumstitel auf d...",
+        "reasoning": "Die richtige Antwort (b) ergibt sich aus dem Textkontext."
+      }
+    },
+    {
+      "id": "Q4",
+      "teil": 2,
+      "type": "multiple_choice",
+      "stem": "Was lässt sich aus der Argumentation über besitzt ein NFT-Besitzer tatsächlich ableiten?",
+      "options": {
+        "a": "Die Kontrolle über alle Kopien.",
+        "b": "Ein digitales Echtheitszertifikat.",
+        "c": "Das Copyright am Werk."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Die Bilddatei kann weiterhin beliebig kopiert und verbreitet werden; der NFT-Besitzer hat lediglich ein digitales Echtheitszertifikat erworben.",
+        "reasoning": "[Inferential] Die richtige Antwort (b) ergibt sich aus dem Textkontext."
+      }
+    },
+    {
+      "id": "Q5",
+      "teil": 2,
+      "type": "multiple_choice",
+      "stem": "Welche Gegenposition zu argumentierte die Konzeptkunst wird im Text nicht berücksichtigt?",
+      "options": {
+        "a": "Material ist wichtiger als die Idee.",
+        "b": "Die Idee hinter dem Werk ist wichtiger als seine materielle Form.",
+        "c": "Nur physische Kunst ist echte Kunst."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Die Konzeptkunst hat bereits in den 1960er Jahren argumentiert, dass die Idee hinter einem Werk wichtiger ist als seine materielle Manifestation.",
+        "reasoning": "[Critical] Die richtige Antwort (b) ergibt sich aus dem Textkontext."
+      }
+    },
+    {
+      "id": "Q6",
+      "teil": 2,
+      "type": "multiple_choice",
+      "stem": "Welche Gegenposition zu erreichte der NFT-Boom seinen Höhepunkt wird im Text nicht berücksichtigt?",
+      "options": {
+        "a": "Ende 2019.",
+        "b": "Frühjahr 2021.",
+        "c": "Sommer 2023."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Der Höhepunkt des NFT-Booms im Frühjahr 2021, als digitale Werke für zweistellige Millionenbeträge versteigert wurden, demonstrierte die Bereitscha...",
+        "reasoning": "[Critical] Die richtige Antwort (b) ergibt sich aus dem Textkontext."
+      }
+    },
+    {
+      "id": "Q7",
+      "teil": 2,
+      "type": "multiple_choice",
+      "stem": "Was impliziert die Darstellung von schaffen immersive Installationen für die Gesamtthese?",
+      "options": {
+        "a": "Billige Kopien.",
+        "b": "Einzigartige, nicht reproduzierbare Erlebnisse.",
+        "c": "Virtuelle Galerien zum Kaufen."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Immersive Installationen, die den Betrachter in digitale Kunstwelten eintauchen lassen, schaffen einzigartige Erlebnisse, die per Definition nicht ...",
+        "reasoning": "[Inferential] Die richtige Antwort (b) ergibt sich aus dem Textkontext."
+      }
+    }
+  ],
+  "scoring": {
+    "total_points": 7,
+    "pass_threshold": 5,
+    "grading": [
+      {
+        "range": [
+          6,
+          7
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          4,
+          5
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          3,
+          3
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          1,
+          2
+        ],
+        "label": "Noch üben!",
+        "emoji": "📝"
+      },
+      {
+        "range": [
+          0,
+          0
+        ],
+        "label": "Mehr Übung nötig",
+        "emoji": "💪"
+      }
+    ]
+  },
+  "qa": {
+    "vocab_in_c1_list": true,
+    "grammar_c1_appropriate": true,
+    "word_count_in_range": true,
+    "all_answers_verifiable": true,
+    "image_count": 1,
+    "passed": true
+  }
+}

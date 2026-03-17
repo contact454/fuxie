@@ -1,0 +1,92 @@
+{
+  "id": "W-C2-T1-013",
+  "cefrLevel": "C2",
+  "teil": 1,
+  "teilName": "Akademischer Text",
+  "textType": "Eroerterung",
+  "register": "akademisch",
+  "topic": "Konsumethik",
+  "instruction": "Verfassen Sie im Rahmen eines Seminars für Wirtschaftssoziologie eine wissenschaftlich fundierte Erörterung zum Thema 'Die moralische Last des Konsums – Individuelle Verantwortung versus systemische Regulierung'. Integrieren Sie dabei die Kernaussagen der beiden Quellentexte und analysieren Sie die vorliegende Grafik. Diskutieren Sie kritisch, inwieweit bewusster Konsum tatsächliche gesellschaftliche Veränderungen bewirken kann.",
+  "instructionVi": "Trong khuôn khổ một hội thảo về xã hội học kinh tế, hãy viết một bài luận học thuật về chủ đề 'Gánh nặng đạo đức của tiêu dùng – Trách nhiệm cá nhân đối với quy định hệ thống'. Hãy kết hợp các ý chính từ hai văn bản nguồn và phân tích biểu đồ được cung cấp. Thảo luận phản biện về việc tiêu dùng có ý thức có thể tạo ra những thay đổi xã hội thực sự ở mức độ nào.",
+  "situation": "In einer Zeit globaler ökologischer Krisen wird die Rolle des Endverbrauchers oft als Schlüssel zur Nachhaltigkeit dargestellt. Dennoch bleibt die Frage umstritten, ob der 'ethische Konsum' lediglich ein Privileg wohlhabender Schichten ist oder ein wirksames Instrument zur Transformation der Marktwirtschaft darstellt.",
+  "contentPoints": [
+    "Zusammenfassung der gegensätzlichen Positionen aus den Quellentexten zur Wirksamkeit des individuellen Konsumverzichts.",
+    "Detaillierte Analyse der Grafik bezüglich der Diskrepanz zwischen moralischem Anspruch und tatsächlichem Kaufverhalten.",
+    "Kritische Erörterung der Frage, ob individuelle Kaufentscheidungen die politische Rahmensetzung ersetzen können oder lediglich ergänzen.",
+    "Stellungnahme zur Notwendigkeit staatlicher Eingriffe (z.B. CO2-Steuer, Lieferkettengesetze) im Vergleich zur Strategie der Konsumentenaufklärung."
+  ],
+  "sourceText": "Text 1: 'Die Macht des Kassenzettels' (Wirtschaftswoche): Die moderne Marktwirtschaft ist demokratischer als viele glauben. Jeder Euro, den wir für regional erzeugte Bio-Produkte ausgeben, fungiert als Stimmzettel gegen ausbeuterische Produktionsbedingungen und Umweltzerstörung. Der Trend zum 'LOHAS' (Lifestyle of Health and Sustainability) zeigt, dass Konzerne auf die moralischen Forderungen der Kunden reagieren. Wer die Verantwortung allein auf die Politik schiebt, verkennt die Macht der Nachfrage, die letztlich das Angebot definiert.\n\nText 2: 'Die Illusion der sauberen Weste' (Der Spiegel): Individueller Konsumethik sind enge Grenzen gesetzt. Das System ist so komplex, dass ein Verbraucher kaum die gesamte Lieferkette eines Smartphones oder T-Shirts überblicken kann. Zudem führt die Fixierung auf den Einzelnen zur 'Privatisierung der Schuld': Während sich Bürger um Plastikhalme sorgen, agieren Großindustrien weitgehend ungestört unter vorteilhaften gesetzlichen Bedingungen. Ohne strikte globale Verbote und ökologische Preistransparenz bleibt ethisches Shoppen ein reines Lifestyle-Phänomen ohne messbaren Impact.",
+  "sourceTextType": "Zeitungsartikel (Auszüge)",
+  "grafikDesc": "Balkendiagramm: 'Wichtigste Kriterien beim Lebensmittelkauf in Deutschland (2023)' - Vergleich zwischen der theoretischen Wichtigkeit von Ethik und dem tatsächlichen Kaufgrund Preis.",
+  "grafikData": [
+    {
+      "label": "Preis/Angebot",
+      "value": 78,
+      "unit": "Prozent"
+    },
+    {
+      "label": "Qualität & Geschmack",
+      "value": 82,
+      "unit": "Prozent"
+    },
+    {
+      "label": "Regionale Herkunft",
+      "value": 45,
+      "unit": "Prozent"
+    },
+    {
+      "label": "Bio-Zertifizierung/Tierwohl",
+      "value": 31,
+      "unit": "Prozent"
+    },
+    {
+      "label": "Umweltfreundliche Verpackung",
+      "value": 24,
+      "unit": "Prozent"
+    }
+  ],
+  "minWords": 350,
+  "maxWords": null,
+  "timeMinutes": 60,
+  "rubric": {
+    "criteria": [
+      {
+        "id": "inhalt",
+        "name": "Inhalt",
+        "nameVi": "Nội dung",
+        "maxScore": 5,
+        "weight": 20
+      },
+      {
+        "id": "angemessenheit",
+        "name": "Kommunikative Angemessenheit",
+        "nameVi": "Phù hợp giao tiếp",
+        "maxScore": 5,
+        "weight": 20
+      },
+      {
+        "id": "korrektheit",
+        "name": "Korrektheit",
+        "nameVi": "Chính xác ngữ pháp & chính tả",
+        "maxScore": 5,
+        "weight": 20
+      },
+      {
+        "id": "spektrum",
+        "name": "Wortschatz & Strukturen",
+        "nameVi": "Đa dạng từ vựng & cấu trúc",
+        "maxScore": 5,
+        "weight": 20
+      },
+      {
+        "id": "kohaerenz",
+        "name": "Kohaerenz & Kohaesion",
+        "nameVi": "Mạch lạc & liên kết",
+        "maxScore": 5,
+        "weight": 20
+      }
+    ],
+    "maxScore": 25
+  },
+  "maxScore": 25
+}

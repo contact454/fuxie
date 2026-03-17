@@ -1,0 +1,249 @@
+{
+  "id": "A2-T1-008",
+  "level": "A2",
+  "teil": 1,
+  "teil_name": "Zeitungsartikel lesen",
+  "topic": "Freizeit & Hobby",
+  "topic_id": "008",
+  "metadata": {
+    "word_count": 171,
+    "target_grammar": [
+      "Perfekt",
+      "Modalverben",
+      "Nebensatz mit weil/dass"
+    ],
+    "target_vocabulary": [
+      "Sportpark",
+      "Schwimmbad",
+      "Fußballplatz",
+      "eröffnen",
+      "Kletterwand",
+      "Verein",
+      "Mitglied",
+      "Eintritt",
+      "Kurs",
+      "Anlage"
+    ],
+    "generated_at": "2026-03-09T21:45:00+07:00",
+    "version": 1
+  },
+  "text": {
+    "title": "Neuer Sportpark am Spree-Ufer eröffnet",
+    "subtitle": "Schwimmbad, Fußball und Klettern — alles an einem Ort",
+    "body": "Am vergangenen Wochenende hat der neue Sportpark „SpreeAktiv\" an der Spree eröffnet. Der Park liegt zwischen den Stadtteilen Friedrichshain und Kreuzberg und bietet viele Sportmöglichkeiten.\n\nDie Anlage hat ein großes Schwimmbad mit drei Becken: ein Sportbecken, ein Familienbecken und ein Kinderbecken. Außerdem gibt es zwei Fußballplätze, vier Tennisplätze und eine 12 Meter hohe Kletterwand.\n\nDer Sportpark bietet auch viele Kurse an. Man kann Yoga, Boxen oder Tanzkurse besuchen. Ein Kurs kostet 8 Euro pro Stunde. Wer regelmäßig kommen möchte, kann eine Monatskarte für 45 Euro kaufen.\n\nDie Bürgermeisterin hat bei der Eröffnung gesagt, dass der Sportpark für alle Menschen gedacht ist. „Sport soll Spaß machen und für jeden bezahlbar sein\", hat sie erklärt. Der Eintritt für Kinder unter 12 Jahren ist immer kostenlos.\n\nDer Sportpark ist jeden Tag von 6 bis 22 Uhr geöffnet.",
+    "source": "BZ Berlin"
+  },
+  "images": [
+    {
+      "id": "IMG1",
+      "type": "scene",
+      "prompt": "Cute cartoon illustration of a modern sports park by a river in Berlin. Swimming pool with happy swimmers, soccer field, climbing wall, tennis courts. Trees, blue sky, city skyline in background. Fuxie cartoon style, flat illustration, warm pastel colors, no text.",
+      "filename": "A2-T1-008_scene.png",
+      "placement": "header",
+      "alt_text": "Sportpark SpreeAktiv am Flussufer",
+      "dimensions": "768x512"
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q1",
+      "teil": 1,
+      "type": "multiple_choice",
+      "stem": "Wo liegt der neue Sportpark?",
+      "options": {
+        "a": "Im Stadtzentrum am Alexanderplatz.",
+        "b": "Zwischen Friedrichshain und Kreuzberg an der Spree.",
+        "c": "Am Stadtrand neben dem Flughafen."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Im Text steht: 'Der Park liegt zwischen den Stadtteilen Friedrichshain und Kreuzberg.'",
+        "key_evidence": "zwischen den Stadtteilen Friedrichshain und Kreuzberg",
+        "key_vocabulary": [
+          {
+            "word": "Spree",
+            "type": "Eigenname",
+            "meaning": "river in Berlin"
+          },
+          {
+            "word": "Ufer",
+            "type": "Nomen",
+            "meaning": "riverbank"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q2",
+      "teil": 1,
+      "type": "multiple_choice",
+      "stem": "Wie viele Becken hat das Schwimmbad?",
+      "options": {
+        "a": "Zwei.",
+        "b": "Drei.",
+        "c": "Vier."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Im Text steht: 'ein großes Schwimmbad mit drei Becken: ein Sportbecken, ein Familienbecken und ein Kinderbecken.'",
+        "key_evidence": "drei Becken",
+        "key_vocabulary": [
+          {
+            "word": "Becken",
+            "type": "Nomen",
+            "meaning": "pool/basin"
+          },
+          {
+            "word": "Schwimmbad",
+            "type": "Nomen",
+            "meaning": "swimming pool"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q3",
+      "teil": 1,
+      "type": "multiple_choice",
+      "stem": "Was kostet eine Monatskarte?",
+      "options": {
+        "a": "35 Euro.",
+        "b": "45 Euro.",
+        "c": "55 Euro."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Im Text steht: 'eine Monatskarte für 45 Euro kaufen.'",
+        "key_evidence": "Monatskarte für 45 Euro",
+        "key_vocabulary": [
+          {
+            "word": "Monatskarte",
+            "type": "Nomen",
+            "meaning": "monthly pass"
+          },
+          {
+            "word": "regelmäßig",
+            "type": "Adverb",
+            "meaning": "regularly"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q4",
+      "teil": 1,
+      "type": "multiple_choice",
+      "stem": "Wer muss keinen Eintritt bezahlen?",
+      "options": {
+        "a": "Studenten.",
+        "b": "Kinder unter 12 Jahren.",
+        "c": "Vereinsmitglieder."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Im Text steht: 'Der Eintritt für Kinder unter 12 Jahren ist immer kostenlos.'",
+        "key_evidence": "Kinder unter 12 Jahren ist immer kostenlos",
+        "key_vocabulary": [
+          {
+            "word": "Eintritt",
+            "type": "Nomen",
+            "meaning": "admission"
+          },
+          {
+            "word": "kostenlos",
+            "type": "Adjektiv",
+            "meaning": "free of charge"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q5",
+      "teil": 1,
+      "type": "multiple_choice",
+      "stem": "Wann ist der Sportpark geöffnet?",
+      "options": {
+        "a": "Von 8 bis 20 Uhr.",
+        "b": "Von 6 bis 22 Uhr.",
+        "c": "Von 7 bis 21 Uhr."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Im Text steht: 'Der Sportpark ist jeden Tag von 6 bis 22 Uhr geöffnet.'",
+        "key_evidence": "von 6 bis 22 Uhr geöffnet",
+        "key_vocabulary": [
+          {
+            "word": "geöffnet",
+            "type": "Partizip II",
+            "meaning": "open"
+          },
+          {
+            "word": "jeden Tag",
+            "type": "Adverb",
+            "meaning": "every day"
+          }
+        ]
+      }
+    }
+  ],
+  "scoring": {
+    "total_points": 5,
+    "pass_threshold": 3,
+    "grading": [
+      {
+        "range": [
+          5,
+          5
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          4,
+          4
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          3,
+          3
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          1,
+          2
+        ],
+        "label": "Noch üben!",
+        "emoji": "📝"
+      },
+      {
+        "range": [
+          0,
+          0
+        ],
+        "label": "Mehr Übung nötig",
+        "emoji": "💪"
+      }
+    ]
+  },
+  "qa": {
+    "vocab_in_a2_list": true,
+    "grammar_a2_only": true,
+    "word_count_in_range": true,
+    "all_answers_verifiable": true,
+    "mc_distractors_plausible": true,
+    "image_count": 1,
+    "passed": true
+  }
+}

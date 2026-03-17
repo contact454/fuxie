@@ -1,0 +1,222 @@
+{
+  "id": "B1-T4-010",
+  "level": "B1",
+  "teil": 4,
+  "teil_name": "Leserbriefe lesen",
+  "topic": "Familie & Beziehungen",
+  "topic_id": "010",
+  "metadata": {
+    "word_count": 278,
+    "target_grammar": [
+      "Nebensatz mit weil/dass/ob",
+      "Konjunktiv II",
+      "Modalverben"
+    ],
+    "target_vocabulary": [
+      "Elternzeit",
+      "Väter",
+      "Gleichberechtigung",
+      "Karriere",
+      "Erziehung",
+      "Vorbild",
+      "Arbeitgeber",
+      "Partnerschaft"
+    ],
+    "generated_at": "2026-03-10T23:40:00+07:00",
+    "version": 1
+  },
+  "debate": {
+    "topic": "Sollten Väter mehr Elternzeit nehmen?",
+    "context": "In Deutschland nehmen die meisten Väter nur zwei Monate Elternzeit. Manche fordern, dass Väter länger zu Hause bleiben sollen.",
+    "letters": [
+      {
+        "author": "Sandra J., Münster",
+        "text": "Ja! Gleichberechtigung fängt zu Hause an. Wenn nur die Mütter zu Hause bleiben, festigt das alte Rollenmuster. Väter, die länger Elternzeit nehmen, bauen eine engere Beziehung zu ihren Kindern auf. Das ist gut für die ganze Familie.",
+        "position": "ja"
+      },
+      {
+        "author": "Klaus G., München",
+        "text": "Das klingt nett, aber in der Realität können sich das viele Familien nicht leisten. Oft verdient der Vater mehr, und wenn er länger zu Hause bleibt, fehlt Geld. Außerdem gibt es Arbeitgeber, die Väter mit langer Elternzeit benachteiligen.",
+        "position": "nein"
+      },
+      {
+        "author": "Lena R., Bremen",
+        "text": "Unbedingt! In Schweden nehmen Väter selbstverständlich lange Elternzeit, und die Gesellschaft profitiert davon. Kinder brauchen beide Elternteile. Es ist unfair, wenn nur die Mutter ihre Karriere unterbricht.",
+        "position": "ja"
+      },
+      {
+        "author": "Martin P., Erfurt",
+        "text": "Das sollte jede Familie selbst entscheiden. Manche Väter wollen mehr Zeit mit den Kindern, andere nicht. Man sollte niemanden zwingen. Wichtig ist, dass beide Partner zufrieden sind — ob mit oder ohne Elternzeit.",
+        "position": "nein"
+      },
+      {
+        "author": "Seda T., Karlsruhe",
+        "text": "Ja, und Arbeitgeber müssen das unterstützen! Mein Mann wollte sechs Monate Elternzeit nehmen, aber sein Chef hat ihn unter Druck gesetzt. Solange Väter Angst um ihre Karriere haben müssen, wird sich nichts ändern. Wir brauchen bessere Gesetze.",
+        "position": "ja"
+      }
+    ]
+  },
+  "images": [
+    {
+      "id": "IMG1",
+      "type": "scene",
+      "prompt": "Cute cartoon illustration of a father caring for a baby at home: feeding, playing, while the mother heads off to work with a briefcase. Equal partnership. Fuxie cartoon style, flat illustration, warm pastel colors, no text.",
+      "filename": "B1-T4-010_scene.png",
+      "placement": "header",
+      "alt_text": "Debatte: Väter in Elternzeit",
+      "dimensions": "768x512"
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q1",
+      "teil": 4,
+      "type": "ja_nein",
+      "stem": "Sandra J. findet, dass Väter mehr Elternzeit nehmen sollten.",
+      "answer": "ja",
+      "points": 1,
+      "explanation": {
+        "de": "Sandra sagt Ja, weil Gleichberechtigung zu Hause anfängt.",
+        "key_evidence": "Ja! Gleichberechtigung fängt zu Hause an",
+        "key_vocabulary": [
+          {
+            "word": "Gleichberechtigung",
+            "type": "Nomen",
+            "meaning": "equality"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q2",
+      "teil": 4,
+      "type": "ja_nein",
+      "stem": "Klaus G. ist der Meinung, dass längere Väter-Elternzeit realistisch ist.",
+      "answer": "nein",
+      "points": 1,
+      "explanation": {
+        "de": "Klaus sagt, viele Familien können es sich finanziell nicht leisten.",
+        "key_evidence": "in der Realität können sich das viele Familien nicht leisten",
+        "key_vocabulary": [
+          {
+            "word": "benachteiligen",
+            "type": "Verb",
+            "meaning": "to disadvantage"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q3",
+      "teil": 4,
+      "type": "ja_nein",
+      "stem": "Lena R. wünscht sich, dass Väter in Deutschland länger Elternzeit nehmen.",
+      "answer": "ja",
+      "points": 1,
+      "explanation": {
+        "de": "Lena sagt unbedingt und nennt Schweden als Vorbild.",
+        "key_evidence": "Unbedingt! In Schweden nehmen Väter selbstverständlich lange Elternzeit",
+        "key_vocabulary": [
+          {
+            "word": "selbstverständlich",
+            "type": "Adverb",
+            "meaning": "naturally / of course"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q4",
+      "teil": 4,
+      "type": "ja_nein",
+      "stem": "Martin P. will Väter zur Elternzeit verpflichten.",
+      "answer": "nein",
+      "points": 1,
+      "explanation": {
+        "de": "Martin findet, das sollte jede Familie selbst entscheiden — kein Zwang.",
+        "key_evidence": "Das sollte jede Familie selbst entscheiden / Man sollte niemanden zwingen",
+        "key_vocabulary": [
+          {
+            "word": "Zwang",
+            "type": "Nomen",
+            "meaning": "coercion"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q5",
+      "teil": 4,
+      "type": "ja_nein",
+      "stem": "Seda T. meint, dass Arbeitgeber Väter bei der Elternzeit unterstützen müssen.",
+      "answer": "ja",
+      "points": 1,
+      "explanation": {
+        "de": "Seda sagt Ja und fordert bessere Gesetze, weil Väter Angst um die Karriere haben.",
+        "key_evidence": "Arbeitgeber müssen das unterstützen / Wir brauchen bessere Gesetze",
+        "key_vocabulary": [
+          {
+            "word": "unter Druck setzen",
+            "type": "Verb",
+            "meaning": "to put pressure on"
+          }
+        ]
+      }
+    }
+  ],
+  "scoring": {
+    "total_points": 5,
+    "pass_threshold": 3,
+    "grading": [
+      {
+        "range": [
+          5,
+          5
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          4,
+          4
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          3,
+          3
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          1,
+          2
+        ],
+        "label": "Noch üben!",
+        "emoji": "📝"
+      },
+      {
+        "range": [
+          0,
+          0
+        ],
+        "label": "Mehr Übung nötig",
+        "emoji": "💪"
+      }
+    ]
+  },
+  "qa": {
+    "vocab_in_b1_list": true,
+    "grammar_b1_appropriate": true,
+    "word_count_in_range": true,
+    "all_answers_verifiable": true,
+    "ja_nein_balanced": true,
+    "image_count": 1,
+    "passed": true
+  }
+}

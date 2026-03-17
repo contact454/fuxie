@@ -1,0 +1,239 @@
+{
+  "id": "A1-T1-006",
+  "level": "A1",
+  "teil": 1,
+  "teil_name": "Kurze Texte lesen",
+  "topic": "Im Restaurant",
+  "topic_id": "006",
+  "metadata": {
+    "word_count_text_a": 40,
+    "word_count_text_b": 46,
+    "target_grammar": [
+      "Präsens",
+      "Akkusativ",
+      "Modalverb möchten"
+    ],
+    "target_vocabulary": [
+      "Restaurant",
+      "Tisch",
+      "reservieren",
+      "essen",
+      "trinken",
+      "Speisekarte",
+      "bestellen",
+      "Kellner",
+      "Rechnung",
+      "Nachtisch"
+    ],
+    "generated_at": "2026-03-09T02:15:00+07:00",
+    "version": 1
+  },
+  "texts": [
+    {
+      "id": "TextA",
+      "type": "sms",
+      "sender": "Tom",
+      "receiver": "Lisa",
+      "content": "Hallo Lisa! Ich möchte heute Abend ins Restaurant gehen. Die Pizzeria Roma in der Schillerstraße ist sehr gut. Ich reserviere einen Tisch für 19 Uhr. Wir sind vier Personen. Kommst du auch? Die Pizza dort ist fantastisch und nicht teuer!"
+    },
+    {
+      "id": "TextB",
+      "type": "sms",
+      "sender": "Lisa",
+      "receiver": "Tom",
+      "content": "Hallo Tom! Ja, ich komme gern ins Restaurant! Aber ich esse keine Pizza. Ich möchte lieber Pasta oder einen großen Salat. Gibt es auch Nachtisch auf der Speisekarte? Ich liebe Tiramisu! Und kann ich meinen Freund Max mitbringen? Dann sind wir fünf Personen. Bis heute Abend!"
+    }
+  ],
+  "images": [
+    {
+      "id": "IMG1",
+      "type": "scene",
+      "prompt": "Cute cartoon illustration of a cozy Italian restaurant interior with checkered tablecloths, pizza oven, candles, and happy diners. Fuxie cartoon style, flat illustration, warm pastel colors, no text.",
+      "filename": "A1-T1-006_scene.png",
+      "placement": "header",
+      "alt_text": "Gemütliches Restaurant am Abend",
+      "dimensions": "768x512"
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q1",
+      "teil": 1,
+      "linked_text": "TextA",
+      "type": "richtig_falsch",
+      "statement": "Tom möchte mittags ins Restaurant gehen.",
+      "answer": "falsch",
+      "points": 1,
+      "explanation": {
+        "de": "Im Text steht: 'Ich möchte heute Abend ins Restaurant gehen.' Tom möchte abends gehen, nicht mittags.",
+        "key_evidence": "heute Abend ins Restaurant gehen",
+        "key_vocabulary": [
+          {
+            "word": "Abend",
+            "type": "Nomen",
+            "meaning": "evening"
+          },
+          {
+            "word": "mittags",
+            "type": "Adverb",
+            "meaning": "at noon"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q2",
+      "teil": 1,
+      "linked_text": "TextA",
+      "type": "richtig_falsch",
+      "statement": "Tom reserviert einen Tisch für vier Personen.",
+      "answer": "richtig",
+      "points": 1,
+      "explanation": {
+        "de": "Im Text steht: 'Ich reserviere einen Tisch für 19 Uhr. Wir sind vier Personen.'",
+        "key_evidence": "Wir sind vier Personen",
+        "key_vocabulary": [
+          {
+            "word": "reservieren",
+            "type": "Verb",
+            "meaning": "to reserve"
+          },
+          {
+            "word": "Person",
+            "type": "Nomen",
+            "meaning": "person"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q3",
+      "teil": 1,
+      "linked_text": "TextB",
+      "type": "richtig_falsch",
+      "statement": "Lisa möchte Pizza essen.",
+      "answer": "falsch",
+      "points": 1,
+      "explanation": {
+        "de": "Im Text steht: 'Aber ich esse keine Pizza. Ich möchte lieber Pasta oder Salat.' Lisa möchte keine Pizza.",
+        "key_evidence": "ich esse keine Pizza",
+        "key_vocabulary": [
+          {
+            "word": "Pizza",
+            "type": "Nomen",
+            "meaning": "pizza"
+          },
+          {
+            "word": "Pasta",
+            "type": "Nomen",
+            "meaning": "pasta"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q4",
+      "teil": 1,
+      "linked_text": "TextB",
+      "type": "richtig_falsch",
+      "statement": "Lisa mag Tiramisu.",
+      "answer": "richtig",
+      "points": 1,
+      "explanation": {
+        "de": "Im Text steht: 'Ich liebe Tiramisu!' Lisa liebt Tiramisu.",
+        "key_evidence": "Ich liebe Tiramisu",
+        "key_vocabulary": [
+          {
+            "word": "lieben",
+            "type": "Verb",
+            "meaning": "to love"
+          },
+          {
+            "word": "Nachtisch",
+            "type": "Nomen",
+            "meaning": "dessert"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q5",
+      "teil": 1,
+      "linked_text": "TextB",
+      "type": "richtig_falsch",
+      "statement": "Mit Lisa und Max sind es sechs Personen.",
+      "answer": "falsch",
+      "points": 1,
+      "explanation": {
+        "de": "Im Text steht: 'Dann sind wir fünf Personen.' Mit Max sind es fünf Personen, nicht sechs.",
+        "key_evidence": "Dann sind wir fünf Personen",
+        "key_vocabulary": [
+          {
+            "word": "fünf",
+            "type": "Zahlwort",
+            "meaning": "five"
+          },
+          {
+            "word": "sechs",
+            "type": "Zahlwort",
+            "meaning": "six"
+          }
+        ]
+      }
+    }
+  ],
+  "scoring": {
+    "total_points": 5,
+    "pass_threshold": 3,
+    "grading": [
+      {
+        "range": [
+          5,
+          5
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          4,
+          4
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          3,
+          3
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          1,
+          2
+        ],
+        "label": "Noch üben!",
+        "emoji": "📝"
+      },
+      {
+        "range": [
+          0,
+          0
+        ],
+        "label": "Mehr Übung nötig",
+        "emoji": "💪"
+      }
+    ]
+  },
+  "qa": {
+    "vocab_in_a1_list": true,
+    "grammar_a1_only": true,
+    "word_count_in_range": true,
+    "all_answers_verifiable": true,
+    "image_count": 1,
+    "passed": false
+  }
+}

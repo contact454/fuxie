@@ -1,0 +1,243 @@
+{
+  "id": "B1-T5-005",
+  "level": "B1",
+  "teil": 5,
+  "teil_name": "Informationsblatt lesen",
+  "topic": "Ausbildung & Karriere",
+  "topic_id": "005",
+  "metadata": {
+    "word_count": 282,
+    "target_grammar": [
+      "Passiv",
+      "Modalverben",
+      "Nebensatz mit wenn/dass"
+    ],
+    "target_vocabulary": [
+      "Volkshochschule",
+      "Anmeldung",
+      "Kursangebot",
+      "Semester",
+      "Ermäßigung",
+      "Zertifikat",
+      "Bildungsgutschein",
+      "Kursleiter"
+    ],
+    "generated_at": "2026-03-10T23:47:00+07:00",
+    "version": 1
+  },
+  "infotext": {
+    "source": "Volkshochschule Frankfurt am Main",
+    "title": "VHS Frankfurt: Unser Kursangebot im Sommersemester 2026",
+    "format": "Informationsblatt",
+    "sections": [
+      {
+        "heading": "Kursangebot",
+        "text": "Die VHS Frankfurt bietet über 3.000 Kurse in den Bereichen Sprachen, Gesundheit, Beruf und EDV, Kreativität, Politik und Gesellschaft. Das Sommersemester läuft vom 1. Februar bis 31. Juli 2026. Die meisten Kurse finden abends (18–21 Uhr) oder am Wochenende statt."
+      },
+      {
+        "heading": "Anmeldung",
+        "text": "Sie können sich online, per Telefon oder persönlich in einer unserer Geschäftsstellen anmelden. Online-Anmeldung: www.vhs-frankfurt.de — rund um die Uhr möglich. Telefonische Anmeldung: 069-212-71501 (Mo–Fr 9–17 Uhr). Die Anmeldung ist verbindlich."
+      },
+      {
+        "heading": "Gebühren und Ermäßigungen",
+        "text": "Die Kursgebühren variieren je nach Kurs und Dauer. 50 % Ermäßigung erhalten: Empfänger von Bürgergeld oder Wohngeld, Schüler und Auszubildende, Studierende bis 27 Jahre. Inhaber eines Frankfurt-Passes zahlen nur 1 Euro pro Abend. Bildungsgutscheine werden für ausgewählte Berufskurse akzeptiert."
+      },
+      {
+        "heading": "Rücktritt und Erstattung",
+        "text": "Ein Rücktritt ist bis 7 Werktage vor Kursbeginn kostenlos möglich. Danach werden 50 % der Kursgebühr als Stornogebühr fällig. Wenn ein Kurs von der VHS abgesagt wird, erhalten Sie eine volle Erstattung."
+      },
+      {
+        "heading": "Zertifikate",
+        "text": "Für viele Kurse erhalten Sie nach regelmäßiger Teilnahme eine Teilnahmebescheinigung. In den Bereichen Sprachen und EDV können Sie zusätzlich anerkannte Prüfungen ablegen, z.B. telc-Deutschprüfungen oder den Europäischen Computerführerschein (ECDL)."
+      }
+    ]
+  },
+  "images": [
+    {
+      "id": "IMG1",
+      "type": "scene",
+      "prompt": "Cute cartoon illustration of a VHS (Volkshochschule) building with course catalogs, students registering, class schedule on a board. Fuxie cartoon style, flat illustration, warm pastel colors, no text.",
+      "filename": "B1-T5-005_scene.png",
+      "placement": "header",
+      "alt_text": "VHS Frankfurt Kursangebot",
+      "dimensions": "768x512"
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q1",
+      "teil": 5,
+      "type": "multiple_choice",
+      "stem": "Wann endet das Sommersemester 2026?",
+      "options": {
+        "a": "Am 30. Juni.",
+        "b": "Am 31. Juli.",
+        "c": "Am 31. August."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Das Sommersemester läuft bis 31. Juli 2026.",
+        "key_evidence": "1. Februar bis 31. Juli 2026",
+        "key_vocabulary": [
+          {
+            "word": "Semester",
+            "type": "Nomen",
+            "meaning": "semester"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q2",
+      "teil": 5,
+      "type": "multiple_choice",
+      "stem": "Wer bekommt 50 % Ermäßigung?",
+      "options": {
+        "a": "Alle Senioren ab 60.",
+        "b": "Empfänger von Bürgergeld.",
+        "c": "Alle Teilnehmer ab dem 2. Kurs."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Empfänger von Bürgergeld oder Wohngeld erhalten 50 % Ermäßigung.",
+        "key_evidence": "50 % Ermäßigung: Empfänger von Bürgergeld oder Wohngeld",
+        "key_vocabulary": [
+          {
+            "word": "Bürgergeld",
+            "type": "Nomen",
+            "meaning": "citizen's benefit (welfare)"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q3",
+      "teil": 5,
+      "type": "multiple_choice",
+      "stem": "Was möchte der Autor mit Bis wann verdeutlichen?",
+      "options": {
+        "a": "3 Werktage vor Kursbeginn.",
+        "b": "7 Werktage vor Kursbeginn.",
+        "c": "14 Werktage vor Kursbeginn."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Rücktritt ist bis 7 Werktage vor Kursbeginn kostenlos.",
+        "key_evidence": "bis 7 Werktage vor Kursbeginn kostenlos",
+        "key_vocabulary": [
+          {
+            "word": "Rücktritt",
+            "type": "Nomen",
+            "meaning": "withdrawal / cancellation"
+          }
+        ],
+        "reasoning": "[Inferential] "
+      }
+    },
+    {
+      "id": "Q4",
+      "teil": 5,
+      "type": "multiple_choice",
+      "stem": "Wie viel zahlen Inhaber eines Frankfurt-Passes pro Abend?",
+      "options": {
+        "a": "Nichts.",
+        "b": "1 Euro.",
+        "c": "5 Euro."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Mit dem Frankfurt-Pass zahlt man nur 1 Euro pro Abend.",
+        "key_evidence": "Frankfurt-Passes zahlen nur 1 Euro pro Abend",
+        "key_vocabulary": [
+          {
+            "word": "Frankfurt-Pass",
+            "type": "Nomen",
+            "meaning": "Frankfurt social pass"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q5",
+      "teil": 5,
+      "type": "multiple_choice",
+      "stem": "Welche Prüfungen kann man an der VHS ablegen?",
+      "options": {
+        "a": "Nur Deutschprüfungen.",
+        "b": "telc-Deutschprüfungen und ECDL.",
+        "c": "Keine Prüfungen."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Man kann telc-Deutschprüfungen und den ECDL ablegen.",
+        "key_evidence": "telc-Deutschprüfungen oder den ECDL",
+        "key_vocabulary": [
+          {
+            "word": "Prüfung ablegen",
+            "type": "Verb",
+            "meaning": "to take an exam"
+          }
+        ]
+      }
+    }
+  ],
+  "scoring": {
+    "total_points": 5,
+    "pass_threshold": 3,
+    "grading": [
+      {
+        "range": [
+          5,
+          5
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          4,
+          4
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          3,
+          3
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          1,
+          2
+        ],
+        "label": "Noch üben!",
+        "emoji": "📝"
+      },
+      {
+        "range": [
+          0,
+          0
+        ],
+        "label": "Mehr Übung nötig",
+        "emoji": "💪"
+      }
+    ]
+  },
+  "qa": {
+    "vocab_in_b1_list": true,
+    "grammar_b1_appropriate": true,
+    "word_count_in_range": true,
+    "all_answers_verifiable": true,
+    "image_count": 1,
+    "passed": true
+  }
+}

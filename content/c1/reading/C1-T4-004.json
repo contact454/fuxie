@@ -1,0 +1,196 @@
+{
+  "id": "C1-T4-004",
+  "level": "C1",
+  "teil": 4,
+  "teil_name": "Meinungen zuordnen",
+  "topic": "Architektur & Stadtplanung",
+  "topic_id": "004",
+  "metadata": {
+    "word_count": 111,
+    "target_grammar": [
+      "Nominalisierung",
+      "Partizipialkonstruktionen",
+      "Konjunktiv I/II",
+      "Passiversatzformen"
+    ],
+    "target_vocabulary": [],
+    "generated_at": "2026-03-11T23:18:54.731267",
+    "version": 1
+  },
+  "opinion_texts": {
+    "question": "Brauchen wir Denkmalschutz in der modernen Stadtentwicklung?",
+    "texts": [
+      {
+        "name": "Architektin Dr. Lisa Bergmann",
+        "text": "Denkmalschutz ist unverzichtbar, aber er muss flexibler werden. Starre Vorschriften verhindern oft sinnvolle Sanierungen und nachhaltige Umbauten. Wir brauchen einen kreativen Dialog zwischen Bewahrung und Erneuerung.",
+        "label": "A"
+      },
+      {
+        "name": "Investor Thomas Schreiber",
+        "text": "Übertriebener Denkmalschutz blockiert dringend benötigten Wohnraum. In Zeiten von Wohnungsnot können wir es uns nicht leisten, jedes alte Gebäude unter Schutz zu stellen, wenn der Platz für moderne, energieeffiziente Wohnungen fehlt.",
+        "label": "B"
+      },
+      {
+        "name": "Kulturhistorikerin Prof. Dr. Eva Zimmermann",
+        "text": "Historische Gebäude sind Zeugnisse unserer Geschichte und Identität. Wer sie abreißt, zerstört unwiederbringlich kulturelles Erbe. Der Denkmalschutz ist eine der wenigen wirksamen Bremsen gegen die Uniformierung unserer Städte.",
+        "label": "C"
+      },
+      {
+        "name": "Stadtplaner Maximilian Fuchs",
+        "text": "Die Lösung liegt in einem integrativen Ansatz. Denkmalgeschützte Gebäude können durch behutsame Modernisierung energetisch ertüchtigt und neuen Nutzungen zugeführt werden, ohne ihren historischen Charakter zu verlieren.",
+        "label": "D"
+      }
+    ]
+  },
+  "images": [
+    {
+      "id": "IMG1",
+      "type": "scene",
+      "prompt": "Cute cartoon illustration of experts discussing Architektur & Stadtplanung. Fuxie cartoon style, flat illustration, warm pastel colors, no text.",
+      "filename": "C1-T4-004_scene.png",
+      "placement": "header",
+      "alt_text": "Brauchen wir Denkmalschutz in der modernen Stadten",
+      "dimensions": "768x512"
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q1",
+      "teil": 4,
+      "type": "matching",
+      "stem": "Die These, dass denkmalschutz muss flexibler und dialogorientierter werden, wird durch folgende Argumentation gestützt:",
+      "answer": "A",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Text/Beitrag A",
+        "reasoning": "[Inferential] Die Aussage 'Denkmalschutz muss flexibler und dialogorientierte...' entspricht der Position von A."
+      }
+    },
+    {
+      "id": "Q2",
+      "teil": 4,
+      "type": "matching",
+      "stem": "Wohnungsbau sollte Vorrang vor Denkmalschutz haben.",
+      "answer": "B",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Text/Beitrag B",
+        "reasoning": "Die Aussage 'Wohnungsbau sollte Vorrang vor Denkmalschutz haben...' entspricht der Position von B."
+      }
+    },
+    {
+      "id": "Q3",
+      "teil": 4,
+      "type": "matching",
+      "stem": "Die These, dass historische Gebäude sind unwiederbringliches kulturelles Erbe, wird durch folgende Argumentation gestützt:",
+      "answer": "C",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Text/Beitrag C",
+        "reasoning": "[Inferential] Die Aussage 'Historische Gebäude sind unwiederbringliches kultu...' entspricht der Position von C."
+      }
+    },
+    {
+      "id": "Q4",
+      "teil": 4,
+      "type": "matching",
+      "stem": "Die grundlegende Prämisse, dass modernisierung und Denkmalschutz lassen sich vereinbaren, liegt der Position zugrunde:",
+      "answer": "D",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Text/Beitrag D",
+        "reasoning": "[Inferential] Die Aussage 'Modernisierung und Denkmalschutz lassen sich verei...' entspricht der Position von D."
+      }
+    },
+    {
+      "id": "Q5",
+      "teil": 4,
+      "type": "matching",
+      "stem": "Die grundlegende Prämisse, dass starre Vorschriften verhindern sinnvolle Sanierungen, liegt der Position zugrunde:",
+      "answer": "A",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Text/Beitrag A",
+        "reasoning": "[Inferential] Die Aussage 'Starre Vorschriften verhindern sinnvolle Sanierung...' entspricht der Position von A."
+      }
+    },
+    {
+      "id": "Q6",
+      "teil": 4,
+      "type": "matching",
+      "stem": "Die grundlegende Prämisse, dass denkmalschutz schützt vor der Uniformierung der Städte, liegt der Position zugrunde:",
+      "answer": "C",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Text/Beitrag C",
+        "reasoning": "[Inferential] Die Aussage 'Denkmalschutz schützt vor der Uniformierung der St...' entspricht der Position von C."
+      }
+    },
+    {
+      "id": "Q7",
+      "teil": 4,
+      "type": "matching",
+      "stem": "Energetische Ertüchtigung denkmalgeschützter Gebäude ist möglich.",
+      "answer": "D",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Text/Beitrag D",
+        "reasoning": "Die Aussage 'Energetische Ertüchtigung denkmalgeschützter Gebäu...' entspricht der Position von D."
+      }
+    }
+  ],
+  "scoring": {
+    "total_points": 7,
+    "pass_threshold": 5,
+    "grading": [
+      {
+        "range": [
+          6,
+          7
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          4,
+          5
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          3,
+          3
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          1,
+          2
+        ],
+        "label": "Noch üben!",
+        "emoji": "📝"
+      },
+      {
+        "range": [
+          0,
+          0
+        ],
+        "label": "Mehr Übung nötig",
+        "emoji": "💪"
+      }
+    ]
+  },
+  "qa": {
+    "vocab_in_c1_list": true,
+    "grammar_c1_appropriate": true,
+    "word_count_in_range": true,
+    "all_answers_verifiable": true,
+    "image_count": 1,
+    "passed": true
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "id": "W-A1-T1-012",
+  "cefrLevel": "A1",
+  "teil": 1,
+  "teilName": "Formular ausfuellen",
+  "textType": "Formular",
+  "register": "neutral",
+  "topic": "Reisebuchung",
+  "instruction": "Ihr Freund Mario Rossi möchte eine Reise buchen. Er bittet Sie, das Anmeldeformular für ihn auszufüllen. Schreiben Sie die Informationen in das Formular.",
+  "instructionVi": "Bạn của bạn, Mario Rossi, muốn đặt một chuyến du lịch. Anh ấy nhờ bạn điền vào mẫu đăng ký. Hãy viết các thông tin vào mẫu đơn.",
+  "situation": "Mario Rossi kommt aus Rom, Italien. Er möchte im August mit seiner Frau und seinen zwei Kindern für eine Woche (7 Tage) an den Bodensee nach Konstanz fahren und dort in einem Hotel übernachten.",
+  "contentPoints": [
+    "Herkunftsland des Reisenden",
+    "Gesamtanzahl der Personen",
+    "Zielort der Reise",
+    "Aufenthaltsdauer",
+    "Reisemonat"
+  ],
+  "sourceText": "Mario Rossi, Rom (Italien), Urlaub mit Ehefrau und 2 Kindern, Ziel: Konstanz (Bodensee), Dauer: 7 Tage, Zeit: August.",
+  "sourceTextType": "Notiz",
+  "formFields": [
+    {
+      "label": "Name, Vorname",
+      "type": "text"
+    },
+    {
+      "label": "Heimatland",
+      "type": "text"
+    },
+    {
+      "label": "Personen (insgesamt)",
+      "type": "number"
+    },
+    {
+      "label": "Reiseziel",
+      "type": "text"
+    },
+    {
+      "label": "Dauer (Tage)",
+      "type": "number"
+    },
+    {
+      "label": "Reisetermin (Monat)",
+      "type": "text"
+    }
+  ],
+  "minWords": 15,
+  "maxWords": 30,
+  "timeMinutes": 5,
+  "rubric": {
+    "criteria": [
+      {
+        "id": "inhalt",
+        "name": "Inhalt",
+        "nameVi": "Nội dung",
+        "maxScore": 5,
+        "weight": 30
+      },
+      {
+        "id": "korrektheit",
+        "name": "Korrektheit",
+        "nameVi": "Chính xác ngữ pháp & chính tả",
+        "maxScore": 5,
+        "weight": 40
+      },
+      {
+        "id": "angemessenheit",
+        "name": "Angemessenheit",
+        "nameVi": "Tính phù hợp",
+        "maxScore": 5,
+        "weight": 30
+      }
+    ],
+    "maxScore": 15
+  },
+  "maxScore": 15
+}

@@ -1,0 +1,51 @@
+{
+  "id": "W-A2-T2-008",
+  "cefrLevel": "A2",
+  "teil": 2,
+  "teilName": "Persoenliche Mitteilung",
+  "textType": "Mitteilung",
+  "register": "halbformell",
+  "topic": "Krankmeldung",
+  "instruction": "Schreiben Sie eine kurze Mitteilung (ca. 40-60 Woerter).",
+  "instructionVi": "Viet tin nhan: Krankmeldung.",
+  "situation": "Sie sind krank. Schreiben Sie Ihrem Chef.",
+  "contentPoints": [
+    "informieren dass krank",
+    "Dauer nennen",
+    "Vertretung vorschlagen"
+  ],
+  "minWords": 40,
+  "maxWords": 70,
+  "timeMinutes": 15,
+  "rubric": {
+    "criteria": [
+      {
+        "id": "inhalt",
+        "name": "Inhalt",
+        "nameVi": "Noi dung",
+        "maxScore": 5,
+        "weight": 30
+      },
+      {
+        "id": "korrektheit",
+        "name": "Korrektheit",
+        "nameVi": "Chinh xac",
+        "maxScore": 5,
+        "weight": 35
+      },
+      {
+        "id": "angemessenheit",
+        "name": "Kommunikative Angemessenheit",
+        "nameVi": "Phu hop giao tiep",
+        "maxScore": 5,
+        "weight": 35
+      }
+    ],
+    "maxScore": 15
+  },
+  "maxScore": 15,
+  "sourceText": "Stellen Sie sich vor, Sie sind Lukas Müller. Aufgrund einer schweren Grippe mit Fieber können Sie am 12. Mai nicht zur Prüfung bei Frau Dr. Schneider in der Schillerstraße 10 erscheinen. Verfassen Sie eine offizielle Krankmeldung per E-Mail an schneider@uni-koeln.de und bitten Sie um einen Nachholtermin.",
+  "sourceTextType": "Situationsbeschreibung für eine E-Mail",
+  "stimulusSender": "Frau Dr. Schneider",
+  "grafikData": []
+}

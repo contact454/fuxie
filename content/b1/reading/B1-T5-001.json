@@ -1,0 +1,243 @@
+{
+  "id": "B1-T5-001",
+  "level": "B1",
+  "teil": 5,
+  "teil_name": "Informationsblatt lesen",
+  "topic": "Gesundheit & Ernährung",
+  "topic_id": "001",
+  "metadata": {
+    "word_count": 285,
+    "target_grammar": [
+      "Passiv",
+      "Modalverben",
+      "Nebensatz mit wenn/dass"
+    ],
+    "target_vocabulary": [
+      "Krankenkasse",
+      "Vorsorge",
+      "Impfung",
+      "Bonusprogramm",
+      "Beitrag",
+      "Leistung",
+      "Antrag",
+      "Versicherte"
+    ],
+    "generated_at": "2026-03-10T23:47:00+07:00",
+    "version": 1
+  },
+  "infotext": {
+    "source": "AOK Gesundheitskasse",
+    "title": "Bonusprogramm: Gesund leben und Prämien erhalten",
+    "format": "Informationsblatt",
+    "sections": [
+      {
+        "heading": "Was ist das Bonusprogramm?",
+        "text": "Die AOK belohnt Versicherte, die aktiv etwas für ihre Gesundheit tun. Für bestimmte Gesundheitsaktivitäten sammeln Sie Punkte, die Sie gegen Geldprämien oder Sachpreise eintauschen können."
+      },
+      {
+        "heading": "Wer kann teilnehmen?",
+        "text": "Alle AOK-Versicherten ab 16 Jahren können am Bonusprogramm teilnehmen. Für Kinder und Jugendliche unter 16 gibt es ein eigenes Kinderbonusprogramm. Die Teilnahme ist freiwillig und kostenlos."
+      },
+      {
+        "heading": "Welche Aktivitäten zählen?",
+        "text": "Punkte erhalten Sie für: Vorsorgeuntersuchungen beim Arzt oder Zahnarzt, regelmäßige Impfungen, Mitgliedschaft in einem Sportverein oder Fitnessstudio, Teilnahme an Gesundheitskursen (z.B. Ernährungsberatung, Stressbewältigung, Rückengymnastik), Nichtraucher-Status und gesundes Körpergewicht (BMI 18,5–25)."
+      },
+      {
+        "heading": "Wie funktioniert es?",
+        "text": "Laden Sie die AOK-Bonus-App herunter oder holen Sie das Bonusheft in einer AOK-Filiale ab. Lassen Sie Ihre Aktivitäten von Ihrem Arzt, Zahnarzt oder Kursleiter abstempeln. Am Ende des Jahres reichen Sie das Bonusheft ein oder laden Ihre Nachweise in der App hoch."
+      },
+      {
+        "heading": "Was können Sie gewinnen?",
+        "text": "Je nach Punktestand erhalten Sie eine Geldprämie von 30 bis 150 Euro pro Jahr. Alternativ können Sie Ihre Punkte gegen Sachpreise eintauschen, z.B. einen Fitness-Tracker oder eine Sporttasche. Die Prämie wird auf Ihr Konto überwiesen."
+      }
+    ]
+  },
+  "images": [
+    {
+      "id": "IMG1",
+      "type": "scene",
+      "prompt": "Cute cartoon illustration of a health insurance info brochure with icons for doctor visits, sports, healthy food, and bonus rewards. Fuxie cartoon style, flat illustration, warm pastel colors, no text.",
+      "filename": "B1-T5-001_scene.png",
+      "placement": "header",
+      "alt_text": "AOK Bonusprogramm",
+      "dimensions": "768x512"
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q1",
+      "teil": 5,
+      "type": "multiple_choice",
+      "stem": "Was impliziert der Text über Schlussfolgerung über Ab welchem Alter kann man am legt der Text nahe?",
+      "options": {
+        "a": "Ab 12 Jahren.",
+        "b": "Ab 16 Jahren.",
+        "c": "Ab 18 Jahren."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Alle AOK-Versicherten ab 16 Jahren können teilnehmen.",
+        "key_evidence": "ab 16 Jahren",
+        "key_vocabulary": [
+          {
+            "word": "Versicherte",
+            "type": "Nomen",
+            "meaning": "insured person"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q2",
+      "teil": 5,
+      "type": "multiple_choice",
+      "stem": "Wofür bekommt man KEINE Punkte?",
+      "options": {
+        "a": "Mitgliedschaft im Sportverein.",
+        "b": "Vorsorgeuntersuchung beim Arzt.",
+        "c": "Einkauf in der Apotheke."
+      },
+      "answer": "c",
+      "points": 1,
+      "explanation": {
+        "de": "Apothekeneinkäufe werden nicht als Aktivität aufgeführt.",
+        "key_evidence": "Vorsorgeuntersuchungen, Impfungen, Sportverein, Gesundheitskurse, Nichtraucher, BMI",
+        "key_vocabulary": [
+          {
+            "word": "Vorsorgeuntersuchung",
+            "type": "Nomen",
+            "meaning": "preventive check-up"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q3",
+      "teil": 5,
+      "type": "multiple_choice",
+      "stem": "Wie kann man seine Aktivitäten nachweisen?",
+      "options": {
+        "a": "Nur über die App.",
+        "b": "Über die App oder mit dem Bonusheft.",
+        "c": "Nur mit dem Bonusheft."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Man kann die App nutzen oder das Bonusheft in der Filiale abholen.",
+        "key_evidence": "AOK-Bonus-App / oder holen Sie das Bonusheft ab",
+        "key_vocabulary": [
+          {
+            "word": "Nachweis",
+            "type": "Nomen",
+            "meaning": "proof / evidence"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q4",
+      "teil": 5,
+      "type": "multiple_choice",
+      "stem": "Wie hoch ist die maximale Geldprämie pro Jahr?",
+      "options": {
+        "a": "100 Euro.",
+        "b": "150 Euro.",
+        "c": "200 Euro."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Die Geldprämie beträgt 30 bis 150 Euro pro Jahr.",
+        "key_evidence": "30 bis 150 Euro pro Jahr",
+        "key_vocabulary": [
+          {
+            "word": "Prämie",
+            "type": "Nomen",
+            "meaning": "bonus / premium"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q5",
+      "teil": 5,
+      "type": "multiple_choice",
+      "stem": "Was möchte der Autor mit kostet die Teilnahme am Bonusprogramm verdeutlichen?",
+      "options": {
+        "a": "10 Euro pro Jahr.",
+        "b": "Es ist kostenlos.",
+        "c": "5 Euro Anmeldegebühr."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Die Teilnahme ist freiwillig und kostenlos.",
+        "key_evidence": "Die Teilnahme ist freiwillig und kostenlos",
+        "key_vocabulary": [
+          {
+            "word": "freiwillig",
+            "type": "Adjektiv",
+            "meaning": "voluntary"
+          }
+        ],
+        "reasoning": "[Inferential] "
+      }
+    }
+  ],
+  "scoring": {
+    "total_points": 5,
+    "pass_threshold": 3,
+    "grading": [
+      {
+        "range": [
+          5,
+          5
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          4,
+          4
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          3,
+          3
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          1,
+          2
+        ],
+        "label": "Noch üben!",
+        "emoji": "📝"
+      },
+      {
+        "range": [
+          0,
+          0
+        ],
+        "label": "Mehr Übung nötig",
+        "emoji": "💪"
+      }
+    ]
+  },
+  "qa": {
+    "vocab_in_b1_list": true,
+    "grammar_b1_appropriate": true,
+    "word_count_in_range": true,
+    "all_answers_verifiable": true,
+    "image_count": 1,
+    "passed": true
+  }
+}

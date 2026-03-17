@@ -1,0 +1,49 @@
+{
+  "id": "W-A2-T1-015",
+  "cefrLevel": "A2",
+  "teil": 1,
+  "teilName": "E-Mail-Antwort",
+  "textType": "E-Mail",
+  "register": "informell",
+  "topic": "Computerproblem",
+  "instruction": "Sie haben eine E-Mail von Ihrem Freund Lukas erhalten. Er hat ein Problem mit seinem Laptop. Antworten Sie ihm.",
+  "instructionVi": "Bạn nhận được một email từ người bạn tên Lukas. Anh ấy đang gặp vấn đề với máy tính xách tay. Hãy trả lời anh ấy.",
+  "situation": "Ihr Freund Lukas hat Ihnen geschrieben, weil sein Laptop nicht mehr funktioniert. Er braucht das Gerät dringend für ein Projekt und bittet Sie um Hilfe oder eine Empfehlung für eine Reparatur.",
+  "contentPoints": [
+    "Sagen Sie, dass Ihnen das Leid tut.",
+    "Geben Sie einen Tipp oder empfehlen Sie einen Reparaturservice.",
+    "Bieten Sie an, ihm Ihren Laptop zu leihen oder schlagen Sie ein Treffen vor."
+  ],
+  "sourceText": "Hallo! Mein Laptop ist leider kaputt und ich kann meine Hausaufgaben nicht machen. Der Bildschirm bleibt einfach schwarz. Kannst du mir vielleicht helfen oder kennst du einen guten Reparaturservice in der Stadt? Ich brauche den Laptop dringend für das Projekt am Montag. Viele Grüße, Lukas",
+  "sourceTextType": "E-Mail",
+  "minWords": 40,
+  "maxWords": 70,
+  "timeMinutes": 15,
+  "rubric": {
+    "criteria": [
+      {
+        "id": "inhalt",
+        "name": "Inhalt",
+        "nameVi": "Nội dung",
+        "maxScore": 5,
+        "weight": 30
+      },
+      {
+        "id": "korrektheit",
+        "name": "Korrektheit",
+        "nameVi": "Chính xác ngữ pháp & chính tả",
+        "maxScore": 5,
+        "weight": 35
+      },
+      {
+        "id": "angemessenheit",
+        "name": "Kommunikative Angemessenheit",
+        "nameVi": "Phù hợp giao tiếp",
+        "maxScore": 5,
+        "weight": 35
+      }
+    ],
+    "maxScore": 15
+  },
+  "maxScore": 15
+}

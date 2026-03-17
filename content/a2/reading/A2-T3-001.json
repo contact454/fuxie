@@ -1,0 +1,244 @@
+{
+  "id": "A2-T3-001",
+  "level": "A2",
+  "teil": 3,
+  "teil_name": "Kleinanzeigen zuordnen",
+  "topic": "Im Supermarkt",
+  "topic_id": "001",
+  "metadata": {
+    "word_count": 180,
+    "target_grammar": [
+      "Modalverben",
+      "Nebensatz mit wenn"
+    ],
+    "target_vocabulary": [
+      "Bio-Kiste",
+      "Lieferdienst",
+      "Wochenmarkt",
+      "Sonderangebot",
+      "Bestellung",
+      "Gemüseladen",
+      "vegan",
+      "Gutschein",
+      "Lebensmittel",
+      "Kundenkarte"
+    ],
+    "generated_at": "2026-03-09T22:36:00+07:00",
+    "version": 1
+  },
+  "anzeigen": [
+    {
+      "id": "A",
+      "text": "Bio-Kiste „Grünes Glück“. Jede Woche frisches Obst und Gemüse direkt vom Bauernhof. Lieferung jeden Mittwoch. Ab 15 € Bestellung möglich. Erste Box gratis! Info: www.gruenes-glueck.de"
+    },
+    {
+      "id": "B",
+      "text": "REWE Sonderangebot! Diese Woche: 20 % auf alle Milchprodukte. Nur mit Kundenkarte. Gültig bis Samstag. REWE Markt, Hauptstraße 12."
+    },
+    {
+      "id": "C",
+      "text": "Kleiner Gemüseladen sucht Aushilfe. 10 Stunden/Woche, Mo + Mi Vormittag. 12,50 €/Stunde. Erfahrung nicht nötig. Melden bei Frau Özdemir, Tel: 0176-3344556."
+    },
+    {
+      "id": "D",
+      "text": "Veganer Supermarkt „PlantPower“ jetzt in Schöneberg! 100 % pflanzliche Produkte. Eröffnungsangebot: 10 € Gutschein ab 30 € Einkauf. Täglich 9–20 Uhr."
+    },
+    {
+      "id": "E",
+      "text": "Wochenmarkt am Winterfeldtplatz. Jeden Samstag 8–14 Uhr. Frisches Brot, Käse, Fisch und Blumen direkt von regionalen Anbietern. Kommen Sie vorbei!"
+    },
+    {
+      "id": "F",
+      "text": "Asia-Lebensmittel Kim. Große Auswahl an asiatischen Gewürzen, Nudeln, Soßen und Tofu. Online-Bestellung möglich. Lieferung in 24 Stunden. www.asia-kim.de"
+    }
+  ],
+  "images": [
+    {
+      "id": "IMG1",
+      "type": "scene",
+      "prompt": "Cute cartoon illustration of a bulletin board with six colorful classified ads pinned to it, each with different food/grocery themes — organic box, supermarket sale, job posting, vegan shop, farmers market, Asian grocery. Fuxie cartoon style, flat illustration, warm pastel colors, no readable text.",
+      "filename": "A2-T3-001_scene.png",
+      "placement": "header",
+      "alt_text": "Kleinanzeigen zum Thema Lebensmittel",
+      "dimensions": "768x512"
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q1",
+      "teil": 3,
+      "type": "matching",
+      "situation": "Luisa isst kein Fleisch und keine Milch. Sie sucht ein Geschäft mit nur pflanzlichen Produkten.",
+      "answer": "D",
+      "points": 1,
+      "explanation": {
+        "de": "Anzeige D ist für den veganen Supermarkt „PlantPower“ mit 100 % pflanzlichen Produkten.",
+        "key_evidence": "100 % pflanzliche Produkte",
+        "key_vocabulary": [
+          {
+            "word": "pflanzlich",
+            "type": "Adjektiv",
+            "meaning": "plant-based"
+          },
+          {
+            "word": "vegan",
+            "type": "Adjektiv",
+            "meaning": "vegan"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q2",
+      "teil": 3,
+      "type": "matching",
+      "situation": "Tom möchte am Wochenende frische Lebensmittel auf einem Markt kaufen.",
+      "answer": "E",
+      "points": 1,
+      "explanation": {
+        "de": "Anzeige E ist für den Wochenmarkt am Winterfeldtplatz, jeden Samstag 8–14 Uhr.",
+        "key_evidence": "Wochenmarkt am Winterfeldtplatz. Jeden Samstag 8–14 Uhr",
+        "key_vocabulary": [
+          {
+            "word": "Wochenmarkt",
+            "type": "Nomen",
+            "meaning": "weekly market"
+          },
+          {
+            "word": "regional",
+            "type": "Adjektiv",
+            "meaning": "regional / local"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q3",
+      "teil": 3,
+      "type": "matching",
+      "situation": "Maria braucht einen Nebenjob am Vormittag. Sie hat keine Berufserfahrung.",
+      "answer": "C",
+      "points": 1,
+      "explanation": {
+        "de": "Anzeige C sucht eine Aushilfe, Mo + Mi Vormittag, Erfahrung nicht nötig.",
+        "key_evidence": "Mo + Mi Vormittag. 12,50 €/Stunde. Erfahrung nicht nötig",
+        "key_vocabulary": [
+          {
+            "word": "Aushilfe",
+            "type": "Nomen",
+            "meaning": "part-time helper"
+          },
+          {
+            "word": "Erfahrung",
+            "type": "Nomen",
+            "meaning": "experience"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q4",
+      "teil": 3,
+      "type": "matching",
+      "situation": "Herr Nguyen kocht gern asiatisch und braucht spezielle Gewürze und Soßen.",
+      "answer": "F",
+      "points": 1,
+      "explanation": {
+        "de": "Anzeige F ist für Asia-Lebensmittel Kim mit asiatischen Gewürzen, Nudeln und Soßen.",
+        "key_evidence": "Große Auswahl an asiatischen Gewürzen, Nudeln, Soßen und Tofu",
+        "key_vocabulary": [
+          {
+            "word": "Gewürz",
+            "type": "Nomen",
+            "meaning": "spice"
+          },
+          {
+            "word": "Auswahl",
+            "type": "Nomen",
+            "meaning": "selection"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q5",
+      "teil": 3,
+      "type": "matching",
+      "situation": "Familie Braun möchte jede Woche Bio-Obst und -Gemüse nach Hause geliefert bekommen.",
+      "answer": "A",
+      "points": 1,
+      "explanation": {
+        "de": "Anzeige A bietet eine Bio-Kiste mit wöchentlicher Lieferung von Obst und Gemüse.",
+        "key_evidence": "Jede Woche frisches Obst und Gemüse direkt vom Bauernhof. Lieferung jeden Mittwoch",
+        "key_vocabulary": [
+          {
+            "word": "Bio-Kiste",
+            "type": "Nomen",
+            "meaning": "organic produce box"
+          },
+          {
+            "word": "Lieferung",
+            "type": "Nomen",
+            "meaning": "delivery"
+          }
+        ]
+      }
+    }
+  ],
+  "scoring": {
+    "total_points": 5,
+    "pass_threshold": 3,
+    "grading": [
+      {
+        "range": [
+          5,
+          5
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          4,
+          4
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          3,
+          3
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          1,
+          2
+        ],
+        "label": "Noch üben!",
+        "emoji": "📝"
+      },
+      {
+        "range": [
+          0,
+          0
+        ],
+        "label": "Mehr Übung nötig",
+        "emoji": "💪"
+      }
+    ]
+  },
+  "qa": {
+    "vocab_in_a2_list": true,
+    "grammar_a2_only": true,
+    "word_count_in_range": true,
+    "all_answers_verifiable": true,
+    "matching_no_duplicate_answers": true,
+    "six_ads_present": true,
+    "image_count": 1,
+    "passed": true
+  }
+}

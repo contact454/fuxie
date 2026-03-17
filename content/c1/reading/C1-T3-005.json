@@ -1,0 +1,145 @@
+{
+  "id": "C1-T3-005",
+  "level": "C1",
+  "teil": 3,
+  "teil_name": "Lückentext (Sätze)",
+  "topic": "Psychologie & Gesellschaft",
+  "topic_id": "005",
+  "metadata": {
+    "word_count": 195,
+    "target_grammar": [
+      "Nominalisierung",
+      "Partizipialkonstruktionen",
+      "Konjunktiv I/II",
+      "Passiversatzformen"
+    ],
+    "target_vocabulary": [],
+    "generated_at": "2026-03-11T23:15:03.315013",
+    "version": 1
+  },
+  "sentence_cloze": {
+    "title": "Einsamkeit als Epidemie des 21. Jahrhunderts",
+    "text": "Einsamkeit betrifft nicht nur ältere Menschen, wie das Klischee suggeriert. {1} Studien zeigen, dass junge Erwachsene zwischen 18 und 25 Jahren die am stärksten von Einsamkeit betroffene Altersgruppe sind.\n\nDie gesundheitlichen Folgen chronischer Einsamkeit sind alarmierend. {2} Forscher vergleichen das Gesundheitsrisiko mit dem Rauchen von 15 Zigaretten pro Tag und schätzen, dass Einsamkeit die Sterblichkeit um 26 Prozent erhöht.\n\nDie Ursachen sind vielschichtig. {3} Die zunehmende Individualisierung der Gesellschaft, die Auflösung traditioneller Gemeinschaftsstrukturen und die Verlagerung sozialer Interaktion ins Digitale tragen alle zum Phänomen bei.\n\nGroßbritannien hat 2018 als erstes Land ein Ministerium für Einsamkeit geschaffen. {4} Die Initiative folgte einem Bericht, der zeigte, dass über neun Millionen Briten sich oft oder immer einsam fühlen.\n\nSozialpsychologen betonen, dass Einsamkeit und Alleinsein nicht dasselbe sind. {5} Einsamkeit entsteht aus der Diskrepanz zwischen den gewünschten und den tatsächlichen sozialen Beziehungen.\n\nDer Zusammenhang zwischen sozialen Medien und Einsamkeit ist paradox. {6} Plattformen, die Vernetzung versprechen, können das Gefühl der Isolation verstärken, wenn oberflächliche Online-Kontakte tiefe persönliche Beziehungen ersetzen.\n\nPräventive Ansätze setzen auf verschiedenen Ebenen an. {7} Stadtplanerische Maßnahmen wie Gemeinschaftsgärten und Begegnungszentren schaffen physische Räume für soziale Interaktion.\n\nLetztlich ist die Bekämpfung der Einsamkeit eine gesamtgesellschaftliche Aufgabe. {8}",
+    "sentences": [
+      {
+        "id": "A",
+        "text": "In Japan gibt es den Begriff Hikikomori für Menschen, die sich vollständig aus dem gesellschaftlichen Leben zurückziehen."
+      },
+      {
+        "id": "B",
+        "text": "Auch betriebliche Gesundheitsförderung und ehrenamtliches Engagement leisten wichtige Beiträge."
+      },
+      {
+        "id": "C",
+        "text": "Sie erfordert ein Umdenken in der Art, wie wir Gemeinschaft, Nachbarschaft und soziale Teilhabe gestalten."
+      },
+      {
+        "id": "D",
+        "text": "Das Ministerium koordiniert Maßnahmen gegen soziale Isolation auf nationaler Ebene."
+      },
+      {
+        "id": "E",
+        "text": "Die Einsamkeitsepidemie durchzieht alle Altersgruppen und sozialen Schichten."
+      },
+      {
+        "id": "F",
+        "text": "Es handelt sich nicht um ein individuelles Versagen, sondern um ein strukturelles gesellschaftliches Problem."
+      },
+      {
+        "id": "G",
+        "text": "Man kann allein sein, ohne einsam zu sein, und man kann sich inmitten vieler Menschen einsam fühlen."
+      },
+      {
+        "id": "H",
+        "text": "Die Corona-Pandemie hat das Einsamkeitsproblem drastisch verschärft."
+      },
+      {
+        "id": "I",
+        "text": "Die Art der Nutzung ist dabei entscheidender als die Nutzungsdauer."
+      },
+      {
+        "id": "J",
+        "text": "Chronische Einsamkeit erhöht das Risiko für Herzerkrankungen, Depressionen und kognitive Beeinträchtigungen signifikant."
+      }
+    ],
+    "answers": {
+      "1": "E",
+      "2": "J",
+      "3": "F",
+      "4": "D",
+      "5": "G",
+      "6": "I",
+      "7": "B",
+      "8": "C"
+    },
+    "distractors": [
+      "H",
+      "A"
+    ]
+  },
+  "images": [
+    {
+      "id": "IMG1",
+      "type": "scene",
+      "prompt": "Cute cartoon illustration related to Psychologie & Gesellschaft. Fuxie cartoon style, flat illustration, warm pastel colors, no text.",
+      "filename": "C1-T3-005_scene.png",
+      "placement": "header",
+      "alt_text": "Einsamkeit als Epidemie des 21. Jahrhunderts",
+      "dimensions": "768x512"
+    }
+  ],
+  "scoring": {
+    "total_points": 8,
+    "pass_threshold": 5,
+    "grading": [
+      {
+        "range": [
+          7,
+          8
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          5,
+          6
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          4,
+          4
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          1,
+          3
+        ],
+        "label": "Noch üben!",
+        "emoji": "📝"
+      },
+      {
+        "range": [
+          0,
+          0
+        ],
+        "label": "Mehr Übung nötig",
+        "emoji": "💪"
+      }
+    ]
+  },
+  "qa": {
+    "vocab_in_c1_list": true,
+    "grammar_c1_appropriate": true,
+    "word_count_in_range": true,
+    "all_gaps_match": true,
+    "image_count": 1,
+    "passed": true
+  }
+}

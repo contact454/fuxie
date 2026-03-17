@@ -1,0 +1,244 @@
+{
+  "id": "A2-T3-004",
+  "level": "A2",
+  "teil": 3,
+  "teil_name": "Kleinanzeigen zuordnen",
+  "topic": "In der Schule",
+  "topic_id": "004",
+  "metadata": {
+    "word_count": 176,
+    "target_grammar": [
+      "Modalverben",
+      "Nebensatz mit dass"
+    ],
+    "target_vocabulary": [
+      "Nachhilfe",
+      "Deutschkurs",
+      "Gitarrenunterricht",
+      "Schulbücher",
+      "Laptop",
+      "Lerngruppe",
+      "Prüfung",
+      "Anfänger",
+      "gebraucht",
+      "Unterricht"
+    ],
+    "generated_at": "2026-03-09T22:36:00+07:00",
+    "version": 1
+  },
+  "anzeigen": [
+    {
+      "id": "A",
+      "text": "Mathe-Nachhilfe für Schüler Klasse 5–10. Erfahrener Lehrer, 18 €/Stunde. Einzelunterricht oder kleine Gruppen. Auch online möglich. Kontakt: Herr Fischer, 0176-1122334."
+    },
+    {
+      "id": "B",
+      "text": "Deutschkurs B1 am Abend. Start: 1. April. Di + Do 18:30–20:00. 12 Wochen, 180 €. Max. 12 Teilnehmer. Anmeldung: VHS Mitte, Tel: 030-9988776."
+    },
+    {
+      "id": "C",
+      "text": "Gitarrenunterricht für Kinder und Erwachsene! Anfänger und Fortgeschrittene. 25 €/Stunde. Montags und freitags. Eigene Gitarre mitbringen oder leihen (5 €). Musikschule Klang, Schillerstraße 8."
+    },
+    {
+      "id": "D",
+      "text": "Schulbücher günstig zu verkaufen! Gymnasium Klasse 7: Deutsch, Englisch, Geschichte, Bio. Guter Zustand. Alle zusammen 35 €. Abholung in Charlottenburg. Mia, 0157-6677889."
+    },
+    {
+      "id": "E",
+      "text": "Lerngruppe Informatik sucht Mitglieder! Wir treffen uns jeden Samstag 14:00–16:00 in der Stadtbibliothek. Thema: Python programmieren. Kostenlos und für alle offen."
+    },
+    {
+      "id": "F",
+      "text": "Laptop zu verkaufen. Lenovo ThinkPad, 2 Jahre alt, guter Zustand. 14 Zoll, 8 GB RAM. Ideal für Schule und Studium. 250 €. Fotos per WhatsApp: 0170-4455667."
+    }
+  ],
+  "images": [
+    {
+      "id": "IMG1",
+      "type": "scene",
+      "prompt": "Cute cartoon illustration of a school notice board with six colorful education-themed classified ads — math tutoring, language course, guitar lessons, textbooks for sale, study group, laptop for sale. Fuxie cartoon style, flat illustration, warm pastel colors, no readable text.",
+      "filename": "A2-T3-004_scene.png",
+      "placement": "header",
+      "alt_text": "Kleinanzeigen zum Thema Schule und Lernen",
+      "dimensions": "768x512"
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q1",
+      "teil": 3,
+      "type": "matching",
+      "situation": "Mariam möchte besseres Deutsch lernen. Sie kann nur abends nach der Arbeit.",
+      "answer": "B",
+      "points": 1,
+      "explanation": {
+        "de": "Anzeige B bietet einen Deutschkurs B1 am Abend, Di + Do 18:30–20:00.",
+        "key_evidence": "Deutschkurs B1 am Abend. Di + Do 18:30–20:00",
+        "key_vocabulary": [
+          {
+            "word": "Deutschkurs",
+            "type": "Nomen",
+            "meaning": "German course"
+          },
+          {
+            "word": "Abend",
+            "type": "Nomen",
+            "meaning": "evening"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q2",
+      "teil": 3,
+      "type": "matching",
+      "situation": "Jonas kommt in die 7. Klasse am Gymnasium und braucht billige Bücher.",
+      "answer": "D",
+      "points": 1,
+      "explanation": {
+        "de": "Anzeige D verkauft Schulbücher für Gymnasium Klasse 7, günstig (35 €).",
+        "key_evidence": "Schulbücher günstig zu verkaufen! Gymnasium Klasse 7",
+        "key_vocabulary": [
+          {
+            "word": "günstig",
+            "type": "Adjektiv",
+            "meaning": "affordable / cheap"
+          },
+          {
+            "word": "Schulbuch",
+            "type": "Nomen",
+            "meaning": "textbook"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q3",
+      "teil": 3,
+      "type": "matching",
+      "situation": "Emilia (9 Jahre) möchte ein Musikinstrument lernen. Sie hat noch nie Musik gemacht.",
+      "answer": "C",
+      "points": 1,
+      "explanation": {
+        "de": "Anzeige C bietet Gitarrenunterricht für Kinder, auch für Anfänger.",
+        "key_evidence": "Gitarrenunterricht für Kinder und Erwachsene! Anfänger und Fortgeschrittene",
+        "key_vocabulary": [
+          {
+            "word": "Gitarrenunterricht",
+            "type": "Nomen",
+            "meaning": "guitar lessons"
+          },
+          {
+            "word": "Anfänger",
+            "type": "Nomen",
+            "meaning": "beginner"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q4",
+      "teil": 3,
+      "type": "matching",
+      "situation": "Tim interessiert sich für Computer und möchte zusammen mit anderen Programmieren lernen.",
+      "answer": "E",
+      "points": 1,
+      "explanation": {
+        "de": "Anzeige E ist eine Lerngruppe Informatik zum Thema Python programmieren.",
+        "key_evidence": "Lerngruppe Informatik. Thema: Python programmieren. Kostenlos",
+        "key_vocabulary": [
+          {
+            "word": "Lerngruppe",
+            "type": "Nomen",
+            "meaning": "study group"
+          },
+          {
+            "word": "programmieren",
+            "type": "Verb",
+            "meaning": "to program"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q5",
+      "teil": 3,
+      "type": "matching",
+      "situation": "Sophie schreibt bald eine Mathe-Prüfung und braucht Hilfe. Am liebsten allein mit einem Lehrer.",
+      "answer": "A",
+      "points": 1,
+      "explanation": {
+        "de": "Anzeige A bietet Mathe-Nachhilfe, Einzelunterricht oder kleine Gruppen.",
+        "key_evidence": "Mathe-Nachhilfe für Schüler. Einzelunterricht oder kleine Gruppen",
+        "key_vocabulary": [
+          {
+            "word": "Nachhilfe",
+            "type": "Nomen",
+            "meaning": "tutoring"
+          },
+          {
+            "word": "Einzelunterricht",
+            "type": "Nomen",
+            "meaning": "one-on-one lesson"
+          }
+        ]
+      }
+    }
+  ],
+  "scoring": {
+    "total_points": 5,
+    "pass_threshold": 3,
+    "grading": [
+      {
+        "range": [
+          5,
+          5
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          4,
+          4
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          3,
+          3
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          1,
+          2
+        ],
+        "label": "Noch üben!",
+        "emoji": "📝"
+      },
+      {
+        "range": [
+          0,
+          0
+        ],
+        "label": "Mehr Übung nötig",
+        "emoji": "💪"
+      }
+    ]
+  },
+  "qa": {
+    "vocab_in_a2_list": true,
+    "grammar_a2_only": true,
+    "word_count_in_range": true,
+    "all_answers_verifiable": true,
+    "matching_no_duplicate_answers": true,
+    "six_ads_present": true,
+    "image_count": 1,
+    "passed": true
+  }
+}

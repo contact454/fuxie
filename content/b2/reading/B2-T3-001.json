@@ -1,0 +1,222 @@
+{
+  "id": "B2-T3-001",
+  "level": "B2",
+  "teil": 3,
+  "teil_name": "Anzeigen zuordnen",
+  "topic": "Wissenschaft & Forschung",
+  "topic_id": "001",
+  "metadata": {
+    "word_count": 151,
+    "target_grammar": [
+      "Konjunktiv II",
+      "Passiv",
+      "Modalverben",
+      "Relativsätze"
+    ],
+    "target_vocabulary": [],
+    "generated_at": "2026-03-11T22:34:38.583025",
+    "version": 1
+  },
+  "anzeigen": [
+    {
+      "id": "A",
+      "text": "Helmholtz-Stipendium: Förderung für Nachwuchswissenschaftler in den Naturwissenschaften. 24 Monate, 2.200 Euro/Monat. Voraussetzung: abgeschlossenes Masterstudium. Bewerbung bis 31. März."
+    },
+    {
+      "id": "B",
+      "text": "Labor-Ausstatter Schmidt: Pipetten, Zentrifugen und Laborchemikalien zu Großhandelspreisen. Lieferung innerhalb von 48 Stunden. Mengenrabatt ab 500 Euro Bestellwert. www.labor-schmidt.de"
+    },
+    {
+      "id": "C",
+      "text": "Internationale Konferenz für Biotechnologie, 15.-18. April in München. Keynote-Vorträge, Poster-Sessions, Networking-Dinner. Frühbucherrabatt bis 28. Februar: 320 statt 480 Euro."
+    },
+    {
+      "id": "D",
+      "text": "Fortbildung Datenanalyse mit Python: 5-tägiger Intensivkurs für Forschende. Keine Vorkenntnisse nötig. Online oder Präsenz in Berlin. 890 Euro inkl. Zertifikat. Nächster Start: 5. Mai."
+    },
+    {
+      "id": "E",
+      "text": "Wissenschaftsverlag Springer sucht freie Lektoren für naturwissenschaftliche Fachbücher. Homeoffice möglich. Honorar nach Vereinbarung. Bewerbung mit Lebenslauf an lektorat@springer.de"
+    },
+    {
+      "id": "F",
+      "text": "Max-Planck-Gesellschaft: Doktorandenstellen in Quantenphysik. 3 Jahre, TV-L E13 (65%). Internationales Forschungsteam. Beginn: Oktober 2026. Bewerbung online unter www.mpg.de/karriere"
+    },
+    {
+      "id": "G",
+      "text": "Wissenschaftsjournalismus-Seminar: Wie vermittle ich Forschungsergebnisse verständlich? 2-Tages-Workshop, 6.-7. Juni in Hamburg. Für Wissenschaftler und Pressestellen. 290 Euro."
+    },
+    {
+      "id": "H",
+      "text": "Forschungsreaktor-Führung am KIT Karlsruhe. Einmal monatlich, samstags 10-12 Uhr. Kostenlos, aber Anmeldung erforderlich. Mindestalter 16 Jahre. Ausweis mitbringen."
+    }
+  ],
+  "situationen": [
+    {
+      "id": "S1",
+      "text": "Dr. Berger hat sein Masterstudium in Chemie abgeschlossen und sucht eine finanzielle Förderung für sein Forschungsprojekt.",
+      "answer": "A"
+    },
+    {
+      "id": "S2",
+      "text": "Eine Biologin muss für ihr Labor neue Geräte bestellen und legt Wert auf schnelle Lieferung.",
+      "answer": "B"
+    },
+    {
+      "id": "S3",
+      "text": "Ein Physikprofessor möchte lernen, seine Forschung mediengerecht zu präsentieren.",
+      "answer": "G"
+    },
+    {
+      "id": "S4",
+      "text": "Eine Studentin der Sozialwissenschaften muss für ihre Masterarbeit große Datenmengen auswerten und hat noch keine Programmiererfahrung.",
+      "answer": "D"
+    },
+    {
+      "id": "S5",
+      "text": "Ein promovierter Biologe sucht eine Tätigkeit, bei der er von zu Hause aus arbeiten kann.",
+      "answer": "E"
+    }
+  ],
+  "null_matches": [
+    "C",
+    "F",
+    "H"
+  ],
+  "images": [
+    {
+      "id": "IMG1",
+      "type": "scene",
+      "prompt": "Cute cartoon illustration of a bulletin board with various professional advertisements related to Wissenschaft & Forschung. Fuxie cartoon style, flat illustration, warm pastel colors, no text.",
+      "filename": "B2-T3-001_scene.png",
+      "placement": "header",
+      "alt_text": "Anzeigen: Wissenschaft & Forschung",
+      "dimensions": "768x512"
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q1",
+      "teil": 3,
+      "type": "matching",
+      "stem": "Die implizite Annahme, dass dr. Berger hat sein Masterstudium in Chemie abgeschlossen und sucht eine finanzielle Förderung für sein Forschungsprojekt, liegt dem Beitrag zugrunde:",
+      "answer": "A",
+      "points": 1,
+      "explanation": {
+        "de": "Anzeige A passt, weil sie das beschriebene Bedürfnis erfüllt.",
+        "key_evidence": "Anzeige A",
+        "key_vocabulary": [],
+        "reasoning": "[Inferential] "
+      }
+    },
+    {
+      "id": "Q2",
+      "teil": 3,
+      "type": "matching",
+      "stem": "Aus der Argumentation lässt sich ableiten, dass eine Biologin muss für ihr Labor neue Geräte bestellen und legt Wert auf schnelle Lieferung. Diese Position vertritt:",
+      "answer": "B",
+      "points": 1,
+      "explanation": {
+        "de": "Anzeige B passt, weil sie das beschriebene Bedürfnis erfüllt.",
+        "key_evidence": "Anzeige B",
+        "key_vocabulary": [],
+        "reasoning": "[Inferential] "
+      }
+    },
+    {
+      "id": "Q3",
+      "teil": 3,
+      "type": "matching",
+      "stem": "Aus der Argumentation lässt sich ableiten, dass Ein Physikprofessor möchte lernen, seine Forschung mediengerecht zu präsentieren. Diese Position vertritt:",
+      "answer": "G",
+      "points": 1,
+      "explanation": {
+        "de": "Anzeige G passt, weil sie das beschriebene Bedürfnis erfüllt.",
+        "key_evidence": "Anzeige G",
+        "key_vocabulary": [],
+        "reasoning": "[Inferential] "
+      }
+    },
+    {
+      "id": "Q4",
+      "teil": 3,
+      "type": "matching",
+      "stem": "Eine Studentin der Sozialwissenschaften muss für ihre Masterarbeit große Datenmengen auswerten und hat noch keine Programmiererfahrung.",
+      "answer": "D",
+      "points": 1,
+      "explanation": {
+        "de": "Anzeige D passt, weil sie das beschriebene Bedürfnis erfüllt.",
+        "key_evidence": "Anzeige D",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q5",
+      "teil": 3,
+      "type": "matching",
+      "stem": "Ein promovierter Biologe sucht eine Tätigkeit, bei der er von zu Hause aus arbeiten kann.",
+      "answer": "E",
+      "points": 1,
+      "explanation": {
+        "de": "Anzeige E passt, weil sie das beschriebene Bedürfnis erfüllt.",
+        "key_evidence": "Anzeige E",
+        "key_vocabulary": []
+      }
+    }
+  ],
+  "scoring": {
+    "total_points": 5,
+    "pass_threshold": 3,
+    "grading": [
+      {
+        "range": [
+          5,
+          5
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          4,
+          4
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          3,
+          3
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          1,
+          2
+        ],
+        "label": "Noch üben!",
+        "emoji": "📝"
+      },
+      {
+        "range": [
+          0,
+          0
+        ],
+        "label": "Mehr Übung nötig",
+        "emoji": "💪"
+      }
+    ]
+  },
+  "qa": {
+    "vocab_in_b2_list": true,
+    "grammar_b2_appropriate": true,
+    "word_count_in_range": true,
+    "all_answers_verifiable": true,
+    "null_matches_correct": true,
+    "image_count": 1,
+    "passed": true
+  }
+}

@@ -1,0 +1,224 @@
+{
+  "id": "B1-T2-001",
+  "level": "B1",
+  "teil": 2,
+  "teil_name": "Pressebericht lesen",
+  "topic": "Gesundheit & Ernährung",
+  "topic_id": "001",
+  "metadata": {
+    "word_count": 295,
+    "target_grammar": [
+      "Nebensatz mit dass/weil/obwohl",
+      "Passiv",
+      "Konjunktiv II"
+    ],
+    "target_vocabulary": [
+      "Trend",
+      "vegetarisch",
+      "Bevölkerung",
+      "Ernährung",
+      "Studie",
+      "steigen",
+      "Anteil",
+      "Umfrage",
+      "Tierwohl",
+      "Lebensmittel"
+    ],
+    "generated_at": "2026-03-10T22:57:00+07:00",
+    "version": 1
+  },
+  "article": {
+    "source": "Berliner Tagblatt",
+    "date": "8. Februar 2026",
+    "title": "Trend: Vegetarisch essen wird beliebter",
+    "subtitle": "Neue Studie zeigt: Immer mehr Deutsche verzichten auf Fleisch",
+    "text": "Laut einer aktuellen Studie der Universität Göttingen ernähren sich mittlerweile rund zehn Prozent der deutschen Bevölkerung vegetarisch. Vor zehn Jahren waren es nur vier Prozent. Besonders bei jungen Menschen zwischen 18 und 30 Jahren ist der Anteil deutlich gestiegen.\n\nDie Gründe für den Wandel sind vielfältig. In einer Umfrage gaben 42 Prozent der Befragten an, dass sie aus Gründen des Tierwohls auf Fleisch verzichten. 35 Prozent nannten den Klimaschutz als wichtigsten Grund, weil die Fleischproduktion besonders viel CO2 verursacht. Weitere 23 Prozent sagten, dass sie sich ohne Fleisch gesünder fühlen.\n\nAuch die Lebensmittelindustrie hat auf den Trend reagiert. In jedem Supermarkt gibt es heute eine große Auswahl an vegetarischen und veganen Produkten, obwohl diese vor wenigen Jahren noch selten waren. Pflanzliche Burger, Würstchen und sogar Fischstäbchen ohne Fisch werden immer beliebter.\n\nExperten sehen den Trend positiv. Professor Dr. Anna Keller von der Universität Göttingen erklärt: „Eine pflanzliche Ernährung kann sehr gesund sein, wenn man auf eine ausgewogene Zusammenstellung achtet. Wichtig ist, dass man genug Eiweiß, Eisen und Vitamin B12 zu sich nimmt.“\n\nKritiker warnen jedoch, dass vegetarische Fertigprodukte oft viel Zucker und Fett enthalten. Außerdem werden manche pflanzlichen Zutaten, wie zum Beispiel Soja, aus fernen Ländern importiert, was ebenfalls die Umwelt belastet.\n\nInsgesamt zeigt die Studie, dass sich das Essverhalten der Deutschen langsam, aber deutlich verändert."
+  },
+  "images": [
+    {
+      "id": "IMG1",
+      "type": "scene",
+      "prompt": "Cute cartoon illustration of a German newspaper front page about vegetarian food trends, with vegetables and plant-based products in the background. Fuxie cartoon style, flat illustration, warm pastel colors, no readable text.",
+      "filename": "B1-T2-001_scene.png",
+      "placement": "header",
+      "alt_text": "Zeitungsartikel über vegetarische Ernährung",
+      "dimensions": "768x512"
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q1",
+      "teil": 2,
+      "type": "multiple_choice",
+      "stem": "Wie viel Prozent der Deutschen ernähren sich laut der Studie vegetarisch?",
+      "options": {
+        "a": "Vier Prozent.",
+        "b": "Zehn Prozent.",
+        "c": "Zwanzig Prozent."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Rund zehn Prozent der deutschen Bevölkerung ernähren sich vegetarisch.",
+        "key_evidence": "rund zehn Prozent der deutschen Bevölkerung vegetarisch",
+        "key_vocabulary": [
+          {
+            "word": "Bevölkerung",
+            "type": "Nomen",
+            "meaning": "population"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q2",
+      "teil": 2,
+      "type": "multiple_choice",
+      "stem": "Was ist der häufigste Grund, warum Menschen auf Fleisch verzichten?",
+      "options": {
+        "a": "Klimaschutz.",
+        "b": "Tierwohl.",
+        "c": "Gesundheit."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "42 Prozent verzichten aus Gründen des Tierwohls — das ist der höchste Anteil.",
+        "key_evidence": "42 Prozent der Befragten an, dass sie aus Gründen des Tierwohls",
+        "key_vocabulary": [
+          {
+            "word": "Tierwohl",
+            "type": "Nomen",
+            "meaning": "animal welfare"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q3",
+      "teil": 2,
+      "type": "multiple_choice",
+      "stem": "Was meint Professorin Dr. Keller zur vegetarischen Ernährung?",
+      "options": {
+        "a": "Sie ist immer ungesund.",
+        "b": "Sie kann gesund sein, wenn man auf die richtige Zusammenstellung achtet.",
+        "c": "Sie ist nur für junge Menschen geeignet."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Sie sagt, pflanzliche Ernährung kann gesund sein, wenn man auf ausgewogene Zusammenstellung achtet.",
+        "key_evidence": "kann sehr gesund sein, wenn man auf eine ausgewogene Zusammenstellung achtet",
+        "key_vocabulary": [
+          {
+            "word": "ausgewogen",
+            "type": "Adjektiv",
+            "meaning": "balanced"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q4",
+      "teil": 2,
+      "type": "multiple_choice",
+      "stem": "Was kritisieren die Kritiker an vegetarischen Fertigprodukten?",
+      "options": {
+        "a": "Sie schmecken schlecht.",
+        "b": "Sie enthalten oft viel Zucker und Fett.",
+        "c": "Sie sind zu teuer."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Kritiker warnen, dass vegetarische Fertigprodukte oft viel Zucker und Fett enthalten.",
+        "key_evidence": "vegetarische Fertigprodukte oft viel Zucker und Fett enthalten",
+        "key_vocabulary": [
+          {
+            "word": "Fertigprodukt",
+            "type": "Nomen",
+            "meaning": "ready-made product"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q5",
+      "teil": 2,
+      "type": "multiple_choice",
+      "stem": "Welche Altersgruppe isst besonders häufig vegetarisch?",
+      "options": {
+        "a": "Menschen über 60.",
+        "b": "Kinder unter 12.",
+        "c": "Junge Menschen zwischen 18 und 30."
+      },
+      "answer": "c",
+      "points": 1,
+      "explanation": {
+        "de": "Besonders bei jungen Menschen zwischen 18 und 30 Jahren ist der Anteil gestiegen.",
+        "key_evidence": "Besonders bei jungen Menschen zwischen 18 und 30 Jahren",
+        "key_vocabulary": [
+          {
+            "word": "Anteil",
+            "type": "Nomen",
+            "meaning": "share / proportion"
+          }
+        ]
+      }
+    }
+  ],
+  "scoring": {
+    "total_points": 5,
+    "pass_threshold": 3,
+    "grading": [
+      {
+        "range": [
+          5,
+          5
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          4,
+          4
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          3,
+          3
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          1,
+          2
+        ],
+        "label": "Noch üben!",
+        "emoji": "📝"
+      },
+      {
+        "range": [
+          0,
+          0
+        ],
+        "label": "Mehr Übung nötig",
+        "emoji": "💪"
+      }
+    ]
+  },
+  "qa": {
+    "vocab_in_b1_list": true,
+    "grammar_b1_appropriate": true,
+    "word_count_in_range": true,
+    "all_answers_verifiable": true,
+    "image_count": 1,
+    "passed": true
+  }
+}

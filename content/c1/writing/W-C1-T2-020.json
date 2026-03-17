@@ -1,0 +1,64 @@
+{
+  "id": "W-C1-T2-020",
+  "cefrLevel": "C1",
+  "teil": 2,
+  "teilName": "Textumwandlung",
+  "textType": "Formeller Brief",
+  "register": "formell",
+  "topic": "Verkehrskonzept",
+  "instruction": "Sie haben einen Vortrag eines Verkehrsexperten zur Neugestaltung des Stadtverkehrs gehört. Schreiben Sie nun einen formellen Brief an den Oberbürgermeister Ihrer Stadt, in dem Sie die Argumente des Experten sachlich zusammenfassen und Ihre eigene Position zu einer autofreien Innenstadt darlegen.",
+  "instructionVi": "Bạn đã nghe một bài tham luận của chuyên gia giao thông về việc tái cấu trúc giao thông đô thị. Hãy viết một lá thư trang trọng gửi Thị trưởng thành phố, tóm tắt khách quan các luận điểm của chuyên gia và trình bày quan điểm cá nhân về một trung tâm thành phố không ô tô.",
+  "situation": "Ihre Heimatstadt leidet unter zunehmendem Verkehrsaufkommen und schlechter Luftqualität. Die Stadtverwaltung plant eine umfassende Reform des Verkehrskonzepts, die jedoch in der Bevölkerung und beim Einzelhandel umstritten ist. Sie möchten sich als engagierter Bürger konstruktiv an der Debatte beteiligen.",
+  "contentPoints": [
+    "Zusammenfassung der im Vortrag genannten Hauptprobleme und Lösungsansätze",
+    "Bewertung der Auswirkungen einer Verkehrsberuhigung auf die Lebensqualität",
+    "Stellungnahme zu den wirtschaftlichen Bedenken der lokalen Ladenbesitzer",
+    "Eigene Vorschläge zur Förderung alternativer Mobilitätsformen"
+  ],
+  "sourceText": "„Ja, also, meine Damen und Herren, schauen wir uns doch mal um: Unsere Innenstadt erstickt im Blech! Jeden Morgen der gleiche Stau, und von der Abgasbelastung will ich gar nicht erst anfangen. Wir müssen da radikal umdenken. Mein Vorschlag ist ja, den Individualverkehr massiv zurückzudrängen. Wenn wir die Parkgebühren in der City verdoppeln und gleichzeitig dieses Geld eins zu eins in den Ausbau der Tram und der Buslinien stecken, dann bewegen wir auch was. Viele Geschäftsleute haben natürlich Panik, dass ihnen die Kunden weglaufen, wenn man nicht mehr direkt vor der Ladentür parken kann. Aber wissen Sie was? Das Gegenteil ist der Fall! Studien zeigen doch, dass Fußgängerzonen und breite Radwege die Verweildauer der Leute erhöhen und den Umsatz sogar steigern. Wir brauchen mehr Grünflächen statt Asphaltwüsten. Es geht hier nicht darum, die Autofahrer zu ärgern, sondern darum, die Stadt wieder bewohnbar zu machen. Wenn wir jetzt nicht handeln, dann stirbt das Zentrum sowieso aus, aber aus anderen Gründen.“",
+  "sourceTextType": "Muendlicher Vortrag",
+  "minWords": 200,
+  "maxWords": 300,
+  "timeMinutes": 40,
+  "rubric": {
+    "criteria": [
+      {
+        "id": "inhalt",
+        "name": "Inhalt",
+        "nameVi": "Nội dung",
+        "maxScore": 5,
+        "weight": 20
+      },
+      {
+        "id": "angemessenheit",
+        "name": "Kommunikative Angemessenheit",
+        "nameVi": "Phù hợp giao tiếp",
+        "maxScore": 5,
+        "weight": 20
+      },
+      {
+        "id": "korrektheit",
+        "name": "Korrektheit",
+        "nameVi": "Chính xác ngữ pháp & chính tả",
+        "maxScore": 5,
+        "weight": 20
+      },
+      {
+        "id": "spektrum",
+        "name": "Wortschatz & Strukturen",
+        "nameVi": "Đa dạng từ vựng & cấu trúc",
+        "maxScore": 5,
+        "weight": 20
+      },
+      {
+        "id": "kohaerenz",
+        "name": "Kohaerenz & Kohaesion",
+        "nameVi": "Mạch lạc & liên kết",
+        "maxScore": 5,
+        "weight": 20
+      }
+    ],
+    "maxScore": 25
+  },
+  "maxScore": 25
+}

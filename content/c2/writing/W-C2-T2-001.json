@@ -1,0 +1,92 @@
+{
+  "id": "W-C2-T2-001",
+  "cefrLevel": "C2",
+  "teil": 2,
+  "teilName": "Textumwandlung",
+  "textType": "Zeitungsartikel",
+  "register": "variiert",
+  "topic": "Stadtentwicklung",
+  "instruction": "Wandeln Sie den Vortragsnotizen zum Thema 'Stadtentwicklung' in einen Zeitungsartikel um (mind. 200 Woerter).",
+  "instructionVi": "Chuyen doi: Vortragsnotizen -> Zeitungsartikel ve Stadtentwicklung.",
+  "situation": "Lesen Sie den Vortragsnotizen zum Thema 'Stadtentwicklung' und schreiben Sie daraus einen Zeitungsartikel.",
+  "contentPoints": [
+    "Kernaussagen erfassen",
+    "In Textsorte 'Zeitungsartikel' umwandeln",
+    "Register und Stil anpassen",
+    "Kohaerenten Text verfassen"
+  ],
+  "minWords": 200,
+  "maxWords": 350,
+  "timeMinutes": 30,
+  "rubric": {
+    "criteria": [
+      {
+        "id": "inhalt",
+        "name": "Inhalt",
+        "nameVi": "Noi dung",
+        "maxScore": 5,
+        "weight": 20
+      },
+      {
+        "id": "angemessenheit",
+        "name": "Kommunikative Angemessenheit",
+        "nameVi": "Phu hop giao tiep",
+        "maxScore": 5,
+        "weight": 20
+      },
+      {
+        "id": "korrektheit",
+        "name": "Korrektheit",
+        "nameVi": "Chinh xac ngu phap",
+        "maxScore": 5,
+        "weight": 20
+      },
+      {
+        "id": "spektrum",
+        "name": "Wortschatz & Strukturen",
+        "nameVi": "Da dang tu vung",
+        "maxScore": 5,
+        "weight": 20
+      },
+      {
+        "id": "kohaerenz",
+        "name": "Kohaerenz & Kohaesion",
+        "nameVi": "Mach lac & lien ket",
+        "maxScore": 5,
+        "weight": 20
+      }
+    ],
+    "maxScore": 25
+  },
+  "maxScore": 25,
+  "sourceTextType": "Zeitungsartikel",
+  "sourceText": "Metropolen im Wandel: Die Renaissance der urbanen Resilienz\nVon Dr. Helene Marwitz, Frankfurter Allgemeine Rundschau\n\nDie moderne Stadtentwicklung steht vor einem monumentalen Paradigmenwechsel. Angesichts der Prognose der Vereinten Nationen, wonach bis 2050 rund 70 Prozent der Weltbevölkerung in urbanen Zentren leben werden, müssen Metropolen ihre infrastrukturelle Beschaffenheit grundlegend reevaluieren. Laut Prof. Dr. Julian Weber, Experte für nachhaltigen Städtebau an der Technischen Universität, ist die Ära der funktionalen Trennung von Wohn- und Arbeitsquartieren endgültig passé. Das Modell der „Schwammstadt“ avanciert hierbei zum globalen Leitbild: Durch großflächige Entsiegelung und vertikale Begrünung sollen urbane Räume befähigt werden, extreme Niederschlagsereignisse effektiv zu puffern.\n\nEin exemplarisches Projekt findet sich im Berliner Ortsteil Adlershof, wo die Symbiose aus Hochtechnologie und urbanem Lebensraum bereits Früchte trägt. Aktuelle Daten illustrieren, dass die Implementierung dezentraler Photovoltaik-Anlagen und intelligenter Wärmenetze die lokalen CO2-Emissionen um signifikante 18 Prozent reduziert hat. Dennoch mahnt Weber zur Vorsicht: „Die ökologische Transformation darf nicht zum Katalysator sozialer Exklusion werden.“ Die Gefahr der Gentrifizierung durch energetische Sanierungen ist omnipräsent. Statistisch gesehen stiegen die Mieten in sanierten Modellquartieren um bis zu 25 Prozent, was einkommensschwache Schichten an den Stadtrand drängt. Eine resiliente Stadtentwicklung muss daher die soziale Gerechtigkeit mit klimatischer Adaption verschmelzen, um die Akzeptanz der Transformation langfristig zu sichern.",
+  "grafikDesc": "Entwicklung der CO2-Emissionen und Mietpreise in sanierten Stadtquartieren (Basisjahr 2015 = 100)",
+  "grafikData": [
+    {
+      "Jahr": 2015,
+      "CO2-Emissionen": 100,
+      "Mietpreisniveau": 100
+    },
+    {
+      "Jahr": 2017,
+      "CO2-Emissionen": 94,
+      "Mietpreisniveau": 107
+    },
+    {
+      "Jahr": 2019,
+      "CO2-Emissionen": 89,
+      "Mietpreisniveau": 116
+    },
+    {
+      "Jahr": 2021,
+      "CO2-Emissionen": 83,
+      "Mietpreisniveau": 124
+    },
+    {
+      "Jahr": 2023,
+      "CO2-Emissionen": 76,
+      "Mietpreisniveau": 132
+    }
+  ]
+}

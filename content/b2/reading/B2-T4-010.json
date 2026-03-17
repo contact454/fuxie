@@ -1,0 +1,172 @@
+{
+  "id": "B2-T4-010",
+  "level": "B2",
+  "teil": 4,
+  "teil_name": "Kommentare lesen",
+  "topic": "Mobilität & Verkehr",
+  "topic_id": "010",
+  "metadata": {
+    "word_count": 144,
+    "target_grammar": [
+      "Konjunktiv II",
+      "Passiv",
+      "Nominalisierung",
+      "Relativsatze"
+    ],
+    "target_vocabulary": [],
+    "generated_at": "2026-03-11T22:37:08.661642",
+    "version": 1
+  },
+  "forum": {
+    "question": "Sollte ein Tempolimit auf Autobahnen eingefuhrt werden?",
+    "comments": [
+      {
+        "name": "ADAC-Sprecherin Sabine Kraft",
+        "position": "nein",
+        "text": "Deutschland ist das einzige Industrieland ohne allgemeines Tempolimit auf Autobahnen. Doch die Unfallstatistiken zeigen, dass Autobahnen ohne Tempolimit nicht unsicherer sind als solche mit Begrenzung. Die Infrastruktur und der Straßenzustand sind entscheidender fur die Sicherheit als eine pauschale Geschwindigkeitsbegrenzung."
+      },
+      {
+        "name": "Klimaaktivist Tim Schroder",
+        "position": "ja",
+        "text": "Ein Tempolimit von 120 km/h wurde nach Berechnungen des Umweltbundesamtes jahrlich 6,7 Millionen Tonnen CO2 einsparen. Das ist eine einfache, kostenlose Klimaschutzmaßnahme, die sofort wirkt. Es gibt keinen vernunftigen Grund, darauf zu verzichten."
+      },
+      {
+        "name": "Automobilingenieurin Dr. Lise Petersen",
+        "position": "nein",
+        "text": "Die deutschen Autobahnen sind fur hohe Geschwindigkeiten gebaut. Die Fahrzeugtechnik hat enorme Fortschritte gemacht, Sicherheitssysteme wie automatisches Bremsen und Spurhaltung machen schnelles Fahren sicherer als je zuvor. Ein Tempolimit ware ein Ruckschritt."
+      },
+      {
+        "name": "Fahrlehrer Benjamin Koch",
+        "position": "ja",
+        "text": "Aus meiner taglichen Erfahrung kann ich sagen, dass die Geschwindigkeitsunterschiede auf Autobahnen ohne Tempolimit das grosste Risiko darstellen. Wenn ein Lkw mit 80 fahrt und ein Sportwagen mit 250, ist das extrem gefahrlich. Ein einheitliches Tempolimit wurde den Verkehrsfluss harmonisieren."
+      }
+    ]
+  },
+  "images": [
+    {
+      "id": "IMG1",
+      "type": "scene",
+      "prompt": "Cute cartoon illustration of people having a discussion forum about Mobilität & Verkehr, showing speech bubbles with different opinions. Fuxie cartoon style, flat illustration, warm pastel colors, no text.",
+      "filename": "B2-T4-010_scene.png",
+      "placement": "header",
+      "alt_text": "Sollte ein Tempolimit auf Autobahnen eingefuhrt we",
+      "dimensions": "768x512"
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q1",
+      "teil": 4,
+      "type": "ja_nein",
+      "stem": "Sabine Kraft halt Autobahnen ohne Tempolimit fur unsicherer als solche mit Begrenzung.",
+      "answer": "nein",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Sabine Kraft halt Autobahnen ohne Tempolimit fur unsicherer als solche mit Begre",
+        "reasoning": "Die richtige Antwort ergibt sich aus dem Text."
+      }
+    },
+    {
+      "id": "Q2",
+      "teil": 4,
+      "type": "ja_nein",
+      "stem": "Der Text legt nahe, dass tim Schroder argumentiert mit den Klimavorteilen eines Tempolimits.",
+      "answer": "ja",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Tim Schroder argumentiert mit den Klimavorteilen eines Tempolimits.",
+        "reasoning": "[Inferential] Die richtige Antwort ergibt sich aus dem Text."
+      }
+    },
+    {
+      "id": "Q3",
+      "teil": 4,
+      "type": "ja_nein",
+      "stem": "Dr. Petersen sieht ein Tempolimit als Fortschritt an.",
+      "answer": "nein",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Dr. Petersen sieht ein Tempolimit als Fortschritt an.",
+        "reasoning": "Die richtige Antwort ergibt sich aus dem Text."
+      }
+    },
+    {
+      "id": "Q4",
+      "teil": 4,
+      "type": "ja_nein",
+      "stem": "Aus dem Text lässt sich schließen, dass benjamin Koch weist auf die Gefahr grosser Geschwindigkeitsunterschiede hin.",
+      "answer": "ja",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Benjamin Koch weist auf die Gefahr grosser Geschwindigkeitsunterschiede hin.",
+        "reasoning": "[Inferential] Die richtige Antwort ergibt sich aus dem Text."
+      }
+    },
+    {
+      "id": "Q5",
+      "teil": 4,
+      "type": "ja_nein",
+      "stem": "Aus dem Text lässt sich schließen, dass Die Mehrzahl der Kommentatoren befurwortet ein Tempolimit.",
+      "answer": "nein",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Die Mehrzahl der Kommentatoren befurwortet ein Tempolimit.",
+        "reasoning": "[Inferential] Die richtige Antwort ergibt sich aus dem Text."
+      }
+    }
+  ],
+  "scoring": {
+    "total_points": 5,
+    "pass_threshold": 3,
+    "grading": [
+      {
+        "range": [
+          5,
+          5
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          4,
+          4
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          3,
+          3
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          1,
+          2
+        ],
+        "label": "Noch uben!",
+        "emoji": "📝"
+      },
+      {
+        "range": [
+          0,
+          0
+        ],
+        "label": "Mehr Ubung notig",
+        "emoji": "💪"
+      }
+    ]
+  },
+  "qa": {
+    "vocab_in_b2_list": true,
+    "grammar_b2_appropriate": true,
+    "word_count_in_range": true,
+    "all_answers_verifiable": true,
+    "image_count": 1,
+    "passed": true
+  }
+}

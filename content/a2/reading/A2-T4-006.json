@@ -1,0 +1,285 @@
+{
+  "id": "A2-T4-006",
+  "level": "A2",
+  "teil": 4,
+  "teil_name": "Fahrpläne und Kalender lesen",
+  "topic": "Im Restaurant",
+  "topic_id": "006",
+  "metadata": {
+    "word_count": 80,
+    "target_grammar": [
+      "Modalverben",
+      "Zeitangaben"
+    ],
+    "target_vocabulary": [
+      "Veranstaltung",
+      "Brunch",
+      "Themenabend",
+      "Reservierung",
+      "Buffet",
+      "Live-Musik",
+      "Weinprobe",
+      "Grillabend",
+      "Kinderbuffet",
+      "Eintritt"
+    ],
+    "generated_at": "2026-03-09T22:46:00+07:00",
+    "version": 1
+  },
+  "schedule": {
+    "title": "Gasthof zum Goldenen Hirsch — Wochenplan Events",
+    "type": "event_schedule",
+    "columns": [
+      "Tag",
+      "Event",
+      "Uhrzeit",
+      "Preis / Person",
+      "Reservierung"
+    ],
+    "rows": [
+      [
+        "Montag",
+        "Pasta-Abend: Pasta + Getränk",
+        "18:00–21:00",
+        "12,90 €",
+        "nicht nötig"
+      ],
+      [
+        "Dienstag",
+        "Quiz-Abend mit Preisen",
+        "19:30–22:00",
+        "Eintritt frei",
+        "nicht nötig"
+      ],
+      [
+        "Mittwoch",
+        "— Ruhetag —",
+        "—",
+        "—",
+        "—"
+      ],
+      [
+        "Donnerstag",
+        "Weinprobe (6 Weine + Snacks)",
+        "19:00–21:30",
+        "25 €",
+        "ja, bis Dienstag"
+      ],
+      [
+        "Freitag",
+        "Live-Musik (Jazz-Band)",
+        "20:00–23:00",
+        "5 €",
+        "empfohlen"
+      ],
+      [
+        "Samstag",
+        "Grillabend auf der Terrasse",
+        "17:00–22:00",
+        "ab 15 €",
+        "ja, bis Donnerstag"
+      ],
+      [
+        "Sonntag",
+        "Familien-Brunch (Buffet)",
+        "10:00–14:00",
+        "18,90 € / Kinder 8,90 €",
+        "ja, bis Freitag"
+      ]
+    ],
+    "footnote": "Reservierung telefonisch: 06221-334455 oder online. Am Mittwoch ist das Restaurant geschlossen. Kindersitze und Hochstühle vorhanden. Terrasse bei gutem Wetter geöffnet."
+  },
+  "images": [
+    {
+      "id": "IMG1",
+      "type": "schedule",
+      "prompt": "Cute cartoon illustration of a cozy German restaurant (Gasthof) with outdoor terrace, string lights, a chalkboard showing weekly events, families dining. Fuxie cartoon style, flat illustration, warm pastel colors, no text.",
+      "filename": "A2-T4-006_schedule.png",
+      "placement": "header",
+      "alt_text": "Gasthof Wochenplan Events",
+      "dimensions": "768x512"
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q1",
+      "teil": 4,
+      "type": "detail_extraction",
+      "stem": "Wann ist das Restaurant geschlossen?",
+      "options": {
+        "a": "Am Montag.",
+        "b": "Am Mittwoch.",
+        "c": "Am Sonntag."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Am Mittwoch ist Ruhetag.",
+        "key_evidence": "Mittwoch: Ruhetag",
+        "key_vocabulary": [
+          {
+            "word": "Ruhetag",
+            "type": "Nomen",
+            "meaning": "day off / closing day"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q2",
+      "teil": 4,
+      "type": "detail_extraction",
+      "stem": "Bis wann muss man für den Grillabend reservieren?",
+      "options": {
+        "a": "Bis Dienstag.",
+        "b": "Bis Donnerstag.",
+        "c": "Bis Freitag."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Für den Grillabend am Samstag muss man bis Donnerstag reservieren.",
+        "key_evidence": "Samstag: Reservierung ja, bis Donnerstag",
+        "key_vocabulary": [
+          {
+            "word": "Reservierung",
+            "type": "Nomen",
+            "meaning": "reservation"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q3",
+      "teil": 4,
+      "type": "detail_extraction",
+      "stem": "Was kostet der Familien-Brunch für ein Kind?",
+      "options": {
+        "a": "Gratis.",
+        "b": "8,90 €.",
+        "c": "18,90 €."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Kinder zahlen beim Familien-Brunch 8,90 €.",
+        "key_evidence": "Familien-Brunch: Kinder 8,90 €",
+        "key_vocabulary": [
+          {
+            "word": "Brunch",
+            "type": "Nomen",
+            "meaning": "brunch"
+          },
+          {
+            "word": "Buffet",
+            "type": "Nomen",
+            "meaning": "buffet"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q4",
+      "teil": 4,
+      "type": "detail_extraction",
+      "stem": "An welchem Abend gibt es Live-Musik?",
+      "options": {
+        "a": "Am Donnerstag.",
+        "b": "Am Freitag.",
+        "c": "Am Samstag."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Am Freitag gibt es Live-Musik (Jazz-Band) von 20:00–23:00.",
+        "key_evidence": "Freitag: Live-Musik (Jazz-Band) 20:00–23:00",
+        "key_vocabulary": [
+          {
+            "word": "Live-Musik",
+            "type": "Nomen",
+            "meaning": "live music"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q5",
+      "teil": 4,
+      "type": "detail_extraction",
+      "stem": "Was kostet der Quiz-Abend?",
+      "options": {
+        "a": "5 €.",
+        "b": "12,90 €.",
+        "c": "Der Eintritt ist frei."
+      },
+      "answer": "c",
+      "points": 1,
+      "explanation": {
+        "de": "Der Quiz-Abend am Dienstag hat Eintritt frei.",
+        "key_evidence": "Quiz-Abend: Eintritt frei",
+        "key_vocabulary": [
+          {
+            "word": "Eintritt",
+            "type": "Nomen",
+            "meaning": "admission"
+          }
+        ]
+      }
+    }
+  ],
+  "scoring": {
+    "total_points": 5,
+    "pass_threshold": 3,
+    "grading": [
+      {
+        "range": [
+          5,
+          5
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          4,
+          4
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          3,
+          3
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          1,
+          2
+        ],
+        "label": "Noch üben!",
+        "emoji": "📝"
+      },
+      {
+        "range": [
+          0,
+          0
+        ],
+        "label": "Mehr Übung nötig",
+        "emoji": "💪"
+      }
+    ]
+  },
+  "qa": {
+    "vocab_in_a2_list": true,
+    "grammar_a2_only": true,
+    "word_count_in_range": true,
+    "all_answers_verifiable": true,
+    "schedule_data_consistent": true,
+    "image_count": 1,
+    "passed": true
+  }
+}

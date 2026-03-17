@@ -1,0 +1,196 @@
+{
+  "id": "C1-T4-011",
+  "level": "C1",
+  "teil": 4,
+  "teil_name": "Meinungen zuordnen",
+  "topic": "Umweltpolitik & Klima",
+  "topic_id": "011",
+  "metadata": {
+    "word_count": 112,
+    "target_grammar": [
+      "Nominalisierung",
+      "Partizipialkonstruktionen",
+      "Konjunktiv I/II",
+      "Passiversatzformen"
+    ],
+    "target_vocabulary": [],
+    "generated_at": "2026-03-11T23:18:54.731267",
+    "version": 1
+  },
+  "opinion_texts": {
+    "question": "Ist Kernenergie die Lösung für die Klimakrise?",
+    "texts": [
+      {
+        "name": "Physiker Prof. Dr. Werner Hofer",
+        "text": "Kernenergie ist CO2-arm, grundlastfähig und liefert riesige Energiemengen auf kleiner Fläche. Wer den Klimawandel ernst nimmt, kann nicht gleichzeitig die einzige bewährte CO2-arme Grundlasttechnologie ablehnen.",
+        "label": "A"
+      },
+      {
+        "name": "Umweltaktivistin Sarah Lindner",
+        "text": "Die Risiken der Kernenergie, Atommüll für Hunderttausende von Jahren, das Restrisiko eines GAUs und die Gefahr der nuklearen Proliferation, überwiegen die Vorteile bei Weitem. Die Zukunft gehört den erneuerbaren Energien.",
+        "label": "B"
+      },
+      {
+        "name": "Energieökonom Dr. Paul Richter",
+        "text": "Neue Kernkraftwerke sind schlicht zu teuer und dauern zu lange im Bau. Die Kosten pro Kilowattstunde liegen bei Neubauten weit über denen von Wind- und Solarenergie. Der Markt hat bereits entschieden.",
+        "label": "C"
+      },
+      {
+        "name": "Ingenieurin Dr. Kerstin Meier",
+        "text": "Kleine modulare Reaktoren der nächsten Generation könnten die Probleme herkömmlicher Kernkraftwerke lösen: kürzere Bauzeiten, geringere Kosten und weniger langlebigen Atommüll. Die Technologie verdient eine faire Chance.",
+        "label": "D"
+      }
+    ]
+  },
+  "images": [
+    {
+      "id": "IMG1",
+      "type": "scene",
+      "prompt": "Cute cartoon illustration of experts discussing Umweltpolitik & Klima. Fuxie cartoon style, flat illustration, warm pastel colors, no text.",
+      "filename": "C1-T4-011_scene.png",
+      "placement": "header",
+      "alt_text": "Ist Kernenergie die Lösung für die Klimakrise?",
+      "dimensions": "768x512"
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q1",
+      "teil": 4,
+      "type": "matching",
+      "stem": "Die grundlegende Prämisse, dass kernenergie liefert CO2-arme Grundlastenergie auf kleiner Fläche, liegt der Position zugrunde:",
+      "answer": "A",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Text/Beitrag A",
+        "reasoning": "[Inferential] Die Aussage 'Kernenergie liefert CO2-arme Grundlastenergie auf ...' entspricht der Position von A."
+      }
+    },
+    {
+      "id": "Q2",
+      "teil": 4,
+      "type": "matching",
+      "stem": "Die Risiken der Kernenergie überwiegen die Vorteile.",
+      "answer": "B",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Text/Beitrag B",
+        "reasoning": "Die Aussage 'Die Risiken der Kernenergie überwiegen die Vorteil...' entspricht der Position von B."
+      }
+    },
+    {
+      "id": "Q3",
+      "teil": 4,
+      "type": "matching",
+      "stem": "Die These, dass neue Kernkraftwerke sind wirtschaftlich nicht konkurrenzfähig, wird durch folgende Argumentation gestützt:",
+      "answer": "C",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Text/Beitrag C",
+        "reasoning": "[Inferential] Die Aussage 'Neue Kernkraftwerke sind wirtschaftlich nicht konk...' entspricht der Position von C."
+      }
+    },
+    {
+      "id": "Q4",
+      "teil": 4,
+      "type": "matching",
+      "stem": "Die grundlegende Prämisse, dass kleine modulare Reaktoren könnten die bisherigen Probleme lösen, liegt der Position zugrunde:",
+      "answer": "D",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Text/Beitrag D",
+        "reasoning": "[Inferential] Die Aussage 'Kleine modulare Reaktoren könnten die bisherigen P...' entspricht der Position von D."
+      }
+    },
+    {
+      "id": "Q5",
+      "teil": 4,
+      "type": "matching",
+      "stem": "Die These, dass wer Klimaschutz ernst nimmt, kann Kernenergie nicht ablehnen, wird durch folgende Argumentation gestützt:",
+      "answer": "A",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Text/Beitrag A",
+        "reasoning": "[Inferential] Die Aussage 'Wer Klimaschutz ernst nimmt, kann Kernenergie nich...' entspricht der Position von A."
+      }
+    },
+    {
+      "id": "Q6",
+      "teil": 4,
+      "type": "matching",
+      "stem": "Die grundlegende Prämisse, dass erneuerbare Energien sind die Zukunft der Energieversorgung, liegt der Position zugrunde:",
+      "answer": "B",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Text/Beitrag B",
+        "reasoning": "[Inferential] Die Aussage 'Erneuerbare Energien sind die Zukunft der Energiev...' entspricht der Position von B."
+      }
+    },
+    {
+      "id": "Q7",
+      "teil": 4,
+      "type": "matching",
+      "stem": "Der Markt bevorzugt bereits Wind- und Solarenergie aus Kostengründen.",
+      "answer": "C",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Text/Beitrag C",
+        "reasoning": "Die Aussage 'Der Markt bevorzugt bereits Wind- und Solarenergie...' entspricht der Position von C."
+      }
+    }
+  ],
+  "scoring": {
+    "total_points": 7,
+    "pass_threshold": 5,
+    "grading": [
+      {
+        "range": [
+          6,
+          7
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          4,
+          5
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          3,
+          3
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          1,
+          2
+        ],
+        "label": "Noch üben!",
+        "emoji": "📝"
+      },
+      {
+        "range": [
+          0,
+          0
+        ],
+        "label": "Mehr Übung nötig",
+        "emoji": "💪"
+      }
+    ]
+  },
+  "qa": {
+    "vocab_in_c1_list": true,
+    "grammar_c1_appropriate": true,
+    "word_count_in_range": true,
+    "all_answers_verifiable": true,
+    "image_count": 1,
+    "passed": true
+  }
+}

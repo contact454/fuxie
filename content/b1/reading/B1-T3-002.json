@@ -1,0 +1,258 @@
+{
+  "id": "B1-T3-002",
+  "level": "B1",
+  "teil": 3,
+  "teil_name": "Anzeigen zuordnen",
+  "topic": "Reisen & Tourismus",
+  "topic_id": "002",
+  "metadata": {
+    "word_count": 235,
+    "target_grammar": [
+      "Nebensatz mit weil/dass",
+      "Modalverben",
+      "Komparativ"
+    ],
+    "target_vocabulary": [
+      "Ferienwohnung",
+      "Pauschalreise",
+      "Wanderung",
+      "Sprachreise",
+      "Kreuzfahrt",
+      "Campingplatz",
+      "Reiseleitung",
+      "Buchung"
+    ],
+    "generated_at": "2026-03-10T23:30:00+07:00",
+    "version": 1
+  },
+  "anzeigen": [
+    {
+      "id": "A",
+      "text": "Ferienwohnung an der Ostsee — Direkt am Strand! 2 Zimmer, Küche, Balkon mit Meerblick. 75 €/Nacht. Hunde willkommen. Min. 3 Nächte. Buchung: www.ostsee-fewo.de"
+    },
+    {
+      "id": "B",
+      "text": "Sprachreise nach Irland — 2 Wochen Englisch lernen in Dublin. Kurs + Gastfamilie + Ausflüge. Für Schüler (14–17 J.) und Erwachsene. Ab 1.490 €. Info: www.sprachreisen-global.de"
+    },
+    {
+      "id": "C",
+      "text": "Aktivurlaub Alpen — Wanderwochen in Tirol! 7 Tage, geführte Touren (leicht bis schwer), Halbpension, 3-Sterne-Hotel. 690 € p.P. Nächste Termine: Juni, September. Tel: 089-2233445."
+    },
+    {
+      "id": "D",
+      "text": "Rom zum Sonderpreis! Städtereise 4 Tage/3 Nächte inkl. Flug, Hotel und Stadtführung. Nur 349 € p.P. Abreise: jedes Wochenende. Last-Minute-Angebot! www.citytrip-deals.de"
+    },
+    {
+      "id": "E",
+      "text": "Campingplatz Bodensee — Stellplätze für Zelt, Wohnmobil und Wohnwagen. Strand, Spielplatz, Restaurant. 22 €/Nacht inkl. Strom. Familien-Rabatt: 10 %. Saison: Mai–Oktober."
+    },
+    {
+      "id": "F",
+      "text": "Rhein-Kreuzfahrt — 7 Tage von Köln nach Basel. Vollpension, Ausflüge, Abendprogramm. Kabine ab 1.290 €. Ideal für Paare und Senioren. Nächste Fahrt: 15. Juli."
+    },
+    {
+      "id": "G",
+      "text": "Bauernhof-Urlaub im Schwarzwald — Ideal für Familien mit Kindern! Tiere füttern, reiten, wandern. Ferienwohnung mit 3 Zimmern. 85 €/Nacht. Hunde erlaubt. www.bauernhof-schwarzwald.de"
+    },
+    {
+      "id": "H",
+      "text": "Gruppenreise Prag — Busreise für Vereine und Gruppen ab 20 Personen. 3 Tage inkl. Hotel, Frühstück, Stadtführung. Ab 189 € p.P. Eigenes Programm möglich. Kontakt: gruppen@reisebus-west.de"
+    }
+  ],
+  "situationen": [
+    {
+      "id": "S1",
+      "text": "Die Familie Meier sucht einen günstigen Urlaub am See, wo die Kinder spielen können. Sie haben ein Wohnmobil.",
+      "answer": "E"
+    },
+    {
+      "id": "S2",
+      "text": "Frau Schmidt (68) und ihr Mann möchten eine bequeme Reise mit Essen und Programm, ohne selbst planen zu müssen.",
+      "answer": "F"
+    },
+    {
+      "id": "S3",
+      "text": "Lukas (16) möchte in den Ferien sein Englisch verbessern und bei einer Familie im Ausland wohnen.",
+      "answer": "B"
+    },
+    {
+      "id": "S4",
+      "text": "Der Sportverein „Turner 04“ sucht eine preiswerte Gruppenreise ins Ausland für 25 Mitglieder.",
+      "answer": "H"
+    },
+    {
+      "id": "S5",
+      "text": "Anna liebt Berge und möchte eine Woche wandern, mit professioneller Führung und Übernachtung.",
+      "answer": "C"
+    }
+  ],
+  "null_matches": [
+    "A",
+    "D",
+    "G"
+  ],
+  "images": [
+    {
+      "id": "IMG1",
+      "type": "scene",
+      "prompt": "Cute cartoon illustration of a travel agency window display with posters for beach holidays, mountain hiking, city trips, and cruise ships. Fuxie cartoon style, flat illustration, warm pastel colors, no text.",
+      "filename": "B1-T3-002_scene.png",
+      "placement": "header",
+      "alt_text": "Reiseanzeigen",
+      "dimensions": "768x512"
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q1",
+      "teil": 3,
+      "type": "matching",
+      "stem": "Die Familie Meier sucht einen günstigen Urlaub am See mit Spielplatz. Sie haben ein Wohnmobil.",
+      "answer": "E",
+      "points": 1,
+      "explanation": {
+        "de": "Campingplatz Bodensee bietet Stellplätze für Wohnmobile, Spielplatz und Familien-Rabatt.",
+        "key_evidence": "Stellplätze für Wohnmobil / Spielplatz / Familien-Rabatt",
+        "key_vocabulary": [
+          {
+            "word": "Stellplatz",
+            "type": "Nomen",
+            "meaning": "pitch / parking spot"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q2",
+      "teil": 3,
+      "type": "matching",
+      "stem": "Frau Schmidt (68) möchte eine bequeme Reise mit Essen und Programm, ohne selbst planen zu müssen.",
+      "answer": "F",
+      "points": 1,
+      "explanation": {
+        "de": "Die Rhein-Kreuzfahrt bietet Vollpension, Ausflüge, Abendprogramm und ist ideal für Senioren.",
+        "key_evidence": "Vollpension, Ausflüge, Abendprogramm / Ideal für Senioren",
+        "key_vocabulary": [
+          {
+            "word": "Kreuzfahrt",
+            "type": "Nomen",
+            "meaning": "cruise"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q3",
+      "teil": 3,
+      "type": "matching",
+      "stem": "Lukas (16) möchte sein Englisch verbessern und bei einer Familie im Ausland wohnen.",
+      "answer": "B",
+      "points": 1,
+      "explanation": {
+        "de": "Die Sprachreise nach Irland bietet Englischkurs und Gastfamilie für Schüler 14–17 Jahre.",
+        "key_evidence": "Englisch lernen in Dublin / Gastfamilie / Schüler 14–17",
+        "key_vocabulary": [
+          {
+            "word": "Sprachreise",
+            "type": "Nomen",
+            "meaning": "language trip"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q4",
+      "teil": 3,
+      "type": "matching",
+      "stem": "Die Position, dass Der Sportverein sucht eine preiswerte Gruppenreise ins Ausland für 25 Mitglieder, findet sich bei:",
+      "answer": "H",
+      "points": 1,
+      "explanation": {
+        "de": "Die Gruppenreise Prag ist für Gruppen ab 20 Personen, ab 189 € pro Person.",
+        "key_evidence": "Busreise für Gruppen ab 20 Personen / Ab 189 €",
+        "key_vocabulary": [
+          {
+            "word": "Gruppenreise",
+            "type": "Nomen",
+            "meaning": "group trip"
+          }
+        ],
+        "reasoning": "[Inferential] "
+      }
+    },
+    {
+      "id": "Q5",
+      "teil": 3,
+      "type": "matching",
+      "stem": "Anna liebt Berge und möchte eine Woche wandern mit professioneller Führung.",
+      "answer": "C",
+      "points": 1,
+      "explanation": {
+        "de": "Der Aktivurlaub Alpen bietet 7 Tage geführte Wandertouren in Tirol.",
+        "key_evidence": "7 Tage, geführte Touren / Wanderwochen in Tirol",
+        "key_vocabulary": [
+          {
+            "word": "geführt",
+            "type": "Partizip II",
+            "meaning": "guided"
+          }
+        ]
+      }
+    }
+  ],
+  "scoring": {
+    "total_points": 5,
+    "pass_threshold": 3,
+    "grading": [
+      {
+        "range": [
+          5,
+          5
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          4,
+          4
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          3,
+          3
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          1,
+          2
+        ],
+        "label": "Noch üben!",
+        "emoji": "📝"
+      },
+      {
+        "range": [
+          0,
+          0
+        ],
+        "label": "Mehr Übung nötig",
+        "emoji": "💪"
+      }
+    ]
+  },
+  "qa": {
+    "vocab_in_b1_list": true,
+    "grammar_b1_appropriate": true,
+    "word_count_in_range": true,
+    "all_answers_verifiable": true,
+    "null_matches_correct": true,
+    "image_count": 1,
+    "passed": true
+  }
+}

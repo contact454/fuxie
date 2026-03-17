@@ -1,0 +1,276 @@
+{
+  "id": "A1-T3-001",
+  "level": "A1",
+  "teil": 3,
+  "teil_name": "Schilder und Aushänge",
+  "topic": "Im Supermarkt",
+  "topic_id": "001",
+  "metadata": {
+    "generated_at": "2026-03-09T02:45:00+07:00",
+    "version": 1
+  },
+  "schilder": [
+    {
+      "id": "Schild1",
+      "type": "Öffnungszeiten",
+      "text": "Öffnungszeiten: Montag bis Samstag 7:00 – 21:00 Uhr. Sonntag geschlossen.",
+      "icon": "🕐"
+    },
+    {
+      "id": "Schild2",
+      "type": "Angebot",
+      "text": "Sonderangebot! Diese Woche: Äpfel nur 0,99 € pro Kilo. Nur solange der Vorrat reicht.",
+      "icon": "🏷️"
+    },
+    {
+      "id": "Schild3",
+      "type": "Regel",
+      "text": "Bitte nehmen Sie einen Einkaufswagen oder Korb am Eingang. Keine eigenen Taschen im Geschäft.",
+      "icon": "🛒"
+    },
+    {
+      "id": "Schild4",
+      "type": "Information",
+      "text": "Frische Backwaren in der Bäckerei-Abteilung. Täglich frisch ab 7 Uhr.",
+      "icon": "🥖"
+    },
+    {
+      "id": "Schild5",
+      "type": "Warnung",
+      "text": "Achtung! Nasser Boden in Gang 3. Bitte langsam und vorsichtig gehen.",
+      "icon": "⚠️"
+    }
+  ],
+  "images": [
+    {
+      "id": "IMG1",
+      "type": "schild",
+      "linked_schild": "Schild1",
+      "prompt": "Cartoon sign: 'Öffnungszeiten: Mo-Sa 7:00-21:00 Uhr. Sonntag geschlossen.' Blue/white professional sign with clock icon. Fuxie cartoon, rounded corners, legible sans-serif font.",
+      "filename": "A1-T3-001_schild_1.png",
+      "placement": "schild_1",
+      "alt_text": "Schild mit Öffnungszeiten",
+      "dimensions": "400x300"
+    },
+    {
+      "id": "IMG2",
+      "type": "schild",
+      "linked_schild": "Schild2",
+      "prompt": "Cartoon sign: 'Sonderangebot! Äpfel nur 0,99€ pro Kilo.' Green/gold sale sign with apple icon. Fuxie cartoon, star burst design, legible font.",
+      "filename": "A1-T3-001_schild_2.png",
+      "placement": "schild_2",
+      "alt_text": "Sonderangebot-Schild für Äpfel",
+      "dimensions": "400x300"
+    },
+    {
+      "id": "IMG3",
+      "type": "schild",
+      "linked_schild": "Schild3",
+      "prompt": "Cartoon sign: 'Bitte nehmen Sie einen Einkaufswagen am Eingang.' Gray/blue rule sign with shopping cart icon. Fuxie cartoon, legible font.",
+      "filename": "A1-T3-001_schild_3.png",
+      "placement": "schild_3",
+      "alt_text": "Regel-Schild Einkaufswagen",
+      "dimensions": "400x300"
+    },
+    {
+      "id": "IMG4",
+      "type": "schild",
+      "linked_schild": "Schild4",
+      "prompt": "Cartoon sign: 'Frische Backwaren - Täglich frisch ab 7 Uhr.' Warm brown/orange bakery sign with bread icon. Fuxie cartoon, legible font.",
+      "filename": "A1-T3-001_schild_4.png",
+      "placement": "schild_4",
+      "alt_text": "Informationsschild Bäckerei",
+      "dimensions": "400x300"
+    },
+    {
+      "id": "IMG5",
+      "type": "schild",
+      "linked_schild": "Schild5",
+      "prompt": "Cartoon warning sign: 'Achtung! Nasser Boden. Bitte vorsichtig gehen.' Yellow/red warning sign with wet floor icon. Fuxie cartoon, legible font.",
+      "filename": "A1-T3-001_schild_5.png",
+      "placement": "schild_5",
+      "alt_text": "Warnschild nasser Boden",
+      "dimensions": "400x300"
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q11",
+      "teil": 3,
+      "linked_schild": "Schild1",
+      "type": "richtig_falsch",
+      "statement": "Der Supermarkt ist am Sonntag offen.",
+      "answer": "falsch",
+      "points": 1,
+      "explanation": {
+        "de": "Auf dem Schild steht: 'Sonntag geschlossen.' Der Supermarkt ist am Sonntag nicht offen.",
+        "key_evidence": "Sonntag geschlossen",
+        "key_vocabulary": [
+          {
+            "word": "geschlossen",
+            "type": "Adjektiv",
+            "meaning": "closed"
+          },
+          {
+            "word": "offen",
+            "type": "Adjektiv",
+            "meaning": "open"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q12",
+      "teil": 3,
+      "linked_schild": "Schild2",
+      "type": "richtig_falsch",
+      "statement": "Äpfel kosten diese Woche 0,99 € pro Kilo.",
+      "answer": "richtig",
+      "points": 1,
+      "explanation": {
+        "de": "Auf dem Schild steht: 'Äpfel nur 0,99 € pro Kilo.'",
+        "key_evidence": "Äpfel nur 0,99 € pro Kilo",
+        "key_vocabulary": [
+          {
+            "word": "Sonderangebot",
+            "type": "Nomen",
+            "meaning": "special offer"
+          },
+          {
+            "word": "Kilo",
+            "type": "Nomen",
+            "meaning": "kilogram"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q13",
+      "teil": 3,
+      "linked_schild": "Schild3",
+      "type": "richtig_falsch",
+      "statement": "Man darf eigene Taschen ins Geschäft mitbringen.",
+      "answer": "falsch",
+      "points": 1,
+      "explanation": {
+        "de": "Auf dem Schild steht: 'Keine eigenen Taschen im Geschäft.' Man darf keine eigenen Taschen mitbringen.",
+        "key_evidence": "Keine eigenen Taschen im Geschäft",
+        "key_vocabulary": [
+          {
+            "word": "Tasche",
+            "type": "Nomen",
+            "meaning": "bag"
+          },
+          {
+            "word": "Einkaufswagen",
+            "type": "Nomen",
+            "meaning": "shopping cart"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q14",
+      "teil": 3,
+      "linked_schild": "Schild4",
+      "type": "richtig_falsch",
+      "statement": "Frisches Brot gibt es ab 7 Uhr.",
+      "answer": "richtig",
+      "points": 1,
+      "explanation": {
+        "de": "Auf dem Schild steht: 'Täglich frisch ab 7 Uhr.' Ab 7 Uhr gibt es frische Backwaren.",
+        "key_evidence": "Täglich frisch ab 7 Uhr",
+        "key_vocabulary": [
+          {
+            "word": "Backwaren",
+            "type": "Nomen",
+            "meaning": "baked goods"
+          },
+          {
+            "word": "frisch",
+            "type": "Adjektiv",
+            "meaning": "fresh"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q15",
+      "teil": 3,
+      "linked_schild": "Schild5",
+      "type": "richtig_falsch",
+      "statement": "Man kann hier normal und schnell gehen.",
+      "answer": "falsch",
+      "points": 1,
+      "explanation": {
+        "de": "Auf dem Schild steht: 'Bitte vorsichtig gehen.' Der Boden ist nass, man soll vorsichtig gehen, nicht schnell.",
+        "key_evidence": "Bitte vorsichtig gehen",
+        "key_vocabulary": [
+          {
+            "word": "vorsichtig",
+            "type": "Adjektiv",
+            "meaning": "careful"
+          },
+          {
+            "word": "nass",
+            "type": "Adjektiv",
+            "meaning": "wet"
+          }
+        ]
+      }
+    }
+  ],
+  "scoring": {
+    "total_points": 5,
+    "pass_threshold": 3,
+    "grading": [
+      {
+        "range": [
+          5,
+          5
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          4,
+          4
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          3,
+          3
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          1,
+          2
+        ],
+        "label": "Noch üben!",
+        "emoji": "📝"
+      },
+      {
+        "range": [
+          0,
+          0
+        ],
+        "label": "Mehr Übung nötig",
+        "emoji": "💪"
+      }
+    ]
+  },
+  "qa": {
+    "all_signs_different_types": true,
+    "word_count_per_sign_valid": true,
+    "image_text_matches_sign": false,
+    "all_answers_verifiable": true,
+    "passed": false
+  }
+}

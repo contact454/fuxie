@@ -1,0 +1,171 @@
+{
+  "id": "C1-T1-009",
+  "level": "C1",
+  "teil": 1,
+  "teil_name": "Lückentext (Wörter)",
+  "topic": "Kunst & Ästhetik",
+  "topic_id": "009",
+  "metadata": {
+    "word_count": 253,
+    "target_grammar": [
+      "Nominalisierung",
+      "Partizipialkonstruktionen",
+      "Konjunktiv I/II",
+      "Passiversatzformen"
+    ],
+    "target_vocabulary": [],
+    "generated_at": "2026-03-11T22:50:15.527648",
+    "version": 1
+  },
+  "cloze": {
+    "title": "Die Frage des Originals in der digitalen Kunstwelt",
+    "text": "Die rasante Verbreitung digitaler Kunstformen hat eine fundamentale Frage {1}: Was bedeutet Originalität in einer Welt, in der jedes digitale Werk mit einem einzigen Klick perfekt reproduziert werden kann? Die traditionelle Kunstwelt, in der der physische Besitz eines Gemäldes oder einer Skulptur den Wert des Werkes maßgeblich {2}, steht vor einer konzeptuellen Revolution.\n\nBereits Walter Benjamin thematisierte in seinem einflussreichen Essay von 1935 den Verlust der Aura des Kunstwerks im Zeitalter seiner technischen {3}. Was Benjamin für die Fotografie und den Film konstatierte, hat sich im digitalen Zeitalter potenziert: Eine Datei ist von ihrer Kopie nicht mehr zu unterscheiden, der Begriff des Originals verliert seine materielle {4}.\n\nDie Einführung von Non-Fungible Tokens hat den Versuch unternommen, digitaler Kunst künstliche Knappheit zu {5}. NFTs ermöglichen es, ein spezifisches digitales Werk als Original zu zertifizieren und auf einer Blockchain unveränderlich zu registrieren. Der Hype um NFT-Kunst erreichte seinen Höhepunkt, als ein Werk des Künstlers Beeple im März 2021 bei Christie's für 69 Millionen Dollar {6} wurde.\n\nKritiker sehen in NFTs jedoch keine überzeugende Lösung. Die technologische Zertifizierung stelle eine rein wirtschaftliche Konstruktion dar, die mit dem ästhetischen oder kulturellen Wert eines Werkes nichts zu tun habe. Zudem sei der ökologische Fußabdruck der zugrunde liegenden Blockchain-Technologie {7}.\n\nDie Debatte um das digitale Original berührt letztlich philosophische Grundfragen der Ästhetik: Liegt der Wert eines Kunstwerks in seiner materiellen Einzigartigkeit, in der kreativen Leistung des Künstlers oder in der Erfahrung des Betrachters? Die Antwort auf diese Frage wird die Zukunft des Kunstmarkts und des Kunstbegriffs selbst maßgeblich {8}.",
+    "gaps": [
+      {
+        "pos": 1,
+        "options": {
+          "a": "aufgeworfen",
+          "b": "gestellt",
+          "c": "erhoben",
+          "d": "formuliert"
+        },
+        "answer": "a"
+      },
+      {
+        "pos": 2,
+        "options": {
+          "a": "bestimmt",
+          "b": "festlegt",
+          "c": "definiert",
+          "d": "ausmacht"
+        },
+        "answer": "a"
+      },
+      {
+        "pos": 3,
+        "options": {
+          "a": "Vervielfältigung",
+          "b": "Reproduzierbarkeit",
+          "c": "Herstellung",
+          "d": "Wiedergabe"
+        },
+        "answer": "b"
+      },
+      {
+        "pos": 4,
+        "options": {
+          "a": "Bedeutung",
+          "b": "Grundlage",
+          "c": "Substanz",
+          "d": "Relevanz"
+        },
+        "answer": "b"
+      },
+      {
+        "pos": 5,
+        "options": {
+          "a": "geben",
+          "b": "schaffen",
+          "c": "verleihen",
+          "d": "zuweisen"
+        },
+        "answer": "c"
+      },
+      {
+        "pos": 6,
+        "options": {
+          "a": "verkauft",
+          "b": "ersteigert",
+          "c": "versteigert",
+          "d": "gehandelt"
+        },
+        "answer": "c"
+      },
+      {
+        "pos": 7,
+        "options": {
+          "a": "beträchtlich",
+          "b": "erheblich",
+          "c": "enorm",
+          "d": "gewaltig"
+        },
+        "answer": "b"
+      },
+      {
+        "pos": 8,
+        "options": {
+          "a": "prägen",
+          "b": "leiten",
+          "c": "formen",
+          "d": "bestimmen"
+        },
+        "answer": "a"
+      }
+    ]
+  },
+  "images": [
+    {
+      "id": "IMG1",
+      "type": "scene",
+      "prompt": "Cute cartoon illustration related to Kunst & Ästhetik, showing an academic/intellectual scene. Fuxie cartoon style, flat illustration, warm pastel colors, no text.",
+      "filename": "C1-T1-009_scene.png",
+      "placement": "header",
+      "alt_text": "Die Frage des Originals in der digitalen Kunstwelt",
+      "dimensions": "768x512"
+    }
+  ],
+  "scoring": {
+    "total_points": 8,
+    "pass_threshold": 5,
+    "grading": [
+      {
+        "range": [
+          7,
+          8
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          5,
+          6
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          4,
+          4
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          1,
+          3
+        ],
+        "label": "Noch üben!",
+        "emoji": "📝"
+      },
+      {
+        "range": [
+          0,
+          0
+        ],
+        "label": "Mehr Übung nötig",
+        "emoji": "💪"
+      }
+    ]
+  },
+  "qa": {
+    "vocab_in_c1_list": true,
+    "grammar_c1_appropriate": true,
+    "word_count_in_range": true,
+    "all_gaps_have_4_options": true,
+    "image_count": 1,
+    "passed": true
+  }
+}

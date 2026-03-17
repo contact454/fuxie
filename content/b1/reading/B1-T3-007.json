@@ -1,0 +1,258 @@
+{
+  "id": "B1-T3-007",
+  "level": "B1",
+  "teil": 3,
+  "teil_name": "Anzeigen zuordnen",
+  "topic": "Kultur & Gesellschaft",
+  "topic_id": "007",
+  "metadata": {
+    "word_count": 225,
+    "target_grammar": [
+      "Nebensatz mit weil/dass",
+      "Modalverben",
+      "Passiv"
+    ],
+    "target_vocabulary": [
+      "Theater",
+      "Konzert",
+      "Museum",
+      "Ausstellung",
+      "Führung",
+      "Ticket",
+      "Ermäßigung",
+      "Workshop"
+    ],
+    "generated_at": "2026-03-10T23:32:00+07:00",
+    "version": 1
+  },
+  "anzeigen": [
+    {
+      "id": "A",
+      "text": "Staatstheater — Hamlet von Shakespeare, Premiere am 15. Mai. Karten: 25–65 €. Ermäßigung für Studenten und Rentner. Dauer: ca. 2,5 Stunden. Box Office: 069-1122334."
+    },
+    {
+      "id": "B",
+      "text": "Malkurs für Erwachsene — Acryl auf Leinwand. 6 Abende, Di 19–21 Uhr. Für Anfänger und Fortgeschrittene. Material inklusive. 110 €. Kunstatelier Wedding."
+    },
+    {
+      "id": "C",
+      "text": "Stadtmuseum: Sonderausstellung „Köln im Mittelalter“. 1. März–31. August. Eintritt: 8 € (ermäßigt 5 €). Führungen jeden Sonntag, 14 Uhr. Gruppenführung auf Anfrage."
+    },
+    {
+      "id": "D",
+      "text": "Jazzfestival am Hafen — 3 Tage Live-Musik! 20.–22. Juni. Über 30 Bands auf 4 Bühnen. Tagesticket: 35 €, Festival-Pass: 85 €. Kinder unter 12 frei. www.harbour-jazz.de"
+    },
+    {
+      "id": "E",
+      "text": "Tanzkurs Salsa & Bachata — Für Paare und Singles. Anfänger: Mo 20–21 Uhr, Mittelstufe: Mi 20–21 Uhr. 8 Wochen, 95 € p.P. Tanzschule Ritmo, Ehrenfeld."
+    },
+    {
+      "id": "F",
+      "text": "Kinderprogramm im Puppentheater — Der gestiefelte Kater. Sa + So, 11 und 14 Uhr. Ab 4 Jahren. 7 € (Erwachsene 9 €). Dauer: 50 Min. Reservierung empfohlen. Tel: 0221-5544332."
+    },
+    {
+      "id": "G",
+      "text": "Poetry Slam — Offene Bühne! Jeden letzten Freitag im Monat, 20 Uhr. Zuschauer: 5 €. Mitmachen kostenlos (Anmeldung bis 19:30). Café Goldrausch, Neukölln."
+    },
+    {
+      "id": "H",
+      "text": "Dokumentarfilm-Reihe: Migration und Heimat — 5 Filme, jeden Donnerstag 19 Uhr, April/Mai. Diskussion mit Regisseuren. Eintritt frei. Programmkino Lichtblick, Kreuzberg."
+    }
+  ],
+  "situationen": [
+    {
+      "id": "S1",
+      "text": "Frau König möchte mit ihren zwei Kindern (5 und 7) am Wochenende ein Theaterstück für Kinder sehen.",
+      "answer": "F"
+    },
+    {
+      "id": "S2",
+      "text": "Carlos interessiert sich für Geschichte und möchte eine Ausstellung mit Führung besuchen.",
+      "answer": "C"
+    },
+    {
+      "id": "S3",
+      "text": "Tom möchte selbst Gedichte vor Publikum lesen. Er hat kein Geld für den Auftritt.",
+      "answer": "G"
+    },
+    {
+      "id": "S4",
+      "text": "Nadia möchte malen lernen. Sie ist Anfängerin und möchte abends nach der Arbeit kommen.",
+      "answer": "B"
+    },
+    {
+      "id": "S5",
+      "text": "Familie Rodriguez sucht ein Musikevent, bei dem die Kinder (8 und 10) kostenlos dabei sein können.",
+      "answer": "D"
+    }
+  ],
+  "null_matches": [
+    "A",
+    "E",
+    "H"
+  ],
+  "images": [
+    {
+      "id": "IMG1",
+      "type": "scene",
+      "prompt": "Cute cartoon illustration of a cultural bulletin board with posters for theater, museum exhibitions, jazz festival, art classes, and poetry slam. Fuxie cartoon style, flat illustration, warm pastel colors, no text.",
+      "filename": "B1-T3-007_scene.png",
+      "placement": "header",
+      "alt_text": "Kultur-Anzeigen",
+      "dimensions": "768x512"
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q1",
+      "teil": 3,
+      "type": "matching",
+      "stem": "Frau König sucht ein Kindertheater am Wochenende für ihre Kinder (5 und 7).",
+      "answer": "F",
+      "points": 1,
+      "explanation": {
+        "de": "Das Puppentheater hat Sa + So Vorstellungen, ab 4 Jahren.",
+        "key_evidence": "Kinderprogramm / Sa + So / Ab 4 Jahren",
+        "key_vocabulary": [
+          {
+            "word": "Puppentheater",
+            "type": "Nomen",
+            "meaning": "puppet theater"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q2",
+      "teil": 3,
+      "type": "matching",
+      "stem": "Carlos möchte eine Geschichtsausstellung mit Führung besuchen.",
+      "answer": "C",
+      "points": 1,
+      "explanation": {
+        "de": "Das Stadtmuseum hat eine Sonderausstellung mit Führungen jeden Sonntag.",
+        "key_evidence": "Sonderausstellung Köln im Mittelalter / Führungen jeden Sonntag",
+        "key_vocabulary": [
+          {
+            "word": "Sonderausstellung",
+            "type": "Nomen",
+            "meaning": "special exhibition"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q3",
+      "teil": 3,
+      "type": "matching",
+      "stem": "Tom möchte selbst Gedichte vorlesen, kostenlos mitmachen.",
+      "answer": "G",
+      "points": 1,
+      "explanation": {
+        "de": "Beim Poetry Slam ist das Mitmachen kostenlos.",
+        "key_evidence": "Offene Bühne / Mitmachen kostenlos",
+        "key_vocabulary": [
+          {
+            "word": "Poetry Slam",
+            "type": "Nomen",
+            "meaning": "poetry slam"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q4",
+      "teil": 3,
+      "type": "matching",
+      "stem": "Die Position, dass nadia möchte als Anfängerin abends malen lernen, findet sich bei:",
+      "answer": "B",
+      "points": 1,
+      "explanation": {
+        "de": "Der Malkurs ist abends, für Anfänger, Material inklusive.",
+        "key_evidence": "Di 19–21 Uhr / Für Anfänger / Material inklusive",
+        "key_vocabulary": [
+          {
+            "word": "Leinwand",
+            "type": "Nomen",
+            "meaning": "canvas"
+          }
+        ],
+        "reasoning": "[Inferential] "
+      }
+    },
+    {
+      "id": "Q5",
+      "teil": 3,
+      "type": "matching",
+      "stem": "Familie Rodriguez sucht ein Musikevent, Kinder (8+10) gratis.",
+      "answer": "D",
+      "points": 1,
+      "explanation": {
+        "de": "Beim Jazzfestival sind Kinder unter 12 frei.",
+        "key_evidence": "Kinder unter 12 frei",
+        "key_vocabulary": [
+          {
+            "word": "Festival-Pass",
+            "type": "Nomen",
+            "meaning": "festival pass"
+          }
+        ]
+      }
+    }
+  ],
+  "scoring": {
+    "total_points": 5,
+    "pass_threshold": 3,
+    "grading": [
+      {
+        "range": [
+          5,
+          5
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          4,
+          4
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          3,
+          3
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          1,
+          2
+        ],
+        "label": "Noch üben!",
+        "emoji": "📝"
+      },
+      {
+        "range": [
+          0,
+          0
+        ],
+        "label": "Mehr Übung nötig",
+        "emoji": "💪"
+      }
+    ]
+  },
+  "qa": {
+    "vocab_in_b1_list": true,
+    "grammar_b1_appropriate": true,
+    "word_count_in_range": true,
+    "all_answers_verifiable": true,
+    "null_matches_correct": true,
+    "image_count": 1,
+    "passed": true
+  }
+}

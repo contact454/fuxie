@@ -1,0 +1,249 @@
+{
+  "id": "A2-T1-003",
+  "level": "A2",
+  "teil": 1,
+  "teil_name": "Zeitungsartikel lesen",
+  "topic": "Beim Arzt",
+  "topic_id": "003",
+  "metadata": {
+    "word_count": 175,
+    "target_grammar": [
+      "Perfekt",
+      "Modalverben",
+      "Nebensatz mit wenn"
+    ],
+    "target_vocabulary": [
+      "Gesundheits-App",
+      "Termin",
+      "Arztpraxis",
+      "herunterladen",
+      "kostenlos",
+      "Patient",
+      "Wartezeit",
+      "Rezept",
+      "Versicherung",
+      "Bewertung"
+    ],
+    "generated_at": "2026-03-09T21:40:00+07:00",
+    "version": 1
+  },
+  "text": {
+    "title": "Neue App macht Arztbesuche einfacher",
+    "subtitle": "Termine buchen, Rezepte bestellen — alles per Handy",
+    "body": "Eine neue Gesundheits-App hilft jetzt Patienten in Berlin. Die App heißt „MeinArzt\" und man kann sie kostenlos im App-Store herunterladen. Über 200 Arztpraxen in Berlin nutzen die App schon.\n\nMit der App kann man ganz einfach einen Termin beim Arzt buchen. Man wählt den Arzt, den Tag und die Uhrzeit — alles am Handy. Die App zeigt auch die Wartezeit in der Praxis an. So weiß man vorher, wie lange man warten muss.\n\nBesonders praktisch ist die Rezept-Funktion. Wenn man ein Rezept braucht, kann man es über die App bestellen. Der Arzt schickt das Rezept dann direkt an die Apotheke. Man muss nicht extra in die Praxis kommen.\n\nDie App hat schon über 15.000 Downloads und die Bewertungen sind sehr gut. „Ich spare viel Zeit, weil ich nicht mehr lange telefonieren muss\", sagt eine Nutzerin. Die Entwickler planen, dass die App bald auch Video-Sprechstunden anbietet.",
+    "source": "Berliner Kurier"
+  },
+  "images": [
+    {
+      "id": "IMG1",
+      "type": "scene",
+      "prompt": "Cute cartoon illustration of a person using a health app on their smartphone. The screen shows a friendly doctor icon and appointment calendar. A medical cross symbol nearby. Modern, clean German city background. Fuxie cartoon style, flat illustration, warm pastel colors, no text.",
+      "filename": "A2-T1-003_scene.png",
+      "placement": "header",
+      "alt_text": "Person nutzt Gesundheits-App am Handy",
+      "dimensions": "768x512"
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q1",
+      "teil": 1,
+      "type": "multiple_choice",
+      "stem": "Was kostet die App „MeinArzt\"?",
+      "options": {
+        "a": "2,99 Euro.",
+        "b": "Sie ist kostenlos.",
+        "c": "4,99 Euro pro Monat."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Im Text steht: 'man kann sie kostenlos im App-Store herunterladen.'",
+        "key_evidence": "man kann sie kostenlos im App-Store herunterladen",
+        "key_vocabulary": [
+          {
+            "word": "kostenlos",
+            "type": "Adjektiv",
+            "meaning": "free of charge"
+          },
+          {
+            "word": "herunterladen",
+            "type": "Verb",
+            "meaning": "to download"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q2",
+      "teil": 1,
+      "type": "multiple_choice",
+      "stem": "Was kann man mit der App machen?",
+      "options": {
+        "a": "Medikamente kaufen.",
+        "b": "Einen Arzttermin buchen.",
+        "c": "Eine Versicherung abschließen."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Im Text steht: 'Mit der App kann man ganz einfach einen Termin beim Arzt buchen.'",
+        "key_evidence": "einen Termin beim Arzt buchen",
+        "key_vocabulary": [
+          {
+            "word": "Termin",
+            "type": "Nomen",
+            "meaning": "appointment"
+          },
+          {
+            "word": "buchen",
+            "type": "Verb",
+            "meaning": "to book"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q3",
+      "teil": 1,
+      "type": "multiple_choice",
+      "stem": "Was passiert, wenn man ein Rezept über die App bestellt?",
+      "options": {
+        "a": "Man bekommt es per Post.",
+        "b": "Der Arzt schickt es an die Apotheke.",
+        "c": "Man muss es in der Praxis abholen."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Im Text steht: 'Der Arzt schickt das Rezept dann direkt an die Apotheke.'",
+        "key_evidence": "Der Arzt schickt das Rezept dann direkt an die Apotheke",
+        "key_vocabulary": [
+          {
+            "word": "Rezept",
+            "type": "Nomen",
+            "meaning": "prescription"
+          },
+          {
+            "word": "Apotheke",
+            "type": "Nomen",
+            "meaning": "pharmacy"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q4",
+      "teil": 1,
+      "type": "multiple_choice",
+      "stem": "Wie viele Downloads hat die App schon?",
+      "options": {
+        "a": "Über 5.000.",
+        "b": "Über 15.000.",
+        "c": "Über 50.000."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Im Text steht: 'Die App hat schon über 15.000 Downloads.'",
+        "key_evidence": "über 15.000 Downloads",
+        "key_vocabulary": [
+          {
+            "word": "Download",
+            "type": "Nomen",
+            "meaning": "download"
+          },
+          {
+            "word": "Bewertung",
+            "type": "Nomen",
+            "meaning": "review/rating"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q5",
+      "teil": 1,
+      "type": "multiple_choice",
+      "stem": "Was planen die Entwickler für die Zukunft?",
+      "options": {
+        "a": "Einen Online-Shop für Medikamente.",
+        "b": "Video-Sprechstunden in der App.",
+        "c": "Eine App nur für Kinder."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Im Text steht: 'Die Entwickler planen, dass die App bald auch Video-Sprechstunden anbietet.'",
+        "key_evidence": "dass die App bald auch Video-Sprechstunden anbietet",
+        "key_vocabulary": [
+          {
+            "word": "Video-Sprechstunde",
+            "type": "Nomen",
+            "meaning": "video consultation"
+          },
+          {
+            "word": "Entwickler",
+            "type": "Nomen",
+            "meaning": "developer"
+          }
+        ]
+      }
+    }
+  ],
+  "scoring": {
+    "total_points": 5,
+    "pass_threshold": 3,
+    "grading": [
+      {
+        "range": [
+          5,
+          5
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          4,
+          4
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          3,
+          3
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          1,
+          2
+        ],
+        "label": "Noch üben!",
+        "emoji": "📝"
+      },
+      {
+        "range": [
+          0,
+          0
+        ],
+        "label": "Mehr Übung nötig",
+        "emoji": "💪"
+      }
+    ]
+  },
+  "qa": {
+    "vocab_in_a2_list": true,
+    "grammar_a2_only": true,
+    "word_count_in_range": true,
+    "all_answers_verifiable": true,
+    "mc_distractors_plausible": true,
+    "image_count": 1,
+    "passed": true
+  }
+}

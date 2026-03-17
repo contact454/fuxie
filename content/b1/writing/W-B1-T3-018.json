@@ -1,0 +1,64 @@
+{
+  "id": "W-B1-T3-018",
+  "cefrLevel": "B1",
+  "teil": 3,
+  "teilName": "Formelle E-Mail",
+  "textType": "Formeller Brief",
+  "register": "formell",
+  "topic": "Vermieter kontaktieren",
+  "instruction": "Sie wohnen zur Miete in einer Wohnung in Berlin. Seit zwei Tagen gibt es ein Problem: Die Heizung im Wohnzimmer funktioniert nicht mehr und es ist sehr kalt. Schreiben Sie eine E-Mail an Ihren Vermieter, Herrn Meyer.",
+  "instructionVi": "Bạn đang thuê một căn hộ ở Berlin. Hai ngày nay có một vấn đề: Lò sưởi trong phòng khách không hoạt động và trời rất lạnh. Hãy viết một email cho chủ nhà, ông Meyer.",
+  "situation": "Sie wohnen in der Müllerstraße 15, 10117 Berlin. Da es draußen Winter ist, muss der Schaden schnell behoben werden. Sie erreichen Ihren Vermieter normalerweise nur schriftlich oder per E-Mail.",
+  "contentPoints": [
+    "Grund für Ihr Schreiben (Problem beschreiben).",
+    "Seit wann das Problem besteht.",
+    "Bitten Sie um eine schnelle Reparatur.",
+    "Machen Sie einen Terminvorschlag für den Handwerker."
+  ],
+  "sourceText": "Vermieter: Herr Meyer\nAdresse: Müllerstraße 15, 10117 Berlin\nProblem: Heizungskörper im Wohnzimmer bleibt kalt\nBeginn des Problems: Vor zwei Tagen\nVertragsnummer: Mi-882-2023",
+  "sourceTextType": "Mietinformationen",
+  "minWords": 80,
+  "maxWords": 120,
+  "timeMinutes": 25,
+  "rubric": {
+    "criteria": [
+      {
+        "id": "inhalt",
+        "name": "Inhalt",
+        "nameVi": "Nội dung",
+        "maxScore": 5,
+        "weight": 25
+      },
+      {
+        "id": "angemessenheit",
+        "name": "Kommunikative Angemessenheit",
+        "nameVi": "Phù hợp giao tiếp",
+        "maxScore": 5,
+        "weight": 20
+      },
+      {
+        "id": "korrektheit",
+        "name": "Korrektheit",
+        "nameVi": "Chính xác ngữ pháp & chính tả",
+        "maxScore": 5,
+        "weight": 25
+      },
+      {
+        "id": "spektrum",
+        "name": "Wortschatz & Strukturen",
+        "nameVi": "Đa dạng từ vựng & cấu trúc",
+        "maxScore": 5,
+        "weight": 15
+      },
+      {
+        "id": "kohaerenz",
+        "name": "Kohaerenz & Kohaesion",
+        "nameVi": "Mạch lạc & liên kết",
+        "maxScore": 5,
+        "weight": 15
+      }
+    ],
+    "maxScore": 25
+  },
+  "maxScore": 25
+}

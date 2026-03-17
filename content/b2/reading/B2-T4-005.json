@@ -1,0 +1,172 @@
+{
+  "id": "B2-T4-005",
+  "level": "B2",
+  "teil": 4,
+  "teil_name": "Kommentare lesen",
+  "topic": "Umwelt & Nachhaltigkeit",
+  "topic_id": "005",
+  "metadata": {
+    "word_count": 142,
+    "target_grammar": [
+      "Konjunktiv II",
+      "Passiv",
+      "Nominalisierung",
+      "Relativsatze"
+    ],
+    "target_vocabulary": [],
+    "generated_at": "2026-03-11T22:37:08.661642",
+    "version": 1
+  },
+  "forum": {
+    "question": "Sollte Fleisch starker besteuert werden?",
+    "comments": [
+      {
+        "name": "Dr. Maria Santos",
+        "position": "ja",
+        "text": "Die Fleischproduktion ist einer der grossten Treiber des Klimawandels und verbraucht enorme Mengen an Wasser und Anbauflache. Eine hohere Besteuerung wurde den Konsum reduzieren und gleichzeitig Mittel fur nachhaltige Landwirtschaft bereitstellen. Der ermasseigte Mehrwertsteuersatz von 7 Prozent auf Fleisch ist ein klimapolitischer Anachronismus."
+      },
+      {
+        "name": "Heinrich Bauer",
+        "position": "nein",
+        "text": "Als Landwirt bin ich direkt betroffen. Hohere Steuern auf Fleisch wurden die ohnehin angespannte Lage vieler Betriebe weiter verschlechtern. Statt den Konsum uber den Preis zu steuern, sollte man lieber in eine artgerechtere Tierhaltung investieren."
+      },
+      {
+        "name": "Karin Engel",
+        "position": "ja",
+        "text": "Fleisch ist in Deutschland viel zu billig. Wer im Supermarkt ein Hahnchen fur 3 Euro kauft, bezahlt nicht den wahren Preis. Die externen Kosten fur Umweltverschmutzung, Antibiotikaresistenzen und Tierleid werden auf die Allgemeinheit abgewalzt."
+      },
+      {
+        "name": "Michael Steiner",
+        "position": "nein",
+        "text": "Eine Fleischsteuer trifft vor allem Geringverdiener. Wer wenig verdient, gibt einen grosseren Anteil seines Einkommens fur Lebensmittel aus. Eine solche Steuer ware sozial ungerecht und wurde die Ungleichheit weiter vergroessern."
+      }
+    ]
+  },
+  "images": [
+    {
+      "id": "IMG1",
+      "type": "scene",
+      "prompt": "Cute cartoon illustration of people having a discussion forum about Umwelt & Nachhaltigkeit, showing speech bubbles with different opinions. Fuxie cartoon style, flat illustration, warm pastel colors, no text.",
+      "filename": "B2-T4-005_scene.png",
+      "placement": "header",
+      "alt_text": "Sollte Fleisch starker besteuert werden?",
+      "dimensions": "768x512"
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q1",
+      "teil": 4,
+      "type": "ja_nein",
+      "stem": "Dr. Santos halt den ermassigten Mehrwertsteuersatz auf Fleisch fur zeitgemass.",
+      "answer": "nein",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Dr. Santos halt den ermassigten Mehrwertsteuersatz auf Fleisch fur zeitgemass.",
+        "reasoning": "Die richtige Antwort ergibt sich aus dem Text."
+      }
+    },
+    {
+      "id": "Q2",
+      "teil": 4,
+      "type": "ja_nein",
+      "stem": "Der Autor ist der Meinung, dass heinrich Bauer befurchtet negative Folgen fur landwirtschaftliche Betriebe.",
+      "answer": "ja",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Heinrich Bauer befurchtet negative Folgen fur landwirtschaftliche Betriebe.",
+        "reasoning": "[Inferential] Die richtige Antwort ergibt sich aus dem Text."
+      }
+    },
+    {
+      "id": "Q3",
+      "teil": 4,
+      "type": "ja_nein",
+      "stem": "Der Text legt nahe, dass karin Engel findet, dass Fleischpreise die wahren Kosten widerspiegeln.",
+      "answer": "nein",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Karin Engel findet, dass Fleischpreise die wahren Kosten widerspiegeln.",
+        "reasoning": "[Inferential] Die richtige Antwort ergibt sich aus dem Text."
+      }
+    },
+    {
+      "id": "Q4",
+      "teil": 4,
+      "type": "ja_nein",
+      "stem": "Aus dem Text lässt sich schließen, dass michael Steiner sorgt sich um die soziale Gerechtigkeit einer Fleischsteuer.",
+      "answer": "ja",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Michael Steiner sorgt sich um die soziale Gerechtigkeit einer Fleischsteuer.",
+        "reasoning": "[Inferential] Die richtige Antwort ergibt sich aus dem Text."
+      }
+    },
+    {
+      "id": "Q5",
+      "teil": 4,
+      "type": "ja_nein",
+      "stem": "Alle vier Kommentatoren sind gegen eine hohere Besteuerung von Fleisch.",
+      "answer": "nein",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Alle vier Kommentatoren sind gegen eine hohere Besteuerung von Fleisch.",
+        "reasoning": "Die richtige Antwort ergibt sich aus dem Text."
+      }
+    }
+  ],
+  "scoring": {
+    "total_points": 5,
+    "pass_threshold": 3,
+    "grading": [
+      {
+        "range": [
+          5,
+          5
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          4,
+          4
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          3,
+          3
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          1,
+          2
+        ],
+        "label": "Noch uben!",
+        "emoji": "📝"
+      },
+      {
+        "range": [
+          0,
+          0
+        ],
+        "label": "Mehr Ubung notig",
+        "emoji": "💪"
+      }
+    ]
+  },
+  "qa": {
+    "vocab_in_b2_list": true,
+    "grammar_b2_appropriate": true,
+    "word_count_in_range": true,
+    "all_answers_verifiable": true,
+    "image_count": 1,
+    "passed": true
+  }
+}

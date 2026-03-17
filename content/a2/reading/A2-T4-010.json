@@ -1,0 +1,271 @@
+{
+  "id": "A2-T4-010",
+  "level": "A2",
+  "teil": 4,
+  "teil_name": "Fahrpläne und Kalender lesen",
+  "topic": "Feste & Feiertage",
+  "topic_id": "010",
+  "metadata": {
+    "word_count": 84,
+    "target_grammar": [
+      "Modalverben",
+      "Zeitangaben"
+    ],
+    "target_vocabulary": [
+      "Festprogramm",
+      "Bühne",
+      "Auftritt",
+      "Kinderprogramm",
+      "Feuerwerk",
+      "Eröffnung",
+      "Umzug",
+      "Food-Meile",
+      "Flohmarkt",
+      "Moderation"
+    ],
+    "generated_at": "2026-03-09T22:46:00+07:00",
+    "version": 1
+  },
+  "schedule": {
+    "title": "Nürnberger Stadtfest — Programm Samstag, 13. Juni 2026",
+    "type": "event_program",
+    "columns": [
+      "Uhrzeit",
+      "Hauptbühne (Hauptmarkt)",
+      "Kinderprogramm (Lorenzer Platz)",
+      "Sonstiges"
+    ],
+    "rows": [
+      [
+        "14:00",
+        "Eröffnung durch Bürgermeister",
+        "Puppentheater",
+        "Food-Meile öffnet"
+      ],
+      [
+        "15:00",
+        "Musikgruppe „Fränkische Blasmusik“",
+        "Kinderschminken",
+        "Flohmarkt (bis 18:00)"
+      ],
+      [
+        "16:30",
+        "Tanzgruppe „Rhythmus“",
+        "Hüpfburg & Basteln",
+        "—"
+      ],
+      [
+        "18:00",
+        "Singer-Songwriter Anna Lenz",
+        "Kinderprogramm Ende",
+        "Lampionumzug (Start: Rathaus)"
+      ],
+      [
+        "20:00",
+        "Live-Band „Stadtlichter“",
+        "—",
+        "Biergartenparty"
+      ],
+      [
+        "22:30",
+        "Feuerwerk an der Kaiserburg",
+        "—",
+        "—"
+      ]
+    ],
+    "footnote": "Eintritt frei! Bei Regen: Hauptbühne im Festzelt. Kinderprogramm endet um 18:00. Essen und Getränke: Food-Meile in der Burgstraße (14:00–23:00). Letzte S-Bahn: 0:15 Uhr ab Hauptbahnhof."
+  },
+  "images": [
+    {
+      "id": "IMG1",
+      "type": "schedule",
+      "prompt": "Cute cartoon illustration of a German city festival at night with fireworks over a castle, a stage with musicians, food stalls, families celebrating, lanterns and decorations. Fuxie cartoon style, flat illustration, warm pastel colors, no text.",
+      "filename": "A2-T4-010_schedule.png",
+      "placement": "header",
+      "alt_text": "Nürnberger Stadtfest Programm",
+      "dimensions": "768x512"
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q1",
+      "teil": 4,
+      "type": "detail_extraction",
+      "stem": "Wann beginnt das Stadtfest?",
+      "options": {
+        "a": "Um 12:00 Uhr.",
+        "b": "Um 14:00 Uhr.",
+        "c": "Um 15:00 Uhr."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Das Stadtfest beginnt um 14:00 mit der Eröffnung.",
+        "key_evidence": "14:00: Eröffnung durch Bürgermeister",
+        "key_vocabulary": [
+          {
+            "word": "Eröffnung",
+            "type": "Nomen",
+            "meaning": "opening"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q2",
+      "teil": 4,
+      "type": "detail_extraction",
+      "stem": "Wann ist das Feuerwerk?",
+      "options": {
+        "a": "Um 20:00 Uhr.",
+        "b": "Um 22:00 Uhr.",
+        "c": "Um 22:30 Uhr."
+      },
+      "answer": "c",
+      "points": 1,
+      "explanation": {
+        "de": "Das Feuerwerk ist um 22:30 an der Kaiserburg.",
+        "key_evidence": "22:30: Feuerwerk an der Kaiserburg",
+        "key_vocabulary": [
+          {
+            "word": "Feuerwerk",
+            "type": "Nomen",
+            "meaning": "fireworks"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q3",
+      "teil": 4,
+      "type": "detail_extraction",
+      "stem": "Bis wann gibt es das Kinderprogramm?",
+      "options": {
+        "a": "Bis 16:30 Uhr.",
+        "b": "Bis 18:00 Uhr.",
+        "c": "Bis 20:00 Uhr."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Das Kinderprogramm endet um 18:00.",
+        "key_evidence": "18:00: Kinderprogramm Ende",
+        "key_vocabulary": [
+          {
+            "word": "Kinderprogramm",
+            "type": "Nomen",
+            "meaning": "children's program"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q4",
+      "teil": 4,
+      "type": "detail_extraction",
+      "stem": "Wo startet der Lampionumzug?",
+      "options": {
+        "a": "Am Hauptmarkt.",
+        "b": "Am Rathaus.",
+        "c": "An der Kaiserburg."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Der Lampionumzug startet am Rathaus um 18:00.",
+        "key_evidence": "Lampionumzug (Start: Rathaus)",
+        "key_vocabulary": [
+          {
+            "word": "Lampionumzug",
+            "type": "Nomen",
+            "meaning": "lantern parade"
+          },
+          {
+            "word": "Rathaus",
+            "type": "Nomen",
+            "meaning": "town hall"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q5",
+      "teil": 4,
+      "type": "detail_extraction",
+      "stem": "Wann fährt die letzte S-Bahn?",
+      "options": {
+        "a": "Um 23:00 Uhr.",
+        "b": "Um 23:45 Uhr.",
+        "c": "Um 0:15 Uhr."
+      },
+      "answer": "c",
+      "points": 1,
+      "explanation": {
+        "de": "Die letzte S-Bahn fährt um 0:15 ab Hauptbahnhof.",
+        "key_evidence": "Letzte S-Bahn: 0:15 Uhr ab Hauptbahnhof",
+        "key_vocabulary": [
+          {
+            "word": "S-Bahn",
+            "type": "Nomen",
+            "meaning": "suburban train"
+          }
+        ]
+      }
+    }
+  ],
+  "scoring": {
+    "total_points": 5,
+    "pass_threshold": 3,
+    "grading": [
+      {
+        "range": [
+          5,
+          5
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          4,
+          4
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          3,
+          3
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          1,
+          2
+        ],
+        "label": "Noch üben!",
+        "emoji": "📝"
+      },
+      {
+        "range": [
+          0,
+          0
+        ],
+        "label": "Mehr Übung nötig",
+        "emoji": "💪"
+      }
+    ]
+  },
+  "qa": {
+    "vocab_in_a2_list": true,
+    "grammar_a2_only": true,
+    "word_count_in_range": true,
+    "all_answers_verifiable": true,
+    "schedule_data_consistent": true,
+    "image_count": 1,
+    "passed": true
+  }
+}

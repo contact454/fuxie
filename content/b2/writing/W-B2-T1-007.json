@@ -1,0 +1,64 @@
+{
+  "id": "W-B2-T1-007",
+  "cefrLevel": "B2",
+  "teil": 1,
+  "teilName": "Forumsbeitrag",
+  "textType": "Forumsbeitrag",
+  "register": "neutral",
+  "topic": "Plastikverbot",
+  "instruction": "Schreiben Sie einen Forumsbeitrag (mind. 150 Woerter): Reicht das Verbot von Einwegplastik?",
+  "instructionVi": "Viet bai forum >=150 tu: Plastikverbot.",
+  "situation": "In einem Online-Forum wird diskutiert: Reicht das Verbot von Einwegplastik? Schreiben Sie einen Beitrag.",
+  "contentPoints": [
+    "Einleitung: Thema und These",
+    "Argumente dafuer",
+    "Argumente dagegen",
+    "eigene Stellungnahme und Loesungsvorschlag"
+  ],
+  "minWords": 150,
+  "maxWords": 250,
+  "timeMinutes": 35,
+  "rubric": {
+    "criteria": [
+      {
+        "id": "inhalt",
+        "name": "Inhalt",
+        "nameVi": "Noi dung",
+        "maxScore": 5,
+        "weight": 25
+      },
+      {
+        "id": "angemessenheit",
+        "name": "Kommunikative Angemessenheit",
+        "nameVi": "Phu hop giao tiep",
+        "maxScore": 5,
+        "weight": 20
+      },
+      {
+        "id": "korrektheit",
+        "name": "Korrektheit",
+        "nameVi": "Chinh xac ngu phap",
+        "maxScore": 5,
+        "weight": 25
+      },
+      {
+        "id": "spektrum",
+        "name": "Wortschatz & Strukturen",
+        "nameVi": "Da dang tu vung",
+        "maxScore": 5,
+        "weight": 15
+      },
+      {
+        "id": "kohaerenz",
+        "name": "Kohaerenz & Kohaesion",
+        "nameVi": "Mach lac & lien ket",
+        "maxScore": 5,
+        "weight": 15
+      }
+    ],
+    "maxScore": 25
+  },
+  "maxScore": 25,
+  "sourceText": "Süddeutsche Zeitung, 15. November 2023: In den letzten Jahren hat die Diskussion über ein striktes Plastikverbot an Intensität gewonnen. Laut einer Studie der EU-Kommission landen jährlich etwa acht Millionen Tonnen Kunststoff in den Weltmeeren, was verheerende Folgen für das Ökosystem hat. Befürworter eines Verbots betonen, dass Einwegplastik, das 70 % des Meeresmülls ausmacht, leicht durch nachhaltige Alternativen ersetzt werden kann. Auf der anderen Seite warnt die Industrie vor wirtschaftlichen Einbußen. Viele Unternehmen argumentieren, dass Plastik aufgrund seiner Hygieneeigenschaften und geringen Produktionskosten in Bereichen wie der Lebensmittelverpackung unverzichtbar sei. Ein pauschales Verbot könnte zudem die Preise für Endverbraucher erheblich steigern.\n\nDr. Elena Schmidt, Umweltbiologin: „Ein konsequentes Verbot von Einwegplastik ist der einzige Weg, um die Verschmutzung unserer Ozeane langfristig zu stoppen und die Artenvielfalt zu schützen.“\n\nMarkus Weber, Verband der Kunststoffverarbeiter: „Statt Verboten benötigen wir bessere Recycling-Systeme; Plastik ist ein wertvoller Rohstoff, dessen Verbot Innovationen bremsen würde.“\n\nSollte die Regierung ein striktes, allgemeines Plastikverbot einführen oder gibt es bessere Wege, um den Umweltschutz zu fördern? Nehmen Sie in unserem Online-Forum Stellung dazu.",
+  "sourceTextType": "Zeitungsartikel und Expertenstatements"
+}

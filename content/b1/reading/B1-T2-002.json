@@ -1,0 +1,224 @@
+{
+  "id": "B1-T2-002",
+  "level": "B1",
+  "teil": 2,
+  "teil_name": "Pressebericht lesen",
+  "topic": "Reisen & Tourismus",
+  "topic_id": "002",
+  "metadata": {
+    "word_count": 290,
+    "target_grammar": [
+      "Nebensatz mit weil/obwohl/dass",
+      "Passiv",
+      "Komparativ/Superlativ"
+    ],
+    "target_vocabulary": [
+      "nachhaltig",
+      "Klimaschutz",
+      "Flugzeug",
+      "CO2-Ausstoß",
+      "Fernreise",
+      "Bahnfahrt",
+      "Tourismus",
+      "Umweltbewusstsein",
+      "Inlandsreise",
+      "Reiseverhalten"
+    ],
+    "generated_at": "2026-03-10T22:57:00+07:00",
+    "version": 1
+  },
+  "article": {
+    "source": "Süddeutsche Zeitung",
+    "date": "14. März 2026",
+    "title": "Nachhaltig reisen: Bahn statt Flugzeug",
+    "subtitle": "Immer mehr Deutsche wählen für Urlaubsreisen den Zug",
+    "text": "Die Deutsche Bahn hat im letzten Jahr einen Rekord gemeldet: Über 150 Millionen Fahrgäste haben das Fernverkehrsnetz genutzt, fünf Prozent mehr als im Vorjahr. Experten sehen darin ein wachsendes Umweltbewusstsein bei den Reisenden.\n\nEine Zugreise innerhalb Europas verursacht im Durchschnitt nur ein Zehntel des CO2-Ausstoßes eines Fluges auf der gleichen Strecke. Das ist ein Argument, das immer mehr Urlauber überzeugt. Besonders beliebt sind Nachtzüge nach Wien, Amsterdam und Stockholm, obwohl die Fahrzeit deutlich länger ist als beim Fliegen.\n\nDie Bundesregierung unterstützt diesen Trend. Seit Januar 2026 gibt es eine neue Klimaprämie: Wer eine Inlandsreise mit der Bahn statt mit dem Flugzeug macht, bekommt einen Rabatt von 20 Prozent auf das Ticket. Das Programm wird aus Steuergeldern finanziert und soll zunächst zwei Jahre laufen.\n\nNicht alle sind begeistert. Vertreter der Flugindustrie kritisieren das Programm, weil es ihrer Meinung nach den Wettbewerb verzerrt. Außerdem weisen sie darauf hin, dass moderne Flugzeuge deutlich weniger Treibstoff verbrauchen als früher.\n\nReiseexperte Martin Hoffmann vom Deutschen Reiseverband erklärt: „Für Strecken bis 800 Kilometer ist die Bahn heute eine echte Alternative zum Flugzeug. Aber für Fernreisen nach Asien oder Amerika wird das Flugzeug vorerst unverzichtbar bleiben.“\n\nKlar ist: Das Reiseverhalten der Deutschen verändert sich. Ob der Trend langfristig anhält, werden die kommenden Jahre zeigen."
+  },
+  "images": [
+    {
+      "id": "IMG1",
+      "type": "scene",
+      "prompt": "Cute cartoon illustration of a modern high-speed train passing through scenic European countryside with mountains and a sunset, passengers visible through windows. Fuxie cartoon style, flat illustration, warm pastel colors, no text.",
+      "filename": "B1-T2-002_scene.png",
+      "placement": "header",
+      "alt_text": "Nachtzug durch Europa",
+      "dimensions": "768x512"
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q1",
+      "teil": 2,
+      "type": "multiple_choice",
+      "stem": "Wie viele Fahrgäste hat die Deutsche Bahn im Fernverkehr befördert?",
+      "options": {
+        "a": "Über 100 Millionen.",
+        "b": "Über 150 Millionen.",
+        "c": "Über 200 Millionen."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Über 150 Millionen Fahrgäste haben das Fernverkehrsnetz genutzt.",
+        "key_evidence": "Über 150 Millionen Fahrgäste",
+        "key_vocabulary": [
+          {
+            "word": "Fernverkehr",
+            "type": "Nomen",
+            "meaning": "long-distance transport"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q2",
+      "teil": 2,
+      "type": "multiple_choice",
+      "stem": "Wie viel CO2 verursacht eine Zugreise im Vergleich zum Flug?",
+      "options": {
+        "a": "Die Hälfte.",
+        "b": "Ein Zehntel.",
+        "c": "Genauso viel."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Eine Zugreise verursacht nur ein Zehntel des CO2 eines Fluges.",
+        "key_evidence": "nur ein Zehntel des CO2-Ausstoßes eines Fluges",
+        "key_vocabulary": [
+          {
+            "word": "CO2-Ausstoß",
+            "type": "Nomen",
+            "meaning": "CO2 emissions"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q3",
+      "teil": 2,
+      "type": "multiple_choice",
+      "stem": "Was ist die neue Klimaprämie der Bundesregierung?",
+      "options": {
+        "a": "Kostenloses Bahnticket für Studenten.",
+        "b": "20 Prozent Rabatt auf Inlandsreisen mit der Bahn.",
+        "c": "Eine Steuer auf alle Flugreisen."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Wer Inlandsreisen mit der Bahn macht, bekommt 20 Prozent Rabatt.",
+        "key_evidence": "Wer eine Inlandsreise mit der Bahn macht, bekommt einen Rabatt von 20 Prozent",
+        "key_vocabulary": [
+          {
+            "word": "Klimaprämie",
+            "type": "Nomen",
+            "meaning": "climate bonus"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q4",
+      "teil": 2,
+      "type": "multiple_choice",
+      "stem": "Warum kritisiert die Flugindustrie das Programm?",
+      "options": {
+        "a": "Weil Züge zu laut sind.",
+        "b": "Weil es den Wettbewerb verzerrt.",
+        "c": "Weil die Bahn zu teuer ist."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Die Flugindustrie meint, das Programm verzerrt den Wettbewerb.",
+        "key_evidence": "weil es ihrer Meinung nach den Wettbewerb verzerrt",
+        "key_vocabulary": [
+          {
+            "word": "Wettbewerb",
+            "type": "Nomen",
+            "meaning": "competition"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q5",
+      "teil": 2,
+      "type": "multiple_choice",
+      "stem": "Bis zu welcher Entfernung ist laut dem Experten die Bahn eine gute Alternative?",
+      "options": {
+        "a": "Bis 500 Kilometer.",
+        "b": "Bis 800 Kilometer.",
+        "c": "Bis 1200 Kilometer."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Für Strecken bis 800 Kilometer ist die Bahn eine echte Alternative.",
+        "key_evidence": "Für Strecken bis 800 Kilometer",
+        "key_vocabulary": [
+          {
+            "word": "Alternative",
+            "type": "Nomen",
+            "meaning": "alternative"
+          }
+        ]
+      }
+    }
+  ],
+  "scoring": {
+    "total_points": 5,
+    "pass_threshold": 3,
+    "grading": [
+      {
+        "range": [
+          5,
+          5
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          4,
+          4
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          3,
+          3
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          1,
+          2
+        ],
+        "label": "Noch üben!",
+        "emoji": "📝"
+      },
+      {
+        "range": [
+          0,
+          0
+        ],
+        "label": "Mehr Übung nötig",
+        "emoji": "💪"
+      }
+    ]
+  },
+  "qa": {
+    "vocab_in_b1_list": true,
+    "grammar_b1_appropriate": true,
+    "word_count_in_range": true,
+    "all_answers_verifiable": true,
+    "image_count": 1,
+    "passed": true
+  }
+}

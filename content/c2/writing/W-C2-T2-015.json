@@ -1,0 +1,64 @@
+{
+  "id": "W-C2-T2-015",
+  "cefrLevel": "C2",
+  "teil": 2,
+  "teilName": "Textumwandlung",
+  "textType": "Pressemitteilung",
+  "register": "sachlich",
+  "topic": "Forschungspolitik",
+  "instruction": "Sie arbeiten in der Pressestelle des Bundesministeriums für Bildung und Forschung. Verfassen Sie auf Basis der vorliegenden Informationen aus einer internen Kabinettssitzung eine Pressemitteilung für die nationale Presse. Achten Sie darauf, die Informationen in einen angemessenen, sachlichen und publikumsorientierten Stil zu transformieren und dabei eine klare Struktur (Überschrift, Lead-Text, Hauptteil) einzuhalten.",
+  "instructionVi": "Bạn làm việc tại văn phòng báo chí của Bộ Giáo dục và Nghiên cứu Liên bang. Hãy viết một thông cáo báo chí cho truyền thông quốc gia dựa trên thông tin từ một cuộc họp nội bộ nội các. Hãy chú ý chuyển đổi thông tin sang phong cách khách quan, phù hợp với công chúng và tuân thủ cấu trúc rõ ràng (tiêu đề, lời dẫn, thân bài).",
+  "situation": "Das Bundeskabinett hat sich auf die Eckpunkte einer neuen Forschungsstrategie geeinigt. Ihre Aufgabe ist es, die wesentlichen Beschlüsse aus dem vorliegenden Sitzungsprotokoll so aufzubereiten, dass die Öffentlichkeit über die strategische Neuausrichtung, die finanziellen Investitionen und die geplanten Reformen informiert wird.",
+  "contentPoints": [
+    "Darstellung der zentralen Ziele und der finanziellen Dimension der 'Forschungsinitiative 2030'",
+    "Erläuterung des geplanten Strukturwandels in der Forschungsförderung sowie des verstärkten Technologietransfers",
+    "Beschreibung der Maßnahmen zur Steigerung der internationalen Attraktivität und der ethischen Begleitung",
+    "Ausblick auf das weitere Gesetzgebungsverfahren und die erwarteten gesellschaftlichen Auswirkungen"
+  ],
+  "sourceText": "In der jüngsten Kabinettssitzung wurde der Entwurf für die 'Forschungsinitiative 2030' intensiv debattiert. Dieses Strategiepapier markiert einen Wendepunkt in der nationalen Wissenschaftspolitik. Kernziel ist es, Deutschland als führenden Standort für Green-Tech und künstliche Intelligenz zu festigen. Hierfür ist eine Budgetaufstockung von 5,2 Milliarden Euro vorgesehen, die über das nächste Jahrzehnt verteilt werden soll. Besonders hervorgehoben wurde die Notwendigkeit, den Wissens- und Technologietransfer aus den Universitäten in den Mittelstand zu forcieren. Man möchte weg von langwierigen bürokratischen Prozessen hin zu agilen Förderinstrumenten. Kritik gab es bezüglich der Verteilung: Einige Ministerien fordern mehr Mittel für die Grundlagenforschung, während andere die industrielle Anwendung priorisieren. Ein weiterer zentraler Aspekt ist die Gewinnung internationaler Spitzenforscher durch attraktivere Rahmenbedingungen und weniger Visa-Hürden. Zudem wird die Einrichtung eines interdisziplinären Expertengremiums geplant, das die ethischen Dimensionen der KI-Forschung kritisch begleitet. Das Vorhaben soll die technologische Souveränität Europas stärken und gleichzeitig einen Beitrag zur Klimaneutralität leisten. Die endgültige Verabschiedung des Papiers ist für das vierte Quartal des laufenden Kalenderjahres angesetzt, wobei noch Detailfragen zur regionalen Verteilung der Fördergelder geklärt werden müssen.",
+  "sourceTextType": "Sitzungsprotokoll (Zusammenfassung)",
+  "minWords": 250,
+  "maxWords": null,
+  "timeMinutes": 45,
+  "rubric": {
+    "criteria": [
+      {
+        "id": "inhalt",
+        "name": "Inhalt",
+        "nameVi": "Nội dung",
+        "maxScore": 5,
+        "weight": 20
+      },
+      {
+        "id": "angemessenheit",
+        "name": "Kommunikative Angemessenheit",
+        "nameVi": "Phù hợp giao tiếp",
+        "maxScore": 5,
+        "weight": 20
+      },
+      {
+        "id": "korrektheit",
+        "name": "Korrektheit",
+        "nameVi": "Chính xác ngữ pháp & chính tả",
+        "maxScore": 5,
+        "weight": 20
+      },
+      {
+        "id": "spektrum",
+        "name": "Wortschatz & Strukturen",
+        "nameVi": "Đa dạng từ vựng & cấu trúc",
+        "maxScore": 5,
+        "weight": 20
+      },
+      {
+        "id": "kohaerenz",
+        "name": "Kohaerenz & Kohaesion",
+        "nameVi": "Mạch lạc & liên kết",
+        "maxScore": 5,
+        "weight": 20
+      }
+    ],
+    "maxScore": 25
+  },
+  "maxScore": 25
+}

@@ -1,0 +1,265 @@
+{
+  "id": "A2-T2-002",
+  "level": "A2",
+  "teil": 2,
+  "teil_name": "Informationstafeln verstehen",
+  "topic": "Meine Familie",
+  "topic_id": "002",
+  "metadata": {
+    "word_count": 88,
+    "target_grammar": [
+      "Modalverben",
+      "Zeitangaben"
+    ],
+    "target_vocabulary": [
+      "Familienzentrum",
+      "Beratung",
+      "Spielzimmer",
+      "Krabbelgruppe",
+      "Elterntreff",
+      "Anmeldung",
+      "Veranstaltung",
+      "Stockwerk",
+      "Wickelraum",
+      "Aufenthaltsraum"
+    ],
+    "generated_at": "2026-03-09T22:32:00+07:00",
+    "version": 1
+  },
+  "infotafel": {
+    "title": "Familienzentrum Sonnenschein — Raumübersicht",
+    "location": "Ahornweg 3, 80331 München",
+    "rows": [
+      {
+        "floor": "EG",
+        "items": "Empfang & Anmeldung · Spielzimmer (0–3 Jahre) · Wickelraum · WC"
+      },
+      {
+        "floor": "1. OG",
+        "items": "Krabbelgruppe · Eltern-Kind-Turnen · Stillraum"
+      },
+      {
+        "floor": "2. OG",
+        "items": "Elternberatung · Kursraum A & B · Aufenthaltsraum mit Küche"
+      },
+      {
+        "floor": "3. OG",
+        "items": "Büro der Leitung · Besprechungsraum · Dachterrasse"
+      }
+    ],
+    "extra_info": "Öffnungszeiten: Mo–Fr 9:00–17:00 Uhr. Anmeldung für Kurse am Empfang oder online unter www.familienzentrum-sonnenschein.de. Am Samstag gibt es ein offenes Familiencafé von 10:00–14:00 Uhr."
+  },
+  "images": [
+    {
+      "id": "IMG1",
+      "type": "info_board",
+      "prompt": "Cute cartoon illustration of the lobby of a bright, welcoming German family center with a reception desk, colorful playroom visible through glass doors, parents with small children, toys and plants. Fuxie cartoon style, flat illustration, warm pastel colors, no text.",
+      "filename": "A2-T2-002_board.png",
+      "placement": "header",
+      "alt_text": "Familienzentrum Sonnenschein Raumübersicht",
+      "dimensions": "768x512"
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q1",
+      "teil": 2,
+      "type": "multiple_choice",
+      "stem": "Wo kann man sein Baby wickeln?",
+      "options": {
+        "a": "Im 1. Obergeschoss.",
+        "b": "Im Erdgeschoss.",
+        "c": "Im 2. Obergeschoss."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Der Wickelraum ist im EG (Erdgeschoss).",
+        "key_evidence": "EG: Empfang & Anmeldung · Spielzimmer (0–3 Jahre) · Wickelraum · WC",
+        "key_vocabulary": [
+          {
+            "word": "Wickelraum",
+            "type": "Nomen",
+            "meaning": "changing room (for babies)"
+          },
+          {
+            "word": "Erdgeschoss",
+            "type": "Nomen",
+            "meaning": "ground floor"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q2",
+      "teil": 2,
+      "type": "multiple_choice",
+      "stem": "In welchem Stockwerk ist die Krabbelgruppe?",
+      "options": {
+        "a": "Im Erdgeschoss.",
+        "b": "Im 1. Obergeschoss.",
+        "c": "Im 3. Obergeschoss."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Die Krabbelgruppe ist im 1. OG.",
+        "key_evidence": "1. OG: Krabbelgruppe · Eltern-Kind-Turnen · Stillraum",
+        "key_vocabulary": [
+          {
+            "word": "Krabbelgruppe",
+            "type": "Nomen",
+            "meaning": "crawling group (baby play group)"
+          },
+          {
+            "word": "Stockwerk",
+            "type": "Nomen",
+            "meaning": "floor / story"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q3",
+      "teil": 2,
+      "type": "multiple_choice",
+      "stem": "Wo kann man sich für einen Kurs anmelden?",
+      "options": {
+        "a": "Nur am Empfang im Erdgeschoss.",
+        "b": "Am Empfang oder online.",
+        "c": "Nur online."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Man kann sich am Empfang oder online anmelden.",
+        "key_evidence": "Anmeldung für Kurse am Empfang oder online",
+        "key_vocabulary": [
+          {
+            "word": "Anmeldung",
+            "type": "Nomen",
+            "meaning": "registration"
+          },
+          {
+            "word": "Empfang",
+            "type": "Nomen",
+            "meaning": "reception"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q4",
+      "teil": 2,
+      "type": "multiple_choice",
+      "stem": "Was gibt es am Samstag?",
+      "options": {
+        "a": "Das Familienzentrum ist geschlossen.",
+        "b": "Es gibt ein offenes Familiencafé.",
+        "c": "Es gibt einen Elternberatungstag."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Am Samstag gibt es ein offenes Familiencafé von 10:00-14:00 Uhr.",
+        "key_evidence": "Am Samstag gibt es ein offenes Familiencafé von 10:00–14:00 Uhr",
+        "key_vocabulary": [
+          {
+            "word": "Familiencafé",
+            "type": "Nomen",
+            "meaning": "family café"
+          },
+          {
+            "word": "offen",
+            "type": "Adjektiv",
+            "meaning": "open"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q5",
+      "teil": 2,
+      "type": "multiple_choice",
+      "stem": "Wo ist das Büro der Leitung?",
+      "options": {
+        "a": "Im 2. Obergeschoss.",
+        "b": "Im Erdgeschoss.",
+        "c": "Im 3. Obergeschoss."
+      },
+      "answer": "c",
+      "points": 1,
+      "explanation": {
+        "de": "Das Büro der Leitung ist im 3. OG.",
+        "key_evidence": "3. OG: Büro der Leitung · Besprechungsraum · Dachterrasse",
+        "key_vocabulary": [
+          {
+            "word": "Leitung",
+            "type": "Nomen",
+            "meaning": "management / director"
+          },
+          {
+            "word": "Besprechungsraum",
+            "type": "Nomen",
+            "meaning": "meeting room"
+          }
+        ]
+      }
+    }
+  ],
+  "scoring": {
+    "total_points": 5,
+    "pass_threshold": 3,
+    "grading": [
+      {
+        "range": [
+          5,
+          5
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          4,
+          4
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          3,
+          3
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          1,
+          2
+        ],
+        "label": "Noch üben!",
+        "emoji": "📝"
+      },
+      {
+        "range": [
+          0,
+          0
+        ],
+        "label": "Mehr Übung nötig",
+        "emoji": "💪"
+      }
+    ]
+  },
+  "qa": {
+    "vocab_in_a2_list": true,
+    "grammar_a2_only": true,
+    "word_count_in_range": true,
+    "all_answers_verifiable": true,
+    "mc_distractors_plausible": true,
+    "image_count": 1,
+    "passed": true
+  }
+}

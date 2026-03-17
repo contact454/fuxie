@@ -1,0 +1,172 @@
+{
+  "id": "B2-T4-002",
+  "level": "B2",
+  "teil": 4,
+  "teil_name": "Kommentare lesen",
+  "topic": "Politik & Gesellschaft",
+  "topic_id": "002",
+  "metadata": {
+    "word_count": 140,
+    "target_grammar": [
+      "Konjunktiv II",
+      "Passiv",
+      "Nominalisierung",
+      "Relativsatze"
+    ],
+    "target_vocabulary": [],
+    "generated_at": "2026-03-11T22:37:08.661642",
+    "version": 1
+  },
+  "forum": {
+    "question": "Sollte es eine Pflicht zum Wehrdienst oder Sozialdienst geben?",
+    "comments": [
+      {
+        "name": "Hauptmann Julia Brandt",
+        "position": "ja",
+        "text": "Ein verpflichtender Dienst, ob Wehr- oder Sozialdienst, starkt den gesellschaftlichen Zusammenhalt. Junge Menschen lernen Verantwortung, Teamarbeit und Disziplin. In einer Zeit, in der die Gesellschaft zunehmend auseinanderdriftet, ware ein solcher Dienst ein wichtiger Kitt."
+      },
+      {
+        "name": "Leon Schneider, 19",
+        "position": "nein",
+        "text": "Ein Pflichtdienst ware ein massiver Eingriff in die Freiheit junger Menschen. Nach 12 oder 13 Jahren Schule brauchen wir die Freiheit, unseren eigenen Weg zu finden, sei es ein Studium, eine Ausbildung oder ein Freiwilligenjahr. Zwang fuhrt nur zu Frustration."
+      },
+      {
+        "name": "Bettina Hoffmann",
+        "position": "ja",
+        "text": "Als Leiterin eines Pflegeheims bin ich taglich auf Unterstutzung angewiesen. Die Abschaffung des Zivildienstes 2011 hat eine enorme Lucke hinterlassen. Ein sozialer Pflichtdienst konnte diese Lucke fullen und jungen Menschen gleichzeitig wichtige Lebenserfahrung vermitteln."
+      },
+      {
+        "name": "Dr. Florian Gerber",
+        "position": "nein",
+        "text": "Aus rechtlicher Sicht ist ein Pflichtdienst hochst problematisch. Artikel 12 des Grundgesetzes garantiert die freie Berufswahl. Ein Zwangsdienst wurde dieses Grundrecht massiv einschranken und ware verfassungsrechtlich nur unter sehr engen Voraussetzungen vertretbar."
+      }
+    ]
+  },
+  "images": [
+    {
+      "id": "IMG1",
+      "type": "scene",
+      "prompt": "Cute cartoon illustration of people having a discussion forum about Politik & Gesellschaft, showing speech bubbles with different opinions. Fuxie cartoon style, flat illustration, warm pastel colors, no text.",
+      "filename": "B2-T4-002_scene.png",
+      "placement": "header",
+      "alt_text": "Sollte es eine Pflicht zum Wehrdienst oder Soziald",
+      "dimensions": "768x512"
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q1",
+      "teil": 4,
+      "type": "ja_nein",
+      "stem": "Julia Brandt sieht einen Pflichtdienst als Mittel gegen den gesellschaftlichen Zusammenbruch.",
+      "answer": "ja",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Julia Brandt sieht einen Pflichtdienst als Mittel gegen den gesellschaftlichen Z",
+        "reasoning": "Die richtige Antwort ergibt sich aus dem Text."
+      }
+    },
+    {
+      "id": "Q2",
+      "teil": 4,
+      "type": "ja_nein",
+      "stem": "Aus dem Text lässt sich schließen, dass leon Schneider befurwortet einen Pflichtdienst nach der Schule.",
+      "answer": "nein",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Leon Schneider befurwortet einen Pflichtdienst nach der Schule.",
+        "reasoning": "[Inferential] Die richtige Antwort ergibt sich aus dem Text."
+      }
+    },
+    {
+      "id": "Q3",
+      "teil": 4,
+      "type": "ja_nein",
+      "stem": "Aus dem Text lässt sich schließen, dass bettina Hoffmann berichtet von einer Personallucke seit Abschaffung des Zivildienstes.",
+      "answer": "ja",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Bettina Hoffmann berichtet von einer Personallucke seit Abschaffung des Zivildie",
+        "reasoning": "[Inferential] Die richtige Antwort ergibt sich aus dem Text."
+      }
+    },
+    {
+      "id": "Q4",
+      "teil": 4,
+      "type": "ja_nein",
+      "stem": "Dr. Gerber halt einen Pflichtdienst fur verfassungsrechtlich unproblematisch.",
+      "answer": "nein",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Dr. Gerber halt einen Pflichtdienst fur verfassungsrechtlich unproblematisch.",
+        "reasoning": "Die richtige Antwort ergibt sich aus dem Text."
+      }
+    },
+    {
+      "id": "Q5",
+      "teil": 4,
+      "type": "ja_nein",
+      "stem": "Aus dem Text lässt sich schließen, dass Die Mehrzahl der Kommentatoren spricht sich fur einen Pflichtdienst aus.",
+      "answer": "nein",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Die Mehrzahl der Kommentatoren spricht sich fur einen Pflichtdienst aus.",
+        "reasoning": "[Inferential] Die richtige Antwort ergibt sich aus dem Text."
+      }
+    }
+  ],
+  "scoring": {
+    "total_points": 5,
+    "pass_threshold": 3,
+    "grading": [
+      {
+        "range": [
+          5,
+          5
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          4,
+          4
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          3,
+          3
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          1,
+          2
+        ],
+        "label": "Noch uben!",
+        "emoji": "📝"
+      },
+      {
+        "range": [
+          0,
+          0
+        ],
+        "label": "Mehr Ubung notig",
+        "emoji": "💪"
+      }
+    ]
+  },
+  "qa": {
+    "vocab_in_b2_list": true,
+    "grammar_b2_appropriate": true,
+    "word_count_in_range": true,
+    "all_answers_verifiable": true,
+    "image_count": 1,
+    "passed": true
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "id": "W-A2-T1-004",
+  "cefrLevel": "A2",
+  "teil": 1,
+  "teilName": "E-Mail-Antwort",
+  "textType": "E-Mail",
+  "register": "informell",
+  "topic": "Feier",
+  "instruction": "Schreiben Sie eine Antwort-E-Mail (ca. 40-60 Woerter). Schreiben Sie zu allen drei Punkten.",
+  "instructionVi": "Tra loi email: Feier.",
+  "situation": "Sie feiern Ihren Abschluss und moechten Freunde einladen.",
+  "contentPoints": [
+    "einladen",
+    "Details nennen",
+    "bitten etwas mitzubringen"
+  ],
+  "minWords": 40,
+  "maxWords": 70,
+  "timeMinutes": 15,
+  "rubric": {
+    "criteria": [
+      {
+        "id": "inhalt",
+        "name": "Inhalt",
+        "nameVi": "Noi dung",
+        "maxScore": 5,
+        "weight": 30
+      },
+      {
+        "id": "korrektheit",
+        "name": "Korrektheit",
+        "nameVi": "Chinh xac",
+        "maxScore": 5,
+        "weight": 35
+      },
+      {
+        "id": "angemessenheit",
+        "name": "Kommunikative Angemessenheit",
+        "nameVi": "Phu hop giao tiep",
+        "maxScore": 5,
+        "weight": 35
+      }
+    ],
+    "maxScore": 15
+  },
+  "maxScore": 15,
+  "sourceText": "Hallo! Wie geht es dir? Du hast mir doch erzählt, dass du bald eine Feier planst. Das klingt toll! Wen möchtest du alles einladen? Wann und wo findet die Party genau statt? Sag mir bitte Bescheid, ob wir Gäste etwas zum Essen oder Trinken mitbringen sollen. Ich freue mich schon!\nViele Grüße,\nLukas",
+  "sourceTextType": "E-Mail",
+  "stimulusSender": "Lukas",
+  "grafikData": []
+}

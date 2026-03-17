@@ -1,0 +1,222 @@
+{
+  "id": "B1-T4-003",
+  "level": "B1",
+  "teil": 4,
+  "teil_name": "Leserbriefe lesen",
+  "topic": "Umwelt & Natur",
+  "topic_id": "003",
+  "metadata": {
+    "word_count": 278,
+    "target_grammar": [
+      "Nebensatz mit weil/dass/wenn",
+      "Konjunktiv II",
+      "Passiv"
+    ],
+    "target_vocabulary": [
+      "Innenstadt",
+      "Fahrrad",
+      "Abgas",
+      "Parkplatz",
+      "Lebensqualität",
+      "ÖPNV",
+      "Pendler",
+      "autofreie Zone"
+    ],
+    "generated_at": "2026-03-10T23:38:00+07:00",
+    "version": 1
+  },
+  "debate": {
+    "topic": "Soll man Autos aus der Innenstadt verbannen?",
+    "context": "Immer mehr Städte diskutieren darüber, ob Autos aus dem Stadtzentrum verbannt werden sollen. Einige Städte haben bereits autofreie Zonen eingerichtet. Was meinen die Leser?",
+    "letters": [
+      {
+        "author": "Stefan G., München",
+        "text": "Unbedingt! Ohne Autos wären die Innenstädte viel schöner: weniger Lärm, saubere Luft, mehr Platz für Fußgänger und Radfahrer. In Amsterdam und Kopenhagen funktioniert das hervorragend. Die Lebensqualität steigt enorm, wenn Autos draußen bleiben müssen.",
+        "position": "ja"
+      },
+      {
+        "author": "Renate H., Dortmund",
+        "text": "Das ist unrealistisch! Viele Menschen, besonders Ältere und Behinderte, sind auf ihr Auto angewiesen. Außerdem: Wie sollen Geschäfte und Restaurants beliefert werden? Ein komplettes Autoverbot würde den Einzelhandel zerstören.",
+        "position": "nein"
+      },
+      {
+        "author": "Yusuf D., Nürnberg",
+        "text": "Ich bin dafür, aber nur wenn der öffentliche Nahverkehr gleichzeitig ausgebaut wird. Busse und Bahnen müssen häufiger fahren und günstiger werden. Ohne gute Alternativen kann man den Leuten das Auto nicht wegnehmen.",
+        "position": "ja"
+      },
+      {
+        "author": "Monika F., Bremen",
+        "text": "Als Geschäftsfrau in der Innenstadt bin ich absolut dagegen. Wenn die Kunden nicht mehr mit dem Auto kommen können, kaufen sie eben online. Das Ergebnis: leere Innenstädte und geschlossene Läden. Das kann doch niemand wollen!",
+        "position": "nein"
+      },
+      {
+        "author": "Lisa S., Hannover",
+        "text": "Ja! Unsere Kinder verdienen saubere Luft. In der Innenstadt spielen Kinder zwischen Abgasen — das ist unverantwortlich. Autofreie Zonen sind sicherer und gesünder. Die Menschen gewöhnen sich schnell daran, wie Beispiele in Spanien und Belgien zeigen.",
+        "position": "ja"
+      }
+    ]
+  },
+  "images": [
+    {
+      "id": "IMG1",
+      "type": "scene",
+      "prompt": "Cute cartoon illustration of a German city center debate: one half shows cars and traffic, the other shows a pedestrian zone with bikes, cafes and happy people. Fuxie cartoon style, flat illustration, warm pastel colors, no text.",
+      "filename": "B1-T4-003_scene.png",
+      "placement": "header",
+      "alt_text": "Debatte: Autofreie Innenstadt",
+      "dimensions": "768x512"
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q1",
+      "teil": 4,
+      "type": "ja_nein",
+      "stem": "Stefan G. ist dafür, Autos aus der Innenstadt zu verbannen.",
+      "answer": "ja",
+      "points": 1,
+      "explanation": {
+        "de": "Stefan sagt unbedingt und lobt das Modell von Amsterdam und Kopenhagen.",
+        "key_evidence": "Unbedingt! / Die Lebensqualität steigt enorm",
+        "key_vocabulary": [
+          {
+            "word": "Lebensqualität",
+            "type": "Nomen",
+            "meaning": "quality of life"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q2",
+      "teil": 4,
+      "type": "ja_nein",
+      "stem": "Der Autor deutet an, dass renate H. hält ein Autoverbot in der Innenstadt für eine gute Idee.",
+      "answer": "nein",
+      "points": 1,
+      "explanation": {
+        "de": "Renate findet es unrealistisch und warnt vor Schäden für den Einzelhandel.",
+        "key_evidence": "Das ist unrealistisch / Ein komplettes Autoverbot würde den Einzelhandel zerstören",
+        "key_vocabulary": [
+          {
+            "word": "angewiesen sein auf",
+            "type": "Verb",
+            "meaning": "to depend on"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q3",
+      "teil": 4,
+      "type": "ja_nein",
+      "stem": "Yusuf D. ist grundsätzlich für autofreie Innenstädte.",
+      "answer": "ja",
+      "points": 1,
+      "explanation": {
+        "de": "Er ist dafür, aber fordert gleichzeitig besseren öffentlichen Nahverkehr.",
+        "key_evidence": "Ich bin dafür, aber nur wenn der öffentliche Nahverkehr ausgebaut wird",
+        "key_vocabulary": [
+          {
+            "word": "öffentlicher Nahverkehr",
+            "type": "Nomen",
+            "meaning": "public transport"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q4",
+      "teil": 4,
+      "type": "ja_nein",
+      "stem": "Monika F. unterstützt die Idee autofreier Innenstädte.",
+      "answer": "nein",
+      "points": 1,
+      "explanation": {
+        "de": "Als Geschäftsfrau ist sie absolut dagegen, weil Kunden zum Online-Shopping wechseln würden.",
+        "key_evidence": "absolut dagegen / Kunden kaufen eben online",
+        "key_vocabulary": [
+          {
+            "word": "Einzelhandel",
+            "type": "Nomen",
+            "meaning": "retail"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q5",
+      "teil": 4,
+      "type": "ja_nein",
+      "stem": "Lisa S. findet, dass autofreie Zonen besser für Kinder sind.",
+      "answer": "ja",
+      "points": 1,
+      "explanation": {
+        "de": "Lisa sagt Ja und betont, dass Kinder saubere Luft und Sicherheit verdienen.",
+        "key_evidence": "Ja! Unsere Kinder verdienen saubere Luft / Autofreie Zonen sind sicherer",
+        "key_vocabulary": [
+          {
+            "word": "unverantwortlich",
+            "type": "Adjektiv",
+            "meaning": "irresponsible"
+          }
+        ]
+      }
+    }
+  ],
+  "scoring": {
+    "total_points": 5,
+    "pass_threshold": 3,
+    "grading": [
+      {
+        "range": [
+          5,
+          5
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          4,
+          4
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          3,
+          3
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          1,
+          2
+        ],
+        "label": "Noch üben!",
+        "emoji": "📝"
+      },
+      {
+        "range": [
+          0,
+          0
+        ],
+        "label": "Mehr Übung nötig",
+        "emoji": "💪"
+      }
+    ]
+  },
+  "qa": {
+    "vocab_in_b1_list": true,
+    "grammar_b1_appropriate": true,
+    "word_count_in_range": true,
+    "all_answers_verifiable": true,
+    "ja_nein_balanced": true,
+    "image_count": 1,
+    "passed": true
+  }
+}

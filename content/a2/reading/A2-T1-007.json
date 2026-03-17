@@ -1,0 +1,249 @@
+{
+  "id": "A2-T1-007",
+  "level": "A2",
+  "teil": 1,
+  "teil_name": "Zeitungsartikel lesen",
+  "topic": "Unterwegs",
+  "topic_id": "007",
+  "metadata": {
+    "word_count": 176,
+    "target_grammar": [
+      "Perfekt",
+      "Modalverben",
+      "Nebensatz mit weil/dass/wenn"
+    ],
+    "target_vocabulary": [
+      "E-Scooter",
+      "Verkehr",
+      "Fahrrad",
+      "Unfall",
+      "Gehweg",
+      "Helm",
+      "Geschwindigkeit",
+      "Verbot",
+      "Regel",
+      "umweltfreundlich"
+    ],
+    "generated_at": "2026-03-09T21:45:00+07:00",
+    "version": 1
+  },
+  "text": {
+    "title": "E-Scooter in Berlin — praktisch oder gefährlich?",
+    "subtitle": "Neue Regeln für elektrische Roller in der Stadt",
+    "body": "Seit einem Jahr gibt es E-Scooter in Berlin. Die elektrischen Roller sind sehr beliebt: Jeden Tag fahren über 10.000 Menschen damit durch die Stadt. Man kann einen E-Scooter einfach per App mieten. Eine Fahrt kostet 1 Euro plus 20 Cent pro Minute.\n\nAber es gibt auch Probleme. Im letzten Jahr hat es über 400 Unfälle mit E-Scootern gegeben. Viele Fahrer tragen keinen Helm und fahren zu schnell. Außerdem parken viele Leute die Roller auf dem Gehweg. Das ist besonders für ältere Menschen und Familien mit Kinderwagen ein Problem.\n\nDeshalb hat die Stadt neue Regeln eingeführt. E-Scooter dürfen nur noch auf Radwegen und der Straße fahren— nicht mehr auf dem Gehweg. Die Höchstgeschwindigkeit liegt bei 20 km/h. Wenn man die Regeln nicht beachtet, muss man 50 Euro Strafe bezahlen.\n\nViele Berliner finden die Roller trotzdem gut, weil sie umweltfreundlich sind. „Ich fahre jeden Tag mit dem Scooter zur Arbeit\", sagt ein Nutzer.",
+    "source": "Tagesspiegel"
+  },
+  "images": [
+    {
+      "id": "IMG1",
+      "type": "scene",
+      "prompt": "Cute cartoon illustration of a German city street with people riding electric scooters. A dedicated bike lane, traffic signs, some scooters parked at a station. Mix of riders - office workers, students. Urban Berlin setting with trees and buildings. Fuxie cartoon style, flat illustration, warm pastel colors, no text.",
+      "filename": "A2-T1-007_scene.png",
+      "placement": "header",
+      "alt_text": "E-Scooter auf Berliner Straßen",
+      "dimensions": "768x512"
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q1",
+      "teil": 1,
+      "type": "multiple_choice",
+      "stem": "Wie viele Menschen fahren täglich mit E-Scootern in Berlin?",
+      "options": {
+        "a": "Über 5.000.",
+        "b": "Über 10.000.",
+        "c": "Über 20.000."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Im Text steht: 'Jeden Tag fahren über 10.000 Menschen damit durch die Stadt.'",
+        "key_evidence": "über 10.000 Menschen",
+        "key_vocabulary": [
+          {
+            "word": "täglich",
+            "type": "Adverb",
+            "meaning": "daily"
+          },
+          {
+            "word": "beliebt",
+            "type": "Adjektiv",
+            "meaning": "popular"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q2",
+      "teil": 1,
+      "type": "multiple_choice",
+      "stem": "Was ist ein Problem mit den E-Scootern?",
+      "options": {
+        "a": "Sie sind zu teuer.",
+        "b": "Es hat viele Unfälle gegeben.",
+        "c": "Sie fahren zu langsam."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Im Text steht: 'Im letzten Jahr hat es über 400 Unfälle mit E-Scootern gegeben.'",
+        "key_evidence": "über 400 Unfälle mit E-Scootern",
+        "key_vocabulary": [
+          {
+            "word": "Unfall",
+            "type": "Nomen",
+            "meaning": "accident"
+          },
+          {
+            "word": "gefährlich",
+            "type": "Adjektiv",
+            "meaning": "dangerous"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q3",
+      "teil": 1,
+      "type": "multiple_choice",
+      "stem": "Wo dürfen E-Scooter jetzt fahren?",
+      "options": {
+        "a": "Auf dem Gehweg und im Park.",
+        "b": "Auf Radwegen und der Straße.",
+        "c": "Nur auf der Straße."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Im Text steht: 'E-Scooter dürfen nur noch auf Radwegen und der Straße fahren.'",
+        "key_evidence": "auf Radwegen und der Straße fahren",
+        "key_vocabulary": [
+          {
+            "word": "Radweg",
+            "type": "Nomen",
+            "meaning": "bike lane"
+          },
+          {
+            "word": "Gehweg",
+            "type": "Nomen",
+            "meaning": "sidewalk"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q4",
+      "teil": 1,
+      "type": "multiple_choice",
+      "stem": "Wie hoch ist die Strafe, wenn man die Regeln nicht beachtet?",
+      "options": {
+        "a": "25 Euro.",
+        "b": "50 Euro.",
+        "c": "100 Euro."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Im Text steht: 'Wenn man die Regeln nicht beachtet, muss man 50 Euro Strafe bezahlen.'",
+        "key_evidence": "50 Euro Strafe bezahlen",
+        "key_vocabulary": [
+          {
+            "word": "Strafe",
+            "type": "Nomen",
+            "meaning": "fine/penalty"
+          },
+          {
+            "word": "beachten",
+            "type": "Verb",
+            "meaning": "to follow/observe"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q5",
+      "teil": 1,
+      "type": "multiple_choice",
+      "stem": "Warum finden viele Berliner die E-Scooter gut?",
+      "options": {
+        "a": "Weil sie sehr billig sind.",
+        "b": "Weil sie umweltfreundlich sind.",
+        "c": "Weil sie schneller als Autos sind."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Im Text steht: 'Viele Berliner finden die Roller trotzdem gut, weil sie umweltfreundlich sind.'",
+        "key_evidence": "weil sie umweltfreundlich sind",
+        "key_vocabulary": [
+          {
+            "word": "umweltfreundlich",
+            "type": "Adjektiv",
+            "meaning": "environmentally friendly"
+          },
+          {
+            "word": "trotzdem",
+            "type": "Adverb",
+            "meaning": "nevertheless"
+          }
+        ]
+      }
+    }
+  ],
+  "scoring": {
+    "total_points": 5,
+    "pass_threshold": 3,
+    "grading": [
+      {
+        "range": [
+          5,
+          5
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          4,
+          4
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          3,
+          3
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          1,
+          2
+        ],
+        "label": "Noch üben!",
+        "emoji": "📝"
+      },
+      {
+        "range": [
+          0,
+          0
+        ],
+        "label": "Mehr Übung nötig",
+        "emoji": "💪"
+      }
+    ]
+  },
+  "qa": {
+    "vocab_in_a2_list": true,
+    "grammar_a2_only": true,
+    "word_count_in_range": true,
+    "all_answers_verifiable": true,
+    "mc_distractors_plausible": true,
+    "image_count": 1,
+    "passed": true
+  }
+}

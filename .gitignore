@@ -1,0 +1,61 @@
+# Dependencies
+node_modules/
+.pnpm-store/
+
+# Next.js
+.next/
+out/
+
+# Build
+dist/
+build/
+*.tsbuildinfo
+
+# Turbo
+.turbo/
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Prisma
+packages/database/src/generated/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+
+# Testing
+coverage/
+
+# Docker
+docker-compose.override.yml
+
+# Vercel
+.vercel/
+
+# AI Agent configs
+.gemini/
+.agents/
+
+# Large static assets (served via CDN/GCS in production)
+apps/web/public/images/
+apps/web/public/audio/
+
+# Mascot source files
+Fuxie/
+
+# Junk files
+0
+001

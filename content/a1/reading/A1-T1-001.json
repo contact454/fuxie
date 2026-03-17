@@ -1,0 +1,239 @@
+{
+  "id": "A1-T1-001",
+  "level": "A1",
+  "teil": 1,
+  "teil_name": "Kurze Texte lesen",
+  "topic": "Im Supermarkt",
+  "topic_id": "001",
+  "metadata": {
+    "word_count_text_a": 49,
+    "word_count_text_b": 43,
+    "target_grammar": [
+      "Präsens",
+      "Akkusativ",
+      "Imperativ"
+    ],
+    "target_vocabulary": [
+      "einkaufen",
+      "Supermarkt",
+      "Brot",
+      "Milch",
+      "Obst",
+      "Käse",
+      "Schokolade",
+      "brauchen",
+      "kaufen",
+      "kosten"
+    ],
+    "generated_at": "2026-03-09T02:00:00+07:00",
+    "version": 1
+  },
+  "texts": [
+    {
+      "id": "TextA",
+      "type": "email",
+      "sender": "Lisa",
+      "receiver": "Mama",
+      "content": "Liebe Mama,\nich gehe heute Nachmittag in den Supermarkt. Wir brauchen Brot, Milch und Obst. Ich kaufe auch Butter und Eier. Der Supermarkt in der Hauptstraße ist bis 20 Uhr offen. Ich bin um 18 Uhr wieder zu Hause. Brauchst du noch etwas? Schreib mir bitte!\nLiebe Grüße,\nLisa"
+    },
+    {
+      "id": "TextB",
+      "type": "sms",
+      "sender": "Paul",
+      "receiver": "Lisa",
+      "content": "Hallo Lisa! Ich bin es, Paul. Kannst du bitte auch Käse kaufen? Ich brauche Käse für das Abendessen heute. Und kauf bitte keine Schokolade. Wir haben noch drei Tafeln zu Hause. Ich koche heute Abend Pasta mit Käse. Danke dir und bis später!"
+    }
+  ],
+  "images": [
+    {
+      "id": "IMG1",
+      "type": "scene",
+      "prompt": "Cute cartoon illustration of a young woman with a shopping basket walking through a bright, modern German supermarket with colorful shelves of bread, milk, and fruit visible. Fuxie cartoon style, flat illustration, warm pastel colors, no text in the image.",
+      "filename": "A1-T1-001_scene.png",
+      "placement": "header",
+      "alt_text": "Junge Frau beim Einkaufen im Supermarkt",
+      "dimensions": "768x512"
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q1",
+      "teil": 1,
+      "linked_text": "TextA",
+      "type": "richtig_falsch",
+      "statement": "Lisa geht heute einkaufen.",
+      "answer": "richtig",
+      "points": 1,
+      "explanation": {
+        "de": "Im Text steht: 'ich gehe heute in den Supermarkt'. Einkaufen gehen und in den Supermarkt gehen ist das Gleiche.",
+        "key_evidence": "ich gehe heute in den Supermarkt",
+        "key_vocabulary": [
+          {
+            "word": "einkaufen",
+            "type": "Verb",
+            "meaning": "to go shopping"
+          },
+          {
+            "word": "Supermarkt",
+            "type": "Nomen",
+            "meaning": "supermarket"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q2",
+      "teil": 1,
+      "linked_text": "TextA",
+      "type": "richtig_falsch",
+      "statement": "Lisa kommt um 20 Uhr nach Hause.",
+      "answer": "falsch",
+      "points": 1,
+      "explanation": {
+        "de": "Im Text steht: 'Ich bin um 18 Uhr wieder zu Hause.' Lisa kommt um 18 Uhr nach Hause, nicht um 20 Uhr. 20 Uhr ist die Schließzeit des Supermarkts.",
+        "key_evidence": "Ich bin um 18 Uhr wieder zu Hause",
+        "key_vocabulary": [
+          {
+            "word": "zu Hause",
+            "type": "Adverb",
+            "meaning": "at home"
+          },
+          {
+            "word": "Uhr",
+            "type": "Nomen",
+            "meaning": "o'clock"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q3",
+      "teil": 1,
+      "linked_text": "TextA",
+      "type": "richtig_falsch",
+      "statement": "Lisa kauft auch Fleisch.",
+      "answer": "falsch",
+      "points": 1,
+      "explanation": {
+        "de": "Im Text steht: 'Wir brauchen Brot, Milch und Obst.' Fleisch steht nicht in der Liste. Lisa kauft Brot, Milch und Obst.",
+        "key_evidence": "Wir brauchen Brot, Milch und Obst",
+        "key_vocabulary": [
+          {
+            "word": "Fleisch",
+            "type": "Nomen",
+            "meaning": "meat"
+          },
+          {
+            "word": "Obst",
+            "type": "Nomen",
+            "meaning": "fruit"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q4",
+      "teil": 1,
+      "linked_text": "TextB",
+      "type": "richtig_falsch",
+      "statement": "Paul möchte Käse haben.",
+      "answer": "richtig",
+      "points": 1,
+      "explanation": {
+        "de": "Im Text steht: 'Kannst du bitte auch Käse kaufen? Ich brauche Käse für das Abendessen.' Paul möchte Käse.",
+        "key_evidence": "Kannst du bitte auch Käse kaufen",
+        "key_vocabulary": [
+          {
+            "word": "Käse",
+            "type": "Nomen",
+            "meaning": "cheese"
+          },
+          {
+            "word": "Abendessen",
+            "type": "Nomen",
+            "meaning": "dinner"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q5",
+      "teil": 1,
+      "linked_text": "TextB",
+      "type": "richtig_falsch",
+      "statement": "Paul möchte Schokolade kaufen.",
+      "answer": "falsch",
+      "points": 1,
+      "explanation": {
+        "de": "Im Text steht: 'kauf bitte keine Schokolade – wir haben noch welche zu Hause.' Paul möchte KEINE Schokolade. Sie haben noch Schokolade.",
+        "key_evidence": "kauf bitte keine Schokolade",
+        "key_vocabulary": [
+          {
+            "word": "Schokolade",
+            "type": "Nomen",
+            "meaning": "chocolate"
+          },
+          {
+            "word": "keine",
+            "type": "Pronomen",
+            "meaning": "no / none"
+          }
+        ]
+      }
+    }
+  ],
+  "scoring": {
+    "total_points": 5,
+    "pass_threshold": 3,
+    "grading": [
+      {
+        "range": [
+          5,
+          5
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          4,
+          4
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          3,
+          3
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          1,
+          2
+        ],
+        "label": "Noch üben!",
+        "emoji": "📝"
+      },
+      {
+        "range": [
+          0,
+          0
+        ],
+        "label": "Mehr Übung nötig",
+        "emoji": "💪"
+      }
+    ]
+  },
+  "qa": {
+    "vocab_in_a1_list": true,
+    "grammar_a1_only": true,
+    "word_count_in_range": true,
+    "all_answers_verifiable": true,
+    "image_count": 1,
+    "passed": false
+  }
+}

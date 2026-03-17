@@ -1,0 +1,222 @@
+{
+  "id": "B2-T3-002",
+  "level": "B2",
+  "teil": 3,
+  "teil_name": "Anzeigen zuordnen",
+  "topic": "Politik & Gesellschaft",
+  "topic_id": "002",
+  "metadata": {
+    "word_count": 158,
+    "target_grammar": [
+      "Konjunktiv II",
+      "Passiv",
+      "Modalverben",
+      "Relativsätze"
+    ],
+    "target_vocabulary": [],
+    "generated_at": "2026-03-11T22:34:38.583025",
+    "version": 1
+  },
+  "anzeigen": [
+    {
+      "id": "A",
+      "text": "Bundeszentrale für politische Bildung: Seminar Demokratie und Partizipation. 3 Tage in Bonn. Für Lehrkräfte und Multiplikatoren. Teilnahme kostenlos inkl. Unterkunft."
+    },
+    {
+      "id": "B",
+      "text": "Bürgerinitiative Grünes Viertel sucht Mitstreiter: Wir setzen uns für mehr Grünflächen und weniger Verkehr in unserem Stadtteil ein. Treffen jeden 2. Donnerstag, 19 Uhr im Gemeindezentrum."
+    },
+    {
+      "id": "C",
+      "text": "Ehrenamtsprojekt Lesepaten: Unterstützen Sie Grundschulkinder beim Lesenlernen! 2 Stunden pro Woche. Schulung wird angeboten. Melden Sie sich bei ehrenamt@stadt-bonn.de"
+    },
+    {
+      "id": "D",
+      "text": "Demokratie-Workshop für Jugendliche (14-18 Jahre): Was bedeutet Demokratie? Wie funktioniert der Bundestag? Interaktives Planspiel. 2 Tage im Jugendzentrum. Kostenlos."
+    },
+    {
+      "id": "E",
+      "text": "Politische Stiftungen im Vergleich: Informationsabend am 12. April, 18 Uhr im Rathaus. Vorstellung der 6 parteinahen Stiftungen und ihrer Stipendienprogramme. Eintritt frei."
+    },
+    {
+      "id": "F",
+      "text": "Stadtteilverein Nordstadt: Kommunalpolitik hautnah erleben. Wir begleiten Ratssitzungen und organisieren Bürgersprechstunden. Neue Mitglieder willkommen!"
+    },
+    {
+      "id": "G",
+      "text": "Online-Kurs Fake News erkennen: 4-wöchiger Selbstlernkurs der VHS. Medienkompetenz stärken, Quellen prüfen lernen. 45 Euro. Start jederzeit möglich."
+    },
+    {
+      "id": "H",
+      "text": "Wahlhelfer gesucht! Für die Kommunalwahl am 15. September brauchen wir zuverlässige Wahlhelfer. Aufwandsentschädigung: 60 Euro. Anmeldung beim Wahlamt der Stadt."
+    }
+  ],
+  "situationen": [
+    {
+      "id": "S1",
+      "text": "Eine Lehrerin möchte sich zum Thema politische Bildung fortbilden und sucht ein kostenloses Angebot mit Übernachtung.",
+      "answer": "A"
+    },
+    {
+      "id": "S2",
+      "text": "Ein 16-Jähriger interessiert sich für Politik und möchte verstehen, wie der Bundestag funktioniert.",
+      "answer": "D"
+    },
+    {
+      "id": "S3",
+      "text": "Eine Rentnerin möchte sich ehrenamtlich engagieren und Kindern beim Lernen helfen.",
+      "answer": "C"
+    },
+    {
+      "id": "S4",
+      "text": "Ein Student sucht Informationen über Stipendien politischer Stiftungen.",
+      "answer": "E"
+    },
+    {
+      "id": "S5",
+      "text": "Jemand möchte sich gegen den zunehmenden Verkehr in seiner Nachbarschaft einsetzen.",
+      "answer": "B"
+    }
+  ],
+  "null_matches": [
+    "F",
+    "G",
+    "H"
+  ],
+  "images": [
+    {
+      "id": "IMG1",
+      "type": "scene",
+      "prompt": "Cute cartoon illustration of a bulletin board with various professional advertisements related to Politik & Gesellschaft. Fuxie cartoon style, flat illustration, warm pastel colors, no text.",
+      "filename": "B2-T3-002_scene.png",
+      "placement": "header",
+      "alt_text": "Anzeigen: Politik & Gesellschaft",
+      "dimensions": "768x512"
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q1",
+      "teil": 3,
+      "type": "matching",
+      "stem": "Die implizite Annahme, dass eine Lehrerin möchte sich zum Thema politische Bildung fortbilden und sucht ein kostenloses Angebot mit Übernachtung, liegt dem Beitrag zugrunde:",
+      "answer": "A",
+      "points": 1,
+      "explanation": {
+        "de": "Anzeige A passt, weil sie das beschriebene Bedürfnis erfüllt.",
+        "key_evidence": "Anzeige A",
+        "key_vocabulary": [],
+        "reasoning": "[Inferential] "
+      }
+    },
+    {
+      "id": "Q2",
+      "teil": 3,
+      "type": "matching",
+      "stem": "Aus der Argumentation lässt sich ableiten, dass Ein 16-Jähriger interessiert sich für Politik und möchte verstehen, wie der Bundestag funktioniert. Diese Position vertritt:",
+      "answer": "D",
+      "points": 1,
+      "explanation": {
+        "de": "Anzeige D passt, weil sie das beschriebene Bedürfnis erfüllt.",
+        "key_evidence": "Anzeige D",
+        "key_vocabulary": [],
+        "reasoning": "[Inferential] "
+      }
+    },
+    {
+      "id": "Q3",
+      "teil": 3,
+      "type": "matching",
+      "stem": "Aus der Argumentation lässt sich ableiten, dass eine Rentnerin möchte sich ehrenamtlich engagieren und Kindern beim Lernen helfen. Diese Position vertritt:",
+      "answer": "C",
+      "points": 1,
+      "explanation": {
+        "de": "Anzeige C passt, weil sie das beschriebene Bedürfnis erfüllt.",
+        "key_evidence": "Anzeige C",
+        "key_vocabulary": [],
+        "reasoning": "[Inferential] "
+      }
+    },
+    {
+      "id": "Q4",
+      "teil": 3,
+      "type": "matching",
+      "stem": "Ein Student sucht Informationen über Stipendien politischer Stiftungen.",
+      "answer": "E",
+      "points": 1,
+      "explanation": {
+        "de": "Anzeige E passt, weil sie das beschriebene Bedürfnis erfüllt.",
+        "key_evidence": "Anzeige E",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q5",
+      "teil": 3,
+      "type": "matching",
+      "stem": "Jemand möchte sich gegen den zunehmenden Verkehr in seiner Nachbarschaft einsetzen.",
+      "answer": "B",
+      "points": 1,
+      "explanation": {
+        "de": "Anzeige B passt, weil sie das beschriebene Bedürfnis erfüllt.",
+        "key_evidence": "Anzeige B",
+        "key_vocabulary": []
+      }
+    }
+  ],
+  "scoring": {
+    "total_points": 5,
+    "pass_threshold": 3,
+    "grading": [
+      {
+        "range": [
+          5,
+          5
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          4,
+          4
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          3,
+          3
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          1,
+          2
+        ],
+        "label": "Noch üben!",
+        "emoji": "📝"
+      },
+      {
+        "range": [
+          0,
+          0
+        ],
+        "label": "Mehr Übung nötig",
+        "emoji": "💪"
+      }
+    ]
+  },
+  "qa": {
+    "vocab_in_b2_list": true,
+    "grammar_b2_appropriate": true,
+    "word_count_in_range": true,
+    "all_answers_verifiable": true,
+    "null_matches_correct": true,
+    "image_count": 1,
+    "passed": true
+  }
+}

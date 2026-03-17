@@ -1,0 +1,276 @@
+{
+  "id": "A1-T3-010",
+  "level": "A1",
+  "teil": 3,
+  "teil_name": "Schilder und Aushänge",
+  "topic": "Feste und Feiertage",
+  "topic_id": "010",
+  "metadata": {
+    "generated_at": "2026-03-09T02:45:00+07:00",
+    "version": 1
+  },
+  "schilder": [
+    {
+      "id": "Schild1",
+      "type": "Information",
+      "text": "Veranstaltung heute: Stadtfest auf dem Marktplatz. Live-Musik ab 16 Uhr. Eintritt frei!",
+      "icon": "🎶"
+    },
+    {
+      "id": "Schild2",
+      "type": "Öffnungszeiten",
+      "text": "Einlass ab 18 Uhr. Die Türen schließen um 20 Uhr. Bitte kommen Sie pünktlich.",
+      "icon": "🚪"
+    },
+    {
+      "id": "Schild3",
+      "type": "Information",
+      "text": "Garderobe im Foyer. 2 € pro Jacke. Bitte keine Wertsachen in der Garderobe.",
+      "icon": "🧥"
+    },
+    {
+      "id": "Schild4",
+      "type": "Warnung",
+      "text": "Feuerwerk um 22 Uhr! Bitte Abstand halten. Kinder nur mit Erwachsenen.",
+      "icon": "🎆"
+    },
+    {
+      "id": "Schild5",
+      "type": "Information",
+      "text": "Karten an der Abendkasse: Erwachsene 15 €, Kinder bis 12 Jahre frei. Nur Barzahlung.",
+      "icon": "🎫"
+    }
+  ],
+  "images": [
+    {
+      "id": "IMG1",
+      "type": "schild",
+      "linked_schild": "Schild1",
+      "prompt": "Cartoon event sign: 'Stadtfest auf dem Marktplatz. Live-Musik ab 16 Uhr. Eintritt frei!' Festive purple/gold sign. Fuxie cartoon.",
+      "filename": "A1-T3-010_schild_1.png",
+      "placement": "schild_1",
+      "alt_text": "Stadtfest-Ankündigung",
+      "dimensions": "400x300"
+    },
+    {
+      "id": "IMG2",
+      "type": "schild",
+      "linked_schild": "Schild2",
+      "prompt": "Cartoon admission sign: 'Einlass ab 18 Uhr. Türen schließen 20 Uhr.' Blue/white event sign. Fuxie cartoon.",
+      "filename": "A1-T3-010_schild_2.png",
+      "placement": "schild_2",
+      "alt_text": "Einlass-Schild",
+      "dimensions": "400x300"
+    },
+    {
+      "id": "IMG3",
+      "type": "schild",
+      "linked_schild": "Schild3",
+      "prompt": "Cartoon cloakroom sign: 'Garderobe 2€ pro Jacke. Keine Wertsachen.' Neutral gray sign with coat icon. Fuxie cartoon.",
+      "filename": "A1-T3-010_schild_3.png",
+      "placement": "schild_3",
+      "alt_text": "Garderobe-Schild",
+      "dimensions": "400x300"
+    },
+    {
+      "id": "IMG4",
+      "type": "schild",
+      "linked_schild": "Schild4",
+      "prompt": "Cartoon fireworks warning: 'Feuerwerk 22 Uhr! Abstand halten. Kinder nur mit Erwachsenen.' Red/orange warning. Fuxie cartoon.",
+      "filename": "A1-T3-010_schild_4.png",
+      "placement": "schild_4",
+      "alt_text": "Feuerwerk-Warnschild",
+      "dimensions": "400x300"
+    },
+    {
+      "id": "IMG5",
+      "type": "schild",
+      "linked_schild": "Schild5",
+      "prompt": "Cartoon ticket booth sign: 'Abendkasse: Erwachsene 15€, Kinder frei. Nur Barzahlung.' Green/gold ticket sign. Fuxie cartoon.",
+      "filename": "A1-T3-010_schild_5.png",
+      "placement": "schild_5",
+      "alt_text": "Abendkasse-Preisschild",
+      "dimensions": "400x300"
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q11",
+      "teil": 3,
+      "linked_schild": "Schild1",
+      "type": "richtig_falsch",
+      "statement": "Das Stadtfest kostet Eintritt.",
+      "answer": "falsch",
+      "points": 1,
+      "explanation": {
+        "de": "Auf dem Schild steht: 'Eintritt frei!' Man muss nicht bezahlen.",
+        "key_evidence": "Eintritt frei!",
+        "key_vocabulary": [
+          {
+            "word": "Eintritt",
+            "type": "Nomen",
+            "meaning": "admission"
+          },
+          {
+            "word": "frei",
+            "type": "Adjektiv",
+            "meaning": "free"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q12",
+      "teil": 3,
+      "linked_schild": "Schild2",
+      "type": "richtig_falsch",
+      "statement": "Der Einlass endet um 20 Uhr.",
+      "answer": "richtig",
+      "points": 1,
+      "explanation": {
+        "de": "Auf dem Schild steht: 'Die Türen schließen um 20 Uhr.' Der Einlass endet also um 20 Uhr.",
+        "key_evidence": "Die Türen schließen um 20 Uhr",
+        "key_vocabulary": [
+          {
+            "word": "Einlass",
+            "type": "Nomen",
+            "meaning": "admission"
+          },
+          {
+            "word": "schließen",
+            "type": "Verb",
+            "meaning": "to close"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q13",
+      "teil": 3,
+      "linked_schild": "Schild3",
+      "type": "richtig_falsch",
+      "statement": "Die Garderobe ist kostenlos.",
+      "answer": "falsch",
+      "points": 1,
+      "explanation": {
+        "de": "Auf dem Schild steht: '2 € pro Jacke.' Die Garderobe kostet 2 Euro.",
+        "key_evidence": "2 € pro Jacke",
+        "key_vocabulary": [
+          {
+            "word": "Garderobe",
+            "type": "Nomen",
+            "meaning": "cloakroom"
+          },
+          {
+            "word": "kostenlos",
+            "type": "Adjektiv",
+            "meaning": "free of charge"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q14",
+      "teil": 3,
+      "linked_schild": "Schild4",
+      "type": "richtig_falsch",
+      "statement": "Kinder müssen mit Erwachsenen zum Feuerwerk gehen.",
+      "answer": "richtig",
+      "points": 1,
+      "explanation": {
+        "de": "Auf dem Schild steht: 'Kinder nur mit Erwachsenen.' Kinder müssen mit Erwachsenen gehen.",
+        "key_evidence": "Kinder nur mit Erwachsenen",
+        "key_vocabulary": [
+          {
+            "word": "Feuerwerk",
+            "type": "Nomen",
+            "meaning": "fireworks"
+          },
+          {
+            "word": "Erwachsene",
+            "type": "Nomen",
+            "meaning": "adults"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q15",
+      "teil": 3,
+      "linked_schild": "Schild5",
+      "type": "richtig_falsch",
+      "statement": "Man kann mit Kreditkarte bezahlen.",
+      "answer": "falsch",
+      "points": 1,
+      "explanation": {
+        "de": "Auf dem Schild steht: 'Nur Barzahlung.' Man kann nur bar bezahlen, nicht mit Kreditkarte.",
+        "key_evidence": "Nur Barzahlung",
+        "key_vocabulary": [
+          {
+            "word": "Barzahlung",
+            "type": "Nomen",
+            "meaning": "cash payment"
+          },
+          {
+            "word": "Kreditkarte",
+            "type": "Nomen",
+            "meaning": "credit card"
+          }
+        ]
+      }
+    }
+  ],
+  "scoring": {
+    "total_points": 5,
+    "pass_threshold": 3,
+    "grading": [
+      {
+        "range": [
+          5,
+          5
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          4,
+          4
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          3,
+          3
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          1,
+          2
+        ],
+        "label": "Noch üben!",
+        "emoji": "📝"
+      },
+      {
+        "range": [
+          0,
+          0
+        ],
+        "label": "Mehr Übung nötig",
+        "emoji": "💪"
+      }
+    ]
+  },
+  "qa": {
+    "all_signs_different_types": true,
+    "word_count_per_sign_valid": true,
+    "image_text_matches_sign": false,
+    "all_answers_verifiable": true,
+    "passed": false
+  }
+}

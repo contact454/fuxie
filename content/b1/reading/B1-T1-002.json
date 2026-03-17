@@ -1,0 +1,200 @@
+{
+  "id": "B1-T1-002",
+  "level": "B1",
+  "teil": 1,
+  "teil_name": "Blog-Eintrag lesen",
+  "topic": "Reisen & Tourismus",
+  "topic_id": "002",
+  "metadata": {
+    "word_count": 270,
+    "target_grammar": [
+      "Nebensatz mit weil/dass/obwohl",
+      "Konjunktiv II",
+      "Perfekt"
+    ],
+    "target_vocabulary": [
+      "Rucksack",
+      "Hostel",
+      "Sehenswürdigkeit",
+      "Abenteuer",
+      "Flug",
+      "Reiseführer",
+      "Erlebnis",
+      "Einheimische",
+      "Unterkunft",
+      "planen"
+    ],
+    "generated_at": "2026-03-10T22:50:00+07:00",
+    "version": 1
+  },
+  "blog": {
+    "title": "Meine erste Reise allein",
+    "author": "MaxTravel92",
+    "date": "3. Januar 2026",
+    "text": "Letzten Sommer bin ich zum ersten Mal allein gereist. Ich war drei Wochen in Portugal, und es war die beste Entscheidung meines Lebens. Meine Eltern waren zuerst besorgt, weil ich noch nie allein in einem fremden Land war. Aber ich wollte endlich etwas Neues erleben.\n\nIch habe vorher nicht viel geplant, weil ich flexibel bleiben wollte. Ich hatte nur einen Rucksack, ein Hostel für die ersten zwei Nächte in Lissabon und einen Reiseführer. Den Rest habe ich spontan entschieden. Das war manchmal stressig, aber meistens aufregend.\n\nAm besten hat mir gefallen, dass ich andere Reisende im Hostel kennengelernt habe. Wir haben zusammen gekocht, sind an den Strand gegangen und haben Ausflüge gemacht. Ich habe sogar ein paar Einheimische getroffen, die mir ihre Lieblingsorte gezeigt haben — kleine Restaurants und versteckte Strände, die in keinem Reiseführer stehen.\n\nNatürlich gab es auch schwierige Momente. Einmal habe ich meinen Zug verpasst und musste vier Stunden am Bahnhof warten. Außerdem war ich manchmal einsam, besonders abends. Aber genau das hat mich stärker gemacht.\n\nJetzt plane ich schon meine nächste Reise — dieses Mal nach Griechenland. Ich würde jedem empfehlen, mindestens einmal allein zu reisen. Man lernt so viel über sich selbst!"
+  },
+  "images": [
+    {
+      "id": "IMG1",
+      "type": "scene",
+      "prompt": "Cute cartoon illustration of a young man with a backpack standing at a scenic lookout point over a colorful coastal city with orange rooftops and the ocean. Fuxie cartoon style, flat illustration, warm pastel colors, no text.",
+      "filename": "B1-T1-002_scene.png",
+      "placement": "header",
+      "alt_text": "Max reist allein durch Portugal",
+      "dimensions": "768x512"
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q1",
+      "teil": 1,
+      "type": "richtig_falsch",
+      "stem": "Der Autor deutet an, dass max hat seine Reise nach Portugal sehr genau geplant.",
+      "answer": "falsch",
+      "points": 1,
+      "explanation": {
+        "de": "Max hat nicht viel geplant, weil er flexibel bleiben wollte.",
+        "key_evidence": "Ich habe vorher nicht viel geplant, weil ich flexibel bleiben wollte",
+        "key_vocabulary": [
+          {
+            "word": "flexibel",
+            "type": "Adjektiv",
+            "meaning": "flexible"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q2",
+      "teil": 1,
+      "type": "richtig_falsch",
+      "stem": "Max' Eltern fanden die Idee sofort gut.",
+      "answer": "falsch",
+      "points": 1,
+      "explanation": {
+        "de": "Seine Eltern waren zuerst besorgt.",
+        "key_evidence": "Meine Eltern waren zuerst besorgt",
+        "key_vocabulary": [
+          {
+            "word": "besorgt",
+            "type": "Adjektiv",
+            "meaning": "worried / concerned"
+          }
+        ],
+        "reasoning": "[Inferential] "
+      }
+    },
+    {
+      "id": "Q3",
+      "teil": 1,
+      "type": "richtig_falsch",
+      "stem": "Im Hostel hat Max andere Reisende kennengelernt und mit ihnen etwas unternommen.",
+      "answer": "richtig",
+      "points": 1,
+      "explanation": {
+        "de": "Er hat andere Reisende kennengelernt, zusammen gekocht und Ausflüge gemacht.",
+        "key_evidence": "Wir haben zusammen gekocht, sind an den Strand gegangen und haben Ausflüge gemacht",
+        "key_vocabulary": [
+          {
+            "word": "Reisende",
+            "type": "Nomen",
+            "meaning": "traveler"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q4",
+      "teil": 1,
+      "type": "richtig_falsch",
+      "stem": "Max hat während der Reise nie Probleme gehabt.",
+      "answer": "falsch",
+      "points": 1,
+      "explanation": {
+        "de": "Er hat seinen Zug verpasst und war manchmal einsam.",
+        "key_evidence": "Einmal habe ich meinen Zug verpasst und musste vier Stunden am Bahnhof warten",
+        "key_vocabulary": [
+          {
+            "word": "einsam",
+            "type": "Adjektiv",
+            "meaning": "lonely"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q5",
+      "teil": 1,
+      "type": "richtig_falsch",
+      "stem": "Max möchte als Nächstes nach Griechenland reisen.",
+      "answer": "richtig",
+      "points": 1,
+      "explanation": {
+        "de": "Er plant seine nächste Reise nach Griechenland.",
+        "key_evidence": "Jetzt plane ich schon meine nächste Reise — dieses Mal nach Griechenland",
+        "key_vocabulary": [
+          {
+            "word": "planen",
+            "type": "Verb",
+            "meaning": "to plan"
+          }
+        ]
+      }
+    }
+  ],
+  "scoring": {
+    "total_points": 5,
+    "pass_threshold": 3,
+    "grading": [
+      {
+        "range": [
+          5,
+          5
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          4,
+          4
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          3,
+          3
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          1,
+          2
+        ],
+        "label": "Noch üben!",
+        "emoji": "📝"
+      },
+      {
+        "range": [
+          0,
+          0
+        ],
+        "label": "Mehr Übung nötig",
+        "emoji": "💪"
+      }
+    ]
+  },
+  "qa": {
+    "vocab_in_b1_list": true,
+    "grammar_b1_appropriate": true,
+    "word_count_in_range": true,
+    "all_answers_verifiable": true,
+    "richtig_falsch_balanced": true,
+    "image_count": 1,
+    "passed": true
+  }
+}

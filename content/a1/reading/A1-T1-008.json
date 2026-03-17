@@ -1,0 +1,239 @@
+{
+  "id": "A1-T1-008",
+  "level": "A1",
+  "teil": 1,
+  "teil_name": "Kurze Texte lesen",
+  "topic": "Freizeit und Hobby",
+  "topic_id": "008",
+  "metadata": {
+    "word_count_text_a": 44,
+    "word_count_text_b": 48,
+    "target_grammar": [
+      "Präsens",
+      "Akkusativ",
+      "Modalverb können"
+    ],
+    "target_vocabulary": [
+      "Freizeit",
+      "Sport",
+      "schwimmen",
+      "Fußball",
+      "Kino",
+      "Film",
+      "Wochenende",
+      "spielen",
+      "Verein",
+      "Training"
+    ],
+    "generated_at": "2026-03-09T02:15:00+07:00",
+    "version": 1
+  },
+  "texts": [
+    {
+      "id": "TextA",
+      "type": "email",
+      "sender": "Lena",
+      "receiver": "Sophie",
+      "content": "Liebe Sophie,\nam Samstag gehe ich ins Schwimmbad. Das Schwimmbad öffnet um 9 Uhr. Möchtest du mitkommen? Danach können wir ins Kino gehen. Um 14 Uhr gibt es einen neuen Film. Er heißt 'Sommertage'. Die Kinokarten kosten 8 Euro pro Person.\nBis bald!\nLena"
+    },
+    {
+      "id": "TextB",
+      "type": "sms",
+      "sender": "Sophie",
+      "receiver": "Lena",
+      "content": "Hallo Lena! Schwimmen ist eine super Idee! Aber ich kann erst um 11 Uhr kommen. Am Vormittag habe ich Gitarrenunterricht von 9 bis 10:30 Uhr. Ins Kino möchte ich auch gern mitkommen. Ich bringe meine Schwester Nina mit. Sie liebt Filme! Sollen wir die Karten online kaufen?"
+    }
+  ],
+  "images": [
+    {
+      "id": "IMG1",
+      "type": "scene",
+      "prompt": "Cute cartoon illustration of a public outdoor swimming pool with happy people swimming and a cinema building visible in the background. Sunny day, blue water. Fuxie cartoon style, flat illustration, warm pastel colors, no text.",
+      "filename": "A1-T1-008_scene.png",
+      "placement": "header",
+      "alt_text": "Schwimmbad und Kino",
+      "dimensions": "768x512"
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q1",
+      "teil": 1,
+      "linked_text": "TextA",
+      "type": "richtig_falsch",
+      "statement": "Lena möchte am Sonntag schwimmen gehen.",
+      "answer": "falsch",
+      "points": 1,
+      "explanation": {
+        "de": "Im Text steht: 'am Samstag gehe ich ins Schwimmbad'. Lena geht am Samstag, nicht am Sonntag.",
+        "key_evidence": "am Samstag gehe ich ins Schwimmbad",
+        "key_vocabulary": [
+          {
+            "word": "Samstag",
+            "type": "Nomen",
+            "meaning": "Saturday"
+          },
+          {
+            "word": "Schwimmbad",
+            "type": "Nomen",
+            "meaning": "swimming pool"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q2",
+      "teil": 1,
+      "linked_text": "TextA",
+      "type": "richtig_falsch",
+      "statement": "Die Kinokarten kosten 8 Euro.",
+      "answer": "richtig",
+      "points": 1,
+      "explanation": {
+        "de": "Im Text steht: 'Die Kinokarten kosten 8 Euro pro Person.'",
+        "key_evidence": "Die Kinokarten kosten 8 Euro pro Person",
+        "key_vocabulary": [
+          {
+            "word": "Kinokarte",
+            "type": "Nomen",
+            "meaning": "cinema ticket"
+          },
+          {
+            "word": "kosten",
+            "type": "Verb",
+            "meaning": "to cost"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q3",
+      "teil": 1,
+      "linked_text": "TextB",
+      "type": "richtig_falsch",
+      "statement": "Sophie kann um 9 Uhr kommen.",
+      "answer": "falsch",
+      "points": 1,
+      "explanation": {
+        "de": "Im Text steht: 'Aber ich kann erst um 11 Uhr kommen. Am Vormittag habe ich Gitarrenunterricht.' Sophie kommt erst um 11 Uhr.",
+        "key_evidence": "ich kann erst um 11 Uhr kommen",
+        "key_vocabulary": [
+          {
+            "word": "erst",
+            "type": "Adverb",
+            "meaning": "only/not until"
+          },
+          {
+            "word": "Gitarrenunterricht",
+            "type": "Nomen",
+            "meaning": "guitar lesson"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q4",
+      "teil": 1,
+      "linked_text": "TextB",
+      "type": "richtig_falsch",
+      "statement": "Sophie bringt ihre Schwester mit.",
+      "answer": "richtig",
+      "points": 1,
+      "explanation": {
+        "de": "Im Text steht: 'Ich bringe meine Schwester Nina mit.'",
+        "key_evidence": "Ich bringe meine Schwester Nina mit",
+        "key_vocabulary": [
+          {
+            "word": "Schwester",
+            "type": "Nomen",
+            "meaning": "sister"
+          },
+          {
+            "word": "mitbringen",
+            "type": "Verb",
+            "meaning": "to bring along"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q5",
+      "teil": 1,
+      "linked_text": "TextB",
+      "type": "richtig_falsch",
+      "statement": "Sophie hat am Vormittag Klavierunterricht.",
+      "answer": "falsch",
+      "points": 1,
+      "explanation": {
+        "de": "Im Text steht: 'Am Vormittag habe ich Gitarrenunterricht.' Sophie hat Gitarrenunterricht, nicht Klavierunterricht.",
+        "key_evidence": "Gitarrenunterricht",
+        "key_vocabulary": [
+          {
+            "word": "Gitarre",
+            "type": "Nomen",
+            "meaning": "guitar"
+          },
+          {
+            "word": "Klavier",
+            "type": "Nomen",
+            "meaning": "piano"
+          }
+        ]
+      }
+    }
+  ],
+  "scoring": {
+    "total_points": 5,
+    "pass_threshold": 3,
+    "grading": [
+      {
+        "range": [
+          5,
+          5
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          4,
+          4
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          3,
+          3
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          1,
+          2
+        ],
+        "label": "Noch üben!",
+        "emoji": "📝"
+      },
+      {
+        "range": [
+          0,
+          0
+        ],
+        "label": "Mehr Übung nötig",
+        "emoji": "💪"
+      }
+    ]
+  },
+  "qa": {
+    "vocab_in_a1_list": true,
+    "grammar_a1_only": true,
+    "word_count_in_range": true,
+    "all_answers_verifiable": true,
+    "image_count": 1,
+    "passed": false
+  }
+}

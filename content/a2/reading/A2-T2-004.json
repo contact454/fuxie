@@ -1,0 +1,260 @@
+{
+  "id": "A2-T2-004",
+  "level": "A2",
+  "teil": 2,
+  "teil_name": "Informationstafeln verstehen",
+  "topic": "In der Schule",
+  "topic_id": "004",
+  "metadata": {
+    "word_count": 90,
+    "target_grammar": [
+      "Modalverben",
+      "Nebensatz mit wenn"
+    ],
+    "target_vocabulary": [
+      "Volkshochschule",
+      "Kursangebot",
+      "Sprachkurs",
+      "Ermäßigung",
+      "Teilnehmer",
+      "Anmeldefrist",
+      "Semester",
+      "Gebühr",
+      "Zertifikat",
+      "Unterricht"
+    ],
+    "generated_at": "2026-03-09T22:32:00+07:00",
+    "version": 1
+  },
+  "infotafel": {
+    "title": "Volkshochschule Hamburg — Kursangebot Frühjahr 2026",
+    "location": "Schanzenstraße 75, 20357 Hamburg",
+    "rows": [
+      {
+        "floor": "EG",
+        "items": "Anmeldung & Information · Buchhandlung · Cafeteria · Garderobe"
+      },
+      {
+        "floor": "1. OG",
+        "items": "Sprachkurse (Deutsch, Englisch, Spanisch) · Kursräume 101–106"
+      },
+      {
+        "floor": "2. OG",
+        "items": "Computerkurse · Fotografie · Kreativwerkstatt · Kursräume 201–204"
+      },
+      {
+        "floor": "3. OG",
+        "items": "Yoga · Pilates · Kochkurse · Kursräume 301–303"
+      }
+    ],
+    "extra_info": "Semester: März–Juli 2026. Anmeldefrist: bis 28. Februar. Ermäßigung: 30 % für Schüler, Studenten und Rentner. Zertifikat: nach 80 % Teilnahme. Information & Anmeldung: Mo–Fr 9:00–16:00 Uhr."
+  },
+  "images": [
+    {
+      "id": "IMG1",
+      "type": "info_board",
+      "prompt": "Cute cartoon illustration of a German adult education center (Volkshochschule) lobby with a reception desk, people of different ages looking at a course catalog, hallway with classroom doors visible. Fuxie cartoon style, flat illustration, warm pastel colors, no text.",
+      "filename": "A2-T2-004_board.png",
+      "placement": "header",
+      "alt_text": "Volkshochschule Kursangebot",
+      "dimensions": "768x512"
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q1",
+      "teil": 2,
+      "type": "multiple_choice",
+      "stem": "In welchem Stockwerk sind die Sprachkurse?",
+      "options": {
+        "a": "Im Erdgeschoss.",
+        "b": "Im 1. Obergeschoss.",
+        "c": "Im 2. Obergeschoss."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Die Sprachkurse sind im 1. OG.",
+        "key_evidence": "1. OG: Sprachkurse (Deutsch, Englisch, Spanisch) · Kursräume 101–106",
+        "key_vocabulary": [
+          {
+            "word": "Sprachkurs",
+            "type": "Nomen",
+            "meaning": "language course"
+          },
+          {
+            "word": "Obergeschoss",
+            "type": "Nomen",
+            "meaning": "upper floor"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q2",
+      "teil": 2,
+      "type": "multiple_choice",
+      "stem": "Wo kann man einen Kochkurs machen?",
+      "options": {
+        "a": "Im 2. Obergeschoss.",
+        "b": "Im 3. Obergeschoss.",
+        "c": "Im Erdgeschoss."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Die Kochkurse sind im 3. OG.",
+        "key_evidence": "3. OG: Yoga · Pilates · Kochkurse · Kursräume 301–303",
+        "key_vocabulary": [
+          {
+            "word": "Kochkurs",
+            "type": "Nomen",
+            "meaning": "cooking course"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q3",
+      "teil": 2,
+      "type": "multiple_choice",
+      "stem": "Bis wann kann man sich anmelden?",
+      "options": {
+        "a": "Bis 31. Januar.",
+        "b": "Bis 28. Februar.",
+        "c": "Bis 15. März."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Die Anmeldefrist ist bis 28. Februar.",
+        "key_evidence": "Anmeldefrist: bis 28. Februar",
+        "key_vocabulary": [
+          {
+            "word": "Anmeldefrist",
+            "type": "Nomen",
+            "meaning": "registration deadline"
+          },
+          {
+            "word": "sich anmelden",
+            "type": "Verb",
+            "meaning": "to register"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q4",
+      "teil": 2,
+      "type": "multiple_choice",
+      "stem": "Wer bekommt eine Ermäßigung?",
+      "options": {
+        "a": "Nur Studenten.",
+        "b": "Schüler, Studenten und Rentner.",
+        "c": "Alle Teilnehmer."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Schüler, Studenten und Rentner bekommen 30 % Ermäßigung.",
+        "key_evidence": "Ermäßigung: 30 % für Schüler, Studenten und Rentner",
+        "key_vocabulary": [
+          {
+            "word": "Ermäßigung",
+            "type": "Nomen",
+            "meaning": "discount / reduction"
+          },
+          {
+            "word": "Rentner",
+            "type": "Nomen",
+            "meaning": "retiree / pensioner"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q5",
+      "teil": 2,
+      "type": "multiple_choice",
+      "stem": "Was braucht man für ein Zertifikat?",
+      "options": {
+        "a": "Man muss eine Prüfung bestehen.",
+        "b": "Man muss 80 % der Termine besuchen.",
+        "c": "Man muss den Kurs zweimal machen."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Man bekommt ein Zertifikat nach 80 % Teilnahme.",
+        "key_evidence": "Zertifikat: nach 80 % Teilnahme",
+        "key_vocabulary": [
+          {
+            "word": "Zertifikat",
+            "type": "Nomen",
+            "meaning": "certificate"
+          },
+          {
+            "word": "Teilnahme",
+            "type": "Nomen",
+            "meaning": "attendance / participation"
+          }
+        ]
+      }
+    }
+  ],
+  "scoring": {
+    "total_points": 5,
+    "pass_threshold": 3,
+    "grading": [
+      {
+        "range": [
+          5,
+          5
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          4,
+          4
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          3,
+          3
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          1,
+          2
+        ],
+        "label": "Noch üben!",
+        "emoji": "📝"
+      },
+      {
+        "range": [
+          0,
+          0
+        ],
+        "label": "Mehr Übung nötig",
+        "emoji": "💪"
+      }
+    ]
+  },
+  "qa": {
+    "vocab_in_a2_list": true,
+    "grammar_a2_only": true,
+    "word_count_in_range": true,
+    "all_answers_verifiable": true,
+    "mc_distractors_plausible": true,
+    "image_count": 1,
+    "passed": true
+  }
+}

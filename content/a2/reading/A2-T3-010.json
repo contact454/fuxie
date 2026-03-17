@@ -1,0 +1,244 @@
+{
+  "id": "A2-T3-010",
+  "level": "A2",
+  "teil": 3,
+  "teil_name": "Kleinanzeigen zuordnen",
+  "topic": "Feste & Feiertage",
+  "topic_id": "010",
+  "metadata": {
+    "word_count": 183,
+    "target_grammar": [
+      "Modalverben",
+      "Perfekt"
+    ],
+    "target_vocabulary": [
+      "Flohmarkt",
+      "Konzert",
+      "Kinderfest",
+      "Karneval",
+      "Weinprobe",
+      "Open-Air-Kino",
+      "Eintritt",
+      "Veranstaltung",
+      "Kostüm",
+      "Vorverkauf"
+    ],
+    "generated_at": "2026-03-09T22:40:00+07:00",
+    "version": 1
+  },
+  "anzeigen": [
+    {
+      "id": "A",
+      "text": "Großer Flohmarkt im Mauerpark! Jeden Sonntag 10:00–18:00. Über 200 Stände: Kleidung, Möbel, Bücher, Spielzeug. Eintritt frei. Straßenmusik und Food-Trucks vor Ort."
+    },
+    {
+      "id": "B",
+      "text": "Konzert: „Die Ärzte\" live in der Waldbühne! Samstag, 5. Juli 2026. Einlass 18:00, Beginn 20:00. Tickets ab 45 € im Vorverkauf. Nur noch wenige Plätze! www.waldbühne-berlin.de"
+    },
+    {
+      "id": "C",
+      "text": "Kinderfest am Lietzensee! Sonntag, 15. Juni, 12:00–17:00. Hüpfburg, Clown, Malen und Basteln. Eis und Waffeln kostenlos. Für Kinder bis 12 Jahre. Bei Regen im Gemeindehaus."
+    },
+    {
+      "id": "D",
+      "text": "Karneval der Kulturen 2026! Straßenumzug: Pfingstsonntag ab 12:00. Live-Musik, Tanz, Essen aus aller Welt. Kostüme erwünscht! Kreuzberg, Hermannplatz bis Blücherplatz. Eintritt frei."
+    },
+    {
+      "id": "E",
+      "text": "Weinprobe „Rheingau trifft Berlin\". Freitag, 20. Juni, 19:00–22:00. 6 Weine + kleine Snacks. 25 € pro Person. Ab 18 Jahren. Restaurant Rebstock, Savignyplatz 4. Plätze begrenzt!"
+    },
+    {
+      "id": "F",
+      "text": "Open-Air-Kino im Kulturforum! Film: „Good Bye, Lenin!\" Samstag, 28. Juni, 21:30. Decke und Kissen mitbringen! Eintritt: 8 €, ermäßigt 5 €. Getränke am Kiosk."
+    }
+  ],
+  "images": [
+    {
+      "id": "IMG1",
+      "type": "scene",
+      "prompt": "Cute cartoon illustration of a community notice board with six colorful event-themed classified ads — flea market, concert, children's festival, carnival parade, wine tasting, outdoor cinema. Fuxie cartoon style, flat illustration, warm pastel colors, no readable text.",
+      "filename": "A2-T3-010_scene.png",
+      "placement": "header",
+      "alt_text": "Kleinanzeigen zum Thema Feste und Veranstaltungen",
+      "dimensions": "768x512"
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q1",
+      "teil": 3,
+      "type": "matching",
+      "situation": "Frau Vogt möchte am Wochenende günstige Sachen kaufen: Bücher, Kleidung und Möbel.",
+      "answer": "A",
+      "points": 1,
+      "explanation": {
+        "de": "Anzeige A ist der Flohmarkt im Mauerpark mit Kleidung, Möbeln und Büchern.",
+        "key_evidence": "Großer Flohmarkt. Über 200 Stände: Kleidung, Möbel, Bücher, Spielzeug. Eintritt frei",
+        "key_vocabulary": [
+          {
+            "word": "Flohmarkt",
+            "type": "Nomen",
+            "meaning": "flea market"
+          },
+          {
+            "word": "Stand",
+            "type": "Nomen",
+            "meaning": "stall / booth"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q2",
+      "teil": 3,
+      "type": "matching",
+      "situation": "Ben (10 Jahre) möchte am Sonntag draußen spielen und malen. Seine Eltern suchen eine kindgerechte Veranstaltung.",
+      "answer": "C",
+      "points": 1,
+      "explanation": {
+        "de": "Anzeige C ist das Kinderfest mit Hüpfburg, Clown, Malen und Basteln.",
+        "key_evidence": "Kinderfest am Lietzensee! Hüpfburg, Clown, Malen und Basteln",
+        "key_vocabulary": [
+          {
+            "word": "Kinderfest",
+            "type": "Nomen",
+            "meaning": "children's festival"
+          },
+          {
+            "word": "Basteln",
+            "type": "Nomen/Verb",
+            "meaning": "crafting"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q3",
+      "teil": 3,
+      "type": "matching",
+      "situation": "Herr und Frau Wagner (beide 45) mögen Wein und möchten an einem Abend verschiedene Weine probieren.",
+      "answer": "E",
+      "points": 1,
+      "explanation": {
+        "de": "Anzeige E bietet eine Weinprobe mit 6 Weinen und Snacks.",
+        "key_evidence": "Weinprobe. 6 Weine + kleine Snacks. 25 € pro Person",
+        "key_vocabulary": [
+          {
+            "word": "Weinprobe",
+            "type": "Nomen",
+            "meaning": "wine tasting"
+          },
+          {
+            "word": "probieren",
+            "type": "Verb",
+            "meaning": "to try / taste"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q4",
+      "teil": 3,
+      "type": "matching",
+      "situation": "Sophie möchte sich verkleiden und auf ein buntes Straßenfest mit Musik und Tanz gehen.",
+      "answer": "D",
+      "points": 1,
+      "explanation": {
+        "de": "Anzeige D ist der Karneval der Kulturen mit Kostümen, Musik und Tanz.",
+        "key_evidence": "Karneval der Kulturen. Straßenumzug. Kostüme erwünscht! Live-Musik, Tanz",
+        "key_vocabulary": [
+          {
+            "word": "Karneval",
+            "type": "Nomen",
+            "meaning": "carnival"
+          },
+          {
+            "word": "Kostüm",
+            "type": "Nomen",
+            "meaning": "costume"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q5",
+      "teil": 3,
+      "type": "matching",
+      "situation": "Tim und seine Freundin möchten an einem Sommerabend draußen einen Film schauen.",
+      "answer": "F",
+      "points": 1,
+      "explanation": {
+        "de": "Anzeige F ist das Open-Air-Kino im Kulturforum, Samstag 21:30.",
+        "key_evidence": "Open-Air-Kino im Kulturforum! Film: „Good Bye, Lenin!\" Samstag 21:30",
+        "key_vocabulary": [
+          {
+            "word": "Open-Air-Kino",
+            "type": "Nomen",
+            "meaning": "outdoor cinema"
+          },
+          {
+            "word": "Sommerabend",
+            "type": "Nomen",
+            "meaning": "summer evening"
+          }
+        ]
+      }
+    }
+  ],
+  "scoring": {
+    "total_points": 5,
+    "pass_threshold": 3,
+    "grading": [
+      {
+        "range": [
+          5,
+          5
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          4,
+          4
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          3,
+          3
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          1,
+          2
+        ],
+        "label": "Noch üben!",
+        "emoji": "📝"
+      },
+      {
+        "range": [
+          0,
+          0
+        ],
+        "label": "Mehr Übung nötig",
+        "emoji": "💪"
+      }
+    ]
+  },
+  "qa": {
+    "vocab_in_a2_list": true,
+    "grammar_a2_only": true,
+    "word_count_in_range": true,
+    "all_answers_verifiable": true,
+    "matching_no_duplicate_answers": true,
+    "six_ads_present": true,
+    "image_count": 1,
+    "passed": true
+  }
+}

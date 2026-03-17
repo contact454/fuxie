@@ -1,0 +1,244 @@
+{
+  "id": "A2-T3-008",
+  "level": "A2",
+  "teil": 3,
+  "teil_name": "Kleinanzeigen zuordnen",
+  "topic": "Freizeit & Hobby",
+  "topic_id": "008",
+  "metadata": {
+    "word_count": 181,
+    "target_grammar": [
+      "Modalverben",
+      "Nebensatz mit dass"
+    ],
+    "target_vocabulary": [
+      "Fußballteam",
+      "Schwimmkurs",
+      "Yoga",
+      "Wandergruppe",
+      "Fotokurs",
+      "Buchclub",
+      "Anfänger",
+      "Mitglied",
+      "Training",
+      "Vereinsbeitrag"
+    ],
+    "generated_at": "2026-03-09T22:38:00+07:00",
+    "version": 1
+  },
+  "anzeigen": [
+    {
+      "id": "A",
+      "text": "Fußballteam sucht Spieler! Wir spielen jeden Mittwoch 19:00–21:00 auf dem Sportplatz Mitte. Für alle Level. Keine Vereinspflicht. Einfach kommen und mitspielen! Infos: Kerem, 0176-5544332."
+    },
+    {
+      "id": "B",
+      "text": "Schwimmkurs für Erwachsene. Sie können nicht schwimmen? Kein Problem! Kurs ab 3. April, 10 Termine. Freitags 17:00–18:00, Hallenbad West. 85 €. Anmeldung: schwimmschule-west@mail.de"
+    },
+    {
+      "id": "C",
+      "text": "Outdoor-Yoga im Park! Jeden Samstag 9:00–10:00 im Volkspark Friedrichshain. Bei Regen fällt der Kurs aus. Spende: 5 €. Matte mitbringen. Keine Anmeldung nötig."
+    },
+    {
+      "id": "D",
+      "text": "Wandergruppe „Bergfreunde“ — nächste Tour: Samstag, 29. März. Leichte Wanderung (8 km, ca. 3 Stunden). Treffpunkt: 9:30, S-Bahn Wannsee. Hunde willkommen! Info: www.bergfreunde-berlin.de"
+    },
+    {
+      "id": "E",
+      "text": "Fotokurs für Anfänger! 4 Samstage im April, 10:00–13:00. Themen: Kamera-Basics, Porträt, Landschaft, Bearbeitung. 120 €. Eigene Kamera oder Smartphone reicht. Galerie Licht, Kastanienallee 20."
+    },
+    {
+      "id": "F",
+      "text": "Buchclub sucht neue Mitglieder! Wir lesen jeden Monat ein Buch und treffen uns zum Diskutieren. Nächstes Treffen: 5. April, 19:00, Café Blatt. Aktuelles Buch: „Tschick“ von W. Herrndorf."
+    }
+  ],
+  "images": [
+    {
+      "id": "IMG1",
+      "type": "scene",
+      "prompt": "Cute cartoon illustration of a community notice board with six colorful leisure-themed classified ads — football team, swimming course, yoga in park, hiking group, photography class, book club. Fuxie cartoon style, flat illustration, warm pastel colors, no readable text.",
+      "filename": "A2-T3-008_scene.png",
+      "placement": "header",
+      "alt_text": "Kleinanzeigen zum Thema Freizeit und Hobby",
+      "dimensions": "768x512"
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q1",
+      "teil": 3,
+      "type": "matching",
+      "situation": "Sandra liest sehr gern. Sie möchte mit anderen Leuten über Bücher sprechen.",
+      "answer": "F",
+      "points": 1,
+      "explanation": {
+        "de": "Anzeige F ist der Buchclub, der monatlich ein Buch liest und diskutiert.",
+        "key_evidence": "Buchclub sucht neue Mitglieder! Wir lesen jeden Monat ein Buch und treffen uns zum Diskutieren",
+        "key_vocabulary": [
+          {
+            "word": "Buchclub",
+            "type": "Nomen",
+            "meaning": "book club"
+          },
+          {
+            "word": "diskutieren",
+            "type": "Verb",
+            "meaning": "to discuss"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q2",
+      "teil": 3,
+      "type": "matching",
+      "situation": "Tom hat gerade eine Kamera bekommen und möchte lernen, gute Fotos zu machen.",
+      "answer": "E",
+      "points": 1,
+      "explanation": {
+        "de": "Anzeige E bietet einen Fotokurs für Anfänger mit Kamera-Basics.",
+        "key_evidence": "Fotokurs für Anfänger! Kamera-Basics, Porträt, Landschaft, Bearbeitung",
+        "key_vocabulary": [
+          {
+            "word": "Fotokurs",
+            "type": "Nomen",
+            "meaning": "photography course"
+          },
+          {
+            "word": "Anfänger",
+            "type": "Nomen",
+            "meaning": "beginner"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q3",
+      "teil": 3,
+      "type": "matching",
+      "situation": "Markus hat einen Hund und möchte am Wochenende in der Natur spazieren gehen — am liebsten mit anderen Leuten.",
+      "answer": "D",
+      "points": 1,
+      "explanation": {
+        "de": "Anzeige D ist die Wandergruppe, Hunde willkommen, Samstag in der Natur.",
+        "key_evidence": "Leichte Wanderung (8 km). Hunde willkommen!",
+        "key_vocabulary": [
+          {
+            "word": "Wandergruppe",
+            "type": "Nomen",
+            "meaning": "hiking group"
+          },
+          {
+            "word": "Wanderung",
+            "type": "Nomen",
+            "meaning": "hike"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q4",
+      "teil": 3,
+      "type": "matching",
+      "situation": "Elena ist 35 und kann nicht schwimmen. Sie möchte es jetzt endlich lernen.",
+      "answer": "B",
+      "points": 1,
+      "explanation": {
+        "de": "Anzeige B bietet einen Schwimmkurs für Erwachsene, auch für Nichtschwimmer.",
+        "key_evidence": "Schwimmkurs für Erwachsene. Sie können nicht schwimmen? Kein Problem!",
+        "key_vocabulary": [
+          {
+            "word": "Schwimmkurs",
+            "type": "Nomen",
+            "meaning": "swimming course"
+          },
+          {
+            "word": "Erwachsene",
+            "type": "Nomen",
+            "meaning": "adults"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q5",
+      "teil": 3,
+      "type": "matching",
+      "situation": "David spielt gern Fußball und sucht eine Gruppe zum Mitspielen — ohne Verein.",
+      "answer": "A",
+      "points": 1,
+      "explanation": {
+        "de": "Anzeige A sucht Spieler für ein Fußballteam, keine Vereinspflicht.",
+        "key_evidence": "Fußballteam sucht Spieler! Keine Vereinspflicht. Einfach kommen und mitspielen!",
+        "key_vocabulary": [
+          {
+            "word": "Fußballteam",
+            "type": "Nomen",
+            "meaning": "football team"
+          },
+          {
+            "word": "Vereinspflicht",
+            "type": "Nomen",
+            "meaning": "club membership requirement"
+          }
+        ]
+      }
+    }
+  ],
+  "scoring": {
+    "total_points": 5,
+    "pass_threshold": 3,
+    "grading": [
+      {
+        "range": [
+          5,
+          5
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          4,
+          4
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          3,
+          3
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          1,
+          2
+        ],
+        "label": "Noch üben!",
+        "emoji": "📝"
+      },
+      {
+        "range": [
+          0,
+          0
+        ],
+        "label": "Mehr Übung nötig",
+        "emoji": "💪"
+      }
+    ]
+  },
+  "qa": {
+    "vocab_in_a2_list": true,
+    "grammar_a2_only": true,
+    "word_count_in_range": true,
+    "all_answers_verifiable": true,
+    "matching_no_duplicate_answers": true,
+    "six_ads_present": true,
+    "image_count": 1,
+    "passed": true
+  }
+}

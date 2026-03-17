@@ -1,0 +1,205 @@
+{
+  "id": "B1-T1-004",
+  "level": "B1",
+  "teil": 1,
+  "teil_name": "Blog-Eintrag lesen",
+  "topic": "Medien & Kommunikation",
+  "topic_id": "004",
+  "metadata": {
+    "word_count": 258,
+    "target_grammar": [
+      "Nebensatz mit dass/weil/als",
+      "Konjunktiv II",
+      "Perfekt"
+    ],
+    "target_vocabulary": [
+      "Social Media",
+      "Bildschirmzeit",
+      "löschen",
+      "Benachrichtigung",
+      "Vergleich",
+      "Selbstwertgefühl",
+      "Nachrichten",
+      "Ablenkung",
+      "entspannen",
+      "bewusst"
+    ],
+    "generated_at": "2026-03-10T22:50:00+07:00",
+    "version": 1
+  },
+  "blog": {
+    "title": "Warum ich Social Media gelöscht habe",
+    "author": "TobiasDigital",
+    "date": "10. März 2026",
+    "text": "Vor drei Monaten habe ich alle Social-Media-Apps von meinem Handy gelöscht. Instagram, TikTok, Twitter — alles weg. Meine Freunde dachten, ich wäre verrückt. Aber es war eine der besten Entscheidungen, die ich je getroffen habe.\n\nDer Grund war einfach: Ich habe gemerkt, dass ich jeden Tag fast drei Stunden auf Social Media verbracht habe. Wenn ich morgens aufgewacht bin, habe ich sofort mein Handy genommen und die Nachrichten gecheckt. Abends im Bett habe ich noch stundenlang durch Videos gescrollt, obwohl ich eigentlich müde war.\n\nAußerdem habe ich mich oft schlecht gefühlt, wenn ich die perfekten Fotos von anderen Leuten gesehen habe. Alle schienen glücklicher, erfolgreicher und schöner zu sein als ich. Dieser ständige Vergleich war nicht gut für mein Selbstwertgefühl.\n\nSeit ich kein Social Media mehr habe, lese ich wieder Bücher, treffe mich öfter mit Freunden und schlafe besser. Ich habe auch mehr Zeit für mein Hobby — Gitarre spielen. Anfangs war es schwer, weil ich ständig mein Handy nehmen wollte. Aber nach zwei Wochen wurde es leichter.\n\nIch sage nicht, dass Social Media für alle schlecht ist. Aber wenn man merkt, dass es einem nicht guttut, sollte man eine Pause machen. Man verpasst weniger, als man denkt."
+  },
+  "images": [
+    {
+      "id": "IMG1",
+      "type": "scene",
+      "prompt": "Cute cartoon illustration of a young man sitting on a sofa reading a book and playing guitar, his phone on a shelf with app icons crossed out. Peaceful living room. Fuxie cartoon style, flat illustration, warm pastel colors, no text.",
+      "filename": "B1-T1-004_scene.png",
+      "placement": "header",
+      "alt_text": "Tobias lebt ohne Social Media",
+      "dimensions": "768x512"
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q1",
+      "teil": 1,
+      "type": "richtig_falsch",
+      "stem": "Die Hauptaussage des Textes ist, dass tobias hat nur Instagram gelöscht, aber TikTok behalten.",
+      "answer": "falsch",
+      "points": 1,
+      "explanation": {
+        "de": "Er hat alle Social-Media-Apps gelöscht: Instagram, TikTok, Twitter.",
+        "key_evidence": "Instagram, TikTok, Twitter — alles weg",
+        "key_vocabulary": [
+          {
+            "word": "löschen",
+            "type": "Verb",
+            "meaning": "to delete"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q2",
+      "teil": 1,
+      "type": "richtig_falsch",
+      "stem": "Der Text impliziert, dass tobias hat täglich etwa drei Stunden auf Social Media verbracht.",
+      "answer": "richtig",
+      "points": 1,
+      "explanation": {
+        "de": "Er hat jeden Tag fast drei Stunden auf Social Media verbracht.",
+        "key_evidence": "Ich habe gemerkt, dass ich jeden Tag fast drei Stunden auf Social Media verbracht habe",
+        "key_vocabulary": [
+          {
+            "word": "Bildschirmzeit",
+            "type": "Nomen",
+            "meaning": "screen time"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q3",
+      "teil": 1,
+      "type": "richtig_falsch",
+      "stem": "Die Fotos auf Social Media haben Tobias glücklich gemacht.",
+      "answer": "falsch",
+      "points": 1,
+      "explanation": {
+        "de": "Der ständige Vergleich mit anderen hat seinem Selbstwertgefühl geschadet.",
+        "key_evidence": "Dieser ständige Vergleich war nicht gut für mein Selbstwertgefühl",
+        "key_vocabulary": [
+          {
+            "word": "Vergleich",
+            "type": "Nomen",
+            "meaning": "comparison"
+          },
+          {
+            "word": "Selbstwertgefühl",
+            "type": "Nomen",
+            "meaning": "self-esteem"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q4",
+      "teil": 1,
+      "type": "richtig_falsch",
+      "stem": "Am Anfang fiel es Tobias leicht, ohne Social Media zu leben.",
+      "answer": "falsch",
+      "points": 1,
+      "explanation": {
+        "de": "Anfangs war es schwer, weil er ständig sein Handy nehmen wollte.",
+        "key_evidence": "Anfangs war es schwer, weil ich ständig mein Handy nehmen wollte",
+        "key_vocabulary": [
+          {
+            "word": "ständig",
+            "type": "Adverb",
+            "meaning": "constantly"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q5",
+      "teil": 1,
+      "type": "richtig_falsch",
+      "stem": "Tobias meint, dass Social Media für alle Menschen schlecht ist.",
+      "answer": "falsch",
+      "points": 1,
+      "explanation": {
+        "de": "Er sagt, dass Social Media nicht für alle schlecht ist, aber man eine Pause machen sollte, wenn es nicht guttut.",
+        "key_evidence": "Ich sage nicht, dass Social Media für alle schlecht ist",
+        "key_vocabulary": [
+          {
+            "word": "Pause",
+            "type": "Nomen",
+            "meaning": "break"
+          }
+        ],
+        "reasoning": "[Inferential] "
+      }
+    }
+  ],
+  "scoring": {
+    "total_points": 5,
+    "pass_threshold": 3,
+    "grading": [
+      {
+        "range": [
+          5,
+          5
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          4,
+          4
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          3,
+          3
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          1,
+          2
+        ],
+        "label": "Noch üben!",
+        "emoji": "📝"
+      },
+      {
+        "range": [
+          0,
+          0
+        ],
+        "label": "Mehr Übung nötig",
+        "emoji": "💪"
+      }
+    ]
+  },
+  "qa": {
+    "vocab_in_b1_list": true,
+    "grammar_b1_appropriate": true,
+    "word_count_in_range": true,
+    "all_answers_verifiable": true,
+    "richtig_falsch_balanced": true,
+    "image_count": 1,
+    "passed": true
+  }
+}

@@ -1,0 +1,249 @@
+{
+  "id": "A2-T1-002",
+  "level": "A2",
+  "teil": 1,
+  "teil_name": "Zeitungsartikel lesen",
+  "topic": "Meine Familie",
+  "topic_id": "002",
+  "metadata": {
+    "word_count": 168,
+    "target_grammar": [
+      "Perfekt",
+      "Nebensatz mit dass",
+      "Modalverben"
+    ],
+    "target_vocabulary": [
+      "Familienfest",
+      "Stadtteil",
+      "Veranstaltung",
+      "Besucher",
+      "teilnehmen",
+      "Programm",
+      "Spielplatz",
+      "Kinderschminken",
+      "kostenlos",
+      "Nachbarschaft"
+    ],
+    "generated_at": "2026-03-09T21:40:00+07:00",
+    "version": 1
+  },
+  "text": {
+    "title": "Großes Familienfest im Stadtteil Moabit",
+    "subtitle": "Über 500 Besucher haben teilgenommen",
+    "body": "Am vergangenen Samstag hat im Stadtpark Moabit ein großes Familienfest stattgefunden. Über 500 Menschen aus der Nachbarschaft sind gekommen. Das Fest hat von 10 bis 18 Uhr gedauert.\n\nDas Programm war sehr vielfältig. Für Kinder gab es einen großen Spielplatz, Kinderschminken und eine Hüpfburg. Die Erwachsenen konnten Kaffee trinken und Kuchen essen. Außerdem hat eine Liveband Musik gespielt.\n\nDer Bürgermeister Herr Vogel hat das Fest eröffnet. Er hat gesagt, dass solche Feste für die Nachbarschaft sehr wichtig sind. „Die Menschen lernen sich kennen und helfen sich gegenseitig\", hat er erklärt.\n\nDas Familienfest war kostenlos, weil die Stadt und mehrere Sponsoren das Geld gegeben haben. Viele Familien haben gesagt, dass sie nächstes Jahr wieder kommen möchten. Das nächste Fest ist im Juni geplant.",
+    "source": "Moabiter Stadtteilzeitung"
+  },
+  "images": [
+    {
+      "id": "IMG1",
+      "type": "scene",
+      "prompt": "Cute cartoon illustration of a lively family festival in a German park. Families with children enjoying a bouncy castle, face painting station, a band on a small stage, coffee and cake stand. Trees, balloons, and bunting decorations. Fuxie cartoon style, warm pastel colors, no text.",
+      "filename": "A2-T1-002_scene.png",
+      "placement": "header",
+      "alt_text": "Familienfest im Stadtpark",
+      "dimensions": "768x512"
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q1",
+      "teil": 1,
+      "type": "multiple_choice",
+      "stem": "Wann war das Familienfest?",
+      "options": {
+        "a": "Am Sonntag.",
+        "b": "Am Samstag.",
+        "c": "Am Freitag."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Im Text steht: 'Am vergangenen Samstag hat im Stadtpark Moabit ein großes Familienfest stattgefunden.'",
+        "key_evidence": "Am vergangenen Samstag",
+        "key_vocabulary": [
+          {
+            "word": "vergangen",
+            "type": "Adjektiv",
+            "meaning": "last / past"
+          },
+          {
+            "word": "stattfinden",
+            "type": "Verb",
+            "meaning": "to take place"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q2",
+      "teil": 1,
+      "type": "multiple_choice",
+      "stem": "Was konnten die Kinder auf dem Fest machen?",
+      "options": {
+        "a": "Fußball spielen und schwimmen.",
+        "b": "Auf dem Spielplatz spielen und sich schminken lassen.",
+        "c": "Einen Film sehen und Eis essen."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Im Text steht: 'Für Kinder gab es einen großen Spielplatz, Kinderschminken und eine Hüpfburg.'",
+        "key_evidence": "einen großen Spielplatz, Kinderschminken und eine Hüpfburg",
+        "key_vocabulary": [
+          {
+            "word": "Kinderschminken",
+            "type": "Nomen",
+            "meaning": "face painting"
+          },
+          {
+            "word": "Hüpfburg",
+            "type": "Nomen",
+            "meaning": "bouncy castle"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q3",
+      "teil": 1,
+      "type": "multiple_choice",
+      "stem": "Was hat Herr Vogel über das Fest gesagt?",
+      "options": {
+        "a": "Es war zu teuer.",
+        "b": "Es war nicht gut organisiert.",
+        "c": "Solche Feste sind wichtig für die Nachbarschaft."
+      },
+      "answer": "c",
+      "points": 1,
+      "explanation": {
+        "de": "Im Text steht: 'Er hat gesagt, dass solche Feste für die Nachbarschaft sehr wichtig sind.'",
+        "key_evidence": "dass solche Feste für die Nachbarschaft sehr wichtig sind",
+        "key_vocabulary": [
+          {
+            "word": "Nachbarschaft",
+            "type": "Nomen",
+            "meaning": "neighborhood"
+          },
+          {
+            "word": "wichtig",
+            "type": "Adjektiv",
+            "meaning": "important"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q4",
+      "teil": 1,
+      "type": "multiple_choice",
+      "stem": "Warum war das Fest kostenlos?",
+      "options": {
+        "a": "Weil die Familien selbst bezahlt haben.",
+        "b": "Weil die Stadt und Sponsoren das Geld gegeben haben.",
+        "c": "Weil nur wenige Menschen gekommen sind."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Im Text steht: 'Das Familienfest war kostenlos, weil die Stadt und mehrere Sponsoren das Geld gegeben haben.'",
+        "key_evidence": "weil die Stadt und mehrere Sponsoren das Geld gegeben haben",
+        "key_vocabulary": [
+          {
+            "word": "Sponsor",
+            "type": "Nomen",
+            "meaning": "sponsor"
+          },
+          {
+            "word": "kostenlos",
+            "type": "Adjektiv",
+            "meaning": "free of charge"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q5",
+      "teil": 1,
+      "type": "multiple_choice",
+      "stem": "Wann findet das nächste Fest statt?",
+      "options": {
+        "a": "Im Mai.",
+        "b": "Im Juni.",
+        "c": "Im Juli."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Im Text steht: 'Das nächste Fest ist im Juni geplant.'",
+        "key_evidence": "Das nächste Fest ist im Juni geplant",
+        "key_vocabulary": [
+          {
+            "word": "geplant",
+            "type": "Partizip II",
+            "meaning": "planned"
+          },
+          {
+            "word": "nächst",
+            "type": "Adjektiv",
+            "meaning": "next"
+          }
+        ]
+      }
+    }
+  ],
+  "scoring": {
+    "total_points": 5,
+    "pass_threshold": 3,
+    "grading": [
+      {
+        "range": [
+          5,
+          5
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          4,
+          4
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          3,
+          3
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          1,
+          2
+        ],
+        "label": "Noch üben!",
+        "emoji": "📝"
+      },
+      {
+        "range": [
+          0,
+          0
+        ],
+        "label": "Mehr Übung nötig",
+        "emoji": "💪"
+      }
+    ]
+  },
+  "qa": {
+    "vocab_in_a2_list": true,
+    "grammar_a2_only": true,
+    "word_count_in_range": true,
+    "all_answers_verifiable": true,
+    "mc_distractors_plausible": true,
+    "image_count": 1,
+    "passed": true
+  }
+}

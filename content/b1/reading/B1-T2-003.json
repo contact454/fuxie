@@ -1,0 +1,224 @@
+{
+  "id": "B1-T2-003",
+  "level": "B1",
+  "teil": 2,
+  "teil_name": "Pressebericht lesen",
+  "topic": "Umwelt & Natur",
+  "topic_id": "003",
+  "metadata": {
+    "word_count": 288,
+    "target_grammar": [
+      "Nebensatz mit weil/dass/wenn",
+      "Passiv",
+      "Konjunktiv II"
+    ],
+    "target_vocabulary": [
+      "Stadtgarten",
+      "Gemüse",
+      "anbauen",
+      "Dachgarten",
+      "Initiative",
+      "Ernte",
+      "Gemeinschaft",
+      "Förderprogramm",
+      "Grünfläche",
+      "ehrenamtlich"
+    ],
+    "generated_at": "2026-03-10T22:57:00+07:00",
+    "version": 1
+  },
+  "article": {
+    "source": "Hamburger Morgenpost",
+    "date": "20. April 2026",
+    "title": "Stadtgärten: Gemüse auf dem Dach anbauen",
+    "subtitle": "Hamburger Initiative verwandelt Hausdächer in grüne Oasen",
+    "text": "Auf dem Dach eines Bürogebäudes in Hamburg-Altona wachsen Tomaten, Salat und Kräuter. Was vor drei Jahren als kleines Experiment begann, ist heute eines der erfolgreichsten Stadtgarten-Projekte Deutschlands. Die Initiative „Grüne Dächer Hamburg“ hat bereits 15 Dachgärten in der Stadt angelegt.\n\nDie Idee ist einfach: Ungenutzte Dachflächen werden in kleine Gärten verwandelt, in denen Stadtbewohner gemeinsam Gemüse anbauen können. „Viele Menschen in der Stadt haben keinen eigenen Garten“, erklärt Projektleiterin Dr. Claudia Roth. „Unsere Dachgärten geben ihnen die Möglichkeit, frisches Gemüse selbst anzubauen und gleichzeitig etwas für die Umwelt zu tun.“\n\nDie Dachgärten haben mehrere Vorteile. Sie verbessern das Stadtklima, weil Pflanzen CO2 aufnehmen und die Luft kühlen. Außerdem fördern sie die Gemeinschaft, weil Nachbarn sich beim Gärtnern kennenlernen. Im letzten Jahr wurden insgesamt zwei Tonnen Gemüse geerntet, das an die Gärtner und an lokale Tafeln verteilt wurde.\n\nDie Stadt Hamburg unterstützt das Projekt mit einem Förderprogramm. Hausbesitzer können bis zu 5.000 Euro Zuschuss beantragen, wenn sie ihr Dach für einen Gemeinschaftsgarten zur Verfügung stellen. Bisher haben über 50 Hauseigentümer Interesse gezeigt.\n\nKritiker weisen darauf hin, dass nicht jedes Dach für einen Garten geeignet ist. Die Statik muss geprüft werden, und es braucht eine Wasserversorgung. Trotzdem sehen Stadtplaner in den Dachgärten ein Modell für die Zukunft: „Wenn wir unsere Städte grüner machen wollen, müssen wir kreativ mit dem vorhandenen Platz umgehen“, sagt Roth."
+  },
+  "images": [
+    {
+      "id": "IMG1",
+      "type": "scene",
+      "prompt": "Cute cartoon illustration of a rooftop garden in a city with raised beds of tomatoes, herbs and salad, people gardening together, city skyline in background. Fuxie cartoon style, flat illustration, warm pastel colors, no text.",
+      "filename": "B1-T2-003_scene.png",
+      "placement": "header",
+      "alt_text": "Dachgarten in Hamburg",
+      "dimensions": "768x512"
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q1",
+      "teil": 2,
+      "type": "multiple_choice",
+      "stem": "Wie viele Dachgärten hat die Initiative bisher angelegt?",
+      "options": {
+        "a": "5.",
+        "b": "15.",
+        "c": "50."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Die Initiative hat bereits 15 Dachgärten angelegt.",
+        "key_evidence": "bereits 15 Dachgärten in der Stadt angelegt",
+        "key_vocabulary": [
+          {
+            "word": "Dachgarten",
+            "type": "Nomen",
+            "meaning": "rooftop garden"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q2",
+      "teil": 2,
+      "type": "multiple_choice",
+      "stem": "Warum sind Dachgärten gut für das Stadtklima?",
+      "options": {
+        "a": "Weil sie Lärm reduzieren.",
+        "b": "Weil Pflanzen CO2 aufnehmen und die Luft kühlen.",
+        "c": "Weil sie Regenwasser speichern."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Pflanzen nehmen CO2 auf und kühlen die Luft.",
+        "key_evidence": "weil Pflanzen CO2 aufnehmen und die Luft kühlen",
+        "key_vocabulary": [
+          {
+            "word": "Stadtklima",
+            "type": "Nomen",
+            "meaning": "urban climate"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q3",
+      "teil": 2,
+      "type": "multiple_choice",
+      "stem": "Wie viel Gemüse wurde im letzten Jahr geerntet?",
+      "options": {
+        "a": "Eine halbe Tonne.",
+        "b": "Zwei Tonnen.",
+        "c": "Fünf Tonnen."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Es wurden insgesamt zwei Tonnen Gemüse geerntet.",
+        "key_evidence": "zwei Tonnen Gemüse geerntet",
+        "key_vocabulary": [
+          {
+            "word": "Ernte",
+            "type": "Nomen",
+            "meaning": "harvest"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q4",
+      "teil": 2,
+      "type": "multiple_choice",
+      "stem": "Wie viel Zuschuss können Hausbesitzer bekommen?",
+      "options": {
+        "a": "Bis zu 2.000 Euro.",
+        "b": "Bis zu 5.000 Euro.",
+        "c": "Bis zu 10.000 Euro."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Hausbesitzer können bis zu 5.000 Euro Zuschuss beantragen.",
+        "key_evidence": "bis zu 5.000 Euro Zuschuss",
+        "key_vocabulary": [
+          {
+            "word": "Förderprogramm",
+            "type": "Nomen",
+            "meaning": "funding program"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q5",
+      "teil": 2,
+      "type": "multiple_choice",
+      "stem": "Was muss vor dem Bau eines Dachgartens geprüft werden?",
+      "options": {
+        "a": "Die Sonnenstunden pro Tag.",
+        "b": "Die Statik des Gebäudes.",
+        "c": "Die Anzahl der Mieter."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Die Statik muss geprüft werden und eine Wasserversorgung ist nötig.",
+        "key_evidence": "Die Statik muss geprüft werden",
+        "key_vocabulary": [
+          {
+            "word": "Statik",
+            "type": "Nomen",
+            "meaning": "structural stability"
+          }
+        ]
+      }
+    }
+  ],
+  "scoring": {
+    "total_points": 5,
+    "pass_threshold": 3,
+    "grading": [
+      {
+        "range": [
+          5,
+          5
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          4,
+          4
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          3,
+          3
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          1,
+          2
+        ],
+        "label": "Noch üben!",
+        "emoji": "📝"
+      },
+      {
+        "range": [
+          0,
+          0
+        ],
+        "label": "Mehr Übung nötig",
+        "emoji": "💪"
+      }
+    ]
+  },
+  "qa": {
+    "vocab_in_b1_list": true,
+    "grammar_b1_appropriate": true,
+    "word_count_in_range": true,
+    "all_answers_verifiable": true,
+    "image_count": 1,
+    "passed": true
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "id": "W-A1-T2-010",
+  "cefrLevel": "A1",
+  "teil": 2,
+  "teilName": "Kurze E-Mail",
+  "textType": "E-Mail",
+  "register": "informell",
+  "topic": "Reise",
+  "instruction": "Schreiben Sie eine kurze E-Mail (ca. 30-40 Woerter).",
+  "instructionVi": "Viet email ngan: Reise.",
+  "situation": "Sie waren am Wochenende in Muenchen. Schreiben Sie einem Freund.",
+  "contentPoints": [
+    "erzaehlen wohin",
+    "beschreiben was gemacht",
+    "Gefuehle ausdruecken"
+  ],
+  "minWords": 30,
+  "maxWords": 50,
+  "timeMinutes": 10,
+  "rubric": {
+    "criteria": [
+      {
+        "id": "inhalt",
+        "name": "Inhalt",
+        "nameVi": "Noi dung",
+        "maxScore": 5,
+        "weight": 30
+      },
+      {
+        "id": "korrektheit",
+        "name": "Korrektheit",
+        "nameVi": "Chinh xac",
+        "maxScore": 5,
+        "weight": 40
+      },
+      {
+        "id": "angemessenheit",
+        "name": "Angemessenheit",
+        "nameVi": "Phu hop",
+        "maxScore": 5,
+        "weight": 30
+      }
+    ],
+    "maxScore": 15
+  },
+  "maxScore": 15
+}

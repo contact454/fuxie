@@ -1,0 +1,51 @@
+{
+  "id": "W-A2-T1-007",
+  "cefrLevel": "A2",
+  "teil": 1,
+  "teilName": "E-Mail-Antwort",
+  "textType": "E-Mail",
+  "register": "informell",
+  "topic": "Fussball",
+  "instruction": "Schreiben Sie eine Antwort-E-Mail (ca. 40-60 Woerter). Schreiben Sie zu allen drei Punkten.",
+  "instructionVi": "Tra loi email: Fussball.",
+  "situation": "Ein Freund fragt ob Sie in seiner Mannschaft mitspielen.",
+  "contentPoints": [
+    "zusagen oder absagen",
+    "Grund nennen",
+    "Alternative vorschlagen"
+  ],
+  "minWords": 40,
+  "maxWords": 70,
+  "timeMinutes": 15,
+  "rubric": {
+    "criteria": [
+      {
+        "id": "inhalt",
+        "name": "Inhalt",
+        "nameVi": "Noi dung",
+        "maxScore": 5,
+        "weight": 30
+      },
+      {
+        "id": "korrektheit",
+        "name": "Korrektheit",
+        "nameVi": "Chinh xac",
+        "maxScore": 5,
+        "weight": 35
+      },
+      {
+        "id": "angemessenheit",
+        "name": "Kommunikative Angemessenheit",
+        "nameVi": "Phu hop giao tiep",
+        "maxScore": 5,
+        "weight": 35
+      }
+    ],
+    "maxScore": 15
+  },
+  "maxScore": 15,
+  "sourceText": "Hallo! Wie geht es dir? Wir spielen am Samstag um 15 Uhr Fußball im Park. Hast du Lust mitzukommen? Wir brauchen noch einen Spieler und es macht sicher viel Spaß. Ich hoffe, du hast Zeit. Sag mir bitte bald Bescheid, ob du kommen kannst! Viele Grüße, Marc.",
+  "sourceTextType": "Email",
+  "stimulusSender": "Marc",
+  "grafikData": []
+}

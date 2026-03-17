@@ -1,0 +1,265 @@
+{
+  "id": "A2-T2-001",
+  "level": "A2",
+  "teil": 2,
+  "teil_name": "Informationstafeln verstehen",
+  "topic": "Im Supermarkt",
+  "topic_id": "001",
+  "metadata": {
+    "word_count": 95,
+    "target_grammar": [
+      "Präpositionen mit Dativ",
+      "Modalverben"
+    ],
+    "target_vocabulary": [
+      "Erdgeschoss",
+      "Obergeschoss",
+      "Getränke",
+      "Tiefkühlware",
+      "Kundenservice",
+      "Pfandrückgabe",
+      "Bäckerei",
+      "Metzgerei",
+      "Parkhaus",
+      "Rolltreppe"
+    ],
+    "generated_at": "2026-03-09T22:30:00+07:00",
+    "version": 1
+  },
+  "infotafel": {
+    "title": "EDEKA Markt am Rosenplatz — Stockwerk-Information",
+    "location": "Rosenplatz 8, 10117 Berlin",
+    "rows": [
+      {
+        "floor": "UG",
+        "items": "Parkhaus (120 Plätze) · Pfandrückgabe · Einkaufswagen"
+      },
+      {
+        "floor": "EG",
+        "items": "Obst & Gemüse · Bäckerei · Metzgerei · Kasse 1–8"
+      },
+      {
+        "floor": "1. OG",
+        "items": "Getränke · Tiefkühlware · Bio-Ecke · Haushaltswaren"
+      },
+      {
+        "floor": "2. OG",
+        "items": "Kundenservice · Café · WC · Kinderecke"
+      }
+    ],
+    "extra_info": "Öffnungszeiten: Mo–Sa 7:00–21:00 Uhr. Rolltreppe zwischen allen Stockwerken. Aufzug am Eingang rechts. Hunde sind im Markt nicht erlaubt."
+  },
+  "images": [
+    {
+      "id": "IMG1",
+      "type": "info_board",
+      "prompt": "Cute cartoon illustration of a large modern German supermarket directory board showing different floors with colorful icons for each section — bakery, meat counter, drinks, frozen food, parking. Clean flat design, Fuxie cartoon style, warm pastel colors, no text on the image.",
+      "filename": "A2-T2-001_board.png",
+      "placement": "header",
+      "alt_text": "EDEKA Markt Stockwerk-Information",
+      "dimensions": "768x512"
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q1",
+      "teil": 2,
+      "type": "multiple_choice",
+      "stem": "Wo kann man Brot kaufen?",
+      "options": {
+        "a": "Im Untergeschoss.",
+        "b": "Im Erdgeschoss.",
+        "c": "Im 1. Obergeschoss."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Die Bäckerei ist im EG (Erdgeschoss).",
+        "key_evidence": "EG: Obst & Gemüse · Bäckerei · Metzgerei · Kasse 1–8",
+        "key_vocabulary": [
+          {
+            "word": "Bäckerei",
+            "type": "Nomen",
+            "meaning": "bakery"
+          },
+          {
+            "word": "Erdgeschoss",
+            "type": "Nomen",
+            "meaning": "ground floor"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q2",
+      "teil": 2,
+      "type": "multiple_choice",
+      "stem": "Was findet man im Untergeschoss?",
+      "options": {
+        "a": "Das Café und die Kinderecke.",
+        "b": "Die Getränke und Tiefkühlware.",
+        "c": "Das Parkhaus und die Pfandrückgabe."
+      },
+      "answer": "c",
+      "points": 1,
+      "explanation": {
+        "de": "Im UG stehen: Parkhaus (120 Plätze), Pfandrückgabe und Einkaufswagen.",
+        "key_evidence": "UG: Parkhaus (120 Plätze) · Pfandrückgabe · Einkaufswagen",
+        "key_vocabulary": [
+          {
+            "word": "Pfandrückgabe",
+            "type": "Nomen",
+            "meaning": "bottle return"
+          },
+          {
+            "word": "Untergeschoss",
+            "type": "Nomen",
+            "meaning": "basement level"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q3",
+      "teil": 2,
+      "type": "multiple_choice",
+      "stem": "Wo ist der Kundenservice?",
+      "options": {
+        "a": "Im Erdgeschoss.",
+        "b": "Im 1. Obergeschoss.",
+        "c": "Im 2. Obergeschoss."
+      },
+      "answer": "c",
+      "points": 1,
+      "explanation": {
+        "de": "Der Kundenservice ist im 2. OG, zusammen mit Café, WC und Kinderecke.",
+        "key_evidence": "2. OG: Kundenservice · Café · WC · Kinderecke",
+        "key_vocabulary": [
+          {
+            "word": "Kundenservice",
+            "type": "Nomen",
+            "meaning": "customer service"
+          },
+          {
+            "word": "Obergeschoss",
+            "type": "Nomen",
+            "meaning": "upper floor"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q4",
+      "teil": 2,
+      "type": "multiple_choice",
+      "stem": "Was steht in der Extra-Information?",
+      "options": {
+        "a": "Man darf Hunde mitbringen.",
+        "b": "Es gibt keine Rolltreppe.",
+        "c": "Man kann den Aufzug am Eingang rechts benutzen."
+      },
+      "answer": "c",
+      "points": 1,
+      "explanation": {
+        "de": "In der Extra-Information steht: 'Aufzug am Eingang rechts.'",
+        "key_evidence": "Aufzug am Eingang rechts",
+        "key_vocabulary": [
+          {
+            "word": "Aufzug",
+            "type": "Nomen",
+            "meaning": "elevator"
+          },
+          {
+            "word": "Eingang",
+            "type": "Nomen",
+            "meaning": "entrance"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q5",
+      "teil": 2,
+      "type": "multiple_choice",
+      "stem": "Wann hat der Markt geöffnet?",
+      "options": {
+        "a": "Montag bis Freitag, 8:00–20:00 Uhr.",
+        "b": "Montag bis Samstag, 7:00–21:00 Uhr.",
+        "c": "Jeden Tag, 7:00–22:00 Uhr."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Die Öffnungszeiten sind: Mo–Sa 7:00–21:00 Uhr.",
+        "key_evidence": "Öffnungszeiten: Mo–Sa 7:00–21:00 Uhr",
+        "key_vocabulary": [
+          {
+            "word": "Öffnungszeiten",
+            "type": "Nomen",
+            "meaning": "opening hours"
+          },
+          {
+            "word": "geöffnet",
+            "type": "Partizip II",
+            "meaning": "open"
+          }
+        ]
+      }
+    }
+  ],
+  "scoring": {
+    "total_points": 5,
+    "pass_threshold": 3,
+    "grading": [
+      {
+        "range": [
+          5,
+          5
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          4,
+          4
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          3,
+          3
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          1,
+          2
+        ],
+        "label": "Noch üben!",
+        "emoji": "📝"
+      },
+      {
+        "range": [
+          0,
+          0
+        ],
+        "label": "Mehr Übung nötig",
+        "emoji": "💪"
+      }
+    ]
+  },
+  "qa": {
+    "vocab_in_a2_list": true,
+    "grammar_a2_only": true,
+    "word_count_in_range": true,
+    "all_answers_verifiable": true,
+    "mc_distractors_plausible": true,
+    "image_count": 1,
+    "passed": true
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "id": "W-C2-T1-004",
+  "cefrLevel": "C2",
+  "teil": 1,
+  "teilName": "Akademischer Text",
+  "textType": "Eroerterung",
+  "register": "akademisch",
+  "topic": "Digitale Demokratie",
+  "instruction": "Kommentar: Gefaehrden soziale Medien die Demokratie?. Schreiben Sie einen akademischen Text (mind. 350 Woerter).",
+  "instructionVi": "Viet bai hoc thuat >=350 tu: Digitale Demokratie.",
+  "situation": "Kommentar: Gefaehrden soziale Medien die Demokratie?",
+  "contentPoints": [
+    "These klar formulieren",
+    "Hintergrund skizzieren",
+    "Argumente entwickeln",
+    "Gegenposition widerlegen",
+    "Synthese und Schlussfolgerung",
+    "Ausblick"
+  ],
+  "minWords": 350,
+  "maxWords": 600,
+  "timeMinutes": 50,
+  "rubric": {
+    "criteria": [
+      {
+        "id": "inhalt",
+        "name": "Inhalt",
+        "nameVi": "Noi dung",
+        "maxScore": 5,
+        "weight": 20
+      },
+      {
+        "id": "angemessenheit",
+        "name": "Kommunikative Angemessenheit",
+        "nameVi": "Phu hop giao tiep",
+        "maxScore": 5,
+        "weight": 20
+      },
+      {
+        "id": "korrektheit",
+        "name": "Korrektheit",
+        "nameVi": "Chinh xac ngu phap",
+        "maxScore": 5,
+        "weight": 20
+      },
+      {
+        "id": "spektrum",
+        "name": "Wortschatz & Strukturen",
+        "nameVi": "Da dang tu vung",
+        "maxScore": 5,
+        "weight": 20
+      },
+      {
+        "id": "kohaerenz",
+        "name": "Kohaerenz & Kohaesion",
+        "nameVi": "Mach lac & lien ket",
+        "maxScore": 5,
+        "weight": 20
+      }
+    ],
+    "maxScore": 25
+  },
+  "maxScore": 25,
+  "sourceText": "Text 1: Frankfurter Allgemeine Zeitung, 14. Mai 2024. Von Maximilian von Arnim.\nTitel: Die digitale Agora: Chance auf eine neue Volkssouveränität.\nDie Digitalisierung der politischen Willensbildung wird oft als Menetekel für den Verfall des Diskurses missverstanden. Doch blickt man hinter die Schranken der traditionellen Gatekeeper-Medien, offenbart sich ein enormes Potenzial für die Vitalisierung der Demokratie. Digitale Plattformen ermöglichen eine unmittelbare Partizipation, die weit über die periodische Stimmabgabe hinausgeht. Die Vision einer 'Liquid Democracy', in der Bürger ihre Expertise themenspezifisch einbringen, rückt in greifbare Nähe. Es geht um die Überwindung bürokratischer Trägheit und die Etablierung einer inklusiven Diskurskultur, die auch marginalisierte Stimmen hörbar macht. Das Internet fungiert hierbei nicht als Zerstörer, sondern als Katalysator einer deliberativen Erneuerung, die den Bürger aus seiner passiven Konsumentenrolle befreit und zum aktiven Gestalter des Gemeinwesens transformiert.\n\nText 2: Zeitschrift für Politikwissenschaft (ZfP), Ausgabe 02/2023. Von Prof. Dr. Elena Scholz.\nTitel: Fragmentierung statt Integration: Zur algorithmischen Gefährdung des öffentlichen Raums.\nDie wissenschaftliche Auseinandersetzung mit der digitalen Transformation der Demokratie mahnt zur Skepsis gegenüber techno-optimistischen Narrativen. Empirische Befunde deuten darauf hin, dass die algorithmische Selektionslogik sozialer Medien die Herausbildung von Echokammern begünstigt, was die Anschlussfähigkeit unterschiedlicher gesellschaftlicher Teilbereiche untergräbt. Anstatt den deliberativen Austausch zu fördern, führt die digitale Architektur oft zu einer Affektlogik, die Nuancen zugunsten einer binären Polarisierung opfert. Die Erosion intermediärer Instanzen – wie der klassischen Qualitätspresse – entzieht dem demokratischen Diskurs das Fundament einer gemeinsam geteilten Faktenbasis. Somit droht die digitale Sphäre, das Ideal einer rationalen Konsensfindung durch eine fragmentierte Öffentlichkeit zu ersetzen, in der Desinformation und populistische Mobilisierung die strukturelle Integrität des demokratischen Prozesses nachhaltig gefährden.",
+  "sourceTextType": "Vergleichende Analyse zwischen einem journalistischen Plädoyer für digitale Partizipation und einer politikwissenschaftlichen Kritik an der algorithmischen Diskursfragmentierung.",
+  "stimulusSender": "Akademie für politische Bildung, Fachbereich Digitalisierung und Gesellschaft",
+  "grafikDesc": "Das beigefügte Säulendiagramm mit dem Titel 'Digitale Partizipation in Deutschland: Nutzung vs. Vertrauen (2018-2023)' illustriert die ambivalente Entwicklung des bürgerlichen Engagements im digitalen Raum. Während die passive Nutzung von Informationsangeboten und formalen Online-Tools stagniert oder leicht steigt, sinkt die Bereitschaft zur aktiven, diskursiven Beteiligung bei gleichzeitig schwindendem Vertrauen in die Datensicherheit politischer Prozesse.",
+  "grafikData": [
+    "Nutzung von Online-Petitionen: Anstieg von 42 % (2018) auf 58 % (2023)",
+    "Aktive politische Debatte in sozialen Medien: Rückgang von 28 % (2018) auf 14 % (2023)",
+    "Nutzung von Informationsportalen (z.B. Wahl-O-Mat): Konstant hoch bei 72 %",
+    "Vertrauen in die Manipulationssicherheit von E-Voting: Rückgang von 45 % (2018) auf 29 % (2023)",
+    "Teilnahme an digitalen Bürgerhaushalten auf kommunaler Ebene: 9 % (2023)",
+    "Zustimmung zur Aussage 'Das Internet verbessert die Demokratie': Sinken von 51 % (2018) auf 34 % (2023)",
+    "Quelle: Statista / Digital Democracy Index 2024"
+  ]
+}

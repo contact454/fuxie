@@ -1,0 +1,25 @@
+{
+  "auditedAt": "2026-03-16T16:52:43.329Z",
+  "totalSentences": 80,
+  "critical": 0,
+  "warnings": 2,
+  "info": 0,
+  "issues": [
+    {
+      "topic": "a1-alltag",
+      "sentenceId": "s01",
+      "textDe": "Ich stehe um sieben Uhr auf.",
+      "category": "PROGRESSION",
+      "severity": "🟡 WARNING",
+      "detail": "First sentence too long (6 words): \"Ich stehe um sieben Uhr auf.\""
+    },
+    {
+      "topic": "[a1-begruessung:s02]",
+      "sentenceId": "",
+      "textDe": "Wie geht es Ihnen?",
+      "category": "GEMINI_TRANSLATION",
+      "severity": "🟡 WARNING",
+      "detail": "Die vietnamesische Übersetzung 'Bạn (trịnh trọng) khỏe không?' ist unnötig kompliziert. 'trịnh trọng' ist eine Erklärung und keine direkte Übersetzung, was für eine Nachsprech-Übung verwirrend sein kann. Der Gebrauch von 'Bạn' für 'Ihnen' ist zudem nicht immer die passendste formale Anrede. → Fix: Quý vị khỏe không?"
+    }
+  ]
+}

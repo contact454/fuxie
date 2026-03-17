@@ -1,0 +1,197 @@
+{
+  "id": "B2-T5-008",
+  "level": "B2",
+  "teil": 5,
+  "teil_name": "Ratgeber lesen",
+  "topic": "Digitalisierung & Technik",
+  "topic_id": "008",
+  "metadata": {
+    "word_count": 225,
+    "target_grammar": [
+      "Passiv",
+      "Imperativ",
+      "Konjunktiv II",
+      "Nominalisierung"
+    ],
+    "target_vocabulary": [],
+    "generated_at": "2026-03-11T22:40:47.427773",
+    "version": 1
+  },
+  "ratgeber": {
+    "title": "Ratgeber: Ihre Daten im Internet schützen",
+    "sections": [
+      {
+        "heading": "Sichere Passwörter verwenden",
+        "text": "Ein sicheres Passwort sollte mindestens zwölf Zeichen lang sein und Groß- und Kleinbuchstaben, Zahlen und Sonderzeichen enthalten. Verwenden Sie für jeden Dienst ein eigenes Passwort und nutzen Sie einen Passwort-Manager, der Ihre Zugangsdaten verschlüsselt speichert. Ändern Sie Passwörter sofort, wenn ein Dienst einen Datenleck meldet."
+      },
+      {
+        "heading": "Zwei-Faktor-Authentifizierung aktivieren",
+        "text": "Die Zwei-Faktor-Authentifizierung bietet eine zusätzliche Sicherheitsebene. Selbst wenn jemand Ihr Passwort kennt, kann er ohne den zweiten Faktor, etwa einen Code auf Ihrem Smartphone, nicht auf Ihr Konto zugreifen. Aktivieren Sie diese Funktion überall dort, wo sie angeboten wird, insbesondere bei E-Mail, Online-Banking und sozialen Netzwerken."
+      },
+      {
+        "heading": "Phishing-Mails erkennen",
+        "text": "Betrüger versuchen über gefälschte E-Mails, an Ihre Zugangsdaten oder Bankverbindung zu gelangen. Achten Sie auf verdächtige Absenderadressen, Rechtschreibfehler und unerwartete Aufforderungen, Links anzuklicken oder Daten einzugeben. Im Zweifel kontaktieren Sie den angeblichen Absender direkt über die offizielle Website oder Telefonnummer, niemals über den Link in der verdächtigen E-Mail."
+      },
+      {
+        "heading": "WLAN und öffentliche Netzwerke",
+        "text": "Öffentliche WLAN-Netzwerke, etwa in Cafés, Hotels oder am Flughafen, sind anfällig für Angriffe. Vermeiden Sie es, in solchen Netzwerken auf sensible Konten wie Online-Banking oder E-Mail zuzugreifen. Nutzen Sie stattdessen ein VPN, das Ihre Verbindung verschlüsselt und Ihre Daten vor neugierigen Blicken schützt."
+      },
+      {
+        "heading": "Software aktuell halten",
+        "text": "Veraltete Software ist eines der größten Sicherheitsrisiken. Installieren Sie Updates für Betriebssystem, Browser und Apps zeitnah, da diese häufig bekannte Sicherheitslücken schließen. Aktivieren Sie automatische Updates, wo immer möglich, und deinstallieren Sie Programme, die Sie nicht mehr benötigen, da auch sie Angriffsfläche bieten."
+      }
+    ]
+  },
+  "images": [
+    {
+      "id": "IMG1",
+      "type": "scene",
+      "prompt": "Cute cartoon illustration of a guidebook or advice document about Digitalisierung & Technik, showing helpful tips and a friendly character giving advice. Fuxie cartoon style, flat illustration, warm pastel colors, no text.",
+      "filename": "B2-T5-008_scene.png",
+      "placement": "header",
+      "alt_text": "Ratgeber: Ihre Daten im Internet schützen",
+      "dimensions": "768x512"
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q1",
+      "teil": 5,
+      "type": "multiple_choice",
+      "stem": "Was lässt sich aus den Angaben über Absicht verfolgt der Autor, wenn er lang sollte ein sicheres Passwort mindestens sein erwähnt schließen?",
+      "options": {
+        "a": "Acht Zeichen.",
+        "b": "Zwölf Zeichen.",
+        "c": "Sechzehn Zeichen."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Zwölf Zeichen.",
+        "reasoning": "Die richtige Antwort (b) ergibt sich aus dem Textkontext."
+      }
+    },
+    {
+      "id": "Q2",
+      "teil": 5,
+      "type": "multiple_choice",
+      "stem": "Welche Schlussfolgerung über könnte man dem Autor bezüglich Wofür sollte man die Zwei-Faktor-Authentifizierung besonders entgegenhalten legt der Text nahe?",
+      "options": {
+        "a": "Für Nachrichtenportale.",
+        "b": "Für E-Mail, Online-Banking und soziale Netzwerke.",
+        "c": "Für Streaming-Dienste."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Für E-Mail, Online-Banking und soziale Netzwerke.",
+        "reasoning": "[Critical] Die richtige Antwort (b) ergibt sich aus dem Textkontext."
+      }
+    },
+    {
+      "id": "Q3",
+      "teil": 5,
+      "type": "multiple_choice",
+      "stem": "Was lässt sich aus den Angaben über Woran kann man Phishing-Mails erkennen schließen?",
+      "options": {
+        "a": "An professionellem Design.",
+        "b": "An verdächtigen Absenderadressen und Rechtschreibfehlern.",
+        "c": "An kurzen Texten."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "An verdächtigen Absenderadressen und Rechtschreibfehlern.",
+        "reasoning": "[Inferential] Die richtige Antwort (b) ergibt sich aus dem Textkontext."
+      }
+    },
+    {
+      "id": "Q4",
+      "teil": 5,
+      "type": "multiple_choice",
+      "stem": "Was sollte man in öffentlichen WLAN-Netzwerken vermeiden?",
+      "options": {
+        "a": "Nachrichten lesen.",
+        "b": "Auf sensible Konten wie Online-Banking zugreifen.",
+        "c": "Videos schauen."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Auf sensible Konten wie Online-Banking zugreifen.",
+        "reasoning": "Die richtige Antwort (b) ergibt sich aus dem Textkontext."
+      }
+    },
+    {
+      "id": "Q5",
+      "teil": 5,
+      "type": "multiple_choice",
+      "stem": "Was impliziert der Text über Warum sollte man Software aktuell halten?",
+      "options": {
+        "a": "Weil neue Versionen schöner aussehen.",
+        "b": "Weil Updates bekannte Sicherheitslücken schließen.",
+        "c": "Weil der Speicher sonst zu voll wird."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Weil Updates bekannte Sicherheitslücken schließen.",
+        "reasoning": "[Inferential] Die richtige Antwort (b) ergibt sich aus dem Textkontext."
+      }
+    }
+  ],
+  "scoring": {
+    "total_points": 5,
+    "pass_threshold": 3,
+    "grading": [
+      {
+        "range": [
+          5,
+          5
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          4,
+          4
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          3,
+          3
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          1,
+          2
+        ],
+        "label": "Noch üben!",
+        "emoji": "📝"
+      },
+      {
+        "range": [
+          0,
+          0
+        ],
+        "label": "Mehr Übung nötig",
+        "emoji": "💪"
+      }
+    ]
+  },
+  "qa": {
+    "vocab_in_b2_list": true,
+    "grammar_b2_appropriate": true,
+    "word_count_in_range": true,
+    "all_answers_verifiable": true,
+    "image_count": 1,
+    "passed": true
+  }
+}

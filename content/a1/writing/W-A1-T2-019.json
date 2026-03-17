@@ -1,0 +1,52 @@
+{
+  "id": "W-A1-T2-019",
+  "cefrLevel": "A1",
+  "teil": 2,
+  "teilName": "Kurze E-Mail",
+  "textType": "E-Mail",
+  "register": "informell",
+  "topic": "Neuer Kollege",
+  "instruction": "Schreiben Sie eine E-Mail an Ihren Freund Thomas zu den folgenden drei Punkten.",
+  "instructionVi": "Viết một email cho người bạn Thomas của bạn về ba ý dưới đây.",
+  "situation": "Sie arbeiten in einem Büro und haben seit dieser Woche einen neuen Kollegen. Er heißt Marco, kommt aus Italien und ist sehr nett. Sie möchten Thomas von ihm erzählen und ein Treffen vorschlagen.",
+  "contentPoints": [
+    "Name und Herkunft des Kollegen",
+    "Ihr Eindruck (Wie ist er?)",
+    "Einladung zum Mittagessen am Freitag"
+  ],
+  "sourceText": "Hallo! Wie geht es dir bei der Arbeit? Gibt es etwas Neues? Viele Grüße, Thomas",
+  "sourceTextType": "E-Mail",
+  "grafikDesc": null,
+  "grafikData": [],
+  "formFields": [],
+  "minWords": 20,
+  "maxWords": 40,
+  "timeMinutes": 10,
+  "rubric": {
+    "criteria": [
+      {
+        "id": "inhalt",
+        "name": "Inhalt",
+        "nameVi": "Nội dung",
+        "maxScore": 5,
+        "weight": 30
+      },
+      {
+        "id": "korrektheit",
+        "name": "Korrektheit",
+        "nameVi": "Chính xác ngữ pháp & chính tả",
+        "maxScore": 5,
+        "weight": 40
+      },
+      {
+        "id": "angemessenheit",
+        "name": "Angemessenheit",
+        "nameVi": "Tính phù hợp",
+        "maxScore": 5,
+        "weight": 30
+      }
+    ],
+    "maxScore": 15
+  },
+  "maxScore": 15
+}

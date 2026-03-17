@@ -1,0 +1,249 @@
+{
+  "id": "A2-T1-006",
+  "level": "A2",
+  "teil": 1,
+  "teil_name": "Zeitungsartikel lesen",
+  "topic": "Im Restaurant",
+  "topic_id": "006",
+  "metadata": {
+    "word_count": 174,
+    "target_grammar": [
+      "Perfekt",
+      "Modalverben",
+      "Nebensatz mit weil/dass"
+    ],
+    "target_vocabulary": [
+      "Restaurant",
+      "Speisekarte",
+      "vegetarisch",
+      "Bewertung",
+      "Küche",
+      "Gericht",
+      "Service",
+      "Teller",
+      "Preis",
+      "empfehlen"
+    ],
+    "generated_at": "2026-03-09T21:45:00+07:00",
+    "version": 1
+  },
+  "text": {
+    "title": "Restaurant-Test: Die drei besten Lokale in Kreuzberg",
+    "subtitle": "Unsere Redaktion hat getestet und bewertet",
+    "body": "Unsere Zeitung hat drei Restaurants in Kreuzberg getestet. Hier sind die Ergebnisse:\n\nAuf Platz 1 ist das Restaurant „Zum goldenen Löffel\" in der Bergmannstraße. Die Küche dort ist deutsch-international. Das beste Gericht ist die Currywurst mit hausgemachten Pommes für nur 8,50 Euro. Der Service ist sehr freundlich und schnell.\n\nPlatz 2 geht an „Bella Napoli\" in der Oranienstraße. Die italienische Pizzeria hat über 20 verschiedene Pizzen. Eine große Pizza kostet zwischen 9 und 12 Euro. Besonders gut ist die Pizza mit frischen Tomaten und Mozzarella.\n\nAuf Platz 3 ist „Grüne Gabel\" in der Graefestraße. Das Restaurant ist komplett vegetarisch. Es gibt jeden Tag ein anderes Tagesmenü für 7,90 Euro. Viele Kunden kommen wegen der frischen Salate und Suppen.\n\nAlle drei Restaurants sind von Dienstag bis Sonntag geöffnet. Wir empfehlen, dass man am Wochenende einen Tisch reserviert, weil die Lokale dann sehr voll sind.",
+    "source": "Kreuzberger Kurier"
+  },
+  "images": [
+    {
+      "id": "IMG1",
+      "type": "scene",
+      "prompt": "Cute cartoon illustration showing three cozy German restaurants on a lively Berlin street. Each restaurant has outdoor seating, different cuisine styles visible through windows - German, Italian, vegetarian. People dining and chatting. Fuxie cartoon style, flat illustration, warm pastel colors, no text.",
+      "filename": "A2-T1-006_scene.png",
+      "placement": "header",
+      "alt_text": "Drei Restaurants in Berlin-Kreuzberg",
+      "dimensions": "768x512"
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q1",
+      "teil": 1,
+      "type": "multiple_choice",
+      "stem": "Welches Restaurant ist auf Platz 1?",
+      "options": {
+        "a": "Bella Napoli.",
+        "b": "Grüne Gabel.",
+        "c": "Zum goldenen Löffel."
+      },
+      "answer": "c",
+      "points": 1,
+      "explanation": {
+        "de": "Im Text steht: 'Auf Platz 1 ist das Restaurant „Zum goldenen Löffel\".'",
+        "key_evidence": "Auf Platz 1 ist das Restaurant „Zum goldenen Löffel\"",
+        "key_vocabulary": [
+          {
+            "word": "Platz",
+            "type": "Nomen",
+            "meaning": "place/rank"
+          },
+          {
+            "word": "Lokal",
+            "type": "Nomen",
+            "meaning": "restaurant/pub"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q2",
+      "teil": 1,
+      "type": "multiple_choice",
+      "stem": "Was kostet die Currywurst mit Pommes?",
+      "options": {
+        "a": "7,50 Euro.",
+        "b": "8,50 Euro.",
+        "c": "9,50 Euro."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Im Text steht: 'Currywurst mit hausgemachten Pommes für nur 8,50 Euro.'",
+        "key_evidence": "für nur 8,50 Euro",
+        "key_vocabulary": [
+          {
+            "word": "Gericht",
+            "type": "Nomen",
+            "meaning": "dish"
+          },
+          {
+            "word": "hausgemacht",
+            "type": "Adjektiv",
+            "meaning": "homemade"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q3",
+      "teil": 1,
+      "type": "multiple_choice",
+      "stem": "Was ist besonders an „Grüne Gabel\"?",
+      "options": {
+        "a": "Es ist das billigste Restaurant.",
+        "b": "Es ist komplett vegetarisch.",
+        "c": "Es hat die besten Pizzen."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Im Text steht: 'Das Restaurant ist komplett vegetarisch.'",
+        "key_evidence": "komplett vegetarisch",
+        "key_vocabulary": [
+          {
+            "word": "vegetarisch",
+            "type": "Adjektiv",
+            "meaning": "vegetarian"
+          },
+          {
+            "word": "Tagesmenü",
+            "type": "Nomen",
+            "meaning": "daily menu"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q4",
+      "teil": 1,
+      "type": "multiple_choice",
+      "stem": "Wann sind alle drei Restaurants geschlossen?",
+      "options": {
+        "a": "Am Montag.",
+        "b": "Am Sonntag.",
+        "c": "Am Dienstag."
+      },
+      "answer": "a",
+      "points": 1,
+      "explanation": {
+        "de": "Im Text steht: 'Alle drei Restaurants sind von Dienstag bis Sonntag geöffnet.' Das heißt, am Montag sind sie geschlossen.",
+        "key_evidence": "von Dienstag bis Sonntag geöffnet",
+        "key_vocabulary": [
+          {
+            "word": "geöffnet",
+            "type": "Partizip II",
+            "meaning": "open"
+          },
+          {
+            "word": "geschlossen",
+            "type": "Partizip II",
+            "meaning": "closed"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q5",
+      "teil": 1,
+      "type": "multiple_choice",
+      "stem": "Was soll man am Wochenende machen?",
+      "options": {
+        "a": "Früh kommen, weil es keine Reservierung gibt.",
+        "b": "Einen Tisch reservieren, weil die Lokale voll sind.",
+        "c": "Zu Hause essen, weil die Preise höher sind."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Im Text steht: 'Wir empfehlen, dass man am Wochenende einen Tisch reserviert, weil die Lokale dann sehr voll sind.'",
+        "key_evidence": "dass man am Wochenende einen Tisch reserviert",
+        "key_vocabulary": [
+          {
+            "word": "reservieren",
+            "type": "Verb",
+            "meaning": "to reserve"
+          },
+          {
+            "word": "empfehlen",
+            "type": "Verb",
+            "meaning": "to recommend"
+          }
+        ]
+      }
+    }
+  ],
+  "scoring": {
+    "total_points": 5,
+    "pass_threshold": 3,
+    "grading": [
+      {
+        "range": [
+          5,
+          5
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          4,
+          4
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          3,
+          3
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          1,
+          2
+        ],
+        "label": "Noch üben!",
+        "emoji": "📝"
+      },
+      {
+        "range": [
+          0,
+          0
+        ],
+        "label": "Mehr Übung nötig",
+        "emoji": "💪"
+      }
+    ]
+  },
+  "qa": {
+    "vocab_in_a2_list": true,
+    "grammar_a2_only": true,
+    "word_count_in_range": true,
+    "all_answers_verifiable": true,
+    "mc_distractors_plausible": true,
+    "image_count": 1,
+    "passed": true
+  }
+}

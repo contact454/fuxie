@@ -1,0 +1,66 @@
+{
+  "id": "W-B2-T1-006",
+  "cefrLevel": "B2",
+  "teil": 1,
+  "teilName": "Forumsbeitrag",
+  "textType": "Forumsbeitrag",
+  "register": "neutral",
+  "topic": "Wahlpflicht",
+  "instruction": "Schreiben Sie einen Forumsbeitrag (mind. 150 Woerter): Sollte es eine Wahlpflicht geben?",
+  "instructionVi": "Viet bai forum >=150 tu: Wahlpflicht.",
+  "situation": "In einem Online-Forum wird diskutiert: Sollte es eine Wahlpflicht geben? Schreiben Sie einen Beitrag.",
+  "contentPoints": [
+    "Einleitung: Thema und These",
+    "Argumente dafuer",
+    "Argumente dagegen",
+    "eigene Stellungnahme und Loesungsvorschlag"
+  ],
+  "minWords": 150,
+  "maxWords": 250,
+  "timeMinutes": 35,
+  "rubric": {
+    "criteria": [
+      {
+        "id": "inhalt",
+        "name": "Inhalt",
+        "nameVi": "Noi dung",
+        "maxScore": 5,
+        "weight": 25
+      },
+      {
+        "id": "angemessenheit",
+        "name": "Kommunikative Angemessenheit",
+        "nameVi": "Phu hop giao tiep",
+        "maxScore": 5,
+        "weight": 20
+      },
+      {
+        "id": "korrektheit",
+        "name": "Korrektheit",
+        "nameVi": "Chinh xac ngu phap",
+        "maxScore": 5,
+        "weight": 25
+      },
+      {
+        "id": "spektrum",
+        "name": "Wortschatz & Strukturen",
+        "nameVi": "Da dang tu vung",
+        "maxScore": 5,
+        "weight": 15
+      },
+      {
+        "id": "kohaerenz",
+        "name": "Kohaerenz & Kohaesion",
+        "nameVi": "Mach lac & lien ket",
+        "maxScore": 5,
+        "weight": 15
+      }
+    ],
+    "maxScore": 25
+  },
+  "maxScore": 25,
+  "sourceText": "Süddeutsche Zeitung, 14. September 2023\n\nImmer mehr Demokratien weltweit diskutieren über die Einführung einer Wahlpflicht, um der sinkenden Wahlbeteiligung entgegenzuwirken. In Deutschland lag die Beteiligung bei den letzten Landtagswahlen teilweise unter 60 Prozent. Befürworter argumentieren, dass eine allgemeine Pflicht die politische Legitimität stärkt und sicherstellt, dass die Interessen aller Bevölkerungsschichten vertreten werden. Kritiker hingegen sehen darin einen unzulässigen Eingriff in die persönliche Freiheit. In Ländern wie Belgien oder Australien, in denen eine Wahlpflicht besteht, liegt die Beteiligung konstant über 90 Prozent. Dennoch bleibt die Frage umstritten, ob Zwang tatsächlich das politische Interesse fördert oder lediglich zu mehr ungültigen Stimmen führt.\n\nProf. Dr. Klaus Meier, Politikwissenschaftler: „Die Wahlpflicht ist ein wirksames Instrument, um die soziale Spaltung bei der Wahlbeteiligung zu überwinden und die demokratische Basis der Gesellschaft zu verbreitern.“\n\nVera Nowak, Studentin: „Wählen ist ein Grundrecht, kein Zwang. Wer Menschen gegen ihren Willen zur Wahlurne schickt, riskiert eine Zunahme von Protestwahlen und schwächt das Prinzip der politischen Freiwilligkeit.“\n\nWie stehen Sie zum Thema Wahlpflicht? Nehmen Sie im Diskussionsforum Stellung zu der Frage, ob eine gesetzliche Verpflichtung zur Stimmabgabe sinnvoll ist oder ob andere Maßnahmen ergriffen werden sollten.",
+  "sourceTextType": "Zeitungsartikel und Diskussionsanstoß",
+  "stimulusSender": "Redaktion des Online-Forums",
+  "grafikData": []
+}

@@ -1,0 +1,49 @@
+{
+  "id": "W-A2-T2-013",
+  "cefrLevel": "A2",
+  "teil": 2,
+  "teilName": "Persoenliche Mitteilung",
+  "textType": "Mitteilung",
+  "register": "halbformell",
+  "topic": "Sportverein beitreten",
+  "instruction": "Sie möchten in einem Sportverein Mitglied werden und schreiben eine Nachricht an den Vereinsleiter, Herrn Müller. Schreiben Sie ca. 40–70 Wörter zu den drei unten genannten Punkten. Vergessen Sie nicht die Anrede und den Gruß.",
+  "instructionVi": "Bạn muốn gia nhập một câu lạc bộ thể thao và viết một tin nhắn cho người quản lý câu lạc bộ, ông Müller. Viết khoảng 40-70 từ về ba ý dưới đây. Đừng quên lời chào đầu và cuối thư.",
+  "situation": "Sie haben im Internet eine Anzeige des Sportvereins 'Fit & Fun' gesehen. Sie interessieren sich für das Fußballtraining am Dienstagabend und möchten nun Herrn Müller kontaktieren, um mehr Details zu erfahren.",
+  "contentPoints": [
+    "Grund für Ihr Schreiben",
+    "Frage nach einem kostenlosen Probetraining",
+    "Frage zur Ausrüstung (Kleidung/Schuhe)"
+  ],
+  "sourceText": "Sportverein 'Fit & Fun' – Fußball-Training für Erwachsene! Immer dienstags von 18:00 bis 20:00 Uhr auf dem Sportplatz West. Anmeldung und Infos bei Herrn Müller. Wir freuen uns auf neue Mitglieder!",
+  "sourceTextType": "Online-Anzeige",
+  "minWords": 40,
+  "maxWords": 70,
+  "timeMinutes": 15,
+  "rubric": {
+    "criteria": [
+      {
+        "id": "inhalt",
+        "name": "Inhalt",
+        "nameVi": "Nội dung",
+        "maxScore": 5,
+        "weight": 30
+      },
+      {
+        "id": "korrektheit",
+        "name": "Korrektheit",
+        "nameVi": "Chính xác ngữ pháp & chính tả",
+        "maxScore": 5,
+        "weight": 35
+      },
+      {
+        "id": "angemessenheit",
+        "name": "Kommunikative Angemessenheit",
+        "nameVi": "Phù hợp giao tiếp",
+        "maxScore": 5,
+        "weight": 35
+      }
+    ],
+    "maxScore": 15
+  },
+  "maxScore": 15
+}

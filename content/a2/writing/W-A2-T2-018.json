@@ -1,0 +1,49 @@
+{
+  "id": "W-A2-T2-018",
+  "cefrLevel": "A2",
+  "teil": 2,
+  "teilName": "Persoenliche Mitteilung",
+  "textType": "Mitteilung",
+  "register": "halbformell",
+  "topic": "Kochen fuer Freunde",
+  "instruction": "Sie möchten am nächsten Samstagabend für Ihre Freunde kochen und schreiben eine Nachricht an Ihren Freund Lukas.",
+  "instructionVi": "Bạn muốn nấu ăn cho bạn bè vào tối thứ Bảy tới và viết một tin nhắn cho người bạn Lukas của mình.",
+  "situation": "Sie haben eine neue Wohnung mit einer großen Küche und möchten dies mit einem gemeinsamen Abendessen feiern. Sie müssen die Planung mit Lukas abstimmen, der Ihnen beim Einkaufen helfen wollte.",
+  "contentPoints": [
+    "Sagen Sie, warum Sie kochen möchten (z. B. Einweihungsparty).",
+    "Fragen Sie, was Lukas gerne essen möchte oder ob er Allergien hat.",
+    "Machen Sie einen Vorschlag für die Uhrzeit und den Treffpunkt zum Einkaufen."
+  ],
+  "sourceText": "Termin: Samstagabend, 19:00 Uhr. Ort: Meine neue Wohnung. Lukas hilft beim Einkaufen.",
+  "sourceTextType": "Kalendernotiz",
+  "minWords": 40,
+  "maxWords": 70,
+  "timeMinutes": 15,
+  "rubric": {
+    "criteria": [
+      {
+        "id": "inhalt",
+        "name": "Inhalt",
+        "nameVi": "Nội dung",
+        "maxScore": 5,
+        "weight": 30
+      },
+      {
+        "id": "korrektheit",
+        "name": "Korrektheit",
+        "nameVi": "Chính xác ngữ pháp & chính tả",
+        "maxScore": 5,
+        "weight": 35
+      },
+      {
+        "id": "angemessenheit",
+        "name": "Kommunikative Angemessenheit",
+        "nameVi": "Phù hợp giao tiếp",
+        "maxScore": 5,
+        "weight": 35
+      }
+    ],
+    "maxScore": 15
+  },
+  "maxScore": 15
+}

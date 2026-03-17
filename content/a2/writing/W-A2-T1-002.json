@@ -1,0 +1,51 @@
+{
+  "id": "W-A2-T1-002",
+  "cefrLevel": "A2",
+  "teil": 1,
+  "teilName": "E-Mail-Antwort",
+  "textType": "E-Mail",
+  "register": "informell",
+  "topic": "Kurs",
+  "instruction": "Schreiben Sie eine Antwort-E-Mail (ca. 40-60 Woerter). Schreiben Sie zu allen drei Punkten.",
+  "instructionVi": "Tra loi email: Kurs.",
+  "situation": "Ihr Freund fragt nach einem Yoga-Kurs.",
+  "contentPoints": [
+    "Kurs empfehlen",
+    "Zeit und Ort nennen",
+    "eigene Meinung sagen"
+  ],
+  "minWords": 40,
+  "maxWords": 70,
+  "timeMinutes": 15,
+  "rubric": {
+    "criteria": [
+      {
+        "id": "inhalt",
+        "name": "Inhalt",
+        "nameVi": "Noi dung",
+        "maxScore": 5,
+        "weight": 30
+      },
+      {
+        "id": "korrektheit",
+        "name": "Korrektheit",
+        "nameVi": "Chinh xac",
+        "maxScore": 5,
+        "weight": 35
+      },
+      {
+        "id": "angemessenheit",
+        "name": "Kommunikative Angemessenheit",
+        "nameVi": "Phu hop giao tiep",
+        "maxScore": 5,
+        "weight": 35
+      }
+    ],
+    "maxScore": 15
+  },
+  "maxScore": 15,
+  "sourceText": "Hallo! Wie geht es dir? Ich möchte bald einen neuen Kurs machen, aber ich weiß nicht welchen. Du hast doch letztes Jahr einen interessanten Kurs besucht, oder? Kannst du mir einen Kurs empfehlen? Sag mir bitte auch: Wann und wo findet er statt? Wie ist deine Meinung dazu? Ich freue mich auf deine Antwort! Liebe Grüße, Lucas",
+  "sourceTextType": "E-Mail",
+  "stimulusSender": "Lucas",
+  "grafikData": []
+}

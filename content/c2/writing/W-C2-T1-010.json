@@ -1,0 +1,77 @@
+{
+  "id": "W-C2-T1-010",
+  "cefrLevel": "C2",
+  "teil": 1,
+  "teilName": "Akademischer Text",
+  "textType": "Eroerterung",
+  "register": "akademisch",
+  "topic": "Rechtsphilosophie",
+  "instruction": "Essay: Gerechtigkeit in einer Gesellschaft wachsender Ungleichheit. Schreiben Sie einen akademischen Text (mind. 350 Woerter).",
+  "instructionVi": "Viet bai hoc thuat >=350 tu: Rechtsphilosophie.",
+  "situation": "Essay: Gerechtigkeit in einer Gesellschaft wachsender Ungleichheit",
+  "contentPoints": [
+    "These klar formulieren",
+    "Hintergrund skizzieren",
+    "Argumente entwickeln",
+    "Gegenposition widerlegen",
+    "Synthese und Schlussfolgerung",
+    "Ausblick"
+  ],
+  "minWords": 350,
+  "maxWords": 600,
+  "timeMinutes": 50,
+  "rubric": {
+    "criteria": [
+      {
+        "id": "inhalt",
+        "name": "Inhalt",
+        "nameVi": "Noi dung",
+        "maxScore": 5,
+        "weight": 20
+      },
+      {
+        "id": "angemessenheit",
+        "name": "Kommunikative Angemessenheit",
+        "nameVi": "Phu hop giao tiep",
+        "maxScore": 5,
+        "weight": 20
+      },
+      {
+        "id": "korrektheit",
+        "name": "Korrektheit",
+        "nameVi": "Chinh xac ngu phap",
+        "maxScore": 5,
+        "weight": 20
+      },
+      {
+        "id": "spektrum",
+        "name": "Wortschatz & Strukturen",
+        "nameVi": "Da dang tu vung",
+        "maxScore": 5,
+        "weight": 20
+      },
+      {
+        "id": "kohaerenz",
+        "name": "Kohaerenz & Kohaesion",
+        "nameVi": "Mach lac & lien ket",
+        "maxScore": 5,
+        "weight": 20
+      }
+    ],
+    "maxScore": 25
+  },
+  "maxScore": 25,
+  "sourceText": "Text 1: 'Das Primat der Norm: Warum wir den Rechtspositivismus brauchen' von Dr. Maximilian von Arnim, Frankfurter Allgemeine Zeitung, 14. September 2023.\n\nIn einer Ära zunehmender moralischer Fragmentierung erweist sich die strikte Bindung an das kodifizierte Recht als unumgänglicher Ankerpunkt staatlicher Stabilität. Der moderne Rechtsstaat kann es sich nicht leisten, die Geltung seiner Normen unter den Vorbehalt individueller Gerechtigkeitsparadigmen zu stellen. Rechtssicherheit entsteht erst durch die Vorhersehbarkeit richterlicher Entscheidungen auf Basis des geschriebenen Gesetzes. Werden Gesetze unter Berufung auf ein vermeintlich höheres Naturrecht oder subjektive Moralvorstellungen ausgehebelt, droht die Erosion der Rechtsordnung. Die Trennung von Recht und Moral ist daher kein ethisches Defizit, sondern eine zivilisatorische Errungenschaft, die den Bürger vor der Willkür einer moralisierenden Justiz schützt. Nur das positive Recht garantiert die Gleichheit vor dem Gesetz in einer pluralistischen Gesellschaft.\n\nText 2: 'Jenseits des Paragraphen: Die ethische Dimension der Rechtsgeltung' von Prof. Dr. Elena Maric, Archiv für Rechts- und Sozialphilosophie (ARSP), Ausgabe 3/2023.\n\nDie rein positivistische Betrachtungsweise des Rechts greift zu kurz, da sie die Legitimationsbasis jeder Norm ignoriert. Ein Gesetz schöpft seine Verbindlichkeit nicht allein aus dem formal korrekten Setzungsakt, sondern aus seiner teleologischen Ausrichtung auf die Gerechtigkeit. In Anlehnung an die Radbruch’sche Formel muss gelten: Wo die Diskrepanz zwischen dem positiven Gesetz und der Gerechtigkeit ein unerträgliches Maß erreicht, hat das Gesetz als 'unrichtiges Recht' der Gerechtigkeit zu weichen. Ein Rechtssystem, das sich gänzlich von seinen moralischen Wurzeln entkoppelt, degeneriert zum bloßen Herrschaftsinstrument. Die Rechtsphilosophie der Postmoderne fordert daher eine Rückbesinnung auf überpositive Werte. Nur wenn das Recht ein Mindestmaß an ethischer Substanz widerspiegelt, kann es dauerhafte Akzeptanz und damit echte soziale Befriedungsfunktion beanspruchen.",
+  "sourceTextType": "Diskursiv-kontrastierende Textzusammenstellung (Pressekommentar vs. wissenschaftliche Abhandlung)",
+  "stimulusSender": "Prüfungskommission für das Große Staatsexamen / Fakultät für Rechtswissenschaften",
+  "grafikDesc": "Die Grafik 'Vertrauen in die moralische Integrität der Gesetzgebung' illustriert den prozentualen Anteil der Bevölkerung, der die Befolgung eines Gesetzes auch dann für zwingend geboten hält, wenn dieses als moralisch ungerecht empfunden wird. Die Daten verdeutlichen eine signifikante Verschiebung des gesellschaftlichen Konsenses weg von der strikten Gesetzesbindung hin zu einer wertorientierten Gehorsamsverweigerung im Zeitraum von 2018 bis 2023.",
+  "grafikData": [
+    "2018: 72% befürworten strikte Einhaltung des positiven Rechts",
+    "2019: 69% befürworten strikte Einhaltung des positiven Rechts",
+    "2020: 64% befürworten strikte Einhaltung des positiven Rechts",
+    "2021: 58% befürworten strikte Einhaltung des positiven Rechts",
+    "2022: 51% befürworten strikte Einhaltung des positiven Rechts",
+    "2023: 46% befürworten strikte Einhaltung des positiven Rechts",
+    "Quelle: Allensbach Institut für Demoskopie, Erhebung zur Rechtsakzeptanz"
+  ]
+}

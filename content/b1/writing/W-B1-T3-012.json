@@ -1,0 +1,64 @@
+{
+  "id": "W-B1-T3-012",
+  "cefrLevel": "B1",
+  "teil": 3,
+  "teilName": "Formelle E-Mail",
+  "textType": "Formeller Brief",
+  "register": "formell",
+  "topic": "Flugstornierung",
+  "instruction": "Sie haben eine Flugreise nach Berlin gebucht, können diese aber aufgrund einer unerwarteten Krankheit nicht antreten. Schreiben Sie eine formelle E-Mail an den Kundenservice der Fluggesellschaft 'SkyTravel', um Ihren Flug zu stornieren.",
+  "instructionVi": "Bạn đã đặt một chuyến bay đến Berlin nhưng không thể đi do bị ốm đột xuất. Hãy viết một email trang trọng cho bộ phận chăm sóc khách hàng của hãng hàng không 'SkyTravel' để hủy chuyến bay của bạn.",
+  "situation": "Sie haben vor zwei Wochen einen Flug für den 25. Mai gebucht (Buchungsnummer: ST-9982). Gestern hat Ihr Arzt festgestellt, dass Sie eine schwere Grippe haben und in den nächsten zwei Wochen nicht reisen dürfen. Sie müssen nun den Flug offiziell stornieren und sich nach den finanziellen Bedingungen erkundigen.",
+  "contentPoints": [
+    "Nennen Sie den Grund für Ihr Schreiben und die Buchungsnummer.",
+    "Erklären Sie Ihre gesundheitliche Lage und warum Sie nicht fliegen können.",
+    "Fragen Sie nach den Möglichkeiten einer Rückerstattung der Ticketkosten.",
+    "Bitten Sie um Informationen, welche Dokumente (z. B. Attest) das Unternehmen benötigt."
+  ],
+  "sourceText": "Buchungsbestätigung: SkyTravel Flug ST-9982\nDatum: 25. Mai\nStrecke: Frankfurt (FRA) nach Berlin (BER)\nPassagier: [Ihr Name]\nStatus: Bezahlt\nHinweis: Stornierungen sind gemäß unseren AGB schriftlich an den Kundenservice zu richten.",
+  "sourceTextType": "Buchungsbestätigung",
+  "minWords": 80,
+  "maxWords": 120,
+  "timeMinutes": 25,
+  "rubric": {
+    "criteria": [
+      {
+        "id": "inhalt",
+        "name": "Inhalt",
+        "nameVi": "Nội dung",
+        "maxScore": 5,
+        "weight": 25
+      },
+      {
+        "id": "angemessenheit",
+        "name": "Kommunikative Angemessenheit",
+        "nameVi": "Phù hợp giao tiếp",
+        "maxScore": 5,
+        "weight": 20
+      },
+      {
+        "id": "korrektheit",
+        "name": "Korrektheit",
+        "nameVi": "Chính xác ngữ pháp & chính tả",
+        "maxScore": 5,
+        "weight": 25
+      },
+      {
+        "id": "spektrum",
+        "name": "Wortschatz & Strukturen",
+        "nameVi": "Đa dạng từ vựng & cấu trúc",
+        "maxScore": 5,
+        "weight": 15
+      },
+      {
+        "id": "kohaerenz",
+        "name": "Kohaerenz & Kohaesion",
+        "nameVi": "Mạch lạc & liên kết",
+        "maxScore": 5,
+        "weight": 15
+      }
+    ],
+    "maxScore": 25
+  },
+  "maxScore": 25
+}

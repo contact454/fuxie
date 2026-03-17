@@ -1,0 +1,75 @@
+{
+  "id": "W-A1-T1-002",
+  "cefrLevel": "A1",
+  "teil": 1,
+  "teilName": "Formular ausfuellen",
+  "textType": "Formular",
+  "register": "neutral",
+  "topic": "Bibliothek",
+  "instruction": "Fuellen Sie das Formular aus.",
+  "instructionVi": "Dien form: Bibliothek.",
+  "situation": "Sie moechten eine Bibliothekskarte bekommen. Fuellen Sie das Formular aus.",
+  "contentPoints": [
+    "Name und Vorname",
+    "Geburtsdatum",
+    "Adresse",
+    "Telefonnummer",
+    "E-Mail-Adresse"
+  ],
+  "minWords": 15,
+  "maxWords": 30,
+  "timeMinutes": 5,
+  "rubric": {
+    "criteria": [
+      {
+        "id": "inhalt",
+        "name": "Inhalt",
+        "nameVi": "Noi dung",
+        "maxScore": 5,
+        "weight": 30
+      },
+      {
+        "id": "korrektheit",
+        "name": "Korrektheit",
+        "nameVi": "Chinh xac",
+        "maxScore": 5,
+        "weight": 40
+      },
+      {
+        "id": "angemessenheit",
+        "name": "Angemessenheit",
+        "nameVi": "Phu hop",
+        "maxScore": 5,
+        "weight": 30
+      }
+    ],
+    "maxScore": 15
+  },
+  "maxScore": 15,
+  "formFields": [
+    {
+      "label": "Familienname",
+      "type": "text"
+    },
+    {
+      "label": "Vorname",
+      "type": "text"
+    },
+    {
+      "label": "Geburtsdatum",
+      "type": "date"
+    },
+    {
+      "label": "Adresse",
+      "type": "text"
+    },
+    {
+      "label": "Telefon",
+      "type": "text"
+    },
+    {
+      "label": "E-Mail",
+      "type": "email"
+    }
+  ]
+}

@@ -1,0 +1,222 @@
+{
+  "id": "B1-T4-005",
+  "level": "B1",
+  "teil": 4,
+  "teil_name": "Leserbriefe lesen",
+  "topic": "Ausbildung & Karriere",
+  "topic_id": "005",
+  "metadata": {
+    "word_count": 272,
+    "target_grammar": [
+      "Nebensatz mit ob/weil/dass",
+      "Konjunktiv II",
+      "Modalverben"
+    ],
+    "target_vocabulary": [
+      "Praktikum",
+      "Pflicht",
+      "Berufserfahrung",
+      "Theorie",
+      "Praxis",
+      "Ausbeuten",
+      "Lebenslauf",
+      "Arbeitgeber"
+    ],
+    "generated_at": "2026-03-10T23:38:00+07:00",
+    "version": 1
+  },
+  "debate": {
+    "topic": "Sollte jeder ein Pflichtpraktikum machen?",
+    "context": "Manche fordern, dass alle Schüler und Studenten ein Pflichtpraktikum absolvieren sollen, um Berufserfahrung zu sammeln. Andere sehen das kritisch.",
+    "letters": [
+      {
+        "author": "Anna W., Mainz",
+        "text": "Auf jeden Fall! Mein Pflichtpraktikum in einer Werbeagentur hat mir gezeigt, was ich später machen möchte. Ohne diese Erfahrung hätte ich mich für das falsche Studium entschieden. Praktische Erfahrung ist genauso wichtig wie Theorie.",
+        "position": "ja"
+      },
+      {
+        "author": "David S., Göttingen",
+        "text": "Ich bin dagegen. Viele Praktika sind schlecht bezahlt oder unbezahlt. Unternehmen nutzen Praktikanten oft als billige Arbeitskräfte aus. Solange es keinen gesetzlichen Mindestlohn für Praktikanten gibt, sollte niemand dazu gezwungen werden.",
+        "position": "nein"
+      },
+      {
+        "author": "Prof. Maria K., Heidelberg",
+        "text": "Als Dozentin sehe ich den Wert von Praktika deutlich. Studenten, die praktische Erfahrung haben, schreiben bessere Abschlussarbeiten und finden schneller einen Job. Ein Pflichtpraktikum wäre eine sinnvolle Ergänzung zum Studium.",
+        "position": "ja"
+      },
+      {
+        "author": "Luisa B., Potsdam",
+        "text": "Nicht jeder profitiert von einem Praktikum. Ich habe drei Monate Kaffee gekocht und Kopien gemacht — gelernt habe ich nichts. Statt ein Pflichtpraktikum einzuführen, sollte man die Qualität der Praktika verbessern.",
+        "position": "nein"
+      },
+      {
+        "author": "Mehmet Y., Stuttgart",
+        "text": "Ja, aber mit Bedingungen! Das Praktikum sollte mindestens drei Monate dauern, fair bezahlt werden und eine echte Lernmöglichkeit bieten. Wenn diese Standards erfüllt sind, ist ein Pflichtpraktikum eine großartige Chance für junge Menschen.",
+        "position": "ja"
+      }
+    ]
+  },
+  "images": [
+    {
+      "id": "IMG1",
+      "type": "scene",
+      "prompt": "Cute cartoon illustration of young interns at different workplaces: office, lab, art studio. Some learning happily, one making coffee looking bored. Debate theme. Fuxie cartoon style, flat illustration, warm pastel colors, no text.",
+      "filename": "B1-T4-005_scene.png",
+      "placement": "header",
+      "alt_text": "Debatte: Pflichtpraktikum?",
+      "dimensions": "768x512"
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q1",
+      "teil": 4,
+      "type": "ja_nein",
+      "stem": "Anna W. fand ihr Praktikum hilfreich für die Berufswahl.",
+      "answer": "ja",
+      "points": 1,
+      "explanation": {
+        "de": "Anna sagt, ohne das Praktikum hätte sie sich falsch entschieden.",
+        "key_evidence": "hat mir gezeigt, was ich später machen möchte",
+        "key_vocabulary": [
+          {
+            "word": "Berufserfahrung",
+            "type": "Nomen",
+            "meaning": "work experience"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q2",
+      "teil": 4,
+      "type": "ja_nein",
+      "stem": "David S. unterstützt ein Pflichtpraktikum.",
+      "answer": "nein",
+      "points": 1,
+      "explanation": {
+        "de": "David ist dagegen wegen schlechter Bezahlung und Ausnutzung.",
+        "key_evidence": "Ich bin dagegen / Unternehmen nutzen Praktikanten als billige Arbeitskräfte aus",
+        "key_vocabulary": [
+          {
+            "word": "ausnutzen",
+            "type": "Verb",
+            "meaning": "to exploit"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q3",
+      "teil": 4,
+      "type": "ja_nein",
+      "stem": "Der Autor deutet an, dass prof. Maria K. sieht Praktika als wertvolle Ergänzung zum Studium.",
+      "answer": "ja",
+      "points": 1,
+      "explanation": {
+        "de": "Sie sieht den Wert und hält ein Pflichtpraktikum für sinnvoll.",
+        "key_evidence": "Ein Pflichtpraktikum wäre eine sinnvolle Ergänzung zum Studium",
+        "key_vocabulary": [
+          {
+            "word": "Abschlussarbeit",
+            "type": "Nomen",
+            "meaning": "thesis"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q4",
+      "teil": 4,
+      "type": "ja_nein",
+      "stem": "Luisa B. hat bei ihrem Praktikum viel gelernt.",
+      "answer": "nein",
+      "points": 1,
+      "explanation": {
+        "de": "Luisa hat nur Kaffee gekocht und Kopien gemacht — gelernt hat sie nichts.",
+        "key_evidence": "Kaffee gekocht und Kopien gemacht / gelernt habe ich nichts",
+        "key_vocabulary": [
+          {
+            "word": "profitieren",
+            "type": "Verb",
+            "meaning": "to benefit"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q5",
+      "teil": 4,
+      "type": "ja_nein",
+      "stem": "Mehmet Y. ist für ein Pflichtpraktikum, aber mit klaren Standards.",
+      "answer": "ja",
+      "points": 1,
+      "explanation": {
+        "de": "Mehmet sagt Ja, mit Bedingungen: fair bezahlt, echte Lernmöglichkeit.",
+        "key_evidence": "Ja, aber mit Bedingungen / eine großartige Chance für junge Menschen",
+        "key_vocabulary": [
+          {
+            "word": "Bedingung",
+            "type": "Nomen",
+            "meaning": "condition"
+          }
+        ]
+      }
+    }
+  ],
+  "scoring": {
+    "total_points": 5,
+    "pass_threshold": 3,
+    "grading": [
+      {
+        "range": [
+          5,
+          5
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          4,
+          4
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          3,
+          3
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          1,
+          2
+        ],
+        "label": "Noch üben!",
+        "emoji": "📝"
+      },
+      {
+        "range": [
+          0,
+          0
+        ],
+        "label": "Mehr Übung nötig",
+        "emoji": "💪"
+      }
+    ]
+  },
+  "qa": {
+    "vocab_in_b1_list": true,
+    "grammar_b1_appropriate": true,
+    "word_count_in_range": true,
+    "all_answers_verifiable": true,
+    "ja_nein_balanced": true,
+    "image_count": 1,
+    "passed": true
+  }
+}

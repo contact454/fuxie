@@ -1,0 +1,228 @@
+{
+  "id": "B2-T1-007",
+  "level": "B2",
+  "teil": 1,
+  "teil_name": "Sachtext lesen",
+  "topic": "Gesundheit & Medizin",
+  "topic_id": "007",
+  "metadata": {
+    "word_count": 456,
+    "target_grammar": [
+      "Passiv",
+      "Konjunktiv I",
+      "Partizipialstrukturen",
+      "Nominalisierung"
+    ],
+    "target_vocabulary": [
+      "Telemedizin",
+      "Videosprechstunde",
+      "Diagnose",
+      "Versorgungslücke",
+      "Gesundheitswesen",
+      "Facharzt",
+      "Datensicherheit",
+      "Krankenkasse",
+      "Rezept",
+      "Fernbehandlung"
+    ],
+    "generated_at": "2026-03-11T22:21:00+07:00",
+    "version": 1
+  },
+  "article": {
+    "source": "Deutsches Ärzteblatt",
+    "date": "20. Februar 2026",
+    "title": "Telemedizin: Wie der Arztbesuch digital wird",
+    "subtitle": "Zwischen Bequemlichkeit und den Grenzen der Ferndiagnose",
+    "text": "Die Zahl der telemedizinischen Behandlungen in Deutschland hat sich seit 2020 versiebenfacht. Im vergangenen Jahr wurden über 45 Millionen Videosprechstunden durchgeführt — ein deutliches Zeichen dafür, dass sich die ärztliche Versorgung grundlegend wandelt. Was während der Pandemie als Notlösung begann, hat sich zu einem festen Bestandteil des deutschen Gesundheitswesens entwickelt.\n\nBesonders in ländlichen Regionen, wo der nächste Facharzt oft mehr als 50 Kilometer entfernt ist, erweist sich die Telemedizin als wertvolle Ergänzung. Dr. Karin Müller, die als Allgemeinmedizinerin in einem brandenburgischen Dorf praktiziert, nutzt Videosprechstunden inzwischen für rund 30 Prozent ihrer Konsultationen: „Für Verlaufskontrollen bei chronischen Erkrankungen, die Besprechung von Laborergebnissen oder einfache Beratungsgespräche ist die Videosprechstunde ideal. Die Patienten sparen lange Anfahrtswege, und ich kann meine Zeit effizienter einteilen.\"\n\nDie technologische Entwicklung hat die Möglichkeiten der Fernbehandlung erheblich erweitert. Moderne Telemedizin-Plattformen ermöglichen nicht nur Videogespräche, sondern auch die Übermittlung von Vitalparametern über Wearables, die digitale Ausstellung von Rezepten und Überweisungen sowie die KI-gestützte Vorauswertung von Symptomen.\n\nDennoch stößt die Telemedizin an klare Grenzen. Der Bundesärztekammer zufolge eignen sich höchstens 30 Prozent aller medizinischen Fragestellungen für eine rein telemedizinische Behandlung. Bei Beschwerden, die eine körperliche Untersuchung erfordern — etwa Bauchschmerzen, Hautveränderungen oder orthopädische Probleme —, sei eine persönliche Vorstellung unverzichtbar, warnt Kammerpräsident Dr. Klaus Reinhardt.\n\nAuch die Datensicherheit bleibt ein sensibles Thema. Patientendaten unterliegen dem strengsten Datenschutz, doch mehrere Vorfälle im vergangenen Jahr, bei denen Daten von Telemedizin-Anbietern durch Hackerangriffe kompromittiert wurden, haben das Vertrauen der Bevölkerung erschüttert. Eine Forsa-Umfrage zeigt, dass 43 Prozent der Deutschen Bedenken hinsichtlich der Sicherheit ihrer Gesundheitsdaten bei telemedizinischen Anwendungen haben.\n\nDie gesetzlichen Krankenkassen haben reagiert und vergüten telemedizinische Leistungen mittlerweile weitgehend gleichwertig mit Präsenzterminen. Dennoch fehlt vielen älteren Patienten der Zugang zu digitalen Endgeräten oder die Kompetenz im Umgang mit der notwendigen Technologie — ein Problem, das als „digitale Kluft\" im Gesundheitswesen zunehmend diskutiert wird.\n\nExperten prognostizieren, dass bis 2030 rund die Hälfte aller Erstkontakte zwischen Arzt und Patient digital stattfinden wird. Die große Herausforderung bestehe darin, die Telemedizin als sinnvolle Ergänzung zu etablieren, ohne den persönlichen Kontakt zwischen Arzt und Patient zu ersetzen."
+  },
+  "images": [
+    {
+      "id": "IMG1",
+      "type": "scene",
+      "prompt": "Cute cartoon illustration of a doctor in a white coat on a laptop screen, talking to a patient who is sitting comfortably at home on a couch with a cup of tea, showing a telemedicine video consultation. Fuxie cartoon style, flat illustration, warm pastel colors, no text.",
+      "filename": "B2-T1-007_scene.png",
+      "placement": "header",
+      "alt_text": "Telemedizin Videosprechstunde",
+      "dimensions": "768x512"
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q1",
+      "teil": 1,
+      "type": "multiple_choice",
+      "stem": "Wie viele Videosprechstunden wurden im vergangenen Jahr durchgeführt?",
+      "options": {
+        "a": "15 Millionen.",
+        "b": "45 Millionen.",
+        "c": "75 Millionen."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Über 45 Millionen Videosprechstunden wurden im vergangenen Jahr durchgeführt.",
+        "key_evidence": "über 45 Millionen Videosprechstunden",
+        "key_vocabulary": [
+          {
+            "word": "Videosprechstunde",
+            "type": "Nomen",
+            "meaning": "video consultation"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q2",
+      "teil": 1,
+      "type": "multiple_choice",
+      "stem": "Was lässt sich aus den Angaben über viel Prozent ihrer Konsultationen führt Dr. Müller per Video durch schließen?",
+      "options": {
+        "a": "20 Prozent.",
+        "b": "30 Prozent.",
+        "c": "50 Prozent."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Dr. Müller nutzt Videosprechstunden für rund 30 Prozent ihrer Konsultationen.",
+        "key_evidence": "rund 30 Prozent ihrer Konsultationen",
+        "key_vocabulary": [
+          {
+            "word": "Konsultation",
+            "type": "Nomen",
+            "meaning": "consultation"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q3",
+      "teil": 1,
+      "type": "multiple_choice",
+      "stem": "Welche Schwäche hat die Argumentation bezüglich viel Prozent der medizinischen Fragestellungen eignen sich für Telemedizin?",
+      "options": {
+        "a": "Höchstens 30 Prozent.",
+        "b": "Etwa 50 Prozent.",
+        "c": "Mindestens 70 Prozent."
+      },
+      "answer": "a",
+      "points": 1,
+      "explanation": {
+        "de": "Laut Bundesärztekammer eignen sich höchstens 30 Prozent für Telemedizin.",
+        "key_evidence": "höchstens 30 Prozent aller medizinischen Fragestellungen",
+        "key_vocabulary": [
+          {
+            "word": "Fernbehandlung",
+            "type": "Nomen",
+            "meaning": "remote treatment"
+          }
+        ],
+        "reasoning": "[Critical] "
+      }
+    },
+    {
+      "id": "Q4",
+      "teil": 1,
+      "type": "multiple_choice",
+      "stem": "Was impliziert der Text über viel Prozent der Deutschen haben Bedenken zur Datensicherheit?",
+      "options": {
+        "a": "23 Prozent.",
+        "b": "43 Prozent.",
+        "c": "63 Prozent."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "43 Prozent der Deutschen haben Bedenken hinsichtlich der Sicherheit ihrer Gesundheitsdaten.",
+        "key_evidence": "43 Prozent der Deutschen Bedenken",
+        "key_vocabulary": [
+          {
+            "word": "Datensicherheit",
+            "type": "Nomen",
+            "meaning": "data security"
+          }
+        ],
+        "reasoning": "[Inferential] "
+      }
+    },
+    {
+      "id": "Q5",
+      "teil": 1,
+      "type": "multiple_choice",
+      "stem": "Was lässt sich aus den Angaben über prognostizieren Experten für das Jahr 2030 schließen?",
+      "options": {
+        "a": "Alle Arztbesuche werden digital sein.",
+        "b": "Rund die Hälfte aller Erstkontakte wird digital stattfinden.",
+        "c": "Telemedizin wird wieder abgeschafft."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Experten prognostizieren, dass bis 2030 rund die Hälfte aller Erstkontakte digital stattfindet.",
+        "key_evidence": "bis 2030 rund die Hälfte aller Erstkontakte",
+        "key_vocabulary": [
+          {
+            "word": "prognostizieren",
+            "type": "Verb",
+            "meaning": "to predict / forecast"
+          }
+        ],
+        "reasoning": "[Inferential] "
+      }
+    }
+  ],
+  "scoring": {
+    "total_points": 5,
+    "pass_threshold": 3,
+    "grading": [
+      {
+        "range": [
+          5,
+          5
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          4,
+          4
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          3,
+          3
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          1,
+          2
+        ],
+        "label": "Noch üben!",
+        "emoji": "📝"
+      },
+      {
+        "range": [
+          0,
+          0
+        ],
+        "label": "Mehr Übung nötig",
+        "emoji": "💪"
+      }
+    ]
+  },
+  "qa": {
+    "vocab_in_b2_list": true,
+    "grammar_b2_appropriate": true,
+    "word_count_in_range": true,
+    "all_answers_verifiable": true,
+    "image_count": 1,
+    "passed": true
+  }
+}

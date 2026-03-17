@@ -1,0 +1,78 @@
+{
+  "id": "W-A1-T1-011",
+  "cefrLevel": "A1",
+  "teil": 1,
+  "teilName": "Formular ausfuellen",
+  "textType": "Formular",
+  "register": "neutral",
+  "topic": "Schwimmbad",
+  "instruction": "Ihre Freundin Maria Müller möchte eine Mitgliedskarte für das Schwimmbad 'Aquafit' beantragen. Helfen Sie ihr und füllen Sie die fünf fehlenden Informationen im Formular aus.",
+  "instructionVi": "Bạn của bạn, Maria Müller, muốn đăng ký thẻ thành viên cho hồ bơi 'Aquafit'. Hãy giúp cô ấy điền 5 thông tin còn thiếu vào biểu mẫu.",
+  "situation": "Maria Müller (25 Jahre alt) kommt aus Linz in Österreich. Sie wohnt jetzt in der Gartenstraße 12, 10115 Berlin. Sie möchte regelmäßig Sport machen und plant, dreimal pro Woche im 'Aquafit' schwimmen zu gehen.",
+  "contentPoints": [
+    "Herkunftsland der Person",
+    "Aktuelle Postleitzahl und Stadt",
+    "Straße und Hausnummer",
+    "Alter des Mitglieds",
+    "Geplante Besuche pro Woche"
+  ],
+  "sourceText": "Maria Müller ist 25 Jahre alt und kommt aus Linz in Österreich. Seit zwei Monaten wohnt sie in der Gartenstraße 12, 10115 Berlin. Sie möchte im Schwimmbad 'Aquafit' trainieren, am liebsten dreimal in der Woche.",
+  "sourceTextType": "Kurzbeschreibung",
+  "formFields": [
+    {
+      "label": "Name, Vorname",
+      "type": "text",
+      "value": "Müller, Maria"
+    },
+    {
+      "label": "Heimatland",
+      "type": "text"
+    },
+    {
+      "label": "PLZ / Wohnort",
+      "type": "text"
+    },
+    {
+      "label": "Straße / Nr.",
+      "type": "text"
+    },
+    {
+      "label": "Alter",
+      "type": "number"
+    },
+    {
+      "label": "Häufigkeit (pro Woche)",
+      "type": "text"
+    }
+  ],
+  "minWords": 15,
+  "maxWords": 30,
+  "timeMinutes": 5,
+  "rubric": {
+    "criteria": [
+      {
+        "id": "inhalt",
+        "name": "Inhalt",
+        "nameVi": "Nội dung",
+        "maxScore": 5,
+        "weight": 30
+      },
+      {
+        "id": "korrektheit",
+        "name": "Korrektheit",
+        "nameVi": "Chính xác ngữ pháp & chính tả",
+        "maxScore": 5,
+        "weight": 40
+      },
+      {
+        "id": "angemessenheit",
+        "name": "Angemessenheit",
+        "nameVi": "Tính phù hợp",
+        "maxScore": 5,
+        "weight": 30
+      }
+    ],
+    "maxScore": 15
+  },
+  "maxScore": 15
+}

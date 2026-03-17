@@ -1,0 +1,145 @@
+{
+  "id": "C1-T3-006",
+  "level": "C1",
+  "teil": 3,
+  "teil_name": "Lückentext (Sätze)",
+  "topic": "Wissenschaftstheorie",
+  "topic_id": "006",
+  "metadata": {
+    "word_count": 177,
+    "target_grammar": [
+      "Nominalisierung",
+      "Partizipialkonstruktionen",
+      "Konjunktiv I/II",
+      "Passiversatzformen"
+    ],
+    "target_vocabulary": [],
+    "generated_at": "2026-03-11T23:15:03.315013",
+    "version": 1
+  },
+  "sentence_cloze": {
+    "title": "Wissenschaftskommunikation im Zeitalter von Desinformation",
+    "text": "Die Pandemie hat die Bedeutung effektiver Wissenschaftskommunikation schmerzhaft deutlich gemacht. {1} Virologen, die zuvor nur einem Fachpublikum bekannt waren, fanden sich plötzlich im Kreuzfeuer einer aufgeheizten öffentlichen Debatte wieder.\n\nDas Vertrauen in die Wissenschaft variiert erheblich. {2} Laut dem Wissenschaftsbarometer 2024 halten 56 Prozent der Deutschen die Wissenschaft für vertrauenswürdig, doch 30 Prozent sind skeptisch oder misstrauisch.\n\nEin zentrales Problem ist die Diskrepanz zwischen wissenschaftlicher Unsicherheit und öffentlicher Erwartungshaltung. {3} Wissenschaft ist ein Prozess der schrittweisen Annäherung an die Wahrheit, doch die Öffentlichkeit erwartet eindeutige Antworten.\n\nSoziale Medien amplifizieren Desinformation in beispiellosem Ausmaß. {4} Falsche oder irreführende Informationen verbreiten sich sechs- bis zwanzigmal schneller als korrekte Informationen.\n\nWissenschaftsjournalisten stehen vor einem Dilemma. {5} Die Notwendigkeit, komplexe Sachverhalte zu vereinfachen, birgt die Gefahr, wichtige Nuancen und Einschränkungen zu unterschlagen.\n\nNeue Formate der Wissenschaftskommunikation entstehen. {6} Podcasts, YouTube-Kanäle und Science Slams erreichen Zielgruppen, die traditionelle wissenschaftliche Publikationen nicht lesen.\n\nDie Wissenschaft selbst muss sich verändern. {7} Forschende müssen Kommunikation als integralen Bestandteil ihrer Tätigkeit begreifen, nicht als lästige Pflichtübung.\n\nLetztlich geht es um die Zukunft einer aufgeklärten Gesellschaft. {8}",
+    "sentences": [
+      {
+        "id": "A",
+        "text": "Die Finanzierung investigativer Wissenschaftsjournalistik ist seit Jahren rückläufig."
+      },
+      {
+        "id": "B",
+        "text": "Die Kluft zwischen wissenschaftlichem Konsens und öffentlicher Wahrnehmung wurde in der Krise überdeutlich sichtbar."
+      },
+      {
+        "id": "C",
+        "text": "Die algorithmische Verstärkung sensationalistischer Inhalte untergräbt systematisch die öffentliche Wissensbasis."
+      },
+      {
+        "id": "D",
+        "text": "Wenn Forscher ihre Einschätzungen revidieren, wird dies in der Öffentlichkeit häufig als Inkompetenz statt als wissenschaftliche Selbstkorrektur wahrgenommen."
+      },
+      {
+        "id": "E",
+        "text": "Ohne ein grundlegendes Verständnis wissenschaftlicher Methoden und Denkweisen wird der demokratische Diskurs anfällig für Manipulation."
+      },
+      {
+        "id": "F",
+        "text": "Diese niedrigschwelligen Formate demokratisieren den Zugang zu wissenschaftlichem Wissen."
+      },
+      {
+        "id": "G",
+        "text": "Bürgerwissenschaft, bei der Laien aktiv an Forschungsprojekten mitwirken, schafft eine Brücke zwischen Wissenschaft und Gesellschaft."
+      },
+      {
+        "id": "H",
+        "text": "Die Gratwanderung zwischen Verständlichkeit und Genauigkeit ist eine der größten Herausforderungen des Fachs."
+      },
+      {
+        "id": "I",
+        "text": "Die Vertrauenswerte unterscheiden sich dabei stark nach Bildungsgrad, politischer Orientierung und Medienkonsumgewohnheiten."
+      },
+      {
+        "id": "J",
+        "text": "Universitäten sollten Kommunikationstraining in die wissenschaftliche Ausbildung integrieren und öffentliches Engagement stärker in Karriereanreize einbeziehen."
+      }
+    ],
+    "answers": {
+      "1": "B",
+      "2": "I",
+      "3": "D",
+      "4": "C",
+      "5": "H",
+      "6": "F",
+      "7": "J",
+      "8": "E"
+    },
+    "distractors": [
+      "A",
+      "G"
+    ]
+  },
+  "images": [
+    {
+      "id": "IMG1",
+      "type": "scene",
+      "prompt": "Cute cartoon illustration related to Wissenschaftstheorie. Fuxie cartoon style, flat illustration, warm pastel colors, no text.",
+      "filename": "C1-T3-006_scene.png",
+      "placement": "header",
+      "alt_text": "Wissenschaftskommunikation im Zeitalter von Desinf",
+      "dimensions": "768x512"
+    }
+  ],
+  "scoring": {
+    "total_points": 8,
+    "pass_threshold": 5,
+    "grading": [
+      {
+        "range": [
+          7,
+          8
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          5,
+          6
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          4,
+          4
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          1,
+          3
+        ],
+        "label": "Noch üben!",
+        "emoji": "📝"
+      },
+      {
+        "range": [
+          0,
+          0
+        ],
+        "label": "Mehr Übung nötig",
+        "emoji": "💪"
+      }
+    ]
+  },
+  "qa": {
+    "vocab_in_c1_list": true,
+    "grammar_c1_appropriate": true,
+    "word_count_in_range": true,
+    "all_gaps_match": true,
+    "image_count": 1,
+    "passed": true
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "id": "W-B1-T2-011",
+  "cefrLevel": "B1",
+  "teil": 2,
+  "teilName": "Meinungsaeusserung",
+  "textType": "Forumsbeitrag",
+  "register": "informell",
+  "topic": "Bio-Lebensmittel",
+  "instruction": "Sie haben im Internet einen Diskussionsbeitrag zum Thema „Bio-Lebensmittel — gesund oder nur teuer?“ gefunden. Schreiben Sie nun Ihre Meinung dazu (ca. 80-120 Wörter).",
+  "instructionVi": "Bạn tìm thấy một bài thảo luận trên internet về chủ đề \"Thực phẩm hữu cơ - tốt cho sức khỏe hay chỉ đắt tiền?\". Hãy viết ý kiến của bạn về vấn đề này (khoảng 80-120 từ).",
+  "situation": "In einem Online-Forum für Ernährung wird hitzig über den Sinn von Bio-Produkten debattiert. Während einige Nutzer die gesundheitlichen Vorteile loben, kritisieren andere die hohen Preise im Supermarkt. Sie möchten sich an dieser Diskussion beteiligen und Ihre persönliche Sichtweise teilen.",
+  "contentPoints": [
+    "Geben Sie Ihre Meinung zu Bio-Lebensmitteln an.",
+    "Nennen Sie Gründe, warum man Bio-Produkte kaufen sollte oder warum nicht.",
+    "Beschreiben Sie, worauf Sie beim Einkaufen von Lebensmitteln besonders achten.",
+    "Machen Sie einen Vorschlag, wie man sich gesund und trotzdem günstig ernähren kann."
+  ],
+  "sourceText": "Sarah: Ich kaufe fast nur noch Bio, weil ich keine Pestizide in meinem Essen möchte. Die Umwelt profitiert auch davon. Aber ehrlich gesagt, am Ende des Monats ist mein Geldbeutel oft leer. \n\nKommentare:\nMax: Ich halte das für Geldverschwendung. Vitamine sind in normalem Gemüse genauso drin, und Bio ist oft nur ein Marketing-Trick.\nLena: Mir ist vor allem das Tierwohl wichtig. Bei Bio-Fleisch weiß ich, dass die Tiere ein besseres Leben hatten. Das ist mir den Aufpreis wert.",
+  "sourceTextType": "Forumsdiskussion",
+  "minWords": 80,
+  "maxWords": 120,
+  "timeMinutes": 20,
+  "rubric": {
+    "criteria": [
+      {
+        "id": "inhalt",
+        "name": "Inhalt",
+        "nameVi": "Nội dung",
+        "maxScore": 5,
+        "weight": 25
+      },
+      {
+        "id": "angemessenheit",
+        "name": "Kommunikative Angemessenheit",
+        "nameVi": "Phù hợp giao tiếp",
+        "maxScore": 5,
+        "weight": 20
+      },
+      {
+        "id": "korrektheit",
+        "name": "Korrektheit",
+        "nameVi": "Chính xác ngữ pháp & chính tả",
+        "maxScore": 5,
+        "weight": 25
+      },
+      {
+        "id": "spektrum",
+        "name": "Wortschatz & Strukturen",
+        "nameVi": "Đa dạng từ vựng & cấu trúc",
+        "maxScore": 5,
+        "weight": 15
+      },
+      {
+        "id": "kohaerenz",
+        "name": "Kohaerenz & Kohaesion",
+        "nameVi": "Mạch lạc & liên kết",
+        "maxScore": 5,
+        "weight": 15
+      }
+    ],
+    "maxScore": 25
+  },
+  "maxScore": 25
+}

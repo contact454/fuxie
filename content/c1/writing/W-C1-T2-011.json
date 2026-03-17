@@ -1,0 +1,64 @@
+{
+  "id": "W-C1-T2-011",
+  "cefrLevel": "C1",
+  "teil": 2,
+  "teilName": "Textumwandlung",
+  "textType": "Formeller Brief",
+  "register": "formell",
+  "topic": "Forschungsantrag",
+  "instruction": "Sie haben einen Vortrag über innovative Stadtbegrünung gehört. Verfassen Sie auf dieser Grundlage einen formellen Brief an die Deutsche Forschungsgemeinschaft (DFG), um Fördermittel für ein konkretes Forschungsprojekt zu beantragen. Wandeln Sie die Informationen aus dem Vortrag in eine wissenschaftlich fundierte Argumentation für Ihren Antrag um.",
+  "instructionVi": "Dựa trên nội dung một bài thuyết trình về phủ xanh đô thị sáng tạo, hãy viết một lá thư trang trọng gửi Hiệp hội Nghiên cứu Đức (DFG) để xin tài trợ cho một dự án nghiên cứu cụ thể. Chuyển đổi thông tin từ bài thuyết trình thành lập luận khoa học cho đơn xin của bạn.",
+  "situation": "Sie sind wissenschaftlicher Mitarbeiter an der Technischen Universität und spezialisiert auf ökologisches Bauen. Nach einem Gastvortrag zum Thema 'Vertikale Gärten' möchten Sie eine Studie zur Langzeitstabilität und Bewässerungseffizienz durchführen und benötigen hierfür eine offizielle Forschungsförderung.",
+  "contentPoints": [
+    "Zusammenfassung der zentralen Thesen des Vortrags zur Bedeutung vertikaler Begrünung.",
+    "Darstellung der bestehenden Forschungslücken (Statik und Instandhaltungskosten).",
+    "Detaillierte Erläuterung Ihres geplanten Forschungsansatzes und der Methodik.",
+    "Darlegung der gesellschaftlichen und ökologischen Relevanz des Projekts für die Stadt der Zukunft."
+  ],
+  "sourceText": "Meine Damen und Herren, heute sprechen wir über die Zukunft unserer Städte. Es ist kein Geheimnis: Beton speichert Hitze. Wir sehen einen massiven Anstieg der Durchschnittstemperaturen in Innenstädten, den sogenannten Heat-Island-Effekt. Die Lösung liegt nicht nur in herkömmlichen Parks, sondern direkt an den Wänden unserer Gebäude. Vertikale Begrünung, also Gärten, die an Fassaden wachsen, können die Umgebungstemperatur lokal um bis zu fünf Grad senken. Aber – und das ist der entscheidende Punkt – wir wissen in der Praxis noch viel zu wenig über die langfristige Statik und die effiziente Bewässerung solcher Systeme im industriellen Maßstab. Viele Pilotprojekte scheitern bereits nach zwei Jahren, weil entweder die Wurzeln die Bausubstanz angreifen oder die Kosten für die manuelle Instandhaltung schlichtweg explodieren. Hier brauchen wir dringend wissenschaftlich fundierte Langzeitstudien, um automatisierte und standardisierte Verfahren zu entwickeln. Wenn wir die Städte der Zukunft wirklich lebenswert gestalten wollen, müssen wir die Biologie mit der modernen Architektur verschmelzen, ohne dabei die Sicherheit der Gebäude zu gefährden.",
+  "sourceTextType": "Muendlicher Vortrag",
+  "minWords": 200,
+  "maxWords": 300,
+  "timeMinutes": 40,
+  "rubric": {
+    "criteria": [
+      {
+        "id": "inhalt",
+        "name": "Inhalt",
+        "nameVi": "Nội dung",
+        "maxScore": 5,
+        "weight": 20
+      },
+      {
+        "id": "angemessenheit",
+        "name": "Kommunikative Angemessenheit",
+        "nameVi": "Phù hợp giao tiếp",
+        "maxScore": 5,
+        "weight": 20
+      },
+      {
+        "id": "korrektheit",
+        "name": "Korrektheit",
+        "nameVi": "Chính xác ngữ pháp & chính tả",
+        "maxScore": 5,
+        "weight": 20
+      },
+      {
+        "id": "spektrum",
+        "name": "Wortschatz & Strukturen",
+        "nameVi": "Đa dạng từ vựng & cấu trúc",
+        "maxScore": 5,
+        "weight": 20
+      },
+      {
+        "id": "kohaerenz",
+        "name": "Kohaerenz & Kohaesion",
+        "nameVi": "Mạch lạc & liên kết",
+        "maxScore": 5,
+        "weight": 20
+      }
+    ],
+    "maxScore": 25
+  },
+  "maxScore": 25
+}

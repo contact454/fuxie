@@ -1,0 +1,258 @@
+{
+  "id": "B1-T3-010",
+  "level": "B1",
+  "teil": 3,
+  "teil_name": "Anzeigen zuordnen",
+  "topic": "Familie & Beziehungen",
+  "topic_id": "010",
+  "metadata": {
+    "word_count": 228,
+    "target_grammar": [
+      "Nebensatz mit weil/dass/wenn",
+      "Modalverben",
+      "Passiv"
+    ],
+    "target_vocabulary": [
+      "Familienberatung",
+      "Elternkurs",
+      "Kinderbetreuung",
+      "Nachhilfe",
+      "Babysitter",
+      "Spielgruppe",
+      "Beratung",
+      "Erziehung"
+    ],
+    "generated_at": "2026-03-10T23:32:00+07:00",
+    "version": 1
+  },
+  "anzeigen": [
+    {
+      "id": "A",
+      "text": "Familienberatung — Probleme in der Ehe, Erziehungsfragen, Trennungsbegleitung. Vertraulich und kostenlos. Termine: Mo–Fr 9–17 Uhr. Caritas-Beratungsstelle Mitte. Tel: 030-6677889. Auch auf Türkisch und Arabisch."
+    },
+    {
+      "id": "B",
+      "text": "Nachhilfe in Mathe und Deutsch — Erfahrene Lehrerin gibt Einzelunterricht für Schüler (Klasse 5–10). 25 €/Stunde. Bei Ihnen zu Hause oder online. Flexible Termine. Kontakt: nachhilfe.anna@mail.de"
+    },
+    {
+      "id": "C",
+      "text": "Eltern-Kind-Café — Treffpunkt für Mütter und Väter mit Babys und Kleinkindern (0–3 Jahre). Spielecke, Wickelraum, Kaffee und Kuchen. Di + Do, 10–12 Uhr. Kostenlos. Familienzentrum Kreuzberg."
+    },
+    {
+      "id": "D",
+      "text": "Babysitter gesucht! Familie mit 2 Kindern (4 und 7) sucht zuverlässige/n Babysitter/in für Fr + Sa Abend, 18–22 Uhr. 12 €/Std. Erfahrung und Erste-Hilfe-Kurs erwünscht. kontakt@familie-berger.de"
+    },
+    {
+      "id": "E",
+      "text": "Kita-Platz frei! Kindertagesstätte Sonnenblume hat ab September Plätze für Kinder ab 1 Jahr. Ganztags (7–17 Uhr). Pädagogisches Konzept: Montessori. Infotag: 5. Juni, 15 Uhr. www.kita-sonnenblume.de"
+    },
+    {
+      "id": "F",
+      "text": "Elternkurs: Starke Kinder — Wie unterstütze ich mein Kind in der Pubertät? 5 Abende, Mi 19–21 Uhr. Leitung: Familienpsychologin Frau Dr. Stein. 60 €/Paar. VHS Pankow. Anmeldung erforderlich."
+    },
+    {
+      "id": "G",
+      "text": "Au-pair-Vermittlung International — Gastfamilien in Deutschland suchen Au-pairs aus aller Welt. 6–12 Monate. Taschengeld, Unterkunft, Sprachkurs inklusive. Info: www.aupair-connect.de"
+    },
+    {
+      "id": "H",
+      "text": "Großeltern-Enkel-Tag im Zoo — Sonntag, 1. Juni: Großeltern mit Enkel zahlen zusammen nur 15 € (statt 28 €). Tierpfleger-Führung, Bastelstation, Kinderfest. Zoo Berlin, 10–17 Uhr."
+    }
+  ],
+  "situationen": [
+    {
+      "id": "S1",
+      "text": "Herr und Frau Yilmaz haben Probleme in der Ehe und brauchen Hilfe — am besten auf Türkisch.",
+      "answer": "A"
+    },
+    {
+      "id": "S2",
+      "text": "Frau Müller sucht für ihren Sohn (7. Klasse) jemanden, der ihm bei den Hausaufgaben hilft.",
+      "answer": "B"
+    },
+    {
+      "id": "S3",
+      "text": "Eltern eines 13-Jährigen möchten lernen, wie sie ihr Kind in der Pubertät unterstützen.",
+      "answer": "F"
+    },
+    {
+      "id": "S4",
+      "text": "Maria hat ein Baby (6 Monate) und sucht einen Treffpunkt, wo sie andere junge Eltern kennenlernen kann.",
+      "answer": "C"
+    },
+    {
+      "id": "S5",
+      "text": "Oma Gertrude möchte einen besonderen Ausflug mit ihren Enkeln machen, möglichst günstig.",
+      "answer": "H"
+    }
+  ],
+  "null_matches": [
+    "D",
+    "E",
+    "G"
+  ],
+  "images": [
+    {
+      "id": "IMG1",
+      "type": "scene",
+      "prompt": "Cute cartoon illustration of a family center bulletin board with ads for family counseling, tutoring, parent-child cafe, babysitting, and zoo day trips. Fuxie cartoon style, flat illustration, warm pastel colors, no text.",
+      "filename": "B1-T3-010_scene.png",
+      "placement": "header",
+      "alt_text": "Familien-Anzeigen",
+      "dimensions": "768x512"
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q1",
+      "teil": 3,
+      "type": "matching",
+      "stem": "Die Ansicht, dass herr und Frau Yilmaz brauchen Eheberatung, am besten auf Türkisch, wird vertreten von:",
+      "answer": "A",
+      "points": 1,
+      "explanation": {
+        "de": "Die Caritas-Beratung bietet Familienberatung, kostenlos, auch auf Türkisch.",
+        "key_evidence": "Probleme in der Ehe / kostenlos / Auch auf Türkisch",
+        "key_vocabulary": [
+          {
+            "word": "Familienberatung",
+            "type": "Nomen",
+            "meaning": "family counseling"
+          }
+        ],
+        "reasoning": "[Inferential] "
+      }
+    },
+    {
+      "id": "Q2",
+      "teil": 3,
+      "type": "matching",
+      "stem": "Frau Müllers Sohn (7. Klasse) braucht Hausaufgabenhilfe.",
+      "answer": "B",
+      "points": 1,
+      "explanation": {
+        "de": "Nachhilfe für Schüler Klasse 5–10, zu Hause oder online.",
+        "key_evidence": "Einzelunterricht für Schüler (Klasse 5–10)",
+        "key_vocabulary": [
+          {
+            "word": "Nachhilfe",
+            "type": "Nomen",
+            "meaning": "tutoring"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q3",
+      "teil": 3,
+      "type": "matching",
+      "stem": "Eltern eines 13-Jährigen suchen einen Kurs zur Pubertätsbegleitung.",
+      "answer": "F",
+      "points": 1,
+      "explanation": {
+        "de": "Der Elternkurs behandelt Unterstützung in der Pubertät.",
+        "key_evidence": "Wie unterstütze ich mein Kind in der Pubertät",
+        "key_vocabulary": [
+          {
+            "word": "Pubertät",
+            "type": "Nomen",
+            "meaning": "puberty"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q4",
+      "teil": 3,
+      "type": "matching",
+      "stem": "Die Position, dass maria sucht mit Baby (6 Monate) einen Treffpunkt für junge Eltern, findet sich bei:",
+      "answer": "C",
+      "points": 1,
+      "explanation": {
+        "de": "Das Eltern-Kind-Café ist für Eltern mit Babys 0–3 Jahre, kostenlos.",
+        "key_evidence": "Treffpunkt für Mütter und Väter mit Babys / 0–3 Jahre / Kostenlos",
+        "key_vocabulary": [
+          {
+            "word": "Spielecke",
+            "type": "Nomen",
+            "meaning": "play corner"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q5",
+      "teil": 3,
+      "type": "matching",
+      "stem": "Oma Gertrude will einen günstigen Ausflug mit Enkeln machen.",
+      "answer": "H",
+      "points": 1,
+      "explanation": {
+        "de": "Der Großeltern-Enkel-Tag im Zoo bietet Sonderpreis für Großeltern mit Enkeln.",
+        "key_evidence": "Großeltern mit Enkel zahlen zusammen nur 15 €",
+        "key_vocabulary": [
+          {
+            "word": "Enkel",
+            "type": "Nomen",
+            "meaning": "grandchild"
+          }
+        ]
+      }
+    }
+  ],
+  "scoring": {
+    "total_points": 5,
+    "pass_threshold": 3,
+    "grading": [
+      {
+        "range": [
+          5,
+          5
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          4,
+          4
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          3,
+          3
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          1,
+          2
+        ],
+        "label": "Noch üben!",
+        "emoji": "📝"
+      },
+      {
+        "range": [
+          0,
+          0
+        ],
+        "label": "Mehr Übung nötig",
+        "emoji": "💪"
+      }
+    ]
+  },
+  "qa": {
+    "vocab_in_b1_list": true,
+    "grammar_b1_appropriate": true,
+    "word_count_in_range": true,
+    "all_answers_verifiable": true,
+    "null_matches_correct": true,
+    "image_count": 1,
+    "passed": true
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "id": "W-A1-T2-012",
+  "cefrLevel": "A1",
+  "teil": 2,
+  "teilName": "Kurze E-Mail",
+  "textType": "E-Mail",
+  "register": "informell",
+  "topic": "Arzttermin",
+  "instruction": "Sie möchten heute mit Ihrem Freund Max Fußball spielen, aber Sie sind krank. Schreiben Sie eine E-Mail an Max.",
+  "instructionVi": "Bạn muốn đi chơi bóng đá với người bạn Max hôm nay, nhưng bạn bị ốm. Hãy viết một email cho Max.",
+  "situation": "Sie haben heute Nachmittag eine Verabredung mit Max zum Fußballspielen. Da Sie starke Kopfschmerzen haben, haben Sie kurzfristig einen Termin beim Arzt bekommen. Sie müssen das Treffen absagen.",
+  "contentPoints": [
+    "Grund für die E-Mail (Absage)",
+    "Termin beim Arzt (Wann?)",
+    "Vorschlag für ein neues Treffen"
+  ],
+  "sourceText": "Hallo, kommst du heute um 16:00 Uhr zum Fußballplatz? Ich bringe den Ball mit. Bis dann, Max",
+  "sourceTextType": "E-Mail",
+  "minWords": 20,
+  "maxWords": 40,
+  "timeMinutes": 10,
+  "rubric": {
+    "criteria": [
+      {
+        "id": "inhalt",
+        "name": "Inhalt",
+        "nameVi": "Nội dung",
+        "maxScore": 5,
+        "weight": 30
+      },
+      {
+        "id": "korrektheit",
+        "name": "Korrektheit",
+        "nameVi": "Chính xác ngữ pháp & chính tả",
+        "maxScore": 5,
+        "weight": 40
+      },
+      {
+        "id": "angemessenheit",
+        "name": "Angemessenheit",
+        "nameVi": "Tính phù hợp",
+        "maxScore": 5,
+        "weight": 30
+      }
+    ],
+    "maxScore": 15
+  },
+  "maxScore": 15
+}

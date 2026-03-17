@@ -1,0 +1,64 @@
+{
+  "id": "W-B2-T1-011",
+  "cefrLevel": "B2",
+  "teil": 1,
+  "teilName": "Forumsbeitrag",
+  "textType": "Forumsbeitrag",
+  "register": "neutral",
+  "topic": "Veganismus",
+  "instruction": "Sie schreiben einen Forumsbeitrag zur aktuellen Debatte über vegane Ernährung. Äußern Sie Ihre Meinung zum Trend des Veganismus, diskutieren Sie Gründe für diese Lebensweise und gehen Sie auf die Herausforderungen im Alltag ein. Schreiben Sie circa 150 bis 250 Wörter.",
+  "instructionVi": "Bạn hãy viết một bài đăng trên diễn đàn về cuộc tranh luận hiện nay về chế độ ăn thuần chay. Hãy nêu ý kiến của bạn về xu hướng ăn thuần chay, thảo luận về lý do của lối sống này và đề cập đến những thách thức trong cuộc sống hàng ngày. Viết khoảng 150 đến 250 từ.",
+  "situation": "In einem Online-Forum für junge Erwachsene wird derzeit intensiv über das Thema 'Veganismus – Modeerscheinung oder Notwendigkeit?' diskutiert. Da Sie sich für gesunde Ernährung und Nachhaltigkeit interessieren, möchten Sie einen Beitrag verfassen und Ihre Perspektive einbringen.",
+  "contentPoints": [
+    "Nehmen Sie Stellung zum Trend des Veganismus in der heutigen Gesellschaft.",
+    "Nennen Sie Gründe, warum sich immer mehr Menschen für eine rein pflanzliche Ernährung entscheiden.",
+    "Erläutern Sie mögliche Schwierigkeiten oder Nachteile bei der Umstellung auf Veganismus.",
+    "Schlagen Sie Alternativen vor, wie man sich umweltbewusst ernähren kann, ohne komplett auf tierische Produkte zu verzichten."
+  ],
+  "sourceText": "Die Zahl der Veganer in Deutschland steigt stetig an. Laut aktuellen Umfragen ernähren sich bereits über 1,5 Millionen Menschen rein pflanzlich. Die Motive sind vielfältig: Tierwohl, Umweltschutz und die eigene Gesundheit stehen im Vordergrund. Doch Kritiker warnen vor Nährstoffmangel, insbesondere bei Vitamin B12. Der Ernährungsexperte Dr. Klaus Schmidt betont: 'Eine vegane Ernährung kann gesundheitliche Vorteile bieten, erfordert aber ein fundiertes Wissen über Lebensmittelkombinationen und Supplementierung.' Gleichzeitig wächst der Markt für vegane Ersatzprodukte rasant, was den Einstieg zwar erleichtert, aber oft mit hochverarbeiteten Inhaltsstoffen einhergeht.",
+  "sourceTextType": "Online-Artikel aus dem Magazin 'Ernährung Heute'",
+  "minWords": 150,
+  "maxWords": 250,
+  "timeMinutes": 35,
+  "rubric": {
+    "criteria": [
+      {
+        "id": "inhalt",
+        "name": "Inhalt",
+        "nameVi": "Nội dung",
+        "maxScore": 5,
+        "weight": 25
+      },
+      {
+        "id": "angemessenheit",
+        "name": "Kommunikative Angemessenheit",
+        "nameVi": "Phù hợp giao tiếp",
+        "maxScore": 5,
+        "weight": 20
+      },
+      {
+        "id": "korrektheit",
+        "name": "Korrektheit",
+        "nameVi": "Chính xác ngữ pháp & chính tả",
+        "maxScore": 5,
+        "weight": 25
+      },
+      {
+        "id": "spektrum",
+        "name": "Wortschatz & Strukturen",
+        "nameVi": "Đa dạng từ vựng & cấu trúc",
+        "maxScore": 5,
+        "weight": 15
+      },
+      {
+        "id": "kohaerenz",
+        "name": "Kohaerenz & Kohaesion",
+        "nameVi": "Mạch lạc & liên kết",
+        "maxScore": 5,
+        "weight": 15
+      }
+    ],
+    "maxScore": 25
+  },
+  "maxScore": 25
+}

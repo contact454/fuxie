@@ -1,0 +1,260 @@
+{
+  "id": "A2-T2-010",
+  "level": "A2",
+  "teil": 2,
+  "teil_name": "Informationstafeln verstehen",
+  "topic": "Feste & Feiertage",
+  "topic_id": "010",
+  "metadata": {
+    "word_count": 92,
+    "target_grammar": [
+      "Modalverben",
+      "Perfekt"
+    ],
+    "target_vocabulary": [
+      "Veranstaltung",
+      "Bühne",
+      "Eintritt",
+      "Kinderprogramm",
+      "Flohmarkt",
+      "Feuerwerk",
+      "Festzelt",
+      "Karussell",
+      "Bratwurst",
+      "Glühwein"
+    ],
+    "generated_at": "2026-03-09T22:34:00+07:00",
+    "version": 1
+  },
+  "infotafel": {
+    "title": "Nürnberger Stadtfest 2026 — Veranstaltungsübersicht",
+    "location": "Hauptmarkt & Altstadt, 90403 Nürnberg",
+    "rows": [
+      {
+        "label": "Hauptmarkt",
+        "items": "Große Bühne (Musik & Shows) · Festzelt · Biergarten · Kinderprogramm"
+      },
+      {
+        "label": "Lorenzer Platz",
+        "items": "Flohmarkt (Sa 10–18 Uhr) · Kunsthandwerk · Straßenkünstler"
+      },
+      {
+        "label": "Burgstraße",
+        "items": "Essensmeile: Bratwurst, Crêpes, Pizza, Eis · Getränkestände"
+      },
+      {
+        "label": "Kaiserburg",
+        "items": "Feuerwerk (Sa 22:30 Uhr) · Aussichtspunkt · Foto-Station"
+      }
+    ],
+    "extra_info": "Datum: Freitag 12. – Sonntag 14. Juni 2026. Eintritt frei! Freitag & Samstag: 14:00–24:00 Uhr. Sonntag: 11:00–22:00 Uhr. Kinderprogramm: täglich 14:00–18:00 Uhr (Karussell, Hüpfburg, Malen). Hunde an der Leine erlaubt."
+  },
+  "images": [
+    {
+      "id": "IMG1",
+      "type": "info_board",
+      "prompt": "Cute cartoon illustration of a vibrant German city festival (Stadtfest) in a historic town square with a stage, colorful bunting, food stalls, a ferris wheel, families celebrating, and medieval buildings in the background. Fuxie cartoon style, flat illustration, warm pastel colors, no text.",
+      "filename": "A2-T2-010_board.png",
+      "placement": "header",
+      "alt_text": "Nürnberger Stadtfest Veranstaltungsübersicht",
+      "dimensions": "768x512"
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q1",
+      "teil": 2,
+      "type": "multiple_choice",
+      "stem": "Wo ist die große Bühne?",
+      "options": {
+        "a": "Auf dem Lorenzer Platz.",
+        "b": "In der Burgstraße.",
+        "c": "Auf dem Hauptmarkt."
+      },
+      "answer": "c",
+      "points": 1,
+      "explanation": {
+        "de": "Die Große Bühne ist auf dem Hauptmarkt.",
+        "key_evidence": "Hauptmarkt: Große Bühne (Musik & Shows)",
+        "key_vocabulary": [
+          {
+            "word": "Bühne",
+            "type": "Nomen",
+            "meaning": "stage"
+          },
+          {
+            "word": "Hauptmarkt",
+            "type": "Nomen",
+            "meaning": "main market square"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q2",
+      "teil": 2,
+      "type": "multiple_choice",
+      "stem": "Wann ist das Feuerwerk?",
+      "options": {
+        "a": "Freitag um 23:00 Uhr.",
+        "b": "Samstag um 22:30 Uhr.",
+        "c": "Sonntag um 22:00 Uhr."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Das Feuerwerk ist am Samstag um 22:30 Uhr an der Kaiserburg.",
+        "key_evidence": "Kaiserburg: Feuerwerk (Sa 22:30 Uhr)",
+        "key_vocabulary": [
+          {
+            "word": "Feuerwerk",
+            "type": "Nomen",
+            "meaning": "fireworks"
+          },
+          {
+            "word": "Uhr",
+            "type": "Nomen",
+            "meaning": "o'clock"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q3",
+      "teil": 2,
+      "type": "multiple_choice",
+      "stem": "Wie viel kostet der Eintritt zum Stadtfest?",
+      "options": {
+        "a": "5 Euro.",
+        "b": "10 Euro.",
+        "c": "Der Eintritt ist frei."
+      },
+      "answer": "c",
+      "points": 1,
+      "explanation": {
+        "de": "Der Eintritt ist frei.",
+        "key_evidence": "Eintritt frei!",
+        "key_vocabulary": [
+          {
+            "word": "Eintritt",
+            "type": "Nomen",
+            "meaning": "admission"
+          },
+          {
+            "word": "frei",
+            "type": "Adjektiv",
+            "meaning": "free (no cost)"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q4",
+      "teil": 2,
+      "type": "multiple_choice",
+      "stem": "Wann ist der Flohmarkt?",
+      "options": {
+        "a": "Am Freitag von 10–18 Uhr.",
+        "b": "Am Samstag von 10–18 Uhr.",
+        "c": "Am Sonntag von 11–22 Uhr."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Der Flohmarkt ist am Samstag von 10–18 Uhr auf dem Lorenzer Platz.",
+        "key_evidence": "Lorenzer Platz: Flohmarkt (Sa 10–18 Uhr)",
+        "key_vocabulary": [
+          {
+            "word": "Flohmarkt",
+            "type": "Nomen",
+            "meaning": "flea market"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q5",
+      "teil": 2,
+      "type": "multiple_choice",
+      "stem": "Was gibt es beim Kinderprogramm?",
+      "options": {
+        "a": "Musik und Shows auf der Bühne.",
+        "b": "Karussell, Hüpfburg und Malen.",
+        "c": "Bratwurst und Eis."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Beim Kinderprogramm gibt es Karussell, Hüpfburg und Malen.",
+        "key_evidence": "Kinderprogramm: täglich 14:00–18:00 Uhr (Karussell, Hüpfburg, Malen)",
+        "key_vocabulary": [
+          {
+            "word": "Karussell",
+            "type": "Nomen",
+            "meaning": "carousel / merry-go-round"
+          },
+          {
+            "word": "Hüpfburg",
+            "type": "Nomen",
+            "meaning": "bouncy castle"
+          }
+        ]
+      }
+    }
+  ],
+  "scoring": {
+    "total_points": 5,
+    "pass_threshold": 3,
+    "grading": [
+      {
+        "range": [
+          5,
+          5
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          4,
+          4
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          3,
+          3
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          1,
+          2
+        ],
+        "label": "Noch üben!",
+        "emoji": "📝"
+      },
+      {
+        "range": [
+          0,
+          0
+        ],
+        "label": "Mehr Übung nötig",
+        "emoji": "💪"
+      }
+    ]
+  },
+  "qa": {
+    "vocab_in_a2_list": true,
+    "grammar_a2_only": true,
+    "word_count_in_range": true,
+    "all_answers_verifiable": true,
+    "mc_distractors_plausible": true,
+    "image_count": 1,
+    "passed": true
+  }
+}

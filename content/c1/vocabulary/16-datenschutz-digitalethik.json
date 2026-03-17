@@ -1,0 +1,852 @@
+{
+  "theme": {
+    "slug": "c1-datenschutz-digitalethik",
+    "name": "Datenschutz & Digitalethik",
+    "nameVi": "Bảo vệ dữ liệu & Đạo đức số",
+    "nameEn": "Data Protection & Digital Ethics",
+    "sortOrder": 16,
+    "imageUrl": "/images/themes/c1-datenschutz-digitalethik.png"
+  },
+  "words": [
+    {
+      "word": "Datensouveränität",
+      "article": "FEMININ",
+      "plural": "die Datensouveränitäten",
+      "wordType": "NOMEN",
+      "meaningVi": "chủ quyền dữ liệu",
+      "meaningEn": "data sovereignty",
+      "exampleSentence1": "Die Debatte um die Datensouveränität von Bürgern im digitalen Raum gewinnt zunehmend an Bedeutung.",
+      "exampleTranslation1": "Cuộc tranh luận về chủ quyền dữ liệu của công dân trong không gian số ngày càng trở nên quan trọng.",
+      "exampleSentence2": "Unternehmen stehen in der Pflicht, die Datensouveränität ihrer Kunden zu respektieren und zu schützen.",
+      "exampleTranslation2": "Các doanh nghiệp có nghĩa vụ tôn trọng và bảo vệ chủ quyền dữ liệu của khách hàng.",
+      "notes": "Fachsprachlich. Bezieht sich auf das Recht des Einzelnen, über die eigenen Daten zu bestimmen und die Kontrolle darüber zu behalten.",
+      "imageUrl": "/images/vocab/c1-datenschutz-digitalethik/die-datensouveraenitaet.png"
+    },
+    {
+      "word": "informationelle Selbstbestimmung",
+      "article": "FEMININ",
+      "plural": "die informationelle Selbstbestimmungen",
+      "wordType": "NOMEN",
+      "meaningVi": "quyền tự quyết về thông tin",
+      "meaningEn": "informational self-determination",
+      "exampleSentence1": "Das Recht auf informationelle Selbstbestimmung ist ein fundamentaler Pfeiler des Datenschutzes in Deutschland.",
+      "exampleTranslation1": "Quyền tự quyết về thông tin là một trụ cột cơ bản của bảo vệ dữ liệu ở Đức.",
+      "exampleSentence2": "Angesichts der allgegenwärtigen Datenerfassung wird die Wahrung der informationellen Selbstbestimmung zur zentralen Herausforderung.",
+      "exampleTranslation2": "Trước sự thu thập dữ liệu phổ biến, việc duy trì quyền tự quyết về thông tin trở thành một thách thức trung tâm.",
+      "notes": "Rechtssprachlich, bildungssprachlich. Eng verknüpft mit dem Datenschutzgrundrecht; das Recht, selbst über die Preisgabe und Verwendung persönlicher Daten zu bestimmen.",
+      "imageUrl": "/images/vocab/c1-datenschutz-digitalethik/die-informationelle-selbstbestimmung.png"
+    },
+    {
+      "word": "Rechenschaftspflicht",
+      "article": "FEMININ",
+      "plural": "die Rechenschaftspflichten",
+      "wordType": "NOMEN",
+      "meaningVi": "trách nhiệm giải trình",
+      "meaningEn": "accountability",
+      "exampleSentence1": "Die DSGVO legt fest, dass Verantwortliche eine umfassende Rechenschaftspflicht bezüglich ihrer Datenverarbeitungsprozesse haben.",
+      "exampleTranslation1": "GDPR quy định rằng các bên chịu trách nhiệm có nghĩa vụ giải trình toàn diện về các quy trình xử lý dữ liệu của họ.",
+      "exampleSentence2": "Eine effektive Rechenschaftspflicht ist unerlässlich, um das Vertrauen der Nutzer in digitale Dienste zu stärken.",
+      "exampleTranslation2": "Trách nhiệm giải trình hiệu quả là không thể thiếu để củng cố niềm tin của người dùng vào các dịch vụ kỹ thuật số.",
+      "notes": "Fachsprachlich. Betont die Pflicht, Rechenschaft über Handlungen abzulegen, insbesondere im Datenschutzkontext; die Fähigkeit, die Einhaltung von Regeln nachzuweisen.",
+      "imageUrl": "/images/vocab/c1-datenschutz-digitalethik/die-rechenschaftspflicht.png"
+    },
+    {
+      "word": "Nachvollziehbarkeit",
+      "article": "FEMININ",
+      "plural": "die Nachvollziehbarkeiten",
+      "wordType": "NOMEN",
+      "meaningVi": "tính có thể truy vết, tính dễ hiểu",
+      "meaningEn": "traceability, comprehensibility",
+      "exampleSentence1": "Die Nachvollziehbarkeit algorithmischer Entscheidungsprozesse ist eine Kernforderung der Digitalethik.",
+      "exampleTranslation1": "Tính dễ hiểu của các quy trình ra quyết định bằng thuật toán là một yêu cầu cốt lõi của đạo đức số.",
+      "exampleSentence2": "Um Vertrauen zu schaffen, müssen Unternehmen die Nachvollziehbarkeit ihrer Datenverarbeitungsmechanismen gewährleisten.",
+      "exampleTranslation2": "Để tạo niềm tin, các doanh nghiệp phải đảm bảo tính dễ hiểu của các cơ chế xử lý dữ liệu của họ.",
+      "notes": "Bildungssprachlich, fachsprachlich. Beschreibt die Möglichkeit, Abläufe oder Entscheidungen zu verstehen, zu verfolgen und zu überprüfen.",
+      "imageUrl": "/images/vocab/c1-datenschutz-digitalethik/die-nachvollziehbarkeit.png"
+    },
+    {
+      "word": "algorithmische Diskriminierung",
+      "article": "FEMININ",
+      "plural": "die algorithmische Diskriminierungen",
+      "wordType": "NOMEN",
+      "meaningVi": "phân biệt đối xử bằng thuật toán",
+      "meaningEn": "algorithmic discrimination",
+      "exampleSentence1": "Expertengruppen warnen vor dem Potenzial der algorithmischen Diskriminierung, das sich in automatisierten Entscheidungen manifestieren kann.",
+      "exampleTranslation1": "Các nhóm chuyên gia cảnh báo về tiềm năng phân biệt đối xử bằng thuật toán, có thể biểu hiện trong các quyết định tự động.",
+      "exampleSentence2": "Die Entwicklung ethischer Richtlinien soll dazu beitragen, die algorithmische Diskriminierung in KI-Systemen zu verhindern.",
+      "exampleTranslation2": "Việc phát triển các nguyên tắc đạo đức nhằm góp phần ngăn chặn sự phân biệt đối xử bằng thuật toán trong các hệ thống AI.",
+      "notes": "Fachsprachlich, aktuell relevant. Bezieht sich auf die Ungleichbehandlung von Personen oder Gruppen durch Algorithmen und automatisierte Systeme.",
+      "imageUrl": "/images/vocab/c1-datenschutz-digitalethik/die-algorithmische-diskriminierung.png"
+    },
+    {
+      "word": "digitale Mündigkeit",
+      "article": "FEMININ",
+      "plural": "die digitale Mündigkeiten",
+      "wordType": "NOMEN",
+      "meaningVi": "năng lực số, sự tự chủ kỹ thuật số",
+      "meaningEn": "digital literacy/autonomy",
+      "exampleSentence1": "Die Förderung der digitalen Mündigkeit ist entscheidend, damit Bürger souverän im Internet agieren können.",
+      "exampleTranslation1": "Việc thúc đẩy năng lực số là rất quan trọng để công dân có thể hành động một cách độc lập trên internet.",
+      "exampleSentence2": "Nur ein mündiger Nutzer kann die Risiken und Chancen digitaler Technologien adäquat einschätzen und verantwortungsbewusst handeln.",
+      "exampleTranslation2": "Chỉ một người dùng có năng lực mới có thể đánh giá đầy đủ các rủi ro và cơ hội của công nghệ số và hành động có trách nhiệm.",
+      "notes": "Bildungssprachlich. Ähnlich wie 'Medienkompetenz', aber stärker auf die Fähigkeit zur selbstbestimmten, kritischen und verantwortungsbewussten Nutzung digitaler Medien bezogen.",
+      "imageUrl": "/images/vocab/c1-datenschutz-digitalethik/die-digitale-muendigkeit.png"
+    },
+    {
+      "word": "Datenmissbrauch",
+      "article": "MASKULIN",
+      "plural": "die Datenmissbräuche",
+      "wordType": "NOMEN",
+      "meaningVi": "lạm dụng dữ liệu",
+      "meaningEn": "data misuse",
+      "exampleSentence1": "Der Skandal um den Datenmissbrauch bei dem sozialen Netzwerk führte zu einer weltweiten Debatte über den Umgang mit persönlichen Informationen.",
+      "exampleTranslation1": "Vụ bê bối lạm dụng dữ liệu tại mạng xã hội đã dẫn đến một cuộc tranh luận toàn cầu về cách xử lý thông tin cá nhân.",
+      "exampleSentence2": "Unternehmen müssen präventive Maßnahmen ergreifen, um den Datenmissbrauch durch Dritte effektiv zu unterbinden.",
+      "exampleTranslation2": "Các doanh nghiệp phải thực hiện các biện pháp phòng ngừa để ngăn chặn hiệu quả việc lạm dụng dữ liệu bởi bên thứ ba.",
+      "notes": "Fachsprachlich, bildungssprachlich. Beschreibt die unrechtmäßige oder unerlaubte Verwendung von Daten, oft zum Nachteil der Betroffenen.",
+      "imageUrl": "/images/vocab/c1-datenschutz-digitalethik/der-datenmissbrauch.png"
+    },
+    {
+      "word": "Datenethik",
+      "article": "FEMININ",
+      "plural": "die Datenethiken",
+      "wordType": "NOMEN",
+      "meaningVi": "đạo đức dữ liệu",
+      "meaningEn": "data ethics",
+      "exampleSentence1": "Die Datenethik befasst sich mit den moralischen Fragen, die sich aus der Sammlung, Analyse und Nutzung großer Datenmengen ergeben.",
+      "exampleTranslation1": "Đạo đức dữ liệu giải quyết các vấn đề đạo đức phát sinh từ việc thu thập, phân tích và sử dụng lượng lớn dữ liệu.",
+      "exampleSentence2": "Angesichts der rasanten technologischen Entwicklung gewinnt die Etablierung einer umfassenden Datenethik zunehmend an Relevanz.",
+      "exampleTranslation2": "Trước sự phát triển nhanh chóng của công nghệ, việc thiết lập một đạo đức dữ liệu toàn diện ngày càng trở nên quan trọng.",
+      "notes": "Fachsprachlich. Das zentrale Thema des Kontextes; ein Teilbereich der Digitalethik, der sich speziell mit ethischen Aspekten der Datenverarbeitung beschäftigt.",
+      "imageUrl": "/images/vocab/c1-datenschutz-digitalethik/die-datenethik.png"
+    },
+    {
+      "word": "digitale Kluft",
+      "article": "FEMININ",
+      "plural": "die digitale Klüfte",
+      "wordType": "NOMEN",
+      "meaningVi": "khoảng cách số",
+      "meaningEn": "digital divide",
+      "exampleSentence1": "Die Politik muss Strategien entwickeln, um die digitale Kluft zwischen verschiedenen gesellschaftlichen Gruppen zu überwinden.",
+      "exampleTranslation1": "Chính phủ phải phát triển các chiến lược để vượt qua khoảng cách số giữa các nhóm xã hội khác nhau.",
+      "exampleSentence2": "Fehlender Zugang zu digitaler Bildung verschärft die digitale Kluft und benachteiligt bestimmte Bevölkerungsschichten.",
+      "exampleTranslation2": "Việc thiếu tiếp cận giáo dục kỹ thuật số làm trầm trọng thêm khoảng cách số và gây bất lợi cho một số tầng lớp dân cư nhất định.",
+      "notes": "Bildungssprachlich, soziologisch. Beschreibt die Ungleichheit beim Zugang zu und der Nutzung von Informations- und Kommunikationstechnologien zwischen verschiedenen Bevölkerungsgruppen.",
+      "imageUrl": "/images/vocab/c1-datenschutz-digitalethik/die-digitale-kluft.png"
+    },
+    {
+      "word": "digitale Fußabdruck",
+      "article": "MASKULIN",
+      "plural": "die digitale Fußabdrücke",
+      "wordType": "NOMEN",
+      "meaningVi": "dấu chân số",
+      "meaningEn": "digital footprint",
+      "exampleSentence1": "Jeder Klick und jede Interaktion im Netz hinterlässt einen digitalen Fußabdruck, der Rückschlüsse auf das Verhalten zulässt.",
+      "exampleTranslation1": "Mỗi cú nhấp chuột và mỗi tương tác trên mạng đều để lại một dấu chân số, cho phép suy luận về hành vi.",
+      "exampleSentence2": "Es ist ratsam, sich bewusst zu sein, welchen digitalen Fußabdruck man hinterlässt, um die eigene Privatsphäre zu schützen.",
+      "exampleTranslation2": "Nên nhận thức rõ về dấu chân số mà mình để lại để bảo vệ quyền riêng tư của bản thân.",
+      "notes": "Bildungssprachlich. Metapher für die Spuren, die eine Person durch ihre Aktivitäten im Internet (z.B. Beiträge, Likes, Suchanfragen) hinterlässt.",
+      "imageUrl": "/images/vocab/c1-datenschutz-digitalethik/der-digitale-fussabdruck.png"
+    },
+    {
+      "word": "Datensparsamkeit",
+      "article": "FEMININ",
+      "plural": "die Datensparsamkeiten",
+      "wordType": "NOMEN",
+      "meaningVi": "nguyên tắc tiết kiệm dữ liệu (tối thiểu hóa dữ liệu)",
+      "meaningEn": "data minimization",
+      "exampleSentence1": "Das Prinzip der Datensparsamkeit fordert, nur jene Daten zu erheben, die für den jeweiligen Zweck unbedingt erforderlich sind.",
+      "exampleTranslation1": "Nguyên tắc tiết kiệm dữ liệu yêu cầu chỉ thu thập những dữ liệu thực sự cần thiết cho mục đích cụ thể.",
+      "exampleSentence2": "Viele Apps verstoßen gegen das Gebot der Datensparsamkeit, indem sie weitreichende Berechtigungen einfordern.",
+      "exampleTranslation2": "Nhiều ứng dụng vi phạm nguyên tắc tiết kiệm dữ liệu bằng cách yêu cầu các quyền truy cập rộng rãi.",
+      "notes": "Fachsprachlich, ein Grundprinzip des Datenschutzes. Beschreibt die Forderung, so wenig personenbezogene Daten wie möglich zu erheben, zu verarbeiten und zu speichern.",
+      "imageUrl": "/images/vocab/c1-datenschutz-digitalethik/die-datensparsamkeit.png"
+    },
+    {
+      "word": "informierte Einwilligung",
+      "article": "FEMININ",
+      "plural": "die informierte Einwilligungen",
+      "wordType": "NOMEN",
+      "meaningVi": "sự đồng ý có hiểu biết",
+      "meaningEn": "informed consent",
+      "exampleSentence1": "Für die Verarbeitung sensibler Daten ist gemäß der DSGVO eine ausdrückliche und informierte Einwilligung des Betroffenen erforderlich.",
+      "exampleTranslation1": "Theo GDPR, việc xử lý dữ liệu nhạy cảm yêu cầu sự đồng ý rõ ràng và có hiểu biết của chủ thể dữ liệu.",
+      "exampleSentence2": "Ohne eine transparente Aufklärung kann von einer echten informierten Einwilligung nicht die Rede sein.",
+      "exampleTranslation2": "Nếu không có sự giải thích minh bạch, không thể nói đến một sự đồng ý có hiểu biết thực sự.",
+      "notes": "Rechtssprachlich, fachsprachlich. Betont, dass die Zustimmung zu einer Handlung (z.B. Datenverarbeitung) auf vollständiger und verständlicher Information basieren muss.",
+      "imageUrl": "/images/vocab/c1-datenschutz-digitalethik/die-informierte-einwilligung.png"
+    },
+    {
+      "word": "Haftung",
+      "article": "FEMININ",
+      "plural": "die Haftungen",
+      "wordType": "NOMEN",
+      "meaningVi": "trách nhiệm pháp lý",
+      "meaningEn": "liability",
+      "exampleSentence1": "Bei Datenschutzverletzungen können Unternehmen unter Umständen zur Haftung herangezogen werden.",
+      "exampleTranslation1": "Trong trường hợp vi phạm bảo vệ dữ liệu, các doanh nghiệp có thể phải chịu trách nhiệm pháp lý.",
+      "exampleSentence2": "Die Frage der Haftung bei Fehlfunktionen autonomer Systeme stellt die Gesetzgeber vor neue Herausforderungen.",
+      "exampleTranslation2": "Vấn đề trách nhiệm pháp lý khi hệ thống tự động gặp trục trặc đặt ra những thách thức mới cho các nhà lập pháp.",
+      "notes": "Rechtssprachlich. Die Verpflichtung, für einen Schaden oder eine Pflichtverletzung einzustehen.",
+      "imageUrl": "/images/vocab/c1-datenschutz-digitalethik/die-haftung.png"
+    },
+    {
+      "word": "Massenüberwachung",
+      "article": "FEMININ",
+      "plural": "die Massenüberwachungen",
+      "wordType": "NOMEN",
+      "meaningVi": "giám sát hàng loạt",
+      "meaningEn": "mass surveillance",
+      "exampleSentence1": "Kritiker befürchten, dass die Einführung neuer Technologien zur Massenüberwachung der Bevölkerung missbraucht werden könnte.",
+      "exampleTranslation1": "Các nhà phê bình lo ngại rằng việc giới thiệu các công nghệ mới có thể bị lạm dụng để giám sát hàng loạt dân chúng.",
+      "exampleSentence2": "Die rechtliche Legitimation von Maßnahmen der Massenüberwachung wird regelmäßig vor Gericht überprüft.",
+      "exampleTranslation2": "Tính hợp pháp của các biện pháp giám sát hàng loạt thường xuyên được tòa án xem xét.",
+      "notes": "Politisch, gesellschaftskritisch. Beschreibt die systematische, oft anlasslose Überwachung einer großen Anzahl von Personen durch staatliche oder private Akteure.",
+      "imageUrl": "/images/vocab/c1-datenschutz-digitalethik/die-massenueberwachung.png"
+    },
+    {
+      "word": "Dilemma",
+      "article": "NEUTRUM",
+      "plural": "die Dilemmata/Dilemmen",
+      "wordType": "NOMEN",
+      "meaningVi": "tình thế tiến thoái lưỡng nan",
+      "meaningEn": "dilemma",
+      "exampleSentence1": "Das Dilemma zwischen Sicherheit und Freiheit prägt viele Debatten im Bereich der Digitalethik.",
+      "exampleTranslation1": "Tình thế tiến thoái lưỡng nan giữa an ninh và tự do định hình nhiều cuộc tranh luận trong lĩnh vực đạo đức số.",
+      "exampleSentence2": "Unternehmen stehen oft vor dem Dilemma, innovative Produkte zu entwickeln und gleichzeitig höchste Datenschutzstandards einzuhalten.",
+      "exampleTranslation2": "Các doanh nghiệp thường đối mặt với tình thế tiến thoái lưỡng nan: phát triển sản phẩm đổi mới đồng thời tuân thủ các tiêu chuẩn bảo vệ dữ liệu cao nhất.",
+      "notes": "Bildungssprachlich. Eine schwierige Wahl zwischen zwei (meist unangenehmen) Optionen, bei der jede Entscheidung Nachteile mit sich bringt.",
+      "imageUrl": "/images/vocab/c1-datenschutz-digitalethik/das-dilemma.png"
+    },
+    {
+      "word": "Eingriff",
+      "article": "MASKULIN",
+      "plural": "die Eingriffe",
+      "wordType": "NOMEN",
+      "meaningVi": "sự can thiệp, sự xâm phạm",
+      "meaningEn": "intervention, infringement",
+      "exampleSentence1": "Jeder staatliche Eingriff in die Privatsphäre der Bürger bedarf einer klaren gesetzlichen Grundlage und muss verhältnismäßig sein.",
+      "exampleTranslation1": "Mọi sự can thiệp của nhà nước vào quyền riêng tư của công dân đều cần có cơ sở pháp lý rõ ràng và phải cân xứng.",
+      "exampleSentence2": "Ein unzulässiger Eingriff in die informationelle Selbstbestimmung kann schwerwiegende rechtliche Konsequenzen nach sich ziehen.",
+      "exampleTranslation2": "Một sự xâm phạm trái phép vào quyền tự quyết về thông tin có thể dẫn đến những hậu quả pháp lý nghiêm trọng.",
+      "notes": "Rechtssprachlich, bildungssprachlich. Bezeichnet eine aktive Handlung, die eine Situation beeinflusst oder in Rechte, Freiheiten etc. eingreift.",
+      "imageUrl": "/images/vocab/c1-datenschutz-digitalethik/der-eingriff.png"
+    },
+    {
+      "word": "Verhältnismäßigkeit",
+      "article": "FEMININ",
+      "plural": "die Verhältnismäßigkeiten",
+      "wordType": "NOMEN",
+      "meaningVi": "tính cân xứng, tính tương xứng",
+      "meaningEn": "proportionality",
+      "exampleSentence1": "Bei der Abwägung von Sicherheitsinteressen und Grundrechten muss stets das Prinzip der Verhältnismäßigkeit gewahrt bleiben.",
+      "exampleTranslation1": "Khi cân nhắc giữa lợi ích an ninh và các quyền cơ bản, nguyên tắc cân xứng phải luôn được duy trì.",
+      "exampleSentence2": "Eine Maßnahme ist nur dann verhältnismäßig, wenn sie geeignet, erforderlich und angemessen ist.",
+      "exampleTranslation2": "Một biện pháp chỉ được coi là cân xứng nếu nó phù hợp, cần thiết và thích đáng.",
+      "notes": "Rechtssprachlich, bildungssprachlich. Ein zentraler Rechtsgrundsatz, der verlangt, dass staatliche Maßnahmen nicht über das zur Erreichung eines legitimen Ziels Notwendige hinausgehen dürfen.",
+      "imageUrl": "/images/vocab/c1-datenschutz-digitalethik/die-verhaeltnismaessigkeit.png"
+    },
+    {
+      "word": "Resilienz",
+      "article": "FEMININ",
+      "plural": "die Resilienzen",
+      "wordType": "NOMEN",
+      "meaningVi": "khả năng phục hồi, tính kiên cường",
+      "meaningEn": "resilience",
+      "exampleSentence1": "Die Stärkung der Resilienz digitaler Infrastrukturen gegenüber Cyberangriffen ist von nationaler Bedeutung.",
+      "exampleTranslation1": "Việc tăng cường khả năng phục hồi của cơ sở hạ tầng kỹ thuật số trước các cuộc tấn công mạng có ý nghĩa quốc gia.",
+      "exampleSentence2": "Eine resiliente Gesellschaft ist besser in der Lage, sich an die Herausforderungen des digitalen Wandels anzupassen.",
+      "exampleTranslation2": "Một xã hội kiên cường có khả năng tốt hơn trong việc thích ứng với những thách thức của sự chuyển đổi số.",
+      "notes": "Fachsprachlich, bildungssprachlich. Die Fähigkeit eines Systems, einer Person oder einer Gesellschaft, sich von Störungen, Krisen oder Rückschlägen zu erholen und sich anzupassen.",
+      "imageUrl": "/images/vocab/c1-datenschutz-digitalethik/die-resilienz.png"
+    },
+    {
+      "word": "gewährleisten",
+      "article": null,
+      "plural": null,
+      "wordType": "VERB",
+      "meaningVi": "đảm bảo, bảo đảm",
+      "meaningEn": "to guarantee, ensure",
+      "exampleSentence1": "Der Gesetzgeber muss sicherstellen, dass die Grundrechte der Bürger im digitalen Raum umfassend gewährleistet sind.",
+      "exampleTranslation1": "Nhà lập pháp phải đảm bảo rằng các quyền cơ bản của công dân trong không gian số được bảo đảm một cách toàn diện.",
+      "exampleSentence2": "Unternehmen sind verpflichtet, die Sicherheit der verarbeiteten Daten zu gewährleisten, um Missbrauch zu verhindern.",
+      "exampleTranslation2": "Các doanh nghiệp có nghĩa vụ đảm bảo an toàn cho dữ liệu đã xử lý để ngăn chặn lạm dụng.",
+      "notes": "Gehoben, fachsprachlich. Stärker als 'sichern' oder 'garantieren', oft im Kontext von Rechten, Standards oder Verpflichtungen verwendet.",
+      "conjugation": {
+        "praesens": {
+          "ich": "gewährleiste",
+          "du": "gewährleistest",
+          "er/sie/es": "gewährleistet",
+          "wir": "gewährleisten",
+          "ihr": "gewährleistet",
+          "sie/Sie": "gewährleisten"
+        },
+        "praeteritum": {
+          "ich": "gewährleistete",
+          "du": "gewährleistetest",
+          "er/sie/es": "gewährleistete",
+          "wir": "gewährleisteten",
+          "ihr": "gewährleistetet",
+          "sie/Sie": "gewährleisteten"
+        },
+        "perfekt": {
+          "hilfsverb": "haben",
+          "partizip2": "gewährleistet"
+        },
+        "konjunktiv2": {
+          "ich": "gewährleistete",
+          "du": "gewährleistetest",
+          "er/sie/es": "gewährleistete",
+          "wir": "gewährleisteten",
+          "ihr": "gewährleistetet",
+          "sie/Sie": "gewährleisteten"
+        },
+        "imperativ": {
+          "du": "gewährleiste",
+          "ihr": "gewährleistet",
+          "Sie": "gewährleisten Sie"
+        }
+      },
+      "imageUrl": "/images/vocab/c1-datenschutz-digitalethik/gewaehrleisten.png"
+    },
+    {
+      "word": "erheben",
+      "article": null,
+      "plural": null,
+      "wordType": "VERB",
+      "meaningVi": "thu thập (dữ liệu), khảo sát",
+      "meaningEn": "to collect (data), to survey",
+      "exampleSentence1": "Soziale Netzwerke erheben eine enorme Menge an persönlichen Daten ihrer Nutzer, oft ohne deren umfassende Kenntnis.",
+      "exampleTranslation1": "Các mạng xã hội thu thập một lượng lớn dữ liệu cá nhân của người dùng, thường là không có sự hiểu biết đầy đủ của họ.",
+      "exampleSentence2": "Nur Daten, die für einen explizit festgelegten Zweck erforderlich sind, dürfen erhoben und verarbeitet werden.",
+      "exampleTranslation2": "Chỉ những dữ liệu cần thiết cho một mục đích đã được xác định rõ ràng mới được phép thu thập và xử lý.",
+      "notes": "Fachsprachlich. Spezifisch für das Sammeln von Daten, Informationen, Gebühren, Steuern oder Beschwerden.",
+      "conjugation": {
+        "praesens": {
+          "ich": "erhebe",
+          "du": "erhebst",
+          "er/sie/es": "erhebt",
+          "wir": "erheben",
+          "ihr": "erhebt",
+          "sie/Sie": "erheben"
+        },
+        "praeteritum": {
+          "ich": "erhob",
+          "du": "erhobst",
+          "er/sie/es": "erhob",
+          "wir": "erhoben",
+          "ihr": "erhobt",
+          "sie/Sie": "erhoben"
+        },
+        "perfekt": {
+          "hilfsverb": "haben",
+          "partizip2": "erhoben"
+        },
+        "konjunktiv2": {
+          "ich": "erhöbe",
+          "du": "erhöbest",
+          "er/sie/es": "erhöbe",
+          "wir": "erhöben",
+          "ihr": "erhöbet",
+          "sie/Sie": "erhöben"
+        },
+        "imperativ": {
+          "du": "erhebe",
+          "ihr": "erhebt",
+          "Sie": "erheben Sie"
+        }
+      },
+      "imageUrl": "/images/vocab/c1-datenschutz-digitalethik/erheben.png"
+    },
+    {
+      "word": "anonymisieren",
+      "article": null,
+      "plural": null,
+      "wordType": "VERB",
+      "meaningVi": "ẩn danh hóa",
+      "meaningEn": "to anonymize",
+      "exampleSentence1": "Vor der Weitergabe an Forschungseinrichtungen sollten Datensätze umfassend anonymisiert werden, um Rückschlüsse auf Einzelpersonen zu vermeiden.",
+      "exampleTranslation1": "Trước khi chuyển giao cho các tổ chức nghiên cứu, các bộ dữ liệu nên được ẩn danh hóa toàn diện để tránh suy luận về các cá nhân.",
+      "exampleSentence2": "Eine vollständige Anonymisierung von Daten ist technisch oft eine große Herausforderung.",
+      "exampleTranslation2": "Việc ẩn danh hóa hoàn toàn dữ liệu thường là một thách thức kỹ thuật lớn.",
+      "notes": "Fachsprachlich. Daten so zu verändern, dass sie keiner Person mehr zugeordnet werden können, um den Datenschutz zu gewährleisten.",
+      "conjugation": {
+        "praesens": {
+          "ich": "anonymisiere",
+          "du": "anonymisierst",
+          "er/sie/es": "anonymisiert",
+          "wir": "anonymisieren",
+          "ihr": "anonymisiert",
+          "sie/Sie": "anonymisieren"
+        },
+        "praeteritum": {
+          "ich": "anonymisierte",
+          "du": "anonymisiertest",
+          "er/sie/es": "anonymisierte",
+          "wir": "anonymisierten",
+          "ihr": "anonymisiertet",
+          "sie/Sie": "anonymisierten"
+        },
+        "perfekt": {
+          "hilfsverb": "haben",
+          "partizip2": "anonymisiert"
+        },
+        "konjunktiv2": {
+          "ich": "anonymisierte",
+          "du": "anonymisiertest",
+          "er/sie/es": "anonymisierte",
+          "wir": "anonymisierten",
+          "ihr": "anonymisiertet",
+          "sie/Sie": "anonymisierten"
+        },
+        "imperativ": {
+          "du": "anonymisiere",
+          "ihr": "anonymisiert",
+          "Sie": "anonymisieren Sie"
+        }
+      },
+      "imageUrl": "/images/vocab/c1-datenschutz-digitalethik/anonymisieren.png"
+    },
+    {
+      "word": "sensibilisieren",
+      "article": null,
+      "plural": null,
+      "wordType": "VERB",
+      "meaningVi": "nâng cao nhận thức, làm cho nhạy cảm",
+      "meaningEn": "to raise awareness, to sensitize",
+      "exampleSentence1": "Bildungseinrichtungen müssen ihre Schüler für die Risiken des Internets sensibilisieren und Medienkompetenz vermitteln.",
+      "exampleTranslation1": "Các cơ sở giáo dục phải nâng cao nhận thức cho học sinh về rủi ro trên internet và truyền đạt năng lực truyền thông.",
+      "exampleSentence2": "Kampagnen zur Sensibilisierung der Öffentlichkeit für Datenschutzfragen sind unerlässlich.",
+      "exampleTranslation2": "Các chiến dịch nâng cao nhận thức cộng đồng về các vấn đề bảo vệ dữ liệu là không thể thiếu.",
+      "notes": "Bildungssprachlich. Jemandem ein Bewusstsein für etwas schaffen, ihn für ein Thema empfänglich machen.",
+      "conjugation": {
+        "praesens": {
+          "ich": "sensibilisiere",
+          "du": "sensibilisierst",
+          "er/sie/es": "sensibilisiert",
+          "wir": "sensibilisieren",
+          "ihr": "sensibilisiert",
+          "sie/Sie": "sensibilisieren"
+        },
+        "praeteritum": {
+          "ich": "sensibilisierte",
+          "du": "sensibilisiertest",
+          "er/sie/es": "sensibilisierte",
+          "wir": "sensibilisierten",
+          "ihr": "sensibilisiertet",
+          "sie/Sie": "sensibilisierten"
+        },
+        "perfekt": {
+          "hilfsverb": "haben",
+          "partizip2": "sensibilisiert"
+        },
+        "konjunktiv2": {
+          "ich": "sensibilisierte",
+          "du": "sensibilisiertest",
+          "er/sie/es": "sensibilisierte",
+          "wir": "sensibilisierten",
+          "ihr": "sensibilisiertet",
+          "sie/Sie": "sensibilisierten"
+        },
+        "imperativ": {
+          "du": "sensibilisiere",
+          "ihr": "sensibilisiert",
+          "Sie": "sensibilisieren Sie"
+        }
+      },
+      "imageUrl": "/images/vocab/c1-datenschutz-digitalethik/sensibilisieren.png"
+    },
+    {
+      "word": "einschreiten",
+      "article": null,
+      "plural": null,
+      "wordType": "VERB",
+      "meaningVi": "can thiệp, xen vào",
+      "meaningEn": "to intervene",
+      "exampleSentence1": "Die Aufsichtsbehörden können einschreiten, wenn Unternehmen gegen Datenschutzvorschriften verstoßen.",
+      "exampleTranslation1": "Các cơ quan giám sát có thể can thiệp khi các doanh nghiệp vi phạm quy định bảo vệ dữ liệu.",
+      "exampleSentence2": "Bei offensichtlichem Missbrauch von Nutzerdaten ist ein schnelles und entschlossenes Einschreiten der Plattformbetreiber geboten.",
+      "exampleTranslation2": "Khi có dấu hiệu lạm dụng dữ liệu người dùng rõ ràng, các nhà điều hành nền tảng cần phải can thiệp nhanh chóng và quyết đoán.",
+      "notes": "Gehoben, formell. Aktiv werden, um eine Situation zu beeinflussen, zu beenden oder einen Missstand zu beheben.",
+      "conjugation": {
+        "praesens": {
+          "ich": "schreite ein",
+          "du": "schreitest ein",
+          "er/sie/es": "schreitet ein",
+          "wir": "schreiten ein",
+          "ihr": "schreitet ein",
+          "sie/Sie": "schreiten ein"
+        },
+        "praeteritum": {
+          "ich": "schritt ein",
+          "du": "schrittest ein",
+          "er/sie/es": "schritt ein",
+          "wir": "schritten ein",
+          "ihr": "schrittet ein",
+          "sie/Sie": "schritten ein"
+        },
+        "perfekt": {
+          "hilfsverb": "sein",
+          "partizip2": "eingeschritten"
+        },
+        "konjunktiv2": {
+          "ich": "schritte ein",
+          "du": "schrittest ein",
+          "er/sie/es": "schritte ein",
+          "wir": "schritten ein",
+          "ihr": "schrittet ein",
+          "sie/Sie": "schritten ein"
+        },
+        "imperativ": {
+          "du": "schreite ein",
+          "ihr": "schreitet ein",
+          "Sie": "schreiten Sie ein"
+        }
+      },
+      "imageUrl": "/images/vocab/c1-datenschutz-digitalethik/einschreiten.png"
+    },
+    {
+      "word": "kodifizieren",
+      "article": null,
+      "plural": null,
+      "wordType": "VERB",
+      "meaningVi": "pháp điển hóa, hệ thống hóa thành luật",
+      "meaningEn": "to codify",
+      "exampleSentence1": "Viele ethische Prinzipien im Umgang mit KI müssen noch in rechtlich bindenden Normen kodifiziert werden.",
+      "exampleTranslation1": "Nhiều nguyên tắc đạo đức trong việc xử lý AI vẫn cần được pháp điển hóa thành các quy tắc ràng buộc pháp lý.",
+      "exampleSentence2": "Die Gesetzgebung versucht, die komplexen Sachverhalte der Digitalisierung zu kodifizieren und klare Regeln zu schaffen.",
+      "exampleTranslation2": "Pháp luật đang cố gắng pháp điển hóa các vấn đề phức tạp của số hóa và tạo ra các quy tắc rõ ràng.",
+      "notes": "Fachsprachlich, bildungssprachlich. Etwas (z.B. Regeln, Prinzipien) in einem Gesetzbuch, einem Regelsystem oder einer systematischen Form zusammenfassen und festschreiben.",
+      "conjugation": {
+        "praesens": {
+          "ich": "kodifiziere",
+          "du": "kodifizierst",
+          "er/sie/es": "kodifiziert",
+          "wir": "kodifizieren",
+          "ihr": "kodifiziert",
+          "sie/Sie": "kodifizieren"
+        },
+        "praeteritum": {
+          "ich": "kodifizierte",
+          "du": "kodifiziertest",
+          "er/sie/es": "kodifizierte",
+          "wir": "kodifizierten",
+          "ihr": "kodifiziertet",
+          "sie/Sie": "kodifizierten"
+        },
+        "perfekt": {
+          "hilfsverb": "haben",
+          "partizip2": "kodifiziert"
+        },
+        "konjunktiv2": {
+          "ich": "kodifizierte",
+          "du": "kodifiziertest",
+          "er/sie/es": "kodifizierte",
+          "wir": "kodifizierten",
+          "ihr": "kodifiziertet",
+          "sie/Sie": "kodifizierten"
+        },
+        "imperativ": {
+          "du": "kodifiziere",
+          "ihr": "kodifiziert",
+          "Sie": "kodifizieren Sie"
+        }
+      },
+      "imageUrl": "/images/vocab/c1-datenschutz-digitalethik/kodifizieren.png"
+    },
+    {
+      "word": "verankern",
+      "article": null,
+      "plural": null,
+      "wordType": "VERB",
+      "meaningVi": "neo giữ, củng cố, ghi sâu",
+      "meaningEn": "to embed, to enshrine",
+      "exampleSentence1": "Das Recht auf Datenschutz sollte stärker in den Verfassungen der Mitgliedstaaten verankert werden.",
+      "exampleTranslation1": "Quyền bảo vệ dữ liệu nên được ghi sâu hơn vào hiến pháp của các quốc gia thành viên.",
+      "exampleSentence2": "Ethische Leitlinien müssen in der Unternehmenskultur tief verankert sein, um wirksam zu sein.",
+      "exampleTranslation2": "Các nguyên tắc đạo đức phải được ghi sâu vào văn hóa doanh nghiệp để có hiệu quả.",
+      "notes": "Gehoben, bildungssprachlich. Etwas fest und dauerhaft etablieren, integrieren oder in einer Grundlage festlegen.",
+      "conjugation": {
+        "praesens": {
+          "ich": "verankere",
+          "du": "verankerst",
+          "er/sie/es": "verankert",
+          "wir": "verankern",
+          "ihr": "verankert",
+          "sie/Sie": "verankern"
+        },
+        "praeteritum": {
+          "ich": "verankerte",
+          "du": "verankertest",
+          "er/sie/es": "verankerte",
+          "wir": "verankerten",
+          "ihr": "verankertet",
+          "sie/Sie": "verankerten"
+        },
+        "perfekt": {
+          "hilfsverb": "haben",
+          "partizip2": "verankert"
+        },
+        "konjunktiv2": {
+          "ich": "verankerte",
+          "du": "verankertest",
+          "er/sie/es": "verankerte",
+          "wir": "verankerten",
+          "ihr": "verankertet",
+          "sie/Sie": "verankerten"
+        },
+        "imperativ": {
+          "du": "verankere",
+          "ihr": "verankert",
+          "Sie": "verankern Sie"
+        }
+      },
+      "imageUrl": "/images/vocab/c1-datenschutz-digitalethik/verankern.png"
+    },
+    {
+      "word": "beeinträchtigen",
+      "article": null,
+      "plural": null,
+      "wordType": "VERB",
+      "meaningVi": "ảnh hưởng xấu, gây hại, xâm phạm",
+      "meaningEn": "to impair, to infringe, to adversely affect",
+      "exampleSentence1": "Die unkontrollierte Nutzung von Daten kann die Grundrechte der Bürger erheblich beeinträchtigen.",
+      "exampleTranslation1": "Việc sử dụng dữ liệu không kiểm soát có thể ảnh hưởng đáng kể đến các quyền cơ bản của công dân.",
+      "exampleSentence2": "Es ist zu prüfen, inwiefern automatisierte Entscheidungssysteme die Autonomie des Einzelnen beeinträchtigen könnten.",
+      "exampleTranslation2": "Cần xem xét mức độ mà các hệ thống ra quyết định tự động có thể xâm phạm quyền tự chủ của cá nhân.",
+      "notes": "Gehoben, formell. Negativ beeinflussen, schaden, die Funktion oder den Wert von etwas mindern.",
+      "conjugation": {
+        "praesens": {
+          "ich": "beeinträchtige",
+          "du": "beeinträchtigst",
+          "er/sie/es": "beeinträchtigt",
+          "wir": "beeinträchtigen",
+          "ihr": "beeinträchtigt",
+          "sie/Sie": "beeinträchtigen"
+        },
+        "praeteritum": {
+          "ich": "beeinträchtigte",
+          "du": "beeinträchtigtest",
+          "er/sie/es": "beeinträchtigte",
+          "wir": "beeinträchtigten",
+          "ihr": "beeinträchtigtet",
+          "sie/Sie": "beeinträchtigten"
+        },
+        "perfekt": {
+          "hilfsverb": "haben",
+          "partizip2": "beeinträchtigt"
+        },
+        "konjunktiv2": {
+          "ich": "beeinträchtigte",
+          "du": "beeinträchtigtest",
+          "er/sie/es": "beeinträchtigte",
+          "wir": "beeinträchtigten",
+          "ihr": "beeinträchtigtet",
+          "sie/Sie": "beeinträchtigten"
+        },
+        "imperativ": {
+          "du": "beeinträchtige",
+          "ihr": "beeinträchtigt",
+          "Sie": "beeinträchtigen Sie"
+        }
+      },
+      "imageUrl": "/images/vocab/c1-datenschutz-digitalethik/beeintraechtigen.png"
+    },
+    {
+      "word": "unterbinden",
+      "article": null,
+      "plural": null,
+      "wordType": "VERB",
+      "meaningVi": "ngăn chặn, chấm dứt",
+      "meaningEn": "to prevent, to suppress",
+      "exampleSentence1": "Effektive Sicherheitsmechanismen sind notwendig, um Cyberangriffe und Datenlecks zu unterbinden.",
+      "exampleTranslation1": "Các cơ chế bảo mật hiệu quả là cần thiết để ngăn chặn các cuộc tấn công mạng và rò rỉ dữ liệu.",
+      "exampleSentence2": "Der Gesetzgeber ist bestrebt, die Verbreitung illegaler Inhalte im Internet zu unterbinden.",
+      "exampleTranslation2": "Nhà lập pháp đang nỗ lực ngăn chặn việc phát tán nội dung bất hợp pháp trên internet.",
+      "notes": "Gehoben, formell. Etwas verhindern oder stoppen, sodass es nicht geschehen kann oder aufhört.",
+      "conjugation": {
+        "praesens": {
+          "ich": "unterbinde",
+          "du": "unterbindest",
+          "er/sie/es": "unterbindet",
+          "wir": "unterbinden",
+          "ihr": "unterbindet",
+          "sie/Sie": "unterbinden"
+        },
+        "praeteritum": {
+          "ich": "unterband",
+          "du": "unterbandest",
+          "er/sie/es": "unterband",
+          "wir": "unterbanden",
+          "ihr": "unterbandet",
+          "sie/Sie": "unterbanden"
+        },
+        "perfekt": {
+          "hilfsverb": "haben",
+          "partizip2": "unterbunden"
+        },
+        "konjunktiv2": {
+          "ich": "unterbände",
+          "du": "unterbändest",
+          "er/sie/es": "unterbände",
+          "wir": "unterbänden",
+          "ihr": "unterbändet",
+          "sie/Sie": "unterbänden"
+        },
+        "imperativ": {
+          "du": "unterbinde",
+          "ihr": "unterbindet",
+          "Sie": "unterbinden Sie"
+        }
+      },
+      "imageUrl": "/images/vocab/c1-datenschutz-digitalethik/unterbinden.png"
+    },
+    {
+      "word": "offenlegen",
+      "article": null,
+      "plural": null,
+      "wordType": "VERB",
+      "meaningVi": "công khai, tiết lộ",
+      "meaningEn": "to disclose, to reveal",
+      "exampleSentence1": "Unternehmen müssen transparent offenlegen, welche Daten sie zu welchem Zweck verarbeiten.",
+      "exampleTranslation1": "Các doanh nghiệp phải công khai minh bạch những dữ liệu nào họ xử lý và với mục đích gì.",
+      "exampleSentence2": "Die Untersuchung forderte die Regierung auf, alle relevanten Dokumente vollständig offenzulegen.",
+      "exampleTranslation2": "Cuộc điều tra yêu cầu chính phủ công khai hoàn toàn tất cả các tài liệu liên quan.",
+      "notes": "Formell, fachsprachlich. Informationen, Fakten oder Dokumente preisgeben, zugänglich machen oder enthüllen.",
+      "conjugation": {
+        "praesens": {
+          "ich": "lege offen",
+          "du": "legst offen",
+          "er/sie/es": "legt offen",
+          "wir": "legen offen",
+          "ihr": "legt offen",
+          "sie/Sie": "legen offen"
+        },
+        "praeteritum": {
+          "ich": "legte offen",
+          "du": "legtest offen",
+          "er/sie/es": "legte offen",
+          "wir": "legten offen",
+          "ihr": "legtet offen",
+          "sie/Sie": "legten offen"
+        },
+        "perfekt": {
+          "hilfsverb": "haben",
+          "partizip2": "offengelegt"
+        },
+        "konjunktiv2": {
+          "ich": "legte offen",
+          "du": "legtest offen",
+          "er/sie/es": "legte offen",
+          "wir": "legten offen",
+          "ihr": "legtet offen",
+          "sie/Sie": "legten offen"
+        },
+        "imperativ": {
+          "du": "lege offen",
+          "ihr": "legt offen",
+          "Sie": "legen Sie offen"
+        }
+      },
+      "imageUrl": "/images/vocab/c1-datenschutz-digitalethik/offenlegen.png"
+    },
+    {
+      "word": "unabdingbar",
+      "article": null,
+      "plural": null,
+      "wordType": "ADJEKTIV",
+      "meaningVi": "không thể thiếu, thiết yếu",
+      "meaningEn": "indispensable, essential",
+      "exampleSentence1": "Eine unabhängige Datenschutzaufsichtsbehörde ist für den Schutz der Bürgerrechte unabdingbar.",
+      "exampleTranslation1": "Một cơ quan giám sát bảo vệ dữ liệu độc lập là không thể thiếu để bảo vệ quyền công dân.",
+      "exampleSentence2": "Die Einhaltung ethischer Standards ist für die Akzeptanz von KI-Systemen in der Gesellschaft unabdingbar.",
+      "exampleTranslation2": "Việc tuân thủ các tiêu chuẩn đạo đức là thiết yếu cho sự chấp nhận của các hệ thống AI trong xã hội.",
+      "notes": "Gehoben, formell. Absolut notwendig, nicht wegzudenken oder zu ersetzen.",
+      "imageUrl": "/images/vocab/c1-datenschutz-digitalethik/unabdingbar.png"
+    },
+    {
+      "word": "datenschutzkonform",
+      "article": null,
+      "plural": null,
+      "wordType": "ADJEKTIV",
+      "meaningVi": "tuân thủ bảo vệ dữ liệu",
+      "meaningEn": "data protection compliant",
+      "exampleSentence1": "Alle digitalen Anwendungen müssen datenschutzkonform gestaltet sein, um den gesetzlichen Anforderungen zu genügen.",
+      "exampleTranslation1": "Tất cả các ứng dụng kỹ thuật số phải được thiết kế tuân thủ bảo vệ dữ liệu để đáp ứng các yêu cầu pháp lý.",
+      "exampleSentence2": "Die Verarbeitung personenbezogener Daten muss stets datenschutzkonform erfolgen.",
+      "exampleTranslation2": "Việc xử lý dữ liệu cá nhân phải luôn được thực hiện theo quy định bảo vệ dữ liệu.",
+      "notes": "Fachsprachlich. Entspricht den geltenden Regeln und Gesetzen des Datenschutzes (z.B. DSGVO).",
+      "imageUrl": "/images/vocab/c1-datenschutz-digitalethik/datenschutzkonform.png"
+    },
+    {
+      "word": "verhältnismäßig",
+      "article": null,
+      "plural": null,
+      "wordType": "ADJEKTIV",
+      "meaningVi": "cân xứng, tương xứng",
+      "meaningEn": "proportionate",
+      "exampleSentence1": "Jede Maßnahme, die in Grundrechte eingreift, muss dem Gebot der Verhältnismäßigkeit entsprechen.",
+      "exampleTranslation1": "Mọi biện pháp can thiệp vào các quyền cơ bản phải tuân thủ nguyên tắc cân xứng.",
+      "exampleSentence2": "Die Sanktionen für Datenschutzverstöße müssen verhältnismäßig zu dem entstandenen Schaden sein.",
+      "exampleTranslation2": "Các biện pháp trừng phạt đối với vi phạm bảo vệ dữ liệu phải tương xứng với thiệt hại đã gây ra.",
+      "notes": "Rechtssprachlich, bildungssprachlich. Angemessen im Verhältnis zum Zweck oder der Schwere, weder übertrieben noch unzureichend.",
+      "imageUrl": "/images/vocab/c1-datenschutz-digitalethik/verhaeltnismaessig.png"
+    },
+    {
+      "word": "vulnerabel",
+      "article": null,
+      "plural": null,
+      "wordType": "ADJEKTIV",
+      "meaningVi": "dễ bị tổn thương, dễ bị tấn công",
+      "meaningEn": "vulnerable",
+      "exampleSentence1": "Viele IoT-Geräte sind aufgrund unzureichender Sicherheitsvorkehrungen äußerst vulnerabel für Cyberangriffe.",
+      "exampleTranslation1": "Nhiều thiết bị IoT rất dễ bị tấn công mạng do các biện pháp bảo mật không đầy đủ.",
+      "exampleSentence2": "Besonders schutzbedürftige Personengruppen sind online oft vulnerabler gegenüber Betrugsversuchen.",
+      "exampleTranslation2": "Các nhóm người đặc biệt dễ bị tổn thương thường dễ bị lừa đảo trực tuyến hơn.",
+      "notes": "Fachsprachlich, bildungssprachlich. Anfällig, verwundbar, leicht zu schädigen oder anzugreifen.",
+      "imageUrl": "/images/vocab/c1-datenschutz-digitalethik/vulnerabel.png"
+    },
+    {
+      "word": "unantastbar",
+      "article": null,
+      "plural": null,
+      "wordType": "ADJEKTIV",
+      "meaningVi": "bất khả xâm phạm",
+      "meaningEn": "inviolable, untouchable",
+      "exampleSentence1": "Die Menschenwürde ist ein unantastbares Gut und muss in jedem Kontext respektiert werden.",
+      "exampleTranslation1": "Phẩm giá con người là một giá trị bất khả xâm phạm và phải được tôn trọng trong mọi bối cảnh.",
+      "exampleSentence2": "Das Recht auf Privatsphäre gilt als unantastbar und ist durch die Verfassung geschützt.",
+      "exampleTranslation2": "Quyền riêng tư được coi là bất khả xâm phạm và được hiến pháp bảo vệ.",
+      "notes": "Gehoben, rechtssprachlich. Etwas, das nicht verletzt, angegriffen oder in Frage gestellt werden darf; von höchstem Wert und Schutz.",
+      "imageUrl": "/images/vocab/c1-datenschutz-digitalethik/unantastbar.png"
+    },
+    {
+      "word": "präventiv",
+      "article": null,
+      "plural": null,
+      "wordType": "ADJEKTIV",
+      "meaningVi": "phòng ngừa, ngăn chặn",
+      "meaningEn": "preventive",
+      "exampleSentence1": "Präventive Maßnahmen im Bereich der Cybersicherheit sind entscheidend, um Schäden zu vermeiden.",
+      "exampleTranslation1": "Các biện pháp phòng ngừa trong lĩnh vực an ninh mạng là rất quan trọng để tránh thiệt hại.",
+      "exampleSentence2": "Eine präventive Aufklärung der Nutzer kann viele Risiken im Umgang mit persönlichen Daten minimieren.",
+      "exampleTranslation2": "Việc giáo dục phòng ngừa cho người dùng có thể giảm thiểu nhiều rủi ro khi xử lý dữ liệu cá nhân.",
+      "notes": "Fachsprachlich, bildungssprachlich. Vorbeugend, darauf abzielend, etwas Unerwünschtes zu verhindern, bevor es eintritt.",
+      "imageUrl": "/images/vocab/c1-datenschutz-digitalethik/praeventiv.png"
+    },
+    {
+      "word": "dezidiert",
+      "article": null,
+      "plural": null,
+      "wordType": "ADVERB",
+      "meaningVi": "kiên quyết, rõ ràng, dứt khoát",
+      "meaningEn": "decidedly, explicitly",
+      "exampleSentence1": "Der Bericht sprach sich dezidiert für eine stärkere Regulierung von Big Data aus.",
+      "exampleTranslation1": "Báo cáo đã kiên quyết ủng hộ việc tăng cường quy định đối với Dữ liệu lớn (Big Data).",
+      "exampleSentence2": "Die Kommission hat dezidiert klargestellt, dass Datenschutz kein Luxus, sondern ein Grundrecht ist.",
+      "exampleTranslation2": "Ủy ban đã rõ ràng tuyên bố rằng bảo vệ dữ liệu không phải là một sự xa xỉ, mà là một quyền cơ bản.",
+      "notes": "Gehoben, formell. Entschieden, ausdrücklich, bestimmt, ohne Zweifel oder Zögern. Kann auch als Adjektiv verwendet werden.",
+      "imageUrl": "/images/vocab/c1-datenschutz-digitalethik/dezidiert.png"
+    }
+  ]
+}

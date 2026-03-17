@@ -1,0 +1,64 @@
+{
+  "id": "W-B2-T1-013",
+  "cefrLevel": "B2",
+  "teil": 1,
+  "teilName": "Forumsbeitrag",
+  "textType": "Forumsbeitrag",
+  "register": "neutral",
+  "topic": "E-Mobilitaet",
+  "instruction": "Sie haben im Internet einen Artikel zum Thema „Reisen mit dem Elektroauto“ gelesen. Schreiben Sie nun einen Forumsbeitrag, in dem Sie Ihre Meinung dazu äußern und auf die unten genannten Punkte eingehen.",
+  "instructionVi": "Bạn vừa đọc một bài báo về chủ đề \"Du lịch bằng xe điện\". Hãy viết một bài đăng trên diễn đàn để bày tỏ ý kiến của bạn và đề cập đến các ý dưới đây.",
+  "situation": "In einem aktuellen Online-Magazin wird diskutiert, ob Elektroautos für lange Urlaubsreisen bereits alltagstauglich sind. Viele Leser äußern sich kritisch zur mangelnden Infrastruktur in ländlichen Regionen, während andere die ökologischen Vorteile für den Tourismus betonen.",
+  "contentPoints": [
+    "Äußern Sie Ihre Meinung zur Nutzung von Elektroautos bei Urlaubsreisen.",
+    "Nennen Sie Gründe, warum viele Menschen noch zögern, mit dem E-Auto in den Urlaub zu fahren.",
+    "Erläutern Sie Vorteile der E-Mobilität für die Umwelt im Bereich Tourismus.",
+    "Schlagen Sie Möglichkeiten vor, wie die Ladeinfrastruktur in Ferienregionen verbessert werden könnte."
+  ],
+  "sourceText": "Reisen ohne Abgase: Die Zukunft der E-Mobilität im Urlaub. In den letzten Jahren hat das Interesse an Elektroautos stark zugenommen. Dennoch stellt die Urlaubsfahrt mit dem E-Auto viele Reisende vor Herausforderungen. Während Kurzstrecken im Alltag problemlos bewältigt werden, bereiten lange Fahrten in den Sommerurlaub oft Sorgen. Experten betonen, dass die Reichweitenangst zwar sinkt, aber die Ladeinfrastruktur in beliebten Feriengebieten oft noch nicht ausreicht. Zudem gibt es große Preisunterschiede bei den Ladestationen im Ausland. Professor Dr. Müller, Experte für Verkehrsentwicklung, sagt: „Der Erfolg der E-Mobilität im Tourismus hängt entscheidend vom flächendeckenden Ausbau der Schnellladestationen ab.“ Klimaschützer weisen darauf hin, dass nur so ein wirklich nachhaltiger Tourismus möglich sei.",
+  "sourceTextType": "Online-Magazin 'MobilHeute'",
+  "minWords": 150,
+  "maxWords": 250,
+  "timeMinutes": 35,
+  "rubric": {
+    "criteria": [
+      {
+        "id": "inhalt",
+        "name": "Inhalt",
+        "nameVi": "Nội dung",
+        "maxScore": 5,
+        "weight": 25
+      },
+      {
+        "id": "angemessenheit",
+        "name": "Kommunikative Angemessenheit",
+        "nameVi": "Phù hợp giao tiếp",
+        "maxScore": 5,
+        "weight": 20
+      },
+      {
+        "id": "korrektheit",
+        "name": "Korrektheit",
+        "nameVi": "Chính xác ngữ pháp & chính tả",
+        "maxScore": 5,
+        "weight": 25
+      },
+      {
+        "id": "spektrum",
+        "name": "Wortschatz & Strukturen",
+        "nameVi": "Đa dạng từ vựng & cấu trúc",
+        "maxScore": 5,
+        "weight": 15
+      },
+      {
+        "id": "kohaerenz",
+        "name": "Kohaerenz & Kohaesion",
+        "nameVi": "Mạch lạc & liên kết",
+        "maxScore": 5,
+        "weight": 15
+      }
+    ],
+    "maxScore": 25
+  },
+  "maxScore": 25
+}

@@ -1,0 +1,239 @@
+{
+  "id": "A1-T1-003",
+  "level": "A1",
+  "teil": 1,
+  "teil_name": "Kurze Texte lesen",
+  "topic": "Beim Arzt",
+  "topic_id": "003",
+  "metadata": {
+    "word_count_text_a": 44,
+    "word_count_text_b": 46,
+    "target_grammar": [
+      "Präsens",
+      "Modalverb können",
+      "Akkusativ"
+    ],
+    "target_vocabulary": [
+      "Arzt",
+      "Termin",
+      "krank",
+      "Kopfschmerzen",
+      "Medikament",
+      "Rezept",
+      "Apotheke",
+      "anrufen",
+      "Praxis",
+      "Sprechstunde"
+    ],
+    "generated_at": "2026-03-09T02:15:00+07:00",
+    "version": 1
+  },
+  "texts": [
+    {
+      "id": "TextA",
+      "type": "email",
+      "sender": "Sarah",
+      "receiver": "Dr. Weber",
+      "content": "Sehr geehrter Herr Dr. Weber,\nich bin krank. Ich habe Kopfschmerzen und Fieber. Kann ich morgen einen Termin bekommen? Am Vormittag habe ich Zeit, am besten um 10 Uhr. Bitte rufen Sie mich an. Meine Nummer ist 0176-4567890.\nMit freundlichen Grüßen,\nSarah Klein"
+    },
+    {
+      "id": "TextB",
+      "type": "sms",
+      "sender": "Praxis Dr. Weber",
+      "receiver": "Sarah",
+      "content": "Liebe Frau Klein, Ihr Termin ist morgen um 9 Uhr bei Dr. Weber. Bitte bringen Sie Ihre Versicherungskarte mit. Die Praxis ist in der Berliner Straße 15, zweiter Stock. Kommen Sie bitte 10 Minuten früher für die Anmeldung. Wir haben Parkplätze vor dem Haus. Bis morgen!"
+    }
+  ],
+  "images": [
+    {
+      "id": "IMG1",
+      "type": "scene",
+      "prompt": "Cute cartoon illustration of a doctor's office waiting room with a friendly female doctor, a patient sitting, medical posters on wall, bright clean modern clinic. Fuxie cartoon style, flat illustration, warm pastel colors, no text.",
+      "filename": "A1-T1-003_scene.png",
+      "placement": "header",
+      "alt_text": "Wartezimmer beim Arzt",
+      "dimensions": "768x512"
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q1",
+      "teil": 1,
+      "linked_text": "TextA",
+      "type": "richtig_falsch",
+      "statement": "Sarah hat Zahnschmerzen.",
+      "answer": "falsch",
+      "points": 1,
+      "explanation": {
+        "de": "Im Text steht: 'Ich habe Kopfschmerzen und Fieber.' Sarah hat Kopfschmerzen, nicht Zahnschmerzen.",
+        "key_evidence": "Ich habe Kopfschmerzen und Fieber",
+        "key_vocabulary": [
+          {
+            "word": "Kopfschmerzen",
+            "type": "Nomen",
+            "meaning": "headache"
+          },
+          {
+            "word": "Zahnschmerzen",
+            "type": "Nomen",
+            "meaning": "toothache"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q2",
+      "teil": 1,
+      "linked_text": "TextA",
+      "type": "richtig_falsch",
+      "statement": "Sarah möchte am Vormittag zum Arzt gehen.",
+      "answer": "richtig",
+      "points": 1,
+      "explanation": {
+        "de": "Im Text steht: 'Am Vormittag habe ich Zeit, am besten um 10 Uhr.' Sarah möchte am Vormittag kommen.",
+        "key_evidence": "Am Vormittag habe ich Zeit",
+        "key_vocabulary": [
+          {
+            "word": "Vormittag",
+            "type": "Nomen",
+            "meaning": "morning"
+          },
+          {
+            "word": "Termin",
+            "type": "Nomen",
+            "meaning": "appointment"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q3",
+      "teil": 1,
+      "linked_text": "TextB",
+      "type": "richtig_falsch",
+      "statement": "Der Termin ist um 10 Uhr.",
+      "answer": "falsch",
+      "points": 1,
+      "explanation": {
+        "de": "Im Text steht: 'Ihr Termin ist morgen um 9 Uhr.' Der Termin ist um 9 Uhr, nicht um 10 Uhr. Sarah wollte 10 Uhr, aber der Termin ist um 9 Uhr.",
+        "key_evidence": "Ihr Termin ist morgen um 9 Uhr",
+        "key_vocabulary": [
+          {
+            "word": "Termin",
+            "type": "Nomen",
+            "meaning": "appointment"
+          },
+          {
+            "word": "morgen",
+            "type": "Adverb",
+            "meaning": "tomorrow"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q4",
+      "teil": 1,
+      "linked_text": "TextB",
+      "type": "richtig_falsch",
+      "statement": "Sarah soll ihre Versicherungskarte mitbringen.",
+      "answer": "richtig",
+      "points": 1,
+      "explanation": {
+        "de": "Im Text steht: 'Bitte bringen Sie Ihre Versicherungskarte mit.' Sarah soll die Versicherungskarte mitbringen.",
+        "key_evidence": "Bitte bringen Sie Ihre Versicherungskarte mit",
+        "key_vocabulary": [
+          {
+            "word": "Versicherungskarte",
+            "type": "Nomen",
+            "meaning": "insurance card"
+          },
+          {
+            "word": "mitbringen",
+            "type": "Verb",
+            "meaning": "to bring along"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q5",
+      "teil": 1,
+      "linked_text": "TextB",
+      "type": "richtig_falsch",
+      "statement": "Die Praxis hat keine Parkplätze.",
+      "answer": "falsch",
+      "points": 1,
+      "explanation": {
+        "de": "Im Text steht: 'Wir haben Parkplätze vor dem Haus.' Die Praxis hat Parkplätze.",
+        "key_evidence": "Wir haben Parkplätze vor dem Haus",
+        "key_vocabulary": [
+          {
+            "word": "Parkplatz",
+            "type": "Nomen",
+            "meaning": "parking space"
+          },
+          {
+            "word": "vor",
+            "type": "Präposition",
+            "meaning": "in front of"
+          }
+        ]
+      }
+    }
+  ],
+  "scoring": {
+    "total_points": 5,
+    "pass_threshold": 3,
+    "grading": [
+      {
+        "range": [
+          5,
+          5
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          4,
+          4
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          3,
+          3
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          1,
+          2
+        ],
+        "label": "Noch üben!",
+        "emoji": "📝"
+      },
+      {
+        "range": [
+          0,
+          0
+        ],
+        "label": "Mehr Übung nötig",
+        "emoji": "💪"
+      }
+    ]
+  },
+  "qa": {
+    "vocab_in_a1_list": true,
+    "grammar_a1_only": true,
+    "word_count_in_range": true,
+    "all_answers_verifiable": true,
+    "image_count": 1,
+    "passed": false
+  }
+}

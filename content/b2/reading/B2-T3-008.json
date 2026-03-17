@@ -1,0 +1,222 @@
+{
+  "id": "B2-T3-008",
+  "level": "B2",
+  "teil": 3,
+  "teil_name": "Anzeigen zuordnen",
+  "topic": "Digitalisierung & Technik",
+  "topic_id": "008",
+  "metadata": {
+    "word_count": 157,
+    "target_grammar": [
+      "Konjunktiv II",
+      "Passiv",
+      "Modalverben",
+      "Relativsätze"
+    ],
+    "target_vocabulary": [],
+    "generated_at": "2026-03-11T22:34:38.583025",
+    "version": 1
+  },
+  "anzeigen": [
+    {
+      "id": "A",
+      "text": "IT-Sicherheitskurs CompTIA Security+: Vorbereitung auf die internationale Zertifizierung. 5 Tage Intensivtraining. Online oder in Frankfurt. 2.100 Euro inkl. Prüfungsvoucher."
+    },
+    {
+      "id": "B",
+      "text": "Smart-Home-Beratung: Wir planen und installieren Ihr intelligentes Zuhause. Licht, Heizung, Sicherheit — alles per App steuerbar. Kostenlose Erstberatung. SmartLiving GmbH."
+    },
+    {
+      "id": "C",
+      "text": "Coding-Bootcamp Web Development: In 12 Wochen zum Full-Stack-Entwickler. HTML, CSS, JavaScript, React, Node.js. Garantiertes Vorstellungsgespräch. 8.500 Euro oder Ratenzahlung. CodeCamp Berlin."
+    },
+    {
+      "id": "D",
+      "text": "Technikversicherung CyberShield: Schutz für Laptop, Smartphone und Tablet gegen Diebstahl, Bruch und Wasserschaden. Ab 5,99 Euro/Monat. Weltweiter Schutz. Online abschließen."
+    },
+    {
+      "id": "E",
+      "text": "Raspberry Pi Workshop für Einsteiger: Eigene IoT-Projekte bauen. Samstag, 10-16 Uhr im FabLab München. Keine Vorkenntnisse nötig. Material inkl. 65 Euro."
+    },
+    {
+      "id": "F",
+      "text": "Datenschutz-Beauftragter (TÜV): Ausbildung in 5 Tagen. Pflichtqualifikation für Unternehmen ab 20 Mitarbeitern. 2.300 Euro. Nächster Kurs: Mai 2026."
+    },
+    {
+      "id": "G",
+      "text": "PC-Hilfe für Senioren: Ehrenamtliche helfen beim Einrichten von E-Mail, Video-Telefonie und Online-Banking. Jeden Mittwoch 14-16 Uhr in der Stadtbibliothek. Kostenlos."
+    },
+    {
+      "id": "H",
+      "text": "3D-Druck-Service: Prototypen und Ersatzteile aus Kunststoff und Metall. Lieferzeit ab 3 Werktagen. Upload und Angebot online. PrintDirect GmbH."
+    }
+  ],
+  "situationen": [
+    {
+      "id": "S1",
+      "text": "Ein IT-Administrator möchte eine international anerkannte Sicherheitszertifizierung erwerben.",
+      "answer": "A"
+    },
+    {
+      "id": "S2",
+      "text": "Eine Rentnerin braucht Hilfe beim Einrichten von Video-Telefonie.",
+      "answer": "G"
+    },
+    {
+      "id": "S3",
+      "text": "Ein Unternehmen mit 50 Mitarbeitern benötigt einen zertifizierten Datenschutz-Beauftragten.",
+      "answer": "F"
+    },
+    {
+      "id": "S4",
+      "text": "Ein Bastler möchte lernen, kleine elektronische Projekte mit einem Minicomputer zu bauen.",
+      "answer": "E"
+    },
+    {
+      "id": "S5",
+      "text": "Jemand möchte seine Wohnung mit intelligenter Technik ausstatten.",
+      "answer": "B"
+    }
+  ],
+  "null_matches": [
+    "C",
+    "D",
+    "H"
+  ],
+  "images": [
+    {
+      "id": "IMG1",
+      "type": "scene",
+      "prompt": "Cute cartoon illustration of a bulletin board with various professional advertisements related to Digitalisierung & Technik. Fuxie cartoon style, flat illustration, warm pastel colors, no text.",
+      "filename": "B2-T3-008_scene.png",
+      "placement": "header",
+      "alt_text": "Anzeigen: Digitalisierung & Technik",
+      "dimensions": "768x512"
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q1",
+      "teil": 3,
+      "type": "matching",
+      "stem": "Ein IT-Administrator möchte eine international anerkannte Sicherheitszertifizierung erwerben.",
+      "answer": "A",
+      "points": 1,
+      "explanation": {
+        "de": "Anzeige A passt, weil sie das beschriebene Bedürfnis erfüllt.",
+        "key_evidence": "Anzeige A",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q2",
+      "teil": 3,
+      "type": "matching",
+      "stem": "Aus der Argumentation lässt sich ableiten, dass eine Rentnerin braucht Hilfe beim Einrichten von Video-Telefonie. Diese Position vertritt:",
+      "answer": "G",
+      "points": 1,
+      "explanation": {
+        "de": "Anzeige G passt, weil sie das beschriebene Bedürfnis erfüllt.",
+        "key_evidence": "Anzeige G",
+        "key_vocabulary": [],
+        "reasoning": "[Inferential] "
+      }
+    },
+    {
+      "id": "Q3",
+      "teil": 3,
+      "type": "matching",
+      "stem": "Ein Unternehmen mit 50 Mitarbeitern benötigt einen zertifizierten Datenschutz-Beauftragten.",
+      "answer": "F",
+      "points": 1,
+      "explanation": {
+        "de": "Anzeige F passt, weil sie das beschriebene Bedürfnis erfüllt.",
+        "key_evidence": "Anzeige F",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q4",
+      "teil": 3,
+      "type": "matching",
+      "stem": "Die implizite Annahme, dass Ein Bastler möchte lernen, kleine elektronische Projekte mit einem Minicomputer zu bauen, liegt dem Beitrag zugrunde:",
+      "answer": "E",
+      "points": 1,
+      "explanation": {
+        "de": "Anzeige E passt, weil sie das beschriebene Bedürfnis erfüllt.",
+        "key_evidence": "Anzeige E",
+        "key_vocabulary": [],
+        "reasoning": "[Inferential] "
+      }
+    },
+    {
+      "id": "Q5",
+      "teil": 3,
+      "type": "matching",
+      "stem": "Die implizite Annahme, dass jemand möchte seine Wohnung mit intelligenter Technik ausstatten, liegt dem Beitrag zugrunde:",
+      "answer": "B",
+      "points": 1,
+      "explanation": {
+        "de": "Anzeige B passt, weil sie das beschriebene Bedürfnis erfüllt.",
+        "key_evidence": "Anzeige B",
+        "key_vocabulary": [],
+        "reasoning": "[Inferential] "
+      }
+    }
+  ],
+  "scoring": {
+    "total_points": 5,
+    "pass_threshold": 3,
+    "grading": [
+      {
+        "range": [
+          5,
+          5
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          4,
+          4
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          3,
+          3
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          1,
+          2
+        ],
+        "label": "Noch üben!",
+        "emoji": "📝"
+      },
+      {
+        "range": [
+          0,
+          0
+        ],
+        "label": "Mehr Übung nötig",
+        "emoji": "💪"
+      }
+    ]
+  },
+  "qa": {
+    "vocab_in_b2_list": true,
+    "grammar_b2_appropriate": true,
+    "word_count_in_range": true,
+    "all_answers_verifiable": true,
+    "null_matches_correct": true,
+    "image_count": 1,
+    "passed": true
+  }
+}

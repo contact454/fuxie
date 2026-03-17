@@ -1,0 +1,185 @@
+{
+  "id": "C2-T4-003",
+  "level": "C2",
+  "teil": 4,
+  "teil_name": "Meinungen zuordnen",
+  "topic": "Abstrakte Forschung",
+  "topic_id": "003",
+  "metadata": {
+    "word_count": 119,
+    "target_grammar": [
+      "Alle Strukturen",
+      "Konjunktiv I/II",
+      "Erweiterte Partizipialkonstruktionen",
+      "Nominalisierung",
+      "Akademischer Stil"
+    ],
+    "target_vocabulary": [],
+    "generated_at": "2026-03-12T00:00:04.735012",
+    "version": 1
+  },
+  "opinion_texts": {
+    "question": "Revolutioniert KI die wissenschaftliche Methode?",
+    "texts": [
+      {
+        "name": "Prof. Dr. Stefan Wolff, Physiker",
+        "label": "A",
+        "text": "KI-gestützte Datenanalyse entdeckt Muster in Datensätzen, die für menschliche Forscher unsichtbar wären. In der Genomforschung und der Astrophysik hat maschinelles Lernen bereits zu Durchbrüchen geführt, die mit herkömmlichen Methoden nicht erreichbar gewesen wären."
+      },
+      {
+        "name": "Wissenschaftsphilosophin Dr. Claudia Berg",
+        "label": "B",
+        "text": "Wenn KI Hypothesen generiert, die Menschen nicht nachvollziehen können, stellt sich die fundamentale Frage: Kann es Wissen ohne Verständnis geben? Die epistemologischen Grundlagen der Wissenschaft werden durch undurchsichtige Algorithmen untergraben."
+      },
+      {
+        "name": "KI-Forscherin Prof. Dr. Lin Zhang",
+        "label": "C",
+        "text": "Die Sorgen sind übertrieben. KI ist ein Werkzeug, kein Forscher. Sie kann Hypothesen vorschlagen und Daten analysieren, aber die Interpretation, die Theoriebildung und die methodische Reflexion bleiben menschliche Aufgaben."
+      },
+      {
+        "name": "Bioethiker Dr. Paul Richter",
+        "label": "D",
+        "text": "Die Demokratisierung der Forschung durch KI birgt auch Risiken. Wenn jeder mit einem Computer und einem KI-Modell Forschung betreiben kann, ohne methodische Ausbildung, sinkt die wissenschaftliche Qualität."
+      }
+    ]
+  },
+  "images": [
+    {
+      "id": "IMG1",
+      "type": "scene",
+      "prompt": "Sophisticated cartoon of experts discussing Abstrakte Forschung. Fuxie cartoon style, flat illustration, warm pastel colors, no text.",
+      "filename": "C2-T4-003_scene.png",
+      "placement": "header",
+      "alt_text": "Revolutioniert KI die wissenschaftliche Methode?",
+      "dimensions": "768x512"
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q1",
+      "teil": 4,
+      "type": "matching",
+      "stem": "KI entdeckt Muster, die für menschliche Forscher unsichtbar wären.",
+      "answer": "A",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Text/Beitrag A",
+        "reasoning": "Die Aussage 'KI entdeckt Muster, die für menschliche Forscher u...' entspricht der Position von A."
+      }
+    },
+    {
+      "id": "Q2",
+      "teil": 4,
+      "type": "matching",
+      "stem": "Die epistemologische Überzeugung, dass undurchsichtige Algorithmen untergraben die epistemologischen Grundlagen, manifestiert sich in der Argumentation von:",
+      "answer": "B",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Text/Beitrag B",
+        "reasoning": "[Inferential] Die Aussage 'Undurchsichtige Algorithmen untergraben die episte...' entspricht der Position von B."
+      }
+    },
+    {
+      "id": "Q3",
+      "teil": 4,
+      "type": "matching",
+      "stem": "Die methodologische Annahme, dass kI ist ein Werkzeug, kein Forscher, prägt die Analyse von:",
+      "answer": "C",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Text/Beitrag C",
+        "reasoning": "[Inferential] Die Aussage 'KI ist ein Werkzeug, kein Forscher....' entspricht der Position von C."
+      }
+    },
+    {
+      "id": "Q4",
+      "teil": 4,
+      "type": "matching",
+      "stem": "Die epistemologische Überzeugung, dass fehlende methodische Ausbildung gefährdet die wissenschaftliche Qualität, manifestiert sich in der Argumentation von:",
+      "answer": "D",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Text/Beitrag D",
+        "reasoning": "[Inferential] Die Aussage 'Fehlende methodische Ausbildung gefährdet die wiss...' entspricht der Position von D."
+      }
+    },
+    {
+      "id": "Q5",
+      "teil": 4,
+      "type": "matching",
+      "stem": "Die epistemologische Überzeugung, dass kann es Wissen ohne menschliches Verständnis geben?, manifestiert sich in der Argumentation von:",
+      "answer": "B",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Text/Beitrag B",
+        "reasoning": "[Inferential] Die Aussage 'Kann es Wissen ohne menschliches Verständnis geben...' entspricht der Position von B."
+      }
+    },
+    {
+      "id": "Q6",
+      "teil": 4,
+      "type": "matching",
+      "stem": "Die methodologische Annahme, dass interpretation und Theoriebildung bleiben menschliche Aufgaben, prägt die Analyse von:",
+      "answer": "C",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Text/Beitrag C",
+        "reasoning": "[Inferential] Die Aussage 'Interpretation und Theoriebildung bleiben menschli...' entspricht der Position von C."
+      }
+    }
+  ],
+  "scoring": {
+    "total_points": 6,
+    "pass_threshold": 4,
+    "grading": [
+      {
+        "range": [
+          5,
+          6
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          4,
+          4
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          3,
+          3
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          1,
+          2
+        ],
+        "label": "Noch üben!",
+        "emoji": "📝"
+      },
+      {
+        "range": [
+          0,
+          0
+        ],
+        "label": "Mehr Übung nötig",
+        "emoji": "💪"
+      }
+    ]
+  },
+  "qa": {
+    "vocab_in_c2_list": true,
+    "grammar_c2_appropriate": true,
+    "word_count_in_range": true,
+    "all_answers_verifiable": true,
+    "image_count": 1,
+    "passed": true
+  }
+}

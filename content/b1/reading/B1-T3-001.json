@@ -1,0 +1,258 @@
+{
+  "id": "B1-T3-001",
+  "level": "B1",
+  "teil": 3,
+  "teil_name": "Anzeigen zuordnen",
+  "topic": "Gesundheit & Ernährung",
+  "topic_id": "001",
+  "metadata": {
+    "word_count": 240,
+    "target_grammar": [
+      "Nebensatz mit weil/dass",
+      "Modalverben",
+      "Imperativ"
+    ],
+    "target_vocabulary": [
+      "Fitnessstudio",
+      "Ernährungsberatung",
+      "Mitgliedschaft",
+      "Probetraining",
+      "Kurs",
+      "Krankenkasse",
+      "Yoga",
+      "Ermäßigung"
+    ],
+    "generated_at": "2026-03-10T23:30:00+07:00",
+    "version": 1
+  },
+  "anzeigen": [
+    {
+      "id": "A",
+      "text": "FitZone — Dein neues Fitnessstudio in Mitte! Eröffnungsangebot: 3 Monate für 99 €. Gerätetraining, Sauna, Gruppenkurse. Täglich 6–23 Uhr. Probetraining kostenlos! www.fitzone-berlin.de"
+    },
+    {
+      "id": "B",
+      "text": "Ernährungsberatung Dr. Claudia Weiß. Individuelle Ernährungspläne für Gewichtsabnahme, Allergien und Sportler. Krankenkasse übernimmt bis zu 80 %. Termine: Mo–Fr, 9–17 Uhr. Tel: 030-4455667."
+    },
+    {
+      "id": "C",
+      "text": "Yoga für Anfänger — 8-Wochen-Kurs ab 5. April. Jeden Samstag 10–11:30 Uhr. Kleine Gruppen (max. 8 Personen). Matte wird gestellt. 120 € inkl. Tee. Studio Lotusblume, Prenzlauer Berg."
+    },
+    {
+      "id": "D",
+      "text": "Laufgruppe „Stadtläufer“ — Wir laufen jeden Mittwoch und Sonntag im Tiergarten. Alle Niveaus willkommen. Treffpunkt: Siegessäule, 18 Uhr. Kostenlos und ohne Anmeldung!"
+    },
+    {
+      "id": "E",
+      "text": "Bio-Kochkurs: Saisonale Küche mit regionalen Zutaten. 4 Abende (Di, 18–21 Uhr). Inkl. Rezeptheft und alle Zutaten. 180 € pro Person. Max. 10 Teilnehmer. Anmeldung: kochschule-mitte@mail.de"
+    },
+    {
+      "id": "F",
+      "text": "Rückenfit-Kurs — Prävention für Büroarbeiter! 10 Einheiten, Dienstag 17:30–18:30. Krankenkasse zahlt bei regelmäßiger Teilnahme 100 %. Physiopraxis am Rosenthaler Platz. Anmeldung erforderlich."
+    },
+    {
+      "id": "G",
+      "text": "Heilfasten-Woche auf dem Bauernhof. 7 Tage Fasten, Wandern und Entspannung in Brandenburg. Inkl. Unterkunft, Betreuung und Vorträge. 890 €. Nächster Termin: 12.–19. Mai. www.fastenhof-brandenburg.de"
+    },
+    {
+      "id": "H",
+      "text": "Schwimmkurs für Erwachsene — Sie haben nie richtig Schwimmen gelernt? Kein Problem! Intensivkurs: 5 Tage, Mo–Fr, 8–9 Uhr. Hallenbad Neukölln. 95 €. Auch Ängstkurs verfügbar. Tel: 030-9988771."
+    }
+  ],
+  "situationen": [
+    {
+      "id": "S1",
+      "text": "Maria sitzt den ganzen Tag im Büro und hat oft Rückenschmerzen. Ihre Krankenkasse soll die Kosten übernehmen.",
+      "answer": "F"
+    },
+    {
+      "id": "S2",
+      "text": "Tom möchte laufen gehen, sucht aber Leute, die mitkommen. Er will kein Geld ausgeben.",
+      "answer": "D"
+    },
+    {
+      "id": "S3",
+      "text": "Aylin hat eine Laktose-Allergie und braucht professionelle Hilfe bei der Ernährung.",
+      "answer": "B"
+    },
+    {
+      "id": "S4",
+      "text": "Julian möchte schwimmen lernen. Er ist Erwachsener und hat etwas Angst vor dem Wasser.",
+      "answer": "H"
+    },
+    {
+      "id": "S5",
+      "text": "Sophie will kochen lernen und möchte dabei frische, regionale Produkte verwenden.",
+      "answer": "E"
+    }
+  ],
+  "null_matches": [
+    "A",
+    "C",
+    "G"
+  ],
+  "images": [
+    {
+      "id": "IMG1",
+      "type": "scene",
+      "prompt": "Cute cartoon illustration of a bulletin board with various health and fitness advertisements pinned to it — gym flyer, yoga class, cooking course, swimming. Fuxie cartoon style, flat illustration, warm pastel colors, no text.",
+      "filename": "B1-T3-001_scene.png",
+      "placement": "header",
+      "alt_text": "Anzeigen zu Gesundheit und Ernährung",
+      "dimensions": "768x512"
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q1",
+      "teil": 3,
+      "type": "matching",
+      "stem": "Maria sitzt den ganzen Tag im Büro und hat oft Rückenschmerzen. Ihre Krankenkasse soll die Kosten übernehmen.",
+      "answer": "F",
+      "points": 1,
+      "explanation": {
+        "de": "Der Rückenfit-Kurs ist Prävention für Büroarbeiter und die Krankenkasse zahlt 100 %.",
+        "key_evidence": "Prävention für Büroarbeiter / Krankenkasse zahlt 100 %",
+        "key_vocabulary": [
+          {
+            "word": "Prävention",
+            "type": "Nomen",
+            "meaning": "prevention"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q2",
+      "teil": 3,
+      "type": "matching",
+      "stem": "Tom möchte laufen gehen, sucht aber Leute, die mitkommen. Er will kein Geld ausgeben.",
+      "answer": "D",
+      "points": 1,
+      "explanation": {
+        "de": "Die Laufgruppe ist kostenlos, ohne Anmeldung, und läuft in der Gruppe.",
+        "key_evidence": "Kostenlos und ohne Anmeldung",
+        "key_vocabulary": [
+          {
+            "word": "Laufgruppe",
+            "type": "Nomen",
+            "meaning": "running group"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q3",
+      "teil": 3,
+      "type": "matching",
+      "stem": "Die Position, dass aylin hat eine Laktose-Allergie und braucht professionelle Hilfe bei der Ernährung, findet sich bei:",
+      "answer": "B",
+      "points": 1,
+      "explanation": {
+        "de": "Dr. Weiß bietet individuelle Ernährungspläne für Allergien an.",
+        "key_evidence": "Individuelle Ernährungspläne für Allergien",
+        "key_vocabulary": [
+          {
+            "word": "Ernährungsberatung",
+            "type": "Nomen",
+            "meaning": "nutritional counseling"
+          }
+        ],
+        "reasoning": "[Inferential] "
+      }
+    },
+    {
+      "id": "Q4",
+      "teil": 3,
+      "type": "matching",
+      "stem": "Julian möchte schwimmen lernen. Er ist Erwachsener und hat etwas Angst vor dem Wasser.",
+      "answer": "H",
+      "points": 1,
+      "explanation": {
+        "de": "Der Schwimmkurs ist für Erwachsene und bietet auch einen Ängstkurs an.",
+        "key_evidence": "Schwimmkurs für Erwachsene / Auch Ängstkurs verfügbar",
+        "key_vocabulary": [
+          {
+            "word": "Ängstkurs",
+            "type": "Nomen",
+            "meaning": "course for anxious swimmers"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q5",
+      "teil": 3,
+      "type": "matching",
+      "stem": "Sophie will kochen lernen und möchte dabei frische, regionale Produkte verwenden.",
+      "answer": "E",
+      "points": 1,
+      "explanation": {
+        "de": "Der Bio-Kochkurs verwendet regionale Zutaten und saisonale Küche.",
+        "key_evidence": "Saisonale Küche mit regionalen Zutaten",
+        "key_vocabulary": [
+          {
+            "word": "regional",
+            "type": "Adjektiv",
+            "meaning": "regional / local"
+          }
+        ]
+      }
+    }
+  ],
+  "scoring": {
+    "total_points": 5,
+    "pass_threshold": 3,
+    "grading": [
+      {
+        "range": [
+          5,
+          5
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          4,
+          4
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          3,
+          3
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          1,
+          2
+        ],
+        "label": "Noch üben!",
+        "emoji": "📝"
+      },
+      {
+        "range": [
+          0,
+          0
+        ],
+        "label": "Mehr Übung nötig",
+        "emoji": "💪"
+      }
+    ]
+  },
+  "qa": {
+    "vocab_in_b1_list": true,
+    "grammar_b1_appropriate": true,
+    "word_count_in_range": true,
+    "all_answers_verifiable": true,
+    "null_matches_correct": true,
+    "image_count": 1,
+    "passed": true
+  }
+}

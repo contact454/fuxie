@@ -1,0 +1,50 @@
+{
+  "id": "W-A2-T1-014",
+  "cefrLevel": "A2",
+  "teil": 1,
+  "teilName": "E-Mail-Antwort",
+  "textType": "E-Mail",
+  "register": "informell",
+  "topic": "Nachbar",
+  "instruction": "Sie haben eine E-Mail von Ihrem Freund Lucas erhalten. Er schreibt über seinen neuen Nachbarn. Antworten Sie ihm.",
+  "instructionVi": "Bạn nhận được một email từ người bạn tên Lucas. Anh ấy kể về người hàng xóm mới của mình. Hãy viết thư trả lời anh ấy.",
+  "situation": "Ihr Freund Lucas ist vor Kurzem umgezogen und hat einen neuen Nachbarn. Er hat Ihnen von seinen Erfahrungen berichtet und möchte wissen, wie die Situation bei Ihnen zu Hause ist.",
+  "contentPoints": [
+    "Bedanken Sie sich für seine E-Mail.",
+    "Berichten Sie über Ihre eigenen Nachbarn.",
+    "Schreiben Sie, ob es bei Ihnen auch Lärmprobleme gibt.",
+    "Schlagen Sie ein Treffen vor."
+  ],
+  "sourceText": "Hallo! Wie geht es dir? Ich wohne jetzt seit zwei Wochen in der neuen Wohnung. Mein Nachbar Herr Weber ist wirklich freundlich. Er hilft mir oft. Aber am Wochenende hört er leider sehr laut Musik. Das ist ein bisschen anstrengend. Wie sind deine Nachbarn eigentlich? Hast du auch Probleme mit Lärm? Schreib mir bald! Liebe Grüße, Lucas",
+  "sourceTextType": "E-Mail",
+  "minWords": 40,
+  "maxWords": 70,
+  "timeMinutes": 15,
+  "rubric": {
+    "criteria": [
+      {
+        "id": "inhalt",
+        "name": "Inhalt",
+        "nameVi": "Nội dung",
+        "maxScore": 5,
+        "weight": 30
+      },
+      {
+        "id": "korrektheit",
+        "name": "Korrektheit",
+        "nameVi": "Chính xác ngữ pháp & chính tả",
+        "maxScore": 5,
+        "weight": 35
+      },
+      {
+        "id": "angemessenheit",
+        "name": "Kommunikative Angemessenheit",
+        "nameVi": "Phù hợp giao tiếp",
+        "maxScore": 5,
+        "weight": 35
+      }
+    ],
+    "maxScore": 15
+  },
+  "maxScore": 15
+}

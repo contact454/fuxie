@@ -1,0 +1,145 @@
+{
+  "id": "C1-T3-007",
+  "level": "C1",
+  "teil": 3,
+  "teil_name": "Lückentext (Sätze)",
+  "topic": "Medien & Kommunikation",
+  "topic_id": "007",
+  "metadata": {
+    "word_count": 183,
+    "target_grammar": [
+      "Nominalisierung",
+      "Partizipialkonstruktionen",
+      "Konjunktiv I/II",
+      "Passiversatzformen"
+    ],
+    "target_vocabulary": [],
+    "generated_at": "2026-03-11T23:15:03.315013",
+    "version": 1
+  },
+  "sentence_cloze": {
+    "title": "Podcasts als Medium der Wissensvermittlung",
+    "text": "Der Podcast-Markt hat in den vergangenen Jahren ein explosives Wachstum erlebt. {1} In Deutschland hören inzwischen rund 38 Prozent der Bevölkerung regelmäßig Podcasts, Tendenz steigend.\n\nBesonders bemerkenswert ist der Erfolg von Wissenspodcasts. {2} Formate wie populärwissenschaftliche Podcasts und Bildungsangebote gehören zu den meistgehörten Genres überhaupt.\n\nDie Stärken des Mediums liegen in seiner Niedrigschwelligkeit und Flexibilität. {3} Hörer können Podcasts beim Pendeln, Kochen oder Sport konsumieren und sich damit Wissen aneignen, für das sie sonst keine Zeit fänden.\n\nGleichzeitig gibt es berechtigte Kritik an der Qualitätskontrolle. {4} Anders als im traditionellen Journalismus oder akademischen Publikationswesen gibt es keine systematische Überprüfung der vermittelten Inhalte.\n\nFür Bildungseinrichtungen eröffnen Podcasts neue Möglichkeiten. {5} Universitäten nutzen sie als ergänzendes Lehrformat, Museen als Audioguides und Bibliotheken als Zugang zu Literatur.\n\nDie Monetarisierung bleibt eine Herausforderung. {6} Die meisten Wissenspodcasts finanzieren sich über Werbung, Sponsoring oder Crowdfunding, wobei nur wenige Formate ausreichende Einnahmen generieren.\n\nDie akustische Natur des Mediums hat eigene Gesetzmäßigkeiten. {7} Komplexe Zusammenhänge müssen linear und ohne visuelle Unterstützung vermittelt werden, was besondere Anforderungen an die Didaktik stellt.\n\nDie Zukunft des Wissenspodcasts liegt möglicherweise in der Personalisierung. {8}",
+    "sentences": [
+      {
+        "id": "A",
+        "text": "Die wirtschaftliche Tragfähigkeit einzelner Podcast-Projekte hängt stark von der Nischengröße und der Loyalität der Hörerschaft ab."
+      },
+      {
+        "id": "B",
+        "text": "Algorithmengesteuerte Empfehlungen und kuratierte Lernpfade könnten individuelle Wissensbiografien erkennbar machen."
+      },
+      {
+        "id": "C",
+        "text": "Die Integration von Podcasts in formale Bildungskontexte ist ein wachsender Trend."
+      },
+      {
+        "id": "D",
+        "text": "Interaktive Podcast-Formate, bei denen Hörer Fragen einreichen können, erhöhen das Engagement."
+      },
+      {
+        "id": "E",
+        "text": "Die Spotify-Übernahme von Podcast-Studios hat den Markt nachhaltig verändert."
+      },
+      {
+        "id": "F",
+        "text": "Das zeitunabhängige, ortsungebundene Hören passt perfekt in den fragmentierten Alltag moderner Gesellschaften."
+      },
+      {
+        "id": "G",
+        "text": "Der fehlende visuelle Kanal kann durch lebendige Erzählung, Sounddesign und klare Strukturierung kompensiert werden."
+      },
+      {
+        "id": "H",
+        "text": "Jeder kann einen Podcast produzieren und veröffentlichen, unabhängig von fachlicher Qualifikation."
+      },
+      {
+        "id": "I",
+        "text": "Die Zahl der weltweit verfügbaren Podcasts hat die Marke von fünf Millionen überschritten."
+      },
+      {
+        "id": "J",
+        "text": "Themen aus Wissenschaft, Geschichte und Philosophie erreichen über Podcasts ein Millionenpublikum."
+      }
+    ],
+    "answers": {
+      "1": "I",
+      "2": "J",
+      "3": "F",
+      "4": "H",
+      "5": "C",
+      "6": "A",
+      "7": "G",
+      "8": "B"
+    },
+    "distractors": [
+      "E",
+      "D"
+    ]
+  },
+  "images": [
+    {
+      "id": "IMG1",
+      "type": "scene",
+      "prompt": "Cute cartoon illustration related to Medien & Kommunikation. Fuxie cartoon style, flat illustration, warm pastel colors, no text.",
+      "filename": "C1-T3-007_scene.png",
+      "placement": "header",
+      "alt_text": "Podcasts als Medium der Wissensvermittlung",
+      "dimensions": "768x512"
+    }
+  ],
+  "scoring": {
+    "total_points": 8,
+    "pass_threshold": 5,
+    "grading": [
+      {
+        "range": [
+          7,
+          8
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          5,
+          6
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          4,
+          4
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          1,
+          3
+        ],
+        "label": "Noch üben!",
+        "emoji": "📝"
+      },
+      {
+        "range": [
+          0,
+          0
+        ],
+        "label": "Mehr Übung nötig",
+        "emoji": "💪"
+      }
+    ]
+  },
+  "qa": {
+    "vocab_in_c1_list": true,
+    "grammar_c1_appropriate": true,
+    "word_count_in_range": true,
+    "all_gaps_match": true,
+    "image_count": 1,
+    "passed": true
+  }
+}

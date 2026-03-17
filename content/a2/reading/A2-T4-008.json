@@ -1,0 +1,280 @@
+{
+  "id": "A2-T4-008",
+  "level": "A2",
+  "teil": 4,
+  "teil_name": "Fahrpläne und Kalender lesen",
+  "topic": "Freizeit & Hobby",
+  "topic_id": "008",
+  "metadata": {
+    "word_count": 79,
+    "target_grammar": [
+      "Modalverben",
+      "Zeitangaben"
+    ],
+    "target_vocabulary": [
+      "Hallenbad",
+      "Sporthalle",
+      "Belegungsplan",
+      "Sportverein",
+      "Schwimmkurs",
+      "Turnen",
+      "Badminton",
+      "Kraftraum",
+      "Öffnungszeiten",
+      "Vereinstraining"
+    ],
+    "generated_at": "2026-03-09T22:46:00+07:00",
+    "version": 1
+  },
+  "schedule": {
+    "title": "Sporthalle Ost — Wochenbelegungsplan",
+    "type": "hall_schedule",
+    "columns": [
+      "Zeitraum",
+      "Montag",
+      "Dienstag",
+      "Mittwoch",
+      "Donnerstag",
+      "Freitag"
+    ],
+    "rows": [
+      [
+        "8:00–10:00",
+        "Seniorenturnen",
+        "Yoga",
+        "Seniorenturnen",
+        "Yoga",
+        "frei"
+      ],
+      [
+        "10:00–12:00",
+        "Mutter-Kind-Turnen",
+        "frei",
+        "Mutter-Kind-Turnen",
+        "frei",
+        "Badminton"
+      ],
+      [
+        "14:00–16:00",
+        "Schulsport",
+        "Schulsport",
+        "Schulsport",
+        "Schulsport",
+        "frei"
+      ],
+      [
+        "16:00–18:00",
+        "Kinder-Fußball",
+        "Kinder-Turnen",
+        "Kinder-Fußball",
+        "Kinder-Turnen",
+        "Kinder-Judo"
+      ],
+      [
+        "18:00–20:00",
+        "Volleyballverein",
+        "Kraftraum (offen)",
+        "Basketballverein",
+        "Kraftraum (offen)",
+        "Volleyballverein"
+      ],
+      [
+        "20:00–22:00",
+        "Badminton (offen)",
+        "Fußball-Hobbygruppe",
+        "frei",
+        "Fußball-Hobbygruppe",
+        "frei"
+      ]
+    ],
+    "footnote": "Samstag 9:00–13:00: freies Training für alle. Sonntag geschlossen. Kraftraum: nur ab 16 Jahren. Sportschuhe mit heller Sohle Pflicht. Umkleidekabinen und Duschen vorhanden."
+  },
+  "images": [
+    {
+      "id": "IMG1",
+      "type": "schedule",
+      "prompt": "Cute cartoon illustration of a modern German sports hall with different activities visible — volleyball, gymnastics, children playing football— and a schedule board near the entrance. Fuxie cartoon style, flat illustration, warm pastel colors, no text.",
+      "filename": "A2-T4-008_schedule.png",
+      "placement": "header",
+      "alt_text": "Sporthalle Wochenbelegungsplan",
+      "dimensions": "768x512"
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q1",
+      "teil": 4,
+      "type": "detail_extraction",
+      "stem": "Wann ist Kinder-Fußball?",
+      "options": {
+        "a": "Montag und Mittwoch, 16:00–18:00.",
+        "b": "Dienstag und Donnerstag, 16:00–18:00.",
+        "c": "Freitag, 16:00–18:00."
+      },
+      "answer": "a",
+      "points": 1,
+      "explanation": {
+        "de": "Kinder-Fußball ist Montag und Mittwoch 16:00–18:00.",
+        "key_evidence": "16:00–18:00: Mo Kinder-Fußball, Mi Kinder-Fußball",
+        "key_vocabulary": [
+          {
+            "word": "Belegungsplan",
+            "type": "Nomen",
+            "meaning": "usage schedule"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q2",
+      "teil": 4,
+      "type": "detail_extraction",
+      "stem": "Ab welchem Alter darf man den Kraftraum benutzen?",
+      "options": {
+        "a": "Ab 14 Jahren.",
+        "b": "Ab 16 Jahren.",
+        "c": "Ab 18 Jahren."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Der Kraftraum ist nur ab 16 Jahren erlaubt.",
+        "key_evidence": "Kraftraum: nur ab 16 Jahren",
+        "key_vocabulary": [
+          {
+            "word": "Kraftraum",
+            "type": "Nomen",
+            "meaning": "weight room / gym"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q3",
+      "teil": 4,
+      "type": "detail_extraction",
+      "stem": "Was ist am Samstag?",
+      "options": {
+        "a": "Die Halle ist geschlossen.",
+        "b": "Freies Training für alle, 9:00–13:00.",
+        "c": "Nur Vereinstraining."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Am Samstag 9:00–13:00 ist freies Training für alle.",
+        "key_evidence": "Samstag 9:00–13:00: freies Training für alle",
+        "key_vocabulary": [
+          {
+            "word": "Training",
+            "type": "Nomen",
+            "meaning": "training / workout"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q4",
+      "teil": 4,
+      "type": "detail_extraction",
+      "stem": "Welche Schuhe muss man in der Halle tragen?",
+      "options": {
+        "a": "Laufschuhe.",
+        "b": "Sportschuhe mit heller Sohle.",
+        "c": "Keine Schuhe (barfuß)."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Man muss Sportschuhe mit heller Sohle tragen.",
+        "key_evidence": "Sportschuhe mit heller Sohle Pflicht",
+        "key_vocabulary": [
+          {
+            "word": "Sohle",
+            "type": "Nomen",
+            "meaning": "sole (of shoe)"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q5",
+      "teil": 4,
+      "type": "detail_extraction",
+      "stem": "Wann kann man abends frei Badminton spielen?",
+      "options": {
+        "a": "Am Montag, 20:00–22:00.",
+        "b": "Am Freitag, 10:00–12:00.",
+        "c": "Am Mittwoch, 20:00–22:00."
+      },
+      "answer": "a",
+      "points": 1,
+      "explanation": {
+        "de": "Am Montag 20:00–22:00 ist offenes Badminton.",
+        "key_evidence": "Montag 20:00–22:00: Badminton (offen)",
+        "key_vocabulary": [
+          {
+            "word": "Badminton",
+            "type": "Nomen",
+            "meaning": "badminton"
+          }
+        ]
+      }
+    }
+  ],
+  "scoring": {
+    "total_points": 5,
+    "pass_threshold": 3,
+    "grading": [
+      {
+        "range": [
+          5,
+          5
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          4,
+          4
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          3,
+          3
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          1,
+          2
+        ],
+        "label": "Noch üben!",
+        "emoji": "📝"
+      },
+      {
+        "range": [
+          0,
+          0
+        ],
+        "label": "Mehr Übung nötig",
+        "emoji": "💪"
+      }
+    ]
+  },
+  "qa": {
+    "vocab_in_a2_list": true,
+    "grammar_a2_only": true,
+    "word_count_in_range": true,
+    "all_answers_verifiable": true,
+    "schedule_data_consistent": true,
+    "image_count": 1,
+    "passed": true
+  }
+}

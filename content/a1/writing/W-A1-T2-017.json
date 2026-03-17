@@ -1,0 +1,47 @@
+{
+  "id": "W-A1-T2-017",
+  "cefrLevel": "A1",
+  "teil": 2,
+  "teilName": "Kurze E-Mail",
+  "textType": "E-Mail",
+  "register": "informell",
+  "topic": "Deutschpruefung",
+  "instruction": "Schreiben Sie eine E-Mail an Ihre Freundin Maria. Schreiben Sie etwas zu allen drei Punkten. Vergessen Sie nicht die Anrede und den Gruß am Ende.",
+  "instructionVi": "Viết một email cho bạn của bạn là Maria. Hãy viết về cả ba ý dưới đây. Đừng quên lời chào mở đầu và kết thúc.",
+  "situation": "Sie haben am Samstag Ihre Deutschprüfung A1 gemacht. Berichten Sie Ihrer Freundin Maria von der Prüfung und laden Sie sie ein.",
+  "contentPoints": [
+    "Wie war die Prüfung?",
+    "Wann bekommen Sie die Ergebnisse?",
+    "Treffen am Sonntag?"
+  ],
+  "minWords": 20,
+  "maxWords": 40,
+  "timeMinutes": 10,
+  "rubric": {
+    "criteria": [
+      {
+        "id": "inhalt",
+        "name": "Inhalt",
+        "nameVi": "Nội dung",
+        "maxScore": 5,
+        "weight": 30
+      },
+      {
+        "id": "korrektheit",
+        "name": "Korrektheit",
+        "nameVi": "Chính xác ngữ pháp & chính tả",
+        "maxScore": 5,
+        "weight": 40
+      },
+      {
+        "id": "angemessenheit",
+        "name": "Angemessenheit",
+        "nameVi": "Tính phù hợp",
+        "maxScore": 5,
+        "weight": 30
+      }
+    ],
+    "maxScore": 15
+  },
+  "maxScore": 15
+}

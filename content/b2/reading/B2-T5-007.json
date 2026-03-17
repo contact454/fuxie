@@ -1,0 +1,197 @@
+{
+  "id": "B2-T5-007",
+  "level": "B2",
+  "teil": 5,
+  "teil_name": "Ratgeber lesen",
+  "topic": "Gesundheit & Medizin",
+  "topic_id": "007",
+  "metadata": {
+    "word_count": 250,
+    "target_grammar": [
+      "Passiv",
+      "Imperativ",
+      "Konjunktiv II",
+      "Nominalisierung"
+    ],
+    "target_vocabulary": [],
+    "generated_at": "2026-03-11T22:40:47.427773",
+    "version": 1
+  },
+  "ratgeber": {
+    "title": "Ratgeber: Gesund durch die Erkältungszeit",
+    "sections": [
+      {
+        "heading": "Vorbeugung durch Hygiene",
+        "text": "Häufiges und gründliches Händewaschen mit Seife ist die wirksamste Maßnahme gegen Erkältungsviren. Waschen Sie Ihre Hände mindestens 20 Sekunden lang, besonders nach dem Niesen, vor dem Essen und nach der Nutzung öffentlicher Verkehrsmittel. Berühren Sie Ihr Gesicht möglichst selten, denn über Augen, Nase und Mund gelangen Erreger am leichtesten in den Körper."
+      },
+      {
+        "heading": "Immunsystem stärken",
+        "text": "Ein starkes Immunsystem ist der beste Schutz. Achten Sie auf eine ausgewogene Ernährung mit viel Obst und Gemüse, bewegen Sie sich regelmäßig an der frischen Luft und schlafen Sie mindestens sieben bis acht Stunden pro Nacht. Wechselduschen und regelmäßige Saunagänge können die Abwehrkräfte zusätzlich trainieren."
+      },
+      {
+        "heading": "Symptome richtig einschätzen",
+        "text": "Nicht jede Erkältung erfordert einen Arztbesuch. Typische Symptome wie Schnupfen, leichter Husten und Halsschmerzen klingen in der Regel nach sieben bis zehn Tagen von selbst ab. Suchen Sie jedoch einen Arzt auf, wenn hohes Fieber über 39 Grad länger als drei Tage anhält, starke Atemnot auftritt oder die Beschwerden sich nach einer Woche nicht bessern."
+      },
+      {
+        "heading": "Hausmittel, die wirklich helfen",
+        "text": "Warme Getränke wie Kamillentee oder Ingwertee lindern Halsschmerzen und befeuchten die Schleimhäute. Inhalieren mit heißem Wasserdampf, eventuell mit Kamillenextrakt oder Kochsalz, befreit verstopfte Atemwege. Honig hat eine nachgewiesene entzündungshemmende Wirkung und kann pur oder im Tee eingenommen werden. Für Kinder unter einem Jahr ist Honig allerdings nicht geeignet."
+      },
+      {
+        "heading": "Wann Antibiotika sinnvoll sind",
+        "text": "Antibiotika wirken ausschließlich gegen bakterielle Infektionen und sind bei einer normalen, durch Viren verursachten Erkältung wirkungslos. Die unnötige Einnahme von Antibiotika fördert die Entstehung resistenter Bakterien, ein wachsendes globales Gesundheitsproblem. Nehmen Sie Antibiotika nur ein, wenn der Arzt sie ausdrücklich verschrieben hat, und beenden Sie die Einnahme stets wie verordnet."
+      }
+    ]
+  },
+  "images": [
+    {
+      "id": "IMG1",
+      "type": "scene",
+      "prompt": "Cute cartoon illustration of a guidebook or advice document about Gesundheit & Medizin, showing helpful tips and a friendly character giving advice. Fuxie cartoon style, flat illustration, warm pastel colors, no text.",
+      "filename": "B2-T5-007_scene.png",
+      "placement": "header",
+      "alt_text": "Ratgeber: Gesund durch die Erkältungszeit",
+      "dimensions": "768x512"
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q1",
+      "teil": 5,
+      "type": "multiple_choice",
+      "stem": "Was impliziert der Text über lange sollte man sich die Hände waschen?",
+      "options": {
+        "a": "5 Sekunden.",
+        "b": "20 Sekunden.",
+        "c": "Eine Minute."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "20 Sekunden.",
+        "reasoning": "[Inferential] Die richtige Antwort (b) ergibt sich aus dem Textkontext."
+      }
+    },
+    {
+      "id": "Q2",
+      "teil": 5,
+      "type": "multiple_choice",
+      "stem": "Was impliziert der Text über Schlussfolgerung über Schlussfolgerung über viel Schlaf wird empfohlen legt der Text nahe legt der Text nahe?",
+      "options": {
+        "a": "5 bis 6 Stunden.",
+        "b": "7 bis 8 Stunden.",
+        "c": "9 bis 10 Stunden."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "7 bis 8 Stunden.",
+        "reasoning": "[Inferential] Die richtige Antwort (b) ergibt sich aus dem Textkontext."
+      }
+    },
+    {
+      "id": "Q3",
+      "teil": 5,
+      "type": "multiple_choice",
+      "stem": "Was impliziert der Text über man bei einer Erkältung zum Arzt gehen?",
+      "options": {
+        "a": "Sofort bei Schnupfen.",
+        "b": "Bei hohem Fieber über 39 Grad, das länger als drei Tage anhält.",
+        "c": "Erst nach zwei Wochen."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Ratgeber: Gesund durch die Erkältungszeit",
+        "reasoning": "Die richtige Antwort (b) ergibt sich aus dem Textkontext."
+      }
+    },
+    {
+      "id": "Q4",
+      "teil": 5,
+      "type": "multiple_choice",
+      "stem": "Für wen ist Honig als Hausmittel nicht geeignet?",
+      "options": {
+        "a": "Für Diabetiker.",
+        "b": "Für Kinder unter einem Jahr.",
+        "c": "Für Schwangere."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Für Kinder unter einem Jahr.",
+        "reasoning": "Die richtige Antwort (b) ergibt sich aus dem Textkontext."
+      }
+    },
+    {
+      "id": "Q5",
+      "teil": 5,
+      "type": "multiple_choice",
+      "stem": "Welche Schwäche hat die Argumentation bezüglich Antibiotika sinnvoll?",
+      "options": {
+        "a": "Bei jeder Erkältung.",
+        "b": "Nur bei bakteriellen Infektionen, vom Arzt verschrieben.",
+        "c": "Vorbeugend in der Erkältungszeit."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Nur bei bakteriellen Infektionen, vom Arzt verschrieben.",
+        "reasoning": "[Critical] Die richtige Antwort (b) ergibt sich aus dem Textkontext."
+      }
+    }
+  ],
+  "scoring": {
+    "total_points": 5,
+    "pass_threshold": 3,
+    "grading": [
+      {
+        "range": [
+          5,
+          5
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          4,
+          4
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          3,
+          3
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          1,
+          2
+        ],
+        "label": "Noch üben!",
+        "emoji": "📝"
+      },
+      {
+        "range": [
+          0,
+          0
+        ],
+        "label": "Mehr Übung nötig",
+        "emoji": "💪"
+      }
+    ]
+  },
+  "qa": {
+    "vocab_in_b2_list": true,
+    "grammar_b2_appropriate": true,
+    "word_count_in_range": true,
+    "all_answers_verifiable": true,
+    "image_count": 1,
+    "passed": true
+  }
+}

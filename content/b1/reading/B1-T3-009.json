@@ -1,0 +1,258 @@
+{
+  "id": "B1-T3-009",
+  "level": "B1",
+  "teil": 3,
+  "teil_name": "Anzeigen zuordnen",
+  "topic": "Einkaufen & Konsum",
+  "topic_id": "009",
+  "metadata": {
+    "word_count": 225,
+    "target_grammar": [
+      "Nebensatz mit weil/dass",
+      "Modalverben",
+      "Passiv"
+    ],
+    "target_vocabulary": [
+      "Flohmarkt",
+      "Gutschein",
+      "Reparatur",
+      "Second-Hand",
+      "Lieferung",
+      "Rabatt",
+      "Tauschbörse",
+      "Garantie"
+    ],
+    "generated_at": "2026-03-10T23:32:00+07:00",
+    "version": 1
+  },
+  "anzeigen": [
+    {
+      "id": "A",
+      "text": "Nachtflohmarkt im alten Kesselhaus — Freitag, 9. Mai, 18–23 Uhr. Über 100 Stände: Vintage-Kleidung, Vinyl, Möbel, Schmuck. Eintritt: 3 €. Live-DJ und Foodtrucks. www.nachtfloh.de"
+    },
+    {
+      "id": "B",
+      "text": "Reparatur-Werkstatt für Elektronik — Handy, Tablet, Laptop: Displaytausch, Akku, Wasserschaden. Schnellreparatur oft am selben Tag. Ab 29 €. Garantie auf alle Reparaturen. ElekFix, Rathaus-Passage."
+    },
+    {
+      "id": "C",
+      "text": "Online-Supermarkt FreshBox — Lebensmittel bequem nach Hause liefern lassen! Lieferung am selben Tag ab 40 € Bestellwert. Erster Einkauf: 10 € Rabatt mit Code FRESH10. www.freshbox.de"
+    },
+    {
+      "id": "D",
+      "text": "Kleidertausch-Party — Samstag, 17. Mai, 14–18 Uhr. Bring bis zu 5 Kleidungsstücke mit und tausche sie gegen andere! Kostenlos. Café Wandel, Schöneberg. Nur saubere und gute Kleidung."
+    },
+    {
+      "id": "E",
+      "text": "Handgemachte Keramik — Teller, Tassen, Vasen. Jedes Stück ein Unikat. Shop + Werkstattbesichtigung: Fr 14–18, Sa 10–16 Uhr. Töpferei Feuerstein, Prenzlauer Berg."
+    },
+    {
+      "id": "F",
+      "text": "Geschenkgutscheine für Erlebnisse — Kochkurse, Escape Rooms, Spa-Tage, Fallschirmspringen. Online kaufen und sofort per E-Mail verschicken. Ab 25 €. www.erlebnisbox.de"
+    },
+    {
+      "id": "G",
+      "text": "Second-Hand-Laden Eröffnung — Kleidung, Schuhe, Taschen. Top-Marken zu kleinen Preisen. Eröffnungswoche: 20 % auf alles! Mo–Sa 11–19 Uhr. Vintagista, Bergmannstraße 5."
+    },
+    {
+      "id": "H",
+      "text": "Unverpackt-Laden Naturgut — Lebensmittel ohne Verpackung: Nudeln, Reis, Müsli, Gewürze. Eigene Behälter mitbringen oder vor Ort kaufen. Mo–Sa 9–19 Uhr. Winterfeldtplatz, Schöneberg."
+    }
+  ],
+  "situationen": [
+    {
+      "id": "S1",
+      "text": "Nina sucht ein Last-Minute-Geschenk für ihre Freundin, das sie sofort online verschicken kann.",
+      "answer": "F"
+    },
+    {
+      "id": "S2",
+      "text": "Kevins Handy-Display ist kaputt. Er braucht es schnell zurück, möglichst am selben Tag.",
+      "answer": "B"
+    },
+    {
+      "id": "S3",
+      "text": "Laura hat viele alte Kleidungsstücke und möchte sie gegen andere tauschen, ohne Geld auszugeben.",
+      "answer": "D"
+    },
+    {
+      "id": "S4",
+      "text": "Frau Berg möchte Lebensmittel kaufen und dabei möglichst wenig Verpackungsmüll produzieren.",
+      "answer": "H"
+    },
+    {
+      "id": "S5",
+      "text": "Tim sucht Marken-Kleidung zu günstigen Preisen und will ein neues Geschäft testen.",
+      "answer": "G"
+    }
+  ],
+  "null_matches": [
+    "A",
+    "C",
+    "E"
+  ],
+  "images": [
+    {
+      "id": "IMG1",
+      "type": "scene",
+      "prompt": "Cute cartoon illustration of a shopping district notice board with ads for flea markets, repair shops, swap parties, online groceries, and second-hand stores. Fuxie cartoon style, flat illustration, warm pastel colors, no text.",
+      "filename": "B1-T3-009_scene.png",
+      "placement": "header",
+      "alt_text": "Einkaufs-Anzeigen",
+      "dimensions": "768x512"
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q1",
+      "teil": 3,
+      "type": "matching",
+      "stem": "Die Ansicht, dass nina braucht ein Last-Minute-Geschenk zum sofort Verschicken, wird vertreten von:",
+      "answer": "F",
+      "points": 1,
+      "explanation": {
+        "de": "Erlebnisbox bietet Gutscheine online, sofort per E-Mail verschickbar.",
+        "key_evidence": "Online kaufen und sofort per E-Mail verschicken",
+        "key_vocabulary": [
+          {
+            "word": "Geschenkgutschein",
+            "type": "Nomen",
+            "meaning": "gift voucher"
+          }
+        ],
+        "reasoning": "[Inferential] "
+      }
+    },
+    {
+      "id": "Q2",
+      "teil": 3,
+      "type": "matching",
+      "stem": "Kevins Handy-Display ist kaputt, Reparatur am selben Tag erwünscht.",
+      "answer": "B",
+      "points": 1,
+      "explanation": {
+        "de": "ElekFix bietet Schnellreparatur oft am selben Tag, ab 29 €.",
+        "key_evidence": "Displaytausch / Schnellreparatur oft am selben Tag",
+        "key_vocabulary": [
+          {
+            "word": "Schnellreparatur",
+            "type": "Nomen",
+            "meaning": "quick repair"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q3",
+      "teil": 3,
+      "type": "matching",
+      "stem": "Laura möchte alte Kleidung tauschen, kostenlos.",
+      "answer": "D",
+      "points": 1,
+      "explanation": {
+        "de": "Die Kleidertausch-Party ist kostenlos: Kleidung mitbringen und tauschen.",
+        "key_evidence": "tausche sie gegen andere / Kostenlos",
+        "key_vocabulary": [
+          {
+            "word": "Tausch",
+            "type": "Nomen",
+            "meaning": "exchange / swap"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q4",
+      "teil": 3,
+      "type": "matching",
+      "stem": "Frau Berg will Lebensmittel ohne Verpackung kaufen.",
+      "answer": "H",
+      "points": 1,
+      "explanation": {
+        "de": "Der Unverpackt-Laden bietet Lebensmittel ohne Verpackung.",
+        "key_evidence": "Lebensmittel ohne Verpackung / Eigene Behälter mitbringen",
+        "key_vocabulary": [
+          {
+            "word": "Unverpackt-Laden",
+            "type": "Nomen",
+            "meaning": "zero-waste shop"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q5",
+      "teil": 3,
+      "type": "matching",
+      "stem": "Die Position, dass tim sucht günstige Markenkleidung in einem neuen Geschäft, findet sich bei:",
+      "answer": "G",
+      "points": 1,
+      "explanation": {
+        "de": "Der neue Second-Hand-Laden hat Top-Marken, 20 % Eröffnungsrabatt.",
+        "key_evidence": "Top-Marken zu kleinen Preisen / Eröffnungswoche 20 % auf alles",
+        "key_vocabulary": [
+          {
+            "word": "Eröffnung",
+            "type": "Nomen",
+            "meaning": "opening"
+          }
+        ]
+      }
+    }
+  ],
+  "scoring": {
+    "total_points": 5,
+    "pass_threshold": 3,
+    "grading": [
+      {
+        "range": [
+          5,
+          5
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          4,
+          4
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          3,
+          3
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          1,
+          2
+        ],
+        "label": "Noch üben!",
+        "emoji": "📝"
+      },
+      {
+        "range": [
+          0,
+          0
+        ],
+        "label": "Mehr Übung nötig",
+        "emoji": "💪"
+      }
+    ]
+  },
+  "qa": {
+    "vocab_in_b1_list": true,
+    "grammar_b1_appropriate": true,
+    "word_count_in_range": true,
+    "all_answers_verifiable": true,
+    "null_matches_correct": true,
+    "image_count": 1,
+    "passed": true
+  }
+}

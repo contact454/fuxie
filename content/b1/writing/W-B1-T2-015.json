@@ -1,0 +1,64 @@
+{
+  "id": "W-B1-T2-015",
+  "cefrLevel": "B1",
+  "teil": 2,
+  "teilName": "Meinungsaeusserung",
+  "textType": "Forumsbeitrag",
+  "register": "informell",
+  "topic": "Gesundheits-Apps",
+  "instruction": "Sie haben im Internet ein Forum zum Thema „Gesundheits-Apps: Helfer oder Zeitverschwendung?“ gefunden. Schreiben Sie einen Beitrag und äußern Sie Ihre Meinung dazu.",
+  "instructionVi": "Bạn tìm thấy một diễn đàn trực tuyến về chủ đề 'Ứng dụng sức khỏe: Công cụ hỗ trợ hay lãng phí thời gian?'. Hãy viết một bài đăng bày tỏ ý kiến của mình.",
+  "situation": "In einem Online-Forum diskutieren Nutzer darüber, ob Apps zur Überwachung von Schritten, Schlaf oder Ernährung wirklich sinnvoll sind. Während einige die Motivation loben, warnen andere vor Stress und dem Umgang mit privaten Daten.",
+  "contentPoints": [
+    "Äußern Sie Ihre Meinung zu Gesundheits-Apps im Alltag.",
+    "Nennen Sie Gründe, warum diese Apps nützlich sein können.",
+    "Erläutern Sie mögliche Nachteile (z. B. Stress oder Datenschutz).",
+    "Berichten Sie kurz von Ihren eigenen Erfahrungen oder Vorlieben."
+  ],
+  "sourceText": "Moderator: Willkommen im Forum! Benutzt ihr Apps für eure Fitness? \nLukas: Ich liebe meine Lauf-App! Sie motiviert mich jeden Tag, mehr Sport zu machen. Ohne die App wäre ich viel fauler. \nSarah: Ich halte davon nicht viel. Man schaut nur noch auf das Handy statt auf den eigenen Körper zu hören. Außerdem weiß ich nicht, was mit meinen Daten passiert.",
+  "sourceTextType": "Forumsdiskussion mit zwei Kommentaren",
+  "minWords": 80,
+  "maxWords": 120,
+  "timeMinutes": 20,
+  "rubric": {
+    "criteria": [
+      {
+        "id": "inhalt",
+        "name": "Inhalt",
+        "nameVi": "Nội dung",
+        "maxScore": 5,
+        "weight": 25
+      },
+      {
+        "id": "angemessenheit",
+        "name": "Kommunikative Angemessenheit",
+        "nameVi": "Phù hợp giao tiếp",
+        "maxScore": 5,
+        "weight": 20
+      },
+      {
+        "id": "korrektheit",
+        "name": "Korrektheit",
+        "nameVi": "Chính xác ngữ pháp & chính tả",
+        "maxScore": 5,
+        "weight": 25
+      },
+      {
+        "id": "spektrum",
+        "name": "Wortschatz & Strukturen",
+        "nameVi": "Đa dạng từ vựng & cấu trúc",
+        "maxScore": 5,
+        "weight": 15
+      },
+      {
+        "id": "kohaerenz",
+        "name": "Kohaerenz & Kohaesion",
+        "nameVi": "Mạch lạc & liên kết",
+        "maxScore": 5,
+        "weight": 15
+      }
+    ],
+    "maxScore": 25
+  },
+  "maxScore": 25
+}

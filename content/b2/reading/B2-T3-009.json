@@ -1,0 +1,222 @@
+{
+  "id": "B2-T3-009",
+  "level": "B2",
+  "teil": 3,
+  "teil_name": "Anzeigen zuordnen",
+  "topic": "Migration & Integration",
+  "topic_id": "009",
+  "metadata": {
+    "word_count": 146,
+    "target_grammar": [
+      "Konjunktiv II",
+      "Passiv",
+      "Modalverben",
+      "Relativsätze"
+    ],
+    "target_vocabulary": [],
+    "generated_at": "2026-03-11T22:34:38.583025",
+    "version": 1
+  },
+  "anzeigen": [
+    {
+      "id": "A",
+      "text": "Integrationskurs Deutsch B1: 600 Stunden Sprachkurs + 100 Stunden Orientierungskurs. BAMF-gefördert. Beginn jeden Monat. Volkshochschule Frankfurt. Anmeldung mit Berechtigungsschein."
+    },
+    {
+      "id": "B",
+      "text": "Berufsanerkennung IHK FOSA: Wir prüfen die Gleichwertigkeit Ihres ausländischen Berufsabschlusses. Beratung kostenlos, Verfahrenskosten je nach Beruf. www.ihk-fosa.de"
+    },
+    {
+      "id": "C",
+      "text": "Interkulturelles Training für Unternehmen: Sensibilisierung für kulturelle Unterschiede. Teambuilding und Kommunikation. Halbtags- oder Ganztagsseminare. Ab 1.200 Euro. intercultural-consulting.de"
+    },
+    {
+      "id": "D",
+      "text": "Sprachcafé International: Deutsch üben in lockerer Atmosphäre. Jeden Freitag 16-18 Uhr im Café Vielfalt. Alle Niveaus willkommen. Kostenlos, Getränke zum Selbstkostenpreis."
+    },
+    {
+      "id": "E",
+      "text": "Migrationsberatung für Erwachsene: Unterstützung bei Behördengängen, Wohnungssuche und Jobvermittlung. Kostenlos und vertraulich. Caritas-Beratungsstelle, Mo-Fr 9-16 Uhr."
+    },
+    {
+      "id": "F",
+      "text": "Tandem-Sprachpartnerschaft: Deutsch-Arabisch, Deutsch-Türkisch, Deutsch-Ukrainisch. Regelmäßige Treffen zum gegenseitigen Sprachenlernen. Anmeldung über die App TandemCity."
+    },
+    {
+      "id": "G",
+      "text": "Qualifizierung für zugewanderte Lehrkräfte: Anpassungslehrgang für Lehrer mit ausländischem Abschluss. 12 Monate, bezahlt. Pädagogische Seminare und Schulpraxis. Kultusministerium Niedersachsen."
+    },
+    {
+      "id": "H",
+      "text": "Mentorenprogramm Ankommen: Ehrenamtliche begleiten Neuzugewanderte im Alltag. Gemeinsam Behörden besuchen, Sport machen, die Stadt kennenlernen. Melden Sie sich als Mentor oder Mentee!"
+    }
+  ],
+  "situationen": [
+    {
+      "id": "S1",
+      "text": "Ein syrischer Arzt möchte seinen Abschluss in Deutschland anerkennen lassen.",
+      "answer": "B"
+    },
+    {
+      "id": "S2",
+      "text": "Eine ukrainische Lehrerin sucht einen Weg, in Deutschland unterrichten zu dürfen.",
+      "answer": "G"
+    },
+    {
+      "id": "S3",
+      "text": "Jemand möchte in entspannter Atmosphäre Deutsch sprechen üben, ohne dafür zu bezahlen.",
+      "answer": "D"
+    },
+    {
+      "id": "S4",
+      "text": "Ein Unternehmen möchte sein internationales Team für kulturelle Unterschiede sensibilisieren.",
+      "answer": "C"
+    },
+    {
+      "id": "S5",
+      "text": "Eine neu zugewanderte Familie braucht Hilfe bei der Wohnungssuche und Behördengängen.",
+      "answer": "E"
+    }
+  ],
+  "null_matches": [
+    "A",
+    "F",
+    "H"
+  ],
+  "images": [
+    {
+      "id": "IMG1",
+      "type": "scene",
+      "prompt": "Cute cartoon illustration of a bulletin board with various professional advertisements related to Migration & Integration. Fuxie cartoon style, flat illustration, warm pastel colors, no text.",
+      "filename": "B2-T3-009_scene.png",
+      "placement": "header",
+      "alt_text": "Anzeigen: Migration & Integration",
+      "dimensions": "768x512"
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q1",
+      "teil": 3,
+      "type": "matching",
+      "stem": "Die implizite Annahme, dass Ein syrischer Arzt möchte seinen Abschluss in Deutschland anerkennen lassen, liegt dem Beitrag zugrunde:",
+      "answer": "B",
+      "points": 1,
+      "explanation": {
+        "de": "Anzeige B passt, weil sie das beschriebene Bedürfnis erfüllt.",
+        "key_evidence": "Anzeige B",
+        "key_vocabulary": [],
+        "reasoning": "[Inferential] "
+      }
+    },
+    {
+      "id": "Q2",
+      "teil": 3,
+      "type": "matching",
+      "stem": "Eine ukrainische Lehrerin sucht einen Weg, in Deutschland unterrichten zu dürfen.",
+      "answer": "G",
+      "points": 1,
+      "explanation": {
+        "de": "Anzeige G passt, weil sie das beschriebene Bedürfnis erfüllt.",
+        "key_evidence": "Anzeige G",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q3",
+      "teil": 3,
+      "type": "matching",
+      "stem": "Die implizite Annahme, dass jemand möchte in entspannter Atmosphäre Deutsch sprechen üben, ohne dafür zu bezahlen, liegt dem Beitrag zugrunde:",
+      "answer": "D",
+      "points": 1,
+      "explanation": {
+        "de": "Anzeige D passt, weil sie das beschriebene Bedürfnis erfüllt.",
+        "key_evidence": "Anzeige D",
+        "key_vocabulary": [],
+        "reasoning": "[Inferential] "
+      }
+    },
+    {
+      "id": "Q4",
+      "teil": 3,
+      "type": "matching",
+      "stem": "Ein Unternehmen möchte sein internationales Team für kulturelle Unterschiede sensibilisieren.",
+      "answer": "C",
+      "points": 1,
+      "explanation": {
+        "de": "Anzeige C passt, weil sie das beschriebene Bedürfnis erfüllt.",
+        "key_evidence": "Anzeige C",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q5",
+      "teil": 3,
+      "type": "matching",
+      "stem": "Die implizite Annahme, dass eine neu zugewanderte Familie braucht Hilfe bei der Wohnungssuche und Behördengängen, liegt dem Beitrag zugrunde:",
+      "answer": "E",
+      "points": 1,
+      "explanation": {
+        "de": "Anzeige E passt, weil sie das beschriebene Bedürfnis erfüllt.",
+        "key_evidence": "Anzeige E",
+        "key_vocabulary": [],
+        "reasoning": "[Inferential] "
+      }
+    }
+  ],
+  "scoring": {
+    "total_points": 5,
+    "pass_threshold": 3,
+    "grading": [
+      {
+        "range": [
+          5,
+          5
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          4,
+          4
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          3,
+          3
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          1,
+          2
+        ],
+        "label": "Noch üben!",
+        "emoji": "📝"
+      },
+      {
+        "range": [
+          0,
+          0
+        ],
+        "label": "Mehr Übung nötig",
+        "emoji": "💪"
+      }
+    ]
+  },
+  "qa": {
+    "vocab_in_b2_list": true,
+    "grammar_b2_appropriate": true,
+    "word_count_in_range": true,
+    "all_answers_verifiable": true,
+    "null_matches_correct": true,
+    "image_count": 1,
+    "passed": true
+  }
+}

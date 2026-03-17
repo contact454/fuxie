@@ -1,0 +1,51 @@
+{
+  "id": "W-A2-T1-001",
+  "cefrLevel": "A2",
+  "teil": 1,
+  "teilName": "E-Mail-Antwort",
+  "textType": "E-Mail",
+  "register": "informell",
+  "topic": "Umzug",
+  "instruction": "Schreiben Sie eine Antwort-E-Mail (ca. 40-60 Woerter). Schreiben Sie zu allen drei Punkten.",
+  "instructionVi": "Tra loi email: Umzug.",
+  "situation": "Ihre Freundin Anna braucht Hilfe beim Umzug. Antworten Sie.",
+  "contentPoints": [
+    "auf Nachricht reagieren",
+    "Hilfe anbieten",
+    "fragen wann und wo"
+  ],
+  "minWords": 40,
+  "maxWords": 70,
+  "timeMinutes": 15,
+  "rubric": {
+    "criteria": [
+      {
+        "id": "inhalt",
+        "name": "Inhalt",
+        "nameVi": "Noi dung",
+        "maxScore": 5,
+        "weight": 30
+      },
+      {
+        "id": "korrektheit",
+        "name": "Korrektheit",
+        "nameVi": "Chinh xac",
+        "maxScore": 5,
+        "weight": 35
+      },
+      {
+        "id": "angemessenheit",
+        "name": "Kommunikative Angemessenheit",
+        "nameVi": "Phu hop giao tiep",
+        "maxScore": 5,
+        "weight": 35
+      }
+    ],
+    "maxScore": 15
+  },
+  "maxScore": 15,
+  "sourceText": "Hallo! Wie geht es dir? Ich habe tolle Neuigkeiten: Ich ziehe endlich um! Die neue Wohnung ist im Stadtzentrum. Ich bin gerade dabei, alle Kisten zu packen, und es ist wirklich viel Arbeit. Ich freue mich schon sehr darauf. Schreib mir bitte bald!\n\nViele Grüße,\nLukas",
+  "sourceTextType": "E-Mail",
+  "stimulusSender": "Lukas",
+  "grafikData": []
+}

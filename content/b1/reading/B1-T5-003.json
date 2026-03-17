@@ -1,0 +1,243 @@
+{
+  "id": "B1-T5-003",
+  "level": "B1",
+  "teil": 5,
+  "teil_name": "Informationsblatt lesen",
+  "topic": "Umwelt & Natur",
+  "topic_id": "003",
+  "metadata": {
+    "word_count": 280,
+    "target_grammar": [
+      "Passiv",
+      "Modalverben",
+      "Nebensatz mit damit/weil"
+    ],
+    "target_vocabulary": [
+      "Mülltrennung",
+      "Wertstoff",
+      "Biotonne",
+      "Restmüll",
+      "Recycling",
+      "Abholung",
+      "Sperrmüll",
+      "Gebühr"
+    ],
+    "generated_at": "2026-03-10T23:47:00+07:00",
+    "version": 1
+  },
+  "infotext": {
+    "source": "Stadtverwaltung Köln — Abfallwirtschaft",
+    "title": "Richtig Müll trennen: So funktioniert es in Köln",
+    "format": "Informationsblatt",
+    "sections": [
+      {
+        "heading": "Warum Mülltrennung?",
+        "text": "Durch richtige Mülltrennung können bis zu 60 % des Hausmülls recycelt werden. Das spart Energie, schützt Ressourcen und reduziert CO2-Emissionen. Mülltrennung ist in Deutschland Pflicht."
+      },
+      {
+        "heading": "Die vier Tonnen",
+        "text": "Gelbe Tonne/Gelber Sack: Verpackungen aus Plastik, Metall und Verbundmaterial (z.B. Joghurtbecher, Konservendosen, Tetrapacks). Blaue Tonne: Papier, Pappe, Karton, Zeitungen, Kataloge. Braune Tonne (Biotonne): Küchenabfälle, Obst- und Gemüsereste, Kaffeesatz, Gartenabfälle. Graue Tonne (Restmüll): Alles, was in keine andere Tonne gehört, z.B. Windeln, Hygieneartikel, kaputte Gegenstände."
+      },
+      {
+        "heading": "Was gehört NICHT in die Tonnen?",
+        "text": "Glas muss in öffentliche Glascontainer gebracht werden (weiß, grün, braun getrennt). Elektrogeräte und Batterien gehören zum Wertstoffhof oder in Sammelboxen im Supermarkt. Medikamente können in der Apotheke abgegeben werden."
+      },
+      {
+        "heading": "Sperrmüll",
+        "text": "Große Gegenstände wie alte Möbel oder Matratzen können zweimal pro Jahr kostenlos als Sperrmüll abgeholt werden. Anmeldung bis 2 Wochen vorher online oder telefonisch unter 0221-9220. Maximal 3 Kubikmeter pro Abholung."
+      },
+      {
+        "heading": "Abholtermine",
+        "text": "Die genauen Abholtermine finden Sie online unter www.awb-koeln.de oder in der AWB-App. Die App erinnert Sie automatisch am Vorabend. Bei Fragen: Servicehotline 0221-922-0 (Mo–Fr 7–18 Uhr)."
+      }
+    ]
+  },
+  "images": [
+    {
+      "id": "IMG1",
+      "type": "scene",
+      "prompt": "Cute cartoon illustration of colored recycling bins (yellow, blue, brown, gray) with icons showing what goes in each, in a German residential area. Fuxie cartoon style, flat illustration, warm pastel colors, no text.",
+      "filename": "B1-T5-003_scene.png",
+      "placement": "header",
+      "alt_text": "Mülltrennung in Köln",
+      "dimensions": "768x512"
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q1",
+      "teil": 5,
+      "type": "multiple_choice",
+      "stem": "Welche Schlussfolgerung über In welche Tonne gehören Joghurtbecher legt der Text nahe?",
+      "options": {
+        "a": "In die blaue Tonne.",
+        "b": "In die gelbe Tonne.",
+        "c": "In die graue Tonne."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Verpackungen aus Plastik gehören in die gelbe Tonne.",
+        "key_evidence": "Gelbe Tonne: Verpackungen aus Plastik",
+        "key_vocabulary": [
+          {
+            "word": "Verpackung",
+            "type": "Nomen",
+            "meaning": "packaging"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q2",
+      "teil": 5,
+      "type": "multiple_choice",
+      "stem": "Was ist die Hauptaussage des Textes zu Wohin bringt man alte Glasflaschen?",
+      "options": {
+        "a": "In die gelbe Tonne.",
+        "b": "In die braune Tonne.",
+        "c": "In öffentliche Glascontainer."
+      },
+      "answer": "c",
+      "points": 1,
+      "explanation": {
+        "de": "Glas muss in öffentliche Glascontainer gebracht werden.",
+        "key_evidence": "Glas muss in öffentliche Glascontainer gebracht werden",
+        "key_vocabulary": [
+          {
+            "word": "Glascontainer",
+            "type": "Nomen",
+            "meaning": "glass recycling container"
+          }
+        ],
+        "reasoning": "[Inferential] "
+      }
+    },
+    {
+      "id": "Q3",
+      "teil": 5,
+      "type": "multiple_choice",
+      "stem": "Wie oft pro Jahr kann man kostenlos Sperrmüll abholen lassen?",
+      "options": {
+        "a": "Einmal.",
+        "b": "Zweimal.",
+        "c": "Viermal."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Sperrmüll kann zweimal pro Jahr kostenlos abgeholt werden.",
+        "key_evidence": "zweimal pro Jahr kostenlos",
+        "key_vocabulary": [
+          {
+            "word": "Sperrmüll",
+            "type": "Nomen",
+            "meaning": "bulky waste"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q4",
+      "teil": 5,
+      "type": "multiple_choice",
+      "stem": "Wohin kann man alte Medikamente bringen?",
+      "options": {
+        "a": "In die graue Tonne.",
+        "b": "Zum Wertstoffhof.",
+        "c": "In die Apotheke."
+      },
+      "answer": "c",
+      "points": 1,
+      "explanation": {
+        "de": "Medikamente können in der Apotheke abgegeben werden.",
+        "key_evidence": "Medikamente können in der Apotheke abgegeben werden",
+        "key_vocabulary": [
+          {
+            "word": "abgeben",
+            "type": "Verb",
+            "meaning": "to hand in / drop off"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q5",
+      "teil": 5,
+      "type": "multiple_choice",
+      "stem": "Wie wird man an die Abholtermine erinnert?",
+      "options": {
+        "a": "Per Brief.",
+        "b": "Per Telefonanruf.",
+        "c": "Durch die AWB-App."
+      },
+      "answer": "c",
+      "points": 1,
+      "explanation": {
+        "de": "Die App erinnert automatisch am Vorabend.",
+        "key_evidence": "Die App erinnert Sie automatisch am Vorabend",
+        "key_vocabulary": [
+          {
+            "word": "Abholtermin",
+            "type": "Nomen",
+            "meaning": "collection date"
+          }
+        ]
+      }
+    }
+  ],
+  "scoring": {
+    "total_points": 5,
+    "pass_threshold": 3,
+    "grading": [
+      {
+        "range": [
+          5,
+          5
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          4,
+          4
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          3,
+          3
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          1,
+          2
+        ],
+        "label": "Noch üben!",
+        "emoji": "📝"
+      },
+      {
+        "range": [
+          0,
+          0
+        ],
+        "label": "Mehr Übung nötig",
+        "emoji": "💪"
+      }
+    ]
+  },
+  "qa": {
+    "vocab_in_b1_list": true,
+    "grammar_b1_appropriate": true,
+    "word_count_in_range": true,
+    "all_answers_verifiable": true,
+    "image_count": 1,
+    "passed": true
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "id": "W-B2-T2-020",
+  "cefrLevel": "B2",
+  "teil": 2,
+  "teilName": "Nachricht/E-Mail",
+  "textType": "E-Mail",
+  "register": "formell",
+  "topic": "Forschungsbericht",
+  "instruction": "Sie arbeiten als wissenschaftlicher Mitarbeiter an einem Forschungsinstitut. Ihr Projektleiter hat Ihnen eine E-Mail bezüglich eines Berichts geschickt. Antworten Sie ihm förmlich und gehen Sie auf alle genannten Punkte ein.",
+  "instructionVi": "Bạn làm việc với tư cách là cộng tác viên khoa học tại một viện nghiên cứu. Trưởng dự án đã gửi cho bạn một email liên quan đến một báo cáo. Hãy trả lời ông ấy một cách trang trọng và đề cập đến tất cả các ý được nêu.",
+  "situation": "Sie sind Teil eines Teams, das die Auswirkungen von Mikroplastik in Gewässern untersucht. Ihr Vorgesetzter, Herr Dr. Weber, benötigt für eine wichtige Fachkonferenz im nächsten Monat dringend ein Update zu Ihren aktuellen Ergebnissen und den Stand der Laboranalysen.",
+  "contentPoints": [
+    "Zusammenfassung des aktuellen Stands der Laboruntersuchungen",
+    "Erklärung für die zeitliche Verzögerung bei der Datenauswertung",
+    "Vorschlag zur grafischen Darstellung der Ergebnisse für den Vortrag",
+    "Terminvorschlag für eine detaillierte Besprechung der nächsten Schritte"
+  ],
+  "sourceText": "Sehr geehrte(r) Frau/Herr [Nachname], ich bereite gerade unseren Vortrag für die internationale Fachtagung im nächsten Monat vor. Leider fehlen mir noch die konkreten Daten aus Ihren letzten Untersuchungen. Könnten Sie mir bitte kurz mitteilen, wie weit Sie mit der Analyse sind? Gibt es Schwierigkeiten, die wir berücksichtigen müssen? Bitte schicken Sie mir bis morgen eine Zusammenfassung der wichtigsten Punkte, damit ich die Präsentationsfolien finalisieren kann. Mit freundlichen Grüßen, Dr. Weber.",
+  "sourceTextType": "Geschäftliche E-Mail des Vorgesetzten",
+  "minWords": 100,
+  "maxWords": 150,
+  "timeMinutes": 25,
+  "rubric": {
+    "criteria": [
+      {
+        "id": "inhalt",
+        "name": "Inhalt",
+        "nameVi": "Nội dung",
+        "maxScore": 5,
+        "weight": 25
+      },
+      {
+        "id": "angemessenheit",
+        "name": "Kommunikative Angemessenheit",
+        "nameVi": "Phù hợp giao tiếp",
+        "maxScore": 5,
+        "weight": 20
+      },
+      {
+        "id": "korrektheit",
+        "name": "Korrektheit",
+        "nameVi": "Chính xác ngữ pháp & chính tả",
+        "maxScore": 5,
+        "weight": 25
+      },
+      {
+        "id": "spektrum",
+        "name": "Wortschatz & Strukturen",
+        "nameVi": "Đa dạng từ vựng & cấu trúc",
+        "maxScore": 5,
+        "weight": 15
+      },
+      {
+        "id": "kohaerenz",
+        "name": "Kohaerenz & Kohaesion",
+        "nameVi": "Mạch lạc & liên kết",
+        "maxScore": 5,
+        "weight": 15
+      }
+    ],
+    "maxScore": 25
+  },
+  "maxScore": 25
+}

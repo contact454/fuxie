@@ -1,0 +1,258 @@
+{
+  "id": "B1-T3-004",
+  "level": "B1",
+  "teil": 3,
+  "teil_name": "Anzeigen zuordnen",
+  "topic": "Medien & Kommunikation",
+  "topic_id": "004",
+  "metadata": {
+    "word_count": 228,
+    "target_grammar": [
+      "Nebensatz mit dass/weil",
+      "Modalverben",
+      "Komparativ"
+    ],
+    "target_vocabulary": [
+      "Handyvertrag",
+      "Flatrate",
+      "Streaming",
+      "Datenvolumen",
+      "Internetkurs",
+      "Podcast",
+      "Bibliothek",
+      "Tarif"
+    ],
+    "generated_at": "2026-03-10T23:30:00+07:00",
+    "version": 1
+  },
+  "anzeigen": [
+    {
+      "id": "A",
+      "text": "MobilPlus Tarif — Allnet-Flat + 15 GB Daten für nur 14,99 €/Monat. Keine Mindestlaufzeit! 5G inklusive. Im TeleShop oder online: www.mobilplus.de"
+    },
+    {
+      "id": "B",
+      "text": "Internetkurs für Senioren — E-Mail, Online-Banking und Video-Telefonie lernen. 6 Termine, Mo 10–12 Uhr. Kleine Gruppen (max. 6). 60 €. VHS Charlottenburg. Laptop wird gestellt."
+    },
+    {
+      "id": "C",
+      "text": "Podcast-Workshop — Erstelle deinen eigenen Podcast! 2 Tage (Sa+So), 10–16 Uhr. Aufnahme, Schnitt, Veröffentlichung. Für Anfänger. 120 € inkl. Software. Medienhaus Kreuzberg."
+    },
+    {
+      "id": "D",
+      "text": "StreamAll Premium — Filme, Serien, Musik und Hörbücher. Alles in einer App! Familien-Abo (bis 5 Profile): 16,99 €/Monat. Erster Monat gratis testen. www.streamall.de"
+    },
+    {
+      "id": "E",
+      "text": "Fotokurs für Smartphone — Bessere Fotos mit dem Handy! 4 Abende (Do, 18–20 Uhr). Portrait, Landschaft, Bildbearbeitung. 90 €. Volkshochschule Mitte. Eigenes Smartphone mitbringen."
+    },
+    {
+      "id": "F",
+      "text": "Stadtbibliothek digital — Kostenlos E-Books, Zeitschriften und Hörbücher ausleihen! Nur Bibliotheksausweis nötig (10 €/Jahr). App für iOS und Android. Über 50.000 Titel verfügbar."
+    },
+    {
+      "id": "G",
+      "text": "Schreibwerkstatt Online — Kreatives Schreiben per Videokonferenz. 8 Wochen, Mittwoch 19–21 Uhr. Feedback von Profis. 160 €. Für alle, die gern schreiben. Anmeldung: schreibwerkstatt@online.de"
+    },
+    {
+      "id": "H",
+      "text": "IT-Sicherheit zu Hause — Vortrag: Wie schütze ich mich vor Betrug im Internet? Donnerstag, 8. Mai, 18 Uhr. Eintritt frei. Polizeipräsidium Hannover. Keine Anmeldung nötig."
+    }
+  ],
+  "situationen": [
+    {
+      "id": "S1",
+      "text": "Frau Becker (72) möchte lernen, wie sie E-Mails schreiben und mit der Familie videotelefonieren kann.",
+      "answer": "B"
+    },
+    {
+      "id": "S2",
+      "text": "Familie Hoffmann sucht ein Streaming-Angebot, das alle Familienmitglieder nutzen können.",
+      "answer": "D"
+    },
+    {
+      "id": "S3",
+      "text": "Kerem liest sehr gern und sucht eine günstige Möglichkeit, digital Bücher auszuleihen.",
+      "answer": "F"
+    },
+    {
+      "id": "S4",
+      "text": "Nina möchte einen eigenen Podcast starten, hat aber keine Erfahrung.",
+      "answer": "C"
+    },
+    {
+      "id": "S5",
+      "text": "Herr Weber braucht einen neuen Handyvertrag mit viel Datenvolumen, aber ohne lange Vertragslaufzeit.",
+      "answer": "A"
+    }
+  ],
+  "null_matches": [
+    "E",
+    "G",
+    "H"
+  ],
+  "images": [
+    {
+      "id": "IMG1",
+      "type": "scene",
+      "prompt": "Cute cartoon illustration of a digital bulletin board with ads for phone contracts, streaming services, internet courses, podcast workshops, and e-library. Fuxie cartoon style, flat illustration, warm pastel colors, no text.",
+      "filename": "B1-T3-004_scene.png",
+      "placement": "header",
+      "alt_text": "Medien-Anzeigen",
+      "dimensions": "768x512"
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q1",
+      "teil": 3,
+      "type": "matching",
+      "stem": "Frau Becker (72) möchte E-Mails und Videotelefonie lernen.",
+      "answer": "B",
+      "points": 1,
+      "explanation": {
+        "de": "Der Internetkurs für Senioren bietet genau das: E-Mail, Online-Banking, Video-Telefonie.",
+        "key_evidence": "Internetkurs für Senioren / E-Mail, Online-Banking und Video-Telefonie",
+        "key_vocabulary": [
+          {
+            "word": "Senioren",
+            "type": "Nomen",
+            "meaning": "seniors"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q2",
+      "teil": 3,
+      "type": "matching",
+      "stem": "Die Ansicht, dass familie Hoffmann sucht Streaming für die ganze Familie, wird vertreten von:",
+      "answer": "D",
+      "points": 1,
+      "explanation": {
+        "de": "StreamAll Premium bietet ein Familienabo mit bis zu 5 Profilen.",
+        "key_evidence": "Familien-Abo (bis 5 Profile)",
+        "key_vocabulary": [
+          {
+            "word": "Abo",
+            "type": "Nomen",
+            "meaning": "subscription"
+          }
+        ],
+        "reasoning": "[Inferential] "
+      }
+    },
+    {
+      "id": "Q3",
+      "teil": 3,
+      "type": "matching",
+      "stem": "Kerem sucht eine günstige Möglichkeit, digital Bücher auszuleihen.",
+      "answer": "F",
+      "points": 1,
+      "explanation": {
+        "de": "Die Stadtbibliothek bietet kostenlos E-Books für nur 10 €/Jahr Ausweis.",
+        "key_evidence": "Kostenlos E-Books ausleihen / Bibliotheksausweis 10 €/Jahr",
+        "key_vocabulary": [
+          {
+            "word": "ausleihen",
+            "type": "Verb",
+            "meaning": "to borrow"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q4",
+      "teil": 3,
+      "type": "matching",
+      "stem": "Die Ansicht, dass nina möchte einen eigenen Podcast starten, ohne Erfahrung, wird vertreten von:",
+      "answer": "C",
+      "points": 1,
+      "explanation": {
+        "de": "Der Podcast-Workshop ist für Anfänger und deckt Aufnahme, Schnitt und Veröffentlichung ab.",
+        "key_evidence": "Erstelle deinen eigenen Podcast / Für Anfänger",
+        "key_vocabulary": [
+          {
+            "word": "Podcast",
+            "type": "Nomen",
+            "meaning": "podcast"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q5",
+      "teil": 3,
+      "type": "matching",
+      "stem": "Herr Weber braucht einen Handyvertrag mit viel Daten, ohne lange Laufzeit.",
+      "answer": "A",
+      "points": 1,
+      "explanation": {
+        "de": "MobilPlus bietet 15 GB Daten ohne Mindestlaufzeit.",
+        "key_evidence": "15 GB Daten / Keine Mindestlaufzeit",
+        "key_vocabulary": [
+          {
+            "word": "Mindestlaufzeit",
+            "type": "Nomen",
+            "meaning": "minimum contract period"
+          }
+        ]
+      }
+    }
+  ],
+  "scoring": {
+    "total_points": 5,
+    "pass_threshold": 3,
+    "grading": [
+      {
+        "range": [
+          5,
+          5
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          4,
+          4
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          3,
+          3
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          1,
+          2
+        ],
+        "label": "Noch üben!",
+        "emoji": "📝"
+      },
+      {
+        "range": [
+          0,
+          0
+        ],
+        "label": "Mehr Übung nötig",
+        "emoji": "💪"
+      }
+    ]
+  },
+  "qa": {
+    "vocab_in_b1_list": true,
+    "grammar_b1_appropriate": true,
+    "word_count_in_range": true,
+    "all_answers_verifiable": true,
+    "null_matches_correct": true,
+    "image_count": 1,
+    "passed": true
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "id": "W-B1-T3-006",
+  "cefrLevel": "B1",
+  "teil": 3,
+  "teilName": "Formelle E-Mail",
+  "textType": "Formeller Brief",
+  "register": "formell",
+  "topic": "Falsche Rechnung",
+  "instruction": "Schreiben Sie einen formellen Brief (ca. 80-100 Woerter).",
+  "instructionVi": "Viet email chinh thuc: Falsche Rechnung.",
+  "situation": "Stromrechnung zu hoch. Schreiben Sie den Stadtwerken.",
+  "contentPoints": [
+    "formelle Anrede",
+    "Grund des Schreibens",
+    "Sachverhalt schildern",
+    "Bitte/Forderung",
+    "formelle Grussformel"
+  ],
+  "minWords": 80,
+  "maxWords": 120,
+  "timeMinutes": 20,
+  "rubric": {
+    "criteria": [
+      {
+        "id": "inhalt",
+        "name": "Inhalt",
+        "nameVi": "Noi dung",
+        "maxScore": 5,
+        "weight": 25
+      },
+      {
+        "id": "angemessenheit",
+        "name": "Kommunikative Angemessenheit",
+        "nameVi": "Phu hop giao tiep",
+        "maxScore": 5,
+        "weight": 20
+      },
+      {
+        "id": "korrektheit",
+        "name": "Korrektheit",
+        "nameVi": "Chinh xac ngu phap",
+        "maxScore": 5,
+        "weight": 25
+      },
+      {
+        "id": "spektrum",
+        "name": "Wortschatz & Strukturen",
+        "nameVi": "Da dang tu vung",
+        "maxScore": 5,
+        "weight": 15
+      },
+      {
+        "id": "kohaerenz",
+        "name": "Kohaerenz & Kohaesion",
+        "nameVi": "Mach lac & lien ket",
+        "maxScore": 5,
+        "weight": 15
+      }
+    ],
+    "maxScore": 25
+  },
+  "maxScore": 25,
+  "sourceText": "Sie haben am 15. Oktober 2023 bei der Büromarkt Schneider GmbH (Hauptstraße 12, 10115 Berlin) unter der Bestellnummer BS-9942 einen Laserdrucker bestellt. Gestern erhielten Sie die Rechnung Nr. RE-550 vom 20. Oktober. Zu Ihrem Entsetzen wurden Ihnen jedoch zehn Geräte statt einem in Rechnung gestellt. Der Gesamtbetrag beläuft sich auf 2.500 € statt der vereinbarten 250 €. Schreiben Sie einen formellen Brief an die Buchhaltung, um diesen Fehler zu reklamieren und eine korrigierte Rechnung einzufordern.",
+  "sourceTextType": "Situationsbeschreibung",
+  "grafikData": []
+}

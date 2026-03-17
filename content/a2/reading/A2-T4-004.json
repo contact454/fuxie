@@ -1,0 +1,280 @@
+{
+  "id": "A2-T4-004",
+  "level": "A2",
+  "teil": 4,
+  "teil_name": "Fahrpläne und Kalender lesen",
+  "topic": "In der Schule",
+  "topic_id": "004",
+  "metadata": {
+    "word_count": 83,
+    "target_grammar": [
+      "Modalverben",
+      "Zeitangaben"
+    ],
+    "target_vocabulary": [
+      "Stundenplan",
+      "Semester",
+      "Kursraum",
+      "Dozent",
+      "Teilnehmer",
+      "Gebühr",
+      "Ermäßigung",
+      "Anmeldung",
+      "Zertifikat",
+      "Niveaustufe"
+    ],
+    "generated_at": "2026-03-09T22:45:00+07:00",
+    "version": 1
+  },
+  "schedule": {
+    "title": "VHS Hamburg — Stundenplan Frühjahr 2026",
+    "type": "course_schedule",
+    "columns": [
+      "Kurs",
+      "Tag",
+      "Uhrzeit",
+      "Raum",
+      "Dozent/in",
+      "Gebühr"
+    ],
+    "rows": [
+      [
+        "Deutsch A2",
+        "Mo + Mi",
+        "9:00–12:00",
+        "Raum 102",
+        "Frau Schmidt",
+        "220 €"
+      ],
+      [
+        "Englisch B1",
+        "Di + Do",
+        "18:00–20:00",
+        "Raum 105",
+        "Mr. Taylor",
+        "180 €"
+      ],
+      [
+        "Computerkurs",
+        "Mittwoch",
+        "14:00–16:00",
+        "PC-Raum",
+        "Herr Yilmaz",
+        "90 €"
+      ],
+      [
+        "Fotografie",
+        "Samstag",
+        "10:00–13:00",
+        "Raum 201",
+        "Frau Klein",
+        "120 €"
+      ],
+      [
+        "Yoga",
+        "Donnerstag",
+        "17:00–18:30",
+        "Sporthalle",
+        "Frau Hofer",
+        "75 €"
+      ],
+      [
+        "Spanisch A1",
+        "Freitag",
+        "10:00–12:00",
+        "Raum 103",
+        "Sr. Gómez",
+        "160 €"
+      ]
+    ],
+    "footnote": "Semester: 3. März – 11. Juli 2026. Ermäßigung: 30 % für Schüler, Studenten und Rentner. Anmeldung bis 28. Februar. Zertifikat nach 80 % Teilnahme."
+  },
+  "images": [
+    {
+      "id": "IMG1",
+      "type": "schedule",
+      "prompt": "Cute cartoon illustration of a German adult education center (VHS) hallway with colorful classroom doors numbered, students of different ages walking with books. Fuxie cartoon style, flat illustration, warm pastel colors, no text.",
+      "filename": "A2-T4-004_schedule.png",
+      "placement": "header",
+      "alt_text": "VHS Stundenplan",
+      "dimensions": "768x512"
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q1",
+      "teil": 4,
+      "type": "detail_extraction",
+      "stem": "Wann ist der Deutschkurs A2?",
+      "options": {
+        "a": "Montag und Mittwoch, 9:00–12:00.",
+        "b": "Dienstag und Donnerstag, 18:00–20:00.",
+        "c": "Freitag, 10:00–12:00."
+      },
+      "answer": "a",
+      "points": 1,
+      "explanation": {
+        "de": "Deutsch A2 ist Mo + Mi 9:00–12:00 in Raum 102.",
+        "key_evidence": "Deutsch A2: Mo + Mi, 9:00–12:00",
+        "key_vocabulary": [
+          {
+            "word": "Stundenplan",
+            "type": "Nomen",
+            "meaning": "timetable"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q2",
+      "teil": 4,
+      "type": "detail_extraction",
+      "stem": "Wie viel kostet der Yoga-Kurs?",
+      "options": {
+        "a": "90 €.",
+        "b": "75 €.",
+        "c": "120 €."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Der Yoga-Kurs kostet 75 €.",
+        "key_evidence": "Yoga: Gebühr 75 €",
+        "key_vocabulary": [
+          {
+            "word": "Gebühr",
+            "type": "Nomen",
+            "meaning": "fee"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q3",
+      "teil": 4,
+      "type": "detail_extraction",
+      "stem": "In welchem Raum ist der Computerkurs?",
+      "options": {
+        "a": "Raum 102.",
+        "b": "Raum 201.",
+        "c": "Im PC-Raum."
+      },
+      "answer": "c",
+      "points": 1,
+      "explanation": {
+        "de": "Der Computerkurs ist im PC-Raum.",
+        "key_evidence": "Computerkurs: Raum PC-Raum",
+        "key_vocabulary": [
+          {
+            "word": "Kursraum",
+            "type": "Nomen",
+            "meaning": "classroom"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q4",
+      "teil": 4,
+      "type": "detail_extraction",
+      "stem": "Wer bekommt eine Ermäßigung?",
+      "options": {
+        "a": "Nur Studenten.",
+        "b": "Schüler, Studenten und Rentner.",
+        "c": "Alle Teilnehmer."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Schüler, Studenten und Rentner bekommen 30 % Ermäßigung.",
+        "key_evidence": "Ermäßigung: 30 % für Schüler, Studenten und Rentner",
+        "key_vocabulary": [
+          {
+            "word": "Ermäßigung",
+            "type": "Nomen",
+            "meaning": "discount"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q5",
+      "teil": 4,
+      "type": "detail_extraction",
+      "stem": "Welcher Kurs ist am Wochenende?",
+      "options": {
+        "a": "Yoga.",
+        "b": "Englisch B1.",
+        "c": "Fotografie."
+      },
+      "answer": "c",
+      "points": 1,
+      "explanation": {
+        "de": "Fotografie ist am Samstag 10:00–13:00.",
+        "key_evidence": "Fotografie: Samstag, 10:00–13:00",
+        "key_vocabulary": [
+          {
+            "word": "Wochenende",
+            "type": "Nomen",
+            "meaning": "weekend"
+          }
+        ]
+      }
+    }
+  ],
+  "scoring": {
+    "total_points": 5,
+    "pass_threshold": 3,
+    "grading": [
+      {
+        "range": [
+          5,
+          5
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          4,
+          4
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          3,
+          3
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          1,
+          2
+        ],
+        "label": "Noch üben!",
+        "emoji": "📝"
+      },
+      {
+        "range": [
+          0,
+          0
+        ],
+        "label": "Mehr Übung nötig",
+        "emoji": "💪"
+      }
+    ]
+  },
+  "qa": {
+    "vocab_in_a2_list": true,
+    "grammar_a2_only": true,
+    "word_count_in_range": true,
+    "all_answers_verifiable": true,
+    "schedule_data_consistent": true,
+    "image_count": 1,
+    "passed": true
+  }
+}

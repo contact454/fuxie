@@ -1,0 +1,64 @@
+{
+  "id": "W-B2-T2-013",
+  "cefrLevel": "B2",
+  "teil": 2,
+  "teilName": "Nachricht/E-Mail",
+  "textType": "E-Mail",
+  "register": "formell",
+  "topic": "Veranstaltungskritik",
+  "instruction": "Schreiben Sie eine E-Mail an das städtische Kulturamt, in der Sie eine formelle Rückmeldung zu einer besuchten Kulturveranstaltung geben. Gehen Sie dabei auf die untenstehende Nachricht der Veranstalter ein.",
+  "instructionVi": "Viết một email gửi văn phòng văn hóa thành phố để phản hồi chính thức về một sự kiện văn hóa bạn đã tham dự. Hãy dựa trên nội dung tin nhắn từ ban tổ chức dưới đây.",
+  "situation": "Sie haben letzte Woche das städtische Festival 'Sommer-Kultur-Tage' besucht. Die Stadtverwaltung hat Ihnen eine E-Mail geschickt und bittet um Feedback zur Organisation und zum Programm. Da Sie mit einigen Aspekten unzufrieden waren, verfassen Sie nun eine Kritik.",
+  "contentPoints": [
+    "Grund für Ihr Schreiben und Bezugnahme auf die Anfrage des Kulturamts",
+    "Positive Eindrücke zum Programm und der Atmosphäre schildern",
+    "Kritik an organisatorischen Mängeln (z.B. Wartezeiten, Technik oder Verpflegung)",
+    "Vorschläge für konkrete Verbesserungen bei zukünftigen Veranstaltungen"
+  ],
+  "sourceText": "Sehr geehrte Damen und Herren, wir hoffen, dass Ihnen unser diesjähriges Festival 'Sommer-Kultur-Tage' gefallen hat. Als städtische Veranstalter legen wir großen Wert auf Ihre Meinung. Haben die Programmauswahl und die Technik Ihren Erwartungen entsprochen? Gab es Probleme beim Einlass oder bei der Verpflegung vor Ort? Ihr Feedback hilft uns, das kulturelle Angebot unserer Stadt kontinuierlich zu verbessern. Wir freuen uns auf Ihre Rückmeldung. Mit freundlichen Grüßen, Ihr Kulturamt-Team.",
+  "sourceTextType": "E-Mail der Stadtverwaltung",
+  "minWords": 100,
+  "maxWords": 150,
+  "timeMinutes": 25,
+  "rubric": {
+    "criteria": [
+      {
+        "id": "inhalt",
+        "name": "Inhalt",
+        "nameVi": "Nội dung",
+        "maxScore": 5,
+        "weight": 25
+      },
+      {
+        "id": "angemessenheit",
+        "name": "Kommunikative Angemessenheit",
+        "nameVi": "Phù hợp giao tiếp",
+        "maxScore": 5,
+        "weight": 20
+      },
+      {
+        "id": "korrektheit",
+        "name": "Korrektheit",
+        "nameVi": "Chính xác ngữ pháp & chính tả",
+        "maxScore": 5,
+        "weight": 25
+      },
+      {
+        "id": "spektrum",
+        "name": "Wortschatz & Strukturen",
+        "nameVi": "Đa dạng từ vựng & cấu trúc",
+        "maxScore": 5,
+        "weight": 15
+      },
+      {
+        "id": "kohaerenz",
+        "name": "Kohaerenz & Kohaesion",
+        "nameVi": "Mạch lạc & liên kết",
+        "maxScore": 5,
+        "weight": 15
+      }
+    ],
+    "maxScore": 25
+  },
+  "maxScore": 25
+}

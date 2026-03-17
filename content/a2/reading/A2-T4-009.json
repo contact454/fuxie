@@ -1,0 +1,280 @@
+{
+  "id": "A2-T4-009",
+  "level": "A2",
+  "teil": 4,
+  "teil_name": "Fahrpläne und Kalender lesen",
+  "topic": "Arbeit & Beruf",
+  "topic_id": "009",
+  "metadata": {
+    "word_count": 81,
+    "target_grammar": [
+      "Modalverben",
+      "Zeitangaben"
+    ],
+    "target_vocabulary": [
+      "Bewerbungstraining",
+      "Berufsberatung",
+      "Lebenslauf",
+      "Vorstellungsgespräch",
+      "Computerkurs",
+      "Raum",
+      "Anmeldung",
+      "Dozent",
+      "kostenlos",
+      "Zielgruppe"
+    ],
+    "generated_at": "2026-03-09T22:46:00+07:00",
+    "version": 1
+  },
+  "schedule": {
+    "title": "Arbeitsagentur Düsseldorf — Bewerbungstraining-Termine April 2026",
+    "type": "training_schedule",
+    "columns": [
+      "Datum",
+      "Thema",
+      "Uhrzeit",
+      "Raum",
+      "Dozent/in",
+      "Zielgruppe"
+    ],
+    "rows": [
+      [
+        "Di, 1. April",
+        "Lebenslauf schreiben",
+        "10:00–12:00",
+        "Raum 201",
+        "Frau Yilmaz",
+        "alle"
+      ],
+      [
+        "Do, 3. April",
+        "Online-Bewerbung",
+        "14:00–16:00",
+        "PC-Raum",
+        "Herr Becker",
+        "unter 30"
+      ],
+      [
+        "Di, 8. April",
+        "Vorstellungsgespräch üben",
+        "10:00–12:00",
+        "Raum 201",
+        "Frau Yilmaz",
+        "alle"
+      ],
+      [
+        "Do, 10. April",
+        "Berufsorientierung",
+        "14:00–16:00",
+        "Raum 105",
+        "Frau Klein",
+        "unter 25"
+      ],
+      [
+        "Di, 15. April",
+        "Bewerbungsfoto & Kleidung",
+        "10:00–12:00",
+        "Raum 201",
+        "Herr Becker",
+        "alle"
+      ],
+      [
+        "Do, 17. April",
+        "Minijob & Nebenjob finden",
+        "14:00–16:00",
+        "Raum 105",
+        "Frau Klein",
+        "alle"
+      ]
+    ],
+    "footnote": "Alle Kurse kostenlos. Anmeldung: online oder am Empfang. Bitte Personalausweis mitbringen. Laptop wird im PC-Raum gestellt. Kinderbetreuung auf Anfrage möglich."
+  },
+  "images": [
+    {
+      "id": "IMG1",
+      "type": "schedule",
+      "prompt": "Cute cartoon illustration of a German employment agency training room with people at desks working on laptops, an instructor at a whiteboard showing resume tips. Fuxie cartoon style, flat illustration, warm pastel colors, no text.",
+      "filename": "A2-T4-009_schedule.png",
+      "placement": "header",
+      "alt_text": "Bewerbungstraining-Termine",
+      "dimensions": "768x512"
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q1",
+      "teil": 4,
+      "type": "detail_extraction",
+      "stem": "Wann kann man lernen, einen Lebenslauf zu schreiben?",
+      "options": {
+        "a": "Am 3. April.",
+        "b": "Am 1. April.",
+        "c": "Am 8. April."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Am Dienstag, 1. April ist das Thema Lebenslauf schreiben.",
+        "key_evidence": "Di, 1. April: Lebenslauf schreiben",
+        "key_vocabulary": [
+          {
+            "word": "Lebenslauf",
+            "type": "Nomen",
+            "meaning": "resume / CV"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q2",
+      "teil": 4,
+      "type": "detail_extraction",
+      "stem": "Welcher Kurs ist nur für junge Leute unter 25?",
+      "options": {
+        "a": "Lebenslauf schreiben.",
+        "b": "Online-Bewerbung.",
+        "c": "Berufsorientierung."
+      },
+      "answer": "c",
+      "points": 1,
+      "explanation": {
+        "de": "Berufsorientierung ist für die Zielgruppe unter 25.",
+        "key_evidence": "Berufsorientierung: Zielgruppe unter 25",
+        "key_vocabulary": [
+          {
+            "word": "Berufsorientierung",
+            "type": "Nomen",
+            "meaning": "career orientation"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q3",
+      "teil": 4,
+      "type": "detail_extraction",
+      "stem": "Was kosten die Kurse?",
+      "options": {
+        "a": "10 € pro Kurs.",
+        "b": "30 € für alle Kurse.",
+        "c": "Alle Kurse sind kostenlos."
+      },
+      "answer": "c",
+      "points": 1,
+      "explanation": {
+        "de": "Alle Kurse sind kostenlos.",
+        "key_evidence": "Alle Kurse kostenlos",
+        "key_vocabulary": [
+          {
+            "word": "kostenlos",
+            "type": "Adjektiv",
+            "meaning": "free of charge"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q4",
+      "teil": 4,
+      "type": "detail_extraction",
+      "stem": "In welchem Raum findet die Online-Bewerbung statt?",
+      "options": {
+        "a": "Raum 201.",
+        "b": "Im PC-Raum.",
+        "c": "Raum 105."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Online-Bewerbung ist im PC-Raum.",
+        "key_evidence": "Online-Bewerbung: Raum PC-Raum",
+        "key_vocabulary": [
+          {
+            "word": "Bewerbung",
+            "type": "Nomen",
+            "meaning": "application"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q5",
+      "teil": 4,
+      "type": "detail_extraction",
+      "stem": "Was muss man mitbringen?",
+      "options": {
+        "a": "Einen Laptop.",
+        "b": "Den Personalausweis.",
+        "c": "Bewerbungsfotos."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Man soll den Personalausweis mitbringen.",
+        "key_evidence": "Bitte Personalausweis mitbringen",
+        "key_vocabulary": [
+          {
+            "word": "Personalausweis",
+            "type": "Nomen",
+            "meaning": "ID card"
+          }
+        ]
+      }
+    }
+  ],
+  "scoring": {
+    "total_points": 5,
+    "pass_threshold": 3,
+    "grading": [
+      {
+        "range": [
+          5,
+          5
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          4,
+          4
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          3,
+          3
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          1,
+          2
+        ],
+        "label": "Noch üben!",
+        "emoji": "📝"
+      },
+      {
+        "range": [
+          0,
+          0
+        ],
+        "label": "Mehr Übung nötig",
+        "emoji": "💪"
+      }
+    ]
+  },
+  "qa": {
+    "vocab_in_a2_list": true,
+    "grammar_a2_only": true,
+    "word_count_in_range": true,
+    "all_answers_verifiable": true,
+    "schedule_data_consistent": true,
+    "image_count": 1,
+    "passed": true
+  }
+}

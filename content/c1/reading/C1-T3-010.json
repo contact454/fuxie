@@ -1,0 +1,145 @@
+{
+  "id": "C1-T3-010",
+  "level": "C1",
+  "teil": 3,
+  "teil_name": "Lückentext (Sätze)",
+  "topic": "Bildungsforschung",
+  "topic_id": "010",
+  "metadata": {
+    "word_count": 199,
+    "target_grammar": [
+      "Nominalisierung",
+      "Partizipialkonstruktionen",
+      "Konjunktiv I/II",
+      "Passiversatzformen"
+    ],
+    "target_vocabulary": [],
+    "generated_at": "2026-03-11T23:15:03.315013",
+    "version": 1
+  },
+  "sentence_cloze": {
+    "title": "Der Einfluss von KI auf die Zukunft der Bildung",
+    "text": "Künstliche Intelligenz hat das Potenzial, das Bildungswesen grundlegend zu transformieren. {1} Intelligente Tutorsysteme können den Lernfortschritt individuell analysieren und maßgeschneiderte Übungsaufgaben generieren.\n\nDie Technologie verspricht eine Demokratisierung der Bildung. {2} KI-gestützte Plattformen könnten hochwertige Bildung auch in Regionen zugänglich machen, die unter Lehrkräftemangel leiden.\n\nGleichzeitig sorgt die Einführung von Large Language Models für Verunsicherung im Bildungssystem. {3} Traditionelle Prüfungsformate wie Hausarbeiten und Essays werden infrage gestellt, da KI-Tools vergleichbare Texte in Sekunden generieren können.\n\nDie Rolle der Lehrkraft verändert sich fundamental. {4} Statt Wissen zu vermitteln, das online jederzeit verfügbar ist, rücken die Moderation von Lernprozessen und die Förderung kritischen Denkens in den Vordergrund.\n\nKritiker warnen vor einer technologischen Lösungsfixierung. {5} Bildung ist ein zutiefst sozialer Prozess, der menschliche Beziehungen, Empathie und emotionale Intelligenz erfordert, die keine KI ersetzen kann.\n\nDer Datenschutz stellt eine besondere Herausforderung dar. {6} KI-basierte Lernsysteme sammeln umfangreiche Daten über das Lernverhalten, die Stärken und die Schwächen der Schüler.\n\nBildungsforscher betonen die Notwendigkeit, KI-Kompetenz als Querschnittsthema in allen Fächern zu verankern. {7} Schüler müssen nicht nur lernen, KI-Tools zu bedienen, sondern auch deren Funktionsweise, Grenzen und ethische Implikationen zu verstehen.\n\nDie kommenden Jahre werden entscheiden, ob KI die Bildung demokratisiert oder bestehende Ungleichheiten verschärft. {8}",
+    "sentences": [
+      {
+        "id": "A",
+        "text": "Die Reduktion des Lernens auf messbare Daten und Algorithmen greift zu kurz und vernachlässigt die ganzheitliche Persönlichkeitsbildung."
+      },
+      {
+        "id": "B",
+        "text": "Die UNESCO hat 2021 Leitlinien für den ethischen Einsatz von KI in der Bildung veröffentlicht."
+      },
+      {
+        "id": "C",
+        "text": "Der Zugang zu personalisierter Nachhilfe, der bisher ein Privileg wohlhabender Familien war, könnte so universalisiert werden."
+      },
+      {
+        "id": "D",
+        "text": "Die Antwort hängt davon ab, ob die Technologie allen gleichermaßen zugänglich gemacht wird oder ob der Digital Divide sich weiter vertieft."
+      },
+      {
+        "id": "E",
+        "text": "Die Grenzen zwischen eigenständiger Leistung und KI-generiertem Output verschwimmen zunehmend."
+      },
+      {
+        "id": "F",
+        "text": "China investiert massiv in KI-gestützte Bildungssysteme mit teils problematischer Überwachungskomponente."
+      },
+      {
+        "id": "G",
+        "text": "Die kritische Auseinandersetzung mit Algorithmen und ihren gesellschaftlichen Auswirkungen ist eine Schlüsselkompetenz des 21. Jahrhunderts."
+      },
+      {
+        "id": "H",
+        "text": "Vom Wissensvermittler zum Lernbegleiter — dieser Wandel erfordert eine grundlegende Neuausrichtung der Lehrerausbildung."
+      },
+      {
+        "id": "I",
+        "text": "Adaptive Lernsysteme passen sich in Echtzeit an das Niveau und die Lerngeschwindigkeit des einzelnen Schülers an."
+      },
+      {
+        "id": "J",
+        "text": "Der verantwortungsvolle Umgang mit diesen sensiblen Informationen, insbesondere bei minderjährigen Nutzern, muss regulatorisch sichergestellt werden."
+      }
+    ],
+    "answers": {
+      "1": "I",
+      "2": "C",
+      "3": "E",
+      "4": "H",
+      "5": "A",
+      "6": "J",
+      "7": "G",
+      "8": "D"
+    },
+    "distractors": [
+      "F",
+      "B"
+    ]
+  },
+  "images": [
+    {
+      "id": "IMG1",
+      "type": "scene",
+      "prompt": "Cute cartoon illustration related to Bildungsforschung. Fuxie cartoon style, flat illustration, warm pastel colors, no text.",
+      "filename": "C1-T3-010_scene.png",
+      "placement": "header",
+      "alt_text": "Der Einfluss von KI auf die Zukunft der Bildung",
+      "dimensions": "768x512"
+    }
+  ],
+  "scoring": {
+    "total_points": 8,
+    "pass_threshold": 5,
+    "grading": [
+      {
+        "range": [
+          7,
+          8
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          5,
+          6
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          4,
+          4
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          1,
+          3
+        ],
+        "label": "Noch üben!",
+        "emoji": "📝"
+      },
+      {
+        "range": [
+          0,
+          0
+        ],
+        "label": "Mehr Übung nötig",
+        "emoji": "💪"
+      }
+    ]
+  },
+  "qa": {
+    "vocab_in_c1_list": true,
+    "grammar_c1_appropriate": true,
+    "word_count_in_range": true,
+    "all_gaps_match": true,
+    "image_count": 1,
+    "passed": true
+  }
+}

@@ -1,0 +1,185 @@
+{
+  "id": "C2-T4-001",
+  "level": "C2",
+  "teil": 4,
+  "teil_name": "Meinungen zuordnen",
+  "topic": "Rechtsphilosophie",
+  "topic_id": "001",
+  "metadata": {
+    "word_count": 120,
+    "target_grammar": [
+      "Alle Strukturen",
+      "Konjunktiv I/II",
+      "Erweiterte Partizipialkonstruktionen",
+      "Nominalisierung",
+      "Akademischer Stil"
+    ],
+    "target_vocabulary": [],
+    "generated_at": "2026-03-12T00:00:04.735012",
+    "version": 1
+  },
+  "opinion_texts": {
+    "question": "Ist algorithmische Rechtsprechung mit dem Rechtsstaat vereinbar?",
+    "texts": [
+      {
+        "name": "Prof. Dr. Helena Kraft, Rechtsphilosophin",
+        "label": "A",
+        "text": "Algorithmische Entscheidungsunterstützung kann die Konsistenz richterlicher Urteile verbessern und systematische Verzerrungen reduzieren. Die vollständige Delegation juristischer Entscheidungen an Maschinen wäre jedoch mit dem Grundsatz des gesetzlichen Richters unvereinbar."
+      },
+      {
+        "name": "Prof. Dr. Markus Brandt, Informatiker",
+        "label": "B",
+        "text": "Die technischen Möglichkeiten sind bereits weit fortgeschritten. Prädiktive Algorithmen können Rückfallwahrscheinlichkeiten und Prozessausgänge mit einer Trefferquote vorhersagen, die menschliche Experten übertrifft. Die Frage ist nicht ob, sondern wie wir diese Werkzeuge einsetzen."
+      },
+      {
+        "name": "Richterin Dr. Sabine Hartmann",
+        "label": "C",
+        "text": "Die richterliche Unabhängigkeit ist ein Verfassungsprinzip, das durch algorithmische Systeme nicht ersetzt werden darf. Jeder Fall ist einzigartig, und die Würdigung der konkreten Umstände erfordert menschliches Urteilsvermögen, Empathie und Erfahrung."
+      },
+      {
+        "name": "Dr. Kai Lehmann, Bürgerrechtler",
+        "label": "D",
+        "text": "Algorithmische Systeme reproduzieren und verstärken bestehende gesellschaftliche Vorurteile. Wenn historische Daten, in denen strukturelle Diskriminierung eingeschrieben ist, als Trainingsbasis dienen, perpetuiert die KI diese Ungerechtigkeiten unter dem Deckmantel vermeintlicher Objektivität."
+      }
+    ]
+  },
+  "images": [
+    {
+      "id": "IMG1",
+      "type": "scene",
+      "prompt": "Sophisticated cartoon of experts discussing Rechtsphilosophie. Fuxie cartoon style, flat illustration, warm pastel colors, no text.",
+      "filename": "C2-T4-001_scene.png",
+      "placement": "header",
+      "alt_text": "Ist algorithmische Rechtsprechung mit dem Rechtsst",
+      "dimensions": "768x512"
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q1",
+      "teil": 4,
+      "type": "matching",
+      "stem": "Algorithmen können die Konsistenz richterlicher Urteile verbessern.",
+      "answer": "A",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Text/Beitrag A",
+        "reasoning": "Die Aussage 'Algorithmen können die Konsistenz richterlicher Ur...' entspricht der Position von A."
+      }
+    },
+    {
+      "id": "Q2",
+      "teil": 4,
+      "type": "matching",
+      "stem": "Die epistemologische Überzeugung, dass prädiktive Algorithmen übertreffen menschliche Experten bei Vorhersagen, manifestiert sich in der Argumentation von:",
+      "answer": "B",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Text/Beitrag B",
+        "reasoning": "[Inferential] Die Aussage 'Prädiktive Algorithmen übertreffen menschliche Exp...' entspricht der Position von B."
+      }
+    },
+    {
+      "id": "Q3",
+      "teil": 4,
+      "type": "matching",
+      "stem": "Die methodologische Annahme, dass richterliche Unabhängigkeit darf nicht durch Algorithmen ersetzt werden, prägt die Analyse von:",
+      "answer": "C",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Text/Beitrag C",
+        "reasoning": "[Inferential] Die Aussage 'Richterliche Unabhängigkeit darf nicht durch Algor...' entspricht der Position von C."
+      }
+    },
+    {
+      "id": "Q4",
+      "teil": 4,
+      "type": "matching",
+      "stem": "Die methodologische Annahme, dass kI reproduziert bestehende gesellschaftliche Vorurteile, prägt die Analyse von:",
+      "answer": "D",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Text/Beitrag D",
+        "reasoning": "[Inferential] Die Aussage 'KI reproduziert bestehende gesellschaftliche Vorur...' entspricht der Position von D."
+      }
+    },
+    {
+      "id": "Q5",
+      "teil": 4,
+      "type": "matching",
+      "stem": "Die methodologische Annahme, dass Die vollständige Delegation an Maschinen ist mit dem Rechtsstaat unvereinbar, prägt die Analyse von:",
+      "answer": "A",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Text/Beitrag A",
+        "reasoning": "[Inferential] Die Aussage 'Die vollständige Delegation an Maschinen ist mit d...' entspricht der Position von A."
+      }
+    },
+    {
+      "id": "Q6",
+      "teil": 4,
+      "type": "matching",
+      "stem": "Die epistemologische Überzeugung, dass jeder Fall ist einzigartig und erfordert menschliches Urteilsvermögen, manifestiert sich in der Argumentation von:",
+      "answer": "C",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Text/Beitrag C",
+        "reasoning": "[Inferential] Die Aussage 'Jeder Fall ist einzigartig und erfordert menschlic...' entspricht der Position von C."
+      }
+    }
+  ],
+  "scoring": {
+    "total_points": 6,
+    "pass_threshold": 4,
+    "grading": [
+      {
+        "range": [
+          5,
+          6
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          4,
+          4
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          3,
+          3
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          1,
+          2
+        ],
+        "label": "Noch üben!",
+        "emoji": "📝"
+      },
+      {
+        "range": [
+          0,
+          0
+        ],
+        "label": "Mehr Übung nötig",
+        "emoji": "💪"
+      }
+    ]
+  },
+  "qa": {
+    "vocab_in_c2_list": true,
+    "grammar_c2_appropriate": true,
+    "word_count_in_range": true,
+    "all_answers_verifiable": true,
+    "image_count": 1,
+    "passed": true
+  }
+}

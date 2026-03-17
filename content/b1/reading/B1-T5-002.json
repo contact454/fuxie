@@ -1,0 +1,243 @@
+{
+  "id": "B1-T5-002",
+  "level": "B1",
+  "teil": 5,
+  "teil_name": "Informationsblatt lesen",
+  "topic": "Reisen & Tourismus",
+  "topic_id": "002",
+  "metadata": {
+    "word_count": 282,
+    "target_grammar": [
+      "Passiv",
+      "Modalverben",
+      "Nebensatz mit wenn/falls"
+    ],
+    "target_vocabulary": [
+      "Bahncard",
+      "Ermäßigung",
+      "Fernverkehr",
+      "Nahverkehr",
+      "Kündigung",
+      "Rabatt",
+      "Buchung",
+      "Fahrgast"
+    ],
+    "generated_at": "2026-03-10T23:47:00+07:00",
+    "version": 1
+  },
+  "infotext": {
+    "source": "Deutsche Bahn AG",
+    "title": "BahnCard 25 und BahnCard 50: Alle Infos auf einen Blick",
+    "format": "Informationsblatt",
+    "sections": [
+      {
+        "heading": "Überblick",
+        "text": "Mit der BahnCard sparen Sie bei jeder Fahrt mit der Deutschen Bahn. Die BahnCard 25 bietet 25 % Rabatt auf Flexpreis- und Sparpreis-Tickets im Fernverkehr. Die BahnCard 50 bietet 50 % Rabatt auf Flexpreis-Tickets, aber keinen zusätzlichen Rabatt auf Sparpreise."
+      },
+      {
+        "heading": "Preise",
+        "text": "BahnCard 25 (2. Klasse): 62,90 Euro pro Jahr. BahnCard 25 (1. Klasse): 125 Euro pro Jahr. BahnCard 50 (2. Klasse): 244 Euro pro Jahr. BahnCard 50 (1. Klasse): 492 Euro pro Jahr. Für Personen unter 27 und über 65 gibt es ermäßigte Preise."
+      },
+      {
+        "heading": "Gültigkeit",
+        "text": "Die BahnCard gilt 12 Monate ab Kaufdatum. Sie verlängert sich automatisch um ein weiteres Jahr, wenn Sie nicht mindestens 6 Wochen vor Ablauf kündigen. Die Kündigung ist online, per E-Mail oder per Brief möglich."
+      },
+      {
+        "heading": "Nahverkehr",
+        "text": "Im Nahverkehr (Regionalzüge, S-Bahn) gilt der BahnCard-Rabatt ebenfalls auf Einzelfahrkarten. Für Zeitkarten (Monats- und Jahreskarten) gibt es keine BahnCard-Ermäßigung."
+      },
+      {
+        "heading": "Probe BahnCard",
+        "text": "Sie sind unsicher? Testen Sie die Probe BahnCard 25 für nur 19,90 Euro für 3 Monate. Sie können jederzeit auf die reguläre BahnCard umsteigen. Die Probe BahnCard verlängert sich nicht automatisch."
+      }
+    ]
+  },
+  "images": [
+    {
+      "id": "IMG1",
+      "type": "scene",
+      "prompt": "Cute cartoon illustration of a Deutsche Bahn information counter with brochures about BahnCard, a train in the background, discount signs. Fuxie cartoon style, flat illustration, warm pastel colors, no text.",
+      "filename": "B1-T5-002_scene.png",
+      "placement": "header",
+      "alt_text": "BahnCard Information",
+      "dimensions": "768x512"
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q1",
+      "teil": 5,
+      "type": "multiple_choice",
+      "stem": "Welche Schlussfolgerung über viel Rabatt gibt die BahnCard 50 auf Sparpreise legt der Text nahe?",
+      "options": {
+        "a": "50 % Rabatt.",
+        "b": "25 % Rabatt.",
+        "c": "Keinen zusätzlichen Rabatt."
+      },
+      "answer": "c",
+      "points": 1,
+      "explanation": {
+        "de": "Die BahnCard 50 bietet keinen zusätzlichen Rabatt auf Sparpreise.",
+        "key_evidence": "keinen zusätzlichen Rabatt auf Sparpreise",
+        "key_vocabulary": [
+          {
+            "word": "Sparpreis",
+            "type": "Nomen",
+            "meaning": "saver fare"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q2",
+      "teil": 5,
+      "type": "multiple_choice",
+      "stem": "Wer bekommt ermäßigte BahnCard-Preise?",
+      "options": {
+        "a": "Studenten und Rentner.",
+        "b": "Personen unter 27 und über 65.",
+        "c": "Kinder unter 14."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Für Personen unter 27 und über 65 gibt es ermäßigte Preise.",
+        "key_evidence": "unter 27 und über 65",
+        "key_vocabulary": [
+          {
+            "word": "ermäßigt",
+            "type": "Partizip II",
+            "meaning": "discounted / reduced"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q3",
+      "teil": 5,
+      "type": "multiple_choice",
+      "stem": "Wann muss man spätestens kündigen?",
+      "options": {
+        "a": "4 Wochen vor Ablauf.",
+        "b": "6 Wochen vor Ablauf.",
+        "c": "8 Wochen vor Ablauf."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Man muss mindestens 6 Wochen vor Ablauf kündigen.",
+        "key_evidence": "mindestens 6 Wochen vor Ablauf kündigen",
+        "key_vocabulary": [
+          {
+            "word": "Kündigung",
+            "type": "Nomen",
+            "meaning": "cancellation"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q4",
+      "teil": 5,
+      "type": "multiple_choice",
+      "stem": "Wie viel kostet die Probe BahnCard 25?",
+      "options": {
+        "a": "9,90 Euro für 3 Monate.",
+        "b": "19,90 Euro für 3 Monate.",
+        "c": "29,90 Euro für 3 Monate."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Die Probe BahnCard 25 kostet 19,90 Euro für 3 Monate.",
+        "key_evidence": "19,90 Euro für 3 Monate",
+        "key_vocabulary": [
+          {
+            "word": "Probe",
+            "type": "Nomen",
+            "meaning": "trial"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q5",
+      "teil": 5,
+      "type": "multiple_choice",
+      "stem": "Warum wird Gilt der BahnCard-Rabatt für Monatskarten im im Text erwähnt?",
+      "options": {
+        "a": "Ja, auf alle Nahverkehrstickets.",
+        "b": "Nein, nicht für Zeitkarten.",
+        "c": "Nur für die 1. Klasse."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Für Zeitkarten gibt es keine BahnCard-Ermäßigung.",
+        "key_evidence": "Für Zeitkarten gibt es keine BahnCard-Ermäßigung",
+        "key_vocabulary": [
+          {
+            "word": "Zeitkarte",
+            "type": "Nomen",
+            "meaning": "season ticket"
+          }
+        ],
+        "reasoning": "[Inferential] "
+      }
+    }
+  ],
+  "scoring": {
+    "total_points": 5,
+    "pass_threshold": 3,
+    "grading": [
+      {
+        "range": [
+          5,
+          5
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          4,
+          4
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          3,
+          3
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          1,
+          2
+        ],
+        "label": "Noch üben!",
+        "emoji": "📝"
+      },
+      {
+        "range": [
+          0,
+          0
+        ],
+        "label": "Mehr Übung nötig",
+        "emoji": "💪"
+      }
+    ]
+  },
+  "qa": {
+    "vocab_in_b1_list": true,
+    "grammar_b1_appropriate": true,
+    "word_count_in_range": true,
+    "all_answers_verifiable": true,
+    "image_count": 1,
+    "passed": true
+  }
+}

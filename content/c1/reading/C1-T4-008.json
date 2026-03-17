@@ -1,0 +1,196 @@
+{
+  "id": "C1-T4-008",
+  "level": "C1",
+  "teil": 4,
+  "teil_name": "Meinungen zuordnen",
+  "topic": "Recht & Justiz",
+  "topic_id": "008",
+  "metadata": {
+    "word_count": 109,
+    "target_grammar": [
+      "Nominalisierung",
+      "Partizipialkonstruktionen",
+      "Konjunktiv I/II",
+      "Passiversatzformen"
+    ],
+    "target_vocabulary": [],
+    "generated_at": "2026-03-11T23:18:54.731267",
+    "version": 1
+  },
+  "opinion_texts": {
+    "question": "Braucht der digitale Raum eigene Gesetze?",
+    "texts": [
+      {
+        "name": "Juristin Prof. Dr. Sandra Mohr",
+        "text": "Das bestehende Recht ist grundsätzlich auch auf digitale Sachverhalte anwendbar. Was offline illegal ist, ist auch online illegal. Es bedarf keiner grundlegend neuen Gesetze, sondern einer konsequenteren Durchsetzung bestehender Normen.",
+        "label": "A"
+      },
+      {
+        "name": "IT-Unternehmer Florian Kühn",
+        "text": "Überregulierung erstickt Innovation. Die Technologiebranche entwickelt sich so schnell, dass Gesetze bei ihrem Inkrafttreten bereits veraltet sind. Statt starrer Regulierung brauchen wir flexible Governance-Modelle und Selbstverpflichtungen der Industrie.",
+        "label": "B"
+      },
+      {
+        "name": "Datenschützerin Dr. Carola Stein",
+        "text": "Die DSGVO hat gezeigt, dass spezifische digitale Regulierung funktioniert und weltweit als Vorbild dient. Gerade in Bereichen wie KI, Gesichtserkennung und algorithmischer Entscheidungsfindung brauchen wir dringend neue Gesetze.",
+        "label": "C"
+      },
+      {
+        "name": "Politologe Dr. Andreas Berger",
+        "text": "Die größte Herausforderung ist die internationale Dimension. Digitale Konzerne operieren global, aber Gesetze gelten national. Ohne internationale Kooperation laufen nationale Regelungen ins Leere.",
+        "label": "D"
+      }
+    ]
+  },
+  "images": [
+    {
+      "id": "IMG1",
+      "type": "scene",
+      "prompt": "Cute cartoon illustration of experts discussing Recht & Justiz. Fuxie cartoon style, flat illustration, warm pastel colors, no text.",
+      "filename": "C1-T4-008_scene.png",
+      "placement": "header",
+      "alt_text": "Braucht der digitale Raum eigene Gesetze?",
+      "dimensions": "768x512"
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q1",
+      "teil": 4,
+      "type": "matching",
+      "stem": "Die grundlegende Prämisse, dass bestehende Gesetze sind grundsätzlich auch online anwendbar, liegt der Position zugrunde:",
+      "answer": "A",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Text/Beitrag A",
+        "reasoning": "[Inferential] Die Aussage 'Bestehende Gesetze sind grundsätzlich auch online ...' entspricht der Position von A."
+      }
+    },
+    {
+      "id": "Q2",
+      "teil": 4,
+      "type": "matching",
+      "stem": "Die These, dass überregulierung hemmt Innovation in der Technologiebranche, wird durch folgende Argumentation gestützt:",
+      "answer": "B",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Text/Beitrag B",
+        "reasoning": "[Inferential] Die Aussage 'Überregulierung hemmt Innovation in der Technologi...' entspricht der Position von B."
+      }
+    },
+    {
+      "id": "Q3",
+      "teil": 4,
+      "type": "matching",
+      "stem": "Für KI und Gesichtserkennung brauchen wir neue Gesetze.",
+      "answer": "C",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Text/Beitrag C",
+        "reasoning": "Die Aussage 'Für KI und Gesichtserkennung brauchen wir neue Ges...' entspricht der Position von C."
+      }
+    },
+    {
+      "id": "Q4",
+      "teil": 4,
+      "type": "matching",
+      "stem": "Nationale Regelungen allein reichen wegen der Globalität nicht aus.",
+      "answer": "D",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Text/Beitrag D",
+        "reasoning": "Die Aussage 'Nationale Regelungen allein reichen wegen der Glob...' entspricht der Position von D."
+      }
+    },
+    {
+      "id": "Q5",
+      "teil": 4,
+      "type": "matching",
+      "stem": "Die grundlegende Prämisse, dass Die DSGVO beweist, dass digitale Regulierung funktioniert, liegt der Position zugrunde:",
+      "answer": "C",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Text/Beitrag C",
+        "reasoning": "[Inferential] Die Aussage 'Die DSGVO beweist, dass digitale Regulierung funkt...' entspricht der Position von C."
+      }
+    },
+    {
+      "id": "Q6",
+      "teil": 4,
+      "type": "matching",
+      "stem": "Die These, dass flexible Governance-Modelle sind besser als starre Gesetze, wird durch folgende Argumentation gestützt:",
+      "answer": "B",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Text/Beitrag B",
+        "reasoning": "[Inferential] Die Aussage 'Flexible Governance-Modelle sind besser als starre...' entspricht der Position von B."
+      }
+    },
+    {
+      "id": "Q7",
+      "teil": 4,
+      "type": "matching",
+      "stem": "Die grundlegende Prämisse, dass internationale Kooperation ist die größte regulatorische Herausforderung, liegt der Position zugrunde:",
+      "answer": "D",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Text/Beitrag D",
+        "reasoning": "[Inferential] Die Aussage 'Internationale Kooperation ist die größte regulato...' entspricht der Position von D."
+      }
+    }
+  ],
+  "scoring": {
+    "total_points": 7,
+    "pass_threshold": 5,
+    "grading": [
+      {
+        "range": [
+          6,
+          7
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          4,
+          5
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          3,
+          3
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          1,
+          2
+        ],
+        "label": "Noch üben!",
+        "emoji": "📝"
+      },
+      {
+        "range": [
+          0,
+          0
+        ],
+        "label": "Mehr Übung nötig",
+        "emoji": "💪"
+      }
+    ]
+  },
+  "qa": {
+    "vocab_in_c1_list": true,
+    "grammar_c1_appropriate": true,
+    "word_count_in_range": true,
+    "all_answers_verifiable": true,
+    "image_count": 1,
+    "passed": true
+  }
+}

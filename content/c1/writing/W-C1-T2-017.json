@@ -1,0 +1,64 @@
+{
+  "id": "W-C1-T2-017",
+  "cefrLevel": "C1",
+  "teil": 2,
+  "teilName": "Textumwandlung",
+  "textType": "Formeller Brief",
+  "register": "formell",
+  "topic": "Stadtplanung",
+  "instruction": "Sie haben einen Vortrag zum Thema 'Nachhaltige Stadtentwicklung und modernes Wohnen' gehört. Schreiben Sie nun einen formellen Brief an das Stadtplanungsamt Ihrer Stadt, in dem Sie die im Vortrag genannten Konzepte aufgreifen und deren Umsetzung für ein geplantes Neubauprojekt in Ihrem Viertel fordern. Berücksichtigen Sie alle unten genannten inhaltlichen Punkte.",
+  "instructionVi": "Bạn đã nghe một bài thuyết trình về chủ đề 'Phát triển đô thị bền vững và nhà ở hiện đại'. Hãy viết một bức thư trang trọng gửi Phòng Quy hoạch Đô thị, đề xuất áp dụng các khái niệm từ bài thuyết trình vào dự án xây dựng mới tại khu phố của bạn.",
+  "situation": "Ihre Stadtverwaltung plant den Bau einer neuen Wohnsiedlung auf einer ehemaligen Industriefläche in Ihrem Bezirk. Da Sie befürchten, dass rein ökonomische Interessen vor ökologischer und sozialer Nachhaltigkeit stehen könnten, wenden Sie sich mit fundierten Vorschlägen an die zuständigen Planer.",
+  "contentPoints": [
+    "Fassen Sie die Kernprobleme der aktuellen Stadtplanung (Versiegelung, soziale Isolation) kurz zusammen.",
+    "Erläutern Sie die Vorteile des 'Schwammstadt-Konzepts' für das geplante Bauvorhaben.",
+    "Machen Sie Vorschläge zur Förderung der sozialen Interaktion innerhalb des neuen Quartiers.",
+    "Begründen Sie, warum das Modell der '15-Minuten-Stadt' für die zukünftigen Bewohner unverzichtbar ist."
+  ],
+  "sourceText": "Guten Morgen zusammen! Schön, dass Sie alle da sind. Heute möchte ich über ein Thema sprechen, das uns alle angeht: Wie wollen wir in Zukunft in unseren Städten leben? Momentan sieht es ja eher so aus, dass wir viel zu viel Beton haben. Alles ist versiegelt. Wenn es regnet, gibt es Überschwemmungen, und im Sommer ist es in den Straßenzügen unerträglich heiß. Wir müssen das Konzept der 'Schwammstadt' endlich ernst nehmen. Das bedeutet mehr Grünflächen und spezielle Böden, die Wasser wie ein Schwamm aufsaugen können, statt es nur in die Kanalisation zu leiten. Aber es geht nicht nur ums Klima. Schauen Sie sich mal die neuen Wohnblöcke an – da kennt doch keiner mehr seinen Nachbarn. Wir brauchen wieder Orte der echten Begegnung, wie Gemeinschaftsgärten auf den Dächern oder Co-Working-Spaces direkt im Wohnviertel. Das Konzept der '15-Minuten-Stadt' ist hier das Stichwort. Alles Wichtige – Arbeit, Einkauf, Arzt – muss zu Fuß oder mit dem Rad in einer Viertelstunde erreichbar sein. Das spart massiv CO2 und erhöht die Lebensqualität enorm. Wir müssen weg von der reinen Schlafstadt hin zu lebendigen Quartieren. Wenn wir jetzt nicht umsteuern, verlieren wir den Anschluss an eine lebenswerte Zukunft.",
+  "sourceTextType": "Muendlicher Vortrag",
+  "minWords": 200,
+  "maxWords": 300,
+  "timeMinutes": 40,
+  "rubric": {
+    "criteria": [
+      {
+        "id": "inhalt",
+        "name": "Inhalt",
+        "nameVi": "Nội dung",
+        "maxScore": 5,
+        "weight": 20
+      },
+      {
+        "id": "angemessenheit",
+        "name": "Kommunikative Angemessenheit",
+        "nameVi": "Phù hợp giao tiếp",
+        "maxScore": 5,
+        "weight": 20
+      },
+      {
+        "id": "korrektheit",
+        "name": "Korrektheit",
+        "nameVi": "Chính xác ngữ pháp & chính tả",
+        "maxScore": 5,
+        "weight": 20
+      },
+      {
+        "id": "spektrum",
+        "name": "Wortschatz & Strukturen",
+        "nameVi": "Đa dạng từ vựng & cấu trúc",
+        "maxScore": 5,
+        "weight": 20
+      },
+      {
+        "id": "kohaerenz",
+        "name": "Kohaerenz & Kohaesion",
+        "nameVi": "Mạch lạc & liên kết",
+        "maxScore": 5,
+        "weight": 20
+      }
+    ],
+    "maxScore": 25
+  },
+  "maxScore": 25
+}

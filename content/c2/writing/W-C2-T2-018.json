@@ -1,0 +1,64 @@
+{
+  "id": "W-C2-T2-018",
+  "cefrLevel": "C2",
+  "teil": 2,
+  "teilName": "Textumwandlung",
+  "textType": "Zeitungskritik",
+  "register": "sachlich",
+  "topic": "Naturschutz",
+  "instruction": "Verfassen Sie auf der Grundlage des vorliegenden Berichts über das Projekt 'Grüne Lunge 2030' eine fundierte Zeitungskritik für das Feuilleton einer renommierten überregionalen Tageszeitung. Analysieren und bewerten Sie die beschriebenen Maßnahmen kritisch unter Berücksichtigung ökologischer und ökonomischer Aspekte.",
+  "instructionVi": "Dựa trên báo cáo về dự án 'Lá phổi xanh 2030', hãy viết một bài phê bình báo chí chuyên sâu cho mục văn hóa của một tờ nhật báo uy tín toàn quốc. Hãy phân tích và đánh giá các biện pháp được mô tả một cách có phê phán, có tính đến các khía cạnh sinh thái và kinh tế.",
+  "situation": "Sie sind Redakteur für Umweltfragen bei einer großen Tageszeitung. Ihnen liegt ein Zwischenbericht eines groß angelegten Aufforstungsprojekts vor, das von der Industrie finanziert wird. Ihre Aufgabe ist es, die Öffentlichkeit über die Ambivalenz dieses Projekts aufzuklären und die Diskrepanz zwischen PR-Versprechen und ökologischer Realität aufzuzeigen.",
+  "contentPoints": [
+    "Zusammenfassung der wesentlichen Ziele und der Finanzierungsstruktur des Projekts 'Grüne Lunge 2030'.",
+    "Kritische Auseinandersetzung mit der Baumartenwahl und der damit verbundenen Problematik der Monokulturen.",
+    "Bewertung des Projekts im Spannungsfeld zwischen ökonomischer Effizienz (Greenwashing-Verdacht) und echtem ökologischem Mehrwert.",
+    "Formulierung von Anforderungen an zukunftsfähige Naturschutzprojekte dieser Größenordnung."
+  ],
+  "sourceText": "Das ambitionierte Projekt 'Grüne Lunge 2030' hat sich zum Ziel gesetzt, ehemalige Industrieflächen im Ruhrgebiet großflächig zu rekultivieren und in Waldlandschaften umzuwandeln. Der vorliegende Zwischenbericht hebt hervor, dass bereits über 500.000 Setzlinge gepflanzt wurden. Dabei setzt die Projektleitung primär auf schnell wachsende Nadelholzarten wie Fichten und Kiefern, um eine rasche Biomassebildung und somit eine effektive CO2-Absorbierung zu gewährleisten. Diese Flächen sollen zudem als Naherholungsgebiete für die lokale Bevölkerung dienen. Finanziert wird das Vorhaben maßgeblich durch ein Konsortium international agierender Energiekonzerne, die das Projekt im Rahmen ihres 'Green Branding' nutzen und CO2-Kompensationszertifikate erwerben.\n\nAllerdings mehren sich die Stimmen aus der Wissenschaft, die vor der Entstehung von Monokulturen warnen. Diese seien extrem anfällig für Dürreperioden und Schädlingsbefall, insbesondere durch den Borkenkäfer, was die langfristige Stabilität des Ökosystems gefährdet. Zudem bleibe der Beitrag zur Biodiversität minimal, da heimische Laubbaumarten, die eine höhere Resilienz aufweisen und Lebensraum für bedrohte Tierarten bieten würden, aufgrund ihres langsamen Wachstums kaum berücksichtigt wurden. Während das Management die Kosteneffizienz und die schnelle Visualisierung von Erfolgen betont, fordern Naturschutzverbände eine grundlegende Neuausrichtung hin zu naturnahen Mischwäldern, auch wenn dies zeitaufwendiger und teurer wäre. Es stellt sich die Frage, ob hier kurzfristiger Imagegewinn über nachhaltigen Naturschutz gestellt wird.",
+  "sourceTextType": "Zwischenbericht / Pressemitteilung",
+  "minWords": 250,
+  "maxWords": null,
+  "timeMinutes": 45,
+  "rubric": {
+    "criteria": [
+      {
+        "id": "inhalt",
+        "name": "Inhalt",
+        "nameVi": "Nội dung",
+        "maxScore": 5,
+        "weight": 20
+      },
+      {
+        "id": "angemessenheit",
+        "name": "Kommunikative Angemessenheit",
+        "nameVi": "Phù hợp giao tiếp",
+        "maxScore": 5,
+        "weight": 20
+      },
+      {
+        "id": "korrektheit",
+        "name": "Korrektheit",
+        "nameVi": "Chính xác ngữ pháp & chính tả",
+        "maxScore": 5,
+        "weight": 20
+      },
+      {
+        "id": "spektrum",
+        "name": "Wortschatz & Strukturen",
+        "nameVi": "Đa dạng từ vựng & cấu trúc",
+        "maxScore": 5,
+        "weight": 20
+      },
+      {
+        "id": "kohaerenz",
+        "name": "Kohaerenz & Kohaesion",
+        "nameVi": "Mạch lạc & liên kết",
+        "maxScore": 5,
+        "weight": 20
+      }
+    ],
+    "maxScore": 25
+  },
+  "maxScore": 25
+}

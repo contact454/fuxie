@@ -1,0 +1,92 @@
+{
+  "id": "W-C1-T1-002",
+  "cefrLevel": "C1",
+  "teil": 1,
+  "teilName": "Argumentativer Text",
+  "textType": "Argumentation",
+  "register": "sachlich",
+  "topic": "Bildung & Chancen",
+  "instruction": "Schreiben Sie einen argumentativen Text zum Thema 'Bildung & Chancen' (mind. 250 Woerter). Beschreiben Sie die Grafik.",
+  "instructionVi": "Viet bai lap luan >=250 tu: Bildung & Chancen.",
+  "situation": "Schreiben Sie zu dem Thema 'Bildung & Chancen'. Die Grafik zeigt: Bildungsabschluesse nach Herkunft (Tortendiagramm).",
+  "contentPoints": [
+    "Grafik beschreiben",
+    "Ursachen analysieren",
+    "Situation im Heimatland vergleichen",
+    "Konsequenzen diskutieren",
+    "Eigene Meinung und Loesungsvorschlag"
+  ],
+  "minWords": 250,
+  "maxWords": 400,
+  "timeMinutes": 50,
+  "rubric": {
+    "criteria": [
+      {
+        "id": "inhalt",
+        "name": "Inhalt",
+        "nameVi": "Noi dung",
+        "maxScore": 5,
+        "weight": 20
+      },
+      {
+        "id": "angemessenheit",
+        "name": "Kommunikative Angemessenheit",
+        "nameVi": "Phu hop giao tiep",
+        "maxScore": 5,
+        "weight": 20
+      },
+      {
+        "id": "korrektheit",
+        "name": "Korrektheit",
+        "nameVi": "Chinh xac ngu phap",
+        "maxScore": 5,
+        "weight": 20
+      },
+      {
+        "id": "spektrum",
+        "name": "Wortschatz & Strukturen",
+        "nameVi": "Da dang tu vung",
+        "maxScore": 5,
+        "weight": 20
+      },
+      {
+        "id": "kohaerenz",
+        "name": "Kohaerenz & Kohaesion",
+        "nameVi": "Mach lac & lien ket",
+        "maxScore": 5,
+        "weight": 20
+      }
+    ],
+    "maxScore": 25
+  },
+  "maxScore": 25,
+  "grafikDesc": "Ein Balkendiagramm mit dem Titel 'Akademisierungsquote und soziale Herkunft in Deutschland (2022)'. Es zeigt den prozentualen Anteil der Kinder, die ein Studium aufnehmen, differenziert nach dem höchsten Bildungsabschluss der Eltern.",
+  "sourceText": "Thema: Bildungserfolg und soziale Herkunft. In der aktuellen bildungspolitischen Debatte wird verstärkt über die sogenannte 'Bildungsschere' diskutiert. Während die einen die individuelle Leistungsbereitschaft betonen, sehen andere strukturelle Barrieren als Hauptursache für ungleiche Chancen. Nehmen Sie Stellung zu dieser Problematik. \n\nZwei Expertenmeinungen dazu: \n\nProf. Dr. h.c. Matthias Vogel, Bildungssoziologe an der Universität Mannheim: 'Das deutsche Bildungssystem bietet durch seine zunehmende Durchlässigkeit theoretisch jedem Individuum die Chance auf sozialen Aufstieg. Die statistischen Diskrepanzen bei der Studierquote resultieren primär aus unterschiedlichen familiären Prioritätensetzungen und individuellen Präferenzen, nicht aus einer gezielten strukturellen Exklusion.' \n\nDr. Elena Martinez, Leiterin des Instituts für Bildungsökonomie Berlin: 'Wir beobachten eine persistente Bildungsbenachteiligung, die tief in institutionellen Hürden verwurzelt ist. Solange der Bildungserfolg massiv vom kulturellen Kapital des Elternhauses abhängt, bleibt das Versprechen der Chancengleichheit eine bloße Illusion, die dringend staatliche Interventionen erfordert.'\n\nIhre Aufgaben:\n1. Beschreiben Sie die vorliegende Grafik detailliert.\n2. Analysieren Sie die Ursachen für die Korrelation zwischen sozialer Herkunft und Bildungserfolg.\n3. Vergleichen Sie die Situation in Deutschland mit der Situation in Ihrem Heimatland.\n4. Diskutieren Sie die langfristigen gesellschaftlichen Konsequenzen einer ungleichen Chancenverteilung.\n5. Formulieren Sie Ihre eigene Meinung und unterbreiten Sie konkrete Lösungsansätze für mehr Bildungsgerechtigkeit.",
+  "sourceTextType": "Argumentative Essay Stimulus / Schreibaufgabe C1",
+  "stimulusSender": "Zentraler Prüfungsausschuss für Hochschulzugangsprüfungen",
+  "grafikData": [
+    {
+      "Kategorie": "Eltern ohne Abitur",
+      "Wert": "21%"
+    },
+    {
+      "Kategorie": "Eltern mit Abitur (kein Hochschulabschluss)",
+      "Wert": "45%"
+    },
+    {
+      "Kategorie": "Mindestens ein Elternteil mit Bachelor-Abschluss",
+      "Wert": "68%"
+    },
+    {
+      "Kategorie": "Mindestens ein Elternteil mit Master/Diplom-Abschluss",
+      "Wert": "79%"
+    },
+    {
+      "Kategorie": "Mindestens ein Elternteil mit Promotion",
+      "Wert": "86%"
+    },
+    {
+      "Quelle": "Deutsches Zentrum für Hochschul- und Wissenschaftsforschung (DZHW), Datenstand 2023"
+    }
+  ]
+}

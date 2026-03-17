@@ -1,0 +1,239 @@
+{
+  "id": "A1-T1-005",
+  "level": "A1",
+  "teil": 1,
+  "teil_name": "Kurze Texte lesen",
+  "topic": "Wohnung suchen",
+  "topic_id": "005",
+  "metadata": {
+    "word_count_text_a": 49,
+    "word_count_text_b": 46,
+    "target_grammar": [
+      "Präsens",
+      "Akkusativ",
+      "Modalverb möchten"
+    ],
+    "target_vocabulary": [
+      "Wohnung",
+      "Zimmer",
+      "Miete",
+      "Küche",
+      "Bad",
+      "Balkon",
+      "Garten",
+      "Möbel",
+      "Quadratmeter",
+      "warm"
+    ],
+    "generated_at": "2026-03-09T02:15:00+07:00",
+    "version": 1
+  },
+  "texts": [
+    {
+      "id": "TextA",
+      "type": "email",
+      "sender": "Peter",
+      "receiver": "Frau Bauer",
+      "content": "Sehr geehrte Frau Bauer,\nich suche eine 2-Zimmer-Wohnung. Ich habe Ihre Anzeige gelesen. Die Wohnung in der Mozartstraße ist sehr interessant. Ich möchte die Wohnung gerne am Dienstag um 14 Uhr sehen. Ist das möglich? Ich komme allein und habe keine Haustiere.\nMit freundlichen Grüßen,\nPeter Schmidt"
+    },
+    {
+      "id": "TextB",
+      "type": "sms",
+      "sender": "Frau Bauer",
+      "receiver": "Peter",
+      "content": "Hallo Herr Schmidt, Dienstag um 14 Uhr ist gut. Die Wohnung hat 55 Quadratmeter und einen schönen Balkon. Die Miete ist 450 Euro warm. Die Küche ist neu und modern. Das Bad hat eine Badewanne. Bitte klingeln Sie bei Bauer im dritten Stock. Bis Dienstag dann!"
+    }
+  ],
+  "images": [
+    {
+      "id": "IMG1",
+      "type": "scene",
+      "prompt": "Cute cartoon illustration of a cozy German apartment interior with a small balcony, kitchen, and living room visible through an open door. Modern, tidy, with warm lighting. Fuxie cartoon style, flat illustration, warm pastel colors, no text.",
+      "filename": "A1-T1-005_scene.png",
+      "placement": "header",
+      "alt_text": "Gemütliche Wohnung mit Balkon",
+      "dimensions": "768x512"
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q1",
+      "teil": 1,
+      "linked_text": "TextA",
+      "type": "richtig_falsch",
+      "statement": "Peter sucht eine 3-Zimmer-Wohnung.",
+      "answer": "falsch",
+      "points": 1,
+      "explanation": {
+        "de": "Im Text steht: 'ich suche eine 2-Zimmer-Wohnung'. Peter sucht eine 2-Zimmer-Wohnung, nicht 3 Zimmer.",
+        "key_evidence": "ich suche eine 2-Zimmer-Wohnung",
+        "key_vocabulary": [
+          {
+            "word": "Zimmer",
+            "type": "Nomen",
+            "meaning": "room"
+          },
+          {
+            "word": "suchen",
+            "type": "Verb",
+            "meaning": "to search"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q2",
+      "teil": 1,
+      "linked_text": "TextA",
+      "type": "richtig_falsch",
+      "statement": "Peter möchte die Wohnung am Dienstag sehen.",
+      "answer": "richtig",
+      "points": 1,
+      "explanation": {
+        "de": "Im Text steht: 'Ich möchte die Wohnung gerne am Dienstag um 14 Uhr sehen.'",
+        "key_evidence": "am Dienstag um 14 Uhr sehen",
+        "key_vocabulary": [
+          {
+            "word": "Dienstag",
+            "type": "Nomen",
+            "meaning": "Tuesday"
+          },
+          {
+            "word": "sehen",
+            "type": "Verb",
+            "meaning": "to see"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q3",
+      "teil": 1,
+      "linked_text": "TextA",
+      "type": "richtig_falsch",
+      "statement": "Peter hat einen Hund.",
+      "answer": "falsch",
+      "points": 1,
+      "explanation": {
+        "de": "Im Text steht: 'Ich komme allein und habe keine Haustiere.' Peter hat keine Haustiere, also auch keinen Hund.",
+        "key_evidence": "habe keine Haustiere",
+        "key_vocabulary": [
+          {
+            "word": "Haustier",
+            "type": "Nomen",
+            "meaning": "pet"
+          },
+          {
+            "word": "keine",
+            "type": "Pronomen",
+            "meaning": "no / none"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q4",
+      "teil": 1,
+      "linked_text": "TextB",
+      "type": "richtig_falsch",
+      "statement": "Die Wohnung hat einen Balkon.",
+      "answer": "richtig",
+      "points": 1,
+      "explanation": {
+        "de": "Im Text steht: 'Die Wohnung hat 55 Quadratmeter und einen Balkon.'",
+        "key_evidence": "und einen Balkon",
+        "key_vocabulary": [
+          {
+            "word": "Balkon",
+            "type": "Nomen",
+            "meaning": "balcony"
+          },
+          {
+            "word": "Quadratmeter",
+            "type": "Nomen",
+            "meaning": "square meter"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q5",
+      "teil": 1,
+      "linked_text": "TextB",
+      "type": "richtig_falsch",
+      "statement": "Die Wohnung ist im zweiten Stock.",
+      "answer": "falsch",
+      "points": 1,
+      "explanation": {
+        "de": "Im Text steht: 'Bitte klingeln Sie bei Bauer, dritter Stock.' Die Wohnung ist im dritten Stock, nicht im zweiten.",
+        "key_evidence": "dritter Stock",
+        "key_vocabulary": [
+          {
+            "word": "Stock",
+            "type": "Nomen",
+            "meaning": "floor"
+          },
+          {
+            "word": "dritter",
+            "type": "Adjektiv",
+            "meaning": "third"
+          }
+        ]
+      }
+    }
+  ],
+  "scoring": {
+    "total_points": 5,
+    "pass_threshold": 3,
+    "grading": [
+      {
+        "range": [
+          5,
+          5
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          4,
+          4
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          3,
+          3
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          1,
+          2
+        ],
+        "label": "Noch üben!",
+        "emoji": "📝"
+      },
+      {
+        "range": [
+          0,
+          0
+        ],
+        "label": "Mehr Übung nötig",
+        "emoji": "💪"
+      }
+    ]
+  },
+  "qa": {
+    "vocab_in_a1_list": true,
+    "grammar_a1_only": true,
+    "word_count_in_range": true,
+    "all_answers_verifiable": true,
+    "image_count": 1,
+    "passed": false
+  }
+}

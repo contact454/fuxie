@@ -1,0 +1,196 @@
+{
+  "id": "C1-T4-007",
+  "level": "C1",
+  "teil": 4,
+  "teil_name": "Meinungen zuordnen",
+  "topic": "Medien & Kommunikation",
+  "topic_id": "007",
+  "metadata": {
+    "word_count": 123,
+    "target_grammar": [
+      "Nominalisierung",
+      "Partizipialkonstruktionen",
+      "Konjunktiv I/II",
+      "Passiversatzformen"
+    ],
+    "target_vocabulary": [],
+    "generated_at": "2026-03-11T23:18:54.731267",
+    "version": 1
+  },
+  "opinion_texts": {
+    "question": "Sollte der Staat den Qualitätsjournalismus subventionieren?",
+    "texts": [
+      {
+        "name": "Chefredakteur Dr. Martin Beck",
+        "text": "Ohne staatliche Unterstützung werden viele Redaktionen die nächsten fünf Jahre nicht überleben. Qualitätsjournalismus ist ein öffentliches Gut, das wie Schulen und Krankenhäuser nicht allein dem Markt überlassen werden darf.",
+        "label": "A"
+      },
+      {
+        "name": "Medienpolitikerin Sarah Winkler",
+        "text": "Staatliche Medienförderung birgt die Gefahr politischer Einflussnahme. Wer die Medien finanziert, kann auch Einfluss auf die Berichterstattung nehmen. Die Unabhängigkeit der Presse ist ein zu hohes Gut, um sie aufs Spiel zu setzen.",
+        "label": "B"
+      },
+      {
+        "name": "Medienökonom Prof. Dr. Klaus Franke",
+        "text": "Statt direkter Subventionen sollte der Staat die Rahmenbedingungen verbessern: einen reduzierten Mehrwertsteuersatz für journalistische Produkte, Förderung der digitalen Infrastruktur und Stärkung der Medienkompetenz in Schulen.",
+        "label": "C"
+      },
+      {
+        "name": "Bloggerin und Bürgerjournalistin Lisa Maier",
+        "text": "Die großen Verlage haben über Jahrzehnte hohe Gewinne eingefahren und die Digitalisierung verschlafen. Warum sollte der Steuerzahler nun für die Versäumnisse der Medienkonzerne aufkommen? Bürgerjournalismus und unabhängige Online-Medien zeigen, dass Qualität auch ohne Großverlage möglich ist.",
+        "label": "D"
+      }
+    ]
+  },
+  "images": [
+    {
+      "id": "IMG1",
+      "type": "scene",
+      "prompt": "Cute cartoon illustration of experts discussing Medien & Kommunikation. Fuxie cartoon style, flat illustration, warm pastel colors, no text.",
+      "filename": "C1-T4-007_scene.png",
+      "placement": "header",
+      "alt_text": "Sollte der Staat den Qualitätsjournalismus subvent",
+      "dimensions": "768x512"
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q1",
+      "teil": 4,
+      "type": "matching",
+      "stem": "Qualitätsjournalismus ist ein öffentliches Gut wie Bildung und Gesundheit.",
+      "answer": "A",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Text/Beitrag A",
+        "reasoning": "Die Aussage 'Qualitätsjournalismus ist ein öffentliches Gut wie...' entspricht der Position von A."
+      }
+    },
+    {
+      "id": "Q2",
+      "teil": 4,
+      "type": "matching",
+      "stem": "Die grundlegende Prämisse, dass staatliche Medienförderung gefährdet die Pressefreiheit, liegt der Position zugrunde:",
+      "answer": "B",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Text/Beitrag B",
+        "reasoning": "[Inferential] Die Aussage 'Staatliche Medienförderung gefährdet die Pressefre...' entspricht der Position von B."
+      }
+    },
+    {
+      "id": "Q3",
+      "teil": 4,
+      "type": "matching",
+      "stem": "Die grundlegende Prämisse, dass Der Staat sollte Rahmenbedingungen verbessern statt direkt zu subventionieren, liegt der Position zugrunde:",
+      "answer": "C",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Text/Beitrag C",
+        "reasoning": "[Inferential] Die Aussage 'Der Staat sollte Rahmenbedingungen verbessern stat...' entspricht der Position von C."
+      }
+    },
+    {
+      "id": "Q4",
+      "teil": 4,
+      "type": "matching",
+      "stem": "Die These, dass Die Medienkonzerne tragen selbst Schuld an ihrer Krise, wird durch folgende Argumentation gestützt:",
+      "answer": "D",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Text/Beitrag D",
+        "reasoning": "[Inferential] Die Aussage 'Die Medienkonzerne tragen selbst Schuld an ihrer K...' entspricht der Position von D."
+      }
+    },
+    {
+      "id": "Q5",
+      "teil": 4,
+      "type": "matching",
+      "stem": "Die These, dass viele Redaktionen werden ohne Unterstützung nicht überleben, wird durch folgende Argumentation gestützt:",
+      "answer": "A",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Text/Beitrag A",
+        "reasoning": "[Inferential] Die Aussage 'Viele Redaktionen werden ohne Unterstützung nicht ...' entspricht der Position von A."
+      }
+    },
+    {
+      "id": "Q6",
+      "teil": 4,
+      "type": "matching",
+      "stem": "Ein reduzierter Mehrwertsteuersatz wäre eine indirekte Förderung.",
+      "answer": "C",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Text/Beitrag C",
+        "reasoning": "Die Aussage 'Ein reduzierter Mehrwertsteuersatz wäre eine indir...' entspricht der Position von C."
+      }
+    },
+    {
+      "id": "Q7",
+      "teil": 4,
+      "type": "matching",
+      "stem": "Die grundlegende Prämisse, dass bürgerjournalismus zeigt, dass Qualität auch außerhalb großer Verlage möglich ist, liegt der Position zugrunde:",
+      "answer": "D",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Text/Beitrag D",
+        "reasoning": "[Inferential] Die Aussage 'Bürgerjournalismus zeigt, dass Qualität auch außer...' entspricht der Position von D."
+      }
+    }
+  ],
+  "scoring": {
+    "total_points": 7,
+    "pass_threshold": 5,
+    "grading": [
+      {
+        "range": [
+          6,
+          7
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          4,
+          5
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          3,
+          3
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          1,
+          2
+        ],
+        "label": "Noch üben!",
+        "emoji": "📝"
+      },
+      {
+        "range": [
+          0,
+          0
+        ],
+        "label": "Mehr Übung nötig",
+        "emoji": "💪"
+      }
+    ]
+  },
+  "qa": {
+    "vocab_in_c1_list": true,
+    "grammar_c1_appropriate": true,
+    "word_count_in_range": true,
+    "all_answers_verifiable": true,
+    "image_count": 1,
+    "passed": true
+  }
+}

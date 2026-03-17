@@ -1,0 +1,49 @@
+{
+  "id": "W-A2-T2-016",
+  "cefrLevel": "A2",
+  "teil": 2,
+  "teilName": "Persoenliche Mitteilung",
+  "textType": "Mitteilung",
+  "register": "halbformell",
+  "topic": "Umweltaktion",
+  "instruction": "Schreiben Sie eine Mitteilung an Ihren Nachbarn, Herrn Weber, weil Sie an der Umweltaktion im Park teilnehmen möchten.",
+  "instructionVi": "Viết một tin nhắn cho hàng xóm của bạn, ông Weber, vì bạn muốn tham gia hoạt động môi trường tại công viên.",
+  "situation": "Ihr Nachbar, Herr Weber, organisiert am nächsten Samstag eine Müllsammel-Aktion im Stadtpark. Er hat einen Zettel im Treppenhaus aufgehängt und bittet die Nachbarn um Hilfe. Sie finden die Idee sehr gut und haben Zeit.",
+  "contentPoints": [
+    "Sagen Sie, dass Sie gerne bei der Aktion helfen möchten.",
+    "Fragen Sie nach der genauen Uhrzeit und dem Treffpunkt.",
+    "Fragen Sie, ob Sie Material (z.B. Handschuhe oder Mülltüten) mitbringen sollen."
+  ],
+  "sourceText": "Liebe Nachbarn, unser Stadtpark ist leider sehr schmutzig. Ich möchte ihn am nächsten Samstag sauber machen. Wer hat Zeit und hilft mir? Bitte schreiben Sie mir eine kurze Nachricht. Ihr Nachbar, Klaus Weber.",
+  "sourceTextType": "Aushang im Treppenhaus",
+  "minWords": 40,
+  "maxWords": 70,
+  "timeMinutes": 15,
+  "rubric": {
+    "criteria": [
+      {
+        "id": "inhalt",
+        "name": "Inhalt",
+        "nameVi": "Nội dung",
+        "maxScore": 5,
+        "weight": 30
+      },
+      {
+        "id": "korrektheit",
+        "name": "Korrektheit",
+        "nameVi": "Chính xác ngữ pháp & chính tả",
+        "maxScore": 5,
+        "weight": 35
+      },
+      {
+        "id": "angemessenheit",
+        "name": "Kommunikative Angemessenheit",
+        "nameVi": "Phù hợp giao tiếp",
+        "maxScore": 5,
+        "weight": 35
+      }
+    ],
+    "maxScore": 15
+  },
+  "maxScore": 15
+}

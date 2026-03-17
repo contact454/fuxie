@@ -1,0 +1,185 @@
+{
+  "id": "C2-T4-004",
+  "level": "C2",
+  "teil": 4,
+  "teil_name": "Meinungen zuordnen",
+  "topic": "Sprachphilosophie",
+  "topic_id": "004",
+  "metadata": {
+    "word_count": 126,
+    "target_grammar": [
+      "Alle Strukturen",
+      "Konjunktiv I/II",
+      "Erweiterte Partizipialkonstruktionen",
+      "Nominalisierung",
+      "Akademischer Stil"
+    ],
+    "target_vocabulary": [],
+    "generated_at": "2026-03-12T00:00:04.735012",
+    "version": 1
+  },
+  "opinion_texts": {
+    "question": "Formt Sprache unser Denken?",
+    "texts": [
+      {
+        "name": "Linguistin Prof. Dr. Lena Hofmann",
+        "label": "A",
+        "text": "Die empirische Evidenz für eine schwache Version der Sapir-Whorf-Hypothese ist beachtlich. Sprachen, die grammatische Unterscheidungen erzwingen, die andere nicht kennen, beeinflussen nachweislich die Wahrnehmung und Kategorisierung der Welt durch ihre Sprecher."
+      },
+      {
+        "name": "Kognitionswissenschaftler Dr. Jan Krüger",
+        "label": "B",
+        "text": "Die universalen Strukturen des menschlichen Denkens überwiegen die sprachlichen Unterschiede. Grundlegende kognitive Operationen wie Kategorisierung, Kausalattribution und räumliche Orientierung funktionieren sprachübergreifend nach analogen Prinzipien."
+      },
+      {
+        "name": "Philosophin Dr. Nadia Benz",
+        "label": "C",
+        "text": "Die Frage ist falsch gestellt. Sprache und Denken sind keine getrennten Entitäten, von denen die eine die andere kausal beeinflusst. Sie sind vielmehr ko-konstitutiv: Sprache ist eine Form des Denkens, und Denken manifestiert sich wesentlich in sprachlichen Strukturen."
+      },
+      {
+        "name": "Übersetzer Dr. Felix Stein",
+        "label": "D",
+        "text": "Als Literaturübersetzer erlebe ich täglich, dass bestimmte Gedanken in einer Sprache formulierbar sind, die in einer anderen nur über Umwege ausgedrückt werden können. Die Übersetzbarkeit hat Grenzen, die auf fundamentale kognitive Unterschiede hindeuten."
+      }
+    ]
+  },
+  "images": [
+    {
+      "id": "IMG1",
+      "type": "scene",
+      "prompt": "Sophisticated cartoon of experts discussing Sprachphilosophie. Fuxie cartoon style, flat illustration, warm pastel colors, no text.",
+      "filename": "C2-T4-004_scene.png",
+      "placement": "header",
+      "alt_text": "Formt Sprache unser Denken?",
+      "dimensions": "768x512"
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q1",
+      "teil": 4,
+      "type": "matching",
+      "stem": "Die epistemologische Überzeugung, dass grammatische Unterscheidungen beeinflussen die Wahrnehmung der Welt, manifestiert sich in der Argumentation von:",
+      "answer": "A",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Text/Beitrag A",
+        "reasoning": "[Inferential] Die Aussage 'Grammatische Unterscheidungen beeinflussen die Wah...' entspricht der Position von A."
+      }
+    },
+    {
+      "id": "Q2",
+      "teil": 4,
+      "type": "matching",
+      "stem": "Die epistemologische Überzeugung, dass grundlegende kognitive Operationen funktionieren sprachübergreifend, manifestiert sich in der Argumentation von:",
+      "answer": "B",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Text/Beitrag B",
+        "reasoning": "[Inferential] Die Aussage 'Grundlegende kognitive Operationen funktionieren s...' entspricht der Position von B."
+      }
+    },
+    {
+      "id": "Q3",
+      "teil": 4,
+      "type": "matching",
+      "stem": "Die methodologische Annahme, dass sprache und Denken sind ko-konstitutiv, nicht kausal getrennt, prägt die Analyse von:",
+      "answer": "C",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Text/Beitrag C",
+        "reasoning": "[Inferential] Die Aussage 'Sprache und Denken sind ko-konstitutiv, nicht kaus...' entspricht der Position von C."
+      }
+    },
+    {
+      "id": "Q4",
+      "teil": 4,
+      "type": "matching",
+      "stem": "Die methodologische Annahme, dass Die Übersetzbarkeit hat Grenzen, die auf kognitive Unterschiede hindeuten, prägt die Analyse von:",
+      "answer": "D",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Text/Beitrag D",
+        "reasoning": "[Inferential] Die Aussage 'Die Übersetzbarkeit hat Grenzen, die auf kognitive...' entspricht der Position von D."
+      }
+    },
+    {
+      "id": "Q5",
+      "teil": 4,
+      "type": "matching",
+      "stem": "Universale Denkstrukturen überwiegen die sprachlichen Unterschiede.",
+      "answer": "B",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Text/Beitrag B",
+        "reasoning": "Die Aussage 'Universale Denkstrukturen überwiegen die sprachlic...' entspricht der Position von B."
+      }
+    },
+    {
+      "id": "Q6",
+      "teil": 4,
+      "type": "matching",
+      "stem": "Die epistemologische Überzeugung, dass bestimmte Gedanken sind in manchen Sprachen nur über Umwege formulierbar, manifestiert sich in der Argumentation von:",
+      "answer": "D",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Text/Beitrag D",
+        "reasoning": "[Inferential] Die Aussage 'Bestimmte Gedanken sind in manchen Sprachen nur üb...' entspricht der Position von D."
+      }
+    }
+  ],
+  "scoring": {
+    "total_points": 6,
+    "pass_threshold": 4,
+    "grading": [
+      {
+        "range": [
+          5,
+          6
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          4,
+          4
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          3,
+          3
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          1,
+          2
+        ],
+        "label": "Noch üben!",
+        "emoji": "📝"
+      },
+      {
+        "range": [
+          0,
+          0
+        ],
+        "label": "Mehr Übung nötig",
+        "emoji": "💪"
+      }
+    ]
+  },
+  "qa": {
+    "vocab_in_c2_list": true,
+    "grammar_c2_appropriate": true,
+    "word_count_in_range": true,
+    "all_answers_verifiable": true,
+    "image_count": 1,
+    "passed": true
+  }
+}

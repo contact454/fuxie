@@ -1,0 +1,243 @@
+{
+  "id": "B1-T5-010",
+  "level": "B1",
+  "teil": 5,
+  "teil_name": "Informationsblatt lesen",
+  "topic": "Familie & Beziehungen",
+  "topic_id": "010",
+  "metadata": {
+    "word_count": 280,
+    "target_grammar": [
+      "Passiv",
+      "Modalverben",
+      "Nebensatz mit wenn/dass/damit"
+    ],
+    "target_vocabulary": [
+      "Elterngeld",
+      "Elternzeit",
+      "Antrag",
+      "Einkommen",
+      "Arbeitgeber",
+      "Bezugsdauer",
+      "Teilzeit",
+      "Geburt"
+    ],
+    "generated_at": "2026-03-10T23:50:00+07:00",
+    "version": 1
+  },
+  "infotext": {
+    "source": "Bundesministerium für Familie, Senioren, Frauen und Jugend",
+    "title": "Elterngeld und Elternzeit: Die wichtigsten Fakten",
+    "format": "Informationsblatt",
+    "sections": [
+      {
+        "heading": "Was ist Elterngeld?",
+        "text": "Elterngeld ist eine finanzielle Unterstützung vom Staat für Eltern nach der Geburt eines Kindes. Es gleicht fehlendes Einkommen aus, wenn Eltern nach der Geburt weniger oder gar nicht arbeiten. Elterngeld gibt es in drei Varianten: Basiselterngeld, ElterngeldPlus und Partnerschaftsbonus."
+      },
+      {
+        "heading": "Höhe des Elterngeldes",
+        "text": "Das Basiselterngeld beträgt 65–67 % des Nettoeinkommens vor der Geburt. Mindestens 300 Euro und höchstens 1.800 Euro pro Monat. Eltern ohne Einkommen vor der Geburt erhalten den Mindestbetrag von 300 Euro. ElterngeldPlus beträgt die Hälfte des Basiselterngeldes, dafür doppelt so lange."
+      },
+      {
+        "heading": "Bezugsdauer",
+        "text": "Basiselterngeld: maximal 14 Monate für beide Elternteile zusammen. Ein Elternteil kann mindestens 2 und höchstens 12 Monate beantragen. Die 2 zusätzlichen Partnermonate gibt es, wenn auch der andere Elternteil mindestens 2 Monate Elterngeld nimmt."
+      },
+      {
+        "heading": "Elternzeit",
+        "text": "Elternzeit ist eine unbezahlte Freistellung von der Arbeit. Sie dauert maximal 3 Jahre pro Kind. Der Arbeitsplatz ist während der Elternzeit geschützt — der Arbeitgeber darf Ihnen nicht kündigen. Sie können während der Elternzeit bis zu 32 Stunden pro Woche in Teilzeit arbeiten."
+      },
+      {
+        "heading": "Antrag stellen",
+        "text": "Den Antrag auf Elterngeld stellen Sie bei der Elterngeldstelle Ihres Bundeslandes. Wichtig: Der Antrag kann erst nach der Geburt gestellt werden, aber Elterngeld wird rückwirkend für maximal 3 Monate gezahlt. Benötigte Unterlagen: Geburtsurkunde, Einkommensnachweis, Bescheinigung des Arbeitgebers."
+      }
+    ]
+  },
+  "images": [
+    {
+      "id": "IMG1",
+      "type": "scene",
+      "prompt": "Cute cartoon illustration of parents with a newborn baby reading a government information brochure about parental leave and benefits. Fuxie cartoon style, flat illustration, warm pastel colors, no text.",
+      "filename": "B1-T5-010_scene.png",
+      "placement": "header",
+      "alt_text": "Elterngeld und Elternzeit",
+      "dimensions": "768x512"
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q1",
+      "teil": 5,
+      "type": "multiple_choice",
+      "stem": "Wie hoch ist das maximale Basiselterngeld pro Monat?",
+      "options": {
+        "a": "1.200 Euro.",
+        "b": "1.800 Euro.",
+        "c": "2.400 Euro."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Das Basiselterngeld beträgt höchstens 1.800 Euro pro Monat.",
+        "key_evidence": "höchstens 1.800 Euro pro Monat",
+        "key_vocabulary": [
+          {
+            "word": "Elterngeld",
+            "type": "Nomen",
+            "meaning": "parental allowance"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q2",
+      "teil": 5,
+      "type": "multiple_choice",
+      "stem": "Wie lange können beide Eltern zusammen Basiselterngeld bekommen?",
+      "options": {
+        "a": "12 Monate.",
+        "b": "14 Monate.",
+        "c": "18 Monate."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Basiselterngeld gibt es maximal 14 Monate für beide Elternteile zusammen.",
+        "key_evidence": "maximal 14 Monate für beide Elternteile zusammen",
+        "key_vocabulary": [
+          {
+            "word": "Bezugsdauer",
+            "type": "Nomen",
+            "meaning": "benefit period"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q3",
+      "teil": 5,
+      "type": "multiple_choice",
+      "stem": "Wie viele Stunden pro Woche darf man während der Elternzeit arbeiten?",
+      "options": {
+        "a": "Bis zu 20 Stunden.",
+        "b": "Bis zu 32 Stunden.",
+        "c": "Gar nicht."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Man kann während der Elternzeit bis zu 32 Stunden pro Woche in Teilzeit arbeiten.",
+        "key_evidence": "bis zu 32 Stunden pro Woche",
+        "key_vocabulary": [
+          {
+            "word": "Teilzeit",
+            "type": "Nomen",
+            "meaning": "part-time"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q4",
+      "teil": 5,
+      "type": "multiple_choice",
+      "stem": "Wann kann man den Antrag auf Elterngeld stellen?",
+      "options": {
+        "a": "Vor der Geburt.",
+        "b": "Erst nach der Geburt.",
+        "c": "Im 6. Schwangerschaftsmonat."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Der Antrag kann erst nach der Geburt gestellt werden.",
+        "key_evidence": "Der Antrag kann erst nach der Geburt gestellt werden",
+        "key_vocabulary": [
+          {
+            "word": "Antrag",
+            "type": "Nomen",
+            "meaning": "application"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q5",
+      "teil": 5,
+      "type": "multiple_choice",
+      "stem": "Was ist die Hauptaussage des Textes zu viel Elterngeld bekommen Eltern ohne vorheriges Einkommen?",
+      "options": {
+        "a": "Nichts.",
+        "b": "300 Euro pro Monat.",
+        "c": "500 Euro pro Monat."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Eltern ohne Einkommen erhalten den Mindestbetrag von 300 Euro.",
+        "key_evidence": "Mindestbetrag von 300 Euro",
+        "key_vocabulary": [
+          {
+            "word": "Mindestbetrag",
+            "type": "Nomen",
+            "meaning": "minimum amount"
+          }
+        ],
+        "reasoning": "[Inferential] "
+      }
+    }
+  ],
+  "scoring": {
+    "total_points": 5,
+    "pass_threshold": 3,
+    "grading": [
+      {
+        "range": [
+          5,
+          5
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          4,
+          4
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          3,
+          3
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          1,
+          2
+        ],
+        "label": "Noch üben!",
+        "emoji": "📝"
+      },
+      {
+        "range": [
+          0,
+          0
+        ],
+        "label": "Mehr Übung nötig",
+        "emoji": "💪"
+      }
+    ]
+  },
+  "qa": {
+    "vocab_in_b1_list": true,
+    "grammar_b1_appropriate": true,
+    "word_count_in_range": true,
+    "all_answers_verifiable": true,
+    "image_count": 1,
+    "passed": true
+  }
+}

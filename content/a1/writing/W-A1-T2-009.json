@@ -1,0 +1,47 @@
+{
+  "id": "W-A1-T2-009",
+  "cefrLevel": "A1",
+  "teil": 2,
+  "teilName": "Kurze E-Mail",
+  "textType": "E-Mail",
+  "register": "informell",
+  "topic": "Nachbar",
+  "instruction": "Schreiben Sie eine kurze E-Mail (ca. 30-40 Woerter).",
+  "instructionVi": "Viet email ngan: Nachbar.",
+  "situation": "Sie bekommen morgen ein Paket. Schreiben Sie Ihrem Nachbarn.",
+  "contentPoints": [
+    "bitten Paket anzunehmen",
+    "erklaeren warum nicht da",
+    "sich bedanken"
+  ],
+  "minWords": 30,
+  "maxWords": 50,
+  "timeMinutes": 10,
+  "rubric": {
+    "criteria": [
+      {
+        "id": "inhalt",
+        "name": "Inhalt",
+        "nameVi": "Noi dung",
+        "maxScore": 5,
+        "weight": 30
+      },
+      {
+        "id": "korrektheit",
+        "name": "Korrektheit",
+        "nameVi": "Chinh xac",
+        "maxScore": 5,
+        "weight": 40
+      },
+      {
+        "id": "angemessenheit",
+        "name": "Angemessenheit",
+        "nameVi": "Phu hop",
+        "maxScore": 5,
+        "weight": 30
+      }
+    ],
+    "maxScore": 15
+  },
+  "maxScore": 15
+}

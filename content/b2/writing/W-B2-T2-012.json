@@ -1,0 +1,64 @@
+{
+  "id": "W-B2-T2-012",
+  "cefrLevel": "B2",
+  "teil": 2,
+  "teilName": "Nachricht/E-Mail",
+  "textType": "E-Mail",
+  "register": "formell",
+  "topic": "Mietminderung",
+  "instruction": "Sie haben bereits vor zwei Wochen einen Mangel in Ihrer Wohnung gemeldet. Da sich bisher nichts getan hat, schreiben Sie nun eine E-Mail an die Hausverwaltung 'Immo-Fix'. Reagieren Sie auf die letzte Nachricht der Hausverwaltung und fordern Sie eine Mietminderung.",
+  "instructionVi": "Bạn đã báo cáo hư hỏng trong căn hộ từ hai tuần trước. Hãy viết một email cho ban quản lý 'Immo-Fix', phản hồi tin nhắn của họ và yêu cầu giảm tiền thuê nhà.",
+  "situation": "In Ihrer Wohnung funktioniert die Heizung seit zwei Wochen nicht mehr. Sie haben bereits einmal Bescheid gegeben, aber die Hausverwaltung hat Sie mit einer E-Mail vertröstet. Da es Winter ist und die Temperaturen sinken, ist die Wohnung kaum noch bewohnbar.",
+  "contentPoints": [
+    "Beziehen Sie sich höflich auf die Antwort der Hausverwaltung.",
+    "Schildern Sie detailliert die Auswirkungen der kalten Wohnung auf Ihren Alltag.",
+    "Setzen Sie eine letzte, verbindliche Frist zur Behebung des Mangels.",
+    "Kündigen Sie eine Mietminderung von 20% für den Zeitraum des Ausfalls an."
+  ],
+  "sourceText": "Sehr geehrte Mieter, wir haben Ihre Nachricht bezüglich der defekten Heizung erhalten. Leider können wir die Reparatur aufgrund von Personalmangel und fehlenden Ersatzteilen nicht vor Ende des Monats durchführen. Wir bitten um Ihr Verständnis für diese Verzögerung und hoffen, dass die Temperaturen in Ihrer Wohnung nicht zu stark absinken. Mit freundlichen Grüßen, Ihre Hausverwaltung Immo-Fix.",
+  "sourceTextType": "E-Mail der Hausverwaltung",
+  "minWords": 100,
+  "maxWords": 150,
+  "timeMinutes": 25,
+  "rubric": {
+    "criteria": [
+      {
+        "id": "inhalt",
+        "name": "Inhalt",
+        "nameVi": "Nội dung",
+        "maxScore": 5,
+        "weight": 25
+      },
+      {
+        "id": "angemessenheit",
+        "name": "Kommunikative Angemessenheit",
+        "nameVi": "Phù hợp giao tiếp",
+        "maxScore": 5,
+        "weight": 20
+      },
+      {
+        "id": "korrektheit",
+        "name": "Korrektheit",
+        "nameVi": "Chính xác ngữ pháp & chính tả",
+        "maxScore": 5,
+        "weight": 25
+      },
+      {
+        "id": "spektrum",
+        "name": "Wortschatz & Strukturen",
+        "nameVi": "Đa dạng từ vựng & cấu trúc",
+        "maxScore": 5,
+        "weight": 15
+      },
+      {
+        "id": "kohaerenz",
+        "name": "Kohaerenz & Kohaesion",
+        "nameVi": "Mạch lạc & liên kết",
+        "maxScore": 5,
+        "weight": 15
+      }
+    ],
+    "maxScore": 25
+  },
+  "maxScore": 25
+}

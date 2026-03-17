@@ -1,0 +1,93 @@
+{
+  "id": "W-C1-T1-007",
+  "cefrLevel": "C1",
+  "teil": 1,
+  "teilName": "Argumentativer Text",
+  "textType": "Argumentation",
+  "register": "sachlich",
+  "topic": "Wohnen & Mieten",
+  "instruction": "Schreiben Sie einen argumentativen Text zum Thema 'Wohnen & Mieten' (mind. 250 Woerter). Beschreiben Sie die Grafik.",
+  "instructionVi": "Viet bai lap luan >=250 tu: Wohnen & Mieten.",
+  "situation": "Schreiben Sie zu dem Thema 'Wohnen & Mieten'. Die Grafik zeigt: Mietpreisentwicklung Grossstaedte (Saeulendiagramm).",
+  "contentPoints": [
+    "Grafik beschreiben",
+    "Ursachen analysieren",
+    "Situation im Heimatland vergleichen",
+    "Konsequenzen diskutieren",
+    "Eigene Meinung und Loesungsvorschlag"
+  ],
+  "minWords": 250,
+  "maxWords": 400,
+  "timeMinutes": 50,
+  "rubric": {
+    "criteria": [
+      {
+        "id": "inhalt",
+        "name": "Inhalt",
+        "nameVi": "Noi dung",
+        "maxScore": 5,
+        "weight": 20
+      },
+      {
+        "id": "angemessenheit",
+        "name": "Kommunikative Angemessenheit",
+        "nameVi": "Phu hop giao tiep",
+        "maxScore": 5,
+        "weight": 20
+      },
+      {
+        "id": "korrektheit",
+        "name": "Korrektheit",
+        "nameVi": "Chinh xac ngu phap",
+        "maxScore": 5,
+        "weight": 20
+      },
+      {
+        "id": "spektrum",
+        "name": "Wortschatz & Strukturen",
+        "nameVi": "Da dang tu vung",
+        "maxScore": 5,
+        "weight": 20
+      },
+      {
+        "id": "kohaerenz",
+        "name": "Kohaerenz & Kohaesion",
+        "nameVi": "Mach lac & lien ket",
+        "maxScore": 5,
+        "weight": 20
+      }
+    ],
+    "maxScore": 25
+  },
+  "maxScore": 25,
+  "grafikDesc": "Das Balkendiagramm mit dem Titel „Entwicklung der durchschnittlichen Nettokaltmieten für Neubauwohnungen in deutschen A-Städten“ illustriert den rasanten Preisanstieg pro Quadratmeter über einen Zeitraum von sechs Jahren. Die Erhebung verdeutlicht eine stetige Aufwärtsspirale in den Metropolregionen. Als Datenbasis dienten Statistiken des Statistischen Bundesamtes.",
+  "sourceText": "Thema: Die Wohnungsnot in Ballungszentren – Zwischen Marktwirtschaft und staatlicher Intervention\n\nExpertenmeinungen:\n\nDr. Amelie Weber, Stadtsoziologin: „Wohnen ist ein elementares Menschenrecht und darf nicht rein marktlogischen Spekulationen unterworfen werden. Ohne eine konsequente staatliche Regulierung, wie etwa einen bundesweiten Mietendeckel und die massive Förderung des kommunalen Wohnungsbaus, droht eine fortschreitende soziale Segregation in unseren Städten.“\n\nProf. Dr. h.c. Thomas Müller, Immobilienökonom: „Der aktuelle Mangel an bezahlbarem Wohnraum ist primär das Resultat von Überregulierung und bürokratischen Hürden im Baugewerbe. Preisdeckelungen bekämpfen lediglich Symptome, schrecken jedoch private Investoren ab, was den notwendigen Neubau weiter ausbremst und die Krise langfristig verschärft.“\n\nIhre Aufgabe:\nVerfassen Sie eine strukturierte Erörterung (ca. 350-450 Wörter), in der Sie:\n1. Die vorliegende Grafik beschreiben.\n2. Die Ursachen für die steigenden Mietpreise in urbanen Zentren analysieren.\n3. Die Situation auf dem Wohnungsmarkt mit der in Ihrem Heimatland vergleichen.\n4. Die gesellschaftlichen Konsequenzen dieser Entwicklung diskutieren.\n5. Ihre eigene Meinung darlegen und einen konkreten Lösungsvorschlag präsentieren.",
+  "sourceTextType": "Argumentativer Essay-Stimulus (C1-Niveau)",
+  "stimulusSender": "Zentraler Prüfungsausschuss",
+  "grafikData": [
+    {
+      "Jahr": "2018",
+      "Mietpreis": "12,50 €/m²"
+    },
+    {
+      "Jahr": "2019",
+      "Mietpreis": "13,10 €/m²"
+    },
+    {
+      "Jahr": "2020",
+      "Mietpreis": "13,80 €/m²"
+    },
+    {
+      "Jahr": "2021",
+      "Mietpreis": "14,60 €/m²"
+    },
+    {
+      "Jahr": "2022",
+      "Mietpreis": "15,90 €/m²"
+    },
+    {
+      "Jahr": "2023",
+      "Mietpreis": "17,40 €/m²"
+    }
+  ]
+}

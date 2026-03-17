@@ -1,0 +1,243 @@
+{
+  "id": "B1-T5-006",
+  "level": "B1",
+  "teil": 5,
+  "teil_name": "Informationsblatt lesen",
+  "topic": "Wohnen & Zusammenleben",
+  "topic_id": "006",
+  "metadata": {
+    "word_count": 280,
+    "target_grammar": [
+      "Passiv",
+      "Modalverben",
+      "Nebensatz mit wenn/dass/damit"
+    ],
+    "target_vocabulary": [
+      "Mietvertrag",
+      "Kaution",
+      "Kündigung",
+      "Nebenkosten",
+      "Vermieter",
+      "Mieter",
+      "Schönheitsreparatur",
+      "Betriebskosten"
+    ],
+    "generated_at": "2026-03-10T23:50:00+07:00",
+    "version": 1
+  },
+  "infotext": {
+    "source": "Mieterverein Berlin e.V.",
+    "title": "Ihre Rechte als Mieter: Die wichtigsten Infos",
+    "format": "Informationsblatt",
+    "sections": [
+      {
+        "heading": "Mietvertrag",
+        "text": "Lesen Sie Ihren Mietvertrag sorgfältig, bevor Sie unterschreiben. Im Vertrag stehen: die Kaltmiete, die Nebenkosten (auch Betriebskosten genannt), die Größe der Wohnung, die Kündigungsfrist und Regelungen zu Haustieren und Untervermietung."
+      },
+      {
+        "heading": "Kaution",
+        "text": "Der Vermieter darf höchstens drei Monatsmieten (Kaltmiete) als Kaution verlangen. Sie können die Kaution in drei monatlichen Raten zahlen. Die Kaution muss auf einem separaten Konto angelegt werden. Nach dem Auszug muss der Vermieter die Kaution innerhalb von 6 Monaten zurückzahlen."
+      },
+      {
+        "heading": "Kündigung",
+        "text": "Die gesetzliche Kündigungsfrist für Mieter beträgt 3 Monate. Die Kündigung muss schriftlich erfolgen und spätestens am 3. Werktag eines Monats beim Vermieter eingehen. Der Vermieter kann nur aus wichtigen Gründen kündigen, zum Beispiel bei Eigenbedarf."
+      },
+      {
+        "heading": "Reparaturen",
+        "text": "Für große Reparaturen (Heizung, Wasserleitung, Fenster) ist der Vermieter zuständig. Kleinreparaturen bis 75 Euro pro Fall und maximal 200 Euro pro Jahr können im Mietvertrag auf den Mieter übertragen werden."
+      },
+      {
+        "heading": "Beratung",
+        "text": "Als Mitglied des Mietervereins erhalten Sie kostenlose Rechtsberatung. Mitgliedsbeitrag: 90 Euro pro Jahr. Servicehotline: 030-2263-4455 (Mo–Fr 9–18 Uhr). Online-Beratung: www.mieterverein-berlin.de/beratung"
+      }
+    ]
+  },
+  "images": [
+    {
+      "id": "IMG1",
+      "type": "scene",
+      "prompt": "Cute cartoon illustration of a tenant reading a rental contract at a desk, with a small apartment in the background, keys and documents. Fuxie cartoon style, flat illustration, warm pastel colors, no text.",
+      "filename": "B1-T5-006_scene.png",
+      "placement": "header",
+      "alt_text": "Mieterrechte",
+      "dimensions": "768x512"
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q1",
+      "teil": 5,
+      "type": "multiple_choice",
+      "stem": "Wie hoch darf die Kaution höchstens sein?",
+      "options": {
+        "a": "Zwei Monatsmieten.",
+        "b": "Drei Monatsmieten.",
+        "c": "Vier Monatsmieten."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Die Kaution darf höchstens drei Monatsmieten (Kaltmiete) betragen.",
+        "key_evidence": "höchstens drei Monatsmieten",
+        "key_vocabulary": [
+          {
+            "word": "Kaution",
+            "type": "Nomen",
+            "meaning": "deposit"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q2",
+      "teil": 5,
+      "type": "multiple_choice",
+      "stem": "Wie lang ist die Kündigungsfrist für Mieter?",
+      "options": {
+        "a": "1 Monat.",
+        "b": "3 Monate.",
+        "c": "6 Monate."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Die gesetzliche Kündigungsfrist beträgt 3 Monate.",
+        "key_evidence": "Die gesetzliche Kündigungsfrist für Mieter beträgt 3 Monate",
+        "key_vocabulary": [
+          {
+            "word": "Kündigungsfrist",
+            "type": "Nomen",
+            "meaning": "notice period"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q3",
+      "teil": 5,
+      "type": "multiple_choice",
+      "stem": "Wer muss eine kaputte Heizung reparieren?",
+      "options": {
+        "a": "Der Mieter.",
+        "b": "Der Vermieter.",
+        "c": "Beide teilen sich die Kosten."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Für große Reparaturen wie Heizung ist der Vermieter zuständig.",
+        "key_evidence": "große Reparaturen (Heizung) ist der Vermieter zuständig",
+        "key_vocabulary": [
+          {
+            "word": "zuständig",
+            "type": "Adjektiv",
+            "meaning": "responsible"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q4",
+      "teil": 5,
+      "type": "multiple_choice",
+      "stem": "Bis wann muss die Kaution nach dem Auszug zurückgezahlt werden?",
+      "options": {
+        "a": "Innerhalb von 3 Monaten.",
+        "b": "Innerhalb von 6 Monaten.",
+        "c": "Innerhalb von 12 Monaten."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Die Kaution muss innerhalb von 6 Monaten zurückgezahlt werden.",
+        "key_evidence": "innerhalb von 6 Monaten zurückzahlen",
+        "key_vocabulary": [
+          {
+            "word": "Auszug",
+            "type": "Nomen",
+            "meaning": "moving out"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q5",
+      "teil": 5,
+      "type": "multiple_choice",
+      "stem": "Was ist die Hauptaussage des Textes zu viel kostet die Mitgliedschaft im Mieterverein?",
+      "options": {
+        "a": "60 Euro pro Jahr.",
+        "b": "90 Euro pro Jahr.",
+        "c": "120 Euro pro Jahr."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Der Mitgliedsbeitrag beträgt 90 Euro pro Jahr.",
+        "key_evidence": "Mitgliedsbeitrag: 90 Euro pro Jahr",
+        "key_vocabulary": [
+          {
+            "word": "Rechtsberatung",
+            "type": "Nomen",
+            "meaning": "legal advice"
+          }
+        ],
+        "reasoning": "[Inferential] "
+      }
+    }
+  ],
+  "scoring": {
+    "total_points": 5,
+    "pass_threshold": 3,
+    "grading": [
+      {
+        "range": [
+          5,
+          5
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          4,
+          4
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          3,
+          3
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          1,
+          2
+        ],
+        "label": "Noch üben!",
+        "emoji": "📝"
+      },
+      {
+        "range": [
+          0,
+          0
+        ],
+        "label": "Mehr Übung nötig",
+        "emoji": "💪"
+      }
+    ]
+  },
+  "qa": {
+    "vocab_in_b1_list": true,
+    "grammar_b1_appropriate": true,
+    "word_count_in_range": true,
+    "all_answers_verifiable": true,
+    "image_count": 1,
+    "passed": true
+  }
+}

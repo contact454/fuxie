@@ -1,0 +1,200 @@
+{
+  "id": "B1-T1-003",
+  "level": "B1",
+  "teil": 1,
+  "teil_name": "Blog-Eintrag lesen",
+  "topic": "Umwelt & Natur",
+  "topic_id": "003",
+  "metadata": {
+    "word_count": 260,
+    "target_grammar": [
+      "Nebensatz mit weil/dass/wenn",
+      "Konjunktiv II",
+      "Passiv"
+    ],
+    "target_vocabulary": [
+      "Plastik",
+      "Müll",
+      "wiederverwendbar",
+      "Verpackung",
+      "Umwelt",
+      "Stoffbeutel",
+      "Trinkflasche",
+      "vermeiden",
+      "nachhaltig",
+      "Gewissen"
+    ],
+    "generated_at": "2026-03-10T22:50:00+07:00",
+    "version": 1
+  },
+  "blog": {
+    "title": "Wie ich weniger Plastik verbrauche",
+    "author": "GrueneLena",
+    "date": "22. November 2025",
+    "text": "Vor einem Jahr habe ich einen Dokumentarfilm über Plastik im Meer gesehen. Die Bilder von Meeresschildkröten mit Plastik im Magen haben mich so schockiert, dass ich sofort etwas ändern wollte. Seitdem versuche ich, so wenig Plastik wie möglich zu benutzen.\n\nAm Anfang war das gar nicht so einfach. Plastik ist überall: in der Zahnbürste, in der Verpackung von Obst, sogar in Kleidung. Aber Schritt für Schritt habe ich neue Gewohnheiten entwickelt. Ich nehme jetzt immer einen Stoffbeutel zum Einkaufen mit, benutze eine wiederverwendbare Trinkflasche und kaufe Seife und Shampoo ohne Plastikverpackung.\n\nBesonders schwierig finde ich es beim Einkaufen im Supermarkt, weil fast alles in Plastik verpackt ist. Deshalb gehe ich jetzt oft in einen Unverpackt-Laden, obwohl der weiter weg ist. Dort kann man Nudeln, Reis und Müsli in eigene Gläser füllen.\n\nMeine Freunde reagieren unterschiedlich. Manche finden es toll und machen mit. Andere sagen, dass eine einzelne Person sowieso nichts ändern kann. Ich glaube aber, dass jeder kleine Schritt wichtig ist. Wenn viele Menschen kleine Dinge ändern, kann das einen großen Unterschied machen.\n\nPerfekt bin ich natürlich nicht. Manchmal kaufe ich trotzdem etwas mit Plastikverpackung, wenn es keine Alternative gibt. Aber mein Müll ist deutlich weniger geworden, und das gibt mir ein gutes Gewissen."
+  },
+  "images": [
+    {
+      "id": "IMG1",
+      "type": "scene",
+      "prompt": "Cute cartoon illustration of a woman shopping at a zero-waste store, filling glass jars with pasta and rice from bulk dispensers, carrying a cloth bag. Fuxie cartoon style, flat illustration, warm pastel colors, no text.",
+      "filename": "B1-T1-003_scene.png",
+      "placement": "header",
+      "alt_text": "Lena kauft im Unverpackt-Laden ein",
+      "dimensions": "768x512"
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q1",
+      "teil": 1,
+      "type": "richtig_falsch",
+      "stem": "Der Autor deutet an, dass lena hat angefangen, weniger Plastik zu benutzen, nachdem sie einen Film gesehen hat.",
+      "answer": "richtig",
+      "points": 1,
+      "explanation": {
+        "de": "Ein Dokumentarfilm über Plastik im Meer hat sie motiviert.",
+        "key_evidence": "Vor einem Jahr habe ich einen Dokumentarfilm über Plastik im Meer gesehen",
+        "key_vocabulary": [
+          {
+            "word": "Dokumentarfilm",
+            "type": "Nomen",
+            "meaning": "documentary"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q2",
+      "teil": 1,
+      "type": "richtig_falsch",
+      "stem": "Es war für Lena von Anfang an einfach, auf Plastik zu verzichten.",
+      "answer": "falsch",
+      "points": 1,
+      "explanation": {
+        "de": "Am Anfang war das gar nicht so einfach, weil Plastik überall ist.",
+        "key_evidence": "Am Anfang war das gar nicht so einfach. Plastik ist überall",
+        "key_vocabulary": [
+          {
+            "word": "Verpackung",
+            "type": "Nomen",
+            "meaning": "packaging"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q3",
+      "teil": 1,
+      "type": "richtig_falsch",
+      "stem": "Lena kauft im Unverpackt-Laden ein, obwohl er weiter weg ist.",
+      "answer": "richtig",
+      "points": 1,
+      "explanation": {
+        "de": "Sie geht oft in einen Unverpackt-Laden, obwohl der weiter weg ist.",
+        "key_evidence": "Deshalb gehe ich jetzt oft in einen Unverpackt-Laden, obwohl der weiter weg ist",
+        "key_vocabulary": [
+          {
+            "word": "Unverpackt-Laden",
+            "type": "Nomen",
+            "meaning": "zero-waste shop"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q4",
+      "teil": 1,
+      "type": "richtig_falsch",
+      "stem": "Alle Freunde von Lena finden ihre Idee gut und machen mit.",
+      "answer": "falsch",
+      "points": 1,
+      "explanation": {
+        "de": "Nur manche finden es toll; andere sagen, eine einzelne Person kann nichts ändern.",
+        "key_evidence": "Manche finden es toll und machen mit. Andere sagen, dass eine einzelne Person sowieso nichts ändern kann",
+        "key_vocabulary": [
+          {
+            "word": "Unterschied",
+            "type": "Nomen",
+            "meaning": "difference"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q5",
+      "teil": 1,
+      "type": "richtig_falsch",
+      "stem": "Im Text wird erwähnt, dass lena benutzt heute gar kein Plastik mehr.",
+      "answer": "falsch",
+      "points": 1,
+      "explanation": {
+        "de": "Manchmal kauft sie trotzdem etwas mit Plastikverpackung, wenn es keine Alternative gibt.",
+        "key_evidence": "Manchmal kaufe ich trotzdem etwas mit Plastikverpackung, wenn es keine Alternative gibt",
+        "key_vocabulary": [
+          {
+            "word": "Alternative",
+            "type": "Nomen",
+            "meaning": "alternative"
+          }
+        ],
+        "reasoning": "[Inferential] "
+      }
+    }
+  ],
+  "scoring": {
+    "total_points": 5,
+    "pass_threshold": 3,
+    "grading": [
+      {
+        "range": [
+          5,
+          5
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          4,
+          4
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          3,
+          3
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          1,
+          2
+        ],
+        "label": "Noch üben!",
+        "emoji": "📝"
+      },
+      {
+        "range": [
+          0,
+          0
+        ],
+        "label": "Mehr Übung nötig",
+        "emoji": "💪"
+      }
+    ]
+  },
+  "qa": {
+    "vocab_in_b1_list": true,
+    "grammar_b1_appropriate": true,
+    "word_count_in_range": true,
+    "all_answers_verifiable": true,
+    "richtig_falsch_balanced": true,
+    "image_count": 1,
+    "passed": true
+  }
+}

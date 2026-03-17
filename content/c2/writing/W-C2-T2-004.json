@@ -1,0 +1,87 @@
+{
+  "id": "W-C2-T2-004",
+  "cefrLevel": "C2",
+  "teil": 2,
+  "teilName": "Textumwandlung",
+  "textType": "Wissenschaftlicher Abstract",
+  "register": "variiert",
+  "topic": "Technikfolgen",
+  "instruction": "Wandeln Sie den Podcast-Transkript zum Thema 'Technikfolgen' in einen Wissenschaftlicher Abstract um (mind. 200 Woerter).",
+  "instructionVi": "Chuyen doi: Podcast-Transkript -> Wissenschaftlicher Abstract ve Technikfolgen.",
+  "situation": "Lesen Sie den Podcast-Transkript zum Thema 'Technikfolgen' und schreiben Sie daraus einen Wissenschaftlicher Abstract.",
+  "contentPoints": [
+    "Kernaussagen erfassen",
+    "In Textsorte 'Wissenschaftlicher Abstract' umwandeln",
+    "Register und Stil anpassen",
+    "Kohaerenten Text verfassen"
+  ],
+  "minWords": 200,
+  "maxWords": 350,
+  "timeMinutes": 30,
+  "rubric": {
+    "criteria": [
+      {
+        "id": "inhalt",
+        "name": "Inhalt",
+        "nameVi": "Noi dung",
+        "maxScore": 5,
+        "weight": 20
+      },
+      {
+        "id": "angemessenheit",
+        "name": "Kommunikative Angemessenheit",
+        "nameVi": "Phu hop giao tiep",
+        "maxScore": 5,
+        "weight": 20
+      },
+      {
+        "id": "korrektheit",
+        "name": "Korrektheit",
+        "nameVi": "Chinh xac ngu phap",
+        "maxScore": 5,
+        "weight": 20
+      },
+      {
+        "id": "spektrum",
+        "name": "Wortschatz & Strukturen",
+        "nameVi": "Da dang tu vung",
+        "maxScore": 5,
+        "weight": 20
+      },
+      {
+        "id": "kohaerenz",
+        "name": "Kohaerenz & Kohaesion",
+        "nameVi": "Mach lac & lien ket",
+        "maxScore": 5,
+        "weight": 20
+      }
+    ],
+    "maxScore": 25
+  },
+  "maxScore": 25,
+  "sourceTextType": "Wissenschaftlicher Abstract",
+  "sourceText": "Titel: Ambivalenz des Fortschritts: Eine interdisziplinäre Analyse der Technikfolgenabschätzung im Zeitalter der KI.\nQuelle: Prof. Dr. Maximilian von Aue, Institut für Technologiefolgenforschung (ITF), Berlin 2024.\n\nDie vorliegende Untersuchung widmet sich der systematischen Evaluierung technologischer Auswirkungen auf sozioökonomische Strukturen, unter besonderer Berücksichtigung der rasanten Entwicklung generativer Künstlicher Intelligenz (KI). Während technologische Innovationen historisch stets als Katalysatoren für Wohlstand fungierten, mahnt Dr. Elena Moretti, Expertin für Systemanalyse am ITF, vor einer „unkontrollierten Beschleunigung ohne ethisches Korrektiv“. Empirische Daten der Studie prognostizieren, dass bis zum Jahr 2035 rund 42 % der gegenwärtigen Berufsbilder durch Automatisierungsprozesse eine fundamentale Transformation erfahren oder gänzlich obsolet werden könnten. \n\nBesorgniserregend erweist sich dabei die wachsende Diskrepanz zwischen technischem Fortschritt und regulatorischer Anpassungsfähigkeit. Die Analyse verdeutlicht, dass insbesondere in der produzierenden Industrie sowie in hochspezialisierten Dienstleistungssektoren eine Polarisierung des Arbeitsmarktes droht. Neben ökonomischen Effekten werden auch ökologische Externalitäten, wie der immense Ressourcenverbrauch globaler Rechenzentren, kritisch beleuchtet. Abschließend plädiert die Arbeit für eine proaktive Technikfolgenabschätzung, die nicht nur Risiken minimiert, sondern durch inklusive Partizipationsmodelle die gesellschaftliche Akzeptanz sichert. Es wird konstatiert, dass der Erfolg künftiger Technologien maßgeblich von der Balance zwischen disruptiver Innovationskraft und sozialer Verantwortung abhängt.",
+  "grafikDesc": "Ein Säulendiagramm zur prognostizierten Veränderung der Beschäftigungszahlen in ausgewählten Branchen durch den Einsatz von KI bis zum Jahr 2035 (in Prozent).",
+  "grafikData": [
+    {
+      "Branche": "IT & Softwareentwicklung",
+      "Prognose": "+28%"
+    },
+    {
+      "Branche": "Gesundheitswesen",
+      "Prognose": "+12%"
+    },
+    {
+      "Branche": "Finanzdienstleistungen",
+      "Prognose": "-18%"
+    },
+    {
+      "Branche": "Produzierendes Gewerbe",
+      "Prognose": "-34%"
+    },
+    {
+      "Branche": "Verwaltung & Backoffice",
+      "Prognose": "-45%"
+    }
+  ]
+}

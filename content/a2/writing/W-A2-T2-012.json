@@ -1,0 +1,49 @@
+{
+  "id": "W-A2-T2-012",
+  "cefrLevel": "A2",
+  "teil": 2,
+  "teilName": "Persoenliche Mitteilung",
+  "textType": "Mitteilung",
+  "register": "halbformell",
+  "topic": "Jobsuche",
+  "instruction": "Sie suchen einen Nebenjob. Schreiben Sie eine Nachricht an Herrn Meyer, einen Bekannten, der im Café 'Sonnenschein' arbeitet.",
+  "instructionVi": "Bạn đang tìm một công việc làm thêm. Hãy viết một tin nhắn cho ông Meyer, một người quen đang làm việc tại quán cà phê 'Sonnenschein'.",
+  "situation": "Sie haben eine Anzeige vom Café 'Sonnenschein' gesehen. Da Sie momentan Zeit haben und gerne im Service arbeiten möchten, schreiben Sie Herrn Meyer eine Nachricht.",
+  "contentPoints": [
+    "Schreiben Sie, warum Sie Herrn Meyer kontaktieren.",
+    "Sagen Sie, an welchen Tagen und zu welchen Zeiten Sie arbeiten können.",
+    "Fragen Sie nach einem Termin für ein kurzes Gespräch."
+  ],
+  "sourceText": "Aushilfe gesucht! Das Café 'Sonnenschein' sucht ab sofort Verstärkung für das Team (Service und Küche). Bei Interesse melden Sie sich bitte bei Herrn Meyer.",
+  "sourceTextType": "Kurzanzeige",
+  "minWords": 40,
+  "maxWords": 70,
+  "timeMinutes": 15,
+  "rubric": {
+    "criteria": [
+      {
+        "id": "inhalt",
+        "name": "Inhalt",
+        "nameVi": "Nội dung",
+        "maxScore": 5,
+        "weight": 30
+      },
+      {
+        "id": "korrektheit",
+        "name": "Korrektheit",
+        "nameVi": "Chính xác ngữ pháp & chính tả",
+        "maxScore": 5,
+        "weight": 35
+      },
+      {
+        "id": "angemessenheit",
+        "name": "Kommunikative Angemessenheit",
+        "nameVi": "Phù hợp giao tiếp",
+        "maxScore": 5,
+        "weight": 35
+      }
+    ],
+    "maxScore": 15
+  },
+  "maxScore": 15
+}

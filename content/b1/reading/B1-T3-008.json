@@ -1,0 +1,258 @@
+{
+  "id": "B1-T3-008",
+  "level": "B1",
+  "teil": 3,
+  "teil_name": "Anzeigen zuordnen",
+  "topic": "Sport & Fitness",
+  "topic_id": "008",
+  "metadata": {
+    "word_count": 230,
+    "target_grammar": [
+      "Nebensatz mit weil/wenn",
+      "Modalverben",
+      "Komparativ"
+    ],
+    "target_vocabulary": [
+      "Sportverein",
+      "Schwimmkurs",
+      "Yoga",
+      "Laufgruppe",
+      "Mitgliedschaft",
+      "Probetraining",
+      "Mannschaft",
+      "Halle"
+    ],
+    "generated_at": "2026-03-10T23:32:00+07:00",
+    "version": 1
+  },
+  "anzeigen": [
+    {
+      "id": "A",
+      "text": "Schwimmkurs für Kinder (6–10 Jahre) — Anfänger und Fortgeschrittene. 10 Einheiten, Sa 9–10 Uhr. Max. 8 Kinder pro Gruppe. 95 €. Hallenbad Mitte. Anmeldung: schwimmschule@mitte.de"
+    },
+    {
+      "id": "B",
+      "text": "Tennisclub Grünwald sucht neue Mitglieder! Plätze (Freien + Halle), Trainerstunden, Turniere. Jahresbeitrag: Erwachsene 360 €, Jugend 120 €. Probetraining kostenlos! www.tc-gruenwald.de"
+    },
+    {
+      "id": "C",
+      "text": "Yoga im Park — Jeden Sonntag, 10–11 Uhr, Englischer Garten. Bring deine eigene Matte mit. Für alle Niveaus. Auf Spendenbasis (empfohlen: 5 €). Bei Regen entfällt der Kurs. Instagram: @yogaimpark"
+    },
+    {
+      "id": "D",
+      "text": "Fußball-Mannschaft sucht Spieler! Herren, Kreisliga, Training Di + Do 19–21 Uhr. Spielerfahrung erwünscht. Saisonbeitrag: 80 €. FC Union Altona. Kontakt: trainer@fc-altona.de"
+    },
+    {
+      "id": "E",
+      "text": "Kletterhalle BoulderWorld — Täglich 10–22 Uhr. Tageskarte: 12 €, 10er-Karte: 95 €. Einsteigerkurs jeden Samstag 14 Uhr (kostenlos mit Tageskarte). Schuhverleih: 4 €. www.boulderworld.de"
+    },
+    {
+      "id": "F",
+      "text": "Seniorensport: Gymnastik und Balance — Jeden Mi, 10–11 Uhr. Für Menschen ab 65. Sturzprävention, sanfte Bewegung. 5 €/Stunde. Gemeindehaus St. Markus, Eppendorf."
+    },
+    {
+      "id": "G",
+      "text": "Kampfsport für Frauen — Selbstverteidigungskurs (Krav Maga). 8 Wochen, Mo 20–21:30 Uhr. Keine Vorkenntnisse nötig. 130 €. Kampfsporthalle Schöneberg. Info: www.kravmaga-berlin.de"
+    },
+    {
+      "id": "H",
+      "text": "SUP-Kurs auf der Alster — Stand-Up-Paddling für Anfänger. Samstag 12–14 Uhr, Mai–September. Board und Neopren inklusive. 45 € pro Person. Wassersportzentrum Alster. Online buchen."
+    }
+  ],
+  "situationen": [
+    {
+      "id": "S1",
+      "text": "Herr Petersen (70) sucht einen sanften Sportkurs am Vormittag, der gut für sein Gleichgewicht ist.",
+      "answer": "F"
+    },
+    {
+      "id": "S2",
+      "text": "Sara möchte eine Kampfsportart lernen, um sich selbst verteidigen zu können. Sie hat keine Erfahrung.",
+      "answer": "G"
+    },
+    {
+      "id": "S3",
+      "text": "Die 8-jährige Leonie soll samstags schwimmen lernen. Sie ist Anfängerin.",
+      "answer": "A"
+    },
+    {
+      "id": "S4",
+      "text": "Max möchte am Wochenende Yoga machen, möglichst draussen und günstig.",
+      "answer": "C"
+    },
+    {
+      "id": "S5",
+      "text": "Ben hat früher Fußball gespielt und sucht eine Mannschaft für regelmäßiges Abendtraining.",
+      "answer": "D"
+    }
+  ],
+  "null_matches": [
+    "B",
+    "E",
+    "H"
+  ],
+  "images": [
+    {
+      "id": "IMG1",
+      "type": "scene",
+      "prompt": "Cute cartoon illustration of a sports center notice board with ads for swimming, yoga, football, climbing, martial arts. Fuxie cartoon style, flat illustration, warm pastel colors, no text.",
+      "filename": "B1-T3-008_scene.png",
+      "placement": "header",
+      "alt_text": "Sport-Anzeigen",
+      "dimensions": "768x512"
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q1",
+      "teil": 3,
+      "type": "matching",
+      "stem": "Herr Petersen (70) sucht sanften Vormittagssport für Gleichgewicht.",
+      "answer": "F",
+      "points": 1,
+      "explanation": {
+        "de": "Seniorensport bietet Gymnastik und Balance, Mi 10–11 Uhr, ab 65 Jahre.",
+        "key_evidence": "ab 65 / Sturzprävention, sanfte Bewegung / Mi 10–11 Uhr",
+        "key_vocabulary": [
+          {
+            "word": "Sturzprävention",
+            "type": "Nomen",
+            "meaning": "fall prevention"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q2",
+      "teil": 3,
+      "type": "matching",
+      "stem": "Die Position, dass sara sucht Selbstverteidigungskurs ohne Vorkenntnisse, findet sich bei:",
+      "answer": "G",
+      "points": 1,
+      "explanation": {
+        "de": "Der Krav-Maga-Kurs ist für Frauen, keine Vorkenntnisse nötig.",
+        "key_evidence": "Selbstverteidigungskurs / Keine Vorkenntnisse nötig",
+        "key_vocabulary": [
+          {
+            "word": "Selbstverteidigung",
+            "type": "Nomen",
+            "meaning": "self-defense"
+          }
+        ],
+        "reasoning": "[Inferential] "
+      }
+    },
+    {
+      "id": "Q3",
+      "teil": 3,
+      "type": "matching",
+      "stem": "Leonie (8) soll samstags Schwimmen lernen, Anfängerin.",
+      "answer": "A",
+      "points": 1,
+      "explanation": {
+        "de": "Schwimmkurs für Kinder 6–10 Jahre, Sa 9–10 Uhr, Anfänger.",
+        "key_evidence": "6–10 Jahre / Anfänger / Sa 9–10 Uhr",
+        "key_vocabulary": [
+          {
+            "word": "Schwimmkurs",
+            "type": "Nomen",
+            "meaning": "swimming course"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q4",
+      "teil": 3,
+      "type": "matching",
+      "stem": "Max möchte am Wochenende günstig draußen Yoga machen.",
+      "answer": "C",
+      "points": 1,
+      "explanation": {
+        "de": "Yoga im Park ist sonntags, draussen, auf Spendenbasis.",
+        "key_evidence": "Sonntag / Englischer Garten / Auf Spendenbasis",
+        "key_vocabulary": [
+          {
+            "word": "Spendenbasis",
+            "type": "Nomen",
+            "meaning": "donation basis"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q5",
+      "teil": 3,
+      "type": "matching",
+      "stem": "Ben sucht eine Fußballmannschaft mit Abendtraining.",
+      "answer": "D",
+      "points": 1,
+      "explanation": {
+        "de": "FC Altona sucht Spieler, Training Di + Do 19–21 Uhr.",
+        "key_evidence": "Fußball-Mannschaft sucht Spieler / Training Di + Do 19–21 Uhr",
+        "key_vocabulary": [
+          {
+            "word": "Kreisliga",
+            "type": "Nomen",
+            "meaning": "district league"
+          }
+        ]
+      }
+    }
+  ],
+  "scoring": {
+    "total_points": 5,
+    "pass_threshold": 3,
+    "grading": [
+      {
+        "range": [
+          5,
+          5
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          4,
+          4
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          3,
+          3
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          1,
+          2
+        ],
+        "label": "Noch üben!",
+        "emoji": "📝"
+      },
+      {
+        "range": [
+          0,
+          0
+        ],
+        "label": "Mehr Übung nötig",
+        "emoji": "💪"
+      }
+    ]
+  },
+  "qa": {
+    "vocab_in_b1_list": true,
+    "grammar_b1_appropriate": true,
+    "word_count_in_range": true,
+    "all_answers_verifiable": true,
+    "null_matches_correct": true,
+    "image_count": 1,
+    "passed": true
+  }
+}

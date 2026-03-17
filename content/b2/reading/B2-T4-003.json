@@ -1,0 +1,172 @@
+{
+  "id": "B2-T4-003",
+  "level": "B2",
+  "teil": 4,
+  "teil_name": "Kommentare lesen",
+  "topic": "Kultur & Kunst",
+  "topic_id": "003",
+  "metadata": {
+    "word_count": 120,
+    "target_grammar": [
+      "Konjunktiv II",
+      "Passiv",
+      "Nominalisierung",
+      "Relativsatze"
+    ],
+    "target_vocabulary": [],
+    "generated_at": "2026-03-11T22:37:08.661642",
+    "version": 1
+  },
+  "forum": {
+    "question": "Sollten Museumsbesuche fur alle kostenlos sein?",
+    "comments": [
+      {
+        "name": "Sophie Lehmann",
+        "position": "ja",
+        "text": "Kunst und Kultur durfen kein Privileg der Wohlhabenden sein. In Grossbritannien sind die grossen Nationalmuseen seit 2001 kostenlos, und die Besucherzahlen haben sich verdoppelt. Kostenloser Zugang fordert die kulturelle Teilhabe aller Bevolkerungsschichten."
+      },
+      {
+        "name": "Dr. Kurt Zimmermann",
+        "position": "nein",
+        "text": "Als Museumsdirektor weiss ich, dass Eintrittsgelder einen erheblichen Teil unseres Budgets ausmachen. Ohne diese Einnahmen mussten wir bei Ausstellungen, Restaurierung und Bildungsprogrammen drastisch kurzen. Das ware kontraproduktiv."
+      },
+      {
+        "name": "Claudia Fischer",
+        "position": "ja",
+        "text": "Ich bin alleinerziehende Mutter von zwei Kindern. Ein Museumsbesuch fur uns drei kostet schnell 30 bis 40 Euro. Das konnen wir uns schlicht nicht leisten. Kulturelle Bildung sollte fur Familien wie unsere zuganglich sein."
+      },
+      {
+        "name": "Prof. Dr. Hans Keller",
+        "position": "nein",
+        "text": "Ein gewisser Eintrittspreis signalisiert Wertschatzung. Was nichts kostet, wird oft auch nicht wertgeschatzt. Statt alle Museen kostenlos zu machen, sollten wir gezielt Ermassigungen fur bedurftige Gruppen anbieten."
+      }
+    ]
+  },
+  "images": [
+    {
+      "id": "IMG1",
+      "type": "scene",
+      "prompt": "Cute cartoon illustration of people having a discussion forum about Kultur & Kunst, showing speech bubbles with different opinions. Fuxie cartoon style, flat illustration, warm pastel colors, no text.",
+      "filename": "B2-T4-003_scene.png",
+      "placement": "header",
+      "alt_text": "Sollten Museumsbesuche fur alle kostenlos sein?",
+      "dimensions": "768x512"
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q1",
+      "teil": 4,
+      "type": "ja_nein",
+      "stem": "Der Autor ist der Meinung, dass sophie Lehmann verweist auf positive Erfahrungen aus Grossbritannien.",
+      "answer": "ja",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Sophie Lehmann verweist auf positive Erfahrungen aus Grossbritannien.",
+        "reasoning": "[Inferential] Die richtige Antwort ergibt sich aus dem Text."
+      }
+    },
+    {
+      "id": "Q2",
+      "teil": 4,
+      "type": "ja_nein",
+      "stem": "Aus dem Text lässt sich schließen, dass dr. Zimmermann halt kostenlose Museen fur finanziell unproblematisch.",
+      "answer": "nein",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Dr. Zimmermann halt kostenlose Museen fur finanziell unproblematisch.",
+        "reasoning": "[Inferential] Die richtige Antwort ergibt sich aus dem Text."
+      }
+    },
+    {
+      "id": "Q3",
+      "teil": 4,
+      "type": "ja_nein",
+      "stem": "Claudia Fischer kann sich Museumsbesuche fur ihre Familie leisten.",
+      "answer": "nein",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Claudia Fischer kann sich Museumsbesuche fur ihre Familie leisten.",
+        "reasoning": "Die richtige Antwort ergibt sich aus dem Text."
+      }
+    },
+    {
+      "id": "Q4",
+      "teil": 4,
+      "type": "ja_nein",
+      "stem": "Prof. Keller schlagt gezielte Ermassigungen statt genereller Kostenfreiheit vor.",
+      "answer": "ja",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Prof. Keller schlagt gezielte Ermassigungen statt genereller Kostenfreiheit vor.",
+        "reasoning": "Die richtige Antwort ergibt sich aus dem Text."
+      }
+    },
+    {
+      "id": "Q5",
+      "teil": 4,
+      "type": "ja_nein",
+      "stem": "Aus dem Text lässt sich schließen, dass alle Kommentatoren finden, dass Museen kostenlos sein sollten.",
+      "answer": "nein",
+      "points": 1,
+      "explanation": {
+        "key_evidence": "Alle Kommentatoren finden, dass Museen kostenlos sein sollten.",
+        "reasoning": "[Inferential] Die richtige Antwort ergibt sich aus dem Text."
+      }
+    }
+  ],
+  "scoring": {
+    "total_points": 5,
+    "pass_threshold": 3,
+    "grading": [
+      {
+        "range": [
+          5,
+          5
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          4,
+          4
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          3,
+          3
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          1,
+          2
+        ],
+        "label": "Noch uben!",
+        "emoji": "📝"
+      },
+      {
+        "range": [
+          0,
+          0
+        ],
+        "label": "Mehr Ubung notig",
+        "emoji": "💪"
+      }
+    ]
+  },
+  "qa": {
+    "vocab_in_b2_list": true,
+    "grammar_b2_appropriate": true,
+    "word_count_in_range": true,
+    "all_answers_verifiable": true,
+    "image_count": 1,
+    "passed": true
+  }
+}

@@ -1,0 +1,244 @@
+{
+  "id": "A2-T3-007",
+  "level": "A2",
+  "teil": 3,
+  "teil_name": "Kleinanzeigen zuordnen",
+  "topic": "Unterwegs",
+  "topic_id": "007",
+  "metadata": {
+    "word_count": 177,
+    "target_grammar": [
+      "Modalverben",
+      "Nebensatz mit weil"
+    ],
+    "target_vocabulary": [
+      "Mitfahrgelegenheit",
+      "Autovermietung",
+      "Fahrradverleih",
+      "Monatsticket",
+      "Taxi",
+      "Carsharing",
+      "Strecke",
+      "Führerschein",
+      "Fahrt",
+      "Abonnement"
+    ],
+    "generated_at": "2026-03-09T22:38:00+07:00",
+    "version": 1
+  },
+  "anzeigen": [
+    {
+      "id": "A",
+      "text": "Mitfahrgelegenheit: Berlin → Hamburg, Freitag 15:00. 2 Plätze frei. 15 € pro Person. Nichtraucher-Auto. Rückfahrt Sonntag 18:00 möglich. Kontakt: Nico, 0176-2233445."
+    },
+    {
+      "id": "B",
+      "text": "City-Car Autovermietung. Kleinwagen ab 29 €/Tag. Führerschein und Ausweis nötig. Mindestalter 21. Abholen: Flughafen oder Hauptbahnhof. Online buchen: www.citycar-berlin.de"
+    },
+    {
+      "id": "C",
+      "text": "Stadtrad Berlin — Fahrradverleih! 1 €/30 Minuten oder 9 € Tageskarte. Über 200 Stationen in der Stadt. App herunterladen und sofort losfahren. Helm wird empfohlen."
+    },
+    {
+      "id": "D",
+      "text": "BVG-Abo zum Sonderpreis! Monatsticket AB: statt 86 € nur 49 € für Schüler und Azubis. Gültig in allen Bussen, Bahnen und Trams. Info: www.bvg.de/schuelerabo"
+    },
+    {
+      "id": "E",
+      "text": "Taxi-Zentrale Berlin. 24 Stunden, 7 Tage die Woche. Festpreis zum Flughafen BER: 39 €. Großraumtaxi für Gruppen verfügbar. Anruf: 030-202020 oder App."
+    },
+    {
+      "id": "F",
+      "text": "ShareNow Carsharing: Autos in der ganzen Stadt finden und sofort losfahren! Ab 0,29 €/Minute. Registrierung kostenlos. Tanken und Parken inklusive. Nur mit Führerschein."
+    }
+  ],
+  "images": [
+    {
+      "id": "IMG1",
+      "type": "scene",
+      "prompt": "Cute cartoon illustration of a community notice board with six colorful transport-themed classified ads — carpool, car rental, bike sharing, transit pass, taxi, car sharing. Fuxie cartoon style, flat illustration, warm pastel colors, no readable text.",
+      "filename": "A2-T3-007_scene.png",
+      "placement": "header",
+      "alt_text": "Kleinanzeigen zum Thema Mobilität",
+      "dimensions": "768x512"
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q1",
+      "teil": 3,
+      "type": "matching",
+      "situation": "Lukas ist Schüler und fährt jeden Tag mit dem Bus zur Schule. Er sucht ein günstiges Monatsticket.",
+      "answer": "D",
+      "points": 1,
+      "explanation": {
+        "de": "Anzeige D bietet ein BVG-Abo zum Sonderpreis für Schüler und Azubis.",
+        "key_evidence": "BVG-Abo zum Sonderpreis! Monatsticket AB: nur 49 € für Schüler und Azubis",
+        "key_vocabulary": [
+          {
+            "word": "Monatsticket",
+            "type": "Nomen",
+            "meaning": "monthly pass"
+          },
+          {
+            "word": "Abonnement",
+            "type": "Nomen",
+            "meaning": "subscription"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q2",
+      "teil": 3,
+      "type": "matching",
+      "situation": "Frau Hansen muss am Freitag von Berlin nach Hamburg fahren. Sie möchte nicht allein fahren und Geld sparen.",
+      "answer": "A",
+      "points": 1,
+      "explanation": {
+        "de": "Anzeige A bietet eine Mitfahrgelegenheit Berlin → Hamburg am Freitag für 15 €.",
+        "key_evidence": "Mitfahrgelegenheit: Berlin → Hamburg, Freitag 15:00. 15 € pro Person",
+        "key_vocabulary": [
+          {
+            "word": "Mitfahrgelegenheit",
+            "type": "Nomen",
+            "meaning": "ride share"
+          },
+          {
+            "word": "Nichtraucher",
+            "type": "Nomen",
+            "meaning": "non-smoker"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q3",
+      "teil": 3,
+      "type": "matching",
+      "situation": "Pedro ist Tourist in Berlin und möchte die Stadt mit dem Fahrrad erkunden.",
+      "answer": "C",
+      "points": 1,
+      "explanation": {
+        "de": "Anzeige C ist Stadtrad Berlin, Fahrradverleih mit über 200 Stationen.",
+        "key_evidence": "Stadtrad Berlin — Fahrradverleih! 9 € Tageskarte. Über 200 Stationen",
+        "key_vocabulary": [
+          {
+            "word": "Fahrradverleih",
+            "type": "Nomen",
+            "meaning": "bicycle rental"
+          },
+          {
+            "word": "Tageskarte",
+            "type": "Nomen",
+            "meaning": "day pass"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q4",
+      "teil": 3,
+      "type": "matching",
+      "situation": "Familie Schuster fliegt morgen in den Urlaub. Sie haben viel Gepäck und brauchen einen Transport zum Flughafen.",
+      "answer": "E",
+      "points": 1,
+      "explanation": {
+        "de": "Anzeige E ist die Taxi-Zentrale mit Festpreis zum Flughafen BER (39 €), auch Großraumtaxi.",
+        "key_evidence": "Festpreis zum Flughafen BER: 39 €. Großraumtaxi für Gruppen verfügbar",
+        "key_vocabulary": [
+          {
+            "word": "Festpreis",
+            "type": "Nomen",
+            "meaning": "fixed price"
+          },
+          {
+            "word": "Großraumtaxi",
+            "type": "Nomen",
+            "meaning": "large taxi / van taxi"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q5",
+      "teil": 3,
+      "type": "matching",
+      "situation": "Julia braucht nur für ein paar Stunden ein Auto. Sie möchte flexibel sein und kein Auto für den ganzen Tag mieten.",
+      "answer": "F",
+      "points": 1,
+      "explanation": {
+        "de": "Anzeige F ist ShareNow Carsharing, ab 0,29 €/Minute, spontan nutzbar.",
+        "key_evidence": "ShareNow Carsharing: Autos finden und sofort losfahren! Ab 0,29 €/Minute",
+        "key_vocabulary": [
+          {
+            "word": "Carsharing",
+            "type": "Nomen",
+            "meaning": "car sharing"
+          },
+          {
+            "word": "flexibel",
+            "type": "Adjektiv",
+            "meaning": "flexible"
+          }
+        ]
+      }
+    }
+  ],
+  "scoring": {
+    "total_points": 5,
+    "pass_threshold": 3,
+    "grading": [
+      {
+        "range": [
+          5,
+          5
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          4,
+          4
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          3,
+          3
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          1,
+          2
+        ],
+        "label": "Noch üben!",
+        "emoji": "📝"
+      },
+      {
+        "range": [
+          0,
+          0
+        ],
+        "label": "Mehr Übung nötig",
+        "emoji": "💪"
+      }
+    ]
+  },
+  "qa": {
+    "vocab_in_a2_list": true,
+    "grammar_a2_only": true,
+    "word_count_in_range": true,
+    "all_answers_verifiable": true,
+    "matching_no_duplicate_answers": true,
+    "six_ads_present": true,
+    "image_count": 1,
+    "passed": true
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "id": "W-A2-T2-003",
+  "cefrLevel": "A2",
+  "teil": 2,
+  "teilName": "Persoenliche Mitteilung",
+  "textType": "Mitteilung",
+  "register": "halbformell",
+  "topic": "Paket",
+  "instruction": "Schreiben Sie eine kurze Mitteilung (ca. 40-60 Woerter).",
+  "instructionVi": "Viet tin nhan: Paket.",
+  "situation": "Sie sind morgen nicht da. Schreiben Sie der Nachbarin.",
+  "contentPoints": [
+    "bitten Paket anzunehmen",
+    "erklaeren warum nicht da",
+    "sich bedanken"
+  ],
+  "minWords": 40,
+  "maxWords": 70,
+  "timeMinutes": 15,
+  "rubric": {
+    "criteria": [
+      {
+        "id": "inhalt",
+        "name": "Inhalt",
+        "nameVi": "Noi dung",
+        "maxScore": 5,
+        "weight": 30
+      },
+      {
+        "id": "korrektheit",
+        "name": "Korrektheit",
+        "nameVi": "Chinh xac",
+        "maxScore": 5,
+        "weight": 35
+      },
+      {
+        "id": "angemessenheit",
+        "name": "Kommunikative Angemessenheit",
+        "nameVi": "Phu hop giao tiep",
+        "maxScore": 5,
+        "weight": 35
+      }
+    ],
+    "maxScore": 15
+  },
+  "maxScore": 15,
+  "sourceText": "Sie erhielten am 14. Oktober eine Nachricht von DHL: Ihr Paket wurde bei Frau Schmidt (Schillerstraße 12) abgegeben. Da die Nachbarin jedoch für zwei Wochen im Urlaub ist, benötigen Sie Hilfe vom Kundenservice, um den Inhalt dringend für ein Fest am Wochenende zu erhalten.",
+  "sourceTextType": "E-Mail / Situationsbeschreibung",
+  "stimulusSender": "DHL Paketbenachrichtigung",
+  "grafikData": []
+}
