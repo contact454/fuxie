@@ -38,16 +38,12 @@ const nextConfig: NextConfig = {
         FIREBASE_SERVICE_ACCOUNT_KEY: process.env.FIREBASE_SERVICE_ACCOUNT_KEY,
         AUTH_COOKIE_SECRET: process.env.AUTH_COOKIE_SECRET,
     },
-    // Rewrite /images/* and /audio/* to GCS in production
+    // Rewrite /images/* to GCS in production (audio served directly from public/)
     async rewrites() {
         return [
             {
                 source: '/images/:path*',
                 destination: 'https://storage.googleapis.com/fuxie-images/images/:path*',
-            },
-            {
-                source: '/audio/:path*',
-                destination: 'https://storage.googleapis.com/fuxie-images/audio/:path*',
             },
         ]
     },
