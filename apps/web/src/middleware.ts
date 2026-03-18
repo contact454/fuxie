@@ -6,7 +6,7 @@ import {
 } from 'next-firebase-auth-edge'
 import { authConfig } from '@/lib/auth/config'
 
-const AUTH_PAGES = ['/login', '/register']
+const AUTH_PAGES = ['/', '/login', '/register']
 
 export async function middleware(request: NextRequest) {
     return authMiddleware(request, {
@@ -14,7 +14,7 @@ export async function middleware(request: NextRequest) {
         logoutPath: '/api/auth/logout',
         ...authConfig,
         handleValidToken: async ({ token, decodedToken }, headers) => {
-            // Authenticated user trying to access login/register → redirect to dashboard
+            // Authenticated user trying to access root/login/register → redirect to dashboard
             if (AUTH_PAGES.includes(request.nextUrl.pathname)) {
                 return redirectToHome(request, { path: '/dashboard' })
             }
@@ -27,7 +27,6 @@ export async function middleware(request: NextRequest) {
             return redirectToLogin(request, {
                 path: '/login',
                 publicPaths: [
-                    '/',
                     '/login',
                     '/register',
                     '/api/auth/login',
