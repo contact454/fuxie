@@ -51,6 +51,9 @@ docker-compose.override.yml
 
 # Large static assets (images served via CDN/GCS in production)
 apps/web/public/images/
+# But track grammar diagrams (small, essential for learning)
+!apps/web/public/images/grammar/
+!apps/web/public/images/grammar/**
 
 # Mascot source files
 Fuxie/
