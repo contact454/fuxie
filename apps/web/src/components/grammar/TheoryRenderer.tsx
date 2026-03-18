@@ -1,15 +1,33 @@
 'use client'
 
 import React, { useState } from 'react'
+import Image from 'next/image'
 import type {
   TheoryBlock, RuleBlock, ParadigmTableBlock, ExamplesBlock,
   KeyTakeawayBlock, MnemonicBlock, ContrastBlock,
   SituationBlock, DiscoveryBlock, CommonMistakesBlock
 } from './types'
+import { grammarDiagrams, type TopicDiagrams } from './diagramConfig'
 import s from './grammar.module.css'
 
+// ─── Diagram Image ───────────────────────────────────
+function DiagramImage({ src, alt }: { src: string; alt: string }) {
+  return (
+    <div className={s.diagramWrap}>
+      <Image
+        src={src}
+        alt={alt}
+        width={560}
+        height={560}
+        className={s.diagramImg}
+        priority={false}
+      />
+    </div>
+  )
+}
+
 // ─── Rule Card ───────────────────────────────────────
-function RuleCard({ block }: { block: RuleBlock }) {
+function RuleCard({ block, diagrams }: { block: RuleBlock; diagrams?: TopicDiagrams }) {
   return (
     <div className={s.theoryCard}>
       <div className={s.cardHeader}>
@@ -25,6 +43,7 @@ function RuleCard({ block }: { block: RuleBlock }) {
         </ol>
       )}
       {block.formula && <div className={s.formulaBox}>{block.formula}</div>}
+      {diagrams?.rule && <DiagramImage src={diagrams.rule} alt="Grammar rule diagram" />}
       {block.comparison_vi && (
         <div className={s.comparisonBox}>
           {block.comparison_vi.split('\n').map((line, i) => (
@@ -38,7 +57,7 @@ function RuleCard({ block }: { block: RuleBlock }) {
 }
 
 // ─── Paradigm Table ──────────────────────────────────
-function ParadigmTable({ block }: { block: ParadigmTableBlock }) {
+function ParadigmTable({ block, diagrams }: { block: ParadigmTableBlock; diagrams?: TopicDiagrams }) {
   const hlCols = new Set(block.highlight_columns ?? [])
   return (
     <div className={s.theoryCard}>
@@ -46,6 +65,7 @@ function ParadigmTable({ block }: { block: ParadigmTableBlock }) {
         <span className={s.cardIcon}>📊</span>
         <span className={`${s.cardLabel} ${s.labelTable}`}>BẢNG CHIA</span>
       </div>
+      {diagrams?.table && <DiagramImage src={diagrams.table} alt="Conjugation table diagram" />}
       <div className={s.tableWrap}>
         <table className={s.grammarTable}>
           <thead>
@@ -120,7 +140,7 @@ function KeyTakeaway({ block }: { block: KeyTakeawayBlock }) {
 }
 
 // ─── Mnemonic Card ───────────────────────────────────
-function MnemonicCard({ block }: { block: MnemonicBlock }) {
+function MnemonicCard({ block, diagrams }: { block: MnemonicBlock; diagrams?: TopicDiagrams }) {
   return (
     <div className={`${s.theoryCard} ${s.mnemonicCard}`}>
       <div className={s.cardHeader}>
@@ -131,6 +151,7 @@ function MnemonicCard({ block }: { block: MnemonicBlock }) {
         <div className={s.mnemonicVisual}>{block.visual_emoji}</div>
       )}
       <div className={s.mnemonicText}>{block.text_vi}</div>
+      {diagrams?.mnemonic && <DiagramImage src={diagrams.mnemonic} alt="Mnemonic diagram" />}
     </div>
   )
 }
@@ -240,16 +261,17 @@ function CommonMistakesCard({ block }: { block: CommonMistakesBlock }) {
 }
 
 // ─── Dispatcher ──────────────────────────────────────
-export function TheoryRenderer({ blocks }: { blocks: TheoryBlock[] }) {
+export function TheoryRenderer({ blocks, topicSlug }: { blocks: TheoryBlock[]; topicSlug?: string }) {
+  const diagrams = topicSlug ? grammarDiagrams[topicSlug] : undefined
   return (
     <div className={s.theoryContainer}>
       {blocks.map((block, i) => {
         switch (block.type) {
-          case 'rule':            return <RuleCard key={i} block={block} />
-          case 'paradigm_table':  return <ParadigmTable key={i} block={block} />
+          case 'rule':            return <RuleCard key={i} block={block} diagrams={diagrams} />
+          case 'paradigm_table':  return <ParadigmTable key={i} block={block} diagrams={diagrams} />
           case 'examples':        return <ExampleCards key={i} block={block} />
           case 'key_takeaway':    return <KeyTakeaway key={i} block={block} />
-          case 'mnemonic':        return <MnemonicCard key={i} block={block} />
+          case 'mnemonic':        return <MnemonicCard key={i} block={block} diagrams={diagrams} />
           case 'contrast':        return <ContrastBox key={i} block={block} />
           case 'situation':       return <SituationCard key={i} block={block} />
           case 'discovery':       return <DiscoveryCard key={i} block={block} />

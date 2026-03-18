@@ -247,7 +247,7 @@ export function LessonPlayer({
             {currentStep.type === 'theory' && (
                 <div className={s.stepContainer} key={`theory-${currentStep.blockIndex}`}>
                     <div className={s.stepContent}>
-                        <TheoryRenderer blocks={[theoryBlocks[currentStep.blockIndex]]} />
+                        <TheoryRenderer blocks={[theoryBlocks[currentStep.blockIndex]]} topicSlug={topicSlug} />
                     </div>
                     <div className={s.stepFooter}>
                         <div className={s.stepFooterInner}>
