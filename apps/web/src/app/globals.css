@@ -313,3 +313,205 @@ body {
 .mascot-loading-bounce .mascot-image {
   animation: mascotBounce 1s ease-in-out infinite;
 }
+
+/* ===== MOBILE RESPONSIVE ===== */
+
+/* Slide-in animation for drawer */
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* Mobile header — only display on screens < md */
+@media (max-width: 767px) {
+  .mobile-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 40;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 56px;
+    padding: 0 16px;
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  }
+}
+
+.mobile-header-hamburger {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  color: #374151;
+  transition: background-color 0.15s;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.mobile-header-hamburger:hover {
+  background-color: #f3f4f6;
+}
+
+.mobile-header-logo {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+}
+
+.mobile-header-xp {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 10px;
+  border-radius: 20px;
+  background: linear-gradient(135deg, rgba(255, 107, 53, 0.08), rgba(46, 196, 182, 0.08));
+}
+
+/* Sidebar backdrop overlay */
+.sidebar-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 40;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  animation: fadeIn 0.2s ease-out both;
+}
+
+/* Sidebar drawer */
+.sidebar-drawer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 50;
+  width: 280px;
+  max-width: 85vw;
+  background: white;
+  box-shadow: 4px 0 24px rgba(0, 0, 0, 0.12);
+  transform: translateX(-100%);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+
+.sidebar-drawer-open {
+  transform: translateX(0);
+}
+
+.sidebar-drawer-close-row {
+  display: flex;
+  justify-content: flex-end;
+  padding: 12px 12px 0;
+}
+
+.sidebar-drawer-close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  color: #6b7280;
+  transition: background-color 0.15s;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.sidebar-drawer-close:hover {
+  background-color: #f3f4f6;
+}
+
+/* Mobile main content — top padding for header, bottom for nav */
+.mobile-main {
+  flex: 1;
+  padding-top: 56px;
+  padding-bottom: calc(64px + env(safe-area-inset-bottom, 0px));
+}
+
+@media (min-width: 768px) {
+  .mobile-main {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+
+/* Bottom navigation — only display on screens < md */
+@media (max-width: 767px) {
+  .bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 40;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: calc(64px + env(safe-area-inset-bottom, 0px));
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-top: 1px solid rgba(0, 0, 0, 0.06);
+  }
+}
+
+.bottom-nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  padding: 6px 12px;
+  border-radius: 12px;
+  text-decoration: none;
+  transition: all 0.2s ease-out;
+  min-width: 56px;
+}
+
+.bottom-nav-icon {
+  font-size: 20px;
+  line-height: 1;
+  transition: transform 0.2s ease-out;
+}
+
+.bottom-nav-label {
+  font-size: 10px;
+  font-weight: 500;
+  color: #9ca3af;
+  white-space: nowrap;
+}
+
+.bottom-nav-item-active .bottom-nav-icon {
+  transform: scale(1.15);
+}
+
+.bottom-nav-item-active .bottom-nav-label {
+  color: #FF6B35;
+  font-weight: 600;
+}
+
+.bottom-nav-item:not(.bottom-nav-item-active):active {
+  transform: scale(0.95);
+}
+
+/* Drawer sidebar override — remove border and width constraint */
+.sidebar-drawer aside {
+  border-right: none;
+  width: 100%;
+  height: 100%;
+}

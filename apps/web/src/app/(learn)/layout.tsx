@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { prisma } from '@fuxie/database'
 import { getServerUser } from '@/lib/auth/server-auth'
-import { Sidebar } from '@/components/shared/sidebar'
+import { MobileShell } from '@/components/shared/mobile-shell'
 
 export const metadata: Metadata = {
     title: 'Fuxie 🦊 — Lernen',
@@ -46,8 +46,10 @@ export default async function LearnLayout({ children }: { children: React.ReactN
 
     return (
         <div className="flex min-h-screen bg-gray-50">
-            <Sidebar dailyGoal={dailyGoal} />
-            <main className="flex-1 ml-64">{children}</main>
+            <MobileShell dailyGoal={dailyGoal}>
+                {children}
+            </MobileShell>
         </div>
     )
 }
+
