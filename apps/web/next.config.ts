@@ -40,24 +40,69 @@ const nextConfig: NextConfig = {
         FIREBASE_SERVICE_ACCOUNT_KEY: process.env.FIREBASE_SERVICE_ACCOUNT_KEY,
         AUTH_COOKIE_SECRET: process.env.AUTH_COOKIE_SECRET,
     },
-    // Rewrite /images/* to GCS in production (audio served directly from public/)
+    // Rewrite /images/* to GCS, /audio/* to Cloudflare R2 in production
     async rewrites() {
         return [
             {
                 source: '/images/:path*',
                 destination: 'https://storage.googleapis.com/fuxie-images/images/:path*',
             },
+            {
+                source: '/audio/:path*',
+                destination: 'https://pub-625435748a97403aae6db93258050afd.r2.dev/audio/:path*',
+            },
         ]
     },
-    // Fix COOP for Firebase signInWithPopup
+    // Fix COOP for Firebase signInWithPopup + CDN cache headers for static media
     async headers() {
         return [
+            // COOP for Firebase popup auth
             {
                 source: '/(.*)',
                 headers: [
                     {
                         key: 'Cross-Origin-Opener-Policy',
                         value: 'same-origin-allow-popups',
+                    },
+                ],
+            },
+            // GCS images — immutable, cache 1 year at Vercel Edge + browser
+            {
+                source: '/images/:path*',
+                headers: [
+                    {
+                        key: 'Cache-Control',
+                        value: 'public, max-age=31536000, immutable',
+                    },
+                ],
+            },
+            // Audio lessons — immutable, cache 1 year
+            {
+                source: '/audio/:path*',
+                headers: [
+                    {
+                        key: 'Cache-Control',
+                        value: 'public, max-age=31536000, immutable',
+                    },
+                ],
+            },
+            // Mascot images — cache 30 days (may update occasionally)
+            {
+                source: '/mascot/:path*',
+                headers: [
+                    {
+                        key: 'Cache-Control',
+                        value: 'public, max-age=2592000, stale-while-revalidate=86400',
+                    },
+                ],
+            },
+            // Grammar diagrams — immutable, cache 1 year
+            {
+                source: '/grammar/:path*',
+                headers: [
+                    {
+                        key: 'Cache-Control',
+                        value: 'public, max-age=31536000, immutable',
                     },
                 ],
             },

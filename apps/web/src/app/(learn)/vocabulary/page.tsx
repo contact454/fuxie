@@ -1,6 +1,7 @@
 import { redirect } from 'next/navigation'
 import { prisma } from '@fuxie/database'
 import { getServerUser } from '@/lib/auth/server-auth'
+import { cacheWrap } from '@/lib/cache/redis'
 import { VocabularyClient } from '@/components/vocabulary/vocabulary-client'
 
 export const dynamic = 'force-dynamic'
@@ -86,7 +87,7 @@ export default async function VocabularyPage() {
     const serverUser = await getServerUser()
     if (!serverUser) redirect('/login')
 
-    const availableLevels = await getAvailableLevels()
+    const availableLevels = await cacheWrap('vocab:levels', 3600, getAvailableLevels)
     const defaultLevel: CefrLevel = availableLevels[0] || 'A1'
     const { themes, totalWords, totalDue } = await getThemes(serverUser.userId, defaultLevel)
 

@@ -49,8 +49,9 @@ docker-compose.override.yml
 .gemini/
 .agents/
 
-# Large static assets (images served via CDN/GCS in production)
+# Large static assets (served via CDN in production)
 apps/web/public/images/
+apps/web/public/audio/
 # But track grammar diagrams (small, essential for learning)
 !apps/web/public/images/grammar/
 !apps/web/public/images/grammar/**

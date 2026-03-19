@@ -14,6 +14,7 @@
         "@fuxie/database": "workspace:*",
         "@fuxie/shared": "workspace:*",
         "@fuxie/srs-engine": "workspace:*",
+        "@google/generative-ai": "^0.24.1",
         "@hono/node-server": "^1.14.0",
         "@hono/zod-validator": "^0.4.2",
         "hono": "^4.7.2",
@@ -21,6 +22,7 @@
     },
     "devDependencies": {
         "@fuxie/typescript-config": "workspace:*",
+        "@types/node": "^22.12.0",
         "tsx": "^4.19.2",
         "typescript": "^5.7.3"
     }

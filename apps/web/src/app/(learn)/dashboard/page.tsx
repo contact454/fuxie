@@ -2,6 +2,7 @@ import { Suspense } from 'react'
 import { redirect } from 'next/navigation'
 import { prisma } from '@fuxie/database'
 import { getServerUser } from '@/lib/auth/server-auth'
+import { cacheWrap } from '@/lib/cache/redis'
 import { DashboardClient } from '@/components/dashboard/dashboard-client'
 import { StatsSkeleton, ContentSkeleton } from '@/components/dashboard/dashboard-skeletons'
 
@@ -238,7 +239,7 @@ async function DashboardContent({ userId }: { userId: string }) {
     const [headerData, statsData, contentData] = await Promise.all([
         getHeaderData(userId),
         getStatsData(userId),
-        getContentData(userId),
+        cacheWrap(`dash:content:${userId}`, 60, () => getContentData(userId)),
     ])
 
     return (
