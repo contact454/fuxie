@@ -10,6 +10,9 @@ export const authConfig = {
     cookieName: 'fuxie-auth',
     cookieSignatureKeys: [
         process.env.AUTH_COOKIE_SECRET || (() => {
+            if (process.env.NEXT_PHASE === 'phase-production-build') {
+                return 'build-phase-placeholder-not-used-at-runtime'
+            }
             if (process.env.NODE_ENV === 'production') {
                 throw new Error('[Fuxie] AUTH_COOKIE_SECRET env var is REQUIRED in production!')
             }
