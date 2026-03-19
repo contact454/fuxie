@@ -1,0 +1,160 @@
+{
+  "id": "L-B1-GOETHE-001-T4",
+  "level": "B1",
+  "teil": 4,
+  "teil_name": "Radiodiskussion",
+  "task_type": "zuordnung_sprecher",
+  "topic": "Museumsführung und kulturelle Veranstaltung",
+  "audio_file": "/audio/listening/B1/Teil4-Radiodiskussion/L-B1-GOETHE-001-T4.mp3",
+  "metadata": {
+    "generated_at": "2026-03-19T10:04:11.176736",
+    "version": 1,
+    "gespraech_count": 5,
+    "source_script": "data/scripts/B1/Teil4-Radiodiskussion/L-B1-GOETHE-001-T4.json"
+  },
+  "questions": [
+    {
+      "id": "Q1",
+      "item": 1,
+      "type": "zuordnung_sprecher",
+      "statement": "Willkommen zu unserer Diskussionsrunde 'Kultur für alle'. He...",
+      "options": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "answer": 1,
+      "points": 1,
+      "explanation": {
+        "de": "Diese Aussage gehört zu Abschnitt 1.",
+        "vi": "Câu này thuộc phần 1.",
+        "key_evidence": "Willkommen zu unserer Diskussionsrunde '",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q2",
+      "item": 2,
+      "type": "zuordnung_sprecher",
+      "statement": "Das stimmt natürlich, aber jüngere Besucher erwarten mehr In...",
+      "options": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "answer": 2,
+      "points": 1,
+      "explanation": {
+        "de": "Diese Aussage gehört zu Abschnitt 2.",
+        "vi": "Câu này thuộc phần 2.",
+        "key_evidence": "Das stimmt natürlich, aber jüngere Besuc",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q3",
+      "item": 3,
+      "type": "zuordnung_sprecher",
+      "statement": "Ein wichtiger Punkt. Wie sieht es mit dem Thema Finanzierung...",
+      "options": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "answer": 3,
+      "points": 1,
+      "explanation": {
+        "de": "Diese Aussage gehört zu Abschnitt 3.",
+        "vi": "Câu này thuộc phần 3.",
+        "key_evidence": "Ein wichtiger Punkt. Wie sieht es mit de",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q4",
+      "item": 4,
+      "type": "zuordnung_sprecher",
+      "statement": "Frau Klein, was denken Sie zum Thema freier Eintritt in alle...",
+      "options": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "answer": 4,
+      "points": 1,
+      "explanation": {
+        "de": "Diese Aussage gehört zu Abschnitt 4.",
+        "vi": "Câu này thuộc phần 4.",
+        "key_evidence": "Frau Klein, was denken Sie zum Thema fre",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q5",
+      "item": 5,
+      "type": "zuordnung_sprecher",
+      "statement": "Und ich wünsche mir, dass Museen stärker auf Familien und Ki...",
+      "options": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "answer": 5,
+      "points": 1,
+      "explanation": {
+        "de": "Diese Aussage gehört zu Abschnitt 5.",
+        "vi": "Câu này thuộc phần 5.",
+        "key_evidence": "Und ich wünsche mir, dass Museen stärker",
+        "key_vocabulary": []
+      }
+    }
+  ],
+  "scoring": {
+    "total_points": 5,
+    "pass_threshold": 3,
+    "grading": [
+      {
+        "range": [
+          5,
+          5
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          3,
+          4
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          2,
+          2
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          0,
+          1
+        ],
+        "label": "Noch üben!",
+        "emoji": "📝"
+      }
+    ]
+  }
+}

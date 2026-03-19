@@ -1,0 +1,175 @@
+{
+  "id": "L-A2-GOETHE-001-T1",
+  "level": "A2",
+  "teil": 1,
+  "teil_name": "Radiosendungen und Ansagen",
+  "task_type": "mc_abc",
+  "topic": "Wetter und Freizeitplanung",
+  "audio_file": "/audio/listening/A2/Teil1-Radiosendungen-und-Ansagen/L-A2-GOETHE-001-T1.mp3",
+  "metadata": {
+    "generated_at": "2026-03-19T10:04:11.107740",
+    "version": 1,
+    "gespraech_count": 5,
+    "source_script": "data/scripts/A2/Teil1-Radiosendungen-und-Ansagen/L-A2-GOETHE-001-T1.json"
+  },
+  "questions": [
+    {
+      "id": "Q1",
+      "gespraech": 1,
+      "type": "mc_abc",
+      "question": "Woher kommt eine Person im Gespräch 1?",
+      "options": {
+        "a": "Türkei",
+        "b": "Marokko",
+        "c": "Deutschland"
+      },
+      "answer": "c",
+      "points": 1,
+      "explanation": {
+        "de": "Im Gespräch hört man: 'Deutschland'.",
+        "vi": "Một người trong đoạn hội thoại 1 đến từ đâu?",
+        "key_evidence": "Deutschland",
+        "key_vocabulary": [
+          {
+            "word": "kommen aus",
+            "meaning": "to come from"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q2",
+      "gespraech": 2,
+      "type": "mc_abc",
+      "question": "Wo wohnt eine Person im Gespräch 2?",
+      "options": {
+        "a": "Pflanzenfest mit",
+        "b": "Hamburg",
+        "c": "Köln"
+      },
+      "answer": "a",
+      "points": 1,
+      "explanation": {
+        "de": "Im Gespräch hört man: 'Pflanzenfest mit'.",
+        "vi": "Một người trong đoạn hội thoại 2 sống ở đâu?",
+        "key_evidence": "Pflanzenfest mit",
+        "key_vocabulary": [
+          {
+            "word": "wohnen",
+            "meaning": "to live"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q3",
+      "gespraech": 3,
+      "type": "mc_abc",
+      "question": "Woher kommt eine Person im Gespräch 3?",
+      "options": {
+        "a": "Türkei",
+        "b": "Marokko",
+        "c": "Deutschland"
+      },
+      "answer": "c",
+      "points": 1,
+      "explanation": {
+        "de": "Im Gespräch hört man: 'Deutschland'.",
+        "vi": "Một người trong đoạn hội thoại 3 đến từ đâu?",
+        "key_evidence": "Deutschland",
+        "key_vocabulary": [
+          {
+            "word": "kommen aus",
+            "meaning": "to come from"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q4",
+      "gespraech": 4,
+      "type": "mc_abc",
+      "question": "Was passiert im Gespräch 4?",
+      "options": {
+        "a": "Jemand kauft ein.",
+        "b": "Jemand stellt sich vor.",
+        "c": "Jemand telefoniert."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Im Gespräch hört man: 'Für alle Badefans eine gute Nachricht. Das Freibad'.",
+        "vi": "Điều gì xảy ra trong đoạn hội thoại 4?",
+        "key_evidence": "Für alle Badefans eine gute Nachricht. Das Freibad",
+        "key_vocabulary": [
+          {
+            "word": "vorstellen",
+            "meaning": "to introduce"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q5",
+      "gespraech": 5,
+      "type": "mc_abc",
+      "question": "Was passiert im Gespräch 5?",
+      "options": {
+        "a": "Jemand kauft ein.",
+        "b": "Jemand stellt sich vor.",
+        "c": "Jemand telefoniert."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Im Gespräch hört man: 'Zum Schluss die Wettervorhersage für die nächste W'.",
+        "vi": "Điều gì xảy ra trong đoạn hội thoại 5?",
+        "key_evidence": "Zum Schluss die Wettervorhersage für die nächste W",
+        "key_vocabulary": [
+          {
+            "word": "vorstellen",
+            "meaning": "to introduce"
+          }
+        ]
+      }
+    }
+  ],
+  "scoring": {
+    "total_points": 5,
+    "pass_threshold": 3,
+    "grading": [
+      {
+        "range": [
+          5,
+          5
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          3,
+          4
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          2,
+          2
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          0,
+          1
+        ],
+        "label": "Noch üben!",
+        "emoji": "📝"
+      }
+    ]
+  }
+}

@@ -1,0 +1,175 @@
+{
+  "id": "L-B1-GOETHE-009-T2",
+  "level": "B1",
+  "teil": 2,
+  "teil_name": "Führung oder Monolog",
+  "task_type": "mc_abc",
+  "topic": "Gesundheitstipps aus dem Radio",
+  "audio_file": "/audio/listening/B1/Teil2-Fuehrung-oder-Monolog/L-B1-GOETHE-009-T2.mp3",
+  "metadata": {
+    "generated_at": "2026-03-19T10:04:11.168398",
+    "version": 1,
+    "gespraech_count": 5,
+    "source_script": "data/scripts/B1/Teil2-Fuehrung-oder-Monolog/L-B1-GOETHE-009-T2.json"
+  },
+  "questions": [
+    {
+      "id": "Q1",
+      "gespraech": 1,
+      "type": "mc_abc",
+      "question": "Wie heißt eine Person im Gespräch 1?",
+      "options": {
+        "a": "Anna",
+        "b": "Ernährungswissenschaftlerin",
+        "c": "Thomas"
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Im Gespräch hört man: 'bin Ernährungswissenschaftlerin'.",
+        "vi": "Một người trong đoạn hội thoại 1 tên là gì?",
+        "key_evidence": "bin Ernährungswissenschaftlerin",
+        "key_vocabulary": [
+          {
+            "word": "heißen",
+            "meaning": "to be called"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q2",
+      "gespraech": 2,
+      "type": "mc_abc",
+      "question": "Wo wohnt eine Person im Gespräch 2?",
+      "options": {
+        "a": "weiterer Mythos",
+        "b": "München",
+        "c": "Leipzig"
+      },
+      "answer": "a",
+      "points": 1,
+      "explanation": {
+        "de": "Im Gespräch hört man: 'weiterer Mythos'.",
+        "vi": "Một người trong đoạn hội thoại 2 sống ở đâu?",
+        "key_evidence": "weiterer Mythos",
+        "key_vocabulary": [
+          {
+            "word": "wohnen",
+            "meaning": "to live"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q3",
+      "gespraech": 3,
+      "type": "mc_abc",
+      "question": "Woher kommt eine Person im Gespräch 3?",
+      "options": {
+        "a": "Brasilien",
+        "b": "Spanien",
+        "c": "Deutschland"
+      },
+      "answer": "c",
+      "points": 1,
+      "explanation": {
+        "de": "Im Gespräch hört man: 'Deutschland'.",
+        "vi": "Một người trong đoạn hội thoại 3 đến từ đâu?",
+        "key_evidence": "Deutschland",
+        "key_vocabulary": [
+          {
+            "word": "kommen aus",
+            "meaning": "to come from"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q4",
+      "gespraech": 4,
+      "type": "mc_abc",
+      "question": "Was macht eine Person beruflich (Gespräch 4)?",
+      "options": {
+        "a": "Ärztin",
+        "b": "Kellner",
+        "c": "Arzt"
+      },
+      "answer": "c",
+      "points": 1,
+      "explanation": {
+        "de": "Im Gespräch hört man: 'Arzt'.",
+        "vi": "Một người làm nghề gì (đoạn 4)?",
+        "key_evidence": "Arzt",
+        "key_vocabulary": [
+          {
+            "word": "Arzt",
+            "meaning": "doctor (m)"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q5",
+      "gespraech": 5,
+      "type": "mc_abc",
+      "question": "Wo wohnt eine Person im Gespräch 5?",
+      "options": {
+        "a": "großes Glas",
+        "b": "Hannover",
+        "c": "Dresden"
+      },
+      "answer": "a",
+      "points": 1,
+      "explanation": {
+        "de": "Im Gespräch hört man: 'großes Glas'.",
+        "vi": "Một người trong đoạn hội thoại 5 sống ở đâu?",
+        "key_evidence": "großes Glas",
+        "key_vocabulary": [
+          {
+            "word": "wohnen",
+            "meaning": "to live"
+          }
+        ]
+      }
+    }
+  ],
+  "scoring": {
+    "total_points": 5,
+    "pass_threshold": 3,
+    "grading": [
+      {
+        "range": [
+          5,
+          5
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          3,
+          4
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          2,
+          2
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          0,
+          1
+        ],
+        "label": "Noch üben!",
+        "emoji": "📝"
+      }
+    ]
+  }
+}

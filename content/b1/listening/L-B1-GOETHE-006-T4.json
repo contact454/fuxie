@@ -1,0 +1,160 @@
+{
+  "id": "L-B1-GOETHE-006-T4",
+  "level": "B1",
+  "teil": 4,
+  "teil_name": "Radiodiskussion",
+  "task_type": "zuordnung_sprecher",
+  "topic": "Reiseinformation mit Verspätung und Umsteigen",
+  "audio_file": "/audio/listening/B1/Teil4-Radiodiskussion/L-B1-GOETHE-006-T4.mp3",
+  "metadata": {
+    "generated_at": "2026-03-19T10:04:11.179662",
+    "version": 1,
+    "gespraech_count": 5,
+    "source_script": "data/scripts/B1/Teil4-Radiodiskussion/L-B1-GOETHE-006-T4.json"
+  },
+  "questions": [
+    {
+      "id": "Q1",
+      "item": 1,
+      "type": "zuordnung_sprecher",
+      "statement": "Willkommen bei 'Unterwegs'. Heute diskutieren wir: Fliegen o...",
+      "options": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "answer": 1,
+      "points": 1,
+      "explanation": {
+        "de": "Diese Aussage gehört zu Abschnitt 1.",
+        "vi": "Câu này thuộc phần 1.",
+        "key_evidence": "Willkommen bei 'Unterwegs'. Heute diskut",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q2",
+      "item": 2,
+      "type": "zuordnung_sprecher",
+      "statement": "Genau! Wenn man alles zusammenzählt, ist der Zeitvorteil bei...",
+      "options": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "answer": 2,
+      "points": 1,
+      "explanation": {
+        "de": "Diese Aussage gehört zu Abschnitt 2.",
+        "vi": "Câu này thuộc phần 2.",
+        "key_evidence": "Genau! Wenn man alles zusammenzählt, ist",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q3",
+      "item": 3,
+      "type": "zuordnung_sprecher",
+      "statement": "Ein Flug verursacht über zehnmal so viel CO2 wie die gleiche...",
+      "options": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "answer": 3,
+      "points": 1,
+      "explanation": {
+        "de": "Diese Aussage gehört zu Abschnitt 3.",
+        "vi": "Câu này thuộc phần 3.",
+        "key_evidence": "Ein Flug verursacht über zehnmal so viel",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q4",
+      "item": 4,
+      "type": "zuordnung_sprecher",
+      "statement": "Und günstigere Preise! Wer früh bucht, fährt günstig, aber s...",
+      "options": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "answer": 4,
+      "points": 1,
+      "explanation": {
+        "de": "Diese Aussage gehört zu Abschnitt 4.",
+        "vi": "Câu này thuộc phần 4.",
+        "key_evidence": "Und günstigere Preise! Wer früh bucht, f",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q5",
+      "item": 5,
+      "type": "zuordnung_sprecher",
+      "statement": "Schnellere Züge, bessere Verbindungen und ein Ende der Kurzs...",
+      "options": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "answer": 5,
+      "points": 1,
+      "explanation": {
+        "de": "Diese Aussage gehört zu Abschnitt 5.",
+        "vi": "Câu này thuộc phần 5.",
+        "key_evidence": "Schnellere Züge, bessere Verbindungen un",
+        "key_vocabulary": []
+      }
+    }
+  ],
+  "scoring": {
+    "total_points": 5,
+    "pass_threshold": 3,
+    "grading": [
+      {
+        "range": [
+          5,
+          5
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          3,
+          4
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          2,
+          2
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          0,
+          1
+        ],
+        "label": "Noch üben!",
+        "emoji": "📝"
+      }
+    ]
+  }
+}

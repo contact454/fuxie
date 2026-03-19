@@ -1,0 +1,165 @@
+{
+  "id": "L-A2-GOETHE-003-T2",
+  "level": "A2",
+  "teil": 2,
+  "teil_name": "Zusammenhängendes Gespräch",
+  "task_type": "zuordnung",
+  "topic": "Im Fitnessstudio anmelden",
+  "audio_file": "/audio/listening/A2/Teil2-Zusammenhaengendes-Gespraech/L-A2-GOETHE-003-T2.mp3",
+  "metadata": {
+    "generated_at": "2026-03-19T10:04:11.115148",
+    "version": 1,
+    "gespraech_count": 6,
+    "source_script": "data/scripts/A2/Teil2-Zusammenhaengendes-Gespraech/L-A2-GOETHE-003-T2.json"
+  },
+  "questions": [
+    {
+      "id": "Q1",
+      "item": 1,
+      "type": "zuordnung",
+      "statement": "Guten Tag, ich möchte mich gern im Fitnessstudio anmelden....",
+      "options": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "answer": 1,
+      "points": 1,
+      "explanation": {
+        "de": "Diese Aussage gehört zu Abschnitt 1.",
+        "vi": "Câu này thuộc phần 1.",
+        "key_evidence": "Guten Tag, ich möchte mich gern im Fitne",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q2",
+      "item": 2,
+      "type": "zuordnung",
+      "statement": "Was kostet eine Mitgliedschaft bei Ihnen?...",
+      "options": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "answer": 2,
+      "points": 1,
+      "explanation": {
+        "de": "Diese Aussage gehört zu Abschnitt 2.",
+        "vi": "Câu này thuộc phần 2.",
+        "key_evidence": "Was kostet eine Mitgliedschaft bei Ihnen",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q3",
+      "item": 3,
+      "type": "zuordnung",
+      "statement": "Welche Kurse bieten Sie denn an?...",
+      "options": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "answer": 3,
+      "points": 1,
+      "explanation": {
+        "de": "Diese Aussage gehört zu Abschnitt 3.",
+        "vi": "Câu này thuộc phần 3.",
+        "key_evidence": "Welche Kurse bieten Sie denn an?",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q4",
+      "item": 4,
+      "type": "zuordnung",
+      "statement": "Das passt gut. Ich arbeite bis siebzehn Uhr. Muss ich etwas ...",
+      "options": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "answer": 4,
+      "points": 1,
+      "explanation": {
+        "de": "Diese Aussage gehört zu Abschnitt 4.",
+        "vi": "Câu này thuộc phần 4.",
+        "key_evidence": "Das passt gut. Ich arbeite bis siebzehn ",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q5",
+      "item": 5,
+      "type": "zuordnung",
+      "statement": "Und wie lang ist die Vertragslaufzeit?...",
+      "options": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "answer": 5,
+      "points": 1,
+      "explanation": {
+        "de": "Diese Aussage gehört zu Abschnitt 5.",
+        "vi": "Câu này thuộc phần 5.",
+        "key_evidence": "Und wie lang ist die Vertragslaufzeit?",
+        "key_vocabulary": []
+      }
+    }
+  ],
+  "scoring": {
+    "total_points": 5,
+    "pass_threshold": 3,
+    "grading": [
+      {
+        "range": [
+          5,
+          5
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          3,
+          4
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          2,
+          2
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          0,
+          1
+        ],
+        "label": "Noch üben!",
+        "emoji": "📝"
+      }
+    ]
+  }
+}

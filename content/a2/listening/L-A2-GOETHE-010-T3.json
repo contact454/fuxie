@@ -1,0 +1,175 @@
+{
+  "id": "L-A2-GOETHE-010-T3",
+  "level": "A2",
+  "teil": 3,
+  "teil_name": "Kurze Einzelgespräche",
+  "task_type": "mc_abc",
+  "topic": "Öffentliche Durchsage",
+  "audio_file": "/audio/listening/A2/Teil3-Kurze-Einzelgespraeche/L-A2-GOETHE-010-T3.mp3",
+  "metadata": {
+    "generated_at": "2026-03-19T10:04:11.125112",
+    "version": 1,
+    "gespraech_count": 5,
+    "source_script": "data/scripts/A2/Teil3-Kurze-Einzelgespraeche/L-A2-GOETHE-010-T3.json"
+  },
+  "questions": [
+    {
+      "id": "Q1",
+      "gespraech": 1,
+      "type": "mc_abc",
+      "question": "Wo wohnt eine Person im Gespräch 1?",
+      "options": {
+        "a": "die Bahnhofshalle",
+        "b": "Leipzig",
+        "c": "Köln"
+      },
+      "answer": "a",
+      "points": 1,
+      "explanation": {
+        "de": "Im Gespräch hört man: 'die Bahnhofshalle'.",
+        "vi": "Một người trong đoạn hội thoại 1 sống ở đâu?",
+        "key_evidence": "die Bahnhofshalle",
+        "key_vocabulary": [
+          {
+            "word": "wohnen",
+            "meaning": "to live"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q2",
+      "gespraech": 2,
+      "type": "mc_abc",
+      "question": "Wo wohnt eine Person im Gespräch 2?",
+      "options": {
+        "a": "in zwei",
+        "b": "Hamburg",
+        "c": "Stuttgart"
+      },
+      "answer": "a",
+      "points": 1,
+      "explanation": {
+        "de": "Im Gespräch hört man: 'in zwei'.",
+        "vi": "Một người trong đoạn hội thoại 2 sống ở đâu?",
+        "key_evidence": "in zwei",
+        "key_vocabulary": [
+          {
+            "word": "wohnen",
+            "meaning": "to live"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q3",
+      "gespraech": 3,
+      "type": "mc_abc",
+      "question": "Was passiert im Gespräch 3?",
+      "options": {
+        "a": "Jemand kauft ein.",
+        "b": "Jemand stellt sich vor.",
+        "c": "Jemand telefoniert."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Im Gespräch hört man: 'Warst du schon mal im Museum für moderne Kunst? Ne'.",
+        "vi": "Điều gì xảy ra trong đoạn hội thoại 3?",
+        "key_evidence": "Warst du schon mal im Museum für moderne Kunst? Ne",
+        "key_vocabulary": [
+          {
+            "word": "vorstellen",
+            "meaning": "to introduce"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q4",
+      "gespraech": 4,
+      "type": "mc_abc",
+      "question": "Was passiert im Gespräch 4?",
+      "options": {
+        "a": "Jemand kauft ein.",
+        "b": "Jemand stellt sich vor.",
+        "c": "Jemand telefoniert."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Im Gespräch hört man: 'Im Einkaufszentrum war heute eine Modenschau. Echt'.",
+        "vi": "Điều gì xảy ra trong đoạn hội thoại 4?",
+        "key_evidence": "Im Einkaufszentrum war heute eine Modenschau. Echt",
+        "key_vocabulary": [
+          {
+            "word": "vorstellen",
+            "meaning": "to introduce"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q5",
+      "gespraech": 5,
+      "type": "mc_abc",
+      "question": "Wo wohnt eine Person im Gespräch 5?",
+      "options": {
+        "a": "ist morgen",
+        "b": "Düsseldorf",
+        "c": "Köln"
+      },
+      "answer": "a",
+      "points": 1,
+      "explanation": {
+        "de": "Im Gespräch hört man: 'ist morgen'.",
+        "vi": "Một người trong đoạn hội thoại 5 sống ở đâu?",
+        "key_evidence": "ist morgen",
+        "key_vocabulary": [
+          {
+            "word": "wohnen",
+            "meaning": "to live"
+          }
+        ]
+      }
+    }
+  ],
+  "scoring": {
+    "total_points": 5,
+    "pass_threshold": 3,
+    "grading": [
+      {
+        "range": [
+          5,
+          5
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          3,
+          4
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          2,
+          2
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          0,
+          1
+        ],
+        "label": "Noch üben!",
+        "emoji": "📝"
+      }
+    ]
+  }
+}

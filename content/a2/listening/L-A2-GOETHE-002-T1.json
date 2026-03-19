@@ -1,0 +1,175 @@
+{
+  "id": "L-A2-GOETHE-002-T1",
+  "level": "A2",
+  "teil": 1,
+  "teil_name": "Radiosendungen und Ansagen",
+  "task_type": "mc_abc",
+  "topic": "Wohnung suchen und Mietgespräch",
+  "audio_file": "/audio/listening/A2/Teil1-Radiosendungen-und-Ansagen/L-A2-GOETHE-002-T1.mp3",
+  "metadata": {
+    "generated_at": "2026-03-19T10:04:11.108554",
+    "version": 1,
+    "gespraech_count": 5,
+    "source_script": "data/scripts/A2/Teil1-Radiosendungen-und-Ansagen/L-A2-GOETHE-002-T1.json"
+  },
+  "questions": [
+    {
+      "id": "Q1",
+      "gespraech": 1,
+      "type": "mc_abc",
+      "question": "Wo wohnt eine Person im Gespräch 1?",
+      "options": {
+        "a": "Berlin",
+        "b": "München",
+        "c": "Dresden"
+      },
+      "answer": "a",
+      "points": 1,
+      "explanation": {
+        "de": "Im Gespräch hört man: 'Berlin'.",
+        "vi": "Một người trong đoạn hội thoại 1 sống ở đâu?",
+        "key_evidence": "Berlin",
+        "key_vocabulary": [
+          {
+            "word": "wohnen",
+            "meaning": "to live"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q2",
+      "gespraech": 2,
+      "type": "mc_abc",
+      "question": "Wo wohnt eine Person im Gespräch 2?",
+      "options": {
+        "a": "Nordrhein",
+        "b": "Düsseldorf",
+        "c": "Frankfurt"
+      },
+      "answer": "a",
+      "points": 1,
+      "explanation": {
+        "de": "Im Gespräch hört man: 'Nordrhein'.",
+        "vi": "Một người trong đoạn hội thoại 2 sống ở đâu?",
+        "key_evidence": "Nordrhein",
+        "key_vocabulary": [
+          {
+            "word": "wohnen",
+            "meaning": "to live"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q3",
+      "gespraech": 3,
+      "type": "mc_abc",
+      "question": "Wo wohnt eine Person im Gespräch 3?",
+      "options": {
+        "a": "Ratgeber zum",
+        "b": "Frankfurt",
+        "c": "Stuttgart"
+      },
+      "answer": "a",
+      "points": 1,
+      "explanation": {
+        "de": "Im Gespräch hört man: 'Ratgeber zum'.",
+        "vi": "Một người trong đoạn hội thoại 3 sống ở đâu?",
+        "key_evidence": "Ratgeber zum",
+        "key_vocabulary": [
+          {
+            "word": "wohnen",
+            "meaning": "to live"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q4",
+      "gespraech": 4,
+      "type": "mc_abc",
+      "question": "Was macht eine Person beruflich (Gespräch 4)?",
+      "options": {
+        "a": "Krankenschwester",
+        "b": "Programmierer",
+        "c": "Student"
+      },
+      "answer": "c",
+      "points": 1,
+      "explanation": {
+        "de": "Im Gespräch hört man: 'Student'.",
+        "vi": "Một người làm nghề gì (đoạn 4)?",
+        "key_evidence": "Student",
+        "key_vocabulary": [
+          {
+            "word": "Student",
+            "meaning": "student (m)"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q5",
+      "gespraech": 5,
+      "type": "mc_abc",
+      "question": "Wo wohnt eine Person im Gespräch 5?",
+      "options": {
+        "a": "Tipp für",
+        "b": "Berlin",
+        "c": "Köln"
+      },
+      "answer": "a",
+      "points": 1,
+      "explanation": {
+        "de": "Im Gespräch hört man: 'Tipp für'.",
+        "vi": "Một người trong đoạn hội thoại 5 sống ở đâu?",
+        "key_evidence": "Tipp für",
+        "key_vocabulary": [
+          {
+            "word": "wohnen",
+            "meaning": "to live"
+          }
+        ]
+      }
+    }
+  ],
+  "scoring": {
+    "total_points": 5,
+    "pass_threshold": 3,
+    "grading": [
+      {
+        "range": [
+          5,
+          5
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          3,
+          4
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          2,
+          2
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          0,
+          1
+        ],
+        "label": "Noch üben!",
+        "emoji": "📝"
+      }
+    ]
+  }
+}

@@ -1,0 +1,175 @@
+{
+  "id": "L-B1-GOETHE-001-T2",
+  "level": "B1",
+  "teil": 2,
+  "teil_name": "Führung oder Monolog",
+  "task_type": "mc_abc",
+  "topic": "Museumsführung und kulturelle Veranstaltung",
+  "audio_file": "/audio/listening/B1/Teil2-Fuehrung-oder-Monolog/L-B1-GOETHE-001-T2.mp3",
+  "metadata": {
+    "generated_at": "2026-03-19T10:04:11.163267",
+    "version": 1,
+    "gespraech_count": 5,
+    "source_script": "data/scripts/B1/Teil2-Fuehrung-oder-Monolog/L-B1-GOETHE-001-T2.json"
+  },
+  "questions": [
+    {
+      "id": "Q1",
+      "gespraech": 1,
+      "type": "mc_abc",
+      "question": "Wie heißt eine Person im Gespräch 1?",
+      "options": {
+        "a": "Anna",
+        "b": "Dr",
+        "c": "Thomas"
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Im Gespräch hört man: 'bin Dr'.",
+        "vi": "Một người trong đoạn hội thoại 1 tên là gì?",
+        "key_evidence": "bin Dr",
+        "key_vocabulary": [
+          {
+            "word": "heißen",
+            "meaning": "to be called"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q2",
+      "gespraech": 2,
+      "type": "mc_abc",
+      "question": "Wo wohnt eine Person im Gespräch 2?",
+      "options": {
+        "a": "bedeutendes Werk",
+        "b": "Hannover",
+        "c": "Düsseldorf"
+      },
+      "answer": "a",
+      "points": 1,
+      "explanation": {
+        "de": "Im Gespräch hört man: 'bedeutendes Werk'.",
+        "vi": "Một người trong đoạn hội thoại 2 sống ở đâu?",
+        "key_evidence": "bedeutendes Werk",
+        "key_vocabulary": [
+          {
+            "word": "wohnen",
+            "meaning": "to live"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q3",
+      "gespraech": 3,
+      "type": "mc_abc",
+      "question": "Wo wohnt eine Person im Gespräch 3?",
+      "options": {
+        "a": "berühmtes Selbstporträt",
+        "b": "Hannover",
+        "c": "Stuttgart"
+      },
+      "answer": "a",
+      "points": 1,
+      "explanation": {
+        "de": "Im Gespräch hört man: 'berühmtes Selbstporträt'.",
+        "vi": "Một người trong đoạn hội thoại 3 sống ở đâu?",
+        "key_evidence": "berühmtes Selbstporträt",
+        "key_vocabulary": [
+          {
+            "word": "wohnen",
+            "meaning": "to live"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q4",
+      "gespraech": 4,
+      "type": "mc_abc",
+      "question": "Was macht eine Person beruflich (Gespräch 4)?",
+      "options": {
+        "a": "Studentin",
+        "b": "Krankenschwester",
+        "c": "Student"
+      },
+      "answer": "c",
+      "points": 1,
+      "explanation": {
+        "de": "Im Gespräch hört man: 'Student'.",
+        "vi": "Một người làm nghề gì (đoạn 4)?",
+        "key_evidence": "Student",
+        "key_vocabulary": [
+          {
+            "word": "Student",
+            "meaning": "student (m)"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q5",
+      "gespraech": 5,
+      "type": "mc_abc",
+      "question": "Wo wohnt eine Person im Gespräch 5?",
+      "options": {
+        "a": "unserem Museum",
+        "b": "München",
+        "c": "Dresden"
+      },
+      "answer": "a",
+      "points": 1,
+      "explanation": {
+        "de": "Im Gespräch hört man: 'unserem Museum'.",
+        "vi": "Một người trong đoạn hội thoại 5 sống ở đâu?",
+        "key_evidence": "unserem Museum",
+        "key_vocabulary": [
+          {
+            "word": "wohnen",
+            "meaning": "to live"
+          }
+        ]
+      }
+    }
+  ],
+  "scoring": {
+    "total_points": 5,
+    "pass_threshold": 3,
+    "grading": [
+      {
+        "range": [
+          5,
+          5
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          3,
+          4
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          2,
+          2
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          0,
+          1
+        ],
+        "label": "Noch üben!",
+        "emoji": "📝"
+      }
+    ]
+  }
+}

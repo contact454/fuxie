@@ -1,0 +1,175 @@
+{
+  "id": "L-A2-GOETHE-001-T3",
+  "level": "A2",
+  "teil": 3,
+  "teil_name": "Kurze Einzelgespräche",
+  "task_type": "mc_abc",
+  "topic": "Wetter und Freizeitplanung",
+  "audio_file": "/audio/listening/A2/Teil3-Kurze-Einzelgespraeche/L-A2-GOETHE-001-T3.mp3",
+  "metadata": {
+    "generated_at": "2026-03-19T10:04:11.119580",
+    "version": 1,
+    "gespraech_count": 5,
+    "source_script": "data/scripts/A2/Teil3-Kurze-Einzelgespraeche/L-A2-GOETHE-001-T3.json"
+  },
+  "questions": [
+    {
+      "id": "Q1",
+      "gespraech": 1,
+      "type": "mc_abc",
+      "question": "Wo wohnt eine Person im Gespräch 1?",
+      "options": {
+        "a": "meinem Garten",
+        "b": "Dresden",
+        "c": "Berlin"
+      },
+      "answer": "a",
+      "points": 1,
+      "explanation": {
+        "de": "Im Gespräch hört man: 'meinem Garten'.",
+        "vi": "Một người trong đoạn hội thoại 1 sống ở đâu?",
+        "key_evidence": "meinem Garten",
+        "key_vocabulary": [
+          {
+            "word": "wohnen",
+            "meaning": "to live"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q2",
+      "gespraech": 2,
+      "type": "mc_abc",
+      "question": "Was passiert im Gespräch 2?",
+      "options": {
+        "a": "Jemand kauft ein.",
+        "b": "Jemand stellt sich vor.",
+        "c": "Jemand telefoniert."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Im Gespräch hört man: 'Es regnet schon den ganzen Tag. Was sollen wir mac'.",
+        "vi": "Điều gì xảy ra trong đoạn hội thoại 2?",
+        "key_evidence": "Es regnet schon den ganzen Tag. Was sollen wir mac",
+        "key_vocabulary": [
+          {
+            "word": "vorstellen",
+            "meaning": "to introduce"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q3",
+      "gespraech": 3,
+      "type": "mc_abc",
+      "question": "Wo wohnt eine Person im Gespräch 3?",
+      "options": {
+        "a": "vierzig Minuten",
+        "b": "Köln",
+        "c": "Hannover"
+      },
+      "answer": "a",
+      "points": 1,
+      "explanation": {
+        "de": "Im Gespräch hört man: 'vierzig Minuten'.",
+        "vi": "Một người trong đoạn hội thoại 3 sống ở đâu?",
+        "key_evidence": "vierzig Minuten",
+        "key_vocabulary": [
+          {
+            "word": "wohnen",
+            "meaning": "to live"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q4",
+      "gespraech": 4,
+      "type": "mc_abc",
+      "question": "Was passiert im Gespräch 4?",
+      "options": {
+        "a": "Jemand kauft ein.",
+        "b": "Jemand stellt sich vor.",
+        "c": "Jemand telefoniert."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Im Gespräch hört man: 'Der Herbst ist da! Die Blätter werden bunt. Ja, di'.",
+        "vi": "Điều gì xảy ra trong đoạn hội thoại 4?",
+        "key_evidence": "Der Herbst ist da! Die Blätter werden bunt. Ja, di",
+        "key_vocabulary": [
+          {
+            "word": "vorstellen",
+            "meaning": "to introduce"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q5",
+      "gespraech": 5,
+      "type": "mc_abc",
+      "question": "Was passiert im Gespräch 5?",
+      "options": {
+        "a": "Jemand kauft ein.",
+        "b": "Jemand stellt sich vor.",
+        "c": "Jemand telefoniert."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Im Gespräch hört man: 'Im Winter ist es so dunkel und kalt. Was machst du'.",
+        "vi": "Điều gì xảy ra trong đoạn hội thoại 5?",
+        "key_evidence": "Im Winter ist es so dunkel und kalt. Was machst du",
+        "key_vocabulary": [
+          {
+            "word": "vorstellen",
+            "meaning": "to introduce"
+          }
+        ]
+      }
+    }
+  ],
+  "scoring": {
+    "total_points": 5,
+    "pass_threshold": 3,
+    "grading": [
+      {
+        "range": [
+          5,
+          5
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          3,
+          4
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          2,
+          2
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          0,
+          1
+        ],
+        "label": "Noch üben!",
+        "emoji": "📝"
+      }
+    ]
+  }
+}

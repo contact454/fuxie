@@ -1,0 +1,175 @@
+{
+  "id": "L-B1-GOETHE-008-T2",
+  "level": "B1",
+  "teil": 2,
+  "teil_name": "Führung oder Monolog",
+  "task_type": "mc_abc",
+  "topic": "Einkaufen und Reklamation",
+  "audio_file": "/audio/listening/B1/Teil2-Fuehrung-oder-Monolog/L-B1-GOETHE-008-T2.mp3",
+  "metadata": {
+    "generated_at": "2026-03-19T10:04:11.167333",
+    "version": 1,
+    "gespraech_count": 5,
+    "source_script": "data/scripts/B1/Teil2-Fuehrung-oder-Monolog/L-B1-GOETHE-008-T2.json"
+  },
+  "questions": [
+    {
+      "id": "Q1",
+      "gespraech": 1,
+      "type": "mc_abc",
+      "question": "Wie heißt eine Person im Gespräch 1?",
+      "options": {
+        "a": "Anna",
+        "b": "Beraterin",
+        "c": "Thomas"
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Im Gespräch hört man: 'bin Beraterin'.",
+        "vi": "Một người trong đoạn hội thoại 1 tên là gì?",
+        "key_evidence": "bin Beraterin",
+        "key_vocabulary": [
+          {
+            "word": "heißen",
+            "meaning": "to be called"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q2",
+      "gespraech": 2,
+      "type": "mc_abc",
+      "question": "Wo wohnt eine Person im Gespräch 2?",
+      "options": {
+        "a": "neues",
+        "b": "Zürich",
+        "c": "Stuttgart"
+      },
+      "answer": "a",
+      "points": 1,
+      "explanation": {
+        "de": "Im Gespräch hört man: 'neues'.",
+        "vi": "Một người trong đoạn hội thoại 2 sống ở đâu?",
+        "key_evidence": "neues",
+        "key_vocabulary": [
+          {
+            "word": "wohnen",
+            "meaning": "to live"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q3",
+      "gespraech": 3,
+      "type": "mc_abc",
+      "question": "Wo wohnt eine Person im Gespräch 3?",
+      "options": {
+        "a": "freiwilliges Umtauschrecht",
+        "b": "Berlin",
+        "c": "Frankfurt"
+      },
+      "answer": "a",
+      "points": 1,
+      "explanation": {
+        "de": "Im Gespräch hört man: 'freiwilliges Umtauschrecht'.",
+        "vi": "Một người trong đoạn hội thoại 3 sống ở đâu?",
+        "key_evidence": "freiwilliges Umtauschrecht",
+        "key_vocabulary": [
+          {
+            "word": "wohnen",
+            "meaning": "to live"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q4",
+      "gespraech": 4,
+      "type": "mc_abc",
+      "question": "Was macht eine Person beruflich (Gespräch 4)?",
+      "options": {
+        "a": "Programmierer",
+        "b": "Student",
+        "c": "Verkäufer"
+      },
+      "answer": "c",
+      "points": 1,
+      "explanation": {
+        "de": "Im Gespräch hört man: 'Verkäufer'.",
+        "vi": "Một người làm nghề gì (đoạn 4)?",
+        "key_evidence": "Verkäufer",
+        "key_vocabulary": [
+          {
+            "word": "Verkäufer",
+            "meaning": "salesperson"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q5",
+      "gespraech": 5,
+      "type": "mc_abc",
+      "question": "Wo wohnt eine Person im Gespräch 5?",
+      "options": {
+        "a": "wichtigster Rat",
+        "b": "Leipzig",
+        "c": "Köln"
+      },
+      "answer": "a",
+      "points": 1,
+      "explanation": {
+        "de": "Im Gespräch hört man: 'wichtigster Rat'.",
+        "vi": "Một người trong đoạn hội thoại 5 sống ở đâu?",
+        "key_evidence": "wichtigster Rat",
+        "key_vocabulary": [
+          {
+            "word": "wohnen",
+            "meaning": "to live"
+          }
+        ]
+      }
+    }
+  ],
+  "scoring": {
+    "total_points": 5,
+    "pass_threshold": 3,
+    "grading": [
+      {
+        "range": [
+          5,
+          5
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          3,
+          4
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          2,
+          2
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          0,
+          1
+        ],
+        "label": "Noch üben!",
+        "emoji": "📝"
+      }
+    ]
+  }
+}
