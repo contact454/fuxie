@@ -37,6 +37,13 @@ function getServiceAccount() {
         return { projectId, clientEmail, privateKey }
     }
 
+    // During `next build` (Vercel), don't crash — routes are collected but not executed.
+    // At runtime, the env vars will be available and this code won't be reached.
+    if (process.env.NEXT_PHASE === 'phase-production-build') {
+        console.warn('[Fuxie] ⚠️  Skipping Firebase init during build phase (credentials unavailable)')
+        return { projectId: '', clientEmail: '', privateKey: '' }
+    }
+
     throw new Error(
         '[Fuxie] Missing Firebase credentials. Set FIREBASE_SERVICE_ACCOUNT_KEY env var ' +
         '(JSON string) or individual NEXT_PUBLIC_FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, ' +
