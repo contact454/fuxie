@@ -19,7 +19,7 @@ const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 
 const CONTENT_DIR = path.resolve(__dirname, '../../../content')
-const LEVELS: CefrLevel[] = ['A1', 'A2', 'B1', 'B2']
+const LEVELS: CefrLevel[] = ['A1', 'A2', 'B1', 'B2', 'C1', 'C2']
 
 interface ExerciseQuestion {
   id: string           // "Q1"
