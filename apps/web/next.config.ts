@@ -40,12 +40,12 @@ const nextConfig: NextConfig = {
         FIREBASE_SERVICE_ACCOUNT_KEY: process.env.FIREBASE_SERVICE_ACCOUNT_KEY,
         AUTH_COOKIE_SECRET: process.env.AUTH_COOKIE_SECRET,
     },
-    // Rewrite /images/* to GCS, /audio/* to Cloudflare R2 in production
+    // Rewrite /images/* and /audio/* to Cloudflare R2 CDN
     async rewrites() {
         return [
             {
                 source: '/images/:path*',
-                destination: 'https://storage.googleapis.com/fuxie-images/images/:path*',
+                destination: 'https://pub-625435748a97403aae6db93258050afd.r2.dev/images/:path*',
             },
             {
                 source: '/audio/:path*',
