@@ -1,0 +1,150 @@
+{
+  "id": "L-C1-GOETHE-007-T3",
+  "level": "C1",
+  "teil": 3,
+  "teil_name": "Diskussion in Abschnitten",
+  "task_type": "richtig_falsch",
+  "topic": "Migration und Integration",
+  "audio_file": "/audio/listening/C1/Teil3-Diskussion-in-Abschnitten/L-C1-GOETHE-007-T3.mp3",
+  "metadata": {
+    "generated_at": "2026-03-19T11:27:15.969392",
+    "version": 1,
+    "gespraech_count": 5,
+    "source_script": "data/scripts/C1/Teil3-Diskussion-in-Abschnitten/L-C1-GOETHE-007-T3.json"
+  },
+  "questions": [
+    {
+      "id": "Q1",
+      "item": 1,
+      "type": "richtig_falsch",
+      "statement": "Die Person kommt aus Deutschland.",
+      "answer": "richtig",
+      "points": 1,
+      "explanation": {
+        "de": "Richtig. Man hört: 'aus Deutschland'.",
+        "vi": "Đúng. Ta nghe: 'aus Deutschland'.",
+        "key_evidence": "aus Deutschland",
+        "key_vocabulary": [
+          {
+            "word": "kommen aus",
+            "meaning": "to come from"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q2",
+      "item": 2,
+      "type": "richtig_falsch",
+      "statement": "Die Person kommt aus Indien.",
+      "answer": "falsch",
+      "points": 1,
+      "explanation": {
+        "de": "Falsch. Die Person kommt aus Syrien, nicht aus Indien.",
+        "vi": "Sai. Người đó đến từ Syrien, không phải Indien.",
+        "key_evidence": "aus Syrien",
+        "key_vocabulary": [
+          {
+            "word": "kommen aus",
+            "meaning": "to come from"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q3",
+      "item": 3,
+      "type": "richtig_falsch",
+      "statement": "Die Personen kennen sich schon lange.",
+      "answer": "falsch",
+      "points": 1,
+      "explanation": {
+        "de": "Falsch. Die Personen stellen sich vor, sie kennen sich noch nicht.",
+        "vi": "Sai. Họ đang tự giới thiệu, chưa quen nhau.",
+        "key_evidence": "vorstellen",
+        "key_vocabulary": [
+          {
+            "word": "kennen",
+            "meaning": "to know"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q4",
+      "item": 4,
+      "type": "richtig_falsch",
+      "statement": "Die Person kommt aus Japan.",
+      "answer": "falsch",
+      "points": 1,
+      "explanation": {
+        "de": "Falsch. Die Person kommt aus Deutschland, nicht aus Japan.",
+        "vi": "Sai. Người đó đến từ Deutschland, không phải Japan.",
+        "key_evidence": "aus Deutschland",
+        "key_vocabulary": [
+          {
+            "word": "kommen aus",
+            "meaning": "to come from"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q5",
+      "item": 5,
+      "type": "richtig_falsch",
+      "statement": "Die Personen kennen sich schon lange.",
+      "answer": "falsch",
+      "points": 1,
+      "explanation": {
+        "de": "Falsch. Die Personen stellen sich vor, sie kennen sich noch nicht.",
+        "vi": "Sai. Họ đang tự giới thiệu, chưa quen nhau.",
+        "key_evidence": "vorstellen",
+        "key_vocabulary": [
+          {
+            "word": "kennen",
+            "meaning": "to know"
+          }
+        ]
+      }
+    }
+  ],
+  "scoring": {
+    "total_points": 5,
+    "pass_threshold": 3,
+    "grading": [
+      {
+        "range": [
+          5,
+          5
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          3,
+          4
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          2,
+          2
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          0,
+          1
+        ],
+        "label": "Noch üben!",
+        "emoji": "📝"
+      }
+    ]
+  }
+}

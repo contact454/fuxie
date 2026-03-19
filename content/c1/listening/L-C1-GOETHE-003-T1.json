@@ -1,0 +1,160 @@
+{
+  "id": "L-C1-GOETHE-003-T1",
+  "level": "C1",
+  "teil": 1,
+  "teil_name": "Podcast oder Rezension",
+  "task_type": "zuordnung",
+  "topic": "EU-Familienpolitik und Gleichstellung",
+  "audio_file": "/audio/listening/C1/Teil1-Podcast-oder-Rezension/L-C1-GOETHE-003-T1.mp3",
+  "metadata": {
+    "generated_at": "2026-03-19T11:27:15.941828",
+    "version": 1,
+    "gespraech_count": 5,
+    "source_script": "data/scripts/C1/Teil1-Podcast-oder-Rezension/L-C1-GOETHE-003-T1.json"
+  },
+  "questions": [
+    {
+      "id": "Q1",
+      "item": 1,
+      "type": "zuordnung",
+      "statement": "Willkommen bei unserem europapolitischen Podcast 'Europa ver...",
+      "options": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "answer": 1,
+      "points": 1,
+      "explanation": {
+        "de": "Diese Aussage gehört zu Abschnitt 1.",
+        "vi": "Câu này thuộc phần 1.",
+        "key_evidence": "Willkommen bei unserem europapolitischen",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q2",
+      "item": 2,
+      "type": "zuordnung",
+      "statement": "Das konservative Familienmodell mit dem männlichen Alleinver...",
+      "options": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "answer": 2,
+      "points": 1,
+      "explanation": {
+        "de": "Diese Aussage gehört zu Abschnitt 2.",
+        "vi": "Câu này thuộc phần 2.",
+        "key_evidence": "Das konservative Familienmodell mit dem ",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q3",
+      "item": 3,
+      "type": "zuordnung",
+      "statement": "Frankreich hat ein besonders interessantes Modell: Die Kinde...",
+      "options": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "answer": 3,
+      "points": 1,
+      "explanation": {
+        "de": "Diese Aussage gehört zu Abschnitt 3.",
+        "vi": "Câu này thuộc phần 3.",
+        "key_evidence": "Frankreich hat ein besonders interessant",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q4",
+      "item": 4,
+      "type": "zuordnung",
+      "statement": "Länder mit besserer Vereinbarkeit von Familie und Beruf habe...",
+      "options": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "answer": 4,
+      "points": 1,
+      "explanation": {
+        "de": "Diese Aussage gehört zu Abschnitt 4.",
+        "vi": "Câu này thuộc phần 4.",
+        "key_evidence": "Länder mit besserer Vereinbarkeit von Fa",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q5",
+      "item": 5,
+      "type": "zuordnung",
+      "statement": "Der Gender Pay Gap in der Europäischen Union liegt durchschn...",
+      "options": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "answer": 5,
+      "points": 1,
+      "explanation": {
+        "de": "Diese Aussage gehört zu Abschnitt 5.",
+        "vi": "Câu này thuộc phần 5.",
+        "key_evidence": "Der Gender Pay Gap in der Europäischen U",
+        "key_vocabulary": []
+      }
+    }
+  ],
+  "scoring": {
+    "total_points": 5,
+    "pass_threshold": 3,
+    "grading": [
+      {
+        "range": [
+          5,
+          5
+        ],
+        "label": "Ausgezeichnet!",
+        "emoji": "⭐⭐⭐"
+      },
+      {
+        "range": [
+          3,
+          4
+        ],
+        "label": "Sehr gut!",
+        "emoji": "⭐⭐"
+      },
+      {
+        "range": [
+          2,
+          2
+        ],
+        "label": "Gut!",
+        "emoji": "⭐"
+      },
+      {
+        "range": [
+          0,
+          1
+        ],
+        "label": "Noch üben!",
+        "emoji": "📝"
+      }
+    ]
+  }
+}
