@@ -83,6 +83,10 @@ export async function GET(req: NextRequest) {
                 total,
                 totalPages: Math.ceil(total / limit),
             },
+        }, {
+            headers: {
+                'Cache-Control': 'private, max-age=60, stale-while-revalidate=300',
+            },
         })
     } catch (error) {
         return handleApiError(error)

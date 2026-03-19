@@ -1,8 +1,11 @@
 'use client'
 
-import { useState, useCallback, useEffect, useRef } from 'react'
+import { useState, useCallback } from 'react'
 import { ExerciseProgress } from './exercise-progress'
 import { ExerciseResults } from './exercise-results'
+import { useExerciseTimer } from '@/hooks/use-exercise-timer'
+import { useSubmitExercise } from '@/hooks/use-submit-exercise'
+import type { ExerciseAnswer } from '@/hooks/use-submit-exercise'
 
 // ─── Types ──────────────────────────────────────────
 interface MatchPair {
@@ -28,17 +31,15 @@ export function MatchingExercise({ pairs, cefrLevel, themeName, themeSlug, onExi
     const [selectedMeaning, setSelectedMeaning] = useState<string | null>(null)
     const [matchedPairs, setMatchedPairs] = useState<Set<string>>(new Set())
     const [wrongPair, setWrongPair] = useState<{ word: string; meaning: string } | null>(null)
-    const [timer, setTimer] = useState(0)
-    const [phase, setPhase] = useState<'playing' | 'results'>('playing')
     const [mistakes, setMistakes] = useState(0)
-    const [submitResult, setSubmitResult] = useState<{
-        totalQuestions: number
-        correctCount: number
-        accuracy: number
-        xpEarned: number
-        results: Array<{ questionId: string; isCorrect: boolean; userAnswer: string; correctAnswer: string }>
-    } | null>(null)
-    const timerRef = useRef<ReturnType<typeof setInterval> | null>(null)
+
+    const { timer, stopTimer, resetTimer } = useExerciseTimer()
+    const { submitResult, phase, submitAnswers, resetSubmit } = useSubmitExercise({
+        exerciseType: 'matching',
+        themeSlug,
+        cefrLevel,
+        xpPerCorrect: 5,
+    })
 
     // Shuffled columns
     const [shuffledWords] = useState(() =>
@@ -48,35 +49,19 @@ export function MatchingExercise({ pairs, cefrLevel, themeName, themeSlug, onExi
         [...pairs].sort(() => Math.random() - 0.5)
     )
 
-    // Timer
-    useEffect(() => {
-        timerRef.current = setInterval(() => setTimer(t => t + 1), 1000)
-        return () => { if (timerRef.current) clearInterval(timerRef.current) }
-    }, [])
+    const finishExercise = useCallback(async () => {
+        stopTimer()
 
-    const handleWordClick = useCallback((pairId: string) => {
-        if (matchedPairs.has(pairId)) return
-        setSelectedWord(pairId)
-        setWrongPair(null)
+        const answers: ExerciseAnswer[] = pairs.map(p => ({
+            questionId: p.id,
+            answer: p.meaning,
+            correctAnswer: p.meaning,
+        }))
 
-        // Check if meaning already selected
-        if (selectedMeaning) {
-            checkMatch(pairId, selectedMeaning)
-        }
-    }, [matchedPairs, selectedMeaning])
+        await submitAnswers(answers, timer)
+    }, [stopTimer, pairs, submitAnswers, timer])
 
-    const handleMeaningClick = useCallback((pairId: string) => {
-        if (matchedPairs.has(pairId)) return
-        setSelectedMeaning(pairId)
-        setWrongPair(null)
-
-        // Check if word already selected
-        if (selectedWord) {
-            checkMatch(selectedWord, pairId)
-        }
-    }, [matchedPairs, selectedWord])
-
-    const checkMatch = (wordId: string, meaningId: string) => {
+    const checkMatch = useCallback((wordId: string, meaningId: string) => {
         if (wordId === meaningId) {
             // Correct match!
             const newMatched = new Set(matchedPairs)
@@ -87,13 +72,11 @@ export function MatchingExercise({ pairs, cefrLevel, themeName, themeSlug, onExi
 
             // Check if all matched
             if (newMatched.size === pairs.length) {
-                setTimeout(() => finishExercise(newMatched.size), 500)
+                setTimeout(() => finishExercise(), 500)
             }
         } else {
             // Wrong match
             setMistakes(m => m + 1)
-            const wordPair = pairs.find(p => p.id === wordId)
-            const meaningPair = pairs.find(p => p.id === meaningId)
             setWrongPair({ word: wordId, meaning: meaningId })
 
             setTimeout(() => {
@@ -102,54 +85,29 @@ export function MatchingExercise({ pairs, cefrLevel, themeName, themeSlug, onExi
                 setWrongPair(null)
             }, 800)
         }
-    }
+    }, [matchedPairs, pairs.length, finishExercise])
 
-    const finishExercise = async (totalMatched: number) => {
-        if (timerRef.current) clearInterval(timerRef.current)
+    const handleWordClick = useCallback((pairId: string) => {
+        if (matchedPairs.has(pairId)) return
+        setSelectedWord(pairId)
+        setWrongPair(null)
 
-        const totalAttempts = totalMatched + mistakes
-        const accuracy = totalAttempts > 0 ? (totalMatched / totalAttempts) * 100 : 100
-        const localFallback = {
-            totalQuestions: pairs.length,
-            correctCount: pairs.length,
-            accuracy: Math.round(accuracy),
-            xpEarned: pairs.length * 5 + (mistakes === 0 ? 20 : 0),
-            results: pairs.map(p => ({
-                questionId: p.id,
-                isCorrect: true,
-                userAnswer: p.meaning,
-                correctAnswer: p.meaning,
-            })),
+        // Check if meaning already selected
+        if (selectedMeaning) {
+            checkMatch(pairId, selectedMeaning)
         }
+    }, [matchedPairs, selectedMeaning, checkMatch])
 
-        try {
-            const answers = pairs.map(p => ({
-                questionId: p.id,
-                answer: p.meaning,
-                correctAnswer: p.meaning,
-            }))
-            const res = await fetch('/api/v1/vocabulary/practice/submit', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({
-                    exerciseType: 'matching',
-                    themeSlug,
-                    cefrLevel,
-                    timeTaken: timer,
-                    answers,
-                }),
-            })
-            const data = await res.json()
-            if (data.success) {
-                setSubmitResult(data.data)
-            } else {
-                setSubmitResult(localFallback)
-            }
-        } catch {
-            setSubmitResult(localFallback)
+    const handleMeaningClick = useCallback((pairId: string) => {
+        if (matchedPairs.has(pairId)) return
+        setSelectedMeaning(pairId)
+        setWrongPair(null)
+
+        // Check if word already selected
+        if (selectedWord) {
+            checkMatch(selectedWord, pairId)
         }
-        setPhase('results')
-    }
+    }, [matchedPairs, selectedWord, checkMatch])
 
     // ─── Results Phase ──────────────────────────────
     if (phase === 'results' && submitResult) {
@@ -166,11 +124,9 @@ export function MatchingExercise({ pairs, cefrLevel, themeName, themeSlug, onExi
                     setSelectedWord(null)
                     setSelectedMeaning(null)
                     setWrongPair(null)
-                    setTimer(0)
                     setMistakes(0)
-                    setPhase('playing')
-                    setSubmitResult(null)
-                    timerRef.current = setInterval(() => setTimer(t => t + 1), 1000)
+                    resetSubmit()
+                    resetTimer()
                 }}
                 onNewTheme={onExit}
             />

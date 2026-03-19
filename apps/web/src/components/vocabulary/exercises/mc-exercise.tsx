@@ -1,8 +1,13 @@
 'use client'
 
-import { useState, useCallback, useEffect, useRef } from 'react'
+import { useState, useCallback, useEffect } from 'react'
+import Image from 'next/image'
+import { playSound } from '@/hooks/use-audio-player'
 import { ExerciseProgress } from './exercise-progress'
 import { ExerciseResults } from './exercise-results'
+import { useExerciseTimer } from '@/hooks/use-exercise-timer'
+import { useSubmitExercise } from '@/hooks/use-submit-exercise'
+import type { ExerciseAnswer } from '@/hooks/use-submit-exercise'
 
 // ─── Types ──────────────────────────────────────────
 interface McQuestion {
@@ -40,39 +45,29 @@ interface SubmitResult {
     }>
 }
 
-// ─── Audio utils ────────────────────────────────────
-function playAudio(url: string | null) {
-    if (!url) return
-    try {
-        const audio = new Audio(url)
-        audio.play().catch(() => {})
-    } catch { /* silent */ }
-}
+
 
 // ─── Component ──────────────────────────────────────
 export function McExercise({ questions, cefrLevel, themeName, themeSlug, onExit, onComplete }: McExerciseProps) {
     const [currentIndex, setCurrentIndex] = useState(0)
     const [selectedAnswer, setSelectedAnswer] = useState<string | null>(null)
     const [isRevealed, setIsRevealed] = useState(false)
-    const [answers, setAnswers] = useState<Array<{ questionId: string; answer: string; correctAnswer: string }>>([])
-    const [phase, setPhase] = useState<'playing' | 'results'>('playing')
-    const [submitResult, setSubmitResult] = useState<SubmitResult | null>(null)
-    const [timer, setTimer] = useState(0)
-    const [isSubmitting, setIsSubmitting] = useState(false)
-    const timerRef = useRef<ReturnType<typeof setInterval> | null>(null)
+    const [answers, setAnswers] = useState<ExerciseAnswer[]>([])
+
+    const { timer, stopTimer, resetTimer } = useExerciseTimer()
+    const { submitResult, isSubmitting, phase, submitAnswers, resetSubmit } = useSubmitExercise({
+        exerciseType: 'mc',
+        themeSlug,
+        cefrLevel,
+        xpPerCorrect: 5,
+    })
 
     const question = questions[currentIndex]!
-
-    // Timer
-    useEffect(() => {
-        timerRef.current = setInterval(() => setTimer(t => t + 1), 1000)
-        return () => { if (timerRef.current) clearInterval(timerRef.current) }
-    }, [])
 
     // Auto play audio for audio_to_word variant
     useEffect(() => {
         if (question.type === 'audio_to_word' && question.promptAudio) {
-            playAudio(question.promptAudio)
+            playSound(question.promptAudio)
         }
     }, [currentIndex, question.type, question.promptAudio])
 
@@ -81,7 +76,7 @@ export function McExercise({ questions, cefrLevel, themeName, themeSlug, onExit,
         setSelectedAnswer(option)
         setIsRevealed(true)
 
-        const newAnswers = [...answers, {
+        const newAnswers: ExerciseAnswer[] = [...answers, {
             questionId: question.id,
             answer: option,
             correctAnswer: question.correctAnswer,
@@ -96,59 +91,11 @@ export function McExercise({ questions, cefrLevel, themeName, themeSlug, onExit,
                 setIsRevealed(false)
             } else {
                 // Submit
-                submitAnswers(newAnswers)
+                stopTimer()
+                submitAnswers(newAnswers, timer)
             }
         }, 1500)
-    }, [isRevealed, answers, currentIndex, questions.length, question])
-
-    const submitAnswers = async (finalAnswers: typeof answers) => {
-        if (timerRef.current) clearInterval(timerRef.current)
-        setIsSubmitting(true)
-
-        // Build local results as fallback
-        const localResults = finalAnswers.map(a => ({
-            questionId: a.questionId,
-            isCorrect: a.answer === a.correctAnswer,
-            userAnswer: a.answer,
-            correctAnswer: a.correctAnswer,
-        }))
-        const localCorrectCount = localResults.filter(r => r.isCorrect).length
-        const localFallback: SubmitResult = {
-            totalQuestions: finalAnswers.length,
-            correctCount: localCorrectCount,
-            accuracy: finalAnswers.length > 0 ? (localCorrectCount / finalAnswers.length) * 100 : 0,
-            xpEarned: localCorrectCount * 5,
-            results: localResults,
-        }
-
-        try {
-            const res = await fetch('/api/v1/vocabulary/practice/submit', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({
-                    exerciseType: 'mc',
-                    themeSlug,
-                    cefrLevel,
-                    timeTaken: timer,
-                    answers: finalAnswers,
-                }),
-            })
-            const data = await res.json()
-            if (data.success) {
-                setSubmitResult(data.data)
-            } else {
-                // API returned error — use local fallback
-                console.warn('Submit API returned error, using local results:', data)
-                setSubmitResult(localFallback)
-            }
-        } catch (err) {
-            console.error('Submit fetch failed:', err)
-            setSubmitResult(localFallback)
-        } finally {
-            setIsSubmitting(false)
-            setPhase('results')
-        }
-    }
+    }, [isRevealed, answers, currentIndex, questions.length, question, stopTimer, submitAnswers, timer])
 
     // ─── Variant Labels ─────────────────────────────
     const getQuestionLabel = () => {
@@ -176,10 +123,8 @@ export function McExercise({ questions, cefrLevel, themeName, themeSlug, onExit,
                     setSelectedAnswer(null)
                     setIsRevealed(false)
                     setAnswers([])
-                    setPhase('playing')
-                    setSubmitResult(null)
-                    setTimer(0)
-                    timerRef.current = setInterval(() => setTimer(t => t + 1), 1000)
+                    resetSubmit()
+                    resetTimer()
                 }}
                 onNewTheme={onExit}
             />
@@ -206,10 +151,12 @@ export function McExercise({ questions, cefrLevel, themeName, themeSlug, onExit,
                         {/* Image prompt (image_to_word only) */}
                         {question.type === 'image_to_word' && question.promptImage && (
                             <div className="mb-4 flex justify-center">
-                                <img
+                                <Image
                                     src={question.promptImage}
                                     alt="Vocabulary image"
-                                    className="w-40 h-40 rounded-2xl object-cover shadow-md"
+                                    width={160}
+                                    height={160}
+                                    className="rounded-2xl object-cover shadow-md"
                                 />
                             </div>
                         )}
@@ -217,7 +164,7 @@ export function McExercise({ questions, cefrLevel, themeName, themeSlug, onExit,
                         {/* Audio prompt (audio_to_word only) */}
                         {question.type === 'audio_to_word' && (
                             <button
-                                onClick={() => playAudio(question.promptAudio)}
+                                onClick={() => playSound(question.promptAudio)}
                                 className="mb-4 w-24 h-24 rounded-full bg-gradient-to-br from-[#004E89] to-blue-600 text-white flex items-center justify-center mx-auto shadow-lg hover:scale-105 transition-transform"
                             >
                                 <svg className="w-12 h-12" fill="currentColor" viewBox="0 0 24 24">
@@ -233,7 +180,7 @@ export function McExercise({ questions, cefrLevel, themeName, themeSlug, onExit,
                                 {/* Audio button for de_to_vi */}
                                 {question.type === 'de_to_vi' && question.promptAudio && (
                                     <button
-                                        onClick={() => playAudio(question.promptAudio)}
+                                        onClick={() => playSound(question.promptAudio)}
                                         className="mt-2 inline-flex items-center gap-1 text-[#004E89] hover:text-blue-700 transition-colors"
                                     >
                                         <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">

@@ -4,10 +4,12 @@ import path from 'path'
 
 const nextConfig: NextConfig = {
     typescript: {
-        ignoreBuildErrors: true,
+        // TypeScript checks re-enabled: tsc --noEmit passes cleanly (0 errors)
+        ignoreBuildErrors: false,
     },
     eslint: {
-        ignoreDuringBuilds: true,
+        // ESLint re-enabled: 0 errors with eslint-config-next v16 (flat config)
+        ignoreDuringBuilds: false,
     },
     // Required for monorepo: trace files from packages/ for Prisma engine
     outputFileTracingRoot: path.join(__dirname, '../../'),

@@ -1,13 +1,19 @@
 import { NextRequest, NextResponse } from 'next/server'
+import { z } from 'zod'
 import { prisma } from '@fuxie/database'
+
+const VALID_LEVELS = ['A1', 'A2', 'B1', 'B2', 'C1', 'C2'] as const
+const querySchema = z.object({ level: z.enum(VALID_LEVELS).default('A1') })
 
 // GET /api/v1/listening?level=A1 — List listening lessons grouped by Teil
 export async function GET(req: NextRequest) {
     try {
-        const level = req.nextUrl.searchParams.get('level') || 'A1'
+        const { level } = querySchema.parse({
+            level: req.nextUrl.searchParams.get('level') || undefined,
+        })
 
         const lessons = await prisma.listeningLesson.findMany({
-            where: { cefrLevel: level as any },
+            where: { cefrLevel: level },
             orderBy: [{ teil: 'asc' }, { sortOrder: 'asc' }],
             select: {
                 id: true,
@@ -56,6 +62,10 @@ export async function GET(req: NextRequest) {
                 level,
                 totalLessons: lessons.length,
                 teile,
+            },
+        }, {
+            headers: {
+                'Cache-Control': 'private, max-age=60, stale-while-revalidate=300',
             },
         })
     } catch (error) {

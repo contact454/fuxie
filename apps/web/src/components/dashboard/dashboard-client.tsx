@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import Image from 'next/image'
 
 // ===== TYPES =====
 
@@ -77,18 +78,20 @@ export interface DashboardData {
 // ===== CONSTANTS =====
 
 const CEFR_COLORS: Record<string, string> = {
-    A1: '#4CAF50', A2: '#8BC34A', B1: '#FF9800', B2: '#FF5722', C1: '#9C27B0', C2: '#673AB7',
+    A1: 'var(--color-cefr-a1)', A2: 'var(--color-cefr-a2)',
+    B1: 'var(--color-cefr-b1)', B2: 'var(--color-cefr-b2)',
+    C1: 'var(--color-cefr-c1)', C2: 'var(--color-cefr-c2)',
 }
 
 const CEFR_ORDER = ['A1', 'A2', 'B1', 'B2', 'C1', 'C2'] as const
 
 const SKILL_COLORS: Record<string, string> = {
-    HOEREN: '#2EC4B6',
-    LESEN: '#004E89',
-    SCHREIBEN: '#FF6B35',
-    SPRECHEN: '#9C27B0',
-    GRAMMATIK: '#FF9800',
-    WORTSCHATZ: '#4CAF50',
+    HOEREN: 'var(--color-skill-hoeren)',
+    LESEN: 'var(--color-skill-lesen)',
+    SCHREIBEN: 'var(--color-skill-schreiben)',
+    SPRECHEN: 'var(--color-skill-sprechen)',
+    GRAMMATIK: 'var(--color-skill-grammatik)',
+    WORTSCHATZ: 'var(--color-skill-wortschatz)',
 }
 
 const SKILL_ICONS: Record<string, string> = {
@@ -112,105 +115,147 @@ const ACHIEVEMENT_ICONS: Record<string, string> = {
 
 // ===== MAIN COMPONENT =====
 
-export function DashboardClient({ data }: { data: DashboardData }) {
+export function DashboardClient({ data, section }: { data: DashboardData; section?: 'header' | 'stats' | 'content' }) {
     const currentIdx = CEFR_ORDER.indexOf(data.profile.currentLevel as typeof CEFR_ORDER[number])
     const targetIdx = CEFR_ORDER.indexOf(data.profile.targetLevel as typeof CEFR_ORDER[number])
     const cefrProgress = targetIdx > 0 ? Math.round((currentIdx / targetIdx) * 100) : 0
 
-    const studyGoalPercent = data.profile.studyGoalMinutes > 0
-        ? Math.min(100, Math.round((data.todayActivity.totalMinutes / data.profile.studyGoalMinutes) * 100))
+    const studyGoalPercent = data.profile?.studyGoalMinutes > 0
+        ? Math.min(100, Math.round(((data.todayActivity?.totalMinutes ?? 0) / data.profile.studyGoalMinutes) * 100))
         : 0
 
-    const maxWeeklyXp = Math.max(...data.weeklyActivity.map((d) => d.xp), 1)
+    const maxWeeklyXp = Math.max(...(data.weeklyActivity ?? []).map((d) => d.xp), 1)
 
+    // If no section specified, render everything (backward compat)
+    if (!section) {
+        return (
+            <div className="min-h-screen p-4 sm:p-6 lg:p-8">
+                <HeaderSection data={data} />
+                <StatsSection data={data} studyGoalPercent={studyGoalPercent} />
+                <ContentSection data={data} cefrProgress={cefrProgress} maxWeeklyXp={maxWeeklyXp} currentIdx={currentIdx} />
+            </div>
+        )
+    }
+
+    if (section === 'header') {
+        return (
+            <div className="p-4 sm:p-6 lg:p-8 pb-0">
+                <HeaderSection data={data} />
+            </div>
+        )
+    }
+
+    if (section === 'stats') {
+        return (
+            <div className="px-4 sm:px-6 lg:px-8">
+                <StatsSection data={data} studyGoalPercent={studyGoalPercent} />
+            </div>
+        )
+    }
+
+    // section === 'content'
     return (
-        <div className="min-h-screen p-4 sm:p-6 lg:p-8">
-            {/* ===== HEADER ===== */}
-            <header className="mb-6 animate-fade-in-up">
-                <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
-                    <div>
-                        <h1 className="text-2xl sm:text-3xl font-bold text-gray-900 flex items-center gap-2">
-                            {data.greeting}, {data.profile.displayName}!
-                            <img src="/mascot/core/fuxie-core-happy-wave.png" alt="Fuxie" width={36} height={36} className="inline-block object-contain" />
-                        </h1>
-                        <div className="mt-1 flex flex-wrap items-center gap-2 text-sm text-gray-500">
-                            <span
-                                className="inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-bold text-white"
-                                style={{ backgroundColor: CEFR_COLORS[data.profile.currentLevel] }}
-                            >
-                                {data.profile.currentLevel}
-                            </span>
-                            <span>·</span>
-                            <span className="font-medium text-gray-700">
-                                Lv.{data.profile.fuxieLevel} {data.profile.fuxieTitle}
-                            </span>
-                            {data.profile.targetExam && (
-                                <>
-                                    <span>·</span>
-                                    <span>Ziel: {data.profile.targetExam} {data.profile.targetLevel}</span>
-                                </>
-                            )}
+        <div className="px-4 sm:px-6 lg:px-8 pb-8">
+            <ContentSection data={data} cefrProgress={cefrProgress} maxWeeklyXp={maxWeeklyXp} currentIdx={currentIdx} />
+        </div>
+    )
+}
+
+function HeaderSection({ data }: { data: DashboardData }) {
+    return (
+        <header className="mb-6 animate-fade-in-up">
+            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+                <div>
+                    <h1 className="text-2xl sm:text-3xl font-bold text-gray-900 flex items-center gap-2">
+                        {data.greeting}, {data.profile.displayName}!
+                        <Image src="/mascot/core/fuxie-core-happy-wave.png" alt="Fuxie" width={36} height={36} className="inline-block object-contain" />
+                    </h1>
+                    <div className="mt-1 flex flex-wrap items-center gap-2 text-sm text-gray-500">
+                        <span
+                            className="inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-bold text-white"
+                            style={{ backgroundColor: CEFR_COLORS[data.profile.currentLevel] }}
+                        >
+                            {data.profile.currentLevel}
+                        </span>
+                        <span>·</span>
+                        <span className="font-medium text-gray-700">
+                            Lv.{data.profile.fuxieLevel} {data.profile.fuxieTitle}
+                        </span>
+                        {data.profile.targetExam && (
+                            <>
+                                <span>·</span>
+                                <span>Ziel: {data.profile.targetExam} {data.profile.targetLevel}</span>
+                            </>
+                        )}
+                    </div>
+                </div>
+                {data.profile.examDaysLeft !== null && (
+                    <div className="flex items-center gap-2 rounded-xl bg-gradient-to-r from-fuxie-primary/10 to-fuxie-secondary/10 px-4 py-2.5 text-sm">
+                        <span className="text-lg">🎯</span>
+                        <div>
+                            <p className="font-semibold text-gray-900">
+                                {data.profile.examDaysLeft} Tage
+                            </p>
+                            <p className="text-xs text-gray-500">bis zur Prüfung</p>
                         </div>
                     </div>
-                    {data.profile.examDaysLeft !== null && (
-                        <div className="flex items-center gap-2 rounded-xl bg-gradient-to-r from-fuxie-primary/10 to-fuxie-secondary/10 px-4 py-2.5 text-sm">
-                            <span className="text-lg">🎯</span>
-                            <div>
-                                <p className="font-semibold text-gray-900">
-                                    {data.profile.examDaysLeft} Tage
-                                </p>
-                                <p className="text-xs text-gray-500">bis zur Prüfung</p>
-                            </div>
-                        </div>
-                    )}
-                </div>
-            </header>
-
-            {/* ===== STAT CARDS ===== */}
-            <div className="mb-6 grid gap-3 grid-cols-2 lg:grid-cols-4">
-                <StatCard
-                    label="Streak"
-                    value={data.streak.currentStreak}
-                    icon="🔥"
-                    suffix="Tage"
-                    detail={`Rekord: ${data.streak.longestStreak}`}
-                    gradient="from-orange-500/10 to-red-500/5"
-                    color="#FF6B35"
-                    pulse={data.streak.currentStreak > 0}
-                    index={0}
-                />
-                <StatCard
-                    label="XP Heute"
-                    value={data.todayActivity.xpEarned}
-                    icon="⭐"
-                    detail={`Gesamt: ${data.profile.totalXp.toLocaleString()}`}
-                    gradient="from-blue-500/10 to-indigo-500/5"
-                    color="#004E89"
-                    index={1}
-                />
-                <StatCard
-                    label="SRS fällig"
-                    value={data.srs.dueCount}
-                    icon="📚"
-                    detail={`${data.srs.totalCards} Karten · ${data.srs.reviewedToday} heute`}
-                    gradient="from-teal-500/10 to-emerald-500/5"
-                    color="#2EC4B6"
-                    urgent={data.srs.dueCount > 20}
-                    index={2}
-                />
-                <StatCard
-                    label="Lernzeit"
-                    value={data.todayActivity.totalMinutes}
-                    icon="⏱️"
-                    suffix="min"
-                    detail={`Ziel: ${data.profile.studyGoalMinutes} min (${studyGoalPercent}%)`}
-                    gradient="from-purple-500/10 to-pink-500/5"
-                    color="#9C27B0"
-                    index={3}
-                    goalPercent={studyGoalPercent}
-                />
+                )}
             </div>
+        </header>
+    )
+}
 
+function StatsSection({ data, studyGoalPercent }: { data: DashboardData; studyGoalPercent: number }) {
+    return (
+        <div className="mb-6 grid gap-3 grid-cols-2 lg:grid-cols-4">
+            <StatCard
+                label="Streak"
+                value={data.streak?.currentStreak ?? 0}
+                icon="🔥"
+                suffix="Tage"
+                detail={`Rekord: ${data.streak?.longestStreak ?? 0}`}
+                gradient="from-orange-500/10 to-red-500/5"
+                color="#FF6B35"
+                pulse={(data.streak?.currentStreak ?? 0) > 0}
+                index={0}
+            />
+            <StatCard
+                label="XP Heute"
+                value={data.todayActivity?.xpEarned ?? 0}
+                icon="⭐"
+                detail={`Gesamt: ${data.profile.totalXp.toLocaleString()}`}
+                gradient="from-blue-500/10 to-indigo-500/5"
+                color="#004E89"
+                index={1}
+            />
+            <StatCard
+                label="SRS fällig"
+                value={data.srs?.dueCount ?? 0}
+                icon="📚"
+                detail={`${data.srs?.totalCards ?? 0} Karten · ${data.srs?.reviewedToday ?? 0} heute`}
+                gradient="from-teal-500/10 to-emerald-500/5"
+                color="#2EC4B6"
+                urgent={(data.srs?.dueCount ?? 0) > 20}
+                index={2}
+            />
+            <StatCard
+                label="Lernzeit"
+                value={data.todayActivity?.totalMinutes ?? 0}
+                icon="⏱️"
+                suffix="min"
+                detail={`Ziel: ${data.profile.studyGoalMinutes} min (${studyGoalPercent}%)`}
+                gradient="from-purple-500/10 to-pink-500/5"
+                color="#9C27B0"
+                index={3}
+                goalPercent={studyGoalPercent}
+            />
+        </div>
+    )
+}
+
+function ContentSection({ data, cefrProgress, maxWeeklyXp, currentIdx }: { data: DashboardData; cefrProgress: number; maxWeeklyXp: number; currentIdx: number }) {
+    return (
+        <>
             {/* ===== CEFR PROGRESS + WEEKLY CHART ===== */}
             <div className="mb-6 grid gap-4 lg:grid-cols-5">
                 {/* CEFR Roadmap */}
@@ -280,12 +325,12 @@ export function DashboardClient({ data }: { data: DashboardData }) {
                             icon="⏱️"
                         />
                         <MiniStat
-                            value={`${data.listening.completedLessons}/${data.listening.totalLessons}`}
+                            value={`${data.listening?.completedLessons ?? 0}/${data.listening?.totalLessons ?? 0}`}
                             label="Hören"
                             icon="🎧"
                         />
                         <MiniStat
-                            value={`${data.grammar.completedLessons}/${data.grammar.totalLessons}`}
+                            value={`${data.grammar?.completedLessons ?? 0}/${data.grammar?.totalLessons ?? 0}`}
                             label="Grammatik"
                             icon="📝"
                         />
@@ -298,9 +343,9 @@ export function DashboardClient({ data }: { data: DashboardData }) {
                         Wochenaktivität
                     </h2>
                     <div className="flex items-end gap-1.5 h-32">
-                        {data.weeklyActivity.map((day, i) => {
+                        {(data.weeklyActivity ?? []).map((day, i) => {
                             const heightPercent = maxWeeklyXp > 0 ? (day.xp / maxWeeklyXp) * 100 : 0
-                            const isToday = i === data.weeklyActivity.length - 1
+                            const isToday = i === (data.weeklyActivity ?? []).length - 1
                             return (
                                 <div key={day.date} className="group relative flex flex-1 flex-col items-center gap-1">
                                     {/* Tooltip */}
@@ -330,7 +375,7 @@ export function DashboardClient({ data }: { data: DashboardData }) {
                     <div className="mt-3 flex items-center justify-between text-xs text-gray-400 border-t border-gray-50 pt-2">
                         <span>Diese Woche</span>
                         <span className="font-semibold text-gray-600">
-                            {data.weeklyActivity.reduce((s, d) => s + d.xp, 0)} XP
+                            {(data.weeklyActivity ?? []).reduce((s, d) => s + d.xp, 0)} XP
                         </span>
                     </div>
                 </div>
@@ -344,7 +389,7 @@ export function DashboardClient({ data }: { data: DashboardData }) {
                         Skills
                     </h2>
                     <div className="space-y-3">
-                        {data.skills.map((skill) => (
+                        {(data.skills ?? []).map((skill) => (
                             <div key={skill.key} className="group">
                                 <div className="flex items-center justify-between mb-1">
                                     <span className="flex items-center gap-1.5 text-sm font-medium text-gray-700">
@@ -379,20 +424,20 @@ export function DashboardClient({ data }: { data: DashboardData }) {
                             href="/review"
                             icon="🔄"
                             label="SRS Wiederholen"
-                            sublabel={data.srs.dueCount > 0 ? `${data.srs.dueCount} Karten fällig` : 'Keine Karten fällig'}
+                            sublabel={(data.srs?.dueCount ?? 0) > 0 ? `${data.srs.dueCount} Karten fällig` : 'Keine Karten fällig'}
                             color="#2EC4B6"
-                            badge={data.srs.dueCount > 0 ? data.srs.dueCount : undefined}
+                            badge={(data.srs?.dueCount ?? 0) > 0 ? data.srs.dueCount : undefined}
                         />
                         <QuickAction
                             href="/listening"
                             icon="🎧"
                             label="Hörverstehen"
-                            sublabel={data.listening.completedLessons > 0
+                            sublabel={(data.listening?.completedLessons ?? 0) > 0
                                 ? `${data.listening.completedLessons}/${data.listening.totalLessons} Lektionen`
-                                : `${data.listening.totalLessons} Lektionen verfügbar`
+                                : `${data.listening?.totalLessons ?? 0} Lektionen verfügbar`
                             }
                             color="#2EC4B6"
-                            badge={data.listening.totalLessons - data.listening.completedLessons > 0
+                            badge={(data.listening?.totalLessons ?? 0) - (data.listening?.completedLessons ?? 0) > 0
                                 ? data.listening.totalLessons - data.listening.completedLessons
                                 : undefined}
                         />
@@ -407,12 +452,12 @@ export function DashboardClient({ data }: { data: DashboardData }) {
                             href="/grammar"
                             icon="📝"
                             label="Grammatik"
-                            sublabel={data.grammar.completedLessons > 0
+                            sublabel={(data.grammar?.completedLessons ?? 0) > 0
                                 ? `${data.grammar.completedLessons}/${data.grammar.totalLessons} Lektionen · ${data.grammar.totalStars} ⭐`
-                                : `${data.grammar.totalTopics} Themen verfügbar`
+                                : `${data.grammar?.totalTopics ?? 0} Themen verfügbar`
                             }
                             color="#004E89"
-                            badge={data.grammar.totalLessons - data.grammar.completedLessons > 0
+                            badge={(data.grammar?.totalLessons ?? 0) - (data.grammar?.completedLessons ?? 0) > 0
                                 ? data.grammar.totalLessons - data.grammar.completedLessons
                                 : undefined}
                         />
@@ -434,7 +479,7 @@ export function DashboardClient({ data }: { data: DashboardData }) {
                     <h2 className="mb-4 text-sm font-semibold uppercase tracking-wider text-gray-400">
                         Erfolge
                     </h2>
-                    {data.achievements.length > 0 ? (
+                    {(data.achievements ?? []).length > 0 ? (
                         <div className="space-y-2.5">
                             {data.achievements.map((a) => (
                                 <div
@@ -460,14 +505,14 @@ export function DashboardClient({ data }: { data: DashboardData }) {
                         </div>
                     ) : (
                         <div className="flex flex-col items-center justify-center py-8 text-center">
-                            <img src="/mascot/core/fuxie-core-happy-wave.png" alt="Fuxie" width={48} height={48} className="mb-2 object-contain" />
+                            <Image src="/mascot/core/fuxie-core-happy-wave.png" alt="Fuxie" width={48} height={48} className="mb-2 object-contain" />
                             <p className="text-sm text-gray-500">Noch keine Erfolge</p>
                             <p className="text-xs text-gray-400 mt-1">Lerne weiter, um Erfolge zu verdienen!</p>
                         </div>
                     )}
                 </div>
             </div>
-        </div>
+        </>
     )
 }
 

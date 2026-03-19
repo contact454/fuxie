@@ -1,8 +1,10 @@
 'use client'
 
-import { useState, useCallback, useEffect, useRef } from 'react'
+import { useState, useCallback, useEffect } from 'react'
 import { ExerciseProgress } from './exercise-progress'
 import { ExerciseResults } from './exercise-results'
+import { useExerciseTimer } from '@/hooks/use-exercise-timer'
+import { useSubmitExercise, type ExerciseAnswer } from '@/hooks/use-submit-exercise'
 
 // ─── Types ──────────────────────────────────────────
 interface ScrambleQuestion {
@@ -30,19 +32,21 @@ export function ScrambleExercise({ questions, cefrLevel, themeName, themeSlug, o
     const [selectedWords, setSelectedWords] = useState<string[]>([])
     const [isRevealed, setIsRevealed] = useState(false)
     const [isCorrect, setIsCorrect] = useState(false)
-    const [answers, setAnswers] = useState<Array<{ questionId: string; answer: string; correctAnswer: string }>>([])
-    const [phase, setPhase] = useState<'playing' | 'results'>('playing')
-    const [submitResult, setSubmitResult] = useState<any>(null)
-    const [timer, setTimer] = useState(0)
-    const timerRef = useRef<ReturnType<typeof setInterval> | null>(null)
+    const [answers, setAnswers] = useState<ExerciseAnswer[]>([])
+
+    const { timer, stopTimer, resetTimer } = useExerciseTimer()
+    const { submitResult, phase, submitAnswers, resetSubmit } = useSubmitExercise({
+        exerciseType: 'scramble',
+        themeSlug,
+        cefrLevel,
+        xpPerCorrect: 8,
+        compareFn: (a, b) => {
+            const normalize = (s: string) => s.replace(/[.!?;,]+$/g, '').trim().toLowerCase()
+            return normalize(a) === normalize(b)
+        },
+    })
 
     const question = questions[currentIndex]!
-
-    // Timer
-    useEffect(() => {
-        timerRef.current = setInterval(() => setTimer(t => t + 1), 1000)
-        return () => { if (timerRef.current) clearInterval(timerRef.current) }
-    }, [])
 
     // Reset available words on new question
     useEffect(() => {
@@ -82,7 +86,7 @@ export function ScrambleExercise({ questions, cefrLevel, themeName, themeSlug, o
         setIsCorrect(correct)
         setIsRevealed(true)
 
-        const newAnswers = [...answers, {
+        const newAnswers: ExerciseAnswer[] = [...answers, {
             questionId: question.id,
             answer: userSentence,
             correctAnswer: question.correctSentence,
@@ -95,48 +99,11 @@ export function ScrambleExercise({ questions, cefrLevel, themeName, themeSlug, o
                 setIsRevealed(false)
                 setIsCorrect(false)
             } else {
-                submitAnswers(newAnswers)
+                stopTimer()
+                submitAnswers(newAnswers, timer)
             }
         }, 2500)
-    }, [isRevealed, selectedWords, question, answers, currentIndex, questions.length])
-
-    const submitAnswers = async (finalAnswers: typeof answers) => {
-        if (timerRef.current) clearInterval(timerRef.current)
-        const normalize = (s: string) => s.replace(/[.!?;,]+$/g, '').trim().toLowerCase()
-        const localResults = finalAnswers.map(a => ({
-            questionId: a.questionId,
-            isCorrect: normalize(a.answer) === normalize(a.correctAnswer),
-            userAnswer: a.answer,
-            correctAnswer: a.correctAnswer,
-        }))
-        const cc = localResults.filter(r => r.isCorrect).length
-        const localFallback = {
-            totalQuestions: finalAnswers.length,
-            correctCount: cc,
-            accuracy: finalAnswers.length > 0 ? (cc / finalAnswers.length) * 100 : 0,
-            xpEarned: cc * 8,
-            results: localResults,
-        }
-        try {
-            const res = await fetch('/api/v1/vocabulary/practice/submit', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({
-                    exerciseType: 'scramble',
-                    themeSlug,
-                    cefrLevel,
-                    timeTaken: timer,
-                    answers: finalAnswers,
-                }),
-            })
-            const data = await res.json()
-            if (data.success) setSubmitResult(data.data)
-            else setSubmitResult(localFallback)
-        } catch {
-            setSubmitResult(localFallback)
-        }
-        setPhase('results')
-    }
+    }, [isRevealed, selectedWords, question, answers, currentIndex, questions.length, stopTimer, submitAnswers, timer])
 
     // ─── Results ────────────────────────────────────
     if (phase === 'results' && submitResult) {
@@ -150,8 +117,9 @@ export function ScrambleExercise({ questions, cefrLevel, themeName, themeSlug, o
                 results={submitResult.results}
                 onRetry={() => {
                     setCurrentIndex(0); setSelectedWords([]); setIsRevealed(false); setIsCorrect(false)
-                    setAnswers([]); setPhase('playing'); setSubmitResult(null)
-                    setTimer(0); timerRef.current = setInterval(() => setTimer(t => t + 1), 1000)
+                    setAnswers([])
+                    resetSubmit()
+                    resetTimer()
                 }}
                 onNewTheme={onExit}
             />

@@ -1,0 +1,126 @@
+/* ═══════════════════════════════════════════
+   Grammar Diagrams — Rough.js Excalidraw style
+   ═══════════════════════════════════════════ */
+
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Patrick+Hand&display=swap');
+
+/* ─── Board ─── */
+.diagramBoard {
+  background: #fff;
+  border-radius: 18px;
+  padding: 24px 20px 16px;
+  margin: 16px 0;
+  position: relative;
+  font-family: 'Caveat', 'Patrick Hand', cursive;
+  box-shadow:
+    0 1px 3px rgba(0, 0, 0, 0.04),
+    inset 0 0 0 1px rgba(0, 0, 0, 0.02);
+}
+
+/* ─── Rough.js SVG Board ─── */
+.roughBoard {
+  margin: 16px 0;
+  background: #fff;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  position: relative;
+}
+/* subtle dot grid like Excalidraw */
+.roughBoard::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle, rgba(0, 0, 0, 0.06) 1px, transparent 1px);
+  background-size: 20px 20px;
+  pointer-events: none;
+}
+.roughSvg {
+  width: 100%;
+  height: auto;
+  display: block;
+  position: relative;
+  z-index: 1;
+}
+
+/* ─── SVG Text Styles ─── */
+.roughTitle {
+  font-family: 'Caveat', cursive;
+  font-size: 28px;
+  font-weight: 700;
+  fill: #1e293b;
+}
+.roughSubtitle {
+  font-family: 'Caveat', cursive;
+  font-size: 15px;
+  fill: #94a3b8;
+  font-weight: 500;
+}
+.roughBoxTitle {
+  font-family: 'Caveat', cursive;
+  font-size: 26px;
+  font-weight: 700;
+}
+.roughBoxSub {
+  font-family: 'Caveat', cursive;
+  font-size: 14px;
+  fill: #94a3b8;
+}
+.roughPronoun {
+  font-family: 'Caveat', cursive;
+  font-size: 18px;
+  fill: #64748b;
+  font-weight: 500;
+}
+.roughForm {
+  font-family: 'Caveat', cursive;
+  font-size: 22px;
+  font-weight: 700;
+}
+.roughAnnotation {
+  font-family: 'Caveat', cursive;
+  font-size: 12px;
+  font-weight: 600;
+}
+.roughFuxie {
+  font-size: 28px;
+}
+.roughFuxieText {
+  font-family: 'Caveat', cursive;
+  font-size: 14px;
+  fill: #94a3b8;
+}
+
+/* ─── Legacy CSS Diagrams ─── */
+.twoCol {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+.conjBox {
+  border-radius: 14px;
+  padding: 14px 12px;
+  border: 2.5px solid;
+}
+.conjBoxBlue { border-color: #93c5fd; background: linear-gradient(170deg, #eff6ff 0%, #fff 100%); }
+.conjBoxGreen { border-color: #86efac; background: linear-gradient(170deg, #f0fdf4 0%, #fff 100%); }
+.conjHeader { text-align: center; margin-bottom: 10px; padding-bottom: 8px; border-bottom: 2px dashed rgba(0,0,0,0.08); }
+.conjVerb { font-family: 'Caveat', cursive; font-size: 24px; font-weight: 700; display: block; }
+.conjBoxBlue .conjVerb { color: #2563eb; }
+.conjBoxGreen .conjVerb { color: #16a34a; }
+.conjMeaning { font-size: 14px; color: #94a3b8; font-family: 'Caveat', cursive; }
+.conjList { display: flex; flex-direction: column; gap: 4px; }
+.conjRow { display: flex; align-items: center; gap: 6px; padding: 3px 4px; border-radius: 8px; }
+.pronoun { font-family: 'Caveat', cursive; font-size: 16px; color: #64748b; min-width: 68px; text-align: right; }
+.arrow { color: #cbd5e1; font-size: 14px; }
+.form { font-family: 'Caveat', cursive; font-size: 20px; font-weight: 700; padding: 1px 8px; border-radius: 6px; }
+.formBlue { color: #1d4ed8; background: rgba(37,99,235,0.08); }
+.formGreen { color: #15803d; background: rgba(22,163,74,0.08); }
+.conjNote { margin-top: 10px; padding: 6px 10px; background: rgba(0,0,0,0.03); border-radius: 8px; font-size: 13px; color: #64748b; display: flex; align-items: center; gap: 6px; font-family: -apple-system, sans-serif; }
+.noteIcon { font-size: 14px; }
+.diagramTitle { text-align: center; margin-bottom: 18px; }
+.titleDe { display: block; font-family: 'Caveat', cursive; font-size: 28px; font-weight: 700; color: #1e293b; }
+.titleVi { font-family: 'Caveat', cursive; font-size: 16px; color: #94a3b8; }
+.fuxieCorner { display: flex; align-items: center; justify-content: flex-end; gap: 8px; margin-top: 12px; opacity: 0.7; }
+.fuxieEmoji { font-size: 24px; filter: hue-rotate(180deg) saturate(1.5); }
+.fuxieBubble { font-size: 13px; color: #94a3b8; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 4px 12px; font-family: -apple-system, sans-serif; }

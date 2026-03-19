@@ -250,6 +250,7 @@ export default function GrammarMocktestPage() {
   const [elapsedTime, setElapsedTime] = useState(0)
 
   const currentStep = steps[currentStepIdx]
+  if (!currentStep) return null
   const totalSteps = steps.length
   const progress = ((currentStepIdx) / (totalSteps - 1)) * 100
 
@@ -265,10 +266,10 @@ export default function GrammarMocktestPage() {
   }, [totalSteps])
 
   const handleExerciseAnswer = useCallback((correct: boolean, correctAnswer: string) => {
-    const step = steps[currentStepIdx]
+    const step = steps[currentStepIdx]!
     if (step.type !== 'exercise') return
 
-    const ex = SAMPLE_EXERCISES[step.exerciseIndex]
+    const ex = SAMPLE_EXERCISES[(step as { type: 'exercise'; exerciseIndex: number }).exerciseIndex]!
     setAnswers(prev => [...prev, { correct, tags: ex.tags || [] }])
 
     if (correct) {
@@ -365,7 +366,7 @@ export default function GrammarMocktestPage() {
       {currentStep.type === 'theory' && (
         <div className={s.stepContainer} key={`theory-${currentStep.blockIndex}`}>
           <div className={s.stepContent}>
-            <TheoryRenderer blocks={[SAMPLE_THEORY[currentStep.blockIndex]]} />
+            <TheoryRenderer blocks={[SAMPLE_THEORY[currentStep.blockIndex]!]} />
           </div>
           <div className={s.stepFooter}>
             <div className={s.stepFooterInner}>
@@ -382,7 +383,7 @@ export default function GrammarMocktestPage() {
         <div className={s.stepContainer} key={`ex-${currentStep.exerciseIndex}`}>
           <div className={s.stepContent}>
             <ExerciseRenderer
-              exercise={SAMPLE_EXERCISES[currentStep.exerciseIndex]}
+              exercise={SAMPLE_EXERCISES[currentStep.exerciseIndex]!}
               onAnswer={handleExerciseAnswer}
             />
           </div>

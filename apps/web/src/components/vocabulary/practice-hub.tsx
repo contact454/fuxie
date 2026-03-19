@@ -2,6 +2,7 @@
 
 import { useState, useCallback, useRef } from 'react'
 import { useRouter } from 'next/navigation'
+import Image from 'next/image'
 import { Mascot } from '@/components/ui/mascot'
 
 // ─── Types ──────────────────────────────────────────
@@ -201,10 +202,12 @@ export function PracticeHub({ themes, availableLevels, initialLevel }: PracticeH
                                         }`}
                                 >
                                     {theme.imageUrl ? (
-                                        <img
+                                        <Image
                                             src={theme.imageUrl}
                                             alt={theme.name}
-                                            className="w-14 h-14 rounded-xl object-cover mb-2"
+                                            width={56}
+                                            height={56}
+                                            className="rounded-xl object-cover mb-2"
                                         />
                                     ) : (
                                         <div className="w-14 h-14 rounded-xl bg-gray-100 flex items-center justify-center text-2xl mb-2">📖</div>

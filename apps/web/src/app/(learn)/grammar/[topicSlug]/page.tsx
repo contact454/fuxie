@@ -13,9 +13,9 @@ const TYPE_INFO: Record<string, { label: string; emoji: string; description: str
 
 export async function generateMetadata({ params }: { params: Promise<{ topicSlug: string }> }) {
     const { topicSlug } = await params
-    const topic = await (prisma as any).grammarTopic.findUnique({
+    const topic = await prisma.grammarTopic.findUnique({
         where: { slug: topicSlug },
-    }) as any
+    })
     return {
         title: topic ? `Fuxie 🦊 — ${topic.titleDe ?? topic.title}` : 'Fuxie — Grammatik',
         description: topic?.titleVi ?? 'Deutsche Grammatik',
@@ -27,25 +27,25 @@ export default async function TopicDetailPage({ params }: { params: Promise<{ to
     const serverUser = await getServerUser()
     if (!serverUser) redirect('/login')
 
-    const topic = await (prisma as any).grammarTopic.findUnique({
+    const topic = await prisma.grammarTopic.findUnique({
         where: { slug: topicSlug },
-    }) as any
+    })
 
     if (!topic) notFound()
 
     // Query lessons separately
-    const lessons = await (prisma as any).grammarLesson.findMany({
+    const lessons = await prisma.grammarLesson.findMany({
         where: { topicId: topic.id },
         orderBy: { sortOrder: 'asc' },
-    }) as any[]
+    })
 
     // Get progress
-    const progressRows = await (prisma as any).grammarProgress.findMany({
+    const progressRows = await prisma.grammarProgress.findMany({
         where: {
             userId: serverUser.userId,
-            lessonId: { in: lessons.map((l: any) => l.id) },
+            lessonId: { in: lessons.map((l) => l.id) },
         },
-    }) as any[]
+    })
     const progressMap: Record<string, { score: number; stars: number; completed: boolean }> = {}
     for (const p of progressRows) {
         progressMap[p.lessonId] = {

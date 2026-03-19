@@ -1,6 +1,13 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@fuxie/database'
 import { getServerUser } from '@/lib/auth/server-auth'
+import { z } from 'zod'
+
+const ListeningSubmitSchema = z.object({
+    answers: z.record(z.string(), z.string()),
+    timeTaken: z.number().int().min(0).optional(),
+    listenCount: z.number().int().min(1).optional(),
+})
 
 // POST /api/v1/listening/:lessonId/submit — Submit listening answers
 export async function POST(
@@ -18,11 +25,15 @@ export async function POST(
 
         const { lessonId } = await params
         const body = await req.json()
-        const { answers, timeTaken, listenCount } = body as {
-            answers: Record<string, string>  // { questionId: userAnswer }
-            timeTaken?: number
-            listenCount?: number
+        const parsed = ListeningSubmitSchema.safeParse(body)
+        if (!parsed.success) {
+            return NextResponse.json(
+                { success: false, error: 'Invalid input', details: parsed.error.flatten().fieldErrors },
+                { status: 400 }
+            )
         }
+        const { answers, timeTaken, listenCount } = parsed.data
+
 
         // Get lesson with correct answers
         const lesson = await prisma.listeningLesson.findUnique({

@@ -1,4 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
+import { z } from 'zod'
+
+const translateSchema = z.object({ word: z.string().min(1).trim() })
 
 // ─── Mini dictionary: common German → Vietnamese ───
 // This serves as a fast lookup for frequent words across A1-C2 levels.
@@ -235,12 +238,13 @@ const MINI_DICT: Record<string, string> = {
 }
 
 export async function GET(req: NextRequest) {
-  const word = req.nextUrl.searchParams.get('word')
-  if (!word) {
+  const parsed = translateSchema.safeParse({
+    word: req.nextUrl.searchParams.get('word'),
+  })
+  if (!parsed.success) {
     return NextResponse.json({ error: 'Missing word parameter' }, { status: 400 })
   }
-
-  const cleanWord = word.trim()
+  const cleanWord = parsed.data.word
 
   // 1) Check mini dictionary (case-insensitive)
   const dictEntry = MINI_DICT[cleanWord] || MINI_DICT[cleanWord.toLowerCase()] || MINI_DICT[cleanWord.charAt(0).toUpperCase() + cleanWord.slice(1).toLowerCase()]

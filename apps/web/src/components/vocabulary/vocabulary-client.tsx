@@ -2,6 +2,8 @@
 
 import { useState, useCallback, useRef, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
+import Image from 'next/image'
+import Link from 'next/link'
 
 import { Mascot } from '@/components/ui/mascot'
 import { AudioPlayer } from '@/components/ui/audio-player'
@@ -259,38 +261,38 @@ export function VocabularyClient({ themes, totalWords, totalDue, availableLevels
                     </div>
                     {currentTotalDue > 0 ? (
                         <div className="flex gap-2">
-                            <a
+                            <Link
                                 href="/vocabulary/practice"
                                 className="flex items-center gap-2 px-5 py-3 rounded-xl border-2 border-[#004E89] text-[#004E89] font-bold text-sm hover:bg-[#004E89]/5 transition-all whitespace-nowrap"
                             >
                                 <span>🎯</span>
                                 Üben
-                            </a>
-                            <a
+                            </Link>
+                            <Link
                                 href="/review"
                                 className={`flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r ${cefrColors?.gradient ?? 'from-[#FF6B35] to-orange-500'} text-white font-bold text-sm hover:opacity-90 transition-all shadow-lg whitespace-nowrap`}
                             >
                                 <span>✨</span>
                                 Jetzt lernen
                                 <span className="ml-1 bg-white/20 rounded-lg px-2 py-0.5 text-xs">{currentTotalDue}</span>
-                            </a>
+                            </Link>
                         </div>
                     ) : (
                         <div className="flex gap-2">
-                            <a
+                            <Link
                                 href="/vocabulary/practice"
                                 className="flex items-center gap-2 px-5 py-3 rounded-xl border-2 border-[#004E89] text-[#004E89] font-bold text-sm hover:bg-[#004E89]/5 transition-all whitespace-nowrap"
                             >
                                 <span>🎯</span>
                                 Üben
-                            </a>
-                            <a
+                            </Link>
+                            <Link
                                 href="/review"
                                 className="flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-[#FF6B35] to-orange-500 text-white font-bold text-sm hover:opacity-90 transition-all shadow-lg shadow-orange-200 whitespace-nowrap"
                             >
                                 <span>✨</span>
                                 Jetzt lernen
-                            </a>
+                            </Link>
                         </div>
                     )}
                 </div>
@@ -349,10 +351,12 @@ export function VocabularyClient({ themes, totalWords, totalDue, availableLevels
                                     {/* Theme image */}
                                     <div className="relative mb-2">
                                         {theme.imageUrl ? (
-                                            <img
+                                            <Image
                                                 src={theme.imageUrl}
                                                 alt={theme.name}
-                                                className="w-14 h-14 rounded-xl object-cover"
+                                                width={56}
+                                                height={56}
+                                                className="rounded-xl object-cover"
                                             />
                                         ) : (
                                             <div className="w-14 h-14 rounded-xl bg-gray-100 flex items-center justify-center text-2xl">
@@ -399,10 +403,12 @@ export function VocabularyClient({ themes, totalWords, totalDue, availableLevels
                     <div className="p-6 flex items-start gap-5">
                         {/* Large theme image */}
                         {selectedTheme.imageUrl ? (
-                            <img
+                            <Image
                                 src={selectedTheme.imageUrl}
                                 alt={selectedTheme.name}
-                                className="w-24 h-24 rounded-2xl object-cover shadow-sm flex-shrink-0"
+                                width={96}
+                                height={96}
+                                className="rounded-2xl object-cover shadow-sm flex-shrink-0"
                             />
                         ) : (
                             <div className="w-24 h-24 rounded-2xl bg-gray-100 flex items-center justify-center text-4xl flex-shrink-0">
@@ -492,11 +498,12 @@ export function VocabularyClient({ themes, totalWords, totalDue, availableLevels
                                                 >
                                                     {w.imageUrl && (
                                                         <div className="mb-2 flex justify-center">
-                                                            <img
+                                                            <Image
                                                                 src={w.imageUrl}
                                                                 alt={w.word}
-                                                                className="w-16 h-16 rounded-lg object-cover"
-                                                                loading="lazy"
+                                                                width={64}
+                                                                height={64}
+                                                                className="rounded-lg object-cover"
                                                             />
                                                         </div>
                                                     )}
@@ -579,11 +586,12 @@ export function VocabularyClient({ themes, totalWords, totalDue, availableLevels
                                             >
                                                 {/* Word image or article color block */}
                                                 {w.imageUrl ? (
-                                                    <img
+                                                    <Image
                                                         src={w.imageUrl}
                                                         alt={w.word}
-                                                        className="w-11 h-11 rounded-lg object-cover shrink-0"
-                                                        loading="lazy"
+                                                        width={44}
+                                                        height={44}
+                                                        className="rounded-lg object-cover shrink-0"
                                                     />
                                                 ) : (
                                                     <div

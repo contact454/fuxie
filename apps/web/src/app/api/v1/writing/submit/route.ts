@@ -1,7 +1,16 @@
 import { NextRequest, NextResponse } from 'next/server'
+import { z } from 'zod'
 import { prisma } from '@fuxie/database'
 import { getServerUser } from '@/lib/auth/server-auth'
 import { gradeWriting } from '@/lib/ai/writing-grader'
+import { handleApiError } from '@/lib/api/error-handler'
+
+const writingSubmitSchema = z.object({
+    exerciseId: z.string().min(1),
+    submittedText: z.string().min(1),
+    wordCount: z.number().int().min(0).optional(),
+    timeSpentSeconds: z.number().min(0).optional(),
+})
 
 // POST /api/v1/writing/submit — Submit writing and get AI grading
 export async function POST(req: NextRequest) {
@@ -12,11 +21,7 @@ export async function POST(req: NextRequest) {
         }
 
         const body = await req.json()
-        const { exerciseId, submittedText, wordCount, timeSpentSeconds } = body
-
-        if (!exerciseId || !submittedText) {
-            return NextResponse.json({ success: false, error: 'Missing exerciseId or submittedText' }, { status: 400 })
-        }
+        const { exerciseId, submittedText, wordCount, timeSpentSeconds } = writingSubmitSchema.parse(body)
 
         // Fetch exercise details
         const exercise = await prisma.writingExercise.findUnique({
@@ -78,20 +83,18 @@ export async function POST(req: NextRequest) {
                 ...gradingResult,
             },
         })
-    } catch (error: any) {
-        console.error('[Writing Submit API] Error:', error)
-
+    } catch (error: unknown) {
         // Check if it's an API key error
-        if (error.message?.includes('API_KEY') || error.message?.includes('GEMINI')) {
+        if (
+            error instanceof Error &&
+            (error.message.includes('API_KEY') || error.message.includes('GEMINI'))
+        ) {
             return NextResponse.json(
                 { success: false, error: 'AI service not configured. Please set GEMINI_API_KEY.' },
                 { status: 503 }
             )
         }
 
-        return NextResponse.json(
-            { success: false, error: error.message || 'Failed to grade writing' },
-            { status: 500 }
-        )
+        return handleApiError(error)
     }
 }

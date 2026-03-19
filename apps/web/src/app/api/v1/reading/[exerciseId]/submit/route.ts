@@ -1,6 +1,13 @@
 import { NextRequest, NextResponse } from 'next/server'
+import { z } from 'zod'
 import { prisma } from '@fuxie/database'
 import { getServerUser } from '@/lib/auth/server-auth'
+import { handleApiError } from '@/lib/api/error-handler'
+
+const readingSubmitSchema = z.object({
+    answers: z.record(z.string(), z.string()),   // { questionId: userAnswer }
+    timeTaken: z.number().min(0).optional(),
+})
 
 // POST /api/v1/reading/:exerciseId/submit — Submit reading answers
 export async function POST(
@@ -18,10 +25,7 @@ export async function POST(
 
         const { exerciseId } = await params
         const body = await req.json()
-        const { answers, timeTaken } = body as {
-            answers: Record<string, string>  // { questionId: userAnswer }
-            timeTaken?: number
-        }
+        const { answers, timeTaken } = readingSubmitSchema.parse(body)
 
         // Get exercise with correct answers
         const exercise = await prisma.readingExercise.findUnique({
@@ -117,10 +121,6 @@ export async function POST(
             },
         })
     } catch (error) {
-        console.error('[Reading Submit API] Error:', error)
-        return NextResponse.json(
-            { success: false, error: 'Failed to submit answers' },
-            { status: 500 }
-        )
+        return handleApiError(error)
     }
 }

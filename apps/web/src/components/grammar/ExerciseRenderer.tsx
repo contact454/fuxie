@@ -68,7 +68,7 @@ function MultipleChoice({
   const handleCheck = () => {
     if (selected === null || answered) return
     setAnswered(true)
-    onAnswer(selected === exercise.correct, exercise.options[exercise.correct])
+    onAnswer(selected === exercise.correct, exercise.options[exercise.correct]!)
   }
 
   return (
@@ -468,7 +468,7 @@ function Transformation({
     const isCorrect = exercise.accepted_answers.some(
       a => a.toLowerCase().replace(/\.$/, '') === val
     )
-    onAnswer(isCorrect, exercise.accepted_answers[0])
+    onAnswer(isCorrect, exercise.accepted_answers[0]!)
   }
 
   return (

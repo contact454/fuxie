@@ -11,8 +11,25 @@ export async function GET(
 
         const exercise = await prisma.readingExercise.findUnique({
             where: { exerciseId },
-            include: {
+            select: {
+                exerciseId: true,
+                cefrLevel: true,
+                teil: true,
+                teilName: true,
+                topic: true,
+                textsJson: true,
+                imagesJson: true,
                 questions: {
+                    select: {
+                        id: true,
+                        questionNumber: true,
+                        questionType: true,
+                        statement: true,
+                        linkedText: true,
+                        options: true,
+                        sortOrder: true,
+                        // NOTE: correctAnswer intentionally excluded to prevent leaking answers
+                    },
                     orderBy: { sortOrder: 'asc' },
                 },
             },
@@ -25,7 +42,11 @@ export async function GET(
             )
         }
 
-        return NextResponse.json({ success: true, data: exercise })
+        return NextResponse.json({ success: true, data: exercise }, {
+            headers: {
+                'Cache-Control': 'private, max-age=60, stale-while-revalidate=300',
+            },
+        })
     } catch (error) {
         console.error('[Reading API] Error:', error)
         return NextResponse.json(

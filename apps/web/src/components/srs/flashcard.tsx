@@ -1,6 +1,7 @@
 'use client'
 
 import { GENDER_ARTICLES } from '@fuxie/shared/types'
+import Image from 'next/image'
 
 import { AudioPlayer } from '@/components/ui/audio-player'
 
@@ -80,10 +81,12 @@ export function Flashcard({ vocabulary, isFlipped, onFlip }: FlashcardProps) {
                     {/* Vocabulary image */}
                     {imageUrl && (
                         <div className="w-20 h-20 rounded-xl overflow-hidden mb-3 bg-gray-50 flex items-center justify-center">
-                            <img
+                            <Image
                                 src={imageUrl}
                                 alt={word}
-                                className="w-full h-full object-cover"
+                                width={80}
+                                height={80}
+                                className="object-cover"
                                 onError={(e) => { (e.target as HTMLImageElement).style.display = 'none' }}
                             />
                         </div>
@@ -168,13 +171,13 @@ export function Flashcard({ vocabulary, isFlipped, onFlip }: FlashcardProps) {
                     {exampleSentence1 && (
                         <div className="mb-2">
                             <p className="text-xs font-semibold text-gray-500 uppercase mb-1">Beispiele</p>
-                            <p className="text-sm font-medium text-gray-800 italic">„{exampleSentence1}"</p>
+                            <p className="text-sm font-medium text-gray-800 italic">„{exampleSentence1}&rdquo;</p>
                             <p className="text-xs text-gray-500">{exampleTranslation1}</p>
                         </div>
                     )}
                     {exampleSentence2 && (
                         <div className="mb-2">
-                            <p className="text-sm font-medium text-gray-800 italic">„{exampleSentence2}"</p>
+                            <p className="text-sm font-medium text-gray-800 italic">„{exampleSentence2}&rdquo;</p>
                             <p className="text-xs text-gray-500">{exampleTranslation2}</p>
                         </div>
                     )}

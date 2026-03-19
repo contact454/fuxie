@@ -3,6 +3,7 @@
 import { useState, useCallback } from 'react'
 import { useRouter } from 'next/navigation'
 import { Mascot } from '@/components/ui/mascot'
+import { useLevelSwitcher } from '@/hooks/use-level-switcher'
 
 // ─── Types ──────────────────────────────────────────
 interface LessonItem {
@@ -76,49 +77,38 @@ function ProgressRing({ progress, size = 40, strokeWidth = 3.5 }: { progress: nu
 // ─── Main Component ─────────────────────────────────
 export function ListeningClient({ teile, totalLessons, totalCompleted, availableLevels, initialLevel }: ListeningClientProps) {
     const router = useRouter()
-    const [currentLevel, setCurrentLevel] = useState(initialLevel)
     const [currentTeile, setCurrentTeile] = useState(teile)
     const [currentTotal, setCurrentTotal] = useState(totalLessons)
     const [currentCompleted, setCurrentCompleted] = useState(totalCompleted)
-    const [isLevelLoading, setIsLevelLoading] = useState(false)
     const [expandedTeil, setExpandedTeil] = useState<number | null>(teile[0]?.teil ?? null)
+
+    const { currentLevel, isLevelLoading, switchLevel } = useLevelSwitcher({
+        initialLevel,
+        apiEndpoint: '/api/v1/listening?level={level}',
+        transformData: (data: any) => data,
+        onSuccess: useCallback((data: any) => {
+            setCurrentTeile(data.data.teile.map((t: any) => ({
+                teil: t.teil,
+                teilName: t.teilName,
+                lessons: t.lessons.map((l: any) => ({
+                    id: l.id,
+                    lessonId: l.lessonId,
+                    title: l.title,
+                    topic: l.topic,
+                    taskType: l.taskType,
+                    audioDuration: l.audioDuration,
+                    questionCount: l._count?.questions ?? 0,
+                    completion: null,
+                })),
+            })))
+            setCurrentTotal(data.data.totalLessons)
+            setCurrentCompleted(0)
+            setExpandedTeil(data.data.teile[0]?.teil ?? null)
+        }, []),
+    })
 
     const cefrColors = CEFR_COLORS[currentLevel] ?? CEFR_COLORS.A1!
     const overallProgress = currentTotal > 0 ? Math.round((currentCompleted / currentTotal) * 100) : 0
-
-    // Switch CEFR level
-    const switchLevel = useCallback(async (level: string) => {
-        if (level === currentLevel) return
-        setIsLevelLoading(true)
-        setCurrentLevel(level)
-        try {
-            const res = await fetch(`/api/v1/listening?level=${level}`)
-            const data = await res.json()
-            if (data.success) {
-                setCurrentTeile(data.data.teile.map((t: any) => ({
-                    teil: t.teil,
-                    teilName: t.teilName,
-                    lessons: t.lessons.map((l: any) => ({
-                        id: l.id,
-                        lessonId: l.lessonId,
-                        title: l.title,
-                        topic: l.topic,
-                        taskType: l.taskType,
-                        audioDuration: l.audioDuration,
-                        questionCount: l._count?.questions ?? 0,
-                        completion: null, // TODO: fetch user progress
-                    })),
-                })))
-                setCurrentTotal(data.data.totalLessons)
-                setCurrentCompleted(0) // Will be updated from server
-                setExpandedTeil(data.data.teile[0]?.teil ?? null)
-            }
-        } catch (err) {
-            console.error(err)
-        } finally {
-            setIsLevelLoading(false)
-        }
-    }, [currentLevel])
 
     const toggleTeil = (teil: number) => {
         setExpandedTeil(expandedTeil === teil ? null : teil)

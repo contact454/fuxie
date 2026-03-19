@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 
 const navItems = [
@@ -36,7 +37,7 @@ export function Sidebar({ dailyGoal }: SidebarProps) {
         <aside className="fixed left-0 top-0 z-30 flex h-screen w-64 flex-col border-r border-gray-200/80 bg-white/95 backdrop-blur-sm">
             {/* Logo — Fuxie mascot */}
             <div className="flex items-center gap-2.5 border-b border-gray-100 px-6 py-5">
-                <img
+                <Image
                     src="/mascot/core/fuxie-core-happy-wave.png"
                     alt="Fuxie"
                     width={36}
@@ -63,7 +64,7 @@ export function Sidebar({ dailyGoal }: SidebarProps) {
                                             : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900'
                                         }`}
                                 >
-                                    <img
+                                    <Image
                                         src={item.icon}
                                         alt={item.labelDe}
                                         width={28}

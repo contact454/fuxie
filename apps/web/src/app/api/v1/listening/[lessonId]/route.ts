@@ -11,7 +11,19 @@ export async function GET(
 
         const lesson = await prisma.listeningLesson.findUnique({
             where: { lessonId },
-            include: {
+            select: {
+                lessonId: true,
+                cefrLevel: true,
+                board: true,
+                teil: true,
+                teilName: true,
+                title: true,
+                topic: true,
+                taskType: true,
+                audioUrl: true,
+                audioDuration: true,
+                // NOTE: transcript, backgroundScene excluded — not needed for player UI
+                // NOTE: correctAnswer excluded from questions to prevent answer leaking
                 questions: {
                     orderBy: { sortOrder: 'asc' },
                     select: {
@@ -34,7 +46,11 @@ export async function GET(
             )
         }
 
-        return NextResponse.json({ success: true, data: lesson })
+        return NextResponse.json({ success: true, data: lesson }, {
+            headers: {
+                'Cache-Control': 'private, max-age=60, stale-while-revalidate=300',
+            },
+        })
     } catch (error) {
         console.error('[Listening API] Error:', error)
         return NextResponse.json(

@@ -56,6 +56,7 @@ export interface SpeakingLessonData {
   exerciseType: string
   exercisesJson: NachsprechenExercise
   configJson: NachsprechenConfig | null
+  estimatedMin?: number
 }
 
 export interface SpeakingTopicData {

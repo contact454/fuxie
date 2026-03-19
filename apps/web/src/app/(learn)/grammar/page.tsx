@@ -14,34 +14,34 @@ type CefrLevel = 'A1' | 'A2' | 'B1' | 'B2' | 'C1' | 'C2'
 
 async function getGrammarData(userId: string | null, level: CefrLevel) {
     // Query topics and lessons separately to avoid Prisma include issues
-    const topics = await (prisma as any).grammarTopic.findMany({
+    const topics = await prisma.grammarTopic.findMany({
         where: { cefrLevel: level },
         orderBy: { sortOrder: 'asc' },
-    }) as any[]
+    })
 
     // Get all lessons for this level (use topicId to group)
-    const topicIds = topics.map((t: any) => t.id)
+    const topicIds = topics.map((t) => t.id)
     const lessons = topicIds.length > 0
-        ? await (prisma as any).grammarLesson.findMany({
+        ? await prisma.grammarLesson.findMany({
             where: { topicId: { in: topicIds } },
             orderBy: { sortOrder: 'asc' },
-        }) as any[]
+        })
         : []
 
     // Group lessons by topicId
     const lessonsByTopic: Record<string, any[]> = {}
     for (const l of lessons) {
         if (!lessonsByTopic[l.topicId]) lessonsByTopic[l.topicId] = []
-        lessonsByTopic[l.topicId].push(l)
+        lessonsByTopic[l.topicId]!.push(l)
     }
 
     // Get user progress
     let progressMap: Record<string, { score: number; stars: number; completed: boolean }> = {}
     if (userId && lessons.length > 0) {
         const lessonIds = lessons.map((l: any) => l.id)
-        const progressRows = await (prisma as any).grammarProgress.findMany({
+        const progressRows = await prisma.grammarProgress.findMany({
             where: { userId, lessonId: { in: lessonIds } },
-        }) as any[]
+        })
         for (const p of progressRows) {
             progressMap[p.lessonId] = {
                 score: p.score ?? 0,
@@ -81,11 +81,11 @@ async function getGrammarData(userId: string | null, level: CefrLevel) {
 }
 
 async function getAvailableLevels(): Promise<CefrLevel[]> {
-    const levels = await (prisma as any).grammarTopic.findMany({
+    const levels = await prisma.grammarTopic.findMany({
         select: { cefrLevel: true },
         distinct: ['cefrLevel'],
         orderBy: { cefrLevel: 'asc' },
-    }) as any[]
+    })
     if (levels.length === 0) return ['A1']
     return levels.map((l: any) => l.cefrLevel as CefrLevel)
 }
@@ -95,7 +95,7 @@ export default async function GrammarPage() {
     if (!serverUser) redirect('/login')
 
     const availableLevels = await getAvailableLevels()
-    const defaultLevel: CefrLevel = availableLevels[0] || 'A1'
+    const defaultLevel: CefrLevel = availableLevels[0]! || 'A1'
     const data = await getGrammarData(serverUser.userId, defaultLevel)
 
     return (

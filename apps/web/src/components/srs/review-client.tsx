@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useCallback, useRef, useEffect } from 'react'
+import Image from 'next/image'
 import { Flashcard } from './flashcard'
 import { RatingButtons } from './rating-buttons'
 import { Mascot } from '@/components/ui/mascot'
@@ -526,10 +527,12 @@ export function ReviewClient({ themes, availableLevels, initialLevel, dueCounts,
                             >
                                 {/* Image */}
                                 {theme.imageUrl ? (
-                                    <img
+                                    <Image
                                         src={theme.imageUrl}
                                         alt={theme.name}
-                                        className="w-16 h-16 rounded-xl object-cover mb-3 group-hover:scale-105 transition-transform"
+                                        width={64}
+                                        height={64}
+                                        className="rounded-xl object-cover mb-3 group-hover:scale-105 transition-transform"
                                     />
                                 ) : (
                                     <div className="w-16 h-16 rounded-xl bg-gray-100 flex items-center justify-center text-2xl mb-3">

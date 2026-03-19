@@ -73,26 +73,30 @@ export async function POST(req: NextRequest) {
         const accuracy = answers.length > 0 ? (correctCount / answers.length) * 100 : 0
         const xpEarned = calculateXp(results, timeTaken)
 
-        // Save attempt
-        const attempt = await prisma.vocabExerciseAttempt.create({
-            data: {
-                userId,
-                exerciseType,
-                themeSlug,
-                cefrLevel,
-                totalQuestions: answers.length,
-                correctCount,
-                score: xpEarned,
-                timeTaken: timeTaken ?? null,
-                accuracy,
-                details: { results } as any,
-            },
-        })
+        // Save attempt + update XP atomically in a transaction
+        const attempt = await prisma.$transaction(async (tx) => {
+            const newAttempt = await tx.vocabExerciseAttempt.create({
+                data: {
+                    userId,
+                    exerciseType,
+                    themeSlug,
+                    cefrLevel,
+                    totalQuestions: answers.length,
+                    correctCount,
+                    score: xpEarned,
+                    timeTaken: timeTaken ?? null,
+                    accuracy,
+                    details: { results } as any,
+                },
+            })
 
-        // Update user XP
-        await prisma.userProfile.updateMany({
-            where: { userId },
-            data: { totalXp: { increment: xpEarned } },
+            // Update user XP in same transaction (atomic — both succeed or both fail)
+            await tx.userProfile.updateMany({
+                where: { userId },
+                data: { totalXp: { increment: xpEarned } },
+            })
+
+            return newAttempt
         })
 
         return NextResponse.json({

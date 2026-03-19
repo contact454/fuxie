@@ -8,9 +8,9 @@ export const dynamic = 'force-dynamic'
 
 export async function generateMetadata({ params }: { params: Promise<{ topicSlug: string; lessonId: string }> }) {
     const { lessonId } = await params
-    const lesson = await (prisma as any).grammarLesson.findUnique({
+    const lesson = await prisma.grammarLesson.findUnique({
         where: { id: lessonId },
-    }) as any
+    })
     return {
         title: lesson ? `Fuxie 🦊 — ${lesson.titleVi}` : 'Fuxie — Grammatik',
     }
@@ -21,9 +21,9 @@ export default async function LessonPage({ params }: { params: Promise<{ topicSl
     const serverUser = await getServerUser()
     if (!serverUser) redirect('/login')
 
-    const lesson = await (prisma as any).grammarLesson.findUnique({
+    const lesson = await prisma.grammarLesson.findUnique({
         where: { id: lessonId },
-    }) as any
+    })
 
     if (!lesson) notFound()
 

@@ -114,6 +114,7 @@ export function LessonPlayer({
     const [progressSaved, setProgressSaved] = useState(false)
 
     const currentStep = steps[currentStepIdx]
+    if (!currentStep) return null
     const totalSteps = steps.length
     const progress = ((currentStepIdx) / (totalSteps - 1)) * 100
     const totalExercises = exercises.length
@@ -152,9 +153,9 @@ export function LessonPlayer({
     }, [totalSteps])
 
     const handleExerciseAnswer = useCallback((correct: boolean, correctAnswer: string) => {
-        const step = steps[currentStepIdx]
+        const step = steps[currentStepIdx]!
         if (step.type !== 'exercise') return
-        const ex = exercises[step.exerciseIndex]
+        const ex = exercises[(step as { type: 'exercise'; exerciseIndex: number }).exerciseIndex]!
         setAnswers(prev => [...prev, { correct, tags: ex.tags || [] }])
         if (correct) {
             setShowConfetti(true)
@@ -247,7 +248,7 @@ export function LessonPlayer({
             {currentStep.type === 'theory' && (
                 <div className={s.stepContainer} key={`theory-${currentStep.blockIndex}`}>
                     <div className={s.stepContent}>
-                        <TheoryRenderer blocks={[theoryBlocks[currentStep.blockIndex]]} topicSlug={topicSlug} />
+                        <TheoryRenderer blocks={[theoryBlocks[currentStep.blockIndex]!]} topicSlug={topicSlug} />
                     </div>
                     <div className={s.stepFooter}>
                         <div className={s.stepFooterInner}>
@@ -264,7 +265,7 @@ export function LessonPlayer({
                 <div className={s.stepContainer} key={`ex-${currentStep.exerciseIndex}`}>
                     <div className={s.stepContent}>
                         <ExerciseRenderer
-                            exercise={exercises[currentStep.exerciseIndex]}
+                            exercise={exercises[currentStep.exerciseIndex]!}
                             onAnswer={handleExerciseAnswer}
                         />
                     </div>

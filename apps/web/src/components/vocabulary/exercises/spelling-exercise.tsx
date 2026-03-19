@@ -1,8 +1,12 @@
 'use client'
 
 import { useState, useCallback, useEffect, useRef } from 'react'
+import Image from 'next/image'
+import { playSound } from '@/hooks/use-audio-player'
 import { ExerciseProgress } from './exercise-progress'
 import { ExerciseResults } from './exercise-results'
+import { useExerciseTimer } from '@/hooks/use-exercise-timer'
+import { useSubmitExercise, type ExerciseAnswer } from '@/hooks/use-submit-exercise'
 
 // ─── Types ──────────────────────────────────────────
 interface SpellingQuestion {
@@ -29,10 +33,7 @@ interface SpellingExerciseProps {
 // German special characters keyboard
 const SPECIAL_CHARS = ['ä', 'ö', 'ü', 'ß', 'Ä', 'Ö', 'Ü']
 
-function playAudio(url: string | null) {
-    if (!url) return
-    try { new Audio(url).play().catch(() => {}) } catch { /* silent */ }
-}
+
 
 // ─── Component ──────────────────────────────────────
 export function SpellingExercise({ questions, cefrLevel, themeName, themeSlug, onExit, onComplete }: SpellingExerciseProps) {
@@ -41,20 +42,18 @@ export function SpellingExercise({ questions, cefrLevel, themeName, themeSlug, o
     const [isRevealed, setIsRevealed] = useState(false)
     const [isCorrect, setIsCorrect] = useState(false)
     const [showHint, setShowHint] = useState(false)
-    const [answers, setAnswers] = useState<Array<{ questionId: string; answer: string; correctAnswer: string }>>([])
-    const [phase, setPhase] = useState<'playing' | 'results'>('playing')
-    const [submitResult, setSubmitResult] = useState<any>(null)
-    const [timer, setTimer] = useState(0)
+    const [answers, setAnswers] = useState<ExerciseAnswer[]>([])
     const inputRef = useRef<HTMLInputElement>(null)
-    const timerRef = useRef<ReturnType<typeof setInterval> | null>(null)
+
+    const { timer, stopTimer, resetTimer } = useExerciseTimer()
+    const { submitResult, phase, submitAnswers, resetSubmit } = useSubmitExercise({
+        exerciseType: 'spelling',
+        themeSlug,
+        cefrLevel,
+        xpPerCorrect: 7,
+    })
 
     const question = questions[currentIndex]!
-
-    // Timer
-    useEffect(() => {
-        timerRef.current = setInterval(() => setTimer(t => t + 1), 1000)
-        return () => { if (timerRef.current) clearInterval(timerRef.current) }
-    }, [])
 
     // Focus input on new question
     useEffect(() => {
@@ -78,7 +77,7 @@ export function SpellingExercise({ questions, cefrLevel, themeName, themeSlug, o
         setIsCorrect(correct)
         setIsRevealed(true)
 
-        const newAnswers = [...answers, {
+        const newAnswers: ExerciseAnswer[] = [...answers, {
             questionId: question.id,
             answer: userInput.trim(),
             correctAnswer: question.correctAnswer,
@@ -94,10 +93,11 @@ export function SpellingExercise({ questions, cefrLevel, themeName, themeSlug, o
                 setIsCorrect(false)
                 setShowHint(false)
             } else {
-                submitAnswers(newAnswers)
+                stopTimer()
+                submitAnswers(newAnswers, timer)
             }
         }, 2000)
-    }, [isRevealed, userInput, question, answers, currentIndex, questions.length])
+    }, [isRevealed, userInput, question, answers, currentIndex, questions.length, stopTimer, submitAnswers, timer])
 
     const insertChar = (ch: string) => {
         setUserInput(prev => prev + ch)
@@ -109,43 +109,6 @@ export function SpellingExercise({ questions, cefrLevel, themeName, themeSlug, o
             e.preventDefault()
             checkAnswer()
         }
-    }
-
-    const submitAnswers = async (finalAnswers: typeof answers) => {
-        if (timerRef.current) clearInterval(timerRef.current)
-        const localResults = finalAnswers.map(a => ({
-            questionId: a.questionId,
-            isCorrect: a.answer.toLowerCase() === a.correctAnswer.toLowerCase(),
-            userAnswer: a.answer,
-            correctAnswer: a.correctAnswer,
-        }))
-        const cc = localResults.filter(r => r.isCorrect).length
-        const localFallback = {
-            totalQuestions: finalAnswers.length,
-            correctCount: cc,
-            accuracy: finalAnswers.length > 0 ? (cc / finalAnswers.length) * 100 : 0,
-            xpEarned: cc * 7,
-            results: localResults,
-        }
-        try {
-            const res = await fetch('/api/v1/vocabulary/practice/submit', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({
-                    exerciseType: 'spelling',
-                    themeSlug,
-                    cefrLevel,
-                    timeTaken: timer,
-                    answers: finalAnswers,
-                }),
-            })
-            const data = await res.json()
-            if (data.success) setSubmitResult(data.data)
-            else setSubmitResult(localFallback)
-        } catch {
-            setSubmitResult(localFallback)
-        }
-        setPhase('results')
     }
 
     // ─── Results ────────────────────────────────────
@@ -160,8 +123,9 @@ export function SpellingExercise({ questions, cefrLevel, themeName, themeSlug, o
                 results={submitResult.results}
                 onRetry={() => {
                     setCurrentIndex(0); setUserInput(''); setIsRevealed(false); setIsCorrect(false)
-                    setShowHint(false); setAnswers([]); setPhase('playing'); setSubmitResult(null)
-                    setTimer(0); timerRef.current = setInterval(() => setTimer(t => t + 1), 1000)
+                    setShowHint(false); setAnswers([])
+                    resetSubmit()
+                    resetTimer()
                 }}
                 onNewTheme={onExit}
             />
@@ -188,10 +152,12 @@ export function SpellingExercise({ questions, cefrLevel, themeName, themeSlug, o
                         {/* Image */}
                         {question.promptImage && (
                             <div className="mb-4 flex justify-center">
-                                <img
+                                <Image
                                     src={question.promptImage}
                                     alt="Vocabulary hint"
-                                    className="w-44 h-44 rounded-2xl object-cover shadow-md"
+                                    width={176}
+                                    height={176}
+                                    className="rounded-2xl object-cover shadow-md"
                                 />
                             </div>
                         )}
@@ -199,7 +165,7 @@ export function SpellingExercise({ questions, cefrLevel, themeName, themeSlug, o
                         {/* Audio button */}
                         {question.promptAudio && (
                             <button
-                                onClick={() => playAudio(question.promptAudio)}
+                                onClick={() => playSound(question.promptAudio)}
                                 className="mb-3 inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-blue-50 text-[#004E89] hover:bg-blue-100 transition-colors"
                             >
                                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">

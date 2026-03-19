@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import { useRouter } from 'next/navigation'
+import Image from 'next/image'
 import { createUserWithEmailAndPassword } from 'firebase/auth'
 import { getFirebaseAuth } from '@/lib/firebase/config'
 
@@ -80,7 +81,7 @@ export default function RegisterPage() {
                 {/* Header */}
                 <div className="mb-8 text-center">
                     <div className="flex items-center justify-center gap-2 mb-2">
-                        <img
+                        <Image
                             src="/mascot/core/fuxie-core-happy-wave.png"
                             alt="Fuxie"
                             width={48}

@@ -45,28 +45,28 @@ export async function GET(req: NextRequest) {
             },
         })
 
-        // Get user's SRS progress per theme
+        // Get user's SRS progress per theme — aggregated in DB (avoids loading thousands of cards into JS)
         let srsProgress: Record<string, { total: number; learned: number; due: number }> = {}
         if (user) {
-            const cards = await prisma.srsCard.findMany({
-                where: { userId: user.id },
-                select: {
-                    vocabularyItem: { select: { themeId: true } },
-                    state: true,
-                    nextReviewAt: true,
-                },
-            })
-
-            const now = new Date()
-            for (const card of cards) {
-                const themeId = card.vocabularyItem?.themeId
-                if (!themeId) continue
-                if (!srsProgress[themeId]) {
-                    srsProgress[themeId] = { total: 0, learned: 0, due: 0 }
+            const stats = await prisma.$queryRaw<
+                { themeId: string; total: bigint; learned: bigint; due: bigint }[]
+            >`
+                SELECT vi."themeId",
+                       COUNT(*)::bigint AS total,
+                       COUNT(*) FILTER (WHERE sc.state = 2)::bigint AS learned,
+                       COUNT(*) FILTER (WHERE sc."nextReviewAt" <= NOW())::bigint AS due
+                FROM srs_cards sc
+                JOIN vocabulary_items vi ON vi.id = sc."vocabularyItemId"
+                WHERE sc."userId" = ${user.id}
+                  AND vi."themeId" IS NOT NULL
+                GROUP BY vi."themeId"
+            `
+            for (const row of stats) {
+                srsProgress[row.themeId] = {
+                    total: Number(row.total),
+                    learned: Number(row.learned),
+                    due: Number(row.due),
                 }
-                srsProgress[themeId].total++
-                if (card.state === 2) srsProgress[themeId].learned++
-                if (card.nextReviewAt <= now) srsProgress[themeId].due++
             }
         }
 
@@ -77,7 +77,11 @@ export async function GET(req: NextRequest) {
             srsProgress: srsProgress[theme.id] ?? { total: 0, learned: 0, due: 0 },
         }))
 
-        return NextResponse.json({ success: true, data })
+        return NextResponse.json({ success: true, data }, {
+            headers: {
+                'Cache-Control': 'private, max-age=60, stale-while-revalidate=300',
+            },
+        })
     } catch (error) {
         return handleApiError(error)
     }

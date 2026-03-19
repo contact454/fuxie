@@ -1,5 +1,6 @@
 import { prisma } from '@fuxie/database'
 import SpeakingClient from '@/components/speaking/SpeakingClient'
+import type { SpeakingTopicData } from '@/components/speaking/types'
 
 export const metadata = {
   title: 'Sprechen | Fuxie',
@@ -21,5 +22,5 @@ export default async function SpeakingPage() {
     ],
   })
 
-  return <SpeakingClient topics={topics} />
+  return <SpeakingClient topics={topics as unknown as SpeakingTopicData[]} />
 }

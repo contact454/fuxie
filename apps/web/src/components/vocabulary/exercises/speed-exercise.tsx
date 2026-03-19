@@ -2,6 +2,8 @@
 
 import { useState, useCallback, useEffect, useRef } from 'react'
 import { ExerciseResults } from './exercise-results'
+import { useExerciseTimer } from '@/hooks/use-exercise-timer'
+import { useSubmitExercise, type ExerciseAnswer } from '@/hooks/use-submit-exercise'
 
 // ─── Types ──────────────────────────────────────────
 interface SpeedQuestion {
@@ -37,49 +39,65 @@ export function SpeedExercise({ questions, cefrLevel, themeName, themeSlug, onEx
     const [combo, setCombo] = useState(0)
     const [maxCombo, setMaxCombo] = useState(0)
     const [totalPoints, setTotalPoints] = useState(0)
-    const [answers, setAnswers] = useState<Array<{ questionId: string; answer: string; correctAnswer: string }>>([])
-    const [phase, setPhase] = useState<'playing' | 'results'>('playing')
-    const [submitResult, setSubmitResult] = useState<any>(null)
-    const [totalTime, setTotalTime] = useState(0)
+    const [answers, setAnswers] = useState<ExerciseAnswer[]>([])
     const countdownRef = useRef<ReturnType<typeof setInterval> | null>(null)
-    const totalTimeRef = useRef<ReturnType<typeof setInterval> | null>(null)
+
+    // Use shared hooks — same as other 5 exercises
+    const { timer, stopTimer, resetTimer } = useExerciseTimer()
+    const { submitResult, phase, submitAnswers, resetSubmit } = useSubmitExercise({
+        exerciseType: 'speed',
+        themeSlug,
+        cefrLevel,
+        xpPerCorrect: 10,
+    })
 
     const question = questions[currentIndex]
 
-    // Total timer
-    useEffect(() => {
-        totalTimeRef.current = setInterval(() => setTotalTime(t => t + 1), 1000)
-        return () => { if (totalTimeRef.current) clearInterval(totalTimeRef.current) }
-    }, [])
+    // Refs for countdown closure (speed-specific: 0.1s intervals need fresh state)
+    const currentIndexRef = useRef(currentIndex)
+    const answersRef = useRef(answers)
+    const isRevealedRef = useRef(isRevealed)
+    const questionRef = useRef(question)
+    currentIndexRef.current = currentIndex
+    answersRef.current = answers
+    isRevealedRef.current = isRevealed
+    questionRef.current = question
 
-    // Countdown per question
+    // Countdown per question — speed-specific logic (0.1s tick, auto-timeout)
     useEffect(() => {
         setCountdown(COUNTDOWN_MAX)
         countdownRef.current = setInterval(() => {
             setCountdown(prev => {
                 if (prev <= 0.1) {
-                    // Time's up — auto-skip
-                    handleTimeout()
+                    // Time's up — use refs for fresh state
+                    if (!isRevealedRef.current) {
+                        setIsRevealed(true)
+                        setCombo(0)
+                        const q = questionRef.current
+                        const newAnswers: ExerciseAnswer[] = [...answersRef.current, {
+                            questionId: q?.id || '',
+                            answer: '__timeout__',
+                            correctAnswer: q?.correctAnswer || '',
+                        }]
+                        setAnswers(newAnswers)
+                        // Advance or finish
+                        if (currentIndexRef.current < questions.length - 1) {
+                            setCurrentIndex(i => i + 1)
+                            setSelectedAnswer(null)
+                            setIsRevealed(false)
+                        } else {
+                            if (countdownRef.current) clearInterval(countdownRef.current)
+                            stopTimer()
+                            setTimeout(() => submitAnswers(newAnswers, timer), 0)
+                        }
+                    }
                     return COUNTDOWN_MAX
                 }
                 return prev - 0.1
             })
         }, 100)
         return () => { if (countdownRef.current) clearInterval(countdownRef.current) }
-    }, [currentIndex])
-
-    const handleTimeout = useCallback(() => {
-        if (isRevealed) return
-        setIsRevealed(true)
-        setCombo(0)
-        const newAnswers = [...answers, {
-            questionId: question?.id || '',
-            answer: '__timeout__',
-            correctAnswer: question?.correctAnswer || '',
-        }]
-        setAnswers(newAnswers)
-        advanceOrFinish(newAnswers)
-    }, [isRevealed, answers, question])
+    }, [currentIndex, questions.length, stopTimer, submitAnswers, timer])
 
     const handleSelect = useCallback((option: string) => {
         if (isRevealed || !question) return
@@ -96,63 +114,24 @@ export function SpeedExercise({ questions, cefrLevel, themeName, themeSlug, onEx
         if (newCombo > maxCombo) setMaxCombo(newCombo)
         setTotalPoints(prev => prev + points)
 
-        const newAnswers = [...answers, {
+        const newAnswers: ExerciseAnswer[] = [...answers, {
             questionId: question.id,
             answer: option,
             correctAnswer: question.correctAnswer,
         }]
         setAnswers(newAnswers)
 
-        setTimeout(() => advanceOrFinish(newAnswers), 800)
-    }, [isRevealed, question, combo, maxCombo, answers])
-
-    const advanceOrFinish = (newAnswers: typeof answers) => {
-        if (currentIndex < questions.length - 1) {
-            setCurrentIndex(i => i + 1)
-            setSelectedAnswer(null)
-            setIsRevealed(false)
-        } else {
-            submitAnswers(newAnswers)
-        }
-    }
-
-    const submitAnswers = async (finalAnswers: typeof answers) => {
-        if (countdownRef.current) clearInterval(countdownRef.current)
-        if (totalTimeRef.current) clearInterval(totalTimeRef.current)
-        const localResults = finalAnswers.map(a => ({
-            questionId: a.questionId,
-            isCorrect: a.answer === a.correctAnswer,
-            userAnswer: a.answer,
-            correctAnswer: a.correctAnswer,
-        }))
-        const cc = localResults.filter(r => r.isCorrect).length
-        const localFallback = {
-            totalQuestions: finalAnswers.length,
-            correctCount: cc,
-            accuracy: finalAnswers.length > 0 ? (cc / finalAnswers.length) * 100 : 0,
-            xpEarned: totalPoints,
-            results: localResults,
-        }
-        try {
-            const res = await fetch('/api/v1/vocabulary/practice/submit', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({
-                    exerciseType: 'speed',
-                    themeSlug,
-                    cefrLevel,
-                    timeTaken: totalTime,
-                    answers: finalAnswers,
-                }),
-            })
-            const data = await res.json()
-            if (data.success) setSubmitResult(data.data)
-            else setSubmitResult(localFallback)
-        } catch {
-            setSubmitResult(localFallback)
-        }
-        setPhase('results')
-    }
+        setTimeout(() => {
+            if (currentIndex < questions.length - 1) {
+                setCurrentIndex(i => i + 1)
+                setSelectedAnswer(null)
+                setIsRevealed(false)
+            } else {
+                stopTimer()
+                submitAnswers(newAnswers, timer)
+            }
+        }, 800)
+    }, [isRevealed, question, combo, maxCombo, answers, currentIndex, questions.length, stopTimer, submitAnswers, timer])
 
     // ─── Results ────────────────────────────────────
     if (phase === 'results' && submitResult) {
@@ -162,13 +141,14 @@ export function SpeedExercise({ questions, cefrLevel, themeName, themeSlug, onEx
                 correctCount={submitResult.correctCount}
                 accuracy={submitResult.accuracy}
                 xpEarned={submitResult.xpEarned || totalPoints}
-                timeTaken={totalTime}
+                timeTaken={timer}
                 results={submitResult.results}
                 onRetry={() => {
                     setCurrentIndex(0); setSelectedAnswer(null); setIsRevealed(false)
                     setCountdown(COUNTDOWN_MAX); setCombo(0); setMaxCombo(0); setTotalPoints(0)
-                    setAnswers([]); setPhase('playing'); setSubmitResult(null); setTotalTime(0)
-                    totalTimeRef.current = setInterval(() => setTotalTime(t => t + 1), 1000)
+                    setAnswers([])
+                    resetSubmit()
+                    resetTimer()
                 }}
                 onNewTheme={onExit}
             />

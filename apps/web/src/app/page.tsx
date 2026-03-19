@@ -1,9 +1,11 @@
+import Image from 'next/image'
+
 export default function HomePage() {
     return (
         <main className="flex min-h-screen flex-col items-center justify-center bg-gradient-to-br from-fuxie-primary/10 to-fuxie-secondary/10">
             <div className="text-center">
                 <div className="flex items-center justify-center gap-3 mb-4">
-                    <img src="/mascot/core/fuxie-core-happy-wave.png" alt="Fuxie" width={72} height={72} className="object-contain" />
+                    <Image src="/mascot/core/fuxie-core-happy-wave.png" alt="Fuxie" width={72} height={72} className="object-contain" />
                     <h1 className="text-6xl font-bold">Fuxie</h1>
                 </div>
                 <p className="text-xl text-gray-600 mb-8">

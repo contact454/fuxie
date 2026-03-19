@@ -15,20 +15,32 @@ export async function GET(req: NextRequest) {
 
         const userId = serverUser.userId
 
-        // Get all listening attempts by user, grouped by lesson
-        const attempts = await prisma.listeningAttempt.findMany({
-            where: { userId },
-            include: {
-                lesson: {
-                    select: {
-                        cefrLevel: true,
-                        teil: true,
-                        lessonId: true,
+        // Run both queries in parallel — they're independent
+        const [attempts, totalLessonsByLevel] = await Promise.all([
+            // Get listening attempts with only needed fields (avoids loading full lesson/question data)
+            prisma.listeningAttempt.findMany({
+                where: { userId },
+                select: {
+                    score: true,
+                    totalQuestions: true,
+                    percentage: true,
+                    timeTaken: true,
+                    completedAt: true,
+                    lesson: {
+                        select: {
+                            cefrLevel: true,
+                            teil: true,
+                            lessonId: true,
+                        },
                     },
                 },
-            },
-            orderBy: { completedAt: 'desc' },
-        })
+                orderBy: { completedAt: 'desc' },
+            }),
+            prisma.listeningLesson.groupBy({
+                by: ['cefrLevel'],
+                _count: true,
+            }),
+        ])
 
         // Aggregate by CEFR level
         const levelStats: Record<string, {
@@ -66,12 +78,7 @@ export async function GET(req: NextRequest) {
             }
         }
 
-        // Calculate totals for each level
-        const totalLessonsByLevel = await prisma.listeningLesson.groupBy({
-            by: ['cefrLevel'],
-            _count: true,
-        })
-
+        // Build totalLessonsMap from the parallel query result
         const totalLessonsMap: Record<string, number> = {}
         for (const g of totalLessonsByLevel) {
             totalLessonsMap[g.cefrLevel] = g._count

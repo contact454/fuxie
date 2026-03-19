@@ -1,6 +1,6 @@
 'use client'
 
-
+import Image from 'next/image'
 
 interface MascotProps {
     variant:
@@ -72,8 +72,7 @@ export function Mascot({ variant, size = 80, className = '', speechBubble }: Mas
 
     return (
         <div className={`relative inline-flex items-end gap-2 ${className}`}>
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
+            <Image
                 src={src}
                 alt={`Fuxie ${variant}`}
                 width={size}

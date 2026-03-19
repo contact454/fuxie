@@ -23,27 +23,48 @@ export default function NachsprechenPlayer({ sentences, config, lessonTitle, onC
   const audioRef = useRef<HTMLAudioElement>(null)
   const mediaRecorderRef = useRef<MediaRecorder | null>(null)
   const chunksRef = useRef<Blob[]>([])
-  const timerRef = useRef<ReturnType<typeof setInterval>>()
+  const timerRef = useRef<ReturnType<typeof setInterval>>(undefined)
   const canvasRef = useRef<HTMLCanvasElement>(null)
   const analyserRef = useRef<AnalyserNode | null>(null)
-  const animFrameRef = useRef<number>()
+  const animFrameRef = useRef<number>(undefined)
+  const audioContextRef = useRef<AudioContext | null>(null)
+  const streamRef = useRef<MediaStream | null>(null)
+  const autoPlayTimerRef = useRef<ReturnType<typeof setTimeout>>(undefined)
 
   const sentence = sentences[currentIdx]
+  if (!sentence) return null
   const progress = ((currentIdx) / sentences.length) * 100
 
-  // Auto-play model audio
+
+  // Auto-play model audio (with cleanup to prevent setState on unmounted component)
   useEffect(() => {
     if (config.autoPlayModel && state === 'idle' && audioRef.current) {
-      setTimeout(() => playModel(), 300)
+      autoPlayTimerRef.current = setTimeout(() => playModel(), 300)
+    }
+    return () => {
+      if (autoPlayTimerRef.current) clearTimeout(autoPlayTimerRef.current)
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [currentIdx])
 
-  // Cleanup on unmount
+  // Comprehensive cleanup on unmount — prevents mic leak, AudioContext leak, animation leak
   useEffect(() => {
     return () => {
       if (timerRef.current) clearInterval(timerRef.current)
       if (animFrameRef.current) cancelAnimationFrame(animFrameRef.current)
+      if (autoPlayTimerRef.current) clearTimeout(autoPlayTimerRef.current)
+      // Close AudioContext if still open
+      if (audioContextRef.current && audioContextRef.current.state !== 'closed') {
+        audioContextRef.current.close().catch(() => {})
+      }
+      // Stop microphone stream tracks (turns off green indicator)
+      if (streamRef.current) {
+        streamRef.current.getTracks().forEach(t => t.stop())
+      }
+      // Stop MediaRecorder if still recording
+      if (mediaRecorderRef.current?.state === 'recording') {
+        mediaRecorderRef.current.stop()
+      }
     }
   }, [])
 
@@ -58,6 +79,7 @@ export default function NachsprechenPlayer({ sentences, config, lessonTitle, onC
   const startRecording = async () => {
     try {
       const stream = await navigator.mediaDevices.getUserMedia({ audio: true })
+      streamRef.current = stream // Store ref for cleanup
       const recorder = new MediaRecorder(stream, {
         mimeType: MediaRecorder.isTypeSupported('audio/webm;codecs=opus')
           ? 'audio/webm;codecs=opus'
@@ -67,6 +89,7 @@ export default function NachsprechenPlayer({ sentences, config, lessonTitle, onC
 
       // Waveform visualization
       const audioContext = new AudioContext()
+      audioContextRef.current = audioContext // Store ref for cleanup
       const source = audioContext.createMediaStreamSource(stream)
       const analyser = audioContext.createAnalyser()
       analyser.fftSize = 256
@@ -137,7 +160,7 @@ export default function NachsprechenPlayer({ sentences, config, lessonTitle, onC
       let x = 0
 
       for (let i = 0; i < bufferLength; i++) {
-        const barHeight = (dataArray[i] / 255) * canvas.height * 0.8
+        const barHeight = (dataArray[i]! / 255) * canvas.height * 0.8
         const gradient = ctx.createLinearGradient(0, canvas.height, 0, canvas.height - barHeight)
         gradient.addColorStop(0, '#3B82F6')
         gradient.addColorStop(1, '#8B5CF6')

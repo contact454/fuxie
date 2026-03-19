@@ -101,17 +101,17 @@ async function getCourseData(userId: string) {
     }
 
     // 5. Fetch grammar topics for A1
-    const grammarTopics = await (prisma as any).grammarTopic.findMany({
+    const grammarTopics = await prisma.grammarTopic.findMany({
         where: { cefrLevel: 'A1' },
-    }) as any[]
-    const grammarTopicMap = new Map(grammarTopics.map((t: any) => [t.slug, t]))
+    })
+    const grammarTopicMap = new Map(grammarTopics.map((t) => [t.slug, t]))
 
     // 6. Fetch grammar lessons for A1
-    const topicIds = grammarTopics.map((t: any) => t.id)
+    const topicIds = grammarTopics.map((t) => t.id)
     const grammarLessons = topicIds.length > 0
-        ? await (prisma as any).grammarLesson.findMany({
+        ? await prisma.grammarLesson.findMany({
             where: { topicId: { in: topicIds } },
-        }) as any[]
+        })
         : []
     const lessonsByTopic: Record<string, any[]> = {}
     for (const l of grammarLessons) {
@@ -120,11 +120,11 @@ async function getCourseData(userId: string) {
     }
 
     // 7. Fetch grammar progress
-    const grammarLessonIds = grammarLessons.map((l: any) => l.id)
+    const grammarLessonIds = grammarLessons.map((l) => l.id)
     const grammarProgress = grammarLessonIds.length > 0
-        ? await (prisma as any).grammarProgress.findMany({
+        ? await prisma.grammarProgress.findMany({
             where: { userId, lessonId: { in: grammarLessonIds } },
-        }) as any[]
+        })
         : []
     const progressMap: Record<string, { completed: boolean; stars: number }> = {}
     for (const p of grammarProgress) {

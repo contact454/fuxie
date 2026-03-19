@@ -3,6 +3,8 @@
 import { useState, useCallback, useEffect, useRef } from 'react'
 import { ExerciseProgress } from './exercise-progress'
 import { ExerciseResults } from './exercise-results'
+import { useExerciseTimer } from '@/hooks/use-exercise-timer'
+import { useSubmitExercise, type ExerciseAnswer } from '@/hooks/use-submit-exercise'
 
 // ─── Types ──────────────────────────────────────────
 interface ClozeQuestion {
@@ -55,20 +57,18 @@ export function ClozeExercise({ questions, cefrLevel, themeName, themeSlug, onEx
     const [userInput, setUserInput] = useState('')
     const [isRevealed, setIsRevealed] = useState(false)
     const [isCorrect, setIsCorrect] = useState(false)
-    const [answers, setAnswers] = useState<Array<{ questionId: string; answer: string; correctAnswer: string }>>([])
-    const [phase, setPhase] = useState<'playing' | 'results'>('playing')
-    const [submitResult, setSubmitResult] = useState<any>(null)
-    const [timer, setTimer] = useState(0)
+    const [answers, setAnswers] = useState<ExerciseAnswer[]>([])
     const inputRef = useRef<HTMLInputElement>(null)
-    const timerRef = useRef<ReturnType<typeof setInterval> | null>(null)
+
+    const { timer, stopTimer, resetTimer } = useExerciseTimer()
+    const { submitResult, phase, submitAnswers, resetSubmit } = useSubmitExercise({
+        exerciseType: 'cloze',
+        themeSlug,
+        cefrLevel,
+        xpPerCorrect: 7,
+    })
 
     const question = questions[currentIndex]!
-
-    // Timer
-    useEffect(() => {
-        timerRef.current = setInterval(() => setTimer(t => t + 1), 1000)
-        return () => { if (timerRef.current) clearInterval(timerRef.current) }
-    }, [])
 
     // Focus input on new question
     useEffect(() => {
@@ -97,10 +97,11 @@ export function ClozeExercise({ questions, cefrLevel, themeName, themeSlug, onEx
                 setIsRevealed(false)
                 setIsCorrect(false)
             } else {
-                submitAnswers(newAnswers)
+                stopTimer()
+                submitAnswers(newAnswers, timer)
             }
         }, 2000)
-    }, [isRevealed, userInput, question, answers, currentIndex, questions.length])
+    }, [isRevealed, userInput, question, answers, currentIndex, questions.length, stopTimer, submitAnswers, timer])
 
     const insertChar = (ch: string) => {
         setUserInput(prev => prev + ch)
@@ -112,43 +113,6 @@ export function ClozeExercise({ questions, cefrLevel, themeName, themeSlug, onEx
             e.preventDefault()
             checkAnswer()
         }
-    }
-
-    const submitAnswers = async (finalAnswers: typeof answers) => {
-        if (timerRef.current) clearInterval(timerRef.current)
-        const localResults = finalAnswers.map(a => ({
-            questionId: a.questionId,
-            isCorrect: a.answer.toLowerCase() === a.correctAnswer.toLowerCase(),
-            userAnswer: a.answer,
-            correctAnswer: a.correctAnswer,
-        }))
-        const cc = localResults.filter(r => r.isCorrect).length
-        const localFallback = {
-            totalQuestions: finalAnswers.length,
-            correctCount: cc,
-            accuracy: finalAnswers.length > 0 ? (cc / finalAnswers.length) * 100 : 0,
-            xpEarned: cc * 7,
-            results: localResults,
-        }
-        try {
-            const res = await fetch('/api/v1/vocabulary/practice/submit', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({
-                    exerciseType: 'cloze',
-                    themeSlug,
-                    cefrLevel,
-                    timeTaken: timer,
-                    answers: finalAnswers,
-                }),
-            })
-            const data = await res.json()
-            if (data.success) setSubmitResult(data.data)
-            else setSubmitResult(localFallback)
-        } catch {
-            setSubmitResult(localFallback)
-        }
-        setPhase('results')
     }
 
     // ─── Results ────────────────────────────────────
@@ -163,8 +127,9 @@ export function ClozeExercise({ questions, cefrLevel, themeName, themeSlug, onEx
                 results={submitResult.results}
                 onRetry={() => {
                     setCurrentIndex(0); setUserInput(''); setIsRevealed(false); setIsCorrect(false)
-                    setAnswers([]); setPhase('playing'); setSubmitResult(null)
-                    setTimer(0); timerRef.current = setInterval(() => setTimer(t => t + 1), 1000)
+                    setAnswers([])
+                    resetSubmit()
+                    resetTimer()
                 }}
                 onNewTheme={onExit}
             />

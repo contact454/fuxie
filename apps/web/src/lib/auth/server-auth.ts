@@ -1,3 +1,4 @@
+import { cache } from 'react'
 import { cookies } from 'next/headers'
 import { getTokens } from 'next-firebase-auth-edge'
 import { prisma } from '@fuxie/database'
@@ -12,8 +13,11 @@ interface ServerUser {
 /**
  * Get authenticated user from Firebase cookie (for Server Components).
  * Auto-provisions a DB user if Firebase auth is valid but no DB record exists.
+ *
+ * Wrapped in React.cache() to deduplicate across layout.tsx + page.tsx
+ * within the same server request (avoids 2× Firebase verify + 2× DB query).
  */
-export async function getServerUser(): Promise<ServerUser | null> {
+export const getServerUser = cache(async (): Promise<ServerUser | null> => {
     try {
         // 1. Verify Firebase token from cookies
         const cookieStore = await cookies()
@@ -52,7 +56,7 @@ export async function getServerUser(): Promise<ServerUser | null> {
         console.error('[Fuxie] getServerUser error:', error)
         return null
     }
-}
+})
 
 /**
  * Create a new user with all required relations in a single transaction.

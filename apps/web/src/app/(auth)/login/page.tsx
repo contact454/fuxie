@@ -2,6 +2,7 @@
 
 import { Suspense, useState } from 'react'
 import { useRouter, useSearchParams } from 'next/navigation'
+import Image from 'next/image'
 import {
     signInWithEmailAndPassword,
     GoogleAuthProvider,
@@ -138,7 +139,7 @@ function LoginContent() {
                 {/* Header */}
                 <div className="mb-8 text-center">
                     <div className="flex items-center justify-center gap-2 mb-2">
-                        <img
+                        <Image
                             src="/mascot/core/fuxie-core-happy-wave.png"
                             alt="Fuxie"
                             width={48}

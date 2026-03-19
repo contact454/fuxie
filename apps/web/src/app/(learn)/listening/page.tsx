@@ -2,6 +2,7 @@ import { redirect } from 'next/navigation'
 import { prisma } from '@fuxie/database'
 import { getServerUser } from '@/lib/auth/server-auth'
 import { ListeningClient } from '@/components/listening/listening-client'
+import { unstable_cache } from 'next/cache'
 
 export const dynamic = 'force-dynamic'
 
@@ -13,53 +14,45 @@ export const metadata = {
 type CefrLevel = 'A1' | 'A2' | 'B1' | 'B2' | 'C1' | 'C2'
 
 async function getListeningData(userId: string | null, cefrLevel: CefrLevel) {
-    const lessons = await prisma.listeningLesson.findMany({
-        where: { cefrLevel },
-        orderBy: [{ teil: 'asc' }, { sortOrder: 'asc' }],
-        select: {
-            id: true,
-            lessonId: true,
-            cefrLevel: true,
-            teil: true,
-            teilName: true,
-            title: true,
-            topic: true,
-            taskType: true,
-            audioUrl: true,
-            audioDuration: true,
-            backgroundScene: true,
-            sortOrder: true,
-            _count: { select: { questions: true } },
-        },
-    })
-
-    // Get user's completion data
-    let completedLessons: Record<string, { bestScore: number; totalQuestions: number; attempts: number }> = {}
-    if (userId) {
-        const attempts = await prisma.listeningAttempt.findMany({
-            where: { userId },
+    // Parallelize independent queries
+    const [lessons, completedLessons] = await Promise.all([
+        prisma.listeningLesson.findMany({
+            where: { cefrLevel },
+            orderBy: [{ teil: 'asc' }, { sortOrder: 'asc' }],
             select: {
+                id: true,
                 lessonId: true,
-                score: true,
-                totalQuestions: true,
+                cefrLevel: true,
+                teil: true,
+                teilName: true,
+                title: true,
+                topic: true,
+                taskType: true,
+                audioUrl: true,
+                audioDuration: true,
+                backgroundScene: true,
+                sortOrder: true,
+                _count: { select: { questions: true } },
             },
-        })
-        for (const a of attempts) {
-            const existing = completedLessons[a.lessonId]
-            if (!existing || a.score > existing.bestScore) {
-                completedLessons[a.lessonId] = {
-                    bestScore: a.score,
-                    totalQuestions: a.totalQuestions,
-                    attempts: (existing?.attempts ?? 0) + 1,
+        }),
+        userId
+            ? prisma.listeningAttempt.findMany({
+                where: { userId },
+                select: { lessonId: true, score: true, totalQuestions: true },
+            }).then(attempts => {
+                const map: Record<string, { bestScore: number; totalQuestions: number; attempts: number }> = {}
+                for (const a of attempts) {
+                    const existing = map[a.lessonId]
+                    if (!existing || a.score > existing.bestScore) {
+                        map[a.lessonId] = { bestScore: a.score, totalQuestions: a.totalQuestions, attempts: (existing?.attempts ?? 0) + 1 }
+                    } else {
+                        map[a.lessonId] = { ...existing, attempts: existing.attempts + 1 }
+                    }
                 }
-            } else {
-                completedLessons[a.lessonId] = {
-                    ...existing,
-                    attempts: existing.attempts + 1,
-                }
-            }
-        }
-    }
+                return map
+            })
+            : ({} as Record<string, { bestScore: number; totalQuestions: number; attempts: number }>),
+    ])
 
     // Group by Teil
     const teilMap: Record<number, {
@@ -104,18 +97,20 @@ async function getListeningData(userId: string | null, cefrLevel: CefrLevel) {
     return { teile, totalLessons, totalCompleted }
 }
 
-async function getAvailableLevels(): Promise<CefrLevel[]> {
-    const levels = await prisma.listeningLesson.findMany({
-        select: { cefrLevel: true },
-        distinct: ['cefrLevel'],
-        orderBy: { cefrLevel: 'asc' },
-    })
-    if (levels.length === 0) {
-        // If no lessons yet, show A1 as default
-        return ['A1']
-    }
-    return levels.map(l => l.cefrLevel as CefrLevel)
-}
+// Cache available levels — content changes rarely (revalidate every 1 hour)
+const getAvailableLevels = unstable_cache(
+    async (): Promise<CefrLevel[]> => {
+        const levels = await prisma.listeningLesson.findMany({
+            select: { cefrLevel: true },
+            distinct: ['cefrLevel'],
+            orderBy: { cefrLevel: 'asc' },
+        })
+        if (levels.length === 0) return ['A1']
+        return levels.map(l => l.cefrLevel as CefrLevel)
+    },
+    ['listening-available-levels'],
+    { revalidate: 3600, tags: ['listening-levels'] }
+)
 
 export default async function ListeningPage() {
     const serverUser = await getServerUser()
