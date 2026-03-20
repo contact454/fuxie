@@ -1,13 +1,18 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useCallback, useTransition } from 'react'
 import { useRouter } from 'next/navigation'
 import NachsprechenPlayer from './NachsprechenPlayer'
 import styles from './speaking.module.css'
-import type { SpeakingTopicData, NachsprechenConfig } from './types'
+import type { SpeakingTopicData, NachsprechenConfig, CefrLevel } from './types'
 
 interface Props {
   topics: SpeakingTopicData[]
+  availableLevels: CefrLevel[]
+  initialLevel: CefrLevel
+  totalLessons: number
+  completedLessons: number
+  totalStars: number
 }
 
 const LEVEL_COLORS: Record<string, string> = {
@@ -29,10 +34,84 @@ const DEFAULT_CONFIG: NachsprechenConfig = {
   autoPlayModel: true,
 }
 
-export default function SpeakingClient({ topics }: Props) {
+function getStarsFromScore(score: number): number {
+  if (score >= 90) return 3
+  if (score >= 70) return 2
+  if (score >= 50) return 1
+  return 0
+}
+
+export default function SpeakingClient({
+  topics: initialTopics,
+  availableLevels,
+  initialLevel,
+  totalLessons: initialTotalLessons,
+  completedLessons: initialCompletedLessons,
+  totalStars: initialTotalStars,
+}: Props) {
   const router = useRouter()
+  const [isPending, startTransition] = useTransition()
+  const [selectedLevel, setSelectedLevel] = useState<CefrLevel>(initialLevel)
+  const [topics, setTopics] = useState(initialTopics)
+  const [totalLessons, setTotalLessons] = useState(initialTotalLessons)
+  const [completedLessons, setCompletedLessons] = useState(initialCompletedLessons)
+  const [totalStars, setTotalStars] = useState(initialTotalStars)
   const [selectedTopic, setSelectedTopic] = useState<SpeakingTopicData | null>(null)
   const [selectedLesson, setSelectedLesson] = useState<number | null>(null)
+
+  const handleLevelChange = useCallback((level: CefrLevel) => {
+    setSelectedLevel(level)
+    setSelectedTopic(null)
+    setSelectedLesson(null)
+    startTransition(() => {
+      router.refresh()
+    })
+  }, [router])
+
+  const handleLessonComplete = useCallback(async (score: number, lessonId: string) => {
+    const stars = getStarsFromScore(score)
+
+    try {
+      await fetch('/api/v1/speaking/progress', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ lessonId, score, maxScore: 100, stars }),
+      })
+    } catch (err) {
+      console.warn('Failed to save progress:', err)
+    }
+
+    // Update local state for immediate UI feedback
+    setTopics(prev => prev.map(topic => ({
+      ...topic,
+      lessons: topic.lessons.map(lesson => {
+        if (lesson.id !== lessonId) return lesson
+        const existing = lesson.completion
+        const shouldUpdate = !existing || score > existing.bestScore
+        return {
+          ...lesson,
+          completion: {
+            bestScore: shouldUpdate ? score : (existing?.bestScore ?? 0),
+            maxScore: 100,
+            stars: shouldUpdate ? stars : (existing?.stars ?? 0),
+            attempts: (existing?.attempts ?? 0) + 1,
+            completed: true,
+          },
+        }
+      }),
+    })))
+
+    // Update stats
+    setCompletedLessons(prev => {
+      const lessonWasNew = !initialTopics
+        .flatMap(t => t.lessons)
+        .find(l => l.id === lessonId)?.completion?.completed
+      return lessonWasNew ? prev + 1 : prev
+    })
+    setTotalStars(prev => prev + stars)
+
+    setSelectedLesson(null)
+  }, [initialTopics])
 
   // Playing a lesson
   if (selectedTopic && selectedLesson !== null) {
@@ -47,11 +126,8 @@ export default function SpeakingClient({ topics }: Props) {
         sentences={exercises.sentences || []}
         config={config}
         lessonTitle={lesson.titleVi}
-        onComplete={(score) => {
-          // TODO: Save progress via API
-          console.log(`Lesson complete! Score: ${score}`)
-          setSelectedLesson(null)
-        }}
+        lessonId={lesson.id}
+        onComplete={(score) => handleLessonComplete(score, lesson.id)}
         onClose={() => setSelectedLesson(null)}
       />
     )
@@ -59,6 +135,11 @@ export default function SpeakingClient({ topics }: Props) {
 
   // Viewing lessons for a topic
   if (selectedTopic) {
+    // Re-read topic from state to get fresh completion data
+    const freshTopic = topics.find(t => t.id === selectedTopic.id) || selectedTopic
+    const topicCompleted = freshTopic.lessons.filter(l => l.completion?.completed).length
+    const topicStars = freshTopic.lessons.reduce((s, l) => s + (l.completion?.stars ?? 0), 0)
+
     return (
       <div className={styles.lessonPlayer}>
         <div className={styles.progressBarWrap}>
@@ -66,42 +147,60 @@ export default function SpeakingClient({ topics }: Props) {
             <button className={styles.progressBarClose} onClick={() => setSelectedTopic(null)}>←</button>
             <div style={{ flex: 1 }}>
               <h2 style={{ fontSize: 18, fontWeight: 700, color: '#111827', margin: 0 }}>
-                {selectedTopic.titleVi}
+                {freshTopic.titleVi}
               </h2>
-              <p style={{ fontSize: 13, color: '#6B7280', margin: 0 }}>{selectedTopic.titleDe}</p>
+              <p style={{ fontSize: 13, color: '#6B7280', margin: 0 }}>
+                {freshTopic.titleDe} · {topicCompleted}/{freshTopic.lessons.length} hoàn thành · ⭐ {topicStars}
+              </p>
             </div>
           </div>
         </div>
 
         <div className={styles.topicGrid} style={{ paddingTop: 16 }}>
-          {selectedTopic.lessons.map((lesson, idx) => (
-            <div
-              key={lesson.id}
-              className={styles.topicCard}
-              onClick={() => setSelectedLesson(idx)}
-            >
+          {freshTopic.lessons.map((lesson, idx) => {
+            const comp = lesson.completion
+            const isCompleted = comp?.completed
+            const lessonStars = comp?.stars ?? 0
+
+            return (
               <div
-                className={styles.topicIcon}
-                style={{ background: `${LEVEL_COLORS[lesson.level]}15` }}
+                key={lesson.id}
+                className={styles.topicCard}
+                onClick={() => {
+                  setSelectedTopic(freshTopic)
+                  setSelectedLesson(idx)
+                }}
               >
-                {lesson.lessonType === 'E' ? '📖' : lesson.lessonType === 'V' ? '🔄' : '🎯'}
-              </div>
-              <div className={styles.topicInfo}>
-                <div className={styles.topicTitle}>{lesson.titleVi}</div>
-                <div className={styles.topicSubtitle}>
-                  {lesson.lessonType === 'E' ? 'Einführung' : lesson.lessonType === 'V' ? 'Vertiefung' : 'Anwendung'}
-                  {' · '}{lesson.estimatedMin} phút
+                <div
+                  className={styles.topicIcon}
+                  style={{ background: isCompleted ? '#ECFDF515' : `${LEVEL_COLORS[lesson.level]}15` }}
+                >
+                  {isCompleted ? '✅' : lesson.lessonType === 'E' ? '📖' : lesson.lessonType === 'V' ? '🔄' : '🎯'}
                 </div>
+                <div className={styles.topicInfo}>
+                  <div className={styles.topicTitle}>{lesson.titleVi}</div>
+                  <div className={styles.topicSubtitle}>
+                    {lesson.lessonType === 'E' ? 'Einführung' : lesson.lessonType === 'V' ? 'Vertiefung' : 'Anwendung'}
+                    {' · '}{lesson.estimatedMin} phút
+                    {isCompleted && ` · ${comp!.bestScore}%`}
+                  </div>
+                </div>
+                {isCompleted ? (
+                  <span className={styles.starsDisplay}>
+                    {'⭐'.repeat(lessonStars)}{'☆'.repeat(3 - lessonStars)}
+                  </span>
+                ) : (
+                  <span className={`${styles.topicBadge} ${styles.badgeNew}`}>Mới</span>
+                )}
               </div>
-              <span className={`${styles.topicBadge} ${styles.badgeNew}`}>Mới</span>
-            </div>
-          ))}
+            )
+          })}
         </div>
       </div>
     )
   }
 
-  // Topic list (grouped by level)
+  // Topic list with level filter
   const groupedByLevel = topics.reduce<Record<string, SpeakingTopicData[]>>((acc, topic) => {
     const level = topic.cefrLevel
     if (!acc[level]) acc[level] = []
@@ -111,6 +210,7 @@ export default function SpeakingClient({ topics }: Props) {
 
   return (
     <div className={styles.lessonPlayer} style={{ paddingBottom: 40 }}>
+      {/* Header */}
       <div style={{ padding: '24px 0 16px' }}>
         <h1 style={{ fontSize: 28, fontWeight: 800, color: '#111827', margin: '0 0 4px' }}>
           🎤 Sprechen
@@ -120,6 +220,43 @@ export default function SpeakingClient({ topics }: Props) {
         </p>
       </div>
 
+      {/* Stats Summary */}
+      <div className={styles.statsRow}>
+        <div className={styles.statItem}>
+          <span className={styles.statValue}>{completedLessons}/{totalLessons}</span>
+          <span className={styles.statLabel}>Bài học</span>
+        </div>
+        <div className={styles.statItem}>
+          <span className={styles.statValue}>⭐ {totalStars}</span>
+          <span className={styles.statLabel}>Tổng sao</span>
+        </div>
+        <div className={styles.statItem}>
+          <span className={styles.statValue}>
+            {totalLessons > 0 ? Math.round((completedLessons / totalLessons) * 100) : 0}%
+          </span>
+          <span className={styles.statLabel}>Tiến độ</span>
+        </div>
+      </div>
+
+      {/* Level Filter */}
+      {availableLevels.length > 1 && (
+        <div className={styles.levelTabs}>
+          {availableLevels.map(level => (
+            <button
+              key={level}
+              className={`${styles.levelTab} ${selectedLevel === level ? styles.levelTabActive : ''}`}
+              style={{
+                '--level-color': LEVEL_COLORS[level],
+              } as React.CSSProperties}
+              onClick={() => handleLevelChange(level)}
+            >
+              {LEVEL_ICONS[level]} {level}
+            </button>
+          ))}
+        </div>
+      )}
+
+      {/* Topic List */}
       {Object.entries(groupedByLevel).map(([level, levelTopics]) => (
         <div key={level} style={{ marginBottom: 24 }}>
           <div style={{
@@ -142,26 +279,44 @@ export default function SpeakingClient({ topics }: Props) {
           </div>
 
           <div className={styles.topicGrid}>
-            {levelTopics.map((topic) => (
-              <div
-                key={topic.id}
-                className={styles.topicCard}
-                onClick={() => setSelectedTopic(topic)}
-              >
+            {levelTopics.map((topic) => {
+              const topicCompleted = topic.lessons.filter(l => l.completion?.completed).length
+              const topicTotal = topic.lessons.length
+
+              return (
                 <div
-                  className={styles.topicIcon}
-                  style={{ background: `${LEVEL_COLORS[level]}15` }}
+                  key={topic.id}
+                  className={styles.topicCard}
+                  onClick={() => setSelectedTopic(topic)}
                 >
-                  🗣️
-                </div>
-                <div className={styles.topicInfo}>
-                  <div className={styles.topicTitle}>{topic.titleVi}</div>
-                  <div className={styles.topicSubtitle}>
-                    {topic.titleDe} · {topic.lessons.length} bài
+                  <div
+                    className={styles.topicIcon}
+                    style={{ background: `${LEVEL_COLORS[level]}15` }}
+                  >
+                    {topicCompleted === topicTotal && topicTotal > 0 ? '✅' : '🗣️'}
                   </div>
+                  <div className={styles.topicInfo}>
+                    <div className={styles.topicTitle}>{topic.titleVi}</div>
+                    <div className={styles.topicSubtitle}>
+                      {topic.titleDe} · {topicCompleted}/{topicTotal} bài
+                    </div>
+                  </div>
+                  {topicCompleted > 0 ? (
+                    <div className={styles.progressMini}>
+                      <div
+                        className={styles.progressMiniFill}
+                        style={{
+                          width: `${Math.round((topicCompleted / topicTotal) * 100)}%`,
+                          background: LEVEL_COLORS[level],
+                        }}
+                      />
+                    </div>
+                  ) : (
+                    <span className={`${styles.topicBadge} ${styles.badgeNew}`}>Mới</span>
+                  )}
                 </div>
-              </div>
-            ))}
+              )
+            })}
           </div>
         </div>
       ))}

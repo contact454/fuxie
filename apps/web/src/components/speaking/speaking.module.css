@@ -470,3 +470,98 @@
   background: #F0FFF4;
   color: #166534;
 }
+
+/* ═══ STATS ROW ═══ */
+.statsRow {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+.statItem {
+  flex: 1;
+  background: #fff;
+  border-radius: 16px;
+  padding: 14px 16px;
+  text-align: center;
+  border: 2px solid #E5E7EB;
+  box-shadow: 0 2px 0 #E5E7EB;
+}
+.statValue {
+  display: block;
+  font-size: 20px;
+  font-weight: 800;
+  color: #111827;
+  margin-bottom: 2px;
+}
+.statLabel {
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  color: #9CA3AF;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* ═══ LEVEL TABS ═══ */
+.levelTabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 20px;
+  overflow-x: auto;
+  padding-bottom: 4px;
+}
+.levelTab {
+  padding: 8px 16px;
+  border: 2px solid #E5E7EB;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #6B7280;
+  background: #fff;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.2s;
+  box-shadow: 0 2px 0 #E5E7EB;
+  position: relative;
+  top: 0;
+}
+.levelTab:hover {
+  border-color: var(--level-color, #3B82F6);
+  color: var(--level-color, #3B82F6);
+  background: #FAFAFA;
+}
+.levelTabActive {
+  border-color: var(--level-color, #3B82F6);
+  color: #fff;
+  background: var(--level-color, #3B82F6);
+  box-shadow: 0 2px 0 color-mix(in srgb, var(--level-color, #3B82F6) 80%, black);
+}
+.levelTabActive:hover {
+  color: #fff;
+  background: var(--level-color, #3B82F6);
+}
+
+/* ═══ STARS DISPLAY ═══ */
+.starsDisplay {
+  font-size: 14px;
+  letter-spacing: 2px;
+  min-width: 56px;
+  text-align: right;
+  flex-shrink: 0;
+}
+
+/* ═══ PROGRESS MINI BAR ═══ */
+.progressMini {
+  width: 48px;
+  height: 8px;
+  background: #E5E7EB;
+  border-radius: 999px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.progressMiniFill {
+  height: 100%;
+  border-radius: 999px;
+  transition: width 0.5s ease;
+}
+

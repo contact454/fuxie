@@ -1,5 +1,7 @@
 // ===== SPEAKING MODULE TYPES =====
 
+export type CefrLevel = 'A1' | 'A2' | 'B1' | 'B2' | 'C1' | 'C2'
+
 export interface NachsprechenSentence {
   id: string
   textDe: string
@@ -45,6 +47,14 @@ export interface EvaluationResult {
   suggestRetry: boolean
 }
 
+export interface LessonCompletion {
+  bestScore: number
+  maxScore: number
+  stars: number
+  attempts: number
+  completed: boolean
+}
+
 export interface SpeakingLessonData {
   id: string
   topicId: string
@@ -57,6 +67,7 @@ export interface SpeakingLessonData {
   exercisesJson: NachsprechenExercise
   configJson: NachsprechenConfig | null
   estimatedMin?: number
+  completion?: LessonCompletion | null
 }
 
 export interface SpeakingTopicData {

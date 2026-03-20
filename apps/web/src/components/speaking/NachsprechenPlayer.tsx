@@ -8,11 +8,12 @@ interface Props {
   sentences: NachsprechenSentence[]
   config: NachsprechenConfig
   lessonTitle: string
+  lessonId: string
   onComplete: (score: number) => void
   onClose: () => void
 }
 
-export default function NachsprechenPlayer({ sentences, config, lessonTitle, onComplete, onClose }: Props) {
+export default function NachsprechenPlayer({ sentences, config, lessonTitle, lessonId, onComplete, onClose }: Props) {
   const [currentIdx, setCurrentIdx] = useState(0)
   const [state, setState] = useState<RecordingState>('idle')
   const [result, setResult] = useState<EvaluationResult | null>(null)
@@ -30,10 +31,46 @@ export default function NachsprechenPlayer({ sentences, config, lessonTitle, onC
   const audioContextRef = useRef<AudioContext | null>(null)
   const streamRef = useRef<MediaStream | null>(null)
   const autoPlayTimerRef = useRef<ReturnType<typeof setTimeout>>(undefined)
+  const isMountedRef = useRef(true)
+  const skipEvaluationRef = useRef(false)
+  const evaluateAbortRef = useRef<AbortController | null>(null)
+  const sentenceRef = useRef<NachsprechenSentence | null>(null)
+  const recordingTimeRef = useRef(0)
 
   const sentence = sentences[currentIdx]
   if (!sentence) return null
   const progress = ((currentIdx) / sentences.length) * 100
+
+  sentenceRef.current = sentence
+  recordingTimeRef.current = recordingTime
+
+  const disposeRecordingResources = useCallback(async () => {
+    if (timerRef.current) {
+      clearInterval(timerRef.current)
+      timerRef.current = undefined
+    }
+
+    if (animFrameRef.current) {
+      cancelAnimationFrame(animFrameRef.current)
+      animFrameRef.current = undefined
+    }
+
+    if (streamRef.current) {
+      streamRef.current.getTracks().forEach(track => track.stop())
+      streamRef.current = null
+    }
+
+    analyserRef.current = null
+
+    if (audioContextRef.current) {
+      if (audioContextRef.current.state !== 'closed') {
+        await audioContextRef.current.close().catch(() => {})
+      }
+      audioContextRef.current = null
+    }
+
+    mediaRecorderRef.current = null
+  }, [])
 
 
   // Auto-play model audio (with cleanup to prevent setState on unmounted component)
@@ -50,34 +87,126 @@ export default function NachsprechenPlayer({ sentences, config, lessonTitle, onC
   // Comprehensive cleanup on unmount — prevents mic leak, AudioContext leak, animation leak
   useEffect(() => {
     return () => {
-      if (timerRef.current) clearInterval(timerRef.current)
-      if (animFrameRef.current) cancelAnimationFrame(animFrameRef.current)
+      isMountedRef.current = false
+      skipEvaluationRef.current = true
+      evaluateAbortRef.current?.abort()
       if (autoPlayTimerRef.current) clearTimeout(autoPlayTimerRef.current)
-      // Close AudioContext if still open
-      if (audioContextRef.current && audioContextRef.current.state !== 'closed') {
-        audioContextRef.current.close().catch(() => {})
-      }
-      // Stop microphone stream tracks (turns off green indicator)
-      if (streamRef.current) {
-        streamRef.current.getTracks().forEach(t => t.stop())
-      }
-      // Stop MediaRecorder if still recording
       if (mediaRecorderRef.current?.state === 'recording') {
         mediaRecorderRef.current.stop()
+      } else {
+        void disposeRecordingResources()
       }
+    }
+  }, [disposeRecordingResources])
+
+  const playModel = useCallback(() => {
+    setState('playing')
+
+    // Try browser TTS if no audioUrl or audioUrl is empty
+    const hasAudio = sentence.audioUrl && sentence.audioUrl.trim() !== ''
+
+    if (hasAudio && audioRef.current) {
+      audioRef.current.src = sentence.audioUrl
+      audioRef.current.onerror = () => {
+        // Fallback to browser TTS if audio file not found
+        playWithBrowserTTS(sentence.textDe)
+      }
+      audioRef.current.onended = () => setState('idle')
+      audioRef.current.play().catch(() => {
+        playWithBrowserTTS(sentence.textDe)
+      })
+    } else {
+      playWithBrowserTTS(sentence.textDe)
+    }
+  }, [sentence.audioUrl, sentence.textDe])
+
+  const playWithBrowserTTS = useCallback((text: string) => {
+    if (typeof window === 'undefined' || !window.speechSynthesis) {
+      setState('idle')
+      return
+    }
+    // Cancel any ongoing speech
+    window.speechSynthesis.cancel()
+
+    const utterance = new SpeechSynthesisUtterance(text)
+    utterance.lang = 'de-DE'
+    utterance.rate = 0.8 // Slow for learners
+    utterance.pitch = 1.0
+
+    // Try to find a German voice
+    const voices = window.speechSynthesis.getVoices()
+    const deVoice = voices.find(v => v.lang.startsWith('de'))
+    if (deVoice) utterance.voice = deVoice
+
+    utterance.onend = () => setState('idle')
+    utterance.onerror = () => setState('idle')
+
+    window.speechSynthesis.speak(utterance)
+  }, [])
+
+  const evaluateRecording = useCallback(async (blob: Blob) => {
+    evaluateAbortRef.current?.abort()
+    const controller = new AbortController()
+    evaluateAbortRef.current = controller
+
+    if (!isMountedRef.current) return
+
+    setState('processing')
+    try {
+      const currentSentence = sentenceRef.current
+      if (!currentSentence) return
+
+      const formData = new FormData()
+      formData.append('audio', blob, 'recording.webm')
+      formData.append('referenceText', currentSentence.textDe)
+      formData.append('level', 'A1')
+      formData.append('exerciseType', 'nachsprechen')
+
+      const res = await fetch('/api/v1/speaking/evaluate', {
+        method: 'POST',
+        body: formData,
+        signal: controller.signal,
+      })
+
+      if (!res.ok) throw new Error('Evaluation failed')
+
+      const evalResult: EvaluationResult = await res.json()
+      if (!isMountedRef.current || controller.signal.aborted) return
+
+      setResult(evalResult)
+      setAttempts(prev => prev + 1)
+      setScores(prev => [...prev, evalResult.accuracy])
+      setState('result')
+    } catch (err) {
+      if (controller.signal.aborted || !isMountedRef.current) return
+
+      console.error('Evaluation error:', err)
+      const currentSentence = sentenceRef.current
+      if (!currentSentence) return
+
+      // Fallback mock result for development
+      const mockResult: EvaluationResult = {
+        transcript: currentSentence.textDe,
+        accuracy: 85 + Math.floor(Math.random() * 15),
+        durationSec: recordingTimeRef.current,
+        words: currentSentence.textDe.split(' ').map(word => ({
+          word,
+          status: Math.random() > 0.2 ? 'correct' : 'warning',
+          score: 70 + Math.floor(Math.random() * 30),
+        })),
+        overallTips: ['Phát âm rất tốt! Cố gắng nói chậm hơn một chút.'],
+        suggestRetry: false,
+      }
+      setResult(mockResult)
+      setAttempts(prev => prev + 1)
+      setScores(prev => [...prev, mockResult.accuracy])
+      setState('result')
     }
   }, [])
 
-  const playModel = () => {
-    if (!audioRef.current) return
-    setState('playing')
-    audioRef.current.src = sentence.audioUrl
-    audioRef.current.onended = () => setState('idle')
-    audioRef.current.play().catch(() => setState('idle'))
-  }
-
   const startRecording = async () => {
     try {
+      skipEvaluationRef.current = false
       const stream = await navigator.mediaDevices.getUserMedia({ audio: true })
       streamRef.current = stream // Store ref for cleanup
       const recorder = new MediaRecorder(stream, {
@@ -102,11 +231,14 @@ export default function NachsprechenPlayer({ sentences, config, lessonTitle, onC
       }
 
       recorder.onstop = async () => {
-        stream.getTracks().forEach(t => t.stop())
-        if (animFrameRef.current) cancelAnimationFrame(animFrameRef.current)
-        audioContext.close()
-
         const blob = new Blob(chunksRef.current, { type: 'audio/webm' })
+        await disposeRecordingResources()
+
+        if (skipEvaluationRef.current || !isMountedRef.current) {
+          skipEvaluationRef.current = false
+          return
+        }
+
         await evaluateRecording(blob)
       }
 
@@ -135,7 +267,10 @@ export default function NachsprechenPlayer({ sentences, config, lessonTitle, onC
     if (mediaRecorderRef.current?.state === 'recording') {
       mediaRecorderRef.current.stop()
     }
-    if (timerRef.current) clearInterval(timerRef.current)
+    if (timerRef.current) {
+      clearInterval(timerRef.current)
+      timerRef.current = undefined
+    }
     setState('processing')
   }
 
@@ -158,62 +293,19 @@ export default function NachsprechenPlayer({ sentences, config, lessonTitle, onC
 
       const barWidth = (canvas.width / bufferLength) * 2.5
       let x = 0
+      const gradient = ctx.createLinearGradient(0, canvas.height, 0, 0)
+      gradient.addColorStop(0, '#3B82F6')
+      gradient.addColorStop(1, '#8B5CF6')
+      ctx.fillStyle = gradient
 
       for (let i = 0; i < bufferLength; i++) {
         const barHeight = (dataArray[i]! / 255) * canvas.height * 0.8
-        const gradient = ctx.createLinearGradient(0, canvas.height, 0, canvas.height - barHeight)
-        gradient.addColorStop(0, '#3B82F6')
-        gradient.addColorStop(1, '#8B5CF6')
-        ctx.fillStyle = gradient
         ctx.fillRect(x, canvas.height - barHeight, barWidth - 1, barHeight)
         x += barWidth
       }
     }
 
     draw()
-  }
-
-  const evaluateRecording = async (blob: Blob) => {
-    setState('processing')
-    try {
-      const formData = new FormData()
-      formData.append('audio', blob, 'recording.webm')
-      formData.append('referenceText', sentence.textDe)
-      formData.append('level', 'A1')
-      formData.append('exerciseType', 'nachsprechen')
-
-      const res = await fetch('/api/v1/speaking/evaluate', {
-        method: 'POST',
-        body: formData
-      })
-
-      if (!res.ok) throw new Error('Evaluation failed')
-
-      const evalResult: EvaluationResult = await res.json()
-      setResult(evalResult)
-      setAttempts(prev => prev + 1)
-      setScores(prev => [...prev, evalResult.accuracy])
-      setState('result')
-    } catch (err) {
-      console.error('Evaluation error:', err)
-      // Fallback mock result for development
-      const mockResult: EvaluationResult = {
-        transcript: sentence.textDe,
-        accuracy: 85 + Math.floor(Math.random() * 15),
-        durationSec: recordingTime,
-        words: sentence.textDe.split(' ').map(word => ({
-          word,
-          status: Math.random() > 0.2 ? 'correct' : 'warning',
-          score: 70 + Math.floor(Math.random() * 30),
-        })),
-        overallTips: ['Phát âm rất tốt! Cố gắng nói chậm hơn một chút.'],
-        suggestRetry: false,
-      }
-      setResult(mockResult)
-      setAttempts(prev => prev + 1)
-      setScores(prev => [...prev, mockResult.accuracy])
-      setState('result')
-    }
   }
 
   const handleNext = () => {
