@@ -3,165 +3,125 @@
   "level": "B2",
   "teil": 3,
   "teil_name": "Diskussion mehrere Personen",
-  "task_type": "zuordnung",
+  "task_type": "mc_abc",
   "topic": "Bargeldloses Bezahlen Pro und Contra",
   "audio_file": "/audio/listening/B2/Teil3-Diskussion-mehrere-Personen/L-B2-GOETHE-005-T3.mp3",
   "metadata": {
     "generated_at": "2026-03-19T10:04:11.226944",
-    "version": 1,
+    "version": 2,
     "gespraech_count": 6,
-    "source_script": "data/scripts/B2/Teil3-Diskussion-mehrere-Personen/L-B2-GOETHE-005-T3.json"
+    "source_script": "data/scripts/B2/Teil3-Diskussion-mehrere-Personen/L-B2-GOETHE-005-T3.json",
+    "regenerated_at": "2026-03-20T07:45:14.532Z"
   },
   "questions": [
     {
       "id": "Q1",
-      "item": 1,
-      "type": "zuordnung",
-      "statement": "Willkommen zur Diskussion: Sollte Deutschland das Bargeld ab...",
-      "options": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6
-      ],
-      "answer": 1,
+      "gespraech": 1,
+      "type": "mc_abc",
+      "question": "Worum geht es im Gespräch 1?",
+      "options": {
+        "a": "Einkaufen und Geld",
+        "b": "Familie und Freunde",
+        "c": "Reisen und Verkehr"
+      },
+      "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Diese Aussage gehört zu Abschnitt 1.",
-        "vi": "Câu này thuộc phần 1.",
-        "key_evidence": "Willkommen zur Diskussion: Sollte Deutsc",
+        "de": "Man hört: \"Einkaufen und Geld\".",
+        "vi": "",
+        "key_evidence": "Einkaufen und Geld",
         "key_vocabulary": []
       }
     },
     {
       "id": "Q2",
-      "item": 2,
-      "type": "zuordnung",
-      "statement": "Wer nichts zu verbergen hat, braucht keine Anonymität. Krimi...",
-      "options": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6
-      ],
-      "answer": 2,
+      "gespraech": 1,
+      "type": "mc_abc",
+      "question": "Wie heißt eine Person im Gespräch 1?",
+      "options": {
+        "a": "Klaus",
+        "b": "Neumann",
+        "c": "Laura"
+      },
+      "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Diese Aussage gehört zu Abschnitt 2.",
-        "vi": "Câu này thuộc phần 2.",
-        "key_evidence": "Wer nichts zu verbergen hat, braucht kei",
-        "key_vocabulary": []
+        "de": "Man hört: \"Neumann\".",
+        "vi": "",
+        "key_evidence": "Neumann",
+        "key_vocabulary": [
+          {
+            "w": "heißen",
+            "m": "to be called"
+          }
+        ]
       }
     },
     {
       "id": "Q3",
-      "item": 3,
-      "type": "zuordnung",
-      "statement": "Aber die Abschaffung von Bargeld würde auch ältere und digit...",
-      "options": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6
-      ],
-      "answer": 3,
+      "gespraech": 1,
+      "type": "mc_abc",
+      "question": "Woher kommt die Person (Gespräch 1)?",
+      "options": {
+        "a": "Papiergeld",
+        "b": "Stuttgart",
+        "c": "Wien"
+      },
+      "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Diese Aussage gehört zu Abschnitt 3.",
-        "vi": "Câu này thuộc phần 3.",
-        "key_evidence": "Aber die Abschaffung von Bargeld würde a",
-        "key_vocabulary": []
+        "de": "Man hört: \"Papiergeld\".",
+        "vi": "",
+        "key_evidence": "Papiergeld",
+        "key_vocabulary": [
+          {
+            "w": "kommen aus",
+            "m": "to come from"
+          }
+        ]
       }
     },
     {
       "id": "Q4",
-      "item": 4,
-      "type": "zuordnung",
-      "statement": "Lassen Sie uns über die technische Zuverlässigkeit sprechen....",
-      "options": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6
-      ],
-      "answer": 4,
+      "gespraech": 1,
+      "type": "mc_abc",
+      "question": "Was macht die Person beruflich (Gespräch 1)?",
+      "options": {
+        "a": "Sekretärin",
+        "b": "Student",
+        "c": "Zahlungsmittel"
+      },
+      "answer": "c",
       "points": 1,
       "explanation": {
-        "de": "Diese Aussage gehört zu Abschnitt 4.",
-        "vi": "Câu này thuộc phần 4.",
-        "key_evidence": "Lassen Sie uns über die technische Zuver",
-        "key_vocabulary": []
-      }
-    },
-    {
-      "id": "Q5",
-      "item": 5,
-      "type": "zuordnung",
-      "statement": "Herr Braun, was halten Sie vom Konzept des digitalen Euros d...",
-      "options": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6
-      ],
-      "answer": 5,
-      "points": 1,
-      "explanation": {
-        "de": "Diese Aussage gehört zu Abschnitt 5.",
-        "vi": "Câu này thuộc phần 5.",
-        "key_evidence": "Herr Braun, was halten Sie vom Konzept d",
-        "key_vocabulary": []
-      }
-    },
-    {
-      "id": "Q6",
-      "item": 6,
-      "type": "zuordnung",
-      "statement": "Da haben Sie einen wichtigen Punkt. Der rechtliche Rahmen mu...",
-      "options": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6
-      ],
-      "answer": 6,
-      "points": 1,
-      "explanation": {
-        "de": "Diese Aussage gehört zu Abschnitt 6.",
-        "vi": "Câu này thuộc phần 6.",
-        "key_evidence": "Da haben Sie einen wichtigen Punkt. Der ",
-        "key_vocabulary": []
+        "de": "Man hört: \"Zahlungsmittel\".",
+        "vi": "",
+        "key_evidence": "Zahlungsmittel",
+        "key_vocabulary": [
+          {
+            "w": "Zahlungsmittel",
+            "m": "Zahlungsmittel"
+          }
+        ]
       }
     }
   ],
   "scoring": {
-    "total_points": 6,
-    "pass_threshold": 4,
+    "total_points": 4,
+    "pass_threshold": 3,
     "grading": [
       {
         "range": [
-          6,
-          6
+          4,
+          4
         ],
         "label": "Ausgezeichnet!",
         "emoji": "⭐⭐⭐"
       },
       {
         "range": [
-          4,
-          5
+          3,
+          3
         ],
         "label": "Sehr gut!",
         "emoji": "⭐⭐"
@@ -169,7 +129,7 @@
       {
         "range": [
           2,
-          3
+          2
         ],
         "label": "Gut!",
         "emoji": "⭐"

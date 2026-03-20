@@ -3,130 +3,93 @@
   "level": "B1",
   "teil": 4,
   "teil_name": "Radiodiskussion",
-  "task_type": "zuordnung_sprecher",
+  "task_type": "mc_abc",
   "topic": "Umwelt und Recycling",
   "audio_file": "/audio/listening/B1/Teil4-Radiodiskussion/L-B1-GOETHE-010-T4.mp3",
   "metadata": {
     "generated_at": "2026-03-19T10:04:11.181757",
-    "version": 1,
+    "version": 2,
     "gespraech_count": 5,
-    "source_script": "data/scripts/B1/Teil4-Radiodiskussion/L-B1-GOETHE-010-T4.json"
+    "source_script": "data/scripts/B1/Teil4-Radiodiskussion/L-B1-GOETHE-010-T4.json",
+    "regenerated_at": "2026-03-20T07:45:14.517Z"
   },
   "questions": [
     {
       "id": "Q1",
-      "item": 1,
-      "type": "zuordnung_sprecher",
-      "statement": "Willkommen bei 'Grün gedacht'. Heute: Wie nachhaltig ist Deu...",
-      "options": [
-        1,
-        2,
-        3,
-        4,
-        5
-      ],
-      "answer": 1,
+      "gespraech": 1,
+      "type": "mc_abc",
+      "question": "Worum geht es im Gespräch 1?",
+      "options": {
+        "a": "Einkaufen und Geld",
+        "b": "Medien und Kommunikation",
+        "c": "Freizeit und Hobbys"
+      },
+      "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Diese Aussage gehört zu Abschnitt 1.",
-        "vi": "Câu này thuộc phần 1.",
-        "key_evidence": "Willkommen bei 'Grün gedacht'. Heute: Wi",
+        "de": "Man hört: \"Einkaufen und Geld\".",
+        "vi": "",
+        "key_evidence": "Einkaufen und Geld",
         "key_vocabulary": []
       }
     },
     {
       "id": "Q2",
-      "item": 2,
-      "type": "zuordnung_sprecher",
-      "statement": "Aber der Ausstieg aus der Kohle ist doch beschlossen. Bis zw...",
-      "options": [
-        1,
-        2,
-        3,
-        4,
-        5
-      ],
-      "answer": 2,
+      "gespraech": 1,
+      "type": "mc_abc",
+      "question": "Wie heißt eine Person im Gespräch 1?",
+      "options": {
+        "a": "Lisa",
+        "b": "Julia",
+        "c": "Dr"
+      },
+      "answer": "c",
       "points": 1,
       "explanation": {
-        "de": "Diese Aussage gehört zu Abschnitt 2.",
-        "vi": "Câu này thuộc phần 2.",
-        "key_evidence": "Aber der Ausstieg aus der Kohle ist doch",
-        "key_vocabulary": []
+        "de": "Man hört: \"Dr\".",
+        "vi": "",
+        "key_evidence": "Dr",
+        "key_vocabulary": [
+          {
+            "w": "heißen",
+            "m": "to be called"
+          }
+        ]
       }
     },
     {
       "id": "Q3",
-      "item": 3,
-      "type": "zuordnung_sprecher",
-      "statement": "Indem man die lokale Bevölkerung finanziell beteiligt. Bürge...",
-      "options": [
-        1,
-        2,
-        3,
-        4,
-        5
-      ],
-      "answer": 3,
+      "gespraech": 1,
+      "type": "mc_abc",
+      "question": "Woher kommt die Person (Gespräch 1)?",
+      "options": {
+        "a": "Erfolgsmodell",
+        "b": "Köln",
+        "c": "Bonn"
+      },
+      "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Diese Aussage gehört zu Abschnitt 3.",
-        "vi": "Câu này thuộc phần 3.",
-        "key_evidence": "Indem man die lokale Bevölkerung finanzi",
-        "key_vocabulary": []
-      }
-    },
-    {
-      "id": "Q4",
-      "item": 4,
-      "type": "zuordnung_sprecher",
-      "statement": "Urban Gardening ist mehr als ein Trend, es verbindet Mensche...",
-      "options": [
-        1,
-        2,
-        3,
-        4,
-        5
-      ],
-      "answer": 4,
-      "points": 1,
-      "explanation": {
-        "de": "Diese Aussage gehört zu Abschnitt 4.",
-        "vi": "Câu này thuộc phần 4.",
-        "key_evidence": "Urban Gardening ist mehr als ein Trend, ",
-        "key_vocabulary": []
-      }
-    },
-    {
-      "id": "Q5",
-      "item": 5,
-      "type": "zuordnung_sprecher",
-      "statement": "Billigflüge müssen teurer werden, damit die Umweltkosten ein...",
-      "options": [
-        1,
-        2,
-        3,
-        4,
-        5
-      ],
-      "answer": 5,
-      "points": 1,
-      "explanation": {
-        "de": "Diese Aussage gehört zu Abschnitt 5.",
-        "vi": "Câu này thuộc phần 5.",
-        "key_evidence": "Billigflüge müssen teurer werden, damit ",
-        "key_vocabulary": []
+        "de": "Man hört: \"Erfolgsmodell\".",
+        "vi": "",
+        "key_evidence": "Erfolgsmodell",
+        "key_vocabulary": [
+          {
+            "w": "kommen aus",
+            "m": "to come from"
+          }
+        ]
       }
     }
   ],
   "scoring": {
-    "total_points": 5,
-    "pass_threshold": 3,
+    "total_points": 3,
+    "pass_threshold": 2,
     "grading": [
       {
         "range": [
-          5,
-          5
+          3,
+          3
         ],
         "label": "Ausgezeichnet!",
         "emoji": "⭐⭐⭐"
@@ -134,7 +97,7 @@
       {
         "range": [
           3,
-          4
+          3
         ],
         "label": "Sehr gut!",
         "emoji": "⭐⭐"

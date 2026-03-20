@@ -8,115 +8,77 @@
   "audio_file": "/audio/listening/C2/Teil1-Radiosendungen/L-C2-GOETHE-005-T1.mp3",
   "metadata": {
     "generated_at": "2026-03-19T11:27:16.026113",
-    "version": 1,
+    "version": 4,
     "gespraech_count": 5,
-    "source_script": "data/scripts/C2/Teil1-Radiosendungen/L-C2-GOETHE-005-T1.json"
+    "source_script": "data/scripts/C2/Teil1-Radiosendungen/L-C2-GOETHE-005-T1.json",
+    "regenerated_at": "2026-03-20T07:45:14.599Z"
   },
   "questions": [
     {
       "id": "Q1",
       "item": 1,
       "type": "ja_nein",
-      "statement": "Die Person kommt aus Deutschland.",
-      "answer": "ja",
+      "statement": "Die Person kommt aus Bremen.",
+      "answer": "nein",
       "points": 1,
       "explanation": {
-        "de": "Richtig. Man hört: 'aus Deutschland'.",
-        "vi": "Đúng. Ta nghe: 'aus Deutschland'.",
-        "key_evidence": "aus Deutschland",
-        "key_vocabulary": [
-          {
-            "word": "kommen aus",
-            "meaning": "to come from"
-          }
-        ]
+        "de": "Nein. Die Person kommt aus Phänomen.",
+        "vi": "Sai.",
+        "key_evidence": "Falsch. Die Person kommt aus Phänomen.",
+        "key_vocabulary": []
       }
     },
     {
       "id": "Q2",
       "item": 2,
       "type": "ja_nein",
-      "statement": "Die Person kommt aus England.",
-      "answer": "nein",
+      "statement": "Phänomen wird erwähnt.",
+      "answer": "ja",
       "points": 1,
       "explanation": {
-        "de": "Falsch. Die Person kommt aus Deutschland, nicht aus England.",
-        "vi": "Sai. Người đó đến từ Deutschland, không phải England.",
-        "key_evidence": "aus Deutschland",
-        "key_vocabulary": [
-          {
-            "word": "kommen aus",
-            "meaning": "to come from"
-          }
-        ]
+        "de": "Ja. Phänomen wird genannt.",
+        "vi": "Đúng.",
+        "key_evidence": "Richtig. Phänomen wird genannt.",
+        "key_vocabulary": []
       }
     },
     {
       "id": "Q3",
       "item": 3,
       "type": "ja_nein",
-      "statement": "Die Person kommt aus Deutschland.",
-      "answer": "ja",
+      "statement": "Die Person kommt aus Stuttgart.",
+      "answer": "nein",
       "points": 1,
       "explanation": {
-        "de": "Richtig. Man hört: 'aus Deutschland'.",
-        "vi": "Đúng. Ta nghe: 'aus Deutschland'.",
-        "key_evidence": "aus Deutschland",
-        "key_vocabulary": [
-          {
-            "word": "kommen aus",
-            "meaning": "to come from"
-          }
-        ]
+        "de": "Nein. Die Person kommt aus Phänomen.",
+        "vi": "Sai.",
+        "key_evidence": "Falsch. Die Person kommt aus Phänomen.",
+        "key_vocabulary": []
       }
     },
     {
       "id": "Q4",
       "item": 4,
       "type": "ja_nein",
-      "statement": "Die Person kommt aus England.",
+      "statement": "Die Person kommt aus Berlin.",
       "answer": "nein",
       "points": 1,
       "explanation": {
-        "de": "Falsch. Die Person kommt aus Deutschland, nicht aus England.",
-        "vi": "Sai. Người đó đến từ Deutschland, không phải England.",
-        "key_evidence": "aus Deutschland",
-        "key_vocabulary": [
-          {
-            "word": "kommen aus",
-            "meaning": "to come from"
-          }
-        ]
-      }
-    },
-    {
-      "id": "Q5",
-      "item": 5,
-      "type": "ja_nein",
-      "statement": "Die Person kommt aus Deutschland.",
-      "answer": "ja",
-      "points": 1,
-      "explanation": {
-        "de": "Richtig. Man hört: 'aus Deutschland'.",
-        "vi": "Đúng. Ta nghe: 'aus Deutschland'.",
-        "key_evidence": "aus Deutschland",
-        "key_vocabulary": [
-          {
-            "word": "kommen aus",
-            "meaning": "to come from"
-          }
-        ]
+        "de": "Nein. Die Person kommt aus Phänomen.",
+        "vi": "Sai.",
+        "key_evidence": "Falsch. Die Person kommt aus Phänomen.",
+        "key_vocabulary": []
       }
     }
   ],
   "scoring": {
-    "total_points": 5,
+    "total_points": 4,
     "pass_threshold": 3,
     "grading": [
       {
         "range": [
-          5,
-          5
+          4,
+          4
         ],
         "label": "Ausgezeichnet!",
         "emoji": "⭐⭐⭐"
@@ -124,7 +86,7 @@
       {
         "range": [
           3,
-          4
+          3
         ],
         "label": "Sehr gut!",
         "emoji": "⭐⭐"

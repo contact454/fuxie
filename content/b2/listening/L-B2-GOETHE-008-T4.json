@@ -8,156 +8,80 @@
   "audio_file": "/audio/listening/B2/Teil4-Vortrag/L-B2-GOETHE-008-T4.mp3",
   "metadata": {
     "generated_at": "2026-03-19T10:04:11.235676",
-    "version": 1,
+    "version": 4,
     "gespraech_count": 5,
-    "source_script": "data/scripts/B2/Teil4-Vortrag/L-B2-GOETHE-008-T4.json"
+    "source_script": "data/scripts/B2/Teil4-Vortrag/L-B2-GOETHE-008-T4.json",
+    "regenerated_at": "2026-03-20T07:45:14.540Z"
   },
   "questions": [
     {
       "id": "Q1",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Wo wohnt eine Person im Gespräch 1?",
+      "question": "Worum geht es im Gespräch 1?",
       "options": {
-        "a": "erforsche ich",
-        "b": "München",
-        "c": "Hamburg"
+        "a": "Einkaufen und Geld",
+        "b": "Bildung und Schule",
+        "c": "Arbeit und Beruf"
       },
-      "answer": "a",
+      "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: 'erforsche ich'.",
-        "vi": "Một người trong đoạn hội thoại 1 sống ở đâu?",
-        "key_evidence": "erforsche ich",
-        "key_vocabulary": [
-          {
-            "word": "wohnen",
-            "meaning": "to live"
-          }
-        ]
+        "de": "Man hört: \"Bildung und Schule\".",
+        "vi": "",
+        "key_evidence": "Bildung und Schule",
+        "key_vocabulary": []
       }
     },
     {
       "id": "Q2",
-      "gespraech": 2,
+      "gespraech": 1,
       "type": "mc_abc",
-      "question": "Was passiert im Gespräch 2?",
+      "question": "Woher kommt die Person (Gespräch 1)?",
       "options": {
-        "a": "Jemand kauft ein.",
-        "b": "Jemand stellt sich vor.",
-        "c": "Jemand telefoniert."
+        "a": "Köln",
+        "b": "Thema",
+        "c": "Stuttgart"
       },
       "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: 'Studien zeigen, dass alle Menschen von einer Kombi'.",
-        "vi": "Điều gì xảy ra trong đoạn hội thoại 2?",
-        "key_evidence": "Studien zeigen, dass alle Menschen von einer Kombi",
+        "de": "Man hört: \"Thema\".",
+        "vi": "",
+        "key_evidence": "Thema",
         "key_vocabulary": [
           {
-            "word": "vorstellen",
-            "meaning": "to introduce"
-          }
-        ]
-      }
-    },
-    {
-      "id": "Q3",
-      "gespraech": 3,
-      "type": "mc_abc",
-      "question": "Wo wohnt eine Person im Gespräch 3?",
-      "options": {
-        "a": "Thema intensiv",
-        "b": "Zürich",
-        "c": "Dresden"
-      },
-      "answer": "a",
-      "points": 1,
-      "explanation": {
-        "de": "Im Gespräch hört man: 'Thema intensiv'.",
-        "vi": "Một người trong đoạn hội thoại 3 sống ở đâu?",
-        "key_evidence": "Thema intensiv",
-        "key_vocabulary": [
-          {
-            "word": "wohnen",
-            "meaning": "to live"
-          }
-        ]
-      }
-    },
-    {
-      "id": "Q4",
-      "gespraech": 4,
-      "type": "mc_abc",
-      "question": "Wo wohnt eine Person im Gespräch 4?",
-      "options": {
-        "a": "Handy",
-        "b": "Köln",
-        "c": "Frankfurt"
-      },
-      "answer": "a",
-      "points": 1,
-      "explanation": {
-        "de": "Im Gespräch hört man: 'Handy'.",
-        "vi": "Một người trong đoạn hội thoại 4 sống ở đâu?",
-        "key_evidence": "Handy",
-        "key_vocabulary": [
-          {
-            "word": "wohnen",
-            "meaning": "to live"
-          }
-        ]
-      }
-    },
-    {
-      "id": "Q5",
-      "gespraech": 5,
-      "type": "mc_abc",
-      "question": "Was passiert im Gespräch 5?",
-      "options": {
-        "a": "Jemand kauft ein.",
-        "b": "Jemand stellt sich vor.",
-        "c": "Jemand telefoniert."
-      },
-      "answer": "b",
-      "points": 1,
-      "explanation": {
-        "de": "Im Gespräch hört man: 'Neben den kognitiven Strategien ist die physische '.",
-        "vi": "Điều gì xảy ra trong đoạn hội thoại 5?",
-        "key_evidence": "Neben den kognitiven Strategien ist die physische ",
-        "key_vocabulary": [
-          {
-            "word": "vorstellen",
-            "meaning": "to introduce"
+            "w": "kommen aus",
+            "m": "to come from"
           }
         ]
       }
     }
   ],
   "scoring": {
-    "total_points": 5,
-    "pass_threshold": 3,
+    "total_points": 2,
+    "pass_threshold": 2,
     "grading": [
       {
         "range": [
-          5,
-          5
+          2,
+          2
         ],
         "label": "Ausgezeichnet!",
         "emoji": "⭐⭐⭐"
       },
       {
         "range": [
-          3,
-          4
+          2,
+          2
         ],
         "label": "Sehr gut!",
         "emoji": "⭐⭐"
       },
       {
         "range": [
-          2,
-          2
+          1,
+          1
         ],
         "label": "Gut!",
         "emoji": "⭐"
@@ -165,7 +89,7 @@
       {
         "range": [
           0,
-          1
+          0
         ],
         "label": "Noch üben!",
         "emoji": "📝"

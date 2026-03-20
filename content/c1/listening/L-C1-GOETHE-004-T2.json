@@ -8,140 +8,88 @@
   "audio_file": "/audio/listening/C1/Teil2-Experteninterview/L-C1-GOETHE-004-T2.mp3",
   "metadata": {
     "generated_at": "2026-03-19T11:27:15.955152",
-    "version": 1,
+    "version": 4,
     "gespraech_count": 5,
-    "source_script": "data/scripts/C1/Teil2-Experteninterview/L-C1-GOETHE-004-T2.json"
+    "source_script": "data/scripts/C1/Teil2-Experteninterview/L-C1-GOETHE-004-T2.json",
+    "regenerated_at": "2026-03-20T07:45:14.563Z"
   },
   "questions": [
     {
       "id": "Q1",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Wo wohnt eine Person im Gespräch 1?",
+      "question": "Wie heißt eine Person im Gespräch 1?",
       "options": {
-        "a": "Feuilletons die",
-        "b": "Dresden",
-        "c": "Leipzig"
+        "a": "Petra",
+        "b": "Julia",
+        "c": "Dr"
       },
-      "answer": "a",
+      "answer": "c",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: 'Feuilletons die'.",
-        "vi": "Một người trong đoạn hội thoại 1 sống ở đâu?",
-        "key_evidence": "Feuilletons die",
+        "de": "Man hört: \"Dr\".",
+        "vi": "",
+        "key_evidence": "Dr",
         "key_vocabulary": [
           {
-            "word": "wohnen",
-            "meaning": "to live"
+            "w": "heißen",
+            "m": "to be called"
           }
         ]
       }
     },
     {
       "id": "Q2",
-      "gespraech": 2,
+      "gespraech": 1,
       "type": "mc_abc",
-      "question": "Wo wohnt eine Person im Gespräch 2?",
+      "question": "Woher kommt die Person (Gespräch 1)?",
       "options": {
-        "a": "Buch nur",
-        "b": "Stuttgart",
-        "c": "Hannover"
+        "a": "Feuilletons",
+        "b": "Dresden",
+        "c": "Stuttgart"
       },
       "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: 'Buch nur'.",
-        "vi": "Một người trong đoạn hội thoại 2 sống ở đâu?",
-        "key_evidence": "Buch nur",
+        "de": "Man hört: \"Feuilletons\".",
+        "vi": "",
+        "key_evidence": "Feuilletons",
         "key_vocabulary": [
           {
-            "word": "wohnen",
-            "meaning": "to live"
+            "w": "kommen aus",
+            "m": "to come from"
           }
         ]
       }
     },
     {
       "id": "Q3",
-      "gespraech": 3,
+      "gespraech": 1,
       "type": "mc_abc",
-      "question": "Wo wohnt eine Person im Gespräch 3?",
+      "question": "Worum geht es im Gespräch 1?",
       "options": {
-        "a": "ernstes Problem",
-        "b": "Berlin",
-        "c": "Düsseldorf"
+        "a": "Freizeit und Hobbys",
+        "b": "Gesundheit und Körper",
+        "c": "Reisen und Verkehr"
       },
-      "answer": "a",
+      "answer": "c",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: 'ernstes Problem'.",
-        "vi": "Một người trong đoạn hội thoại 3 sống ở đâu?",
-        "key_evidence": "ernstes Problem",
-        "key_vocabulary": [
-          {
-            "word": "wohnen",
-            "meaning": "to live"
-          }
-        ]
-      }
-    },
-    {
-      "id": "Q4",
-      "gespraech": 4,
-      "type": "mc_abc",
-      "question": "Wo wohnt eine Person im Gespräch 4?",
-      "options": {
-        "a": "kulturellen Informationswert",
-        "b": "Leipzig",
-        "c": "Frankfurt"
-      },
-      "answer": "a",
-      "points": 1,
-      "explanation": {
-        "de": "Im Gespräch hört man: 'kulturellen Informationswert'.",
-        "vi": "Một người trong đoạn hội thoại 4 sống ở đâu?",
-        "key_evidence": "kulturellen Informationswert",
-        "key_vocabulary": [
-          {
-            "word": "wohnen",
-            "meaning": "to live"
-          }
-        ]
-      }
-    },
-    {
-      "id": "Q5",
-      "gespraech": 5,
-      "type": "mc_abc",
-      "question": "Wo wohnt eine Person im Gespräch 5?",
-      "options": {
-        "a": "Lesetagebuch",
-        "b": "München",
-        "c": "Hannover"
-      },
-      "answer": "a",
-      "points": 1,
-      "explanation": {
-        "de": "Im Gespräch hört man: 'Lesetagebuch'.",
-        "vi": "Một người trong đoạn hội thoại 5 sống ở đâu?",
-        "key_evidence": "Lesetagebuch",
-        "key_vocabulary": [
-          {
-            "word": "wohnen",
-            "meaning": "to live"
-          }
-        ]
+        "de": "Man hört: \"Reisen und Verkehr\".",
+        "vi": "",
+        "key_evidence": "Reisen und Verkehr",
+        "key_vocabulary": []
       }
     }
   ],
   "scoring": {
-    "total_points": 5,
-    "pass_threshold": 3,
+    "total_points": 3,
+    "pass_threshold": 2,
     "grading": [
       {
         "range": [
-          5,
-          5
+          3,
+          3
         ],
         "label": "Ausgezeichnet!",
         "emoji": "⭐⭐⭐"
@@ -149,7 +97,7 @@
       {
         "range": [
           3,
-          4
+          3
         ],
         "label": "Sehr gut!",
         "emoji": "⭐⭐"

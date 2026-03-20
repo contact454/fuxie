@@ -8,276 +8,132 @@
   "audio_file": "/audio/listening/A1/Teil3-Telefonansagen/L-A1-GOETHE-001-T3.mp3",
   "metadata": {
     "generated_at": "2026-03-19T10:04:11.076958",
-    "version": 1,
+    "version": 4,
     "gespraech_count": 5,
-    "source_script": "data/scripts/A1/Teil3-Telefonansagen/L-A1-GOETHE-001-T3.json"
+    "source_script": "data/scripts/A1/Teil3-Telefonansagen/L-A1-GOETHE-001-T3.json",
+    "regenerated_at": "2026-03-20T07:45:14.434Z"
   },
   "questions": [
     {
       "id": "Q1",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Wo wohnt eine Person im Gespräch 1?",
+      "question": "Worum geht es im Gespräch 1?",
       "options": {
-        "a": "der Berliner",
-        "b": "Hannover",
-        "c": "Frankfurt"
+        "a": "Essen und Trinken",
+        "b": "Bildung und Schule",
+        "c": "Umwelt und Natur"
       },
-      "answer": "a",
+      "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: 'der Berliner'.",
-        "vi": "Một người trong đoạn hội thoại 1 sống ở đâu?",
-        "key_evidence": "der Berliner",
-        "key_vocabulary": [
-          {
-            "word": "wohnen",
-            "meaning": "to live"
-          }
-        ]
+        "de": "Im Gespräch hört man: \"Bildung und Schule\".",
+        "vi": "",
+        "key_evidence": "Bildung und Schule",
+        "key_vocabulary": []
       }
     },
     {
       "id": "Q2",
-      "gespraech": 1,
+      "gespraech": 2,
       "type": "mc_abc",
-      "question": "Wo wohnt eine Person im Gespräch 1?",
+      "question": "Worum geht es im Gespräch 2?",
       "options": {
-        "a": "der Berliner",
-        "b": "Hannover",
-        "c": "Frankfurt"
+        "a": "Bildung und Schule",
+        "b": "Umwelt und Natur",
+        "c": "Medien und Kommunikation"
       },
       "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: 'der Berliner'.",
-        "vi": "Một người trong đoạn hội thoại 1 sống ở đâu?",
-        "key_evidence": "der Berliner",
-        "key_vocabulary": [
-          {
-            "word": "wohnen",
-            "meaning": "to live"
-          }
-        ]
+        "de": "Im Gespräch hört man: \"Bildung und Schule\".",
+        "vi": "",
+        "key_evidence": "Bildung und Schule",
+        "key_vocabulary": []
       }
     },
     {
       "id": "Q3",
-      "gespraech": 2,
-      "type": "mc_abc",
-      "question": "Was passiert im Gespräch 2?",
-      "options": {
-        "a": "Jemand kauft ein.",
-        "b": "Jemand stellt sich vor.",
-        "c": "Jemand telefoniert."
-      },
-      "answer": "b",
-      "points": 1,
-      "explanation": {
-        "de": "Im Gespräch hört man: 'Guten Tag, hier ist die Sprachschule Dialog. Ihr D'.",
-        "vi": "Điều gì xảy ra trong đoạn hội thoại 2?",
-        "key_evidence": "Guten Tag, hier ist die Sprachschule Dialog. Ihr D",
-        "key_vocabulary": [
-          {
-            "word": "vorstellen",
-            "meaning": "to introduce"
-          }
-        ]
-      }
-    },
-    {
-      "id": "Q4",
-      "gespraech": 2,
-      "type": "mc_abc",
-      "question": "Was passiert im Gespräch 2?",
-      "options": {
-        "a": "Jemand kauft ein.",
-        "b": "Jemand stellt sich vor.",
-        "c": "Jemand telefoniert."
-      },
-      "answer": "b",
-      "points": 1,
-      "explanation": {
-        "de": "Im Gespräch hört man: 'Guten Tag, hier ist die Sprachschule Dialog. Ihr D'.",
-        "vi": "Điều gì xảy ra trong đoạn hội thoại 2?",
-        "key_evidence": "Guten Tag, hier ist die Sprachschule Dialog. Ihr D",
-        "key_vocabulary": [
-          {
-            "word": "vorstellen",
-            "meaning": "to introduce"
-          }
-        ]
-      }
-    },
-    {
-      "id": "Q5",
       "gespraech": 3,
       "type": "mc_abc",
-      "question": "Wie heißt eine Person im Gespräch 3?",
+      "question": "Worum geht es im Gespräch 3?",
       "options": {
-        "a": "Anna",
-        "b": "krank",
-        "c": "Thomas"
-      },
-      "answer": "b",
-      "points": 1,
-      "explanation": {
-        "de": "Im Gespräch hört man: 'bin krank'.",
-        "vi": "Một người trong đoạn hội thoại 3 tên là gì?",
-        "key_evidence": "bin krank",
-        "key_vocabulary": [
-          {
-            "word": "heißen",
-            "meaning": "to be called"
-          }
-        ]
-      }
-    },
-    {
-      "id": "Q6",
-      "gespraech": 3,
-      "type": "mc_abc",
-      "question": "Wo wohnt eine Person im Gespräch 3?",
-      "options": {
-        "a": "krank",
-        "b": "Berlin",
-        "c": "Köln"
-      },
-      "answer": "a",
-      "points": 1,
-      "explanation": {
-        "de": "Im Gespräch hört man: 'krank'.",
-        "vi": "Một người trong đoạn hội thoại 3 sống ở đâu?",
-        "key_evidence": "krank",
-        "key_vocabulary": [
-          {
-            "word": "wohnen",
-            "meaning": "to live"
-          }
-        ]
-      }
-    },
-    {
-      "id": "Q7",
-      "gespraech": 4,
-      "type": "mc_abc",
-      "question": "Wo wohnt eine Person im Gespräch 4?",
-      "options": {
-        "a": "im Deutschkurs",
-        "b": "Hamburg",
-        "c": "Stuttgart"
-      },
-      "answer": "a",
-      "points": 1,
-      "explanation": {
-        "de": "Im Gespräch hört man: 'im Deutschkurs'.",
-        "vi": "Một người trong đoạn hội thoại 4 sống ở đâu?",
-        "key_evidence": "im Deutschkurs",
-        "key_vocabulary": [
-          {
-            "word": "wohnen",
-            "meaning": "to live"
-          }
-        ]
-      }
-    },
-    {
-      "id": "Q8",
-      "gespraech": 4,
-      "type": "mc_abc",
-      "question": "Wo wohnt eine Person im Gespräch 4?",
-      "options": {
-        "a": "im Deutschkurs",
-        "b": "Hamburg",
-        "c": "Stuttgart"
-      },
-      "answer": "a",
-      "points": 1,
-      "explanation": {
-        "de": "Im Gespräch hört man: 'im Deutschkurs'.",
-        "vi": "Một người trong đoạn hội thoại 4 sống ở đâu?",
-        "key_evidence": "im Deutschkurs",
-        "key_vocabulary": [
-          {
-            "word": "wohnen",
-            "meaning": "to live"
-          }
-        ]
-      }
-    },
-    {
-      "id": "Q9",
-      "gespraech": 5,
-      "type": "mc_abc",
-      "question": "Wo wohnt eine Person im Gespräch 5?",
-      "options": {
-        "a": "beim Arzt",
-        "b": "Stuttgart",
-        "c": "Leipzig"
-      },
-      "answer": "a",
-      "points": 1,
-      "explanation": {
-        "de": "Im Gespräch hört man: 'beim Arzt'.",
-        "vi": "Một người trong đoạn hội thoại 5 sống ở đâu?",
-        "key_evidence": "beim Arzt",
-        "key_vocabulary": [
-          {
-            "word": "wohnen",
-            "meaning": "to live"
-          }
-        ]
-      }
-    },
-    {
-      "id": "Q10",
-      "gespraech": 5,
-      "type": "mc_abc",
-      "question": "Was macht eine Person beruflich (Gespräch 5)?",
-      "options": {
-        "a": "Ingenieur",
-        "b": "Verkäufer",
-        "c": "Arzt"
+        "a": "Bildung und Schule",
+        "b": "Essen und Trinken",
+        "c": "Gesundheit und Körper"
       },
       "answer": "c",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: 'Arzt'.",
-        "vi": "Một người làm nghề gì (đoạn 5)?",
-        "key_evidence": "Arzt",
-        "key_vocabulary": [
-          {
-            "word": "Arzt",
-            "meaning": "doctor (m)"
-          }
-        ]
+        "de": "Im Gespräch hört man: \"Gesundheit und Körper\".",
+        "vi": "",
+        "key_evidence": "Gesundheit und Körper",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q4",
+      "gespraech": 4,
+      "type": "mc_abc",
+      "question": "Worum geht es im Gespräch 4?",
+      "options": {
+        "a": "Bildung und Schule",
+        "b": "Arbeit und Beruf",
+        "c": "Umwelt und Natur"
+      },
+      "answer": "a",
+      "points": 1,
+      "explanation": {
+        "de": "Im Gespräch hört man: \"Bildung und Schule\".",
+        "vi": "",
+        "key_evidence": "Bildung und Schule",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q5",
+      "gespraech": 5,
+      "type": "mc_abc",
+      "question": "Worum geht es im Gespräch 5?",
+      "options": {
+        "a": "Bildung und Schule",
+        "b": "Gesundheit und Körper",
+        "c": "Einkaufen und Geld"
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Im Gespräch hört man: \"Gesundheit und Körper\".",
+        "vi": "",
+        "key_evidence": "Gesundheit und Körper",
+        "key_vocabulary": []
       }
     }
   ],
   "scoring": {
-    "total_points": 10,
-    "pass_threshold": 6,
+    "total_points": 5,
+    "pass_threshold": 3,
     "grading": [
       {
         "range": [
-          9,
-          10
+          5,
+          5
         ],
         "label": "Ausgezeichnet!",
         "emoji": "⭐⭐⭐"
       },
       {
         "range": [
-          7,
-          8
+          4,
+          4
         ],
         "label": "Sehr gut!",
         "emoji": "⭐⭐"
       },
       {
         "range": [
-          5,
-          6
+          3,
+          3
         ],
         "label": "Gut!",
         "emoji": "⭐"
@@ -285,7 +141,7 @@
       {
         "range": [
           0,
-          4
+          2
         ],
         "label": "Noch üben!",
         "emoji": "📝"

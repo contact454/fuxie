@@ -8,9 +8,10 @@
   "audio_file": "/audio/listening/A1/Teil1-Kurze-Alltagsgespraeche/L-A1-GOETHE-007-T1.mp3",
   "metadata": {
     "generated_at": "2026-03-19T10:04:11.068965",
-    "version": 1,
+    "version": 4,
     "gespraech_count": 6,
-    "source_script": "data/scripts/A1/Teil1-Kurze-Alltagsgespraeche/L-A1-GOETHE-007-T1.json"
+    "source_script": "data/scripts/A1/Teil1-Kurze-Alltagsgespraeche/L-A1-GOETHE-007-T1.json",
+    "regenerated_at": "2026-03-20T07:45:14.449Z"
   },
   "questions": [
     {
@@ -19,20 +20,20 @@
       "type": "mc_abc",
       "question": "Wie heißt eine Person im Gespräch 1?",
       "options": {
-        "a": "Anna",
-        "b": "Schneider",
-        "c": "Thomas"
+        "a": "Claudia",
+        "b": "Katja",
+        "c": "Schneider"
       },
-      "answer": "b",
+      "answer": "c",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: 'bin Schneider'.",
-        "vi": "Một người trong đoạn hội thoại 1 tên là gì?",
-        "key_evidence": "bin Schneider",
+        "de": "Im Gespräch hört man: \"Schneider\".",
+        "vi": "",
+        "key_evidence": "Schneider",
         "key_vocabulary": [
           {
-            "word": "heißen",
-            "meaning": "to be called"
+            "w": "heißen",
+            "m": "to be called"
           }
         ]
       }
@@ -41,22 +42,22 @@
       "id": "Q2",
       "gespraech": 2,
       "type": "mc_abc",
-      "question": "Wo wohnt eine Person im Gespräch 2?",
+      "question": "Woher kommt die Person (Gespräch 2)?",
       "options": {
-        "a": "Doppelzimmer frei",
-        "b": "Dresden",
-        "c": "Wien"
+        "a": "Doppelzimmer",
+        "b": "Düsseldorf",
+        "c": "Berlin"
       },
       "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: 'Doppelzimmer frei'.",
-        "vi": "Một người trong đoạn hội thoại 2 sống ở đâu?",
-        "key_evidence": "Doppelzimmer frei",
+        "de": "Im Gespräch hört man: \"Doppelzimmer\".",
+        "vi": "",
+        "key_evidence": "Doppelzimmer",
         "key_vocabulary": [
           {
-            "word": "wohnen",
-            "meaning": "to live"
+            "w": "kommen aus",
+            "m": "to come from"
           }
         ]
       }
@@ -65,96 +66,76 @@
       "id": "Q3",
       "gespraech": 3,
       "type": "mc_abc",
-      "question": "Wo wohnt eine Person im Gespräch 3?",
+      "question": "Worum geht es im Gespräch 3?",
       "options": {
-        "a": "Zimmer bitte",
-        "b": "Köln",
-        "c": "Frankfurt"
+        "a": "Umwelt und Natur",
+        "b": "Freizeit und Hobbys",
+        "c": "Wohnung und Haushalt"
       },
-      "answer": "a",
+      "answer": "c",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: 'Zimmer bitte'.",
-        "vi": "Một người trong đoạn hội thoại 3 sống ở đâu?",
-        "key_evidence": "Zimmer bitte",
-        "key_vocabulary": [
-          {
-            "word": "wohnen",
-            "meaning": "to live"
-          }
-        ]
+        "de": "Im Gespräch hört man: \"Wohnung und Haushalt\".",
+        "vi": "",
+        "key_evidence": "Wohnung und Haushalt",
+        "key_vocabulary": []
       }
     },
     {
       "id": "Q4",
       "gespraech": 4,
       "type": "mc_abc",
-      "question": "Wo wohnt eine Person im Gespräch 4?",
+      "question": "Worum geht es im Gespräch 4?",
       "options": {
-        "a": "meinem Zimmer",
-        "b": "Berlin",
-        "c": "Frankfurt"
+        "a": "Bildung und Schule",
+        "b": "Freizeit und Hobbys",
+        "c": "Wohnung und Haushalt"
       },
-      "answer": "a",
+      "answer": "c",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: 'meinem Zimmer'.",
-        "vi": "Một người trong đoạn hội thoại 4 sống ở đâu?",
-        "key_evidence": "meinem Zimmer",
-        "key_vocabulary": [
-          {
-            "word": "wohnen",
-            "meaning": "to live"
-          }
-        ]
+        "de": "Im Gespräch hört man: \"Wohnung und Haushalt\".",
+        "vi": "",
+        "key_evidence": "Wohnung und Haushalt",
+        "key_vocabulary": []
       }
     },
     {
       "id": "Q5",
       "gespraech": 5,
       "type": "mc_abc",
-      "question": "Wo wohnt eine Person im Gespräch 5?",
+      "question": "Worum geht es im Gespräch 5?",
       "options": {
-        "a": "Gepäck noch",
-        "b": "München",
-        "c": "Dresden"
+        "a": "Einkaufen und Geld",
+        "b": "Gesundheit und Körper",
+        "c": "Wohnung und Haushalt"
       },
-      "answer": "a",
+      "answer": "c",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: 'Gepäck noch'.",
-        "vi": "Một người trong đoạn hội thoại 5 sống ở đâu?",
-        "key_evidence": "Gepäck noch",
-        "key_vocabulary": [
-          {
-            "word": "wohnen",
-            "meaning": "to live"
-          }
-        ]
+        "de": "Im Gespräch hört man: \"Wohnung und Haushalt\".",
+        "vi": "",
+        "key_evidence": "Wohnung und Haushalt",
+        "key_vocabulary": []
       }
     },
     {
       "id": "Q6",
       "gespraech": 6,
       "type": "mc_abc",
-      "question": "Wo wohnt eine Person im Gespräch 6?",
+      "question": "Worum geht es im Gespräch 6?",
       "options": {
-        "a": "Schwimmbad oder",
-        "b": "Düsseldorf",
-        "c": "Zürich"
+        "a": "Einkaufen und Geld",
+        "b": "Gesundheit und Körper",
+        "c": "Reisen und Verkehr"
       },
-      "answer": "a",
+      "answer": "c",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: 'Schwimmbad oder'.",
-        "vi": "Một người trong đoạn hội thoại 6 sống ở đâu?",
-        "key_evidence": "Schwimmbad oder",
-        "key_vocabulary": [
-          {
-            "word": "wohnen",
-            "meaning": "to live"
-          }
-        ]
+        "de": "Im Gespräch hört man: \"Reisen und Verkehr\".",
+        "vi": "",
+        "key_evidence": "Reisen und Verkehr",
+        "key_vocabulary": []
       }
     }
   ],
@@ -172,7 +153,7 @@
       },
       {
         "range": [
-          4,
+          5,
           5
         ],
         "label": "Sehr gut!",
@@ -180,8 +161,8 @@
       },
       {
         "range": [
-          2,
-          3
+          3,
+          4
         ],
         "label": "Gut!",
         "emoji": "⭐"
@@ -189,7 +170,7 @@
       {
         "range": [
           0,
-          1
+          2
         ],
         "label": "Noch üben!",
         "emoji": "📝"

@@ -8,9 +8,10 @@
   "audio_file": "/audio/listening/B1/Teil2-Fuehrung-oder-Monolog/L-B1-GOETHE-003-T2.mp3",
   "metadata": {
     "generated_at": "2026-03-19T10:04:11.164583",
-    "version": 1,
+    "version": 4,
     "gespraech_count": 5,
-    "source_script": "data/scripts/B1/Teil2-Fuehrung-oder-Monolog/L-B1-GOETHE-003-T2.json"
+    "source_script": "data/scripts/B1/Teil2-Fuehrung-oder-Monolog/L-B1-GOETHE-003-T2.json",
+    "regenerated_at": "2026-03-20T07:45:14.497Z"
   },
   "questions": [
     {
@@ -19,129 +20,76 @@
       "type": "mc_abc",
       "question": "Wie heißt eine Person im Gespräch 1?",
       "options": {
-        "a": "Anna",
-        "b": "Sabine",
-        "c": "Thomas"
+        "a": "Klaus",
+        "b": "Anna",
+        "c": "Sabine"
       },
-      "answer": "b",
+      "answer": "c",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: 'bin Sabine'.",
-        "vi": "Một người trong đoạn hội thoại 1 tên là gì?",
-        "key_evidence": "bin Sabine",
+        "de": "Man hört: \"Sabine\".",
+        "vi": "",
+        "key_evidence": "Sabine",
         "key_vocabulary": [
           {
-            "word": "heißen",
-            "meaning": "to be called"
+            "w": "heißen",
+            "m": "to be called"
           }
         ]
       }
     },
     {
       "id": "Q2",
-      "gespraech": 2,
+      "gespraech": 1,
       "type": "mc_abc",
-      "question": "Was macht eine Person beruflich (Gespräch 2)?",
+      "question": "Woher kommt die Person (Gespräch 1)?",
       "options": {
-        "a": "Arzt",
-        "b": "Student",
-        "c": "Lehrerin"
+        "a": "Name",
+        "b": "Düsseldorf",
+        "c": "Stuttgart"
       },
-      "answer": "c",
+      "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: 'Lehrerin'.",
-        "vi": "Một người làm nghề gì (đoạn 2)?",
-        "key_evidence": "Lehrerin",
+        "de": "Man hört: \"Name\".",
+        "vi": "",
+        "key_evidence": "Name",
         "key_vocabulary": [
           {
-            "word": "Lehrerin",
-            "meaning": "teacher (f)"
+            "w": "kommen aus",
+            "m": "to come from"
           }
         ]
       }
     },
     {
       "id": "Q3",
-      "gespraech": 3,
+      "gespraech": 1,
       "type": "mc_abc",
-      "question": "Wo wohnt eine Person im Gespräch 3?",
+      "question": "Worum geht es im Gespräch 1?",
       "options": {
-        "a": "Potsdam im",
-        "b": "Düsseldorf",
-        "c": "München"
+        "a": "Freizeit und Hobbys",
+        "b": "Arbeit und Beruf",
+        "c": "Einkaufen und Geld"
       },
-      "answer": "a",
+      "answer": "c",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: 'Potsdam im'.",
-        "vi": "Một người trong đoạn hội thoại 3 sống ở đâu?",
-        "key_evidence": "Potsdam im",
-        "key_vocabulary": [
-          {
-            "word": "wohnen",
-            "meaning": "to live"
-          }
-        ]
-      }
-    },
-    {
-      "id": "Q4",
-      "gespraech": 4,
-      "type": "mc_abc",
-      "question": "Wo wohnt eine Person im Gespräch 4?",
-      "options": {
-        "a": "Kapitel",
-        "b": "München",
-        "c": "Düsseldorf"
-      },
-      "answer": "a",
-      "points": 1,
-      "explanation": {
-        "de": "Im Gespräch hört man: 'Kapitel'.",
-        "vi": "Một người trong đoạn hội thoại 4 sống ở đâu?",
-        "key_evidence": "Kapitel",
-        "key_vocabulary": [
-          {
-            "word": "wohnen",
-            "meaning": "to live"
-          }
-        ]
-      }
-    },
-    {
-      "id": "Q5",
-      "gespraech": 5,
-      "type": "mc_abc",
-      "question": "Wo wohnt eine Person im Gespräch 5?",
-      "options": {
-        "a": "internationales Buffet",
-        "b": "Berlin",
-        "c": "Wien"
-      },
-      "answer": "a",
-      "points": 1,
-      "explanation": {
-        "de": "Im Gespräch hört man: 'internationales Buffet'.",
-        "vi": "Một người trong đoạn hội thoại 5 sống ở đâu?",
-        "key_evidence": "internationales Buffet",
-        "key_vocabulary": [
-          {
-            "word": "wohnen",
-            "meaning": "to live"
-          }
-        ]
+        "de": "Man hört: \"Einkaufen und Geld\".",
+        "vi": "",
+        "key_evidence": "Einkaufen und Geld",
+        "key_vocabulary": []
       }
     }
   ],
   "scoring": {
-    "total_points": 5,
-    "pass_threshold": 3,
+    "total_points": 3,
+    "pass_threshold": 2,
     "grading": [
       {
         "range": [
-          5,
-          5
+          3,
+          3
         ],
         "label": "Ausgezeichnet!",
         "emoji": "⭐⭐⭐"
@@ -149,7 +97,7 @@
       {
         "range": [
           3,
-          4
+          3
         ],
         "label": "Sehr gut!",
         "emoji": "⭐⭐"

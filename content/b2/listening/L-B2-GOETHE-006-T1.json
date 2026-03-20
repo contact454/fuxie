@@ -8,112 +8,93 @@
   "audio_file": "/audio/listening/B2/Teil1-Alltagsaeusserungen/L-B2-GOETHE-006-T1.mp3",
   "metadata": {
     "generated_at": "2026-03-19T10:04:11.210148",
-    "version": 1,
+    "version": 2,
     "gespraech_count": 5,
-    "source_script": "data/scripts/B2/Teil1-Alltagsaeusserungen/L-B2-GOETHE-006-T1.json"
+    "source_script": "data/scripts/B2/Teil1-Alltagsaeusserungen/L-B2-GOETHE-006-T1.json",
+    "regenerated_at": "2026-03-20T07:45:14.534Z"
   },
   "questions": [
     {
       "id": "Q1",
       "item": 1,
       "type": "richtig_falsch",
-      "statement": "Die Personen kennen sich schon lange.",
+      "statement": "Die Person kommt aus Düsseldorf.",
       "answer": "falsch",
       "points": 1,
       "explanation": {
-        "de": "Falsch. Die Personen stellen sich vor, sie kennen sich noch nicht.",
-        "vi": "Sai. Họ đang tự giới thiệu, chưa quen nhau.",
-        "key_evidence": "vorstellen",
-        "key_vocabulary": [
-          {
-            "word": "kennen",
-            "meaning": "to know"
-          }
-        ]
+        "de": "Falsch. Die Person kommt aus Autofahrer.",
+        "vi": "Sai.",
+        "key_evidence": "Falsch. Die Person kommt aus Autofahrer.",
+        "key_vocabulary": []
       }
     },
     {
       "id": "Q2",
-      "gespraech": 2,
-      "type": "mc_abc",
-      "question": "Wo wohnt eine Person im Gespräch 2?",
-      "options": {
-        "a": "will bis",
-        "b": "Leipzig",
-        "c": "Stuttgart"
-      },
-      "answer": "a",
+      "item": 2,
+      "type": "richtig_falsch",
+      "statement": "Autofahrer wird erwähnt.",
+      "answer": "richtig",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: 'wohne in will bis'.",
-        "vi": "Một người trong đoạn hội thoại 2 sống ở đâu?",
-        "key_evidence": "wohne in will bis",
-        "key_vocabulary": [
-          {
-            "word": "wohnen",
-            "meaning": "to live"
-          }
-        ]
+        "de": "Richtig. Autofahrer wird genannt.",
+        "vi": "Đúng.",
+        "key_evidence": "Richtig. Autofahrer wird genannt.",
+        "key_vocabulary": []
       }
     },
     {
       "id": "Q3",
       "item": 3,
       "type": "richtig_falsch",
-      "statement": "Die Personen kennen sich schon lange.",
+      "statement": "Die Person kommt aus Hamburg.",
       "answer": "falsch",
       "points": 1,
       "explanation": {
-        "de": "Falsch. Die Personen stellen sich vor, sie kennen sich noch nicht.",
-        "vi": "Sai. Họ đang tự giới thiệu, chưa quen nhau.",
-        "key_evidence": "vorstellen",
-        "key_vocabulary": [
-          {
-            "word": "kennen",
-            "meaning": "to know"
-          }
-        ]
+        "de": "Falsch. Die Person kommt aus Autofahrer.",
+        "vi": "Sai.",
+        "key_evidence": "Falsch. Die Person kommt aus Autofahrer.",
+        "key_vocabulary": []
       }
     },
     {
       "id": "Q4",
-      "gespraech": 4,
+      "gespraech": 1,
       "type": "mc_abc",
-      "question": "Wo wohnt eine Person im Gespräch 4?",
+      "question": "Worum geht es im Gespräch 1?",
       "options": {
-        "a": "Dienstwagen",
-        "b": "München",
-        "c": "Leipzig"
+        "a": "Umwelt und Natur",
+        "b": "Einkaufen und Geld",
+        "c": "Gesundheit und Körper"
       },
-      "answer": "a",
+      "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: 'Dienstwagen'.",
-        "vi": "Một người trong đoạn hội thoại 4 sống ở đâu?",
-        "key_evidence": "Dienstwagen",
-        "key_vocabulary": [
-          {
-            "word": "wohnen",
-            "meaning": "to live"
-          }
-        ]
+        "de": "Man hört: \"Einkaufen und Geld\".",
+        "vi": "",
+        "key_evidence": "Einkaufen und Geld",
+        "key_vocabulary": []
       }
     },
     {
       "id": "Q5",
-      "item": 5,
-      "type": "richtig_falsch",
-      "statement": "Die Personen kennen sich schon lange.",
-      "answer": "falsch",
+      "gespraech": 1,
+      "type": "mc_abc",
+      "question": "Woher kommt die Person (Gespräch 1)?",
+      "options": {
+        "a": "Autofahrer",
+        "b": "Düsseldorf",
+        "c": "Bonn"
+      },
+      "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Falsch. Die Personen stellen sich vor, sie kennen sich noch nicht.",
-        "vi": "Sai. Họ đang tự giới thiệu, chưa quen nhau.",
-        "key_evidence": "vorstellen",
+        "de": "Man hört: \"Autofahrer\".",
+        "vi": "",
+        "key_evidence": "Autofahrer",
         "key_vocabulary": [
           {
-            "word": "kennen",
-            "meaning": "to know"
+            "w": "kommen aus",
+            "m": "to come from"
           }
         ]
       }
@@ -133,7 +114,7 @@
       },
       {
         "range": [
-          3,
+          4,
           4
         ],
         "label": "Sehr gut!",
@@ -141,8 +122,8 @@
       },
       {
         "range": [
-          2,
-          2
+          3,
+          3
         ],
         "label": "Gut!",
         "emoji": "⭐"
@@ -150,7 +131,7 @@
       {
         "range": [
           0,
-          1
+          2
         ],
         "label": "Noch üben!",
         "emoji": "📝"

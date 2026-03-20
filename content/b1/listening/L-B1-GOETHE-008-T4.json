@@ -3,130 +3,117 @@
   "level": "B1",
   "teil": 4,
   "teil_name": "Radiodiskussion",
-  "task_type": "zuordnung_sprecher",
+  "task_type": "mc_abc",
   "topic": "Einkaufen und Reklamation",
   "audio_file": "/audio/listening/B1/Teil4-Radiodiskussion/L-B1-GOETHE-008-T4.mp3",
   "metadata": {
     "generated_at": "2026-03-19T10:04:11.180762",
-    "version": 1,
+    "version": 2,
     "gespraech_count": 5,
-    "source_script": "data/scripts/B1/Teil4-Radiodiskussion/L-B1-GOETHE-008-T4.json"
+    "source_script": "data/scripts/B1/Teil4-Radiodiskussion/L-B1-GOETHE-008-T4.json",
+    "regenerated_at": "2026-03-20T07:45:14.512Z"
   },
   "questions": [
     {
       "id": "Q1",
-      "item": 1,
-      "type": "zuordnung_sprecher",
-      "statement": "Willkommen bei 'Verbraucher aktüll'. Heute: Online-Shopping ...",
-      "options": [
-        1,
-        2,
-        3,
-        4,
-        5
-      ],
-      "answer": 1,
+      "gespraech": 1,
+      "type": "mc_abc",
+      "question": "Worum geht es im Gespräch 1?",
+      "options": {
+        "a": "Medien und Kommunikation",
+        "b": "Essen und Trinken",
+        "c": "Einkaufen und Geld"
+      },
+      "answer": "c",
       "points": 1,
       "explanation": {
-        "de": "Diese Aussage gehört zu Abschnitt 1.",
-        "vi": "Câu này thuộc phần 1.",
-        "key_evidence": "Willkommen bei 'Verbraucher aktüll'. Heu",
+        "de": "Man hört: \"Einkaufen und Geld\".",
+        "vi": "",
+        "key_evidence": "Einkaufen und Geld",
         "key_vocabulary": []
       }
     },
     {
       "id": "Q2",
-      "item": 2,
-      "type": "zuordnung_sprecher",
-      "statement": "Das stimmt. In Deutschland wird etwa jede sechste Online-Bes...",
-      "options": [
-        1,
-        2,
-        3,
-        4,
-        5
-      ],
-      "answer": 2,
+      "gespraech": 1,
+      "type": "mc_abc",
+      "question": "Wie heißt eine Person im Gespräch 1?",
+      "options": {
+        "a": "Jung",
+        "b": "Frank",
+        "c": "Markus"
+      },
+      "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Diese Aussage gehört zu Abschnitt 2.",
-        "vi": "Câu này thuộc phần 2.",
-        "key_evidence": "Das stimmt. In Deutschland wird etwa jed",
-        "key_vocabulary": []
+        "de": "Man hört: \"Jung\".",
+        "vi": "",
+        "key_evidence": "Jung",
+        "key_vocabulary": [
+          {
+            "w": "heißen",
+            "m": "to be called"
+          }
+        ]
       }
     },
     {
       "id": "Q3",
-      "item": 3,
-      "type": "zuordnung_sprecher",
-      "statement": "Das ist natürlich ein Problem. Aber der Handel muss bessere ...",
-      "options": [
-        1,
-        2,
-        3,
-        4,
-        5
-      ],
-      "answer": 3,
+      "gespraech": 1,
+      "type": "mc_abc",
+      "question": "Woher kommt die Person (Gespräch 1)?",
+      "options": {
+        "a": "Stuttgart",
+        "b": "Zürich",
+        "c": "Problem"
+      },
+      "answer": "c",
       "points": 1,
       "explanation": {
-        "de": "Diese Aussage gehört zu Abschnitt 3.",
-        "vi": "Câu này thuộc phần 3.",
-        "key_evidence": "Das ist natürlich ein Problem. Aber der ",
-        "key_vocabulary": []
+        "de": "Man hört: \"Problem\".",
+        "vi": "",
+        "key_evidence": "Problem",
+        "key_vocabulary": [
+          {
+            "w": "kommen aus",
+            "m": "to come from"
+          }
+        ]
       }
     },
     {
       "id": "Q4",
-      "item": 4,
-      "type": "zuordnung_sprecher",
-      "statement": "Herr Berger, wie geht es dem stationären Handel in Zeiten de...",
-      "options": [
-        1,
-        2,
-        3,
-        4,
-        5
-      ],
-      "answer": 4,
+      "gespraech": 1,
+      "type": "mc_abc",
+      "question": "Was macht die Person beruflich (Gespräch 1)?",
+      "options": {
+        "a": "Koch",
+        "b": "Lehrerin",
+        "c": "Verbraucher"
+      },
+      "answer": "c",
       "points": 1,
       "explanation": {
-        "de": "Diese Aussage gehört zu Abschnitt 4.",
-        "vi": "Câu này thuộc phần 4.",
-        "key_evidence": "Herr Berger, wie geht es dem stationären",
-        "key_vocabulary": []
-      }
-    },
-    {
-      "id": "Q5",
-      "item": 5,
-      "type": "zuordnung_sprecher",
-      "statement": "Lassen Sie uns zum Schluss kommen. Was ist Ihr Rat an die Ve...",
-      "options": [
-        1,
-        2,
-        3,
-        4,
-        5
-      ],
-      "answer": 5,
-      "points": 1,
-      "explanation": {
-        "de": "Diese Aussage gehört zu Abschnitt 5.",
-        "vi": "Câu này thuộc phần 5.",
-        "key_evidence": "Lassen Sie uns zum Schluss kommen. Was i",
-        "key_vocabulary": []
+        "de": "Man hört: \"Verbraucher\".",
+        "vi": "",
+        "key_evidence": "Verbraucher",
+        "key_vocabulary": [
+          {
+            "w": "Verbraucher",
+            "m": "Verbraucher"
+          }
+        ]
       }
     }
   ],
   "scoring": {
-    "total_points": 5,
+    "total_points": 4,
     "pass_threshold": 3,
     "grading": [
       {
         "range": [
-          5,
-          5
+          4,
+          4
         ],
         "label": "Ausgezeichnet!",
         "emoji": "⭐⭐⭐"
@@ -134,7 +121,7 @@
       {
         "range": [
           3,
-          4
+          3
         ],
         "label": "Sehr gut!",
         "emoji": "⭐⭐"

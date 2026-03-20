@@ -8,9 +8,10 @@
   "audio_file": "/audio/listening/B1/Teil2-Fuehrung-oder-Monolog/L-B1-GOETHE-002-T2.mp3",
   "metadata": {
     "generated_at": "2026-03-19T10:04:11.163978",
-    "version": 1,
+    "version": 4,
     "gespraech_count": 5,
-    "source_script": "data/scripts/B1/Teil2-Fuehrung-oder-Monolog/L-B1-GOETHE-002-T2.json"
+    "source_script": "data/scripts/B1/Teil2-Fuehrung-oder-Monolog/L-B1-GOETHE-002-T2.json",
+    "regenerated_at": "2026-03-20T07:45:14.494Z"
   },
   "questions": [
     {
@@ -19,129 +20,76 @@
       "type": "mc_abc",
       "question": "Wie heißt eine Person im Gespräch 1?",
       "options": {
-        "a": "Anna",
-        "b": "Thomas",
-        "c": "Maria"
+        "a": "Sara",
+        "b": "Lisa",
+        "c": "Thomas"
       },
-      "answer": "b",
+      "answer": "c",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: 'bin Thomas'.",
-        "vi": "Một người trong đoạn hội thoại 1 tên là gì?",
-        "key_evidence": "bin Thomas",
+        "de": "Man hört: \"Thomas\".",
+        "vi": "",
+        "key_evidence": "Thomas",
         "key_vocabulary": [
           {
-            "word": "heißen",
-            "meaning": "to be called"
+            "w": "heißen",
+            "m": "to be called"
           }
         ]
       }
     },
     {
       "id": "Q2",
-      "gespraech": 2,
+      "gespraech": 1,
       "type": "mc_abc",
-      "question": "Was passiert im Gespräch 2?",
+      "question": "Woher kommt die Person (Gespräch 1)?",
       "options": {
-        "a": "Jemand kauft ein.",
-        "b": "Jemand stellt sich vor.",
-        "c": "Jemand telefoniert."
+        "a": "Leipzig",
+        "b": "Hannover",
+        "c": "Name"
       },
-      "answer": "b",
+      "answer": "c",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: 'Erstens wird die Straßenbahnlinie M zehn bis zum A'.",
-        "vi": "Điều gì xảy ra trong đoạn hội thoại 2?",
-        "key_evidence": "Erstens wird die Straßenbahnlinie M zehn bis zum A",
+        "de": "Man hört: \"Name\".",
+        "vi": "",
+        "key_evidence": "Name",
         "key_vocabulary": [
           {
-            "word": "vorstellen",
-            "meaning": "to introduce"
+            "w": "kommen aus",
+            "m": "to come from"
           }
         ]
       }
     },
     {
       "id": "Q3",
-      "gespraech": 3,
+      "gespraech": 1,
       "type": "mc_abc",
-      "question": "Wo wohnt eine Person im Gespräch 3?",
+      "question": "Worum geht es im Gespräch 1?",
       "options": {
-        "a": "der gesamten",
-        "b": "Dresden",
-        "c": "Frankfurt"
+        "a": "Gesundheit und Körper",
+        "b": "Essen und Trinken",
+        "c": "Einkaufen und Geld"
       },
-      "answer": "a",
+      "answer": "c",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: 'wohne in der gesamten'.",
-        "vi": "Một người trong đoạn hội thoại 3 sống ở đâu?",
-        "key_evidence": "wohne in der gesamten",
-        "key_vocabulary": [
-          {
-            "word": "wohnen",
-            "meaning": "to live"
-          }
-        ]
-      }
-    },
-    {
-      "id": "Q4",
-      "gespraech": 4,
-      "type": "mc_abc",
-      "question": "Wo wohnt eine Person im Gespräch 4?",
-      "options": {
-        "a": "neue E",
-        "b": "Köln",
-        "c": "Zürich"
-      },
-      "answer": "a",
-      "points": 1,
-      "explanation": {
-        "de": "Im Gespräch hört man: 'neue E'.",
-        "vi": "Một người trong đoạn hội thoại 4 sống ở đâu?",
-        "key_evidence": "neue E",
-        "key_vocabulary": [
-          {
-            "word": "wohnen",
-            "meaning": "to live"
-          }
-        ]
-      }
-    },
-    {
-      "id": "Q5",
-      "gespraech": 5,
-      "type": "mc_abc",
-      "question": "Wo wohnt eine Person im Gespräch 5?",
-      "options": {
-        "a": "Städten wie",
-        "b": "Dresden",
-        "c": "Hannover"
-      },
-      "answer": "a",
-      "points": 1,
-      "explanation": {
-        "de": "Im Gespräch hört man: 'Städten wie'.",
-        "vi": "Một người trong đoạn hội thoại 5 sống ở đâu?",
-        "key_evidence": "Städten wie",
-        "key_vocabulary": [
-          {
-            "word": "wohnen",
-            "meaning": "to live"
-          }
-        ]
+        "de": "Man hört: \"Einkaufen und Geld\".",
+        "vi": "",
+        "key_evidence": "Einkaufen und Geld",
+        "key_vocabulary": []
       }
     }
   ],
   "scoring": {
-    "total_points": 5,
-    "pass_threshold": 3,
+    "total_points": 3,
+    "pass_threshold": 2,
     "grading": [
       {
         "range": [
-          5,
-          5
+          3,
+          3
         ],
         "label": "Ausgezeichnet!",
         "emoji": "⭐⭐⭐"
@@ -149,7 +97,7 @@
       {
         "range": [
           3,
-          4
+          3
         ],
         "label": "Sehr gut!",
         "emoji": "⭐⭐"

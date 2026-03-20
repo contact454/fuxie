@@ -8,112 +8,93 @@
   "audio_file": "/audio/listening/B2/Teil1-Alltagsaeusserungen/L-B2-GOETHE-002-T1.mp3",
   "metadata": {
     "generated_at": "2026-03-19T10:04:11.206917",
-    "version": 1,
+    "version": 2,
     "gespraech_count": 5,
-    "source_script": "data/scripts/B2/Teil1-Alltagsaeusserungen/L-B2-GOETHE-002-T1.json"
+    "source_script": "data/scripts/B2/Teil1-Alltagsaeusserungen/L-B2-GOETHE-002-T1.json",
+    "regenerated_at": "2026-03-20T07:45:14.524Z"
   },
   "questions": [
     {
       "id": "Q1",
       "item": 1,
       "type": "richtig_falsch",
-      "statement": "Die Personen kennen sich schon lange.",
+      "statement": "Die Person kommt aus Leipzig.",
       "answer": "falsch",
       "points": 1,
       "explanation": {
-        "de": "Falsch. Die Personen stellen sich vor, sie kennen sich noch nicht.",
-        "vi": "Sai. Họ đang tự giới thiệu, chưa quen nhau.",
-        "key_evidence": "vorstellen",
-        "key_vocabulary": [
-          {
-            "word": "kennen",
-            "meaning": "to know"
-          }
-        ]
+        "de": "Falsch. Die Person kommt aus Tiny.",
+        "vi": "Sai.",
+        "key_evidence": "Falsch. Die Person kommt aus Tiny.",
+        "key_vocabulary": []
       }
     },
     {
       "id": "Q2",
-      "gespraech": 2,
-      "type": "mc_abc",
-      "question": "Wo wohnt eine Person im Gespräch 2?",
-      "options": {
-        "a": "Mehrgenerationenhaus gegründet",
-        "b": "Düsseldorf",
-        "c": "Köln"
-      },
-      "answer": "a",
+      "item": 2,
+      "type": "richtig_falsch",
+      "statement": "Tiny wird erwähnt.",
+      "answer": "richtig",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: 'wohne in Mehrgenerationenhaus gegründet'.",
-        "vi": "Một người trong đoạn hội thoại 2 sống ở đâu?",
-        "key_evidence": "wohne in Mehrgenerationenhaus gegründet",
-        "key_vocabulary": [
-          {
-            "word": "wohnen",
-            "meaning": "to live"
-          }
-        ]
+        "de": "Richtig. Tiny wird genannt.",
+        "vi": "Đúng.",
+        "key_evidence": "Richtig. Tiny wird genannt.",
+        "key_vocabulary": []
       }
     },
     {
       "id": "Q3",
       "item": 3,
       "type": "richtig_falsch",
-      "statement": "Die Personen kennen sich schon lange.",
+      "statement": "Die Person kommt aus München.",
       "answer": "falsch",
       "points": 1,
       "explanation": {
-        "de": "Falsch. Die Personen stellen sich vor, sie kennen sich noch nicht.",
-        "vi": "Sai. Họ đang tự giới thiệu, chưa quen nhau.",
-        "key_evidence": "vorstellen",
-        "key_vocabulary": [
-          {
-            "word": "kennen",
-            "meaning": "to know"
-          }
-        ]
+        "de": "Falsch. Die Person kommt aus Tiny.",
+        "vi": "Sai.",
+        "key_evidence": "Falsch. Die Person kommt aus Tiny.",
+        "key_vocabulary": []
       }
     },
     {
       "id": "Q4",
-      "gespraech": 4,
+      "gespraech": 1,
       "type": "mc_abc",
-      "question": "Seit wann ist die Person in Deutschland (Gespräch 4)?",
+      "question": "Worum geht es im Gespräch 1?",
       "options": {
-        "a": "seit einer Woche",
-        "b": "seit zwei Jahren",
-        "c": "seit einem Jahr"
+        "a": "Einkaufen und Geld",
+        "b": "Freizeit und Hobbys",
+        "c": "Arbeit und Beruf"
       },
-      "answer": "b",
+      "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: 'seit zwei Jahren'.",
-        "vi": "Người đó ở Đức từ bao giờ (đoạn 4)?",
-        "key_evidence": "seit zwei Jahren",
-        "key_vocabulary": [
-          {
-            "word": "seit",
-            "meaning": "since/for"
-          }
-        ]
+        "de": "Man hört: \"Einkaufen und Geld\".",
+        "vi": "",
+        "key_evidence": "Einkaufen und Geld",
+        "key_vocabulary": []
       }
     },
     {
       "id": "Q5",
-      "item": 5,
-      "type": "richtig_falsch",
-      "statement": "Die Personen kennen sich schon lange.",
-      "answer": "falsch",
+      "gespraech": 1,
+      "type": "mc_abc",
+      "question": "Woher kommt die Person (Gespräch 1)?",
+      "options": {
+        "a": "Tiny",
+        "b": "Köln",
+        "c": "Wien"
+      },
+      "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Falsch. Die Personen stellen sich vor, sie kennen sich noch nicht.",
-        "vi": "Sai. Họ đang tự giới thiệu, chưa quen nhau.",
-        "key_evidence": "vorstellen",
+        "de": "Man hört: \"Tiny\".",
+        "vi": "",
+        "key_evidence": "Tiny",
         "key_vocabulary": [
           {
-            "word": "kennen",
-            "meaning": "to know"
+            "w": "kommen aus",
+            "m": "to come from"
           }
         ]
       }
@@ -133,7 +114,7 @@
       },
       {
         "range": [
-          3,
+          4,
           4
         ],
         "label": "Sehr gut!",
@@ -141,8 +122,8 @@
       },
       {
         "range": [
-          2,
-          2
+          3,
+          3
         ],
         "label": "Gut!",
         "emoji": "⭐"
@@ -150,7 +131,7 @@
       {
         "range": [
           0,
-          1
+          2
         ],
         "label": "Noch üben!",
         "emoji": "📝"

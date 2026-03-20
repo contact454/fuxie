@@ -3,146 +3,85 @@
   "level": "C1",
   "teil": 1,
   "teil_name": "Podcast oder Rezension",
-  "task_type": "zuordnung",
+  "task_type": "mc_abc",
   "topic": "Medizinethik und Gentherapie",
   "audio_file": "/audio/listening/C1/Teil1-Podcast-oder-Rezension/L-C1-GOETHE-008-T1.mp3",
   "metadata": {
     "generated_at": "2026-03-19T11:27:15.945159",
-    "version": 1,
+    "version": 2,
     "gespraech_count": 5,
-    "source_script": "data/scripts/C1/Teil1-Podcast-oder-Rezension/L-C1-GOETHE-008-T1.json"
+    "source_script": "data/scripts/C1/Teil1-Podcast-oder-Rezension/L-C1-GOETHE-008-T1.json",
+    "regenerated_at": "2026-03-20T07:45:14.574Z"
   },
   "questions": [
     {
       "id": "Q1",
-      "item": 1,
-      "type": "zuordnung",
-      "statement": "Willkommen bei 'Zukunft Medizin', dem Podcast an der Schnitt...",
-      "options": [
-        1,
-        2,
-        3,
-        4,
-        5
-      ],
-      "answer": 1,
+      "gespraech": 1,
+      "type": "mc_abc",
+      "question": "Worum geht es im Gespräch 1?",
+      "options": {
+        "a": "Gesundheit und Körper",
+        "b": "Einkaufen und Geld",
+        "c": "Umwelt und Natur"
+      },
+      "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Diese Aussage gehört zu Abschnitt 1.",
-        "vi": "Câu này thuộc phần 1.",
-        "key_evidence": "Willkommen bei 'Zukunft Medizin', dem Po",
+        "de": "Man hört: \"Einkaufen und Geld\".",
+        "vi": "",
+        "key_evidence": "Einkaufen und Geld",
         "key_vocabulary": []
       }
     },
     {
       "id": "Q2",
-      "item": 2,
-      "type": "zuordnung",
-      "statement": "Die Kosten sind allerdings astronomisch: Eine Behandlung kos...",
-      "options": [
-        1,
-        2,
-        3,
-        4,
-        5
-      ],
-      "answer": 2,
+      "gespraech": 1,
+      "type": "mc_abc",
+      "question": "Woher kommt die Person (Gespräch 1)?",
+      "options": {
+        "a": "Hamburg",
+        "b": "München",
+        "c": "Wissenschaft"
+      },
+      "answer": "c",
       "points": 1,
       "explanation": {
-        "de": "Diese Aussage gehört zu Abschnitt 2.",
-        "vi": "Câu này thuộc phần 2.",
-        "key_evidence": "Die Kosten sind allerdings astronomisch:",
-        "key_vocabulary": []
-      }
-    },
-    {
-      "id": "Q3",
-      "item": 3,
-      "type": "zuordnung",
-      "statement": "Neben den Kosten gibt es weitere ethische Bedenken: Wo verlä...",
-      "options": [
-        1,
-        2,
-        3,
-        4,
-        5
-      ],
-      "answer": 3,
-      "points": 1,
-      "explanation": {
-        "de": "Diese Aussage gehört zu Abschnitt 3.",
-        "vi": "Câu này thuộc phần 3.",
-        "key_evidence": "Neben den Kosten gibt es weitere ethisch",
-        "key_vocabulary": []
-      }
-    },
-    {
-      "id": "Q4",
-      "item": 4,
-      "type": "zuordnung",
-      "statement": "Keimbahntherapie, also Veränderungen, die an die nächste Gen...",
-      "options": [
-        1,
-        2,
-        3,
-        4,
-        5
-      ],
-      "answer": 4,
-      "points": 1,
-      "explanation": {
-        "de": "Diese Aussage gehört zu Abschnitt 4.",
-        "vi": "Câu này thuộc phần 4.",
-        "key_evidence": "Keimbahntherapie, also Veränderungen, di",
-        "key_vocabulary": []
-      }
-    },
-    {
-      "id": "Q5",
-      "item": 5,
-      "type": "zuordnung",
-      "statement": "Deutschland hat sehr restriktive Gesetze: Das Embryonenschut...",
-      "options": [
-        1,
-        2,
-        3,
-        4,
-        5
-      ],
-      "answer": 5,
-      "points": 1,
-      "explanation": {
-        "de": "Diese Aussage gehört zu Abschnitt 5.",
-        "vi": "Câu này thuộc phần 5.",
-        "key_evidence": "Deutschland hat sehr restriktive Gesetze",
-        "key_vocabulary": []
+        "de": "Man hört: \"Wissenschaft\".",
+        "vi": "",
+        "key_evidence": "Wissenschaft",
+        "key_vocabulary": [
+          {
+            "w": "kommen aus",
+            "m": "to come from"
+          }
+        ]
       }
     }
   ],
   "scoring": {
-    "total_points": 5,
-    "pass_threshold": 3,
+    "total_points": 2,
+    "pass_threshold": 2,
     "grading": [
       {
         "range": [
-          5,
-          5
+          2,
+          2
         ],
         "label": "Ausgezeichnet!",
         "emoji": "⭐⭐⭐"
       },
       {
         "range": [
-          3,
-          4
+          2,
+          2
         ],
         "label": "Sehr gut!",
         "emoji": "⭐⭐"
       },
       {
         "range": [
-          2,
-          2
+          1,
+          1
         ],
         "label": "Gut!",
         "emoji": "⭐"
@@ -150,7 +89,7 @@
       {
         "range": [
           0,
-          1
+          0
         ],
         "label": "Noch üben!",
         "emoji": "📝"

@@ -3,130 +3,117 @@
   "level": "B1",
   "teil": 4,
   "teil_name": "Radiodiskussion",
-  "task_type": "zuordnung_sprecher",
+  "task_type": "mc_abc",
   "topic": "Bewerbungsgespräch und Praktikum",
   "audio_file": "/audio/listening/B1/Teil4-Radiodiskussion/L-B1-GOETHE-005-T4.mp3",
   "metadata": {
     "generated_at": "2026-03-19T10:04:11.179146",
-    "version": 1,
+    "version": 2,
     "gespraech_count": 5,
-    "source_script": "data/scripts/B1/Teil4-Radiodiskussion/L-B1-GOETHE-005-T4.json"
+    "source_script": "data/scripts/B1/Teil4-Radiodiskussion/L-B1-GOETHE-005-T4.json",
+    "regenerated_at": "2026-03-20T07:45:14.503Z"
   },
   "questions": [
     {
       "id": "Q1",
-      "item": 1,
-      "type": "zuordnung_sprecher",
-      "statement": "Willkommen bei 'Beruf und Karriere'. Heute diskutieren wir: ...",
-      "options": [
-        1,
-        2,
-        3,
-        4,
-        5
-      ],
-      "answer": 1,
+      "gespraech": 1,
+      "type": "mc_abc",
+      "question": "Worum geht es im Gespräch 1?",
+      "options": {
+        "a": "Medien und Kommunikation",
+        "b": "Einkaufen und Geld",
+        "c": "Bildung und Schule"
+      },
+      "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Diese Aussage gehört zu Abschnitt 1.",
-        "vi": "Câu này thuộc phần 1.",
-        "key_evidence": "Willkommen bei 'Beruf und Karriere'. Heu",
+        "de": "Man hört: \"Einkaufen und Geld\".",
+        "vi": "",
+        "key_evidence": "Einkaufen und Geld",
         "key_vocabulary": []
       }
     },
     {
       "id": "Q2",
-      "item": 2,
-      "type": "zuordnung_sprecher",
-      "statement": "Das hängt stark von der Branche ab. Ein Meister im Handwerk ...",
-      "options": [
-        1,
-        2,
-        3,
-        4,
-        5
-      ],
-      "answer": 2,
+      "gespraech": 1,
+      "type": "mc_abc",
+      "question": "Wie heißt eine Person im Gespräch 1?",
+      "options": {
+        "a": "Meier",
+        "b": "Claudia",
+        "c": "Martin"
+      },
+      "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Diese Aussage gehört zu Abschnitt 2.",
-        "vi": "Câu này thuộc phần 2.",
-        "key_evidence": "Das hängt stark von der Branche ab. Ein ",
-        "key_vocabulary": []
+        "de": "Man hört: \"Meier\".",
+        "vi": "",
+        "key_evidence": "Meier",
+        "key_vocabulary": [
+          {
+            "w": "heißen",
+            "m": "to be called"
+          }
+        ]
       }
     },
     {
       "id": "Q3",
-      "item": 3,
-      "type": "zuordnung_sprecher",
-      "statement": "Überlegen Sie, was Ihnen Spaß macht. Wenn Sie gern praktisch...",
-      "options": [
-        1,
-        2,
-        3,
-        4,
-        5
-      ],
-      "answer": 3,
+      "gespraech": 1,
+      "type": "mc_abc",
+      "question": "Woher kommt die Person (Gespräch 1)?",
+      "options": {
+        "a": "Studium",
+        "b": "Bonn",
+        "c": "Frankfurt"
+      },
+      "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Diese Aussage gehört zu Abschnitt 3.",
-        "vi": "Câu này thuộc phần 3.",
-        "key_evidence": "Überlegen Sie, was Ihnen Spaß macht. Wen",
-        "key_vocabulary": []
+        "de": "Man hört: \"Studium\".",
+        "vi": "",
+        "key_evidence": "Studium",
+        "key_vocabulary": [
+          {
+            "w": "kommen aus",
+            "m": "to come from"
+          }
+        ]
       }
     },
     {
       "id": "Q4",
-      "item": 4,
-      "type": "zuordnung_sprecher",
-      "statement": "Und für Menschen, die noch keine Ausbildung haben, gibt es I...",
-      "options": [
-        1,
-        2,
-        3,
-        4,
-        5
-      ],
-      "answer": 4,
+      "gespraech": 1,
+      "type": "mc_abc",
+      "question": "Was macht die Person beruflich (Gespräch 1)?",
+      "options": {
+        "a": "Koch",
+        "b": "Sekretärin",
+        "c": "Nicht"
+      },
+      "answer": "c",
       "points": 1,
       "explanation": {
-        "de": "Diese Aussage gehört zu Abschnitt 4.",
-        "vi": "Câu này thuộc phần 4.",
-        "key_evidence": "Und für Menschen, die noch keine Ausbild",
-        "key_vocabulary": []
-      }
-    },
-    {
-      "id": "Q5",
-      "item": 5,
-      "type": "zuordnung_sprecher",
-      "statement": "Egal ob Ausbildung oder Studium: Finden Sie Ihren Weg und ge...",
-      "options": [
-        1,
-        2,
-        3,
-        4,
-        5
-      ],
-      "answer": 5,
-      "points": 1,
-      "explanation": {
-        "de": "Diese Aussage gehört zu Abschnitt 5.",
-        "vi": "Câu này thuộc phần 5.",
-        "key_evidence": "Egal ob Ausbildung oder Studium: Finden ",
-        "key_vocabulary": []
+        "de": "Man hört: \"Nicht\".",
+        "vi": "",
+        "key_evidence": "Nicht",
+        "key_vocabulary": [
+          {
+            "w": "Nicht",
+            "m": "Nicht"
+          }
+        ]
       }
     }
   ],
   "scoring": {
-    "total_points": 5,
+    "total_points": 4,
     "pass_threshold": 3,
     "grading": [
       {
         "range": [
-          5,
-          5
+          4,
+          4
         ],
         "label": "Ausgezeichnet!",
         "emoji": "⭐⭐⭐"
@@ -134,7 +121,7 @@
       {
         "range": [
           3,
-          4
+          3
         ],
         "label": "Sehr gut!",
         "emoji": "⭐⭐"

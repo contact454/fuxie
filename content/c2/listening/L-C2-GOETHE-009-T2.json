@@ -8,172 +8,96 @@
   "audio_file": "/audio/listening/C2/Teil2-Spontanes-Gespraech/L-C2-GOETHE-009-T2.mp3",
   "metadata": {
     "generated_at": "2026-03-19T11:27:16.132911",
-    "version": 1,
+    "version": 4,
     "gespraech_count": 6,
-    "source_script": "data/scripts/C2/Teil2-Spontanes-Gespraech/L-C2-GOETHE-009-T2.json"
+    "source_script": "data/scripts/C2/Teil2-Spontanes-Gespraech/L-C2-GOETHE-009-T2.json",
+    "regenerated_at": "2026-03-20T07:45:14.608Z"
   },
   "questions": [
     {
       "id": "Q1",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Wo wohnt eine Person im Gespräch 1?",
+      "question": "Worum geht es im Gespräch 1?",
       "options": {
-        "a": "dem sich",
-        "b": "Düsseldorf",
-        "c": "Zürich"
+        "a": "Freizeit und Hobbys",
+        "b": "Arbeit und Beruf",
+        "c": "Einkaufen und Geld"
       },
-      "answer": "a",
+      "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: 'dem sich'.",
-        "vi": "Một người trong đoạn hội thoại 1 sống ở đâu?",
-        "key_evidence": "dem sich",
-        "key_vocabulary": [
-          {
-            "word": "wohnen",
-            "meaning": "to live"
-          }
-        ]
+        "de": "Man hört: \"Arbeit und Beruf\".",
+        "vi": "",
+        "key_evidence": "Arbeit und Beruf",
+        "key_vocabulary": []
       }
     },
     {
       "id": "Q2",
-      "gespraech": 2,
+      "gespraech": 1,
       "type": "mc_abc",
-      "question": "Wo wohnt eine Person im Gespräch 2?",
+      "question": "Woher kommt die Person (Gespräch 1)?",
       "options": {
-        "a": "welchen Gründen",
-        "b": "Berlin",
-        "c": "Hannover"
+        "a": "Frankfurt",
+        "b": "Düsseldorf",
+        "c": "Motor"
       },
-      "answer": "a",
+      "answer": "c",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: 'welchen Gründen'.",
-        "vi": "Một người trong đoạn hội thoại 2 sống ở đâu?",
-        "key_evidence": "welchen Gründen",
+        "de": "Man hört: \"Motor\".",
+        "vi": "",
+        "key_evidence": "Motor",
         "key_vocabulary": [
           {
-            "word": "wohnen",
-            "meaning": "to live"
+            "w": "kommen aus",
+            "m": "to come from"
           }
         ]
       }
     },
     {
       "id": "Q3",
-      "gespraech": 3,
+      "gespraech": 1,
       "type": "mc_abc",
-      "question": "Wo wohnt eine Person im Gespräch 3?",
+      "question": "Was macht die Person beruflich (Gespräch 1)?",
       "options": {
-        "a": "zu schützendes",
-        "b": "Hannover",
-        "c": "Stuttgart"
+        "a": "Mechaniker",
+        "b": "Studentin",
+        "c": "Verfall"
       },
-      "answer": "a",
+      "answer": "c",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: 'zu schützendes'.",
-        "vi": "Một người trong đoạn hội thoại 3 sống ở đâu?",
-        "key_evidence": "zu schützendes",
+        "de": "Man hört: \"Verfall\".",
+        "vi": "",
+        "key_evidence": "Verfall",
         "key_vocabulary": [
           {
-            "word": "wohnen",
-            "meaning": "to live"
-          }
-        ]
-      }
-    },
-    {
-      "id": "Q4",
-      "gespraech": 4,
-      "type": "mc_abc",
-      "question": "Wo wohnt eine Person im Gespräch 4?",
-      "options": {
-        "a": "der Unternehmenssprache",
-        "b": "München",
-        "c": "Hamburg"
-      },
-      "answer": "a",
-      "points": 1,
-      "explanation": {
-        "de": "Im Gespräch hört man: 'der Unternehmenssprache'.",
-        "vi": "Một người trong đoạn hội thoại 4 sống ở đâu?",
-        "key_evidence": "der Unternehmenssprache",
-        "key_vocabulary": [
-          {
-            "word": "wohnen",
-            "meaning": "to live"
-          }
-        ]
-      }
-    },
-    {
-      "id": "Q5",
-      "gespraech": 5,
-      "type": "mc_abc",
-      "question": "Wo wohnt eine Person im Gespräch 5?",
-      "options": {
-        "a": "zu schützendes",
-        "b": "Hannover",
-        "c": "Stuttgart"
-      },
-      "answer": "a",
-      "points": 1,
-      "explanation": {
-        "de": "Im Gespräch hört man: 'zu schützendes'.",
-        "vi": "Một người trong đoạn hội thoại 5 sống ở đâu?",
-        "key_evidence": "zu schützendes",
-        "key_vocabulary": [
-          {
-            "word": "wohnen",
-            "meaning": "to live"
-          }
-        ]
-      }
-    },
-    {
-      "id": "Q6",
-      "gespraech": 6,
-      "type": "mc_abc",
-      "question": "Wo wohnt eine Person im Gespräch 6?",
-      "options": {
-        "a": "für historische",
-        "b": "Leipzig",
-        "c": "Düsseldorf"
-      },
-      "answer": "a",
-      "points": 1,
-      "explanation": {
-        "de": "Im Gespräch hört man: 'für historische'.",
-        "vi": "Một người trong đoạn hội thoại 6 sống ở đâu?",
-        "key_evidence": "für historische",
-        "key_vocabulary": [
-          {
-            "word": "wohnen",
-            "meaning": "to live"
+            "w": "Verfall",
+            "m": "Verfall"
           }
         ]
       }
     }
   ],
   "scoring": {
-    "total_points": 6,
-    "pass_threshold": 4,
+    "total_points": 3,
+    "pass_threshold": 2,
     "grading": [
       {
         "range": [
-          6,
-          6
+          3,
+          3
         ],
         "label": "Ausgezeichnet!",
         "emoji": "⭐⭐⭐"
       },
       {
         "range": [
-          4,
-          5
+          3,
+          3
         ],
         "label": "Sehr gut!",
         "emoji": "⭐⭐"
@@ -181,7 +105,7 @@
       {
         "range": [
           2,
-          3
+          2
         ],
         "label": "Gut!",
         "emoji": "⭐"

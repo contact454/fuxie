@@ -8,140 +8,112 @@
   "audio_file": "/audio/listening/C1/Teil2-Experteninterview/L-C1-GOETHE-001-T2.mp3",
   "metadata": {
     "generated_at": "2026-03-19T11:27:15.952396",
-    "version": 1,
+    "version": 4,
     "gespraech_count": 5,
-    "source_script": "data/scripts/C1/Teil2-Experteninterview/L-C1-GOETHE-001-T2.json"
+    "source_script": "data/scripts/C1/Teil2-Experteninterview/L-C1-GOETHE-001-T2.json",
+    "regenerated_at": "2026-03-20T07:45:14.554Z"
   },
   "questions": [
     {
       "id": "Q1",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Wo wohnt eine Person im Gespräch 1?",
+      "question": "Wie heißt eine Person im Gespräch 1?",
       "options": {
-        "a": "Neumann",
-        "b": "Dresden",
-        "c": "Berlin"
+        "a": "Professorin",
+        "b": "Katja",
+        "c": "Lisa"
       },
       "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: 'Neumann'.",
-        "vi": "Một người trong đoạn hội thoại 1 sống ở đâu?",
-        "key_evidence": "Neumann",
+        "de": "Man hört: \"Professorin\".",
+        "vi": "",
+        "key_evidence": "Professorin",
         "key_vocabulary": [
           {
-            "word": "wohnen",
-            "meaning": "to live"
+            "w": "heißen",
+            "m": "to be called"
           }
         ]
       }
     },
     {
       "id": "Q2",
-      "gespraech": 2,
+      "gespraech": 1,
       "type": "mc_abc",
-      "question": "Wo wohnt eine Person im Gespräch 2?",
+      "question": "Woher kommt die Person (Gespräch 1)?",
       "options": {
-        "a": "konzeptüllen Verständnisfragen",
-        "b": "Frankfurt",
-        "c": "Hamburg"
+        "a": "Neumann",
+        "b": "Leipzig",
+        "c": "Berlin"
       },
       "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: 'konzeptüllen Verständnisfragen'.",
-        "vi": "Một người trong đoạn hội thoại 2 sống ở đâu?",
-        "key_evidence": "konzeptüllen Verständnisfragen",
+        "de": "Man hört: \"Neumann\".",
+        "vi": "",
+        "key_evidence": "Neumann",
         "key_vocabulary": [
           {
-            "word": "wohnen",
-            "meaning": "to live"
+            "w": "kommen aus",
+            "m": "to come from"
           }
         ]
       }
     },
     {
       "id": "Q3",
-      "gespraech": 3,
+      "gespraech": 1,
       "type": "mc_abc",
-      "question": "Wo wohnt eine Person im Gespräch 3?",
+      "question": "Was macht die Person beruflich (Gespräch 1)?",
       "options": {
-        "a": "den letzten",
-        "b": "Stuttgart",
-        "c": "Hannover"
+        "a": "Ersatz",
+        "b": "Student",
+        "c": "Studentin"
       },
       "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: 'den letzten'.",
-        "vi": "Một người trong đoạn hội thoại 3 sống ở đâu?",
-        "key_evidence": "den letzten",
+        "de": "Man hört: \"Ersatz\".",
+        "vi": "",
+        "key_evidence": "Ersatz",
         "key_vocabulary": [
           {
-            "word": "wohnen",
-            "meaning": "to live"
+            "w": "Ersatz",
+            "m": "Ersatz"
           }
         ]
       }
     },
     {
       "id": "Q4",
-      "gespraech": 4,
+      "gespraech": 1,
       "type": "mc_abc",
-      "question": "Was macht eine Person beruflich (Gespräch 4)?",
+      "question": "Worum geht es im Gespräch 1?",
       "options": {
-        "a": "Ärztin",
-        "b": "Ingenieur",
-        "c": "Lehrer"
-      },
-      "answer": "c",
-      "points": 1,
-      "explanation": {
-        "de": "Im Gespräch hört man: 'Lehrer'.",
-        "vi": "Một người làm nghề gì (đoạn 4)?",
-        "key_evidence": "Lehrer",
-        "key_vocabulary": [
-          {
-            "word": "Lehrer",
-            "meaning": "teacher (m)"
-          }
-        ]
-      }
-    },
-    {
-      "id": "Q5",
-      "gespraech": 5,
-      "type": "mc_abc",
-      "question": "Wo wohnt eine Person im Gespräch 5?",
-      "options": {
-        "a": "diese kurze",
-        "b": "Leipzig",
-        "c": "Stuttgart"
+        "a": "Bildung und Schule",
+        "b": "Wohnung und Haushalt",
+        "c": "Reisen und Verkehr"
       },
       "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: 'diese kurze'.",
-        "vi": "Một người trong đoạn hội thoại 5 sống ở đâu?",
-        "key_evidence": "diese kurze",
-        "key_vocabulary": [
-          {
-            "word": "wohnen",
-            "meaning": "to live"
-          }
-        ]
+        "de": "Man hört: \"Bildung und Schule\".",
+        "vi": "",
+        "key_evidence": "Bildung und Schule",
+        "key_vocabulary": []
       }
     }
   ],
   "scoring": {
-    "total_points": 5,
+    "total_points": 4,
     "pass_threshold": 3,
     "grading": [
       {
         "range": [
-          5,
-          5
+          4,
+          4
         ],
         "label": "Ausgezeichnet!",
         "emoji": "⭐⭐⭐"
@@ -149,7 +121,7 @@
       {
         "range": [
           3,
-          4
+          3
         ],
         "label": "Sehr gut!",
         "emoji": "⭐⭐"

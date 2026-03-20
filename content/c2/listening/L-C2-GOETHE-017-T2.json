@@ -8,172 +8,96 @@
   "audio_file": "/audio/listening/C2/Teil2-Spontanes-Gespraech/L-C2-GOETHE-017-T2.mp3",
   "metadata": {
     "generated_at": "2026-03-19T11:27:16.147792",
-    "version": 1,
+    "version": 4,
     "gespraech_count": 6,
-    "source_script": "data/scripts/C2/Teil2-Spontanes-Gespraech/L-C2-GOETHE-017-T2.json"
+    "source_script": "data/scripts/C2/Teil2-Spontanes-Gespraech/L-C2-GOETHE-017-T2.json",
+    "regenerated_at": "2026-03-20T07:45:14.629Z"
   },
   "questions": [
     {
       "id": "Q1",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Wo wohnt eine Person im Gespräch 1?",
+      "question": "Worum geht es im Gespräch 1?",
       "options": {
-        "a": "technischer Präzision",
-        "b": "Stuttgart",
-        "c": "Zürich"
+        "a": "Umwelt und Natur",
+        "b": "Arbeit und Beruf",
+        "c": "Einkaufen und Geld"
       },
-      "answer": "a",
+      "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: 'technischer Präzision'.",
-        "vi": "Một người trong đoạn hội thoại 1 sống ở đâu?",
-        "key_evidence": "technischer Präzision",
-        "key_vocabulary": [
-          {
-            "word": "wohnen",
-            "meaning": "to live"
-          }
-        ]
+        "de": "Man hört: \"Arbeit und Beruf\".",
+        "vi": "",
+        "key_evidence": "Arbeit und Beruf",
+        "key_vocabulary": []
       }
     },
     {
       "id": "Q2",
-      "gespraech": 2,
+      "gespraech": 1,
       "type": "mc_abc",
-      "question": "Wo wohnt eine Person im Gespräch 2?",
+      "question": "Woher kommt die Person (Gespräch 1)?",
       "options": {
-        "a": "Film im",
-        "b": "Hannover",
-        "c": "München"
+        "a": "Hamburg",
+        "b": "Bonn",
+        "c": "Film"
       },
-      "answer": "a",
+      "answer": "c",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: 'Film im'.",
-        "vi": "Một người trong đoạn hội thoại 2 sống ở đâu?",
-        "key_evidence": "Film im",
+        "de": "Man hört: \"Film\".",
+        "vi": "",
+        "key_evidence": "Film",
         "key_vocabulary": [
           {
-            "word": "wohnen",
-            "meaning": "to live"
+            "w": "kommen aus",
+            "m": "to come from"
           }
         ]
       }
     },
     {
       "id": "Q3",
-      "gespraech": 3,
+      "gespraech": 1,
       "type": "mc_abc",
-      "question": "Wo wohnt eine Person im Gespräch 3?",
+      "question": "Was macht die Person beruflich (Gespräch 1)?",
       "options": {
-        "a": "der geschlechtsspezifischen",
-        "b": "Köln",
-        "c": "Düsseldorf"
+        "a": "Sekretärin",
+        "b": "Mechaniker",
+        "c": "Kriminalfilm"
       },
-      "answer": "a",
+      "answer": "c",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: 'der geschlechtsspezifischen'.",
-        "vi": "Một người trong đoạn hội thoại 3 sống ở đâu?",
-        "key_evidence": "der geschlechtsspezifischen",
+        "de": "Man hört: \"Kriminalfilm\".",
+        "vi": "",
+        "key_evidence": "Kriminalfilm",
         "key_vocabulary": [
           {
-            "word": "wohnen",
-            "meaning": "to live"
-          }
-        ]
-      }
-    },
-    {
-      "id": "Q4",
-      "gespraech": 4,
-      "type": "mc_abc",
-      "question": "Wo wohnt eine Person im Gespräch 4?",
-      "options": {
-        "a": "Film im",
-        "b": "Hannover",
-        "c": "München"
-      },
-      "answer": "a",
-      "points": 1,
-      "explanation": {
-        "de": "Im Gespräch hört man: 'Film im'.",
-        "vi": "Một người trong đoạn hội thoại 4 sống ở đâu?",
-        "key_evidence": "Film im",
-        "key_vocabulary": [
-          {
-            "word": "wohnen",
-            "meaning": "to live"
-          }
-        ]
-      }
-    },
-    {
-      "id": "Q5",
-      "gespraech": 5,
-      "type": "mc_abc",
-      "question": "Wo wohnt eine Person im Gespräch 5?",
-      "options": {
-        "a": "unsichtbar bleibt",
-        "b": "Leipzig",
-        "c": "Wien"
-      },
-      "answer": "a",
-      "points": 1,
-      "explanation": {
-        "de": "Im Gespräch hört man: 'unsichtbar bleibt'.",
-        "vi": "Một người trong đoạn hội thoại 5 sống ở đâu?",
-        "key_evidence": "unsichtbar bleibt",
-        "key_vocabulary": [
-          {
-            "word": "wohnen",
-            "meaning": "to live"
-          }
-        ]
-      }
-    },
-    {
-      "id": "Q6",
-      "gespraech": 6,
-      "type": "mc_abc",
-      "question": "Wo wohnt eine Person im Gespräch 6?",
-      "options": {
-        "a": "monatelanger",
-        "b": "Düsseldorf",
-        "c": "Stuttgart"
-      },
-      "answer": "a",
-      "points": 1,
-      "explanation": {
-        "de": "Im Gespräch hört man: 'monatelanger'.",
-        "vi": "Một người trong đoạn hội thoại 6 sống ở đâu?",
-        "key_evidence": "monatelanger",
-        "key_vocabulary": [
-          {
-            "word": "wohnen",
-            "meaning": "to live"
+            "w": "Kriminalfilm",
+            "m": "Kriminalfilm"
           }
         ]
       }
     }
   ],
   "scoring": {
-    "total_points": 6,
-    "pass_threshold": 4,
+    "total_points": 3,
+    "pass_threshold": 2,
     "grading": [
       {
         "range": [
-          6,
-          6
+          3,
+          3
         ],
         "label": "Ausgezeichnet!",
         "emoji": "⭐⭐⭐"
       },
       {
         "range": [
-          4,
-          5
+          3,
+          3
         ],
         "label": "Sehr gut!",
         "emoji": "⭐⭐"
@@ -181,7 +105,7 @@
       {
         "range": [
           2,
-          3
+          2
         ],
         "label": "Gut!",
         "emoji": "⭐"

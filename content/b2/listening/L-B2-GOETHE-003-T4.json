@@ -8,140 +8,88 @@
   "audio_file": "/audio/listening/B2/Teil4-Vortrag/L-B2-GOETHE-003-T4.mp3",
   "metadata": {
     "generated_at": "2026-03-19T10:04:11.232697",
-    "version": 1,
+    "version": 4,
     "gespraech_count": 5,
-    "source_script": "data/scripts/B2/Teil4-Vortrag/L-B2-GOETHE-003-T4.json"
+    "source_script": "data/scripts/B2/Teil4-Vortrag/L-B2-GOETHE-003-T4.json",
+    "regenerated_at": "2026-03-20T07:45:14.528Z"
   },
   "questions": [
     {
       "id": "Q1",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Wo wohnt eine Person im Gespräch 1?",
+      "question": "Worum geht es im Gespräch 1?",
       "options": {
-        "a": "einer Welt",
-        "b": "München",
-        "c": "Stuttgart"
+        "a": "Wohnung und Haushalt",
+        "b": "Arbeit und Beruf",
+        "c": "Einkaufen und Geld"
       },
-      "answer": "a",
+      "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: 'einer Welt'.",
-        "vi": "Một người trong đoạn hội thoại 1 sống ở đâu?",
-        "key_evidence": "einer Welt",
-        "key_vocabulary": [
-          {
-            "word": "wohnen",
-            "meaning": "to live"
-          }
-        ]
+        "de": "Man hört: \"Arbeit und Beruf\".",
+        "vi": "",
+        "key_evidence": "Arbeit und Beruf",
+        "key_vocabulary": []
       }
     },
     {
       "id": "Q2",
-      "gespraech": 2,
+      "gespraech": 1,
       "type": "mc_abc",
-      "question": "Wo wohnt eine Person im Gespräch 2?",
+      "question": "Woher kommt die Person (Gespräch 1)?",
       "options": {
-        "a": "erheblicher Teil",
-        "b": "Berlin",
-        "c": "Hannover"
+        "a": "Tief",
+        "b": "Köln",
+        "c": "Hamburg"
       },
       "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: 'erheblicher Teil'.",
-        "vi": "Một người trong đoạn hội thoại 2 sống ở đâu?",
-        "key_evidence": "erheblicher Teil",
+        "de": "Man hört: \"Tief\".",
+        "vi": "",
+        "key_evidence": "Tief",
         "key_vocabulary": [
           {
-            "word": "wohnen",
-            "meaning": "to live"
+            "w": "kommen aus",
+            "m": "to come from"
           }
         ]
       }
     },
     {
       "id": "Q3",
-      "gespraech": 3,
+      "gespraech": 1,
       "type": "mc_abc",
-      "question": "Wo wohnt eine Person im Gespräch 3?",
+      "question": "Was macht die Person beruflich (Gespräch 1)?",
       "options": {
-        "a": "Tief nach",
-        "b": "Zürich",
-        "c": "Köln"
+        "a": "Arzt",
+        "b": "Studentin",
+        "c": "Produktivitätswerkzeug"
       },
-      "answer": "a",
+      "answer": "c",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: 'Tief nach'.",
-        "vi": "Một người trong đoạn hội thoại 3 sống ở đâu?",
-        "key_evidence": "Tief nach",
+        "de": "Man hört: \"Produktivitätswerkzeug\".",
+        "vi": "",
+        "key_evidence": "Produktivitätswerkzeug",
         "key_vocabulary": [
           {
-            "word": "wohnen",
-            "meaning": "to live"
-          }
-        ]
-      }
-    },
-    {
-      "id": "Q4",
-      "gespraech": 4,
-      "type": "mc_abc",
-      "question": "Wo wohnt eine Person im Gespräch 4?",
-      "options": {
-        "a": "kurzer Spaziergang",
-        "b": "Berlin",
-        "c": "Hannover"
-      },
-      "answer": "a",
-      "points": 1,
-      "explanation": {
-        "de": "Im Gespräch hört man: 'kurzer Spaziergang'.",
-        "vi": "Một người trong đoạn hội thoại 4 sống ở đâu?",
-        "key_evidence": "kurzer Spaziergang",
-        "key_vocabulary": [
-          {
-            "word": "wohnen",
-            "meaning": "to live"
-          }
-        ]
-      }
-    },
-    {
-      "id": "Q5",
-      "gespraech": 5,
-      "type": "mc_abc",
-      "question": "Wo wohnt eine Person im Gespräch 5?",
-      "options": {
-        "a": "sechs Monaten",
-        "b": "Köln",
-        "c": "Berlin"
-      },
-      "answer": "a",
-      "points": 1,
-      "explanation": {
-        "de": "Im Gespräch hört man: 'sechs Monaten'.",
-        "vi": "Một người trong đoạn hội thoại 5 sống ở đâu?",
-        "key_evidence": "sechs Monaten",
-        "key_vocabulary": [
-          {
-            "word": "wohnen",
-            "meaning": "to live"
+            "w": "Produktivitätswerkzeug",
+            "m": "Produktivitätswerkzeug"
           }
         ]
       }
     }
   ],
   "scoring": {
-    "total_points": 5,
-    "pass_threshold": 3,
+    "total_points": 3,
+    "pass_threshold": 2,
     "grading": [
       {
         "range": [
-          5,
-          5
+          3,
+          3
         ],
         "label": "Ausgezeichnet!",
         "emoji": "⭐⭐⭐"
@@ -149,7 +97,7 @@
       {
         "range": [
           3,
-          4
+          3
         ],
         "label": "Sehr gut!",
         "emoji": "⭐⭐"

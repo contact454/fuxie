@@ -8,140 +8,112 @@
   "audio_file": "/audio/listening/C1/Teil2-Experteninterview/L-C1-GOETHE-006-T2.mp3",
   "metadata": {
     "generated_at": "2026-03-19T11:27:15.957118",
-    "version": 1,
+    "version": 4,
     "gespraech_count": 5,
-    "source_script": "data/scripts/C1/Teil2-Experteninterview/L-C1-GOETHE-006-T2.json"
+    "source_script": "data/scripts/C1/Teil2-Experteninterview/L-C1-GOETHE-006-T2.json",
+    "regenerated_at": "2026-03-20T07:45:14.569Z"
   },
   "questions": [
     {
       "id": "Q1",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Wo wohnt eine Person im Gespräch 1?",
+      "question": "Wie heißt eine Person im Gespräch 1?",
       "options": {
-        "a": "Professorin Dr",
-        "b": "München",
-        "c": "Wien"
+        "a": "Sophie",
+        "b": "Julia",
+        "c": "Maria"
       },
-      "answer": "a",
+      "answer": "c",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: 'Professorin Dr'.",
-        "vi": "Một người trong đoạn hội thoại 1 sống ở đâu?",
-        "key_evidence": "Professorin Dr",
+        "de": "Man hört: \"Maria\".",
+        "vi": "",
+        "key_evidence": "Maria",
         "key_vocabulary": [
           {
-            "word": "wohnen",
-            "meaning": "to live"
+            "w": "heißen",
+            "m": "to be called"
           }
         ]
       }
     },
     {
       "id": "Q2",
-      "gespraech": 2,
+      "gespraech": 1,
       "type": "mc_abc",
-      "question": "Wo wohnt eine Person im Gespräch 2?",
+      "question": "Woher kommt die Person (Gespräch 1)?",
       "options": {
-        "a": "irreführender Mythos",
-        "b": "Hannover",
-        "c": "München"
+        "a": "Professorin",
+        "b": "Wien",
+        "c": "Düsseldorf"
       },
       "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: 'irreführender Mythos'.",
-        "vi": "Một người trong đoạn hội thoại 2 sống ở đâu?",
-        "key_evidence": "irreführender Mythos",
+        "de": "Man hört: \"Professorin\".",
+        "vi": "",
+        "key_evidence": "Professorin",
         "key_vocabulary": [
           {
-            "word": "wohnen",
-            "meaning": "to live"
+            "w": "kommen aus",
+            "m": "to come from"
           }
         ]
       }
     },
     {
       "id": "Q3",
-      "gespraech": 3,
+      "gespraech": 1,
       "type": "mc_abc",
-      "question": "Wo wohnt eine Person im Gespräch 3?",
+      "question": "Was macht die Person beruflich (Gespräch 1)?",
       "options": {
-        "a": "der modernen",
-        "b": "Köln",
-        "c": "Düsseldorf"
+        "a": "Digital",
+        "b": "Koch",
+        "c": "Student"
       },
       "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: 'der modernen'.",
-        "vi": "Một người trong đoạn hội thoại 3 sống ở đâu?",
-        "key_evidence": "der modernen",
+        "de": "Man hört: \"Digital\".",
+        "vi": "",
+        "key_evidence": "Digital",
         "key_vocabulary": [
           {
-            "word": "wohnen",
-            "meaning": "to live"
+            "w": "Digital",
+            "m": "Digital"
           }
         ]
       }
     },
     {
       "id": "Q4",
-      "gespraech": 4,
+      "gespraech": 1,
       "type": "mc_abc",
-      "question": "Was macht eine Person beruflich (Gespräch 4)?",
+      "question": "Worum geht es im Gespräch 1?",
       "options": {
-        "a": "Ärztin",
-        "b": "Ingenieur",
-        "c": "Lehrer"
+        "a": "Gesundheit und Körper",
+        "b": "Bildung und Schule",
+        "c": "Arbeit und Beruf"
       },
       "answer": "c",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: 'Lehrer'.",
-        "vi": "Một người làm nghề gì (đoạn 4)?",
-        "key_evidence": "Lehrer",
-        "key_vocabulary": [
-          {
-            "word": "Lehrer",
-            "meaning": "teacher (m)"
-          }
-        ]
-      }
-    },
-    {
-      "id": "Q5",
-      "gespraech": 5,
-      "type": "mc_abc",
-      "question": "Woher kommt eine Person im Gespräch 5?",
-      "options": {
-        "a": "Japan",
-        "b": "Polen",
-        "c": "Deutschland"
-      },
-      "answer": "c",
-      "points": 1,
-      "explanation": {
-        "de": "Im Gespräch hört man: 'Deutschland'.",
-        "vi": "Một người trong đoạn hội thoại 5 đến từ đâu?",
-        "key_evidence": "Deutschland",
-        "key_vocabulary": [
-          {
-            "word": "kommen aus",
-            "meaning": "to come from"
-          }
-        ]
+        "de": "Man hört: \"Arbeit und Beruf\".",
+        "vi": "",
+        "key_evidence": "Arbeit und Beruf",
+        "key_vocabulary": []
       }
     }
   ],
   "scoring": {
-    "total_points": 5,
+    "total_points": 4,
     "pass_threshold": 3,
     "grading": [
       {
         "range": [
-          5,
-          5
+          4,
+          4
         ],
         "label": "Ausgezeichnet!",
         "emoji": "⭐⭐⭐"
@@ -149,7 +121,7 @@
       {
         "range": [
           3,
-          4
+          3
         ],
         "label": "Sehr gut!",
         "emoji": "⭐⭐"

@@ -8,172 +8,120 @@
   "audio_file": "/audio/listening/B2/Teil2-Radiointerview-mit-Experte/L-B2-GOETHE-008-T2.mp3",
   "metadata": {
     "generated_at": "2026-03-19T10:04:11.220853",
-    "version": 1,
+    "version": 4,
     "gespraech_count": 6,
-    "source_script": "data/scripts/B2/Teil2-Radiointerview-mit-Experte/L-B2-GOETHE-008-T2.json"
+    "source_script": "data/scripts/B2/Teil2-Radiointerview-mit-Experte/L-B2-GOETHE-008-T2.json",
+    "regenerated_at": "2026-03-20T07:45:14.539Z"
   },
   "questions": [
     {
       "id": "Q1",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Wo wohnt eine Person im Gespräch 1?",
+      "question": "Wie heißt eine Person im Gespräch 1?",
       "options": {
-        "a": "Dr",
-        "b": "Stuttgart",
-        "c": "Köln"
+        "a": "Maria",
+        "b": "Sara",
+        "c": "Claudia"
       },
-      "answer": "a",
+      "answer": "c",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: 'Dr'.",
-        "vi": "Một người trong đoạn hội thoại 1 sống ở đâu?",
-        "key_evidence": "Dr",
+        "de": "Man hört: \"Claudia\".",
+        "vi": "",
+        "key_evidence": "Claudia",
         "key_vocabulary": [
           {
-            "word": "wohnen",
-            "meaning": "to live"
+            "w": "heißen",
+            "m": "to be called"
           }
         ]
       }
     },
     {
       "id": "Q2",
-      "gespraech": 2,
+      "gespraech": 1,
       "type": "mc_abc",
-      "question": "Wo wohnt eine Person im Gespräch 2?",
+      "question": "Woher kommt die Person (Gespräch 1)?",
       "options": {
-        "a": "der Prüfung",
-        "b": "Zürich",
-        "c": "Frankfurt"
+        "a": "Dr",
+        "b": "Leipzig",
+        "c": "Köln"
       },
       "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: 'der Prüfung'.",
-        "vi": "Một người trong đoạn hội thoại 2 sống ở đâu?",
-        "key_evidence": "der Prüfung",
+        "de": "Man hört: \"Dr\".",
+        "vi": "",
+        "key_evidence": "Dr",
         "key_vocabulary": [
           {
-            "word": "wohnen",
-            "meaning": "to live"
+            "w": "kommen aus",
+            "m": "to come from"
           }
         ]
       }
     },
     {
       "id": "Q3",
-      "gespraech": 3,
+      "gespraech": 1,
       "type": "mc_abc",
-      "question": "Wo wohnt eine Person im Gespräch 3?",
+      "question": "Was macht die Person beruflich (Gespräch 1)?",
       "options": {
-        "a": "der Praxis",
-        "b": "Dresden",
-        "c": "München"
+        "a": "Student",
+        "b": "Mensch",
+        "c": "Arzt"
       },
-      "answer": "a",
+      "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: 'der Praxis'.",
-        "vi": "Một người trong đoạn hội thoại 3 sống ở đâu?",
-        "key_evidence": "der Praxis",
+        "de": "Man hört: \"Mensch\".",
+        "vi": "",
+        "key_evidence": "Mensch",
         "key_vocabulary": [
           {
-            "word": "wohnen",
-            "meaning": "to live"
+            "w": "Mensch",
+            "m": "Mensch"
           }
         ]
       }
     },
     {
       "id": "Q4",
-      "gespraech": 4,
+      "gespraech": 1,
       "type": "mc_abc",
-      "question": "Wo wohnt eine Person im Gespräch 4?",
+      "question": "Worum geht es im Gespräch 1?",
       "options": {
-        "a": "den Bauch",
-        "b": "München",
-        "c": "Wien"
+        "a": "Wohnung und Haushalt",
+        "b": "Arbeit und Beruf",
+        "c": "Einkaufen und Geld"
       },
-      "answer": "a",
+      "answer": "c",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: 'den Bauch'.",
-        "vi": "Một người trong đoạn hội thoại 4 sống ở đâu?",
-        "key_evidence": "den Bauch",
-        "key_vocabulary": [
-          {
-            "word": "wohnen",
-            "meaning": "to live"
-          }
-        ]
-      }
-    },
-    {
-      "id": "Q5",
-      "gespraech": 5,
-      "type": "mc_abc",
-      "question": "Wo wohnt eine Person im Gespräch 5?",
-      "options": {
-        "a": "kürzester Zeit",
-        "b": "Köln",
-        "c": "Stuttgart"
-      },
-      "answer": "a",
-      "points": 1,
-      "explanation": {
-        "de": "Im Gespräch hört man: 'kürzester Zeit'.",
-        "vi": "Một người trong đoạn hội thoại 5 sống ở đâu?",
-        "key_evidence": "kürzester Zeit",
-        "key_vocabulary": [
-          {
-            "word": "wohnen",
-            "meaning": "to live"
-          }
-        ]
-      }
-    },
-    {
-      "id": "Q6",
-      "gespraech": 6,
-      "type": "mc_abc",
-      "question": "Was passiert im Gespräch 6?",
-      "options": {
-        "a": "Jemand kauft ein.",
-        "b": "Jemand stellt sich vor.",
-        "c": "Jemand telefoniert."
-      },
-      "answer": "b",
-      "points": 1,
-      "explanation": {
-        "de": "Im Gespräch hört man: 'Sprechen Sie über Ihre Angst! Sie ist nichts, wofü'.",
-        "vi": "Điều gì xảy ra trong đoạn hội thoại 6?",
-        "key_evidence": "Sprechen Sie über Ihre Angst! Sie ist nichts, wofü",
-        "key_vocabulary": [
-          {
-            "word": "vorstellen",
-            "meaning": "to introduce"
-          }
-        ]
+        "de": "Man hört: \"Einkaufen und Geld\".",
+        "vi": "",
+        "key_evidence": "Einkaufen und Geld",
+        "key_vocabulary": []
       }
     }
   ],
   "scoring": {
-    "total_points": 6,
-    "pass_threshold": 4,
+    "total_points": 4,
+    "pass_threshold": 3,
     "grading": [
       {
         "range": [
-          6,
-          6
+          4,
+          4
         ],
         "label": "Ausgezeichnet!",
         "emoji": "⭐⭐⭐"
       },
       {
         "range": [
-          4,
-          5
+          3,
+          3
         ],
         "label": "Sehr gut!",
         "emoji": "⭐⭐"
@@ -181,7 +129,7 @@
       {
         "range": [
           2,
-          3
+          2
         ],
         "label": "Gut!",
         "emoji": "⭐"

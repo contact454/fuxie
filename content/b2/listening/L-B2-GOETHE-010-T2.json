@@ -8,172 +8,96 @@
   "audio_file": "/audio/listening/B2/Teil2-Radiointerview-mit-Experte/L-B2-GOETHE-010-T2.mp3",
   "metadata": {
     "generated_at": "2026-03-19T10:04:11.222421",
-    "version": 1,
+    "version": 4,
     "gespraech_count": 6,
-    "source_script": "data/scripts/B2/Teil2-Radiointerview-mit-Experte/L-B2-GOETHE-010-T2.json"
+    "source_script": "data/scripts/B2/Teil2-Radiointerview-mit-Experte/L-B2-GOETHE-010-T2.json",
+    "regenerated_at": "2026-03-20T07:45:14.544Z"
   },
   "questions": [
     {
       "id": "Q1",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Woher kommt eine Person im Gespräch 1?",
+      "question": "Wie heißt eine Person im Gespräch 1?",
       "options": {
-        "a": "China",
-        "b": "Indien",
-        "c": "Deutschland"
+        "a": "Maren",
+        "b": "Martin",
+        "c": "Andreas"
       },
-      "answer": "c",
+      "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: 'Deutschland'.",
-        "vi": "Một người trong đoạn hội thoại 1 đến từ đâu?",
-        "key_evidence": "Deutschland",
+        "de": "Man hört: \"Maren\".",
+        "vi": "",
+        "key_evidence": "Maren",
         "key_vocabulary": [
           {
-            "word": "kommen aus",
-            "meaning": "to come from"
+            "w": "heißen",
+            "m": "to be called"
           }
         ]
       }
     },
     {
       "id": "Q2",
-      "gespraech": 2,
+      "gespraech": 1,
       "type": "mc_abc",
-      "question": "Was passiert im Gespräch 2?",
+      "question": "Woher kommt die Person (Gespräch 1)?",
       "options": {
-        "a": "Jemand kauft ein.",
-        "b": "Jemand stellt sich vor.",
-        "c": "Jemand telefoniert."
+        "a": "Berlin",
+        "b": "Deutschland",
+        "c": "Stuttgart"
       },
       "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: 'Sport und Bewegung stehen an erster Stelle, gefolg'.",
-        "vi": "Điều gì xảy ra trong đoạn hội thoại 2?",
-        "key_evidence": "Sport und Bewegung stehen an erster Stelle, gefolg",
+        "de": "Man hört: \"Deutschland\".",
+        "vi": "",
+        "key_evidence": "Deutschland",
         "key_vocabulary": [
           {
-            "word": "vorstellen",
-            "meaning": "to introduce"
+            "w": "kommen aus",
+            "m": "to come from"
           }
         ]
       }
     },
     {
       "id": "Q3",
-      "gespraech": 3,
+      "gespraech": 1,
       "type": "mc_abc",
-      "question": "Woher kommt eine Person im Gespräch 3?",
+      "question": "Worum geht es im Gespräch 1?",
       "options": {
-        "a": "China",
-        "b": "Indien",
-        "c": "Deutschland"
-      },
-      "answer": "c",
-      "points": 1,
-      "explanation": {
-        "de": "Im Gespräch hört man: 'Deutschland'.",
-        "vi": "Một người trong đoạn hội thoại 3 đến từ đâu?",
-        "key_evidence": "Deutschland",
-        "key_vocabulary": [
-          {
-            "word": "kommen aus",
-            "meaning": "to come from"
-          }
-        ]
-      }
-    },
-    {
-      "id": "Q4",
-      "gespraech": 4,
-      "type": "mc_abc",
-      "question": "Seit wann ist die Person in Deutschland (Gespräch 4)?",
-      "options": {
-        "a": "seit einer Woche",
-        "b": "seit Jahren nicht",
-        "c": "seit einem Jahr"
-      },
-      "answer": "b",
-      "points": 1,
-      "explanation": {
-        "de": "Im Gespräch hört man: 'seit Jahren nicht'.",
-        "vi": "Người đó ở Đức từ bao giờ (đoạn 4)?",
-        "key_evidence": "seit Jahren nicht",
-        "key_vocabulary": [
-          {
-            "word": "seit",
-            "meaning": "since/for"
-          }
-        ]
-      }
-    },
-    {
-      "id": "Q5",
-      "gespraech": 5,
-      "type": "mc_abc",
-      "question": "Wo wohnt eine Person im Gespräch 5?",
-      "options": {
-        "a": "weiteres Problem",
-        "b": "Stuttgart",
-        "c": "Frankfurt"
+        "a": "Einkaufen und Geld",
+        "b": "Gesundheit und Körper",
+        "c": "Freizeit und Hobbys"
       },
       "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: 'weiteres Problem'.",
-        "vi": "Một người trong đoạn hội thoại 5 sống ở đâu?",
-        "key_evidence": "weiteres Problem",
-        "key_vocabulary": [
-          {
-            "word": "wohnen",
-            "meaning": "to live"
-          }
-        ]
-      }
-    },
-    {
-      "id": "Q6",
-      "gespraech": 6,
-      "type": "mc_abc",
-      "question": "Wo wohnt eine Person im Gespräch 6?",
-      "options": {
-        "a": "an und",
-        "b": "Frankfurt",
-        "c": "Zürich"
-      },
-      "answer": "a",
-      "points": 1,
-      "explanation": {
-        "de": "Im Gespräch hört man: 'an und'.",
-        "vi": "Một người trong đoạn hội thoại 6 sống ở đâu?",
-        "key_evidence": "an und",
-        "key_vocabulary": [
-          {
-            "word": "wohnen",
-            "meaning": "to live"
-          }
-        ]
+        "de": "Man hört: \"Einkaufen und Geld\".",
+        "vi": "",
+        "key_evidence": "Einkaufen und Geld",
+        "key_vocabulary": []
       }
     }
   ],
   "scoring": {
-    "total_points": 6,
-    "pass_threshold": 4,
+    "total_points": 3,
+    "pass_threshold": 2,
     "grading": [
       {
         "range": [
-          6,
-          6
+          3,
+          3
         ],
         "label": "Ausgezeichnet!",
         "emoji": "⭐⭐⭐"
       },
       {
         "range": [
-          4,
-          5
+          3,
+          3
         ],
         "label": "Sehr gut!",
         "emoji": "⭐⭐"
@@ -181,7 +105,7 @@
       {
         "range": [
           2,
-          3
+          2
         ],
         "label": "Gut!",
         "emoji": "⭐"

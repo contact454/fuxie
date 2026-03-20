@@ -8,172 +8,96 @@
   "audio_file": "/audio/listening/B2/Teil2-Radiointerview-mit-Experte/L-B2-GOETHE-004-T2.mp3",
   "metadata": {
     "generated_at": "2026-03-19T10:04:11.217718",
-    "version": 1,
+    "version": 4,
     "gespraech_count": 6,
-    "source_script": "data/scripts/B2/Teil2-Radiointerview-mit-Experte/L-B2-GOETHE-004-T2.json"
+    "source_script": "data/scripts/B2/Teil2-Radiointerview-mit-Experte/L-B2-GOETHE-004-T2.json",
+    "regenerated_at": "2026-03-20T07:45:14.529Z"
   },
   "questions": [
     {
       "id": "Q1",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Wo wohnt eine Person im Gespräch 1?",
+      "question": "Wie heißt eine Person im Gespräch 1?",
       "options": {
-        "a": "Dr",
-        "b": "Stuttgart",
-        "c": "Köln"
+        "a": "Nicole",
+        "b": "Monika",
+        "c": "Anna"
       },
       "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: 'Dr'.",
-        "vi": "Một người trong đoạn hội thoại 1 sống ở đâu?",
-        "key_evidence": "Dr",
+        "de": "Man hört: \"Nicole\".",
+        "vi": "",
+        "key_evidence": "Nicole",
         "key_vocabulary": [
           {
-            "word": "wohnen",
-            "meaning": "to live"
+            "w": "heißen",
+            "m": "to be called"
           }
         ]
       }
     },
     {
       "id": "Q2",
-      "gespraech": 2,
+      "gespraech": 1,
       "type": "mc_abc",
-      "question": "Wo wohnt eine Person im Gespräch 2?",
+      "question": "Woher kommt die Person (Gespräch 1)?",
       "options": {
-        "a": "Praktikum",
-        "b": "Köln",
-        "c": "Hamburg"
-      },
-      "answer": "a",
-      "points": 1,
-      "explanation": {
-        "de": "Im Gespräch hört man: 'Praktikum'.",
-        "vi": "Một người trong đoạn hội thoại 2 sống ở đâu?",
-        "key_evidence": "Praktikum",
-        "key_vocabulary": [
-          {
-            "word": "wohnen",
-            "meaning": "to live"
-          }
-        ]
-      }
-    },
-    {
-      "id": "Q3",
-      "gespraech": 3,
-      "type": "mc_abc",
-      "question": "Wo wohnt eine Person im Gespräch 3?",
-      "options": {
-        "a": "Praktikumszeugnis für",
-        "b": "München",
-        "c": "Düsseldorf"
-      },
-      "answer": "a",
-      "points": 1,
-      "explanation": {
-        "de": "Im Gespräch hört man: 'Praktikumszeugnis für'.",
-        "vi": "Một người trong đoạn hội thoại 3 sống ở đâu?",
-        "key_evidence": "Praktikumszeugnis für",
-        "key_vocabulary": [
-          {
-            "word": "wohnen",
-            "meaning": "to live"
-          }
-        ]
-      }
-    },
-    {
-      "id": "Q4",
-      "gespraech": 4,
-      "type": "mc_abc",
-      "question": "Wo wohnt eine Person im Gespräch 4?",
-      "options": {
-        "a": "einfaches Zeugnis",
-        "b": "Hannover",
-        "c": "Hamburg"
-      },
-      "answer": "a",
-      "points": 1,
-      "explanation": {
-        "de": "Im Gespräch hört man: 'einfaches Zeugnis'.",
-        "vi": "Một người trong đoạn hội thoại 4 sống ở đâu?",
-        "key_evidence": "einfaches Zeugnis",
-        "key_vocabulary": [
-          {
-            "word": "wohnen",
-            "meaning": "to live"
-          }
-        ]
-      }
-    },
-    {
-      "id": "Q5",
-      "gespraech": 5,
-      "type": "mc_abc",
-      "question": "Wo wohnt eine Person im Gespräch 5?",
-      "options": {
-        "a": "einem guten",
-        "b": "Stuttgart",
-        "c": "Düsseldorf"
-      },
-      "answer": "a",
-      "points": 1,
-      "explanation": {
-        "de": "Im Gespräch hört man: 'einem guten'.",
-        "vi": "Một người trong đoạn hội thoại 5 sống ở đâu?",
-        "key_evidence": "einem guten",
-        "key_vocabulary": [
-          {
-            "word": "wohnen",
-            "meaning": "to live"
-          }
-        ]
-      }
-    },
-    {
-      "id": "Q6",
-      "gespraech": 6,
-      "type": "mc_abc",
-      "question": "Wo wohnt eine Person im Gespräch 6?",
-      "options": {
-        "a": "dem perfekten",
+        "a": "Dr",
         "b": "Hamburg",
         "c": "München"
       },
       "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: 'dem perfekten'.",
-        "vi": "Một người trong đoạn hội thoại 6 sống ở đâu?",
-        "key_evidence": "dem perfekten",
+        "de": "Man hört: \"Dr\".",
+        "vi": "",
+        "key_evidence": "Dr",
         "key_vocabulary": [
           {
-            "word": "wohnen",
-            "meaning": "to live"
+            "w": "kommen aus",
+            "m": "to come from"
           }
         ]
+      }
+    },
+    {
+      "id": "Q3",
+      "gespraech": 1,
+      "type": "mc_abc",
+      "question": "Worum geht es im Gespräch 1?",
+      "options": {
+        "a": "Arbeit und Beruf",
+        "b": "Wohnung und Haushalt",
+        "c": "Einkaufen und Geld"
+      },
+      "answer": "a",
+      "points": 1,
+      "explanation": {
+        "de": "Man hört: \"Arbeit und Beruf\".",
+        "vi": "",
+        "key_evidence": "Arbeit und Beruf",
+        "key_vocabulary": []
       }
     }
   ],
   "scoring": {
-    "total_points": 6,
-    "pass_threshold": 4,
+    "total_points": 3,
+    "pass_threshold": 2,
     "grading": [
       {
         "range": [
-          6,
-          6
+          3,
+          3
         ],
         "label": "Ausgezeichnet!",
         "emoji": "⭐⭐⭐"
       },
       {
         "range": [
-          4,
-          5
+          3,
+          3
         ],
         "label": "Sehr gut!",
         "emoji": "⭐⭐"
@@ -181,7 +105,7 @@
       {
         "range": [
           2,
-          3
+          2
         ],
         "label": "Gut!",
         "emoji": "⭐"

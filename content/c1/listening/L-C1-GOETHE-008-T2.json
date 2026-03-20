@@ -8,140 +8,112 @@
   "audio_file": "/audio/listening/C1/Teil2-Experteninterview/L-C1-GOETHE-008-T2.mp3",
   "metadata": {
     "generated_at": "2026-03-19T11:27:15.959601",
-    "version": 1,
+    "version": 4,
     "gespraech_count": 5,
-    "source_script": "data/scripts/C1/Teil2-Experteninterview/L-C1-GOETHE-008-T2.json"
+    "source_script": "data/scripts/C1/Teil2-Experteninterview/L-C1-GOETHE-008-T2.json",
+    "regenerated_at": "2026-03-20T07:45:14.575Z"
   },
   "questions": [
     {
       "id": "Q1",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Wo wohnt eine Person im Gespräch 1?",
+      "question": "Wie heißt eine Person im Gespräch 1?",
       "options": {
-        "a": "der Entwicklung",
-        "b": "München",
-        "c": "Hamburg"
+        "a": "Dr",
+        "b": "Frank",
+        "c": "Petra"
       },
       "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: 'der Entwicklung'.",
-        "vi": "Một người trong đoạn hội thoại 1 sống ở đâu?",
-        "key_evidence": "der Entwicklung",
+        "de": "Man hört: \"Dr\".",
+        "vi": "",
+        "key_evidence": "Dr",
         "key_vocabulary": [
           {
-            "word": "wohnen",
-            "meaning": "to live"
+            "w": "heißen",
+            "m": "to be called"
           }
         ]
       }
     },
     {
       "id": "Q2",
-      "gespraech": 2,
+      "gespraech": 1,
       "type": "mc_abc",
-      "question": "Wo wohnt eine Person im Gespräch 2?",
+      "question": "Woher kommt die Person (Gespräch 1)?",
       "options": {
-        "a": "auf globaler",
-        "b": "Düsseldorf",
-        "c": "Hamburg"
+        "a": "Gentherapien",
+        "b": "München",
+        "c": "Hannover"
       },
       "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: 'auf globaler'.",
-        "vi": "Một người trong đoạn hội thoại 2 sống ở đâu?",
-        "key_evidence": "auf globaler",
+        "de": "Man hört: \"Gentherapien\".",
+        "vi": "",
+        "key_evidence": "Gentherapien",
         "key_vocabulary": [
           {
-            "word": "wohnen",
-            "meaning": "to live"
+            "w": "kommen aus",
+            "m": "to come from"
           }
         ]
       }
     },
     {
       "id": "Q3",
-      "gespraech": 3,
+      "gespraech": 1,
       "type": "mc_abc",
-      "question": "Wo wohnt eine Person im Gespräch 3?",
+      "question": "Was macht die Person beruflich (Gespräch 1)?",
       "options": {
-        "a": "drittes Modell",
-        "b": "Düsseldorf",
-        "c": "Berlin"
+        "a": "Ärztin",
+        "b": "Student",
+        "c": "Ethiker"
       },
-      "answer": "a",
+      "answer": "c",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: 'drittes Modell'.",
-        "vi": "Một người trong đoạn hội thoại 3 sống ở đâu?",
-        "key_evidence": "drittes Modell",
+        "de": "Man hört: \"Ethiker\".",
+        "vi": "",
+        "key_evidence": "Ethiker",
         "key_vocabulary": [
           {
-            "word": "wohnen",
-            "meaning": "to live"
+            "w": "Ethiker",
+            "m": "Ethiker"
           }
         ]
       }
     },
     {
       "id": "Q4",
-      "gespraech": 4,
+      "gespraech": 1,
       "type": "mc_abc",
-      "question": "Wo wohnt eine Person im Gespräch 4?",
+      "question": "Worum geht es im Gespräch 1?",
       "options": {
-        "a": "einer Familienlinie",
-        "b": "Hannover",
-        "c": "Hamburg"
+        "a": "Gesundheit und Körper",
+        "b": "Einkaufen und Geld",
+        "c": "Reisen und Verkehr"
       },
-      "answer": "a",
+      "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: 'einer Familienlinie'.",
-        "vi": "Một người trong đoạn hội thoại 4 sống ở đâu?",
-        "key_evidence": "einer Familienlinie",
-        "key_vocabulary": [
-          {
-            "word": "wohnen",
-            "meaning": "to live"
-          }
-        ]
-      }
-    },
-    {
-      "id": "Q5",
-      "gespraech": 5,
-      "type": "mc_abc",
-      "question": "Wo wohnt eine Person im Gespräch 5?",
-      "options": {
-        "a": "die gesamte",
-        "b": "Leipzig",
-        "c": "Düsseldorf"
-      },
-      "answer": "a",
-      "points": 1,
-      "explanation": {
-        "de": "Im Gespräch hört man: 'die gesamte'.",
-        "vi": "Một người trong đoạn hội thoại 5 sống ở đâu?",
-        "key_evidence": "die gesamte",
-        "key_vocabulary": [
-          {
-            "word": "wohnen",
-            "meaning": "to live"
-          }
-        ]
+        "de": "Man hört: \"Einkaufen und Geld\".",
+        "vi": "",
+        "key_evidence": "Einkaufen und Geld",
+        "key_vocabulary": []
       }
     }
   ],
   "scoring": {
-    "total_points": 5,
+    "total_points": 4,
     "pass_threshold": 3,
     "grading": [
       {
         "range": [
-          5,
-          5
+          4,
+          4
         ],
         "label": "Ausgezeichnet!",
         "emoji": "⭐⭐⭐"
@@ -149,7 +121,7 @@
       {
         "range": [
           3,
-          4
+          3
         ],
         "label": "Sehr gut!",
         "emoji": "⭐⭐"

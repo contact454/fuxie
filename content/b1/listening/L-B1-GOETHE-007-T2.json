@@ -8,9 +8,10 @@
   "audio_file": "/audio/listening/B1/Teil2-Fuehrung-oder-Monolog/L-B1-GOETHE-007-T2.mp3",
   "metadata": {
     "generated_at": "2026-03-19T10:04:11.166768",
-    "version": 1,
+    "version": 4,
     "gespraech_count": 5,
-    "source_script": "data/scripts/B1/Teil2-Fuehrung-oder-Monolog/L-B1-GOETHE-007-T2.json"
+    "source_script": "data/scripts/B1/Teil2-Fuehrung-oder-Monolog/L-B1-GOETHE-007-T2.json",
+    "regenerated_at": "2026-03-20T07:45:14.508Z"
   },
   "questions": [
     {
@@ -19,129 +20,76 @@
       "type": "mc_abc",
       "question": "Wie heißt eine Person im Gespräch 1?",
       "options": {
-        "a": "Anna",
-        "b": "Klaus",
-        "c": "Thomas"
+        "a": "Klaus",
+        "b": "Jörg",
+        "c": "Claudia"
       },
-      "answer": "b",
+      "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: 'bin Klaus'.",
-        "vi": "Một người trong đoạn hội thoại 1 tên là gì?",
-        "key_evidence": "bin Klaus",
+        "de": "Man hört: \"Klaus\".",
+        "vi": "",
+        "key_evidence": "Klaus",
         "key_vocabulary": [
           {
-            "word": "heißen",
-            "meaning": "to be called"
+            "w": "heißen",
+            "m": "to be called"
           }
         ]
       }
     },
     {
       "id": "Q2",
-      "gespraech": 2,
+      "gespraech": 1,
       "type": "mc_abc",
-      "question": "Woher kommt eine Person im Gespräch 2?",
+      "question": "Woher kommt die Person (Gespräch 1)?",
       "options": {
-        "a": "Brasilien",
-        "b": "Spanien",
-        "c": "Deutschland"
+        "a": "Zürich",
+        "b": "Berlin",
+        "c": "Name"
       },
       "answer": "c",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: 'Deutschland'.",
-        "vi": "Một người trong đoạn hội thoại 2 đến từ đâu?",
-        "key_evidence": "Deutschland",
+        "de": "Man hört: \"Name\".",
+        "vi": "",
+        "key_evidence": "Name",
         "key_vocabulary": [
           {
-            "word": "kommen aus",
-            "meaning": "to come from"
+            "w": "kommen aus",
+            "m": "to come from"
           }
         ]
       }
     },
     {
       "id": "Q3",
-      "gespraech": 3,
+      "gespraech": 1,
       "type": "mc_abc",
-      "question": "Wo wohnt eine Person im Gespräch 3?",
+      "question": "Worum geht es im Gespräch 1?",
       "options": {
-        "a": "im Frühjahr",
-        "b": "Leipzig",
-        "c": "Zürich"
+        "a": "Einkaufen und Geld",
+        "b": "Familie und Freunde",
+        "c": "Arbeit und Beruf"
       },
       "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: 'im Frühjahr'.",
-        "vi": "Một người trong đoạn hội thoại 3 sống ở đâu?",
-        "key_evidence": "im Frühjahr",
-        "key_vocabulary": [
-          {
-            "word": "wohnen",
-            "meaning": "to live"
-          }
-        ]
-      }
-    },
-    {
-      "id": "Q4",
-      "gespraech": 4,
-      "type": "mc_abc",
-      "question": "Wo wohnt eine Person im Gespräch 4?",
-      "options": {
-        "a": "der Nachbarschaft",
-        "b": "Hamburg",
-        "c": "Düsseldorf"
-      },
-      "answer": "a",
-      "points": 1,
-      "explanation": {
-        "de": "Im Gespräch hört man: 'wohne in der Nachbarschaft'.",
-        "vi": "Một người trong đoạn hội thoại 4 sống ở đâu?",
-        "key_evidence": "wohne in der Nachbarschaft",
-        "key_vocabulary": [
-          {
-            "word": "wohnen",
-            "meaning": "to live"
-          }
-        ]
-      }
-    },
-    {
-      "id": "Q5",
-      "gespraech": 5,
-      "type": "mc_abc",
-      "question": "Wo wohnt eine Person im Gespräch 5?",
-      "options": {
-        "a": "der gemeinsamen",
-        "b": "Köln",
-        "c": "Wien"
-      },
-      "answer": "a",
-      "points": 1,
-      "explanation": {
-        "de": "Im Gespräch hört man: 'wohne in der gemeinsamen'.",
-        "vi": "Một người trong đoạn hội thoại 5 sống ở đâu?",
-        "key_evidence": "wohne in der gemeinsamen",
-        "key_vocabulary": [
-          {
-            "word": "wohnen",
-            "meaning": "to live"
-          }
-        ]
+        "de": "Man hört: \"Einkaufen und Geld\".",
+        "vi": "",
+        "key_evidence": "Einkaufen und Geld",
+        "key_vocabulary": []
       }
     }
   ],
   "scoring": {
-    "total_points": 5,
-    "pass_threshold": 3,
+    "total_points": 3,
+    "pass_threshold": 2,
     "grading": [
       {
         "range": [
-          5,
-          5
+          3,
+          3
         ],
         "label": "Ausgezeichnet!",
         "emoji": "⭐⭐⭐"
@@ -149,7 +97,7 @@
       {
         "range": [
           3,
-          4
+          3
         ],
         "label": "Sehr gut!",
         "emoji": "⭐⭐"

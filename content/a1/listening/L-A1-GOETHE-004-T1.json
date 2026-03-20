@@ -8,153 +8,124 @@
   "audio_file": "/audio/listening/A1/Teil1-Kurze-Alltagsgespraeche/L-A1-GOETHE-004-T1.mp3",
   "metadata": {
     "generated_at": "2026-03-19T10:04:11.067009",
-    "version": 1,
+    "version": 4,
     "gespraech_count": 6,
-    "source_script": "data/scripts/A1/Teil1-Kurze-Alltagsgespraeche/L-A1-GOETHE-004-T1.json"
+    "source_script": "data/scripts/A1/Teil1-Kurze-Alltagsgespraeche/L-A1-GOETHE-004-T1.json",
+    "regenerated_at": "2026-03-20T07:45:14.442Z"
   },
   "questions": [
     {
       "id": "Q1",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Was passiert im Gespräch 1?",
+      "question": "Worum geht es im Gespräch 1?",
       "options": {
-        "a": "Jemand kauft ein.",
-        "b": "Jemand stellt sich vor.",
-        "c": "Jemand telefoniert."
+        "a": "Bildung und Schule",
+        "b": "Einkaufen und Geld",
+        "c": "Alltag"
       },
-      "answer": "b",
+      "answer": "c",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: 'Guten Tag! Kann ich Ihnen helfen? Ja, ich suche Mi'.",
-        "vi": "Điều gì xảy ra trong đoạn hội thoại 1?",
-        "key_evidence": "Guten Tag! Kann ich Ihnen helfen? Ja, ich suche Mi",
-        "key_vocabulary": [
-          {
-            "word": "vorstellen",
-            "meaning": "to introduce"
-          }
-        ]
+        "de": "Im Gespräch hört man: \"Alltag\".",
+        "vi": "",
+        "key_evidence": "Alltag",
+        "key_vocabulary": []
       }
     },
     {
       "id": "Q2",
       "gespraech": 2,
       "type": "mc_abc",
-      "question": "Was passiert im Gespräch 2?",
+      "question": "Worum geht es im Gespräch 2?",
       "options": {
-        "a": "Jemand kauft ein.",
-        "b": "Jemand stellt sich vor.",
-        "c": "Jemand telefoniert."
+        "a": "Familie und Freunde",
+        "b": "Arbeit und Beruf",
+        "c": "Einkaufen und Geld"
       },
-      "answer": "b",
+      "answer": "c",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: 'Entschuldigung, was kostet dieses Brot? Das Vollko'.",
-        "vi": "Điều gì xảy ra trong đoạn hội thoại 2?",
-        "key_evidence": "Entschuldigung, was kostet dieses Brot? Das Vollko",
-        "key_vocabulary": [
-          {
-            "word": "vorstellen",
-            "meaning": "to introduce"
-          }
-        ]
+        "de": "Im Gespräch hört man: \"Einkaufen und Geld\".",
+        "vi": "",
+        "key_evidence": "Einkaufen und Geld",
+        "key_vocabulary": []
       }
     },
     {
       "id": "Q3",
       "gespraech": 3,
       "type": "mc_abc",
-      "question": "Wo wohnt eine Person im Gespräch 3?",
+      "question": "Worum geht es im Gespräch 3?",
       "options": {
-        "a": "Kilo für",
-        "b": "Wien",
-        "c": "Düsseldorf"
+        "a": "Einkaufen und Geld",
+        "b": "Wohnung und Haushalt",
+        "c": "Umwelt und Natur"
       },
       "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: 'Kilo für'.",
-        "vi": "Một người trong đoạn hội thoại 3 sống ở đâu?",
-        "key_evidence": "Kilo für",
-        "key_vocabulary": [
-          {
-            "word": "wohnen",
-            "meaning": "to live"
-          }
-        ]
+        "de": "Im Gespräch hört man: \"Einkaufen und Geld\".",
+        "vi": "",
+        "key_evidence": "Einkaufen und Geld",
+        "key_vocabulary": []
       }
     },
     {
       "id": "Q4",
       "gespraech": 4,
       "type": "mc_abc",
-      "question": "Wo wohnt eine Person im Gespräch 4?",
+      "question": "Worum geht es im Gespräch 4?",
       "options": {
-        "a": "danke",
-        "b": "Dresden",
-        "c": "Berlin"
+        "a": "Einkaufen und Geld",
+        "b": "Arbeit und Beruf",
+        "c": "Familie und Freunde"
       },
       "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: 'danke'.",
-        "vi": "Một người trong đoạn hội thoại 4 sống ở đâu?",
-        "key_evidence": "danke",
-        "key_vocabulary": [
-          {
-            "word": "wohnen",
-            "meaning": "to live"
-          }
-        ]
+        "de": "Im Gespräch hört man: \"Einkaufen und Geld\".",
+        "vi": "",
+        "key_evidence": "Einkaufen und Geld",
+        "key_vocabulary": []
       }
     },
     {
       "id": "Q5",
       "gespraech": 5,
       "type": "mc_abc",
-      "question": "Wo wohnt eine Person im Gespräch 5?",
+      "question": "Worum geht es im Gespräch 5?",
       "options": {
-        "a": "Gang sieben",
-        "b": "Dresden",
-        "c": "Berlin"
+        "a": "Alltag",
+        "b": "Freizeit und Hobbys",
+        "c": "Einkaufen und Geld"
       },
       "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: 'Gang sieben'.",
-        "vi": "Một người trong đoạn hội thoại 5 sống ở đâu?",
-        "key_evidence": "Gang sieben",
-        "key_vocabulary": [
-          {
-            "word": "wohnen",
-            "meaning": "to live"
-          }
-        ]
+        "de": "Im Gespräch hört man: \"Alltag\".",
+        "vi": "",
+        "key_evidence": "Alltag",
+        "key_vocabulary": []
       }
     },
     {
       "id": "Q6",
       "gespraech": 6,
       "type": "mc_abc",
-      "question": "Was passiert im Gespräch 6?",
+      "question": "Worum geht es im Gespräch 6?",
       "options": {
-        "a": "Jemand kauft ein.",
-        "b": "Jemand stellt sich vor.",
-        "c": "Jemand telefoniert."
+        "a": "Alltag",
+        "b": "Wohnung und Haushalt",
+        "c": "Essen und Trinken"
       },
-      "answer": "b",
+      "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: 'Ich möchte gerne zweihundert Gramm Käse. Welchen K'.",
-        "vi": "Điều gì xảy ra trong đoạn hội thoại 6?",
-        "key_evidence": "Ich möchte gerne zweihundert Gramm Käse. Welchen K",
-        "key_vocabulary": [
-          {
-            "word": "vorstellen",
-            "meaning": "to introduce"
-          }
-        ]
+        "de": "Im Gespräch hört man: \"Alltag\".",
+        "vi": "",
+        "key_evidence": "Alltag",
+        "key_vocabulary": []
       }
     }
   ],
@@ -172,7 +143,7 @@
       },
       {
         "range": [
-          4,
+          5,
           5
         ],
         "label": "Sehr gut!",
@@ -180,8 +151,8 @@
       },
       {
         "range": [
-          2,
-          3
+          3,
+          4
         ],
         "label": "Gut!",
         "emoji": "⭐"
@@ -189,7 +160,7 @@
       {
         "range": [
           0,
-          1
+          2
         ],
         "label": "Noch üben!",
         "emoji": "📝"

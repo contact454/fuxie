@@ -8,156 +8,80 @@
   "audio_file": "/audio/listening/B2/Teil4-Vortrag/L-B2-GOETHE-006-T4.mp3",
   "metadata": {
     "generated_at": "2026-03-19T10:04:11.234603",
-    "version": 1,
+    "version": 4,
     "gespraech_count": 5,
-    "source_script": "data/scripts/B2/Teil4-Vortrag/L-B2-GOETHE-006-T4.json"
+    "source_script": "data/scripts/B2/Teil4-Vortrag/L-B2-GOETHE-006-T4.json",
+    "regenerated_at": "2026-03-20T07:45:14.535Z"
   },
   "questions": [
     {
       "id": "Q1",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Woher kommt eine Person im Gespräch 1?",
+      "question": "Worum geht es im Gespräch 1?",
       "options": {
-        "a": "China",
-        "b": "Indien",
-        "c": "Deutschland"
-      },
-      "answer": "c",
-      "points": 1,
-      "explanation": {
-        "de": "Im Gespräch hört man: 'Deutschland'.",
-        "vi": "Một người trong đoạn hội thoại 1 đến từ đâu?",
-        "key_evidence": "Deutschland",
-        "key_vocabulary": [
-          {
-            "word": "kommen aus",
-            "meaning": "to come from"
-          }
-        ]
-      }
-    },
-    {
-      "id": "Q2",
-      "gespraech": 2,
-      "type": "mc_abc",
-      "question": "Woher kommt eine Person im Gespräch 2?",
-      "options": {
-        "a": "China",
-        "b": "Indien",
-        "c": "Deutschland"
-      },
-      "answer": "c",
-      "points": 1,
-      "explanation": {
-        "de": "Im Gespräch hört man: 'Deutschland'.",
-        "vi": "Một người trong đoạn hội thoại 2 đến từ đâu?",
-        "key_evidence": "Deutschland",
-        "key_vocabulary": [
-          {
-            "word": "kommen aus",
-            "meaning": "to come from"
-          }
-        ]
-      }
-    },
-    {
-      "id": "Q3",
-      "gespraech": 3,
-      "type": "mc_abc",
-      "question": "Was passiert im Gespräch 3?",
-      "options": {
-        "a": "Jemand kauft ein.",
-        "b": "Jemand stellt sich vor.",
-        "c": "Jemand telefoniert."
+        "a": "Familie und Freunde",
+        "b": "Arbeit und Beruf",
+        "c": "Einkaufen und Geld"
       },
       "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: 'Lassen Sie mich die gesundheitlichen Vorteile des '.",
-        "vi": "Điều gì xảy ra trong đoạn hội thoại 3?",
-        "key_evidence": "Lassen Sie mich die gesundheitlichen Vorteile des ",
-        "key_vocabulary": [
-          {
-            "word": "vorstellen",
-            "meaning": "to introduce"
-          }
-        ]
+        "de": "Man hört: \"Arbeit und Beruf\".",
+        "vi": "",
+        "key_evidence": "Arbeit und Beruf",
+        "key_vocabulary": []
       }
     },
     {
-      "id": "Q4",
-      "gespraech": 4,
+      "id": "Q2",
+      "gespraech": 1,
       "type": "mc_abc",
-      "question": "Wo wohnt eine Person im Gespräch 4?",
+      "question": "Woher kommt die Person (Gespräch 1)?",
       "options": {
-        "a": "wie vor",
-        "b": "Köln",
-        "c": "Dresden"
+        "a": "Deutschland",
+        "b": "Leipzig",
+        "c": "Hannover"
       },
       "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: 'wie vor'.",
-        "vi": "Một người trong đoạn hội thoại 4 sống ở đâu?",
-        "key_evidence": "wie vor",
+        "de": "Man hört: \"Deutschland\".",
+        "vi": "",
+        "key_evidence": "Deutschland",
         "key_vocabulary": [
           {
-            "word": "wohnen",
-            "meaning": "to live"
-          }
-        ]
-      }
-    },
-    {
-      "id": "Q5",
-      "gespraech": 5,
-      "type": "mc_abc",
-      "question": "Wo wohnt eine Person im Gespräch 5?",
-      "options": {
-        "a": "Radinfrastruktur würde",
-        "b": "Berlin",
-        "c": "München"
-      },
-      "answer": "a",
-      "points": 1,
-      "explanation": {
-        "de": "Im Gespräch hört man: 'Radinfrastruktur würde'.",
-        "vi": "Một người trong đoạn hội thoại 5 sống ở đâu?",
-        "key_evidence": "Radinfrastruktur würde",
-        "key_vocabulary": [
-          {
-            "word": "wohnen",
-            "meaning": "to live"
+            "w": "kommen aus",
+            "m": "to come from"
           }
         ]
       }
     }
   ],
   "scoring": {
-    "total_points": 5,
-    "pass_threshold": 3,
+    "total_points": 2,
+    "pass_threshold": 2,
     "grading": [
       {
         "range": [
-          5,
-          5
+          2,
+          2
         ],
         "label": "Ausgezeichnet!",
         "emoji": "⭐⭐⭐"
       },
       {
         "range": [
-          3,
-          4
+          2,
+          2
         ],
         "label": "Sehr gut!",
         "emoji": "⭐⭐"
       },
       {
         "range": [
-          2,
-          2
+          1,
+          1
         ],
         "label": "Gut!",
         "emoji": "⭐"
@@ -165,7 +89,7 @@
       {
         "range": [
           0,
-          1
+          0
         ],
         "label": "Noch üben!",
         "emoji": "📝"

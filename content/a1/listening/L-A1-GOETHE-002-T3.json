@@ -8,276 +8,132 @@
   "audio_file": "/audio/listening/A1/Teil3-Telefonansagen/L-A1-GOETHE-002-T3.mp3",
   "metadata": {
     "generated_at": "2026-03-19T10:04:11.077656",
-    "version": 1,
+    "version": 4,
     "gespraech_count": 5,
-    "source_script": "data/scripts/A1/Teil3-Telefonansagen/L-A1-GOETHE-002-T3.json"
+    "source_script": "data/scripts/A1/Teil3-Telefonansagen/L-A1-GOETHE-002-T3.json",
+    "regenerated_at": "2026-03-20T07:45:14.437Z"
   },
   "questions": [
     {
       "id": "Q1",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Wo wohnt eine Person im Gespräch 1?",
+      "question": "Worum geht es im Gespräch 1?",
       "options": {
-        "a": "ändern möchten",
-        "b": "München",
-        "c": "Dresden"
+        "a": "Familie und Freunde",
+        "b": "Medien und Kommunikation",
+        "c": "Gesundheit und Körper"
       },
-      "answer": "a",
+      "answer": "c",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: 'ändern möchten'.",
-        "vi": "Một người trong đoạn hội thoại 1 sống ở đâu?",
-        "key_evidence": "ändern möchten",
-        "key_vocabulary": [
-          {
-            "word": "wohnen",
-            "meaning": "to live"
-          }
-        ]
+        "de": "Im Gespräch hört man: \"Gesundheit und Körper\".",
+        "vi": "",
+        "key_evidence": "Gesundheit und Körper",
+        "key_vocabulary": []
       }
     },
     {
       "id": "Q2",
-      "gespraech": 1,
+      "gespraech": 2,
       "type": "mc_abc",
-      "question": "Wo wohnt eine Person im Gespräch 1?",
+      "question": "Worum geht es im Gespräch 2?",
       "options": {
-        "a": "ändern möchten",
-        "b": "München",
-        "c": "Dresden"
+        "a": "Essen und Trinken",
+        "b": "Bildung und Schule",
+        "c": "Reisen und Verkehr"
       },
       "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: 'ändern möchten'.",
-        "vi": "Một người trong đoạn hội thoại 1 sống ở đâu?",
-        "key_evidence": "ändern möchten",
-        "key_vocabulary": [
-          {
-            "word": "wohnen",
-            "meaning": "to live"
-          }
-        ]
+        "de": "Im Gespräch hört man: \"Essen und Trinken\".",
+        "vi": "",
+        "key_evidence": "Essen und Trinken",
+        "key_vocabulary": []
       }
     },
     {
       "id": "Q3",
-      "gespraech": 2,
+      "gespraech": 3,
       "type": "mc_abc",
-      "question": "Wo wohnt eine Person im Gespräch 2?",
+      "question": "Worum geht es im Gespräch 3?",
       "options": {
-        "a": "tolles Restaurant",
-        "b": "München",
-        "c": "Zürich"
+        "a": "Familie und Freunde",
+        "b": "Medien und Kommunikation",
+        "c": "Essen und Trinken"
       },
-      "answer": "a",
+      "answer": "c",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: 'tolles Restaurant'.",
-        "vi": "Một người trong đoạn hội thoại 2 sống ở đâu?",
-        "key_evidence": "tolles Restaurant",
-        "key_vocabulary": [
-          {
-            "word": "wohnen",
-            "meaning": "to live"
-          }
-        ]
+        "de": "Im Gespräch hört man: \"Essen und Trinken\".",
+        "vi": "",
+        "key_evidence": "Essen und Trinken",
+        "key_vocabulary": []
       }
     },
     {
       "id": "Q4",
-      "gespraech": 2,
+      "gespraech": 4,
       "type": "mc_abc",
-      "question": "Wo wohnt eine Person im Gespräch 2?",
+      "question": "Worum geht es im Gespräch 4?",
       "options": {
-        "a": "tolles Restaurant",
-        "b": "München",
-        "c": "Zürich"
+        "a": "Essen und Trinken",
+        "b": "Freizeit und Hobbys",
+        "c": "Familie und Freunde"
       },
       "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: 'tolles Restaurant'.",
-        "vi": "Một người trong đoạn hội thoại 2 sống ở đâu?",
-        "key_evidence": "tolles Restaurant",
-        "key_vocabulary": [
-          {
-            "word": "wohnen",
-            "meaning": "to live"
-          }
-        ]
+        "de": "Im Gespräch hört man: \"Essen und Trinken\".",
+        "vi": "",
+        "key_evidence": "Essen und Trinken",
+        "key_vocabulary": []
       }
     },
     {
       "id": "Q5",
-      "gespraech": 3,
-      "type": "mc_abc",
-      "question": "Was passiert im Gespräch 3?",
-      "options": {
-        "a": "Jemand kauft ein.",
-        "b": "Jemand stellt sich vor.",
-        "c": "Jemand telefoniert."
-      },
-      "answer": "b",
-      "points": 1,
-      "explanation": {
-        "de": "Im Gespräch hört man: 'Guten Tag, hier spricht die Reservierung vom Resta'.",
-        "vi": "Điều gì xảy ra trong đoạn hội thoại 3?",
-        "key_evidence": "Guten Tag, hier spricht die Reservierung vom Resta",
-        "key_vocabulary": [
-          {
-            "word": "vorstellen",
-            "meaning": "to introduce"
-          }
-        ]
-      }
-    },
-    {
-      "id": "Q6",
-      "gespraech": 3,
-      "type": "mc_abc",
-      "question": "Was passiert im Gespräch 3?",
-      "options": {
-        "a": "Jemand kauft ein.",
-        "b": "Jemand stellt sich vor.",
-        "c": "Jemand telefoniert."
-      },
-      "answer": "b",
-      "points": 1,
-      "explanation": {
-        "de": "Im Gespräch hört man: 'Guten Tag, hier spricht die Reservierung vom Resta'.",
-        "vi": "Điều gì xảy ra trong đoạn hội thoại 3?",
-        "key_evidence": "Guten Tag, hier spricht die Reservierung vom Resta",
-        "key_vocabulary": [
-          {
-            "word": "vorstellen",
-            "meaning": "to introduce"
-          }
-        ]
-      }
-    },
-    {
-      "id": "Q7",
-      "gespraech": 4,
-      "type": "mc_abc",
-      "question": "Wo wohnt eine Person im Gespräch 4?",
-      "options": {
-        "a": "das neue",
-        "b": "Wien",
-        "c": "Berlin"
-      },
-      "answer": "a",
-      "points": 1,
-      "explanation": {
-        "de": "Im Gespräch hört man: 'das neue'.",
-        "vi": "Một người trong đoạn hội thoại 4 sống ở đâu?",
-        "key_evidence": "das neue",
-        "key_vocabulary": [
-          {
-            "word": "wohnen",
-            "meaning": "to live"
-          }
-        ]
-      }
-    },
-    {
-      "id": "Q8",
-      "gespraech": 4,
-      "type": "mc_abc",
-      "question": "Wo wohnt eine Person im Gespräch 4?",
-      "options": {
-        "a": "das neue",
-        "b": "Wien",
-        "c": "Berlin"
-      },
-      "answer": "a",
-      "points": 1,
-      "explanation": {
-        "de": "Im Gespräch hört man: 'das neue'.",
-        "vi": "Một người trong đoạn hội thoại 4 sống ở đâu?",
-        "key_evidence": "das neue",
-        "key_vocabulary": [
-          {
-            "word": "wohnen",
-            "meaning": "to live"
-          }
-        ]
-      }
-    },
-    {
-      "id": "Q9",
       "gespraech": 5,
       "type": "mc_abc",
-      "question": "Wo wohnt eine Person im Gespräch 5?",
+      "question": "Worum geht es im Gespräch 5?",
       "options": {
-        "a": "Tisch für",
-        "b": "Berlin",
-        "c": "Frankfurt"
+        "a": "Alltag",
+        "b": "Einkaufen und Geld",
+        "c": "Freizeit und Hobbys"
       },
       "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: 'Tisch für'.",
-        "vi": "Một người trong đoạn hội thoại 5 sống ở đâu?",
-        "key_evidence": "Tisch für",
-        "key_vocabulary": [
-          {
-            "word": "wohnen",
-            "meaning": "to live"
-          }
-        ]
-      }
-    },
-    {
-      "id": "Q10",
-      "gespraech": 5,
-      "type": "mc_abc",
-      "question": "Wo wohnt eine Person im Gespräch 5?",
-      "options": {
-        "a": "Tisch für",
-        "b": "Berlin",
-        "c": "Frankfurt"
-      },
-      "answer": "a",
-      "points": 1,
-      "explanation": {
-        "de": "Im Gespräch hört man: 'Tisch für'.",
-        "vi": "Một người trong đoạn hội thoại 5 sống ở đâu?",
-        "key_evidence": "Tisch für",
-        "key_vocabulary": [
-          {
-            "word": "wohnen",
-            "meaning": "to live"
-          }
-        ]
+        "de": "Im Gespräch hört man: \"Alltag\".",
+        "vi": "",
+        "key_evidence": "Alltag",
+        "key_vocabulary": []
       }
     }
   ],
   "scoring": {
-    "total_points": 10,
-    "pass_threshold": 6,
+    "total_points": 5,
+    "pass_threshold": 3,
     "grading": [
       {
         "range": [
-          9,
-          10
+          5,
+          5
         ],
         "label": "Ausgezeichnet!",
         "emoji": "⭐⭐⭐"
       },
       {
         "range": [
-          7,
-          8
+          4,
+          4
         ],
         "label": "Sehr gut!",
         "emoji": "⭐⭐"
       },
       {
         "range": [
-          5,
-          6
+          3,
+          3
         ],
         "label": "Gut!",
         "emoji": "⭐"
@@ -285,7 +141,7 @@
       {
         "range": [
           0,
-          4
+          2
         ],
         "label": "Noch üben!",
         "emoji": "📝"

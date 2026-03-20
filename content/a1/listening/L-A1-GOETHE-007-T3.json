@@ -8,276 +8,132 @@
   "audio_file": "/audio/listening/A1/Teil3-Telefonansagen/L-A1-GOETHE-007-T3.mp3",
   "metadata": {
     "generated_at": "2026-03-19T10:04:11.080941",
-    "version": 1,
+    "version": 4,
     "gespraech_count": 5,
-    "source_script": "data/scripts/A1/Teil3-Telefonansagen/L-A1-GOETHE-007-T3.json"
+    "source_script": "data/scripts/A1/Teil3-Telefonansagen/L-A1-GOETHE-007-T3.json",
+    "regenerated_at": "2026-03-20T07:45:14.451Z"
   },
   "questions": [
     {
       "id": "Q1",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Wo wohnt eine Person im Gespräch 1?",
+      "question": "Worum geht es im Gespräch 1?",
       "options": {
-        "a": "Doppelzimmer mit",
-        "b": "Hamburg",
-        "c": "Berlin"
+        "a": "Einkaufen und Geld",
+        "b": "Gesundheit und Körper",
+        "c": "Reisen und Verkehr"
       },
       "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: 'Doppelzimmer mit'.",
-        "vi": "Một người trong đoạn hội thoại 1 sống ở đâu?",
-        "key_evidence": "Doppelzimmer mit",
-        "key_vocabulary": [
-          {
-            "word": "wohnen",
-            "meaning": "to live"
-          }
-        ]
+        "de": "Im Gespräch hört man: \"Einkaufen und Geld\".",
+        "vi": "",
+        "key_evidence": "Einkaufen und Geld",
+        "key_vocabulary": []
       }
     },
     {
       "id": "Q2",
-      "gespraech": 1,
+      "gespraech": 2,
       "type": "mc_abc",
-      "question": "Wo wohnt eine Person im Gespräch 1?",
+      "question": "Worum geht es im Gespräch 2?",
       "options": {
-        "a": "Doppelzimmer mit",
-        "b": "Hamburg",
-        "c": "Berlin"
+        "a": "Umwelt und Natur",
+        "b": "Einkaufen und Geld",
+        "c": "Freizeit und Hobbys"
       },
-      "answer": "a",
+      "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: 'Doppelzimmer mit'.",
-        "vi": "Một người trong đoạn hội thoại 1 sống ở đâu?",
-        "key_evidence": "Doppelzimmer mit",
-        "key_vocabulary": [
-          {
-            "word": "wohnen",
-            "meaning": "to live"
-          }
-        ]
+        "de": "Im Gespräch hört man: \"Einkaufen und Geld\".",
+        "vi": "",
+        "key_evidence": "Einkaufen und Geld",
+        "key_vocabulary": []
       }
     },
     {
       "id": "Q3",
-      "gespraech": 2,
+      "gespraech": 3,
       "type": "mc_abc",
-      "question": "Wie heißt eine Person im Gespräch 2?",
+      "question": "Worum geht es im Gespräch 3?",
       "options": {
-        "a": "Anna",
-        "b": "gerade",
-        "c": "Thomas"
+        "a": "Bildung und Schule",
+        "b": "Wohnung und Haushalt",
+        "c": "Reisen und Verkehr"
       },
       "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: 'bin gerade'.",
-        "vi": "Một người trong đoạn hội thoại 2 tên là gì?",
-        "key_evidence": "bin gerade",
-        "key_vocabulary": [
-          {
-            "word": "heißen",
-            "meaning": "to be called"
-          }
-        ]
+        "de": "Im Gespräch hört man: \"Wohnung und Haushalt\".",
+        "vi": "",
+        "key_evidence": "Wohnung und Haushalt",
+        "key_vocabulary": []
       }
     },
     {
       "id": "Q4",
-      "gespraech": 2,
+      "gespraech": 4,
       "type": "mc_abc",
-      "question": "Wo wohnt eine Person im Gespräch 2?",
+      "question": "Worum geht es im Gespräch 4?",
       "options": {
-        "a": "gerade im",
-        "b": "Stuttgart",
-        "c": "Berlin"
+        "a": "Einkaufen und Geld",
+        "b": "Arbeit und Beruf",
+        "c": "Medien und Kommunikation"
       },
       "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: 'gerade im'.",
-        "vi": "Một người trong đoạn hội thoại 2 sống ở đâu?",
-        "key_evidence": "gerade im",
-        "key_vocabulary": [
-          {
-            "word": "wohnen",
-            "meaning": "to live"
-          }
-        ]
+        "de": "Im Gespräch hört man: \"Einkaufen und Geld\".",
+        "vi": "",
+        "key_evidence": "Einkaufen und Geld",
+        "key_vocabulary": []
       }
     },
     {
       "id": "Q5",
-      "gespraech": 3,
-      "type": "mc_abc",
-      "question": "Was passiert im Gespräch 3?",
-      "options": {
-        "a": "Jemand kauft ein.",
-        "b": "Jemand stellt sich vor.",
-        "c": "Jemand telefoniert."
-      },
-      "answer": "b",
-      "points": 1,
-      "explanation": {
-        "de": "Im Gespräch hört man: 'Guten Tag, hier ist Herr Schmidt. Ich habe eine Re'.",
-        "vi": "Điều gì xảy ra trong đoạn hội thoại 3?",
-        "key_evidence": "Guten Tag, hier ist Herr Schmidt. Ich habe eine Re",
-        "key_vocabulary": [
-          {
-            "word": "vorstellen",
-            "meaning": "to introduce"
-          }
-        ]
-      }
-    },
-    {
-      "id": "Q6",
-      "gespraech": 3,
-      "type": "mc_abc",
-      "question": "Was passiert im Gespräch 3?",
-      "options": {
-        "a": "Jemand kauft ein.",
-        "b": "Jemand stellt sich vor.",
-        "c": "Jemand telefoniert."
-      },
-      "answer": "b",
-      "points": 1,
-      "explanation": {
-        "de": "Im Gespräch hört man: 'Guten Tag, hier ist Herr Schmidt. Ich habe eine Re'.",
-        "vi": "Điều gì xảy ra trong đoạn hội thoại 3?",
-        "key_evidence": "Guten Tag, hier ist Herr Schmidt. Ich habe eine Re",
-        "key_vocabulary": [
-          {
-            "word": "vorstellen",
-            "meaning": "to introduce"
-          }
-        ]
-      }
-    },
-    {
-      "id": "Q7",
-      "gespraech": 4,
-      "type": "mc_abc",
-      "question": "Wo wohnt eine Person im Gespräch 4?",
-      "options": {
-        "a": "Hotels in",
-        "b": "Hamburg",
-        "c": "Hannover"
-      },
-      "answer": "a",
-      "points": 1,
-      "explanation": {
-        "de": "Im Gespräch hört man: 'Hotels in'.",
-        "vi": "Một người trong đoạn hội thoại 4 sống ở đâu?",
-        "key_evidence": "Hotels in",
-        "key_vocabulary": [
-          {
-            "word": "wohnen",
-            "meaning": "to live"
-          }
-        ]
-      }
-    },
-    {
-      "id": "Q8",
-      "gespraech": 4,
-      "type": "mc_abc",
-      "question": "Wo wohnt eine Person im Gespräch 4?",
-      "options": {
-        "a": "Hotels in",
-        "b": "Hamburg",
-        "c": "Hannover"
-      },
-      "answer": "a",
-      "points": 1,
-      "explanation": {
-        "de": "Im Gespräch hört man: 'Hotels in'.",
-        "vi": "Một người trong đoạn hội thoại 4 sống ở đâu?",
-        "key_evidence": "Hotels in",
-        "key_vocabulary": [
-          {
-            "word": "wohnen",
-            "meaning": "to live"
-          }
-        ]
-      }
-    },
-    {
-      "id": "Q9",
       "gespraech": 5,
       "type": "mc_abc",
-      "question": "Wie heißt eine Person im Gespräch 5?",
+      "question": "Worum geht es im Gespräch 5?",
       "options": {
-        "a": "Anna",
-        "b": "am",
-        "c": "Thomas"
+        "a": "Freizeit und Hobbys",
+        "b": "Wohnung und Haushalt",
+        "c": "Bildung und Schule"
       },
       "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: 'bin am'.",
-        "vi": "Một người trong đoạn hội thoại 5 tên là gì?",
-        "key_evidence": "bin am",
-        "key_vocabulary": [
-          {
-            "word": "heißen",
-            "meaning": "to be called"
-          }
-        ]
-      }
-    },
-    {
-      "id": "Q10",
-      "gespraech": 5,
-      "type": "mc_abc",
-      "question": "Wo wohnt eine Person im Gespräch 5?",
-      "options": {
-        "a": "im Hotel",
-        "b": "Hannover",
-        "c": "Berlin"
-      },
-      "answer": "a",
-      "points": 1,
-      "explanation": {
-        "de": "Im Gespräch hört man: 'im Hotel'.",
-        "vi": "Một người trong đoạn hội thoại 5 sống ở đâu?",
-        "key_evidence": "im Hotel",
-        "key_vocabulary": [
-          {
-            "word": "wohnen",
-            "meaning": "to live"
-          }
-        ]
+        "de": "Im Gespräch hört man: \"Wohnung und Haushalt\".",
+        "vi": "",
+        "key_evidence": "Wohnung und Haushalt",
+        "key_vocabulary": []
       }
     }
   ],
   "scoring": {
-    "total_points": 10,
-    "pass_threshold": 6,
+    "total_points": 5,
+    "pass_threshold": 3,
     "grading": [
       {
         "range": [
-          9,
-          10
+          5,
+          5
         ],
         "label": "Ausgezeichnet!",
         "emoji": "⭐⭐⭐"
       },
       {
         "range": [
-          7,
-          8
+          4,
+          4
         ],
         "label": "Sehr gut!",
         "emoji": "⭐⭐"
       },
       {
         "range": [
-          5,
-          6
+          3,
+          3
         ],
         "label": "Gut!",
         "emoji": "⭐"
@@ -285,7 +141,7 @@
       {
         "range": [
           0,
-          4
+          2
         ],
         "label": "Noch üben!",
         "emoji": "📝"

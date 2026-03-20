@@ -8,172 +8,120 @@
   "audio_file": "/audio/listening/B2/Teil2-Radiointerview-mit-Experte/L-B2-GOETHE-002-T2.mp3",
   "metadata": {
     "generated_at": "2026-03-19T10:04:11.216396",
-    "version": 1,
+    "version": 4,
     "gespraech_count": 6,
-    "source_script": "data/scripts/B2/Teil2-Radiointerview-mit-Experte/L-B2-GOETHE-002-T2.json"
+    "source_script": "data/scripts/B2/Teil2-Radiointerview-mit-Experte/L-B2-GOETHE-002-T2.json",
+    "regenerated_at": "2026-03-20T07:45:14.525Z"
   },
   "questions": [
     {
       "id": "Q1",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Woher kommt eine Person im Gespräch 1?",
+      "question": "Wie heißt eine Person im Gespräch 1?",
       "options": {
-        "a": "China",
-        "b": "Indien",
-        "c": "Deutschland"
+        "a": "Koch",
+        "b": "Anna",
+        "c": "Klaus"
       },
-      "answer": "c",
+      "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: 'Deutschland'.",
-        "vi": "Một người trong đoạn hội thoại 1 đến từ đâu?",
-        "key_evidence": "Deutschland",
+        "de": "Man hört: \"Koch\".",
+        "vi": "",
+        "key_evidence": "Koch",
         "key_vocabulary": [
           {
-            "word": "kommen aus",
-            "meaning": "to come from"
+            "w": "heißen",
+            "m": "to be called"
           }
         ]
       }
     },
     {
       "id": "Q2",
-      "gespraech": 2,
+      "gespraech": 1,
       "type": "mc_abc",
-      "question": "Wo wohnt eine Person im Gespräch 2?",
+      "question": "Woher kommt die Person (Gespräch 1)?",
       "options": {
-        "a": "großer Trend",
-        "b": "Frankfurt",
-        "c": "Köln"
+        "a": "Nürnberg",
+        "b": "Köln",
+        "c": "Sabine"
       },
-      "answer": "a",
+      "answer": "c",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: 'großer Trend'.",
-        "vi": "Một người trong đoạn hội thoại 2 sống ở đâu?",
-        "key_evidence": "großer Trend",
+        "de": "Man hört: \"Sabine\".",
+        "vi": "",
+        "key_evidence": "Sabine",
         "key_vocabulary": [
           {
-            "word": "wohnen",
-            "meaning": "to live"
+            "w": "kommen aus",
+            "m": "to come from"
           }
         ]
       }
     },
     {
       "id": "Q3",
-      "gespraech": 3,
+      "gespraech": 1,
       "type": "mc_abc",
-      "question": "Wo wohnt eine Person im Gespräch 3?",
+      "question": "Was macht die Person beruflich (Gespräch 1)?",
       "options": {
-        "a": "der Praxis",
-        "b": "Dresden",
-        "c": "München"
+        "a": "Fahrzeuge",
+        "b": "Sekretärin",
+        "c": "Ärztin"
       },
       "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: 'wohne in der Praxis'.",
-        "vi": "Một người trong đoạn hội thoại 3 sống ở đâu?",
-        "key_evidence": "wohne in der Praxis",
+        "de": "Man hört: \"Fahrzeuge\".",
+        "vi": "",
+        "key_evidence": "Fahrzeuge",
         "key_vocabulary": [
           {
-            "word": "wohnen",
-            "meaning": "to live"
+            "w": "Fahrzeuge",
+            "m": "Fahrzeuge"
           }
         ]
       }
     },
     {
       "id": "Q4",
-      "gespraech": 4,
+      "gespraech": 1,
       "type": "mc_abc",
-      "question": "Woher kommt eine Person im Gespräch 4?",
+      "question": "Worum geht es im Gespräch 1?",
       "options": {
-        "a": "China",
-        "b": "Indien",
-        "c": "Deutschland"
-      },
-      "answer": "c",
-      "points": 1,
-      "explanation": {
-        "de": "Im Gespräch hört man: 'Deutschland'.",
-        "vi": "Một người trong đoạn hội thoại 4 đến từ đâu?",
-        "key_evidence": "Deutschland",
-        "key_vocabulary": [
-          {
-            "word": "kommen aus",
-            "meaning": "to come from"
-          }
-        ]
-      }
-    },
-    {
-      "id": "Q5",
-      "gespraech": 5,
-      "type": "mc_abc",
-      "question": "Wo wohnt eine Person im Gespräch 5?",
-      "options": {
-        "a": "konkretes Beispiel",
-        "b": "Düsseldorf",
-        "c": "Stuttgart"
+        "a": "Wohnung und Haushalt",
+        "b": "Technik und Digitalisierung",
+        "c": "Arbeit und Beruf"
       },
       "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: 'wohne in konkretes Beispiel'.",
-        "vi": "Một người trong đoạn hội thoại 5 sống ở đâu?",
-        "key_evidence": "wohne in konkretes Beispiel",
-        "key_vocabulary": [
-          {
-            "word": "wohnen",
-            "meaning": "to live"
-          }
-        ]
-      }
-    },
-    {
-      "id": "Q6",
-      "gespraech": 6,
-      "type": "mc_abc",
-      "question": "Was macht eine Person beruflich (Gespräch 6)?",
-      "options": {
-        "a": "Arzt",
-        "b": "Ärztin",
-        "c": "Koch"
-      },
-      "answer": "c",
-      "points": 1,
-      "explanation": {
-        "de": "Im Gespräch hört man: 'Koch'.",
-        "vi": "Một người làm nghề gì (đoạn 6)?",
-        "key_evidence": "Koch",
-        "key_vocabulary": [
-          {
-            "word": "Koch",
-            "meaning": "cook"
-          }
-        ]
+        "de": "Man hört: \"Wohnung und Haushalt\".",
+        "vi": "",
+        "key_evidence": "Wohnung und Haushalt",
+        "key_vocabulary": []
       }
     }
   ],
   "scoring": {
-    "total_points": 6,
-    "pass_threshold": 4,
+    "total_points": 4,
+    "pass_threshold": 3,
     "grading": [
       {
         "range": [
-          6,
-          6
+          4,
+          4
         ],
         "label": "Ausgezeichnet!",
         "emoji": "⭐⭐⭐"
       },
       {
         "range": [
-          4,
-          5
+          3,
+          3
         ],
         "label": "Sehr gut!",
         "emoji": "⭐⭐"
@@ -181,7 +129,7 @@
       {
         "range": [
           2,
-          3
+          2
         ],
         "label": "Gut!",
         "emoji": "⭐"

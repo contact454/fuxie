@@ -8,112 +8,93 @@
   "audio_file": "/audio/listening/B2/Teil1-Alltagsaeusserungen/L-B2-GOETHE-003-T1.mp3",
   "metadata": {
     "generated_at": "2026-03-19T10:04:11.207815",
-    "version": 1,
+    "version": 2,
     "gespraech_count": 5,
-    "source_script": "data/scripts/B2/Teil1-Alltagsaeusserungen/L-B2-GOETHE-003-T1.json"
+    "source_script": "data/scripts/B2/Teil1-Alltagsaeusserungen/L-B2-GOETHE-003-T1.json",
+    "regenerated_at": "2026-03-20T07:45:14.526Z"
   },
   "questions": [
     {
       "id": "Q1",
       "item": 1,
       "type": "richtig_falsch",
-      "statement": "Die Person heißt davon.",
-      "answer": "richtig",
+      "statement": "Die Person kommt aus Düsseldorf.",
+      "answer": "falsch",
       "points": 1,
       "explanation": {
-        "de": "Richtig. Man hört: 'davon'.",
-        "vi": "Đúng. Ta nghe thấy tên 'davon'.",
-        "key_evidence": "davon",
-        "key_vocabulary": [
-          {
-            "word": "heißen",
-            "meaning": "to be called"
-          }
-        ]
+        "de": "Falsch. Die Person kommt aus Chef.",
+        "vi": "Sai.",
+        "key_evidence": "Falsch. Die Person kommt aus Chef.",
+        "key_vocabulary": []
       }
     },
     {
       "id": "Q2",
-      "gespraech": 2,
-      "type": "mc_abc",
-      "question": "Wo wohnt eine Person im Gespräch 2?",
-      "options": {
-        "a": "Chef hat",
-        "b": "Berlin",
-        "c": "Köln"
-      },
-      "answer": "a",
+      "item": 2,
+      "type": "richtig_falsch",
+      "statement": "Chef wird erwähnt.",
+      "answer": "richtig",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: 'Chef hat'.",
-        "vi": "Một người trong đoạn hội thoại 2 sống ở đâu?",
-        "key_evidence": "Chef hat",
-        "key_vocabulary": [
-          {
-            "word": "wohnen",
-            "meaning": "to live"
-          }
-        ]
+        "de": "Richtig. Chef wird genannt.",
+        "vi": "Đúng.",
+        "key_evidence": "Richtig. Chef wird genannt.",
+        "key_vocabulary": []
       }
     },
     {
       "id": "Q3",
       "item": 3,
       "type": "richtig_falsch",
-      "statement": "Die Personen kennen sich schon lange.",
+      "statement": "Die Person kommt aus Hannover.",
       "answer": "falsch",
       "points": 1,
       "explanation": {
-        "de": "Falsch. Die Personen stellen sich vor, sie kennen sich noch nicht.",
-        "vi": "Sai. Họ đang tự giới thiệu, chưa quen nhau.",
-        "key_evidence": "vorstellen",
-        "key_vocabulary": [
-          {
-            "word": "kennen",
-            "meaning": "to know"
-          }
-        ]
+        "de": "Falsch. Die Person kommt aus Chef.",
+        "vi": "Sai.",
+        "key_evidence": "Falsch. Die Person kommt aus Chef.",
+        "key_vocabulary": []
       }
     },
     {
       "id": "Q4",
-      "gespraech": 4,
+      "gespraech": 1,
       "type": "mc_abc",
-      "question": "Wo wohnt eine Person im Gespräch 4?",
+      "question": "Worum geht es im Gespräch 1?",
       "options": {
-        "a": "Seminar über",
-        "b": "Dresden",
-        "c": "Zürich"
+        "a": "Einkaufen und Geld",
+        "b": "Familie und Freunde",
+        "c": "Arbeit und Beruf"
       },
-      "answer": "a",
+      "answer": "c",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: 'Seminar über'.",
-        "vi": "Một người trong đoạn hội thoại 4 sống ở đâu?",
-        "key_evidence": "Seminar über",
-        "key_vocabulary": [
-          {
-            "word": "wohnen",
-            "meaning": "to live"
-          }
-        ]
+        "de": "Man hört: \"Arbeit und Beruf\".",
+        "vi": "",
+        "key_evidence": "Arbeit und Beruf",
+        "key_vocabulary": []
       }
     },
     {
       "id": "Q5",
-      "item": 5,
-      "type": "richtig_falsch",
-      "statement": "Die Person heißt zu.",
-      "answer": "richtig",
+      "gespraech": 1,
+      "type": "mc_abc",
+      "question": "Woher kommt die Person (Gespräch 1)?",
+      "options": {
+        "a": "Chef",
+        "b": "Hamburg",
+        "c": "Wien"
+      },
+      "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Richtig. Man hört: 'zu'.",
-        "vi": "Đúng. Ta nghe thấy tên 'zu'.",
-        "key_evidence": "zu",
+        "de": "Man hört: \"Chef\".",
+        "vi": "",
+        "key_evidence": "Chef",
         "key_vocabulary": [
           {
-            "word": "heißen",
-            "meaning": "to be called"
+            "w": "kommen aus",
+            "m": "to come from"
           }
         ]
       }
@@ -133,7 +114,7 @@
       },
       {
         "range": [
-          3,
+          4,
           4
         ],
         "label": "Sehr gut!",
@@ -141,8 +122,8 @@
       },
       {
         "range": [
-          2,
-          2
+          3,
+          3
         ],
         "label": "Gut!",
         "emoji": "⭐"
@@ -150,7 +131,7 @@
       {
         "range": [
           0,
-          1
+          2
         ],
         "label": "Noch üben!",
         "emoji": "📝"

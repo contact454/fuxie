@@ -8,9 +8,10 @@
   "audio_file": "/audio/listening/B1/Teil2-Fuehrung-oder-Monolog/L-B1-GOETHE-001-T2.mp3",
   "metadata": {
     "generated_at": "2026-03-19T10:04:11.163267",
-    "version": 1,
+    "version": 4,
     "gespraech_count": 5,
-    "source_script": "data/scripts/B1/Teil2-Fuehrung-oder-Monolog/L-B1-GOETHE-001-T2.json"
+    "source_script": "data/scripts/B1/Teil2-Fuehrung-oder-Monolog/L-B1-GOETHE-001-T2.json",
+    "regenerated_at": "2026-03-20T07:45:14.490Z"
   },
   "questions": [
     {
@@ -19,129 +20,76 @@
       "type": "mc_abc",
       "question": "Wie heißt eine Person im Gespräch 1?",
       "options": {
-        "a": "Anna",
+        "a": "Laura",
         "b": "Dr",
-        "c": "Thomas"
+        "c": "Klaus"
       },
       "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: 'bin Dr'.",
-        "vi": "Một người trong đoạn hội thoại 1 tên là gì?",
-        "key_evidence": "bin Dr",
+        "de": "Man hört: \"Dr\".",
+        "vi": "",
+        "key_evidence": "Dr",
         "key_vocabulary": [
           {
-            "word": "heißen",
-            "meaning": "to be called"
+            "w": "heißen",
+            "m": "to be called"
           }
         ]
       }
     },
     {
       "id": "Q2",
-      "gespraech": 2,
+      "gespraech": 1,
       "type": "mc_abc",
-      "question": "Wo wohnt eine Person im Gespräch 2?",
+      "question": "Woher kommt die Person (Gespräch 1)?",
       "options": {
-        "a": "bedeutendes Werk",
-        "b": "Hannover",
-        "c": "Düsseldorf"
+        "a": "Name",
+        "b": "Leipzig",
+        "c": "Frankfurt"
       },
       "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: 'bedeutendes Werk'.",
-        "vi": "Một người trong đoạn hội thoại 2 sống ở đâu?",
-        "key_evidence": "bedeutendes Werk",
+        "de": "Man hört: \"Name\".",
+        "vi": "",
+        "key_evidence": "Name",
         "key_vocabulary": [
           {
-            "word": "wohnen",
-            "meaning": "to live"
+            "w": "kommen aus",
+            "m": "to come from"
           }
         ]
       }
     },
     {
       "id": "Q3",
-      "gespraech": 3,
+      "gespraech": 1,
       "type": "mc_abc",
-      "question": "Wo wohnt eine Person im Gespräch 3?",
+      "question": "Worum geht es im Gespräch 1?",
       "options": {
-        "a": "berühmtes Selbstporträt",
-        "b": "Hannover",
-        "c": "Stuttgart"
+        "a": "Einkaufen und Geld",
+        "b": "Arbeit und Beruf",
+        "c": "Wohnung und Haushalt"
       },
       "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: 'berühmtes Selbstporträt'.",
-        "vi": "Một người trong đoạn hội thoại 3 sống ở đâu?",
-        "key_evidence": "berühmtes Selbstporträt",
-        "key_vocabulary": [
-          {
-            "word": "wohnen",
-            "meaning": "to live"
-          }
-        ]
-      }
-    },
-    {
-      "id": "Q4",
-      "gespraech": 4,
-      "type": "mc_abc",
-      "question": "Was macht eine Person beruflich (Gespräch 4)?",
-      "options": {
-        "a": "Studentin",
-        "b": "Krankenschwester",
-        "c": "Student"
-      },
-      "answer": "c",
-      "points": 1,
-      "explanation": {
-        "de": "Im Gespräch hört man: 'Student'.",
-        "vi": "Một người làm nghề gì (đoạn 4)?",
-        "key_evidence": "Student",
-        "key_vocabulary": [
-          {
-            "word": "Student",
-            "meaning": "student (m)"
-          }
-        ]
-      }
-    },
-    {
-      "id": "Q5",
-      "gespraech": 5,
-      "type": "mc_abc",
-      "question": "Wo wohnt eine Person im Gespräch 5?",
-      "options": {
-        "a": "unserem Museum",
-        "b": "München",
-        "c": "Dresden"
-      },
-      "answer": "a",
-      "points": 1,
-      "explanation": {
-        "de": "Im Gespräch hört man: 'unserem Museum'.",
-        "vi": "Một người trong đoạn hội thoại 5 sống ở đâu?",
-        "key_evidence": "unserem Museum",
-        "key_vocabulary": [
-          {
-            "word": "wohnen",
-            "meaning": "to live"
-          }
-        ]
+        "de": "Man hört: \"Einkaufen und Geld\".",
+        "vi": "",
+        "key_evidence": "Einkaufen und Geld",
+        "key_vocabulary": []
       }
     }
   ],
   "scoring": {
-    "total_points": 5,
-    "pass_threshold": 3,
+    "total_points": 3,
+    "pass_threshold": 2,
     "grading": [
       {
         "range": [
-          5,
-          5
+          3,
+          3
         ],
         "label": "Ausgezeichnet!",
         "emoji": "⭐⭐⭐"
@@ -149,7 +97,7 @@
       {
         "range": [
           3,
-          4
+          3
         ],
         "label": "Sehr gut!",
         "emoji": "⭐⭐"

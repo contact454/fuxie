@@ -8,55 +8,51 @@
   "audio_file": "/audio/listening/A2/Teil3-Kurze-Einzelgespraeche/L-A2-GOETHE-004-T3.mp3",
   "metadata": {
     "generated_at": "2026-03-19T10:04:11.121400",
-    "version": 1,
+    "version": 4,
     "gespraech_count": 5,
-    "source_script": "data/scripts/A2/Teil3-Kurze-Einzelgespraeche/L-A2-GOETHE-004-T3.json"
+    "source_script": "data/scripts/A2/Teil3-Kurze-Einzelgespraeche/L-A2-GOETHE-004-T3.json",
+    "regenerated_at": "2026-03-20T07:45:14.471Z"
   },
   "questions": [
     {
       "id": "Q1",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Woher kommt eine Person im Gespräch 1?",
+      "question": "Worum geht es im Gespräch 1?",
       "options": {
-        "a": "Türkei",
-        "b": "Marokko",
-        "c": "Deutschland"
+        "a": "Einkaufen und Geld",
+        "b": "Arbeit und Beruf",
+        "c": "Freizeit und Hobbys"
       },
       "answer": "c",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: 'Deutschland'.",
-        "vi": "Một người trong đoạn hội thoại 1 đến từ đâu?",
-        "key_evidence": "Deutschland",
-        "key_vocabulary": [
-          {
-            "word": "kommen aus",
-            "meaning": "to come from"
-          }
-        ]
+        "de": "Im Gespräch hört man: \"Freizeit und Hobbys\".",
+        "vi": "",
+        "key_evidence": "Freizeit und Hobbys",
+        "key_vocabulary": []
       }
     },
     {
       "id": "Q2",
       "gespraech": 2,
       "type": "mc_abc",
-      "question": "Woher kommt eine Person im Gespräch 2?",
+      "question": "Woher kommt die Person (Gespräch 2)?",
       "options": {
-        "a": "Schweiz",
-        "b": "Brasilien",
-        "c": "Italien"
+        "a": "Bremen",
+        "b": "Leipzig",
+        "c": "Mallorca"
       },
       "answer": "c",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: 'Italien'.",
-        "vi": "Một người trong đoạn hội thoại 2 đến từ đâu?",
-        "key_evidence": "Italien",
+        "de": "Im Gespräch hört man: \"Mallorca\".",
+        "vi": "",
+        "key_evidence": "Mallorca",
         "key_vocabulary": [
           {
-            "word": "kommen aus",
-            "meaning": "to come from"
+            "w": "kommen aus",
+            "m": "to come from"
           }
         ]
       }
@@ -65,72 +61,57 @@
       "id": "Q3",
       "gespraech": 3,
       "type": "mc_abc",
-      "question": "Woher kommt eine Person im Gespräch 3?",
+      "question": "Worum geht es im Gespräch 3?",
       "options": {
-        "a": "Korea",
-        "b": "England",
-        "c": "Griechenland"
+        "a": "Reisen und Verkehr",
+        "b": "Einkaufen und Geld",
+        "c": "Familie und Freunde"
       },
-      "answer": "c",
+      "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: 'Griechenland'.",
-        "vi": "Một người trong đoạn hội thoại 3 đến từ đâu?",
-        "key_evidence": "Griechenland",
-        "key_vocabulary": [
-          {
-            "word": "kommen aus",
-            "meaning": "to come from"
-          }
-        ]
+        "de": "Im Gespräch hört man: \"Reisen und Verkehr\".",
+        "vi": "",
+        "key_evidence": "Reisen und Verkehr",
+        "key_vocabulary": []
       }
     },
     {
       "id": "Q4",
       "gespraech": 4,
       "type": "mc_abc",
-      "question": "Was passiert im Gespräch 4?",
+      "question": "Worum geht es im Gespräch 4?",
       "options": {
-        "a": "Jemand kauft ein.",
-        "b": "Jemand stellt sich vor.",
-        "c": "Jemand telefoniert."
+        "a": "Reisen und Verkehr",
+        "b": "Arbeit und Beruf",
+        "c": "Familie und Freunde"
       },
-      "answer": "b",
+      "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: 'Ich muss noch meinen Koffer packen. Was soll ich m'.",
-        "vi": "Điều gì xảy ra trong đoạn hội thoại 4?",
-        "key_evidence": "Ich muss noch meinen Koffer packen. Was soll ich m",
-        "key_vocabulary": [
-          {
-            "word": "vorstellen",
-            "meaning": "to introduce"
-          }
-        ]
+        "de": "Im Gespräch hört man: \"Reisen und Verkehr\".",
+        "vi": "",
+        "key_evidence": "Reisen und Verkehr",
+        "key_vocabulary": []
       }
     },
     {
       "id": "Q5",
       "gespraech": 5,
       "type": "mc_abc",
-      "question": "Wo wohnt eine Person im Gespräch 5?",
+      "question": "Worum geht es im Gespräch 5?",
       "options": {
-        "a": "Kroatien",
-        "b": "Köln",
-        "c": "Frankfurt"
+        "a": "Essen und Trinken",
+        "b": "Reisen und Verkehr",
+        "c": "Bildung und Schule"
       },
-      "answer": "a",
+      "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: 'Kroatien'.",
-        "vi": "Một người trong đoạn hội thoại 5 sống ở đâu?",
-        "key_evidence": "Kroatien",
-        "key_vocabulary": [
-          {
-            "word": "wohnen",
-            "meaning": "to live"
-          }
-        ]
+        "de": "Im Gespräch hört man: \"Reisen und Verkehr\".",
+        "vi": "",
+        "key_evidence": "Reisen und Verkehr",
+        "key_vocabulary": []
       }
     }
   ],
@@ -148,7 +129,7 @@
       },
       {
         "range": [
-          3,
+          4,
           4
         ],
         "label": "Sehr gut!",
@@ -156,8 +137,8 @@
       },
       {
         "range": [
-          2,
-          2
+          3,
+          3
         ],
         "label": "Gut!",
         "emoji": "⭐"
@@ -165,7 +146,7 @@
       {
         "range": [
           0,
-          1
+          2
         ],
         "label": "Noch üben!",
         "emoji": "📝"

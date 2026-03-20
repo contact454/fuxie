@@ -8,112 +8,93 @@
   "audio_file": "/audio/listening/B1/Teil1-Kurze-Texte/L-B1-GOETHE-004-T1.mp3",
   "metadata": {
     "generated_at": "2026-03-19T10:04:11.156269",
-    "version": 1,
+    "version": 2,
     "gespraech_count": 5,
-    "source_script": "data/scripts/B1/Teil1-Kurze-Texte/L-B1-GOETHE-004-T1.json"
+    "source_script": "data/scripts/B1/Teil1-Kurze-Texte/L-B1-GOETHE-004-T1.json",
+    "regenerated_at": "2026-03-20T07:45:14.499Z"
   },
   "questions": [
     {
       "id": "Q1",
       "item": 1,
       "type": "richtig_falsch",
-      "statement": "Die Person kommt aus Deutschland.",
-      "answer": "richtig",
+      "statement": "Die Person kommt aus Leipzig.",
+      "answer": "falsch",
       "points": 1,
       "explanation": {
-        "de": "Richtig. Man hört: 'aus Deutschland'.",
-        "vi": "Đúng. Ta nghe: 'aus Deutschland'.",
-        "key_evidence": "aus Deutschland",
-        "key_vocabulary": [
-          {
-            "word": "kommen aus",
-            "meaning": "to come from"
-          }
-        ]
+        "de": "Falsch. Die Person kommt aus Thema.",
+        "vi": "Sai.",
+        "key_evidence": "Falsch. Die Person kommt aus Thema.",
+        "key_vocabulary": []
       }
     },
     {
       "id": "Q2",
-      "gespraech": 2,
-      "type": "mc_abc",
-      "question": "Wo wohnt eine Person im Gespräch 2?",
-      "options": {
-        "a": "der Kita",
-        "b": "Hannover",
-        "c": "Köln"
-      },
-      "answer": "a",
+      "item": 2,
+      "type": "richtig_falsch",
+      "statement": "Einkommen wird erwähnt.",
+      "answer": "richtig",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: 'der Kita'.",
-        "vi": "Một người trong đoạn hội thoại 2 sống ở đâu?",
-        "key_evidence": "der Kita",
-        "key_vocabulary": [
-          {
-            "word": "wohnen",
-            "meaning": "to live"
-          }
-        ]
+        "de": "Richtig. Einkommen wird genannt.",
+        "vi": "Đúng.",
+        "key_evidence": "Richtig. Einkommen wird genannt.",
+        "key_vocabulary": []
       }
     },
     {
       "id": "Q3",
       "item": 3,
       "type": "richtig_falsch",
-      "statement": "Die Personen kennen sich schon lange.",
+      "statement": "Es geht um eine Reise.",
       "answer": "falsch",
       "points": 1,
       "explanation": {
-        "de": "Falsch. Die Personen stellen sich vor, sie kennen sich noch nicht.",
-        "vi": "Sai. Họ đang tự giới thiệu, chưa quen nhau.",
-        "key_evidence": "vorstellen",
-        "key_vocabulary": [
-          {
-            "word": "kennen",
-            "meaning": "to know"
-          }
-        ]
+        "de": "Falsch. Das Thema ist ein anderes.",
+        "vi": "Sai.",
+        "key_evidence": "Falsch. Das Thema ist ein anderes.",
+        "key_vocabulary": []
       }
     },
     {
       "id": "Q4",
-      "gespraech": 4,
+      "gespraech": 1,
       "type": "mc_abc",
-      "question": "Woher kommt eine Person im Gespräch 4?",
+      "question": "Worum geht es im Gespräch 1?",
       "options": {
-        "a": "Brasilien",
-        "b": "Spanien",
-        "c": "Deutschland"
+        "a": "Einkaufen und Geld",
+        "b": "Bildung und Schule",
+        "c": "Freizeit und Hobbys"
       },
-      "answer": "c",
+      "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: 'Deutschland'.",
-        "vi": "Một người trong đoạn hội thoại 4 đến từ đâu?",
-        "key_evidence": "Deutschland",
-        "key_vocabulary": [
-          {
-            "word": "kommen aus",
-            "meaning": "to come from"
-          }
-        ]
+        "de": "Man hört: \"Einkaufen und Geld\".",
+        "vi": "",
+        "key_evidence": "Einkaufen und Geld",
+        "key_vocabulary": []
       }
     },
     {
       "id": "Q5",
-      "item": 5,
-      "type": "richtig_falsch",
-      "statement": "Die Personen kennen sich schon lange.",
-      "answer": "falsch",
+      "gespraech": 1,
+      "type": "mc_abc",
+      "question": "Woher kommt die Person (Gespräch 1)?",
+      "options": {
+        "a": "Thema",
+        "b": "Leipzig",
+        "c": "Hannover"
+      },
+      "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Falsch. Die Personen stellen sich vor, sie kennen sich noch nicht.",
-        "vi": "Sai. Họ đang tự giới thiệu, chưa quen nhau.",
-        "key_evidence": "vorstellen",
+        "de": "Man hört: \"Thema\".",
+        "vi": "",
+        "key_evidence": "Thema",
         "key_vocabulary": [
           {
-            "word": "kennen",
-            "meaning": "to know"
+            "w": "kommen aus",
+            "m": "to come from"
           }
         ]
       }
@@ -133,7 +114,7 @@
       },
       {
         "range": [
-          3,
+          4,
           4
         ],
         "label": "Sehr gut!",
@@ -141,8 +122,8 @@
       },
       {
         "range": [
-          2,
-          2
+          3,
+          3
         ],
         "label": "Gut!",
         "emoji": "⭐"
@@ -150,7 +131,7 @@
       {
         "range": [
           0,
-          1
+          2
         ],
         "label": "Noch üben!",
         "emoji": "📝"

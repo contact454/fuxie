@@ -8,55 +8,51 @@
   "audio_file": "/audio/listening/A2/Teil1-Radiosendungen-und-Ansagen/L-A2-GOETHE-001-T1.mp3",
   "metadata": {
     "generated_at": "2026-03-19T10:04:11.107740",
-    "version": 1,
+    "version": 4,
     "gespraech_count": 5,
-    "source_script": "data/scripts/A2/Teil1-Radiosendungen-und-Ansagen/L-A2-GOETHE-001-T1.json"
+    "source_script": "data/scripts/A2/Teil1-Radiosendungen-und-Ansagen/L-A2-GOETHE-001-T1.json",
+    "regenerated_at": "2026-03-20T07:45:14.459Z"
   },
   "questions": [
     {
       "id": "Q1",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Woher kommt eine Person im Gespräch 1?",
+      "question": "Worum geht es im Gespräch 1?",
       "options": {
-        "a": "Türkei",
-        "b": "Marokko",
-        "c": "Deutschland"
+        "a": "Reisen und Verkehr",
+        "b": "Technik und Digitalisierung",
+        "c": "Alltag"
       },
       "answer": "c",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: 'Deutschland'.",
-        "vi": "Một người trong đoạn hội thoại 1 đến từ đâu?",
-        "key_evidence": "Deutschland",
-        "key_vocabulary": [
-          {
-            "word": "kommen aus",
-            "meaning": "to come from"
-          }
-        ]
+        "de": "Im Gespräch hört man: \"Alltag\".",
+        "vi": "",
+        "key_evidence": "Alltag",
+        "key_vocabulary": []
       }
     },
     {
       "id": "Q2",
       "gespraech": 2,
       "type": "mc_abc",
-      "question": "Wo wohnt eine Person im Gespräch 2?",
+      "question": "Woher kommt die Person (Gespräch 2)?",
       "options": {
-        "a": "Pflanzenfest mit",
-        "b": "Hamburg",
-        "c": "Köln"
+        "a": "Bonn",
+        "b": "Berlin",
+        "c": "Pflanzenfest"
       },
-      "answer": "a",
+      "answer": "c",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: 'Pflanzenfest mit'.",
-        "vi": "Một người trong đoạn hội thoại 2 sống ở đâu?",
-        "key_evidence": "Pflanzenfest mit",
+        "de": "Im Gespräch hört man: \"Pflanzenfest\".",
+        "vi": "",
+        "key_evidence": "Pflanzenfest",
         "key_vocabulary": [
           {
-            "word": "wohnen",
-            "meaning": "to live"
+            "w": "kommen aus",
+            "m": "to come from"
           }
         ]
       }
@@ -65,72 +61,57 @@
       "id": "Q3",
       "gespraech": 3,
       "type": "mc_abc",
-      "question": "Woher kommt eine Person im Gespräch 3?",
+      "question": "Worum geht es im Gespräch 3?",
       "options": {
-        "a": "Türkei",
-        "b": "Marokko",
-        "c": "Deutschland"
+        "a": "Alltag",
+        "b": "Reisen und Verkehr",
+        "c": "Wohnung und Haushalt"
       },
-      "answer": "c",
+      "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: 'Deutschland'.",
-        "vi": "Một người trong đoạn hội thoại 3 đến từ đâu?",
-        "key_evidence": "Deutschland",
-        "key_vocabulary": [
-          {
-            "word": "kommen aus",
-            "meaning": "to come from"
-          }
-        ]
+        "de": "Im Gespräch hört man: \"Alltag\".",
+        "vi": "",
+        "key_evidence": "Alltag",
+        "key_vocabulary": []
       }
     },
     {
       "id": "Q4",
       "gespraech": 4,
       "type": "mc_abc",
-      "question": "Was passiert im Gespräch 4?",
+      "question": "Worum geht es im Gespräch 4?",
       "options": {
-        "a": "Jemand kauft ein.",
-        "b": "Jemand stellt sich vor.",
-        "c": "Jemand telefoniert."
+        "a": "Wohnung und Haushalt",
+        "b": "Reisen und Verkehr",
+        "c": "Einkaufen und Geld"
       },
-      "answer": "b",
+      "answer": "c",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: 'Für alle Badefans eine gute Nachricht. Das Freibad'.",
-        "vi": "Điều gì xảy ra trong đoạn hội thoại 4?",
-        "key_evidence": "Für alle Badefans eine gute Nachricht. Das Freibad",
-        "key_vocabulary": [
-          {
-            "word": "vorstellen",
-            "meaning": "to introduce"
-          }
-        ]
+        "de": "Im Gespräch hört man: \"Einkaufen und Geld\".",
+        "vi": "",
+        "key_evidence": "Einkaufen und Geld",
+        "key_vocabulary": []
       }
     },
     {
       "id": "Q5",
       "gespraech": 5,
       "type": "mc_abc",
-      "question": "Was passiert im Gespräch 5?",
+      "question": "Worum geht es im Gespräch 5?",
       "options": {
-        "a": "Jemand kauft ein.",
-        "b": "Jemand stellt sich vor.",
-        "c": "Jemand telefoniert."
+        "a": "Freizeit und Hobbys",
+        "b": "Einkaufen und Geld",
+        "c": "Arbeit und Beruf"
       },
-      "answer": "b",
+      "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: 'Zum Schluss die Wettervorhersage für die nächste W'.",
-        "vi": "Điều gì xảy ra trong đoạn hội thoại 5?",
-        "key_evidence": "Zum Schluss die Wettervorhersage für die nächste W",
-        "key_vocabulary": [
-          {
-            "word": "vorstellen",
-            "meaning": "to introduce"
-          }
-        ]
+        "de": "Im Gespräch hört man: \"Freizeit und Hobbys\".",
+        "vi": "",
+        "key_evidence": "Freizeit und Hobbys",
+        "key_vocabulary": []
       }
     }
   ],
@@ -148,7 +129,7 @@
       },
       {
         "range": [
-          3,
+          4,
           4
         ],
         "label": "Sehr gut!",
@@ -156,8 +137,8 @@
       },
       {
         "range": [
-          2,
-          2
+          3,
+          3
         ],
         "label": "Gut!",
         "emoji": "⭐"
@@ -165,7 +146,7 @@
       {
         "range": [
           0,
-          1
+          2
         ],
         "label": "Noch üben!",
         "emoji": "📝"

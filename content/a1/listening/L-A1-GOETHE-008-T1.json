@@ -8,55 +8,51 @@
   "audio_file": "/audio/listening/A1/Teil1-Kurze-Alltagsgespraeche/L-A1-GOETHE-008-T1.mp3",
   "metadata": {
     "generated_at": "2026-03-19T10:04:11.069576",
-    "version": 1,
+    "version": 4,
     "gespraech_count": 6,
-    "source_script": "data/scripts/A1/Teil1-Kurze-Alltagsgespraeche/L-A1-GOETHE-008-T1.json"
+    "source_script": "data/scripts/A1/Teil1-Kurze-Alltagsgespraeche/L-A1-GOETHE-008-T1.json",
+    "regenerated_at": "2026-03-20T07:45:14.452Z"
   },
   "questions": [
     {
       "id": "Q1",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Was passiert im Gespräch 1?",
+      "question": "Worum geht es im Gespräch 1?",
       "options": {
-        "a": "Jemand kauft ein.",
-        "b": "Jemand stellt sich vor.",
-        "c": "Jemand telefoniert."
+        "a": "Reisen und Verkehr",
+        "b": "Freizeit und Hobbys",
+        "c": "Bildung und Schule"
       },
       "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: 'Was machst du am Wochenende, Anna? Ich weiß noch n'.",
-        "vi": "Điều gì xảy ra trong đoạn hội thoại 1?",
-        "key_evidence": "Was machst du am Wochenende, Anna? Ich weiß noch n",
-        "key_vocabulary": [
-          {
-            "word": "vorstellen",
-            "meaning": "to introduce"
-          }
-        ]
+        "de": "Im Gespräch hört man: \"Freizeit und Hobbys\".",
+        "vi": "",
+        "key_evidence": "Freizeit und Hobbys",
+        "key_vocabulary": []
       }
     },
     {
       "id": "Q2",
       "gespraech": 2,
       "type": "mc_abc",
-      "question": "Wo wohnt eine Person im Gespräch 2?",
+      "question": "Woher kommt die Person (Gespräch 2)?",
       "options": {
-        "a": "am Sonntag",
-        "b": "Stuttgart",
-        "c": "Düsseldorf"
+        "a": "Leipzig",
+        "b": "Berlin",
+        "c": "Picknick"
       },
-      "answer": "a",
+      "answer": "c",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: 'am Sonntag'.",
-        "vi": "Một người trong đoạn hội thoại 2 sống ở đâu?",
-        "key_evidence": "am Sonntag",
+        "de": "Im Gespräch hört man: \"Picknick\".",
+        "vi": "",
+        "key_evidence": "Picknick",
         "key_vocabulary": [
           {
-            "word": "wohnen",
-            "meaning": "to live"
+            "w": "kommen aus",
+            "m": "to come from"
           }
         ]
       }
@@ -65,96 +61,76 @@
       "id": "Q3",
       "gespraech": 3,
       "type": "mc_abc",
-      "question": "Wo wohnt eine Person im Gespräch 3?",
+      "question": "Worum geht es im Gespräch 3?",
       "options": {
-        "a": "Straßenfest in",
-        "b": "Hamburg",
-        "c": "Zürich"
+        "a": "Familie und Freunde",
+        "b": "Einkaufen und Geld",
+        "c": "Arbeit und Beruf"
       },
-      "answer": "a",
+      "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: 'Straßenfest in'.",
-        "vi": "Một người trong đoạn hội thoại 3 sống ở đâu?",
-        "key_evidence": "Straßenfest in",
-        "key_vocabulary": [
-          {
-            "word": "wohnen",
-            "meaning": "to live"
-          }
-        ]
+        "de": "Im Gespräch hört man: \"Einkaufen und Geld\".",
+        "vi": "",
+        "key_evidence": "Einkaufen und Geld",
+        "key_vocabulary": []
       }
     },
     {
       "id": "Q4",
       "gespraech": 4,
       "type": "mc_abc",
-      "question": "Was passiert im Gespräch 4?",
+      "question": "Worum geht es im Gespräch 4?",
       "options": {
-        "a": "Jemand kauft ein.",
-        "b": "Jemand stellt sich vor.",
-        "c": "Jemand telefoniert."
+        "a": "Reisen und Verkehr",
+        "b": "Essen und Trinken",
+        "c": "Einkaufen und Geld"
       },
-      "answer": "b",
+      "answer": "c",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: 'Ich muss am Samstag einkaufen und die Wohnung putz'.",
-        "vi": "Điều gì xảy ra trong đoạn hội thoại 4?",
-        "key_evidence": "Ich muss am Samstag einkaufen und die Wohnung putz",
-        "key_vocabulary": [
-          {
-            "word": "vorstellen",
-            "meaning": "to introduce"
-          }
-        ]
+        "de": "Im Gespräch hört man: \"Einkaufen und Geld\".",
+        "vi": "",
+        "key_evidence": "Einkaufen und Geld",
+        "key_vocabulary": []
       }
     },
     {
       "id": "Q5",
       "gespraech": 5,
       "type": "mc_abc",
-      "question": "Wo wohnt eine Person im Gespräch 5?",
+      "question": "Worum geht es im Gespräch 5?",
       "options": {
-        "a": "München",
-        "b": "Stuttgart",
-        "c": "Köln"
+        "a": "Familie und Freunde",
+        "b": "Reisen und Verkehr",
+        "c": "Einkaufen und Geld"
       },
-      "answer": "a",
+      "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: 'wohne in München'.",
-        "vi": "Một người trong đoạn hội thoại 5 sống ở đâu?",
-        "key_evidence": "wohne in München",
-        "key_vocabulary": [
-          {
-            "word": "wohnen",
-            "meaning": "to live"
-          }
-        ]
+        "de": "Im Gespräch hört man: \"Reisen und Verkehr\".",
+        "vi": "",
+        "key_evidence": "Reisen und Verkehr",
+        "key_vocabulary": []
       }
     },
     {
       "id": "Q6",
       "gespraech": 6,
       "type": "mc_abc",
-      "question": "Wo wohnt eine Person im Gespräch 6?",
+      "question": "Worum geht es im Gespräch 6?",
       "options": {
-        "a": "ich aber",
-        "b": "Frankfurt",
-        "c": "Dresden"
+        "a": "Gesundheit und Körper",
+        "b": "Einkaufen und Geld",
+        "c": "Familie und Freunde"
       },
       "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: 'ich aber'.",
-        "vi": "Một người trong đoạn hội thoại 6 sống ở đâu?",
-        "key_evidence": "ich aber",
-        "key_vocabulary": [
-          {
-            "word": "wohnen",
-            "meaning": "to live"
-          }
-        ]
+        "de": "Im Gespräch hört man: \"Gesundheit und Körper\".",
+        "vi": "",
+        "key_evidence": "Gesundheit und Körper",
+        "key_vocabulary": []
       }
     }
   ],
@@ -172,7 +148,7 @@
       },
       {
         "range": [
-          4,
+          5,
           5
         ],
         "label": "Sehr gut!",
@@ -180,8 +156,8 @@
       },
       {
         "range": [
-          2,
-          3
+          3,
+          4
         ],
         "label": "Gut!",
         "emoji": "⭐"
@@ -189,7 +165,7 @@
       {
         "range": [
           0,
-          1
+          2
         ],
         "label": "Noch üben!",
         "emoji": "📝"

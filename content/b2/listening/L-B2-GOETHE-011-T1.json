@@ -8,125 +8,92 @@
   "audio_file": "/audio/listening/B2/Teil1-Alltagsaeusserungen/L-B2-GOETHE-011-T1.mp3",
   "metadata": {
     "generated_at": "2026-03-19T10:04:11.213919",
-    "version": 1,
+    "version": 2,
     "gespraech_count": 5,
-    "source_script": "data/scripts/B2/Teil1-Alltagsaeusserungen/L-B2-GOETHE-011-T1.json"
+    "source_script": "data/scripts/B2/Teil1-Alltagsaeusserungen/L-B2-GOETHE-011-T1.json",
+    "regenerated_at": "2026-03-20T07:45:14.547Z"
   },
   "questions": [
     {
       "id": "Q1",
       "item": 1,
       "type": "richtig_falsch",
-      "statement": "Die Personen kennen sich schon lange.",
+      "statement": "Die Person kommt aus Berlin.",
       "answer": "falsch",
       "points": 1,
       "explanation": {
-        "de": "Falsch. Die Personen stellen sich vor, sie kennen sich noch nicht.",
-        "vi": "Sai. Họ đang tự giới thiệu, chưa quen nhau.",
-        "key_evidence": "vorstellen",
-        "key_vocabulary": [
-          {
-            "word": "kennen",
-            "meaning": "to know"
-          }
-        ]
+        "de": "Falsch. Die Person kommt aus Nudeln.",
+        "vi": "Sai.",
+        "key_evidence": "Falsch. Die Person kommt aus Nudeln.",
+        "key_vocabulary": []
       }
     },
     {
       "id": "Q2",
-      "gespraech": 2,
-      "type": "mc_abc",
-      "question": "Was macht eine Person beruflich (Gespräch 2)?",
-      "options": {
-        "a": "Arzt",
-        "b": "Ärztin",
-        "c": "Koch"
-      },
-      "answer": "c",
+      "item": 2,
+      "type": "richtig_falsch",
+      "statement": "Nudeln wird erwähnt.",
+      "answer": "richtig",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: 'Koch'.",
-        "vi": "Một người làm nghề gì (đoạn 2)?",
-        "key_evidence": "Koch",
-        "key_vocabulary": [
-          {
-            "word": "Koch",
-            "meaning": "cook"
-          }
-        ]
+        "de": "Richtig. Nudeln wird genannt.",
+        "vi": "Đúng.",
+        "key_evidence": "Richtig. Nudeln wird genannt.",
+        "key_vocabulary": []
       }
     },
     {
       "id": "Q3",
-      "item": 3,
-      "type": "richtig_falsch",
-      "statement": "Die Person kommt aus China.",
-      "answer": "falsch",
+      "gespraech": 1,
+      "type": "mc_abc",
+      "question": "Worum geht es im Gespräch 1?",
+      "options": {
+        "a": "Wohnung und Haushalt",
+        "b": "Einkaufen und Geld",
+        "c": "Technik und Digitalisierung"
+      },
+      "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Falsch. Die Person kommt aus Deutschland, nicht aus China.",
-        "vi": "Sai. Người đó đến từ Deutschland, không phải China.",
-        "key_evidence": "aus Deutschland",
-        "key_vocabulary": [
-          {
-            "word": "kommen aus",
-            "meaning": "to come from"
-          }
-        ]
+        "de": "Man hört: \"Einkaufen und Geld\".",
+        "vi": "",
+        "key_evidence": "Einkaufen und Geld",
+        "key_vocabulary": []
       }
     },
     {
       "id": "Q4",
-      "gespraech": 4,
+      "gespraech": 1,
       "type": "mc_abc",
-      "question": "Was macht eine Person beruflich (Gespräch 4)?",
+      "question": "Woher kommt die Person (Gespräch 1)?",
       "options": {
-        "a": "Arzt",
-        "b": "Ärztin",
-        "c": "Koch"
+        "a": "Nudeln",
+        "b": "Düsseldorf",
+        "c": "Hannover"
       },
-      "answer": "c",
+      "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: 'Koch'.",
-        "vi": "Một người làm nghề gì (đoạn 4)?",
-        "key_evidence": "Koch",
+        "de": "Man hört: \"Nudeln\".",
+        "vi": "",
+        "key_evidence": "Nudeln",
         "key_vocabulary": [
           {
-            "word": "Koch",
-            "meaning": "cook"
-          }
-        ]
-      }
-    },
-    {
-      "id": "Q5",
-      "item": 5,
-      "type": "richtig_falsch",
-      "statement": "Die Personen kennen sich schon lange.",
-      "answer": "falsch",
-      "points": 1,
-      "explanation": {
-        "de": "Falsch. Die Personen stellen sich vor, sie kennen sich noch nicht.",
-        "vi": "Sai. Họ đang tự giới thiệu, chưa quen nhau.",
-        "key_evidence": "vorstellen",
-        "key_vocabulary": [
-          {
-            "word": "kennen",
-            "meaning": "to know"
+            "w": "kommen aus",
+            "m": "to come from"
           }
         ]
       }
     }
   ],
   "scoring": {
-    "total_points": 5,
+    "total_points": 4,
     "pass_threshold": 3,
     "grading": [
       {
         "range": [
-          5,
-          5
+          4,
+          4
         ],
         "label": "Ausgezeichnet!",
         "emoji": "⭐⭐⭐"
@@ -134,7 +101,7 @@
       {
         "range": [
           3,
-          4
+          3
         ],
         "label": "Sehr gut!",
         "emoji": "⭐⭐"

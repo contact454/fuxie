@@ -8,172 +8,96 @@
   "audio_file": "/audio/listening/C1/Teil4-Vortrag/L-C1-GOETHE-004-T4.mp3",
   "metadata": {
     "generated_at": "2026-03-19T11:27:15.977798",
-    "version": 1,
+    "version": 4,
     "gespraech_count": 6,
-    "source_script": "data/scripts/C1/Teil4-Vortrag/L-C1-GOETHE-004-T4.json"
+    "source_script": "data/scripts/C1/Teil4-Vortrag/L-C1-GOETHE-004-T4.json",
+    "regenerated_at": "2026-03-20T07:45:14.564Z"
   },
   "questions": [
     {
       "id": "Q1",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Wo wohnt eine Person im Gespräch 1?",
+      "question": "Worum geht es im Gespräch 1?",
       "options": {
-        "a": "der Literaturrezeption",
-        "b": "Hamburg",
-        "c": "Stuttgart"
+        "a": "Arbeit und Beruf",
+        "b": "Einkaufen und Geld",
+        "c": "Bildung und Schule"
       },
-      "answer": "a",
+      "answer": "c",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: 'der Literaturrezeption'.",
-        "vi": "Một người trong đoạn hội thoại 1 sống ở đâu?",
-        "key_evidence": "der Literaturrezeption",
-        "key_vocabulary": [
-          {
-            "word": "wohnen",
-            "meaning": "to live"
-          }
-        ]
+        "de": "Man hört: \"Bildung und Schule\".",
+        "vi": "",
+        "key_evidence": "Bildung und Schule",
+        "key_vocabulary": []
       }
     },
     {
       "id": "Q2",
-      "gespraech": 2,
+      "gespraech": 1,
       "type": "mc_abc",
-      "question": "Was passiert im Gespräch 2?",
+      "question": "Woher kommt die Person (Gespräch 1)?",
       "options": {
-        "a": "Jemand kauft ein.",
-        "b": "Jemand stellt sich vor.",
-        "c": "Jemand telefoniert."
+        "a": "Marktlogik",
+        "b": "Berlin",
+        "c": "Bremen"
       },
-      "answer": "b",
+      "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: 'Im zwanzigsten Jahrhundert wurde das Feuilleton zu'.",
-        "vi": "Điều gì xảy ra trong đoạn hội thoại 2?",
-        "key_evidence": "Im zwanzigsten Jahrhundert wurde das Feuilleton zu",
+        "de": "Man hört: \"Marktlogik\".",
+        "vi": "",
+        "key_evidence": "Marktlogik",
         "key_vocabulary": [
           {
-            "word": "vorstellen",
-            "meaning": "to introduce"
+            "w": "kommen aus",
+            "m": "to come from"
           }
         ]
       }
     },
     {
       "id": "Q3",
-      "gespraech": 3,
+      "gespraech": 1,
       "type": "mc_abc",
-      "question": "Wo wohnt eine Person im Gespräch 3?",
+      "question": "Was macht die Person beruflich (Gespräch 1)?",
       "options": {
-        "a": "eine Ware",
-        "b": "Zürich",
-        "c": "Dresden"
+        "a": "Student",
+        "b": "Maßstab",
+        "c": "Journalist"
       },
-      "answer": "a",
+      "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: 'eine Ware'.",
-        "vi": "Một người trong đoạn hội thoại 3 sống ở đâu?",
-        "key_evidence": "eine Ware",
+        "de": "Man hört: \"Maßstab\".",
+        "vi": "",
+        "key_evidence": "Maßstab",
         "key_vocabulary": [
           {
-            "word": "wohnen",
-            "meaning": "to live"
-          }
-        ]
-      }
-    },
-    {
-      "id": "Q4",
-      "gespraech": 4,
-      "type": "mc_abc",
-      "question": "Wo wohnt eine Person im Gespräch 4?",
-      "options": {
-        "a": "zahlreiche Subkulturen",
-        "b": "Düsseldorf",
-        "c": "Hannover"
-      },
-      "answer": "a",
-      "points": 1,
-      "explanation": {
-        "de": "Im Gespräch hört man: 'zahlreiche Subkulturen'.",
-        "vi": "Một người trong đoạn hội thoại 4 sống ở đâu?",
-        "key_evidence": "zahlreiche Subkulturen",
-        "key_vocabulary": [
-          {
-            "word": "wohnen",
-            "meaning": "to live"
-          }
-        ]
-      }
-    },
-    {
-      "id": "Q5",
-      "gespraech": 5,
-      "type": "mc_abc",
-      "question": "Wo wohnt eine Person im Gespräch 5?",
-      "options": {
-        "a": "Gewinn oder",
-        "b": "Zürich",
-        "c": "Düsseldorf"
-      },
-      "answer": "a",
-      "points": 1,
-      "explanation": {
-        "de": "Im Gespräch hört man: 'Gewinn oder'.",
-        "vi": "Một người trong đoạn hội thoại 5 sống ở đâu?",
-        "key_evidence": "Gewinn oder",
-        "key_vocabulary": [
-          {
-            "word": "wohnen",
-            "meaning": "to live"
-          }
-        ]
-      }
-    },
-    {
-      "id": "Q6",
-      "gespraech": 6,
-      "type": "mc_abc",
-      "question": "Wo wohnt eine Person im Gespräch 6?",
-      "options": {
-        "a": "jeder Epoche",
-        "b": "Düsseldorf",
-        "c": "Frankfurt"
-      },
-      "answer": "a",
-      "points": 1,
-      "explanation": {
-        "de": "Im Gespräch hört man: 'jeder Epoche'.",
-        "vi": "Một người trong đoạn hội thoại 6 sống ở đâu?",
-        "key_evidence": "jeder Epoche",
-        "key_vocabulary": [
-          {
-            "word": "wohnen",
-            "meaning": "to live"
+            "w": "Maßstab",
+            "m": "Maßstab"
           }
         ]
       }
     }
   ],
   "scoring": {
-    "total_points": 6,
-    "pass_threshold": 4,
+    "total_points": 3,
+    "pass_threshold": 2,
     "grading": [
       {
         "range": [
-          6,
-          6
+          3,
+          3
         ],
         "label": "Ausgezeichnet!",
         "emoji": "⭐⭐⭐"
       },
       {
         "range": [
-          4,
-          5
+          3,
+          3
         ],
         "label": "Sehr gut!",
         "emoji": "⭐⭐"
@@ -181,7 +105,7 @@
       {
         "range": [
           2,
-          3
+          2
         ],
         "label": "Gut!",
         "emoji": "⭐"

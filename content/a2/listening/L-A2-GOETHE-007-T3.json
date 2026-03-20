@@ -8,129 +8,105 @@
   "audio_file": "/audio/listening/A2/Teil3-Kurze-Einzelgespraeche/L-A2-GOETHE-007-T3.mp3",
   "metadata": {
     "generated_at": "2026-03-19T10:04:11.123300",
-    "version": 1,
+    "version": 4,
     "gespraech_count": 5,
-    "source_script": "data/scripts/A2/Teil3-Kurze-Einzelgespraeche/L-A2-GOETHE-007-T3.json"
+    "source_script": "data/scripts/A2/Teil3-Kurze-Einzelgespraeche/L-A2-GOETHE-007-T3.json",
+    "regenerated_at": "2026-03-20T07:45:14.480Z"
   },
   "questions": [
     {
       "id": "Q1",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Wo wohnt eine Person im Gespräch 1?",
+      "question": "Worum geht es im Gespräch 1?",
       "options": {
-        "a": "der Wohnung",
-        "b": "Düsseldorf",
-        "c": "Stuttgart"
+        "a": "Arbeit und Beruf",
+        "b": "Wohnung und Haushalt",
+        "c": "Freizeit und Hobbys"
       },
-      "answer": "a",
+      "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: 'der Wohnung'.",
-        "vi": "Một người trong đoạn hội thoại 1 sống ở đâu?",
-        "key_evidence": "der Wohnung",
-        "key_vocabulary": [
-          {
-            "word": "wohnen",
-            "meaning": "to live"
-          }
-        ]
+        "de": "Im Gespräch hört man: \"Wohnung und Haushalt\".",
+        "vi": "",
+        "key_evidence": "Wohnung und Haushalt",
+        "key_vocabulary": []
       }
     },
     {
       "id": "Q2",
       "gespraech": 2,
       "type": "mc_abc",
-      "question": "Was passiert im Gespräch 2?",
+      "question": "Worum geht es im Gespräch 2?",
       "options": {
-        "a": "Jemand kauft ein.",
-        "b": "Jemand stellt sich vor.",
-        "c": "Jemand telefoniert."
+        "a": "Technik und Digitalisierung",
+        "b": "Medien und Kommunikation",
+        "c": "Umwelt und Natur"
       },
-      "answer": "b",
+      "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: 'Ich habe einen verpassten Anruf von einer unbekann'.",
-        "vi": "Điều gì xảy ra trong đoạn hội thoại 2?",
-        "key_evidence": "Ich habe einen verpassten Anruf von einer unbekann",
-        "key_vocabulary": [
-          {
-            "word": "vorstellen",
-            "meaning": "to introduce"
-          }
-        ]
+        "de": "Im Gespräch hört man: \"Technik und Digitalisierung\".",
+        "vi": "",
+        "key_evidence": "Technik und Digitalisierung",
+        "key_vocabulary": []
       }
     },
     {
       "id": "Q3",
       "gespraech": 3,
       "type": "mc_abc",
-      "question": "Wo wohnt eine Person im Gespräch 3?",
+      "question": "Worum geht es im Gespräch 3?",
       "options": {
-        "a": "Handy hat",
-        "b": "Leipzig",
-        "c": "Düsseldorf"
+        "a": "Arbeit und Beruf",
+        "b": "Einkaufen und Geld",
+        "c": "Freizeit und Hobbys"
       },
-      "answer": "a",
+      "answer": "c",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: 'Handy hat'.",
-        "vi": "Một người trong đoạn hội thoại 3 sống ở đâu?",
-        "key_evidence": "Handy hat",
-        "key_vocabulary": [
-          {
-            "word": "wohnen",
-            "meaning": "to live"
-          }
-        ]
+        "de": "Im Gespräch hört man: \"Freizeit und Hobbys\".",
+        "vi": "",
+        "key_evidence": "Freizeit und Hobbys",
+        "key_vocabulary": []
       }
     },
     {
       "id": "Q4",
       "gespraech": 4,
       "type": "mc_abc",
-      "question": "Was macht eine Person beruflich (Gespräch 4)?",
+      "question": "Worum geht es im Gespräch 4?",
       "options": {
-        "a": "Kellner",
-        "b": "Architekt",
-        "c": "Arzt"
+        "a": "Bildung und Schule",
+        "b": "Gesundheit und Körper",
+        "c": "Essen und Trinken"
       },
-      "answer": "c",
+      "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: 'Arzt'.",
-        "vi": "Một người làm nghề gì (đoạn 4)?",
-        "key_evidence": "Arzt",
-        "key_vocabulary": [
-          {
-            "word": "Arzt",
-            "meaning": "doctor (m)"
-          }
-        ]
+        "de": "Im Gespräch hört man: \"Gesundheit und Körper\".",
+        "vi": "",
+        "key_evidence": "Gesundheit und Körper",
+        "key_vocabulary": []
       }
     },
     {
       "id": "Q5",
       "gespraech": 5,
       "type": "mc_abc",
-      "question": "Wo wohnt eine Person im Gespräch 5?",
+      "question": "Worum geht es im Gespräch 5?",
       "options": {
-        "a": "die Einstellungen",
-        "b": "Berlin",
-        "c": "Frankfurt"
+        "a": "Technik und Digitalisierung",
+        "b": "Bildung und Schule",
+        "c": "Reisen und Verkehr"
       },
       "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: 'die Einstellungen'.",
-        "vi": "Một người trong đoạn hội thoại 5 sống ở đâu?",
-        "key_evidence": "die Einstellungen",
-        "key_vocabulary": [
-          {
-            "word": "wohnen",
-            "meaning": "to live"
-          }
-        ]
+        "de": "Im Gespräch hört man: \"Technik und Digitalisierung\".",
+        "vi": "",
+        "key_evidence": "Technik und Digitalisierung",
+        "key_vocabulary": []
       }
     }
   ],
@@ -148,7 +124,7 @@
       },
       {
         "range": [
-          3,
+          4,
           4
         ],
         "label": "Sehr gut!",
@@ -156,8 +132,8 @@
       },
       {
         "range": [
-          2,
-          2
+          3,
+          3
         ],
         "label": "Gut!",
         "emoji": "⭐"
@@ -165,7 +141,7 @@
       {
         "range": [
           0,
-          1
+          2
         ],
         "label": "Noch üben!",
         "emoji": "📝"

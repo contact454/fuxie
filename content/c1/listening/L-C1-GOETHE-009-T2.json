@@ -8,140 +8,112 @@
   "audio_file": "/audio/listening/C1/Teil2-Experteninterview/L-C1-GOETHE-009-T2.mp3",
   "metadata": {
     "generated_at": "2026-03-19T11:27:15.960431",
-    "version": 1,
+    "version": 4,
     "gespraech_count": 5,
-    "source_script": "data/scripts/C1/Teil2-Experteninterview/L-C1-GOETHE-009-T2.json"
+    "source_script": "data/scripts/C1/Teil2-Experteninterview/L-C1-GOETHE-009-T2.json",
+    "regenerated_at": "2026-03-20T07:45:14.577Z"
   },
   "questions": [
     {
       "id": "Q1",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Wo wohnt eine Person im Gespräch 1?",
+      "question": "Wie heißt eine Person im Gespräch 1?",
       "options": {
-        "a": "Professorin Dr",
-        "b": "München",
-        "c": "Wien"
+        "a": "Hans",
+        "b": "Petra",
+        "c": "Leonie"
       },
-      "answer": "a",
+      "answer": "c",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: 'Professorin Dr'.",
-        "vi": "Một người trong đoạn hội thoại 1 sống ở đâu?",
-        "key_evidence": "Professorin Dr",
+        "de": "Man hört: \"Leonie\".",
+        "vi": "",
+        "key_evidence": "Leonie",
         "key_vocabulary": [
           {
-            "word": "wohnen",
-            "meaning": "to live"
+            "w": "heißen",
+            "m": "to be called"
           }
         ]
       }
     },
     {
       "id": "Q2",
-      "gespraech": 2,
+      "gespraech": 1,
       "type": "mc_abc",
-      "question": "Wo wohnt eine Person im Gespräch 2?",
+      "question": "Woher kommt die Person (Gespräch 1)?",
       "options": {
-        "a": "der Europäischen",
-        "b": "Wien",
-        "c": "Hannover"
+        "a": "Zürich",
+        "b": "Frankfurt",
+        "c": "Professorin"
       },
-      "answer": "a",
+      "answer": "c",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: 'der Europäischen'.",
-        "vi": "Một người trong đoạn hội thoại 2 sống ở đâu?",
-        "key_evidence": "der Europäischen",
+        "de": "Man hört: \"Professorin\".",
+        "vi": "",
+        "key_evidence": "Professorin",
         "key_vocabulary": [
           {
-            "word": "wohnen",
-            "meaning": "to live"
+            "w": "kommen aus",
+            "m": "to come from"
           }
         ]
       }
     },
     {
       "id": "Q3",
-      "gespraech": 3,
+      "gespraech": 1,
       "type": "mc_abc",
-      "question": "Woher kommt eine Person im Gespräch 3?",
+      "question": "Was macht die Person beruflich (Gespräch 1)?",
       "options": {
-        "a": "Japan",
-        "b": "Polen",
-        "c": "Deutschland"
+        "a": "Journalist",
+        "b": "Arzt",
+        "c": "Problem"
       },
       "answer": "c",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: 'Deutschland'.",
-        "vi": "Một người trong đoạn hội thoại 3 đến từ đâu?",
-        "key_evidence": "Deutschland",
+        "de": "Man hört: \"Problem\".",
+        "vi": "",
+        "key_evidence": "Problem",
         "key_vocabulary": [
           {
-            "word": "kommen aus",
-            "meaning": "to come from"
+            "w": "Problem",
+            "m": "Problem"
           }
         ]
       }
     },
     {
       "id": "Q4",
-      "gespraech": 4,
+      "gespraech": 1,
       "type": "mc_abc",
-      "question": "Wo wohnt eine Person im Gespräch 4?",
+      "question": "Worum geht es im Gespräch 1?",
       "options": {
-        "a": "Grundrecht",
-        "b": "München",
-        "c": "Dresden"
+        "a": "Arbeit und Beruf",
+        "b": "Einkaufen und Geld",
+        "c": "Familie und Freunde"
       },
-      "answer": "a",
+      "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: 'Grundrecht'.",
-        "vi": "Một người trong đoạn hội thoại 4 sống ở đâu?",
-        "key_evidence": "Grundrecht",
-        "key_vocabulary": [
-          {
-            "word": "wohnen",
-            "meaning": "to live"
-          }
-        ]
-      }
-    },
-    {
-      "id": "Q5",
-      "gespraech": 5,
-      "type": "mc_abc",
-      "question": "Wo wohnt eine Person im Gespräch 5?",
-      "options": {
-        "a": "Europa",
-        "b": "Wien",
-        "c": "Stuttgart"
-      },
-      "answer": "a",
-      "points": 1,
-      "explanation": {
-        "de": "Im Gespräch hört man: 'Europa'.",
-        "vi": "Một người trong đoạn hội thoại 5 sống ở đâu?",
-        "key_evidence": "Europa",
-        "key_vocabulary": [
-          {
-            "word": "wohnen",
-            "meaning": "to live"
-          }
-        ]
+        "de": "Man hört: \"Einkaufen und Geld\".",
+        "vi": "",
+        "key_evidence": "Einkaufen und Geld",
+        "key_vocabulary": []
       }
     }
   ],
   "scoring": {
-    "total_points": 5,
+    "total_points": 4,
     "pass_threshold": 3,
     "grading": [
       {
         "range": [
-          5,
-          5
+          4,
+          4
         ],
         "label": "Ausgezeichnet!",
         "emoji": "⭐⭐⭐"
@@ -149,7 +121,7 @@
       {
         "range": [
           3,
-          4
+          3
         ],
         "label": "Sehr gut!",
         "emoji": "⭐⭐"

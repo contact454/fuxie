@@ -8,172 +8,96 @@
   "audio_file": "/audio/listening/C1/Teil4-Vortrag/L-C1-GOETHE-007-T4.mp3",
   "metadata": {
     "generated_at": "2026-03-19T11:27:15.979965",
-    "version": 1,
+    "version": 4,
     "gespraech_count": 6,
-    "source_script": "data/scripts/C1/Teil4-Vortrag/L-C1-GOETHE-007-T4.json"
+    "source_script": "data/scripts/C1/Teil4-Vortrag/L-C1-GOETHE-007-T4.json",
+    "regenerated_at": "2026-03-20T07:45:14.572Z"
   },
   "questions": [
     {
       "id": "Q1",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Woher kommt eine Person im Gespräch 1?",
+      "question": "Worum geht es im Gespräch 1?",
       "options": {
-        "a": "Japan",
-        "b": "Polen",
+        "a": "Familie und Freunde",
+        "b": "Einkaufen und Geld",
+        "c": "Medien und Kommunikation"
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Man hört: \"Einkaufen und Geld\".",
+        "vi": "",
+        "key_evidence": "Einkaufen und Geld",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q2",
+      "gespraech": 1,
+      "type": "mc_abc",
+      "question": "Woher kommt die Person (Gespräch 1)?",
+      "options": {
+        "a": "Leipzig",
+        "b": "Köln",
         "c": "Deutschland"
       },
       "answer": "c",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: 'Deutschland'.",
-        "vi": "Một người trong đoạn hội thoại 1 đến từ đâu?",
+        "de": "Man hört: \"Deutschland\".",
+        "vi": "",
         "key_evidence": "Deutschland",
         "key_vocabulary": [
           {
-            "word": "kommen aus",
-            "meaning": "to come from"
-          }
-        ]
-      }
-    },
-    {
-      "id": "Q2",
-      "gespraech": 2,
-      "type": "mc_abc",
-      "question": "Was passiert im Gespräch 2?",
-      "options": {
-        "a": "Jemand kauft ein.",
-        "b": "Jemand stellt sich vor.",
-        "c": "Jemand telefoniert."
-      },
-      "answer": "b",
-      "points": 1,
-      "explanation": {
-        "de": "Im Gespräch hört man: 'Die Frage ist nicht ob, sondern wie wir diese Viel'.",
-        "vi": "Điều gì xảy ra trong đoạn hội thoại 2?",
-        "key_evidence": "Die Frage ist nicht ob, sondern wie wir diese Viel",
-        "key_vocabulary": [
-          {
-            "word": "vorstellen",
-            "meaning": "to introduce"
+            "w": "kommen aus",
+            "m": "to come from"
           }
         ]
       }
     },
     {
       "id": "Q3",
-      "gespraech": 3,
+      "gespraech": 1,
       "type": "mc_abc",
-      "question": "Woher kommt eine Person im Gespräch 3?",
+      "question": "Was macht die Person beruflich (Gespräch 1)?",
       "options": {
-        "a": "Japan",
-        "b": "Polen",
-        "c": "Deutschland"
+        "a": "Verkäufer",
+        "b": "Kinder",
+        "c": "Student"
       },
-      "answer": "c",
+      "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: 'Deutschland'.",
-        "vi": "Một người trong đoạn hội thoại 3 đến từ đâu?",
-        "key_evidence": "Deutschland",
+        "de": "Man hört: \"Kinder\".",
+        "vi": "",
+        "key_evidence": "Kinder",
         "key_vocabulary": [
           {
-            "word": "kommen aus",
-            "meaning": "to come from"
-          }
-        ]
-      }
-    },
-    {
-      "id": "Q4",
-      "gespraech": 4,
-      "type": "mc_abc",
-      "question": "Wo wohnt eine Person im Gespräch 4?",
-      "options": {
-        "a": "besonders gravierendes",
-        "b": "Zürich",
-        "c": "Hannover"
-      },
-      "answer": "a",
-      "points": 1,
-      "explanation": {
-        "de": "Im Gespräch hört man: 'besonders gravierendes'.",
-        "vi": "Một người trong đoạn hội thoại 4 sống ở đâu?",
-        "key_evidence": "besonders gravierendes",
-        "key_vocabulary": [
-          {
-            "word": "wohnen",
-            "meaning": "to live"
-          }
-        ]
-      }
-    },
-    {
-      "id": "Q5",
-      "gespraech": 5,
-      "type": "mc_abc",
-      "question": "Wo wohnt eine Person im Gespräch 5?",
-      "options": {
-        "a": "weiteres gravierendes",
-        "b": "Frankfurt",
-        "c": "Dresden"
-      },
-      "answer": "a",
-      "points": 1,
-      "explanation": {
-        "de": "Im Gespräch hört man: 'weiteres gravierendes'.",
-        "vi": "Một người trong đoạn hội thoại 5 sống ở đâu?",
-        "key_evidence": "weiteres gravierendes",
-        "key_vocabulary": [
-          {
-            "word": "wohnen",
-            "meaning": "to live"
-          }
-        ]
-      }
-    },
-    {
-      "id": "Q6",
-      "gespraech": 6,
-      "type": "mc_abc",
-      "question": "Wo wohnt eine Person im Gespräch 6?",
-      "options": {
-        "a": "öffentlichen Institutionen",
-        "b": "Stuttgart",
-        "c": "Hamburg"
-      },
-      "answer": "a",
-      "points": 1,
-      "explanation": {
-        "de": "Im Gespräch hört man: 'öffentlichen Institutionen'.",
-        "vi": "Một người trong đoạn hội thoại 6 sống ở đâu?",
-        "key_evidence": "öffentlichen Institutionen",
-        "key_vocabulary": [
-          {
-            "word": "wohnen",
-            "meaning": "to live"
+            "w": "Kinder",
+            "m": "Kinder"
           }
         ]
       }
     }
   ],
   "scoring": {
-    "total_points": 6,
-    "pass_threshold": 4,
+    "total_points": 3,
+    "pass_threshold": 2,
     "grading": [
       {
         "range": [
-          6,
-          6
+          3,
+          3
         ],
         "label": "Ausgezeichnet!",
         "emoji": "⭐⭐⭐"
       },
       {
         "range": [
-          4,
-          5
+          3,
+          3
         ],
         "label": "Sehr gut!",
         "emoji": "⭐⭐"
@@ -181,7 +105,7 @@
       {
         "range": [
           2,
-          3
+          2
         ],
         "label": "Gut!",
         "emoji": "⭐"

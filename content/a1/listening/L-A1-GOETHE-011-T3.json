@@ -8,276 +8,132 @@
   "audio_file": "/audio/listening/A1/Teil3-Telefonansagen/L-A1-GOETHE-011-T3.mp3",
   "metadata": {
     "generated_at": "2026-03-19T10:04:11.083363",
-    "version": 1,
+    "version": 4,
     "gespraech_count": 5,
-    "source_script": "data/scripts/A1/Teil3-Telefonansagen/L-A1-GOETHE-011-T3.json"
+    "source_script": "data/scripts/A1/Teil3-Telefonansagen/L-A1-GOETHE-011-T3.json",
+    "regenerated_at": "2026-03-20T07:45:14.458Z"
   },
   "questions": [
     {
       "id": "Q1",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Was passiert im Gespräch 1?",
+      "question": "Worum geht es im Gespräch 1?",
       "options": {
-        "a": "Jemand kauft ein.",
-        "b": "Jemand stellt sich vor.",
-        "c": "Jemand telefoniert."
+        "a": "Alltag",
+        "b": "Technik und Digitalisierung",
+        "c": "Reisen und Verkehr"
       },
-      "answer": "b",
+      "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: 'Hallo Fatima, hier ist Maria! Ich habe tolle Neuig'.",
-        "vi": "Điều gì xảy ra trong đoạn hội thoại 1?",
-        "key_evidence": "Hallo Fatima, hier ist Maria! Ich habe tolle Neuig",
-        "key_vocabulary": [
-          {
-            "word": "vorstellen",
-            "meaning": "to introduce"
-          }
-        ]
+        "de": "Im Gespräch hört man: \"Alltag\".",
+        "vi": "",
+        "key_evidence": "Alltag",
+        "key_vocabulary": []
       }
     },
     {
       "id": "Q2",
-      "gespraech": 1,
+      "gespraech": 2,
       "type": "mc_abc",
-      "question": "Was passiert im Gespräch 1?",
+      "question": "Worum geht es im Gespräch 2?",
       "options": {
-        "a": "Jemand kauft ein.",
-        "b": "Jemand stellt sich vor.",
-        "c": "Jemand telefoniert."
+        "a": "Einkaufen und Geld",
+        "b": "Umwelt und Natur",
+        "c": "Reisen und Verkehr"
       },
-      "answer": "b",
+      "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: 'Hallo Fatima, hier ist Maria! Ich habe tolle Neuig'.",
-        "vi": "Điều gì xảy ra trong đoạn hội thoại 1?",
-        "key_evidence": "Hallo Fatima, hier ist Maria! Ich habe tolle Neuig",
-        "key_vocabulary": [
-          {
-            "word": "vorstellen",
-            "meaning": "to introduce"
-          }
-        ]
+        "de": "Im Gespräch hört man: \"Einkaufen und Geld\".",
+        "vi": "",
+        "key_evidence": "Einkaufen und Geld",
+        "key_vocabulary": []
       }
     },
     {
       "id": "Q3",
-      "gespraech": 2,
+      "gespraech": 3,
       "type": "mc_abc",
-      "question": "Was passiert im Gespräch 2?",
+      "question": "Worum geht es im Gespräch 3?",
       "options": {
-        "a": "Jemand kauft ein.",
-        "b": "Jemand stellt sich vor.",
-        "c": "Jemand telefoniert."
+        "a": "Familie und Freunde",
+        "b": "Alltag",
+        "c": "Freizeit und Hobbys"
       },
       "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: 'Guten Tag, hier ist das Restaurant Sonnenschein. S'.",
-        "vi": "Điều gì xảy ra trong đoạn hội thoại 2?",
-        "key_evidence": "Guten Tag, hier ist das Restaurant Sonnenschein. S",
-        "key_vocabulary": [
-          {
-            "word": "vorstellen",
-            "meaning": "to introduce"
-          }
-        ]
+        "de": "Im Gespräch hört man: \"Alltag\".",
+        "vi": "",
+        "key_evidence": "Alltag",
+        "key_vocabulary": []
       }
     },
     {
       "id": "Q4",
-      "gespraech": 2,
+      "gespraech": 4,
       "type": "mc_abc",
-      "question": "Was passiert im Gespräch 2?",
+      "question": "Worum geht es im Gespräch 4?",
       "options": {
-        "a": "Jemand kauft ein.",
-        "b": "Jemand stellt sich vor.",
-        "c": "Jemand telefoniert."
+        "a": "Einkaufen und Geld",
+        "b": "Freizeit und Hobbys",
+        "c": "Essen und Trinken"
       },
-      "answer": "b",
+      "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: 'Guten Tag, hier ist das Restaurant Sonnenschein. S'.",
-        "vi": "Điều gì xảy ra trong đoạn hội thoại 2?",
-        "key_evidence": "Guten Tag, hier ist das Restaurant Sonnenschein. S",
-        "key_vocabulary": [
-          {
-            "word": "vorstellen",
-            "meaning": "to introduce"
-          }
-        ]
+        "de": "Im Gespräch hört man: \"Einkaufen und Geld\".",
+        "vi": "",
+        "key_evidence": "Einkaufen und Geld",
+        "key_vocabulary": []
       }
     },
     {
       "id": "Q5",
-      "gespraech": 3,
-      "type": "mc_abc",
-      "question": "Wo wohnt eine Person im Gespräch 3?",
-      "options": {
-        "a": "der Hauptstraße",
-        "b": "Hannover",
-        "c": "Dresden"
-      },
-      "answer": "a",
-      "points": 1,
-      "explanation": {
-        "de": "Im Gespräch hört man: 'der Hauptstraße'.",
-        "vi": "Một người trong đoạn hội thoại 3 sống ở đâu?",
-        "key_evidence": "der Hauptstraße",
-        "key_vocabulary": [
-          {
-            "word": "wohnen",
-            "meaning": "to live"
-          }
-        ]
-      }
-    },
-    {
-      "id": "Q6",
-      "gespraech": 3,
-      "type": "mc_abc",
-      "question": "Wo wohnt eine Person im Gespräch 3?",
-      "options": {
-        "a": "der Hauptstraße",
-        "b": "Hannover",
-        "c": "Dresden"
-      },
-      "answer": "a",
-      "points": 1,
-      "explanation": {
-        "de": "Im Gespräch hört man: 'der Hauptstraße'.",
-        "vi": "Một người trong đoạn hội thoại 3 sống ở đâu?",
-        "key_evidence": "der Hauptstraße",
-        "key_vocabulary": [
-          {
-            "word": "wohnen",
-            "meaning": "to live"
-          }
-        ]
-      }
-    },
-    {
-      "id": "Q7",
-      "gespraech": 4,
-      "type": "mc_abc",
-      "question": "Wo wohnt eine Person im Gespräch 4?",
-      "options": {
-        "a": "schönes Geburtstagsfest",
-        "b": "München",
-        "c": "Hannover"
-      },
-      "answer": "a",
-      "points": 1,
-      "explanation": {
-        "de": "Im Gespräch hört man: 'schönes Geburtstagsfest'.",
-        "vi": "Một người trong đoạn hội thoại 4 sống ở đâu?",
-        "key_evidence": "schönes Geburtstagsfest",
-        "key_vocabulary": [
-          {
-            "word": "wohnen",
-            "meaning": "to live"
-          }
-        ]
-      }
-    },
-    {
-      "id": "Q8",
-      "gespraech": 4,
-      "type": "mc_abc",
-      "question": "Wo wohnt eine Person im Gespräch 4?",
-      "options": {
-        "a": "schönes Geburtstagsfest",
-        "b": "München",
-        "c": "Hannover"
-      },
-      "answer": "a",
-      "points": 1,
-      "explanation": {
-        "de": "Im Gespräch hört man: 'schönes Geburtstagsfest'.",
-        "vi": "Một người trong đoạn hội thoại 4 sống ở đâu?",
-        "key_evidence": "schönes Geburtstagsfest",
-        "key_vocabulary": [
-          {
-            "word": "wohnen",
-            "meaning": "to live"
-          }
-        ]
-      }
-    },
-    {
-      "id": "Q9",
       "gespraech": 5,
       "type": "mc_abc",
-      "question": "Wo wohnt eine Person im Gespräch 5?",
+      "question": "Worum geht es im Gespräch 5?",
       "options": {
-        "a": "bisschen später",
-        "b": "Berlin",
-        "c": "Hamburg"
+        "a": "Familie und Freunde",
+        "b": "Einkaufen und Geld",
+        "c": "Alltag"
       },
-      "answer": "a",
+      "answer": "c",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: 'bisschen später'.",
-        "vi": "Một người trong đoạn hội thoại 5 sống ở đâu?",
-        "key_evidence": "bisschen später",
-        "key_vocabulary": [
-          {
-            "word": "wohnen",
-            "meaning": "to live"
-          }
-        ]
-      }
-    },
-    {
-      "id": "Q10",
-      "gespraech": 5,
-      "type": "mc_abc",
-      "question": "Wo wohnt eine Person im Gespräch 5?",
-      "options": {
-        "a": "bisschen später",
-        "b": "Berlin",
-        "c": "Hamburg"
-      },
-      "answer": "a",
-      "points": 1,
-      "explanation": {
-        "de": "Im Gespräch hört man: 'bisschen später'.",
-        "vi": "Một người trong đoạn hội thoại 5 sống ở đâu?",
-        "key_evidence": "bisschen später",
-        "key_vocabulary": [
-          {
-            "word": "wohnen",
-            "meaning": "to live"
-          }
-        ]
+        "de": "Im Gespräch hört man: \"Alltag\".",
+        "vi": "",
+        "key_evidence": "Alltag",
+        "key_vocabulary": []
       }
     }
   ],
   "scoring": {
-    "total_points": 10,
-    "pass_threshold": 6,
+    "total_points": 5,
+    "pass_threshold": 3,
     "grading": [
       {
         "range": [
-          9,
-          10
+          5,
+          5
         ],
         "label": "Ausgezeichnet!",
         "emoji": "⭐⭐⭐"
       },
       {
         "range": [
-          7,
-          8
+          4,
+          4
         ],
         "label": "Sehr gut!",
         "emoji": "⭐⭐"
       },
       {
         "range": [
-          5,
-          6
+          3,
+          3
         ],
         "label": "Gut!",
         "emoji": "⭐"
@@ -285,7 +141,7 @@
       {
         "range": [
           0,
-          4
+          2
         ],
         "label": "Noch üben!",
         "emoji": "📝"

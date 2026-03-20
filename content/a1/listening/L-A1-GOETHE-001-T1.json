@@ -8,9 +8,10 @@
   "audio_file": "/audio/listening/A1/Teil1-Kurze-Alltagsgespraeche/L-A1-GOETHE-001-T1.mp3",
   "metadata": {
     "generated_at": "2026-03-19T10:04:11.065110",
-    "version": 1,
+    "version": 4,
     "gespraech_count": 6,
-    "source_script": "data/scripts/A1/Teil1-Kurze-Alltagsgespraeche/L-A1-GOETHE-001-T1.json"
+    "source_script": "data/scripts/A1/Teil1-Kurze-Alltagsgespraeche/L-A1-GOETHE-001-T1.json",
+    "regenerated_at": "2026-03-20T07:45:14.431Z"
   },
   "questions": [
     {
@@ -19,20 +20,20 @@
       "type": "mc_abc",
       "question": "Wie heißt eine Person im Gespräch 1?",
       "options": {
-        "a": "Anna",
-        "b": "Maria",
-        "c": "Peter"
+        "a": "Maria",
+        "b": "Michael",
+        "c": "Anna"
       },
-      "answer": "b",
+      "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: 'heiße Maria'.",
-        "vi": "Một người trong đoạn hội thoại 1 tên là gì?",
-        "key_evidence": "heiße Maria",
+        "de": "Im Gespräch hört man: \"Maria\".",
+        "vi": "",
+        "key_evidence": "Maria",
         "key_vocabulary": [
           {
-            "word": "heißen",
-            "meaning": "to be called"
+            "w": "heißen",
+            "m": "to be called"
           }
         ]
       }
@@ -41,22 +42,22 @@
       "id": "Q2",
       "gespraech": 2,
       "type": "mc_abc",
-      "question": "Woher kommt eine Person im Gespräch 2?",
+      "question": "Woher kommt die Person (Gespräch 2)?",
       "options": {
-        "a": "Korea",
-        "b": "Spanien",
-        "c": "Deutschland"
+        "a": "Nürnberg",
+        "b": "Leipzig",
+        "c": "Japan"
       },
       "answer": "c",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: 'Deutschland'.",
-        "vi": "Một người trong đoạn hội thoại 2 đến từ đâu?",
-        "key_evidence": "Deutschland",
+        "de": "Im Gespräch hört man: \"Japan\".",
+        "vi": "",
+        "key_evidence": "Japan",
         "key_vocabulary": [
           {
-            "word": "kommen aus",
-            "meaning": "to come from"
+            "w": "kommen aus",
+            "m": "to come from"
           }
         ]
       }
@@ -65,22 +66,22 @@
       "id": "Q3",
       "gespraech": 3,
       "type": "mc_abc",
-      "question": "Seit wann ist die Person in Deutschland (Gespräch 3)?",
+      "question": "Was macht die Person beruflich (Gespräch 3)?",
       "options": {
-        "a": "seit einer Woche",
-        "b": "seit drei Monaten",
-        "c": "seit einem Jahr"
+        "a": "Anna",
+        "b": "Student",
+        "c": "Lehrerin"
       },
-      "answer": "b",
+      "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: 'seit drei Monaten'.",
-        "vi": "Người đó ở Đức từ bao giờ (đoạn 3)?",
-        "key_evidence": "seit drei Monaten",
+        "de": "Im Gespräch hört man: \"Anna\".",
+        "vi": "",
+        "key_evidence": "Anna",
         "key_vocabulary": [
           {
-            "word": "seit",
-            "meaning": "since/for"
+            "w": "Anna",
+            "m": "Anna"
           }
         ]
       }
@@ -89,72 +90,57 @@
       "id": "Q4",
       "gespraech": 4,
       "type": "mc_abc",
-      "question": "Was macht eine Person beruflich (Gespräch 4)?",
+      "question": "Worum geht es im Gespräch 4?",
       "options": {
-        "a": "Lehrerin",
-        "b": "Student",
-        "c": "Ingenieur"
+        "a": "Arbeit und Beruf",
+        "b": "Medien und Kommunikation",
+        "c": "Wohnung und Haushalt"
       },
-      "answer": "c",
+      "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: 'Ingenieur'.",
-        "vi": "Một người làm nghề gì (đoạn 4)?",
-        "key_evidence": "Ingenieur",
-        "key_vocabulary": [
-          {
-            "word": "Ingenieur",
-            "meaning": "engineer"
-          }
-        ]
+        "de": "Im Gespräch hört man: \"Arbeit und Beruf\".",
+        "vi": "",
+        "key_evidence": "Arbeit und Beruf",
+        "key_vocabulary": []
       }
     },
     {
       "id": "Q5",
       "gespraech": 5,
       "type": "mc_abc",
-      "question": "Wie heißt eine Person im Gespräch 5?",
+      "question": "Worum geht es im Gespräch 5?",
       "options": {
-        "a": "Anna",
-        "b": "Becker",
-        "c": "Thomas"
+        "a": "Gesundheit und Körper",
+        "b": "Arbeit und Beruf",
+        "c": "Reisen und Verkehr"
       },
       "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: 'bin Becker'.",
-        "vi": "Một người trong đoạn hội thoại 5 tên là gì?",
-        "key_evidence": "bin Becker",
-        "key_vocabulary": [
-          {
-            "word": "heißen",
-            "meaning": "to be called"
-          }
-        ]
+        "de": "Im Gespräch hört man: \"Arbeit und Beruf\".",
+        "vi": "",
+        "key_evidence": "Arbeit und Beruf",
+        "key_vocabulary": []
       }
     },
     {
       "id": "Q6",
       "gespraech": 6,
       "type": "mc_abc",
-      "question": "Woher kommt eine Person im Gespräch 6?",
+      "question": "Worum geht es im Gespräch 6?",
       "options": {
-        "a": "Korea",
-        "b": "Spanien",
-        "c": "Deutschland"
+        "a": "Essen und Trinken",
+        "b": "Reisen und Verkehr",
+        "c": "Bildung und Schule"
       },
       "answer": "c",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: 'Deutschland'.",
-        "vi": "Một người trong đoạn hội thoại 6 đến từ đâu?",
-        "key_evidence": "Deutschland",
-        "key_vocabulary": [
-          {
-            "word": "kommen aus",
-            "meaning": "to come from"
-          }
-        ]
+        "de": "Im Gespräch hört man: \"Bildung und Schule\".",
+        "vi": "",
+        "key_evidence": "Bildung und Schule",
+        "key_vocabulary": []
       }
     }
   ],
@@ -172,7 +158,7 @@
       },
       {
         "range": [
-          4,
+          5,
           5
         ],
         "label": "Sehr gut!",
@@ -180,8 +166,8 @@
       },
       {
         "range": [
-          2,
-          3
+          3,
+          4
         ],
         "label": "Gut!",
         "emoji": "⭐"
@@ -189,7 +175,7 @@
       {
         "range": [
           0,
-          1
+          2
         ],
         "label": "Noch üben!",
         "emoji": "📝"

@@ -8,55 +8,51 @@
   "audio_file": "/audio/listening/A1/Teil1-Kurze-Alltagsgespraeche/L-A1-GOETHE-002-T1.mp3",
   "metadata": {
     "generated_at": "2026-03-19T10:04:11.065815",
-    "version": 1,
+    "version": 4,
     "gespraech_count": 6,
-    "source_script": "data/scripts/A1/Teil1-Kurze-Alltagsgespraeche/L-A1-GOETHE-002-T1.json"
+    "source_script": "data/scripts/A1/Teil1-Kurze-Alltagsgespraeche/L-A1-GOETHE-002-T1.json",
+    "regenerated_at": "2026-03-20T07:45:14.435Z"
   },
   "questions": [
     {
       "id": "Q1",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Wo wohnt eine Person im Gespräch 1?",
+      "question": "Worum geht es im Gespräch 1?",
       "options": {
-        "a": "Tisch für",
-        "b": "Berlin",
-        "c": "Frankfurt"
+        "a": "Essen und Trinken",
+        "b": "Medien und Kommunikation",
+        "c": "Bildung und Schule"
       },
       "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: 'Tisch für'.",
-        "vi": "Một người trong đoạn hội thoại 1 sống ở đâu?",
-        "key_evidence": "Tisch für",
-        "key_vocabulary": [
-          {
-            "word": "wohnen",
-            "meaning": "to live"
-          }
-        ]
+        "de": "Im Gespräch hört man: \"Essen und Trinken\".",
+        "vi": "",
+        "key_evidence": "Essen und Trinken",
+        "key_vocabulary": []
       }
     },
     {
       "id": "Q2",
       "gespraech": 2,
       "type": "mc_abc",
-      "question": "Wo wohnt eine Person im Gespräch 2?",
+      "question": "Woher kommt die Person (Gespräch 2)?",
       "options": {
-        "a": "Glas Apfelsaft",
-        "b": "Zürich",
-        "c": "München"
+        "a": "Glas",
+        "b": "Düsseldorf",
+        "c": "Nürnberg"
       },
       "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: 'Glas Apfelsaft'.",
-        "vi": "Một người trong đoạn hội thoại 2 sống ở đâu?",
-        "key_evidence": "Glas Apfelsaft",
+        "de": "Im Gespräch hört man: \"Glas\".",
+        "vi": "",
+        "key_evidence": "Glas",
         "key_vocabulary": [
           {
-            "word": "wohnen",
-            "meaning": "to live"
+            "w": "kommen aus",
+            "m": "to come from"
           }
         ]
       }
@@ -65,96 +61,76 @@
       "id": "Q3",
       "gespraech": 3,
       "type": "mc_abc",
-      "question": "Wo wohnt eine Person im Gespräch 3?",
+      "question": "Worum geht es im Gespräch 3?",
       "options": {
-        "a": "Tagesgericht heute",
-        "b": "München",
-        "c": "Dresden"
+        "a": "Wohnung und Haushalt",
+        "b": "Einkaufen und Geld",
+        "c": "Arbeit und Beruf"
       },
-      "answer": "a",
+      "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: 'Tagesgericht heute'.",
-        "vi": "Một người trong đoạn hội thoại 3 sống ở đâu?",
-        "key_evidence": "Tagesgericht heute",
-        "key_vocabulary": [
-          {
-            "word": "wohnen",
-            "meaning": "to live"
-          }
-        ]
+        "de": "Im Gespräch hört man: \"Einkaufen und Geld\".",
+        "vi": "",
+        "key_evidence": "Einkaufen und Geld",
+        "key_vocabulary": []
       }
     },
     {
       "id": "Q4",
       "gespraech": 4,
       "type": "mc_abc",
-      "question": "Was passiert im Gespräch 4?",
+      "question": "Worum geht es im Gespräch 4?",
       "options": {
-        "a": "Jemand kauft ein.",
-        "b": "Jemand stellt sich vor.",
-        "c": "Jemand telefoniert."
+        "a": "Einkaufen und Geld",
+        "b": "Gesundheit und Körper",
+        "c": "Bildung und Schule"
       },
-      "answer": "b",
+      "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: 'Die Rechnung, bitte! Zusammen oder getrennt? Zusam'.",
-        "vi": "Điều gì xảy ra trong đoạn hội thoại 4?",
-        "key_evidence": "Die Rechnung, bitte! Zusammen oder getrennt? Zusam",
-        "key_vocabulary": [
-          {
-            "word": "vorstellen",
-            "meaning": "to introduce"
-          }
-        ]
+        "de": "Im Gespräch hört man: \"Einkaufen und Geld\".",
+        "vi": "",
+        "key_evidence": "Einkaufen und Geld",
+        "key_vocabulary": []
       }
     },
     {
       "id": "Q5",
       "gespraech": 5,
       "type": "mc_abc",
-      "question": "Was passiert im Gespräch 5?",
+      "question": "Worum geht es im Gespräch 5?",
       "options": {
-        "a": "Jemand kauft ein.",
-        "b": "Jemand stellt sich vor.",
-        "c": "Jemand telefoniert."
+        "a": "Arbeit und Beruf",
+        "b": "Freizeit und Hobbys",
+        "c": "Einkaufen und Geld"
       },
-      "answer": "b",
+      "answer": "c",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: 'Entschuldigung, kann ich noch etwas bestellen? Nat'.",
-        "vi": "Điều gì xảy ra trong đoạn hội thoại 5?",
-        "key_evidence": "Entschuldigung, kann ich noch etwas bestellen? Nat",
-        "key_vocabulary": [
-          {
-            "word": "vorstellen",
-            "meaning": "to introduce"
-          }
-        ]
+        "de": "Im Gespräch hört man: \"Einkaufen und Geld\".",
+        "vi": "",
+        "key_evidence": "Einkaufen und Geld",
+        "key_vocabulary": []
       }
     },
     {
       "id": "Q6",
       "gespraech": 6,
       "type": "mc_abc",
-      "question": "Wo wohnt eine Person im Gespräch 6?",
+      "question": "Worum geht es im Gespräch 6?",
       "options": {
-        "a": "Platz frei",
-        "b": "Leipzig",
-        "c": "Düsseldorf"
+        "a": "Familie und Freunde",
+        "b": "Essen und Trinken",
+        "c": "Einkaufen und Geld"
       },
-      "answer": "a",
+      "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: 'Platz frei'.",
-        "vi": "Một người trong đoạn hội thoại 6 sống ở đâu?",
-        "key_evidence": "Platz frei",
-        "key_vocabulary": [
-          {
-            "word": "wohnen",
-            "meaning": "to live"
-          }
-        ]
+        "de": "Im Gespräch hört man: \"Essen und Trinken\".",
+        "vi": "",
+        "key_evidence": "Essen und Trinken",
+        "key_vocabulary": []
       }
     }
   ],
@@ -172,7 +148,7 @@
       },
       {
         "range": [
-          4,
+          5,
           5
         ],
         "label": "Sehr gut!",
@@ -180,8 +156,8 @@
       },
       {
         "range": [
-          2,
-          3
+          3,
+          4
         ],
         "label": "Gut!",
         "emoji": "⭐"
@@ -189,7 +165,7 @@
       {
         "range": [
           0,
-          1
+          2
         ],
         "label": "Noch üben!",
         "emoji": "📝"

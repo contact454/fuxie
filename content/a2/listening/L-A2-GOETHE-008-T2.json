@@ -3,135 +3,93 @@
   "level": "A2",
   "teil": 2,
   "teil_name": "Zusammenhängendes Gespräch",
-  "task_type": "zuordnung",
+  "task_type": "mc_abc",
   "topic": "Arbeitskollegen-Gespräch",
   "audio_file": "/audio/listening/A2/Teil2-Zusammenhaengendes-Gespraech/L-A2-GOETHE-008-T2.mp3",
   "metadata": {
     "generated_at": "2026-03-19T10:04:11.117517",
-    "version": 1,
+    "version": 2,
     "gespraech_count": 6,
-    "source_script": "data/scripts/A2/Teil2-Zusammenhaengendes-Gespraech/L-A2-GOETHE-008-T2.json"
+    "source_script": "data/scripts/A2/Teil2-Zusammenhaengendes-Gespraech/L-A2-GOETHE-008-T2.json",
+    "regenerated_at": "2026-03-20T07:45:14.481Z"
   },
   "questions": [
     {
       "id": "Q1",
-      "item": 1,
-      "type": "zuordnung",
-      "statement": "Guten Morgen, Maria! Du bist ja heute früh im Büro....",
-      "options": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6
-      ],
-      "answer": 1,
+      "gespraech": 1,
+      "type": "mc_abc",
+      "question": "Worum geht es im Gespräch 1?",
+      "options": {
+        "a": "Einkaufen und Geld",
+        "b": "Medien und Kommunikation",
+        "c": "Arbeit und Beruf"
+      },
+      "answer": "c",
       "points": 1,
       "explanation": {
-        "de": "Diese Aussage gehört zu Abschnitt 1.",
-        "vi": "Câu này thuộc phần 1.",
-        "key_evidence": "Guten Morgen, Maria! Du bist ja heute fr",
+        "de": "Man hört: \"Arbeit und Beruf\".",
+        "vi": "",
+        "key_evidence": "Arbeit und Beruf",
         "key_vocabulary": []
       }
     },
     {
       "id": "Q2",
-      "item": 2,
-      "type": "zuordnung",
-      "statement": "Du machst das schon! Deine Arbeit ist wirklich gut....",
-      "options": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6
-      ],
-      "answer": 2,
+      "gespraech": 1,
+      "type": "mc_abc",
+      "question": "Wie heißt eine Person im Gespräch 1?",
+      "options": {
+        "a": "Klaus",
+        "b": "Weber",
+        "c": "Claudia"
+      },
+      "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Diese Aussage gehört zu Abschnitt 2.",
-        "vi": "Câu này thuộc phần 2.",
-        "key_evidence": "Du machst das schon! Deine Arbeit ist wi",
-        "key_vocabulary": []
+        "de": "Man hört: \"Weber\".",
+        "vi": "",
+        "key_evidence": "Weber",
+        "key_vocabulary": [
+          {
+            "w": "heißen",
+            "m": "to be called"
+          }
+        ]
       }
     },
     {
       "id": "Q3",
-      "item": 3,
-      "type": "zuordnung",
-      "statement": "Ja, natürlich! Und der Chef ist übrigens sehr freundlich....",
-      "options": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6
-      ],
-      "answer": 3,
+      "gespraech": 1,
+      "type": "mc_abc",
+      "question": "Woher kommt die Person (Gespräch 1)?",
+      "options": {
+        "a": "Frau",
+        "b": "München",
+        "c": "Bonn"
+      },
+      "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Diese Aussage gehört zu Abschnitt 3.",
-        "vi": "Câu này thuộc phần 3.",
-        "key_evidence": "Ja, natürlich! Und der Chef ist übrigens",
-        "key_vocabulary": []
-      }
-    },
-    {
-      "id": "Q4",
-      "item": 4,
-      "type": "zuordnung",
-      "statement": "Gern! Ich reserviere uns einen Tisch. Du musst unbedingt den...",
-      "options": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6
-      ],
-      "answer": 4,
-      "points": 1,
-      "explanation": {
-        "de": "Diese Aussage gehört zu Abschnitt 4.",
-        "vi": "Câu này thuộc phần 4.",
-        "key_evidence": "Gern! Ich reserviere uns einen Tisch. Du",
-        "key_vocabulary": []
-      }
-    },
-    {
-      "id": "Q5",
-      "item": 5,
-      "type": "zuordnung",
-      "statement": "In der Personalabteilung im zweiten Stock. Frag nach Frau We...",
-      "options": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6
-      ],
-      "answer": 5,
-      "points": 1,
-      "explanation": {
-        "de": "Diese Aussage gehört zu Abschnitt 5.",
-        "vi": "Câu này thuộc phần 5.",
-        "key_evidence": "In der Personalabteilung im zweiten Stoc",
-        "key_vocabulary": []
+        "de": "Man hört: \"Frau\".",
+        "vi": "",
+        "key_evidence": "Frau",
+        "key_vocabulary": [
+          {
+            "w": "kommen aus",
+            "m": "to come from"
+          }
+        ]
       }
     }
   ],
   "scoring": {
-    "total_points": 5,
-    "pass_threshold": 3,
+    "total_points": 3,
+    "pass_threshold": 2,
     "grading": [
       {
         "range": [
-          5,
-          5
+          3,
+          3
         ],
         "label": "Ausgezeichnet!",
         "emoji": "⭐⭐⭐"
@@ -139,7 +97,7 @@
       {
         "range": [
           3,
-          4
+          3
         ],
         "label": "Sehr gut!",
         "emoji": "⭐⭐"

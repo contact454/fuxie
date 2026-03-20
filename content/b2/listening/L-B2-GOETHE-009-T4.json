@@ -8,156 +8,80 @@
   "audio_file": "/audio/listening/B2/Teil4-Vortrag/L-B2-GOETHE-009-T4.mp3",
   "metadata": {
     "generated_at": "2026-03-19T10:04:11.236231",
-    "version": 1,
+    "version": 4,
     "gespraech_count": 5,
-    "source_script": "data/scripts/B2/Teil4-Vortrag/L-B2-GOETHE-009-T4.json"
+    "source_script": "data/scripts/B2/Teil4-Vortrag/L-B2-GOETHE-009-T4.json",
+    "regenerated_at": "2026-03-20T07:45:14.543Z"
   },
   "questions": [
     {
       "id": "Q1",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Wo wohnt eine Person im Gespräch 1?",
+      "question": "Worum geht es im Gespräch 1?",
       "options": {
-        "a": "beschäftige ich",
-        "b": "München",
-        "c": "Stuttgart"
-      },
-      "answer": "a",
-      "points": 1,
-      "explanation": {
-        "de": "Im Gespräch hört man: 'beschäftige ich'.",
-        "vi": "Một người trong đoạn hội thoại 1 sống ở đâu?",
-        "key_evidence": "beschäftige ich",
-        "key_vocabulary": [
-          {
-            "word": "wohnen",
-            "meaning": "to live"
-          }
-        ]
-      }
-    },
-    {
-      "id": "Q2",
-      "gespraech": 2,
-      "type": "mc_abc",
-      "question": "Woher kommt eine Person im Gespräch 2?",
-      "options": {
-        "a": "China",
-        "b": "Indien",
-        "c": "Deutschland"
-      },
-      "answer": "c",
-      "points": 1,
-      "explanation": {
-        "de": "Im Gespräch hört man: 'Deutschland'.",
-        "vi": "Một người trong đoạn hội thoại 2 đến từ đâu?",
-        "key_evidence": "Deutschland",
-        "key_vocabulary": [
-          {
-            "word": "kommen aus",
-            "meaning": "to come from"
-          }
-        ]
-      }
-    },
-    {
-      "id": "Q3",
-      "gespraech": 3,
-      "type": "mc_abc",
-      "question": "Wo wohnt eine Person im Gespräch 3?",
-      "options": {
-        "a": "Beispiel für",
-        "b": "Zürich",
-        "c": "Wien"
-      },
-      "answer": "a",
-      "points": 1,
-      "explanation": {
-        "de": "Im Gespräch hört man: 'Beispiel für'.",
-        "vi": "Một người trong đoạn hội thoại 3 sống ở đâu?",
-        "key_evidence": "Beispiel für",
-        "key_vocabulary": [
-          {
-            "word": "wohnen",
-            "meaning": "to live"
-          }
-        ]
-      }
-    },
-    {
-      "id": "Q4",
-      "gespraech": 4,
-      "type": "mc_abc",
-      "question": "Wo wohnt eine Person im Gespräch 4?",
-      "options": {
-        "a": "den Preis",
-        "b": "Berlin",
-        "c": "Hamburg"
-      },
-      "answer": "a",
-      "points": 1,
-      "explanation": {
-        "de": "Im Gespräch hört man: 'den Preis'.",
-        "vi": "Một người trong đoạn hội thoại 4 sống ở đâu?",
-        "key_evidence": "den Preis",
-        "key_vocabulary": [
-          {
-            "word": "wohnen",
-            "meaning": "to live"
-          }
-        ]
-      }
-    },
-    {
-      "id": "Q5",
-      "gespraech": 5,
-      "type": "mc_abc",
-      "question": "Was passiert im Gespräch 5?",
-      "options": {
-        "a": "Jemand kauft ein.",
-        "b": "Jemand stellt sich vor.",
-        "c": "Jemand telefoniert."
+        "a": "Familie und Freunde",
+        "b": "Einkaufen und Geld",
+        "c": "Medien und Kommunikation"
       },
       "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: 'Lassen Sie mich abschließend über die Rolle der Fi'.",
-        "vi": "Điều gì xảy ra trong đoạn hội thoại 5?",
-        "key_evidence": "Lassen Sie mich abschließend über die Rolle der Fi",
+        "de": "Man hört: \"Einkaufen und Geld\".",
+        "vi": "",
+        "key_evidence": "Einkaufen und Geld",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q2",
+      "gespraech": 1,
+      "type": "mc_abc",
+      "question": "Woher kommt die Person (Gespräch 1)?",
+      "options": {
+        "a": "Produkten",
+        "b": "Leipzig",
+        "c": "Berlin"
+      },
+      "answer": "a",
+      "points": 1,
+      "explanation": {
+        "de": "Man hört: \"Produkten\".",
+        "vi": "",
+        "key_evidence": "Produkten",
         "key_vocabulary": [
           {
-            "word": "vorstellen",
-            "meaning": "to introduce"
+            "w": "kommen aus",
+            "m": "to come from"
           }
         ]
       }
     }
   ],
   "scoring": {
-    "total_points": 5,
-    "pass_threshold": 3,
+    "total_points": 2,
+    "pass_threshold": 2,
     "grading": [
       {
         "range": [
-          5,
-          5
+          2,
+          2
         ],
         "label": "Ausgezeichnet!",
         "emoji": "⭐⭐⭐"
       },
       {
         "range": [
-          3,
-          4
+          2,
+          2
         ],
         "label": "Sehr gut!",
         "emoji": "⭐⭐"
       },
       {
         "range": [
-          2,
-          2
+          1,
+          1
         ],
         "label": "Gut!",
         "emoji": "⭐"
@@ -165,7 +89,7 @@
       {
         "range": [
           0,
-          1
+          0
         ],
         "label": "Noch üben!",
         "emoji": "📝"

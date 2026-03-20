@@ -8,9 +8,10 @@
   "audio_file": "/audio/listening/B1/Teil2-Fuehrung-oder-Monolog/L-B1-GOETHE-008-T2.mp3",
   "metadata": {
     "generated_at": "2026-03-19T10:04:11.167333",
-    "version": 1,
+    "version": 4,
     "gespraech_count": 5,
-    "source_script": "data/scripts/B1/Teil2-Fuehrung-oder-Monolog/L-B1-GOETHE-008-T2.json"
+    "source_script": "data/scripts/B1/Teil2-Fuehrung-oder-Monolog/L-B1-GOETHE-008-T2.json",
+    "regenerated_at": "2026-03-20T07:45:14.511Z"
   },
   "questions": [
     {
@@ -19,129 +20,100 @@
       "type": "mc_abc",
       "question": "Wie heißt eine Person im Gespräch 1?",
       "options": {
-        "a": "Anna",
-        "b": "Beraterin",
-        "c": "Thomas"
+        "a": "Nina",
+        "b": "Katrin",
+        "c": "Sabine"
       },
       "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: 'bin Beraterin'.",
-        "vi": "Một người trong đoạn hội thoại 1 tên là gì?",
-        "key_evidence": "bin Beraterin",
+        "de": "Man hört: \"Katrin\".",
+        "vi": "",
+        "key_evidence": "Katrin",
         "key_vocabulary": [
           {
-            "word": "heißen",
-            "meaning": "to be called"
+            "w": "heißen",
+            "m": "to be called"
           }
         ]
       }
     },
     {
       "id": "Q2",
-      "gespraech": 2,
+      "gespraech": 1,
       "type": "mc_abc",
-      "question": "Wo wohnt eine Person im Gespräch 2?",
+      "question": "Woher kommt die Person (Gespräch 1)?",
       "options": {
-        "a": "neues",
-        "b": "Zürich",
-        "c": "Stuttgart"
+        "a": "Leipzig",
+        "b": "Dresden",
+        "c": "Name"
       },
-      "answer": "a",
+      "answer": "c",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: 'neues'.",
-        "vi": "Một người trong đoạn hội thoại 2 sống ở đâu?",
-        "key_evidence": "neues",
+        "de": "Man hört: \"Name\".",
+        "vi": "",
+        "key_evidence": "Name",
         "key_vocabulary": [
           {
-            "word": "wohnen",
-            "meaning": "to live"
+            "w": "kommen aus",
+            "m": "to come from"
           }
         ]
       }
     },
     {
       "id": "Q3",
-      "gespraech": 3,
+      "gespraech": 1,
       "type": "mc_abc",
-      "question": "Wo wohnt eine Person im Gespräch 3?",
+      "question": "Was macht die Person beruflich (Gespräch 1)?",
       "options": {
-        "a": "freiwilliges Umtauschrecht",
-        "b": "Berlin",
-        "c": "Frankfurt"
+        "a": "Arzt",
+        "b": "Beraterin",
+        "c": "Journalist"
       },
-      "answer": "a",
+      "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: 'freiwilliges Umtauschrecht'.",
-        "vi": "Một người trong đoạn hội thoại 3 sống ở đâu?",
-        "key_evidence": "freiwilliges Umtauschrecht",
+        "de": "Man hört: \"Beraterin\".",
+        "vi": "",
+        "key_evidence": "Beraterin",
         "key_vocabulary": [
           {
-            "word": "wohnen",
-            "meaning": "to live"
+            "w": "Beraterin",
+            "m": "Beraterin"
           }
         ]
       }
     },
     {
       "id": "Q4",
-      "gespraech": 4,
+      "gespraech": 1,
       "type": "mc_abc",
-      "question": "Was macht eine Person beruflich (Gespräch 4)?",
+      "question": "Worum geht es im Gespräch 1?",
       "options": {
-        "a": "Programmierer",
-        "b": "Student",
-        "c": "Verkäufer"
-      },
-      "answer": "c",
-      "points": 1,
-      "explanation": {
-        "de": "Im Gespräch hört man: 'Verkäufer'.",
-        "vi": "Một người làm nghề gì (đoạn 4)?",
-        "key_evidence": "Verkäufer",
-        "key_vocabulary": [
-          {
-            "word": "Verkäufer",
-            "meaning": "salesperson"
-          }
-        ]
-      }
-    },
-    {
-      "id": "Q5",
-      "gespraech": 5,
-      "type": "mc_abc",
-      "question": "Wo wohnt eine Person im Gespräch 5?",
-      "options": {
-        "a": "wichtigster Rat",
-        "b": "Leipzig",
-        "c": "Köln"
+        "a": "Einkaufen und Geld",
+        "b": "Familie und Freunde",
+        "c": "Arbeit und Beruf"
       },
       "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: 'wichtigster Rat'.",
-        "vi": "Một người trong đoạn hội thoại 5 sống ở đâu?",
-        "key_evidence": "wichtigster Rat",
-        "key_vocabulary": [
-          {
-            "word": "wohnen",
-            "meaning": "to live"
-          }
-        ]
+        "de": "Man hört: \"Einkaufen und Geld\".",
+        "vi": "",
+        "key_evidence": "Einkaufen und Geld",
+        "key_vocabulary": []
       }
     }
   ],
   "scoring": {
-    "total_points": 5,
+    "total_points": 4,
     "pass_threshold": 3,
     "grading": [
       {
         "range": [
-          5,
-          5
+          4,
+          4
         ],
         "label": "Ausgezeichnet!",
         "emoji": "⭐⭐⭐"
@@ -149,7 +121,7 @@
       {
         "range": [
           3,
-          4
+          3
         ],
         "label": "Sehr gut!",
         "emoji": "⭐⭐"

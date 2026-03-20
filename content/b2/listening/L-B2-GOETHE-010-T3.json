@@ -3,165 +3,101 @@
   "level": "B2",
   "teil": 3,
   "teil_name": "Diskussion mehrere Personen",
-  "task_type": "zuordnung",
+  "task_type": "mc_abc",
   "topic": "Ehrenamt und Engagement",
   "audio_file": "/audio/listening/B2/Teil3-Diskussion-mehrere-Personen/L-B2-GOETHE-010-T3.mp3",
   "metadata": {
     "generated_at": "2026-03-19T10:04:11.229727",
-    "version": 1,
+    "version": 2,
     "gespraech_count": 6,
-    "source_script": "data/scripts/B2/Teil3-Diskussion-mehrere-Personen/L-B2-GOETHE-010-T3.json"
+    "source_script": "data/scripts/B2/Teil3-Diskussion-mehrere-Personen/L-B2-GOETHE-010-T3.json",
+    "regenerated_at": "2026-03-20T07:45:14.545Z"
   },
   "questions": [
     {
       "id": "Q1",
-      "item": 1,
-      "type": "zuordnung",
-      "statement": "Willkommen zur Diskussion: Sollte Ehrenamt eine Pflicht sein...",
-      "options": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6
-      ],
-      "answer": 1,
+      "gespraech": 1,
+      "type": "mc_abc",
+      "question": "Worum geht es im Gespräch 1?",
+      "options": {
+        "a": "Arbeit und Beruf",
+        "b": "Bildung und Schule",
+        "c": "Essen und Trinken"
+      },
+      "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Diese Aussage gehört zu Abschnitt 1.",
-        "vi": "Câu này thuộc phần 1.",
-        "key_evidence": "Willkommen zur Diskussion: Sollte Ehrena",
+        "de": "Man hört: \"Arbeit und Beruf\".",
+        "vi": "",
+        "key_evidence": "Arbeit und Beruf",
         "key_vocabulary": []
       }
     },
     {
       "id": "Q2",
-      "item": 2,
-      "type": "zuordnung",
-      "statement": "Können Sie das genaür erklären?...",
-      "options": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6
-      ],
-      "answer": 2,
+      "gespraech": 1,
+      "type": "mc_abc",
+      "question": "Wie heißt eine Person im Gespräch 1?",
+      "options": {
+        "a": "Brandt",
+        "b": "Michael",
+        "c": "Nina"
+      },
+      "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Diese Aussage gehört zu Abschnitt 2.",
-        "vi": "Câu này thuộc phần 2.",
-        "key_evidence": "Können Sie das genaür erklären?",
-        "key_vocabulary": []
+        "de": "Man hört: \"Brandt\".",
+        "vi": "",
+        "key_evidence": "Brandt",
+        "key_vocabulary": [
+          {
+            "w": "heißen",
+            "m": "to be called"
+          }
+        ]
       }
     },
     {
       "id": "Q3",
-      "item": 3,
-      "type": "zuordnung",
-      "statement": "Freiwillige Angebote erreichen aber nur die, die ohnehin off...",
-      "options": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6
-      ],
-      "answer": 3,
+      "gespraech": 1,
+      "type": "mc_abc",
+      "question": "Woher kommt die Person (Gespräch 1)?",
+      "options": {
+        "a": "Bereiche",
+        "b": "Nürnberg",
+        "c": "Bonn"
+      },
+      "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Diese Aussage gehört zu Abschnitt 3.",
-        "vi": "Câu này thuộc phần 3.",
-        "key_evidence": "Freiwillige Angebote erreichen aber nur ",
-        "key_vocabulary": []
-      }
-    },
-    {
-      "id": "Q4",
-      "item": 4,
-      "type": "zuordnung",
-      "statement": "Aber der Service Civiqü in Frankreich ist freiwillig und gut...",
-      "options": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6
-      ],
-      "answer": 4,
-      "points": 1,
-      "explanation": {
-        "de": "Diese Aussage gehört zu Abschnitt 4.",
-        "vi": "Câu này thuộc phần 4.",
-        "key_evidence": "Aber der Service Civiqü in Frankreich is",
-        "key_vocabulary": []
-      }
-    },
-    {
-      "id": "Q5",
-      "item": 5,
-      "type": "zuordnung",
-      "statement": "Herr Brandt, haben Sie einen alternativen Vorschlag zur Stär...",
-      "options": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6
-      ],
-      "answer": 5,
-      "points": 1,
-      "explanation": {
-        "de": "Diese Aussage gehört zu Abschnitt 5.",
-        "vi": "Câu này thuộc phần 5.",
-        "key_evidence": "Herr Brandt, haben Sie einen alternative",
-        "key_vocabulary": []
-      }
-    },
-    {
-      "id": "Q6",
-      "item": 6,
-      "type": "zuordnung",
-      "statement": "Vielen Dank für diese lebhafte Debatte zu einem Thema, das d...",
-      "options": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6
-      ],
-      "answer": 6,
-      "points": 1,
-      "explanation": {
-        "de": "Diese Aussage gehört zu Abschnitt 6.",
-        "vi": "Câu này thuộc phần 6.",
-        "key_evidence": "Vielen Dank für diese lebhafte Debatte z",
-        "key_vocabulary": []
+        "de": "Man hört: \"Bereiche\".",
+        "vi": "",
+        "key_evidence": "Bereiche",
+        "key_vocabulary": [
+          {
+            "w": "kommen aus",
+            "m": "to come from"
+          }
+        ]
       }
     }
   ],
   "scoring": {
-    "total_points": 6,
-    "pass_threshold": 4,
+    "total_points": 3,
+    "pass_threshold": 2,
     "grading": [
       {
         "range": [
-          6,
-          6
+          3,
+          3
         ],
         "label": "Ausgezeichnet!",
         "emoji": "⭐⭐⭐"
       },
       {
         "range": [
-          4,
-          5
+          3,
+          3
         ],
         "label": "Sehr gut!",
         "emoji": "⭐⭐"
@@ -169,7 +105,7 @@
       {
         "range": [
           2,
-          3
+          2
         ],
         "label": "Gut!",
         "emoji": "⭐"

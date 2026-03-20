@@ -8,276 +8,132 @@
   "audio_file": "/audio/listening/A1/Teil3-Telefonansagen/L-A1-GOETHE-004-T3.mp3",
   "metadata": {
     "generated_at": "2026-03-19T10:04:11.078953",
-    "version": 1,
+    "version": 4,
     "gespraech_count": 5,
-    "source_script": "data/scripts/A1/Teil3-Telefonansagen/L-A1-GOETHE-004-T3.json"
+    "source_script": "data/scripts/A1/Teil3-Telefonansagen/L-A1-GOETHE-004-T3.json",
+    "regenerated_at": "2026-03-20T07:45:14.444Z"
   },
   "questions": [
     {
       "id": "Q1",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Wie heißt eine Person im Gespräch 1?",
+      "question": "Worum geht es im Gespräch 1?",
       "options": {
-        "a": "Anna",
-        "b": "gerade",
-        "c": "Thomas"
+        "a": "Gesundheit und Körper",
+        "b": "Einkaufen und Geld",
+        "c": "Bildung und Schule"
       },
       "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: 'bin gerade'.",
-        "vi": "Một người trong đoạn hội thoại 1 tên là gì?",
-        "key_evidence": "bin gerade",
-        "key_vocabulary": [
-          {
-            "word": "heißen",
-            "meaning": "to be called"
-          }
-        ]
+        "de": "Im Gespräch hört man: \"Einkaufen und Geld\".",
+        "vi": "",
+        "key_evidence": "Einkaufen und Geld",
+        "key_vocabulary": []
       }
     },
     {
       "id": "Q2",
-      "gespraech": 1,
+      "gespraech": 2,
       "type": "mc_abc",
-      "question": "Wo wohnt eine Person im Gespräch 1?",
+      "question": "Worum geht es im Gespräch 2?",
       "options": {
-        "a": "gerade im",
-        "b": "Stuttgart",
-        "c": "Berlin"
+        "a": "Umwelt und Natur",
+        "b": "Einkaufen und Geld",
+        "c": "Gesundheit und Körper"
       },
-      "answer": "a",
+      "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: 'gerade im'.",
-        "vi": "Một người trong đoạn hội thoại 1 sống ở đâu?",
-        "key_evidence": "gerade im",
-        "key_vocabulary": [
-          {
-            "word": "wohnen",
-            "meaning": "to live"
-          }
-        ]
+        "de": "Im Gespräch hört man: \"Einkaufen und Geld\".",
+        "vi": "",
+        "key_evidence": "Einkaufen und Geld",
+        "key_vocabulary": []
       }
     },
     {
       "id": "Q3",
-      "gespraech": 2,
+      "gespraech": 3,
       "type": "mc_abc",
-      "question": "Was passiert im Gespräch 2?",
+      "question": "Worum geht es im Gespräch 3?",
       "options": {
-        "a": "Jemand kauft ein.",
-        "b": "Jemand stellt sich vor.",
-        "c": "Jemand telefoniert."
+        "a": "Alltag",
+        "b": "Reisen und Verkehr",
+        "c": "Bildung und Schule"
       },
-      "answer": "b",
+      "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: 'Guten Tag, hier ist der Lieferservice vom Supermar'.",
-        "vi": "Điều gì xảy ra trong đoạn hội thoại 2?",
-        "key_evidence": "Guten Tag, hier ist der Lieferservice vom Supermar",
-        "key_vocabulary": [
-          {
-            "word": "vorstellen",
-            "meaning": "to introduce"
-          }
-        ]
+        "de": "Im Gespräch hört man: \"Alltag\".",
+        "vi": "",
+        "key_evidence": "Alltag",
+        "key_vocabulary": []
       }
     },
     {
       "id": "Q4",
-      "gespraech": 2,
+      "gespraech": 4,
       "type": "mc_abc",
-      "question": "Was passiert im Gespräch 2?",
+      "question": "Worum geht es im Gespräch 4?",
       "options": {
-        "a": "Jemand kauft ein.",
-        "b": "Jemand stellt sich vor.",
-        "c": "Jemand telefoniert."
+        "a": "Bildung und Schule",
+        "b": "Alltag",
+        "c": "Einkaufen und Geld"
       },
       "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: 'Guten Tag, hier ist der Lieferservice vom Supermar'.",
-        "vi": "Điều gì xảy ra trong đoạn hội thoại 2?",
-        "key_evidence": "Guten Tag, hier ist der Lieferservice vom Supermar",
-        "key_vocabulary": [
-          {
-            "word": "vorstellen",
-            "meaning": "to introduce"
-          }
-        ]
+        "de": "Im Gespräch hört man: \"Alltag\".",
+        "vi": "",
+        "key_evidence": "Alltag",
+        "key_vocabulary": []
       }
     },
     {
       "id": "Q5",
-      "gespraech": 3,
-      "type": "mc_abc",
-      "question": "Wie heißt eine Person im Gespräch 3?",
-      "options": {
-        "a": "Anna",
-        "b": "noch",
-        "c": "Thomas"
-      },
-      "answer": "b",
-      "points": 1,
-      "explanation": {
-        "de": "Im Gespräch hört man: 'bin noch'.",
-        "vi": "Một người trong đoạn hội thoại 3 tên là gì?",
-        "key_evidence": "bin noch",
-        "key_vocabulary": [
-          {
-            "word": "heißen",
-            "meaning": "to be called"
-          }
-        ]
-      }
-    },
-    {
-      "id": "Q6",
-      "gespraech": 3,
-      "type": "mc_abc",
-      "question": "Wo wohnt eine Person im Gespräch 3?",
-      "options": {
-        "a": "noch eine",
-        "b": "Wien",
-        "c": "Berlin"
-      },
-      "answer": "a",
-      "points": 1,
-      "explanation": {
-        "de": "Im Gespräch hört man: 'noch eine'.",
-        "vi": "Một người trong đoạn hội thoại 3 sống ở đâu?",
-        "key_evidence": "noch eine",
-        "key_vocabulary": [
-          {
-            "word": "wohnen",
-            "meaning": "to live"
-          }
-        ]
-      }
-    },
-    {
-      "id": "Q7",
-      "gespraech": 4,
-      "type": "mc_abc",
-      "question": "Was passiert im Gespräch 4?",
-      "options": {
-        "a": "Jemand kauft ein.",
-        "b": "Jemand stellt sich vor.",
-        "c": "Jemand telefoniert."
-      },
-      "answer": "b",
-      "points": 1,
-      "explanation": {
-        "de": "Im Gespräch hört man: 'Hallo, hier ist die Kundenkarte-Hotline. Ihre neue'.",
-        "vi": "Điều gì xảy ra trong đoạn hội thoại 4?",
-        "key_evidence": "Hallo, hier ist die Kundenkarte-Hotline. Ihre neue",
-        "key_vocabulary": [
-          {
-            "word": "vorstellen",
-            "meaning": "to introduce"
-          }
-        ]
-      }
-    },
-    {
-      "id": "Q8",
-      "gespraech": 4,
-      "type": "mc_abc",
-      "question": "Was passiert im Gespräch 4?",
-      "options": {
-        "a": "Jemand kauft ein.",
-        "b": "Jemand stellt sich vor.",
-        "c": "Jemand telefoniert."
-      },
-      "answer": "b",
-      "points": 1,
-      "explanation": {
-        "de": "Im Gespräch hört man: 'Hallo, hier ist die Kundenkarte-Hotline. Ihre neue'.",
-        "vi": "Điều gì xảy ra trong đoạn hội thoại 4?",
-        "key_evidence": "Hallo, hier ist die Kundenkarte-Hotline. Ihre neue",
-        "key_vocabulary": [
-          {
-            "word": "vorstellen",
-            "meaning": "to introduce"
-          }
-        ]
-      }
-    },
-    {
-      "id": "Q9",
       "gespraech": 5,
       "type": "mc_abc",
-      "question": "Wo wohnt eine Person im Gespräch 5?",
+      "question": "Worum geht es im Gespräch 5?",
       "options": {
-        "a": "der Schillerstraße",
-        "b": "Hannover",
-        "c": "Berlin"
+        "a": "Einkaufen und Geld",
+        "b": "Essen und Trinken",
+        "c": "Umwelt und Natur"
       },
       "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: 'der Schillerstraße'.",
-        "vi": "Một người trong đoạn hội thoại 5 sống ở đâu?",
-        "key_evidence": "der Schillerstraße",
-        "key_vocabulary": [
-          {
-            "word": "wohnen",
-            "meaning": "to live"
-          }
-        ]
-      }
-    },
-    {
-      "id": "Q10",
-      "gespraech": 5,
-      "type": "mc_abc",
-      "question": "Wo wohnt eine Person im Gespräch 5?",
-      "options": {
-        "a": "der Schillerstraße",
-        "b": "Hannover",
-        "c": "Berlin"
-      },
-      "answer": "a",
-      "points": 1,
-      "explanation": {
-        "de": "Im Gespräch hört man: 'der Schillerstraße'.",
-        "vi": "Một người trong đoạn hội thoại 5 sống ở đâu?",
-        "key_evidence": "der Schillerstraße",
-        "key_vocabulary": [
-          {
-            "word": "wohnen",
-            "meaning": "to live"
-          }
-        ]
+        "de": "Im Gespräch hört man: \"Einkaufen und Geld\".",
+        "vi": "",
+        "key_evidence": "Einkaufen und Geld",
+        "key_vocabulary": []
       }
     }
   ],
   "scoring": {
-    "total_points": 10,
-    "pass_threshold": 6,
+    "total_points": 5,
+    "pass_threshold": 3,
     "grading": [
       {
         "range": [
-          9,
-          10
+          5,
+          5
         ],
         "label": "Ausgezeichnet!",
         "emoji": "⭐⭐⭐"
       },
       {
         "range": [
-          7,
-          8
+          4,
+          4
         ],
         "label": "Sehr gut!",
         "emoji": "⭐⭐"
       },
       {
         "range": [
-          5,
-          6
+          3,
+          3
         ],
         "label": "Gut!",
         "emoji": "⭐"
@@ -285,7 +141,7 @@
       {
         "range": [
           0,
-          4
+          2
         ],
         "label": "Noch üben!",
         "emoji": "📝"

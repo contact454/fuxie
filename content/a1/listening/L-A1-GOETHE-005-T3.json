@@ -8,276 +8,137 @@
   "audio_file": "/audio/listening/A1/Teil3-Telefonansagen/L-A1-GOETHE-005-T3.mp3",
   "metadata": {
     "generated_at": "2026-03-19T10:04:11.079606",
-    "version": 1,
+    "version": 4,
     "gespraech_count": 5,
-    "source_script": "data/scripts/A1/Teil3-Telefonansagen/L-A1-GOETHE-005-T3.json"
+    "source_script": "data/scripts/A1/Teil3-Telefonansagen/L-A1-GOETHE-005-T3.json",
+    "regenerated_at": "2026-03-20T07:45:14.447Z"
   },
   "questions": [
     {
       "id": "Q1",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Wo wohnt eine Person im Gespräch 1?",
+      "question": "Wie heißt eine Person im Gespräch 1?",
       "options": {
-        "a": "morgen erinnern",
-        "b": "Berlin",
-        "c": "Düsseldorf"
+        "a": "Hans",
+        "b": "Julia",
+        "c": "Schmidt"
       },
-      "answer": "a",
+      "answer": "c",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: 'morgen erinnern'.",
-        "vi": "Một người trong đoạn hội thoại 1 sống ở đâu?",
-        "key_evidence": "morgen erinnern",
+        "de": "Im Gespräch hört man: \"Schmidt\".",
+        "vi": "",
+        "key_evidence": "Schmidt",
         "key_vocabulary": [
           {
-            "word": "wohnen",
-            "meaning": "to live"
+            "w": "heißen",
+            "m": "to be called"
           }
         ]
       }
     },
     {
       "id": "Q2",
-      "gespraech": 1,
+      "gespraech": 2,
       "type": "mc_abc",
-      "question": "Wo wohnt eine Person im Gespräch 1?",
+      "question": "Worum geht es im Gespräch 2?",
       "options": {
-        "a": "morgen erinnern",
-        "b": "Berlin",
-        "c": "Düsseldorf"
+        "a": "Einkaufen und Geld",
+        "b": "Gesundheit und Körper",
+        "c": "Freizeit und Hobbys"
       },
-      "answer": "a",
+      "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: 'morgen erinnern'.",
-        "vi": "Một người trong đoạn hội thoại 1 sống ở đâu?",
-        "key_evidence": "morgen erinnern",
-        "key_vocabulary": [
-          {
-            "word": "wohnen",
-            "meaning": "to live"
-          }
-        ]
+        "de": "Im Gespräch hört man: \"Gesundheit und Körper\".",
+        "vi": "",
+        "key_evidence": "Gesundheit und Körper",
+        "key_vocabulary": []
       }
     },
     {
       "id": "Q3",
-      "gespraech": 2,
+      "gespraech": 3,
       "type": "mc_abc",
-      "question": "Was macht eine Person beruflich (Gespräch 2)?",
+      "question": "Worum geht es im Gespräch 3?",
       "options": {
-        "a": "Ingenieur",
-        "b": "Verkäufer",
-        "c": "Arzt"
+        "a": "Einkaufen und Geld",
+        "b": "Bildung und Schule",
+        "c": "Gesundheit und Körper"
       },
       "answer": "c",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: 'Arzt'.",
-        "vi": "Một người làm nghề gì (đoạn 2)?",
-        "key_evidence": "Arzt",
-        "key_vocabulary": [
-          {
-            "word": "Arzt",
-            "meaning": "doctor (m)"
-          }
-        ]
+        "de": "Im Gespräch hört man: \"Gesundheit und Körper\".",
+        "vi": "",
+        "key_evidence": "Gesundheit und Körper",
+        "key_vocabulary": []
       }
     },
     {
       "id": "Q4",
-      "gespraech": 2,
+      "gespraech": 4,
       "type": "mc_abc",
-      "question": "Was macht eine Person beruflich (Gespräch 2)?",
+      "question": "Worum geht es im Gespräch 4?",
       "options": {
-        "a": "Ingenieur",
-        "b": "Verkäufer",
-        "c": "Arzt"
+        "a": "Gesundheit und Körper",
+        "b": "Freizeit und Hobbys",
+        "c": "Medien und Kommunikation"
       },
-      "answer": "c",
+      "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: 'Arzt'.",
-        "vi": "Một người làm nghề gì (đoạn 2)?",
-        "key_evidence": "Arzt",
-        "key_vocabulary": [
-          {
-            "word": "Arzt",
-            "meaning": "doctor (m)"
-          }
-        ]
+        "de": "Im Gespräch hört man: \"Gesundheit und Körper\".",
+        "vi": "",
+        "key_evidence": "Gesundheit und Körper",
+        "key_vocabulary": []
       }
     },
     {
       "id": "Q5",
-      "gespraech": 3,
-      "type": "mc_abc",
-      "question": "Wo wohnt eine Person im Gespräch 3?",
-      "options": {
-        "a": "krank und",
-        "b": "Zürich",
-        "c": "Wien"
-      },
-      "answer": "a",
-      "points": 1,
-      "explanation": {
-        "de": "Im Gespräch hört man: 'krank und'.",
-        "vi": "Một người trong đoạn hội thoại 3 sống ở đâu?",
-        "key_evidence": "krank und",
-        "key_vocabulary": [
-          {
-            "word": "wohnen",
-            "meaning": "to live"
-          }
-        ]
-      }
-    },
-    {
-      "id": "Q6",
-      "gespraech": 3,
-      "type": "mc_abc",
-      "question": "Was macht eine Person beruflich (Gespräch 3)?",
-      "options": {
-        "a": "Ingenieur",
-        "b": "Verkäufer",
-        "c": "Arzt"
-      },
-      "answer": "c",
-      "points": 1,
-      "explanation": {
-        "de": "Im Gespräch hört man: 'Arzt'.",
-        "vi": "Một người làm nghề gì (đoạn 3)?",
-        "key_evidence": "Arzt",
-        "key_vocabulary": [
-          {
-            "word": "Arzt",
-            "meaning": "doctor (m)"
-          }
-        ]
-      }
-    },
-    {
-      "id": "Q7",
-      "gespraech": 4,
-      "type": "mc_abc",
-      "question": "Wo wohnt eine Person im Gespräch 4?",
-      "options": {
-        "a": "für Ihr",
-        "b": "München",
-        "c": "Zürich"
-      },
-      "answer": "a",
-      "points": 1,
-      "explanation": {
-        "de": "Im Gespräch hört man: 'für Ihr'.",
-        "vi": "Một người trong đoạn hội thoại 4 sống ở đâu?",
-        "key_evidence": "für Ihr",
-        "key_vocabulary": [
-          {
-            "word": "wohnen",
-            "meaning": "to live"
-          }
-        ]
-      }
-    },
-    {
-      "id": "Q8",
-      "gespraech": 4,
-      "type": "mc_abc",
-      "question": "Was macht eine Person beruflich (Gespräch 4)?",
-      "options": {
-        "a": "Ingenieur",
-        "b": "Verkäufer",
-        "c": "Arzt"
-      },
-      "answer": "c",
-      "points": 1,
-      "explanation": {
-        "de": "Im Gespräch hört man: 'Arzt'.",
-        "vi": "Một người làm nghề gì (đoạn 4)?",
-        "key_evidence": "Arzt",
-        "key_vocabulary": [
-          {
-            "word": "Arzt",
-            "meaning": "doctor (m)"
-          }
-        ]
-      }
-    },
-    {
-      "id": "Q9",
       "gespraech": 5,
       "type": "mc_abc",
-      "question": "Wo wohnt eine Person im Gespräch 5?",
+      "question": "Worum geht es im Gespräch 5?",
       "options": {
-        "a": "Ordnung",
-        "b": "Berlin",
-        "c": "Wien"
+        "a": "Bildung und Schule",
+        "b": "Gesundheit und Körper",
+        "c": "Wohnung und Haushalt"
       },
-      "answer": "a",
+      "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: 'Ordnung'.",
-        "vi": "Một người trong đoạn hội thoại 5 sống ở đâu?",
-        "key_evidence": "Ordnung",
-        "key_vocabulary": [
-          {
-            "word": "wohnen",
-            "meaning": "to live"
-          }
-        ]
-      }
-    },
-    {
-      "id": "Q10",
-      "gespraech": 5,
-      "type": "mc_abc",
-      "question": "Was macht eine Person beruflich (Gespräch 5)?",
-      "options": {
-        "a": "Ingenieur",
-        "b": "Verkäufer",
-        "c": "Arzt"
-      },
-      "answer": "c",
-      "points": 1,
-      "explanation": {
-        "de": "Im Gespräch hört man: 'Arzt'.",
-        "vi": "Một người làm nghề gì (đoạn 5)?",
-        "key_evidence": "Arzt",
-        "key_vocabulary": [
-          {
-            "word": "Arzt",
-            "meaning": "doctor (m)"
-          }
-        ]
+        "de": "Im Gespräch hört man: \"Gesundheit und Körper\".",
+        "vi": "",
+        "key_evidence": "Gesundheit und Körper",
+        "key_vocabulary": []
       }
     }
   ],
   "scoring": {
-    "total_points": 10,
-    "pass_threshold": 6,
+    "total_points": 5,
+    "pass_threshold": 3,
     "grading": [
       {
         "range": [
-          9,
-          10
+          5,
+          5
         ],
         "label": "Ausgezeichnet!",
         "emoji": "⭐⭐⭐"
       },
       {
         "range": [
-          7,
-          8
+          4,
+          4
         ],
         "label": "Sehr gut!",
         "emoji": "⭐⭐"
       },
       {
         "range": [
-          5,
-          6
+          3,
+          3
         ],
         "label": "Gut!",
         "emoji": "⭐"
@@ -285,7 +146,7 @@
       {
         "range": [
           0,
-          4
+          2
         ],
         "label": "Noch üben!",
         "emoji": "📝"

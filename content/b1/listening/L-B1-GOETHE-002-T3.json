@@ -8,142 +8,85 @@
   "audio_file": "/audio/listening/B1/Teil3-Gespraech-zwei-Personen/L-B1-GOETHE-002-T3.mp3",
   "metadata": {
     "generated_at": "2026-03-19T10:04:11.170784",
-    "version": 1,
+    "version": 4,
     "gespraech_count": 6,
-    "source_script": "data/scripts/B1/Teil3-Gespraech-zwei-Personen/L-B1-GOETHE-002-T3.json"
+    "source_script": "data/scripts/B1/Teil3-Gespraech-zwei-Personen/L-B1-GOETHE-002-T3.json",
+    "regenerated_at": "2026-03-20T07:45:14.494Z"
   },
   "questions": [
     {
       "id": "Q1",
       "item": 1,
       "type": "richtig_falsch",
-      "statement": "Die Personen kennen sich schon lange.",
+      "statement": "Die Person kommt aus Frankfurt.",
       "answer": "falsch",
       "points": 1,
       "explanation": {
-        "de": "Falsch. Die Personen stellen sich vor, sie kennen sich noch nicht.",
-        "vi": "Sai. Họ đang tự giới thiệu, chưa quen nhau.",
-        "key_evidence": "vorstellen",
-        "key_vocabulary": [
-          {
-            "word": "kennen",
-            "meaning": "to know"
-          }
-        ]
+        "de": "Falsch. Die Person kommt aus Unfall.",
+        "vi": "Sai.",
+        "key_evidence": "Falsch. Die Person kommt aus Unfall.",
+        "key_vocabulary": []
       }
     },
     {
       "id": "Q2",
       "item": 2,
       "type": "richtig_falsch",
-      "statement": "Die Personen kennen sich schon lange.",
-      "answer": "falsch",
+      "statement": "Unfall wird erwähnt.",
+      "answer": "richtig",
       "points": 1,
       "explanation": {
-        "de": "Falsch. Die Personen stellen sich vor, sie kennen sich noch nicht.",
-        "vi": "Sai. Họ đang tự giới thiệu, chưa quen nhau.",
-        "key_evidence": "vorstellen",
-        "key_vocabulary": [
-          {
-            "word": "kennen",
-            "meaning": "to know"
-          }
-        ]
+        "de": "Richtig. Unfall wird genannt.",
+        "vi": "Đúng.",
+        "key_evidence": "Richtig. Unfall wird genannt.",
+        "key_vocabulary": []
       }
     },
     {
       "id": "Q3",
       "item": 3,
       "type": "richtig_falsch",
-      "statement": "Die Person kommt aus Deutschland.",
-      "answer": "richtig",
+      "statement": "Die Person kommt aus Stuttgart.",
+      "answer": "falsch",
       "points": 1,
       "explanation": {
-        "de": "Richtig. Man hört: 'aus Deutschland'.",
-        "vi": "Đúng. Ta nghe: 'aus Deutschland'.",
-        "key_evidence": "aus Deutschland",
-        "key_vocabulary": [
-          {
-            "word": "kommen aus",
-            "meaning": "to come from"
-          }
-        ]
+        "de": "Falsch. Die Person kommt aus Unfall.",
+        "vi": "Sai.",
+        "key_evidence": "Falsch. Die Person kommt aus Unfall.",
+        "key_vocabulary": []
       }
     },
     {
       "id": "Q4",
       "item": 4,
       "type": "richtig_falsch",
-      "statement": "Die Personen kennen sich schon lange.",
+      "statement": "Die Person kommt aus Bremen.",
       "answer": "falsch",
       "points": 1,
       "explanation": {
-        "de": "Falsch. Die Personen stellen sich vor, sie kennen sich noch nicht.",
-        "vi": "Sai. Họ đang tự giới thiệu, chưa quen nhau.",
-        "key_evidence": "vorstellen",
-        "key_vocabulary": [
-          {
-            "word": "kennen",
-            "meaning": "to know"
-          }
-        ]
-      }
-    },
-    {
-      "id": "Q5",
-      "item": 5,
-      "type": "richtig_falsch",
-      "statement": "Die Person kommt aus Deutschland.",
-      "answer": "richtig",
-      "points": 1,
-      "explanation": {
-        "de": "Richtig. Man hört: 'aus Deutschland'.",
-        "vi": "Đúng. Ta nghe: 'aus Deutschland'.",
-        "key_evidence": "aus Deutschland",
-        "key_vocabulary": [
-          {
-            "word": "kommen aus",
-            "meaning": "to come from"
-          }
-        ]
-      }
-    },
-    {
-      "id": "Q6",
-      "item": 6,
-      "type": "richtig_falsch",
-      "statement": "Die Personen kennen sich schon lange.",
-      "answer": "falsch",
-      "points": 1,
-      "explanation": {
-        "de": "Falsch. Die Personen stellen sich vor, sie kennen sich noch nicht.",
-        "vi": "Sai. Họ đang tự giới thiệu, chưa quen nhau.",
-        "key_evidence": "vorstellen",
-        "key_vocabulary": [
-          {
-            "word": "kennen",
-            "meaning": "to know"
-          }
-        ]
+        "de": "Falsch. Die Person kommt aus Unfall.",
+        "vi": "Sai.",
+        "key_evidence": "Falsch. Die Person kommt aus Unfall.",
+        "key_vocabulary": []
       }
     }
   ],
   "scoring": {
-    "total_points": 6,
-    "pass_threshold": 4,
+    "total_points": 4,
+    "pass_threshold": 3,
     "grading": [
       {
         "range": [
-          6,
-          6
+          4,
+          4
         ],
         "label": "Ausgezeichnet!",
         "emoji": "⭐⭐⭐"
       },
       {
         "range": [
-          4,
-          5
+          3,
+          3
         ],
         "label": "Sehr gut!",
         "emoji": "⭐⭐"
@@ -151,7 +94,7 @@
       {
         "range": [
           2,
-          3
+          2
         ],
         "label": "Gut!",
         "emoji": "⭐"

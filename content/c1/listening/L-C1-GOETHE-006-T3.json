@@ -8,115 +8,77 @@
   "audio_file": "/audio/listening/C1/Teil3-Diskussion-in-Abschnitten/L-C1-GOETHE-006-T3.mp3",
   "metadata": {
     "generated_at": "2026-03-19T11:27:15.968625",
-    "version": 1,
+    "version": 4,
     "gespraech_count": 5,
-    "source_script": "data/scripts/C1/Teil3-Diskussion-in-Abschnitten/L-C1-GOETHE-006-T3.json"
+    "source_script": "data/scripts/C1/Teil3-Diskussion-in-Abschnitten/L-C1-GOETHE-006-T3.json",
+    "regenerated_at": "2026-03-20T07:45:14.569Z"
   },
   "questions": [
     {
       "id": "Q1",
       "item": 1,
       "type": "richtig_falsch",
-      "statement": "Die Person heißt überzeugt.",
-      "answer": "richtig",
+      "statement": "Eine Person heißt Michael.",
+      "answer": "falsch",
       "points": 1,
       "explanation": {
-        "de": "Richtig. Man hört: 'überzeugt'.",
-        "vi": "Đúng. Ta nghe thấy tên 'überzeugt'.",
-        "key_evidence": "überzeugt",
-        "key_vocabulary": [
-          {
-            "word": "heißen",
-            "meaning": "to be called"
-          }
-        ]
+        "de": "Falsch. Die Person heißt Wegner.",
+        "vi": "Sai.",
+        "key_evidence": "Falsch. Die Person heißt Wegner.",
+        "key_vocabulary": []
       }
     },
     {
       "id": "Q2",
       "item": 2,
       "type": "richtig_falsch",
-      "statement": "Die Personen kennen sich schon lange.",
-      "answer": "falsch",
+      "statement": "Eine Person heißt Wegner.",
+      "answer": "richtig",
       "points": 1,
       "explanation": {
-        "de": "Falsch. Die Personen stellen sich vor, sie kennen sich noch nicht.",
-        "vi": "Sai. Họ đang tự giới thiệu, chưa quen nhau.",
-        "key_evidence": "vorstellen",
-        "key_vocabulary": [
-          {
-            "word": "kennen",
-            "meaning": "to know"
-          }
-        ]
+        "de": "Richtig. Man hört den Namen \"Wegner\".",
+        "vi": "Đúng.",
+        "key_evidence": "Richtig. Man hört den Namen \"Wegner\".",
+        "key_vocabulary": []
       }
     },
     {
       "id": "Q3",
       "item": 3,
       "type": "richtig_falsch",
-      "statement": "Die Personen kennen sich schon lange.",
+      "statement": "Eine Person heißt Petra.",
       "answer": "falsch",
       "points": 1,
       "explanation": {
-        "de": "Falsch. Die Personen stellen sich vor, sie kennen sich noch nicht.",
-        "vi": "Sai. Họ đang tự giới thiệu, chưa quen nhau.",
-        "key_evidence": "vorstellen",
-        "key_vocabulary": [
-          {
-            "word": "kennen",
-            "meaning": "to know"
-          }
-        ]
+        "de": "Falsch. Die Person heißt Wegner.",
+        "vi": "Sai.",
+        "key_evidence": "Falsch. Die Person heißt Wegner.",
+        "key_vocabulary": []
       }
     },
     {
       "id": "Q4",
       "item": 4,
       "type": "richtig_falsch",
-      "statement": "Die Personen kennen sich schon lange.",
+      "statement": "Eine Person heißt Julia.",
       "answer": "falsch",
       "points": 1,
       "explanation": {
-        "de": "Falsch. Die Personen stellen sich vor, sie kennen sich noch nicht.",
-        "vi": "Sai. Họ đang tự giới thiệu, chưa quen nhau.",
-        "key_evidence": "vorstellen",
-        "key_vocabulary": [
-          {
-            "word": "kennen",
-            "meaning": "to know"
-          }
-        ]
-      }
-    },
-    {
-      "id": "Q5",
-      "item": 5,
-      "type": "richtig_falsch",
-      "statement": "Die Personen kennen sich schon lange.",
-      "answer": "falsch",
-      "points": 1,
-      "explanation": {
-        "de": "Falsch. Die Personen stellen sich vor, sie kennen sich noch nicht.",
-        "vi": "Sai. Họ đang tự giới thiệu, chưa quen nhau.",
-        "key_evidence": "vorstellen",
-        "key_vocabulary": [
-          {
-            "word": "kennen",
-            "meaning": "to know"
-          }
-        ]
+        "de": "Falsch. Die Person heißt Wegner.",
+        "vi": "Sai.",
+        "key_evidence": "Falsch. Die Person heißt Wegner.",
+        "key_vocabulary": []
       }
     }
   ],
   "scoring": {
-    "total_points": 5,
+    "total_points": 4,
     "pass_threshold": 3,
     "grading": [
       {
         "range": [
-          5,
-          5
+          4,
+          4
         ],
         "label": "Ausgezeichnet!",
         "emoji": "⭐⭐⭐"
@@ -124,7 +86,7 @@
       {
         "range": [
           3,
-          4
+          3
         ],
         "label": "Sehr gut!",
         "emoji": "⭐⭐"

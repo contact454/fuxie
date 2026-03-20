@@ -3,130 +3,93 @@
   "level": "C1",
   "teil": 1,
   "teil_name": "Podcast oder Rezension",
-  "task_type": "zuordnung",
+  "task_type": "mc_abc",
   "topic": "EU-Familienpolitik und Gleichstellung",
   "audio_file": "/audio/listening/C1/Teil1-Podcast-oder-Rezension/L-C1-GOETHE-003-T1.mp3",
   "metadata": {
     "generated_at": "2026-03-19T11:27:15.941828",
-    "version": 1,
+    "version": 2,
     "gespraech_count": 5,
-    "source_script": "data/scripts/C1/Teil1-Podcast-oder-Rezension/L-C1-GOETHE-003-T1.json"
+    "source_script": "data/scripts/C1/Teil1-Podcast-oder-Rezension/L-C1-GOETHE-003-T1.json",
+    "regenerated_at": "2026-03-20T07:45:14.559Z"
   },
   "questions": [
     {
       "id": "Q1",
-      "item": 1,
-      "type": "zuordnung",
-      "statement": "Willkommen bei unserem europapolitischen Podcast 'Europa ver...",
-      "options": [
-        1,
-        2,
-        3,
-        4,
-        5
-      ],
-      "answer": 1,
+      "gespraech": 1,
+      "type": "mc_abc",
+      "question": "Worum geht es im Gespräch 1?",
+      "options": {
+        "a": "Bildung und Schule",
+        "b": "Arbeit und Beruf",
+        "c": "Einkaufen und Geld"
+      },
+      "answer": "c",
       "points": 1,
       "explanation": {
-        "de": "Diese Aussage gehört zu Abschnitt 1.",
-        "vi": "Câu này thuộc phần 1.",
-        "key_evidence": "Willkommen bei unserem europapolitischen",
+        "de": "Man hört: \"Einkaufen und Geld\".",
+        "vi": "",
+        "key_evidence": "Einkaufen und Geld",
         "key_vocabulary": []
       }
     },
     {
       "id": "Q2",
-      "item": 2,
-      "type": "zuordnung",
-      "statement": "Das konservative Familienmodell mit dem männlichen Alleinver...",
-      "options": [
-        1,
-        2,
-        3,
-        4,
-        5
-      ],
-      "answer": 2,
+      "gespraech": 1,
+      "type": "mc_abc",
+      "question": "Woher kommt die Person (Gespräch 1)?",
+      "options": {
+        "a": "Beruf",
+        "b": "Wien",
+        "c": "Hannover"
+      },
+      "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Diese Aussage gehört zu Abschnitt 2.",
-        "vi": "Câu này thuộc phần 2.",
-        "key_evidence": "Das konservative Familienmodell mit dem ",
-        "key_vocabulary": []
+        "de": "Man hört: \"Beruf\".",
+        "vi": "",
+        "key_evidence": "Beruf",
+        "key_vocabulary": [
+          {
+            "w": "kommen aus",
+            "m": "to come from"
+          }
+        ]
       }
     },
     {
       "id": "Q3",
-      "item": 3,
-      "type": "zuordnung",
-      "statement": "Frankreich hat ein besonders interessantes Modell: Die Kinde...",
-      "options": [
-        1,
-        2,
-        3,
-        4,
-        5
-      ],
-      "answer": 3,
+      "gespraech": 1,
+      "type": "mc_abc",
+      "question": "Was macht die Person beruflich (Gespräch 1)?",
+      "options": {
+        "a": "Vorbild",
+        "b": "Ingenieur",
+        "c": "Arzt"
+      },
+      "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Diese Aussage gehört zu Abschnitt 3.",
-        "vi": "Câu này thuộc phần 3.",
-        "key_evidence": "Frankreich hat ein besonders interessant",
-        "key_vocabulary": []
-      }
-    },
-    {
-      "id": "Q4",
-      "item": 4,
-      "type": "zuordnung",
-      "statement": "Länder mit besserer Vereinbarkeit von Familie und Beruf habe...",
-      "options": [
-        1,
-        2,
-        3,
-        4,
-        5
-      ],
-      "answer": 4,
-      "points": 1,
-      "explanation": {
-        "de": "Diese Aussage gehört zu Abschnitt 4.",
-        "vi": "Câu này thuộc phần 4.",
-        "key_evidence": "Länder mit besserer Vereinbarkeit von Fa",
-        "key_vocabulary": []
-      }
-    },
-    {
-      "id": "Q5",
-      "item": 5,
-      "type": "zuordnung",
-      "statement": "Der Gender Pay Gap in der Europäischen Union liegt durchschn...",
-      "options": [
-        1,
-        2,
-        3,
-        4,
-        5
-      ],
-      "answer": 5,
-      "points": 1,
-      "explanation": {
-        "de": "Diese Aussage gehört zu Abschnitt 5.",
-        "vi": "Câu này thuộc phần 5.",
-        "key_evidence": "Der Gender Pay Gap in der Europäischen U",
-        "key_vocabulary": []
+        "de": "Man hört: \"Vorbild\".",
+        "vi": "",
+        "key_evidence": "Vorbild",
+        "key_vocabulary": [
+          {
+            "w": "Vorbild",
+            "m": "Vorbild"
+          }
+        ]
       }
     }
   ],
   "scoring": {
-    "total_points": 5,
-    "pass_threshold": 3,
+    "total_points": 3,
+    "pass_threshold": 2,
     "grading": [
       {
         "range": [
-          5,
-          5
+          3,
+          3
         ],
         "label": "Ausgezeichnet!",
         "emoji": "⭐⭐⭐"
@@ -134,7 +97,7 @@
       {
         "range": [
           3,
-          4
+          3
         ],
         "label": "Sehr gut!",
         "emoji": "⭐⭐"

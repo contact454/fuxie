@@ -8,55 +8,51 @@
   "audio_file": "/audio/listening/A1/Teil1-Kurze-Alltagsgespraeche/L-A1-GOETHE-005-T1.mp3",
   "metadata": {
     "generated_at": "2026-03-19T10:04:11.067651",
-    "version": 1,
+    "version": 4,
     "gespraech_count": 6,
-    "source_script": "data/scripts/A1/Teil1-Kurze-Alltagsgespraeche/L-A1-GOETHE-005-T1.json"
+    "source_script": "data/scripts/A1/Teil1-Kurze-Alltagsgespraeche/L-A1-GOETHE-005-T1.json",
+    "regenerated_at": "2026-03-20T07:45:14.445Z"
   },
   "questions": [
     {
       "id": "Q1",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Wo wohnt eine Person im Gespräch 1?",
+      "question": "Worum geht es im Gespräch 1?",
       "options": {
-        "a": "machen",
-        "b": "Köln",
-        "c": "Zürich"
+        "a": "Gesundheit und Körper",
+        "b": "Einkaufen und Geld",
+        "c": "Bildung und Schule"
       },
       "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: 'machen'.",
-        "vi": "Một người trong đoạn hội thoại 1 sống ở đâu?",
-        "key_evidence": "machen",
-        "key_vocabulary": [
-          {
-            "word": "wohnen",
-            "meaning": "to live"
-          }
-        ]
+        "de": "Im Gespräch hört man: \"Gesundheit und Körper\".",
+        "vi": "",
+        "key_evidence": "Gesundheit und Körper",
+        "key_vocabulary": []
       }
     },
     {
       "id": "Q2",
       "gespraech": 2,
       "type": "mc_abc",
-      "question": "Wo wohnt eine Person im Gespräch 2?",
+      "question": "Woher kommt die Person (Gespräch 2)?",
       "options": {
-        "a": "bisschen Husten",
-        "b": "München",
-        "c": "Leipzig"
+        "a": "Rezept",
+        "b": "Leipzig",
+        "c": "Hamburg"
       },
       "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: 'bisschen Husten'.",
-        "vi": "Một người trong đoạn hội thoại 2 sống ở đâu?",
-        "key_evidence": "bisschen Husten",
+        "de": "Im Gespräch hört man: \"Rezept\".",
+        "vi": "",
+        "key_evidence": "Rezept",
         "key_vocabulary": [
           {
-            "word": "wohnen",
-            "meaning": "to live"
+            "w": "kommen aus",
+            "m": "to come from"
           }
         ]
       }
@@ -65,22 +61,22 @@
       "id": "Q3",
       "gespraech": 3,
       "type": "mc_abc",
-      "question": "Was macht eine Person beruflich (Gespräch 3)?",
+      "question": "Was macht die Person beruflich (Gespräch 3)?",
       "options": {
-        "a": "Ingenieur",
-        "b": "Verkäufer",
-        "c": "Arzt"
+        "a": "Studentin",
+        "b": "Journalist",
+        "c": "Frau"
       },
       "answer": "c",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: 'Arzt'.",
-        "vi": "Một người làm nghề gì (đoạn 3)?",
-        "key_evidence": "Arzt",
+        "de": "Im Gespräch hört man: \"Frau\".",
+        "vi": "",
+        "key_evidence": "Frau",
         "key_vocabulary": [
           {
-            "word": "Arzt",
-            "meaning": "doctor (m)"
+            "w": "Frau",
+            "m": "Frau"
           }
         ]
       }
@@ -89,72 +85,57 @@
       "id": "Q4",
       "gespraech": 4,
       "type": "mc_abc",
-      "question": "Wo wohnt eine Person im Gespräch 4?",
+      "question": "Worum geht es im Gespräch 4?",
       "options": {
-        "a": "neues Rezept",
-        "b": "Stuttgart",
-        "c": "Hamburg"
+        "a": "Gesundheit und Körper",
+        "b": "Freizeit und Hobbys",
+        "c": "Essen und Trinken"
       },
       "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: 'neues Rezept'.",
-        "vi": "Một người trong đoạn hội thoại 4 sống ở đâu?",
-        "key_evidence": "neues Rezept",
-        "key_vocabulary": [
-          {
-            "word": "wohnen",
-            "meaning": "to live"
-          }
-        ]
+        "de": "Im Gespräch hört man: \"Gesundheit und Körper\".",
+        "vi": "",
+        "key_evidence": "Gesundheit und Körper",
+        "key_vocabulary": []
       }
     },
     {
       "id": "Q5",
       "gespraech": 5,
       "type": "mc_abc",
-      "question": "Wo wohnt eine Person im Gespräch 5?",
+      "question": "Worum geht es im Gespräch 5?",
       "options": {
-        "a": "Rücken tut",
-        "b": "Leipzig",
-        "c": "Hamburg"
+        "a": "Alltag",
+        "b": "Einkaufen und Geld",
+        "c": "Arbeit und Beruf"
       },
       "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: 'Rücken tut'.",
-        "vi": "Một người trong đoạn hội thoại 5 sống ở đâu?",
-        "key_evidence": "Rücken tut",
-        "key_vocabulary": [
-          {
-            "word": "wohnen",
-            "meaning": "to live"
-          }
-        ]
+        "de": "Im Gespräch hört man: \"Alltag\".",
+        "vi": "",
+        "key_evidence": "Alltag",
+        "key_vocabulary": []
       }
     },
     {
       "id": "Q6",
       "gespraech": 6,
       "type": "mc_abc",
-      "question": "Wo wohnt eine Person im Gespräch 6?",
+      "question": "Worum geht es im Gespräch 6?",
       "options": {
-        "a": "fünf Minuten",
-        "b": "Hamburg",
-        "c": "Stuttgart"
+        "a": "Alltag",
+        "b": "Einkaufen und Geld",
+        "c": "Arbeit und Beruf"
       },
       "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: 'fünf Minuten'.",
-        "vi": "Một người trong đoạn hội thoại 6 sống ở đâu?",
-        "key_evidence": "fünf Minuten",
-        "key_vocabulary": [
-          {
-            "word": "wohnen",
-            "meaning": "to live"
-          }
-        ]
+        "de": "Im Gespräch hört man: \"Alltag\".",
+        "vi": "",
+        "key_evidence": "Alltag",
+        "key_vocabulary": []
       }
     }
   ],
@@ -172,7 +153,7 @@
       },
       {
         "range": [
-          4,
+          5,
           5
         ],
         "label": "Sehr gut!",
@@ -180,8 +161,8 @@
       },
       {
         "range": [
-          2,
-          3
+          3,
+          4
         ],
         "label": "Gut!",
         "emoji": "⭐"
@@ -189,7 +170,7 @@
       {
         "range": [
           0,
-          1
+          2
         ],
         "label": "Noch üben!",
         "emoji": "📝"

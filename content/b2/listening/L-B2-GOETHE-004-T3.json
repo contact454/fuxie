@@ -3,165 +3,125 @@
   "level": "B2",
   "teil": 3,
   "teil_name": "Diskussion mehrere Personen",
-  "task_type": "zuordnung",
+  "task_type": "mc_abc",
   "topic": "Praktikumserfahrungen im Studium",
   "audio_file": "/audio/listening/B2/Teil3-Diskussion-mehrere-Personen/L-B2-GOETHE-004-T3.mp3",
   "metadata": {
     "generated_at": "2026-03-19T10:04:11.226361",
-    "version": 1,
+    "version": 2,
     "gespraech_count": 6,
-    "source_script": "data/scripts/B2/Teil3-Diskussion-mehrere-Personen/L-B2-GOETHE-004-T3.json"
+    "source_script": "data/scripts/B2/Teil3-Diskussion-mehrere-Personen/L-B2-GOETHE-004-T3.json",
+    "regenerated_at": "2026-03-20T07:45:14.530Z"
   },
   "questions": [
     {
       "id": "Q1",
-      "item": 1,
-      "type": "zuordnung",
-      "statement": "Willkommen zur Diskussion: Sind Praktika Ausbeutung oder Cha...",
-      "options": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6
-      ],
-      "answer": 1,
+      "gespraech": 1,
+      "type": "mc_abc",
+      "question": "Worum geht es im Gespräch 1?",
+      "options": {
+        "a": "Einkaufen und Geld",
+        "b": "Bildung und Schule",
+        "c": "Arbeit und Beruf"
+      },
+      "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Diese Aussage gehört zu Abschnitt 1.",
-        "vi": "Câu này thuộc phần 1.",
-        "key_evidence": "Willkommen zur Diskussion: Sind Praktika",
+        "de": "Man hört: \"Einkaufen und Geld\".",
+        "vi": "",
+        "key_evidence": "Einkaufen und Geld",
         "key_vocabulary": []
       }
     },
     {
       "id": "Q2",
-      "item": 2,
-      "type": "zuordnung",
-      "statement": "Aber das würde dazu führen, dass kleine Unternehmen und Vere...",
-      "options": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6
-      ],
-      "answer": 2,
+      "gespraech": 1,
+      "type": "mc_abc",
+      "question": "Wie heißt eine Person im Gespräch 1?",
+      "options": {
+        "a": "Thomas",
+        "b": "Andreas",
+        "c": "Wolf"
+      },
+      "answer": "c",
       "points": 1,
       "explanation": {
-        "de": "Diese Aussage gehört zu Abschnitt 2.",
-        "vi": "Câu này thuộc phần 2.",
-        "key_evidence": "Aber das würde dazu führen, dass kleine ",
-        "key_vocabulary": []
+        "de": "Man hört: \"Wolf\".",
+        "vi": "",
+        "key_evidence": "Wolf",
+        "key_vocabulary": [
+          {
+            "w": "heißen",
+            "m": "to be called"
+          }
+        ]
       }
     },
     {
       "id": "Q3",
-      "item": 3,
-      "type": "zuordnung",
-      "statement": "In der Kreativwirtschaft und im Journalismus sind unbezahlte...",
-      "options": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6
-      ],
-      "answer": 3,
+      "gespraech": 1,
+      "type": "mc_abc",
+      "question": "Woher kommt die Person (Gespräch 1)?",
+      "options": {
+        "a": "Geld",
+        "b": "Leipzig",
+        "c": "Köln"
+      },
+      "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Diese Aussage gehört zu Abschnitt 3.",
-        "vi": "Câu này thuộc phần 3.",
-        "key_evidence": "In der Kreativwirtschaft und im Journali",
-        "key_vocabulary": []
+        "de": "Man hört: \"Geld\".",
+        "vi": "",
+        "key_evidence": "Geld",
+        "key_vocabulary": [
+          {
+            "w": "kommen aus",
+            "m": "to come from"
+          }
+        ]
       }
     },
     {
       "id": "Q4",
-      "item": 4,
-      "type": "zuordnung",
-      "statement": "Deswegen fordern wir auch staatliche Zuschüsse für Praktika ...",
-      "options": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6
-      ],
-      "answer": 4,
+      "gespraech": 1,
+      "type": "mc_abc",
+      "question": "Was macht die Person beruflich (Gespräch 1)?",
+      "options": {
+        "a": "Praktikant",
+        "b": "Arzt",
+        "c": "Studentin"
+      },
+      "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Diese Aussage gehört zu Abschnitt 4.",
-        "vi": "Câu này thuộc phần 4.",
-        "key_evidence": "Deswegen fordern wir auch staatliche Zus",
-        "key_vocabulary": []
-      }
-    },
-    {
-      "id": "Q5",
-      "item": 5,
-      "type": "zuordnung",
-      "statement": "Ein weiteres Problem ist die rechtliche Grauzone bei sogenan...",
-      "options": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6
-      ],
-      "answer": 5,
-      "points": 1,
-      "explanation": {
-        "de": "Diese Aussage gehört zu Abschnitt 5.",
-        "vi": "Câu này thuộc phần 5.",
-        "key_evidence": "Ein weiteres Problem ist die rechtliche ",
-        "key_vocabulary": []
-      }
-    },
-    {
-      "id": "Q6",
-      "item": 6,
-      "type": "zuordnung",
-      "statement": "Vielen Dank für Ihre Expertise! Praktika müssen fair bezahlt...",
-      "options": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6
-      ],
-      "answer": 6,
-      "points": 1,
-      "explanation": {
-        "de": "Diese Aussage gehört zu Abschnitt 6.",
-        "vi": "Câu này thuộc phần 6.",
-        "key_evidence": "Vielen Dank für Ihre Expertise! Praktika",
-        "key_vocabulary": []
+        "de": "Man hört: \"Praktikant\".",
+        "vi": "",
+        "key_evidence": "Praktikant",
+        "key_vocabulary": [
+          {
+            "w": "Praktikant",
+            "m": "Praktikant"
+          }
+        ]
       }
     }
   ],
   "scoring": {
-    "total_points": 6,
-    "pass_threshold": 4,
+    "total_points": 4,
+    "pass_threshold": 3,
     "grading": [
       {
         "range": [
-          6,
-          6
+          4,
+          4
         ],
         "label": "Ausgezeichnet!",
         "emoji": "⭐⭐⭐"
       },
       {
         "range": [
-          4,
-          5
+          3,
+          3
         ],
         "label": "Sehr gut!",
         "emoji": "⭐⭐"
@@ -169,7 +129,7 @@
       {
         "range": [
           2,
-          3
+          2
         ],
         "label": "Gut!",
         "emoji": "⭐"

@@ -8,112 +8,93 @@
   "audio_file": "/audio/listening/B1/Teil1-Kurze-Texte/L-B1-GOETHE-011-T1.mp3",
   "metadata": {
     "generated_at": "2026-03-19T10:04:11.162309",
-    "version": 1,
+    "version": 2,
     "gespraech_count": 5,
-    "source_script": "data/scripts/B1/Teil1-Kurze-Texte/L-B1-GOETHE-011-T1.json"
+    "source_script": "data/scripts/B1/Teil1-Kurze-Texte/L-B1-GOETHE-011-T1.json",
+    "regenerated_at": "2026-03-20T07:45:14.518Z"
   },
   "questions": [
     {
       "id": "Q1",
       "item": 1,
       "type": "richtig_falsch",
-      "statement": "Die Personen kennen sich schon lange.",
+      "statement": "Die Person kommt aus Leipzig.",
       "answer": "falsch",
       "points": 1,
       "explanation": {
-        "de": "Falsch. Die Personen stellen sich vor, sie kennen sich noch nicht.",
-        "vi": "Sai. Họ đang tự giới thiệu, chưa quen nhau.",
-        "key_evidence": "vorstellen",
-        "key_vocabulary": [
-          {
-            "word": "kennen",
-            "meaning": "to know"
-          }
-        ]
+        "de": "Falsch. Die Person kommt aus Wahlplakaten.",
+        "vi": "Sai.",
+        "key_evidence": "Falsch. Die Person kommt aus Wahlplakaten.",
+        "key_vocabulary": []
       }
     },
     {
       "id": "Q2",
-      "gespraech": 2,
-      "type": "mc_abc",
-      "question": "Was macht eine Person beruflich (Gespräch 2)?",
-      "options": {
-        "a": "Studentin",
-        "b": "Krankenschwester",
-        "c": "Student"
-      },
-      "answer": "c",
+      "item": 2,
+      "type": "richtig_falsch",
+      "statement": "Johann wird erwähnt.",
+      "answer": "richtig",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: 'Student'.",
-        "vi": "Một người làm nghề gì (đoạn 2)?",
-        "key_evidence": "Student",
-        "key_vocabulary": [
-          {
-            "word": "Student",
-            "meaning": "student (m)"
-          }
-        ]
+        "de": "Richtig. Johann wird genannt.",
+        "vi": "Đúng.",
+        "key_evidence": "Richtig. Johann wird genannt.",
+        "key_vocabulary": []
       }
     },
     {
       "id": "Q3",
       "item": 3,
       "type": "richtig_falsch",
-      "statement": "Die Personen kennen sich schon lange.",
+      "statement": "Die Person kommt aus Düsseldorf.",
       "answer": "falsch",
       "points": 1,
       "explanation": {
-        "de": "Falsch. Die Personen stellen sich vor, sie kennen sich noch nicht.",
-        "vi": "Sai. Họ đang tự giới thiệu, chưa quen nhau.",
-        "key_evidence": "vorstellen",
-        "key_vocabulary": [
-          {
-            "word": "kennen",
-            "meaning": "to know"
-          }
-        ]
+        "de": "Falsch. Die Person kommt aus Rat.",
+        "vi": "Sai.",
+        "key_evidence": "Falsch. Die Person kommt aus Rat.",
+        "key_vocabulary": []
       }
     },
     {
       "id": "Q4",
-      "gespraech": 4,
+      "gespraech": 1,
       "type": "mc_abc",
-      "question": "Wo wohnt eine Person im Gespräch 4?",
+      "question": "Worum geht es im Gespräch 1?",
       "options": {
-        "a": "Hamburg zeigt",
-        "b": "Hamburg",
-        "c": "Stuttgart"
+        "a": "Einkaufen und Geld",
+        "b": "Medien und Kommunikation",
+        "c": "Umwelt und Natur"
       },
       "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: 'Hamburg zeigt'.",
-        "vi": "Một người trong đoạn hội thoại 4 sống ở đâu?",
-        "key_evidence": "Hamburg zeigt",
-        "key_vocabulary": [
-          {
-            "word": "wohnen",
-            "meaning": "to live"
-          }
-        ]
+        "de": "Man hört: \"Einkaufen und Geld\".",
+        "vi": "",
+        "key_evidence": "Einkaufen und Geld",
+        "key_vocabulary": []
       }
     },
     {
       "id": "Q5",
-      "item": 5,
-      "type": "richtig_falsch",
-      "statement": "Die Personen kennen sich schon lange.",
-      "answer": "falsch",
+      "gespraech": 1,
+      "type": "mc_abc",
+      "question": "Woher kommt die Person (Gespräch 1)?",
+      "options": {
+        "a": "Wahlplakaten",
+        "b": "Bremen",
+        "c": "Nürnberg"
+      },
+      "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Falsch. Die Personen stellen sich vor, sie kennen sich noch nicht.",
-        "vi": "Sai. Họ đang tự giới thiệu, chưa quen nhau.",
-        "key_evidence": "vorstellen",
+        "de": "Man hört: \"Wahlplakaten\".",
+        "vi": "",
+        "key_evidence": "Wahlplakaten",
         "key_vocabulary": [
           {
-            "word": "kennen",
-            "meaning": "to know"
+            "w": "kommen aus",
+            "m": "to come from"
           }
         ]
       }
@@ -133,7 +114,7 @@
       },
       {
         "range": [
-          3,
+          4,
           4
         ],
         "label": "Sehr gut!",
@@ -141,8 +122,8 @@
       },
       {
         "range": [
-          2,
-          2
+          3,
+          3
         ],
         "label": "Gut!",
         "emoji": "⭐"
@@ -150,7 +131,7 @@
       {
         "range": [
           0,
-          1
+          2
         ],
         "label": "Noch üben!",
         "emoji": "📝"

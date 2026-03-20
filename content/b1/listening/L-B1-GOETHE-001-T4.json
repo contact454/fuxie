@@ -3,130 +3,93 @@
   "level": "B1",
   "teil": 4,
   "teil_name": "Radiodiskussion",
-  "task_type": "zuordnung_sprecher",
+  "task_type": "mc_abc",
   "topic": "Museumsführung und kulturelle Veranstaltung",
   "audio_file": "/audio/listening/B1/Teil4-Radiodiskussion/L-B1-GOETHE-001-T4.mp3",
   "metadata": {
     "generated_at": "2026-03-19T10:04:11.176736",
-    "version": 1,
+    "version": 2,
     "gespraech_count": 5,
-    "source_script": "data/scripts/B1/Teil4-Radiodiskussion/L-B1-GOETHE-001-T4.json"
+    "source_script": "data/scripts/B1/Teil4-Radiodiskussion/L-B1-GOETHE-001-T4.json",
+    "regenerated_at": "2026-03-20T07:45:14.492Z"
   },
   "questions": [
     {
       "id": "Q1",
-      "item": 1,
-      "type": "zuordnung_sprecher",
-      "statement": "Willkommen zu unserer Diskussionsrunde 'Kultur für alle'. He...",
-      "options": [
-        1,
-        2,
-        3,
-        4,
-        5
-      ],
-      "answer": 1,
+      "gespraech": 1,
+      "type": "mc_abc",
+      "question": "Worum geht es im Gespräch 1?",
+      "options": {
+        "a": "Technik und Digitalisierung",
+        "b": "Familie und Freunde",
+        "c": "Freizeit und Hobbys"
+      },
+      "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Diese Aussage gehört zu Abschnitt 1.",
-        "vi": "Câu này thuộc phần 1.",
-        "key_evidence": "Willkommen zu unserer Diskussionsrunde '",
+        "de": "Man hört: \"Technik und Digitalisierung\".",
+        "vi": "",
+        "key_evidence": "Technik und Digitalisierung",
         "key_vocabulary": []
       }
     },
     {
       "id": "Q2",
-      "item": 2,
-      "type": "zuordnung_sprecher",
-      "statement": "Das stimmt natürlich, aber jüngere Besucher erwarten mehr In...",
-      "options": [
-        1,
-        2,
-        3,
-        4,
-        5
-      ],
-      "answer": 2,
+      "gespraech": 1,
+      "type": "mc_abc",
+      "question": "Wie heißt eine Person im Gespräch 1?",
+      "options": {
+        "a": "Petra",
+        "b": "Klein",
+        "c": "Maria"
+      },
+      "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Diese Aussage gehört zu Abschnitt 2.",
-        "vi": "Câu này thuộc phần 2.",
-        "key_evidence": "Das stimmt natürlich, aber jüngere Besuc",
-        "key_vocabulary": []
+        "de": "Man hört: \"Klein\".",
+        "vi": "",
+        "key_evidence": "Klein",
+        "key_vocabulary": [
+          {
+            "w": "heißen",
+            "m": "to be called"
+          }
+        ]
       }
     },
     {
       "id": "Q3",
-      "item": 3,
-      "type": "zuordnung_sprecher",
-      "statement": "Ein wichtiger Punkt. Wie sieht es mit dem Thema Finanzierung...",
-      "options": [
-        1,
-        2,
-        3,
-        4,
-        5
-      ],
-      "answer": 3,
+      "gespraech": 1,
+      "type": "mc_abc",
+      "question": "Woher kommt die Person (Gespräch 1)?",
+      "options": {
+        "a": "Zürich",
+        "b": "Leipzig",
+        "c": "Museen"
+      },
+      "answer": "c",
       "points": 1,
       "explanation": {
-        "de": "Diese Aussage gehört zu Abschnitt 3.",
-        "vi": "Câu này thuộc phần 3.",
-        "key_evidence": "Ein wichtiger Punkt. Wie sieht es mit de",
-        "key_vocabulary": []
-      }
-    },
-    {
-      "id": "Q4",
-      "item": 4,
-      "type": "zuordnung_sprecher",
-      "statement": "Frau Klein, was denken Sie zum Thema freier Eintritt in alle...",
-      "options": [
-        1,
-        2,
-        3,
-        4,
-        5
-      ],
-      "answer": 4,
-      "points": 1,
-      "explanation": {
-        "de": "Diese Aussage gehört zu Abschnitt 4.",
-        "vi": "Câu này thuộc phần 4.",
-        "key_evidence": "Frau Klein, was denken Sie zum Thema fre",
-        "key_vocabulary": []
-      }
-    },
-    {
-      "id": "Q5",
-      "item": 5,
-      "type": "zuordnung_sprecher",
-      "statement": "Und ich wünsche mir, dass Museen stärker auf Familien und Ki...",
-      "options": [
-        1,
-        2,
-        3,
-        4,
-        5
-      ],
-      "answer": 5,
-      "points": 1,
-      "explanation": {
-        "de": "Diese Aussage gehört zu Abschnitt 5.",
-        "vi": "Câu này thuộc phần 5.",
-        "key_evidence": "Und ich wünsche mir, dass Museen stärker",
-        "key_vocabulary": []
+        "de": "Man hört: \"Museen\".",
+        "vi": "",
+        "key_evidence": "Museen",
+        "key_vocabulary": [
+          {
+            "w": "kommen aus",
+            "m": "to come from"
+          }
+        ]
       }
     }
   ],
   "scoring": {
-    "total_points": 5,
-    "pass_threshold": 3,
+    "total_points": 3,
+    "pass_threshold": 2,
     "grading": [
       {
         "range": [
-          5,
-          5
+          3,
+          3
         ],
         "label": "Ausgezeichnet!",
         "emoji": "⭐⭐⭐"
@@ -134,7 +97,7 @@
       {
         "range": [
           3,
-          4
+          3
         ],
         "label": "Sehr gut!",
         "emoji": "⭐⭐"

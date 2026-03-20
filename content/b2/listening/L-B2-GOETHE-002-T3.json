@@ -3,165 +3,101 @@
   "level": "B2",
   "teil": 3,
   "teil_name": "Diskussion mehrere Personen",
-  "task_type": "zuordnung",
+  "task_type": "mc_abc",
   "topic": "Alternative Wohnformen",
   "audio_file": "/audio/listening/B2/Teil3-Diskussion-mehrere-Personen/L-B2-GOETHE-002-T3.mp3",
   "metadata": {
     "generated_at": "2026-03-19T10:04:11.225239",
-    "version": 1,
+    "version": 2,
     "gespraech_count": 6,
-    "source_script": "data/scripts/B2/Teil3-Diskussion-mehrere-Personen/L-B2-GOETHE-002-T3.json"
+    "source_script": "data/scripts/B2/Teil3-Diskussion-mehrere-Personen/L-B2-GOETHE-002-T3.json",
+    "regenerated_at": "2026-03-20T07:45:14.525Z"
   },
   "questions": [
     {
       "id": "Q1",
-      "item": 1,
-      "type": "zuordnung",
-      "statement": "Willkommen zur Diskussion über Wohnraum in der Stadt. Brauch...",
-      "options": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6
-      ],
-      "answer": 1,
+      "gespraech": 1,
+      "type": "mc_abc",
+      "question": "Worum geht es im Gespräch 1?",
+      "options": {
+        "a": "Gesundheit und Körper",
+        "b": "Einkaufen und Geld",
+        "c": "Freizeit und Hobbys"
+      },
+      "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Diese Aussage gehört zu Abschnitt 1.",
-        "vi": "Câu này thuộc phần 1.",
-        "key_evidence": "Willkommen zur Diskussion über Wohnraum ",
+        "de": "Man hört: \"Einkaufen und Geld\".",
+        "vi": "",
+        "key_evidence": "Einkaufen und Geld",
         "key_vocabulary": []
       }
     },
     {
       "id": "Q2",
-      "item": 2,
-      "type": "zuordnung",
-      "statement": "Das klingt spannend. Was unterscheidet Ihr Modell von einer ...",
-      "options": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6
-      ],
-      "answer": 2,
+      "gespraech": 1,
+      "type": "mc_abc",
+      "question": "Wie heißt eine Person im Gespräch 1?",
+      "options": {
+        "a": "Schmidt",
+        "b": "Petra",
+        "c": "Jörg"
+      },
+      "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Diese Aussage gehört zu Abschnitt 2.",
-        "vi": "Câu này thuộc phần 2.",
-        "key_evidence": "Das klingt spannend. Was unterscheidet I",
-        "key_vocabulary": []
+        "de": "Man hört: \"Schmidt\".",
+        "vi": "",
+        "key_evidence": "Schmidt",
+        "key_vocabulary": [
+          {
+            "w": "heißen",
+            "m": "to be called"
+          }
+        ]
       }
     },
     {
       "id": "Q3",
-      "item": 3,
-      "type": "zuordnung",
-      "statement": "In Berlin fehlen hunderttausend Wohnungen. Das kann keine Ge...",
-      "options": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6
-      ],
-      "answer": 3,
+      "gespraech": 1,
+      "type": "mc_abc",
+      "question": "Woher kommt die Person (Gespräch 1)?",
+      "options": {
+        "a": "Stuttgart",
+        "b": "Problem",
+        "c": "Wien"
+      },
+      "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Diese Aussage gehört zu Abschnitt 3.",
-        "vi": "Câu này thuộc phần 3.",
-        "key_evidence": "In Berlin fehlen hunderttausend Wohnunge",
-        "key_vocabulary": []
-      }
-    },
-    {
-      "id": "Q4",
-      "item": 4,
-      "type": "zuordnung",
-      "statement": "Das ist der Preis der Demokratie. Aber die Bewohner identifi...",
-      "options": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6
-      ],
-      "answer": 4,
-      "points": 1,
-      "explanation": {
-        "de": "Diese Aussage gehört zu Abschnitt 4.",
-        "vi": "Câu này thuộc phần 4.",
-        "key_evidence": "Das ist der Preis der Demokratie. Aber d",
-        "key_vocabulary": []
-      }
-    },
-    {
-      "id": "Q5",
-      "item": 5,
-      "type": "zuordnung",
-      "statement": "Das ist ein Skandal, wenn gleichzeitig Menschen keine bezahl...",
-      "options": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6
-      ],
-      "answer": 5,
-      "points": 1,
-      "explanation": {
-        "de": "Diese Aussage gehört zu Abschnitt 5.",
-        "vi": "Câu này thuộc phần 5.",
-        "key_evidence": "Das ist ein Skandal, wenn gleichzeitig M",
-        "key_vocabulary": []
-      }
-    },
-    {
-      "id": "Q6",
-      "item": 6,
-      "type": "zuordnung",
-      "statement": "Vorsichtig optimistisch. Das Bewusstsein für die Probleme wä...",
-      "options": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6
-      ],
-      "answer": 6,
-      "points": 1,
-      "explanation": {
-        "de": "Diese Aussage gehört zu Abschnitt 6.",
-        "vi": "Câu này thuộc phần 6.",
-        "key_evidence": "Vorsichtig optimistisch. Das Bewusstsein",
-        "key_vocabulary": []
+        "de": "Man hört: \"Problem\".",
+        "vi": "",
+        "key_evidence": "Problem",
+        "key_vocabulary": [
+          {
+            "w": "kommen aus",
+            "m": "to come from"
+          }
+        ]
       }
     }
   ],
   "scoring": {
-    "total_points": 6,
-    "pass_threshold": 4,
+    "total_points": 3,
+    "pass_threshold": 2,
     "grading": [
       {
         "range": [
-          6,
-          6
+          3,
+          3
         ],
         "label": "Ausgezeichnet!",
         "emoji": "⭐⭐⭐"
       },
       {
         "range": [
-          4,
-          5
+          3,
+          3
         ],
         "label": "Sehr gut!",
         "emoji": "⭐⭐"
@@ -169,7 +105,7 @@
       {
         "range": [
           2,
-          3
+          2
         ],
         "label": "Gut!",
         "emoji": "⭐"
