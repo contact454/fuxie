@@ -8,10 +8,10 @@
   "audio_file": "/audio/listening/B2/Teil2-Radiointerview-mit-Experte/L-B2-GOETHE-002-T2.mp3",
   "metadata": {
     "generated_at": "2026-03-19T10:04:11.216396",
-    "version": 4,
+    "version": 5,
     "gespraech_count": 6,
     "source_script": "data/scripts/B2/Teil2-Radiointerview-mit-Experte/L-B2-GOETHE-002-T2.json",
-    "regenerated_at": "2026-03-20T07:45:14.525Z"
+    "regenerated_at": "2026-03-20T07:53:02.676Z"
   },
   "questions": [
     {
@@ -28,12 +28,12 @@
       "points": 1,
       "explanation": {
         "de": "Man hört: \"Koch\".",
-        "vi": "",
+        "vi": "Một người trong đoạn 1 tên là gì?",
         "key_evidence": "Koch",
         "key_vocabulary": [
           {
-            "w": "heißen",
-            "m": "to be called"
+            "word": "heißen",
+            "meaning": "to be called"
           }
         ]
       }
@@ -42,22 +42,22 @@
       "id": "Q2",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Woher kommt die Person (Gespräch 1)?",
+      "question": "Wie heißt eine Person (Gespräch 1)?",
       "options": {
-        "a": "Nürnberg",
-        "b": "Köln",
-        "c": "Sabine"
+        "a": "Portugal",
+        "b": "Kiel",
+        "c": "Nigeria"
       },
-      "answer": "c",
+      "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Man hört: \"Sabine\".",
-        "vi": "",
-        "key_evidence": "Sabine",
+        "de": "Im Gespräch hört man den Namen \"Koch\".",
+        "vi": "Một người trong đoạn 1 tên là gì?",
+        "key_evidence": "Koch",
         "key_vocabulary": [
           {
-            "w": "kommen aus",
-            "m": "to come from"
+            "word": "heißen",
+            "meaning": "to be called"
           }
         ]
       }
@@ -76,12 +76,12 @@
       "points": 1,
       "explanation": {
         "de": "Man hört: \"Fahrzeuge\".",
-        "vi": "",
+        "vi": "Người đó làm nghề gì (đoạn 1)?",
         "key_evidence": "Fahrzeuge",
         "key_vocabulary": [
           {
-            "w": "Fahrzeuge",
-            "m": "Fahrzeuge"
+            "word": "Fahrzeuge",
+            "meaning": "Fahrzeuge"
           }
         ]
       }
@@ -90,19 +90,24 @@
       "id": "Q4",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Worum geht es im Gespräch 1?",
+      "question": "Woher kommt die Person (Gespräch 1)?",
       "options": {
-        "a": "Wohnung und Haushalt",
-        "b": "Technik und Digitalisierung",
-        "c": "Arbeit und Beruf"
+        "a": "Deutschland",
+        "b": "Indien",
+        "c": "Münster"
       },
       "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Man hört: \"Wohnung und Haushalt\".",
-        "vi": "",
-        "key_evidence": "Wohnung und Haushalt",
-        "key_vocabulary": []
+        "de": "Die Person kommt aus Deutschland.",
+        "vi": "Người đó đến từ đâu (đoạn 1)?",
+        "key_evidence": "Deutschland",
+        "key_vocabulary": [
+          {
+            "word": "kommen aus",
+            "meaning": "to come from"
+          }
+        ]
       }
     }
   ],

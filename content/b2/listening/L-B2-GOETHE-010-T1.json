@@ -8,23 +8,23 @@
   "audio_file": "/audio/listening/B2/Teil1-Alltagsaeusserungen/L-B2-GOETHE-010-T1.mp3",
   "metadata": {
     "generated_at": "2026-03-19T10:04:11.213183",
-    "version": 2,
+    "version": 4,
     "gespraech_count": 5,
     "source_script": "data/scripts/B2/Teil1-Alltagsaeusserungen/L-B2-GOETHE-010-T1.json",
-    "regenerated_at": "2026-03-20T07:45:14.544Z"
+    "regenerated_at": "2026-03-20T07:53:59.201Z"
   },
   "questions": [
     {
       "id": "Q1",
       "item": 1,
       "type": "richtig_falsch",
-      "statement": "Die Person kommt aus Berlin.",
+      "statement": "Die Person kommt aus Belgien.",
       "answer": "falsch",
       "points": 1,
       "explanation": {
-        "de": "Falsch. Die Person kommt aus Freund.",
+        "de": "Falsch. Die Aussage stimmt nicht mit dem Hörtext überein.",
         "vi": "Sai.",
-        "key_evidence": "Falsch. Die Person kommt aus Freund.",
+        "key_evidence": "Die Person kommt aus Belgien.",
         "key_vocabulary": []
       }
     },
@@ -36,9 +36,9 @@
       "answer": "richtig",
       "points": 1,
       "explanation": {
-        "de": "Richtig. Freund wird genannt.",
+        "de": "Richtig. Die Aussage stimmt mit dem Hörtext überein.",
         "vi": "Đúng.",
-        "key_evidence": "Richtig. Freund wird genannt.",
+        "key_evidence": "Freund wird erwähnt.",
         "key_vocabulary": []
       }
     },
@@ -46,7 +46,7 @@
       "id": "Q3",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Worum geht es im Gespräch 1?",
+      "question": "Welches Thema wird besprochen (Gespräch 1)?",
       "options": {
         "a": "Gesundheit und Körper",
         "b": "Freizeit und Hobbys",
@@ -56,7 +56,7 @@
       "points": 1,
       "explanation": {
         "de": "Man hört: \"Einkaufen und Geld\".",
-        "vi": "",
+        "vi": "Đoạn hội thoại 1 nói về chủ đề gì?",
         "key_evidence": "Einkaufen und Geld",
         "key_vocabulary": []
       }
@@ -65,24 +65,19 @@
       "id": "Q4",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Woher kommt die Person (Gespräch 1)?",
+      "question": "Welches Thema wird besprochen (Gespräch 1)?",
       "options": {
-        "a": "Frankfurt",
-        "b": "Stuttgart",
-        "c": "Freund"
+        "a": "Irak",
+        "b": "Kanada",
+        "c": "Würzburg"
       },
-      "answer": "c",
+      "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Man hört: \"Freund\".",
-        "vi": "",
-        "key_evidence": "Freund",
-        "key_vocabulary": [
-          {
-            "w": "kommen aus",
-            "m": "to come from"
-          }
-        ]
+        "de": "Das Hauptthema ist \"Einkaufen\".",
+        "vi": "Đoạn hội thoại 1 nói về chủ đề gì?",
+        "key_evidence": "Einkaufen",
+        "key_vocabulary": []
       }
     }
   ],

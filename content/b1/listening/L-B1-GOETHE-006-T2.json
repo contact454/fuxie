@@ -8,10 +8,10 @@
   "audio_file": "/audio/listening/B1/Teil2-Fuehrung-oder-Monolog/L-B1-GOETHE-006-T2.mp3",
   "metadata": {
     "generated_at": "2026-03-19T10:04:11.166224",
-    "version": 4,
+    "version": 5,
     "gespraech_count": 5,
     "source_script": "data/scripts/B1/Teil2-Fuehrung-oder-Monolog/L-B1-GOETHE-006-T2.json",
-    "regenerated_at": "2026-03-20T07:45:14.506Z"
+    "regenerated_at": "2026-03-20T07:53:02.659Z"
   },
   "questions": [
     {
@@ -28,12 +28,12 @@
       "points": 1,
       "explanation": {
         "de": "Man hört: \"Petra\".",
-        "vi": "",
+        "vi": "Một người trong đoạn 1 tên là gì?",
         "key_evidence": "Petra",
         "key_vocabulary": [
           {
-            "w": "heißen",
-            "m": "to be called"
+            "word": "heißen",
+            "meaning": "to be called"
           }
         ]
       }
@@ -42,22 +42,22 @@
       "id": "Q2",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Woher kommt die Person (Gespräch 1)?",
+      "question": "Wie heißt eine Person (Gespräch 1)?",
       "options": {
-        "a": "Hannover",
-        "b": "Wien",
-        "c": "Name"
+        "a": "Melbourne",
+        "b": "Essen",
+        "c": "Stuttgart"
       },
       "answer": "c",
       "points": 1,
       "explanation": {
-        "de": "Man hört: \"Name\".",
-        "vi": "",
-        "key_evidence": "Name",
+        "de": "Im Gespräch hört man den Namen \"Petra\".",
+        "vi": "Một người trong đoạn 1 tên là gì?",
+        "key_evidence": "Petra",
         "key_vocabulary": [
           {
-            "w": "kommen aus",
-            "m": "to come from"
+            "word": "heißen",
+            "meaning": "to be called"
           }
         ]
       }
@@ -66,19 +66,24 @@
       "id": "Q3",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Worum geht es im Gespräch 1?",
+      "question": "Woher kommt die Person (Gespräch 1)?",
       "options": {
-        "a": "Technik und Digitalisierung",
-        "b": "Freizeit und Hobbys",
-        "c": "Reisen und Verkehr"
+        "a": "Dresden",
+        "b": "Amsterdam",
+        "c": "Brasilien"
       },
-      "answer": "c",
+      "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Man hört: \"Reisen und Verkehr\".",
-        "vi": "",
-        "key_evidence": "Reisen und Verkehr",
-        "key_vocabulary": []
+        "de": "Die Person kommt aus Dresden.",
+        "vi": "Người đó đến từ đâu (đoạn 1)?",
+        "key_evidence": "Dresden",
+        "key_vocabulary": [
+          {
+            "word": "kommen aus",
+            "meaning": "to come from"
+          }
+        ]
       }
     }
   ],

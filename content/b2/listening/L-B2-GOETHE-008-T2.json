@@ -8,10 +8,10 @@
   "audio_file": "/audio/listening/B2/Teil2-Radiointerview-mit-Experte/L-B2-GOETHE-008-T2.mp3",
   "metadata": {
     "generated_at": "2026-03-19T10:04:11.220853",
-    "version": 4,
+    "version": 6,
     "gespraech_count": 6,
     "source_script": "data/scripts/B2/Teil2-Radiointerview-mit-Experte/L-B2-GOETHE-008-T2.json",
-    "regenerated_at": "2026-03-20T07:45:14.539Z"
+    "regenerated_at": "2026-03-20T07:53:59.200Z"
   },
   "questions": [
     {
@@ -28,12 +28,12 @@
       "points": 1,
       "explanation": {
         "de": "Man hört: \"Claudia\".",
-        "vi": "",
+        "vi": "Một người trong đoạn 1 tên là gì?",
         "key_evidence": "Claudia",
         "key_vocabulary": [
           {
-            "w": "heißen",
-            "m": "to be called"
+            "word": "heißen",
+            "meaning": "to be called"
           }
         ]
       }
@@ -42,22 +42,22 @@
       "id": "Q2",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Woher kommt die Person (Gespräch 1)?",
+      "question": "Wie heißt eine Person (Gespräch 1)?",
       "options": {
-        "a": "Dr",
-        "b": "Leipzig",
-        "c": "Köln"
+        "a": "Indonesien",
+        "b": "Wolfsburg",
+        "c": "Chemnitz"
       },
-      "answer": "a",
+      "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Man hört: \"Dr\".",
-        "vi": "",
+        "de": "Im Gespräch hört man den Namen \"Dr\".",
+        "vi": "Một người trong đoạn 1 tên là gì?",
         "key_evidence": "Dr",
         "key_vocabulary": [
           {
-            "w": "kommen aus",
-            "m": "to come from"
+            "word": "heißen",
+            "meaning": "to be called"
           }
         ]
       }
@@ -76,12 +76,12 @@
       "points": 1,
       "explanation": {
         "de": "Man hört: \"Mensch\".",
-        "vi": "",
+        "vi": "Người đó làm nghề gì (đoạn 1)?",
         "key_evidence": "Mensch",
         "key_vocabulary": [
           {
-            "w": "Mensch",
-            "m": "Mensch"
+            "word": "Mensch",
+            "meaning": "Mensch"
           }
         ]
       }
@@ -90,7 +90,7 @@
       "id": "Q4",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Worum geht es im Gespräch 1?",
+      "question": "Welches Thema wird besprochen (Gespräch 1)?",
       "options": {
         "a": "Wohnung und Haushalt",
         "b": "Arbeit und Beruf",
@@ -100,7 +100,7 @@
       "points": 1,
       "explanation": {
         "de": "Man hört: \"Einkaufen und Geld\".",
-        "vi": "",
+        "vi": "Đoạn hội thoại 1 nói về chủ đề gì?",
         "key_evidence": "Einkaufen und Geld",
         "key_vocabulary": []
       }

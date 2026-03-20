@@ -8,17 +8,17 @@
   "audio_file": "/audio/listening/B1/Teil4-Radiodiskussion/L-B1-GOETHE-008-T4.mp3",
   "metadata": {
     "generated_at": "2026-03-19T10:04:11.180762",
-    "version": 2,
+    "version": 4,
     "gespraech_count": 5,
     "source_script": "data/scripts/B1/Teil4-Radiodiskussion/L-B1-GOETHE-008-T4.json",
-    "regenerated_at": "2026-03-20T07:45:14.512Z"
+    "regenerated_at": "2026-03-20T07:53:59.195Z"
   },
   "questions": [
     {
       "id": "Q1",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Worum geht es im Gespräch 1?",
+      "question": "Welches Thema wird besprochen (Gespräch 1)?",
       "options": {
         "a": "Medien und Kommunikation",
         "b": "Essen und Trinken",
@@ -28,7 +28,7 @@
       "points": 1,
       "explanation": {
         "de": "Man hört: \"Einkaufen und Geld\".",
-        "vi": "",
+        "vi": "Đoạn hội thoại 1 nói về chủ đề gì?",
         "key_evidence": "Einkaufen und Geld",
         "key_vocabulary": []
       }
@@ -47,12 +47,12 @@
       "points": 1,
       "explanation": {
         "de": "Man hört: \"Jung\".",
-        "vi": "",
+        "vi": "Một người trong đoạn 1 tên là gì?",
         "key_evidence": "Jung",
         "key_vocabulary": [
           {
-            "w": "heißen",
-            "m": "to be called"
+            "word": "heißen",
+            "meaning": "to be called"
           }
         ]
       }
@@ -61,22 +61,22 @@
       "id": "Q3",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Woher kommt die Person (Gespräch 1)?",
+      "question": "Wie heißt eine Person (Gespräch 1)?",
       "options": {
-        "a": "Stuttgart",
-        "b": "Zürich",
-        "c": "Problem"
+        "a": "Lübeck",
+        "b": "Dänemark",
+        "c": "Dortmund"
       },
       "answer": "c",
       "points": 1,
       "explanation": {
-        "de": "Man hört: \"Problem\".",
-        "vi": "",
-        "key_evidence": "Problem",
+        "de": "Im Gespräch hört man den Namen \"Jung\".",
+        "vi": "Một người trong đoạn 1 tên là gì?",
+        "key_evidence": "Jung",
         "key_vocabulary": [
           {
-            "w": "kommen aus",
-            "m": "to come from"
+            "word": "heißen",
+            "meaning": "to be called"
           }
         ]
       }
@@ -95,12 +95,12 @@
       "points": 1,
       "explanation": {
         "de": "Man hört: \"Verbraucher\".",
-        "vi": "",
+        "vi": "Người đó làm nghề gì (đoạn 1)?",
         "key_evidence": "Verbraucher",
         "key_vocabulary": [
           {
-            "w": "Verbraucher",
-            "m": "Verbraucher"
+            "word": "Verbraucher",
+            "meaning": "Verbraucher"
           }
         ]
       }

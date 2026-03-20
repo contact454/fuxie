@@ -8,23 +8,23 @@
   "audio_file": "/audio/listening/B2/Teil1-Alltagsaeusserungen/L-B2-GOETHE-008-T1.mp3",
   "metadata": {
     "generated_at": "2026-03-19T10:04:11.211644",
-    "version": 2,
+    "version": 4,
     "gespraech_count": 5,
     "source_script": "data/scripts/B2/Teil1-Alltagsaeusserungen/L-B2-GOETHE-008-T1.json",
-    "regenerated_at": "2026-03-20T07:45:14.538Z"
+    "regenerated_at": "2026-03-20T07:53:59.199Z"
   },
   "questions": [
     {
       "id": "Q1",
       "item": 1,
       "type": "richtig_falsch",
-      "statement": "Die Person kommt aus Frankfurt.",
+      "statement": "Die Person kommt aus Heidelberg.",
       "answer": "falsch",
       "points": 1,
       "explanation": {
-        "de": "Falsch. Die Person kommt aus Körper.",
+        "de": "Falsch. Die Aussage stimmt nicht mit dem Hörtext überein.",
         "vi": "Sai.",
-        "key_evidence": "Falsch. Die Person kommt aus Körper.",
+        "key_evidence": "Die Person kommt aus Heidelberg.",
         "key_vocabulary": []
       }
     },
@@ -36,9 +36,9 @@
       "answer": "richtig",
       "points": 1,
       "explanation": {
-        "de": "Richtig. Körper wird genannt.",
+        "de": "Richtig. Die Aussage stimmt mit dem Hörtext überein.",
         "vi": "Đúng.",
-        "key_evidence": "Richtig. Körper wird genannt.",
+        "key_evidence": "Körper wird erwähnt.",
         "key_vocabulary": []
       }
     },
@@ -46,13 +46,13 @@
       "id": "Q3",
       "item": 3,
       "type": "richtig_falsch",
-      "statement": "Die Person kommt aus Leipzig.",
+      "statement": "Die Person kommt aus Griechenland.",
       "answer": "falsch",
       "points": 1,
       "explanation": {
-        "de": "Falsch. Die Person kommt aus Körper.",
+        "de": "Falsch. Die Aussage stimmt nicht mit dem Hörtext überein.",
         "vi": "Sai.",
-        "key_evidence": "Falsch. Die Person kommt aus Körper.",
+        "key_evidence": "Die Person kommt aus Griechenland.",
         "key_vocabulary": []
       }
     },
@@ -60,7 +60,7 @@
       "id": "Q4",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Worum geht es im Gespräch 1?",
+      "question": "Welches Thema wird besprochen (Gespräch 1)?",
       "options": {
         "a": "Essen und Trinken",
         "b": "Gesundheit und Körper",
@@ -70,7 +70,7 @@
       "points": 1,
       "explanation": {
         "de": "Man hört: \"Einkaufen und Geld\".",
-        "vi": "",
+        "vi": "Đoạn hội thoại 1 nói về chủ đề gì?",
         "key_evidence": "Einkaufen und Geld",
         "key_vocabulary": []
       }
@@ -79,24 +79,19 @@
       "id": "Q5",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Woher kommt die Person (Gespräch 1)?",
+      "question": "Welches Thema wird besprochen (Gespräch 1)?",
       "options": {
-        "a": "Hamburg",
-        "b": "Bonn",
-        "c": "Körper"
+        "a": "Würzburg",
+        "b": "Indien",
+        "c": "Bayreuth"
       },
-      "answer": "c",
+      "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Man hört: \"Körper\".",
-        "vi": "",
-        "key_evidence": "Körper",
-        "key_vocabulary": [
-          {
-            "w": "kommen aus",
-            "m": "to come from"
-          }
-        ]
+        "de": "Das Hauptthema ist \"Einkaufen\".",
+        "vi": "Đoạn hội thoại 1 nói về chủ đề gì?",
+        "key_evidence": "Einkaufen",
+        "key_vocabulary": []
       }
     }
   ],

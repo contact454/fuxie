@@ -8,36 +8,41 @@
   "audio_file": "/audio/listening/A2/Teil3-Kurze-Einzelgespraeche/L-A2-GOETHE-002-T3.mp3",
   "metadata": {
     "generated_at": "2026-03-19T10:04:11.120225",
-    "version": 4,
+    "version": 6,
     "gespraech_count": 5,
     "source_script": "data/scripts/A2/Teil3-Kurze-Einzelgespraeche/L-A2-GOETHE-002-T3.json",
-    "regenerated_at": "2026-03-20T07:45:14.464Z"
+    "regenerated_at": "2026-03-20T07:53:59.187Z"
   },
   "questions": [
     {
       "id": "Q1",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Worum geht es im Gespräch 1?",
+      "question": "Woher kommt die Person (Gespräch 1)?",
       "options": {
-        "a": "Technik und Digitalisierung",
-        "b": "Wohnung und Haushalt",
-        "c": "Einkaufen und Geld"
+        "a": "Indien",
+        "b": "Stuttgart",
+        "c": "Berlin"
       },
       "answer": "c",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: \"Einkaufen und Geld\".",
-        "vi": "",
-        "key_evidence": "Einkaufen und Geld",
-        "key_vocabulary": []
+        "de": "Die Person kommt aus Berlin.",
+        "vi": "Người đó đến từ đâu (đoạn 1)?",
+        "key_evidence": "Berlin",
+        "key_vocabulary": [
+          {
+            "word": "kommen aus",
+            "meaning": "to come from"
+          }
+        ]
       }
     },
     {
       "id": "Q2",
       "gespraech": 2,
       "type": "mc_abc",
-      "question": "Worum geht es im Gespräch 2?",
+      "question": "Welches Thema wird besprochen (Gespräch 2)?",
       "options": {
         "a": "Einkaufen und Geld",
         "b": "Arbeit und Beruf",
@@ -47,7 +52,7 @@
       "points": 1,
       "explanation": {
         "de": "Im Gespräch hört man: \"Einkaufen und Geld\".",
-        "vi": "",
+        "vi": "Đoạn hội thoại 2 nói về chủ đề gì?",
         "key_evidence": "Einkaufen und Geld",
         "key_vocabulary": []
       }
@@ -56,7 +61,7 @@
       "id": "Q3",
       "gespraech": 3,
       "type": "mc_abc",
-      "question": "Worum geht es im Gespräch 3?",
+      "question": "Welches Thema wird besprochen (Gespräch 3)?",
       "options": {
         "a": "Einkaufen und Geld",
         "b": "Arbeit und Beruf",
@@ -66,7 +71,7 @@
       "points": 1,
       "explanation": {
         "de": "Im Gespräch hört man: \"Einkaufen und Geld\".",
-        "vi": "",
+        "vi": "Đoạn hội thoại 3 nói về chủ đề gì?",
         "key_evidence": "Einkaufen und Geld",
         "key_vocabulary": []
       }
@@ -75,7 +80,7 @@
       "id": "Q4",
       "gespraech": 4,
       "type": "mc_abc",
-      "question": "Worum geht es im Gespräch 4?",
+      "question": "Welches Thema wird besprochen (Gespräch 4)?",
       "options": {
         "a": "Umwelt und Natur",
         "b": "Einkaufen und Geld",
@@ -85,7 +90,7 @@
       "points": 1,
       "explanation": {
         "de": "Im Gespräch hört man: \"Einkaufen und Geld\".",
-        "vi": "",
+        "vi": "Đoạn hội thoại 4 nói về chủ đề gì?",
         "key_evidence": "Einkaufen und Geld",
         "key_vocabulary": []
       }
@@ -94,7 +99,7 @@
       "id": "Q5",
       "gespraech": 5,
       "type": "mc_abc",
-      "question": "Worum geht es im Gespräch 5?",
+      "question": "Welches Thema wird besprochen (Gespräch 5)?",
       "options": {
         "a": "Einkaufen und Geld",
         "b": "Wohnung und Haushalt",
@@ -104,7 +109,7 @@
       "points": 1,
       "explanation": {
         "de": "Im Gespräch hört man: \"Wohnung und Haushalt\".",
-        "vi": "",
+        "vi": "Đoạn hội thoại 5 nói về chủ đề gì?",
         "key_evidence": "Wohnung und Haushalt",
         "key_vocabulary": []
       }

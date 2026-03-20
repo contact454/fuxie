@@ -8,10 +8,10 @@
   "audio_file": "/audio/listening/B1/Teil1-Kurze-Texte/L-B1-GOETHE-005-T1.mp3",
   "metadata": {
     "generated_at": "2026-03-19T10:04:11.157630",
-    "version": 2,
+    "version": 4,
     "gespraech_count": 5,
     "source_script": "data/scripts/B1/Teil1-Kurze-Texte/L-B1-GOETHE-005-T1.json",
-    "regenerated_at": "2026-03-20T07:45:14.501Z"
+    "regenerated_at": "2026-03-20T07:53:59.193Z"
   },
   "questions": [
     {
@@ -22,9 +22,9 @@
       "answer": "falsch",
       "points": 1,
       "explanation": {
-        "de": "Falsch. Das Thema ist ein anderes.",
+        "de": "Falsch. Die Aussage stimmt nicht mit dem Hörtext überein.",
         "vi": "Sai.",
-        "key_evidence": "Falsch. Das Thema ist ein anderes.",
+        "key_evidence": "Es geht um eine Reise.",
         "key_vocabulary": []
       }
     },
@@ -36,9 +36,9 @@
       "answer": "richtig",
       "points": 1,
       "explanation": {
-        "de": "Richtig. Praktikum wird genannt.",
+        "de": "Richtig. Die Aussage stimmt mit dem Hörtext überein.",
         "vi": "Đúng.",
-        "key_evidence": "Richtig. Praktikum wird genannt.",
+        "key_evidence": "Praktikum wird erwähnt.",
         "key_vocabulary": []
       }
     },
@@ -50,9 +50,9 @@
       "answer": "falsch",
       "points": 1,
       "explanation": {
-        "de": "Falsch. Die Person kommt aus Deutschland.",
+        "de": "Falsch. Die Aussage stimmt nicht mit dem Hörtext überein.",
         "vi": "Sai.",
-        "key_evidence": "Falsch. Die Person kommt aus Deutschland.",
+        "key_evidence": "Die Person kommt aus Wien.",
         "key_vocabulary": []
       }
     },
@@ -60,7 +60,7 @@
       "id": "Q4",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Worum geht es im Gespräch 1?",
+      "question": "Welches Thema wird besprochen (Gespräch 1)?",
       "options": {
         "a": "Gesundheit und Körper",
         "b": "Bildung und Schule",
@@ -70,7 +70,7 @@
       "points": 1,
       "explanation": {
         "de": "Man hört: \"Arbeit und Beruf\".",
-        "vi": "",
+        "vi": "Đoạn hội thoại 1 nói về chủ đề gì?",
         "key_evidence": "Arbeit und Beruf",
         "key_vocabulary": []
       }
@@ -79,24 +79,19 @@
       "id": "Q5",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Woher kommt die Person (Gespräch 1)?",
+      "question": "Welches Thema wird besprochen (Gespräch 1)?",
       "options": {
-        "a": "Leipzig",
-        "b": "Stuttgart",
-        "c": "Praktikum"
+        "a": "Stuttgart",
+        "b": "Bangkok",
+        "c": "Aachen"
       },
-      "answer": "c",
+      "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Man hört: \"Praktikum\".",
-        "vi": "",
-        "key_evidence": "Praktikum",
-        "key_vocabulary": [
-          {
-            "w": "kommen aus",
-            "m": "to come from"
-          }
-        ]
+        "de": "Das Hauptthema ist \"Einkaufen\".",
+        "vi": "Đoạn hội thoại 1 nói về chủ đề gì?",
+        "key_evidence": "Einkaufen",
+        "key_vocabulary": []
       }
     }
   ],

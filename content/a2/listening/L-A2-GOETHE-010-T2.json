@@ -8,17 +8,17 @@
   "audio_file": "/audio/listening/A2/Teil2-Zusammenhaengendes-Gespraech/L-A2-GOETHE-010-T2.mp3",
   "metadata": {
     "generated_at": "2026-03-19T10:04:11.118444",
-    "version": 2,
+    "version": 4,
     "gespraech_count": 6,
     "source_script": "data/scripts/A2/Teil2-Zusammenhaengendes-Gespraech/L-A2-GOETHE-010-T2.json",
-    "regenerated_at": "2026-03-20T07:45:14.487Z"
+    "regenerated_at": "2026-03-20T07:53:59.190Z"
   },
   "questions": [
     {
       "id": "Q1",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Worum geht es im Gespräch 1?",
+      "question": "Welches Thema wird besprochen (Gespräch 1)?",
       "options": {
         "a": "Arbeit und Beruf",
         "b": "Bildung und Schule",
@@ -28,7 +28,7 @@
       "points": 1,
       "explanation": {
         "de": "Man hört: \"Reisen und Verkehr\".",
-        "vi": "",
+        "vi": "Đoạn hội thoại 1 nói về chủ đề gì?",
         "key_evidence": "Reisen und Verkehr",
         "key_vocabulary": []
       }
@@ -47,12 +47,12 @@
       "points": 1,
       "explanation": {
         "de": "Man hört: \"München\".",
-        "vi": "",
+        "vi": "Người đó đến từ đâu (đoạn 1)?",
         "key_evidence": "München",
         "key_vocabulary": [
           {
-            "w": "kommen aus",
-            "m": "to come from"
+            "word": "kommen aus",
+            "meaning": "to come from"
           }
         ]
       }

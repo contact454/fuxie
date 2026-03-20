@@ -8,17 +8,17 @@
   "audio_file": "/audio/listening/C2/Teil2-Spontanes-Gespraech/L-C2-GOETHE-012-T2.mp3",
   "metadata": {
     "generated_at": "2026-03-19T11:27:16.137195",
-    "version": 4,
+    "version": 6,
     "gespraech_count": 6,
     "source_script": "data/scripts/C2/Teil2-Spontanes-Gespraech/L-C2-GOETHE-012-T2.json",
-    "regenerated_at": "2026-03-20T07:45:14.616Z"
+    "regenerated_at": "2026-03-20T07:53:59.213Z"
   },
   "questions": [
     {
       "id": "Q1",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Worum geht es im Gespräch 1?",
+      "question": "Welches Thema wird besprochen (Gespräch 1)?",
       "options": {
         "a": "Wohnung und Haushalt",
         "b": "Einkaufen und Geld",
@@ -28,7 +28,7 @@
       "points": 1,
       "explanation": {
         "de": "Man hört: \"Wohnung und Haushalt\".",
-        "vi": "",
+        "vi": "Đoạn hội thoại 1 nói về chủ đề gì?",
         "key_evidence": "Wohnung und Haushalt",
         "key_vocabulary": []
       }
@@ -47,12 +47,12 @@
       "points": 1,
       "explanation": {
         "de": "Man hört: \"München\".",
-        "vi": "",
+        "vi": "Người đó đến từ đâu (đoạn 1)?",
         "key_evidence": "München",
         "key_vocabulary": [
           {
-            "w": "kommen aus",
-            "m": "to come from"
+            "word": "kommen aus",
+            "meaning": "to come from"
           }
         ]
       }
@@ -71,12 +71,12 @@
       "points": 1,
       "explanation": {
         "de": "Man hört: \"Studentin\".",
-        "vi": "",
+        "vi": "Người đó làm nghề gì (đoạn 1)?",
         "key_evidence": "Studentin",
         "key_vocabulary": [
           {
-            "w": "Studentin",
-            "m": "Studentin"
+            "word": "Studentin",
+            "meaning": "Studentin"
           }
         ]
       }

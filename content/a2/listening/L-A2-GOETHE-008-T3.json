@@ -8,17 +8,17 @@
   "audio_file": "/audio/listening/A2/Teil3-Kurze-Einzelgespraeche/L-A2-GOETHE-008-T3.mp3",
   "metadata": {
     "generated_at": "2026-03-19T10:04:11.123936",
-    "version": 4,
+    "version": 6,
     "gespraech_count": 5,
     "source_script": "data/scripts/A2/Teil3-Kurze-Einzelgespraeche/L-A2-GOETHE-008-T3.json",
-    "regenerated_at": "2026-03-20T07:45:14.482Z"
+    "regenerated_at": "2026-03-20T07:53:59.190Z"
   },
   "questions": [
     {
       "id": "Q1",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Worum geht es im Gespräch 1?",
+      "question": "Welches Thema wird besprochen (Gespräch 1)?",
       "options": {
         "a": "Arbeit und Beruf",
         "b": "Einkaufen und Geld",
@@ -28,7 +28,7 @@
       "points": 1,
       "explanation": {
         "de": "Im Gespräch hört man: \"Arbeit und Beruf\".",
-        "vi": "",
+        "vi": "Đoạn hội thoại 1 nói về chủ đề gì?",
         "key_evidence": "Arbeit und Beruf",
         "key_vocabulary": []
       }
@@ -37,50 +37,50 @@
       "id": "Q2",
       "gespraech": 2,
       "type": "mc_abc",
-      "question": "Woher kommt die Person (Gespräch 2)?",
+      "question": "Welches Thema wird besprochen (Gespräch 2)?",
       "options": {
-        "a": "Vorstellungsgespräch",
-        "b": "Nürnberg",
-        "c": "Zürich"
+        "a": "Dänemark",
+        "b": "Iran",
+        "c": "Indien"
       },
       "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: \"Vorstellungsgespräch\".",
-        "vi": "",
-        "key_evidence": "Vorstellungsgespräch",
-        "key_vocabulary": [
-          {
-            "w": "kommen aus",
-            "m": "to come from"
-          }
-        ]
+        "de": "Das Hauptthema ist \"Einkaufen\".",
+        "vi": "Đoạn hội thoại 2 nói về chủ đề gì?",
+        "key_evidence": "Einkaufen",
+        "key_vocabulary": []
       }
     },
     {
       "id": "Q3",
       "gespraech": 3,
       "type": "mc_abc",
-      "question": "Worum geht es im Gespräch 3?",
+      "question": "Woher kommt die Person (Gespräch 3)?",
       "options": {
-        "a": "Technik und Digitalisierung",
-        "b": "Arbeit und Beruf",
-        "c": "Einkaufen und Geld"
+        "a": "Potsdam",
+        "b": "Dresden",
+        "c": "Wolfsburg"
       },
-      "answer": "c",
+      "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: \"Einkaufen und Geld\".",
-        "vi": "",
-        "key_evidence": "Einkaufen und Geld",
-        "key_vocabulary": []
+        "de": "Die Person kommt aus Potsdam.",
+        "vi": "Người đó đến từ đâu (đoạn 3)?",
+        "key_evidence": "Potsdam",
+        "key_vocabulary": [
+          {
+            "word": "kommen aus",
+            "meaning": "to come from"
+          }
+        ]
       }
     },
     {
       "id": "Q4",
       "gespraech": 4,
       "type": "mc_abc",
-      "question": "Worum geht es im Gespräch 4?",
+      "question": "Welches Thema wird besprochen (Gespräch 4)?",
       "options": {
         "a": "Arbeit und Beruf",
         "b": "Essen und Trinken",
@@ -90,7 +90,7 @@
       "points": 1,
       "explanation": {
         "de": "Im Gespräch hört man: \"Alltag\".",
-        "vi": "",
+        "vi": "Đoạn hội thoại 4 nói về chủ đề gì?",
         "key_evidence": "Alltag",
         "key_vocabulary": []
       }
@@ -99,7 +99,7 @@
       "id": "Q5",
       "gespraech": 5,
       "type": "mc_abc",
-      "question": "Worum geht es im Gespräch 5?",
+      "question": "Welches Thema wird besprochen (Gespräch 5)?",
       "options": {
         "a": "Einkaufen und Geld",
         "b": "Arbeit und Beruf",
@@ -109,7 +109,7 @@
       "points": 1,
       "explanation": {
         "de": "Im Gespräch hört man: \"Einkaufen und Geld\".",
-        "vi": "",
+        "vi": "Đoạn hội thoại 5 nói về chủ đề gì?",
         "key_evidence": "Einkaufen und Geld",
         "key_vocabulary": []
       }

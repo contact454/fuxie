@@ -8,17 +8,17 @@
   "audio_file": "/audio/listening/A2/Teil2-Zusammenhaengendes-Gespraech/L-A2-GOETHE-001-T2.mp3",
   "metadata": {
     "generated_at": "2026-03-19T10:04:11.114091",
-    "version": 2,
+    "version": 4,
     "gespraech_count": 6,
     "source_script": "data/scripts/A2/Teil2-Zusammenhaengendes-Gespraech/L-A2-GOETHE-001-T2.json",
-    "regenerated_at": "2026-03-20T07:45:14.460Z"
+    "regenerated_at": "2026-03-20T07:53:59.187Z"
   },
   "questions": [
     {
       "id": "Q1",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Worum geht es im Gespräch 1?",
+      "question": "Welches Thema wird besprochen (Gespräch 1)?",
       "options": {
         "a": "Reisen und Verkehr",
         "b": "Gesundheit und Körper",
@@ -28,7 +28,7 @@
       "points": 1,
       "explanation": {
         "de": "Man hört: \"Reisen und Verkehr\".",
-        "vi": "",
+        "vi": "Đoạn hội thoại 1 nói về chủ đề gì?",
         "key_evidence": "Reisen und Verkehr",
         "key_vocabulary": []
       }
@@ -37,24 +37,19 @@
       "id": "Q2",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Woher kommt die Person (Gespräch 1)?",
+      "question": "Welches Thema wird besprochen (Gespräch 1)?",
       "options": {
-        "a": "Hamburg",
-        "b": "Zürich",
-        "c": "Biergarten"
+        "a": "Toronto",
+        "b": "Bonn",
+        "c": "Neuseeland"
       },
       "answer": "c",
       "points": 1,
       "explanation": {
-        "de": "Man hört: \"Biergarten\".",
-        "vi": "",
-        "key_evidence": "Biergarten",
-        "key_vocabulary": [
-          {
-            "w": "kommen aus",
-            "m": "to come from"
-          }
-        ]
+        "de": "Das Hauptthema ist \"Reisen\".",
+        "vi": "Đoạn hội thoại 1 nói về chủ đề gì?",
+        "key_evidence": "Reisen",
+        "key_vocabulary": []
       }
     }
   ],

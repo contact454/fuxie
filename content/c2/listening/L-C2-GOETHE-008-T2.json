@@ -8,17 +8,17 @@
   "audio_file": "/audio/listening/C2/Teil2-Spontanes-Gespraech/L-C2-GOETHE-008-T2.mp3",
   "metadata": {
     "generated_at": "2026-03-19T11:27:16.131765",
-    "version": 4,
+    "version": 6,
     "gespraech_count": 6,
     "source_script": "data/scripts/C2/Teil2-Spontanes-Gespraech/L-C2-GOETHE-008-T2.json",
-    "regenerated_at": "2026-03-20T07:45:14.606Z"
+    "regenerated_at": "2026-03-20T07:53:59.211Z"
   },
   "questions": [
     {
       "id": "Q1",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Worum geht es im Gespräch 1?",
+      "question": "Welches Thema wird besprochen (Gespräch 1)?",
       "options": {
         "a": "Freizeit und Hobbys",
         "b": "Gesundheit und Körper",
@@ -28,7 +28,7 @@
       "points": 1,
       "explanation": {
         "de": "Man hört: \"Freizeit und Hobbys\".",
-        "vi": "",
+        "vi": "Đoạn hội thoại 1 nói về chủ đề gì?",
         "key_evidence": "Freizeit und Hobbys",
         "key_vocabulary": []
       }
@@ -37,24 +37,19 @@
       "id": "Q2",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Woher kommt die Person (Gespräch 1)?",
+      "question": "Welches Thema wird besprochen (Gespräch 1)?",
       "options": {
-        "a": "Wien",
-        "b": "Stuttgart",
-        "c": "Safiya"
+        "a": "Leipzig",
+        "b": "Dresden",
+        "c": "Graz"
       },
-      "answer": "c",
+      "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Man hört: \"Safiya\".",
-        "vi": "",
-        "key_evidence": "Safiya",
-        "key_vocabulary": [
-          {
-            "w": "kommen aus",
-            "m": "to come from"
-          }
-        ]
+        "de": "Das Hauptthema ist \"Freizeit\".",
+        "vi": "Đoạn hội thoại 1 nói về chủ đề gì?",
+        "key_evidence": "Freizeit",
+        "key_vocabulary": []
       }
     },
     {
@@ -71,12 +66,12 @@
       "points": 1,
       "explanation": {
         "de": "Man hört: \"Weapons\".",
-        "vi": "",
+        "vi": "Người đó làm nghề gì (đoạn 1)?",
         "key_evidence": "Weapons",
         "key_vocabulary": [
           {
-            "w": "Weapons",
-            "m": "Weapons"
+            "word": "Weapons",
+            "meaning": "Weapons"
           }
         ]
       }

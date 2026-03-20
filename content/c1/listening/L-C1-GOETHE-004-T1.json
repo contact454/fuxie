@@ -8,17 +8,17 @@
   "audio_file": "/audio/listening/C1/Teil1-Podcast-oder-Rezension/L-C1-GOETHE-004-T1.mp3",
   "metadata": {
     "generated_at": "2026-03-19T11:27:15.942467",
-    "version": 2,
+    "version": 4,
     "gespraech_count": 5,
     "source_script": "data/scripts/C1/Teil1-Podcast-oder-Rezension/L-C1-GOETHE-004-T1.json",
-    "regenerated_at": "2026-03-20T07:45:14.562Z"
+    "regenerated_at": "2026-03-20T07:53:59.203Z"
   },
   "questions": [
     {
       "id": "Q1",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Worum geht es im Gespräch 1?",
+      "question": "Welches Thema wird besprochen (Gespräch 1)?",
       "options": {
         "a": "Gesundheit und Körper",
         "b": "Arbeit und Beruf",
@@ -28,7 +28,7 @@
       "points": 1,
       "explanation": {
         "de": "Man hört: \"Arbeit und Beruf\".",
-        "vi": "",
+        "vi": "Đoạn hội thoại 1 nói về chủ đề gì?",
         "key_evidence": "Arbeit und Beruf",
         "key_vocabulary": []
       }
@@ -37,24 +37,19 @@
       "id": "Q2",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Woher kommt die Person (Gespräch 1)?",
+      "question": "Welches Thema wird besprochen (Gespräch 1)?",
       "options": {
-        "a": "Dresden",
-        "b": "Judith",
-        "c": "Frankfurt"
+        "a": "Augsburg",
+        "b": "Irland",
+        "c": "Neuseeland"
       },
-      "answer": "b",
+      "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Man hört: \"Judith\".",
-        "vi": "",
-        "key_evidence": "Judith",
-        "key_vocabulary": [
-          {
-            "w": "kommen aus",
-            "m": "to come from"
-          }
-        ]
+        "de": "Das Hauptthema ist \"Arbeit und Beruf\".",
+        "vi": "Đoạn hội thoại 1 nói về chủ đề gì?",
+        "key_evidence": "Arbeit und Beruf",
+        "key_vocabulary": []
       }
     },
     {
@@ -71,12 +66,12 @@
       "points": 1,
       "explanation": {
         "de": "Man hört: \"Leerstellen\".",
-        "vi": "",
+        "vi": "Người đó làm nghề gì (đoạn 1)?",
         "key_evidence": "Leerstellen",
         "key_vocabulary": [
           {
-            "w": "Leerstellen",
-            "m": "Leerstellen"
+            "word": "Leerstellen",
+            "meaning": "Leerstellen"
           }
         ]
       }

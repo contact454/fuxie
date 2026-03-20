@@ -8,17 +8,17 @@
   "audio_file": "/audio/listening/C1/Teil1-Podcast-oder-Rezension/L-C1-GOETHE-006-T1.mp3",
   "metadata": {
     "generated_at": "2026-03-19T11:27:15.943860",
-    "version": 2,
+    "version": 4,
     "gespraech_count": 5,
     "source_script": "data/scripts/C1/Teil1-Podcast-oder-Rezension/L-C1-GOETHE-006-T1.json",
-    "regenerated_at": "2026-03-20T07:45:14.568Z"
+    "regenerated_at": "2026-03-20T07:53:59.204Z"
   },
   "questions": [
     {
       "id": "Q1",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Worum geht es im Gespräch 1?",
+      "question": "Welches Thema wird besprochen (Gespräch 1)?",
       "options": {
         "a": "Bildung und Schule",
         "b": "Einkaufen und Geld",
@@ -28,7 +28,7 @@
       "points": 1,
       "explanation": {
         "de": "Man hört: \"Einkaufen und Geld\".",
-        "vi": "",
+        "vi": "Đoạn hội thoại 1 nói về chủ đề gì?",
         "key_evidence": "Einkaufen und Geld",
         "key_vocabulary": []
       }
@@ -37,24 +37,19 @@
       "id": "Q2",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Woher kommt die Person (Gespräch 1)?",
+      "question": "Welches Thema wird besprochen (Gespräch 1)?",
       "options": {
-        "a": "Leipzig",
-        "b": "Hamburg",
-        "c": "Brennglas"
+        "a": "Wolfsburg",
+        "b": "Toronto",
+        "c": "Kroatien"
       },
-      "answer": "c",
+      "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Man hört: \"Brennglas\".",
-        "vi": "",
-        "key_evidence": "Brennglas",
-        "key_vocabulary": [
-          {
-            "w": "kommen aus",
-            "m": "to come from"
-          }
-        ]
+        "de": "Das Hauptthema ist \"Einkaufen\".",
+        "vi": "Đoạn hội thoại 1 nói về chủ đề gì?",
+        "key_evidence": "Einkaufen",
+        "key_vocabulary": []
       }
     }
   ],

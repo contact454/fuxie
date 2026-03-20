@@ -8,17 +8,17 @@
   "audio_file": "/audio/listening/A2/Teil1-Radiosendungen-und-Ansagen/L-A2-GOETHE-005-T1.mp3",
   "metadata": {
     "generated_at": "2026-03-19T10:04:11.110505",
-    "version": 4,
+    "version": 6,
     "gespraech_count": 5,
     "source_script": "data/scripts/A2/Teil1-Radiosendungen-und-Ansagen/L-A2-GOETHE-005-T1.json",
-    "regenerated_at": "2026-03-20T07:45:14.473Z"
+    "regenerated_at": "2026-03-20T07:53:59.188Z"
   },
   "questions": [
     {
       "id": "Q1",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Worum geht es im Gespräch 1?",
+      "question": "Welches Thema wird besprochen (Gespräch 1)?",
       "options": {
         "a": "Essen und Trinken",
         "b": "Gesundheit und Körper",
@@ -28,7 +28,7 @@
       "points": 1,
       "explanation": {
         "de": "Im Gespräch hört man: \"Gesundheit und Körper\".",
-        "vi": "",
+        "vi": "Đoạn hội thoại 1 nói về chủ đề gì?",
         "key_evidence": "Gesundheit und Körper",
         "key_vocabulary": []
       }
@@ -37,50 +37,50 @@
       "id": "Q2",
       "gespraech": 2,
       "type": "mc_abc",
-      "question": "Woher kommt die Person (Gespräch 2)?",
+      "question": "Welches Thema wird besprochen (Gespräch 2)?",
       "options": {
-        "a": "Gesundheitstipp",
-        "b": "Berlin",
-        "c": "Wien"
+        "a": "Portugal",
+        "b": "Dortmund",
+        "c": "Winterthur"
       },
       "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: \"Gesundheitstipp\".",
-        "vi": "",
-        "key_evidence": "Gesundheitstipp",
-        "key_vocabulary": [
-          {
-            "w": "kommen aus",
-            "m": "to come from"
-          }
-        ]
+        "de": "Das Hauptthema ist \"Gesundheit\".",
+        "vi": "Đoạn hội thoại 2 nói về chủ đề gì?",
+        "key_evidence": "Gesundheit",
+        "key_vocabulary": []
       }
     },
     {
       "id": "Q3",
       "gespraech": 3,
       "type": "mc_abc",
-      "question": "Worum geht es im Gespräch 3?",
+      "question": "Woher kommt die Person (Gespräch 3)?",
       "options": {
-        "a": "Freizeit und Hobbys",
-        "b": "Gesundheit und Körper",
-        "c": "Einkaufen und Geld"
+        "a": "Deutschland",
+        "b": "England",
+        "c": "Korea"
       },
-      "answer": "b",
+      "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: \"Gesundheit und Körper\".",
-        "vi": "",
-        "key_evidence": "Gesundheit und Körper",
-        "key_vocabulary": []
+        "de": "Die Person kommt aus Deutschland.",
+        "vi": "Người đó đến từ đâu (đoạn 3)?",
+        "key_evidence": "Deutschland",
+        "key_vocabulary": [
+          {
+            "word": "kommen aus",
+            "meaning": "to come from"
+          }
+        ]
       }
     },
     {
       "id": "Q4",
       "gespraech": 4,
       "type": "mc_abc",
-      "question": "Worum geht es im Gespräch 4?",
+      "question": "Welches Thema wird besprochen (Gespräch 4)?",
       "options": {
         "a": "Einkaufen und Geld",
         "b": "Medien und Kommunikation",
@@ -90,7 +90,7 @@
       "points": 1,
       "explanation": {
         "de": "Im Gespräch hört man: \"Gesundheit und Körper\".",
-        "vi": "",
+        "vi": "Đoạn hội thoại 4 nói về chủ đề gì?",
         "key_evidence": "Gesundheit und Körper",
         "key_vocabulary": []
       }
@@ -99,7 +99,7 @@
       "id": "Q5",
       "gespraech": 5,
       "type": "mc_abc",
-      "question": "Worum geht es im Gespräch 5?",
+      "question": "Welches Thema wird besprochen (Gespräch 5)?",
       "options": {
         "a": "Gesundheit und Körper",
         "b": "Einkaufen und Geld",
@@ -109,7 +109,7 @@
       "points": 1,
       "explanation": {
         "de": "Im Gespräch hört man: \"Gesundheit und Körper\".",
-        "vi": "",
+        "vi": "Đoạn hội thoại 5 nói về chủ đề gì?",
         "key_evidence": "Gesundheit und Körper",
         "key_vocabulary": []
       }

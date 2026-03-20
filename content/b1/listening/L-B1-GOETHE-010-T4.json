@@ -8,17 +8,17 @@
   "audio_file": "/audio/listening/B1/Teil4-Radiodiskussion/L-B1-GOETHE-010-T4.mp3",
   "metadata": {
     "generated_at": "2026-03-19T10:04:11.181757",
-    "version": 2,
+    "version": 4,
     "gespraech_count": 5,
     "source_script": "data/scripts/B1/Teil4-Radiodiskussion/L-B1-GOETHE-010-T4.json",
-    "regenerated_at": "2026-03-20T07:45:14.517Z"
+    "regenerated_at": "2026-03-20T07:53:59.196Z"
   },
   "questions": [
     {
       "id": "Q1",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Worum geht es im Gespräch 1?",
+      "question": "Welches Thema wird besprochen (Gespräch 1)?",
       "options": {
         "a": "Einkaufen und Geld",
         "b": "Medien und Kommunikation",
@@ -28,7 +28,7 @@
       "points": 1,
       "explanation": {
         "de": "Man hört: \"Einkaufen und Geld\".",
-        "vi": "",
+        "vi": "Đoạn hội thoại 1 nói về chủ đề gì?",
         "key_evidence": "Einkaufen und Geld",
         "key_vocabulary": []
       }
@@ -47,12 +47,12 @@
       "points": 1,
       "explanation": {
         "de": "Man hört: \"Dr\".",
-        "vi": "",
+        "vi": "Một người trong đoạn 1 tên là gì?",
         "key_evidence": "Dr",
         "key_vocabulary": [
           {
-            "w": "heißen",
-            "m": "to be called"
+            "word": "heißen",
+            "meaning": "to be called"
           }
         ]
       }
@@ -61,22 +61,22 @@
       "id": "Q3",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Woher kommt die Person (Gespräch 1)?",
+      "question": "Wie heißt eine Person (Gespräch 1)?",
       "options": {
-        "a": "Erfolgsmodell",
-        "b": "Köln",
-        "c": "Bonn"
+        "a": "Bochum",
+        "b": "Leipzig",
+        "c": "Toronto"
       },
-      "answer": "a",
+      "answer": "c",
       "points": 1,
       "explanation": {
-        "de": "Man hört: \"Erfolgsmodell\".",
-        "vi": "",
-        "key_evidence": "Erfolgsmodell",
+        "de": "Im Gespräch hört man den Namen \"Dr\".",
+        "vi": "Một người trong đoạn 1 tên là gì?",
+        "key_evidence": "Dr",
         "key_vocabulary": [
           {
-            "w": "kommen aus",
-            "m": "to come from"
+            "word": "heißen",
+            "meaning": "to be called"
           }
         ]
       }

@@ -8,10 +8,10 @@
   "audio_file": "/audio/listening/C1/Teil2-Experteninterview/L-C1-GOETHE-013-T2.mp3",
   "metadata": {
     "generated_at": "2026-03-19T11:27:15.964312",
-    "version": 4,
+    "version": 5,
     "gespraech_count": 5,
     "source_script": "data/scripts/C1/Teil2-Experteninterview/L-C1-GOETHE-013-T2.json",
-    "regenerated_at": "2026-03-20T07:45:14.587Z"
+    "regenerated_at": "2026-03-20T07:53:02.721Z"
   },
   "questions": [
     {
@@ -28,12 +28,12 @@
       "points": 1,
       "explanation": {
         "de": "Man hört: \"Clara\".",
-        "vi": "",
+        "vi": "Một người trong đoạn 1 tên là gì?",
         "key_evidence": "Clara",
         "key_vocabulary": [
           {
-            "w": "heißen",
-            "m": "to be called"
+            "word": "heißen",
+            "meaning": "to be called"
           }
         ]
       }
@@ -42,22 +42,22 @@
       "id": "Q2",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Woher kommt die Person (Gespräch 1)?",
+      "question": "Wie heißt eine Person (Gespräch 1)?",
       "options": {
-        "a": "Wien",
-        "b": "Berlin",
-        "c": "Dr"
+        "a": "Dresden",
+        "b": "Darmstadt",
+        "c": "Amsterdam"
       },
       "answer": "c",
       "points": 1,
       "explanation": {
-        "de": "Man hört: \"Dr\".",
-        "vi": "",
-        "key_evidence": "Dr",
+        "de": "Im Gespräch hört man den Namen \"Bergström\".",
+        "vi": "Một người trong đoạn 1 tên là gì?",
+        "key_evidence": "Bergström",
         "key_vocabulary": [
           {
-            "w": "kommen aus",
-            "m": "to come from"
+            "word": "heißen",
+            "meaning": "to be called"
           }
         ]
       }
@@ -76,12 +76,12 @@
       "points": 1,
       "explanation": {
         "de": "Man hört: \"Unternehmen\".",
-        "vi": "",
+        "vi": "Người đó làm nghề gì (đoạn 1)?",
         "key_evidence": "Unternehmen",
         "key_vocabulary": [
           {
-            "w": "Unternehmen",
-            "m": "Unternehmen"
+            "word": "Unternehmen",
+            "meaning": "Unternehmen"
           }
         ]
       }
@@ -90,19 +90,24 @@
       "id": "Q4",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Worum geht es im Gespräch 1?",
+      "question": "Woher kommt die Person (Gespräch 1)?",
       "options": {
-        "a": "Einkaufen und Geld",
-        "b": "Technik und Digitalisierung",
-        "c": "Reisen und Verkehr"
+        "a": "Deutschland",
+        "b": "Moskau",
+        "c": "Bayreuth"
       },
       "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Man hört: \"Einkaufen und Geld\".",
-        "vi": "",
-        "key_evidence": "Einkaufen und Geld",
-        "key_vocabulary": []
+        "de": "Die Person kommt aus Deutschland.",
+        "vi": "Người đó đến từ đâu (đoạn 1)?",
+        "key_evidence": "Deutschland",
+        "key_vocabulary": [
+          {
+            "word": "kommen aus",
+            "meaning": "to come from"
+          }
+        ]
       }
     }
   ],

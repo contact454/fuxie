@@ -8,17 +8,17 @@
   "audio_file": "/audio/listening/C2/Teil2-Spontanes-Gespraech/L-C2-GOETHE-006-T2.mp3",
   "metadata": {
     "generated_at": "2026-03-19T11:27:16.129207",
-    "version": 4,
+    "version": 6,
     "gespraech_count": 6,
     "source_script": "data/scripts/C2/Teil2-Spontanes-Gespraech/L-C2-GOETHE-006-T2.json",
-    "regenerated_at": "2026-03-20T07:45:14.602Z"
+    "regenerated_at": "2026-03-20T07:53:59.211Z"
   },
   "questions": [
     {
       "id": "Q1",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Worum geht es im Gespräch 1?",
+      "question": "Welches Thema wird besprochen (Gespräch 1)?",
       "options": {
         "a": "Medien und Kommunikation",
         "b": "Wohnung und Haushalt",
@@ -28,7 +28,7 @@
       "points": 1,
       "explanation": {
         "de": "Man hört: \"Arbeit und Beruf\".",
-        "vi": "",
+        "vi": "Đoạn hội thoại 1 nói về chủ đề gì?",
         "key_evidence": "Arbeit und Beruf",
         "key_vocabulary": []
       }
@@ -37,24 +37,19 @@
       "id": "Q2",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Woher kommt die Person (Gespräch 1)?",
+      "question": "Welches Thema wird besprochen (Gespräch 1)?",
       "options": {
-        "a": "Leipzig",
-        "b": "Berlin",
-        "c": "Seminar"
+        "a": "Paris",
+        "b": "Peru",
+        "c": "Freiburg"
       },
-      "answer": "c",
+      "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Man hört: \"Seminar\".",
-        "vi": "",
-        "key_evidence": "Seminar",
-        "key_vocabulary": [
-          {
-            "w": "kommen aus",
-            "m": "to come from"
-          }
-        ]
+        "de": "Das Hauptthema ist \"Arbeit und Beruf\".",
+        "vi": "Đoạn hội thoại 1 nói về chủ đề gì?",
+        "key_evidence": "Arbeit und Beruf",
+        "key_vocabulary": []
       }
     }
   ],

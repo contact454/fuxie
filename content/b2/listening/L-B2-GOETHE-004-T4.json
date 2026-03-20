@@ -8,17 +8,17 @@
   "audio_file": "/audio/listening/B2/Teil4-Vortrag/L-B2-GOETHE-004-T4.mp3",
   "metadata": {
     "generated_at": "2026-03-19T10:04:11.233332",
-    "version": 4,
+    "version": 6,
     "gespraech_count": 5,
     "source_script": "data/scripts/B2/Teil4-Vortrag/L-B2-GOETHE-004-T4.json",
-    "regenerated_at": "2026-03-20T07:45:14.531Z"
+    "regenerated_at": "2026-03-20T07:53:59.198Z"
   },
   "questions": [
     {
       "id": "Q1",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Worum geht es im Gespräch 1?",
+      "question": "Welches Thema wird besprochen (Gespräch 1)?",
       "options": {
         "a": "Arbeit und Beruf",
         "b": "Freizeit und Hobbys",
@@ -28,7 +28,7 @@
       "points": 1,
       "explanation": {
         "de": "Man hört: \"Arbeit und Beruf\".",
-        "vi": "",
+        "vi": "Đoạn hội thoại 1 nói về chủ đề gì?",
         "key_evidence": "Arbeit und Beruf",
         "key_vocabulary": []
       }
@@ -37,24 +37,19 @@
       "id": "Q2",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Woher kommt die Person (Gespräch 1)?",
+      "question": "Welches Thema wird besprochen (Gespräch 1)?",
       "options": {
-        "a": "Bonn",
-        "b": "Praktika",
-        "c": "Hamburg"
+        "a": "Erfurt",
+        "b": "Leipzig",
+        "c": "Münster"
       },
-      "answer": "b",
+      "answer": "c",
       "points": 1,
       "explanation": {
-        "de": "Man hört: \"Praktika\".",
-        "vi": "",
-        "key_evidence": "Praktika",
-        "key_vocabulary": [
-          {
-            "w": "kommen aus",
-            "m": "to come from"
-          }
-        ]
+        "de": "Das Hauptthema ist \"Arbeit und Beruf\".",
+        "vi": "Đoạn hội thoại 1 nói về chủ đề gì?",
+        "key_evidence": "Arbeit und Beruf",
+        "key_vocabulary": []
       }
     },
     {
@@ -71,12 +66,12 @@
       "points": 1,
       "explanation": {
         "de": "Man hört: \"Praktikant\".",
-        "vi": "",
+        "vi": "Người đó làm nghề gì (đoạn 1)?",
         "key_evidence": "Praktikant",
         "key_vocabulary": [
           {
-            "w": "Praktikant",
-            "m": "Praktikant"
+            "word": "Praktikant",
+            "meaning": "Praktikant"
           }
         ]
       }

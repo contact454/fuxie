@@ -8,17 +8,17 @@
   "audio_file": "/audio/listening/C1/Teil1-Podcast-oder-Rezension/L-C1-GOETHE-001-T1.mp3",
   "metadata": {
     "generated_at": "2026-03-19T11:27:15.940246",
-    "version": 2,
+    "version": 4,
     "gespraech_count": 5,
     "source_script": "data/scripts/C1/Teil1-Podcast-oder-Rezension/L-C1-GOETHE-001-T1.json",
-    "regenerated_at": "2026-03-20T07:45:14.553Z"
+    "regenerated_at": "2026-03-20T07:53:59.202Z"
   },
   "questions": [
     {
       "id": "Q1",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Worum geht es im Gespräch 1?",
+      "question": "Welches Thema wird besprochen (Gespräch 1)?",
       "options": {
         "a": "Technik und Digitalisierung",
         "b": "Freizeit und Hobbys",
@@ -28,7 +28,7 @@
       "points": 1,
       "explanation": {
         "de": "Man hört: \"Arbeit und Beruf\".",
-        "vi": "",
+        "vi": "Đoạn hội thoại 1 nói về chủ đề gì?",
         "key_evidence": "Arbeit und Beruf",
         "key_vocabulary": []
       }
@@ -37,24 +37,19 @@
       "id": "Q2",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Woher kommt die Person (Gespräch 1)?",
+      "question": "Welches Thema wird besprochen (Gespräch 1)?",
       "options": {
-        "a": "Bremen",
-        "b": "Thema",
-        "c": "Berlin"
+        "a": "Trier",
+        "b": "Halle",
+        "c": "Aachen"
       },
-      "answer": "b",
+      "answer": "c",
       "points": 1,
       "explanation": {
-        "de": "Man hört: \"Thema\".",
-        "vi": "",
-        "key_evidence": "Thema",
-        "key_vocabulary": [
-          {
-            "w": "kommen aus",
-            "m": "to come from"
-          }
-        ]
+        "de": "Das Hauptthema ist \"Arbeit und Beruf\".",
+        "vi": "Đoạn hội thoại 1 nói về chủ đề gì?",
+        "key_evidence": "Arbeit und Beruf",
+        "key_vocabulary": []
       }
     },
     {
@@ -71,12 +66,12 @@
       "points": 1,
       "explanation": {
         "de": "Man hört: \"Kinder\".",
-        "vi": "",
+        "vi": "Người đó làm nghề gì (đoạn 1)?",
         "key_evidence": "Kinder",
         "key_vocabulary": [
           {
-            "w": "Kinder",
-            "m": "Kinder"
+            "word": "Kinder",
+            "meaning": "Kinder"
           }
         ]
       }

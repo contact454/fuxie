@@ -8,17 +8,17 @@
   "audio_file": "/audio/listening/C1/Teil1-Podcast-oder-Rezension/L-C1-GOETHE-010-T1.mp3",
   "metadata": {
     "generated_at": "2026-03-19T11:27:15.946513",
-    "version": 2,
+    "version": 4,
     "gespraech_count": 5,
     "source_script": "data/scripts/C1/Teil1-Podcast-oder-Rezension/L-C1-GOETHE-010-T1.json",
-    "regenerated_at": "2026-03-20T07:45:14.579Z"
+    "regenerated_at": "2026-03-20T07:53:59.206Z"
   },
   "questions": [
     {
       "id": "Q1",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Worum geht es im Gespräch 1?",
+      "question": "Welches Thema wird besprochen (Gespräch 1)?",
       "options": {
         "a": "Familie und Freunde",
         "b": "Arbeit und Beruf",
@@ -28,7 +28,7 @@
       "points": 1,
       "explanation": {
         "de": "Man hört: \"Alltag\".",
-        "vi": "",
+        "vi": "Đoạn hội thoại 1 nói về chủ đề gì?",
         "key_evidence": "Alltag",
         "key_vocabulary": []
       }
@@ -37,24 +37,19 @@
       "id": "Q2",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Woher kommt die Person (Gespräch 1)?",
+      "question": "Welches Thema wird besprochen (Gespräch 1)?",
       "options": {
-        "a": "Informationen",
-        "b": "Hannover",
-        "c": "Hamburg"
+        "a": "Chemnitz",
+        "b": "Wien",
+        "c": "Shanghai"
       },
       "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Man hört: \"Informationen\".",
-        "vi": "",
-        "key_evidence": "Informationen",
-        "key_vocabulary": [
-          {
-            "w": "kommen aus",
-            "m": "to come from"
-          }
-        ]
+        "de": "Das Hauptthema ist \"Medien\".",
+        "vi": "Đoạn hội thoại 1 nói về chủ đề gì?",
+        "key_evidence": "Medien",
+        "key_vocabulary": []
       }
     },
     {
@@ -71,12 +66,12 @@
       "points": 1,
       "explanation": {
         "de": "Man hört: \"Sunk\".",
-        "vi": "",
+        "vi": "Người đó làm nghề gì (đoạn 1)?",
         "key_evidence": "Sunk",
         "key_vocabulary": [
           {
-            "w": "Sunk",
-            "m": "Sunk"
+            "word": "Sunk",
+            "meaning": "Sunk"
           }
         ]
       }

@@ -8,10 +8,10 @@
   "audio_file": "/audio/listening/B2/Teil1-Alltagsaeusserungen/L-B2-GOETHE-005-T1.mp3",
   "metadata": {
     "generated_at": "2026-03-19T10:04:11.209403",
-    "version": 2,
+    "version": 4,
     "gespraech_count": 5,
     "source_script": "data/scripts/B2/Teil1-Alltagsaeusserungen/L-B2-GOETHE-005-T1.json",
-    "regenerated_at": "2026-03-20T07:45:14.531Z"
+    "regenerated_at": "2026-03-20T07:53:59.198Z"
   },
   "questions": [
     {
@@ -22,9 +22,9 @@
       "answer": "falsch",
       "points": 1,
       "explanation": {
-        "de": "Falsch. Die Person kommt aus Berlin.",
+        "de": "Falsch. Die Aussage stimmt nicht mit dem Hörtext überein.",
         "vi": "Sai.",
-        "key_evidence": "Falsch. Die Person kommt aus Berlin.",
+        "key_evidence": "Die Person kommt aus Nürnberg.",
         "key_vocabulary": []
       }
     },
@@ -36,9 +36,9 @@
       "answer": "richtig",
       "points": 1,
       "explanation": {
-        "de": "Richtig. Berlin wird genannt.",
+        "de": "Richtig. Die Aussage stimmt mit dem Hörtext überein.",
         "vi": "Đúng.",
-        "key_evidence": "Richtig. Berlin wird genannt.",
+        "key_evidence": "Berlin wird erwähnt.",
         "key_vocabulary": []
       }
     },
@@ -50,9 +50,9 @@
       "answer": "falsch",
       "points": 1,
       "explanation": {
-        "de": "Falsch. Die Person kommt aus Berlin.",
+        "de": "Falsch. Die Aussage stimmt nicht mit dem Hörtext überein.",
         "vi": "Sai.",
-        "key_evidence": "Falsch. Die Person kommt aus Berlin.",
+        "key_evidence": "Die Person kommt aus Stuttgart.",
         "key_vocabulary": []
       }
     },
@@ -60,7 +60,7 @@
       "id": "Q4",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Worum geht es im Gespräch 1?",
+      "question": "Welches Thema wird besprochen (Gespräch 1)?",
       "options": {
         "a": "Medien und Kommunikation",
         "b": "Essen und Trinken",
@@ -70,7 +70,7 @@
       "points": 1,
       "explanation": {
         "de": "Man hört: \"Einkaufen und Geld\".",
-        "vi": "",
+        "vi": "Đoạn hội thoại 1 nói về chủ đề gì?",
         "key_evidence": "Einkaufen und Geld",
         "key_vocabulary": []
       }
@@ -89,12 +89,12 @@
       "points": 1,
       "explanation": {
         "de": "Man hört: \"Berlin\".",
-        "vi": "",
+        "vi": "Người đó đến từ đâu (đoạn 1)?",
         "key_evidence": "Berlin",
         "key_vocabulary": [
           {
-            "w": "kommen aus",
-            "m": "to come from"
+            "word": "kommen aus",
+            "meaning": "to come from"
           }
         ]
       }

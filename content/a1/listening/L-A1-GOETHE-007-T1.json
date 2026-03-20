@@ -8,10 +8,10 @@
   "audio_file": "/audio/listening/A1/Teil1-Kurze-Alltagsgespraeche/L-A1-GOETHE-007-T1.mp3",
   "metadata": {
     "generated_at": "2026-03-19T10:04:11.068965",
-    "version": 4,
+    "version": 6,
     "gespraech_count": 6,
     "source_script": "data/scripts/A1/Teil1-Kurze-Alltagsgespraeche/L-A1-GOETHE-007-T1.json",
-    "regenerated_at": "2026-03-20T07:45:14.449Z"
+    "regenerated_at": "2026-03-20T07:53:59.184Z"
   },
   "questions": [
     {
@@ -28,12 +28,12 @@
       "points": 1,
       "explanation": {
         "de": "Im Gespräch hört man: \"Schneider\".",
-        "vi": "",
+        "vi": "Một người trong đoạn 1 tên là gì?",
         "key_evidence": "Schneider",
         "key_vocabulary": [
           {
-            "w": "heißen",
-            "m": "to be called"
+            "word": "heißen",
+            "meaning": "to be called"
           }
         ]
       }
@@ -42,22 +42,22 @@
       "id": "Q2",
       "gespraech": 2,
       "type": "mc_abc",
-      "question": "Woher kommt die Person (Gespräch 2)?",
+      "question": "Wie heißt eine Person (Gespräch 2)?",
       "options": {
-        "a": "Doppelzimmer",
-        "b": "Düsseldorf",
-        "c": "Berlin"
+        "a": "Göttingen",
+        "b": "Hannover",
+        "c": "Kairo"
       },
-      "answer": "a",
+      "answer": "c",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: \"Doppelzimmer\".",
-        "vi": "",
-        "key_evidence": "Doppelzimmer",
+        "de": "Im Gespräch hört man den Namen \"Schneider\".",
+        "vi": "Một người trong đoạn 2 tên là gì?",
+        "key_evidence": "Schneider",
         "key_vocabulary": [
           {
-            "w": "kommen aus",
-            "m": "to come from"
+            "word": "heißen",
+            "meaning": "to be called"
           }
         ]
       }
@@ -66,7 +66,7 @@
       "id": "Q3",
       "gespraech": 3,
       "type": "mc_abc",
-      "question": "Worum geht es im Gespräch 3?",
+      "question": "Welches Thema wird besprochen (Gespräch 3)?",
       "options": {
         "a": "Umwelt und Natur",
         "b": "Freizeit und Hobbys",
@@ -76,7 +76,7 @@
       "points": 1,
       "explanation": {
         "de": "Im Gespräch hört man: \"Wohnung und Haushalt\".",
-        "vi": "",
+        "vi": "Đoạn hội thoại 3 nói về chủ đề gì?",
         "key_evidence": "Wohnung und Haushalt",
         "key_vocabulary": []
       }
@@ -85,7 +85,7 @@
       "id": "Q4",
       "gespraech": 4,
       "type": "mc_abc",
-      "question": "Worum geht es im Gespräch 4?",
+      "question": "Welches Thema wird besprochen (Gespräch 4)?",
       "options": {
         "a": "Bildung und Schule",
         "b": "Freizeit und Hobbys",
@@ -95,7 +95,7 @@
       "points": 1,
       "explanation": {
         "de": "Im Gespräch hört man: \"Wohnung und Haushalt\".",
-        "vi": "",
+        "vi": "Đoạn hội thoại 4 nói về chủ đề gì?",
         "key_evidence": "Wohnung und Haushalt",
         "key_vocabulary": []
       }
@@ -104,7 +104,7 @@
       "id": "Q5",
       "gespraech": 5,
       "type": "mc_abc",
-      "question": "Worum geht es im Gespräch 5?",
+      "question": "Welches Thema wird besprochen (Gespräch 5)?",
       "options": {
         "a": "Einkaufen und Geld",
         "b": "Gesundheit und Körper",
@@ -114,7 +114,7 @@
       "points": 1,
       "explanation": {
         "de": "Im Gespräch hört man: \"Wohnung und Haushalt\".",
-        "vi": "",
+        "vi": "Đoạn hội thoại 5 nói về chủ đề gì?",
         "key_evidence": "Wohnung und Haushalt",
         "key_vocabulary": []
       }
@@ -123,7 +123,7 @@
       "id": "Q6",
       "gespraech": 6,
       "type": "mc_abc",
-      "question": "Worum geht es im Gespräch 6?",
+      "question": "Welches Thema wird besprochen (Gespräch 6)?",
       "options": {
         "a": "Einkaufen und Geld",
         "b": "Gesundheit und Körper",
@@ -133,7 +133,7 @@
       "points": 1,
       "explanation": {
         "de": "Im Gespräch hört man: \"Reisen und Verkehr\".",
-        "vi": "",
+        "vi": "Đoạn hội thoại 6 nói về chủ đề gì?",
         "key_evidence": "Reisen und Verkehr",
         "key_vocabulary": []
       }

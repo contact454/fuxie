@@ -8,10 +8,10 @@
   "audio_file": "/audio/listening/C1/Teil2-Experteninterview/L-C1-GOETHE-007-T2.mp3",
   "metadata": {
     "generated_at": "2026-03-19T11:27:15.958665",
-    "version": 4,
+    "version": 5,
     "gespraech_count": 5,
     "source_script": "data/scripts/C1/Teil2-Experteninterview/L-C1-GOETHE-007-T2.json",
-    "regenerated_at": "2026-03-20T07:45:14.571Z"
+    "regenerated_at": "2026-03-20T07:53:02.710Z"
   },
   "questions": [
     {
@@ -28,12 +28,12 @@
       "points": 1,
       "explanation": {
         "de": "Man hört: \"Ay\".",
-        "vi": "",
+        "vi": "Một người trong đoạn 1 tên là gì?",
         "key_evidence": "Ay",
         "key_vocabulary": [
           {
-            "w": "heißen",
-            "m": "to be called"
+            "word": "heißen",
+            "meaning": "to be called"
           }
         ]
       }
@@ -42,22 +42,22 @@
       "id": "Q2",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Woher kommt die Person (Gespräch 1)?",
+      "question": "Wie heißt eine Person (Gespräch 1)?",
       "options": {
-        "a": "Bonn",
-        "b": "Professorin",
-        "c": "Zürich"
+        "a": "Kiel",
+        "b": "Brasilien",
+        "c": "Bielefeld"
       },
-      "answer": "b",
+      "answer": "c",
       "points": 1,
       "explanation": {
-        "de": "Man hört: \"Professorin\".",
-        "vi": "",
+        "de": "Im Gespräch hört man den Namen \"Professorin\".",
+        "vi": "Một người trong đoạn 1 tên là gì?",
         "key_evidence": "Professorin",
         "key_vocabulary": [
           {
-            "w": "kommen aus",
-            "m": "to come from"
+            "word": "heißen",
+            "meaning": "to be called"
           }
         ]
       }
@@ -66,19 +66,24 @@
       "id": "Q3",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Worum geht es im Gespräch 1?",
+      "question": "Woher kommt die Person (Gespräch 1)?",
       "options": {
-        "a": "Arbeit und Beruf",
-        "b": "Umwelt und Natur",
-        "c": "Medien und Kommunikation"
+        "a": "Polen",
+        "b": "Salzburg",
+        "c": "Deutschland"
       },
-      "answer": "a",
+      "answer": "c",
       "points": 1,
       "explanation": {
-        "de": "Man hört: \"Arbeit und Beruf\".",
-        "vi": "",
-        "key_evidence": "Arbeit und Beruf",
-        "key_vocabulary": []
+        "de": "Die Person kommt aus Deutschland.",
+        "vi": "Người đó đến từ đâu (đoạn 1)?",
+        "key_evidence": "Deutschland",
+        "key_vocabulary": [
+          {
+            "word": "kommen aus",
+            "meaning": "to come from"
+          }
+        ]
       }
     }
   ],

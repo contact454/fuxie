@@ -8,10 +8,10 @@
   "audio_file": "/audio/listening/B1/Teil1-Kurze-Texte/L-B1-GOETHE-003-T1.mp3",
   "metadata": {
     "generated_at": "2026-03-19T10:04:11.155340",
-    "version": 2,
+    "version": 4,
     "gespraech_count": 5,
     "source_script": "data/scripts/B1/Teil1-Kurze-Texte/L-B1-GOETHE-003-T1.json",
-    "regenerated_at": "2026-03-20T07:45:14.496Z"
+    "regenerated_at": "2026-03-20T07:53:59.192Z"
   },
   "questions": [
     {
@@ -22,9 +22,9 @@
       "answer": "falsch",
       "points": 1,
       "explanation": {
-        "de": "Falsch. Das Thema ist ein anderes.",
+        "de": "Falsch. Die Aussage stimmt nicht mit dem Hörtext überein.",
         "vi": "Sai.",
-        "key_evidence": "Falsch. Das Thema ist ein anderes.",
+        "key_evidence": "Es geht um eine Reise.",
         "key_vocabulary": []
       }
     },
@@ -36,9 +36,9 @@
       "answer": "richtig",
       "points": 1,
       "explanation": {
-        "de": "Richtig. Maria wird genannt.",
+        "de": "Richtig. Die Aussage stimmt mit dem Hörtext überein.",
         "vi": "Đúng.",
-        "key_evidence": "Richtig. Maria wird genannt.",
+        "key_evidence": "Maria wird erwähnt.",
         "key_vocabulary": []
       }
     },
@@ -50,9 +50,9 @@
       "answer": "falsch",
       "points": 1,
       "explanation": {
-        "de": "Falsch. Die Person kommt aus München.",
+        "de": "Falsch. Die Aussage stimmt nicht mit dem Hörtext überein.",
         "vi": "Sai.",
-        "key_evidence": "Falsch. Die Person kommt aus München.",
+        "key_evidence": "Die Person kommt aus Düsseldorf.",
         "key_vocabulary": []
       }
     },
@@ -60,7 +60,7 @@
       "id": "Q4",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Worum geht es im Gespräch 1?",
+      "question": "Welches Thema wird besprochen (Gespräch 1)?",
       "options": {
         "a": "Einkaufen und Geld",
         "b": "Essen und Trinken",
@@ -70,7 +70,7 @@
       "points": 1,
       "explanation": {
         "de": "Man hört: \"Einkaufen und Geld\".",
-        "vi": "",
+        "vi": "Đoạn hội thoại 1 nói về chủ đề gì?",
         "key_evidence": "Einkaufen und Geld",
         "key_vocabulary": []
       }
@@ -79,24 +79,19 @@
       "id": "Q5",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Woher kommt die Person (Gespräch 1)?",
+      "question": "Welches Thema wird besprochen (Gespräch 1)?",
       "options": {
-        "a": "Zürich",
-        "b": "Köln",
-        "c": "Maria"
+        "a": "Amsterdam",
+        "b": "Stuttgart",
+        "c": "Essen"
       },
       "answer": "c",
       "points": 1,
       "explanation": {
-        "de": "Man hört: \"Maria\".",
-        "vi": "",
-        "key_evidence": "Maria",
-        "key_vocabulary": [
-          {
-            "w": "kommen aus",
-            "m": "to come from"
-          }
-        ]
+        "de": "Das Hauptthema ist \"Einkaufen\".",
+        "vi": "Đoạn hội thoại 1 nói về chủ đề gì?",
+        "key_evidence": "Einkaufen",
+        "key_vocabulary": []
       }
     }
   ],

@@ -8,23 +8,23 @@
   "audio_file": "/audio/listening/B2/Teil1-Alltagsaeusserungen/L-B2-GOETHE-003-T1.mp3",
   "metadata": {
     "generated_at": "2026-03-19T10:04:11.207815",
-    "version": 2,
+    "version": 4,
     "gespraech_count": 5,
     "source_script": "data/scripts/B2/Teil1-Alltagsaeusserungen/L-B2-GOETHE-003-T1.json",
-    "regenerated_at": "2026-03-20T07:45:14.526Z"
+    "regenerated_at": "2026-03-20T07:53:59.197Z"
   },
   "questions": [
     {
       "id": "Q1",
       "item": 1,
       "type": "richtig_falsch",
-      "statement": "Die Person kommt aus Düsseldorf.",
+      "statement": "Die Person kommt aus Hamburg.",
       "answer": "falsch",
       "points": 1,
       "explanation": {
-        "de": "Falsch. Die Person kommt aus Chef.",
+        "de": "Falsch. Die Aussage stimmt nicht mit dem Hörtext überein.",
         "vi": "Sai.",
-        "key_evidence": "Falsch. Die Person kommt aus Chef.",
+        "key_evidence": "Die Person kommt aus Hamburg.",
         "key_vocabulary": []
       }
     },
@@ -36,9 +36,9 @@
       "answer": "richtig",
       "points": 1,
       "explanation": {
-        "de": "Richtig. Chef wird genannt.",
+        "de": "Richtig. Die Aussage stimmt mit dem Hörtext überein.",
         "vi": "Đúng.",
-        "key_evidence": "Richtig. Chef wird genannt.",
+        "key_evidence": "Chef wird erwähnt.",
         "key_vocabulary": []
       }
     },
@@ -46,13 +46,13 @@
       "id": "Q3",
       "item": 3,
       "type": "richtig_falsch",
-      "statement": "Die Person kommt aus Hannover.",
+      "statement": "Die Person kommt aus Melbourne.",
       "answer": "falsch",
       "points": 1,
       "explanation": {
-        "de": "Falsch. Die Person kommt aus Chef.",
+        "de": "Falsch. Die Aussage stimmt nicht mit dem Hörtext überein.",
         "vi": "Sai.",
-        "key_evidence": "Falsch. Die Person kommt aus Chef.",
+        "key_evidence": "Die Person kommt aus Melbourne.",
         "key_vocabulary": []
       }
     },
@@ -60,7 +60,7 @@
       "id": "Q4",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Worum geht es im Gespräch 1?",
+      "question": "Welches Thema wird besprochen (Gespräch 1)?",
       "options": {
         "a": "Einkaufen und Geld",
         "b": "Familie und Freunde",
@@ -70,7 +70,7 @@
       "points": 1,
       "explanation": {
         "de": "Man hört: \"Arbeit und Beruf\".",
-        "vi": "",
+        "vi": "Đoạn hội thoại 1 nói về chủ đề gì?",
         "key_evidence": "Arbeit und Beruf",
         "key_vocabulary": []
       }
@@ -79,24 +79,19 @@
       "id": "Q5",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Woher kommt die Person (Gespräch 1)?",
+      "question": "Welches Thema wird besprochen (Gespräch 1)?",
       "options": {
-        "a": "Chef",
-        "b": "Hamburg",
-        "c": "Wien"
+        "a": "Paris",
+        "b": "Würzburg",
+        "c": "Freiburg"
       },
       "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Man hört: \"Chef\".",
-        "vi": "",
-        "key_evidence": "Chef",
-        "key_vocabulary": [
-          {
-            "w": "kommen aus",
-            "m": "to come from"
-          }
-        ]
+        "de": "Das Hauptthema ist \"Arbeit und Beruf\".",
+        "vi": "Đoạn hội thoại 1 nói về chủ đề gì?",
+        "key_evidence": "Arbeit und Beruf",
+        "key_vocabulary": []
       }
     }
   ],

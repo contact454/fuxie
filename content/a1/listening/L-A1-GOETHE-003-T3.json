@@ -8,36 +8,41 @@
   "audio_file": "/audio/listening/A1/Teil3-Telefonansagen/L-A1-GOETHE-003-T3.mp3",
   "metadata": {
     "generated_at": "2026-03-19T10:04:11.078358",
-    "version": 4,
+    "version": 6,
     "gespraech_count": 5,
     "source_script": "data/scripts/A1/Teil3-Telefonansagen/L-A1-GOETHE-003-T3.json",
-    "regenerated_at": "2026-03-20T07:45:14.441Z"
+    "regenerated_at": "2026-03-20T07:53:59.183Z"
   },
   "questions": [
     {
       "id": "Q1",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Worum geht es im Gespräch 1?",
+      "question": "Wie heißt eine Person (Gespräch 1)?",
       "options": {
-        "a": "Freizeit und Hobbys",
-        "b": "Umwelt und Natur",
-        "c": "Einkaufen und Geld"
+        "a": "Maria",
+        "b": "Laura",
+        "c": "Klein"
       },
       "answer": "c",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: \"Einkaufen und Geld\".",
-        "vi": "",
-        "key_evidence": "Einkaufen und Geld",
-        "key_vocabulary": []
+        "de": "Im Gespräch hört man den Namen \"Klein\".",
+        "vi": "Một người trong đoạn 1 tên là gì?",
+        "key_evidence": "Klein",
+        "key_vocabulary": [
+          {
+            "word": "heißen",
+            "meaning": "to be called"
+          }
+        ]
       }
     },
     {
       "id": "Q2",
       "gespraech": 2,
       "type": "mc_abc",
-      "question": "Worum geht es im Gespräch 2?",
+      "question": "Welches Thema wird besprochen (Gespräch 2)?",
       "options": {
         "a": "Bildung und Schule",
         "b": "Familie und Freunde",
@@ -47,7 +52,7 @@
       "points": 1,
       "explanation": {
         "de": "Im Gespräch hört man: \"Bildung und Schule\".",
-        "vi": "",
+        "vi": "Đoạn hội thoại 2 nói về chủ đề gì?",
         "key_evidence": "Bildung und Schule",
         "key_vocabulary": []
       }
@@ -56,7 +61,7 @@
       "id": "Q3",
       "gespraech": 3,
       "type": "mc_abc",
-      "question": "Worum geht es im Gespräch 3?",
+      "question": "Welches Thema wird besprochen (Gespräch 3)?",
       "options": {
         "a": "Familie und Freunde",
         "b": "Wohnung und Haushalt",
@@ -66,7 +71,7 @@
       "points": 1,
       "explanation": {
         "de": "Im Gespräch hört man: \"Einkaufen und Geld\".",
-        "vi": "",
+        "vi": "Đoạn hội thoại 3 nói về chủ đề gì?",
         "key_evidence": "Einkaufen und Geld",
         "key_vocabulary": []
       }
@@ -75,7 +80,7 @@
       "id": "Q4",
       "gespraech": 4,
       "type": "mc_abc",
-      "question": "Worum geht es im Gespräch 4?",
+      "question": "Welches Thema wird besprochen (Gespräch 4)?",
       "options": {
         "a": "Einkaufen und Geld",
         "b": "Reisen und Verkehr",
@@ -85,7 +90,7 @@
       "points": 1,
       "explanation": {
         "de": "Im Gespräch hört man: \"Alltag\".",
-        "vi": "",
+        "vi": "Đoạn hội thoại 4 nói về chủ đề gì?",
         "key_evidence": "Alltag",
         "key_vocabulary": []
       }
@@ -94,7 +99,7 @@
       "id": "Q5",
       "gespraech": 5,
       "type": "mc_abc",
-      "question": "Worum geht es im Gespräch 5?",
+      "question": "Welches Thema wird besprochen (Gespräch 5)?",
       "options": {
         "a": "Reisen und Verkehr",
         "b": "Medien und Kommunikation",
@@ -104,7 +109,7 @@
       "points": 1,
       "explanation": {
         "de": "Im Gespräch hört man: \"Reisen und Verkehr\".",
-        "vi": "",
+        "vi": "Đoạn hội thoại 5 nói về chủ đề gì?",
         "key_evidence": "Reisen und Verkehr",
         "key_vocabulary": []
       }

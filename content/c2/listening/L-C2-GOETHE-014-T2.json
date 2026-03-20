@@ -8,17 +8,17 @@
   "audio_file": "/audio/listening/C2/Teil2-Spontanes-Gespraech/L-C2-GOETHE-014-T2.mp3",
   "metadata": {
     "generated_at": "2026-03-19T11:27:16.140760",
-    "version": 4,
+    "version": 6,
     "gespraech_count": 6,
     "source_script": "data/scripts/C2/Teil2-Spontanes-Gespraech/L-C2-GOETHE-014-T2.json",
-    "regenerated_at": "2026-03-20T07:45:14.621Z"
+    "regenerated_at": "2026-03-20T07:53:59.213Z"
   },
   "questions": [
     {
       "id": "Q1",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Worum geht es im Gespräch 1?",
+      "question": "Welches Thema wird besprochen (Gespräch 1)?",
       "options": {
         "a": "Technik und Digitalisierung",
         "b": "Bildung und Schule",
@@ -28,7 +28,7 @@
       "points": 1,
       "explanation": {
         "de": "Man hört: \"Einkaufen und Geld\".",
-        "vi": "",
+        "vi": "Đoạn hội thoại 1 nói về chủ đề gì?",
         "key_evidence": "Einkaufen und Geld",
         "key_vocabulary": []
       }
@@ -37,24 +37,19 @@
       "id": "Q2",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Woher kommt die Person (Gespräch 1)?",
+      "question": "Welches Thema wird besprochen (Gespräch 1)?",
       "options": {
-        "a": "Social",
-        "b": "Hamburg",
-        "c": "Leipzig"
+        "a": "Chemnitz",
+        "b": "Darmstadt",
+        "c": "Syrien"
       },
-      "answer": "a",
+      "answer": "c",
       "points": 1,
       "explanation": {
-        "de": "Man hört: \"Social\".",
-        "vi": "",
-        "key_evidence": "Social",
-        "key_vocabulary": [
-          {
-            "w": "kommen aus",
-            "m": "to come from"
-          }
-        ]
+        "de": "Das Hauptthema ist \"Einkaufen\".",
+        "vi": "Đoạn hội thoại 1 nói về chủ đề gì?",
+        "key_evidence": "Einkaufen",
+        "key_vocabulary": []
       }
     },
     {
@@ -71,12 +66,12 @@
       "points": 1,
       "explanation": {
         "de": "Man hört: \"Konformität\".",
-        "vi": "",
+        "vi": "Người đó làm nghề gì (đoạn 1)?",
         "key_evidence": "Konformität",
         "key_vocabulary": [
           {
-            "w": "Konformität",
-            "m": "Konformität"
+            "word": "Konformität",
+            "meaning": "Konformität"
           }
         ]
       }

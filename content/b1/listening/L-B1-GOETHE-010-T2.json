@@ -8,10 +8,10 @@
   "audio_file": "/audio/listening/B1/Teil2-Fuehrung-oder-Monolog/L-B1-GOETHE-010-T2.mp3",
   "metadata": {
     "generated_at": "2026-03-19T10:04:11.168984",
-    "version": 4,
+    "version": 6,
     "gespraech_count": 5,
     "source_script": "data/scripts/B1/Teil2-Fuehrung-oder-Monolog/L-B1-GOETHE-010-T2.json",
-    "regenerated_at": "2026-03-20T07:45:14.516Z"
+    "regenerated_at": "2026-03-20T07:53:59.195Z"
   },
   "questions": [
     {
@@ -28,12 +28,12 @@
       "points": 1,
       "explanation": {
         "de": "Man hört: \"Lisa\".",
-        "vi": "",
+        "vi": "Một người trong đoạn 1 tên là gì?",
         "key_evidence": "Lisa",
         "key_vocabulary": [
           {
-            "w": "heißen",
-            "m": "to be called"
+            "word": "heißen",
+            "meaning": "to be called"
           }
         ]
       }
@@ -42,22 +42,22 @@
       "id": "Q2",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Woher kommt die Person (Gespräch 1)?",
+      "question": "Wie heißt eine Person (Gespräch 1)?",
       "options": {
-        "a": "Köln",
-        "b": "Leipzig",
-        "c": "Name"
+        "a": "Paris",
+        "b": "Dubai",
+        "c": "Bonn"
       },
-      "answer": "c",
+      "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Man hört: \"Name\".",
-        "vi": "",
-        "key_evidence": "Name",
+        "de": "Im Gespräch hört man den Namen \"Umweltwissenschaftlerin\".",
+        "vi": "Một người trong đoạn 1 tên là gì?",
+        "key_evidence": "Umweltwissenschaftlerin",
         "key_vocabulary": [
           {
-            "w": "kommen aus",
-            "m": "to come from"
+            "word": "heißen",
+            "meaning": "to be called"
           }
         ]
       }
@@ -76,12 +76,12 @@
       "points": 1,
       "explanation": {
         "de": "Man hört: \"Umweltwissenschaftlerin\".",
-        "vi": "",
+        "vi": "Người đó làm nghề gì (đoạn 1)?",
         "key_evidence": "Umweltwissenschaftlerin",
         "key_vocabulary": [
           {
-            "w": "Umweltwissenschaftlerin",
-            "m": "Umweltwissenschaftlerin"
+            "word": "Umweltwissenschaftlerin",
+            "meaning": "Umweltwissenschaftlerin"
           }
         ]
       }
@@ -90,7 +90,7 @@
       "id": "Q4",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Worum geht es im Gespräch 1?",
+      "question": "Welches Thema wird besprochen (Gespräch 1)?",
       "options": {
         "a": "Einkaufen und Geld",
         "b": "Umwelt und Natur",
@@ -100,7 +100,7 @@
       "points": 1,
       "explanation": {
         "de": "Man hört: \"Einkaufen und Geld\".",
-        "vi": "",
+        "vi": "Đoạn hội thoại 1 nói về chủ đề gì?",
         "key_evidence": "Einkaufen und Geld",
         "key_vocabulary": []
       }

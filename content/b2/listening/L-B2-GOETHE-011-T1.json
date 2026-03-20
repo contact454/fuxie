@@ -8,23 +8,23 @@
   "audio_file": "/audio/listening/B2/Teil1-Alltagsaeusserungen/L-B2-GOETHE-011-T1.mp3",
   "metadata": {
     "generated_at": "2026-03-19T10:04:11.213919",
-    "version": 2,
+    "version": 4,
     "gespraech_count": 5,
     "source_script": "data/scripts/B2/Teil1-Alltagsaeusserungen/L-B2-GOETHE-011-T1.json",
-    "regenerated_at": "2026-03-20T07:45:14.547Z"
+    "regenerated_at": "2026-03-20T07:53:59.201Z"
   },
   "questions": [
     {
       "id": "Q1",
       "item": 1,
       "type": "richtig_falsch",
-      "statement": "Die Person kommt aus Berlin.",
+      "statement": "Die Person kommt aus Düsseldorf.",
       "answer": "falsch",
       "points": 1,
       "explanation": {
-        "de": "Falsch. Die Person kommt aus Nudeln.",
+        "de": "Falsch. Die Aussage stimmt nicht mit dem Hörtext überein.",
         "vi": "Sai.",
-        "key_evidence": "Falsch. Die Person kommt aus Nudeln.",
+        "key_evidence": "Die Person kommt aus Düsseldorf.",
         "key_vocabulary": []
       }
     },
@@ -36,9 +36,9 @@
       "answer": "richtig",
       "points": 1,
       "explanation": {
-        "de": "Richtig. Nudeln wird genannt.",
+        "de": "Richtig. Die Aussage stimmt mit dem Hörtext überein.",
         "vi": "Đúng.",
-        "key_evidence": "Richtig. Nudeln wird genannt.",
+        "key_evidence": "Nudeln wird erwähnt.",
         "key_vocabulary": []
       }
     },
@@ -46,7 +46,7 @@
       "id": "Q3",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Worum geht es im Gespräch 1?",
+      "question": "Welches Thema wird besprochen (Gespräch 1)?",
       "options": {
         "a": "Wohnung und Haushalt",
         "b": "Einkaufen und Geld",
@@ -56,7 +56,7 @@
       "points": 1,
       "explanation": {
         "de": "Man hört: \"Einkaufen und Geld\".",
-        "vi": "",
+        "vi": "Đoạn hội thoại 1 nói về chủ đề gì?",
         "key_evidence": "Einkaufen und Geld",
         "key_vocabulary": []
       }
@@ -65,24 +65,19 @@
       "id": "Q4",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Woher kommt die Person (Gespräch 1)?",
+      "question": "Welches Thema wird besprochen (Gespräch 1)?",
       "options": {
-        "a": "Nudeln",
-        "b": "Düsseldorf",
-        "c": "Hannover"
+        "a": "Aachen",
+        "b": "Essen",
+        "c": "Kairo"
       },
-      "answer": "a",
+      "answer": "c",
       "points": 1,
       "explanation": {
-        "de": "Man hört: \"Nudeln\".",
-        "vi": "",
-        "key_evidence": "Nudeln",
-        "key_vocabulary": [
-          {
-            "w": "kommen aus",
-            "m": "to come from"
-          }
-        ]
+        "de": "Das Hauptthema ist \"Einkaufen\".",
+        "vi": "Đoạn hội thoại 1 nói về chủ đề gì?",
+        "key_evidence": "Einkaufen",
+        "key_vocabulary": []
       }
     }
   ],

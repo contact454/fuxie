@@ -8,51 +8,56 @@
   "audio_file": "/audio/listening/A1/Teil1-Kurze-Alltagsgespraeche/L-A1-GOETHE-005-T1.mp3",
   "metadata": {
     "generated_at": "2026-03-19T10:04:11.067651",
-    "version": 4,
+    "version": 6,
     "gespraech_count": 6,
     "source_script": "data/scripts/A1/Teil1-Kurze-Alltagsgespraeche/L-A1-GOETHE-005-T1.json",
-    "regenerated_at": "2026-03-20T07:45:14.445Z"
+    "regenerated_at": "2026-03-20T07:53:59.183Z"
   },
   "questions": [
     {
       "id": "Q1",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Worum geht es im Gespräch 1?",
+      "question": "Wie heißt eine Person (Gespräch 1)?",
       "options": {
-        "a": "Gesundheit und Körper",
-        "b": "Einkaufen und Geld",
-        "c": "Bildung und Schule"
+        "a": "Julia",
+        "b": "Sara",
+        "c": "Frau"
       },
-      "answer": "a",
+      "answer": "c",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: \"Gesundheit und Körper\".",
-        "vi": "",
-        "key_evidence": "Gesundheit und Körper",
-        "key_vocabulary": []
+        "de": "Im Gespräch hört man den Namen \"Frau\".",
+        "vi": "Một người trong đoạn 1 tên là gì?",
+        "key_evidence": "Frau",
+        "key_vocabulary": [
+          {
+            "word": "heißen",
+            "meaning": "to be called"
+          }
+        ]
       }
     },
     {
       "id": "Q2",
       "gespraech": 2,
       "type": "mc_abc",
-      "question": "Woher kommt die Person (Gespräch 2)?",
+      "question": "Wie heißt eine Person (Gespräch 2)?",
       "options": {
-        "a": "Rezept",
-        "b": "Leipzig",
-        "c": "Hamburg"
+        "a": "Sydney",
+        "b": "Seoul",
+        "c": "Würzburg"
       },
       "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: \"Rezept\".",
-        "vi": "",
-        "key_evidence": "Rezept",
+        "de": "Im Gespräch hört man den Namen \"Schmidt\".",
+        "vi": "Một người trong đoạn 2 tên là gì?",
+        "key_evidence": "Schmidt",
         "key_vocabulary": [
           {
-            "w": "kommen aus",
-            "m": "to come from"
+            "word": "heißen",
+            "meaning": "to be called"
           }
         ]
       }
@@ -71,12 +76,12 @@
       "points": 1,
       "explanation": {
         "de": "Im Gespräch hört man: \"Frau\".",
-        "vi": "",
+        "vi": "Người đó làm nghề gì (đoạn 3)?",
         "key_evidence": "Frau",
         "key_vocabulary": [
           {
-            "w": "Frau",
-            "m": "Frau"
+            "word": "Frau",
+            "meaning": "Frau"
           }
         ]
       }
@@ -85,7 +90,7 @@
       "id": "Q4",
       "gespraech": 4,
       "type": "mc_abc",
-      "question": "Worum geht es im Gespräch 4?",
+      "question": "Welches Thema wird besprochen (Gespräch 4)?",
       "options": {
         "a": "Gesundheit und Körper",
         "b": "Freizeit und Hobbys",
@@ -95,7 +100,7 @@
       "points": 1,
       "explanation": {
         "de": "Im Gespräch hört man: \"Gesundheit und Körper\".",
-        "vi": "",
+        "vi": "Đoạn hội thoại 4 nói về chủ đề gì?",
         "key_evidence": "Gesundheit und Körper",
         "key_vocabulary": []
       }
@@ -104,7 +109,7 @@
       "id": "Q5",
       "gespraech": 5,
       "type": "mc_abc",
-      "question": "Worum geht es im Gespräch 5?",
+      "question": "Welches Thema wird besprochen (Gespräch 5)?",
       "options": {
         "a": "Alltag",
         "b": "Einkaufen und Geld",
@@ -114,7 +119,7 @@
       "points": 1,
       "explanation": {
         "de": "Im Gespräch hört man: \"Alltag\".",
-        "vi": "",
+        "vi": "Đoạn hội thoại 5 nói về chủ đề gì?",
         "key_evidence": "Alltag",
         "key_vocabulary": []
       }
@@ -123,7 +128,7 @@
       "id": "Q6",
       "gespraech": 6,
       "type": "mc_abc",
-      "question": "Worum geht es im Gespräch 6?",
+      "question": "Welches Thema wird besprochen (Gespräch 6)?",
       "options": {
         "a": "Alltag",
         "b": "Einkaufen und Geld",
@@ -133,7 +138,7 @@
       "points": 1,
       "explanation": {
         "de": "Im Gespräch hört man: \"Alltag\".",
-        "vi": "",
+        "vi": "Đoạn hội thoại 6 nói về chủ đề gì?",
         "key_evidence": "Alltag",
         "key_vocabulary": []
       }

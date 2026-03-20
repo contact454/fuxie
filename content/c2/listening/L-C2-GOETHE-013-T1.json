@@ -8,23 +8,23 @@
   "audio_file": "/audio/listening/C2/Teil1-Radiosendungen/L-C2-GOETHE-013-T1.mp3",
   "metadata": {
     "generated_at": "2026-03-19T11:27:16.064418",
-    "version": 4,
+    "version": 6,
     "gespraech_count": 5,
     "source_script": "data/scripts/C2/Teil1-Radiosendungen/L-C2-GOETHE-013-T1.json",
-    "regenerated_at": "2026-03-20T07:45:14.618Z"
+    "regenerated_at": "2026-03-20T07:53:59.213Z"
   },
   "questions": [
     {
       "id": "Q1",
       "item": 1,
       "type": "ja_nein",
-      "statement": "Die Person kommt aus Düsseldorf.",
+      "statement": "Die Person kommt aus Frankreich.",
       "answer": "nein",
       "points": 1,
       "explanation": {
-        "de": "Nein. Die Person kommt aus Schulbüchern.",
+        "de": "Nein. Die Aussage stimmt nicht mit dem Hörtext überein.",
         "vi": "Sai.",
-        "key_evidence": "Falsch. Die Person kommt aus Schulbüchern.",
+        "key_evidence": "Die Person kommt aus Frankreich.",
         "key_vocabulary": []
       }
     },
@@ -46,13 +46,13 @@
       "id": "Q3",
       "item": 3,
       "type": "ja_nein",
-      "statement": "Die Person kommt aus Zürich.",
+      "statement": "Die Person kommt aus New York.",
       "answer": "nein",
       "points": 1,
       "explanation": {
-        "de": "Nein. Die Person kommt aus Schulbüchern.",
+        "de": "Nein. Die Aussage stimmt nicht mit dem Hörtext überein.",
         "vi": "Sai.",
-        "key_evidence": "Falsch. Die Person kommt aus Schulbüchern.",
+        "key_evidence": "Die Person kommt aus New York.",
         "key_vocabulary": []
       }
     }

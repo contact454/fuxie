@@ -8,17 +8,17 @@
   "audio_file": "/audio/listening/A2/Teil2-Zusammenhaengendes-Gespraech/L-A2-GOETHE-009-T2.mp3",
   "metadata": {
     "generated_at": "2026-03-19T10:04:11.118038",
-    "version": 2,
+    "version": 4,
     "gespraech_count": 6,
     "source_script": "data/scripts/A2/Teil2-Zusammenhaengendes-Gespraech/L-A2-GOETHE-009-T2.json",
-    "regenerated_at": "2026-03-20T07:45:14.484Z"
+    "regenerated_at": "2026-03-20T07:53:59.190Z"
   },
   "questions": [
     {
       "id": "Q1",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Worum geht es im Gespräch 1?",
+      "question": "Welches Thema wird besprochen (Gespräch 1)?",
       "options": {
         "a": "Freizeit und Hobbys",
         "b": "Einkaufen und Geld",
@@ -28,7 +28,7 @@
       "points": 1,
       "explanation": {
         "de": "Man hört: \"Freizeit und Hobbys\".",
-        "vi": "",
+        "vi": "Đoạn hội thoại 1 nói về chủ đề gì?",
         "key_evidence": "Freizeit und Hobbys",
         "key_vocabulary": []
       }
@@ -47,12 +47,12 @@
       "points": 1,
       "explanation": {
         "de": "Man hört: \"Frau\".",
-        "vi": "",
+        "vi": "Một người trong đoạn 1 tên là gì?",
         "key_evidence": "Frau",
         "key_vocabulary": [
           {
-            "w": "heißen",
-            "m": "to be called"
+            "word": "heißen",
+            "meaning": "to be called"
           }
         ]
       }
@@ -61,22 +61,22 @@
       "id": "Q3",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Woher kommt die Person (Gespräch 1)?",
+      "question": "Wie heißt eine Person (Gespräch 1)?",
       "options": {
-        "a": "Frau",
-        "b": "Nürnberg",
-        "c": "Bremen"
+        "a": "Erfurt",
+        "b": "Bulgarien",
+        "c": "Hamburg"
       },
       "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Man hört: \"Frau\".",
-        "vi": "",
-        "key_evidence": "Frau",
+        "de": "Im Gespräch hört man den Namen \"Müller\".",
+        "vi": "Một người trong đoạn 1 tên là gì?",
+        "key_evidence": "Müller",
         "key_vocabulary": [
           {
-            "w": "kommen aus",
-            "m": "to come from"
+            "word": "heißen",
+            "meaning": "to be called"
           }
         ]
       }
@@ -95,12 +95,12 @@
       "points": 1,
       "explanation": {
         "de": "Man hört: \"Frau\".",
-        "vi": "",
+        "vi": "Người đó làm nghề gì (đoạn 1)?",
         "key_evidence": "Frau",
         "key_vocabulary": [
           {
-            "w": "Frau",
-            "m": "Frau"
+            "word": "Frau",
+            "meaning": "Frau"
           }
         ]
       }
