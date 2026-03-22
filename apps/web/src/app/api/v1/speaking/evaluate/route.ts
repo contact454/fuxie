@@ -101,7 +101,7 @@ export async function POST(request: NextRequest) {
     let overallTips: string[] = []
 
     try {
-      const model = getGenAI().getGenerativeModel({ model: 'gemini-2.0-flash' })
+      const model = getGenAI().getGenerativeModel({ model: 'gemini-2.5-flash' })
 
       const arrayBuffer = await audioFile.arrayBuffer()
       const base64Data = Buffer.from(arrayBuffer).toString('base64')
