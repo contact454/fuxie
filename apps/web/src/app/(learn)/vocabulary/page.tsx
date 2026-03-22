@@ -1,8 +1,7 @@
 import { redirect } from 'next/navigation'
 import { prisma } from '@fuxie/database'
 import { getServerUser } from '@/lib/auth/server-auth'
-import { cacheWrap } from '@/lib/cache/redis'
-import { getVocabularyLevels, getVocabularyThemes, mapVocabularyThemes, type CefrLevel } from '@/lib/content/vocabulary'
+import { getVocabularyThemes, mapVocabularyThemes, type CefrLevel } from '@/lib/content/vocabulary'
 import { getVocabularyThemeSrsProgress } from '@/lib/srs/stats'
 import { VocabularyClient } from '@/components/vocabulary/vocabulary-client'
 
@@ -11,21 +10,39 @@ export const metadata = {
     description: 'Deutsche Vokabeln — Browse and learn vocabulary by CEFR level',
 }
 
+async function getAvailableLevels(): Promise<CefrLevel[]> {
+    try {
+        const levels = await prisma.vocabularyTheme.findMany({
+            select: { cefrLevel: true },
+            distinct: ['cefrLevel'],
+            orderBy: { cefrLevel: 'asc' },
+        })
+        if (levels.length === 0) return ['A1']
+        return levels.map(l => l.cefrLevel as CefrLevel)
+    } catch (err) {
+        console.error('[Vocabulary] Error fetching levels:', err)
+        return ['A1']
+    }
+}
+
 async function getThemes(userId: string | null, cefrLevel: CefrLevel) {
     const themes = await getVocabularyThemes(cefrLevel)
 
-    // Get SRS progress per theme
     let srsProgress: Record<string, { total: number; learned: number; due: number }> = {}
     let totalDue = 0
     if (userId) {
-        const progressMap = await getVocabularyThemeSrsProgress(userId, cefrLevel)
-        for (const [themeId, progress] of Object.entries(progressMap)) {
-            srsProgress[themeId] = {
-                total: progress.total,
-                learned: progress.learned,
-                due: progress.due,
+        try {
+            const progressMap = await getVocabularyThemeSrsProgress(userId, cefrLevel)
+            for (const [themeId, progress] of Object.entries(progressMap)) {
+                srsProgress[themeId] = {
+                    total: progress.total,
+                    learned: progress.learned,
+                    due: progress.due,
+                }
+                totalDue += progress.due
             }
-            totalDue += progress.due
+        } catch (err) {
+            console.error('[Vocabulary] Error fetching SRS progress:', err)
         }
     }
 
@@ -43,19 +60,37 @@ export default async function VocabularyPage() {
     const serverUser = await getServerUser()
     if (!serverUser) redirect('/login')
 
-    const availableLevels = await cacheWrap('vocab:levels', 3600, getVocabularyLevels)
-    const defaultLevel: CefrLevel = availableLevels[0] || 'A1'
-    const { themes, totalWords, totalDue } = await getThemes(serverUser.userId, defaultLevel)
+    try {
+        const availableLevels = await getAvailableLevels()
+        const defaultLevel: CefrLevel = availableLevels[0] || 'A1'
+        const { themes, totalWords, totalDue } = await getThemes(serverUser.userId, defaultLevel)
 
-    return (
-        <div className="max-w-5xl mx-auto px-4 py-8">
-            <VocabularyClient
-                themes={themes}
-                totalWords={totalWords}
-                totalDue={totalDue}
-                availableLevels={availableLevels}
-                initialLevel={defaultLevel}
-            />
-        </div>
-    )
+        return (
+            <div className="max-w-5xl mx-auto px-4 py-8">
+                <VocabularyClient
+                    themes={themes}
+                    totalWords={totalWords}
+                    totalDue={totalDue}
+                    availableLevels={availableLevels}
+                    initialLevel={defaultLevel}
+                />
+            </div>
+        )
+    } catch (err) {
+        console.error('[Vocabulary] Page render error:', err)
+        return (
+            <div className="max-w-5xl mx-auto px-4 py-8 text-center">
+                <div style={{ fontSize: 48, marginBottom: 16 }}>🦊</div>
+                <h2 style={{ fontSize: 20, fontWeight: 700, color: '#111827', marginBottom: 8 }}>
+                    Trang từ vựng đang được cập nhật
+                </h2>
+                <p style={{ color: '#6B7280', marginBottom: 16 }}>
+                    Vui lòng thử lại sau hoặc quay về trang chủ.
+                </p>
+                <a href="/dashboard" style={{ color: '#3B82F6', textDecoration: 'underline' }}>
+                    ← Quay về Dashboard
+                </a>
+            </div>
+        )
+    }
 }
