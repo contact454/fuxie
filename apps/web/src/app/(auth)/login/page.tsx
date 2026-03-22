@@ -166,7 +166,7 @@ function LoginContent() {
             } else if (code === 'auth/cancelled-popup-request') {
                 // ignore
             } else {
-                setError(`Đăng nhập Google thất bại. (${code || 'unknown'})`)
+                setError(`Đăng nhập Google thất bại. (${code || (err as Error)?.message || 'unknown'})`)
             }
         } finally {
             setLoading(false)
