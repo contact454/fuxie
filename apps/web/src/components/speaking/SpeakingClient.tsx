@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useCallback, useTransition } from 'react'
+import { useState, useCallback } from 'react'
 import { useRouter } from 'next/navigation'
 import styles from './speaking.module.css'
 import type { SpeakingTopicData, CefrLevel } from './types'
@@ -33,7 +33,6 @@ export default function SpeakingClient({
   totalStars: initialTotalStars,
 }: Props) {
   const router = useRouter()
-  const [isPending, startTransition] = useTransition()
   const [selectedLevel, setSelectedLevel] = useState<CefrLevel>(initialLevel)
   const [topics, setTopics] = useState(initialTopics)
   const [totalLessons, setTotalLessons] = useState(initialTotalLessons)
@@ -41,13 +40,22 @@ export default function SpeakingClient({
   const [totalStars, setTotalStars] = useState(initialTotalStars)
   const [selectedTopic, setSelectedTopic] = useState<SpeakingTopicData | null>(null)
 
-  const handleLevelChange = useCallback((level: CefrLevel) => {
+  const handleLevelChange = useCallback(async (level: CefrLevel) => {
     setSelectedLevel(level)
     setSelectedTopic(null)
-    startTransition(() => {
-      router.refresh()
-    })
-  }, [router])
+    try {
+      const res = await fetch(`/api/v1/speaking/topics?level=${level}`)
+      if (res.ok) {
+        const data = await res.json()
+        setTopics(data.topics)
+        setTotalLessons(data.totalLessons)
+        setCompletedLessons(data.completedLessons)
+        setTotalStars(data.totalStars)
+      }
+    } catch (err) {
+      console.error('Failed to fetch topics:', err)
+    }
+  }, [])
 
   // Viewing lessons for a topic
   if (selectedTopic) {
