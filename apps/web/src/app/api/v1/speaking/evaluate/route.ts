@@ -103,6 +103,7 @@ async function callGeminiWithAudio(
 
   if (!response.ok) {
     const errorText = await response.text()
+    console.error(`[Gemini] HTTP ${response.status}: ${errorText.substring(0, 500)}`)
     throw new Error(`HTTP_${response.status}: ${errorText.substring(0, 200)}`)
   }
 
@@ -110,16 +111,16 @@ async function callGeminiWithAudio(
   
   const text = result?.candidates?.[0]?.content?.parts?.[0]?.text
   if (!text) {
-    const blockReason = result?.candidates?.[0]?.finishReason || result?.promptFeedback?.blockReason || 'unknown'
-    throw new Error(`NO_TEXT: finishReason=${blockReason}, resp=${JSON.stringify(result).substring(0, 150)}`)
+    const resultStr = JSON.stringify(result).substring(0, 300)
+    console.error('[Gemini] No text in response:', resultStr)
+    throw new Error(`NO_TEXT: ${resultStr}`)
   }
 
   console.log(`[Gemini] Raw response: ${text.substring(0, 300)}`)
 
   // Parse JSON from response
   const cleaned = text.replace(/```json\s*/g, '').replace(/```\s*/g, '').trim()
-  const parsed = JSON.parse(cleaned) // Will throw SyntaxError if invalid
-  return parsed
+  return JSON.parse(cleaned)
 }
 
 export async function POST(request: NextRequest) {
@@ -192,19 +193,21 @@ Antworte NUR als JSON (kein Markdown):
 
       const parsed = await callGeminiWithAudio(base64Data, mimeType, prompt)
 
-      transcript = parsed.transcript || ''
-      aiScore = typeof parsed.score === 'number' ? parsed.score : 0
-      usedAI = true
+      if (parsed) {
+        transcript = parsed.transcript || ''
+        aiScore = typeof parsed.score === 'number' ? parsed.score : 0
+        usedAI = true
 
-      console.log(`[Evaluate] Gemini: transcript="${transcript}", score=${aiScore}`)
+        console.log(`[Evaluate] Gemini: transcript="${transcript}", score=${aiScore}`)
 
-      if (parsed.feedbackVi) {
-        overallTips.push(`💡 ${parsed.feedbackVi}`)
-      }
-      if (parsed.issues?.length > 0) {
-        parsed.issues.forEach((issue: any) => {
-          overallTips.push(`- "${issue.word}": ${issue.issueVi || issue.tip}`)
-        })
+        if (parsed.feedbackVi) {
+          overallTips.push(`💡 ${parsed.feedbackVi}`)
+        }
+        if (parsed.issues?.length > 0) {
+          parsed.issues.forEach((issue: any) => {
+            overallTips.push(`- "${issue.word}": ${issue.issueVi || issue.tip}`)
+          })
+        }
       }
     } catch (err: any) {
       debugError = `catch: ${err?.message || String(err)}`
