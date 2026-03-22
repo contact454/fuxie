@@ -1,17 +1,30 @@
 import Redis from 'ioredis'
 
-const redisUrl = process.env.REDIS_URL || 'redis://localhost:6379'
+const redisUrl = process.env.REDIS_URL || ''
 
-// BullMQ requires maxRetriesPerRequest to be null
-export const connection = new Redis(redisUrl, {
-    maxRetriesPerRequest: null,
-    enableReadyCheck: false,
-})
+let connection: Redis | null = null
 
-connection.on('error', (err) => {
-    console.error('[BullMQ Redis] Connection Error:', err)
-})
+if (redisUrl) {
+    try {
+        connection = new Redis(redisUrl, {
+            maxRetriesPerRequest: null,
+            enableReadyCheck: false,
+            lazyConnect: true,
+        })
 
-connection.on('ready', () => {
-    console.log('[BullMQ Redis] Connected to', redisUrl)
-})
+        connection.on('error', (err) => {
+            console.warn('[BullMQ Redis] Connection Error:', err.message)
+        })
+
+        connection.on('ready', () => {
+            console.log('[BullMQ Redis] Connected to', redisUrl)
+        })
+    } catch (err) {
+        console.warn('[BullMQ Redis] Failed to init:', err)
+        connection = null
+    }
+} else {
+    console.log('[BullMQ Redis] REDIS_URL not set — workers disabled')
+}
+
+export { connection }

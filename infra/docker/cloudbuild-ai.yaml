@@ -1,0 +1,6 @@
+steps:
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['build', '-t', 'gcr.io/fuxie-490502/fuxie-ai-service:latest', '-f', 'infra/docker/Dockerfile.ai', '.']
+images:
+- 'gcr.io/fuxie-490502/fuxie-ai-service:latest'
+timeout: '600s'

@@ -2,24 +2,33 @@ import { NextRequest, NextResponse } from 'next/server'
 import { z } from 'zod'
 import { handleApiError } from '@/lib/api/error-handler'
 import { withAuth } from '@/lib/auth/middleware'
+import { GoogleGenerativeAI } from '@google/generative-ai'
 
-// Word-level alignment using Levenshtein-style comparison
+// ─── Gemini Client (lazy init) ───────────────────────
+let genAI: GoogleGenerativeAI | null = null
+function getGenAI() {
+  if (!genAI) {
+    const key = process.env.GEMINI_API_KEY || process.env.GOOGLE_AI_API_KEY || ''
+    if (!key) throw new Error('GEMINI_API_KEY not set')
+    genAI = new GoogleGenerativeAI(key)
+  }
+  return genAI
+}
+
+// ─── Word alignment (Levenshtein) ────────────────────
 function alignWords(refWords: string[], userWords: string[]): Array<{
   word: string
   status: 'correct' | 'warning' | 'error' | 'missing'
   score: number
 }> {
   const results: Array<{ word: string; status: 'correct' | 'warning' | 'error' | 'missing'; score: number }> = []
-
-  const normalizeWord = (w: string) => w.toLowerCase().replace(/[^a-zäöüß]/g, '')
+  const normalize = (w: string) => w.toLowerCase().replace(/[^a-zäöüß]/g, '')
 
   let userIdx = 0
   for (const refWord of refWords) {
-    const refNorm = normalizeWord(refWord)
-
+    const refNorm = normalize(refWord)
     if (userIdx < userWords.length) {
-      const userNorm = normalizeWord(userWords[userIdx]!)
-
+      const userNorm = normalize(userWords[userIdx]!)
       if (refNorm === userNorm) {
         results.push({ word: refWord, status: 'correct', score: 100 })
         userIdx++
@@ -27,10 +36,8 @@ function alignWords(refWords: string[], userWords: string[]): Array<{
         results.push({ word: refWord, status: 'warning', score: 70 })
         userIdx++
       } else {
-        // Check if this word appears later in user words
-        const futureIdx = userWords.slice(userIdx).findIndex(w => normalizeWord(w) === refNorm)
+        const futureIdx = userWords.slice(userIdx).findIndex(w => normalize(w) === refNorm)
         if (futureIdx > 0) {
-          // User added extra words
           userIdx += futureIdx
           results.push({ word: refWord, status: 'correct', score: 100 })
           userIdx++
@@ -42,7 +49,6 @@ function alignWords(refWords: string[], userWords: string[]): Array<{
       results.push({ word: refWord, status: 'missing', score: 0 })
     }
   }
-
   return results
 }
 
@@ -89,48 +95,69 @@ export async function POST(request: NextRequest) {
       exerciseType: formData.get('exerciseType') || 'nachsprechen',
     })
 
-    // === STEP 1: Call AI Service for Grammar & Pronunciation ===
-    const aiServiceUrl = process.env.AI_SERVICE_URL || 'http://localhost:3001'
+    // === STEP 1: Call Gemini directly for pronunciation evaluation ===
     let transcript = ''
     let aiScore = 0
     let overallTips: string[] = []
 
     try {
-      const aiFormData = new FormData()
-      aiFormData.append('audio', audioFile)
-      aiFormData.append('cefrLevel', level)
-      aiFormData.append('expectedText', referenceText)
-      aiFormData.append('exerciseType', exerciseType)
+      const model = getGenAI().getGenerativeModel({ model: 'gemini-2.0-flash' })
 
-      const aiRes = await fetch(`${aiServiceUrl}/grade/speaking`, {
-        method: 'POST',
-        body: aiFormData,
-        signal: AbortSignal.timeout(20000), // Gemini Audio takes a bit longer
-      })
+      const arrayBuffer = await audioFile.arrayBuffer()
+      const base64Data = Buffer.from(arrayBuffer).toString('base64')
 
-      if (aiRes.ok) {
-        const json = await aiRes.json()
-        if (json.success && json.data) {
-          transcript = json.data.transcript || ''
-          aiScore = json.data.score || 0
-          
-          if (json.data.feedbackVi) {
-            overallTips.push(`💡 ${json.data.feedbackVi}`)
-          }
-          if (json.data.issues && json.data.issues.length > 0) {
-            json.data.issues.forEach((issue: any) => {
-              overallTips.push(`- "${issue.word}": ${issue.issueVi || issue.tip}`)
-            })
-          }
-        }
-      } else {
-        console.warn('AI Service returned error status:', await aiRes.text())
+      const prompt = `Du bist ein DaF-Aussprachetrainer. Höre dir die Audioaufnahme eines vietnamesischen ${level}-Lerners an.
+
+## Kontext
+- Niveau: ${level}
+- Übungstyp: ${exerciseType}
+- Erwarteter Text: "${referenceText}"
+
+## Aufgabe
+1. Transkribiere genau, was der Lerner gesagt hat.
+2. Vergleiche es mit dem erwarteten Text.
+3. Bewerte die Aussprache (0-100) und gib Feedback auf Vietnamesisch.
+4. Identifiziere MAXIMAL 3 Wörter mit Ausspracheproblemen.
+
+Antworte NUR als JSON:
+{
+  "transcript": "Was der Lerner gesagt hat",
+  "score": 0-100,
+  "feedbackVi": "Đánh giá bằng tiếng Việt",
+  "issues": [
+    { "word": "Wort", "issueVi": "Vấn đề phát âm", "tip": "Phonetischer Tipp" }
+  ]
+}`
+
+      const result = await model.generateContent([
+        prompt,
+        {
+          inlineData: {
+            data: base64Data,
+            mimeType: audioFile.type || 'audio/webm',
+          },
+        },
+      ])
+      const responseText = result.response.text()
+      const cleaned = responseText.replace(/```json\s*/g, '').replace(/```\s*/g, '').trim()
+      const parsed = JSON.parse(cleaned)
+
+      transcript = parsed.transcript || ''
+      aiScore = parsed.score || 0
+
+      if (parsed.feedbackVi) {
+        overallTips.push(`💡 ${parsed.feedbackVi}`)
+      }
+      if (parsed.issues?.length > 0) {
+        parsed.issues.forEach((issue: any) => {
+          overallTips.push(`- "${issue.word}": ${issue.issueVi || issue.tip}`)
+        })
       }
     } catch (err) {
-      console.warn('Failed to call AI Service for speaking grading:', err)
+      console.warn('[Evaluate/Gemini] Error:', err)
     }
 
-    // Fallback if AI Service failed or returned empty
+    // Fallback if Gemini failed
     if (!transcript) {
       const words = referenceText.split(' ')
       transcript = words.map(w => Math.random() > 0.1 ? w : w.slice(0, -1)).join(' ')
@@ -142,12 +169,10 @@ export async function POST(request: NextRequest) {
     const userWords = transcript.replace(/[!?.,:;]/g, '').split(/\s+/).filter(Boolean)
     const wordResults = alignWords(refWords, userWords)
     
-    // Use AI score if valid, otherwise fallback to word alignment score
     const accuracy = aiScore > 0 ? aiScore : (wordResults.length > 0
       ? Math.round(wordResults.reduce((s, w) => s + w.score, 0) / wordResults.length)
       : 0)
 
-    // === STEP 4: Return result ===
     return NextResponse.json({
       transcript,
       accuracy,
