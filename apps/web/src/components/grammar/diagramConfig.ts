@@ -18,38 +18,38 @@ const BASE = '/images/grammar'
 export const grammarDiagrams: Record<string, TopicDiagrams> = {
   // ═══ A1 ═══
   'a1-praesens': {
-    table: `${BASE}/a1/a1_praesens_table.png`,
-    mnemonic: `${BASE}/a1/a1_praesens_mnemonic.png`,
+    table: `${BASE}/a1/a1_praesens_table_v4.png`,
+    mnemonic: `${BASE}/a1/a1_praesens_mnemonic_v4.png`,
   },
   'a1-sein-haben': {
-    rule: `${BASE}/a1/a1_sein_haben_rule.png`,
-    table: `${BASE}/a1/a1_sein_haben_table.png`,
-    mnemonic: `${BASE}/a1/a1_sein_haben_mnemonic.png`,
+    rule: `${BASE}/a1/a1_sein_haben_v4.png`,
+    table: `${BASE}/a1/a1_sein_haben_table_v4.png`,
+    mnemonic: `${BASE}/a1/a1_sein_haben_mnemonic_v4.png`,
   },
   'a1-artikel': {
-    rule: `${BASE}/a1/a1_artikel_rule.png`,
-    table: `${BASE}/a1/a1_artikel_table.png`,
+    rule: `${BASE}/a1/a1_artikel_rule_v4.png`,
+    table: `${BASE}/a1/a1_artikel_table_v4.png`,
   },
   'a1-personalpronomen': {
-    rule: `${BASE}/a1/a1_pronomen_rule.png`,
+    rule: `${BASE}/a1/a1_pronomen_v4.png`,
   },
   'a1-negation': {
-    rule: `${BASE}/a1/a1_negation_rule.png`,
+    rule: `${BASE}/a1/a1_negation_v4.png`,
   },
   'a1-w-fragen': {
-    rule: `${BASE}/a1/a1_wfragen_rule.png`,
+    rule: `${BASE}/a1/a1_wfragen_v4.png`,
   },
   'a1-satzstellung': {
-    rule: `${BASE}/a1/a1_satzstellung_rule.png`,
+    rule: `${BASE}/a1/a1_satzstellung_v4.png`,
   },
   'a1-akkusativ': {
-    rule: `${BASE}/a1/a1_akkusativ_rule.png`,
+    rule: `${BASE}/a1/a1_akkusativ_v4.png`,
   },
   'a1-trennbare-verben': {
-    rule: `${BASE}/a1/a1_trennbare_rule.png`,
+    rule: `${BASE}/a1/a1_trennbare_v4.png`,
   },
   'a1-modalverben': {
-    rule: `${BASE}/a1/a1_modalverben_rule.png`,
-    table: `${BASE}/a1/a1_modalverben_table.png`,
+    rule: `${BASE}/a1/a1_modalverben_rule_v4.png`,
+    table: `${BASE}/a1/a1_modalverben_table_v4.png`,
   },
 }
