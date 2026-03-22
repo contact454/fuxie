@@ -43,6 +43,7 @@ function alignWords(refWords: string[], userWords: string[]): Array<{
           userIdx++
         } else {
           results.push({ word: refWord, status: 'error', score: 0 })
+          userIdx++ // consume the wrong word
         }
       }
     } else {
@@ -95,10 +96,13 @@ export async function POST(request: NextRequest) {
       exerciseType: formData.get('exerciseType') || 'nachsprechen',
     })
 
-    // === STEP 1: Call Gemini directly for pronunciation evaluation ===
+    console.log(`[Evaluate] Level: ${level}, Audio: ${audioFile.size} bytes, Type: ${audioFile.type}, Ref: "${referenceText}"`)
+
+    // === STEP 1: Call Gemini for pronunciation evaluation ===
     let transcript = ''
     let aiScore = 0
     let overallTips: string[] = []
+    let usedAI = false
 
     try {
       const model = getGenAI().getGenerativeModel({ model: 'gemini-2.5-flash' })
@@ -106,26 +110,36 @@ export async function POST(request: NextRequest) {
       const arrayBuffer = await audioFile.arrayBuffer()
       const base64Data = Buffer.from(arrayBuffer).toString('base64')
 
-      const prompt = `Du bist ein DaF-Aussprachetrainer. Höre dir die Audioaufnahme eines vietnamesischen ${level}-Lerners an.
+      console.log(`[Evaluate] Calling Gemini with ${base64Data.length} base64 chars...`)
+
+      const prompt = `Du bist ein strenger DaF-Aussprachetrainer. Höre dir die Audioaufnahme eines vietnamesischen ${level}-Lerners an.
 
 ## Kontext
 - Niveau: ${level}
 - Übungstyp: ${exerciseType}
 - Erwarteter Text: "${referenceText}"
 
-## Aufgabe
-1. Transkribiere genau, was der Lerner gesagt hat.
-2. Vergleiche es mit dem erwarteten Text.
-3. Bewerte die Aussprache (0-100) und gib Feedback auf Vietnamesisch.
-4. Identifiziere MAXIMAL 3 Wörter mit Ausspracheproblemen.
+## WICHTIGE REGELN
+- Transkribiere EXAKT was du hörst, NICHT den erwarteten Text!
+- Wenn der Lerner etwas anderes sagt als erwartet, schreibe was er TATSÄCHLICH gesagt hat.
+- Wenn du nur Rauschen, Stille oder unverständliche Laute hörst, setze transcript auf "" (leer) und score auf 0.
+- Sei STRENG bei der Bewertung. Nur perfekte Aussprache bekommt 90+.
+- Typische Fehler von Vietnamesen: "r" als "z", "ch" falsch, "ü/ö/ä" schwierig.
 
-Antworte NUR als JSON:
+## Bewertungsskala
+- 90-100: Nahezu perfekt, muttersprachlich
+- 70-89: Gut, verständlich mit kleinen Fehlern
+- 50-69: Befriedigend, einige Aussprachefehler
+- 30-49: Schwach, schwer verständlich
+- 0-29: Unverständlich oder falscher Text
+
+Antworte NUR als JSON (kein Markdown):
 {
-  "transcript": "Was der Lerner gesagt hat",
+  "transcript": "Was der Lerner TATSÄCHLICH gesagt hat (oder leer wenn nicht erkennbar)",
   "score": 0-100,
   "feedbackVi": "Đánh giá bằng tiếng Việt",
   "issues": [
-    { "word": "Wort", "issueVi": "Vấn đề phát âm", "tip": "Phonetischer Tipp" }
+    { "word": "Wort", "issueVi": "Vấn đề phát âm", "tip": "Tipp" }
   ]
 }`
 
@@ -139,11 +153,16 @@ Antworte NUR als JSON:
         },
       ])
       const responseText = result.response.text()
+      console.log(`[Evaluate] Gemini raw response: ${responseText.substring(0, 300)}`)
+      
       const cleaned = responseText.replace(/```json\s*/g, '').replace(/```\s*/g, '').trim()
       const parsed = JSON.parse(cleaned)
 
       transcript = parsed.transcript || ''
-      aiScore = parsed.score || 0
+      aiScore = typeof parsed.score === 'number' ? parsed.score : 0
+      usedAI = true
+
+      console.log(`[Evaluate] Gemini result: transcript="${transcript}", score=${aiScore}`)
 
       if (parsed.feedbackVi) {
         overallTips.push(`💡 ${parsed.feedbackVi}`)
@@ -153,28 +172,33 @@ Antworte NUR als JSON:
           overallTips.push(`- "${issue.word}": ${issue.issueVi || issue.tip}`)
         })
       }
-    } catch (err) {
-      console.warn('[Evaluate/Gemini] Error:', err)
+    } catch (err: any) {
+      console.error('[Evaluate/Gemini] Error:', err?.message || err)
     }
 
-    // Fallback if Gemini failed
-    if (!transcript) {
-      const words = referenceText.split(' ')
-      transcript = words.map(w => Math.random() > 0.1 ? w : w.slice(0, -1)).join(' ')
-      overallTips = ['Hệ thống AI đang bảo trì. Vui lòng nói chậm, rõ ràng hơn.']
+    // Fallback if Gemini failed — clearly indicate it's NOT real grading
+    if (!usedAI || !transcript) {
+      console.warn('[Evaluate] Using fallback — Gemini did not return a transcript')
+      transcript = '(Không nhận diện được giọng nói)'
+      aiScore = 0
+      overallTips = [
+        '⚠️ Hệ thống AI chưa nhận diện được giọng nói của bạn.',
+        '💡 Hãy nói rõ ràng hơn, gần microphone hơn và thử lại.',
+      ]
     }
 
     // === STEP 2: Word alignment for UI (Color Chips) ===
     const refWords = referenceText.replace(/[!?.,:;]/g, '').split(/\s+/).filter(Boolean)
-    const userWords = transcript.replace(/[!?.,:;]/g, '').split(/\s+/).filter(Boolean)
+    const userWords = transcript.replace(/[!?.,:;()]/g, '').split(/\s+/).filter(Boolean)
     const wordResults = alignWords(refWords, userWords)
     
-    const accuracy = aiScore > 0 ? aiScore : (wordResults.length > 0
-      ? Math.round(wordResults.reduce((s, w) => s + w.score, 0) / wordResults.length)
-      : 0)
+    // Use AI score directly — don't override with word alignment when AI worked
+    const accuracy = usedAI ? aiScore : 0
+
+    console.log(`[Evaluate] Final: accuracy=${accuracy}, usedAI=${usedAI}, words=${wordResults.length}`)
 
     return NextResponse.json({
-      transcript,
+      transcript: usedAI ? transcript : '',
       accuracy,
       durationSec: 0,
       words: wordResults,
