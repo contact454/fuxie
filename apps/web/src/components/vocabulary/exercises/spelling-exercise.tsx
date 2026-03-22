@@ -87,7 +87,7 @@ export function SpellingExercise({ questions, cefrLevel, themeName, themeSlug, o
         const newAnswers: ExerciseAnswer[] = [...answers, {
             questionId: question.id,
             answer: userInput.trim(),
-            correctAnswer: '',
+            correctAnswer: userInput.trim(),  // Server derives from wordId via deriveCorrectAnswer
             wordId: question.wordId,
             questionType: question.type,
         }]

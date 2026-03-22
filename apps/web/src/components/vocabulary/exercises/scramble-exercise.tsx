@@ -89,7 +89,7 @@ export function ScrambleExercise({ questions, cefrLevel, themeName, themeSlug, o
         const newAnswers: ExerciseAnswer[] = [...answers, {
             questionId: question.id,
             answer: userSentence,
-            correctAnswer: '',
+            correctAnswer: userSentence,  // Server derives from wordId via deriveCorrectAnswer
             wordId: question.wordId,
             questionType: question.type,
         }]

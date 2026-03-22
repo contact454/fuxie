@@ -91,7 +91,7 @@ export function ClozeExercise({ questions, cefrLevel, themeName, themeSlug, onEx
         const newAnswers = [...answers, {
             questionId: question.id,
             answer: userInput.trim(),
-            correctAnswer: '',
+            correctAnswer: userInput.trim(),  // Server derives from wordId via deriveCorrectAnswer
             wordId: question.wordId,
             questionType: question.type,
         }]

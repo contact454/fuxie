@@ -76,10 +76,11 @@ export function SpeedExercise({ questions, cefrLevel, themeName, themeSlug, onEx
                     if (!isRevealedRef.current) {
                         setIsRevealed(true)
                         const q = questionRef.current
+                        const timeoutCorrect = q?.type === 'de_to_vi' ? (q?.meaningVi || '') : (q?.word || '')
                         const newAnswers: ExerciseAnswer[] = [...answersRef.current, {
                             questionId: q?.id || '',
                             answer: '__timeout__',
-                            correctAnswer: '',
+                            correctAnswer: timeoutCorrect,
                             wordId: q?.wordId,
                             questionType: q?.type,
                         }]
@@ -121,10 +122,11 @@ export function SpeedExercise({ questions, cefrLevel, themeName, themeSlug, onEx
         setSelectedAnswer(option)
         setIsRevealed(true)
 
+        const correctAnswer = question.type === 'de_to_vi' ? question.meaningVi : question.word
         const newAnswers: ExerciseAnswer[] = [...answers, {
             questionId: question.id,
             answer: option,
-            correctAnswer: '',
+            correctAnswer,
             wordId: question.wordId,
             questionType: question.type,
         }]

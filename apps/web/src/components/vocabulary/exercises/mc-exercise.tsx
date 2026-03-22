@@ -82,10 +82,14 @@ export function McExercise({ questions, cefrLevel, themeName, themeSlug, onExit,
         setSelectedAnswer(option)
         setIsRevealed(true)
 
+        const correctAnswer = question.type === 'de_to_vi'
+            ? question.meaningVi
+            : question.word  // vi_to_de, image_to_word, audio_to_word
+
         const newAnswers: ExerciseAnswer[] = [...answers, {
             questionId: question.id,
             answer: option,
-            correctAnswer: '',
+            correctAnswer,
             wordId: question.wordId,
             questionType: question.type,
         }]
