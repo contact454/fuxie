@@ -52,4 +52,20 @@ export const grammarDiagrams: Record<string, TopicDiagrams> = {
     rule: `${BASE}/a1/a1_modalverben_rule_v4.png`,
     table: `${BASE}/a1/a1_modalverben_table_v4.png`,
   },
+
+  // ═══ A1 — Topics from grammar-topics.json seed ═══
+  'a1-g01-alphabet-aussprache': {
+    rule: `${BASE}/a1/a1_alphabet_rule_v4.png`,
+    mnemonic: `${BASE}/a1/a1_alphabet_mnemonic_v4.png`,
+  },
+  'a1-g02-personalpronomen-sein-haben': {
+    table: `${BASE}/a1/a1_pronomen_table_v4.png`,
+    mnemonic: `${BASE}/a1/a1_pronomen_mnemonic_v4.png`,
+  },
+  'a1-g03-regelmaessige-verben': {
+    rule: `${BASE}/a1/a1_regelmaessig_rule_v4.png`,
+  },
+  'a1-g04-satzbau-fragen': {
+    rule: `${BASE}/a1/a1_satzbau_fragen_v4.png`,
+  },
 }
