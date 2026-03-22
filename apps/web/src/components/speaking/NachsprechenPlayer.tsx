@@ -152,6 +152,53 @@ export default function NachsprechenPlayer({ sentences, config, lessonTitle, les
     window.speechSynthesis.speak(utterance)
   }, [])
 
+  // Convert WebM blob to WAV (Gemini doesn't support WebM audio)
+  const convertToWav = useCallback(async (webmBlob: Blob): Promise<Blob> => {
+    try {
+      const arrayBuffer = await webmBlob.arrayBuffer()
+      const audioCtx = new AudioContext({ sampleRate: 16000 })
+      const audioBuffer = await audioCtx.decodeAudioData(arrayBuffer)
+      
+      // Convert to mono 16-bit PCM WAV
+      const numChannels = 1
+      const sampleRate = audioBuffer.sampleRate
+      const channelData = audioBuffer.getChannelData(0)
+      const numSamples = channelData.length
+      const wavBuffer = new ArrayBuffer(44 + numSamples * 2)
+      const view = new DataView(wavBuffer)
+      
+      // WAV header
+      const writeString = (offset: number, str: string) => {
+        for (let i = 0; i < str.length; i++) view.setUint8(offset + i, str.charCodeAt(i))
+      }
+      writeString(0, 'RIFF')
+      view.setUint32(4, 36 + numSamples * 2, true)
+      writeString(8, 'WAVE')
+      writeString(12, 'fmt ')
+      view.setUint32(16, 16, true)
+      view.setUint16(20, 1, true) // PCM
+      view.setUint16(22, numChannels, true)
+      view.setUint32(24, sampleRate, true)
+      view.setUint32(28, sampleRate * numChannels * 2, true)
+      view.setUint16(32, numChannels * 2, true)
+      view.setUint16(34, 16, true)
+      writeString(36, 'data')
+      view.setUint32(40, numSamples * 2, true)
+      
+      // PCM samples
+      for (let i = 0; i < numSamples; i++) {
+        const s = Math.max(-1, Math.min(1, channelData[i]!))
+        view.setInt16(44 + i * 2, s < 0 ? s * 0x8000 : s * 0x7FFF, true)
+      }
+      
+      audioCtx.close()
+      return new Blob([wavBuffer], { type: 'audio/wav' })
+    } catch (err) {
+      console.warn('WAV conversion failed, sending original:', err)
+      return webmBlob // fallback to original
+    }
+  }, [])
+
   const evaluateRecording = useCallback(async (blob: Blob) => {
     evaluateAbortRef.current?.abort()
     const controller = new AbortController()
@@ -164,8 +211,12 @@ export default function NachsprechenPlayer({ sentences, config, lessonTitle, les
       const currentSentence = sentenceRef.current
       if (!currentSentence) return
 
+      // Convert WebM to WAV for Gemini compatibility
+      const wavBlob = await convertToWav(blob)
+      console.log(`Audio: ${blob.size}b webm → ${wavBlob.size}b wav`)
+
       const formData = new FormData()
-      formData.append('audio', blob, 'recording.webm')
+      formData.append('audio', wavBlob, 'recording.wav')
       formData.append('referenceText', currentSentence.textDe)
       formData.append('level', 'A1')
       formData.append('exerciseType', 'nachsprechen')
@@ -192,25 +243,25 @@ export default function NachsprechenPlayer({ sentences, config, lessonTitle, les
       const currentSentence = sentenceRef.current
       if (!currentSentence) return
 
-      // Fallback mock result for development
-      const mockResult: EvaluationResult = {
-        transcript: currentSentence.textDe,
-        accuracy: 85 + Math.floor(Math.random() * 15),
+      // Show error result instead of fake mock
+      const errorResult: EvaluationResult = {
+        transcript: '',
+        accuracy: 0,
         durationSec: recordingTimeRef.current,
         words: currentSentence.textDe.split(' ').map(word => ({
           word,
-          status: Math.random() > 0.2 ? 'correct' : 'warning',
-          score: 70 + Math.floor(Math.random() * 30),
+          status: 'error' as const,
+          score: 0,
         })),
-        overallTips: ['Phát âm rất tốt! Cố gắng nói chậm hơn một chút.'],
-        suggestRetry: false,
+        overallTips: ['⚠️ Không thể kết nối hệ thống AI. Vui lòng thử lại.'],
+        suggestRetry: true,
       }
-      setResult(mockResult)
+      setResult(errorResult)
       setAttempts(prev => prev + 1)
-      setScores(prev => [...prev, mockResult.accuracy])
+      setScores(prev => [...prev, 0])
       setState('result')
     }
-  }, [])
+  }, [convertToWav])
 
   const startRecording = async () => {
     try {
