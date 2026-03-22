@@ -7,6 +7,8 @@ export interface ExerciseAnswer {
     questionId: string
     answer: string
     correctAnswer: string
+    wordId?: string
+    questionType?: string
 }
 
 export interface SubmitResult {
@@ -14,9 +16,10 @@ export interface SubmitResult {
     correctCount: number
     accuracy: number
     xpEarned: number
+    graded?: boolean
     results: Array<{
         questionId: string
-        isCorrect: boolean
+        isCorrect: boolean | null
         userAnswer: string
         correctAnswer: string
     }>
@@ -57,18 +60,20 @@ export function useSubmitExercise({
 
     const buildLocalFallback = useCallback(
         (answers: ExerciseAnswer[]): SubmitResult => {
+            const canGradeLocally = answers.every((answer) => answer.correctAnswer.trim().length > 0)
             const results = answers.map(a => ({
                 questionId: a.questionId,
-                isCorrect: compare(a.answer, a.correctAnswer),
+                isCorrect: canGradeLocally ? compare(a.answer, a.correctAnswer) : null,
                 userAnswer: a.answer,
-                correctAnswer: a.correctAnswer,
+                correctAnswer: a.correctAnswer || 'Serverbewertung erforderlich',
             }))
             const correctCount = results.filter(r => r.isCorrect).length
             return {
                 totalQuestions: answers.length,
-                correctCount,
-                accuracy: answers.length > 0 ? (correctCount / answers.length) * 100 : 0,
-                xpEarned: correctCount * xpPerCorrect,
+                correctCount: canGradeLocally ? correctCount : 0,
+                accuracy: canGradeLocally && answers.length > 0 ? (correctCount / answers.length) * 100 : 0,
+                xpEarned: canGradeLocally ? correctCount * xpPerCorrect : 0,
+                graded: canGradeLocally,
                 results,
             }
         },
@@ -94,7 +99,10 @@ export function useSubmitExercise({
                 })
                 const data = await res.json()
                 if (data.success) {
-                    setSubmitResult(data.data)
+                    setSubmitResult({
+                        ...data.data,
+                        graded: true,
+                    })
                 } else {
                     console.warn('[useSubmitExercise] API returned error, using local fallback:', data)
                     setSubmitResult(localFallback)

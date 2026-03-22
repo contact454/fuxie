@@ -3,8 +3,6 @@ import { prisma } from '@fuxie/database'
 import { getServerUser } from '@/lib/auth/server-auth'
 import { ReadingPlayer } from '@/components/reading/reading-player'
 
-export const dynamic = 'force-dynamic'
-
 export async function generateMetadata({ params }: { params: Promise<{ exerciseId: string }> }) {
     const { exerciseId } = await params
     return {

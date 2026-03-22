@@ -1,58 +1,39 @@
 import { redirect } from 'next/navigation'
 import { prisma } from '@fuxie/database'
 import { getServerUser } from '@/lib/auth/server-auth'
+import { cacheWrap } from '@/lib/cache/redis'
 import { ListeningClient } from '@/components/listening/listening-client'
-import { unstable_cache } from 'next/cache'
-
-export const dynamic = 'force-dynamic'
+import { getListeningLessonList, getListeningLevels, type CefrLevel } from '@/lib/content/listening'
 
 export const metadata = {
     title: 'Fuxie 🦊 — Hörverstehen',
     description: 'Deutsche Hörverstehen — Practice listening comprehension by CEFR level',
 }
 
-type CefrLevel = 'A1' | 'A2' | 'B1' | 'B2' | 'C1' | 'C2'
-
 async function getListeningData(userId: string | null, cefrLevel: CefrLevel) {
-    // Parallelize independent queries
-    const [lessons, completedLessons] = await Promise.all([
-        prisma.listeningLesson.findMany({
-            where: { cefrLevel },
-            orderBy: [{ teil: 'asc' }, { sortOrder: 'asc' }],
-            select: {
-                id: true,
-                lessonId: true,
-                cefrLevel: true,
-                teil: true,
-                teilName: true,
-                title: true,
-                topic: true,
-                taskType: true,
-                audioUrl: true,
-                audioDuration: true,
-                backgroundScene: true,
-                sortOrder: true,
-                _count: { select: { questions: true } },
+    const lessons = await cacheWrap(`listening:lessons:${cefrLevel}`, 3600, () => getListeningLessonList(cefrLevel))
+
+    const lessonIds = lessons.map((lesson) => lesson.id)
+    const completedLessons = userId && lessonIds.length > 0
+        ? await prisma.listeningAttempt.findMany({
+            where: {
+                userId,
+                lessonId: { in: lessonIds },
             },
-        }),
-        userId
-            ? prisma.listeningAttempt.findMany({
-                where: { userId },
-                select: { lessonId: true, score: true, totalQuestions: true },
-            }).then(attempts => {
-                const map: Record<string, { bestScore: number; totalQuestions: number; attempts: number }> = {}
-                for (const a of attempts) {
-                    const existing = map[a.lessonId]
-                    if (!existing || a.score > existing.bestScore) {
-                        map[a.lessonId] = { bestScore: a.score, totalQuestions: a.totalQuestions, attempts: (existing?.attempts ?? 0) + 1 }
-                    } else {
-                        map[a.lessonId] = { ...existing, attempts: existing.attempts + 1 }
-                    }
+            select: { lessonId: true, score: true, totalQuestions: true },
+        }).then(attempts => {
+            const map: Record<string, { bestScore: number; totalQuestions: number; attempts: number }> = {}
+            for (const a of attempts) {
+                const existing = map[a.lessonId]
+                if (!existing || a.score > existing.bestScore) {
+                    map[a.lessonId] = { bestScore: a.score, totalQuestions: a.totalQuestions, attempts: (existing?.attempts ?? 0) + 1 }
+                } else {
+                    map[a.lessonId] = { ...existing, attempts: existing.attempts + 1 }
                 }
-                return map
-            })
-            : ({} as Record<string, { bestScore: number; totalQuestions: number; attempts: number }>),
-    ])
+            }
+            return map
+        })
+        : ({} as Record<string, { bestScore: number; totalQuestions: number; attempts: number }>)
 
     // Group by Teil
     const teilMap: Record<number, {
@@ -97,26 +78,11 @@ async function getListeningData(userId: string | null, cefrLevel: CefrLevel) {
     return { teile, totalLessons, totalCompleted }
 }
 
-// Cache available levels — content changes rarely (revalidate every 1 hour)
-const getAvailableLevels = unstable_cache(
-    async (): Promise<CefrLevel[]> => {
-        const levels = await prisma.listeningLesson.findMany({
-            select: { cefrLevel: true },
-            distinct: ['cefrLevel'],
-            orderBy: { cefrLevel: 'asc' },
-        })
-        if (levels.length === 0) return ['A1']
-        return levels.map(l => l.cefrLevel as CefrLevel)
-    },
-    ['listening-available-levels'],
-    { revalidate: 3600, tags: ['listening-levels'] }
-)
-
 export default async function ListeningPage() {
     const serverUser = await getServerUser()
     if (!serverUser) redirect('/login')
 
-    const availableLevels = await getAvailableLevels()
+    const availableLevels = await getListeningLevels()
     const defaultLevel: CefrLevel = availableLevels[0] || 'A1'
     const data = await getListeningData(serverUser.userId, defaultLevel)
 

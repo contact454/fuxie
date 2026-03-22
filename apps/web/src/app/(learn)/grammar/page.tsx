@@ -1,9 +1,8 @@
 import { redirect } from 'next/navigation'
 import { prisma } from '@fuxie/database'
 import { getServerUser } from '@/lib/auth/server-auth'
+import { cacheWrap } from '@/lib/cache/redis'
 import { GrammarClient } from '@/components/grammar/GrammarClient'
-
-export const dynamic = 'force-dynamic'
 
 export const metadata = {
     title: 'Fuxie 🦊 — Grammatik',
@@ -14,19 +13,36 @@ type CefrLevel = 'A1' | 'A2' | 'B1' | 'B2' | 'C1' | 'C2'
 
 async function getGrammarData(userId: string | null, level: CefrLevel) {
     // Query topics and lessons separately to avoid Prisma include issues
-    const topics = await prisma.grammarTopic.findMany({
+    const topics = await cacheWrap(`grammar:topics:${level}`, 3600, () => prisma.grammarTopic.findMany({
         where: { cefrLevel: level },
         orderBy: { sortOrder: 'asc' },
-    })
+        select: {
+            id: true,
+            slug: true,
+            title: true,
+            titleDe: true,
+            titleVi: true,
+            cefrLevel: true,
+        },
+    }))
 
     // Get all lessons for this level (use topicId to group)
     const topicIds = topics.map((t) => t.id)
-    const lessons = topicIds.length > 0
-        ? await prisma.grammarLesson.findMany({
+    const lessons = await cacheWrap(`grammar:lessons:${level}`, 3600, async () => {
+        if (topicIds.length === 0) return []
+        return prisma.grammarLesson.findMany({
             where: { topicId: { in: topicIds } },
             orderBy: { sortOrder: 'asc' },
+            select: {
+                id: true,
+                topicId: true,
+                lessonType: true,
+                lessonNumber: true,
+                titleVi: true,
+                estimatedMin: true,
+            },
         })
-        : []
+    })
 
     // Group lessons by topicId
     const lessonsByTopic: Record<string, any[]> = {}
@@ -41,6 +57,12 @@ async function getGrammarData(userId: string | null, level: CefrLevel) {
         const lessonIds = lessons.map((l: any) => l.id)
         const progressRows = await prisma.grammarProgress.findMany({
             where: { userId, lessonId: { in: lessonIds } },
+            select: {
+                lessonId: true,
+                score: true,
+                stars: true,
+                completed: true,
+            },
         })
         for (const p of progressRows) {
             progressMap[p.lessonId] = {
@@ -81,13 +103,15 @@ async function getGrammarData(userId: string | null, level: CefrLevel) {
 }
 
 async function getAvailableLevels(): Promise<CefrLevel[]> {
-    const levels = await prisma.grammarTopic.findMany({
-        select: { cefrLevel: true },
-        distinct: ['cefrLevel'],
-        orderBy: { cefrLevel: 'asc' },
+    return cacheWrap('grammar:levels', 3600, async () => {
+        const levels = await prisma.grammarTopic.findMany({
+            select: { cefrLevel: true },
+            distinct: ['cefrLevel'],
+            orderBy: { cefrLevel: 'asc' },
+        })
+        if (levels.length === 0) return ['A1']
+        return levels.map((l: any) => l.cefrLevel as CefrLevel)
     })
-    if (levels.length === 0) return ['A1']
-    return levels.map((l: any) => l.cefrLevel as CefrLevel)
 }
 
 export default async function GrammarPage() {

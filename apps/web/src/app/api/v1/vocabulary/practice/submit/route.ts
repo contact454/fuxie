@@ -16,8 +16,47 @@ const submitSchema = z.object({
         questionId: z.string(),
         answer: z.string(),
         correctAnswer: z.string(),
+        wordId: z.string().uuid().optional(),
+        questionType: z.string().optional(),
     })),
 })
+
+function buildDisplayWord(word: { word: string; article: string | null }) {
+    if (!word.article) return word.word
+
+    return `${word.article === 'MASKULIN' ? 'der' : word.article === 'FEMININ' ? 'die' : 'das'} ${word.word}`
+}
+
+function deriveCorrectAnswer(
+    answer: { correctAnswer: string; questionType?: string; wordId?: string },
+    word?: {
+        word: string
+        article: string | null
+        meaningVi: string
+        exampleSentence1: string | null
+    }
+) {
+    if (!word) {
+        return answer.correctAnswer
+    }
+
+    switch (answer.questionType) {
+        case 'de_to_vi':
+        case 'pair':
+            return word.meaningVi
+        case 'vi_to_de':
+        case 'image_to_word':
+        case 'audio_to_word':
+            return buildDisplayWord(word)
+        case 'spelling':
+        case 'cloze':
+            return word.word
+        case 'scramble':
+            return word.exampleSentence1 ?? answer.correctAnswer
+        default:
+            return answer.correctAnswer
+    }
+}
 
 // XP calculation
 function calculateXp(answers: { isCorrect: boolean }[], timeTaken?: number): number {
@@ -58,13 +97,43 @@ export async function POST(req: NextRequest) {
         const body = await req.json()
         const { exerciseType, themeSlug, cefrLevel, timeTaken, answers } = submitSchema.parse(body)
 
+        const wordIds = [...new Set(answers.map(a => a.wordId).filter((id): id is string => Boolean(id)))]
+        const wordMap = new Map<string, {
+            word: string
+            article: string | null
+            meaningVi: string
+            exampleSentence1: string | null
+        }>()
+
+        if (wordIds.length > 0) {
+            const words = await prisma.vocabularyItem.findMany({
+                where: {
+                    id: { in: wordIds },
+                    cefrLevel,
+                    theme: { slug: themeSlug },
+                },
+                select: {
+                    id: true,
+                    word: true,
+                    article: true,
+                    meaningVi: true,
+                    exampleSentence1: true,
+                },
+            })
+
+            for (const word of words) {
+                wordMap.set(word.id, word)
+            }
+        }
+
         // Grade each answer
         const results = answers.map(a => {
-            const isCorrect = a.answer.trim().toLowerCase() === a.correctAnswer.trim().toLowerCase()
+            const correctAnswer = deriveCorrectAnswer(a, a.wordId ? wordMap.get(a.wordId) : undefined)
+            const isCorrect = a.answer.trim().toLowerCase() === correctAnswer.trim().toLowerCase()
             return {
                 questionId: a.questionId,
                 userAnswer: a.answer,
-                correctAnswer: a.correctAnswer,
+                correctAnswer,
                 isCorrect,
             }
         })

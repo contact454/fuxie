@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { z } from 'zod'
+import { withAuth } from '@/lib/auth/middleware'
 
 /**
  * GET /api/v1/tts?text=Hallo&speed=1.0
@@ -73,6 +74,8 @@ async function getAccessToken(): Promise<string> {
 
 export async function GET(req: NextRequest) {
     try {
+        await withAuth(req)
+
         const params = Object.fromEntries(req.nextUrl.searchParams)
         const { text, speed } = querySchema.parse(params)
 
@@ -120,7 +123,8 @@ export async function GET(req: NextRequest) {
             headers: {
                 'Content-Type': 'audio/mpeg',
                 'Content-Length': audioBuffer.length.toString(),
-                'Cache-Control': 'public, max-age=86400, immutable', // Cache 24h
+                'Cache-Control': 'private, max-age=86400, stale-while-revalidate=86400',
+                'Vary': 'Cookie',
             },
         })
     } catch (error: any) {

@@ -4,6 +4,23 @@ All notable changes to the Fuxie project will be documented here.
 
 ---
 
+## [2026-03-21] Session — Speaking Seed A1–C1 Expansion
+
+### Changed
+- `seed-speaking.ts` — Rewrote to support all CEFR levels (A1–C2)
+  - Auto-iterates `content/{level}/speaking/` directories
+  - Normalizes field differences (A1: `textDe`/`textVi`/`pronunciationNotes` → A2+: `german`/`vietnamese`/`pronunciationTips`)
+  - Auto-calculates `expectedDurationSec` from word count for A2+ content
+  - Level-specific configs (C2: 30s recording, 35% min; A1: 10s, 60%)
+  - Appends `-nachsprechen` suffix to A2+ lessonIds for consistency
+- **New content via `generate-speaking-advanced.ts`:**
+  - B2: +6 topics (freizeit, gesundheit, reisen, umwelt, medien, wohnen) → 10 total
+  - C1: +7 topics (arbeit, gesellschaft, umwelt, medien, kultur, wissenschaft, gesundheit) → 8 total
+  - C2: +6 topics (philosophie, politik, wirtschaft, kunst, sprache, technologie) → 6 total
+- **Result**: 48 topics, 384 lessons, 2,298 sentences seeded (was: 10 topics, 80 lessons A1 only)
+
+---
+
 ## [2026-03-02] Session 7 — Phase 3+4 Mascot (Gamification + Hero + Stickers)
 
 ### Added

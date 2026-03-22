@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useCallback } from 'react'
+import { useState, useCallback, useEffect, useRef } from 'react'
 import { ExerciseProgress } from './exercise-progress'
 import { ExerciseResults } from './exercise-results'
 import { useExerciseTimer } from '@/hooks/use-exercise-timer'
@@ -32,6 +32,8 @@ export function MatchingExercise({ pairs, cefrLevel, themeName, themeSlug, onExi
     const [matchedPairs, setMatchedPairs] = useState<Set<string>>(new Set())
     const [wrongPair, setWrongPair] = useState<{ word: string; meaning: string } | null>(null)
     const [mistakes, setMistakes] = useState(0)
+    const finishTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null)
+    const wrongPairTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null)
 
     const { timer, stopTimer, resetTimer } = useExerciseTimer()
     const { submitResult, phase, submitAnswers, resetSubmit } = useSubmitExercise({
@@ -49,6 +51,13 @@ export function MatchingExercise({ pairs, cefrLevel, themeName, themeSlug, onExi
         [...pairs].sort(() => Math.random() - 0.5)
     )
 
+    useEffect(() => {
+        return () => {
+            if (finishTimeoutRef.current) clearTimeout(finishTimeoutRef.current)
+            if (wrongPairTimeoutRef.current) clearTimeout(wrongPairTimeoutRef.current)
+        }
+    }, [])
+
     const finishExercise = useCallback(async () => {
         stopTimer()
 
@@ -56,6 +65,8 @@ export function MatchingExercise({ pairs, cefrLevel, themeName, themeSlug, onExi
             questionId: p.id,
             answer: p.meaning,
             correctAnswer: p.meaning,
+            wordId: p.wordId,
+            questionType: 'pair',
         }))
 
         await submitAnswers(answers, timer)
@@ -72,14 +83,16 @@ export function MatchingExercise({ pairs, cefrLevel, themeName, themeSlug, onExi
 
             // Check if all matched
             if (newMatched.size === pairs.length) {
-                setTimeout(() => finishExercise(), 500)
+                if (finishTimeoutRef.current) clearTimeout(finishTimeoutRef.current)
+                finishTimeoutRef.current = setTimeout(() => finishExercise(), 500)
             }
         } else {
             // Wrong match
             setMistakes(m => m + 1)
             setWrongPair({ word: wordId, meaning: meaningId })
 
-            setTimeout(() => {
+            if (wrongPairTimeoutRef.current) clearTimeout(wrongPairTimeoutRef.current)
+            wrongPairTimeoutRef.current = setTimeout(() => {
                 setSelectedWord(null)
                 setSelectedMeaning(null)
                 setWrongPair(null)

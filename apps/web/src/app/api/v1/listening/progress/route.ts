@@ -50,6 +50,7 @@ export async function GET(req: NextRequest) {
             averageScore: number
             bestScore: number
             totalTimeSeconds: number
+            totalPercentage: number
         }> = {}
 
         const lessonBests: Record<string, { score: number; total: number }> = {}
@@ -64,11 +65,13 @@ export async function GET(req: NextRequest) {
                     averageScore: 0,
                     bestScore: 0,
                     totalTimeSeconds: 0,
+                    totalPercentage: 0,
                 }
             }
 
             levelStats[level].totalAttempts++
             levelStats[level].totalTimeSeconds += attempt.timeTaken ?? 0
+            levelStats[level].totalPercentage += attempt.percentage
 
             // Track best score per lesson
             const key = `${level}-${attempt.lesson.lessonId}`
@@ -102,13 +105,11 @@ export async function GET(req: NextRequest) {
             }
         }
 
-        // Calculate averages
         for (const stat of Object.values(levelStats)) {
-            const levelAttempts = attempts.filter(a => a.lesson.cefrLevel === stat.level)
-            const totalPercentage = levelAttempts.reduce((sum, a) => sum + a.percentage, 0)
-            stat.averageScore = levelAttempts.length > 0
-                ? Math.round(totalPercentage / levelAttempts.length)
+            stat.averageScore = stat.totalAttempts > 0
+                ? Math.round(stat.totalPercentage / stat.totalAttempts)
                 : 0
+            delete (stat as { totalPercentage?: number }).totalPercentage
         }
 
         // Recent attempts (last 10)

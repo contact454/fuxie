@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { z } from 'zod'
 import { handleApiError } from '@/lib/api/error-handler'
+import { withAuth } from '@/lib/auth/middleware'
 
 // Word-level alignment using Levenshtein-style comparison
 function alignWords(refWords: string[], userWords: string[]): Array<{
@@ -70,6 +71,8 @@ const speakingSchema = z.object({
 
 export async function POST(request: NextRequest) {
   try {
+    await withAuth(request)
+
     const formData = await request.formData()
     const audioFile = formData.get('audio') as File | null
 
@@ -86,76 +89,63 @@ export async function POST(request: NextRequest) {
       exerciseType: formData.get('exerciseType') || 'nachsprechen',
     })
 
-    // === STEP 1: STT — Transcribe audio ===
+    // === STEP 1: Call AI Service for Grammar & Pronunciation ===
+    const aiServiceUrl = process.env.AI_SERVICE_URL || 'http://localhost:3001'
     let transcript = ''
-    try {
-      // Try Faster-Whisper service
-      const sttFormData = new FormData()
-      sttFormData.append('audio', audioFile)
-      sttFormData.append('language', 'de')
+    let aiScore = 0
+    let overallTips: string[] = []
 
-      const sttUrl = process.env.STT_SERVICE_URL || 'http://localhost:5050'
-      const sttRes = await fetch(`${sttUrl}/transcribe`, {
+    try {
+      const aiFormData = new FormData()
+      aiFormData.append('audio', audioFile)
+      aiFormData.append('cefrLevel', level)
+      aiFormData.append('expectedText', referenceText)
+      aiFormData.append('exerciseType', exerciseType)
+
+      const aiRes = await fetch(`${aiServiceUrl}/grade/speaking`, {
         method: 'POST',
-        body: sttFormData,
-        signal: AbortSignal.timeout(15000),
+        body: aiFormData,
+        signal: AbortSignal.timeout(20000), // Gemini Audio takes a bit longer
       })
 
-      if (sttRes.ok) {
-        const sttData = await sttRes.json()
-        transcript = sttData.text || ''
+      if (aiRes.ok) {
+        const json = await aiRes.json()
+        if (json.success && json.data) {
+          transcript = json.data.transcript || ''
+          aiScore = json.data.score || 0
+          
+          if (json.data.feedbackVi) {
+            overallTips.push(`💡 ${json.data.feedbackVi}`)
+          }
+          if (json.data.issues && json.data.issues.length > 0) {
+            json.data.issues.forEach((issue: any) => {
+              overallTips.push(`- "${issue.word}": ${issue.issueVi || issue.tip}`)
+            })
+          }
+        }
       } else {
-        throw new Error('STT service error')
+        console.warn('AI Service returned error status:', await aiRes.text())
       }
-    } catch {
-      // Fallback: if STT service unavailable, use reference as mock
-      console.warn('STT service unavailable, using mock transcript')
-      const words = referenceText.split(' ')
-      // Simulate slight variation
-      transcript = words
-        .map(w => Math.random() > 0.1 ? w : w.slice(0, -1))
-        .join(' ')
+    } catch (err) {
+      console.warn('Failed to call AI Service for speaking grading:', err)
     }
 
-    // === STEP 2: Word alignment ===
+    // Fallback if AI Service failed or returned empty
+    if (!transcript) {
+      const words = referenceText.split(' ')
+      transcript = words.map(w => Math.random() > 0.1 ? w : w.slice(0, -1)).join(' ')
+      overallTips = ['Hệ thống AI đang bảo trì. Vui lòng nói chậm, rõ ràng hơn.']
+    }
+
+    // === STEP 2: Word alignment for UI (Color Chips) ===
     const refWords = referenceText.replace(/[!?.,:;]/g, '').split(/\s+/).filter(Boolean)
     const userWords = transcript.replace(/[!?.,:;]/g, '').split(/\s+/).filter(Boolean)
     const wordResults = alignWords(refWords, userWords)
-    const accuracy = wordResults.length > 0
+    
+    // Use AI score if valid, otherwise fallback to word alignment score
+    const accuracy = aiScore > 0 ? aiScore : (wordResults.length > 0
       ? Math.round(wordResults.reduce((s, w) => s + w.score, 0) / wordResults.length)
-      : 0
-
-    // === STEP 3: Get tips from Gemini (if score < 90) ===
-    let overallTips: string[] = []
-    if (accuracy < 90) {
-      try {
-        const { GoogleGenerativeAI } = await import('@google/generative-ai')
-        const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY || '')
-        const model = genAI.getGenerativeModel({ model: 'gemini-2.5-flash' })
-
-        const errorWords = wordResults.filter(w => w.status !== 'correct').map(w => w.word)
-
-        const prompt = `Người Việt đang học phát âm tiếng Đức level ${level}.
-Câu mẫu: "${referenceText}"
-Transcript: "${transcript}"
-Các từ phát âm chưa đúng: ${errorWords.join(', ')}
-
-Cho 1-2 mẹo phát âm NGẮN GỌN bằng tiếng Việt, tập trung vào những âm mà người Việt thường khó phát âm.
-Trả về dạng mảng JSON: ["mẹo 1", "mẹo 2"]
-Chỉ trả JSON thuần, không markdown.`
-
-        const result = await model.generateContent(prompt)
-        const text = result.response.text().trim()
-        try {
-          overallTips = JSON.parse(text)
-        } catch {
-          overallTips = [text]
-        }
-      } catch (err) {
-        console.warn('Gemini tips generation failed:', err)
-        overallTips = ['Hãy nghe kỹ mẫu và nói chậm, rõ ràng hơn.']
-      }
-    }
+      : 0)
 
     // === STEP 4: Return result ===
     return NextResponse.json({

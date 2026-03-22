@@ -1,54 +1,39 @@
 import { redirect } from 'next/navigation'
 import { prisma } from '@fuxie/database'
 import { getServerUser } from '@/lib/auth/server-auth'
+import { cacheWrap } from '@/lib/cache/redis'
 import { ReadingClient } from '@/components/reading/reading-client'
-import { unstable_cache } from 'next/cache'
-
-export const dynamic = 'force-dynamic'
+import { getReadingExerciseList, getReadingLevels, type CefrLevel } from '@/lib/content/reading'
 
 export const metadata = {
     title: 'Fuxie 🦊 — Leseverstehen',
     description: 'Deutsche Leseverstehen — Practice reading comprehension by CEFR level',
 }
 
-type CefrLevel = 'A1' | 'A2' | 'B1' | 'B2' | 'C1' | 'C2'
-
 async function getReadingData(userId: string | null, cefrLevel: CefrLevel) {
-    // Parallelize independent queries
-    const [exercises, completedExercises] = await Promise.all([
-        prisma.readingExercise.findMany({
-            where: { cefrLevel },
-            orderBy: [{ teil: 'asc' }, { sortOrder: 'asc' }],
-            select: {
-                id: true,
-                exerciseId: true,
-                cefrLevel: true,
-                teil: true,
-                teilName: true,
-                topic: true,
-                metadataJson: true,
-                sortOrder: true,
-                _count: { select: { questions: true } },
+    const exercises = await cacheWrap(`reading:exercises:${cefrLevel}`, 3600, () => getReadingExerciseList(cefrLevel))
+
+    const exerciseIds = exercises.map((exercise) => exercise.id)
+    const completedExercises = userId && exerciseIds.length > 0
+        ? await prisma.readingAttempt.findMany({
+            where: {
+                userId,
+                exerciseId: { in: exerciseIds },
             },
-        }),
-        userId
-            ? prisma.readingAttempt.findMany({
-                where: { userId },
-                select: { exerciseId: true, score: true, totalQuestions: true },
-            }).then(attempts => {
-                const map: Record<string, { bestScore: number; totalQuestions: number; attempts: number }> = {}
-                for (const a of attempts) {
-                    const existing = map[a.exerciseId]
-                    if (!existing || a.score > existing.bestScore) {
-                        map[a.exerciseId] = { bestScore: a.score, totalQuestions: a.totalQuestions, attempts: (existing?.attempts ?? 0) + 1 }
-                    } else {
-                        map[a.exerciseId] = { ...existing, attempts: existing.attempts + 1 }
-                    }
+            select: { exerciseId: true, score: true, totalQuestions: true },
+        }).then(attempts => {
+            const map: Record<string, { bestScore: number; totalQuestions: number; attempts: number }> = {}
+            for (const a of attempts) {
+                const existing = map[a.exerciseId]
+                if (!existing || a.score > existing.bestScore) {
+                    map[a.exerciseId] = { bestScore: a.score, totalQuestions: a.totalQuestions, attempts: (existing?.attempts ?? 0) + 1 }
+                } else {
+                    map[a.exerciseId] = { ...existing, attempts: existing.attempts + 1 }
                 }
-                return map
-            })
-            : ({} as Record<string, { bestScore: number; totalQuestions: number; attempts: number }>),
-    ])
+            }
+            return map
+        })
+        : ({} as Record<string, { bestScore: number; totalQuestions: number; attempts: number }>)
 
     // Group by Teil
     const teilMap: Record<number, {
@@ -86,26 +71,11 @@ async function getReadingData(userId: string | null, cefrLevel: CefrLevel) {
     return { teile, totalExercises, totalCompleted }
 }
 
-// Cache available levels — content changes rarely (revalidate every 1 hour)
-const getAvailableLevels = unstable_cache(
-    async (): Promise<CefrLevel[]> => {
-        const levels = await prisma.readingExercise.findMany({
-            select: { cefrLevel: true },
-            distinct: ['cefrLevel'],
-            orderBy: { cefrLevel: 'asc' },
-        })
-        if (levels.length === 0) return ['A1']
-        return levels.map(l => l.cefrLevel as CefrLevel)
-    },
-    ['reading-available-levels'],
-    { revalidate: 3600, tags: ['reading-levels'] }
-)
-
 export default async function ReadingPage() {
     const serverUser = await getServerUser()
     if (!serverUser) redirect('/login')
 
-    const availableLevels = await getAvailableLevels()
+    const availableLevels = await getReadingLevels()
     const defaultLevel: CefrLevel = availableLevels[0] || 'A1'
     const data = await getReadingData(serverUser.userId, defaultLevel)
 

@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { z } from 'zod'
-import { prisma } from '@fuxie/database'
+import { getListeningLessonList, groupListeningLessonsByTeil, type CefrLevel } from '@/lib/content/listening'
 
 const VALID_LEVELS = ['A1', 'A2', 'B1', 'B2', 'C1', 'C2'] as const
 const querySchema = z.object({ level: z.enum(VALID_LEVELS).default('A1') })
@@ -12,49 +12,8 @@ export async function GET(req: NextRequest) {
             level: req.nextUrl.searchParams.get('level') || undefined,
         })
 
-        const lessons = await prisma.listeningLesson.findMany({
-            where: { cefrLevel: level },
-            orderBy: [{ teil: 'asc' }, { sortOrder: 'asc' }],
-            select: {
-                id: true,
-                lessonId: true,
-                cefrLevel: true,
-                teil: true,
-                teilName: true,
-                title: true,
-                topic: true,
-                taskType: true,
-                audioUrl: true,
-                audioDuration: true,
-                backgroundScene: true,
-                sortOrder: true,
-                _count: { select: { questions: true } },
-            },
-        })
-
-        // Group by Teil
-        const teilMap: Record<number, {
-            teil: number
-            teilName: string
-            lessons: typeof lessons
-            totalLessons: number
-        }> = {}
-
-        for (const lesson of lessons) {
-            if (!teilMap[lesson.teil]) {
-                teilMap[lesson.teil] = {
-                    teil: lesson.teil,
-                    teilName: lesson.teilName,
-                    lessons: [],
-                    totalLessons: 0,
-                }
-            }
-            const entry = teilMap[lesson.teil]!
-            entry.lessons.push(lesson)
-            entry.totalLessons++
-        }
-
-        const teile = Object.values(teilMap).sort((a, b) => a.teil - b.teil)
+        const lessons = await getListeningLessonList(level as CefrLevel)
+        const teile = groupListeningLessonsByTeil(lessons)
 
         return NextResponse.json({
             success: true,

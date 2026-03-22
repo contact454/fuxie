@@ -19,10 +19,14 @@ import * as fs from 'fs'
 import * as path from 'path'
 
 // ─── Config ─────────────────────────────────────────
-const API_KEY = process.env.GEMINI_API_KEY || 'AIzaSyA8jCaVXLsIQBU-_zXTO3I3c_1cB2wu3uc'
+const API_KEY = process.env.GEMINI_API_KEY
 const MODEL = 'gemini-3-flash-preview'
 const CONTENT_DIR = path.resolve(__dirname, '../content')
 const DELAY_MS = 2000 // between API calls
+
+if (!API_KEY) {
+    throw new Error('GEMINI_API_KEY is required')
+}
 
 const ai = new GoogleGenerativeAI(API_KEY)
 const model = ai.getGenerativeModel({ model: MODEL })

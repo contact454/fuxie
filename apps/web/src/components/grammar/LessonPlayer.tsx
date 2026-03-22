@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState, useCallback, useMemo, useEffect } from 'react'
+import React, { useState, useCallback, useMemo, useEffect, useRef } from 'react'
 import { TheoryRenderer } from '@/components/grammar/TheoryRenderer'
 import { ExerciseRenderer, FeedbackToast } from '@/components/grammar/ExerciseRenderer'
 import type { TheoryBlock, GrammarExercise } from '@/components/grammar/types'
@@ -95,6 +95,7 @@ export function LessonPlayer({
     lessonId, titleDe, titleVi, level, lessonType, estimatedMin,
     theoryBlocks, exercises, topicSlug,
 }: LessonPlayerProps) {
+    const confettiTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null)
     const [steps] = useState<Step[]>(() => {
         const all: Step[] = [{ type: 'hero' }]
         theoryBlocks.forEach((_, i) => all.push({ type: 'theory', blockIndex: i }))
@@ -124,6 +125,12 @@ export function LessonPlayer({
             setElapsedTime(Math.floor((Date.now() - startTime) / 1000))
         }
     }, [currentStep, startTime])
+
+    useEffect(() => {
+        return () => {
+            if (confettiTimeoutRef.current) clearTimeout(confettiTimeoutRef.current)
+        }
+    }, [])
 
     // Save progress when reaching results
     const correctCount = answers.filter(a => a.correct).length
@@ -159,7 +166,8 @@ export function LessonPlayer({
         setAnswers(prev => [...prev, { correct, tags: ex.tags || [] }])
         if (correct) {
             setShowConfetti(true)
-            setTimeout(() => setShowConfetti(false), 2000)
+            if (confettiTimeoutRef.current) clearTimeout(confettiTimeoutRef.current)
+            confettiTimeoutRef.current = setTimeout(() => setShowConfetti(false), 2000)
         }
         setFeedbackState({
             isCorrect: correct,

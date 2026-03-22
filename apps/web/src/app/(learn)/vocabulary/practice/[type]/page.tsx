@@ -2,8 +2,6 @@ import { redirect } from 'next/navigation'
 import { getServerUser } from '@/lib/auth/server-auth'
 import { ExercisePlayerWrapper } from '@/components/vocabulary/exercises/exercise-player-wrapper'
 
-export const dynamic = 'force-dynamic'
-
 interface PageProps {
     params: Promise<{ type: string }>
     searchParams: Promise<{ theme?: string; level?: string }>

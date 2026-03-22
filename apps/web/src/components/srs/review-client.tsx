@@ -39,8 +39,10 @@ interface VocabCard {
 interface SrsCard {
     id: string
     interval: number
+    repetitions: number
     easeFactor: number
     state: number
+    lapseCount: number
     vocabularyItem: VocabCard
 }
 
@@ -91,8 +93,21 @@ export function ReviewClient({ themes, availableLevels, initialLevel, dueCounts,
     const [srsComplete, setSrsComplete] = useState(false)
     const [currentDueCounts, setCurrentDueCounts] = useState(dueCounts)
     const [currentTotalDue, setCurrentTotalDue] = useState(totalDueAll)
+    const srsAdvanceTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null)
 
     const cefrColors = CEFR_COLORS[currentLevel] ?? CEFR_COLORS.A1!
+
+    const workerRef = useRef<Worker | null>(null)
+
+    useEffect(() => {
+        // Initialize Web Worker for instant local SM-2 calc
+        workerRef.current = new Worker(new URL('../../workers/srs.worker.ts', import.meta.url))
+        
+        return () => {
+            if (srsAdvanceTimeoutRef.current) clearTimeout(srsAdvanceTimeoutRef.current)
+            workerRef.current?.terminate()
+        }
+    }, [])
 
     // ─── Level switching ────────────────────────────
     const switchLevel = async (level: string) => {
@@ -178,21 +193,13 @@ export function ReviewClient({ themes, availableLevels, initialLevel, dueCounts,
         }
     }
 
-    const handleRate = useCallback(async (rating: Rating) => {
+    const handleRate = useCallback((rating: Rating) => {
         const card = srsCards[srsIndex]
         if (!card || isSubmitting) return
         setIsSubmitting(true)
         setLastRating(rating)
 
-        try {
-            const res = await fetch('/api/v1/srs/review', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ cardId: card.id, rating }),
-            })
-            const data = await res.json()
-            const xp = data.data?.xpEarned ?? 0
-
+        const finishReview = (xp: number) => {
             setSrsStats(prev => ({
                 totalReviewed: prev.totalReviewed + 1,
                 correct: rating !== 'AGAIN' ? prev.correct + 1 : prev.correct,
@@ -200,20 +207,67 @@ export function ReviewClient({ themes, availableLevels, initialLevel, dueCounts,
                 xpEarned: prev.xpEarned + xp,
             }))
 
-            setTimeout(() => {
+            if (srsAdvanceTimeoutRef.current) clearTimeout(srsAdvanceTimeoutRef.current)
+            srsAdvanceTimeoutRef.current = setTimeout(() => {
                 if (srsIndex + 1 < srsCards.length) {
                     setSrsIndex(i => i + 1)
                     setSrsFlipped(false)
                     setLastRating(null)
+                    setIsSubmitting(false)
                 } else {
                     setSrsComplete(true)
+                    setIsSubmitting(false)
                 }
             }, 600)
-        } catch (err) {
-            console.error(err)
-        } finally {
-            setIsSubmitting(false)
         }
+
+        // Fire-and-forget sync to server securely
+        const syncToServer = () => {
+            fetch('/api/v1/srs/review', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ cardId: card.id, rating, responseTimeMs: 0 }),
+            }).catch(console.error)
+        }
+
+        // 1. Optimistic Fast UI with Web Worker if available
+        if (workerRef.current) {
+            workerRef.current.postMessage({
+                type: 'CALCULATE_REVIEW',
+                payload: {
+                    cardId: card.id,
+                    rating,
+                    cardState: {
+                        interval: card.interval,
+                        repetitions: card.repetitions,
+                        easeFactor: card.easeFactor,
+                        state: card.state,
+                        lapseCount: card.lapseCount
+                    }
+                }
+            })
+            
+            // Instantly transition UI (XP for correct is hardcoded to 10 for optimistic calc)
+            finishReview(rating === 'AGAIN' ? 0 : 10)
+            syncToServer()
+            return
+        }
+
+        // 2. Fallback if Worker fails
+        fetch('/api/v1/srs/review', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ cardId: card.id, rating, responseTimeMs: 0 }),
+        })
+            .then(res => res.json())
+            .then(data => {
+                finishReview(data.data?.xpEarned ?? 0)
+            })
+            .catch(err => {
+                console.error(err)
+                setIsSubmitting(false)
+            })
+
     }, [srsCards, srsIndex, isSubmitting])
 
     // ─── Back to themes ─────────────────────────────

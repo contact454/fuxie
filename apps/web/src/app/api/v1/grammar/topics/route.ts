@@ -43,6 +43,12 @@ export async function GET(req: NextRequest) {
             const lessonIds = lessons.map((l: any) => l.id)
             const progressRows = await prisma.grammarProgress.findMany({
                 where: { userId: serverUser.userId, lessonId: { in: lessonIds } },
+                select: {
+                    lessonId: true,
+                    score: true,
+                    stars: true,
+                    completed: true,
+                },
             })
             for (const p of progressRows) {
                 progressMap[p.lessonId] = {

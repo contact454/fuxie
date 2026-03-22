@@ -2,6 +2,8 @@ import { NextRequest, NextResponse } from 'next/server'
 import { z } from 'zod'
 import { prisma } from '@fuxie/database'
 import { withAuth } from '@/lib/auth/middleware'
+import { getDbUserByFirebaseUid } from '@/lib/auth/db-user'
+import { getVocabularyThemes, mapVocabularyThemes, type CefrLevel } from '@/lib/content/vocabulary'
 import { handleApiError } from '@/lib/api/error-handler'
 
 const VALID_LEVELS = ['A1', 'A2', 'B1', 'B2', 'C1', 'C2'] as const
@@ -22,28 +24,9 @@ export async function GET(req: NextRequest) {
         const { level } = querySchema.parse(params)
 
         // Get DB user
-        const user = await prisma.user.findUnique({
-            where: { firebaseUid: auth.userId },
-            select: { id: true },
-        })
+        const user = await getDbUserByFirebaseUid(auth.userId)
 
-        const themes = await prisma.vocabularyTheme.findMany({
-            where: { cefrLevel: level },
-            orderBy: { sortOrder: 'asc' },
-            select: {
-                id: true,
-                slug: true,
-                name: true,
-                nameVi: true,
-                nameEn: true,
-                cefrLevel: true,
-                sortOrder: true,
-                imageUrl: true,
-                _count: {
-                    select: { items: true },
-                },
-            },
-        })
+        const themes = await getVocabularyThemes(level as CefrLevel)
 
         // Get user's SRS progress per theme — aggregated in DB (avoids loading thousands of cards into JS)
         let srsProgress: Record<string, { total: number; learned: number; due: number }> = {}
@@ -70,10 +53,8 @@ export async function GET(req: NextRequest) {
             }
         }
 
-        const data = themes.map((theme) => ({
+        const data = mapVocabularyThemes(themes).map((theme) => ({
             ...theme,
-            wordCount: theme._count.items,
-            _count: undefined,
             srsProgress: srsProgress[theme.id] ?? { total: 0, learned: 0, due: 0 },
         }))
 

@@ -2,7 +2,6 @@ import { NextRequest, NextResponse } from 'next/server'
 import { z } from 'zod'
 import { prisma } from '@fuxie/database'
 import { getServerUser } from '@/lib/auth/server-auth'
-import { gradeWriting } from '@/lib/ai/writing-grader'
 import { handleApiError } from '@/lib/api/error-handler'
 
 const writingSubmitSchema = z.object({
@@ -34,18 +33,36 @@ export async function POST(req: NextRequest) {
 
         const rubric = exercise.rubricJson as any
 
-        // Call AI grading
-        const gradingResult = await gradeWriting({
-            cefrLevel: exercise.cefrLevel,
-            textType: exercise.textType,
-            register: exercise.register,
-            situation: exercise.situation,
-            contentPoints: exercise.contentPoints as string[],
-            submittedText,
-            minWords: exercise.minWords,
-            maxWords: exercise.maxWords,
-            rubric,
+        // Call AI grading service
+        const aiServiceUrl = process.env.AI_SERVICE_URL || 'http://localhost:3001'
+        const aiRes = await fetch(`${aiServiceUrl}/grade/writing`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                cefrLevel: exercise.cefrLevel,
+                textType: exercise.textType,
+                register: exercise.register,
+                situation: exercise.situation,
+                contentPoints: exercise.contentPoints,
+                submittedText,
+                minWords: exercise.minWords,
+                maxWords: exercise.maxWords,
+                rubric,
+            }),
+            signal: AbortSignal.timeout(25000), // Writing grading can take up to 20s
         })
+
+        if (!aiRes.ok) {
+            console.error('[Writing Grade] AI Service returned error status:', await aiRes.text())
+            return NextResponse.json({ success: false, error: 'AI grading service unavailable' }, { status: 502 })
+        }
+
+        const json = await aiRes.json()
+        if (!json.success || !json.data) {
+            return NextResponse.json({ success: false, error: 'Invalid response from AI grading service' }, { status: 500 })
+        }
+
+        const gradingResult = json.data
 
         // Extract individual criterion scores
         const criteriaMap: Record<string, number> = {}

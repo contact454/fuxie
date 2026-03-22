@@ -4,7 +4,7 @@ import { Mascot } from '@/components/ui/mascot'
 
 interface ResultItem {
     questionId: string
-    isCorrect: boolean
+    isCorrect: boolean | null
     userAnswer: string
     correctAnswer: string
 }
@@ -15,6 +15,7 @@ interface ExerciseResultsProps {
     accuracy: number
     xpEarned: number
     timeTaken?: number
+    graded?: boolean
     results: ResultItem[]
     onRetry: () => void
     onNewTheme: () => void
@@ -57,11 +58,13 @@ export function ExerciseResults({
     accuracy,
     xpEarned,
     timeTaken,
+    graded = true,
     results,
     onRetry,
     onNewTheme,
 }: ExerciseResultsProps) {
     const getMessage = () => {
+        if (!graded) return { text: 'Antworten gesendet', emoji: '📡' }
         if (accuracy >= 90) return { text: 'Ausgezeichnet! 🏆', emoji: '🎉' }
         if (accuracy >= 70) return { text: 'Sehr gut! 🎉', emoji: '👏' }
         if (accuracy >= 50) return { text: 'Gut gemacht! 👍', emoji: '💪' }
@@ -78,19 +81,29 @@ export function ExerciseResults({
     return (
         <div className="max-w-lg mx-auto px-4 py-8 animate-fade-in-up">
             {/* Confetti effect */}
-            {accuracy >= 70 && (
+            {graded && accuracy >= 70 && (
                 <div className="text-center text-4xl mb-2 animate-bounce">
                     {msg.emoji}
                 </div>
             )}
 
             {/* Score Ring */}
-            <div className="flex justify-center mb-4">
-                <ScoreRing score={correctCount} total={totalQuestions} />
-            </div>
+            {graded ? (
+                <div className="flex justify-center mb-4">
+                    <ScoreRing score={correctCount} total={totalQuestions} />
+                </div>
+            ) : (
+                <div className="flex justify-center mb-4 text-5xl">{msg.emoji}</div>
+            )}
 
             {/* Message */}
             <h2 className="text-2xl font-bold text-gray-900 text-center mb-6">{msg.text}</h2>
+
+            {!graded && (
+                <p className="text-sm text-center text-gray-500 mb-6">
+                    Die Antworten wurden gespeichert, konnten aber ohne Serververbindung nicht bewertet werden.
+                </p>
+            )}
 
             {/* Stats Row */}
             <div className="flex justify-center gap-3 mb-8">
@@ -104,43 +117,49 @@ export function ExerciseResults({
                     <span className="text-lg font-bold text-[#FF6B35]">+{xpEarned} XP</span>
                     <span className="text-xs text-gray-400">Erfahrung</span>
                 </div>
-                <div className="flex flex-col items-center bg-blue-50 rounded-xl px-4 py-3 border border-blue-100">
-                    <span className="text-lg font-bold text-[#004E89]">{Math.round(accuracy)}%</span>
-                    <span className="text-xs text-gray-400">Genauigkeit</span>
-                </div>
+                {graded && (
+                    <div className="flex flex-col items-center bg-blue-50 rounded-xl px-4 py-3 border border-blue-100">
+                        <span className="text-lg font-bold text-[#004E89]">{Math.round(accuracy)}%</span>
+                        <span className="text-xs text-gray-400">Genauigkeit</span>
+                    </div>
+                )}
             </div>
 
             {/* Mascot */}
             <div className="flex justify-center mb-6">
-                <Mascot variant={accuracy >= 70 ? 'celebrate' : 'encouragement'} size={64} />
+                <Mascot variant={!graded ? 'thinking' : accuracy >= 70 ? 'celebrate' : 'encouragement'} size={64} />
             </div>
 
             {/* Answer Breakdown */}
             <div className="bg-white rounded-2xl border border-gray-100 p-4 mb-6">
                 <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-3">
-                    Antworten ({correctCount}/{totalQuestions})
+                    {graded ? `Antworten (${correctCount}/${totalQuestions})` : 'Antworten gespeichert'}
                 </h3>
                 <div className="space-y-2 max-h-64 overflow-y-auto">
                     {results.map((r, i) => (
                         <div
                             key={r.questionId}
                             className={`flex items-center gap-3 p-2.5 rounded-xl text-sm ${
-                                r.isCorrect
+                                r.isCorrect === null
+                                    ? 'bg-gray-50 border border-gray-200'
+                                    : r.isCorrect
                                     ? 'bg-emerald-50 border border-emerald-100'
                                     : 'bg-red-50 border border-red-100'
                             }`}
                         >
                             <span className="text-base">
-                                {r.isCorrect ? '✅' : '❌'}
+                                {r.isCorrect === null ? '•' : r.isCorrect ? '✅' : '❌'}
                             </span>
                             <span className="flex-1 font-medium text-gray-800">
-                                {i + 1}. {r.correctAnswer}
+                                {i + 1}. {r.isCorrect === null ? r.userAnswer : r.correctAnswer}
                             </span>
-                            {!r.isCorrect && (
+                            {r.isCorrect === null ? (
+                                <span className="text-xs text-gray-500">Wird bewertet</span>
+                            ) : !r.isCorrect ? (
                                 <span className="text-xs text-red-500">
                                     Deine: {r.userAnswer}
                                 </span>
-                            )}
+                            ) : null}
                         </div>
                     ))}
                 </div>

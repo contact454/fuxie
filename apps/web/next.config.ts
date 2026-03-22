@@ -37,8 +37,6 @@ const nextConfig: NextConfig = {
         NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET: process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET,
         NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
         NEXT_PUBLIC_APP_URL: process.env.NEXT_PUBLIC_APP_URL,
-        FIREBASE_SERVICE_ACCOUNT_KEY: process.env.FIREBASE_SERVICE_ACCOUNT_KEY,
-        AUTH_COOKIE_SECRET: process.env.AUTH_COOKIE_SECRET,
     },
     // Rewrite /images/* and /audio/* to Cloudflare R2 CDN
     async rewrites() {
@@ -111,5 +109,4 @@ const nextConfig: NextConfig = {
 }
 
 export default nextConfig
-
 

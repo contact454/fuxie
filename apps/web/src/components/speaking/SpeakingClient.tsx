@@ -2,9 +2,8 @@
 
 import { useState, useCallback, useTransition } from 'react'
 import { useRouter } from 'next/navigation'
-import NachsprechenPlayer from './NachsprechenPlayer'
 import styles from './speaking.module.css'
-import type { SpeakingTopicData, NachsprechenConfig, CefrLevel } from './types'
+import type { SpeakingTopicData, CefrLevel } from './types'
 
 interface Props {
   topics: SpeakingTopicData[]
@@ -25,22 +24,6 @@ const LEVEL_ICONS: Record<string, string> = {
   A1: '🌱', A2: '🌿', B1: '🌳', B2: '🔥', C1: '⭐', C2: '👑',
 }
 
-const DEFAULT_CONFIG: NachsprechenConfig = {
-  maxRecordingSec: 10,
-  minAccuracyToPass: 70,
-  attemptsAllowed: 3,
-  showIPA: true,
-  showTranslation: true,
-  autoPlayModel: true,
-}
-
-function getStarsFromScore(score: number): number {
-  if (score >= 90) return 3
-  if (score >= 70) return 2
-  if (score >= 50) return 1
-  return 0
-}
-
 export default function SpeakingClient({
   topics: initialTopics,
   availableLevels,
@@ -57,81 +40,14 @@ export default function SpeakingClient({
   const [completedLessons, setCompletedLessons] = useState(initialCompletedLessons)
   const [totalStars, setTotalStars] = useState(initialTotalStars)
   const [selectedTopic, setSelectedTopic] = useState<SpeakingTopicData | null>(null)
-  const [selectedLesson, setSelectedLesson] = useState<number | null>(null)
 
   const handleLevelChange = useCallback((level: CefrLevel) => {
     setSelectedLevel(level)
     setSelectedTopic(null)
-    setSelectedLesson(null)
     startTransition(() => {
       router.refresh()
     })
   }, [router])
-
-  const handleLessonComplete = useCallback(async (score: number, lessonId: string) => {
-    const stars = getStarsFromScore(score)
-
-    try {
-      await fetch('/api/v1/speaking/progress', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ lessonId, score, maxScore: 100, stars }),
-      })
-    } catch (err) {
-      console.warn('Failed to save progress:', err)
-    }
-
-    // Update local state for immediate UI feedback
-    setTopics(prev => prev.map(topic => ({
-      ...topic,
-      lessons: topic.lessons.map(lesson => {
-        if (lesson.id !== lessonId) return lesson
-        const existing = lesson.completion
-        const shouldUpdate = !existing || score > existing.bestScore
-        return {
-          ...lesson,
-          completion: {
-            bestScore: shouldUpdate ? score : (existing?.bestScore ?? 0),
-            maxScore: 100,
-            stars: shouldUpdate ? stars : (existing?.stars ?? 0),
-            attempts: (existing?.attempts ?? 0) + 1,
-            completed: true,
-          },
-        }
-      }),
-    })))
-
-    // Update stats
-    setCompletedLessons(prev => {
-      const lessonWasNew = !initialTopics
-        .flatMap(t => t.lessons)
-        .find(l => l.id === lessonId)?.completion?.completed
-      return lessonWasNew ? prev + 1 : prev
-    })
-    setTotalStars(prev => prev + stars)
-
-    setSelectedLesson(null)
-  }, [initialTopics])
-
-  // Playing a lesson
-  if (selectedTopic && selectedLesson !== null) {
-    const lesson = selectedTopic.lessons[selectedLesson]
-    if (!lesson) return null
-
-    const exercises = lesson.exercisesJson as { sentences: any[] }
-    const config = (lesson.configJson as NachsprechenConfig) || DEFAULT_CONFIG
-
-    return (
-      <NachsprechenPlayer
-        sentences={exercises.sentences || []}
-        config={config}
-        lessonTitle={lesson.titleVi}
-        lessonId={lesson.id}
-        onComplete={(score) => handleLessonComplete(score, lesson.id)}
-        onClose={() => setSelectedLesson(null)}
-      />
-    )
-  }
 
   // Viewing lessons for a topic
   if (selectedTopic) {
@@ -167,8 +83,7 @@ export default function SpeakingClient({
                 key={lesson.id}
                 className={styles.topicCard}
                 onClick={() => {
-                  setSelectedTopic(freshTopic)
-                  setSelectedLesson(idx)
+                  router.push(`/speaking/${lesson.id}`)
                 }}
               >
                 <div

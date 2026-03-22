@@ -115,6 +115,7 @@ export function VocabularyClient({ themes, totalWords, totalDue, availableLevels
     const scrollRef = useRef<HTMLDivElement>(null)
     const detailRef = useRef<HTMLDivElement>(null)
     const activeLevelRef = useRef(initialLevel)
+    const scrollTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null)
 
     const cefrColors = CEFR_COLORS[currentLevel] || CEFR_COLORS.A1
     const selectedTheme = currentThemes.find(t => t.slug === selectedThemeSlug) ?? null
@@ -190,12 +191,19 @@ export function VocabularyClient({ themes, totalWords, totalDue, availableLevels
         if (themes[0]) loadWordsForLevel(themes[0].slug, initialLevel)
     }, []) // eslint-disable-line react-hooks/exhaustive-deps
 
+    useEffect(() => {
+        return () => {
+            if (scrollTimeoutRef.current) clearTimeout(scrollTimeoutRef.current)
+        }
+    }, [])
+
     const selectTheme = (slug: string) => {
         setSelectedThemeSlug(slug)
         setShowAllWords(false)
         loadWords(slug)
         // Smooth scroll to detail panel
-        setTimeout(() => {
+        if (scrollTimeoutRef.current) clearTimeout(scrollTimeoutRef.current)
+        scrollTimeoutRef.current = setTimeout(() => {
             detailRef.current?.scrollIntoView({ behavior: 'smooth', block: 'nearest' })
         }, 100)
     }

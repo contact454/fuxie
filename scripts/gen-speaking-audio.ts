@@ -50,12 +50,13 @@ function createAudioScript(
   lessonId: string,
   sentenceId: string,
   topicSlug: string,
+  level: string,
   sentence: NachsprechenSentence,
   idx: number,
 ) {
   return {
-    lesson_id: `L-SPR-${topicSlug.toUpperCase()}-${String(idx + 1).padStart(2, '0')}`,
-    level: 'A1',
+    lesson_id: `L-SPR-${level.toUpperCase()}-${topicSlug.toUpperCase()}-${String(idx + 1).padStart(2, '0')}`,
+    level: level.toUpperCase(),
     title: `Nachsprechen: ${sentence.textDe}`,
     board: 'FUXIE',
     teil: 0,
@@ -118,7 +119,7 @@ async function main() {
       const scriptFileName = `L-SPR-${topicSlug.toUpperCase()}-${String(i + 1).padStart(2, '0')}.json`
 
       // Create Audio Factory script
-      const script = createAudioScript(lesson.id, sentenceId, topicSlug, sentence, i)
+      const script = createAudioScript(lesson.id, sentenceId, topicSlug, lesson.level || 'A1', sentence, i)
 
       // Write to scripts directory (flat — batch_produce.py discovers L-*.json)
       const scriptPath = path.join(SCRIPTS_OUTPUT_DIR, scriptFileName)

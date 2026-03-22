@@ -6,7 +6,7 @@
 import fs from 'fs'
 import { execSync } from 'child_process'
 
-const API_KEY = process.env.GEMINI_API_KEY || 'AIzaSyDJ8tesOkLOjxNItDkLfjuz0LJRkNy63EM'
+const API_KEY = process.env.GEMINI_API_KEY
 const MODEL = 'gemini-2.5-flash-image'
 const OUT_DIR = '/Users/huynhngocphuc/Dev-Workspace/Active-Projects/9-Fuxie/apps/web/public/images/grammar/a1'
 const DELAY_MS = 3000
@@ -328,6 +328,10 @@ Excalidraw hand-drawn style, white background. ALL text exactly as specified.`,
 
 // ─── Generate one diagram ─────────────────────────
 async function generateDiagram(name, prompt) {
+  if (!API_KEY) {
+    throw new Error('GEMINI_API_KEY is required')
+  }
+
   const outPath = `${OUT_DIR}/${name}_hd.png`
   console.log(`\n🎨 Generating: ${name}...`)
   

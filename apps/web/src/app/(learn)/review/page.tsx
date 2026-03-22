@@ -1,89 +1,34 @@
 import { redirect } from 'next/navigation'
 import { prisma } from '@fuxie/database'
 import { getServerUser } from '@/lib/auth/server-auth'
+import { getVocabularyLevels, getVocabularyThemes, mapVocabularyThemes, type CefrLevel } from '@/lib/content/vocabulary'
+import { getVocabularyDueCountsByLevel, getVocabularyThemeSrsProgress } from '@/lib/srs/stats'
 import { ReviewClient } from '@/components/srs/review-client'
-
-export const dynamic = 'force-dynamic'
 
 export const metadata = {
     title: 'Fuxie 🦊 — Wiederholen',
     description: 'SRS Flashcard Review — Lerne Vokabeln mit Karteikarten',
 }
 
-type CefrLevel = 'A1' | 'A2' | 'B1' | 'B2' | 'C1' | 'C2'
-
 async function getThemesForLevel(userId: string, cefrLevel: CefrLevel) {
-    const themes = await prisma.vocabularyTheme.findMany({
-        where: { cefrLevel },
-        orderBy: { sortOrder: 'asc' },
-        select: {
-            id: true,
-            slug: true,
-            name: true,
-            nameVi: true,
-            cefrLevel: true,
-            imageUrl: true,
-            _count: { select: { items: true } },
-        },
-    })
+    const themes = await getVocabularyThemes(cefrLevel)
 
-    // Get SRS counts per theme
-    const now = new Date()
-    const cards = await prisma.srsCard.findMany({
-        where: { userId },
-        select: {
-            vocabularyItem: { select: { themeId: true, cefrLevel: true } },
-            state: true,
-            nextReviewAt: true,
-        },
-    })
+    const srsMap = await getVocabularyThemeSrsProgress(userId, cefrLevel)
 
-    const srsMap: Record<string, { total: number; learned: number; due: number }> = {}
-    for (const card of cards) {
-        const tid = card.vocabularyItem?.themeId
-        if (!tid || card.vocabularyItem?.cefrLevel !== cefrLevel) continue
-        if (!srsMap[tid]) srsMap[tid] = { total: 0, learned: 0, due: 0 }
-        srsMap[tid].total++
-        if (card.state === 2) srsMap[tid].learned++
-        if (card.nextReviewAt <= now) srsMap[tid].due++
-    }
-
-    return themes.map(t => ({
-        id: t.id,
-        slug: t.slug,
-        name: t.name,
-        nameVi: t.nameVi,
-        cefrLevel: t.cefrLevel,
-        imageUrl: t.imageUrl,
-        wordCount: t._count.items,
-        srsProgress: srsMap[t.id] ?? { total: 0, learned: 0, due: 0 },
+    return mapVocabularyThemes(themes).map(theme => ({
+        ...theme,
+        srsProgress: srsMap[theme.id]
+            ? {
+                total: srsMap[theme.id]!.total,
+                learned: srsMap[theme.id]!.learned,
+                due: srsMap[theme.id]!.due,
+            }
+            : { total: 0, learned: 0, due: 0 },
     }))
 }
 
-async function getAvailableLevels(): Promise<CefrLevel[]> {
-    const levels = await prisma.vocabularyTheme.findMany({
-        select: { cefrLevel: true },
-        distinct: ['cefrLevel'],
-        orderBy: { cefrLevel: 'asc' },
-    })
-    return levels.map(l => l.cefrLevel as CefrLevel)
-}
-
 async function getDueCounts(userId: string) {
-    const now = new Date()
-    const cards = await prisma.srsCard.findMany({
-        where: { userId, nextReviewAt: { lte: now } },
-        select: {
-            vocabularyItem: { select: { cefrLevel: true } },
-        },
-    })
-    const counts: Record<string, number> = {}
-    for (const c of cards) {
-        const lvl = c.vocabularyItem?.cefrLevel
-        if (!lvl) continue
-        counts[lvl] = (counts[lvl] || 0) + 1
-    }
-    return counts
+    return getVocabularyDueCountsByLevel(userId)
 }
 
 export default async function ReviewPage() {
@@ -97,7 +42,7 @@ export default async function ReviewPage() {
     const userLevel = (profile?.currentLevel ?? 'A1') as CefrLevel
 
     const [availableLevels, themes, dueCounts] = await Promise.all([
-        getAvailableLevels(),
+        getVocabularyLevels(),
         getThemesForLevel(serverUser.userId, userLevel),
         getDueCounts(serverUser.userId),
     ])

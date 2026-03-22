@@ -1,9 +1,8 @@
 import { redirect } from 'next/navigation'
 import { prisma } from '@fuxie/database'
 import { getServerUser } from '@/lib/auth/server-auth'
+import { cacheWrap } from '@/lib/cache/redis'
 import { WritingClient } from '@/components/writing/writing-client'
-
-export const dynamic = 'force-dynamic'
 
 export const metadata = {
     title: 'Fuxie 🦊 — Schreibtraining',
@@ -13,7 +12,7 @@ export const metadata = {
 type CefrLevel = 'A1' | 'A2' | 'B1' | 'B2' | 'C1' | 'C2'
 
 async function getWritingData(userId: string | null, cefrLevel: CefrLevel) {
-    const exercises = await prisma.writingExercise.findMany({
+    const exercises = await cacheWrap(`writing:exercises:${cefrLevel}`, 3600, () => prisma.writingExercise.findMany({
         where: { cefrLevel },
         orderBy: [{ teil: 'asc' }, { sortOrder: 'asc' }],
         select: {
@@ -31,13 +30,17 @@ async function getWritingData(userId: string | null, cefrLevel: CefrLevel) {
             maxScore: true,
             sortOrder: true,
         },
-    })
+    }))
 
     // Get user's completion data
     let completedExercises: Record<string, { bestScore: number; maxScore: number; attempts: number }> = {}
-    if (userId) {
+    const exerciseIds = exercises.map((exercise) => exercise.id)
+    if (userId && exerciseIds.length > 0) {
         const attempts = await prisma.writingAttempt.findMany({
-            where: { userId },
+            where: {
+                userId,
+                exerciseId: { in: exerciseIds },
+            },
             select: {
                 exerciseId: true,
                 totalScore: true,
@@ -105,13 +108,15 @@ async function getWritingData(userId: string | null, cefrLevel: CefrLevel) {
 }
 
 async function getAvailableLevels(): Promise<CefrLevel[]> {
-    const levels = await prisma.writingExercise.findMany({
-        select: { cefrLevel: true },
-        distinct: ['cefrLevel'],
-        orderBy: { cefrLevel: 'asc' },
+    return cacheWrap('writing:levels', 3600, async () => {
+        const levels = await prisma.writingExercise.findMany({
+            select: { cefrLevel: true },
+            distinct: ['cefrLevel'],
+            orderBy: { cefrLevel: 'asc' },
+        })
+        if (levels.length === 0) return ['A1']
+        return levels.map(l => l.cefrLevel as CefrLevel)
     })
-    if (levels.length === 0) return ['A1']
-    return levels.map(l => l.cefrLevel as CefrLevel)
 }
 
 export default async function WritingPage() {

@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { z } from 'zod'
-import { prisma } from '@fuxie/database'
+import { getReadingExerciseList, groupReadingExercisesByTeil, type CefrLevel } from '@/lib/content/reading'
 
 const VALID_LEVELS = ['A1', 'A2', 'B1', 'B2', 'C1', 'C2'] as const
 const querySchema = z.object({ level: z.enum(VALID_LEVELS).default('A1') })
@@ -12,45 +12,8 @@ export async function GET(req: NextRequest) {
             level: req.nextUrl.searchParams.get('level') || undefined,
         })
 
-        const exercises = await prisma.readingExercise.findMany({
-            where: { cefrLevel: level },
-            orderBy: [{ teil: 'asc' }, { sortOrder: 'asc' }],
-            select: {
-                id: true,
-                exerciseId: true,
-                cefrLevel: true,
-                teil: true,
-                teilName: true,
-                topic: true,
-                metadataJson: true,
-                sortOrder: true,
-                _count: { select: { questions: true } },
-            },
-        })
-
-        // Group by Teil
-        const teilMap: Record<number, {
-            teil: number
-            teilName: string
-            exercises: typeof exercises
-            totalExercises: number
-        }> = {}
-
-        for (const ex of exercises) {
-            if (!teilMap[ex.teil]) {
-                teilMap[ex.teil] = {
-                    teil: ex.teil,
-                    teilName: ex.teilName,
-                    exercises: [],
-                    totalExercises: 0,
-                }
-            }
-            const entry = teilMap[ex.teil]!
-            entry.exercises.push(ex)
-            entry.totalExercises++
-        }
-
-        const teile = Object.values(teilMap).sort((a, b) => a.teil - b.teil)
+        const exercises = await getReadingExerciseList(level as CefrLevel)
+        const teile = groupReadingExercisesByTeil(exercises)
 
         return NextResponse.json({
             success: true,

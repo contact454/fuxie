@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useCallback, useEffect } from 'react'
+import { useState, useCallback, useEffect, useRef } from 'react'
 import { ExerciseProgress } from './exercise-progress'
 import { ExerciseResults } from './exercise-results'
 import { useExerciseTimer } from '@/hooks/use-exercise-timer'
@@ -11,7 +11,6 @@ interface ScrambleQuestion {
     id: string
     type: string
     scrambledWords: string[]
-    correctSentence: string
     translation: string | null
     wordId: string
 }
@@ -31,8 +30,8 @@ export function ScrambleExercise({ questions, cefrLevel, themeName, themeSlug, o
     const [availableWords, setAvailableWords] = useState<string[]>([])
     const [selectedWords, setSelectedWords] = useState<string[]>([])
     const [isRevealed, setIsRevealed] = useState(false)
-    const [isCorrect, setIsCorrect] = useState(false)
     const [answers, setAnswers] = useState<ExerciseAnswer[]>([])
+    const advanceTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null)
 
     const { timer, stopTimer, resetTimer } = useExerciseTimer()
     const { submitResult, phase, submitAnswers, resetSubmit } = useSubmitExercise({
@@ -53,6 +52,12 @@ export function ScrambleExercise({ questions, cefrLevel, themeName, themeSlug, o
         setAvailableWords([...question.scrambledWords])
         setSelectedWords([])
     }, [currentIndex, question.scrambledWords])
+
+    useEffect(() => {
+        return () => {
+            if (advanceTimeoutRef.current) clearTimeout(advanceTimeoutRef.current)
+        }
+    }, [])
 
     const addWord = useCallback((word: string, index: number) => {
         if (isRevealed) return
@@ -79,25 +84,22 @@ export function ScrambleExercise({ questions, cefrLevel, themeName, themeSlug, o
         if (isRevealed || selectedWords.length === 0) return
 
         const userSentence = selectedWords.join(' ')
-        // Normalize: remove trailing punctuation for comparison
-        const normalize = (s: string) => s.replace(/[.!?;,]+$/g, '').trim().toLowerCase()
-        const correct = normalize(userSentence) === normalize(question.correctSentence)
-
-        setIsCorrect(correct)
         setIsRevealed(true)
 
         const newAnswers: ExerciseAnswer[] = [...answers, {
             questionId: question.id,
             answer: userSentence,
-            correctAnswer: question.correctSentence,
+            correctAnswer: '',
+            wordId: question.wordId,
+            questionType: question.type,
         }]
         setAnswers(newAnswers)
 
-        setTimeout(() => {
+        if (advanceTimeoutRef.current) clearTimeout(advanceTimeoutRef.current)
+        advanceTimeoutRef.current = setTimeout(() => {
             if (currentIndex < questions.length - 1) {
                 setCurrentIndex(i => i + 1)
                 setIsRevealed(false)
-                setIsCorrect(false)
             } else {
                 stopTimer()
                 submitAnswers(newAnswers, timer)
@@ -116,7 +118,7 @@ export function ScrambleExercise({ questions, cefrLevel, themeName, themeSlug, o
                 timeTaken={timer}
                 results={submitResult.results}
                 onRetry={() => {
-                    setCurrentIndex(0); setSelectedWords([]); setIsRevealed(false); setIsCorrect(false)
+                    setCurrentIndex(0); setSelectedWords([]); setIsRevealed(false)
                     setAnswers([])
                     resetSubmit()
                     resetTimer()
@@ -155,9 +157,7 @@ export function ScrambleExercise({ questions, cefrLevel, themeName, themeSlug, o
                     {/* Construction zone — selected words */}
                     <div className={`min-h-[80px] p-4 mb-6 rounded-2xl border-2 transition-all ${
                         isRevealed
-                            ? isCorrect
-                                ? 'border-emerald-400 bg-emerald-50'
-                                : 'border-red-400 bg-red-50'
+                            ? 'border-[#004E89] bg-blue-50'
                             : selectedWords.length > 0
                                 ? 'border-[#004E89] bg-blue-50'
                                 : 'border-dashed border-gray-400 bg-gray-50/50'
@@ -173,9 +173,7 @@ export function ScrambleExercise({ questions, cefrLevel, themeName, themeSlug, o
                                         disabled={isRevealed}
                                         className={`px-4 py-2 rounded-xl text-sm font-bold transition-all ${
                                             isRevealed
-                                                ? isCorrect
-                                                    ? 'bg-emerald-200 text-emerald-800'
-                                                    : 'bg-red-200 text-red-800'
+                                                ? 'bg-blue-200 text-[#004E89]'
                                                 : 'bg-white text-[#004E89] border-2 border-[#004E89] hover:bg-[#004E89] hover:text-white shadow-sm'
                                         }`}
                                     >
@@ -188,13 +186,7 @@ export function ScrambleExercise({ questions, cefrLevel, themeName, themeSlug, o
                         {/* Feedback */}
                         {isRevealed && (
                             <div className="mt-3 pt-3 border-t border-current/10">
-                                {isCorrect ? (
-                                    <p className="text-sm text-emerald-600 font-semibold">✅ Richtig!</p>
-                                ) : (
-                                    <p className="text-sm text-red-600">
-                                        ❌ Richtig: <strong>{question.correctSentence}</strong>
-                                    </p>
-                                )}
+                                <p className="text-sm text-[#004E89] font-semibold">Antwort gespeichert</p>
                             </div>
                         )}
                     </div>

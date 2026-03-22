@@ -1,16 +1,19 @@
 import { notFound, redirect } from 'next/navigation'
+import { cache } from 'react'
 import { prisma } from '@fuxie/database'
 import { getServerUser } from '@/lib/auth/server-auth'
 import { LessonPlayer } from '@/components/grammar/LessonPlayer'
 import type { TheoryBlock, GrammarExercise } from '@/components/grammar/types'
 
-export const dynamic = 'force-dynamic'
+const getGrammarLesson = cache(async (lessonId: string) => {
+    return prisma.grammarLesson.findUnique({
+        where: { id: lessonId },
+    })
+})
 
 export async function generateMetadata({ params }: { params: Promise<{ topicSlug: string; lessonId: string }> }) {
     const { lessonId } = await params
-    const lesson = await prisma.grammarLesson.findUnique({
-        where: { id: lessonId },
-    })
+    const lesson = await getGrammarLesson(lessonId)
     return {
         title: lesson ? `Fuxie 🦊 — ${lesson.titleVi}` : 'Fuxie — Grammatik',
     }
@@ -21,9 +24,7 @@ export default async function LessonPage({ params }: { params: Promise<{ topicSl
     const serverUser = await getServerUser()
     if (!serverUser) redirect('/login')
 
-    const lesson = await prisma.grammarLesson.findUnique({
-        where: { id: lessonId },
-    })
+    const lesson = await getGrammarLesson(lessonId)
 
     if (!lesson) notFound()
 

@@ -2,7 +2,13 @@ import { PrismaClient, CefrLevel, ContentStatus } from '@prisma/client'
 import { GoogleGenerativeAI } from '@google/generative-ai'
 
 const p = new PrismaClient()
-const ai = new GoogleGenerativeAI('AIzaSyA8jCaVXLsIQBU-_zXTO3I3c_1cB2wu3uc')
+const apiKey = process.env.GEMINI_API_KEY
+
+if (!apiKey) {
+  throw new Error('GEMINI_API_KEY is required')
+}
+
+const ai = new GoogleGenerativeAI(apiKey)
 
 const TOPICS = [
   {

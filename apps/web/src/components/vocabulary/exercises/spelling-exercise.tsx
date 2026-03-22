@@ -15,10 +15,10 @@ interface SpellingQuestion {
     prompt: string           // Vietnamese meaning
     promptImage: string | null
     promptAudio: string | null
-    correctAnswer: string    // German word
     article: string | null   // MASKULIN / FEMININ / NEUTRUM
     wordId: string
     hint: string             // first 2 chars
+    answerLength: number
 }
 
 interface SpellingExerciseProps {
@@ -40,10 +40,11 @@ export function SpellingExercise({ questions, cefrLevel, themeName, themeSlug, o
     const [currentIndex, setCurrentIndex] = useState(0)
     const [userInput, setUserInput] = useState('')
     const [isRevealed, setIsRevealed] = useState(false)
-    const [isCorrect, setIsCorrect] = useState(false)
     const [showHint, setShowHint] = useState(false)
     const [answers, setAnswers] = useState<ExerciseAnswer[]>([])
     const inputRef = useRef<HTMLInputElement>(null)
+    const focusTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null)
+    const advanceTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null)
 
     const { timer, stopTimer, resetTimer } = useExerciseTimer()
     const { submitResult, phase, submitAnswers, resetSubmit } = useSubmitExercise({
@@ -57,8 +58,16 @@ export function SpellingExercise({ questions, cefrLevel, themeName, themeSlug, o
 
     // Focus input on new question
     useEffect(() => {
-        setTimeout(() => inputRef.current?.focus(), 100)
+        if (focusTimeoutRef.current) clearTimeout(focusTimeoutRef.current)
+        focusTimeoutRef.current = setTimeout(() => inputRef.current?.focus(), 100)
     }, [currentIndex])
+
+    useEffect(() => {
+        return () => {
+            if (focusTimeoutRef.current) clearTimeout(focusTimeoutRef.current)
+            if (advanceTimeoutRef.current) clearTimeout(advanceTimeoutRef.current)
+        }
+    }, [])
 
     const getArticle = (article: string | null) => {
         if (!article) return ''
@@ -73,24 +82,24 @@ export function SpellingExercise({ questions, cefrLevel, themeName, themeSlug, o
     const checkAnswer = useCallback(() => {
         if (isRevealed || !userInput.trim()) return
 
-        const correct = userInput.trim().toLowerCase() === question.correctAnswer.toLowerCase()
-        setIsCorrect(correct)
         setIsRevealed(true)
 
         const newAnswers: ExerciseAnswer[] = [...answers, {
             questionId: question.id,
             answer: userInput.trim(),
-            correctAnswer: question.correctAnswer,
+            correctAnswer: '',
+            wordId: question.wordId,
+            questionType: question.type,
         }]
         setAnswers(newAnswers)
 
         // Auto advance after 2s
-        setTimeout(() => {
+        if (advanceTimeoutRef.current) clearTimeout(advanceTimeoutRef.current)
+        advanceTimeoutRef.current = setTimeout(() => {
             if (currentIndex < questions.length - 1) {
                 setCurrentIndex(i => i + 1)
                 setUserInput('')
                 setIsRevealed(false)
-                setIsCorrect(false)
                 setShowHint(false)
             } else {
                 stopTimer()
@@ -122,7 +131,7 @@ export function SpellingExercise({ questions, cefrLevel, themeName, themeSlug, o
                 timeTaken={timer}
                 results={submitResult.results}
                 onRetry={() => {
-                    setCurrentIndex(0); setUserInput(''); setIsRevealed(false); setIsCorrect(false)
+                    setCurrentIndex(0); setUserInput(''); setIsRevealed(false)
                     setShowHint(false); setAnswers([])
                     resetSubmit()
                     resetTimer()
@@ -191,9 +200,7 @@ export function SpellingExercise({ questions, cefrLevel, themeName, themeSlug, o
                     <div className="mb-4">
                         <div className={`relative rounded-2xl border-2 transition-all overflow-hidden ${
                             isRevealed
-                                ? isCorrect
-                                    ? 'border-emerald-400 bg-emerald-50'
-                                    : 'border-red-400 bg-red-50'
+                                ? 'border-[#004E89] bg-blue-50'
                                 : 'border-gray-200 bg-white focus-within:border-[#004E89] focus-within:shadow-lg focus-within:shadow-blue-100'
                         }`}>
                             <input
@@ -211,13 +218,7 @@ export function SpellingExercise({ questions, cefrLevel, themeName, themeSlug, o
                             />
                             {isRevealed && (
                                 <div className="text-center pb-3">
-                                    {isCorrect ? (
-                                        <span className="text-emerald-600 font-bold text-sm">✅ Richtig!</span>
-                                    ) : (
-                                        <span className="text-red-600 text-sm">
-                                            ❌ Richtig: <strong>{articleText ? `${articleText} ${question.correctAnswer}` : question.correctAnswer}</strong>
-                                        </span>
-                                    )}
+                                    <span className="text-[#004E89] font-bold text-sm">Antwort gespeichert</span>
                                 </div>
                             )}
                         </div>
@@ -264,7 +265,7 @@ export function SpellingExercise({ questions, cefrLevel, themeName, themeSlug, o
                         <div className="mt-4 p-3 rounded-xl bg-amber-50 border border-amber-200 text-center">
                             <span className="text-sm text-amber-700">
                                 💡 Anfang: <strong>{question.hint}...</strong>
-                                <span className="text-amber-400 ml-2">({question.correctAnswer.length} Buchstaben)</span>
+                                <span className="text-amber-400 ml-2">({question.answerLength} Buchstaben)</span>
                             </span>
                         </div>
                     )}

@@ -1,16 +1,32 @@
 import { redirect, notFound } from 'next/navigation'
+import { cache } from 'react'
 import { prisma } from '@fuxie/database'
 import { getServerUser } from '@/lib/auth/server-auth'
 import { LessonPlayer } from '@/components/listening/lesson-player'
 
-export const dynamic = 'force-dynamic'
+const getListeningLesson = cache(async (lessonId: string) => {
+    return prisma.listeningLesson.findUnique({
+        where: { lessonId },
+        include: {
+            questions: {
+                orderBy: { sortOrder: 'asc' },
+                select: {
+                    id: true,
+                    questionNumber: true,
+                    questionType: true,
+                    questionText: true,
+                    questionTextVi: true,
+                    options: true,
+                    sortOrder: true,
+                },
+            },
+        },
+    })
+})
 
 export async function generateMetadata({ params }: { params: Promise<{ lessonId: string }> }) {
     const { lessonId } = await params
-    const lesson = await prisma.listeningLesson.findUnique({
-        where: { lessonId },
-        select: { title: true, topic: true, cefrLevel: true },
-    })
+    const lesson = await getListeningLesson(lessonId)
     return {
         title: lesson ? `Fuxie 🦊 — ${lesson.topic}` : 'Fuxie 🦊 — Hörverstehen',
         description: lesson?.title ?? 'German listening comprehension exercise',
@@ -28,23 +44,7 @@ export default async function ListeningLessonPage({ params }: { params: Promise<
 
     const { lessonId } = await params
 
-    const lesson = await prisma.listeningLesson.findUnique({
-        where: { lessonId },
-        include: {
-            questions: {
-                orderBy: { sortOrder: 'asc' },
-                select: {
-                    id: true,
-                    questionNumber: true,
-                    questionType: true,
-                    questionText: true,
-                    questionTextVi: true,
-                    options: true,
-                    sortOrder: true,
-                },
-            },
-        },
-    })
+    const lesson = await getListeningLesson(lessonId)
 
     if (!lesson) notFound()
 

@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useCallback } from 'react'
+import { useState, useCallback, useEffect, useRef } from 'react'
 
 import { Flashcard } from './flashcard'
 import { RatingButtons } from './rating-buttons'
@@ -56,9 +56,16 @@ export function ReviewSession({ initialCards, totalDue }: ReviewSessionProps) {
         again: 0,
         xpEarned: 0,
     })
+    const advanceTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null)
 
     const currentCard = cards[currentIndex]
     const progress = cards.length > 0 ? ((currentIndex) / cards.length) * 100 : 0
+
+    useEffect(() => {
+        return () => {
+            if (advanceTimeoutRef.current) clearTimeout(advanceTimeoutRef.current)
+        }
+    }, [])
 
     const handleFlip = useCallback(() => {
         setIsFlipped((prev) => !prev)
@@ -96,7 +103,8 @@ export function ReviewSession({ initialCards, totalDue }: ReviewSessionProps) {
             }))
 
             // Brief delay for mascot reaction, then move to next
-            setTimeout(() => {
+            if (advanceTimeoutRef.current) clearTimeout(advanceTimeoutRef.current)
+            advanceTimeoutRef.current = setTimeout(() => {
                 if (currentIndex + 1 < cards.length) {
                     setCurrentIndex((prev) => prev + 1)
                     setIsFlipped(false)

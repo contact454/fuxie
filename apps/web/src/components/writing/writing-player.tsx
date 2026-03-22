@@ -237,6 +237,8 @@ export function WritingPlayer(props: WritingPlayerProps) {
     const [error, setError] = useState<string | null>(null)
     const timerRef = useRef<ReturnType<typeof setInterval> | null>(null)
     const textareaRef = useRef<HTMLTextAreaElement>(null)
+    const isMountedRef = useRef(true)
+    const submitAbortRef = useRef<AbortController | null>(null)
 
     const wordCount = countWords(text)
     const isFormComplete = isFormular
@@ -245,10 +247,13 @@ export function WritingPlayer(props: WritingPlayerProps) {
 
     // ─── Timer ──────────────────────────────────────
     useEffect(() => {
+        isMountedRef.current = true
         timerRef.current = setInterval(() => {
             setTimeElapsed(prev => prev + 1)
         }, 1000)
         return () => {
+            isMountedRef.current = false
+            submitAbortRef.current?.abort()
             if (timerRef.current) clearInterval(timerRef.current)
         }
     }, [])
@@ -264,6 +269,10 @@ export function WritingPlayer(props: WritingPlayerProps) {
             : text
 
         try {
+            submitAbortRef.current?.abort()
+            const controller = new AbortController()
+            submitAbortRef.current = controller
+
             const res = await fetch('/api/v1/writing/submit', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
@@ -273,8 +282,10 @@ export function WritingPlayer(props: WritingPlayerProps) {
                     wordCount: countWords(submittedText),
                     timeSpentSeconds: timeElapsed,
                 }),
+                signal: controller.signal,
             })
             const data = await res.json()
+            if (!isMountedRef.current || controller.signal.aborted) return
             if (data.success) {
                 setFeedback(data.data)
                 setPhase('feedback')
@@ -283,7 +294,9 @@ export function WritingPlayer(props: WritingPlayerProps) {
                 setError(data.error || 'Fehler beim Einreichen')
                 setPhase('writing')
             }
-        } catch {
+        } catch (err) {
+            if (!isMountedRef.current) return
+            if (err instanceof Error && err.name === 'AbortError') return
             setError('Verbindungsfehler. Bitte versuche es erneut.')
             setPhase('writing')
         }

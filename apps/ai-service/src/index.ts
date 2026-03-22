@@ -8,6 +8,7 @@ import { gradeRoutes } from './routes/grade.js'
 import { generateRoutes } from './routes/generate.js'
 import { audioRoutes } from './routes/audio.js'
 import { healthRoutes } from './routes/health.js'
+import { startWorkers } from './lib/queue/worker.js'
 
 const app = new Hono()
 
@@ -43,6 +44,7 @@ app.onError((err, c) => {
 const port = Number(process.env.PORT) || 3001
 console.log(`🦊 Fuxie AI Service running on port ${port}`)
 
+startWorkers()
 serve({ fetch: app.fetch, port })
 
 export default app

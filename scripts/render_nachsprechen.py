@@ -25,7 +25,7 @@ TTS_URL = "http://127.0.0.1:8004/synthesize_clone"
 ARCHETYPE = "mid_female_neutral"  # Clear, measured mid-register — ideal for pronunciation model
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
-SCRIPTS_DIR = PROJECT_ROOT.parent / "8-Audio-Factory" / "data" / "scripts" / "Sprechen-Nachsprechen"
+SCRIPTS_DIR = PROJECT_ROOT.parent / "8-Audio-Factory" / "data" / "scripts" / "Sprechen-Nachsprechen-Phase2"
 OUTPUT_DIR = PROJECT_ROOT / "apps" / "web" / "public" / "audio" / "speaking" / "a1"
 
 # Ensure ffmpeg is available for WAV→MP3
@@ -108,8 +108,8 @@ def main():
         print(f"❌ Cannot connect to TTS server: {err}")
         sys.exit(1)
 
-    # Discover scripts
-    scripts = sorted(SCRIPTS_DIR.glob("L-SPR-*.json"))
+    # Discover scripts recursively
+    scripts = sorted(SCRIPTS_DIR.rglob("*.json"))
     print(f"📋 Found {len(scripts)} scripts")
 
     rendered = 0

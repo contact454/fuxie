@@ -70,14 +70,12 @@ function generateMcQuestion(
     let prompt = ''
     let promptImage: string | null = null
     let promptAudio: string | null = null
-    let correctAnswer = ''
     let options: string[] = []
 
     switch (variant) {
         case 'de_to_vi':
             prompt = displayWord
             promptAudio = target.audioUrl
-            correctAnswer = target.meaningVi
             options = shuffle([
                 target.meaningVi,
                 ...wrongAnswers.map(w => w.meaningVi),
@@ -86,7 +84,6 @@ function generateMcQuestion(
 
         case 'vi_to_de':
             prompt = target.meaningVi
-            correctAnswer = displayWord
             options = shuffle([
                 displayWord,
                 ...wrongAnswers.map(w => {
@@ -100,7 +97,6 @@ function generateMcQuestion(
         case 'image_to_word':
             promptImage = target.imageUrl
             prompt = '' // Image is the prompt
-            correctAnswer = displayWord
             options = shuffle([
                 displayWord,
                 ...wrongAnswers.map(w => {
@@ -114,7 +110,6 @@ function generateMcQuestion(
         case 'audio_to_word':
             promptAudio = target.audioUrl
             prompt = '' // Audio is the prompt
-            correctAnswer = displayWord
             options = shuffle([
                 displayWord,
                 ...wrongAnswers.map(w => {
@@ -132,7 +127,6 @@ function generateMcQuestion(
         prompt,
         promptImage,
         promptAudio,
-        correctAnswer,
         options,
         wordId: target.id,
         word: displayWord,
@@ -222,10 +216,10 @@ export async function GET(req: NextRequest) {
                 prompt: w.meaningVi,
                 promptImage: w.imageUrl,
                 promptAudio: w.audioUrl,
-                correctAnswer: w.word,
                 article: w.article,
                 wordId: w.id,
                 hint: w.word.substring(0, 2),
+                answerLength: w.word.length,
             }))
         } else if (type === 'cloze') {
             const withSentences = allWords.filter(w => w.exampleSentence1)
@@ -238,7 +232,6 @@ export async function GET(req: NextRequest) {
                     type: 'cloze',
                     sentence: blank,
                     translation: w.exampleTranslation1,
-                    correctAnswer: w.word,
                     wordType: w.wordType,
                     wordId: w.id,
                 }
@@ -253,7 +246,6 @@ export async function GET(req: NextRequest) {
                     id: `r${i + 1}`,
                     type: 'scramble',
                     scrambledWords: shuffle(words),
-                    correctSentence: sentence,
                     translation: w.exampleTranslation1,
                     wordId: w.id,
                 }

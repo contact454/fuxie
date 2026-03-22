@@ -1,9 +1,8 @@
 import { redirect } from 'next/navigation'
 import { prisma } from '@fuxie/database'
 import { getServerUser } from '@/lib/auth/server-auth'
+import { getVocabularyThemeSrsProgress } from '@/lib/srs/stats'
 import { CourseClient } from '@/components/course/CourseClient'
-
-export const dynamic = 'force-dynamic'
 
 export const metadata = {
     title: 'Fuxie 🦊 — Kurs A1',
@@ -40,9 +39,21 @@ async function getCourseData(userId: string) {
     // 1. Fetch course + modules
     const course = await prisma.course.findFirst({
         where: { slug: 'deutsch-a1-anfaenger' },
-        include: {
+        select: {
+            title: true,
+            titleDe: true,
+            description: true,
             modules: {
                 orderBy: { sortOrder: 'asc' },
+                select: {
+                    id: true,
+                    slug: true,
+                    title: true,
+                    titleDe: true,
+                    description: true,
+                    sortOrder: true,
+                    estimatedMinutes: true,
+                },
             },
         },
     })
@@ -82,27 +93,18 @@ async function getCourseData(userId: string) {
     const vocabThemeMap = new Map(vocabThemes.map(t => [t.slug, t]))
 
     // 4. Fetch user's SRS cards for vocab progress
-    const srsCards = await prisma.srsCard.findMany({
-        where: { userId },
-        select: {
-            vocabularyItem: {
-                select: { themeId: true },
-            },
-            state: true,
-        },
-    })
-    const learnedByTheme: Record<string, number> = {}
-    for (const card of srsCards) {
-        const themeId = card.vocabularyItem?.themeId
-        if (!themeId) continue
-        if (card.state !== 0) { // 0 = NEW state in FSRS
-            learnedByTheme[themeId] = (learnedByTheme[themeId] ?? 0) + 1
-        }
-    }
+    const themeProgress = await getVocabularyThemeSrsProgress(userId, 'A1')
 
     // 5. Fetch grammar topics for A1
     const grammarTopics = await prisma.grammarTopic.findMany({
         where: { cefrLevel: 'A1' },
+        select: {
+            id: true,
+            slug: true,
+            title: true,
+            titleDe: true,
+            titleVi: true,
+        },
     })
     const grammarTopicMap = new Map(grammarTopics.map((t) => [t.slug, t]))
 
@@ -111,6 +113,10 @@ async function getCourseData(userId: string) {
     const grammarLessons = topicIds.length > 0
         ? await prisma.grammarLesson.findMany({
             where: { topicId: { in: topicIds } },
+            select: {
+                id: true,
+                topicId: true,
+            },
         })
         : []
     const lessonsByTopic: Record<string, any[]> = {}
@@ -124,6 +130,11 @@ async function getCourseData(userId: string) {
     const grammarProgress = grammarLessonIds.length > 0
         ? await prisma.grammarProgress.findMany({
             where: { userId, lessonId: { in: grammarLessonIds } },
+            select: {
+                lessonId: true,
+                completed: true,
+                stars: true,
+            },
         })
         : []
     const progressMap: Record<string, { completed: boolean; stars: number }> = {}
@@ -145,7 +156,7 @@ async function getCourseData(userId: string) {
                     name: theme.name,
                     nameVi: theme.nameVi,
                     itemCount: theme._count.items,
-                    learnedCount: learnedByTheme[theme.id] ?? 0,
+                    learnedCount: themeProgress[theme.id]?.started ?? 0,
                 }
             })
             .filter(Boolean) as ModuleWithProgress['vocabThemes']

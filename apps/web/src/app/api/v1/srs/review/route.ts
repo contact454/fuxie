@@ -2,8 +2,10 @@ import { NextRequest, NextResponse } from 'next/server'
 import { z } from 'zod'
 import { prisma } from '@fuxie/database'
 import { withAuth, NotFoundError } from '@/lib/auth/middleware'
+import { getDbUserByFirebaseUid } from '@/lib/auth/db-user'
 import { handleApiError } from '@/lib/api/error-handler'
-import { calculateReview, createNewCard } from '@fuxie/srs-engine'
+import { calculateReview } from '@fuxie/srs-engine'
+import { countDueSrsCards, getDueSrsCards } from '@/lib/srs/due-cards'
 import { XP_REWARDS } from '@fuxie/shared/constants'
 import type { SrsRating } from '@fuxie/shared/types'
 
@@ -14,62 +16,16 @@ import type { SrsRating } from '@fuxie/shared/types'
 export async function GET(req: NextRequest) {
     try {
         const auth = await withAuth(req)
-        const user = await prisma.user.findUnique({
-            where: { firebaseUid: auth.userId },
-            select: { id: true },
-        })
+        const user = await getDbUserByFirebaseUid(auth.userId)
         if (!user) throw new NotFoundError('User not found')
 
         const limit = Number(req.nextUrl.searchParams.get('limit') ?? '20')
+        const now = new Date()
 
-        const cards = await prisma.srsCard.findMany({
-            where: {
-                userId: user.id,
-                nextReviewAt: { lte: new Date() },
-            },
-            orderBy: { nextReviewAt: 'asc' },
-            take: Math.min(limit, 50),
-            select: {
-                id: true,
-                interval: true,
-                repetitions: true,
-                easeFactor: true,
-                nextReviewAt: true,
-                state: true,
-                totalReviews: true,
-                totalCorrect: true,
-                lapseCount: true,
-                vocabularyItem: {
-                    select: {
-                        id: true,
-                        word: true,
-                        article: true,
-                        plural: true,
-                        wordType: true,
-                        cefrLevel: true,
-                        meaningVi: true,
-                        meaningEn: true,
-                        ipa: true,
-                        audioUrl: true,
-                        imageUrl: true,
-                        exampleSentence1: true,
-                        exampleTranslation1: true,
-                        exampleSentence2: true,
-                        exampleTranslation2: true,
-                        notes: true,
-                        conjugation: true,
-                    },
-                },
-            },
-        })
-
-        // Also get total due count
-        const totalDue = await prisma.srsCard.count({
-            where: {
-                userId: user.id,
-                nextReviewAt: { lte: new Date() },
-            },
-        })
+        const [cards, totalDue] = await Promise.all([
+            getDueSrsCards({ userId: user.id, now, limit }),
+            countDueSrsCards({ userId: user.id, now }),
+        ])
 
         return NextResponse.json({
             success: true,
@@ -97,10 +53,7 @@ const reviewSchema = z.object({
 export async function POST(req: NextRequest) {
     try {
         const auth = await withAuth(req)
-        const user = await prisma.user.findUnique({
-            where: { firebaseUid: auth.userId },
-            select: { id: true },
-        })
+        const user = await getDbUserByFirebaseUid(auth.userId)
         if (!user) throw new NotFoundError('User not found')
 
         const body = await req.json()

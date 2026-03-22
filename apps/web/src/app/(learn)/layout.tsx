@@ -1,39 +1,25 @@
 import type { Metadata } from 'next'
-import { prisma } from '@fuxie/database'
 import { getServerUser } from '@/lib/auth/server-auth'
+import { getDashboardUserContext, getTodayActivitySummary } from '@/lib/dashboard/request-data'
 import { MobileShell } from '@/components/shared/mobile-shell'
 
 export const metadata: Metadata = {
     title: 'Fuxie 🦊 — Lernen',
 }
 
-export const dynamic = 'force-dynamic'
-
 async function getDailyGoal() {
     try {
         const serverUser = await getServerUser()
         if (!serverUser) return undefined
 
-        const todayStart = new Date()
-        todayStart.setHours(0, 0, 0, 0)
-
-        const [profile, todayActivity] = await Promise.all([
-            prisma.userProfile.findUnique({
-                where: { userId: serverUser.userId },
-                select: { studyGoalMinutes: true },
-            }),
-            prisma.dailyActivity.findFirst({
-                where: {
-                    userId: serverUser.userId,
-                    date: todayStart,
-                },
-                select: { totalMinutes: true, xpEarned: true },
-            }),
+        const [user, todayActivity] = await Promise.all([
+            getDashboardUserContext(serverUser.userId),
+            getTodayActivitySummary(serverUser.userId),
         ])
 
         return {
             currentMinutes: todayActivity?.totalMinutes ?? 0,
-            goalMinutes: profile?.studyGoalMinutes ?? 15,
+            goalMinutes: user?.profile?.studyGoalMinutes ?? user?.settings?.srsNewCardsPerDay ?? 15,
             xpEarned: todayActivity?.xpEarned ?? 0,
         }
     } catch {
@@ -52,4 +38,3 @@ export default async function LearnLayout({ children }: { children: React.ReactN
         </div>
     )
 }
-

@@ -1,7 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { z } from 'zod'
-import { prisma } from '@fuxie/database'
+import { prisma, type Prisma } from '@fuxie/database'
 import { withAuth } from '@/lib/auth/middleware'
+import { buildVocabularyItemWhere, type CefrLevel } from '@/lib/content/vocabulary'
 import { handleApiError } from '@/lib/api/error-handler'
 
 const VALID_LEVELS = ['A1', 'A2', 'B1', 'B2', 'C1', 'C2'] as const
@@ -26,25 +27,16 @@ export async function GET(req: NextRequest) {
         const params = Object.fromEntries(req.nextUrl.searchParams)
         const { level, theme, search, wordType, page, limit } = querySchema.parse(params)
 
-        const where: Record<string, unknown> = { cefrLevel: level }
-
-        if (theme) {
-            where.theme = { slug: theme }
-        }
-        if (wordType) {
-            where.wordType = wordType
-        }
-        if (search) {
-            where.OR = [
-                { word: { contains: search, mode: 'insensitive' } },
-                { meaningVi: { contains: search, mode: 'insensitive' } },
-                { meaningEn: { contains: search, mode: 'insensitive' } },
-            ]
-        }
+        const where: Prisma.VocabularyItemWhereInput = buildVocabularyItemWhere({
+            level: level as CefrLevel,
+            theme,
+            search,
+            wordType,
+        })
 
         const [items, total] = await Promise.all([
             prisma.vocabularyItem.findMany({
-                where: where as any,
+                where,
                 orderBy: [{ theme: { sortOrder: 'asc' } }, { word: 'asc' }],
                 skip: (page - 1) * limit,
                 take: limit,
@@ -71,7 +63,7 @@ export async function GET(req: NextRequest) {
                     },
                 },
             }),
-            prisma.vocabularyItem.count({ where: where as any }),
+            prisma.vocabularyItem.count({ where }),
         ])
 
         return NextResponse.json({

@@ -1,9 +1,21 @@
 import { notFound, redirect } from 'next/navigation'
 import Link from 'next/link'
+import { cache } from 'react'
 import { prisma } from '@fuxie/database'
 import { getServerUser } from '@/lib/auth/server-auth'
 
-export const dynamic = 'force-dynamic'
+const getGrammarTopic = cache(async (topicSlug: string) => {
+    return prisma.grammarTopic.findUnique({
+        where: { slug: topicSlug },
+    })
+})
+
+const getGrammarLessonsByTopicId = cache(async (topicId: string) => {
+    return prisma.grammarLesson.findMany({
+        where: { topicId },
+        orderBy: { sortOrder: 'asc' },
+    })
+})
 
 const TYPE_INFO: Record<string, { label: string; emoji: string; description: string }> = {
     E: { label: 'Einführung', emoji: '📖', description: 'Giới thiệu lý thuyết + bài tập cơ bản' },
@@ -13,9 +25,7 @@ const TYPE_INFO: Record<string, { label: string; emoji: string; description: str
 
 export async function generateMetadata({ params }: { params: Promise<{ topicSlug: string }> }) {
     const { topicSlug } = await params
-    const topic = await prisma.grammarTopic.findUnique({
-        where: { slug: topicSlug },
-    })
+    const topic = await getGrammarTopic(topicSlug)
     return {
         title: topic ? `Fuxie 🦊 — ${topic.titleDe ?? topic.title}` : 'Fuxie — Grammatik',
         description: topic?.titleVi ?? 'Deutsche Grammatik',
@@ -27,17 +37,11 @@ export default async function TopicDetailPage({ params }: { params: Promise<{ to
     const serverUser = await getServerUser()
     if (!serverUser) redirect('/login')
 
-    const topic = await prisma.grammarTopic.findUnique({
-        where: { slug: topicSlug },
-    })
+    const topic = await getGrammarTopic(topicSlug)
 
     if (!topic) notFound()
 
-    // Query lessons separately
-    const lessons = await prisma.grammarLesson.findMany({
-        where: { topicId: topic.id },
-        orderBy: { sortOrder: 'asc' },
-    })
+    const lessons = await getGrammarLessonsByTopicId(topic.id)
 
     // Get progress
     const progressRows = await prisma.grammarProgress.findMany({

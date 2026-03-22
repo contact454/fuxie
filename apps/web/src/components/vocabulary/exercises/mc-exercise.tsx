@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useCallback, useEffect } from 'react'
+import { useState, useCallback, useEffect, useRef } from 'react'
 import Image from 'next/image'
 import { playSound } from '@/hooks/use-audio-player'
 import { ExerciseProgress } from './exercise-progress'
@@ -16,7 +16,6 @@ interface McQuestion {
     prompt: string
     promptImage: string | null
     promptAudio: string | null
-    correctAnswer: string
     options: string[]
     wordId: string
     word: string
@@ -53,6 +52,7 @@ export function McExercise({ questions, cefrLevel, themeName, themeSlug, onExit,
     const [selectedAnswer, setSelectedAnswer] = useState<string | null>(null)
     const [isRevealed, setIsRevealed] = useState(false)
     const [answers, setAnswers] = useState<ExerciseAnswer[]>([])
+    const advanceTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null)
 
     const { timer, stopTimer, resetTimer } = useExerciseTimer()
     const { submitResult, isSubmitting, phase, submitAnswers, resetSubmit } = useSubmitExercise({
@@ -71,6 +71,12 @@ export function McExercise({ questions, cefrLevel, themeName, themeSlug, onExit,
         }
     }, [currentIndex, question.type, question.promptAudio])
 
+    useEffect(() => {
+        return () => {
+            if (advanceTimeoutRef.current) clearTimeout(advanceTimeoutRef.current)
+        }
+    }, [])
+
     const handleSelect = useCallback((option: string) => {
         if (isRevealed) return
         setSelectedAnswer(option)
@@ -79,12 +85,15 @@ export function McExercise({ questions, cefrLevel, themeName, themeSlug, onExit,
         const newAnswers: ExerciseAnswer[] = [...answers, {
             questionId: question.id,
             answer: option,
-            correctAnswer: question.correctAnswer,
+            correctAnswer: '',
+            wordId: question.wordId,
+            questionType: question.type,
         }]
         setAnswers(newAnswers)
 
         // Auto-advance after 1.5s
-        setTimeout(() => {
+        if (advanceTimeoutRef.current) clearTimeout(advanceTimeoutRef.current)
+        advanceTimeoutRef.current = setTimeout(() => {
             if (currentIndex < questions.length - 1) {
                 setCurrentIndex(i => i + 1)
                 setSelectedAnswer(null)
@@ -200,17 +209,12 @@ export function McExercise({ questions, cefrLevel, themeName, themeSlug, onExit,
                     <div className="grid grid-cols-2 gap-3">
                         {question.options.map((option, i) => {
                             const isSelected = selectedAnswer === option
-                            const isCorrect = option === question.correctAnswer
                             let btnClass = 'bg-white border-2 border-gray-200 text-gray-800 hover:border-[#004E89] hover:bg-blue-50 hover:shadow-md'
 
                             if (isRevealed) {
-                                if (isCorrect) {
-                                    btnClass = 'bg-emerald-50 border-2 border-emerald-400 text-emerald-800 shadow-emerald-100 shadow-md'
-                                } else if (isSelected && !isCorrect) {
-                                    btnClass = 'bg-red-50 border-2 border-red-400 text-red-800'
-                                } else {
-                                    btnClass = 'bg-gray-50 border-2 border-gray-100 text-gray-400'
-                                }
+                                btnClass = isSelected
+                                    ? 'bg-blue-50 border-2 border-[#004E89] text-[#004E89] shadow-blue-100 shadow-md'
+                                    : 'bg-gray-50 border-2 border-gray-100 text-gray-400'
                             }
 
                             return (
@@ -220,11 +224,8 @@ export function McExercise({ questions, cefrLevel, themeName, themeSlug, onExit,
                                     disabled={isRevealed}
                                     className={`py-4 px-5 rounded-xl font-semibold text-base transition-all text-center ${btnClass}`}
                                 >
-                                    {isRevealed && isCorrect && (
-                                        <span className="text-emerald-500 mr-1">✓</span>
-                                    )}
-                                    {isRevealed && isSelected && !isCorrect && (
-                                        <span className="text-red-500 mr-1">✗</span>
+                                    {isRevealed && isSelected && (
+                                        <span className="text-[#004E89] mr-1">•</span>
                                     )}
                                     <span>{option}</span>
                                 </button>

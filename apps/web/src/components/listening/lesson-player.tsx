@@ -68,6 +68,7 @@ export function LessonPlayer({
 }: LessonPlayerProps) {
     const router = useRouter()
     const audioRef = useRef<HTMLAudioElement>(null)
+    const autoPlayTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null)
     const [phase, setPhase] = useState<Phase>('intro')
     const [isPlaying, setIsPlaying] = useState(false)
     const [currentTime, setCurrentTime] = useState(0)
@@ -109,12 +110,20 @@ export function LessonPlayer({
             audio.removeEventListener('play', onPlay)
             audio.removeEventListener('pause', onPause)
         }
-    }, [])
+    }, [phase, audioUrl])
 
     // Speed change
     useEffect(() => {
         if (audioRef.current) audioRef.current.playbackRate = playbackSpeed
-    }, [playbackSpeed])
+    }, [playbackSpeed, phase])
+
+    useEffect(() => {
+        return () => {
+            if (autoPlayTimeoutRef.current) {
+                clearTimeout(autoPlayTimeoutRef.current)
+            }
+        }
+    }, [])
 
     const togglePlay = useCallback(() => {
         const audio = audioRef.current
@@ -234,7 +243,12 @@ export function LessonPlayer({
                     <button
                         onClick={() => {
                             setPhase('listening')
-                            setTimeout(() => audioRef.current?.play(), 300)
+                            if (autoPlayTimeoutRef.current) {
+                                clearTimeout(autoPlayTimeoutRef.current)
+                            }
+                            autoPlayTimeoutRef.current = setTimeout(() => {
+                                audioRef.current?.play().catch(() => {})
+                            }, 300)
                         }}
                         className="mt-6 w-full py-3.5 rounded-xl bg-gradient-to-r from-[#FF6B35] to-orange-500 text-white font-bold text-base hover:opacity-90 transition-all shadow-lg shadow-orange-200"
                     >

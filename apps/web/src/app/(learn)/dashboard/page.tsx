@@ -1,15 +1,13 @@
-import { Suspense } from 'react'
+import { Suspense, cache } from 'react'
 import { redirect } from 'next/navigation'
 import { prisma } from '@fuxie/database'
 import { getServerUser } from '@/lib/auth/server-auth'
 import { cacheWrap } from '@/lib/cache/redis'
+import { getDashboardUserContext, getTodayActivitySummary } from '@/lib/dashboard/request-data'
 import { DashboardClient } from '@/components/dashboard/dashboard-client'
 import { StatsSkeleton, ContentSkeleton } from '@/components/dashboard/dashboard-skeletons'
 
 import type { DashboardData } from '@/components/dashboard/dashboard-client'
-
-// Force dynamic — dashboard needs real-time data
-export const dynamic = 'force-dynamic'
 
 function getTimeGreeting(): string {
     const hour = new Date().getHours()
@@ -30,16 +28,8 @@ function calculateFuxieLevel(totalXp: number): { level: number; title: string } 
 // ===== SPLIT FETCH FUNCTIONS =====
 
 /** Fast — single user query with relations */
-async function getHeaderData(userId: string) {
-    const user = await prisma.user.findUnique({
-        where: { id: userId },
-        include: {
-            profile: true,
-            streak: true,
-            learningPath: true,
-            settings: true,
-        },
-    })
+const getHeaderData = cache(async (userId: string) => {
+    const user = await getDashboardUserContext(userId)
 
     const profile = user?.profile
     const streak = user?.streak
@@ -78,10 +68,10 @@ async function getHeaderData(userId: string) {
             lastActivityDate: streak?.lastActivityDate?.toISOString() ?? null,
         },
     }
-}
+})
 
 /** Stats — SRS counts + today's activity */
-async function getStatsData(userId: string) {
+const getStatsData = cache(async (userId: string) => {
     const now = new Date()
     const todayStart = new Date(now.getFullYear(), now.getMonth(), now.getDate())
 
@@ -91,10 +81,7 @@ async function getStatsData(userId: string) {
             prisma.srsCard.count({ where: { userId } }),
             prisma.srsReviewLog.count({ where: { userId, reviewedAt: { gte: todayStart } } }),
         ]),
-        prisma.dailyActivity.findFirst({
-            where: { userId, date: { gte: todayStart } },
-            orderBy: { date: 'desc' },
-        }),
+        getTodayActivitySummary(userId),
     ])
 
     const [dueCount, totalCards, reviewedToday] = srsStats
@@ -110,7 +97,7 @@ async function getStatsData(userId: string) {
             wordsLearned: todayActivity?.wordsLearned ?? 0,
         },
     }
-}
+})
 
 /** Content — weekly activity, skills, achievements, listening, grammar */
 async function getContentData(userId: string) {
@@ -132,9 +119,20 @@ async function getContentData(userId: string) {
         `.catch(() => []),
         prisma.userAchievement.findMany({
             where: { userId },
-            include: { achievement: true },
             orderBy: { earnedAt: 'desc' },
             take: 5,
+            select: {
+                earnedAt: true,
+                achievement: {
+                    select: {
+                        id: true,
+                        title: true,
+                        titleDe: true,
+                        iconUrl: true,
+                        category: true,
+                    },
+                },
+            },
         }),
         Promise.all([
             prisma.listeningLesson.count(),
@@ -150,8 +148,10 @@ async function getContentData(userId: string) {
             prisma.grammarTopic.count(),
             prisma.grammarLesson.count(),
             prisma.grammarProgress.count({ where: { userId, completed: true } }),
-            prisma.grammarProgress.findMany({ where: { userId }, select: { stars: true } })
-                .then((rows) => rows.reduce((s, r) => s + (r.stars ?? 0), 0)),
+            prisma.grammarProgress.aggregate({
+                where: { userId },
+                _sum: { stars: true },
+            }).then((result) => result._sum.stars ?? 0),
         ]).catch(() => [0, 0, 0, 0] as const),
     ])
 

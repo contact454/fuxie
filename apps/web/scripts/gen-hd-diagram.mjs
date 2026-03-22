@@ -5,7 +5,7 @@
 import fs from 'fs'
 import { execSync } from 'child_process'
 
-const API_KEY = process.env.GEMINI_API_KEY || 'AIzaSyDJ8tesOkLOjxNItDkLfjuz0LJRkNy63EM'
+const API_KEY = process.env.GEMINI_API_KEY
 const MODEL = 'gemini-2.5-flash-image'
 const OUTPUT = '/Users/huynhngocphuc/Dev-Workspace/Active-Projects/9-Fuxie/apps/web/public/images/grammar/a1/a1_sein_haben_rule_hd.png'
 
@@ -38,6 +38,10 @@ ALL text must be EXACTLY as specified. Do NOT add extra or garbled text.
 Make this HIGH QUALITY and DETAILED.`
 
 async function main() {
+  if (!API_KEY) {
+    throw new Error('GEMINI_API_KEY is required')
+  }
+
   console.log('🎨 Calling Gemini API for HD diagram...')
   console.log(`   Model: ${MODEL}`)
   

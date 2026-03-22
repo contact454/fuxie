@@ -2,6 +2,9 @@
 
 import { useState, useCallback } from 'react'
 import { useRouter } from 'next/navigation'
+import { MascotImage } from '../shared/mascot-image'
+import { motion } from 'framer-motion'
+import { ArrowLeft, RotateCcw, ArrowRight } from 'lucide-react'
 import NachsprechenPlayer from './NachsprechenPlayer'
 import styles from './speaking.module.css'
 import type { NachsprechenSentence, NachsprechenConfig } from './types'
@@ -35,6 +38,13 @@ function getStarsFromScore(score: number): number {
   if (score >= 70) return 2
   if (score >= 50) return 1
   return 0
+}
+
+const getScoreColor = (score: number) => {
+  if (score >= 90) return '#10B981'; // Emerald 500
+  if (score >= 70) return '#F59E0B'; // Amber 500
+  if (score >= 50) return '#F97316'; // Orange 500
+  return '#EF4444'; // Red 500
 }
 
 export default function SpeakingLessonPlayer({
@@ -95,7 +105,7 @@ export default function SpeakingLessonPlayer({
             className={styles.progressBarClose}
             style={{ position: 'absolute', left: 20, top: 20 }}
           >
-            ←
+            <ArrowLeft size={18} />
           </button>
 
           {/* Mascot/Icon */}
@@ -103,10 +113,10 @@ export default function SpeakingLessonPlayer({
             width: 80, height: 80, margin: '32px auto 20px',
             background: 'linear-gradient(135deg, #FF6B35, #FF8F5E)',
             borderRadius: 24, display: 'flex', alignItems: 'center',
-            justifyContent: 'center', fontSize: 36,
+            justifyContent: 'center',
             boxShadow: '0 8px 24px rgba(255, 107, 53, 0.3)',
           }}>
-            🎤
+            <MascotImage pose="skill-sprechen" width={56} height={56} />
           </div>
 
           <h1 style={{ fontSize: 22, fontWeight: 800, color: '#111827', margin: '0 0 6px' }}>
@@ -145,13 +155,15 @@ export default function SpeakingLessonPlayer({
           </div>
 
           {/* Start button */}
-          <button
+          <motion.button
+            whileHover={{ scale: 1.02 }}
+            whileTap={{ scale: 0.98 }}
             className={`${styles.btnPrimary} ${styles.btnGreen}`}
             style={{ width: '100%', fontSize: 18, padding: '18px 24px' }}
             onClick={() => setPhase('practice')}
           >
             🎤 Bắt đầu luyện tập
-          </button>
+          </motion.button>
         </div>
       </div>
     )
@@ -178,40 +190,64 @@ export default function SpeakingLessonPlayer({
         <div style={{ fontSize: 48, marginBottom: 16 }}>🚧</div>
         <p style={{ color: '#6B7280' }}>Dạng bài <strong>{exerciseType}</strong> đang được phát triển...</p>
         <button className={styles.btnOutline} onClick={() => router.push('/speaking')} style={{ marginTop: 20 }}>
-          ← Quay lại
+          <ArrowLeft size={16} /> Quay lại
         </button>
       </div>
     )
   }
 
   // ═══ SUMMARY PHASE ═══
-  const resultMessage = finalScore >= 90
-    ? { emoji: '🎉', main: 'Xuất sắc!', sub: 'Phát âm gần như hoàn hảo!' }
-    : finalScore >= 70
-    ? { emoji: '👍', main: 'Tốt lắm!', sub: 'Chỉ cần cải thiện một chút nữa.' }
-    : finalScore >= 50
-    ? { emoji: '💪', main: 'Khá ổn!', sub: 'Hãy luyện thêm để tiến bộ hơn.' }
-    : { emoji: '🦊', main: 'Cố gắng thêm!', sub: 'Nghe kỹ mẫu và nói chậm hơn nhé.' }
+  const getResultMascot = (score: number) => {
+    if (score >= 90) return 'core-happy-wave'
+    if (score >= 70) return 'state-welcome'
+    if (score >= 50) return 'learn-studying'
+    return 'learn-wrong'
+  }
+  
+  const getResultMessage = (score: number) => {
+    if (score >= 90) return { main: 'Xuất sắc!', sub: 'Phát âm gần như hoàn hảo!' }
+    if (score >= 70) return { main: 'Tốt lắm!', sub: 'Chỉ cần cải thiện một chút nữa.' }
+    if (score >= 50) return { main: 'Khá ổn!', sub: 'Hãy luyện thêm để tiến bộ hơn.' }
+    return { main: 'Cố gắng thêm!', sub: 'Nghe kỹ mẫu và nói chậm hơn nhé.' }
+  }
+
+  const resultInfo = getResultMessage(finalScore)
 
   return (
     <div className={styles.lessonPlayer}>
-      <div style={{ padding: '40px 0 0', textAlign: 'center' }}>
-        {/* Stars animation */}
-        <div style={{ fontSize: 48, marginBottom: 8 }}>{resultMessage.emoji}</div>
+      <motion.div 
+        initial={{ opacity: 0, scale: 0.95 }}
+        animate={{ opacity: 1, scale: 1 }}
+        style={{ padding: '40px 0 0', textAlign: 'center' }}
+      >
+        {/* Mascot animation */}
+        <div style={{ marginBottom: 16, display: 'flex', justifyContent: 'center' }}>
+          <MascotImage pose={getResultMascot(finalScore) as any} size="md" className="drop-shadow-md" />
+        </div>
         <h2 style={{ fontSize: 24, fontWeight: 800, color: '#111827', margin: '0 0 4px' }}>
-          {resultMessage.main}
+          {resultInfo.main}
         </h2>
         <p style={{ fontSize: 14, color: '#6B7280', margin: '0 0 24px' }}>
-          {resultMessage.sub}
+          {resultInfo.sub}
         </p>
 
         {/* Score circle */}
-        <div className={`${styles.scoreCircle} ${
-          finalScore >= 80 ? styles.scoreHigh : finalScore >= 50 ? styles.scoreMedium : styles.scoreLow
-        }`} style={{
-          width: 96, height: 96, fontSize: 28, margin: '0 auto 20px',
-        }}>
-          {finalScore}%
+        <div className={styles.scoreCircleContainer} style={{ width: 120, height: 120, margin: '0 auto 24px' }}>
+          <svg width="120" height="120" viewBox="0 0 120 120" className={styles.scoreSvg}>
+            <circle cx="60" cy="60" r="54" fill="none" strokeWidth="8" className={styles.scoreTrack} />
+            <motion.circle 
+              cx="60" cy="60" r="54" fill="none" strokeWidth="8" 
+              strokeLinecap="round"
+              stroke={getScoreColor(finalScore)}
+              strokeDasharray={2 * Math.PI * 54}
+              strokeDashoffset={2 * Math.PI * 54}
+              animate={{ strokeDashoffset: 2 * Math.PI * 54 * (1 - finalScore / 100) }}
+              transition={{ duration: 1.5, ease: "easeOut", delay: 0.3 }}
+            />
+          </svg>
+          <div className={styles.scoreValue} style={{ color: getScoreColor(finalScore), fontSize: 32 }}>
+            {finalScore}%
+          </div>
         </div>
 
         {/* Stars */}
@@ -220,16 +256,21 @@ export default function SpeakingLessonPlayer({
         </div>
 
         {/* XP earned */}
-        <div style={{
-          display: 'inline-flex', alignItems: 'center', gap: 6,
-          padding: '8px 16px', background: '#FFFBEB', borderRadius: 12,
-          border: '1px solid #FDE68A', marginBottom: 32,
-        }}>
+        <motion.div 
+          initial={{ y: 10, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ delay: 0.8 }}
+          style={{
+            display: 'inline-flex', alignItems: 'center', gap: 6,
+            padding: '8px 16px', background: '#FFFBEB', borderRadius: 12,
+            border: '1px solid #FDE68A', marginBottom: 32,
+          }}
+        >
           <span style={{ fontSize: 16 }}>✨</span>
           <span style={{ fontSize: 14, fontWeight: 700, color: '#92400E' }}>
             +{stars * 10} XP {isSaving ? '(đang lưu...)' : ''}
           </span>
-        </div>
+        </motion.div>
 
         {/* Action buttons */}
         <div className={styles.btnRow}>
@@ -237,7 +278,7 @@ export default function SpeakingLessonPlayer({
             className={styles.btnOutline}
             onClick={() => router.push('/speaking')}
           >
-            ← Quay lại
+            <ArrowLeft size={16} /> Quay lại
           </button>
           <button
             className={`${styles.btnPrimary} ${styles.btnGreen}`}
@@ -247,10 +288,10 @@ export default function SpeakingLessonPlayer({
               setStars(0)
             }}
           >
-            🔄 Luyện lại
+            <RotateCcw size={16} /> Luyện lại
           </button>
         </div>
-      </div>
+      </motion.div>
     </div>
   )
 }

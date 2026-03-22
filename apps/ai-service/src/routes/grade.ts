@@ -154,43 +154,39 @@ Antworte NUR als JSON (kein Markdown):
 
 // ─── POST /speaking — Pronunciation Feedback ────────
 gradeRoutes.post('/speaking', async (c) => {
-    let body: {
-        cefrLevel: string
-        transcript: string
-        expectedText?: string
-        exerciseType?: string
-    }
-
     try {
-        body = await c.req.json()
-    } catch {
-        return c.json({ success: false, error: { code: 'INVALID_BODY', message: 'Invalid JSON body' } }, 400)
-    }
+        const body = await c.req.parseBody()
+        const audioFile = body['audio']
+        const cefrLevel = (body['cefrLevel'] as string) || 'A1'
+        const expectedText = body['expectedText'] as string | undefined
+        const exerciseType = (body['exerciseType'] as string) || 'free-speech'
 
-    const { cefrLevel, transcript, expectedText, exerciseType = 'free-speech' } = body
+        if (!audioFile || !(audioFile instanceof File)) {
+            return c.json({ success: false, error: { code: 'MISSING_AUDIO', message: 'audio file is required' } }, 400)
+        }
 
-    if (!transcript?.trim()) {
-        return c.json({ success: false, error: { code: 'MISSING_TRANSCRIPT', message: 'transcript is required' } }, 400)
-    }
-
-    try {
         const model = getModel('gemini-3-flash-preview')
-        console.log(`[Grade/Speaking] Level: ${cefrLevel}, Type: ${exerciseType}`)
+        console.log(`[Grade/Speaking] Level: ${cefrLevel}, Type: ${exerciseType}, Audio size: ${audioFile.size} bytes`)
 
-        const prompt = `Du bist ein DaF-Aussprachetrainer. Analysiere die Transkription eines ${cefrLevel}-Lerners.
+        const arrayBuffer = await audioFile.arrayBuffer()
+        const base64Data = Buffer.from(arrayBuffer).toString('base64')
+
+        const prompt = `Du bist ein DaF-Aussprachetrainer. Höre dir die Audioaufnahme eines vietnamesischen ${cefrLevel}-Lerners an.
 
 ## Kontext
 - Niveau: ${cefrLevel}
 - Übungstyp: ${exerciseType}
-${expectedText ? `- Erwarteter Text: "${expectedText}"` : ''}
+${expectedText ? `- Erwarteter Text (Was der Lerner sagen sollte): "${expectedText}"` : ''}
 
-## Transkription (vom STT)
-"""
-${transcript}
-"""
+## Aufgabe
+1. Transkribiere genau, was der Lerner gesagt hat (erkenne Aussprachefehler).
+2. Vergleiche es mit dem erwarteten Text (falls vorhanden).
+3. Bewerte die Aussprache und gib konstruktives Feedback auf Deutsch und Vietnamesisch.
+4. Identifiziere MAXIMAL 3 spezifische Wörter mit schlechter Aussprache und gib phonetische Tipps.
 
 Antworte NUR als JSON:
 {
+  "transcript": "Das erkannte, gesprochene Wort/Satz",
   "score": 0-100,
   "fluency": 0-100,
   "accuracy": 0-100,
@@ -198,12 +194,20 @@ Antworte NUR als JSON:
   "feedback": "Gesamtbewertung auf Deutsch",
   "feedbackVi": "Đánh giá tổng thể bằng tiếng Việt",
   "issues": [
-    { "word": "...", "issue": "Aussprachehinweis auf Deutsch", "issueVi": "Gợi ý tiếng Việt", "tip": "Phonetischer Tipp" }
+    { "word": "falsch ausgesprochenes Wort", "issue": "Aussprachehinweis auf Deutsch", "issueVi": "Gợi ý tiếng Việt", "tip": "Phonetischer Tipp" }
   ],
   "encouragement": "Ermutigende Nachricht 🦊"
 }`
 
-        const result = await model.generateContent(prompt)
+        const result = await model.generateContent([
+            prompt,
+            {
+                inlineData: {
+                    data: base64Data,
+                    mimeType: audioFile.type || 'audio/webm',
+                },
+            },
+        ])
         const responseText = result.response.text()
 
         const cleaned = responseText.replace(/```json\s*/g, '').replace(/```\s*/g, '').trim()
@@ -212,6 +216,7 @@ Antworte NUR als JSON:
         return c.json({
             success: true,
             data: {
+                transcript: parsed.transcript || '',
                 score: parsed.score ?? 0,
                 fluency: parsed.fluency ?? 0,
                 accuracy: parsed.accuracy ?? 0,

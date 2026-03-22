@@ -1,6 +1,7 @@
-'use client'
-
 import { useState, useRef, useCallback, useEffect } from 'react'
+import { motion, AnimatePresence } from 'framer-motion'
+import { Mic, Square, Loader2, Check, AlertCircle, X, HelpCircle, Volume2, ArrowRight, RotateCcw } from 'lucide-react'
+import { MascotImage } from '../shared/mascot-image'
 import styles from './speaking.module.css'
 import type { NachsprechenSentence, NachsprechenConfig, WordResult, EvaluationResult, RecordingState } from './types'
 
@@ -285,22 +286,35 @@ export default function NachsprechenPlayer({ sentences, config, lessonTitle, les
     const bufferLength = analyser.frequencyBinCount
     const dataArray = new Uint8Array(bufferLength)
 
-    const draw = () => {
+      const draw = () => {
       animFrameRef.current = requestAnimationFrame(draw)
       analyser.getByteFrequencyData(dataArray)
 
+      // Clear with slight opacity for a tracing effect (optional) or fully clear
       ctx.clearRect(0, 0, canvas.width, canvas.height)
 
       const barWidth = (canvas.width / bufferLength) * 2.5
       let x = 0
-      const gradient = ctx.createLinearGradient(0, canvas.height, 0, 0)
+      
+      const gradient = ctx.createLinearGradient(0, 0, canvas.width, 0)
       gradient.addColorStop(0, '#3B82F6')
+      gradient.addColorStop(0.5, '#6366f1')
       gradient.addColorStop(1, '#8B5CF6')
-      ctx.fillStyle = gradient
+      
+      ctx.strokeStyle = gradient
+      ctx.lineCap = 'round'
+      ctx.lineWidth = Math.max(2, barWidth - 2)
 
       for (let i = 0; i < bufferLength; i++) {
-        const barHeight = (dataArray[i]! / 255) * canvas.height * 0.8
-        ctx.fillRect(x, canvas.height - barHeight, barWidth - 1, barHeight)
+        // Boost low signals slightly for visual flair
+        const v = dataArray[i]! / 255.0
+        const barHeight = Math.max(4, v * v * canvas.height * 0.9)
+        const y = (canvas.height - barHeight) / 2
+        
+        ctx.beginPath()
+        ctx.moveTo(x + barWidth / 2, y)
+        ctx.lineTo(x + barWidth / 2, y + barHeight)
+        ctx.stroke()
         x += barWidth
       }
     }
@@ -326,10 +340,11 @@ export default function NachsprechenPlayer({ sentences, config, lessonTitle, les
     setResult(null)
   }
 
-  const getScoreStyle = (score: number) => {
-    if (score >= 80) return styles.scoreHigh
-    if (score >= 50) return styles.scoreMedium
-    return styles.scoreLow
+  const getScoreColor = (score: number) => {
+    if (score >= 90) return '#10B981'; // Emerald 500
+    if (score >= 70) return '#F59E0B'; // Amber 500
+    if (score >= 50) return '#F97316'; // Orange 500
+    return '#EF4444'; // Red 500
   }
 
   const getChipStyle = (status: string) => {
@@ -344,12 +359,19 @@ export default function NachsprechenPlayer({ sentences, config, lessonTitle, les
 
   const getChipIcon = (status: string) => {
     switch (status) {
-      case 'correct': return '✓'
-      case 'warning': return '⚠'
-      case 'error': return '✗'
-      case 'missing': return '?'
-      default: return '✓'
+      case 'correct': return <Check size={14} />
+      case 'warning': return <AlertCircle size={14} />
+      case 'error': return <X size={14} />
+      case 'missing': return <HelpCircle size={14} />
+      default: return <Check size={14} />
     }
+  }
+
+  const getMascotPose = (score: number) => {
+    if (score >= 90) return 'core-celebrate'
+    if (score >= 70) return 'learn-encouragement'
+    if (score >= 50) return 'learn-studying'
+    return 'learn-wrong'
   }
 
   const getResultMessage = (score: number) => {
@@ -388,7 +410,7 @@ export default function NachsprechenPlayer({ sentences, config, lessonTitle, les
           onClick={playModel}
           disabled={state === 'recording' || state === 'processing'}
         >
-          🔊
+          <Volume2 size={24} />
         </button>
         <div className={styles.sentenceTextDe}>{sentence.textDe}</div>
         {config.showTranslation && (
@@ -406,36 +428,76 @@ export default function NachsprechenPlayer({ sentences, config, lessonTitle, les
 
       {/* Waveform */}
       <div className={styles.waveformContainer}>
-        {state === 'recording' ? (
-          <canvas ref={canvasRef} className={styles.waveformCanvas} width={560} height={80} />
-        ) : (
-          <span className={styles.waveformPlaceholder}>
-            {state === 'idle' ? '🎵 Nhấn nút mic để bắt đầu' : state === 'processing' ? '⏳ Đang phân tích...' : ''}
-          </span>
-        )}
+        <AnimatePresence mode="wait">
+          {state === 'recording' ? (
+            <motion.div
+              key="recording"
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.95 }}
+            >
+              <canvas ref={canvasRef} className={styles.waveformCanvas} width={560} height={80} />
+            </motion.div>
+          ) : state === 'processing' ? (
+            <motion.div
+              key="processing"
+              className={styles.waveformProcessing}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+            >
+              <Loader2 className={styles.spinnerIcon} />
+              <motion.span
+                animate={{ opacity: [0.5, 1, 0.5] }}
+                transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
+              >
+                AI đang phân tích giọng đọc của bạn...
+              </motion.span>
+            </motion.div>
+          ) : (
+            <motion.span
+              key="idle"
+              className={styles.waveformPlaceholder}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+            >
+              <Mic size={18} style={{ marginRight: 8 }} /> Nhấn nút mic để bắt đầu
+            </motion.span>
+          )}
+        </AnimatePresence>
       </div>
 
       {/* Record Button */}
       <div className={styles.recordBtnWrap}>
         {state === 'recording' ? (
           <>
-            <button className={`${styles.recordBtn} ${styles.recordBtnRecording}`} onClick={stopRecording}>
-              ⏹
-            </button>
+            <motion.button 
+              whileTap={{ scale: 0.9 }}
+              className={`${styles.recordBtn} ${styles.recordBtnRecording}`} 
+              onClick={stopRecording}
+            >
+              <Square fill="currentColor" size={24} />
+            </motion.button>
             <span className={styles.recordTimer}>{recordingTime}s / {config.maxRecordingSec}s</span>
           </>
         ) : state === 'processing' ? (
           <>
             <button className={`${styles.recordBtn} ${styles.recordBtnDisabled}`} disabled>
-              ⏳
+              <Loader2 className={styles.spinnerIcon} size={28} />
             </button>
             <span className={styles.recordHint}>Đang phân tích...</span>
           </>
         ) : state !== 'result' ? (
           <>
-            <button className={`${styles.recordBtn} ${styles.recordBtnIdle}`} onClick={startRecording}>
-              🎙️
-            </button>
+            <motion.button 
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className={`${styles.recordBtn} ${styles.recordBtnIdle}`} 
+              onClick={startRecording}
+            >
+              <Mic size={28} />
+            </motion.button>
             <span className={styles.recordHint}>Nhấn để thu âm</span>
           </>
         ) : null}
@@ -443,12 +505,34 @@ export default function NachsprechenPlayer({ sentences, config, lessonTitle, les
 
       {/* Result Panel */}
       {state === 'result' && result && (
-        <div className={styles.resultPanel}>
+        <motion.div 
+          className={styles.resultPanel}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ type: 'spring', damping: 20, stiffness: 300 }}
+        >
           <div className={styles.resultHeader}>
-            <div className={`${styles.scoreCircle} ${getScoreStyle(result.accuracy)}`}>
-              {result.accuracy}%
+            <div className={styles.mascotAndScore}>
+              <MascotImage pose={getMascotPose(result.accuracy)} size="sm" />
+              <div className={styles.scoreCircleContainer}>
+                <svg width="72" height="72" viewBox="0 0 72 72" className={styles.scoreSvg}>
+                  <circle cx="36" cy="36" r="32" fill="none" strokeWidth="6" className={styles.scoreTrack} />
+                  <motion.circle 
+                    cx="36" cy="36" r="32" fill="none" strokeWidth="6" 
+                    strokeLinecap="round"
+                    stroke={getScoreColor(result.accuracy)}
+                    strokeDasharray={2 * Math.PI * 32}
+                    strokeDashoffset={2 * Math.PI * 32}
+                    animate={{ strokeDashoffset: 2 * Math.PI * 32 * (1 - result.accuracy / 100) }}
+                    transition={{ duration: 1.5, ease: "easeOut", delay: 0.2 }}
+                  />
+                </svg>
+                <div className={styles.scoreValue} style={{ color: getScoreColor(result.accuracy) }}>
+                  {result.accuracy}%
+                </div>
+              </div>
             </div>
-            <div>
+            <div className={styles.resultTextCol}>
               <div className={styles.resultMessage}>{getResultMessage(result.accuracy).main}</div>
               <div className={styles.resultSubMessage}>{getResultMessage(result.accuracy).sub}</div>
             </div>
@@ -457,15 +541,17 @@ export default function NachsprechenPlayer({ sentences, config, lessonTitle, les
           {/* Word Chips */}
           <div className={styles.wordChips}>
             {result.words.map((w, i) => (
-              <span
+              <button
                 key={i}
+                type="button"
                 className={`${styles.wordChip} ${getChipStyle(w.status)}`}
                 style={{ animationDelay: `${i * 0.05}s` }}
-                title={w.tip || ''}
+                title={w.tip || 'Nhấn để nghe phát âm'}
+                onClick={() => playWithBrowserTTS(w.word)}
               >
                 {w.word}
                 <span className={styles.chipIcon}>{getChipIcon(w.status)}</span>
-              </span>
+              </button>
             ))}
           </div>
 
@@ -477,7 +563,7 @@ export default function NachsprechenPlayer({ sentences, config, lessonTitle, les
               ))}
             </div>
           )}
-        </div>
+        </motion.div>
       )}
 
       {/* Footer */}
@@ -486,14 +572,18 @@ export default function NachsprechenPlayer({ sentences, config, lessonTitle, les
           <div className={styles.btnRow}>
             {attempts < config.attemptsAllowed && result && result.accuracy < config.minAccuracyToPass && (
               <button className={styles.btnOutline} onClick={handleRetry}>
-                🔄 Thử lại
+                <RotateCcw size={16} /> Thử lại
               </button>
             )}
             <button
               className={`${styles.btnPrimary} ${styles.btnGreen}`}
               onClick={handleNext}
             >
-              {currentIdx < sentences.length - 1 ? 'Tiếp theo →' : 'Hoàn thành ✓'}
+              {currentIdx < sentences.length - 1 ? (
+                <>Tiếp theo <ArrowRight size={16} /></>
+              ) : (
+                <>Hoàn thành <Check size={16} /></>
+              )}
             </button>
           </div>
         </div>

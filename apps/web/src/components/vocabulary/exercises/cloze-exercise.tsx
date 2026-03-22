@@ -12,7 +12,6 @@ interface ClozeQuestion {
     type: string
     sentence: string         // "Lisa _____ heute Nachmittag in den Supermarkt"
     translation: string | null // Vietnamese translation
-    correctAnswer: string    // "geht"
     wordType: string         // VERB, NOMEN, etc.
     wordId: string
 }
@@ -56,9 +55,10 @@ export function ClozeExercise({ questions, cefrLevel, themeName, themeSlug, onEx
     const [currentIndex, setCurrentIndex] = useState(0)
     const [userInput, setUserInput] = useState('')
     const [isRevealed, setIsRevealed] = useState(false)
-    const [isCorrect, setIsCorrect] = useState(false)
     const [answers, setAnswers] = useState<ExerciseAnswer[]>([])
     const inputRef = useRef<HTMLInputElement>(null)
+    const focusTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null)
+    const advanceTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null)
 
     const { timer, stopTimer, resetTimer } = useExerciseTimer()
     const { submitResult, phase, submitAnswers, resetSubmit } = useSubmitExercise({
@@ -72,30 +72,38 @@ export function ClozeExercise({ questions, cefrLevel, themeName, themeSlug, onEx
 
     // Focus input on new question
     useEffect(() => {
-        setTimeout(() => inputRef.current?.focus(), 100)
+        if (focusTimeoutRef.current) clearTimeout(focusTimeoutRef.current)
+        focusTimeoutRef.current = setTimeout(() => inputRef.current?.focus(), 100)
     }, [currentIndex])
+
+    useEffect(() => {
+        return () => {
+            if (focusTimeoutRef.current) clearTimeout(focusTimeoutRef.current)
+            if (advanceTimeoutRef.current) clearTimeout(advanceTimeoutRef.current)
+        }
+    }, [])
 
     const checkAnswer = useCallback(() => {
         if (isRevealed || !userInput.trim()) return
 
-        const correct = userInput.trim().toLowerCase() === question.correctAnswer.toLowerCase()
-        setIsCorrect(correct)
         setIsRevealed(true)
 
         const newAnswers = [...answers, {
             questionId: question.id,
             answer: userInput.trim(),
-            correctAnswer: question.correctAnswer,
+            correctAnswer: '',
+            wordId: question.wordId,
+            questionType: question.type,
         }]
         setAnswers(newAnswers)
 
         // Auto advance
-        setTimeout(() => {
+        if (advanceTimeoutRef.current) clearTimeout(advanceTimeoutRef.current)
+        advanceTimeoutRef.current = setTimeout(() => {
             if (currentIndex < questions.length - 1) {
                 setCurrentIndex(i => i + 1)
                 setUserInput('')
                 setIsRevealed(false)
-                setIsCorrect(false)
             } else {
                 stopTimer()
                 submitAnswers(newAnswers, timer)
@@ -126,7 +134,7 @@ export function ClozeExercise({ questions, cefrLevel, themeName, themeSlug, onEx
                 timeTaken={timer}
                 results={submitResult.results}
                 onRetry={() => {
-                    setCurrentIndex(0); setUserInput(''); setIsRevealed(false); setIsCorrect(false)
+                    setCurrentIndex(0); setUserInput(''); setIsRevealed(false)
                     setAnswers([])
                     resetSubmit()
                     resetTimer()
@@ -147,13 +155,11 @@ export function ClozeExercise({ questions, cefrLevel, themeName, themeSlug, onEx
                         {i < parts.length - 1 && (
                             <span className={`inline-block mx-1 px-2 py-0.5 rounded-lg border-b-2 font-bold min-w-[80px] text-center ${
                                 isRevealed
-                                    ? isCorrect
-                                        ? 'bg-emerald-100 border-emerald-400 text-emerald-700'
-                                        : 'bg-red-100 border-red-400 text-red-700'
+                                    ? 'bg-blue-100 border-[#004E89] text-[#004E89]'
                                     : 'bg-blue-100 border-[#004E89] text-[#004E89]'
                             }`}>
                                 {isRevealed
-                                    ? isCorrect ? userInput : question.correctAnswer
+                                    ? userInput
                                     : userInput || '___'
                                 }
                             </span>
@@ -201,16 +207,9 @@ export function ClozeExercise({ questions, cefrLevel, themeName, themeSlug, onEx
                     </div>
 
                     {/* Feedback */}
-                    {isRevealed && !isCorrect && (
-                        <div className="mb-4 p-3 rounded-xl bg-red-50 border border-red-100 text-center">
-                            <span className="text-sm text-red-600">
-                                Deine Antwort: <span className="line-through">{userInput}</span> → Richtig: <strong>{question.correctAnswer}</strong>
-                            </span>
-                        </div>
-                    )}
-                    {isRevealed && isCorrect && (
-                        <div className="mb-4 p-3 rounded-xl bg-emerald-50 border border-emerald-100 text-center">
-                            <span className="text-sm text-emerald-600 font-semibold">✅ Richtig!</span>
+                    {isRevealed && (
+                        <div className="mb-4 p-3 rounded-xl bg-blue-50 border border-blue-100 text-center">
+                            <span className="text-sm text-[#004E89] font-semibold">Antwort gespeichert</span>
                         </div>
                     )}
 
@@ -229,9 +228,7 @@ export function ClozeExercise({ questions, cefrLevel, themeName, themeSlug, onEx
                             spellCheck={false}
                             className={`w-full py-4 px-6 text-lg font-semibold rounded-2xl border-2 outline-none transition-all ${
                                 isRevealed
-                                    ? isCorrect
-                                        ? 'border-emerald-400 bg-emerald-50'
-                                        : 'border-red-400 bg-red-50'
+                                    ? 'border-[#004E89] bg-blue-50'
                                     : 'border-gray-200 bg-white focus:border-[#004E89] focus:shadow-lg focus:shadow-blue-100'
                             }`}
                         />
