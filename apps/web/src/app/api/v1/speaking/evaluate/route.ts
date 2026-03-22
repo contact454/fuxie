@@ -143,12 +143,18 @@ Antworte NUR als JSON (kein Markdown):
   ]
 }`
 
+      // Force audio/wav MIME type — browser converts WebM→WAV before upload
+      const detectedMime = audioFile.name?.endsWith('.wav') ? 'audio/wav' 
+        : audioFile.type?.includes('wav') ? 'audio/wav'
+        : audioFile.type || 'audio/wav'
+      console.log(`[Evaluate] Using MIME: ${detectedMime} (original: ${audioFile.type}, name: ${audioFile.name})`)
+
       const result = await model.generateContent([
         prompt,
         {
           inlineData: {
             data: base64Data,
-            mimeType: audioFile.type || 'audio/webm',
+            mimeType: detectedMime,
           },
         },
       ])
@@ -176,14 +182,21 @@ Antworte NUR als JSON (kein Markdown):
       console.error('[Evaluate/Gemini] Error:', err?.message || err)
     }
 
-    // Fallback if Gemini failed — clearly indicate it's NOT real grading
-    if (!usedAI || !transcript) {
-      console.warn('[Evaluate] Using fallback — Gemini did not return a transcript')
-      transcript = '(Không nhận diện được giọng nói)'
+    // Handle different outcomes
+    if (!usedAI) {
+      // Gemini call completely failed (error)
+      console.warn('[Evaluate] Gemini call failed — using error fallback')
+      transcript = ''
       aiScore = 0
       overallTips = [
-        '⚠️ Hệ thống AI chưa nhận diện được giọng nói của bạn.',
-        '💡 Hãy nói rõ ràng hơn, gần microphone hơn và thử lại.',
+        '⚠️ Hệ thống AI gặp lỗi. Vui lòng thử lại sau.',
+      ]
+    } else if (!transcript && aiScore === 0) {
+      // Gemini worked but detected no speech — valid AI response
+      console.log('[Evaluate] Gemini detected no recognizable speech')
+      overallTips = overallTips.length > 0 ? overallTips : [
+        '🎤 AI không nhận diện được lời nói trong bản ghi âm.',
+        '💡 Hãy nói to, rõ ràng hơn và gần microphone hơn.',
       ]
     }
 
