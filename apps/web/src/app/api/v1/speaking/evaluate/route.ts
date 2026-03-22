@@ -89,7 +89,7 @@ async function callGeminiWithAudio(
     }],
     generationConfig: {
       temperature: 0.1,
-      maxOutputTokens: 1024,
+      maxOutputTokens: 8192,
     }
   }
 
@@ -116,11 +116,47 @@ async function callGeminiWithAudio(
     throw new Error(`NO_TEXT: ${resultStr}`)
   }
 
-  console.log(`[Gemini] Raw response: ${text.substring(0, 300)}`)
+  console.log(`[Gemini] Raw response: ${text.substring(0, 500)}`)
 
-  // Parse JSON from response
-  const cleaned = text.replace(/```json\s*/g, '').replace(/```\s*/g, '').trim()
-  return JSON.parse(cleaned)
+  // Robust JSON parsing — handle markdown fences, truncated strings, etc.
+  let cleaned = text
+  // Remove markdown code fences
+  cleaned = cleaned.replace(/```json\s*/gi, '').replace(/```\s*/gi, '').trim()
+  
+  try {
+    return JSON.parse(cleaned)
+  } catch (firstErr) {
+    console.warn('[Gemini] First JSON.parse failed, trying regex extraction...')
+    // Try to extract JSON object with regex
+    const jsonMatch = cleaned.match(/\{[\s\S]*\}/)
+    if (jsonMatch) {
+      try {
+        return JSON.parse(jsonMatch[0])
+      } catch (secondErr) {
+        // Try to fix common issues: truncated strings, trailing commas
+        let fixedJson = jsonMatch[0]
+        // Remove trailing commas before } or ]
+        fixedJson = fixedJson.replace(/,\s*([}\]])/g, '$1')
+        // If truncated, try to close it
+        const openBraces = (fixedJson.match(/\{/g) || []).length
+        const closeBraces = (fixedJson.match(/\}/g) || []).length
+        if (openBraces > closeBraces) {
+          // Truncated — extract what we can
+          const transcriptMatch = fixedJson.match(/"transcript"\s*:\s*"([^"]*)"/)
+          const scoreMatch = fixedJson.match(/"score"\s*:\s*(\d+)/)
+          const feedbackMatch = fixedJson.match(/"feedbackVi"\s*:\s*"([^"]*)"/)
+          return {
+            transcript: transcriptMatch?.[1] || '',
+            score: scoreMatch ? parseInt(scoreMatch[1]) : 0,
+            feedbackVi: feedbackMatch?.[1] || '',
+            issues: []
+          }
+        }
+        throw new Error(`JSON_PARSE: ${String(secondErr).substring(0, 100)}`)
+      }
+    }
+    throw new Error(`NO_JSON_FOUND: ${cleaned.substring(0, 150)}`)
+  }
 }
 
 export async function POST(request: NextRequest) {
@@ -161,35 +197,18 @@ export async function POST(request: NextRequest) {
         : audioFile.type?.includes('wav') ? 'audio/wav'
         : 'audio/wav' // Default to WAV since browser converts
 
-      const prompt = `Du bist ein strenger DaF-Aussprachetrainer. Höre dir die Audioaufnahme eines vietnamesischen ${level}-Lerners an.
+      const prompt = `Du bist ein DaF-Aussprachetrainer. Analysiere die Audioaufnahme.
 
-## Kontext
-- Niveau: ${level}
-- Übungstyp: ${exerciseType}
-- Erwarteter Text: "${referenceText}"
+Erwarteter Text: "${referenceText}"
+Niveau: ${level}
 
-## WICHTIGE REGELN
-- Transkribiere EXAKT was du hörst, NICHT den erwarteten Text!
-- Wenn der Lerner etwas anderes sagt als erwartet, schreibe was er TATSÄCHLICH gesagt hat.
-- Wenn du nur Rauschen, Stille oder unverständliche Laute hörst, setze transcript auf "" (leer) und score auf 0.
-- Sei STRENG bei der Bewertung. Nur perfekte Aussprache bekommt 90+.
+REGELN:
+- Transkribiere EXAKT was du hörst
+- Bei Stille/Rauschen: transcript="", score=0
+- Bewertung: 90+=perfekt, 70-89=gut, 50-69=ok, 30-49=schwach, 0-29=falsch
 
-## Bewertungsskala
-- 90-100: Nahezu perfekt, muttersprachlich
-- 70-89: Gut, verständlich mit kleinen Fehlern
-- 50-69: Befriedigend, einige Aussprachefehler
-- 30-49: Schwach, schwer verständlich
-- 0-29: Unverständlich oder falscher Text
-
-Antworte NUR als JSON (kein Markdown):
-{
-  "transcript": "Was der Lerner TATSÄCHLICH gesagt hat (oder leer wenn nicht erkennbar)",
-  "score": 0-100,
-  "feedbackVi": "Đánh giá bằng tiếng Việt",
-  "issues": [
-    { "word": "Wort", "issueVi": "Vấn đề phát âm", "tip": "Tipp" }
-  ]
-}`
+Antworte NUR als valides JSON ohne Markdown:
+{"transcript":"...","score":0,"feedbackVi":"...","issues":[{"word":"...","issueVi":"..."}]}`
 
       const parsed = await callGeminiWithAudio(base64Data, mimeType, prompt)
 
