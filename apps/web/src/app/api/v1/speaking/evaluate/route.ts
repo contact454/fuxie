@@ -2,18 +2,9 @@ import { NextRequest, NextResponse } from 'next/server'
 import { z } from 'zod'
 import { handleApiError } from '@/lib/api/error-handler'
 import { withAuth } from '@/lib/auth/middleware'
-import { GoogleGenerativeAI } from '@google/generative-ai'
 
-// ─── Gemini Client (lazy init) ───────────────────────
-let genAI: GoogleGenerativeAI | null = null
-function getGenAI() {
-  if (!genAI) {
-    const key = process.env.GEMINI_API_KEY || process.env.GOOGLE_AI_API_KEY || ''
-    if (!key) throw new Error('GEMINI_API_KEY not set')
-    genAI = new GoogleGenerativeAI(key)
-  }
-  return genAI
-}
+// Increase Vercel function timeout for audio processing
+export const maxDuration = 30
 
 // ─── Word alignment (Levenshtein) ────────────────────
 function alignWords(refWords: string[], userWords: string[]): Array<{
@@ -43,7 +34,7 @@ function alignWords(refWords: string[], userWords: string[]): Array<{
           userIdx++
         } else {
           results.push({ word: refWord, status: 'error', score: 0 })
-          userIdx++ // consume the wrong word
+          userIdx++
         }
       }
     } else {
@@ -76,6 +67,67 @@ const speakingSchema = z.object({
   exerciseType: z.string().default('nachsprechen'),
 })
 
+// ─── Call Gemini REST API directly (more reliable than SDK for audio) ───
+async function callGeminiWithAudio(
+  base64Audio: string,
+  mimeType: string,
+  prompt: string
+): Promise<{ transcript: string; score: number; feedbackVi: string; issues: any[] } | null> {
+  const apiKey = process.env.GEMINI_API_KEY || process.env.GOOGLE_AI_API_KEY
+  if (!apiKey) {
+    console.error('[Gemini] No API key found')
+    return null
+  }
+
+  const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${apiKey}`
+
+  const body = {
+    contents: [{
+      parts: [
+        { text: prompt },
+        { inline_data: { mime_type: mimeType, data: base64Audio } }
+      ]
+    }],
+    generationConfig: {
+      temperature: 0.1,
+      maxOutputTokens: 1024,
+    }
+  }
+
+  console.log(`[Gemini] Calling REST API, audio: ${base64Audio.length} b64 chars, mime: ${mimeType}`)
+
+  const response = await fetch(url, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(body),
+  })
+
+  if (!response.ok) {
+    const errorText = await response.text()
+    console.error(`[Gemini] HTTP ${response.status}: ${errorText.substring(0, 500)}`)
+    return null
+  }
+
+  const result = await response.json()
+  
+  const text = result?.candidates?.[0]?.content?.parts?.[0]?.text
+  if (!text) {
+    console.error('[Gemini] No text in response:', JSON.stringify(result).substring(0, 300))
+    return null
+  }
+
+  console.log(`[Gemini] Raw response: ${text.substring(0, 300)}`)
+
+  // Parse JSON from response
+  const cleaned = text.replace(/```json\s*/g, '').replace(/```\s*/g, '').trim()
+  try {
+    return JSON.parse(cleaned)
+  } catch (err) {
+    console.error('[Gemini] JSON parse error:', err, 'text:', cleaned.substring(0, 200))
+    return null
+  }
+}
+
 export async function POST(request: NextRequest) {
   try {
     await withAuth(request)
@@ -96,21 +148,23 @@ export async function POST(request: NextRequest) {
       exerciseType: formData.get('exerciseType') || 'nachsprechen',
     })
 
-    console.log(`[Evaluate] Level: ${level}, Audio: ${audioFile.size} bytes, Type: ${audioFile.type}, Ref: "${referenceText}"`)
+    console.log(`[Evaluate] Level: ${level}, Audio: ${audioFile.size}b, Type: ${audioFile.type}, Name: ${audioFile.name}, Ref: "${referenceText}"`)
 
     // === STEP 1: Call Gemini for pronunciation evaluation ===
     let transcript = ''
     let aiScore = 0
     let overallTips: string[] = []
     let usedAI = false
+    let debugError = ''
 
     try {
-      const model = getGenAI().getGenerativeModel({ model: 'gemini-2.5-flash' })
-
       const arrayBuffer = await audioFile.arrayBuffer()
       const base64Data = Buffer.from(arrayBuffer).toString('base64')
 
-      console.log(`[Evaluate] Calling Gemini with ${base64Data.length} base64 chars...`)
+      // Determine MIME type — browser now sends WAV
+      const mimeType = audioFile.name?.endsWith('.wav') ? 'audio/wav'
+        : audioFile.type?.includes('wav') ? 'audio/wav'
+        : 'audio/wav' // Default to WAV since browser converts
 
       const prompt = `Du bist ein strenger DaF-Aussprachetrainer. Höre dir die Audioaufnahme eines vietnamesischen ${level}-Lerners an.
 
@@ -124,7 +178,6 @@ export async function POST(request: NextRequest) {
 - Wenn der Lerner etwas anderes sagt als erwartet, schreibe was er TATSÄCHLICH gesagt hat.
 - Wenn du nur Rauschen, Stille oder unverständliche Laute hörst, setze transcript auf "" (leer) und score auf 0.
 - Sei STRENG bei der Bewertung. Nur perfekte Aussprache bekommt 90+.
-- Typische Fehler von Vietnamesen: "r" als "z", "ch" falsch, "ü/ö/ä" schwierig.
 
 ## Bewertungsskala
 - 90-100: Nahezu perfekt, muttersprachlich
@@ -143,56 +196,40 @@ Antworte NUR als JSON (kein Markdown):
   ]
 }`
 
-      // Force audio/wav MIME type — browser converts WebM→WAV before upload
-      const detectedMime = audioFile.name?.endsWith('.wav') ? 'audio/wav' 
-        : audioFile.type?.includes('wav') ? 'audio/wav'
-        : audioFile.type || 'audio/wav'
-      console.log(`[Evaluate] Using MIME: ${detectedMime} (original: ${audioFile.type}, name: ${audioFile.name})`)
+      const parsed = await callGeminiWithAudio(base64Data, mimeType, prompt)
 
-      const result = await model.generateContent([
-        prompt,
-        {
-          inlineData: {
-            data: base64Data,
-            mimeType: detectedMime,
-          },
-        },
-      ])
-      const responseText = result.response.text()
-      console.log(`[Evaluate] Gemini raw response: ${responseText.substring(0, 300)}`)
-      
-      const cleaned = responseText.replace(/```json\s*/g, '').replace(/```\s*/g, '').trim()
-      const parsed = JSON.parse(cleaned)
+      if (parsed) {
+        transcript = parsed.transcript || ''
+        aiScore = typeof parsed.score === 'number' ? parsed.score : 0
+        usedAI = true
 
-      transcript = parsed.transcript || ''
-      aiScore = typeof parsed.score === 'number' ? parsed.score : 0
-      usedAI = true
+        console.log(`[Evaluate] Gemini: transcript="${transcript}", score=${aiScore}`)
 
-      console.log(`[Evaluate] Gemini result: transcript="${transcript}", score=${aiScore}`)
-
-      if (parsed.feedbackVi) {
-        overallTips.push(`💡 ${parsed.feedbackVi}`)
-      }
-      if (parsed.issues?.length > 0) {
-        parsed.issues.forEach((issue: any) => {
-          overallTips.push(`- "${issue.word}": ${issue.issueVi || issue.tip}`)
-        })
+        if (parsed.feedbackVi) {
+          overallTips.push(`💡 ${parsed.feedbackVi}`)
+        }
+        if (parsed.issues?.length > 0) {
+          parsed.issues.forEach((issue: any) => {
+            overallTips.push(`- "${issue.word}": ${issue.issueVi || issue.tip}`)
+          })
+        }
       }
     } catch (err: any) {
-      console.error('[Evaluate/Gemini] Error:', err?.message || err)
+      debugError = `catch: ${err?.message || String(err)}`
+      console.error('[Evaluate] Unexpected error:', err?.message || err)
     }
 
     // Handle different outcomes
     if (!usedAI) {
-      // Gemini call completely failed (error)
       console.warn('[Evaluate] Gemini call failed — using error fallback')
       transcript = ''
       aiScore = 0
+      const apiKey = process.env.GEMINI_API_KEY || process.env.GOOGLE_AI_API_KEY || ''
       overallTips = [
-        '⚠️ Hệ thống AI gặp lỗi. Vui lòng thử lại sau.',
+        `⚠️ Hệ thống AI gặp lỗi. Vui lòng thử lại sau.`,
+        `🔍 Debug: key=${apiKey ? apiKey.substring(0,8) + '...' : 'MISSING'}, audioSize=${audioFile.size}b, err=${debugError || 'unknown'}`,
       ]
     } else if (!transcript && aiScore === 0) {
-      // Gemini worked but detected no speech — valid AI response
       console.log('[Evaluate] Gemini detected no recognizable speech')
       overallTips = overallTips.length > 0 ? overallTips : [
         '🎤 AI không nhận diện được lời nói trong bản ghi âm.',
@@ -204,11 +241,11 @@ Antworte NUR als JSON (kein Markdown):
     const refWords = referenceText.replace(/[!?.,:;]/g, '').split(/\s+/).filter(Boolean)
     const userWords = transcript.replace(/[!?.,:;()]/g, '').split(/\s+/).filter(Boolean)
     const wordResults = alignWords(refWords, userWords)
-    
-    // Use AI score directly — don't override with word alignment when AI worked
+
+    // Use AI score directly
     const accuracy = usedAI ? aiScore : 0
 
-    console.log(`[Evaluate] Final: accuracy=${accuracy}, usedAI=${usedAI}, words=${wordResults.length}`)
+    console.log(`[Evaluate] Final: accuracy=${accuracy}, usedAI=${usedAI}`)
 
     return NextResponse.json({
       transcript: usedAI ? transcript : '',
