@@ -60,37 +60,19 @@ export default async function VocabularyPage() {
     const serverUser = await getServerUser()
     if (!serverUser) redirect('/login')
 
-    try {
-        const availableLevels = await getAvailableLevels()
-        const defaultLevel: CefrLevel = availableLevels[0] || 'A1'
-        const { themes, totalWords, totalDue } = await getThemes(serverUser.userId, defaultLevel)
+    const availableLevels = await getAvailableLevels()
+    const defaultLevel: CefrLevel = availableLevels[0] || 'A1'
+    const { themes, totalWords, totalDue } = await getThemes(serverUser.userId, defaultLevel)
 
-        return (
-            <div className="max-w-5xl mx-auto px-4 py-8">
-                <VocabularyClient
-                    themes={themes}
-                    totalWords={totalWords}
-                    totalDue={totalDue}
-                    availableLevels={availableLevels}
-                    initialLevel={defaultLevel}
-                />
-            </div>
-        )
-    } catch (err) {
-        console.error('[Vocabulary] Page render error:', err)
-        return (
-            <div className="max-w-5xl mx-auto px-4 py-8 text-center">
-                <div style={{ fontSize: 48, marginBottom: 16 }}>🦊</div>
-                <h2 style={{ fontSize: 20, fontWeight: 700, color: '#111827', marginBottom: 8 }}>
-                    Trang từ vựng đang được cập nhật
-                </h2>
-                <p style={{ color: '#6B7280', marginBottom: 16 }}>
-                    Vui lòng thử lại sau hoặc quay về trang chủ.
-                </p>
-                <a href="/dashboard" style={{ color: '#3B82F6', textDecoration: 'underline' }}>
-                    ← Quay về Dashboard
-                </a>
-            </div>
-        )
-    }
+    return (
+        <div className="max-w-5xl mx-auto px-4 py-8">
+            <VocabularyClient
+                themes={themes}
+                totalWords={totalWords}
+                totalDue={totalDue}
+                availableLevels={availableLevels}
+                initialLevel={defaultLevel}
+            />
+        </div>
+    )
 }
