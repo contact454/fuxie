@@ -21,6 +21,7 @@ export default function NachsprechenPlayer({ sentences, config, lessonTitle, les
   const [attempts, setAttempts] = useState(0)
   const [scores, setScores] = useState<number[]>([])
   const [recordingTime, setRecordingTime] = useState(0)
+  const [micError, setMicError] = useState<string | null>(null)
 
   const audioRef = useRef<HTMLAudioElement>(null)
   const mediaRecorderRef = useRef<MediaRecorder | null>(null)
@@ -213,7 +214,15 @@ export default function NachsprechenPlayer({ sentences, config, lessonTitle, les
 
   const startRecording = async () => {
     try {
+      setMicError(null)
       skipEvaluationRef.current = false
+
+      // Check if getUserMedia is available
+      if (!navigator.mediaDevices?.getUserMedia) {
+        setMicError('Trình duyệt không hỗ trợ ghi âm. Vui lòng dùng Chrome hoặc Safari.')
+        return
+      }
+
       const stream = await navigator.mediaDevices.getUserMedia({ audio: true })
       streamRef.current = stream // Store ref for cleanup
       const recorder = new MediaRecorder(stream, {
@@ -264,8 +273,17 @@ export default function NachsprechenPlayer({ sentences, config, lessonTitle, les
           return prev + 1
         })
       }, 1000)
-    } catch (err) {
-      console.error('Microphone access denied:', err)
+    } catch (err: any) {
+      console.error('Microphone access error:', err)
+      if (err.name === 'NotAllowedError' || err.name === 'PermissionDeniedError') {
+        setMicError('Bạn cần cho phép truy cập microphone. Nhấn vào biểu tượng 🔒 trên thanh địa chỉ để cấp quyền.')
+      } else if (err.name === 'NotFoundError' || err.name === 'DevicesNotFoundError') {
+        setMicError('Không tìm thấy microphone. Vui lòng kết nối microphone và thử lại.')
+      } else if (err.name === 'NotReadableError') {
+        setMicError('Microphone đang được sử dụng bởi ứng dụng khác. Vui lòng đóng ứng dụng đó và thử lại.')
+      } else {
+        setMicError('Không thể truy cập microphone. Vui lòng kiểm tra cài đặt trình duyệt.')
+      }
       setState('idle')
     }
   }
@@ -496,6 +514,35 @@ export default function NachsprechenPlayer({ sentences, config, lessonTitle, les
           </>
         ) : state !== 'result' ? (
           <>
+            {micError && (
+              <motion.div
+                initial={{ opacity: 0, y: -10 }}
+                animate={{ opacity: 1, y: 0 }}
+                style={{
+                  background: '#FEE2E2',
+                  border: '1px solid #FECACA',
+                  borderRadius: '12px',
+                  padding: '12px 16px',
+                  marginBottom: '12px',
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '8px',
+                  fontSize: '0.9rem',
+                  color: '#991B1B',
+                  width: '100%',
+                  maxWidth: '400px',
+                }}
+              >
+                <AlertCircle size={18} style={{ flexShrink: 0 }} />
+                <span style={{ flex: 1 }}>{micError}</span>
+                <button 
+                  onClick={() => setMicError(null)} 
+                  style={{ background: 'none', border: 'none', cursor: 'pointer', color: '#991B1B', padding: '2px' }}
+                >
+                  <X size={16} />
+                </button>
+              </motion.div>
+            )}
             <motion.button 
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
