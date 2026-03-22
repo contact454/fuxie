@@ -72,11 +72,10 @@ async function callGeminiWithAudio(
   base64Audio: string,
   mimeType: string,
   prompt: string
-): Promise<{ transcript: string; score: number; feedbackVi: string; issues: any[] } | null> {
+): Promise<{ transcript: string; score: number; feedbackVi: string; issues: any[] }> {
   const apiKey = process.env.GEMINI_API_KEY || process.env.GOOGLE_AI_API_KEY
   if (!apiKey) {
-    console.error('[Gemini] No API key found')
-    return null
+    throw new Error('NO_API_KEY')
   }
 
   const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${apiKey}`
@@ -104,28 +103,23 @@ async function callGeminiWithAudio(
 
   if (!response.ok) {
     const errorText = await response.text()
-    console.error(`[Gemini] HTTP ${response.status}: ${errorText.substring(0, 500)}`)
-    return null
+    throw new Error(`HTTP_${response.status}: ${errorText.substring(0, 200)}`)
   }
 
   const result = await response.json()
   
   const text = result?.candidates?.[0]?.content?.parts?.[0]?.text
   if (!text) {
-    console.error('[Gemini] No text in response:', JSON.stringify(result).substring(0, 300))
-    return null
+    const blockReason = result?.candidates?.[0]?.finishReason || result?.promptFeedback?.blockReason || 'unknown'
+    throw new Error(`NO_TEXT: finishReason=${blockReason}, resp=${JSON.stringify(result).substring(0, 150)}`)
   }
 
   console.log(`[Gemini] Raw response: ${text.substring(0, 300)}`)
 
   // Parse JSON from response
   const cleaned = text.replace(/```json\s*/g, '').replace(/```\s*/g, '').trim()
-  try {
-    return JSON.parse(cleaned)
-  } catch (err) {
-    console.error('[Gemini] JSON parse error:', err, 'text:', cleaned.substring(0, 200))
-    return null
-  }
+  const parsed = JSON.parse(cleaned) // Will throw SyntaxError if invalid
+  return parsed
 }
 
 export async function POST(request: NextRequest) {
@@ -198,21 +192,19 @@ Antworte NUR als JSON (kein Markdown):
 
       const parsed = await callGeminiWithAudio(base64Data, mimeType, prompt)
 
-      if (parsed) {
-        transcript = parsed.transcript || ''
-        aiScore = typeof parsed.score === 'number' ? parsed.score : 0
-        usedAI = true
+      transcript = parsed.transcript || ''
+      aiScore = typeof parsed.score === 'number' ? parsed.score : 0
+      usedAI = true
 
-        console.log(`[Evaluate] Gemini: transcript="${transcript}", score=${aiScore}`)
+      console.log(`[Evaluate] Gemini: transcript="${transcript}", score=${aiScore}`)
 
-        if (parsed.feedbackVi) {
-          overallTips.push(`💡 ${parsed.feedbackVi}`)
-        }
-        if (parsed.issues?.length > 0) {
-          parsed.issues.forEach((issue: any) => {
-            overallTips.push(`- "${issue.word}": ${issue.issueVi || issue.tip}`)
-          })
-        }
+      if (parsed.feedbackVi) {
+        overallTips.push(`💡 ${parsed.feedbackVi}`)
+      }
+      if (parsed.issues?.length > 0) {
+        parsed.issues.forEach((issue: any) => {
+          overallTips.push(`- "${issue.word}": ${issue.issueVi || issue.tip}`)
+        })
       }
     } catch (err: any) {
       debugError = `catch: ${err?.message || String(err)}`
