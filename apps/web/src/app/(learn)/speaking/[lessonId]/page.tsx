@@ -32,6 +32,10 @@ export default async function SpeakingLessonPage({ params }: { params: Promise<{
 
   if (!lesson) notFound()
 
+  // Prisma JSON fields need explicit serialization to pass through RSC boundary
+  const exercisesJson = JSON.parse(JSON.stringify(lesson.exercisesJson ?? {}))
+  const configJson = lesson.configJson ? JSON.parse(JSON.stringify(lesson.configJson)) : null
+
   return (
     <SpeakingLessonPlayer
       lessonId={lesson.id}
@@ -41,8 +45,8 @@ export default async function SpeakingLessonPage({ params }: { params: Promise<{
       topicSlug={lesson.topic.slug}
       cefrLevel={lesson.level}
       exerciseType={lesson.exerciseType}
-      exercisesJson={lesson.exercisesJson as any}
-      configJson={lesson.configJson as any}
+      exercisesJson={exercisesJson}
+      configJson={configJson}
       estimatedMin={lesson.estimatedMin}
     />
   )
