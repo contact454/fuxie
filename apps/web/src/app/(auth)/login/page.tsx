@@ -1,12 +1,14 @@
 'use client'
 
-import { Suspense, useState } from 'react'
+import { Suspense, useState, useEffect } from 'react'
 import { useRouter, useSearchParams } from 'next/navigation'
 import Image from 'next/image'
 import {
     signInWithEmailAndPassword,
     GoogleAuthProvider,
     signInWithPopup,
+    signInWithRedirect,
+    getRedirectResult,
 } from 'firebase/auth'
 import { getFirebaseAuth } from '@/lib/firebase/config'
 
@@ -38,6 +40,28 @@ function LoginContent() {
     const [password, setPassword] = useState('')
     const [error, setError] = useState<string | null>(null)
     const [loading, setLoading] = useState(false)
+
+    // Handle redirect result from Google Sign-In
+    useEffect(() => {
+        getRedirectResult(getFirebaseAuth())
+            .then(async (result) => {
+                if (result) {
+                    setLoading(true)
+                    const idToken = await result.user.getIdToken()
+                    await postLoginFlow(idToken, result.user.displayName || 'Learner')
+                }
+            })
+            .catch((err) => {
+                const code = (err as { code?: string })?.code
+                console.error('[Fuxie] Google Redirect error:', code, err.message)
+                if (code === 'auth/unauthorized-domain') {
+                    setError('Domain chưa được cấp quyền trong Firebase.')
+                } else if (code) {
+                    setError(`Đăng nhập Google thất bại (${code})`)
+                }
+            })
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [])
 
     /**
      * Shared post-login flow:
@@ -110,23 +134,39 @@ function LoginContent() {
             const provider = new GoogleAuthProvider()
             provider.setCustomParameters({ prompt: 'select_account' })
 
-            const credential = await signInWithPopup(auth, provider)
-            const idToken = await credential.user.getIdToken()
-            await postLoginFlow(idToken, credential.user.displayName || 'Learner')
+            // Try popup first, fall back to redirect
+            try {
+                const credential = await signInWithPopup(auth, provider)
+                const idToken = await credential.user.getIdToken()
+                await postLoginFlow(idToken, credential.user.displayName || 'Learner')
+            } catch (popupErr: unknown) {
+                const popupCode = (popupErr as { code?: string })?.code
+                console.error('[Fuxie] Popup error:', popupCode, (popupErr as Error).message)
+
+                // If popup fails due to cookies/blocking, use redirect
+                if (
+                    popupCode === 'auth/popup-blocked' ||
+                    popupCode === 'auth/popup-closed-by-user' ||
+                    popupCode === 'auth/cancelled-popup-request' ||
+                    popupCode === 'auth/internal-error' ||
+                    popupCode === 'auth/network-request-failed'
+                ) {
+                    console.log('[Fuxie] Falling back to redirect...')
+                    await signInWithRedirect(auth, provider)
+                    return // redirect will navigate away
+                }
+                throw popupErr // re-throw for outer catch
+            }
         } catch (err: unknown) {
             const code = (err as { code?: string })?.code
-            console.error('[Fuxie] Google Sign-In error:', code)
+            console.error('[Fuxie] Google Sign-In error:', code, (err as Error).message)
 
-            if (code === 'auth/popup-closed-by-user') {
-                setError('Popup đã bị đóng. Vui lòng thử lại.')
-            } else if (code === 'auth/popup-blocked') {
-                setError('Popup bị chặn. Vui lòng cho phép popup.')
-            } else if (code === 'auth/unauthorized-domain') {
+            if (code === 'auth/unauthorized-domain') {
                 setError('Domain chưa được cấp quyền trong Firebase.')
             } else if (code === 'auth/cancelled-popup-request') {
-                // User clicked again before popup finished — ignore
+                // ignore
             } else {
-                setError('Đăng nhập Google thất bại. Vui lòng thử lại.')
+                setError(`Đăng nhập Google thất bại. (${code || 'unknown'})`)
             }
         } finally {
             setLoading(false)
