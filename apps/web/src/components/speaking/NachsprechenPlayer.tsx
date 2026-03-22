@@ -131,13 +131,19 @@ export default function NachsprechenPlayer({ sentences, config, lessonTitle, les
 
     const utterance = new SpeechSynthesisUtterance(text)
     utterance.lang = 'de-DE'
-    utterance.rate = 0.8 // Slow for learners
+    utterance.rate = 0.85 // Slightly slow for learners, but natural
     utterance.pitch = 1.0
 
-    // Try to find a German voice
+    // Prioritize high-quality Google Neural/Premium voices
     const voices = window.speechSynthesis.getVoices()
-    const deVoice = voices.find(v => v.lang.startsWith('de'))
-    if (deVoice) utterance.voice = deVoice
+    const deVoices = voices.filter(v => v.lang.startsWith('de'))
+    
+    // Prefer: Google Deutsch > any Google voice > any de-DE voice > any de voice
+    const preferred = deVoices.find(v => v.name.includes('Google Deutsch'))
+      || deVoices.find(v => v.name.includes('Google'))
+      || deVoices.find(v => v.lang === 'de-DE')
+      || deVoices[0]
+    if (preferred) utterance.voice = preferred
 
     utterance.onend = () => setState('idle')
     utterance.onerror = () => setState('idle')
