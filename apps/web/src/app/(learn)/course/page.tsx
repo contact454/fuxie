@@ -35,7 +35,7 @@ interface ModuleWithProgress {
         totalStars: number
     }>
     skillLinks: Array<{
-        skill: string
+        skill: 'listening' | 'reading' | 'writing' | 'speaking'
         label: string
         labelVi: string
         href: string
@@ -89,7 +89,7 @@ async function getCourseData(userId: string, level: CefrLevel) {
     let moduleMap: Record<string, {
         vocabularyThemes: string[]
         grammarTopics: string[]
-        skillLinks?: Array<{ skill: string; label: string; labelVi: string; href: string; emoji: string }>
+        skillLinks?: Array<{ skill: 'listening' | 'reading' | 'writing' | 'speaking'; label: string; labelVi: string; href: string; emoji: string }>
     }> = {}
     try {
         const courseJson = JSON.parse(fs.readFileSync(courseJsonPath, 'utf-8'))
@@ -97,7 +97,7 @@ async function getCourseData(userId: string, level: CefrLevel) {
             moduleMap[mod.slug] = {
                 vocabularyThemes: mod.vocabularyThemes ?? [],
                 grammarTopics: mod.grammarTopics ?? [],
-                skillLinks: mod.skillLinks ?? [],
+                skillLinks: (mod.skillLinks ?? []) as Array<{ skill: 'listening' | 'reading' | 'writing' | 'speaking'; label: string; labelVi: string; href: string; emoji: string }>,
             }
         }
     } catch {
