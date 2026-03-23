@@ -14,6 +14,7 @@ const navItems = [
     { href: '/writing', label: 'Viết', labelDe: 'Schreiben', icon: '/mascot/skill/fuxie-skill-schreiben.png' },
     { href: '/speaking', label: 'Nói', labelDe: 'Sprechen', icon: '/mascot/skill/fuxie-skill-sprechen.png' },
     { href: '/chat', label: 'Chat AI', labelDe: 'KI-Chat', icon: '/mascot/core/fuxie-core-happy-wave.png' },
+    { href: '/leaderboard', label: 'Xếp hạng', labelDe: 'Rangliste', icon: '/mascot/learn/fuxie-learn-graduation.png' },
     { href: '/exam', label: 'Thi thử', labelDe: 'Prüfung', icon: '/mascot/learn/fuxie-learn-graduation.png' },
     { href: '/review', label: 'Ôn tập SRS', labelDe: 'Wiederholen', icon: '/mascot/learn/fuxie-learn-studying.png' },
 ]
