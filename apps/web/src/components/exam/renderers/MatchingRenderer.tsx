@@ -63,29 +63,33 @@ export function MatchingRenderer({ content, answer, onChange }: Props) {
                 <h4 className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-3 flex items-center gap-1.5">
                     📌 Anzeigen
                 </h4>
-                <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2.5">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                     {data.options.map((opt, idx) => {
                         const isUsed = usedOptions.has(opt.key)
                         const colorClass = AD_COLORS[idx % AD_COLORS.length]
                         return (
                             <div
                                 key={opt.key}
-                                className={`relative rounded-xl p-3 transition-all ring-1 bg-gradient-to-b ${colorClass}
-                                    ${isUsed ? 'opacity-50 scale-95' : 'hover:scale-[1.02] hover:shadow-sm'}`}
+                                className={`relative rounded-xl p-4 transition-all ring-1 bg-gradient-to-br ${colorClass}
+                                    ${isUsed ? 'opacity-50 scale-[0.98]' : 'hover:scale-[1.01] hover:shadow-sm'}`}
                             >
                                 {isUsed && (
-                                    <div className="absolute top-1.5 right-1.5 w-5 h-5 rounded-full bg-green-500 flex items-center justify-center">
-                                        <span className="text-white text-[10px] font-bold">✓</span>
+                                    <div className="absolute top-2 right-2 w-6 h-6 rounded-full bg-green-500 flex items-center justify-center shadow-sm">
+                                        <span className="text-white text-xs font-bold">✓</span>
                                     </div>
                                 )}
-                                <div className="text-2xl mb-1.5">{getIcon(opt.title)}</div>
-                                <div className="flex items-center gap-1 mb-1">
-                                    <span className="w-5 h-5 rounded-full bg-white/80 flex items-center justify-center text-[10px] font-bold text-gray-600 shrink-0">
-                                        {opt.key}
-                                    </span>
-                                    <span className="text-xs font-semibold text-gray-800 leading-tight truncate">{opt.title}</span>
+                                <div className="flex items-start gap-3">
+                                    <div className="text-3xl shrink-0">{getIcon(opt.title)}</div>
+                                    <div className="flex-1 min-w-0">
+                                        <div className="flex items-center gap-1.5 mb-1">
+                                            <span className="w-6 h-6 rounded-full bg-white/80 flex items-center justify-center text-xs font-bold text-gray-600 shrink-0 shadow-sm">
+                                                {opt.key}
+                                            </span>
+                                            <span className="text-sm font-bold text-gray-800 leading-tight">{opt.title}</span>
+                                        </div>
+                                        <p className="text-xs text-gray-600 leading-relaxed">{opt.snippet}</p>
+                                    </div>
                                 </div>
-                                <p className="text-[10px] text-gray-500 leading-snug line-clamp-3">{opt.snippet}</p>
                             </div>
                         )
                     })}
