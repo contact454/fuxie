@@ -246,7 +246,7 @@ export function ExamSessionClient({ examId }: { examId: string }) {
             {task && (
                 <div className="bg-white rounded-2xl ring-1 ring-gray-100 p-6 mb-6 min-h-[400px]">
                     {/* Audio player for Hören tasks */}
-                    {(task.audioUrl || (task.contentJson as Record<string, unknown>).audioTranscript) && (
+                    {!!(task.audioUrl || (task.contentJson as Record<string, unknown>).audioTranscript) && (
                         <ExamAudioPlayer
                             src={task.audioUrl}
                             transcript={(task.contentJson as Record<string, unknown>).audioTranscript as string}
