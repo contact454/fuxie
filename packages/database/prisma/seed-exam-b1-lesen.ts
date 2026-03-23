@@ -27,10 +27,17 @@ async function main() {
         },
     })
 
-    // Delete old sections + tasks
+    // Delete old sections + tasks (cascade: answers → tasks → sections)
     const oldSections = await prisma.examSection.findMany({ where: { examId: exam.id }, select: { id: true } })
     if (oldSections.length > 0) {
-        await prisma.examTask.deleteMany({ where: { sectionId: { in: oldSections.map(s => s.id) } } })
+        const sectionIds = oldSections.map(s => s.id)
+        const oldTasks = await prisma.examTask.findMany({ where: { sectionId: { in: sectionIds } }, select: { id: true } })
+        if (oldTasks.length > 0) {
+            await prisma.examAnswer.deleteMany({ where: { taskId: { in: oldTasks.map(t => t.id) } } })
+        }
+        // Delete attempts for this exam too
+        await prisma.examAttempt.deleteMany({ where: { examId: exam.id } })
+        await prisma.examTask.deleteMany({ where: { sectionId: { in: sectionIds } } })
         await prisma.examSection.deleteMany({ where: { examId: exam.id } })
     }
 
@@ -112,37 +119,37 @@ Jetzt fühle ich mich schon wie zu Hause. Ich verstehe fast alles und kann auch 
         },
     })
 
-    // ===== TEIL 2: Zeitungsartikel — MC (6 items × 3.5 pts ≈ 21) =====
+    // ===== TEIL 2: Zeitungsartikel — MC (5 items × 4 pts = 20) =====
     await prisma.examTask.create({
         data: {
             sectionId: section.id,
             title: 'Teil 2 — Zeitungsartikel',
             exerciseType: 'MULTIPLE_CHOICE',
-            maxPoints: 21,
+            maxPoints: 20,
             sortOrder: 2,
             contentJson: {
                 instructions: 'Lesen Sie den Text und die Aufgaben 7 bis 12. Wählen Sie die richtige Antwort: A, B oder C.',
                 passage: `Lernen mit dem Smartphone — Chance oder Problem?
 
-Immer mehr Schulen in Deutschland erlauben das Smartphone im Unterricht. In Bayern dürfen Schüler seit diesem Schuljahr ihre Handys im Klassenzimmer benutzen — aber nur, wenn der Lehrer es erlaubt.
+Immer mehr Schulen in Deutschland erlauben das Smartphone im Unterricht. In Bayern dürfen Schüler seit diesem Schuljahr ihre Handys im Klassenzimmer benutzen — aber nur, wenn der Lehrer es erlaubt hat. Die Diskussion, ob digitale Geräte den Unterricht verbessern oder stören, ist in den letzten Jahren immer wichtiger geworden.
 
-„Wir nutzen das Smartphone als Wörterbuch und als Rechner", erklärt Mathematiklehrerin Frau Berger aus Nürnberg. „Die Schüler können auch im Internet recherchieren und Lernvideos ansehen." In ihrer Klasse arbeiten die Schüler oft in kleinen Gruppen und erstellen gemeinsam Präsentationen auf ihren Geräten.
+„Wir nutzen das Smartphone als Wörterbuch und als Rechner", erklärt Mathematiklehrerin Frau Berger aus Nürnberg. „Die Schüler können auch im Internet recherchieren und Lernvideos ansehen." In ihrer Klasse arbeiten die Schüler oft in kleinen Gruppen und erstellen gemeinsam Präsentationen auf ihren Geräten. Obwohl einige Eltern zunächst skeptisch waren, haben sie sich inzwischen davon überzeugt, dass die Methode funktioniert.
 
-Aber nicht alle Lehrer sind begeistert. „Viele Schüler sind abgelenkt", sagt Herr Krause, ein Deutschlehrer in München. „Sie schauen heimlich auf Social Media oder schreiben Nachrichten." Er fordert klare Regeln: Handys nur in bestimmten Stunden und nur für Schulaufgaben.
+Aber nicht alle Lehrer sind begeistert. „Viele Schüler sind abgelenkt", sagt Herr Krause, ein Deutschlehrer in München. „Sie schauen heimlich auf Social Media oder schreiben Nachrichten." Weil die Ablenkung so groß sei, fordert er klare Regeln: Handys nur in bestimmten Stunden und nur für Schulaufgaben. Er hätte es am liebsten, wenn die Handys in den Pausen eingesammelt würden.
 
-Eine aktuelle Studie der Universität Hamburg zeigt interessante Ergebnisse: Schüler, die Lern-Apps nutzen, haben bessere Noten in Fremdsprachen. Aber gleichzeitig lesen diese Schüler weniger Bücher und können sich nicht so lange konzentrieren.
+Eine aktuelle Studie der Universität Hamburg hat interessante Ergebnisse gezeigt: Schüler, die Lern-Apps nutzen, haben bessere Noten in Fremdsprachen. Aber gleichzeitig lesen diese Schüler weniger Bücher und können sich nicht so lange konzentrieren, weil sie ständig am Bildschirm sind.
 
-Experten empfehlen deshalb einen Mittelweg: Smartphones im Unterricht ja, aber mit klaren Regeln und zeitlichen Grenzen. „Die Technik kann den Unterricht besser machen, aber sie kann den Lehrer nicht ersetzen", sagt Bildungsforscher Professor Dr. Weber.`,
+Experten empfehlen deshalb einen Mittelweg: Smartphones im Unterricht ja, aber mit klaren Regeln und zeitlichen Grenzen. „Die Technik könnte den Unterricht besser machen, aber sie kann den Lehrer nicht ersetzen", sagt Bildungsforscher Professor Dr. Weber.`,
                 items: [
                     {
                         id: 't2-1',
                         question: 'Seit wann dürfen Schüler in Bayern Handys im Unterricht nutzen?',
                         options: [
-                            { key: 'A', text: 'Schon seit vielen Jahren' },
-                            { key: 'B', text: 'Seit diesem Schuljahr' },
+                            { key: 'A', text: 'Seit diesem Schuljahr' },
+                            { key: 'B', text: 'Schon seit vielen Jahren' },
                             { key: 'C', text: 'Ab dem nächsten Schuljahr' },
                         ],
-                        correctAnswer: 'B',
+                        correctAnswer: 'A',
                         explanation: 'Text: "seit diesem Schuljahr ihre Handys im Klassenzimmer benutzen"'
                     },
                     {
@@ -161,10 +168,10 @@ Experten empfehlen deshalb einen Mittelweg: Smartphones im Unterricht ja, aber m
                         question: 'Was kritisiert Herr Krause?',
                         options: [
                             { key: 'A', text: 'Die Smartphones sind zu teuer' },
-                            { key: 'B', text: 'Die Schüler lassen sich ablenken' },
-                            { key: 'C', text: 'Die Lehrer können keine Apps nutzen' },
+                            { key: 'B', text: 'Die Lehrer können keine Apps nutzen' },
+                            { key: 'C', text: 'Die Schüler lassen sich ablenken' },
                         ],
-                        correctAnswer: 'B',
+                        correctAnswer: 'C',
                         explanation: 'Text: "Viele Schüler sind abgelenkt... schauen heimlich auf Social Media"'
                     },
                     {
@@ -180,17 +187,6 @@ Experten empfehlen deshalb einen Mittelweg: Smartphones im Unterricht ja, aber m
                     },
                     {
                         id: 't2-5',
-                        question: 'Was ist ein Nachteil der Smartphone-Nutzung laut Studie?',
-                        options: [
-                            { key: 'A', text: 'Die Schüler sprechen weniger' },
-                            { key: 'B', text: 'Die Schüler lesen weniger und können sich schlechter konzentrieren' },
-                            { key: 'C', text: 'Die Schüler haben schlechtere Noten' },
-                        ],
-                        correctAnswer: 'B',
-                        explanation: 'Text: "lesen weniger Bücher und können sich nicht so lange konzentrieren"'
-                    },
-                    {
-                        id: 't2-6',
                         question: 'Was empfehlen die Experten?',
                         options: [
                             { key: 'A', text: 'Smartphones komplett verbieten' },
@@ -262,24 +258,24 @@ Experten empfehlen deshalb einen Mittelweg: Smartphones im Unterricht ja, aber m
                 passage: `Thema: Sollte man im Homeoffice arbeiten?
 
 **Text A — Sabine, 34, Berlin:**
-Ich arbeite seit zwei Jahren von zu Hause. Am Anfang fand ich es toll — kein Pendeln, kein Stress in der U-Bahn. Aber jetzt fehlen mir die Kollegen. Man sitzt den ganzen Tag allein vor dem Computer. Manchmal rede ich stundenlang mit niemandem. Ich gehe jetzt wieder zwei Tage pro Woche ins Büro und bin viel zufriedener.
+Ich arbeite seit zwei Jahren von zu Hause, weil meine Firma während der Pandemie das Homeoffice eingeführt hat. Am Anfang fand ich es toll — kein Pendeln, kein Stress in der U-Bahn. Aber jetzt fehlen mir die Kollegen. Man sitzt den ganzen Tag allein vor dem Computer. Manchmal rede ich stundenlang mit niemandem, obwohl ich eigentlich ein geselliger Mensch bin. Ich gehe jetzt wieder zwei Tage pro Woche ins Büro und bin viel zufriedener. Wenn ich die Wahl hätte, würde ich ein Mischmodell bevorzugen.
 
 **Text B — Thomas, 41, Hamburg:**
-Für mich ist Homeoffice perfekt. Ich kann meine Arbeitszeit frei einteilen und bin viel produktiver. Morgens bringe ich die Kinder zur Schule, dann arbeite ich konzentriert von 9 bis 15 Uhr und hole sie nachmittags wieder ab. Im Büro wurde ich ständig gestört — durch Meetings, Telefonate und Kollegen.
+Für mich ist Homeoffice perfekt, weil ich meine Arbeitszeit frei einteilen kann und viel produktiver bin. Morgens bringe ich die Kinder zur Schule, dann arbeite ich konzentriert von 9 bis 15 Uhr und hole sie nachmittags wieder ab. Im Büro wurde ich ständig gestört — durch Meetings, Telefonate und Kollegen. Bevor ich ins Homeoffice gewechselt bin, hatte ich oft das Gefühl, dass ich meine Zeit verschwendet habe.
 
 **Text C — Petra, 28, München:**
-Ich finde, es kommt auf den Job an. Als Grafikdesignerin kann ich gut von zu Hause arbeiten. Aber mein Mann ist Krankenpfleger — er muss natürlich im Krankenhaus sein. Außerdem braucht man Disziplin: Wer zu Hause arbeitet, muss auch mal den Fernseher auslassen und sich konzentrieren.`,
+Ich finde, es kommt auf den Job an. Als Grafikdesignerin kann ich gut von zu Hause arbeiten, wenn ich kreative Projekte habe. Aber mein Mann ist Krankenpfleger — er muss natürlich im Krankenhaus sein. Außerdem braucht man Disziplin: Wer zu Hause arbeitet, muss auch mal den Fernseher auslassen und sich konzentrieren. Es wäre besser, wenn die Arbeitgeber flexible Modelle anbieten würden, die zu jedem Beruf passen.`,
                 items: [
                     {
                         id: 't4-1',
                         question: 'Sabine findet Homeoffice...',
                         options: [
-                            { key: 'A', text: 'immer noch sehr gut' },
-                            { key: 'B', text: 'manchmal einsam' },
+                            { key: 'A', text: 'manchmal einsam' },
+                            { key: 'B', text: 'immer noch sehr gut' },
                             { key: 'C', text: 'besser als im Büro' },
                         ],
-                        correctAnswer: 'B',
-                        explanation: 'Text A: "fehlen mir die Kollegen" + "sitzt den ganzen Tag allein" + "rede ich stundenlang mit niemandem"'
+                        correctAnswer: 'A',
+                        explanation: 'Text A: "fehlen mir die Kollegen" + "sitzt den ganzen Tag allein"'
                     },
                     {
                         id: 't4-2',
@@ -296,12 +292,12 @@ Ich finde, es kommt auf den Job an. Als Grafikdesignerin kann ich gut von zu Hau
                         id: 't4-3',
                         question: 'Warum findet Thomas Homeoffice gut?',
                         options: [
-                            { key: 'A', text: 'Er kann seine Zeit flexibel einteilen' },
-                            { key: 'B', text: 'Er verdient mehr Geld' },
-                            { key: 'C', text: 'Er trifft mehr Kollegen' },
+                            { key: 'A', text: 'Er verdient mehr Geld' },
+                            { key: 'B', text: 'Er trifft mehr Kollegen' },
+                            { key: 'C', text: 'Er kann seine Zeit flexibel einteilen' },
                         ],
-                        correctAnswer: 'A',
-                        explanation: 'Text B: "kann meine Arbeitszeit frei einteilen"'
+                        correctAnswer: 'C',
+                        explanation: 'Text B: "Arbeitszeit frei einteilen" + "viel produktiver"'
                     },
                     {
                         id: 't4-4',
@@ -329,30 +325,30 @@ Ich finde, es kommt auf den Job an. Als Grafikdesignerin kann ich gut von zu Hau
                         id: 't4-6',
                         question: 'Was braucht man laut Petra für Homeoffice?',
                         options: [
-                            { key: 'A', text: 'Einen großen Schreibtisch' },
-                            { key: 'B', text: 'Selbstdisziplin' },
+                            { key: 'A', text: 'Selbstdisziplin' },
+                            { key: 'B', text: 'Einen großen Schreibtisch' },
                             { key: 'C', text: 'Einen guten Computer' },
                         ],
-                        correctAnswer: 'B',
+                        correctAnswer: 'A',
                         explanation: 'Text C: "man braucht Disziplin"'
                     },
                     {
                         id: 't4-7',
-                        question: 'Warum kann Petras Mann nicht im Homeoffice arbeiten?',
+                        question: 'Was wäre laut Petra die beste Lösung?',
                         options: [
-                            { key: 'A', text: 'Er hat keinen Computer' },
-                            { key: 'B', text: 'Sein Beruf erfordert Anwesenheit' },
-                            { key: 'C', text: 'Er möchte nicht' },
+                            { key: 'A', text: 'Alle sollten ins Büro gehen' },
+                            { key: 'B', text: 'Flexible Modelle für jeden Beruf' },
+                            { key: 'C', text: 'Nur Krankenpfleger sollten ins Büro' },
                         ],
                         correctAnswer: 'B',
-                        explanation: 'Text C: "Krankenpfleger — er muss natürlich im Krankenhaus sein"'
+                        explanation: 'Text C: "Es wäre besser, wenn die Arbeitgeber flexible Modelle anbieten würden"'
                     },
                 ],
             },
         },
     })
 
-    // ===== TEIL 5: Anleitung — Ja/Nein (4 items × 5 pts = 20) =====
+    // ===== TEIL 5: Anleitung — Richtig/Falsch (5 items × 4 pts = 20) =====
     await prisma.examTask.create({
         data: {
             sectionId: section.id,
@@ -361,20 +357,20 @@ Ich finde, es kommt auf den Job an. Als Grafikdesignerin kann ich gut von zu Hau
             maxPoints: 20,
             sortOrder: 5,
             contentJson: {
-                instructions: 'Lesen Sie die Hausordnung und die Aufgaben 27 bis 30. Wählen Sie: Ja oder Nein.',
+                instructions: 'Lesen Sie die Hausordnung und die Aufgaben 27 bis 31. Wählen Sie: Richtig oder Falsch.',
                 passage: `Hausordnung — Wohngemeinschaft Lindenstraße 42
 
-1. Ruhezeiten: Bitte halten Sie die Ruhezeiten ein: werktags von 22.00 bis 7.00 Uhr, an Sonn- und Feiertagen ganztags. Laute Musik und Partys sind während dieser Zeit nicht erlaubt.
+1. Ruhezeiten: Bitte halten Sie die Ruhezeiten ein: werktags von 22.00 bis 7.00 Uhr, an Sonn- und Feiertagen ganztags. Laute Musik und Partys sind während dieser Zeiten nicht erlaubt. Wenn Sie eine Party planen möchten, müssten Sie das mindestens eine Woche vorher mit allen Bewohnern absprechen.
 
-2. Küche: Die Küche ist ein Gemeinschaftsraum. Bitte räumen Sie Ihr Geschirr sofort nach dem Essen ab und stellen Sie es in die Spülmaschine. Der Kühlschrank wird jeden Sonntagabend überprüft — nicht beschriftete Lebensmittel werden entsorgt.
+2. Küche: Die Küche ist ein Gemeinschaftsraum, der von allen sauber gehalten werden muss. Bitte räumen Sie Ihr Geschirr sofort nach dem Essen ab und stellen Sie es in die Spülmaschine. Der Kühlschrank wird jeden Sonntagabend überprüft — nicht beschriftete Lebensmittel werden entsorgt, weil es in der Vergangenheit häufig Probleme mit verdorbenen Lebensmitteln gegeben hat.
 
-3. Bad: Jeder Bewohner hat einen festen Badezimmer-Zeitslot am Morgen (siehe Aushang). Am Abend kann das Bad frei genutzt werden. Bitte putzen Sie die Dusche nach jeder Benutzung.
+3. Bad: Jeder Bewohner hat einen festen Badezimmer-Zeitslot am Morgen (siehe Aushang). Am Abend kann das Bad frei genutzt werden. Bitte putzen Sie die Dusche nach jeder Benutzung, damit der nächste Bewohner sie sauber vorfindet.
 
-4. Müll: Der Müll wird getrennt (Papier, Plastik, Bio, Restmüll). Die Tonnen stehen im Hof. Der Müllplan hängt in der Küche aus — bitte halten Sie sich daran.
+4. Müll: Der Müll wird getrennt (Papier, Plastik, Bio, Restmüll). Die Tonnen stehen im Hof. Der Müllplan hängt in der Küche aus — bitte halten Sie sich daran. Wenn jemand seinen Mülldienst nicht machen kann, sollte er rechtzeitig einen Tauschpartner finden.
 
 5. Gäste: Gäste dürfen gerne zu Besuch kommen, aber bitte informieren Sie Ihre Mitbewohner vorher. Übernachtungsgäste sind maximal 3 Nächte pro Monat erlaubt.
 
-6. Haustiere: Haustiere sind nur nach Absprache mit allen Bewohnern erlaubt.`,
+6. Haustiere: Haustiere sind nur nach Absprache mit allen Bewohnern erlaubt. Wenn ein Mitbewohner allergisch wäre, hätte das Tier leider keinen Platz in der WG.`,
                 items: [
                     {
                         id: 't5-1',
@@ -400,13 +396,19 @@ Ich finde, es kommt auf den Job an. Als Grafikdesignerin kann ich gut von zu Hau
                         correctAnswer: 'FALSCH',
                         explanation: 'Text: "Übernachtungsgäste sind maximal 3 Nächte pro Monat erlaubt"'
                     },
+                    {
+                        id: 't5-5',
+                        statement: 'Man kann eine Party machen, wenn man es vorher mit den Mitbewohnern bespricht.',
+                        correctAnswer: 'RICHTIG',
+                        explanation: 'Text: "Wenn Sie eine Party planen möchten, müssten Sie das mindestens eine Woche vorher mit allen Bewohnern absprechen."'
+                    },
                 ],
             },
         },
     })
 
     console.log(`✅ Goethe B1 Lesen seeded: ${exam.id}`)
-    console.log('   5 Teile: TF(18) + MC(21) + Matching(21) + MC(21) + TF(20) = 101 pts (normalized to 100)')
+    console.log('   5 Teile: TF(18) + MC(20) + Matching(21) + MC(21) + TF(20) = 100 pts')
 }
 
 main()

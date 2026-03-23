@@ -28,8 +28,13 @@ async function main() {
         select: { id: true },
     })
     if (oldSections.length > 0) {
-        await prisma.examTask.deleteMany({ where: { sectionId: { in: oldSections.map(s => s.id) } } })
-        await prisma.examSection.deleteMany({ where: { id: { in: oldSections.map(s => s.id) } } })
+        const sectionIds = oldSections.map(s => s.id)
+        const oldTasks = await prisma.examTask.findMany({ where: { sectionId: { in: sectionIds } }, select: { id: true } })
+        if (oldTasks.length > 0) {
+            await prisma.examAnswer.deleteMany({ where: { taskId: { in: oldTasks.map(t => t.id) } } })
+        }
+        await prisma.examTask.deleteMany({ where: { sectionId: { in: sectionIds } } })
+        await prisma.examSection.deleteMany({ where: { id: { in: sectionIds } } })
     }
 
     // Update exam template for Lesen + Hören
@@ -67,19 +72,19 @@ async function main() {
             contentJson: {
                 instructions: 'Sie hören fünf kurze Texte. Sie hören jeden Text zweimal. Wählen Sie für die Aufgaben 1 bis 10: Richtig oder Falsch.',
                 audioTranscript: `Ansage 1:
-Achtung, eine Durchsage am Bahnhof München Hauptbahnhof. Der ICE 587 nach Berlin fährt heute nicht von Gleis 14, sondern von Gleis 8 ab. Ich wiederhole: Der ICE 587 nach Berlin fährt von Gleis 8. Wir bitten um Ihr Verständnis.
+Achtung, eine Durchsage am Bahnhof München Hauptbahnhof. Weil es Probleme mit der Weiche gibt, fährt der ICE 587 nach Berlin heute nicht von Gleis 14, sondern von Gleis 8 ab. Wir bitten um Ihr Verständnis und hoffen, dass die Reparatur bald abgeschlossen sein wird.
 
 Ansage 2:
-Liebe Kundinnen und Kunden! Heute ist unser Sonderverkauf. Alle Winterjacken sind 50 Prozent reduziert. Das Angebot gilt nur heute bis 20 Uhr. Sie finden die Jacken in der zweiten Etage.
+Liebe Kundinnen und Kunden! Da wir letzte Woche unsere Inventur abgeschlossen haben, veranstalten wir heute einen Sonderverkauf. Alle Winterjacken sind 50 Prozent reduziert. Das Angebot gilt nur heute bis 20 Uhr. Sie finden die Jacken in der zweiten Etage, wenn Sie die Rolltreppe nach oben nehmen.
 
 Ansage 3:
-Hallo, hier ist die Arztpraxis Dr. Müller. Leider können wir Ihren Anruf gerade nicht entgegennehmen. Unsere Sprechzeiten sind Montag bis Freitag von 8 bis 12 Uhr und Dienstag und Donnerstag auch nachmittags von 14 bis 17 Uhr. Bitte hinterlassen Sie eine Nachricht.
+Hallo, hier ist die Arztpraxis Dr. Müller. Leider können wir Ihren Anruf gerade nicht entgegennehmen, weil alle Mitarbeiter mit Patienten beschäftigt sind. Unsere Sprechzeiten sind Montag bis Freitag von 8 bis 12 Uhr und Dienstag und Donnerstag auch nachmittags von 14 bis 17 Uhr. Es wäre nett, wenn Sie uns eine Nachricht hinterlassen würden.
 
 Ansage 4:
-Willkommen im Stadtmuseum. Die aktuelle Ausstellung „Leben in München 1900" ist noch bis Ende März zu sehen. Führungen finden täglich um 11 und um 15 Uhr statt. Der Eintritt kostet 8 Euro für Erwachsene, Kinder unter 12 Jahren sind frei.
+Willkommen im Stadtmuseum. Die aktuelle Ausstellung „Leben in München 1900" ist noch bis Ende März zu sehen. Die Museumsleitung hat beschlossen, dass Führungen täglich um 11 und um 15 Uhr stattfinden werden. Der Eintritt kostet 8 Euro für Erwachsene, Kinder unter 12 Jahren sind frei, weil wir Bildung für Kinder fördern möchten.
 
 Ansage 5:
-Liebe Fahrgäste, aufgrund von Bauarbeiten ist die U-Bahn-Linie U3 zwischen Marienplatz und Münchner Freiheit heute ab 21 Uhr gesperrt. Bitte nutzen Sie den Ersatzbus, der an allen Haltestellen hält.`,
+Liebe Fahrgäste, aufgrund von Bauarbeiten, die gestern begonnen haben, ist die U-Bahn-Linie U3 zwischen Marienplatz und Münchner Freiheit heute ab 21 Uhr gesperrt. Obwohl die Arbeiten eigentlich erst nächste Woche geplant waren, mussten sie vorgezogen werden. Bitte nutzen Sie den Ersatzbus, der an allen Haltestellen hält.`,
                 passage: 'Hören Sie die Ansagen und beantworten Sie die Fragen.',
                 items: [
                     { id: 'h1-1', statement: 'Der Zug nach Berlin fährt von Gleis 14.', correctAnswer: 'FALSCH', explanation: 'Er fährt von Gleis 8, nicht Gleis 14.' },
@@ -258,11 +263,11 @@ Zusammenfassend: Man muss nicht perfekt sein. Jeder kleine Schritt zählt. Wenn 
                         id: 'h4-1',
                         question: 'Was ist das Hauptthema des Vortrags?',
                         options: [
-                            { key: 'A', text: 'Wie man in der Stadt günstig leben kann' },
-                            { key: 'B', text: 'Wie man als Einzelperson nachhaltiger leben kann' },
+                            { key: 'A', text: 'Wie man als Einzelperson nachhaltiger leben kann' },
+                            { key: 'B', text: 'Wie man in der Stadt günstig leben kann' },
                             { key: 'C', text: 'Warum man aufs Land ziehen sollte' },
                         ],
-                        correctAnswer: 'B',
+                        correctAnswer: 'A',
                         explanation: 'Thema: "Nachhaltig leben in der Stadt" — was kann man als einzelne Person tun.'
                     },
                     {
