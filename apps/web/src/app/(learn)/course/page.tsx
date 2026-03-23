@@ -82,26 +82,42 @@ async function getCourseData(userId: string, level: CefrLevel) {
     if (!course) return null
 
     // 2. Read course.json to get module → vocab/grammar/skill mappings
-    const fs = await import('node:fs')
-    const path = await import('node:path')
-    const contentDir = path.join(process.cwd(), '..', '..', 'content')
-    const courseJsonPath = path.join(contentDir, level.toLowerCase(), 'course.json')
     let moduleMap: Record<string, {
         vocabularyThemes: string[]
         grammarTopics: string[]
         skillLinks?: Array<{ skill: 'listening' | 'reading' | 'writing' | 'speaking'; label: string; labelVi: string; href: string; emoji: string }>
     }> = {}
     try {
-        const courseJson = JSON.parse(fs.readFileSync(courseJsonPath, 'utf-8'))
-        for (const mod of courseJson.modules) {
-            moduleMap[mod.slug] = {
-                vocabularyThemes: mod.vocabularyThemes ?? [],
-                grammarTopics: mod.grammarTopics ?? [],
-                skillLinks: (mod.skillLinks ?? []) as Array<{ skill: 'listening' | 'reading' | 'writing' | 'speaking'; label: string; labelVi: string; href: string; emoji: string }>,
+        // Dynamic import — may fail on some serverless runtimes
+        const fs = require('fs')
+        const path = require('path')
+        // Try multiple potential paths for the content directory
+        const candidates = [
+            path.join(process.cwd(), '..', '..', 'content'),
+            path.join(process.cwd(), 'content'),
+            path.join(process.cwd(), '..', 'content'),
+        ]
+        let courseJsonPath = ''
+        for (const dir of candidates) {
+            const candidate = path.join(dir, level.toLowerCase(), 'course.json')
+            if (fs.existsSync(candidate)) {
+                courseJsonPath = candidate
+                break
+            }
+        }
+        if (courseJsonPath) {
+            const courseJson = JSON.parse(fs.readFileSync(courseJsonPath, 'utf-8'))
+            for (const mod of courseJson.modules) {
+                moduleMap[mod.slug] = {
+                    vocabularyThemes: mod.vocabularyThemes ?? [],
+                    grammarTopics: mod.grammarTopics ?? [],
+                    skillLinks: (mod.skillLinks ?? []) as Array<{ skill: 'listening' | 'reading' | 'writing' | 'speaking'; label: string; labelVi: string; href: string; emoji: string }>,
+                }
             }
         }
     } catch {
-        // fallback: empty mappings
+        // On Vercel or when content files are missing, proceed with empty mappings
+        moduleMap = {}
     }
 
     // 3. Fetch all vocab themes for this level
