@@ -88,9 +88,9 @@ async function getCourseData(userId: string, level: CefrLevel) {
         skillLinks?: Array<{ skill: 'listening' | 'reading' | 'writing' | 'speaking'; label: string; labelVi: string; href: string; emoji: string }>
     }> = {}
     try {
-        // Dynamic import — may fail on some serverless runtimes
-        const fs = require('fs')
-        const path = require('path')
+        // Dynamic import — will fail gracefully on Vercel serverless
+        const fs = await import('fs')
+        const path = await import('path')
         // Try multiple potential paths for the content directory
         const candidates = [
             path.join(process.cwd(), '..', '..', 'content'),
