@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server'
-import { prisma } from '@fuxie/database'
+import { prisma, Prisma } from '@fuxie/database'
 import { getServerUser } from '@/lib/auth/server-auth'
 
 interface SubmitBody {
@@ -117,11 +117,11 @@ export async function POST(
                     data: {
                         attemptId,
                         taskId: ga.taskId,
-                        answerJson: answers.find(a => a.taskId === ga.taskId)?.answerJson ?? {},
+                        answerJson: (answers.find(a => a.taskId === ga.taskId)?.answerJson ?? {}) as Prisma.InputJsonValue,
                         score: ga.score,
                         maxScore: ga.maxScore,
                         isCorrect: ga.isCorrect,
-                        rubricScores: ga.details,
+                        rubricScores: ga.details as Prisma.InputJsonValue,
                     },
                 })
             }
@@ -135,7 +135,7 @@ export async function POST(
                     maxScore,
                     passed,
                     percentScore,
-                    scoreBreakdown: sectionScores,
+                    scoreBreakdown: sectionScores as unknown as Prisma.InputJsonValue,
                 },
             })
 
