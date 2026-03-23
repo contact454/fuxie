@@ -3,13 +3,9 @@
         "slug": "deutsch-a1-anfaenger",
         "title": "Deutsch A1 — Anfänger",
         "titleDe": "Deutsch A1 — Anfänger",
-        "description": "Khóa học tiếng Đức A1 cho người mới bắt đầu. 8 module, 60-150 giờ học, bao phủ 4 kỹ năng (Hören, Lesen, Schreiben, Sprechen) và chuẩn bị cho kỳ thi Goethe A1 / Telc A1 / ÖSD A1.",
+        "description": "Khóa học tiếng Đức A1 cho người mới bắt đầu. 8 module, bao phủ 6 kỹ năng (Nghe, Nói, Đọc, Viết, Từ vựng, Ngữ pháp) và chuẩn bị cho kỳ thi Goethe A1.",
         "cefrLevel": "A1",
-        "examTypes": [
-            "GOETHE",
-            "TELC",
-            "OESD"
-        ],
+        "examTypes": ["GOETHE", "TELC", "OESD"],
         "imageUrl": "/mascot/hero/hero-landing.png",
         "sortOrder": 1
     },
@@ -22,12 +18,13 @@
             "cefrLevel": "A1",
             "sortOrder": 1,
             "estimatedMinutes": 1200,
-            "vocabularyThemes": [
-                "a1-person"
-            ],
-            "grammarTopics": [
-                "a1-g01-alphabet-aussprache",
-                "a1-g02-personalpronomen-sein-haben"
+            "vocabularyThemes": ["a1-person"],
+            "grammarTopics": ["a1-g01-alphabet-aussprache", "a1-g02-personalpronomen-sein-haben"],
+            "skillLinks": [
+                {"skill": "listening", "label": "Hören", "labelVi": "Nghe hiểu", "href": "/listening?level=A1", "emoji": "🎧"},
+                {"skill": "speaking", "label": "Sprechen", "labelVi": "Luyện nói", "href": "/speaking?level=A1", "emoji": "🎙️"},
+                {"skill": "reading", "label": "Lesen", "labelVi": "Đọc hiểu", "href": "/reading?level=A1", "emoji": "📖"},
+                {"skill": "writing", "label": "Schreiben", "labelVi": "Luyện viết", "href": "/writing?level=A1", "emoji": "✍️"}
             ]
         },
         {
@@ -38,12 +35,13 @@
             "cefrLevel": "A1",
             "sortOrder": 2,
             "estimatedMinutes": 1200,
-            "vocabularyThemes": [
-                "a1-familie-freunde"
-            ],
-            "grammarTopics": [
-                "a1-g03-regelmaessige-verben",
-                "a1-g04-satzbau-fragen"
+            "vocabularyThemes": ["a1-familie-freunde"],
+            "grammarTopics": ["a1-g03-regelmaessige-verben", "a1-g04-satzbau-fragen"],
+            "skillLinks": [
+                {"skill": "listening", "label": "Hören", "labelVi": "Nghe hiểu", "href": "/listening?level=A1", "emoji": "🎧"},
+                {"skill": "speaking", "label": "Sprechen", "labelVi": "Luyện nói", "href": "/speaking?level=A1", "emoji": "🎙️"},
+                {"skill": "reading", "label": "Lesen", "labelVi": "Đọc hiểu", "href": "/reading?level=A1", "emoji": "📖"},
+                {"skill": "writing", "label": "Schreiben", "labelVi": "Luyện viết", "href": "/writing?level=A1", "emoji": "✍️"}
             ]
         },
         {
@@ -54,81 +52,82 @@
             "cefrLevel": "A1",
             "sortOrder": 3,
             "estimatedMinutes": 1200,
-            "vocabularyThemes": [
-                "a1-wohnen",
-                "a1-koerper-gesundheit"
-            ],
-            "grammarTopics": [
-                "a1-g05-artikel",
-                "a1-g06-verneinung",
-                "a1-g07-nomen-genus-plural"
+            "vocabularyThemes": ["a1-wohnen", "a1-koerper-gesundheit"],
+            "grammarTopics": ["a1-artikel", "a1-negation"],
+            "skillLinks": [
+                {"skill": "listening", "label": "Hören", "labelVi": "Nghe hiểu", "href": "/listening?level=A1", "emoji": "🎧"},
+                {"skill": "speaking", "label": "Sprechen", "labelVi": "Luyện nói", "href": "/speaking?level=A1", "emoji": "🎙️"},
+                {"skill": "reading", "label": "Lesen", "labelVi": "Đọc hiểu", "href": "/reading?level=A1", "emoji": "📖"},
+                {"skill": "writing", "label": "Schreiben", "labelVi": "Luyện viết", "href": "/writing?level=A1", "emoji": "✍️"}
             ]
         },
         {
             "slug": "m4-essen-und-trinken",
             "title": "Essen und Trinken",
             "titleDe": "Essen und Trinken",
-            "description": "Ăn uống, mua sắm, nhà hàng, động từ bất quy tắc, Modalverben.",
+            "description": "Ăn uống, mua sắm, nhà hàng, W-Fragen, Modalverben.",
             "cefrLevel": "A1",
             "sortOrder": 4,
             "estimatedMinutes": 1200,
-            "vocabularyThemes": [
-                "a1-essen-trinken",
-                "a1-einkaufen"
-            ],
-            "grammarTopics": [
-                "a1-g08-unregelmaessige-verben",
-                "a1-g09-modalverben"
+            "vocabularyThemes": ["a1-essen-trinken", "a1-einkaufen"],
+            "grammarTopics": ["a1-w-fragen", "a1-modalverben"],
+            "skillLinks": [
+                {"skill": "listening", "label": "Hören", "labelVi": "Nghe hiểu", "href": "/listening?level=A1", "emoji": "🎧"},
+                {"skill": "speaking", "label": "Sprechen", "labelVi": "Luyện nói", "href": "/speaking?level=A1", "emoji": "🎙️"},
+                {"skill": "reading", "label": "Lesen", "labelVi": "Đọc hiểu", "href": "/reading?level=A1", "emoji": "📖"},
+                {"skill": "writing", "label": "Schreiben", "labelVi": "Luyện viết", "href": "/writing?level=A1", "emoji": "✍️"}
             ]
         },
         {
             "slug": "m5-mein-tag",
             "title": "Mein Tag",
             "titleDe": "Mein Tag",
-            "description": "Thời gian, giải trí, hoạt động hàng ngày, Akkusativ, trennbare Verben.",
+            "description": "Thời gian, giải trí, Satzstellung, Akkusativ, trennbare Verben.",
             "cefrLevel": "A1",
             "sortOrder": 5,
             "estimatedMinutes": 1200,
-            "vocabularyThemes": [
-                "a1-zeitangaben",
-                "a1-freizeit"
-            ],
-            "grammarTopics": [
-                "a1-g10-akkusativ",
-                "a1-g12-trennbare-verben"
+            "vocabularyThemes": ["a1-zeitangaben", "a1-freizeit"],
+            "grammarTopics": ["a1-satzstellung", "a1-akkusativ", "a1-trennbare-verben"],
+            "skillLinks": [
+                {"skill": "listening", "label": "Hören", "labelVi": "Nghe hiểu", "href": "/listening?level=A1", "emoji": "🎧"},
+                {"skill": "speaking", "label": "Sprechen", "labelVi": "Luyện nói", "href": "/speaking?level=A1", "emoji": "🎙️"},
+                {"skill": "reading", "label": "Lesen", "labelVi": "Đọc hiểu", "href": "/reading?level=A1", "emoji": "📖"},
+                {"skill": "writing", "label": "Schreiben", "labelVi": "Luyện viết", "href": "/writing?level=A1", "emoji": "✍️"}
             ]
         },
         {
             "slug": "m6-unterwegs",
             "title": "Unterwegs in der Stadt",
             "titleDe": "Unterwegs in der Stadt",
-            "description": "Du lịch, giao thông, thành phố, đại từ sở hữu, môi trường.",
+            "description": "Du lịch, giao thông, thành phố, sein/haben, Personalpronomen.",
             "cefrLevel": "A1",
             "sortOrder": 6,
             "estimatedMinutes": 1200,
-            "vocabularyThemes": [
-                "a1-reisen-verkehr",
-                "a1-umwelt"
-            ],
-            "grammarTopics": [
-                "a1-g11-possessivpronomen"
+            "vocabularyThemes": ["a1-reisen-verkehr", "a1-umwelt"],
+            "grammarTopics": ["a1-sein-haben", "a1-personalpronomen", "a1-praesens"],
+            "skillLinks": [
+                {"skill": "listening", "label": "Hören", "labelVi": "Nghe hiểu", "href": "/listening?level=A1", "emoji": "🎧"},
+                {"skill": "speaking", "label": "Sprechen", "labelVi": "Luyện nói", "href": "/speaking?level=A1", "emoji": "🎙️"},
+                {"skill": "reading", "label": "Lesen", "labelVi": "Đọc hiểu", "href": "/reading?level=A1", "emoji": "📖"},
+                {"skill": "writing", "label": "Schreiben", "labelVi": "Luyện viết", "href": "/writing?level=A1", "emoji": "✍️"}
             ]
         },
         {
             "slug": "m7-alltag",
             "title": "Alltag: Arbeit, Schule, Service",
             "titleDe": "Alltag: Arbeit, Schule, Dienstleistungen",
-            "description": "Công việc, giáo dục, dịch vụ, giao tiếp — tổng hợp ngữ pháp G01-G12.",
+            "description": "Công việc, giáo dục, dịch vụ, giao tiếp — tổng hợp ngữ pháp A1.",
             "cefrLevel": "A1",
             "sortOrder": 7,
             "estimatedMinutes": 900,
-            "vocabularyThemes": [
-                "a1-arbeit-beruf",
-                "a1-ausbildung-lernen",
-                "a1-dienstleistungen",
-                "a1-kommunikation"
-            ],
-            "grammarTopics": []
+            "vocabularyThemes": ["a1-arbeit-beruf", "a1-ausbildung-lernen", "a1-dienstleistungen", "a1-kommunikation"],
+            "grammarTopics": [],
+            "skillLinks": [
+                {"skill": "listening", "label": "Hören", "labelVi": "Nghe hiểu", "href": "/listening?level=A1", "emoji": "🎧"},
+                {"skill": "speaking", "label": "Sprechen", "labelVi": "Luyện nói", "href": "/speaking?level=A1", "emoji": "🎙️"},
+                {"skill": "reading", "label": "Lesen", "labelVi": "Đọc hiểu", "href": "/reading?level=A1", "emoji": "📖"},
+                {"skill": "writing", "label": "Schreiben", "labelVi": "Luyện viết", "href": "/writing?level=A1", "emoji": "✍️"}
+            ]
         },
         {
             "slug": "m8-pruefungsvorbereitung",
@@ -139,7 +138,13 @@
             "sortOrder": 8,
             "estimatedMinutes": 900,
             "vocabularyThemes": [],
-            "grammarTopics": []
+            "grammarTopics": [],
+            "skillLinks": [
+                {"skill": "listening", "label": "Hören", "labelVi": "Nghe ôn thi", "href": "/listening?level=A1", "emoji": "🎧"},
+                {"skill": "speaking", "label": "Sprechen", "labelVi": "Nói ôn thi", "href": "/speaking?level=A1", "emoji": "🎙️"},
+                {"skill": "reading", "label": "Lesen", "labelVi": "Đọc ôn thi", "href": "/reading?level=A1", "emoji": "📖"},
+                {"skill": "writing", "label": "Schreiben", "labelVi": "Viết ôn thi", "href": "/writing?level=A1", "emoji": "✍️"}
+            ]
         }
     ]
 }

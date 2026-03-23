@@ -2,10 +2,20 @@
 
 import Link from 'next/link'
 
+interface SkillLink {
+    skill: 'listening' | 'reading' | 'writing' | 'speaking'
+    label: string
+    labelVi: string
+    href: string
+    emoji: string
+    count?: number
+}
+
 interface CourseData {
     courseTitle: string
     courseTitleDe: string
     courseDescription: string | null
+    cefrLevel?: string
     modules: Array<{
         id: string
         slug: string
@@ -29,6 +39,7 @@ interface CourseData {
             completedCount: number
             totalStars: number
         }>
+        skillLinks: SkillLink[]
         isUnlocked: boolean
     }>
 }
@@ -52,12 +63,18 @@ export function CourseClient({ data }: { data: CourseData }) {
     const totalGrammarLessons = data.modules.reduce((s, m) => s + m.grammarTopics.reduce((ss, t) => ss + t.lessonCount, 0), 0)
     const totalGrammarCompleted = data.modules.reduce((s, m) => s + m.grammarTopics.reduce((ss, t) => ss + t.completedCount, 0), 0)
 
+    const level = data.cefrLevel ?? 'A1'
+    const levelColors: Record<string, string> = {
+        A1: 'bg-green-500', A2: 'bg-teal-500', B1: 'bg-blue-500',
+        B2: 'bg-indigo-500', C1: 'bg-purple-500', C2: 'bg-rose-500',
+    }
+
     return (
         <div className="max-w-4xl mx-auto px-4 py-8">
             {/* Course Header */}
             <div className="mb-8">
                 <div className="flex items-center gap-3 mb-2">
-                    <span className="px-3 py-1 rounded-full bg-green-500 text-white text-sm font-bold">A1</span>
+                    <span className={`px-3 py-1 rounded-full ${levelColors[level] ?? 'bg-green-500'} text-white text-sm font-bold`}>{level}</span>
                     <h1 className="text-2xl sm:text-3xl font-bold text-gray-900">
                         📚 {data.courseTitleDe}
                     </h1>
@@ -240,8 +257,30 @@ export function CourseClient({ data }: { data: CourseData }) {
                                             </div>
                                         )}
 
+                                        {/* Skill Links (Listening, Reading, Writing, Speaking) */}
+                                        {mod.skillLinks && mod.skillLinks.length > 0 && (
+                                            <div className="mt-4">
+                                                <h3 className="text-xs font-semibold uppercase tracking-wider text-gray-400 mb-2">
+                                                    🎯 Kỹ năng
+                                                </h3>
+                                                <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
+                                                    {mod.skillLinks.map(skill => (
+                                                        <Link
+                                                            key={skill.skill}
+                                                            href={skill.href}
+                                                            className="flex flex-col items-center gap-1 rounded-xl bg-gray-50 hover:bg-gray-100 px-3 py-3 transition-colors text-center"
+                                                        >
+                                                            <span className="text-xl">{skill.emoji}</span>
+                                                            <span className="text-xs font-medium text-gray-700">{skill.label}</span>
+                                                            <span className="text-[10px] text-gray-400">{skill.labelVi}</span>
+                                                        </Link>
+                                                    ))}
+                                                </div>
+                                            </div>
+                                        )}
+
                                         {/* Empty state */}
-                                        {mod.vocabThemes.length === 0 && mod.grammarTopics.length === 0 && (
+                                        {mod.vocabThemes.length === 0 && mod.grammarTopics.length === 0 && (!mod.skillLinks || mod.skillLinks.length === 0) && (
                                             <p className="text-sm text-gray-400 italic">
                                                 Tổng ôn — không có nội dung mới
                                             </p>

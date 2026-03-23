@@ -5,9 +5,11 @@ import { getVocabularyThemeSrsProgress } from '@/lib/srs/stats'
 import { CourseClient } from '@/components/course/CourseClient'
 
 export const metadata = {
-    title: 'Fuxie 🦊 — Kurs A1',
-    description: 'Deutsch A1 — Khóa học tiếng Đức cho người mới bắt đầu',
+    title: 'Fuxie 🦊 — Kurs',
+    description: 'Deutsch Kurs — Lộ trình học tiếng Đức theo chuẩn CEFR',
 }
+
+type CefrLevel = 'A1' | 'A2' | 'B1' | 'B2' | 'C1' | 'C2'
 
 interface ModuleWithProgress {
     id: string
@@ -32,13 +34,32 @@ interface ModuleWithProgress {
         completedCount: number
         totalStars: number
     }>
+    skillLinks: Array<{
+        skill: string
+        label: string
+        labelVi: string
+        href: string
+        emoji: string
+    }>
     isUnlocked: boolean
 }
 
-async function getCourseData(userId: string) {
+// Course slugs per CEFR level
+const COURSE_SLUGS: Record<CefrLevel, string> = {
+    A1: 'deutsch-a1-anfaenger',
+    A2: 'deutsch-a2-grundstufe',
+    B1: 'deutsch-b1-mittelstufe',
+    B2: 'deutsch-b2-oberstufe',
+    C1: 'deutsch-c1-fortgeschritten',
+    C2: 'deutsch-c2-meisterstufe',
+}
+
+async function getCourseData(userId: string, level: CefrLevel) {
+    const courseSlug = COURSE_SLUGS[level]
+
     // 1. Fetch course + modules
     const course = await prisma.course.findFirst({
-        where: { slug: 'deutsch-a1-anfaenger' },
+        where: { slug: courseSlug },
         select: {
             title: true,
             titleDe: true,
@@ -60,28 +81,32 @@ async function getCourseData(userId: string) {
 
     if (!course) return null
 
-    // 2. Read course.json to get module → vocab/grammar mappings
-    // (modules in DB don't store theme/topic slugs, so we read from JSON)
+    // 2. Read course.json to get module → vocab/grammar/skill mappings
     const fs = await import('node:fs')
     const path = await import('node:path')
     const contentDir = path.join(process.cwd(), '..', '..', 'content')
-    const courseJsonPath = path.join(contentDir, 'a1', 'course.json')
-    let moduleMap: Record<string, { vocabularyThemes: string[]; grammarTopics: string[] }> = {}
+    const courseJsonPath = path.join(contentDir, level.toLowerCase(), 'course.json')
+    let moduleMap: Record<string, {
+        vocabularyThemes: string[]
+        grammarTopics: string[]
+        skillLinks?: Array<{ skill: string; label: string; labelVi: string; href: string; emoji: string }>
+    }> = {}
     try {
         const courseJson = JSON.parse(fs.readFileSync(courseJsonPath, 'utf-8'))
         for (const mod of courseJson.modules) {
             moduleMap[mod.slug] = {
                 vocabularyThemes: mod.vocabularyThemes ?? [],
                 grammarTopics: mod.grammarTopics ?? [],
+                skillLinks: mod.skillLinks ?? [],
             }
         }
     } catch {
         // fallback: empty mappings
     }
 
-    // 3. Fetch all vocab themes for A1
+    // 3. Fetch all vocab themes for this level
     const vocabThemes = await prisma.vocabularyTheme.findMany({
-        where: { cefrLevel: 'A1' },
+        where: { cefrLevel: level },
         select: {
             id: true,
             slug: true,
@@ -93,11 +118,11 @@ async function getCourseData(userId: string) {
     const vocabThemeMap = new Map(vocabThemes.map(t => [t.slug, t]))
 
     // 4. Fetch user's SRS cards for vocab progress
-    const themeProgress = await getVocabularyThemeSrsProgress(userId, 'A1')
+    const themeProgress = await getVocabularyThemeSrsProgress(userId, level)
 
-    // 5. Fetch grammar topics for A1
+    // 5. Fetch grammar topics for this level
     const grammarTopics = await prisma.grammarTopic.findMany({
-        where: { cefrLevel: 'A1' },
+        where: { cefrLevel: level },
         select: {
             id: true,
             slug: true,
@@ -108,7 +133,7 @@ async function getCourseData(userId: string) {
     })
     const grammarTopicMap = new Map(grammarTopics.map((t) => [t.slug, t]))
 
-    // 6. Fetch grammar lessons for A1
+    // 6. Fetch grammar lessons for this level
     const topicIds = grammarTopics.map((t) => t.id)
     const grammarLessons = topicIds.length > 0
         ? await prisma.grammarLesson.findMany({
@@ -144,7 +169,7 @@ async function getCourseData(userId: string) {
 
     // 8. Build modules with progress
     const modules: ModuleWithProgress[] = course.modules.map((mod, idx) => {
-        const mapping = moduleMap[mod.slug] ?? { vocabularyThemes: [], grammarTopics: [] }
+        const mapping = moduleMap[mod.slug] ?? { vocabularyThemes: [], grammarTopics: [], skillLinks: [] }
 
         // Resolve vocab themes
         const vocabThemesResolved = mapping.vocabularyThemes
@@ -181,7 +206,6 @@ async function getCourseData(userId: string) {
             .filter(Boolean) as ModuleWithProgress['grammarTopics']
 
         // Unlock logic: first module always unlocked, rest need previous module completed
-        // (simplified: always unlocked for now — real logic would check actual completion)
         const isUnlocked = idx === 0 || true
 
         return {
@@ -194,6 +218,7 @@ async function getCourseData(userId: string) {
             estimatedMinutes: mod.estimatedMinutes,
             vocabThemes: vocabThemesResolved,
             grammarTopics: grammarTopicsResolved,
+            skillLinks: mapping.skillLinks ?? [],
             isUnlocked,
         }
     })
@@ -202,23 +227,82 @@ async function getCourseData(userId: string) {
         courseTitle: course.title,
         courseTitleDe: course.titleDe ?? course.title,
         courseDescription: course.description,
+        cefrLevel: level,
         modules,
     }
 }
 
-export default async function CoursePage() {
+export default async function CoursePage({
+    searchParams,
+}: {
+    searchParams: Promise<{ level?: string }>
+}) {
     const serverUser = await getServerUser()
     if (!serverUser) redirect('/login')
 
-    const data = await getCourseData(serverUser.userId)
+    const params = await searchParams
+    const requestedLevel = (params.level?.toUpperCase() ?? '') as CefrLevel
+    const validLevels: CefrLevel[] = ['A1', 'A2', 'B1', 'B2', 'C1', 'C2']
+
+    // Determine level: from query param, or user's current level, or A1
+    let level: CefrLevel = 'A1'
+    if (validLevels.includes(requestedLevel)) {
+        level = requestedLevel
+    } else {
+        const profile = await prisma.userProfile.findFirst({
+            where: { userId: serverUser.userId },
+            select: { currentLevel: true },
+        })
+        level = (profile?.currentLevel ?? 'A1') as CefrLevel
+    }
+
+    const data = await getCourseData(serverUser.userId, level)
 
     if (!data) {
         return (
             <div className="max-w-4xl mx-auto px-4 py-16 text-center">
-                <p className="text-lg text-gray-500">Chưa có khóa học nào. Vui lòng seed data trước.</p>
+                <p className="text-lg text-gray-500 mb-4">Chưa có khóa học {level}. Vui lòng seed data trước.</p>
+                {/* Level selector */}
+                <div className="flex flex-wrap gap-2 justify-center">
+                    {validLevels.map(l => (
+                        <a
+                            key={l}
+                            href={`/course?level=${l}`}
+                            className={`px-4 py-2 rounded-full text-sm font-medium transition-colors
+                                ${l === level
+                                    ? 'bg-blue-500 text-white'
+                                    : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+                                }`}
+                        >
+                            {l}
+                        </a>
+                    ))}
+                </div>
             </div>
         )
     }
 
-    return <CourseClient data={data} />
+    return (
+        <div>
+            {/* Level selector */}
+            <div className="max-w-4xl mx-auto px-4 pt-6">
+                <div className="flex flex-wrap gap-2">
+                    {validLevels.map(l => (
+                        <a
+                            key={l}
+                            href={`/course?level=${l}`}
+                            className={`px-4 py-2 rounded-full text-sm font-medium transition-colors
+                                ${l === level
+                                    ? 'bg-blue-500 text-white shadow-md'
+                                    : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+                                }`}
+                        >
+                            {l}
+                        </a>
+                    ))}
+                </div>
+            </div>
+            <CourseClient data={data} />
+        </div>
+    )
 }

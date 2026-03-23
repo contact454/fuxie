@@ -1,0 +1,82 @@
+{
+    "course": {
+        "slug": "deutsch-c2-meisterstufe",
+        "title": "Deutsch C2 — Meisterstufe",
+        "titleDe": "Deutsch C2 — Meisterstufe",
+        "description": "Khóa học tiếng Đức C2. Partizipialkonstruktionen, Nominalstil, irreale Vergleiche, subjektloses Passiv, Wortbildung, Textkohärenz, Stilistik. Chuẩn bị Goethe C2 / GDS.",
+        "cefrLevel": "C2",
+        "examTypes": ["GOETHE", "GDS"],
+        "imageUrl": "/mascot/hero/hero-landing.png",
+        "sortOrder": 6
+    },
+    "modules": [
+        {
+            "slug": "m1-partizipial-und-nominalstil",
+            "title": "Partizipialkonstruktionen & Nominalstil",
+            "titleDe": "Erweiterte Partizipialkonstruktionen & Nominalstil vs. Verbalstil",
+            "description": "Phân từ mở rộng, thể DT vs thể ĐT, so sánh giả định.",
+            "cefrLevel": "C2",
+            "sortOrder": 1,
+            "estimatedMinutes": 2700,
+            "vocabularyThemes": [],
+            "grammarTopics": ["c2-erw-partizipialkonstruktionen", "c2-nominalstil-verbalstil", "c2-irreale-vergleichssaetze"],
+            "skillLinks": [
+                {"skill": "listening", "label": "Hören", "labelVi": "Nghe hiểu", "href": "/listening?level=C2", "emoji": "🎧"},
+                {"skill": "speaking", "label": "Sprechen", "labelVi": "Luyện nói", "href": "/speaking?level=C2", "emoji": "🎙️"},
+                {"skill": "reading", "label": "Lesen", "labelVi": "Đọc hiểu", "href": "/reading?level=C2", "emoji": "📖"},
+                {"skill": "writing", "label": "Schreiben", "labelVi": "Luyện viết", "href": "/writing?level=C2", "emoji": "✍️"}
+            ]
+        },
+        {
+            "slug": "m2-passiv-und-wortbildung",
+            "title": "Subjektloses Passiv & Wortbildung",
+            "titleDe": "Subjektlose Passivkonstruktionen & erweiterte Wortbildung",
+            "description": "BĐ ko chủ ngữ, tạo từ nâng cao, liên kết văn bản.",
+            "cefrLevel": "C2",
+            "sortOrder": 2,
+            "estimatedMinutes": 2700,
+            "vocabularyThemes": [],
+            "grammarTopics": ["c2-subjektloses-passiv", "c2-erweiterte-wortbildung", "c2-textkohaerenz"],
+            "skillLinks": [
+                {"skill": "listening", "label": "Hören", "labelVi": "Nghe hiểu", "href": "/listening?level=C2", "emoji": "🎧"},
+                {"skill": "speaking", "label": "Sprechen", "labelVi": "Luyện nói", "href": "/speaking?level=C2", "emoji": "🎙️"},
+                {"skill": "reading", "label": "Lesen", "labelVi": "Đọc hiểu", "href": "/reading?level=C2", "emoji": "📖"},
+                {"skill": "writing", "label": "Schreiben", "labelVi": "Luyện viết", "href": "/writing?level=C2", "emoji": "✍️"}
+            ]
+        },
+        {
+            "slug": "m3-stilistik-und-konjunktiv1",
+            "title": "Stilistik & Konjunktiv I erweitert",
+            "titleDe": "Stilistik & Register, Konjunktiv I erweitert",
+            "description": "Phong cách & ngữ vực, KI mở rộng.",
+            "cefrLevel": "C2",
+            "sortOrder": 3,
+            "estimatedMinutes": 2700,
+            "vocabularyThemes": [],
+            "grammarTopics": ["c2-stilistik-register", "c2-konjunktiv1-erweitert"],
+            "skillLinks": [
+                {"skill": "listening", "label": "Hören", "labelVi": "Nghe hiểu", "href": "/listening?level=C2", "emoji": "🎧"},
+                {"skill": "speaking", "label": "Sprechen", "labelVi": "Luyện nói", "href": "/speaking?level=C2", "emoji": "🎙️"},
+                {"skill": "reading", "label": "Lesen", "labelVi": "Đọc hiểu", "href": "/reading?level=C2", "emoji": "📖"},
+                {"skill": "writing", "label": "Schreiben", "labelVi": "Luyện viết", "href": "/writing?level=C2", "emoji": "✍️"}
+            ]
+        },
+        {
+            "slug": "m4-pruefungsvorbereitung-c2",
+            "title": "Prüfungsvorbereitung C2 / GDS",
+            "titleDe": "Prüfungsvorbereitung C2 / GDS",
+            "description": "Tổng ôn 4 kỹ năng, Mock exams Goethe C2 / GDS.",
+            "cefrLevel": "C2",
+            "sortOrder": 4,
+            "estimatedMinutes": 900,
+            "vocabularyThemes": [],
+            "grammarTopics": [],
+            "skillLinks": [
+                {"skill": "listening", "label": "Hören", "labelVi": "Nghe ôn thi", "href": "/listening?level=C2", "emoji": "🎧"},
+                {"skill": "speaking", "label": "Sprechen", "labelVi": "Nói ôn thi", "href": "/speaking?level=C2", "emoji": "🎙️"},
+                {"skill": "reading", "label": "Lesen", "labelVi": "Đọc ôn thi", "href": "/reading?level=C2", "emoji": "📖"},
+                {"skill": "writing", "label": "Schreiben", "labelVi": "Viết ôn thi", "href": "/writing?level=C2", "emoji": "✍️"}
+            ]
+        }
+    ]
+}
