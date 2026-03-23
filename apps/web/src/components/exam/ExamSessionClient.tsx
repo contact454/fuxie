@@ -40,6 +40,7 @@ import { MCRenderer } from './renderers/MCRenderer'
 import { TFRenderer } from './renderers/TFRenderer'
 import { MatchingRenderer } from './renderers/MatchingRenderer'
 import { GapFillRenderer } from './renderers/GapFillRenderer'
+import { ExamAudioPlayer } from './ExamAudioPlayer'
 
 const SKILL_EMOJI: Record<string, string> = {
     LESEN: '📖', HOEREN: '🎧', SCHREIBEN: '✍️', SPRECHEN: '🗣️',
@@ -244,6 +245,15 @@ export function ExamSessionClient({ examId }: { examId: string }) {
             {/* Task renderer */}
             {task && (
                 <div className="bg-white rounded-2xl ring-1 ring-gray-100 p-6 mb-6 min-h-[400px]">
+                    {/* Audio player for Hören tasks */}
+                    {(task.audioUrl || (task.contentJson as Record<string, unknown>).audioTranscript) && (
+                        <ExamAudioPlayer
+                            src={task.audioUrl}
+                            transcript={(task.contentJson as Record<string, unknown>).audioTranscript as string}
+                            maxPlays={2}
+                            label={section?.skill === 'HOEREN' ? 'Hörtext' : undefined}
+                        />
+                    )}
                     <h3 className="text-sm font-semibold text-gray-600 mb-4">{task.title}</h3>
 
                     {task.exerciseType === 'MULTIPLE_CHOICE' && (
