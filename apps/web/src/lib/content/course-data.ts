@@ -4,12 +4,13 @@
  */
 
 // Static imports — bundled at build time
-import a1Course from '../../../../../content/a1/course.json'
-import a2Course from '../../../../../content/a2/course.json'
-import b1Course from '../../../../../content/b1/course.json'
-import b2Course from '../../../../../content/b2/course.json'
-import c1Course from '../../../../../content/c1/course.json'
-import c2Course from '../../../../../content/c2/course.json'
+// Files are in apps/web/src/data/courses/ (copies from content/<level>/course.json)
+import a1Course from '@/data/courses/a1.json'
+import a2Course from '@/data/courses/a2.json'
+import b1Course from '@/data/courses/b1.json'
+import b2Course from '@/data/courses/b2.json'
+import c1Course from '@/data/courses/c1.json'
+import c2Course from '@/data/courses/c2.json'
 
 type CefrLevel = 'A1' | 'A2' | 'B1' | 'B2' | 'C1' | 'C2'
 
