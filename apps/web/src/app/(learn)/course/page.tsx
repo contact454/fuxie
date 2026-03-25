@@ -237,7 +237,18 @@ export default async function CoursePage({
         level = (profile?.currentLevel ?? 'A1') as CefrLevel
     }
 
-    const data = await getCourseData(serverUser.userId, level)
+    let data = null
+    try {
+        data = await getCourseData(serverUser.userId, level)
+    } catch (err: any) {
+        console.error('[CoursePage] getCourseData error:', err)
+        return (
+            <div className="max-w-4xl mx-auto px-4 py-16 text-center">
+                <p className="text-lg text-red-500 mb-4">Lỗi tải dữ liệu khóa học: {err?.message ?? 'Unknown error'}</p>
+                <pre className="text-xs text-left bg-gray-100 p-4 rounded max-h-40 overflow-auto">{err?.stack ?? ''}</pre>
+            </div>
+        )
+    }
 
     if (!data) {
         return (
