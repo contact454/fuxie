@@ -3,6 +3,7 @@ import { prisma } from '@fuxie/database'
 import { getServerUser } from '@/lib/auth/server-auth'
 import { getVocabularyThemeSrsProgress } from '@/lib/srs/stats'
 import { CourseClient } from '@/components/course/CourseClient'
+import { getCourseModuleMap } from '@/lib/content/course-data'
 
 export const metadata = {
     title: 'Fuxie 🦊 — Kurs',
@@ -81,44 +82,8 @@ async function getCourseData(userId: string, level: CefrLevel) {
 
     if (!course) return null
 
-    // 2. Read course.json to get module → vocab/grammar/skill mappings
-    let moduleMap: Record<string, {
-        vocabularyThemes: string[]
-        grammarTopics: string[]
-        skillLinks?: Array<{ skill: 'listening' | 'reading' | 'writing' | 'speaking'; label: string; labelVi: string; href: string; emoji: string }>
-    }> = {}
-    try {
-        // Dynamic import — will fail gracefully on Vercel serverless
-        const fs = await import('fs')
-        const path = await import('path')
-        // Try multiple potential paths for the content directory
-        const candidates = [
-            path.join(process.cwd(), '..', '..', 'content'),
-            path.join(process.cwd(), 'content'),
-            path.join(process.cwd(), '..', 'content'),
-        ]
-        let courseJsonPath = ''
-        for (const dir of candidates) {
-            const candidate = path.join(dir, level.toLowerCase(), 'course.json')
-            if (fs.existsSync(candidate)) {
-                courseJsonPath = candidate
-                break
-            }
-        }
-        if (courseJsonPath) {
-            const courseJson = JSON.parse(fs.readFileSync(courseJsonPath, 'utf-8'))
-            for (const mod of courseJson.modules) {
-                moduleMap[mod.slug] = {
-                    vocabularyThemes: mod.vocabularyThemes ?? [],
-                    grammarTopics: mod.grammarTopics ?? [],
-                    skillLinks: (mod.skillLinks ?? []) as Array<{ skill: 'listening' | 'reading' | 'writing' | 'speaking'; label: string; labelVi: string; href: string; emoji: string }>,
-                }
-            }
-        }
-    } catch {
-        // On Vercel or when content files are missing, proceed with empty mappings
-        moduleMap = {}
-    }
+    // 2. Get module → vocab/grammar/skill mappings from static imports
+    const moduleMap = getCourseModuleMap(level)
 
     // 3. Fetch all vocab themes for this level
     const vocabThemes = await prisma.vocabularyTheme.findMany({
