@@ -23,7 +23,7 @@ export interface ThemeSrsProgress {
 
 export const getVocabularyThemeSrsProgress = cache(async (userId: string, cefrLevel?: string) => {
     const levelFilter = cefrLevel
-        ? Prisma.sql`AND vi."cefrLevel" = ${cefrLevel}`
+        ? Prisma.sql`AND vi."cefrLevel" = ${cefrLevel}::"CefrLevel"`
         : Prisma.empty
 
     const rows = await prisma.$queryRaw<ThemeProgressRow[]>`
