@@ -18,23 +18,21 @@
       "id": "Q1",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Wie heißt eine Person im Gespräch 1?",
+      "question": "Wie viele Jahre Berufserfahrung hat Marion Schuster als Erzieherin?",
       "options": {
-        "a": "Marion",
-        "b": "Sabine",
-        "c": "Claudia"
+        "a": "Fünf Jahre.",
+        "b": "Zehn Jahre.",
+        "c": "Fünfundzwanzig Jahre."
       },
-      "answer": "a",
+      "answer": "c",
       "points": 1,
       "explanation": {
-        "de": "Man hört: \"Marion\".",
-        "vi": "Một người trong đoạn 1 tên là gì?",
-        "key_evidence": "Marion",
+        "de": "Marion Schuster stellt sich als Erzieherin mit fünfundzwanzig Jahren Berufserfahrung vor.",
+        "vi": "Marion Schuster giới thiệu mình là một nhà giáo dục có hai mươi lăm năm kinh nghiệm làm việc.",
+        "key_evidence": "Mein Name ist Marion Schuster, ich bin Erzieherin mit fünfundzwanzig Jahren Berufserfahrung.",
         "key_vocabulary": [
-          {
-            "word": "heißen",
-            "meaning": "to be called"
-          }
+          "Berufserfahrung",
+          "Erzieherin"
         ]
       }
     },
@@ -42,23 +40,22 @@
       "id": "Q2",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Wie heißt eine Person (Gespräch 1)?",
+      "question": "Wie viele Kinder werden maximal in der Tagespflege von einer Tagesmutter betreut?",
       "options": {
-        "a": "Passau",
-        "b": "Kiel",
-        "c": "Darmstadt"
+        "a": "Zwei Kinder.",
+        "b": "Fünf Kinder.",
+        "c": "Zehn Kinder."
       },
-      "answer": "c",
+      "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man den Namen \"Erzieherin\".",
-        "vi": "Một người trong đoạn 1 tên là gì?",
-        "key_evidence": "Erzieherin",
+        "de": "Die Rednerin erklärt, dass bei der Tagespflege maximal fünf Kinder von einer qualifizierten Tagesmutter betreut werden.",
+        "vi": "Người nói giải thích rằng trong dịch vụ chăm sóc ban ngày, tối đa năm trẻ em được chăm sóc bởi một người mẹ nuôi có trình độ.",
+        "key_evidence": "Bei der Tagespflege werden maximal fünf Kinder von einer qualifizierten Tagesmutter betreut.",
         "key_vocabulary": [
-          {
-            "word": "heißen",
-            "meaning": "to be called"
-          }
+          "maximal",
+          "Tagespflege",
+          "Tagesmutter"
         ]
       }
     },
@@ -66,23 +63,22 @@
       "id": "Q3",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Was macht die Person beruflich (Gespräch 1)?",
+      "question": "Welchen Betreuungsschlüssel empfiehlt die Rednerin für Kinder unter drei Jahren in Berlin?",
       "options": {
-        "a": "Erzieherin",
-        "b": "Architektin",
-        "c": "Arzt"
+        "a": "Eins zu vier.",
+        "b": "Eins zu neun.",
+        "c": "Eins zu zwölf."
       },
       "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Man hört: \"Erzieherin\".",
-        "vi": "Người đó làm nghề gì (đoạn 1)?",
-        "key_evidence": "Erzieherin",
+        "de": "Die Rednerin gibt an, dass der Betreuungsschlüssel für Kinder unter drei Jahren in Berlin bei eins zu vier liegen sollte.",
+        "vi": "Người nói cho biết tỷ lệ chăm sóc trẻ em dưới ba tuổi ở Berlin nên là một giáo viên trên bốn trẻ em.",
+        "key_evidence": "In Berlin sollte dieser Schlüssel bei Kindern unter drei Jahren bei eins zu vier liegen.",
         "key_vocabulary": [
-          {
-            "word": "Erzieherin",
-            "meaning": "Erzieherin"
-          }
+          "Betreuungsschlüssel",
+          "empfehlen",
+          "unter drei Jahren"
         ]
       }
     },
@@ -90,19 +86,46 @@
       "id": "Q4",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Welches Thema wird besprochen (Gespräch 1)?",
+      "question": "Wie hoch sind die monatlichen Kosten für eine Kita in Berlin?",
       "options": {
-        "a": "Einkaufen und Geld",
-        "b": "Familie und Freunde",
-        "c": "Essen und Trinken"
+        "a": "Zwischen null und vierhundert Euro.",
+        "b": "Sie ist beitragsfrei.",
+        "c": "Vierhundert Euro."
       },
-      "answer": "a",
+      "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Man hört: \"Einkaufen und Geld\".",
-        "vi": "Đoạn hội thoại 1 nói về chủ đề gì?",
-        "key_evidence": "Einkaufen und Geld",
-        "key_vocabulary": []
+        "de": "Die Rednerin informiert, dass die Kita in Berlin seit 2020 beitragsfrei ist.",
+        "vi": "Người nói thông báo rằng từ năm 2020, nhà trẻ (Kita) ở Berlin đã miễn phí.",
+        "key_evidence": "In Berlin ist die Kita seit zweitausendeundzwanzig beitragsfrei.",
+        "key_vocabulary": [
+          "Kosten",
+          "beitragsfrei",
+          "monatlich"
+        ]
+      }
+    },
+    {
+      "id": "Q5",
+      "gespraech": 1,
+      "type": "mc_abc",
+      "question": "Wann sollte man laut der Rednerin am besten einen Betreuungsplatz beantragen?",
+      "options": {
+        "a": "Ein halbes Jahr im Voraus.",
+        "b": "Ein Jahr im Voraus.",
+        "c": "Zwei Jahre im Voraus."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Die Rednerin rät, einen Platz am besten ein Jahr im Voraus zu beantragen.",
+        "vi": "Người nói khuyên nên đăng ký chỗ tốt nhất là một năm trước.",
+        "key_evidence": "Vergessen Sie nicht, rechtzeitig einen Platz zu beantragen, am besten ein Jahr im Voraus.",
+        "key_vocabulary": [
+          "beantragen",
+          "im Voraus",
+          "rechtzeitig"
+        ]
       }
     }
   ],

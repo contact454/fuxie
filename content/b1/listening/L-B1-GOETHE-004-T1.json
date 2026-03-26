@@ -16,82 +16,209 @@
   "questions": [
     {
       "id": "Q1",
-      "item": 1,
+      "gespraech": 1,
       "type": "richtig_falsch",
-      "statement": "Die Person kommt aus Stuttgart.",
+      "statement": "In Berlin sind öffentliche Kitas seit 2020 für Eltern komplett kostenlos.",
       "answer": "falsch",
       "points": 1,
       "explanation": {
-        "de": "Falsch. Die Aussage stimmt nicht mit dem Hörtext überein.",
-        "vi": "Sai.",
-        "key_evidence": "Die Person kommt aus Stuttgart.",
-        "key_vocabulary": []
+        "de": "Der Sprecher sagt, dass öffentliche Kitas in Berlin seit 2020 nichts mehr kosten, aber das Mittagessen müssen die Eltern noch bezahlen.",
+        "vi": "Người nói cho biết các nhà trẻ công lập ở Berlin từ năm 2020 không còn thu phí, nhưng phụ huynh vẫn phải trả tiền ăn trưa.",
+        "key_evidence": "In Berlin kosten öffentliche Kitas seit zweitausendeundzwanzig nichts mehr für die Eltern. Nur das Mittagessen müssen die Eltern noch bezahlen, etwa dreiundzwanzig Euro pro Monat.",
+        "key_vocabulary": [
+          "kostenlos",
+          "bezahlen",
+          "Mittagessen"
+        ]
       }
     },
     {
       "id": "Q2",
-      "item": 2,
-      "type": "richtig_falsch",
-      "statement": "Einkommen wird erwähnt.",
-      "answer": "richtig",
+      "gespraech": 1,
+      "type": "mc_abc",
+      "question": "Wie viel kostet das Mittagessen in öffentlichen Kitas in Berlin pro Monat?",
+      "options": {
+        "a": "Etwa 20 Euro.",
+        "b": "Etwa 23 Euro.",
+        "c": "Nichts."
+      },
+      "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Richtig. Die Aussage stimmt mit dem Hörtext überein.",
-        "vi": "Đúng.",
-        "key_evidence": "Einkommen wird erwähnt.",
-        "key_vocabulary": []
+        "de": "Der Sprecher erwähnt, dass das Mittagessen etwa dreiundzwanzig Euro pro Monat kostet.",
+        "vi": "Người nói đề cập rằng bữa ăn trưa có giá khoảng 23 Euro mỗi tháng.",
+        "key_evidence": "Nur das Mittagessen müssen die Eltern noch bezahlen, etwa dreiundzwanzig Euro pro Monat.",
+        "key_vocabulary": [
+          "kosten",
+          "pro Monat",
+          "Mittagessen"
+        ]
       }
     },
     {
       "id": "Q3",
-      "item": 3,
+      "gespraech": 2,
       "type": "richtig_falsch",
-      "statement": "Es geht um eine Reise.",
+      "statement": "Eine Tagesmutter betreut maximal zehn Kinder in ihrer Wohnung.",
       "answer": "falsch",
       "points": 1,
       "explanation": {
-        "de": "Falsch. Die Aussage stimmt nicht mit dem Hörtext überein.",
-        "vi": "Sai.",
-        "key_evidence": "Es geht um eine Reise.",
-        "key_vocabulary": []
+        "de": "Der Sprecher sagt, dass Tagesmütter kleine Gruppen von maximal fünf Kindern betreuen.",
+        "vi": "Người nói cho biết các bảo mẫu tại nhà chăm sóc các nhóm nhỏ tối đa năm trẻ em.",
+        "key_evidence": "Sie betreuen kleine Gruppen von maximal fünf Kindern in ihrer eigenen Wohnung.",
+        "key_vocabulary": [
+          "betreuen",
+          "maximal",
+          "Kinder"
+        ]
       }
     },
     {
       "id": "Q4",
-      "gespraech": 1,
+      "gespraech": 2,
       "type": "mc_abc",
-      "question": "Welches Thema wird besprochen (Gespräch 1)?",
+      "question": "Wie viele Stunden Ausbildung muss eine Tagesmutter mindestens absolvieren?",
       "options": {
-        "a": "Einkaufen und Geld",
-        "b": "Bildung und Schule",
-        "c": "Freizeit und Hobbys"
+        "a": "Hundert Stunden.",
+        "b": "Hundertdreißig Stunden.",
+        "c": "Fünf Stunden."
       },
-      "answer": "a",
+      "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Man hört: \"Einkaufen und Geld\".",
-        "vi": "Đoạn hội thoại 1 nói về chủ đề gì?",
-        "key_evidence": "Einkaufen und Geld",
-        "key_vocabulary": []
+        "de": "Der Sprecher informiert, dass Tagesmütter eine Ausbildung von mindestens hundertdreißig Stunden absolvieren müssen.",
+        "vi": "Người nói thông báo rằng các bảo mẫu tại nhà phải hoàn thành khóa đào tạo ít nhất 130 giờ.",
+        "key_evidence": "Tagesmütter müssen eine spezielle Ausbildung von mindestens hundertdreißig Stunden absolvieren.",
+        "key_vocabulary": [
+          "Ausbildung",
+          "mindestens",
+          "absolvieren"
+        ]
       }
     },
     {
       "id": "Q5",
-      "gespraech": 1,
-      "type": "mc_abc",
-      "question": "Welches Thema wird besprochen (Gespräch 1)?",
-      "options": {
-        "a": "Düsseldorf",
-        "b": "Aachen",
-        "c": "Bamberg"
-      },
-      "answer": "a",
+      "gespraech": 3,
+      "type": "richtig_falsch",
+      "statement": "Laut Studien haben Mütter während der Pandemie weniger Erziehungsarbeit im Haushalt übernommen als Väter.",
+      "answer": "falsch",
       "points": 1,
       "explanation": {
-        "de": "Das Hauptthema ist \"Einkaufen\".",
-        "vi": "Đoạn hội thoại 1 nói về chủ đề gì?",
-        "key_evidence": "Einkaufen",
-        "key_vocabulary": []
+        "de": "Der Sprecher erklärt, dass Mütter nach wie vor den größeren Teil der Erziehungsarbeit im Haushalt tragen, obwohl Väter mehr Betreuungsarbeit übernommen haben.",
+        "vi": "Người nói giải thích rằng các bà mẹ vẫn đảm nhận phần lớn công việc nuôi dạy con cái trong gia đình, mặc dù các ông bố đã đảm nhận nhiều công việc chăm sóc hơn.",
+        "key_evidence": "Trotzdem tragen Mütter nach wie vor den größeren Teil der Erziehungsarbeit im Haushalt.",
+        "key_vocabulary": [
+          "Studien",
+          "Erziehungsarbeit",
+          "übernehmen"
+        ]
+      }
+    },
+    {
+      "id": "Q6",
+      "gespraech": 3,
+      "type": "mc_abc",
+      "question": "Was empfehlen Experten für Eltern, die im Homeoffice arbeiten und Kinder betreuen?",
+      "options": {
+        "a": "Flexible Arbeitszeiten ohne feste Routinen.",
+        "b": "Klare Strukturen und feste Arbeitszeiten.",
+        "c": "Dass nur ein Elternteil die Kinder betreut."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Der Sprecher sagt, dass Experten raten, klare Strukturen und feste Arbeitszeiten im Homeoffice einzuhalten.",
+        "vi": "Người nói cho biết các chuyên gia khuyên nên duy trì cấu trúc rõ ràng và giờ làm việc cố định khi làm việc tại nhà.",
+        "key_evidence": "Experten raten, klare Strukturen und feste Arbeitszeiten im Homeoffice einzuhalten.",
+        "key_vocabulary": [
+          "Experten",
+          "empfehlen",
+          "Homeoffice",
+          "Arbeitszeiten"
+        ]
+      }
+    },
+    {
+      "id": "Q7",
+      "gespraech": 4,
+      "type": "richtig_falsch",
+      "statement": "In Schweden können Väter ihre reservierten Elternzeit-Tage auf die Mutter übertragen.",
+      "answer": "falsch",
+      "points": 1,
+      "explanation": {
+        "de": "Der Sprecher sagt, dass neunzig Tage Elternzeit für den Vater reserviert sind und nicht übertragbar sind.",
+        "vi": "Người nói cho biết 90 ngày nghỉ phép dành cho cha không thể chuyển nhượng được.",
+        "key_evidence": "Davon sind neunzig Tage für den Vater reserviert, die nicht übertragbar sind.",
+        "key_vocabulary": [
+          "reserviert",
+          "übertragen",
+          "Elternzeit"
+        ]
+      }
+    },
+    {
+      "id": "Q8",
+      "gespraech": 4,
+      "type": "mc_abc",
+      "question": "Wie lange beträgt die maximale Elternzeit in Deutschland?",
+      "options": {
+        "a": "Vierhundertachtzig Tage.",
+        "b": "Vierzehn Monate.",
+        "c": "Neunzig Tage."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Der Sprecher informiert, dass die Elternzeit in Deutschland maximal vierzehn Monate beträgt.",
+        "vi": "Người nói thông báo rằng thời gian nghỉ phép của cha mẹ ở Đức tối đa là 14 tháng.",
+        "key_evidence": "In Deutschland beträgt die Elternzeit maximal vierzehn Monate mit einem Elterngeld von fünfundsechzig Prozent.",
+        "key_vocabulary": [
+          "maximal",
+          "Elternzeit",
+          "betragen"
+        ]
+      }
+    },
+    {
+      "id": "Q9",
+      "gespraech": 5,
+      "type": "richtig_falsch",
+      "statement": "Experten empfehlen, Kindern ab dem zweiten Lebensjahr täglich mindestens fünfzehn Minuten vorzulesen.",
+      "answer": "falsch",
+      "points": 1,
+      "explanation": {
+        "de": "Der Sprecher sagt, dass Experten empfehlen, Kindern ab dem ersten Lebensjahr täglich mindestens fünfzehn Minuten vorzulesen.",
+        "vi": "Người nói cho biết các chuyên gia khuyên nên đọc sách cho trẻ em ít nhất 15 phút mỗi ngày, bắt đầu từ một tuổi.",
+        "key_evidence": "Experten empfehlen, Kindern ab dem ersten Lebensjahr täglich mindestens fünfzehn Minuten vorzulesen.",
+        "key_vocabulary": [
+          "Experten",
+          "empfehlen",
+          "vorlesen",
+          "Lebensjahr"
+        ]
+      }
+    },
+    {
+      "id": "Q10",
+      "gespraech": 5,
+      "type": "mc_abc",
+      "question": "Was bietet die Stiftung Lesen für Familien mit kleinen Kindern an?",
+      "options": {
+        "a": "Kostenlose Sprachkurse.",
+        "b": "Kostenlose Vorlesepakete.",
+        "c": "Spezielle Programme für Kitas."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Der Sprecher erwähnt, dass die Stiftung Lesen kostenlose Vorlesepakete für Familien mit kleinen Kindern anbietet.",
+        "vi": "Người nói đề cập rằng Quỹ Đọc sách cung cấp các gói đọc sách miễn phí cho các gia đình có trẻ nhỏ.",
+        "key_evidence": "Die Stiftung Lesen bietet kostenlose Vorlesepakete für Familien mit kleinen Kindern an.",
+        "key_vocabulary": [
+          "Stiftung",
+          "kostenlos",
+          "Vorlesepakete"
+        ]
       }
     }
   ],

@@ -18,18 +18,18 @@
       "id": "Q1",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Welches Thema wird besprochen (Gespräch 1)?",
+      "question": "Wer sagt das: \"In Deutschland ist eine duale Ausbildung ein hervorragender Weg in den Beruf\"?",
       "options": {
-        "a": "Medien und Kommunikation",
-        "b": "Einkaufen und Geld",
-        "c": "Bildung und Schule"
+        "a": "Der Moderator",
+        "b": "Frau Meier",
+        "c": "Herr Baumann"
       },
       "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Man hört: \"Einkaufen und Geld\".",
-        "vi": "Đoạn hội thoại 1 nói về chủ đề gì?",
-        "key_evidence": "Einkaufen und Geld",
+        "de": "Frau Meier sagt, dass eine duale Ausbildung ein hervorragender Weg in den Beruf ist.",
+        "vi": "Bà Meier nói rằng đào tạo kép là một con đường tuyệt vời để vào nghề.",
+        "key_evidence": "In Deutschland ist eine duale Ausbildung ein hervorragender Weg in den Beruf.",
         "key_vocabulary": []
       }
     },
@@ -37,72 +37,133 @@
       "id": "Q2",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Wie heißt eine Person im Gespräch 1?",
+      "question": "Wer sagt das: \"Akademiker verdienen im Laufe ihres Lebens im Durchschnitt deutlich mehr als Nicht-Akademiker\"?",
       "options": {
-        "a": "Meier",
-        "b": "Claudia",
-        "c": "Martin"
+        "a": "Der Moderator",
+        "b": "Frau Meier",
+        "c": "Herr Baumann"
       },
-      "answer": "a",
+      "answer": "c",
       "points": 1,
       "explanation": {
-        "de": "Man hört: \"Meier\".",
-        "vi": "Một người trong đoạn 1 tên là gì?",
-        "key_evidence": "Meier",
-        "key_vocabulary": [
-          {
-            "word": "heißen",
-            "meaning": "to be called"
-          }
-        ]
+        "de": "Herr Baumann erwähnt, dass Akademiker im Durchschnitt mehr verdienen.",
+        "vi": "Ông Baumann đề cập rằng các học giả kiếm được nhiều tiền hơn trung bình.",
+        "key_evidence": "Aber Akademiker verdienen im Laufe ihres Lebens im Durchschnitt deutlich mehr als Nicht-Akademiker.",
+        "key_vocabulary": []
       }
     },
     {
       "id": "Q3",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Wie heißt eine Person (Gespräch 1)?",
+      "question": "Wer sagt das: \"Ein Meister im Handwerk kann mehr verdienen als mancher Akademiker\"?",
       "options": {
-        "a": "Warschau",
-        "b": "Frankreich",
-        "c": "Russland"
+        "a": "Der Moderator",
+        "b": "Frau Meier",
+        "c": "Herr Baumann"
       },
       "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man den Namen \"Meier\".",
-        "vi": "Một người trong đoạn 1 tên là gì?",
-        "key_evidence": "Meier",
-        "key_vocabulary": [
-          {
-            "word": "heißen",
-            "meaning": "to be called"
-          }
-        ]
+        "de": "Der Moderator sagt, dass ein Meister im Handwerk mehr verdienen kann.",
+        "vi": "Người điều hành nói rằng một thợ thủ công bậc thầy có thể kiếm được nhiều tiền hơn.",
+        "key_evidence": "Ein Meister im Handwerk kann mehr verdienen als mancher Akademiker.",
+        "key_vocabulary": []
       }
     },
     {
       "id": "Q4",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Was macht die Person beruflich (Gespräch 1)?",
+      "question": "Wer sagt das: \"Ein Elektromeister mit eigenem Betrieb verdient oft über sechzigtausend Euro im Jahr\"?",
       "options": {
-        "a": "Koch",
-        "b": "Sekretärin",
-        "c": "Nicht"
+        "a": "Der Moderator",
+        "b": "Frau Meier",
+        "c": "Herr Baumann"
       },
       "answer": "c",
       "points": 1,
       "explanation": {
-        "de": "Man hört: \"Nicht\".",
-        "vi": "Người đó làm nghề gì (đoạn 1)?",
-        "key_evidence": "Nicht",
-        "key_vocabulary": [
-          {
-            "word": "Nicht",
-            "meaning": "Nicht"
-          }
-        ]
+        "de": "Herr Baumann gibt ein konkretes Beispiel für das Einkommen eines Elektromeisters.",
+        "vi": "Ông Baumann đưa ra một ví dụ cụ thể về thu nhập của một thợ điện bậc thầy.",
+        "key_evidence": "Ein Elektromeister mit eigenem Betrieb verdient oft über sechzigtausend Euro im Jahr.",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q5",
+      "gespraech": 1,
+      "type": "mc_abc",
+      "question": "Wer sagt das: \"Wenn Sie gern praktisch arbeiten, ist eine Ausbildung ideal\"?",
+      "options": {
+        "a": "Der Moderator",
+        "b": "Frau Meier",
+        "c": "Herr Baumann"
+      },
+      "answer": "a",
+      "points": 1,
+      "explanation": {
+        "de": "Der Moderator gibt den Rat, dass eine Ausbildung ideal ist, wenn man gern praktisch arbeitet.",
+        "vi": "Người điều hành khuyên rằng đào tạo nghề là lý tưởng nếu bạn thích làm việc thực tế.",
+        "key_evidence": "Wenn Sie gern praktisch arbeiten, ist eine Ausbildung ideal.",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q6",
+      "gespraech": 1,
+      "type": "mc_abc",
+      "question": "Wer sagt das: \"Ausländische Abschlüsse müssen erst anerkannt werden\"?",
+      "options": {
+        "a": "Der Moderator",
+        "b": "Frau Meier",
+        "c": "Herr Baumann"
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Frau Meier erklärt, dass ausländische Abschlüsse zuerst anerkannt werden müssen.",
+        "vi": "Bà Meier giải thích rằng bằng cấp nước ngoài phải được công nhận trước.",
+        "key_evidence": "Ausländische Abschlüsse müssen erst anerkannt werden.",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q7",
+      "gespraech": 1,
+      "type": "mc_abc",
+      "question": "Wer sagt das: \"Hören Sie nie auf zu lernen! Fort- und Weiterbildung ist in jedem Beruf wichtig\"?",
+      "options": {
+        "a": "Der Moderator",
+        "b": "Frau Meier",
+        "c": "Herr Baumann"
+      },
+      "answer": "c",
+      "points": 1,
+      "explanation": {
+        "de": "Herr Baumann gibt den abschließenden Rat, nie aufzuhören zu lernen.",
+        "vi": "Ông Baumann đưa ra lời khuyên cuối cùng là đừng bao giờ ngừng học hỏi.",
+        "key_evidence": "Hören Sie nie auf zu lernen! Fort- und Weiterbildung ist in jedem Beruf wichtig.",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q8",
+      "gespraech": 1,
+      "type": "mc_abc",
+      "question": "Wer sagt das: \"Ein gutes Bewerbungsgespräch ist der Schlüssel zu Ihrem Traumjob\"?",
+      "options": {
+        "a": "Der Moderator",
+        "b": "Frau Meier",
+        "c": "Herr Baumann"
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Frau Meier betont die Wichtigkeit eines guten Bewerbungsgesprächs.",
+        "vi": "Bà Meier nhấn mạnh tầm quan trọng của một cuộc phỏng vấn xin việc tốt.",
+        "key_evidence": "Und vergessen Sie nicht: Ein gutes Bewerbungsgespräch ist der Schlüssel zu Ihrem Traumjob!",
+        "key_vocabulary": []
       }
     }
   ],

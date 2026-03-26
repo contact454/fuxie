@@ -16,82 +16,207 @@
   "questions": [
     {
       "id": "Q1",
-      "item": 1,
+      "gespraech": 1,
       "type": "richtig_falsch",
-      "statement": "Die Person kommt aus Konstanz.",
-      "answer": "falsch",
+      "statement": "Reduzierte Ware kann man beim Sommerschlussverkauf oft nicht umtauschen.",
+      "answer": "richtig",
       "points": 1,
       "explanation": {
-        "de": "Falsch. Die Aussage stimmt nicht mit dem Hörtext überein.",
-        "vi": "Sai.",
-        "key_evidence": "Die Person kommt aus Konstanz.",
-        "key_vocabulary": []
+        "de": "Der Sprecher sagt: 'reduzierte Ware ist oft vom Umtausch ausgeschlossen'.",
+        "vi": "Người nói nói: 'hàng giảm giá thường không được đổi trả'.",
+        "key_evidence": "reduzierte Ware ist oft vom Umtausch ausgeschlossen.",
+        "key_vocabulary": [
+          "reduziert",
+          "Umtausch",
+          "ausgeschlossen"
+        ]
       }
     },
     {
       "id": "Q2",
-      "item": 2,
-      "type": "richtig_falsch",
-      "statement": "Produkt wird erwähnt.",
-      "answer": "richtig",
+      "gespraech": 1,
+      "type": "mc_abc",
+      "question": "Wann findet man die besten Angebote beim Sommerschlussverkauf?",
+      "options": {
+        "a": "Am ersten und am letzten Tag.",
+        "b": "Nur am ersten Tag.",
+        "c": "Am fünfzehnten und am achtundzwanzigsten."
+      },
+      "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Richtig. Die Aussage stimmt mit dem Hörtext überein.",
-        "vi": "Đúng.",
-        "key_evidence": "Produkt wird erwähnt.",
-        "key_vocabulary": []
+        "de": "Der Sprecher sagt: 'Die besten Angebote gibt es erfahrungsgemäß am ersten und am letzten Tag des Schlussverkaufs'.",
+        "vi": "Người nói nói: 'Theo kinh nghiệm, những ưu đãi tốt nhất có vào ngày đầu tiên và ngày cuối cùng của đợt giảm giá'.",
+        "key_evidence": "Die besten Angebote gibt es erfahrungsgemäß am ersten und am letzten Tag des Schlussverkaufs.",
+        "key_vocabulary": [
+          "Angebote",
+          "erfahrungsgemäß",
+          "Schlussverkauf"
+        ]
       }
     },
     {
       "id": "Q3",
-      "item": 3,
+      "gespraech": 2,
       "type": "richtig_falsch",
-      "statement": "Die Person kommt aus Essen.",
+      "statement": "Man muss immer einen Grund nennen, wenn man online bestellte Ware zurückschicken möchte.",
       "answer": "falsch",
       "points": 1,
       "explanation": {
-        "de": "Falsch. Die Aussage stimmt nicht mit dem Hörtext überein.",
-        "vi": "Sai.",
-        "key_evidence": "Die Person kommt aus Essen.",
-        "key_vocabulary": []
+        "de": "Der Sprecher sagt: 'Sie können die Ware ohne Angabe von Gründen zurückschicken'.",
+        "vi": "Người nói nói: 'Bạn có thể gửi trả hàng mà không cần nêu lý do'.",
+        "key_evidence": "Das bedeutet, Sie können die Ware ohne Angabe von Gründen zurückschicken.",
+        "key_vocabulary": [
+          "Angabe",
+          "Gründen",
+          "zurückschicken"
+        ]
       }
     },
     {
       "id": "Q4",
-      "gespraech": 1,
+      "gespraech": 2,
       "type": "mc_abc",
-      "question": "Welches Thema wird besprochen (Gespräch 1)?",
+      "question": "Wann beginnt die Frist für das Widerrufsrecht bei Online-Bestellungen?",
       "options": {
-        "a": "Gesundheit und Körper",
-        "b": "Familie und Freunde",
-        "c": "Einkaufen und Geld"
-      },
-      "answer": "c",
-      "points": 1,
-      "explanation": {
-        "de": "Man hört: \"Einkaufen und Geld\".",
-        "vi": "Đoạn hội thoại 1 nói về chủ đề gì?",
-        "key_evidence": "Einkaufen und Geld",
-        "key_vocabulary": []
-      }
-    },
-    {
-      "id": "Q5",
-      "gespraech": 1,
-      "type": "mc_abc",
-      "question": "Welches Thema wird besprochen (Gespräch 1)?",
-      "options": {
-        "a": "Marokko",
-        "b": "Berlin",
-        "c": "Linz"
+        "a": "Am Tag der Bestellung.",
+        "b": "An dem Tag, an dem man die Ware erhalten hat.",
+        "c": "Vierzehn Tage nach der Lieferung."
       },
       "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Das Hauptthema ist \"Einkaufen\".",
-        "vi": "Đoạn hội thoại 1 nói về chủ đề gì?",
-        "key_evidence": "Einkaufen",
-        "key_vocabulary": []
+        "de": "Der Sprecher sagt: 'Die Widerrufsfrist beginnt an dem Tag, an dem Sie die Ware erhalten haben'.",
+        "vi": "Người nói nói: 'Thời hạn rút lại bắt đầu vào ngày bạn nhận được hàng'.",
+        "key_evidence": "Die Widerrufsfrist beginnt an dem Tag, an dem Sie die Ware erhalten haben.",
+        "key_vocabulary": [
+          "Widerrufsfrist",
+          "beginnt",
+          "erhalten"
+        ]
+      }
+    },
+    {
+      "id": "Q5",
+      "gespraech": 3,
+      "type": "richtig_falsch",
+      "statement": "Nach zwölf Monaten muss der Käufer beweisen, dass ein Mangel schon beim Kauf bestand.",
+      "answer": "richtig",
+      "points": 1,
+      "explanation": {
+        "de": "Der Sprecher sagt: 'Nach zwölf Monaten kehrt sich die Beweislast um und Sie müssen den Mangel nachweisen'.",
+        "vi": "Người nói nói: 'Sau mười hai tháng, gánh nặng chứng minh sẽ đảo ngược và bạn phải chứng minh lỗi'.",
+        "key_evidence": "Nach zwölf Monaten kehrt sich die Beweislast um und Sie müssen den Mangel nachweisen.",
+        "key_vocabulary": [
+          "Beweislast",
+          "Mangel",
+          "nachweisen"
+        ]
+      }
+    },
+    {
+      "id": "Q6",
+      "gespraech": 3,
+      "type": "mc_abc",
+      "question": "Was ist das wichtigste Dokument, wenn man eine Reklamation hat?",
+      "options": {
+        "a": "Der Kassenbon.",
+        "b": "Die Originalverpackung.",
+        "c": "Ein Foto des kaputten Geräts."
+      },
+      "answer": "a",
+      "points": 1,
+      "explanation": {
+        "de": "Der Sprecher sagt: 'Bewahren Sie immer den Kassenbon auf, er ist Ihr wichtigstes Beweismittel'.",
+        "vi": "Người nói nói: 'Hãy luôn giữ hóa đơn, đó là bằng chứng quan trọng nhất của bạn'.",
+        "key_evidence": "Bewahren Sie immer den Kassenbon auf, er ist Ihr wichtigstes Beweismittel.",
+        "key_vocabulary": [
+          "Kassenbon",
+          "Beweismittel",
+          "Reklamation"
+        ]
+      }
+    },
+    {
+      "id": "Q7",
+      "gespraech": 4,
+      "type": "richtig_falsch",
+      "statement": "In Repair-Cafés kann man kaputte Geräte reparieren lassen und spart dabei Geld.",
+      "answer": "richtig",
+      "points": 1,
+      "explanation": {
+        "de": "Der Sprecher sagt: 'dort repariert man kaputte Geräte ehrenamtlich. Das spart Geld und schont die Umwelt'.",
+        "vi": "Người nói nói: 'ở đó người ta sửa chữa các thiết bị hỏng một cách tự nguyện. Điều đó tiết kiệm tiền và bảo vệ môi trường'.",
+        "key_evidence": "Auch Repair-Cafés werden immer beliebter, dort repariert man kaputte Geräte ehrenamtlich. Das spart Geld und schont die Umwelt.",
+        "key_vocabulary": [
+          "reparieren",
+          "spart Geld",
+          "schont die Umwelt"
+        ]
+      }
+    },
+    {
+      "id": "Q8",
+      "gespraech": 4,
+      "type": "mc_abc",
+      "question": "Was ist ein Vorteil, wenn man ein Repair-Café besucht?",
+      "options": {
+        "a": "Man kann dort neue Geräte kaufen.",
+        "b": "Man lernt etwas über Technik und Reparaturen.",
+        "c": "Man bekommt dort Geld für alte Geräte."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Der Sprecher sagt: 'Und man lernt dabei noch etwas über Technik'.",
+        "vi": "Người nói nói: 'Và bạn còn học được điều gì đó về kỹ thuật'.",
+        "key_evidence": "Und man lernt dabei noch etwas über Technik.",
+        "key_vocabulary": [
+          "Vorteil",
+          "lernt",
+          "Technik"
+        ]
+      }
+    },
+    {
+      "id": "Q9",
+      "gespraech": 5,
+      "type": "richtig_falsch",
+      "statement": "Wenn man einen verdächtigen Anruf bekommt, sollte man sofort auflegen und die Polizei informieren.",
+      "answer": "richtig",
+      "points": 1,
+      "explanation": {
+        "de": "Der Sprecher sagt: 'Wenn Sie einen verdächtigen Anruf erhalten, legen Sie sofort auf und informieren die Polizei'.",
+        "vi": "Người nói nói: 'Nếu bạn nhận được một cuộc gọi đáng ngờ, hãy cúp máy ngay lập tức và thông báo cho cảnh sát'.",
+        "key_evidence": "Wenn Sie einen verdächtigen Anruf erhalten, legen Sie sofort auf und informieren die Polizei.",
+        "key_vocabulary": [
+          "verdächtigen Anruf",
+          "auflegen",
+          "informieren"
+        ]
+      }
+    },
+    {
+      "id": "Q10",
+      "gespraech": 5,
+      "type": "mc_abc",
+      "question": "Was sollte man bei einem betrügerischen Anruf auf keinen Fall machen?",
+      "options": {
+        "a": "Persönliche Daten oder Kontodaten am Telefon preisgeben.",
+        "b": "Den Anruf sofort beenden.",
+        "c": "Die Polizei informieren."
+      },
+      "answer": "a",
+      "points": 1,
+      "explanation": {
+        "de": "Der Sprecher sagt: 'Geben Sie niemals Kontodaten oder persönliche Informationen am Telefon an Fremde'.",
+        "vi": "Người nói nói: 'Tuyệt đối không cung cấp thông tin tài khoản hoặc thông tin cá nhân qua điện thoại cho người lạ'.",
+        "key_evidence": "Geben Sie niemals Kontodaten oder persönliche Informationen am Telefon an Fremde.",
+        "key_vocabulary": [
+          "betrügerisch",
+          "Kontodaten",
+          "preisgeben"
+        ]
       }
     }
   ],

@@ -18,42 +18,45 @@
       "id": "Q1",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Welches Thema wird besprochen (Gespräch 1)?",
+      "question": "Wer sagt das: Deutschland hat einen guten Ruf beim Umweltschutz, aber es gibt noch viel zu tun?",
       "options": {
-        "a": "Einkaufen und Geld",
-        "b": "Medien und Kommunikation",
-        "c": "Freizeit und Hobbys"
+        "a": "Der Moderator",
+        "b": "Frau Dr. Sommer",
+        "c": "Herr Zimmermann"
       },
-      "answer": "a",
+      "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Man hört: \"Einkaufen und Geld\".",
-        "vi": "Đoạn hội thoại 1 nói về chủ đề gì?",
-        "key_evidence": "Einkaufen und Geld",
-        "key_vocabulary": []
+        "de": "Frau Dr. Sommer sagt, dass Deutschland einen guten Ruf beim Umweltschutz hat, aber noch viel getan werden muss.",
+        "vi": "Bà Dr. Sommer nói rằng Đức có danh tiếng tốt về bảo vệ môi trường, nhưng vẫn còn nhiều việc phải làm.",
+        "key_evidence": "Deutschland hat einen guten Ruf beim Umweltschutz, aber es gibt noch viel zu tun.",
+        "key_vocabulary": [
+          "Umweltschutz",
+          "Ruf"
+        ]
       }
     },
     {
       "id": "Q2",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Wie heißt eine Person im Gespräch 1?",
+      "question": "Wer sagt das: Beim Recycling sind wir Weltspitze, aber beim CO2-Ausstoß pro Kopf liegen wir im oberen Drittel?",
       "options": {
-        "a": "Lisa",
-        "b": "Julia",
-        "c": "Dr"
+        "a": "Der Moderator",
+        "b": "Frau Dr. Sommer",
+        "c": "Herr Zimmermann"
       },
-      "answer": "c",
+      "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Man hört: \"Dr\".",
-        "vi": "Một người trong đoạn 1 tên là gì?",
-        "key_evidence": "Dr",
+        "de": "Frau Dr. Sommer gibt diese Informationen über Deutschlands Position beim Recycling und CO2-Ausstoß.",
+        "vi": "Bà Dr. Sommer cung cấp thông tin này về vị trí của Đức trong việc tái chế và lượng khí thải CO2.",
+        "key_evidence": "Beim Recycling sind wir Weltspitze, aber beim CO2-Ausstoß pro Kopf liegen wir im oberen Drittel.",
         "key_vocabulary": [
-          {
-            "word": "heißen",
-            "meaning": "to be called"
-          }
+          "Recycling",
+          "Weltspitze",
+          "CO2-Ausstoß",
+          "pro Kopf"
         ]
       }
     },
@@ -61,23 +64,134 @@
       "id": "Q3",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Wie heißt eine Person (Gespräch 1)?",
+      "question": "Wer sagt das: Wir müssen schneller sein [beim Kohleausstieg]. Jedes Jahr Kohleverbrennung schadet dem Klima unwiderruflich?",
       "options": {
-        "a": "Bochum",
-        "b": "Leipzig",
-        "c": "Toronto"
+        "a": "Der Moderator",
+        "b": "Frau Dr. Sommer",
+        "c": "Herr Zimmermann"
       },
       "answer": "c",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man den Namen \"Dr\".",
-        "vi": "Một người trong đoạn 1 tên là gì?",
-        "key_evidence": "Dr",
+        "de": "Herr Zimmermann äußert die Meinung, dass der Kohleausstieg schneller erfolgen muss, da die Kohleverbrennung dem Klima schadet.",
+        "vi": "Ông Zimmermann bày tỏ quan điểm rằng việc loại bỏ than phải nhanh hơn, vì đốt than gây hại cho khí hậu.",
+        "key_evidence": "Nein, wir müssen schneller sein. Jedes Jahr Kohleverbrennung schadet dem Klima unwiderruflich.",
         "key_vocabulary": [
-          {
-            "word": "heißen",
-            "meaning": "to be called"
-          }
+          "Kohleverbrennung",
+          "unwiderruflich"
+        ]
+      }
+    },
+    {
+      "id": "Q4",
+      "gespraech": 1,
+      "type": "mc_abc",
+      "question": "Wer sagt das: Windräder und Solarparks brauchen Platz und stoßen oft auf Widerstand in der Bevölkerung?",
+      "options": {
+        "a": "Der Moderator",
+        "b": "Frau Dr. Sommer",
+        "c": "Herr Zimmermann"
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Frau Dr. Sommer weist auf die Herausforderungen beim Ausbau erneuerbarer Energien hin, nämlich den Platzbedarf und den Widerstand der Bevölkerung.",
+        "vi": "Bà Dr. Sommer chỉ ra những thách thức trong việc mở rộng năng lượng tái tạo, đó là nhu cầu về không gian và sự phản đối của người dân.",
+        "key_evidence": "Aber Windräder und Solarparks brauchen Platz und stoßen oft auf Widerstand in der Bevölkerung.",
+        "key_vocabulary": [
+          "Windräder",
+          "Solarparks",
+          "Widerstand"
+        ]
+      }
+    },
+    {
+      "id": "Q5",
+      "gespraech": 1,
+      "type": "mc_abc",
+      "question": "Wer sagt das: Indem man die lokale Bevölkerung finanziell beteiligt. Bürgerwindparks sind ein Erfolgsmodell?",
+      "options": {
+        "a": "Der Moderator",
+        "b": "Frau Dr. Sommer",
+        "c": "Herr Zimmermann"
+      },
+      "answer": "a",
+      "points": 1,
+      "explanation": {
+        "de": "Der Moderator schlägt vor, die Akzeptanz für erneuerbare Energien durch finanzielle Beteiligung der lokalen Bevölkerung zu erhöhen.",
+        "vi": "Người điều hành đề xuất tăng cường sự chấp nhận đối với năng lượng tái tạo bằng cách cho người dân địa phương tham gia tài chính.",
+        "key_evidence": "Indem man die lokale Bevölkerung finanziell beteiligt. Bürgerwindparks sind ein Erfolgsmodell.",
+        "key_vocabulary": [
+          "finanziell beteiligt",
+          "Bürgerwindparks",
+          "Erfolgsmodell"
+        ]
+      }
+    },
+    {
+      "id": "Q6",
+      "gespraech": 1,
+      "type": "mc_abc",
+      "question": "Wer sagt das: In Berlin gibt es viele Initiativen für Urban Gardening und Nachbarschaftsgärten?",
+      "options": {
+        "a": "Der Moderator",
+        "b": "Frau Dr. Sommer",
+        "c": "Herr Zimmermann"
+      },
+      "answer": "c",
+      "points": 1,
+      "explanation": {
+        "de": "Herr Zimmermann erwähnt die Existenz vieler Initiativen für Urban Gardening und Nachbarschaftsgärten in Berlin.",
+        "vi": "Ông Zimmermann đề cập đến sự tồn tại của nhiều sáng kiến về Urban Gardening và vườn cộng đồng ở Berlin.",
+        "key_evidence": "In Berlin gibt es viele Initiativen für Urban Gardening und Nachbarschaftsgärten.",
+        "key_vocabulary": [
+          "Initiativen",
+          "Urban Gardening",
+          "Nachbarschaftsgärten"
+        ]
+      }
+    },
+    {
+      "id": "Q7",
+      "gespraech": 1,
+      "type": "mc_abc",
+      "question": "Wer sagt das: Zum Beispiel fliegen viele junge Menschen trotzdem für dreißig Euro nach Barcelona am Wochenende?",
+      "options": {
+        "a": "Der Moderator",
+        "b": "Frau Dr. Sommer",
+        "c": "Herr Zimmermann"
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Frau Dr. Sommer nennt dies als Beispiel für einen Widerspruch im Alltag, obwohl Umweltschutz wichtig ist.",
+        "vi": "Bà Dr. Sommer đưa ra ví dụ này về một mâu thuẫn trong cuộc sống hàng ngày, mặc dù bảo vệ môi trường là quan trọng.",
+        "key_evidence": "Zum Beispiel fliegen viele junge Menschen trotzdem für dreißig Euro nach Barcelona am Wochenende.",
+        "key_vocabulary": [
+          "trotzdem",
+          "Wochenende"
+        ]
+      }
+    },
+    {
+      "id": "Q8",
+      "gespraech": 1,
+      "type": "mc_abc",
+      "question": "Wer sagt das: Das nennt sich CO2-Steuer und wird in Deutschland schrittweise eingeführt?",
+      "options": {
+        "a": "Der Moderator",
+        "b": "Frau Dr. Sommer",
+        "c": "Herr Zimmermann"
+      },
+      "answer": "c",
+      "points": 1,
+      "explanation": {
+        "de": "Herr Zimmermann erklärt, dass das Prinzip, dass Verursacher zahlen, als CO2-Steuer bezeichnet wird und in Deutschland eingeführt wird.",
+        "vi": "Ông Zimmermann giải thích rằng nguyên tắc người gây ô nhiễm phải trả tiền được gọi là thuế CO2 và đang được áp dụng ở Đức.",
+        "key_evidence": "Das nennt sich CO2-Steuer und wird in Deutschland schrittweise eingeführt.",
+        "key_vocabulary": [
+          "CO2-Steuer",
+          "schrittweise eingeführt"
         ]
       }
     }

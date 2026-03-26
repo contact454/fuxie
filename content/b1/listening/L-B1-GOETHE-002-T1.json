@@ -16,81 +16,166 @@
   "questions": [
     {
       "id": "Q1",
-      "item": 1,
+      "gespraech": 1,
       "type": "richtig_falsch",
-      "statement": "Die Person kommt aus Mexiko.",
+      "statement": "Die Bergung nach dem Unfall auf der A zehn ist schon beendet.",
       "answer": "falsch",
       "points": 1,
       "explanation": {
-        "de": "Falsch. Die Aussage stimmt nicht mit dem Hörtext überein.",
-        "vi": "Sai.",
-        "key_evidence": "Die Person kommt aus Mexiko.",
+        "de": "Der Sprecher sagt, dass die Bergung voraussichtlich noch eine Stunde dauert, was bedeutet, sie ist noch nicht beendet.",
+        "vi": "Người nói cho biết việc cứu hộ dự kiến còn kéo dài một giờ nữa, có nghĩa là nó vẫn chưa kết thúc.",
+        "key_evidence": "die Bergung dauert voraussichtlich noch eine Stunde.",
         "key_vocabulary": []
       }
     },
     {
       "id": "Q2",
-      "item": 2,
-      "type": "richtig_falsch",
-      "statement": "Eine Uhrzeit wird genannt.",
-      "answer": "richtig",
+      "gespraech": 1,
+      "type": "mc_abc",
+      "question": "Mit wie viel zusätzlicher Fahrzeit müssen Autofahrer auf der A hundert rechnen?",
+      "options": {
+        "a": "Fünf Minuten.",
+        "b": "Zehn bis fünfzehn Minuten.",
+        "c": "Dreißig Minuten."
+      },
+      "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Richtig. Die Aussage stimmt mit dem Hörtext überein.",
-        "vi": "Đúng.",
-        "key_evidence": "Eine Uhrzeit wird genannt.",
+        "de": "Der Sprecher informiert, dass man im Berufsverkehr mit zehn bis fünfzehn Minuten zusätzlicher Fahrzeit rechnen muss.",
+        "vi": "Người nói thông báo rằng trong giờ cao điểm, người lái xe phải tính thêm từ mười đến mười lăm phút thời gian di chuyển.",
+        "key_evidence": "Im Berufsverkehr rechnen Sie bitte mit zehn bis fünfzehn Minuten zusätzlicher Fahrzeit.",
         "key_vocabulary": []
       }
     },
     {
       "id": "Q3",
-      "item": 3,
+      "gespraech": 2,
       "type": "richtig_falsch",
-      "statement": "Die Person kommt aus Toronto.",
+      "statement": "Heute regnet es den ganzen Tag in Berlin und Brandenburg.",
       "answer": "falsch",
       "points": 1,
       "explanation": {
-        "de": "Falsch. Die Aussage stimmt nicht mit dem Hörtext überein.",
-        "vi": "Sai.",
-        "key_evidence": "Die Person kommt aus Toronto.",
+        "de": "Der Sprecher sagt, dass es am Vormittag leicht regnen kann, aber ab Mittag bleibt es trocken.",
+        "vi": "Người nói cho biết có thể có mưa nhẹ vào buổi sáng, nhưng từ trưa trở đi trời sẽ khô ráo.",
+        "key_evidence": "Am Vormittag kann es vereinzelt leicht regnen, aber ab Mittag bleibt es trocken.",
         "key_vocabulary": []
       }
     },
     {
       "id": "Q4",
-      "gespraech": 1,
+      "gespraech": 2,
       "type": "mc_abc",
-      "question": "Welches Thema wird besprochen (Gespräch 1)?",
+      "question": "Welche Temperaturen werden ab Mittwoch erwartet?",
       "options": {
-        "a": "Arbeit und Beruf",
-        "b": "Einkaufen und Geld",
-        "c": "Technik und Digitalisierung"
+        "a": "Um dreizehn Grad.",
+        "b": "Bis zu zwanzig Grad.",
+        "c": "Sechs Grad."
       },
-      "answer": "a",
+      "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Man hört: \"Arbeit und Beruf\".",
-        "vi": "Đoạn hội thoại 1 nói về chủ đề gì?",
-        "key_evidence": "Arbeit und Beruf",
+        "de": "Der Sprecher erwähnt, dass ab Mittwoch eine Wetterbesserung mit bis zu zwanzig Grad erwartet wird.",
+        "vi": "Người nói đề cập rằng từ thứ Tư trở đi, thời tiết được dự báo sẽ tốt hơn với nhiệt độ lên đến hai mươi độ C.",
+        "key_evidence": "Ab Mittwoch erwarten wir eine deutliche Wetterbesserung mit Sonnenschein und bis zu zwanzig Grad.",
         "key_vocabulary": []
       }
     },
     {
       "id": "Q5",
-      "gespraech": 1,
+      "gespraech": 3,
+      "type": "richtig_falsch",
+      "statement": "Die S-Bahn-Linie S sieben ist nur für wenige Tage gesperrt.",
+      "answer": "falsch",
+      "points": 1,
+      "explanation": {
+        "de": "Der Sprecher informiert, dass die Linie S sieben für drei Wochen gesperrt wird.",
+        "vi": "Người nói thông báo rằng tuyến S bảy sẽ bị đóng cửa trong ba tuần.",
+        "key_evidence": "Ab nächsten Montag wird die Linie S sieben zwischen Wannsee und Potsdam für drei Wochen gesperrt.",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q6",
+      "gespraech": 3,
       "type": "mc_abc",
-      "question": "Welches Thema wird besprochen (Gespräch 1)?",
+      "question": "Wie oft fahren die Ersatzbusse für die S-Bahn?",
       "options": {
-        "a": "Bremen",
-        "b": "Münster",
-        "c": "Luxemburg"
+        "a": "Alle zehn Minuten.",
+        "b": "Alle fünfzehn Minuten.",
+        "c": "Alle drei Wochen."
       },
       "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Das Hauptthema ist \"Arbeit und Beruf\".",
-        "vi": "Đoạn hội thoại 1 nói về chủ đề gì?",
-        "key_evidence": "Arbeit und Beruf",
+        "de": "Der Sprecher sagt, dass ein Ersatzverkehr mit Bussen eingerichtet wird, die alle zehn Minuten fahren.",
+        "vi": "Người nói cho biết sẽ có dịch vụ xe buýt thay thế, chạy cứ mười phút một chuyến.",
+        "key_evidence": "Ein Ersatzverkehr mit Bussen wird eingerichtet, die alle zehn Minuten fahren.",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q7",
+      "gespraech": 4,
+      "type": "richtig_falsch",
+      "statement": "Das Sturmtief Xander dauert bis zum Wochenende.",
+      "answer": "falsch",
+      "points": 1,
+      "explanation": {
+        "de": "Der Sprecher sagt, dass das Sturmtief bis Mittwochmittag abziehen soll.",
+        "vi": "Người nói cho biết cơn bão dự kiến sẽ tan vào trưa thứ Tư.",
+        "key_evidence": "Das Sturmtief soll bis Mittwochmittag abziehen, danach beruhigt sich die Wetterlage wieder.",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q8",
+      "gespraech": 4,
+      "type": "mc_abc",
+      "question": "Was sollen die Menschen wegen des Sturms tun?",
+      "options": {
+        "a": "Sie sollen ihr Auto unter Bäumen parken.",
+        "b": "Sie sollen Gartenmöbel und Mülltonnen sichern.",
+        "c": "Sie sollen unnötige Fahrten machen."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Der Sprecher rät, Gartenmöbel, Mülltonnen und andere lose Gegenstände zu sichern.",
+        "vi": "Người nói khuyên nên cố định đồ nội thất sân vườn, thùng rác và các vật dụng lỏng lẻo khác.",
+        "key_evidence": "Sichern Sie Gartenmöbel, Mülltonnen und andere lose Gegenstände auf Ihrem Grundstück.",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q9",
+      "gespraech": 5,
+      "type": "richtig_falsch",
+      "statement": "Die neuen Fahrradwege gibt es jetzt auf allen Straßen in Berlin.",
+      "answer": "falsch",
+      "points": 1,
+      "explanation": {
+        "de": "Der Sprecher erwähnt spezifisch die Friedrichstraße und die Kantstraße, nicht alle Straßen in Berlin.",
+        "vi": "Người nói đề cập cụ thể đến phố Friedrichstraße và Kantstraße, chứ không phải tất cả các con phố ở Berlin.",
+        "key_evidence": "Die Stadt Berlin hat neue Fahrradwege auf der Friedrichstraße und der Kantstraße eröffnet.",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q10",
+      "gespraech": 5,
+      "type": "mc_abc",
+      "question": "Was ist eine Folge der neuen Fahrradwege für Autofahrer?",
+      "options": {
+        "a": "Es gibt mehr Parkplätze für Autos.",
+        "b": "Eine Fahrspur für Autos fällt weg.",
+        "c": "Autofahrer können schneller fahren."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Der Sprecher erklärt, dass auf diesen Straßen jeweils eine Fahrspur für Autos wegfällt.",
+        "vi": "Người nói giải thích rằng trên những con đường này, mỗi làn đường dành cho ô tô sẽ bị loại bỏ.",
+        "key_evidence": "Gleichzeitig fallen auf diesen Straßen jeweils eine Fahrspur für Autos weg.",
         "key_vocabulary": []
       }
     }

@@ -16,81 +16,166 @@
   "questions": [
     {
       "id": "Q1",
-      "item": 1,
+      "gespraech": 1,
       "type": "richtig_falsch",
-      "statement": "Die Person kommt aus Hannover.",
-      "answer": "falsch",
+      "statement": "In Deutschland werden über 60% des Mülls recycelt.",
+      "answer": "richtig",
       "points": 1,
       "explanation": {
-        "de": "Falsch. Die Aussage stimmt nicht mit dem Hörtext überein.",
-        "vi": "Sai.",
-        "key_evidence": "Die Person kommt aus Hannover.",
+        "de": "Der Sprecher sagt, dass Deutschland Weltmeister im Recycling ist und über sechzig Prozent des gesamten Mülls recycelt werden.",
+        "vi": "Người nói cho biết Đức là nhà vô địch thế giới về tái chế và hơn 60% tổng số rác thải được tái chế.",
+        "key_evidence": "Deutschland ist Weltmeister im Recycling: über sechzig Prozent des gesamten Mülls werden recycelt.",
         "key_vocabulary": []
       }
     },
     {
       "id": "Q2",
-      "item": 2,
-      "type": "richtig_falsch",
-      "statement": "Grad wird erwähnt.",
-      "answer": "richtig",
+      "gespraech": 1,
+      "type": "mc_abc",
+      "question": "Was gehört in die gelbe Tonne?",
+      "options": {
+        "a": "Papier und Karton.",
+        "b": "Verpackungen aus Plastik, Metall und Verbundstoff.",
+        "c": "Obstreste und Gemüseschalen."
+      },
+      "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Richtig. Die Aussage stimmt mit dem Hörtext überein.",
-        "vi": "Đúng.",
-        "key_evidence": "Grad wird erwähnt.",
+        "de": "Der Sprecher erklärt, dass in die gelbe Tonne Verpackungen aus Plastik, Metall und Verbundstoff kommen.",
+        "vi": "Người nói giải thích rằng thùng màu vàng dùng để đựng bao bì làm từ nhựa, kim loại và vật liệu tổng hợp.",
+        "key_evidence": "In die gelbe Tonne kommen Verpackungen aus Plastik, Metall und Verbundstoff.",
         "key_vocabulary": []
       }
     },
     {
       "id": "Q3",
-      "item": 3,
+      "gespraech": 2,
       "type": "richtig_falsch",
-      "statement": "Die Person kommt aus Marokko.",
+      "statement": "In den letzten 100 Jahren sind die Temperaturen in Deutschland um zwei Grad gestiegen.",
       "answer": "falsch",
       "points": 1,
       "explanation": {
-        "de": "Falsch. Die Aussage stimmt nicht mit dem Hörtext überein.",
-        "vi": "Sai.",
-        "key_evidence": "Die Person kommt aus Marokko.",
+        "de": "Der Sprecher sagt, dass die Durchschnittstemperaturen in den letzten hundert Jahren um ein Grad gestiegen sind, nicht um zwei Grad.",
+        "vi": "Người nói cho biết nhiệt độ trung bình ở Đức đã tăng một độ trong một trăm năm qua, không phải hai độ.",
+        "key_evidence": "In Deutschland sind die Durchschnittstemperaturen in den letzten hundert Jahren um ein Grad gestiegen.",
         "key_vocabulary": []
       }
     },
     {
       "id": "Q4",
-      "gespraech": 1,
+      "gespraech": 2,
       "type": "mc_abc",
-      "question": "Welches Thema wird besprochen (Gespräch 1)?",
+      "question": "Bis wann möchte die Bundesregierung klimaneutral sein?",
       "options": {
-        "a": "Freizeit und Hobbys",
-        "b": "Einkaufen und Geld",
-        "c": "Essen und Trinken"
+        "a": "Bis 2022.",
+        "b": "Bis 2045.",
+        "c": "Bis 2050."
       },
       "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Man hört: \"Einkaufen und Geld\".",
-        "vi": "Đoạn hội thoại 1 nói về chủ đề gì?",
-        "key_evidence": "Einkaufen und Geld",
+        "de": "Der Sprecher erwähnt, dass die Bundesregierung sich das Ziel gesetzt hat, bis zweitausendfünfundvierzig klimaneutral zu sein.",
+        "vi": "Người nói đề cập rằng chính phủ liên bang đã đặt mục tiêu trở thành trung hòa khí hậu vào năm 2045.",
+        "key_evidence": "Die Bundesregierung hat sich das Ziel gesetzt, bis zweitausendfünfundvierzig klimaneutral zu sein.",
         "key_vocabulary": []
       }
     },
     {
       "id": "Q5",
-      "gespraech": 1,
+      "gespraech": 3,
+      "type": "richtig_falsch",
+      "statement": "Meeresschildkröten sterben, weil sie Plastiktüten für Quallen halten.",
+      "answer": "richtig",
+      "points": 1,
+      "explanation": {
+        "de": "Der Sprecher erklärt, dass Meeresschildkröten Plastiktüten mit Quallen verwechseln und daran sterben.",
+        "vi": "Người nói giải thích rằng rùa biển nhầm túi nhựa với sứa và chết vì điều đó.",
+        "key_evidence": "Meeresschildkröten verwechseln Plastiktüten mit Quallen und sterben daran.",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q6",
+      "gespraech": 3,
       "type": "mc_abc",
-      "question": "Welches Thema wird besprochen (Gespräch 1)?",
+      "question": "Was wurde in Deutschland im Einzelhandel seit 2022 verboten?",
       "options": {
-        "a": "Kairo",
-        "b": "Afghanistan",
-        "c": "Berlin"
+        "a": "Strohhalme.",
+        "b": "Plastikbesteck.",
+        "c": "Plastiktüten."
       },
       "answer": "c",
       "points": 1,
       "explanation": {
-        "de": "Das Hauptthema ist \"Einkaufen\".",
-        "vi": "Đoạn hội thoại 1 nói về chủ đề gì?",
-        "key_evidence": "Einkaufen",
+        "de": "Der Sprecher informiert, dass es in Deutschland seit zweitausendzweiundzwanzig ein Verbot von Plastiktüten im Einzelhandel gibt.",
+        "vi": "Người nói thông báo rằng ở Đức, việc cấm túi nhựa trong ngành bán lẻ đã có hiệu lực từ năm 2022.",
+        "key_evidence": "In Deutschland gibt es seit zweitausendzweiundzwanzig ein Verbot von Plastiktüten im Einzelhandel.",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q7",
+      "gespraech": 4,
+      "type": "richtig_falsch",
+      "statement": "Die Heizung ist der größte Energieverbraucher im Haushalt.",
+      "answer": "richtig",
+      "points": 1,
+      "explanation": {
+        "de": "Der Sprecher bestätigt, dass die Heizung mit über siebzig Prozent der größte Energieverbraucher im Haushalt ist.",
+        "vi": "Người nói xác nhận rằng hệ thống sưởi là thiết bị tiêu thụ năng lượng lớn nhất trong gia đình, chiếm hơn 70%.",
+        "key_evidence": "Der größte Energieverbraucher im Haushalt ist die Heizung mit über siebzig Prozent.",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q8",
+      "gespraech": 4,
+      "type": "mc_abc",
+      "question": "Wie viel Prozent Heizkosten kann man sparen, wenn man die Raumtemperatur um ein Grad senkt?",
+      "options": {
+        "a": "Sechs Prozent.",
+        "b": "Siebzig Prozent.",
+        "c": "Achtzig Prozent."
+      },
+      "answer": "a",
+      "points": 1,
+      "explanation": {
+        "de": "Der Sprecher sagt, dass das Senken der Raumtemperatur um nur ein Grad bereits sechs Prozent Heizkosten spart.",
+        "vi": "Người nói cho biết việc giảm nhiệt độ phòng chỉ một độ đã tiết kiệm được 6% chi phí sưởi ấm.",
+        "key_evidence": "Senken Sie die Raumtemperatur um nur ein Grad, das spart bereits sechs Prozent Heizkosten.",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q9",
+      "gespraech": 5,
+      "type": "richtig_falsch",
+      "statement": "Ein Zug verbraucht pro Passagier mehr Energie als ein Auto.",
+      "answer": "falsch",
+      "points": 1,
+      "explanation": {
+        "de": "Der Sprecher erklärt, dass ein Zug pro Passagier nur ein Zehntel der Energie eines Autos verbraucht, also weniger, nicht mehr.",
+        "vi": "Người nói giải thích rằng một chuyến tàu chỉ tiêu thụ một phần mười năng lượng của một chiếc ô tô cho mỗi hành khách, tức là ít hơn, không phải nhiều hơn.",
+        "key_evidence": "Ein Zug verbraucht pro Passagier nur ein Zehntel der Energie eines Autos.",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q10",
+      "gespraech": 5,
+      "type": "mc_abc",
+      "question": "Was verbessert sich, wenn Autos aus den Städten verschwinden?",
+      "options": {
+        "a": "Die Anzahl der E-Autos.",
+        "b": "Die Lebensqualität.",
+        "c": "Die verstopften Straßen."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Der Sprecher sagt, dass sich die Lebensqualität deutlich verbessert, wo Autos verschwinden, mit weniger Lärm und sauberer Luft.",
+        "vi": "Người nói cho biết chất lượng cuộc sống được cải thiện đáng kể khi ô tô biến mất khỏi các thành phố, với ít tiếng ồn và không khí sạch hơn.",
+        "key_evidence": "Wo Autos verschwinden, verbessert sich die Lebensqualität deutlich.",
         "key_vocabulary": []
       }
     }

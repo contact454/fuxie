@@ -18,66 +18,94 @@
       "id": "Q1",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Wie heißt eine Person im Gespräch 1?",
+      "question": "Wie heißt die Rednerin, die durch die Sammlung führt?",
       "options": {
-        "a": "Laura",
-        "b": "Dr",
-        "c": "Klaus"
+        "a": "Dr. Claudia Stein.",
+        "b": "Frau Schmidt.",
+        "c": "Dr. Müller."
       },
-      "answer": "b",
+      "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Man hört: \"Dr\".",
-        "vi": "Một người trong đoạn 1 tên là gì?",
-        "key_evidence": "Dr",
-        "key_vocabulary": [
-          {
-            "word": "heißen",
-            "meaning": "to be called"
-          }
-        ]
+        "de": "Die Rednerin stellt sich mit den Worten 'Mein Name ist Dr. Claudia Stein' vor.",
+        "vi": "Người thuyết trình giới thiệu mình bằng câu 'Tên tôi là Dr. Claudia Stein'.",
+        "key_evidence": "Mein Name ist Dr. Claudia Stein",
+        "key_vocabulary": []
       }
     },
     {
       "id": "Q2",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Wie heißt eine Person (Gespräch 1)?",
+      "question": "Wie viele Gemälde umfasst die Sammlung der Gemäldegalerie insgesamt?",
       "options": {
-        "a": "Würzburg",
-        "b": "Augsburg",
-        "c": "Madrid"
+        "a": "Über fünfzehn Gemälde.",
+        "b": "Über dreitausendfünfhundert Gemälde.",
+        "c": "Über neunzig Gemälde."
       },
       "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man den Namen \"Claudia\".",
-        "vi": "Một người trong đoạn 1 tên là gì?",
-        "key_evidence": "Claudia",
-        "key_vocabulary": [
-          {
-            "word": "heißen",
-            "meaning": "to be called"
-          }
-        ]
+        "de": "Die Rednerin erwähnt, dass die Galerie 'insgesamt über dreitausendfünfhundert Gemälde' hat.",
+        "vi": "Người thuyết trình đề cập rằng phòng trưng bày có 'tổng cộng hơn ba nghìn năm trăm bức tranh'.",
+        "key_evidence": "insgesamt über dreitausendfünfhundert Gemälde.",
+        "key_vocabulary": []
       }
     },
     {
       "id": "Q3",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Welches Thema wird besprochen (Gespräch 1)?",
+      "question": "Wie lange dauern die thematischen Führungen für Schulklassen und Studentengruppen?",
       "options": {
-        "a": "Einkaufen und Geld",
-        "b": "Arbeit und Beruf",
-        "c": "Wohnung und Haushalt"
+        "a": "Fünfundsiebzig Minuten.",
+        "b": "Neunzig Minuten.",
+        "c": "Zwei Stunden."
       },
-      "answer": "a",
+      "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Man hört: \"Einkaufen und Geld\".",
-        "vi": "Đoạn hội thoại 1 nói về chủ đề gì?",
-        "key_evidence": "Einkaufen und Geld",
+        "de": "Im Text heißt es: 'Die Führungen dauern neunzig Minuten'.",
+        "vi": "Trong văn bản có ghi: 'Các chuyến tham quan kéo dài chín mươi phút'.",
+        "key_evidence": "Die Führungen dauern neunzig Minuten",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q4",
+      "gespraech": 1,
+      "type": "mc_abc",
+      "question": "Was kostet eine thematische Führung für eine Gruppe?",
+      "options": {
+        "a": "Fünfzehn Euro.",
+        "b": "Neunzig Euro.",
+        "c": "Fünfundsiebzig Euro."
+      },
+      "answer": "c",
+      "points": 1,
+      "explanation": {
+        "de": "Die Rednerin sagt: 'und kosten fünfundsiebzig Euro pro Gruppe'.",
+        "vi": "Người thuyết trình nói: 'và có giá bảy mươi lăm Euro cho mỗi nhóm'.",
+        "key_evidence": "und kosten fünfundsiebzig Euro pro Gruppe.",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q5",
+      "gespraech": 1,
+      "type": "mc_abc",
+      "question": "An welchem Wochentag ist das Museum normalerweise geschlossen?",
+      "options": {
+        "a": "Am Donnerstag.",
+        "b": "Am Sonntag.",
+        "c": "Am Montag."
+      },
+      "answer": "c",
+      "points": 1,
+      "explanation": {
+        "de": "Die Rednerin informiert: 'Montags ist das Museum geschlossen'.",
+        "vi": "Người thuyết trình thông báo: 'Bảo tàng đóng cửa vào thứ Hai'.",
+        "key_evidence": "Montags ist das Museum geschlossen",
         "key_vocabulary": []
       }
     }

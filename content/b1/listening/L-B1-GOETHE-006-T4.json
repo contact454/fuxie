@@ -18,42 +18,46 @@
       "id": "Q1",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Welches Thema wird besprochen (Gespräch 1)?",
+      "question": "Wer sagt das: 'Der Zug ist bequemer, umweltfreundlicher und stressfreier als das Flugzeug.'?",
       "options": {
-        "a": "Freizeit und Hobbys",
-        "b": "Wohnung und Haushalt",
-        "c": "Einkaufen und Geld"
+        "a": "Der Moderator",
+        "b": "Herr Lange",
+        "c": "Frau Berg"
       },
-      "answer": "c",
+      "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Man hört: \"Einkaufen und Geld\".",
-        "vi": "Đoạn hội thoại 1 nói về chủ đề gì?",
-        "key_evidence": "Einkaufen und Geld",
-        "key_vocabulary": []
+        "de": "Herr Lange (Gast_A) sagt: 'Für mich ist klar: Der Zug ist bequemer, umweltfreundlicher und stressfreier als das Flugzeug.'",
+        "vi": "Ông Lange (Gast_A) nói: 'Đối với tôi thì rõ ràng: Tàu hỏa thoải mái hơn, thân thiện với môi trường hơn và ít căng thẳng hơn máy bay.'",
+        "key_evidence": "Für mich ist klar: Der Zug ist bequemer, umweltfreundlicher und stressfreier als das Flugzeug.",
+        "key_vocabulary": [
+          "bequem",
+          "umweltfreundlich",
+          "stressfrei",
+          "Flugzeug"
+        ]
       }
     },
     {
       "id": "Q2",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Wie heißt eine Person im Gespräch 1?",
+      "question": "Wer sagt das: 'Für lange Reisen ist das Flugzeug einfach schneller.'?",
       "options": {
-        "a": "Lange",
-        "b": "Thomas",
-        "c": "Michael"
+        "a": "Der Moderator",
+        "b": "Herr Lange",
+        "c": "Frau Berg"
       },
-      "answer": "a",
+      "answer": "c",
       "points": 1,
       "explanation": {
-        "de": "Man hört: \"Lange\".",
-        "vi": "Một người trong đoạn 1 tên là gì?",
-        "key_evidence": "Lange",
+        "de": "Frau Berg (Gast_B) sagt: 'Das stimmt für kurze Strecken, aber für lange Reisen ist das Flugzeug einfach schneller.'",
+        "vi": "Bà Berg (Gast_B) nói: 'Điều đó đúng với những chặng đường ngắn, nhưng đối với những chuyến đi dài thì máy bay đơn giản là nhanh hơn.'",
+        "key_evidence": "Das stimmt für kurze Strecken, aber für lange Reisen ist das Flugzeug einfach schneller.",
         "key_vocabulary": [
-          {
-            "word": "heißen",
-            "meaning": "to be called"
-          }
+          "Strecken",
+          "Reisen",
+          "schneller"
         ]
       }
     },
@@ -61,23 +65,136 @@
       "id": "Q3",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Wie heißt eine Person (Gespräch 1)?",
+      "question": "Wer sagt das: 'Ab etwa fünfhundert Kilometern ist das Flugzeug zeitlich im Vorteil.'?",
       "options": {
-        "a": "Indien",
-        "b": "Polen",
-        "c": "Japan"
+        "a": "Der Moderator",
+        "b": "Herr Lange",
+        "c": "Frau Berg"
       },
       "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man den Namen \"Lange\".",
-        "vi": "Một người trong đoạn 1 tên là gì?",
-        "key_evidence": "Lange",
+        "de": "Herr Lange (Gast_A) sagt: 'Ab etwa fünfhundert Kilometern ist das Flugzeug zeitlich im Vorteil, wenn man alles einrechnet.'",
+        "vi": "Ông Lange (Gast_A) nói: 'Từ khoảng năm trăm kilomet trở lên, máy bay có lợi thế về thời gian, nếu tính toán tất cả.'",
+        "key_evidence": "Ab etwa fünfhundert Kilometern ist das Flugzeug zeitlich im Vorteil, wenn man alles einrechnet.",
         "key_vocabulary": [
-          {
-            "word": "heißen",
-            "meaning": "to be called"
-          }
+          "Kilometer",
+          "zeitlich",
+          "Vorteil"
+        ]
+      }
+    },
+    {
+      "id": "Q4",
+      "gespraech": 1,
+      "type": "mc_abc",
+      "question": "Wer sagt das: 'Man muss auch die Zeit am Flughafen rechnen: Security, Boarding, Wartezeit.'?",
+      "options": {
+        "a": "Der Moderator",
+        "b": "Herr Lange",
+        "c": "Frau Berg"
+      },
+      "answer": "c",
+      "points": 1,
+      "explanation": {
+        "de": "Frau Berg (Gast_B) sagt: 'Aber man muss auch die Zeit am Flughafen rechnen: Security, Boarding, Wartezeit.'",
+        "vi": "Bà Berg (Gast_B) nói: 'Nhưng người ta cũng phải tính thời gian ở sân bay: An ninh, lên máy bay, thời gian chờ đợi.'",
+        "key_evidence": "Aber man muss auch die Zeit am Flughafen rechnen: Security, Boarding, Wartezeit.",
+        "key_vocabulary": [
+          "Flughafen",
+          "rechnen",
+          "Wartezeit"
+        ]
+      }
+    },
+    {
+      "id": "Q5",
+      "gespraech": 1,
+      "type": "mc_abc",
+      "question": "Wer sagt das: 'Ein Flug verursacht über zehnmal so viel CO2 wie die gleiche Strecke mit dem Zug.'?",
+      "options": {
+        "a": "Der Moderator",
+        "b": "Herr Lange",
+        "c": "Frau Berg"
+      },
+      "answer": "a",
+      "points": 1,
+      "explanation": {
+        "de": "Der Moderator sagt: 'Ein Flug verursacht über zehnmal so viel CO2 wie die gleiche Strecke mit dem Zug.'",
+        "vi": "Người điều hành nói: 'Một chuyến bay gây ra lượng CO2 gấp hơn mười lần so với cùng quãng đường bằng tàu hỏa.'",
+        "key_evidence": "Ein Flug verursacht über zehnmal so viel CO2 wie die gleiche Strecke mit dem Zug.",
+        "key_vocabulary": [
+          "verursachen",
+          "CO2",
+          "Strecke"
+        ]
+      }
+    },
+    {
+      "id": "Q6",
+      "gespraech": 1,
+      "type": "mc_abc",
+      "question": "Wer sagt das: 'Die Deutsche Bahn ist leider nicht immer pünktlich, das ist ihr größtes Problem.'?",
+      "options": {
+        "a": "Der Moderator",
+        "b": "Herr Lange",
+        "c": "Frau Berg"
+      },
+      "answer": "c",
+      "points": 1,
+      "explanation": {
+        "de": "Frau Berg (Gast_B) sagt: 'Die Deutsche Bahn ist leider nicht immer pünktlich, das ist ihr größtes Problem.'",
+        "vi": "Bà Berg (Gast_B) nói: 'Đường sắt Đức tiếc là không phải lúc nào cũng đúng giờ, đó là vấn đề lớn nhất của họ.'",
+        "key_evidence": "Die Deutsche Bahn ist leider nicht immer pünktlich, das ist ihr größtes Problem.",
+        "key_vocabulary": [
+          "pünktlich",
+          "Problem"
+        ]
+      }
+    },
+    {
+      "id": "Q7",
+      "gespraech": 1,
+      "type": "mc_abc",
+      "question": "Wer sagt das: 'Das Deutschlandticket für neunundvierzig Euro ist ein guter Schritt in die richtige Richtung.'?",
+      "options": {
+        "a": "Der Moderator",
+        "b": "Herr Lange",
+        "c": "Frau Berg"
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Herr Lange (Gast_A) sagt: 'Das Deutschlandticket für neunundvierzig Euro ist ein guter Schritt in die richtige Richtung.'",
+        "vi": "Ông Lange (Gast_A) nói: 'Vé Deutschlandticket với giá bốn mươi chín Euro là một bước đi đúng hướng.'",
+        "key_evidence": "Das Deutschlandticket für neunundvierzig Euro ist ein guter Schritt in die richtige Richtung.",
+        "key_vocabulary": [
+          "Deutschlandticket",
+          "Schritt",
+          "Richtung"
+        ]
+      }
+    },
+    {
+      "id": "Q8",
+      "gespraech": 1,
+      "type": "mc_abc",
+      "question": "Wer sagt das: 'Ich wünsche mir Nachtzüge zurück! Einschlafen in Berlin und aufwachen in Barcelona.'?",
+      "options": {
+        "a": "Der Moderator",
+        "b": "Herr Lange",
+        "c": "Frau Berg"
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Herr Lange (Gast_A) sagt: 'Und ich wünsche mir Nachtzüge zurück! Einschlafen in Berlin und aufwachen in Barcelona.'",
+        "vi": "Ông Lange (Gast_A) nói: 'Và tôi ước có lại những chuyến tàu đêm! Ngủ ở Berlin và thức dậy ở Barcelona.'",
+        "key_evidence": "Und ich wünsche mir Nachtzüge zurück! Einschlafen in Berlin und aufwachen in Barcelona.",
+        "key_vocabulary": [
+          "Nachtzüge",
+          "Einschlafen",
+          "aufwachen"
         ]
       }
     }

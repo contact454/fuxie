@@ -18,79 +18,164 @@
       "id": "Q1",
       "item": 1,
       "type": "richtig_falsch",
-      "statement": "Es geht um eine Reise.",
+      "statement": "Der Sprecher empfiehlt, genau zur vereinbarten Zeit zum Bewerbungsgespräch zu erscheinen.",
       "answer": "falsch",
       "points": 1,
       "explanation": {
-        "de": "Falsch. Die Aussage stimmt nicht mit dem Hörtext überein.",
-        "vi": "Sai.",
-        "key_evidence": "Es geht um eine Reise.",
+        "de": "Der Sprecher sagt, man soll 'am besten zehn Minuten vor dem vereinbarten Termin' kommen, nicht genau zur vereinbarten Zeit.",
+        "vi": "Người nói khuyên nên đến 'tốt nhất là mười phút trước thời gian đã hẹn', chứ không phải đúng giờ đã hẹn.",
+        "key_evidence": "Kommen Sie pünktlich, am besten zehn Minuten vor dem vereinbarten Termin.",
         "key_vocabulary": []
       }
     },
     {
       "id": "Q2",
-      "item": 2,
-      "type": "richtig_falsch",
-      "statement": "Praktikum wird erwähnt.",
-      "answer": "richtig",
+      "item": 1,
+      "type": "mc_abc",
+      "question": "Was soll man laut dem Sprecher zum Bewerbungsgespräch mitbringen?",
+      "options": {
+        "a": "Bewerbungsunterlagen, Notizblock und Stift.",
+        "b": "Nur die Bewerbungsunterlagen.",
+        "c": "Einen Laptop und ein Handy."
+      },
+      "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Richtig. Die Aussage stimmt mit dem Hörtext überein.",
-        "vi": "Đúng.",
-        "key_evidence": "Praktikum wird erwähnt.",
+        "de": "Der Sprecher nennt explizit 'Bewerbungsunterlagen, einen Notizblock und einen Stift' als Dinge, die man mitbringen soll.",
+        "vi": "Người nói rõ ràng đề cập 'hồ sơ xin việc, một cuốn sổ ghi chú và một cây bút' là những thứ cần mang theo.",
+        "key_evidence": "Bringen Sie Ihre Bewerbungsunterlagen, einen Notizblock und einen Stift mit.",
         "key_vocabulary": []
       }
     },
     {
       "id": "Q3",
-      "item": 3,
+      "item": 2,
       "type": "richtig_falsch",
-      "statement": "Die Person kommt aus Wien.",
+      "statement": "Seit 2015 erhalten alle Praktikanten den Mindestlohn.",
       "answer": "falsch",
       "points": 1,
       "explanation": {
-        "de": "Falsch. Die Aussage stimmt nicht mit dem Hörtext überein.",
-        "vi": "Sai.",
-        "key_evidence": "Die Person kommt aus Wien.",
+        "de": "Der Sprecher erwähnt, dass der Mindestlohn für Praktikanten seit 2015 gilt, aber 'allerdings mit Ausnahmen', wie Pflichtpraktika oder Praktika unter drei Monaten.",
+        "vi": "Người nói đề cập rằng mức lương tối thiểu áp dụng cho thực tập sinh từ năm 2015, nhưng 'có những trường hợp ngoại lệ', như thực tập bắt buộc hoặc thực tập dưới ba tháng.",
+        "key_evidence": "Seit zweitausendfünfzehn gilt der Mindestlohn auch für Praktikanten, allerdings mit Ausnahmen. Pflichtpraktika im Rahmen des Studiums und Praktika unter drei Monaten sind vom Mindestlohn ausgenommen.",
         "key_vocabulary": []
       }
     },
     {
       "id": "Q4",
-      "gespraech": 1,
+      "item": 2,
       "type": "mc_abc",
-      "question": "Welches Thema wird besprochen (Gespräch 1)?",
+      "question": "Was ist laut dem Sprecher bei der Wahl eines Praktikums wichtiger als das Geld?",
       "options": {
-        "a": "Gesundheit und Körper",
-        "b": "Bildung und Schule",
-        "c": "Arbeit und Beruf"
+        "a": "Ob man etwas lernt und ins Team integriert wird.",
+        "b": "Ob das Praktikum länger als drei Monate dauert.",
+        "c": "Ob man ein gutes Zeugnis bekommt."
       },
-      "answer": "c",
+      "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Man hört: \"Arbeit und Beruf\".",
-        "vi": "Đoạn hội thoại 1 nói về chủ đề gì?",
-        "key_evidence": "Arbeit und Beruf",
+        "de": "Der Sprecher sagt: 'Wichtiger ist, ob man im Praktikum wirklich etwas lernt und ins Team integriert wird.'",
+        "vi": "Người nói nói: 'Quan trọng hơn là liệu bạn có thực sự học được điều gì đó trong kỳ thực tập và được hòa nhập vào đội ngũ hay không'.",
+        "key_evidence": "Wichtiger ist, ob man im Praktikum wirklich etwas lernt und ins Team integriert wird.",
         "key_vocabulary": []
       }
     },
     {
       "id": "Q5",
-      "gespraech": 1,
+      "item": 3,
+      "type": "richtig_falsch",
+      "statement": "Der Lebenslauf sollte länger als zwei Seiten sein.",
+      "answer": "falsch",
+      "points": 1,
+      "explanation": {
+        "de": "Der Sprecher sagt, der Lebenslauf sollte 'nicht länger als zwei Seiten sein'.",
+        "vi": "Người nói nói rằng sơ yếu lý lịch 'không nên dài quá hai trang'.",
+        "key_evidence": "Er sollte übersichtlich, vollständig und nicht länger als zwei Seiten sein.",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q6",
+      "item": 3,
       "type": "mc_abc",
-      "question": "Welches Thema wird besprochen (Gespräch 1)?",
+      "question": "Was ist in Deutschland beim Lebenslauf üblich?",
       "options": {
-        "a": "Stuttgart",
-        "b": "Bangkok",
-        "c": "Aachen"
+        "a": "Ein professionelles Foto oben rechts auf dem Lebenslauf.",
+        "b": "Die beruflichen Stationen chronologisch ordnen.",
+        "c": "Lücken im Lebenslauf nicht erklären."
       },
       "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Das Hauptthema ist \"Einkaufen\".",
-        "vi": "Đoạn hội thoại 1 nói về chủ đề gì?",
-        "key_evidence": "Einkaufen",
+        "de": "Der Sprecher erklärt: 'In Deutschland ist es üblich, ein professionelles Foto oben rechts auf dem Lebenslauf zu haben.'",
+        "vi": "Người nói giải thích: 'Ở Đức, việc có một bức ảnh chuyên nghiệp ở góc trên bên phải sơ yếu lý lịch là điều phổ biến'.",
+        "key_evidence": "In Deutschland ist es üblich, ein professionelles Foto oben rechts auf dem Lebenslauf zu haben.",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q7",
+      "item": 4,
+      "type": "richtig_falsch",
+      "statement": "Man sollte die Bewerbungsdokumente in mehreren Anhängen versenden.",
+      "answer": "falsch",
+      "points": 1,
+      "explanation": {
+        "de": "Der Sprecher rät: 'Fassen Sie alle Dokumente in einer einzigen PDF-Datei zusammen, nicht in mehreren Anhängen'.",
+        "vi": "Người nói khuyên: 'Hãy tổng hợp tất cả tài liệu vào một tệp PDF duy nhất, không phải trong nhiều tệp đính kèm'.",
+        "key_evidence": "Fassen Sie alle Dokumente in einer einzigen PDF-Datei zusammen, nicht in mehreren Anhängen.",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q8",
+      "item": 4,
+      "type": "mc_abc",
+      "question": "Wie groß darf die Dateigröße der Bewerbungsdokumente maximal sein?",
+      "options": {
+        "a": "Fünf Megabyte.",
+        "b": "Zehn Megabyte.",
+        "c": "Eine Megabyte."
+      },
+      "answer": "a",
+      "points": 1,
+      "explanation": {
+        "de": "Der Sprecher sagt, 'Die Dateigröße sollte fünf Megabyte nicht überschreiten'.",
+        "vi": "Người nói nói rằng 'Kích thước tệp không nên vượt quá năm Megabyte'.",
+        "key_evidence": "Die Dateigröße sollte fünf Megabyte nicht überschreiten.",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q9",
+      "item": 5,
+      "type": "richtig_falsch",
+      "statement": "Für ein Video-Interview reicht es, nur den Oberkörper professionell zu kleiden.",
+      "answer": "falsch",
+      "points": 1,
+      "explanation": {
+        "de": "Der Sprecher betont: 'Ziehen Sie sich vollständig professionell an, nicht nur am Oberkörper'.",
+        "vi": "Người nói nhấn mạnh: 'Hãy mặc trang phục chuyên nghiệp hoàn chỉnh, không chỉ phần thân trên'.",
+        "key_evidence": "Ziehen Sie sich vollständig professionell an, nicht nur am Oberkörper.",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q10",
+      "item": 5,
+      "type": "mc_abc",
+      "question": "Wohin soll man beim Video-Interview schauen, um direkten Blickkontakt zu simulieren?",
+      "options": {
+        "a": "In die Kamera.",
+        "b": "Auf den Bildschirm.",
+        "c": "Auf den Notizblock."
+      },
+      "answer": "a",
+      "points": 1,
+      "explanation": {
+        "de": "Der Sprecher rät: 'Schaün Sie in die Kamera, nicht auf den Bildschirm, das wirkt wie direkter Blickkontakt'.",
+        "vi": "Người nói khuyên: 'Hãy nhìn vào camera, không phải vào màn hình, điều đó tạo cảm giác như giao tiếp bằng mắt trực tiếp'.",
+        "key_evidence": "Schaün Sie in die Kamera, nicht auf den Bildschirm, das wirkt wie direkter Blickkontakt.",
         "key_vocabulary": []
       }
     }

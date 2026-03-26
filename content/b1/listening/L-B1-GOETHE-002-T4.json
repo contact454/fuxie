@@ -18,18 +18,18 @@
       "id": "Q1",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Welches Thema wird besprochen (Gespräch 1)?",
+      "question": "Wer sagt das: \"Die Luft in der Stadt würde besser und es gäbe weniger Lärm\"?",
       "options": {
-        "a": "Arbeit und Beruf",
-        "b": "Technik und Digitalisierung",
-        "c": "Familie und Freunde"
+        "a": "Moderator",
+        "b": "Herr Weber",
+        "c": "Frau Bauer"
       },
-      "answer": "a",
+      "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Man hört: \"Arbeit und Beruf\".",
-        "vi": "Đoạn hội thoại 1 nói về chủ đề gì?",
-        "key_evidence": "Arbeit und Beruf",
+        "de": "Herr Weber sagt, dass die Luft in der Stadt besser und der Lärm weniger würde.",
+        "vi": "Ông Weber nói rằng không khí trong thành phố sẽ tốt hơn và tiếng ồn sẽ giảm đi.",
+        "key_evidence": "Die Luft in der Stadt würde viel besser werden, und es gäbe weniger Lärm.",
         "key_vocabulary": []
       }
     },
@@ -37,72 +37,133 @@
       "id": "Q2",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Wie heißt eine Person im Gespräch 1?",
+      "question": "Wer sagt das: \"Viele Menschen brauchen ihr Auto, um zur Arbeit zu fahren\"?",
       "options": {
-        "a": "Weber",
-        "b": "Martin",
-        "c": "Sabine"
+        "a": "Moderator",
+        "b": "Herr Weber",
+        "c": "Frau Bauer"
       },
-      "answer": "a",
+      "answer": "c",
       "points": 1,
       "explanation": {
-        "de": "Man hört: \"Weber\".",
-        "vi": "Một người trong đoạn 1 tên là gì?",
-        "key_evidence": "Weber",
-        "key_vocabulary": [
-          {
-            "word": "heißen",
-            "meaning": "to be called"
-          }
-        ]
+        "de": "Frau Bauer erklärt, dass viele Menschen ihr Auto für die Arbeit benötigen.",
+        "vi": "Bà Bauer giải thích rằng nhiều người cần ô tô để đi làm.",
+        "key_evidence": "aber in der Praxis brauchen viele Menschen ihr Auto zum Arbeiten.",
+        "key_vocabulary": []
       }
     },
     {
       "id": "Q3",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Woher kommt die Person (Gespräch 1)?",
+      "question": "Wer sagt das: \"Der öffentliche Nahverkehr muss zuerst besser werden\"?",
       "options": {
-        "a": "München",
-        "b": "Berlin",
-        "c": "Hamburg"
+        "a": "Moderator",
+        "b": "Herr Weber",
+        "c": "Frau Bauer"
       },
-      "answer": "b",
+      "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Man hört: \"Berlin\".",
-        "vi": "Người đó đến từ đâu (đoạn 1)?",
-        "key_evidence": "Berlin",
-        "key_vocabulary": [
-          {
-            "word": "kommen aus",
-            "meaning": "to come from"
-          }
-        ]
+        "de": "Der Moderator betont, dass der öffentliche Nahverkehr zuerst ausgebaut werden muss.",
+        "vi": "Người điều hành nhấn mạnh rằng giao thông công cộng cần được phát triển trước tiên.",
+        "key_evidence": "Der öffentliche Nahverkehr muss zuerst ausgebaut werden.",
+        "key_vocabulary": []
       }
     },
     {
       "id": "Q4",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Was macht die Person beruflich (Gespräch 1)?",
+      "question": "Wer sagt das: \"In Amsterdam und Kopenhagen hat die Verkehrswende funktioniert\"?",
       "options": {
-        "a": "Student",
-        "b": "Berlin",
-        "c": "Arzt"
+        "a": "Moderator",
+        "b": "Herr Weber",
+        "c": "Frau Bauer"
       },
       "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Man hört: \"Berlin\".",
-        "vi": "Người đó làm nghề gì (đoạn 1)?",
-        "key_evidence": "Berlin",
-        "key_vocabulary": [
-          {
-            "word": "Berlin",
-            "meaning": "Berlin"
-          }
-        ]
+        "de": "Herr Weber nennt Amsterdam und Kopenhagen als Beispiele, wo die Verkehrswende erfolgreich war.",
+        "vi": "Ông Weber nêu Amsterdam và Copenhagen là ví dụ về nơi chuyển đổi giao thông đã thành công.",
+        "key_evidence": "In Amsterdam und Kopenhagen hat die Verkehrswende aber funktioniert, und die Menschen sind zufriedener.",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q5",
+      "gespraech": 1,
+      "type": "mc_abc",
+      "question": "Wer sagt das: \"Man sollte zuerst einzelne Straßen autofrei machen\"?",
+      "options": {
+        "a": "Moderator",
+        "b": "Herr Weber",
+        "c": "Frau Bauer"
+      },
+      "answer": "c",
+      "points": 1,
+      "explanation": {
+        "de": "Frau Bauer schlägt vor, schrittweise vorzugehen und zuerst einzelne Straßen autofrei zu machen.",
+        "vi": "Bà Bauer đề xuất tiến hành từng bước và trước tiên biến các con đường riêng lẻ thành khu vực không có ô tô.",
+        "key_evidence": "Ich schlage vor, dass wir schrittweise vorgehen. Zuerst einzelne Straßen autofrei machen.",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q6",
+      "gespraech": 1,
+      "type": "mc_abc",
+      "question": "Wer sagt das: \"Das Fahrrad ist gut für kurze Strecken bis zu fünf Kilometern\"?",
+      "options": {
+        "a": "Moderator",
+        "b": "Herr Weber",
+        "c": "Frau Bauer"
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Herr Weber meint, dass das Fahrrad ideal für kurze Strecken bis zu fünf Kilometern in der Stadt ist.",
+        "vi": "Ông Weber cho rằng xe đạp lý tưởng cho những quãng đường ngắn đến năm km trong thành phố.",
+        "key_evidence": "Das Fahrrad ist ideal für kurze Strecken bis zu fünf Kilometern in der Stadt.",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q7",
+      "gespraech": 1,
+      "type": "mc_abc",
+      "question": "Wer sagt das: \"E-Scooter sind ein großes Problem, weil sie Gehwege blockieren\"?",
+      "options": {
+        "a": "Moderator",
+        "b": "Herr Weber",
+        "c": "Frau Bauer"
+      },
+      "answer": "a",
+      "points": 1,
+      "explanation": {
+        "de": "Der Moderator kritisiert, dass E-Scooter überall herumstehen und Gehwege blockieren.",
+        "vi": "Người điều hành chỉ trích rằng xe điện E-Scooter đậu khắp nơi và chặn lối đi bộ.",
+        "key_evidence": "E-Scooter sind ein großes Problem! Sie stehen überall rum und blockieren die Gehwege.",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q8",
+      "gespraech": 1,
+      "type": "mc_abc",
+      "question": "Wer sagt das: \"Man sollte die Fahrzeiten der öffentlichen Verkehrsmittel verbessern\"?",
+      "options": {
+        "a": "Moderator",
+        "b": "Herr Weber",
+        "c": "Frau Bauer"
+      },
+      "answer": "c",
+      "points": 1,
+      "explanation": {
+        "de": "Frau Bauer schlägt vor, die Taktung der öffentlichen Verkehrsmittel zu verbessern.",
+        "vi": "Bà Bauer đề xuất cải thiện tần suất các phương tiện giao thông công cộng.",
+        "key_evidence": "Die Taktung der öffentlichen Verkehrsmittel verbessern. Wenn alle fünf Minuten ein Bus kommt, lässt man das Auto stehen.",
+        "key_vocabulary": []
       }
     }
   ],

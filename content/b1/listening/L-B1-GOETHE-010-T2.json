@@ -18,90 +18,94 @@
       "id": "Q1",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Wie heißt eine Person im Gespräch 1?",
+      "question": "Was ist Lisa Berger von Beruf?",
       "options": {
-        "a": "Laura",
-        "b": "Stefan",
-        "c": "Lisa"
+        "a": "Sie ist Umweltwissenschaftlerin an der Technischen Universität Berlin.",
+        "b": "Sie ist Studentin an der Technischen Universität Berlin.",
+        "c": "Sie ist eine Expertin für Mode und Textilien."
       },
-      "answer": "c",
+      "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Man hört: \"Lisa\".",
-        "vi": "Một người trong đoạn 1 tên là gì?",
-        "key_evidence": "Lisa",
-        "key_vocabulary": [
-          {
-            "word": "heißen",
-            "meaning": "to be called"
-          }
-        ]
+        "de": "Lisa Berger stellt sich als Umweltwissenschaftlerin an der Technischen Universität Berlin vor.",
+        "vi": "Lisa Berger giới thiệu mình là nhà khoa học môi trường tại Đại học Kỹ thuật Berlin.",
+        "key_evidence": "Mein Name ist Lisa Berger, ich bin Umweltwissenschaftlerin an der Technischen Universität Berlin.",
+        "key_vocabulary": []
       }
     },
     {
       "id": "Q2",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Wie heißt eine Person (Gespräch 1)?",
+      "question": "Welchen Anteil haben Lebensmittelproduktion an den gesamten Treibhausemissionen?",
       "options": {
-        "a": "Paris",
-        "b": "Dubai",
-        "c": "Bonn"
+        "a": "Etwa ein Drittel.",
+        "b": "Etwa die Hälfte.",
+        "c": "Etwa ein Viertel."
       },
-      "answer": "b",
+      "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man den Namen \"Umweltwissenschaftlerin\".",
-        "vi": "Một người trong đoạn 1 tên là gì?",
-        "key_evidence": "Umweltwissenschaftlerin",
-        "key_vocabulary": [
-          {
-            "word": "heißen",
-            "meaning": "to be called"
-          }
-        ]
+        "de": "Die Rednerin erklärt, dass die Lebensmittelproduktion ungefähr ein Drittel aller Treibhausemissionen verursacht.",
+        "vi": "Người nói giải thích rằng sản xuất thực phẩm gây ra khoảng một phần ba tổng lượng khí thải nhà kính.",
+        "key_evidence": "Die Lebensmittelproduktion verursacht etwa ein Drittel aller Treibhausemissionen.",
+        "key_vocabulary": []
       }
     },
     {
       "id": "Q3",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Was macht die Person beruflich (Gespräch 1)?",
+      "question": "Welche Industrie ist laut der Rednerin der zweitgrößte Umweltverschmutzer weltweit?",
       "options": {
-        "a": "Studentin",
-        "b": "Student",
-        "c": "Umweltwissenschaftlerin"
+        "a": "Die Textilindustrie.",
+        "b": "Die Lebensmittelindustrie.",
+        "c": "Die chemische Industrie."
       },
-      "answer": "c",
+      "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Man hört: \"Umweltwissenschaftlerin\".",
-        "vi": "Người đó làm nghề gì (đoạn 1)?",
-        "key_evidence": "Umweltwissenschaftlerin",
-        "key_vocabulary": [
-          {
-            "word": "Umweltwissenschaftlerin",
-            "meaning": "Umweltwissenschaftlerin"
-          }
-        ]
+        "de": "Die Rednerin sagt, dass die Textilindustrie nach der Ölindustrie der zweitgrößte Umweltverschmutzer ist.",
+        "vi": "Người nói cho biết ngành công nghiệp dệt may là ngành gây ô nhiễm môi trường lớn thứ hai trên thế giới, sau ngành công nghiệp dầu mỏ.",
+        "key_evidence": "Die Textilindustrie ist der zweitgrößte Umweltverschmutzer weltweit nach der Ölindustrie.",
+        "key_vocabulary": []
       }
     },
     {
       "id": "Q4",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Welches Thema wird besprochen (Gespräch 1)?",
+      "question": "Wie viel Wasser verbraucht jeder Mensch in Deutschland durchschnittlich pro Tag?",
       "options": {
-        "a": "Einkaufen und Geld",
-        "b": "Umwelt und Natur",
-        "c": "Technik und Digitalisierung"
+        "a": "Hundertachtundzwanzig Liter.",
+        "b": "Dreißig Liter.",
+        "c": "Weniger als hundert Liter."
       },
       "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Man hört: \"Einkaufen und Geld\".",
-        "vi": "Đoạn hội thoại 1 nói về chủ đề gì?",
-        "key_evidence": "Einkaufen und Geld",
+        "de": "Die Rednerin nennt die genaue Zahl von hundertachtundzwanzig Litern Wasser pro Person und Tag in Deutschland.",
+        "vi": "Người nói đưa ra con số chính xác là 128 lít nước mỗi người mỗi ngày ở Đức.",
+        "key_evidence": "In Deutschland verbraucht jeder Mensch durchschnittlich hundertachtundzwanzig Liter Wasser am Tag.",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q5",
+      "gespraech": 1,
+      "type": "mc_abc",
+      "question": "Welche umweltfreundlichen Alternativen für die Reinigung nennt die Rednerin?",
+      "options": {
+        "a": "Essig und Natron.",
+        "b": "Spezielle chemische Produkte.",
+        "c": "Nur Wasser und Seife."
+      },
+      "answer": "a",
+      "points": 1,
+      "explanation": {
+        "de": "Die Rednerin empfiehlt Essig und Natron als preiswerte und umweltfreundliche Alternativen für die Reinigung.",
+        "vi": "Người nói đề xuất giấm và baking soda là những lựa chọn thay thế rẻ tiền và thân thiện với môi trường để làm sạch.",
+        "key_evidence": "Essig und Natron sind preiswerte und umweltfreundliche Alternativen für viele Reinigungsarbeiten.",
         "key_vocabulary": []
       }
     }

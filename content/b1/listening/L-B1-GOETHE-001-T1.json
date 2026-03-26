@@ -16,81 +16,166 @@
   "questions": [
     {
       "id": "Q1",
-      "item": 1,
+      "gespraech": 1,
       "type": "richtig_falsch",
-      "statement": "Die Person kommt aus Warschau.",
+      "statement": "Im Deutschen Historischen Museum ist das Fotografieren mit Blitz erlaubt.",
       "answer": "falsch",
       "points": 1,
       "explanation": {
-        "de": "Falsch. Die Aussage stimmt nicht mit dem Hörtext überein.",
-        "vi": "Sai.",
-        "key_evidence": "Die Person kommt aus Warschau.",
+        "de": "Der Sprecher sagt, dass das Fotografieren mit Blitz in diesem Raum nicht erlaubt ist.",
+        "vi": "Người nói cho biết việc chụp ảnh có đèn flash không được phép trong phòng này.",
+        "key_evidence": "Bitte beachten Sie, dass das Fotografieren mit Blitz in diesem Raum nicht erlaubt ist.",
         "key_vocabulary": []
       }
     },
     {
       "id": "Q2",
-      "item": 2,
-      "type": "richtig_falsch",
-      "statement": "Johann wird erwähnt.",
-      "answer": "richtig",
+      "gespraech": 1,
+      "type": "mc_abc",
+      "question": "Wo beginnt der Rundgang heute im Deutschen Historischen Museum?",
+      "options": {
+        "a": "Im ersten Stock.",
+        "b": "Im Erdgeschoss.",
+        "c": "Im nächsten Saal."
+      },
+      "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Richtig. Die Aussage stimmt mit dem Hörtext überein.",
-        "vi": "Đúng.",
-        "key_evidence": "Johann wird erwähnt.",
+        "de": "Der Sprecher informiert, dass der Rundgang heute im Erdgeschoss beginnt.",
+        "vi": "Người nói thông báo rằng chuyến tham quan hôm nay bắt đầu ở tầng trệt.",
+        "key_evidence": "Wir beginnen unseren Rundgang heute im Erdgeschoss mit der Ausstellung zur Weimarer Republik.",
         "key_vocabulary": []
       }
     },
     {
       "id": "Q3",
-      "item": 3,
+      "gespraech": 2,
       "type": "richtig_falsch",
-      "statement": "Die Person kommt aus Brasilien.",
-      "answer": "falsch",
+      "statement": "Schüler und Studenten bekommen eine Ermäßigung von dreißig Prozent.",
+      "answer": "richtig",
       "points": 1,
       "explanation": {
-        "de": "Falsch. Die Aussage stimmt nicht mit dem Hörtext überein.",
-        "vi": "Sai.",
-        "key_evidence": "Die Person kommt aus Brasilien.",
+        "de": "Der Sprecher erwähnt, dass es für Schüler und Studenten eine Ermäßigung von dreißig Prozent gibt.",
+        "vi": "Người nói đề cập rằng có giảm giá ba mươi phần trăm cho học sinh và sinh viên.",
+        "key_evidence": "Für Schüler und Studenten gibt es eine Ermäßigung von dreißig Prozent.",
         "key_vocabulary": []
       }
     },
     {
       "id": "Q4",
-      "gespraech": 1,
+      "gespraech": 2,
       "type": "mc_abc",
-      "question": "Welches Thema wird besprochen (Gespräch 1)?",
+      "question": "Wann beginnt das Konzert heute Abend?",
       "options": {
-        "a": "Bildung und Schule",
-        "b": "Familie und Freunde",
-        "c": "Einkaufen und Geld"
+        "a": "Um 19:00 Uhr.",
+        "b": "Um 20:00 Uhr.",
+        "c": "Um 22:00 Uhr."
       },
-      "answer": "c",
+      "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Man hört: \"Einkaufen und Geld\".",
-        "vi": "Đoạn hội thoại 1 nói về chủ đề gì?",
-        "key_evidence": "Einkaufen und Geld",
+        "de": "Der Sprecher sagt, dass das Konzert um zwanzig Uhr beginnt.",
+        "vi": "Người nói cho biết buổi hòa nhạc bắt đầu lúc 20 giờ.",
+        "key_evidence": "Das Konzert beginnt um zwanzig Uhr und daürt etwa zwei Stunden mit einer Pause.",
         "key_vocabulary": []
       }
     },
     {
       "id": "Q5",
-      "gespraech": 1,
+      "gespraech": 3,
+      "type": "richtig_falsch",
+      "statement": "An den Tagen mit freiem Eintritt gibt es auch kostenlose Führungen.",
+      "answer": "richtig",
+      "points": 1,
+      "explanation": {
+        "de": "Der Sprecher bestätigt, dass an diesen Tagen auch kostenlose Führungen stattfinden.",
+        "vi": "Người nói xác nhận rằng vào những ngày này cũng có các chuyến tham quan miễn phí.",
+        "key_evidence": "An diesen Tagen finden auch kostenlose Führungen in verschiedenen Sprachen statt.",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q6",
+      "gespraech": 3,
       "type": "mc_abc",
-      "question": "Welches Thema wird besprochen (Gespräch 1)?",
+      "question": "Wann sollte man die Museen besuchen, um lange Wartezeiten zu vermeiden?",
       "options": {
-        "a": "Winterthur",
-        "b": "Magdeburg",
-        "c": "Kanada"
+        "a": "Nach zehn Uhr.",
+        "b": "Jeden ersten Sonntag im Monat.",
+        "c": "Schon vor zehn Uhr."
+      },
+      "answer": "c",
+      "points": 1,
+      "explanation": {
+        "de": "Der Sprecher rät, schon vor zehn Uhr zu kommen, um Wartezeiten zu vermeiden.",
+        "vi": "Người nói khuyên nên đến trước 10 giờ để tránh thời gian chờ đợi lâu.",
+        "key_evidence": "Mein Rat ist, schon vor zehn Uhr zu kommen, dann sind noch nicht so viele Besucher da.",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q7",
+      "gespraech": 4,
+      "type": "richtig_falsch",
+      "statement": "Am Donnerstagabend ist der Eintritt zur Ausstellung kostenlos.",
+      "answer": "richtig",
+      "points": 1,
+      "explanation": {
+        "de": "Der Sprecher informiert, dass der Eintritt am Donnerstagabend für alle frei ist.",
+        "vi": "Người nói thông báo rằng vào tối thứ Năm, vé vào cửa miễn phí cho tất cả mọi người.",
+        "key_evidence": "Am Donnerstagabend ist der Eintritt von achtzehn bis einundzwanzig Uhr für alle frei.",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q8",
+      "gespraech": 4,
+      "type": "mc_abc",
+      "question": "Wie viel kostet der normale Eintritt für die Ausstellung?",
+      "options": {
+        "a": "Acht Euro.",
+        "b": "Zwölf Euro.",
+        "c": "Fünfzehn Euro."
       },
       "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Das Hauptthema ist \"Einkaufen\".",
-        "vi": "Đoạn hội thoại 1 nói về chủ đề gì?",
-        "key_evidence": "Einkaufen",
+        "de": "Der Sprecher gibt an, dass der Eintritt zwölf Euro kostet.",
+        "vi": "Người nói cho biết vé vào cửa có giá mười hai Euro.",
+        "key_evidence": "Der Eintritt kostet zwölf Euro, ermäßigt acht Euro.",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q9",
+      "gespraech": 5,
+      "type": "richtig_falsch",
+      "statement": "Kinder unter zwölf Jahren müssen keinen Eintritt bezahlen.",
+      "answer": "richtig",
+      "points": 1,
+      "explanation": {
+        "de": "Der Sprecher sagt, dass Kinder unter zwölf Jahren freien Eintritt haben.",
+        "vi": "Người nói cho biết trẻ em dưới mười hai tuổi được vào cửa miễn phí.",
+        "key_evidence": "Kinder unter zwölf haben freien Eintritt, müssen aber von einem Erwachsenen begleitet werden.",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q10",
+      "gespraech": 5,
+      "type": "mc_abc",
+      "question": "Wie viele Einrichtungen nehmen an der Langen Nacht der Museen teil?",
+      "options": {
+        "a": "Zehn.",
+        "b": "Achtzehn.",
+        "c": "Über achtzig."
+      },
+      "answer": "c",
+      "points": 1,
+      "explanation": {
+        "de": "Der Sprecher erwähnt, dass über achtzig Museen, Galerien und Gedenkstätten geöffnet haben.",
+        "vi": "Người nói đề cập rằng hơn tám mươi bảo tàng, phòng trưng bày và đài tưởng niệm mở cửa.",
+        "key_evidence": "Über achtzig Museen, Galerien und Gedenkstätten haben von achtzehn bis zwei Uhr nachts geöffnet.",
         "key_vocabulary": []
       }
     }

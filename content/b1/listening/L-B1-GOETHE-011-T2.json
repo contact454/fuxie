@@ -18,66 +18,94 @@
       "id": "Q1",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Wie heißt eine Person im Gespräch 1?",
+      "question": "Wer führt die Besucher heute durch die Gemäldegalerie?",
       "options": {
-        "a": "Dr",
-        "b": "Monika",
-        "c": "Jörg"
+        "a": "Eine Mitarbeiterin des Museums.",
+        "b": "Dr. Claudia Stein.",
+        "c": "Eine Kunsthistorikerin."
       },
-      "answer": "a",
+      "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Man hört: \"Dr\".",
-        "vi": "Một người trong đoạn 1 tên là gì?",
-        "key_evidence": "Dr",
-        "key_vocabulary": [
-          {
-            "word": "heißen",
-            "meaning": "to be called"
-          }
-        ]
+        "de": "Die Rednerin stellt sich vor: 'Mein Name ist Dr. Claudia Stein und ich werde Sie heute durch unsere Sammlung führen.'",
+        "vi": "Người thuyết trình giới thiệu: 'Tên tôi là Dr. Claudia Stein và tôi sẽ hướng dẫn quý vị tham quan bộ sưu tập của chúng tôi hôm nay.'",
+        "key_evidence": "Mein Name ist Dr. Claudia Stein und ich werde Sie heute durch unsere Sammlung führen.",
+        "key_vocabulary": []
       }
     },
     {
       "id": "Q2",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Wie heißt eine Person (Gespräch 1)?",
+      "question": "Wie viele Gemälde sind insgesamt in der Sammlung der Galerie?",
       "options": {
-        "a": "Spanien",
-        "b": "Italien",
-        "c": "Wiesbaden"
+        "a": "Über 3000 Gemälde.",
+        "b": "Über 3500 Gemälde.",
+        "c": "Über 1800 Gemälde."
       },
-      "answer": "a",
+      "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man den Namen \"Claudia\".",
-        "vi": "Một người trong đoạn 1 tên là gì?",
-        "key_evidence": "Claudia",
-        "key_vocabulary": [
-          {
-            "word": "heißen",
-            "meaning": "to be called"
-          }
-        ]
+        "de": "Die Rednerin sagt: 'Wir haben Werke vom dreizehnten bis zum achtzehnten Jahrhundert, insgesamt über dreitausendfünfhundert Gemälde.'",
+        "vi": "Người thuyết trình nói: 'Chúng tôi có các tác phẩm từ thế kỷ 13 đến thế kỷ 18, tổng cộng hơn 3500 bức tranh.'",
+        "key_evidence": "Wir haben Werke vom dreizehnten bis zum achtzehnten Jahrhundert, insgesamt über dreitausendfünfhundert Gemälde.",
+        "key_vocabulary": []
       }
     },
     {
       "id": "Q3",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Welches Thema wird besprochen (Gespräch 1)?",
+      "question": "Wie alt war Rembrandt van Rijn, als er sein berühmtes Selbstporträt malte?",
       "options": {
-        "a": "Einkaufen und Geld",
-        "b": "Medien und Kommunikation",
-        "c": "Gesundheit und Körper"
+        "a": "Fünfzehn Jahre alt.",
+        "b": "Dreiundfünfzig Jahre alt.",
+        "c": "Dreizehn Jahre alt."
       },
-      "answer": "a",
+      "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Man hört: \"Einkaufen und Geld\".",
-        "vi": "Đoạn hội thoại 1 nói về chủ đề gì?",
-        "key_evidence": "Einkaufen und Geld",
+        "de": "Die Rednerin erwähnt: 'Sein berühmtes Selbstporträt zeigt den Künstler im Alter von dreiundfünfzig Jahren.'",
+        "vi": "Người thuyết trình đề cập: 'Bức tự họa nổi tiếng của ông ấy cho thấy nghệ sĩ ở tuổi 53.'",
+        "key_evidence": "Sein berühmtes Selbstporträt zeigt den Künstler im Alter von dreiundfünfzig Jahren.",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q4",
+      "gespraech": 1,
+      "type": "mc_abc",
+      "question": "Was kostet eine thematische Führung für eine Gruppe?",
+      "options": {
+        "a": "Neunzig Euro.",
+        "b": "Fünfundsiebzig Euro.",
+        "c": "Zwei Wochen im Voraus."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Die Rednerin informiert: 'Die Führungen dauern neunzig Minuten und kosten fünfundsiebzig Euro pro Gruppe.'",
+        "vi": "Người thuyết trình thông báo: 'Các chuyến tham quan kéo dài 90 phút và có giá 75 Euro cho mỗi nhóm.'",
+        "key_evidence": "Die Führungen dauern neunzig Minuten und kosten fünfundsiebzig Euro pro Gruppe.",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q5",
+      "gespraech": 1,
+      "type": "mc_abc",
+      "question": "Wann schließt die Gemäldegalerie am Donnerstag?",
+      "options": {
+        "a": "Um 18:00 Uhr.",
+        "b": "Um 20:00 Uhr.",
+        "c": "Am Montag ist sie geschlossen."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Die Rednerin erklärt die Öffnungszeiten: 'Die Öffnungszeiten sind Dienstag bis Sonntag von zehn bis achtzehn Uhr, donnerstags bis zwanzig Uhr.'",
+        "vi": "Người thuyết trình giải thích giờ mở cửa: 'Giờ mở cửa là từ thứ Ba đến Chủ Nhật từ 10 giờ đến 18 giờ, riêng thứ Năm đến 20 giờ.'",
+        "key_evidence": "Die Öffnungszeiten sind Dienstag bis Sonntag von zehn bis achtzehn Uhr, donnerstags bis zwanzig Uhr.",
         "key_vocabulary": []
       }
     }

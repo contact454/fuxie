@@ -18,13 +18,13 @@
       "id": "Q1",
       "item": 1,
       "type": "richtig_falsch",
-      "statement": "Die Person kommt aus Bangkok.",
-      "answer": "falsch",
+      "statement": "Die eine Person hat zu hohen Cholesterin und leicht erhöhten Blutdruck.",
+      "answer": "richtig",
       "points": 1,
       "explanation": {
-        "de": "Falsch. Die Aussage stimmt nicht mit dem Hörtext überein.",
-        "vi": "Sai.",
-        "key_evidence": "Die Person kommt aus Bangkok.",
+        "de": "Die eine Person sagt: 'Mein Cholesterin ist etwas zu hoch und mein Blutdruck ist auch leicht erhöht.'",
+        "vi": "Người này nói: 'Mức cholesterol của tôi hơi cao và huyết áp của tôi cũng hơi tăng nhẹ.'",
+        "key_evidence": "Mein Cholesterin ist etwas zu hoch und mein Blutdruck ist auch leicht erhöht.",
         "key_vocabulary": []
       }
     },
@@ -32,13 +32,13 @@
       "id": "Q2",
       "item": 2,
       "type": "richtig_falsch",
-      "statement": "Cholesterin wird erwähnt.",
-      "answer": "richtig",
+      "statement": "Der Arzt hat der Person, die beim Arzt war, sofort Medikamente verschrieben.",
+      "answer": "falsch",
       "points": 1,
       "explanation": {
-        "de": "Richtig. Die Aussage stimmt mit dem Hörtext überein.",
-        "vi": "Đúng.",
-        "key_evidence": "Cholesterin wird erwähnt.",
+        "de": "Die Person sagt: 'Nein, noch nicht. Er sagt, ich soll erst meine Ernährung umstellen und mehr Sport machen.'",
+        "vi": "Người này nói: 'Chưa. Bác sĩ nói tôi nên thay đổi chế độ ăn uống và tập thể dục nhiều hơn trước.'",
+        "key_evidence": "Nein, noch nicht. Er sagt, ich soll erst meine Ernährung umstellen und mehr Sport machen.",
         "key_vocabulary": []
       }
     },
@@ -46,13 +46,13 @@
       "id": "Q3",
       "item": 3,
       "type": "richtig_falsch",
-      "statement": "Die Person kommt aus Afghanistan.",
+      "statement": "Die Person, die beim Arzt war, isst morgens Haferflocken mit Obst.",
       "answer": "falsch",
       "points": 1,
       "explanation": {
-        "de": "Falsch. Die Aussage stimmt nicht mit dem Hörtext überein.",
-        "vi": "Sai.",
-        "key_evidence": "Die Person kommt aus Afghanistan.",
+        "de": "Die Person, die beim Arzt war, sagt: 'Morgens Brötchen mit Butter und Marmelade'. Die andere Person frühstückt Haferflocken.",
+        "vi": "Người đi khám bác sĩ nói: 'Buổi sáng bánh mì với bơ và mứt'. Người kia ăn yến mạch vào bữa sáng.",
+        "key_evidence": "Morgens Brötchen mit Butter und Marmelade",
         "key_vocabulary": []
       }
     },
@@ -60,13 +60,55 @@
       "id": "Q4",
       "item": 4,
       "type": "richtig_falsch",
-      "statement": "Die Person kommt aus Köln.",
+      "statement": "Die andere Person joggt jeden Dienstag und Donnerstag im Park.",
+      "answer": "richtig",
+      "points": 1,
+      "explanation": {
+        "de": "Die andere Person sagt: 'Ich laufe jeden Dienstag und Donnerstag im Park.'",
+        "vi": "Người kia nói: 'Tôi chạy bộ mỗi thứ Ba và thứ Năm trong công viên.'",
+        "key_evidence": "Ich laufe jeden Dienstag und Donnerstag im Park.",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q5",
+      "item": 5,
+      "type": "richtig_falsch",
+      "statement": "Die Person, die beim Arzt war, mag Joggen sehr gerne.",
       "answer": "falsch",
       "points": 1,
       "explanation": {
-        "de": "Falsch. Die Aussage stimmt nicht mit dem Hörtext überein.",
-        "vi": "Sai.",
-        "key_evidence": "Die Person kommt aus Köln.",
+        "de": "Die Person, die beim Arzt war, sagt: 'Joggen ist nicht so meins. Ich bekomme immer Seitenstiche nach fünf Minuten.'",
+        "vi": "Người đi khám bác sĩ nói: 'Chạy bộ không phải là sở thích của tôi. Tôi luôn bị đau bụng sau năm phút.'",
+        "key_evidence": "Joggen ist nicht so meins. Ich bekomme immer Seitenstiche nach fünf Minuten.",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q6",
+      "item": 6,
+      "type": "richtig_falsch",
+      "statement": "Sie wollen nächsten Dienstag um 7:30 Uhr mit dem Sport beginnen.",
+      "answer": "falsch",
+      "points": 1,
+      "explanation": {
+        "de": "Sie wollen 'Nächsten Dienstag um halb sieben im Volkspark' beginnen. 'Halb sieben' bedeutet 6:30 Uhr.",
+        "vi": "Họ muốn bắt đầu 'thứ Ba tới lúc sáu rưỡi tại công viên Volkspark'. 'Halb sieben' có nghĩa là 6:30 sáng.",
+        "key_evidence": "Nächsten Dienstag um halb sieben im Volkspark?",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q7",
+      "item": 7,
+      "type": "richtig_falsch",
+      "statement": "Die Person, die die Laufschuhe kaufen will, möchte auch bei leichtem Regen joggen gehen.",
+      "answer": "falsch",
+      "points": 1,
+      "explanation": {
+        "de": "Die Person, die die Laufschuhe kaufen will, sagt: 'Aber wenn es regnet, bleibe ich im Bett!'",
+        "vi": "Người muốn mua giày chạy bộ nói: 'Nhưng nếu trời mưa, tôi sẽ ở trong giường!'",
+        "key_evidence": "Aber wenn es regnet, bleibe ich im Bett!",
         "key_vocabulary": []
       }
     }

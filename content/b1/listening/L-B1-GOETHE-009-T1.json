@@ -16,15 +16,15 @@
   "questions": [
     {
       "id": "Q1",
-      "item": 1,
+      "gespraech": 1,
       "type": "richtig_falsch",
-      "statement": "Es geht um eine Reise.",
-      "answer": "falsch",
+      "statement": "Zu wenig Schlaf kann das Risiko für Herzkrankheiten erhöhen.",
+      "answer": "richtig",
       "points": 1,
       "explanation": {
-        "de": "Falsch. Die Aussage stimmt nicht mit dem Hörtext überein.",
-        "vi": "Sai.",
-        "key_evidence": "Es geht um eine Reise.",
+        "de": "Der Sprecher sagt, dass zu wenig Schlaf das Risiko für Herzkrankheiten erhöht.",
+        "vi": "Người nói cho biết thiếu ngủ làm tăng nguy cơ mắc bệnh tim.",
+        "key_evidence": "Zu wenig Schlaf erhöht das Risiko für Herzkrankheiten, Diabetes und Depressionen.",
         "key_vocabulary": []
       }
     },
@@ -32,18 +32,150 @@
       "id": "Q2",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Welches Thema wird besprochen (Gespräch 1)?",
+      "question": "Welche Temperatur ist ideal für ein Schlafzimmer?",
       "options": {
-        "a": "Umwelt und Natur",
-        "b": "Gesundheit und Körper",
-        "c": "Essen und Trinken"
+        "a": "um 7 Grad",
+        "b": "um 9 Grad",
+        "c": "um 18 Grad"
+      },
+      "answer": "c",
+      "points": 1,
+      "explanation": {
+        "de": "Der Sprecher empfiehlt ein Schlafzimmer mit einer Temperatur um achtzehn Grad.",
+        "vi": "Người nói khuyến nghị nhiệt độ phòng ngủ lý tưởng là khoảng 18 độ C.",
+        "key_evidence": "Ein dunkles, kühles Schlafzimmer mit einer Temperatur um achtzehn Grad ist ideal.",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q3",
+      "gespraech": 2,
+      "type": "richtig_falsch",
+      "statement": "Die Weltgesundheitsorganisation empfiehlt mindestens 30 Minuten Training pro Woche.",
+      "answer": "falsch",
+      "points": 1,
+      "explanation": {
+        "de": "Der Sprecher sagt, dass die Weltgesundheitsorganisation mindestens 150 Minuten Training pro Woche empfiehlt, was etwa 30 Minuten an fünf Tagen sind, nicht 30 Minuten pro Woche.",
+        "vi": "Người nói cho biết Tổ chức Y tế Thế giới khuyến nghị ít nhất 150 phút tập luyện mỗi tuần, tương đương khoảng 30 phút mỗi ngày trong 5 ngày, chứ không phải 30 phút mỗi tuần.",
+        "key_evidence": "Die Weltgesundheitsorganisation empfiehlt mindestens hundertfünfzig Minuten moderates Training pro Woche. Das sind nur etwa dreißig Minuten an fünf Tagen...",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q4",
+      "gespraech": 2,
+      "type": "mc_abc",
+      "question": "Wie oft pro Woche wird Krafttraining empfohlen?",
+      "options": {
+        "a": "einmal pro Woche",
+        "b": "zweimal pro Woche",
+        "c": "fünfmal pro Woche"
       },
       "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Man hört: \"Gesundheit und Körper\".",
-        "vi": "Đoạn hội thoại 1 nói về chủ đề gì?",
-        "key_evidence": "Gesundheit und Körper",
+        "de": "Der Sprecher empfiehlt Krafttraining mindestens zweimal pro Woche.",
+        "vi": "Người nói khuyến nghị tập luyện sức mạnh ít nhất hai lần mỗi tuần.",
+        "key_evidence": "Auch Krafttraining wird empfohlen, mindestens zweimal pro Woche alle großen Muskelgruppen.",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q5",
+      "gespraech": 3,
+      "type": "richtig_falsch",
+      "statement": "Kaffee und Tee können Wasser ersetzen, da sie Flüssigkeit enthalten.",
+      "answer": "falsch",
+      "points": 1,
+      "explanation": {
+        "de": "Der Sprecher erklärt, dass Kaffee und Tee nicht als Wasserersatz zählen, obwohl sie Flüssigkeit enthalten.",
+        "vi": "Người nói giải thích rằng cà phê và trà không được tính là thay thế nước, mặc dù chúng chứa chất lỏng.",
+        "key_evidence": "Kaffee und Tee zählen übrigens nicht als Wasserersatz, obwohl sie Flüssigkeit enthalten.",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q6",
+      "gespraech": 3,
+      "type": "mc_abc",
+      "question": "Wie viele Portionen Obst und Gemüse empfiehlt die Deutsche Gesellschaft für Ernährung pro Tag?",
+      "options": {
+        "a": "drei Portionen",
+        "b": "fünf Portionen",
+        "c": "eineinhalb Portionen"
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Die Deutsche Gesellschaft für Ernährung empfiehlt fünf Portionen Obst und Gemüse am Tag.",
+        "vi": "Hiệp hội Dinh dưỡng Đức khuyến nghị năm khẩu phần trái cây và rau quả mỗi ngày.",
+        "key_evidence": "Die Deutsche Gesellschaft für Ernährung empfiehlt fünf Portionen Obst und Gemüse am Tag.",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q7",
+      "gespraech": 4,
+      "type": "richtig_falsch",
+      "statement": "Schon zehn Minuten tägliche Meditation können helfen, Stress zu reduzieren.",
+      "answer": "richtig",
+      "points": 1,
+      "explanation": {
+        "de": "Der Sprecher sagt, dass zehn Minuten tägliche Meditation den Stresspegel deutlich senken können.",
+        "vi": "Người nói cho biết chỉ mười phút thiền mỗi ngày có thể giảm đáng kể mức độ căng thẳng.",
+        "key_evidence": "Schon zehn Minuten tägliche Meditation können den Stresspegel deutlich senken.",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q8",
+      "gespraech": 4,
+      "type": "mc_abc",
+      "question": "Was sind Meditation, Yoga und progressive Muskelentspannung laut dem Sprecher?",
+      "options": {
+        "a": "wissenschaftlich erprobte Methoden",
+        "b": "neue und unbekannte Methoden",
+        "c": "nur für Experten geeignete Methoden"
+      },
+      "answer": "a",
+      "points": 1,
+      "explanation": {
+        "de": "Der Sprecher beschreibt Meditation, Yoga und progressive Muskelentspannung als wissenschaftlich erprobte Methoden.",
+        "vi": "Người nói mô tả thiền, yoga và thư giãn cơ tiến bộ là những phương pháp đã được khoa học chứng minh.",
+        "key_evidence": "Meditation, Yoga und progressive Muskelentspannung sind wissenschaftlich erprobte Methoden.",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q9",
+      "gespraech": 5,
+      "type": "richtig_falsch",
+      "statement": "Die gesetzliche Krankenkasse bezahlt einen Gesundheitscheck für alle Personen ab 30 Jahren.",
+      "answer": "falsch",
+      "points": 1,
+      "explanation": {
+        "de": "Der Sprecher sagt, dass die gesetzliche Krankenkasse den Gesundheitscheck ab fünfunddreißig Jahren übernimmt, nicht ab 30 Jahren.",
+        "vi": "Người nói cho biết quỹ bảo hiểm y tế công chi trả cho việc kiểm tra sức khỏe từ 35 tuổi trở lên, chứ không phải từ 30 tuổi.",
+        "key_evidence": "Eine wichtige Nachricht für alle Hörer ab fünfunddreißig Jahren. Ab diesem Alter übernimmt die gesetzliche Krankenkasse alle drei Jahre einen Gesundheitscheck.",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q10",
+      "gespraech": 5,
+      "type": "mc_abc",
+      "question": "Was umfasst der allgemeine Gesundheitscheck-up ab 35 Jahren?",
+      "options": {
+        "a": "eine Blutuntersuchung, Blutdruckmessung und eine körperliche Untersuchung",
+        "b": "nur eine Blutuntersuchung und eine Blutdruckmessung",
+        "c": "eine Darmkrebsvorsorge und eine Blutuntersuchung"
+      },
+      "answer": "a",
+      "points": 1,
+      "explanation": {
+        "de": "Der Sprecher listet auf, dass der Check-up eine Blutuntersuchung, Blutdruckmessung und eine körperliche Untersuchung umfasst.",
+        "vi": "Người nói liệt kê rằng gói kiểm tra sức khỏe bao gồm xét nghiệm máu, đo huyết áp và khám thể chất.",
+        "key_evidence": "Der Check-up umfasst eine Blutuntersuchung, Blutdruckmessung und eine körperliche Untersuchung.",
         "key_vocabulary": []
       }
     }

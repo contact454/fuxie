@@ -16,81 +16,166 @@
   "questions": [
     {
       "id": "Q1",
-      "item": 1,
+      "gespraech": 1,
       "type": "richtig_falsch",
-      "statement": "Die Person kommt aus Frankfurt.",
+      "statement": "Im Deutschen Historischen Museum darf man mit Blitz fotografieren.",
       "answer": "falsch",
       "points": 1,
       "explanation": {
-        "de": "Falsch. Die Aussage stimmt nicht mit dem Hörtext überein.",
-        "vi": "Sai.",
-        "key_evidence": "Die Person kommt aus Frankfurt.",
+        "de": "Der Museumsführer sagt: 'Bitte beachten Sie, dass das Fotografieren mit Blitz in diesem Raum nicht erlaubt ist.'",
+        "vi": "Người hướng dẫn bảo tàng nói: 'Xin lưu ý rằng việc chụp ảnh có đèn flash không được phép trong phòng này.'",
+        "key_evidence": "Bitte beachten Sie, dass das Fotografieren mit Blitz in diesem Raum nicht erlaubt ist.",
         "key_vocabulary": []
       }
     },
     {
       "id": "Q2",
-      "item": 2,
-      "type": "richtig_falsch",
-      "statement": "Johann wird erwähnt.",
-      "answer": "richtig",
+      "gespraech": 1,
+      "type": "mc_abc",
+      "question": "Was ist laut dem Museumsführer in der Ausstellung besonders beeindruckend?",
+      "options": {
+        "a": "Die originalen Dokumente.",
+        "b": "Die Sammlung von Wahlplakaten.",
+        "c": "Die Alltagsgegenstände."
+      },
+      "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Richtig. Die Aussage stimmt mit dem Hörtext überein.",
-        "vi": "Đúng.",
-        "key_evidence": "Johann wird erwähnt.",
+        "de": "Der Museumsführer sagt: 'Besonders beeindruckend ist die Sammlung von Wahlplakaten der verschiedenen Parteien.'",
+        "vi": "Người hướng dẫn bảo tàng nói: 'Đặc biệt ấn tượng là bộ sưu tập các áp phích bầu cử của các đảng khác nhau.'",
+        "key_evidence": "Besonders beeindruckend ist die Sammlung von Wahlplakaten der verschiedenen Parteien.",
         "key_vocabulary": []
       }
     },
     {
       "id": "Q3",
-      "item": 3,
+      "gespraech": 2,
       "type": "richtig_falsch",
-      "statement": "Die Person kommt aus Toronto.",
+      "statement": "Das Konzert dauert ohne Pause zwei Stunden.",
       "answer": "falsch",
       "points": 1,
       "explanation": {
-        "de": "Falsch. Die Aussage stimmt nicht mit dem Hörtext überein.",
-        "vi": "Sai.",
-        "key_evidence": "Die Person kommt aus Toronto.",
+        "de": "Der Sprecher sagt: 'Das Konzert beginnt um zwanzig Uhr und daürt etwa zwei Stunden mit einer Pause.'",
+        "vi": "Người nói cho biết: 'Buổi hòa nhạc bắt đầu lúc 8 giờ tối và kéo dài khoảng hai giờ, có một giờ nghỉ giải lao.'",
+        "key_evidence": "Das Konzert beginnt um zwanzig Uhr und daürt etwa zwei Stunden mit einer Pause.",
         "key_vocabulary": []
       }
     },
     {
       "id": "Q4",
-      "gespraech": 1,
+      "gespraech": 2,
       "type": "mc_abc",
-      "question": "Welches Thema wird besprochen (Gespräch 1)?",
+      "question": "Wie viel Ermäßigung bekommen Schüler und Studenten für das Konzert?",
       "options": {
-        "a": "Einkaufen und Geld",
-        "b": "Medien und Kommunikation",
-        "c": "Umwelt und Natur"
+        "a": "Zehn Prozent.",
+        "b": "Dreißig Prozent.",
+        "c": "Fünfundvierzig Prozent."
       },
-      "answer": "a",
+      "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Man hört: \"Einkaufen und Geld\".",
-        "vi": "Đoạn hội thoại 1 nói về chủ đề gì?",
-        "key_evidence": "Einkaufen und Geld",
+        "de": "Der Sprecher sagt: 'Für Schüler und Studenten gibt es eine Ermäßigung von dreißig Prozent.'",
+        "vi": "Người nói cho biết: 'Học sinh và sinh viên được giảm giá ba mươi phần trăm.'",
+        "key_evidence": "Für Schüler und Studenten gibt es eine Ermäßigung von dreißig Prozent.",
         "key_vocabulary": []
       }
     },
     {
       "id": "Q5",
-      "gespraech": 1,
+      "gespraech": 3,
+      "type": "richtig_falsch",
+      "statement": "Jeden Sonntag im Monat haben viele Berliner Museen freien Eintritt.",
+      "answer": "falsch",
+      "points": 1,
+      "explanation": {
+        "de": "Der Sprecher sagt: 'Jeden ersten Sonntag im Monat bieten viele Berliner Museen freien Eintritt an.'",
+        "vi": "Người nói cho biết: 'Vào Chủ Nhật đầu tiên của mỗi tháng, nhiều bảo tàng ở Berlin cung cấp vé vào cửa miễn phí.'",
+        "key_evidence": "Jeden ersten Sonntag im Monat bieten viele Berliner Museen freien Eintritt an.",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q6",
+      "gespraech": 3,
       "type": "mc_abc",
-      "question": "Welches Thema wird besprochen (Gespräch 1)?",
+      "question": "Was rät der Sprecher, um lange Wartezeiten zu vermeiden?",
       "options": {
-        "a": "Kroatien",
-        "b": "Oldenburg",
-        "c": "Kolumbien"
+        "a": "Man sollte nach zehn Uhr kommen.",
+        "b": "Man sollte schon vor zehn Uhr kommen.",
+        "c": "Man sollte die Webseite besuchen."
       },
       "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Das Hauptthema ist \"Einkaufen\".",
-        "vi": "Đoạn hội thoại 1 nói về chủ đề gì?",
-        "key_evidence": "Einkaufen",
+        "de": "Der Sprecher sagt: 'Mein Rat ist, schon vor zehn Uhr zu kommen, dann sind noch nicht so viele Besucher da.'",
+        "vi": "Người nói khuyên: 'Lời khuyên của tôi là nên đến trước 10 giờ, khi đó chưa có nhiều khách tham quan.'",
+        "key_evidence": "Mein Rat ist, schon vor zehn Uhr zu kommen, dann sind noch nicht so viele Besucher da.",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q7",
+      "gespraech": 4,
+      "type": "richtig_falsch",
+      "statement": "Die Ausstellung 'Stadtansichten' kann man bis Ende Juli besuchen.",
+      "answer": "falsch",
+      "points": 1,
+      "explanation": {
+        "de": "Der Sprecher sagt: 'Die Ausstellung läuft vom fünfzehnten März bis zum dreißigsten Juni.'",
+        "vi": "Người nói cho biết: 'Triển lãm diễn ra từ ngày 15 tháng 3 đến ngày 30 tháng 6.'",
+        "key_evidence": "Die Ausstellung läuft vom fünfzehnten März bis zum dreißigsten Juni.",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q8",
+      "gespraech": 4,
+      "type": "mc_abc",
+      "question": "Wann ist der Eintritt zur Ausstellung für alle Besucher kostenlos?",
+      "options": {
+        "a": "Am Donnerstagabend von 18 bis 21 Uhr.",
+        "b": "Am Wochenende.",
+        "c": "Jeden Tag nach 18 Uhr."
+      },
+      "answer": "a",
+      "points": 1,
+      "explanation": {
+        "de": "Der Sprecher sagt: 'Am Donnerstagabend ist der Eintritt von achtzehn bis einundzwanzig Uhr für alle frei.'",
+        "vi": "Người nói cho biết: 'Vào tối thứ Năm, vé vào cửa miễn phí cho tất cả mọi người từ 6 giờ tối đến 9 giờ tối.'",
+        "key_evidence": "Am Donnerstagabend ist der Eintritt von achtzehn bis einundzwanzig Uhr für alle frei.",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q9",
+      "gespraech": 5,
+      "type": "richtig_falsch",
+      "statement": "Kinder unter zwölf Jahren müssen Eintritt bezahlen.",
+      "answer": "falsch",
+      "points": 1,
+      "explanation": {
+        "de": "Der Sprecher sagt: 'Kinder unter zwölf haben freien Eintritt, müssen aber von einem Erwachsenen begleitet werden.'",
+        "vi": "Người nói cho biết: 'Trẻ em dưới mười hai tuổi được vào cửa miễn phí, nhưng phải có người lớn đi kèm.'",
+        "key_evidence": "Kinder unter zwölf haben freien Eintritt, müssen aber von einem Erwachsenen begleitet werden.",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q10",
+      "gespraech": 5,
+      "type": "mc_abc",
+      "question": "Was ist im Preis der Eintrittskarte für achtzehn Euro enthalten?",
+      "options": {
+        "a": "Nur der Eintritt zu einem Museum.",
+        "b": "Der Eintritt zu allen teilnehmenden Einrichtungen und die Nutzung der Shuttle-Busse.",
+        "c": "Der Eintritt und ein Getränk."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Der Sprecher sagt: 'Eine Eintrittskarte für achtzehn Euro gilt für alle teilnehmenden Einrichtungen und die Busse.'",
+        "vi": "Người nói cho biết: 'Một vé vào cửa giá mười tám Euro có giá trị cho tất cả các cơ sở tham gia và xe buýt đưa đón.'",
+        "key_evidence": "Eine Eintrittskarte für achtzehn Euro gilt für alle teilnehmenden Einrichtungen und die Busse.",
         "key_vocabulary": []
       }
     }

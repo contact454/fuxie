@@ -18,85 +18,165 @@
       "id": "Q1",
       "item": 1,
       "type": "richtig_falsch",
-      "statement": "Die Person kommt aus Bremen.",
+      "statement": "Der Anschlusszug in München wartet auf den verspäteten ICE.",
       "answer": "falsch",
       "points": 1,
       "explanation": {
-        "de": "Falsch. Die Aussage stimmt nicht mit dem Hörtext überein.",
-        "vi": "Sai.",
-        "key_evidence": "Die Person kommt aus Bremen.",
+        "de": "Der Ansager sagt: 'Ihr Anschlusszug in München wartet nicht'.",
+        "vi": "Người thông báo nói: 'Chuyến tàu nối chuyến của quý vị ở Munich sẽ không chờ'.",
+        "key_evidence": "Ihr Anschlusszug in München wartet nicht",
         "key_vocabulary": []
       }
     },
     {
       "id": "Q2",
-      "item": 2,
-      "type": "richtig_falsch",
-      "statement": "Italien wird erwähnt.",
-      "answer": "richtig",
+      "gespraech": 1,
+      "type": "mc_abc",
+      "question": "Wann sollte der ICE siebenhundertvierunddreißig ursprünglich abfahren?",
+      "options": {
+        "a": "Um dreizehn Uhr fünfzehn.",
+        "b": "Um dreizehn Uhr fünfundvierzig.",
+        "c": "Um sechzehn Uhr."
+      },
+      "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Richtig. Die Aussage stimmt mit dem Hörtext überein.",
-        "vi": "Đúng.",
-        "key_evidence": "Italien wird erwähnt.",
+        "de": "Der Ansager sagt: 'Der ICE siebenhundertvierunddreißig um dreizehn Uhr fünfundvierzig hat heute eine Verspätung'. Dies impliziert, dass die ursprüngliche Abfahrtszeit 13:45 Uhr war.",
+        "vi": "Người thông báo nói: 'Chuyến tàu ICE 734 lúc 13:45 hôm nay bị trễ'. Điều này ngụ ý rằng thời gian khởi hành ban đầu là 13:45.",
+        "key_evidence": "Der ICE siebenhundertvierunddreißig um dreizehn Uhr fünfundvierzig hat heute eine Verspätung von dreißig Minuten.",
         "key_vocabulary": []
       }
     },
     {
       "id": "Q3",
-      "item": 3,
+      "item": 2,
       "type": "richtig_falsch",
-      "statement": "Die Person kommt aus Hannover.",
+      "statement": "Es ist günstiger, Zugtickets nach Italien kurz vor der Reise zu kaufen.",
       "answer": "falsch",
       "points": 1,
       "explanation": {
-        "de": "Falsch. Die Aussage stimmt nicht mit dem Hörtext überein.",
-        "vi": "Sai.",
-        "key_evidence": "Die Person kommt aus Hannover.",
+        "de": "Der Sprecher sagt: 'Buchen Sie Ihrer Tickets mindestens drei Monate im Voraus, dann sind sie am günstigsten.'",
+        "vi": "Người nói cho biết: 'Hãy đặt vé trước ít nhất ba tháng, khi đó chúng sẽ rẻ nhất.'",
+        "key_evidence": "Buchen Sie Ihrer Tickets mindestens drei Monate im Voraus, dann sind sie am günstigsten.",
         "key_vocabulary": []
       }
     },
     {
       "id": "Q4",
-      "gespraech": 1,
+      "gespraech": 2,
       "type": "mc_abc",
-      "question": "Welches Thema wird besprochen (Gespräch 1)?",
+      "question": "Wie lange dauert die Zugfahrt von Berlin nach Rom ungefähr?",
       "options": {
-        "a": "Gesundheit und Körper",
-        "b": "Essen und Trinken",
-        "c": "Einkaufen und Geld"
+        "a": "Zwischen zwölf und vierzehn Stunden.",
+        "b": "Etwa drei Monate.",
+        "c": "Weniger als zwölf Stunden."
       },
-      "answer": "c",
+      "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Man hört: \"Einkaufen und Geld\".",
-        "vi": "Đoạn hội thoại 1 nói về chủ đề gì?",
-        "key_evidence": "Einkaufen und Geld",
+        "de": "Der Sprecher sagt: 'Die Fahrt dauert insgesamt zwischen zwölf und vierzehn Stunden, je nach Verbindung.'",
+        "vi": "Người nói cho biết: 'Chuyến đi tổng cộng mất từ mười hai đến mười bốn giờ, tùy thuộc vào chuyến tàu.'",
+        "key_evidence": "Die Fahrt dauert insgesamt zwischen zwölf und vierzehn Stunden, je nach Verbindung.",
         "key_vocabulary": []
       }
     },
     {
       "id": "Q5",
-      "gespraech": 1,
+      "item": 3,
+      "type": "richtig_falsch",
+      "statement": "Deutsche Staatsbürger benötigen ein Visum für einen Aufenthalt von zwei Monaten in Japan.",
+      "answer": "falsch",
+      "points": 1,
+      "explanation": {
+        "de": "Der Sprecher sagt: 'Für die Einreise nach Japan brauchen deutsche Staatsbürger kein Visum für Aufenthalte bis neunzig Tage.' Zwei Monate sind weniger als neunzig Tage.",
+        "vi": "Người nói cho biết: 'Để nhập cảnh Nhật Bản, công dân Đức không cần thị thực cho các kỳ lưu trú dưới chín mươi ngày.' Hai tháng ít hơn chín mươi ngày.",
+        "key_evidence": "Für die Einreise nach Japan brauchen deutsche Staatsbürger kein Visum für Aufenthalte bis neunzig Tage.",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q6",
+      "gespraech": 3,
       "type": "mc_abc",
-      "question": "Woher kommt die Person (Gespräch 1)?",
+      "question": "Wie oft pro Woche gibt es die neue direkte Flugverbindung von Berlin nach Tokio?",
       "options": {
-        "a": "Düsseldorf",
-        "b": "Leipzig",
-        "c": "Frankfurt"
+        "a": "Zweimal pro Woche.",
+        "b": "Dreimal pro Woche.",
+        "c": "Elfmal pro Woche."
       },
       "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Man hört: \"Leipzig\".",
-        "vi": "Người đó đến từ đâu (đoạn 1)?",
-        "key_evidence": "Leipzig",
-        "key_vocabulary": [
-          {
-            "word": "kommen aus",
-            "meaning": "to come from"
-          }
-        ]
+        "de": "Der Sprecher sagt: 'Die Fluggesellschaft bietet dreimal wöchentlich Direktflüge an, dienstags, donnerstags und samstags.'",
+        "vi": "Người nói cho biết: 'Hãng hàng không cung cấp các chuyến bay thẳng ba lần mỗi tuần, vào thứ Ba, thứ Năm và thứ Bảy.'",
+        "key_evidence": "Die Fluggesellschaft bietet dreimal wöchentlich Direktflüge an, dienstags, donnerstags und samstags.",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q7",
+      "item": 4,
+      "type": "richtig_falsch",
+      "statement": "Bei einer Verspätung von mehr als fünf Stunden erhalten Passagiere Verpflegungsgutscheine.",
+      "answer": "falsch",
+      "points": 1,
+      "explanation": {
+        "de": "Die Durchsage informiert, dass Verpflegungsgutscheine bei einer Verspätung von mehr als drei Stunden erhältlich sind, nicht erst ab fünf Stunden.",
+        "vi": "Thông báo cho biết phiếu ăn uống có sẵn khi chuyến bay bị trễ hơn ba giờ, chứ không phải chỉ từ năm giờ trở lên.",
+        "key_evidence": "Bei einer Verspätung von mehr als drei Stunden haben Sie Anspruch auf Verpflegungsgutscheine.",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q8",
+      "gespraech": 4,
+      "type": "mc_abc",
+      "question": "Was ist der Grund für die erheblichen Verzögerungen am Flughafen Berlin Brandenburg?",
+      "options": {
+        "a": "Ein Streik des Bodenpersonals.",
+        "b": "Technische Probleme an den Flugzeugen.",
+        "c": "Schlechtes Wetter."
+      },
+      "answer": "a",
+      "points": 1,
+      "explanation": {
+        "de": "Die Durchsage informiert: 'Aufgrund eines Streiks des Bodenpersonals kommt es heute zu erheblichen Verzögerungen.'",
+        "vi": "Thông báo cho biết: 'Do cuộc đình công của nhân viên mặt đất, hôm nay có những sự chậm trễ đáng kể.'",
+        "key_evidence": "Aufgrund eines Streiks des Bodenpersonals kommt es heute zu erheblichen Verzögerungen.",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q9",
+      "item": 5,
+      "type": "richtig_falsch",
+      "statement": "Die Nordsee ist besonders für ihre weißen Sandstrände bekannt.",
+      "answer": "falsch",
+      "points": 1,
+      "explanation": {
+        "de": "Der Sprecher sagt, dass die weißen Sandstrände an der Ostsee sind, nicht an der Nordsee.",
+        "vi": "Người nói cho biết rằng các bãi biển cát trắng nằm ở Biển Baltic (Ostsee), chứ không phải Biển Bắc (Nordsee).",
+        "key_evidence": "An der Ostsee locken weiße Sandstrände, historische Seebäder und mildes Seeklima.",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q10",
+      "gespraech": 5,
+      "type": "mc_abc",
+      "question": "Wann sollte man am besten buchen, um die besten Preise für einen Urlaub an der Ostsee zu bekommen?",
+      "options": {
+        "a": "Im Juli oder August.",
+        "b": "Im Januar oder Februar.",
+        "c": "In der Nebensaison."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Der Sprecher sagt: 'Frühes Buchen lohnt sich also, idealerweise schon im Januar oder Februar.'",
+        "vi": "Người nói cho biết: 'Vì vậy, đặt sớm sẽ có lợi, lý tưởng nhất là vào tháng Giêng hoặc tháng Hai.'",
+        "key_evidence": "Frühes Buchen lohnt sich also, idealerweise schon im Januar oder Februar.",
+        "key_vocabulary": []
       }
     }
   ],

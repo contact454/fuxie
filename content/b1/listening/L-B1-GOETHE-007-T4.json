@@ -18,18 +18,18 @@
       "id": "Q1",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Welches Thema wird besprochen (Gespräch 1)?",
+      "question": "Wer sagt das: \"Unser Thema heute: Wie gelingt gute Nachbarschaft?\"",
       "options": {
-        "a": "Einkaufen und Geld",
-        "b": "Essen und Trinken",
-        "c": "Wohnung und Haushalt"
+        "a": "Moderator",
+        "b": "Frau Hartmann",
+        "c": "Herr Vogt"
       },
       "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Man hört: \"Einkaufen und Geld\".",
-        "vi": "Đoạn hội thoại 1 nói về chủ đề gì?",
-        "key_evidence": "Einkaufen und Geld",
+        "de": "Der Moderator eröffnet die Sendung mit der Vorstellung des Themas.",
+        "vi": "Người điều hành mở đầu chương trình bằng cách giới thiệu chủ đề.",
+        "key_evidence": "Moderator: Unser Thema heute: Wie gelingt gute Nachbarschaft?",
         "key_vocabulary": []
       }
     },
@@ -37,48 +37,133 @@
       "id": "Q2",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Wie heißt eine Person im Gespräch 1?",
+      "question": "Wer sagt das: \"Gute Nachbarschaft ist in einer Großstadt wie Berlin besonders wichtig und gleichzeitig schwierig.\"",
       "options": {
-        "a": "Hartmann",
-        "b": "Hans",
-        "c": "Anna"
+        "a": "Moderator",
+        "b": "Frau Hartmann",
+        "c": "Herr Vogt"
       },
-      "answer": "a",
+      "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Man hört: \"Hartmann\".",
-        "vi": "Một người trong đoạn 1 tên là gì?",
-        "key_evidence": "Hartmann",
-        "key_vocabulary": [
-          {
-            "word": "heißen",
-            "meaning": "to be called"
-          }
-        ]
+        "de": "Frau Hartmann äußert diese Meinung gleich zu Beginn der Diskussion.",
+        "vi": "Bà Hartmann bày tỏ ý kiến này ngay từ đầu cuộc thảo luận.",
+        "key_evidence": "Gast_A: Gute Nachbarschaft ist in einer Großstadt wie Berlin besonders wichtig und gleichzeitig schwierig.",
+        "key_vocabulary": []
       }
     },
     {
       "id": "Q3",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Wie heißt eine Person (Gespräch 1)?",
+      "question": "Wer sagt das: \"Ich lebe auf dem Land und da kennt man seine Nachbarn. In der Stadt ist das ganz anders.\"",
       "options": {
-        "a": "Thailand",
-        "b": "Italien",
-        "c": "Irak"
+        "a": "Moderator",
+        "b": "Frau Hartmann",
+        "c": "Herr Vogt"
+      },
+      "answer": "c",
+      "points": 1,
+      "explanation": {
+        "de": "Herr Vogt vergleicht seine Erfahrung auf dem Land mit der Situation in der Stadt.",
+        "vi": "Ông Vogt so sánh kinh nghiệm sống ở nông thôn với tình hình ở thành phố.",
+        "key_evidence": "Gast_B: Ich lebe auf dem Land und da kennt man seine Nachbarn. In der Stadt ist das ganz anders.",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q4",
+      "gespraech": 1,
+      "type": "mc_abc",
+      "question": "Wer sagt das: \"Auf dem Land hilft man sich gegenseitig, das gehört einfach dazu und ist selbstverständlich.\"",
+      "options": {
+        "a": "Moderator",
+        "b": "Frau Hartmann",
+        "c": "Herr Vogt"
       },
       "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man den Namen \"Hartmann\".",
-        "vi": "Một người trong đoạn 1 tên là gì?",
-        "key_evidence": "Hartmann",
-        "key_vocabulary": [
-          {
-            "word": "heißen",
-            "meaning": "to be called"
-          }
-        ]
+        "de": "Der Moderator beschreibt die Hilfsbereitschaft auf dem Land als selbstverständlich.",
+        "vi": "Người điều hành mô tả sự sẵn lòng giúp đỡ ở nông thôn là điều hiển nhiên.",
+        "key_evidence": "Moderator: Auf dem Land hilft man sich gegenseitig, das gehört einfach dazu und ist selbstverständlich.",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q5",
+      "gespraech": 1,
+      "type": "mc_abc",
+      "question": "Wer sagt das: \"Lärm ist das Hauptproblem, dann kommen Haustiere und das Thema Sauberkeit im Haus.\"",
+      "options": {
+        "a": "Moderator",
+        "b": "Frau Hartmann",
+        "c": "Herr Vogt"
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Frau Hartmann nennt die häufigsten Nachbarschaftskonflikte aus ihrer Erfahrung.",
+        "vi": "Bà Hartmann nêu ra những xung đột hàng xóm phổ biến nhất từ kinh nghiệm của mình.",
+        "key_evidence": "Gast_A: Lärm ist das Hauptproblem, dann kommen Haustiere und das Thema Sauberkeit im Haus.",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q6",
+      "gespraech": 1,
+      "type": "mc_abc",
+      "question": "Wer sagt das: \"Stellen Sie sich bei Ihren direkten Nachbarn vor. Ein kleines Geschenk wie Schokolade wirkt Wunder.\"",
+      "options": {
+        "a": "Moderator",
+        "b": "Frau Hartmann",
+        "c": "Herr Vogt"
+      },
+      "answer": "c",
+      "points": 1,
+      "explanation": {
+        "de": "Herr Vogt gibt diesen Ratschlag für Menschen, die neu in ein Viertel ziehen.",
+        "vi": "Ông Vogt đưa ra lời khuyên này cho những người mới chuyển đến một khu phố.",
+        "key_evidence": "Gast_B: Stellen Sie sich bei Ihren direkten Nachbarn vor. Ein kleines Geschenk wie Schokolade wirkt Wunder.",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q7",
+      "gespraech": 1,
+      "type": "mc_abc",
+      "question": "Wer sagt das: \"Kommunikation ist wirklich das wichtigste Werkzeug für ein gutes Zusammenleben.\"",
+      "options": {
+        "a": "Moderator",
+        "b": "Frau Hartmann",
+        "c": "Herr Vogt"
+      },
+      "answer": "a",
+      "points": 1,
+      "explanation": {
+        "de": "Der Moderator fasst die Bedeutung der Kommunikation für ein gutes Zusammenleben zusammen.",
+        "vi": "Người điều hành tóm tắt tầm quan trọng của giao tiếp để có một cuộc sống chung tốt đẹp.",
+        "key_evidence": "Moderator: Kommunikation ist wirklich das wichtigste Werkzeug für ein gutes Zusammenleben.",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q8",
+      "gespraech": 1,
+      "type": "mc_abc",
+      "question": "Wer sagt das: \"Seien Sie freundlich zu Ihren Nachbarn, denn gute Nachbarn sind Gold wert!\"",
+      "options": {
+        "a": "Moderator",
+        "b": "Frau Hartmann",
+        "c": "Herr Vogt"
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Frau Hartmann gibt diesen abschließenden Tipp am Ende der Diskussion.",
+        "vi": "Bà Hartmann đưa ra lời khuyên cuối cùng này vào cuối cuộc thảo luận.",
+        "key_evidence": "Gast_A: Seien Sie freundlich zu Ihren Nachbarn, denn gute Nachbarn sind Gold wert!",
+        "key_vocabulary": []
       }
     }
   ],

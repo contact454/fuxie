@@ -18,18 +18,18 @@
       "id": "Q1",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Welches Thema wird besprochen (Gespräch 1)?",
+      "question": "Wer sagt das: \"Heute diskutieren wir über das Thema Partys und Feiern in der Stadt.\"",
       "options": {
-        "a": "Umwelt und Natur",
-        "b": "Freizeit und Hobbys",
-        "c": "Wohnung und Haushalt"
+        "a": "Der Moderator",
+        "b": "Herr Ludwig",
+        "c": "Frau Petersen"
       },
-      "answer": "c",
+      "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Man hört: \"Wohnung und Haushalt\".",
-        "vi": "Đoạn hội thoại 1 nói về chủ đề gì?",
-        "key_evidence": "Wohnung und Haushalt",
+        "de": "Der Moderator eröffnet die Diskussion und stellt das Thema vor.",
+        "vi": "Người điều hành mở đầu cuộc thảo luận và giới thiệu chủ đề.",
+        "key_evidence": "Moderator: Willkommen zu 'Zusammenleben'. Heute diskutieren wir über das Thema Partys und Feiern in der Stadt.",
         "key_vocabulary": []
       }
     },
@@ -37,48 +37,133 @@
       "id": "Q2",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Wie heißt eine Person im Gespräch 1?",
+      "question": "Wer sagt das: \"In meinem Haus gibt es ständig Partys und der Lärm stört mich sehr.\"",
       "options": {
-        "a": "Nina",
-        "b": "Sophie",
-        "c": "Ludwig"
+        "a": "Der Moderator",
+        "b": "Herr Ludwig",
+        "c": "Frau Petersen"
       },
-      "answer": "c",
+      "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Man hört: \"Ludwig\".",
-        "vi": "Một người trong đoạn 1 tên là gì?",
-        "key_evidence": "Ludwig",
-        "key_vocabulary": [
-          {
-            "word": "heißen",
-            "meaning": "to be called"
-          }
-        ]
+        "de": "Herr Ludwig beschreibt seine persönliche Situation mit Lärmbelästigung.",
+        "vi": "Ông Ludwig mô tả tình hình cá nhân của mình về việc bị làm phiền bởi tiếng ồn.",
+        "key_evidence": "Gast_A: In meinem Haus gibt es ständig Partys und der Lärm stört mich sehr.",
+        "key_vocabulary": []
       }
     },
     {
       "id": "Q3",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Woher kommt die Person (Gespräch 1)?",
+      "question": "Wer sagt das: \"Feiern gehört zum Leben dazu, besonders in einer Großstadt.\"",
       "options": {
-        "a": "Frankfurt",
-        "b": "Hannover",
-        "c": "Deutschland"
+        "a": "Der Moderator",
+        "b": "Herr Ludwig",
+        "c": "Frau Petersen"
       },
       "answer": "c",
       "points": 1,
       "explanation": {
-        "de": "Man hört: \"Deutschland\".",
-        "vi": "Người đó đến từ đâu (đoạn 1)?",
-        "key_evidence": "Deutschland",
-        "key_vocabulary": [
-          {
-            "word": "kommen aus",
-            "meaning": "to come from"
-          }
-        ]
+        "de": "Frau Petersen äußert Verständnis für Partys als Teil des Lebens in der Stadt.",
+        "vi": "Bà Petersen bày tỏ sự thông cảm với việc tiệc tùng là một phần của cuộc sống ở thành phố.",
+        "key_evidence": "Gast_B: Ich kann das verstehen, aber Feiern gehört zum Leben dazu, besonders in einer Großstadt.",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q4",
+      "gespraech": 1,
+      "type": "mc_abc",
+      "question": "Wer sagt das: \"Oft bis zwei oder drei Uhr nachts geht der Lärm.\"",
+      "options": {
+        "a": "Der Moderator",
+        "b": "Herr Ludwig",
+        "c": "Frau Petersen"
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Herr Ludwig gibt an, wie lange der Lärm in seinem Haus normalerweise dauert.",
+        "vi": "Ông Ludwig cho biết tiếng ồn trong nhà ông ấy thường kéo dài đến mấy giờ.",
+        "key_evidence": "Gast_A: Oft bis zwei oder drei Uhr nachts! Und ich muss am nächsten Tag um sechs Uhr aufstehen.",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q5",
+      "gespraech": 1,
+      "type": "mc_abc",
+      "question": "Wer sagt das: \"Ab zweiundzwanzig Uhr gilt in Deutschland die Nachtruhe.\"",
+      "options": {
+        "a": "Der Moderator",
+        "b": "Herr Ludwig",
+        "c": "Frau Petersen"
+      },
+      "answer": "c",
+      "points": 1,
+      "explanation": {
+        "de": "Frau Petersen weist auf die gesetzliche Regelung der Nachtruhe hin.",
+        "vi": "Bà Petersen chỉ ra quy định pháp luật về giờ nghỉ đêm.",
+        "key_evidence": "Gast_B: Das ist natürlich problematisch. Ab zweiundzwanzig Uhr gilt in Deutschland die Nachtruhe.",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q6",
+      "gespraech": 1,
+      "type": "mc_abc",
+      "question": "Wer sagt das: \"Nach dem Gesetz ist Ruhestörung nach zweiundzwanzig Uhr eine Ordnungswidrigkeit.\"",
+      "options": {
+        "a": "Der Moderator",
+        "b": "Herr Ludwig",
+        "c": "Frau Petersen"
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Herr Ludwig erklärt die rechtliche Einordnung von Ruhestörung nach 22 Uhr.",
+        "vi": "Ông Ludwig giải thích phân loại pháp lý về việc gây rối trật tự sau 22 giờ.",
+        "key_evidence": "Gast_A: Nach dem Gesetz ist Ruhestörung nach zweiundzwanzig Uhr eine Ordnungswidrigkeit.",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q7",
+      "gespraech": 1,
+      "type": "mc_abc",
+      "question": "Wer sagt das: \"Man könnte auch gemeinsame Regeln im Haus aufstellen, die für alle gelten.\"",
+      "options": {
+        "a": "Der Moderator",
+        "b": "Herr Ludwig",
+        "c": "Frau Petersen"
+      },
+      "answer": "c",
+      "points": 1,
+      "explanation": {
+        "de": "Frau Petersen schlägt eine friedliche Lösung durch gemeinsame Regeln vor.",
+        "vi": "Bà Petersen đề xuất một giải pháp hòa bình thông qua các quy tắc chung.",
+        "key_evidence": "Gast_B: Man könnte auch gemeinsame Regeln im Haus aufstellen, die für alle gelten.",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q8",
+      "gespraech": 1,
+      "type": "mc_abc",
+      "question": "Wer sagt das: \"Die meisten Konflikte lassen sich durch ein Gespräch lösen.\"",
+      "options": {
+        "a": "Der Moderator",
+        "b": "Herr Ludwig",
+        "c": "Frau Petersen"
+      },
+      "answer": "a",
+      "points": 1,
+      "explanation": {
+        "de": "Der Moderator fasst am Ende zusammen, dass Gespräche die beste Lösung sind.",
+        "vi": "Người điều hành tổng kết rằng đối thoại là giải pháp tốt nhất.",
+        "key_evidence": "Moderator: Das finde ich auch. Die meisten Konflikte lassen sich durch ein Gespräch lösen.",
+        "key_vocabulary": []
       }
     }
   ],

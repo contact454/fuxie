@@ -18,79 +18,164 @@
       "id": "Q1",
       "item": 1,
       "type": "richtig_falsch",
-      "statement": "Die Person kommt aus Marokko.",
-      "answer": "falsch",
+      "statement": "Die Nachtruhe in Deutschland beginnt um 22 Uhr und endet um 6 Uhr morgens.",
+      "answer": "richtig",
       "points": 1,
       "explanation": {
-        "de": "Falsch. Die Aussage stimmt nicht mit dem Hörtext überein.",
-        "vi": "Sai.",
-        "key_evidence": "Die Person kommt aus Marokko.",
+        "de": "Der Sprecher sagt: 'In Deutschland gilt die Nachtruhe von zweiundzwanzig Uhr bis sechs Uhr morgens.'",
+        "vi": "Người nói cho biết: 'Ở Đức, thời gian nghỉ đêm là từ 22 giờ đến 6 giờ sáng.'",
+        "key_evidence": "In Deutschland gilt die Nachtruhe von zweiundzwanzig Uhr bis sechs Uhr morgens.",
         "key_vocabulary": []
       }
     },
     {
       "id": "Q2",
-      "item": 2,
-      "type": "richtig_falsch",
-      "statement": "Gespräch wird erwähnt.",
-      "answer": "richtig",
+      "gespraech": 1,
+      "type": "mc_abc",
+      "question": "Was ist die schlimmste Konsequenz, wenn man die Regeln zur Ruhestörung wiederholt missachtet?",
+      "options": {
+        "a": "Eine Abmahnung vom Vermieter.",
+        "b": "Die Kündigung der Wohnung.",
+        "c": "Eine Geldstrafe von der Polizei."
+      },
+      "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Richtig. Die Aussage stimmt mit dem Hörtext überein.",
-        "vi": "Đúng.",
-        "key_evidence": "Gespräch wird erwähnt.",
+        "de": "Der Sprecher erwähnt: 'Im schlimmsten Fall kann wiederholte Ruhestörung sogar zur Kündigung der Wohnung führen.'",
+        "vi": "Người nói đề cập: 'Trong trường hợp xấu nhất, việc gây ồn ào lặp đi lặp lại thậm chí có thể dẫn đến việc chấm dứt hợp đồng thuê nhà.'",
+        "key_evidence": "Im schlimmsten Fall kann wiederholte Ruhestörung sogar zur Kündigung der Wohnung führen.",
         "key_vocabulary": []
       }
     },
     {
       "id": "Q3",
-      "item": 3,
+      "item": 2,
       "type": "richtig_falsch",
-      "statement": "Es geht um eine Reise.",
+      "statement": "Der erste Schritt bei Lärmproblemen ist, sich schriftlich an den Vermieter zu wenden.",
       "answer": "falsch",
       "points": 1,
       "explanation": {
-        "de": "Falsch. Die Aussage stimmt nicht mit dem Hörtext überein.",
-        "vi": "Sai.",
-        "key_evidence": "Es geht um eine Reise.",
+        "de": "Der Sprecher sagt: 'Der erste Schritt sollte immer ein freundliches persönliches Gespräch sein.'",
+        "vi": "Người nói cho biết: 'Bước đầu tiên luôn phải là một cuộc trò chuyện thân thiện trực tiếp.'",
+        "key_evidence": "Der erste Schritt sollte immer ein freundliches persönliches Gespräch sein.",
         "key_vocabulary": []
       }
     },
     {
       "id": "Q4",
-      "gespraech": 1,
+      "gespraech": 2,
       "type": "mc_abc",
-      "question": "Welches Thema wird besprochen (Gespräch 1)?",
+      "question": "Was sollte man in einer schriftlichen Beschwerde an den Vermieter dokumentieren?",
       "options": {
-        "a": "Reisen und Verkehr",
-        "b": "Gesundheit und Körper",
-        "c": "Einkaufen und Geld"
+        "a": "Nur die Art des Lärms.",
+        "b": "Datum, Uhrzeit und Art des Lärms.",
+        "c": "Nur die Namen der anderen Nachbarn."
       },
-      "answer": "c",
+      "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Man hört: \"Einkaufen und Geld\".",
-        "vi": "Đoạn hội thoại 1 nói về chủ đề gì?",
-        "key_evidence": "Einkaufen und Geld",
+        "de": "Der Sprecher erklärt: 'In der Beschwerde sollten Sie konkrete Datum, Uhrzeit und Art des Lärms dokumentieren.'",
+        "vi": "Người nói giải thích: 'Trong đơn khiếu nại, bạn nên ghi lại cụ thể ngày, giờ và loại tiếng ồn.'",
+        "key_evidence": "In der Beschwerde sollten Sie konkrete Datum, Uhrzeit und Art des Lärms dokumentieren.",
         "key_vocabulary": []
       }
     },
     {
       "id": "Q5",
-      "gespraech": 1,
-      "type": "mc_abc",
-      "question": "Welches Thema wird besprochen (Gespräch 1)?",
-      "options": {
-        "a": "Irak",
-        "b": "Australien",
-        "c": "Warschau"
-      },
-      "answer": "c",
+      "item": 3,
+      "type": "richtig_falsch",
+      "statement": "Eine gute Nachbarschaft ist nur für ältere Menschen wichtig.",
+      "answer": "falsch",
       "points": 1,
       "explanation": {
-        "de": "Das Hauptthema ist \"Einkaufen\".",
-        "vi": "Đoạn hội thoại 1 nói về chủ đề gì?",
-        "key_evidence": "Einkaufen",
+        "de": "Der Sprecher sagt: 'Besonders für ältere Menschen ist eine gute Nachbarschaft oft eine wichtige soziale Stütze. Aber auch für Familien mit kleinen Kindern ist es wertvoll, Nachbarn zu kennen.'",
+        "vi": "Người nói cho biết: 'Đặc biệt đối với người lớn tuổi, một tình làng nghĩa xóm tốt thường là một chỗ dựa xã hội quan trọng. Nhưng đối với các gia đình có con nhỏ, việc biết hàng xóm cũng rất có giá trị.'",
+        "key_evidence": "Besonders für ältere Menschen ist eine gute Nachbarschaft oft eine wichtige soziale Stütze. Aber auch für Familien mit kleinen Kindern ist es wertvoll, Nachbarn zu kennen.",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q6",
+      "gespraech": 3,
+      "type": "mc_abc",
+      "question": "Was kann man auf der Website 'nebenan.de' machen?",
+      "options": {
+        "a": "Nur Informationen über die Stadt finden.",
+        "b": "Gesuche aufgeben oder zu Veranstaltungen einladen.",
+        "c": "Nur mit dem Vermieter kommunizieren."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Der Sprecher sagt: 'Dort können Sie Gesuche aufgeben, Hilfe anbieten oder zu Veranstaltungen einladen.'",
+        "vi": "Người nói cho biết: 'Ở đó bạn có thể đăng yêu cầu, đề nghị giúp đỡ hoặc mời tham gia các sự kiện.'",
+        "key_evidence": "Dort können Sie Gesuche aufgeben, Hilfe anbieten oder zu Veranstaltungen einladen.",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q7",
+      "item": 4,
+      "type": "richtig_falsch",
+      "statement": "Wenn eine Reinigungsfirma das Treppenhaus putzt, ist das für die Mieter günstiger.",
+      "answer": "falsch",
+      "points": 1,
+      "explanation": {
+        "de": "Der Sprecher sagt: 'Das ist zwar teurer, aber es vermeidet Konflikte und das Ergebnis ist meist sauberer.'",
+        "vi": "Người nói cho biết: 'Điều đó tuy đắt hơn, nhưng nó tránh được xung đột và kết quả thường sạch hơn.'",
+        "key_evidence": "Das ist zwar teurer, aber es vermeidet Konflikte und das Ergebnis ist meist sauberer.",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q8",
+      "gespraech": 4,
+      "type": "mc_abc",
+      "question": "Wie werden die Kosten für eine Reinigungsfirma, die das Treppenhaus putzt, verteilt?",
+      "options": {
+        "a": "Der Vermieter zahlt alle Kosten allein.",
+        "b": "Die Kosten werden auf alle Mieter umgelegt.",
+        "c": "Nur die Mieter, die den Putzplan nicht einhalten, zahlen."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Der Sprecher erklärt: 'Die Kosten dafür werden dann auf alle Mieter über die Betriebskostenabrechnung umgelegt.'",
+        "vi": "Người nói giải thích: 'Chi phí đó sau đó sẽ được phân bổ cho tất cả các người thuê nhà thông qua hóa đơn chi phí vận hành.'",
+        "key_evidence": "Die Kosten dafür werden dann auf alle Mieter über die Betriebskostenabrechnung umgelegt.",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q9",
+      "item": 5,
+      "type": "richtig_falsch",
+      "statement": "Der Vermieter kann die Haltung von Kleintieren wie Hamstern verbieten.",
+      "answer": "falsch",
+      "points": 1,
+      "explanation": {
+        "de": "Der Sprecher sagt: 'Grundsätzlich darf der Vermieter die Haltung von Kleintieren wie Hamstern nicht verbieten.'",
+        "vi": "Người nói cho biết: 'Về nguyên tắc, chủ nhà không được phép cấm nuôi các loài vật nhỏ như chuột hamster.'",
+        "key_evidence": "Grundsätzlich darf der Vermieter die Haltung von Kleintieren wie Hamstern nicht verbieten.",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q10",
+      "gespraech": 5,
+      "type": "mc_abc",
+      "question": "Was ist bei der Haltung von Hunden und Katzen im Vergleich zu Kleintieren anders?",
+      "options": {
+        "a": "Der Vermieter darf ihre Haltung immer verbieten.",
+        "b": "Der Mietvertrag kann Einschränkungen enthalten.",
+        "c": "Sie dürfen nicht im Treppenhaus laufen."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Der Sprecher erklärt: 'Bei Hunden und Katzen sieht es anders aus: hier kann der Mietvertrag Einschränkungen enthalten.'",
+        "vi": "Người nói giải thích: 'Đối với chó và mèo thì khác: hợp đồng thuê nhà có thể chứa các hạn chế.'",
+        "key_evidence": "Bei Hunden und Katzen sieht es anders aus: hier kann der Mietvertrag Einschränkungen enthalten.",
         "key_vocabulary": []
       }
     }

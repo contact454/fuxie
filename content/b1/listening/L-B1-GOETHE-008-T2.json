@@ -18,23 +18,21 @@
       "id": "Q1",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Wie heißt eine Person im Gespräch 1?",
+      "question": "Was ist Katrin Schäfer von Beruf?",
       "options": {
-        "a": "Nina",
-        "b": "Katrin",
-        "c": "Sabine"
+        "a": "Sie ist Verkäuferin in einem Geschäft.",
+        "b": "Sie ist Beraterin bei der Verbraucherzentrale.",
+        "c": "Sie ist Herstellerin von Produkten."
       },
       "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Man hört: \"Katrin\".",
-        "vi": "Một người trong đoạn 1 tên là gì?",
-        "key_evidence": "Katrin",
+        "de": "Katrin Schäfer stellt sich als Beraterin bei der Verbraucherzentrale Berlin vor.",
+        "vi": "Katrin Schäfer giới thiệu mình là cố vấn tại Trung tâm Bảo vệ Người tiêu dùng Berlin.",
+        "key_evidence": "Mein Name ist Katrin Schäfer und ich bin Beraterin bei der Verbraucherzentrale Berlin.",
         "key_vocabulary": [
-          {
-            "word": "heißen",
-            "meaning": "to be called"
-          }
+          "Beraterin",
+          "Verbraucherzentrale"
         ]
       }
     },
@@ -42,23 +40,21 @@
       "id": "Q2",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Wie heißt eine Person (Gespräch 1)?",
+      "question": "Wie lange ist die gesetzliche Gewährleistungsfrist für ein Produkt?",
       "options": {
-        "a": "Dortmund",
-        "b": "Irak",
-        "c": "Oldenburg"
+        "a": "Vierzehn Tage.",
+        "b": "Fünf Jahre.",
+        "c": "Zwei Jahre."
       },
-      "answer": "a",
+      "answer": "c",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man den Namen \"Beraterin\".",
-        "vi": "Một người trong đoạn 1 tên là gì?",
-        "key_evidence": "Beraterin",
+        "de": "Die Rednerin erklärt, dass jedes Produkt eine gesetzliche Gewährleistungsfrist von zwei Jahren hat.",
+        "vi": "Người nói giải thích rằng mỗi sản phẩm có thời hạn bảo hành pháp lý là hai năm.",
+        "key_evidence": "Jedes Produkt hat eine gesetzliche Gewährleistungsfrist von zwei Jahren.",
         "key_vocabulary": [
-          {
-            "word": "heißen",
-            "meaning": "to be called"
-          }
+          "gesetzlich",
+          "Gewährleistungsfrist"
         ]
       }
     },
@@ -66,23 +62,22 @@
       "id": "Q3",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Was macht die Person beruflich (Gespräch 1)?",
+      "question": "Was ist der Unterschied zwischen Gewährleistung und Garantie?",
       "options": {
-        "a": "Arzt",
-        "b": "Beraterin",
-        "c": "Journalist"
+        "a": "Die Gewährleistung ist freiwillig, die Garantie ist gesetzlich.",
+        "b": "Die Gewährleistung ist gesetzlich, die Garantie ist eine freiwillige Leistung.",
+        "c": "Beide sind dasselbe und haben die gleiche Frist."
       },
       "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Man hört: \"Beraterin\".",
-        "vi": "Người đó làm nghề gì (đoạn 1)?",
-        "key_evidence": "Beraterin",
+        "de": "Die Rednerin betont, dass Gewährleistung und Garantie nicht dasselbe sind; die Gewährleistung ist gesetzlich, während die Garantie eine freiwillige Leistung des Herstellers ist.",
+        "vi": "Người nói nhấn mạnh rằng bảo hành (Gewährleistung) và bảo đảm (Garantie) không giống nhau; bảo hành là theo luật định, trong khi bảo đảm là một dịch vụ tự nguyện từ nhà sản xuất.",
+        "key_evidence": "Achtung: Gewährleistung und Garantie sind nicht dasselbe! Die Garantie ist eine freiwillige Leistung.",
         "key_vocabulary": [
-          {
-            "word": "Beraterin",
-            "meaning": "Beraterin"
-          }
+          "freiwillig",
+          "gesetzlich",
+          "Leistung"
         ]
       }
     },
@@ -90,19 +85,45 @@
       "id": "Q4",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Welches Thema wird besprochen (Gespräch 1)?",
+      "question": "Welcher Preis gilt, wenn der Preis an der Kasse vom Preis am Regal abweicht?",
       "options": {
-        "a": "Einkaufen und Geld",
-        "b": "Familie und Freunde",
-        "c": "Arbeit und Beruf"
+        "a": "Der höhere Preis an der Kasse.",
+        "b": "Der niedrigere Preis am Regal.",
+        "c": "Der Kunde muss den Preis am Regal bezahlen, aber es ist keine verbindliche Regel."
       },
-      "answer": "a",
+      "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Man hört: \"Einkaufen und Geld\".",
-        "vi": "Đoạn hội thoại 1 nói về chủ đề gì?",
-        "key_evidence": "Einkaufen und Geld",
-        "key_vocabulary": []
+        "de": "Die Rednerin erklärt, dass der niedrigere Preis gilt, wenn der Preis an der Kasse anders ist als am Regal, weil das Preisschild am Regal als verbindliches Angebot gilt.",
+        "vi": "Người nói giải thích rằng giá thấp hơn sẽ được áp dụng nếu giá ở quầy thanh toán khác với giá trên kệ, vì bảng giá trên kệ được coi là một đề nghị ràng buộc.",
+        "key_evidence": "Wenn an der Kasse ein anderer Preis angezeigt wird als am Regal, gilt der niedrigere Preis.",
+        "key_vocabulary": [
+          "abweichen",
+          "niedriger",
+          "verbindlich"
+        ]
+      }
+    },
+    {
+      "id": "Q5",
+      "gespraech": 1,
+      "type": "mc_abc",
+      "question": "Wie viel kostet eine Beratung bei der Verbraucherzentrale?",
+      "options": {
+        "a": "Zwei Euro.",
+        "b": "Fünf Euro.",
+        "c": "Vierzehn Euro."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Die Rednerin informiert, dass die Beratung bei der Verbraucherzentrale nur fünf Euro kostet.",
+        "vi": "Người nói thông báo rằng dịch vụ tư vấn tại Trung tâm Bảo vệ Người tiêu dùng chỉ tốn năm Euro.",
+        "key_evidence": "Unsere Beratung kostet nur fünf Euro.",
+        "key_vocabulary": [
+          "Beratung",
+          "kosten"
+        ]
       }
     }
   ],

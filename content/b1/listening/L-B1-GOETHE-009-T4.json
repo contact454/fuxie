@@ -18,42 +18,45 @@
       "id": "Q1",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Welches Thema wird besprochen (Gespräch 1)?",
+      "question": "Wer sagt das: Hundertfünfzig Minuten moderate Bewegung pro Woche sind das Minimum laut WHO?",
       "options": {
-        "a": "Einkaufen und Geld",
-        "b": "Technik und Digitalisierung",
-        "c": "Bildung und Schule"
+        "a": "Der Moderator",
+        "b": "Frau Dr. König",
+        "c": "Herr Schulz"
       },
-      "answer": "a",
+      "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Man hört: \"Einkaufen und Geld\".",
-        "vi": "Đoạn hội thoại 1 nói về chủ đề gì?",
-        "key_evidence": "Einkaufen und Geld",
-        "key_vocabulary": []
+        "de": "Frau Dr. König sagt: 'Hundertfünfzig Minuten moderate Bewegung pro Woche sind das Minimum laut WHO.'",
+        "vi": "Bà Dr. König nói: 'Một trăm năm mươi phút vận động vừa phải mỗi tuần là mức tối thiểu theo WHO.'",
+        "key_evidence": "Hundertfünfzig Minuten moderate Bewegung pro Woche sind das Minimum laut WHO.",
+        "key_vocabulary": [
+          "moderat",
+          "Minimum",
+          "WHO"
+        ]
       }
     },
     {
       "id": "Q2",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Wie heißt eine Person im Gespräch 1?",
+      "question": "Wer sagt das: Für den maximalen Gesundheitseffekt wären dreihundert Minuten Sport pro Woche ideal?",
       "options": {
-        "a": "Dr",
-        "b": "Katja",
-        "c": "Andreas"
+        "a": "Der Moderator",
+        "b": "Frau Dr. König",
+        "c": "Herr Schulz"
       },
-      "answer": "a",
+      "answer": "c",
       "points": 1,
       "explanation": {
-        "de": "Man hört: \"Dr\".",
-        "vi": "Một người trong đoạn 1 tên là gì?",
-        "key_evidence": "Dr",
+        "de": "Herr Schulz sagt: 'Ideal wären dreihundert Minuten, also fünf Stunden pro Woche, für den maximalen Gesundheitseffekt.'",
+        "vi": "Ông Schulz nói: 'Lý tưởng sẽ là ba trăm phút, tức là năm giờ mỗi tuần, để đạt hiệu quả sức khỏe tối đa.'",
+        "key_evidence": "Ideal wären dreihundert Minuten, also fünf Stunden pro Woche, für den maximalen Gesundheitseffekt.",
         "key_vocabulary": [
-          {
-            "word": "heißen",
-            "meaning": "to be called"
-          }
+          "maximal",
+          "Gesundheitseffekt",
+          "ideal"
         ]
       }
     },
@@ -61,23 +64,134 @@
       "id": "Q3",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Was macht die Person beruflich (Gespräch 1)?",
+      "question": "Wer sagt das: Regelmäßigkeit ist wichtiger als Intensität beim Sport?",
       "options": {
-        "a": "Arzt",
-        "b": "Journalist",
-        "c": "Intensität"
+        "a": "Der Moderator",
+        "b": "Frau Dr. König",
+        "c": "Herr Schulz"
+      },
+      "answer": "a",
+      "points": 1,
+      "explanation": {
+        "de": "Der Moderator sagt: 'Regelmäßigkeit ist wichtiger als Intensität beim Sport.'",
+        "vi": "Người điều hành nói: 'Sự đều đặn quan trọng hơn cường độ khi tập thể thao.'",
+        "key_evidence": "Regelmäßigkeit ist wichtiger als Intensität beim Sport.",
+        "key_vocabulary": [
+          "Regelmäßigkeit",
+          "Intensität"
+        ]
+      }
+    },
+    {
+      "id": "Q4",
+      "gespraech": 1,
+      "type": "mc_abc",
+      "question": "Wer sagt das: Schwimmen ist ideal, weil es den ganzen Körper trainiert und die Gelenke schont?",
+      "options": {
+        "a": "Der Moderator",
+        "b": "Frau Dr. König",
+        "c": "Herr Schulz"
+      },
+      "answer": "a",
+      "points": 1,
+      "explanation": {
+        "de": "Der Moderator sagt: 'Schwimmen ist ideal, weil es den ganzen Körper trainiert und die Gelenke schont.'",
+        "vi": "Người điều hành nói: 'Bơi lội là lý tưởng vì nó rèn luyện toàn bộ cơ thể và bảo vệ khớp.'",
+        "key_evidence": "Schwimmen ist ideal, weil es den ganzen Körper trainiert und die Gelenke schont.",
+        "key_vocabulary": [
+          "ideal",
+          "Gelenke schonen"
+        ]
+      }
+    },
+    {
+      "id": "Q5",
+      "gespraech": 1,
+      "type": "mc_abc",
+      "question": "Wer sagt das: Anfänger sollten mit intensiven Trainingsprogrammen sehr vorsichtig sein?",
+      "options": {
+        "a": "Der Moderator",
+        "b": "Frau Dr. König",
+        "c": "Herr Schulz"
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Frau Dr. König sagt: 'Als Fitnesstrainer sage ich: Anfänger sollten mit diesen intensiven Programmen sehr vorsichtig sein.'",
+        "vi": "Bà Dr. König nói: 'Với tư cách là huấn luyện viên thể hình, tôi nói: Người mới bắt đầu nên rất cẩn thận với các chương trình tập luyện cường độ cao này.'",
+        "key_evidence": "Als Fitnesstrainer sage ich: Anfänger sollten mit diesen intensiven Programmen sehr vorsichtig sein.",
+        "key_vocabulary": [
+          "Anfänger",
+          "intensiv",
+          "vorsichtig"
+        ]
+      }
+    },
+    {
+      "id": "Q6",
+      "gespraech": 1,
+      "type": "mc_abc",
+      "question": "Wer sagt das: Eine Mitgliedschaft im Sportverein kostet manchmal nur zehn bis zwanzig Euro pro Monat?",
+      "options": {
+        "a": "Der Moderator",
+        "b": "Frau Dr. König",
+        "c": "Herr Schulz"
+      },
+      "answer": "a",
+      "points": 1,
+      "explanation": {
+        "de": "Der Moderator sagt: 'Die Mitgliedschaft ist oft sehr günstig, manchmal nur zehn bis zwanzig Euro pro Monat.'",
+        "vi": "Người điều hành nói: 'Phí thành viên thường rất rẻ, đôi khi chỉ từ mười đến hai mươi Euro mỗi tháng.'",
+        "key_evidence": "Die Mitgliedschaft ist oft sehr günstig, manchmal nur zehn bis zwanzig Euro pro Monat.",
+        "key_vocabulary": [
+          "Mitgliedschaft",
+          "günstig",
+          "pro Monat"
+        ]
+      }
+    },
+    {
+      "id": "Q7",
+      "gespraech": 1,
+      "type": "mc_abc",
+      "question": "Wer sagt das: Kinder sollten mindestens sechzig Minuten täglich aktiv sein?",
+      "options": {
+        "a": "Der Moderator",
+        "b": "Frau Dr. König",
+        "c": "Herr Schulz"
       },
       "answer": "c",
       "points": 1,
       "explanation": {
-        "de": "Man hört: \"Intensität\".",
-        "vi": "Người đó làm nghề gì (đoạn 1)?",
-        "key_evidence": "Intensität",
+        "de": "Herr Schulz sagt: 'Kinder sollten übrigens mindestens sechzig Minuten täglich aktiv sein und sich bewegen.'",
+        "vi": "Ông Schulz nói: 'Trẻ em nên hoạt động ít nhất sáu mươi phút mỗi ngày.'",
+        "key_evidence": "Kinder sollten übrigens mindestens sechzig Minuten täglich aktiv sein und sich bewegen.",
         "key_vocabulary": [
-          {
-            "word": "Intensität",
-            "meaning": "Intensität"
-          }
+          "mindestens",
+          "täglich",
+          "aktiv"
+        ]
+      }
+    },
+    {
+      "id": "Q8",
+      "gespraech": 1,
+      "type": "mc_abc",
+      "question": "Wer sagt das: Das Problem der Kinder und Bildschirme müssen Eltern und Schulen gemeinsam lösen?",
+      "options": {
+        "a": "Der Moderator",
+        "b": "Frau Dr. König",
+        "c": "Herr Schulz"
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Frau Dr. König sagt: 'Das ist ein gesellschaftliches Problem, das Eltern und Schulen gemeinsam lösen müssen.'",
+        "vi": "Bà Dr. König nói: 'Đây là một vấn đề xã hội mà cha mẹ và trường học phải cùng nhau giải quyết.'",
+        "key_evidence": "Das ist ein gesellschaftliches Problem, das Eltern und Schulen gemeinsam lösen müssen.",
+        "key_vocabulary": [
+          "gesellschaftliches Problem",
+          "gemeinsam lösen"
         ]
       }
     }
