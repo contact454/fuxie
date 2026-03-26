@@ -17,73 +17,43 @@
     {
       "id": "Q1",
       "gespraech": 1,
-      "type": "mc_abc",
-      "question": "Wie heißt eine Person im Gespräch 1?",
-      "options": {
-        "a": "Ay",
-        "b": "Anna",
-        "c": "Julia"
-      },
-      "answer": "a",
+      "type": "richtig_falsch",
+      "statement": "Laut Professorin Yılmaz überwiegen die Defizite im Integrationsprozess die bisherigen Errungenschaften deutlich.",
+      "answer": "falsch",
       "points": 1,
       "explanation": {
-        "de": "Man hört: \"Ay\".",
-        "vi": "Một người trong đoạn 1 tên là gì?",
-        "key_evidence": "Ay",
-        "key_vocabulary": [
-          {
-            "word": "heißen",
-            "meaning": "to be called"
-          }
-        ]
+        "de": "Die Aussage ist falsch. Die Professorin beschreibt die Bilanz als 'gemischt', was bedeutet, dass sowohl Erfolge als auch Probleme nebeneinander existieren, ohne dass eine Seite explizit als überwiegend dargestellt wird. Die Formulierung 'deutlich überwiegen' ist eine unzulässige Zuspitzung.",
+        "vi": "Tuyên bố này là sai. Vị giáo sư mô tả bức tranh tổng thể là 'hỗn hợp' (gemischt), có nghĩa là cả thành công và vấn đề cùng tồn tại song song, không có bên nào được mô tả rõ ràng là chiếm ưu thế. Cách diễn đạt 'chiếm ưu thế rõ rệt' (deutlich überwiegen) là một sự cường điệu hóa không được chứng minh.",
+        "key_evidence": "Die Bilanz ist gemischt: Es gibt beeindruckende Erfolgsgeschichten und gleichzeitig hartnäckige strukturelle Probleme.",
+        "key_vocabulary": []
       }
     },
     {
       "id": "Q2",
       "gespraech": 1,
-      "type": "mc_abc",
-      "question": "Wie heißt eine Person (Gespräch 1)?",
-      "options": {
-        "a": "Kiel",
-        "b": "Brasilien",
-        "c": "Bielefeld"
-      },
-      "answer": "c",
+      "type": "richtig_falsch",
+      "statement": "Die Professorin impliziert, dass der Mangel an informellen Beziehungen für qualifizierte Einwanderer ein gravierenderes Aufstiegshindernis darstellt als fehlende formale Bildung.",
+      "answer": "richtig",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man den Namen \"Professorin\".",
-        "vi": "Một người trong đoạn 1 tên là gì?",
-        "key_evidence": "Professorin",
-        "key_vocabulary": [
-          {
-            "word": "heißen",
-            "meaning": "to be called"
-          }
-        ]
+        "de": "Die Aussage ist richtig. Die Expertin betont, dass selbst gut ausgebildete Kinder der zweiten und dritten Generation Diskriminierung erfahren und dass der fehlende Zugang zu Netzwerken massive Nachteile schafft. Dies legt nahe, dass soziale Barrieren ein größeres Problem sind als ein Mangel an Qualifikationen.",
+        "vi": "Tuyên bố này là đúng. Chuyên gia nhấn mạnh rằng ngay cả con cái thế hệ thứ hai và thứ ba được giáo dục tốt vẫn phải đối mặt với sự phân biệt đối xử và việc thiếu khả năng tiếp cận các mạng lưới quan hệ tạo ra những bất lợi lớn. Điều này cho thấy rằng các rào cản xã hội là một vấn đề lớn hơn so với việc thiếu trình độ chuyên môn.",
+        "key_evidence": "Aber sie erleben weiterhin Diskriminierung auf dem Arbeits- und Wohnungsmarkt... Und der fehlende Zugang zu sozialen Netzwerken erschwert den beruflichen Aufstieg von Menschen mit Migrationserfahrung.",
+        "key_vocabulary": []
       }
     },
     {
       "id": "Q3",
       "gespraech": 1,
-      "type": "mc_abc",
-      "question": "Woher kommt die Person (Gespräch 1)?",
-      "options": {
-        "a": "Polen",
-        "b": "Salzburg",
-        "c": "Deutschland"
-      },
-      "answer": "c",
+      "type": "richtig_falsch",
+      "statement": "Die Professorin deutet an, dass die bestehenden rechtlichen Instrumente zur Bekämpfung von Diskriminierung unzureichend und ineffektiv sind.",
+      "answer": "richtig",
       "points": 1,
       "explanation": {
-        "de": "Die Person kommt aus Deutschland.",
-        "vi": "Người đó đến từ đâu (đoạn 1)?",
-        "key_evidence": "Deutschland",
-        "key_vocabulary": [
-          {
-            "word": "kommen aus",
-            "meaning": "to come from"
-          }
-        ]
+        "de": "Die Aussage ist richtig. Indem die Professorin ein Antidiskriminierungsgesetz 'mit echten Sanktionen und einer schlagkräftigen Durchsetzungsbehörde' fordert, impliziert sie, dass die gegenwärtigen Gesetze genau diese Eigenschaften nicht besitzen und daher nicht ausreichen.",
+        "vi": "Tuyên bố này là đúng. Bằng cách yêu cầu một luật chống phân biệt đối xử 'với các biện pháp trừng phạt thực sự và một cơ quan thực thi mạnh mẽ', vị giáo sư ngụ ý rằng các luật hiện hành không có những đặc điểm này và do đó không đủ hiệu quả.",
+        "key_evidence": "Zweitens: Ein Antidiskriminierungsgesetz mit echten Sanktionen und einer schlagkräftigen Durchsetzungsbehörde.",
+        "key_vocabulary": []
       }
     }
   ],

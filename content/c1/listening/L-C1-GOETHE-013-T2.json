@@ -17,97 +17,57 @@
     {
       "id": "Q1",
       "gespraech": 1,
-      "type": "mc_abc",
-      "question": "Wie heißt eine Person im Gespräch 1?",
-      "options": {
-        "a": "Clara",
-        "b": "Jörg",
-        "c": "Markus"
-      },
-      "answer": "a",
+      "type": "richtig_falsch",
+      "statement": "Frau Bergström vertritt die Auffassung, dass die Europäische Union in puncto Gleichstellung eine unangefochtene globale Vorreiterrolle einnimmt und keine wesentlichen Defizite mehr aufweist.",
+      "answer": "falsch",
       "points": 1,
       "explanation": {
-        "de": "Man hört: \"Clara\".",
-        "vi": "Một người trong đoạn 1 tên là gì?",
-        "key_evidence": "Clara",
-        "key_vocabulary": [
-          {
-            "word": "heißen",
-            "meaning": "to be called"
-          }
-        ]
+        "de": "Die Aussage ist falsch. Frau Bergström bezeichnet Europa zwar als den \"gleichberechtigtsten Kontinent\", relativiert diese Aussage aber sofort, indem sie betont, dass man \"noch weit von echter Parität entfernt\" sei. Dies widerspricht der Behauptung, es gäbe \"keine wesentlichen Defizite\".",
+        "vi": "Tuyên bố này sai. Mặc dù bà Bergström mô tả châu Âu là \"lục địa bình đẳng nhất\", bà ngay lập tức làm rõ tuyên bố này bằng cách nhấn mạnh rằng châu Âu \"vẫn còn xa mới đạt được sự bình đẳng thực sự\". Điều này mâu thuẫn với khẳng định rằng \"không còn thiếu sót đáng kể nào\".",
+        "key_evidence": "Europa ist der gleichberechtigtste Kontinent der Welt, aber wir sind noch weit von echter Parität entfernt...",
+        "key_vocabulary": []
       }
     },
     {
       "id": "Q2",
       "gespraech": 1,
-      "type": "mc_abc",
-      "question": "Wie heißt eine Person (Gespräch 1)?",
-      "options": {
-        "a": "Dresden",
-        "b": "Darmstadt",
-        "c": "Amsterdam"
-      },
-      "answer": "c",
+      "type": "richtig_falsch",
+      "statement": "Nach Einschätzung von Frau Bergström ist die neu verabschiedete Entgelttransparenz-Richtlinie ein hinreichendes Instrument, um die Lohnlücke effektiv zu schließen.",
+      "answer": "falsch",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man den Namen \"Bergström\".",
-        "vi": "Một người trong đoạn 1 tên là gì?",
-        "key_evidence": "Bergström",
-        "key_vocabulary": [
-          {
-            "word": "heißen",
-            "meaning": "to be called"
-          }
-        ]
+        "de": "Die Aussage ist falsch. Obwohl die Expertin die Richtlinie als \"Meilenstein\" bezeichnet, stellt sie klar, dass Transparenz allein nicht ausreicht. Sie fordert zusätzlich \"wirksame Sanktionen\", was belegt, dass sie die Richtlinie nicht für ein \"hinreichendes Instrument\" hält.",
+        "vi": "Tuyên bố này sai. Mặc dù chuyên gia gọi chỉ thị này là một \"cột mốc quan trọng\", bà làm rõ rằng chỉ riêng sự minh bạch là không đủ. Bà yêu cầu thêm \"các biện pháp trừng phạt hiệu quả\", điều này chứng tỏ bà không coi chỉ thị này là một \"công cụ đầy đủ\".",
+        "key_evidence": "Transparenz allein schließt aber keine Lohnlücke. Es braucht wirksame Sanktionen für Unternehmen, die diskriminieren...",
+        "key_vocabulary": []
       }
     },
     {
       "id": "Q3",
       "gespraech": 1,
-      "type": "mc_abc",
-      "question": "Was macht die Person beruflich (Gespräch 1)?",
-      "options": {
-        "a": "Unternehmen",
-        "b": "Student",
-        "c": "Ingenieur"
-      },
-      "answer": "a",
+      "type": "richtig_falsch",
+      "statement": "Die Effektivität des schwedischen Elternzeitmodells führt die Expertin maßgeblich auf einen Mechanismus zurück, bei dem der Familie finanzielle Ansprüche verloren gehen, wenn der Vater seine reservierten Monate nicht in Anspruch nimmt.",
+      "answer": "richtig",
       "points": 1,
       "explanation": {
-        "de": "Man hört: \"Unternehmen\".",
-        "vi": "Người đó làm nghề gì (đoạn 1)?",
-        "key_evidence": "Unternehmen",
-        "key_vocabulary": [
-          {
-            "word": "Unternehmen",
-            "meaning": "Unternehmen"
-          }
-        ]
+        "de": "Die Aussage ist richtig. Die Expertin erklärt den Erfolg des schwedischen Modells explizit damit, dass die Familie \"Elternzeitansprüche verliert\", wenn der Vater seine Zeit nicht nutzt. Dies entspricht der Umschreibung \"finanzielle Ansprüche gehen verloren\".",
+        "vi": "Tuyên bố này đúng. Chuyên gia giải thích rõ ràng sự thành công của mô hình Thụy Điển là do gia đình \"mất quyền hưởng chế độ nghỉ phép của cha mẹ\" nếu người cha không sử dụng thời gian của mình. Điều này tương ứng với cách diễn đạt \"mất các quyền lợi tài chính\".",
+        "key_evidence": "Der Unterschied liegt im System: In Schweden verliert die Familie Elternzeitansprüche, die der Vater nicht nutzt...",
+        "key_vocabulary": []
       }
     },
     {
       "id": "Q4",
       "gespraech": 1,
-      "type": "mc_abc",
-      "question": "Woher kommt die Person (Gespräch 1)?",
-      "options": {
-        "a": "Deutschland",
-        "b": "Moskau",
-        "c": "Bayreuth"
-      },
-      "answer": "a",
+      "type": "richtig_falsch",
+      "statement": "Die Expertin hebt hervor, dass der gesetzlich verankerte Anspruch auf Kinderbetreuung in Deutschland flächendeckend durch ein adäquates Angebot an Plätzen gedeckt ist.",
+      "answer": "falsch",
       "points": 1,
       "explanation": {
-        "de": "Die Person kommt aus Deutschland.",
-        "vi": "Người đó đến từ đâu (đoạn 1)?",
-        "key_evidence": "Deutschland",
-        "key_vocabulary": [
-          {
-            "word": "kommen aus",
-            "meaning": "to come from"
-          }
-        ]
+        "de": "Die Aussage ist falsch. Die Expertin stellt klar, dass es zwar einen \"Rechtsanspruch\" gibt, diesem aber in der Realität nicht nachgekommen wird, da \"in vielen Regionen die tatsächlichen Plätze fehlen\". Die Versorgung ist also nicht \"flächendeckend\" und \"adäquat\".",
+        "vi": "Tuyên bố này sai. Chuyên gia làm rõ rằng mặc dù có \"quyền hợp pháp\" đối với một chỗ trong nhà trẻ, nhưng trên thực tế điều này không được đáp ứng vì \"ở nhiều vùng vẫn thiếu các chỗ thực tế\". Do đó, việc cung cấp không phải là \"trên toàn quốc\" và \"đầy đủ\".",
+        "key_evidence": "Deutschland hat zwar den Rechtsanspruch auf einen Krippenplatz, aber in vielen Regionen fehlen die tatsächlichen Plätze...",
+        "key_vocabulary": []
       }
     }
   ],

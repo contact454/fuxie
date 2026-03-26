@@ -16,40 +16,66 @@
   "questions": [
     {
       "id": "Q1",
-      "gespraech": 1,
+      "teil": 1,
       "type": "mc_abc",
-      "question": "Welches Thema wird besprochen (Gespräch 1)?",
+      "question": "Wie bewertet der Sprecher das Potenzial der Kreislaufwirtschaft für den Klimaschutz?",
       "options": {
-        "a": "Bildung und Schule",
-        "b": "Reisen und Verkehr",
-        "c": "Einkaufen und Geld"
+        "a": "Er stuft es als außerordentlich signifikant ein, dessen Wirkung mit fundamentalen Transformationen in anderen Sektoren vergleichbar ist.",
+        "b": "Er ist der Ansicht, dass die vollständige Dekarbonisierung des Energiesektors einen weitaus größeren Beitrag leisten würde.",
+        "c": "Er betont, dass die Schätzungen der Ellen MacArthur Foundation primär theoretischer Natur sind und in der Praxis kaum erreichbar wären."
       },
-      "answer": "c",
+      "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Man hört: \"Einkaufen und Geld\".",
-        "vi": "Đoạn hội thoại 1 nói về chủ đề gì?",
-        "key_evidence": "Einkaufen und Geld",
-        "key_vocabulary": []
+        "de": "Der Sprecher bezeichnet den Beitrag als 'gewaltig' und stellt ihn auf eine Stufe mit der 'vollständigen Dekarbonisierung des Energiesektors', was die immense Bedeutung unterstreicht. Option (b) ist eine lexikalische Falle; der Beitrag wird als 'vergleichbar' beschrieben, nicht als geringer. Option (c) ist falsch, da der Sprecher die Schätzung als Beleg für das enorme Potenzial anführt und sie nicht infrage stellt.",
+        "vi": "Diễn giả mô tả đóng góp này là 'to lớn' và đặt nó ngang hàng với 'việc khử cacbon hoàn toàn của ngành năng lượng', điều này nhấn mạnh tầm quan trọng to lớn của nó. Lựa chọn (b) là một cái bẫy từ vựng; sự đóng góp được mô tả là 'có thể so sánh được', chứ không phải là nhỏ hơn. Lựa chọn (c) sai vì diễn giả trích dẫn ước tính này như một bằng chứng cho tiềm năng to lớn và không hề nghi ngờ nó.",
+        "key_evidence": "Das wäre ein gewaltiger Beitrag zum Klimaschutz, vergleichbar mit der vollständigen Dekarbonisierung des Energiesektors.",
+        "key_vocabulary": [
+          {
+            "word": "signifikant",
+            "translation": "đáng kể"
+          },
+          {
+            "word": "fundamentale Transformation",
+            "translation": "sự chuyển đổi cơ bản"
+          },
+          {
+            "word": "vergleichbar",
+            "translation": "có thể so sánh được"
+          }
+        ]
       }
     },
     {
       "id": "Q2",
-      "gespraech": 1,
+      "teil": 1,
       "type": "mc_abc",
-      "question": "Welches Thema wird besprochen (Gespräch 1)?",
+      "question": "Welche fundamentale Voraussetzung muss laut dem Podcast für eine erfolgreiche Etablierung der Kreislaufwirtschaft erfüllt werden?",
       "options": {
-        "a": "Bulgarien",
-        "b": "Halle",
-        "c": "Mannheim"
+        "a": "Die Schaffung ambitionierter regulatorischer Rahmenbedingungen durch politische Akteure wie die EU.",
+        "b": "Eine systemische Neuausrichtung der Kooperation und Prozesse entlang der gesamten Wertschöpfungskette.",
+        "c": "Die flächendeckende Einführung eines Reparierbarkeits-Index nach französischem Vorbild für alle Produktkategorien."
       },
-      "answer": "c",
+      "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Das Hauptthema ist \"Einkaufen\".",
-        "vi": "Đoạn hội thoại 1 nói về chủ đề gì?",
-        "key_evidence": "Einkaufen",
-        "key_vocabulary": []
+        "de": "Der Sprecher identifiziert die 'Umstellung ganzer Wertschöpfungsketten' als die 'größte Herausforderung'. Dies erfordert eine grundlegend neue Zusammenarbeit aller Beteiligten, was in Option (b) korrekt paraphrasiert wird. Option (a) ist eine lexikalische Falle; die EU-Regularien werden als bereits geschaffener Rahmen erwähnt, nicht als die größte noch zu bewältigende Hürde. Option (c) nennt ein positives Beispiel (Frankreich), aber nicht die übergreifende, fundamentale Herausforderung für das gesamte System.",
+        "vi": "Diễn giả xác định 'sự chuyển đổi của toàn bộ chuỗi giá trị' là 'thách thức lớn nhất'. Điều này đòi hỏi một sự hợp tác hoàn toàn mới giữa tất cả các bên liên quan, được diễn giải chính xác trong lựa chọn (b). Lựa chọn (a) là một cái bẫy từ vựng; các quy định của EU được đề cập như một khuôn khổ đã được tạo ra, chứ không phải là rào cản lớn nhất cần phải vượt qua. Lựa chọn (c) nêu một ví dụ tích cực (Pháp), nhưng không phải là thách thức cơ bản, bao trùm cho toàn bộ hệ thống.",
+        "key_evidence": "Die größte Herausforderung ist die Umstellung ganzer Wertschöpfungsketten, die über Jahrzehnte linear optimiert wurden. Zulieferer, Hersteller, Händler und Entsorger müssen grundlegend neu zusammenarbeiten und ihre Prozesse umgestalten.",
+        "key_vocabulary": [
+          {
+            "word": "systemische Neuausrichtung",
+            "translation": "sự tái định hướng mang tính hệ thống"
+          },
+          {
+            "word": "Wertschöpfungskette",
+            "translation": "chuỗi giá trị"
+          },
+          {
+            "word": "regulatorische Rahmenbedingungen",
+            "translation": "khuôn khổ pháp lý"
+          }
+        ]
       }
     }
   ],

@@ -16,58 +16,94 @@
   "questions": [
     {
       "id": "Q1",
-      "item": 1,
-      "type": "richtig_falsch",
-      "statement": "Eine Person heißt Petra.",
-      "answer": "falsch",
+      "teil": 3,
+      "abschnitt": 1,
+      "type": "mc_abc",
+      "question": "Wie bewertet Gast A die Priorisierung des Handschriftunterrichts im digitalen Zeitalter?",
+      "options": {
+        "a": "Er betrachtet sie als eine kontraproduktive Verwendung von limitierten Lernressourcen.",
+        "b": "Er hält sie für eine überflüssige, aber harmlose Tradition, vergleichbar mit der Kutsche.",
+        "c": "Er plädiert für eine differenzierte Betrachtung, die digitale Kompetenz nicht ausschließt."
+      },
+      "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Falsch. Die Aussage stimmt nicht mit dem Hörtext überein.",
-        "vi": "Sai.",
-        "key_evidence": "Eine Person heißt Petra.",
-        "key_vocabulary": []
+        "de": "Die korrekte Antwort ist (a), da Gast A argumentiert, dass die Zeit für Schönschrift auf Kosten wichtigerer digitaler Kompetenzen geht. Er sieht es also als eine schlechte Investition von Lernzeit. Option (b) ist eine lexikalische Falle; obwohl er den Vergleich mit der 'Kutsche' und das Wort 'überflüssig' verwendet, impliziert sein Argument, dass es aktiv schädlich ist (weil Zeit fehlt), nicht nur harmlos. Option (c) spiegelt eher die allgemeine Schlussfolgerung der Diskussion wider, nicht seine anfängliche, provokante Position.",
+        "vi": "Đáp án đúng là (a), vì Khách A lập luận rằng thời gian dành cho việc viết chữ đẹp sẽ làm mất đi thời gian học các kỹ năng số quan trọng hơn. Do đó, ông coi đó là một sự đầu tư thời gian học tập không hiệu quả. Lựa chọn (b) là một cái bẫy từ vựng; mặc dù ông sử dụng so sánh với 'xe ngựa' và từ 'thừa thãi', lập luận của ông ngụ ý rằng nó có hại một cách chủ động (vì thiếu thời gian), chứ không chỉ vô hại. Lựa chọn (c) phản ánh kết luận chung của cuộc thảo luận hơn là quan điểm khiêu khích ban đầu của ông.",
+        "key_evidence": "Jede Stunde, die ein Kind mit Schönschrift verbringt, fehlt für das Erlernen von Programmierung und Medienkompetenz...",
+        "key_vocabulary": [
+          "kontraproduktiv",
+          "limitierte Lernressourcen"
+        ]
       }
     },
     {
       "id": "Q2",
-      "item": 2,
-      "type": "richtig_falsch",
-      "statement": "Eine Person heißt Dr.",
-      "answer": "richtig",
+      "teil": 3,
+      "abschnitt": 2,
+      "type": "mc_abc",
+      "question": "Worauf basiert laut Professorin Kluge (Gast B) die wissenschaftliche Evidenz für die kognitiven Vorteile der Handschrift?",
+      "options": {
+        "a": "Auf einer Meta-Analyse, die eine starke Korrelation zwischen Handschrift und Lernleistung aufzeigt.",
+        "b": "Auf experimentellen Untersuchungen, die einen kausalen Zusammenhang nachweisen.",
+        "c": "Auf der Beobachtung, dass leistungsstärkere Schüler das Schreiben mit der Hand präferieren."
+      },
+      "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Richtig. Die Aussage stimmt mit dem Hörtext überein.",
-        "vi": "Đúng.",
-        "key_evidence": "Eine Person heißt Dr.",
-        "key_vocabulary": []
+        "de": "Die korrekte Antwort ist (b). Als Gast A die Kausalität der Studien infrage stellt ('Korrelation ist nicht Kausalität'), entgegnet Gast B explizit, dass es sich um 'randomisierte kontrollierte Studien' handelt. Diese Art von Studie dient dazu, einen kausalen Zusammenhang nachzuweisen, nicht nur eine Korrelation. Option (a) ist eine Falle, da der Begriff 'Korrelation' von Gast A als Kritikpunkt genannt wird, den Gast B widerlegt. Option (c) beschreibt genau die von Gast A geäußerte Vermutung ('Vielleicht schreiben leistungsstärkere Schüler einfach lieber mit der Hand'), die Gast B zurückweist.",
+        "vi": "Đáp án đúng là (b). Khi Khách A đặt câu hỏi về tính nhân quả của các nghiên cứu ('Tương quan không phải là nhân quả'), Khách B đã phản bác một cách rõ ràng rằng đó là 'các nghiên cứu ngẫu nhiên có đối chứng'. Loại nghiên cứu này được thiết kế để chứng minh mối quan hệ nhân quả, không chỉ là sự tương quan. Lựa chọn (a) là một cái bẫy, vì thuật ngữ 'tương quan' được Khách A nêu ra như một điểm phê bình mà Khách B bác bỏ. Lựa chọn (c) mô tả chính xác giả định mà Khách A đưa ra ('Có lẽ những học sinh có thành tích cao hơn chỉ đơn giản là thích viết tay hơn'), điều mà Khách B phủ nhận.",
+        "key_evidence": "Nein, es handelt sich um randomisierte kontrollierte Studien. Die Probanden wurden zufällig den Gruppen zugeteilt...",
+        "key_vocabulary": [
+          "kausaler Zusammenhang",
+          "experimentelle Untersuchungen"
+        ]
       }
     },
     {
       "id": "Q3",
-      "item": 3,
-      "type": "richtig_falsch",
-      "statement": "Eine Person heißt Markus.",
-      "answer": "falsch",
+      "teil": 3,
+      "abschnitt": 3,
+      "type": "mc_abc",
+      "question": "Welche Schlussfolgerung lässt sich aus der Diskussion über die Schülermotivation ziehen?",
+      "options": {
+        "a": "Die didaktische Qualität der Lehrmaterialien ist für die Motivation entscheidender als das verwendete Medium.",
+        "b": "Digitale Medien sind grundsätzlich motivierender als traditionelle Arbeitshefte.",
+        "c": "Mangelnde Motivation beim Handschreiben ist ein unüberwindbares Hindernis im modernen Schulalltag."
+      },
+      "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Falsch. Die Aussage stimmt nicht mit dem Hörtext überein.",
-        "vi": "Sai.",
-        "key_evidence": "Eine Person heißt Markus.",
-        "key_vocabulary": []
+        "de": "Die korrekte Antwort ist (a). Die Sprecher sind sich einig, dass nicht das Medium (Stift oder Tablet) an sich motiviert, sondern die Qualität des Unterrichts und der Materialien. Dies wird durch die Aussagen 'Motivation entsteht durch guten Unterricht, nicht durch das Medium allein' und 'Ein schlecht gestaltetes Tablet-Arbeitsblatt ist nicht motivierender als ein gut gestaltetes Arbeitsheft' untermauert. Option (b) ist falsch, da explizit gesagt wird, dass ein schlechtes digitales Arbeitsblatt nicht motivierend ist. Option (c) ist ebenfalls falsch, da das Motivationsproblem zwar anerkannt, aber durch 'guten Unterricht' als lösbar dargestellt wird.",
+        "vi": "Đáp án đúng là (a). Các diễn giả đồng ý rằng không phải bản thân phương tiện (bút hay máy tính bảng) tạo ra động lực, mà là chất lượng của bài giảng và tài liệu. Điều này được củng cố bởi các phát biểu 'Động lực đến từ bài giảng tốt, chứ không chỉ từ phương tiện' và 'Một bài tập trên máy tính bảng được thiết kế tồi không tạo động lực hơn một cuốn vở bài tập được thiết kế tốt'. Lựa chọn (b) sai, vì có nói rõ rằng một bài tập kỹ thuật số tồi không tạo động lực. Lựa chọn (c) cũng sai, vì vấn đề động lực tuy được thừa nhận nhưng được cho là có thể giải quyết được thông qua 'bài giảng tốt'.",
+        "key_evidence": "Das stimmt, aber Motivation entsteht durch guten Unterricht, nicht durch das Medium allein.",
+        "key_vocabulary": [
+          "didaktische Qualität",
+          "entscheidender als"
+        ]
       }
     },
     {
       "id": "Q4",
-      "item": 4,
-      "type": "richtig_falsch",
-      "statement": "Eine Person heißt Thomas.",
-      "answer": "falsch",
+      "teil": 3,
+      "abschnitt": 4,
+      "type": "mc_abc",
+      "question": "Wie wird die finnische Bildungsreform, die Schreibschrift abzuschaffen, in der Diskussion bewertet?",
+      "options": {
+        "a": "Als ein innovatives und nachahmenswertes Modell für die Digitalisierung des Bildungswesens.",
+        "b": "Als ein voreiliger Schritt, dessen negative Konsequenzen und wissenschaftliche Fundierung zunehmend infrage gestellt werden.",
+        "c": "Als eine rein ideologische Entscheidung, die von finnischen Bildungsforschern einhellig abgelehnt wird."
+      },
+      "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Falsch. Die Aussage stimmt nicht mit dem Hörtext überein.",
-        "vi": "Sai.",
-        "key_evidence": "Eine Person heißt Thomas.",
-        "key_vocabulary": []
+        "de": "Die korrekte Antwort ist (b). Die Bewertung in der Diskussion ist kritisch. Gast A nennt die Reform 'wissenschaftlich fragwürdig und bildungspolitisch voreilig'. Zudem wird erwähnt, dass es Hinweise auf negative Folgen ('feinmotorische Entwicklung und die Lerntiefe gelitten haben') gibt und selbst finnische Forscher die Reform nun 'differenzierter' bewerten. Option (a) ist eine lexikalische Falle, die das Wort 'Innovationsbereitschaft' aufgreift, aber die stark kritische Gesamteinschätzung ignoriert. Option (c) ist zu extrem; es wird gesagt, dass die Forscher ihre Meinung ändern ('differenzierter bewerten'), nicht, dass sie die Reform von Anfang an einhellig abgelehnt hätten.",
+        "vi": "Đáp án đúng là (b). Đánh giá trong cuộc thảo luận mang tính phê phán. Khách A gọi cuộc cải cách là 'đáng ngờ về mặt khoa học và vội vàng về mặt chính sách giáo dục'. Ngoài ra, có đề cập đến các dấu hiệu về hậu quả tiêu cực ('sự phát triển vận động tinh và chiều sâu học tập đã bị ảnh hưởng') và ngay cả các nhà nghiên cứu Phần Lan hiện cũng đánh giá cuộc cải cách một cách 'khác biệt hơn'. Lựa chọn (a) là một cái bẫy từ vựng, sử dụng từ 'sẵn sàng đổi mới' nhưng bỏ qua đánh giá tổng thể mang tính phê phán mạnh mẽ. Lựa chọn (c) quá cực đoan; có nói rằng các nhà nghiên cứu đang thay đổi quan điểm ('đánh giá khác biệt hơn'), chứ không phải họ đã nhất trí phản đối cuộc cải cách ngay từ đầu.",
+        "key_evidence": "Als wissenschaftlich fragwürdig und bildungspolitisch voreilig...",
+        "key_vocabulary": [
+          "voreiliger Schritt",
+          "infrage gestellt werden"
+        ]
       }
     }
   ],

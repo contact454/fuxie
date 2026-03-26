@@ -17,96 +17,68 @@
     {
       "id": "Q1",
       "gespraech": 1,
-      "type": "mc_abc",
-      "question": "Wie heißt eine Person im Gespräch 1?",
-      "options": {
-        "a": "Sara",
-        "b": "Eva",
-        "c": "Petra"
-      },
-      "answer": "b",
+      "type": "richtig_falsch",
+      "statement": "Frau Professor Kirchner erachtet die Mietpreisbremse als eine unzureichende, lediglich palliative Maßnahme zur Bewältigung der Wohnungskrise.",
+      "answer": "richtig",
       "points": 1,
       "explanation": {
-        "de": "Man hört: \"Eva\".",
-        "vi": "Một người trong đoạn 1 tên là gì?",
-        "key_evidence": "Eva",
+        "de": "Die Aussage ist korrekt. Die Expertin stimmt implizit der Einschätzung zu, dass die Mietpreisbremse nur Symptome bekämpft, aber nicht die Ursache (fehlender Wohnraum). Sie betont, dass ohne massiven Neubau die Krise nicht überwunden werden kann, was die Mietpreisbremse allein als ungenügend darstellt.",
+        "vi": "Nhận định này đúng. Chuyên gia ngầm đồng ý với đánh giá rằng biện pháp hãm giá thuê nhà chỉ giải quyết triệu chứng chứ không giải quyết nguyên nhân (thiếu nhà ở). Bà nhấn mạnh rằng nếu không có xây dựng mới quy mô lớn thì không thể vượt qua khủng hoảng, điều này cho thấy chỉ riêng biện pháp hãm giá thuê nhà là không đủ.",
+        "key_evidence": "Ohne massiven Neubau wird die Mietpreisbremse die Wohnungskrise nicht überwinden können, die in den vergangenen Jahren zunehmend an Bedeutung gewonnen haben.",
         "key_vocabulary": [
-          {
-            "word": "heißen",
-            "meaning": "to be called"
-          }
+          "unzureichend: không đủ",
+          "palliative Maßnahme: biện pháp giảm nhẹ (triệu chứng)"
         ]
       }
     },
     {
       "id": "Q2",
       "gespraech": 1,
-      "type": "mc_abc",
-      "question": "Wie heißt eine Person (Gespräch 1)?",
-      "options": {
-        "a": "Kroatien",
-        "b": "Berlin",
-        "c": "Düsseldorf"
-      },
-      "answer": "b",
+      "type": "richtig_falsch",
+      "statement": "Laut der Expertin ist die Bodenspekulation ein marginaler Faktor, der die Errichtung von erschwinglichem Wohnraum nur unwesentlich beeinträchtigt.",
+      "answer": "falsch",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man den Namen \"Professorin\".",
-        "vi": "Một người trong đoạn 1 tên là gì?",
-        "key_evidence": "Professorin",
+        "de": "Die Aussage ist falsch. Die Expertin identifiziert die Bodenspekulation explizit als eine der Hauptursachen der Krise, die den Bau bezahlbarer Wohnungen aktiv 'verhindert', also maßgeblich beeinträchtigt und nicht nur unwesentlich.",
+        "vi": "Nhận định này sai. Chuyên gia xác định rõ ràng việc đầu cơ đất đai là một trong những nguyên nhân chính của cuộc khủng hoảng, nó chủ động 'ngăn chặn' việc xây dựng nhà ở giá rẻ, tức là ảnh hưởng đáng kể chứ không phải không đáng kể.",
+        "key_evidence": "Zweitens: Bodenspekulation, die die Grundstückspreise in die Höhe treibt und den Bau bezahlbarer Wohnungen verhindert, die in den vergangenen Jahren zunehmend an Bedeutung gewonnen haben.",
         "key_vocabulary": [
-          {
-            "word": "heißen",
-            "meaning": "to be called"
-          }
+          "marginaler Faktor: yếu tố bên lề, không quan trọng",
+          "unwesentlich: không đáng kể"
         ]
       }
     },
     {
       "id": "Q3",
       "gespraech": 1,
-      "type": "mc_abc",
-      "question": "Was macht die Person beruflich (Gespräch 1)?",
-      "options": {
-        "a": "Instrument",
-        "b": "Ingenieur",
-        "c": "Lehrerin"
-      },
-      "answer": "a",
+      "type": "richtig_falsch",
+      "statement": "Die Expertin konstatiert, dass die gegenwärtige Rate der energetischen Sanierungen in Deutschland dem postulierten Bedarf zur Erreichung der Klimaziele entspricht.",
+      "answer": "falsch",
       "points": 1,
       "explanation": {
-        "de": "Man hört: \"Instrument\".",
-        "vi": "Người đó làm nghề gì (đoạn 1)?",
-        "key_evidence": "Instrument",
+        "de": "Die Aussage ist falsch. Die Expertin stellt eine erhebliche Diskrepanz fest: Die aktuelle Sanierungsrate liegt bei nur einem Prozent, während mindestens drei Prozent erforderlich wären. Die Rate entspricht also keineswegs dem Bedarf.",
+        "vi": "Nhận định này sai. Chuyên gia chỉ ra một sự khác biệt đáng kể: tỷ lệ cải tạo hiện tại chỉ là một phần trăm, trong khi cần ít nhất ba phần trăm. Do đó, tỷ lệ này hoàn toàn không đáp ứng được nhu cầu.",
+        "key_evidence": "Die Sanierungsrate liegt in Deutschland bei etwa einem Prozent pro Jahr, nötig wären mindestens drei Prozent, was in der wissenschaftlichen Gemeinschaft für erhebliche Diskussionen sorgt.",
         "key_vocabulary": [
-          {
-            "word": "Instrument",
-            "meaning": "Instrument"
-          }
+          "konstatieren: nhận định, xác nhận",
+          "postulierter Bedarf: nhu cầu được đề ra/yêu cầu"
         ]
       }
     },
     {
       "id": "Q4",
       "gespraech": 1,
-      "type": "mc_abc",
-      "question": "Woher kommt die Person (Gespräch 1)?",
-      "options": {
-        "a": "Deutschland",
-        "b": "Berlin",
-        "c": "China"
-      },
-      "answer": "a",
+      "type": "richtig_falsch",
+      "statement": "Frau Professor Kirchner befürwortet uneingeschränkt die flächendeckende Implementierung des Konzepts der Fünfzehn-Minuten-Stadt.",
+      "answer": "richtig",
       "points": 1,
       "explanation": {
-        "de": "Die Person kommt aus Deutschland.",
-        "vi": "Người đó đến từ đâu (đoạn 1)?",
-        "key_evidence": "Deutschland",
+        "de": "Die Aussage ist korrekt. Die Expertin bezeichnet das Konzept als das 'überzeugendste' der letzten Jahrzehnte und empfiehlt explizit, es 'in jeder deutschen Stadt' umzusetzen. Dies signalisiert eine uneingeschränkte und flächendeckende Unterstützung.",
+        "vi": "Nhận định này đúng. Chuyên gia gọi khái niệm này là 'thuyết phục nhất' trong những thập kỷ qua và đề xuất rõ ràng rằng nó 'nên được thực hiện ở mọi thành phố của Đức'. Điều này cho thấy sự ủng hộ không hạn chế và trên diện rộng.",
+        "key_evidence": "Es ist das überzeugendste urbanistische Konzept der letzten Jahrzehnte und sollte in jeder deutschen Stadt umgesetzt werden, was sowohl in der Forschung als auch in der Praxis weitreichende Konsequenzen hat.",
         "key_vocabulary": [
-          {
-            "word": "kommen aus",
-            "meaning": "to come from"
-          }
+          "uneingeschränkt: không hạn chế, tuyệt đối",
+          "flächendeckende Implementierung: triển khai trên diện rộng"
         ]
       }
     }

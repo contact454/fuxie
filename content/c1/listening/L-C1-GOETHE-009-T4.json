@@ -16,62 +16,84 @@
   "questions": [
     {
       "id": "Q1",
-      "gespraech": 1,
+      "teil": 4,
       "type": "mc_abc",
-      "question": "Welches Thema wird besprochen (Gespräch 1)?",
+      "question": "Was konstituiert laut dem Dozenten die fundamentale Bedeutung der Sprachpolitik?",
       "options": {
-        "a": "Einkaufen und Geld",
-        "b": "Arbeit und Beruf",
-        "c": "Umwelt und Natur"
+        "a": "Sie reguliert den Zugang zu gesellschaftlicher Partizipation.",
+        "b": "Sie optimiert Sprache primär als effizientes Kommunikationsmittel.",
+        "c": "Sie stellt das absolut wichtigste Feld politischer Auseinandersetzungen dar."
       },
       "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Man hört: \"Einkaufen und Geld\".",
-        "vi": "Đoạn hội thoại 1 nói về chủ đề gì?",
-        "key_evidence": "Einkaufen und Geld",
-        "key_vocabulary": []
+        "de": "Korrekt. Der Dozent stellt fest, dass die Bestimmung der offiziellen Sprache darüber entscheidet, wer 'an der Gesellschaft vollständig teilhaben kann', was 'Zugang zu gesellschaftlicher Partizipation' präzise umschreibt. Option (b) ist ein lexikalischer Fallstrick; der Dozent sagt explizit, dass Sprache 'nicht nur ein Kommunikationsmittel' ist. Option (c) ist eine Übertreibung; er nennt es 'zu den wichtigsten', nicht 'das absolut wichtigste' Feld.",
+        "vi": "Đúng. Giảng viên khẳng định rằng việc xác định ngôn ngữ chính thức sẽ quyết định ai 'có thể tham gia đầy đủ vào xã hội', điều này được diễn giải chính xác là 'tiếp cận sự tham gia xã hội'. Lựa chọn (b) là một cái bẫy từ vựng; giảng viên nói rõ rằng ngôn ngữ 'không chỉ là một phương tiện giao tiếp'. Lựa chọn (c) là một sự phóng đại; ông gọi nó là 'một trong những lĩnh vực quan trọng nhất', chứ không phải là lĩnh vực 'quan trọng nhất tuyệt đối'.",
+        "key_evidence": "Wer die offizielle Sprache eines Landes bestimmt, bestimmt auch, wer an der Gesellschaft vollständig teilhaben kann.",
+        "key_vocabulary": [
+          {
+            "word": "konstituieren",
+            "translation": "cấu thành, tạo nên"
+          },
+          {
+            "word": "Partizipation",
+            "translation": "sự tham gia"
+          }
+        ]
       }
     },
     {
       "id": "Q2",
-      "gespraech": 1,
+      "teil": 4,
       "type": "mc_abc",
-      "question": "Welches Thema wird besprochen (Gespräch 1)?",
+      "question": "Welche Schlussfolgerung bezüglich der vorgestellten sprachpolitischen Modelle wird vom Dozenten impliziert?",
       "options": {
-        "a": "Wolfsburg",
-        "b": "Belgien",
-        "c": "Polen"
+        "a": "Das plurilinguistische Modell ist dem monolinguistischen grundsätzlich überlegen.",
+        "b": "Die Adäquatheit eines Modells ist von kontextuellen Faktoren abhängig.",
+        "c": "Das liberale Modell führt zwangsläufig zur Unterdrückung von Minderheitensprachen."
       },
-      "answer": "a",
+      "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Das Hauptthema ist \"Einkaufen\".",
-        "vi": "Đoạn hội thoại 1 nói về chủ đề gì?",
-        "key_evidence": "Einkaufen",
-        "key_vocabulary": []
+        "de": "Korrekt. Diese Aussage fasst die Kernaussage des Dozenten zusammen, dass jedes Modell 'spezifische Vor- und Nachteile hat, die vom historischen und gesellschaftlichen Kontext abhängen'. Option (a) ist ein lexikalischer Fallstrick, der die positive Erwähnung der Schweiz verallgemeinert, obwohl der Dozent auch Nachteile des plurilinguistischen Modells nennt ('institutionell aufwendig', 'kann politische Konflikte verschärfen'). Option (c) ist eine unzulässige Verallgemeinerung; der Dozent beschreibt das liberale Modell neutraler und nennt keine zwangsläufigen negativen Folgen.",
+        "vi": "Đúng. Tuyên bố này tóm tắt ý chính của giảng viên rằng mỗi mô hình 'có những ưu và nhược điểm cụ thể, phụ thuộc vào bối cảnh lịch sử và xã hội'. Lựa chọn (a) là một cái bẫy từ vựng, khái quát hóa việc đề cập tích cực đến Thụy Sĩ, mặc dù giảng viên cũng nêu ra những nhược điểm của mô hình đa ngôn ngữ ('tốn kém về mặt thể chế', 'có thể làm trầm trọng thêm các xung đột chính trị'). Lựa chọn (c) là một sự khái quát hóa không được phép; giảng viên mô tả mô hình tự do một cách trung lập hơn và không nêu ra bất kỳ hậu quả tiêu cực tất yếu nào.",
+        "key_evidence": "Jedes Modell hat spezifische Vor- und Nachteile, die vom historischen und gesellschaftlichen Kontext abhängen.",
+        "key_vocabulary": [
+          {
+            "word": "implizieren",
+            "translation": "ngụ ý, bao hàm"
+          },
+          {
+            "word": "Adäquatheit",
+            "translation": "sự phù hợp, sự tương xứng"
+          }
+        ]
       }
     },
     {
       "id": "Q3",
-      "gespraech": 1,
+      "teil": 4,
       "type": "mc_abc",
-      "question": "Was macht die Person beruflich (Gespräch 1)?",
+      "question": "Was postuliert der Dozent als eine zentrale Voraussetzung für den Erhalt von Minderheitensprachen?",
       "options": {
-        "a": "Staatsdoktrin",
-        "b": "Koch",
-        "c": "Ingenieur"
+        "a": "Es bedarf proaktiver staatlicher Fördermaßnahmen.",
+        "b": "Die Lösung sprachlicher Konflikte ist die oberste Priorität.",
+        "c": "Die Einrichtung von Fernsehsendern in der Minderheitensprache ist entscheidend."
       },
       "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Man hört: \"Staatsdoktrin\".",
-        "vi": "Người đó làm nghề gì (đoạn 1)?",
-        "key_evidence": "Staatsdoktrin",
+        "de": "Korrekt. Diese Option paraphrasiert die zentrale Lehre des Dozenten: 'Minderheitensprachen brauchen aktive Förderung, passiver Schutz allein reicht nicht für ihr Überleben'. 'Proaktive staatliche Fördermaßnahmen' ist eine exakte Umschreibung von 'aktive Förderung'. Option (b) ist ein lexikalischer Fallstrick, der das Wort 'Konflikt' aus den Fallstudien aufgreift, aber die Priorität falsch setzt. Die Entschärfung von Konflikten (Südtirol) ist ein mögliches Ergebnis, aber die Voraussetzung für den Spracherhalt ist die Förderung. Option (c) isoliert ein Detail aus dem Fallbeispiel Wales und stellt es fälschlicherweise als universell entscheidenden Faktor dar.",
+        "vi": "Đúng. Lựa chọn này diễn giải bài học trung tâm của giảng viên: 'Các ngôn ngữ thiểu số cần sự thúc đẩy tích cực, chỉ bảo vệ thụ động thôi thì không đủ để chúng tồn tại'. 'Các biện pháp hỗ trợ chủ động của nhà nước' là một cách diễn đạt chính xác cho 'thúc đẩy tích cực'. Lựa chọn (b) là một cái bẫy từ vựng, sử dụng từ 'xung đột' từ các nghiên cứu tình huống nhưng đặt sai ưu tiên. Việc xoa dịu xung đột (Nam Tyrol) là một kết quả có thể có, nhưng điều kiện tiên quyết để bảo tồn ngôn ngữ là sự thúc đẩy. Lựa chọn (c) tách một chi tiết từ ví dụ về xứ Wales và trình bày sai lệch nó như một yếu tố quyết định phổ quát.",
+        "key_evidence": "Zweitens: Minderheitensprachen brauchen aktive Förderung, passiver Schutz allein reicht nicht für ihr Überleben.",
         "key_vocabulary": [
           {
-            "word": "Staatsdoktrin",
-            "meaning": "Staatsdoktrin"
+            "word": "postulieren",
+            "translation": "đưa ra định đề, yêu cầu"
+          },
+          {
+            "word": "proaktiv",
+            "translation": "chủ động"
           }
         ]
       }

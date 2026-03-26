@@ -17,96 +17,72 @@
     {
       "id": "Q1",
       "gespraech": 1,
-      "type": "mc_abc",
-      "question": "Wie heißt eine Person im Gespräch 1?",
-      "options": {
-        "a": "Stefan",
-        "b": "Sabine",
-        "c": "Clara"
-      },
-      "answer": "c",
+      "type": "richtig_falsch",
+      "statement": "Frau Bergström betrachtet die Entgelttransparenz-Richtlinie als eine in sich geschlossene und hinreichende Maßnahme zur Beseitigung von Lohndifferenzen.",
+      "answer": "falsch",
       "points": 1,
       "explanation": {
-        "de": "Man hört: \"Clara\".",
-        "vi": "Một người trong đoạn 1 tên là gì?",
-        "key_evidence": "Clara",
+        "de": "Die Aussage ist falsch. Frau Bergström bezeichnet die Richtlinie zwar als 'Meilenstein', betont aber explizit, dass Transparenz allein nicht ausreicht und durch 'wirksame Sanktionen' ergänzt werden muss, um die Lohnlücke zu schließen. Die Maßnahme ist also nicht hinreichend.",
+        "vi": "Tuyên bố này là sai. Mặc dù bà Bergström gọi chỉ thị này là một 'cột mốc quan trọng', bà nhấn mạnh rõ ràng rằng chỉ riêng sự minh bạch là không đủ và cần phải được bổ sung bằng 'các biện pháp trừng phạt hiệu quả' để thu hẹp khoảng cách lương. Do đó, biện pháp này không phải là đủ.",
+        "key_evidence": "Transparenz allein schließt aber keine Lohnlücke. Es braucht wirksame Sanktionen für Unternehmen, die diskriminieren.",
         "key_vocabulary": [
-          {
-            "word": "heißen",
-            "meaning": "to be called"
-          }
+          "hinreichend",
+          "Beseitigung",
+          "Lohndifferenzen"
         ]
       }
     },
     {
       "id": "Q2",
       "gespraech": 1,
-      "type": "mc_abc",
-      "question": "Wie heißt eine Person (Gespräch 1)?",
-      "options": {
-        "a": "Halle",
-        "b": "Bielefeld",
-        "c": "Rumänien"
-      },
-      "answer": "b",
+      "type": "richtig_falsch",
+      "statement": "Nach Einschätzung der Expertin hat die deutsche Regelung der Partnermonate bereits eine tiefgreifende soziokulturelle Transformation bewirkt.",
+      "answer": "falsch",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man den Namen \"Bergström\".",
-        "vi": "Một người trong đoạn 1 tên là gì?",
-        "key_evidence": "Bergström",
+        "de": "Die Aussage ist falsch. Die Expertin bewertet die zwei Partnermonate in Deutschland als unzureichend, um einen 'echten Kulturwandel' herbeizuführen. Sie fordert stattdessen mindestens vier Monate, um die Gleichstellung substanziell voranzubringen.",
+        "vi": "Tuyên bố này là sai. Chuyên gia đánh giá hai tháng nghỉ phép cho người cha ở Đức là không đủ để tạo ra một 'sự thay đổi văn hóa thực sự'. Thay vào đó, bà yêu cầu ít nhất bốn tháng để thúc đẩy bình đẳng một cách đáng kể.",
+        "key_evidence": "Deutschland hat zwar die Partnermonate eingeführt, aber zwei Monate sind zu wenig für echten Kulturwandel.",
         "key_vocabulary": [
-          {
-            "word": "heißen",
-            "meaning": "to be called"
-          }
+          "Einschätzung",
+          "tiefgreifend",
+          "soziokulturelle Transformation"
         ]
       }
     },
     {
       "id": "Q3",
       "gespraech": 1,
-      "type": "mc_abc",
-      "question": "Was macht die Person beruflich (Gespräch 1)?",
-      "options": {
-        "a": "Lehrerin",
-        "b": "Studentin",
-        "c": "Unternehmen"
-      },
-      "answer": "c",
+      "type": "richtig_falsch",
+      "statement": "Die Expertin beurteilt die Fortschritte der EU in der Gleichstellung zwiespältig: Einerseits erkennt sie eine globale Spitzenposition an, andererseits konstatiert sie weiterhin erhebliche Defizite.",
+      "answer": "richtig",
       "points": 1,
       "explanation": {
-        "de": "Man hört: \"Unternehmen\".",
-        "vi": "Người đó làm nghề gì (đoạn 1)?",
-        "key_evidence": "Unternehmen",
+        "de": "Die Aussage ist richtig. Frau Bergström formuliert genau diese ambivalente Haltung, indem sie Europa als den 'gleichberechtigtste[n] Kontinent der Welt' bezeichnet, aber im selben Satz einschränkt, dass man 'noch weit von echter Parität entfernt' sei.",
+        "vi": "Tuyên bố này là đúng. Bà Bergström thể hiện chính xác thái độ hai mặt này khi mô tả châu Âu là 'lục địa bình đẳng nhất thế giới', nhưng trong cùng một câu lại hạn chế rằng họ 'vẫn còn xa mới đạt được sự bình đẳng thực sự'.",
+        "key_evidence": "Europa ist der gleichberechtigtste Kontinent der Welt, aber wir sind noch weit von echter Parität entfernt.",
         "key_vocabulary": [
-          {
-            "word": "Unternehmen",
-            "meaning": "Unternehmen"
-          }
+          "zwiespältig",
+          "Spitzenposition",
+          "erhebliche Defizite"
         ]
       }
     },
     {
       "id": "Q4",
       "gespraech": 1,
-      "type": "mc_abc",
-      "question": "Woher kommt die Person (Gespräch 1)?",
-      "options": {
-        "a": "Deutschland",
-        "b": "Würzburg",
-        "c": "Russland"
-      },
-      "answer": "a",
+      "type": "richtig_falsch",
+      "statement": "Frau Bergström konstatiert, dass in Deutschland der gesetzliche Anspruch auf Kinderbetreuung flächendeckend durch ein ausreichendes Angebot an Plätzen gedeckt ist.",
+      "answer": "falsch",
       "points": 1,
       "explanation": {
-        "de": "Die Person kommt aus Deutschland.",
-        "vi": "Người đó đến từ đâu (đoạn 1)?",
-        "key_evidence": "Deutschland",
+        "de": "Die Aussage ist falsch. Die Expertin stellt klar, dass es zwar einen 'Rechtsanspruch' gibt, dieser aber in der Realität nicht eingelöst wird, da 'in vielen Regionen die tatsächlichen Plätze fehlen'. Es besteht also eine Diskrepanz zwischen Anspruch und Wirklichkeit.",
+        "vi": "Tuyên bố này là sai. Chuyên gia làm rõ rằng mặc dù có 'quyền hợp pháp', nhưng quyền này không được thực hiện trong thực tế vì 'ở nhiều khu vực thiếu các chỗ trông trẻ thực tế'. Do đó, có sự khác biệt giữa quyền lợi và thực tế.",
+        "key_evidence": "Deutschland hat zwar den Rechtsanspruch auf einen Krippenplatz, aber in vielen Regionen fehlen die tatsächlichen Plätze.",
         "key_vocabulary": [
-          {
-            "word": "kommen aus",
-            "meaning": "to come from"
-          }
+          "konstatiert",
+          "flächendeckend",
+          "ausreichendes Angebot"
         ]
       }
     }

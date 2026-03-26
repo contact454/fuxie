@@ -16,57 +16,81 @@
   "questions": [
     {
       "id": "Q1",
-      "item": 1,
-      "type": "richtig_falsch",
-      "statement": "Eine Person heißt Michael.",
-      "answer": "falsch",
+      "gespraech": 1,
+      "abschnitt": 1,
+      "type": "mc_abc",
+      "question": "Wie positioniert sich Frau Dr. Kohl zu Beginn der Diskussion gegenüber den Forderungen von Herrn Wegner?",
+      "options": {
+        "a": "Sie vertritt eine nuancierte Haltung, indem sie die infrastrukturellen Vorschläge befürwortet, jedoch Bedenken hinsichtlich der Standardisierung äußert.",
+        "b": "Sie lehnt die Vorschläge kategorisch ab, da eine „radikale Digitalisierung“ nachweislich keine positiven Lernergebnisse hervorbringt.",
+        "c": "Sie kritisiert die Forderungen als eine Form der Bürokratisierung, die die pädagogische Freiheit der Lehrkräfte vollständig untergräbt."
+      },
+      "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Falsch. Die Aussage stimmt nicht mit dem Hörtext überein.",
-        "vi": "Sai.",
-        "key_evidence": "Eine Person heißt Michael.",
+        "de": "Korrekt. Frau Dr. Kohl unterstützt explizit die Forderung nach besserer Infrastruktur („Die Infrastruktur-Forderung unterstütze ich vollkommen“), äußert aber gleichzeitig Skepsis bezüglich der Standards („aber bei den Standards bin ich skeptisch“). Ihre Haltung ist also differenziert oder nuanciert. Option (b) ist eine lexikalische Falle; sie zitiert zwar Frau Kohls anfängliche Skepsis gegenüber „radikaler Digitalisierung“, ignoriert aber ihre explizite Zustimmung zur Infrastruktur-Forderung und stellt ihre Ablehnung als kategorisch dar, was nicht zutrifft.",
+        "vi": "Đúng. Bà Dr. Kohl rõ ràng ủng hộ yêu cầu về cơ sở hạ tầng tốt hơn („Tôi hoàn toàn ủng hộ yêu cầu về cơ sở hạ tầng“), nhưng đồng thời cũng bày tỏ sự hoài nghi về các tiêu chuẩn („nhưng về các tiêu chuẩn thì tôi hoài nghi“). Do đó, quan điểm của bà là có phân biệt hoặc đa chiều. Lựa chọn (b) là một cái bẫy từ vựng; nó trích dẫn sự hoài nghi ban đầu của bà Kohl đối với „số hóa triệt để“, nhưng lại bỏ qua sự đồng ý rõ ràng của bà đối với yêu cầu về cơ sở hạ tầng và miêu tả sự từ chối của bà là tuyệt đối, điều này không đúng.",
+        "key_evidence": "Die Infrastruktur-Forderung unterstütze ich vollkommen, aber bei den Standards bin ich skeptisch und habe Bedenken.",
         "key_vocabulary": []
       }
     },
     {
       "id": "Q2",
-      "item": 2,
-      "type": "richtig_falsch",
-      "statement": "Eine Person heißt Wegner.",
-      "answer": "richtig",
+      "gespraech": 1,
+      "abschnitt": 2,
+      "type": "mc_abc",
+      "question": "Was bezweckt Herr Wegner mit seinem Vergleich zwischen dem Lehr- und dem Arztberuf?",
+      "options": {
+        "a": "Er will verdeutlichen, dass die „digitale Diagnostik“ ein unverzichtbares Werkzeug im modernen Unterricht werden muss.",
+        "b": "Er möchte die Dringlichkeit unterstreichen, digitale Fähigkeiten als selbstverständlichen Teil der professionellen Standards von Lehrkräften zu etablieren.",
+        "c": "Er argumentiert, dass die pädagogische Freiheit der Akzeptanz moderner Technologien durch die Gesellschaft untergeordnet werden sollte."
+      },
+      "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Richtig. Die Aussage stimmt mit dem Hörtext überein.",
-        "vi": "Đúng.",
-        "key_evidence": "Eine Person heißt Wegner.",
+        "de": "Korrekt. Herr Wegner nutzt den Vergleich, um zu verdeutlichen, dass digitale Kompetenz eine grundlegende berufliche Anforderung für Lehrkräfte sein sollte, ähnlich wie medizinische Fachkenntnisse für Ärzte. Es geht ihm um die Etablierung eines professionellen Mindeststandards. Option (a) ist eine lexikalische Falle, da sie den Begriff „digitale Diagnostik“ aus dem Vergleich wörtlich auf den Unterricht überträgt, was nicht Wegners Intention ist. Er nutzt es als Analogie für eine erwartete Grundkompetenz.",
+        "vi": "Đúng. Ông Wegner sử dụng phép so sánh để làm rõ rằng năng lực kỹ thuật số nên là một yêu cầu nghề nghiệp cơ bản đối với giáo viên, tương tự như kiến thức chuyên môn y khoa đối với bác sĩ. Ông quan tâm đến việc thiết lập một tiêu chuẩn chuyên môn tối thiểu. Lựa chọn (a) là một cái bẫy từ vựng, vì nó áp dụng thuật ngữ „chẩn đoán kỹ thuật số“ từ phép so sánh một cách máy móc vào việc giảng dạy, điều này không phải là ý định của ông Wegner. Ông sử dụng nó như một sự tương tự cho một năng lực cơ bản được mong đợi.",
+        "key_evidence": "Kein Patient akzeptiert, dass sein Arzt keine digitale Diagnostik beherrscht. Warum akzeptieren wir das bei Lehrern?",
         "key_vocabulary": []
       }
     },
     {
       "id": "Q3",
-      "item": 3,
-      "type": "richtig_falsch",
-      "statement": "Eine Person heißt Petra.",
-      "answer": "falsch",
+      "gespraech": 1,
+      "abschnitt": 3,
+      "type": "mc_abc",
+      "question": "Wie entkräftet Herr Wegner den Einwand, dass eine verstärkte Digitalisierung der Schule zu übermäßiger Bildschirmzeit führt?",
+      "options": {
+        "a": "Er argumentiert, dass die qualitative Beschaffenheit der Nutzung entscheidender ist als die reine Zeitdauer.",
+        "b": "Er plädiert dafür, dass die „private Nutzung“ von Medien eingeschränkt werden muss, um den schulischen Anforderungen gerecht zu werden.",
+        "c": "Er stellt die Gültigkeit der WHO-Empfehlung infrage, da aktives digitales Lernen das Gehirn nicht schädige."
+      },
+      "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Falsch. Die Aussage stimmt nicht mit dem Hörtext überein.",
-        "vi": "Sai.",
-        "key_evidence": "Eine Person heißt Petra.",
+        "de": "Korrekt. Herr Wegner entgegnet der Sorge um zu viel Bildschirmzeit mit dem Argument, dass die Art der Nutzung entscheidend ist. Er unterscheidet zwischen passivem Konsum und aktivem, kognitiv förderlichem Lernen. Option (b) ist eine lexikalische Falle. Sie greift den Begriff „private Nutzung“ auf, der von Frau Dr. Kohl erwähnt wird, aber Herr Wegner schlägt nicht vor, diese einzuschränken, sondern er differenziert die Qualität der Bildschirmzeit selbst.",
+        "vi": "Đúng. Ông Wegner phản bác lại mối lo ngại về thời gian sử dụng thiết bị điện tử quá nhiều bằng lập luận rằng loại hình sử dụng mới là yếu tố quyết định. Ông phân biệt giữa việc tiêu thụ thụ động và việc học tập chủ động, có lợi cho nhận thức. Lựa chọn (b) là một cái bẫy từ vựng. Nó sử dụng thuật ngữ „sử dụng cá nhân“ mà bà Dr. Kohl đã đề cập, nhưng ông Wegner không đề xuất hạn chế việc này, thay vào đó ông phân biệt chất lượng của chính thời gian sử dụng thiết bị.",
+        "key_evidence": "Bildschirmzeit ist nicht gleich Bildschirmzeit. Passive Mediennutzung und aktives digitales Lernen unterscheiden sich fundamental.",
         "key_vocabulary": []
       }
     },
     {
       "id": "Q4",
-      "item": 4,
-      "type": "richtig_falsch",
-      "statement": "Eine Person heißt Julia.",
-      "answer": "falsch",
+      "gespraech": 1,
+      "abschnitt": 4,
+      "type": "mc_abc",
+      "question": "Worin besteht der wesentliche Konsens am Ende der Diskussion?",
+      "options": {
+        "a": "Die Teilnehmer stimmen überein, dass die Digitalisierung nur durch eine „differenzierte Diskussion“ vorangetrieben werden kann.",
+        "b": "Es herrscht Einigkeit darüber, dass die technologische Entwicklung in Schulen von IT-Managern und Pädagogen gemeinsam gesteuert werden muss.",
+        "c": "Die Gesprächspartner sind sich einig, dass pädagogische Prinzipien die Grundlage für den Einsatz digitaler Technologien bilden müssen."
+      },
+      "answer": "c",
       "points": 1,
       "explanation": {
-        "de": "Falsch. Die Aussage stimmt nicht mit dem Hörtext überein.",
-        "vi": "Sai.",
-        "key_evidence": "Eine Person heißt Julia.",
+        "de": "Korrekt. Am Ende der Diskussion stimmen alle Teilnehmer, insbesondere Herr Wegner, der Aussage des Moderators zu, dass die Pädagogik die treibende Kraft hinter der Digitalisierung sein muss. Die Technologie soll ein Werkzeug sein, das didaktischen Zielen dient. Option (a) ist eine lexikalische Falle. Sie verwendet den Ausdruck „differenzierte Diskussion“ aus dem Schlusswort von Frau Dr. Kohl, der die Qualität des Gesprächs beschreibt, aber nicht den inhaltlichen Konsens darstellt.",
+        "vi": "Đúng. Vào cuối cuộc thảo luận, tất cả những người tham gia, đặc biệt là ông Wegner, đều đồng ý với tuyên bố của người điều hành rằng phương pháp sư phạm phải là động lực chính đằng sau quá trình số hóa. Công nghệ nên là một công cụ phục vụ các mục tiêu giáo khoa. Lựa chọn (a) là một cái bẫy từ vựng. Nó sử dụng cụm từ „cuộc thảo luận đa chiều“ từ lời kết của bà Dr. Kohl, mô tả chất lượng của cuộc trò chuyện, nhưng không đại diện cho sự đồng thuận về nội dung.",
+        "key_evidence": "Da sind wir uns einig! Pädagogik muss bei jeder digitalen Innovation an erster Stelle stehen.",
         "key_vocabulary": []
       }
     }

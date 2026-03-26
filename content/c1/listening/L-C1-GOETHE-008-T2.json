@@ -17,91 +17,56 @@
     {
       "id": "Q1",
       "gespraech": 1,
-      "type": "mc_abc",
-      "question": "Wie heißt eine Person im Gespräch 1?",
-      "options": {
-        "a": "Dr",
-        "b": "Frank",
-        "c": "Petra"
-      },
-      "answer": "a",
+      "type": "richtig_falsch",
+      "statement": "Professor Kramer vertritt die Ansicht, dass die exorbitanten Kosten für Gentherapien angesichts des immensen Forschungsaufwands ethisch vertretbar sind.",
+      "answer": "falsch",
       "points": 1,
       "explanation": {
-        "de": "Man hört: \"Dr\".",
-        "vi": "Một người trong đoạn 1 tên là gì?",
-        "key_evidence": "Dr",
-        "key_vocabulary": [
-          {
-            "word": "heißen",
-            "meaning": "to be called"
-          }
-        ]
+        "de": "Der Experte erkennt zwar die hohen Entwicklungskosten an, bezeichnet die daraus resultierenden Preise jedoch explizit als 'ethisch problematisch' und als Ursache für ein 'fundamentales Gerechtigkeitsproblem', was das Gegenteil von 'vertretbar' ist.",
+        "vi": "Mặc dù chuyên gia thừa nhận chi phí phát triển cao, ông mô tả rõ ràng mức giá này là 'có vấn đề về mặt đạo đức' và là nguyên nhân của một 'vấn đề công bằng cơ bản', điều này trái ngược với 'có thể chấp nhận được'.",
+        "key_evidence": "Allerdings sind die Behandlungskosten mit Millionenbeträgen pro Patient derzeit astronomisch und ethisch problematisch.",
+        "key_vocabulary": []
       }
     },
     {
       "id": "Q2",
       "gespraech": 1,
-      "type": "mc_abc",
-      "question": "Wie heißt eine Person (Gespräch 1)?",
-      "options": {
-        "a": "Rumänien",
-        "b": "Norwegen",
-        "c": "China"
-      },
-      "answer": "b",
+      "type": "richtig_falsch",
+      "statement": "Nach Auffassung des Experten bedarf die Gentherapie, die ausschließlich den behandelten Individuen zugutekommt, einer grundlegend neuen ethischen Beurteilung.",
+      "answer": "falsch",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man den Namen \"Kramer\".",
-        "vi": "Một người trong đoạn 1 tên là gì?",
-        "key_evidence": "Kramer",
-        "key_vocabulary": [
-          {
-            "word": "heißen",
-            "meaning": "to be called"
-          }
-        ]
+        "de": "Der Experte stellt klar, dass die somatische Gentherapie (die nur den Patienten betrifft) ethisch unproblematisch ist und nach denselben Prinzipien wie jede andere medizinische Behandlung bewertet wird, also keiner 'grundlegend neuen' Beurteilung bedarf.",
+        "vi": "Chuyên gia làm rõ rằng liệu pháp gen soma (chỉ ảnh hưởng đến bệnh nhân) không có vấn đề về mặt đạo đức và được đánh giá theo các nguyên tắc tương tự như bất kỳ phương pháp điều trị y tế nào khác, do đó không cần một sự đánh giá 'hoàn toàn mới'.",
+        "key_evidence": "Die somatische Gentherapie, die nur den behandelten Patienten betrifft, halte ich für ethisch unproblematisch. Hier gilt das gleiche Prinzip wie bei jeder anderen medizinischen Behandlung...",
+        "key_vocabulary": []
       }
     },
     {
       "id": "Q3",
       "gespraech": 1,
-      "type": "mc_abc",
-      "question": "Was macht die Person beruflich (Gespräch 1)?",
-      "options": {
-        "a": "Ärztin",
-        "b": "Student",
-        "c": "Ethiker"
-      },
-      "answer": "c",
+      "type": "richtig_falsch",
+      "statement": "Der Experte deutet an, dass es unter bestimmten Umständen eine moralische Verpflichtung geben könnte, Erbkrankheiten durch Eingriffe in die Keimbahn zu eliminieren.",
+      "answer": "richtig",
       "points": 1,
       "explanation": {
-        "de": "Man hört: \"Ethiker\".",
-        "vi": "Người đó làm nghề gì (đoạn 1)?",
-        "key_evidence": "Ethiker",
-        "key_vocabulary": [
-          {
-            "word": "Ethiker",
-            "meaning": "Ethiker"
-          }
-        ]
+        "de": "Durch die rhetorische Frage, ob es ethisch vertretbar wäre, eine schwere genetische Krankheit nicht zu entfernen, wenn die Möglichkeit dazu besteht, wird impliziert, dass ein Nichthandeln moralisch fragwürdig sein könnte. Dies deutet auf eine potenzielle moralische Verpflichtung hin.",
+        "vi": "Thông qua câu hỏi tu từ về việc liệu có thể chấp nhận được về mặt đạo đức khi không loại bỏ một căn bệnh di truyền nghiêm trọng nếu có khả năng, điều này ngụ ý rằng việc không hành động có thể bị nghi ngờ về mặt đạo đức. Điều này cho thấy một nghĩa vụ đạo đức tiềm tàng.",
+        "key_evidence": "Wenn wir eine schwere genetische Erkrankung endgültig aus einer Familienlinie entfernen können, wäre es dann ethisch vertretbar, das nicht zu tun?",
+        "key_vocabulary": []
       }
     },
     {
       "id": "Q4",
       "gespraech": 1,
-      "type": "mc_abc",
-      "question": "Welches Thema wird besprochen (Gespräch 1)?",
-      "options": {
-        "a": "Gesundheit und Körper",
-        "b": "Einkaufen und Geld",
-        "c": "Reisen und Verkehr"
-      },
-      "answer": "b",
+      "type": "richtig_falsch",
+      "statement": "Professor Kramer bewertet den Fall des chinesischen Forschers He Jiankui ausschließlich als einen schädlichen Präzedenzfall, der das Vertrauen in die Genforschung untergräbt.",
+      "answer": "falsch",
       "points": 1,
       "explanation": {
-        "de": "Man hört: \"Einkaufen und Geld\".",
-        "vi": "Đoạn hội thoại 1 nói về chủ đề gì?",
-        "key_evidence": "Einkaufen und Geld",
+        "de": "Obwohl der Experte den Fall als 'eklatanten Verstoß' bezeichnet, der das Vertrauen beschädigt hat, wird im direkten Anschluss darauf hingewiesen, dass der Fall auch die Notwendigkeit internationaler Standards aufzeigt. Die Bewertung ist also nicht 'ausschließlich' negativ.",
+        "vi": "Mặc dù chuyên gia gọi trường hợp này là một 'sự vi phạm trắng trợn' làm tổn hại lòng tin, ngay sau đó có chỉ ra rằng trường hợp này cũng cho thấy sự cần thiết của các tiêu chuẩn quốc tế. Do đó, đánh giá không phải là 'hoàn toàn' tiêu cực.",
+        "key_evidence": "Aber sein Fall zeigt auch, dass nationale Regulierung allein nicht ausreicht und wir internationale Standards brauchen.",
         "key_vocabulary": []
       }
     }

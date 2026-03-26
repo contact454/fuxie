@@ -15,64 +15,71 @@
   },
   "questions": [
     {
-      "id": "Q1",
-      "gespraech": 1,
+      "id": "q1",
+      "teil": 1,
       "type": "mc_abc",
-      "question": "Welches Thema wird besprochen (Gespräch 1)?",
+      "question": "Was wird über die Auswirkungen des traditionellen Familienmodells in Deutschland impliziert?",
       "options": {
-        "a": "Reisen und Verkehr",
-        "b": "Technik und Digitalisierung",
-        "c": "Einkaufen und Geld"
+        "a": "Es schafft durch steuerliche Regelungen finanzielle Fehlanreize, die einer paritätischen Erwerbstätigkeit entgegenwirken.",
+        "b": "Es hat zur Folge, dass lediglich vierzig Prozent der Väter überhaupt eine Elternzeit in Anspruch nehmen.",
+        "c": "Es wird durch die EU-Richtlinie zur Vereinbarkeit von Beruf und Privatleben nachhaltig gefördert."
       },
-      "answer": "c",
+      "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Man hört: \"Einkaufen und Geld\".",
-        "vi": "Đoạn hội thoại 1 nói về chủ đề gì?",
-        "key_evidence": "Einkaufen und Geld",
-        "key_vocabulary": []
-      }
-    },
-    {
-      "id": "Q2",
-      "gespraech": 1,
-      "type": "mc_abc",
-      "question": "Welches Thema wird besprochen (Gespräch 1)?",
-      "options": {
-        "a": "Winterthur",
-        "b": "Finnland",
-        "c": "Brasilien"
-      },
-      "answer": "c",
-      "points": 1,
-      "explanation": {
-        "de": "Das Hauptthema ist \"Einkaufen\".",
-        "vi": "Đoạn hội thoại 1 nói về chủ đề gì?",
-        "key_evidence": "Einkaufen",
-        "key_vocabulary": []
-      }
-    },
-    {
-      "id": "Q3",
-      "gespraech": 1,
-      "type": "mc_abc",
-      "question": "Was macht die Person beruflich (Gespräch 1)?",
-      "options": {
-        "a": "Arzt",
-        "b": "Lehrerin",
-        "c": "Vorbild"
-      },
-      "answer": "c",
-      "points": 1,
-      "explanation": {
-        "de": "Man hört: \"Vorbild\".",
-        "vi": "Người đó làm nghề gì (đoạn 1)?",
-        "key_evidence": "Vorbild",
+        "de": "Die korrekte Antwort ist 'a', da der Podcast explizit das 'Ehegattensplitting' erwähnt, das Paare mit einem Hauptverdiener steuerlich begünstigt und somit 'starke Anreize gegen gleichberechtigte Erwerbstätigkeit' setzt. Dies ist eine Umschreibung für finanzielle Fehlanreize. Option 'b' ist eine lexikalische Falle; sie nennt zwar eine korrekte Statistik aus dem Text, beschreibt aber eine Folge und nicht die zugrundeliegende systemische Ursache, nach der gefragt wird. Option 'c' ist falsch, da die EU-Richtlinie als ein Schritt 'nach vorn' und somit als Gegenmaßnahme zum traditionellen Modell dargestellt wird.",
+        "vi": "Đáp án đúng là 'a', vì podcast đề cập rõ ràng đến 'Ehegattensplitting' (chế độ thuế chung cho vợ chồng), ưu đãi về thuế cho các cặp vợ chồng có một người kiếm tiền chính và do đó tạo ra 'những động lực mạnh mẽ chống lại việc làm bình đẳng'. Đây là cách diễn giải khác của việc tạo ra các khuyến khích tài chính sai lầm. Lựa chọn 'b' là một cái bẫy từ vựng; nó trích dẫn một số liệu thống kê đúng từ văn bản, nhưng mô tả một hệ quả chứ không phải nguyên nhân hệ thống cơ bản được hỏi đến. Lựa chọn 'c' là sai, vì chỉ thị của EU được trình bày như một bước 'tiến bộ' và do đó là một biện pháp đối phó với mô hình truyền thống.",
+        "key_evidence": "Das Ehegattensplitting, das Ehepaare mit einem Hauptverdiener steuerlich bevorzugt, setzt starke Anreize gegen gleichberechtigte Erwerbstätigkeit...",
         "key_vocabulary": [
-          {
-            "word": "Vorbild",
-            "meaning": "Vorbild"
-          }
+          "Fehlanreize",
+          "paritätisch",
+          "entgegenwirken"
+        ]
+      }
+    },
+    {
+      "id": "q2",
+      "teil": 1,
+      "type": "mc_abc",
+      "question": "Welche Schlussfolgerung bezüglich der nationalen Familienpolitik lässt sich aus dem Vergleich zwischen Frankreich und Italien ziehen?",
+      "options": {
+        "a": "Die staatliche Infrastruktur für Kinderbetreuung stellt einen entscheidenden Faktor für die Geburtenrate und die Frauenerwerbsquote dar.",
+        "b": "In beiden Ländern stehen Frauen vor einer „erzwungenen Wahl“ zwischen beruflicher Laufbahn und familiären Verpflichtungen.",
+        "c": "Das französische Modell sorgt in der wissenschaftlichen Gemeinschaft für einhellige Zustimmung und gilt als unumstritten."
+      },
+      "answer": "a",
+      "points": 1,
+      "explanation": {
+        "de": "Die korrekte Antwort ist 'a'. Der Text stellt einen direkten Zusammenhang her: Frankreich hat eine flächendeckende, kostenlose Kinderbetreuung und infolgedessen eine hohe Geburten- und Frauenerwerbsquote. Italien hingegen leidet unter fehlenden Betreuungsangeboten, was zu einer der niedrigsten Geburtenraten führt. Daraus lässt sich schlussfolgern, dass die Betreuungsinfrastruktur entscheidend ist. Option 'b' ist eine lexikalische Falle, die den Begriff 'erzwungene Wahl' auf beide Länder verallgemeinert, obwohl er im Text explizit nur für Italien verwendet wird. Option 'c' ist falsch, da der Text besagt, dass Experten bezüglich des französischen Modells 'nach wie vor unterschiedlicher Meinung sind'.",
+        "vi": "Đáp án đúng là 'a'. Văn bản thiết lập một mối liên hệ trực tiếp: Pháp có hệ thống chăm sóc trẻ em miễn phí và rộng khắp, và kết quả là có tỷ lệ sinh và tỷ lệ phụ nữ đi làm cao. Ngược lại, Ý thiếu các cơ sở chăm sóc trẻ em, dẫn đến một trong những tỷ lệ sinh thấp nhất. Từ đó có thể kết luận rằng cơ sở hạ tầng chăm sóc trẻ em là yếu tố quyết định. Lựa chọn 'b' là một cái bẫy từ vựng, khái quát hóa thuật ngữ 'lựa chọn bắt buộc' cho cả hai quốc gia, mặc dù trong văn bản nó chỉ được sử dụng rõ ràng cho Ý. Lựa chọn 'c' là sai, vì văn bản nói rằng các chuyên gia 'vẫn còn nhiều ý kiến khác nhau' về mô hình của Pháp.",
+        "key_evidence": "Frankreich hat ein besonders interessantes Modell: Die Kinderbetreuung ist ab drei Jahren kostenlos und flächendeckend gewährleistet... Das französische Modell erklärt, warum Frankreich eine der höchsten Geburtenraten in Europa bei gleichzeitig hoher Frauenerwerbsquote hat... In Italien dagegen führen fehlende Betreuungsangebote... zu einer der niedrigsten Geburtenraten weltweit.",
+        "key_vocabulary": [
+          "Schlussfolgerung",
+          "Infrastruktur",
+          "entscheidender Faktor"
+        ]
+      }
+    },
+    {
+      "id": "q3",
+      "teil": 1,
+      "type": "mc_abc",
+      "question": "Welchen zentralen ökonomischen Zusammenhang stellt der Podcast in Bezug auf die Familienpolitik her?",
+      "options": {
+        "a": "Eine fortschrittliche Politik zur Vereinbarkeit von Familie und Beruf korreliert positiv mit demografischer Stabilität und gesamtwirtschaftlicher Leistung.",
+        "b": "Die Beseitigung des Gender Pay Gaps durch Entgelttransparenz ist der entscheidende Schlüssel für das Wirtschaftswachstum in der EU.",
+        "c": "Die ökonomischen Folgen ungleicher Familienpolitik beschränken sich primär auf die Altersversorgung von Frauen."
+      },
+      "answer": "a",
+      "points": 1,
+      "explanation": {
+        "de": "Die korrekte Antwort ist 'a'. Der Podcast argumentiert, dass Länder mit besserer Vereinbarkeit von Familie und Beruf nicht nur höhere Geburtenraten (demografische Stabilität), sondern auch ein höheres Wirtschaftswachstum (gesamtwirtschaftliche Leistung) aufweisen, und nennt die nordischen Länder als Beleg. Option 'b' ist eine lexikalische Falle. Obwohl der Gender Pay Gap und die Transparenzrichtlinie erwähnt werden, wird deren Wirksamkeit als ungewiss ('bleibt abzuwarten') dargestellt und es ist nicht das zentrale ökonomische Argument des Podcasts. Option 'c' ist eine unzulässige Einschränkung; der Text sagt explizit, dass die Folgen 'die gesamte Volkswirtschaft' betreffen, nicht nur die Altersversorgung von Frauen.",
+        "vi": "Đáp án đúng là 'a'. Podcast lập luận rằng các quốc gia có sự cân bằng tốt hơn giữa gia đình và công việc không chỉ có tỷ lệ sinh cao hơn (ổn định nhân khẩu học) mà còn có tăng trưởng kinh tế cao hơn (hiệu suất kinh tế tổng thể), và lấy các nước Bắc Âu làm bằng chứng. Lựa chọn 'b' là một cái bẫy từ vựng. Mặc dù khoảng cách lương theo giới và chỉ thị về minh bạch lương được đề cập, hiệu quả của chúng được mô tả là không chắc chắn ('vẫn còn phải xem') và đó không phải là lập luận kinh tế trung tâm của podcast. Lựa chọn 'c' là một sự thu hẹp không chính xác; văn bản nói rõ rằng các hậu quả ảnh hưởng đến 'toàn bộ nền kinh tế quốc dân', chứ không chỉ riêng chế độ hưu trí của phụ nữ.",
+        "key_evidence": "Länder mit besserer Vereinbarkeit von Familie und Beruf haben höhere Geburtenraten und gleichzeitig höheres Wirtschaftswachstum, was die Notwendigkeit einer differenzierten Betrachtung deutlich unterstreicht.",
+        "key_vocabulary": [
+          "korreliert positiv",
+          "demografische Stabilität",
+          "gesamtwirtschaftliche Leistung"
         ]
       }
     }

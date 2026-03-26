@@ -17,91 +17,56 @@
     {
       "id": "Q1",
       "gespraech": 1,
-      "type": "mc_abc",
-      "question": "Wie heißt eine Person im Gespräch 1?",
-      "options": {
-        "a": "Professorin",
-        "b": "Katja",
-        "c": "Lisa"
-      },
-      "answer": "a",
+      "type": "richtig_falsch",
+      "statement": "Laut Frau Neumann beschränkt sich der kognitive Vorteil des Handschreibens primär auf das universitäre Umfeld.",
+      "answer": "falsch",
       "points": 1,
       "explanation": {
-        "de": "Man hört: \"Professorin\".",
-        "vi": "Một người trong đoạn 1 tên là gì?",
-        "key_evidence": "Professorin",
-        "key_vocabulary": [
-          {
-            "word": "heißen",
-            "meaning": "to be called"
-          }
-        ]
+        "de": "Die Aussage ist falsch. Die Expertin erwähnt zwar eine Studie mit Studierenden, betont aber explizit, dass der positive Effekt des Handschreibens in allen Altersgruppen und Kontexten nachweisbar ist. Die Erwähnung des universitären Lernens im Statement ist eine lexikalische Falle.",
+        "vi": "Phát biểu này sai. Mặc dù chuyên gia có đề cập đến một nghiên cứu với sinh viên, bà nhấn mạnh rõ ràng rằng hiệu quả tích cực của việc viết tay có thể được chứng minh ở mọi lứa tuổi và trong mọi bối cảnh. Việc đề cập đến môi trường học đại học trong phát biểu là một cái bẫy từ vựng.",
+        "key_evidence": "Der Effekt zeigt sich in allen Altersgruppen und Kontexten, von der Grundschule bis zur Erwachsenenbildung.",
+        "key_vocabulary": []
       }
     },
     {
       "id": "Q2",
       "gespraech": 1,
-      "type": "mc_abc",
-      "question": "Wie heißt eine Person (Gespräch 1)?",
-      "options": {
-        "a": "Ägypten",
-        "b": "Südafrika",
-        "c": "Berlin"
-      },
-      "answer": "a",
+      "type": "richtig_falsch",
+      "statement": "Die zunehmende Digitalisierung in Schulen ist laut der Expertin eine Konsequenz aus der wissenschaftlich belegten Unzulänglichkeit der Handschrift als Lernwerkzeug.",
+      "answer": "falsch",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man den Namen \"Professorin\".",
-        "vi": "Một người trong đoạn 1 tên là gì?",
-        "key_evidence": "Professorin",
-        "key_vocabulary": [
-          {
-            "word": "heißen",
-            "meaning": "to be called"
-          }
-        ]
+        "de": "Die Aussage ist falsch. Die Expertin führt die Umstellung auf digitale Medien nicht auf wissenschaftliche Evidenz gegen die Handschrift zurück, sondern auf ein Missverständnis, bei dem Digitalisierung fälschlicherweise mit Fortschritt gleichgesetzt wird.",
+        "vi": "Phát biểu này sai. Chuyên gia không cho rằng việc chuyển đổi sang phương tiện kỹ thuật số là do bằng chứng khoa học chống lại việc viết tay, mà là do một sự hiểu lầm, trong đó việc số hóa bị đánh đồng một cách sai lầm với sự tiến bộ.",
+        "key_evidence": "Das liegt an einem Missverständnis: Digitalisierung wird mit Fortschritt gleichgesetzt und Handschrift mit Rückständigkeit.",
+        "key_vocabulary": []
       }
     },
     {
       "id": "Q3",
       "gespraech": 1,
-      "type": "mc_abc",
-      "question": "Was macht die Person beruflich (Gespräch 1)?",
-      "options": {
-        "a": "Ersatz",
-        "b": "Student",
-        "c": "Studentin"
-      },
-      "answer": "a",
+      "type": "richtig_falsch",
+      "statement": "Die von Frau Neumann beobachtete Regression der feinmotorischen Kompetenzen bei Kindern beeinträchtigt diverse alltagspraktische Fertigkeiten.",
+      "answer": "richtig",
       "points": 1,
       "explanation": {
-        "de": "Man hört: \"Ersatz\".",
-        "vi": "Người đó làm nghề gì (đoạn 1)?",
-        "key_evidence": "Ersatz",
-        "key_vocabulary": [
-          {
-            "word": "Ersatz",
-            "meaning": "Ersatz"
-          }
-        ]
+        "de": "Die Aussage ist richtig. Die Expertin stellt klar, dass die Verschlechterung der Feinmotorik nicht nur das Schreiben betrifft, sondern auch andere alltägliche Tätigkeiten wie das Schneiden mit einer Schere oder das Binden von Schnürsenkeln.",
+        "vi": "Phát biểu này đúng. Chuyên gia làm rõ rằng sự suy giảm kỹ năng vận động tinh không chỉ ảnh hưởng đến việc viết lách mà còn ảnh hưởng đến các hoạt động hàng ngày khác như cắt bằng kéo hay buộc dây giày.",
+        "key_evidence": "Das hat auch Auswirkungen über das Schreiben hinaus, beispielsweise auf das Schneiden mit der Schere oder das Binden von Schuhbändern.",
+        "key_vocabulary": []
       }
     },
     {
       "id": "Q4",
       "gespraech": 1,
-      "type": "mc_abc",
-      "question": "Welches Thema wird besprochen (Gespräch 1)?",
-      "options": {
-        "a": "Bildung und Schule",
-        "b": "Wohnung und Haushalt",
-        "c": "Reisen und Verkehr"
-      },
-      "answer": "a",
+      "type": "richtig_falsch",
+      "statement": "Die Expertin prognostiziert, dass die Handschrift aufgrund ihrer fundamentalen kognitiven Verankerung fortbestehen wird, wenngleich in modifizierter Form.",
+      "answer": "richtig",
       "points": 1,
       "explanation": {
-        "de": "Man hört: \"Bildung und Schule\".",
-        "vi": "Đoạn hội thoại 1 nói về chủ đề gì?",
-        "key_evidence": "Bildung und Schule",
+        "de": "Die Aussage ist richtig. Sie fasst die Zukunftsprognose der Expertin korrekt zusammen: Die Handschrift wird sich zwar verändern ('transformieren'), aber nicht verschwinden, da sie ein wesentlicher Bestandteil der menschlichen kognitiven Architektur ist.",
+        "vi": "Phát biểu này đúng. Nó tóm tắt chính xác dự báo tương lai của chuyên gia: Việc viết tay sẽ thay đổi ('biến đổi'), nhưng sẽ không biến mất vì nó là một phần thiết yếu trong cấu trúc nhận thức của con người.",
+        "key_evidence": "Die Handschrift wird sich transformieren, aber sie wird nicht verschwinden, weil sie ein fundamentaler Teil unserer kognitiven Architektur ist.",
         "key_vocabulary": []
       }
     }

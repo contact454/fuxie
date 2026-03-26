@@ -16,69 +16,56 @@
   "questions": [
     {
       "id": "Q1",
-      "gespraech": 1,
+      "teil": 4,
       "type": "mc_abc",
-      "question": "Welches Thema wird besprochen (Gespräch 1)?",
+      "question": "Was impliziert der Dozent bezüglich der aktuellen Integrationslage in Deutschland?",
       "options": {
-        "a": "Familie und Freunde",
-        "b": "Einkaufen und Geld",
-        "c": "Medien und Kommunikation"
+        "a": "Erfolgreiche Entwicklungen werden durch systemische Benachteiligungen konterkariert.",
+        "b": "Die Fortschritte der zweiten und dritten Generation sind nicht messbar und daher fragwürdig.",
+        "c": "Die soziale Integration ist die problematischste Dimension im Vergleich zur strukturellen."
       },
-      "answer": "b",
+      "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Man hört: \"Einkaufen und Geld\".",
-        "vi": "Đoạn hội thoại 1 nói về chủ đề gì?",
-        "key_evidence": "Einkaufen und Geld",
-        "key_vocabulary": []
+        "de": "Der Dozent stellt den messbaren Fortschritten bei der Integration die 'schlechte Nachricht' gegenüber, dass hartnäckige Diskriminierung diese Erfolge systematisch untergräbt. Option (a) paraphrasiert diesen zentralen Widerspruch korrekt. Option (b) ist ein lexikalischer Trugschluss; der Dozent betont explizit, dass die Fortschritte 'messbar' sind. Option (c) ist falsch, da der Dozent die Dimensionen als sich gegenseitig bedingend darstellt ('Ohne strukturelle Integration keine soziale') und die gravierendsten Probleme im Bereich der strukturellen Integration (Bildung, Wohnungsmarkt) verortet.",
+        "vi": "Giảng viên đối chiếu những tiến bộ có thể đo lường được trong quá trình hội nhập với 'tin xấu' rằng sự phân biệt đối xử dai dẳng đang làm suy yếu một cách có hệ thống những thành công này. Lựa chọn (a) diễn giải chính xác mâu thuẫn trung tâm này. Lựa chọn (b) là một cái bẫy từ vựng; giảng viên nhấn mạnh rõ ràng rằng những tiến bộ là 'có thể đo lường được' ('messbar'). Lựa chọn (c) sai, vì giảng viên trình bày các khía cạnh là phụ thuộc lẫn nhau ('Không có hội nhập cấu trúc thì không có hội nhập xã hội') và xác định các vấn đề nghiêm trọng nhất trong lĩnh vực hội nhập cấu trúc (giáo dục, thị trường nhà ở).",
+        "key_evidence": "Die schlechte Nachricht: Diskriminierung bleibt hartnäckig bestehen und untergräbt die Integrationsfortschritte systematisch."
       }
     },
     {
       "id": "Q2",
-      "gespraech": 1,
+      "teil": 4,
       "type": "mc_abc",
-      "question": "Woher kommt die Person (Gespräch 1)?",
+      "question": "Welche Schlussfolgerung zieht der Dozent aus dem Befund der Diskriminierung im Bildungssystem?",
       "options": {
-        "a": "Leipzig",
-        "b": "Köln",
-        "c": "Deutschland"
+        "a": "Die Benachteiligung ist nicht nur auf persönliche Vorurteile zurückzuführen, sondern im System verankert.",
+        "b": "Die Deutschkenntnisse der Kinder sind die Hauptursache für die ungleichen Empfehlungen.",
+        "c": "Die Gymnasialempfehlungen basieren trotz allem primär auf der individuellen Leistung der Kinder."
       },
-      "answer": "c",
+      "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Man hört: \"Deutschland\".",
-        "vi": "Người đó đến từ đâu (đoạn 1)?",
-        "key_evidence": "Deutschland",
-        "key_vocabulary": [
-          {
-            "word": "kommen aus",
-            "meaning": "to come from"
-          }
-        ]
+        "de": "Der Dozent bezeichnet das Problem als 'institutionelle Diskriminierung' und schlussfolgert, dass 'nicht nur individuelle, sondern strukturelle Maßnahmen nötig sind'. Option (a) fasst diese Kernaussage, dass das Problem systemischer Natur ist, korrekt zusammen. Option (b) ist eine unbegründete Annahme; der Dozent erwähnt sogar, dass die Deutschkenntnisse der jüngeren Generationen 'hervorragend' sind. Option (c) widerspricht direkt der Evidenz, da Kinder 'bei gleicher Leistung' seltener eine Empfehlung erhalten.",
+        "vi": "Giảng viên gọi vấn đề này là 'sự phân biệt đối xử mang tính thể chế' ('institutionelle Diskriminierung') và kết luận rằng 'không chỉ cần các biện pháp cá nhân mà còn cần các biện pháp mang tính cấu trúc'. Lựa chọn (a) tóm tắt chính xác ý chính này, rằng vấn đề có bản chất hệ thống. Lựa chọn (b) là một giả định không có cơ sở; giảng viên thậm chí còn đề cập rằng kỹ năng tiếng Đức của các thế hệ trẻ là 'xuất sắc'. Lựa chọn (c) trực tiếp mâu thuẫn với bằng chứng, vì trẻ em nhận được giấy giới thiệu ít hơn 'với cùng thành tích học tập'.",
+        "key_evidence": "Dieser Befund ist empirisch vielfach belegt und zeigt, dass nicht nur individuelle, sondern strukturelle Maßnahmen nötig sind."
       }
     },
     {
       "id": "Q3",
-      "gespraech": 1,
+      "teil": 4,
       "type": "mc_abc",
-      "question": "Was macht die Person beruflich (Gespräch 1)?",
+      "question": "Welches übergeordnete Ziel verfolgen die politischen Handlungsempfehlungen des Dozenten?",
       "options": {
-        "a": "Verkäufer",
-        "b": "Kinder",
-        "c": "Student"
+        "a": "Sie sollen vorrangig die Privatwirtschaft dazu verpflichten, Diversität zu fördern.",
+        "b": "Sie konzentrieren sich ausschließlich auf die Verbesserung der frühkindlichen Bildung.",
+        "c": "Sie zielen auf eine tiefgreifende Veränderung institutioneller Praktiken und gesellschaftlicher Wahrnehmungen ab."
       },
-      "answer": "b",
+      "answer": "c",
       "points": 1,
       "explanation": {
-        "de": "Man hört: \"Kinder\".",
-        "vi": "Người đó làm nghề gì (đoạn 1)?",
-        "key_evidence": "Kinder",
-        "key_vocabulary": [
-          {
-            "word": "Kinder",
-            "meaning": "Kinder"
-          }
-        ]
+        "de": "Die Vorschläge des Dozenten (frühkindliche Bildung, anonymisierte Bewerbungen im öffentlichen Dienst, Diversität in Institutionen, gesellschaftlicher Narrativ) zielen auf eine umfassende Veränderung ab. Sie betreffen sowohl institutionelle Abläufe als auch die allgemeine Denkweise über Vielfalt. Option (c) fasst dieses breite Ziel korrekt zusammen. Option (a) ist ein lexikalischer Trugschluss; der öffentliche Dienst soll 'verpflichtend' handeln und als 'Vorbild für die Privatwirtschaft' dienen, diese wird aber nicht direkt verpflichtet. Option (b) ist zu eng gefasst, da die frühkindliche Bildung nur einer von vier genannten Punkten ist.",
+        "vi": "Các đề xuất của giảng viên (giáo dục mầm non, quy trình ứng tuyển ẩn danh trong khu vực công, sự đa dạng trong các tổ chức, câu chuyện xã hội) nhằm mục đích thay đổi toàn diện. Chúng ảnh hưởng đến cả quy trình của các thể chế và cách suy nghĩ chung về sự đa dạng. Lựa chọn (c) tóm tắt chính xác mục tiêu rộng lớn này. Lựa chọn (a) là một cái bẫy từ vựng; khu vực công phải hành động 'bắt buộc' và đóng vai trò là 'hình mẫu cho khu vực tư nhân', nhưng khu vực tư nhân không bị bắt buộc trực tiếp. Lựa chọn (b) quá hẹp, vì giáo dục mầm non chỉ là một trong bốn điểm được đề cập.",
+        "key_evidence": "Drittens: Diversität in öffentlichen Institutionen fördern, damit sich die Zusammensetzung der Gesellschaft in ihren Institutionen widerspiegelt. Viertens: Einen gesellschaftlichen Narrativ entwickeln, der Vielfalt als Stärke und Bereicherung begreift."
       }
     }
   ],

@@ -16,40 +16,38 @@
   "questions": [
     {
       "id": "Q1",
-      "gespraech": 1,
+      "teil": 4,
       "type": "mc_abc",
-      "question": "Welches Thema wird besprochen (Gespräch 1)?",
+      "question": "Was hebt der Dozent als das verbindende Element der vorgestellten Stadtplanungskonzepte hervor?",
       "options": {
-        "a": "Reisen und Verkehr",
-        "b": "Gesundheit und Körper",
-        "c": "Einkaufen und Geld"
-      },
-      "answer": "c",
-      "points": 1,
-      "explanation": {
-        "de": "Man hört: \"Einkaufen und Geld\".",
-        "vi": "Đoạn hội thoại 1 nói về chủ đề gì?",
-        "key_evidence": "Einkaufen und Geld",
-        "key_vocabulary": []
-      }
-    },
-    {
-      "id": "Q2",
-      "gespraech": 1,
-      "type": "mc_abc",
-      "question": "Welches Thema wird besprochen (Gespräch 1)?",
-      "options": {
-        "a": "Essen",
-        "b": "Irland",
-        "c": "Köln"
+        "a": "ihre anthropozentrische Ausrichtung.",
+        "b": "ihre Fokussierung auf klimatische Resilienz.",
+        "c": "ihre Abhängigkeit von technologischen Innovationen."
       },
       "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Das Hauptthema ist \"Einkaufen\".",
-        "vi": "Đoạn hội thoại 1 nói về chủ đề gì?",
-        "key_evidence": "Einkaufen",
-        "key_vocabulary": []
+        "de": "Der Dozent fasst explizit zusammen, dass alle drei Konzepte den Menschen in den Mittelpunkt stellen. 'Anthropozentrische Ausrichtung' ist eine akademische Paraphrase für diese Aussage. Option (b) ist ein lexikalischer Trugschluss; obwohl Resilienz im Kontext der 'produktiven Stadt' erwähnt wird, ist es nicht das gemeinsame Merkmal aller drei Konzepte. Option (c) ist falsch, da Technologie als separater Punkt nach den Konzepten diskutiert wird und nicht als deren Grundlage.",
+        "vi": "Giảng viên tóm tắt một cách rõ ràng rằng cả ba khái niệm đều đặt con người làm trung tâm. 'Anthropozentrische Ausrichtung' (định hướng lấy con người làm trung tâm) là một cách diễn giải học thuật cho tuyên bố này. Lựa chọn (b) là một cái bẫy từ vựng; mặc dù khả năng chống chịu (Resilienz) được đề cập trong bối cảnh 'thành phố sản xuất', nó không phải là đặc điểm chung của cả ba khái niệm. Lựa chọn (c) sai vì công nghệ được thảo luận như một điểm riêng biệt sau các khái niệm chứ không phải là nền tảng của chúng.",
+        "key_evidence": "Alle drei Konzepte haben eines gemeinsam: Sie stellen den Menschen und seine Bedürfnisse in den Mittelpunkt."
+      }
+    },
+    {
+      "id": "Q2",
+      "teil": 4,
+      "type": "mc_abc",
+      "question": "Wie bewertet der Dozent den Beitrag von Technologie zur zukünftigen Stadtentwicklung?",
+      "options": {
+        "a": "Er misst ihr die größte Bedeutung bei der Reduzierung des Energieverbrauchs und der Simulation von Veränderungen bei.",
+        "b": "Er betrachtet sie als ein unterstützendes Instrument, dessen Wirksamkeit von partizipativen Prozessen abhängt.",
+        "c": "Er sieht sie als den entscheidenden Faktor für die Lösung aller urbanen Probleme."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Der Dozent stellt klar, dass Technologie allein nicht ausreicht, sondern 'kluge Planung und demokratische Beteiligung' erfordert. Dies impliziert, dass Technologie ein unterstützendes Werkzeug ist, dessen Erfolg von menschlichen Faktoren (partizipativen Prozessen) abhängt. Option (a) ist eine lexikalische Falle, die spezifische Anwendungsbeispiele ('Energieverbrauch', 'simulieren') aus dem Text aufgreift, aber die einschränkende Hauptaussage des Dozenten ignoriert. Option (c) ist eine Übertreibung und wird durch die Aussage, dass Technologie allein keine gute Stadt macht, widerlegt.",
+        "vi": "Giảng viên làm rõ rằng chỉ công nghệ thôi là không đủ, mà cần có 'quy hoạch thông minh và sự tham gia dân chủ'. Điều này ngụ ý rằng công nghệ là một công cụ hỗ trợ, mà hiệu quả của nó phụ thuộc vào các yếu tố con người (quy trình có sự tham gia). Lựa chọn (a) là một cái bẫy từ vựng, lấy các ví dụ ứng dụng cụ thể ('tiêu thụ năng lượng', 'mô phỏng') từ văn bản nhưng bỏ qua tuyên bố chính mang tính giới hạn của giảng viên. Lựa chọn (c) là một sự phóng đại và bị bác bỏ bởi tuyên bố rằng chỉ công nghệ không thể tạo nên một thành phố tốt.",
+        "key_evidence": "Aber Technologie allein macht keine gute Stadt. Es braucht kluge Planung und demokratische Beteiligung der Bürger."
       }
     }
   ],

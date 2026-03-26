@@ -16,58 +16,78 @@
   "questions": [
     {
       "id": "Q1",
-      "item": 1,
-      "type": "richtig_falsch",
-      "statement": "Eine Person heißt Peter.",
-      "answer": "falsch",
+      "teil": 3,
+      "abschnitt": 1,
+      "type": "mc_abc",
+      "question": "Wie entkräftet Gast_B die anfängliche These von Gast_A, die Handschrift sei obsolet?",
+      "options": {
+        "a": "Indem er die fundamentale Funktion der Handschrift neu definiert und sie von einem reinen Gebrauchsmittel abgrenzt.",
+        "b": "Indem er argumentiert, dass die Handschrift ein effizienteres Transportmittel für Gedanken sei als die Tastatur.",
+        "c": "Indem er die historische Bedeutung der Kutsche in Frage stellt und den Vergleich für unzulässig erklärt."
+      },
+      "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Falsch. Die Aussage stimmt nicht mit dem Hörtext überein.",
-        "vi": "Sai.",
-        "key_evidence": "Eine Person heißt Peter.",
-        "key_vocabulary": []
+        "de": "Die korrekte Antwort ist (a), da Gast_B den Vergleich mit der Kutsche zurückweist, indem er klarstellt, dass die Handschrift keine reine Transportfunktion hat, sondern ein Werkzeug zur kognitiven Verarbeitung ist. Option (b) ist eine lexikalische Falle, die den Begriff 'Transportmittel' aus dem Audio aufgreift, ihn aber in einen falschen Kontext setzt. Option (c) ist falsch, da nicht die historische Bedeutung der Kutsche, sondern die Analogie an sich kritisiert wird.",
+        "vi": "Đáp án đúng là (a), vì Vị khách B bác bỏ so sánh với xe ngựa bằng cách làm rõ rằng viết tay không chỉ có chức năng vận chuyển đơn thuần mà còn là một công cụ xử lý nhận thức. Lựa chọn (b) là một cái bẫy từ vựng, sử dụng thuật ngữ 'Transportmittel' (phương tiện vận chuyển) từ bài nghe nhưng đặt nó vào một ngữ cảnh sai. Lựa chọn (c) sai vì không phải ý nghĩa lịch sử của xe ngựa bị chỉ trích, mà là chính sự tương đồng đó.",
+        "key_evidence": "Das sehe ich fundamental anders. Die Handschrift ist kein Transportmittel, sondern ein kognitives Werkzeug."
       }
     },
     {
       "id": "Q2",
-      "item": 2,
-      "type": "richtig_falsch",
-      "statement": "Eine Person heißt Dr.",
-      "answer": "richtig",
+      "teil": 3,
+      "abschnitt": 2,
+      "type": "mc_abc",
+      "question": "Welche Bedenken äußert Gast_A hinsichtlich der wissenschaftlichen Belege für die kognitiven Vorteile der Handschrift?",
+      "options": {
+        "a": "Er kritisiert, dass die Probanden der Studien nicht zufällig den Gruppen zugeteilt wurden.",
+        "b": "Er bestreitet die Validität der Meta-Analyse, da sie zu wenige Studien umfasse.",
+        "c": "Er stellt infrage, ob der beobachtete Zusammenhang zwischen Handschrift und Lernleistung tatsächlich auf eine ursächliche Beziehung zurückzuführen ist."
+      },
+      "answer": "c",
       "points": 1,
       "explanation": {
-        "de": "Richtig. Die Aussage stimmt mit dem Hörtext überein.",
-        "vi": "Đúng.",
-        "key_evidence": "Eine Person heißt Dr.",
-        "key_vocabulary": []
+        "de": "Die korrekte Antwort ist (c). Gast_A zweifelt nicht die Korrelation an, sondern die Kausalität, indem er andeutet, dass leistungsstärkere Schüler vielleicht einfach eine Präferenz für das Schreiben mit der Hand haben. Option (a) ist falsch, da dies die Widerlegung von Gast_B ist, nicht der Einwand von Gast_A. Option (b) ist eine lexikalische Falle; die Meta-Analyse wird erwähnt, aber ihre Validität oder der Umfang werden von Gast_A nicht in dieser Form kritisiert.",
+        "vi": "Đáp án đúng là (c). Vị khách A không nghi ngờ sự tương quan, mà là mối quan hệ nhân quả, bằng cách ngụ ý rằng những học sinh có thành tích cao hơn có thể chỉ đơn giản là thích viết tay hơn. Lựa chọn (a) sai, vì đây là lời phản bác của Vị khách B, không phải là sự phản đối của Vị khách A. Lựa chọn (b) là một cái bẫy từ vựng; phân tích tổng hợp được đề cập, nhưng tính hợp lệ hoặc phạm vi của nó không bị Vị khách A chỉ trích theo cách này.",
+        "key_evidence": "Aber Korrelation ist nicht Kausalität. Vielleicht schreiben leistungsstärkere Schüler einfach lieber mit der Hand."
       }
     },
     {
       "id": "Q3",
-      "item": 3,
-      "type": "richtig_falsch",
-      "statement": "Eine Person heißt Maria.",
-      "answer": "falsch",
+      "teil": 3,
+      "abschnitt": 3,
+      "type": "mc_abc",
+      "question": "Was ist laut dem Lehrer die maßgebliche Determinante für die Lernmotivation der Schüler?",
+      "options": {
+        "a": "Die didaktische Qualität der Unterrichtsgestaltung, unabhängig vom verwendeten Medium.",
+        "b": "Die Wahl zwischen einem modernen Tablet-Arbeitsblatt und einem traditionellen Arbeitsheft.",
+        "c": "Die konsequente Nutzung digitaler Medien, da diese eine höhere intrinsische Motivation bewirken."
+      },
+      "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Falsch. Die Aussage stimmt nicht mit dem Hörtext überein.",
-        "vi": "Sai.",
-        "key_evidence": "Eine Person heißt Maria.",
-        "key_vocabulary": []
+        "de": "Die korrekte Antwort ist (a). Der Lehrer betont, dass guter Unterricht motiviert, nicht das Medium an sich. Option (b) ist eine lexikalische Falle, die die erwähnten Medien ('Tablet-Arbeitsblatt', 'Arbeitsheft') aufgreift, aber fälschlicherweise impliziert, die Wahl zwischen ihnen sei entscheidend. Der Lehrer sagt jedoch, dass beide schlecht gestaltet sein können. Option (c) widerspricht seiner Aussage, dass das Medium allein nicht entscheidend ist.",
+        "vi": "Đáp án đúng là (a). Giáo viên nhấn mạnh rằng một bài giảng tốt sẽ tạo động lực, chứ không phải bản thân phương tiện. Lựa chọn (b) là một cái bẫy từ vựng, sử dụng các phương tiện được đề cập ('Tablet-Arbeitsblatt', 'Arbeitsheft') nhưng lại ngụ ý sai rằng sự lựa chọn giữa chúng là quyết định. Tuy nhiên, giáo viên nói rằng cả hai đều có thể được thiết kế kém. Lựa chọn (c) mâu thuẫn với tuyên bố của ông rằng chỉ riêng phương tiện không phải là yếu tố quyết định.",
+        "key_evidence": "Das stimmt, aber Motivation entsteht durch guten Unterricht, nicht durch das Medium allein."
       }
     },
     {
       "id": "Q4",
-      "item": 4,
-      "type": "richtig_falsch",
-      "statement": "Eine Person heißt Petra.",
-      "answer": "falsch",
+      "teil": 3,
+      "abschnitt": 4,
+      "type": "mc_abc",
+      "question": "Welchen Lösungsansatz favorisieren die Experten am Ende der Diskussion?",
+      "options": {
+        "a": "Die Priorisierung der digitalen Bildung, um ideologische Grabenkämpfe zu beenden.",
+        "b": "Eine pragmatische Synthese, die auf wissenschaftlicher Evidenz basiert und sowohl manuelle als auch digitale Schreibkompetenzen integriert.",
+        "c": "Die Wiedereinführung der Schreibschrift als obligatorisches Kernelement des Lehrplans zur Förderung der Kognition."
+      },
+      "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Falsch. Die Aussage stimmt nicht mit dem Hörtext überein.",
-        "vi": "Sai.",
-        "key_evidence": "Eine Person heißt Petra.",
-        "key_vocabulary": []
+        "de": "Die korrekte Antwort ist (b). Der empfohlene Kompromiss besteht darin, Druckschrift beizubehalten, Schreibschrift optional anzubieten und digitale Kompetenzen parallel aufzubauen. Dies soll auf wissenschaftlicher Evidenz basieren. Option (a) ist eine lexikalische Falle, die 'ideologische Grabenkämpfe' aufgreift, aber den Konsens falsch darstellt, der keine einseitige Priorisierung vorsieht. Option (c) ist falsch, da die Schreibschrift nur 'optional' angeboten werden soll, nicht als obligatorisches Kernelement.",
+        "vi": "Đáp án đúng là (b). Giải pháp thỏa hiệp được đề xuất là duy trì chữ in, cung cấp chữ viết tay như một lựa chọn tùy chọn và xây dựng năng lực kỹ thuật số song song. Điều này phải dựa trên bằng chứng khoa học. Lựa chọn (a) là một cái bẫy từ vựng, sử dụng cụm từ 'ideologische Grabenkämpfe' (những cuộc chiến ý thức hệ) nhưng trình bày sai sự đồng thuận, vốn không ưu tiên một phía. Lựa chọn (c) sai, vì chữ viết tay chỉ nên được cung cấp 'tùy chọn' (optional), không phải là một yếu tố cốt lõi bắt buộc.",
+        "key_evidence": "Druckschrift beibehalten, Schreibschrift optional anbieten und digitale Kompetenz parallel aufbauen. ... Die Entscheidung sollte auf wissenschaftlicher Evidenz basieren, nicht auf ideologischen Grabenkämpfen."
       }
     }
   ],

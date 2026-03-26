@@ -16,57 +16,77 @@
   "questions": [
     {
       "id": "Q1",
-      "item": 1,
-      "type": "richtig_falsch",
-      "statement": "Eine Person heißt Maria.",
-      "answer": "falsch",
+      "gespraech": 1,
+      "type": "mc_abc",
+      "question": "Was ist der ethische Kerneinwand von Dr. Hoffmann gegen das Nudging-Konzept?",
+      "options": {
+        "a": "Es umgeht die rationale Auseinandersetzung des Individuums mit einer Entscheidung.",
+        "b": "Es korrigiert die kognitiven Schwächen der Bürger nicht auf nachhaltige Weise.",
+        "c": "Es stellt eine Form des Paternalismus dar, die die Autonomie der Bürger missachtet."
+      },
+      "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Falsch. Die Aussage stimmt nicht mit dem Hörtext überein.",
-        "vi": "Sai.",
-        "key_evidence": "Eine Person heißt Maria.",
+        "de": "Die korrekte Antwort ist (a), da Dr. Hoffmann kritisiert, dass Nudging die bewusste, rationale Entscheidungsfindung gezielt aushebelt. Option (b) ist eine lexikalische Falle; der Text sagt, Nudging 'nutzt' die kognitiven Schwächen, nicht, dass es sie nicht 'korrigiert'. Option (c) ist zwar ein Teil seiner Kritik ('weicher Paternalismus'), aber der fundamentale Mechanismus, den er anprangert, ist die Umgehung der Rationalität, was (a) präziser erfasst.",
+        "vi": "Đáp án đúng là (a), vì Tiến sĩ Hoffmann chỉ trích rằng Nudging có chủ đích bỏ qua quá trình ra quyết định có ý thức và hợp lý. Lựa chọn (b) là một cái bẫy từ vựng; văn bản nói rằng Nudging 'lợi dụng' những điểm yếu về nhận thức, chứ không phải là nó không 'sửa chữa' chúng. Lựa chọn (c) tuy là một phần trong lời chỉ trích của ông ('chủ nghĩa gia trưởng mềm dẻo'), nhưng cơ chế cơ bản mà ông phản đối là việc bỏ qua tính hợp lý, điều mà (a) diễn đạt chính xác hơn.",
+        "key_evidence": "Nudging umgeht die bewusste Entscheidungsfindung und nutzt genau die kognitiven Schwächen, die es zu korrigieren vorgibt.",
         "key_vocabulary": []
       }
     },
     {
       "id": "Q2",
-      "item": 2,
-      "type": "richtig_falsch",
-      "statement": "Eine Person heißt Professorin.",
-      "answer": "richtig",
+      "gespraech": 1,
+      "type": "mc_abc",
+      "question": "Womit rechtfertigt Frau Professorin Wendt die staatliche Gestaltung von Entscheidungssituationen?",
+      "options": {
+        "a": "Mit der Notwendigkeit, evidenzbasierte und lebensrettende Maßnahmen durchzusetzen.",
+        "b": "Mit der Unmöglichkeit, eine neutrale, nicht-gestaltete Entscheidungsumgebung zu schaffen.",
+        "c": "Mit der staatlichen Pflicht, die Bürger vor unbewussten Fehlentscheidungen zu schützen."
+      },
+      "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Richtig. Die Aussage stimmt mit dem Hörtext überein.",
-        "vi": "Đúng.",
-        "key_evidence": "Eine Person heißt Professorin.",
+        "de": "Antwort (b) ist korrekt. Frau Wendt argumentiert, dass der Staat ohnehin immer und 'unvermeidbar' Entscheidungsarchitekturen schafft, da eine neutrale Position nicht existiert. Die Gestaltung ist also keine Frage des 'Ob', sondern des 'Wie'. Option (a) ist ein Beispiel für eine positive Gestaltung, aber nicht die grundsätzliche Rechtfertigung. Option (c) ist eine Interpretation des Ziels von Nudging, aber nicht ihre Kernbegründung für die Legitimität staatlicher Gestaltung an sich.",
+        "vi": "Đáp án (b) là chính xác. Giáo sư Wendt lập luận rằng nhà nước dù sao cũng luôn luôn và 'không thể tránh khỏi' việc tạo ra các cấu trúc quyết định, vì không tồn tại một vị trí trung lập. Do đó, việc thiết kế không phải là câu hỏi 'Có hay không' mà là 'Như thế nào'. Lựa chọn (a) là một ví dụ về việc thiết kế tích cực, nhưng không phải là sự biện minh cơ bản. Lựa chọn (c) là một cách diễn giải mục tiêu của Nudging, nhưng không phải là lý do cốt lõi của bà cho tính hợp pháp của việc thiết kế của nhà nước.",
+        "key_evidence": "Der Staat gestaltet ohnehin jede Entscheidungssituation, ob bewusst oder unbewusst, das ist unvermeidbar.",
         "key_vocabulary": []
       }
     },
     {
       "id": "Q3",
-      "item": 3,
-      "type": "richtig_falsch",
-      "statement": "Eine Person heißt Laura.",
-      "answer": "falsch",
+      "gespraech": 1,
+      "type": "mc_abc",
+      "question": "Welche Implikation bezüglich der Wirksamkeit von Aufklärung lässt sich aus der Diskussion ableiten?",
+      "options": {
+        "a": "Aufklärung allein führt oft nicht zu den gewünschten Verhaltensanpassungen.",
+        "b": "Aufklärung ist bei komplexen Themen wie dem Rauchen prinzipiell wirkungslos.",
+        "c": "Aufklärung muss durch Nudging ersetzt werden, um menschliches Verhalten zu ändern."
+      },
+      "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Falsch. Die Aussage stimmt nicht mit dem Hörtext überein.",
-        "vi": "Sai.",
-        "key_evidence": "Eine Person heißt Laura.",
+        "de": "Antwort (a) ist korrekt. Die Diskussionsteilnehmer sind sich einig, dass Information allein ('Aufklärung allein') oft nicht ausreicht, um Verhalten zu ändern, wie das Beispiel der Raucher zeigt. Option (b) ist eine unzulässige Verallgemeinerung; das Beispiel des Rauchens illustriert ein Problem, behauptet aber nicht, dass Aufklärung 'prinzipiell wirkungslos' ist. Option (c) ist falsch; der Konsens am Ende ist, dass Nudging die Aufklärung 'ergänzt, aber niemals ersetzt'.",
+        "vi": "Đáp án (a) là chính xác. Những người tham gia thảo luận đồng ý rằng chỉ riêng thông tin ('chỉ riêng việc khai sáng') thường không đủ để thay đổi hành vi, như ví dụ về những người hút thuốc đã cho thấy. Lựa chọn (b) là một sự khái quát hóa không được phép; ví dụ về việc hút thuốc minh họa một vấn đề, nhưng không khẳng định rằng việc khai sáng 'về nguyên tắc là vô tác dụng'. Lựa chọn (c) là sai; sự đồng thuận cuối cùng là Nudging 'bổ sung, nhưng không bao giờ thay thế' việc khai sáng.",
+        "key_evidence": "Das ist ein nobles Ideal, aber die Forschung zeigt, dass Aufklärung allein menschliches Verhalten kaum verändert.",
         "key_vocabulary": []
       }
     },
     {
       "id": "Q4",
-      "item": 4,
-      "type": "richtig_falsch",
-      "statement": "Eine Person heißt Katja.",
-      "answer": "falsch",
+      "gespraech": 1,
+      "type": "mc_abc",
+      "question": "Unter welcher zentralen Bedingung wird Nudging am Ende der Diskussion als legitimes politisches Instrument betrachtet?",
+      "options": {
+        "a": "Wenn es ausschließlich für kurzfristige Verhaltensänderungen eingesetzt wird.",
+        "b": "Wenn seine Anwendung die Förderung langfristiger Entscheidungskompetenz nicht substituiert.",
+        "c": "Wenn seine Wirksamkeit und eventuelle Nebenwirkungen regelmäßig evaluiert werden."
+      },
+      "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Falsch. Die Aussage stimmt nicht mit dem Hörtext überein.",
-        "vi": "Sai.",
-        "key_evidence": "Eine Person heißt Katja.",
+        "de": "Antwort (b) fasst den finalen Konsens am besten zusammen. Nudging wird als akzeptabel angesehen, solange es als Ergänzung zur Bildung für 'langfristige Entscheidungskompetenz' dient und diese nicht ersetzt. Option (a) ist zwar erwähnt ('Nudging für kurzfristige Verhaltensänderung'), aber es ist nicht die zentrale Bedingung für seine Legitimität, sondern eine Beschreibung seiner Funktion. Option (c) ist eine der vier genannten Mindeststandards, aber die übergeordnete Bedingung, die den philosophischen Konflikt auflöst, ist die in (b) beschriebene komplementäre Rolle zur Bildung mündiger Bürger.",
+        "vi": "Đáp án (b) tóm tắt tốt nhất sự đồng thuận cuối cùng. Nudging được coi là có thể chấp nhận được miễn là nó đóng vai trò bổ sung cho giáo dục nhằm 'năng lực ra quyết định dài hạn' và không thay thế nó. Lựa chọn (a) tuy được đề cập ('Nudging để thay đổi hành vi ngắn hạn'), nhưng nó không phải là điều kiện trung tâm cho tính hợp pháp của nó, mà là một mô tả về chức năng của nó. Lựa chọn (c) là một trong bốn tiêu chuẩn tối thiểu được nêu, nhưng điều kiện bao trùm giải quyết xung đột triết học là vai trò bổ sung cho việc giáo dục công dân có năng lực, được mô tả trong (b).",
+        "key_evidence": "Wichtig ist, dass Nudging Aufklärung ergänzt, aber niemals ersetzt, denn mündige Bürger bleiben das eigentliche Ziel.",
         "key_vocabulary": []
       }
     }

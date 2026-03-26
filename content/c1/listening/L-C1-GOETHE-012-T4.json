@@ -16,40 +16,47 @@
   "questions": [
     {
       "id": "Q1",
-      "gespraech": 1,
+      "teil": 4,
       "type": "mc_abc",
-      "question": "Welches Thema wird besprochen (Gespräch 1)?",
+      "question": "Was ist laut dem Dozenten das fundamentale Prinzip, das den vorgestellten Stadtplanungskonzepten zugrunde liegt?",
       "options": {
-        "a": "Einkaufen und Geld",
-        "b": "Arbeit und Beruf",
-        "c": "Umwelt und Natur"
+        "a": "Die Priorisierung des menschlichen Wohlbefindens und der alltäglichen Erfordernisse.",
+        "b": "Die Reduzierung von Transportwegen durch dezentrale Werkstätten und Urban Farming.",
+        "c": "Die technologische Optimierung zur Anpassung an den Klimawandel."
       },
       "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Man hört: \"Einkaufen und Geld\".",
-        "vi": "Đoạn hội thoại 1 nói về chủ đề gì?",
-        "key_evidence": "Einkaufen und Geld",
-        "key_vocabulary": []
+        "de": "Der Dozent fasst zusammen, dass alle drei Konzepte den Menschen in den Mittelpunkt stellen. Option (a) paraphrasiert diesen Kerngedanken korrekt. Option (b) ist ein lexikalischer Trugschluss, da sie nur spezifische Details des Konzepts der 'produktiven Stadt' nennt, nicht aber das übergreifende Prinzip aller drei Konzepte. Option (c) ist falsch, da der Dozent Technologie als einen separaten, wenn auch wichtigen, Aspekt behandelt und das Kernprinzip der Konzepte als menschenzentriert, nicht technologiezentriert, beschreibt.",
+        "vi": "Giảng viên tóm tắt rằng cả ba khái niệm đều đặt con người làm trung tâm. Lựa chọn (a) diễn giải chính xác ý tưởng cốt lõi này. Lựa chọn (b) là một cái bẫy từ vựng, vì nó chỉ đề cập đến các chi tiết cụ thể của khái niệm 'thành phố sản xuất' chứ không phải nguyên tắc bao trùm của cả ba khái niệm. Lựa chọn (c) sai vì giảng viên xem công nghệ là một khía cạnh riêng biệt, mặc dù quan trọng, và mô tả nguyên tắc cốt lõi của các khái niệm là lấy con người làm trung tâm, không phải công nghệ.",
+        "key_evidence": "Alle drei Konzepte haben eines gemeinsam: Sie stellen den Menschen und seine Bedürfnisse in den Mittelpunkt...",
+        "key_vocabulary": [
+          "fundamentales Prinzip = gemeinsames Merkmal",
+          "Priorisierung des menschlichen Wohlbefindens = den Menschen in den Mittelpunkt stellen",
+          "alltägliche Erfordernisse = Bedürfnisse"
+        ]
       }
     },
     {
       "id": "Q2",
-      "gespraech": 1,
+      "teil": 4,
       "type": "mc_abc",
-      "question": "Welches Thema wird besprochen (Gespräch 1)?",
+      "question": "Welche Schlussfolgerung lässt sich aus den Ausführungen des Dozenten über die Rolle der Technologie in der Stadtentwicklung ziehen?",
       "options": {
-        "a": "Vietnam",
-        "b": "Niederlande",
-        "c": "Warschau"
+        "a": "Technologie allein ist ausreichend, um die Lebensqualität in Städten signifikant zu verbessern.",
+        "b": "Technologischer Fortschritt ist ein unterstützendes Instrument, dessen Erfolg von partizipativen Planungsansätzen abhängt.",
+        "c": "Die Bürgerbeteiligung wird durch den Einsatz von digitalen Zwillingen und Smart-Home-Technologien überflüssig."
       },
       "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Das Hauptthema ist \"Einkaufen\".",
-        "vi": "Đoạn hội thoại 1 nói về chủ đề gì?",
-        "key_evidence": "Einkaufen",
-        "key_vocabulary": []
+        "de": "Der Dozent betont explizit, dass Technologie allein nicht ausreicht, sondern durch kluge Planung und Bürgerbeteiligung ergänzt werden muss. Option (b) fasst diese nuancierte Haltung korrekt zusammen, indem sie Technologie als unterstützendes Werkzeug darstellt, dessen Erfolg an die Beteiligung der Bürger geknüpft ist. Option (a) ist eine direkte Widerlegung der Aussage des Dozenten ('Technologie allein macht keine gute Stadt'). Option (c) ist ebenfalls falsch, da der Dozent die Bürgerbeteiligung als 'entscheidend' für den Erfolg bezeichnet und sie nicht durch Technologie ersetzt sieht.",
+        "vi": "Giảng viên nhấn mạnh rõ ràng rằng chỉ công nghệ thôi là không đủ, mà cần được bổ sung bằng quy hoạch thông minh và sự tham gia của người dân. Lựa chọn (b) tóm tắt chính xác quan điểm tinh tế này, mô tả công nghệ như một công cụ hỗ trợ mà thành công của nó phụ thuộc vào sự tham gia của người dân. Lựa chọn (a) trực tiếp mâu thuẫn với tuyên bố của giảng viên ('Chỉ công nghệ thôi không làm nên một thành phố tốt'). Lựa chọn (c) cũng sai, vì giảng viên mô tả sự tham gia của người dân là 'quyết định' cho sự thành công và không coi nó bị thay thế bởi công nghệ.",
+        "key_evidence": "Aber Technologie allein macht keine gute Stadt. Es braucht kluge Planung und demokratische Beteiligung der Bürger...",
+        "key_vocabulary": [
+          "unterstützendes Instrument = Technologie allein macht keine gute Stadt",
+          "partizipative Planungsansätze = demokratische Beteiligung der Bürger"
+        ]
       }
     }
   ],

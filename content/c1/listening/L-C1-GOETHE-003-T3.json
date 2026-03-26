@@ -16,44 +16,59 @@
   "questions": [
     {
       "id": "Q1",
-      "item": 1,
-      "type": "richtig_falsch",
-      "statement": "Eine Person heißt Julia.",
-      "answer": "falsch",
+      "teil": 3,
+      "abschnitt": 2,
+      "type": "mc_abc",
+      "question": "Welches grundlegende Prinzip liegt der Argumentation von Herrn Ramos gegen eine Harmonisierung der Familienpolitik zugrunde?",
+      "options": {
+        "a": "Die Wahrung der nationalen Souveränität in sozialpolitischen Gestaltungsfragen.",
+        "b": "Die Bewahrung der traditionellen, kulturell geprägten Familienstrukturen.",
+        "c": "Die Notwendigkeit, die Politik an die geografischen Gegebenheiten anzupassen."
+      },
+      "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Falsch. Die Aussage stimmt nicht mit dem Hörtext überein.",
-        "vi": "Sai.",
-        "key_evidence": "Eine Person heißt Julia.",
-        "key_vocabulary": []
+        "de": "Die korrekte Antwort ist (a), da Herr Ramos explizit die 'demokratische Selbstbestimmung der Mitgliedstaaten' als Kern seines Arguments anführt. Dies ist eine Paraphrase für nationale Souveränität. Option (b) ist eine lexikalische Falle; obwohl er 'kulturell geprägt' und 'historische Wurzeln' erwähnt, ist dies nur eine Begründung für das übergeordnete Prinzip der Selbstbestimmung, nicht das Prinzip selbst. Option (c) ist falsch, da er die Relevanz der Geographie explizit verneint ('Es geht nicht um Geographie...').",
+        "vi": "Đáp án đúng là (a), vì ông Ramos nêu rõ 'quyền tự quyết dân chủ của các quốc gia thành viên' là trọng tâm trong lập luận của mình. Đây là cách diễn giải khác của chủ quyền quốc gia. Lựa chọn (b) là một cái bẫy từ vựng; mặc dù ông có đề cập đến 'đặc trưng văn hóa' và 'nguồn gốc lịch sử', đây chỉ là lý do để bảo vệ nguyên tắc bao trùm là quyền tự quyết, chứ không phải là bản thân nguyên tắc đó. Lựa chọn (c) sai, vì ông đã phủ nhận rõ ràng sự liên quan của địa lý ('Vấn đề không phải là địa lý...').",
+        "key_evidence": "Es geht nicht um Geographie, sondern um demokratische Selbstbestimmung der Mitgliedstaaten."
       }
     },
     {
       "id": "Q2",
-      "item": 2,
-      "type": "richtig_falsch",
-      "statement": "Eine Person heißt Professor.",
-      "answer": "richtig",
+      "teil": 3,
+      "abschnitt": 3,
+      "type": "mc_abc",
+      "question": "Wie wird die EU-Vereinbarkeitsrichtlinie von 2019 in der Diskussion insgesamt bewertet?",
+      "options": {
+        "a": "Sie wird als ein richtungsweisender, aber in seiner Reichweite noch unzureichender Ansatz betrachtet.",
+        "b": "Sie wird als ideales Modell gelobt, das den nationalen Spielraum für die Mitgliedstaaten optimal wahrt.",
+        "c": "Sie wird als gescheitert angesehen, da ihre Mindeststandards von den meisten Staaten nicht akzeptiert werden."
+      },
+      "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Richtig. Die Aussage stimmt mit dem Hörtext überein.",
-        "vi": "Đúng.",
-        "key_evidence": "Eine Person heißt Professor.",
-        "key_vocabulary": []
+        "de": "Die korrekte Antwort ist (a). Die Richtlinie wird als 'ein Anfang' (Frau Özdemir) und 'gutes Modell' (Prof. Stein) bezeichnet, was auf einen positiven, richtungsweisenden Charakter hindeutet. Gleichzeitig wird sie als nicht weitreichend genug kritisiert ('der nicht-übertragbare Anteil müsste mindestens verdoppelt werden'). Option (b) ist eine lexikalische Falle, die das positive Wort 'Modell' aufgreift, aber die deutliche Kritik von Frau Özdemir ignoriert, dass die Standards nicht weit genug gehen. Option (c) ist falsch; das Gegenteil ist der Fall, da selbst 'die skeptischsten Mitgliedstaaten' die Standards akzeptieren konnten.",
+        "vi": "Đáp án đúng là (a). Chỉ thị này được coi là 'một sự khởi đầu' (bà Özdemir) và 'một mô hình tốt' (GS. Stein), cho thấy tính chất tích cực, định hướng. Đồng thời, nó bị chỉ trích là chưa đủ sâu rộng ('phần không thể chuyển nhượng phải được tăng ít nhất gấp đôi'). Lựa chọn (b) là một cái bẫy từ vựng, sử dụng từ tích cực 'mô hình' nhưng bỏ qua lời chỉ trích rõ ràng của bà Özdemir rằng các tiêu chuẩn chưa đủ cao. Lựa chọn (c) sai; thực tế ngược lại, vì ngay cả 'các quốc gia thành viên hoài nghi nhất' cũng có thể chấp nhận các tiêu chuẩn này.",
+        "key_evidence": "Nein, sie sind ein Anfang, aber der nicht-übertragbare Anteil müsste mindestens verdoppelt werden."
       }
     },
     {
       "id": "Q3",
-      "item": 3,
-      "type": "richtig_falsch",
-      "statement": "Eine Person heißt Hans.",
-      "answer": "falsch",
+      "teil": 3,
+      "abschnitt": 4,
+      "type": "mc_abc",
+      "question": "Was lässt sich aus der Diskussion über den Zusammenhang zwischen Familienpolitik und Geburtenraten schlussfolgern?",
+      "options": {
+        "a": "Es besteht Uneinigkeit darüber, ob die Familienpolitik der alleinige bestimmende Faktor ist.",
+        "b": "Es wird übereinstimmend festgestellt, dass wirtschaftliche Unsicherheit die Hauptursache ist.",
+        "c": "Die Forschungsergebnisse zur Wirkung von Familienpolitik werden von Herrn Ramos grundsätzlich angezweifelt."
+      },
+      "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Falsch. Die Aussage stimmt nicht mit dem Hörtext überein.",
-        "vi": "Sai.",
-        "key_evidence": "Eine Person heißt Hans.",
-        "key_vocabulary": []
+        "de": "Die korrekte Antwort ist (a). Herr Ramos argumentiert, dass das Phänomen 'nicht allein auf die Familienpolitik zurückzuführen ist', während Frau Özdemir auf Forschung verweist, die einen klaren Zusammenhang zeigt. Dies verdeutlicht die Uneinigkeit über die alleinige Dominanz dieses Faktors. Option (b) ist falsch, da wirtschaftliche Unsicherheit nur als einer von mehreren Faktoren vom Moderator genannt wird, es herrscht keine Übereinstimmung, dass es die Hauptursache ist. Option (c) ist zu stark formuliert; Herr Ramos zweifelt nicht die Forschung an sich an, sondern relativiert die alleinige Aussagekraft der Familienpolitik, indem er das Phänomen als 'komplex' bezeichnet.",
+        "vi": "Đáp án đúng là (a). Ông Ramos lập luận rằng hiện tượng này 'không chỉ do chính sách gia đình', trong khi bà Özdemir trích dẫn nghiên cứu cho thấy một mối liên hệ rõ ràng. Điều này cho thấy sự bất đồng về việc liệu đây có phải là yếu tố quyết định duy nhất hay không. Lựa chọn (b) sai, vì sự bất ổn kinh tế chỉ được người điều hành đề cập đến như một trong nhiều yếu tố, không có sự đồng thuận rằng đó là nguyên nhân chính. Lựa chọn (c) được diễn đạt quá mạnh; ông Ramos không nghi ngờ bản thân nghiên cứu, mà chỉ làm giảm đi tính quyết định duy nhất của chính sách gia đình bằng cách gọi hiện tượng này là 'phức tạp'.",
+        "key_evidence": "Das ist ein komplexes Phänomen, das nicht allein auf die Familienpolitik zurückzuführen ist."
       }
     }
   ],

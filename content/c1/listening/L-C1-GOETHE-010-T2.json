@@ -17,23 +17,22 @@
     {
       "id": "Q1",
       "gespraech": 1,
-      "type": "mc_abc",
-      "question": "Wie heißt eine Person im Gespräch 1?",
-      "options": {
-        "a": "Katja",
-        "b": "Michael",
-        "c": "Christine"
-      },
-      "answer": "c",
+      "type": "richtig_falsch",
+      "statement": "Frau Kaufmann vertritt die Auffassung, dass das Konzept der vollkommen rationalen Entscheidung eine adäquate Beschreibung menschlichen Verhaltens darstellt.",
+      "answer": "falsch",
       "points": 1,
       "explanation": {
-        "de": "Man hört: \"Christine\".",
-        "vi": "Một người trong đoạn 1 tên là gì?",
-        "key_evidence": "Christine",
+        "de": "Die Aussage ist falsch. Die Expertin bezeichnet die vollkommen rationale Entscheidung explizit als ein 'theoretisches Ideal', dem echte Menschen 'systematisch nicht entsprechen'. Sie ist also keine adäquate Beschreibung, sondern ein theoretisches Konstrukt.",
+        "vi": "Phát biểu này sai. Chuyên gia mô tả quyết định hoàn toàn lý trí một cách rõ ràng là một 'lý tưởng lý thuyết' mà con người thực tế 'không hề tương ứng một cách có hệ thống'. Do đó, nó không phải là một mô tả thỏa đáng, mà là một cấu trúc lý thuyết.",
+        "key_evidence": "Die vollkommen rationale Entscheidung ist ein theoretisches Ideal, dem echte Menschen systematisch nicht entsprechen.",
         "key_vocabulary": [
           {
-            "word": "heißen",
-            "meaning": "to be called"
+            "word": "Auffassung vertreten",
+            "translation": "to hold the view / đưa ra quan điểm"
+          },
+          {
+            "word": "adäquat",
+            "translation": "adequate / thỏa đáng, phù hợp"
           }
         ]
       }
@@ -41,23 +40,22 @@
     {
       "id": "Q2",
       "gespraech": 1,
-      "type": "mc_abc",
-      "question": "Wie heißt eine Person (Gespräch 1)?",
-      "options": {
-        "a": "Chile",
-        "b": "Konstanz",
-        "c": "Pakistan"
-      },
-      "answer": "c",
+      "type": "richtig_falsch",
+      "statement": "Die Expertin postuliert, dass kognitive Verzerrungen in ihrer fundamentalen Existenz kulturübergreifend sind, ihre Manifestation jedoch kulturell geprägt ist.",
+      "answer": "richtig",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man den Namen \"Professorin\".",
-        "vi": "Một người trong đoạn 1 tên là gì?",
-        "key_evidence": "Professorin",
+        "de": "Die Aussage ist richtig. Die Expertin bestätigt, dass viele Verzerrungen 'universal' und 'evolutionär tief verankert' sind (fundamentale Existenz). Der Moderator ergänzt, dass jedoch die 'Ausprägung variiert' (Manifestation ist kulturell geprägt), was die Expertin durch Beispiele untermauert.",
+        "vi": "Phát biểu này đúng. Chuyên gia xác nhận rằng nhiều thiên kiến là 'phổ quát' và 'bám rễ sâu trong quá trình tiến hóa' (sự tồn tại cơ bản). Người điều hành bổ sung rằng tuy nhiên 'mức độ biểu hiện thì khác nhau' (sự biểu hiện bị ảnh hưởng bởi văn hóa), điều này được chuyên gia củng cố bằng các ví dụ.",
+        "key_evidence": "Viele Verzerrungen sind tatsächlich universal, weil sie evolutionär tief verankert sind im menschlichen Gehirn. [...] Aber die Ausprägung variiert: In kollektivistischen Kulturen ist der Gruppendenk-Bias stärker als in individualistischen.",
         "key_vocabulary": [
           {
-            "word": "heißen",
-            "meaning": "to be called"
+            "word": "postulieren",
+            "translation": "to postulate / đưa ra định đề, giả định"
+          },
+          {
+            "word": "die Manifestation",
+            "translation": "the manifestation / sự biểu hiện"
           }
         ]
       }
@@ -65,23 +63,22 @@
     {
       "id": "Q3",
       "gespraech": 1,
-      "type": "mc_abc",
-      "question": "Was macht die Person beruflich (Gespräch 1)?",
-      "options": {
-        "a": "Sekretärin",
-        "b": "Student",
-        "c": "Individuen"
-      },
-      "answer": "c",
+      "type": "richtig_falsch",
+      "statement": "Die Institutionalisierung von Konsens in Organisationen führt laut der Diskussion zu qualitativ hochwertigeren Entscheidungen.",
+      "answer": "falsch",
       "points": 1,
       "explanation": {
-        "de": "Man hört: \"Individuen\".",
-        "vi": "Người đó làm nghề gì (đoạn 1)?",
-        "key_evidence": "Individuen",
+        "de": "Die Aussage ist falsch. Das Gespräch betont das Gegenteil: Nicht Konsens, sondern das 'bewusste Einholen von Gegenmeinungen' und die Institutionalisierung von 'Widerspruch' (z.B. durch einen Advocatus Diaboli) sind entscheidend, um Gruppendenken zu verhindern und die Entscheidungsqualität zu verbessern.",
+        "vi": "Phát biểu này sai. Cuộc thảo luận nhấn mạnh điều ngược lại: không phải sự đồng thuận, mà là 'việc chủ động tìm kiếm các ý kiến trái chiều' và việc thể chế hóa 'sự phản biện' (ví dụ qua vai trò của người biện hộ cho quỷ dữ) mới là yếu tố quyết định để ngăn chặn tư duy nhóm và cải thiện chất lượng quyết định.",
+        "key_evidence": "Das institutionalisiert den Widerspruch und verhindert Gruppendenken, das zu katastrophalen Fehlentscheidungen führen kann.",
         "key_vocabulary": [
           {
-            "word": "Individuen",
-            "meaning": "Individuen"
+            "word": "die Institutionalisierung",
+            "translation": "the institutionalization / sự thể chế hóa"
+          },
+          {
+            "word": "der Konsens",
+            "translation": "the consensus / sự đồng thuận"
           }
         ]
       }
@@ -89,20 +86,24 @@
     {
       "id": "Q4",
       "gespraech": 1,
-      "type": "mc_abc",
-      "question": "Welches Thema wird besprochen (Gespräch 1)?",
-      "options": {
-        "a": "Reisen und Verkehr",
-        "b": "Medien und Kommunikation",
-        "c": "Arbeit und Beruf"
-      },
-      "answer": "c",
+      "type": "richtig_falsch",
+      "statement": "Die ethische Legitimität von Nudging-Maßnahmen ist an die Bedingung geknüpft, dass die Betroffenen leicht widersprechen können.",
+      "answer": "richtig",
       "points": 1,
       "explanation": {
-        "de": "Man hört: \"Arbeit und Beruf\".",
-        "vi": "Đoạn hội thoại 1 nói về chủ đề gì?",
-        "key_evidence": "Arbeit und Beruf",
-        "key_vocabulary": []
+        "de": "Die Aussage ist richtig. Der Moderator nennt Transparenz als entscheidende ethische Grenze und führt aus, dass Menschen nicht nur wissen müssen, dass sie gelenkt werden, sondern auch 'leicht widersprechen können' müssen. Dies ist eine explizit genannte Bedingung.",
+        "vi": "Phát biểu này đúng. Người điều hành nêu rõ tính minh bạch là một giới hạn đạo đức quyết định và giải thích rằng mọi người không chỉ cần biết rằng họ đang bị định hướng, mà còn phải có thể 'dễ dàng phản đối'. Đây là một điều kiện được nêu ra một cách rõ ràng.",
+        "key_evidence": "Ja, Transparenz ist entscheidend: Menschen müssen wissen, dass und wie sie gelenkt werden, und leicht widersprechen können.",
+        "key_vocabulary": [
+          {
+            "word": "die Legitimität",
+            "translation": "the legitimacy / tính hợp pháp, tính chính đáng"
+          },
+          {
+            "word": "an eine Bedingung geknüpft sein",
+            "translation": "to be tied to a condition / bị ràng buộc bởi một điều kiện"
+          }
+        ]
       }
     }
   ],

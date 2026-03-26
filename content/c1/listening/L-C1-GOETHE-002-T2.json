@@ -17,97 +17,57 @@
     {
       "id": "Q1",
       "gespraech": 1,
-      "type": "mc_abc",
-      "question": "Wie heißt eine Person im Gespräch 1?",
-      "options": {
-        "a": "Markus",
-        "b": "Anna",
-        "c": "Eva"
-      },
-      "answer": "c",
+      "type": "richtig_falsch",
+      "statement": "Frau Kirchner erachtet die Mietpreisbremse als ein fundamental unzureichendes Instrument zur Bewältigung der Wohnungskrise.",
+      "answer": "richtig",
       "points": 1,
       "explanation": {
-        "de": "Man hört: \"Eva\".",
-        "vi": "Một người trong đoạn 1 tên là gì?",
-        "key_evidence": "Eva",
-        "key_vocabulary": [
-          {
-            "word": "heißen",
-            "meaning": "to be called"
-          }
-        ]
+        "de": "Die Aussage ist richtig. Die Expertin bezeichnet die Mietpreisbremse als eine Maßnahme, die lediglich Symptome lindert, aber das Kernproblem – das fehlende Angebot – nicht löst. Dies impliziert, dass sie das Instrument für fundamental unzureichend hält.",
+        "vi": "Tuyên bố này đúng. Chuyên gia mô tả biện pháp hãm giá thuê nhà là một biện pháp chỉ làm giảm triệu chứng chứ không giải quyết được vấn đề cốt lõi – sự thiếu hụt nguồn cung. Điều này ngụ ý rằng bà coi công cụ này về cơ bản là không đủ.",
+        "key_evidence": "Die Mietpreisbremse lindert Symptome, löst aber nicht das Grundproblem des fehlenden Angebots auf dem Wohnungsmarkt.",
+        "key_vocabulary": []
       }
     },
     {
       "id": "Q2",
       "gespraech": 1,
-      "type": "mc_abc",
-      "question": "Wie heißt eine Person (Gespräch 1)?",
-      "options": {
-        "a": "Türkei",
-        "b": "Bonn",
-        "c": "Bangkok"
-      },
-      "answer": "b",
+      "type": "richtig_falsch",
+      "statement": "Laut Frau Kirchner ist der gesellschaftliche Trend zu kleineren Haushalten die alleinige Hauptursache für den gestiegenen Wohnraumbedarf.",
+      "answer": "falsch",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man den Namen \"Professorin\".",
-        "vi": "Một người trong đoạn 1 tên là gì?",
-        "key_evidence": "Professorin",
-        "key_vocabulary": [
-          {
-            "word": "heißen",
-            "meaning": "to be called"
-          }
-        ]
+        "de": "Die Aussage ist falsch. Die Expertin nennt den Trend zu kleineren Haushalten als eine von drei wesentlichen Ursachen, neben dem Angebotsdefizit und der Bodenspekulation. Sie wird also nicht als die 'alleinige Hauptursache' dargestellt.",
+        "vi": "Tuyên bố này sai. Chuyên gia đề cập đến xu hướng các hộ gia đình nhỏ hơn là một trong ba nguyên nhân chính, bên cạnh sự thiếu hụt nguồn cung và đầu cơ đất đai. Do đó, nó không được trình bày là 'nguyên nhân chính duy nhất'.",
+        "key_evidence": "Drittens: gesellschaftliche Veränderungen wie der Trend zu kleineren Haushalten, der den Pro-Kopf-Flächenverbrauch steigert.",
+        "key_vocabulary": []
       }
     },
     {
       "id": "Q3",
       "gespraech": 1,
-      "type": "mc_abc",
-      "question": "Was macht die Person beruflich (Gespräch 1)?",
-      "options": {
-        "a": "Koch",
-        "b": "Arzt",
-        "c": "Instrument"
-      },
-      "answer": "c",
+      "type": "richtig_falsch",
+      "statement": "Die Expertin konstatiert, dass die gegenwärtigen Anstrengungen zur energetischen Sanierung des Gebäudebestands dem postulierten Bedarf entsprechen.",
+      "answer": "falsch",
       "points": 1,
       "explanation": {
-        "de": "Man hört: \"Instrument\".",
-        "vi": "Người đó làm nghề gì (đoạn 1)?",
-        "key_evidence": "Instrument",
-        "key_vocabulary": [
-          {
-            "word": "Instrument",
-            "meaning": "Instrument"
-          }
-        ]
+        "de": "Die Aussage ist falsch. Die Expertin stellt explizit fest, dass die aktuelle Sanierungsrate bei nur einem Prozent liegt, während mindestens drei Prozent erforderlich wären. Es besteht also eine erhebliche Diskrepanz zwischen den Anstrengungen und dem Bedarf.",
+        "vi": "Tuyên bố này sai. Chuyên gia nêu rõ rằng tỷ lệ cải tạo hiện tại chỉ là một phần trăm, trong khi cần ít nhất ba phần trăm. Do đó, có một sự khác biệt đáng kể giữa nỗ lực và nhu cầu.",
+        "key_evidence": "Die Sanierungsrate liegt in Deutschland bei etwa einem Prozent pro Jahr, nötig wären mindestens drei Prozent.",
+        "key_vocabulary": []
       }
     },
     {
       "id": "Q4",
       "gespraech": 1,
-      "type": "mc_abc",
-      "question": "Woher kommt die Person (Gespräch 1)?",
-      "options": {
-        "a": "Bochum",
-        "b": "Berlin",
-        "c": "Deutschland"
-      },
-      "answer": "c",
+      "type": "richtig_falsch",
+      "statement": "Frau Kirchner beurteilt das Konzept der Fünfzehn-Minuten-Stadt als eine von mehreren vielversprechenden, aber noch nicht gänzlich erprobten urbanistischen Visionen.",
+      "answer": "falsch",
       "points": 1,
       "explanation": {
-        "de": "Die Person kommt aus Deutschland.",
-        "vi": "Người đó đến từ đâu (đoạn 1)?",
-        "key_evidence": "Deutschland",
-        "key_vocabulary": [
-          {
-            "word": "kommen aus",
-            "meaning": "to come from"
-          }
-        ]
+        "de": "Die Aussage ist falsch. Die Expertin bewertet das Konzept nicht als eine von mehreren Optionen, sondern als 'das überzeugendste urbanistische Konzept der letzten Jahrzehnte' und empfiehlt dessen Umsetzung in jeder deutschen Stadt. Ihre Haltung ist also eindeutig und nicht zögerlich.",
+        "vi": "Tuyên bố này sai. Chuyên gia không đánh giá khái niệm này là một trong nhiều lựa chọn, mà là 'khái niệm đô thị thuyết phục nhất trong những thập kỷ qua' và khuyến nghị thực hiện nó ở mọi thành phố của Đức. Do đó, thái độ của bà là rõ ràng và không do dự.",
+        "key_evidence": "Es ist das überzeugendste urbanistische Konzept der letzten Jahrzehnte und sollte in jeder deutschen Stadt umgesetzt werden.",
+        "key_vocabulary": []
       }
     }
   ],

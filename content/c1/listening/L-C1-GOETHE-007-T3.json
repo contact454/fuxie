@@ -16,57 +16,81 @@
   "questions": [
     {
       "id": "Q1",
-      "item": 1,
-      "type": "richtig_falsch",
-      "statement": "Eine Person heißt Markus.",
-      "answer": "falsch",
+      "gespraech": 1,
+      "abschnitt": 1,
+      "type": "mc_abc",
+      "question": "Was impliziert Frau al-Hashimi bezüglich der Wohnraumsituation für Zugewanderte?",
+      "options": {
+        "a": "Die räumliche Konzentration von Migranten behindert deren gesellschaftliche und sprachliche Eingliederung.",
+        "b": "Die Konzentration in bestimmten Stadtvierteln ist eine bewusste Entscheidung der Zugewanderten, um ihre Kultur zu pflegen.",
+        "c": "Der Mangel an Wohnungen stellt primär eine finanzielle Belastung für die Kommunen dar."
+      },
+      "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Falsch. Die Aussage stimmt nicht mit dem Hörtext überein.",
-        "vi": "Sai.",
-        "key_evidence": "Eine Person heißt Markus.",
+        "de": "KORREKT: Frau al-Hashimi stellt klar, dass die räumliche Trennung (Segregation) die soziale Vermischung und das Erlernen der Sprache erschwert. Option (a) paraphrasiert diese Konsequenz. FALSCH: Option (b) ist eine unbegründete Annahme; der Text sagt, sie finden anderswo keine Wohnung. Option (c) ist eine lexikalische Falle; die finanzielle Entlastung der Kommunen wird in einem völlig anderen Kontext (Integrationsgesetz) erwähnt, nicht in Bezug auf die Wohnungssituation.",
+        "vi": "ĐÚNG: Bà al-Hashimi nói rõ rằng sự tách biệt về không gian (phân biệt) gây khó khăn cho sự hòa nhập xã hội và việc học ngôn ngữ. Lựa chọn (a) diễn giải hệ quả này. SAI: Lựa chọn (b) là một giả định không có cơ sở; văn bản nói rằng họ không tìm được nhà ở nơi khác. Lựa chọn (c) là một cái bẫy từ vựng; việc giảm gánh nặng tài chính cho các đô thị được đề cập trong một bối cảnh hoàn toàn khác (luật hội nhập), không liên quan đến tình hình nhà ở.",
+        "key_evidence": "Diese räumliche Segregation verhindert soziale Durchmischung und erschwert die sprachliche Integration erheblich.",
         "key_vocabulary": []
       }
     },
     {
       "id": "Q2",
-      "item": 2,
-      "type": "richtig_falsch",
-      "statement": "Eine Person heißt Nguyen.",
-      "answer": "richtig",
+      "gespraech": 1,
+      "abschnitt": 2,
+      "type": "mc_abc",
+      "question": "Welches Haupthindernis für die Arbeitsmarktintegration von Geflüchteten identifiziert Herr Müller?",
+      "options": {
+        "a": "Die mangelnde Motivation und die fehlenden Perspektiven der eingestellten Personen.",
+        "b": "Die langwierigen und komplexen administrativen Verfahren der Behörden.",
+        "c": "Die unzureichende fachliche Qualifikation der Bewerber aus dem Ausland."
+      },
+      "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Richtig. Die Aussage stimmt mit dem Hörtext überein.",
-        "vi": "Đúng.",
-        "key_evidence": "Eine Person heißt Nguyen.",
+        "de": "KORREKT: Herr Müller bezeichnet die Bürokratie, also langsame administrative Prozesse wie Arbeitserlaubnisse und Anerkennungsverfahren, als das 'Hauptproblem'. Option (b) fasst dies korrekt zusammen. FALSCH: Option (a) ist eine lexikalische Falle und das genaue Gegenteil seiner Aussage; er lobt seine Mitarbeiter als 'hochmotiviert' und dass sie 'wertvolle Perspektiven' einbringen. Option (c) wird nicht als Hauptproblem genannt; das Problem ist die Anerkennung der Qualifikationen, nicht deren Fehlen.",
+        "vi": "ĐÚNG: Ông Müller gọi thủ tục hành chính quan liêu, tức là các quy trình hành chính chậm chạp như giấy phép lao động và thủ tục công nhận bằng cấp, là 'vấn đề chính'. Lựa chọn (b) tóm tắt điều này một cách chính xác. SAI: Lựa chọn (a) là một cái bẫy từ vựng và hoàn toàn trái ngược với phát biểu của ông; ông khen ngợi nhân viên của mình là 'có động lực cao' và mang lại 'những góc nhìn quý giá'. Lựa chọn (c) không được đề cập là vấn đề chính; vấn đề là việc công nhận bằng cấp, chứ không phải là thiếu bằng cấp.",
+        "key_evidence": "Das Hauptproblem ist die Bürokratie: Arbeitserlaubnisse, Aufenthaltsstatus und Anerkennungsverfahren kosten enorm viel Zeit.",
         "key_vocabulary": []
       }
     },
     {
       "id": "Q3",
-      "item": 3,
-      "type": "richtig_falsch",
-      "statement": "Eine Person heißt Hans.",
-      "answer": "falsch",
+      "gespraech": 1,
+      "abschnitt": 3,
+      "type": "mc_abc",
+      "question": "Wie lässt sich die in der Diskussion geäußerte Kritik an den Integrationskursen zusammenfassen?",
+      "options": {
+        "a": "Die Kurse weisen sowohl quantitative als auch qualitative Defizite auf.",
+        "b": "Die langen Wartezeiten sind die einzige signifikante Schwachstelle des Kurssystems.",
+        "c": "Es mangelt ausschließlich an qualifizierten Lehrkräften, um die Kurse durchzuführen."
+      },
+      "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Falsch. Die Aussage stimmt nicht mit dem Hörtext überein.",
-        "vi": "Sai.",
-        "key_evidence": "Eine Person heißt Hans.",
+        "de": "KORREKT: Die Kritik ist zweigeteilt: Es fehlen 'massenweise Kursplätze und qualifizierte Lehrkräfte' (quantitatives Problem) und die Formate sind nicht auf die 'unterschiedlichen Bildungshintergründe' zugeschnitten (qualitatives Problem). Option (a) fasst beide Aspekte korrekt zusammen. FALSCH: Die Optionen (b) und (c) sind lexikalische Fallen, die jeweils nur einen Teilaspekt der Kritik isolieren und fälschlicherweise als das einzige Problem darstellen.",
+        "vi": "ĐÚNG: Lời chỉ trích có hai phần: thiếu 'hàng loạt suất học và giáo viên có trình độ' (vấn đề về số lượng) và các hình thức khóa học không được điều chỉnh cho phù hợp với 'nền tảng giáo dục khác nhau' của người tham gia (vấn đề về chất lượng). Lựa chọn (a) tóm tắt chính xác cả hai khía cạnh. SAI: Lựa chọn (b) và (c) là những cái bẫy từ vựng, mỗi lựa chọn chỉ tách riêng một phần của lời chỉ trích và trình bày sai lệch rằng đó là vấn đề duy nhất.",
+        "key_evidence": "Es fehlen massenweise Kursplätze und qualifizierte Lehrkräfte. [...] Und die Kursformate sind oft nicht auf die unterschiedlichen Bildungshintergründe der Teilnehmenden zugeschnitten.",
         "key_vocabulary": []
       }
     },
     {
       "id": "Q4",
-      "item": 4,
-      "type": "richtig_falsch",
-      "statement": "Eine Person heißt Sabine.",
-      "answer": "falsch",
+      "gespraech": 1,
+      "abschnitt": 4,
+      "type": "mc_abc",
+      "question": "Worin besteht nach dem abschließenden Konsens der Diskussionsteilnehmer die Voraussetzung für eine gelingende Integration?",
+      "options": {
+        "a": "Die primäre Verantwortung liegt bei den Zuwanderern, sich an die Aufnahmegesellschaft anzupassen.",
+        "b": "Die Politik muss vor allem finanzielle Investitionen tätigen, um Sozialkosten zu senken.",
+        "c": "Sie erfordert ein Zusammenspiel aus gegenseitiger Annäherung, gesellschaftlicher Offenheit und adäquaten politischen Rahmenbedingungen."
+      },
+      "answer": "c",
       "points": 1,
       "explanation": {
-        "de": "Falsch. Die Aussage stimmt nicht mit dem Hörtext überein.",
-        "vi": "Sai.",
-        "key_evidence": "Eine Person heißt Sabine.",
+        "de": "KORREKT: Der Konsens am Ende ist, dass Integration nur gelingt, wenn 'beide Seiten aufeinander zugehen' (gegenseitige Annäherung), die 'Aufnahmegesellschaft sich ebenfalls verändert' (gesellschaftliche Offenheit) und die 'Politik die notwendigen strukturellen Rahmenbedingungen schafft'. Option (c) fasst diese drei Säulen umfassend zusammen. FALSCH: Option (a) widerspricht der Idee der Gegenseitigkeit. Option (b) ist eine lexikalische Falle, die den Aspekt der 'Investition' aufgreift, aber die ebenso wichtigen sozialen und politischen Komponenten ignoriert.",
+        "vi": "ĐÚNG: Sự đồng thuận cuối cùng là hội nhập chỉ thành công khi 'cả hai bên cùng tiến đến với nhau' (sự xích lại gần nhau), 'xã hội tiếp nhận cũng phải thay đổi' (sự cởi mở của xã hội) và 'chính trị tạo ra các điều kiện khung cấu trúc cần thiết'. Lựa chọn (c) tóm tắt toàn diện ba trụ cột này. SAI: Lựa chọn (a) mâu thuẫn với ý tưởng về sự tương hỗ. Lựa chọn (b) là một cái bẫy từ vựng, đề cập đến khía cạnh 'đầu tư' nhưng bỏ qua các thành phần xã hội và chính trị cũng quan trọng không kém.",
+        "key_evidence": "Integration gelingt nur, wenn beide Seiten aufeinander zugehen und voneinander lernen wollen. [...] Und wenn die Politik die notwendigen strukturellen Rahmenbedingungen schafft...",
         "key_vocabulary": []
       }
     }

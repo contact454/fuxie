@@ -16,57 +16,77 @@
   "questions": [
     {
       "id": "Q1",
-      "item": 1,
-      "type": "richtig_falsch",
-      "statement": "Eine Person heißt Klaus.",
-      "answer": "falsch",
+      "gespraech": 1,
+      "type": "mc_abc",
+      "question": "Wie beurteilt der Immobilienökonom, Herr Dr. Steinbach, die Wohnungssituation in Deutschland?",
+      "options": {
+        "a": "Er sieht eine flächendeckende Knappheit an Wohnraum in allen deutschen Ballungsräumen.",
+        "b": "Er konstatiert ein erhebliches geographisches Ungleichgewicht auf dem Wohnungsmarkt.",
+        "c": "Er führt die Krise primär auf die überzogenen Wohnflächenansprüche der Bürger zurück."
+      },
+      "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Falsch. Die Aussage stimmt nicht mit dem Hörtext überein.",
-        "vi": "Sai.",
-        "key_evidence": "Eine Person heißt Klaus.",
+        "de": "Die korrekte Antwort ist (b), da der Ökonom die Lage als 'regional sehr unterschiedlich' beschreibt, mit explodierenden Mieten in Metropolen und Leerstand in anderen Gebieten. Dies wird vom Moderator als 'räumliche Unwucht' zusammengefasst. Option (a) ist eine unzulässige Verallgemeinerung. Option (c) ist eine lexikalische Falle, die eine zu Beginn geäußerte Meinung eines anderen Sprechers aufgreift.",
+        "vi": "Đáp án đúng là (b), vì nhà kinh tế học mô tả tình hình là 'rất khác nhau theo từng khu vực', với giá thuê tăng vọt ở các đô thị lớn và nhà trống ở các khu vực khác. Người điều hành tóm tắt điều này là 'sự mất cân bằng về không gian'. Lựa chọn (a) là một sự khái quát hóa không được phép. Lựa chọn (c) là một cái bẫy từ vựng, lấy ý kiến của một người nói khác đã được nêu ở đầu cuộc thảo luận.",
+        "key_evidence": "Der Wohnungsmarkt ist in den Ballungsräumen massiv angespannt, aber regional sehr unterschiedlich. [...] Während in München und Berlin die Mieten explodieren, stehen in vielen ostdeutschen Städten Wohnungen leer.",
         "key_vocabulary": []
       }
     },
     {
       "id": "Q2",
-      "item": 2,
-      "type": "richtig_falsch",
-      "statement": "Eine Person heißt Lenz.",
-      "answer": "richtig",
+      "gespraech": 1,
+      "type": "mc_abc",
+      "question": "Wie charakterisiert die Architektin, Frau Bogdan, den deutschen Bausektor?",
+      "options": {
+        "a": "Als einen Sektor, der durch serielles Bauen die Kosten bereits signifikant gesenkt hat.",
+        "b": "Als einen Bereich, der sich durch einen Mangel an Fortschrittlichkeit und Effizienz auszeichnet.",
+        "c": "Als einen Markt, der sich auf die Planung besonders innovativer Wohnprojekte konzentriert."
+      },
+      "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Richtig. Die Aussage stimmt mit dem Hörtext überein.",
-        "vi": "Đúng.",
-        "key_evidence": "Eine Person heißt Lenz.",
+        "de": "Die korrekte Antwort ist (b), da die Architektin den Sektor als 'Innovationslaggard' (Innovationsnachzügler) bezeichnet und kritisiert, dass zu teuer, langsam und wenig innovativ gebaut wird. Option (a) ist eine lexikalische Falle; serielles Bauen wird vom Moderator als Potenzial erwähnt, nicht als etablierter Standard. Option (c) verwechselt die persönliche Arbeit der Architektin mit einer allgemeinen Beschreibung des gesamten Sektors.",
+        "vi": "Đáp án đúng là (b), vì nữ kiến trúc sư mô tả ngành này là một 'kẻ tụt hậu về đổi mới' (Innovationslaggard) và chỉ trích rằng việc xây dựng quá đắt đỏ, chậm chạp và thiếu sáng tạo. Lựa chọn (a) là một cái bẫy từ vựng; xây dựng hàng loạt được người điều hành đề cập như một tiềm năng, không phải là một tiêu chuẩn đã được thiết lập. Lựa chọn (c) nhầm lẫn công việc cá nhân của nữ kiến trúc sư với mô tả chung về toàn bộ ngành.",
+        "key_evidence": "Wir bauen zu teuer, zu langsam und zu wenig innovativ. Der deutsche Bausektor ist ein Innovationslaggard.",
         "key_vocabulary": []
       }
     },
     {
       "id": "Q3",
-      "item": 3,
-      "type": "richtig_falsch",
-      "statement": "Eine Person heißt Nina.",
-      "answer": "falsch",
+      "gespraech": 1,
+      "type": "mc_abc",
+      "question": "Welche ambivalente Wirkung von Mietpreisregulierungen stellt Herr Dr. Steinbach dar?",
+      "options": {
+        "a": "Sie sind gänzlich ineffektiv, da Vermieter sie durch Modernisierungen gezielt umgehen.",
+        "b": "Sie bieten eine temporäre Entlastung für Mieter, verschärfen aber langfristig den Wohnungsmangel.",
+        "c": "Sie nützen ausschließlich Bestandsmietern, während potenzielle Neumieter keine Wohnungen mehr finden."
+      },
+      "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Falsch. Die Aussage stimmt nicht mit dem Hörtext überein.",
-        "vi": "Sai.",
-        "key_evidence": "Eine Person heißt Nina.",
+        "de": "Die korrekte Antwort ist (b), da der Ökonom eine differenzierte Sichtweise vertritt: Kurzfristig lindern die Maßnahmen den Druck, aber langfristig reduzieren sie die Investitionsbereitschaft, was den Mangel verschärft. Option (a) ist eine lexikalische Falle, die die spezifische Erfahrung der Mieterin wiedergibt, nicht die allgemeine ökonomische Analyse. Option (c) ist eine Aussage des Moderators, die die Konsequenz zusammenfasst, aber die Antwort (b) beschreibt die zugrundeliegende ökonomische Dynamik aus der Sicht des Experten genauer.",
+        "vi": "Đáp án đúng là (b), vì nhà kinh tế học đưa ra một quan điểm khác biệt: trong ngắn hạn, các biện pháp này giảm bớt áp lực, nhưng về lâu dài, chúng làm giảm sự sẵn sàng đầu tư, điều này làm trầm trọng thêm tình trạng thiếu hụt. Lựa chọn (a) là một cái bẫy từ vựng, phản ánh kinh nghiệm cụ thể của người thuê nhà, không phải là phân tích kinh tế tổng thể. Lựa chọn (c) là một phát biểu của người điều hành tóm tắt hậu quả, nhưng đáp án (b) mô tả chính xác hơn động lực kinh tế cơ bản từ góc độ của chuyên gia.",
+        "key_evidence": "Kurzfristig lindern sie den Druck, langfristig reduzieren sie aber die Investitionsbereitschaft und verschärfen den Mangel.",
         "key_vocabulary": []
       }
     },
     {
       "id": "Q4",
-      "item": 4,
-      "type": "richtig_falsch",
-      "statement": "Eine Person heißt Julia.",
-      "answer": "falsch",
+      "gespraech": 1,
+      "type": "mc_abc",
+      "question": "Was ist die fundamentale politische Forderung der Mieterin, Frau Lenz?",
+      "options": {
+        "a": "Eine Beschleunigung der Genehmigungsverfahren für Neubauten.",
+        "b": "Ein Paradigmenwechsel, bei dem Wohnen nicht mehr primär als Ware, sondern als Grundrecht verstanden wird.",
+        "c": "Eine stärkere staatliche Förderung für klimafreundliche Bauweisen wie den Holzbau."
+      },
+      "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Falsch. Die Aussage stimmt nicht mit dem Hörtext überein.",
-        "vi": "Sai.",
-        "key_evidence": "Eine Person heißt Julia.",
+        "de": "Die korrekte Antwort ist (b), da sie fordert, dass Wohnen 'wieder als Grundrecht behandelt wird und nicht nur als Investitionsobjekt'. Dies stellt einen fundamentalen Wandel in der Perspektive dar. Die Optionen (a) und (c) sind lexikalische Fallen, die Forderungen bzw. Themen der anderen Experten (Ökonom und Architektin) aufgreifen und fälschlicherweise der Mieterin zuordnen.",
+        "vi": "Đáp án đúng là (b), vì cô ấy yêu cầu nhà ở 'được đối xử trở lại như một quyền cơ bản và không chỉ là một đối tượng đầu tư'. Điều này thể hiện một sự thay đổi cơ bản trong quan điểm. Các lựa chọn (a) và (c) là những cái bẫy từ vựng, lấy các yêu cầu hoặc chủ đề của các chuyên gia khác (nhà kinh tế học và kiến trúc sư) và gán sai cho người thuê nhà.",
+        "key_evidence": "Dass Wohnen wieder als Grundrecht behandelt wird und nicht nur als Investitionsobjekt für Kapitalanleger.",
         "key_vocabulary": []
       }
     }

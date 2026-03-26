@@ -17,92 +17,69 @@
     {
       "id": "Q1",
       "gespraech": 1,
-      "type": "mc_abc",
-      "question": "Wie heißt eine Person im Gespräch 1?",
-      "options": {
-        "a": "Wolfgang",
-        "b": "Sabine",
-        "c": "Katja"
-      },
-      "answer": "b",
+      "type": "richtig_falsch",
+      "statement": "Professorin Hartwig betrachtet die etablierten Recyclingpraktiken in Deutschland als adäquate Grundlage für eine zirkuläre Ökonomie.",
+      "answer": "falsch",
       "points": 1,
       "explanation": {
-        "de": "Man hört: \"Sabine\".",
-        "vi": "Một người trong đoạn 1 tên là gì?",
-        "key_evidence": "Sabine",
+        "de": "Die Aussage ist falsch. Professorin Hartwig stellt klar, dass die Kreislaufwirtschaft weit über das Recycling hinausgeht, auch wenn Deutschland in diesem Bereich führend ist. Sie impliziert, dass die aktuellen Praktiken allein nicht ausreichen.",
+        "vi": "Phát biểu này sai. Giáo sư Hartwig làm rõ rằng kinh tế tuần hoàn vượt xa việc tái chế, mặc dù Đức đang dẫn đầu trong lĩnh vực này. Bà ngụ ý rằng các phương pháp hiện tại là không đủ.",
+        "key_evidence": "Deutschland ist Europameister im Recycling, aber Kreislaufwirtschaft ist viel mehr als nur Mülltrennung und Wiederverwertung.",
         "key_vocabulary": [
-          {
-            "word": "heißen",
-            "meaning": "to be called"
-          }
+          "etablierte Recyclingpraktiken = established recycling practices",
+          "adäquate Grundlage = adequate basis"
         ]
       }
     },
     {
       "id": "Q2",
       "gespraech": 1,
-      "type": "mc_abc",
-      "question": "Wie heißt eine Person (Gespräch 1)?",
-      "options": {
-        "a": "Trier",
-        "b": "Seoul",
-        "c": "Serbien"
-      },
-      "answer": "c",
+      "type": "richtig_falsch",
+      "statement": "Die Implementierung zirkulärer Geschäftsmodelle erweist sich für Unternehmen von Beginn an als ökonomisch vorteilhaft.",
+      "answer": "falsch",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man den Namen \"Professorin\".",
-        "vi": "Một người trong đoạn 1 tên là gì?",
-        "key_evidence": "Professorin",
+        "de": "Die Aussage ist falsch. Die Expertin betont, dass die Umstellungskosten zunächst hoch sind und sich die Profitabilität erst langfristig einstellt. Der Ausdruck 'von Beginn an' widerspricht dieser Aussage direkt.",
+        "vi": "Phát biểu này sai. Chuyên gia nhấn mạnh rằng chi phí chuyển đổi ban đầu rất cao và lợi nhuận chỉ đến trong dài hạn. Cụm từ 'ngay từ đầu' trực tiếp mâu thuẫn với phát biểu này.",
+        "key_evidence": "Kurzfristig sind die Umstellungskosten hoch, langfristig ist Kreislaufwirtschaft deutlich profitabler als lineare Wirtschaft.",
         "key_vocabulary": [
-          {
-            "word": "heißen",
-            "meaning": "to be called"
-          }
+          "von Beginn an = from the beginning",
+          "ökonomisch vorteilhaft = economically advantageous"
         ]
       }
     },
     {
       "id": "Q3",
       "gespraech": 1,
-      "type": "mc_abc",
-      "question": "Was macht die Person beruflich (Gespräch 1)?",
-      "options": {
-        "a": "Rohstoff",
-        "b": "Ingenieur",
-        "c": "Lehrerin"
-      },
-      "answer": "a",
+      "type": "richtig_falsch",
+      "statement": "Nach Auffassung der Expertin bedarf es fiskalpolitischer Anreize, um den Übergang zu einer Kreislaufwirtschaft zu beschleunigen.",
+      "answer": "richtig",
       "points": 1,
       "explanation": {
-        "de": "Man hört: \"Rohstoff\".",
-        "vi": "Người đó làm nghề gì (đoạn 1)?",
-        "key_evidence": "Rohstoff",
+        "de": "Die Aussage ist richtig. Die Expertin fordert explizit eine Umstellung der Besteuerung, bei der der Verbrauch von Rohstoffen höher besteuert und Reparaturen steuerlich begünstigt werden. Dies sind klassische fiskalpolitische Anreize.",
+        "vi": "Phát biểu này đúng. Chuyên gia yêu cầu một cách rõ ràng việc thay đổi hệ thống thuế, theo đó việc tiêu thụ nguyên liệu thô sẽ bị đánh thuế cao hơn và dịch vụ sửa chữa được ưu đãi về thuế. Đây là những ưu đãi chính sách tài khóa điển hình.",
+        "key_evidence": "Die Besteuerung muss umgestellt werden: Rohstoffverbrauch höher besteuern und Reparaturleistungen steuerlich begünstigen.",
         "key_vocabulary": [
-          {
-            "word": "Rohstoff",
-            "meaning": "Rohstoff"
-          }
+          "fiskalpolitische Anreize = fiscal policy incentives",
+          "beschleunigen = to accelerate"
         ]
       }
     },
     {
       "id": "Q4",
       "gespraech": 1,
-      "type": "mc_abc",
-      "question": "Welches Thema wird besprochen (Gespräch 1)?",
-      "options": {
-        "a": "Familie und Freunde",
-        "b": "Einkaufen und Geld",
-        "c": "Bildung und Schule"
-      },
-      "answer": "b",
+      "type": "richtig_falsch",
+      "statement": "Digitale Produktpässe werden als instrumentell für die lückenlose Nachverfolgung von Werkstoffen in einem Produktlebenszyklus angesehen.",
+      "answer": "richtig",
       "points": 1,
       "explanation": {
-        "de": "Man hört: \"Einkaufen und Geld\".",
-        "vi": "Đoạn hội thoại 1 nói về chủ đề gì?",
-        "key_evidence": "Einkaufen und Geld",
-        "key_vocabulary": []
+        "de": "Die Aussage ist richtig. Die Expertin bezeichnet die Rolle der Digitalisierung als 'entscheidend' und erklärt, dass digitale Produktpässe die 'gesamte Materialhistorie' dokumentieren können. Dies entspricht der Idee einer lückenlosen Nachverfolgung.",
+        "vi": "Phát biểu này đúng. Chuyên gia mô tả vai trò của số hóa là 'quyết định' và giải thích rằng hộ chiếu sản phẩm kỹ thuật số có thể ghi lại 'toàn bộ lịch sử vật liệu'. Điều này tương ứng với ý tưởng về việc theo dõi liền mạch.",
+        "key_evidence": "Eine entscheidende Rolle! Digitale Produktpässe können die gesamte Materialhistorie eines Produkts dokumentieren.",
+        "key_vocabulary": [
+          "instrumentell = instrumental",
+          "lückenlose Nachverfolgung = seamless tracking"
+        ]
       }
     }
   ],

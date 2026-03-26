@@ -15,63 +15,97 @@
   },
   "questions": [
     {
-      "id": "Q1",
-      "gespraech": 1,
+      "id": "q1_hoeren_c1_t1",
+      "teil": 1,
       "type": "mc_abc",
-      "question": "Welches Thema wird besprochen (Gespräch 1)?",
+      "question": "Was wird im Podcast als ein fundamentaler Grund für die Zuspitzung der Wohnungskrise in Deutschland impliziert?",
       "options": {
-        "a": "Bildung und Schule",
-        "b": "Arbeit und Beruf",
-        "c": "Einkaufen und Geld"
+        "a": "Ein systemisches Versäumnis der Politik, den Wohnungsbau bedarfsgerecht zu steuern.",
+        "b": "Die signifikante Zunahme der Baukosten und die Bodenspekulation in Metropolen.",
+        "c": "Der hohe Energieverbrauch des Gebäudesektors, der Investitionen verteuert."
+      },
+      "answer": "a",
+      "points": 1,
+      "explanation": {
+        "de": "Die korrekte Antwort ist A, da der Podcast von einer 'verfehlten Wohnungspolitik' und einem 'strukturellen Versagen' spricht. Dies deutet auf ein grundlegendes, systemisches Problem hin, das über einzelne Faktoren wie Baukosten hinausgeht. Option B ist eine lexikalische Falle; sie nennt zwar korrekte Einzelursachen ('steigende Baukosten', 'Bodenspekulation'), erfasst aber nicht die vom Sprecher implizierte übergeordnete politische Verantwortung. Option C ist falsch, da der Energieverbrauch als ökologische Herausforderung, nicht als primäre Ursache der Wohnungsknappheit dargestellt wird.",
+        "vi": "Đáp án đúng là A, vì podcast nói về một 'chính sách nhà ở sai lầm' (verfehlte Wohnungspolitik) và một 'thất bại mang tính hệ thống' (strukturelles Versagen). Điều này cho thấy một vấn đề cơ bản, mang tính hệ thống, vượt ra ngoài các yếu tố riêng lẻ như chi phí xây dựng. Lựa chọn B là một cái bẫy từ vựng; nó đề cập đến các nguyên nhân riêng lẻ đúng ('steigende Baukosten', 'Bodenspekulation'), nhưng không nắm bắt được trách nhiệm chính trị bao quát hơn mà người nói ngụ ý. Lựa chọn C sai, vì việc tiêu thụ năng lượng được trình bày như một thách thức sinh thái, không phải là nguyên nhân chính gây ra tình trạng thiếu nhà ở.",
+        "key_evidence": "Die Ursachen sind komplex: zu wenig Neubau, Bodenspekulation, steigende Baukosten und eine verfehlte Wohnungspolitik... Jährlich fallen mehr Sozialwohnungen aus der Bindung als neue gebaut werden, ein strukturelles Versagen der Wohnungspolitik...",
+        "key_vocabulary": [
+          {
+            "word": "Zuspitzung",
+            "translation": "sự leo thang, sự trầm trọng hóa"
+          },
+          {
+            "word": "systemisches Versäumnis",
+            "translation": "sự thiếu sót mang tính hệ thống"
+          },
+          {
+            "word": "bedarfsgerecht",
+            "translation": "phù hợp với nhu cầu"
+          }
+        ]
+      }
+    },
+    {
+      "id": "q2_hoeren_c1_t1",
+      "teil": 1,
+      "type": "mc_abc",
+      "question": "Welche Schlussfolgerung bezüglich der Wohnungspolitik lässt sich aus dem Vergleich zwischen Wien und Deutschland ziehen?",
+      "options": {
+        "a": "Dass die Lebensqualität in Wien aufgrund des sozialen Wohnungsbaus signifikant höher ist als in deutschen Metropolen.",
+        "b": "Dass die Konzeption von Wohnraum als öffentliche Aufgabe eine effektive Strategie zur Sicherung der Bezahlbarkeit darstellt.",
+        "c": "Dass in Deutschland der soziale Wohnungsbestand seit der Wiedervereinigung um mehr als die Hälfte reduziert wurde."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Die korrekte Antwort ist B. Der Vergleich zeigt, dass Wiens Ansatz, Wohnen als 'öffentliche Aufgabe' zu betrachten, zu 'deutlich niedrigeren Mieten' führt. Dies legt die Schlussfolgerung nahe, dass dieser Ansatz eine wirksame Strategie ist. Option A ist falsch, da der Text von 'vergleichbarer Lebensqualität' spricht, nicht von einer höheren in Wien. Option C ist eine lexikalische Falle. Die Aussage ist zwar faktenbasiert und stammt aus dem Text, sie ist aber die Beschreibung des Problems in Deutschland und nicht die Schlussfolgerung, die sich aus dem Vergleich mit Wien ergibt. Die Frage verlangt nach einer Synthese, nicht nach einer reinen Faktenwiedergabe.",
+        "vi": "Đáp án đúng là B. So sánh cho thấy cách tiếp cận của Vienna, coi nhà ở là 'nhiệm vụ công' (öffentliche Aufgabe), dẫn đến 'giá thuê nhà thấp hơn đáng kể' (deutlich niedrigeren Mieten). Điều này dẫn đến kết luận rằng cách tiếp cận này là một chiến lược hiệu quả. Lựa chọn A sai, vì văn bản nói về 'chất lượng sống tương đương' (vergleichbarer Lebensqualität), không phải là chất lượng sống ở Vienna cao hơn. Lựa chọn C là một cái bẫy từ vựng. Mặc dù câu nói này dựa trên sự thật và được lấy từ văn bản, nó chỉ mô tả vấn đề ở Đức chứ không phải là kết luận rút ra từ việc so sánh với Vienna. Câu hỏi yêu cầu một sự tổng hợp, không phải là việc lặp lại một sự thật đơn thuần.",
+        "key_evidence": "In Wien, einer der lebenswertesten Städte weltweit, wird sozialer Wohnungsbau seit hundert Jahren als öffentliche Aufgabe verstanden... Das Ergebnis: Wien hat deutlich niedrigere Mieten als München oder Zürich bei vergleichbarer Lebensqualität...",
+        "key_vocabulary": [
+          {
+            "word": "Schlussfolgerung",
+            "translation": "kết luận"
+          },
+          {
+            "word": "Konzeption",
+            "translation": "quan niệm, khái niệm"
+          },
+          {
+            "word": "Sicherung der Bezahlbarkeit",
+            "translation": "việc đảm bảo khả năng chi trả"
+          }
+        ]
+      }
+    },
+    {
+      "id": "q3_hoeren_c1_t1",
+      "teil": 1,
+      "type": "mc_abc",
+      "question": "Was behindert laut dem Podcast maßgeblich die Verbreitung innovativer Bauweisen wie dem Holzbau in Deutschland?",
+      "options": {
+        "a": "Ein Mangel an erfolgreichen Pilotprojekten, die die Machbarkeit demonstrieren könnten.",
+        "b": "Die technologische Überlegenheit skandinavischer Länder in diesem Sektor.",
+        "c": "Bestehende administrative und gesetzliche Vorschriften, die eine schnellere Umsetzung erschweren."
       },
       "answer": "c",
       "points": 1,
       "explanation": {
-        "de": "Man hört: \"Einkaufen und Geld\".",
-        "vi": "Đoạn hội thoại 1 nói về chủ đề gì?",
-        "key_evidence": "Einkaufen und Geld",
-        "key_vocabulary": []
-      }
-    },
-    {
-      "id": "Q2",
-      "gespraech": 1,
-      "type": "mc_abc",
-      "question": "Welches Thema wird besprochen (Gespräch 1)?",
-      "options": {
-        "a": "Mexiko",
-        "b": "Bern",
-        "c": "Iran"
-      },
-      "answer": "a",
-      "points": 1,
-      "explanation": {
-        "de": "Das Hauptthema ist \"Einkaufen\".",
-        "vi": "Đoạn hội thoại 1 nói về chủ đề gì?",
-        "key_evidence": "Einkaufen",
-        "key_vocabulary": []
-      }
-    },
-    {
-      "id": "Q3",
-      "gespraech": 1,
-      "type": "mc_abc",
-      "question": "Was macht die Person beruflich (Gespräch 1)?",
-      "options": {
-        "a": "Ziel",
-        "b": "Studentin",
-        "c": "Ingenieur"
-      },
-      "answer": "a",
-      "points": 1,
-      "explanation": {
-        "de": "Man hört: \"Ziel\".",
-        "vi": "Người đó làm nghề gì (đoạn 1)?",
-        "key_evidence": "Ziel",
+        "de": "Die korrekte Antwort ist C, da sie den im Text genannten Grund 'regulatorische Hürden bremsen den Holzbau noch erheblich' präzise paraphrasiert. Option A ist falsch, weil der Text explizit erwähnt: 'Auch in Deutschland gibt es Pilotprojekte'. Option B ist eine irreführende Interpretation. Skandinavien wird zwar als Vorreiter genannt, aber der Text impliziert nicht, dass Deutschland technologisch unterlegen ist, sondern dass bürokratische Hürden das Problem sind.",
+        "vi": "Đáp án đúng là C, vì nó diễn giải chính xác lý do được đề cập trong văn bản: 'các rào cản pháp lý vẫn còn cản trở đáng kể việc xây dựng bằng gỗ' (regulatorische Hürden bremsen den Holzbau noch erheblich). Lựa chọn A sai, vì văn bản nêu rõ: 'Ở Đức cũng có các dự án thí điểm' (Auch in Deutschland gibt es Pilotprojekte). Lựa chọn B là một cách diễn giải sai lệch. Mặc dù Scandinavia được nhắc đến như một nước tiên phong, văn bản không ngụ ý rằng Đức thua kém về công nghệ, mà vấn đề nằm ở các rào cản hành chính.",
+        "key_evidence": "Auch in Deutschland gibt es Pilotprojekte, aber regulatorische Hürden bremsen den Holzbau noch erheblich...",
         "key_vocabulary": [
           {
-            "word": "Ziel",
-            "meaning": "Ziel"
+            "word": "maßgeblich behindern",
+            "translation": "cản trở một cách đáng kể"
+          },
+          {
+            "word": "Verbreitung",
+            "translation": "sự phổ biến, sự lan rộng"
+          },
+          {
+            "word": "regulatorische Hürden",
+            "translation": "các rào cản pháp lý/quy định"
           }
         ]
       }

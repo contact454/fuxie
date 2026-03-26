@@ -16,58 +16,78 @@
   "questions": [
     {
       "id": "Q1",
-      "item": 1,
-      "type": "richtig_falsch",
-      "statement": "Eine Person heißt Maria.",
-      "answer": "falsch",
+      "gespraech": 1,
+      "abschnitt": 1,
+      "type": "mc_abc",
+      "question": "Wie beurteilt Professor Stern die Demokratisierung der Literaturvermittlung durch soziale Medien?",
+      "options": {
+        "a": "Er vertritt eine ambivalente Haltung, indem er die erweiterte Teilhabe anerkennt, jedoch qualitative Defizite konstatiert.",
+        "b": "Er lehnt sie kategorisch ab, da sie die professionelle Literaturkritik fundamental untergräbt.",
+        "c": "Er sieht darin ausschließlich eine positive Entwicklung, die das Feuilleton überflüssig macht."
+      },
+      "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Falsch. Die Aussage stimmt nicht mit dem Hörtext überein.",
-        "vi": "Sai.",
-        "key_evidence": "Eine Person heißt Maria.",
-        "key_vocabulary": []
+        "de": "Die korrekte Antwort ist (a), da Professor Stern eine differenzierte Meinung äußert. Er begrüßt die Demokratisierung 'grundsätzlich', was der 'erweiterten Teilhabe' entspricht. Gleichzeitig bemängelt er, dass wichtige Aspekte der Kritik 'auf der Strecke bleiben', was den 'qualitativen Defiziten' entspricht. Option (b) ist eine lexikalische Falle; das Wort 'untergräbt' stammt aus seiner ersten, allgemeineren Aussage, aber er lehnt die Entwicklung nicht 'kategorisch' ab, sondern begrüßt sie 'grundsätzlich'. Option (c) ist falsch, da er explizit die Nachteile benennt.",
+        "vi": "Đáp án đúng là (a), vì Giáo sư Stern bày tỏ một quan điểm đa chiều. Ông 'về nguyên tắc' hoan nghênh việc dân chủ hóa, tương ứng với 'sự tham gia mở rộng'. Đồng thời, ông chỉ trích rằng các khía cạnh quan trọng của phê bình 'bị bỏ lại phía sau', tương ứng với 'thiếu hụt về chất lượng'. Lựa chọn (b) là một cái bẫy từ vựng; từ 'untergräbt' (làm suy yếu) đến từ phát biểu chung chung đầu tiên của ông, nhưng ông không từ chối sự phát triển này một cách 'dứt khoát' mà 'về nguyên tắc' hoan nghênh nó. Lựa chọn (c) sai vì ông đã nêu rõ những nhược điểm.",
+        "key_evidence": "Die sozialen Medien haben die Literaturvermittlung demokratisiert, und das begrüße ich grundsätzlich. Aber die ästhetische Analyse, die historische Einordnung und die formale Kritik bleiben dabei oft auf der Strecke."
       }
     },
     {
       "id": "Q2",
-      "item": 2,
-      "type": "richtig_falsch",
-      "statement": "Eine Person heißt Becker.",
-      "answer": "richtig",
+      "gespraech": 1,
+      "abschnitt": 2,
+      "type": "mc_abc",
+      "question": "Was ist laut Frau Becker ein wesentliches Unterscheidungsmerkmal ihrer Literaturvermittlung im Vergleich zur traditionellen Kritik?",
+      "options": {
+        "a": "Die konsequente Vermeidung jeglicher Fachkenntnis, um die Inhalte verständlicher zu machen.",
+        "b": "Die Etablierung einer partnerschaftlichen Kommunikationsform anstelle einer autoritären Wissensvermittlung.",
+        "c": "Die Fokussierung auf emotionale Aspekte unter gänzlichem Verzicht auf analytische Tiefe."
+      },
+      "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Richtig. Die Aussage stimmt mit dem Hörtext überein.",
-        "vi": "Đúng.",
-        "key_evidence": "Eine Person heißt Becker.",
-        "key_vocabulary": []
+        "de": "Die korrekte Antwort ist (b). Frau Becker betont, dass der entscheidende Unterschied die 'Ansprache' sei: 'auf Augenhöhe, nicht von oben herab'. Dies wird treffend als 'partnerschaftliche Kommunikationsform' im Gegensatz zu einer 'autoritären Wissensvermittlung' paraphrasiert. Option (a) ist eine lexikalische Falle, die falsch ist, da sie explizit sagt, dass sie ihre 'Fachkenntnis' einbringt. Option (c) greift einen Vorwurf auf ('mangelnden analytischen Tiefe'), den sie aber zurückweist, und ist daher nicht ihre eigene Beschreibung ihrer Methode.",
+        "vi": "Đáp án đúng là (b). Bà Becker nhấn mạnh rằng sự khác biệt quyết định là ở 'cách tiếp cận': 'ngang hàng, không phải từ trên xuống'. Điều này được diễn giải chính xác là 'hình thức giao tiếp đối tác' trái ngược với 'truyền đạt kiến thức độc đoán'. Lựa chọn (a) là một cái bẫy từ vựng, sai vì bà ấy nói rõ rằng bà ấy vận dụng 'kiến thức chuyên môn' của mình. Lựa chọn (c) đề cập đến một lời chỉ trích ('thiếu chiều sâu phân tích') mà bà ấy bác bỏ, do đó đó không phải là mô tả của bà về phương pháp của mình.",
+        "key_evidence": "Der Unterschied ist die Ansprache: Ich rede mit meiner Community auf Augenhöhe, nicht von oben herab."
       }
     },
     {
       "id": "Q3",
-      "item": 3,
-      "type": "richtig_falsch",
-      "statement": "Eine Person heißt Claudia.",
-      "answer": "falsch",
+      "gespraech": 1,
+      "abschnitt": 3,
+      "type": "mc_abc",
+      "question": "Worin sind sich Professor Stern und der Moderator hinsichtlich der traditionellen Literaturkritik einig?",
+      "options": {
+        "a": "Sie hat eine sprachliche Exklusivität entwickelt, die ihre Rezeption erschwert.",
+        "b": "Ihre intellektuelle Anspruchslosigkeit hat zu einem Popularitätsverlust geführt.",
+        "c": "Sie hat ihre Relevanz im digitalen Zeitalter vollständig eingebüßt."
+      },
+      "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Falsch. Die Aussage stimmt nicht mit dem Hörtext überein.",
-        "vi": "Sai.",
-        "key_evidence": "Eine Person heißt Claudia.",
-        "key_vocabulary": []
+        "de": "Die korrekte Antwort ist (a). Sowohl Professor Stern ('Das Feuilleton hat sich ... vom Publikum entfernt') als auch der Moderator ('Die Sprache ... ist oft so hermetisch, dass sie selbst gebildete Leser ausschließt') stimmen darin überein, dass die Sprache der traditionellen Kritik unzugänglich geworden ist. Dies wird mit 'sprachliche Exklusivität' und 'erschwerte Rezeption' korrekt zusammengefasst. Option (b) ist das Gegenteil des Gesagten; das Problem ist die übermäßige, nicht die mangelnde intellektuelle Komplexität. Option (c) ist zu absolut; die Diskussion dreht sich um Anpassung und Brückenbildung, nicht um einen kompletten Relevanzverlust.",
+        "vi": "Đáp án đúng là (a). Cả Giáo sư Stern ('Mục văn hóa ... đã ngày càng xa rời công chúng') và người điều hành ('Ngôn ngữ ... thường quá kín kẽ đến mức loại trừ cả những độc giả có học thức') đều đồng ý rằng ngôn ngữ của phê bình truyền thống đã trở nên khó tiếp cận. Điều này được tóm tắt chính xác bằng 'tính độc quyền về ngôn ngữ' và 'gây khó khăn cho việc tiếp nhận'. Lựa chọn (b) trái ngược với những gì đã nói; vấn đề là sự phức tạp trí tuệ quá mức, chứ không phải thiếu hụt. Lựa chọn (c) quá tuyệt đối; cuộc thảo luận xoay quanh sự thích ứng và xây dựng cầu nối, không phải là mất đi hoàn toàn sự liên quan.",
+        "key_evidence": "Moderator: Die Sprache der Literaturkritik ist oft so hermetisch, dass sie selbst gebildete Leser ausschließt. Gast_B: Das ist ein wichtiger Punkt. Das Feuilleton hat sich in den letzten Jahrzehnten zunehmend vom Publikum entfernt."
       }
     },
     {
       "id": "Q4",
-      "item": 4,
-      "type": "richtig_falsch",
-      "statement": "Eine Person heißt Petra.",
-      "answer": "falsch",
+      "gespraech": 1,
+      "abschnitt": 4,
+      "type": "mc_abc",
+      "question": "Welche problematische Konsequenz algorithmischer Buchempfehlungen wird in der Diskussion identifiziert?",
+      "options": {
+        "a": "Sie ersetzen zunehmend die persönliche Beratung in Buchhandlungen.",
+        "b": "Sie basieren ausschließlich auf der literarischen Qualität der Werke.",
+        "c": "Sie fördern eine intellektuelle Einseitigkeit bei den Lesern durch personalisierte Vorschläge."
+      },
+      "answer": "c",
       "points": 1,
       "explanation": {
-        "de": "Falsch. Die Aussage stimmt nicht mit dem Hörtext überein.",
-        "vi": "Sai.",
-        "key_evidence": "Eine Person heißt Petra.",
-        "key_vocabulary": []
+        "de": "Die korrekte Antwort ist (c). Der Moderator bezeichnet die Folge der Algorithmen als 'problematische Filterblasen-Bildung'. Dies bedeutet, dass Nutzer nur noch sehen, was zu ihrem bisherigen Verhalten passt. 'Intellektuelle Einseitigkeit' ist eine präzise Paraphrase dieses Konzepts. Option (b) ist eine lexikalische Falle, die das exakte Gegenteil der Aussage im Transkript darstellt ('nicht von literarischer Qualität'). Option (a) ist falsch, da im Gegenteil betont wird, dass die persönliche Beratung 'nicht zu ersetzen' sei.",
+        "vi": "Đáp án đúng là (c). Người điều hành gọi hậu quả của các thuật toán là 'sự hình thành bong bóng lọc có vấn đề'. Điều này có nghĩa là người dùng chỉ còn thấy những gì phù hợp với hành vi trước đây của họ. 'Sự phiến diện về mặt trí tuệ' là một cách diễn giải chính xác cho khái niệm này. Lựa chọn (b) là một cái bẫy từ vựng, trình bày điều hoàn toàn ngược lại với phát biểu trong bản ghi ('không dựa trên chất lượng văn học'). Lựa chọn (a) sai, vì ngược lại, người ta nhấn mạnh rằng tư vấn cá nhân là 'không thể thay thế'.",
+        "key_evidence": "Das führt zu einer problematischen Filterblasen-Bildung auch im kulturellen Bereich der Literaturrezeption."
       }
     }
   ],

@@ -15,65 +15,57 @@
   },
   "questions": [
     {
-      "id": "Q1",
-      "gespraech": 1,
+      "id": "q1_hoeren_c1_t1",
+      "teil": 1,
       "type": "mc_abc",
-      "question": "Welches Thema wird besprochen (Gespräch 1)?",
+      "question": "Wie bewertet der Sprecher den Einsatz von Heuristiken im menschlichen Entscheidungsprozess?",
       "options": {
-        "a": "Familie und Freunde",
-        "b": "Arbeit und Beruf",
-        "c": "Alltag"
-      },
-      "answer": "c",
-      "points": 1,
-      "explanation": {
-        "de": "Man hört: \"Alltag\".",
-        "vi": "Đoạn hội thoại 1 nói về chủ đề gì?",
-        "key_evidence": "Alltag",
-        "key_vocabulary": []
-      }
-    },
-    {
-      "id": "Q2",
-      "gespraech": 1,
-      "type": "mc_abc",
-      "question": "Welches Thema wird besprochen (Gespräch 1)?",
-      "options": {
-        "a": "Chemnitz",
-        "b": "Wien",
-        "c": "Shanghai"
+        "a": "Er charakterisiert sie als einen ambivalenten Mechanismus, der sowohl die Effizienz steigert als auch zu systematischen Fehleinschätzungen führen kann.",
+        "b": "Er kritisiert sie als grundsätzlich irrationale Abkürzungen, die in der modernen Welt keinen praktischen Nutzen mehr haben.",
+        "c": "Er betrachtet sie als eine rein evolutionär bedingte Schwäche, die durch rationales Denken vollständig kompensiert werden sollte."
       },
       "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Das Hauptthema ist \"Medien\".",
-        "vi": "Đoạn hội thoại 1 nói về chủ đề gì?",
-        "key_evidence": "Medien",
-        "key_vocabulary": []
+        "de": "Die korrekte Antwort ist (a), da der Sprecher Heuristiken als zweischneidiges Schwert darstellt: Sie sind einerseits 'nützlich und effizient', führen andererseits aber zu 'systematischen Fehlern'. Diese Ambivalenz wird in der Antwortoption treffend zusammengefasst. Option (b) ist falsch, da der Sprecher explizit ihren Nutzen erwähnt. Option (c) ist eine unzulässige Übertreibung; der Sprecher impliziert nicht, dass sie vollständig kompensiert werden sollten.",
+        "vi": "Đáp án đúng là (a), vì người nói trình bày các phương pháp phỏng đoán (heuristics) như một con dao hai lưỡi: một mặt chúng 'hữu ích và hiệu quả', mặt khác lại dẫn đến 'những sai lầm có hệ thống'. Sự mâu thuẫn này được tóm tắt chính xác trong phương án trả lời. Phương án (b) sai vì người nói đã đề cập rõ ràng đến lợi ích của chúng. Phương án (c) là một sự phóng đại không được phép; người nói không ngụ ý rằng chúng nên được bù đắp hoàn toàn.",
+        "key_evidence": "Diese Heuristiken sind in vielen Alltagssituationen nützlich und effizient, führen aber manchmal zu systematischen Fehlern."
       }
     },
     {
-      "id": "Q3",
-      "gespraech": 1,
+      "id": "q2_hoeren_c1_t1",
+      "teil": 1,
       "type": "mc_abc",
-      "question": "Was macht die Person beruflich (Gespräch 1)?",
+      "question": "Welche Implikation ergibt sich aus dem Experiment mit den Richtern bezüglich kognitiver Verzerrungen?",
       "options": {
-        "a": "Sunk",
-        "b": "Ingenieur",
-        "c": "Architektin"
+        "a": "Juristische Urteile basieren häufiger auf zufälligen numerischen Einflüssen als auf Fakten.",
+        "b": "Die Anfälligkeit für unbewusste Denkmuster ist nicht auf Laien beschränkt, sondern betrifft auch hochqualifizierte Fachexperten.",
+        "c": "Richter verhängen höhere Strafen, um dem Ankereffekt bewusst entgegenzuwirken und ihre Autorität zu demonstrieren."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Die korrekte Antwort ist (b). Der Sprecher bezeichnet die Erkenntnis als 'beunruhigend', gerade weil sie zeigt, dass 'selbst Experten' davon betroffen sind. Dies impliziert, dass die Anfälligkeit für solche Verzerrungen universell ist und nicht durch Fachwissen allein ausgeschaltet wird. Option (a) ist eine unzulässige Verallgemeinerung. Option (c) ist eine falsche Interpretation der Motivation der Richter; sie handeln unbewusst, nicht bewusst.",
+        "vi": "Đáp án đúng là (b). Người nói mô tả phát hiện này là 'đáng lo ngại' chính vì nó cho thấy 'ngay cả các chuyên gia' cũng bị ảnh hưởng. Điều này ngụ ý rằng sự nhạy cảm với những thành kiến như vậy là phổ biến và không thể bị loại bỏ chỉ bằng kiến thức chuyên môn. Phương án (a) là một sự khái quát hóa không được phép. Phương án (c) là một sự diễn giải sai về động cơ của các thẩm phán; họ hành động một cách vô thức, không phải có ý thức.",
+        "key_evidence": "Das ist beunruhigend, weil es zeigt, dass selbst Experten unbewussten kognitiven Verzerrungen unterliegen."
+      }
+    },
+    {
+      "id": "q3_hoeren_c1_t1",
+      "teil": 1,
+      "type": "mc_abc",
+      "question": "Was ist der zentrale ethische Konflikt in der Debatte um Nudging, wie er im Podcast dargestellt wird?",
+      "options": {
+        "a": "Die Abwägung zwischen der Förderung gesellschaftlich erwünschten Verhaltens und dem potenziellen Eingriff in die individuelle Autonomie.",
+        "b": "Die Frage, ob die Erhöhung der Organspenderquote die Einschränkung der persönlichen Entscheidungsfreiheit rechtfertigt.",
+        "c": "Der Vorwurf, dass Nudging eine paternalistische Manipulation ist, die ausschließlich staatlichen Interessen dient."
       },
       "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Man hört: \"Sunk\".",
-        "vi": "Người đó làm nghề gì (đoạn 1)?",
-        "key_evidence": "Sunk",
-        "key_vocabulary": [
-          {
-            "word": "Sunk",
-            "meaning": "Sunk"
-          }
-        ]
+        "de": "Die korrekte Antwort ist (a). Der Podcast stellt den Konflikt dar zwischen dem Ziel, 'bessere gesellschaftliche Ergebnisse' zu erzielen, und der Kritik, dass Nudging die 'Autonomie des Einzelnen untergräbt'. Dies beschreibt exakt das Spannungsfeld. Option (b) ist ein lexikalischer Fallstrick; sie ist zu spezifisch auf das Organspende-Beispiel bezogen und widerspricht der Aussage, dass die Freiheit nicht eingeschränkt wird. Option (c) ist zu absolut; der Text stellt die Manipulation als Frage ('Wann wird ... zur Manipulation?') und erwähnt nicht, dass sie ausschließlich staatlichen Interessen dient.",
+        "vi": "Đáp án đúng là (a). Podcast trình bày xung đột giữa mục tiêu đạt được 'kết quả xã hội tốt hơn' và sự chỉ trích rằng việc thúc đẩy (Nudging) 'làm suy yếu quyền tự chủ của cá nhân'. Điều này mô tả chính xác sự căng thẳng. Phương án (b) là một cái bẫy từ vựng; nó quá cụ thể vào ví dụ hiến tạng và mâu thuẫn với tuyên bố rằng quyền tự do không bị hạn chế. Phương án (c) quá tuyệt đối; văn bản đặt ra sự thao túng như một câu hỏi ('Khi nào ... trở thành sự thao túng?') và không đề cập rằng nó chỉ phục vụ lợi ích của nhà nước.",
+        "key_evidence": "Allerdings wirft Nudging auch ethische Fragen auf: Wann wird sanfte Lenkung zur unwürdigen Manipulation? Kritiker argumentieren, dass Nudging die Autonomie des Einzelnen untergräbt und paternalistisch ist."
       }
     }
   ],

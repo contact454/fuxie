@@ -17,97 +17,53 @@
     {
       "id": "Q1",
       "gespraech": 1,
-      "type": "mc_abc",
-      "question": "Wie heißt eine Person im Gespräch 1?",
-      "options": {
-        "a": "Sophie",
-        "b": "Julia",
-        "c": "Maria"
-      },
-      "answer": "c",
+      "type": "richtig_falsch",
+      "statement": "Professorin Leitner konstatiert eine erhebliche Diskrepanz zwischen der Verfügbarkeit digitaler Infrastruktur und deren didaktischer Integration in den Schulalltag.",
+      "answer": "richtig",
       "points": 1,
       "explanation": {
-        "de": "Man hört: \"Maria\".",
-        "vi": "Một người trong đoạn 1 tên là gì?",
-        "key_evidence": "Maria",
-        "key_vocabulary": [
-          {
-            "word": "heißen",
-            "meaning": "to be called"
-          }
-        ]
+        "de": "Die Aussage ist korrekt. Die Expertin beschreibt die Situation als 'paradox', da die technische Ausstattung ('Verfügbarkeit digitaler Infrastruktur') zwar verbessert wurde, die tatsächliche Nutzung im Unterricht ('didaktische Integration') jedoch stark hinterherhinkt.",
+        "vi": "Nhận định này đúng. Chuyên gia mô tả tình hình là 'nghịch lý', vì trang thiết bị kỹ thuật ('sự sẵn có của cơ sở hạ tầng kỹ thuật số') đã được cải thiện, nhưng việc sử dụng thực tế trong giảng dạy ('sự tích hợp về mặt sư phạm') lại tụt hậu đáng kể.",
+        "key_evidence": "Wir befinden uns in einer paradoxen Situation: Die Ausstattung hat sich verbessert, die Nutzung hinkt aber deutlich hinterher."
       }
     },
     {
       "id": "Q2",
       "gespraech": 1,
-      "type": "mc_abc",
-      "question": "Wie heißt eine Person (Gespräch 1)?",
-      "options": {
-        "a": "Norwegen",
-        "b": "Bulgarien",
-        "c": "Finnland"
-      },
-      "answer": "b",
+      "type": "richtig_falsch",
+      "statement": "Die Expertin vertritt die Auffassung, dass der Begriff 'Digital Natives' die tatsächlichen Medienkompetenzen von Jugendlichen zutreffend beschreibt.",
+      "answer": "falsch",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man den Namen \"Professorin\".",
-        "vi": "Một người trong đoạn 1 tên là gì?",
-        "key_evidence": "Professorin",
-        "key_vocabulary": [
-          {
-            "word": "heißen",
-            "meaning": "to be called"
-          }
-        ]
+        "de": "Die Aussage ist falsch. Die Expertin bezeichnet den Begriff 'Digital Natives' explizit als einen 'irreführenden Mythos'. Sie argumentiert, dass die Fähigkeit, Geräte zu bedienen, nicht mit einer reflexiven Medienkompetenz, wie der kritischen Quellenbewertung, gleichzusetzen ist.",
+        "vi": "Nhận định này sai. Chuyên gia gọi thuật ngữ 'Digital Natives' (người bản địa kỹ thuật số) một cách rõ ràng là một 'huyền thoại gây hiểu lầm'. Bà lập luận rằng khả năng vận hành thiết bị không đồng nghĩa với năng lực truyền thông phản biện, chẳng hạn như đánh giá nguồn tin một cách phê phán.",
+        "key_evidence": "Digital Natives ist ein irreführender Mythos. Jugendliche können Smartphones bedienen, aber keine Quellen kritisch bewerten."
       }
     },
     {
       "id": "Q3",
       "gespraech": 1,
-      "type": "mc_abc",
-      "question": "Was macht die Person beruflich (Gespräch 1)?",
-      "options": {
-        "a": "Digital",
-        "b": "Koch",
-        "c": "Student"
-      },
-      "answer": "a",
+      "type": "richtig_falsch",
+      "statement": "Angesichts der Potenziale von KI plädiert Professorin Leitner für eine fundamentale Reform der schulischen Leistungsbewertung, anstatt auf Verbote zu setzen.",
+      "answer": "richtig",
       "points": 1,
       "explanation": {
-        "de": "Man hört: \"Digital\".",
-        "vi": "Người đó làm nghề gì (đoạn 1)?",
-        "key_evidence": "Digital",
-        "key_vocabulary": [
-          {
-            "word": "Digital",
-            "meaning": "Digital"
-          }
-        ]
+        "de": "Die Aussage ist korrekt. Die Expertin sagt klar, dass man KI nicht verbieten könne, sondern sie integrieren müsse. Als direkte Konsequenz daraus fordert sie, dass sich Prüfungsformate 'fundamental ändern müssen', da reine Wissensabfragen obsolet werden.",
+        "vi": "Nhận định này đúng. Chuyên gia nói rõ rằng không thể cấm AI mà phải tích hợp nó. Như một hệ quả trực tiếp, bà yêu cầu các hình thức kiểm tra phải 'thay đổi một cách cơ bản', vì việc kiểm tra kiến thức đơn thuần sẽ trở nên lỗi thời.",
+        "key_evidence": "Wir können KI nicht verbieten, wir müssen sie in den Unterricht integrieren und den kritischen Umgang damit lehren. Das bedeutet konkret, dass Prüfungsformate sich fundamental ändern müssen, weil Wissensabfragen obsolet werden."
       }
     },
     {
       "id": "Q4",
       "gespraech": 1,
-      "type": "mc_abc",
-      "question": "Woher kommt die Person (Gespräch 1)?",
-      "options": {
-        "a": "Mexiko",
-        "b": "Würzburg",
-        "c": "Deutschland"
-      },
-      "answer": "c",
+      "type": "richtig_falsch",
+      "statement": "Für Professorin Leitner liegt der ultimative Zweck der Digitalisierung primär in der technologischen Modernisierung der Bildungsinstitutionen.",
+      "answer": "falsch",
       "points": 1,
       "explanation": {
-        "de": "Die Person kommt aus Deutschland.",
-        "vi": "Người đó đến từ đâu (đoạn 1)?",
-        "key_evidence": "Deutschland",
-        "key_vocabulary": [
-          {
-            "word": "kommen aus",
-            "meaning": "to come from"
-          }
-        ]
+        "de": "Die Aussage ist falsch. Die Expertin betont, dass Technologie nicht als 'Selbstzweck' zu verstehen ist. Das eigentliche Ziel ('Versprechen') der Digitalisierung sei nicht 'mehr Technik', sondern pädagogische Verbesserungen wie 'mehr Chancengleichheit und individuelles Lernen'.",
+        "vi": "Nhận định này sai. Chuyên gia nhấn mạnh rằng công nghệ không nên được hiểu là 'mục đích tự thân'. Mục tiêu thực sự ('lời hứa') của số hóa không phải là 'nhiều công nghệ hơn', mà là những cải tiến về mặt sư phạm như 'bình đẳng hơn về cơ hội và học tập cá nhân hóa'.",
+        "key_evidence": "Eine Bildungspolitik, die Technologie nicht als Selbstzweck begreift, sondern als Werkzeug für besseres und gerechteres Lernen."
       }
     }
   ],

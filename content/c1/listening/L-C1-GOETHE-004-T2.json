@@ -17,68 +17,53 @@
     {
       "id": "Q1",
       "gespraech": 1,
-      "type": "mc_abc",
-      "question": "Wie heißt eine Person im Gespräch 1?",
-      "options": {
-        "a": "Petra",
-        "b": "Julia",
-        "c": "Dr"
-      },
-      "answer": "c",
+      "type": "richtig_falsch",
+      "statement": "Professor Reiser betrachtet die zunehmende Beteiligung von Laien an der Literaturdebatte als uneingeschränkt vorteilhaft für die literarische Kultur.",
+      "answer": "falsch",
       "points": 1,
       "explanation": {
-        "de": "Man hört: \"Dr\".",
-        "vi": "Một người trong đoạn 1 tên là gì?",
-        "key_evidence": "Dr",
+        "de": "Der Experte bewertet die Demokratisierung zwar als „grundsätzlich positiv“, schränkt diese Aussage aber sofort ein, indem er betont, dass sie „keine fachliche Kompetenz und ästhetische Urteilskraft“ ersetzt. Seine Zustimmung ist also nicht „uneingeschränkt“.",
+        "vi": "Chuyên gia đánh giá việc dân chủ hóa là \"về cơ bản là tích cực\", nhưng ông ngay lập tức hạn chế nhận định này bằng cách nhấn mạnh rằng nó \"không thay thế được năng lực chuyên môn và khả năng phán đoán thẩm mỹ\". Do đó, sự tán thành của ông không phải là \"vô điều kiện\".",
+        "key_evidence": "Demokratisierung ist grundsätzlich positiv, aber sie ersetzt keine fachliche Kompetenz und ästhetische Urteilskraft.",
         "key_vocabulary": [
-          {
-            "word": "heißen",
-            "meaning": "to be called"
-          }
+          "uneingeschränkt = ohne Einschränkung, bedingungslos",
+          "vorteilhaft = nützlich, positiv"
         ]
       }
     },
     {
       "id": "Q2",
       "gespraech": 1,
-      "type": "mc_abc",
-      "question": "Wie heißt eine Person (Gespräch 1)?",
-      "options": {
-        "a": "Berlin",
-        "b": "Nürnberg",
-        "c": "Braunschweig"
-      },
-      "answer": "c",
+      "type": "richtig_falsch",
+      "statement": "Laut Professor Reiser korreliert der kommerzielle Erfolg eines Buches in der Regel nicht mit dessen literarischem Wert.",
+      "answer": "richtig",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man den Namen \"Reiser\".",
-        "vi": "Một người trong đoạn 1 tên là gì?",
-        "key_evidence": "Reiser",
+        "de": "Der Experte stellt klar, dass Bestsellerlisten Verkaufszahlen und nicht Qualität messen. Seine Aussage „Die meistverkauften Bücher sind selten die besten“ bekräftigt die Ansicht, dass kommerzieller Erfolg (Verkaufszahlen) und literarischer Wert (Qualität) nicht miteinander in Beziehung stehen.",
+        "vi": "Chuyên gia làm rõ rằng danh sách sách bán chạy đo lường doanh số bán hàng chứ không phải chất lượng. Phát biểu của ông \"Những cuốn sách bán chạy nhất hiếm khi là những cuốn sách hay nhất\" khẳng định quan điểm rằng thành công thương mại (doanh số) và giá trị văn học (chất lượng) không tương quan với nhau.",
+        "key_evidence": "Bestsellerlisten messen Verkaufszahlen, nicht Qualität. Die meistverkauften Bücher sind selten die besten.",
         "key_vocabulary": [
-          {
-            "word": "heißen",
-            "meaning": "to be called"
-          }
+          "korrelieren = in einer Wechselbeziehung stehen",
+          "kommerzieller Erfolg = Erfolg im Verkauf",
+          "literarischer Wert = künstlerische Qualität"
         ]
       }
     },
     {
       "id": "Q3",
       "gespraech": 1,
-      "type": "mc_abc",
-      "question": "Welches Thema wird besprochen (Gespräch 1)?",
-      "options": {
-        "a": "Freizeit und Hobbys",
-        "b": "Gesundheit und Körper",
-        "c": "Reisen und Verkehr"
-      },
-      "answer": "c",
+      "type": "richtig_falsch",
+      "statement": "Der Experte ist der Ansicht, dass die etablierte Literaturkritik ihre traditionellen Formate aufgeben muss, um ein jüngeres Publikum zu erreichen.",
+      "answer": "richtig",
       "points": 1,
       "explanation": {
-        "de": "Man hört: \"Reisen und Verkehr\".",
-        "vi": "Đoạn hội thoại 1 nói về chủ đề gì?",
-        "key_evidence": "Reisen und Verkehr",
-        "key_vocabulary": []
+        "de": "Der Experte stimmt zu, dass das traditionelle Feuilleton junge Leser kaum erreicht und bezeichnet dies als „ernstes Problem“. Seine Schlussfolgerung, dass die Literaturkritik „neue Formen und Kanäle finden muss“, impliziert die Notwendigkeit einer Abkehr von oder zumindest einer Ergänzung zu den rein traditionellen Formaten.",
+        "vi": "Chuyên gia đồng ý rằng mục phê bình văn học truyền thống (Feuilleton) khó tiếp cận được độc giả trẻ và gọi đây là một \"vấn đề nghiêm trọng\". Kết luận của ông rằng phê bình văn học \"phải tìm ra các hình thức và kênh mới\" ngụ ý sự cần thiết phải từ bỏ hoặc ít nhất là bổ sung cho các định dạng hoàn toàn truyền thống.",
+        "key_evidence": "Das stimmt, und das ist ein ernstes Problem. Die Literaturkritik muss neue Formen und Kanäle finden.",
+        "key_vocabulary": [
+          "etabliert = seit Langem bestehend, anerkannt",
+          "Formate aufgeben = bisherige Methoden nicht mehr verwenden"
+        ]
       }
     }
   ],

@@ -16,64 +16,56 @@
   "questions": [
     {
       "id": "Q1",
-      "gespraech": 1,
+      "teil": 4,
       "type": "mc_abc",
-      "question": "Welches Thema wird besprochen (Gespräch 1)?",
+      "question": "Wie bewertet der Dozent die im Vortrag erwähnte „Demokratisierung“ der Literaturkritik?",
       "options": {
-        "a": "Arbeit und Beruf",
-        "b": "Einkaufen und Geld",
-        "c": "Bildung und Schule"
-      },
-      "answer": "c",
-      "points": 1,
-      "explanation": {
-        "de": "Man hört: \"Bildung und Schule\".",
-        "vi": "Đoạn hội thoại 1 nói về chủ đề gì?",
-        "key_evidence": "Bildung und Schule",
-        "key_vocabulary": []
-      }
-    },
-    {
-      "id": "Q2",
-      "gespraech": 1,
-      "type": "mc_abc",
-      "question": "Welches Thema wird besprochen (Gespräch 1)?",
-      "options": {
-        "a": "Russland",
-        "b": "New York",
-        "c": "Spanien"
+        "a": "Er betrachtet sie als eine ambivalente Entwicklung mit sowohl positiven als auch negativen Aspekten.",
+        "b": "Er begrüßt sie uneingeschränkt, da sie die professionellen Qualitätsmaßstäbe signifikant erhöht.",
+        "c": "Er lehnt sie kategorisch ab, weil sie die Monopolstellung traditioneller Kritikereliten festigt."
       },
       "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Das Hauptthema ist \"Einkaufen\".",
-        "vi": "Đoạn hội thoại 1 nói về chủ đề gì?",
-        "key_evidence": "Einkaufen",
-        "key_vocabulary": []
+        "de": "Der Dozent beschreibt die Demokratisierung als 'im Prinzip begrüßenswert', was die positive Seite darstellt. Gleichzeitig warnt er, dass sie zu einer 'Erosion professioneller Standards und Qualitätsmaßstäbe' führt, was die negative Seite ist. Die Bewertung ist also ambivalent (zwiespältig). Option (b) ist falsch, da er eine Erosion der Standards beklagt, nicht deren Erhöhung. Option (c) ist ein direkter Widerspruch zur Aussage, dass Urteile 'nicht mehr von einer kleinen Elite monopolisiert werden'.",
+        "vi": "Giảng viên mô tả quá trình dân chủ hóa là 'về nguyên tắc đáng hoan nghênh', thể hiện mặt tích cực. Đồng thời, ông cảnh báo rằng nó dẫn đến 'sự xói mòn các tiêu chuẩn chuyên môn và thước đo chất lượng', đây là mặt tiêu cực. Do đó, đánh giá này mang tính hai mặt (ambivalent). Lựa chọn (b) sai vì ông phàn nàn về sự xói mòn các tiêu chuẩn, chứ không phải sự nâng cao chúng. Lựa chọn (c) hoàn toàn trái ngược với tuyên bố rằng các phán quyết 'không còn bị độc quyền bởi một nhóm tinh hoa nhỏ'.",
+        "key_evidence": "Das ist im Prinzip begrüßenswert, führt aber zu einer Erosion professioneller Standards und Qualitätsmaßstäbe."
+      }
+    },
+    {
+      "id": "Q2",
+      "teil": 4,
+      "type": "mc_abc",
+      "question": "Was impliziert der Dozent als den fundamentalsten Wandel in der literarischen Öffentlichkeit vom 20. zum 21. Jahrhundert?",
+      "options": {
+        "a": "Die Etablierung der Literaturkritik als eine neue intellektuelle Disziplin.",
+        "b": "Die vollständige Verdrängung ästhetischer Kriterien durch ökonomische Erfolgsindikatoren.",
+        "c": "Die Verlagerung der meinungsbildenden Autorität von zentralisierten Instanzen zu einem breiten Publikum."
+      },
+      "answer": "c",
+      "points": 1,
+      "explanation": {
+        "de": "Der Dozent betont, dass die 'Macht der wenigen' (zentralisierte Instanzen wie Reich-Ranicki) 'dramatisch erodiert und sich dezentralisiert' hat. Dies beschreibt präzise die Verlagerung der Autorität. Option (a) ist ein lexikalischer Fallstrick; die Etablierung der Kritik fand laut Vortrag im 18. Jahrhundert statt, nicht im 21. Option (b) ist eine Übertreibung; obwohl die Ökonomisierung ein Faktor ist, wird nicht von einer 'vollständigen Verdrängung' gesprochen, und der Kern des Wandels ist die Machtstruktur.",
+        "vi": "Giảng viên nhấn mạnh rằng 'quyền lực của số ít' (các cơ quan tập trung như Reich-Ranicki) đã 'bị xói mòn nghiêm trọng và đã được phi tập trung hóa'. Điều này mô tả chính xác sự dịch chuyển quyền lực. Lựa chọn (a) là một cái bẫy từ vựng; theo bài giảng, việc thiết lập phê bình văn học diễn ra vào thế kỷ 18, không phải thế kỷ 21. Lựa chọn (b) là một sự phóng đại; mặc dù kinh tế hóa là một yếu tố, nhưng không có nói đến việc 'loại bỏ hoàn toàn', và cốt lõi của sự thay đổi là cấu trúc quyền lực.",
+        "key_evidence": "Diese Macht der wenigen ist im einundzwanzigsten Jahrhundert dramatisch erodiert und hat sich dezentralisiert."
       }
     },
     {
       "id": "Q3",
-      "gespraech": 1,
+      "teil": 4,
       "type": "mc_abc",
-      "question": "Was macht die Person beruflich (Gespräch 1)?",
+      "question": "Welche primäre Aufgabe weist der Dozent der schulischen Bildung im Kontext des fragmentierten literarischen Kanons zu?",
       "options": {
-        "a": "Student",
-        "b": "Maßstab",
-        "c": "Journalist"
+        "a": "Die Wiederherstellung eines singulären, verbindlichen literarischen Kanons für alle Lernenden.",
+        "b": "Die Vermittlung von grundlegenden Kompetenzen zur autonomen Qualitätsbeurteilung von Literatur.",
+        "c": "Die ausschließliche Konzentration auf Referenzwerke, die in universitären Seminaren behandelt werden."
       },
       "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Man hört: \"Maßstab\".",
-        "vi": "Người đó làm nghề gì (đoạn 1)?",
-        "key_evidence": "Maßstab",
-        "key_vocabulary": [
-          {
-            "word": "Maßstab",
-            "meaning": "Maßstab"
-          }
-        ]
+        "de": "Der Dozent plädiert dafür, dass der Literaturunterricht die 'Fähigkeit, ästhetisch zu urteilen und Texte zu analysieren' vermitteln soll. Dies zielt auf die Entwicklung autonomer Urteilsfähigkeit ab, anstatt nur spezifische Werke zu lehren. Option (a) widerspricht seiner Idee der 'informierten Pluralität' und 'individueller Lektürepfade'. Option (c) ist ein lexikalischer Fallstrick; er erwähnt das 'germanistische Seminar' nur als Beispiel für eine Subkultur, nicht als Vorbild für den Schulunterricht.",
+        "vi": "Giảng viên ủng hộ rằng việc dạy văn học nên truyền đạt 'khả năng phán đoán thẩm mỹ và phân tích văn bản'. Điều này nhằm mục đích phát triển khả năng phán đoán độc lập, thay vì chỉ dạy các tác phẩm cụ thể. Lựa chọn (a) mâu thuẫn với ý tưởng của ông về 'sự đa nguyên có hiểu biết' và 'con đường đọc sách cá nhân'. Lựa chọn (c) là một cái bẫy từ vựng; ông chỉ đề cập đến 'hội thảo nghiên cứu văn học Đức' như một ví dụ về một tiểu văn hóa, chứ không phải là một hình mẫu cho việc giảng dạy ở trường phổ thông.",
+        "key_evidence": "Literaturunterricht sollte nicht nur Werke vermitteln, sondern die Fähigkeit, ästhetisch zu urteilen und Texte zu analysieren."
       }
     }
   ],

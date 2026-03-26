@@ -16,58 +16,74 @@
   "questions": [
     {
       "id": "Q1",
-      "item": 1,
-      "type": "richtig_falsch",
-      "statement": "Eine Person heißt Monika.",
-      "answer": "falsch",
+      "gespraech": 1,
+      "type": "mc_abc",
+      "statement": "Worin besteht die anfängliche Divergenz in den Standpunkten der beiden Experten bezüglich der Kreislaufwirtschaft?",
+      "options": {
+        "a": "In der Bewertung des Kontrasts zwischen dem theoretischen Potenzial und der gegenwärtigen praktischen Umsetzung.",
+        "b": "In der grundsätzlichen physikalischen Machbarkeit einer vollständigen Kreislaufwirtschaft.",
+        "c": "In der Frage, ob Klimaschutz und wirtschaftlicher Wohlstand prinzipiell miteinander vereinbar sind."
+      },
+      "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Falsch. Die Aussage stimmt nicht mit dem Hörtext überein.",
-        "vi": "Sai.",
-        "key_evidence": "Eine Person heißt Monika.",
-        "key_vocabulary": []
+        "de": "Die korrekte Antwort ist (a), da die Diskussion mit einer optimistischen Vision („einzige Möglichkeit“) beginnt, der sofort die ernüchternde Realität („gerade einmal zehn Prozent“) gegenübergestellt wird. Dies zeigt eine unterschiedliche Bewertung der aktuellen Lage. Option (b) ist eine lexikalische Falle; beide Experten scheinen sich einig zu sein, dass eine 100%-ige Kreislaufwirtschaft „physikalisch unmöglich“ ist, es ist also kein Punkt der Meinungsverschiedenheit. Option (c) ist falsch, da der erste Experte explizit sagt, dass beides vereinbar ist, und der zweite dem nicht widerspricht.",
+        "vi": "Đáp án đúng là (a), vì cuộc thảo luận bắt đầu bằng một tầm nhìn lạc quan (\"khả năng duy nhất\") ngay lập tức bị đối chiếu với thực tế phũ phàng (\"chỉ vỏn vẹn mười phần trăm\"). Điều này cho thấy sự khác biệt trong việc đánh giá tình hình hiện tại. Lựa chọn (b) là một cái bẫy từ vựng; cả hai chuyên gia dường như đồng ý rằng nền kinh tế tuần hoàn 100% là \"không thể về mặt vật lý\", vì vậy đây không phải là điểm bất đồng. Lựa chọn (c) sai, vì chuyên gia đầu tiên nói rõ rằng cả hai có thể tương thích và chuyên gia thứ hai không phản đối điều này.",
+        "key_evidence": "Gast_A: Die Kreislaufwirtschaft ist die einzige Möglichkeit, Wohlstand und Klimaschutz dauerhaft miteinander zu vereinbaren. Gast_B: Das klingt zu schön, um wahr zu sein. In der Praxis recyceln wir gerade einmal zehn Prozent der weltweit genutzten Materialien."
       }
     },
     {
       "id": "Q2",
-      "item": 2,
-      "type": "richtig_falsch",
-      "statement": "Eine Person heißt Lindner.",
-      "answer": "richtig",
+      "gespraech": 1,
+      "type": "mc_abc",
+      "statement": "Welche Bedingung wird in der Diskussion als unerlässlich für die tatsächliche Wirksamkeit der Kreislaufwirtschaft im Klimaschutz angesehen?",
+      "options": {
+        "a": "Die Entwicklung von Geschäftsmodellen, die den Besitz von Produkten gänzlich infrage stellen.",
+        "b": "Eine weitreichende Drosselung des allgemeinen Ressourcenverbrauchs.",
+        "c": "Die Akzeptanz, dass sie als Alibi für maßlosen Konsum dient."
+      },
+      "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Richtig. Die Aussage stimmt mit dem Hörtext überein.",
-        "vi": "Đúng.",
-        "key_evidence": "Eine Person heißt Lindner.",
-        "key_vocabulary": []
+        "de": "Die korrekte Antwort ist (b). Es wird explizit gesagt, dass die Kreislaufwirtschaft „notwendig, aber nicht hinreichend“ ist und durch eine „massive Reduktion des Konsums“ ergänzt werden muss. „Drosselung des Ressourcenverbrauchs“ ist eine treffende Paraphrase. Option (a) ist zu spezifisch; das Infragestellen von Besitz ist ein Beispiel für eine Veränderung, aber nicht die übergeordnete Bedingung. Option (c) ist eine lexikalische Falle, die den Sinn verdreht; der Vorwurf des Greenwashings wird als berechtigt angesehen, *wenn* die Kreislaufwirtschaft als Alibi dient, was aber gerade verhindert werden soll.",
+        "vi": "Đáp án đúng là (b). Có nói rõ rằng kinh tế tuần hoàn là \"cần thiết nhưng không đủ\" và phải được bổ sung bằng việc \"giảm tiêu dùng hàng loạt\". \"Drosselung des Ressourcenverbrauchs\" (sự cắt giảm tiêu thụ tài nguyên) là một cách diễn giải chính xác. Lựa chọn (a) quá cụ thể; việc đặt câu hỏi về quyền sở hữu là một ví dụ về sự thay đổi, nhưng không phải là điều kiện tiên quyết bao trùm. Lựa chọn (c) là một cái bẫy từ vựng làm sai lệch ý nghĩa; lời cáo buộc về \"tẩy xanh\" (greenwashing) được coi là chính đáng *nếu* kinh tế tuần hoàn được dùng như một cái cớ, nhưng đó chính là điều cần phải ngăn chặn.",
+        "key_evidence": "Nein, Kreislaufwirtschaft ist notwendig, aber nicht hinreichend. Wir brauchen gleichzeitig eine massive Reduktion des Konsums."
       }
     },
     {
       "id": "Q3",
-      "item": 3,
-      "type": "richtig_falsch",
-      "statement": "Eine Person heißt Maria.",
-      "answer": "falsch",
+      "gespraech": 1,
+      "type": "mc_abc",
+      "statement": "Wodurch lassen sich traditionelle Unternehmen laut der Diskussion am ehesten von einer Umstellung auf Kreislaufmodelle überzeugen?",
+      "options": {
+        "a": "Durch die Demonstration des Kreislaufpotenzials in der Bauindustrie.",
+        "b": "Durch den Appell an ihre soziale und ökologische Verantwortung.",
+        "c": "Durch die Aussicht auf langfristige ökonomische Vorteile und Wettbewerbsfähigkeit."
+      },
+      "answer": "c",
       "points": 1,
       "explanation": {
-        "de": "Falsch. Die Aussage stimmt nicht mit dem Hörtext überein.",
-        "vi": "Sai.",
-        "key_evidence": "Eine Person heißt Maria.",
-        "key_vocabulary": []
+        "de": "Die korrekte Antwort ist (c), da im Gespräch betont wird, dass „harte wirtschaftliche Zahlen und Fakten“ sowie die Vermeidung von „Wettbewerbsnachteilen durch hohe Rohstoffkosten“ die überzeugendsten Argumente sind. Dies wird mit „ökonomische Vorteile“ gut zusammengefasst. Option (a) ist eine Falle; die Bauindustrie wird als Sektor mit hohem Potenzial genannt, aber nicht als das primäre Überzeugungsmittel für alle Unternehmen. Option (b) ist falsch, da moralische oder soziale Appelle in diesem Kontext nicht als Hauptmotivator erwähnt werden.",
+        "vi": "Đáp án đúng là (c), vì trong cuộc trò chuyện, người ta nhấn mạnh rằng \"các con số và dữ kiện kinh tế cứng\" cũng như việc tránh \"bất lợi cạnh tranh do chi phí nguyên liệu thô cao\" là những lập luận thuyết phục nhất. Điều này được tóm tắt tốt bằng cụm từ \"lợi ích kinh tế\". Lựa chọn (a) là một cái bẫy; ngành xây dựng được đề cập đến như một lĩnh vực có tiềm năng cao, nhưng không phải là phương tiện thuyết phục chính cho tất cả các công ty. Lựa chọn (b) sai, vì những lời kêu gọi về đạo đức hoặc xã hội không được đề cập đến như động lực chính trong bối cảnh này.",
+        "key_evidence": "Mit harten wirtschaftlichen Zahlen und Fakten. Rohstoffpreise steigen langfristig, Kreislaufmodelle senken die Materialkosten. [...] Unternehmen, die heute nicht umstellen, werden in zehn Jahren Wettbewerbsnachteile durch hohe Rohstoffkosten haben."
       }
     },
     {
       "id": "Q4",
-      "item": 4,
-      "type": "richtig_falsch",
-      "statement": "Eine Person heißt Wolfgang.",
-      "answer": "falsch",
+      "gespraech": 1,
+      "type": "mc_abc",
+      "statement": "Wie wird die Rolle der Konsumenten bei der Transformation zur Kreislaufwirtschaft in der Diskussion eingeschätzt?",
+      "options": {
+        "a": "Ihre Mitwirkung wird als fundamental, jedoch für sich allein genommen als unzureichend bewertet.",
+        "b": "Ihnen wird die Hauptverantwortung zugeschrieben, da sie durch ihre Nachfrage das System steuern.",
+        "c": "Sie werden hauptsächlich durch das „Recht auf Reparatur“ in die Pflicht genommen."
+      },
+      "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Falsch. Die Aussage stimmt nicht mit dem Hörtext überein.",
-        "vi": "Sai.",
-        "key_evidence": "Eine Person heißt Wolfgang.",
-        "key_vocabulary": []
+        "de": "Die korrekte Antwort ist (a). Die Aussage, dass Konsumenten eine „zentrale Rolle“ spielen, aber „allein das System nicht verändern können“ und es „regulatorische Rahmenbedingungen“ braucht, wird hier präzise paraphrasiert. Option (b) ist falsch, da explizit gesagt wird, dass Konsumenten es *nicht* allein schaffen können. Option (c) ist eine lexikalische Falle; das „Recht auf Reparatur“ wird als Beispiel für eine regulatorische Maßnahme genannt, die sich an die Hersteller richtet, nicht primär an die Konsumenten.",
+        "vi": "Đáp án đúng là (a). Nhận định rằng người tiêu dùng đóng một \"vai trò trung tâm\" nhưng \"một mình không thể thay đổi hệ thống\" và cần có \"khuôn khổ pháp lý\" được diễn giải lại một cách chính xác ở đây. Lựa chọn (b) sai, vì có nói rõ rằng người tiêu dùng *không* thể làm điều đó một mình. Lựa chọn (c) là một cái bẫy từ vựng; \"quyền được sửa chữa\" được đề cập như một ví dụ về biện pháp pháp lý nhắm vào các nhà sản xuất, chứ không phải chủ yếu nhắm vào người tiêu dùng.",
+        "key_evidence": "Eine zentrale Rolle, aber Konsumenten allein können das System nicht verändern, dafür braucht es regulatorische Rahmenbedingungen."
       }
     }
   ],

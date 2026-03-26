@@ -15,41 +15,49 @@
   },
   "questions": [
     {
-      "id": "Q1",
+      "id": "C1H4_Q1",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Welches Thema wird besprochen (Gespräch 1)?",
+      "question": "Wie bewertet der Dozent die Rolle von KI-Tutoren in der zukünftigen Bildungslandschaft?",
       "options": {
-        "a": "Reisen und Verkehr",
-        "b": "Wohnung und Haushalt",
-        "c": "Arbeit und Beruf"
+        "a": "Er sieht sie als eine unterstützende Ergänzung, die Lehrpersonal von repetitiven Aufgaben befreit.",
+        "b": "Er ist der Ansicht, dass sie aufgrund ihrer unendlichen Geduld den menschlichen Lehrkräften überlegen sind.",
+        "c": "Er befürchtet, dass sie die menschliche Lehrkraft auf lange Sicht vollständig ersetzen werden."
       },
       "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Man hört: \"Reisen und Verkehr\".",
-        "vi": "Đoạn hội thoại 1 nói về chủ đề gì?",
-        "key_evidence": "Reisen und Verkehr",
-        "key_vocabulary": []
+        "de": "Die korrekte Antwort ist (a), da der Dozent explizit sagt, dass KI-Tutoren Lehrkräfte bei Routineaufgaben entlasten können, sie aber nicht ersetzen werden. Option (b) ist eine lexikalische Falle; obwohl 'unendlich geduldig' erwähnt wird, wird keine Überlegenheit impliziert. Option (c) widerspricht direkt der Aussage des Dozenten, dass KI die menschliche Lehrkraft 'niemals' ersetzen wird.",
+        "vi": "Đáp án đúng là (a), vì giảng viên nói rõ rằng gia sư AI có thể giảm bớt gánh nặng cho giáo viên trong các công việc thường ngày, nhưng sẽ không thay thế họ. Lựa chọn (b) là một cái bẫy từ vựng; mặc dù 'unendlich geduldig' (kiên nhẫn vô hạn) được đề cập, nhưng không có sự ngụ ý về sự vượt trội. Lựa chọn (c) trực tiếp mâu thuẫn với tuyên bố của giảng viên rằng AI sẽ 'không bao giờ' thay thế giáo viên con người.",
+        "key_evidence": "KI-Tutoren werden niemals die menschliche Lehrkraft ersetzen, aber sie können sie bei Routineaufgaben entlasten.",
+        "key_vocabulary": [
+          "entlasten",
+          "Routineaufgaben",
+          "ergänzen"
+        ]
       }
     },
     {
-      "id": "Q2",
+      "id": "C1H4_Q2",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Welches Thema wird besprochen (Gespräch 1)?",
+      "question": "Was impliziert der Dozent als gravierendste Konsequenz der fortschreitenden Digitalisierung im Bildungswesen?",
       "options": {
-        "a": "Frankfurt",
-        "b": "Augsburg",
-        "c": "Hanoi"
+        "a": "Die Notwendigkeit massiver Investitionen in die Fortbildung des Lehrpersonals.",
+        "b": "Eine potenzielle Verschärfung sozialer Disparitäten durch ungleichen Zugang zu Technologie.",
+        "c": "Die ethischen Bedenken bezüglich der Sammlung sensibler Schülerdaten durch adaptive Lernsysteme."
       },
-      "answer": "c",
+      "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Das Hauptthema ist \"Arbeit und Beruf\".",
-        "vi": "Đoạn hội thoại 1 nói về chủ đề gì?",
-        "key_evidence": "Arbeit und Beruf",
-        "key_vocabulary": []
+        "de": "Die korrekte Antwort ist (b), da der Dozent die 'digitale Ungleichheit' als 'größte Herausforderung' bezeichnet, die das 'bestehende Bildungsgefälle zu verschärfen droht'. Dies wird mit 'Verschärfung sozialer Disparitäten' treffend paraphrasiert. Die Optionen (a) und (c) nennen zwar ebenfalls Herausforderungen, die im Vortrag erwähnt werden (Weiterqualifizierung und Datenschutz), aber sie werden nicht als die primäre oder größte Gefahr dargestellt.",
+        "vi": "Đáp án đúng là (b), vì giảng viên gọi 'bất bình đẳng kỹ thuật số' là 'thách thức lớn nhất', có nguy cơ 'làm trầm trọng thêm khoảng cách giáo dục hiện có'. Điều này được diễn giải chính xác bằng cụm từ 'làm trầm trọng thêm sự chênh lệch xã hội'. Các lựa chọn (a) và (c) cũng đề cập đến những thách thức được nói đến trong bài giảng (đào tạo nâng cao và bảo vệ dữ liệu), nhưng chúng không được trình bày là mối nguy hiểm chính hoặc lớn nhất.",
+        "key_evidence": "Die größte Herausforderung ist die digitale Ungleichheit, die das bestehende Bildungsgefälle zu verschärfen droht.",
+        "key_vocabulary": [
+          "gravierendste Konsequenz",
+          "Verschärfung",
+          "Disparitäten"
+        ]
       }
     }
   ],

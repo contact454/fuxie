@@ -15,70 +15,57 @@
   },
   "questions": [
     {
-      "id": "Q1",
-      "gespraech": 1,
+      "id": "q1_hoeren_c1_t1",
+      "teil": 1,
       "type": "mc_abc",
-      "question": "Welches Thema wird besprochen (Gespräch 1)?",
+      "question": "Was impliziert der Sprecher bezüglich der ökonomischen Dimension der Zuwanderung in Deutschland?",
       "options": {
-        "a": "Einkaufen und Geld",
-        "b": "Arbeit und Beruf",
-        "c": "Familie und Freunde"
+        "a": "Sie stellt eine unabdingbare Voraussetzung für die Aufrechterhaltung der wirtschaftlichen Prosperität dar.",
+        "b": "Das neue Fachkräfteeinwanderungsgesetz hat den Fachkräftemangel bereits vollständig behoben.",
+        "c": "Die primäre Funktion der Zuwanderung ist die Erfüllung humanitärer Verpflichtungen."
       },
       "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Man hört: \"Einkaufen und Geld\".",
-        "vi": "Đoạn hội thoại 1 nói về chủ đề gì?",
-        "key_evidence": "Einkaufen und Geld",
-        "key_vocabulary": []
+        "de": "Der Sprecher betont, dass Deutschland ohne qualifizierte Zuwanderung seinen Wohlstand nicht sichern kann. Option (a) paraphrasiert diesen Gedanken korrekt mit akademischem Vokabular ('unabdingbare Voraussetzung', 'wirtschaftliche Prosperität'). Option (b) ist eine lexikalische Falle; das Gesetz wird zwar erwähnt, aber nur als 'Schritt in die richtige Richtung', nicht als endgültige Lösung. Option (c) widerspricht der Aussage, dass Integration 'nicht nur eine humanitäre Aufgabe, sondern eine wirtschaftliche Notwendigkeit' ist.",
+        "vi": "Diễn giả nhấn mạnh rằng nếu không có nhập cư có trình độ, Đức không thể đảm bảo sự thịnh vượng của mình. Lựa chọn (a) diễn giải chính xác ý này bằng từ vựng học thuật ('điều kiện tiên quyết không thể thiếu', 'sự thịnh vượng kinh tế'). Lựa chọn (b) là một cái bẫy từ vựng; luật được đề cập, nhưng chỉ là một 'bước đi đúng hướng', không phải là giải pháp cuối cùng. Lựa chọn (c) mâu thuẫn với tuyên bố rằng hội nhập 'không chỉ là một nhiệm vụ nhân đạo, mà còn là một sự cần thiết về kinh tế'.",
+        "key_evidence": "Ohne qualifizierte Zuwanderung kann Deutschland seinen Fachkräftemangel langfristig nicht bewältigen und seinen Wohlstand nicht sichern."
       }
     },
     {
-      "id": "Q2",
-      "gespraech": 1,
+      "id": "q2_hoeren_c1_t1",
+      "teil": 1,
       "type": "mc_abc",
-      "question": "Woher kommt die Person (Gespräch 1)?",
+      "question": "Wie bewertet der Sprecher den Prozess der Anerkennung ausländischer Berufsqualifikationen in Deutschland?",
       "options": {
-        "a": "Köln",
-        "b": "Deutschland",
-        "c": "Hamburg"
+        "a": "Er sieht es als ein komplexes Problem an, das hauptsächlich die Betroffenen frustriert.",
+        "b": "Er erachtet ihn als ineffizient und kontraproduktiv für die nationale Ökonomie.",
+        "c": "Er lobt die Gründlichkeit des Prozesses, die hohe Qualitätsstandards sichert."
       },
       "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Man hört: \"Deutschland\".",
-        "vi": "Người đó đến từ đâu (đoạn 1)?",
-        "key_evidence": "Deutschland",
-        "key_vocabulary": [
-          {
-            "word": "kommen aus",
-            "meaning": "to come from"
-          }
-        ]
+        "de": "Der Sprecher bezeichnet den Prozess als 'langwierig und bürokratisch' sowie 'volkswirtschaftlich unsinnig', da er 'wertvolles Potenzial' verschwendet. Option (b) fasst diese Kritik präzise zusammen ('ineffizient', 'kontraproduktiv'). Option (a) ist eine lexikalische Falle, die die Wörter 'Problem' und 'frustrierend' aufgreift, aber die Aussage verengt, indem sie die volkswirtschaftliche Dimension, die der Sprecher explizit nennt ('nicht nur für die Betroffenen'), ignoriert. Option (c) ist das genaue Gegenteil der im Text geäußerten Kritik.",
+        "vi": "Diễn giả mô tả quy trình này là 'kéo dài và quan liêu' cũng như 'vô lý về mặt kinh tế quốc dân' vì nó lãng phí 'tiềm năng quý giá'. Lựa chọn (b) tóm tắt chính xác sự chỉ trích này ('không hiệu quả', 'phản tác dụng'). Lựa chọn (a) là một cái bẫy từ vựng, sử dụng các từ 'vấn đề' và 'gây bực bội', nhưng lại thu hẹp ý nghĩa bằng cách bỏ qua khía cạnh kinh tế quốc dân mà diễn giả đã nêu rõ ('không chỉ đối với những người bị ảnh hưởng'). Lựa chọn (c) hoàn toàn trái ngược với sự chỉ trích được đưa ra trong bài nghe.",
+        "key_evidence": "Das ist nicht nur für die Betroffenen frustrierend, sondern auch volkswirtschaftlich unsinnig und verschwendet wertvolles Potenzial."
       }
     },
     {
-      "id": "Q3",
-      "gespraech": 1,
+      "id": "q3_hoeren_c1_t1",
+      "teil": 1,
       "type": "mc_abc",
-      "question": "Was macht die Person beruflich (Gespräch 1)?",
+      "question": "Welche fundamentale Voraussetzung für eine gelingende Integration wird im Podcast postuliert?",
       "options": {
-        "a": "Einwanderungsgesellschaft",
-        "b": "Arzt",
-        "c": "Koch"
+        "a": "Die Bereitstellung ausreichender finanzieller und struktureller Unterstützung für die Kommunen.",
+        "b": "Die vollständige Assimilation der Zugewanderten an die deutsche Leitkultur.",
+        "c": "Eine wechselseitige Anstrengung und Anpassungsbereitschaft sowohl der Migranten als auch der aufnehmenden Gesellschaft."
       },
-      "answer": "a",
+      "answer": "c",
       "points": 1,
       "explanation": {
-        "de": "Man hört: \"Einwanderungsgesellschaft\".",
-        "vi": "Người đó làm nghề gì (đoạn 1)?",
-        "key_evidence": "Einwanderungsgesellschaft",
-        "key_vocabulary": [
-          {
-            "word": "Einwanderungsgesellschaft",
-            "meaning": "Einwanderungsgesellschaft"
-          }
-        ]
+        "de": "Die Kernaussage am Ende des Podcasts ist, dass Integration 'keine Einbahnstraße' ist und 'Bereitschaft von beiden Seiten' erfordert. Option (c) ist die exakte Paraphrase dieses Prinzips der Gegenseitigkeit ('wechselseitige Anstrengung'). Option (a) ist eine lexikalische Falle; die Unterstützung für Kommunen wird zwar als wichtig erachtet, aber nicht als die fundamentalste Voraussetzung dargestellt. Option (b) widerspricht der Forderung, 'Vielfalt als Normalität' zu akzeptieren, was das Gegenteil von Assimilation ist.",
+        "vi": "Thông điệp cốt lõi ở cuối podcast là hội nhập 'không phải là con đường một chiều' và đòi hỏi 'sự sẵn sàng từ cả hai phía'. Lựa chọn (c) diễn giải chính xác nguyên tắc tương hỗ này ('nỗ lực từ hai phía'). Lựa chọn (a) là một cái bẫy từ vựng; sự hỗ trợ cho các đô thị được coi là quan trọng, nhưng không được trình bày như là điều kiện tiên quyết cơ bản nhất. Lựa chọn (b) mâu thuẫn với yêu cầu chấp nhận 'sự đa dạng như một điều bình thường', điều này trái ngược với sự đồng hóa.",
+        "key_evidence": "Integration ist keine Einbahnstraße: Sie erfordert Bereitschaft von beiden Seiten, von Zugewanderten und Aufnahmegesellschaft."
       }
     }
   ],
