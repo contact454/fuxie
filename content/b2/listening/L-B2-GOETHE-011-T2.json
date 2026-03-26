@@ -18,23 +18,24 @@
       "id": "Q1",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Wie heißt eine Person im Gespräch 1?",
+      "question": "Was erwartet Professor Keller bezüglich der traditionellen Fleischindustrie in der Zukunft?",
       "options": {
-        "a": "Maria",
-        "b": "Anna",
-        "c": "Dr"
+        "a": "Sie wird ihre führende Rolle beibehalten.",
+        "b": "Ihre Relevanz wird deutlich abnehmen.",
+        "c": "Sie wird sich vollständig auf In-vitro-Fleisch umstellen."
       },
-      "answer": "c",
+      "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Man hört: \"Dr\".",
-        "vi": "Một người trong đoạn 1 tên là gì?",
-        "key_evidence": "Dr",
+        "de": "Professor Keller sagt, dass die traditionelle Fleischindustrie an Bedeutung verlieren wird, was bedeutet, dass ihre Relevanz abnehmen wird.",
+        "vi": "Giáo sư Keller nói rằng ngành công nghiệp thịt truyền thống sẽ mất đi tầm quan trọng, điều này có nghĩa là mức độ liên quan của nó sẽ giảm đáng kể.",
+        "key_evidence": "Die traditionelle Fleischindustrie wird an Bedeutung verlieren.",
         "key_vocabulary": [
-          {
-            "word": "heißen",
-            "meaning": "to be called"
-          }
+          "traditionell",
+          "Fleischindustrie",
+          "Bedeutung verlieren",
+          "Relevanz",
+          "abnehmen"
         ]
       }
     },
@@ -42,23 +43,24 @@
       "id": "Q2",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Wie heißt eine Person (Gespräch 1)?",
+      "question": "Was schließt Professor Keller aus den Verkostungen von In-vitro-Fleisch?",
       "options": {
-        "a": "Freiburg",
-        "b": "Lübeck",
-        "c": "Hannover"
+        "a": "Es ist geschmacklich noch nicht ausgereift.",
+        "b": "Viele Konsumenten können es geschmacklich nicht von echtem Fleisch unterscheiden.",
+        "c": "Die Herstellung ist zu komplex, um es marktfähig zu machen."
       },
-      "answer": "a",
+      "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man den Namen \"Professor\".",
-        "vi": "Một người trong đoạn 1 tên là gì?",
-        "key_evidence": "Professor",
+        "de": "Professor Keller erwähnt, dass blinde Verkostungen zeigen, dass viele Testpersonen keinen Unterschied zwischen In-vitro-Fleisch und echtem Fleisch schmecken.",
+        "vi": "Giáo sư Keller đề cập rằng các cuộc thử nghiệm mù cho thấy nhiều người thử không thể phân biệt được hương vị giữa thịt nuôi cấy và thịt thật.",
+        "key_evidence": "Blinde Verkostungen zeigen, dass viele Testpersonen keinen Unterschied schmecken.",
         "key_vocabulary": [
-          {
-            "word": "heißen",
-            "meaning": "to be called"
-          }
+          "Verkostung",
+          "In-vitro-Fleisch",
+          "geschmacklich",
+          "unterscheiden",
+          "ausgereift"
         ]
       }
     },
@@ -66,19 +68,104 @@
       "id": "Q3",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Welches Thema wird besprochen (Gespräch 1)?",
+      "question": "Wie schlägt Professor Keller vor, tief verwurzelte Essgewohnheiten zu ändern?",
       "options": {
-        "a": "Reisen und Verkehr",
-        "b": "Alltag",
-        "c": "Bildung und Schule"
+        "a": "Durch strikte Verbote bestimmter Lebensmittel.",
+        "b": "Indem man attraktive pflanzliche Optionen fördert.",
+        "c": "Durch umfassende Aufklärung über die Risiken von Fleischkonsum."
       },
       "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Man hört: \"Alltag\".",
-        "vi": "Đoạn hội thoại 1 nói về chủ đề gì?",
-        "key_evidence": "Alltag",
-        "key_vocabulary": []
+        "de": "Professor Keller erklärt, dass positive Anreize statt Verbote helfen. Wenn pflanzliche Alternativen günstiger und leckerer werden, steigen viele freiwillig um.",
+        "vi": "Giáo sư Keller giải thích rằng việc khuyến khích tích cực thay vì cấm đoán sẽ có ích. Nếu các lựa chọn thay thế từ thực vật trở nên rẻ hơn và ngon hơn, nhiều người sẽ tự nguyện chuyển đổi.",
+        "key_evidence": "Durch positive Anreize statt Verbote. Wenn pflanzliche Alternativen günstiger und leckerer werden, steigen viele freiwillig um.",
+        "key_vocabulary": [
+          "Essgewohnheiten",
+          "ändern",
+          "Anreize",
+          "Verbote",
+          "pflanzlich",
+          "fördern"
+        ]
+      }
+    },
+    {
+      "id": "Q4",
+      "gespraech": 1,
+      "type": "mc_abc",
+      "question": "Welche Bedeutung misst Professor Keller den Supermärkten bei der Ernährungsumstellung bei?",
+      "options": {
+        "a": "Sie haben nur einen geringen Einfluss auf die Kaufentscheidungen.",
+        "b": "Ihre Macht liegt in der Gestaltung des Angebots und der Präsentation.",
+        "c": "Sie sollten sich auf den Verkauf von regionalen Produkten beschränken."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Professor Keller betont, dass Supermärkte eine enorme Rolle spielen, da sie bestimmen, was im Regal steht und wie es platziert wird.",
+        "vi": "Giáo sư Keller nhấn mạnh rằng các siêu thị đóng một vai trò to lớn, vì họ quyết định những gì có trên kệ và cách nó được sắp xếp.",
+        "key_evidence": "Eine enorme Rolle! Sie bestimmen, was im Regal steht und wie es platziert wird.",
+        "key_vocabulary": [
+          "Bedeutung",
+          "Ernährungsumstellung",
+          "Macht",
+          "Gestaltung",
+          "Angebot",
+          "Präsentation"
+        ]
+      }
+    },
+    {
+      "id": "Q5",
+      "gespraech": 1,
+      "type": "mc_abc",
+      "question": "Was ist Professor Kellers Meinung zur Beliebtheit exotischer Superfoods?",
+      "options": {
+        "a": "Sie sind aufgrund ihrer einzigartigen Nährwerte unverzichtbar.",
+        "b": "Ihr Erfolg ist hauptsächlich auf geschicktes Marketing und Profitstreben zurückzuführen.",
+        "c": "Sie tragen maßgeblich zur Reduzierung des Fleischkonsums bei."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Professor Keller erklärt, dass der Trend der Superfoods größtenteils Marketing ist und die Lebensmittelindustrie mit dem Exotischen mehr Profit machen kann.",
+        "vi": "Giáo sư Keller giải thích rằng xu hướng siêu thực phẩm chủ yếu là tiếp thị và ngành công nghiệp thực phẩm có thể kiếm được nhiều lợi nhuận hơn từ những sản phẩm ngoại lai.",
+        "key_evidence": "Das ist größtenteils Marketing. [...] Weil die Lebensmittelindustrie mit dem Exotischen mehr Profit machen kann als mit Leinsamen.",
+        "key_vocabulary": [
+          "Beliebtheit",
+          "exotisch",
+          "Superfoods",
+          "Marketing",
+          "Profitstreben",
+          "zurückzuführen"
+        ]
+      }
+    },
+    {
+      "id": "Q6",
+      "gespraech": 1,
+      "type": "mc_abc",
+      "question": "Welche grundlegende Botschaft möchte Professor Keller den Hörern am Ende des Interviews mitgeben?",
+      "options": {
+        "a": "Die Umstellung auf nachhaltige Ernährung ist eine individuelle Verantwortung.",
+        "b": "Die Politik muss strengere Gesetze für die Lebensmittelindustrie erlassen.",
+        "c": "Man sollte sich ausschließlich von pflanzlichen Produkten ernähren."
+      },
+      "answer": "a",
+      "points": 1,
+      "explanation": {
+        "de": "Professor Keller schließt das Interview mit der Aussage, dass jede Mahlzeit eine Entscheidung für oder gegen unsere Zukunft ist, was die individuelle Verantwortung betont.",
+        "vi": "Giáo sư Keller kết thúc cuộc phỏng vấn bằng cách nói rằng mỗi bữa ăn là một quyết định cho hoặc chống lại tương lai của chúng ta, điều này nhấn mạnh trách nhiệm cá nhân.",
+        "key_evidence": "Denken Sie daran: Jede Mahlzeit ist eine Entscheidung für oder gegen unsere Zukunft.",
+        "key_vocabulary": [
+          "Botschaft",
+          "grundlegend",
+          "nachhaltig",
+          "Ernährung",
+          "individuell",
+          "Verantwortung"
+        ]
       }
     }
   ],

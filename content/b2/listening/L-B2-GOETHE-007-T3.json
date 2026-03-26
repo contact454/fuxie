@@ -16,68 +16,148 @@
   "questions": [
     {
       "id": "Q1",
-      "gespraech": 1,
+      "item": 1,
       "type": "mc_abc",
-      "question": "Welches Thema wird besprochen (Gespräch 1)?",
+      "question": "Wer sagt das: 'Als Psychologin sehe ich einen klaren Zusammenhang zwischen exzessiver Social-Media-Nutzung und psychischen Problemen.'?",
       "options": {
-        "a": "Wohnung und Haushalt",
-        "b": "Gesundheit und Körper",
-        "c": "Reisen und Verkehr"
+        "a": "Moderator",
+        "b": "Frau Dr. Hoffmann",
+        "c": "Herr Weber"
       },
       "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Man hört: \"Gesundheit und Körper\".",
-        "vi": "Đoạn hội thoại 1 nói về chủ đề gì?",
-        "key_evidence": "Gesundheit und Körper",
-        "key_vocabulary": []
+        "de": "Frau Dr. Hoffmann, die Psychologin, äußert diese professionelle Einschätzung zu Beginn der Diskussion.",
+        "vi": "Bà Dr. Hoffmann, nhà tâm lý học, đưa ra đánh giá chuyên môn này khi bắt đầu cuộc thảo luận.",
+        "key_evidence": "Als Psychologin sehe ich einen klaren Zusammenhang zwischen exzessiver Social-Media-Nutzung und psychischen Problemen.",
+        "key_vocabulary": [
+          "Psychologin",
+          "Zusammenhang",
+          "exzessiv",
+          "Nutzung",
+          "psychisch"
+        ]
       }
     },
     {
       "id": "Q2",
-      "gespraech": 1,
+      "item": 2,
       "type": "mc_abc",
-      "question": "Wie heißt eine Person im Gespräch 1?",
+      "question": "Wer sagt das: 'Korrelation ist nicht Kausalität. Vielleicht nutzen Menschen mit Problemen einfach mehr Social Media.'?",
       "options": {
-        "a": "Dr",
-        "b": "Katja",
-        "c": "Martin"
+        "a": "Moderator",
+        "b": "Frau Dr. Hoffmann",
+        "c": "Herr Weber"
       },
-      "answer": "a",
+      "answer": "c",
       "points": 1,
       "explanation": {
-        "de": "Man hört: \"Dr\".",
-        "vi": "Một người trong đoạn 1 tên là gì?",
-        "key_evidence": "Dr",
+        "de": "Herr Weber, der Vertreter der Social-Media-Plattform, argumentiert gegen einen direkten kausalen Zusammenhang.",
+        "vi": "Ông Weber, đại diện của nền tảng mạng xã hội, lập luận chống lại mối quan hệ nhân quả trực tiếp.",
+        "key_evidence": "Korrelation ist nicht Kausalität. Vielleicht nutzen Menschen mit Problemen einfach mehr Social Media.",
         "key_vocabulary": [
-          {
-            "word": "heißen",
-            "meaning": "to be called"
-          }
+          "Korrelation",
+          "Kausalität",
+          "nutzen",
+          "Probleme"
         ]
       }
     },
     {
       "id": "Q3",
-      "gespraech": 1,
+      "item": 3,
       "type": "mc_abc",
-      "question": "Wie heißt eine Person (Gespräch 1)?",
+      "question": "Wer sagt das: 'Das sind kosmetische Maßnahmen an einem System, das von süchtig machendem Design profitiert.'?",
       "options": {
-        "a": "Malaysia",
-        "b": "Berlin",
-        "c": "Mexiko"
+        "a": "Moderator",
+        "b": "Frau Dr. Hoffmann",
+        "c": "Herr Weber"
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Frau Dr. Hoffmann kritisiert die von Herrn Weber genannten Schutzmaßnahmen als unzureichend und oberflächlich.",
+        "vi": "Bà Dr. Hoffmann chỉ trích các biện pháp bảo vệ mà ông Weber đề cập là không đủ và hời hợt.",
+        "key_evidence": "Das sind kosmetische Maßnahmen an einem System, das von süchtig machendem Design profitiert.",
+        "key_vocabulary": [
+          "kosmetisch",
+          "Maßnahmen",
+          "System",
+          "süchtig machend",
+          "Design",
+          "profitieren"
+        ]
+      }
+    },
+    {
+      "id": "Q4",
+      "item": 4,
+      "type": "mc_abc",
+      "question": "Wer sagt das: 'Sucht ist ein starkes Wort. Unsere Nutzer genießen die Plattform und profitieren davon.'?",
+      "options": {
+        "a": "Moderator",
+        "b": "Frau Dr. Hoffmann",
+        "c": "Herr Weber"
+      },
+      "answer": "c",
+      "points": 1,
+      "explanation": {
+        "de": "Herr Weber verteidigt die Plattform und lehnt den Begriff 'Sucht' in diesem Kontext ab.",
+        "vi": "Ông Weber bảo vệ nền tảng và từ chối thuật ngữ 'nghiện' trong ngữ cảnh này.",
+        "key_evidence": "Sucht ist ein starkes Wort. Unsere Nutzer genießen die Plattform und profitieren davon.",
+        "key_vocabulary": [
+          "Sucht",
+          "starkes Wort",
+          "genießen",
+          "profitieren"
+        ]
+      }
+    },
+    {
+      "id": "Q5",
+      "item": 5,
+      "type": "mc_abc",
+      "question": "Wer sagt das: 'Kein Smartphone vor dem zwölften Lebensjahr. Danach klare Regeln und gemeinsame Medienzeit.'?",
+      "options": {
+        "a": "Moderator",
+        "b": "Frau Dr. Hoffmann",
+        "c": "Herr Weber"
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Frau Dr. Hoffmann gibt als Expertin konkrete Empfehlungen für Eltern bezüglich der Smartphone-Nutzung von Kindern.",
+        "vi": "Bà Dr. Hoffmann, với tư cách là chuyên gia, đưa ra các khuyến nghị cụ thể cho phụ huynh về việc sử dụng điện thoại thông minh của trẻ em.",
+        "key_evidence": "Kein Smartphone vor dem zwölften Lebensjahr. Danach klare Regeln und gemeinsame Medienzeit.",
+        "key_vocabulary": [
+          "Smartphone",
+          "Lebensjahr",
+          "Regeln",
+          "Medienzeit"
+        ]
+      }
+    },
+    {
+      "id": "Q6",
+      "item": 6,
+      "type": "mc_abc",
+      "question": "Wer sagt das: 'Ich würde mir wünschen, dass diese Zusammenarbeit transparenter und verbindlicher wird.'?",
+      "options": {
+        "a": "Moderator",
+        "b": "Frau Dr. Hoffmann",
+        "c": "Herr Weber"
       },
       "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man den Namen \"Dr\".",
-        "vi": "Một người trong đoạn 1 tên là gì?",
-        "key_evidence": "Dr",
+        "de": "Der Moderator äußert am Ende der Diskussion seinen Wunsch nach verbesserter Transparenz und Verbindlichkeit in der Zusammenarbeit.",
+        "vi": "Người điều hành bày tỏ mong muốn về sự minh bạch và ràng buộc tốt hơn trong hợp tác vào cuối cuộc thảo luận.",
+        "key_evidence": "Ich würde mir wünschen, dass diese Zusammenarbeit transparenter und verbindlicher wird.",
         "key_vocabulary": [
-          {
-            "word": "heißen",
-            "meaning": "to be called"
-          }
+          "wünschen",
+          "Zusammenarbeit",
+          "transparenter",
+          "verbindlicher"
         ]
       }
     }

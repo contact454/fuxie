@@ -16,81 +16,166 @@
   "questions": [
     {
       "id": "Q1",
-      "item": 1,
+      "gespraech": 1,
       "type": "richtig_falsch",
-      "statement": "Die Person kommt aus Freiburg.",
+      "question": "Die zweite Sprecherin ist der Meinung, dass Second-Hand-Kleidung oft von schlechter Qualität ist.",
       "answer": "falsch",
       "points": 1,
       "explanation": {
-        "de": "Falsch. Die Aussage stimmt nicht mit dem Hörtext überein.",
-        "vi": "Sai.",
-        "key_evidence": "Die Person kommt aus Freiburg.",
+        "de": "Die zweite Sprecherin widerspricht dieser Annahme explizit mit 'Im Gegenteil, viele Sachen wurden kaum getragen.'",
+        "vi": "Người nói thứ hai đã bác bỏ giả định này một cách rõ ràng với câu 'Ngược lại, nhiều món đồ hầu như chưa được mặc.'",
+        "key_evidence": "Im Gegenteil, viele Sachen wurden kaum getragen.",
         "key_vocabulary": []
       }
     },
     {
       "id": "Q2",
-      "item": 2,
-      "type": "richtig_falsch",
-      "statement": "Restaurants wird erwähnt.",
-      "answer": "richtig",
+      "gespraech": 1,
+      "type": "mc_abc",
+      "question": "Was schließt die zweite Sprecherin aus ihrer Erfahrung mit Second-Hand-Kleidung?",
+      "options": {
+        "a": "Man kann damit viel Geld sparen und gleichzeitig die Umwelt schonen.",
+        "b": "Die Qualität von gebrauchter Kleidung ist oft besser als erwartet.",
+        "c": "Designerstücke sind auf Online-Plattformen immer noch zu teuer."
+      },
+      "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Richtig. Die Aussage stimmt mit dem Hörtext überein.",
-        "vi": "Đúng.",
-        "key_evidence": "Restaurants wird erwähnt.",
+        "de": "Die zweite Sprecherin erwähnt, dass sie Designerstücke für einen Bruchteil des Preises findet und im Januar dreihundert Euro gespart hat, was die finanziellen und ökologischen Vorteile unterstreicht.",
+        "vi": "Người nói thứ hai đề cập rằng cô ấy tìm thấy đồ thiết kế với giá chỉ bằng một phần nhỏ và đã tiết kiệm được ba trăm Euro vào tháng Giêng, điều này nhấn mạnh lợi ích tài chính và môi trường.",
+        "key_evidence": "Auf Vinted finde ich teilweise Designerstücke für einen Bruchteil des Originalpreises. ... Im Januar habe ich dreihundert Euro gespart im Vergleich zum Vorjahr.",
         "key_vocabulary": []
       }
     },
     {
       "id": "Q3",
-      "item": 3,
+      "gespraech": 2,
       "type": "richtig_falsch",
-      "statement": "Die Person kommt aus Leipzig.",
+      "question": "Die zweite Sprecherin nutzt die App 'Too Good To Go' hauptsächlich, um Restaurants zu unterstützen.",
       "answer": "falsch",
       "points": 1,
       "explanation": {
-        "de": "Falsch. Die Aussage stimmt nicht mit dem Hörtext überein.",
-        "vi": "Sai.",
-        "key_evidence": "Die Person kommt aus Leipzig.",
+        "de": "Die zweite Sprecherin nutzt die App, um günstiges Essen zu bekommen ('Sushi im Wert von zwanzig Euro für vier Euro'). Sie erkennt zwar an, dass Restaurants auch profitieren, aber ihr Hauptmotiv ist der persönliche Vorteil des günstigen Essens.",
+        "vi": "Người nói thứ hai sử dụng ứng dụng để mua thức ăn giá rẻ ('Sushi trị giá hai mươi Euro với giá bốn Euro'). Mặc dù cô ấy thừa nhận rằng các nhà hàng cũng được hưởng lợi, nhưng động cơ chính của cô ấy là lợi ích cá nhân từ thức ăn giá rẻ.",
+        "key_evidence": "Ich nutze die App regelmäßig. Gestern habe ich Sushi im Wert von zwanzig Euro für vier Euro bekommen.",
         "key_vocabulary": []
       }
     },
     {
       "id": "Q4",
-      "gespraech": 1,
+      "gespraech": 2,
       "type": "mc_abc",
-      "question": "Welches Thema wird besprochen (Gespräch 1)?",
+      "question": "Welche Einstellung vertritt die zweite Sprecherin zum Thema Lebensmittelverschwendung?",
       "options": {
-        "a": "Freizeit und Hobbys",
-        "b": "Einkaufen und Geld",
-        "c": "Familie und Freunde"
+        "a": "Sie findet es inakzeptabel, wie viele Lebensmittel weggeworfen werden.",
+        "b": "Sie glaubt, dass die meisten geretteten Lebensmittel nicht mehr genießbar sind.",
+        "c": "Sie ist der Meinung, dass die Supermärkte die Hauptverantwortung tragen."
       },
-      "answer": "b",
+      "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Man hört: \"Einkaufen und Geld\".",
-        "vi": "Đoạn hội thoại 1 nói về chủ đề gì?",
-        "key_evidence": "Einkaufen und Geld",
+        "de": "Die zweite Sprecherin reagiert auf die Information über weggeworfene Lebensmittel mit 'Das ist unfassbar', was ihre Ablehnung und Empörung über die Verschwendung zeigt.",
+        "vi": "Người nói thứ hai phản ứng với thông tin về thực phẩm bị vứt bỏ bằng câu 'Thật không thể tin được', điều này cho thấy sự phản đối và phẫn nộ của cô ấy về sự lãng phí.",
+        "key_evidence": "In Deutschland werden jährlich elf Millionen Tonnen Lebensmittel weggeworfen. Das ist unfassbar.",
         "key_vocabulary": []
       }
     },
     {
       "id": "Q5",
-      "gespraech": 1,
+      "gespraech": 3,
+      "type": "richtig_falsch",
+      "question": "Die zweite Sprecherin ist der Ansicht, dass der Besitz von Werkzeugen unnötig ist, wenn man sie selten braucht.",
+      "answer": "richtig",
+      "points": 1,
+      "explanation": {
+        "de": "Die zweite Sprecherin äußert diese Ansicht direkt mit der Frage: 'Ich brauche einmal im Jahr eine Bohrmaschine. Warum sollte ich eine kaufen?'",
+        "vi": "Người nói thứ hai bày tỏ quan điểm này trực tiếp bằng câu hỏi: 'Tôi chỉ cần máy khoan mỗi năm một lần. Tại sao tôi phải mua một cái?'",
+        "key_evidence": "Ich brauche einmal im Jahr eine Bohrmaschine. Warum sollte ich eine kaufen?",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q6",
+      "gespraech": 3,
       "type": "mc_abc",
-      "question": "Welches Thema wird besprochen (Gespräch 1)?",
+      "question": "Welche Sorge der zweiten Sprecherin wird durch die Sharing-Community gelöst?",
       "options": {
-        "a": "Bayreuth",
-        "b": "Stuttgart",
-        "c": "Moskau"
+        "a": "Die hohen Anschaffungskosten für selten genutzte Geräte.",
+        "b": "Die Frage der Haftung bei Beschädigung von ausgeliehenen Gegenständen.",
+        "c": "Die begrenzte Auswahl an verfügbaren Werkzeugen und Geräten."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Die zweite Sprecherin fragt explizit: 'Und wenn etwas kaputt geht? Wer zahlt dann für die Reparatur oder den Ersatz?', woraufhin der erste Sprecher die Existenz einer Versicherung erklärt.",
+        "vi": "Người nói thứ hai hỏi rõ ràng: 'Và nếu có gì đó hỏng hóc? Ai sẽ trả tiền sửa chữa hoặc thay thế?', sau đó người nói thứ nhất giải thích về sự tồn tại của bảo hiểm.",
+        "key_evidence": "Und wenn etwas kaputt geht? Wer zahlt dann für die Reparatur oder den Ersatz? ... Es gibt eine Versicherung, die durch einen kleinen Jahresbeitrag von zwanzig Euro finanziert wird.",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q7",
+      "gespraech": 4,
+      "type": "richtig_falsch",
+      "question": "Der erste Sprecher ist der Meinung, dass Fair Fashion bereits in der gesamten Gesellschaft akzeptiert ist.",
+      "answer": "falsch",
+      "points": 1,
+      "explanation": {
+        "de": "Der erste Sprecher sagt, dass sich das Konzept 'Weniger ist mehr' in der Konsumgesellschaft 'erst noch durchsetzen' muss, was bedeutet, dass es noch nicht vollständig akzeptiert ist.",
+        "vi": "Người nói thứ nhất nói rằng khái niệm 'Ít hơn là nhiều hơn' 'vẫn còn phải được chấp nhận' trong xã hội tiêu dùng, điều này có nghĩa là nó chưa được chấp nhận hoàn toàn.",
+        "key_evidence": "Das Konzept 'Weniger ist mehr' muss sich in unserer Konsumgesellschaft erst noch durchsetzen.",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q8",
+      "gespraech": 4,
+      "type": "mc_abc",
+      "question": "Was schlägt die zweite Sprecherin vor, um die höheren Kosten von Fair Fashion auszugleichen?",
+      "options": {
+        "a": "Man sollte weniger Kleidung kaufen, aber dafür auf bessere Qualität achten.",
+        "b": "Man sollte nur noch Second-Hand-Kleidung kaufen, um Geld zu sparen.",
+        "c": "Man sollte auf den Kauf von T-Shirts verzichten, da sie zu viel Wasser verbrauchen."
       },
       "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Das Hauptthema ist \"Einkaufen\".",
-        "vi": "Đoạn hội thoại 1 nói về chủ đề gì?",
-        "key_evidence": "Einkaufen",
+        "de": "Die zweite Sprecherin schlägt vor: 'Wenn man seltener, aber besser kauft, gibt man am Ende trotzdem nicht viel mehr Geld aus.'",
+        "vi": "Người nói thứ hai đề xuất: 'Nếu mua ít hơn nhưng chất lượng tốt hơn, cuối cùng bạn vẫn không chi nhiều tiền hơn.'",
+        "key_evidence": "Wenn man seltener, aber besser kauft, gibt man am Ende trotzdem nicht viel mehr Geld aus.",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q9",
+      "gespraech": 5,
+      "type": "richtig_falsch",
+      "question": "Die zweite Sprecherin ist besorgt, dass nachhaltige Geldanlagen oft nicht wirklich umweltfreundlich sind.",
+      "answer": "richtig",
+      "points": 1,
+      "explanation": {
+        "de": "Die zweite Sprecherin äußert ihre Sorge direkt mit der Frage: 'Aber ist das nicht nur Greenwashing? Viele sogenannte grüne Fonds enthalten trotzdem fossile Energieunternehmen.'",
+        "vi": "Người nói thứ hai bày tỏ lo ngại của mình trực tiếp bằng câu hỏi: 'Nhưng đó không phải chỉ là tẩy xanh sao? Nhiều quỹ được gọi là xanh vẫn chứa các công ty năng lượng hóa thạch.'",
+        "key_evidence": "Aber ist das nicht nur Greenwashing? Viele sogenannte grüne Fonds enthalten trotzdem fossile Energieunternehmen.",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q10",
+      "gespraech": 5,
+      "type": "mc_abc",
+      "question": "Welche Schlussfolgerung zieht die zweite Sprecherin am Ende des Gesprächs?",
+      "options": {
+        "a": "Die Rendite von nachhaltigen Geldanlagen ist oft enttäuschend.",
+        "b": "Es gibt keinen überzeugenden Grund, nicht nachhaltig zu investieren.",
+        "c": "Greenwashing ist das größte Problem bei grünen Geldanlagen."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Nachdem sie erfahren hat, dass nachhaltige Fonds langfristig mindestens genauso gut abschneiden, schließt die zweite Sprecherin: 'Dann gibt es ja keinen Grund, nicht nachhaltig zu investieren.'",
+        "vi": "Sau khi biết rằng các quỹ bền vững hoạt động tốt ít nhất là tương đương về lâu dài, người nói thứ hai kết luận: 'Vậy thì không có lý do gì để không đầu tư bền vững.'",
+        "key_evidence": "Das überrascht mich positiv! Dann gibt es ja keinen Grund, nicht nachhaltig zu investieren.",
         "key_vocabulary": []
       }
     }

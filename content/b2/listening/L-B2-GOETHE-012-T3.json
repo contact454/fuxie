@@ -16,68 +16,140 @@
   "questions": [
     {
       "id": "Q1",
-      "gespraech": 1,
+      "item": 1,
       "type": "mc_abc",
-      "question": "Welches Thema wird besprochen (Gespräch 1)?",
+      "question": "Wer sagt das: 'Die Mietpreise explodieren und für Normalverdiener wird Wohnen in der Stadt unbezahlbar.'?",
       "options": {
-        "a": "Einkaufen und Geld",
-        "b": "Freizeit und Hobbys",
-        "c": "Gesundheit und Körper"
+        "a": "Moderator",
+        "b": "Herr Schmidt",
+        "c": "Frau Lehmann"
       },
-      "answer": "a",
+      "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Man hört: \"Einkaufen und Geld\".",
-        "vi": "Đoạn hội thoại 1 nói về chủ đề gì?",
-        "key_evidence": "Einkaufen und Geld",
-        "key_vocabulary": []
+        "de": "Herr Schmidt (Gast_A) äußert diese Meinung zu Beginn der Diskussion.",
+        "vi": "Ông Schmidt (Khách mời A) bày tỏ quan điểm này khi bắt đầu cuộc thảo luận.",
+        "key_evidence": "Gast_A: Auf jeden Fall! Die Mietpreise explodieren und für Normalverdiener wird Wohnen in der Stadt unbezahlbar.",
+        "key_vocabulary": [
+          "explodieren",
+          "Normalverdiener",
+          "unbezahlbar"
+        ]
       }
     },
     {
       "id": "Q2",
-      "gespraech": 1,
+      "item": 2,
       "type": "mc_abc",
-      "question": "Wie heißt eine Person im Gespräch 1?",
+      "question": "Wer sagt das: 'Ich finde, wir haben vor allem ein Problem bei der Nutzung vorhandener Flächen.'?",
       "options": {
-        "a": "Petra",
-        "b": "Katja",
-        "c": "Schmidt"
+        "a": "Moderator",
+        "b": "Herr Schmidt",
+        "c": "Frau Lehmann"
       },
       "answer": "c",
       "points": 1,
       "explanation": {
-        "de": "Man hört: \"Schmidt\".",
-        "vi": "Một người trong đoạn 1 tên là gì?",
-        "key_evidence": "Schmidt",
+        "de": "Frau Lehmann (Gast_B) bringt die Perspektive der Flächennutzung ins Spiel.",
+        "vi": "Bà Lehmann (Khách mời B) đưa ra quan điểm về việc sử dụng các diện tích hiện có.",
+        "key_evidence": "Gast_B: Ich finde, wir haben vor allem ein Problem bei der Nutzung vorhandener Flächen.",
         "key_vocabulary": [
-          {
-            "word": "heißen",
-            "meaning": "to be called"
-          }
+          "vorhanden",
+          "Flächennutzung",
+          "Problem"
         ]
       }
     },
     {
       "id": "Q3",
-      "gespraech": 1,
+      "item": 3,
       "type": "mc_abc",
-      "question": "Wie heißt eine Person (Gespräch 1)?",
+      "question": "Wer sagt das: 'Wir besitzen das Haus gemeinsam. Niemand kann die Miete erhöhen oder uns kündigen.'?",
       "options": {
-        "a": "Norwegen",
-        "b": "Oldenburg",
-        "c": "Dänemark"
+        "a": "Moderator",
+        "b": "Herr Schmidt",
+        "c": "Frau Lehmann"
       },
       "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man den Namen \"Schmidt\".",
-        "vi": "Một người trong đoạn 1 tên là gì?",
-        "key_evidence": "Schmidt",
+        "de": "Der Moderator fasst hier die Vorteile des Wohnprojekts von Herrn Schmidt zusammen.",
+        "vi": "Người điều hành tóm tắt những lợi ích của dự án nhà ở của ông Schmidt.",
+        "key_evidence": "Moderator: Wir besitzen das Haus gemeinsam. Niemand kann die Miete erhöhen oder uns kündigen.",
         "key_vocabulary": [
-          {
-            "word": "heißen",
-            "meaning": "to be called"
-          }
+          "besitzen",
+          "gemeinsam",
+          "kündigen"
+        ]
+      }
+    },
+    {
+      "id": "Q4",
+      "item": 4,
+      "type": "mc_abc",
+      "question": "Wer sagt das: 'Es ist ein hervorragendes Konzept, aber es löst nicht das Grundproblem des fehlenden Wohnraums.'?",
+      "options": {
+        "a": "Moderator",
+        "b": "Herr Schmidt",
+        "c": "Frau Lehmann"
+      },
+      "answer": "c",
+      "points": 1,
+      "explanation": {
+        "de": "Frau Lehmann (Gast_B) bewertet das genossenschaftliche Modell kritisch im Hinblick auf das Gesamtproblem.",
+        "vi": "Bà Lehmann (Khách mời B) đánh giá mô hình hợp tác xã một cách phê phán về vấn đề tổng thể.",
+        "key_evidence": "Gast_B: Es ist ein hervorragendes Konzept, aber es löst nicht das Grundproblem des fehlenden Wohnraums.",
+        "key_vocabulary": [
+          "hervorragend",
+          "Konzept",
+          "Grundproblem",
+          "fehlend"
+        ]
+      }
+    },
+    {
+      "id": "Q5",
+      "item": 5,
+      "type": "mc_abc",
+      "question": "Wer sagt das: 'Natürlich, manchmal dauert es ewig, bis Entscheidungen getroffen werden, weil alle mitreden wollen.'?",
+      "options": {
+        "a": "Moderator",
+        "b": "Herr Schmidt",
+        "c": "Frau Lehmann"
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Herr Schmidt (Gast_A) beschreibt hier einen Nachteil des gemeinschaftlichen Wohnens aus eigener Erfahrung.",
+        "vi": "Ông Schmidt (Khách mời A) mô tả một nhược điểm của việc sống cộng đồng từ kinh nghiệm của bản thân.",
+        "key_evidence": "Gast_A: Natürlich, manchmal dauert es ewig, bis Entscheidungen getroffen werden, weil alle mitreden wollen.",
+        "key_vocabulary": [
+          "ewig",
+          "Entscheidungen treffen",
+          "mitreden"
+        ]
+      }
+    },
+    {
+      "id": "Q6",
+      "item": 6,
+      "type": "mc_abc",
+      "question": "Wer sagt das: 'Fangt klein an, sucht Gleichgesinnte und holt euch professionelle Beratung bei Genossenschaften.'?",
+      "options": {
+        "a": "Moderator",
+        "b": "Herr Schmidt",
+        "c": "Frau Lehmann"
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Herr Schmidt (Gast_A) gibt am Ende der Diskussion Ratschläge für die Gründung alternativer Wohnprojekte.",
+        "vi": "Ông Schmidt (Khách mời A) đưa ra lời khuyên cho việc thành lập các dự án nhà ở thay thế vào cuối cuộc thảo luận.",
+        "key_evidence": "Gast_A: Fangt klein an, sucht Gleichgesinnte und holt euch professionelle Beratung bei Genossenschaften.",
+        "key_vocabulary": [
+          "Gleichgesinnte",
+          "professionelle Beratung",
+          "Genossenschaften"
         ]
       }
     }

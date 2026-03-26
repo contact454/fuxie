@@ -16,81 +16,166 @@
   "questions": [
     {
       "id": "Q1",
-      "item": 1,
+      "gespraech": 1,
       "type": "richtig_falsch",
-      "statement": "Die Person kommt aus Amsterdam.",
-      "answer": "falsch",
+      "question": "Der zweite Sprecher zieht am Ende des Gesprächs in Betracht, selbst in ein Tiny House zu ziehen.",
+      "answer": "richtig",
       "points": 1,
       "explanation": {
-        "de": "Falsch. Die Aussage stimmt nicht mit dem Hörtext überein.",
-        "vi": "Sai.",
-        "key_evidence": "Die Person kommt aus Amsterdam.",
+        "de": "Der zweite Sprecher sagt am Ende des Gesprächs: 'Vielleicht sollte ich mir das mal anschauen', was seine Überlegung ausdrückt, selbst in ein Tiny House zu ziehen.",
+        "vi": "Người nói thứ hai ở cuối cuộc trò chuyện nói: 'Có lẽ tôi nên xem xét điều đó', thể hiện sự cân nhắc của anh ấy về việc tự mình chuyển đến một ngôi nhà nhỏ.",
+        "key_evidence": "Vielleicht sollte ich mir das mal anschauen.",
         "key_vocabulary": []
       }
     },
     {
       "id": "Q2",
-      "item": 2,
-      "type": "richtig_falsch",
-      "statement": "Tiny wird erwähnt.",
-      "answer": "richtig",
+      "gespraech": 1,
+      "type": "mc_abc",
+      "question": "Was beeindruckt den zweiten Sprecher am meisten am Tiny House der Familie Müller?",
+      "options": {
+        "a": "Die innovative Raumgestaltung mit Einbaumöbeln.",
+        "b": "Die überraschend niedrigen Mietkosten in Berlin.",
+        "c": "Die Befreiung von überflüssigem Besitz."
+      },
+      "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Richtig. Die Aussage stimmt mit dem Hörtext überein.",
-        "vi": "Đúng.",
-        "key_evidence": "Tiny wird erwähnt.",
+        "de": "Der zweite Sprecher ist beeindruckt von der günstigen Miete von achthundert Euro warm in Berlin, was ihn dazu bringt, das Konzept selbst in Betracht zu ziehen.",
+        "vi": "Người nói thứ hai ấn tượng với giá thuê rẻ 800 euro đã bao gồm chi phí sưởi ấm ở Berlin, điều này khiến anh ấy cân nhắc về khái niệm này.",
+        "key_evidence": "Doch, sogar sehr günstig! Achthundert Euro warm, weil die Grundfläche so klein ist. Das ist wirklich wenig für Berlin.",
         "key_vocabulary": []
       }
     },
     {
       "id": "Q3",
-      "item": 3,
+      "gespraech": 2,
       "type": "richtig_falsch",
-      "statement": "Die Person kommt aus Bayreuth.",
-      "answer": "falsch",
+      "question": "Der erste Sprecher betont, dass das Mehrgenerationenhaus der Nachbarn eine moderne Form des Zusammenlebens ist, die sich von traditionellen Großfamilien unterscheidet.",
+      "answer": "richtig",
       "points": 1,
       "explanation": {
-        "de": "Falsch. Die Aussage stimmt nicht mit dem Hörtext überein.",
-        "vi": "Sai.",
-        "key_evidence": "Die Person kommt aus Bayreuth.",
+        "de": "Der erste Sprecher erklärt, dass es sich um eine bewusste Wahl und Organisation mit separaten Wohneinheiten handelt, im Gegensatz zu den traditionellen Großfamilien von früher.",
+        "vi": "Người nói thứ nhất giải thích rằng đây là một lựa chọn và tổ chức có ý thức với các đơn vị nhà ở riêng biệt, khác với các gia đình lớn truyền thống ngày xưa.",
+        "key_evidence": "Ja, aber heute ist es bewusst gewählt und organisiert, mit separaten Wohneinheiten.",
         "key_vocabulary": []
       }
     },
     {
       "id": "Q4",
-      "gespraech": 1,
+      "gespraech": 2,
       "type": "mc_abc",
-      "question": "Welches Thema wird besprochen (Gespräch 1)?",
+      "question": "Welche Vorteile des Mehrgenerationenhauses hebt der zweite Sprecher besonders hervor?",
       "options": {
-        "a": "Einkaufen und Geld",
-        "b": "Freizeit und Hobbys",
-        "c": "Arbeit und Beruf"
+        "a": "Die Möglichkeit, Konflikte durch regelmäßige Treffen zu lösen.",
+        "b": "Die bewusste Entscheidung für separate Wohneinheiten.",
+        "c": "Die gleichzeitige Lösung von Einsamkeit im Alter und Kinderbetreuungsproblemen."
       },
-      "answer": "a",
+      "answer": "c",
       "points": 1,
       "explanation": {
-        "de": "Man hört: \"Einkaufen und Geld\".",
-        "vi": "Đoạn hội thoại 1 nói về chủ đề gì?",
-        "key_evidence": "Einkaufen und Geld",
+        "de": "Der zweite Sprecher fasst zusammen, dass das Konzept 'Einsamkeit im Alter und den Mangel an Kinderbetreuung gleichzeitig' bekämpft.",
+        "vi": "Người nói thứ hai tóm tắt rằng khái niệm này 'đồng thời chống lại sự cô đơn khi về già và thiếu hụt chăm sóc trẻ em'.",
+        "key_evidence": "Es bekämpft Einsamkeit im Alter und den Mangel an Kinderbetreuung gleichzeitig.",
         "key_vocabulary": []
       }
     },
     {
       "id": "Q5",
-      "gespraech": 1,
+      "gespraech": 3,
+      "type": "richtig_falsch",
+      "question": "Der zweite Sprecher äußert zunächst Bedenken hinsichtlich der Komplexität der Entscheidungsfindung in einer Baugruppe.",
+      "answer": "richtig",
+      "points": 1,
+      "explanation": {
+        "de": "Der zweite Sprecher fragt besorgt: 'Das klingt kompliziert. Wie einigen sich dreißig Leute auf eine Badezimmerfarbe?', was seine anfänglichen Bedenken zeigt.",
+        "vi": "Người nói thứ hai lo lắng hỏi: 'Nghe có vẻ phức tạp. Làm thế nào ba mươi người có thể thống nhất về màu sắc phòng tắm?', điều này cho thấy những lo ngại ban đầu của anh ấy.",
+        "key_evidence": "Das klingt kompliziert. Wie einigen sich dreißig Leute auf eine Badezimmerfarbe?",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q6",
+      "gespraech": 3,
       "type": "mc_abc",
-      "question": "Welches Thema wird besprochen (Gespräch 1)?",
+      "question": "Welchen finanziellen Vorteil bietet eine Baugruppe laut dem ersten Sprecher?",
       "options": {
-        "a": "Thailand",
-        "b": "Berlin",
-        "c": "Brasilien"
+        "a": "Man spart die Kosten für die ökologische Bauweise.",
+        "b": "Die Miete ist deutlich niedriger als bei einer Eigentumswohnung.",
+        "c": "Man vermeidet die Margen von Bauträgern und Maklern."
       },
       "answer": "c",
       "points": 1,
       "explanation": {
-        "de": "Das Hauptthema ist \"Einkaufen\".",
-        "vi": "Đoạn hội thoại 1 nói về chủ đề gì?",
-        "key_evidence": "Einkaufen",
+        "de": "Der erste Sprecher erklärt, dass man etwa zwanzig Prozent günstiger baut, 'weil man die Bauträger-Marge und den Makler spart'.",
+        "vi": "Người nói thứ nhất giải thích rằng việc xây dựng rẻ hơn khoảng hai mươi phần trăm 'vì bạn tiết kiệm được lợi nhuận của nhà phát triển và môi giới'.",
+        "key_evidence": "Ja, etwa zwanzig Prozent günstiger, weil man die Bauträger-Marge und den Makler spart.",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q7",
+      "gespraech": 4,
+      "type": "richtig_falsch",
+      "question": "Der zweite Sprecher geht zunächst davon aus, dass ein Hausboot ständig in Bewegung ist und Schwindel verursachen könnte.",
+      "answer": "richtig",
+      "points": 1,
+      "explanation": {
+        "de": "Der zweite Sprecher fragt: 'Wird ihm nicht schwindelig bei dem ganzen Geschaukel?', was seine Annahme über die Bewegung eines Hausbootes zeigt.",
+        "vi": "Người nói thứ hai hỏi: 'Anh ấy không bị chóng mặt vì sự rung lắc đó sao?', điều này cho thấy giả định của anh ấy về chuyển động của một chiếc thuyền nhà.",
+        "key_evidence": "Wird ihm nicht schwindelig bei dem ganzen Geschaukel?",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q8",
+      "gespraech": 4,
+      "type": "mc_abc",
+      "question": "Was ist das Besondere am Liegeplatz des Hausbootes von Sprecher1_4s Bruder?",
+      "options": {
+        "a": "Er befindet sich auf einem ruhigen See in Brandenburg.",
+        "b": "Er bietet eine zentrale Lage in Berlin mit Stadtblick.",
+        "c": "Er ist überraschend günstig, da er außerhalb des Stadtzentrums liegt."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Der erste Sprecher beschreibt den Liegeplatz als 'mitten in Berlin auf der Spree' in Kreuzberg 'mit Blick auf die Stadt'.",
+        "vi": "Người nói thứ nhất mô tả bến đỗ là 'ở giữa Berlin trên sông Spree' ở Kreuzberg 'với tầm nhìn ra thành phố'.",
+        "key_evidence": "Nein, mitten in Berlin auf der Spree! Er hat einen Liegeplatz in Kreuzberg mit Blick auf die Stadt.",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q9",
+      "gespraech": 5,
+      "type": "richtig_falsch",
+      "question": "Der zweite Sprecher sieht Co-Living als eine dauerhafte Wohnlösung für alle Altersgruppen.",
+      "answer": "falsch",
+      "points": 1,
+      "explanation": {
+        "de": "Der zweite Sprecher äußert, dass Co-Living 'gut für ein bis zwei Jahre' funktioniert, aber 'langfristig braucht man seine Privatsphäre', was gegen eine dauerhafte Lösung spricht.",
+        "vi": "Người nói thứ hai bày tỏ rằng Co-Living hoạt động 'tốt trong một đến hai năm', nhưng 'về lâu dài, người ta cần sự riêng tư', điều này mâu thuẫn với một giải pháp lâu dài.",
+        "key_evidence": "Ich glaube, das Konzept funktioniert gut für ein bis zwei Jahre, aber langfristig braucht man seine Privatsphäre.",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q10",
+      "gespraech": 5,
+      "type": "mc_abc",
+      "question": "Was unterscheidet Co-Living laut den Sprechern von einer normalen Studenten-WG?",
+      "options": {
+        "a": "Es ist ausschließlich für Studenten gedacht.",
+        "b": "Es bietet professionellen Service und eine bessere Ausstattung.",
+        "c": "Man teilt sich nur das Badezimmer, nicht Küche oder Wohnzimmer."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Der zweite Sprecher beschreibt Co-Living als 'wie eine Studenten-WG, nur professioneller und mit mehr Service', und der erste Sprecher nennt 'Reinigung, schnelles Internet und manchmal sogar Frühstück inklusive' als Beispiele für diesen Service.",
+        "vi": "Người nói thứ hai mô tả Co-Living là 'giống như một căn hộ chung của sinh viên, nhưng chuyên nghiệp hơn và có nhiều dịch vụ hơn', và người nói thứ nhất đưa ra 'dọn dẹp, internet tốc độ cao và đôi khi bao gồm cả bữa sáng' làm ví dụ cho dịch vụ này.",
+        "key_evidence": "Ja, das ist wie eine Studenten-WG, nur professioneller und mit mehr Service. [...] Dafür bekommt man Service: Reinigung, schnelles Internet und manchmal sogar Frühstück inklusive.",
         "key_vocabulary": []
       }
     }

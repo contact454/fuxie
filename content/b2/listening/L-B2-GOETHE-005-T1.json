@@ -16,86 +16,212 @@
   "questions": [
     {
       "id": "Q1",
-      "item": 1,
+      "gespraech": 1,
       "type": "richtig_falsch",
-      "statement": "Die Person kommt aus Nürnberg.",
-      "answer": "falsch",
+      "question": "Der zweite Sprecher ist der Meinung, dass Bargeld ihm hilft, seine Ausgaben besser zu kontrollieren.",
+      "answer": "richtig",
       "points": 1,
       "explanation": {
-        "de": "Falsch. Die Aussage stimmt nicht mit dem Hörtext überein.",
-        "vi": "Sai.",
-        "key_evidence": "Die Person kommt aus Nürnberg.",
-        "key_vocabulary": []
+        "de": "Der zweite Sprecher sagt klar: 'Ich finde es einfacher, den Überblick über meine Ausgaben zu behalten, wenn ich Bargeld verwende.'",
+        "vi": "Người nói thứ hai nói rõ: 'Tôi thấy dễ dàng hơn để kiểm soát chi tiêu của mình khi tôi dùng tiền mặt.'",
+        "key_evidence": "Ich finde es einfacher, den Überblick über meine Ausgaben zu behalten, wenn ich Bargeld verwende.",
+        "key_vocabulary": [
+          "Überblick behalten",
+          "Ausgaben",
+          "verwenden"
+        ]
       }
     },
     {
       "id": "Q2",
-      "item": 2,
-      "type": "richtig_falsch",
-      "statement": "Berlin wird erwähnt.",
-      "answer": "richtig",
+      "gespraech": 1,
+      "type": "mc_abc",
+      "question": "Was schlussfolgert der erste Sprecher bezüglich des kontaktlosen Bezahlens?",
+      "options": {
+        "a": "Es ist bequemer und hygienischer als Bargeld.",
+        "b": "Es kann dazu führen, dass man mehr Geld ausgibt.",
+        "c": "Es bietet einen besseren Überblick über die Finanzen."
+      },
+      "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Richtig. Die Aussage stimmt mit dem Hörtext überein.",
-        "vi": "Đúng.",
-        "key_evidence": "Berlin wird erwähnt.",
-        "key_vocabulary": []
+        "de": "Der erste Sprecher stimmt dem zweiten Sprecher zu und sagt: 'Kontaktloses Bezahlen verleitet definitiv zum Mehr-Ausgeben.'",
+        "vi": "Người nói thứ nhất đồng ý với người nói thứ hai và nói: 'Thanh toán không tiếp xúc chắc chắn dẫn đến việc chi tiêu nhiều hơn.'",
+        "key_evidence": "Kontaktloses Bezahlen verleitet definitiv zum Mehr-Ausgeben.",
+        "key_vocabulary": [
+          "schlussfolgern",
+          "kontaktloses Bezahlen",
+          "verleiten zum"
+        ]
       }
     },
     {
       "id": "Q3",
-      "item": 3,
+      "gespraech": 2,
       "type": "richtig_falsch",
-      "statement": "Die Person kommt aus Stuttgart.",
-      "answer": "falsch",
+      "question": "Der zweite Sprecher sieht in einem bargeldlosen System vor allem die Gefahr, dass technische Probleme den Zahlungsverkehr lahmlegen könnten.",
+      "answer": "richtig",
       "points": 1,
       "explanation": {
-        "de": "Falsch. Die Aussage stimmt nicht mit dem Hörtext überein.",
-        "vi": "Sai.",
-        "key_evidence": "Die Person kommt aus Stuttgart.",
-        "key_vocabulary": []
+        "de": "Der zweite Sprecher fragt: 'Was ist, wenn die Technik mal ausfällt?' und fügt hinzu: 'Siehst du! Deshalb brauchen wir Bargeld als Backup.'",
+        "vi": "Người nói thứ hai hỏi: 'Điều gì sẽ xảy ra nếu công nghệ bị lỗi?' và nói thêm: 'Thấy chưa! Đó là lý do tại sao chúng ta cần tiền mặt làm dự phòng.'",
+        "key_evidence": "Was ist, wenn die Technik mal ausfällt? ... Siehst du! Deshalb brauchen wir Bargeld als Backup.",
+        "key_vocabulary": [
+          "bargeldloses System",
+          "Gefahr",
+          "lahmlegen",
+          "Backup"
+        ]
       }
     },
     {
       "id": "Q4",
-      "gespraech": 1,
+      "gespraech": 2,
       "type": "mc_abc",
-      "question": "Welches Thema wird besprochen (Gespräch 1)?",
+      "question": "Welche historische Ursache nennt der zweite Sprecher für die starke Bindung der Deutschen an Bargeld?",
       "options": {
-        "a": "Medien und Kommunikation",
-        "b": "Essen und Trinken",
-        "c": "Einkaufen und Geld"
+        "a": "Die Angst vor staatlicher Überwachung und mangelndem Datenschutz.",
+        "b": "Die Erfahrungen mit früheren Währungsreformen.",
+        "c": "Die Bequemlichkeit und Hygiene von Bargeldzahlungen."
       },
-      "answer": "c",
+      "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Man hört: \"Einkaufen und Geld\".",
-        "vi": "Đoạn hội thoại 1 nói về chủ đề gì?",
-        "key_evidence": "Einkaufen und Geld",
-        "key_vocabulary": []
+        "de": "Der zweite Sprecher erklärt: 'Das liegt auch an der deutschen Geschichte. Zwei Währungsreformen haben tiefes Misstrauen hinterlassen.'",
+        "vi": "Người nói thứ hai giải thích: 'Điều đó cũng liên quan đến lịch sử nước Đức. Hai cuộc cải cách tiền tệ đã để lại sự mất lòng tin sâu sắc.'",
+        "key_evidence": "Das liegt auch an der deutschen Geschichte. Zwei Währungsreformen haben tiefes Misstrauen hinterlassen.",
+        "key_vocabulary": [
+          "historische Ursache",
+          "Bindung",
+          "Währungsreformen",
+          "Misstrauen"
+        ]
       }
     },
     {
       "id": "Q5",
-      "gespraech": 1,
-      "type": "mc_abc",
-      "question": "Woher kommt die Person (Gespräch 1)?",
-      "options": {
-        "a": "Berlin",
-        "b": "Wien",
-        "c": "München"
-      },
-      "answer": "a",
+      "gespraech": 3,
+      "type": "richtig_falsch",
+      "question": "Der erste Sprecher konnte nach dem Verlust seines Portemonnaies problemlos alle seine Online-Dienste und Abonnements nutzen.",
+      "answer": "falsch",
       "points": 1,
       "explanation": {
-        "de": "Man hört: \"Berlin\".",
-        "vi": "Người đó đến từ đâu (đoạn 1)?",
-        "key_evidence": "Berlin",
+        "de": "Der erste Sprecher berichtet: 'Es war erstaunlich schwierig! Viele Online-Dienste und Abo-Services konnte ich nicht nutzen.'",
+        "vi": "Người nói thứ nhất kể lại: 'Thật đáng ngạc nhiên là khó khăn! Tôi không thể sử dụng nhiều dịch vụ trực tuyến và dịch vụ đăng ký.'",
+        "key_evidence": "Es war erstaunlich schwierig! Viele Online-Dienste und Abo-Services konnte ich nicht nutzen.",
         "key_vocabulary": [
-          {
-            "word": "kommen aus",
-            "meaning": "to come from"
-          }
+          "Portemonnaie verlieren",
+          "problemlos",
+          "Abonnements"
+        ]
+      }
+    },
+    {
+      "id": "Q6",
+      "gespraech": 3,
+      "type": "mc_abc",
+      "question": "Welche Konsequenz zog der erste Sprecher aus dem Verlust seines Portemonnaies?",
+      "options": {
+        "a": "Er hat sofort begonnen, nur noch mit Bargeld zu bezahlen.",
+        "b": "Er hat sich entschieden, Smartphone-Payment einzurichten.",
+        "c": "Er hat seine Bank gewechselt, um Wartezeiten zu vermeiden."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Der erste Sprecher sagt: 'Nein, das hatte ich noch nie eingerichtet. Jetzt habe ich es aber sofort nach dem Vorfall getan.'",
+        "vi": "Người nói thứ nhất nói: 'Không, tôi chưa bao giờ thiết lập nó. Nhưng bây giờ tôi đã làm ngay sau sự cố.'",
+        "key_evidence": "Nein, das hatte ich noch nie eingerichtet. Jetzt habe ich es aber sofort nach dem Vorfall getan.",
+        "key_vocabulary": [
+          "Konsequenz ziehen",
+          "Verlust",
+          "einrichten",
+          "Smartphone-Payment"
+        ]
+      }
+    },
+    {
+      "id": "Q7",
+      "gespraech": 4,
+      "type": "richtig_falsch",
+      "question": "Der erste Sprecher erklärt, dass der digitale Euro auch ohne Internetverbindung funktionieren soll.",
+      "answer": "richtig",
+      "points": 1,
+      "explanation": {
+        "de": "Der erste Sprecher bestätigt: 'Und er soll auch offline funktionieren, also ohne Internetverbindung verwendbar sein.'",
+        "vi": "Người nói thứ nhất xác nhận: 'Và nó cũng sẽ hoạt động ngoại tuyến, tức là có thể sử dụng mà không cần kết nối internet.'",
+        "key_evidence": "Und er soll auch offline funktionieren, also ohne Internetverbindung verwendbar sein.",
+        "key_vocabulary": [
+          "digitaler Euro",
+          "offline funktionieren",
+          "Internetverbindung"
+        ]
+      }
+    },
+    {
+      "id": "Q8",
+      "gespraech": 4,
+      "type": "mc_abc",
+      "question": "Welche Hauptsorge äußern Kritiker bezüglich der Einführung des digitalen Euros, die der zweite Sprecher als berechtigt ansieht?",
+      "options": {
+        "a": "Die mangelnde Sicherheit im Vergleich zu Bargeld.",
+        "b": "Eine mögliche Zunahme der staatlichen Kontrolle über das Geld der Bürger.",
+        "c": "Die Schwierigkeit, den digitalen Euro offline zu nutzen."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Der erste Sprecher erwähnt: 'Kritiker befürchten allerdings, dass der Staat damit noch mehr Kontrolle über unser Geld bekommt.' Der zweite Sprecher antwortet darauf: 'Das ist ein berechtigter Einwand.'",
+        "vi": "Người nói thứ nhất đề cập: 'Tuy nhiên, các nhà phê bình lo ngại rằng nhà nước sẽ kiểm soát tiền của chúng ta nhiều hơn.' Người nói thứ hai trả lời: 'Đó là một phản đối chính đáng.'",
+        "key_evidence": "Kritiker befürchten allerdings, dass der Staat damit noch mehr Kontrolle über unser Geld bekommt. ... Das ist ein berechtigter Einwand.",
+        "key_vocabulary": [
+          "Hauptsorge",
+          "Kritiker",
+          "Einführung",
+          "staatliche Kontrolle",
+          "berechtigter Einwand"
+        ]
+      }
+    },
+    {
+      "id": "Q9",
+      "gespraech": 5,
+      "type": "richtig_falsch",
+      "question": "Der zweite Sprecher ist erfreut darüber, dass nun alle Stände auf dem Wochenmarkt Kartenzahlung akzeptieren.",
+      "answer": "richtig",
+      "points": 1,
+      "explanation": {
+        "de": "Der zweite Sprecher reagiert mit 'Endlich!' auf die Nachricht, dass der letzte Stand auf dem Wochenmarkt Kartenzahlung akzeptiert.",
+        "vi": "Người nói thứ hai phản ứng với 'Cuối cùng!' khi nghe tin gian hàng cuối cùng ở chợ tuần cũng chấp nhận thanh toán bằng thẻ.",
+        "key_evidence": "Endlich! Ich habe immer extra Bargeld mitgenommen, weil die Stände keine Karten nahmen.",
+        "key_vocabulary": [
+          "erfreut",
+          "Wochenmarkt",
+          "akzeptieren"
+        ]
+      }
+    },
+    {
+      "id": "Q10",
+      "gespraech": 5,
+      "type": "mc_abc",
+      "question": "Welchen Nachteil der Kartenzahlung für Händler nennt der erste Sprecher?",
+      "options": {
+        "a": "Sie müssen abends Bargeld zur Bank bringen.",
+        "b": "Es fallen Gebühren pro Transaktion an.",
+        "c": "Die Kartenlesegeräte sind zu teuer in der Anschaffung."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Der erste Sprecher weist darauf hin: 'Andererseits fallen Gebühren an. Pro Kartenzahlung zahlt der Händler zwischen ein und vier Prozent.'",
+        "vi": "Người nói thứ nhất chỉ ra: 'Mặt khác, có phí phát sinh. Mỗi lần thanh toán bằng thẻ, người bán phải trả từ một đến bốn phần trăm.'",
+        "key_evidence": "Andererseits fallen Gebühren an. Pro Kartenzahlung zahlt der Händler zwischen ein und vier Prozent.",
+        "key_vocabulary": [
+          "Nachteil",
+          "Händler",
+          "Gebühren",
+          "Transaktion"
         ]
       }
     }

@@ -16,93 +16,116 @@
   "questions": [
     {
       "id": "Q1",
-      "gespraech": 1,
+      "item": 1,
       "type": "mc_abc",
-      "question": "Welches Thema wird besprochen (Gespräch 1)?",
+      "question": "Wer sagt das: 'Nachhaltiger Konsum ist kein Luxus, sondern eine Überlebensfrage für unseren Planeten.'?",
       "options": {
-        "a": "Einkaufen und Geld",
-        "b": "Gesundheit und Körper",
-        "c": "Technik und Digitalisierung"
+        "a": "Herr Fischer",
+        "b": "Frau Engel",
+        "c": "Moderator"
       },
       "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Man hört: \"Einkaufen und Geld\".",
-        "vi": "Đoạn hội thoại 1 nói về chủ đề gì?",
-        "key_evidence": "Einkaufen und Geld",
+        "de": "Herr Fischer äußert diese grundlegende Meinung zu Beginn der Diskussion.",
+        "vi": "Ông Fischer bày tỏ quan điểm cơ bản này ngay từ đầu cuộc thảo luận.",
+        "key_evidence": "Nachhaltiger Konsum ist kein Luxus, sondern eine Überlebensfrage für unseren Planeten.",
         "key_vocabulary": []
       }
     },
     {
       "id": "Q2",
-      "gespraech": 1,
+      "item": 2,
       "type": "mc_abc",
-      "question": "Wie heißt eine Person im Gespräch 1?",
+      "question": "Wer sagt das: 'Nicht jeder kann sich Bio-Lebensmittel und faire Mode leisten.'?",
       "options": {
-        "a": "Fischer",
-        "b": "Lisa",
-        "c": "Laura"
+        "a": "Herr Fischer",
+        "b": "Frau Engel",
+        "c": "Moderator"
       },
-      "answer": "a",
+      "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Man hört: \"Fischer\".",
-        "vi": "Một người trong đoạn 1 tên là gì?",
-        "key_evidence": "Fischer",
-        "key_vocabulary": [
-          {
-            "word": "heißen",
-            "meaning": "to be called"
-          }
-        ]
+        "de": "Frau Engel vertritt die differenzierte Ansicht, dass nachhaltiger Konsum nicht für jeden erschwinglich ist.",
+        "vi": "Bà Engel đưa ra quan điểm khác biệt rằng không phải ai cũng có thể mua được sản phẩm bền vững.",
+        "key_evidence": "Nicht jeder kann sich Bio-Lebensmittel und faire Mode leisten.",
+        "key_vocabulary": []
       }
     },
     {
       "id": "Q3",
-      "gespraech": 1,
+      "item": 3,
       "type": "mc_abc",
-      "question": "Wie heißt eine Person (Gespräch 1)?",
+      "question": "Wer sagt das: 'Das Narrativ vom individuellen Fußabdruck greift zu kurz.'?",
       "options": {
-        "a": "Brüssel",
-        "b": "Bielefeld",
-        "c": "Würzburg"
-      },
-      "answer": "a",
-      "points": 1,
-      "explanation": {
-        "de": "Im Gespräch hört man den Namen \"Fischer\".",
-        "vi": "Một người trong đoạn 1 tên là gì?",
-        "key_evidence": "Fischer",
-        "key_vocabulary": [
-          {
-            "word": "heißen",
-            "meaning": "to be called"
-          }
-        ]
-      }
-    },
-    {
-      "id": "Q4",
-      "gespraech": 1,
-      "type": "mc_abc",
-      "question": "Was macht die Person beruflich (Gespräch 1)?",
-      "options": {
-        "a": "Journalist",
-        "b": "Ingenieur",
-        "c": "Supermärkte"
+        "a": "Herr Fischer",
+        "b": "Frau Engel",
+        "c": "Moderator"
       },
       "answer": "c",
       "points": 1,
       "explanation": {
-        "de": "Man hört: \"Supermärkte\".",
-        "vi": "Người đó làm nghề gì (đoạn 1)?",
-        "key_evidence": "Supermärkte",
-        "key_vocabulary": [
-          {
-            "word": "Supermärkte",
-            "meaning": "Supermärkte"
-          }
-        ]
+        "de": "Der Moderator schlussfolgert, dass die alleinige Konzentration auf den individuellen Fußabdruck nicht ausreicht.",
+        "vi": "Người điều hành kết luận rằng việc chỉ tập trung vào dấu chân cá nhân là chưa đủ.",
+        "key_evidence": "Richtig, und genau deshalb greift das Narrativ vom individuellen Fußabdruck zu kurz.",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q4",
+      "item": 4,
+      "type": "mc_abc",
+      "question": "Wer sagt das: 'Konventionelle Lebensmittel sind nur deshalb billig, weil die Umweltkosten externalisiert werden.'?",
+      "options": {
+        "a": "Herr Fischer",
+        "b": "Frau Engel",
+        "c": "Moderator"
+      },
+      "answer": "a",
+      "points": 1,
+      "explanation": {
+        "de": "Herr Fischer erklärt die ökonomische Ursache für die niedrigen Preise konventioneller Produkte.",
+        "vi": "Ông Fischer giải thích nguyên nhân kinh tế dẫn đến giá thành thấp của các sản phẩm thông thường.",
+        "key_evidence": "Das stimmt, aber konventionelle Lebensmittel sind nur deshalb billig, weil die Umweltkosten externalisiert werden.",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q5",
+      "item": 5,
+      "type": "mc_abc",
+      "question": "Wer sagt das: 'Nachhaltigkeit muss wirtschaftlich tragfähig und sozial gerecht sein, sonst scheitert sie!'?",
+      "options": {
+        "a": "Herr Fischer",
+        "b": "Frau Engel",
+        "c": "Moderator"
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Frau Engel fasst am Ende der Diskussion ihre zentrale Forderung für erfolgreiche Nachhaltigkeit zusammen.",
+        "vi": "Bà Engel tóm tắt yêu cầu cốt lõi của mình về tính bền vững thành công vào cuối cuộc thảo luận.",
+        "key_evidence": "Nachhaltigkeit muss wirtschaftlich tragfähig und sozial gerecht sein, sonst scheitert sie!",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q6",
+      "item": 6,
+      "type": "mc_abc",
+      "question": "Wer sagt das: 'Deutschland sollte dringend nachziehen und ähnliche Gesetze einführen.'?",
+      "options": {
+        "a": "Herr Fischer",
+        "b": "Frau Engel",
+        "c": "Moderator"
+      },
+      "answer": "c",
+      "points": 1,
+      "explanation": {
+        "de": "Der Moderator fordert Deutschland auf, dem Beispiel Frankreichs beim Reparierbarkeits-Index zu folgen.",
+        "vi": "Người điều hành kêu gọi Đức noi gương Pháp trong việc áp dụng chỉ số khả năng sửa chữa.",
+        "key_evidence": "Das ist vorbildlich. Deutschland sollte dringend nachziehen und ähnliche Gesetze einführen.",
+        "key_vocabulary": []
       }
     }
   ],

@@ -18,18 +18,18 @@
       "id": "Q1",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Welches Thema wird besprochen (Gespräch 1)?",
+      "question": "Was beabsichtigt der Dozent in seinem Vortrag hauptsächlich zu tun?",
       "options": {
-        "a": "Essen und Trinken",
-        "b": "Einkaufen und Geld",
-        "c": "Wohnung und Haushalt"
+        "a": "Er möchte die wirtschaftlichen Auswirkungen der Ernährungstrends analysieren.",
+        "b": "Er will drei wesentliche Entwicklungen in der Ernährung detailliert vorstellen.",
+        "c": "Er plant, die Probleme der Lebensmittelproduktion in Japan und Singapur zu diskutieren."
       },
       "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Man hört: \"Einkaufen und Geld\".",
-        "vi": "Đoạn hội thoại 1 nói về chủ đề gì?",
-        "key_evidence": "Einkaufen und Geld",
+        "de": "Der Dozent kündigt an, drei zentrale Trends beleuchten zu wollen, die die Ernährung verändern werden.",
+        "vi": "Giảng viên thông báo rằng ông muốn làm rõ ba xu hướng trung tâm sẽ thay đổi dinh dưỡng.",
+        "key_evidence": "Ich möchte heute drei zentrale Trends beleuchten, die unsere Ernährung grundlegend verändern werden.",
         "key_vocabulary": []
       }
     },
@@ -37,18 +37,18 @@
       "id": "Q2",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Welches Thema wird besprochen (Gespräch 1)?",
+      "question": "Was schließt der Dozent aus dem Trend der Personalisierung in der Ernährung?",
       "options": {
-        "a": "Berlin",
-        "b": "Brasilien",
-        "c": "Griechenland"
+        "a": "Einheitliche Ernährungsratschläge werden in Zukunft an Bedeutung verlieren.",
+        "b": "DNA-Tests sind die einzige Methode, um einen optimalen Speiseplan zu erstellen.",
+        "c": "Jeder Mensch wird seine Ernährungsgewohnheiten grundlegend ändern müssen."
       },
-      "answer": "b",
+      "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Das Hauptthema ist \"Einkaufen\".",
-        "vi": "Đoạn hội thoại 1 nói về chủ đề gì?",
-        "key_evidence": "Einkaufen",
+        "de": "Der Dozent erklärt, dass das, was für den einen gesund ist, für den anderen nachteilig sein kann, was die Individualisierung der Ernährung unterstreicht.",
+        "vi": "Giảng viên giải thích rằng những gì tốt cho người này có thể có hại cho người khác, điều này nhấn mạnh sự cá nhân hóa trong dinh dưỡng.",
+        "key_evidence": "Was für den einen gesund ist, kann für den anderen weniger vorteilhaft oder sogar nachteilig sein.",
         "key_vocabulary": []
       }
     },
@@ -56,24 +56,114 @@
       "id": "Q3",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Was macht die Person beruflich (Gespräch 1)?",
+      "question": "Welchen entscheidenden Vorteil des Indoor-Farmings hebt der Dozent hervor?",
       "options": {
-        "a": "Mechaniker",
-        "b": "Sekretärin",
-        "c": "Nahrungsaufnahme"
+        "a": "Es ermöglicht die Produktion von exotischen Früchten in städtischen Gebieten.",
+        "b": "Es reduziert den Wasserverbrauch erheblich und macht Pestizide unnötig.",
+        "c": "Es schafft neue Arbeitsplätze für Landwirte in der Stadt."
       },
-      "answer": "c",
+      "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Man hört: \"Nahrungsaufnahme\".",
-        "vi": "Người đó làm nghề gì (đoạn 1)?",
-        "key_evidence": "Nahrungsaufnahme",
-        "key_vocabulary": [
-          {
-            "word": "Nahrungsaufnahme",
-            "meaning": "Nahrungsaufnahme"
-          }
-        ]
+        "de": "Der Dozent nennt explizit den geringeren Wasserverbrauch und den Verzicht auf Pestizide als Vorteile von Indoor-Farmen.",
+        "vi": "Giảng viên nêu rõ việc giảm tiêu thụ nước và không cần thuốc trừ sâu là những lợi ích của nông nghiệp trong nhà.",
+        "key_evidence": "Diese Farmen verbrauchen neunzig Prozent weniger Wasser und benötigen keine Pestizide.",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q4",
+      "gespraech": 1,
+      "type": "mc_abc",
+      "question": "Wie bewertet der Dozent die Rolle moderner Technologien im Bereich der Fermentation?",
+      "options": {
+        "a": "Sie ersetzt traditionelle Fermentationsmethoden vollständig.",
+        "b": "Sie nutzt altes Wissen und verbessert es durch neue Erkenntnisse.",
+        "c": "Sie konzentriert sich ausschließlich auf die Entwicklung neuer, unbekannter Lebensmittel."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Der Dozent betont, dass moderne Technologien auf uraltes Wissen zurückgreifen und es optimieren.",
+        "vi": "Giảng viên nhấn mạnh rằng công nghệ hiện đại dựa trên kiến thức cổ xưa và tối ưu hóa nó.",
+        "key_evidence": "Interessanterweise greifen moderne Technologien auf uraltes Wissen zurück und optimieren es.",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q5",
+      "gespraech": 1,
+      "type": "mc_abc",
+      "question": "Welche Herausforderung sieht der Dozent für die Lebensmittelindustrie in Deutschland, trotz ihrer guten Ausgangsposition?",
+      "options": {
+        "a": "Es gibt zu wenige Investoren, die in alternative Proteine investieren.",
+        "b": "Die politischen Rahmenbedingungen passen sich zu langsam an neue Technologien an.",
+        "c": "Die Verbraucher sind nicht bereit, für innovative Lebensmittel mehr zu bezahlen."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Der Dozent kritisiert, dass die Politik die regulatorischen Rahmenbedingungen schneller anpassen muss.",
+        "vi": "Giảng viên chỉ trích rằng chính sách cần phải điều chỉnh các quy định pháp lý nhanh hơn để phù hợp với công nghệ mới.",
+        "key_evidence": "Allerdings muss die Politik die regulatorischen Rahmenbedingungen schneller an die neuen Technologien anpassen.",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q6",
+      "gespraech": 1,
+      "type": "mc_abc",
+      "question": "Was kritisiert der Dozent bezüglich der Zulassung neuer Lebensmittel in der EU?",
+      "options": {
+        "a": "Der Prozess ist zu kompliziert und undurchsichtig.",
+        "b": "Die durchschnittliche Dauer der Zulassung ist zu lang.",
+        "c": "Es gibt zu strenge Vorschriften für die Inhaltsstoffe."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Der Dozent bemängelt explizit, dass die Zulassung neuer Lebensmittel in der EU durchschnittlich achtzehn Monate dauert und dies zu lang sei.",
+        "vi": "Giảng viên chỉ trích rõ ràng rằng việc cấp phép thực phẩm mới ở EU mất trung bình mười tám tháng và điều này là quá lâu.",
+        "key_evidence": "Die Zulassung neuer Lebensmittel in der EU dauert durchschnittlich achtzehn Monate, das ist zu lang.",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q7",
+      "gespraech": 1,
+      "type": "mc_abc",
+      "question": "Was betont der Dozent als ebenso entscheidend wie technologische Innovation?",
+      "options": {
+        "a": "Die Notwendigkeit, mehr traditionelle Gerichte zu konsumieren.",
+        "b": "Einen Wandel in der gesellschaftlichen Einstellung zum Essen.",
+        "c": "Die Bedeutung, Essen nur als reine Nahrungsaufnahme zu betrachten."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Der Dozent hebt hervor, dass neben technologischer Innovation auch ein kultureller Wandel im Verhältnis zum Essen notwendig ist.",
+        "vi": "Giảng viên nhấn mạnh rằng bên cạnh đổi mới công nghệ, cũng cần có một sự thay đổi văn hóa trong thái độ đối với thực phẩm.",
+        "key_evidence": "Wir brauchen auch einen kulturellen Wandel in unserem Verhältnis zum Essen.",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q8",
+      "gespraech": 1,
+      "type": "mc_abc",
+      "question": "Was ist laut dem Dozenten die größte Herausforderung für die Zukunft der Ernährung?",
+      "options": {
+        "a": "Die Entwicklung völlig neuer Lebensmittel, die keine Tradition haben.",
+        "b": "Die Integration von technologischem Fortschritt mit kulturellen Werten und Traditionen.",
+        "c": "Die Sicherstellung, dass alle Menschen Zugang zu personalisierter Ernährung haben."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Der Dozent fasst zusammen, dass die Herausforderung darin besteht, Innovation und Tradition in Einklang zu bringen.",
+        "vi": "Giảng viên tóm tắt rằng thách thức là làm thế nào để dung hòa đổi mới và truyền thống.",
+        "key_evidence": "Die Herausforderung besteht darin, Innovation und Tradition in Einklang zu bringen.",
+        "key_vocabulary": []
       }
     }
   ],

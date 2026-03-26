@@ -16,81 +16,166 @@
   "questions": [
     {
       "id": "Q1",
-      "item": 1,
+      "gespraech": 1,
       "type": "richtig_falsch",
-      "statement": "Die Person kommt aus London.",
-      "answer": "falsch",
+      "question": "Der Mann ist überzeugt, dass die Einführung der Nutzungszeitbegrenzung für Jugendliche trotz möglicher Umgehung sinnvoll ist.",
+      "answer": "richtig",
       "points": 1,
       "explanation": {
-        "de": "Falsch. Die Aussage stimmt nicht mit dem Hörtext überein.",
-        "vi": "Sai.",
-        "key_evidence": "Die Person kommt aus London.",
+        "de": "Der Mann sagt: 'Trotzdem finde ich den Schritt richtig.' Er erkennt an, dass die Begrenzung umgangen werden kann, hält den Schritt aber dennoch für korrekt.",
+        "vi": "Người đàn ông nói: 'Dù vậy, tôi vẫn thấy bước đi này là đúng đắn.' Anh ấy thừa nhận rằng việc giới hạn có thể bị lách luật, nhưng vẫn cho rằng đây là một bước đi đúng.",
+        "key_evidence": "Trotzdem finde ich den Schritt richtig.",
         "key_vocabulary": []
       }
     },
     {
       "id": "Q2",
-      "item": 2,
-      "type": "richtig_falsch",
-      "statement": "Instagram wird erwähnt.",
-      "answer": "richtig",
+      "gespraech": 1,
+      "type": "mc_abc",
+      "question": "Was schließt die Frau aus den Forschungsergebnissen bezüglich Social Media?",
+      "options": {
+        "a": "Soziale Medien sind grundsätzlich schädlich für Jugendliche.",
+        "b": "Eine maßvolle Nutzung von Social Media kann positive Effekte haben.",
+        "c": "Die positiven Aspekte überwiegen immer die negativen."
+      },
+      "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Richtig. Die Aussage stimmt mit dem Hörtext überein.",
-        "vi": "Đúng.",
-        "key_evidence": "Instagram wird erwähnt.",
+        "de": "Die Frau zitiert die Forschung: 'In moderaten Dosen ja, bei exzessiver Nutzung überwiegen die negativen Effekte.' Dies bedeutet, dass eine moderate Nutzung positive Effekte haben kann.",
+        "vi": "Người phụ nữ trích dẫn nghiên cứu: 'Với liều lượng vừa phải thì có, nhưng khi sử dụng quá mức thì các tác động tiêu cực sẽ chiếm ưu thế.' Điều này có nghĩa là việc sử dụng vừa phải có thể mang lại hiệu quả tích cực.",
+        "key_evidence": "Die Forschung sagt: In moderaten Dosen ja, bei exzessiver Nutzung überwiegen die negativen Effekte.",
         "key_vocabulary": []
       }
     },
     {
       "id": "Q3",
-      "item": 3,
+      "gespraech": 2,
       "type": "richtig_falsch",
-      "statement": "Die Person kommt aus Shanghai.",
+      "question": "Der Mann ist der Ansicht, dass seine privaten Social-Media-Kenntnisse für die berufliche Aufgabe ausreichen.",
       "answer": "falsch",
       "points": 1,
       "explanation": {
-        "de": "Falsch. Die Aussage stimmt nicht mit dem Hörtext überein.",
-        "vi": "Sai.",
-        "key_evidence": "Die Person kommt aus Shanghai.",
+        "de": "Der Mann stellt fest: 'Privat ja, aber professionell ist es nochmal etwas ganz anderes, stelle ich fest.' Er erkennt also, dass seine privaten Kenntnisse nicht ausreichen.",
+        "vi": "Người đàn ông nhận ra: 'Cá nhân thì có, nhưng chuyên nghiệp thì hoàn toàn khác, tôi nhận thấy vậy.' Do đó, anh ấy nhận ra rằng kiến thức cá nhân của mình không đủ.",
+        "key_evidence": "Privat ja, aber professionell ist es nochmal etwas ganz anderes, stelle ich fest.",
         "key_vocabulary": []
       }
     },
     {
       "id": "Q4",
-      "gespraech": 1,
+      "gespraech": 2,
       "type": "mc_abc",
-      "question": "Welches Thema wird besprochen (Gespräch 1)?",
+      "question": "Welchen Rat gibt die Frau dem Mann für den Beginn seiner Social-Media-Arbeit?",
       "options": {
-        "a": "Einkaufen und Geld",
-        "b": "Familie und Freunde",
-        "c": "Bildung und Schule"
+        "a": "Er sollte sofort eine spezialisierte Agentur beauftragen.",
+        "b": "Er sollte sich auf die Steigerung der Follower-Zahl konzentrieren.",
+        "c": "Er sollte einen klaren Plan haben und regelmäßig Inhalte veröffentlichen."
       },
-      "answer": "a",
+      "answer": "c",
       "points": 1,
       "explanation": {
-        "de": "Man hört: \"Einkaufen und Geld\".",
-        "vi": "Đoạn hội thoại 1 nói về chủ đề gì?",
-        "key_evidence": "Einkaufen und Geld",
+        "de": "Die Frau rät: 'Für den Anfang reicht ein guter Plan und Konsistenz. Poste regelmäßig und interagiere mit der Community.'",
+        "vi": "Người phụ nữ khuyên: 'Để bắt đầu, một kế hoạch tốt và sự nhất quán là đủ. Đăng bài thường xuyên và tương tác với cộng đồng.'",
+        "key_evidence": "Für den Anfang reicht ein guter Plan und Konsistenz. Poste regelmäßig und interagiere mit der Community.",
         "key_vocabulary": []
       }
     },
     {
       "id": "Q5",
-      "gespraech": 1,
-      "type": "mc_abc",
-      "question": "Welches Thema wird besprochen (Gespräch 1)?",
-      "options": {
-        "a": "Ägypten",
-        "b": "Dortmund",
-        "c": "Serbien"
-      },
-      "answer": "a",
+      "gespraech": 3,
+      "type": "richtig_falsch",
+      "question": "Der Mann empfand die Zeit direkt nach dem Löschen der Apps als schwierig.",
+      "answer": "richtig",
       "points": 1,
       "explanation": {
-        "de": "Das Hauptthema ist \"Einkaufen\".",
-        "vi": "Đoạn hội thoại 1 nói về chủ đề gì?",
-        "key_evidence": "Einkaufen",
+        "de": "Der Mann beschreibt seine Erfahrung mit den Worten: 'Die ersten drei Tage waren schlimm, wie ein Entzug.' Dies zeigt, dass er die Anfangszeit als schwierig empfand.",
+        "vi": "Người đàn ông mô tả trải nghiệm của mình bằng những lời: 'Ba ngày đầu thật tồi tệ, như một cơn cai nghiện.' Điều này cho thấy anh ấy cảm thấy thời gian đầu rất khó khăn.",
+        "key_evidence": "Die ersten drei Tage waren schlimm, wie ein Entzug.",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q6",
+      "gespraech": 3,
+      "type": "mc_abc",
+      "question": "Was beabsichtigt die Frau nach dem Gespräch?",
+      "options": {
+        "a": "Sie möchte ihre Social-Media-Nutzung dauerhaft beenden.",
+        "b": "Sie plant, die Auswirkungen eines Social-Media-Verzichts selbst zu testen.",
+        "c": "Sie will ihre Freunde über die negativen Folgen von Social Media informieren."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Die Frau sagt am Ende des Gesprächs: 'Ich glaube, ich werde es auch mal eine Woche versuchen. So als Experiment.' Sie möchte es also selbst ausprobieren.",
+        "vi": "Người phụ nữ nói vào cuối cuộc trò chuyện: 'Tôi nghĩ tôi cũng sẽ thử một tuần. Như một thử nghiệm.' Cô ấy muốn tự mình thử nghiệm.",
+        "key_evidence": "Ich glaube, ich werde es auch mal eine Woche versuchen. So als Experiment.",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q7",
+      "gespraech": 4,
+      "type": "richtig_falsch",
+      "question": "Die Frau hält das neue Fach 'Medienkompetenz' für eine notwendige und zeitgemäße Einführung.",
+      "answer": "richtig",
+      "points": 1,
+      "explanation": {
+        "de": "Die Frau äußert: 'Das finde ich längst überfällig.' Dies bedeutet, dass sie es für dringend notwendig und schon lange fällig hält.",
+        "vi": "Người phụ nữ nói: 'Tôi thấy điều này đã quá hạn từ lâu rồi.' Điều này có nghĩa là cô ấy cho rằng nó rất cần thiết và lẽ ra đã phải được thực hiện từ lâu.",
+        "key_evidence": "Das finde ich längst überfällig.",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q8",
+      "gespraech": 4,
+      "type": "mc_abc",
+      "question": "Was impliziert der Mann bezüglich der im Fach 'Medienkompetenz' vermittelten Fähigkeiten?",
+      "options": {
+        "a": "Diese Fähigkeiten sind ausschließlich für Kinder relevant.",
+        "b": "Viele Erwachsene könnten von diesen Fähigkeiten ebenfalls profitieren.",
+        "c": "Erwachsene sind von Natur aus besser im Umgang mit Medien."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Der Mann bemerkt: 'Das sind Fähigkeiten, die auch viele Erwachsene nicht haben.' Dies impliziert, dass diese Fähigkeiten auch für Erwachsene nützlich wären.",
+        "vi": "Người đàn ông nhận xét: 'Đó là những kỹ năng mà nhiều người lớn cũng không có.' Điều này ngụ ý rằng những kỹ năng này cũng hữu ích cho người lớn.",
+        "key_evidence": "Das sind Fähigkeiten, die auch viele Erwachsene nicht haben.",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q9",
+      "gespraech": 5,
+      "type": "richtig_falsch",
+      "question": "Die Frau ist der Ansicht, dass die hohen Einnahmen von Influencern hauptsächlich auf deren gesellschaftlichen Beitrag zurückzuführen sind.",
+      "answer": "falsch",
+      "points": 1,
+      "explanation": {
+        "de": "Die Frau erklärt: 'Gerechtigkeit hat damit wenig zu tun. Der Markt bestimmt den Preis und Aufmerksamkeit ist eine Währung.' Sie sieht die Einnahmen als marktwirtschaftlich bedingt, nicht primär als Ergebnis gesellschaftlichen Beitrags.",
+        "vi": "Người phụ nữ giải thích: 'Công bằng thì ít liên quan đến việc này. Thị trường quyết định giá cả và sự chú ý là một loại tiền tệ.' Cô ấy coi thu nhập là do thị trường quyết định, không phải chủ yếu là kết quả của đóng góp xã hội.",
+        "key_evidence": "Gerechtigkeit hat damit wenig zu tun. Der Markt bestimmt den Preis und Aufmerksamkeit ist eine Währung.",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q10",
+      "gespraech": 5,
+      "type": "mc_abc",
+      "question": "Wie beurteilt die Frau die langfristige Perspektive einer Influencer-Karriere?",
+      "options": {
+        "a": "Sie hält sie für eine sehr stabile und lukrative Berufswahl.",
+        "b": "Sie vergleicht sie mit der unsicheren Laufbahn eines Profisportlers.",
+        "c": "Sie betont, dass Influencer immer einen positiven Einfluss haben."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Die Frau sagt: 'Aber die Karriere ist kurz und unsicher, wie bei einem Profisportler.' Sie vergleicht die Unsicherheit der Influencer-Karriere direkt mit der eines Profisportlers.",
+        "vi": "Người phụ nữ nói: 'Nhưng sự nghiệp này ngắn ngủi và không chắc chắn, giống như một vận động viên chuyên nghiệp.' Cô ấy so sánh sự không chắc chắn của sự nghiệp influencer trực tiếp với sự nghiệp của một vận động viên chuyên nghiệp.",
+        "key_evidence": "Aber die Karriere ist kurz und unsicher, wie bei einem Profisportler.",
         "key_vocabulary": []
       }
     }

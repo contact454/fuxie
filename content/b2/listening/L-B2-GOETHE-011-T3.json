@@ -16,69 +16,116 @@
   "questions": [
     {
       "id": "Q1",
-      "gespraech": 1,
+      "item": 1,
       "type": "mc_abc",
-      "question": "Welches Thema wird besprochen (Gespräch 1)?",
+      "question": "Wer sagt das: 'Eine rein vegane Ernährung ist nicht für jeden geeignet'?",
       "options": {
-        "a": "Reisen und Verkehr",
-        "b": "Einkaufen und Geld",
-        "c": "Technik und Digitalisierung"
+        "a": "Frau Dr. Hansen",
+        "b": "Herr Keller",
+        "c": "Der Moderator"
       },
       "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Man hört: \"Reisen und Verkehr\".",
-        "vi": "Đoạn hội thoại 1 nói về chủ đề gì?",
-        "key_evidence": "Reisen und Verkehr",
+        "de": "Frau Dr. Hansen, die Ernährungswissenschaftlerin, äußert diese Bedenken zu Beginn der Diskussion.",
+        "vi": "Bà Dr. Hansen, nhà khoa học dinh dưỡng, bày tỏ mối lo ngại này ngay từ đầu cuộc thảo luận.",
+        "key_evidence": "Als Ernährungswissenschaftlerin sage ich: Eine rein vegane Ernährung ist nicht für jeden geeignet.",
         "key_vocabulary": []
       }
     },
     {
       "id": "Q2",
-      "gespraech": 1,
+      "item": 2,
       "type": "mc_abc",
-      "question": "Wie heißt eine Person im Gespräch 1?",
+      "question": "Wer sagt das: 'Die wissenschaftlichen Belege für die Vorteile veganer Ernährung sind eindeutig'?",
       "options": {
-        "a": "Andreas",
-        "b": "Markus",
-        "c": "Dr"
+        "a": "Der Moderator",
+        "b": "Frau Dr. Hansen",
+        "c": "Herr Keller"
       },
       "answer": "c",
       "points": 1,
       "explanation": {
-        "de": "Man hört: \"Dr\".",
-        "vi": "Một người trong đoạn 1 tên là gì?",
-        "key_evidence": "Dr",
-        "key_vocabulary": [
-          {
-            "word": "heißen",
-            "meaning": "to be called"
-          }
-        ]
+        "de": "Herr Keller widerspricht Frau Dr. Hansen und betont die Eindeutigkeit der wissenschaftlichen Belege.",
+        "vi": "Ông Keller phản bác bà Dr. Hansen và nhấn mạnh tính rõ ràng của các bằng chứng khoa học.",
+        "key_evidence": "Das sehe ich anders. Die wissenschaftlichen Belege für die Vorteile veganer Ernährung sind eindeutig.",
+        "key_vocabulary": []
       }
     },
     {
       "id": "Q3",
-      "gespraech": 1,
+      "item": 3,
       "type": "mc_abc",
-      "question": "Wie heißt eine Person (Gespräch 1)?",
+      "question": "Wer sagt das: 'Nahrungsergänzungsmittel sind kein Ersatz für eine ausgewogene, vielfältige Ernährung'?",
       "options": {
-        "a": "Rostock",
-        "b": "Dresden",
-        "c": "Athen"
+        "a": "Herr Keller",
+        "b": "Der Moderator",
+        "c": "Frau Dr. Hansen"
       },
       "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man den Namen \"Dr\".",
-        "vi": "Một người trong đoạn 1 tên là gì?",
-        "key_evidence": "Dr",
-        "key_vocabulary": [
-          {
-            "word": "heißen",
-            "meaning": "to be called"
-          }
-        ]
+        "de": "Der Moderator greift den Punkt der Nahrungsergänzungsmittel auf und stellt klar, dass sie keinen vollwertigen Ersatz darstellen.",
+        "vi": "Người điều hành đề cập đến vấn đề thực phẩm bổ sung và làm rõ rằng chúng không phải là sự thay thế hoàn chỉnh.",
+        "key_evidence": "Nahrungsergänzungsmittel sind kein Ersatz für eine ausgewogene, vielfältige Ernährung.",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q4",
+      "item": 4,
+      "type": "mc_abc",
+      "question": "Wer sagt das: 'Das ist ein valider Punkt. Nicht jeder Mensch verstoffwechselt pflanzliche Proteine gleich effizient'?",
+      "options": {
+        "a": "Frau Dr. Hansen",
+        "b": "Herr Keller",
+        "c": "Der Moderator"
+      },
+      "answer": "a",
+      "points": 1,
+      "explanation": {
+        "de": "Frau Dr. Hansen stimmt dem Moderator zu, dass individuelle genetische Veranlagung eine Rolle spielt.",
+        "vi": "Bà Dr. Hansen đồng ý với người điều hành rằng yếu tố di truyền cá nhân đóng một vai trò quan trọng.",
+        "key_evidence": "Das ist ein valider Punkt. Nicht jeder Mensch verstoffwechselt pflanzliche Proteine gleich effizient.",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q5",
+      "item": 5,
+      "type": "mc_abc",
+      "question": "Wer sagt das: 'Das ist fast so viel wie der gesamte Transportsektor weltweit mit Autos, Flugzeugen und Schiffen'?",
+      "options": {
+        "a": "Der Moderator",
+        "b": "Frau Dr. Hansen",
+        "c": "Herr Keller"
+      },
+      "answer": "c",
+      "points": 1,
+      "explanation": {
+        "de": "Herr Keller untermauert die Aussage von Frau Dr. Hansen über Treibhausgasemissionen mit einem Vergleich zum Transportsektor.",
+        "vi": "Ông Keller củng cố tuyên bố của bà Dr. Hansen về lượng khí thải nhà kính bằng cách so sánh với ngành giao thông vận tải.",
+        "key_evidence": "Das ist fast so viel wie der gesamte Transportsektor weltweit mit Autos, Flugzeugen und Schiffen.",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q6",
+      "item": 6,
+      "type": "mc_abc",
+      "question": "Wer sagt das: 'Die Klimakrise erfordert radikale Veränderungen, nicht halbherzige Kompromisse'?",
+      "options": {
+        "a": "Frau Dr. Hansen",
+        "b": "Herr Keller",
+        "c": "Der Moderator"
+      },
+      "answer": "a",
+      "points": 1,
+      "explanation": {
+        "de": "Frau Dr. Hansen lehnt den Vorschlag des Flexitarismus ab und fordert drastischere Maßnahmen.",
+        "vi": "Bà Dr. Hansen từ chối đề xuất về chế độ ăn linh hoạt và kêu gọi các biện pháp quyết liệt hơn.",
+        "key_evidence": "Das reicht nicht! Die Klimakrise erfordert radikale Veränderungen, nicht halbherzige Kompromisse.",
+        "key_vocabulary": []
       }
     }
   ],

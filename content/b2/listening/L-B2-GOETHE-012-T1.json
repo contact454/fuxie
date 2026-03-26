@@ -16,81 +16,166 @@
   "questions": [
     {
       "id": "Q1",
-      "item": 1,
+      "gespraech": 1,
       "type": "richtig_falsch",
-      "statement": "Die Person kommt aus Hannover.",
+      "question": "Die Frau ist von Anfang an überzeugt, dass ein Tiny House für eine vierköpfige Familie praktisch ist.",
       "answer": "falsch",
       "points": 1,
       "explanation": {
-        "de": "Falsch. Die Aussage stimmt nicht mit dem Hörtext überein.",
-        "vi": "Sai.",
-        "key_evidence": "Die Person kommt aus Hannover.",
+        "de": "Die Frau äußert zunächst Skepsis mit den Worten: 'Das kann doch nicht funktionieren!'",
+        "vi": "Người phụ nữ ban đầu bày tỏ sự hoài nghi với câu nói: 'Điều đó không thể hoạt động được!'",
+        "key_evidence": "Das kann doch nicht funktionieren!",
         "key_vocabulary": []
       }
     },
     {
       "id": "Q2",
-      "item": 2,
-      "type": "richtig_falsch",
-      "statement": "Tiny wird erwähnt.",
-      "answer": "richtig",
+      "gespraech": 1,
+      "type": "mc_abc",
+      "question": "Welche Absicht äußert die Frau am Ende des Gesprächs?",
+      "options": {
+        "a": "Sie möchte die Familie Müller überzeugen, in eine größere Wohnung zu ziehen.",
+        "b": "Sie beabsichtigt, sich genauer mit der Wohnform der Tiny Houses auseinanderzusetzen.",
+        "c": "Sie ist der Ansicht, dass Tiny Houses nur für Singles geeignet sind."
+      },
+      "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Richtig. Die Aussage stimmt mit dem Hörtext überein.",
-        "vi": "Đúng.",
-        "key_evidence": "Tiny wird erwähnt.",
+        "de": "Die Frau sagt: 'Vielleicht sollte ich mir das mal anschauen', was ihre Absicht zeigt, sich näher zu informieren.",
+        "vi": "Người phụ nữ nói: 'Có lẽ tôi nên xem xét điều đó', điều này cho thấy ý định tìm hiểu thêm của cô ấy.",
+        "key_evidence": "Vielleicht sollte ich mir das mal anschauen.",
         "key_vocabulary": []
       }
     },
     {
       "id": "Q3",
-      "item": 3,
+      "gespraech": 2,
       "type": "richtig_falsch",
-      "statement": "Die Person kommt aus München.",
-      "answer": "falsch",
+      "question": "Die Frau sieht in Mehrgenerationenhäusern eine Lösung für mehrere gesellschaftliche Probleme.",
+      "answer": "richtig",
       "points": 1,
       "explanation": {
-        "de": "Falsch. Die Aussage stimmt nicht mit dem Hörtext überein.",
-        "vi": "Sai.",
-        "key_evidence": "Die Person kommt aus München.",
+        "de": "Die Frau sagt: 'Es bekämpft Einsamkeit im Alter und den Mangel an Kinderbetreuung gleichzeitig.'",
+        "vi": "Người phụ nữ nói: 'Nó chống lại sự cô đơn khi về già và thiếu hụt chăm sóc trẻ em cùng một lúc.'",
+        "key_evidence": "Es bekämpft Einsamkeit im Alter und den Mangel an Kinderbetreuung gleichzeitig.",
         "key_vocabulary": []
       }
     },
     {
       "id": "Q4",
-      "gespraech": 1,
+      "gespraech": 2,
       "type": "mc_abc",
-      "question": "Welches Thema wird besprochen (Gespräch 1)?",
+      "question": "Was hebt der Mann als Besonderheit des modernen Mehrgenerationenhauses hervor?",
       "options": {
-        "a": "Einkaufen und Geld",
-        "b": "Bildung und Schule",
-        "c": "Umwelt und Natur"
+        "a": "Es ist eine freiwillige Entscheidung und bietet individuelle Wohnbereiche.",
+        "b": "Es gibt keine Konflikte mehr, da alles gut organisiert ist.",
+        "c": "Die Großeltern übernehmen die gesamte Kinderbetreuung."
       },
       "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Man hört: \"Einkaufen und Geld\".",
-        "vi": "Đoạn hội thoại 1 nói về chủ đề gì?",
-        "key_evidence": "Einkaufen und Geld",
+        "de": "Der Mann erklärt: 'Ja, aber heute ist es bewusst gewählt und organisiert, mit separaten Wohneinheiten.'",
+        "vi": "Người đàn ông giải thích: 'Vâng, nhưng ngày nay nó được lựa chọn và tổ chức một cách có ý thức, với các đơn vị nhà ở riêng biệt.'",
+        "key_evidence": "Ja, aber heute ist es bewusst gewählt und organisiert, mit separaten Wohneinheiten.",
         "key_vocabulary": []
       }
     },
     {
       "id": "Q5",
-      "gespraech": 1,
+      "gespraech": 3,
+      "type": "richtig_falsch",
+      "question": "Die Frau erwartet, dass die Planung eines Baugruppenprojekts viel Zeit in Anspruch nimmt.",
+      "answer": "richtig",
+      "points": 1,
+      "explanation": {
+        "de": "Die Frau schließt das Gespräch mit der Bemerkung: 'Allerdings braucht man wahrscheinlich viel Geduld für die Planungsphase.'",
+        "vi": "Người phụ nữ kết thúc cuộc trò chuyện bằng nhận xét: 'Tuy nhiên, có lẽ cần rất nhiều kiên nhẫn cho giai đoạn lập kế hoạch.'",
+        "key_evidence": "Allerdings braucht man wahrscheinlich viel Geduld für die Planungsphase.",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q6",
+      "gespraech": 3,
       "type": "mc_abc",
-      "question": "Welches Thema wird besprochen (Gespräch 1)?",
+      "question": "Welchen Hauptvorteil einer Baugruppe nennt der Mann?",
       "options": {
-        "a": "Thailand",
-        "b": "Berlin",
-        "c": "England"
+        "a": "Die Möglichkeit, die Badezimmerfarbe selbst zu bestimmen.",
+        "b": "Die Kostenersparnis durch den Wegfall von Zwischenhändlern.",
+        "c": "Die schnellere Realisierung des Bauvorhabens im Vergleich zu Einzelbauern."
       },
       "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Das Hauptthema ist \"Einkaufen\".",
-        "vi": "Đoạn hội thoại 1 nói về chủ đề gì?",
-        "key_evidence": "Einkaufen",
+        "de": "Der Mann erklärt: 'Ja, etwa zwanzig Prozent günstiger, weil man die Bauträger-Marge und den Makler spart.'",
+        "vi": "Người đàn ông giải thích: 'Vâng, rẻ hơn khoảng hai mươi phần trăm, vì bạn tiết kiệm được lợi nhuận của nhà phát triển và phí môi giới.'",
+        "key_evidence": "Ja, etwa zwanzig Prozent günstiger, weil man die Bauträger-Marge und den Makler spart.",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q7",
+      "gespraech": 4,
+      "type": "richtig_falsch",
+      "question": "Die Frau geht davon aus, dass Hausboote stark schwanken.",
+      "answer": "richtig",
+      "points": 1,
+      "explanation": {
+        "de": "Die Frau fragt: 'Wird ihm nicht schwindelig bei dem ganzen Geschaukel?'",
+        "vi": "Người phụ nữ hỏi: 'Anh ấy không bị chóng mặt vì sự rung lắc đó sao?'",
+        "key_evidence": "Wird ihm nicht schwindelig bei dem ganzen Geschaukel?",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q8",
+      "gespraech": 4,
+      "type": "mc_abc",
+      "question": "Wo befindet sich das Hausboot des Bruders?",
+      "options": {
+        "a": "Auf einem See in Brandenburg, außerhalb der Stadt.",
+        "b": "Zentral in Berlin, an einem Fluss mit Stadtblick.",
+        "c": "An einem abgelegenen Ort, um Ruhe zu finden."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Der Mann sagt: 'Nein, mitten in Berlin auf der Spree! Er hat einen Liegeplatz in Kreuzberg mit Blick auf die Stadt.'",
+        "vi": "Người đàn ông nói: 'Không, giữa Berlin trên sông Spree! Anh ấy có một bến đỗ ở Kreuzberg với tầm nhìn ra thành phố.'",
+        "key_evidence": "Nein, mitten in Berlin auf der Spree! Er hat einen Liegeplatz in Kreuzberg mit Blick auf die Stadt.",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q9",
+      "gespraech": 5,
+      "type": "richtig_falsch",
+      "question": "Die Frau ist der Meinung, dass Co-Living auf Dauer nicht ideal ist.",
+      "answer": "richtig",
+      "points": 1,
+      "explanation": {
+        "de": "Die Frau äußert: 'Ich glaube, das Konzept funktioniert gut für ein bis zwei Jahre, aber langfristig braucht man seine Privatsphäre.'",
+        "vi": "Người phụ nữ bày tỏ: 'Tôi tin rằng khái niệm này hoạt động tốt trong một đến hai năm, nhưng về lâu dài người ta cần sự riêng tư.'",
+        "key_evidence": "Ich glaube, das Konzept funktioniert gut für ein bis zwei Jahre, aber langfristig braucht man seine Privatsphäre.",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q10",
+      "gespraech": 5,
+      "type": "mc_abc",
+      "question": "Welche Vorteile des Co-Living hebt der Mann hervor?",
+      "options": {
+        "a": "Die Möglichkeit, Kosten zu sparen und in einer ruhigen Umgebung zu leben.",
+        "b": "Die sofortige Integration in eine Gemeinschaft und umfassende Dienstleistungen.",
+        "c": "Die absolute Privatsphäre und die Freiheit, alles selbst zu organisieren."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Der Mann nennt: 'Man hat sofort eine Gemeinschaft und muss sich nicht um Möbel oder Internet kümmern.' und 'Dafür bekommt man Service: Reinigung, schnelles Internet und manchmal sogar Frühstück inklusive.'",
+        "vi": "Người đàn ông nêu ra: 'Người ta có ngay một cộng đồng và không phải lo lắng về đồ đạc hay internet.' và 'Đổi lại, bạn nhận được dịch vụ: dọn dẹp, internet nhanh và đôi khi cả bữa sáng bao gồm.'",
+        "key_evidence": "Man hat sofort eine Gemeinschaft und muss sich nicht um Möbel oder Internet kümmern. Dafür bekommt man Service: Reinigung, schnelles Internet und manchmal sogar Frühstück inklusive.",
         "key_vocabulary": []
       }
     }

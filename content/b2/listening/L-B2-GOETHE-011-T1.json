@@ -16,68 +16,207 @@
   "questions": [
     {
       "id": "Q1",
-      "item": 1,
+      "gespraech": 1,
       "type": "richtig_falsch",
-      "statement": "Die Person kommt aus Düsseldorf.",
+      "question": "Die Frau lehnt den Verzehr von Insekten grundsätzlich ab.",
       "answer": "falsch",
       "points": 1,
       "explanation": {
-        "de": "Falsch. Die Aussage stimmt nicht mit dem Hörtext überein.",
-        "vi": "Sai.",
-        "key_evidence": "Die Person kommt aus Düsseldorf.",
-        "key_vocabulary": []
+        "de": "Die Frau sagt, dass sie bereit wäre, Insekten zu probieren, wenn sie diese nicht sieht und es gut schmeckt.",
+        "vi": "Người phụ nữ nói rằng cô ấy sẵn sàng thử côn trùng nếu cô ấy không nhìn thấy chúng và chúng ngon.",
+        "key_evidence": "Na ja, wenn ich es nicht sehe und es gut schmeckt, wäre ich vielleicht bereit es zu probieren.",
+        "key_vocabulary": [
+          "grundsätzlich ablehnen",
+          "Verzehr",
+          "bereit sein"
+        ]
       }
     },
     {
       "id": "Q2",
-      "item": 2,
-      "type": "richtig_falsch",
-      "statement": "Nudeln wird erwähnt.",
-      "answer": "richtig",
-      "points": 1,
-      "explanation": {
-        "de": "Richtig. Die Aussage stimmt mit dem Hörtext überein.",
-        "vi": "Đúng.",
-        "key_evidence": "Nudeln wird erwähnt.",
-        "key_vocabulary": []
-      }
-    },
-    {
-      "id": "Q3",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Welches Thema wird besprochen (Gespräch 1)?",
+      "question": "Was ist laut der Frau das Hauptproblem beim Verzehr von Insekten in ihrer Kultur?",
       "options": {
-        "a": "Wohnung und Haushalt",
-        "b": "Einkaufen und Geld",
-        "c": "Technik und Digitalisierung"
+        "a": "Der ungewohnte Geschmack.",
+        "b": "Die kulturelle Gewohnheit.",
+        "c": "Die fehlende Verarbeitung zu Mehl."
       },
       "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Man hört: \"Einkaufen und Geld\".",
-        "vi": "Đoạn hội thoại 1 nói về chủ đề gì?",
-        "key_evidence": "Einkaufen und Geld",
-        "key_vocabulary": []
+        "de": "Die Frau schließt, dass es sich eher um eine kulturelle Hürde als um ein geschmackliches Problem handelt.",
+        "vi": "Người phụ nữ kết luận rằng đó là một rào cản văn hóa hơn là một vấn đề về hương vị.",
+        "key_evidence": "Stimmt, es ist wohl eher eine kulturelle Hürde als ein geschmackliches Problem.",
+        "key_vocabulary": [
+          "Hauptproblem",
+          "kulturelle Hürde",
+          "geschmackliches Problem"
+        ]
+      }
+    },
+    {
+      "id": "Q3",
+      "gespraech": 2,
+      "type": "richtig_falsch",
+      "question": "Der Mann ist mit seiner neuen vegetarischen Ernährung bereits vollkommen zufrieden.",
+      "answer": "falsch",
+      "points": 1,
+      "explanation": {
+        "de": "Der Mann gibt zu, dass ihm die Umstellung schwerfällt und er den Geschmack von Steak vermisst.",
+        "vi": "Người đàn ông thừa nhận rằng việc chuyển đổi khó khăn đối với anh ấy và anh ấy nhớ hương vị của bít tết.",
+        "key_evidence": "es fällt mir schwerer als gedacht.",
+        "key_vocabulary": [
+          "vollkommen zufrieden",
+          "Umstellung",
+          "vermissen"
+        ]
       }
     },
     {
       "id": "Q4",
-      "gespraech": 1,
+      "gespraech": 2,
       "type": "mc_abc",
-      "question": "Welches Thema wird besprochen (Gespräch 1)?",
+      "question": "Was schlägt die Frau dem Mann vor, um die Umstellung auf vegetarische Ernährung zu erleichtern?",
       "options": {
-        "a": "Aachen",
-        "b": "Essen",
-        "c": "Kairo"
+        "a": "Er soll mehr pflanzliche Fleischalternativen ausprobieren.",
+        "b": "Er sollte sich an die fehlende Routine beim Kochen gewöhnen.",
+        "c": "Er soll Geduld haben, da die Gewöhnung Zeit braucht."
       },
       "answer": "c",
       "points": 1,
       "explanation": {
-        "de": "Das Hauptthema ist \"Einkaufen\".",
-        "vi": "Đoạn hội thoại 1 nói về chủ đề gì?",
-        "key_evidence": "Einkaufen",
-        "key_vocabulary": []
+        "de": "Die Frau ermutigt den Mann, geduldig zu sein, da sie selbst die Erfahrung gemacht hat, dass man sich mit der Zeit an die neue Ernährung gewöhnt.",
+        "vi": "Người phụ nữ khuyến khích người đàn ông kiên nhẫn, vì cô ấy đã tự mình trải nghiệm rằng người ta sẽ quen với chế độ ăn mới theo thời gian.",
+        "key_evidence": "Mit der Zeit gewöhnt man sich daran. Nach drei Monaten habe ich Fleisch überhaupt nicht mehr vermisst.",
+        "key_vocabulary": [
+          "Umstellung erleichtern",
+          "Geduld haben",
+          "Gewöhnung"
+        ]
+      }
+    },
+    {
+      "id": "Q5",
+      "gespraech": 3,
+      "type": "richtig_falsch",
+      "question": "Der Mann sieht die mögliche Zulassung von Laborfleisch in der EU als eine positive Entwicklung.",
+      "answer": "falsch",
+      "points": 1,
+      "explanation": {
+        "de": "Der Mann äußert sich besorgt über die Zulassung von Laborfleisch und findet es beunruhigend.",
+        "vi": "Người đàn ông bày tỏ lo ngại về việc cấp phép thịt nuôi cấy trong phòng thí nghiệm và thấy điều đó đáng lo ngại.",
+        "key_evidence": "Das finde ich beunruhigend. Fleisch aus dem Labor klingt nach Science-Fiction.",
+        "key_vocabulary": [
+          "Zulassung",
+          "positive Entwicklung",
+          "beunruhigend"
+        ]
+      }
+    },
+    {
+      "id": "Q6",
+      "gespraech": 3,
+      "type": "mc_abc",
+      "question": "Was ist laut der Frau momentan das größte Hindernis für die Verbreitung von Laborfleisch?",
+      "options": {
+        "a": "Die mangelnde Akzeptanz bei den Verbrauchern.",
+        "b": "Die hohen Produktionskosten.",
+        "c": "Die schlechte Umweltbilanz."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Die Frau nennt den hohen Preis als das Hauptproblem für Laborfleisch.",
+        "vi": "Người phụ nữ nêu giá cao là vấn đề chính đối với thịt nuôi cấy trong phòng thí nghiệm.",
+        "key_evidence": "Das Hauptproblem ist zurzeit noch der Preis. Ein Kilo Laborfleisch kostet mehrere hundert Euro.",
+        "key_vocabulary": [
+          "größtes Hindernis",
+          "Verbreitung",
+          "Produktionskosten"
+        ]
+      }
+    },
+    {
+      "id": "Q7",
+      "gespraech": 4,
+      "type": "richtig_falsch",
+      "question": "Die Studierenden waren von Anfang an begeistert von der Umstellung des Speiseplans in der Mensa.",
+      "answer": "falsch",
+      "points": 1,
+      "explanation": {
+        "de": "Der Mann berichtet, dass es anfangs viel Protest gab, die meisten Studierenden das Angebot aber inzwischen besser finden.",
+        "vi": "Người đàn ông báo cáo rằng ban đầu có rất nhiều phản đối, nhưng hiện tại hầu hết sinh viên đều thấy thực đơn tốt hơn.",
+        "key_evidence": "Anfangs gab es viel Protest, aber inzwischen finden die meisten das Angebot sogar besser.",
+        "key_vocabulary": [
+          "begeistert",
+          "Umstellung",
+          "Protest"
+        ]
+      }
+    },
+    {
+      "id": "Q8",
+      "gespraech": 4,
+      "type": "mc_abc",
+      "question": "Was hat die Mensa unternommen, um die Akzeptanz der pflanzlichen Gerichte zu erhöhen?",
+      "options": {
+        "a": "Sie hat die Preise für vegetarische Gerichte deutlich gesenkt.",
+        "b": "Sie hat einen spezialisierten Koch für vegane Küche eingestellt.",
+        "c": "Sie hat das Angebot an Fleischgerichten komplett gestrichen."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Der Mann erklärt, dass die Mensa einen Koch eingestellt hat, der auf vegane Küche spezialisiert ist, was die Qualität der Gerichte verbessert hat.",
+        "vi": "Người đàn ông giải thích rằng căng tin đã thuê một đầu bếp chuyên về ẩm thực thuần chay, điều này đã cải thiện chất lượng món ăn.",
+        "key_evidence": "Unsere Mensa hat extra einen Koch eingestellt, der sich auf vegane Küche spezialisiert hat.",
+        "key_vocabulary": [
+          "Akzeptanz erhöhen",
+          "spezialisierter Koch",
+          "vegane Küche"
+        ]
+      }
+    },
+    {
+      "id": "Q9",
+      "gespraech": 5,
+      "type": "richtig_falsch",
+      "question": "Der Mann hat negative Erfahrungen mit dem Intervallfasten gemacht.",
+      "answer": "falsch",
+      "points": 1,
+      "explanation": {
+        "de": "Der Mann berichtet, dass er sehr gute Erfahrungen mit dem Intervallfasten gemacht hat.",
+        "vi": "Người đàn ông báo cáo rằng anh ấy đã có những trải nghiệm rất tốt với việc nhịn ăn gián đoạn.",
+        "key_evidence": "Ich mache seit drei Monaten Intervallfasten und habe damit sehr gute Erfahrungen gemacht.",
+        "key_vocabulary": [
+          "negative Erfahrungen",
+          "Intervallfasten",
+          "gute Erfahrungen"
+        ]
+      }
+    },
+    {
+      "id": "Q10",
+      "gespraech": 5,
+      "type": "mc_abc",
+      "question": "Was sagt der Mann über die wissenschaftliche Grundlage des Intervallfastens?",
+      "options": {
+        "a": "Es gibt noch keine ausreichenden Studien zu den gesundheitlichen Vorteilen.",
+        "b": "Mehrere Studien belegen positive Auswirkungen auf die Gesundheit.",
+        "c": "Die Wissenschaft ist sich über die Effekte noch uneinig."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Der Mann bestätigt, dass es mehrere seriöse Studien gibt, die positive Effekte des Intervallfastens belegen.",
+        "vi": "Người đàn ông xác nhận rằng có nhiều nghiên cứu đáng tin cậy chứng minh những tác động tích cực của việc nhịn ăn gián đoạn.",
+        "key_evidence": "Ja, mehrere Studien zeigen positive Effekte auf den Stoffwechsel, die Entzündungswerte und das Gewicht.",
+        "key_vocabulary": [
+          "wissenschaftliche Grundlage",
+          "ausreichende Studien",
+          "positive Auswirkungen"
+        ]
       }
     }
   ],

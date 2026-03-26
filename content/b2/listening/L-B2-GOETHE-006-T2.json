@@ -18,23 +18,23 @@
       "id": "Q1",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Wie heißt eine Person im Gespräch 1?",
+      "question": "Was möchte Dr. Michäl Lang mit seiner Aussage über die Sicherheit des Radfahrens in Großstädten vermitteln?",
       "options": {
-        "a": "Claudia",
-        "b": "Peter",
-        "c": "Michäl"
+        "a": "Er möchte die verbreitete Angst vor dem Radfahren relativieren.",
+        "b": "Er betont, dass Radfahren objektiv gefährlicher ist, als es scheint.",
+        "c": "Er meint, dass die Infrastruktur bereits ausreichend sicher ist."
       },
-      "answer": "c",
+      "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Man hört: \"Michäl\".",
-        "vi": "Một người trong đoạn 1 tên là gì?",
-        "key_evidence": "Michäl",
+        "de": "Dr. Lang möchte die subjektive Wahrnehmung der Gefahr korrigieren, indem er sagt, dass Radfahren objektiv sicherer ist, als viele denken.",
+        "vi": "Tiến sĩ Lang muốn điều chỉnh nhận thức chủ quan về sự nguy hiểm bằng cách nói rằng đạp xe khách quan an toàn hơn nhiều người nghĩ.",
+        "key_evidence": "Objektivgesehen ist Radfahren sicherer als viele denken.",
         "key_vocabulary": [
-          {
-            "word": "heißen",
-            "meaning": "to be called"
-          }
+          "objektivgesehen",
+          "relativieren",
+          "verbreitet",
+          "Angst"
         ]
       }
     },
@@ -42,23 +42,23 @@
       "id": "Q2",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Woher kommt die Person (Gespräch 1)?",
+      "question": "Worauf führt der Experte die häufigsten Fahrradunfälle in deutschen Städten zurück?",
       "options": {
-        "a": "Berlin",
-        "b": "Deutschland",
-        "c": "Düsseldorf"
+        "a": "Auf die mangelnde Aufmerksamkeit der Radfahrer im Straßenverkehr.",
+        "b": "Auf gefährliche Situationen, die durch abbiegende Autos und geradeaus fahrende Radfahrer entstehen.",
+        "c": "Auf die unzureichende Beleuchtung an Fahrrädern, besonders nachts."
       },
       "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Man hört: \"Deutschland\".",
-        "vi": "Người đó đến từ đâu (đoạn 1)?",
-        "key_evidence": "Deutschland",
+        "de": "Der Experte nennt spezifisch die Konflikte zwischen rechtsabbiegenden Autos und geradeaus fahrenden Radfahrern als Hauptursache.",
+        "vi": "Chuyên gia đặc biệt chỉ ra các xung đột giữa ô tô rẽ phải và người đi xe đạp đi thẳng là nguyên nhân chính.",
+        "key_evidence": "Die häufigste Unfallursache sind Konflikte zwischen rechtsabbiegenden Autos und geradeaus fahrenden Radfahrern.",
         "key_vocabulary": [
-          {
-            "word": "kommen aus",
-            "meaning": "to come from"
-          }
+          "Unfallursache",
+          "Konflikte",
+          "rechtsabbiegend",
+          "geradeaus fahrend"
         ]
       }
     },
@@ -66,19 +66,98 @@
       "id": "Q3",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Welches Thema wird besprochen (Gespräch 1)?",
+      "question": "Was ist laut dem Moderator der Hauptgrund, warum geschützte Kreuzungen in Deutschland noch nicht flächendeckend umgesetzt werden?",
       "options": {
-        "a": "Bildung und Schule",
-        "b": "Einkaufen und Geld",
-        "c": "Umwelt und Natur"
+        "a": "Die Radfahrer lehnen diese Art von Kreuzungen ab.",
+        "b": "Die Kosten für den Umbau sind zu hoch und es fehlt an politischer Unterstützung.",
+        "c": "Es gibt technische Schwierigkeiten bei der Anpassung an deutsche Straßenverhältnisse."
       },
-      "answer": "c",
+      "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Man hört: \"Umwelt und Natur\".",
-        "vi": "Đoạn hội thoại 1 nói về chủ đề gì?",
-        "key_evidence": "Umwelt und Natur",
-        "key_vocabulary": []
+        "de": "Der Moderator nennt explizit die hohen Kosten für den Umbau und den fehlenden politischen Willen als Hürden für die Umsetzung.",
+        "vi": "Người điều hành chương trình nêu rõ chi phí cao cho việc cải tạo và thiếu ý chí chính trị là những trở ngại cho việc triển khai.",
+        "key_evidence": "Der Umbau bestehender Kreuzungen ist teür und erfordert politischen Willen gegen die Auto-Lobby.",
+        "key_vocabulary": [
+          "Umbau",
+          "politischen Willen",
+          "flächendeckend",
+          "umsetzen"
+        ]
+      }
+    },
+    {
+      "id": "Q4",
+      "gespraech": 1,
+      "type": "mc_abc",
+      "question": "Welche Schlussfolgerung zieht der Moderator aus den Erfahrungen mit einer Helmpflicht in Australien?",
+      "options": {
+        "a": "Eine Helmpflicht würde die Sicherheit der verbleibenden Radfahrer erheblich verbessern.",
+        "b": "Eine Helmpflicht könnte paradoxerweise zu einer Verschlechterung der Radfahrsicherheit führen.",
+        "c": "Eine Helmpflicht ist notwendig, um die Anzahl schwerer Kopfverletzungen zu minimieren."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Der Moderator argumentiert, dass eine Helmpflicht die Zahl der Radfahrer reduziert, was wiederum die Sichtbarkeit und Infrastruktur verschlechtert und somit kontraproduktiv ist.",
+        "vi": "Người điều hành chương trình lập luận rằng việc bắt buộc đội mũ bảo hiểm làm giảm số lượng người đi xe đạp, điều này lại làm giảm khả năng hiển thị và cơ sở hạ tầng, do đó phản tác dụng.",
+        "key_evidence": "Das ist kontraproduktiv, weil weniger Radfahrer auch weniger Sichtbarkeit und schlechtere Infrastruktur bedeuten.",
+        "key_vocabulary": [
+          "Schlussfolgerung",
+          "Helmpflicht",
+          "kontraproduktiv",
+          "Sichtbarkeit",
+          "Infrastruktur"
+        ]
+      }
+    },
+    {
+      "id": "Q5",
+      "gespraech": 1,
+      "type": "mc_abc",
+      "question": "Was besagt das vom Experten erwähnte 'Safety in Numbers'-Phänomen im Kontext des Radfahrens?",
+      "options": {
+        "a": "Die Sicherheit für Radfahrer nimmt ab, je mehr Fahrräder auf den Straßen unterwegs sind.",
+        "b": "Eine höhere Anzahl von Radfahrern führt zu einer insgesamt geringeren Unfallrate pro einzelnem Radfahrer.",
+        "c": "Die Sichtbarkeit von Radfahrern verbessert sich nur, wenn sie in großen Gruppen fahren."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Das Phänomen beschreibt, dass eine Zunahme des Radverkehrsanteils die Sicherheit für jeden einzelnen Radfahrer erhöht, da die Unfallrate pro Radfahrer sinkt.",
+        "vi": "Hiện tượng này mô tả rằng việc tăng tỷ lệ người đi xe đạp sẽ nâng cao an toàn cho mỗi người đi xe đạp, vì tỷ lệ tai nạn trên mỗi người đi xe đạp giảm.",
+        "key_evidence": "Das sogenannte 'Safety in Numbers'-Phänomen: Je mehr Radfahrer, desto sicherer wird es für alle. Die Unfallrate pro Radfahrer sinkt, wenn der Radverkehrsanteil steigt.",
+        "key_vocabulary": [
+          "Phänomen",
+          "Unfallrate",
+          "Radverkehrsanteil",
+          "sinkt"
+        ]
+      }
+    },
+    {
+      "id": "Q6",
+      "gespraech": 1,
+      "type": "mc_abc",
+      "question": "Was empfiehlt der Moderator Radfahrern, um ihre persönliche Sicherheit im Straßenverkehr zu erhöhen?",
+      "options": {
+        "a": "Sie sollten sich stets defensiv verhalten und den Kontakt zu Autofahrern meiden.",
+        "b": "Sie sollten durch ihr Verhalten und ihre Ausstattung aktiv zur eigenen Sichtbarkeit beitragen.",
+        "c": "Sie sollten sich vorrangig auf die Einhaltung der Verkehrsregeln durch Autofahrer verlassen."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Der Moderator gibt konkrete Ratschläge wie selbstbewusstes Fahren, helle Kleidung und Beleuchtung, um die eigene Sichtbarkeit und damit die Sicherheit zu erhöhen.",
+        "vi": "Người điều hành chương trình đưa ra những lời khuyên cụ thể như lái xe tự tin, mặc quần áo sáng màu và sử dụng đèn chiếu sáng để tăng khả năng hiển thị và do đó tăng an toàn cá nhân.",
+        "key_evidence": "Fahren Sie selbstbewusst und sichtbar. Tragen Sie helle Kleidung und nutzen Sie immer Beleuchtung. Und meiden Sie den toten Winkel von Lkws.",
+        "key_vocabulary": [
+          "selbstbewusst",
+          "sichtbar",
+          "helle Kleidung",
+          "Beleuchtung",
+          "Sicherheit"
+        ]
       }
     }
   ],

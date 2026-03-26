@@ -16,81 +16,166 @@
   "questions": [
     {
       "id": "Q1",
-      "item": 1,
+      "gespraech": 1,
       "type": "richtig_falsch",
-      "statement": "Die Person kommt aus London.",
+      "question": "Die Frau lehnt den Verzehr von Insekten grundsätzlich ab.",
       "answer": "falsch",
       "points": 1,
       "explanation": {
-        "de": "Falsch. Die Aussage stimmt nicht mit dem Hörtext überein.",
-        "vi": "Sai.",
-        "key_evidence": "Die Person kommt aus London.",
+        "de": "Die Frau sagt, dass sie Insekten vielleicht probieren würde, wenn sie diese nicht sieht und sie gut schmecken. Das zeigt, dass sie den Verzehr nicht grundsätzlich ablehnt, sondern unter bestimmten Bedingungen offen dafür ist.",
+        "vi": "Người phụ nữ nói rằng cô ấy có thể thử ăn côn trùng nếu không nhìn thấy chúng và chúng ngon. Điều này cho thấy cô ấy không hoàn toàn từ chối việc ăn côn trùng mà sẵn sàng thử trong những điều kiện nhất định.",
+        "key_evidence": "Na ja, wenn ich es nicht sehe und es gut schmeckt, wäre ich vielleicht bereit es zu probieren.",
         "key_vocabulary": []
       }
     },
     {
       "id": "Q2",
-      "item": 2,
-      "type": "richtig_falsch",
-      "statement": "Nudeln wird erwähnt.",
-      "answer": "richtig",
+      "gespraech": 1,
+      "type": "mc_abc",
+      "question": "Was schlussfolgert die Frau am Ende des Gesprächs bezüglich des Insektenverzehrs?",
+      "options": {
+        "a": "Sie hält es für ein unüberwindbares geschmackliches Problem.",
+        "b": "Sie sieht darin hauptsächlich eine kulturell bedingte Schwierigkeit.",
+        "c": "Sie ist überzeugt, dass es die Zukunft der Ernährung ist."
+      },
+      "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Richtig. Die Aussage stimmt mit dem Hörtext überein.",
-        "vi": "Đúng.",
-        "key_evidence": "Nudeln wird erwähnt.",
+        "de": "Die Frau stimmt dem Mann zu, dass es eher eine kulturelle Hürde als ein geschmackliches Problem ist, Insekten zu essen.",
+        "vi": "Người phụ nữ đồng ý với người đàn ông rằng việc ăn côn trùng chủ yếu là một rào cản văn hóa hơn là một vấn đề về hương vị.",
+        "key_evidence": "Stimmt, es ist wohl eher eine kulturelle Hürde als ein geschmackliches Problem.",
         "key_vocabulary": []
       }
     },
     {
       "id": "Q3",
-      "item": 3,
+      "gespraech": 2,
       "type": "richtig_falsch",
-      "statement": "Die Person kommt aus München.",
+      "question": "Die Frau hat sich bereits vollständig an die vegetarische Ernährung gewöhnt.",
       "answer": "falsch",
       "points": 1,
       "explanation": {
-        "de": "Falsch. Die Aussage stimmt nicht mit dem Hörtext überein.",
-        "vi": "Sai.",
-        "key_evidence": "Die Person kommt aus München.",
+        "de": "Die Frau gibt zu, dass sie den Geschmack eines guten Steaks vermisst, was zeigt, dass sie sich noch nicht vollständig an die vegetarische Ernährung gewöhnt hat.",
+        "vi": "Người phụ nữ thừa nhận rằng cô ấy nhớ hương vị của một miếng bít tết ngon, điều này cho thấy cô ấy vẫn chưa hoàn toàn quen với chế độ ăn chay.",
+        "key_evidence": "Aber ich vermisse den Geschmack von einem richtig guten Steak, das muss ich zugeben.",
         "key_vocabulary": []
       }
     },
     {
       "id": "Q4",
-      "gespraech": 1,
+      "gespraech": 2,
       "type": "mc_abc",
-      "question": "Welches Thema wird besprochen (Gespräch 1)?",
+      "question": "Was rät der Mann der Frau bezüglich der Umstellung auf vegetarische Ernährung?",
       "options": {
-        "a": "Einkaufen und Geld",
-        "b": "Essen und Trinken",
-        "c": "Bildung und Schule"
+        "a": "Sie sollte sofort aufhören, wenn es ihr schwerfällt.",
+        "b": "Sie muss geduldig sein, da die Gewöhnung Zeit braucht.",
+        "c": "Sie sollte nur pflanzliche Fleischalternativen essen."
       },
-      "answer": "a",
+      "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Man hört: \"Einkaufen und Geld\".",
-        "vi": "Đoạn hội thoại 1 nói về chủ đề gì?",
-        "key_evidence": "Einkaufen und Geld",
+        "de": "Der Mann sagt, dass man sich mit der Zeit daran gewöhnt und er selbst nach drei Monaten Fleisch nicht mehr vermisst hat. Dies impliziert, dass die Frau geduldig sein sollte.",
+        "vi": "Người đàn ông nói rằng người ta sẽ quen dần theo thời gian và bản thân anh ấy cũng không còn nhớ thịt sau ba tháng. Điều này ngụ ý rằng người phụ nữ nên kiên nhẫn.",
+        "key_evidence": "Mit der Zeit gewöhnt man sich daran. Nach drei Monaten habe ich Fleisch überhaupt nicht mehr vermisst.",
         "key_vocabulary": []
       }
     },
     {
       "id": "Q5",
-      "gespraech": 1,
-      "type": "mc_abc",
-      "question": "Welches Thema wird besprochen (Gespräch 1)?",
-      "options": {
-        "a": "New York",
-        "b": "Chemnitz",
-        "c": "Berlin"
-      },
-      "answer": "a",
+      "gespraech": 3,
+      "type": "richtig_falsch",
+      "question": "Die Frau ist von der Idee des Laborfleisches sofort begeistert.",
+      "answer": "falsch",
       "points": 1,
       "explanation": {
-        "de": "Das Hauptthema ist \"Einkaufen\".",
-        "vi": "Đoạn hội thoại 1 nói về chủ đề gì?",
-        "key_evidence": "Einkaufen",
+        "de": "Die Frau äußert, dass sie die Idee beunruhigend findet und es nach Science-Fiction klingt, was keine Begeisterung zeigt.",
+        "vi": "Người phụ nữ bày tỏ rằng cô ấy thấy ý tưởng này đáng lo ngại và nghe như khoa học viễn tưởng, điều này không thể hiện sự hào hứng.",
+        "key_evidence": "Das finde ich beunruhigend. Fleisch aus dem Labor klingt nach Science-Fiction.",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q6",
+      "gespraech": 3,
+      "type": "mc_abc",
+      "question": "Was ist laut dem Mann das größte Hindernis für die Akzeptanz von Laborfleisch?",
+      "options": {
+        "a": "Die fehlende Umweltfreundlichkeit.",
+        "b": "Die hohen Produktionskosten.",
+        "c": "Die mangelnde Akzeptanz bei den Verbrauchern."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Der Mann nennt den Preis als das Hauptproblem und erwähnt, dass ein Kilo Laborfleisch mehrere hundert Euro kostet.",
+        "vi": "Người đàn ông nêu giá cả là vấn đề chính và đề cập rằng một kilôgam thịt nuôi cấy có giá vài trăm euro.",
+        "key_evidence": "Das Hauptproblem ist zurzeit noch der Preis. Ein Kilo Laborfleisch kostet mehrere hundert Euro.",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q7",
+      "gespraech": 4,
+      "type": "richtig_falsch",
+      "question": "Die Studierenden waren von Anfang an begeistert von der Umstellung des Speiseplans.",
+      "answer": "falsch",
+      "points": 1,
+      "explanation": {
+        "de": "Der Mann berichtet, dass es anfangs viel Protest gab, bevor die Studierenden das Angebot besser fanden.",
+        "vi": "Người đàn ông báo cáo rằng ban đầu có rất nhiều phản đối, trước khi sinh viên thấy thực đơn tốt hơn.",
+        "key_evidence": "Anfangs gab es viel Protest, aber inzwischen finden die meisten das Angebot sogar besser.",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q8",
+      "gespraech": 4,
+      "type": "mc_abc",
+      "question": "Was betont die Frau als entscheidend für die Akzeptanz der pflanzlichen Gerichte?",
+      "options": {
+        "a": "Der niedrigere Preis der vegetarischen Optionen.",
+        "b": "Die hohe Qualität und der gute Geschmack der Speisen.",
+        "c": "Die große Auswahl an verschiedenen Gerichten."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Die Frau betont, dass die Qualität stimmen muss und dass 'labbriger Tofu niemanden überzeugt', was auf die Wichtigkeit von gutem Geschmack und Qualität hinweist.",
+        "vi": "Người phụ nữ nhấn mạnh rằng chất lượng phải tốt và 'đậu phụ nhão không thuyết phục được ai', điều này cho thấy tầm quan trọng của hương vị và chất lượng tốt.",
+        "key_evidence": "Die Qualität muss aber stimmen. Labbriger Tofu überzeugt niemanden von pflanzlicher Ernährung.",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q9",
+      "gespraech": 5,
+      "type": "richtig_falsch",
+      "question": "Der Mann hat negative Erfahrungen mit dem Intervallfasten gemacht.",
+      "answer": "falsch",
+      "points": 1,
+      "explanation": {
+        "de": "Der Mann sagt ausdrücklich, dass er 'sehr gute Erfahrungen' mit dem Intervallfasten gemacht hat.",
+        "vi": "Người đàn ông nói rõ rằng anh ấy đã có 'những trải nghiệm rất tốt' với việc nhịn ăn gián đoạn.",
+        "key_evidence": "Ich mache seit drei Monaten Intervallfasten und habe damit sehr gute Erfahrungen gemacht.",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q10",
+      "gespraech": 5,
+      "type": "mc_abc",
+      "question": "Was überzeugt die Frau letztendlich, das Intervallfasten auszuprobieren?",
+      "options": {
+        "a": "Die persönliche Empfehlung des Mannes.",
+        "b": "Die wissenschaftlich belegten gesundheitlichen Vorteile.",
+        "c": "Die einfache Umsetzung im Alltag."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Die Frau fragt nach seriösen Studien und entscheidet sich zum Ausprobieren, nachdem der Mann die positiven Effekte auf den Stoffwechsel, Entzündungswerte und das Gewicht erwähnt.",
+        "vi": "Người phụ nữ hỏi về các nghiên cứu đáng tin cậy và quyết định thử sau khi người đàn ông đề cập đến những tác động tích cực đối với quá trình trao đổi chất, chỉ số viêm và cân nặng.",
+        "key_evidence": "Ja, mehrere Studien zeigen positive Effekte auf den Stoffwechsel, die Entzündungswerte und das Gewicht. Ich glaube, ich probiere das auch einmal aus.",
         "key_vocabulary": []
       }
     }

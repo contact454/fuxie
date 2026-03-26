@@ -16,68 +16,139 @@
   "questions": [
     {
       "id": "Q1",
-      "gespraech": 1,
+      "item": 1,
       "type": "mc_abc",
-      "question": "Welches Thema wird besprochen (Gespräch 1)?",
+      "question": "Wer sagt das: 'Für Normalverdiener wird Wohnen in der Stadt unbezahlbar.'?",
       "options": {
-        "a": "Gesundheit und Körper",
-        "b": "Einkaufen und Geld",
-        "c": "Freizeit und Hobbys"
-      },
-      "answer": "b",
-      "points": 1,
-      "explanation": {
-        "de": "Man hört: \"Einkaufen und Geld\".",
-        "vi": "Đoạn hội thoại 1 nói về chủ đề gì?",
-        "key_evidence": "Einkaufen und Geld",
-        "key_vocabulary": []
-      }
-    },
-    {
-      "id": "Q2",
-      "gespraech": 1,
-      "type": "mc_abc",
-      "question": "Wie heißt eine Person im Gespräch 1?",
-      "options": {
-        "a": "Schmidt",
-        "b": "Petra",
-        "c": "Jörg"
+        "a": "Herr Schmidt",
+        "b": "Frau Lehmann",
+        "c": "Moderator"
       },
       "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Man hört: \"Schmidt\".",
-        "vi": "Một người trong đoạn 1 tên là gì?",
-        "key_evidence": "Schmidt",
+        "de": "Herr Schmidt (Gast_A) äußert diese Meinung zu Beginn der Diskussion über die steigenden Mietpreise.",
+        "vi": "Ông Schmidt (Khách mời A) bày tỏ quan điểm này khi bắt đầu cuộc thảo luận về giá thuê nhà tăng cao.",
+        "key_evidence": "Die Mietpreise explodieren und für Normalverdiener wird Wohnen in der Stadt unbezahlbar.",
         "key_vocabulary": [
-          {
-            "word": "heißen",
-            "meaning": "to be called"
-          }
+          "Normalverdiener",
+          "unbezahlbar",
+          "explodieren"
+        ]
+      }
+    },
+    {
+      "id": "Q2",
+      "item": 2,
+      "type": "mc_abc",
+      "question": "Wer sagt das: 'Wir haben vor allem ein Problem bei der Nutzung vorhandener Flächen.'?",
+      "options": {
+        "a": "Herr Schmidt",
+        "b": "Frau Lehmann",
+        "c": "Moderator"
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Frau Lehmann (Gast_B) bringt diese Perspektive in die Diskussion ein, dass das Problem nicht nur fehlender Wohnraum, sondern auch die ineffiziente Nutzung bestehender Flächen ist.",
+        "vi": "Bà Lehmann (Khách mời B) đưa ra quan điểm này vào cuộc thảo luận, cho rằng vấn đề không chỉ là thiếu nhà ở mà còn là việc sử dụng không hiệu quả các diện tích hiện có.",
+        "key_evidence": "Ich finde, wir haben vor allem ein Problem bei der Nutzung vorhandener Flächen.",
+        "key_vocabulary": [
+          "vorhanden",
+          "Flächen",
+          "Nutzung"
         ]
       }
     },
     {
       "id": "Q3",
-      "gespraech": 1,
+      "item": 3,
       "type": "mc_abc",
-      "question": "Wie heißt eine Person (Gespräch 1)?",
+      "question": "Wer sagt das: 'Wir besitzen das Haus gemeinsam. Niemand kann die Miete erhöhen oder uns kündigen.'?",
       "options": {
-        "a": "Portugal",
-        "b": "Oldenburg",
-        "c": "Heidelberg"
+        "a": "Herr Schmidt",
+        "b": "Frau Lehmann",
+        "c": "Moderator"
+      },
+      "answer": "c",
+      "points": 1,
+      "explanation": {
+        "de": "Der Moderator fasst hier die Vorteile des Wohnprojekts von Herrn Schmidt zusammen, nachdem Herr Schmidt davon erzählt hat.",
+        "vi": "Người điều hành tóm tắt những lợi ích của dự án nhà ở của ông Schmidt sau khi ông Schmidt kể về nó.",
+        "key_evidence": "Wir besitzen das Haus gemeinsam. Niemand kann die Miete erhöhen oder uns kündigen.",
+        "key_vocabulary": [
+          "besitzen",
+          "gemeinsam",
+          "kündigen"
+        ]
+      }
+    },
+    {
+      "id": "Q4",
+      "item": 4,
+      "type": "mc_abc",
+      "question": "Wer sagt das: 'Es ist ein hervorragendes Konzept, aber es löst nicht das Grundproblem des fehlenden Wohnraums.'?",
+      "options": {
+        "a": "Herr Schmidt",
+        "b": "Frau Lehmann",
+        "c": "Moderator"
       },
       "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man den Namen \"Schmidt\".",
-        "vi": "Một người trong đoạn 1 tên là gì?",
-        "key_evidence": "Schmidt",
+        "de": "Frau Lehmann (Gast_B) bewertet genossenschaftliche Wohnmodelle als Stadtplanerin und erkennt deren Wert an, weist aber auf deren Grenzen hin.",
+        "vi": "Bà Lehmann (Khách mời B) đánh giá các mô hình nhà ở hợp tác xã với tư cách là nhà quy hoạch đô thị và công nhận giá trị của chúng, nhưng cũng chỉ ra những hạn chế của chúng.",
+        "key_evidence": "Es ist ein hervorragendes Konzept, aber es löst nicht das Grundproblem des fehlenden Wohnraums.",
         "key_vocabulary": [
-          {
-            "word": "heißen",
-            "meaning": "to be called"
-          }
+          "hervorragend",
+          "Konzept",
+          "Grundproblem"
+        ]
+      }
+    },
+    {
+      "id": "Q5",
+      "item": 5,
+      "type": "mc_abc",
+      "question": "Wer sagt das: 'Manchmal dauert es ewig, bis Entscheidungen getroffen werden, weil alle mitreden wollen.'?",
+      "options": {
+        "a": "Herr Schmidt",
+        "b": "Frau Lehmann",
+        "c": "Moderator"
+      },
+      "answer": "a",
+      "points": 1,
+      "explanation": {
+        "de": "Herr Schmidt (Gast_A) beschreibt hier einen Nachteil des engen Zusammenlebens in einer Genossenschaft, nämlich die langwierige Entscheidungsfindung.",
+        "vi": "Ông Schmidt (Khách mời A) mô tả một nhược điểm của việc sống gần gũi trong một hợp tác xã, đó là quá trình ra quyết định kéo dài.",
+        "key_evidence": "Natürlich, manchmal dauert es ewig, bis Entscheidungen getroffen werden, weil alle mitreden wollen.",
+        "key_vocabulary": [
+          "ewig",
+          "Entscheidungen",
+          "mitreden"
+        ]
+      }
+    },
+    {
+      "id": "Q6",
+      "item": 6,
+      "type": "mc_abc",
+      "question": "Wer sagt das: 'Engagieren Sie sich für bezahlbaren Wohnraum in Ihrer Stadt! Es geht uns alle an!'?",
+      "options": {
+        "a": "Herr Schmidt",
+        "b": "Frau Lehmann",
+        "c": "Moderator"
+      },
+      "answer": "c",
+      "points": 1,
+      "explanation": {
+        "de": "Der Moderator schließt die Diskussion mit einem Appell an die Zuhörer, sich für bezahlbaren Wohnraum einzusetzen.",
+        "vi": "Người điều hành kết thúc cuộc thảo luận bằng lời kêu gọi thính giả hành động vì nhà ở giá cả phải chăng.",
+        "key_evidence": "Engagieren Sie sich für bezahlbaren Wohnraum in Ihrer Stadt! Es geht uns alle an!",
+        "key_vocabulary": [
+          "engagieren",
+          "bezahlbar",
+          "angehen"
         ]
       }
     }

@@ -16,81 +16,166 @@
   "questions": [
     {
       "id": "Q1",
-      "item": 1,
+      "gespraech": 1,
       "type": "richtig_falsch",
-      "statement": "Die Person kommt aus Peru.",
-      "answer": "falsch",
+      "question": "Der zweite Sprecher ist der Meinung, dass Radfahren trotz der Risiken vorteilhaft ist.",
+      "answer": "richtig",
       "points": 1,
       "explanation": {
-        "de": "Falsch. Die Aussage stimmt nicht mit dem Hörtext überein.",
-        "vi": "Sai.",
-        "key_evidence": "Die Person kommt aus Peru.",
+        "de": "Der zweite Sprecher sagt: 'Ich fahre trotzdem jeden Tag Rad. Statistisch gesehen ist der gesundheitliche Nutzen größer als das Risiko.' Dies zeigt, dass er Radfahren trotz der Gefahren als vorteilhaft ansieht.",
+        "vi": "Người nói thứ hai nói: 'Dù sao tôi vẫn đạp xe mỗi ngày. Về mặt thống kê, lợi ích sức khỏe lớn hơn rủi ro.' Điều này cho thấy anh ấy coi việc đạp xe là có lợi bất chấp những nguy hiểm.",
+        "key_evidence": "Ich fahre trotzdem jeden Tag Rad. Statistisch gesehen ist der gesundheitliche Nutzen größer als das Risiko.",
         "key_vocabulary": []
       }
     },
     {
       "id": "Q2",
-      "item": 2,
-      "type": "richtig_falsch",
-      "statement": "Autofahrer wird erwähnt.",
-      "answer": "richtig",
+      "gespraech": 1,
+      "type": "mc_abc",
+      "question": "Was kritisiert der erste Sprecher bezüglich der Radwege in Berlin?",
+      "options": {
+        "a": "Sie sind zu schmal und bieten nicht genug Platz für alle Radfahrer.",
+        "b": "Ihre Instandhaltung ist mangelhaft, besonders im Winter.",
+        "c": "Es gibt nicht genug baulich getrennte Radwege, um Unfälle zu vermeiden."
+      },
+      "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Richtig. Die Aussage stimmt mit dem Hörtext überein.",
-        "vi": "Đúng.",
-        "key_evidence": "Autofahrer wird erwähnt.",
+        "de": "Der erste Sprecher sagt: 'Und die bestehenden Radwege müssen besser gepflegt werden. Im Winter sind sie oft nicht geräumt.' Dies ist eine direkte Kritik an der mangelhaften Pflege.",
+        "vi": "Người nói thứ nhất nói: 'Và các làn đường dành cho xe đạp hiện có phải được bảo trì tốt hơn. Vào mùa đông, chúng thường không được dọn dẹp.' Đây là một lời chỉ trích trực tiếp về việc bảo trì kém.",
+        "key_evidence": "Und die bestehenden Radwege müssen besser gepflegt werden. Im Winter sind sie oft nicht geräumt.",
         "key_vocabulary": []
       }
     },
     {
       "id": "Q3",
-      "item": 3,
+      "gespraech": 2,
       "type": "richtig_falsch",
-      "statement": "Die Person kommt aus Ungarn.",
-      "answer": "falsch",
+      "question": "Der zweite Sprecher ist der Ansicht, dass Berlins aktueller Plan zur Radwegeerweiterung nicht ausreicht, um das Ziel zu erreichen.",
+      "answer": "richtig",
       "points": 1,
       "explanation": {
-        "de": "Falsch. Die Aussage stimmt nicht mit dem Hörtext überein.",
-        "vi": "Sai.",
-        "key_evidence": "Die Person kommt aus Ungarn.",
+        "de": "Der zweite Sprecher kommentiert den Plan mit hundert Kilometern pro Jahr: 'Hundert Kilometer pro Jahr klingt viel, aber Berlin hat insgesamt fünftausendfünfhundert Straßenkilometer.' Dies impliziert, dass die Anstrengungen im Verhältnis zur Gesamtstrecke nicht ausreichen.",
+        "vi": "Người nói thứ hai bình luận về kế hoạch 100 km mỗi năm: 'Một trăm km mỗi năm nghe có vẻ nhiều, nhưng Berlin có tổng cộng 5.500 km đường.' Điều này ngụ ý rằng những nỗ lực này không đủ so với tổng chiều dài đường.",
+        "key_evidence": "Hundert Kilometer pro Jahr klingt viel, aber Berlin hat insgesamt fünftausendfünfhundert Straßenkilometer.",
         "key_vocabulary": []
       }
     },
     {
       "id": "Q4",
-      "gespraech": 1,
+      "gespraech": 2,
       "type": "mc_abc",
-      "question": "Welches Thema wird besprochen (Gespräch 1)?",
+      "question": "Was hebt der zweite Sprecher als entscheidenden Faktor für Kopenhagens Erfolg hervor?",
       "options": {
-        "a": "Umwelt und Natur",
-        "b": "Einkaufen und Geld",
-        "c": "Gesundheit und Körper"
+        "a": "Die frühe Einführung von E-Bikes zur Förderung des Radfahrens.",
+        "b": "Eine konsequente Umgestaltung der Verkehrsinfrastruktur zugunsten von Radfahrern.",
+        "c": "Die finanzielle Unterstützung der Einwohner beim Kauf von Fahrrädern."
       },
       "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Man hört: \"Einkaufen und Geld\".",
-        "vi": "Đoạn hội thoại 1 nói về chủ đề gì?",
-        "key_evidence": "Einkaufen und Geld",
+        "de": "Der zweite Sprecher erklärt Kopenhagens Erfolg mit 'Konsequenz. Sie haben systematisch Autofahrspuren in Radwege umgewandelt und Radparkhäuser gebaut.' Dies beschreibt eine konsequente Umgestaltung der Infrastruktur.",
+        "vi": "Người nói thứ hai giải thích thành công của Copenhagen bằng 'Sự nhất quán. Họ đã chuyển đổi có hệ thống các làn đường ô tô thành làn đường dành cho xe đạp và xây dựng các bãi đỗ xe đạp.' Điều này mô tả một sự tái cấu trúc cơ sở hạ tầng nhất quán.",
+        "key_evidence": "Konsequenz. Sie haben systematisch Autofahrspuren in Radwege umgewandelt und Radparkhäuser gebaut.",
         "key_vocabulary": []
       }
     },
     {
       "id": "Q5",
-      "gespraech": 1,
-      "type": "mc_abc",
-      "question": "Welches Thema wird besprochen (Gespräch 1)?",
-      "options": {
-        "a": "Kassel",
-        "b": "Berlin",
-        "c": "Irland"
-      },
-      "answer": "c",
+      "gespraech": 3,
+      "type": "richtig_falsch",
+      "question": "Der erste Sprecher äußert anfangs die Befürchtung, dass man bei einem E-Bike nicht selbst treten muss.",
+      "answer": "richtig",
       "points": 1,
       "explanation": {
-        "de": "Das Hauptthema ist \"Einkaufen\".",
-        "vi": "Đoạn hội thoại 1 nói về chủ đề gì?",
-        "key_evidence": "Einkaufen",
+        "de": "Der erste Sprecher fragt: 'Aber ist das nicht Schummelei? Man tritt ja nicht richtig und bekommt trotzdem Unterstützung.' Dies zeigt seine anfängliche Befürchtung oder sein Missverständnis.",
+        "vi": "Người nói thứ nhất hỏi: 'Nhưng đó không phải là gian lận sao? Người ta không đạp đúng cách mà vẫn nhận được sự hỗ trợ.' Điều này cho thấy nỗi sợ hãi hoặc sự hiểu lầm ban đầu của anh ấy.",
+        "key_evidence": "Aber ist das nicht Schummelei? Man tritt ja nicht richtig und bekommt trotzdem Unterstützung.",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q6",
+      "gespraech": 3,
+      "type": "mc_abc",
+      "question": "Welchen Vorteil eines E-Bikes betont der zweite Sprecher besonders?",
+      "options": {
+        "a": "Es ist eine kostengünstige Alternative zu öffentlichen Verkehrsmitteln.",
+        "b": "Es ermöglicht, längere und anspruchsvollere Strecken mühelos zu bewältigen.",
+        "c": "Man kann damit völlig ohne eigene Anstrengung fahren."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Der zweite Sprecher sagt: 'Seit ich ein E-Bike habe, fahre ich doppelt so viel Rad wie vorher, auch längere Strecken.' und 'Und für Berge und Gegenwind ist die Unterstützung wirklich eine riesige Erleichterung.' Dies hebt die Möglichkeit hervor, anspruchsvollere Strecken zu fahren.",
+        "vi": "Người nói thứ hai nói: 'Kể từ khi có xe đạp điện, tôi đạp xe gấp đôi so với trước đây, kể cả những quãng đường dài hơn.' và 'Và đối với những đoạn đường đồi núi và ngược gió, sự hỗ trợ thực sự là một sự nhẹ nhõm rất lớn.' Điều này nhấn mạnh khả năng đi những quãng đường khó khăn hơn.",
+        "key_evidence": "Seit ich ein E-Bike habe, fahre ich doppelt so viel Rad wie vorher, auch längere Strecken. Und für Berge und Gegenwind ist die Unterstützung wirklich eine riesige Erleichterung.",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q7",
+      "gespraech": 4,
+      "type": "richtig_falsch",
+      "question": "Der erste Sprecher hat bereits persönliche Erfahrungen mit dem Dienstrad-Leasing gemacht.",
+      "answer": "richtig",
+      "points": 1,
+      "explanation": {
+        "de": "Der erste Sprecher sagt: 'Mein Arbeitgeber bietet das an und ich spare dadurch fast vierzig Prozent vom Listenpreis.' Dies deutet darauf hin, dass er das Angebot bereits nutzt oder zumindest die Vorteile für sich persönlich kennt und in Anspruch nehmen kann.",
+        "vi": "Người nói thứ nhất nói: 'Người sử dụng lao động của tôi cung cấp dịch vụ này và tôi tiết kiệm được gần bốn mươi phần trăm giá niêm yết.' Điều này cho thấy anh ấy đã sử dụng ưu đãi này hoặc ít nhất là biết và có thể tận dụng các lợi ích cá nhân.",
+        "key_evidence": "Mein Arbeitgeber bietet das an und ich spare dadurch fast vierzig Prozent vom Listenpreis.",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q8",
+      "gespraech": 4,
+      "type": "mc_abc",
+      "question": "Was ist ein wesentlicher finanzieller Vorteil des Dienstrad-Leasings für den Arbeitnehmer?",
+      "options": {
+        "a": "Der Arbeitgeber übernimmt die gesamten monatlichen Leasingraten.",
+        "b": "Man spart Steuern und Sozialabgaben, da der Betrag vom Bruttogehalt abgezogen wird.",
+        "c": "Man erhält nach drei Jahren ein neues Fahrrad kostenlos."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Der zweite Sprecher erklärt: 'Weil der Betrag vom Brutto abgezogen wird, sparst du Steuern und Sozialabgaben.' Dies ist der wesentliche finanzielle Vorteil.",
+        "vi": "Người nói thứ hai giải thích: 'Vì số tiền được trừ vào tổng lương, bạn tiết kiệm được thuế và các khoản đóng góp xã hội.' Đây là lợi ích tài chính chính.",
+        "key_evidence": "Weil der Betrag vom Brutto abgezogen wird, sparst du Steuern und Sozialabgaben.",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q9",
+      "gespraech": 5,
+      "type": "richtig_falsch",
+      "question": "Der erste Sprecher ist der Ansicht, dass die Polizei nur Radfahrer, aber nicht Autofahrer ausreichend kontrolliert.",
+      "answer": "richtig",
+      "points": 1,
+      "explanation": {
+        "de": "Der erste Sprecher sagt: 'Das stimmt, aber Autofahrer parken auch ständig auf dem Radweg, und das wird selten kontrolliert.' Dies drückt seine Meinung aus, dass die Kontrollen ungleich verteilt sind.",
+        "vi": "Người nói thứ nhất nói: 'Đúng vậy, nhưng người lái ô tô cũng thường xuyên đỗ xe trên làn đường dành cho xe đạp, và điều đó hiếm khi được kiểm soát.' Điều này thể hiện quan điểm của anh ấy rằng việc kiểm soát không đồng đều.",
+        "key_evidence": "Das stimmt, aber Autofahrer parken auch ständig auf dem Radweg, und das wird selten kontrolliert.",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q10",
+      "gespraech": 5,
+      "type": "mc_abc",
+      "question": "Was schlägt der zweite Sprecher vor, um die Verkehrssicherheit für Radfahrer zu verbessern?",
+      "options": {
+        "a": "Strengere Strafen für alle Verkehrsverstöße, unabhängig vom Verkehrsmittel.",
+        "b": "Eine umfassende Aufklärung und Verkehrserziehung für alle Verkehrsteilnehmer.",
+        "c": "Die Einführung spezieller Verkehrsregeln nur für Radfahrer."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Der zweite Sprecher schließt mit der Aussage: 'Genau, und deshalb brauchen wir mehr Aufklärung und Verkehrserziehung, nicht nur für Autofahrer.' Dies ist sein Vorschlag zur Verbesserung der Situation.",
+        "vi": "Người nói thứ hai kết luận bằng câu nói: 'Đúng vậy, và đó là lý do tại sao chúng ta cần nhiều thông tin và giáo dục giao thông hơn, không chỉ dành cho người lái ô tô.' Đây là đề xuất của anh ấy để cải thiện tình hình.",
+        "key_evidence": "Genau, und deshalb brauchen wir mehr Aufklärung und Verkehrserziehung, nicht nur für Autofahrer.",
         "key_vocabulary": []
       }
     }

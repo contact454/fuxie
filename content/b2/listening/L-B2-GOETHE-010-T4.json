@@ -18,42 +18,48 @@
       "id": "Q1",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Welches Thema wird besprochen (Gespräch 1)?",
+      "question": "Was ist das Hauptziel des Dozenten in diesem Vortrag?",
       "options": {
-        "a": "Einkaufen und Geld",
-        "b": "Umwelt und Natur",
-        "c": "Arbeit und Beruf"
+        "a": "Die Studierenden zur aktiven Teilnahme am Ehrenamt zu motivieren.",
+        "b": "Eine umfassende Analyse des Ehrenamts in Deutschland zu präsentieren.",
+        "c": "Die ökonomische Bedeutung des Ehrenamts für den Staat hervorzuheben."
       },
-      "answer": "a",
+      "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Man hört: \"Einkaufen und Geld\".",
-        "vi": "Đoạn hội thoại 1 nói về chủ đề gì?",
-        "key_evidence": "Einkaufen und Geld",
-        "key_vocabulary": []
+        "de": "Der Dozent kündigt an, die historische Entwicklung, den aktuellen Stand und die Zukunft des Ehrenamts zu beleuchten, was einer umfassenden Analyse entspricht.",
+        "vi": "Giảng viên thông báo sẽ làm rõ sự phát triển lịch sử, tình hình hiện tại và tương lai của công tác tình nguyện, điều này tương đương với một phân tích toàn diện.",
+        "key_evidence": "Heute möchte ich die historische Entwicklung, den aktüllen Stand und die Zukunft des Ehrenamts beleuchten.",
+        "key_vocabulary": [
+          "Hauptziel",
+          "umfassende Analyse",
+          "präsentieren",
+          "beleuchten"
+        ]
       }
     },
     {
       "id": "Q2",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Woher kommt die Person (Gespräch 1)?",
+      "question": "Welche Rolle spielte das Vereinswesen nach dem Zweiten Weltkrieg laut dem Dozenten?",
       "options": {
-        "a": "Deutschland",
-        "b": "Hannover",
-        "c": "München"
+        "a": "Es förderte die wirtschaftliche Erholung Deutschlands.",
+        "b": "Es trug zur sozialen Integration und zum Zusammenhalt bei.",
+        "c": "Es etablierte neue politische Strukturen im Land."
       },
-      "answer": "a",
+      "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Man hört: \"Deutschland\".",
-        "vi": "Người đó đến từ đâu (đoạn 1)?",
-        "key_evidence": "Deutschland",
+        "de": "Der Dozent beschreibt das Vereinswesen als 'Kitt einer gespaltenen Gesellschaft', was bedeutet, dass es die Gesellschaft zusammenhielt und integrierte.",
+        "vi": "Giảng viên mô tả hệ thống câu lạc bộ là 'chất keo gắn kết một xã hội bị chia rẽ', điều này có nghĩa là nó đã gắn kết và hòa nhập xã hội.",
+        "key_evidence": "Nach dem Zweiten Weltkrieg wurde das Vereinswesen zum Kitt einer gespaltenen Gesellschaft.",
         "key_vocabulary": [
-          {
-            "word": "kommen aus",
-            "meaning": "to come from"
-          }
+          "Rolle spielte",
+          "Vereinswesen",
+          "soziale Integration",
+          "Zusammenhalt",
+          "Kitt"
         ]
       }
     },
@@ -61,23 +67,152 @@
       "id": "Q3",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Was macht die Person beruflich (Gespräch 1)?",
+      "question": "Welches Problem spricht der Dozent bezüglich der Engagementquote an?",
       "options": {
-        "a": "Nicht",
-        "b": "Studentin",
-        "c": "Journalist"
+        "a": "Die Gesamtquote der Engagierten ist in Deutschland zu niedrig.",
+        "b": "Ehrenamtliches Engagement könnte bestehende soziale Ungleichheiten verstärken.",
+        "c": "Es gibt zu wenige Vereine, die Nicht-Akademiker ansprechen."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Der Dozent weist darauf hin, dass sich Akademiker häufiger engagieren und dies die Frage aufwirft, ob Ehrenamt soziale Ungleichheit verstärkt.",
+        "vi": "Giảng viên chỉ ra rằng những người có học vấn cao thường tham gia nhiều hơn, và điều này đặt ra câu hỏi liệu công tác tình nguyện có làm tăng thêm bất bình đẳng xã hội hay không.",
+        "key_evidence": "Das wirft die Frage auf, ob ehrenamtliches Engagement soziale Ungleichheit verstärkt statt sie zu verringern.",
+        "key_vocabulary": [
+          "Problem spricht an",
+          "Engagementquote",
+          "soziale Ungleichheiten",
+          "verstärken"
+        ]
+      }
+    },
+    {
+      "id": "Q4",
+      "gespraech": 1,
+      "type": "mc_abc",
+      "question": "Welche Schlussfolgerung zieht der Dozent aus dem sogenannten „Matthäus-Effekt“ im Ehrenamt?",
+      "options": {
+        "a": "Die Politik sollte Maßnahmen ergreifen, um den Zugang für alle zu erleichtern.",
+        "b": "Ehrenamtliches Engagement ist hauptsächlich für die berufliche Weiterentwicklung relevant.",
+        "c": "Es ist unvermeidlich, dass einige Gruppen mehr profitieren als andere."
       },
       "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Man hört: \"Nicht\".",
-        "vi": "Người đó làm nghề gì (đoạn 1)?",
-        "key_evidence": "Nicht",
+        "de": "Nach der Beschreibung des Matthäus-Effekts fordert der Dozent, dass die Politik gezielt Zugangshürden für unterrepräsentierte Gruppen abbauen muss.",
+        "vi": "Sau khi mô tả hiệu ứng Matthäus, giảng viên kêu gọi chính trị phải chủ động loại bỏ các rào cản tiếp cận cho các nhóm ít được đại diện.",
+        "key_evidence": "Die Politik muss daher gezielt Zugangshürden für unterrepräsentierte Gruppen abbaün.",
         "key_vocabulary": [
-          {
-            "word": "Nicht",
-            "meaning": "Nicht"
-          }
+          "Schlussfolgerung zieht",
+          "Matthäus-Effekt",
+          "Maßnahmen ergreifen",
+          "Zugang erleichtern",
+          "Zugangshürden abbauen"
+        ]
+      }
+    },
+    {
+      "id": "Q5",
+      "gespraech": 1,
+      "type": "mc_abc",
+      "question": "Welche Kritik äußert der Dozent bezüglich der staatlichen Unterstützung des Ehrenamts?",
+      "options": {
+        "a": "Der Staat sollte das Ehrenamt vollständig finanzieren, da es so wertvoll ist.",
+        "b": "Die finanzielle Unterstützung des Staates steht in keinem angemessenen Verhältnis zum Nutzen des Ehrenamts.",
+        "c": "Die Bürger sollten mehr Steuern zahlen, um das Ehrenamt zu fördern."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Der Dozent kritisiert, dass der Staat nur einen Bruchteil der Summe investiert, die er durch das Ehrenamt spart, und nennt dies ein 'Missverhältnis'.",
+        "vi": "Giảng viên chỉ trích rằng nhà nước chỉ đầu tư một phần nhỏ số tiền mà họ tiết kiệm được nhờ công tác tình nguyện, và gọi đây là 'sự mất cân đối'.",
+        "key_evidence": "Gleichzeitig investiert der Staat nur einen Bruchteil dieser Summe in die Unterstützung des Ehrenamts. Dieses Missverhältnis muss sich ändern, wenn das Ehrenamt zukunftsfähig bleiben soll.",
+        "key_vocabulary": [
+          "Kritik äußert",
+          "staatliche Unterstützung",
+          "finanzielle Unterstützung",
+          "angemessenes Verhältnis",
+          "Nutzen",
+          "Missverhältnis"
+        ]
+      }
+    },
+    {
+      "id": "Q6",
+      "gespraech": 1,
+      "type": "mc_abc",
+      "question": "Was ist laut dem Dozenten eine entscheidende Voraussetzung für die Zukunftsfähigkeit des Ehrenamts?",
+      "options": {
+        "a": "Eine stärkere Fokussierung auf digitale Engagement-Möglichkeiten.",
+        "b": "Eine Anpassung des Verhältnisses zwischen staatlichen Einsparungen und Investitionen.",
+        "c": "Die Einführung eines Mindestlohns für alle ehrenamtlichen Tätigkeiten."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Der Dozent betont, dass sich das 'Missverhältnis' zwischen staatlichen Einsparungen und Investitionen ändern muss, damit das Ehrenamt zukunftsfähig bleibt.",
+        "vi": "Giảng viên nhấn mạnh rằng 'sự mất cân đối' giữa tiết kiệm và đầu tư của nhà nước phải thay đổi để công tác tình nguyện có thể duy trì trong tương lai.",
+        "key_evidence": "Dieses Missverhältnis muss sich ändern, wenn das Ehrenamt zukunftsfähig bleiben soll.",
+        "key_vocabulary": [
+          "entscheidende Voraussetzung",
+          "Zukunftsfähigkeit",
+          "Anpassung",
+          "Verhältnis",
+          "staatlichen Einsparungen",
+          "Investitionen"
+        ]
+      }
+    },
+    {
+      "id": "Q7",
+      "gespraech": 1,
+      "type": "mc_abc",
+      "question": "Welche negative Auswirkung der Digitalisierung auf das Ehrenamt hebt der Dozent hervor?",
+      "options": {
+        "a": "Die digitale Koordination ist für viele Ehrenamtliche zu kompliziert.",
+        "b": "Der Verlust des direkten zwischenmenschlichen Austauschs.",
+        "c": "Die Notwendigkeit, neue Kompetenzen im Online-Bereich zu erwerben."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Der Dozent erwähnt, dass durch die Digitalisierung der persönliche Kontakt verloren geht, welcher für viele eine Hauptmotivation ist.",
+        "vi": "Giảng viên đề cập rằng số hóa làm mất đi sự tiếp xúc cá nhân, điều mà đối với nhiều người là động lực chính.",
+        "key_evidence": "Gleichzeitig geht der persönliche Kontakt verloren, der für viele die Hauptmotivation des Ehrenamts ist.",
+        "key_vocabulary": [
+          "negative Auswirkung",
+          "Digitalisierung",
+          "hervorheben",
+          "Verlust",
+          "zwischenmenschlichen Austauschs",
+          "persönlicher Kontakt"
+        ]
+      }
+    },
+    {
+      "id": "Q8",
+      "gespraech": 1,
+      "type": "mc_abc",
+      "question": "Wie stellt sich der Dozent die zukünftige Form des ehrenamtlichen Engagements vor?",
+      "options": {
+        "a": "Es wird sich vollständig in den digitalen Raum verlagern.",
+        "b": "Es wird eine Kombination aus persönlichen Treffen und Online-Aktivitäten sein.",
+        "c": "Es wird wieder stärker auf traditionelle Vereinsstrukturen setzen."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Der Dozent prognostiziert eine 'hybride Form aus Präsenz und digitalem Engagement', was eine Kombination aus beiden bedeutet.",
+        "vi": "Giảng viên dự đoán một 'hình thức kết hợp giữa sự hiện diện trực tiếp và tham gia kỹ thuật số', có nghĩa là sự kết hợp của cả hai.",
+        "key_evidence": "Die Zukunft des Ehrenamts liegt vermutlich in einer hybriden Form aus Präsenz und digitalem Engagement.",
+        "key_vocabulary": [
+          "stellt sich vor",
+          "zukünftige Form",
+          "hybride Form",
+          "Präsenz",
+          "digitales Engagement",
+          "Kombination"
         ]
       }
     }

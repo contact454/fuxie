@@ -16,81 +16,166 @@
   "questions": [
     {
       "id": "Q1",
-      "item": 1,
+      "gespraech": 1,
       "type": "richtig_falsch",
-      "statement": "Die Person kommt aus Heidelberg.",
-      "answer": "falsch",
+      "question": "Der zweite Sprecher ist der Meinung, dass die Angst vor einer Prüfung oft größer ist als die Prüfung selbst.",
+      "answer": "richtig",
       "points": 1,
       "explanation": {
-        "de": "Falsch. Die Aussage stimmt nicht mit dem Hörtext überein.",
-        "vi": "Sai.",
-        "key_evidence": "Die Person kommt aus Heidelberg.",
+        "de": "Der zweite Sprecher sagt: 'Oft ist die Angst vor der Prüfung schlimmer als die Prüfung selbst.'",
+        "vi": "Người nói thứ hai nói: 'Thường thì nỗi sợ trước kỳ thi còn tồi tệ hơn chính kỳ thi.'",
+        "key_evidence": "Oft ist die Angst vor der Prüfung schlimmer als die Prüfung selbst.",
         "key_vocabulary": []
       }
     },
     {
       "id": "Q2",
-      "item": 2,
-      "type": "richtig_falsch",
-      "statement": "Körper wird erwähnt.",
-      "answer": "richtig",
+      "gespraech": 1,
+      "type": "mc_abc",
+      "question": "Was möchte der zweite Sprecher dem ersten Sprecher mit seinem Rat vermitteln?",
+      "options": {
+        "a": "Dass man mit Atemübungen garantiert eine bessere Note erzielt.",
+        "b": "Dass körperliche Entspannung und Panik nicht gleichzeitig existieren können.",
+        "c": "Dass man nur durch konsequentes Üben die Nervosität überwinden kann."
+      },
+      "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Richtig. Die Aussage stimmt mit dem Hörtext überein.",
-        "vi": "Đúng.",
-        "key_evidence": "Körper wird erwähnt.",
+        "de": "Der zweite Sprecher erklärt: 'Dein Körper kann nicht gleichzeitig entspannt atmen und in Panik sein.' Dies ist der Kern seines Ratschlags zu Atemübungen.",
+        "vi": "Người nói thứ hai giải thích: 'Cơ thể bạn không thể vừa thở thư giãn vừa hoảng loạn cùng một lúc.' Đây là trọng tâm lời khuyên của anh ấy về các bài tập thở.",
+        "key_evidence": "Dein Körper kann nicht gleichzeitig entspannt atmen und in Panik sein.",
         "key_vocabulary": []
       }
     },
     {
       "id": "Q3",
-      "item": 3,
+      "gespraech": 2,
       "type": "richtig_falsch",
-      "statement": "Die Person kommt aus Griechenland.",
+      "question": "Der zweite Sprecher ist der Ansicht, dass jede Form von Prüfungsangst die kognitive Leistung beeinträchtigt.",
       "answer": "falsch",
       "points": 1,
       "explanation": {
-        "de": "Falsch. Die Aussage stimmt nicht mit dem Hörtext überein.",
-        "vi": "Sai.",
-        "key_evidence": "Die Person kommt aus Griechenland.",
+        "de": "Der zweite Sprecher erwähnt das Yerkes-Dodson-Gesetz und sagt: 'Ein mittleres Erregungsniveau ist optimal für die kognitive Leistung.' Er fügt hinzu, dass nur Panik das Denken blockiert.",
+        "vi": "Người nói thứ hai đề cập đến định luật Yerkes-Dodson và nói: 'Mức độ kích thích vừa phải là tối ưu cho hiệu suất nhận thức.' Anh ấy nói thêm rằng chỉ sự hoảng loạn mới làm tắc nghẽn suy nghĩ.",
+        "key_evidence": "Ein mittleres Erregungsniveau ist optimal für die kognitive Leistung. ... Ja, solange sie nicht in Panik umschlägt. Dann blockiert sie das Denken komplett.",
         "key_vocabulary": []
       }
     },
     {
       "id": "Q4",
-      "gespraech": 1,
+      "gespraech": 2,
       "type": "mc_abc",
-      "question": "Welches Thema wird besprochen (Gespräch 1)?",
+      "question": "Was sehen die Sprecher als eine wesentliche Ursache für Prüfungsangst an?",
       "options": {
-        "a": "Essen und Trinken",
-        "b": "Gesundheit und Körper",
-        "c": "Einkaufen und Geld"
+        "a": "Die Schwierigkeit der Prüfungsfragen.",
+        "b": "Unrealistische Erwartungen an die eigene Leistung.",
+        "c": "Ein Mangel an Vorbereitung auf die Prüfung."
       },
-      "answer": "c",
+      "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Man hört: \"Einkaufen und Geld\".",
-        "vi": "Đoạn hội thoại 1 nói về chủ đề gì?",
-        "key_evidence": "Einkaufen und Geld",
+        "de": "Der erste Sprecher sagt, dass die Angst 'oft durch unrealistische Erwartungen an sich selbst verstärkt' wird, und der zweite Sprecher ergänzt, dass 'Perfektionismus ein großer Risikofaktor' ist.",
+        "vi": "Người nói thứ nhất nói rằng nỗi sợ 'thường được tăng cường bởi những kỳ vọng không thực tế vào bản thân', và người nói thứ hai bổ sung rằng 'chủ nghĩa hoàn hảo là một yếu tố rủi ro lớn'.",
+        "key_evidence": "Und diese Angst wird oft durch unrealistische Erwartungen an sich selbst verstärkt. Perfektionismus ist ein großer Risikofaktor für Prüfungsangst, hat mein Therapeut gesagt.",
         "key_vocabulary": []
       }
     },
     {
       "id": "Q5",
-      "gespraech": 1,
+      "gespraech": 3,
+      "type": "richtig_falsch",
+      "question": "Der zweite Sprecher betrachtet Prüfungsangst als ein Zeichen persönlicher Schwäche.",
+      "answer": "falsch",
+      "points": 1,
+      "explanation": {
+        "de": "Der zweite Sprecher stellt klar: 'Dabei ist sie eine behandelbare psychische Reaktion, keine Charakterschwäche.'",
+        "vi": "Người nói thứ hai làm rõ: 'Thực ra, đó là một phản ứng tâm lý có thể điều trị được, không phải là một điểm yếu về tính cách.'",
+        "key_evidence": "Dabei ist sie eine behandelbare psychische Reaktion, keine Charakterschwäche.",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q6",
+      "gespraech": 3,
       "type": "mc_abc",
-      "question": "Welches Thema wird besprochen (Gespräch 1)?",
+      "question": "Welches Problem bezüglich der Prüfungsangst betont der erste Sprecher?",
       "options": {
-        "a": "Würzburg",
-        "b": "Indien",
-        "c": "Bayreuth"
+        "a": "Die mangelnde Unterstützung durch die Universitäten.",
+        "b": "Die Wahrnehmung als persönliches Versagen, was zum Schweigen führt.",
+        "c": "Die hohen Kosten für psychologische Beratung."
       },
       "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Das Hauptthema ist \"Einkaufen\".",
-        "vi": "Đoạn hội thoại 1 nói về chủ đề gì?",
-        "key_evidence": "Einkaufen",
+        "de": "Der erste Sprecher sagt: 'Genau das ist das Problem. Prüfungsangst wird oft als persönliches Versagen wahrgenommen.'",
+        "vi": "Người nói thứ nhất nói: 'Đó chính là vấn đề. Nỗi sợ thi cử thường bị coi là thất bại cá nhân.'",
+        "key_evidence": "Genau das ist das Problem. Prüfungsangst wird oft als persönliches Versagen wahrgenommen.",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q7",
+      "gespraech": 4,
+      "type": "richtig_falsch",
+      "question": "Der erste Sprecher rät dazu, bei einer unverstandenen Aufgabe im Hörverstehen zu verweilen, um keine Informationen zu verpassen.",
+      "answer": "falsch",
+      "points": 1,
+      "explanation": {
+        "de": "Der erste Sprecher gibt den Rat: 'Weitergehen! Wenn du bei einer Aufgabe hängen bleibst, verpasst du die nächsten Antworten.'",
+        "vi": "Người nói thứ nhất khuyên: 'Hãy tiếp tục! Nếu bạn mắc kẹt ở một câu hỏi, bạn sẽ bỏ lỡ các câu trả lời tiếp theo.'",
+        "key_evidence": "Weitergehen! Wenn du bei einer Aufgabe hängen bleibst, verpasst du die nächsten Antworten.",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q8",
+      "gespraech": 4,
+      "type": "mc_abc",
+      "question": "Welchen ersten Ratschlag gibt der zweite Sprecher, um das Hörverstehen zu verbessern?",
+      "options": {
+        "a": "Man sollte die Aufgaben während des Hörens beantworten.",
+        "b": "Man soll vor dem Hören die Aufgaben lesen und Schlüsselwörter markieren.",
+        "c": "Man sollte sich nicht von einzelnen Wörtern ablenken lassen."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Der zweite Sprecher gibt den Tipp: 'Lies dir vor dem Hören die Aufgaben genau durch und markiere die Schlüsselwörter.'",
+        "vi": "Người nói thứ hai đưa ra lời khuyên: 'Trước khi nghe, hãy đọc kỹ các câu hỏi và gạch chân các từ khóa.'",
+        "key_evidence": "Ein Tipp: Lies dir vor dem Hören die Aufgaben genau durch und markiere die Schlüsselwörter.",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q9",
+      "gespraech": 5,
+      "type": "richtig_falsch",
+      "question": "Der zweite Sprecher berichtet, dass der Prüfer bei seinem Blackout verständnislos reagierte und ihn durchfallen ließ.",
+      "answer": "falsch",
+      "points": 1,
+      "explanation": {
+        "de": "Der zweite Sprecher erzählt, dass der Prüfer 'sehr nett' war und ihm 'eine andere Frage gestellt' hat, um ihm zu helfen.",
+        "vi": "Người nói thứ hai kể rằng giám khảo 'rất tốt bụng' và đã 'đặt một câu hỏi khác' để giúp anh ấy.",
+        "key_evidence": "Er war sehr nett und hat mir eine andere Frage gestellt, um mich wieder reinzubekommen.",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q10",
+      "gespraech": 5,
+      "type": "mc_abc",
+      "question": "Welche Schlussfolgerung ziehen die Sprecher aus der Erfahrung mit dem Blackout?",
+      "options": {
+        "a": "Man sollte Blackouts unbedingt vermeiden, um die Prüfung zu bestehen.",
+        "b": "Offene und ehrliche Kommunikation mit dem Prüfer ist entscheidend.",
+        "c": "Prüfer sind in solchen Situationen immer streng und unnachgiebig."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Der erste Sprecher betont: 'Das zeigt, wie wichtig es ist, offen zu kommunizieren statt zu schweigen.' Der zweite Sprecher bestätigt: 'Die meisten reagieren verständnisvoll, wenn man ehrlich und offen ist.'",
+        "vi": "Người nói thứ nhất nhấn mạnh: 'Điều đó cho thấy việc giao tiếp cởi mở quan trọng như thế nào thay vì im lặng.' Người nói thứ hai xác nhận: 'Hầu hết họ đều thông cảm nếu bạn trung thực và cởi mở.'",
+        "key_evidence": "Das zeigt, wie wichtig es ist, offen zu kommunizieren statt zu schweigen. Prüfer sind auch Menschen. Die meisten reagieren verständnisvoll, wenn man ehrlich und offen ist.",
         "key_vocabulary": []
       }
     }

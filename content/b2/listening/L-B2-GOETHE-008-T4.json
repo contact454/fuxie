@@ -18,38 +18,223 @@
       "id": "Q1",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Welches Thema wird besprochen (Gespräch 1)?",
+      "question": "Was ist die Hauptabsicht der Lernpsychologin mit diesem Vortrag?",
       "options": {
-        "a": "Einkaufen und Geld",
-        "b": "Bildung und Schule",
-        "c": "Arbeit und Beruf"
+        "a": "Sie möchte die Studierenden über die neuesten Forschungsergebnisse in der Lernpsychologie informieren.",
+        "b": "Sie beabsichtigt, verbreitete Missverständnisse über das Lernen zu korrigieren und bewährte Methoden vorzustellen.",
+        "c": "Sie plant, eine detaillierte Anleitung zur Erstellung von Lernplänen für verschiedene Lerntypen zu geben."
       },
       "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Man hört: \"Bildung und Schule\".",
-        "vi": "Đoạn hội thoại 1 nói về chủ đề gì?",
-        "key_evidence": "Bildung und Schule",
-        "key_vocabulary": []
+        "de": "Die Dozentin erklärt zu Beginn, dass sie mit Lern-Mythen aufräumen und evidenzbasierte Strategien vorstellen möchte, was der Korrektur von Missverständnissen und der Vorstellung bewährter Methoden entspricht.",
+        "vi": "Giảng viên giải thích ngay từ đầu rằng cô ấy muốn xóa bỏ những lầm tưởng về việc học và giới thiệu các chiến lược dựa trên bằng chứng, điều này tương ứng với việc sửa chữa những hiểu lầm và giới thiệu các phương pháp đã được chứng minh.",
+        "key_evidence": "Heute möchte ich mit den hartnäckigsten Lern-Mythen aufräumen und evidenzbasierte Strategien vorstellen.",
+        "key_vocabulary": [
+          "Hauptabsicht",
+          "Lernpsychologin",
+          "beabsichtigt",
+          "verbreitete Missverständnisse",
+          "korrigieren",
+          "bewährte Methoden",
+          "vorstellen"
+        ]
       }
     },
     {
       "id": "Q2",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Welches Thema wird besprochen (Gespräch 1)?",
+      "question": "Welche Schlussfolgerung zieht die Dozentin bezüglich der Theorie der individuellen Lerntypen?",
       "options": {
-        "a": "Stuttgart",
-        "b": "Neuseeland",
-        "c": "Kanada"
+        "a": "Sie ist der Ansicht, dass die meisten Studierenden ihren Lerntyp noch nicht kennen und ihn entdecken sollten.",
+        "b": "Sie betont, dass es keine wissenschaftliche Grundlage für die Existenz spezifischer Lerntypen gibt.",
+        "c": "Sie schlägt vor, dass Studierende sich auf ihren bevorzugten Lerntyp konzentrieren, um effektiver zu sein."
       },
-      "answer": "c",
+      "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Das Hauptthema ist \"Bildung\".",
-        "vi": "Đoạn hội thoại 1 nói về chủ đề gì?",
-        "key_evidence": "Bildung",
-        "key_vocabulary": []
+        "de": "Die Dozentin stellt klar, dass es keine wissenschaftliche Evidenz für die Lerntypen-Theorie gibt, was bedeutet, dass sie keine wissenschaftliche Grundlage hat.",
+        "vi": "Giảng viên làm rõ rằng không có bằng chứng khoa học nào cho lý thuyết về các kiểu học tập, điều đó có nghĩa là nó không có cơ sở khoa học.",
+        "key_evidence": "Die Wahrheit: Es gibt keine wissenschaftliche Evidenz für die Lerntypen-Theorie.",
+        "key_vocabulary": [
+          "Schlussfolgerung",
+          "bezüglich",
+          "Theorie",
+          "individuellen Lerntypen",
+          "betont",
+          "wissenschaftliche Grundlage",
+          "Existenz",
+          "spezifischer"
+        ]
+      }
+    },
+    {
+      "id": "Q3",
+      "gespraech": 1,
+      "type": "mc_abc",
+      "question": "Warum kritisiert die Dozentin das wiederholte Lesen des Lernstoffs als alleinige Methode?",
+      "options": {
+        "a": "Es führt zu einer Überforderung des Gehirns und vermindert die Konzentrationsfähigkeit.",
+        "b": "Es erzeugt lediglich ein trügerisches Gefühl des Lernens, ohne tatsächliche Wissensaneignung zu fördern.",
+        "c": "Es ist zu zeitaufwendig und lässt wenig Raum für andere, wichtigere Lernstrategien."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Die Dozentin erklärt, dass passive Wiederholung nur das Gefühl des Lernens erzeugt, aber nicht zu echtem Lernen führt, was die Kritik an der Methode als ineffektiv begründet.",
+        "vi": "Giảng viên giải thích rằng việc lặp lại thụ động chỉ tạo ra cảm giác học tập, nhưng không dẫn đến việc học thực sự, điều này là cơ sở cho việc phê phán phương pháp này là không hiệu quả.",
+        "key_evidence": "Die Wahrheit: Passive Wiederholung erzeugt nur das Gefühl des Lernens, nicht echtes Lernen.",
+        "key_vocabulary": [
+          "kritisiert",
+          "wiederholte Lesen",
+          "alleinige Methode",
+          "erzeugt",
+          "lediglich",
+          "trügerisches Gefühl",
+          "tatsächliche Wissensaneignung",
+          "fördern"
+        ]
+      }
+    },
+    {
+      "id": "Q4",
+      "gespraech": 1,
+      "type": "mc_abc",
+      "question": "Was ist laut der Dozentin der entscheidende Vorteil des Interleaving, obwohl es sich schwieriger anfühlt?",
+      "options": {
+        "a": "Es ermöglicht eine schnellere Bearbeitung des gesamten Prüfungsstoffs in kürzerer Zeit.",
+        "b": "Es fördert durch die empfundene Schwierigkeit ein tieferes und nachhaltigeres Verständnis der Inhalte.",
+        "c": "Es verhindert, dass man sich zu lange mit einem Thema beschäftigt und dadurch die Motivation verliert."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Die Dozentin betont, dass die Schwierigkeit, die beim Interleaving empfunden wird, gerade das tiefere Verständnis fördert.",
+        "vi": "Giảng viên nhấn mạnh rằng chính sự khó khăn cảm nhận được khi học xen kẽ lại thúc đẩy sự hiểu biết sâu sắc hơn.",
+        "key_evidence": "Es fühlt sich zwar schwieriger an, aber genau diese Schwierigkeit fördert tieferes Verständnis.",
+        "key_vocabulary": [
+          "entscheidende Vorteil",
+          "Interleaving",
+          "empfundene Schwierigkeit",
+          "fördert",
+          "tieferes Verständnis",
+          "nachhaltigeres Verständnis",
+          "Inhalte"
+        ]
+      }
+    },
+    {
+      "id": "Q5",
+      "gespraech": 1,
+      "type": "mc_abc",
+      "question": "Was betont die Dozentin bezüglich der Phase des verteilten Wiederholens?",
+      "options": {
+        "a": "Der Stoff sollte in kurzen, intensiven Einheiten direkt vor der Prüfung wiederholt werden.",
+        "b": "Eine regelmäßige Auffrischung des Lernstoffs über einen längeren Zeitraum ist entscheidend.",
+        "c": "Es ist am effektivsten, den gesamten Stoff einmal gründlich zu wiederholen und dann abzuschließen."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Die Dozentin erklärt, dass der Stoff über mehrere Wochen regelmäßig aufgefrischt werden muss, was eine regelmäßige Auffrischung über einen längeren Zeitraum bedeutet.",
+        "vi": "Giảng viên giải thích rằng tài liệu phải được ôn lại thường xuyên trong vài tuần, điều này có nghĩa là ôn lại thường xuyên trong một thời gian dài.",
+        "key_evidence": "Phase drei: Verteiltes Wiederholen. Der Stoff muss über mehrere Wochen regelmäßig aufgefrischt werden.",
+        "key_vocabulary": [
+          "betont",
+          "bezüglich",
+          "Phase",
+          "verteilten Wiederholens",
+          "regelmäßige Auffrischung",
+          "längeren Zeitraum",
+          "entscheidend"
+        ]
+      }
+    },
+    {
+      "id": "Q6",
+      "gespraech": 1,
+      "type": "mc_abc",
+      "question": "Welchen Aspekt der Prüfungssimulation hebt die Dozentin als besonders wichtig hervor?",
+      "options": {
+        "a": "Die Simulation sollte idealerweise in einer Gruppe stattfinden, um sich gegenseitig zu motivieren.",
+        "b": "Es ist entscheidend, die Bedingungen der echten Prüfung so realistisch wie möglich nachzubilden.",
+        "c": "Der Fokus sollte darauf liegen, möglichst viele verschiedene Fragetypen zu üben, unabhängig vom Zeitdruck."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Die Dozentin fordert dazu auf, Probeprüfungen unter realistischen Bedingungen zu machen, inklusive Zeitdruck und ohne Handy, um die echten Prüfungsbedingungen nachzubilden.",
+        "vi": "Giảng viên khuyến khích làm bài thi thử trong điều kiện thực tế, bao gồm áp lực thời gian và không sử dụng điện thoại di động, để tái tạo các điều kiện thi thật.",
+        "key_evidence": "Phase vier: Simulation. Machen Sie Probeprüfungen unter realistischen Bedingungen. Zeitdruck, kein Handy, echte Prüfungsfragen, wenn möglich, und sofortige Selbstkorrektur.",
+        "key_vocabulary": [
+          "Aspekt",
+          "Prüfungssimulation",
+          "hebt hervor",
+          "besonders wichtig",
+          "entscheidend",
+          "Bedingungen",
+          "echten Prüfung",
+          "realistisch nachzubilden"
+        ]
+      }
+    },
+    {
+      "id": "Q7",
+      "gespraech": 1,
+      "type": "mc_abc",
+      "question": "Welche Rolle spielen physische Faktoren wie Schlaf und Bewegung laut der Dozentin für die Prüfungsvorbereitung?",
+      "options": {
+        "a": "Sie sind unterstützende Elemente, die bei Zeitmangel vernachlässigt werden können.",
+        "b": "Sie bilden die grundlegende Voraussetzung für eine erfolgreiche kognitive Lernleistung.",
+        "c": "Sie sind hauptsächlich dazu da, Stress abzubauen, haben aber keinen direkten Einfluss auf das Lernen."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Die Dozentin erklärt, dass physische und emotionale Vorbereitung ebenso wichtig ist wie kognitive Strategien und Schlaf, Bewegung und Ernährung die Basis bilden.",
+        "vi": "Giảng viên giải thích rằng việc chuẩn bị thể chất và tinh thần cũng quan trọng như các chiến lược nhận thức, và giấc ngủ, vận động và dinh dưỡng tạo thành nền tảng.",
+        "key_evidence": "Neben den kognitiven Strategien ist die physische und emotionale Vorbereitung ebenso wichtig. Ausreichend Schlaf, regelmäßige Bewegung und eine ausgewogene Ernährung bilden die Basis.",
+        "key_vocabulary": [
+          "Rolle",
+          "physische Faktoren",
+          "Schlaf",
+          "Bewegung",
+          "Prüfungsvorbereitung",
+          "bilden",
+          "grundlegende Voraussetzung",
+          "erfolgreiche",
+          "kognitive Lernleistung"
+        ]
+      }
+    },
+    {
+      "id": "Q8",
+      "gespraech": 1,
+      "type": "mc_abc",
+      "question": "Was rät die Dozentin bezüglich des Lernumfangs in der Woche vor der Prüfung und warum?",
+      "options": {
+        "a": "Der Lernumfang sollte deutlich gesteigert werden, um letzte Lücken zu schließen.",
+        "b": "Es ist ratsam, den Lernaufwand zu reduzieren, um Stress zu vermeiden und die Konsolidierung zu fördern.",
+        "c": "Man sollte sich auf das Wiederholen der schwierigsten Themen konzentrieren und neue Inhalte vermeiden."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Die Dozentin empfiehlt, den Lernumfang in der Woche vor der Prüfung zu reduzieren, da Last-Minute-Lernen Stress erzeugt und die Konsolidierung im Langzeitgedächtnis verschlechtert.",
+        "vi": "Giảng viên khuyên nên giảm khối lượng học tập trong tuần trước kỳ thi, vì việc học vào phút chót gây căng thẳng và làm giảm khả năng củng cố kiến thức trong trí nhớ dài hạn.",
+        "key_evidence": "In der Woche vor der Prüfung sollte der Lernumfang reduziert werden, nicht gesteigert. Last-Minute-Lernen erzeugt nur Stress und verschlechtert die Konsolidierung im Langzeitgedächtnis.",
+        "key_vocabulary": [
+          "rät",
+          "bezüglich",
+          "Lernumfang",
+          "Woche vor der Prüfung",
+          "ratsam",
+          "reduzieren",
+          "Stress vermeiden",
+          "Konsolidierung",
+          "fördern"
+        ]
       }
     }
   ],

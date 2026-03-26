@@ -16,69 +16,116 @@
   "questions": [
     {
       "id": "Q1",
-      "gespraech": 1,
+      "item": 1,
       "type": "mc_abc",
-      "question": "Welches Thema wird besprochen (Gespräch 1)?",
+      "question": "Wer sagt das: 'Ehrenamt bedeutet Ehre und freiwillige Verpflichtung, Zwang widerspricht dem Grundgedanken.'?",
       "options": {
-        "a": "Arbeit und Beruf",
-        "b": "Bildung und Schule",
-        "c": "Essen und Trinken"
+        "a": "Moderator",
+        "b": "Herr Brandt",
+        "c": "Frau Meyer"
       },
-      "answer": "a",
+      "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Man hört: \"Arbeit und Beruf\".",
-        "vi": "Đoạn hội thoại 1 nói về chủ đề gì?",
-        "key_evidence": "Arbeit und Beruf",
+        "de": "Herr Brandt äußert diese grundlegende Definition des Ehrenamts und lehnt Zwang ab.",
+        "vi": "Ông Brandt đưa ra định nghĩa cơ bản này về công việc tình nguyện và từ chối sự ép buộc.",
+        "key_evidence": "Ehrenamt heißt Ehre und das Amt kommt von freiwilliger Verpflichtung. Zwang widerspricht dem Grundgedanken.",
         "key_vocabulary": []
       }
     },
     {
       "id": "Q2",
-      "gespraech": 1,
+      "item": 2,
       "type": "mc_abc",
-      "question": "Wie heißt eine Person im Gespräch 1?",
+      "question": "Wer sagt das: 'Ein sozialer Pflichtdienst funktioniert in anderen Ländern sehr gut.'?",
       "options": {
-        "a": "Brandt",
-        "b": "Michael",
-        "c": "Nina"
+        "a": "Moderator",
+        "b": "Herr Brandt",
+        "c": "Frau Meyer"
       },
-      "answer": "a",
+      "answer": "c",
       "points": 1,
       "explanation": {
-        "de": "Man hört: \"Brandt\".",
-        "vi": "Một người trong đoạn 1 tên là gì?",
-        "key_evidence": "Brandt",
-        "key_vocabulary": [
-          {
-            "word": "heißen",
-            "meaning": "to be called"
-          }
-        ]
+        "de": "Frau Meyer führt das Argument an, dass ein Pflichtdienst in anderen Ländern erfolgreich ist.",
+        "vi": "Bà Meyer đưa ra lập luận rằng nghĩa vụ phục vụ cộng đồng hoạt động rất tốt ở các quốc gia khác.",
+        "key_evidence": "In anderen Ländern gibt es einen sozialen Pflichtdienst und er funktioniert sehr gut.",
+        "key_vocabulary": []
       }
     },
     {
       "id": "Q3",
-      "gespraech": 1,
+      "item": 3,
       "type": "mc_abc",
-      "question": "Wie heißt eine Person (Gespräch 1)?",
+      "question": "Wer sagt das: 'Freiwillige Angebote können Ziele auch ohne Zwang erreichen.'?",
       "options": {
-        "a": "Dresden",
-        "b": "Stuttgart",
-        "c": "Wuppertal"
+        "a": "Moderator",
+        "b": "Herr Brandt",
+        "c": "Frau Meyer"
       },
       "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man den Namen \"Brandt\".",
-        "vi": "Một người trong đoạn 1 tên là gì?",
-        "key_evidence": "Brandt",
-        "key_vocabulary": [
-          {
-            "word": "heißen",
-            "meaning": "to be called"
-          }
-        ]
+        "de": "Der Moderator schlägt vor, dass die gewünschten Effekte auch durch freiwillige Initiativen erzielt werden können.",
+        "vi": "Người điều hành đề xuất rằng những hiệu ứng mong muốn cũng có thể đạt được thông qua các sáng kiến tự nguyện.",
+        "key_evidence": "Das kann man auch durch freiwillige Angebote erreichen, ohne den Zwang.",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q4",
+      "item": 4,
+      "type": "mc_abc",
+      "question": "Wer sagt das: 'Junge Menschen lernen durch den Pflichtdienst soziale Verantwortung und erhalten neue Einblicke.'?",
+      "options": {
+        "a": "Moderator",
+        "b": "Herr Brandt",
+        "c": "Frau Meyer"
+      },
+      "answer": "c",
+      "points": 1,
+      "explanation": {
+        "de": "Frau Meyer betont die positiven Lerneffekte und Erfahrungen, die junge Menschen durch einen Pflichtdienst sammeln würden.",
+        "vi": "Bà Meyer nhấn mạnh những hiệu quả học tập và kinh nghiệm tích cực mà những người trẻ tuổi sẽ có được thông qua nghĩa vụ phục vụ cộng đồng.",
+        "key_evidence": "Junge Menschen lernen soziale Verantwortung und bekommen Einblick in Bereiche, die sie sonst nie erleben.",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q5",
+      "item": 5,
+      "type": "mc_abc",
+      "question": "Wer sagt das: 'Gesellschaftlicher Zusammenhalt entsteht durch freiwillige Gemeinschaft, nicht durch Zwang.'?",
+      "options": {
+        "a": "Moderator",
+        "b": "Herr Brandt",
+        "c": "Frau Meyer"
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Herr Brandt widerspricht der Idee, dass Zwang den gesellschaftlichen Zusammenhalt fördern kann, und betont die Freiwilligkeit.",
+        "vi": "Ông Brandt phản đối ý kiến cho rằng sự ép buộc có thể thúc đẩy sự gắn kết xã hội và nhấn mạnh tính tự nguyện.",
+        "key_evidence": "Zusammenhalt entsteht nicht durch Zwang, sondern durch freiwillige Gemeinschaft.",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q6",
+      "item": 6,
+      "type": "mc_abc",
+      "question": "Wer sagt das: 'Die nächste Generation ist bereit für mehr Verantwortung, trotz der Gegenargumente.'?",
+      "options": {
+        "a": "Moderator",
+        "b": "Herr Brandt",
+        "c": "Frau Meyer"
+      },
+      "answer": "a",
+      "points": 1,
+      "explanation": {
+        "de": "Der Moderator äußert am Ende der Diskussion seine persönliche Überzeugung bezüglich der Bereitschaft der jungen Generation.",
+        "vi": "Người điều hành bày tỏ niềm tin cá nhân của mình về sự sẵn sàng của thế hệ trẻ vào cuối cuộc thảo luận.",
+        "key_evidence": "Ich respektiere die Gegenargumente, glaube aber, dass die nächste Generation bereit ist für mehr Verantwortung.",
+        "key_vocabulary": []
       }
     }
   ],

@@ -18,18 +18,18 @@
       "id": "Q1",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Welches Thema wird besprochen (Gespräch 1)?",
+      "question": "Was beunruhigt den Dozenten am meisten bezüglich der heutigen Informationsbeschaffung?",
       "options": {
-        "a": "Bildung und Schule",
-        "b": "Wohnung und Haushalt",
-        "c": "Essen und Trinken"
+        "a": "Die Tatsache, dass junge Menschen keine Zeitungen mehr lesen.",
+        "b": "Die potenziellen negativen Auswirkungen auf die Gesellschaft und Demokratie.",
+        "c": "Die Geschwindigkeit, mit der Nachrichten verbreitet werden."
       },
-      "answer": "a",
+      "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Man hört: \"Bildung und Schule\".",
-        "vi": "Đoạn hội thoại 1 nói về chủ đề gì?",
-        "key_evidence": "Bildung und Schule",
+        "de": "Der Dozent äußert Bedenken über die weitreichenden Konsequenzen für Journalismus, Politik und das demokratische Zusammenleben, da über fünfzig Prozent der unter Dreißigjährigen ihre Nachrichten aus sozialen Medien beziehen.",
+        "vi": "Giảng viên bày tỏ lo ngại về những hậu quả sâu rộng đối với báo chí, chính trị và sự chung sống dân chủ, vì hơn 50% người dưới 30 tuổi lấy tin tức từ mạng xã hội.",
+        "key_evidence": "Das hat weitreichende Konsequenzen für Journalismus, Politik und das demokratische Zusammenleben.",
         "key_vocabulary": []
       }
     },
@@ -37,18 +37,132 @@
       "id": "Q2",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Welches Thema wird besprochen (Gespräch 1)?",
+      "question": "Welche Schlussfolgerung zieht der Dozent aus der schnellen Verbreitung von Nachrichten in sozialen Medien?",
       "options": {
-        "a": "Wien",
-        "b": "Düsseldorf",
-        "c": "Leipzig"
+        "a": "Journalisten können ihre Arbeit nicht mehr effektiv ausführen.",
+        "b": "Die Kontrolle über die Richtigkeit von Informationen geht verloren.",
+        "c": "Die Menschen sind besser und schneller informiert als früher."
       },
-      "answer": "a",
+      "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Das Hauptthema ist \"Bildung\".",
-        "vi": "Đoạn hội thoại 1 nói về chủ đề gì?",
-        "key_evidence": "Bildung",
+        "de": "Der Dozent betont, dass Informationen sich ohne journalistische Qualitätskontrolle verbreiten, was bedeutet, dass Falschinformationen sich ausbreiten können, bevor sie korrigiert werden.",
+        "vi": "Giảng viên nhấn mạnh rằng thông tin lan truyền mà không có sự kiểm soát chất lượng báo chí, điều này có nghĩa là thông tin sai lệch có thể lan rộng trước khi được sửa chữa.",
+        "key_evidence": "Informationen verbreiten sich in Echtzeit um den gesamten Globus, ohne journalistische Qualitätskontrolle. Das bedeutet: Falschinformationen können sich ausbreiten, bevor sie korrigiert werden.",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q3",
+      "gespraech": 1,
+      "type": "mc_abc",
+      "question": "Was deutet der Dozent bezüglich der Korrektur von Falschinformationen an?",
+      "options": {
+        "a": "Korrekturen sind meistens erfolgreich, wenn sie schnell erfolgen.",
+        "b": "Die Bemühungen zur Richtigstellung sind oft unzureichend.",
+        "c": "Die meisten Menschen sind nicht an der Wahrheit interessiert."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Der Dozent weist darauf hin, dass eine Korrektur nur etwa dreißig Prozent der Menschen erreicht, die die Falschinformation gesehen haben, was auf eine geringe Wirksamkeit hindeutet.",
+        "vi": "Giảng viên chỉ ra rằng việc sửa chữa chỉ tiếp cận được khoảng 30% số người đã xem thông tin sai lệch, điều này cho thấy hiệu quả thấp.",
+        "key_evidence": "Die Forschung zeigt, dass eine Korrektur nur etwa dreißig Prozent der Menschen erreicht, die die Falschinfo gesehen haben.",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q4",
+      "gespraech": 1,
+      "type": "mc_abc",
+      "question": "Welche Auswirkung hat die Fragmentierung der Öffentlichkeit durch algorithmische Informationsblasen laut dem Dozenten?",
+      "options": {
+        "a": "Die Menschen sind besser über ihre spezifischen Interessen informiert.",
+        "b": "Eine gemeinsame Basis für gesellschaftliche Diskussionen fehlt.",
+        "c": "Algorithmen filtern unwichtige Nachrichten heraus."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Der Dozent erklärt, dass es durch die algorithmisch kuratierten Informationsblasen keine gemeinsame Informationsgrundlage mehr gibt, auf der gesellschaftliche Debatten geführt werden können.",
+        "vi": "Giảng viên giải thích rằng do các bong bóng thông tin được thuật toán quản lý, không còn một nền tảng thông tin chung nào để các cuộc tranh luận xã hội có thể diễn ra.",
+        "key_evidence": "Es gibt keine gemeinsame Informationsgrundlage mehr, auf der gesellschaftliche Debatten geführt werden. Jeder lebt in seiner algorithmisch kuratierten Informationsblase.",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q5",
+      "gespraech": 1,
+      "type": "mc_abc",
+      "question": "Warum bevorzugen algorithmische Empfehlungssysteme nach Ansicht des Dozenten emotionale Inhalte?",
+      "options": {
+        "a": "Sie sind einfacher zu verstehen als komplexe Analysen.",
+        "b": "Sie führen zu einer stärkeren Beteiligung der Nutzer.",
+        "c": "Sie spiegeln die wahren Gefühle der Gesellschaft wider."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Der Dozent erklärt, dass emotionale Inhalte wie Wut, Empörung und Angst mehr Engagement generieren als nüchterne Analyse, weshalb Algorithmen sie bevorzugen.",
+        "vi": "Giảng viên giải thích rằng nội dung cảm xúc như giận dữ, phẫn nộ và sợ hãi tạo ra nhiều tương tác hơn so với phân tích khách quan, đó là lý do tại sao thuật toán ưu tiên chúng.",
+        "key_evidence": "Wut, Empörung und Angst generieren mehr Engagement als nüchterne Analyse.",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q6",
+      "gespraech": 1,
+      "type": "mc_abc",
+      "question": "Welches Hauptproblem nennt der Dozent bezüglich der Stärkung des Qualitätsjournalismus?",
+      "options": {
+        "a": "Es gibt zu wenige qualifizierte Journalisten.",
+        "b": "Die traditionellen Einnahmequellen sind rückläufig.",
+        "c": "Die Leser sind nicht bereit, für Nachrichten zu bezahlen."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Der Dozent hebt hervor, dass die Finanzierung von Qualitätsjournalismus zunehmend schwierig ist, da Werbeeinnahmen von Medien zu Plattformen abwandern.",
+        "vi": "Giảng viên nhấn mạnh rằng việc tài trợ cho báo chí chất lượng ngày càng khó khăn, vì doanh thu quảng cáo chuyển từ các phương tiện truyền thông sang các nền tảng.",
+        "key_evidence": "Die Finanzierung von Qualitätsjournalismus ist allerdings zunehmend schwierig in der digitalen Ära. Werbeeinnahmen wandern von Medien zu Plattformen, die selbst keine Inhalte produzieren.",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q7",
+      "gespraech": 1,
+      "type": "mc_abc",
+      "question": "Welche innovativen Finanzierungsmodelle schlägt der Dozent für den Qualitätsjournalismus vor?",
+      "options": {
+        "a": "Staatliche Subventionen und Spendenaktionen.",
+        "b": "Mitgliedschaftsprogramme und Unterstützung durch Stiftungen.",
+        "c": "Erhöhung der Werbeeinnahmen und Partnerschaften mit Plattformen."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Der Dozent nennt explizit Mitgliedschaftsprogramme und Stiftungen als innovative Finanzierungsmodelle, die immer wichtiger werden.",
+        "vi": "Giảng viên đề cập rõ ràng đến các chương trình thành viên và quỹ tài trợ như những mô hình tài chính đổi mới ngày càng trở nên quan trọng.",
+        "key_evidence": "Innovative Finanzierungsmodelle wie Mitgliedschaftsprogramme und Stiftungen werden immer wichtiger.",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q8",
+      "gespraech": 1,
+      "type": "mc_abc",
+      "question": "Was ist die abschließende Botschaft des Dozenten an sein Publikum?",
+      "options": {
+        "a": "Soziale Medien sollten komplett gemieden werden.",
+        "b": "Man sollte soziale Medien kritisch und bewusst nutzen.",
+        "c": "Die Regulierung von Plattformen ist die einzige Lösung."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Der Dozent schließt seinen Vortrag mit der Empfehlung ab, kritisch und informiert zu bleiben, und betont, dass soziale Medien verantwortungsvoller gestaltet werden müssen.",
+        "vi": "Giảng viên kết thúc bài giảng bằng lời khuyên nên giữ thái độ phê phán và cập nhật thông tin, đồng thời nhấn mạnh rằng mạng xã hội cần được quản lý một cách có trách nhiệm hơn.",
+        "key_evidence": "Abschließend: Social Media ist nicht per se schlecht, aber es muss verantwortungsvoller gestaltet werden. Vielen Dank! Bleiben Sie kritisch und informiert in einer Welt der Informationsüberflutung!",
         "key_vocabulary": []
       }
     }

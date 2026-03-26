@@ -18,18 +18,18 @@
       "id": "Q1",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Welches Thema wird besprochen (Gespräch 1)?",
+      "question": "Was ist das Hauptziel des Dozenten in dieser Vorlesung?",
       "options": {
-        "a": "Gesundheit und Körper",
-        "b": "Bildung und Schule",
-        "c": "Einkaufen und Geld"
+        "a": "Die technischen Aspekte des bargeldlosen Zahlungsverkehrs zu erläutern.",
+        "b": "Die ökonomischen Auswirkungen des Wandels im Geldsystems zu analysieren.",
+        "c": "Die Geschichte des Bargeldes über dreitausend Jahre darzustellen."
       },
-      "answer": "c",
+      "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Man hört: \"Einkaufen und Geld\".",
-        "vi": "Đoạn hội thoại 1 nói về chủ đề gì?",
-        "key_evidence": "Einkaufen und Geld",
+        "de": "Der Dozent erklärt, dass er in der Vorlesung die wirtschaftlichen Auswirkungen des Wandels im Geldsystem analysieren wird.",
+        "vi": "Giảng viên giải thích rằng trong bài giảng, ông sẽ phân tích những tác động kinh tế của sự thay đổi trong hệ thống tiền tệ.",
+        "key_evidence": "In dieser Vorlesung analysiere ich die wirtschaftlichen Auswirkungen dieses Wandels.",
         "key_vocabulary": []
       }
     },
@@ -37,18 +37,18 @@
       "id": "Q2",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Welches Thema wird besprochen (Gespräch 1)?",
+      "question": "Welches Problem sieht der Dozent bei digitalen Zahlungen, obwohl diese pro Transaktion günstiger sind als Bargeld?",
       "options": {
-        "a": "Frankfurt",
-        "b": "Polen",
-        "c": "Luxemburg"
+        "a": "Die hohen Kosten für die Infrastruktur der digitalen Systeme.",
+        "b": "Die oligopolistische Marktstellung der Zahlungsdienstleister, die Gebühren diktieren.",
+        "c": "Die mangelnde Akzeptanz digitaler Zahlungen im Einzelhandel."
       },
-      "answer": "a",
+      "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Das Hauptthema ist \"Einkaufen\".",
-        "vi": "Đoạn hội thoại 1 nói về chủ đề gì?",
-        "key_evidence": "Einkaufen",
+        "de": "Der Dozent weist darauf hin, dass Zahlungsdienstleister eine oligopolistische Marktstellung haben und die Gebühren weitgehend diktieren können, was ein ordnungspolitisches Problem darstellt.",
+        "vi": "Giảng viên chỉ ra rằng các nhà cung cấp dịch vụ thanh toán có vị thế thị trường độc quyền nhóm và có thể định đoạt phần lớn các khoản phí, điều này tạo ra một vấn đề về chính sách kinh tế.",
+        "key_evidence": "Diese Unternehmen haben eine oligopolistische Marktstellung und können die Gebühren weitgehend diktieren. Trotzdem bleibt die Marktmacht weniger großer Zahlungsdienstleister ein ordnungspolitisches Problem.",
         "key_vocabulary": []
       }
     },
@@ -56,24 +56,114 @@
       "id": "Q3",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Was macht die Person beruflich (Gespräch 1)?",
+      "question": "Welche Absicht verfolgt die Einführung des digitalen Euros nach Ansicht des Dozenten?",
       "options": {
-        "a": "Herausgeber",
-        "b": "Ärztin",
-        "c": "Lehrerin"
+        "a": "Die Kosten des Bargeldkreislaufs weiter zu senken.",
+        "b": "Die Marktmacht großer Zahlungsdienstleister durch staatliche Konkurrenz zu begrenzen.",
+        "c": "Die Sicherheit digitaler Transaktionen zu erhöhen."
       },
-      "answer": "a",
+      "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Man hört: \"Herausgeber\".",
-        "vi": "Người đó làm nghề gì (đoạn 1)?",
-        "key_evidence": "Herausgeber",
-        "key_vocabulary": [
-          {
-            "word": "Herausgeber",
-            "meaning": "Herausgeber"
-          }
-        ]
+        "de": "Der Dozent erklärt, dass der digitale Euro eingeführt werden soll, um dem Problem der Marktmacht durch staatliche Konkurrenz entgegenzuwirken.",
+        "vi": "Giảng viên giải thích rằng đồng Euro kỹ thuật số được giới thiệu nhằm chống lại vấn đề quyền lực thị trường thông qua sự cạnh tranh của nhà nước.",
+        "key_evidence": "Die Einführung des digitalen Euros soll diesem Marktmachtproblem durch staatliche Konkurrenz entgegenwirken.",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q4",
+      "gespraech": 1,
+      "type": "mc_abc",
+      "question": "Welche bedeutende neue Möglichkeit ergibt sich für Zentralbanken durch die Abschaffung des Bargeldes, laut dem Dozenten?",
+      "options": {
+        "a": "Sie können die Geldmenge effektiver kontrollieren.",
+        "b": "Sie können negative Zinsen direkt und umfassend durchsetzen.",
+        "c": "Sie können die Privatsphäre der Bürger besser schützen."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Der Dozent betont, dass Zentralbanken ohne Bargeld erstmals die Möglichkeit hätten, negative Zinsen direkt durchzusetzen, da Sparer ihr Geld nicht mehr zu Hause aufbewahren könnten.",
+        "vi": "Giảng viên nhấn mạnh rằng nếu không có tiền mặt, các ngân hàng trung ương lần đầu tiên có khả năng áp dụng trực tiếp lãi suất âm, vì người gửi tiền không thể giữ tiền ở nhà nữa.",
+        "key_evidence": "Ohne Bargeld hätten Zentralbanken erstmals die Möglichkeit, negative Zinsen direkt durchzusetzen. Bei Bargeld können Sparer ihr Geld einfach zu Hause aufbewahren und dem Negativzins entgehen.",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q5",
+      "gespraech": 1,
+      "type": "mc_abc",
+      "question": "Welche Sorge äußert der Dozent bezüglich der neuen Instrumente der Geldpolitik im bargeldlosen System?",
+      "options": {
+        "a": "Die Gefahr einer zu geringen Kontrolle über die Inflation.",
+        "b": "Die Möglichkeit einer übermächtigen Geldpolitik und mangelnder Bürgerschutz.",
+        "c": "Die Komplexität der Implementierung digitaler Zinssätze."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Der Dozent fragt, wie Bürger vor einer übermächtigen Geldpolitik geschützt werden können, was seine Sorge vor zu viel Macht der Zentralbanken im bargeldlosen System ausdrückt.",
+        "vi": "Giảng viên đặt câu hỏi làm thế nào để bảo vệ công dân khỏi một chính sách tiền tệ quá mạnh, điều này thể hiện sự lo ngại của ông về quyền lực quá lớn của các ngân hàng trung ương trong hệ thống không dùng tiền mặt.",
+        "key_evidence": "Das gibt der Geldpolitik mächtige neue Instrumente, wirft aber auch demokratische Fragen auf. Wer kontrolliert die Kontrolle? Wie schützen wir Bürger vor einer übermächtigen Geldpolitik?",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q6",
+      "gespraech": 1,
+      "type": "mc_abc",
+      "question": "Wie erklärt der Dozent den Einfluss digitaler Zahlungen auf das Ausgabeverhalten der Verbraucher?",
+      "options": {
+        "a": "Sie führen zu bewussteren Kaufentscheidungen aufgrund der Transparenz.",
+        "b": "Sie reduzieren den „Schmerz des Bezahlens“ und fördern höhere Ausgaben.",
+        "c": "Sie ermöglichen eine bessere Budgetkontrolle durch digitale Aufzeichnungen."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Der Dozent erklärt, dass digitale Zahlungen den 'Schmerz des Bezahlens' reduzieren und nachweislich zu höheren Ausgaben führen.",
+        "vi": "Giảng viên giải thích rằng thanh toán kỹ thuật số làm giảm 'nỗi đau khi thanh toán' và được chứng minh là dẫn đến chi tiêu cao hơn.",
+        "key_evidence": "Digitale Zahlungen reduzieren diesen Schmerz und führen nachweislich zu höheren Ausgaben.",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q7",
+      "gespraech": 1,
+      "type": "mc_abc",
+      "question": "Welche Haltung nimmt der Dozent bezüglich des psychologischen Effekts digitaler Zahlungen auf Verbraucher ein?",
+      "options": {
+        "a": "Er sieht darin einen klaren Vorteil für die gesamte Wirtschaft.",
+        "b": "Er betrachtet ihn aus Sicht des Verbraucherschutzes als problematisch.",
+        "c": "Er hält ihn für irrelevant für das ökonomische Verhalten."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Der Dozent stellt fest, dass der psychologische Effekt digitaler Zahlungen, der zu höheren Ausgaben führt, für Verbraucherschützer problematisch ist.",
+        "vi": "Giảng viên nhận định rằng tác động tâm lý của thanh toán kỹ thuật số, dẫn đến chi tiêu cao hơn, là một vấn đề đối với các tổ chức bảo vệ người tiêu dùng.",
+        "key_evidence": "Für den Einzelhandel ist das attraktiv, für Verbraucherschützer problematisch.",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q8",
+      "gespraech": 1,
+      "type": "mc_abc",
+      "question": "Was ist die zentrale Schlussfolgerung des Dozenten bezüglich des Übergangs zum bargeldlosen Bezahlen?",
+      "options": {
+        "a": "Es ist primär eine technische Entwicklung zur Effizienzsteigerung.",
+        "b": "Es ist ein Wandel, der fundamentale gesellschaftliche Fragen berührt.",
+        "c": "Es ist ein unvermeidbarer Schritt zur vollständigen Digitalisierung aller Lebensbereiche."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Der Dozent schließt, dass der Übergang zum bargeldlosen Bezahlen kein rein technisches Phänomen ist, sondern fundamentale Fragen von Freiheit, Privatsphäre und demokratischer Kontrolle berührt.",
+        "vi": "Giảng viên kết luận rằng việc chuyển đổi sang thanh toán không dùng tiền mặt không phải là một hiện tượng thuần túy kỹ thuật, mà nó chạm đến những câu hỏi cơ bản về tự do, quyền riêng tư và kiểm soát dân chủ.",
+        "key_evidence": "Der Übergang zum bargeldlosen Bezahlen ist kein rein technisches Phänomen. Er berührt fundamentale Fragen von Freiheit, Privatsphäre und demokratischer Kontrolle.",
+        "key_vocabulary": []
       }
     }
   ],

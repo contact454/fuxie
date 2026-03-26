@@ -16,82 +16,221 @@
   "questions": [
     {
       "id": "Q1",
-      "item": 1,
+      "gespraech": 1,
       "type": "richtig_falsch",
-      "statement": "Die Person kommt aus Hamburg.",
+      "question": "Der zweite Sprecher ist von der Pomodoro-Technik sofort überzeugt.",
       "answer": "falsch",
       "points": 1,
       "explanation": {
-        "de": "Falsch. Die Aussage stimmt nicht mit dem Hörtext überein.",
-        "vi": "Sai.",
-        "key_evidence": "Die Person kommt aus Hamburg.",
-        "key_vocabulary": []
+        "de": "Der zweite Sprecher fragt zunächst skeptisch: 'Und das hilft wirklich bei der Konzentration? Ich bin nach zehn Minuten immer schon abgelenkt.' Er entscheidet sich erst später, die Technik auszuprobieren.",
+        "vi": "Người nói thứ hai ban đầu hỏi một cách hoài nghi: 'Và điều đó thực sự giúp tập trung sao? Tôi luôn bị phân tâm sau mười phút.' Anh ấy chỉ quyết định thử kỹ thuật này sau đó.",
+        "key_evidence": "Und das hilft wirklich bei der Konzentration? Ich bin nach zehn Minuten immer schon abgelenkt. Ich glaube, ich probiere das morgen im Büro aus.",
+        "key_vocabulary": [
+          "überzeugt",
+          "Konzentration",
+          "abgelenkt",
+          "ausprobieren"
+        ]
       }
     },
     {
       "id": "Q2",
-      "item": 2,
-      "type": "richtig_falsch",
-      "statement": "Chef wird erwähnt.",
-      "answer": "richtig",
+      "gespraech": 1,
+      "type": "mc_abc",
+      "question": "Was ist laut dem ersten Sprecher der Hauptgrund für die Wirksamkeit der Pomodoro-Technik?",
+      "options": {
+        "a": "Die kurzen Pausen ermöglichen eine vollständige Erholung.",
+        "b": "Die begrenzte Dauer der Arbeitsphasen fördert die Konzentration.",
+        "c": "Die Technik ist nach einer bekannten italienischen Speise benannt."
+      },
+      "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Richtig. Die Aussage stimmt mit dem Hörtext überein.",
-        "vi": "Đúng.",
-        "key_evidence": "Chef wird erwähnt.",
-        "key_vocabulary": []
+        "de": "Der erste Sprecher erklärt, dass die Technik funktioniert, 'weil man weiß, dass die konzentrierte Phase zeitlich begrenzt ist'.",
+        "vi": "Người nói thứ nhất giải thích rằng kỹ thuật này hiệu quả 'vì người ta biết rằng giai đoạn tập trung bị giới hạn về thời gian'.",
+        "key_evidence": "Ja, weil man weiß, dass die konzentrierte Phase zeitlich begrenzt ist.",
+        "key_vocabulary": [
+          "Wirksamkeit",
+          "begrenzte Dauer",
+          "fördert",
+          "Konzentration",
+          "zeitlich begrenzt"
+        ]
       }
     },
     {
       "id": "Q3",
-      "item": 3,
+      "gespraech": 2,
       "type": "richtig_falsch",
-      "statement": "Die Person kommt aus Melbourne.",
-      "answer": "falsch",
+      "question": "Der erste Sprecher ist es gewohnt, seinen Arbeitstag mit dem Lesen von E-Mails zu beginnen.",
+      "answer": "richtig",
       "points": 1,
       "explanation": {
-        "de": "Falsch. Die Aussage stimmt nicht mit dem Hörtext überein.",
-        "vi": "Sai.",
-        "key_evidence": "Die Person kommt aus Melbourne.",
-        "key_vocabulary": []
+        "de": "Der erste Sprecher sagt: 'Aber ich brauche morgens zuerst meinen Kaffee und einen Überblick über meine E-Mails', was darauf hindeutet, dass dies seine übliche Routine ist.",
+        "vi": "Người nói thứ nhất nói: 'Nhưng buổi sáng tôi cần cà phê và xem qua email trước', điều này cho thấy đây là thói quen thông thường của anh ấy.",
+        "key_evidence": "Aber ich brauche morgens zuerst meinen Kaffee und einen Überblick über meine E-Mails.",
+        "key_vocabulary": [
+          "gewohnt",
+          "Arbeitstag",
+          "Überblick"
+        ]
       }
     },
     {
       "id": "Q4",
-      "gespraech": 1,
+      "gespraech": 2,
       "type": "mc_abc",
-      "question": "Welches Thema wird besprochen (Gespräch 1)?",
+      "question": "Warum sollte man laut dem zweiten Sprecher die wichtigste Aufgabe am Morgen erledigen?",
       "options": {
-        "a": "Einkaufen und Geld",
-        "b": "Familie und Freunde",
-        "c": "Arbeit und Beruf"
-      },
-      "answer": "c",
-      "points": 1,
-      "explanation": {
-        "de": "Man hört: \"Arbeit und Beruf\".",
-        "vi": "Đoạn hội thoại 1 nói về chủ đề gì?",
-        "key_evidence": "Arbeit und Beruf",
-        "key_vocabulary": []
-      }
-    },
-    {
-      "id": "Q5",
-      "gespraech": 1,
-      "type": "mc_abc",
-      "question": "Welches Thema wird besprochen (Gespräch 1)?",
-      "options": {
-        "a": "Paris",
-        "b": "Würzburg",
-        "c": "Freiburg"
+        "a": "Weil man dann die unangenehmste Arbeit hinter sich hat und der Tag angenehmer wird.",
+        "b": "Weil E-Mails am Morgen die Konzentration auf Routineaufgaben fördern.",
+        "c": "Weil die meisten Menschen nach elf Uhr am produktivsten sind."
       },
       "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Das Hauptthema ist \"Arbeit und Beruf\".",
-        "vi": "Đoạn hội thoại 1 nói về chủ đề gì?",
-        "key_evidence": "Arbeit und Beruf",
-        "key_vocabulary": []
+        "de": "Der zweite Sprecher erklärt die Idee hinter 'Eat the Frog': 'Wenn du morgens den Frosch isst, wird der Rest des Tages leichter.'",
+        "vi": "Người nói thứ hai giải thích ý tưởng đằng sau 'Eat the Frog': 'Nếu bạn ăn con ếch vào buổi sáng, phần còn lại của ngày sẽ dễ dàng hơn.'",
+        "key_evidence": "Die Idee ist: Wenn du morgens den Frosch isst, wird der Rest des Tages leichter.",
+        "key_vocabulary": [
+          "unangenehmste",
+          "erledigen",
+          "produktivsten",
+          "Routineaufgaben"
+        ]
+      }
+    },
+    {
+      "id": "Q5",
+      "gespraech": 3,
+      "type": "richtig_falsch",
+      "question": "Der erste Sprecher empfindet die Arbeit im Großraumbüro als förderlich für seine Konzentration.",
+      "answer": "falsch",
+      "points": 1,
+      "explanation": {
+        "de": "Der erste Sprecher sagt klar: 'Seit wir im Großraumbüro arbeiten, kann ich mich überhaupt nicht mehr konzentrieren.'",
+        "vi": "Người nói thứ nhất nói rõ ràng: 'Kể từ khi chúng tôi làm việc trong văn phòng mở, tôi hoàn toàn không thể tập trung được nữa.'",
+        "key_evidence": "Seit wir im Großraumbüro arbeiten, kann ich mich überhaupt nicht mehr konzentrieren.",
+        "key_vocabulary": [
+          "empfindet",
+          "förderlich",
+          "Konzentration",
+          "Großraumbüro"
+        ]
+      }
+    },
+    {
+      "id": "Q6",
+      "gespraech": 3,
+      "type": "mc_abc",
+      "question": "Welchen Zweck erfüllen Kopfhörer im Team des ersten Sprechers?",
+      "options": {
+        "a": "Sie helfen, störende Geräusche im Großraumbüro zu reduzieren.",
+        "b": "Sie dienen als Zeichen, dass man gerade ungestört arbeiten möchte.",
+        "c": "Sie ermöglichen es, während der Arbeit Musik zu hören."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Der erste Sprecher erklärt: 'Bei uns im Team tragen wir Kopfhörer als Signal dafür, dass wir gerade nicht gestört werden möchten.'",
+        "vi": "Người nói thứ nhất giải thích: 'Trong nhóm của chúng tôi, chúng tôi đeo tai nghe như một tín hiệu cho thấy chúng tôi không muốn bị làm phiền vào lúc đó.'",
+        "key_evidence": "Bei uns im Team tragen wir Kopfhörer als Signal dafür, dass wir gerade nicht gestört werden möchten.",
+        "key_vocabulary": [
+          "Zweck",
+          "erfüllen",
+          "Signal",
+          "ungestört",
+          "reduzieren"
+        ]
+      }
+    },
+    {
+      "id": "Q7",
+      "gespraech": 4,
+      "type": "richtig_falsch",
+      "question": "Der zweite Sprecher ist mit dem Konzept der Eisenhower-Matrix bereits vertraut.",
+      "answer": "richtig",
+      "points": 1,
+      "explanation": {
+        "de": "Der zweite Sprecher erkennt das Konzept sofort und sagt: 'Das klingt nach der Eisenhower-Matrix. Die teilt Aufgaben in vier Kategorien ein.'",
+        "vi": "Người nói thứ hai nhận ra khái niệm này ngay lập tức và nói: 'Nghe có vẻ giống Ma trận Eisenhower. Nó chia các nhiệm vụ thành bốn loại.'",
+        "key_evidence": "Das klingt nach der Eisenhower-Matrix. Die teilt Aufgaben in vier Kategorien ein.",
+        "key_vocabulary": [
+          "Konzept",
+          "vertraut",
+          "Kategorien"
+        ]
+      }
+    },
+    {
+      "id": "Q8",
+      "gespraech": 4,
+      "type": "mc_abc",
+      "question": "Welche Art von Aufgaben wird laut den Sprechern am häufigsten vernachlässigt und warum?",
+      "options": {
+        "a": "Dringende, aber unwichtige Aufgaben, weil sie keine sofortigen Ergebnisse liefern.",
+        "b": "Wichtige, aber nicht dringende Aufgaben, weil dringende Angelegenheiten sie verdrängen.",
+        "c": "Weder wichtige noch dringende Aufgaben, da sie als Zeitverschwendung gelten."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Der erste Sprecher nennt 'Wichtig aber nicht dringend!' als die vernachlässigte Kategorie, und der zweite Sprecher ergänzt: 'Weil immer die dringenden Sachen reinkommen und alles andere verdrängen.'",
+        "vi": "Người nói thứ nhất gọi 'Quan trọng nhưng không khẩn cấp!' là loại bị bỏ qua, và người nói thứ hai bổ sung: 'Vì những việc khẩn cấp luôn xuất hiện và đẩy lùi mọi thứ khác.'",
+        "key_evidence": "Sprecher1_4: Wichtig aber nicht dringend! Sprecher2_4: Weil immer die dringenden Sachen reinkommen und alles andere verdrängen.",
+        "key_vocabulary": [
+          "vernachlässigt",
+          "dringend",
+          "wichtig",
+          "verdrängen",
+          "Angelegenheiten"
+        ]
+      }
+    },
+    {
+      "id": "Q9",
+      "gespraech": 5,
+      "type": "richtig_falsch",
+      "question": "Beide Sprecher sind sich einig, dass Homeoffice ihre Produktivität steigert.",
+      "answer": "falsch",
+      "points": 1,
+      "explanation": {
+        "de": "Der zweite Sprecher ist produktiver, aber der erste Sprecher sagt: 'Bei mir ist es umgekehrt. Zu Hause lenken mich der Haushalt, der Kühlschrank und die Couch ab.'",
+        "vi": "Người nói thứ hai làm việc hiệu quả hơn, nhưng người nói thứ nhất nói: 'Với tôi thì ngược lại. Ở nhà, công việc nhà, tủ lạnh và ghế sofa làm tôi mất tập trung.'",
+        "key_evidence": "Sprecher2_5: Ich bin zu Hause definitiv produktiver... Sprecher1_5: Bei mir ist es umgekehrt. Zu Hause lenken mich der Haushalt, der Kühlschrank und die Couch ab.",
+        "key_vocabulary": [
+          "einig",
+          "Produktivität",
+          "steigert",
+          "umgekehrt",
+          "ablenken"
+        ]
+      }
+    },
+    {
+      "id": "Q10",
+      "gespraech": 5,
+      "type": "mc_abc",
+      "question": "Was ist laut dem zweiten Sprecher das größte Hindernis für seine Produktivität im Homeoffice?",
+      "options": {
+        "a": "Die Ablenkungen durch den Haushalt und persönliche Dinge.",
+        "b": "Die Schwierigkeit, Arbeit und Privatleben voneinander zu trennen.",
+        "c": "Die vielen Videokonferenzen, die den Arbeitstag unterbrechen."
+      },
+      "answer": "c",
+      "points": 1,
+      "explanation": {
+        "de": "Der zweite Sprecher sagt klar: 'Mein größtes Problem im Homeoffice sind endlose Videokonferenzen, die meinen Tag zerstückeln.'",
+        "vi": "Người nói thứ hai nói rõ ràng: 'Vấn đề lớn nhất của tôi khi làm việc tại nhà là những cuộc họp video không ngừng, chúng làm gián đoạn ngày làm việc của tôi.'",
+        "key_evidence": "Mein größtes Problem im Homeoffice sind endlose Videokonferenzen, die meinen Tag zerstückeln.",
+        "key_vocabulary": [
+          "Hindernis",
+          "Produktivität",
+          "Ablenkungen",
+          "trennen",
+          "Videokonferenzen",
+          "zerstückeln"
+        ]
       }
     }
   ],

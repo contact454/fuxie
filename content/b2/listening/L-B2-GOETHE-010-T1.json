@@ -16,68 +16,232 @@
   "questions": [
     {
       "id": "Q1",
-      "item": 1,
+      "gespraech": 1,
       "type": "richtig_falsch",
-      "statement": "Die Person kommt aus Belgien.",
-      "answer": "falsch",
+      "question": "Der Mann ist der Meinung, dass seine ehrenamtliche Arbeit in der Suppenküche ihm persönlich viel gibt.",
+      "answer": "richtig",
       "points": 1,
       "explanation": {
-        "de": "Falsch. Die Aussage stimmt nicht mit dem Hörtext überein.",
-        "vi": "Sai.",
-        "key_evidence": "Die Person kommt aus Belgien.",
-        "key_vocabulary": []
+        "de": "Der Mann sagt, seine Arbeit sei 'eine unglaubliche Erfahrung', was seine positive Einstellung und den persönlichen Gewinn unterstreicht.",
+        "vi": "Người đàn ông nói công việc của anh ấy là 'một trải nghiệm đáng kinh ngạc', điều này nhấn mạnh thái độ tích cực và lợi ích cá nhân mà anh ấy nhận được.",
+        "key_evidence": "es ist eine unglaubliche Erfahrung.",
+        "key_vocabulary": [
+          "ehrenamtlich",
+          "persönlich",
+          "unglaublich",
+          "Erfahrung"
+        ]
       }
     },
     {
       "id": "Q2",
-      "item": 2,
-      "type": "richtig_falsch",
-      "statement": "Freund wird erwähnt.",
-      "answer": "richtig",
-      "points": 1,
-      "explanation": {
-        "de": "Richtig. Die Aussage stimmt mit dem Hörtext überein.",
-        "vi": "Đúng.",
-        "key_evidence": "Freund wird erwähnt.",
-        "key_vocabulary": []
-      }
-    },
-    {
-      "id": "Q3",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Welches Thema wird besprochen (Gespräch 1)?",
+      "question": "Was schließt die Frau aus der Anzahl der Besucher in der Suppenküche?",
       "options": {
-        "a": "Gesundheit und Körper",
-        "b": "Freizeit und Hobbys",
-        "c": "Einkaufen und Geld"
-      },
-      "answer": "c",
-      "points": 1,
-      "explanation": {
-        "de": "Man hört: \"Einkaufen und Geld\".",
-        "vi": "Đoạn hội thoại 1 nói về chủ đề gì?",
-        "key_evidence": "Einkaufen und Geld",
-        "key_vocabulary": []
-      }
-    },
-    {
-      "id": "Q4",
-      "gespraech": 1,
-      "type": "mc_abc",
-      "question": "Welches Thema wird besprochen (Gespräch 1)?",
-      "options": {
-        "a": "Irak",
-        "b": "Kanada",
-        "c": "Würzburg"
+        "a": "Sie hatte erwartet, dass weniger Menschen die Suppenküche besuchen.",
+        "b": "Sie ist überrascht, dass so wenige Menschen Hilfe benötigen.",
+        "c": "Sie glaubt, dass die Zahl der Besucher in Zukunft sinken wird."
       },
       "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Das Hauptthema ist \"Einkaufen\".",
-        "vi": "Đoạn hội thoại 1 nói về chủ đề gì?",
-        "key_evidence": "Einkaufen",
-        "key_vocabulary": []
+        "de": "Die Frau äußert, dass die tatsächliche Zahl der Besucher 'viel mehr als ich gedacht hätte' ist, was bedeutet, dass sie mit einer geringeren Zahl gerechnet hatte.",
+        "vi": "Người phụ nữ nói rằng số lượng khách đến thăm thực tế 'nhiều hơn tôi nghĩ', có nghĩa là cô ấy đã mong đợi một con số thấp hơn.",
+        "key_evidence": "Das sind viel mehr als ich gedacht hätte.",
+        "key_vocabulary": [
+          "schließen",
+          "Anzahl",
+          "Besucher",
+          "erwarten",
+          "benötigen"
+        ]
+      }
+    },
+    {
+      "id": "Q3",
+      "gespraech": 2,
+      "type": "richtig_falsch",
+      "question": "Die Frau ist überzeugt, dass ehrenamtliches Engagement für die Gesellschaft unverzichtbar ist.",
+      "answer": "richtig",
+      "points": 1,
+      "explanation": {
+        "de": "Die Frau beschreibt ehrenamtliches Engagement als 'das Rückgrat unserer Gesellschaft' und betont, dass 'ohne Ehrenamt vieles nicht funktionieren' würde.",
+        "vi": "Người phụ nữ mô tả hoạt động tình nguyện là 'xương sống của xã hội chúng ta' và nhấn mạnh rằng 'nếu không có hoạt động tình nguyện, nhiều thứ sẽ không hoạt động'.",
+        "key_evidence": "Es ist das Rückgrat unserer Gesellschaft. Ohne Ehrenamt würde vieles nicht funktionieren.",
+        "key_vocabulary": [
+          "überzeugt",
+          "ehrenamtlich",
+          "Engagement",
+          "Gesellschaft",
+          "unverzichtbar"
+        ]
+      }
+    },
+    {
+      "id": "Q4",
+      "gespraech": 2,
+      "type": "mc_abc",
+      "question": "Was ist die Erklärung des Mannes für den Rückgang junger Ehrenamtlicher?",
+      "options": {
+        "a": "Er vermutet, dass junge Leute keine langfristigen Verpflichtungen eingehen möchten.",
+        "b": "Er meint, dass junge Menschen generell kein Interesse an ehrenamtlicher Arbeit haben.",
+        "c": "Er glaubt, dass es zu wenige passende Projekte für junge Freiwillige gibt."
+      },
+      "answer": "a",
+      "points": 1,
+      "explanation": {
+        "de": "Der Mann erklärt, dass junge Menschen 'weniger feste Strukturen wollen', was bedeutet, dass sie keine langfristigen oder starren Verpflichtungen bevorzugen.",
+        "vi": "Người đàn ông giải thích rằng những người trẻ 'muốn ít cấu trúc cố định hơn', có nghĩa là họ không thích những cam kết dài hạn hoặc cứng nhắc.",
+        "key_evidence": "Das liegt wahrscheinlich daran, dass junge Menschen weniger feste Strukturen wollen.",
+        "key_vocabulary": [
+          "Erklärung",
+          "Rückgang",
+          "Ehrenamtliche",
+          "vermuten",
+          "langfristig",
+          "Verpflichtungen"
+        ]
+      }
+    },
+    {
+      "id": "Q5",
+      "gespraech": 3,
+      "type": "richtig_falsch",
+      "question": "Die Frau hält die aktuellen gesetzlichen Regelungen für Sonderurlaub bei ehrenamtlicher Arbeit für ungerecht.",
+      "answer": "richtig",
+      "points": 1,
+      "explanation": {
+        "de": "Die Frau äußert klar: 'Das finde ich unfair. Warum wird nicht jedes ehrenamtliche Engagement gleich behandelt?'",
+        "vi": "Người phụ nữ nói rõ: 'Tôi thấy điều đó không công bằng. Tại sao không phải mọi hoạt động tình nguyện đều được đối xử như nhau?'",
+        "key_evidence": "Das finde ich unfair. Warum wird nicht jedes ehrenamtliche Engagement gleich behandelt?",
+        "key_vocabulary": [
+          "halten für",
+          "aktuell",
+          "gesetzlich",
+          "Regelungen",
+          "Sonderurlaub",
+          "ungerecht"
+        ]
+      }
+    },
+    {
+      "id": "Q6",
+      "gespraech": 3,
+      "type": "mc_abc",
+      "question": "Was ist die Begründung des Mannes für den Sonderstatus der Feuerwehr bezüglich Sonderurlaub?",
+      "options": {
+        "a": "Er erklärt, dass Feuerwehreinsätze oft sofortige Präsenz erfordern, auch während der Arbeitszeit.",
+        "b": "Er ist der Meinung, dass die Feuerwehr mehr Anerkennung verdient als andere ehrenamtliche Tätigkeiten.",
+        "c": "Er weist darauf hin, dass nur wenige Menschen bereit sind, sich bei der Feuerwehr zu engagieren."
+      },
+      "answer": "a",
+      "points": 1,
+      "explanation": {
+        "de": "Der Mann begründet den Sonderstatus damit, dass 'Brände auch während der Arbeitszeit ausbrechen können', was eine sofortige Reaktion notwendig macht.",
+        "vi": "Người đàn ông giải thích tình trạng đặc biệt là do 'hỏa hoạn có thể xảy ra trong giờ làm việc', điều này đòi hỏi phản ứng ngay lập tức.",
+        "key_evidence": "Die Feuerwehr hat Sonderstatus, weil Brände auch während der Arbeitszeit ausbrechen können.",
+        "key_vocabulary": [
+          "Begründung",
+          "Sonderstatus",
+          "bezüglich",
+          "erfordern",
+          "Präsenz",
+          "Arbeitszeit"
+        ]
+      }
+    },
+    {
+      "id": "Q7",
+      "gespraech": 4,
+      "type": "richtig_falsch",
+      "question": "Die junge Frau äußert Bedenken hinsichtlich der finanziellen Machbarkeit eines Freiwilligen Sozialen Jahres (FSJ).",
+      "answer": "richtig",
+      "points": 1,
+      "explanation": {
+        "de": "Die junge Frau fragt kritisch: 'Vierhundert Euro? Davon kann man doch nicht leben!', was ihre finanziellen Bedenken deutlich macht.",
+        "vi": "Cô gái trẻ hỏi một cách phê phán: 'Bốn trăm euro? Làm sao có thể sống được bằng số tiền đó!', điều này thể hiện rõ những lo ngại về tài chính của cô ấy.",
+        "key_evidence": "Vierhundert Euro? Davon kann man doch nicht leben!",
+        "key_vocabulary": [
+          "äußern",
+          "Bedenken",
+          "hinsichtlich",
+          "finanziell",
+          "Machbarkeit"
+        ]
+      }
+    },
+    {
+      "id": "Q8",
+      "gespraech": 4,
+      "type": "mc_abc",
+      "question": "Was ist die Gesamtbewertung der anderen Frau zum finanziellen Aspekt eines FSJ?",
+      "options": {
+        "a": "Sie betont, dass ein FSJ trotz Zuschüssen oft finanzielle Unterstützung von den Eltern erfordert.",
+        "b": "Sie ist der Meinung, dass das Taschengeld zusammen mit Unterkunft und Verpflegung völlig ausreicht.",
+        "c": "Sie glaubt, dass die finanzielle Situation während eines FSJ kein großes Problem darstellt."
+      },
+      "answer": "a",
+      "points": 1,
+      "explanation": {
+        "de": "Die andere Frau sagt, dass es 'finanziell eine Herausforderung' ist und man 'oft Unterstützung von den Eltern' braucht, obwohl es Zuschüsse gibt.",
+        "vi": "Người phụ nữ kia nói rằng đó là 'một thách thức về tài chính' và người ta 'thường cần sự hỗ trợ từ cha mẹ', mặc dù có các khoản trợ cấp.",
+        "key_evidence": "Trotzdem ist es finanziell eine Herausforderung. Man braucht oft Unterstützung von den Eltern.",
+        "key_vocabulary": [
+          "Gesamtbewertung",
+          "finanziell",
+          "Aspekt",
+          "betonen",
+          "Zuschüsse",
+          "Unterstützung"
+        ]
+      }
+    },
+    {
+      "id": "Q9",
+      "gespraech": 5,
+      "type": "richtig_falsch",
+      "question": "Der Mann sieht Online-Volunteering als eine gute Lösung für Personen mit eingeschränkter Flexibilität.",
+      "answer": "richtig",
+      "points": 1,
+      "explanation": {
+        "de": "Der Mann sagt, Online-Volunteering sei 'eine tolle Möglichkeit für Menschen, die zeitlich oder örtlich unflexibel sind'.",
+        "vi": "Người đàn ông nói rằng tình nguyện trực tuyến là 'một cơ hội tuyệt vời cho những người không linh hoạt về thời gian hoặc địa điểm'.",
+        "key_evidence": "Das klingt nach einer tollen Möglichkeit für Menschen, die zeitlich oder örtlich unflexibel sind.",
+        "key_vocabulary": [
+          "Online-Volunteering",
+          "Lösung",
+          "Personen",
+          "eingeschränkt",
+          "Flexibilität"
+        ]
+      }
+    },
+    {
+      "id": "Q10",
+      "gespraech": 5,
+      "type": "mc_abc",
+      "question": "Was schätzt die Frau besonders an der Plattform 'Youvo'?",
+      "options": {
+        "a": "Sie findet es gut, dass man über die Plattform seine beruflichen Kompetenzen für wohltätige Zwecke einsetzen kann.",
+        "b": "Sie ist beeindruckt von der großen Auswahl an Designprojekten, die 'Youvo' anbietet.",
+        "c": "Sie schätzt, dass 'Youvo' auch Menschen ohne spezielle berufliche Fähigkeiten vermittelt."
+      },
+      "answer": "a",
+      "points": 1,
+      "explanation": {
+        "de": "Die Frau lobt 'Youvo' mit den Worten: 'Man nutzt seine beruflichen Fähigkeiten für einen guten Zweck', was die Möglichkeit hervorhebt, professionelle Kompetenzen einzubringen.",
+        "vi": "Người phụ nữ khen ngợi 'Youvo' bằng những lời: 'Người ta sử dụng kỹ năng nghề nghiệp của mình cho một mục đích tốt đẹp', điều này làm nổi bật khả năng đóng góp các năng lực chuyên môn.",
+        "key_evidence": "Man nutzt seine beruflichen Fähigkeiten für einen guten Zweck.",
+        "key_vocabulary": [
+          "schätzen",
+          "Plattform",
+          "beruflich",
+          "Kompetenzen",
+          "wohltätig",
+          "Zwecke",
+          "einsetzen"
+        ]
       }
     }
   ],

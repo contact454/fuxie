@@ -16,92 +16,139 @@
   "questions": [
     {
       "id": "Q1",
-      "gespraech": 1,
+      "item": 1,
       "type": "mc_abc",
-      "question": "Welches Thema wird besprochen (Gespräch 1)?",
+      "question": "Wer sagt das: 'Für mich waren meine Praktika die wichtigste Vorbereitung auf das Berufsleben überhaupt.'?",
       "options": {
-        "a": "Einkaufen und Geld",
-        "b": "Bildung und Schule",
-        "c": "Arbeit und Beruf"
+        "a": "Moderator",
+        "b": "Herr Wolf",
+        "c": "Frau Lang"
       },
-      "answer": "a",
+      "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Man hört: \"Einkaufen und Geld\".",
-        "vi": "Đoạn hội thoại 1 nói về chủ đề gì?",
-        "key_evidence": "Einkaufen und Geld",
-        "key_vocabulary": []
+        "de": "Herr Wolf teilt seine persönliche Erfahrung und Meinung über die Bedeutung seiner Praktika.",
+        "vi": "Ông Wolf chia sẻ kinh nghiệm và quan điểm cá nhân về tầm quan trọng của các kỳ thực tập của mình.",
+        "key_evidence": "Für mich waren meine Praktika die wichtigste Vorbereitung auf das Berufsleben überhaupt.",
+        "key_vocabulary": [
+          "Vorbereitung",
+          "Berufsleben",
+          "überhaupt"
+        ]
       }
     },
     {
       "id": "Q2",
-      "gespraech": 1,
+      "item": 2,
       "type": "mc_abc",
-      "question": "Wie heißt eine Person im Gespräch 1?",
+      "question": "Wer sagt das: 'Das ist eine privilegierte Perspektive. Nicht jeder kann es sich leisten, monatelang für wenig oder kein Geld zu arbeiten.'?",
       "options": {
-        "a": "Thomas",
-        "b": "Andreas",
-        "c": "Wolf"
+        "a": "Moderator",
+        "b": "Herr Wolf",
+        "c": "Frau Lang"
       },
       "answer": "c",
       "points": 1,
       "explanation": {
-        "de": "Man hört: \"Wolf\".",
-        "vi": "Một người trong đoạn 1 tên là gì?",
-        "key_evidence": "Wolf",
+        "de": "Frau Lang äußert die Meinung, dass die positive Sicht auf Praktika oft aus einer privilegierten Position kommt, da nicht jeder unbezahlte Arbeit leisten kann.",
+        "vi": "Bà Lang bày tỏ quan điểm rằng cái nhìn tích cực về thực tập thường xuất phát từ một vị thế đặc quyền, vì không phải ai cũng có thể làm việc không lương.",
+        "key_evidence": "Das ist eine privilegierte Perspektive. Nicht jeder kann es sich leisten, monatelang für wenig oder kein Geld zu arbeiten.",
         "key_vocabulary": [
-          {
-            "word": "heißen",
-            "meaning": "to be called"
-          }
+          "privilegiert",
+          "Perspektive",
+          "leisten"
         ]
       }
     },
     {
       "id": "Q3",
-      "gespraech": 1,
+      "item": 3,
       "type": "mc_abc",
-      "question": "Wie heißt eine Person (Gespräch 1)?",
+      "question": "Wer sagt das: 'Das Argument kennen wir auch aus der Mindestlohndebatte, und es hat sich nicht bewahrheitet.'?",
       "options": {
-        "a": "Nürnberg",
-        "b": "Irak",
-        "c": "Köln"
+        "a": "Moderator",
+        "b": "Herr Wolf",
+        "c": "Frau Lang"
       },
-      "answer": "c",
+      "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man den Namen \"Wolf\".",
-        "vi": "Một người trong đoạn 1 tên là gì?",
-        "key_evidence": "Wolf",
+        "de": "Der Moderator vergleicht das Argument gegen eine Mindestvergütung für Praktika mit der früheren Mindestlohndebatte und stellt fest, dass sich die Befürchtungen nicht bestätigt haben.",
+        "vi": "Người điều hành so sánh lập luận chống lại mức lương tối thiểu cho thực tập sinh với cuộc tranh luận về lương tối thiểu trước đây và nhận định rằng những lo ngại đã không thành hiện thực.",
+        "key_evidence": "Das Argument kennen wir auch aus der Mindestlohndebatte, und es hat sich nicht bewahrheitet.",
         "key_vocabulary": [
-          {
-            "word": "heißen",
-            "meaning": "to be called"
-          }
+          "Argument",
+          "Mindestlohndebatte",
+          "bewahrheitet"
         ]
       }
     },
     {
       "id": "Q4",
-      "gespraech": 1,
+      "item": 4,
       "type": "mc_abc",
-      "question": "Was macht die Person beruflich (Gespräch 1)?",
+      "question": "Wer sagt das: 'Eine gesetzliche Mindestvergütung für alle Praktika, die über vier Wochen dauern.'?",
       "options": {
-        "a": "Praktikant",
-        "b": "Arzt",
-        "c": "Studentin"
+        "a": "Moderator",
+        "b": "Herr Wolf",
+        "c": "Frau Lang"
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Herr Wolf formuliert seine konkrete Forderung nach einer gesetzlichen Mindestvergütung für längere Praktika.",
+        "vi": "Ông Wolf đưa ra yêu cầu cụ thể của mình về mức lương tối thiểu theo luật định cho các kỳ thực tập dài hơn.",
+        "key_evidence": "Eine gesetzliche Mindestvergütung für alle Praktika, die über vier Wochen dauern.",
+        "key_vocabulary": [
+          "gesetzlich",
+          "Mindestvergütung",
+          "dauern"
+        ]
+      }
+    },
+    {
+      "id": "Q5",
+      "item": 5,
+      "type": "mc_abc",
+      "question": "Wer sagt das: 'Das führt dazu, dass nur Studierende aus wohlhabenden Familien in diese Branchen einsteigen können.'?",
+      "options": {
+        "a": "Moderator",
+        "b": "Herr Wolf",
+        "c": "Frau Lang"
+      },
+      "answer": "c",
+      "points": 1,
+      "explanation": {
+        "de": "Frau Lang erklärt die soziale Ungleichheit, die durch unbezahlte Praktika entsteht, indem sie nur Studierenden aus wohlhabenden Familien den Zugang ermöglicht.",
+        "vi": "Bà Lang giải thích sự bất bình đẳng xã hội do thực tập không lương gây ra, khi chỉ sinh viên từ các gia đình khá giả mới có thể tiếp cận.",
+        "key_evidence": "Das führt dazu, dass nur Studierende aus wohlhabenden Familien in diese Branchen einsteigen können.",
+        "key_vocabulary": [
+          "wohlhabend",
+          "Branchen",
+          "einsteigen"
+        ]
+      }
+    },
+    {
+      "id": "Q6",
+      "item": 6,
+      "type": "mc_abc",
+      "question": "Wer sagt das: 'Deswegen fordern wir auch staatliche Zuschüsse für Praktika in Bereichen, die keine hohen Gehälter zahlen können.'?",
+      "options": {
+        "a": "Moderator",
+        "b": "Herr Wolf",
+        "c": "Frau Lang"
       },
       "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Man hört: \"Praktikant\".",
-        "vi": "Người đó làm nghề gì (đoạn 1)?",
-        "key_evidence": "Praktikant",
+        "de": "Der Moderator äußert eine weitere Forderung nach staatlicher Unterstützung, um Praktika in weniger gut bezahlten Branchen zu ermöglichen.",
+        "vi": "Người điều hành đưa ra một yêu cầu khác về hỗ trợ của nhà nước để tạo điều kiện cho các kỳ thực tập trong các ngành có mức lương thấp hơn.",
+        "key_evidence": "Deswegen fordern wir auch staatliche Zuschüsse für Praktika in Bereichen, die keine hohen Gehälter zahlen können.",
         "key_vocabulary": [
-          {
-            "word": "Praktikant",
-            "meaning": "Praktikant"
-          }
+          "staatlich",
+          "Zuschüsse",
+          "Gehälter"
         ]
       }
     }

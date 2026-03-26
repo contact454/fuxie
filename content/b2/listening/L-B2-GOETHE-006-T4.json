@@ -18,18 +18,18 @@
       "id": "Q1",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Welches Thema wird besprochen (Gespräch 1)?",
+      "question": "Was schließt der Dozent aus der durchschnittlichen Pendelentfernung in deutschen Großstädten?",
       "options": {
-        "a": "Familie und Freunde",
-        "b": "Arbeit und Beruf",
-        "c": "Einkaufen und Geld"
+        "a": "Die meisten Berufstätigen nutzen bereits das Fahrrad für ihren Arbeitsweg.",
+        "b": "Das Fahrrad hat ein großes ungenutztes Potenzial für die täglichen Arbeitswege.",
+        "c": "Die Distanzen sind zu lang, um sie regelmäßig mit dem Fahrrad zu bewältigen."
       },
       "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Man hört: \"Arbeit und Beruf\".",
-        "vi": "Đoạn hội thoại 1 nói về chủ đề gì?",
-        "key_evidence": "Arbeit und Beruf",
+        "de": "Der Dozent erklärt, dass die durchschnittliche Pendelentfernung bei 8,5 km liegt und schließt daraus, dass die Mehrheit der Arbeitswege theoretisch mit dem Fahrrad zurückgelegt werden könnte, was auf ein ungenutztes Potenzial hindeutet.",
+        "vi": "Giảng viên giải thích rằng khoảng cách đi làm trung bình là 8,5 km và từ đó kết luận rằng phần lớn các chuyến đi làm về mặt lý thuyết có thể được thực hiện bằng xe đạp, điều này cho thấy một tiềm năng chưa được khai thác.",
+        "key_evidence": "Das bedeutet: Die Mehrheit der Arbeitswege könnte theoretisch mit dem Fahrrad zurückgelegt werden.",
         "key_vocabulary": []
       }
     },
@@ -37,24 +37,133 @@
       "id": "Q2",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Woher kommt die Person (Gespräch 1)?",
+      "question": "Worauf führt der Dozent den deutlich höheren Radverkehrsanteil in den Niederlanden zurück?",
       "options": {
-        "a": "Deutschland",
-        "b": "Leipzig",
-        "c": "Hannover"
+        "a": "Auf die geringere Bevölkerungsdichte und flachere Landschaften.",
+        "b": "Auf eine umfassende Radinfrastruktur, politische Unterstützung und eine etablierte Radkultur.",
+        "c": "Auf die höhere Anzahl an E-Bikes und Lastenrädern."
       },
-      "answer": "a",
+      "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Man hört: \"Deutschland\".",
-        "vi": "Người đó đến từ đâu (đoạn 1)?",
-        "key_evidence": "Deutschland",
-        "key_vocabulary": [
-          {
-            "word": "kommen aus",
-            "meaning": "to come from"
-          }
-        ]
+        "de": "Der Dozent nennt explizit drei Faktoren, die das Nachbarland besser machen: Infrastruktur, politischer Wille und eine tief verwurzelte Radkultur.",
+        "vi": "Giảng viên nêu rõ ba yếu tố giúp quốc gia láng giềng làm tốt hơn: cơ sở hạ tầng, ý chí chính trị và văn hóa đi xe đạp đã ăn sâu.",
+        "key_evidence": "Drei Faktoren: Infrastruktur, politischer Wille und eine tief verwurzelte Radkultur.",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q3",
+      "gespraech": 1,
+      "type": "mc_abc",
+      "question": "Wie beschreibt der Dozent die Radinfrastruktur in Deutschland?",
+      "options": {
+        "a": "Als vorbildlich und gut ausgebaut.",
+        "b": "Als uneinheitlich und von unterschiedlicher Qualität.",
+        "c": "Als ausreichend, aber verbesserungswürdig."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Der Dozent verwendet die Metapher „Flickenteppich aus verschiedenen Qualitätsstufen“, um die Uneinheitlichkeit und mangelnde Qualität der deutschen Radinfrastruktur zu verdeutlichen.",
+        "vi": "Giảng viên sử dụng phép ẩn dụ “tấm thảm chắp vá với nhiều cấp độ chất lượng khác nhau” để làm rõ sự không đồng nhất và chất lượng kém của cơ sở hạ tầng xe đạp ở Đức.",
+        "key_evidence": "In Deutschland dagegen gleicht die Radinfrastruktur einem Flickenteppich aus verschiedenen Qualitätsstufen.",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q4",
+      "gespraech": 1,
+      "type": "mc_abc",
+      "question": "Welches Ziel verfolgt der Dozent, indem er detaillierte Zahlen zu den gesundheitlichen Vorteilen des Radfahrens nennt?",
+      "options": {
+        "a": "Er möchte die Zuhörer über die genauen medizinischen Risiken aufklären.",
+        "b": "Er will die positiven Auswirkungen des Radfahrens wissenschaftlich untermauern und überzeugen.",
+        "c": "Er möchte auf die Notwendigkeit weiterer Forschung in diesem Bereich hinweisen."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Der Dozent leitet die Zahlen mit der Aussage ein, dass er die gesundheitlichen Vorteile „mit konkreten Zahlen belegen“ möchte, was seine Absicht unterstreicht, die Zuhörer wissenschaftlich zu überzeugen.",
+        "vi": "Giảng viên mở đầu bằng cách nói rằng ông muốn “chứng minh những lợi ích sức khỏe bằng những con số cụ thể”, điều này nhấn mạnh ý định của ông là thuyết phục người nghe một cách khoa học.",
+        "key_evidence": "Lassen Sie mich die gesundheitlichen Vorteile des Radfahrens mit konkreten Zahlen belegen.",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q5",
+      "gespraech": 1,
+      "type": "mc_abc",
+      "question": "Welche Schlussfolgerung zieht der Dozent aus dem Vergleich der volkswirtschaftlichen Kosten und Einsparungen?",
+      "options": {
+        "a": "Autofahren ist für die Gesellschaft kostengünstiger als Radfahren.",
+        "b": "Die finanziellen Vorteile des Radfahrens für die Gesellschaft sind unbestreitbar.",
+        "c": "Die externen Kosten des Autoverkehrs sind vernachlässigbar."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Nachdem der Dozent die Einsparungen durch Radfahren und die Kosten durch Autofahren gegenübergestellt hat, fasst er zusammen, dass die ökonomische Überlegenheit des Fahrrads „eindeutig belegt“ ist.",
+        "vi": "Sau khi so sánh lợi ích kinh tế của việc đi xe đạp và chi phí của việc lái ô tô, giảng viên kết luận rằng ưu thế kinh tế của xe đạp là “được chứng minh rõ ràng”.",
+        "key_evidence": "Die ökonomische Überlegenheit des Fahrrads gegenüber dem Auto ist also eindeutig belegt.",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q6",
+      "gespraech": 1,
+      "type": "mc_abc",
+      "question": "Was kritisiert der Dozent an der aktuellen Verkehrspolitik?",
+      "options": {
+        "a": "Die fehlende Anerkennung der Pendlerpauschale für Radfahrer.",
+        "b": "Die einseitige und übermäßige Förderung des Autoverkehrs.",
+        "c": "Die unzureichende Finanzierung des öffentlichen Nahverkehrs."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Der Dozent kritisiert, dass die Politik den Autoverkehr „massiv zulasten des Radverkehrs“ subventioniert und nennt Beispiele wie die Pendlerpauschale und das Dienstwagenprivileg.",
+        "vi": "Giảng viên chỉ trích rằng chính sách đang trợ cấp cho giao thông ô tô “một cách ồ ạt gây bất lợi cho giao thông xe đạp” và đưa ra các ví dụ như trợ cấp đi lại và đặc quyền xe công.",
+        "key_evidence": "Dennoch subventioniert die Politik den Autoverkehr nach wie vor massiv zulasten des Radverkehrs.",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q7",
+      "gespraech": 1,
+      "type": "mc_abc",
+      "question": "Welche Maßnahme schlägt der Dozent vor, um die urbane Mobilität grundlegend zu verbessern?",
+      "options": {
+        "a": "Den vollständigen Stopp aller Subventionen für den Autoverkehr.",
+        "b": "Eine teilweise Umverteilung von Geldern aus dem Autoverkehr in die Radinfrastruktur.",
+        "c": "Die Einführung neuer Steuern für E-Bikes und Lastenräder."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Der Dozent schlägt vor, nur „zehn Prozent dieser Mittel“ (die für den Autoverkehr verwendet werden) in die Radinfrastruktur umzuschichten, um „revolutionäre Veränderungen“ zu bewirken.",
+        "vi": "Giảng viên đề xuất chỉ chuyển “mười phần trăm số tiền này” (được sử dụng cho giao thông ô tô) vào cơ sở hạ tầng xe đạp để tạo ra “những thay đổi mang tính cách mạng”.",
+        "key_evidence": "Eine Umschichtung von nur zehn Prozent dieser Mittel in Radinfrastruktur würde revolutionäre Veränderungen bewirken.",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q8",
+      "gespraech": 1,
+      "type": "mc_abc",
+      "question": "Welche Bedeutung misst der Dozent E-Bikes und Lastenrädern für die zukünftige urbane Mobilität bei?",
+      "options": {
+        "a": "Sie sind eine Nischenlösung für spezielle Transportbedürfnisse.",
+        "b": "Sie erweitern die Attraktivität des Radfahrens und ersetzen zunehmend andere Verkehrsmittel.",
+        "c": "Sie stellen eine zusätzliche Belastung für die bestehende Infrastruktur dar."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Der Dozent betont, dass E-Bikes das Radfahren für neue Zielgruppen attraktiv machen und Lastenräder bereits viele Lieferfahrzeuge und Privatfahrten ersetzen, was ihre transformative Rolle unterstreicht.",
+        "vi": "Giảng viên nhấn mạnh rằng xe đạp điện làm cho việc đi xe đạp trở nên hấp dẫn đối với các nhóm đối tượng mới và xe đạp chở hàng đã thay thế nhiều phương tiện giao hàng và chuyến đi cá nhân, điều này nhấn mạnh vai trò biến đổi của chúng.",
+        "key_evidence": "E-Bikes machen das Radfahren für ältere Menschen und bei hügeligem Terrain attraktiv. Lastenräder ersetzen bereits heute viele Lieferfahrzeuge und Privatfahrten in der Innenstadt.",
+        "key_vocabulary": []
       }
     }
   ],

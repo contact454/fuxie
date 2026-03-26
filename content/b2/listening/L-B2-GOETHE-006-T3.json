@@ -16,93 +16,116 @@
   "questions": [
     {
       "id": "Q1",
-      "gespraech": 1,
+      "item": 1,
       "type": "mc_abc",
-      "question": "Welches Thema wird besprochen (Gespräch 1)?",
+      "question": "Wer sagt das: 'Die Innenstädte müssen autofrei werden, damit Radfahrer endlich sicher unterwegs sind'?",
       "options": {
-        "a": "Alltag",
-        "b": "Wohnung und Haushalt",
-        "c": "Essen und Trinken"
+        "a": "Herr Fischer",
+        "b": "Frau Weber",
+        "c": "Moderator"
       },
       "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Man hört: \"Alltag\".",
-        "vi": "Đoạn hội thoại 1 nói về chủ đề gì?",
-        "key_evidence": "Alltag",
+        "de": "Herr Fischer (Gast_A) äußert diese Forderung zu Beginn der Diskussion.",
+        "vi": "Ông Fischer (Khách mời A) đưa ra yêu cầu này ngay từ đầu cuộc thảo luận.",
+        "key_evidence": "Unbedingt! Die Innenstädte müssen autofrei werden, damit Radfahrer endlich sicher unterwegs sind.",
         "key_vocabulary": []
       }
     },
     {
       "id": "Q2",
-      "gespraech": 1,
+      "item": 2,
       "type": "mc_abc",
-      "question": "Wie heißt eine Person im Gespräch 1?",
+      "question": "Wer sagt das: 'Millionen Menschen sind auf das Auto angewiesen und können nicht einfach umsteigen'?",
       "options": {
-        "a": "Katja",
-        "b": "Klaus",
-        "c": "Fischer"
+        "a": "Herr Fischer",
+        "b": "Frau Weber",
+        "c": "Moderator"
       },
-      "answer": "c",
+      "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Man hört: \"Fischer\".",
-        "vi": "Một người trong đoạn 1 tên là gì?",
-        "key_evidence": "Fischer",
-        "key_vocabulary": [
-          {
-            "word": "heißen",
-            "meaning": "to be called"
-          }
-        ]
+        "de": "Frau Weber (Gast_B) argumentiert gegen die autofreie Innenstadt, indem sie die Abhängigkeit vieler Menschen vom Auto betont.",
+        "vi": "Bà Weber (Khách mời B) phản đối việc cấm ô tô trong nội thành bằng cách nhấn mạnh sự phụ thuộc của nhiều người vào ô tô.",
+        "key_evidence": "Das ist populistisch! Millionen Menschen sind auf das Auto angewiesen und können nicht einfach umsteigen.",
+        "key_vocabulary": []
       }
     },
     {
       "id": "Q3",
-      "gespraech": 1,
+      "item": 3,
       "type": "mc_abc",
-      "question": "Woher kommt die Person (Gespräch 1)?",
+      "question": "Wer sagt das: 'Die meisten Radwege in Berlin sind zu schmal, schlecht markiert und werden von Autos zugeparkt'?",
       "options": {
-        "a": "Bonn",
-        "b": "Berlin",
-        "c": "Hannover"
+        "a": "Herr Fischer",
+        "b": "Frau Weber",
+        "c": "Moderator"
       },
-      "answer": "b",
+      "answer": "c",
       "points": 1,
       "explanation": {
-        "de": "Man hört: \"Berlin\".",
-        "vi": "Người đó đến từ đâu (đoạn 1)?",
-        "key_evidence": "Berlin",
-        "key_vocabulary": [
-          {
-            "word": "kommen aus",
-            "meaning": "to come from"
-          }
-        ]
+        "de": "Der Moderator fasst die Probleme der aktuellen Radwegeinfrastruktur in Berlin zusammen.",
+        "vi": "Người điều hành tóm tắt các vấn đề của cơ sở hạ tầng đường dành cho xe đạp hiện tại ở Berlin.",
+        "key_evidence": "Die meisten Radwege in Berlin sind zu schmal, schlecht markiert und werden von Autos zugeparkt.",
+        "key_vocabulary": []
       }
     },
     {
       "id": "Q4",
-      "gespraech": 1,
+      "item": 4,
       "type": "mc_abc",
-      "question": "Was macht die Person beruflich (Gespräch 1)?",
+      "question": "Wer sagt das: 'Barcelona ist nicht Berlin. Die Einkaufsgewohnheiten und das Wetter sind völlig verschieden'?",
       "options": {
-        "a": "Arzt",
-        "b": "Geschäftsinhaberin",
-        "c": "Mechaniker"
+        "a": "Herr Fischer",
+        "b": "Frau Weber",
+        "c": "Moderator"
+      },
+      "answer": "a",
+      "points": 1,
+      "explanation": {
+        "de": "Herr Fischer (Gast_A) weist darauf hin, dass die Ergebnisse aus Barcelona nicht direkt auf Berlin übertragbar sind.",
+        "vi": "Ông Fischer (Khách mời A) chỉ ra rằng kết quả từ Barcelona không thể áp dụng trực tiếp cho Berlin.",
+        "key_evidence": "Barcelona ist nicht Berlin. Die Einkaufsgewohnheiten und das Wetter sind völlig verschieden.",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q5",
+      "item": 5,
+      "type": "mc_abc",
+      "question": "Wer sagt das: 'Und was ist mit Lieferverkehr, Handwerkern und Menschen mit Behinderungen'?",
+      "options": {
+        "a": "Herr Fischer",
+        "b": "Frau Weber",
+        "c": "Moderator"
       },
       "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Man hört: \"Geschäftsinhaberin\".",
-        "vi": "Người đó làm nghề gì (đoạn 1)?",
-        "key_evidence": "Geschäftsinhaberin",
-        "key_vocabulary": [
-          {
-            "word": "Geschäftsinhaberin",
-            "meaning": "Geschäftsinhaberin"
-          }
-        ]
+        "de": "Frau Weber (Gast_B) stellt kritische Fragen zur praktischen Umsetzung einer autofreien Innenstadt und den Ausnahmen.",
+        "vi": "Bà Weber (Khách mời B) đặt câu hỏi quan trọng về việc triển khai thực tế một khu vực nội thành không có ô tô và các trường hợp ngoại lệ.",
+        "key_evidence": "Und was ist mit Lieferverkehr, Handwerkern und Menschen mit Behinderungen?",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q6",
+      "item": 6,
+      "type": "mc_abc",
+      "question": "Wer sagt das: 'Bürgerbeteiligung ist bei solchen Veränderungen unverzichtbar'?",
+      "options": {
+        "a": "Herr Fischer",
+        "b": "Frau Weber",
+        "c": "Moderator"
+      },
+      "answer": "a",
+      "points": 1,
+      "explanation": {
+        "de": "Herr Fischer (Gast_A) stimmt dem Moderator zu, dass Bürgerbeteiligung bei solchen weitreichenden Entscheidungen entscheidend ist.",
+        "vi": "Ông Fischer (Khách mời A) đồng ý với người điều hành rằng sự tham gia của người dân là rất quan trọng đối với những quyết định có tầm ảnh hưởng lớn như vậy.",
+        "key_evidence": "Da sind wir uns einig. Bürgerbeteiligung ist bei solchen Veränderungen unverzichtbar.",
+        "key_vocabulary": []
       }
     }
   ],

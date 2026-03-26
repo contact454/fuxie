@@ -16,82 +16,213 @@
   "questions": [
     {
       "id": "Q1",
-      "item": 1,
+      "gespraech": 1,
       "type": "richtig_falsch",
-      "statement": "Die Person kommt aus Indien.",
-      "answer": "falsch",
+      "question": "Der erste Sprecher ist der Meinung, dass sein aktuelles Praktikum ihm wertvolle berufliche Einblicke bietet.",
+      "answer": "richtig",
       "points": 1,
       "explanation": {
-        "de": "Falsch. Die Aussage stimmt nicht mit dem Hörtext überein.",
-        "vi": "Sai.",
-        "key_evidence": "Die Person kommt aus Indien.",
-        "key_vocabulary": []
+        "de": "Der erste Sprecher äußert sich positiv über sein Praktikum, da er direkt in ein Projekt eingebunden ist und seine Betreuerin ihn zu Kundengesprächen mitnimmt und nach seiner Meinung fragt. Dies deutet auf wertvolle Einblicke hin.",
+        "vi": "Người nói thứ nhất bày tỏ sự tích cực về kỳ thực tập của mình, vì anh ấy được tham gia trực tiếp vào một dự án và người hướng dẫn đưa anh ấy đi họp khách hàng và hỏi ý kiến của anh ấy. Điều này cho thấy những hiểu biết có giá trị về nghề nghiệp.",
+        "key_evidence": "Überraschenderweise bin ich direkt in ein echtes Projekt eingebunden worden. Meine Betreuerin nimmt mich mit zu Kundengesprächen und fragt nach meiner Meinung.",
+        "key_vocabulary": [
+          "wertvolle Einblicke",
+          "eingebunden",
+          "Kundengespräche"
+        ]
       }
     },
     {
       "id": "Q2",
-      "item": 2,
-      "type": "richtig_falsch",
-      "statement": "Pflichtpraktikum wird erwähnt.",
-      "answer": "richtig",
-      "points": 1,
-      "explanation": {
-        "de": "Richtig. Die Aussage stimmt mit dem Hörtext überein.",
-        "vi": "Đúng.",
-        "key_evidence": "Pflichtpraktikum wird erwähnt.",
-        "key_vocabulary": []
-      }
-    },
-    {
-      "id": "Q3",
-      "item": 3,
-      "type": "richtig_falsch",
-      "statement": "Die Person kommt aus Nürnberg.",
-      "answer": "falsch",
-      "points": 1,
-      "explanation": {
-        "de": "Falsch. Die Aussage stimmt nicht mit dem Hörtext überein.",
-        "vi": "Sai.",
-        "key_evidence": "Die Person kommt aus Nürnberg.",
-        "key_vocabulary": []
-      }
-    },
-    {
-      "id": "Q4",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Welches Thema wird besprochen (Gespräch 1)?",
+      "question": "Was betont der zweite Sprecher bezüglich der Jobsuche?",
       "options": {
-        "a": "Essen und Trinken",
-        "b": "Einkaufen und Geld",
-        "c": "Familie und Freunde"
+        "a": "Eine hohe Abschlussnote ist entscheidend für den Berufseinstieg.",
+        "b": "Praktische Erfahrungen sind oft wichtiger als die reine Abschlussnote.",
+        "c": "Die Dauer des Praktikums spielt die größte Rolle bei der Bewerbung."
       },
       "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Man hört: \"Einkaufen und Geld\".",
-        "vi": "Đoạn hội thoại 1 nói về chủ đề gì?",
-        "key_evidence": "Einkaufen und Geld",
-        "key_vocabulary": []
+        "de": "Der zweite Sprecher sagt explizit, dass Praxiserfahrung bei der Bewerbung oft mehr zählt als die reine Abschlussnote.",
+        "vi": "Người nói thứ hai nói rõ rằng kinh nghiệm thực tế thường quan trọng hơn điểm tốt nghiệp khi nộp đơn xin việc.",
+        "key_evidence": "Bei der Bewerbung zählt Praxiserfahrung oft mehr als die reine Abschlussnote.",
+        "key_vocabulary": [
+          "Praxiserfahrung",
+          "Abschlussnote",
+          "Bewerbung"
+        ]
+      }
+    },
+    {
+      "id": "Q3",
+      "gespraech": 2,
+      "type": "richtig_falsch",
+      "question": "Der zweite Sprecher sieht die universitäre Praktikumspflicht als grundsätzlich unproblematisch an.",
+      "answer": "falsch",
+      "points": 1,
+      "explanation": {
+        "de": "Der zweite Sprecher findet die Praktikumspflicht zwar 'im Prinzip gut', betont aber, dass 'das Timing schwierig ist' und es zu Problemen mit Prüfungen kommen kann. Er sieht also durchaus Probleme.",
+        "vi": "Người nói thứ hai tuy thấy việc thực tập bắt buộc là 'về nguyên tắc là tốt' nhưng lại nhấn mạnh rằng 'thời gian rất khó khăn' và có thể xảy ra vấn đề với các kỳ thi. Vì vậy, anh ấy chắc chắn thấy có vấn đề.",
+        "key_evidence": "Ich finde das im Prinzip gut, aber das Timing ist schwierig. Und wenn es sich mit Prüfungen überschneidet, hat man ein echtes Problem.",
+        "key_vocabulary": [
+          "Praktikumspflicht",
+          "grundsätzlich",
+          "unproblematisch",
+          "Timing"
+        ]
+      }
+    },
+    {
+      "id": "Q4",
+      "gespraech": 2,
+      "type": "mc_abc",
+      "question": "Was ist laut dem zweiten Sprecher die größte Herausforderung bei Pflichtpraktika?",
+      "options": {
+        "a": "Die mangelnde Auswahl an interessanten Praktikumsplätzen.",
+        "b": "Die Schwierigkeit, Praktika und Studienzeiten zu koordinieren.",
+        "c": "Die fehlende Möglichkeit, Praktika im Ausland zu absolvieren."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Der zweite Sprecher erwähnt, dass das 'Timing schwierig' ist und sich Praktika mit Prüfungen überschneiden können, was die Koordination von Praktikum und Studium erschwert.",
+        "vi": "Người nói thứ hai đề cập rằng 'thời gian khó khăn' và các kỳ thực tập có thể trùng với các kỳ thi, điều này làm cho việc phối hợp giữa thực tập và học tập trở nên khó khăn.",
+        "key_evidence": "Ich finde das im Prinzip gut, aber das Timing ist schwierig. Und wenn es sich mit Prüfungen überschneidet, hat man ein echtes Problem.",
+        "key_vocabulary": [
+          "Herausforderung",
+          "koordinieren",
+          "Studienzeiten"
+        ]
       }
     },
     {
       "id": "Q5",
-      "gespraech": 1,
-      "type": "mc_abc",
-      "question": "Welches Thema wird besprochen (Gespräch 1)?",
-      "options": {
-        "a": "Malaysia",
-        "b": "Essen",
-        "c": "Kolumbien"
-      },
-      "answer": "c",
+      "gespraech": 3,
+      "type": "richtig_falsch",
+      "question": "Der erste Sprecher ist der Ansicht, dass unbezahlte Praktika die soziale Ungleichheit verstärken.",
+      "answer": "richtig",
       "points": 1,
       "explanation": {
-        "de": "Das Hauptthema ist \"Einkaufen\".",
-        "vi": "Đoạn hội thoại 1 nói về chủ đề gì?",
-        "key_evidence": "Einkaufen",
-        "key_vocabulary": []
+        "de": "Der erste Sprecher stimmt der Aussage des zweiten Sprechers zu und bekräftigt, dass unbezahlte Praktika die soziale Ungleichheit verschärfen.",
+        "vi": "Người nói thứ nhất đồng ý với nhận định của người nói thứ hai và khẳng định rằng các kỳ thực tập không lương làm trầm trọng thêm bất bình đẳng xã hội.",
+        "key_evidence": "Genau das ist der Punkt. Unbezahlte Praktika verschärfen die soziale Ungleichheit.",
+        "key_vocabulary": [
+          "Ansicht",
+          "soziale Ungleichheit",
+          "verstärken"
+        ]
+      }
+    },
+    {
+      "id": "Q6",
+      "gespraech": 3,
+      "type": "mc_abc",
+      "question": "Was schlussfolgert der zweite Sprecher über die Praktikumsvergütung in Deutschland im europäischen Vergleich?",
+      "options": {
+        "a": "Deutschland ist Vorreiter bei der Bezahlung von Praktikanten.",
+        "b": "Deutschland liegt im Vergleich zu anderen europäischen Ländern zurück.",
+        "c": "Die Situation in Deutschland ist vergleichbar mit der in Frankreich."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Der zweite Sprecher stellt fest, dass Deutschland im europäischen Vergleich 'deutlich hinter den Standards anderer Länder' liegt, insbesondere im Hinblick auf die Bezahlung von Praktikanten.",
+        "vi": "Người nói thứ hai nhận định rằng Đức 'rõ ràng tụt hậu so với tiêu chuẩn của các nước khác' trong so sánh châu Âu, đặc biệt là về việc trả lương cho thực tập sinh.",
+        "key_evidence": "Deutschland liegt da im europäischen Vergleich leider deutlich hinter den Standards anderer Länder.",
+        "key_vocabulary": [
+          "schlussfolgert",
+          "Praktikumsvergütung",
+          "europäischen Vergleich",
+          "zurückliegen"
+        ]
+      }
+    },
+    {
+      "id": "Q7",
+      "gespraech": 4,
+      "type": "richtig_falsch",
+      "question": "Der erste Sprecher empfand die Arbeitsbelastung in den Start-ups als ausgewogen.",
+      "answer": "falsch",
+      "points": 1,
+      "explanation": {
+        "de": "Der erste Sprecher sagt, dass 'Fünfzig-Stunden-Wochen eher die Regel als die Ausnahme' waren, was einer ausgewogenen Work-Life-Balance widerspricht.",
+        "vi": "Người nói thứ nhất nói rằng 'tuần làm việc 50 giờ là quy tắc hơn là ngoại lệ', điều này mâu thuẫn với sự cân bằng giữa công việc và cuộc sống.",
+        "key_evidence": "Fünfzig-Stunden-Wochen waren eher die Regel als die Ausnahme.",
+        "key_vocabulary": [
+          "Arbeitsbelastung",
+          "ausgewogen",
+          "Work-Life-Balance"
+        ]
+      }
+    },
+    {
+      "id": "Q8",
+      "gespraech": 4,
+      "type": "mc_abc",
+      "question": "Wie bewertet der zweite Sprecher die Praktika des ersten Sprechers abschließend?",
+      "options": {
+        "a": "Die geringe Bezahlung machte die Praktika unattraktiv.",
+        "b": "Trotz der Nachteile waren die Praktika aufgrund der Erfahrungen und Kontakte wertvoll.",
+        "c": "Die lange Arbeitszeit war der größte Nachteil und nicht zu rechtfertigen."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Der zweite Sprecher fasst zusammen, dass die 'Kontakte und die Erfahrung das Geld und die lange Arbeitszeit wert' waren, was bedeutet, dass die Vorteile die Nachteile überwogen.",
+        "vi": "Người nói thứ hai tóm tắt rằng 'các mối quan hệ và kinh nghiệm đáng giá tiền bạc và thời gian làm việc dài', có nghĩa là lợi ích đã vượt trội hơn nhược điểm.",
+        "key_evidence": "Aber die Kontakte und die Erfahrung waren das Geld und die lange Arbeitszeit wert.",
+        "key_vocabulary": [
+          "bewertet",
+          "abschließend",
+          "Nachteile",
+          "wertvoll",
+          "Kontakte"
+        ]
+      }
+    },
+    {
+      "id": "Q9",
+      "gespraech": 5,
+      "type": "richtig_falsch",
+      "question": "Der erste Sprecher legt Wert auf sofortige finanzielle Einnahmen, um seine Ausgaben zu decken.",
+      "answer": "richtig",
+      "points": 1,
+      "explanation": {
+        "de": "Der erste Sprecher erklärt, dass er das Geld 'dringend für seine Miete und Lebenshaltungskosten' braucht, was seinen Fokus auf sofortige finanzielle Einnahmen zeigt.",
+        "vi": "Người nói thứ nhất giải thích rằng anh ấy 'cần tiền gấp để trả tiền thuê nhà và chi phí sinh hoạt', điều này cho thấy sự tập trung của anh ấy vào thu nhập tài chính ngay lập tức.",
+        "key_evidence": "Das stimmt, aber ich brauche das Geld dringend für meine Miete und Lebenshaltungskosten.",
+        "key_vocabulary": [
+          "finanzielle Einnahmen",
+          "Ausgaben decken",
+          "dringend"
+        ]
+      }
+    },
+    {
+      "id": "Q10",
+      "gespraech": 5,
+      "type": "mc_abc",
+      "question": "Welchen Rat gibt der zweite Sprecher dem ersten Sprecher bezüglich der vorlesungsfreien Zeit?",
+      "options": {
+        "a": "Er sollte unbedingt einen Kellnerjob annehmen, um schnell Geld zu verdienen.",
+        "b": "Er sollte versuchen, ein fachbezogenes Praktikum zu finden, das langfristig mehr Vorteile bringt.",
+        "c": "Er sollte die vorlesungsfreie Zeit ausschließlich zur Erholung nutzen."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Der zweite Sprecher rät, dass sich 'langfristig ein fachbezogenes Praktikum mehr' lohnt, auch wenn der kurzfristige Verdienst geringer ist. Er schlägt auch ein bezahltes Praktikum vor.",
+        "vi": "Người nói thứ hai khuyên rằng 'về lâu dài, một kỳ thực tập chuyên ngành sẽ có lợi hơn', ngay cả khi thu nhập ngắn hạn thấp hơn. Anh ấy cũng đề xuất một kỳ thực tập có lương.",
+        "key_evidence": "Langfristig lohnt sich ein fachbezogenes Praktikum mehr, auch wenn du kurzfristig weniger verdienst. Oder du suchst ein bezahltes Praktikum.",
+        "key_vocabulary": [
+          "Rat",
+          "vorlesungsfreie Zeit",
+          "fachbezogenes Praktikum",
+          "langfristig",
+          "Vorteile"
+        ]
       }
     }
   ],

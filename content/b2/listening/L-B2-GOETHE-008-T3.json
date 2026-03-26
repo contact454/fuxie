@@ -16,69 +16,116 @@
   "questions": [
     {
       "id": "Q1",
-      "gespraech": 1,
+      "item": 1,
       "type": "mc_abc",
-      "question": "Welches Thema wird besprochen (Gespräch 1)?",
+      "question": "Wer sagt das: 'Standardisierte Prüfungen messen Auswendiglernen, nicht echtes Verständnis'?",
       "options": {
-        "a": "Arbeit und Beruf",
-        "b": "Bildung und Schule",
-        "c": "Reisen und Verkehr"
+        "a": "Moderator",
+        "b": "Herr Vogel",
+        "c": "Frau Dr. Stern"
       },
-      "answer": "a",
+      "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Man hört: \"Arbeit und Beruf\".",
-        "vi": "Đoạn hội thoại 1 nói về chủ đề gì?",
-        "key_evidence": "Arbeit und Beruf",
+        "de": "Herr Vogel äußert diese kritische Meinung über standardisierte Prüfungen.",
+        "vi": "Ông Vogel bày tỏ quan điểm phê phán này về các kỳ thi tiêu chuẩn hóa.",
+        "key_evidence": "Standardisierte Prüfungen messen Auswendiglernen, nicht echtes Verständnis.",
         "key_vocabulary": []
       }
     },
     {
       "id": "Q2",
-      "gespraech": 1,
+      "item": 2,
       "type": "mc_abc",
-      "question": "Wie heißt eine Person im Gespräch 1?",
+      "question": "Wer sagt das: 'Ohne Prüfungen gibt es aber keinen objektiven Maßstab für Leistung und Kompetenz'?",
       "options": {
-        "a": "Vogel",
-        "b": "Julia",
-        "c": "Markus"
+        "a": "Moderator",
+        "b": "Herr Vogel",
+        "c": "Frau Dr. Stern"
       },
-      "answer": "a",
+      "answer": "c",
       "points": 1,
       "explanation": {
-        "de": "Man hört: \"Vogel\".",
-        "vi": "Một người trong đoạn 1 tên là gì?",
-        "key_evidence": "Vogel",
-        "key_vocabulary": [
-          {
-            "word": "heißen",
-            "meaning": "to be called"
-          }
-        ]
+        "de": "Frau Dr. Stern argumentiert, dass Prüfungen für die objektive Bewertung von Leistung und Kompetenz notwendig sind.",
+        "vi": "Bà Dr. Stern lập luận rằng các kỳ thi là cần thiết để đánh giá khách quan năng lực và hiệu suất.",
+        "key_evidence": "Ohne Prüfungen gibt es aber keinen objektiven Maßstab für Leistung und Kompetenz.",
+        "key_vocabulary": []
       }
     },
     {
       "id": "Q3",
-      "gespraech": 1,
+      "item": 3,
       "type": "mc_abc",
-      "question": "Wie heißt eine Person (Gespräch 1)?",
+      "question": "Wer sagt das: 'Objektivität nützt nichts, wenn wir das Falsche messen'?",
       "options": {
-        "a": "Würzburg",
-        "b": "Potsdam",
-        "c": "Mannheim"
+        "a": "Moderator",
+        "b": "Herr Vogel",
+        "c": "Frau Dr. Stern"
       },
       "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man den Namen \"Vogel\".",
-        "vi": "Một người trong đoạn 1 tên là gì?",
-        "key_evidence": "Vogel",
-        "key_vocabulary": [
-          {
-            "word": "heißen",
-            "meaning": "to be called"
-          }
-        ]
+        "de": "Der Moderator stellt die Frage nach dem Sinn von Objektivität, wenn die Messkriterien falsch sind.",
+        "vi": "Người điều hành đặt câu hỏi về ý nghĩa của tính khách quan nếu các tiêu chí đo lường không đúng.",
+        "key_evidence": "Objektivität nützt nichts, wenn wir das Falsche messen.",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q4",
+      "item": 4,
+      "type": "mc_abc",
+      "question": "Wer sagt das: 'Das bestreite ich nicht. Aber die Art, wie wir diese Grundlagen prüfen, muss sich ändern'?",
+      "options": {
+        "a": "Moderator",
+        "b": "Herr Vogel",
+        "c": "Frau Dr. Stern"
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Herr Vogel stimmt der Notwendigkeit von Grundlagenkenntnissen zu, betont aber die Notwendigkeit einer Veränderung der Prüfungsformen.",
+        "vi": "Ông Vogel đồng ý về sự cần thiết của kiến thức nền tảng, nhưng nhấn mạnh sự cần thiết phải thay đổi hình thức thi.",
+        "key_evidence": "Das bestreite ich nicht. Aber die Art, wie wir diese Grundlagen prüfen, muss sich ändern.",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q5",
+      "item": 5,
+      "type": "mc_abc",
+      "question": "Wer sagt das: 'Wenn ein Arzt erst im Lehrbuch nachschlagen muss, welche Dosis er verschreiben soll, ist das problematisch'?",
+      "options": {
+        "a": "Moderator",
+        "b": "Herr Vogel",
+        "c": "Frau Dr. Stern"
+      },
+      "answer": "c",
+      "points": 1,
+      "explanation": {
+        "de": "Frau Dr. Stern nennt dieses Beispiel, um die Wichtigkeit von abrufbarem Faktenwissen in bestimmten Berufsfeldern zu unterstreichen.",
+        "vi": "Bà Dr. Stern đưa ra ví dụ này để nhấn mạnh tầm quan trọng của kiến thức thực tế có thể truy cập được trong một số lĩnh vực nghề nghiệp nhất định.",
+        "key_evidence": "Wenn ein Arzt erst im Lehrbuch nachschlagen muss, welche Dosis er verschreiben soll, ist das problematisch.",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q6",
+      "item": 6,
+      "type": "mc_abc",
+      "question": "Wer sagt das: 'Das verändert die Rolle der Universität fundamental, von der Wissensvermittlung zur Urteilsbildung'?",
+      "options": {
+        "a": "Moderator",
+        "b": "Herr Vogel",
+        "c": "Frau Dr. Stern"
+      },
+      "answer": "a",
+      "points": 1,
+      "explanation": {
+        "de": "Der Moderator fasst zusammen, wie die Nutzung von KI die Funktion der Universität beeinflussen wird.",
+        "vi": "Người điều hành tóm tắt cách việc sử dụng AI sẽ ảnh hưởng đến chức năng của trường đại học.",
+        "key_evidence": "Das verändert die Rolle der Universität fundamental, von der Wissensvermittlung zur Urteilsbildung.",
+        "key_vocabulary": []
       }
     }
   ],

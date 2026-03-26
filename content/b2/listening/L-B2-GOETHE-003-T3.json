@@ -16,68 +16,140 @@
   "questions": [
     {
       "id": "Q1",
-      "gespraech": 1,
+      "item": 1,
       "type": "mc_abc",
-      "question": "Welches Thema wird besprochen (Gespräch 1)?",
+      "question": "Wer sagt das: 'Homeoffice macht mich produktiver und zufriedener als jede Büroumgebung'?",
       "options": {
-        "a": "Arbeit und Beruf",
-        "b": "Technik und Digitalisierung",
-        "c": "Wohnung und Haushalt"
+        "a": "Moderator",
+        "b": "Frau Berg",
+        "c": "Herr Kraus"
       },
-      "answer": "a",
+      "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Man hört: \"Arbeit und Beruf\".",
-        "vi": "Đoạn hội thoại 1 nói về chủ đề gì?",
-        "key_evidence": "Arbeit und Beruf",
-        "key_vocabulary": []
+        "de": "Frau Berg (Gast_A) äußert diese klare Präferenz für das Homeoffice gleich zu Beginn der Diskussion.",
+        "vi": "Bà Berg (Khách mời A) bày tỏ sự ưu tiên rõ ràng này đối với Homeoffice ngay từ đầu cuộc thảo luận.",
+        "key_evidence": "Für mich ist klar: Homeoffice macht mich produktiver und zufriedener als jede Büroumgebung.",
+        "key_vocabulary": [
+          "produktiv",
+          "zufrieden",
+          "Büroumgebung"
+        ]
       }
     },
     {
       "id": "Q2",
-      "gespraech": 1,
+      "item": 2,
       "type": "mc_abc",
-      "question": "Wie heißt eine Person im Gespräch 1?",
+      "question": "Wer sagt das: 'Für Teamarbeit und Innovation braucht man das Büro'?",
       "options": {
-        "a": "Michael",
-        "b": "Julia",
-        "c": "Berg"
+        "a": "Moderator",
+        "b": "Frau Berg",
+        "c": "Herr Kraus"
       },
       "answer": "c",
       "points": 1,
       "explanation": {
-        "de": "Man hört: \"Berg\".",
-        "vi": "Một người trong đoạn 1 tên là gì?",
-        "key_evidence": "Berg",
+        "de": "Herr Kraus (Gast_B) widerspricht der Aussage von Frau Berg und betont die Notwendigkeit des Büros für Teamarbeit und Innovation.",
+        "vi": "Ông Kraus (Khách mời B) phản bác ý kiến của bà Berg và nhấn mạnh sự cần thiết của văn phòng đối với làm việc nhóm và đổi mới.",
+        "key_evidence": "Das mag für Sie persönlich stimmen, aber für Teamarbeit und Innovation braucht man das Büro.",
         "key_vocabulary": [
-          {
-            "word": "heißen",
-            "meaning": "to be called"
-          }
+          "Teamarbeit",
+          "Innovation",
+          "brauchen"
         ]
       }
     },
     {
       "id": "Q3",
-      "gespraech": 1,
+      "item": 3,
       "type": "mc_abc",
-      "question": "Wie heißt eine Person (Gespräch 1)?",
+      "question": "Wer sagt das: 'Den informellen Austausch überschätzen viele. Die meisten Gespräche am Kaffeeautomaten sind Small Talk'?",
       "options": {
-        "a": "Würzburg",
-        "b": "Chile",
-        "c": "Genf"
+        "a": "Moderator",
+        "b": "Frau Berg",
+        "c": "Herr Kraus"
       },
       "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man den Namen \"Berg\".",
-        "vi": "Một người trong đoạn 1 tên là gì?",
-        "key_evidence": "Berg",
+        "de": "Der Moderator relativiert die Bedeutung des informellen Austauschs, den Herr Kraus zuvor als wertvoll bezeichnet hatte.",
+        "vi": "Người điều hành làm giảm nhẹ tầm quan trọng của việc trao đổi không chính thức, điều mà ông Kraus trước đó đã gọi là có giá trị.",
+        "key_evidence": "Den informellen Austausch überschätzen viele. Die meisten Gespräche am Kaffeeautomaten sind Small Talk.",
         "key_vocabulary": [
-          {
-            "word": "heißen",
-            "meaning": "to be called"
-          }
+          "informeller Austausch",
+          "überschätzen",
+          "Small Talk"
+        ]
+      }
+    },
+    {
+      "id": "Q4",
+      "item": 4,
+      "type": "mc_abc",
+      "question": "Wer sagt das: 'Hybrides Arbeiten ist der beste Kompromiss: drei Tage Büro, zwei Tage Homeoffice'?",
+      "options": {
+        "a": "Moderator",
+        "b": "Frau Berg",
+        "c": "Herr Kraus"
+      },
+      "answer": "c",
+      "points": 1,
+      "explanation": {
+        "de": "Herr Kraus (Gast_B) schlägt hybrides Arbeiten als optimalen Mittelweg vor, basierend auf seinen Erfahrungen als Teamleiter.",
+        "vi": "Ông Kraus (Khách mời B) đề xuất làm việc kết hợp là giải pháp tối ưu, dựa trên kinh nghiệm của ông với tư cách là trưởng nhóm.",
+        "key_evidence": "Hybrides Arbeiten ist der beste Kompromiss: drei Tage Büro, zwei Tage Homeoffice.",
+        "key_vocabulary": [
+          "Hybrides Arbeiten",
+          "Kompromiss"
+        ]
+      }
+    },
+    {
+      "id": "Q5",
+      "item": 5,
+      "type": "mc_abc",
+      "question": "Wer sagt das: 'Studien zeigen allerdings, dass Remote-Teams genauso kreativ sein können wie Präsenzteams'?",
+      "options": {
+        "a": "Moderator",
+        "b": "Frau Berg",
+        "c": "Herr Kraus"
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Frau Berg (Gast_A) untermauert ihre Argumentation für Remote-Arbeit mit Verweisen auf Studien zur Kreativität von Teams.",
+        "vi": "Bà Berg (Khách mời A) củng cố lập luận của mình về làm việc từ xa bằng cách tham khảo các nghiên cứu về sự sáng tạo của các nhóm.",
+        "key_evidence": "Studien zeigen allerdings, dass Remote-Teams genauso kreativ sein können wie Präsenzteams.",
+        "key_vocabulary": [
+          "Studien",
+          "Remote-Teams",
+          "Präsenzteams",
+          "kreativ"
+        ]
+      }
+    },
+    {
+      "id": "Q6",
+      "item": 6,
+      "type": "mc_abc",
+      "question": "Wer sagt das: 'Im Homeoffice verschwimmen die Grenzen zwischen Arbeit und Freizeit. Das kann zu Burnout führen'?",
+      "options": {
+        "a": "Moderator",
+        "b": "Frau Berg",
+        "c": "Herr Kraus"
+      },
+      "answer": "a",
+      "points": 1,
+      "explanation": {
+        "de": "Der Moderator spricht einen wichtigen Aspekt der psychischen Gesundheit an und warnt vor den Risiken des Homeoffice, wenn die Grenzen nicht klar sind.",
+        "vi": "Người điều hành đề cập đến một khía cạnh quan trọng của sức khỏe tâm thần và cảnh báo về những rủi ro của Homeoffice nếu ranh giới không rõ ràng.",
+        "key_evidence": "Im Homeoffice verschwimmen die Grenzen zwischen Arbeit und Freizeit. Das kann zu Burnout führen.",
+        "key_vocabulary": [
+          "verschwimmen",
+          "Grenzen",
+          "Freizeit",
+          "Burnout"
         ]
       }
     }

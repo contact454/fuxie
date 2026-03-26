@@ -16,93 +16,116 @@
   "questions": [
     {
       "id": "Q1",
-      "gespraech": 1,
+      "item": 1,
       "type": "mc_abc",
-      "question": "Welches Thema wird besprochen (Gespräch 1)?",
+      "question": "Wer sagt das: \"Die Anonymität des Bargeldes ist essenziell, da man nicht möchte, dass jede einzelne Transaktion erfasst wird\"?",
       "options": {
-        "a": "Einkaufen und Geld",
-        "b": "Familie und Freunde",
-        "c": "Reisen und Verkehr"
+        "a": "Moderator",
+        "b": "Frau Neumann",
+        "c": "Herr Braun"
       },
-      "answer": "a",
+      "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Man hört: \"Einkaufen und Geld\".",
-        "vi": "Đoạn hội thoại 1 nói về chủ đề gì?",
-        "key_evidence": "Einkaufen und Geld",
+        "de": "Frau Neumann äußert ihre Sorge, dass ohne Bargeld jede Transaktion dokumentiert würde, was sie ablehnt.",
+        "vi": "Bà Neumann bày tỏ lo ngại rằng nếu không có tiền mặt, mọi giao dịch sẽ bị ghi lại, điều mà bà phản đối.",
+        "key_evidence": "Weil Bargeld Anonymität garantiert. Ich möchte nicht, dass jede Transaktion dokumentiert wird.",
         "key_vocabulary": []
       }
     },
     {
       "id": "Q2",
-      "gespraech": 1,
+      "item": 2,
       "type": "mc_abc",
-      "question": "Wie heißt eine Person im Gespräch 1?",
+      "question": "Wer sagt das: \"Personen ohne etwas zu verbergen benötigen keine Anonymität, da Bargeld hauptsächlich von Kriminellen für unerlaubte Aktivitäten genutzt wird\"?",
       "options": {
-        "a": "Klaus",
-        "b": "Neumann",
-        "c": "Laura"
-      },
-      "answer": "b",
-      "points": 1,
-      "explanation": {
-        "de": "Man hört: \"Neumann\".",
-        "vi": "Một người trong đoạn 1 tên là gì?",
-        "key_evidence": "Neumann",
-        "key_vocabulary": [
-          {
-            "word": "heißen",
-            "meaning": "to be called"
-          }
-        ]
-      }
-    },
-    {
-      "id": "Q3",
-      "gespraech": 1,
-      "type": "mc_abc",
-      "question": "Wie heißt eine Person (Gespräch 1)?",
-      "options": {
-        "a": "Peru",
-        "b": "Halle",
-        "c": "Chemnitz"
-      },
-      "answer": "a",
-      "points": 1,
-      "explanation": {
-        "de": "Im Gespräch hört man den Namen \"Neumann\".",
-        "vi": "Một người trong đoạn 1 tên là gì?",
-        "key_evidence": "Neumann",
-        "key_vocabulary": [
-          {
-            "word": "heißen",
-            "meaning": "to be called"
-          }
-        ]
-      }
-    },
-    {
-      "id": "Q4",
-      "gespraech": 1,
-      "type": "mc_abc",
-      "question": "Was macht die Person beruflich (Gespräch 1)?",
-      "options": {
-        "a": "Sekretärin",
-        "b": "Student",
-        "c": "Zahlungsmittel"
+        "a": "Moderator",
+        "b": "Frau Neumann",
+        "c": "Herr Braun"
       },
       "answer": "c",
       "points": 1,
       "explanation": {
-        "de": "Man hört: \"Zahlungsmittel\".",
-        "vi": "Người đó làm nghề gì (đoạn 1)?",
-        "key_evidence": "Zahlungsmittel",
-        "key_vocabulary": [
-          {
-            "word": "Zahlungsmittel",
-            "meaning": "Zahlungsmittel"
-          }
-        ]
+        "de": "Herr Braun argumentiert, dass Anonymität für ehrliche Bürger unnötig sei und Bargeld von Kriminellen missbraucht werde.",
+        "vi": "Ông Braun lập luận rằng những người trung thực không cần ẩn danh và tiền mặt bị tội phạm lạm dụng.",
+        "key_evidence": "Wer nichts zu verbergen hat, braucht keine Anonymität. Kriminelle nutzen Bargeld für illegale Geschäfte.",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q3",
+      "item": 3,
+      "type": "mc_abc",
+      "question": "Wer sagt das: \"Das Argument ist bedenklich, denn Privatsphäre ist ein Grundrecht und kein Anzeichen für Verdacht\"?",
+      "options": {
+        "a": "Moderator",
+        "b": "Frau Neumann",
+        "c": "Herr Braun"
+      },
+      "answer": "a",
+      "points": 1,
+      "explanation": {
+        "de": "Der Moderator korrigiert Herrn Braun und betont, dass Privatsphäre ein Grundrecht ist und nicht als Verdachtsgrund dienen sollte.",
+        "vi": "Người điều hành chỉnh sửa ông Braun và nhấn mạnh rằng quyền riêng tư là một quyền cơ bản và không nên bị coi là dấu hiệu của sự nghi ngờ.",
+        "key_evidence": "Das ist ein gefährliches Argument, Herr Braun. Privatsphäre ist ein Grundrecht, kein Verdachtsmoment.",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q4",
+      "item": 4,
+      "type": "mc_abc",
+      "question": "Wer sagt das: \"Die Abschaffung von Bargeld würde ältere und digital unerfahrene Menschen von der Teilnahme am Zahlungsverkehr ausschließen\"?",
+      "options": {
+        "a": "Moderator",
+        "b": "Frau Neumann",
+        "c": "Herr Braun"
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Frau Neumann weist darauf hin, dass die Abschaffung von Bargeld soziale Ausgrenzung für bestimmte Gruppen bedeuten würde.",
+        "vi": "Bà Neumann chỉ ra rằng việc loại bỏ tiền mặt sẽ dẫn đến sự loại trừ xã hội đối với một số nhóm người.",
+        "key_evidence": "Aber die Abschaffung von Bargeld würde auch ältere und digital weniger versierte Menschen ausschließen.",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q5",
+      "item": 5,
+      "type": "mc_abc",
+      "question": "Wer sagt das: \"Obwohl die Idee theoretisch ansprechend ist, beweist die Praxis, dass digitale Inklusion nicht selbstverständlich ist\"?",
+      "options": {
+        "a": "Moderator",
+        "b": "Frau Neumann",
+        "c": "Herr Braun"
+      },
+      "answer": "c",
+      "points": 1,
+      "explanation": {
+        "de": "Herr Braun äußert Skepsis gegenüber der einfachen Umsetzbarkeit digitaler Inklusion, trotz guter theoretischer Ansätze.",
+        "vi": "Ông Braun bày tỏ sự hoài nghi về tính khả thi của việc hòa nhập kỹ thuật số, mặc dù các cách tiếp cận lý thuyết có vẻ tốt.",
+        "key_evidence": "Das klingt gut in der Theorie, aber die Realität zeigt, dass digitale Teilhabe keine Selbstverständlichkeit ist.",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q6",
+      "item": 6,
+      "type": "mc_abc",
+      "question": "Wer sagt das: \"Versprechen von politischen Akteuren und der Zentralbank sind nicht gleichbedeutend mit rechtlich bindenden Garantien\"?",
+      "options": {
+        "a": "Moderator",
+        "b": "Frau Neumann",
+        "c": "Herr Braun"
+      },
+      "answer": "a",
+      "points": 1,
+      "explanation": {
+        "de": "Der Moderator hebt hervor, dass bloße Zusicherungen keine rechtliche Verbindlichkeit haben.",
+        "vi": "Người điều hành nhấn mạnh rằng những lời hứa đơn thuần không có giá trị pháp lý ràng buộc.",
+        "key_evidence": "Zusicherungen der Politik und der Zentralbank sind nicht dasselbe wie gesetzliche Garantien.",
+        "key_vocabulary": []
       }
     }
   ],

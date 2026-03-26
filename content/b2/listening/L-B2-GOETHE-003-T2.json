@@ -18,23 +18,23 @@
       "id": "Q1",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Wie heißt eine Person im Gespräch 1?",
+      "question": "Was impliziert die Moderatorin, wenn sie die menschliche Aufmerksamkeitsspanne mit der eines Goldfisches vergleicht?",
       "options": {
-        "a": "Julia",
-        "b": "Felix",
-        "c": "Maria"
+        "a": "Sie ist erstaunt über die lange Aufmerksamkeitsspanne von Goldfischen.",
+        "b": "Sie hält die gegenwärtige menschliche Konzentrationsfähigkeit für besorgniserregend niedrig.",
+        "c": "Sie möchte wissen, ob Goldfische auch unter digitalen Ablenkungen leiden."
       },
       "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Man hört: \"Felix\".",
-        "vi": "Một người trong đoạn 1 tên là gì?",
-        "key_evidence": "Felix",
+        "de": "Die Moderatorin drückt ihre Überraschung und Besorgnis über die kurze Aufmerksamkeitsspanne aus, indem sie sie als 'weniger als die eines Goldfisches' bezeichnet, was auf einen alarmierenden Zustand hindeutet.",
+        "vi": "Người dẫn chương trình bày tỏ sự ngạc nhiên và lo ngại về khoảng thời gian chú ý ngắn ngủi, bằng cách gọi nó là 'ít hơn cả cá vàng', điều này cho thấy một tình trạng đáng báo động.",
+        "key_evidence": "Acht Sekunden! Das ist weniger als die eines Goldfisches.",
         "key_vocabulary": [
-          {
-            "word": "heißen",
-            "meaning": "to be called"
-          }
+          "implizieren",
+          "Aufmerksamkeitsspanne",
+          "besorgniserregend",
+          "niedrig"
         ]
       }
     },
@@ -42,23 +42,23 @@
       "id": "Q2",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Wie heißt eine Person (Gespräch 1)?",
+      "question": "Was ist laut Dr. Winter der Hauptgrund für die Abnahme der menschlichen Aufmerksamkeitsspanne?",
       "options": {
-        "a": "Dortmund",
-        "b": "Peru",
-        "c": "Wuppertal"
+        "a": "Die Menschen nutzen ihre Smartphones zu selten für kognitive Aufgaben.",
+        "b": "Das Gehirn hat sich an eine ständige Flut von Informationen und Impulsen angepasst.",
+        "c": "Es gibt zu viele esoterische Methoden, die die Konzentration nicht wirklich verbessern."
       },
-      "answer": "c",
+      "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man den Namen \"Dr\".",
-        "vi": "Một người trong đoạn 1 tên là gì?",
-        "key_evidence": "Dr",
+        "de": "Dr. Winter erklärt, dass das Gehirn sich an die konstanten Reize wie Benachrichtigungen und soziale Medien gewöhnt hat, was zur Verkürzung der Aufmerksamkeitsspanne führt.",
+        "vi": "Tiến sĩ Winter giải thích rằng não bộ đã quen với các kích thích liên tục như thông báo và mạng xã hội, dẫn đến việc giảm khả năng tập trung.",
+        "key_evidence": "Unser Gehirn hat sich an ständige Reize gewöhnt. Notifications, Social Media, News im Sekundentakt.",
         "key_vocabulary": [
-          {
-            "word": "heißen",
-            "meaning": "to be called"
-          }
+          "Abnahme",
+          "Reize",
+          "angepasst",
+          "Impulse"
         ]
       }
     },
@@ -66,19 +66,97 @@
       "id": "Q3",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Welches Thema wird besprochen (Gespräch 1)?",
+      "question": "Welche Einstellung vertritt der Experte bezüglich der Möglichkeit, die Konzentrationsfähigkeit wieder zu verbessern?",
       "options": {
-        "a": "Arbeit und Beruf",
-        "b": "Einkaufen und Geld",
-        "c": "Wohnung und Haushalt"
+        "a": "Er ist skeptisch, da der Prozess der Verschlechterung irreversibel ist.",
+        "b": "Er ist optimistisch und betont die Trainierbarkeit des Gehirns.",
+        "c": "Er glaubt, dass nur Meditation eine wirkliche Verbesserung bewirken kann."
       },
-      "answer": "a",
+      "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Man hört: \"Arbeit und Beruf\".",
-        "vi": "Đoạn hội thoại 1 nói về chủ đề gì?",
-        "key_evidence": "Arbeit und Beruf",
-        "key_vocabulary": []
+        "de": "Der Experte äußert sich positiv und betont die Plastizität des Gehirns, was bedeutet, dass die Konzentration durch Training deutlich verbessert werden kann.",
+        "vi": "Chuyên gia bày tỏ sự tích cực và nhấn mạnh tính dẻo của não bộ, có nghĩa là khả năng tập trung có thể được cải thiện đáng kể thông qua luyện tập.",
+        "key_evidence": "Die gute Nachricht: Das Gehirn ist plastisch. Mit dem richtigen Training kann man die Konzentration deutlich verbessern.",
+        "key_vocabulary": [
+          "Einstellung",
+          "vertreten",
+          "optimistisch",
+          "Trainierbarkeit"
+        ]
+      }
+    },
+    {
+      "id": "Q4",
+      "gespraech": 1,
+      "type": "mc_abc",
+      "question": "Was ist die zentrale Erkenntnis des Experten über Multitasking?",
+      "options": {
+        "a": "Es ist eine effektive Methode, um viele Aufgaben gleichzeitig zu erledigen.",
+        "b": "Es führt zu einem Verlust von Energie und einer höheren Fehlerquote.",
+        "c": "Es ist nur für kognitiv anspruchsvolle Aufgaben ungeeignet."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Der Experte erklärt, dass Multitasking lediglich ein schnelles Hin-und-Herwechseln ist, das Energie kostet und zu mehr Fehlern führt als fokussierte Arbeit.",
+        "vi": "Chuyên gia giải thích rằng đa nhiệm chỉ là việc chuyển đổi nhanh chóng giữa các nhiệm vụ, điều này tiêu tốn năng lượng và dẫn đến nhiều lỗi hơn so với làm việc tập trung.",
+        "key_evidence": "Was wir Multitasking nennen, ist in Wirklichkeit schnelles Hin-und-Herwechseln zwischen Aufgaben. Und bei jedem Wechsel verlieren wir Energie und machen mehr Fehler als bei fokussierter Arbeit.",
+        "key_vocabulary": [
+          "Erkenntnis",
+          "Multitasking",
+          "Fehlerquote",
+          "fokussiert"
+        ]
+      }
+    },
+    {
+      "id": "Q5",
+      "gespraech": 1,
+      "type": "mc_abc",
+      "question": "Was möchte Dr. Winter Arbeitgebern hauptsächlich vermitteln, um die Konzentration ihrer Mitarbeiter zu fördern?",
+      "options": {
+        "a": "Sie sollten ihre Mitarbeiter dazu anhalten, mehr Stunden im Büro zu verbringen.",
+        "b": "Sie sollten eine Arbeitsumgebung schaffen, die ungestörtes, tiefes Arbeiten ermöglicht.",
+        "c": "Sie sollten regelmäßige Meditationskurse für ihre Angestellten anbieten."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Dr. Winter rät Arbeitgebern, weniger Meetings und E-Mails zu haben und stattdessen mehr ungestörte Arbeitszeit für tiefgreifende Aufgaben zu ermöglichen, um die Konzentration zu fördern.",
+        "vi": "Tiến sĩ Winter khuyên các nhà tuyển dụng nên giảm bớt các cuộc họp và email, thay vào đó tạo điều kiện cho thời gian làm việc không bị gián đoạn cho các nhiệm vụ chuyên sâu, nhằm thúc đẩy sự tập trung.",
+        "key_evidence": "Weniger Meetings, weniger E-Mails und mehr ungestörte Arbeitszeit für tiefgreifende Aufgaben.",
+        "key_vocabulary": [
+          "vermitteln",
+          "fördern",
+          "Arbeitsumgebung",
+          "ungestört"
+        ]
+      }
+    },
+    {
+      "id": "Q6",
+      "gespraech": 1,
+      "type": "mc_abc",
+      "question": "Wie beurteilt die Moderatorin die Aussage des Experten, dass drei bis vier Stunden 'Deep Work' pro Tag realistisch sind?",
+      "options": {
+        "a": "Sie findet die Dauer zu kurz und für die meisten Berufe unzureichend.",
+        "b": "Sie ist überrascht von der geringen Stundenzahl, erkennt aber deren Potenzial bei hoher Produktivität an.",
+        "c": "Sie ist der Meinung, dass 'Deep Work' nur für wenige Experten überhaupt umsetzbar ist."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Die Moderatorin äußert sich überrascht über die geringe Stundenzahl, schlussfolgert aber, dass diese ausreichen könnte, wenn die Arbeit hochproduktiv ist.",
+        "vi": "Người dẫn chương trình bày tỏ sự ngạc nhiên về số giờ ít ỏi, nhưng kết luận rằng điều này có thể đủ nếu công việc đạt năng suất cao.",
+        "key_evidence": "Das überrascht mich. Aber wenn diese Stunden hochproduktiv sind, ist das vielleicht genug.",
+        "key_vocabulary": [
+          "beurteilen",
+          "realistisch",
+          "überrascht",
+          "Potenzial",
+          "Produktivität"
+        ]
       }
     }
   ],
