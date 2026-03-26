@@ -16,15 +16,57 @@
   "questions": [
     {
       "id": "Q1",
-      "item": 1,
+      "gespraech": 1,
       "type": "richtig_falsch",
-      "statement": "Es geht um eine Reise.",
+      "question": "Die Haltestelle Marktplatz wird heute nicht angefahren.",
+      "answer": "richtig",
+      "points": 1,
+      "explanation": {
+        "de": "Der Ansager sagt: 'Die Haltestelle Marktplatz wird nicht angefahren.'",
+        "vi": "Người thông báo nói: 'Trạm dừng Marktplatz sẽ không được phục vụ.'",
+        "key_evidence": "Die Haltestelle Marktplatz wird nicht angefahren.",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q2",
+      "gespraech": 2,
+      "type": "richtig_falsch",
+      "question": "Die Ersatzbusse zum Flughafen fahren alle zwanzig Minuten.",
       "answer": "falsch",
       "points": 1,
       "explanation": {
-        "de": "Falsch. Die Aussage stimmt nicht mit dem Hörtext überein.",
-        "vi": "Sai.",
-        "key_evidence": "Es geht um eine Reise.",
+        "de": "Der Ansager sagt: 'Die Busse fahren alle zehn Minuten.'",
+        "vi": "Người thông báo nói: 'Các xe buýt chạy mỗi mười phút.'",
+        "key_evidence": "Die Busse fahren alle zehn Minuten.",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q3",
+      "gespraech": 3,
+      "type": "richtig_falsch",
+      "question": "Man kann mit dem Auto in die Parkstraße fahren.",
+      "answer": "falsch",
+      "points": 1,
+      "explanation": {
+        "de": "Der Ansager sagt: 'Die Parkstraße und die Marktstraße sind für Autos gesperrt.'",
+        "vi": "Người thông báo nói: 'Đường Parkstraße và Marktstraße bị cấm cho ô tô.'",
+        "key_evidence": "Die Parkstraße und die Marktstraße sind für Autos gesperrt.",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q4",
+      "gespraech": 4,
+      "type": "richtig_falsch",
+      "question": "Der neue Eingang zum Museum ist in der Kirchstraße.",
+      "answer": "falsch",
+      "points": 1,
+      "explanation": {
+        "de": "Der Ansager sagt: 'Bitte gehen Sie nicht zum Haupteingang in der Kirchstraße. Benutzen Sie den Seiteneingang in der Parkstraße.'",
+        "vi": "Người thông báo nói: 'Xin đừng đi đến lối vào chính ở Kirchstraße. Hãy sử dụng lối vào phụ ở Parkstraße.'",
+        "key_evidence": "Bitte gehen Sie nicht zum Haupteingang in der Kirchstraße. Benutzen Sie den Seiteneingang in der Parkstraße.",
         "key_vocabulary": []
       }
     }

@@ -16,58 +16,78 @@
   "questions": [
     {
       "id": "Q1",
-      "item": 1,
+      "gespraech": 1,
       "type": "richtig_falsch",
-      "statement": "Es geht um ein Restaurant.",
-      "answer": "falsch",
+      "question": "Im Bürgerbüro braucht man einen Reisepass und einen Mietvertrag.",
+      "answer": "richtig",
       "points": 1,
       "explanation": {
-        "de": "Falsch. Die Aussage stimmt nicht mit dem Hörtext überein.",
-        "vi": "Sai.",
-        "key_evidence": "Es geht um ein Restaurant.",
-        "key_vocabulary": []
+        "de": "Der Ansager sagt: 'Bitte bringen Sie Ihren Reisepass und den Mietvertrag mit.'",
+        "vi": "Người thông báo nói: 'Vui lòng mang theo hộ chiếu và hợp đồng thuê nhà của bạn.'",
+        "key_evidence": "Bitte bringen Sie Ihren Reisepass und den Mietvertrag mit.",
+        "key_vocabulary": [
+          "Bürgerbüro",
+          "braucht",
+          "Reisepass",
+          "Mietvertrag"
+        ]
       }
     },
     {
       "id": "Q2",
-      "item": 2,
+      "gespraech": 2,
       "type": "richtig_falsch",
-      "statement": "Passfoto wird erwähnt.",
-      "answer": "richtig",
+      "question": "Das Anmeldeformular für den Integrationskurs muss man bis Samstag abgeben.",
+      "answer": "falsch",
       "points": 1,
       "explanation": {
-        "de": "Richtig. Die Aussage stimmt mit dem Hörtext überein.",
-        "vi": "Đúng.",
-        "key_evidence": "Passfoto wird erwähnt.",
-        "key_vocabulary": []
+        "de": "Der Ansager sagt: 'Bitte geben Sie Ihr Anmeldeformular bis Freitag um zwölf Uhr ab.'",
+        "vi": "Người thông báo nói: 'Vui lòng nộp mẫu đăng ký khóa học hòa nhập trước 12 giờ trưa thứ Sáu.'",
+        "key_evidence": "Bitte geben Sie Ihr Anmeldeformular bis Freitag um zwölf Uhr ab.",
+        "key_vocabulary": [
+          "Anmeldeformular",
+          "Integrationskurs",
+          "abgeben",
+          "Samstag"
+        ]
       }
     },
     {
       "id": "Q3",
-      "item": 3,
+      "gespraech": 3,
       "type": "richtig_falsch",
-      "statement": "Es geht um eine Reise.",
-      "answer": "falsch",
+      "question": "Die Kursteilnehmer sollen ihre Kontaktdaten am Infostand aktualisieren.",
+      "answer": "richtig",
       "points": 1,
       "explanation": {
-        "de": "Falsch. Die Aussage stimmt nicht mit dem Hörtext überein.",
-        "vi": "Sai.",
-        "key_evidence": "Es geht um eine Reise.",
-        "key_vocabulary": []
+        "de": "Der Ansager sagt: 'Füllen Sie bitte das Formular am Infostand aus.' und 'bitte aktualisieren Sie Ihre Kontaktdaten.'",
+        "vi": "Người thông báo nói: 'Vui lòng điền vào mẫu đơn tại quầy thông tin.' và 'vui lòng cập nhật thông tin liên hệ của bạn.'",
+        "key_evidence": "Füllen Sie bitte das Formular am Infostand aus.",
+        "key_vocabulary": [
+          "Kursteilnehmer",
+          "Kontaktdaten",
+          "Infostand",
+          "aktualisieren"
+        ]
       }
     },
     {
       "id": "Q4",
-      "item": 4,
+      "gespraech": 4,
       "type": "richtig_falsch",
-      "statement": "Es geht um Gesundheit.",
-      "answer": "richtig",
+      "question": "Die Ausländerbehörde ist jeden Tag bis achtzehn Uhr geöffnet.",
+      "answer": "falsch",
       "points": 1,
       "explanation": {
-        "de": "Richtig. Die Aussage stimmt mit dem Hörtext überein.",
-        "vi": "Đúng.",
-        "key_evidence": "Es geht um Gesundheit.",
-        "key_vocabulary": []
+        "de": "Der Ansager sagt: 'Montag bis Freitag von acht bis fünfzehn Uhr. Donnerstags haben wir verlängerte Öffnungszeiten bis achtzehn Uhr.' Nur donnerstags ist bis 18 Uhr geöffnet.",
+        "vi": "Người thông báo nói: 'Thứ Hai đến Thứ Sáu từ 8 giờ đến 15 giờ. Vào các ngày Thứ Năm, chúng tôi có giờ mở cửa kéo dài đến 18 giờ.' Chỉ vào Thứ Năm mới mở cửa đến 18 giờ.",
+        "key_evidence": "Montag bis Freitag von acht bis fünfzehn Uhr. Donnerstags haben wir verlängerte Öffnungszeiten bis achtzehn Uhr.",
+        "key_vocabulary": [
+          "Ausländerbehörde",
+          "jeden Tag",
+          "geöffnet",
+          "achtzehn Uhr"
+        ]
       }
     }
   ],

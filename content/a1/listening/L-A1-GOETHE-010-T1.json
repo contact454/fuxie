@@ -18,23 +18,21 @@
       "id": "Q1",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Wie heißt eine Person im Gespräch 1?",
+      "question": "Wie buchstabiert Yuki Tanaka ihren Nachnamen?",
       "options": {
-        "a": "Yuki",
-        "b": "Anna",
-        "c": "Hans"
+        "a": "Y-U-K-I",
+        "b": "T-A-N-A-K-A",
+        "c": "T-A-N-K-A"
       },
-      "answer": "a",
+      "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: \"Yuki\".",
-        "vi": "Một người trong đoạn 1 tên là gì?",
-        "key_evidence": "Yuki",
+        "de": "Yuki Tanaka sagt: 'und der Nachname: T-A-N-A-K-A.'",
+        "vi": "Yuki Tanaka nói: 'và họ: T-A-N-A-K-A.'",
+        "key_evidence": "und der Nachname: T-A-N-A-K-A.",
         "key_vocabulary": [
-          {
-            "word": "heißen",
-            "meaning": "to be called"
-          }
+          "Nachname",
+          "buchstabieren"
         ]
       }
     },
@@ -42,23 +40,21 @@
       "id": "Q2",
       "gespraech": 2,
       "type": "mc_abc",
-      "question": "Woher kommt die Person (Gespräch 2)?",
+      "question": "Wo wohnt der Mann?",
       "options": {
-        "a": "Berlin",
-        "b": "Köln",
-        "c": "Leipzig"
+        "a": "In der Gartenstraße 24.",
+        "b": "In Berlin, Postleitzahl 10170.",
+        "c": "In der Straße 0171."
       },
       "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: \"Berlin\".",
-        "vi": "Người đó đến từ đâu (đoạn 2)?",
-        "key_evidence": "Berlin",
+        "de": "Der Mann sagt: 'Ich wohne in der Gartenstraße vierundzwanzig, in Berlin.'",
+        "vi": "Người đàn ông nói: 'Tôi sống ở số 24 đường Gartenstraße, ở Berlin.'",
+        "key_evidence": "Ich wohne in der Gartenstraße vierundzwanzig, in Berlin.",
         "key_vocabulary": [
-          {
-            "word": "kommen aus",
-            "meaning": "to come from"
-          }
+          "wohnen",
+          "Straße"
         ]
       }
     },
@@ -66,76 +62,91 @@
       "id": "Q3",
       "gespraech": 3,
       "type": "mc_abc",
-      "question": "Welches Thema wird besprochen (Gespräch 3)?",
+      "question": "Wo ist die Frau geboren?",
       "options": {
-        "a": "Einkaufen und Geld",
-        "b": "Alltag",
-        "c": "Wohnung und Haushalt"
+        "a": "In Deutschland.",
+        "b": "In Tokio, Japan.",
+        "c": "Am dritten Mai."
       },
       "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: \"Alltag\".",
-        "vi": "Đoạn hội thoại 3 nói về chủ đề gì?",
-        "key_evidence": "Alltag",
-        "key_vocabulary": []
+        "de": "Die Frau sagt: 'In Tokio, Japan.'",
+        "vi": "Người phụ nữ nói: 'Ở Tokyo, Nhật Bản.'",
+        "key_evidence": "In Tokio, Japan.",
+        "key_vocabulary": [
+          "geboren"
+        ]
       }
     },
     {
       "id": "Q4",
       "gespraech": 4,
       "type": "mc_abc",
-      "question": "Welches Thema wird besprochen (Gespräch 4)?",
+      "question": "Ist die Frau verheiratet?",
       "options": {
-        "a": "Arbeit und Beruf",
-        "b": "Reisen und Verkehr",
-        "c": "Technik und Digitalisierung"
+        "a": "Ja, sie hat einen Freund.",
+        "b": "Nein, sie ist ledig.",
+        "c": "Ja, sie hat Kinder."
       },
-      "answer": "a",
+      "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: \"Arbeit und Beruf\".",
-        "vi": "Đoạn hội thoại 4 nói về chủ đề gì?",
-        "key_evidence": "Arbeit und Beruf",
-        "key_vocabulary": []
+        "de": "Die Frau sagt: 'Nein, ich bin ledig.'",
+        "vi": "Người phụ nữ nói: 'Không, tôi độc thân.'",
+        "key_evidence": "Nein, ich bin ledig.",
+        "key_vocabulary": [
+          "verheiratet",
+          "ledig"
+        ]
       }
     },
     {
       "id": "Q5",
       "gespraech": 5,
       "type": "mc_abc",
-      "question": "Welches Thema wird besprochen (Gespräch 5)?",
+      "question": "Was macht die Studentin am Wochenende?",
       "options": {
-        "a": "Arbeit und Beruf",
-        "b": "Einkaufen und Geld",
-        "c": "Technik und Digitalisierung"
+        "a": "Sie studiert Informatik.",
+        "b": "Sie arbeitet als Kellnerin.",
+        "c": "Sie geht ins Restaurant."
       },
-      "answer": "a",
+      "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: \"Arbeit und Beruf\".",
-        "vi": "Đoạn hội thoại 5 nói về chủ đề gì?",
-        "key_evidence": "Arbeit und Beruf",
-        "key_vocabulary": []
+        "de": "Die Studentin sagt: 'Ja, ich arbeite als Kellnerin in einem Restaurant, am Wochenende.'",
+        "vi": "Nữ sinh viên nói: 'Vâng, tôi làm phục vụ bàn trong một nhà hàng, vào cuối tuần.'",
+        "key_evidence": "Ja, ich arbeite als Kellnerin in einem Restaurant, am Wochenende.",
+        "key_vocabulary": [
+          "Studentin",
+          "arbeiten",
+          "Kellnerin",
+          "Wochenende"
+        ]
       }
     },
     {
       "id": "Q6",
       "gespraech": 6,
       "type": "mc_abc",
-      "question": "Welches Thema wird besprochen (Gespräch 6)?",
+      "question": "Wie gut spricht die Frau Deutsch?",
       "options": {
-        "a": "Bildung und Schule",
-        "b": "Arbeit und Beruf",
-        "c": "Technik und Digitalisierung"
+        "a": "Sie ist Anfängerin.",
+        "b": "Sie ist fortgeschritten.",
+        "c": "Sie spricht sehr gut Deutsch."
       },
       "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: \"Bildung und Schule\".",
-        "vi": "Đoạn hội thoại 6 nói về chủ đề gì?",
-        "key_evidence": "Bildung und Schule",
-        "key_vocabulary": []
+        "de": "Die Frau sagt: 'Ich bin Anfängerin. Deshalb mache ich den A1-Kurs.'",
+        "vi": "Người phụ nữ nói: 'Tôi là người mới bắt đầu. Vì vậy tôi tham gia khóa học A1.'",
+        "key_evidence": "Ich bin Anfängerin. Deshalb mache ich den A1-Kurs.",
+        "key_vocabulary": [
+          "sprechen",
+          "Deutsch",
+          "Anfängerin",
+          "fortgeschritten"
+        ]
       }
     }
   ],

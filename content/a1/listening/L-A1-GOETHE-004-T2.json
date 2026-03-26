@@ -16,44 +16,75 @@
   "questions": [
     {
       "id": "Q1",
-      "item": 1,
+      "gespraech": 1,
       "type": "richtig_falsch",
-      "statement": "Es geht um eine Reise.",
-      "answer": "falsch",
+      "question": "Das Angebot für Erdbeeren ist nur heute gültig.",
+      "answer": "richtig",
       "points": 1,
       "explanation": {
-        "de": "Falsch. Die Aussage stimmt nicht mit dem Hörtext überein.",
-        "vi": "Sai.",
-        "key_evidence": "Es geht um eine Reise.",
-        "key_vocabulary": []
+        "de": "Der Ansager sagt: 'Das Angebot gilt nur heute'.",
+        "vi": "Người thông báo nói: 'Ưu đãi chỉ có giá trị hôm nay'.",
+        "key_evidence": "Das Angebot gilt nur heute.",
+        "key_vocabulary": [
+          "Angebot",
+          "gültig",
+          "heute"
+        ]
       }
     },
     {
       "id": "Q2",
-      "item": 2,
+      "gespraech": 2,
       "type": "richtig_falsch",
-      "statement": "Eine Uhrzeit wird genannt.",
+      "question": "Der Supermarkt schließt heute schon um 18 Uhr.",
       "answer": "richtig",
       "points": 1,
       "explanation": {
-        "de": "Richtig. Die Aussage stimmt mit dem Hörtext überein.",
-        "vi": "Đúng.",
-        "key_evidence": "Eine Uhrzeit wird genannt.",
-        "key_vocabulary": []
+        "de": "Der Ansager sagt: 'Unser Markt schließt heute ausnahmsweise schon um achtzehn Uhr'.",
+        "vi": "Người thông báo nói: 'Siêu thị của chúng tôi hôm nay đặc biệt đóng cửa lúc 18 giờ'.",
+        "key_evidence": "Unser Markt schließt heute ausnahmsweise schon um achtzehn Uhr.",
+        "key_vocabulary": [
+          "Supermarkt",
+          "schließt",
+          "heute",
+          "Uhr"
+        ]
       }
     },
     {
       "id": "Q3",
-      "item": 3,
+      "gespraech": 3,
       "type": "richtig_falsch",
-      "statement": "Es geht ums Einkaufen.",
+      "question": "Die Schnellkasse drei ist heute leider geschlossen.",
       "answer": "richtig",
       "points": 1,
       "explanation": {
-        "de": "Richtig. Die Aussage stimmt mit dem Hörtext überein.",
-        "vi": "Đúng.",
-        "key_evidence": "Es geht ums Einkaufen.",
-        "key_vocabulary": []
+        "de": "Der Ansager sagt: 'Unsere Schnellkasse drei ist heute leider geschlossen'.",
+        "vi": "Người thông báo nói: 'Quầy thanh toán nhanh số ba của chúng tôi hôm nay tiếc là đóng cửa'.",
+        "key_evidence": "Unsere Schnellkasse drei ist heute leider geschlossen.",
+        "key_vocabulary": [
+          "Schnellkasse",
+          "geschlossen",
+          "heute"
+        ]
+      }
+    },
+    {
+      "id": "Q4",
+      "gespraech": 4,
+      "type": "richtig_falsch",
+      "question": "Die Bäckertheke befindet sich am Eingang links.",
+      "answer": "richtig",
+      "points": 1,
+      "explanation": {
+        "de": "Der Ansager sagt: 'Die Bäckertheke finden Sie am Eingang links'.",
+        "vi": "Người thông báo nói: 'Quầy bánh mì bạn có thể tìm thấy ở lối vào bên trái'.",
+        "key_evidence": "Die Bäckertheke finden Sie am Eingang links.",
+        "key_vocabulary": [
+          "Bäckertheke",
+          "Eingang",
+          "links"
+        ]
       }
     }
   ],

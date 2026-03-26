@@ -18,23 +18,21 @@
       "id": "Q1",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Woher kommt die Person (Gespräch 1)?",
+      "question": "Was braucht der Mann für das kalte Wetter?",
       "options": {
-        "a": "Russland",
-        "b": "Salzburg",
-        "c": "Brasilien"
+        "a": "Einen Regenschirm und eine warme Jacke.",
+        "b": "Einen Schal und eine Mütze.",
+        "c": "Eine kurze Hose und ein T-Shirt."
       },
-      "answer": "c",
+      "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Die Person kommt aus Brasilien.",
-        "vi": "Người đó đến từ đâu (đoạn 1)?",
-        "key_evidence": "Brasilien",
+        "de": "Der Mann sagt: 'Dann brauche ich einen Regenschirm und eine warme Jacke.'",
+        "vi": "Người đàn ông nói: 'Vậy thì tôi cần một chiếc ô và một chiếc áo khoác ấm.'",
+        "key_evidence": "Dann brauche ich einen Regenschirm und eine warme Jacke.",
         "key_vocabulary": [
-          {
-            "word": "kommen aus",
-            "meaning": "to come from"
-          }
+          "Regenschirm",
+          "warme Jacke"
         ]
       }
     },
@@ -42,95 +40,110 @@
       "id": "Q2",
       "gespraech": 2,
       "type": "mc_abc",
-      "question": "Welches Thema wird besprochen (Gespräch 2)?",
+      "question": "Was empfiehlt die Frau dem Mann?",
       "options": {
-        "a": "Medien und Kommunikation",
-        "b": "Freizeit und Hobbys",
-        "c": "Alltag"
+        "a": "Ein T-Shirt.",
+        "b": "Eine Sonnencreme.",
+        "c": "Eine Sonnenbrille."
       },
-      "answer": "c",
+      "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: \"Alltag\".",
-        "vi": "Đoạn hội thoại 2 nói về chủ đề gì?",
-        "key_evidence": "Alltag",
-        "key_vocabulary": []
+        "de": "Die Frau sagt: 'Vergiss die Sonnencreme nicht! Die Sonne ist stark.'",
+        "vi": "Người phụ nữ nói: 'Đừng quên kem chống nắng! Nắng gắt lắm.'",
+        "key_evidence": "Vergiss die Sonnencreme nicht! Die Sonne ist stark.",
+        "key_vocabulary": [
+          "Sonnencreme",
+          "vergessen"
+        ]
       }
     },
     {
       "id": "Q3",
       "gespraech": 3,
       "type": "mc_abc",
-      "question": "Welches Thema wird besprochen (Gespräch 3)?",
+      "question": "Wie wird das Wetter morgen?",
       "options": {
-        "a": "Bildung und Schule",
-        "b": "Arbeit und Beruf",
-        "c": "Alltag"
+        "a": "Es wird sonnig und warm.",
+        "b": "Es wird bewölkt und kühl.",
+        "c": "Es regnet und ist kalt."
       },
-      "answer": "c",
+      "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: \"Alltag\".",
-        "vi": "Đoạn hội thoại 3 nói về chủ đề gì?",
-        "key_evidence": "Alltag",
-        "key_vocabulary": []
+        "de": "Die Frau sagt: 'Morgen wird es bewölkt und kühl. Ungefähr vierzehn Grad.'",
+        "vi": "Người phụ nữ nói: 'Ngày mai trời sẽ nhiều mây và mát mẻ. Khoảng mười bốn độ.'",
+        "key_evidence": "Morgen wird es bewölkt und kühl. Ungefähr vierzehn Grad.",
+        "key_vocabulary": [
+          "bewölkt",
+          "kühl"
+        ]
       }
     },
     {
       "id": "Q4",
       "gespraech": 4,
       "type": "mc_abc",
-      "question": "Welches Thema wird besprochen (Gespräch 4)?",
+      "question": "Wo kann die Frau warme Kleidung kaufen?",
       "options": {
-        "a": "Arbeit und Beruf",
-        "b": "Familie und Freunde",
-        "c": "Einkaufen und Geld"
+        "a": "Im Kaufhaus in der Innenstadt.",
+        "b": "In Brasilien.",
+        "c": "Im Supermarkt."
       },
-      "answer": "c",
+      "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: \"Einkaufen und Geld\".",
-        "vi": "Đoạn hội thoại 4 nói về chủ đề gì?",
-        "key_evidence": "Einkaufen und Geld",
-        "key_vocabulary": []
+        "de": "Der Mann sagt: 'Im Kaufhaus in der Innenstadt gibt es gerade Winterschlussverkauf.'",
+        "vi": "Người đàn ông nói: 'Ở trung tâm thương mại trong nội thành đang có đợt giảm giá cuối mùa đông.'",
+        "key_evidence": "Im Kaufhaus in der Innenstadt gibt es gerade Winterschlussverkauf.",
+        "key_vocabulary": [
+          "Kaufhaus",
+          "Innenstadt"
+        ]
       }
     },
     {
       "id": "Q5",
       "gespraech": 5,
       "type": "mc_abc",
-      "question": "Welches Thema wird besprochen (Gespräch 5)?",
+      "question": "Was gibt die Frau dem Mann?",
       "options": {
-        "a": "Wohnung und Haushalt",
-        "b": "Alltag",
-        "c": "Essen und Trinken"
+        "a": "Einen Schal.",
+        "b": "Einen Regenschirm.",
+        "c": "Eine Tasche."
       },
       "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: \"Alltag\".",
-        "vi": "Đoạn hội thoại 5 nói về chủ đề gì?",
-        "key_evidence": "Alltag",
-        "key_vocabulary": []
+        "de": "Die Frau sagt: 'Hier, nimm meinen. Ich habe zwei in meiner Tasche.' (Sie meint einen Regenschirm).",
+        "vi": "Người phụ nữ nói: 'Đây, lấy cái của tôi đi. Tôi có hai cái trong túi.' (Cô ấy nói về một chiếc ô).",
+        "key_evidence": "Hier, nimm meinen. Ich habe zwei in meiner Tasche.",
+        "key_vocabulary": [
+          "Regenschirm",
+          "nehmen"
+        ]
       }
     },
     {
       "id": "Q6",
       "gespraech": 6,
       "type": "mc_abc",
-      "question": "Welches Thema wird besprochen (Gespräch 6)?",
+      "question": "Welche Kleidung ist für den Deutschkurs in Ordnung?",
       "options": {
-        "a": "Alltag",
-        "b": "Freizeit und Hobbys",
-        "c": "Essen und Trinken"
+        "a": "Spezielle Kleidung.",
+        "b": "Warme Sachen.",
+        "c": "Ganz normale Kleidung."
       },
-      "answer": "a",
+      "answer": "c",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: \"Alltag\".",
-        "vi": "Đoạn hội thoại 6 nói về chủ đề gì?",
-        "key_evidence": "Alltag",
-        "key_vocabulary": []
+        "de": "Die Frau sagt: 'Ganz normale Kleidung. Jeans und ein T-Shirt sind in Ordnung.'",
+        "vi": "Người phụ nữ nói: 'Quần áo bình thường thôi. Quần jean và áo phông là được.'",
+        "key_evidence": "Ganz normale Kleidung. Jeans und ein T-Shirt sind in Ordnung.",
+        "key_vocabulary": [
+          "normale Kleidung",
+          "in Ordnung"
+        ]
       }
     }
   ],

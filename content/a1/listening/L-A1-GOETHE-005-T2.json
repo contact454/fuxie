@@ -16,58 +16,73 @@
   "questions": [
     {
       "id": "Q1",
-      "item": 1,
+      "gespraech": 1,
       "type": "richtig_falsch",
-      "statement": "Eine Person heißt Lisa.",
+      "question": "Am Mittwochnachmittag ist die Praxis Dr. Müller geöffnet.",
       "answer": "falsch",
       "points": 1,
       "explanation": {
-        "de": "Falsch. Die Aussage stimmt nicht mit dem Hörtext überein.",
-        "vi": "Sai.",
-        "key_evidence": "Eine Person heißt Lisa.",
-        "key_vocabulary": []
+        "de": "Der Ansager sagt: 'Am Mittwochnachmittag ist die Praxis geschlossen.'",
+        "vi": "Người thông báo nói: 'Phòng khám đóng cửa vào chiều thứ Tư.'",
+        "key_evidence": "Am Mittwochnachmittag ist die Praxis geschlossen.",
+        "key_vocabulary": [
+          "Mittwochnachmittag",
+          "Praxis",
+          "geschlossen"
+        ]
       }
     },
     {
       "id": "Q2",
-      "item": 2,
+      "gespraech": 2,
       "type": "richtig_falsch",
-      "statement": "Eine Person heißt Schneider.",
+      "question": "Dr. Klein hat seine Praxis in der Berliner Straße zwölf.",
       "answer": "richtig",
       "points": 1,
       "explanation": {
-        "de": "Richtig. Die Aussage stimmt mit dem Hörtext überein.",
-        "vi": "Đúng.",
-        "key_evidence": "Eine Person heißt Schneider.",
-        "key_vocabulary": []
+        "de": "Der Ansager sagt: 'Die Vertretung übernimmt Dr. Klein in der Berliner Straße zwölf.'",
+        "vi": "Người thông báo nói: 'Bác sĩ Klein sẽ thay thế tại số 12 đường Berliner.'",
+        "key_evidence": "Die Vertretung übernimmt Dr. Klein in der Berliner Straße zwölf.",
+        "key_vocabulary": [
+          "Vertretung",
+          "übernimmt",
+          "Berliner Straße"
+        ]
       }
     },
     {
       "id": "Q3",
-      "item": 3,
+      "gespraech": 3,
       "type": "richtig_falsch",
-      "statement": "Es geht um eine Reise.",
+      "question": "Man muss immer eine Maske tragen, wenn man die Praxis besucht.",
       "answer": "falsch",
       "points": 1,
       "explanation": {
-        "de": "Falsch. Die Aussage stimmt nicht mit dem Hörtext überein.",
-        "vi": "Sai.",
-        "key_evidence": "Es geht um eine Reise.",
-        "key_vocabulary": []
+        "de": "Der Ansager sagt: 'Wenn Sie krank sind, tragen Sie bitte eine Maske.' Man muss die Maske nur tragen, wenn man krank ist.",
+        "vi": "Người thông báo nói: 'Nếu bạn bị ốm, vui lòng đeo khẩu trang.' Bạn chỉ cần đeo khẩu trang khi bị ốm.",
+        "key_evidence": "Wenn Sie krank sind, tragen Sie bitte eine Maske.",
+        "key_vocabulary": [
+          "krank",
+          "Maske tragen"
+        ]
       }
     },
     {
       "id": "Q4",
-      "item": 4,
+      "gespraech": 4,
       "type": "richtig_falsch",
-      "statement": "Es geht um Gesundheit.",
+      "question": "Die Notdienst-Apotheke ist am Wochenende bis 20 Uhr geöffnet.",
       "answer": "richtig",
       "points": 1,
       "explanation": {
-        "de": "Richtig. Die Aussage stimmt mit dem Hörtext überein.",
-        "vi": "Đúng.",
-        "key_evidence": "Es geht um Gesundheit.",
-        "key_vocabulary": []
+        "de": "Der Ansager sagt: 'Die Notdienst-Apotheke ist Samstag und Sonntag von acht bis zwanzig Uhr geöffnet.'",
+        "vi": "Người thông báo nói: 'Nhà thuốc trực cấp cứu mở cửa từ 8 giờ đến 20 giờ vào thứ Bảy và Chủ Nhật.'",
+        "key_evidence": "Die Notdienst-Apotheke ist Samstag und Sonntag von acht bis zwanzig Uhr geöffnet.",
+        "key_vocabulary": [
+          "Notdienst-Apotheke",
+          "Wochenende",
+          "geöffnet"
+        ]
       }
     }
   ],

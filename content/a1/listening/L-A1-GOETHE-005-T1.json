@@ -18,23 +18,24 @@
       "id": "Q1",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Wie heißt eine Person (Gespräch 1)?",
+      "question": "Wann hat die Person einen Termin?",
       "options": {
-        "a": "Julia",
-        "b": "Sara",
-        "c": "Frau"
+        "a": "Am Mittwoch um zehn Uhr.",
+        "b": "Am Donnerstag um elf Uhr dreißig.",
+        "c": "Am Donnerstag um zehn Uhr."
       },
-      "answer": "c",
+      "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man den Namen \"Frau\".",
-        "vi": "Một người trong đoạn 1 tên là gì?",
-        "key_evidence": "Frau",
+        "de": "Die Person sagt: 'Donnerstag passt gut', nachdem 'Am Donnerstag um elf Uhr dreißig' angeboten wurde.",
+        "vi": "Người đó nói: 'Thứ Năm thì được', sau khi được đề nghị 'Thứ Năm lúc 11 giờ 30 phút'.",
+        "key_evidence": "Am Donnerstag um elf Uhr dreißig hätte ich noch einen Termin. Ja, Donnerstag passt gut.",
         "key_vocabulary": [
-          {
-            "word": "heißen",
-            "meaning": "to be called"
-          }
+          "Termin",
+          "Mittwoch",
+          "Donnerstag",
+          "Uhr",
+          "passen"
         ]
       }
     },
@@ -42,23 +43,23 @@
       "id": "Q2",
       "gespraech": 2,
       "type": "mc_abc",
-      "question": "Wie heißt eine Person (Gespräch 2)?",
+      "question": "Wie lange hat die Person Kopfschmerzen?",
       "options": {
-        "a": "Sydney",
-        "b": "Seoul",
-        "c": "Würzburg"
+        "a": "Seit einem Tag.",
+        "b": "Seit drei Tagen.",
+        "c": "Seit einer Woche."
       },
-      "answer": "a",
+      "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man den Namen \"Schmidt\".",
-        "vi": "Một người trong đoạn 2 tên là gì?",
-        "key_evidence": "Schmidt",
+        "de": "Die Person sagt: 'Ich habe seit drei Tagen Kopfschmerzen und Fieber'.",
+        "vi": "Người đó nói: 'Tôi bị đau đầu và sốt đã ba ngày rồi'.",
+        "key_evidence": "Ich habe seit drei Tagen Kopfschmerzen und Fieber.",
         "key_vocabulary": [
-          {
-            "word": "heißen",
-            "meaning": "to be called"
-          }
+          "Kopfschmerzen",
+          "Fieber",
+          "Tage",
+          "seit"
         ]
       }
     },
@@ -66,23 +67,22 @@
       "id": "Q3",
       "gespraech": 3,
       "type": "mc_abc",
-      "question": "Was macht die Person beruflich (Gespräch 3)?",
+      "question": "Was braucht Frau Schmidt für den Termin?",
       "options": {
-        "a": "Studentin",
-        "b": "Journalist",
-        "c": "Frau"
+        "a": "Ein Glas Wasser.",
+        "b": "Ihre Versichertenkarte.",
+        "c": "Ein Rezept."
       },
-      "answer": "c",
+      "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: \"Frau\".",
-        "vi": "Người đó làm nghề gì (đoạn 3)?",
-        "key_evidence": "Frau",
+        "de": "Die Sprechstundenhilfe fragt: 'Haben Sie Ihre Versichertenkarte dabei?' und Frau Schmidt antwortet: 'Ja, hier bitte'.",
+        "vi": "Trợ lý phòng khám hỏi: 'Bạn có mang theo thẻ bảo hiểm không?' và bà Schmidt trả lời: 'Vâng, đây ạ'.",
+        "key_evidence": "Haben Sie Ihre Versichertenkarte dabei? Ja, hier bitte.",
         "key_vocabulary": [
-          {
-            "word": "Frau",
-            "meaning": "Frau"
-          }
+          "Versichertenkarte",
+          "Termin",
+          "dabei haben"
         ]
       }
     },
@@ -90,57 +90,71 @@
       "id": "Q4",
       "gespraech": 4,
       "type": "mc_abc",
-      "question": "Welches Thema wird besprochen (Gespräch 4)?",
+      "question": "Wofür braucht die Person ein neues Rezept?",
       "options": {
-        "a": "Gesundheit und Körper",
-        "b": "Freizeit und Hobbys",
-        "c": "Essen und Trinken"
+        "a": "Für Tabletten gegen Kopfschmerzen.",
+        "b": "Für Tabletten gegen Bluthochdruck.",
+        "c": "Für Tabletten gegen Fieber."
       },
-      "answer": "a",
+      "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: \"Gesundheit und Körper\".",
-        "vi": "Đoạn hội thoại 4 nói về chủ đề gì?",
-        "key_evidence": "Gesundheit und Körper",
-        "key_vocabulary": []
+        "de": "Die Person sagt: 'Ich nehme Tabletten gegen Bluthochdruck'.",
+        "vi": "Người đó nói: 'Tôi uống thuốc trị huyết áp cao'.",
+        "key_evidence": "Ich nehme Tabletten gegen Bluthochdruck.",
+        "key_vocabulary": [
+          "Rezept",
+          "Medizin",
+          "Tabletten",
+          "Bluthochdruck"
+        ]
       }
     },
     {
       "id": "Q5",
       "gespraech": 5,
       "type": "mc_abc",
-      "question": "Welches Thema wird besprochen (Gespräch 5)?",
+      "question": "Was tut Herrn Müller weh?",
       "options": {
-        "a": "Alltag",
-        "b": "Einkaufen und Geld",
-        "c": "Arbeit und Beruf"
+        "a": "Der Kopf.",
+        "b": "Der Rücken.",
+        "c": "Der Arm."
       },
-      "answer": "a",
+      "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: \"Alltag\".",
-        "vi": "Đoạn hội thoại 5 nói về chủ đề gì?",
-        "key_evidence": "Alltag",
-        "key_vocabulary": []
+        "de": "Herr Müller sagt: 'Mein Rücken tut sehr weh'.",
+        "vi": "Ông Müller nói: 'Lưng của tôi rất đau'.",
+        "key_evidence": "Mein Rücken tut sehr weh.",
+        "key_vocabulary": [
+          "Rücken",
+          "weh tun"
+        ]
       }
     },
     {
       "id": "Q6",
       "gespraech": 6,
       "type": "mc_abc",
-      "question": "Welches Thema wird besprochen (Gespräch 6)?",
+      "question": "Welche Informationen soll Frau Weber auf dem Formular schreiben?",
       "options": {
-        "a": "Alltag",
-        "b": "Einkaufen und Geld",
-        "c": "Arbeit und Beruf"
+        "a": "Ihren Namen und ihr Alter.",
+        "b": "Ihren Namen, ihre Adresse und ihre Telefonnummer.",
+        "c": "Ihren Namen und ihre Beschwerden."
       },
-      "answer": "a",
+      "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: \"Alltag\".",
-        "vi": "Đoạn hội thoại 6 nói về chủ đề gì?",
-        "key_evidence": "Alltag",
-        "key_vocabulary": []
+        "de": "Die Sprechstundenhilfe sagt: 'Schreiben Sie Ihren Namen, Ihre Adresse und Ihre Telefonnummer'.",
+        "vi": "Trợ lý phòng khám nói: 'Hãy viết tên, địa chỉ và số điện thoại của bạn'.",
+        "key_evidence": "Schreiben Sie Ihren Namen, Ihre Adresse und Ihre Telefonnummer.",
+        "key_vocabulary": [
+          "Formular",
+          "schreiben",
+          "Name",
+          "Adresse",
+          "Telefonnummer"
+        ]
       }
     }
   ],

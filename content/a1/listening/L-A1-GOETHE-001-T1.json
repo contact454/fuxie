@@ -18,23 +18,21 @@
       "id": "Q1",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Wie heißt eine Person im Gespräch 1?",
+      "question": "Wo wohnt Maria jetzt?",
       "options": {
-        "a": "Maria",
-        "b": "Michael",
-        "c": "Anna"
+        "a": "In München.",
+        "b": "In Wien.",
+        "c": "In Berlin."
       },
-      "answer": "a",
+      "answer": "c",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: \"Maria\".",
-        "vi": "Một người trong đoạn 1 tên là gì?",
-        "key_evidence": "Maria",
+        "de": "Maria sagt: 'Ich wohne jetzt in Berlin.'",
+        "vi": "Maria nói: 'Bây giờ tôi sống ở Berlin.'",
+        "key_evidence": "Ich wohne jetzt in Berlin.",
         "key_vocabulary": [
-          {
-            "word": "heißen",
-            "meaning": "to be called"
-          }
+          "wohnen",
+          "jetzt"
         ]
       }
     },
@@ -42,23 +40,22 @@
       "id": "Q2",
       "gespraech": 2,
       "type": "mc_abc",
-      "question": "Woher kommt die Person (Gespräch 2)?",
+      "question": "Wie lange ist Yuki schon in Deutschland?",
       "options": {
-        "a": "Nürnberg",
-        "b": "Leipzig",
-        "c": "Japan"
+        "a": "Seit einer Woche.",
+        "b": "Seit zwei Wochen.",
+        "c": "Seit drei Wochen."
       },
-      "answer": "c",
+      "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: \"Japan\".",
-        "vi": "Người đó đến từ đâu (đoạn 2)?",
-        "key_evidence": "Japan",
+        "de": "Yuki sagt: 'Seit zwei Wochen.'",
+        "vi": "Yuki nói: 'Được hai tuần rồi.'",
+        "key_evidence": "Seit zwei Wochen.",
         "key_vocabulary": [
-          {
-            "word": "kommen aus",
-            "meaning": "to come from"
-          }
+          "wie lange",
+          "seit",
+          "Wochen"
         ]
       }
     },
@@ -66,23 +63,22 @@
       "id": "Q3",
       "gespraech": 3,
       "type": "mc_abc",
-      "question": "Was macht die Person beruflich (Gespräch 3)?",
+      "question": "Wie lange lernt Pedro schon Deutsch?",
       "options": {
-        "a": "Anna",
-        "b": "Student",
-        "c": "Lehrerin"
+        "a": "Seit zwei Monaten.",
+        "b": "Seit drei Monaten.",
+        "c": "Seit vier Monaten."
       },
-      "answer": "a",
+      "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: \"Anna\".",
-        "vi": "Người đó làm nghề gì (đoạn 3)?",
-        "key_evidence": "Anna",
+        "de": "Pedro sagt: 'Ich lerne seit drei Monaten Deutsch.'",
+        "vi": "Pedro nói: 'Tôi học tiếng Đức được ba tháng rồi.'",
+        "key_evidence": "Ich lerne seit drei Monaten Deutsch.",
         "key_vocabulary": [
-          {
-            "word": "Anna",
-            "meaning": "Anna"
-          }
+          "lernen",
+          "seit",
+          "Monaten"
         ]
       }
     },
@@ -90,57 +86,66 @@
       "id": "Q4",
       "gespraech": 4,
       "type": "mc_abc",
-      "question": "Welches Thema wird besprochen (Gespräch 4)?",
+      "question": "Was ist Markus von Beruf?",
       "options": {
-        "a": "Arbeit und Beruf",
-        "b": "Medien und Kommunikation",
-        "c": "Wohnung und Haushalt"
+        "a": "Er ist Lehrer.",
+        "b": "Er ist Ingenieur.",
+        "c": "Er ist Student."
       },
-      "answer": "a",
+      "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: \"Arbeit und Beruf\".",
-        "vi": "Đoạn hội thoại 4 nói về chủ đề gì?",
-        "key_evidence": "Arbeit und Beruf",
-        "key_vocabulary": []
+        "de": "Markus sagt: 'Ich arbeite als Ingenieur.'",
+        "vi": "Markus nói: 'Tôi làm kỹ sư.'",
+        "key_evidence": "Ich arbeite als Ingenieur.",
+        "key_vocabulary": [
+          "Beruf",
+          "arbeiten als",
+          "Ingenieur"
+        ]
       }
     },
     {
       "id": "Q5",
       "gespraech": 5,
       "type": "mc_abc",
-      "question": "Welches Thema wird besprochen (Gespräch 5)?",
+      "question": "Wo ist Frau Schneider?",
       "options": {
-        "a": "Gesundheit und Körper",
-        "b": "Arbeit und Beruf",
-        "c": "Reisen und Verkehr"
+        "a": "In Zimmer drei.",
+        "b": "Im Büro nebenan.",
+        "c": "Bei Frau Becker."
       },
       "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: \"Arbeit und Beruf\".",
-        "vi": "Đoạn hội thoại 5 nói về chủ đề gì?",
-        "key_evidence": "Arbeit und Beruf",
-        "key_vocabulary": []
+        "de": "Frau Becker sagt: 'Frau Schneider ist im Büro nebenan.'",
+        "vi": "Bà Becker nói: 'Bà Schneider ở văn phòng bên cạnh.'",
+        "key_evidence": "Frau Schneider ist im Büro nebenan.",
+        "key_vocabulary": [
+          "Büro",
+          "nebenan"
+        ]
       }
     },
     {
       "id": "Q6",
       "gespraech": 6,
       "type": "mc_abc",
-      "question": "Welches Thema wird besprochen (Gespräch 6)?",
+      "question": "Woher kommt Ali?",
       "options": {
-        "a": "Essen und Trinken",
-        "b": "Reisen und Verkehr",
-        "c": "Bildung und Schule"
+        "a": "Aus Marokko.",
+        "b": "Aus Syrien.",
+        "c": "Aus Hamburg."
       },
-      "answer": "c",
+      "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: \"Bildung und Schule\".",
-        "vi": "Đoạn hội thoại 6 nói về chủ đề gì?",
-        "key_evidence": "Bildung und Schule",
-        "key_vocabulary": []
+        "de": "Ali sagt: 'Ich heiße Ali und komme aus Syrien.'",
+        "vi": "Ali nói: 'Tôi tên là Ali và tôi đến từ Syria.'",
+        "key_evidence": "Ich heiße Ali und komme aus Syrien.",
+        "key_vocabulary": [
+          "kommen aus"
+        ]
       }
     }
   ],

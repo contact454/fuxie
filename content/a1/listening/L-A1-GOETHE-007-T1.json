@@ -18,23 +18,22 @@
       "id": "Q1",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Wie heißt eine Person im Gespräch 1?",
+      "question": "Wann kann Herr Schneider frühstücken?",
       "options": {
-        "a": "Claudia",
-        "b": "Katja",
-        "c": "Schneider"
+        "a": "Von sieben bis zehn Uhr.",
+        "b": "Von sechs bis zehn Uhr.",
+        "c": "Von sieben bis elf Uhr."
       },
-      "answer": "c",
+      "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: \"Schneider\".",
-        "vi": "Một người trong đoạn 1 tên là gì?",
-        "key_evidence": "Schneider",
+        "de": "Das Hotelpersonal sagt, dass das Frühstück von sieben bis zehn Uhr ist.",
+        "vi": "Nhân viên khách sạn nói rằng bữa sáng từ 7 giờ đến 10 giờ.",
+        "key_evidence": "Ja, das Frühstück ist im Preis enthalten. Von sieben bis zehn Uhr.",
         "key_vocabulary": [
-          {
-            "word": "heißen",
-            "meaning": "to be called"
-          }
+          "Frühstück",
+          "Uhr",
+          "enthalten"
         ]
       }
     },
@@ -42,23 +41,22 @@
       "id": "Q2",
       "gespraech": 2,
       "type": "mc_abc",
-      "question": "Wie heißt eine Person (Gespräch 2)?",
+      "question": "Wie viel kostet das Doppelzimmer pro Nacht?",
       "options": {
-        "a": "Göttingen",
-        "b": "Hannover",
-        "c": "Kairo"
+        "a": "Achtzig Euro.",
+        "b": "Neunzig Euro.",
+        "c": "Hundert Euro."
       },
-      "answer": "c",
+      "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man den Namen \"Schneider\".",
-        "vi": "Một người trong đoạn 2 tên là gì?",
-        "key_evidence": "Schneider",
+        "de": "Das Hotelpersonal sagt, dass das Zimmer neunzig Euro pro Nacht kostet.",
+        "vi": "Nhân viên khách sạn nói rằng phòng có giá 90 Euro mỗi đêm.",
+        "key_evidence": "Neunzig Euro pro Nacht, mit Frühstück und WLAN.",
         "key_vocabulary": [
-          {
-            "word": "heißen",
-            "meaning": "to be called"
-          }
+          "kosten",
+          "Euro",
+          "pro Nacht"
         ]
       }
     },
@@ -66,76 +64,91 @@
       "id": "Q3",
       "gespraech": 3,
       "type": "mc_abc",
-      "question": "Welches Thema wird besprochen (Gespräch 3)?",
+      "question": "Wo findet der Gast den Safe in seinem Zimmer?",
       "options": {
-        "a": "Umwelt und Natur",
-        "b": "Freizeit und Hobbys",
-        "c": "Wohnung und Haushalt"
+        "a": "Im Bad.",
+        "b": "Im Schrank.",
+        "c": "Unter dem Bett."
       },
-      "answer": "c",
+      "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: \"Wohnung und Haushalt\".",
-        "vi": "Đoạn hội thoại 3 nói về chủ đề gì?",
-        "key_evidence": "Wohnung und Haushalt",
-        "key_vocabulary": []
+        "de": "Das Hotelpersonal erklärt, dass es in jedem Zimmer einen Safe im Schrank gibt.",
+        "vi": "Nhân viên khách sạn giải thích rằng mỗi phòng đều có két an toàn trong tủ quần áo.",
+        "key_evidence": "Ja, in jedem Zimmer gibt es einen Safe im Schrank.",
+        "key_vocabulary": [
+          "Safe",
+          "Zimmer",
+          "Schrank"
+        ]
       }
     },
     {
       "id": "Q4",
       "gespraech": 4,
       "type": "mc_abc",
-      "question": "Welches Thema wird besprochen (Gespräch 4)?",
+      "question": "Wie lautet das WLAN-Passwort?",
       "options": {
-        "a": "Bildung und Schule",
-        "b": "Freizeit und Hobbys",
-        "c": "Wohnung und Haushalt"
+        "a": "Hotel zwanzig dreiundzwanzig.",
+        "b": "Hotel zwanzig vierundzwanzig.",
+        "c": "Hotel zwanzig fünfundzwanzig."
       },
-      "answer": "c",
+      "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: \"Wohnung und Haushalt\".",
-        "vi": "Đoạn hội thoại 4 nói về chủ đề gì?",
-        "key_evidence": "Wohnung und Haushalt",
-        "key_vocabulary": []
+        "de": "Das Hotelpersonal gibt das Passwort als 'Hotel zwanzig vierundzwanzig' an.",
+        "vi": "Nhân viên khách sạn cung cấp mật khẩu là 'Hotel zwanzig vierundzwanzig'.",
+        "key_evidence": "Ich gebe Ihnen das Passwort noch einmal. Es ist Hotel zwanzig vierundzwanzig.",
+        "key_vocabulary": [
+          "Passwort",
+          "Hotel"
+        ]
       }
     },
     {
       "id": "Q5",
       "gespraech": 5,
       "type": "mc_abc",
-      "question": "Welches Thema wird besprochen (Gespräch 5)?",
+      "question": "Bis wann kann der Gast den Gepäckraum nutzen?",
       "options": {
-        "a": "Einkaufen und Geld",
-        "b": "Gesundheit und Körper",
-        "c": "Wohnung und Haushalt"
+        "a": "Bis elf Uhr.",
+        "b": "Bis sechzehn Uhr.",
+        "c": "Bis achtzehn Uhr."
       },
       "answer": "c",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: \"Wohnung und Haushalt\".",
-        "vi": "Đoạn hội thoại 5 nói về chủ đề gì?",
-        "key_evidence": "Wohnung und Haushalt",
-        "key_vocabulary": []
+        "de": "Das Hotelpersonal sagt, dass der Gepäckraum bis achtzehn Uhr genutzt werden kann.",
+        "vi": "Nhân viên khách sạn nói rằng phòng hành lý có thể được sử dụng đến 18 giờ.",
+        "key_evidence": "Ja, wir haben einen Gepäckraum. Den können Sie bis achtzehn Uhr nutzen.",
+        "key_vocabulary": [
+          "Gepäckraum",
+          "nutzen",
+          "Uhr"
+        ]
       }
     },
     {
       "id": "Q6",
       "gespraech": 6,
       "type": "mc_abc",
-      "question": "Welches Thema wird besprochen (Gespräch 6)?",
+      "question": "Wann ist das Schwimmbad geöffnet?",
       "options": {
-        "a": "Einkaufen und Geld",
-        "b": "Gesundheit und Körper",
-        "c": "Reisen und Verkehr"
+        "a": "Von sechs bis zweiundzwanzig Uhr.",
+        "b": "Von sieben bis zweiundzwanzig Uhr.",
+        "c": "Von sechs bis einundzwanzig Uhr."
       },
-      "answer": "c",
+      "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: \"Reisen und Verkehr\".",
-        "vi": "Đoạn hội thoại 6 nói về chủ đề gì?",
-        "key_evidence": "Reisen und Verkehr",
-        "key_vocabulary": []
+        "de": "Das Hotelpersonal informiert, dass das Schwimmbad von sechs bis zweiundzwanzig Uhr geöffnet ist.",
+        "vi": "Nhân viên khách sạn thông báo rằng hồ bơi mở cửa từ 6 giờ đến 22 giờ.",
+        "key_evidence": "Ja, das Schwimmbad ist im Untergeschoss. Es ist von sechs bis zweiundzwanzig Uhr geöffnet.",
+        "key_vocabulary": [
+          "Schwimmbad",
+          "geöffnet",
+          "Uhr"
+        ]
       }
     }
   ],
