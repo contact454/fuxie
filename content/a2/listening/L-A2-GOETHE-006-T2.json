@@ -18,42 +18,45 @@
       "id": "Q1",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Welches Thema wird besprochen (Gespräch 1)?",
+      "question": "Woher kommt Martin?",
       "options": {
-        "a": "Arbeit und Beruf",
-        "b": "Medien und Kommunikation",
-        "c": "Einkaufen und Geld"
+        "a": "Aus Berlin.",
+        "b": "Aus Hamburg.",
+        "c": "Aus Deutschland."
       },
-      "answer": "a",
+      "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Man hört: \"Arbeit und Beruf\".",
-        "vi": "Đoạn hội thoại 1 nói về chủ đề gì?",
-        "key_evidence": "Arbeit und Beruf",
-        "key_vocabulary": []
+        "de": "Martin sagt: 'Ich bin Martin, Martin Schulze aus Hamburg.'",
+        "vi": "Martin nói: 'Tôi là Martin, Martin Schulze đến từ Hamburg.'",
+        "key_evidence": "Ich bin Martin, Martin Schulze aus Hamburg.",
+        "key_vocabulary": [
+          "kommen",
+          "aus"
+        ]
       }
     },
     {
       "id": "Q2",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Wie heißt eine Person im Gespräch 1?",
+      "question": "Wann hört Martin Radio Berlin?",
       "options": {
-        "a": "Lisa",
-        "b": "Claudia",
-        "c": "Nina"
+        "a": "Jeden Tag auf dem Weg zur Arbeit.",
+        "b": "Nur am Wochenende.",
+        "c": "Nur abends."
       },
       "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Man hört: \"Lisa\".",
-        "vi": "Một người trong đoạn 1 tên là gì?",
-        "key_evidence": "Lisa",
+        "de": "Martin sagt: 'Ja, jeden Tag auf dem Weg zur Arbeit. Radio Berlin ist mein Lieblingssender.'",
+        "vi": "Martin nói: 'Vâng, mỗi ngày trên đường đi làm. Radio Berlin là kênh yêu thích của tôi.'",
+        "key_evidence": "Ja, jeden Tag auf dem Weg zur Arbeit. Radio Berlin ist mein Lieblingssender.",
         "key_vocabulary": [
-          {
-            "word": "heißen",
-            "meaning": "to be called"
-          }
+          "hören",
+          "jeden Tag",
+          "Weg",
+          "Arbeit"
         ]
       }
     },
@@ -61,23 +64,21 @@
       "id": "Q3",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Wie heißt eine Person (Gespräch 1)?",
+      "question": "Was gewinnt Martin?",
       "options": {
-        "a": "Irak",
-        "b": "Darmstadt",
-        "c": "Athen"
+        "a": "Eine Reise nach Berlin.",
+        "b": "Zwei Konzertkarten.",
+        "c": "Geld."
       },
-      "answer": "a",
+      "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man den Namen \"Lisa\".",
-        "vi": "Một người trong đoạn 1 tên là gì?",
-        "key_evidence": "Lisa",
+        "de": "Lisa sagt: 'Sie haben zwei VIP-Karten für das Konzert am Samstag gewonnen.'",
+        "vi": "Lisa nói: 'Anh đã thắng hai vé VIP cho buổi hòa nhạc vào thứ Bảy.'",
+        "key_evidence": "Sie haben zwei VIP-Karten für das Konzert am Samstag gewonnen.",
         "key_vocabulary": [
-          {
-            "word": "heißen",
-            "meaning": "to be called"
-          }
+          "gewinnen",
+          "Konzertkarten"
         ]
       }
     },
@@ -85,23 +86,43 @@
       "id": "Q4",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Was macht die Person beruflich (Gespräch 1)?",
+      "question": "Wo kann Martin die Karten abholen?",
       "options": {
-        "a": "Martin",
-        "b": "Verkäufer",
-        "c": "Arzt"
+        "a": "Im Radiosender.",
+        "b": "An der Abendkasse.",
+        "c": "Bei Lisa."
       },
-      "answer": "a",
+      "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Man hört: \"Martin\".",
-        "vi": "Người đó làm nghề gì (đoạn 1)?",
-        "key_evidence": "Martin",
+        "de": "Lisa sagt: 'Die Karten liegen an der Abendkasse bereit.'",
+        "vi": "Lisa nói: 'Vé sẽ có sẵn tại quầy bán vé buổi tối.'",
+        "key_evidence": "Die Karten liegen an der Abendkasse bereit.",
         "key_vocabulary": [
-          {
-            "word": "Martin",
-            "meaning": "Martin"
-          }
+          "abholen",
+          "Abendkasse"
+        ]
+      }
+    },
+    {
+      "id": "Q5",
+      "gespraech": 1,
+      "type": "mc_abc",
+      "question": "Wann ist das Konzert?",
+      "options": {
+        "a": "Am Freitag.",
+        "b": "Am Samstag.",
+        "c": "Am Sonntag."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Lisa sagt: 'Heute können Sie zwei Karten für das Konzert am Samstag gewinnen.'",
+        "vi": "Lisa nói: 'Hôm nay bạn có thể thắng hai vé cho buổi hòa nhạc vào thứ Bảy.'",
+        "key_evidence": "Heute können Sie zwei Karten für das Konzert am Samstag gewinnen.",
+        "key_vocabulary": [
+          "Konzert",
+          "Samstag"
         ]
       }
     }

@@ -18,42 +18,45 @@
       "id": "Q1",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Welches Thema wird besprochen (Gespräch 1)?",
+      "question": "Womit hat Maxi Probleme in Mathematik?",
       "options": {
-        "a": "Freizeit und Hobbys",
-        "b": "Einkaufen und Geld",
-        "c": "Medien und Kommunikation"
+        "a": "Mit dem Lesen.",
+        "b": "Mit Brüchen.",
+        "c": "Mit Sport."
       },
-      "answer": "a",
+      "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Man hört: \"Freizeit und Hobbys\".",
-        "vi": "Đoạn hội thoại 1 nói về chủ đề gì?",
-        "key_evidence": "Freizeit und Hobbys",
-        "key_vocabulary": []
+        "de": "Frau Schneider sagt, dass Maxi besonders beim Rechnen mit Brüchen Probleme hat.",
+        "vi": "Cô Schneider nói rằng Maxi đặc biệt gặp vấn đề khi tính toán với phân số.",
+        "key_evidence": "Besonders beim Rechnen mit Brüchen.",
+        "key_vocabulary": [
+          "Brüche",
+          "Rechnen"
+        ]
       }
     },
     {
       "id": "Q2",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Wie heißt eine Person im Gespräch 1?",
+      "question": "Wann findet der Förderunterricht statt?",
       "options": {
-        "a": "Sabine",
-        "b": "Peter",
-        "c": "Frau"
+        "a": "Jeden Dienstag und Donnerstag von 14:00 bis 15:30 Uhr.",
+        "b": "Jeden Montag und Mittwoch von 14:00 bis 15:30 Uhr.",
+        "c": "Jeden Dienstag und Donnerstag von 15:00 bis 16:30 Uhr."
       },
-      "answer": "c",
+      "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Man hört: \"Frau\".",
-        "vi": "Một người trong đoạn 1 tên là gì?",
-        "key_evidence": "Frau",
+        "de": "Frau Schneider erklärt, dass der Förderunterricht jeden Dienstag und Donnerstag von vierzehn bis fünfzehn Uhr dreißig ist.",
+        "vi": "Cô Schneider giải thích rằng lớp học phụ đạo diễn ra vào mỗi thứ Ba và thứ Năm từ 14:00 đến 15:30.",
+        "key_evidence": "Jeden Dienstag und Donnerstag von vierzehn bis fünfzehn Uhr dreißig.",
         "key_vocabulary": [
-          {
-            "word": "heißen",
-            "meaning": "to be called"
-          }
+          "Förderunterricht",
+          "Dienstag",
+          "Donnerstag",
+          "Uhr"
         ]
       }
     },
@@ -61,23 +64,23 @@
       "id": "Q3",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Wie heißt eine Person (Gespräch 1)?",
+      "question": "In welchen Fächern ist Maxi besonders gut?",
       "options": {
-        "a": "Erfurt",
-        "b": "Bulgarien",
-        "c": "Hamburg"
+        "a": "In Deutsch und Mathe.",
+        "b": "In Sport und Kunst.",
+        "c": "In Mathe und Sport."
       },
-      "answer": "a",
+      "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man den Namen \"Müller\".",
-        "vi": "Một người trong đoạn 1 tên là gì?",
-        "key_evidence": "Müller",
+        "de": "Frau Schneider sagt, dass Maxi in den meisten Fächern sehr aktiv ist, besonders in Sport und Kunst, und dort eine Eins hat.",
+        "vi": "Cô Schneider nói rằng Maxi rất năng động trong hầu hết các môn học, đặc biệt là Thể thao và Nghệ thuật, và đạt điểm 1 ở đó.",
+        "key_evidence": "Ja, in den meisten Fächern ist er sehr aktiv. Besonders in Sport und Kunst. In Sport und Kunst hat er eine Eins.",
         "key_vocabulary": [
-          {
-            "word": "heißen",
-            "meaning": "to be called"
-          }
+          "Fächer",
+          "Sport",
+          "Kunst",
+          "aktiv"
         ]
       }
     },
@@ -85,23 +88,45 @@
       "id": "Q4",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Was macht die Person beruflich (Gespräch 1)?",
+      "question": "Welche Note hat Maxi in Mathematik?",
       "options": {
-        "a": "Ingenieur",
-        "b": "Frau",
-        "c": "Arzt"
+        "a": "Eine Eins.",
+        "b": "Eine Zwei.",
+        "c": "Eine Vier."
       },
-      "answer": "b",
+      "answer": "c",
       "points": 1,
       "explanation": {
-        "de": "Man hört: \"Frau\".",
-        "vi": "Người đó làm nghề gì (đoạn 1)?",
-        "key_evidence": "Frau",
+        "de": "Frau Schneider informiert, dass Maxi in Mathe leider eine Vier hat.",
+        "vi": "Cô Schneider thông báo rằng Maxi không may có điểm 4 môn Toán.",
+        "key_evidence": "In Deutsch eine Zwei und in Mathe leider eine Vier.",
         "key_vocabulary": [
-          {
-            "word": "Frau",
-            "meaning": "Frau"
-          }
+          "Note",
+          "Mathematik",
+          "leider"
+        ]
+      }
+    },
+    {
+      "id": "Q5",
+      "gespraech": 1,
+      "type": "mc_abc",
+      "question": "Wann ist der Elternabend?",
+      "options": {
+        "a": "Am 20. November um 19:00 Uhr.",
+        "b": "Am 20. Oktober um 19:00 Uhr.",
+        "c": "Am 19. November um 20:00 Uhr."
+      },
+      "answer": "a",
+      "points": 1,
+      "explanation": {
+        "de": "Frau Schneider gibt an, dass der Elternabend am zwanzigsten November um neunzehn Uhr ist.",
+        "vi": "Cô Schneider cho biết buổi họp phụ huynh diễn ra vào ngày 20 tháng 11 lúc 19:00.",
+        "key_evidence": "Am zwanzigsten November um neunzehn Uhr in der Aula.",
+        "key_vocabulary": [
+          "Elternabend",
+          "November",
+          "Uhr"
         ]
       }
     }

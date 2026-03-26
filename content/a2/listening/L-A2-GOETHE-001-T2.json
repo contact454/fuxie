@@ -18,18 +18,18 @@
       "id": "Q1",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Welches Thema wird besprochen (Gespräch 1)?",
+      "question": "Wie wird das Wetter am Samstag sein?",
       "options": {
-        "a": "Reisen und Verkehr",
-        "b": "Gesundheit und Körper",
-        "c": "Wohnung und Haushalt"
+        "a": "Es soll sonnig sein.",
+        "b": "Es soll regnen.",
+        "c": "Es soll bewölkt sein."
       },
       "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Man hört: \"Reisen und Verkehr\".",
-        "vi": "Đoạn hội thoại 1 nói về chủ đề gì?",
-        "key_evidence": "Reisen und Verkehr",
+        "de": "Lisa sagt: 'Ja, am Samstag soll es sonnig sein'.",
+        "vi": "Lisa nói: 'Vâng, thứ Bảy trời sẽ nắng'.",
+        "key_evidence": "Ja, am Samstag soll es sonnig sein",
         "key_vocabulary": []
       }
     },
@@ -37,18 +37,75 @@
       "id": "Q2",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Welches Thema wird besprochen (Gespräch 1)?",
+      "question": "Wie lang ist der Radweg, den der Mann und Lisa fahren wollen?",
       "options": {
-        "a": "Toronto",
-        "b": "Bonn",
-        "c": "Neuseeland"
+        "a": "Etwa zwanzig Kilometer.",
+        "b": "Etwa dreißig Kilometer.",
+        "c": "Etwa vierzig Kilometer."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Der Mann sagt: 'Etwa dreißig Kilometer hin und zurück'.",
+        "vi": "Người đàn ông nói: 'Khoảng ba mươi kilômét cả đi và về'.",
+        "key_evidence": "Etwa dreißig Kilometer hin und zurück.",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q3",
+      "gespraech": 1,
+      "type": "mc_abc",
+      "question": "Wohin gehen der Mann und Lisa am Sonntag?",
+      "options": {
+        "a": "Sie gehen in einen Biergarten.",
+        "b": "Sie machen eine Fahrradtour.",
+        "c": "Sie gehen ins Museum."
       },
       "answer": "c",
       "points": 1,
       "explanation": {
-        "de": "Das Hauptthema ist \"Reisen\".",
-        "vi": "Đoạn hội thoại 1 nói về chủ đề gì?",
-        "key_evidence": "Reisen",
+        "de": "Der Mann sagt: 'Am Sonntag können wir ins Museum gehen'.",
+        "vi": "Người đàn ông nói: 'Chủ Nhật chúng ta có thể đi bảo tàng'.",
+        "key_evidence": "Am Sonntag können wir ins Museum gehen.",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q4",
+      "gespraech": 1,
+      "type": "mc_abc",
+      "question": "Wen möchten der Mann und Lisa noch zur Fahrradtour einladen?",
+      "options": {
+        "a": "Pedro und Anna.",
+        "b": "Maria und Tom.",
+        "c": "Niemanden."
+      },
+      "answer": "a",
+      "points": 1,
+      "explanation": {
+        "de": "Lisa sagt: 'Ja, frag doch mal Pedro und Anna'.",
+        "vi": "Lisa nói: 'Vâng, hãy hỏi Pedro và Anna xem sao'.",
+        "key_evidence": "Ja, frag doch mal Pedro und Anna.",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q5",
+      "gespraech": 1,
+      "type": "mc_abc",
+      "question": "Um wie viel Uhr beginnt die Fahrradtour?",
+      "options": {
+        "a": "Um neun Uhr.",
+        "b": "Um zehn Uhr.",
+        "c": "Um elf Uhr."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Der Mann fragt: 'Um zehn Uhr?' und Lisa antwortet: 'Perfekt!'.",
+        "vi": "Người đàn ông hỏi: 'Vào mười giờ?' và Lisa trả lời: 'Hoàn hảo!'.",
+        "key_evidence": "Um zehn Uhr? Dann ist es schon warm genug. Perfekt!",
         "key_vocabulary": []
       }
     }

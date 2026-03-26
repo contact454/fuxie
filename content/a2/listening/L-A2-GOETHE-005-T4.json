@@ -18,13 +18,13 @@
       "id": "Q1",
       "item": 1,
       "type": "ja_nein",
-      "statement": "Eine Person heißt Petra.",
-      "answer": "nein",
+      "statement": "Frau Dr. Yildiz ist eine Allgemeinmedizinerin.",
+      "answer": "ja",
       "points": 1,
       "explanation": {
-        "de": "Nein. Die Person heißt Dr.",
-        "vi": "Sai.",
-        "key_evidence": "Falsch. Die Person heißt Dr.",
+        "de": "Frau Dr. Yildiz sagt: 'Als Allgemeinmedizinerin sehe ich täglich viele verschiedene Patienten.'",
+        "vi": "Bà Dr. Yildiz nói: 'Là một bác sĩ đa khoa, tôi gặp nhiều bệnh nhân khác nhau mỗi ngày.'",
+        "key_evidence": "Als Allgemeinmedizinerin sehe ich täglich viele verschiedene Patienten.",
         "key_vocabulary": []
       }
     },
@@ -32,13 +32,13 @@
       "id": "Q2",
       "item": 2,
       "type": "ja_nein",
-      "statement": "Eine Person heißt Dr.",
-      "answer": "ja",
+      "statement": "Kopfschmerzen sind der häufigste Grund für einen Arztbesuch.",
+      "answer": "nein",
       "points": 1,
       "explanation": {
-        "de": "Ja. Man hört den Namen \"Dr\".",
-        "vi": "Đúng.",
-        "key_evidence": "Richtig. Man hört den Namen \"Dr\".",
+        "de": "Der Gast sagt: 'Erkältungen stehen an erster Stelle, gefolgt von Rückenschmerzen und Kopfschmerzen.'",
+        "vi": "Vị khách nói: 'Cảm lạnh đứng đầu, tiếp theo là đau lưng và đau đầu.'",
+        "key_evidence": "Erkältungen stehen an erster Stelle, gefolgt von Rückenschmerzen und Kopfschmerzen.",
         "key_vocabulary": []
       }
     },
@@ -46,13 +46,13 @@
       "id": "Q3",
       "item": 3,
       "type": "ja_nein",
-      "statement": "Eine Person heißt Jörg.",
-      "answer": "nein",
+      "statement": "Patienten sollen ihre Symptome vor dem Arztbesuch notieren.",
+      "answer": "ja",
       "points": 1,
       "explanation": {
-        "de": "Nein. Die Person heißt Dr.",
-        "vi": "Sai.",
-        "key_evidence": "Falsch. Die Person heißt Dr.",
+        "de": "Der Gast rät: 'Notieren Sie vorher Ihre Symptome: Was tut weh, seit wann und wie stark?'",
+        "vi": "Vị khách khuyên: 'Hãy ghi lại các triệu chứng của bạn trước: Đau gì, từ khi nào và mức độ nặng nhẹ ra sao?'",
+        "key_evidence": "Notieren Sie vorher Ihre Symptome: Was tut weh, seit wann und wie stark?",
         "key_vocabulary": []
       }
     },
@@ -60,13 +60,27 @@
       "id": "Q4",
       "item": 4,
       "type": "ja_nein",
-      "statement": "Eine Person heißt Anna.",
+      "statement": "In allen Regionen Deutschlands gibt es genug Hausärzte.",
       "answer": "nein",
       "points": 1,
       "explanation": {
-        "de": "Nein. Die Person heißt Dr.",
-        "vi": "Sai.",
-        "key_evidence": "Falsch. Die Person heißt Dr.",
+        "de": "Der Gast erklärt: 'In den Städten ja, aber auf dem Land fehlen oft Hausärzte.'",
+        "vi": "Vị khách giải thích: 'Ở các thành phố thì có đủ, nhưng ở nông thôn thường thiếu bác sĩ gia đình.'",
+        "key_evidence": "In den Städten ja, aber auf dem Land fehlen oft Hausärzte.",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q5",
+      "item": 5,
+      "type": "ja_nein",
+      "statement": "Die Krankenkasse bezahlt einen Gesundheitscheck ab 35 Jahren.",
+      "answer": "ja",
+      "points": 1,
+      "explanation": {
+        "de": "Der Gast sagt: 'Ab fünfunddreißig Jahren zahlt die Kasse alle drei Jahre einen umfassenden Check-up.'",
+        "vi": "Vị khách nói: 'Từ ba mươi lăm tuổi trở lên, quỹ bảo hiểm y tế chi trả cho một lần kiểm tra sức khỏe toàn diện mỗi ba năm.'",
+        "key_evidence": "Ab fünfunddreißig Jahren zahlt die Kasse alle drei Jahre einen umfassenden Check-up.",
         "key_vocabulary": []
       }
     }

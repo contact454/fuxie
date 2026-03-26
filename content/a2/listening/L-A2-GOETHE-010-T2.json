@@ -18,42 +18,110 @@
       "id": "Q1",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Welches Thema wird besprochen (Gespräch 1)?",
+      "question": "Wie viele Minuten Verspätung hat der Zug?",
       "options": {
-        "a": "Arbeit und Beruf",
-        "b": "Bildung und Schule",
-        "c": "Reisen und Verkehr"
+        "a": "Zehn Minuten.",
+        "b": "Dreißig Minuten.",
+        "c": "Fünfzehn Minuten."
       },
-      "answer": "c",
+      "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Man hört: \"Reisen und Verkehr\".",
-        "vi": "Đoạn hội thoại 1 nói về chủ đề gì?",
-        "key_evidence": "Reisen und Verkehr",
-        "key_vocabulary": []
+        "de": "Die Frau sagt: 'Ja, sie haben gesagt, dass der Zug Verspätung hat. Dreißig Minuten.'",
+        "vi": "Người phụ nữ nói: 'Vâng, họ nói rằng tàu bị trễ. Ba mươi phút.'",
+        "key_evidence": "Ja, sie haben gesagt, dass der Zug Verspätung hat. Dreißig Minuten.",
+        "key_vocabulary": [
+          "Verspätung",
+          "Minuten"
+        ]
       }
     },
     {
       "id": "Q2",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Woher kommt die Person (Gespräch 1)?",
+      "question": "Wann hat der Mann einen Termin in München?",
       "options": {
-        "a": "München",
-        "b": "Zürich",
-        "c": "Hamburg"
+        "a": "Um dreizehn Uhr fünf.",
+        "b": "Um vierzehn Uhr fünfzehn.",
+        "c": "Um fünfzehn Uhr."
+      },
+      "answer": "c",
+      "points": 1,
+      "explanation": {
+        "de": "Der Mann sagt: 'Ich muss um fünfzehn Uhr in München bei einem Termin sein.'",
+        "vi": "Người đàn ông nói: 'Tôi phải có mặt ở Munich lúc 3 giờ chiều cho một cuộc hẹn.'",
+        "key_evidence": "Ich muss um fünfzehn Uhr in München bei einem Termin sein.",
+        "key_vocabulary": [
+          "Termin",
+          "München"
+        ]
+      }
+    },
+    {
+      "id": "Q3",
+      "gespraech": 1,
+      "type": "mc_abc",
+      "question": "Für welchen Zug hat die Frau eine Fahrkarte?",
+      "options": {
+        "a": "Für den ICE um dreizehn Uhr fünf.",
+        "b": "Für den IC um vierzehn Uhr fünfzehn.",
+        "c": "Für einen Zug nach Hamburg."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Die Frau sagt: 'Aber meine Fahrkarte ist für den IC um vierzehn Uhr fünfzehn.'",
+        "vi": "Người phụ nữ nói: 'Nhưng vé của tôi là cho chuyến IC lúc 14 giờ 15 phút.'",
+        "key_evidence": "Aber meine Fahrkarte ist für den IC um vierzehn Uhr fünfzehn.",
+        "key_vocabulary": [
+          "Fahrkarte",
+          "Zug"
+        ]
+      }
+    },
+    {
+      "id": "Q4",
+      "gespraech": 1,
+      "type": "mc_abc",
+      "question": "Wo ist der Schalter 'DB Information'?",
+      "options": {
+        "a": "Im Erdgeschoss.",
+        "b": "In der Haupthalle.",
+        "c": "Im ersten Stock."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Der Mann sagt: 'Dort drüben in der Haupthalle. Sehen Sie das Schild 'DB Information'?'",
+        "vi": "Người đàn ông nói: 'Ở đằng kia trong sảnh chính. Bạn có thấy biển 'DB Information' không?'",
+        "key_evidence": "Dort drüben in der Haupthalle. Sehen Sie das Schild 'DB Information'?",
+        "key_vocabulary": [
+          "Schalter",
+          "Haupthalle"
+        ]
+      }
+    },
+    {
+      "id": "Q5",
+      "gespraech": 1,
+      "type": "mc_abc",
+      "question": "Wo kann der Mann einen Kaffee bekommen?",
+      "options": {
+        "a": "Im Erdgeschoss neben dem Buchladen.",
+        "b": "Im ersten Stock mit Brötchen.",
+        "c": "In der Haupthalle."
       },
       "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Man hört: \"München\".",
-        "vi": "Người đó đến từ đâu (đoạn 1)?",
-        "key_evidence": "München",
+        "de": "Der Mann sagt: 'Im Erdgeschoss gibt es ein Café direkt neben dem Buchladen.'",
+        "vi": "Người đàn ông nói: 'Ở tầng trệt có một quán cà phê ngay cạnh hiệu sách.'",
+        "key_evidence": "Im Erdgeschoss gibt es ein Café direkt neben dem Buchladen.",
         "key_vocabulary": [
-          {
-            "word": "kommen aus",
-            "meaning": "to come from"
-          }
+          "Kaffee",
+          "Erdgeschoss",
+          "Buchladen"
         ]
       }
     }

@@ -18,18 +18,18 @@
       "id": "Q1",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Welches Thema wird besprochen (Gespräch 1)?",
+      "question": "Was sind die ersten Beschwerden des Patienten?",
       "options": {
-        "a": "Wohnung und Haushalt",
-        "b": "Einkaufen und Geld",
-        "c": "Arbeit und Beruf"
+        "a": "Starke Kopfschmerzen und Müdigkeit.",
+        "b": "Fieber und Husten.",
+        "c": "Halsschmerzen und eine Entzündung."
       },
-      "answer": "c",
+      "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Man hört: \"Arbeit und Beruf\".",
-        "vi": "Đoạn hội thoại 1 nói về chủ đề gì?",
-        "key_evidence": "Arbeit und Beruf",
+        "de": "Der Patient sagt: 'Ich habe seit drei Tagen starke Kopfschmerzen und bin sehr müde.'",
+        "vi": "Bệnh nhân nói: 'Tôi bị đau đầu dữ dội và rất mệt mỏi đã ba ngày rồi.'",
+        "key_evidence": "Ich habe seit drei Tagen starke Kopfschmerzen und bin sehr müde.",
         "key_vocabulary": []
       }
     },
@@ -37,48 +37,76 @@
       "id": "Q2",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Wie heißt eine Person im Gespräch 1?",
+      "question": "Wie hoch war das Fieber des Patienten heute Morgen?",
       "options": {
-        "a": "Anna",
-        "b": "Doktor",
-        "c": "Sabine"
+        "a": "Achtunddreißig Grad fünf.",
+        "b": "Dreiunddreißig Grad fünf.",
+        "c": "Achtundzwanzig Grad fünf."
       },
-      "answer": "b",
+      "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Man hört: \"Doktor\".",
-        "vi": "Một người trong đoạn 1 tên là gì?",
-        "key_evidence": "Doktor",
-        "key_vocabulary": [
-          {
-            "word": "heißen",
-            "meaning": "to be called"
-          }
-        ]
+        "de": "Der Patient sagt: 'Ja, heute Morgen hatte ich achtunddreißig Grad fünf.'",
+        "vi": "Bệnh nhân nói: 'Vâng, sáng nay tôi bị sốt ba mươi tám độ năm.'",
+        "key_evidence": "Ja, heute Morgen hatte ich achtunddreißig Grad fünf.",
+        "key_vocabulary": []
       }
     },
     {
       "id": "Q3",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Wie heißt eine Person (Gespräch 1)?",
+      "question": "Seit wann hat der Patient die Symptome?",
       "options": {
-        "a": "Malaysia",
-        "b": "Korea",
-        "c": "Konstanz"
+        "a": "Seit Montag.",
+        "b": "Seit drei Tagen.",
+        "c": "Seit sieben Tagen."
       },
-      "answer": "c",
+      "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man den Namen \"Doktor\".",
-        "vi": "Một người trong đoạn 1 tên là gì?",
-        "key_evidence": "Doktor",
-        "key_vocabulary": [
-          {
-            "word": "heißen",
-            "meaning": "to be called"
-          }
-        ]
+        "de": "Der Patient sagt: 'Seit Montag. Erst nur Kopfschmerzen, dann kamen die anderen Symptome dazu.'",
+        "vi": "Bệnh nhân nói: 'Từ thứ Hai. Ban đầu chỉ đau đầu, sau đó các triệu chứng khác xuất hiện.'",
+        "key_evidence": "Seit Montag. Erst nur Kopfschmerzen, dann kamen die anderen Symptome dazu.",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q4",
+      "gespraech": 1,
+      "type": "mc_abc",
+      "question": "Was empfiehlt der Herr Doktor gegen die Halsschmerzen?",
+      "options": {
+        "a": "Lutschtabletten und viel warmen Tee.",
+        "b": "Hustensaft und Antibiotika.",
+        "c": "Nur Kamillentee mit Honig."
+      },
+      "answer": "a",
+      "points": 1,
+      "explanation": {
+        "de": "Der Herr Doktor sagt: 'Lutschtabletten und viel warmen Tee trinken. Am besten Kamillentee mit Honig.'",
+        "vi": "Bác sĩ nói: 'Uống viên ngậm và nhiều trà ấm. Tốt nhất là trà hoa cúc với mật ong.'",
+        "key_evidence": "Lutschtabletten und viel warmen Tee trinken. Am besten Kamillentee mit Honig.",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q5",
+      "gespraech": 1,
+      "type": "mc_abc",
+      "question": "Für wie viele Tage bekommt der Patient eine Krankschreibung?",
+      "options": {
+        "a": "Fünf Tage.",
+        "b": "Sieben Tage.",
+        "c": "Zehn Tage."
+      },
+      "answer": "a",
+      "points": 1,
+      "explanation": {
+        "de": "Der Herr Doktor sagt: 'Ja, ich schreibe Sie für fünf Tage krank.'",
+        "vi": "Bác sĩ nói: 'Vâng, tôi sẽ viết giấy nghỉ ốm cho bạn trong năm ngày.'",
+        "key_evidence": "Ja, ich schreibe Sie für fünf Tage krank.",
+        "key_vocabulary": []
       }
     }
   ],

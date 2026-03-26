@@ -18,61 +18,66 @@
       "id": "Q1",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Welches Thema wird besprochen (Gespräch 1)?",
+      "question": "Wie sind die Arbeitszeiten der Frau in ihrem neuen Job?",
       "options": {
-        "a": "Arbeit und Beruf",
-        "b": "Einkaufen und Geld",
-        "c": "Familie und Freunde"
+        "a": "Sie hat Gleitzeit von acht bis sechzehn Uhr.",
+        "b": "Sie arbeitet nur freitags im Homeoffice.",
+        "c": "Sie hat keine festen Arbeitszeiten."
       },
       "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: \"Arbeit und Beruf\".",
-        "vi": "Đoạn hội thoại 1 nói về chủ đề gì?",
-        "key_evidence": "Arbeit und Beruf",
-        "key_vocabulary": []
+        "de": "Die Frau sagt: 'Gleitzeit von acht bis sechzehn Uhr.'",
+        "vi": "Người phụ nữ nói: 'Thời gian làm việc linh hoạt từ 8 giờ đến 16 giờ.'",
+        "key_evidence": "Gleitzeit von acht bis sechzehn Uhr.",
+        "key_vocabulary": [
+          "Gleitzeit",
+          "Arbeitszeiten"
+        ]
       }
     },
     {
       "id": "Q2",
       "gespraech": 2,
       "type": "mc_abc",
-      "question": "Welches Thema wird besprochen (Gespräch 2)?",
+      "question": "Was zieht die Frau zum Vorstellungsgespräch an?",
       "options": {
-        "a": "Dänemark",
-        "b": "Iran",
-        "c": "Indien"
+        "a": "Einen dunklen Blazer und eine schwarze Hose.",
+        "b": "Etwas sehr Formales.",
+        "c": "Smart Casual Kleidung."
       },
       "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Das Hauptthema ist \"Einkaufen\".",
-        "vi": "Đoạn hội thoại 2 nói về chủ đề gì?",
-        "key_evidence": "Einkaufen",
-        "key_vocabulary": []
+        "de": "Die Frau sagt: 'Einen dunklen Blazer und eine schwarze Hose.'",
+        "vi": "Người phụ nữ nói: 'Một chiếc áo blazer màu tối và một chiếc quần đen.'",
+        "key_evidence": "Einen dunklen Blazer und eine schwarze Hose.",
+        "key_vocabulary": [
+          "Blazer",
+          "Hose",
+          "Vorstellungsgespräch"
+        ]
       }
     },
     {
       "id": "Q3",
       "gespraech": 3,
       "type": "mc_abc",
-      "question": "Woher kommt die Person (Gespräch 3)?",
+      "question": "Wie viel mehr Geld bekommt der Mann im Monat?",
       "options": {
-        "a": "Potsdam",
-        "b": "Dresden",
-        "c": "Wolfsburg"
+        "a": "Zweihundert Euro brutto.",
+        "b": "Er bekommt eine bessere Position.",
+        "c": "Er bekommt kein Geld, nur eine bessere Position."
       },
       "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Die Person kommt aus Potsdam.",
-        "vi": "Người đó đến từ đâu (đoạn 3)?",
-        "key_evidence": "Potsdam",
+        "de": "Der Mann sagt: 'Zweihundert Euro brutto mehr im Monat.'",
+        "vi": "Người đàn ông nói: 'Hai trăm Euro tổng cộng mỗi tháng.'",
+        "key_evidence": "Zweihundert Euro brutto mehr im Monat.",
         "key_vocabulary": [
-          {
-            "word": "kommen aus",
-            "meaning": "to come from"
-          }
+          "brutto",
+          "Gehaltserhöhung"
         ]
       }
     },
@@ -80,38 +85,45 @@
       "id": "Q4",
       "gespraech": 4,
       "type": "mc_abc",
-      "question": "Welches Thema wird besprochen (Gespräch 4)?",
+      "question": "Was ist für den Betriebsausflug geplant?",
       "options": {
-        "a": "Arbeit und Beruf",
-        "b": "Essen und Trinken",
-        "c": "Alltag"
+        "a": "Eine Stadtführung und ein Abendessen.",
+        "b": "Nur eine Stadtführung.",
+        "c": "Das Unternehmen bezahlt alles."
       },
-      "answer": "c",
+      "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: \"Alltag\".",
-        "vi": "Đoạn hội thoại 4 nói về chủ đề gì?",
-        "key_evidence": "Alltag",
-        "key_vocabulary": []
+        "de": "Der Mann sagt: 'Erst eine Stadtführung und dann ein gemeinsames Abendessen.'",
+        "vi": "Người đàn ông nói: 'Đầu tiên là một chuyến tham quan thành phố và sau đó là một bữa tối chung.'",
+        "key_evidence": "Erst eine Stadtführung und dann ein gemeinsames Abendessen.",
+        "key_vocabulary": [
+          "Betriebsausflug",
+          "Stadtführung",
+          "Abendessen"
+        ]
       }
     },
     {
       "id": "Q5",
       "gespraech": 5,
       "type": "mc_abc",
-      "question": "Welches Thema wird besprochen (Gespräch 5)?",
+      "question": "Für welche Position sucht die Frau einen Job in der Firma des Mannes?",
       "options": {
-        "a": "Einkaufen und Geld",
-        "b": "Arbeit und Beruf",
-        "c": "Gesundheit und Körper"
+        "a": "Im Kundenservice.",
+        "b": "Für eine Stelle, wo man drei Sprachen spricht.",
+        "c": "Für eine Stelle mit dreitausend Euro Gehalt."
       },
       "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man: \"Einkaufen und Geld\".",
-        "vi": "Đoạn hội thoại 5 nói về chủ đề gì?",
-        "key_evidence": "Einkaufen und Geld",
-        "key_vocabulary": []
+        "de": "Der Mann sagt: 'Ja, wir suchen gerade jemanden für den Kundenservice.'",
+        "vi": "Người đàn ông nói: 'Vâng, chúng tôi đang tìm người cho bộ phận dịch vụ khách hàng.'",
+        "key_evidence": "Ja, wir suchen gerade jemanden für den Kundenservice.",
+        "key_vocabulary": [
+          "Kundenservice",
+          "Stelle"
+        ]
       }
     }
   ],

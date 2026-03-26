@@ -18,56 +18,88 @@
       "id": "Q1",
       "item": 1,
       "type": "ja_nein",
-      "statement": "Eine Person heißt Sara.",
-      "answer": "nein",
+      "statement": "Herr Neumann ist seit zehn Jahren Schulleiter.",
+      "answer": "ja",
       "points": 1,
       "explanation": {
-        "de": "Nein. Die Person heißt Neumann.",
-        "vi": "Sai.",
-        "key_evidence": "Falsch. Die Person heißt Neumann.",
-        "key_vocabulary": []
+        "de": "Herr Neumann sagt: 'Ich bin seit zehn Jahren Schulleiter'.",
+        "vi": "Ông Neumann nói: 'Tôi đã là hiệu trưởng được mười năm rồi'.",
+        "key_evidence": "Ich bin seit zehn Jahren Schulleiter",
+        "key_vocabulary": [
+          "Schulleiter",
+          "seit"
+        ]
       }
     },
     {
       "id": "Q2",
       "item": 2,
       "type": "ja_nein",
-      "statement": "Eine Person heißt Neumann.",
-      "answer": "ja",
+      "statement": "Die Schule von Herrn Neumann nutzt heute weniger digitale Medien.",
+      "answer": "nein",
       "points": 1,
       "explanation": {
-        "de": "Ja. Man hört den Namen \"Neumann\".",
-        "vi": "Đúng.",
-        "key_evidence": "Richtig. Man hört den Namen \"Neumann\".",
-        "key_vocabulary": []
+        "de": "Herr Neumann erklärt: 'Wir nutzen mehr digitale Medien'.",
+        "vi": "Ông Neumann giải thích: 'Chúng tôi sử dụng nhiều phương tiện kỹ thuật số hơn'.",
+        "key_evidence": "Wir nutzen mehr digitale Medien",
+        "key_vocabulary": [
+          "nutzen",
+          "digitale Medien",
+          "mehr"
+        ]
       }
     },
     {
       "id": "Q3",
       "item": 3,
       "type": "ja_nein",
-      "statement": "Eine Person heißt Lisa.",
-      "answer": "nein",
+      "statement": "Herr Neumann empfiehlt Eltern, ihren Kindern viel vorzulesen.",
+      "answer": "ja",
       "points": 1,
       "explanation": {
-        "de": "Nein. Die Person heißt Neumann.",
-        "vi": "Sai.",
-        "key_evidence": "Falsch. Die Person heißt Neumann.",
-        "key_vocabulary": []
+        "de": "Er rät den Eltern: 'Lesen Sie viel mit Ihren Kindern vor'.",
+        "vi": "Ông ấy khuyên phụ huynh: 'Hãy đọc sách cho con bạn nghe nhiều'.",
+        "key_evidence": "Lesen Sie viel mit Ihren Kindern vor.",
+        "key_vocabulary": [
+          "empfehlen",
+          "vorlesen"
+        ]
       }
     },
     {
       "id": "Q4",
       "item": 4,
       "type": "ja_nein",
-      "statement": "Eine Person heißt Maria.",
+      "statement": "An Herrn Neumanns Schule gibt es immer genug Lehrer.",
       "answer": "nein",
       "points": 1,
       "explanation": {
-        "de": "Nein. Die Person heißt Neumann.",
-        "vi": "Sai.",
-        "key_evidence": "Falsch. Die Person heißt Neumann.",
-        "key_vocabulary": []
+        "de": "Herr Neumann sagt: 'Leider nicht immer'.",
+        "vi": "Ông Neumann nói: 'Thật tiếc là không phải lúc nào cũng đủ'.",
+        "key_evidence": "Leider nicht immer.",
+        "key_vocabulary": [
+          "genug",
+          "Lehrer",
+          "leider"
+        ]
+      }
+    },
+    {
+      "id": "Q5",
+      "item": 5,
+      "type": "ja_nein",
+      "statement": "Herr Neumann wünscht sich kleinere Klassen für die Zukunft.",
+      "answer": "ja",
+      "points": 1,
+      "explanation": {
+        "de": "Er äußert den Wunsch: 'Kleinere Klassen und mehr individuelle Förderung'.",
+        "vi": "Ông ấy bày tỏ mong muốn: 'Các lớp học nhỏ hơn và hỗ trợ cá nhân nhiều hơn'.",
+        "key_evidence": "Kleinere Klassen und mehr individuelle Förderung für jedes einzelne Kind.",
+        "key_vocabulary": [
+          "wünschen",
+          "kleinere Klassen",
+          "Zukunft"
+        ]
       }
     }
   ],

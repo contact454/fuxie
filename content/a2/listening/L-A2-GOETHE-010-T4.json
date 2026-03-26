@@ -18,13 +18,13 @@
       "id": "Q1",
       "item": 1,
       "type": "ja_nein",
-      "statement": "Eine Person heißt Peter.",
-      "answer": "nein",
+      "statement": "Frau Hartmann ist Pressesprecherin der Berliner Verkehrsbetriebe.",
+      "answer": "ja",
       "points": 1,
       "explanation": {
-        "de": "Nein. Die Person heißt Hartmann.",
-        "vi": "Sai.",
-        "key_evidence": "Falsch. Die Person heißt Hartmann.",
+        "de": "Der Moderator sagt: 'Wir haben heute Frau Hartmann bei uns, Pressesprecherin der Berliner Verkehrsbetriebe.'",
+        "vi": "Người dẫn chương trình nói: 'Hôm nay chúng tôi có bà Hartmann, phát ngôn viên báo chí của Công ty Vận tải Berlin, ở đây.'",
+        "key_evidence": "Wir haben heute Frau Hartmann bei uns, Pressesprecherin der Berliner Verkehrsbetriebe.",
         "key_vocabulary": []
       }
     },
@@ -32,13 +32,13 @@
       "id": "Q2",
       "item": 2,
       "type": "ja_nein",
-      "statement": "Eine Person heißt Hartmann.",
-      "answer": "ja",
+      "statement": "Die Verkehrsbetriebe investieren in neue Busse.",
+      "answer": "nein",
       "points": 1,
       "explanation": {
-        "de": "Ja. Man hört den Namen \"Hartmann\".",
-        "vi": "Đúng.",
-        "key_evidence": "Richtig. Man hört den Namen \"Hartmann\".",
+        "de": "Frau Hartmann sagt: 'Ja, wir investieren in neue Züge und modernisieren alte Strecken.' Sie spricht von Zügen, nicht von Bussen.",
+        "vi": "Bà Hartmann nói: 'Vâng, chúng tôi đầu tư vào các chuyến tàu mới và hiện đại hóa các tuyến đường cũ.' Bà ấy nói về tàu hỏa, không phải xe buýt.",
+        "key_evidence": "Ja, wir investieren in neue Züge und modernisieren alte Strecken.",
         "key_vocabulary": []
       }
     },
@@ -46,13 +46,13 @@
       "id": "Q3",
       "item": 3,
       "type": "ja_nein",
-      "statement": "Eine Person heißt Lisa.",
+      "statement": "Berlin bekommt dieses Jahr fünfundvierzig neue S-Bahnen.",
       "answer": "nein",
       "points": 1,
       "explanation": {
-        "de": "Nein. Die Person heißt Hartmann.",
-        "vi": "Sai.",
-        "key_evidence": "Falsch. Die Person heißt Hartmann.",
+        "de": "Frau Hartmann sagt: 'Ab nächstem Jahr bekommen wir fünfundvierzig neue S-Bahnen für Berlin.' Die S-Bahnen kommen nächstes Jahr, nicht dieses Jahr.",
+        "vi": "Bà Hartmann nói: 'Từ năm sau, chúng tôi sẽ nhận được 45 tàu S-Bahn mới cho Berlin.' Các tàu S-Bahn sẽ đến vào năm sau, không phải năm nay.",
+        "key_evidence": "Ab nächstem Jahr bekommen wir fünfundvierzig neue S-Bahnen für Berlin.",
         "key_vocabulary": []
       }
     },
@@ -60,13 +60,27 @@
       "id": "Q4",
       "item": 4,
       "type": "ja_nein",
-      "statement": "Eine Person heißt Andreas.",
+      "statement": "Ein Einzelfahrschein kostet ab Januar drei Euro.",
       "answer": "nein",
       "points": 1,
       "explanation": {
-        "de": "Nein. Die Person heißt Hartmann.",
-        "vi": "Sai.",
-        "key_evidence": "Falsch. Die Person heißt Hartmann.",
+        "de": "Frau Hartmann sagt: 'Ein Einzelfahrschein kostet dann drei Euro zehn.' Der Preis ist drei Euro zehn, nicht drei Euro.",
+        "vi": "Bà Hartmann nói: 'Một vé đơn sau đó sẽ có giá ba Euro mười xu.' Giá là ba Euro mười xu, không phải ba Euro.",
+        "key_evidence": "Ein Einzelfahrschein kostet dann drei Euro zehn.",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q5",
+      "item": 5,
+      "type": "ja_nein",
+      "statement": "Die App der Verkehrsbetriebe wird komplett neu gestaltet.",
+      "answer": "ja",
+      "points": 1,
+      "explanation": {
+        "de": "Frau Hartmann sagt: 'Ja, unsere App wird komplett neu gestaltet.'",
+        "vi": "Bà Hartmann nói: 'Vâng, ứng dụng của chúng tôi sẽ được thiết kế lại hoàn toàn.'",
+        "key_evidence": "Ja, unsere App wird komplett neu gestaltet.",
         "key_vocabulary": []
       }
     }

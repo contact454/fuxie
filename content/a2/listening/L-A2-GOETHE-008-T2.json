@@ -18,18 +18,18 @@
       "id": "Q1",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Welches Thema wird besprochen (Gespräch 1)?",
+      "question": "Wann ist Marias Meeting?",
       "options": {
-        "a": "Einkaufen und Geld",
-        "b": "Medien und Kommunikation",
-        "c": "Arbeit und Beruf"
+        "a": "Um neun Uhr.",
+        "b": "Um zehn Uhr.",
+        "c": "Um halb elf."
       },
-      "answer": "c",
+      "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Man hört: \"Arbeit und Beruf\".",
-        "vi": "Đoạn hội thoại 1 nói về chủ đề gì?",
-        "key_evidence": "Arbeit und Beruf",
+        "de": "Maria sagt, sie muss die Präsentation für das Meeting um zehn Uhr fertig machen.",
+        "vi": "Maria nói rằng cô ấy phải hoàn thành bài thuyết trình cho cuộc họp lúc mười giờ.",
+        "key_evidence": "Ja, ich muss die Präsentation für das Meeting um zehn Uhr fertig machen.",
         "key_vocabulary": []
       }
     },
@@ -37,48 +37,76 @@
       "id": "Q2",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Wie heißt eine Person im Gespräch 1?",
+      "question": "Wie lange arbeitet Thomas schon in der Firma?",
       "options": {
-        "a": "Klaus",
-        "b": "Weber",
-        "c": "Claudia"
+        "a": "Seit zwei Jahren.",
+        "b": "Seit drei Jahren.",
+        "c": "Seit vier Jahren."
       },
       "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Man hört: \"Weber\".",
-        "vi": "Một người trong đoạn 1 tên là gì?",
-        "key_evidence": "Weber",
-        "key_vocabulary": [
-          {
-            "word": "heißen",
-            "meaning": "to be called"
-          }
-        ]
+        "de": "Thomas antwortet auf Marias Frage, dass er seit drei Jahren in der Firma arbeitet.",
+        "vi": "Thomas trả lời câu hỏi của Maria rằng anh ấy đã làm việc ở công ty được ba năm.",
+        "key_evidence": "Seit drei Jahren.",
+        "key_vocabulary": []
       }
     },
     {
       "id": "Q3",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Wie heißt eine Person (Gespräch 1)?",
+      "question": "Wo ist die Kantine?",
       "options": {
-        "a": "Zürich",
-        "b": "Oldenburg",
-        "c": "Linz"
+        "a": "Im ersten Stock.",
+        "b": "Im Erdgeschoss.",
+        "c": "Im zweiten Stock."
       },
-      "answer": "c",
+      "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Im Gespräch hört man den Namen \"Weber\".",
-        "vi": "Một người trong đoạn 1 tên là gì?",
-        "key_evidence": "Weber",
-        "key_vocabulary": [
-          {
-            "word": "heißen",
-            "meaning": "to be called"
-          }
-        ]
+        "de": "Thomas sagt, dass die Kantine im Erdgeschoss ist.",
+        "vi": "Thomas nói rằng nhà ăn ở tầng trệt.",
+        "key_evidence": "Ja, im Erdgeschoss.",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q4",
+      "gespraech": 1,
+      "type": "mc_abc",
+      "question": "Wann gehen Maria und Thomas Mittag essen?",
+      "options": {
+        "a": "Um zwölf Uhr.",
+        "b": "Um halb eins.",
+        "c": "Um ein Uhr."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Maria fragt, ob sie um halb eins zusammen Mittag essen gehen können, und Thomas stimmt zu.",
+        "vi": "Maria hỏi liệu họ có thể đi ăn trưa cùng nhau lúc mười hai rưỡi không, và Thomas đồng ý.",
+        "key_evidence": "Gehen wir zusammen Mittag essen? Um halb eins?",
+        "key_vocabulary": []
+      }
+    },
+    {
+      "id": "Q5",
+      "gespraech": 1,
+      "type": "mc_abc",
+      "question": "Wo bekommt Maria ihre Mitarbeiterkarte?",
+      "options": {
+        "a": "Im Erdgeschoss.",
+        "b": "In der Personalabteilung.",
+        "c": "Neben der Küche."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Thomas erklärt, dass Maria ihre Mitarbeiterkarte in der Personalabteilung im zweiten Stock bekommt.",
+        "vi": "Thomas giải thích rằng Maria sẽ nhận thẻ nhân viên của mình ở phòng nhân sự trên tầng hai.",
+        "key_evidence": "In der Personalabteilung im zweiten Stock. Frag nach Frau Weber.",
+        "key_vocabulary": []
       }
     }
   ],
