@@ -15,45 +15,58 @@
   },
   "questions": [
     {
-      "id": "Q1",
+      "id": "gds_h_01",
       "item": 1,
       "type": "ja_nein",
-      "statement": "Die Person kommt aus Frankreich.",
-      "answer": "nein",
-      "points": 1,
-      "explanation": {
-        "de": "Nein. Die Aussage stimmt nicht mit dem Hörtext überein.",
-        "vi": "Sai.",
-        "key_evidence": "Die Person kommt aus Frankreich.",
-        "key_vocabulary": []
-      }
-    },
-    {
-      "id": "Q2",
-      "item": 2,
-      "type": "ja_nein",
-      "statement": "Schulbüchern wird erwähnt.",
+      "statement": "Die geschichtsdidaktische Aufarbeitung der DDR-Vergangenheit war unmittelbar nach der Wende von einer unreflektierten, triumphalistischen Sichtweise geprägt.",
       "answer": "ja",
       "points": 1,
       "explanation": {
-        "de": "Ja. Schulbüchern wird genannt.",
-        "vi": "Đúng.",
-        "key_evidence": "Richtig. Schulbüchern wird genannt.",
-        "key_vocabulary": []
+        "de": "Die Aussage ist korrekt. Der Journalist führt aus, dass in den Jahren direkt nach der Wiedervereinigung eine einseitige Erzählung vom Sieg der Freiheit vorherrschte, die nuancierte Darstellungen des DDR-Alltagslebens vernachlässigte, was einer unreflektierten, triumphalistischen Sichtweise entspricht.",
+        "vi": "Nhận định này đúng. Nhà báo trình bày rằng trong những năm ngay sau khi tái thống nhất, một câu chuyện phiến diện về chiến thắng của tự do đã chiếm ưu thế, bỏ qua những miêu tả tinh tế về cuộc sống hàng ngày ở CHDC Đức, điều này tương ứng với một quan điểm hả hê, thiếu sự tự phản tỉnh.",
+        "key_evidence": "In den unmittelbaren Nachwendejahren dominierte eine Erzählung des Triumphes der Freiheit über die Diktatur, die wenig Raum für differenzierte Betrachtungen der DDR-Alltagsgeschichte ließ.",
+        "key_vocabulary": [
+          "geschichtsdidaktische Aufarbeitung - historical-didactic processing",
+          "unreflektiert - unreflective",
+          "triumphalistisch - triumphalist"
+        ]
       }
     },
     {
-      "id": "Q3",
-      "item": 3,
+      "id": "gds_h_02",
+      "item": 2,
       "type": "ja_nein",
-      "statement": "Die Person kommt aus New York.",
+      "statement": "Dem Journalisten zufolge ist es gelungen, ein konsolidiertes, gesamtdeutsches Geschichtsnarrativ zur Teilung Deutschlands in den Lehrmaterialien zu etablieren.",
       "answer": "nein",
       "points": 1,
       "explanation": {
-        "de": "Nein. Die Aussage stimmt nicht mit dem Hörtext überein.",
-        "vi": "Sai.",
-        "key_evidence": "Die Person kommt aus New York.",
-        "key_vocabulary": []
+        "de": "Die Aussage ist falsch. Der Journalist betont explizit, dass auch 30 Jahre nach der Wiedervereinigung ost- und westdeutsche Schulbücher das Thema aus „deutlich unterschiedlichen Perspektiven“ behandeln, was der Idee eines konsolidierten, gesamtdeutschen Narrativs widerspricht.",
+        "vi": "Nhận định này sai. Nhà báo nhấn mạnh một cách rõ ràng rằng ngay cả 30 năm sau khi tái thống nhất, sách giáo khoa của Đông và Tây Đức vẫn xử lý chủ đề này từ 'những góc nhìn khác biệt rõ rệt', điều này mâu thuẫn với ý tưởng về một câu chuyện lịch sử chung, đã được củng cố của toàn nước Đức.",
+        "key_evidence": "Eine aktuelle Untersuchung des Georg-Eckert-Instituts zeigt, dass ostdeutsche und westdeutsche Schulbücher das Thema auch dreißig Jahre nach der Wiedervereinigung noch aus deutlich unterschiedlichen Perspektiven behandeln.",
+        "key_vocabulary": [
+          "konsolidiert - consolidated",
+          "gesamtdeutsch - all-German",
+          "Geschichtsnarrativ - historical narrative"
+        ]
+      }
+    },
+    {
+      "id": "gds_h_03",
+      "item": 3,
+      "type": "ja_nein",
+      "statement": "Die internationale Rezeption des Mauerfalls, insbesondere in den USA, würdigt laut Bericht primär die Verdienste der ostdeutschen Zivilgesellschaft.",
+      "answer": "nein",
+      "points": 1,
+      "explanation": {
+        "de": "Die Aussage ist falsch. Der Bericht stellt das Gegenteil fest: In amerikanischen Geschichtsbüchern wird die Rolle der ostdeutschen Bürgerbewegung „tendenziell marginalisiert“, da der Mauerfall als Höhepunkt einer von den USA angeführten Bewegung dargestellt wird. Die Verdienste werden also nicht gewürdigt, sondern in den Hintergrund gedrängt.",
+        "vi": "Nhận định này sai. Bài báo cáo nêu rõ điều ngược lại: trong sách giáo khoa lịch sử của Mỹ, vai trò của phong trào công dân Đông Đức 'có xu hướng bị xem nhẹ', vì sự sụp đổ của Bức tường Berlin được miêu tả như là đỉnh điểm của một phong trào do Hoa Kỳ lãnh đạo. Do đó, công lao của họ không được ghi nhận mà bị đẩy xuống hàng thứ yếu.",
+        "key_evidence": "In amerikanischen Geschichtsbüchern wird der Mauerfall häufig als Kulminationspunkt einer von den Vereinigten Staaten angeführten Befreiungsbewegung dargestellt, was die Rolle der ostdeutschen Bürgerbewegung tendenziell marginalisiert.",
+        "key_vocabulary": [
+          "Rezeption - reception",
+          "würdigen - to appreciate, to honor",
+          "Zivilgesellschaft - civil society",
+          "marginalisieren - to marginalize"
+        ]
       }
     }
   ],

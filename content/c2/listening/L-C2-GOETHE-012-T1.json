@@ -15,59 +15,72 @@
   },
   "questions": [
     {
-      "id": "Q1",
+      "id": "GDS_H1_Q1",
       "item": 1,
       "type": "ja_nein",
-      "statement": "Die Person kommt aus Frankfurt.",
-      "answer": "nein",
-      "points": 1,
-      "explanation": {
-        "de": "Nein. Die Person kommt aus Heidelberg.",
-        "vi": "Sai.",
-        "key_evidence": "Falsch. Die Person kommt aus Heidelberg.",
-        "key_vocabulary": []
-      }
-    },
-    {
-      "id": "Q2",
-      "item": 2,
-      "type": "ja_nein",
-      "statement": "Heidelberg wird erwähnt.",
+      "statement": "Die im Beitrag erwähnten Vorzeigeprojekte werden von Kritikern als kontraproduktive Alibi-Maßnahmen angesehen, die von der Notwendigkeit einer fundamentalen politischen Neuausrichtung ablenken.",
       "answer": "ja",
       "points": 1,
       "explanation": {
-        "de": "Ja. Heidelberg wird genannt.",
-        "vi": "Đúng.",
-        "key_evidence": "Richtig. Heidelberg wird genannt.",
-        "key_vocabulary": []
+        "de": "Die Aussage ist korrekt. Der Beitrag zitiert Kritiker, die bemängeln, dass solche 'Leuchtturmprojekte' (Vorzeigeprojekte) vom eigentlichen, strukturellen Problem ablenken und somit einer konsequenten, also fundamentalen, Wohnungsbaupolitik im Wege stehen. Sie dienen quasi als Alibi, um nicht umfassender handeln zu müssen.",
+        "vi": "Tuyên bố này là đúng. Bài báo trích lời các nhà phê bình phàn nàn rằng những 'dự án hải đăng' (dự án kiểu mẫu) như vậy làm sao lãng khỏi vấn đề cơ cấu thực sự và do đó cản trở một chính sách xây dựng nhà ở nhất quán, tức là một chính sách nền tảng. Chúng thực chất đóng vai trò như một cái cớ để không phải hành động một cách toàn diện hơn.",
+        "key_evidence": "Kritiker bemängeln allerdings, dass solche Leuchtturmprojekte das strukturelle Problem nicht lösen und die Politik davon ablenken, eine konsequente Wohnungsbaupolitik zu betreiben.",
+        "key_vocabulary": [
+          "kontraproduktiv: phản tác dụng",
+          "Alibi-Maßnahme: biện pháp bao biện, che đậy",
+          "fundamentale Neuausrichtung: định hướng lại một cách cơ bản"
+        ]
       }
     },
     {
-      "id": "Q3",
+      "id": "GDS_H1_Q2",
+      "item": 2,
+      "type": "ja_nein",
+      "statement": "Der Beitrag legt nahe, dass Studierende in einem dialektischen Prozess gefangen sind, in dem sie durch die Schaffung kulturellen Kapitals unbeabsichtigt ihre eigene Verdrängung aus urbanen Räumen initiieren.",
+      "answer": "ja",
+      "points": 1,
+      "explanation": {
+        "de": "Die Aussage ist korrekt. Der Bericht beschreibt das Paradoxon ('paradoxerweise'), dass Studierende durch ihre Subkulturen ein Viertel aufwerten ('kulturelle Aufwertung'), was den Boden für kommerzielle Interessen bereitet. Dies führt zu steigenden Mieten, die sich am Ende weder die ursprünglichen Bewohner noch die Studierenden selbst leisten können. Dieser widersprüchliche ('dialektische') Prozess führt zu ihrer eigenen Verdrängung.",
+        "vi": "Tuyên bố này là đúng. Bài báo mô tả nghịch lý ('paradoxerweise') rằng sinh viên thông qua các tiểu văn hóa của họ đã nâng cấp ('kulturelle Aufwertung') một khu phố, điều này tạo tiền đề cho các lợi ích thương mại. Điều này dẫn đến việc tăng giá thuê nhà mà cuối cùng cả cư dân ban đầu và chính sinh viên cũng không thể chi trả được. Quá trình mâu thuẫn ('biện chứng') này dẫn đến việc chính họ bị đẩy ra khỏi nơi đó.",
+        "key_evidence": "Wenn Studierende ein heruntergekommenes Viertel durch ihre Anwesenheit kulturell beleben, steigen die Immobilienpreise, sodass weder die ursprünglichen Bewohner noch die Studierenden selbst sich die Mieten auf Dauer leisten können.",
+        "key_vocabulary": [
+          "dialektischer Prozess: quá trình biện chứng",
+          "kulturelles Kapital: vốn văn hóa",
+          "Verdrängung: sự xua đuổi, sự thay thế"
+        ]
+      }
+    },
+    {
+      "id": "GDS_H1_Q3",
       "item": 3,
       "type": "ja_nein",
-      "statement": "Die Person kommt aus Düsseldorf.",
-      "answer": "nein",
+      "statement": "Aus dem Bericht geht hervor, dass die von den Studentenwerken bereitgestellten Wohnkapazitäten die Nachfrage bei Weitem nicht decken und somit lediglich einen Tropfen auf den heißen Stein darstellen.",
+      "answer": "ja",
       "points": 1,
       "explanation": {
-        "de": "Nein. Die Person kommt aus Heidelberg.",
-        "vi": "Sai.",
-        "key_evidence": "Falsch. Die Person kommt aus Heidelberg.",
-        "key_vocabulary": []
+        "de": "Die Aussage ist korrekt. Das Verhältnis von ca. 245.000 Wohnheimplätzen zu fast 3 Millionen Studierenden (Versorgungsgrad < 10%) wird im Beitrag dargestellt. Die idiomatische Wendung 'ein Tropfen auf den heißen Stein' beschreibt exakt diese massive Diskrepanz und die Unzulänglichkeit des Angebots.",
+        "vi": "Tuyên bố này là đúng. Tỷ lệ khoảng 245.000 chỗ ở trong ký túc xá so với gần 3 triệu sinh viên (tỷ lệ cung cấp < 10%) được trình bày trong bài báo. Thành ngữ 'ein Tropfen auf den heißen Stein' (như muối bỏ bể) mô tả chính xác sự chênh lệch lớn này và sự không tương xứng của nguồn cung.",
+        "key_evidence": "Die Studentenwerke verfügen bundesweit über nur etwa zweihundertfünfundvierzigtausend Wohnheimplätze, während es fast drei Millionen Studierende gibt, was einem Versorgungsgrad von weniger als zehn Prozent entspricht.",
+        "key_vocabulary": [
+          "ein Tropfen auf den heißen Stein: như muối bỏ bể, không thấm vào đâu"
+        ]
       }
     },
     {
-      "id": "Q4",
+      "id": "GDS_H1_Q4",
       "item": 4,
       "type": "ja_nein",
-      "statement": "Die Person kommt aus Berlin.",
+      "statement": "Der Journalist vertritt die Auffassung, dass die Lösung des Wohnraumproblems primär in der Förderung weiterer singulärer, innovativer Wohnprojekte nach dem Vorbild Heidelbergs liegt.",
       "answer": "nein",
       "points": 1,
       "explanation": {
-        "de": "Nein. Die Person kommt aus Heidelberg.",
-        "vi": "Sai.",
-        "key_evidence": "Falsch. Die Person kommt aus Heidelberg.",
-        "key_vocabulary": []
+        "de": "Die Aussage ist falsch. Der Beitrag stellt solche Einzelprojekte zwar als erfolgreich dar, betont aber explizit, dass die eigentliche Herausforderung darin besteht, von diesen 'Einzelprojekten' zu einer 'systematischen, skalierbaren Strategie' überzugehen. Die Förderung weiterer Einzelprojekte ist also nicht die Lösung, sondern das, was überwunden werden muss.",
+        "vi": "Tuyên bố này là sai. Mặc dù bài báo trình bày các dự án đơn lẻ như vậy là thành công, nhưng nó nhấn mạnh một cách rõ ràng rằng thách thức thực sự nằm ở việc chuyển từ những 'dự án đơn lẻ' này sang một 'chiến lược có hệ thống và có thể nhân rộng'. Do đó, việc thúc đẩy thêm các dự án đơn lẻ không phải là giải pháp, mà là điều cần phải vượt qua.",
+        "key_evidence": "Die Herausforderung besteht darin, solche erfolgreichen Einzelprojekte in eine systematische, skalierbare Strategie zu überführen, die der Dimension des Problems gerecht wird.",
+        "key_vocabulary": [
+          "singulär: đơn lẻ, duy nhất",
+          "skalierbare Strategie: chiến lược có thể nhân rộng"
+        ]
       }
     }
   ],

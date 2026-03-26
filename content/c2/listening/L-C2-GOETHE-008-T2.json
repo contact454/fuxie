@@ -15,64 +15,72 @@
   },
   "questions": [
     {
-      "id": "Q1",
-      "gespraech": 1,
+      "id": "gds_h_t2_q1",
+      "item": 1,
       "type": "mc_abc",
-      "question": "Welches Thema wird besprochen (Gespräch 1)?",
+      "question": "Worin besteht der Kern des Einwandes der Studentin gegen die Verwendung des Begriffs „algorithmische Diskriminierung“ in diesem spezifischen Kontext?",
       "options": {
-        "a": "Freizeit und Hobbys",
-        "b": "Gesundheit und Körper",
-        "c": "Reisen und Verkehr"
+        "a": "Sie erachtet das Problem primär als eine fehlerhafte logische Schlussfolgerung der Technologie, nicht als eine intendierte Benachteiligung.",
+        "b": "Sie ist der Ansicht, dass der Begriff Diskriminierung ausschließlich auf pseudowissenschaftliche Inhalte anwendbar sei, nicht auf Quantenphysik.",
+        "c": "Sie bestreitet kategorisch, dass Algorithmen überhaupt diskriminierendes Potenzial entfalten könnten, da sie auf reiner Mathematik basieren."
       },
       "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Man hört: \"Freizeit und Hobbys\".",
-        "vi": "Đoạn hội thoại 1 nói về chủ đề gì?",
-        "key_evidence": "Freizeit und Hobbys",
-        "key_vocabulary": []
+        "de": "Die korrekte Antwort ist (a), da die Studentin das Phänomen als „problematische Inferenz des Algorithmus“ beschreibt, der fälschlicherweise zwei unterschiedliche Interessenfelder gleichsetzt. Dies ist eine nuancierte Kritik an der Logik des Systems, nicht an einer unterstellten Absicht. Option (b) ist eine lexikalische Falle, die die Schlüsselwörter „Quantenphysik“ und „Pseudowissenschaft“ in einen falschen Kausalzusammenhang stellt. Option (c) ist falsch, da sie ihre Position überzeichnet; sie stellt den Begriff in Frage („Ich bin mir nicht sicher...“), lehnt ihn aber nicht kategorisch ab.",
+        "vi": "Đáp án đúng là (a), vì nữ sinh viên mô tả hiện tượng này là một \"suy luận có vấn đề của thuật toán\" (problematische Inferenz des Algorithmus), khi nó đánh đồng hai lĩnh vực quan tâm khác nhau một cách sai lầm. Đây là một sự phê phán tinh tế về logic của hệ thống, chứ không phải về một ý định được cho là có chủ đích. Lựa chọn (b) là một cái bẫy từ vựng, đặt các từ khóa \"vật lý lượng tử\" và \"giả khoa học\" vào một mối quan hệ nhân quả sai. Lựa chọn (c) sai vì nó diễn đạt quan điểm của cô ấy một cách thái quá; cô ấy chỉ đặt câu hỏi về thuật ngữ (\"Tôi không chắc...\"), chứ không hoàn toàn bác bỏ nó.",
+        "key_evidence": "Ich bin mir nicht sicher, ob der Begriff Diskriminierung hier passend ist; es handelt sich zunächst einmal um eine problematische Inferenz des Algorithmus, der Interesse an Quantenphysik mit Interesse an Pseudowissenschaft gleichsetzt.",
+        "key_vocabulary": [
+          "die Inferenz - sự suy luận",
+          "etwas gleichsetzen - đánh đồng cái gì đó",
+          "passend - phù hợp"
+        ]
       }
     },
     {
-      "id": "Q2",
-      "gespraech": 1,
+      "id": "gds_h_t2_q2",
+      "item": 2,
       "type": "mc_abc",
-      "question": "Welches Thema wird besprochen (Gespräch 1)?",
+      "question": "Welche fundamentale Erkenntnis gewann der Student durch die Lektüre von Cathy O'Neils Buch?",
       "options": {
-        "a": "Leipzig",
-        "b": "Dresden",
-        "c": "Graz"
+        "a": "Er begriff, dass mathematische Formeln per se als sozial destruktive Waffen fungieren können.",
+        "b": "Ihm wurde die Immanenz menschlicher Voreingenommenheit in der algorithmischen Architektur bewusst.",
+        "c": "Er erkannte, dass Algorithmen die Interessen der Programmierer spiegeln, ohne zwangsläufig deren Vorurteile zu reproduzieren."
       },
       "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Das Hauptthema ist \"Freizeit\".",
-        "vi": "Đoạn hội thoại 1 nói về chủ đề gì?",
-        "key_evidence": "Freizeit",
-        "key_vocabulary": []
+        "de": "Die korrekte Antwort ist (b). Der Student sagt, das Buch habe ihm die Augen geöffnet für die Tatsache, dass Algorithmen „die Vorurteile und Interessen derjenigen reproduzieren, die sie programmiert haben“. Die Formulierung „Immanenz menschlicher Voreingenommenheit“ ist eine hochabstrakte Paraphrase dieser Aussage. Option (a) ist eine zu wörtliche und irreführende Interpretation des Buchtitels „Weapons of Math Destruction“. Option (c) ist eine Falle, die einen Teil der Aussage („Interessen“) korrekt wiedergibt, den entscheidenden anderen Teil („Vorurteile“) aber gezielt negiert und somit der Kernaussage widerspricht.",
+        "vi": "Đáp án đúng là (b). Nam sinh viên nói rằng cuốn sách đã giúp anh \"mở mang tầm mắt\" về sự thật rằng các thuật toán \"tái tạo lại những định kiến và lợi ích của những người đã lập trình ra chúng\". Cụm từ \"sự nội tại của định kiến con người\" (Immanenz menschlicher Voreingenommenheit) là một cách diễn giải lại rất trừu tượng của câu nói này. Lựa chọn (a) là một cách giải thích quá sát nghĩa và gây hiểu lầm về tựa sách \"Weapons of Math Destruction\". Lựa chọn (c) là một cái bẫy, nó trích dẫn đúng một phần của câu nói (\"lợi ích\") nhưng lại cố tình phủ nhận phần quan trọng còn lại (\"định kiến\") và do đó mâu thuẫn với ý chính.",
+        "key_evidence": "Dieses Buch hat mir regelrecht die Augen geöffnet für die Tatsache, dass algorithmische Entscheidungen keineswegs neutral sind, sondern die Vorurteile und Interessen derjenigen reproduzieren, die sie programmiert haben.",
+        "key_vocabulary": [
+          "jemandem die Augen öffnen - làm ai đó sáng mắt ra",
+          "keineswegs - không hề",
+          "reproduzieren - tái tạo, sao chép lại",
+          "die Voreingenommenheit - định kiến, thành kiến"
+        ]
       }
     },
     {
-      "id": "Q3",
-      "gespraech": 1,
+      "id": "gds_h_t2_q3",
+      "item": 3,
       "type": "mc_abc",
-      "question": "Was macht die Person beruflich (Gespräch 1)?",
+      "question": "Welchen Aspekt erachten die Studierenden als den maßgeblichen Vorzug des neuen Studiengangs „Algorithmic Governance“?",
       "options": {
-        "a": "Ingenieur",
-        "b": "Mechaniker",
-        "c": "Weapons"
+        "a": "Die Reputation der Lehrenden, die aus den Kernfächern Informatik und Philosophie stammen.",
+        "b": "Die synergetische Verknüpfung diverser wissenschaftlicher Disziplinen zur Analyse des Phänomens.",
+        "c": "Die flexible Einbindung des Programms als Schwerpunkt- oder Ergänzungsmodul im Studienverlauf."
       },
-      "answer": "c",
+      "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Man hört: \"Weapons\".",
-        "vi": "Người đó làm nghề gì (đoạn 1)?",
-        "key_evidence": "Weapons",
+        "de": "Die korrekte Antwort ist (b). Der Student bezeichnet explizit die „interdisziplinäre Perspektive“ als den „entscheidenden Mehrwert“ des Studiengangs. „Synergetische Verknüpfung diverser wissenschaftlicher Disziplinen“ ist eine C2-Niveau Paraphrase für diesen Gedanken. Option (a) ist eine lexikalische Falle; obwohl die Studentin von den Dozenten „beeindruckt“ ist, wird dies nicht als der entscheidende, von beiden geteilte Vorteil identifiziert. Option (c) greift eine Überlegung des Studenten auf („ob ich es als Schwerpunkt wählen oder als Ergänzungsmodul belegen soll“), was aber eine logistische Frage und nicht den inhaltlichen Hauptvorteil des Studiengangs darstellt.",
+        "vi": "Đáp án đúng là (b). Nam sinh viên nói rõ rằng \"góc nhìn liên ngành\" (interdisziplinäre Perspektive) là \"giá trị gia tăng quyết định\" (entscheidenden Mehrwert) của chương trình học. Cụm từ \"sự kết nối cộng hưởng của các ngành khoa học đa dạng\" (Synergetische Verknüpfung diverser wissenschaftlicher Disziplinen) là một cách diễn giải ở trình độ C2 cho ý tưởng này. Lựa chọn (a) là một cái bẫy từ vựng; mặc dù nữ sinh viên \"ấn tượng\" với các giảng viên, điều này không được xác định là lợi thế quyết định mà cả hai cùng chia sẻ. Lựa chọn (c) đề cập đến một suy tính của nam sinh viên (\"liệu tôi nên chọn nó làm chuyên ngành chính hay học phần bổ sung\"), nhưng đây là một câu hỏi về mặt tổ chức chứ không phải là lợi thế chính về nội dung của chương trình học.",
+        "key_evidence": "Dann lass uns das zusammen belegen, denn ich glaube, dass gerade die interdisziplinäre Perspektive der entscheidende Mehrwert dieses Studiengangs ist...",
         "key_vocabulary": [
-          {
-            "word": "Weapons",
-            "meaning": "Weapons"
-          }
+          "interdisziplinär - liên ngành",
+          "der entscheidende Mehrwert - giá trị gia tăng quyết định",
+          "sich ergänzen - bổ sung cho nhau"
         ]
       }
     }

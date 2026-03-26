@@ -16,63 +16,73 @@
   "questions": [
     {
       "id": "Q1",
-      "gespraech": 1,
+      "item": 1,
       "type": "mc_abc",
-      "question": "Welches Thema wird besprochen (Gespräch 1)?",
+      "question": "Worin sieht der Student die Achillesferse der zitierten Studie zur Markentreue?",
       "options": {
-        "a": "Technik und Digitalisierung",
-        "b": "Bildung und Schule",
-        "c": "Einkaufen und Geld"
-      },
-      "answer": "c",
-      "points": 1,
-      "explanation": {
-        "de": "Man hört: \"Einkaufen und Geld\".",
-        "vi": "Đoạn hội thoại 1 nói về chủ đề gì?",
-        "key_evidence": "Einkaufen und Geld",
-        "key_vocabulary": []
-      }
-    },
-    {
-      "id": "Q2",
-      "gespraech": 1,
-      "type": "mc_abc",
-      "question": "Welches Thema wird besprochen (Gespräch 1)?",
-      "options": {
-        "a": "Chemnitz",
-        "b": "Darmstadt",
-        "c": "Syrien"
-      },
-      "answer": "c",
-      "points": 1,
-      "explanation": {
-        "de": "Das Hauptthema ist \"Einkaufen\".",
-        "vi": "Đoạn hội thoại 1 nói về chủ đề gì?",
-        "key_evidence": "Einkaufen",
-        "key_vocabulary": []
-      }
-    },
-    {
-      "id": "Q3",
-      "gespraech": 1,
-      "type": "mc_abc",
-      "question": "Was macht die Person beruflich (Gespräch 1)?",
-      "options": {
-        "a": "Konformität",
-        "b": "Ingenieur",
-        "c": "Arzt"
+        "a": "Er hegt den Verdacht, dass die Aussagen der Befragten von dem Bestreben geprägt sein könnten, einem gesellschaftlichen Idealbild zu entsprechen.",
+        "b": "Er kritisiert die als unzureichend empfundene Kombination aus quantitativen Daten und der Analyse von Social-Media-Diskursen.",
+        "c": "Er bemängelt, dass die Studie die pragmatischen und preisbewussten Motive der Konsumenten nicht adäquat berücksichtigt."
       },
       "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Man hört: \"Konformität\".",
-        "vi": "Người đó làm nghề gì (đoạn 1)?",
-        "key_evidence": "Konformität",
+        "de": "Der Student zweifelt die Validität der Selbstauskünfte an, da er vermutet, dass 'soziale Erwünschtheit' die Antworten beeinflusst. Das bedeutet, die Probanden antworten möglicherweise so, wie es gesellschaftlich als positiv angesehen wird (Idealbild), anstatt ihre wahre Meinung wiederzugeben. Option (a) paraphrasiert diesen komplexen Sachverhalt. Option (b) ist ein lexikalischer Köder; die Studentin lobt diesen methodischen Ansatz sogar. Option (c) ist ebenfalls eine Falle; der Student erwähnt Pragmatismus als seine eigene Beobachtung, die die Studienergebnisse stützt, nicht als Kritik an der Methodik.",
+        "vi": "Nam sinh viên nghi ngờ tính hợp lệ của các câu trả lời tự khai, vì anh cho rằng 'sự mong muốn xã hội' (soziale Erwünschtheit) ảnh hưởng đến câu trả lời. Điều này có nghĩa là người tham gia có thể trả lời theo cách được xã hội xem là tích cực (hình mẫu lý tưởng), thay vì phản ánh ý kiến thực sự của họ. Phương án (a) diễn giải lại ý phức tạp này. Phương án (b) là một cái bẫy từ vựng; nữ sinh viên thậm chí còn ca ngợi phương pháp tiếp cận này. Phương án (c) cũng là một cái bẫy; nam sinh viên đề cập đến chủ nghĩa thực dụng như một quan sát của riêng mình để ủng hộ kết quả nghiên cứu, chứ không phải là một lời chỉ trích về phương pháp luận.",
+        "key_evidence": "Der Ansatz ist tatsächlich innovativ, allerdings frage ich mich, ob die Selbstauskunft der Probanden über ihre Markenpräferenzen wirklich valide ist, oder ob hier soziale Erwünschtheit eine Rolle spielt.",
         "key_vocabulary": [
-          {
-            "word": "Konformität",
-            "meaning": "Konformität"
-          }
+          "die Achillesferse - điểm yếu chí mạng",
+          "hegen - nuôi dưỡng, ấp ủ (nghi ngờ)",
+          "das Bestreben - nỗ lực, sự cố gắng",
+          "einem Idealbild entsprechen - tương ứng với một hình mẫu lý tưởng"
+        ]
+      }
+    },
+    {
+      "id": "Q2",
+      "item": 2,
+      "type": "mc_abc",
+      "question": "Was kennzeichnet laut der Studentin die ethische Problematik des „Nudgings“ im Konsumverhalten?",
+      "options": {
+        "a": "Die philosophische Komplexität der von Thaler und Sunstein angestoßenen Paternalismus-Debatte.",
+        "b": "Die diffizile Abgrenzung zwischen wohlwollender Orientierungshilfe und verdeckter Willensbeeinflussung.",
+        "c": "Die subtile, aber äußerst wirksame Beeinflussung durch Produktplatzierung und Regalarrangement."
+      },
+      "answer": "b",
+      "points": 1,
+      "explanation": {
+        "de": "Die Studentin beschreibt die ethische Problematik als eine 'fließende Grenze' zwischen Hilfe und Manipulation. Option (b) ist eine hochstufige Paraphrase dieses Gedankens, die 'diffizile Abgrenzung' (schwierige Unterscheidung) zwischen 'wohlwollender Orientierungshilfe' (hilfreiche Entscheidungsarchitektur) und 'verdeckter Willensbeeinflussung' (manipulative Beeinflussung) verwendet. Option (a) ist eine Falle, da dies vom Studenten als Ergänzung erwähnt wird, aber nicht die Kernaussage der Studentin ist. Option (c) beschreibt, wie Nudging funktioniert (Aussage des Studenten), aber nicht das von der Studentin benannte ethische Dilemma.",
+        "vi": "Nữ sinh viên mô tả vấn đề đạo đức như một 'ranh giới mong manh' giữa sự giúp đỡ và sự thao túng. Phương án (b) là một cách diễn giải cấp cao của ý tưởng này, sử dụng các từ 'sự phân định khó khăn' (diffizile Abgrenzung) giữa 'sự hướng dẫn thiện chí' (wohlwollender Orientierungshilfe) và 'sự tác động ý chí một cách che giấu' (verdeckter Willensbeeinflussung). Phương án (a) là một cái bẫy, vì điều này được nam sinh viên đề cập bổ sung, nhưng không phải là phát biểu cốt lõi của nữ sinh viên. Phương án (c) mô tả cách thức hoạt động của 'Nudging' (phát biểu của nam sinh viên), chứ không phải là tình thế tiến thoái lưỡng nan về mặt đạo đức mà nữ sinh viên đã nêu.",
+        "key_evidence": "Das Thema Nudging im Konsumkontext wirft auch ethische Fragen auf, denn die Grenze zwischen einer hilfreichen Entscheidungsarchitektur und manipulativer Beeinflussung ist fließend.",
+        "key_vocabulary": [
+          "diffizil - khó khăn, phức tạp",
+          "die Abgrenzung - sự phân định ranh giới",
+          "wohlwollend - có thiện chí, nhân từ",
+          "die Willensbeeinflussung - sự tác động đến ý chí"
+        ]
+      }
+    },
+    {
+      "id": "Q3",
+      "item": 3,
+      "type": "mc_abc",
+      "question": "Welche Prämisse erachten beide Gesprächspartner als unabdingbar, um der potenziellen Entmündigung durch KI-Systeme entgegenzuwirken?",
+      "options": {
+        "a": "Die Notwendigkeit, der algorithmischen Einengung in eine 'Filterbubble' durch bewusste Konsumentscheidungen zu entkommen.",
+        "b": "Die Förderung von Algorithmen, die Konsumenten dabei helfen, gänzlich neue Produkte zu entdecken.",
+        "c": "Die Schaffung von Transparenz und die Etablierung verbindlicher regulatorischer Rahmenbedingungen."
+      },
+      "answer": "c",
+      "points": 1,
+      "explanation": {
+        "de": "Die Studentin schlägt vor, Transparenz und regulatorische Standards zu fordern, um die Souveränität der Konsumenten zu wahren. Der Student stimmt explizit zu ('Da sind wir uns einig'). Option (c) fasst diese gemeinsame Schlussfolgerung präzise zusammen. Die Frage nach 'Entmündigung' ist eine abstrakte Interpretation des Verlusts der 'Souveränität'. Option (a) ist eine Falle; die 'Filterbubble' ist das Problem, nicht die vereinbarte Lösung. Option (b) ist ebenfalls eine Falle; dies wird als möglicher Vorteil von KI erwähnt, aber nicht als die Lösung für das Souveränitätsproblem, auf die sich beide einigen.",
+        "vi": "Nữ sinh viên đề xuất yêu cầu sự minh bạch và các tiêu chuẩn quy định để bảo vệ chủ quyền của người tiêu dùng. Nam sinh viên đồng ý một cách rõ ràng ('Chúng ta đồng ý về điều đó'). Phương án (c) tóm tắt chính xác kết luận chung này. Câu hỏi về 'sự vô hiệu hóa năng lực hành vi' (Entmündigung) là một cách diễn giải trừu tượng của việc mất đi 'chủ quyền' (Souveränität). Phương án (a) là một cái bẫy; 'bong bóng bộ lọc' là vấn đề, không phải là giải pháp đã được thống nhất. Phương án (b) cũng là một cái bẫy; điều này được đề cập như một lợi ích tiềm năng của AI, nhưng không phải là giải pháp cho vấn đề chủ quyền mà cả hai đều đồng ý.",
+        "key_evidence": "Studentin: Diese Frage lässt sich letztlich nur beantworten, wenn wir mehr Transparenz über die Funktionsweise der Empfehlungsalgorithmen einfordern und regulatorische Mindeststandards etablieren. Student: Da sind wir uns einig...",
+        "key_vocabulary": [
+          "die Prämisse - tiền đề",
+          "unabdingbar - không thể thiếu, tất yếu",
+          "die Entmündigung - sự tước quyền, sự vô hiệu hóa năng lực hành vi",
+          "entgegenwirken - chống lại, phản tác dụng"
         ]
       }
     }

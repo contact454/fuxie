@@ -15,45 +15,54 @@
   },
   "questions": [
     {
-      "id": "Q1",
+      "id": "GDS_H_01",
       "item": 1,
       "type": "ja_nein",
-      "statement": "Die Person kommt aus Nürnberg.",
-      "answer": "nein",
-      "points": 1,
-      "explanation": {
-        "de": "Nein. Die Person kommt aus Heidelberg.",
-        "vi": "Sai.",
-        "key_evidence": "Falsch. Die Person kommt aus Heidelberg.",
-        "key_vocabulary": []
-      }
-    },
-    {
-      "id": "Q2",
-      "item": 2,
-      "type": "ja_nein",
-      "statement": "Heidelberg wird erwähnt.",
+      "statement": "Das Heidelberger Vorzeigeprojekt wird von Kritikern im Grunde als ein Tropfen auf den heißen Stein erachtet, der von der Notwendigkeit fundamentaler politischer Weichenstellungen ablenkt.",
       "answer": "ja",
       "points": 1,
       "explanation": {
-        "de": "Ja. Heidelberg wird genannt.",
-        "vi": "Đúng.",
-        "key_evidence": "Richtig. Heidelberg wird genannt.",
-        "key_vocabulary": []
+        "de": "Die Aussage ist korrekt. Der Sprecher zitiert Kritiker, die bemängeln, dass solche 'Leuchtturmprojekte' (Vorzeigeprojekte) das grundlegende Problem nicht lösen (ein Tropfen auf den heißen Stein) und die Politik von der Entwicklung einer umfassenden Strategie abhalten.",
+        "vi": "Nhận định này đúng. Người nói trích lời các nhà phê bình phàn nàn rằng những 'dự án hải đăng' (dự án kiểu mẫu) như vậy không giải quyết được vấn đề cấu trúc (như muối bỏ bể) và làm chính trị gia xao lãng việc xây dựng một chính sách nhà ở nhất quán.",
+        "key_evidence": "Kritiker bemängeln allerdings, dass solche Leuchtturmprojekte das strukturelle Problem nicht lösen und die Politik davon ablenken, eine konsequente Wohnungsbaupolitik zu betreiben.",
+        "key_vocabulary": [
+          "der Tropfen auf den heißen Stein = eine Maßnahme, die angesichts des Ausmaßes eines Problems kaum Wirkung zeigt",
+          "die Weichenstellung = eine grundlegende Entscheidung, die die zukünftige Entwicklung bestimmt"
+        ]
       }
     },
     {
-      "id": "Q3",
+      "id": "GDS_H_02",
+      "item": 2,
+      "type": "ja_nein",
+      "statement": "Der Beitrag konstatiert, dass Studierende wider Willen als Pioniere einer urbanen Aufwertung fungieren, deren Früchte sie letztlich selbst nicht ernten können.",
+      "answer": "ja",
+      "points": 1,
+      "explanation": {
+        "de": "Die Aussage ist korrekt. Der Text beschreibt das Paradoxon, dass Studierende durch ihre Anwesenheit Viertel kulturell beleben (Pioniere der Aufwertung), was aber zu Mietsteigerungen führt, die sie sich am Ende selbst nicht mehr leisten können (die Früchte nicht ernten können).",
+        "vi": "Nhận định này đúng. Bài nghe mô tả nghịch lý rằng sinh viên, thông qua sự hiện diện của mình, đã làm sống lại các khu phố về mặt văn hóa (những người tiên phong trong việc nâng cấp), nhưng điều này lại dẫn đến việc tăng giá thuê nhà mà cuối cùng chính họ cũng không còn khả năng chi trả (không thể hưởng thành quả).",
+        "key_evidence": "Wenn Studierende ein heruntergekommenes Viertel durch ihre Anwesenheit kulturell beleben, steigen die Immobilienpreise, sodass weder die ursprünglichen Bewohner noch die Studierenden selbst sich die Mieten auf Dauer leisten können.",
+        "key_vocabulary": [
+          "wider Willen = unbeabsichtigt, unfreiwillig",
+          "die Früchte ernten = die positiven Ergebnisse einer Anstrengung genießen"
+        ]
+      }
+    },
+    {
+      "id": "GDS_H_03",
       "item": 3,
       "type": "ja_nein",
-      "statement": "Die Person kommt aus München.",
+      "statement": "Dem Bericht zufolge ist die Versorgungslage mit studentischem Wohnraum zwar angespannt, doch die Summe der ergriffenen innovativen Maßnahmen lässt auf eine baldige Entschärfung der Krise hoffen.",
       "answer": "nein",
       "points": 1,
       "explanation": {
-        "de": "Nein. Die Person kommt aus Heidelberg.",
-        "vi": "Sai.",
-        "key_evidence": "Falsch. Die Person kommt aus Heidelberg.",
-        "key_vocabulary": []
+        "de": "Die Aussage ist falsch. Obwohl innovative Einzelprojekte erwähnt werden, betont der Text, dass diese das strukturelle Problem nicht lösen und erst in eine systematische, skalierbare Strategie überführt werden müssten. Eine baldige Entschärfung wird nicht in Aussicht gestellt; das Problem wird als 'historisches Ausmaß' beschrieben.",
+        "vi": "Nhận định này sai. Mặc dù các dự án cá nhân sáng tạo được đề cập, bài nghe nhấn mạnh rằng chúng không giải quyết được vấn đề cấu trúc và cần phải được chuyển đổi thành một chiến lược có hệ thống và có thể nhân rộng. Một sự xoa dịu sớm cho cuộc khủng hoảng không được đề cập; vấn đề được mô tả là có 'quy mô lịch sử'.",
+        "key_evidence": "Die Herausforderung besteht darin, solche erfolgreichen Einzelprojekte in eine systematische, skalierbare Strategie zu überführen, die der Dimension des Problems gerecht wird.",
+        "key_vocabulary": [
+          "die Entschärfung = die Milderung einer angespannten Situation",
+          "in Aussicht stellen = etwas für die Zukunft versprechen oder andeuten"
+        ]
       }
     }
   ],

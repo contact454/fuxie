@@ -18,42 +18,54 @@
       "id": "Q1",
       "item": 1,
       "type": "ja_nein",
-      "statement": "Die Person kommt aus Erfurt.",
+      "statement": "Die These der Echokammern wird durch die Forschungslage als unumstößliche Tatsache dargestellt.",
       "answer": "nein",
       "points": 1,
       "explanation": {
-        "de": "Nein. Die Aussage stimmt nicht mit dem Hörtext überein.",
-        "vi": "Sai.",
-        "key_evidence": "Die Person kommt aus Erfurt.",
-        "key_vocabulary": []
+        "de": "Die Aussage ist falsch. Der Journalist relativiert die Echokammer-These, indem er darauf hinweist, dass die wissenschaftliche Beweislage nicht eindeutig ist. Die Formulierung 'unumstößliche Tatsache' steht im direkten Widerspruch zur Aussage, dass die Evidenz 'uneinheitlicher' sei.",
+        "vi": "Tuyên bố này là sai. Nhà báo đã tương đối hóa luận điểm về 'buồng vang' (Echokammer) bằng cách chỉ ra rằng bằng chứng khoa học không rõ ràng. Cụm từ 'sự thật không thể lay chuyển' (unumstößliche Tatsache) mâu thuẫn trực tiếp với tuyên bố rằng bằng chứng 'không đồng nhất' (uneinheitlicher).",
+        "key_evidence": "Die empirische Evidenz für die Echokammer-These ist allerdings uneinheitlicher, als die öffentliche Debatte vermuten lässt, denn mehrere Studien konnten zeigen, dass Algorithmen auch zu einer gewissen ideologischen Diversifikation beitragen können.",
+        "key_vocabulary": [
+          "unumstößlich",
+          "relativieren",
+          "uneinheitlich"
+        ]
       }
     },
     {
       "id": "Q2",
       "item": 2,
       "type": "ja_nein",
-      "statement": "Streaming wird erwähnt.",
+      "statement": "Der Beitrag impliziert, dass die Forcierung von Transparenz bei Algorithmen an deren inhärenter Komplexität zu scheitern droht.",
       "answer": "ja",
       "points": 1,
       "explanation": {
-        "de": "Ja. Streaming wird genannt.",
-        "vi": "Đúng.",
-        "key_evidence": "Richtig. Streaming wird genannt.",
-        "key_vocabulary": []
+        "de": "Die Aussage ist richtig. Der Journalist beschreibt das 'Black-Box-Problem', bei dem selbst die Entwickler die Algorithmen nicht vollständig verstehen. Dies legt den Schluss nahe, dass die Forderung nach Transparenz ('Forcierung von Transparenz') an dieser grundsätzlichen Komplexität ('inhärenter Komplexität') scheitern könnte.",
+        "vi": "Tuyên bố này là đúng. Nhà báo mô tả 'vấn đề hộp đen' (Black-Box-Problem), trong đó ngay cả các nhà phát triển cũng không hiểu hoàn toàn các thuật toán. Điều này cho thấy rằng yêu cầu về tính minh bạch ('Forcierung von Transparenz') có thể thất bại do sự phức tạp cơ bản này ('inhärenter Komplexität').",
+        "key_evidence": "Dennoch bleibt die grundsätzliche Herausforderung bestehen, dass die Komplexität moderner Empfehlungsalgorithmen selbst für ihre Entwickler oft nicht vollständig nachvollziehbar ist, ein Phänomen, das als Black-Box-Problem bekannt ist.",
+        "key_vocabulary": [
+          "Forcierung",
+          "inhärent",
+          "scheitern drohen"
+        ]
       }
     },
     {
       "id": "Q3",
       "item": 3,
       "type": "ja_nein",
-      "statement": "Die Person kommt aus Paris.",
-      "answer": "nein",
+      "statement": "Dem Journalisten zufolge stellt die Regulierung algorithmischer Systeme eine Gratwanderung zwischen demokratischer Aufsicht und der Wahrung des Innovationspotenzials dar.",
+      "answer": "ja",
       "points": 1,
       "explanation": {
-        "de": "Nein. Die Aussage stimmt nicht mit dem Hörtext überein.",
-        "vi": "Sai.",
-        "key_evidence": "Die Person kommt aus Paris.",
-        "key_vocabulary": []
+        "de": "Die Aussage ist richtig. Der Journalist beschreibt die Regulierungsdebatte als eine, die sich um die Frage dreht, wie man Kontrolle ausüben kann, 'ohne die technologische Innovation zu ersticken'. Dies entspricht exakt der Metapher einer 'Gratwanderung' – einem schwierigen Balanceakt zwischen zwei gegensätzlichen Zielen.",
+        "vi": "Tuyên bố này là đúng. Nhà báo mô tả cuộc tranh luận về quy định là một cuộc tranh luận xoay quanh câu hỏi làm thế nào để thực hiện kiểm soát 'mà không bóp nghẹt sự đổi mới công nghệ'. Điều này hoàn toàn tương ứng với ẩn dụ về 'đi trên dây' (Gratwanderung) – một hành động giữ thăng bằng khó khăn giữa hai mục tiêu đối lập.",
+        "key_evidence": "Die Regulierungsdebatte kreist daher um die Frage, ob und wie die algorithmische Kuratierung einer demokratischen Kontrolle unterworfen werden kann, ohne die technologische Innovation zu ersticken.",
+        "key_vocabulary": [
+          "Gratwanderung",
+          "Aufsicht",
+          "Wahrung des Innovationspotenzials"
+        ]
       }
     }
   ],
