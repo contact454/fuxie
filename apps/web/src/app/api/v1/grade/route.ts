@@ -1,22 +1,9 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { GoogleGenerativeAI } from '@google/generative-ai'
 
-const API_KEY = process.env.GEMINI_API_KEY || process.env.GOOGLE_AI_API_KEY || ''
-
-let genAI: GoogleGenerativeAI | null = null
-function getGenAI() {
-    if (!genAI) {
-        if (!API_KEY) throw new Error('GEMINI_API_KEY is not set')
-        genAI = new GoogleGenerativeAI(API_KEY)
-    }
-    return genAI
-}
+import { withGeminiFallback } from '@/lib/ai/gemini-fallback'
 
 const BASIC_LEVELS = new Set(['A1', 'A2', 'B1'])
-function getModel(level: string) {
-    const name = BASIC_LEVELS.has(level) ? 'gemini-2.0-flash-lite' : 'gemini-2.0-flash'
-    return getGenAI().getGenerativeModel({ model: name })
-}
 
 // ─── Vietnamese Labels ──────────────────────────────
 const CRITERION_VI: Record<string, string> = {
@@ -58,7 +45,7 @@ async function gradeGrammar(body: { sentence?: string; topic?: string }, cefrLev
         return NextResponse.json({ success: false, error: 'sentence is required' }, { status: 400 })
     }
 
-    const model = getModel(cefrLevel)
+    const modelName = BASIC_LEVELS.has(cefrLevel) ? 'gemini-2.0-flash-lite' : 'gemini-2.0-flash'
     const prompt = `Analysiere diesen deutschen Satz eines ${cefrLevel}-Lerners${topic ? ` (Thema: ${topic})` : ''}.
 
 Satz: "${sentence}"
@@ -73,7 +60,10 @@ Antworte NUR als JSON:
   "tipVi": "Tiếng Việt"
 }`
 
-    const result = await model.generateContent(prompt)
+    const result = await withGeminiFallback(async (client) => {
+        const model = client.getGenerativeModel({ model: modelName })
+        return await model.generateContent(prompt)
+    })
     const text = result.response.text()
     const cleaned = text.replace(/```json\s*/g, '').replace(/```\s*/g, '').trim()
     const parsed = JSON.parse(cleaned)
@@ -112,7 +102,7 @@ async function gradeWriting(body: {
     ).join('\n')
     const contentPointsList = contentPoints.map((p, i) => `${i + 1}. ${p}`).join('\n')
 
-    const model = getModel(cefrLevel)
+    const modelName = BASIC_LEVELS.has(cefrLevel) ? 'gemini-2.0-flash-lite' : 'gemini-2.0-flash'
     const prompt = `Du bist ein DaF-Prüfer. Bewerte diesen ${cefrLevel}-Text streng nach Goethe-Institut-Standards.
 
 ## Aufgabe
@@ -138,7 +128,10 @@ Antworte NUR als JSON:
   "corrections": [{ "original": "...", "corrected": "...", "type": "Grammatik", "typeVi": "Ngữ pháp", "explanation": "deutsch", "explanationVi": "tiếng việt" }]
 }`
 
-    const result = await model.generateContent(prompt)
+    const result = await withGeminiFallback(async (client) => {
+        const model = client.getGenerativeModel({ model: modelName })
+        return await model.generateContent(prompt)
+    })
     const text = result.response.text()
     const cleaned = text.replace(/```json\s*/g, '').replace(/```\s*/g, '').trim()
     const parsed = JSON.parse(cleaned)

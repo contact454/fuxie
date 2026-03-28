@@ -68,18 +68,13 @@ const speakingSchema = z.object({
 })
 
 // ─── Call Gemini REST API directly (more reliable than SDK for audio) ───
+import { withGeminiFallback } from '@/lib/ai/gemini-fallback'
+
 async function callGeminiWithAudio(
   base64Audio: string,
   mimeType: string,
   prompt: string
 ): Promise<{ transcript: string; score: number; feedbackVi: string; issues: any[] }> {
-  const apiKey = process.env.GEMINI_API_KEY || process.env.GOOGLE_AI_API_KEY
-  if (!apiKey) {
-    throw new Error('NO_API_KEY')
-  }
-
-  const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${apiKey}`
-
   const body = {
     contents: [{
       parts: [
@@ -95,19 +90,27 @@ async function callGeminiWithAudio(
 
   console.log(`[Gemini] Calling REST API, audio: ${base64Audio.length} b64 chars, mime: ${mimeType}`)
 
-  const response = await fetch(url, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify(body),
+  const result = await withGeminiFallback(async (_, activeKey) => {
+    const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${activeKey}`
+    
+    const response = await fetch(url, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(body),
+    })
+
+    if (!response.ok) {
+      const errorText = await response.text()
+      console.error(`[Gemini] HTTP ${response.status}: ${errorText.substring(0, 500)}`)
+      
+      // If 429, throw an error with status so withGeminiFallback can rotate key
+      const error: any = new Error(`HTTP_${response.status}: ${errorText.substring(0, 200)}`)
+      error.status = response.status
+      throw error
+    }
+
+    return await response.json()
   })
-
-  if (!response.ok) {
-    const errorText = await response.text()
-    console.error(`[Gemini] HTTP ${response.status}: ${errorText.substring(0, 500)}`)
-    throw new Error(`HTTP_${response.status}: ${errorText.substring(0, 200)}`)
-  }
-
-  const result = await response.json()
   
   const text = result?.candidates?.[0]?.content?.parts?.[0]?.text
   if (!text) {

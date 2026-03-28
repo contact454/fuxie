@@ -1,25 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { GoogleGenerativeAI, type GenerativeModel } from '@google/generative-ai'
-
-// ─── Lazy-init Gemini ──────────────────────────────
-const API_KEY = process.env.GEMINI_API_KEY || process.env.GOOGLE_AI_API_KEY || ''
-
-let genAI: GoogleGenerativeAI | null = null
-function getGenAI(): GoogleGenerativeAI {
-    if (!genAI) {
-        if (!API_KEY) throw new Error('GEMINI_API_KEY is not set')
-        genAI = new GoogleGenerativeAI(API_KEY)
-    }
-    return genAI
-}
+import { withGeminiFallback } from '@/lib/ai/gemini-fallback'
 
 const BASIC_LEVELS = new Set(['A1', 'A2', 'B1'])
-function getChatModel(level: string): GenerativeModel {
-    const name = BASIC_LEVELS.has(level)
-        ? 'gemini-2.0-flash-lite'
-        : 'gemini-2.0-flash'
-    return getGenAI().getGenerativeModel({ model: name })
-}
 
 // ─── System Prompt ─────────────────────────────────
 function getSystemPrompt(level: string): string {
@@ -87,7 +70,7 @@ export async function POST(req: NextRequest) {
             )
         }
 
-        const model = getChatModel(level)
+        const name = BASIC_LEVELS.has(level) ? 'gemini-2.0-flash-lite' : 'gemini-2.0-flash'
 
         // Build conversation history
         const chatHistory = (history as Array<{ role: string; text: string }>).map(msg => ({
@@ -95,12 +78,14 @@ export async function POST(req: NextRequest) {
             parts: [{ text: msg.text }],
         }))
 
-        const chat = model.startChat({
-            history: chatHistory,
-            systemInstruction: getSystemPrompt(level),
+        const result = await withGeminiFallback(async (client) => {
+            const model = client.getGenerativeModel({ model: name })
+            const chat = model.startChat({
+                history: chatHistory,
+                systemInstruction: getSystemPrompt(level),
+            })
+            return await chat.sendMessageStream(message)
         })
-
-        const result = await chat.sendMessageStream(message)
 
         // Stream response
         const encoder = new TextEncoder()

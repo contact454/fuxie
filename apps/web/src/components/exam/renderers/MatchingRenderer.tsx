@@ -1,5 +1,7 @@
 'use client'
 
+import Image from 'next/image'
+
 const AD_ICONS: Record<string, string> = {
     'Sprachschule': '🎓', 'Familienpark': '🎪', 'Büro': '💼', 'Zimmer': '🏠', 'WG': '🏠',
     'Koch': '🍳', 'Fahrrad': '🚲', 'Ehrenamt': '🤝', 'Helfer': '🤝', 'Fitness': '💪',
@@ -22,7 +24,7 @@ const AD_COLORS = [
 interface MatchingContent {
     instructions?: string
     situations: Array<{ id: string; text: string }>
-    options: Array<{ key: string; title: string; snippet: string }>
+    options: Array<{ key: string; title: string; snippet: string; imageUrl?: string }>
 }
 
 interface Props {
@@ -70,24 +72,33 @@ export function MatchingRenderer({ content, answer, onChange }: Props) {
                         return (
                             <div
                                 key={opt.key}
-                                className={`relative rounded-xl p-4 transition-all ring-1 bg-gradient-to-br ${colorClass}
-                                    ${isUsed ? 'opacity-50 scale-[0.98]' : 'hover:scale-[1.01] hover:shadow-sm'}`}
+                                className={`relative rounded-xl overflow-hidden transition-all ring-1 bg-gradient-to-br ${colorClass}
+                                    ${isUsed ? 'opacity-50 scale-[0.98]' : 'hover:scale-[1.01] hover:shadow-md'}`}
                             >
                                 {isUsed && (
-                                    <div className="absolute top-2 right-2 w-6 h-6 rounded-full bg-green-500 flex items-center justify-center shadow-sm">
+                                    <div className="absolute z-10 top-2 right-2 w-6 h-6 rounded-full bg-green-500 flex items-center justify-center shadow-sm">
                                         <span className="text-white text-xs font-bold">✓</span>
                                     </div>
                                 )}
-                                <div className="flex items-start gap-3">
-                                    <div className="text-3xl shrink-0">{getIcon(opt.title)}</div>
+                                
+                                {opt.imageUrl && (
+                                    <div className="relative w-full h-24 sm:h-32 bg-white/40 border-b border-white/20">
+                                        <Image src={opt.imageUrl} alt={opt.title} fill className="object-cover" sizes="(max-width: 640px) 100vw, 50vw" />
+                                    </div>
+                                )}
+
+                                <div className="p-4 flex items-start gap-3">
+                                    {!opt.imageUrl && (
+                                        <div className="text-3xl shrink-0 drop-shadow-sm">{getIcon(opt.title)}</div>
+                                    )}
                                     <div className="flex-1 min-w-0">
-                                        <div className="flex items-center gap-1.5 mb-1">
-                                            <span className="w-6 h-6 rounded-full bg-white/80 flex items-center justify-center text-xs font-bold text-gray-600 shrink-0 shadow-sm">
+                                        <div className="flex items-center gap-2 mb-1.5">
+                                            <span className="w-6 h-6 rounded-full bg-white flex items-center justify-center text-xs font-bold text-gray-700 shrink-0 shadow-sm border border-black/5">
                                                 {opt.key}
                                             </span>
-                                            <span className="text-sm font-bold text-gray-800 leading-tight">{opt.title}</span>
+                                            <span className="text-sm font-bold text-gray-800 leading-tight drop-shadow-sm">{opt.title}</span>
                                         </div>
-                                        <p className="text-xs text-gray-600 leading-relaxed">{opt.snippet}</p>
+                                        <p className="text-xs text-gray-700 leading-relaxed font-medium line-clamp-none sm:line-clamp-3">{opt.snippet}</p>
                                     </div>
                                 </div>
                             </div>
