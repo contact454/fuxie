@@ -10,7 +10,7 @@
  *
  * Run: DATABASE_URL='...' npx tsx scripts/audit-exam-content.ts
  */
-import { PrismaClient } from '@prisma/client'
+import { PrismaClient } from '../apps/web/generated/prisma'
 const prisma = new PrismaClient()
 
 /* ── CEFR level-specific parameters ── */

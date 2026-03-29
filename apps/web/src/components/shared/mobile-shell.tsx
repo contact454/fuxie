@@ -24,9 +24,20 @@ interface MobileShellProps {
     children: React.ReactNode
 }
 
-export function MobileShell({ dailyGoal, children }: MobileShellProps) {
+export function MobileShell({ dailyGoal: initialDailyGoal, children }: MobileShellProps) {
     const pathname = usePathname()
     const [drawerOpen, setDrawerOpen] = useState(false)
+    const [dailyGoal, setDailyGoal] = useState(initialDailyGoal)
+
+    // Fetch daily goal client-side if not provided by server
+    useEffect(() => {
+        if (!initialDailyGoal) {
+            fetch('/api/v1/daily-goal')
+                .then(r => r.ok ? r.json() : null)
+                .then(data => { if (data) setDailyGoal(data) })
+                .catch(() => {})
+        }
+    }, [initialDailyGoal])
 
     // Close drawer on route change
     useEffect(() => {
