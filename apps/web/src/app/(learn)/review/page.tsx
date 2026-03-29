@@ -35,14 +35,18 @@ export default async function ReviewPage() {
     const serverUser = await getServerUser()
     if (!serverUser) redirect('/login')
 
-    const profile = await prisma.userProfile.findFirst({
-        where: { userId: serverUser.userId },
-        select: { currentLevel: true },
-    })
+    // All 3 queries run in parallel instead of sequential
+    const [profile, availableLevels] = await Promise.all([
+        prisma.userProfile.findFirst({
+            where: { userId: serverUser.userId },
+            select: { currentLevel: true },
+        }),
+        getVocabularyLevels(),
+    ])
     const userLevel = (profile?.currentLevel ?? 'A1') as CefrLevel
 
-    const [availableLevels, themes, dueCounts] = await Promise.all([
-        getVocabularyLevels(),
+    // Themes + due counts also in parallel
+    const [themes, dueCounts] = await Promise.all([
         getThemesForLevel(serverUser.userId, userLevel),
         getDueCounts(serverUser.userId),
     ])

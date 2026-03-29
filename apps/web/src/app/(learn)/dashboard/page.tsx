@@ -72,31 +72,33 @@ const getHeaderData = cache(async (userId: string) => {
 
 /** Stats — SRS counts + today's activity */
 const getStatsData = cache(async (userId: string) => {
-    const now = new Date()
-    const todayStart = new Date(now.getFullYear(), now.getMonth(), now.getDate())
+    return cacheWrap(`dash:stats:${userId}`, 30, async () => {
+        const now = new Date()
+        const todayStart = new Date(now.getFullYear(), now.getMonth(), now.getDate())
 
-    const [srsStats, todayActivity] = await Promise.all([
-        Promise.all([
-            prisma.srsCard.count({ where: { userId, nextReviewAt: { lte: now } } }),
-            prisma.srsCard.count({ where: { userId } }),
-            prisma.srsReviewLog.count({ where: { userId, reviewedAt: { gte: todayStart } } }),
-        ]),
-        getTodayActivitySummary(userId),
-    ])
+        const [srsStats, todayActivity] = await Promise.all([
+            Promise.all([
+                prisma.srsCard.count({ where: { userId, nextReviewAt: { lte: now } } }),
+                prisma.srsCard.count({ where: { userId } }),
+                prisma.srsReviewLog.count({ where: { userId, reviewedAt: { gte: todayStart } } }),
+            ]),
+            getTodayActivitySummary(userId),
+        ])
 
-    const [dueCount, totalCards, reviewedToday] = srsStats
+        const [dueCount, totalCards, reviewedToday] = srsStats
 
-    return {
-        srs: { dueCount, totalCards, reviewedToday },
-        todayActivity: {
-            totalMinutes: todayActivity?.totalMinutes ?? 0,
-            xpEarned: todayActivity?.xpEarned ?? 0,
-            lessonsCompleted: todayActivity?.lessonsCompleted ?? 0,
-            exercisesCompleted: todayActivity?.exercisesCompleted ?? 0,
-            srsReviewed: todayActivity?.srsReviewed ?? 0,
-            wordsLearned: todayActivity?.wordsLearned ?? 0,
-        },
-    }
+        return {
+            srs: { dueCount, totalCards, reviewedToday },
+            todayActivity: {
+                totalMinutes: todayActivity?.totalMinutes ?? 0,
+                xpEarned: todayActivity?.xpEarned ?? 0,
+                lessonsCompleted: todayActivity?.lessonsCompleted ?? 0,
+                exercisesCompleted: todayActivity?.exercisesCompleted ?? 0,
+                srsReviewed: todayActivity?.srsReviewed ?? 0,
+                wordsLearned: todayActivity?.wordsLearned ?? 0,
+            },
+        }
+    })
 })
 
 /** Content — weekly activity, skills, achievements, listening, grammar */

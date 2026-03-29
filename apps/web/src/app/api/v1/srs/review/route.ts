@@ -6,6 +6,7 @@ import { getDbUserByFirebaseUid } from '@/lib/auth/db-user'
 import { handleApiError } from '@/lib/api/error-handler'
 import { calculateReview } from '@fuxie/srs-engine'
 import { countDueSrsCards, getDueSrsCards } from '@/lib/srs/due-cards'
+import { cacheInvalidatePrefix } from '@/lib/cache/redis'
 import { XP_REWARDS } from '@fuxie/shared/constants'
 import type { SrsRating } from '@fuxie/shared/types'
 
@@ -143,6 +144,12 @@ export async function POST(req: NextRequest) {
                 },
             }),
         ])
+
+        // Invalidate SRS + dashboard caches so next page load reflects the review
+        cacheInvalidatePrefix(`srs:progress:${user.id}`).catch(() => {})
+        cacheInvalidatePrefix(`srs:due:${user.id}`).catch(() => {})
+        cacheInvalidatePrefix(`dash:stats:${user.id}`).catch(() => {})
+        cacheInvalidatePrefix(`dash:content:${user.id}`).catch(() => {})
 
         return NextResponse.json({
             success: true,

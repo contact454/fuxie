@@ -1,23 +1,26 @@
 import { Prisma, prisma } from '@fuxie/database'
 import { unstable_cache } from 'next/cache'
+import { cacheWrap } from '@/lib/cache/redis'
 
 export type CefrLevel = 'A1' | 'A2' | 'B1' | 'B2' | 'C1' | 'C2'
 
 export async function getVocabularyThemes(level: CefrLevel) {
-    return prisma.vocabularyTheme.findMany({
-        where: { cefrLevel: level },
-        orderBy: { sortOrder: 'asc' },
-        select: {
-            id: true,
-            slug: true,
-            name: true,
-            nameVi: true,
-            nameEn: true,
-            cefrLevel: true,
-            imageUrl: true,
-            _count: { select: { items: true } },
-        },
-    })
+    return cacheWrap(`vocab:themes:${level}`, 3600, () =>
+        prisma.vocabularyTheme.findMany({
+            where: { cefrLevel: level },
+            orderBy: { sortOrder: 'asc' },
+            select: {
+                id: true,
+                slug: true,
+                name: true,
+                nameVi: true,
+                nameEn: true,
+                cefrLevel: true,
+                imageUrl: true,
+                _count: { select: { items: true } },
+            },
+        })
+    )
 }
 
 export function mapVocabularyThemes<

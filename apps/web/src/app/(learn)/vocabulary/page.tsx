@@ -62,6 +62,8 @@ export default async function VocabularyPage() {
 
     const availableLevels = await getAvailableLevels()
     const defaultLevel: CefrLevel = availableLevels[0] || 'A1'
+
+    // Parallel: themes + SRS progress load simultaneously
     const { themes, totalWords, totalDue } = await getThemes(serverUser.userId, defaultLevel)
 
     return (

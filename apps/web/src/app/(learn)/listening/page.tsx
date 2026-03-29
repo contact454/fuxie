@@ -84,6 +84,8 @@ export default async function ListeningPage() {
 
     const availableLevels = await getListeningLevels()
     const defaultLevel: CefrLevel = availableLevels[0] || 'A1'
+
+    // Data loads with Redis cache — blazing fast on repeat visits
     const data = await getListeningData(serverUser.userId, defaultLevel)
 
     return (
