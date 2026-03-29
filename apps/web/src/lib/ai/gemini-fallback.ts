@@ -8,7 +8,7 @@ let currentKeyIndex = 0
 
 export function getGeminiKey(): string {
     if (keys.length === 0) throw new Error('GEMINI_API_KEY is not set')
-    return keys[currentKeyIndex]
+    return keys[currentKeyIndex] ?? keys[0] ?? ''
 }
 
 export function getGeminiClient(): GoogleGenerativeAI {
