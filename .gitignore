@@ -14,11 +14,14 @@ build/
 # Turbo
 .turbo/
 
-# Environment
+# Environment — NEVER commit secrets
 .env
+.env.*
+!.env.example
 .env.local
 .env.*.local
 .env.production
+.env.vercel*
 DATABASE_URL
 Environment
 Settings
@@ -66,6 +69,13 @@ Fuxie/
 # Junk files
 0
 001
+
+# Script output artifacts (audit reports, sample output, logs)
+scripts/*.log
+scripts/*.txt
+scripts/*.json
+scripts/batch*.log
+scripts/image-gen*.log
 
 # Prisma generated client
 apps/web/generated/
