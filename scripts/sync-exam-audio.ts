@@ -15,7 +15,7 @@ dotenv.config();
 const AUDIO_OUTPUT_DIR = "C:\\Users\\DMF Schule\\8-Audio-Factory\\data\\output";
 
 // Neon DB Prod connection exact as export script
-const connectionString = "postgresql://neondb_owner:npg_aU0YPhW6zZQp@ep-rough-thunder-a1m0qm18.ap-southeast-1.aws.neon.tech/fuxie_prod?sslmode=require";
+const connectionString = process.env.DATABASE_URL || "";
 const dbClient = new Client({ connectionString });
 
 const s3 = new S3Client({

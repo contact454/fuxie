@@ -3,7 +3,7 @@ import * as fs from 'fs';
 import * as path from 'path';
 import * as crypto from 'crypto';
 
-const connectionString = "postgresql://neondb_owner:npg_aU0YPhW6zZQp@ep-rough-thunder-a1m0qm18.ap-southeast-1.aws.neon.tech/fuxie_prod?sslmode=require";
+const connectionString = process.env.DATABASE_URL || "";
 const CONTENT_DIR = path.join(__dirname, '../content');
 
 const client = new Client({ connectionString });

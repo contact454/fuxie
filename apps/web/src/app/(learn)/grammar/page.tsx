@@ -9,7 +9,7 @@ export const metadata = {
     description: 'Deutsche Grammatik — Luyện ngữ pháp tiếng Đức từ A1 đến C2',
 }
 
-type CefrLevel = 'A1' | 'A2' | 'B1' | 'B2' | 'C1' | 'C2'
+import type { CefrLevel } from '@/lib/types/cefr'
 
 async function getGrammarData(userId: string | null, level: CefrLevel) {
     // Query topics and lessons separately to avoid Prisma include issues

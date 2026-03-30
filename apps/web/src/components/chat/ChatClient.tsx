@@ -11,7 +11,7 @@ interface Message {
     timestamp: Date
 }
 
-type CefrLevel = 'A1' | 'A2' | 'B1' | 'B2' | 'C1' | 'C2'
+import type { CefrLevel } from '@/lib/types/cefr'
 
 const LEVEL_COLORS: Record<CefrLevel, { bg: string; text: string; ring: string; gradient: string }> = {
     A1: { bg: 'bg-green-500', text: 'text-green-600', ring: 'ring-green-300', gradient: 'from-green-400 to-emerald-500' },

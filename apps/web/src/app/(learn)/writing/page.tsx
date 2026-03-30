@@ -9,7 +9,7 @@ export const metadata = {
     description: 'Deutsche Schreibtraining — Practice writing by CEFR level with AI feedback',
 }
 
-type CefrLevel = 'A1' | 'A2' | 'B1' | 'B2' | 'C1' | 'C2'
+import type { CefrLevel } from '@/lib/types/cefr'
 
 async function getWritingData(userId: string | null, cefrLevel: CefrLevel) {
     const exercises = await cacheWrap(`writing:exercises:${cefrLevel}`, 3600, () => prisma.writingExercise.findMany({

@@ -1,8 +1,8 @@
 import { Prisma, prisma } from '@fuxie/database'
-import { unstable_cache } from 'next/cache'
 import { cacheWrap } from '@/lib/cache/redis'
 
-export type CefrLevel = 'A1' | 'A2' | 'B1' | 'B2' | 'C1' | 'C2'
+export type { CefrLevel } from '@/lib/types/cefr'
+import type { CefrLevel } from '@/lib/types/cefr'
 
 export async function getVocabularyThemes(level: CefrLevel) {
     return cacheWrap(`vocab:themes:${level}`, 3600, () =>
@@ -47,8 +47,8 @@ export function mapVocabularyThemes<
     }))
 }
 
-export const getVocabularyLevels = unstable_cache(
-    async (): Promise<CefrLevel[]> => {
+export async function getVocabularyLevels(): Promise<CefrLevel[]> {
+    return cacheWrap('vocab:levels', 3600, async () => {
         const levels = await prisma.vocabularyTheme.findMany({
             select: { cefrLevel: true },
             distinct: ['cefrLevel'],
@@ -56,10 +56,8 @@ export const getVocabularyLevels = unstable_cache(
         })
         if (levels.length === 0) return ['A1']
         return levels.map((level) => level.cefrLevel as CefrLevel)
-    },
-    ['vocabulary-available-levels'],
-    { revalidate: 3600, tags: ['vocabulary-levels'] }
-)
+    })
+}
 
 export function buildVocabularyItemWhere(params: {
     level: CefrLevel

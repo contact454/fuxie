@@ -12,7 +12,7 @@ import * as fs from 'fs';
 import * as path from 'path';
 dotenv.config();
 
-const connectionString = "postgresql://neondb_owner:npg_aU0YPhW6zZQp@ep-rough-thunder-a1m0qm18.ap-southeast-1.aws.neon.tech/fuxie_prod?sslmode=require";
+const connectionString = process.env.DATABASE_URL || "";
 const client = new Client({ connectionString });
 
 const geminiKey = process.env.GEMINI_API_KEY;

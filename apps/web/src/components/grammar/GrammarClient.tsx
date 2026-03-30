@@ -4,7 +4,7 @@ import React, { useState, useTransition } from 'react'
 import { useRouter } from 'next/navigation'
 import s from './grammar.module.css'
 
-type CefrLevel = 'A1' | 'A2' | 'B1' | 'B2' | 'C1' | 'C2'
+import type { CefrLevel } from '@/lib/types/cefr'
 
 interface LessonSummary {
     id: string

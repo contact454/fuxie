@@ -12,7 +12,7 @@ import b2Course from '@/data/courses/b2.json'
 import c1Course from '@/data/courses/c1.json'
 import c2Course from '@/data/courses/c2.json'
 
-type CefrLevel = 'A1' | 'A2' | 'B1' | 'B2' | 'C1' | 'C2'
+import type { CefrLevel } from '@/lib/types/cefr'
 
 interface SkillLink {
     skill: 'listening' | 'reading' | 'writing' | 'speaking'

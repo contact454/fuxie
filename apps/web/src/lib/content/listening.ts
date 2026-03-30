@@ -1,7 +1,8 @@
 import { prisma } from '@fuxie/database'
-import { unstable_cache } from 'next/cache'
+import { cacheWrap } from '@/lib/cache/redis'
 
-export type CefrLevel = 'A1' | 'A2' | 'B1' | 'B2' | 'C1' | 'C2'
+export type { CefrLevel } from '@/lib/types/cefr'
+import type { CefrLevel } from '@/lib/types/cefr'
 
 export interface ListeningLessonListItem {
     id: string
@@ -69,8 +70,8 @@ export function groupListeningLessonsByTeil(lessons: ListeningLessonListItem[]):
     return Object.values(teilMap).sort((a, b) => a.teil - b.teil)
 }
 
-export const getListeningLevels = unstable_cache(
-    async (): Promise<CefrLevel[]> => {
+export async function getListeningLevels(): Promise<CefrLevel[]> {
+    return cacheWrap('listening:levels', 3600, async () => {
         const levels = await prisma.listeningLesson.findMany({
             select: { cefrLevel: true },
             distinct: ['cefrLevel'],
@@ -78,7 +79,5 @@ export const getListeningLevels = unstable_cache(
         })
         if (levels.length === 0) return ['A1']
         return levels.map((level) => level.cefrLevel as CefrLevel)
-    },
-    ['listening-available-levels'],
-    { revalidate: 3600, tags: ['listening-levels'] }
-)
+    })
+}

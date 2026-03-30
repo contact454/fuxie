@@ -19,7 +19,7 @@ dotenv.config();
 const IMG_DIR = path.join(__dirname, '..', 'apps', 'web', 'public', 'images', 'exams', 'ads');
 
 // Neon DB Prod connection exact as audio sync script
-const connectionString = "postgresql://neondb_owner:npg_aU0YPhW6zZQp@ep-rough-thunder-a1m0qm18.ap-southeast-1.aws.neon.tech/fuxie_prod?sslmode=require";
+const connectionString = process.env.DATABASE_URL || "";
 const dbClient = new Client({ connectionString });
 
 const s3 = new S3Client({

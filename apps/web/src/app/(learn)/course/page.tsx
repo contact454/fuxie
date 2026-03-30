@@ -10,7 +10,7 @@ export const metadata = {
     description: 'Deutsch Kurs — Lộ trình học tiếng Đức theo chuẩn CEFR',
 }
 
-type CefrLevel = 'A1' | 'A2' | 'B1' | 'B2' | 'C1' | 'C2'
+import type { CefrLevel } from '@/lib/types/cefr'
 
 interface ModuleWithProgress {
     id: string

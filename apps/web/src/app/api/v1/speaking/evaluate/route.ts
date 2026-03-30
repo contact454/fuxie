@@ -88,7 +88,6 @@ async function callGeminiWithAudio(
     }
   }
 
-  console.log(`[Gemini] Calling REST API, audio: ${base64Audio.length} b64 chars, mime: ${mimeType}`)
 
   const result = await withGeminiFallback(async (_, activeKey) => {
     const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${activeKey}`
@@ -119,7 +118,6 @@ async function callGeminiWithAudio(
     throw new Error(`NO_TEXT: ${resultStr}`)
   }
 
-  console.log(`[Gemini] Raw response: ${text.substring(0, 500)}`)
 
   // Robust JSON parsing — handle markdown fences, truncated strings, etc.
   let cleaned = text
@@ -182,8 +180,7 @@ export async function POST(request: NextRequest) {
       exerciseType: formData.get('exerciseType') || 'nachsprechen',
     })
 
-    console.log(`[Evaluate] Level: ${level}, Audio: ${audioFile.size}b, Type: ${audioFile.type}, Name: ${audioFile.name}, Ref: "${referenceText}"`)
-
+  
     // === STEP 1: Call Gemini for pronunciation evaluation ===
     let transcript = ''
     let aiScore = 0
@@ -220,8 +217,7 @@ Antworte NUR als valides JSON ohne Markdown:
         aiScore = typeof parsed.score === 'number' ? parsed.score : 0
         usedAI = true
 
-        console.log(`[Evaluate] Gemini: transcript="${transcript}", score=${aiScore}`)
-
+      
         if (parsed.feedbackVi) {
           overallTips.push(`💡 ${parsed.feedbackVi}`)
         }
@@ -247,8 +243,7 @@ Antworte NUR als valides JSON ohne Markdown:
         `🔍 Debug: key=${apiKey ? apiKey.substring(0,8) + '...' : 'MISSING'}, audioSize=${audioFile.size}b, err=${debugError || 'unknown'}`,
       ]
     } else if (!transcript && aiScore === 0) {
-      console.log('[Evaluate] Gemini detected no recognizable speech')
-      overallTips = overallTips.length > 0 ? overallTips : [
+        overallTips = overallTips.length > 0 ? overallTips : [
         '🎤 AI không nhận diện được lời nói trong bản ghi âm.',
         '💡 Hãy nói to, rõ ràng hơn và gần microphone hơn.',
       ]
@@ -262,8 +257,7 @@ Antworte NUR als valides JSON ohne Markdown:
     // Use AI score directly
     const accuracy = usedAI ? aiScore : 0
 
-    console.log(`[Evaluate] Final: accuracy=${accuracy}, usedAI=${usedAI}`)
-
+  
     return NextResponse.json({
       transcript: usedAI ? transcript : '',
       accuracy,
