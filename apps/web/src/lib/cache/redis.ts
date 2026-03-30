@@ -13,13 +13,12 @@ function getRedis(): Redis | null {
     const token = process.env.UPSTASH_REDIS_REST_TOKEN
 
     if (!url || !token) {
-        console.log('[Cache] Redis not configured — running without cache')
         disabled = true
         return null
     }
 
     redis = new Redis({ url, token })
-    console.log('[Cache] Upstash Redis connected')
+
     return redis
 }
 
@@ -32,11 +31,7 @@ export async function cacheGet<T>(key: string): Promise<T | null> {
         if (!client) return null
 
         const value = await client.get<T>(key)
-        if (value !== null && value !== undefined) {
-            console.log(`[Cache] HIT: ${key}`)
-            return value
-        }
-        console.log(`[Cache] MISS: ${key}`)
+        if (value !== null && value !== undefined) return value
         return null
     } catch (err) {
         console.warn(`[Cache] GET error for ${key}:`, err)
@@ -51,7 +46,7 @@ export async function cacheSet(key: string, value: unknown, ttlSeconds: number):
         if (!client) return
 
         await client.set(key, value, { ex: ttlSeconds })
-        console.log(`[Cache] SET: ${key} (TTL: ${ttlSeconds}s)`)
+
     } catch (err) {
         console.warn(`[Cache] SET error for ${key}:`, err)
     }
@@ -86,7 +81,7 @@ export async function cacheInvalidate(...keys: string[]): Promise<void> {
         if (!client || keys.length === 0) return
 
         await client.del(...keys)
-        console.log(`[Cache] INVALIDATED: ${keys.join(', ')}`)
+
     } catch (err) {
         console.warn(`[Cache] INVALIDATE error:`, err)
     }
@@ -111,7 +106,7 @@ export async function cacheInvalidatePrefix(prefix: string): Promise<void> {
             const keys = result[1] as string[]
             if (keys.length > 0) {
                 await client.del(...keys)
-                console.log(`[Cache] INVALIDATED ${keys.length} keys with prefix: ${prefix}`)
+
             }
         } while (cursor !== 0)
     } catch (err) {
