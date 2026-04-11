@@ -23,11 +23,11 @@ export async function GET() {
             latencyMs,
             timestamp: new Date().toISOString(),
         })
-    } catch (err: any) {
+    } catch (err: unknown) {
         return NextResponse.json({
             status: 'error',
             db: 'disconnected',
-            error: err.message,
+            error: err instanceof Error ? err.message : 'Unknown error',
             latencyMs: Date.now() - start,
         }, { status: 503 })
     }

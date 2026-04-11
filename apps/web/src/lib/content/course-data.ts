@@ -22,19 +22,28 @@ interface SkillLink {
     emoji: string
 }
 
+/** Extended module shape including optional fields from course JSON */
+interface CourseModuleJson {
+    slug: string
+    vocabularyThemes?: string[]
+    grammarTopics?: string[]
+    skillLinks?: SkillLink[]
+    [key: string]: unknown
+}
+
 interface CourseModuleMapping {
     vocabularyThemes: string[]
     grammarTopics: string[]
     skillLinks: SkillLink[]
 }
 
-const COURSE_DATA: Record<CefrLevel, typeof a1Course> = {
-    A1: a1Course,
-    A2: a2Course,
-    B1: b1Course,
-    B2: b2Course,
-    C1: c1Course,
-    C2: c2Course,
+const COURSE_DATA: Record<CefrLevel, { modules: CourseModuleJson[] }> = {
+    A1: a1Course as { modules: CourseModuleJson[] },
+    A2: a2Course as { modules: CourseModuleJson[] },
+    B1: b1Course as { modules: CourseModuleJson[] },
+    B2: b2Course as { modules: CourseModuleJson[] },
+    C1: c1Course as { modules: CourseModuleJson[] },
+    C2: c2Course as { modules: CourseModuleJson[] },
 }
 
 /**
@@ -48,10 +57,11 @@ export function getCourseModuleMap(level: CefrLevel): Record<string, CourseModul
     const moduleMap: Record<string, CourseModuleMapping> = {}
     for (const mod of courseJson.modules) {
         moduleMap[mod.slug] = {
-            vocabularyThemes: (mod as any).vocabularyThemes ?? [],
-            grammarTopics: (mod as any).grammarTopics ?? [],
-            skillLinks: ((mod as any).skillLinks ?? []) as SkillLink[],
+            vocabularyThemes: mod.vocabularyThemes ?? [],
+            grammarTopics: mod.grammarTopics ?? [],
+            skillLinks: mod.skillLinks ?? [],
         }
     }
     return moduleMap
 }
+

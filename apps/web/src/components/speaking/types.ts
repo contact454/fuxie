@@ -30,6 +30,7 @@ export interface NachsprechenConfig {
   showIPA: boolean
   showTranslation: boolean
   autoPlayModel: boolean
+  scenario?: string
 }
 
 export interface WordResult {

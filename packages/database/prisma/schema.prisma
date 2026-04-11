@@ -96,6 +96,7 @@ enum ContentStatus {
 
 enum UserRole {
   LEARNER
+  TEACHER
   ADMIN
   CONTENT_CREATOR
 }
@@ -103,30 +104,36 @@ enum UserRole {
 // ===== AUTH & USERS =====
 
 model User {
-  id            String    @id @default(uuid())
-  firebaseUid   String    @unique
-  email         String    @unique
-  role          UserRole  @default(LEARNER)
-  emailVerified Boolean   @default(false)
+  id            String   @id @default(uuid())
+  firebaseUid   String   @unique
+  email         String   @unique
+  role          UserRole @default(LEARNER)
+  emailVerified Boolean  @default(false)
 
-  profile         UserProfile?
-  settings        UserSettings?
-  learningPath    LearningPath?
-  srsCards        SrsCard[]
-  srsReviewLogs   SrsReviewLog[]
-  progress        UserProgress[]
-  assessments     SkillAssessment[]
-  examAttempts    ExamAttempt[]
-  aiConversations AiConversation[]
-  achievements    UserAchievement[]
-  streak          UserStreak?
-  dailyActivities    DailyActivity[]
-  listeningAttempts  ListeningAttempt[]
-  readingAttempts     ReadingAttempt[]
-  writingAttempts     WritingAttempt[]
+  profile               UserProfile?
+  settings              UserSettings?
+  learningPath          LearningPath?
+  srsCards              SrsCard[]
+  srsReviewLogs         SrsReviewLog[]
+  progress              UserProgress[]
+  assessments           SkillAssessment[]
+  examAttempts          ExamAttempt[]
+  aiConversations       AiConversation[]
+  achievements          UserAchievement[]
+  streak                UserStreak?
+  dailyActivities       DailyActivity[]
+  listeningAttempts     ListeningAttempt[]
+  readingAttempts       ReadingAttempt[]
+  writingAttempts       WritingAttempt[]
   vocabExerciseAttempts VocabExerciseAttempt[]
   grammarProgress       GrammarProgress[]
   speakingProgress      SpeakingProgress[]
+  pushSubscriptions     PushSubscription[]
+
+  // Teacher & Classroom relations
+  teacherClassrooms  Classroom[]            @relation("teacherClassrooms")
+  studentEnrollments ClassEnrollment[]      @relation("studentEnrollments")
+  studentSubmissions AssignmentSubmission[] @relation("studentSubmissions")
 
   createdAt DateTime  @default(now())
   updatedAt DateTime  @updatedAt
@@ -135,25 +142,40 @@ model User {
   @@map("users")
 }
 
+model PushSubscription {
+  id        String   @id @default(uuid())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id])
+  endpoint  String
+  p256dh    String
+  auth      String
+  createdAt DateTime @default(now())
+
+  @@unique([userId, endpoint])
+  @@map("push_subscriptions")
+}
+
 model UserProfile {
   id     String @id @default(uuid())
   userId String @unique
   user   User   @relation(fields: [userId], references: [id])
 
-  displayName     String?
-  avatarUrl       String?
-  nativeLanguage  String    @default("vi")
-  currentLevel    CefrLevel @default(A1)
-  targetLevel     CefrLevel?
-  targetExam      ExamType?
-  targetExamDate  DateTime?
-  studyGoalMinutes Int      @default(15)
-  timezone        String    @default("Asia/Ho_Chi_Minh")
+  displayName      String?
+  avatarUrl        String?
+  nativeLanguage   String     @default("vi")
+  currentLevel     CefrLevel  @default(A1)
+  targetLevel      CefrLevel?
+  targetExam       ExamType?
+  targetExamDate   DateTime?
+  studyGoalMinutes Int        @default(15)
+  timezone         String     @default("Asia/Ho_Chi_Minh")
 
   totalXp               Int @default(0)
   totalWordsLearned     Int @default(0)
   totalLessonsCompleted Int @default(0)
   totalStudyMinutes     Int @default(0)
+
+  onboardingCompleted Boolean @default(false)
 
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
@@ -227,7 +249,7 @@ model Course {
 
 model Module {
   id               String        @id @default(uuid())
-  courseId          String
+  courseId         String
   course           Course        @relation(fields: [courseId], references: [id])
   slug             String
   title            String
@@ -297,9 +319,9 @@ model Exercise {
   audioUrl      String?
   imageUrl      String?
 
-  maxScore         Int           @default(1)
-  estimatedSeconds Int           @default(60)
-  xpReward         Int           @default(10)
+  maxScore         Int @default(1)
+  estimatedSeconds Int @default(60)
+  xpReward         Int @default(10)
 
   explanation   String?
   explanationDe String?
@@ -346,9 +368,9 @@ model VocabularyTheme {
 }
 
 model VocabularyItem {
-  id        String           @id @default(uuid())
-  themeId   String?
-  theme     VocabularyTheme? @relation(fields: [themeId], references: [id])
+  id      String           @id @default(uuid())
+  themeId String?
+  theme   VocabularyTheme? @relation(fields: [themeId], references: [id])
 
   word      String
   wordLower String
@@ -390,15 +412,15 @@ model VocabularyItem {
 // ===== GRAMMAR =====
 
 model GrammarTopic {
-  id            String        @id @default(uuid())
-  slug          String        @unique
-  title         String
-  titleDe       String?
-  titleVi       String?
-  description   String?
-  cefrLevel     CefrLevel
-  sortOrder     Int           @default(0)
-  status        ContentStatus @default(DRAFT)
+  id          String        @id @default(uuid())
+  slug        String        @unique
+  title       String
+  titleDe     String?
+  titleVi     String?
+  description String?
+  cefrLevel   CefrLevel
+  sortOrder   Int           @default(0)
+  status      ContentStatus @default(DRAFT)
 
   explanation   String?
   explanationDe String?
@@ -418,9 +440,9 @@ model GrammarTopic {
 }
 
 model GrammarRule {
-  id         String       @id @default(uuid())
-  topicId    String
-  topic      GrammarTopic @relation(fields: [topicId], references: [id])
+  id      String       @id @default(uuid())
+  topicId String
+  topic   GrammarTopic @relation(fields: [topicId], references: [id])
 
   title      String
   titleDe    String?
@@ -429,7 +451,7 @@ model GrammarRule {
   examples   Json
   exceptions Json?
   tableData  Json?
-  sortOrder  Int          @default(0)
+  sortOrder  Int     @default(0)
 
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
@@ -438,23 +460,23 @@ model GrammarRule {
 }
 
 model GrammarLesson {
-  id             String        @id              // "a1-praesens-01-E"
-  topicId        String
-  topic          GrammarTopic  @relation(fields: [topicId], references: [id])
-  level          CefrLevel
-  lessonType     String                         // "E" | "V" | "A"
-  lessonNumber   Int
-  titleDe        String
-  titleVi        String
-  estimatedMin   Int           @default(8)
-  tags           String[]
-  theoryJson     Json?                          // theory blocks (null for A-lessons)
-  exercisesJson  Json                           // exercises array
-  metadataJson   Json?
-  sortOrder      Int           @default(0)
-  status         ContentStatus @default(PUBLISHED)
+  id            String        @id // "a1-praesens-01-E"
+  topicId       String
+  topic         GrammarTopic  @relation(fields: [topicId], references: [id])
+  level         CefrLevel
+  lessonType    String // "E" | "V" | "A"
+  lessonNumber  Int
+  titleDe       String
+  titleVi       String
+  estimatedMin  Int           @default(8)
+  tags          String[]
+  theoryJson    Json? // theory blocks (null for A-lessons)
+  exercisesJson Json // exercises array
+  metadataJson  Json?
+  sortOrder     Int           @default(0)
+  status        ContentStatus @default(PUBLISHED)
 
-  progress       GrammarProgress[]
+  progress GrammarProgress[]
 
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
@@ -465,17 +487,17 @@ model GrammarLesson {
 }
 
 model GrammarProgress {
-  id        String        @id @default(uuid())
-  userId    String
-  user      User          @relation(fields: [userId], references: [id])
-  lessonId  String
-  lesson    GrammarLesson @relation(fields: [lessonId], references: [id])
+  id       String        @id @default(uuid())
+  userId   String
+  user     User          @relation(fields: [userId], references: [id])
+  lessonId String
+  lesson   GrammarLesson @relation(fields: [lessonId], references: [id])
 
   score     Int?
   maxScore  Int?
-  stars     Int?                               // 1-3
-  completed Boolean       @default(false)
-  attempts  Int           @default(0)
+  stars     Int? // 1-3
+  completed Boolean   @default(false)
+  attempts  Int       @default(0)
   lastAt    DateTime?
 
   createdAt DateTime @default(now())
@@ -497,17 +519,17 @@ model SrsCard {
   vocabularyItem   VocabularyItem? @relation(fields: [vocabularyItemId], references: [id])
   grammarTopicId   String?
 
-  interval       Float    @default(0)
-  repetitions    Int      @default(0)
-  easeFactor     Float    @default(2.5)
-  nextReviewAt   DateTime @default(now())
+  interval       Float     @default(0)
+  repetitions    Int       @default(0)
+  easeFactor     Float     @default(2.5)
+  nextReviewAt   DateTime  @default(now())
   lastReviewedAt DateTime?
 
   stability     Float?
   difficulty    Float?
   elapsedDays   Float?
   scheduledDays Float?
-  state         Int      @default(0)
+  state         Int    @default(0)
 
   totalReviews   Int @default(0)
   totalCorrect   Int @default(0)
@@ -526,9 +548,9 @@ model SrsCard {
 }
 
 model SrsReviewLog {
-  id     String @id @default(uuid())
+  id     String  @id @default(uuid())
   userId String
-  user   User   @relation(fields: [userId], references: [id])
+  user   User    @relation(fields: [userId], references: [id])
   cardId String
   card   SrsCard @relation(fields: [cardId], references: [id])
 
@@ -575,15 +597,15 @@ model ExamTemplate {
 }
 
 model ExamSection {
-  id           String       @id @default(uuid())
-  examId       String
-  exam         ExamTemplate @relation(fields: [examId], references: [id])
+  id     String       @id @default(uuid())
+  examId String
+  exam   ExamTemplate @relation(fields: [examId], references: [id])
 
   title        String
   skill        Skill
   totalMinutes Int
   totalPoints  Int
-  sortOrder    Int          @default(0)
+  sortOrder    Int     @default(0)
   instructions String?
 
   tasks ExamTask[]
@@ -595,18 +617,18 @@ model ExamSection {
 }
 
 model ExamTask {
-  id          String       @id @default(uuid())
-  sectionId   String
-  section     ExamSection  @relation(fields: [sectionId], references: [id])
+  id        String      @id @default(uuid())
+  sectionId String
+  section   ExamSection @relation(fields: [sectionId], references: [id])
 
-  title       String
+  title        String
   exerciseType ExerciseType
-  contentJson Json
-  audioUrl    String?
-  imageUrl    String?
-  maxPoints   Int
-  sortOrder   Int          @default(0)
-  rubricJson  Json?
+  contentJson  Json
+  audioUrl     String?
+  imageUrl     String?
+  maxPoints    Int
+  sortOrder    Int          @default(0)
+  rubricJson   Json?
 
   answers ExamAnswer[]
 
@@ -667,9 +689,9 @@ model ExamAnswer {
 // ===== AI =====
 
 model AiConversation {
-  id     String    @id @default(uuid())
+  id     String @id @default(uuid())
   userId String
-  user   User      @relation(fields: [userId], references: [id])
+  user   User   @relation(fields: [userId], references: [id])
 
   title           String?
   cefrLevel       CefrLevel
@@ -692,13 +714,13 @@ model AiMessage {
   conversationId String
   conversation   AiConversation @relation(fields: [conversationId], references: [id])
 
-  role       String
-  content    String
-  contentDe  String?
-  audioUrl   String?
-  model      String?
-  tokensUsed Int?
-  latencyMs  Int?
+  role        String
+  content     String
+  contentDe   String?
+  audioUrl    String?
+  model       String?
+  tokensUsed  Int?
+  latencyMs   Int?
   corrections Json?
 
   createdAt DateTime @default(now())
@@ -710,8 +732,8 @@ model AiMessage {
 // ===== GAMIFICATION =====
 
 model Achievement {
-  id             String @id @default(uuid())
-  slug           String @unique
+  id             String  @id @default(uuid())
+  slug           String  @unique
   title          String
   titleDe        String?
   description    String
@@ -720,7 +742,7 @@ model Achievement {
   category       String
   conditionType  String
   conditionValue Int
-  xpReward       Int    @default(0)
+  xpReward       Int     @default(0)
 
   userAchievements UserAchievement[]
 
@@ -745,9 +767,9 @@ model UserAchievement {
 }
 
 model UserStreak {
-  id               String    @id @default(uuid())
-  userId           String    @unique
-  user             User      @relation(fields: [userId], references: [id])
+  id     String @id @default(uuid())
+  userId String @unique
+  user   User   @relation(fields: [userId], references: [id])
 
   currentStreak    Int       @default(0)
   longestStreak    Int       @default(0)
@@ -824,25 +846,25 @@ model DailyActivity {
 
 model ListeningLesson {
   id              String    @id @default(uuid())
-  lessonId        String    @unique              // "L-A1-GOETHE-001-T1"
+  lessonId        String    @unique // "L-A1-GOETHE-001-T1"
   cefrLevel       CefrLevel
-  board           String    @default("GOETHE")   // GOETHE, TELC, OESD
-  teil            Int                             // 1-4
-  teilName        String                         // "Kurze Alltagsgespräche"
-  title           String                         // Full German title
-  topic           String                         // "Sich vorstellen und begrüßen"
-  taskType        String                         // "MC a/b/c", "Richtig/Falsch"
-  audioUrl        String                         // GCS URL to MP3
-  audioDuration   Int?                           // in seconds
-  backgroundScene String?                        // "cafe", "station"
+  board           String    @default("GOETHE") // GOETHE, TELC, OESD
+  teil            Int // 1-4
+  teilName        String // "Kurze Alltagsgespräche"
+  title           String // Full German title
+  topic           String // "Sich vorstellen und begrüßen"
+  taskType        String // "MC a/b/c", "Richtig/Falsch"
+  audioUrl        String // GCS URL to MP3
+  audioDuration   Int? // in seconds
+  backgroundScene String? // "cafe", "station"
   sortOrder       Int       @default(0)
-  transcript      Json?                          // full script JSON for transcript display
+  transcript      Json? // full script JSON for transcript display
 
-  questions       ListeningQuestion[]
-  attempts        ListeningAttempt[]
+  questions ListeningQuestion[]
+  attempts  ListeningAttempt[]
 
-  createdAt       DateTime  @default(now())
-  updatedAt       DateTime  @updatedAt
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
 
   @@index([cefrLevel, teil])
   @@index([cefrLevel, sortOrder])
@@ -850,25 +872,25 @@ model ListeningLesson {
 }
 
 model ListeningQuestion {
-  id              String          @id @default(uuid())
-  lessonId        String
-  lesson          ListeningLesson @relation(fields: [lessonId], references: [id], onDelete: Cascade)
-  questionNumber  Int                             // 1-15
-  questionType    String                          // "mc_abc", "richtig_falsch", "zuordnung", "ja_nein"
-  questionText    String                          // German question
-  questionTextVi  String?                         // Vietnamese translation
-  options         Json                            // ["a) ...", "b) ...", "c) ..."]
-  correctAnswer   String                          // "b"
-  explanation     String?                         // Why this answer is correct
-  explanationVi   String?                         // Vietnamese explanation
-  timestampStart  Float?                          // Audio timestamp where answer appears
-  timestampEnd    Float?
-  sortOrder       Int             @default(0)
+  id             String          @id @default(uuid())
+  lessonId       String
+  lesson         ListeningLesson @relation(fields: [lessonId], references: [id], onDelete: Cascade)
+  questionNumber Int // 1-15
+  questionType   String // "mc_abc", "richtig_falsch", "zuordnung", "ja_nein"
+  questionText   String // German question
+  questionTextVi String? // Vietnamese translation
+  options        Json // ["a) ...", "b) ...", "c) ..."]
+  correctAnswer  String // "b"
+  explanation    String? // Why this answer is correct
+  explanationVi  String? // Vietnamese explanation
+  timestampStart Float? // Audio timestamp where answer appears
+  timestampEnd   Float?
+  sortOrder      Int             @default(0)
 
-  responses       ListeningResponse[]
+  responses ListeningResponse[]
 
-  createdAt       DateTime        @default(now())
-  updatedAt       DateTime        @updatedAt
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
 
   @@unique([lessonId, questionNumber])
   @@index([lessonId])
@@ -876,20 +898,20 @@ model ListeningQuestion {
 }
 
 model ListeningAttempt {
-  id              String          @id @default(uuid())
-  userId          String
-  user            User            @relation(fields: [userId], references: [id])
-  lessonId        String
-  lesson          ListeningLesson @relation(fields: [lessonId], references: [id])
-  score           Int                             // Correct answers count
-  totalQuestions  Int
-  percentage      Float
-  timeTaken       Int?                            // seconds
-  listenCount     Int             @default(1)     // How many times audio played
+  id             String          @id @default(uuid())
+  userId         String
+  user           User            @relation(fields: [userId], references: [id])
+  lessonId       String
+  lesson         ListeningLesson @relation(fields: [lessonId], references: [id])
+  score          Int // Correct answers count
+  totalQuestions Int
+  percentage     Float
+  timeTaken      Int? // seconds
+  listenCount    Int             @default(1) // How many times audio played
 
-  responses       ListeningResponse[]
+  responses ListeningResponse[]
 
-  completedAt     DateTime        @default(now())
+  completedAt DateTime @default(now())
 
   @@index([userId, lessonId])
   @@index([userId, completedAt])
@@ -897,15 +919,15 @@ model ListeningAttempt {
 }
 
 model ListeningResponse {
-  id              String            @id @default(uuid())
-  attemptId       String
-  attempt         ListeningAttempt  @relation(fields: [attemptId], references: [id], onDelete: Cascade)
-  questionId      String
-  question        ListeningQuestion @relation(fields: [questionId], references: [id])
-  userAnswer      String
-  isCorrect       Boolean
+  id         String            @id @default(uuid())
+  attemptId  String
+  attempt    ListeningAttempt  @relation(fields: [attemptId], references: [id], onDelete: Cascade)
+  questionId String
+  question   ListeningQuestion @relation(fields: [questionId], references: [id])
+  userAnswer String
+  isCorrect  Boolean
 
-  createdAt       DateTime          @default(now())
+  createdAt DateTime @default(now())
 
   @@index([attemptId])
   @@map("listening_responses")
@@ -914,23 +936,23 @@ model ListeningResponse {
 // ===== READING =====
 
 model ReadingExercise {
-  id            String    @id @default(uuid())
-  exerciseId    String    @unique              // "A1-T1-001"
-  cefrLevel     CefrLevel
-  teil          Int                             // 1-5
-  teilName      String                          // "Kurze Texte lesen"
-  topic         String                          // "Im Supermarkt"
-  textsJson     Json                            // Array of text objects (emails, blogs, articles)
-  imagesJson    Json?                           // Array of image refs [{id, type, filename, alt_text}]
-  scoringJson   Json?                           // Grading scale with ranges and labels
-  metadataJson  Json?                           // word count, grammar, vocabulary targets
-  sortOrder     Int       @default(0)
+  id           String    @id @default(uuid())
+  exerciseId   String    @unique // "A1-T1-001"
+  cefrLevel    CefrLevel
+  teil         Int // 1-5
+  teilName     String // "Kurze Texte lesen"
+  topic        String // "Im Supermarkt"
+  textsJson    Json // Array of text objects (emails, blogs, articles)
+  imagesJson   Json? // Array of image refs [{id, type, filename, alt_text}]
+  scoringJson  Json? // Grading scale with ranges and labels
+  metadataJson Json? // word count, grammar, vocabulary targets
+  sortOrder    Int       @default(0)
 
-  questions     ReadingQuestion[]
-  attempts      ReadingAttempt[]
+  questions ReadingQuestion[]
+  attempts  ReadingAttempt[]
 
-  createdAt     DateTime  @default(now())
-  updatedAt     DateTime  @updatedAt
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
 
   @@index([cefrLevel, teil])
   @@index([cefrLevel, sortOrder])
@@ -938,23 +960,23 @@ model ReadingExercise {
 }
 
 model ReadingQuestion {
-  id              String           @id @default(uuid())
-  exerciseId      String
-  exercise        ReadingExercise  @relation(fields: [exerciseId], references: [id], onDelete: Cascade)
-  questionNumber  Int                              // 1-10
-  questionType    String                           // "richtig_falsch", "mc_abc", "matching_ab", "lueckentext", "ja_nein"
-  linkedText      String?                          // "TextA", "TextB" — which text this question refers to
-  statement       String                           // German question/statement
-  options         Json?                            // For MC: ["a) ...", "b) ...", "c) ..."]
-  correctAnswer   String                           // "richtig", "falsch", "a", "b", etc.
-  points          Int              @default(1)
-  explanation     Json?                            // {de, key_evidence, key_vocabulary[]}
-  sortOrder       Int              @default(0)
+  id             String          @id @default(uuid())
+  exerciseId     String
+  exercise       ReadingExercise @relation(fields: [exerciseId], references: [id], onDelete: Cascade)
+  questionNumber Int // 1-10
+  questionType   String // "richtig_falsch", "mc_abc", "matching_ab", "lueckentext", "ja_nein"
+  linkedText     String? // "TextA", "TextB" — which text this question refers to
+  statement      String // German question/statement
+  options        Json? // For MC: ["a) ...", "b) ...", "c) ..."]
+  correctAnswer  String // "richtig", "falsch", "a", "b", etc.
+  points         Int             @default(1)
+  explanation    Json? // {de, key_evidence, key_vocabulary[]}
+  sortOrder      Int             @default(0)
 
-  responses       ReadingResponse[]
+  responses ReadingResponse[]
 
-  createdAt       DateTime         @default(now())
-  updatedAt       DateTime         @updatedAt
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
 
   @@unique([exerciseId, questionNumber])
   @@index([exerciseId])
@@ -962,19 +984,19 @@ model ReadingQuestion {
 }
 
 model ReadingAttempt {
-  id              String           @id @default(uuid())
-  userId          String
-  user            User             @relation(fields: [userId], references: [id])
-  exerciseId      String
-  exercise        ReadingExercise  @relation(fields: [exerciseId], references: [id])
-  score           Int                              // Correct answers count
-  totalQuestions  Int
-  percentage      Float
-  timeTaken       Int?                             // seconds
+  id             String          @id @default(uuid())
+  userId         String
+  user           User            @relation(fields: [userId], references: [id])
+  exerciseId     String
+  exercise       ReadingExercise @relation(fields: [exerciseId], references: [id])
+  score          Int // Correct answers count
+  totalQuestions Int
+  percentage     Float
+  timeTaken      Int? // seconds
 
-  responses       ReadingResponse[]
+  responses ReadingResponse[]
 
-  completedAt     DateTime         @default(now())
+  completedAt DateTime @default(now())
 
   @@index([userId, exerciseId])
   @@index([userId, completedAt])
@@ -982,15 +1004,15 @@ model ReadingAttempt {
 }
 
 model ReadingResponse {
-  id              String           @id @default(uuid())
-  attemptId       String
-  attempt         ReadingAttempt   @relation(fields: [attemptId], references: [id], onDelete: Cascade)
-  questionId      String
-  question        ReadingQuestion  @relation(fields: [questionId], references: [id])
-  userAnswer      String
-  isCorrect       Boolean
+  id         String          @id @default(uuid())
+  attemptId  String
+  attempt    ReadingAttempt  @relation(fields: [attemptId], references: [id], onDelete: Cascade)
+  questionId String
+  question   ReadingQuestion @relation(fields: [questionId], references: [id])
+  userAnswer String
+  isCorrect  Boolean
 
-  createdAt       DateTime         @default(now())
+  createdAt DateTime @default(now())
 
   @@index([attemptId])
   @@map("reading_responses")
@@ -999,21 +1021,21 @@ model ReadingResponse {
 // ===== VOCAB EXERCISES =====
 
 model VocabExerciseAttempt {
-  id           String    @id @default(uuid())
-  userId       String
-  user         User      @relation(fields: [userId], references: [id])
+  id     String @id @default(uuid())
+  userId String
+  user   User   @relation(fields: [userId], references: [id])
 
-  exerciseType String                // "mc", "matching", "spelling", "cloze", "scramble", "speed"
+  exerciseType String // "mc", "matching", "spelling", "cloze", "scramble", "speed"
   themeSlug    String
   cefrLevel    CefrLevel
 
   totalQuestions Int
   correctCount   Int
-  score          Int                  // XP earned
-  timeTaken      Int?                 // seconds
-  accuracy       Float                // 0-100
+  score          Int // XP earned
+  timeTaken      Int? // seconds
+  accuracy       Float // 0-100
 
-  details    Json?                    // { questions, answers }
+  details Json? // { questions, answers }
 
   createdAt DateTime @default(now())
 
@@ -1026,51 +1048,51 @@ model VocabExerciseAttempt {
 // ===== WRITING =====
 
 model WritingExercise {
-  id            String        @id @default(uuid())
-  exerciseId    String        @unique              // "W-A1-T1-001"
-  cefrLevel     CefrLevel
-  teil          Int                                // 1-3
-  teilName      String                             // "Formular ausfüllen"
-  textType      String                             // "Formular", "E-Mail", "Forumsbeitrag", etc.
-  register      String                             // "formell", "informell", "neutral"
-  topic         String                             // "Deutschkurs"
+  id         String    @id @default(uuid())
+  exerciseId String    @unique // "W-A1-T1-001"
+  cefrLevel  CefrLevel
+  teil       Int // 1-3
+  teilName   String // "Formular ausfüllen"
+  textType   String // "Formular", "E-Mail", "Forumsbeitrag", etc.
+  register   String // "formell", "informell", "neutral"
+  topic      String // "Deutschkurs"
 
   // Task definition
-  instruction    String                            // Aufgabenstellung (German)
-  instructionVi  String?                           // Vietnamese translation
-  situation      String                            // Kontext/Situation
-  contentPoints  Json                              // ["Sich vorstellen", "Interesse zeigen", ...]
-  sampleResponse String?                           // Musterlösung
+  instruction    String // Aufgabenstellung (German)
+  instructionVi  String? // Vietnamese translation
+  situation      String // Kontext/Situation
+  contentPoints  Json // ["Sich vorstellen", "Interesse zeigen", ...]
+  sampleResponse String? // Musterlösung
 
   // Form fields (for Formular type)
-  formFields     Json?                             // [{label, type, placeholder}]
+  formFields Json? // [{label, type, placeholder}]
 
   // Source text (for Textumwandlung type)
-  sourceText     String?                           // Ausgangstext
-  sourceTextType String?                           // "Blogpost", "Vortrag", etc.
+  sourceText     String? // Ausgangstext
+  sourceTextType String? // "Blogpost", "Vortrag", etc.
 
   // Grafik (for C1 Argumentation type)
-  grafikUrl      String?                           // URL to chart/graph image
-  grafikDesc     String?                           // Description of the chart
+  grafikUrl  String? // URL to chart/graph image
+  grafikDesc String? // Description of the chart
 
   // Constraints
-  minWords       Int
-  maxWords       Int?
-  timeMinutes    Int           @default(15)        // Suggested time
+  minWords    Int
+  maxWords    Int?
+  timeMinutes Int  @default(15) // Suggested time
 
   // Rubric & Scoring
-  rubricJson     Json                              // Level-specific rubric with criteria + weights
-  maxScore       Int           @default(25)        // Max achievable score
+  rubricJson Json // Level-specific rubric with criteria + weights
+  maxScore   Int  @default(25) // Max achievable score
 
   // Metadata
-  imageUrl       String?
-  sortOrder      Int           @default(0)
-  status         ContentStatus @default(DRAFT)
+  imageUrl  String?
+  sortOrder Int           @default(0)
+  status    ContentStatus @default(DRAFT)
 
-  attempts       WritingAttempt[]
+  attempts WritingAttempt[]
 
-  createdAt      DateTime      @default(now())
-  updatedAt      DateTime      @updatedAt
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
 
   @@index([cefrLevel, teil])
   @@index([cefrLevel, sortOrder])
@@ -1078,36 +1100,36 @@ model WritingExercise {
 }
 
 model WritingAttempt {
-  id              String           @id @default(uuid())
-  userId          String
-  user            User             @relation(fields: [userId], references: [id])
-  exerciseId      String
-  exercise        WritingExercise  @relation(fields: [exerciseId], references: [id])
+  id         String          @id @default(uuid())
+  userId     String
+  user       User            @relation(fields: [userId], references: [id])
+  exerciseId String
+  exercise   WritingExercise @relation(fields: [exerciseId], references: [id])
 
   // Student submission
-  submittedText   String                           // Full text submitted
-  wordCount       Int                              // Actual word count
+  submittedText String // Full text submitted
+  wordCount     Int // Actual word count
 
   // AI Scores (0-5 each criterion)
-  scoreInhalt          Int?                        // Content fulfillment
-  scoreAngemessenheit  Int?                        // Communicative appropriateness
-  scoreKorrektheit     Int?                        // Grammar/spelling accuracy
-  scoreSpektrum        Int?                        // Vocabulary/structure range
-  scoreKohaerenz       Int?                        // Coherence & cohesion
-  totalScore           Int?                        // Sum of above
-  maxScore             Int?                        // Max possible
-  percentScore         Float?                      // Percentage
+  scoreInhalt         Int? // Content fulfillment
+  scoreAngemessenheit Int? // Communicative appropriateness
+  scoreKorrektheit    Int? // Grammar/spelling accuracy
+  scoreSpektrum       Int? // Vocabulary/structure range
+  scoreKohaerenz      Int? // Coherence & cohesion
+  totalScore          Int? // Sum of above
+  maxScore            Int? // Max possible
+  percentScore        Float? // Percentage
 
   // AI Feedback
-  feedbackOverall  String?                         // Overall AI feedback text
-  feedbackJson     Json?                           // Per-criterion: {criterion, score, reasoning, suggestions[]}
-  correctionsJson  Json?                           // Inline corrections: [{original, corrected, type, explanation}]
-  estimatedLevel   CefrLevel?                      // AI-estimated CEFR level of this text
+  feedbackOverall String? // Overall AI feedback text
+  feedbackJson    Json? // Per-criterion: {criterion, score, reasoning, suggestions[]}
+  correctionsJson Json? // Inline corrections: [{original, corrected, type, explanation}]
+  estimatedLevel  CefrLevel? // AI-estimated CEFR level of this text
 
   // Timing
-  timeSpentSeconds Int?                            // Time spent writing
+  timeSpentSeconds Int? // Time spent writing
 
-  submittedAt      DateTime     @default(now())
+  submittedAt DateTime @default(now())
 
   @@index([userId, exerciseId])
   @@index([userId, submittedAt])
@@ -1118,7 +1140,7 @@ model WritingAttempt {
 
 model SpeakingTopic {
   id          String        @id @default(uuid())
-  slug        String        @unique          // "a1-begruessung"
+  slug        String        @unique // "a1-begruessung"
   titleDe     String
   titleVi     String
   description String?
@@ -1126,35 +1148,35 @@ model SpeakingTopic {
   sortOrder   Int           @default(0)
   status      ContentStatus @default(DRAFT)
 
-  lessons     SpeakingLesson[]
+  lessons SpeakingLesson[]
 
-  createdAt   DateTime      @default(now())
-  updatedAt   DateTime      @updatedAt
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
 
   @@index([cefrLevel])
   @@map("speaking_topics")
 }
 
 model SpeakingLesson {
-  id             String         @id              // "a1-begruessung-01-nachsprechen"
-  topicId        String
-  topic          SpeakingTopic  @relation(fields: [topicId], references: [id])
-  level          CefrLevel
-  lessonType     String                          // "E" | "V" | "A"
-  lessonNumber   Int
-  titleDe        String
-  titleVi        String
-  exerciseType   String                          // "nachsprechen" | "wort_lesen" | etc.
-  exercisesJson  Json                            // array of exercise items
-  configJson     Json?                           // { maxRecordingSec, minAccuracy, attemptsAllowed, ... }
-  estimatedMin   Int            @default(5)
-  sortOrder      Int            @default(0)
-  status         ContentStatus  @default(PUBLISHED)
+  id            String        @id // "a1-begruessung-01-nachsprechen"
+  topicId       String
+  topic         SpeakingTopic @relation(fields: [topicId], references: [id])
+  level         CefrLevel
+  lessonType    String // "E" | "V" | "A"
+  lessonNumber  Int
+  titleDe       String
+  titleVi       String
+  exerciseType  String // "nachsprechen" | "wort_lesen" | etc.
+  exercisesJson Json // array of exercise items
+  configJson    Json? // { maxRecordingSec, minAccuracy, attemptsAllowed, ... }
+  estimatedMin  Int           @default(5)
+  sortOrder     Int           @default(0)
+  status        ContentStatus @default(PUBLISHED)
 
-  progress       SpeakingProgress[]
+  progress SpeakingProgress[]
 
-  createdAt      DateTime       @default(now())
-  updatedAt      DateTime       @updatedAt
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
 
   @@index([topicId, sortOrder])
   @@index([level])
@@ -1162,23 +1184,112 @@ model SpeakingLesson {
 }
 
 model SpeakingProgress {
-  id        String         @id @default(uuid())
-  userId    String
-  user      User           @relation(fields: [userId], references: [id])
-  lessonId  String
-  lesson    SpeakingLesson @relation(fields: [lessonId], references: [id])
+  id       String         @id @default(uuid())
+  userId   String
+  user     User           @relation(fields: [userId], references: [id])
+  lessonId String
+  lesson   SpeakingLesson @relation(fields: [lessonId], references: [id])
 
-  score     Int?                               // overall accuracy score 0-100
-  maxScore  Int?                               // max possible (usually 100)
-  stars     Int?                               // 1-3 stars
-  completed Boolean        @default(false)
-  attempts  Int            @default(0)
+  score     Int? // overall accuracy score 0-100
+  maxScore  Int? // max possible (usually 100)
+  stars     Int? // 1-3 stars
+  completed Boolean   @default(false)
+  attempts  Int       @default(0)
   lastAt    DateTime?
 
-  createdAt DateTime       @default(now())
-  updatedAt DateTime       @updatedAt
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
 
   @@unique([userId, lessonId])
   @@index([userId])
   @@map("speaking_progress")
+}
+
+// ===== TEACHER & CLASSROOM =====
+
+model Classroom {
+  id          String    @id @default(uuid())
+  name        String // "Lớp A1 sáng thứ 2"
+  description String?
+  joinCode    String    @unique // 6-char random code ("FUX-A1C")
+  cefrLevel   CefrLevel @default(A1)
+
+  teacherId String
+  teacher   User   @relation("teacherClassrooms", fields: [teacherId], references: [id])
+
+  enrollments ClassEnrollment[]
+  assignments Assignment[]
+
+  isArchived Boolean  @default(false)
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+
+  @@index([teacherId])
+  @@index([joinCode])
+  @@map("classrooms")
+}
+
+model ClassEnrollment {
+  id          String    @id @default(uuid())
+  classroomId String
+  classroom   Classroom @relation(fields: [classroomId], references: [id], onDelete: Cascade)
+  studentId   String
+  student     User      @relation("studentEnrollments", fields: [studentId], references: [id])
+
+  enrolledAt DateTime  @default(now())
+  removedAt  DateTime?
+
+  @@unique([classroomId, studentId])
+  @@index([studentId])
+  @@map("class_enrollments")
+}
+
+model Assignment {
+  id          String    @id @default(uuid())
+  classroomId String
+  classroom   Classroom @relation(fields: [classroomId], references: [id], onDelete: Cascade)
+
+  title       String // "Ôn tập Wortschatz Essen & Trinken"
+  description String?
+
+  // Flexible multi-type assignment
+  targetType String // "xp" | "lesson" | "exam" | "speaking" | "vocabulary" | "grammar" | "writing" | "reading" | "listening"
+  targetId   String? // ID of specific content (if applicable)
+  targetMeta Json? // { "themeSlug": "essen", "cefrLevel": "A1", "xpGoal": 50, ... }
+
+  dueDate   DateTime?
+  startDate DateTime  @default(now())
+
+  submissions AssignmentSubmission[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([classroomId])
+  @@index([dueDate])
+  @@map("assignments")
+}
+
+model AssignmentSubmission {
+  id           String     @id @default(uuid())
+  assignmentId String
+  assignment   Assignment @relation(fields: [assignmentId], references: [id], onDelete: Cascade)
+  studentId    String
+  student      User       @relation("studentSubmissions", fields: [studentId], references: [id])
+
+  status      String  @default("pending") // "pending" | "completed" | "late" | "graded"
+  score       Int?
+  maxScore    Int?
+  timeSpent   Int? // seconds
+  resultJson  Json? // Detailed results per exercise type
+  teacherNote String? // Teacher comment / feedback
+
+  completedAt DateTime?
+  gradedAt    DateTime?
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+
+  @@unique([assignmentId, studentId])
+  @@index([studentId])
+  @@map("assignment_submissions")
 }

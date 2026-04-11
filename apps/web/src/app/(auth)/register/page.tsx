@@ -54,8 +54,8 @@ export default function RegisterPage() {
                 // Non-critical — server-auth.ts will auto-provision as fallback
             }
 
-            // 4. Go to dashboard
-            router.push('/dashboard')
+            // 4. Go to onboarding (placement test → then dashboard)
+            router.push('/onboarding')
         } catch (err: unknown) {
             const code = (err as { code?: string })?.code
             const message = (err as { message?: string })?.message

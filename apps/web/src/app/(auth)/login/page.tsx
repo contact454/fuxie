@@ -81,19 +81,33 @@ function LoginContent() {
         }
 
         // Ensure user exists in DB (idempotent — ignores if already exists)
-        await fetch('/api/v1/auth/register', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({
-                displayName,
-                nativeLanguage: 'vi',
-                targetLevel: 'B1',
-            }),
-        }).catch(() => {
-            // Non-critical — server-auth.ts will auto-provision as fallback
-        })
+        let needsOnboarding = false
+        try {
+            const res = await fetch('/api/v1/auth/register', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    displayName,
+                    nativeLanguage: 'vi',
+                    targetLevel: 'B1',
+                }),
+            })
+            if (res.ok) {
+                const data = await res.json()
+                // new user or existing without completed onboarding
+                if (data?.data?.profile?.onboardingCompleted === false) {
+                    needsOnboarding = true
+                }
+            }
+        } catch (err) {
+            console.error('[Fuxie] DB Register hook failed:', err)
+        }
 
-        router.push(redirectTo)
+        if (needsOnboarding) {
+            router.push('/onboarding')
+        } else {
+            router.push(redirectTo)
+        }
     }
 
     async function handleEmailLogin(e: React.FormEvent) {

@@ -8,6 +8,7 @@ import { SpellingExercise } from './spelling-exercise'
 import { ClozeExercise } from './cloze-exercise'
 import { ScrambleExercise } from './scramble-exercise'
 import { SpeedExercise } from './speed-exercise'
+import { MixedExercise } from './mixed-exercise'
 import { Mascot } from '@/components/ui/mascot'
 
 interface ExercisePlayerWrapperProps {
@@ -88,6 +89,18 @@ export function ExercisePlayerWrapper({ type, theme, level }: ExercisePlayerWrap
 
     // Render exercise based on type
     switch (type) {
+        case 'mixed':
+            return (
+                <MixedExercise
+                    questions={questions}
+                    cefrLevel={level}
+                    themeName={themeName}
+                    themeSlug={theme}
+                    onExit={handleExit}
+                    onComplete={() => {}}
+                />
+            )
+
         case 'mc':
             return (
                 <McExercise

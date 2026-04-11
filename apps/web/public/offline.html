@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fuxie \u2014 You are offline</title>
+    <style>
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            background: linear-gradient(135deg, #fff5f0 0%, #ffffff 50%, #f0f7ff 100%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            color: #333;
+            text-align: center;
+        }
+        h1 {
+            color: #FF6B35;
+            margin-bottom: 8px;
+        }
+        p {
+            color: #666;
+            max-width: 300px;
+            margin-bottom: 24px;
+            line-height: 1.5;
+        }
+        button {
+            background-color: #004E89;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: opacity 0.2s;
+        }
+        button:hover {
+            opacity: 0.9;
+        }
+        img {
+            max-width: 150px;
+            margin-bottom: 24px;
+            filter: grayscale(100%);
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+    <img src="/mascot/core/fuxie-core-happy.png" alt="Offline Fuxie" />
+    <h1>Bạn đang offline!</h1>
+    <p>Rất tiếc, máy tính hoặc điện thoại của bạn không có kết nối internet. Vui lòng kiểm tra lại kết nối nhé.</p>
+    <button onclick="window.location.reload()">Thử lại</button>
+</body>
+</html>

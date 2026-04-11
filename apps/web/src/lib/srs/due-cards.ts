@@ -1,4 +1,4 @@
-import { Prisma, prisma } from '@fuxie/database'
+import { CefrLevel, Prisma, prisma } from '@fuxie/database'
 
 function buildDueWhere(userId: string, now: Date, level?: string): Prisma.SrsCardWhereInput {
     return {
@@ -8,7 +8,7 @@ function buildDueWhere(userId: string, now: Date, level?: string): Prisma.SrsCar
             ? {
                 vocabularyItem: {
                     is: {
-                        cefrLevel: level as any,
+                        cefrLevel: level as CefrLevel,
                     },
                 },
             }

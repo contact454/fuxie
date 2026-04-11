@@ -5,7 +5,7 @@ import { withAuth } from '@/lib/auth/middleware'
 import { handleApiError } from '@/lib/api/error-handler'
 
 const VALID_LEVELS = ['A1', 'A2', 'B1', 'B2', 'C1', 'C2'] as const
-const VALID_TYPES = ['mc', 'matching', 'spelling', 'cloze', 'scramble', 'speed'] as const
+const VALID_TYPES = ['mc', 'matching', 'spelling', 'cloze', 'scramble', 'speed', 'mixed'] as const
 
 const querySchema = z.object({
     level: z.enum(VALID_LEVELS).default('A1'),
@@ -249,6 +249,36 @@ export async function GET(req: NextRequest) {
                     translation: w.exampleTranslation1,
                     wordId: w.id,
                 }
+            })
+        } else if (type === 'mixed') {
+            const selected = pickRandom(allWords, Math.min(Math.floor(count / 2) || 4, allWords.length))
+            questions = []
+            selected.forEach((word, i) => {
+                const displayWord = word.article
+                    ? `${word.article === 'MASKULIN' ? 'der' : word.article === 'FEMININ' ? 'die' : 'das'} ${word.word}`
+                    : word.word
+                
+                // Intro Slice
+                questions.push({
+                    id: `intro_${i}`,
+                    exerciseComponent: 'intro',
+                    type: 'intro',
+                    wordId: word.id,
+                    word: displayWord,
+                    meaningVi: word.meaningVi,
+                    imageUrl: word.imageUrl,
+                    audioUrl: word.audioUrl,
+                    exampleSentence1: word.exampleSentence1,
+                    exampleTranslation1: word.exampleTranslation1,
+                })
+                
+                // MC Slice
+                let variant = availableVariants[i % availableVariants.length]!
+                if (variant === 'image_to_word' && !word.imageUrl) variant = 'de_to_vi'
+                if (variant === 'audio_to_word' && !word.audioUrl) variant = 'de_to_vi'
+                
+                const mc = generateMcQuestion(word, allWords, variant, i)
+                questions.push({ ...mc, exerciseComponent: 'mc' })
             })
         } else {
             questions = []

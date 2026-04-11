@@ -6,6 +6,7 @@ import { MascotImage } from '../shared/mascot-image'
 import { motion } from 'framer-motion'
 import { ArrowLeft, RotateCcw, ArrowRight } from 'lucide-react'
 import NachsprechenPlayer from './NachsprechenPlayer'
+import TurnBasedSpeakingPlayer from './TurnBasedSpeakingPlayer'
 import styles from './speaking.module.css'
 import type { NachsprechenSentence, NachsprechenConfig } from './types'
 
@@ -152,6 +153,11 @@ export default function SpeakingLessonPlayer({
                 <strong>Nachsprechen:</strong> Nghe mẫu → nhấn mic → lặp lại câu. Cố gắng phát âm giống mẫu nhất có thể!
               </>
             )}
+            {exerciseType === 'roleplay' && (
+              <>
+                <strong>Roleplay:</strong> Trò chuyện luân phiên với Fuxie bằng giọng nói. Nhấn Mic để ghi âm từng lượt trả lời!
+              </>
+            )}
           </div>
 
           {/* Start button */}
@@ -180,6 +186,18 @@ export default function SpeakingLessonPlayer({
           lessonId={lessonId}
           onComplete={handleComplete}
           onClose={() => router.push('/speaking')}
+        />
+      )
+    }
+
+    if (exerciseType === 'roleplay') {
+      const scenario = typeof configJson?.scenario === 'string' ? configJson.scenario : titleVi
+      return (
+        <TurnBasedSpeakingPlayer
+          level={cefrLevel}
+          scenario={scenario}
+          onClose={() => router.push('/speaking')}
+          onComplete={handleComplete}
         />
       )
     }

@@ -1,11 +1,10 @@
 'use client'
 
-import { useState, useCallback, useRef } from 'react'
+import { useState, useCallback } from 'react'
 import { useRouter } from 'next/navigation'
 import Image from 'next/image'
 import { Mascot } from '@/components/ui/mascot'
 
-// ─── Types ──────────────────────────────────────────
 interface Theme {
     id: string
     slug: string
@@ -22,52 +21,6 @@ interface PracticeHubProps {
     initialLevel: string
 }
 
-// ─── Constants ──────────────────────────────────────
-const EXERCISE_TYPES = [
-    {
-        key: 'mc',
-        icon: '🔤',
-        name: 'Multiple Choice',
-        desc: 'Wähle die richtige Antwort',
-        available: true,
-    },
-    {
-        key: 'matching',
-        icon: '🔗',
-        name: 'Matching',
-        desc: 'Finde die passenden Paare',
-        available: true,
-    },
-    {
-        key: 'spelling',
-        icon: '✍️',
-        name: 'Spelling',
-        desc: 'Schreibe das richtige Wort',
-        available: true,
-    },
-    {
-        key: 'cloze',
-        icon: '📝',
-        name: 'Lückentext',
-        desc: 'Fülle die Lücke im Satz',
-        available: true,
-    },
-    {
-        key: 'scramble',
-        icon: '🧩',
-        name: 'Satzpuzzle',
-        desc: 'Ordne die Wörter richtig',
-        available: true,
-    },
-    {
-        key: 'speed',
-        icon: '⚡',
-        name: 'Speed Review',
-        desc: 'Antworte so schnell wie möglich',
-        available: true,
-    },
-]
-
 const CEFR_COLORS: Record<string, { gradient: string }> = {
     A1: { gradient: 'from-green-500 to-emerald-600' },
     A2: { gradient: 'from-lime-500 to-green-600' },
@@ -77,16 +30,11 @@ const CEFR_COLORS: Record<string, { gradient: string }> = {
     C2: { gradient: 'from-violet-600 to-purple-800' },
 }
 
-// ─── Component ──────────────────────────────────────
 export function PracticeHub({ themes, availableLevels, initialLevel }: PracticeHubProps) {
     const router = useRouter()
     const [currentLevel, setCurrentLevel] = useState(initialLevel)
     const [currentThemes, setCurrentThemes] = useState(themes)
-    const [selectedThemeSlug, setSelectedThemeSlug] = useState(themes[0]?.slug ?? '')
     const [isLevelLoading, setIsLevelLoading] = useState(false)
-    const scrollRef = useRef<HTMLDivElement>(null)
-
-    const selectedTheme = currentThemes.find(t => t.slug === selectedThemeSlug)
 
     // Switch CEFR level
     const switchLevel = useCallback(async (level: string) => {
@@ -107,7 +55,6 @@ export function PracticeHub({ themes, availableLevels, initialLevel }: PracticeH
                     wordCount: t.wordCount ?? t._count?.items ?? 0,
                 }))
                 setCurrentThemes(newThemes)
-                if (newThemes[0]) setSelectedThemeSlug(newThemes[0].slug)
             }
         } catch (err) {
             console.error(err)
@@ -116,22 +63,17 @@ export function PracticeHub({ themes, availableLevels, initialLevel }: PracticeH
         }
     }, [currentLevel])
 
-    const startExercise = (type: string) => {
-        if (!selectedThemeSlug) return
-        router.push(`/vocabulary/practice/${type}?theme=${selectedThemeSlug}&level=${currentLevel}`)
-    }
-
-    const scrollThemes = (dir: 'left' | 'right') => {
-        scrollRef.current?.scrollBy({ left: dir === 'left' ? -200 : 200, behavior: 'smooth' })
+    const startMixedLesson = (themeSlug: string) => {
+        // Vào thẳng luồng Mixed Bài học có Flashcard
+        router.push(`/vocabulary/practice/mixed?theme=${themeSlug}&level=${currentLevel}`)
     }
 
     return (
-        <div className="max-w-5xl mx-auto">
-            {/* ═══ Header ═══ */}
-            <div className="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm mb-6">
-                {/* CEFR Level Tabs */}
+        <div className="max-w-2xl mx-auto mb-20">
+            {/* ═══ Top Sticky Banner ═══ */}
+            <div className="bg-white/90 backdrop-blur-md sticky top-0 z-30 pt-4 pb-2 px-4 shadow-sm">
                 {availableLevels.length > 1 && (
-                    <div className="flex gap-2 mb-4">
+                    <div className="flex justify-center gap-2 mb-4 overflow-x-auto pb-2 scrollbar-hide">
                         {availableLevels.map(level => {
                             const colors = CEFR_COLORS[level] ?? CEFR_COLORS['A1']!
                             const isActive = level === currentLevel
@@ -140,158 +82,96 @@ export function PracticeHub({ themes, availableLevels, initialLevel }: PracticeH
                                     key={level}
                                     onClick={() => switchLevel(level)}
                                     disabled={isLevelLoading}
-                                    className={`px-4 py-2 rounded-xl text-sm font-bold transition-all ${isActive
+                                    className={`px-6 py-2 rounded-2xl text-base font-black transition-all ${isActive
                                         ? `bg-gradient-to-r ${colors.gradient} text-white shadow-md scale-105`
                                         : 'bg-gray-100 text-gray-500 hover:bg-gray-200'
                                     } ${isLevelLoading ? 'opacity-50 cursor-wait' : ''}`}
                                 >
-                                    {level}
+                                    Niveau {level}
                                 </button>
                             )
                         })}
                     </div>
                 )}
-
-                <div className="flex items-center gap-4">
-                    <Mascot variant="wortschatz" size={56} />
-                    <div className="flex-1">
-                        <h1 className="text-2xl font-bold text-gray-900">Wortschatz üben</h1>
-                        <p className="text-sm text-gray-500 mt-0.5">
-                            Wähle ein Thema und eine Übungsart
+                <div className="flex items-center gap-4 bg-[#004E89]/5 p-4 rounded-3xl border border-blue-100 mt-2">
+                    <Mascot variant="studying" size={56} className="drop-shadow-sm" />
+                    <div>
+                        <h1 className="text-xl font-black text-[#004E89] uppercase tracking-wide">
+                            Lộ trình Từ vựng
+                        </h1>
+                        <p className="text-sm font-semibold text-gray-500">
+                            Học bài theo từng chủ điểm nhé!
                         </p>
                     </div>
-                    <a
-                        href="/vocabulary"
-                        className="flex items-center gap-2 px-4 py-2 rounded-xl border border-gray-200 text-gray-600 text-sm font-medium hover:bg-gray-50 transition"
-                    >
-                        📖 Wörter durchsehen
-                    </a>
                 </div>
             </div>
 
-            {/* ═══ Theme Selector ═══ */}
-            <div className="mb-6">
-                <h2 className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-3">
-                    Thema wählen
-                </h2>
-                <div className="relative group">
-                    <button
-                        onClick={() => scrollThemes('left')}
-                        className="absolute left-0 top-1/2 -translate-y-1/2 z-10 w-8 h-8 rounded-full bg-white shadow-md border border-gray-200 flex items-center justify-center text-gray-500 hover:text-gray-700 opacity-0 group-hover:opacity-100 transition-opacity -ml-3"
-                    >
-                        <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                            <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
-                        </svg>
-                    </button>
+            {/* ═══ Duolingo Z-Path UI ═══ */}
+            <div className="relative mt-12 py-8 flex flex-col items-center gap-14 ml-4 mr-4 overflow-hidden">
+                {/* SVG Đường kẻ zíc zắc (Giả lập bằng absolute line cho nhanh - sẽ thay bằng viền xoắn nếu đủ không gian) */}
+                <div className="absolute top-10 bottom-10 left-1/2 w-4 -ml-2 bg-[#e5e5e5] rounded-full z-0 
+                                shadow-[inset_0_0_8px_rgba(0,0,0,0.08)] hidden md:block" />
 
-                    <div
-                        ref={scrollRef}
-                        className="flex gap-3 overflow-x-auto pb-2 scrollbar-hide scroll-smooth"
-                        style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
-                    >
-                        {currentThemes.map(theme => {
-                            const isSelected = selectedThemeSlug === theme.slug
-                            return (
+                {currentThemes.map((theme, idx) => {
+                    const cycle = idx % 4
+                    let alignClass = ''
+                    if (cycle === 1) alignClass = 'translate-x-12 sm:translate-x-20'
+                    if (cycle === 3) alignClass = '-translate-x-12 sm:-translate-x-20'
+                    
+                    return (
+                        <div key={theme.id} className={`relative z-10 w-full flex justify-center`}>
+                            <div className={`relative flex flex-col items-center ${alignClass} group`}>
+                                
+                                {/* Nút tròn to (Thẻ Bài học) */}
                                 <button
-                                    key={theme.id}
-                                    onClick={() => setSelectedThemeSlug(theme.slug)}
-                                    className={`flex-shrink-0 flex flex-col items-center p-3 rounded-2xl border-2 transition-all duration-200 w-[110px]
-                                        ${isSelected
-                                            ? 'border-[#004E89] bg-blue-50 shadow-md shadow-blue-100'
-                                            : 'border-gray-200 bg-white hover:border-gray-300 hover:shadow-sm'
-                                        }`}
+                                    onClick={() => startMixedLesson(theme.slug)}
+                                    className="relative w-24 h-24 rounded-full bg-[#58cc02] 
+                                               border-b-[8px] border-[#46a302] hover:-translate-y-1 
+                                               hover:border-b-[10px] active:border-b-0 active:translate-y-2 
+                                               transition-all flex items-center justify-center p-2
+                                               shadow-xl shadow-green-100/50"
                                 >
-                                    {theme.imageUrl ? (
-                                        <Image
-                                            src={theme.imageUrl}
-                                            alt={theme.name}
-                                            width={56}
-                                            height={56}
-                                            className="rounded-xl object-cover mb-2"
-                                        />
-                                    ) : (
-                                        <div className="w-14 h-14 rounded-xl bg-gray-100 flex items-center justify-center text-2xl mb-2">📖</div>
-                                    )}
-                                    <span className={`text-xs font-medium text-center leading-tight line-clamp-2
-                                        ${isSelected ? 'text-[#004E89]' : 'text-gray-700'}`}
-                                    >
+                                    <div className="w-full h-full rounded-full bg-white/20 overflow-hidden relative border-2 border-white/40 flex items-center justify-center">
+                                        {theme.imageUrl ? (
+                                            <Image 
+                                                src={theme.imageUrl} 
+                                                fill 
+                                                className="object-cover drop-shadow-sm mix-blend-multiply" 
+                                                alt={theme.name} 
+                                            />
+                                        ) : (
+                                            <span className="text-4xl text-white drop-shadow-md">★</span>
+                                        )}
+                                    </div>
+                                    
+                                    {/* Mép phản quang trên nút */}
+                                    <div className="absolute top-1.5 left-3 right-3 h-4 bg-white/30 rounded-full blur-[1px]"></div>
+                                </button>
+                                
+                                {/* Khung Tooltip chứa tên chủ đề */}
+                                <div className="mt-4 bg-white px-5 py-2.5 rounded-2xl border-2 border-[#e5e5e5] 
+                                                shadow-sm font-bold text-gray-700 text-center relative pointer-events-none
+                                                group-hover:border-[#58cc02] transition-colors">
+                                    {/* Mũi tên trỏ lên */}
+                                    <div className="absolute -top-2 left-1/2 -ml-2 w-4 h-4 bg-white border-l-2 border-t-2 border-[#e5e5e5] 
+                                                    rotate-45 group-hover:border-[#58cc02] transition-colors"></div>
+                                    <span className="relative z-10 block text-[#4b4b4b] uppercase tracking-wide text-xs mb-0.5">
                                         {theme.name}
                                     </span>
-                                    <span className="text-[10px] text-gray-400 mt-0.5">{theme.wordCount} Wörter</span>
-                                </button>
-                            )
-                        })}
-                    </div>
-
-                    <button
-                        onClick={() => scrollThemes('right')}
-                        className="absolute right-0 top-1/2 -translate-y-1/2 z-10 w-8 h-8 rounded-full bg-white shadow-md border border-gray-200 flex items-center justify-center text-gray-500 hover:text-gray-700 opacity-0 group-hover:opacity-100 transition-opacity -mr-3"
-                    >
-                        <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                            <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
-                        </svg>
-                    </button>
-                </div>
-            </div>
-
-            {/* ═══ Exercise Type Grid ═══ */}
-            <div className="mb-8">
-                <h2 className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-3">
-                    Übungsart wählen
-                </h2>
-                <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-                    {EXERCISE_TYPES.map(ex => (
-                        <button
-                            key={ex.key}
-                            onClick={() => ex.available && startExercise(ex.key)}
-                            disabled={!ex.available || !selectedThemeSlug}
-                            className={`relative p-5 rounded-2xl border-2 text-left transition-all duration-300 group overflow-hidden ${
-                                ex.available
-                                    ? 'border-gray-200 bg-white hover:border-[#004E89] hover:shadow-xl hover:shadow-blue-100/50 hover:-translate-y-1 hover:scale-[1.03] cursor-pointer active:scale-[0.98] active:shadow-md'
-                                    : 'border-gray-100 bg-gray-50 opacity-60 cursor-not-allowed'
-                            }`}
-                        >
-                            {/* Hover gradient overlay */}
-                            {ex.available && (
-                                <div className="absolute inset-0 bg-gradient-to-br from-blue-50/0 to-[#004E89]/[0.04] opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl pointer-events-none" />
-                            )}
-
-                            {/* Coming soon badge */}
-                            {!ex.available && (
-                                <span className="absolute top-2 right-2 text-[10px] font-bold bg-gray-200 text-gray-500 rounded-full px-2 py-0.5">
-                                    Bald
-                                </span>
-                            )}
-
-                            <span className="text-3xl mb-3 block transition-transform duration-300 group-hover:scale-110 group-hover:-rotate-3">{ex.icon}</span>
-                            <h3 className={`font-bold text-base mb-1 transition-colors duration-200 ${
-                                ex.available ? 'text-gray-900 group-hover:text-[#004E89]' : 'text-gray-500'
-                            }`}>
-                                {ex.name}
-                            </h3>
-                            <p className="text-xs text-gray-500 transition-colors duration-200 group-hover:text-gray-600">{ex.desc}</p>
-
-                            {ex.available && selectedThemeSlug && (
-                                <div className="mt-3 inline-flex items-center gap-1 text-xs font-bold text-[#004E89] transition-all duration-200 group-hover:gap-2">
-                                    Starten
-                                    <svg className="w-3 h-3 transition-transform duration-300 group-hover:translate-x-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
-                                        <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
-                                    </svg>
+                                    <span className="relative z-10 block text-[#afafaf] font-medium text-[11px] leading-tight max-w-[120px]">
+                                        {theme.nameVi || (theme.wordCount + ' Wörter')}
+                                    </span>
                                 </div>
-                            )}
-                        </button>
-                    ))}
-                </div>
+                            </div>
+                        </div>
+                    )
+                })}
             </div>
-
-            {/* ═══ Selected Theme Info ═══ */}
-            {selectedTheme && (
-                <div className="bg-blue-50 rounded-2xl p-4 border border-blue-100 text-sm text-[#004E89]">
-                    <span className="font-bold">Ausgewähltes Thema:</span> {selectedTheme.name}
-                    {selectedTheme.nameVi && <span className="text-blue-400"> — {selectedTheme.nameVi}</span>}
-                    <span className="text-blue-300 ml-2">({selectedTheme.wordCount} Wörter)</span>
-                </div>
-            )}
+            
+            {/* End of Path Decorator */}
+            <div className="flex justify-center mt-12 mb-10 opacity-70">
+                <Mascot variant="lesen" size={80} className="grayscale mix-blend-multiply" />
+            </div>
         </div>
     )
 }

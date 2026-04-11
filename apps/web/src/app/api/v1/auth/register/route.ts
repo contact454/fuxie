@@ -95,6 +95,7 @@ export async function POST(req: NextRequest) {
                             targetLevel: true,
                             targetExam: true,
                             totalXp: true,
+                            onboardingCompleted: true,
                         },
                     },
                 },

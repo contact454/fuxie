@@ -5,6 +5,7 @@ import Image from 'next/image'
 import { playSound } from '@/hooks/use-audio-player'
 import { ExerciseProgress } from './exercise-progress'
 import { ExerciseResults } from './exercise-results'
+import { BottomFeedback } from './bottom-feedback'
 import { useExerciseTimer } from '@/hooks/use-exercise-timer'
 import { useSubmitExercise } from '@/hooks/use-submit-exercise'
 import type { ExerciseAnswer } from '@/hooks/use-submit-exercise'
@@ -48,11 +49,12 @@ interface SubmitResult {
 
 // ─── Component ──────────────────────────────────────
 export function McExercise({ questions, cefrLevel, themeName, themeSlug, onExit, onComplete }: McExerciseProps) {
+    const [activeQuestions, setActiveQuestions] = useState([...questions])
     const [currentIndex, setCurrentIndex] = useState(0)
     const [selectedAnswer, setSelectedAnswer] = useState<string | null>(null)
     const [isRevealed, setIsRevealed] = useState(false)
+    const [isCorrect, setIsCorrect] = useState<boolean | null>(null)
     const [answers, setAnswers] = useState<ExerciseAnswer[]>([])
-    const advanceTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null)
 
     const { timer, stopTimer, resetTimer } = useExerciseTimer()
     const { submitResult, isSubmitting, phase, submitAnswers, resetSubmit } = useSubmitExercise({
@@ -62,7 +64,7 @@ export function McExercise({ questions, cefrLevel, themeName, themeSlug, onExit,
         xpPerCorrect: 5,
     })
 
-    const question = questions[currentIndex]!
+    const question = activeQuestions[currentIndex]!
 
     // Auto play audio for audio_to_word variant
     useEffect(() => {
@@ -70,12 +72,6 @@ export function McExercise({ questions, cefrLevel, themeName, themeSlug, onExit,
             playSound(question.promptAudio)
         }
     }, [currentIndex, question.type, question.promptAudio])
-
-    useEffect(() => {
-        return () => {
-            if (advanceTimeoutRef.current) clearTimeout(advanceTimeoutRef.current)
-        }
-    }, [])
 
     const handleSelect = useCallback((option: string) => {
         if (isRevealed) return
@@ -86,6 +82,9 @@ export function McExercise({ questions, cefrLevel, themeName, themeSlug, onExit,
             ? question.meaningVi
             : question.word  // vi_to_de, image_to_word, audio_to_word
 
+        const correct = option === correctAnswer
+        setIsCorrect(correct)
+
         const newAnswers: ExerciseAnswer[] = [...answers, {
             questionId: question.id,
             answer: option,
@@ -95,20 +94,24 @@ export function McExercise({ questions, cefrLevel, themeName, themeSlug, onExit,
         }]
         setAnswers(newAnswers)
 
-        // Auto-advance after 1.5s
-        if (advanceTimeoutRef.current) clearTimeout(advanceTimeoutRef.current)
-        advanceTimeoutRef.current = setTimeout(() => {
-            if (currentIndex < questions.length - 1) {
-                setCurrentIndex(i => i + 1)
-                setSelectedAnswer(null)
-                setIsRevealed(false)
-            } else {
-                // Submit
-                stopTimer()
-                submitAnswers(newAnswers, timer)
-            }
-        }, 1500)
-    }, [isRevealed, answers, currentIndex, questions.length, question, stopTimer, submitAnswers, timer])
+        // If wrong, push to the end
+        if (!correct) {
+            setActiveQuestions(prev => [...prev, { ...question, id: question.id + '_retry' }])
+        }
+    }, [isRevealed, answers, question])
+
+    const handleContinue = useCallback(() => {
+        if (currentIndex < activeQuestions.length - 1) {
+            setCurrentIndex(i => i + 1)
+            setSelectedAnswer(null)
+            setIsRevealed(false)
+            setIsCorrect(null)
+        } else {
+            // Submit
+            stopTimer()
+            submitAnswers(answers, timer)
+        }
+    }, [currentIndex, activeQuestions.length, stopTimer, submitAnswers, answers, timer])
 
     // ─── Variant Labels ─────────────────────────────
     const getQuestionLabel = () => {
@@ -132,9 +135,11 @@ export function McExercise({ questions, cefrLevel, themeName, themeSlug, onExit,
                 timeTaken={timer}
                 results={submitResult.results}
                 onRetry={() => {
+                    setActiveQuestions([...questions])
                     setCurrentIndex(0)
                     setSelectedAnswer(null)
                     setIsRevealed(false)
+                    setIsCorrect(null)
                     setAnswers([])
                     resetSubmit()
                     resetTimer()
@@ -150,7 +155,7 @@ export function McExercise({ questions, cefrLevel, themeName, themeSlug, onExit,
             {/* Progress bar */}
             <ExerciseProgress
                 current={currentIndex + 1}
-                total={questions.length}
+                total={activeQuestions.length}
                 onClose={onExit}
                 timer={timer}
                 cefrLevel={cefrLevel}
@@ -248,6 +253,15 @@ export function McExercise({ questions, cefrLevel, themeName, themeSlug, onExit,
                     )}
                 </div>
             </div>
+
+            {/* Bottom Feedback Bar */}
+            {isRevealed && isCorrect !== null && (
+                <BottomFeedback
+                    isCorrect={isCorrect}
+                    correctAnswer={question.type === 'de_to_vi' ? question.meaningVi : question.word}
+                    onContinue={handleContinue}
+                />
+            )}
         </div>
     )
 }

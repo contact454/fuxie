@@ -1,4 +1,4 @@
-import { Prisma, prisma } from '@fuxie/database'
+import { Prisma, WordType, prisma } from '@fuxie/database'
 import { cacheWrap } from '@/lib/cache/redis'
 
 export type { CefrLevel } from '@/lib/types/cefr'
@@ -70,7 +70,7 @@ export function buildVocabularyItemWhere(params: {
     return {
         cefrLevel: level,
         ...(theme ? { theme: { slug: theme } } : {}),
-        ...(wordType ? { wordType: wordType as any } : {}),
+        ...(wordType ? { wordType: wordType as WordType } : {}),
         ...(search
             ? {
                 OR: [
