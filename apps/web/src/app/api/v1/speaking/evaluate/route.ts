@@ -68,7 +68,7 @@ const speakingSchema = z.object({
 })
 
 // ─── Call Gemini REST API directly (more reliable than SDK for audio) ───
-import { withGeminiFallback } from '@/lib/ai/gemini-fallback'
+import { withGeminiFallback, getGeminiKey } from '@/lib/ai/gemini-fallback'
 
 async function callGeminiWithAudio(
   base64Audio: string,
@@ -237,10 +237,11 @@ Antworte NUR als valides JSON ohne Markdown:
       console.warn('[Evaluate] Gemini call failed — using error fallback')
       transcript = ''
       aiScore = 0
-      const apiKey = process.env.GEMINI_API_KEY || process.env.GOOGLE_AI_API_KEY || ''
+      let activeKey = ''
+      try { activeKey = getGeminiKey() } catch(e) {}
       overallTips = [
-        `⚠️ Hệ thống AI gặp lỗi. Vui lòng thử lại sau.`,
-        `🔍 Debug: key=${apiKey ? apiKey.substring(0,8) + '...' : 'MISSING'}, audioSize=${audioFile.size}b, err=${debugError || 'unknown'}`,
+        `⚠️ Hệ thống AI gặp lỗi hoặc quá tải. Vui lòng thử lại sau.`,
+        `🔍 Debug: key=${activeKey ? activeKey.substring(0,8) + '...' : 'MISSING'}, audioSize=${audioFile.size}b, err=${debugError || 'unknown'}`,
       ]
     } else if (!transcript && aiScore === 0) {
         overallTips = overallTips.length > 0 ? overallTips : [

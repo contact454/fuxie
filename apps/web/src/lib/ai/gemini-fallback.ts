@@ -32,26 +32,36 @@ export async function withGeminiFallback<T>(
     maxRetries = 2
 ): Promise<T> {
     let attempt = 0
-    let lastError: any
+    let lastError: unknown
 
     while (attempt <= maxRetries) {
         try {
             const client = getGeminiClient()
             return await operation(client, getGeminiKey())
-        } catch (error: any) {
+        } catch (error: unknown) {
             lastError = error
+            const errMsg = error instanceof Error ? error.message : String(error)
+            const errStatus = (error as { status?: number })?.status
             const isRateLimit = 
-                error?.status === 429 || 
-                error?.message?.includes('429') || 
-                error?.message?.includes('quota') || 
-                error?.message?.includes('exhausted')
-                
-            if (isRateLimit && keys.length > 1) {
-                rotateGeminiKey()
-                attempt++
-                // Small delay before retrying
-                await new Promise(resolve => setTimeout(resolve, 500))
-                continue
+                errStatus === 429 || 
+                errMsg.includes('429') || 
+                errMsg.includes('quota') || 
+                errMsg.includes('exhausted')
+            if (keys.length > 1) {
+                if (errStatus === 403 || errMsg.includes('suspended') || errMsg.includes('PERMISSION_DENIED')) {
+                    console.warn(`[Gemini Fallback] Key at index ${currentKeyIndex} is invalid/suspended. Removing it.`);
+                    keys.splice(currentKeyIndex, 1);
+                    currentKeyIndex = currentKeyIndex % keys.length;
+                    attempt++;
+                    continue;
+                }
+                if (isRateLimit) {
+                    rotateGeminiKey()
+                    attempt++
+                    // Small delay before retrying
+                    await new Promise(resolve => setTimeout(resolve, 500))
+                    continue
+                }
             }
             throw error
         }
