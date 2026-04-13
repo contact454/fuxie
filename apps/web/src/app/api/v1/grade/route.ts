@@ -102,7 +102,7 @@ async function gradeWriting(body: {
     ).join('\n')
     const contentPointsList = contentPoints.map((p, i) => `${i + 1}. ${p}`).join('\n')
 
-    const modelName = BASIC_LEVELS.has(cefrLevel) ? 'gemini-2.5-flash' : 'gemini-2.5-flash'
+    const modelName = 'gemma-4-31b-it'
     const prompt = `Du bist ein DaF-Prüfer. Bewerte diesen ${cefrLevel}-Text streng nach Goethe-Institut-Standards.
 
 ## Aufgabe
