@@ -166,6 +166,12 @@ export async function GET(req: NextRequest) {
             orderBy: { word: 'asc' },
         })
 
+        // Hydrate audioUrl fallback for words without pre-rendered audio
+        const wordsWithAudio = allWords.map(w => ({
+            ...w,
+            audioUrl: w.audioUrl || `/api/v1/tts?text=${encodeURIComponent(w.word)}`
+        }))
+
         if (allWords.length < 4) {
             return NextResponse.json(
                 { success: false, error: 'Not enough vocabulary words in this theme (need at least 4)' },
@@ -173,12 +179,12 @@ export async function GET(req: NextRequest) {
             )
         }
 
-        const targetWords = pickRandom(allWords, Math.min(count, allWords.length))
+        const targetWords = pickRandom(wordsWithAudio, Math.min(count, wordsWithAudio.length))
 
         // Available MC variants (only use image/audio variants if data exists)
         const availableVariants: McVariant[] = ['de_to_vi', 'vi_to_de']
-        const hasImages = allWords.some(w => w.imageUrl)
-        const hasAudio = allWords.some(w => w.audioUrl)
+        const hasImages = wordsWithAudio.some(w => w.imageUrl)
+        const hasAudio = wordsWithAudio.some(w => w.audioUrl)
         if (hasImages) availableVariants.push('image_to_word')
         if (hasAudio) availableVariants.push('audio_to_word')
 
@@ -190,12 +196,12 @@ export async function GET(req: NextRequest) {
                 if (variant === 'image_to_word' && !word.imageUrl) variant = 'de_to_vi'
                 if (variant === 'audio_to_word' && !word.audioUrl) variant = 'de_to_vi'
 
-                return generateMcQuestion(word, allWords, variant, i + 1)
+                return generateMcQuestion(word, wordsWithAudio, variant, i + 1)
             })
         } else if (type === 'matching') {
             // Return pairs for matching
-            const matchCount = Math.min(6, allWords.length)
-            const selected = pickRandom(allWords, matchCount)
+            const matchCount = Math.min(6, wordsWithAudio.length)
+            const selected = pickRandom(wordsWithAudio, matchCount)
             questions = selected.map((w, i) => {
                 const displayWord = w.article
                     ? `${w.article === 'MASKULIN' ? 'der' : w.article === 'FEMININ' ? 'die' : 'das'} ${w.word}`
@@ -222,7 +228,7 @@ export async function GET(req: NextRequest) {
                 answerLength: w.word.length,
             }))
         } else if (type === 'cloze') {
-            const withSentences = allWords.filter(w => w.exampleSentence1)
+            const withSentences = wordsWithAudio.filter(w => w.exampleSentence1)
             const selected = pickRandom(withSentences, Math.min(count, withSentences.length))
             questions = selected.map((w, i) => {
                 const sentence = w.exampleSentence1 || ''
@@ -237,7 +243,7 @@ export async function GET(req: NextRequest) {
                 }
             })
         } else if (type === 'scramble') {
-            const withSentences = allWords.filter(w => w.exampleSentence1)
+            const withSentences = wordsWithAudio.filter(w => w.exampleSentence1)
             const selected = pickRandom(withSentences, Math.min(count, withSentences.length))
             questions = selected.map((w, i) => {
                 const sentence = w.exampleSentence1 || ''
@@ -251,7 +257,7 @@ export async function GET(req: NextRequest) {
                 }
             })
         } else if (type === 'mixed') {
-            const selected = pickRandom(allWords, Math.min(Math.floor(count / 2) || 4, allWords.length))
+            const selected = pickRandom(wordsWithAudio, Math.min(Math.floor(count / 2) || 4, wordsWithAudio.length))
             questions = []
             selected.forEach((word, i) => {
                 const displayWord = word.article
@@ -277,7 +283,7 @@ export async function GET(req: NextRequest) {
                 if (variant === 'image_to_word' && !word.imageUrl) variant = 'de_to_vi'
                 if (variant === 'audio_to_word' && !word.audioUrl) variant = 'de_to_vi'
                 
-                const mc = generateMcQuestion(word, allWords, variant, i)
+                const mc = generateMcQuestion(word, wordsWithAudio, variant, i)
                 questions.push({ ...mc, exerciseComponent: 'mc' })
             })
         } else {
