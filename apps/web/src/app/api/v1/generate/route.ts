@@ -4,7 +4,7 @@ import { withGeminiFallback } from '@/lib/ai/gemini-fallback'
 const BASIC_LEVELS = new Set(['A1', 'A2', 'B1'])
 
 function getModelName(level: string) {
-    return BASIC_LEVELS.has(level) ? 'gemini-2.0-flash-lite' : 'gemini-2.0-flash'
+    return BASIC_LEVELS.has(level) ? 'gemini-2.5-flash' : 'gemini-2.5-flash'
 }
 
 // ─── POST /api/v1/generate — Exercise Generation ─────

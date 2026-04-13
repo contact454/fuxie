@@ -45,7 +45,7 @@ async function gradeGrammar(body: { sentence?: string; topic?: string }, cefrLev
         return NextResponse.json({ success: false, error: 'sentence is required' }, { status: 400 })
     }
 
-    const modelName = BASIC_LEVELS.has(cefrLevel) ? 'gemini-2.0-flash-lite' : 'gemini-2.0-flash'
+    const modelName = BASIC_LEVELS.has(cefrLevel) ? 'gemini-2.5-flash' : 'gemini-2.5-flash'
     const prompt = `Analysiere diesen deutschen Satz eines ${cefrLevel}-Lerners${topic ? ` (Thema: ${topic})` : ''}.
 
 Satz: "${sentence}"
@@ -102,7 +102,7 @@ async function gradeWriting(body: {
     ).join('\n')
     const contentPointsList = contentPoints.map((p, i) => `${i + 1}. ${p}`).join('\n')
 
-    const modelName = BASIC_LEVELS.has(cefrLevel) ? 'gemini-2.0-flash-lite' : 'gemini-2.0-flash'
+    const modelName = BASIC_LEVELS.has(cefrLevel) ? 'gemini-2.5-flash' : 'gemini-2.5-flash'
     const prompt = `Du bist ein DaF-Prüfer. Bewerte diesen ${cefrLevel}-Text streng nach Goethe-Institut-Standards.
 
 ## Aufgabe

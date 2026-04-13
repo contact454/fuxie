@@ -109,7 +109,7 @@ Sei geduldig und frage nach, wenn die Antwort des Benutzers unklar war.`
   }))
 
   const result = await withGeminiFallback(async (client) => {
-    const model = client.getGenerativeModel({ model: 'gemini-2.0-flash' })
+    const model = client.getGenerativeModel({ model: 'gemini-2.5-flash' })
     const chat = model.startChat({ history: chatHistory, systemInstruction: systemPrompt })
     return await chat.sendMessage(transcript)
   })

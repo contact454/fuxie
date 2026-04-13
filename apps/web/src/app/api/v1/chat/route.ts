@@ -70,7 +70,7 @@ export async function POST(req: NextRequest) {
             )
         }
 
-        const name = BASIC_LEVELS.has(level) ? 'gemini-2.0-flash-lite' : 'gemini-2.0-flash'
+        const name = BASIC_LEVELS.has(level) ? 'gemini-2.5-flash' : 'gemini-2.5-flash'
 
         // Build conversation history
         const chatHistory = (history as Array<{ role: string; text: string }>).map(msg => ({
