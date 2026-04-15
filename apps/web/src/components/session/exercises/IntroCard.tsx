@@ -1,7 +1,9 @@
 import { useState } from 'react'
+import type { SessionItem } from '@/lib/session/builder'
+import type { VocabExerciseData } from '@/lib/session/types'
 
-export function IntroCard({ item, onNext }: { item: any, onNext: () => void }) {
-    const { term, meaning, partOfSpeech, article, exampleSentence, imageUrl } = item.data
+export function IntroCard({ item, onNext }: { item: SessionItem, onNext: () => void }) {
+    const { term, meaning, partOfSpeech, article, exampleSentence, imageUrl } = item.data as VocabExerciseData
 
     return (
         <div className="flex flex-col h-full animate-fade-in-up">

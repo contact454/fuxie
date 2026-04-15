@@ -4,6 +4,7 @@ import { useState, useCallback } from 'react'
 import { useRouter } from 'next/navigation'
 import { Mascot } from '@/components/ui/mascot'
 import { useLevelSwitcher } from '@/hooks/use-level-switcher'
+import { CEFR_THEME, getCefrTheme } from '@/lib/constants/cefr'
 
 // ─── Types ──────────────────────────────────────────
 interface ExerciseItem {
@@ -30,14 +31,7 @@ interface ReadingClientProps {
 }
 
 // ─── Constants ──────────────────────────────────────
-const CEFR_COLORS: Record<string, { bg: string; text: string; border: string; gradient: string; css: string; shadow: string }> = {
-    A1: { bg: '#DCFCE7', text: '#166534', border: '#86EFAC', gradient: 'from-green-500 to-emerald-600', css: 'linear-gradient(135deg, #22C55E, #059669)', shadow: 'rgba(34,197,94,0.3)' },
-    A2: { bg: '#D9F99D', text: '#3F6212', border: '#BEF264', gradient: 'from-lime-500 to-green-600', css: 'linear-gradient(135deg, #84CC16, #16A34A)', shadow: 'rgba(132,204,22,0.3)' },
-    B1: { bg: '#FED7AA', text: '#9A3412', border: '#FDBA74', gradient: 'from-orange-400 to-amber-600', css: 'linear-gradient(135deg, #F97316, #D97706)', shadow: 'rgba(249,115,22,0.3)' },
-    B2: { bg: '#FECACA', text: '#991B1B', border: '#FCA5A5', gradient: 'from-red-500 to-orange-600', css: 'linear-gradient(135deg, #EF4444, #EA580C)', shadow: 'rgba(239,68,68,0.3)' },
-    C1: { bg: '#E9D5FF', text: '#6B21A8', border: '#C084FC', gradient: 'from-purple-500 to-violet-600', css: 'linear-gradient(135deg, #A855F7, #7C3AED)', shadow: 'rgba(168,85,247,0.3)' },
-    C2: { bg: '#DDD6FE', text: '#4C1D95', border: '#A78BFA', gradient: 'from-violet-600 to-purple-800', css: 'linear-gradient(135deg, #7C3AED, #6B21A8)', shadow: 'rgba(124,58,237,0.3)' },
-}
+
 
 const TEIL_ICONS: Record<number, string> = {
     1: '📧',   // Kurze Texte / Emails
@@ -97,7 +91,7 @@ export function ReadingClient({ teile, totalExercises, totalCompleted, available
         }, []),
     })
 
-    const cefrColors = CEFR_COLORS[currentLevel] ?? CEFR_COLORS.A1!
+    const cefrColors = getCefrTheme(currentLevel)
     const overallProgress = currentTotal > 0 ? Math.round((currentCompleted / currentTotal) * 100) : 0
 
     const toggleTeil = (teil: number) => {
@@ -110,14 +104,14 @@ export function ReadingClient({ teile, totalExercises, totalCompleted, available
             {/* ═══ HERO BANNER ═══ */}
             <div className="rounded-2xl border border-gray-100 shadow-sm mb-6 overflow-hidden" style={{ background: `linear-gradient(180deg, ${cefrColors.bg}22 0%, #FFFFFF 100%)` }}>
                 {/* Level color stripe */}
-                <div className="h-1" style={{ background: cefrColors.css }} />
+                <div className="h-1" style={{ background: cefrColors.cssGradient }} />
 
                 <div className="p-6">
                     {/* CEFR Level Tabs */}
                     {availableLevels.length > 0 && (
                         <div className="flex gap-2 mb-5">
                             {availableLevels.map(level => {
-                                const colors = CEFR_COLORS[level] ?? CEFR_COLORS['A1']!
+                                const colors = getCefrTheme(level)
                                 const isActive = level === currentLevel
                                 return (
                                     <button
@@ -128,7 +122,7 @@ export function ReadingClient({ teile, totalExercises, totalCompleted, available
                                             ? 'text-white shadow-md scale-105'
                                             : 'bg-gray-100 text-gray-500 hover:bg-gray-200'
                                             } ${isLevelLoading ? 'opacity-50 cursor-wait' : ''}`}
-                                        style={isActive ? { background: colors.css, boxShadow: `0 4px 12px ${colors.shadow}` } : undefined}
+                                        style={isActive ? { background: colors.cssGradient, boxShadow: `0 4px 12px ${colors.shadow}` } : undefined}
                                     >
                                         {level}
                                     </button>
@@ -157,7 +151,7 @@ export function ReadingClient({ teile, totalExercises, totalCompleted, available
                                     }
                                 }}
                                 className="flex items-center gap-2 px-6 py-3 rounded-xl text-white font-bold text-sm hover:opacity-90 transition-all shadow-lg whitespace-nowrap"
-                                style={{ background: cefrColors.css, boxShadow: `0 4px 16px ${cefrColors.shadow}` }}
+                                style={{ background: cefrColors.cssGradient, boxShadow: `0 4px 16px ${cefrColors.shadow}` }}
                             >
                                 <span>📖</span>
                                 Weiterlernen
@@ -169,7 +163,7 @@ export function ReadingClient({ teile, totalExercises, totalCompleted, available
                         <div className="w-full h-2.5 bg-gray-100 rounded-full overflow-hidden">
                             <div
                                 className="h-full rounded-full transition-all duration-700 ease-out"
-                                style={{ width: `${Math.max(overallProgress, 1)}%`, background: cefrColors.css }}
+                                style={{ width: `${Math.max(overallProgress, 1)}%`, background: cefrColors.cssGradient }}
                             />
                         </div>
                         <p className="text-xs text-gray-400 mt-1.5 text-right">{overallProgress}% abgeschlossen</p>
@@ -266,7 +260,7 @@ export function ReadingClient({ teile, totalExercises, totalCompleted, available
                                                     >
                                                         <div className={`w-8 h-8 rounded-lg flex items-center justify-center text-sm font-bold shrink-0 transition-all
                                                             ${isDone ? 'bg-green-500 text-white' : isCurrent ? 'text-white' : 'bg-gray-200 text-gray-500'}`}
-                                                            style={isCurrent ? { background: cefrColors.css } : undefined}
+                                                            style={isCurrent ? { background: cefrColors.cssGradient } : undefined}
                                                         >
                                                             {isDone ? '✓' : idx + 1}
                                                         </div>

@@ -3,6 +3,7 @@ import { z } from 'zod'
 import { handleApiError } from '@/lib/api/error-handler'
 import { withAuth } from '@/lib/auth/middleware'
 import { withGeminiFallback } from '@/lib/ai/gemini-fallback'
+import { editDistance } from '@/lib/ai/text-alignment'
 
 // ─── Types ───
 interface ChatMessage {
@@ -24,22 +25,7 @@ const conversationSchema = z.object({
   scenario: z.string().default('cafe'), // Topic context
 })
 
-// Alignment & Levenshtein from evaluate route (simplified for chat)
-function editDistance(a: string, b: string): number {
-  const dp: number[][] = Array(a.length + 1).fill(null).map(() => Array(b.length + 1).fill(0))
-  for (let i = 0; i <= a.length; i++) dp[i]![0] = i
-  for (let j = 0; j <= b.length; j++) dp[0]![j] = j
-  for (let i = 1; i <= a.length; i++) {
-    for (let j = 1; j <= b.length; j++) {
-      dp[i]![j] = Math.min(
-        dp[i - 1]![j]! + 1,
-        dp[i]![j - 1]! + 1,
-        dp[i - 1]![j - 1]! + (a[i - 1] === b[j - 1] ? 0 : 1)
-      )
-    }
-  }
-  return dp[a.length]![b.length]!
-}
+// editDistance is now imported from '@/lib/ai/text-alignment'
 
 // ─── 1. Gemini Speech-to-Text & Pronunciation Assessment ───
 async function evaluateSpeech(base64Audio: string, mimeType: string, level: string, lastAiMessage: string) {
@@ -119,8 +105,9 @@ Sei geduldig und frage nach, wenn die Antwort des Benutzers unklar war.`
 
 // ─── 3. Audio Factory TTS ───
 async function generateTTS(text: string): Promise<string> {
+    const baseUrl = process.env.AUDIO_FACTORY_URL || 'http://127.0.0.1:8004'
     try {
-        const response = await fetch('http://127.0.0.1:8004/synthesize_clone', {
+        const response = await fetch(`${baseUrl}/synthesize_clone`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({

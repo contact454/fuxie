@@ -165,7 +165,6 @@ function LoginContent() {
                     popupCode === 'auth/internal-error' ||
                     popupCode === 'auth/network-request-failed'
                 ) {
-                    console.log('[Fuxie] Falling back to redirect...')
                     await signInWithRedirect(auth, provider)
                     return // redirect will navigate away
                 }

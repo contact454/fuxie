@@ -5,6 +5,7 @@ import Image from 'next/image'
 import { Flashcard } from './flashcard'
 import { RatingButtons } from './rating-buttons'
 import { Mascot } from '@/components/ui/mascot'
+import { CEFR_THEME, getCefrTheme } from '@/lib/constants/cefr'
 
 // ─── Types ──────────────────────────────────────────
 interface Theme {
@@ -58,14 +59,7 @@ type ViewMode = 'themes' | 'study' | 'srs'
 type Rating = 'AGAIN' | 'HARD' | 'GOOD' | 'EASY'
 
 // ─── Constants ──────────────────────────────────────
-const CEFR_COLORS: Record<string, { gradient: string }> = {
-    A1: { gradient: 'from-green-500 to-emerald-600' },
-    A2: { gradient: 'from-lime-500 to-green-600' },
-    B1: { gradient: 'from-orange-400 to-amber-600' },
-    B2: { gradient: 'from-red-500 to-orange-600' },
-    C1: { gradient: 'from-purple-500 to-violet-600' },
-    C2: { gradient: 'from-violet-600 to-purple-800' },
-}
+
 
 // ─── Main Component ─────────────────────────────────
 export function ReviewClient({ themes, availableLevels, initialLevel, dueCounts, totalDueAll }: ReviewClientProps) {
@@ -95,7 +89,7 @@ export function ReviewClient({ themes, availableLevels, initialLevel, dueCounts,
     const [currentTotalDue, setCurrentTotalDue] = useState(totalDueAll)
     const srsAdvanceTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null)
 
-    const cefrColors = CEFR_COLORS[currentLevel] ?? CEFR_COLORS.A1!
+    const cefrColors = getCefrTheme(currentLevel)
 
     const workerRef = useRef<Worker | null>(null)
 
@@ -511,7 +505,7 @@ export function ReviewClient({ themes, availableLevels, initialLevel, dueCounts,
                 {/* CEFR Level Tabs */}
                 <div className="flex gap-2 mb-4 overflow-x-auto pb-1">
                     {availableLevels.map(level => {
-                        const colors = CEFR_COLORS[level] ?? CEFR_COLORS.A1!
+                        const colors = getCefrTheme(level)
                         const isActive = level === currentLevel
                         const dueCount = currentDueCounts[level] || 0
                         return (

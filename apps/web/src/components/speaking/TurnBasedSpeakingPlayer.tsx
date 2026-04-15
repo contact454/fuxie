@@ -4,6 +4,8 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { Mic, Square, Loader2, Send } from 'lucide-react'
 import styles from './speaking.module.css'
 import { MascotImage } from '../shared/mascot-image'
+import { speakWithBrowserTTS, cancelBrowserTTS } from '@/lib/audio/browser-tts'
+import { startWaveformAnimation } from '@/lib/audio/waveform'
 
 interface Message {
   role: 'user' | 'model'
@@ -33,6 +35,8 @@ export default function TurnBasedSpeakingPlayer({ level, scenario, onClose, onCo
   const canvasRef = useRef<HTMLCanvasElement>(null)
   const streamRef = useRef<MediaStream | null>(null)
   const aiAudioRef = useRef<HTMLAudioElement>(null)
+  const isMountedRef = useRef(true)
+  const stopWaveformRef = useRef<(() => void) | null>(null)
 
   // Auto-start scenario
   useEffect(() => {
@@ -71,17 +75,14 @@ export default function TurnBasedSpeakingPlayer({ level, scenario, onClose, onCo
         aiAudioRef.current.src = audioUrl
         aiAudioRef.current.play()
         setState('playing')
-        aiAudioRef.current.onended = () => setState('idle')
+        aiAudioRef.current.onended = () => { if (isMountedRef.current) setState('idle') }
       }
     } else {
-      // Browser fallback
-      if (typeof window !== 'undefined' && window.speechSynthesis) {
-        const utterance = new SpeechSynthesisUtterance(text)
-        utterance.lang = 'de-DE'
-        setState('playing')
-        utterance.onend = () => setState('idle')
-        window.speechSynthesis.speak(utterance)
-      }
+      // Browser fallback using shared utility
+      setState('playing')
+      speakWithBrowserTTS(text, {
+        onEnd: () => { if (isMountedRef.current) setState('idle') },
+      })
     }
   }
 
@@ -98,6 +99,19 @@ export default function TurnBasedSpeakingPlayer({ level, scenario, onClose, onCo
     audioContextRef.current = null
   }, [])
 
+  // Comprehensive unmount cleanup — prevents mic leak, AudioContext leak, animation leak
+  useEffect(() => {
+    return () => {
+      isMountedRef.current = false
+      cancelBrowserTTS()
+      stopWaveformRef.current?.()
+      if (mediaRecorderRef.current?.state === 'recording') {
+        mediaRecorderRef.current.stop()
+      }
+      disposeRecordingResources()
+    }
+  }, [disposeRecordingResources])
+
   const startRecording = async () => {
     setMicError(null)
     try {
@@ -106,15 +120,24 @@ export default function TurnBasedSpeakingPlayer({ level, scenario, onClose, onCo
       const recorder = new MediaRecorder(stream, { mimeType: 'audio/webm' })
       chunksRef.current = []
 
-      // Visuals
-      const audioContext = new AudioContext()
-      audioContextRef.current = audioContext
+      // Visuals — singleton AudioContext pattern
+      if (!audioContextRef.current || audioContextRef.current.state === 'closed') {
+        audioContextRef.current = new AudioContext()
+      } else if (audioContextRef.current.state === 'suspended') {
+        await audioContextRef.current.resume()
+      }
+      const audioContext = audioContextRef.current
       const source = audioContext.createMediaStreamSource(stream)
       const analyser = audioContext.createAnalyser()
       analyser.fftSize = 256
       source.connect(analyser)
       analyserRef.current = analyser
-      drawWaveform()
+
+      // Use shared waveform animation
+      stopWaveformRef.current?.()
+      if (canvasRef.current) {
+        stopWaveformRef.current = startWaveformAnimation(canvasRef.current, analyser, { style: 'bars' })
+      }
 
       recorder.ondataavailable = e => { if (e.data.size > 0) chunksRef.current.push(e.data) }
       recorder.onstop = () => processAudio(new Blob(chunksRef.current, { type: 'audio/webm' }))
@@ -132,6 +155,8 @@ export default function TurnBasedSpeakingPlayer({ level, scenario, onClose, onCo
     if (mediaRecorderRef.current?.state === 'recording') {
       mediaRecorderRef.current.stop()
     }
+    stopWaveformRef.current?.()
+    stopWaveformRef.current = null
     setState('processing')
   }
 
@@ -163,28 +188,7 @@ export default function TurnBasedSpeakingPlayer({ level, scenario, onClose, onCo
     }
   }
 
-  const drawWaveform = () => {
-      const canvas = canvasRef.current;
-      const analyser = analyserRef.current;
-      if (!canvas || !analyser) return;
-      const ctx = canvas.getContext('2d');
-      if (!ctx) return;
-      const dataArray = new Uint8Array(analyser.frequencyBinCount);
-      const draw = () => {
-          animFrameRef.current = requestAnimationFrame(draw);
-          analyser.getByteFrequencyData(dataArray);
-          ctx.clearRect(0, 0, canvas.width, canvas.height);
-          const barWidth = (canvas.width / dataArray.length) * 2.5;
-          let x = 0;
-          ctx.fillStyle = '#10B981';
-          for (let i = 0; i < dataArray.length; i++) {
-              const barHeight = Math.max(2, ((dataArray[i] || 0) / 255.0) * canvas.height * 0.8);
-              ctx.fillRect(x, (canvas.height - barHeight) / 2, barWidth - 1, barHeight);
-              x += barWidth;
-          }
-      };
-      draw();
-  };
+  // drawWaveform is now handled by startWaveformAnimation from @/lib/audio/waveform.ts
 
   const finishConversation = () => {
     // Calculate average score

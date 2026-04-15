@@ -4,6 +4,7 @@ import { useState, useEffect, useCallback } from 'react'
 import { useRouter } from 'next/navigation'
 import Image from 'next/image'
 import type { SessionItem } from '@/lib/session/builder'
+import type { ExerciseResult, ExerciseData } from '@/lib/session/types'
 
 import { IntroCard } from './exercises/IntroCard'
 import { MultipleChoice } from './exercises/MultipleChoice'
@@ -21,7 +22,7 @@ export function SessionPlayer({ level }: { level: string }) {
     // Gamification state
     const [hearts, setHearts] = useState(5)
     const [score, setScore] = useState(0)
-    const [results, setResults] = useState<any[]>([])
+    const [results, setResults] = useState<ExerciseResult[]>([])
 
     const [isFinished, setIsFinished] = useState(false)
 
@@ -38,7 +39,7 @@ export function SessionPlayer({ level }: { level: string }) {
             .finally(() => setLoading(false))
     }, [level])
 
-    const handleNext = useCallback((isCorrect?: boolean, itemData?: any) => {
+    const handleNext = useCallback((isCorrect?: boolean, itemData?: ExerciseData) => {
         const item = items[currentIndex]
         if (!item) return
 

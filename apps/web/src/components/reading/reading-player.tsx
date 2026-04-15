@@ -8,9 +8,10 @@ import styles from './reading.module.css'
 import {
     type Question, type ExplanationData, type QuestionResult, type ReadingPlayerProps,
     type Phase, type LookedUpWord, type TooltipState, type TextHighlight,
-    CEFR_COLORS, TEIL_DESCRIPTIONS, DIFFICULTY, WARMUP_QUESTIONS, POST_READING_TIPS,
+    TEIL_DESCRIPTIONS, DIFFICULTY, WARMUP_QUESTIONS, POST_READING_TIPS,
     extractKeyWords, getImageUrl, getHeroImage,
 } from './reading-types'
+import { getCefrTheme } from '@/lib/constants/cefr'
 import { renderTexts, renderSchilderCards, renderAnzeigenCards, renderImages } from './reading-text-renderers'
 import { useReadingTranslate } from './use-reading-translate'
 
@@ -43,7 +44,7 @@ export function ReadingPlayer({
     } | null>(null)
     const [expandedResult, setExpandedResult] = useState<string | null>(null)
     const [startTime] = useState(Date.now())
-    const cefrColor = CEFR_COLORS[cefrLevel] ?? CEFR_COLORS.A1!
+    const cefrColor = getCefrTheme(cefrLevel)
     const isBeginner = ['A1', 'A2'].includes(cefrLevel)
     const diff = DIFFICULTY[cefrLevel] ?? DIFFICULTY.A1!
     const teilInfo = isBeginner

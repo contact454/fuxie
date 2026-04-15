@@ -3,6 +3,7 @@
 import { useState, useRef, useEffect, useCallback } from 'react'
 import { useRouter } from 'next/navigation'
 import { Mascot } from '@/components/ui/mascot'
+import { getCefrTheme } from '@/lib/constants/cefr'
 
 // ─── Types ──────────────────────────────────────────
 interface Question {
@@ -44,14 +45,7 @@ interface LessonPlayerProps {
 }
 
 // ─── Constants ──────────────────────────────────────
-const CEFR_COLORS: Record<string, { gradient: string; bg: string; text: string }> = {
-    A1: { gradient: 'from-green-500 to-emerald-600', bg: '#DCFCE7', text: '#166534' },
-    A2: { gradient: 'from-lime-500 to-green-600', bg: '#D9F99D', text: '#3F6212' },
-    B1: { gradient: 'from-orange-400 to-amber-600', bg: '#FED7AA', text: '#9A3412' },
-    B2: { gradient: 'from-red-500 to-orange-600', bg: '#FECACA', text: '#991B1B' },
-    C1: { gradient: 'from-purple-500 to-violet-600', bg: '#E9D5FF', text: '#6B21A8' },
-    C2: { gradient: 'from-violet-600 to-purple-800', bg: '#DDD6FE', text: '#4C1D95' },
-}
+
 
 const DEFAULT_SPEEDS: Record<string, number> = {
     A1: 0.75, A2: 0.85, B1: 1.0, B2: 1.15, C1: 1.25, C2: 1.5,
@@ -84,7 +78,7 @@ export function LessonPlayer({
     } | null>(null)
     const [showTranscript, setShowTranscript] = useState(false)
     const [startTime] = useState(Date.now())
-    const cefrColor = CEFR_COLORS[cefrLevel] ?? CEFR_COLORS.A1!
+    const cefrColor = getCefrTheme(cefrLevel)
 
     // Audio event handlers
     useEffect(() => {
@@ -196,13 +190,17 @@ export function LessonPlayer({
     const canPlayAgain = playCount < maxPlays
     const allAnswered = questions.every(q => answers[q.id])
 
+    // All phases share a single <audio> element at top-level to avoid
+    // unmount/remount (and re-download) when changing phases.
+    const audioElement = <audio ref={audioRef} src={audioUrl} preload="metadata" />
+
     // ═══════════════════════════════════════════
     // INTRO PHASE
     // ═══════════════════════════════════════════
     if (phase === 'intro') {
         return (
             <div className="max-w-lg mx-auto px-4 py-8">
-                <audio ref={audioRef} src={audioUrl} preload="metadata" />
+                {audioElement}
 
                 {/* Back button */}
                 <button onClick={() => router.push('/listening')} className="flex items-center gap-1 text-sm text-gray-500 hover:text-gray-700 mb-6">
@@ -266,7 +264,7 @@ export function LessonPlayer({
         const q = questions[currentQuestion]
         return (
             <div className="max-w-lg mx-auto px-4 py-6">
-                <audio ref={audioRef} src={audioUrl} preload="metadata" />
+                {audioElement}
 
                 {/* Top bar */}
                 <div className="flex items-center justify-between mb-5">
@@ -444,7 +442,7 @@ export function LessonPlayer({
 
         return (
             <div className="max-w-lg mx-auto px-4 py-6">
-                <audio ref={audioRef} src={audioUrl} preload="metadata" />
+                {audioElement}
 
                 {/* Celebration */}
                 <div className="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm text-center mb-5">

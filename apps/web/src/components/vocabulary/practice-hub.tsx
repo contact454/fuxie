@@ -4,6 +4,7 @@ import { useState, useCallback } from 'react'
 import { useRouter } from 'next/navigation'
 import Image from 'next/image'
 import { Mascot } from '@/components/ui/mascot'
+import { CEFR_THEME, getCefrTheme } from '@/lib/constants/cefr'
 
 interface Theme {
     id: string
@@ -21,14 +22,7 @@ interface PracticeHubProps {
     initialLevel: string
 }
 
-const CEFR_COLORS: Record<string, { gradient: string }> = {
-    A1: { gradient: 'from-green-500 to-emerald-600' },
-    A2: { gradient: 'from-lime-500 to-green-600' },
-    B1: { gradient: 'from-orange-400 to-amber-600' },
-    B2: { gradient: 'from-red-500 to-orange-600' },
-    C1: { gradient: 'from-purple-500 to-violet-600' },
-    C2: { gradient: 'from-violet-600 to-purple-800' },
-}
+
 
 export function PracticeHub({ themes, availableLevels, initialLevel }: PracticeHubProps) {
     const router = useRouter()
@@ -75,7 +69,7 @@ export function PracticeHub({ themes, availableLevels, initialLevel }: PracticeH
                 {availableLevels.length > 1 && (
                     <div className="flex justify-center gap-2 mb-4 overflow-x-auto pb-2 scrollbar-hide">
                         {availableLevels.map(level => {
-                            const colors = CEFR_COLORS[level] ?? CEFR_COLORS['A1']!
+                            const colors = getCefrTheme(level)
                             const isActive = level === currentLevel
                             return (
                                 <button

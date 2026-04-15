@@ -2,63 +2,12 @@ import { NextRequest, NextResponse } from 'next/server'
 import { z } from 'zod'
 import { handleApiError } from '@/lib/api/error-handler'
 import { withAuth } from '@/lib/auth/middleware'
+import { editDistance, alignWords } from '@/lib/ai/text-alignment'
 
 // Increase Vercel function timeout for audio processing
 export const maxDuration = 30
 
-// ─── Word alignment (Levenshtein) ────────────────────
-function alignWords(refWords: string[], userWords: string[]): Array<{
-  word: string
-  status: 'correct' | 'warning' | 'error' | 'missing'
-  score: number
-}> {
-  const results: Array<{ word: string; status: 'correct' | 'warning' | 'error' | 'missing'; score: number }> = []
-  const normalize = (w: string) => w.toLowerCase().replace(/[^a-zäöüß]/g, '')
-
-  let userIdx = 0
-  for (const refWord of refWords) {
-    const refNorm = normalize(refWord)
-    if (userIdx < userWords.length) {
-      const userNorm = normalize(userWords[userIdx]!)
-      if (refNorm === userNorm) {
-        results.push({ word: refWord, status: 'correct', score: 100 })
-        userIdx++
-      } else if (editDistance(refNorm, userNorm) <= 2) {
-        results.push({ word: refWord, status: 'warning', score: 70 })
-        userIdx++
-      } else {
-        const futureIdx = userWords.slice(userIdx).findIndex(w => normalize(w) === refNorm)
-        if (futureIdx > 0) {
-          userIdx += futureIdx
-          results.push({ word: refWord, status: 'correct', score: 100 })
-          userIdx++
-        } else {
-          results.push({ word: refWord, status: 'error', score: 0 })
-          userIdx++
-        }
-      }
-    } else {
-      results.push({ word: refWord, status: 'missing', score: 0 })
-    }
-  }
-  return results
-}
-
-function editDistance(a: string, b: string): number {
-  const dp: number[][] = Array(a.length + 1).fill(null).map(() => Array(b.length + 1).fill(0))
-  for (let i = 0; i <= a.length; i++) dp[i]![0] = i
-  for (let j = 0; j <= b.length; j++) dp[0]![j] = j
-  for (let i = 1; i <= a.length; i++) {
-    for (let j = 1; j <= b.length; j++) {
-      dp[i]![j] = Math.min(
-        dp[i - 1]![j]! + 1,
-        dp[i]![j - 1]! + 1,
-        dp[i - 1]![j - 1]! + (a[i - 1] === b[j - 1] ? 0 : 1)
-      )
-    }
-  }
-  return dp[a.length]![b.length]!
-}
+// Word alignment is now imported from '@/lib/ai/text-alignment'
 
 const VALID_LEVELS = ['A1', 'A2', 'B1', 'B2', 'C1', 'C2'] as const
 const speakingSchema = z.object({
@@ -241,7 +190,7 @@ Antworte NUR als valides JSON ohne Markdown:
       try { activeKey = getGeminiKey() } catch(e) {}
       overallTips = [
         `⚠️ Hệ thống AI gặp lỗi hoặc quá tải. Vui lòng thử lại sau.`,
-        `🔍 Debug: key=${activeKey ? activeKey.substring(0,8) + '...' : 'MISSING'}, audioSize=${audioFile.size}b, err=${debugError || 'unknown'}`,
+        `🔍 Debug: audioSize=${audioFile.size}b, err=${debugError || 'unknown'}`,
       ]
     } else if (!transcript && aiScore === 0) {
         overallTips = overallTips.length > 0 ? overallTips : [

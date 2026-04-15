@@ -1,68 +1,153 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { GoogleGenerativeAI, type GenerativeModel } from '@google/generative-ai'
+import { prisma } from '@fuxie/database'
+import { withAuth, NotFoundError } from '@/lib/auth/middleware'
+import { getDbUserByFirebaseUid } from '@/lib/auth/db-user'
+import { handleApiError } from '@/lib/api/error-handler'
 import { withGeminiFallback } from '@/lib/ai/gemini-fallback'
+import { parseGeminiJson } from '@/lib/ai/parse-json'
+import {
+    buildChatSystemPrompt,
+    CHAT_GREETINGS,
+    SUGGESTED_TOPICS,
+    type ChatUserContext,
+} from '@/lib/ai/chat-prompt-builder'
 
 const BASIC_LEVELS = new Set(['A1', 'A2', 'B1'])
 
-// ─── System Prompt ─────────────────────────────────
-function getSystemPrompt(level: string): string {
-    return `Du bist "Fuxie" 🦊 — ein freundlicher, geduldiger KI-Sprachtutor für Deutsch als Fremdsprache.
-Dein Schüler ist vietnamesisch und lernt auf dem CEFR-Niveau ${level}.
-
-## Regeln
-1. Passe deine Sprache STRENG an ${level} an:
-   - A1-A2: Sehr einfache Sätze, Grundwortschatz, viel Wiederholung
-   - B1-B2: Komplexere Sätze, Nebensätze, thematischer Wortschatz
-   - C1-C2: Natürliches Deutsch, idiomatische Wendungen, anspruchsvolle Themen
-
-2. Antworte auf DEUTSCH — aber füge vietnamesische Übersetzungen in Klammern hinzu bei:
-   - Neuen Vokabeln
-   - Grammatikerklärungen
-   - Korrekturen
-
-3. Korrigiere Fehler IMMER:
-   - Zeige den Fehler und die Korrektur
-   - Erkläre kurz die Regel (auf dem passenden Niveau)
-   - Gib ein weiteres Beispiel
-
-4. Sei ermutigend und nutze den 🦊 Emoji gelegentlich
-5. Stelle Folgefragen, um das Gespräch am Laufen zu halten
-6. Wenn der Schüler auf Vietnamesisch schreibt, antworte kurz auf Vietnamesisch und ermutige zum Deutschsprechen
-
-## Format
-- Verwende Markdown für Formatierung
-- Hebe Korrekturen mit **fett** hervor
-- Nutze Aufzählungszeichen für Tipps`
+// ─── Types ─────────────────────────────────────────
+interface ChatCorrection {
+    original: string
+    corrected: string
+    explanation: string
+    rule: string
 }
 
-// ─── Greetings ─────────────────────────────────────
-const GREETINGS: Record<string, string> = {
-    A1: 'Hallo! 🦊 Ich bin Fuxie. Wie heißt du?\n\n*(Xin chào! Mình là Fuxie. Bạn tên gì?)*',
-    A2: 'Hallo! 🦊 Ich bin Fuxie, dein Deutschtutor. Worüber möchtest du heute sprechen?\n\n*(Bạn muốn nói về chủ đề gì hôm nay?)*',
-    B1: 'Hallo! 🦊 Willkommen zurück! Was beschäftigt dich heute? Wollen wir über ein bestimmtes Thema sprechen oder eine Grammatikübung machen?',
-    B2: 'Hallo! 🦊 Schön, dass du da bist. Hast du heute ein bestimmtes Lernziel oder sollen wir einfach ein Gespräch führen?',
-    C1: 'Guten Tag! 🦊 Freut mich, dich wiederzusehen. Wollen wir heute ein anspruchsvolleres Thema diskutieren?',
-    C2: 'Willkommen! 🦊 Auf diesem Niveau können wir über alles reden — von Philosophie bis Alltagskultur. Was interessiert dich gerade besonders?',
+interface ChatResponse {
+    text: string
+    corrections: ChatCorrection[]
+    suggestedFollowUps: string[]
+}
+
+// ─── Helpers ───────────────────────────────────────
+
+/** Fetch enriched user context for the system prompt. */
+async function getUserContext(dbUserId: string): Promise<ChatUserContext> {
+    const [profile, learningPath, recentCards] = await Promise.all([
+        prisma.userProfile.findUnique({
+            where: { userId: dbUserId },
+            select: {
+                displayName: true,
+                currentLevel: true,
+                totalXp: true,
+            },
+        }),
+        prisma.learningPath.findUnique({
+            where: { userId: dbUserId },
+            select: {
+                weakSkills: true,
+                strongSkills: true,
+            },
+        }),
+        // Fetch recently learned vocabulary (last 20 words reviewed successfully)
+        prisma.srsCard.findMany({
+            where: {
+                userId: dbUserId,
+                vocabularyItemId: { not: null },
+                totalCorrect: { gt: 0 },
+            },
+            orderBy: { lastReviewedAt: 'desc' },
+            take: 20,
+            select: {
+                vocabularyItem: {
+                    select: { word: true, meaningVi: true },
+                },
+            },
+        }),
+    ])
+
+    const streak = await prisma.userStreak.findUnique({
+        where: { userId: dbUserId },
+        select: { currentStreak: true },
+    })
+
+    return {
+        displayName: profile?.displayName ?? 'Learner',
+        level: profile?.currentLevel ?? 'A1',
+        weakSkills: learningPath?.weakSkills ?? [],
+        strongSkills: learningPath?.strongSkills ?? [],
+        recentVocab: recentCards
+            .filter(c => c.vocabularyItem)
+            .map(c => `${c.vocabularyItem!.word} (${c.vocabularyItem!.meaningVi})`),
+        streak: streak?.currentStreak ?? 0,
+        totalXp: profile?.totalXp ?? 0,
+    }
+}
+
+/** Generate a conversation title from the first user message. */
+function generateTitle(text: string): string {
+    const cleaned = text.trim().replace(/\n/g, ' ')
+    return cleaned.length > 50 ? cleaned.substring(0, 47) + '...' : cleaned
 }
 
 // ─── POST /api/v1/chat ─────────────────────────────
 export async function POST(req: NextRequest) {
     try {
-        const body = await req.json()
-        const { message, history = [], level = 'A1', action } = body
+        const auth = await withAuth(req)
+        const user = await getDbUserByFirebaseUid(auth.userId)
+        if (!user) throw new NotFoundError('User not found')
 
-        // Start conversation
+        const body = await req.json()
+        const {
+            message,
+            history = [],
+            level,
+            action,
+            conversationId: existingConvId,
+        } = body
+
+        // ── Start conversation ────────────────────────
         if (action === 'start') {
+            const userCtx = await getUserContext(user.id)
+            const effectiveLevel = level ?? userCtx.level
+
+            // Create DB conversation record
+            const conv = await prisma.aiConversation.create({
+                data: {
+                    userId: user.id,
+                    cefrLevel: effectiveLevel,
+                    title: 'Neues Gespräch',
+                    context: 'chat',
+                },
+            })
+
+            const greetingText = CHAT_GREETINGS[effectiveLevel] ?? CHAT_GREETINGS.A1 ?? ''
+
+            // Save the greeting as first message
+            await prisma.aiMessage.create({
+                data: {
+                    conversationId: conv.id,
+                    role: 'assistant',
+                    content: greetingText as string,
+                },
+            })
+
+            await prisma.aiConversation.update({
+                where: { id: conv.id },
+                data: { totalMessages: 1 },
+            })
+
             return NextResponse.json({
                 success: true,
                 data: {
-                    message: GREETINGS[level] || GREETINGS.A1,
-                    level,
+                    conversationId: conv.id,
+                    message: greetingText,
+                    level: effectiveLevel,
+                    suggestedTopics: SUGGESTED_TOPICS[effectiveLevel] ?? SUGGESTED_TOPICS.A1,
                 },
             })
         }
 
-        // Chat message
+        // ── Chat message ──────────────────────────────
         if (!message || typeof message !== 'string' || !message.trim()) {
             return NextResponse.json(
                 { success: false, error: 'Message is required' },
@@ -70,53 +155,113 @@ export async function POST(req: NextRequest) {
             )
         }
 
-        const name = BASIC_LEVELS.has(level) ? 'gemini-2.5-flash' : 'gemini-2.5-flash'
+        const userCtx = await getUserContext(user.id)
+        const effectiveLevel = level ?? userCtx.level
+        const modelName = BASIC_LEVELS.has(effectiveLevel) ? 'gemini-2.5-flash' : 'gemini-2.5-pro'
 
-        // Build conversation history
+        // Resolve or create conversation
+        let convId = existingConvId
+        if (!convId) {
+            const conv = await prisma.aiConversation.create({
+                data: {
+                    userId: user.id,
+                    cefrLevel: effectiveLevel,
+                    title: generateTitle(message),
+                    context: 'chat',
+                },
+            })
+            convId = conv.id
+        }
+
+        // Save user message
+        await prisma.aiMessage.create({
+            data: {
+                conversationId: convId,
+                role: 'user',
+                content: message,
+            },
+        })
+
+        // Build conversation history for Gemini
         const chatHistory = (history as Array<{ role: string; text: string }>).map(msg => ({
             role: msg.role === 'user' ? 'user' as const : 'model' as const,
             parts: [{ text: msg.text }],
         }))
 
+        // Build dynamic system prompt
+        const systemPrompt = buildChatSystemPrompt(userCtx)
+
+        // Call Gemini with fallback
         const result = await withGeminiFallback(async (client) => {
-            const model = client.getGenerativeModel({ model: name })
+            const model = client.getGenerativeModel({
+                model: modelName,
+                generationConfig: {
+                    responseMimeType: 'application/json',
+                },
+            })
             const chat = model.startChat({
                 history: chatHistory,
-                systemInstruction: getSystemPrompt(level),
+                systemInstruction: systemPrompt,
             })
-            return await chat.sendMessageStream(message)
+            return await chat.sendMessage(message)
         })
 
-        // Stream response
-        const encoder = new TextEncoder()
-        const stream = new ReadableStream({
-            async start(controller) {
-                try {
-                    for await (const chunk of result.stream) {
-                        const text = chunk.text()
-                        if (text) {
-                            controller.enqueue(encoder.encode(text))
-                        }
-                    }
-                    controller.close()
-                } catch (err) {
-                    controller.error(err)
-                }
-            },
-        })
+        // Parse structured response
+        const rawText = result.response.text()
+        let parsed: ChatResponse
 
-        return new Response(stream, {
-            headers: {
-                'Content-Type': 'text/plain; charset=utf-8',
-                'Cache-Control': 'no-cache',
-                'Transfer-Encoding': 'chunked',
+        try {
+            parsed = parseGeminiJson<ChatResponse>(rawText)
+
+            // Ensure required fields exist
+            if (!parsed.text) parsed.text = rawText
+            if (!Array.isArray(parsed.corrections)) parsed.corrections = []
+            if (!Array.isArray(parsed.suggestedFollowUps)) parsed.suggestedFollowUps = []
+        } catch {
+            // Fallback: treat entire response as text
+            parsed = {
+                text: rawText,
+                corrections: [],
+                suggestedFollowUps: [],
+            }
+        }
+
+        // Save assistant message to DB (async, non-blocking)
+        const savePromise = Promise.all([
+            prisma.aiMessage.create({
+                data: {
+                    conversationId: convId,
+                    role: 'assistant',
+                    content: parsed.text,
+                    model: modelName,
+                    corrections: parsed.corrections.length > 0
+                        ? (parsed.corrections as unknown as import('@fuxie/database').Prisma.InputJsonValue)
+                        : undefined,
+                },
+            }),
+            prisma.aiConversation.update({
+                where: { id: convId },
+                data: {
+                    totalMessages: { increment: 2 }, // user + assistant
+                    // Update title from first user message if it was "Neues Gespräch"
+                    ...(existingConvId ? {} : { title: generateTitle(message) }),
+                },
+            }),
+        ])
+
+        // Don't await save — respond fast
+        savePromise.catch(err => console.error('[Chat] DB save error:', err))
+
+        return NextResponse.json({
+            success: true,
+            data: {
+                conversationId: convId,
+                text: parsed.text,
+                corrections: parsed.corrections,
+                suggestedFollowUps: parsed.suggestedFollowUps,
             },
         })
-    } catch (err) {
-        console.error('[Chat API] Error:', err)
-        return NextResponse.json(
-            { success: false, error: 'Failed to generate response' },
-            { status: 500 },
-        )
+    } catch (error) {
+        return handleApiError(error)
     }
 }

@@ -1,26 +1,30 @@
 import { useState } from 'react'
+import type { SessionItem } from '@/lib/session/builder'
+import type { VocabExerciseData, GrammarExerciseData } from '@/lib/session/types'
 
-export function MultipleChoice({ item, onNext }: { item: any, onNext: (correct: boolean) => void }) {
+export function MultipleChoice({ item, onNext }: { item: SessionItem, onNext: (correct: boolean) => void }) {
     // Determine if it's Grammar or Vocab review
     const isGrammar = item.type === 'GRAMMAR'
-    const question = isGrammar ? item.data.questionDe : `Nghĩa của từ "${item.data.term}" là gì?`
-    const subTitle = isGrammar ? item.data.questionVi : 'Chọn đáp án đúng'
+    const grammarData = item.data as GrammarExerciseData
+    const vocabData = item.data as VocabExerciseData
+    const question = isGrammar ? grammarData.questionDe : `Nghĩa của từ "${vocabData.term}" là gì?`
+    const subTitle = isGrammar ? grammarData.questionVi : 'Chọn đáp án đúng'
     
     // For vocab review demo, generate some fake options if not provided
     // In real prod, builder.ts would attach distractors to the SessionItem
-    let options = item.data.options || []
-    let correctIndex = item.data.correctIndex ?? 0
+    let options = (isGrammar ? grammarData.options : vocabData.options) || []
+    let correctIndex = (isGrammar ? grammarData.correctIndex : vocabData.correctIndex) ?? 0
     
     if (!isGrammar && options.length === 0) {
         options = [
-            item.data.meaning,
+            vocabData.meaning,
             'Con mèo (Fake)',
             'Bàn chải (Fake)',
             'Gia đình (Fake)'
         ]
         // Randomize
         options.sort(() => Math.random() - 0.5)
-        correctIndex = options.indexOf(item.data.meaning)
+        correctIndex = options.indexOf(vocabData.meaning)
     }
 
     const [selected, setSelected] = useState<number | null>(null)
@@ -82,9 +86,9 @@ export function MultipleChoice({ item, onNext }: { item: any, onNext: (correct: 
                         <div className={`font-bold text-xl mb-1 ${isCorrect ? 'text-emerald-600' : 'text-red-600'}`}>
                             {isCorrect ? 'Tuyệt vời!' : 'Sai rồi!'}
                         </div>
-                        {isGrammar && item.data.explanation && (
+                        {isGrammar && grammarData.explanation && (
                             <div className={`text-sm ${isCorrect ? 'text-emerald-700' : 'text-red-700'}`}>
-                                {item.data.explanation}
+                                {grammarData.explanation}
                             </div>
                         )}
                         {!isGrammar && !isCorrect && (

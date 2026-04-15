@@ -4,6 +4,8 @@ import { Mic, Square, Loader2, Check, AlertCircle, X, HelpCircle, Volume2, Arrow
 import { MascotImage } from '../shared/mascot-image'
 import styles from './speaking.module.css'
 import type { NachsprechenSentence, NachsprechenConfig, WordResult, EvaluationResult, RecordingState } from './types'
+import { speakWithBrowserTTS, cancelBrowserTTS } from '@/lib/audio/browser-tts'
+import { startWaveformAnimation } from '@/lib/audio/waveform'
 
 interface Props {
   sentences: NachsprechenSentence[]
@@ -101,6 +103,12 @@ export default function NachsprechenPlayer({ sentences, config, lessonTitle, les
     }
   }, [disposeRecordingResources])
 
+  const playWithBrowserTTSLocal = useCallback((text: string) => {
+    speakWithBrowserTTS(text, {
+      onEnd: () => { if (isMountedRef.current) setState('idle') },
+    })
+  }, [])
+
   const playModel = useCallback(() => {
     setState('playing')
 
@@ -111,88 +119,61 @@ export default function NachsprechenPlayer({ sentences, config, lessonTitle, les
       audioRef.current.src = sentence.audioUrl
       audioRef.current.onerror = () => {
         // Fallback to browser TTS if audio file not found
-        playWithBrowserTTS(sentence.textDe)
+        playWithBrowserTTSLocal(sentence.textDe)
       }
       audioRef.current.onended = () => setState('idle')
       audioRef.current.play().catch(() => {
-        playWithBrowserTTS(sentence.textDe)
+        playWithBrowserTTSLocal(sentence.textDe)
       })
     } else {
-      playWithBrowserTTS(sentence.textDe)
+      playWithBrowserTTSLocal(sentence.textDe)
     }
-  }, [sentence.audioUrl, sentence.textDe])
+  }, [sentence.audioUrl, sentence.textDe, playWithBrowserTTSLocal])
 
-  const playWithBrowserTTS = useCallback((text: string) => {
-    if (typeof window === 'undefined' || !window.speechSynthesis) {
-      setState('idle')
-      return
-    }
-    // Cancel any ongoing speech
-    window.speechSynthesis.cancel()
+  // Convert WebM blob to WAV via Web Worker (off-thread PCM conversion)
+  const wavWorkerRef = useRef<Worker | null>(null)
 
-    const utterance = new SpeechSynthesisUtterance(text)
-    utterance.lang = 'de-DE'
-    utterance.rate = 0.85 // Slightly slow for learners, but natural
-    utterance.pitch = 1.0
-
-    // Prioritize high-quality Google Neural/Premium voices
-    const voices = window.speechSynthesis.getVoices()
-    const deVoices = voices.filter(v => v.lang.startsWith('de'))
-    
-    // Prefer: Google Deutsch > any Google voice > any de-DE voice > any de voice
-    const preferred = deVoices.find(v => v.name.includes('Google Deutsch'))
-      || deVoices.find(v => v.name.includes('Google'))
-      || deVoices.find(v => v.lang === 'de-DE')
-      || deVoices[0]
-    if (preferred) utterance.voice = preferred
-
-    utterance.onend = () => setState('idle')
-    utterance.onerror = () => setState('idle')
-
-    window.speechSynthesis.speak(utterance)
-  }, [])
-
-  // Convert WebM blob to WAV (Gemini doesn't support WebM audio)
   const convertToWav = useCallback(async (webmBlob: Blob): Promise<Blob> => {
     try {
       const arrayBuffer = await webmBlob.arrayBuffer()
+      // Decode audio on main thread (requires AudioContext), but keep it brief
       const audioCtx = new AudioContext({ sampleRate: 16000 })
       const audioBuffer = await audioCtx.decodeAudioData(arrayBuffer)
-      
-      // Convert to mono 16-bit PCM WAV
-      const numChannels = 1
-      const sampleRate = audioBuffer.sampleRate
       const channelData = audioBuffer.getChannelData(0)
-      const numSamples = channelData.length
-      const wavBuffer = new ArrayBuffer(44 + numSamples * 2)
-      const view = new DataView(wavBuffer)
-      
-      // WAV header
-      const writeString = (offset: number, str: string) => {
-        for (let i = 0; i < str.length; i++) view.setUint8(offset + i, str.charCodeAt(i))
+      const sampleRate = audioBuffer.sampleRate
+      await audioCtx.close()
+
+      // Heavy PCM conversion happens in the worker
+      if (!wavWorkerRef.current) {
+        wavWorkerRef.current = new Worker(
+          new URL('@/workers/audio-convert.worker.ts', import.meta.url),
+        )
       }
-      writeString(0, 'RIFF')
-      view.setUint32(4, 36 + numSamples * 2, true)
-      writeString(8, 'WAVE')
-      writeString(12, 'fmt ')
-      view.setUint32(16, 16, true)
-      view.setUint16(20, 1, true) // PCM
-      view.setUint16(22, numChannels, true)
-      view.setUint32(24, sampleRate, true)
-      view.setUint32(28, sampleRate * numChannels * 2, true)
-      view.setUint16(32, numChannels * 2, true)
-      view.setUint16(34, 16, true)
-      writeString(36, 'data')
-      view.setUint32(40, numSamples * 2, true)
-      
-      // PCM samples
-      for (let i = 0; i < numSamples; i++) {
-        const s = Math.max(-1, Math.min(1, channelData[i]!))
-        view.setInt16(44 + i * 2, s < 0 ? s * 0x8000 : s * 0x7FFF, true)
-      }
-      
-      audioCtx.close()
-      return new Blob([wavBuffer], { type: 'audio/wav' })
+
+      return await new Promise<Blob>((resolve, reject) => {
+        const worker = wavWorkerRef.current!
+        const timeout = setTimeout(() => reject(new Error('Worker timeout')), 10000)
+
+        worker.onmessage = (e) => {
+          clearTimeout(timeout)
+          if (e.data.type === 'RESULT') {
+            resolve(new Blob([e.data.wavBuffer], { type: 'audio/wav' }))
+          } else {
+            reject(new Error(e.data.message || 'Worker conversion failed'))
+          }
+        }
+        worker.onerror = (err) => {
+          clearTimeout(timeout)
+          reject(err)
+        }
+
+        // Transfer the Float32Array buffer to avoid copy
+        const samplesCopy = new Float32Array(channelData)
+        worker.postMessage(
+          { type: 'CONVERT', samples: samplesCopy, sampleRate },
+          [samplesCopy.buffer],
+        )
+      })
     } catch (err) {
       console.warn('WAV conversion failed, sending original:', err)
       return webmBlob // fallback to original
@@ -213,7 +194,6 @@ export default function NachsprechenPlayer({ sentences, config, lessonTitle, les
 
       // Convert WebM to WAV for Gemini compatibility
       const wavBlob = await convertToWav(blob)
-      console.log(`Audio: ${blob.size}b webm → ${wavBlob.size}b wav`)
 
       const formData = new FormData()
       formData.append('audio', wavBlob, 'recording.wav')
@@ -284,14 +264,28 @@ export default function NachsprechenPlayer({ sentences, config, lessonTitle, les
       chunksRef.current = []
 
       // Waveform visualization
-      const audioContext = new AudioContext()
-      audioContextRef.current = audioContext // Store ref for cleanup
+      // Re-use or create AudioContext (singleton pattern avoids hitting browser limit of ~6)
+      if (!audioContextRef.current || audioContextRef.current.state === 'closed') {
+        audioContextRef.current = new AudioContext()
+      } else if (audioContextRef.current.state === 'suspended') {
+        await audioContextRef.current.resume()
+      }
+      const audioContext = audioContextRef.current
       const source = audioContext.createMediaStreamSource(stream)
       const analyser = audioContext.createAnalyser()
       analyser.fftSize = 256
       source.connect(analyser)
       analyserRef.current = analyser
-      drawWaveform()
+      // Start waveform animation using shared utility
+      if (canvasRef.current) {
+        const stopAnimation = startWaveformAnimation(canvasRef.current, analyser, { style: 'gradient-stroke' })
+        // Store cleanup in animFrameRef for disposeRecordingResources
+        animFrameRef.current = requestAnimationFrame(() => {}) // placeholder — cleanup via stopAnimation
+        // Override: we'll cancel via the returned cleanup
+        const origDispose = disposeRecordingResources
+        // Store stopAnimation for use during cleanup
+        ;(analyserRef as any)._stopAnimation = stopAnimation
+      }
 
       recorder.ondataavailable = (e) => {
         if (e.data.size > 0) chunksRef.current.push(e.data)
@@ -350,52 +344,7 @@ export default function NachsprechenPlayer({ sentences, config, lessonTitle, les
     setState('processing')
   }
 
-  const drawWaveform = () => {
-    const canvas = canvasRef.current
-    const analyser = analyserRef.current
-    if (!canvas || !analyser) return
-
-    const ctx = canvas.getContext('2d')
-    if (!ctx) return
-
-    const bufferLength = analyser.frequencyBinCount
-    const dataArray = new Uint8Array(bufferLength)
-
-      const draw = () => {
-      animFrameRef.current = requestAnimationFrame(draw)
-      analyser.getByteFrequencyData(dataArray)
-
-      // Clear with slight opacity for a tracing effect (optional) or fully clear
-      ctx.clearRect(0, 0, canvas.width, canvas.height)
-
-      const barWidth = (canvas.width / bufferLength) * 2.5
-      let x = 0
-      
-      const gradient = ctx.createLinearGradient(0, 0, canvas.width, 0)
-      gradient.addColorStop(0, '#3B82F6')
-      gradient.addColorStop(0.5, '#6366f1')
-      gradient.addColorStop(1, '#8B5CF6')
-      
-      ctx.strokeStyle = gradient
-      ctx.lineCap = 'round'
-      ctx.lineWidth = Math.max(2, barWidth - 2)
-
-      for (let i = 0; i < bufferLength; i++) {
-        // Boost low signals slightly for visual flair
-        const v = dataArray[i]! / 255.0
-        const barHeight = Math.max(4, v * v * canvas.height * 0.9)
-        const y = (canvas.height - barHeight) / 2
-        
-        ctx.beginPath()
-        ctx.moveTo(x + barWidth / 2, y)
-        ctx.lineTo(x + barWidth / 2, y + barHeight)
-        ctx.stroke()
-        x += barWidth
-      }
-    }
-
-    draw()
-  }
+  // drawWaveform is now handled by startWaveformAnimation from @/lib/audio/waveform.ts
 
   const handleNext = () => {
     if (currentIdx < sentences.length - 1) {
@@ -651,7 +600,7 @@ export default function NachsprechenPlayer({ sentences, config, lessonTitle, les
                 className={`${styles.wordChip} ${getChipStyle(w.status)}`}
                 style={{ animationDelay: `${i * 0.05}s` }}
                 title={w.tip || 'Nhấn để nghe phát âm'}
-                onClick={() => playWithBrowserTTS(w.word)}
+                onClick={() => playWithBrowserTTSLocal(w.word)}
               >
                 {w.word}
                 <span className={styles.chipIcon}>{getChipIcon(w.status)}</span>

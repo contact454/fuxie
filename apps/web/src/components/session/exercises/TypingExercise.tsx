@@ -1,7 +1,9 @@
 import { useState, useRef, useEffect } from 'react'
+import type { SessionItem } from '@/lib/session/builder'
+import type { VocabExerciseData } from '@/lib/session/types'
 
-export function TypingExercise({ item, onNext }: { item: any, onNext: (correct: boolean) => void }) {
-    const { term, meaning } = item.data
+export function TypingExercise({ item, onNext }: { item: SessionItem, onNext: (correct: boolean) => void }) {
+    const { term, meaning } = item.data as VocabExerciseData
 
     const [input, setInput] = useState('')
     const [checked, setChecked] = useState(false)

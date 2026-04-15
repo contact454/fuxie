@@ -1,7 +1,9 @@
 'use client'
 
-import Link from 'next/link'
 import Image from 'next/image'
+import { CEFR_LEVELS, getCefrTheme } from '@/lib/constants/cefr'
+import { StatCard, MiniStat } from './stat-card'
+import { QuickAction } from './quick-action'
 
 // ===== TYPES =====
 
@@ -77,13 +79,7 @@ export interface DashboardData {
 
 // ===== CONSTANTS =====
 
-const CEFR_COLORS: Record<string, string> = {
-    A1: 'var(--color-cefr-a1)', A2: 'var(--color-cefr-a2)',
-    B1: 'var(--color-cefr-b1)', B2: 'var(--color-cefr-b2)',
-    C1: 'var(--color-cefr-c1)', C2: 'var(--color-cefr-c2)',
-}
 
-const CEFR_ORDER = ['A1', 'A2', 'B1', 'B2', 'C1', 'C2'] as const
 
 const SKILL_COLORS: Record<string, string> = {
     HOEREN: 'var(--color-skill-hoeren)',
@@ -116,8 +112,8 @@ const ACHIEVEMENT_ICONS: Record<string, string> = {
 // ===== MAIN COMPONENT =====
 
 export function DashboardClient({ data, section }: { data: DashboardData; section?: 'header' | 'stats' | 'content' }) {
-    const currentIdx = CEFR_ORDER.indexOf(data.profile.currentLevel as typeof CEFR_ORDER[number])
-    const targetIdx = CEFR_ORDER.indexOf(data.profile.targetLevel as typeof CEFR_ORDER[number])
+    const currentIdx = CEFR_LEVELS.indexOf(data.profile.currentLevel as typeof CEFR_LEVELS[number])
+    const targetIdx = CEFR_LEVELS.indexOf(data.profile.targetLevel as typeof CEFR_LEVELS[number])
     const cefrProgress = targetIdx > 0 ? Math.round((currentIdx / targetIdx) * 100) : 0
 
     const studyGoalPercent = data.profile?.studyGoalMinutes > 0
@@ -173,7 +169,7 @@ function HeaderSection({ data }: { data: DashboardData }) {
                     <div className="mt-1 flex flex-wrap items-center gap-2 text-sm text-gray-500">
                         <span
                             className="inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-bold text-white"
-                            style={{ backgroundColor: CEFR_COLORS[data.profile.currentLevel] }}
+                            style={{ backgroundColor: getCefrTheme(data.profile.currentLevel).css }}
                         >
                             {data.profile.currentLevel}
                         </span>
@@ -264,11 +260,11 @@ function ContentSection({ data, cefrProgress, maxWeeklyXp, currentIdx }: { data:
                         CEFR Fortschritt
                     </h2>
                     <div className="flex items-center gap-1 sm:gap-2">
-                        {CEFR_ORDER.map((level, idx) => {
+                        {CEFR_LEVELS.map((level, idx) => {
                             const isActive = level === data.profile.currentLevel
                             const isPast = idx < currentIdx
                             const isTarget = level === data.profile.targetLevel
-                            const color = CEFR_COLORS[level] ?? '#9E9E9E'
+                            const color = getCefrTheme(level).css
 
                             return (
                                 <div key={level} className="flex flex-1 flex-col items-center gap-1.5">
@@ -309,7 +305,7 @@ function ContentSection({ data, cefrProgress, maxWeeklyXp, currentIdx }: { data:
                                 className="h-2.5 rounded-full transition-all duration-700 animate-grow-width"
                                 style={{
                                     width: `${Math.max(cefrProgress, 5)}%`,
-                                    background: `linear-gradient(90deg, ${CEFR_COLORS[data.profile.currentLevel]}, ${CEFR_COLORS[data.profile.targetLevel]})`,
+                                    background: `linear-gradient(90deg, ${getCefrTheme(data.profile.currentLevel).css}, ${getCefrTheme(data.profile.targetLevel).css})`,
                                 }}
                             />
                         </div>
@@ -516,147 +512,4 @@ function ContentSection({ data, cefrProgress, maxWeeklyXp, currentIdx }: { data:
     )
 }
 
-// ===== SUB-COMPONENTS =====
 
-function StatCard({
-    label,
-    value,
-    icon,
-    suffix,
-    detail,
-    gradient,
-    color,
-    pulse,
-    urgent,
-    index,
-    goalPercent,
-}: {
-    label: string
-    value: number
-    icon: string
-    suffix?: string
-    detail: string
-    gradient: string
-    color: string
-    pulse?: boolean
-    urgent?: boolean
-    index: number
-    goalPercent?: number
-}) {
-    return (
-        <div
-            className={`card-hover group relative overflow-hidden rounded-2xl bg-white p-4 sm:p-5 shadow-sm ring-1 ring-gray-100 animate-fade-in-up stagger-${index + 1}`}
-        >
-            {/* Background decoration */}
-            <div className={`absolute -right-4 -top-4 h-20 w-20 rounded-full bg-gradient-to-br ${gradient} opacity-60 transition-transform group-hover:scale-125`} />
-
-            {/* Label */}
-            <p className="text-xs sm:text-sm font-medium text-gray-400 relative z-10">{label}</p>
-
-            {/* Value */}
-            <div className="mt-1 flex items-baseline gap-1 relative z-10">
-                <span
-                    className="text-3xl sm:text-4xl font-bold animate-count-up"
-                    style={{ color }}
-                >
-                    {value}
-                </span>
-                {suffix && (
-                    <span className="text-sm font-normal text-gray-400">{suffix}</span>
-                )}
-                <span className={`ml-1 text-xl sm:text-2xl ${pulse ? 'animate-pulse-fire' : ''}`}>
-                    {icon}
-                </span>
-            </div>
-
-            {/* Detail */}
-            <p className="mt-1 text-[10px] sm:text-xs text-gray-400 relative z-10">{detail}</p>
-
-            {/* Goal progress bar (for study time card) */}
-            {goalPercent !== undefined && (
-                <div className="mt-2 h-1.5 w-full rounded-full bg-gray-100 relative z-10">
-                    <div
-                        className="h-1.5 rounded-full transition-all duration-700"
-                        style={{
-                            width: `${goalPercent}%`,
-                            backgroundColor: goalPercent >= 100 ? '#4CAF50' : color,
-                        }}
-                    />
-                </div>
-            )}
-
-            {/* Urgent badge */}
-            {urgent && (
-                <div className="absolute top-2 right-2 flex h-2 w-2 z-10">
-                    <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-red-400 opacity-75" />
-                    <span className="relative inline-flex h-2 w-2 rounded-full bg-red-500" />
-                </div>
-            )}
-        </div>
-    )
-}
-
-function MiniStat({ value, label, icon }: { value: number | string; label: string; icon: string }) {
-    return (
-        <div className="rounded-xl bg-gray-50 p-2.5 text-center transition-colors hover:bg-gray-100">
-            <p className="text-lg sm:text-xl font-bold text-gray-800">
-                <span className="mr-0.5 text-sm">{icon}</span> {value}
-            </p>
-            <p className="text-[10px] text-gray-400">{label}</p>
-        </div>
-    )
-}
-
-function QuickAction({
-    href,
-    icon,
-    label,
-    sublabel,
-    color,
-    badge,
-}: {
-    href: string
-    icon: string
-    label: string
-    sublabel: string
-    color: string
-    badge?: number
-}) {
-    return (
-        <Link
-            href={href}
-            className="card-hover group relative flex items-center gap-3 rounded-xl p-3 transition-all"
-            style={{
-                background: `linear-gradient(135deg, ${color}08, ${color}04)`,
-            }}
-        >
-            <span
-                className="flex h-9 w-9 items-center justify-center rounded-lg text-base text-white transition-transform group-hover:scale-110"
-                style={{ backgroundColor: color }}
-            >
-                {icon}
-            </span>
-            <div className="flex-1 min-w-0">
-                <p className="text-sm font-medium text-gray-800">{label}</p>
-                <p className="text-[10px] text-gray-400">{sublabel}</p>
-            </div>
-            {badge !== undefined && badge > 0 && (
-                <span
-                    className="flex h-5 min-w-5 items-center justify-center rounded-full px-1.5 text-[10px] font-bold text-white"
-                    style={{ backgroundColor: color }}
-                >
-                    {badge}
-                </span>
-            )}
-            <svg
-                className="h-4 w-4 text-gray-300 transition-transform group-hover:translate-x-0.5"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth={2}
-                stroke="currentColor"
-            >
-                <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
-            </svg>
-        </Link>
-    )
-}

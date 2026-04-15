@@ -5,10 +5,14 @@ const fallbackKey = process.env.GEMINI_API_KEY_FALLBACK || ''
 
 const keys = [defaultKey, fallbackKey].filter(k => k.trim().length > 0)
 let currentKeyIndex = 0
+/** Keys that have been detected as invalid/suspended during this runtime */
+const evictedKeys = new Set<string>()
 
 export function getGeminiKey(): string {
-    if (keys.length === 0) throw new Error('GEMINI_API_KEY is not set')
-    return keys[currentKeyIndex] ?? keys[0] ?? ''
+    // Find the next non-evicted key
+    const availableKeys = keys.filter(k => !evictedKeys.has(k))
+    if (availableKeys.length === 0) throw new Error('GEMINI_API_KEY is not set or all keys evicted')
+    return availableKeys[currentKeyIndex % availableKeys.length] ?? availableKeys[0] ?? ''
 }
 
 export function getGeminiClient(): GoogleGenerativeAI {
@@ -49,9 +53,9 @@ export async function withGeminiFallback<T>(
                 errMsg.includes('exhausted')
             if (keys.length > 1) {
                 if (errStatus === 403 || errMsg.includes('suspended') || errMsg.includes('PERMISSION_DENIED')) {
-                    console.warn(`[Gemini Fallback] Key at index ${currentKeyIndex} is invalid/suspended. Removing it.`);
-                    keys.splice(currentKeyIndex, 1);
-                    currentKeyIndex = currentKeyIndex % keys.length;
+                    const evictedKey = getGeminiKey();
+                    evictedKeys.add(evictedKey);
+                    console.warn(`[Gemini Fallback] Key ${evictedKey.substring(0,4)}*** is invalid/suspended. Evicted (${evictedKeys.size}/${keys.length}).`);
                     attempt++;
                     continue;
                 }

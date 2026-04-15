@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { GoogleGenerativeAI } from '@google/generative-ai'
 
 import { withGeminiFallback } from '@/lib/ai/gemini-fallback'
+import { parseGeminiJson } from '@/lib/ai/parse-json'
 
 const BASIC_LEVELS = new Set(['A1', 'A2', 'B1'])
 
@@ -65,8 +65,7 @@ Antworte NUR als JSON:
         return await model.generateContent(prompt)
     })
     const text = result.response.text()
-    const cleaned = text.replace(/```json\s*/g, '').replace(/```\s*/g, '').trim()
-    const parsed = JSON.parse(cleaned)
+    const parsed = parseGeminiJson<any>(text)
 
     return NextResponse.json({ success: true, data: parsed })
 }
@@ -133,8 +132,7 @@ Antworte NUR als JSON:
         return await model.generateContent(prompt)
     })
     const text = result.response.text()
-    const cleaned = text.replace(/```json\s*/g, '').replace(/```\s*/g, '').trim()
-    const parsed = JSON.parse(cleaned)
+    const parsed = parseGeminiJson<any>(text)
 
     const totalScore = (parsed.criteria || []).reduce(
         (sum: number, cr: { score?: number }) => sum + (cr.score || 0), 0

@@ -3,18 +3,19 @@
 import Image from 'next/image'
 import styles from './reading.module.css'
 import { getImageUrl } from './reading-types'
+import type { ReadingImage, ReadingTextBase, SchildText, AnzeigeText, ScheduleData, InfotafelData, DebateData, ForumData, OpinionData, SectionsData, ReadingTextEntry } from './reading-renderer-types'
 
 // ─── Helper: render images by placement ─────────────
-export function renderImages(imagesJson: any, cefrLevel: string, placement?: string) {
+export function renderImages(imagesJson: ReadingImage[] | null | undefined, cefrLevel: string, placement?: string) {
     if (!imagesJson || !Array.isArray(imagesJson)) return null
     const images = placement
-        ? imagesJson.filter((img: any) => img.placement === placement || img.placement?.startsWith(placement))
+        ? imagesJson.filter((img) => img.placement === placement || img.placement?.startsWith(placement))
         : imagesJson
     if (images.length === 0) return null
 
     return (
         <div className={images.length > 1 ? 'grid grid-cols-1 sm:grid-cols-2 gap-4' : ''}>
-            {images.map((img: any, i: number) => (
+            {images.map((img, i: number) => (
                 <div key={img.id || i} className={styles.exerciseImage}>
                     <Image
                         src={getImageUrl(img.filename, cefrLevel)}
@@ -34,10 +35,10 @@ export function renderImages(imagesJson: any, cefrLevel: string, placement?: str
 }
 
 // ─── Helper: render schilder as paired image+text cards ───
-export function renderSchilderCards(textsJson: any, imagesJson: any, cefrLevel: string) {
+export function renderSchilderCards(textsJson: ReadingTextEntry[] | ReadingTextEntry | null | undefined, imagesJson: ReadingImage[] | null | undefined, cefrLevel: string) {
     if (!textsJson) return null
     const texts = Array.isArray(textsJson) ? textsJson : [textsJson]
-    const schilder = texts.filter((t: any) => t.type && t.text && t.icon)
+    const schilder = texts.filter((t): t is SchildText => !!(t as SchildText).type && !!(t as SchildText).text && !!(t as SchildText).icon)
     if (schilder.length === 0) return null
 
     const imageMap: Record<number, { url: string; alt: string }> = {}
@@ -61,7 +62,7 @@ export function renderSchilderCards(textsJson: any, imagesJson: any, cefrLevel: 
 
     return (
         <div className="space-y-4">
-            {schilder.map((sign: any, i: number) => {
+            {schilder.map((sign, i: number) => {
                 const img = imageMap[i + 1]
                 const typeIcon = typeIcons[sign.type] || sign.icon || '🪧'
                 return (
@@ -100,10 +101,10 @@ export function renderSchilderCards(textsJson: any, imagesJson: any, cefrLevel: 
 }
 
 // ─── Helper: render anzeigen as paired image+details cards ───
-export function renderAnzeigenCards(textsJson: any, imagesJson: any, cefrLevel: string) {
+export function renderAnzeigenCards(textsJson: ReadingTextEntry[] | ReadingTextEntry | null | undefined, imagesJson: ReadingImage[] | null | undefined, cefrLevel: string) {
     if (!textsJson) return null
     const texts = Array.isArray(textsJson) ? textsJson : [textsJson]
-    const anzeigen = texts.filter((t: any) => t.title && t.details && !t.text)
+    const anzeigen = texts.filter((t): t is AnzeigeText => !!(t as AnzeigeText).title && !!(t as AnzeigeText).details && !(t as ReadingTextBase).text)
     if (anzeigen.length === 0) return null
 
     const imageMap: Record<string, { url: string; alt: string }> = {}
@@ -128,7 +129,7 @@ export function renderAnzeigenCards(textsJson: any, imagesJson: any, cefrLevel: 
 
     return (
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            {anzeigen.map((ad: any, i: number) => {
+            {anzeigen.map((ad, i: number) => {
                 const img = imageMap[placementKeys[i] || `anzeige_${String.fromCharCode(97+i)}`]
                 const label = String.fromCharCode(65 + i)
                 const details = ad.details || {}
@@ -175,7 +176,7 @@ export function renderAnzeigenCards(textsJson: any, imagesJson: any, cefrLevel: 
 
 // ─── Sub-renderers for structured content ────────────
 
-function renderSchedule(data: any, key: number) {
+function renderSchedule(data: ScheduleData, key: number) {
     return (
         <div key={key} className={`${styles.textCard} ${styles.fadeInUp}`}>
             <div className={styles.textHeader}>
@@ -220,7 +221,7 @@ function renderSchedule(data: any, key: number) {
     )
 }
 
-function renderInfotafel(data: any, key: number) {
+function renderInfotafel(data: InfotafelData, key: number) {
     return (
         <div key={key} className={`${styles.textCard} ${styles.fadeInUp}`}>
             <div className={styles.textHeader}>
@@ -257,7 +258,7 @@ function renderInfotafel(data: any, key: number) {
     )
 }
 
-function renderDebate(data: any, key: number) {
+function renderDebate(data: DebateData, key: number) {
     return (
         <div key={key} className={`${styles.textCard} ${styles.fadeInUp}`}>
             <div className={styles.textHeader}>
@@ -300,7 +301,7 @@ function renderDebate(data: any, key: number) {
     )
 }
 
-function renderForum(data: any, key: number) {
+function renderForum(data: ForumData, key: number) {
     return (
         <div key={key} className={`${styles.textCard} ${styles.fadeInUp}`}>
             <div className={styles.textHeader}>
@@ -339,7 +340,7 @@ function renderForum(data: any, key: number) {
     )
 }
 
-function renderOpinionTexts(data: any, key: number) {
+function renderOpinionTexts(data: OpinionData, key: number) {
     return (
         <div key={key} className={`${styles.textCard} ${styles.fadeInUp}`}>
             <div className={styles.textHeader}>
@@ -367,7 +368,7 @@ function renderOpinionTexts(data: any, key: number) {
     )
 }
 
-function renderSections(data: any, key: number) {
+function renderSections(data: SectionsData, key: number) {
     return (
         <div key={key} className={`${styles.textCard} ${styles.fadeInUp}`}>
             <div className={styles.textHeader}>
@@ -376,7 +377,7 @@ function renderSections(data: any, key: number) {
             </div>
             <div className={`${styles.textBody} ${styles.readingText}`}>
                 {data.sections?.map((section: any, si: number) => (
-                    <div key={si} style={{ marginBottom: si < data.sections.length - 1 ? '14px' : 0 }}>
+                    <div key={si} style={{ marginBottom: si < (data.sections?.length ?? 0) - 1 ? '14px' : 0 }}>
                         {section.heading && (
                             <h4 style={{ fontSize: '14px', fontWeight: 700, color: '#1F2937', marginBottom: '6px' }}>
                                 {section.heading}
@@ -393,7 +394,7 @@ function renderSections(data: any, key: number) {
 }
 
 // ─── Main text rendering dispatcher ────────────────
-export function renderTexts(textsJson: any, cefrLevel?: string) {
+export function renderTexts(textsJson: ReadingTextEntry[] | ReadingTextEntry | null | undefined, cefrLevel?: string) {
     if (!textsJson) return null
 
     const texts = Array.isArray(textsJson) ? textsJson : [textsJson]

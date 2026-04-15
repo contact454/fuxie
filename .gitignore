@@ -66,16 +66,13 @@ apps/web/public/audio/
 # Mascot source files
 Fuxie/
 
-# Junk files
-0
-001
+# Junk files (cleaned up)
 
 # Script output artifacts (audit reports, sample output, logs)
+scripts/archive/
 scripts/*.log
 scripts/*.txt
 scripts/*.json
-scripts/batch*.log
-scripts/image-gen*.log
 
 # Prisma generated client
 apps/web/generated/

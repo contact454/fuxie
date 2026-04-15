@@ -1,6 +1,9 @@
 // ─── Types & Constants for Reading Player ──────────────
 // Extracted from reading-player.tsx to keep the main component focused on logic
 
+import { CEFR_THEME } from '@/lib/constants/cefr'
+import type { ReadingImage, ReadingTextEntry } from './reading-renderer-types'
+
 // ─── Types ──────────────────────────────────────────
 export interface Question {
     id: string
@@ -38,8 +41,8 @@ export interface ReadingPlayerProps {
     teil: number
     teilName: string
     topic: string
-    textsJson: any
-    imagesJson: any
+    textsJson: any // eslint-disable-line @typescript-eslint/no-explicit-any -- Prisma Json field, shape varies by exercise type
+    imagesJson: any // eslint-disable-line @typescript-eslint/no-explicit-any -- Prisma Json field
     questions: Question[]
 }
 
@@ -63,14 +66,8 @@ export type TooltipState = {
 export type TextHighlight = { textIndex: number; text: string; color: string }
 
 // ─── Constants ──────────────────────────────────────
-export const CEFR_COLORS: Record<string, { gradient: string; bg: string; text: string; css: string; shadow: string }> = {
-    A1: { gradient: 'from-green-500 to-emerald-600', bg: '#DCFCE7', text: '#166534', css: 'linear-gradient(135deg, #22C55E, #059669)', shadow: 'rgba(34,197,94,0.3)' },
-    A2: { gradient: 'from-lime-500 to-green-600', bg: '#D9F99D', text: '#3F6212', css: 'linear-gradient(135deg, #84CC16, #16A34A)', shadow: 'rgba(132,204,22,0.3)' },
-    B1: { gradient: 'from-orange-400 to-amber-600', bg: '#FED7AA', text: '#9A3412', css: 'linear-gradient(135deg, #F97316, #D97706)', shadow: 'rgba(249,115,22,0.3)' },
-    B2: { gradient: 'from-red-500 to-orange-600', bg: '#FECACA', text: '#991B1B', css: 'linear-gradient(135deg, #EF4444, #EA580C)', shadow: 'rgba(239,68,68,0.3)' },
-    C1: { gradient: 'from-purple-500 to-violet-600', bg: '#E9D5FF', text: '#6B21A8', css: 'linear-gradient(135deg, #A855F7, #7C3AED)', shadow: 'rgba(168,85,247,0.3)' },
-    C2: { gradient: 'from-violet-600 to-purple-800', bg: '#DDD6FE', text: '#4C1D95', css: 'linear-gradient(135deg, #7C3AED, #6B21A8)', shadow: 'rgba(124,58,237,0.3)' },
-}
+// Re-export from shared CEFR theme — legacy alias kept for backward compat
+export const CEFR_COLORS = CEFR_THEME
 
 export const TEIL_DESCRIPTIONS: Record<string, Record<number, { icon: string; strategy: string; genre: string }>> = {
     beginner: {

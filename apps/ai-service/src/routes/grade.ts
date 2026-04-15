@@ -1,5 +1,6 @@
 import { Hono } from 'hono'
 import { getModel, getModelForLevel } from '../lib/gemini.js'
+import { parseGeminiJson } from '../lib/parse-json.js'
 
 export const gradeRoutes = new Hono()
 
@@ -106,9 +107,8 @@ Antworte NUR als JSON (kein Markdown):
         const result = await model.generateContent(prompt)
         const responseText = result.response.text()
 
-        // Parse JSON — clean up markdown fences if present
-        const cleaned = responseText.replace(/```json\s*/g, '').replace(/```\s*/g, '').trim()
-        const parsed = JSON.parse(cleaned)
+        // Parse JSON — robust cleanup for markdown fences, trailing commas, truncation
+        const parsed = parseGeminiJson(responseText)
 
         // Calculate total score
         const totalScore = (parsed.criteria || []).reduce(
@@ -210,8 +210,7 @@ Antworte NUR als JSON:
         ])
         const responseText = result.response.text()
 
-        const cleaned = responseText.replace(/```json\s*/g, '').replace(/```\s*/g, '').trim()
-        const parsed = JSON.parse(cleaned)
+        const parsed = parseGeminiJson(responseText)
 
         return c.json({
             success: true,
@@ -268,8 +267,7 @@ Antworte NUR als JSON:
 
         const result = await model.generateContent(prompt)
         const responseText = result.response.text()
-        const cleaned = responseText.replace(/```json\s*/g, '').replace(/```\s*/g, '').trim()
-        const parsed = JSON.parse(cleaned)
+        const parsed = parseGeminiJson(responseText)
 
         return c.json({ success: true, data: parsed })
     } catch (err) {

@@ -2,24 +2,33 @@
 
 import { useState, useRef, useEffect, useCallback, type FormEvent } from 'react'
 import Image from 'next/image'
+import { getCefrTheme, CEFR_LEVELS } from '@/lib/constants/cefr'
+import type { CefrLevel } from '@/lib/constants/cefr'
+import { CorrectionBubble } from './CorrectionBubble'
+import { SuggestedTopics } from './SuggestedTopics'
+import { ChatHistory } from './ChatHistory'
+import { VoiceInput } from './VoiceInput'
 
 // ─── Types ─────────────────────────────────────────
+interface Correction {
+    original: string
+    corrected: string
+    explanation: string
+    rule: string
+}
+
 interface Message {
     id: string
     role: 'user' | 'assistant'
     text: string
+    corrections?: Correction[]
+    suggestedFollowUps?: string[]
     timestamp: Date
 }
 
-import type { CefrLevel } from '@/lib/types/cefr'
-
-const LEVEL_COLORS: Record<CefrLevel, { bg: string; text: string; ring: string; gradient: string }> = {
-    A1: { bg: 'bg-green-500', text: 'text-green-600', ring: 'ring-green-300', gradient: 'from-green-400 to-emerald-500' },
-    A2: { bg: 'bg-teal-500', text: 'text-teal-600', ring: 'ring-teal-300', gradient: 'from-teal-400 to-cyan-500' },
-    B1: { bg: 'bg-blue-500', text: 'text-blue-600', ring: 'ring-blue-300', gradient: 'from-blue-400 to-indigo-500' },
-    B2: { bg: 'bg-indigo-500', text: 'text-indigo-600', ring: 'ring-indigo-300', gradient: 'from-indigo-400 to-violet-500' },
-    C1: { bg: 'bg-purple-500', text: 'text-purple-600', ring: 'ring-purple-300', gradient: 'from-purple-400 to-fuchsia-500' },
-    C2: { bg: 'bg-rose-500', text: 'text-rose-600', ring: 'ring-rose-300', gradient: 'from-rose-400 to-pink-500' },
+interface ChatClientProps {
+    initialLevel?: CefrLevel
+    displayName?: string
 }
 
 const LEVEL_DESC: Record<CefrLevel, string> = {
@@ -43,17 +52,19 @@ function renderMarkdown(text: string): string {
         .replace(/\n/g, '<br/>')
 }
 
-export function ChatClient() {
-    const [level, setLevel] = useState<CefrLevel>('A1')
+export function ChatClient({ initialLevel, displayName }: ChatClientProps) {
+    const [level, setLevel] = useState<CefrLevel>(initialLevel ?? 'A1')
     const [messages, setMessages] = useState<Message[]>([])
     const [input, setInput] = useState('')
-    const [isStreaming, setIsStreaming] = useState(false)
+    const [isLoading, setIsLoading] = useState(false)
     const [showLevelPicker, setShowLevelPicker] = useState(false)
     const [hasStarted, setHasStarted] = useState(false)
+    const [conversationId, setConversationId] = useState<string | null>(null)
+    const [showHistory, setShowHistory] = useState(false)
+    const [suggestedTopics, setSuggestedTopics] = useState<string[]>([])
 
     const messagesEndRef = useRef<HTMLDivElement>(null)
     const inputRef = useRef<HTMLTextAreaElement>(null)
-    const abortRef = useRef<AbortController | null>(null)
 
     // Auto-scroll to bottom
     const scrollToBottom = useCallback(() => {
@@ -64,12 +75,14 @@ export function ChatClient() {
         scrollToBottom()
     }, [messages, scrollToBottom])
 
-    // Start a conversation
+    // ─── Start a new conversation ──────────────────
     const startConversation = useCallback(async (selectedLevel: CefrLevel) => {
         setLevel(selectedLevel)
         setShowLevelPicker(false)
         setHasStarted(true)
         setMessages([])
+        setConversationId(null)
+        setSuggestedTopics([])
 
         try {
             const res = await fetch('/api/v1/chat', {
@@ -80,23 +93,25 @@ export function ChatClient() {
             const data = await res.json()
 
             if (data.success) {
+                setConversationId(data.data.conversationId)
                 setMessages([{
                     id: crypto.randomUUID(),
                     role: 'assistant',
                     text: data.data.message,
                     timestamp: new Date(),
                 }])
+                setSuggestedTopics(data.data.suggestedTopics ?? [])
             }
         } catch (err) {
             console.error('Start error:', err)
         }
     }, [])
 
-    // Send message with streaming
+    // ─── Send a message ────────────────────────────
     const sendMessage = useCallback(async (e?: FormEvent) => {
         e?.preventDefault()
         const text = input.trim()
-        if (!text || isStreaming) return
+        if (!text || isLoading) return
 
         const userMsg: Message = {
             id: crypto.randomUUID(),
@@ -106,7 +121,8 @@ export function ChatClient() {
         }
         setMessages(prev => [...prev, userMsg])
         setInput('')
-        setIsStreaming(true)
+        setIsLoading(true)
+        setSuggestedTopics([]) // Clear suggestions while loading
 
         // Build history for context (last 20 messages)
         const history = [...messages, userMsg].slice(-20).map(m => ({
@@ -114,7 +130,7 @@ export function ChatClient() {
             text: m.text,
         }))
 
-        // Create assistant placeholder
+        // Add assistant placeholder
         const assistantId = crypto.randomUUID()
         setMessages(prev => [...prev, {
             id: assistantId,
@@ -124,13 +140,15 @@ export function ChatClient() {
         }])
 
         try {
-            abortRef.current = new AbortController()
-
             const res = await fetch('/api/v1/chat', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ message: text, history, level }),
-                signal: abortRef.current.signal,
+                body: JSON.stringify({
+                    message: text,
+                    history,
+                    level,
+                    conversationId,
+                }),
             })
 
             if (!res.ok) {
@@ -140,42 +158,91 @@ export function ChatClient() {
                         ? { ...m, text: `❌ Lỗi: ${error.error || 'AI không phản hồi'}` }
                         : m
                 ))
-                setIsStreaming(false)
+                setIsLoading(false)
                 return
             }
 
-            // Read the stream
-            const reader = res.body?.getReader()
-            const decoder = new TextDecoder()
-            let fullText = ''
+            const data = await res.json()
 
-            if (reader) {
-                while (true) {
-                    const { done, value } = await reader.read()
-                    if (done) break
+            if (data.success) {
+                // Update conversation ID if this was the first message
+                if (data.data.conversationId && !conversationId) {
+                    setConversationId(data.data.conversationId)
+                }
 
-                    const chunk = decoder.decode(value, { stream: true })
-                    fullText += chunk
+                setMessages(prev => prev.map(m =>
+                    m.id === assistantId
+                        ? {
+                            ...m,
+                            text: data.data.text,
+                            corrections: data.data.corrections,
+                            suggestedFollowUps: data.data.suggestedFollowUps,
+                        }
+                        : m
+                ))
 
-                    setMessages(prev => prev.map(m =>
-                        m.id === assistantId ? { ...m, text: fullText } : m
-                    ))
+                // Set follow-up suggestions
+                if (data.data.suggestedFollowUps?.length > 0) {
+                    setSuggestedTopics(data.data.suggestedFollowUps)
                 }
             }
         } catch (err) {
-            if (err instanceof Error && err.name !== 'AbortError') {
-                setMessages(prev => prev.map(m =>
-                    m.id === assistantId
-                        ? { ...m, text: '❌ Lỗi kết nối. Vui lòng thử lại.' }
-                        : m
-                ))
-            }
+            console.error('[Chat] Send error:', err)
+            setMessages(prev => prev.map(m =>
+                m.id === assistantId
+                    ? { ...m, text: '❌ Lỗi kết nối. Vui lòng thử lại.' }
+                    : m
+            ))
         } finally {
-            setIsStreaming(false)
-            abortRef.current = null
+            setIsLoading(false)
             inputRef.current?.focus()
         }
-    }, [input, isStreaming, messages, level])
+    }, [input, isLoading, messages, level, conversationId])
+
+    // ─── Handle topic / follow-up click ────────────
+    const handleTopicSelect = useCallback((topic: string) => {
+        setInput(topic)
+        // Auto-send after a short delay for UX
+        setTimeout(() => {
+            const textarea = inputRef.current
+            if (textarea) {
+                textarea.focus()
+            }
+        }, 50)
+    }, [])
+
+    // ─── Handle voice transcript ───────────────────
+    const handleVoiceTranscript = useCallback((text: string) => {
+        setInput(prev => (prev ? prev + ' ' + text : text))
+        inputRef.current?.focus()
+    }, [])
+
+    // ─── Load conversation from history ────────────
+    const loadConversation = useCallback(async (convId: string) => {
+        try {
+            const res = await fetch(`/api/v1/chat/history/${convId}`)
+            if (!res.ok) return
+
+            const data = await res.json()
+            if (!data.success) return
+
+            const conv = data.data
+            setConversationId(conv.id)
+            setLevel(conv.level as CefrLevel)
+            setHasStarted(true)
+            setShowLevelPicker(false)
+            setMessages(conv.messages.map((m: { id: string; role: string; text: string; corrections: Correction[]; timestamp: string }) => ({
+                id: m.id,
+                role: m.role as 'user' | 'assistant',
+                text: m.text,
+                corrections: m.corrections,
+                timestamp: new Date(m.timestamp),
+            })))
+            setSuggestedTopics([])
+        } catch (err) {
+            console.error('[Chat] Load conversation error:', err)
+        }
+    }, [])
 
     // Handle Enter key
     const handleKeyDown = (e: React.KeyboardEvent) => {
@@ -185,7 +252,7 @@ export function ChatClient() {
         }
     }
 
-    const colors = LEVEL_COLORS[level]
+    const theme = getCefrTheme(level)
 
     // ─── Level Picker Screen ───────────────────────
     if (!hasStarted || showLevelPicker) {
@@ -208,28 +275,54 @@ export function ChatClient() {
                     Trò chuyện với Fuxie 🦊
                 </h1>
                 <p className="text-gray-500 text-sm mb-8 text-center max-w-md">
-                    Chọn trình độ để Fuxie điều chỉnh cuộc trò chuyện phù hợp
+                    {displayName
+                        ? `Chào ${displayName}! Chọn trình độ để Fuxie điều chỉnh cuộc trò chuyện phù hợp`
+                        : 'Chọn trình độ để Fuxie điều chỉnh cuộc trò chuyện phù hợp'
+                    }
                 </p>
 
                 {/* Level Grid */}
                 <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 w-full max-w-md">
-                    {(Object.keys(LEVEL_COLORS) as CefrLevel[]).map(l => (
-                        <button
-                            key={l}
-                            onClick={() => startConversation(l)}
-                            className={`relative overflow-hidden rounded-2xl p-4 text-white font-bold text-lg
-                                bg-gradient-to-br ${LEVEL_COLORS[l].gradient} shadow-md
-                                hover:shadow-lg hover:scale-[1.03] active:scale-[0.98]
-                                transition-all duration-200 ease-out`}
-                        >
-                            <div className="relative z-10">
-                                <div className="text-xl mb-1">{l}</div>
-                                <div className="text-[10px] font-normal opacity-80">{LEVEL_DESC[l]}</div>
-                            </div>
-                            <div className="absolute -bottom-2 -right-2 text-5xl opacity-10">🦊</div>
-                        </button>
-                    ))}
+                    {CEFR_LEVELS.map(l => {
+                        const t = getCefrTheme(l)
+                        return (
+                            <button
+                                key={l}
+                                onClick={() => startConversation(l)}
+                                className={`relative overflow-hidden rounded-2xl p-4 text-white font-bold text-lg
+                                    bg-gradient-to-br ${t.gradient} shadow-md
+                                    hover:shadow-lg hover:scale-[1.03] active:scale-[0.98]
+                                    transition-all duration-200 ease-out`}
+                            >
+                                <div className="relative z-10">
+                                    <div className="text-xl mb-1">{l}</div>
+                                    <div className="text-[10px] font-normal opacity-80">{LEVEL_DESC[l]}</div>
+                                </div>
+                                <div className="absolute -bottom-2 -right-2 text-5xl opacity-10">🦊</div>
+                            </button>
+                        )
+                    })}
                 </div>
+
+                {/* History button */}
+                <button
+                    onClick={() => setShowHistory(true)}
+                    className="mt-6 px-5 py-2.5 rounded-full text-sm font-medium text-gray-500
+                        bg-white ring-1 ring-gray-200 shadow-sm
+                        hover:bg-gray-50 hover:ring-gray-300 hover:text-gray-700
+                        transition-all duration-200"
+                >
+                    📜 Lịch sử trò chuyện
+                </button>
+
+                {/* History sidebar */}
+                <ChatHistory
+                    isOpen={showHistory}
+                    onClose={() => setShowHistory(false)}
+                    onSelectConversation={loadConversation}
+                    onNewChat={() => setShowLevelPicker(true)}
+                    activeConversationId={conversationId ?? undefined}
+                />
             </div>
         )
     }
@@ -238,16 +331,24 @@ export function ChatClient() {
     return (
         <div className="flex flex-col h-[calc(100vh-120px)] max-w-3xl mx-auto">
             {/* Header */}
-            <div className={`sticky top-0 z-10 flex items-center justify-between px-4 py-3
-                bg-gradient-to-r ${colors.gradient} text-white rounded-b-2xl shadow-lg`}>
+            <div
+                className="sticky top-0 z-10 flex items-center justify-between px-4 py-3 text-white rounded-b-2xl shadow-lg"
+                style={{ background: theme.cssGradient }}
+            >
                 <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center backdrop-blur-sm">
-                        <Image src="/mascot/poses/happy.png" alt="Fuxie" width={32} height={32} />
-                    </div>
+                    {/* History button */}
+                    <button
+                        onClick={() => setShowHistory(true)}
+                        className="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center
+                            backdrop-blur-sm hover:bg-white/30 transition-colors"
+                        title="Lịch sử"
+                    >
+                        📜
+                    </button>
                     <div>
                         <h2 className="font-bold text-sm">Fuxie Tutor 🦊</h2>
                         <p className="text-[10px] opacity-80">
-                            {isStreaming ? 'Schreibt...' : 'Online • ' + LEVEL_DESC[level]}
+                            {isLoading ? 'Schreibt...' : 'Online • ' + LEVEL_DESC[level]}
                         </p>
                     </div>
                 </div>
@@ -283,29 +384,47 @@ export function ChatClient() {
                         )}
 
                         {/* Bubble */}
-                        <div
-                            className={`max-w-[80%] rounded-2xl px-4 py-3 text-sm leading-relaxed shadow-sm
-                                ${msg.role === 'user'
-                                    ? `bg-gradient-to-r ${colors.gradient} text-white rounded-br-md`
-                                    : 'bg-white text-gray-800 ring-1 ring-gray-100 rounded-bl-md'
-                                }
-                                ${msg.role === 'assistant' && !msg.text ? 'animate-pulse' : ''}
-                            `}
-                        >
-                            {msg.role === 'assistant' && !msg.text ? (
-                                <div className="flex gap-1.5 py-1">
-                                    <div className="w-2 h-2 rounded-full bg-gray-300 animate-bounce" style={{ animationDelay: '0ms' }} />
-                                    <div className="w-2 h-2 rounded-full bg-gray-300 animate-bounce" style={{ animationDelay: '150ms' }} />
-                                    <div className="w-2 h-2 rounded-full bg-gray-300 animate-bounce" style={{ animationDelay: '300ms' }} />
-                                </div>
-                            ) : msg.role === 'assistant' ? (
-                                <div
-                                    className="prose prose-sm max-w-none [&>p]:mb-2 [&>ul]:mb-2 [&>ol]:mb-2"
-                                    dangerouslySetInnerHTML={{ __html: renderMarkdown(msg.text) }}
-                                />
-                            ) : (
-                                <p className="whitespace-pre-wrap">{msg.text}</p>
+                        <div className="max-w-[80%]">
+                            <div
+                                className={`rounded-2xl px-4 py-3 text-sm leading-relaxed shadow-sm
+                                    ${msg.role === 'user'
+                                        ? 'text-white rounded-br-md'
+                                        : 'bg-white text-gray-800 ring-1 ring-gray-100 rounded-bl-md'
+                                    }
+                                    ${msg.role === 'assistant' && !msg.text ? 'animate-pulse' : ''}
+                                `}
+                                style={msg.role === 'user' ? { background: theme.cssGradient } : undefined}
+                            >
+                                {msg.role === 'assistant' && !msg.text ? (
+                                    <div className="flex gap-1.5 py-1">
+                                        <div className="w-2 h-2 rounded-full bg-gray-300 animate-bounce" style={{ animationDelay: '0ms' }} />
+                                        <div className="w-2 h-2 rounded-full bg-gray-300 animate-bounce" style={{ animationDelay: '150ms' }} />
+                                        <div className="w-2 h-2 rounded-full bg-gray-300 animate-bounce" style={{ animationDelay: '300ms' }} />
+                                    </div>
+                                ) : msg.role === 'assistant' ? (
+                                    <div
+                                        className="prose prose-sm max-w-none [&>p]:mb-2 [&>ul]:mb-2 [&>ol]:mb-2"
+                                        dangerouslySetInnerHTML={{ __html: renderMarkdown(msg.text) }}
+                                    />
+                                ) : (
+                                    <p className="whitespace-pre-wrap">{msg.text}</p>
+                                )}
+                            </div>
+
+                            {/* Corrections */}
+                            {msg.role === 'assistant' && msg.corrections && msg.corrections.length > 0 && (
+                                <CorrectionBubble corrections={msg.corrections} />
                             )}
+
+                            {/* Follow-up suggestions (only on last assistant message) */}
+                            {msg.role === 'assistant' && msg.suggestedFollowUps && msg.suggestedFollowUps.length > 0 &&
+                                msg.id === messages[messages.length - 1]?.id && (
+                                    <SuggestedTopics
+                                        topics={msg.suggestedFollowUps}
+                                        onSelect={handleTopicSelect}
+                                        variant="inline"
+                                    />
+                                )}
                         </div>
 
                         {/* User avatar */}
@@ -316,6 +435,19 @@ export function ChatClient() {
                         )}
                     </div>
                 ))}
+
+                {/* Suggested topics at start (when only greeting exists) */}
+                {messages.length === 1 && suggestedTopics.length > 0 && (
+                    <div className="mt-4">
+                        <p className="text-xs text-gray-400 text-center mb-2">💡 Gợi ý chủ đề</p>
+                        <SuggestedTopics
+                            topics={suggestedTopics}
+                            onSelect={handleTopicSelect}
+                            variant="grid"
+                        />
+                    </div>
+                )}
+
                 <div ref={messagesEndRef} />
             </div>
 
@@ -330,23 +462,32 @@ export function ChatClient() {
                             onKeyDown={handleKeyDown}
                             placeholder="Schreib etwas auf Deutsch..."
                             rows={1}
-                            className="w-full rounded-2xl bg-white ring-1 ring-gray-200 focus:ring-2 focus:ring-blue-300
+                            className="w-full rounded-2xl bg-white ring-1 ring-gray-200 focus:ring-2 focus:ring-orange-300
                                 px-4 py-3 pr-12 text-sm resize-none outline-none transition-all
                                 placeholder:text-gray-400 max-h-32 overflow-y-auto"
                             style={{ minHeight: '44px' }}
-                            disabled={isStreaming}
+                            disabled={isLoading}
                         />
                     </div>
+
+                    {/* Voice input */}
+                    <VoiceInput
+                        onTranscript={handleVoiceTranscript}
+                        disabled={isLoading}
+                    />
+
+                    {/* Send button */}
                     <button
                         type="submit"
-                        disabled={!input.trim() || isStreaming}
-                        className={`w-11 h-11 rounded-full flex items-center justify-center shrink-0
-                            bg-gradient-to-r ${colors.gradient} text-white shadow-md
+                        disabled={!input.trim() || isLoading}
+                        className="w-11 h-11 rounded-full flex items-center justify-center shrink-0
+                            text-white shadow-md
                             hover:shadow-lg hover:scale-105 active:scale-95
                             disabled:opacity-40 disabled:hover:scale-100 disabled:hover:shadow-md
-                            transition-all duration-150`}
+                            transition-all duration-150"
+                        style={{ background: theme.cssGradient }}
                     >
-                        {isStreaming ? (
+                        {isLoading ? (
                             <svg className="w-5 h-5 animate-spin" viewBox="0 0 24 24" fill="none">
                                 <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="3" strokeDasharray="60" strokeLinecap="round" />
                             </svg>
@@ -358,9 +499,18 @@ export function ChatClient() {
                     </button>
                 </form>
                 <p className="text-[10px] text-gray-400 text-center mt-1.5">
-                    Shift+Enter để xuống dòng · Fuxie có thể sai, hãy kiểm tra lại
+                    Shift+Enter để xuống dòng · 🎤 nhập giọng nói · Fuxie có thể sai
                 </p>
             </div>
+
+            {/* History sidebar */}
+            <ChatHistory
+                isOpen={showHistory}
+                onClose={() => setShowHistory(false)}
+                onSelectConversation={loadConversation}
+                onNewChat={() => startConversation(level)}
+                activeConversationId={conversationId ?? undefined}
+            />
         </div>
     )
 }

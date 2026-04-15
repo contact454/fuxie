@@ -1,5 +1,6 @@
 import { prisma } from '@fuxie/database'
 import type { CefrLevel } from '@fuxie/database'
+import type { ExerciseData } from './types'
 
 export type ExerciseFormat = 'MULTIPLE_CHOICE' | 'TYPING' | 'INTRO' | 'LISTENING_MINI' | 'MATCHING'
 
@@ -7,7 +8,7 @@ export interface SessionItem {
     id: string
     type: 'VOCAB_NEW' | 'VOCAB_REVIEW' | 'GRAMMAR' | 'LISTENING'
     format: ExerciseFormat
-    data: any
+    data: ExerciseData
     points: number
 }
 
@@ -56,7 +57,7 @@ export async function buildDailySession(userId: string, level: CefrLevel): Promi
         orderBy: { sortOrder: 'asc' }
     })
 
-    let newVocabItems: any[] = []
+    let newVocabItems: Array<{ id: string; word: string; meaningVi: string; wordType: string | null; article: string | null; exampleSentence1: string | null; audioUrl: string | null }> = []
     for (const theme of allThemes) {
         if (newVocabItems.length >= 5) break
         

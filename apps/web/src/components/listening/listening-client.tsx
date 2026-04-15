@@ -4,6 +4,7 @@ import { useState, useCallback } from 'react'
 import { useRouter } from 'next/navigation'
 import { Mascot } from '@/components/ui/mascot'
 import { useLevelSwitcher } from '@/hooks/use-level-switcher'
+import { CEFR_THEME, getCefrTheme } from '@/lib/constants/cefr'
 
 // ─── Types ──────────────────────────────────────────
 interface LessonItem {
@@ -32,14 +33,7 @@ interface ListeningClientProps {
 }
 
 // ─── Constants ──────────────────────────────────────
-const CEFR_COLORS: Record<string, { bg: string; text: string; border: string; gradient: string }> = {
-    A1: { bg: '#DCFCE7', text: '#166534', border: '#86EFAC', gradient: 'from-green-500 to-emerald-600' },
-    A2: { bg: '#D9F99D', text: '#3F6212', border: '#BEF264', gradient: 'from-lime-500 to-green-600' },
-    B1: { bg: '#FED7AA', text: '#9A3412', border: '#FDBA74', gradient: 'from-orange-400 to-amber-600' },
-    B2: { bg: '#FECACA', text: '#991B1B', border: '#FCA5A5', gradient: 'from-red-500 to-orange-600' },
-    C1: { bg: '#E9D5FF', text: '#6B21A8', border: '#C084FC', gradient: 'from-purple-500 to-violet-600' },
-    C2: { bg: '#DDD6FE', text: '#4C1D95', border: '#A78BFA', gradient: 'from-violet-600 to-purple-800' },
-}
+
 
 const TEIL_ICONS: Record<number, string> = {
     1: '🎧',
@@ -107,7 +101,7 @@ export function ListeningClient({ teile, totalLessons, totalCompleted, available
         }, []),
     })
 
-    const cefrColors = CEFR_COLORS[currentLevel] ?? CEFR_COLORS.A1!
+    const cefrColors = getCefrTheme(currentLevel)
     const overallProgress = currentTotal > 0 ? Math.round((currentCompleted / currentTotal) * 100) : 0
 
     const toggleTeil = (teil: number) => {
@@ -123,7 +117,7 @@ export function ListeningClient({ teile, totalLessons, totalCompleted, available
                 {availableLevels.length > 0 && (
                     <div className="flex gap-2 mb-4">
                         {availableLevels.map(level => {
-                            const colors = CEFR_COLORS[level] ?? CEFR_COLORS['A1']!
+                            const colors = getCefrTheme(level)
                             const isActive = level === currentLevel
                             return (
                                 <button
