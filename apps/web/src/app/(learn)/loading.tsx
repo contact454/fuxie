@@ -1,6 +1,6 @@
 export default function LearnLoading() {
     return (
-        <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center">
+        <div className="min-h-[100dvh] bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center">
             <div className="text-center">
                 {/* Animated Fuxie loader */}
                 <div className="relative w-16 h-16 mx-auto mb-6">

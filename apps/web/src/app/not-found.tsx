@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 export default function NotFound() {
     return (
-        <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center p-6">
+        <div className="min-h-[100dvh] bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center p-6">
             <div className="bg-white rounded-3xl shadow-xl p-8 max-w-md w-full text-center animate-fade-in-up">
                 {/* Mascot */}
                 <div className="mb-6">

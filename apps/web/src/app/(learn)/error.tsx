@@ -17,7 +17,7 @@ export default function LearnError({
     }, [error])
 
     return (
-        <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center p-6">
+        <div className="min-h-[100dvh] bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center p-6">
             <div className="bg-white rounded-3xl shadow-xl p-8 max-w-md w-full text-center">
                 {/* Icon */}
                 <div className="w-20 h-20 mx-auto mb-6 rounded-full bg-red-50 flex items-center justify-center">

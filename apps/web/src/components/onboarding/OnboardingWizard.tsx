@@ -115,7 +115,7 @@ export function OnboardingWizard() {
     // ===== RENDER =====
 
     return (
-        <div className="min-h-screen bg-gradient-to-br from-orange-50 via-white to-blue-50 flex flex-col">
+        <div className="min-h-[100dvh] bg-gradient-to-br from-orange-50 via-white to-blue-50 flex flex-col">
             {/* Progress Bar */}
             <div className="h-1.5 bg-gray-100">
                 <div

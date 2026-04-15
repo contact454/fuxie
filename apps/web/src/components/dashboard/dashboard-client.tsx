@@ -125,7 +125,7 @@ export function DashboardClient({ data, section }: { data: DashboardData; sectio
     // If no section specified, render everything (backward compat)
     if (!section) {
         return (
-            <div className="min-h-screen p-4 sm:p-6 lg:p-8">
+            <div className="min-h-[100dvh] p-4 sm:p-6 lg:p-8">
                 <HeaderSection data={data} />
                 <StatsSection data={data} studyGoalPercent={studyGoalPercent} />
                 <ContentSection data={data} cefrProgress={cefrProgress} maxWeeklyXp={maxWeeklyXp} currentIdx={currentIdx} />

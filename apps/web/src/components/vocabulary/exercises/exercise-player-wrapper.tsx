@@ -56,7 +56,7 @@ export function ExercisePlayerWrapper({ type, theme, level }: ExercisePlayerWrap
     // Loading state
     if (isLoading) {
         return (
-            <div className="min-h-screen flex flex-col items-center justify-center bg-gray-50">
+            <div className="min-h-[100dvh] flex flex-col items-center justify-center bg-gray-50">
                 <Mascot variant="loading" size={80} />
                 <p className="mt-4 text-gray-500 font-medium">Übung wird geladen...</p>
             </div>
@@ -66,7 +66,7 @@ export function ExercisePlayerWrapper({ type, theme, level }: ExercisePlayerWrap
     // Error state
     if (error || !questions || !exerciseData) {
         return (
-            <div className="min-h-screen flex flex-col items-center justify-center bg-gray-50">
+            <div className="min-h-[100dvh] flex flex-col items-center justify-center bg-gray-50">
                 <Mascot variant="encouragement" size={80} />
                 <p className="mt-4 text-red-500 font-medium">{error || 'Etwas ist schiefgelaufen'}</p>
                 <button
@@ -175,7 +175,7 @@ export function ExercisePlayerWrapper({ type, theme, level }: ExercisePlayerWrap
 
         default:
             return (
-                <div className="min-h-screen flex flex-col items-center justify-center bg-gray-50">
+                <div className="min-h-[100dvh] flex flex-col items-center justify-center bg-gray-50">
                     <Mascot variant="studying" size={80} />
                     <p className="mt-4 text-gray-500 font-medium">
                         Übungstyp &quot;{type}&quot; kommt bald!

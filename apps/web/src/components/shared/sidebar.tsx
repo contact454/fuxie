@@ -36,7 +36,7 @@ export function Sidebar({ dailyGoal }: SidebarProps) {
     const goalReached = goalPercent >= 100
 
     return (
-        <aside className="flex h-screen w-64 flex-col border-r border-gray-200/80 bg-white/95 backdrop-blur-sm">
+        <aside className="flex h-[100dvh] w-64 flex-col border-r border-gray-200/80 bg-white/95 backdrop-blur-sm">
             {/* Logo — Fuxie mascot */}
             <div className="flex items-center gap-2.5 border-b border-gray-100 px-6 py-5">
                 <Image

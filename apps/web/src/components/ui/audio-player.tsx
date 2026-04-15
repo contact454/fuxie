@@ -16,9 +16,9 @@ interface AudioPlayerProps {
 }
 
 const SIZE_CONFIG = {
-    sm: { button: 'w-8 h-8', icon: 'w-4 h-4', text: 'text-xs' },
-    md: { button: 'w-10 h-10', icon: 'w-5 h-5', text: 'text-sm' },
-    lg: { button: 'w-12 h-12', icon: 'w-6 h-6', text: 'text-base' },
+    sm: { button: 'w-11 h-11 sm:w-8 sm:h-8', icon: 'w-5 h-5 sm:w-4 sm:h-4', text: 'text-xs' },
+    md: { button: 'w-12 h-12 sm:w-10 sm:h-10', icon: 'w-6 h-6 sm:w-5 sm:h-5', text: 'text-sm' },
+    lg: { button: 'w-14 h-14 sm:w-12 sm:h-12', icon: 'w-7 h-7 sm:w-6 sm:h-6', text: 'text-base' },
 }
 
 /**

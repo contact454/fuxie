@@ -76,7 +76,7 @@ export default function RegisterPage() {
     }
 
     return (
-        <main className="flex min-h-screen items-center justify-center bg-gradient-to-br from-fuxie-primary/5 via-white to-fuxie-secondary/5">
+        <main className="flex min-h-[100dvh] items-center justify-center bg-gradient-to-br from-fuxie-primary/5 via-white to-fuxie-secondary/5">
             <div className="w-full max-w-md rounded-2xl bg-white p-8 shadow-xl">
                 {/* Header */}
                 <div className="mb-8 text-center">

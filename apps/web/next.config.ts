@@ -1,6 +1,12 @@
 import type { NextConfig } from 'next'
 import path from 'path'
+import withSerwistInit from '@serwist/next'
 
+const withSerwist = withSerwistInit({
+    swSrc: 'src/app/sw.ts',
+    swDest: 'public/sw.js',
+    reloadOnOnline: true,
+})
 
 const nextConfig: NextConfig = {
     typescript: {
@@ -108,5 +114,4 @@ const nextConfig: NextConfig = {
     },
 }
 
-export default nextConfig
-
+export default withSerwist(nextConfig)

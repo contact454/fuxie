@@ -39,6 +39,7 @@ export function useAudioPlayer(src: string | null | undefined) {
     const audioRef = useRef<HTMLAudioElement | null>(null)
     const isMountedRef = useRef(true)
     const playTokenRef = useRef(0)
+    const lastPlayTimeRef = useRef(0)
     const [isPlaying, setIsPlaying] = useState(false)
     const [isLoading, setIsLoading] = useState(false)
     const [hasError, setHasError] = useState(false)
@@ -105,6 +106,11 @@ export function useAudioPlayer(src: string | null | undefined) {
 
     const play = useCallback(async () => {
         if (!audioRef.current || !src || hasError) return
+
+        // Debounce rapid taps (300ms) to prevent main thread blocking on mobile
+        const now = Date.now()
+        if (now - lastPlayTimeRef.current < 300) return
+        lastPlayTimeRef.current = now
 
         if (isPlaying) {
             audioRef.current.pause()
