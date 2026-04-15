@@ -146,7 +146,7 @@ export default function NachsprechenPlayer({ sentences, config, lessonTitle, les
       // Heavy PCM conversion happens in the worker
       if (!wavWorkerRef.current) {
         wavWorkerRef.current = new Worker(
-          new URL('@/workers/audio-convert.worker.ts', import.meta.url),
+          new URL('../../workers/audio-convert.worker.ts', import.meta.url),
         )
       }
 

@@ -110,7 +110,7 @@ export default function RegisterPage() {
                             id="name"
                             type="text"
                             value={name}
-                            onChange={(e) => setName(e.target.value)}
+                            onChange={(e: React.ChangeEvent<HTMLInputElement>) => setName(e.target.value)}
                             className="w-full rounded-lg border border-gray-300 px-4 py-2.5 transition-colors focus:border-fuxie-primary focus:outline-none focus:ring-2 focus:ring-fuxie-primary/20"
                             placeholder="z.B. Phuc"
                             required
@@ -124,7 +124,7 @@ export default function RegisterPage() {
                             id="email"
                             type="email"
                             value={email}
-                            onChange={(e) => setEmail(e.target.value)}
+                            onChange={(e: React.ChangeEvent<HTMLInputElement>) => setEmail(e.target.value)}
                             className="w-full rounded-lg border border-gray-300 px-4 py-2.5 transition-colors focus:border-fuxie-primary focus:outline-none focus:ring-2 focus:ring-fuxie-primary/20"
                             placeholder="dein@email.de"
                             required
@@ -138,7 +138,7 @@ export default function RegisterPage() {
                             id="password"
                             type="password"
                             value={password}
-                            onChange={(e) => setPassword(e.target.value)}
+                            onChange={(e: React.ChangeEvent<HTMLInputElement>) => setPassword(e.target.value)}
                             className="w-full rounded-lg border border-gray-300 px-4 py-2.5 transition-colors focus:border-fuxie-primary focus:outline-none focus:ring-2 focus:ring-fuxie-primary/20"
                             placeholder="Mindestens 6 Zeichen"
                             minLength={6}

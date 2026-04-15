@@ -141,10 +141,11 @@ export async function POST(request: NextRequest) {
       const arrayBuffer = await audioFile.arrayBuffer()
       const base64Data = Buffer.from(arrayBuffer).toString('base64')
 
-      // Determine MIME type — browser now sends WAV
-      const mimeType = audioFile.name?.endsWith('.wav') ? 'audio/wav'
-        : audioFile.type?.includes('wav') ? 'audio/wav'
-        : 'audio/wav' // Default to WAV since browser converts
+      // Determine MIME type — check actual type rather than extension to support fallback webm blobs
+      let mimeType = 'audio/wav'
+      if (audioFile.type?.includes('webm')) {
+        mimeType = 'audio/webm'
+      }
 
       const prompt = `Du bist ein DaF-Aussprachetrainer. Analysiere die Audioaufnahme.
 
