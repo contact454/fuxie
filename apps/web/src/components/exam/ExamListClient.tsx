@@ -78,21 +78,49 @@ export function ExamListClient() {
             .finally(() => setLoading(false))
     }, [filterLevel])
 
-    // Group exams by Level to present them neatly
+    // Group exams by Level and then by Skill to present them cleanly
     const groupedExams = useMemo(() => {
         const grouped = exams.reduce((acc, exam) => {
-            if (!acc[exam.cefrLevel]) acc[exam.cefrLevel] = []
-            acc[exam.cefrLevel].push(exam)
+            if (!acc[exam.cefrLevel]) acc[exam.cefrLevel] = {}
+
+            // Determine primary skill block
+            let primarySkill = 'MIXED'
+            if (exam.sections.length === 1) {
+                primarySkill = exam.sections[0].skill.toUpperCase()
+            } else {
+                const t = exam.title.toLowerCase()
+                if (t.includes('nghe') || t.includes('hören')) primarySkill = 'HOEREN'
+                else if (t.includes('đọc') || t.includes('lesen')) primarySkill = 'LESEN'
+                else if (t.includes('viết') || t.includes('schreiben')) primarySkill = 'SCHREIBEN'
+                else if (t.includes('nói') || t.includes('sprechen')) primarySkill = 'SPRECHEN'
+            }
+
+            if (!acc[exam.cefrLevel][primarySkill]) acc[exam.cefrLevel][primarySkill] = []
+            acc[exam.cefrLevel][primarySkill].push(exam)
             return acc
-        }, {} as Record<string, ExamEntry[]>)
+        }, {} as Record<string, Record<string, ExamEntry[]>>)
 
         // Sort levels
         const levelOrder: Record<string, number> = { 'A1': 1, 'A2': 2, 'B1': 3, 'B2': 4, 'C1': 5, 'C2': 6 }
-        return Object.keys(grouped).sort((a, b) => (levelOrder[a] || 99) - (levelOrder[b] || 99)).map(level => ({
-            level,
-            exams: grouped[level]
-        }))
+        const skillOrder: Record<string, number> = { 'MIXED': 1, 'LESEN': 2, 'HOEREN': 3, 'SCHREIBEN': 4, 'SPRECHEN': 5 }
+
+        return Object.keys(grouped).sort((a, b) => (levelOrder[a] || 99) - (levelOrder[b] || 99)).map(level => {
+            const skillGroups = Object.keys(grouped[level]).sort((a, b) => (skillOrder[a] || 99) - (skillOrder[b] || 99)).map(skill => ({
+                skill,
+                exams: grouped[level][skill]
+            }))
+            return { level, skillGroups }
+        })
     }, [exams])
+
+    const levels = ['Alle', 'A1', 'A2', 'B1', 'B2', 'C1', 'C2']
+    const SKILL_NAMES: Record<string, string> = {
+        MIXED: 'Đề tổng hợp',
+        LESEN: 'Đọc hiểu (Lesen)',
+        HOEREN: 'Nghe hiểu (Hören)',
+        SCHREIBEN: 'Viết (Schreiben)',
+        SPRECHEN: 'Nói (Sprechen)',
+    }
 
     const levels = ['Alle', 'A1', 'A2', 'B1', 'B2', 'C1', 'C2']
 
@@ -186,84 +214,97 @@ export function ExamListClient() {
                                     <div className="flex-1 h-px bg-gradient-to-r from-gray-200 to-transparent ml-4" />
                                 </div>
 
-                                {/* Exam Grid */}
-                                <motion.div 
-                                    variants={containerVariant}
-                                    initial="hidden"
-                                    animate="show"
-                                    className="grid grid-cols-1 lg:grid-cols-2 gap-5"
-                                >
-                                    {group.exams.map(exam => (
-                                        <motion.div
-                                            key={exam.id}
-                                            variants={itemVariant}
-                                            whileHover={{ y: -4, scale: 1.01 }}
-                                            className="group relative bg-white rounded-3xl p-6 border border-gray-200/60 shadow-[0_4px_24px_rgba(0,0,0,0.02)] hover:shadow-[0_12px_40px_rgba(0,0,0,0.08)] transition-all duration-300"
-                                        >
-                                            {/* decorative gradient blob hidden behind */}
-                                            <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-gray-50/50 to-white/10 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none" />
-
-                                            <div className="relative z-10 flex flex-col h-full">
-                                                {/* Top tags */}
-                                                <div className="flex items-center justify-between mb-4">
-                                                    <span className={`px-3 py-1 rounded-full text-xs font-bold border uppercase tracking-wider ${BOARD_COLORS[exam.examType] || BOARD_COLORS.GOETHE}`}>
-                                                        {exam.examType}
-                                                    </span>
-                                                    <span className="flex items-center gap-1.5 text-[11px] font-medium text-gray-400 bg-gray-50 px-2.5 py-1 rounded-full border border-gray-100">
-                                                        <Clock className="w-3.5 h-3.5" /> {exam.totalMinutes} Min
-                                                        <span className="mx-1 text-gray-300">|</span>
-                                                        <Trophy className="w-3.5 h-3.5" /> {exam.totalPoints} Pkt.
-                                                    </span>
+                                {/* Skill Groupings */}
+                                <div className="space-y-10 pl-2">
+                                    {group.skillGroups.map(sg => (
+                                        <div key={sg.skill}>
+                                            <h3 className="text-lg font-bold text-gray-700 mb-5 flex items-center gap-2">
+                                                <div className={`p-1.5 rounded-lg ${sg.skill === 'MIXED' ? 'bg-indigo-100 text-indigo-600' : 'bg-gray-100 text-gray-600'}`}>
+                                                    {sg.skill === 'MIXED' ? <Library className="w-4 h-4" /> : getSkillIcon(sg.skill)}
                                                 </div>
-
-                                                {/* Title */}
-                                                <h3 className="text-xl font-bold text-gray-800 leading-tight mb-2 group-hover:text-[#FF6B35] transition-colors">{exam.title}</h3>
-                                                {exam.description && (
-                                                    <p className="text-xs text-gray-500 mb-5 line-clamp-2">{exam.description}</p>
-                                                )}
-
-                                                {/* Skill breakdown ribbon */}
-                                                <div className="flex flex-wrap gap-2 mb-6">
-                                                    {exam.sections.map((sec, i) => (
-                                                        <div key={i} className="flex items-center gap-1.5 px-2.5 py-1 bg-gray-100/60 text-gray-600 rounded-lg text-xs font-medium border border-gray-200/50">
-                                                            {getSkillIcon(sec.skill)}
-                                                            <span className="capitalize">{sec.skill.toLowerCase()}</span>
-                                                        </div>
-                                                    ))}
-                                                </div>
-
-                                                <div className="flex-1" />
-
-                                                {/* Action / Result row */}
-                                                <div className="pt-4 mt-auto border-t border-gray-100 flex items-center justify-between">
-                                                    {exam.bestAttempt ? (
-                                                        <div className="flex items-center gap-2">
-                                                            <div className={`p-1.5 rounded-full ${exam.bestAttempt.passed ? 'bg-emerald-100 text-emerald-600' : 'bg-red-100 text-red-500'}`}>
-                                                                {exam.bestAttempt.passed ? <CheckCircle2 className="w-4 h-4" /> : <XCircle className="w-4 h-4" />}
-                                                            </div>
-                                                            <div className="flex flex-col">
-                                                                <span className={`text-[13px] font-bold ${exam.bestAttempt.passed ? 'text-emerald-700' : 'text-red-600'}`}>
-                                                                    {exam.bestAttempt.percentScore}%
-                                                                </span>
-                                                                <span className="text-[10px] text-gray-400 font-medium">Bester Versuch</span>
-                                                            </div>
-                                                        </div>
-                                                    ) : (
-                                                        <span className="text-[13px] font-medium text-gray-400">Noch nie gemacht</span>
-                                                    )}
-                                                    
-                                                    <Link
-                                                        href={`/exam/${exam.id}`}
-                                                        className="flex items-center gap-2 px-5 py-2.5 bg-gray-900 text-white text-sm font-semibold rounded-xl hover:bg-[#FF6B35] hover:scale-[1.02] active:scale-95 transition-all duration-200 shadow-md shadow-gray-900/10"
+                                                {SKILL_NAMES[sg.skill] || sg.skill}
+                                            </h3>
+                                            
+                                            <motion.div 
+                                                variants={containerVariant}
+                                                initial="hidden"
+                                                animate="show"
+                                                className="grid grid-cols-1 lg:grid-cols-2 gap-5"
+                                            >
+                                                {sg.exams.map(exam => (
+                                                    <motion.div
+                                                        key={exam.id}
+                                                        variants={itemVariant}
+                                                        whileHover={{ y: -4, scale: 1.01 }}
+                                                        className="group relative bg-white rounded-3xl p-6 border border-gray-200/60 shadow-[0_4px_24px_rgba(0,0,0,0.02)] hover:shadow-[0_12px_40px_rgba(0,0,0,0.08)] transition-all duration-300"
                                                     >
-                                                        {exam.bestAttempt ? 'Wiederholen' : 'Starten'}
-                                                        <ArrowRight className="w-4 h-4" />
-                                                    </Link>
-                                                </div>
-                                            </div>
-                                        </motion.div>
+                                                        {/* decorative gradient blob hidden behind */}
+                                                        <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-gray-50/50 to-white/10 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none" />
+
+                                                        <div className="relative z-10 flex flex-col h-full">
+                                                            {/* Top tags */}
+                                                            <div className="flex items-center justify-between mb-4">
+                                                                <span className={`px-3 py-1 rounded-full text-xs font-bold border uppercase tracking-wider ${BOARD_COLORS[exam.examType] || BOARD_COLORS.GOETHE}`}>
+                                                                    {exam.examType}
+                                                                </span>
+                                                                <span className="flex items-center gap-1.5 text-[11px] font-medium text-gray-400 bg-gray-50 px-2.5 py-1 rounded-full border border-gray-100">
+                                                                    <Clock className="w-3.5 h-3.5" /> {exam.totalMinutes} Min
+                                                                    <span className="mx-1 text-gray-300">|</span>
+                                                                    <Trophy className="w-3.5 h-3.5" /> {exam.totalPoints} Pkt.
+                                                                </span>
+                                                            </div>
+
+                                                            {/* Title */}
+                                                            <h3 className="text-xl font-bold text-gray-800 leading-tight mb-2 group-hover:text-[#FF6B35] transition-colors">{exam.title}</h3>
+                                                            {exam.description && (
+                                                                <p className="text-xs text-gray-500 mb-5 line-clamp-2">{exam.description}</p>
+                                                            )}
+
+                                                            {/* Skill breakdown ribbon */}
+                                                            <div className="flex flex-wrap gap-2 mb-6">
+                                                                {exam.sections.map((sec, i) => (
+                                                                    <div key={i} className="flex items-center gap-1.5 px-2.5 py-1 bg-gray-100/60 text-gray-600 rounded-lg text-xs font-medium border border-gray-200/50">
+                                                                        {getSkillIcon(sec.skill)}
+                                                                        <span className="capitalize">{sec.skill.toLowerCase()}</span>
+                                                                    </div>
+                                                                ))}
+                                                            </div>
+
+                                                            <div className="flex-1" />
+
+                                                            {/* Action / Result row */}
+                                                            <div className="pt-4 mt-auto border-t border-gray-100 flex items-center justify-between">
+                                                                {exam.bestAttempt ? (
+                                                                    <div className="flex items-center gap-2">
+                                                                        <div className={`p-1.5 rounded-full ${exam.bestAttempt.passed ? 'bg-emerald-100 text-emerald-600' : 'bg-red-100 text-red-500'}`}>
+                                                                            {exam.bestAttempt.passed ? <CheckCircle2 className="w-4 h-4" /> : <XCircle className="w-4 h-4" />}
+                                                                        </div>
+                                                                        <div className="flex flex-col">
+                                                                            <span className={`text-[13px] font-bold ${exam.bestAttempt.passed ? 'text-emerald-700' : 'text-red-600'}`}>
+                                                                                {exam.bestAttempt.percentScore}%
+                                                                            </span>
+                                                                            <span className="text-[10px] text-gray-400 font-medium">Bester Versuch</span>
+                                                                        </div>
+                                                                    </div>
+                                                                ) : (
+                                                                    <span className="text-[13px] font-medium text-gray-400">Noch nie gemacht</span>
+                                                                )}
+                                                                
+                                                                <Link
+                                                                    href={`/exam/${exam.id}`}
+                                                                    className="flex items-center gap-2 px-5 py-2.5 bg-gray-900 text-white text-sm font-semibold rounded-xl hover:bg-[#FF6B35] hover:scale-[1.02] active:scale-95 transition-all duration-200 shadow-md shadow-gray-900/10"
+                                                                >
+                                                                    {exam.bestAttempt ? 'Wiederholen' : 'Starten'}
+                                                                    <ArrowRight className="w-4 h-4" />
+                                                                </Link>
+                                                            </div>
+                                                        </div>
+                                                    </motion.div>
+                                                ))}
+                                            </motion.div>
+                                        </div>
                                     ))}
-                                </motion.div>
+                                </div>
                             </motion.div>
                         ))}
                     </AnimatePresence>
