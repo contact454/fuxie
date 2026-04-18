@@ -13,8 +13,8 @@ import type { NachsprechenSentence, NachsprechenConfig } from './types'
 interface Props {
   lessonId: string
   titleDe: string
-  titleVi: string
-  topicTitleVi: string
+  titleNative: string
+  topicTitleNative: string
   topicSlug: string
   cefrLevel: string
   exerciseType: string
@@ -51,8 +51,8 @@ const getScoreColor = (score: number) => {
 export default function SpeakingLessonPlayer({
   lessonId,
   titleDe,
-  titleVi,
-  topicTitleVi,
+  titleNative,
+  topicTitleNative,
   topicSlug,
   cefrLevel,
   exerciseType,
@@ -121,13 +121,13 @@ export default function SpeakingLessonPlayer({
           </div>
 
           <h1 style={{ fontSize: 22, fontWeight: 800, color: '#111827', margin: '0 0 6px' }}>
-            {titleVi}
+            {titleNative}
           </h1>
           <p style={{ fontSize: 14, color: '#6B7280', margin: '0 0 4px' }}>
             {titleDe}
           </p>
           <p style={{ fontSize: 13, color: '#9CA3AF', margin: '0 0 24px' }}>
-            {topicTitleVi} · {cefrLevel}
+            {topicTitleNative} · {cefrLevel}
           </p>
 
           {/* Info cards */}
@@ -182,7 +182,7 @@ export default function SpeakingLessonPlayer({
         <NachsprechenPlayer
           sentences={sentences}
           config={config}
-          lessonTitle={titleVi}
+          lessonTitle={titleNative}
           lessonId={lessonId}
           onComplete={handleComplete}
           onClose={() => router.push('/speaking')}
@@ -191,7 +191,7 @@ export default function SpeakingLessonPlayer({
     }
 
     if (exerciseType === 'roleplay') {
-      const scenario = typeof configJson?.scenario === 'string' ? configJson.scenario : titleVi
+      const scenario = typeof configJson?.scenario === 'string' ? configJson.scenario : titleNative
       return (
         <TurnBasedSpeakingPlayer
           level={cefrLevel}

@@ -5,8 +5,7 @@ import { parseGeminiJson } from '@/lib/ai/parse-json'
 
 const BASIC_LEVELS = new Set(['A1', 'A2', 'B1'])
 
-// ─── Vietnamese Labels ──────────────────────────────
-const CRITERION_VI: Record<string, string> = {
+const CRITERION_NATIVE: Record<string, string> = {
     'Inhalt': 'Nội dung',
     'Kommunikative Angemessenheit': 'Phù hợp giao tiếp',
     'Korrektheit': 'Chính xác ngữ pháp & chính tả',
@@ -15,7 +14,7 @@ const CRITERION_VI: Record<string, string> = {
     'Vollständigkeit': 'Tính đầy đủ',
 }
 
-const ERROR_TYPE_VI: Record<string, string> = {
+const ERROR_TYPE_NATIVE: Record<string, string> = {
     'Grammatik': 'Ngữ pháp',
     'Rechtschreibung': 'Chính tả',
     'Wortschatz': 'Từ vựng',
@@ -27,10 +26,10 @@ const ERROR_TYPE_VI: Record<string, string> = {
 export async function POST(req: NextRequest) {
     try {
         const body = await req.json()
-        const { type = 'grammar', cefrLevel = 'A1' } = body
+        const { type = 'grammar', cefrLevel = 'A1', uiLanguage = 'vi' } = body
 
-        if (type === 'grammar') return gradeGrammar(body, cefrLevel)
-        if (type === 'writing') return gradeWriting(body, cefrLevel)
+        if (type === 'grammar') return gradeGrammar(body, cefrLevel, uiLanguage)
+        if (type === 'writing') return gradeWriting(body, cefrLevel, uiLanguage)
         return NextResponse.json({ success: false, error: 'Unknown type. Use "grammar" or "writing".' }, { status: 400 })
     } catch (err) {
         console.error('[Grade API] Error:', err)
@@ -39,7 +38,7 @@ export async function POST(req: NextRequest) {
 }
 
 // ─── Grammar Grading ─────────────────────────────────
-async function gradeGrammar(body: { sentence?: string; topic?: string }, cefrLevel: string) {
+async function gradeGrammar(body: { sentence?: string; topic?: string }, cefrLevel: string, uiLanguage: string) {
     const { sentence, topic } = body
     if (!sentence?.trim()) {
         return NextResponse.json({ success: false, error: 'sentence is required' }, { status: 400 })
@@ -54,10 +53,10 @@ Antworte NUR als JSON:
 {
   "correct": true/false,
   "correctedSentence": "...",
-  "errors": [{ "original": "...", "corrected": "...", "rule": "Grammatikregel", "ruleVi": "Quy tắc ngữ pháp", "explanation": "deutsch", "explanationVi": "tiếng việt" }],
+  "errors": [{ "original": "...", "corrected": "...", "rule": "Grammatikregel", "ruleNative": "Translated rule depending on UI Language", "explanation": "deutsch", "explanationNative": "Translated explanation depending on UI Language ${uiLanguage}" }],
   "analysis": { "sentence_structure": "...", "verb_position": "...", "cases_used": "..." },
   "tip": "Deutsch",
-  "tipVi": "Tiếng Việt"
+  "tipNative": "Translated tip depending on UI Language ${uiLanguage}"
 }`
 
     const result = await withGeminiFallback(async (client) => {
@@ -80,7 +79,7 @@ async function gradeWriting(body: {
     minWords?: number
     maxWords?: number | null
     rubric?: { criteria: Array<{ id: string; name: string; maxScore: number }>; maxScore: number }
-}, cefrLevel: string) {
+}, cefrLevel: string, uiLanguage: string) {
     const { submittedText, textType = 'Brief', register = 'formell', situation = '', contentPoints = [], minWords = 80, maxWords, rubric } = body
     if (!submittedText?.trim()) {
         return NextResponse.json({ success: false, error: 'submittedText is required' }, { status: 400 })
@@ -97,7 +96,7 @@ async function gradeWriting(body: {
     }
 
     const criteriaList = defaultRubric.criteria.map(cr =>
-        `- "${cr.name}" (${CRITERION_VI[cr.name] || ''}) — max ${cr.maxScore} Punkte`
+        `- "${cr.name}" (${uiLanguage === 'vi' ? CRITERION_NATIVE[cr.name] : cr.name}) — max ${cr.maxScore} Punkte`
     ).join('\n')
     const contentPointsList = contentPoints.map((p, i) => `${i + 1}. ${p}`).join('\n')
 
@@ -120,11 +119,11 @@ ${submittedText}
 
 Antworte NUR als JSON:
 {
-  "criteria": [{ "id": "...", "name": "...", "score": 0, "maxScore": 5, "reasoning": "deutsch", "reasoningVi": "tiếng việt", "suggestions": ["deutsch"], "suggestionsVi": ["tiếng việt"] }],
+  "criteria": [{ "id": "...", "name": "...", "score": 0, "maxScore": 5, "reasoning": "deutsch", "reasoningNative": "Translated reasoning depending on UI Language ${uiLanguage}", "suggestions": ["deutsch"], "suggestionsNative": ["Translated suggestions depending on UI Language ${uiLanguage}"] }],
   "overallFeedback": "deutsch",
-  "overallFeedbackVi": "tiếng việt",
+  "overallFeedbackNative": "Translated feedback depending on UI Language ${uiLanguage}",
   "estimatedLevel": "A1-C2",
-  "corrections": [{ "original": "...", "corrected": "...", "type": "Grammatik", "typeVi": "Ngữ pháp", "explanation": "deutsch", "explanationVi": "tiếng việt" }]
+  "corrections": [{ "original": "...", "corrected": "...", "type": "Grammatik", "typeNative": "Translated type depending on UI Language ${uiLanguage}", "explanation": "deutsch", "explanationNative": "Translated explanation depending on UI Language ${uiLanguage}" }]
 }`
 
     const result = await withGeminiFallback(async (client) => {
@@ -145,26 +144,26 @@ Antworte NUR als JSON:
             maxScore: defaultRubric.maxScore,
             percentScore: defaultRubric.maxScore > 0 ? Math.round((totalScore / defaultRubric.maxScore) * 100) : 0,
             estimatedLevel: parsed.estimatedLevel || cefrLevel,
-            criteria: (parsed.criteria || []).map((cr: { id?: string; name?: string; nameVi?: string; score?: number; maxScore?: number; reasoning?: string; reasoningVi?: string; suggestions?: string[]; suggestionsVi?: string[] }) => ({
+            criteria: (parsed.criteria || []).map((cr: { id?: string; name?: string; nameNative?: string; score?: number; maxScore?: number; reasoning?: string; reasoningNative?: string; suggestions?: string[]; suggestionsNative?: string[] }) => ({
                 id: cr.id || cr.name,
                 name: cr.name,
-                nameVi: CRITERION_VI[cr.name || ''] || cr.nameVi || '',
+                nameNative: uiLanguage === 'vi' ? CRITERION_NATIVE[cr.name || ''] : cr.nameNative || cr.name,
                 score: cr.score || 0,
                 maxScore: cr.maxScore || 5,
                 reasoning: cr.reasoning || '',
-                reasoningVi: cr.reasoningVi || '',
+                reasoningNative: cr.reasoningNative || '',
                 suggestions: cr.suggestions || [],
-                suggestionsVi: cr.suggestionsVi || [],
+                suggestionsNative: cr.suggestionsNative || [],
             })),
             overallFeedback: parsed.overallFeedback || '',
-            overallFeedbackVi: parsed.overallFeedbackVi || '',
-            corrections: (parsed.corrections || []).map((cr: { original?: string; corrected?: string; type?: string; typeVi?: string; explanation?: string; explanationVi?: string }) => ({
+            overallFeedbackNative: parsed.overallFeedbackNative || '',
+            corrections: (parsed.corrections || []).map((cr: { original?: string; corrected?: string; type?: string; typeNative?: string; explanation?: string; explanationNative?: string }) => ({
                 original: cr.original || '',
                 corrected: cr.corrected || '',
                 type: cr.type || 'Grammatik',
-                typeVi: cr.typeVi || ERROR_TYPE_VI[cr.type || ''] || 'Ngữ pháp',
+                typeNative: uiLanguage === 'vi' ? ERROR_TYPE_NATIVE[cr.type || ''] : cr.typeNative || cr.type,
                 explanation: cr.explanation || '',
-                explanationVi: cr.explanationVi || '',
+                explanationNative: cr.explanationNative || '',
             })),
         },
     })

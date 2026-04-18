@@ -6,7 +6,7 @@ import type { CefrLevel } from '@/lib/types/cefr'
 export interface NachsprechenSentence {
   id: string
   textDe: string
-  textVi: string
+  textNative: string
   ipa: string
   audioUrl: string
   expectedDurationSec: number
@@ -64,7 +64,7 @@ export interface SpeakingLessonData {
   lessonType: string
   lessonNumber: number
   titleDe: string
-  titleVi: string
+  titleNative: string
   exerciseType: string
   exercisesJson: NachsprechenExercise
   configJson: NachsprechenConfig | null
@@ -76,7 +76,7 @@ export interface SpeakingTopicData {
   id: string
   slug: string
   titleDe: string
-  titleVi: string
+  titleNative: string
   description: string | null
   cefrLevel: string
   sortOrder: number

@@ -5,8 +5,7 @@ export interface Theme {
     id: string
     slug: string
     name: string
-    nameVi: string | null
-    nameEn: string | null
+    nameNative: string | null
     cefrLevel: string
     imageUrl: string | null
     wordCount: number
@@ -19,8 +18,7 @@ export interface VocabItem {
     article: string | null
     plural: string | null
     wordType: string
-    meaningVi: string
-    meaningEn: string | null
+    meaningNative: string
     notes: string | null
     conjugation: Record<string, unknown> | null
     audioUrl?: string | null

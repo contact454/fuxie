@@ -82,7 +82,7 @@ async function provisionUser(
                     data: {
                         userId: newUser.id,
                         displayName: displayName ?? 'Learner',
-                        nativeLanguage: 'vi',
+                        uiLanguage: 'vi',
                         currentLevel: 'A1',
                         targetLevel: 'B1',
                     },

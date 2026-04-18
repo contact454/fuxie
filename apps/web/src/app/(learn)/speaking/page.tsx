@@ -1,5 +1,6 @@
 import { redirect } from 'next/navigation'
 import { prisma } from '@fuxie/database'
+import { cookies } from 'next/headers'
 import { getServerUser } from '@/lib/auth/server-auth'
 import { cacheWrap } from '@/lib/cache/redis'
 import SpeakingClient from '@/components/speaking/SpeakingClient'
@@ -30,7 +31,7 @@ async function getSpeakingData(userId: string, cefrLevel: CefrLevel) {
       id: true,
       slug: true,
       titleDe: true,
-      titleVi: true,
+      translations: true,
       description: true,
       cefrLevel: true,
       sortOrder: true,
@@ -44,7 +45,7 @@ async function getSpeakingData(userId: string, cefrLevel: CefrLevel) {
           lessonType: true,
           lessonNumber: true,
           titleDe: true,
-          titleVi: true,
+          translations: true,
           exerciseType: true,
           exercisesJson: true,
           configJson: true,
@@ -90,8 +91,20 @@ async function getSpeakingData(userId: string, cefrLevel: CefrLevel) {
   const completedLessons = progressRecords.filter(p => p.completed).length
   const totalStars = progressRecords.reduce((s, p) => s + (p.stars ?? 0), 0)
 
+  const locale = (await cookies()).get('NEXT_LOCALE')?.value || 'vi'
+
+  // Map translations to titleNative for client
+  const mappedTopics = topicsWithProgress.map(topic => ({
+    ...topic,
+    titleNative: (topic.translations as any)?.[locale] || topic.titleDe,
+    lessons: topic.lessons.map(lesson => ({
+      ...lesson,
+      titleNative: (lesson.translations as any)?.[locale] || lesson.titleDe,
+    })),
+  }))
+
   return {
-    topics: topicsWithProgress,
+    topics: mappedTopics,
     totalLessons,
     completedLessons,
     totalStars,

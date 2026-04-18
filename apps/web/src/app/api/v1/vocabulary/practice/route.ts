@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { z } from 'zod'
 import { prisma } from '@fuxie/database'
+import { cookies } from 'next/headers'
 import { withAuth } from '@/lib/auth/middleware'
 import { handleApiError } from '@/lib/api/error-handler'
 
@@ -15,13 +16,13 @@ const querySchema = z.object({
 })
 
 // MC variant types
-type McVariant = 'de_to_vi' | 'vi_to_de' | 'image_to_word' | 'audio_to_word'
+type McVariant = 'de_to_native' | 'native_to_de' | 'image_to_word' | 'audio_to_word'
 
 interface VocabWord {
     id: string
     word: string
     article: string | null
-    meaningVi: string
+    translations: any
     imageUrl: string | null
     audioUrl: string | null
     exampleSentence1: string | null
@@ -55,7 +56,8 @@ function generateMcQuestion(
     target: VocabWord,
     distractors: VocabWord[],
     variant: McVariant,
-    index: number
+    index: number,
+    locale: string
 ) {
     const displayWord = target.article
         ? `${target.article === 'MASKULIN' ? 'der' : target.article === 'FEMININ' ? 'die' : 'das'} ${target.word}`
@@ -73,17 +75,17 @@ function generateMcQuestion(
     let options: string[] = []
 
     switch (variant) {
-        case 'de_to_vi':
+        case 'de_to_native':
             prompt = displayWord
             promptAudio = target.audioUrl
             options = shuffle([
-                target.meaningVi,
-                ...wrongAnswers.map(w => w.meaningVi),
+                (target.translations as any)?.[locale] || (target.translations as any)?.['en'] || '',
+                ...wrongAnswers.map(w => (w.translations as any)?.[locale] || (w.translations as any)?.['en'] || ''),
             ])
             break
 
-        case 'vi_to_de':
-            prompt = target.meaningVi
+        case 'native_to_de':
+            prompt = (target.translations as any)?.[locale] || (target.translations as any)?.['en'] || ''
             options = shuffle([
                 displayWord,
                 ...wrongAnswers.map(w => {
@@ -130,7 +132,7 @@ function generateMcQuestion(
         options,
         wordId: target.id,
         word: displayWord,
-        meaningVi: target.meaningVi,
+        meaningNative: (target.translations as any)?.[locale] || (target.translations as any)?.['en'] || '',
     }
 }
 
@@ -145,6 +147,9 @@ export async function GET(req: NextRequest) {
         const params = Object.fromEntries(req.nextUrl.searchParams)
         const { level, theme, type, count } = querySchema.parse(params)
 
+        const cookieStore = await cookies()
+        const locale = cookieStore.get('NEXT_LOCALE')?.value || 'vi'
+
         // Fetch words for this theme + level
         const allWords = await prisma.vocabularyItem.findMany({
             where: {
@@ -156,7 +161,7 @@ export async function GET(req: NextRequest) {
                 id: true,
                 word: true,
                 article: true,
-                meaningVi: true,
+                translations: true,
                 imageUrl: true,
                 audioUrl: true,
                 exampleSentence1: true,
@@ -182,7 +187,7 @@ export async function GET(req: NextRequest) {
         const targetWords = pickRandom(wordsWithAudio, Math.min(count, wordsWithAudio.length))
 
         // Available MC variants (only use image/audio variants if data exists)
-        const availableVariants: McVariant[] = ['de_to_vi', 'vi_to_de']
+        const availableVariants: McVariant[] = ['de_to_native', 'native_to_de']
         const hasImages = wordsWithAudio.some(w => w.imageUrl)
         const hasAudio = wordsWithAudio.some(w => w.audioUrl)
         if (hasImages) availableVariants.push('image_to_word')
@@ -193,10 +198,10 @@ export async function GET(req: NextRequest) {
             questions = targetWords.map((word, i) => {
                 let variant = availableVariants[i % availableVariants.length]!
                 // For image_to_word, skip if this word has no image
-                if (variant === 'image_to_word' && !word.imageUrl) variant = 'de_to_vi'
-                if (variant === 'audio_to_word' && !word.audioUrl) variant = 'de_to_vi'
+                if (variant === 'image_to_word' && !word.imageUrl) variant = 'de_to_native'
+                if (variant === 'audio_to_word' && !word.audioUrl) variant = 'de_to_native'
 
-                return generateMcQuestion(word, wordsWithAudio, variant, i + 1)
+                return generateMcQuestion(word, wordsWithAudio, variant, i + 1, locale)
             })
         } else if (type === 'matching') {
             // Return pairs for matching
@@ -210,7 +215,7 @@ export async function GET(req: NextRequest) {
                     id: `p${i + 1}`,
                     type: 'pair',
                     word: displayWord,
-                    meaning: w.meaningVi,
+                    meaning: (w.translations as any)?.[locale] || (w.translations as any)?.['en'] || '',
                     wordId: w.id,
                     imageUrl: w.imageUrl,
                 }
@@ -219,7 +224,7 @@ export async function GET(req: NextRequest) {
             questions = targetWords.map((w, i) => ({
                 id: `s${i + 1}`,
                 type: 'spelling',
-                prompt: w.meaningVi,
+                prompt: (w.translations as any)?.[locale] || (w.translations as any)?.['en'] || '',
                 promptImage: w.imageUrl,
                 promptAudio: w.audioUrl,
                 article: w.article,
@@ -271,7 +276,7 @@ export async function GET(req: NextRequest) {
                     type: 'intro',
                     wordId: word.id,
                     word: displayWord,
-                    meaningVi: word.meaningVi,
+                    meaningNative: (word.translations as any)?.[locale] || (word.translations as any)?.['en'] || '',
                     imageUrl: word.imageUrl,
                     audioUrl: word.audioUrl,
                     exampleSentence1: word.exampleSentence1,
@@ -280,10 +285,10 @@ export async function GET(req: NextRequest) {
                 
                 // MC Slice
                 let variant = availableVariants[i % availableVariants.length]!
-                if (variant === 'image_to_word' && !word.imageUrl) variant = 'de_to_vi'
-                if (variant === 'audio_to_word' && !word.audioUrl) variant = 'de_to_vi'
+                if (variant === 'image_to_word' && !word.imageUrl) variant = 'de_to_native'
+                if (variant === 'audio_to_word' && !word.audioUrl) variant = 'de_to_native'
                 
-                const mc = generateMcQuestion(word, wordsWithAudio, variant, i)
+                const mc = generateMcQuestion(word, wordsWithAudio, variant, i, locale)
                 questions.push({ ...mc, exerciseComponent: 'mc' })
             })
         } else {
@@ -293,7 +298,7 @@ export async function GET(req: NextRequest) {
         // Get theme info
         const themeInfo = await prisma.vocabularyTheme.findUnique({
             where: { slug: theme },
-            select: { slug: true, name: true, nameVi: true, imageUrl: true },
+            select: { slug: true, name: true, translations: true, imageUrl: true },
         })
 
         return NextResponse.json({

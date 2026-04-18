@@ -219,7 +219,7 @@ export function VocabularyClient({ themes, totalWords, totalDue, availableLevels
                         <div className="flex-1 min-w-0">
                             <h2 className="text-xl font-bold text-gray-900">{selectedTheme.name}</h2>
                             <p className="text-sm text-gray-500 mt-0.5">
-                                {selectedTheme.nameVi} • {selectedTheme.wordCount} Wörter
+                                {selectedTheme.nameNative} • {selectedTheme.wordCount} Wörter
                             </p>
 
                             {/* Progress */}

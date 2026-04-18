@@ -42,7 +42,7 @@ export async function buildDailySession(userId: string, level: CefrLevel): Promi
             data: {
                 cardId: card.id,
                 term: card.vocabularyItem.word,
-                meaning: card.vocabularyItem.meaningVi,
+                meaning: (card.vocabularyItem.translations as any)?.vi || '',
                 partOfSpeech: card.vocabularyItem.wordType,
                 article: card.vocabularyItem.article,
                 exampleSentence: card.vocabularyItem.exampleSentence1,
@@ -57,7 +57,7 @@ export async function buildDailySession(userId: string, level: CefrLevel): Promi
         orderBy: { sortOrder: 'asc' }
     })
 
-    let newVocabItems: Array<{ id: string; word: string; meaningVi: string; wordType: string | null; article: string | null; exampleSentence1: string | null; audioUrl: string | null }> = []
+    let newVocabItems: Array<{ id: string; word: string; translations: any; wordType: string | null; article: string | null; exampleSentence1: string | null; audioUrl: string | null }> = []
     for (const theme of allThemes) {
         if (newVocabItems.length >= 5) break
         
@@ -81,7 +81,7 @@ export async function buildDailySession(userId: string, level: CefrLevel): Promi
             data: {
                 itemId: vItem.id,
                 term: vItem.word,
-                meaning: vItem.meaningVi,
+                meaning: (vItem.translations as any)?.vi || '',
                 partOfSpeech: vItem.wordType,
                 article: vItem.article,
                 exampleSentence: vItem.exampleSentence1,
@@ -112,7 +112,7 @@ export async function buildDailySession(userId: string, level: CefrLevel): Promi
                 lessonId: incompleteProgress.lessonId,
                 topicTitle: incompleteProgress.lesson.titleDe, // Using titleDe
                 questionDe: 'Wählen Sie die richtige Form: Ich ___ gestern im Kino.',
-                questionVi: 'Chọn dạng đúng:',
+                questionNative: 'Chọn dạng đúng:',
                 options: ['bin', 'war', 'habe', 'wurde'],
                 correctIndex: 1,
                 explanation: 'Quá khứ của sein là war.'

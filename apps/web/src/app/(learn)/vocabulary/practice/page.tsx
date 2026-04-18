@@ -8,8 +8,11 @@ export const metadata = {
     description: 'Vocabulary practice exercises — Multiple Choice, Matching, Spelling and more',
 }
 
-async function getThemesForPractice(cefrLevel: CefrLevel) {
-    return mapVocabularyThemes(await getVocabularyThemes(cefrLevel))
+async function getThemesForPractice(cefrLevel: CefrLevel, locale: string) {
+    return mapVocabularyThemes(await getVocabularyThemes(cefrLevel)).map(t => ({
+        ...t,
+        nameNative: (t.translations as Record<string, string>)?.[locale] || '',
+    }))
 }
 
 export default async function PracticePage() {
@@ -18,7 +21,7 @@ export default async function PracticePage() {
 
     const availableLevels = await getVocabularyLevels()
     const defaultLevel: CefrLevel = availableLevels[0] || 'A1'
-    const themes = await getThemesForPractice(defaultLevel)
+    const themes = await getThemesForPractice(defaultLevel, serverUser.uiLanguage || 'vi')
 
     return (
         <div className="max-w-5xl mx-auto px-4 py-8">

@@ -18,7 +18,7 @@ interface MixedQuestion {
     type: string
     wordId: string
     word: string
-    meaningVi: string
+    meaningNative: string
     prompt?: string
     promptImage?: string | null
     promptAudio?: string | null
@@ -73,9 +73,9 @@ export function MixedExercise({ questions, cefrLevel, themeName, themeSlug, onEx
         setSelectedAnswer(option)
         setIsRevealed(true)
 
-        const correctAnswer = question.type === 'de_to_vi'
-            ? question.meaningVi
-            : question.word  // vi_to_de, image_to_word, audio_to_word
+        const correctAnswer = question.type === 'de_to_native'
+            ? question.meaningNative
+            : question.word  // native_to_de, image_to_word, audio_to_word
 
         const correct = option === correctAnswer
         setIsCorrect(correct)
@@ -194,7 +194,7 @@ export function MixedExercise({ questions, cefrLevel, themeName, themeSlug, onEx
                 <div className="flex-1 flex overflow-y-auto">
                     <IntroSlide
                         word={question.word}
-                        meaningVi={question.meaningVi}
+                        meaningNative={question.meaningNative}
                         imageUrl={question.imageUrl ?? null}
                         audioUrl={question.audioUrl ?? null}
                         onContinue={handleContinue}
@@ -207,8 +207,8 @@ export function MixedExercise({ questions, cefrLevel, themeName, themeSlug, onEx
     // Render MC SLIDE (Multiple Choice)
     const getQuestionLabel = () => {
         switch (question.type) {
-            case 'de_to_vi': return `Was bedeutet "${question.prompt}"?`
-            case 'vi_to_de': return `"${question.prompt}" auf Deutsch?`
+            case 'de_to_native': return `Was bedeutet "${question.prompt}"?`
+            case 'native_to_de': return `"${question.prompt}" auf Deutsch?`
             case 'image_to_word': return 'Welches Wort passt zum Bild?'
             case 'audio_to_word': return 'Welches Wort hörst du?'
             default: return question.prompt
@@ -232,10 +232,10 @@ export function MixedExercise({ questions, cefrLevel, themeName, themeSlug, onEx
                                 🎧
                             </button>
                         )}
-                        {(question.type === 'de_to_vi' || question.type === 'vi_to_de') && (
+                        {(question.type === 'de_to_native' || question.type === 'native_to_de') && (
                             <div className="mb-4">
                                 <p className="text-4xl font-black text-gray-900 leading-tight">{question.prompt}</p>
-                                {question.type === 'de_to_vi' && question.promptAudio && (
+                                {question.type === 'de_to_native' && question.promptAudio && (
                                     <button onClick={() => playSound(question.promptAudio)} className="mt-2 text-[#004E89]">🔊 Anhören</button>
                                 )}
                             </div>
@@ -265,7 +265,7 @@ export function MixedExercise({ questions, cefrLevel, themeName, themeSlug, onEx
             {isRevealed && isCorrect !== null && (
                 <BottomFeedback
                     isCorrect={isCorrect}
-                    correctAnswer={question.type === 'de_to_vi' ? question.meaningVi : question.word}
+                    correctAnswer={question.type === 'de_to_native' ? question.meaningNative : question.word}
                     onContinue={handleContinue}
                 />
             )}

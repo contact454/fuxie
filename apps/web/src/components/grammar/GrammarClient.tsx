@@ -10,7 +10,7 @@ interface LessonSummary {
     id: string
     lessonType: string
     lessonNumber: number
-    titleVi: string
+    titleNative: string
     estimatedMin: number
     progress: { score: number; stars: number; completed: boolean } | null
 }
@@ -19,7 +19,7 @@ interface TopicSummary {
     id: string
     slug: string
     titleDe: string
-    titleVi: string
+    titleNative: string
     cefrLevel: string
     lessons: LessonSummary[]
     totalStars: number
@@ -139,7 +139,7 @@ export function GrammarClient({ topics, totalTopics, totalCompleted, availableLe
                                 {allCompleted && <span className={s.topicCheckmark}>✅</span>}
                             </div>
                             <div className={s.topicCardBody}>
-                                <div className={s.topicTitleVi}>{topic.titleVi}</div>
+                                <div className={s.topicTitleVi}>{topic.titleNative}</div>
                                 <div className={s.topicLessonDots}>
                                     {topic.lessons.map(l => {
                                         const typeInfo = LESSON_TYPE_LABELS[l.lessonType] || { label: l.lessonType, emoji: '📄' }

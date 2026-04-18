@@ -1,5 +1,6 @@
 import { redirect } from 'next/navigation'
 import { prisma } from '@fuxie/database'
+import { cookies } from 'next/headers'
 import { getServerUser } from '@/lib/auth/server-auth'
 import { getVocabularyThemeSrsProgress } from '@/lib/srs/stats'
 import { CourseClient } from '@/components/course/CourseClient'
@@ -23,14 +24,14 @@ interface ModuleWithProgress {
     vocabThemes: Array<{
         slug: string
         name: string
-        nameVi: string | null
+        nameNative: string | null
         itemCount: number
         learnedCount: number
     }>
     grammarTopics: Array<{
         slug: string
         titleDe: string
-        titleVi: string
+        titleNative: string
         lessonCount: number
         completedCount: number
         totalStars: number
@@ -38,7 +39,7 @@ interface ModuleWithProgress {
     skillLinks: Array<{
         skill: 'listening' | 'reading' | 'writing' | 'speaking'
         label: string
-        labelVi: string
+        labelNative: string
         href: string
         emoji: string
     }>
@@ -92,7 +93,7 @@ async function getCourseData(userId: string, level: CefrLevel) {
             id: true,
             slug: true,
             name: true,
-            nameVi: true,
+            translations: true,
             _count: { select: { items: true } },
         },
     })
@@ -109,7 +110,7 @@ async function getCourseData(userId: string, level: CefrLevel) {
             slug: true,
             title: true,
             titleDe: true,
-            titleVi: true,
+            translations: true,
         },
     })
     const grammarTopicMap = new Map(grammarTopics.map((t) => [t.slug, t]))
@@ -148,6 +149,8 @@ async function getCourseData(userId: string, level: CefrLevel) {
         progressMap[p.lessonId] = { completed: p.completed, stars: p.stars ?? 0 }
     }
 
+    const locale = (await cookies()).get('NEXT_LOCALE')?.value || 'vi'
+
     // 8. Build modules with progress
     const modules: ModuleWithProgress[] = course.modules.map((mod, idx) => {
         const mapping = moduleMap[mod.slug] ?? { vocabularyThemes: [], grammarTopics: [], skillLinks: [] }
@@ -160,7 +163,7 @@ async function getCourseData(userId: string, level: CefrLevel) {
                 return {
                     slug: theme.slug,
                     name: theme.name,
-                    nameVi: theme.nameVi,
+                    nameNative: (theme.translations as any)?.[locale] || theme.name,
                     itemCount: theme._count.items,
                     learnedCount: themeProgress[theme.id]?.started ?? 0,
                 }
@@ -178,7 +181,7 @@ async function getCourseData(userId: string, level: CefrLevel) {
                 return {
                     slug: topic.slug,
                     titleDe: topic.titleDe ?? topic.title ?? '',
-                    titleVi: topic.titleVi ?? '',
+                    titleNative: (topic.translations as any)?.[locale] || topic.titleDe || '',
                     lessonCount: lessons.length,
                     completedCount,
                     totalStars,

@@ -1,6 +1,7 @@
 import { notFound, redirect } from 'next/navigation'
 import { cache } from 'react'
 import { prisma } from '@fuxie/database'
+import { cookies } from 'next/headers'
 import { getServerUser } from '@/lib/auth/server-auth'
 import { LessonPlayer } from '@/components/grammar/LessonPlayer'
 import type { TheoryBlock, GrammarExercise } from '@/components/grammar/types'
@@ -15,7 +16,7 @@ export async function generateMetadata({ params }: { params: Promise<{ topicSlug
     const { lessonId } = await params
     const lesson = await getGrammarLesson(lessonId)
     return {
-        title: lesson ? `Fuxie 🦊 — ${lesson.titleVi}` : 'Fuxie — Grammatik',
+        title: lesson ? `Fuxie 🦊 — ${(lesson.translations as any)?.['vi'] || lesson.titleDe}` : 'Fuxie — Grammatik',
     }
 }
 
@@ -35,11 +36,13 @@ export default async function LessonPage({ params }: { params: Promise<{ topicSl
 
     const exercises: GrammarExercise[] = (lesson.exercisesJson as any[]) ?? []
 
+    const locale = (await cookies()).get('NEXT_LOCALE')?.value || 'vi'
+
     return (
         <LessonPlayer
             lessonId={lesson.id}
             titleDe={lesson.titleDe}
-            titleVi={lesson.titleVi}
+            titleNative={(lesson.translations as any)?.[locale] || lesson.titleDe}
             level={lesson.level}
             lessonType={lesson.lessonType}
             estimatedMin={lesson.estimatedMin}

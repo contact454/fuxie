@@ -23,23 +23,26 @@ const conversationSchema = z.object({
   level: z.enum(['A1', 'A2', 'B1', 'B2', 'C1', 'C2']).default('A1'),
   history: z.string().default('[]'), // JSON stringified array of messages
   scenario: z.string().default('cafe'), // Topic context
+  targetLanguage: z.string().default('de'), // e.g., 'en', 'de', 'vi'
+  uiLanguage: z.string().default('vi'),
 })
 
 // editDistance is now imported from '@/lib/ai/text-alignment'
 
 // ─── 1. Gemini Speech-to-Text & Pronunciation Assessment ───
-async function evaluateSpeech(base64Audio: string, mimeType: string, level: string, lastAiMessage: string) {
-  const prompt = `Du bist ein extrem strenger Experte für deutsche Phonetik (Niveau ${level}).
-Der Benutzer antwortet gerade auf: "${lastAiMessage}".
-Aufgabe 1: Transkribiere EXAKT, was im Audio gesagt wird. Wenn es stottert, schreib es auf.
-Aufgabe 2: Bewerte die generelle Aussprache (score 0-100).
-Aufgabe 3: Erstelle eine detaillierte Liste der Wörter aus dem Transkript. Bewerte für jedes Wort präzise die Aussprache-Genauigkeit (accuracyScore 0-100) und den errorType (None, Mispronunciation, Omission, Insertion). Sei bei der phonetischen Bewertung extrem kritisch (wie ein muttersprachlicher Lehrer).
+async function evaluateSpeech(base64Audio: string, mimeType: string, level: string, lastAiMessage: string, uiLang: string) {
+  const prompt = `You are a strict phonetics expert for the German language (Level ${level}).
+The user is currently responding to: "${lastAiMessage}".
+Task 1: Transcribe EXACTLY what is said in the audio. Include stutters.
+Task 2: Score the general pronunciation accuracy (score 0-100).
+Task 3: Create a detailed list of words from the transcript. For each word, rate the pronunciation accuracy (accuracyScore 0-100) and the errorType (None, Mispronunciation, Omission, Insertion). Be extremely critical like a native teacher.
+Task 4: Provide overall feedback translated to the user's interface language (${uiLang}).
 
-Gib NUR valides JSON zurück (response_mime_type ist application/json aktiviert, also liefere nur das pure Objekt):
+Return ONLY valid JSON (response_mime_type is application/json. no markdown wrappers):
 {
   "transcript": "...",
   "score": 85,
-  "feedbackVi": "...",
+  "feedback": "...",
   "words": [
     { "word": "...", "accuracyScore": 90, "errorType": "None" }
   ]
@@ -78,16 +81,16 @@ Gib NUR valides JSON zurück (response_mime_type ist application/json aktiviert,
     return JSON.parse(text)
   } catch (err) {
     console.error("[evaluateSpeech] Gemini Error:", err)
-    return { transcript: '', score: 0, feedbackVi: 'Lỗi nhận lý luận âm thanh (Phonetic Analysis) từ Gemini.', words: [] }
+    return { transcript: '', score: 0, feedback: 'Error analyzing phonetic pronunciation.', words: [] }
   }
 }
 
 // ─── 2. Generative Roleplay (Gemini) ───
 async function generateNextTurn(transcript: string, historyArr: ChatMessage[], level: string, scenario: string) {
-  const systemPrompt = `Du bist Fuxie, ein freundlicher KI-Gesprächspartner. 
-Euer aktuelles Szenario: ${scenario}. Niveau: ${level}.
-Führe ein natürliches Gespräch. Antworte in 1-2 kurzen Sätzen.
-Sei geduldig und frage nach, wenn die Antwort des Benutzers unklar war.`
+  const systemPrompt = `You are Fuxie, a friendly AI conversation partner teaching German. 
+Your current scenario: ${scenario}. Learner level: ${level}.
+Have a natural conversation. Respond in 1-2 short sentences in German.
+Be patient and ask clarifying questions if the user's answer is unclear.`
 
   const chatHistory = historyArr.map((msg) => ({
     role: msg.role === 'user' ? 'user' : 'model',
@@ -139,10 +142,11 @@ export async function POST(request: NextRequest) {
     // Support text-only initial start / fallback
     const isAudioInput = !!audioFile;
 
-    const { level, history, scenario } = conversationSchema.parse({
+    const { level, history, scenario, uiLanguage } = conversationSchema.parse({
       level: formData.get('level') || 'A1',
       history: formData.get('history') || '[]',
       scenario: formData.get('scenario') || 'cafe',
+      uiLanguage: formData.get('uiLanguage') || 'vi',
     })
 
     const historyArr = JSON.parse(history)
@@ -157,10 +161,10 @@ export async function POST(request: NextRequest) {
         const mimeType = audioFile.name?.endsWith('.wav') ? 'audio/wav' : 'audio/webm'
         const lastAiMessage = historyArr.length > 0 ? historyArr[historyArr.length - 1].text : ''
         
-        const evalResult = await evaluateSpeech(base64Data, mimeType, level, lastAiMessage)
+        const evalResult = await evaluateSpeech(base64Data, mimeType, level, lastAiMessage, uiLanguage)
         userTranscript = evalResult.transcript
         accuracy = evalResult.score
-        pronunciationFeedback = evalResult.feedbackVi
+        pronunciationFeedback = evalResult.feedback
         wordsDetail = evalResult.words
     }
     

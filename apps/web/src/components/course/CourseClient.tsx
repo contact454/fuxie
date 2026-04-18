@@ -5,7 +5,7 @@ import Link from 'next/link'
 interface SkillLink {
     skill: 'listening' | 'reading' | 'writing' | 'speaking'
     label: string
-    labelVi: string
+    labelNative: string
     href: string
     emoji: string
     count?: number
@@ -27,14 +27,14 @@ interface CourseData {
         vocabThemes: Array<{
             slug: string
             name: string
-            nameVi: string | null
+            nameNative: string | null
             itemCount: number
             learnedCount: number
         }>
         grammarTopics: Array<{
             slug: string
             titleDe: string
-            titleVi: string
+            titleNative: string
             lessonCount: number
             completedCount: number
             totalStars: number
@@ -191,7 +191,7 @@ export function CourseClient({ data }: { data: CourseData }) {
                                                                         {theme.name}
                                                                     </p>
                                                                     <p className="text-[10px] text-gray-400">
-                                                                        {theme.nameVi} · {theme.learnedCount}/{theme.itemCount}
+                                                                        {theme.nameNative} · {theme.learnedCount}/{theme.itemCount}
                                                                     </p>
                                                                 </div>
                                                                 {/* Mini progress */}
@@ -235,7 +235,7 @@ export function CourseClient({ data }: { data: CourseData }) {
                                                                         {topic.titleDe}
                                                                     </p>
                                                                     <p className="text-[10px] text-gray-400">
-                                                                        {topic.titleVi} · {topic.completedCount}/{topic.lessonCount} · {topic.totalStars}⭐
+                                                                        {topic.titleNative} · {topic.completedCount}/{topic.lessonCount} · {topic.totalStars}⭐
                                                                     </p>
                                                                 </div>
                                                                 {/* Mini progress */}
@@ -272,7 +272,7 @@ export function CourseClient({ data }: { data: CourseData }) {
                                                         >
                                                             <span className="text-xl">{skill.emoji}</span>
                                                             <span className="text-xs font-medium text-gray-700">{skill.label}</span>
-                                                            <span className="text-[10px] text-gray-400">{skill.labelVi}</span>
+                                                            <span className="text-[10px] text-gray-400">{skill.labelNative}</span>
                                                         </Link>
                                                     ))}
                                                 </div>

@@ -1,5 +1,6 @@
 import { redirect } from 'next/navigation'
 import { prisma } from '@fuxie/database'
+import { cookies } from 'next/headers'
 import { getServerUser } from '@/lib/auth/server-auth'
 import { cacheWrap } from '@/lib/cache/redis'
 import { GrammarClient } from '@/components/grammar/GrammarClient'
@@ -21,7 +22,7 @@ async function getGrammarData(userId: string | null, level: CefrLevel) {
             slug: true,
             title: true,
             titleDe: true,
-            titleVi: true,
+            translations: true,
             cefrLevel: true,
         },
     }))
@@ -38,7 +39,7 @@ async function getGrammarData(userId: string | null, level: CefrLevel) {
                 topicId: true,
                 lessonType: true,
                 lessonNumber: true,
-                titleVi: true,
+                translations: true,
                 estimatedMin: true,
             },
         })
@@ -73,19 +74,21 @@ async function getGrammarData(userId: string | null, level: CefrLevel) {
         }
     }
 
+    const locale = (await cookies()).get('NEXT_LOCALE')?.value || 'vi'
+
     const topicsWithProgress = topics.map((t: any) => {
         const topicLessons = lessonsByTopic[t.id] || []
         return {
             id: t.id,
             slug: t.slug,
             titleDe: t.titleDe ?? t.title ?? '',
-            titleVi: t.titleVi ?? '',
+            titleNative: (t.translations as any)?.[locale] || t.titleDe || '',
             cefrLevel: t.cefrLevel,
             lessons: topicLessons.map((l: any) => ({
                 id: l.id,
                 lessonType: l.lessonType,
                 lessonNumber: l.lessonNumber,
-                titleVi: l.titleVi,
+                titleNative: (l.translations as any)?.[locale] || '',
                 estimatedMin: l.estimatedMin,
                 progress: progressMap[l.id] ?? null,
             })),

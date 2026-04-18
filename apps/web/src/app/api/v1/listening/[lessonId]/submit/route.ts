@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@fuxie/database'
+import { cookies } from 'next/headers'
 import { getServerUser } from '@/lib/auth/server-auth'
 import { z } from 'zod'
 
@@ -49,7 +50,7 @@ export async function POST(
                         options: true,
                         correctAnswer: true,
                         explanation: true,
-                        explanationVi: true,
+                        explanationTrans: true,
                     },
                 },
             },
@@ -63,6 +64,7 @@ export async function POST(
         }
 
         // Grade answers
+        const locale = (await cookies()).get('NEXT_LOCALE')?.value || 'vi'
         let score = 0
         const totalQuestions = lesson.questions.length
         const responseData: { questionId: string; userAnswer: string; isCorrect: boolean }[] = []
@@ -75,7 +77,7 @@ export async function POST(
             correctAnswer: string
             isCorrect: boolean
             explanation: string | null
-            explanationVi: string | null
+            explanationNative: string | null
         }[] = []
 
         for (const q of lesson.questions) {
@@ -93,7 +95,7 @@ export async function POST(
                 correctAnswer: q.correctAnswer,
                 isCorrect,
                 explanation: q.explanation,
-                explanationVi: q.explanationVi,
+                explanationNative: (q.explanationTrans as any)?.[locale] || q.explanation,
             })
         }
 

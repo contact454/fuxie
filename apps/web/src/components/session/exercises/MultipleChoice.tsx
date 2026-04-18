@@ -1,14 +1,16 @@
 import { useState } from 'react'
+import { useTranslations } from 'next-intl'
 import type { SessionItem } from '@/lib/session/builder'
 import type { VocabExerciseData, GrammarExerciseData } from '@/lib/session/types'
 
 export function MultipleChoice({ item, onNext }: { item: SessionItem, onNext: (correct: boolean) => void }) {
+    const t = useTranslations('UI')
     // Determine if it's Grammar or Vocab review
     const isGrammar = item.type === 'GRAMMAR'
     const grammarData = item.data as GrammarExerciseData
     const vocabData = item.data as VocabExerciseData
     const question = isGrammar ? grammarData.questionDe : `Nghĩa của từ "${vocabData.term}" là gì?`
-    const subTitle = isGrammar ? grammarData.questionVi : 'Chọn đáp án đúng'
+    const subTitle = isGrammar ? grammarData.questionNative : t('chooseCorrectAnswer')
     
     // For vocab review demo, generate some fake options if not provided
     // In real prod, builder.ts would attach distractors to the SessionItem

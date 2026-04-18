@@ -31,7 +31,7 @@ export async function GET(
                         questionNumber: true,
                         questionType: true,
                         questionText: true,
-                        questionTextVi: true,
+                        translations: true,
                         options: true,
                         sortOrder: true,
                     },

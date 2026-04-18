@@ -5,6 +5,7 @@ import { getDbUserByFirebaseUid } from '@/lib/auth/db-user'
 import { handleApiError } from '@/lib/api/error-handler'
 import { withGeminiFallback } from '@/lib/ai/gemini-fallback'
 import { parseGeminiJson } from '@/lib/ai/parse-json'
+import { cookies } from 'next/headers'
 import {
     buildChatSystemPrompt,
     CHAT_GREETINGS,
@@ -59,7 +60,7 @@ async function getUserContext(dbUserId: string): Promise<ChatUserContext> {
             take: 20,
             select: {
                 vocabularyItem: {
-                    select: { word: true, meaningVi: true },
+                    select: { word: true, translations: true },
                 },
             },
         }),
@@ -70,6 +71,8 @@ async function getUserContext(dbUserId: string): Promise<ChatUserContext> {
         select: { currentStreak: true },
     })
 
+    const locale = (await cookies()).get('NEXT_LOCALE')?.value || 'vi'
+
     return {
         displayName: profile?.displayName ?? 'Learner',
         level: profile?.currentLevel ?? 'A1',
@@ -77,7 +80,7 @@ async function getUserContext(dbUserId: string): Promise<ChatUserContext> {
         strongSkills: learningPath?.strongSkills ?? [],
         recentVocab: recentCards
             .filter(c => c.vocabularyItem)
-            .map(c => `${c.vocabularyItem!.word} (${c.vocabularyItem!.meaningVi})`),
+            .map(c => `${c.vocabularyItem!.word} (${(c.vocabularyItem!.translations as any)?.[locale] || ''})`),
         streak: streak?.currentStreak ?? 0,
         totalXp: profile?.totalXp ?? 0,
     }

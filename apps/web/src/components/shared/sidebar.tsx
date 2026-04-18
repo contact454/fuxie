@@ -3,20 +3,22 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { usePathname } from 'next/navigation'
+import { useTranslations } from 'next-intl'
+import { LanguageSwitcher } from './LanguageSwitcher'
 
 const navItems = [
-    { href: '/dashboard', label: 'Dashboard', labelDe: 'Übersicht', icon: '/mascot/state/fuxie-state-welcome.png' },
-    { href: '/course', label: 'Khóa học', labelDe: 'Kurs', icon: '/mascot/learn/fuxie-learn-studying.png' },
-    { href: '/vocabulary', label: 'Từ vựng', labelDe: 'Wortschatz', icon: '/mascot/skill/fuxie-skill-wortschatz.png' },
-    { href: '/grammar', label: 'Ngữ pháp', labelDe: 'Grammatik', icon: '/mascot/skill/fuxie-skill-grammatik.png' },
-    { href: '/reading', label: 'Đọc', labelDe: 'Lesen', icon: '/mascot/skill/fuxie-skill-lesen.png' },
-    { href: '/listening', label: 'Nghe', labelDe: 'Hören', icon: '/mascot/skill/fuxie-skill-hoeren.png' },
-    { href: '/writing', label: 'Viết', labelDe: 'Schreiben', icon: '/mascot/skill/fuxie-skill-schreiben.png' },
-    { href: '/speaking', label: 'Nói', labelDe: 'Sprechen', icon: '/mascot/skill/fuxie-skill-sprechen.png' },
-    { href: '/chat', label: 'Chat AI', labelDe: 'KI-Chat', icon: '/mascot/core/fuxie-core-happy-wave.png' },
-    { href: '/leaderboard', label: 'Xếp hạng', labelDe: 'Rangliste', icon: '/mascot/learn/fuxie-learn-graduation.png' },
-    { href: '/exam', label: 'Thi thử', labelDe: 'Prüfung', icon: '/mascot/learn/fuxie-learn-graduation.png' },
-    { href: '/review', label: 'Ôn tập SRS', labelDe: 'Wiederholen', icon: '/mascot/learn/fuxie-learn-studying.png' },
+    { href: '/dashboard', labelKey: 'dashboard', icon: '/mascot/state/fuxie-state-welcome.png' },
+    { href: '/course', labelKey: 'course', icon: '/mascot/learn/fuxie-learn-studying.png' },
+    { href: '/vocabulary', labelKey: 'vocabulary', icon: '/mascot/skill/fuxie-skill-wortschatz.png' },
+    { href: '/grammar', labelKey: 'grammar', icon: '/mascot/skill/fuxie-skill-grammatik.png' },
+    { href: '/reading', labelKey: 'reading', icon: '/mascot/skill/fuxie-skill-lesen.png' },
+    { href: '/listening', labelKey: 'listening', icon: '/mascot/skill/fuxie-skill-hoeren.png' },
+    { href: '/writing', labelKey: 'writing', icon: '/mascot/skill/fuxie-skill-schreiben.png' },
+    { href: '/speaking', labelKey: 'speaking', icon: '/mascot/skill/fuxie-skill-sprechen.png' },
+    { href: '/chat', labelKey: 'chat', icon: '/mascot/core/fuxie-core-happy-wave.png' },
+    { href: '/leaderboard', labelKey: 'leaderboard', icon: '/mascot/learn/fuxie-learn-graduation.png' },
+    { href: '/exam', labelKey: 'exam', icon: '/mascot/learn/fuxie-learn-graduation.png' },
+    { href: '/review', labelKey: 'review', icon: '/mascot/learn/fuxie-learn-studying.png' },
 ]
 
 interface SidebarProps {
@@ -29,6 +31,7 @@ interface SidebarProps {
 
 export function Sidebar({ dailyGoal }: SidebarProps) {
     const pathname = usePathname()
+    const t = useTranslations('Navigation')
 
     const goalPercent = dailyGoal && dailyGoal.goalMinutes > 0
         ? Math.min(100, Math.round((dailyGoal.currentMinutes / dailyGoal.goalMinutes) * 100))
@@ -50,6 +53,10 @@ export function Sidebar({ dailyGoal }: SidebarProps) {
                     Fuxie
                 </span>
             </div>
+            
+            <div className="flex justify-center border-b border-gray-100 px-6 py-2">
+                <LanguageSwitcher />
+            </div>
 
             {/* Navigation */}
             <nav className="flex-1 overflow-y-auto px-3 py-4">
@@ -68,16 +75,13 @@ export function Sidebar({ dailyGoal }: SidebarProps) {
                                 >
                                     <Image
                                         src={item.icon}
-                                        alt={item.labelDe}
+                                        alt={item.labelKey}
                                         width={28}
                                         height={28}
                                         className="object-contain shrink-0"
                                     />
                                     <div className="flex flex-col">
-                                        <span>{item.labelDe}</span>
-                                        <span className={`text-[10px] ${isActive ? 'text-[#FF6B35]/60' : 'text-gray-400'}`}>
-                                            {item.label}
-                                        </span>
+                                        <span>{t(item.labelKey as any)}</span>
                                     </div>
                                 </Link>
                             </li>

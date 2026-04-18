@@ -13,14 +13,14 @@ import type { ExerciseAnswer } from '@/hooks/use-submit-exercise'
 // ─── Types ──────────────────────────────────────────
 interface McQuestion {
     id: string
-    type: string // 'de_to_vi' | 'vi_to_de' | 'image_to_word' | 'audio_to_word'
+    type: string // 'de_to_native' | 'native_to_de' | 'image_to_word' | 'audio_to_word'
     prompt: string
     promptImage: string | null
     promptAudio: string | null
     options: string[]
     wordId: string
     word: string
-    meaningVi: string
+    meaningNative: string
 }
 
 interface McExerciseProps {
@@ -78,9 +78,9 @@ export function McExercise({ questions, cefrLevel, themeName, themeSlug, onExit,
         setSelectedAnswer(option)
         setIsRevealed(true)
 
-        const correctAnswer = question.type === 'de_to_vi'
-            ? question.meaningVi
-            : question.word  // vi_to_de, image_to_word, audio_to_word
+        const correctAnswer = question.type === 'de_to_native'
+            ? question.meaningNative
+            : question.word  // native_to_de, image_to_word, audio_to_word
 
         const correct = option === correctAnswer
         setIsCorrect(correct)
@@ -116,8 +116,8 @@ export function McExercise({ questions, cefrLevel, themeName, themeSlug, onExit,
     // ─── Variant Labels ─────────────────────────────
     const getQuestionLabel = () => {
         switch (question.type) {
-            case 'de_to_vi': return `Was bedeutet "${question.prompt}"?`
-            case 'vi_to_de': return `"${question.prompt}" auf Deutsch?`
+            case 'de_to_native': return `Was bedeutet "${question.prompt}"?`
+            case 'native_to_de': return `"${question.prompt}" auf Deutsch?`
             case 'image_to_word': return 'Welches Wort passt zum Bild?'
             case 'audio_to_word': return 'Welches Wort hörst du?'
             default: return question.prompt
@@ -191,12 +191,12 @@ export function McExercise({ questions, cefrLevel, themeName, themeSlug, onExit,
                             </button>
                         )}
 
-                        {/* Text prompt (de_to_vi, vi_to_de) */}
-                        {(question.type === 'de_to_vi' || question.type === 'vi_to_de') && (
+                        {/* Text prompt (de_to_native, native_to_de) */}
+                        {(question.type === 'de_to_native' || question.type === 'native_to_de') && (
                             <div className="mb-4">
                                 <p className="text-3xl font-black text-gray-900">{question.prompt}</p>
-                                {/* Audio button for de_to_vi */}
-                                {question.type === 'de_to_vi' && question.promptAudio && (
+                                {/* Audio button for de_to_native */}
+                                {question.type === 'de_to_native' && question.promptAudio && (
                                     <button
                                         onClick={() => playSound(question.promptAudio)}
                                         className="mt-2 inline-flex items-center gap-1 text-[#004E89] hover:text-blue-700 transition-colors"
@@ -258,7 +258,7 @@ export function McExercise({ questions, cefrLevel, themeName, themeSlug, onExit,
             {isRevealed && isCorrect !== null && (
                 <BottomFeedback
                     isCorrect={isCorrect}
-                    correctAnswer={question.type === 'de_to_vi' ? question.meaningVi : question.word}
+                    correctAnswer={question.type === 'de_to_native' ? question.meaningNative : question.word}
                     onContinue={handleContinue}
                 />
             )}

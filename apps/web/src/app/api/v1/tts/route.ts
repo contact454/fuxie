@@ -20,6 +20,7 @@ import { cacheGet, cacheSet } from '@/lib/cache/redis'
 const querySchema = z.object({
     text: z.string().min(1).max(200),
     speed: z.coerce.number().min(0.5).max(2.0).default(1.0),
+    lang: z.string().default('de'),
 })
 
 const TTS_CACHE_TTL = 7 * 24 * 60 * 60 // 7 days in seconds
@@ -85,9 +86,9 @@ async function getAccessToken(): Promise<string> {
  * Generate a short hash key for the TTS cache.
  * Using a simple FNV-1a-like hash to avoid crypto import overhead for cache keys.
  */
-function ttsCacheKey(text: string, speed: number): string {
+function ttsCacheKey(text: string, speed: number, lang: string): string {
     // Normalize: lowercase, trim whitespace, round speed to 1 decimal
-    const normalized = `${text.trim().toLowerCase()}|${speed.toFixed(1)}`
+    const normalized = `${text.trim().toLowerCase()}|${speed.toFixed(1)}|${lang}`
     // Simple hash — collisions are harmless (just re-fetch TTS)
     let hash = 0x811c9dc5
     for (let i = 0; i < normalized.length; i++) {
@@ -97,15 +98,24 @@ function ttsCacheKey(text: string, speed: number): string {
     return `tts:${hash.toString(36)}`
 }
 
+const getVoiceConfig = (lang: string) => {
+    switch (lang) {
+        case 'en': return { languageCode: 'en-US', name: 'en-US-Neural2-F', ssmlGender: 'FEMALE' };
+        case 'vi': return { languageCode: 'vi-VN', name: 'vi-VN-Wavenet-A', ssmlGender: 'FEMALE' }; // Vietnamese voice
+        case 'de':
+        default: return { languageCode: 'de-DE', name: 'de-DE-Wavenet-C', ssmlGender: 'FEMALE' };
+    }
+}
+
 export async function GET(req: NextRequest) {
     try {
         await withAuth(req)
 
         const params = Object.fromEntries(req.nextUrl.searchParams)
-        const { text, speed } = querySchema.parse(params)
+        const { text, speed, lang } = querySchema.parse(params)
 
         // ── Check server-side cache ──────────────────
-        const cacheKey = ttsCacheKey(text, speed)
+        const cacheKey = ttsCacheKey(text, speed, lang)
         const cachedAudio = await cacheGet<string>(cacheKey)
 
         if (cachedAudio) {
@@ -134,11 +144,7 @@ export async function GET(req: NextRequest) {
                 },
                 body: JSON.stringify({
                     input: { text },
-                    voice: {
-                        languageCode: 'de-DE',
-                        name: 'de-DE-Wavenet-C', // Female Hochdeutsch
-                        ssmlGender: 'FEMALE',
-                    },
+                    voice: getVoiceConfig(lang),
                     audioConfig: {
                         audioEncoding: 'MP3',
                         speakingRate: speed,

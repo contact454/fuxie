@@ -438,7 +438,7 @@ export default function NachsprechenPlayer({ sentences, config, lessonTitle, les
         </button>
         <div className={styles.sentenceTextDe}>{sentence.textDe}</div>
         {config.showTranslation && (
-          <div className={styles.sentenceTextVi}>{sentence.textVi}</div>
+          <div className={styles.sentenceTextVi}>{sentence.textNative}</div>
         )}
         {config.showIPA && (
           <div className={styles.sentenceIpa}>{sentence.ipa}</div>

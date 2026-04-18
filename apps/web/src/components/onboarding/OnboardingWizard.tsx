@@ -336,7 +336,7 @@ function PlacementStep({
 
             {/* Question Card */}
             <div className="bg-white rounded-2xl shadow-lg p-6 mb-4">
-                <p className="text-sm text-gray-400 mb-1">{question.questionVi}</p>
+                <p className="text-sm text-gray-400 mb-1">{question.questionNative}</p>
                 <p className="text-xl font-semibold text-gray-900 mb-6 leading-relaxed">
                     {question.questionDe}
                 </p>
@@ -384,7 +384,7 @@ function PlacementStep({
                     <div className="font-bold mb-1">
                         {lastCorrect ? '✅ Richtig!' : '❌ Leider falsch'}
                     </div>
-                    <div className="text-xs opacity-80">{question.explanationVi}</div>
+                    <div className="text-xs opacity-80">{question.explanationNative}</div>
                 </div>
             )}
         </div>

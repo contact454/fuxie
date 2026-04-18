@@ -1,5 +1,6 @@
 import { notFound, redirect } from 'next/navigation'
 import { prisma } from '@fuxie/database'
+import { cookies } from 'next/headers'
 import { getServerUser } from '@/lib/auth/server-auth'
 import { WritingPlayer } from '@/components/writing/writing-player'
 
@@ -15,6 +16,7 @@ export default async function WritingExercisePage({ params }: { params: Promise<
     if (!serverUser) redirect('/login')
 
     const { exerciseId } = await params
+    const locale = (await cookies()).get('NEXT_LOCALE')?.value || 'vi'
 
     const exercise = await prisma.writingExercise.findUnique({
         where: { exerciseId },
@@ -33,7 +35,7 @@ export default async function WritingExercisePage({ params }: { params: Promise<
                 register={exercise.register}
                 topic={exercise.topic}
                 instruction={exercise.instruction}
-                instructionVi={exercise.instructionVi}
+                instructionNative={(exercise.translations as any)?.[locale] || (exercise.translations as any)?.['en'] || ''}
                 situation={exercise.situation}
                 contentPoints={exercise.contentPoints as string[]}
                 formFields={exercise.formFields as any[] | null}

@@ -14,7 +14,7 @@ interface FormField {
 interface RubricCriterion {
     id: string
     name: string
-    nameVi?: string
+    nameNative?: string
     maxScore: number
 }
 
@@ -26,23 +26,23 @@ interface AiFeedback {
     criteria: Array<{
         id: string
         name: string
-        nameVi?: string
+        nameNative?: string
         score: number
         maxScore: number
         reasoning: string
-        reasoningVi?: string
+        reasoningNative?: string
         suggestions: string[]
-        suggestionsVi?: string[]
+        suggestionsNative?: string[]
     }>
     overallFeedback: string
-    overallFeedbackVi?: string
+    overallFeedbackNative?: string
     corrections: Array<{
         original: string
         corrected: string
         type: string
-        typeVi?: string
+        typeNative?: string
         explanation: string
-        explanationVi?: string
+        explanationNative?: string
     }>
 }
 
@@ -55,7 +55,7 @@ interface WritingPlayerProps {
     register: string
     topic: string
     instruction: string
-    instructionVi: string | null
+    instructionNative: string | null
     situation: string
     contentPoints: string[]
     formFields: FormField[] | null
@@ -332,8 +332,8 @@ export function WritingPlayer(props: WritingPlayerProps) {
                         </div>
                     )}
                     <p className="text-gray-600 mt-3 text-sm">{feedback.overallFeedback}</p>
-                    {feedback.overallFeedbackVi && (
-                        <p className="text-gray-400 mt-1 text-xs italic">🇻🇳 {feedback.overallFeedbackVi}</p>
+                    {feedback.overallFeedbackNative && (
+                        <p className="text-gray-400 mt-1 text-xs italic">🇻🇳 {feedback.overallFeedbackNative}</p>
                     )}
                 </div>
 
@@ -349,7 +349,7 @@ export function WritingPlayer(props: WritingPlayerProps) {
                                     <div className="flex items-center justify-between mb-1">
                                         <div>
                                             <span className="text-sm font-semibold text-gray-800">{c.name}</span>
-                                            {c.nameVi && <span className="text-xs text-gray-400 ml-2">{c.nameVi}</span>}
+                                            {c.nameNative && <span className="text-xs text-gray-400 ml-2">{c.nameNative}</span>}
                                         </div>
                                         <span className="text-sm font-bold" style={{ color: barColor }}>{c.score}/{c.maxScore}</span>
                                     </div>
@@ -358,11 +358,11 @@ export function WritingPlayer(props: WritingPlayerProps) {
                                             style={{ width: `${percent}%`, backgroundColor: barColor }} />
                                     </div>
                                     <p className="text-xs text-gray-500 mt-1 italic">{c.reasoning}</p>
-                                    {c.reasoningVi && <p className="text-xs text-gray-400 italic">🇻🇳 {c.reasoningVi}</p>}
-                                    {c.suggestionsVi && c.suggestionsVi.length > 0 && (
+                                    {c.reasoningNative && <p className="text-xs text-gray-400 italic">🇻🇳 {c.reasoningNative}</p>}
+                                    {c.suggestionsNative && c.suggestionsNative.length > 0 && (
                                         <div className="mt-1.5 pl-2 border-l-2 border-blue-200">
                                             <p className="text-xs font-medium text-blue-600 mb-0.5">💡 Gợi ý cải thiện:</p>
-                                            {c.suggestionsVi.map((s: string, si: number) => (
+                                            {c.suggestionsNative.map((s: string, si: number) => (
                                                 <p key={si} className="text-xs text-blue-500">• {s}</p>
                                             ))}
                                         </div>
@@ -383,7 +383,7 @@ export function WritingPlayer(props: WritingPlayerProps) {
                                     <div className="flex items-start gap-2">
                                         <div className="shrink-0 flex flex-col gap-0.5">
                                             <span className="text-xs font-bold px-2 py-0.5 rounded bg-red-100 text-red-700">{c.type}</span>
-                                            {c.typeVi && <span className="text-[10px] text-gray-400 text-center">{c.typeVi}</span>}
+                                            {c.typeNative && <span className="text-[10px] text-gray-400 text-center">{c.typeNative}</span>}
                                         </div>
                                         <div>
                                             <p className="text-sm">
@@ -392,7 +392,7 @@ export function WritingPlayer(props: WritingPlayerProps) {
                                                 <span className="text-green-600 font-medium">{c.corrected}</span>
                                             </p>
                                             <p className="text-xs text-gray-500 mt-1">{c.explanation}</p>
-                                            {c.explanationVi && <p className="text-xs text-gray-400">🇻🇳 {c.explanationVi}</p>}
+                                            {c.explanationNative && <p className="text-xs text-gray-400">🇻🇳 {c.explanationNative}</p>}
                                         </div>
                                     </div>
                                 </div>
@@ -463,8 +463,8 @@ export function WritingPlayer(props: WritingPlayerProps) {
 
                         {/* Situation */}
                         <p className="text-sm text-gray-800 leading-relaxed mb-2">{props.situation}</p>
-                        {props.instructionVi && (
-                            <p className="text-xs text-gray-400 mb-4 italic">{props.instructionVi}</p>
+                        {props.instructionNative && (
+                            <p className="text-xs text-gray-400 mb-4 italic">{props.instructionNative}</p>
                         )}
 
                         {/* ─── Stimulus Material ─── */}

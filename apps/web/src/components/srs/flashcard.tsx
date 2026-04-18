@@ -1,5 +1,6 @@
 'use client'
 
+import { useLocale } from 'next-intl'
 import { GENDER_ARTICLES } from '@fuxie/shared/types'
 import Image from 'next/image'
 
@@ -10,8 +11,7 @@ interface VocabData {
     article: string | null
     plural: string | null
     wordType: string
-    meaningVi: string
-    meaningEn: string | null
+    translations: Record<string, string> | null
     exampleSentence1: string | null
     exampleTranslation1: string | null
     exampleSentence2: string | null
@@ -40,14 +40,17 @@ const WORD_TYPE_LABELS: Record<string, string> = {
 }
 
 export function Flashcard({ vocabulary, isFlipped, onFlip }: FlashcardProps) {
+    const locale = useLocale();
     const {
-        word, article, plural, wordType, meaningVi, meaningEn,
+        word, article, plural, wordType, translations,
         exampleSentence1, exampleTranslation1, exampleSentence2, exampleTranslation2,
         notes, conjugation, audioUrl, imageUrl
     } = vocabulary
 
     const articleText = article ? GENDER_ARTICLES[article as keyof typeof GENDER_ARTICLES] : null
     const articleColor = article ? ARTICLE_COLORS[article] ?? '#6B7280' : '#6B7280'
+    
+    const displayMeaning = translations?.[locale] || translations?.['vi'] || '';
 
     return (
         <div className="w-full max-w-lg mx-auto" style={{ perspective: '1000px' }}>
@@ -145,8 +148,7 @@ export function Flashcard({ vocabulary, isFlipped, onFlip }: FlashcardProps) {
 
                     {/* Meaning */}
                     <div className="text-center mb-3">
-                        <p className="text-2xl font-bold text-gray-900">{meaningVi}</p>
-                        {meaningEn ? <p className="text-sm text-gray-500 mt-0.5">{meaningEn}</p> : null}
+                        <p className="text-2xl font-bold text-gray-900">{displayMeaning}</p>
                     </div>
 
                     {/* Divider */}

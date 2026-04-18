@@ -82,7 +82,7 @@ type Step =
 interface LessonPlayerProps {
     lessonId: string
     titleDe: string
-    titleVi: string
+    titleNative: string
     level: string
     lessonType: string
     estimatedMin: number
@@ -92,7 +92,7 @@ interface LessonPlayerProps {
 }
 
 export function LessonPlayer({
-    lessonId, titleDe, titleVi, level, lessonType, estimatedMin,
+    lessonId, titleDe, titleNative, level, lessonType, estimatedMin,
     theoryBlocks, exercises, topicSlug,
 }: LessonPlayerProps) {
     const confettiTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null)
@@ -238,7 +238,7 @@ export function LessonPlayer({
                 <div className={s.heroCard}>
                     <div className={s.heroGradient}>
                         <span className={s.heroEmoji}>{lessonTypeEmoji}</span>
-                        <h1 className={s.heroTitle}>{titleVi}</h1>
+                        <h1 className={s.heroTitle}>{titleNative}</h1>
                         <p className={s.heroSubtitle}>{titleDe} · {level} · {lessonTypeLabel}</p>
                         <div className={s.heroChips}>
                             {theoryBlocks.length > 0 && <span className={s.heroChip}>📝 {theoryBlocks.length} phần lý thuyết</span>}

@@ -15,7 +15,7 @@ const getListeningLesson = cache(async (lessonId: string) => {
                     questionNumber: true,
                     questionType: true,
                     questionText: true,
-                    questionTextVi: true,
+                    translations: true,
                     options: true,
                     sortOrder: true,
                 },
@@ -60,7 +60,11 @@ export default async function ListeningLessonPage({ params }: { params: Promise<
             audioUrl={lesson.audioUrl}
             audioDuration={lesson.audioDuration}
             backgroundScene={lesson.backgroundScene}
-            questions={lesson.questions.map(q => ({ ...q, options: q.options as string[] }))}
+            questions={lesson.questions.map(q => ({
+                ...q,
+                options: q.options as string[],
+                questionTextNative: ((q.translations as Record<string, string>)?.[serverUser.uiLanguage || 'vi']) || null
+            }))}
             transcript={lesson.transcript as any}
             maxPlays={MAX_PLAYS[lesson.cefrLevel] || 2}
         />

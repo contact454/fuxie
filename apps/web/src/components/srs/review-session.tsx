@@ -16,8 +16,7 @@ interface CardData {
         article: string | null
         plural: string | null
         wordType: string
-        meaningVi: string
-        meaningEn: string | null
+        translations: Record<string, string> | null
         exampleSentence1: string | null
         exampleTranslation1: string | null
         exampleSentence2: string | null

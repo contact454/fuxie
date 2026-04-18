@@ -1,7 +1,7 @@
 generator client {
   provider        = "prisma-client-js"
   binaryTargets   = ["native", "rhel-openssl-3.0.x"]
-  // output          = "../../../apps/web/generated/prisma"
+  output          = "../../../apps/web/generated/prisma"
   previewFeatures = ["driverAdapters"]
 }
 
@@ -162,7 +162,7 @@ model UserProfile {
 
   displayName      String?
   avatarUrl        String?
-  uiLanguage       String     @default("vi")
+  nativeLanguage   String     @default("vi")
   currentLevel     CefrLevel  @default(A1)
   targetLevel      CefrLevel?
   targetExam       ExamType?
@@ -315,7 +315,6 @@ model Exercise {
 
   instruction   String
   instructionDe String?
-  translations  Json?
   contentJson   Json
   audioUrl      String?
   imageUrl      String?
@@ -350,11 +349,11 @@ model Exercise {
 // ===== VOCABULARY =====
 
 model VocabularyTheme {
-  id           String @id @default(uuid())
-  slug         String @unique
-  name         String
-  translations Json?
-
+  id        String    @id @default(uuid())
+  slug      String    @unique
+  name      String
+  nameVi    String?
+  nameEn    String?
   cefrLevel CefrLevel
   imageUrl  String?
   sortOrder Int       @default(0)
@@ -380,7 +379,8 @@ model VocabularyItem {
   wordType  WordType
   cefrLevel CefrLevel
 
-  translations Json?
+  meaningVi String
+  meaningEn String?
 
   ipa      String?
   audioUrl String?
@@ -412,15 +412,15 @@ model VocabularyItem {
 // ===== GRAMMAR =====
 
 model GrammarTopic {
-  id           String        @id @default(uuid())
-  slug         String        @unique
-  title        String
-  titleDe      String?
-  translations Json?
-  description  String?
-  cefrLevel    CefrLevel
-  sortOrder    Int           @default(0)
-  status       ContentStatus @default(DRAFT)
+  id          String        @id @default(uuid())
+  slug        String        @unique
+  title       String
+  titleDe     String?
+  titleVi     String?
+  description String?
+  cefrLevel   CefrLevel
+  sortOrder   Int           @default(0)
+  status      ContentStatus @default(DRAFT)
 
   explanation   String?
   explanationDe String?
@@ -467,7 +467,7 @@ model GrammarLesson {
   lessonType    String // "E" | "V" | "A"
   lessonNumber  Int
   titleDe       String
-  translations  Json?
+  titleVi       String
   estimatedMin  Int           @default(8)
   tags          String[]
   theoryJson    Json? // theory blocks (null for A-lessons)
@@ -872,20 +872,20 @@ model ListeningLesson {
 }
 
 model ListeningQuestion {
-  id               String          @id @default(uuid())
-  lessonId         String
-  lesson           ListeningLesson @relation(fields: [lessonId], references: [id], onDelete: Cascade)
-  questionNumber   Int // 1-15
-  questionType     String // "mc_abc", "richtig_falsch", "zuordnung", "ja_nein"
-  questionText     String // German question
-  translations     Json? // Vietnamese translation
-  options          Json // ["a) ...", "b) ...", "c) ..."]
-  correctAnswer    String // "b"
-  explanation      String? // Why this answer is correct
-  explanationTrans Json? // Vietnamese explanation
-  timestampStart   Float? // Audio timestamp where answer appears
-  timestampEnd     Float?
-  sortOrder        Int             @default(0)
+  id             String          @id @default(uuid())
+  lessonId       String
+  lesson         ListeningLesson @relation(fields: [lessonId], references: [id], onDelete: Cascade)
+  questionNumber Int // 1-15
+  questionType   String // "mc_abc", "richtig_falsch", "zuordnung", "ja_nein"
+  questionText   String // German question
+  questionTextVi String? // Vietnamese translation
+  options        Json // ["a) ...", "b) ...", "c) ..."]
+  correctAnswer  String // "b"
+  explanation    String? // Why this answer is correct
+  explanationVi  String? // Vietnamese explanation
+  timestampStart Float? // Audio timestamp where answer appears
+  timestampEnd   Float?
+  sortOrder      Int             @default(0)
 
   responses ListeningResponse[]
 
@@ -1059,7 +1059,7 @@ model WritingExercise {
 
   // Task definition
   instruction    String // Aufgabenstellung (German)
-  translations   Json?
+  instructionVi  String? // Vietnamese translation
   situation      String // Kontext/Situation
   contentPoints  Json // ["Sich vorstellen", "Interesse zeigen", ...]
   sampleResponse String? // Musterlösung
@@ -1139,14 +1139,14 @@ model WritingAttempt {
 // ===== SPEAKING =====
 
 model SpeakingTopic {
-  id           String        @id @default(uuid())
-  slug         String        @unique // "a1-begruessung"
-  titleDe      String
-  translations Json?
-  description  String?
-  cefrLevel    CefrLevel
-  sortOrder    Int           @default(0)
-  status       ContentStatus @default(DRAFT)
+  id          String        @id @default(uuid())
+  slug        String        @unique // "a1-begruessung"
+  titleDe     String
+  titleVi     String
+  description String?
+  cefrLevel   CefrLevel
+  sortOrder   Int           @default(0)
+  status      ContentStatus @default(DRAFT)
 
   lessons SpeakingLesson[]
 
@@ -1165,7 +1165,7 @@ model SpeakingLesson {
   lessonType    String // "E" | "V" | "A"
   lessonNumber  Int
   titleDe       String
-  translations  Json?
+  titleVi       String
   exerciseType  String // "nachsprechen" | "wort_lesen" | etc.
   exercisesJson Json // array of exercise items
   configJson    Json? // { maxRecordingSec, minAccuracy, attemptsAllowed, ... }

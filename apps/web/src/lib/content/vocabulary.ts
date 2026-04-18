@@ -13,8 +13,7 @@ export async function getVocabularyThemes(level: CefrLevel) {
                 id: true,
                 slug: true,
                 name: true,
-                nameVi: true,
-                nameEn: true,
+                translations: true,
                 cefrLevel: true,
                 imageUrl: true,
                 _count: { select: { items: true } },
@@ -28,8 +27,7 @@ export function mapVocabularyThemes<
         id: string
         slug: string
         name: string
-        nameVi: string | null
-        nameEn?: string | null
+        translations: any
         cefrLevel: string
         imageUrl: string | null
         _count: { items: number }
@@ -39,8 +37,7 @@ export function mapVocabularyThemes<
         id: theme.id,
         slug: theme.slug,
         name: theme.name,
-        nameVi: theme.nameVi,
-        nameEn: 'nameEn' in theme ? theme.nameEn ?? null : null,
+        translations: theme.translations,
         cefrLevel: theme.cefrLevel,
         imageUrl: theme.imageUrl,
         wordCount: theme._count.items,
@@ -75,8 +72,11 @@ export function buildVocabularyItemWhere(params: {
             ? {
                 OR: [
                     { word: { contains: search, mode: 'insensitive' } },
-                    { meaningVi: { contains: search, mode: 'insensitive' } },
-                    { meaningEn: { contains: search, mode: 'insensitive' } },
+                    { 
+                        translations: { 
+                            string_contains: search 
+                        } 
+                    }
                 ],
             }
             : {}),

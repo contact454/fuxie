@@ -71,7 +71,7 @@ export default function SpeakingClient({
             <button className={styles.progressBarClose} onClick={() => setSelectedTopic(null)}>←</button>
             <div style={{ flex: 1 }}>
               <h2 style={{ fontSize: 18, fontWeight: 700, color: '#111827', margin: 0 }}>
-                {freshTopic.titleVi}
+                {freshTopic.titleNative}
               </h2>
               <p style={{ fontSize: 13, color: '#6B7280', margin: 0 }}>
                 {freshTopic.titleDe} · {topicCompleted}/{freshTopic.lessons.length} hoàn thành · ⭐ {topicStars}
@@ -101,7 +101,7 @@ export default function SpeakingClient({
                   {isCompleted ? '✅' : lesson.lessonType === 'E' ? '📖' : lesson.lessonType === 'V' ? '🔄' : '🎯'}
                 </div>
                 <div className={styles.topicInfo}>
-                  <div className={styles.topicTitle}>{lesson.titleVi}</div>
+                  <div className={styles.topicTitle}>{lesson.titleNative}</div>
                   <div className={styles.topicSubtitle}>
                     {lesson.lessonType === 'E' ? 'Einführung' : lesson.lessonType === 'V' ? 'Vertiefung' : 'Anwendung'}
                     {' · '}{lesson.estimatedMin} phút
@@ -219,7 +219,7 @@ export default function SpeakingClient({
                     {topicCompleted === topicTotal && topicTotal > 0 ? '✅' : '🗣️'}
                   </div>
                   <div className={styles.topicInfo}>
-                    <div className={styles.topicTitle}>{topic.titleVi}</div>
+                    <div className={styles.topicTitle}>{topic.titleNative}</div>
                     <div className={styles.topicSubtitle}>
                       {topic.titleDe} · {topicCompleted}/{topicTotal} bài
                     </div>

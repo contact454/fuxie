@@ -2,6 +2,8 @@ import type { Metadata, Viewport } from 'next'
 import './globals.css'
 import { PwaRegistration } from '@/components/shared/PwaRegistration'
 import { InstallPrompt } from '@/components/shared/InstallPrompt'
+import { NextIntlClientProvider } from 'next-intl';
+import { getMessages, getLocale } from 'next-intl/server';
 
 export const metadata: Metadata = {
     title: 'Fuxie 🦊 — Học tiếng Đức thông minh',
@@ -26,17 +28,22 @@ export const viewport: Viewport = {
     themeColor: '#FF6B35',
 }
 
-export default function RootLayout({
+export default async function RootLayout({
     children,
 }: Readonly<{
     children: React.ReactNode
 }>) {
+    const locale = await getLocale();
+    const messages = await getMessages();
+
     return (
-        <html lang="vi">
+        <html lang={locale}>
             <body>
-                {children}
-                <PwaRegistration />
-                <InstallPrompt />
+                <NextIntlClientProvider messages={messages}>
+                    {children}
+                    <PwaRegistration />
+                    <InstallPrompt />
+                </NextIntlClientProvider>
             </body>
         </html>
     )

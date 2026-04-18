@@ -23,7 +23,7 @@ async function callGeminiWithAudio(
   base64Audio: string,
   mimeType: string,
   prompt: string
-): Promise<{ transcript: string; score: number; feedbackVi: string; issues: any[] }> {
+): Promise<{ transcript: string; score: number; feedbackNative: string; issues: any[] }> {
   const body = {
     contents: [{
       parts: [
@@ -94,11 +94,11 @@ async function callGeminiWithAudio(
           // Truncated — extract what we can
           const transcriptMatch = fixedJson.match(/"transcript"\s*:\s*"([^"]*)"/)
           const scoreMatch = fixedJson.match(/"score"\s*:\s*(\d+)/)
-          const feedbackMatch = fixedJson.match(/"feedbackVi"\s*:\s*"([^"]*)"/)
+          const feedbackMatch = fixedJson.match(/"feedbackNative"\s*:\s*"([^"]*)"/)
           return {
             transcript: transcriptMatch?.[1] || '',
             score: scoreMatch ? parseInt(scoreMatch[1]) : 0,
-            feedbackVi: feedbackMatch?.[1] || '',
+            feedbackNative: feedbackMatch?.[1] || '',
             issues: []
           }
         }
@@ -158,7 +158,7 @@ REGELN:
 - Bewertung: 90+=perfekt, 70-89=gut, 50-69=ok, 30-49=schwach, 0-29=falsch
 
 Antworte NUR als valides JSON ohne Markdown:
-{"transcript":"...","score":0,"feedbackVi":"...","issues":[{"word":"...","issueVi":"..."}]}`
+{"transcript":"...","score":0,"feedbackNative":"...","issues":[{"word":"...","issueVi":"..."}]}`
 
       const parsed = await callGeminiWithAudio(base64Data, mimeType, prompt)
 
@@ -168,8 +168,8 @@ Antworte NUR als valides JSON ohne Markdown:
         usedAI = true
 
       
-        if (parsed.feedbackVi) {
-          overallTips.push(`💡 ${parsed.feedbackVi}`)
+        if (parsed.feedbackNative) {
+          overallTips.push(`💡 ${parsed.feedbackNative}`)
         }
         if (parsed.issues?.length > 0) {
           parsed.issues.forEach((issue: any) => {

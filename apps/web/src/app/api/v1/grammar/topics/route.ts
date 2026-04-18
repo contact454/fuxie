@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { z } from 'zod'
 import { prisma } from '@fuxie/database'
+import { cookies } from 'next/headers'
 import { getServerUser } from '@/lib/auth/server-auth'
 import { handleApiError } from '@/lib/api/error-handler'
 
@@ -20,7 +21,7 @@ export async function GET(req: NextRequest) {
         const topics = await prisma.grammarTopic.findMany({
             where: { cefrLevel: level },
             orderBy: { sortOrder: 'asc' },
-            select: { id: true, slug: true, titleDe: true, title: true, titleVi: true, cefrLevel: true, sortOrder: true },
+            select: { id: true, slug: true, titleDe: true, title: true, translations: true, cefrLevel: true, sortOrder: true },
         })
 
         const topicIds = topics.map((t) => t.id)
@@ -28,7 +29,7 @@ export async function GET(req: NextRequest) {
             ? await prisma.grammarLesson.findMany({
                 where: { topicId: { in: topicIds } },
                 orderBy: { sortOrder: 'asc' },
-                select: { id: true, topicId: true, lessonType: true, lessonNumber: true, titleVi: true, estimatedMin: true },
+                select: { id: true, topicId: true, lessonType: true, lessonNumber: true, translations: true, estimatedMin: true },
             })
             : []
 
@@ -59,19 +60,21 @@ export async function GET(req: NextRequest) {
             }
         }
 
+        const locale = (await cookies()).get('NEXT_LOCALE')?.value || 'vi'
+
         const topicsWithProgress = topics.map((t: any) => {
             const topicLessons = lessonsByTopic[t.id] || []
             return {
                 id: t.id,
                 slug: t.slug,
                 titleDe: t.titleDe ?? t.title ?? '',
-                titleVi: t.titleVi ?? '',
+                titleNative: (t.translations as any)?.[locale] || t.titleDe || '',
                 cefrLevel: t.cefrLevel,
                 lessons: topicLessons.map((l: any) => ({
                     id: l.id,
                     lessonType: l.lessonType,
                     lessonNumber: l.lessonNumber,
-                    titleVi: l.titleVi,
+                    titleNative: (l.translations as any)?.[locale] || '',
                     estimatedMin: l.estimatedMin,
                     progress: progressMap[l.id] ?? null,
                 })),

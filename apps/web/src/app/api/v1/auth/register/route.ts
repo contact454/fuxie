@@ -60,7 +60,7 @@ export async function POST(req: NextRequest) {
                     data: {
                         userId: newUser.id,
                         displayName: data.displayName ?? null,
-                        nativeLanguage: data.nativeLanguage,
+                        uiLanguage: data.nativeLanguage || 'vi',
                         currentLevel: 'A1',
                         targetLevel: data.targetLevel ?? 'B1',
                         targetExam: data.targetExam ?? null,

@@ -1,5 +1,6 @@
 import { redirect, notFound } from 'next/navigation'
 import { prisma } from '@fuxie/database'
+import { cookies } from 'next/headers'
 import { getServerUser } from '@/lib/auth/server-auth'
 import dynamic from 'next/dynamic'
 
@@ -21,10 +22,10 @@ export async function generateMetadata({ params }: { params: Promise<{ lessonId:
   const { lessonId } = await params
   const lesson = await prisma.speakingLesson.findUnique({
     where: { id: lessonId },
-    select: { titleDe: true, titleVi: true },
+    select: { titleDe: true, translations: true },
   })
   return {
-    title: lesson ? `Fuxie 🦊 — ${lesson.titleVi}` : 'Fuxie 🦊 — Sprechen',
+    title: lesson ? `Fuxie 🦊 — ${(lesson.translations as any)?.['vi'] || lesson.titleDe}` : 'Fuxie 🦊 — Sprechen',
     description: lesson?.titleDe ?? 'German speaking exercise',
   }
 }
@@ -39,7 +40,7 @@ export default async function SpeakingLessonPage({ params }: { params: Promise<{
     where: { id: lessonId },
     include: {
       topic: {
-        select: { titleDe: true, titleVi: true, slug: true },
+        select: { titleDe: true, translations: true, slug: true },
       },
     },
   })
@@ -50,12 +51,14 @@ export default async function SpeakingLessonPage({ params }: { params: Promise<{
   const exercisesJson = JSON.parse(JSON.stringify(lesson.exercisesJson ?? {}))
   const configJson = lesson.configJson ? JSON.parse(JSON.stringify(lesson.configJson)) : null
 
+  const locale = (await cookies()).get('NEXT_LOCALE')?.value || 'vi'
+
   return (
     <SpeakingLessonPlayer
       lessonId={lesson.id}
       titleDe={lesson.titleDe}
-      titleVi={lesson.titleVi}
-      topicTitleVi={lesson.topic.titleVi}
+      titleNative={(lesson.translations as any)?.[locale] || lesson.titleDe}
+      topicTitleNative={(lesson.topic.translations as any)?.[locale] || lesson.topic.titleDe}
       topicSlug={lesson.topic.slug}
       cefrLevel={lesson.level}
       exerciseType={lesson.exerciseType}

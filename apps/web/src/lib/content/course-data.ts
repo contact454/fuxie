@@ -17,7 +17,7 @@ import type { CefrLevel } from '@/lib/types/cefr'
 interface SkillLink {
     skill: 'listening' | 'reading' | 'writing' | 'speaking'
     label: string
-    labelVi: string
+    labelNative: string
     href: string
     emoji: string
 }
@@ -38,12 +38,12 @@ interface CourseModuleMapping {
 }
 
 const COURSE_DATA: Record<CefrLevel, { modules: CourseModuleJson[] }> = {
-    A1: a1Course as { modules: CourseModuleJson[] },
-    A2: a2Course as { modules: CourseModuleJson[] },
-    B1: b1Course as { modules: CourseModuleJson[] },
-    B2: b2Course as { modules: CourseModuleJson[] },
-    C1: c1Course as { modules: CourseModuleJson[] },
-    C2: c2Course as { modules: CourseModuleJson[] },
+    A1: a1Course as unknown as { modules: CourseModuleJson[] },
+    A2: a2Course as unknown as { modules: CourseModuleJson[] },
+    B1: b1Course as unknown as { modules: CourseModuleJson[] },
+    B2: b2Course as unknown as { modules: CourseModuleJson[] },
+    C1: c1Course as unknown as { modules: CourseModuleJson[] },
+    C2: c2Course as unknown as { modules: CourseModuleJson[] },
 }
 
 /**

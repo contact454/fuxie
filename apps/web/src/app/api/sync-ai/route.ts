@@ -57,11 +57,11 @@ async function syncLevel(level: string) {
                 questionNumber: i + 1,
                 questionType: q.type,
                 questionText: q.question || q.statement || `Frage ${i+1}`,
-                questionTextVi: "",
+                questionTextNative: "",
                 options: optionsArray,
                 correctAnswer: correctAns,
                 explanation: q.explanation?.de || '',
-                explanationVi: q.explanation?.vi || '',
+                explanationNative: q.explanation?.vi || '',
                 sortOrder: i + 1
             };
         });

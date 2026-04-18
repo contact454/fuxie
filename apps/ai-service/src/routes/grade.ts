@@ -52,6 +52,7 @@ gradeRoutes.post('/writing', async (c) => {
         submittedText: string
         minWords: number
         maxWords: number | null
+        uiLanguage?: string
         rubric: { criteria: Array<{ id: string; name: string; maxScore: number; weight?: number }>; maxScore: number }
     }
 
@@ -61,7 +62,7 @@ gradeRoutes.post('/writing', async (c) => {
         return c.json({ success: false, error: { code: 'INVALID_BODY', message: 'Invalid JSON body' } }, 400)
     }
 
-    const { cefrLevel, textType, register, situation, contentPoints, submittedText, minWords, maxWords, rubric } = body
+    const { cefrLevel, textType, register, situation, contentPoints, submittedText, minWords, maxWords, rubric, uiLanguage = 'vi' } = body
 
     if (!submittedText?.trim()) {
         return c.json({ success: false, error: { code: 'MISSING_TEXT', message: 'submittedText is required' } }, 400)
@@ -73,7 +74,7 @@ gradeRoutes.post('/writing', async (c) => {
         console.log(`[Grade/Writing] Level: ${cefrLevel}, Model: ${modelName}`)
 
         const criteriaList = rubric.criteria.map(cr =>
-            `- "${cr.name}" (${CRITERION_VI[cr.name] || ''}) — max ${cr.maxScore} Punkte`
+            `- "${cr.name}" (${uiLanguage === 'vi' ? CRITERION_VI[cr.name] : cr.name}) — max ${cr.maxScore} Punkte`
         ).join('\n')
         const contentPointsList = contentPoints.map((p, i) => `${i + 1}. ${p}`).join('\n')
         const cefrDesc = getCefrDescriptors(cefrLevel)
@@ -97,11 +98,11 @@ ${submittedText}
 
 Antworte NUR als JSON (kein Markdown):
 {
-  "criteria": [{ "id": "...", "name": "...", "score": 0, "maxScore": 5, "reasoning": "deutsch", "reasoningVi": "tiếng việt", "suggestions": ["deutsch"], "suggestionsVi": ["tiếng việt"] }],
+  "criteria": [{ "id": "...", "name": "...", "score": 0, "maxScore": 5, "reasoning": "deutsch", "reasoningNative": "Translated reasoning depending on UI Language ${uiLanguage}", "suggestions": ["deutsch"], "suggestionsNative": ["Translated suggestions depending on UI Language ${uiLanguage}"] }],
   "overallFeedback": "deutsch",
-  "overallFeedbackVi": "tiếng việt",
+  "overallFeedbackNative": "Translated feedback depending on UI Language ${uiLanguage}",
   "estimatedLevel": "A1-C2",
-  "corrections": [{ "original": "...", "corrected": "...", "type": "Grammatik", "typeVi": "Ngữ pháp", "explanation": "deutsch", "explanationVi": "tiếng việt" }]
+  "corrections": [{ "original": "...", "corrected": "...", "type": "Grammatik", "typeNative": "Translated type depending on UI Language ${uiLanguage}", "explanation": "deutsch", "explanationNative": "Translated explanation depending on UI Language ${uiLanguage}" }]
 }`
 
         const result = await model.generateContent(prompt)
@@ -126,23 +127,23 @@ Antworte NUR als JSON (kein Markdown):
                 criteria: (parsed.criteria || []).map((cr: any) => ({
                     id: cr.id || cr.name,
                     name: cr.name,
-                    nameVi: CRITERION_VI[cr.name] || cr.nameVi || '',
+                    nameNative: uiLanguage === 'vi' ? (CRITERION_VI[cr.name] || cr.nameNative || '') : (cr.nameNative || cr.name),
                     score: cr.score || 0,
                     maxScore: cr.maxScore || 5,
                     reasoning: cr.reasoning || '',
-                    reasoningVi: cr.reasoningVi || '',
+                    reasoningNative: cr.reasoningNative || '',
                     suggestions: cr.suggestions || [],
-                    suggestionsVi: cr.suggestionsVi || [],
+                    suggestionsNative: cr.suggestionsNative || [],
                 })),
                 overallFeedback: parsed.overallFeedback || '',
-                overallFeedbackVi: parsed.overallFeedbackVi || '',
+                overallFeedbackNative: parsed.overallFeedbackNative || '',
                 corrections: (parsed.corrections || []).map((cr: any) => ({
                     original: cr.original || '',
                     corrected: cr.corrected || '',
                     type: cr.type || 'Grammatik',
-                    typeVi: cr.typeVi || ERROR_TYPE_VI[cr.type] || 'Ngữ pháp',
+                    typeNative: uiLanguage === 'vi' ? (cr.typeNative || ERROR_TYPE_VI[cr.type] || 'Ngữ pháp') : (cr.typeNative || cr.type),
                     explanation: cr.explanation || '',
-                    explanationVi: cr.explanationVi || '',
+                    explanationNative: cr.explanationNative || '',
                 })),
             },
         })

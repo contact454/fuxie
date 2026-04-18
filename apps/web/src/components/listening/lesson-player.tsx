@@ -11,7 +11,7 @@ interface Question {
     questionNumber: number
     questionType: string
     questionText: string
-    questionTextVi: string | null
+    questionTextNative: string | null
     options: string[]
     sortOrder: number
 }
@@ -25,7 +25,7 @@ interface QuestionResult {
     correctAnswer: string
     isCorrect: boolean
     explanation: string | null
-    explanationVi: string | null
+    explanationNative: string | null
 }
 
 interface LessonPlayerProps {
@@ -363,8 +363,8 @@ export function LessonPlayer({
 
                         {/* Question text */}
                         <p className="text-base font-bold text-gray-900 mb-4">{q.questionText}</p>
-                        {q.questionTextVi && (
-                            <p className="text-sm text-gray-400 mb-4 -mt-2">{q.questionTextVi}</p>
+                        {q.questionTextNative && (
+                            <p className="text-sm text-gray-400 mb-4 -mt-2">{q.questionTextNative}</p>
                         )}
 
                         {/* Options */}
@@ -516,8 +516,8 @@ export function LessonPlayer({
                                                 <p className="text-sm text-green-600 mt-0.5">
                                                     Richtig: {(qr.options as string[])[qr.correctAnswer.charCodeAt(0) - 97] || qr.correctAnswer}
                                                 </p>
-                                                {qr.explanationVi && (
-                                                    <p className="text-xs text-gray-500 mt-1 italic">{qr.explanationVi}</p>
+                                                {qr.explanationNative && (
+                                                    <p className="text-xs text-gray-500 mt-1 italic">{qr.explanationNative}</p>
                                                 )}
                                             </>
                                         )}

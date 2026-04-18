@@ -2,6 +2,7 @@ import { notFound, redirect } from 'next/navigation'
 import Link from 'next/link'
 import { cache } from 'react'
 import { prisma } from '@fuxie/database'
+import { cookies } from 'next/headers'
 import { getServerUser } from '@/lib/auth/server-auth'
 
 const getGrammarTopic = cache(async (topicSlug: string) => {
@@ -28,7 +29,7 @@ export async function generateMetadata({ params }: { params: Promise<{ topicSlug
     const topic = await getGrammarTopic(topicSlug)
     return {
         title: topic ? `Fuxie 🦊 — ${topic.titleDe ?? topic.title}` : 'Fuxie — Grammatik',
-        description: topic?.titleVi ?? 'Deutsche Grammatik',
+        description: (topic?.translations as any)?.['vi'] || topic?.titleDe || 'Deutsche Grammatik',
     }
 }
 
@@ -42,6 +43,7 @@ export default async function TopicDetailPage({ params }: { params: Promise<{ to
     if (!topic) notFound()
 
     const lessons = await getGrammarLessonsByTopicId(topic.id)
+    const locale = (await cookies()).get('NEXT_LOCALE')?.value || 'vi'
 
     // Get progress
     const progressRows = await prisma.grammarProgress.findMany({
@@ -96,7 +98,7 @@ export default async function TopicDetailPage({ params }: { params: Promise<{ to
                     </span>
                 </div>
                 <h1 className="text-2xl font-bold text-gray-900">{topic.titleDe ?? topic.title}</h1>
-                <p className="text-gray-500">{topic.titleVi}</p>
+                <p className="text-gray-500">{(topic.translations as any)?.[locale] || topic.titleDe}</p>
             </div>
 
             <div className="space-y-4">
@@ -126,7 +128,7 @@ export default async function TopicDetailPage({ params }: { params: Promise<{ to
                                         </span>
                                         {lesson.locked && <span className="text-xs">🔒</span>}
                                     </div>
-                                    <h3 className="font-semibold text-gray-900">{lesson.titleVi}</h3>
+                                    <h3 className="font-semibold text-gray-900">{(lesson.translations as any)?.[locale] || lesson.titleDe}</h3>
                                     <p className="text-sm text-gray-500 mt-0.5">{typeInfo.description}</p>
                                     <div className="flex items-center gap-4 mt-2 text-xs text-gray-400">
                                         <span>⏱️ ~{lesson.estimatedMin} phút</span>

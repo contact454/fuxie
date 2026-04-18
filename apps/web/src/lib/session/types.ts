@@ -26,7 +26,7 @@ export interface GrammarExerciseData {
     lessonId: string
     topicTitle?: string
     questionDe: string
-    questionVi?: string
+    questionNative?: string
     options: string[]
     correctIndex: number
     explanation?: string

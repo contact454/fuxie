@@ -15,7 +15,7 @@ interface SpeedQuestion {
     options: string[]
     wordId: string
     word: string
-    meaningVi: string
+    meaningNative: string
 }
 
 interface SpeedExerciseProps {
@@ -76,7 +76,7 @@ export function SpeedExercise({ questions, cefrLevel, themeName, themeSlug, onEx
                     if (!isRevealedRef.current) {
                         setIsRevealed(true)
                         const q = questionRef.current
-                        const timeoutCorrect = q?.type === 'de_to_vi' ? (q?.meaningVi || '') : (q?.word || '')
+                        const timeoutCorrect = q?.type === 'de_to_native' ? (q?.meaningNative || '') : (q?.word || '')
                         const newAnswers: ExerciseAnswer[] = [...answersRef.current, {
                             questionId: q?.id || '',
                             answer: '__timeout__',
@@ -122,7 +122,7 @@ export function SpeedExercise({ questions, cefrLevel, themeName, themeSlug, onEx
         setSelectedAnswer(option)
         setIsRevealed(true)
 
-        const correctAnswer = question.type === 'de_to_vi' ? question.meaningVi : question.word
+        const correctAnswer = question.type === 'de_to_native' ? question.meaningNative : question.word
         const newAnswers: ExerciseAnswer[] = [...answers, {
             questionId: question.id,
             answer: option,
@@ -215,7 +215,7 @@ export function SpeedExercise({ questions, cefrLevel, themeName, themeSlug, onEx
                 <div className="text-center mb-8">
                     <p className="text-3xl font-black text-white mb-2">{question.prompt || question.word}</p>
                     <p className="text-sm text-gray-500">
-                        {question.type === 'de_to_vi' ? 'Was bedeutet das?' : 'Auf Deutsch?'}
+                        {question.type === 'de_to_native' ? 'Was bedeutet das?' : 'Auf Deutsch?'}
                     </p>
                 </div>
 

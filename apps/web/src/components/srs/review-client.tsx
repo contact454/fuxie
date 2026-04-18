@@ -12,7 +12,7 @@ interface Theme {
     id: string
     slug: string
     name: string
-    nameVi: string | null
+    nameNative: string | null
     cefrLevel: string
     imageUrl: string | null
     wordCount: number
@@ -25,8 +25,7 @@ interface VocabCard {
     article: string | null
     plural: string | null
     wordType: string
-    meaningVi: string
-    meaningEn: string | null
+    translations: Record<string, string> | null
     exampleSentence1: string | null
     exampleTranslation1: string | null
     exampleSentence2: string | null
@@ -294,7 +293,7 @@ export function ReviewClient({ themes, availableLevels, initialLevel, dueCounts,
                     </button>
                     <div className="flex-1">
                         <h2 className="text-lg font-bold text-gray-900">{studyTheme?.name}</h2>
-                        <p className="text-xs text-gray-500">{studyTheme?.nameVi} • {studyCards.length} Wörter</p>
+                        <p className="text-xs text-gray-500">{studyTheme?.nameNative} • {studyCards.length} Wörter</p>
                     </div>
                     <span className={`px-3 py-1 rounded-full text-xs font-bold bg-gradient-to-r ${cefrColors.gradient} text-white`}>
                         {currentLevel}
@@ -592,7 +591,7 @@ export function ReviewClient({ themes, availableLevels, initialLevel, dueCounts,
                                 <h3 className="text-sm font-bold text-gray-900 text-center leading-tight mb-1 group-hover:text-[#FF6B35] transition-colors line-clamp-2">
                                     {theme.name}
                                 </h3>
-                                <p className="text-[11px] text-gray-400 text-center line-clamp-1">{theme.nameVi}</p>
+                                <p className="text-[11px] text-gray-400 text-center line-clamp-1">{theme.nameNative}</p>
 
                                 {/* Stats row */}
                                 <div className="flex items-center gap-2 mt-2">

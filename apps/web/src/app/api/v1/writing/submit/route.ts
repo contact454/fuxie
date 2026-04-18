@@ -4,6 +4,8 @@ import { prisma } from '@fuxie/database'
 import { getServerUser } from '@/lib/auth/server-auth'
 import { handleApiError } from '@/lib/api/error-handler'
 
+import { cookies } from 'next/headers'
+
 const writingSubmitSchema = z.object({
     exerciseId: z.string().min(1),
     submittedText: z.string().min(1),
@@ -32,9 +34,10 @@ export async function POST(req: NextRequest) {
         }
 
         const rubric = exercise.rubricJson as any
-
-        // Call AI grading service
         const aiServiceUrl = process.env.AI_SERVICE_URL || 'http://localhost:3001'
+        const locale = (await cookies()).get('NEXT_LOCALE')?.value || 'vi'
+
+        // Call Custom AI grading service
         const aiRes = await fetch(`${aiServiceUrl}/grade/writing`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
@@ -47,9 +50,10 @@ export async function POST(req: NextRequest) {
                 submittedText,
                 minWords: exercise.minWords,
                 maxWords: exercise.maxWords,
+                uiLanguage: locale,
                 rubric,
             }),
-            signal: AbortSignal.timeout(25000), // Writing grading can take up to 20s
+            signal: AbortSignal.timeout(30000), // Writing grading can take up to 30s
         })
 
         if (!aiRes.ok) {

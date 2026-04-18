@@ -64,7 +64,7 @@ Antworte NUR als JSON:
       "answer": "richtige Antwort",
       "options": ["Option A", "Option B", "Option C", "Option D"],
       "explanation": "Erklärung auf Deutsch",
-      "explanationVi": "Giải thích tiếng Việt"
+      "explanationNative": "Giải thích tiếng Việt"
     }
   ]
 }`
@@ -88,11 +88,11 @@ Der Dialog soll 4-8 Zeilen lang sein, zwischen zwei Personen (A und B).
 Antworte NUR als JSON:
 {
   "title": "Dialogtitel",
-  "titleVi": "Tiêu đề tiếng Việt",
+  "titleNative": "Title in user's native language",
   "situation": "Kurze Beschreibung der Situation",
-  "situationVi": "Mô tả tình huống",
+  "situationNative": "Situation in user's native language",
   "lines": [
-    { "speaker": "A", "text": "Deutsch", "textVi": "Tiếng Việt" }
+    { "speaker": "A", "text": "Deutsch", "textNative": "Translation in user's native language" }
   ],
   "vocabulary": [
     { "de": "Wort", "vi": "Nghĩa", "partOfSpeech": "Nomen/Verb/..." }

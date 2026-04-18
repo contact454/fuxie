@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useCallback } from 'react'
 import { useRouter } from 'next/navigation'
+import { useTranslations } from 'next-intl'
 import Image from 'next/image'
 import type { SessionItem } from '@/lib/session/builder'
 import type { ExerciseResult, ExerciseData } from '@/lib/session/types'
@@ -13,6 +14,7 @@ import { SessionResultScreen } from './SessionResultScreen'
 
 export function SessionPlayer({ level }: { level: string }) {
     const router = useRouter()
+    const t = useTranslations('UI')
     
     const [loading, setLoading] = useState(true)
     const [saving, setSaving] = useState(false)
@@ -120,7 +122,7 @@ export function SessionPlayer({ level }: { level: string }) {
             <div className="flex-1 flex flex-col items-center justify-center p-8 text-center text-gray-500">
                 <Image src="/mascot/core/fuxie-core-sad.png" alt="No items" width={120} height={120} className="mb-4 opacity-50" />
                 <h3 className="text-xl font-bold text-gray-700">Chúc mừng!</h3>
-                <p>Bạn đã hoàn thành mọi bài học và review hôm nay.</p>
+                <p>{t('lessonsCompleted')}</p>
                 <button onClick={() => router.push('/dashboard')} className="mt-6 px-6 py-2 bg-blue-500 text-white rounded-xl">Quay lại Dashboard</button>
             </div>
         )

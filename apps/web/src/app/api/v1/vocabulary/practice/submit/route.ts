@@ -1,8 +1,9 @@
-import { NextRequest, NextResponse } from 'next/server'
 import { z } from 'zod'
 import { prisma } from '@fuxie/database'
+import { cookies } from 'next/headers'
 import { withAuth } from '@/lib/auth/middleware'
 import { handleApiError } from '@/lib/api/error-handler'
+import { NextRequest, NextResponse } from 'next/server'
 
 const VALID_LEVELS = ['A1', 'A2', 'B1', 'B2', 'C1', 'C2'] as const
 const VALID_TYPES = ['mc', 'matching', 'spelling', 'cloze', 'scramble', 'speed'] as const
@@ -32,19 +33,20 @@ function deriveCorrectAnswer(
     word?: {
         word: string
         article: string | null
-        meaningVi: string
+        translations: any
         exampleSentence1: string | null
-    }
+    },
+    locale: string
 ) {
     if (!word) {
         return answer.correctAnswer
     }
 
     switch (answer.questionType) {
-        case 'de_to_vi':
+        case 'de_to_native':
         case 'pair':
-            return word.meaningVi
-        case 'vi_to_de':
+            return (word.translations as any)?.[locale] || (word.translations as any)?.['en'] || ''
+        case 'native_to_de':
         case 'image_to_word':
         case 'audio_to_word':
             return buildDisplayWord(word)
@@ -101,7 +103,7 @@ export async function POST(req: NextRequest) {
         const wordMap = new Map<string, {
             word: string
             article: string | null
-            meaningVi: string
+            translations: any
             exampleSentence1: string | null
         }>()
 
@@ -116,7 +118,7 @@ export async function POST(req: NextRequest) {
                     id: true,
                     word: true,
                     article: true,
-                    meaningVi: true,
+                    translations: true,
                     exampleSentence1: true,
                 },
             })
@@ -126,9 +128,11 @@ export async function POST(req: NextRequest) {
             }
         }
 
+        const locale = (await cookies()).get('NEXT_LOCALE')?.value || 'vi'
+
         // Grade each answer
         const results = answers.map(a => {
-            const correctAnswer = deriveCorrectAnswer(a, a.wordId ? wordMap.get(a.wordId) : undefined)
+            const correctAnswer = deriveCorrectAnswer(a, a.wordId ? wordMap.get(a.wordId) : undefined, locale)
             const isCorrect = a.answer.trim().toLowerCase() === correctAnswer.trim().toLowerCase()
             return {
                 questionId: a.questionId,

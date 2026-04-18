@@ -25,7 +25,7 @@ async function getAvailableLevels(): Promise<CefrLevel[]> {
     }
 }
 
-async function getThemes(userId: string | null, cefrLevel: CefrLevel) {
+async function getThemes(userId: string | null, cefrLevel: CefrLevel, locale: string) {
     const themes = await getVocabularyThemes(cefrLevel)
 
     let srsProgress: Record<string, { total: number; learned: number; due: number }> = {}
@@ -48,6 +48,7 @@ async function getThemes(userId: string | null, cefrLevel: CefrLevel) {
 
     const mappedThemes = mapVocabularyThemes(themes).map((theme) => ({
         ...theme,
+        nameNative: (theme.translations as Record<string, string>)?.[locale] || '',
         srsProgress: srsProgress[theme.id] ?? { total: 0, learned: 0, due: 0 },
     }))
 
@@ -64,7 +65,7 @@ export default async function VocabularyPage() {
     const defaultLevel: CefrLevel = availableLevels[0] || 'A1'
 
     // Parallel: themes + SRS progress load simultaneously
-    const { themes, totalWords, totalDue } = await getThemes(serverUser.userId, defaultLevel)
+    const { themes, totalWords, totalDue } = await getThemes(serverUser.userId, defaultLevel, serverUser.uiLanguage || 'vi')
 
     return (
         <div className="max-w-5xl mx-auto px-4 py-8">

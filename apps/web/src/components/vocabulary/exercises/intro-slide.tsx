@@ -6,13 +6,13 @@ import { playSound } from '@/hooks/use-audio-player'
 
 export interface IntroSlideProps {
     word: string
-    meaningVi: string
+    meaningNative: string
     imageUrl: string | null
     audioUrl: string | null
     onContinue: () => void
 }
 
-export function IntroSlide({ word, meaningVi, imageUrl, audioUrl, onContinue }: IntroSlideProps) {
+export function IntroSlide({ word, meaningNative, imageUrl, audioUrl, onContinue }: IntroSlideProps) {
     // Auto play audio when introducing the word
     useEffect(() => {
         if (audioUrl) {
@@ -65,7 +65,7 @@ export function IntroSlide({ word, meaningVi, imageUrl, audioUrl, onContinue }: 
                 )}
 
                 <p className="text-4xl font-black text-gray-900 mb-2">{word}</p>
-                <p className="text-lg font-semibold text-gray-500">{meaningVi}</p>
+                <p className="text-lg font-semibold text-gray-500">{meaningNative}</p>
             </div>
 
             <button

@@ -45,7 +45,7 @@ export function WordCard({ word: w, variant }: WordCardProps) {
                     <AudioPlayer src={w.audioUrl} text={w.word} size="sm" />
                 </div>
                 <p className="font-bold text-gray-900 text-sm leading-tight">{w.word}</p>
-                <p className="text-xs text-gray-500 mt-1 leading-tight">{w.meaningVi}</p>
+                <p className="text-xs text-gray-500 mt-1 leading-tight">{w.meaningNative}</p>
             </div>
         )
     }
@@ -87,7 +87,7 @@ export function WordCard({ word: w, variant }: WordCardProps) {
                         <span className="text-[11px] text-gray-400">({w.plural})</span>
                     )}
                 </div>
-                <p className="text-xs text-gray-600 mt-0.5">{w.meaningVi}</p>
+                <p className="text-xs text-gray-600 mt-0.5">{w.meaningNative}</p>
             </div>
 
             {/* Type badge + audio */}

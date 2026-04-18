@@ -3,6 +3,7 @@
 import { useState, useCallback } from 'react'
 import { useRouter } from 'next/navigation'
 import Image from 'next/image'
+import { useTranslations } from 'next-intl'
 import { Mascot } from '@/components/ui/mascot'
 import { CEFR_THEME, getCefrTheme } from '@/lib/constants/cefr'
 
@@ -10,7 +11,7 @@ interface Theme {
     id: string
     slug: string
     name: string
-    nameVi: string | null
+    nameNative: string | null
     cefrLevel: string
     imageUrl: string | null
     wordCount: number
@@ -25,6 +26,7 @@ interface PracticeHubProps {
 
 
 export function PracticeHub({ themes, availableLevels, initialLevel }: PracticeHubProps) {
+    const t = useTranslations('UI')
     const router = useRouter()
     const [currentLevel, setCurrentLevel] = useState(initialLevel)
     const [currentThemes, setCurrentThemes] = useState(themes)
@@ -43,7 +45,7 @@ export function PracticeHub({ themes, availableLevels, initialLevel }: PracticeH
                     id: t.id,
                     slug: t.slug,
                     name: t.name,
-                    nameVi: t.nameVi,
+                    nameNative: (t.translations as any)?.['vi'] || t.name,
                     cefrLevel: t.cefrLevel,
                     imageUrl: t.imageUrl,
                     wordCount: t.wordCount ?? t._count?.items ?? 0,
@@ -94,7 +96,7 @@ export function PracticeHub({ themes, availableLevels, initialLevel }: PracticeH
                             Lộ trình Từ vựng
                         </h1>
                         <p className="text-sm font-semibold text-gray-500">
-                            Học bài theo từng chủ điểm nhé!
+                            {t('studyByTheme')}
                         </p>
                     </div>
                 </div>
@@ -153,7 +155,7 @@ export function PracticeHub({ themes, availableLevels, initialLevel }: PracticeH
                                         {theme.name}
                                     </span>
                                     <span className="relative z-10 block text-[#afafaf] font-medium text-[11px] leading-tight max-w-[120px]">
-                                        {theme.nameVi || (theme.wordCount + ' Wörter')}
+                                        {theme.nameNative || (theme.wordCount + ' Wörter')}
                                     </span>
                                 </div>
                             </div>

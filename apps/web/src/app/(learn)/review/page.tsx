@@ -10,13 +10,14 @@ export const metadata = {
     description: 'SRS Flashcard Review — Lerne Vokabeln mit Karteikarten',
 }
 
-async function getThemesForLevel(userId: string, cefrLevel: CefrLevel) {
+async function getThemesForLevel(userId: string, cefrLevel: CefrLevel, locale: string) {
     const themes = await getVocabularyThemes(cefrLevel)
 
     const srsMap = await getVocabularyThemeSrsProgress(userId, cefrLevel)
 
     return mapVocabularyThemes(themes).map(theme => ({
         ...theme,
+        nameNative: (theme.translations as Record<string, string>)?.[locale] || '',
         srsProgress: srsMap[theme.id]
             ? {
                 total: srsMap[theme.id]!.total,
@@ -47,7 +48,7 @@ export default async function ReviewPage() {
 
     // Themes + due counts also in parallel
     const [themes, dueCounts] = await Promise.all([
-        getThemesForLevel(serverUser.userId, userLevel),
+        getThemesForLevel(serverUser.userId, userLevel, serverUser.uiLanguage || 'vi'),
         getDueCounts(serverUser.userId),
     ])
 

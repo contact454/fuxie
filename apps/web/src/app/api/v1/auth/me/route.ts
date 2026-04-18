@@ -21,7 +21,7 @@ export async function GET(req: NextRequest) {
                     select: {
                         displayName: true,
                         avatarUrl: true,
-                        nativeLanguage: true,
+                        uiLanguage: true,
                         currentLevel: true,
                         targetLevel: true,
                         targetExam: true,
