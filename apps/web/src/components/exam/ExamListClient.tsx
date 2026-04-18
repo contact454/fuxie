@@ -130,7 +130,7 @@ export function ExamListClient() {
         SPRECHEN: 'Nói (Sprechen)',
     }
 
-    const levels = ['Alle', 'A1', 'A2', 'B1', 'B2', 'C1', 'C2']
+
 
     return (
         <div className="max-w-5xl mx-auto px-4 py-8 pb-32">
