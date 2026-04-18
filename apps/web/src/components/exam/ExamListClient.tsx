@@ -83,14 +83,22 @@ export function ExamListClient() {
         const grouped = exams.reduce((acc, exam) => {
             if (!acc[exam.cefrLevel]) acc[exam.cefrLevel] = {}
 
-            // Determine primary skill block
+            // Determine primary skill block based on actual sections
             let primarySkill = 'MIXED'
-            if (exam.sections.length === 1) {
-                primarySkill = exam.sections[0].skill.toUpperCase()
+            const distinctSkills = new Set(exam.sections.map(s => s.skill))
+            
+            if (distinctSkills.size === 1) {
+                const skill = Array.from(distinctSkills)[0].toUpperCase()
+                if (['LESEN', 'HOEREN', 'SCHREIBEN', 'SPRECHEN'].includes(skill)) {
+                    primarySkill = skill
+                }
+            } else if (distinctSkills.size > 1) {
+                primarySkill = 'MIXED'
             } else {
+                // Fallback to title matching if sections are empty
                 const t = exam.title.toLowerCase()
-                if (t.includes('nghe') || t.includes('hören')) primarySkill = 'HOEREN'
-                else if (t.includes('đọc') || t.includes('lesen')) primarySkill = 'LESEN'
+                if (t.includes('nghe') || t.includes('hören') && !t.includes('lesen')) primarySkill = 'HOEREN'
+                else if (t.includes('đọc') || t.includes('lesen') && !t.includes('hören')) primarySkill = 'LESEN'
                 else if (t.includes('viết') || t.includes('schreiben')) primarySkill = 'SCHREIBEN'
                 else if (t.includes('nói') || t.includes('sprechen')) primarySkill = 'SPRECHEN'
             }
