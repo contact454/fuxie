@@ -39,7 +39,7 @@ export default async function RootLayout({
     return (
         <html lang={locale}>
             <body>
-                <NextIntlClientProvider messages={messages}>
+                <NextIntlClientProvider locale={locale} messages={messages}>
                     {children}
                     <PwaRegistration />
                     <InstallPrompt />

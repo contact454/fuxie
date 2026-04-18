@@ -109,7 +109,7 @@ Antworte NUR als JSON (kein Markdown):
         const responseText = result.response.text()
 
         // Parse JSON — robust cleanup for markdown fences, trailing commas, truncation
-        const parsed = parseGeminiJson(responseText)
+        const parsed: any = parseGeminiJson(responseText)
 
         // Calculate total score
         const totalScore = (parsed.criteria || []).reduce(
@@ -211,7 +211,7 @@ Antworte NUR als JSON:
         ])
         const responseText = result.response.text()
 
-        const parsed = parseGeminiJson(responseText)
+        const parsed: any = parseGeminiJson(responseText)
 
         return c.json({
             success: true,
@@ -268,7 +268,7 @@ Antworte NUR als JSON:
 
         const result = await model.generateContent(prompt)
         const responseText = result.response.text()
-        const parsed = parseGeminiJson(responseText)
+        const parsed: any = parseGeminiJson(responseText)
 
         return c.json({ success: true, data: parsed })
     } catch (err) {

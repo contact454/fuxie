@@ -4,15 +4,16 @@ import { useState, useEffect, useCallback } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { usePathname } from 'next/navigation'
+import { useTranslations } from 'next-intl'
 import { Sidebar } from './sidebar'
 
 // Bottom nav items — max 5 for mobile UX
 const bottomNavItems = [
-    { href: '/dashboard', label: 'Übersicht', icon: '🏠' },
-    { href: '/vocabulary', label: 'Wortschatz', icon: '📚' },
-    { href: '/grammar', label: 'Grammatik', icon: '📝' },
-    { href: '/listening', label: 'Hören', icon: '🎧' },
-    { href: '/review', label: 'Wiederholen', icon: '🔄' },
+    { href: '/dashboard', labelKey: 'dashboard', icon: '🏠' },
+    { href: '/vocabulary', labelKey: 'vocabulary', icon: '📚' },
+    { href: '/grammar', labelKey: 'grammar', icon: '📝' },
+    { href: '/listening', labelKey: 'listening', icon: '🎧' },
+    { href: '/review', labelKey: 'review', icon: '🔄' },
 ]
 
 interface MobileShellProps {
@@ -28,6 +29,7 @@ export function MobileShell({ dailyGoal: initialDailyGoal, children }: MobileShe
     const pathname = usePathname()
     const [drawerOpen, setDrawerOpen] = useState(false)
     const [dailyGoal, setDailyGoal] = useState(initialDailyGoal)
+    const t = useTranslations('Navigation')
 
     // Fetch daily goal client-side if not provided by server
     useEffect(() => {
@@ -146,7 +148,7 @@ export function MobileShell({ dailyGoal: initialDailyGoal, children }: MobileShe
                             className={`bottom-nav-item ${isActive ? 'bottom-nav-item-active' : ''}`}
                         >
                             <span className="bottom-nav-icon">{item.icon}</span>
-                            <span className="bottom-nav-label">{item.label}</span>
+                            <span className="bottom-nav-label">{t(item.labelKey as any)}</span>
                         </Link>
                     )
                 })}

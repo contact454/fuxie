@@ -98,7 +98,7 @@ export function Sidebar({ dailyGoal }: SidebarProps) {
                     }`}>
                     <div className="flex items-center justify-between mb-1.5">
                         <p className="text-xs font-semibold text-gray-600">
-                            {goalReached ? '✅ Tagesziel erreicht!' : 'Tagesziel'}
+                            {goalReached ? '✅ ' + t('dailyGoalReached') : t('dailyGoal')}
                         </p>
                         {dailyGoal && (
                             <p className="text-[10px] font-medium text-gray-400">
@@ -115,8 +115,8 @@ export function Sidebar({ dailyGoal }: SidebarProps) {
                     </div>
                     <p className="mt-1 text-[10px] text-gray-400">
                         {dailyGoal
-                            ? `${dailyGoal.currentMinutes} / ${dailyGoal.goalMinutes} Minuten`
-                            : '0 / 15 Minuten'
+                            ? `${dailyGoal.currentMinutes} / ${dailyGoal.goalMinutes} ${t('minutes')}`
+                            : `0 / 15 ${t('minutes')}`
                         }
                     </p>
                 </div>
