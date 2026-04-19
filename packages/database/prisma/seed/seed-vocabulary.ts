@@ -1,4 +1,4 @@
-import { PrismaClient, type CefrLevel, type Gender, type WordType, type ContentStatus } from '@prisma/client'
+import { PrismaClient, type CefrLevel, type Gender, type WordType, type ContentStatus } from '@fuxie/database'
 import * as fs from 'node:fs'
 import * as path from 'node:path'
 
@@ -70,8 +70,7 @@ export async function seedVocabulary(
                 where: { slug: data.theme.slug },
                 update: {
                     name: data.theme.name,
-                    nameVi: data.theme.nameVi,
-                    nameEn: data.theme.nameEn,
+                    translations: { vi: data.theme.nameVi, en: data.theme.nameEn },
                     imageUrl: data.theme.imageUrl,
                     cefrLevel: level,
                     sortOrder: data.theme.sortOrder,
@@ -79,8 +78,7 @@ export async function seedVocabulary(
                 create: {
                     slug: data.theme.slug,
                     name: data.theme.name,
-                    nameVi: data.theme.nameVi,
-                    nameEn: data.theme.nameEn,
+                    translations: { vi: data.theme.nameVi, en: data.theme.nameEn },
                     imageUrl: data.theme.imageUrl,
                     cefrLevel: level,
                     sortOrder: data.theme.sortOrder,
@@ -114,8 +112,7 @@ export async function seedVocabulary(
                             article: w.article ?? undefined,
                             plural: w.plural,
                             wordType: w.wordType,
-                            meaningVi: w.meaningVi,
-                            meaningEn: w.meaningEn,
+                            translations: { vi: w.meaningVi, en: w.meaningEn },
                             exampleSentence1: w.exampleSentence1,
                             exampleTranslation1: w.exampleTranslation1,
                             exampleSentence2: w.exampleSentence2,
@@ -132,8 +129,7 @@ export async function seedVocabulary(
                             plural: w.plural,
                             wordType: w.wordType,
                             cefrLevel: level,
-                            meaningVi: w.meaningVi,
-                            meaningEn: w.meaningEn,
+                            translations: { vi: w.meaningVi, en: w.meaningEn },
                             exampleSentence1: w.exampleSentence1,
                             exampleTranslation1: w.exampleTranslation1,
                             exampleSentence2: w.exampleSentence2,

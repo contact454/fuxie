@@ -1,4 +1,4 @@
-import { PrismaClient, type CefrLevel, type ExamType, type ContentStatus } from '@prisma/client'
+import { PrismaClient, type CefrLevel, type ExamType, type ContentStatus } from '@fuxie/database'
 import * as fs from 'node:fs'
 import * as path from 'node:path'
 

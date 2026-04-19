@@ -32,12 +32,17 @@ const PUBLIC_URL = process.env.R2_PUBLIC_URL?.replace(/\/$/, ""); // Ensure no t
 
 async function fileExistsOnR2(key: string): Promise<boolean> {
     try {
-        await s3.send(new HeadObjectCommand({ Bucket: BUCKET, Key: key }));
+        const head = await s3.send(new HeadObjectCommand({ Bucket: BUCKET, Key: key }));
+        if (head.ContentLength === 0) {
+            console.log(`  [OVERWRITE] Found 0-byte file on R2: ${key}`);
+            return false;
+        }
         return true;
     } catch {
         return false;
     }
 }
+
 
 async function main() {
     console.log('🚀 Synchronizing Fuxie Exam Audio to R2 & DB');

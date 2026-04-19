@@ -1,4 +1,4 @@
-import { PrismaClient } from '@prisma/client'
+import { PrismaClient } from '@fuxie/database'
 import * as path from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { seedVocabulary } from './seed/seed-vocabulary.js'
