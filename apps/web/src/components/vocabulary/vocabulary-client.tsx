@@ -3,6 +3,7 @@
 import { useState, useCallback, useRef, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
 import Link from 'next/link'
+import { useLocale } from 'next-intl'
 
 import { Mascot } from '@/components/ui/mascot'
 import { getCefrTheme } from '@/lib/constants/cefr'
@@ -32,6 +33,7 @@ export function VocabularyClient({ themes, totalWords, totalDue, availableLevels
     const [isLoading, setIsLoading] = useState(false)
     const [showAllWords, setShowAllWords] = useState(false)
     const [isAdding, setIsAdding] = useState(false)
+    const locale = useLocale()
     const detailRef = useRef<HTMLDivElement>(null)
     const scrollTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null)
 
@@ -71,7 +73,8 @@ export function VocabularyClient({ themes, totalWords, totalDue, availableLevels
     const loadWordsForLevel = useCallback(async (slug: string, level: string) => {
         setIsLoading(true)
         try {
-            const res = await fetch(`/api/v1/vocabulary?theme=${slug}&level=${level}&limit=100`)
+            const res = await fetch(`/api/v1/vocabulary?theme=${slug}&level=${level}&limit=100&locale=${locale}`)
+
             const data = await res.json()
             if (data.success) setWords(data.data)
         } catch (err) {
@@ -79,7 +82,7 @@ export function VocabularyClient({ themes, totalWords, totalDue, availableLevels
         } finally {
             setIsLoading(false)
         }
-    }, [])
+    }, [locale])
 
     const loadWords = useCallback(async (slug: string) => {
         loadWordsForLevel(slug, currentLevel)
