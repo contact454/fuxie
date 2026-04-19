@@ -10,7 +10,8 @@ interface VocabWord {
     plural?: string | null
     wordType: WordType
     meaningVi: string
-    meaningEn?: string | null
+    meaningEn: string
+    meaningDe?: string
     exampleSentence1?: string | null
     exampleTranslation1?: string | null
     exampleSentence2?: string | null
@@ -112,7 +113,7 @@ export async function seedVocabulary(
                             article: w.article ?? undefined,
                             plural: w.plural,
                             wordType: w.wordType,
-                            translations: { vi: w.meaningVi, en: w.meaningEn },
+                            translations: { vi: w.meaningVi, en: w.meaningEn, de: w.meaningDe },
                             exampleSentence1: w.exampleSentence1,
                             exampleTranslation1: w.exampleTranslation1,
                             exampleSentence2: w.exampleSentence2,
@@ -129,7 +130,7 @@ export async function seedVocabulary(
                             plural: w.plural,
                             wordType: w.wordType,
                             cefrLevel: level,
-                            translations: { vi: w.meaningVi, en: w.meaningEn },
+                            translations: { vi: w.meaningVi, en: w.meaningEn, de: w.meaningDe },
                             exampleSentence1: w.exampleSentence1,
                             exampleTranslation1: w.exampleTranslation1,
                             exampleSentence2: w.exampleSentence2,
