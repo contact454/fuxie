@@ -3,8 +3,16 @@ import UserAnalyticsClient from './UserAnalyticsClient';
 
 export const dynamic = 'force-dynamic';
 
-export default async function UserAnalyticsPage() {
-  
+export default async function UserAnalyticsPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ [key: string]: string | string[] | undefined }>
+}) {
+  const params = await searchParams;
+  const page = parseInt(params.page as string || '1', 10);
+  const search = (params.search as string) || '';
+  const take = 20;
+  const skip = (page - 1) * take;
   // 1. Group by role to get counts
   const roleGroups = await prisma.user.groupBy({
     by: ['role'],
@@ -23,9 +31,21 @@ export default async function UserAnalyticsPage() {
     if (group.role === 'ADMIN') totalAdmins = group._count.role;
   });
 
-  // 2. Fetch recent 50 users with their profiles
+  // 2. Fetch users with search and pagination
+  const whereClause = search ? {
+    email: {
+      contains: search,
+      mode: 'insensitive' as const
+    }
+  } : {};
+
+  const totalUsersInQuery = await prisma.user.count({ where: whereClause });
+  const totalPages = Math.ceil(totalUsersInQuery / take);
+
   const usersRaw = await prisma.user.findMany({
-    take: 50,
+    where: whereClause,
+    take,
+    skip,
     orderBy: {
       createdAt: 'desc'
     },
@@ -59,6 +79,9 @@ export default async function UserAnalyticsPage() {
       totalLearners={totalLearners}
       totalTeachers={totalTeachers}
       totalAdmins={totalAdmins}
+      currentPage={page}
+      totalPages={totalPages}
+      currentSearch={search}
     />
   );
 }

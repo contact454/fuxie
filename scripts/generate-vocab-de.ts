@@ -7,12 +7,14 @@ dotenv.config();
 dotenv.config({ path: '.env.local' });
 
 // Initialize Gemini Client
-if (!process.env.GEMINI_API_KEY) {
-    console.error('❌ GEMINI_API_KEY is missing from environment.');
+const apiKey = 'AIzaSyCWKjhNim3BqAGigHJ5FRI1NC8YlFUVUXc';
+
+if (!apiKey) {
+    console.error('❌ GEMINI_API_KEY is missing.');
     process.exit(1);
 }
 
-const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY });
+const ai = new GoogleGenAI({ apiKey: apiKey });
 const BATCH_SIZE = 40; // Max words to ask per prompt to avoid overload
 
 interface VocabWord {
@@ -71,7 +73,7 @@ Reply ONLY with a strictly valid minified JSON Array of strings. The array must 
             while (!success && attempts < 3) {
                 try {
                     const response = await ai.models.generateContent({
-                        model: 'gemini-2.5-flash',
+                        model: 'gemma-4-31b-it',
                         contents: prompt,
                         config: {
                             temperature: 0.2,

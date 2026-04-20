@@ -8,6 +8,7 @@ interface ServerUser {
     userId: string
     email: string
     firebaseUid: string
+    role: string
 }
 
 /**
@@ -34,7 +35,7 @@ export const getServerUser = cache(async (): Promise<ServerUser | null> => {
         // 2. Look up user in DB
         let user = await prisma.user.findUnique({
             where: { firebaseUid },
-            select: { id: true, email: true, firebaseUid: true },
+            select: { id: true, email: true, firebaseUid: true, role: true },
         })
 
         // 3. Auto-provision if not found
@@ -51,6 +52,7 @@ export const getServerUser = cache(async (): Promise<ServerUser | null> => {
             userId: user.id,
             email: user.email,
             firebaseUid: user.firebaseUid,
+            role: user.role,
         }
     } catch (error) {
         console.error('[Fuxie] getServerUser error:', error)
@@ -65,7 +67,7 @@ async function provisionUser(
     firebaseUid: string,
     email: string,
     displayName?: string
-): Promise<{ id: string; email: string; firebaseUid: string } | null> {
+): Promise<{ id: string; email: string; firebaseUid: string; role: string } | null> {
     try {
         return await prisma.$transaction(async (tx) => {
             const newUser = await tx.user.create({
@@ -106,6 +108,7 @@ async function provisionUser(
                 id: newUser.id,
                 email: newUser.email,
                 firebaseUid: newUser.firebaseUid,
+                role: newUser.role,
             }
         })
     } catch (error) {
