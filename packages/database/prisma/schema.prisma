@@ -135,6 +135,9 @@ model User {
   studentEnrollments ClassEnrollment[]      @relation("studentEnrollments")
   studentSubmissions AssignmentSubmission[] @relation("studentSubmissions")
 
+  // Feedback
+  userFeedbacks      ContentFeedback[]      @relation("userFeedbacks")
+
   createdAt DateTime  @default(now())
   updatedAt DateTime  @updatedAt
   deletedAt DateTime?
@@ -1292,4 +1295,32 @@ model AssignmentSubmission {
   @@unique([assignmentId, studentId])
   @@index([studentId])
   @@map("assignment_submissions")
+}
+
+// ===== FEEDBACK & ADMIN =====
+
+model ContentFeedback {
+  id        String   @id @default(uuid())
+  userId    String
+  user      User     @relation("userFeedbacks", fields: [userId], references: [id])
+  
+  // What content are they giving feedback on?
+  targetType String  // "LESSON", "EXERCISE", "VOCABULARY", "GENERAL"
+  targetId   String? // e.g. Lesson ID or Exercise ID
+  
+  rating    Int      @default(0) // 1-5 scale (Optional context)
+  comment   String   @db.Text
+  
+  // AI Sentiment Score: "POSITIVE", "NEUTRAL", "NEGATIVE"
+  aiSentiment String?
+  
+  isResolved  Boolean @default(false)
+  resolvedAt  DateTime?
+  
+  createdAt DateTime @default(now())
+  
+  @@index([userId])
+  @@index([targetType])
+  @@index([aiSentiment])
+  @@map("content_feedbacks")
 }
