@@ -15,6 +15,9 @@ export function VideoCallLayout({ onEndCall, level }: VideoCallLayoutProps) {
     const [isSummarizing, setIsSummarizing] = useState(false)
     const [pronunciationErrors, setPronunciationErrors] = useState<any[]>([])
     
+    const MAX_CALL_DURATION_SEC = 300 // 5 minutes
+    const [timeLeft, setTimeLeft] = useState(MAX_CALL_DURATION_SEC)
+    
     const audioAnalyserRef = useRef<AnalyserNode | null>(null)
     
     const { connect, disconnect, isConnected, isSpeaking, transcript, fullTranscript } = useLiveAPI()
@@ -24,6 +27,30 @@ export function VideoCallLayout({ onEndCall, level }: VideoCallLayoutProps) {
         connect()
         return () => disconnect()
     }, [connect, disconnect])
+
+    // Countdown Timer Logic
+    useEffect(() => {
+        if (!isConnected || showSummary) return
+
+        const timer = setInterval(() => {
+            setTimeLeft(prev => {
+                if (prev <= 1) {
+                    clearInterval(timer)
+                    handleEndCall()
+                    return 0
+                }
+                return prev - 1
+            })
+        }, 1000)
+
+        return () => clearInterval(timer)
+    }, [isConnected, showSummary])
+
+    const formatTime = (seconds: number) => {
+        const m = Math.floor(seconds / 60).toString().padStart(2, '0')
+        const s = (seconds % 60).toString().padStart(2, '0')
+        return `${m}:${s}`
+    }
 
     const handleEndCall = async () => {
         disconnect()
@@ -95,6 +122,17 @@ export function VideoCallLayout({ onEndCall, level }: VideoCallLayoutProps) {
                 {isSpeaking && (
                     <div className="absolute inset-0 bg-blue-500/10 animate-pulse" />
                 )}
+
+                {/* Countdown Timer Badge */}
+                <div className="absolute top-6 right-6">
+                    <div className={`px-4 py-2 rounded-full backdrop-blur-md font-bold text-lg shadow-lg flex items-center gap-2 transition-colors ${
+                        timeLeft <= 60 
+                            ? 'bg-red-500/80 text-white animate-pulse' 
+                            : 'bg-black/40 text-white'
+                    }`}>
+                        ⏱ {formatTime(timeLeft)}
+                    </div>
+                </div>
 
                 <div className="relative z-10 flex flex-col items-center">
                     <MascotAvatar 
