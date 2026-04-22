@@ -1,6 +1,8 @@
+import * as dotenv from 'dotenv';
+import { resolve } from 'path';
+dotenv.config({ path: resolve(process.cwd(), '.env') });
 
-
-const API_KEY = 'AIzaSyDLXqErzuIoERiMgebbg-c_L3aZTpEO9GQ';
+const API_KEY = process.env.GEMINI_API_KEY;
 const wsUrl = `wss://generativelanguage.googleapis.com/ws/google.ai.generativelanguage.v1beta.GenerativeService.BidiGenerateContent?key=${API_KEY}`;
 
 console.log('Connecting to', wsUrl.replace(API_KEY, 'REDACTED'));
