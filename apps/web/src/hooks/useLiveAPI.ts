@@ -17,6 +17,14 @@ export function useLiveAPI() {
 
     const connect = useCallback(async () => {
         try {
+            // Setup AudioContext FIRST (synchronously) to bypass iOS Safari autoplay restrictions
+            const audioCtx = new (window.AudioContext || (window as any).webkitAudioContext)({ sampleRate: 16000 })
+            audioContextRef.current = audioCtx
+            nextPlayTimeRef.current = audioCtx.currentTime
+            if (audioCtx.state === 'suspended') {
+                await audioCtx.resume()
+            }
+
             // 1. Fetch secure token/key
             const res = await fetch('/api/v1/chat/credentials')
             const data = await res.json()
@@ -25,10 +33,7 @@ export function useLiveAPI() {
             const apiKey = data.apiKey
             const systemPrompt = data.systemPrompt || "Du bist Fuxie, ein freundlicher Deutschlehrer. Antworte kurz und präzise."
 
-            // 2. Setup AudioContext
-            const audioCtx = new (window.AudioContext || (window as any).webkitAudioContext)({ sampleRate: 16000 })
-            audioContextRef.current = audioCtx
-            nextPlayTimeRef.current = audioCtx.currentTime
+            // 2. Connect to WebSocket
 
             // 3. Connect to WebSocket
             const wsUrl = `wss://generativelanguage.googleapis.com/ws/google.ai.generativelanguage.v1alpha.GenerativeService.BidiGenerateContent?key=${apiKey}`
