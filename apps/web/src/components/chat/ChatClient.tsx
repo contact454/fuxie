@@ -293,7 +293,7 @@ export function ChatClient({ initialLevel, displayName }: ChatClientProps) {
                 <div className="w-full max-w-md mb-6">
                     <p className="text-sm font-semibold text-gray-700 mb-3">🎬 Chọn ngữ cảnh (Roleplay):</p>
                     <div className="flex gap-3 overflow-x-auto pb-2 snap-x hide-scrollbar">
-                        {SCENARIOS.map(scenario => (
+                        {SCENARIOS.filter(s => s.targetLevels.includes(level)).map(scenario => (
                             <button
                                 key={scenario.id}
                                 onClick={() => setSelectedScenarioId(scenario.id)}

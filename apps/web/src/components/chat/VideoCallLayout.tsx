@@ -133,7 +133,7 @@ export function VideoCallLayout({ onEndCall, level, scenarioId }: VideoCallLayou
                             <span>🎯</span> Nhiệm vụ kịch bản
                         </h3>
                         <ul className="space-y-3">
-                            {scenario.missions.map((m) => (
+                            {scenario.missions.map((m: any) => (
                                 <li key={m.id} className="text-xs flex gap-2 items-start text-gray-200 bg-black/20 p-2.5 rounded-lg">
                                     <div className="w-3.5 h-3.5 rounded-full border border-gray-400 shrink-0 mt-0.5" />
                                     <span>{m.text}</span>
