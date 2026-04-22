@@ -3,13 +3,15 @@
 import React, { useState, useEffect, useRef } from 'react'
 import { MascotAvatar } from './MascotAvatar'
 import { useLiveAPI } from '@/hooks/useLiveAPI'
+import { SCENARIOS } from '@/lib/content/scenarios'
 
 interface VideoCallLayoutProps {
     onEndCall: () => void
     level: string
+    scenarioId: string
 }
 
-export function VideoCallLayout({ onEndCall, level }: VideoCallLayoutProps) {
+export function VideoCallLayout({ onEndCall, level, scenarioId }: VideoCallLayoutProps) {
     const [isMuted, setIsMuted] = useState(false)
     const [showSummary, setShowSummary] = useState(false)
     const [isSummarizing, setIsSummarizing] = useState(false)
@@ -21,12 +23,13 @@ export function VideoCallLayout({ onEndCall, level }: VideoCallLayoutProps) {
     const audioAnalyserRef = useRef<AnalyserNode | null>(null)
     
     const { connect, disconnect, isConnected, isSpeaking, transcript, fullTranscript } = useLiveAPI()
+    const scenario = SCENARIOS.find(s => s.id === scenarioId) || SCENARIOS[0]!
 
     // Connect on mount
     useEffect(() => {
-        connect()
+        connect(scenarioId)
         return () => disconnect()
-    }, [connect, disconnect])
+    }, [connect, disconnect, scenarioId])
 
     // Countdown Timer Logic
     useEffect(() => {
@@ -121,6 +124,23 @@ export function VideoCallLayout({ onEndCall, level }: VideoCallLayoutProps) {
                 {/* Background ambient glow when speaking */}
                 {isSpeaking && (
                     <div className="absolute inset-0 bg-blue-500/10 animate-pulse" />
+                )}
+
+                {/* Missions Overlay - Top Left */}
+                {scenario.missions.length > 0 && (
+                    <div className="absolute top-6 left-6 w-64 bg-black/40 backdrop-blur-md text-white rounded-2xl p-4 shadow-xl border border-white/10 z-20 hidden md:block">
+                        <h3 className="font-bold text-sm mb-3 flex items-center gap-2 text-blue-300">
+                            <span>🎯</span> Nhiệm vụ kịch bản
+                        </h3>
+                        <ul className="space-y-3">
+                            {scenario.missions.map((m) => (
+                                <li key={m.id} className="text-xs flex gap-2 items-start text-gray-200 bg-black/20 p-2.5 rounded-lg">
+                                    <div className="w-3.5 h-3.5 rounded-full border border-gray-400 shrink-0 mt-0.5" />
+                                    <span>{m.text}</span>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
                 )}
 
                 {/* Countdown Timer Badge */}

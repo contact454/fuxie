@@ -9,6 +9,7 @@ import { SuggestedTopics } from './SuggestedTopics'
 import { ChatHistory } from './ChatHistory'
 import { VoiceInput } from './VoiceInput'
 import { VideoCallLayout } from './VideoCallLayout'
+import { SCENARIOS } from '@/lib/content/scenarios'
 
 // ─── Types ─────────────────────────────────────────
 interface Correction {
@@ -64,6 +65,7 @@ export function ChatClient({ initialLevel, displayName }: ChatClientProps) {
     const [showHistory, setShowHistory] = useState(false)
     const [suggestedTopics, setSuggestedTopics] = useState<string[]>([])
     const [chatMode, setChatMode] = useState<'text' | 'video'>('text')
+    const [selectedScenarioId, setSelectedScenarioId] = useState<string>('free_talk')
 
     const messagesEndRef = useRef<HTMLDivElement>(null)
     const inputRef = useRef<HTMLTextAreaElement>(null)
@@ -280,12 +282,33 @@ export function ChatClient({ initialLevel, displayName }: ChatClientProps) {
                 <h1 className="text-2xl font-bold text-gray-800 mb-2">
                     Trò chuyện với Fuxie 🦊
                 </h1>
-                <p className="text-gray-500 text-sm mb-8 text-center max-w-md">
+                <p className="text-gray-500 text-sm mb-6 text-center max-w-md">
                     {displayName
-                        ? `Chào ${displayName}! Chọn trình độ để Fuxie điều chỉnh cuộc trò chuyện phù hợp`
-                        : 'Chọn trình độ để Fuxie điều chỉnh cuộc trò chuyện phù hợp'
+                        ? `Chào ${displayName}! Chọn kịch bản và trình độ để bắt đầu.`
+                        : 'Chọn kịch bản và trình độ để bắt đầu.'
                     }
                 </p>
+
+                {/* Scenario Selection */}
+                <div className="w-full max-w-md mb-6">
+                    <p className="text-sm font-semibold text-gray-700 mb-3">🎬 Chọn ngữ cảnh (Roleplay):</p>
+                    <div className="flex gap-3 overflow-x-auto pb-2 snap-x hide-scrollbar">
+                        {SCENARIOS.map(scenario => (
+                            <button
+                                key={scenario.id}
+                                onClick={() => setSelectedScenarioId(scenario.id)}
+                                className={`flex-none w-40 p-3 rounded-2xl text-left transition-all snap-start
+                                    ${selectedScenarioId === scenario.id 
+                                        ? 'bg-blue-50 ring-2 ring-blue-500 shadow-md' 
+                                        : 'bg-white ring-1 ring-gray-200 hover:bg-gray-50'}`}
+                            >
+                                <div className="text-2xl mb-1">{scenario.icon}</div>
+                                <div className="font-bold text-sm text-gray-800 leading-tight mb-1">{scenario.title}</div>
+                                <div className="text-[10px] text-gray-500 line-clamp-2">{scenario.description}</div>
+                            </button>
+                        ))}
+                    </div>
+                </div>
 
                 {/* Action Buttons */}
                 <div className="flex gap-4 mb-6 w-full max-w-md">
@@ -355,6 +378,7 @@ export function ChatClient({ initialLevel, displayName }: ChatClientProps) {
         return (
             <VideoCallLayout 
                 level={level} 
+                scenarioId={selectedScenarioId}
                 onEndCall={() => {
                     setHasStarted(false)
                     setShowLevelPicker(true)

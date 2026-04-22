@@ -2,6 +2,7 @@
 
 import { useState, useRef, useCallback } from 'react'
 import { floatTo16BitPCM, pcm16ToFloat32, arrayBufferToBase64, base64ToArrayBuffer } from '@/lib/audio/pcm'
+import { SCENARIOS } from '@/lib/content/scenarios'
 
 export function useLiveAPI() {
     const [isConnected, setIsConnected] = useState(false)
@@ -15,7 +16,7 @@ export function useLiveAPI() {
     const workletNodeRef = useRef<AudioWorkletNode | null>(null)
     const nextPlayTimeRef = useRef<number>(0)
 
-    const connect = useCallback(async () => {
+    const connect = useCallback(async (scenarioId: string = 'free_talk') => {
         try {
             // Setup AudioContext FIRST (synchronously) to bypass iOS Safari autoplay restrictions
             const audioCtx = new (window.AudioContext || (window as any).webkitAudioContext)({ sampleRate: 16000 })
@@ -31,7 +32,9 @@ export function useLiveAPI() {
             if (!data.success) throw new Error('Failed to get credentials')
             
             const apiKey = data.apiKey
-            const systemPrompt = data.systemPrompt || "Du bist Fuxie, ein freundlicher Deutschlehrer. Antworte kurz und präzise."
+            
+            const selectedScenario = SCENARIOS.find(s => s.id === scenarioId) || SCENARIOS[0]
+            const systemPrompt = selectedScenario?.systemPrompt || data.systemPrompt || "Du bist Fuxie, ein freundlicher Deutschlehrer."
 
             // 2. Connect to WebSocket
 
