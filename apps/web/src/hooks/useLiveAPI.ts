@@ -36,7 +36,7 @@ export function useLiveAPI() {
             // 2. Connect to WebSocket
 
             // 3. Connect to WebSocket
-            const wsUrl = `wss://generativelanguage.googleapis.com/ws/google.ai.generativelanguage.v1alpha.GenerativeService.BidiGenerateContent?key=${apiKey}`
+            const wsUrl = `wss://generativelanguage.googleapis.com/ws/google.ai.generativelanguage.v1beta.GenerativeService.BidiGenerateContent?key=${apiKey}`
             const ws = new WebSocket(wsUrl)
             wsRef.current = ws
 
@@ -47,7 +47,7 @@ export function useLiveAPI() {
                 // Send initial setup message
                 ws.send(JSON.stringify({
                     setup: {
-                        model: 'models/gemini-2.0-flash-exp',
+                        model: 'models/gemini-2.5-flash',
                         generationConfig: {
                             responseModalities: ["AUDIO"]
                         },
