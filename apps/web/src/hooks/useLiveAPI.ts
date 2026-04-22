@@ -47,7 +47,7 @@ export function useLiveAPI() {
                 // Send initial setup message
                 ws.send(JSON.stringify({
                     setup: {
-                        model: 'models/gemini-2.5-flash',
+                        model: 'models/gemini-3.1-flash-live-preview',
                         generationConfig: {
                             responseModalities: ["AUDIO"]
                         },
