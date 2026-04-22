@@ -2,13 +2,14 @@ generator client {
   provider        = "prisma-client-js"
   binaryTargets   = ["native", "rhel-openssl-3.0.x", "windows"]
   output          = "../../../apps/web/generated/prisma"
-  previewFeatures = ["driverAdapters"]
+  previewFeatures = ["driverAdapters", "postgresqlExtensions"]
 }
 
 datasource db {
-  provider  = "postgresql"
-  url       = env("DATABASE_URL")
-  directUrl = env("DATABASE_URL_UNPOOLED")
+  provider   = "postgresql"
+  url        = env("DATABASE_URL")
+  directUrl  = env("DATABASE_URL_UNPOOLED")
+  extensions = [vector]
 }
 
 // ===== ENUMS =====
@@ -119,6 +120,7 @@ model User {
   assessments           SkillAssessment[]
   examAttempts          ExamAttempt[]
   aiConversations       AiConversation[]
+  chatMemories          UserChatMemory[]
   achievements          UserAchievement[]
   streak                UserStreak?
   dailyActivities       DailyActivity[]
@@ -730,6 +732,20 @@ model AiMessage {
 
   @@index([conversationId, createdAt])
   @@map("ai_messages")
+}
+
+model UserChatMemory {
+  id        String   @id @default(uuid())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id])
+  content   String   // The extracted memory
+  embedding Unsupported("vector(768)")?
+  
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([userId])
+  @@map("user_chat_memories")
 }
 
 // ===== GAMIFICATION =====

@@ -71,9 +71,9 @@ export function InstallPrompt() {
 
     return (
         <div className="fixed bottom-4 left-4 right-4 md:left-auto md:right-8 md:w-96 bg-white rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] p-4 z-50 animate-fade-in-up border border-gray-100 flex items-center gap-4">
-            <div className="shrink-0 relative w-12 h-12 bg-orange-50 rounded-full flex items-center justify-center">
+            <div className="shrink-0 relative w-12 h-12 bg-blue-50 rounded-full flex items-center justify-center">
                 <Image
-                    src="/mascot/core/fuxie-core-happy.png"
+                    src="/mascot/core/fuxie-core-happy-wave.png?v=2"
                     alt="Fuxie"
                     width={32}
                     height={32}
@@ -91,7 +91,7 @@ export function InstallPrompt() {
             <div className="shrink-0 flex flex-col gap-2">
                 <button
                     onClick={handleInstall}
-                    className="bg-[#FF6B35] text-white text-xs font-bold px-4 py-2 rounded-lg hover:bg-[#e55a25] transition-colors"
+                    className="bg-blue-600 text-white text-xs font-bold px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
                 >
                     Cài đặt
                 </button>

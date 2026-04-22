@@ -3,7 +3,10 @@ import * as path from 'node:path';
 import * as glob from 'glob';
 import { GoogleGenAI } from '@google/genai';
 
-const apiKey = 'AIzaSyBcoXgJ4CqiXssFGFe-vssmemccKKJZwD4';
+import * as dotenv from 'dotenv';
+dotenv.config();
+
+const apiKey = process.env.GEMINI_API_KEY || 'AIzaSyCuGxNVkX8JDBSdUlO_e5qray6geD855sI';
 const ai = new GoogleGenAI({ apiKey: apiKey });
 
 interface VocabWord {
@@ -15,7 +18,7 @@ interface VocabWord {
 }
 
 const BATCH_SIZE = 25; 
-const SLEEP_MS = 1000; // Delay to prevent soft rate limit
+const SLEEP_MS = 2500; // Delay to prevent soft rate limit
 const PROGRESS_FILE = path.resolve(process.cwd(), 'scripts', 'audit-progress.json');
 
 const sleep = (ms: number) => new Promise(r => setTimeout(r, ms));

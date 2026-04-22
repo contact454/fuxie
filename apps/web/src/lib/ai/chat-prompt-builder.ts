@@ -16,6 +16,7 @@ export interface ChatUserContext {
     recentVocab: string[]
     streak: number
     totalXp: number
+    longTermMemories?: string[]
 }
 
 /**
@@ -51,6 +52,10 @@ export function buildChatSystemPrompt(ctx: ChatUserContext): string {
         ? `\nDer Schüler hat einen ${ctx.streak}-Tage-Streak und ${ctx.totalXp} XP. Erwähne manchmal seinen Fortschritt ermutigend.`
         : ''
 
+    const memorySection = ctx.longTermMemories && ctx.longTermMemories.length > 0
+        ? `\n## Langzeitgedächtnis (Long-Term Memory)\nErinnere dich an diese Details aus früheren Gesprächen:\n${ctx.longTermMemories.map(m => `- ${m}`).join('\n')}\nNutze diese Informationen, um das Gespräch persönlicher zu gestalten.`
+        : ''
+
     return `Du bist "Fuxie" 🦊 — ein freundlicher, geduldiger KI-Sprachtutor für Deutsch als Fremdsprache.
 Dein Schüler heißt "${ctx.displayName}" und ist vietnamesisch. CEFR-Niveau: ${ctx.level}.
 
@@ -71,12 +76,12 @@ ${levelDesc}
 3. Sei ermutigend und nutze den 🦊 Emoji gelegentlich
 4. Stelle Folgefragen, um das Gespräch am Laufen zu halten
 5. Wenn der Schüler auf Vietnamesisch schreibt, antworte kurz auf Vietnamesisch und ermutige zum Deutschsprechen
-${vocabSection}${weakSkillSection}${streakSection}
+${vocabSection}${weakSkillSection}${streakSection}${memorySection}
 
 ## WICHTIG: Antwortformat
 Du MUSST deine Antwort als JSON-Objekt zurückgeben mit genau diesem Schema:
 {
-  "text": "Deine Antwort mit Markdown-Formatierung",
+  "text": "Deine Antwort mit Markdown-Formatierung. (WIRD GESPROCHEN)",
   "corrections": [
     {
       "original": "Der fehlerhafte Text des Schülers",
@@ -85,16 +90,21 @@ Du MUSST deine Antwort als JSON-Objekt zurückgeben mit genau diesem Schema:
       "rule": "Name der Grammatikregel"
     }
   ],
+  "pronunciation_feedback": [
+    {
+      "word": "Das falsch ausgesprochene Wort",
+      "phoneme_error": "Kurze Beschreibung des Aussprachefehlers (z.B. 'sch' statt 'ch')"
+    }
+  ],
   "suggestedFollowUps": [
     "Vorschlag 1 als Frage oder Thema",
     "Vorschlag 2"
   ]
 }
 
-- "corrections" ist ein leeres Array [] wenn der Schüler keine Fehler gemacht hat.
-- "suggestedFollowUps" enthält immer 2-3 Vorschläge für den nächsten Gesprächsschritt.
-- Verwende Markdown für Formatierung im "text"-Feld (fett, kursiv, Listen).
-- Die corrections im JSON ersetzen NICHT die Korrekturen im text — du sollst die Korrekturen auch im text-Feld erklären.`
+- "corrections" und "pronunciation_feedback" sind leere Arrays [], wenn der Schüler keine Fehler gemacht hat.
+- Verwende Markdown für Formatierung im "text"-Feld.
+- Wenn der User per Audio spricht und Wörter falsch ausspricht, bemerke dies und trage es in "pronunciation_feedback" ein. Du musst diese Fehler NICHT im "text"-Feld erwähnen, es sei denn es stört die Kommunikation massiv.`
 }
 
 /** Level-appropriate greetings used when starting a new conversation. */

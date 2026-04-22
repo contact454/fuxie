@@ -33,7 +33,7 @@ interface ChatResponse {
 
 /** Fetch enriched user context for the system prompt. */
 async function getUserContext(dbUserId: string): Promise<ChatUserContext> {
-    const [profile, learningPath, recentCards] = await Promise.all([
+    const [profile, learningPath, recentCards, memories] = await Promise.all([
         prisma.userProfile.findUnique({
             where: { userId: dbUserId },
             select: {
@@ -64,6 +64,12 @@ async function getUserContext(dbUserId: string): Promise<ChatUserContext> {
                 },
             },
         }),
+        prisma.userChatMemory.findMany({
+            where: { userId: dbUserId },
+            orderBy: { updatedAt: 'desc' },
+            take: 5,
+            select: { content: true },
+        }),
     ])
 
     const streak = await prisma.userStreak.findUnique({
@@ -81,6 +87,7 @@ async function getUserContext(dbUserId: string): Promise<ChatUserContext> {
         recentVocab: recentCards
             .filter(c => c.vocabularyItem)
             .map(c => `${c.vocabularyItem!.word} (${(c.vocabularyItem!.translations as any)?.[locale] || ''})`),
+        longTermMemories: memories.map(m => m.content),
         streak: streak?.currentStreak ?? 0,
         totalXp: profile?.totalXp ?? 0,
     }

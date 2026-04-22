@@ -40,13 +40,15 @@ export function startWaveformAnimation(
     const draw = () => {
         animFrameId = requestAnimationFrame(draw)
         analyser.getByteFrequencyData(dataArray)
-        ctx.clearRect(0, 0, canvas.width, canvas.height)
+        const canvasW = Math.max(1, (canvas as any).width || 300)
+        const canvasH = Math.max(1, (canvas as any).height || 150)
+        ctx.clearRect(0, 0, canvasW, canvasH)
 
-        const barWidth = (canvas.width / bufferLength) * 2.5
+        const barWidth = (canvasW / bufferLength) * 2.5
         let x = 0
 
         if (style === 'gradient-stroke') {
-            const gradient = ctx.createLinearGradient(0, 0, canvas.width, 0)
+            const gradient = ctx.createLinearGradient(0, 0, canvasW, 0)
             gradient.addColorStop(0, gradientColors[0])
             gradient.addColorStop(0.5, gradientColors[1])
             gradient.addColorStop(1, gradientColors[2])
@@ -57,8 +59,8 @@ export function startWaveformAnimation(
 
             for (let i = 0; i < bufferLength; i++) {
                 const v = (dataArray[i] ?? 0) / 255.0
-                const barHeight = Math.max(4, v * v * canvas.height * 0.9)
-                const y = (canvas.height - barHeight) / 2
+                const barHeight = Math.max(4, v * v * canvasH * 0.9)
+                const y = (canvasH - barHeight) / 2
 
                 ctx.beginPath()
                 ctx.moveTo(x + barWidth / 2, y)
@@ -70,8 +72,8 @@ export function startWaveformAnimation(
             // 'bars' style
             ctx.fillStyle = barColor
             for (let i = 0; i < bufferLength; i++) {
-                const barHeight = Math.max(2, ((dataArray[i] ?? 0) / 255.0) * canvas.height * 0.8)
-                ctx.fillRect(x, (canvas.height - barHeight) / 2, barWidth - 1, barHeight)
+                const barHeight = Math.max(2, ((dataArray[i] ?? 0) / 255.0) * canvasH * 0.8)
+                ctx.fillRect(x, (canvasH - barHeight) / 2, barWidth - 1, barHeight)
                 x += barWidth
             }
         }

@@ -16,6 +16,9 @@ export const metadata: Metadata = {
         statusBarStyle: 'default',
         title: 'Fuxie',
     },
+    icons: {
+        apple: '/mascot/core/fuxie-core-happy.png',
+    },
     formatDetection: {
         telephone: false,
     },

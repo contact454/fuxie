@@ -1,5 +1,14 @@
 import { DBSchema, openDB, IDBPDatabase } from 'idb'
 
+declare var window: any;
+declare var navigator: any;
+
+declare global {
+  interface Window {
+    SyncManager: any;
+  }
+}
+
 interface FuxieOfflineDB extends DBSchema {
     due_cards: {
         key: string // card id
@@ -24,7 +33,7 @@ interface FuxieOfflineDB extends DBSchema {
 let dbPromise: Promise<IDBPDatabase<FuxieOfflineDB>> | null = null
 
 export function getOfflineDB() {
-    if (typeof window === 'undefined') return null
+    if (typeof indexedDB === 'undefined') return null
     if (!dbPromise) {
         dbPromise = openDB<FuxieOfflineDB>('fuxie-offline-db', 1, {
             upgrade(db) {
@@ -62,11 +71,11 @@ export async function queuePendingReview(cardId: string, rating: 'AGAIN' | 'HARD
     })
     
     // Optionally trigger a background sync if Service Worker supports it
-    if ('serviceWorker' in navigator && 'SyncManager' in window) {
+    if ('serviceWorker' in navigator && typeof window !== 'undefined' && 'SyncManager' in window) {
         try {
             const swRegistration = await navigator.serviceWorker.ready
             // Attempt to register a sync tag
-            // @ts-expect-error - TS doesn't know about SyncManager natively yet
+            // @ts-ignore - TS doesn't know about SyncManager natively yet
             await swRegistration.sync.register('sync-reviews')
         } catch (err) {
            console.log('[Sync] Background sync could not be registered', err) 

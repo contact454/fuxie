@@ -8,6 +8,7 @@ import { CorrectionBubble } from './CorrectionBubble'
 import { SuggestedTopics } from './SuggestedTopics'
 import { ChatHistory } from './ChatHistory'
 import { VoiceInput } from './VoiceInput'
+import { VideoCallLayout } from './VideoCallLayout'
 
 // ─── Types ─────────────────────────────────────────
 interface Correction {
@@ -62,6 +63,7 @@ export function ChatClient({ initialLevel, displayName }: ChatClientProps) {
     const [conversationId, setConversationId] = useState<string | null>(null)
     const [showHistory, setShowHistory] = useState(false)
     const [suggestedTopics, setSuggestedTopics] = useState<string[]>([])
+    const [chatMode, setChatMode] = useState<'text' | 'video'>('text')
 
     const messagesEndRef = useRef<HTMLDivElement>(null)
     const inputRef = useRef<HTMLTextAreaElement>(null)
@@ -76,13 +78,17 @@ export function ChatClient({ initialLevel, displayName }: ChatClientProps) {
     }, [messages, scrollToBottom])
 
     // ─── Start a new conversation ──────────────────
-    const startConversation = useCallback(async (selectedLevel: CefrLevel) => {
+    const startConversation = useCallback(async (selectedLevel: CefrLevel, mode: 'text' | 'video' = 'text') => {
         setLevel(selectedLevel)
+        setChatMode(mode)
         setShowLevelPicker(false)
         setHasStarted(true)
         setMessages([])
         setConversationId(null)
         setSuggestedTopics([])
+
+        if (mode === 'video') return // Bypass text init for Video Call
+
 
         try {
             const res = await fetch('/api/v1/chat', {
@@ -260,9 +266,9 @@ export function ChatClient({ initialLevel, displayName }: ChatClientProps) {
             <div className="flex flex-col items-center justify-center min-h-[calc(100vh-120px)] px-4 py-8">
                 {/* Mascot */}
                 <div className="relative mb-6">
-                    <div className="w-24 h-24 rounded-full bg-gradient-to-br from-orange-300 to-amber-400 flex items-center justify-center shadow-lg shadow-orange-200/50 animate-bounce" style={{ animationDuration: '3s' }}>
+                    <div className="w-24 h-24 rounded-full bg-gradient-to-br from-cyan-300 to-blue-400 flex items-center justify-center shadow-lg shadow-blue-200/50 animate-bounce" style={{ animationDuration: '3s' }}>
                         <Image
-                            src="/mascot/poses/happy.png"
+                            src="/mascot/core/fuxie-core-happy-wave.png?v=2"
                             alt="Fuxie"
                             width={80}
                             height={80}
@@ -281,6 +287,22 @@ export function ChatClient({ initialLevel, displayName }: ChatClientProps) {
                     }
                 </p>
 
+                {/* Action Buttons */}
+                <div className="flex gap-4 mb-6 w-full max-w-md">
+                    <button
+                        onClick={() => startConversation(level, 'video')}
+                        className="flex-1 py-3 rounded-2xl bg-gradient-to-r from-red-500 to-orange-500 text-white font-bold shadow-lg shadow-orange-500/30 hover:scale-105 transition-all flex items-center justify-center gap-2"
+                    >
+                        📞 Gọi Fuxie (Live)
+                    </button>
+                    <button
+                        onClick={() => startConversation(level, 'text')}
+                        className="flex-1 py-3 rounded-2xl bg-white text-gray-800 ring-1 ring-gray-200 font-bold shadow-sm hover:scale-105 transition-all flex items-center justify-center gap-2"
+                    >
+                        💬 Nhắn tin
+                    </button>
+                </div>
+
                 {/* Level Grid */}
                 <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 w-full max-w-md">
                     {CEFR_LEVELS.map(l => {
@@ -288,11 +310,12 @@ export function ChatClient({ initialLevel, displayName }: ChatClientProps) {
                         return (
                             <button
                                 key={l}
-                                onClick={() => startConversation(l)}
+                                onClick={() => setLevel(l)}
                                 className={`relative overflow-hidden rounded-2xl p-4 text-white font-bold text-lg
                                     bg-gradient-to-br ${t.gradient} shadow-md
                                     hover:shadow-lg hover:scale-[1.03] active:scale-[0.98]
-                                    transition-all duration-200 ease-out`}
+                                    transition-all duration-200 ease-out
+                                    ${level === l ? 'ring-4 ring-white shadow-xl scale-105' : 'opacity-80'}`}
                             >
                                 <div className="relative z-10">
                                     <div className="text-xl mb-1">{l}</div>
@@ -328,6 +351,19 @@ export function ChatClient({ initialLevel, displayName }: ChatClientProps) {
     }
 
     // ─── Chat Screen ────────────────────────────────
+    if (chatMode === 'video') {
+        return (
+            <VideoCallLayout 
+                level={level} 
+                onEndCall={() => {
+                    setHasStarted(false)
+                    setShowLevelPicker(true)
+                    setChatMode('text')
+                }} 
+            />
+        )
+    }
+
     return (
         <div className="flex flex-col h-[calc(100vh-120px)] max-w-3xl mx-auto">
             {/* Header */}

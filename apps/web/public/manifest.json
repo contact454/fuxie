@@ -9,13 +9,14 @@
   "orientation": "portrait-primary",
   "icons": [
     {
-      "src": "/android-chrome-192x192.png",
-      "sizes": "192x192",
-      "type": "image/png"
+      "src": "/fuxie-icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
     },
     {
-      "src": "/android-chrome-512x512.png",
-      "sizes": "512x512",
+      "src": "/mascot/core/fuxie-core-happy.png",
+      "sizes": "1024x1024",
       "type": "image/png"
     }
   ]

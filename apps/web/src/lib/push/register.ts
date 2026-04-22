@@ -1,3 +1,7 @@
+declare var window: any;
+declare var navigator: any;
+declare var Notification: any;
+
 // Helper to convert base64 VAPID key to Uint8Array
 function urlBase64ToUint8Array(base64String: string) {
     const padding = '='.repeat((4 - base64String.length % 4) % 4)
@@ -5,7 +9,7 @@ function urlBase64ToUint8Array(base64String: string) {
         .replace(/\-/g, '+')
         .replace(/_/g, '/')
 
-    const rawData = window.atob(base64)
+    const rawData = globalThis.atob(base64)
     const outputArray = new Uint8Array(rawData.length)
 
     for (let i = 0; i < rawData.length; ++i) {
@@ -15,7 +19,7 @@ function urlBase64ToUint8Array(base64String: string) {
 }
 
 export async function subscribeToPushNotifications() {
-    if (typeof window === 'undefined' || !('serviceWorker' in navigator) || !('PushManager' in window)) {
+    if (typeof navigator === 'undefined' || !('serviceWorker' in navigator) || !('PushManager' in globalThis)) {
         return false
     }
 

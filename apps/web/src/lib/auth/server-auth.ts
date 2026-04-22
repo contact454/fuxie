@@ -67,7 +67,7 @@ async function provisionUser(
     firebaseUid: string,
     email: string,
     displayName?: string
-): Promise<{ id: string; email: string; firebaseUid: string; role: string } | null> {
+): Promise<{ id: string; email: string; firebaseUid: string; role: any } | null> {
     try {
         return await prisma.$transaction(async (tx) => {
             const newUser = await tx.user.create({
