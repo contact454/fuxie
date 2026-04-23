@@ -1,14 +1,17 @@
 import { GoogleGenerativeAI } from '@google/generative-ai'
 
-const defaultKey = process.env.GEMINI_API_KEY || process.env.GOOGLE_AI_API_KEY || ''
-const fallbackKey = process.env.GEMINI_API_KEY_FALLBACK || ''
-
-const keys = [defaultKey, fallbackKey].filter(k => k.trim().length > 0)
 let currentKeyIndex = 0
 /** Keys that have been detected as invalid/suspended during this runtime */
 const evictedKeys = new Set<string>()
 
+function getActiveKeys(): string[] {
+    const defaultKey = process.env.GEMINI_API_KEY || process.env.GOOGLE_AI_API_KEY || ''
+    const fallbackKey = process.env.GEMINI_API_KEY_FALLBACK || ''
+    return [defaultKey, fallbackKey].filter(k => k.trim().length > 0)
+}
+
 export function getGeminiKey(): string {
+    const keys = getActiveKeys()
     // Find the next non-evicted key
     const availableKeys = keys.filter(k => !evictedKeys.has(k))
     if (availableKeys.length === 0) throw new Error('GEMINI_API_KEY is not set or all keys evicted')
@@ -20,6 +23,7 @@ export function getGeminiClient(): GoogleGenerativeAI {
 }
 
 export function rotateGeminiKey() {
+    const keys = getActiveKeys()
     if (keys.length > 1) {
         const oldIndex = currentKeyIndex
         currentKeyIndex = (currentKeyIndex + 1) % keys.length
@@ -51,6 +55,7 @@ export async function withGeminiFallback<T>(
                 errMsg.includes('429') || 
                 errMsg.includes('quota') || 
                 errMsg.includes('exhausted')
+            const keys = getActiveKeys()
             if (keys.length > 1) {
                 if (errStatus === 403 || errMsg.includes('suspended') || errMsg.includes('PERMISSION_DENIED')) {
                     const evictedKey = getGeminiKey();

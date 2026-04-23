@@ -5,6 +5,8 @@ import { buildChatSystemPrompt } from '@/lib/ai/chat-prompt-builder'
 import { getDbUserByFirebaseUid } from '@/lib/auth/db-user'
 import { prisma } from '@fuxie/database'
 
+export const dynamic = 'force-dynamic'
+
 export async function GET(req: NextRequest) {
     try {
         // Require authentication
