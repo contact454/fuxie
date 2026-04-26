@@ -1,4 +1,5 @@
 import { PrismaClient } from '../../../apps/web/generated/prisma'
+import { PrismaNeon } from '@prisma/adapter-neon'
 
 const globalForPrisma = globalThis as unknown as {
     prisma: PrismaClient | undefined
@@ -23,7 +24,6 @@ function createPrismaClient(): PrismaClient {
     // For local dev: use standard Prisma TCP connection
     if (isNeonUrl && databaseUrl) {
         // Synchronous init with lazy adapter — Prisma 7.x supports { connectionString } directly
-        const { PrismaNeon } = require('@prisma/adapter-neon')
         const adapter = new PrismaNeon({ connectionString: databaseUrl })
         return new PrismaClient({ adapter, log: logConfig })
     }

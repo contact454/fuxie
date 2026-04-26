@@ -72,9 +72,11 @@ export async function GET(req: NextRequest) {
         const mappedItems = items.map((item) => {
             const t = item.translations as (Record<string, string> | null)
             const fallbackMeaning = t ? (t[locale] || t['vi'] || t['en'] || t['meaningVi'] || t['meaningEn'] || JSON.stringify(t)) : ''
+            const meaningDe = t ? (t['de'] || t['meaningDe']) : null
             return {
                 ...item,
                 meaningNative: fallbackMeaning,
+                meaningDe,
             }
         })
 

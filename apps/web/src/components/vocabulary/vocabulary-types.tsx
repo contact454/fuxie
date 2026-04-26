@@ -19,6 +19,7 @@ export interface VocabItem {
     plural: string | null
     wordType: string
     meaningNative: string
+    meaningDe?: string | null
     notes: string | null
     conjugation: Record<string, unknown> | null
     audioUrl?: string | null

@@ -51,6 +51,7 @@ export function Flashcard({ vocabulary, isFlipped, onFlip }: FlashcardProps) {
     const articleColor = article ? ARTICLE_COLORS[article] ?? '#6B7280' : '#6B7280'
     
     const displayMeaning = translations?.[locale] || translations?.['vi'] || '';
+    const meaningDe = translations?.['de'] || translations?.['meaningDe'];
 
     return (
         <div className="w-full max-w-lg mx-auto" style={{ perspective: '1000px' }}>
@@ -149,6 +150,11 @@ export function Flashcard({ vocabulary, isFlipped, onFlip }: FlashcardProps) {
                     {/* Meaning */}
                     <div className="text-center mb-3">
                         <p className="text-2xl font-bold text-gray-900">{displayMeaning}</p>
+                        {meaningDe && (
+                            <div className="mt-2 inline-block bg-[#004E89]/5 border border-[#004E89]/20 rounded-lg px-3 py-2">
+                                <p className="text-sm font-medium text-[#004E89]">{meaningDe}</p>
+                            </div>
+                        )}
                     </div>
 
                     {/* Divider */}
