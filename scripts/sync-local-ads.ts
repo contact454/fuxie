@@ -2,7 +2,7 @@ import { Client } from 'pg';
 import { existsSync } from 'fs';
 import * as path from 'path';
 
-const dbUrl = 'postgresql://fuxie:fuxie_dev@127.0.0.1:5433/fuxie_dev';
+const dbUrl = process.env.DATABASE_URL ?? '';
 const IMG_DIR = path.join('c:/Users/DMF Schule/9-Fuxie/apps/web/public/images/exams/ads');
 
 async function main() {

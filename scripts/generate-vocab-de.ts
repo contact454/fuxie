@@ -7,7 +7,7 @@ dotenv.config();
 dotenv.config({ path: '.env.local' });
 
 // Initialize Gemini Client
-const apiKey = 'AIzaSyCWKjhNim3BqAGigHJ5FRI1NC8YlFUVUXc';
+const apiKey = process.env.GEMINI_API_KEY ?? '';
 
 if (!apiKey) {
     console.error('❌ GEMINI_API_KEY is missing.');

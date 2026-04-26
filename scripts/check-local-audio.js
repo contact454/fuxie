@@ -2,7 +2,7 @@ const { Client } = require('pg');
 
 async function checkExams() {
     try {
-        const client = new Client({ connectionString: 'postgresql://fuxie:fuxie_dev@127.0.0.1:5433/fuxie_dev' });
+        const client = new Client({ connectionString: process.env.DATABASE_URL ?? '' });
         await client.connect();
         
         const res = await client.query(`

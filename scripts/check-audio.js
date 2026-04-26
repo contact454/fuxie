@@ -2,7 +2,7 @@ const { Client } = require('pg');
 
 async function checkExams() {
     try {
-        const client = new Client({ connectionString: 'postgresql://neondb_owner:npg_aU0YPhW6zZQp@ep-rough-thunder-a1m0qm18.ap-southeast-1.aws.neon.tech/fuxie_prod?sslmode=require' });
+        const client = new Client({ connectionString: process.env.DATABASE_URL ?? '' });
         await client.connect();
         
         const res = await client.query(`

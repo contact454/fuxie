@@ -6,7 +6,8 @@ import { GoogleGenAI } from '@google/genai';
 import * as dotenv from 'dotenv';
 dotenv.config();
 
-const apiKey = process.env.GEMINI_API_KEY || 'AIzaSyCuGxNVkX8JDBSdUlO_e5qray6geD855sI';
+const apiKey = process.env.GEMINI_API_KEY || '';
+if (!apiKey) throw new Error("GEMINI_API_KEY is not set in environment");
 const ai = new GoogleGenAI({ apiKey: apiKey });
 
 interface VocabWord {
