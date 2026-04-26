@@ -3,8 +3,8 @@ import { z } from 'zod'
 import { prisma } from '@fuxie/database'
 import { getServerUser } from '@/lib/auth/server-auth'
 import { handleApiError } from '@/lib/api/error-handler'
-
 import { cookies } from 'next/headers'
+import { calculateWritingXp, recordLearningActivity } from '@/lib/progress/learning-activity'
 
 const writingSubmitSchema = z.object({
     exerciseId: z.string().min(1),
@@ -13,7 +13,7 @@ const writingSubmitSchema = z.object({
     timeSpentSeconds: z.number().min(0).optional(),
 })
 
-// POST /api/v1/writing/submit — Submit writing and get AI grading
+// POST /api/v1/writing/submit - Submit writing and get AI grading
 export async function POST(req: NextRequest) {
     try {
         const serverUser = await getServerUser()
@@ -24,7 +24,6 @@ export async function POST(req: NextRequest) {
         const body = await req.json()
         const { exerciseId, submittedText, wordCount, timeSpentSeconds } = writingSubmitSchema.parse(body)
 
-        // Fetch exercise details
         const exercise = await prisma.writingExercise.findUnique({
             where: { exerciseId },
         })
@@ -37,7 +36,6 @@ export async function POST(req: NextRequest) {
         const aiServiceUrl = process.env.AI_SERVICE_URL || 'http://localhost:3001'
         const locale = (await cookies()).get('NEXT_LOCALE')?.value || 'vi'
 
-        // Call Custom AI grading service
         const aiRes = await fetch(`${aiServiceUrl}/grade/writing`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
@@ -53,7 +51,7 @@ export async function POST(req: NextRequest) {
                 uiLanguage: locale,
                 rubric,
             }),
-            signal: AbortSignal.timeout(30000), // Writing grading can take up to 30s
+            signal: AbortSignal.timeout(30000),
         })
 
         if (!aiRes.ok) {
@@ -67,45 +65,63 @@ export async function POST(req: NextRequest) {
         }
 
         const gradingResult = json.data
+        const baseXpEarned = calculateWritingXp()
 
-        // Extract individual criterion scores
         const criteriaMap: Record<string, number> = {}
         for (const c of gradingResult.criteria) {
             criteriaMap[c.id || c.name] = c.score
         }
 
-        // Save attempt to database
-        const attempt = await prisma.writingAttempt.create({
-            data: {
+        const result = await prisma.$transaction(async (tx) => {
+            const attempt = await tx.writingAttempt.create({
+                data: {
+                    userId: serverUser.userId,
+                    exerciseId: exercise.id,
+                    submittedText,
+                    wordCount: wordCount || submittedText.trim().split(/\s+/).length,
+                    scoreInhalt: criteriaMap['Inhalt'] ?? criteriaMap['VollstÃ¤ndigkeit'] ?? null,
+                    scoreAngemessenheit: criteriaMap['Kommunikative Angemessenheit'] ?? criteriaMap['Formale Richtigkeit'] ?? null,
+                    scoreKorrektheit: criteriaMap['Korrektheit'] ?? null,
+                    scoreSpektrum: criteriaMap['Wortschatz & Strukturen'] ?? null,
+                    scoreKohaerenz: criteriaMap['KohÃ¤renz & KohÃ¤sion'] ?? null,
+                    totalScore: gradingResult.totalScore,
+                    maxScore: gradingResult.maxScore,
+                    percentScore: gradingResult.percentScore,
+                    feedbackOverall: gradingResult.overallFeedback,
+                    feedbackJson: gradingResult.criteria,
+                    correctionsJson: gradingResult.corrections,
+                    estimatedLevel: gradingResult.estimatedLevel as any,
+                    timeSpentSeconds: timeSpentSeconds || null,
+                },
+            })
+
+            const progress = await recordLearningActivity(tx, {
                 userId: serverUser.userId,
-                exerciseId: exercise.id,
-                submittedText,
-                wordCount: wordCount || submittedText.trim().split(/\s+/).length,
-                scoreInhalt: criteriaMap['Inhalt'] ?? criteriaMap['Vollständigkeit'] ?? null,
-                scoreAngemessenheit: criteriaMap['Kommunikative Angemessenheit'] ?? criteriaMap['Formale Richtigkeit'] ?? null,
-                scoreKorrektheit: criteriaMap['Korrektheit'] ?? null,
-                scoreSpektrum: criteriaMap['Wortschatz & Strukturen'] ?? null,
-                scoreKohaerenz: criteriaMap['Kohärenz & Kohäsion'] ?? null,
-                totalScore: gradingResult.totalScore,
+                exerciseId: exercise.exerciseId,
+                score: gradingResult.totalScore,
                 maxScore: gradingResult.maxScore,
                 percentScore: gradingResult.percentScore,
-                feedbackOverall: gradingResult.overallFeedback,
-                feedbackJson: gradingResult.criteria,
-                correctionsJson: gradingResult.corrections,
-                estimatedLevel: gradingResult.estimatedLevel as any,
-                timeSpentSeconds: timeSpentSeconds || null,
-            },
+                xpEarned: baseXpEarned,
+                timeSpentSeconds: timeSpentSeconds ?? null,
+                exercisesCompleted: 1,
+            })
+
+            return {
+                attempt,
+                progress,
+            }
         })
 
         return NextResponse.json({
             success: true,
             data: {
-                attemptId: attempt.id,
+                attemptId: result.attempt.id,
+                xpEarned: result.progress.xpEarned,
+                streak: result.progress.streak,
                 ...gradingResult,
             },
         })
     } catch (error: unknown) {
-        // Check if it's an API key error
         if (
             error instanceof Error &&
             (error.message.includes('API_KEY') || error.message.includes('GEMINI'))

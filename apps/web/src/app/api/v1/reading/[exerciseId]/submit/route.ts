@@ -3,6 +3,8 @@ import { z } from 'zod'
 import { prisma } from '@fuxie/database'
 import { getServerUser } from '@/lib/auth/server-auth'
 import { handleApiError } from '@/lib/api/error-handler'
+import { gradeReadingSubmission } from '@/lib/assessment/submission-grading'
+import { calculateReadingXp, recordLearningActivity } from '@/lib/progress/learning-activity'
 
 const readingSubmitSchema = z.object({
     answers: z.record(z.string(), z.string()),   // { questionId: userAnswer }
@@ -55,58 +57,41 @@ export async function POST(
             )
         }
 
-        // Grade answers
-        let score = 0
-        const totalQuestions = exercise.questions.length
-        const responseData: { questionId: string; userAnswer: string; isCorrect: boolean }[] = []
-        const questionResults: {
-            questionId: string
-            questionNumber: number
-            questionType: string
-            statement: string
-            linkedText: string | null
-            options: unknown
-            userAnswer: string
-            correctAnswer: string
-            isCorrect: boolean
-            explanation: unknown
-        }[] = []
+        const { score, totalQuestions, percentage, responseData, questionResults } =
+            gradeReadingSubmission(exercise.questions, answers)
+        const baseXpEarned = calculateReadingXp(percentage)
 
-        for (const q of exercise.questions) {
-            const userAnswer = answers[q.id] || ''
-            const isCorrect = userAnswer.toLowerCase().trim() === q.correctAnswer.toLowerCase().trim()
-            if (isCorrect) score++
-
-            responseData.push({ questionId: q.id, userAnswer, isCorrect })
-            questionResults.push({
-                questionId: q.id,
-                questionNumber: q.questionNumber,
-                questionType: q.questionType,
-                statement: q.statement,
-                linkedText: q.linkedText,
-                options: q.options,
-                userAnswer,
-                correctAnswer: q.correctAnswer,
-                isCorrect,
-                explanation: q.explanation,
-            })
-        }
-
-        const percentage = totalQuestions > 0 ? Math.round((score / totalQuestions) * 100) : 0
-
-        // Save attempt
-        const attempt = await prisma.readingAttempt.create({
-            data: {
-                userId: serverUser.userId,
-                exerciseId: exercise.id,
-                score,
-                totalQuestions,
-                percentage,
-                timeTaken: timeTaken ?? null,
-                responses: {
-                    create: responseData,
+        // Save attempt + unified learning activity
+        const { attempt, progress } = await prisma.$transaction(async (tx) => {
+            const newAttempt = await tx.readingAttempt.create({
+                data: {
+                    userId: serverUser.userId,
+                    exerciseId: exercise.id,
+                    score,
+                    totalQuestions,
+                    percentage,
+                    timeTaken: timeTaken ?? null,
+                    responses: {
+                        create: responseData,
+                    },
                 },
-            },
+            })
+
+            const activity = await recordLearningActivity(tx, {
+                userId: serverUser.userId,
+                exerciseId: exercise.exerciseId,
+                score,
+                maxScore: totalQuestions,
+                percentScore: percentage,
+                xpEarned: baseXpEarned,
+                timeSpentSeconds: timeTaken ?? null,
+                exercisesCompleted: 1,
+            })
+
+            return {
+                attempt: newAttempt,
+                progress: activity,
+            }
         })
 
         return NextResponse.json({
@@ -116,6 +101,8 @@ export async function POST(
                 score,
                 totalQuestions,
                 percentage,
+                xpEarned: progress.xpEarned,
+                streak: progress.streak,
                 timeTaken,
                 questionResults,
             },

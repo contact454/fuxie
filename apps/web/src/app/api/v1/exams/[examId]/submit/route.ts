@@ -1,6 +1,8 @@
 import { NextResponse } from 'next/server'
 import { prisma, Prisma } from '@fuxie/database'
 import { getServerUser } from '@/lib/auth/server-auth'
+import { gradeExamTask } from '@/lib/assessment/submission-grading'
+import { calculateExamXp, recordLearningActivity } from '@/lib/progress/learning-activity'
 
 interface SubmitBody {
     attemptId: string
@@ -82,7 +84,7 @@ export async function POST(
             const task = taskMap.get(ans.taskId)
             if (!task) continue
 
-            const result = gradeTask(task.exerciseType, task.contentJson, ans.answerJson, task.maxPoints)
+            const result = gradeExamTask(task.exerciseType, task.contentJson, ans.answerJson, task.maxPoints)
             gradedAnswers.push({
                 taskId: ans.taskId,
                 score: result.score,
@@ -108,9 +110,14 @@ export async function POST(
         const maxScore = exam.totalPoints
         const percentScore = maxScore > 0 ? Math.round((totalScore / maxScore) * 100) : 0
         const passed = percentScore >= exam.passingScore
+        const baseXpEarned = calculateExamXp(passed)
+        const timeSpentSeconds = Math.max(
+            0,
+            Math.round((Date.now() - attempt.startedAt.getTime()) / 1000)
+        )
 
         // Save answers + update attempt in a transaction
-        await prisma.$transaction(async (tx) => {
+        const progress = await prisma.$transaction(async (tx) => {
             // Save individual answers
             for (const ga of gradedAnswers) {
                 await tx.examAnswer.create({
@@ -139,11 +146,15 @@ export async function POST(
                 },
             })
 
-            // Award XP (10 base + bonus for passing)
-            const xp = passed ? 25 : 10
-            await tx.userProfile.update({
-                where: { userId: user.userId },
-                data: { totalXp: { increment: xp } },
+            return recordLearningActivity(tx, {
+                userId: user.userId,
+                exerciseId: examId,
+                score: totalScore,
+                maxScore,
+                percentScore,
+                xpEarned: baseXpEarned,
+                timeSpentSeconds,
+                exercisesCompleted: 1,
             })
         })
 
@@ -155,6 +166,8 @@ export async function POST(
                 maxScore,
                 percentScore,
                 passed,
+                xpEarned: progress.xpEarned,
+                streak: progress.streak,
                 sectionScores: Object.values(sectionScores),
                 answers: gradedAnswers,
             },
@@ -165,86 +178,3 @@ export async function POST(
     }
 }
 
-/**
- * Auto-grade a task based on exercise type
- */
-function gradeTask(
-    exerciseType: string,
-    contentJson: Record<string, unknown>,
-    userAnswer: Record<string, unknown>,
-    maxPoints: number
-): { score: number; details: Record<string, unknown> } {
-    switch (exerciseType) {
-        case 'TRUE_FALSE': {
-            const items = (contentJson.items as Array<{ id: string; correctAnswer: string }>) ?? []
-            const userAnswers = (userAnswer.answers as Record<string, string>) ?? {}
-            let correct = 0
-            const itemResults: Record<string, boolean> = {}
-            for (const item of items) {
-                const isCorrect = userAnswers[item.id]?.toUpperCase() === item.correctAnswer.toUpperCase()
-                if (isCorrect) correct++
-                itemResults[item.id] = isCorrect
-            }
-            const pointsPerItem = items.length > 0 ? maxPoints / items.length : 0
-            return {
-                score: Math.round(correct * pointsPerItem),
-                details: { correct, total: items.length, itemResults },
-            }
-        }
-
-        case 'MULTIPLE_CHOICE': {
-            const items = (contentJson.items as Array<{ id: string; correctAnswer: string }>) ?? []
-            const userAnswers = (userAnswer.answers as Record<string, string>) ?? {}
-            let correct = 0
-            const itemResults: Record<string, boolean> = {}
-            for (const item of items) {
-                const isCorrect = userAnswers[item.id]?.toUpperCase() === item.correctAnswer.toUpperCase()
-                if (isCorrect) correct++
-                itemResults[item.id] = isCorrect
-            }
-            const pointsPerItem = items.length > 0 ? maxPoints / items.length : 0
-            return {
-                score: Math.round(correct * pointsPerItem),
-                details: { correct, total: items.length, itemResults },
-            }
-        }
-
-        case 'MATCHING': {
-            const correctMapping = (contentJson.correctMapping as Record<string, string>) ?? {}
-            const userMapping = (userAnswer.mapping as Record<string, string>) ?? {}
-            let correct = 0
-            const totalItems = Object.keys(correctMapping).length
-            const itemResults: Record<string, boolean> = {}
-            for (const [key, correctVal] of Object.entries(correctMapping)) {
-                const isCorrect = userMapping[key]?.toUpperCase() === correctVal.toUpperCase()
-                if (isCorrect) correct++
-                itemResults[key] = isCorrect
-            }
-            const pointsPerItem = totalItems > 0 ? maxPoints / totalItems : 0
-            return {
-                score: Math.round(correct * pointsPerItem),
-                details: { correct, total: totalItems, itemResults },
-            }
-        }
-
-        case 'FILL_IN_BLANK': {
-            const items = (contentJson.items as Array<{ id: string; correctAnswer: string }>) ?? []
-            const userAnswers = (userAnswer.answers as Record<string, string>) ?? {}
-            let correct = 0
-            const itemResults: Record<string, boolean> = {}
-            for (const item of items) {
-                const isCorrect = userAnswers[item.id]?.trim().toLowerCase() === item.correctAnswer.trim().toLowerCase()
-                if (isCorrect) correct++
-                itemResults[item.id] = isCorrect
-            }
-            const pointsPerItem = items.length > 0 ? maxPoints / items.length : 0
-            return {
-                score: Math.round(correct * pointsPerItem),
-                details: { correct, total: items.length, itemResults },
-            }
-        }
-
-        default:
-            return { score: 0, details: { error: 'Unsupported exercise type for auto-grading' } }
-    }
-}

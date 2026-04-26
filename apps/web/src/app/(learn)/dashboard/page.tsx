@@ -4,6 +4,7 @@ import { prisma } from '@fuxie/database'
 import { getServerUser } from '@/lib/auth/server-auth'
 import { cacheWrap } from '@/lib/cache/redis'
 import { getDashboardUserContext, getTodayActivitySummary } from '@/lib/dashboard/request-data'
+import { getTodayPlan } from '@/lib/personalization/today-plan'
 import { DashboardClient } from '@/components/dashboard/dashboard-client'
 import { StatsSkeleton, ContentSkeleton } from '@/components/dashboard/dashboard-skeletons'
 
@@ -238,16 +239,17 @@ async function DashboardStats({ userId }: { userId: string }) {
 }
 
 async function DashboardContent({ userId }: { userId: string }) {
-    const [headerData, statsData, contentData] = await Promise.all([
+    const [headerData, statsData, contentData, todayPlan] = await Promise.all([
         getHeaderData(userId),
         getStatsData(userId),
         cacheWrap(`dash:content:${userId}`, 60, () => getContentData(userId)),
+        cacheWrap(`dash:today-plan:${userId}`, 30, () => getTodayPlan(userId)),
     ])
 
     return (
         <DashboardClient
             section="content"
-            data={{ ...headerData, ...statsData, ...contentData } as DashboardData}
+            data={{ ...headerData, ...statsData, ...contentData, todayPlan } as DashboardData}
         />
     )
 }

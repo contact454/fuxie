@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@fuxie/database'
 import { getServerUser } from '@/lib/auth/server-auth'
 import { z } from 'zod'
+import { calculateGrammarXp, recordLearningActivity } from '@/lib/progress/learning-activity'
 
 const GrammarProgressSchema = z.object({
     lessonId: z.string().min(1),
@@ -24,30 +25,28 @@ export async function POST(req: NextRequest) {
             )
         }
         const { lessonId, score, maxScore, stars } = parsed.data
+        const percentScore = Math.round((score / maxScore) * 100)
 
-
-        // Use a transaction to prevent race conditions (concurrent submissions)
         const result = await prisma.$transaction(async (tx) => {
-            const existing = await (tx as any).grammarProgress.findFirst({
+            const existing = await tx.grammarProgress.findFirst({
                 where: { userId: serverUser.userId, lessonId },
-                select: { id: true, score: true, attempts: true },
+                select: { id: true, score: true, attempts: true, completed: true },
             })
 
             const now = new Date()
+            const firstCompletion = !existing?.completed
 
-            if (existing) {
-                const shouldUpdateScore = score > (existing.score ?? 0)
-                return await (tx as any).grammarProgress.update({
+            await (existing
+                ? tx.grammarProgress.update({
                     where: { id: existing.id },
                     data: {
-                        ...(shouldUpdateScore ? { score, maxScore, stars } : {}),
+                        ...(score > (existing.score ?? 0) ? { score, maxScore, stars } : {}),
                         completed: true,
                         attempts: (existing.attempts ?? 0) + 1,
                         lastAt: now,
                     },
                 })
-            } else {
-                return await (tx as any).grammarProgress.create({
+                : tx.grammarProgress.create({
                     data: {
                         userId: serverUser.userId,
                         lessonId,
@@ -58,11 +57,26 @@ export async function POST(req: NextRequest) {
                         attempts: 1,
                         lastAt: now,
                     },
-                })
-            }
+                }))
+
+            return recordLearningActivity(tx, {
+                userId: serverUser.userId,
+                lessonId,
+                score,
+                maxScore,
+                percentScore,
+                xpEarned: calculateGrammarXp(percentScore),
+                lessonsCompleted: firstCompletion ? 1 : 0,
+                exercisesCompleted: firstCompletion ? 0 : 1,
+            })
         })
 
-        return NextResponse.json({ ok: true, saved: true })
+        return NextResponse.json({
+            ok: true,
+            saved: true,
+            xpEarned: result.xpEarned,
+            streak: result.streak,
+        })
     } catch (error) {
         console.error('[Grammar Progress API] Error:', error)
         return NextResponse.json(

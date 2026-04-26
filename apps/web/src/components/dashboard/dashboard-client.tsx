@@ -1,9 +1,11 @@
 'use client'
 
 import Image from 'next/image'
+import Link from 'next/link'
 import { CEFR_LEVELS, getCefrTheme } from '@/lib/constants/cefr'
 import { StatCard, MiniStat } from './stat-card'
 import { QuickAction } from './quick-action'
+import type { TodayPlan } from '@/lib/personalization/today-plan'
 
 // ===== TYPES =====
 
@@ -75,6 +77,7 @@ export interface DashboardData {
         totalStars: number
         maxStars: number
     }
+    todayPlan?: TodayPlan | null
 }
 
 // ===== CONSTANTS =====
@@ -252,6 +255,8 @@ function StatsSection({ data, studyGoalPercent }: { data: DashboardData; studyGo
 function ContentSection({ data, cefrProgress, maxWeeklyXp, currentIdx }: { data: DashboardData; cefrProgress: number; maxWeeklyXp: number; currentIdx: number }) {
     return (
         <>
+            {data.todayPlan && <TodayPlanSection plan={data.todayPlan} />}
+
             {/* ===== CEFR PROGRESS + WEEKLY CHART ===== */}
             <div className="mb-6 grid gap-4 lg:grid-cols-5">
                 {/* CEFR Roadmap */}
@@ -512,4 +517,78 @@ function ContentSection({ data, cefrProgress, maxWeeklyXp, currentIdx }: { data:
     )
 }
 
+function TodayPlanSection({ plan }: { plan: TodayPlan }) {
+    const topActions = plan.actions.slice(0, 3)
+
+    if (topActions.length === 0) {
+        return null
+    }
+
+    return (
+        <section className="mb-6 rounded-2xl bg-white p-5 shadow-sm ring-1 ring-gray-100 animate-fade-in-up stagger-4">
+            <div className="mb-4 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+                <div>
+                    <h2 className="text-sm font-semibold uppercase tracking-wider text-gray-400">
+                        Heute lernen
+                    </h2>
+                    <p className="mt-1 text-lg font-semibold text-gray-900">
+                        Fokus: {plan.focus}
+                    </p>
+                </div>
+                <div className="grid grid-cols-3 gap-2 text-center text-xs">
+                    <div className="rounded-xl bg-gray-50 px-3 py-2">
+                        <p className="font-bold text-gray-900">{plan.currentMinutes}/{plan.goalMinutes}</p>
+                        <p className="text-gray-400">min</p>
+                    </div>
+                    <div className="rounded-xl bg-gray-50 px-3 py-2">
+                        <p className="font-bold text-gray-900">{plan.dueSrsCount}</p>
+                        <p className="text-gray-400">SRS</p>
+                    </div>
+                    <div className="rounded-xl bg-gray-50 px-3 py-2">
+                        <p className="font-bold text-gray-900">{plan.signals.pendingAssignments}</p>
+                        <p className="text-gray-400">Tasks</p>
+                    </div>
+                </div>
+            </div>
+
+            <div className="grid gap-3 md:grid-cols-3">
+                {topActions.map((action, index) => (
+                    <Link
+                        key={action.id}
+                        href={action.href}
+                        className="card-hover group flex min-h-28 flex-col justify-between rounded-xl border border-gray-100 p-4 transition-all"
+                    >
+                        <div className="flex items-start justify-between gap-3">
+                            <div className="min-w-0">
+                                <p className="text-xs font-semibold uppercase tracking-wider text-gray-400">
+                                    {action.badge ?? action.skill}
+                                </p>
+                                <h3 className="mt-1 line-clamp-2 text-sm font-semibold text-gray-900">
+                                    {action.title}
+                                </h3>
+                            </div>
+                            <span
+                                className="flex h-7 w-7 shrink-0 items-center justify-center rounded-lg text-xs font-bold text-white"
+                                style={{ backgroundColor: todayPlanColor(action.type, index) }}
+                            >
+                                {index + 1}
+                            </span>
+                        </div>
+                        <div className="mt-3 flex items-center justify-between gap-2 text-xs text-gray-500">
+                            <span className="line-clamp-1">{action.reason}</span>
+                            <span className="shrink-0 font-semibold text-gray-700">{action.estimatedMinutes} min</span>
+                        </div>
+                    </Link>
+                ))}
+            </div>
+        </section>
+    )
+}
+
+function todayPlanColor(type: string, index: number) {
+    if (type === 'srs') return '#2EC4B6'
+    if (type === 'assignment') return '#FF6B35'
+    if (type === 'exam') return '#9C27B0'
+    return ['#004E89', '#2EC4B6', '#FF6B35'][index] ?? '#004E89'
+}
 

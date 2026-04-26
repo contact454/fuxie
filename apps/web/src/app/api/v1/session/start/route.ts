@@ -1,12 +1,12 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { withAuth } from '@/lib/auth/middleware'
+import { withDbAuth } from '@/lib/auth/middleware'
 import { handleApiError } from '@/lib/api/error-handler'
 import { buildDailySession } from '@/lib/session/builder'
 import type { CefrLevel } from '@fuxie/database'
 
 export async function GET(req: NextRequest) {
     try {
-        const auth = await withAuth(req)
+        const auth = await withDbAuth(req)
         
         // Extract level parameter
         const { searchParams } = new URL(req.url)

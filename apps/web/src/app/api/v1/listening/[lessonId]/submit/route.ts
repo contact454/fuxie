@@ -3,6 +3,8 @@ import { prisma } from '@fuxie/database'
 import { cookies } from 'next/headers'
 import { getServerUser } from '@/lib/auth/server-auth'
 import { z } from 'zod'
+import { gradeListeningSubmission } from '@/lib/assessment/submission-grading'
+import { calculateListeningXp, recordLearningActivity } from '@/lib/progress/learning-activity'
 
 const ListeningSubmitSchema = z.object({
     answers: z.record(z.string(), z.string()),
@@ -63,58 +65,50 @@ export async function POST(
             )
         }
 
-        // Grade answers
         const locale = (await cookies()).get('NEXT_LOCALE')?.value || 'vi'
-        let score = 0
-        const totalQuestions = lesson.questions.length
-        const responseData: { questionId: string; userAnswer: string; isCorrect: boolean }[] = []
-        const questionResults: {
-            questionId: string
-            questionNumber: number
-            questionText: string
-            options: unknown
-            userAnswer: string
-            correctAnswer: string
-            isCorrect: boolean
-            explanation: string | null
-            explanationNative: string | null
-        }[] = []
+        const { score, totalQuestions, percentage, responseData, questionResults } =
+            gradeListeningSubmission(
+                lesson.questions.map((question) => ({
+                    ...question,
+                    explanationTrans: question.explanationTrans as Record<string, string> | null,
+                })),
+                answers,
+                locale
+            )
+        const baseXpEarned = calculateListeningXp(percentage)
 
-        for (const q of lesson.questions) {
-            const userAnswer = answers[q.id] || ''
-            const isCorrect = userAnswer.toLowerCase().trim() === q.correctAnswer.toLowerCase().trim()
-            if (isCorrect) score++
-
-            responseData.push({ questionId: q.id, userAnswer, isCorrect })
-            questionResults.push({
-                questionId: q.id,
-                questionNumber: q.questionNumber,
-                questionText: q.questionText,
-                options: q.options,
-                userAnswer,
-                correctAnswer: q.correctAnswer,
-                isCorrect,
-                explanation: q.explanation,
-                explanationNative: (q.explanationTrans as any)?.[locale] || q.explanation,
-            })
-        }
-
-        const percentage = totalQuestions > 0 ? Math.round((score / totalQuestions) * 100) : 0
-
-        // Save attempt
-        const attempt = await prisma.listeningAttempt.create({
-            data: {
-                userId: serverUser.userId,
-                lessonId: lesson.id,
-                score,
-                totalQuestions,
-                percentage,
-                timeTaken: timeTaken ?? null,
-                listenCount: listenCount ?? 1,
-                responses: {
-                    create: responseData,
+        // Save attempt + unified learning activity
+        const { attempt, progress } = await prisma.$transaction(async (tx) => {
+            const newAttempt = await tx.listeningAttempt.create({
+                data: {
+                    userId: serverUser.userId,
+                    lessonId: lesson.id,
+                    score,
+                    totalQuestions,
+                    percentage,
+                    timeTaken: timeTaken ?? null,
+                    listenCount: listenCount ?? 1,
+                    responses: {
+                        create: responseData,
+                    },
                 },
-            },
+            })
+
+            const activity = await recordLearningActivity(tx, {
+                userId: serverUser.userId,
+                exerciseId: lesson.lessonId,
+                score,
+                maxScore: totalQuestions,
+                percentScore: percentage,
+                xpEarned: baseXpEarned,
+                timeSpentSeconds: timeTaken ?? null,
+                exercisesCompleted: 1,
+            })
+
+            return {
+                attempt: newAttempt,
+                progress: activity,
+            }
         })
 
         return NextResponse.json({
@@ -124,6 +118,8 @@ export async function POST(
                 score,
                 totalQuestions,
                 percentage,
+                xpEarned: progress.xpEarned,
+                streak: progress.streak,
                 timeTaken,
                 listenCount,
                 questionResults,

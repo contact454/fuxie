@@ -9,6 +9,7 @@ import { countDueSrsCards, getDueSrsCards } from '@/lib/srs/due-cards'
 import { cacheInvalidatePrefix } from '@/lib/cache/redis'
 import { XP_REWARDS } from '@fuxie/shared/constants'
 import type { SrsRating } from '@fuxie/shared/types'
+import { recordLearningActivity } from '@/lib/progress/learning-activity'
 
 /**
  * GET /api/v1/srs/review
@@ -60,13 +61,11 @@ export async function POST(req: NextRequest) {
         const body = await req.json()
         const { cardId, rating, responseTimeMs } = reviewSchema.parse(body)
 
-        // Get current card
         const card = await prisma.srsCard.findFirst({
             where: { id: cardId, userId: user.id },
         })
         if (!card) throw new NotFoundError('Card not found')
 
-        // Calculate SM-2 review
         const result = calculateReview(
             {
                 interval: card.interval,
@@ -78,16 +77,10 @@ export async function POST(req: NextRequest) {
             rating as SrsRating
         )
 
-        // Calculate XP
-        const xpEarned = rating === 'AGAIN' ? 0 : XP_REWARDS.SRS_CORRECT
+        const baseXpEarned = rating === 'AGAIN' ? 0 : XP_REWARDS.SRS_CORRECT
 
-        // Update card + create review log + update stats in transaction
-        const todayStart = new Date()
-        todayStart.setHours(0, 0, 0, 0)
-
-        await prisma.$transaction([
-            // 1. Update SRS card
-            prisma.srsCard.update({
+        const progress = await prisma.$transaction(async (tx) => {
+            await tx.srsCard.update({
                 where: { id: cardId },
                 data: {
                     interval: result.interval,
@@ -101,9 +94,9 @@ export async function POST(req: NextRequest) {
                     totalCorrect: rating !== 'AGAIN' ? { increment: 1 } : undefined,
                     totalIncorrect: rating === 'AGAIN' ? { increment: 1 } : undefined,
                 },
-            }),
-            // 2. Create review log
-            prisma.srsReviewLog.create({
+            })
+
+            await tx.srsReviewLog.create({
                 data: {
                     userId: user.id,
                     cardId,
@@ -116,36 +109,16 @@ export async function POST(req: NextRequest) {
                     newEaseFactor: result.easeFactor,
                     newState: result.state,
                 },
-            }),
-            // 3. Update daily activity
-            prisma.dailyActivity.upsert({
-                where: {
-                    userId_date: {
-                        userId: user.id,
-                        date: todayStart,
-                    },
-                },
-                update: {
-                    srsReviewed: { increment: 1 },
-                    xpEarned: { increment: xpEarned },
-                },
-                create: {
-                    userId: user.id,
-                    date: todayStart,
-                    srsReviewed: 1,
-                    xpEarned,
-                },
-            }),
-            // 4. Update user profile XP
-            prisma.userProfile.updateMany({
-                where: { userId: user.id },
-                data: {
-                    totalXp: { increment: xpEarned },
-                },
-            }),
-        ])
+            })
 
-        // Invalidate SRS + dashboard caches so next page load reflects the review
+            return recordLearningActivity(tx, {
+                userId: user.id,
+                xpEarned: baseXpEarned,
+                srsReviewed: 1,
+                updateStreak: true,
+            })
+        })
+
         cacheInvalidatePrefix(`srs:progress:${user.id}`).catch(() => {})
         cacheInvalidatePrefix(`srs:due:${user.id}`).catch(() => {})
         cacheInvalidatePrefix(`dash:stats:${user.id}`).catch(() => {})
@@ -158,7 +131,8 @@ export async function POST(req: NextRequest) {
                 newInterval: result.interval,
                 newState: result.state,
                 nextReviewAt: result.nextReviewAt.toISOString(),
-                xpEarned,
+                xpEarned: progress.xpEarned,
+                streak: progress.streak,
             },
         })
     } catch (error) {
