@@ -1,21 +1,38 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { prisma } from '@fuxie/database'
+import { z } from 'zod'
+import { prisma, Prisma } from '@fuxie/database'
 import { handleApiError } from '@/lib/api/error-handler'
 import { requireTeacher } from '@/lib/auth/teacher-guard'
+
+const assignmentTargetTypes = [
+  'xp',
+  'lesson',
+  'exam',
+  'speaking',
+  'vocabulary',
+  'grammar',
+  'writing',
+  'reading',
+  'listening',
+] as const
+
+const createAssignmentSchema = z.object({
+  classroomId: z.string().uuid(),
+  title: z.string().trim().min(2).max(140),
+  description: z.string().trim().max(1000).nullable().optional(),
+  targetType: z.enum(assignmentTargetTypes),
+  targetId: z.string().trim().min(1).max(160).nullable().optional(),
+  targetMeta: z.record(z.unknown()).nullable().optional(),
+  dueDate: z.string().trim().min(1).nullable().optional(),
+})
 
 // POST /api/v1/teacher/assignments — create assignment for a classroom
 export async function POST(request: NextRequest) {
   try {
     const user = await requireTeacher(request)
-    const body = await request.json()
-    const { classroomId, title, description, targetType, targetId, targetMeta, dueDate } = body
-
-    if (!classroomId || !title || !targetType) {
-      return NextResponse.json(
-        { success: false, error: 'classroomId, title, và targetType là bắt buộc.' },
-        { status: 400 },
-      )
-    }
+    const { classroomId, title, description, targetType, targetId, targetMeta, dueDate } =
+      createAssignmentSchema.parse(await request.json())
+    const parsedDueDate = parseOptionalDueDate(dueDate)
 
     // Verify classroom ownership
     const classroom = await prisma.classroom.findUnique({
@@ -41,8 +58,8 @@ export async function POST(request: NextRequest) {
           description: description?.trim() || null,
           targetType,
           targetId: targetId || null,
-          targetMeta: targetMeta || null,
-          dueDate: dueDate ? new Date(dueDate) : null,
+          targetMeta: targetMeta ? targetMeta as Prisma.InputJsonValue : Prisma.JsonNull,
+          dueDate: parsedDueDate,
         },
       })
 
@@ -73,4 +90,21 @@ export async function POST(request: NextRequest) {
   } catch (err) {
     return handleApiError(err)
   }
+}
+
+function parseOptionalDueDate(value: string | null | undefined): Date | null {
+  if (!value) {
+    return null
+  }
+
+  const date = new Date(value)
+  if (Number.isNaN(date.getTime())) {
+    throw new z.ZodError([{
+      code: z.ZodIssueCode.custom,
+      path: ['dueDate'],
+      message: 'Invalid dueDate',
+    }])
+  }
+
+  return date
 }

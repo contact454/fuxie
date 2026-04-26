@@ -1,7 +1,5 @@
 'use client'
-import Link from 'next/link';
-
-
+import Link from 'next/link'
 import { useState } from 'react'
 
 interface Student {
@@ -16,6 +14,12 @@ interface Student {
   currentStreak: number
   lastActive: string | null
   enrolledAt: string
+  analytics: {
+    riskLevel: 'low' | 'medium' | 'high'
+    riskReasons: string[]
+    recentMinutes7d: number
+    inactiveDays: number | null
+  }
 }
 
 interface ClassAssignment {
@@ -23,10 +27,27 @@ interface ClassAssignment {
   title: string
   description: string | null
   targetType: string
+  targetId?: string | null
+  targetMeta?: unknown
   dueDate: string | null
   submissionCount: number
   totalStudents: number
   createdAt: string
+}
+
+interface InterventionRecommendation {
+  id: string
+  title: string
+  description: string
+  targetType: string
+  targetId: string | null
+  targetMeta: Record<string, unknown>
+  targetStudentIds: string[]
+  targetStudentNames: string[]
+  priority: number
+  reason: string
+  dueDays: number
+  estimatedMinutes: number
 }
 
 interface ClassroomData {
@@ -37,6 +58,25 @@ interface ClassroomData {
   cefrLevel: string
   students: Student[]
   assignments: ClassAssignment[]
+  analytics: {
+    studentCount: number
+    activeLast7Days: number
+    atRiskCount: number
+    highRiskCount: number
+    averageXp: number
+    averageStudyMinutes: number
+    averageCompletionRate: number
+    overdueAssignments: number
+    topRiskStudents: Array<{
+      id: string
+      displayName: string
+      level: 'low' | 'medium' | 'high'
+      reasons: string[]
+      recentMinutes7d: number
+      inactiveDays: number | null
+    }>
+  }
+  interventions: InterventionRecommendation[]
 }
 
 interface Props {
@@ -44,15 +84,15 @@ interface Props {
 }
 
 const TARGET_TYPE_LABELS: Record<string, string> = {
-  xp: '🎯 Mục tiêu XP',
-  vocabulary: '📚 Từ vựng',
-  grammar: '📐 Ngữ pháp',
-  listening: '🎧 Nghe',
-  reading: '📖 Đọc',
-  writing: '✍️ Viết',
-  speaking: '🎤 Nói',
-  exam: '📝 Thi thử',
-  lesson: '📕 Bài học',
+  xp: 'Target XP',
+  vocabulary: 'Vocabulary',
+  grammar: 'Grammar',
+  listening: 'Listening',
+  reading: 'Reading',
+  writing: 'Writing',
+  speaking: 'Speaking',
+  exam: 'Exam',
+  lesson: 'Lesson',
 }
 
 export default function ClassroomDetailClient({ classroom }: Props) {
@@ -62,11 +102,44 @@ export default function ClassroomDetailClient({ classroom }: Props) {
   const [assignForm, setAssignForm] = useState({ title: '', description: '', targetType: 'vocabulary', dueDate: '' })
   const [assigning, setAssigning] = useState(false)
   const [assignments, setAssignments] = useState(classroom.assignments)
+  const [interventions, setInterventions] = useState(classroom.interventions)
+  const [assigningIntervention, setAssigningIntervention] = useState<string | null>(null)
 
   const copyCode = () => {
     navigator.clipboard.writeText(classroom.joinCode)
     setCopiedCode(true)
     setTimeout(() => setCopiedCode(false), 2000)
+  }
+
+  const handleAssignIntervention = async (recommendationId: string) => {
+    setAssigningIntervention(recommendationId)
+    try {
+      const res = await fetch(`/api/v1/teacher/classrooms/${classroom.id}/interventions`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ recommendationId }),
+      })
+      const data = await res.json()
+      if (data.success) {
+        setAssignments((prev) => [{
+          id: data.data.id,
+          title: data.data.title,
+          description: data.data.description,
+          targetType: data.data.targetType,
+          targetId: data.data.targetId,
+          targetMeta: data.data.targetMeta,
+          dueDate: data.data.dueDate,
+          submissionCount: data.data.submissionCount,
+          totalStudents: data.data.totalStudents,
+          createdAt: data.data.createdAt,
+        }, ...prev])
+        setInterventions((prev) => prev.filter((item) => item.id !== recommendationId))
+      }
+    } catch (error) {
+      console.error(error)
+    } finally {
+      setAssigningIntervention(null)
+    }
   }
 
   const handleAssign = async () => {
@@ -86,7 +159,7 @@ export default function ClassroomDetailClient({ classroom }: Props) {
       })
       const data = await res.json()
       if (data.success) {
-        setAssignments(prev => [{
+        setAssignments((prev) => [{
           id: data.data.id,
           title: data.data.title,
           description: assignForm.description || null,
@@ -99,16 +172,18 @@ export default function ClassroomDetailClient({ classroom }: Props) {
         setShowAssignModal(false)
         setAssignForm({ title: '', description: '', targetType: 'vocabulary', dueDate: '' })
       }
-    } catch (e) { console.error(e) }
-    finally { setAssigning(false) }
+    } catch (error) {
+      console.error(error)
+    } finally {
+      setAssigning(false)
+    }
   }
 
   return (
     <div>
-      {/* Header */}
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '24px', flexWrap: 'wrap', gap: '12px' }}>
         <div>
-          <Link href="/teacher/classrooms" style={{ color: '#64748b', textDecoration: 'none', fontSize: '0.85rem' }}>← Quay lại</Link>
+          <Link href="/teacher/classrooms" style={{ color: '#64748b', textDecoration: 'none', fontSize: '0.85rem' }}>← Quay lai</Link>
           <h1 style={{ fontSize: '1.5rem', fontWeight: 800, color: '#f8fafc', margin: '8px 0 4px' }}>{classroom.name}</h1>
           {classroom.description && <p style={{ color: '#94a3b8', margin: 0, fontSize: '0.9rem' }}>{classroom.description}</p>}
         </div>
@@ -117,12 +192,12 @@ export default function ClassroomDetailClient({ classroom }: Props) {
             background: '#0f172a', borderRadius: '10px', padding: '8px 16px',
             display: 'flex', alignItems: 'center', gap: '8px', border: '1px solid #334155',
           }}>
-            <span style={{ color: '#64748b', fontSize: '0.85rem' }}>Mã lớp:</span>
+            <span style={{ color: '#64748b', fontSize: '0.85rem' }}>Ma lop:</span>
             <span style={{ color: '#f97316', fontWeight: 700, fontFamily: 'monospace', fontSize: '1.1rem' }}>{classroom.joinCode}</span>
             <button onClick={copyCode} style={{
               background: 'none', border: 'none', cursor: 'pointer',
               color: copiedCode ? '#10b981' : '#64748b', fontSize: '0.8rem',
-            }}>{copiedCode ? '✓' : '📋'}</button>
+            }}>{copiedCode ? 'OK' : 'Copy'}</button>
           </div>
           <span style={{
             background: '#1e3a5f', color: '#60a5fa',
@@ -131,48 +206,164 @@ export default function ClassroomDetailClient({ classroom }: Props) {
         </div>
       </div>
 
-      {/* Tabs */}
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: '12px', marginBottom: '20px' }}>
+        {[
+          { label: 'Hoc vien active 7 ngay', value: classroom.analytics.activeLast7Days, color: '#3b82f6' },
+          { label: 'Can chu y', value: classroom.analytics.atRiskCount, color: classroom.analytics.atRiskCount > 0 ? '#f87171' : '#94a3b8' },
+          { label: 'Nguy co cao', value: classroom.analytics.highRiskCount, color: classroom.analytics.highRiskCount > 0 ? '#fb7185' : '#94a3b8' },
+          { label: 'Avg completion', value: `${classroom.analytics.averageCompletionRate}%`, color: '#10b981' },
+          { label: 'Avg XP', value: classroom.analytics.averageXp, color: '#fbbf24' },
+          { label: 'Qua han', value: classroom.analytics.overdueAssignments, color: classroom.analytics.overdueAssignments > 0 ? '#fb7185' : '#94a3b8' },
+        ].map((item) => (
+          <div key={item.label} style={{
+            background: '#1e293b',
+            borderRadius: '14px',
+            padding: '16px',
+            border: '1px solid #334155',
+          }}>
+            <div style={{ fontSize: '1.4rem', fontWeight: 800, color: item.color }}>{item.value}</div>
+            <div style={{ fontSize: '0.8rem', color: '#94a3b8' }}>{item.label}</div>
+          </div>
+        ))}
+      </div>
+
+      {classroom.analytics.topRiskStudents.length > 0 && (
+        <div style={{ background: '#1e293b', borderRadius: '16px', border: '1px solid #334155', overflow: 'hidden', marginBottom: '24px' }}>
+          <div style={{ padding: '14px 18px', borderBottom: '1px solid #334155', color: '#f8fafc', fontWeight: 700 }}>
+            Hoc vien can can thiep
+          </div>
+          {classroom.analytics.topRiskStudents.map((student, index) => (
+            <Link
+              key={student.id}
+              href={`/teacher/students/${student.id}`}
+              style={{
+                display: 'flex',
+                alignItems: 'center',
+                gap: '12px',
+                padding: '14px 18px',
+                borderBottom: index < classroom.analytics.topRiskStudents.length - 1 ? '1px solid #334155' : 'none',
+                textDecoration: 'none',
+              }}
+            >
+              <span style={{
+                width: '34px',
+                height: '34px',
+                borderRadius: '10px',
+                background: student.level === 'high' ? '#7f1d1d' : '#78350f',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                color: '#fff',
+                fontWeight: 700,
+                fontSize: '0.8rem',
+                flexShrink: 0,
+              }}>
+                {student.level === 'high' ? 'H' : 'M'}
+              </span>
+              <div style={{ flex: 1 }}>
+                <div style={{ color: '#e2e8f0', fontWeight: 600 }}>{student.displayName}</div>
+                <div style={{ color: '#64748b', fontSize: '0.8rem' }}>
+                  {student.inactiveDays != null ? `${student.inactiveDays} ngay khong hoc` : 'Chua co activity'}
+                  {` · ${student.recentMinutes7d} phut / 7 ngay`}
+                </div>
+              </div>
+              <div style={{ color: student.level === 'high' ? '#fca5a5' : '#fcd34d', fontSize: '0.8rem', maxWidth: '260px', textAlign: 'right' }}>
+                {student.reasons.slice(0, 2).join(' · ')}
+              </div>
+            </Link>
+          ))}
+        </div>
+      )}
+
+      {interventions.length > 0 && (
+        <div style={{ background: '#1e293b', borderRadius: '16px', border: '1px solid #334155', padding: '18px', marginBottom: '24px' }}>
+          <div style={{ display: 'flex', justifyContent: 'space-between', gap: '12px', alignItems: 'center', marginBottom: '14px', flexWrap: 'wrap' }}>
+            <div>
+              <h2 style={{ color: '#f8fafc', fontSize: '1rem', fontWeight: 700, margin: 0 }}>Intervention suggestions</h2>
+              <p style={{ color: '#64748b', fontSize: '0.82rem', margin: '4px 0 0' }}>Generated from risk, weak skill, assignment, and activity signals.</p>
+            </div>
+            <span style={{ color: '#94a3b8', fontSize: '0.82rem' }}>{interventions.length} suggestions</span>
+          </div>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '12px' }}>
+            {interventions.slice(0, 4).map((item) => (
+              <div key={item.id} style={{ background: '#0f172a', border: '1px solid #334155', borderRadius: '14px', padding: '14px' }}>
+                <div style={{ display: 'flex', justifyContent: 'space-between', gap: '10px', marginBottom: '8px' }}>
+                  <div style={{ minWidth: 0 }}>
+                    <div style={{ color: '#64748b', fontSize: '0.72rem', textTransform: 'uppercase', letterSpacing: '0.04em', fontWeight: 700 }}>
+                      {TARGET_TYPE_LABELS[item.targetType] || item.targetType}
+                    </div>
+                    <div style={{ color: '#f8fafc', fontSize: '0.95rem', fontWeight: 700, marginTop: '4px' }}>{item.title}</div>
+                  </div>
+                  <span style={{ color: '#fbbf24', fontWeight: 800, fontSize: '0.85rem' }}>{item.priority}</span>
+                </div>
+                <p style={{ color: '#94a3b8', fontSize: '0.8rem', lineHeight: 1.45, margin: '0 0 10px' }}>{item.description}</p>
+                <div style={{ display: 'flex', justifyContent: 'space-between', gap: '8px', color: '#64748b', fontSize: '0.76rem', marginBottom: '12px' }}>
+                  <span>{item.reason}</span>
+                  <span>{item.targetStudentIds.length} students</span>
+                </div>
+                <button
+                  onClick={() => handleAssignIntervention(item.id)}
+                  disabled={assigningIntervention === item.id}
+                  style={{
+                    width: '100%',
+                    padding: '9px 12px',
+                    borderRadius: '10px',
+                    background: '#2563eb',
+                    color: 'white',
+                    border: 'none',
+                    cursor: 'pointer',
+                    fontWeight: 700,
+                    fontSize: '0.84rem',
+                    opacity: assigningIntervention === item.id ? 0.65 : 1,
+                  }}
+                >
+                  {assigningIntervention === item.id ? 'Creating...' : `Auto-assign (${item.dueDays} days)`}
+                </button>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+
       <div style={{ display: 'flex', gap: '4px', marginBottom: '24px', background: '#1e293b', borderRadius: '12px', padding: '4px' }}>
-        {(['students', 'assignments'] as const).map(t => (
-          <button key={t} onClick={() => setTab(t)} style={{
+        {(['students', 'assignments'] as const).map((value) => (
+          <button key={value} onClick={() => setTab(value)} style={{
             flex: 1, padding: '10px', borderRadius: '8px', border: 'none', cursor: 'pointer',
-            background: tab === t ? '#3b82f6' : 'transparent',
-            color: tab === t ? 'white' : '#94a3b8',
+            background: tab === value ? '#3b82f6' : 'transparent',
+            color: tab === value ? 'white' : '#94a3b8',
             fontWeight: 600, fontSize: '0.9rem',
           }}>
-            {t === 'students' ? `👥 Học viên (${classroom.students.length})` : `📋 Bài tập (${assignments.length})`}
+            {value === 'students' ? `Hoc vien (${classroom.students.length})` : `Bai tap (${assignments.length})`}
           </button>
         ))}
       </div>
 
-      {/* Students Tab */}
       {tab === 'students' && (
         <div>
           {classroom.students.length === 0 ? (
             <div style={{ background: '#1e293b', borderRadius: '16px', padding: '40px', textAlign: 'center', border: '1px solid #334155' }}>
               <div style={{ fontSize: '3rem', marginBottom: '12px' }}>👥</div>
-              <p style={{ color: '#94a3b8' }}>Chưa có học viên nào. Chia sẻ mã lớp <strong style={{ color: '#f97316' }}>{classroom.joinCode}</strong> cho học viên!</p>
+              <p style={{ color: '#94a3b8' }}>Chua co hoc vien nao trong lop nay.</p>
             </div>
           ) : (
             <div style={{ background: '#1e293b', borderRadius: '16px', border: '1px solid #334155', overflow: 'hidden' }}>
-              {/* Table header */}
               <div style={{
-                display: 'grid', gridTemplateColumns: '2fr 1fr 1fr 1fr 1fr 1fr',
+                display: 'grid', gridTemplateColumns: '2.2fr 0.8fr 0.9fr 0.9fr 0.9fr 1.4fr',
                 padding: '12px 20px', borderBottom: '1px solid #334155', fontSize: '0.8rem', color: '#64748b', fontWeight: 600,
               }}>
-                <span>Học viên</span>
+                <span>Hoc vien</span>
                 <span>Level</span>
                 <span>XP</span>
                 <span>Streak</span>
-                <span>Phút học</span>
-                <span>Bài xong</span>
+                <span>7 ngay</span>
+                <span>Risk</span>
               </div>
-              {classroom.students.map((s, i) => (
-                <Link key={s.id} href={`/teacher/students/${s.id}`} style={{
-                  display: 'grid', gridTemplateColumns: '2fr 1fr 1fr 1fr 1fr 1fr',
+              {classroom.students.map((student, index) => (
+                <Link key={student.id} href={`/teacher/students/${student.id}`} style={{
+                  display: 'grid', gridTemplateColumns: '2.2fr 0.8fr 0.9fr 0.9fr 0.9fr 1.4fr',
                   padding: '14px 20px', textDecoration: 'none',
-                  borderBottom: i < classroom.students.length - 1 ? '1px solid #334155' : 'none',
-                  alignItems: 'center', transition: 'background 0.15s',
+                  borderBottom: index < classroom.students.length - 1 ? '1px solid #334155' : 'none',
+                  alignItems: 'center',
                 }}>
                   <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
                     <div style={{
@@ -180,20 +371,31 @@ export default function ClassroomDetailClient({ classroom }: Props) {
                       background: '#334155', display: 'flex', alignItems: 'center', justifyContent: 'center',
                       color: '#94a3b8', fontWeight: 700, fontSize: '0.85rem',
                     }}>
-                      {s.displayName.charAt(0).toUpperCase()}
+                      {student.displayName.charAt(0).toUpperCase()}
                     </div>
                     <div>
-                      <div style={{ color: '#e2e8f0', fontWeight: 600, fontSize: '0.9rem' }}>{s.displayName}</div>
-                      <div style={{ color: '#64748b', fontSize: '0.75rem' }}>{s.email}</div>
+                      <div style={{ color: '#e2e8f0', fontWeight: 600, fontSize: '0.9rem' }}>{student.displayName}</div>
+                      <div style={{ color: '#64748b', fontSize: '0.75rem' }}>{student.email}</div>
                     </div>
                   </div>
-                  <span style={{ color: '#60a5fa', fontWeight: 600, fontSize: '0.85rem' }}>{s.currentLevel}</span>
-                  <span style={{ color: '#fbbf24', fontWeight: 600, fontSize: '0.9rem' }}>{s.totalXp.toLocaleString()}</span>
-                  <span style={{ color: s.currentStreak > 0 ? '#f97316' : '#475569', fontWeight: 600, fontSize: '0.9rem' }}>
-                    {s.currentStreak > 0 ? `🔥 ${s.currentStreak}` : '—'}
+                  <span style={{ color: '#60a5fa', fontWeight: 600, fontSize: '0.85rem' }}>{student.currentLevel}</span>
+                  <span style={{ color: '#fbbf24', fontWeight: 600, fontSize: '0.9rem' }}>{student.totalXp.toLocaleString()}</span>
+                  <span style={{ color: student.currentStreak > 0 ? '#f97316' : '#475569', fontWeight: 600, fontSize: '0.9rem' }}>
+                    {student.currentStreak > 0 ? `${student.currentStreak}` : '—'}
                   </span>
-                  <span style={{ color: '#94a3b8', fontSize: '0.9rem' }}>{s.totalStudyMinutes}</span>
-                  <span style={{ color: '#94a3b8', fontSize: '0.9rem' }}>{s.totalLessonsCompleted}</span>
+                  <span style={{ color: '#94a3b8', fontSize: '0.9rem' }}>{student.analytics.recentMinutes7d}m</span>
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
+                    <span style={{
+                      color: student.analytics.riskLevel === 'high' ? '#fca5a5' : student.analytics.riskLevel === 'medium' ? '#fcd34d' : '#86efac',
+                      fontSize: '0.8rem',
+                      fontWeight: 700,
+                    }}>
+                      {student.analytics.riskLevel.toUpperCase()}
+                    </span>
+                    <span style={{ color: '#64748b', fontSize: '0.72rem' }}>
+                      {student.analytics.riskReasons[0] || 'On track'}
+                    </span>
+                  </div>
                 </Link>
               ))}
             </div>
@@ -201,48 +403,49 @@ export default function ClassroomDetailClient({ classroom }: Props) {
         </div>
       )}
 
-      {/* Assignments Tab */}
       {tab === 'assignments' && (
         <div>
           <div style={{ marginBottom: '16px' }}>
             <button onClick={() => setShowAssignModal(true)} style={{
               background: '#3b82f6', color: 'white', border: 'none',
               padding: '10px 20px', borderRadius: '10px', fontWeight: 600, cursor: 'pointer', fontSize: '0.9rem',
-            }}>+ Giao bài mới</button>
+            }}>+ Giao bai moi</button>
           </div>
 
           {assignments.length === 0 ? (
             <div style={{ background: '#1e293b', borderRadius: '16px', padding: '40px', textAlign: 'center', border: '1px solid #334155' }}>
               <div style={{ fontSize: '3rem', marginBottom: '12px' }}>📋</div>
-              <p style={{ color: '#94a3b8' }}>Chưa có bài tập nào được giao.</p>
+              <p style={{ color: '#94a3b8' }}>Chua co bai tap nao duoc giao.</p>
             </div>
           ) : (
             <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
-              {assignments.map(a => {
-                const completionPercent = a.totalStudents > 0 ? Math.round((a.submissionCount / a.totalStudents) * 100) : 0
-                const isOverdue = a.dueDate && new Date(a.dueDate) < new Date()
+              {assignments.map((assignment) => {
+                const completionPercent = assignment.totalStudents > 0
+                  ? Math.round((assignment.submissionCount / assignment.totalStudents) * 100)
+                  : 0
+                const isOverdue = assignment.dueDate && new Date(assignment.dueDate) < new Date()
+
                 return (
-                  <div key={a.id} style={{
+                  <div key={assignment.id} style={{
                     background: '#1e293b', borderRadius: '14px', padding: '20px',
                     border: '1px solid #334155',
                   }}>
                     <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '10px' }}>
                       <div>
-                        <h3 style={{ color: '#f8fafc', fontSize: '1rem', fontWeight: 700, margin: '0 0 4px' }}>{a.title}</h3>
+                        <h3 style={{ color: '#f8fafc', fontSize: '1rem', fontWeight: 700, margin: '0 0 4px' }}>{assignment.title}</h3>
                         <span style={{ color: '#94a3b8', fontSize: '0.8rem' }}>
-                          {TARGET_TYPE_LABELS[a.targetType] || a.targetType}
+                          {TARGET_TYPE_LABELS[assignment.targetType] || assignment.targetType}
                         </span>
                       </div>
-                      {a.dueDate && (
+                      {assignment.dueDate && (
                         <span style={{
                           fontSize: '0.8rem', fontWeight: 600,
                           color: isOverdue ? '#f87171' : '#94a3b8',
                         }}>
-                          {isOverdue ? '⚠️ Quá hạn' : `📅 ${new Date(a.dueDate).toLocaleDateString('vi-VN')}`}
+                          {isOverdue ? 'Qua han' : new Date(assignment.dueDate).toLocaleDateString('vi-VN')}
                         </span>
                       )}
                     </div>
-                    {/* Progress bar */}
                     <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
                       <div style={{ flex: 1, background: '#334155', borderRadius: '6px', height: '8px', overflow: 'hidden' }}>
                         <div style={{
@@ -250,11 +453,10 @@ export default function ClassroomDetailClient({ classroom }: Props) {
                           height: '100%',
                           background: completionPercent >= 100 ? '#10b981' : '#3b82f6',
                           borderRadius: '6px',
-                          transition: 'width 0.3s ease',
                         }} />
                       </div>
-                      <span style={{ color: '#94a3b8', fontSize: '0.85rem', fontWeight: 600, minWidth: '70px', textAlign: 'right' }}>
-                        {a.submissionCount}/{a.totalStudents} nộp
+                      <span style={{ color: '#94a3b8', fontSize: '0.85rem', fontWeight: 600, minWidth: '84px', textAlign: 'right' }}>
+                        {assignment.submissionCount}/{assignment.totalStudents}
                       </span>
                     </div>
                   </div>
@@ -265,22 +467,20 @@ export default function ClassroomDetailClient({ classroom }: Props) {
         </div>
       )}
 
-      {/* Assign Modal */}
       {showAssignModal && (
         <div style={{
           position: 'fixed', inset: 0, background: 'rgba(0,0,0,0.6)',
           display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: 100,
         }} onClick={() => setShowAssignModal(false)}>
-          <div onClick={e => e.stopPropagation()} style={{
+          <div onClick={(event) => event.stopPropagation()} style={{
             background: '#1e293b', borderRadius: '20px', padding: '32px',
             width: '100%', maxWidth: '520px', border: '1px solid #334155',
           }}>
-            <h2 style={{ color: '#f8fafc', fontSize: '1.2rem', fontWeight: 700, margin: '0 0 20px' }}>📋 Giao bài tập mới</h2>
+            <h2 style={{ color: '#f8fafc', fontSize: '1.2rem', fontWeight: 700, margin: '0 0 20px' }}>Giao bai tap moi</h2>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
               <div>
-                <label style={{ color: '#94a3b8', fontSize: '0.85rem', display: 'block', marginBottom: '6px' }}>Tiêu đề *</label>
-                <input value={assignForm.title} onChange={e => setAssignForm(f => ({ ...f, title: e.target.value }))}
-                  placeholder="VD: Ôn tập từ vựng Essen & Trinken"
+                <label style={{ color: '#94a3b8', fontSize: '0.85rem', display: 'block', marginBottom: '6px' }}>Tieu de *</label>
+                <input value={assignForm.title} onChange={(event) => setAssignForm((form) => ({ ...form, title: event.target.value }))}
                   style={{
                     width: '100%', padding: '10px 14px', borderRadius: '10px',
                     background: '#0f172a', border: '1px solid #334155', color: '#f8fafc',
@@ -288,10 +488,10 @@ export default function ClassroomDetailClient({ classroom }: Props) {
                   }} />
               </div>
               <div>
-                <label style={{ color: '#94a3b8', fontSize: '0.85rem', display: 'block', marginBottom: '6px' }}>Loại bài</label>
+                <label style={{ color: '#94a3b8', fontSize: '0.85rem', display: 'block', marginBottom: '6px' }}>Loai bai</label>
                 <div style={{ display: 'flex', gap: '6px', flexWrap: 'wrap' }}>
                   {Object.entries(TARGET_TYPE_LABELS).map(([key, label]) => (
-                    <button key={key} onClick={() => setAssignForm(f => ({ ...f, targetType: key }))}
+                    <button key={key} onClick={() => setAssignForm((form) => ({ ...form, targetType: key }))}
                       style={{
                         padding: '6px 12px', borderRadius: '8px', border: 'none', cursor: 'pointer',
                         fontSize: '0.8rem', fontWeight: 500,
@@ -302,9 +502,9 @@ export default function ClassroomDetailClient({ classroom }: Props) {
                 </div>
               </div>
               <div>
-                <label style={{ color: '#94a3b8', fontSize: '0.85rem', display: 'block', marginBottom: '6px' }}>Hạn nộp</label>
+                <label style={{ color: '#94a3b8', fontSize: '0.85rem', display: 'block', marginBottom: '6px' }}>Han nop</label>
                 <input type="datetime-local" value={assignForm.dueDate}
-                  onChange={e => setAssignForm(f => ({ ...f, dueDate: e.target.value }))}
+                  onChange={(event) => setAssignForm((form) => ({ ...form, dueDate: event.target.value }))}
                   style={{
                     width: '100%', padding: '10px 14px', borderRadius: '10px',
                     background: '#0f172a', border: '1px solid #334155', color: '#f8fafc',
@@ -315,12 +515,12 @@ export default function ClassroomDetailClient({ classroom }: Props) {
                 <button onClick={() => setShowAssignModal(false)} style={{
                   padding: '10px 20px', borderRadius: '10px', background: '#334155',
                   color: '#94a3b8', border: 'none', cursor: 'pointer', fontWeight: 500,
-                }}>Hủy</button>
+                }}>Huy</button>
                 <button onClick={handleAssign} disabled={assigning} style={{
                   padding: '10px 20px', borderRadius: '10px', background: '#3b82f6',
                   color: 'white', border: 'none', cursor: 'pointer', fontWeight: 600,
                   opacity: assigning ? 0.6 : 1,
-                }}>{assigning ? 'Đang giao...' : 'Giao bài'}</button>
+                }}>{assigning ? 'Dang giao...' : 'Giao bai'}</button>
               </div>
             </div>
           </div>

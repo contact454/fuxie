@@ -1,7 +1,8 @@
-import Link from 'next/link';
+import Link from 'next/link'
 import { redirect, notFound } from 'next/navigation'
 import { prisma } from '@fuxie/database'
 import { getServerUser } from '@/lib/auth/server-auth'
+import { getStudentRiskProfile } from '@/lib/analytics/teacher-analytics'
 
 export async function generateMetadata({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params
@@ -12,8 +13,29 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
   return {
     title: student?.profile?.displayName
       ? `${student.profile.displayName} | Fuxie Teacher`
-      : 'Hồ sơ học viên | Fuxie Teacher',
+      : 'Student Profile | Fuxie Teacher',
   }
+}
+
+const TARGET_TYPE_LABELS: Record<string, string> = {
+  xp: 'Target XP',
+  vocabulary: 'Vocabulary',
+  grammar: 'Grammar',
+  listening: 'Listening',
+  reading: 'Reading',
+  writing: 'Writing',
+  speaking: 'Speaking',
+  exam: 'Exam',
+  lesson: 'Lesson',
+}
+
+const SKILL_LABELS: Record<string, string> = {
+  HOEREN: 'Listening',
+  LESEN: 'Reading',
+  SCHREIBEN: 'Writing',
+  SPRECHEN: 'Speaking',
+  GRAMMATIK: 'Grammar',
+  WORTSCHATZ: 'Vocabulary',
 }
 
 export default async function StudentProfilePage({ params }: { params: Promise<{ id: string }> }) {
@@ -22,7 +44,6 @@ export default async function StudentProfilePage({ params }: { params: Promise<{
 
   const { id: studentId } = await params
 
-  // Verify teacher has this student
   const enrollment = await prisma.classEnrollment.findFirst({
     where: {
       studentId,
@@ -48,7 +69,12 @@ export default async function StudentProfilePage({ params }: { params: Promise<{
         },
         include: {
           assignment: {
-            select: { title: true, targetType: true, dueDate: true, classroom: { select: { name: true } } },
+            select: {
+              title: true,
+              targetType: true,
+              dueDate: true,
+              classroom: { select: { name: true } },
+            },
           },
         },
         orderBy: { createdAt: 'desc' },
@@ -56,9 +82,8 @@ export default async function StudentProfilePage({ params }: { params: Promise<{
       },
       assessments: {
         orderBy: { assessedAt: 'desc' },
-        take: 6,
+        take: 12,
       },
-      // Enrolled classrooms for this teacher
       studentEnrollments: {
         where: {
           removedAt: null,
@@ -73,36 +98,43 @@ export default async function StudentProfilePage({ params }: { params: Promise<{
 
   const profile = student.profile
   const streak = student.streak
+  const pendingCount = student.studentSubmissions.filter((submission) => submission.status === 'pending').length
+  const completedCount = student.studentSubmissions.filter((submission) => submission.status !== 'pending').length
 
-  // Skill scores for radar chart data
-  const skillMap: Record<string, number> = {}
-  for (const a of student.assessments) {
-    if (!(a.skill in skillMap)) skillMap[a.skill] = a.score
+  const latestSkillScores: Record<string, number> = {}
+  for (const assessment of student.assessments) {
+    if (!(assessment.skill in latestSkillScores)) {
+      latestSkillScores[assessment.skill] = assessment.score
+    }
   }
+
+  const risk = getStudentRiskProfile({
+    id: student.id,
+    displayName: profile?.displayName || student.email,
+    email: student.email,
+    currentLevel: profile?.currentLevel || 'A1',
+    totalXp: profile?.totalXp || 0,
+    totalStudyMinutes: profile?.totalStudyMinutes || 0,
+    totalLessonsCompleted: profile?.totalLessonsCompleted || 0,
+    currentStreak: streak?.currentStreak || 0,
+    lastActive: streak?.lastActivityDate || null,
+    dailyActivities: student.dailyActivities,
+    pendingAssignments: pendingCount,
+    skillScores: latestSkillScores,
+  })
 
   const totalMinutesLast7Days = student.dailyActivities
     .slice(0, 7)
-    .reduce((s, d) => s + d.totalMinutes, 0)
+    .reduce((sum, day) => sum + day.totalMinutes, 0)
 
-  const pendingCount = student.studentSubmissions.filter(s => s.status === 'pending').length
-  const completedCount = student.studentSubmissions.filter(s => s.status !== 'pending').length
-
-  const TARGET_TYPE_LABELS: Record<string, string> = {
-    xp: '🎯 XP', vocabulary: '📚 Từ vựng', grammar: '📐 Ngữ pháp',
-    listening: '🎧 Nghe', reading: '📖 Đọc', writing: '✍️ Viết',
-    speaking: '🎤 Nói', exam: '📝 Thi thử', lesson: '📕 Bài học',
-  }
-
-  const SKILL_LABELS: Record<string, string> = {
-    HOEREN: '🎧 Nghe', LESEN: '📖 Đọc', SCHREIBEN: '✍️ Viết',
-    SPRECHEN: '🎤 Nói', GRAMMATIK: '📐 Ngữ pháp', WORTSCHATZ: '📚 Từ vựng',
-  }
+  const totalXpLast7Days = student.dailyActivities
+    .slice(0, 7)
+    .reduce((sum, day) => sum + day.xpEarned, 0)
 
   return (
     <div>
-      <Link href="/teacher/classrooms" style={{ color: '#64748b', textDecoration: 'none', fontSize: '0.85rem' }}>← Quay lại</Link>
+      <Link href="/teacher/classrooms" style={{ color: '#64748b', textDecoration: 'none', fontSize: '0.85rem' }}>← Quay lai</Link>
 
-      {/* Profile header */}
       <div style={{
         background: '#1e293b', borderRadius: '20px', padding: '28px',
         border: '1px solid #334155', marginTop: '12px', marginBottom: '24px',
@@ -116,18 +148,18 @@ export default async function StudentProfilePage({ params }: { params: Promise<{
         }}>
           {(profile?.displayName || 'L').charAt(0).toUpperCase()}
         </div>
-        <div style={{ flex: 1, minWidth: '200px' }}>
+        <div style={{ flex: 1, minWidth: '220px' }}>
           <h1 style={{ color: '#f8fafc', fontSize: '1.4rem', fontWeight: 800, margin: '0 0 4px' }}>
             {profile?.displayName || student.email}
           </h1>
-          <p style={{ color: '#94a3b8', margin: '0 0 4px', fontSize: '0.85rem' }}>{student.email}</p>
+          <p style={{ color: '#94a3b8', margin: '0 0 8px', fontSize: '0.85rem' }}>{student.email}</p>
           <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
-            {student.studentEnrollments.map(e => (
-              <span key={e.id} style={{
+            {student.studentEnrollments.map((enrollmentItem) => (
+              <span key={enrollmentItem.id} style={{
                 background: '#334155', color: '#94a3b8', padding: '2px 10px',
                 borderRadius: '6px', fontSize: '0.75rem',
               }}>
-                {e.classroom.name}
+                {enrollmentItem.classroom.name}
               </span>
             ))}
           </div>
@@ -142,39 +174,125 @@ export default async function StudentProfilePage({ params }: { params: Promise<{
             <div style={{ color: '#64748b', fontSize: '0.75rem' }}>XP</div>
           </div>
           <div style={{ textAlign: 'center' }}>
-            <div style={{ color: '#f97316', fontSize: '1.5rem', fontWeight: 800 }}>{streak?.currentStreak || 0}🔥</div>
+            <div style={{ color: '#f97316', fontSize: '1.5rem', fontWeight: 800 }}>{streak?.currentStreak || 0}</div>
             <div style={{ color: '#64748b', fontSize: '0.75rem' }}>Streak</div>
           </div>
         </div>
       </div>
 
-      {/* Stats cards */}
+      <div style={{ display: 'grid', gridTemplateColumns: 'minmax(0, 2fr) minmax(300px, 1fr)', gap: '16px', marginBottom: '24px' }}>
+        <div style={{ background: '#1e293b', borderRadius: '16px', border: '1px solid #334155', padding: '20px' }}>
+          <h2 style={{ color: '#f8fafc', fontSize: '1rem', fontWeight: 700, margin: '0 0 12px' }}>Risk assessment</h2>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '12px' }}>
+            <span style={{
+              padding: '6px 10px',
+              borderRadius: '999px',
+              fontSize: '0.78rem',
+              fontWeight: 700,
+              color: risk.level === 'high' ? '#fecaca' : risk.level === 'medium' ? '#fde68a' : '#bbf7d0',
+              background: risk.level === 'high' ? '#7f1d1d' : risk.level === 'medium' ? '#78350f' : '#14532d',
+            }}>
+              {risk.level.toUpperCase()}
+            </span>
+            <span style={{ color: '#94a3b8', fontSize: '0.85rem' }}>
+              {risk.inactiveDays != null ? `${risk.inactiveDays} ngay khong hoc` : 'Chua co du lieu activity'}
+            </span>
+          </div>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, minmax(0, 1fr))', gap: '10px', marginBottom: '14px' }}>
+            <div style={{ background: '#0f172a', borderRadius: '12px', padding: '14px' }}>
+              <div style={{ color: '#64748b', fontSize: '0.75rem' }}>7 day minutes</div>
+              <div style={{ color: '#f8fafc', fontSize: '1.2rem', fontWeight: 800 }}>{risk.recentMinutes7d}</div>
+            </div>
+            <div style={{ background: '#0f172a', borderRadius: '12px', padding: '14px' }}>
+              <div style={{ color: '#64748b', fontSize: '0.75rem' }}>Pending work</div>
+              <div style={{ color: '#f8fafc', fontSize: '1.2rem', fontWeight: 800 }}>{risk.pendingAssignments}</div>
+            </div>
+            <div style={{ background: '#0f172a', borderRadius: '12px', padding: '14px' }}>
+              <div style={{ color: '#64748b', fontSize: '0.75rem' }}>7 day XP</div>
+              <div style={{ color: '#f8fafc', fontSize: '1.2rem', fontWeight: 800 }}>{totalXpLast7Days}</div>
+            </div>
+          </div>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+            {risk.reasons.length > 0 ? risk.reasons.map((reason) => (
+              <div key={reason} style={{
+                background: '#0f172a',
+                borderRadius: '10px',
+                padding: '10px 12px',
+                color: '#cbd5e1',
+                fontSize: '0.84rem',
+                border: '1px solid #334155',
+              }}>
+                {reason}
+              </div>
+            )) : (
+              <div style={{
+                background: '#0f172a',
+                borderRadius: '10px',
+                padding: '10px 12px',
+                color: '#86efac',
+                fontSize: '0.84rem',
+                border: '1px solid #334155',
+              }}>
+                Student is currently on track.
+              </div>
+            )}
+          </div>
+        </div>
+
+        <div style={{ background: '#1e293b', borderRadius: '16px', border: '1px solid #334155', padding: '20px' }}>
+          <h2 style={{ color: '#f8fafc', fontSize: '1rem', fontWeight: 700, margin: '0 0 12px' }}>Skill focus</h2>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '10px', marginBottom: '14px' }}>
+            <div>
+              <div style={{ color: '#64748b', fontSize: '0.75rem', marginBottom: '6px' }}>Weakest skills</div>
+              <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
+                {risk.weakestSkills.length > 0 ? risk.weakestSkills.map((skill) => (
+                  <span key={skill} style={{ background: '#7f1d1d', color: '#fecaca', padding: '4px 10px', borderRadius: '999px', fontSize: '0.78rem', fontWeight: 600 }}>
+                    {SKILL_LABELS[skill] || skill}
+                  </span>
+                )) : <span style={{ color: '#94a3b8', fontSize: '0.84rem' }}>No weak skills flagged</span>}
+              </div>
+            </div>
+            <div>
+              <div style={{ color: '#64748b', fontSize: '0.75rem', marginBottom: '6px' }}>Strongest skills</div>
+              <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
+                {risk.strongestSkills.length > 0 ? risk.strongestSkills.map((skill) => (
+                  <span key={skill} style={{ background: '#14532d', color: '#bbf7d0', padding: '4px 10px', borderRadius: '999px', fontSize: '0.78rem', fontWeight: 600 }}>
+                    {SKILL_LABELS[skill] || skill}
+                  </span>
+                )) : <span style={{ color: '#94a3b8', fontSize: '0.84rem' }}>Not enough assessment data</span>}
+              </div>
+            </div>
+          </div>
+          <div style={{ color: '#94a3b8', fontSize: '0.84rem', lineHeight: 1.5 }}>
+            Prioritize the weakest skill first, then use short assignment cycles to rebuild momentum.
+          </div>
+        </div>
+      </div>
+
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: '12px', marginBottom: '24px' }}>
         {[
-          { label: 'Phút học (7 ngày)', value: totalMinutesLast7Days, icon: '⏱️', color: '#3b82f6' },
-          { label: 'Tổng phút học', value: profile?.totalStudyMinutes || 0, icon: '📊', color: '#10b981' },
-          { label: 'Bài đã xong', value: profile?.totalLessonsCompleted || 0, icon: '✅', color: '#8b5cf6' },
-          { label: 'Từ đã học', value: profile?.totalWordsLearned || 0, icon: '📚', color: '#f59e0b' },
-          { label: 'Bài giao chờ', value: pendingCount, icon: '📋', color: pendingCount > 0 ? '#f87171' : '#64748b' },
-          { label: 'Bài giao xong', value: completedCount, icon: '🏆', color: '#10b981' },
-        ].map(stat => (
+          { label: 'Minutes (7 days)', value: totalMinutesLast7Days, color: '#3b82f6' },
+          { label: 'Total study minutes', value: profile?.totalStudyMinutes || 0, color: '#10b981' },
+          { label: 'Lessons completed', value: profile?.totalLessonsCompleted || 0, color: '#8b5cf6' },
+          { label: 'Words learned', value: profile?.totalWordsLearned || 0, color: '#f59e0b' },
+          { label: 'Pending assignments', value: pendingCount, color: pendingCount > 0 ? '#f87171' : '#94a3b8' },
+          { label: 'Completed assignments', value: completedCount, color: '#10b981' },
+        ].map((stat) => (
           <div key={stat.label} style={{
             background: '#1e293b', borderRadius: '14px', padding: '16px',
             border: '1px solid #334155',
           }}>
-            <div style={{ fontSize: '1.2rem', marginBottom: '2px' }}>{stat.icon}</div>
             <div style={{ fontSize: '1.5rem', fontWeight: 800, color: stat.color }}>{stat.value}</div>
             <div style={{ fontSize: '0.8rem', color: '#94a3b8' }}>{stat.label}</div>
           </div>
         ))}
       </div>
 
-      {/* Skill scores */}
-      {Object.keys(skillMap).length > 0 && (
+      {Object.keys(latestSkillScores).length > 0 && (
         <div style={{ marginBottom: '24px' }}>
-          <h2 style={{ color: '#f8fafc', fontSize: '1.1rem', fontWeight: 700, margin: '0 0 12px' }}>Điểm theo kỹ năng</h2>
+          <h2 style={{ color: '#f8fafc', fontSize: '1.1rem', fontWeight: 700, margin: '0 0 12px' }}>Latest skill scores</h2>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(160px, 1fr))', gap: '10px' }}>
-            {Object.entries(skillMap).map(([skill, score]) => (
+            {Object.entries(latestSkillScores).map(([skill, score]) => (
               <div key={skill} style={{
                 background: '#1e293b', borderRadius: '12px', padding: '14px',
                 border: '1px solid #334155',
@@ -200,72 +318,73 @@ export default async function StudentProfilePage({ params }: { params: Promise<{
         </div>
       )}
 
-      {/* Recent activity (heatmap-ish) */}
       {student.dailyActivities.length > 0 && (
         <div style={{ marginBottom: '24px' }}>
-          <h2 style={{ color: '#f8fafc', fontSize: '1.1rem', fontWeight: 700, margin: '0 0 12px' }}>Hoạt động 30 ngày gần nhất</h2>
+          <h2 style={{ color: '#f8fafc', fontSize: '1.1rem', fontWeight: 700, margin: '0 0 12px' }}>30-day activity</h2>
           <div style={{ display: 'flex', gap: '4px', flexWrap: 'wrap' }}>
-            {student.dailyActivities.map(d => {
-              const intensity = Math.min(d.totalMinutes / 30, 1)
+            {student.dailyActivities.map((day) => {
+              const intensity = Math.min(day.totalMinutes / 30, 1)
               return (
-                <div key={d.date.toISOString()} title={`${d.date.toLocaleDateString('vi-VN')}: ${d.totalMinutes} phút, ${d.xpEarned} XP`}
+                <div
+                  key={day.date.toISOString()}
+                  title={`${day.date.toLocaleDateString('vi-VN')}: ${day.totalMinutes} min, ${day.xpEarned} XP`}
                   style={{
                     width: '28px', height: '28px', borderRadius: '6px',
-                    background: d.totalMinutes === 0
+                    background: day.totalMinutes === 0
                       ? '#1e293b'
                       : `rgba(59, 130, 246, ${0.2 + intensity * 0.8})`,
                     border: '1px solid #334155',
-                  }} />
+                  }}
+                />
               )
             })}
           </div>
         </div>
       )}
 
-      {/* Submissions history */}
-      <h2 style={{ color: '#f8fafc', fontSize: '1.1rem', fontWeight: 700, margin: '0 0 12px' }}>Bài giao đã nộp</h2>
+      <h2 style={{ color: '#f8fafc', fontSize: '1.1rem', fontWeight: 700, margin: '0 0 12px' }}>Assignment history</h2>
       {student.studentSubmissions.length === 0 ? (
         <div style={{ background: '#1e293b', borderRadius: '14px', padding: '32px', textAlign: 'center', border: '1px solid #334155' }}>
-          <p style={{ color: '#94a3b8' }}>Chưa có bài nộp nào.</p>
+          <p style={{ color: '#94a3b8' }}>No submissions yet.</p>
         </div>
       ) : (
         <div style={{ background: '#1e293b', borderRadius: '14px', border: '1px solid #334155', overflow: 'hidden' }}>
-          {student.studentSubmissions.map((s, i) => (
-            <div key={s.id} style={{
+          {student.studentSubmissions.map((submission, index) => (
+            <div key={submission.id} style={{
               padding: '14px 20px',
-              borderBottom: i < student.studentSubmissions.length - 1 ? '1px solid #334155' : 'none',
+              borderBottom: index < student.studentSubmissions.length - 1 ? '1px solid #334155' : 'none',
               display: 'flex', alignItems: 'center', gap: '12px',
             }}>
               <span style={{
                 width: '32px', height: '32px', borderRadius: '8px',
-                background: s.status === 'pending' ? '#334155' : '#164e63',
+                background: submission.status === 'pending' ? '#334155' : '#164e63',
                 display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.85rem', flexShrink: 0,
               }}>
-                {s.status === 'pending' ? '⏳' : s.status === 'completed' ? '✅' : s.status === 'late' ? '⚠️' : '📝'}
+                {submission.status === 'pending' ? '⏳' : submission.status === 'completed' ? '✅' : submission.status === 'late' ? '⚠️' : '📝'}
               </span>
               <div style={{ flex: 1 }}>
-                <div style={{ color: '#e2e8f0', fontWeight: 600, fontSize: '0.9rem' }}>{s.assignment.title}</div>
+                <div style={{ color: '#e2e8f0', fontWeight: 600, fontSize: '0.9rem' }}>{submission.assignment.title}</div>
                 <div style={{ color: '#64748b', fontSize: '0.8rem' }}>
-                  {TARGET_TYPE_LABELS[s.assignment.targetType] || s.assignment.targetType}
+                  {TARGET_TYPE_LABELS[submission.assignment.targetType] || submission.assignment.targetType}
                   {' · '}
-                  {s.assignment.classroom.name}
-                  {s.assignment.dueDate && ` · Hạn: ${new Date(s.assignment.dueDate).toLocaleDateString('vi-VN')}`}
+                  {submission.assignment.classroom.name}
+                  {submission.assignment.dueDate && ` · Due: ${new Date(submission.assignment.dueDate).toLocaleDateString('vi-VN')}`}
                 </div>
               </div>
               <div style={{ textAlign: 'right' }}>
-                {s.score != null ? (
+                {submission.score != null ? (
                   <span style={{
-                    color: s.score >= 70 ? '#10b981' : s.score >= 40 ? '#f59e0b' : '#f87171',
+                    color: submission.score >= 70 ? '#10b981' : submission.score >= 40 ? '#f59e0b' : '#f87171',
                     fontWeight: 700, fontSize: '0.95rem',
                   }}>
-                    {s.score}{s.maxScore ? `/${s.maxScore}` : '%'}
+                    {submission.score}{submission.maxScore ? `/${submission.maxScore}` : '%'}
                   </span>
                 ) : (
                   <span style={{
                     fontSize: '0.8rem', fontWeight: 600,
-                    color: s.status === 'pending' ? '#f59e0b' : '#94a3b8',
+                    color: submission.status === 'pending' ? '#f59e0b' : '#94a3b8',
                   }}>
-                    {s.status === 'pending' ? 'Chưa làm' : 'Đã nộp'}
+                    {submission.status === 'pending' ? 'Pending' : 'Submitted'}
                   </span>
                 )}
               </div>

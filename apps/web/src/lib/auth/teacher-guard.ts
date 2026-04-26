@@ -1,5 +1,5 @@
 import { NextRequest } from 'next/server'
-import { withAuth } from '@/lib/auth/middleware'
+import { withDbAuth } from '@/lib/auth/middleware'
 import { prisma } from '@fuxie/database'
 
 /**
@@ -7,12 +7,7 @@ import { prisma } from '@fuxie/database'
  * Throws 403 if the user is a LEARNER or CONTENT_CREATOR.
  */
 export async function requireTeacher(request: NextRequest) {
-  const authUser = await withAuth(request)
-
-  const dbUser = await prisma.user.findUnique({
-    where: { id: authUser.userId },
-    select: { role: true },
-  })
+  const dbUser = await withDbAuth(request)
 
   if (!dbUser || (dbUser.role !== 'TEACHER' && dbUser.role !== 'ADMIN')) {
     const err = Object.assign(
@@ -22,7 +17,7 @@ export async function requireTeacher(request: NextRequest) {
     throw err
   }
 
-  return authUser
+  return dbUser
 }
 
 /**
@@ -46,4 +41,3 @@ export async function generateJoinCode(): Promise<string> {
   }
   return code
 }
-

@@ -1,12 +1,12 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@fuxie/database'
 import { handleApiError } from '@/lib/api/error-handler'
-import { withAuth } from '@/lib/auth/middleware'
+import { withDbAuth } from '@/lib/auth/middleware'
 
 // GET /api/v1/student/assignments — list assignments for current student
 export async function GET(request: NextRequest) {
   try {
-    const user = await withAuth(request)
+    const user = await withDbAuth(request)
 
     const submissions = await prisma.assignmentSubmission.findMany({
       where: { studentId: user.userId },

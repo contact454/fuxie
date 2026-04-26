@@ -1,7 +1,14 @@
 import { NextRequest, NextResponse } from 'next/server'
+import { z } from 'zod'
 import { prisma } from '@fuxie/database'
 import { handleApiError } from '@/lib/api/error-handler'
 import { requireTeacher, generateJoinCode } from '@/lib/auth/teacher-guard'
+
+const createClassroomSchema = z.object({
+  name: z.string().trim().min(2).max(120),
+  description: z.string().trim().max(1000).nullable().optional(),
+  cefrLevel: z.enum(['A1', 'A2', 'B1', 'B2', 'C1', 'C2']).default('A1'),
+})
 
 // GET /api/v1/teacher/classrooms — list teacher's classrooms
 export async function GET(request: NextRequest) {
@@ -38,15 +45,7 @@ export async function GET(request: NextRequest) {
 export async function POST(request: NextRequest) {
   try {
     const user = await requireTeacher(request)
-    const body = await request.json()
-    const { name, description, cefrLevel } = body
-
-    if (!name || typeof name !== 'string' || name.trim().length < 2) {
-      return NextResponse.json(
-        { success: false, error: 'Tên lớp phải có ít nhất 2 ký tự.' },
-        { status: 400 },
-      )
-    }
+    const { name, description, cefrLevel } = createClassroomSchema.parse(await request.json())
 
     const joinCode = await generateJoinCode()
 
@@ -54,7 +53,7 @@ export async function POST(request: NextRequest) {
       data: {
         name: name.trim(),
         description: description?.trim() || null,
-        cefrLevel: cefrLevel || 'A1',
+        cefrLevel,
         joinCode,
         teacherId: user.userId,
       },

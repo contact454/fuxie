@@ -1,23 +1,21 @@
 import { NextRequest, NextResponse } from 'next/server'
+import { z } from 'zod'
 import { prisma } from '@fuxie/database'
 import { handleApiError } from '@/lib/api/error-handler'
-import { withAuth } from '@/lib/auth/middleware'
+import { withDbAuth } from '@/lib/auth/middleware'
+
+const enrollSchema = z.object({
+  joinCode: z.string()
+    .trim()
+    .toUpperCase()
+    .regex(/^FUX-[A-HJ-NP-Z2-9]{3,5}$/, 'Invalid join code format'),
+})
 
 // POST /api/v1/student/enroll — join a classroom via join code
 export async function POST(request: NextRequest) {
   try {
-    const user = await withAuth(request)
-    const body = await request.json()
-    const { joinCode } = body
-
-    if (!joinCode || typeof joinCode !== 'string') {
-      return NextResponse.json(
-        { success: false, error: 'Mã lớp (joinCode) là bắt buộc.' },
-        { status: 400 },
-      )
-    }
-
-    const normalizedCode = joinCode.trim().toUpperCase()
+    const user = await withDbAuth(request)
+    const { joinCode: normalizedCode } = enrollSchema.parse(await request.json())
 
     const classroom = await prisma.classroom.findUnique({
       where: { joinCode: normalizedCode },
