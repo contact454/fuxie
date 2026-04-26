@@ -3,6 +3,7 @@ import { prisma } from '@fuxie/database'
 import { withAuth, NotFoundError } from '@/lib/auth/middleware'
 import { getDbUserByFirebaseUid } from '@/lib/auth/db-user'
 import { handleApiError } from '@/lib/api/error-handler'
+import { enforceRateLimit, getRateLimitNumber, getRequestClientKey } from '@/lib/api/rate-limit'
 import { withGeminiFallback } from '@/lib/ai/gemini-fallback'
 import { parseGeminiJson } from '@/lib/ai/parse-json'
 import { cookies } from 'next/headers'
@@ -105,6 +106,15 @@ export async function POST(req: NextRequest) {
         const auth = await withAuth(req)
         const user = await getDbUserByFirebaseUid(auth.userId)
         if (!user) throw new NotFoundError('User not found')
+
+        const limited = enforceRateLimit(getRequestClientKey(req, user.id), {
+            keyPrefix: 'web-chat',
+            windowMs: getRateLimitNumber('WEB_CHAT_RATE_LIMIT_WINDOW_MS', 60_000),
+            max: getRateLimitNumber('WEB_CHAT_RATE_LIMIT_MAX', 30),
+        })
+        if (limited) {
+            return limited
+        }
 
         const body = await req.json()
         const {

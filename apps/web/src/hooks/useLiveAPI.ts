@@ -9,6 +9,7 @@ export function useLiveAPI() {
     const [isSpeaking, setIsSpeaking] = useState(false)
     const [transcript, setTranscript] = useState('')
     const [fullTranscript, setFullTranscript] = useState('')
+    const [connectionError, setConnectionError] = useState<string | null>(null)
     
     const wsRef = useRef<WebSocket | null>(null)
     const audioContextRef = useRef<AudioContext | null>(null)
@@ -18,6 +19,7 @@ export function useLiveAPI() {
 
     const connect = useCallback(async (scenarioId: string = 'free_talk') => {
         try {
+            setConnectionError(null)
             // Setup AudioContext FIRST (synchronously) to bypass iOS Safari autoplay restrictions
             const audioCtx = new (window.AudioContext || (window as any).webkitAudioContext)({ sampleRate: 16000 })
             audioContextRef.current = audioCtx
@@ -30,16 +32,26 @@ export function useLiveAPI() {
             const res = await fetch('/api/v1/chat/credentials')
             const data = await res.json()
             if (!data.success) throw new Error('Failed to get credentials')
-            
-            const apiKey = data.apiKey
-            
+            if (!data.liveApiEnabled) {
+                throw new Error(data.error || 'Live voice chat is not enabled.')
+            }
+
             const selectedScenario = SCENARIOS.find(s => s.id === scenarioId) || SCENARIOS[0]
             const systemPrompt = selectedScenario?.systemPrompt || data.systemPrompt || "Du bist Fuxie, ein freundlicher Deutschlehrer."
 
             // 2. Connect to WebSocket
 
             // 3. Connect to WebSocket
-            const wsUrl = `wss://generativelanguage.googleapis.com/ws/google.ai.generativelanguage.v1beta.GenerativeService.BidiGenerateContent?key=${apiKey}`
+            const wsUrl = data.transport === 'proxy' && data.liveProxyUrl
+                ? data.liveProxyUrl
+                : data.apiKey
+                    ? `wss://generativelanguage.googleapis.com/ws/google.ai.generativelanguage.v1beta.GenerativeService.BidiGenerateContent?key=${data.apiKey}`
+                    : null
+
+            if (!wsUrl) {
+                throw new Error('Live voice chat credentials are incomplete.')
+            }
+
             const ws = new WebSocket(wsUrl)
             wsRef.current = ws
 
@@ -143,6 +155,7 @@ export function useLiveAPI() {
 
         } catch (error) {
             console.error('[LiveAPI] Connection failed:', error)
+            setConnectionError(error instanceof Error ? error.message : 'Live voice chat connection failed.')
             setIsConnected(false)
         }
     }, [])
@@ -175,6 +188,7 @@ export function useLiveAPI() {
         isConnected,
         isSpeaking,
         transcript,
-        fullTranscript
+        fullTranscript,
+        connectionError
     }
 }

@@ -49,7 +49,12 @@ ${fullTranscript}`
 
             // 2. Save to database using executeRaw for pgvector
             const queries = memories.map((content, i) => {
-                const vectorString = `[${embeddings[i].join(',')}]`
+                const embedding = embeddings[i]
+                if (!embedding) {
+                    return prisma.$executeRaw`SELECT 1`
+                }
+
+                const vectorString = `[${embedding.join(',')}]`
                 return prisma.$executeRaw`
                     INSERT INTO user_chat_memories (id, "userId", content, embedding, "createdAt", "updatedAt")
                     VALUES (gen_random_uuid(), ${user.id}, ${content}, ${vectorString}::vector, NOW(), NOW())

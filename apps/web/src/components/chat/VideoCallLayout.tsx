@@ -22,7 +22,7 @@ export function VideoCallLayout({ onEndCall, level, scenarioId }: VideoCallLayou
     
     const audioAnalyserRef = useRef<AnalyserNode | null>(null)
     
-    const { connect, disconnect, isConnected, isSpeaking, transcript, fullTranscript } = useLiveAPI()
+    const { connect, disconnect, isConnected, isSpeaking, transcript, fullTranscript, connectionError } = useLiveAPI()
     const scenario = SCENARIOS.find(s => s.id === scenarioId) || SCENARIOS[0]!
 
     // Connect on mount
@@ -164,9 +164,14 @@ export function VideoCallLayout({ onEndCall, level, scenarioId }: VideoCallLayou
                     
                     {/* Status Badge */}
                     <div className="mt-8 px-4 py-1.5 rounded-full bg-black/40 backdrop-blur-md text-white text-sm font-medium flex items-center gap-2">
-                        <div className={`w-2 h-2 rounded-full ${!isConnected ? 'bg-yellow-400' : isSpeaking ? 'bg-green-400 animate-pulse' : 'bg-gray-400'}`} />
-                        {!isConnected ? 'Đang kết nối...' : isSpeaking ? 'Fuxie đang nói...' : 'Fuxie đang nghe...'}
+                        <div className={`w-2 h-2 rounded-full ${connectionError ? 'bg-red-400' : !isConnected ? 'bg-yellow-400' : isSpeaking ? 'bg-green-400 animate-pulse' : 'bg-gray-400'}`} />
+                        {connectionError ? 'Khong the ket noi Live API' : !isConnected ? 'Đang kết nối...' : isSpeaking ? 'Fuxie đang nói...' : 'Fuxie đang nghe...'}
                     </div>
+                    {connectionError && (
+                        <div className="mt-3 max-w-md text-center text-xs text-red-200 bg-red-950/60 border border-red-500/30 rounded-xl px-4 py-2">
+                            {connectionError}
+                        </div>
+                    )}
                 </div>
 
                 <div className="absolute bottom-24 left-0 w-full px-8 flex justify-center">

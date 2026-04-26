@@ -17,13 +17,13 @@ export function MascotAvatar({
     className = '',
 }: MascotAvatarProps) {
     const [mouthOpen, setMouthOpen] = useState(false)
-    const requestRef = useRef<number>()
+    const requestRef = useRef<number | null>(null)
 
     // Simple Lip-sync based on Audio Analyser volume
     useEffect(() => {
         if (!isSpeaking || !audioAnalyser) {
             setMouthOpen(false)
-            if (requestRef.current) cancelAnimationFrame(requestRef.current)
+            if (requestRef.current !== null) cancelAnimationFrame(requestRef.current)
             return
         }
 
@@ -34,7 +34,7 @@ export function MascotAvatar({
             // Calculate average volume
             let sum = 0
             for (let i = 0; i < dataArray.length; i++) {
-                sum += dataArray[i]
+                sum += dataArray[i] ?? 0
             }
             const average = sum / dataArray.length
 
@@ -47,7 +47,7 @@ export function MascotAvatar({
         updateMouth()
 
         return () => {
-            if (requestRef.current) cancelAnimationFrame(requestRef.current)
+            if (requestRef.current !== null) cancelAnimationFrame(requestRef.current)
         }
     }, [isSpeaking, audioAnalyser])
 
