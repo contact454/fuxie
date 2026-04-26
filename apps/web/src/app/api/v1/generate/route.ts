@@ -1,4 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
+import { withAuth } from '@/lib/auth/middleware'
+import { handleApiError } from '@/lib/api/error-handler'
+import { enforceRateLimit, getRateLimitNumber, getRequestClientKey } from '@/lib/api/rate-limit'
 import { withGeminiFallback } from '@/lib/ai/gemini-fallback'
 import { parseGeminiJson } from '@/lib/ai/parse-json'
 
@@ -11,6 +14,16 @@ function getModelName(level: string) {
 // ─── POST /api/v1/generate — Exercise Generation ─────
 export async function POST(req: NextRequest) {
     try {
+        const auth = await withAuth(req)
+        const limited = enforceRateLimit(getRequestClientKey(req, auth.userId), {
+            keyPrefix: 'web-generate',
+            windowMs: getRateLimitNumber('WEB_GENERATE_RATE_LIMIT_WINDOW_MS', 60_000),
+            max: getRateLimitNumber('WEB_GENERATE_RATE_LIMIT_MAX', 10),
+        })
+        if (limited) {
+            return limited
+        }
+
         const body = await req.json()
         const { type = 'vocabulary', cefrLevel = 'A1', topic, count = 5 } = body
 
@@ -27,7 +40,7 @@ export async function POST(req: NextRequest) {
         return NextResponse.json({ success: false, error: 'Unknown type. Use "vocabulary", "grammar", or "conversation".' }, { status: 400 })
     } catch (err) {
         console.error('[Generate API] Error:', err)
-        return NextResponse.json({ success: false, error: 'Generation failed' }, { status: 500 })
+        return handleApiError(err)
     }
 }
 

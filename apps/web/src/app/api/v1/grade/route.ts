@@ -1,5 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server'
 
+import { handleApiError } from '@/lib/api/error-handler'
+import { enforceRateLimit, getRateLimitNumber, getRequestClientKey } from '@/lib/api/rate-limit'
+import { withAuth } from '@/lib/auth/middleware'
 import { withGeminiFallback } from '@/lib/ai/gemini-fallback'
 import { parseGeminiJson } from '@/lib/ai/parse-json'
 
@@ -25,6 +28,16 @@ const ERROR_TYPE_NATIVE: Record<string, string> = {
 // ─── POST /api/v1/grade — Grammar & Writing auto-grading ─
 export async function POST(req: NextRequest) {
     try {
+        const auth = await withAuth(req)
+        const limited = enforceRateLimit(getRequestClientKey(req, auth.userId), {
+            keyPrefix: 'web-grade',
+            windowMs: getRateLimitNumber('WEB_GRADE_RATE_LIMIT_WINDOW_MS', 60_000),
+            max: getRateLimitNumber('WEB_GRADE_RATE_LIMIT_MAX', 20),
+        })
+        if (limited) {
+            return limited
+        }
+
         const body = await req.json()
         const { type = 'grammar', cefrLevel = 'A1', uiLanguage = 'vi' } = body
 
@@ -33,7 +46,7 @@ export async function POST(req: NextRequest) {
         return NextResponse.json({ success: false, error: 'Unknown type. Use "grammar" or "writing".' }, { status: 400 })
     } catch (err) {
         console.error('[Grade API] Error:', err)
-        return NextResponse.json({ success: false, error: 'Grading failed' }, { status: 500 })
+        return handleApiError(err)
     }
 }
 

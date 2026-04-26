@@ -1,278 +1,169 @@
-import { Hono } from 'hono'
-import { getModel, getModelForLevel } from '../lib/gemini.js'
-import { parseGeminiJson } from '../lib/parse-json.js'
+import { Hono, type Context } from 'hono'
+import { ZodError } from 'zod'
+import {
+    gradeGrammarSentence,
+    gradeSpeakingAudio,
+    gradeWritingSubmission,
+    parseGrammarGradeRequest,
+    parseSpeakingGradeRequest,
+    parseWritingGradeRequest,
+    type GradeJobType,
+} from '../lib/grading.js'
+import {
+    addGradingJob,
+    getGradingJobStatus,
+    listDeadLetterJobs,
+} from '../lib/queue/queues.js'
 
 export const gradeRoutes = new Hono()
 
-// ─── Vietnamese Labels ──────────────────────────────
-const CRITERION_VI: Record<string, string> = {
-    'Inhalt': 'Nội dung',
-    'Kommunikative Angemessenheit': 'Phù hợp giao tiếp',
-    'Angemessenheit': 'Tính phù hợp',
-    'Korrektheit': 'Chính xác ngữ pháp & chính tả',
-    'Wortschatz & Strukturen': 'Đa dạng từ vựng & cấu trúc',
-    'Kohaerenz & Kohaesion': 'Mạch lạc & liên kết',
-    'Kohärenz & Kohäsion': 'Mạch lạc & liên kết',
-    'Vollständigkeit': 'Tính đầy đủ',
-    'Formale Richtigkeit': 'Đúng hình thức',
-}
-
-const ERROR_TYPE_VI: Record<string, string> = {
-    'Grammatik': 'Ngữ pháp',
-    'Rechtschreibung': 'Chính tả',
-    'Wortschatz': 'Từ vựng',
-    'Syntax': 'Cú pháp',
-    'Interpunktion': 'Dấu câu',
-    'Register': 'Văn phong',
-    'Formatierung': 'Định dạng',
-    'Kohärenz': 'Liên kết',
-}
-
-// ─── CEFR Rubric Descriptors ────────────────────────
-function getCefrDescriptors(level: string): string {
-    const descriptors: Record<string, string> = {
-        'A1': `A1: Einfache Sätze, Grundwortschatz. Inhalt/Korrektheit/Angemessenheit je 0-5 Punkte.`,
-        'A2': `A2: Einfache zusammenhängende Sätze. Inhalt/Korrektheit/Angemessenheit je 0-5 Punkte.`,
-        'B1': `B1: Zusammenhängende Texte, Nebensätze, Konnektoren. 5 Kriterien (Inhalt, Kommunikative Angemessenheit, Korrektheit, Wortschatz & Strukturen, Kohärenz & Kohäsion) je 0-5 Punkte.`,
-        'B2': `B2: Argumentative Texte, komplexe Strukturen, differenzierter Wortschatz. 5 Kriterien je 0-5 Punkte.`,
-        'C1': `C1: Anspruchsvolle Texte, präziser Ausdruck, souveräner Stil. 5 Kriterien je 0-5 Punkte.`,
-        'C2': `C2: Muttersprachliches Niveau, nuancierte Argumentation. 5 Kriterien je 0-5 Punkte.`,
-    }
-    return descriptors[level] ?? descriptors['B1']!
-}
-
-// ─── POST /writing — Writing Grading ────────────────
 gradeRoutes.post('/writing', async (c) => {
-    let body: {
-        cefrLevel: string
-        textType: string
-        register: string
-        situation: string
-        contentPoints: string[]
-        submittedText: string
-        minWords: number
-        maxWords: number | null
-        uiLanguage?: string
-        rubric: { criteria: Array<{ id: string; name: string; maxScore: number; weight?: number }>; maxScore: number }
-    }
-
     try {
-        body = await c.req.json()
-    } catch {
-        return c.json({ success: false, error: { code: 'INVALID_BODY', message: 'Invalid JSON body' } }, 400)
-    }
-
-    const { cefrLevel, textType, register, situation, contentPoints, submittedText, minWords, maxWords, rubric, uiLanguage = 'vi' } = body
-
-    if (!submittedText?.trim()) {
-        return c.json({ success: false, error: { code: 'MISSING_TEXT', message: 'submittedText is required' } }, 400)
-    }
-
-    try {
-        const modelName = getModelForLevel(cefrLevel)
-        const model = getModel(modelName)
-        console.log(`[Grade/Writing] Level: ${cefrLevel}, Model: ${modelName}`)
-
-        const criteriaList = rubric.criteria.map(cr =>
-            `- "${cr.name}" (${uiLanguage === 'vi' ? CRITERION_VI[cr.name] : cr.name}) — max ${cr.maxScore} Punkte`
-        ).join('\n')
-        const contentPointsList = contentPoints.map((p, i) => `${i + 1}. ${p}`).join('\n')
-        const cefrDesc = getCefrDescriptors(cefrLevel)
-
-        const prompt = `Du bist ein DaF-Prüfer. Bewerte diesen ${cefrLevel}-Text streng nach Goethe-Institut-Standards.
-
-## Aufgabe
-- Niveau: ${cefrLevel} | Texttyp: ${textType} | Register: ${register}
-- Situation: ${situation}
-- Inhaltspunkte: ${contentPointsList}
-- Wortanzahl: ${minWords}${maxWords ? `–${maxWords}` : '+'} Wörter
-${cefrDesc}
-
-## Kriterien
-${criteriaList}
-
-## Text
-"""
-${submittedText}
-"""
-
-Antworte NUR als JSON (kein Markdown):
-{
-  "criteria": [{ "id": "...", "name": "...", "score": 0, "maxScore": 5, "reasoning": "deutsch", "reasoningNative": "Translated reasoning depending on UI Language ${uiLanguage}", "suggestions": ["deutsch"], "suggestionsNative": ["Translated suggestions depending on UI Language ${uiLanguage}"] }],
-  "overallFeedback": "deutsch",
-  "overallFeedbackNative": "Translated feedback depending on UI Language ${uiLanguage}",
-  "estimatedLevel": "A1-C2",
-  "corrections": [{ "original": "...", "corrected": "...", "type": "Grammatik", "typeNative": "Translated type depending on UI Language ${uiLanguage}", "explanation": "deutsch", "explanationNative": "Translated explanation depending on UI Language ${uiLanguage}" }]
-}`
-
-        const result = await model.generateContent(prompt)
-        const responseText = result.response.text()
-
-        // Parse JSON — robust cleanup for markdown fences, trailing commas, truncation
-        const parsed: any = parseGeminiJson(responseText)
-
-        // Calculate total score
-        const totalScore = (parsed.criteria || []).reduce(
-            (sum: number, cr: { score?: number }) => sum + (cr.score || 0), 0
-        )
-        const maxScore = rubric.maxScore
-
-        return c.json({
-            success: true,
-            data: {
-                totalScore,
-                maxScore,
-                percentScore: maxScore > 0 ? Math.round((totalScore / maxScore) * 100) : 0,
-                estimatedLevel: parsed.estimatedLevel || cefrLevel,
-                criteria: (parsed.criteria || []).map((cr: any) => ({
-                    id: cr.id || cr.name,
-                    name: cr.name,
-                    nameNative: uiLanguage === 'vi' ? (CRITERION_VI[cr.name] || cr.nameNative || '') : (cr.nameNative || cr.name),
-                    score: cr.score || 0,
-                    maxScore: cr.maxScore || 5,
-                    reasoning: cr.reasoning || '',
-                    reasoningNative: cr.reasoningNative || '',
-                    suggestions: cr.suggestions || [],
-                    suggestionsNative: cr.suggestionsNative || [],
-                })),
-                overallFeedback: parsed.overallFeedback || '',
-                overallFeedbackNative: parsed.overallFeedbackNative || '',
-                corrections: (parsed.corrections || []).map((cr: any) => ({
-                    original: cr.original || '',
-                    corrected: cr.corrected || '',
-                    type: cr.type || 'Grammatik',
-                    typeNative: uiLanguage === 'vi' ? (cr.typeNative || ERROR_TYPE_VI[cr.type] || 'Ngữ pháp') : (cr.typeNative || cr.type),
-                    explanation: cr.explanation || '',
-                    explanationNative: cr.explanationNative || '',
-                })),
-            },
-        })
+        const body = await c.req.json()
+        const data = await gradeWritingSubmission(parseWritingGradeRequest(body))
+        return c.json({ success: true, data })
     } catch (err) {
-        console.error('[Grade/Writing] Error:', err)
-        return c.json({ success: false, error: { code: 'AI_ERROR', message: 'Writing grading failed' } }, 500)
+        return handleGradeError(c, err, 'Writing grading failed')
     }
 })
 
-// ─── POST /speaking — Pronunciation Feedback ────────
 gradeRoutes.post('/speaking', async (c) => {
     try {
-        const body = await c.req.parseBody()
-        const audioFile = body['audio']
-        const cefrLevel = (body['cefrLevel'] as string) || 'A1'
-        const expectedText = body['expectedText'] as string | undefined
-        const exerciseType = (body['exerciseType'] as string) || 'free-speech'
+        const data = await parseSpeakingRequest(c)
+        const result = await gradeSpeakingAudio(data)
+        return c.json({ success: true, data: result })
+    } catch (err) {
+        return handleGradeError(c, err, 'Speaking grading failed')
+    }
+})
 
-        if (!audioFile || !(audioFile instanceof File)) {
-            return c.json({ success: false, error: { code: 'MISSING_AUDIO', message: 'audio file is required' } }, 400)
+gradeRoutes.post('/grammar', async (c) => {
+    try {
+        const body = await c.req.json()
+        const data = await gradeGrammarSentence(parseGrammarGradeRequest(body))
+        return c.json({ success: true, data })
+    } catch (err) {
+        return handleGradeError(c, err, 'Grammar analysis failed')
+    }
+})
+
+gradeRoutes.post('/async', async (c) => {
+    try {
+        const body = await c.req.json()
+        const type = normalizeGradeType(body?.type)
+        if (!type) {
+            return c.json(
+                {
+                    success: false,
+                    error: 'Unsupported type. Use "writing", "speaking", or "grammar".',
+                },
+                400,
+            )
         }
 
-        const model = getModel('gemini-3-flash-preview')
-        console.log(`[Grade/Speaking] Level: ${cefrLevel}, Type: ${exerciseType}, Audio size: ${audioFile.size} bytes`)
-
-        const arrayBuffer = await audioFile.arrayBuffer()
-        const base64Data = Buffer.from(arrayBuffer).toString('base64')
-
-        const prompt = `Du bist ein DaF-Aussprachetrainer. Höre dir die Audioaufnahme eines vietnamesischen ${cefrLevel}-Lerners an.
-
-## Kontext
-- Niveau: ${cefrLevel}
-- Übungstyp: ${exerciseType}
-${expectedText ? `- Erwarteter Text (Was der Lerner sagen sollte): "${expectedText}"` : ''}
-
-## Aufgabe
-1. Transkribiere genau, was der Lerner gesagt hat (erkenne Aussprachefehler).
-2. Vergleiche es mit dem erwarteten Text (falls vorhanden).
-3. Bewerte die Aussprache und gib konstruktives Feedback auf Deutsch und Vietnamesisch.
-4. Identifiziere MAXIMAL 3 spezifische Wörter mit schlechter Aussprache und gib phonetische Tipps.
-
-Antworte NUR als JSON:
-{
-  "transcript": "Das erkannte, gesprochene Wort/Satz",
-  "score": 0-100,
-  "fluency": 0-100,
-  "accuracy": 0-100,
-  "pronunciation": 0-100,
-  "feedback": "Gesamtbewertung auf Deutsch",
-  "feedbackVi": "Đánh giá tổng thể bằng tiếng Việt",
-  "issues": [
-    { "word": "falsch ausgesprochenes Wort", "issue": "Aussprachehinweis auf Deutsch", "issueVi": "Gợi ý tiếng Việt", "tip": "Phonetischer Tipp" }
-  ],
-  "encouragement": "Ermutigende Nachricht 🦊"
-}`
-
-        const result = await model.generateContent([
-            prompt,
-            {
-                inlineData: {
-                    data: base64Data,
-                    mimeType: audioFile.type || 'audio/webm',
-                },
-            },
-        ])
-        const responseText = result.response.text()
-
-        const parsed: any = parseGeminiJson(responseText)
+        const payload = validateAsyncPayload(type, body)
+        const idempotencyKey = typeof body?.idempotencyKey === 'string' ? body.idempotencyKey : undefined
+        const job = await addGradingJob(type, payload, { idempotencyKey })
 
         return c.json({
             success: true,
             data: {
-                transcript: parsed.transcript || '',
-                score: parsed.score ?? 0,
-                fluency: parsed.fluency ?? 0,
-                accuracy: parsed.accuracy ?? 0,
-                pronunciation: parsed.pronunciation ?? 0,
-                feedback: parsed.feedback || '',
-                feedbackVi: parsed.feedbackVi || '',
-                issues: parsed.issues || [],
-                encouragement: parsed.encouragement || 'Weiter so! 🦊',
+                message: 'Job enqueued successfully',
+                jobId: job.id,
+                type,
             },
         })
     } catch (err) {
-        console.error('[Grade/Speaking] Error:', err)
-        return c.json({ success: false, error: { code: 'AI_ERROR', message: 'Speaking grading failed' } }, 500)
+        return handleGradeError(c, err, 'Failed to enqueue grading job')
     }
 })
 
-// ─── POST /grammar — Grammar Analysis ───────────────
-gradeRoutes.post('/grammar', async (c) => {
-    let body: { cefrLevel: string; sentence: string; topic?: string }
-
+gradeRoutes.get('/jobs/:jobId', async (c) => {
     try {
-        body = await c.req.json()
-    } catch {
-        return c.json({ success: false, error: { code: 'INVALID_BODY', message: 'Invalid JSON body' } }, 400)
-    }
+        const job = await getGradingJobStatus(c.req.param('jobId'))
+        if (!job) {
+            return c.json({ success: false, error: 'Job not found' }, 404)
+        }
 
-    const { cefrLevel, sentence, topic } = body
-
-    if (!sentence?.trim()) {
-        return c.json({ success: false, error: { code: 'MISSING_SENTENCE', message: 'sentence is required' } }, 400)
-    }
-
-    try {
-        const model = getModel(getModelForLevel(cefrLevel))
-
-        const prompt = `Analysiere diesen deutschen Satz eines ${cefrLevel}-Lerners${topic ? ` (Thema: ${topic})` : ''}.
-
-Satz: "${sentence}"
-
-Antworte NUR als JSON:
-{
-  "correct": true/false,
-  "correctedSentence": "...",
-  "errors": [{ "original": "...", "corrected": "...", "rule": "Grammatikregel", "ruleVi": "Quy tắc ngữ pháp", "explanation": "deutsch", "explanationVi": "tiếng việt" }],
-  "analysis": { "sentence_structure": "...", "verb_position": "...", "cases_used": "..." },
-  "tip": "Deutsch",
-  "tipVi": "Tiếng Việt"
-}`
-
-        const result = await model.generateContent(prompt)
-        const responseText = result.response.text()
-        const parsed: any = parseGeminiJson(responseText)
-
-        return c.json({ success: true, data: parsed })
+        return c.json({ success: true, data: job })
     } catch (err) {
-        console.error('[Grade/Grammar] Error:', err)
-        return c.json({ success: false, error: { code: 'AI_ERROR', message: 'Grammar analysis failed' } }, 500)
+        return handleGradeError(c, err, 'Failed to fetch grading job status')
     }
 })
+
+gradeRoutes.get('/dead-letter', async (c) => {
+    try {
+        const requestedLimit = Number(c.req.query('limit') || 20)
+        const limit = Number.isFinite(requestedLimit) ? Math.max(1, Math.min(100, requestedLimit)) : 20
+        const jobs = await listDeadLetterJobs('grading', limit)
+        return c.json({ success: true, data: jobs })
+    } catch (err) {
+        return handleGradeError(c, err, 'Failed to fetch dead-letter jobs')
+    }
+})
+
+function normalizeGradeType(type: unknown): GradeJobType | null {
+    if (type === 'writing' || type === 'speaking' || type === 'grammar') {
+        return type
+    }
+
+    return null
+}
+
+function validateAsyncPayload(type: GradeJobType, body: Record<string, unknown>) {
+    switch (type) {
+        case 'writing':
+            return parseWritingGradeRequest(body)
+        case 'grammar':
+            return parseGrammarGradeRequest(body)
+        case 'speaking':
+            return parseSpeakingGradeRequest(body)
+    }
+}
+
+async function parseSpeakingRequest(c: Context) {
+    const contentType = c.req.header('content-type') || ''
+    if (contentType.includes('application/json')) {
+        return parseSpeakingGradeRequest(await c.req.json())
+    }
+
+    const body = await c.req.parseBody()
+    const audioFile = body.audio
+    if (!audioFile || !(audioFile instanceof File)) {
+        throw new Error('audio file is required')
+    }
+
+    const arrayBuffer = await audioFile.arrayBuffer()
+    return parseSpeakingGradeRequest({
+        cefrLevel: typeof body.cefrLevel === 'string' ? body.cefrLevel : 'A1',
+        expectedText: typeof body.expectedText === 'string' ? body.expectedText : undefined,
+        exerciseType: typeof body.exerciseType === 'string' ? body.exerciseType : 'free-speech',
+        audioBase64: Buffer.from(arrayBuffer).toString('base64'),
+        mimeType: audioFile.type || 'audio/webm',
+    })
+}
+
+function handleGradeError(c: Context, err: unknown, fallbackMessage: string) {
+    if (err instanceof ZodError) {
+        return c.json(
+            {
+                success: false,
+                error: {
+                    code: 'INVALID_INPUT',
+                    message: err.issues.map((issue) => `${issue.path.join('.')}: ${issue.message}`).join('; '),
+                },
+            },
+            400,
+        )
+    }
+
+    console.error('[Grade] Error:', err)
+    const message = err instanceof Error ? err.message : fallbackMessage
+    const status = message.includes('queue is disabled')
+        ? 503
+        : message.includes('audio file is required')
+            ? 400
+            : 500
+
+    return c.json({ success: false, error: { code: 'GRADE_ERROR', message } }, status)
+}
