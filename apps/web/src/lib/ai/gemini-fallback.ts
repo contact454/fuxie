@@ -1,13 +1,12 @@
 import { GoogleGenerativeAI } from '@google/generative-ai'
+import { getGeminiApiKeys } from '@fuxie/shared/env'
 
 let currentKeyIndex = 0
 /** Keys that have been detected as invalid/suspended during this runtime */
 const evictedKeys = new Set<string>()
 
 function getActiveKeys(): string[] {
-    const defaultKey = process.env.GEMINI_API_KEY || process.env.GOOGLE_AI_API_KEY || ''
-    const fallbackKey = process.env.GEMINI_API_KEY_FALLBACK || ''
-    return [defaultKey, fallbackKey].filter(k => k.trim().length > 0)
+    return getGeminiApiKeys(process.env)
 }
 
 export function getGeminiKey(): string {
