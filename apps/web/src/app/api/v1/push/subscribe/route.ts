@@ -1,11 +1,11 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@fuxie/database'
-import { withAuth } from '@/lib/auth/middleware'
+import { withDbAuth } from '@/lib/auth/middleware'
 import { handleApiError } from '@/lib/api/error-handler'
 
 export async function POST(req: NextRequest) {
     try {
-        const auth = await withAuth(req)
+        const auth = await withDbAuth(req)
         const body = await req.json()
         
         const { endpoint, keys } = body

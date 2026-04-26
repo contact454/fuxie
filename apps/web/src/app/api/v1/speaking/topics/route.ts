@@ -1,11 +1,11 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@fuxie/database'
-import { withAuth } from '@/lib/auth/middleware'
+import { withDbAuth } from '@/lib/auth/middleware'
 import { handleApiError } from '@/lib/api/error-handler'
 
 export async function GET(request: NextRequest) {
   try {
-    const session = await withAuth(request)
+    const session = await withDbAuth(request)
     const { searchParams } = new URL(request.url)
     const level = searchParams.get('level') || 'A1'
 

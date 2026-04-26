@@ -1,5 +1,6 @@
 import { NextRequest } from 'next/server'
 import { getTokens } from 'next-firebase-auth-edge'
+import { prisma, type UserRole } from '@fuxie/database'
 import { authConfig } from './config'
 
 export class AuthError extends Error {
@@ -30,5 +31,37 @@ export async function withAuth(req: NextRequest): Promise<{ userId: string; emai
     return {
         userId: tokens.decodedToken.uid,
         email: tokens.decodedToken.email ?? '',
+    }
+}
+
+export async function withDbAuth(req: NextRequest): Promise<{
+    userId: string
+    firebaseUid: string
+    email: string
+    role: UserRole
+}> {
+    const auth = await withAuth(req)
+    const user = await prisma.user.findFirst({
+        where: {
+            firebaseUid: auth.userId,
+            deletedAt: null,
+        },
+        select: {
+            id: true,
+            firebaseUid: true,
+            email: true,
+            role: true,
+        },
+    })
+
+    if (!user) {
+        throw new NotFoundError('User not found')
+    }
+
+    return {
+        userId: user.id,
+        firebaseUid: user.firebaseUid,
+        email: user.email || auth.email,
+        role: user.role,
     }
 }

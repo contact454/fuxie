@@ -5,7 +5,8 @@ export function floatTo16BitPCM(input: Float32Array): ArrayBuffer {
     const buffer = new ArrayBuffer(input.length * 2)
     const view = new DataView(buffer)
     for (let i = 0; i < input.length; i++) {
-        let s = Math.max(-1, Math.min(1, input[i]))
+        const sample = input[i] ?? 0
+        let s = Math.max(-1, Math.min(1, sample))
         view.setInt16(i * 2, s < 0 ? s * 0x8000 : s * 0x7fff, true) // little-endian
     }
     return buffer
@@ -18,7 +19,7 @@ export function pcm16ToFloat32(buffer: ArrayBuffer): Float32Array {
     const int16Array = new Int16Array(buffer)
     const float32Array = new Float32Array(int16Array.length)
     for (let i = 0; i < int16Array.length; i++) {
-        const s = int16Array[i]
+        const s = int16Array[i] ?? 0
         float32Array[i] = s < 0 ? s / 0x8000 : s / 0x7fff
     }
     return float32Array
@@ -32,7 +33,7 @@ export function arrayBufferToBase64(buffer: ArrayBuffer): string {
     const bytes = new Uint8Array(buffer)
     const len = bytes.byteLength
     for (let i = 0; i < len; i++) {
-        binary += String.fromCharCode(bytes[i])
+        binary += String.fromCharCode(bytes[i] ?? 0)
     }
     return typeof window !== 'undefined' ? window.btoa(binary) : Buffer.from(buffer).toString('base64')
 }

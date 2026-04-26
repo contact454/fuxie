@@ -3,7 +3,7 @@
 import { useState, useEffect, useMemo } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { motion, AnimatePresence } from 'framer-motion'
+import { motion, AnimatePresence, type Variants } from 'framer-motion'
 import { BookOpen, Headphones, PenTool, MessageCircle, Clock, Trophy, CheckCircle2, XCircle, ArrowRight, Library, Sparkles } from 'lucide-react'
 
 interface ExamEntry {
@@ -52,7 +52,7 @@ const getSkillIcon = (skillName: string) => {
 }
 
 // Animation Variants
-const containerVariant = {
+const containerVariant: Variants = {
     hidden: { opacity: 0 },
     show: {
         opacity: 1,
@@ -60,9 +60,9 @@ const containerVariant = {
     }
 }
 
-const itemVariant = {
+const itemVariant: Variants = {
     hidden: { opacity: 0, y: 20 },
-    show: { opacity: 1, y: 0, transition: { type: "spring", stiffness: 300, damping: 24 } }
+    show: { opacity: 1, y: 0, transition: { type: 'spring', stiffness: 300, damping: 24 } }
 }
 
 export function ExamListClient() {
@@ -81,15 +81,15 @@ export function ExamListClient() {
     // Group exams by Level and then by Skill to present them cleanly
     const groupedExams = useMemo(() => {
         const grouped = exams.reduce((acc, exam) => {
-            if (!acc[exam.cefrLevel]) acc[exam.cefrLevel] = {}
+            const levelBucket = acc[exam.cefrLevel] ?? (acc[exam.cefrLevel] = {})
 
             // Determine primary skill block based on actual sections
             let primarySkill = 'MIXED'
             const distinctSkills = new Set(exam.sections.map(s => s.skill))
             
             if (distinctSkills.size === 1) {
-                const skill = Array.from(distinctSkills)[0].toUpperCase()
-                if (['LESEN', 'HOEREN', 'SCHREIBEN', 'SPRECHEN'].includes(skill)) {
+                const skill = Array.from(distinctSkills)[0]?.toUpperCase()
+                if (skill && ['LESEN', 'HOEREN', 'SCHREIBEN', 'SPRECHEN'].includes(skill)) {
                     primarySkill = skill
                 }
             } else if (distinctSkills.size > 1) {
@@ -103,8 +103,8 @@ export function ExamListClient() {
                 else if (t.includes('nói') || t.includes('sprechen')) primarySkill = 'SPRECHEN'
             }
 
-            if (!acc[exam.cefrLevel][primarySkill]) acc[exam.cefrLevel][primarySkill] = []
-            acc[exam.cefrLevel][primarySkill].push(exam)
+            if (!levelBucket[primarySkill]) levelBucket[primarySkill] = []
+            levelBucket[primarySkill]!.push(exam)
             return acc
         }, {} as Record<string, Record<string, ExamEntry[]>>)
 
@@ -113,9 +113,10 @@ export function ExamListClient() {
         const skillOrder: Record<string, number> = { 'MIXED': 1, 'LESEN': 2, 'HOEREN': 3, 'SCHREIBEN': 4, 'SPRECHEN': 5 }
 
         return Object.keys(grouped).sort((a, b) => (levelOrder[a] || 99) - (levelOrder[b] || 99)).map(level => {
-            const skillGroups = Object.keys(grouped[level]).sort((a, b) => (skillOrder[a] || 99) - (skillOrder[b] || 99)).map(skill => ({
+            const examsBySkill = grouped[level] ?? {}
+            const skillGroups = Object.keys(examsBySkill).sort((a, b) => (skillOrder[a] || 99) - (skillOrder[b] || 99)).map(skill => ({
                 skill,
-                exams: grouped[level][skill]
+                exams: examsBySkill[skill] ?? [],
             }))
             return { level, skillGroups }
         })

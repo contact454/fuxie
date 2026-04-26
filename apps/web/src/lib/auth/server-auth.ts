@@ -2,13 +2,33 @@ import { cache } from 'react'
 import { cookies } from 'next/headers'
 import { getTokens } from 'next-firebase-auth-edge'
 import { prisma } from '@fuxie/database'
+import type { UserRole } from '@fuxie/database'
 import { authConfig } from './config'
 
 interface ServerUser {
     userId: string
     email: string
     firebaseUid: string
-    role: string
+    role: UserRole
+    uiLanguage: string
+}
+
+function isNextDynamicServerError(error: unknown): boolean {
+    if (!error || typeof error !== 'object') {
+        return false
+    }
+
+    const errorLike = error as { digest?: unknown; message?: unknown }
+    const digest = typeof errorLike.digest === 'string' ? errorLike.digest : ''
+    const message = error instanceof Error
+        ? error.message
+        : typeof errorLike.message === 'string'
+            ? errorLike.message
+            : ''
+
+    return digest === 'DYNAMIC_SERVER_USAGE' ||
+        message.includes('Dynamic server usage') ||
+        message.includes("couldn't be rendered statically")
 }
 
 /**
@@ -35,7 +55,17 @@ export const getServerUser = cache(async (): Promise<ServerUser | null> => {
         // 2. Look up user in DB
         let user = await prisma.user.findUnique({
             where: { firebaseUid },
-            select: { id: true, email: true, firebaseUid: true, role: true },
+            select: {
+                id: true,
+                email: true,
+                firebaseUid: true,
+                role: true,
+                profile: {
+                    select: {
+                        uiLanguage: true,
+                    },
+                },
+            },
         })
 
         // 3. Auto-provision if not found
@@ -53,8 +83,13 @@ export const getServerUser = cache(async (): Promise<ServerUser | null> => {
             email: user.email,
             firebaseUid: user.firebaseUid,
             role: user.role,
+            uiLanguage: user.profile?.uiLanguage ?? 'vi',
         }
     } catch (error) {
+        if (isNextDynamicServerError(error)) {
+            throw error
+        }
+
         console.error('[Fuxie] getServerUser error:', error)
         return null
     }
@@ -67,7 +102,13 @@ async function provisionUser(
     firebaseUid: string,
     email: string,
     displayName?: string
-): Promise<{ id: string; email: string; firebaseUid: string; role: any } | null> {
+): Promise<{
+    id: string
+    email: string
+    firebaseUid: string
+    role: UserRole
+    profile: { uiLanguage: string } | null
+} | null> {
     try {
         return await prisma.$transaction(async (tx) => {
             const newUser = await tx.user.create({
@@ -109,6 +150,7 @@ async function provisionUser(
                 email: newUser.email,
                 firebaseUid: newUser.firebaseUid,
                 role: newUser.role,
+                profile: { uiLanguage: 'vi' },
             }
         })
     } catch (error) {
