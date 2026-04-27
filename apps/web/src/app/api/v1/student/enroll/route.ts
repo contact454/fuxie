@@ -3,6 +3,7 @@ import { z } from 'zod'
 import { prisma } from '@fuxie/database'
 import { handleApiError } from '@/lib/api/error-handler'
 import { withDbAuth } from '@/lib/auth/middleware'
+import { cacheInvalidatePrefix } from '@/lib/cache/redis'
 
 const enrollSchema = z.object({
   joinCode: z.string()
@@ -19,7 +20,7 @@ export async function POST(request: NextRequest) {
 
     const classroom = await prisma.classroom.findUnique({
       where: { joinCode: normalizedCode },
-      select: { id: true, name: true, cefrLevel: true, isArchived: true },
+      select: { id: true, name: true, cefrLevel: true, isArchived: true, teacherId: true },
     })
 
     if (!classroom) {
@@ -84,6 +85,8 @@ export async function POST(request: NextRequest) {
         skipDuplicates: true,
       })
     }
+
+    cacheInvalidatePrefix(`teacher:classrooms:${classroom.teacherId}`).catch(() => {})
 
     return NextResponse.json({
       success: true,

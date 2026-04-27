@@ -1,5 +1,5 @@
 import { cache } from 'react'
-import { Prisma, prisma } from '@fuxie/database'
+import { prisma } from '@fuxie/database'
 import { cacheWrap } from '@/lib/cache/redis'
 
 type ThemeProgressRow = {
@@ -24,11 +24,21 @@ export interface ThemeSrsProgress {
 
 export const getVocabularyThemeSrsProgress = cache(async (userId: string, cefrLevel?: string) => {
     return cacheWrap(`srs:progress:${userId}:${cefrLevel ?? 'all'}`, 30, async () => {
-        const levelFilter = cefrLevel
-            ? Prisma.sql`AND vi."cefrLevel" = ${cefrLevel}::"CefrLevel"`
-            : Prisma.empty
-
-        const rows = await prisma.$queryRaw<ThemeProgressRow[]>`
+        const rows = cefrLevel
+            ? await prisma.$queryRaw<ThemeProgressRow[]>`
+                SELECT vi."themeId" AS "themeId",
+                       COUNT(*)::bigint AS total,
+                       COUNT(*) FILTER (WHERE sc.state <> 0)::bigint AS started,
+                       COUNT(*) FILTER (WHERE sc.state = 2)::bigint AS learned,
+                       COUNT(*) FILTER (WHERE sc."nextReviewAt" <= NOW())::bigint AS due
+                FROM srs_cards sc
+                JOIN vocabulary_items vi ON vi.id = sc."vocabularyItemId"
+                WHERE sc."userId" = ${userId}
+                  AND vi."themeId" IS NOT NULL
+                  AND vi."cefrLevel" = ${cefrLevel}::"CefrLevel"
+                GROUP BY vi."themeId"
+            `
+            : await prisma.$queryRaw<ThemeProgressRow[]>`
             SELECT vi."themeId" AS "themeId",
                    COUNT(*)::bigint AS total,
                    COUNT(*) FILTER (WHERE sc.state <> 0)::bigint AS started,
@@ -38,7 +48,6 @@ export const getVocabularyThemeSrsProgress = cache(async (userId: string, cefrLe
             JOIN vocabulary_items vi ON vi.id = sc."vocabularyItemId"
             WHERE sc."userId" = ${userId}
               AND vi."themeId" IS NOT NULL
-              ${levelFilter}
             GROUP BY vi."themeId"
         `
 

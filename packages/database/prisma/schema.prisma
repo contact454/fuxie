@@ -711,6 +711,7 @@ model AiConversation {
   deletedAt DateTime?
 
   @@index([userId, updatedAt])
+  @@index([updatedAt])
   @@map("ai_conversations")
 }
 
@@ -731,6 +732,7 @@ model AiMessage {
   createdAt DateTime @default(now())
 
   @@index([conversationId, createdAt])
+  @@index([createdAt])
   @@map("ai_messages")
 }
 
@@ -821,6 +823,7 @@ model UserProgress {
   completedAt DateTime @default(now())
 
   @@index([userId, completedAt])
+  @@index([completedAt])
   @@index([userId, lessonId])
   @@map("user_progress")
 }
@@ -858,6 +861,7 @@ model DailyActivity {
 
   @@unique([userId, date])
   @@index([userId, date])
+  @@index([date])
   @@map("daily_activities")
 }
 
@@ -934,6 +938,7 @@ model ListeningAttempt {
 
   @@index([userId, lessonId])
   @@index([userId, completedAt])
+  @@index([completedAt])
   @@map("listening_attempts")
 }
 
@@ -1019,6 +1024,7 @@ model ReadingAttempt {
 
   @@index([userId, exerciseId])
   @@index([userId, completedAt])
+  @@index([completedAt])
   @@map("reading_attempts")
 }
 
@@ -1061,6 +1067,7 @@ model VocabExerciseAttempt {
   @@index([userId, exerciseType])
   @@index([userId, cefrLevel])
   @@index([userId, createdAt])
+  @@index([createdAt])
   @@map("vocab_exercise_attempts")
 }
 
@@ -1152,6 +1159,8 @@ model WritingAttempt {
 
   @@index([userId, exerciseId])
   @@index([userId, submittedAt])
+  @@index([submittedAt])
+  @@index([percentScore])
   @@map("writing_attempts")
 }
 
@@ -1244,6 +1253,8 @@ model Classroom {
   updatedAt  DateTime @updatedAt
 
   @@index([teacherId])
+  @@index([teacherId, isArchived, createdAt])
+  @@index([teacherId, isArchived, updatedAt])
   @@index([joinCode])
   @@map("classrooms")
 }
@@ -1310,6 +1321,8 @@ model AssignmentSubmission {
 
   @@unique([assignmentId, studentId])
   @@index([studentId])
+  @@index([studentId, status])
+  @@index([completedAt])
   @@map("assignment_submissions")
 }
 
@@ -1338,5 +1351,6 @@ model ContentFeedback {
   @@index([userId])
   @@index([targetType])
   @@index([aiSentiment])
+  @@index([isResolved])
   @@map("content_feedbacks")
 }

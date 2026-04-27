@@ -7,12 +7,14 @@ const {
     createAssignmentMock,
     createManySubmissionsMock,
     transactionMock,
+    cacheInvalidatePrefixMock,
 } = vi.hoisted(() => ({
     requireTeacherMock: vi.fn(),
     findClassroomMock: vi.fn(),
     createAssignmentMock: vi.fn(),
     createManySubmissionsMock: vi.fn(),
     transactionMock: vi.fn(),
+    cacheInvalidatePrefixMock: vi.fn(),
 }))
 
 vi.mock('@/lib/auth/teacher-guard', () => ({
@@ -24,6 +26,10 @@ vi.mock('@/lib/auth/middleware', () => {
     class NotFoundError extends Error {}
     return { AuthError, NotFoundError }
 })
+
+vi.mock('@/lib/cache/redis', () => ({
+    cacheInvalidatePrefix: cacheInvalidatePrefixMock,
+}))
 
 vi.mock('@fuxie/database', () => ({
     prisma: {
@@ -61,6 +67,7 @@ describe('POST /api/v1/teacher/assignments', () => {
             dueDate: new Date('2026-04-25T08:00:00.000Z'),
         })
         createManySubmissionsMock.mockResolvedValue({ count: 2 })
+        cacheInvalidatePrefixMock.mockResolvedValue(undefined)
         transactionMock.mockImplementation(async (callback: (tx: any) => Promise<unknown>) =>
             callback({
                 assignment: { create: createAssignmentMock },
@@ -114,6 +121,7 @@ describe('POST /api/v1/teacher/assignments', () => {
                 { assignmentId: 'assignment-1', studentId: 'student-2', status: 'pending' },
             ],
         })
+        expect(cacheInvalidatePrefixMock).toHaveBeenCalledWith('teacher:classrooms:db-teacher-1')
     })
 })
 

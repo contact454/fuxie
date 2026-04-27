@@ -9,6 +9,7 @@ const {
     updateEnrollmentMock,
     findAssignmentsMock,
     createManySubmissionsMock,
+    cacheInvalidatePrefixMock,
 } = vi.hoisted(() => ({
     withDbAuthMock: vi.fn(),
     findClassroomMock: vi.fn(),
@@ -17,10 +18,15 @@ const {
     updateEnrollmentMock: vi.fn(),
     findAssignmentsMock: vi.fn(),
     createManySubmissionsMock: vi.fn(),
+    cacheInvalidatePrefixMock: vi.fn(),
 }))
 
 vi.mock('@/lib/auth/middleware', () => ({
     withDbAuth: withDbAuthMock,
+}))
+
+vi.mock('@/lib/cache/redis', () => ({
+    cacheInvalidatePrefix: cacheInvalidatePrefixMock,
 }))
 
 vi.mock('@fuxie/database', () => ({
@@ -56,6 +62,7 @@ describe('POST /api/v1/student/enroll', () => {
             name: 'A1 Abendkurs',
             cefrLevel: 'A1',
             isArchived: false,
+            teacherId: 'teacher-1',
         })
         findEnrollmentMock.mockResolvedValue(null)
         createEnrollmentMock.mockResolvedValue({})
@@ -64,6 +71,7 @@ describe('POST /api/v1/student/enroll', () => {
             { id: 'assignment-2' },
         ])
         createManySubmissionsMock.mockResolvedValue({ count: 2 })
+        cacheInvalidatePrefixMock.mockResolvedValue(undefined)
     })
 
     it('rejects malformed join codes before querying classrooms', async () => {
@@ -79,7 +87,7 @@ describe('POST /api/v1/student/enroll', () => {
         expect(response.status).toBe(200)
         expect(findClassroomMock).toHaveBeenCalledWith({
             where: { joinCode: 'FUX-ABC' },
-            select: { id: true, name: true, cefrLevel: true, isArchived: true },
+            select: { id: true, name: true, cefrLevel: true, isArchived: true, teacherId: true },
         })
         expect(createEnrollmentMock).toHaveBeenCalledWith({
             data: {
@@ -94,6 +102,7 @@ describe('POST /api/v1/student/enroll', () => {
             ],
             skipDuplicates: true,
         })
+        expect(cacheInvalidatePrefixMock).toHaveBeenCalledWith('teacher:classrooms:teacher-1')
     })
 })
 
