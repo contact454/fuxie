@@ -1,7 +1,7 @@
 import { notFound, redirect } from 'next/navigation'
 import { prisma } from '@fuxie/database'
 import { getServerUser } from '@/lib/auth/server-auth'
-import { ReadingPlayer } from '@/components/reading/reading-player'
+import { ReadingPlayerDynamic } from '@/components/reading/ReadingPlayerDynamic'
 
 export async function generateMetadata({ params }: { params: Promise<{ exerciseId: string }> }) {
     const { exerciseId } = await params
@@ -40,7 +40,7 @@ export default async function ReadingExercisePage({ params }: { params: Promise<
 
     return (
         <div className="max-w-5xl mx-auto px-4 py-6">
-            <ReadingPlayer
+            <ReadingPlayerDynamic
                 exerciseId={exercise.exerciseId}
                 cefrLevel={exercise.cefrLevel}
                 teil={exercise.teil}

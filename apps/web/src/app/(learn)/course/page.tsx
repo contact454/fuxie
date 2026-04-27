@@ -3,7 +3,7 @@ import { prisma } from '@fuxie/database'
 import { cookies } from 'next/headers'
 import { getServerUser } from '@/lib/auth/server-auth'
 import { getVocabularyThemeSrsProgress } from '@/lib/srs/stats'
-import { CourseClient } from '@/components/course/CourseClient'
+import { CourseClientDynamic } from '@/components/course/CourseClientDynamic'
 import { getCourseModuleMap } from '@/lib/content/course-data'
 
 export const metadata = {
@@ -297,7 +297,7 @@ export default async function CoursePage({
                     ))}
                 </div>
             </div>
-            <CourseClient data={data} />
+            <CourseClientDynamic data={data} />
         </div>
     )
 }

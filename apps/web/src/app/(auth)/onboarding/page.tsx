@@ -1,7 +1,7 @@
 import { redirect } from 'next/navigation'
 import { getServerUser } from '@/lib/auth/server-auth'
 import { prisma } from '@fuxie/database'
-import { OnboardingWizard } from '@/components/onboarding/OnboardingWizard'
+import { OnboardingWizardDynamic } from '@/components/onboarding/OnboardingWizardDynamic'
 
 export const metadata = {
     title: 'Fuxie 🦊 — Willkommen!',
@@ -22,5 +22,5 @@ export default async function OnboardingPage() {
         redirect('/dashboard')
     }
 
-    return <OnboardingWizard />
+    return <OnboardingWizardDynamic />
 }

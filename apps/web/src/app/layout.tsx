@@ -2,8 +2,7 @@ import type { Metadata, Viewport } from 'next'
 import './globals.css'
 import { PwaRegistration } from '@/components/shared/PwaRegistration'
 import { InstallPrompt } from '@/components/shared/InstallPrompt'
-import { NextIntlClientProvider } from 'next-intl';
-import { getMessages, getLocale } from 'next-intl/server';
+import { cookies } from 'next/headers'
 
 export const metadata: Metadata = {
     title: 'Fuxie 🦊 — Học tiếng Đức thông minh',
@@ -36,17 +35,15 @@ export default async function RootLayout({
 }: Readonly<{
     children: React.ReactNode
 }>) {
-    const locale = await getLocale();
-    const messages = await getMessages();
+    const cookieStore = await cookies()
+    const locale = cookieStore.get('NEXT_LOCALE')?.value || 'vi'
 
     return (
         <html lang={locale}>
             <body>
-                <NextIntlClientProvider locale={locale} messages={messages}>
-                    {children}
-                    <PwaRegistration />
-                    <InstallPrompt />
-                </NextIntlClientProvider>
+                {children}
+                <PwaRegistration />
+                <InstallPrompt />
             </body>
         </html>
     )

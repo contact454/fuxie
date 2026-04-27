@@ -2,14 +2,10 @@
 
 import { useState, useRef, useEffect, useCallback, type FormEvent } from 'react'
 import Image from 'next/image'
+import dynamic from 'next/dynamic'
 import { getCefrTheme, CEFR_LEVELS } from '@/lib/constants/cefr'
 import type { CefrLevel } from '@/lib/constants/cefr'
-import { CorrectionBubble } from './CorrectionBubble'
-import { SuggestedTopics } from './SuggestedTopics'
-import { ChatHistory } from './ChatHistory'
-import { VoiceInput } from './VoiceInput'
-import { VideoCallLayout } from './VideoCallLayout'
-import { SCENARIOS } from '@/lib/content/scenarios'
+import { SCENARIO_OPTIONS } from '@/lib/content/scenario-options'
 
 // ─── Types ─────────────────────────────────────────
 interface Correction {
@@ -41,6 +37,31 @@ const LEVEL_DESC: Record<CefrLevel, string> = {
     C1: 'Nâng cao — Kompetent',
     C2: 'Thành thạo — Muttersprachlich',
 }
+
+const ChatHistory = dynamic(() => import('./ChatHistory').then(mod => mod.ChatHistory), {
+    ssr: false,
+})
+
+const VoiceInput = dynamic(() => import('./VoiceInput').then(mod => mod.VoiceInput), {
+    ssr: false,
+})
+
+const VideoCallLayout = dynamic(() => import('./VideoCallLayout').then(mod => mod.VideoCallLayout), {
+    ssr: false,
+    loading: () => (
+        <main className="min-h-[100dvh] bg-slate-950 flex items-center justify-center text-white">
+            Loading video session...
+        </main>
+    ),
+})
+
+const CorrectionBubble = dynamic(() => import('./CorrectionBubble').then(mod => mod.CorrectionBubble), {
+    ssr: false,
+})
+
+const SuggestedTopics = dynamic(() => import('./SuggestedTopics').then(mod => mod.SuggestedTopics), {
+    ssr: false,
+})
 
 // Simple markdown rendering
 function renderMarkdown(text: string): string {
@@ -293,7 +314,7 @@ export function ChatClient({ initialLevel, displayName }: ChatClientProps) {
                 <div className="w-full max-w-md mb-6">
                     <p className="text-sm font-semibold text-gray-700 mb-3">🎬 Chọn ngữ cảnh (Roleplay):</p>
                     <div className="flex gap-3 overflow-x-auto pb-2 snap-x hide-scrollbar">
-                        {SCENARIOS.filter(s => s.targetLevels.includes(level)).map(scenario => (
+                        {SCENARIO_OPTIONS.filter(s => s.targetLevels.includes(level)).map(scenario => (
                             <button
                                 key={scenario.id}
                                 onClick={() => setSelectedScenarioId(scenario.id)}

@@ -3,7 +3,7 @@ import { prisma } from '@fuxie/database'
 import { getServerUser } from '@/lib/auth/server-auth'
 import { getVocabularyLevels, getVocabularyThemes, mapVocabularyThemes, type CefrLevel } from '@/lib/content/vocabulary'
 import { getVocabularyDueCountsByLevel, getVocabularyThemeSrsProgress } from '@/lib/srs/stats'
-import { ReviewClient } from '@/components/srs/review-client'
+import { ReviewClientDynamic } from '@/components/srs/ReviewClientDynamic'
 
 export const metadata = {
     title: 'Fuxie 🦊 — Wiederholen',
@@ -56,7 +56,7 @@ export default async function ReviewPage() {
 
     return (
         <div className="max-w-5xl mx-auto px-4 py-8">
-            <ReviewClient
+            <ReviewClientDynamic
                 themes={themes}
                 availableLevels={availableLevels}
                 initialLevel={userLevel}

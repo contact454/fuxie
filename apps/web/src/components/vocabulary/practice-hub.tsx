@@ -5,7 +5,7 @@ import { useRouter } from 'next/navigation'
 import Image from 'next/image'
 import { useTranslations } from 'next-intl'
 import { Mascot } from '@/components/ui/mascot'
-import { CEFR_THEME, getCefrTheme } from '@/lib/constants/cefr'
+import { getCefrTheme } from '@/lib/constants/cefr'
 
 interface Theme {
     id: string

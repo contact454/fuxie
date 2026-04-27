@@ -2,11 +2,9 @@
 
 import { useState, useCallback } from 'react'
 import { useRouter } from 'next/navigation'
+import dynamic from 'next/dynamic'
 import { MascotImage } from '../shared/mascot-image'
-import { motion } from 'framer-motion'
 import { ArrowLeft, RotateCcw, ArrowRight } from 'lucide-react'
-import NachsprechenPlayer from './NachsprechenPlayer'
-import TurnBasedSpeakingPlayer from './TurnBasedSpeakingPlayer'
 import styles from './speaking.module.css'
 import type { NachsprechenSentence, NachsprechenConfig } from './types'
 
@@ -24,6 +22,16 @@ interface Props {
 }
 
 type Phase = 'intro' | 'practice' | 'summary'
+
+const NachsprechenPlayer = dynamic(() => import('./NachsprechenPlayer'), {
+  ssr: false,
+  loading: () => <div className={styles.lessonPlayer}>Loading practice...</div>,
+})
+
+const TurnBasedSpeakingPlayer = dynamic(() => import('./TurnBasedSpeakingPlayer'), {
+  ssr: false,
+  loading: () => <div className={styles.lessonPlayer}>Loading roleplay...</div>,
+})
 
 const DEFAULT_CONFIG: NachsprechenConfig = {
   maxRecordingSec: 10,
@@ -161,15 +169,13 @@ export default function SpeakingLessonPlayer({
           </div>
 
           {/* Start button */}
-          <motion.button
-            whileHover={{ scale: 1.02 }}
-            whileTap={{ scale: 0.98 }}
+          <button
             className={`${styles.btnPrimary} ${styles.btnGreen}`}
             style={{ width: '100%', fontSize: 18, padding: '18px 24px' }}
             onClick={() => setPhase('practice')}
           >
             🎤 Bắt đầu luyện tập
-          </motion.button>
+          </button>
         </div>
       </div>
     )
@@ -233,11 +239,7 @@ export default function SpeakingLessonPlayer({
 
   return (
     <div className={styles.lessonPlayer}>
-      <motion.div 
-        initial={{ opacity: 0, scale: 0.95 }}
-        animate={{ opacity: 1, scale: 1 }}
-        style={{ padding: '40px 0 0', textAlign: 'center' }}
-      >
+      <div style={{ padding: '40px 0 0', textAlign: 'center' }}>
         {/* Mascot animation */}
         <div style={{ marginBottom: 16, display: 'flex', justifyContent: 'center' }}>
           <MascotImage pose={getResultMascot(finalScore) as any} size="md" className="drop-shadow-md" />
@@ -253,14 +255,12 @@ export default function SpeakingLessonPlayer({
         <div className={styles.scoreCircleContainer} style={{ width: 120, height: 120, margin: '0 auto 24px' }}>
           <svg width="120" height="120" viewBox="0 0 120 120" className={styles.scoreSvg}>
             <circle cx="60" cy="60" r="54" fill="none" strokeWidth="8" className={styles.scoreTrack} />
-            <motion.circle 
+            <circle
               cx="60" cy="60" r="54" fill="none" strokeWidth="8" 
               strokeLinecap="round"
               stroke={getScoreColor(finalScore)}
               strokeDasharray={2 * Math.PI * 54}
-              strokeDashoffset={2 * Math.PI * 54}
-              animate={{ strokeDashoffset: 2 * Math.PI * 54 * (1 - finalScore / 100) }}
-              transition={{ duration: 1.5, ease: "easeOut", delay: 0.3 }}
+              strokeDashoffset={2 * Math.PI * 54 * (1 - finalScore / 100)}
             />
           </svg>
           <div className={styles.scoreValue} style={{ color: getScoreColor(finalScore), fontSize: 32 }}>
@@ -274,10 +274,7 @@ export default function SpeakingLessonPlayer({
         </div>
 
         {/* XP earned */}
-        <motion.div 
-          initial={{ y: 10, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ delay: 0.8 }}
+        <div
           style={{
             display: 'inline-flex', alignItems: 'center', gap: 6,
             padding: '8px 16px', background: '#FFFBEB', borderRadius: 12,
@@ -288,7 +285,7 @@ export default function SpeakingLessonPlayer({
           <span style={{ fontSize: 14, fontWeight: 700, color: '#92400E' }}>
             +{stars * 10} XP {isSaving ? '(đang lưu...)' : ''}
           </span>
-        </motion.div>
+        </div>
 
         {/* Action buttons */}
         <div className={styles.btnRow}>
@@ -309,7 +306,7 @@ export default function SpeakingLessonPlayer({
             <RotateCcw size={16} /> Luyện lại
           </button>
         </div>
-      </motion.div>
+      </div>
     </div>
   )
 }

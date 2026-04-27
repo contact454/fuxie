@@ -1,14 +1,15 @@
 import { redirect } from 'next/navigation'
 import { getServerUser } from '@/lib/auth/server-auth'
-import { ExercisePlayerWrapper } from '@/components/vocabulary/exercises/exercise-player-wrapper'
+import { ExercisePlayerWrapperDynamic } from '@/components/vocabulary/exercises/ExercisePlayerWrapperDynamic'
 
 interface PageProps {
     params: Promise<{ type: string }>
     searchParams: Promise<{ theme?: string; level?: string }>
 }
 
-const VALID_TYPES = ['mc', 'matching', 'spelling', 'cloze', 'scramble', 'speed']
+const VALID_TYPES = ['mixed', 'mc', 'matching', 'spelling', 'cloze', 'scramble', 'speed']
 const TYPE_TITLES: Record<string, string> = {
+    mixed: 'Mixed Practice',
     mc: 'Multiple Choice',
     matching: 'Matching',
     spelling: 'Spelling',
@@ -36,7 +37,7 @@ export default async function ExerciseTypePage({ params, searchParams }: PagePro
     if (!theme) redirect('/vocabulary/practice')
 
     return (
-        <ExercisePlayerWrapper
+        <ExercisePlayerWrapperDynamic
             type={type}
             theme={theme}
             level={level || 'A1'}

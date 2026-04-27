@@ -1,5 +1,5 @@
 import { prisma } from '@fuxie/database';
-import UserAnalyticsClient from './UserAnalyticsClient';
+import { UserAnalyticsClientDynamic } from './UserAnalyticsClientDynamic';
 
 export const dynamic = 'force-dynamic';
 
@@ -74,7 +74,7 @@ export default async function UserAnalyticsPage({
   }));
 
   return (
-    <UserAnalyticsClient 
+    <UserAnalyticsClientDynamic
       users={users}
       totalLearners={totalLearners}
       totalTeachers={totalTeachers}

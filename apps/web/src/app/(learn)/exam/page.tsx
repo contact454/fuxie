@@ -1,6 +1,6 @@
 import { redirect } from 'next/navigation'
 import { getServerUser } from '@/lib/auth/server-auth'
-import { ExamListClient } from '@/components/exam/ExamListClient'
+import { ExamListClientDynamic } from '@/components/exam/ExamListClientDynamic'
 
 export const metadata = {
     title: 'Fuxie 🦊 — Prüfung üben',
@@ -11,5 +11,5 @@ export default async function ExamPage() {
     const user = await getServerUser()
     if (!user) redirect('/login')
 
-    return <ExamListClient />
+    return <ExamListClientDynamic />
 }
