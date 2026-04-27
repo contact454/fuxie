@@ -1046,6 +1046,55 @@ health and index creation without printing secret values.
   - `_prisma_migrations` contains both repo migrations with finished status.
   - All 14 performance indexes now exist in Production.
 
+## Execution Slice - Post-Rollout Closure
+
+Date: 2026-04-27
+
+### Prompt
+
+Act as the post-rollout closure operator for the completed performance
+optimization release. The production migration has been applied and verified.
+Perform final non-destructive production checks, clean up merged review branches
+where safe, and record the release closure state. Do not change runtime code.
+
+### Backlog
+
+1. Confirm `master` is clean, PR #1 is merged, and latest `master` CI is green.
+2. Confirm production health still returns `status: ok` and `db: connected`.
+3. Confirm Prisma migration status remains up to date and the performance
+   indexes are present.
+4. Delete the merged performance branch locally and remotely if it still exists.
+5. Record closure results and push the docs-only release record.
+
+### Non-Goals
+
+- Do not change application runtime code.
+- Do not run any destructive database command.
+- Do not create new migrations.
+- Do not modify production environment variables.
+
+### Acceptance Criteria
+
+- Production remains healthy after migration and docs deploys.
+- The merged performance branch is removed or confirmed absent.
+- `master` remains clean and CI/Vercel are green.
+
+### Slice Results
+
+- Pre-closure status:
+  - `master` was clean and tracking `origin/master`.
+  - PR #1 was merged.
+  - Latest `master` CI was green.
+- Production verification:
+  - `vercel curl /api/v1/health --deployment https://fuxie-kp0w3253q-contact-8252s-projects.vercel.app`
+    returned `{"status":"ok","db":"connected"}`.
+  - `prisma migrate status` reported `Database schema is up to date!`.
+  - `_prisma_migrations` had 2 finished migrations and no unfinished migrations.
+  - Production had all 14 performance indexes.
+- Branch cleanup:
+  - Deleted local branch `codex/performance-optimization`.
+  - Deleted remote branch `origin/codex/performance-optimization`.
+
 ## Open Risks
 
 - A local perf result can be noisy because Next dev compilation affects cold
