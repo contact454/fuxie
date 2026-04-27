@@ -1000,6 +1000,52 @@ Operator-confirmed sequence:
 Explicit operator confirmation is required before steps 2-3 above because they
 mutate the production database metadata and create production indexes.
 
+## Completed Execution Slice - Production Migration Apply
+
+Date: 2026-04-27
+
+### Prompt
+
+Act as the production migration operator for the merged performance optimization
+batch. The operator has explicitly approved production mutation with
+`ok chạy migration production`. Baseline the existing production schema in
+Prisma migration history, apply the index-only performance migration, and verify
+health and index creation without printing secret values.
+
+### Backlog
+
+1. Confirm `master` is clean and GitHub CI is green.
+2. Confirm the latest Vercel Production deployment is ready.
+3. Load Production `DATABASE_URL` and `DATABASE_URL_UNPOOLED` into the shell
+   without printing values.
+4. Mark `20260301164154_init` as applied with `prisma migrate resolve`.
+5. Apply `20260427091500_add_performance_indexes` with `prisma migrate deploy`.
+6. Verify migration status, production health, and the 14 performance indexes.
+
+### Non-Goals
+
+- Do not run `migrate reset`.
+- Do not run `db push`.
+- Do not print database credentials or other secret values.
+- Do not change runtime application code.
+
+### Slice Results
+
+- Pre-flight checks:
+  - `master` was clean and tracking `origin/master`.
+  - Latest GitHub Actions run on `master` was successful.
+  - Latest Vercel Production deployment was ready:
+    `https://fuxie-gwacn26ue-contact-8252s-projects.vercel.app`.
+- Production migration actions:
+  - `20260301164154_init` was marked as applied.
+  - `20260427091500_add_performance_indexes` was applied successfully.
+- Verification:
+  - `prisma migrate status` reports `Database schema is up to date!`.
+  - `vercel curl /api/v1/health --deployment https://fuxie-gwacn26ue-contact-8252s-projects.vercel.app`
+    returned `{"status":"ok","db":"connected"}`.
+  - `_prisma_migrations` contains both repo migrations with finished status.
+  - All 14 performance indexes now exist in Production.
+
 ## Open Risks
 
 - A local perf result can be noisy because Next dev compilation affects cold
