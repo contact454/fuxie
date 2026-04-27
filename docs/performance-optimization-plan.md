@@ -1,0 +1,484 @@
+# Performance Optimization Plan
+
+Date: 2026-04-27
+
+This document is the working prompt, backlog, and verification plan for the current
+performance pass. It is intentionally written before code changes so implementation
+stays measurable and scoped.
+
+## Prompt Engineering Brief
+
+### Role
+
+Act as a senior Next.js performance engineer working inside the Fuxie monorepo.
+Optimize the learning web app for faster authenticated page loads, smaller initial
+JavaScript, safer local smoke testing, and repeatable performance gates.
+
+### Product Context
+
+Fuxie is an authenticated language-learning app with learner, teacher, and admin
+surfaces. The highest-traffic learner routes are dashboard, vocabulary, review,
+skill lesson players, and chat. Teacher/admin routes are operationally important
+but can tolerate slightly higher latency if they stay reliable and predictable.
+
+### Current Baseline
+
+- The working tree already contains a broad performance batch.
+- `pnpm check:quick` passed on 2026-04-27.
+- `pnpm smoke:full-local` passed on 2026-04-27.
+- `pnpm --filter @fuxie/web test` passed on 2026-04-27.
+- `pnpm check:bundle` passed on 2026-04-27; all budgeted routes are below the
+  current `115kb` gzipped initial JS budget.
+- `pnpm check` passed on 2026-04-27, including typecheck, core tests, content QA,
+  secret audit, and production build.
+- `pnpm perf:local:warn` ran on 2026-04-27; several learner warm medians still
+  exceed the local dev budgets and should be treated as follow-up optimization
+  targets, not release blockers while running in Next dev mode.
+- Bundle budget must still be run only after a clean production build. The script
+  correctly rejects dev `.next` artifacts.
+- Dev logs show `/dashboard`, `/vocabulary`, and `/admin` returning `200`.
+- The AI service can run on port `3001`; recent logs show Redis connected at
+  `redis://localhost:6380`.
+- New scripts exist for local smoke, local perf, bundle budgets, and dev seeding.
+
+### Primary Goals
+
+1. Reduce initial client JavaScript on route entry by moving heavy interactive
+   clients behind route-level dynamic wrappers.
+2. Reduce repeated database work on hot authenticated reads with short-lived cache
+   wrappers and targeted invalidation.
+3. Keep local and CI verification repeatable with smoke, perf, and bundle gates.
+4. Preserve auth, role guards, and route behavior while optimizing.
+5. Keep content and vocabulary changes isolated from app-runtime performance work.
+
+### Non-Goals
+
+- Do not redesign the product UI during this pass.
+- Do not rewrite domain logic or introduce a new caching backend.
+- Do not commit or print secrets from `.env` files.
+- Do not revert existing working-tree changes unless explicitly requested.
+- Do not chase micro-optimizations before the measurement scripts are reliable.
+
+### Engineering Constraints
+
+- Prefer existing Next.js app-router patterns and local helpers.
+- Keep server components responsible for data fetching.
+- Use `dynamic(..., { ssr: false })` only for genuinely interactive or heavy
+  browser-only clients.
+- Avoid caching personalized data without user-specific keys.
+- Use short TTLs for personalized route data unless invalidation is explicit.
+- Every cache must have a safe no-Redis behavior for local development.
+- Keep each code step independently typecheckable.
+
+### Measurement Strategy
+
+Use these gates in this order:
+
+1. `pnpm check:quick`
+   - Fast correctness gate after each code slice.
+2. `pnpm smoke:full-local`
+   - Authenticated learner, teacher, admin smoke against local services.
+3. `pnpm perf:local:warn`
+   - Noisy local latency measurement; useful for trend direction.
+4. `pnpm check:bundle`
+   - Production build plus route-level initial JavaScript budgets.
+5. `pnpm check`
+   - Full final gate before commit or deploy handoff.
+
+## Backlog
+
+### P0 - Make Performance Gates Trustworthy
+
+Acceptance criteria:
+
+- Local smoke fails clearly when dev auth is unavailable.
+- Perf script reports cold, warm median, warm max, status, bytes, and route budget.
+- Bundle script checks actual app routes and rejects dev build artifacts.
+- All scripts are documented in `package.json` and can run from the repo root.
+
+Current status:
+
+- Mostly implemented.
+- Local smoke and perf scripts have been exercised.
+- Bundle budget passes after a clean production build.
+
+### P0 - Preserve Correct Auth While Enabling Dev Smoke
+
+Acceptance criteria:
+
+- Dev auth is gated by an explicit environment flag.
+- Learner, teacher, and admin dev sessions are role-scoped.
+- Middleware excludes only the intended dev-auth routes.
+- Production Firebase auth path is untouched when dev auth is disabled.
+
+Current status:
+
+- Implemented in the working tree.
+- Server auth DB lookups now use a short TTL cache after token/dev-cookie
+  verification, and admin role mutation invalidates the affected user cache.
+- Needs focused tests or smoke verification for all three roles.
+
+### P1 - Reduce Initial Route JavaScript
+
+Acceptance criteria:
+
+- Large client components are wrapped in `*Dynamic.tsx` modules.
+- Route files stay server components where possible.
+- Loading states are stable, compact, and do not shift layout heavily.
+- `pnpm check:bundle` stays under budget for all budgeted routes.
+
+Current status:
+
+- Broad dynamic-wrapper pass is present.
+- Bundle verification passes for the current route budget.
+- Needs spot review for whether any dynamic wrapper unnecessarily delays first
+  interaction.
+
+### P1 - Cache Hot Personalized Reads Safely
+
+Acceptance criteria:
+
+- Dashboard stats/content, SRS due, vocabulary lists, teacher classrooms, and admin
+  summaries use short TTL cache where repeated reads are expensive.
+- Cache keys include user id, level, locale, paging, filters, and role where needed.
+- Mutations invalidate relevant prefixes where stale data would be confusing.
+- Local memory fallback is bounded and disabled in production unless explicitly
+  enabled.
+
+Current status:
+
+- Several cache wrappers are present.
+- Submit/progress routes now invalidate dashboard, today-plan, and SRS cache
+  prefixes after mutations commit.
+- Vocabulary list cache keys now keep the `vocab:list` prefix literal so admin
+  vocabulary mutations can invalidate list caches correctly.
+- Needs a follow-up stale-data check during browser smoke.
+
+### P1 - Optimize Admin And Teacher Aggregate Queries
+
+Acceptance criteria:
+
+- Aggregate pages use grouped/count queries instead of loading large row sets.
+- Teacher/admin pages do not execute serial query loops for simple summaries.
+- Indexes exist for the most common aggregate filters.
+
+Current status:
+
+- Admin dashboard and classrooms route have improvements.
+- Prisma schema includes additional indexes.
+- Needs DB migration/generate verification before rollout.
+
+### P2 - Split Heavy Tooling From Runtime
+
+Acceptance criteria:
+
+- Scripts for seed, perf, bundle, and QA stay in root `scripts`.
+- Runtime app code does not import script-only dependencies.
+- Temporary scripts are removed or clearly ignored before final commit.
+
+Current status:
+
+- New scripts exist.
+- Temporary root debug scripts were removed after triage; no known root temp
+  scripts remain from the audio-check investigation.
+
+### P2 - Content And Image Generation Hygiene
+
+Acceptance criteria:
+
+- Vocabulary JSON edits are validated by content QA.
+- Image generation scripts support safe dry runs and clear provider/env errors.
+- Large content-only diffs are kept separate from runtime performance commits.
+
+Current status:
+
+- Content changes are present.
+- Needs content QA and commit grouping later.
+
+## Suggested Code Order
+
+1. Validate and harden perf/smoke/bundle scripts.
+2. Review dev-auth and route middleware boundaries.
+3. Review dynamic wrappers for missing imports or excessive `ssr: false`.
+4. Review personalized cache keys and invalidation.
+5. Run typecheck, smoke, perf, bundle gates.
+6. Split changes into small commits by risk area.
+
+## Completed Execution Slice - Dynamic Wrappers, Invalidation, Cleanup
+
+Date: 2026-04-27
+
+### Prompt
+
+Act as a performance-focused reviewer and implementer for the already-open
+optimization batch. Before changing code, identify the smallest follow-up slice
+that improves confidence without widening the diff unnecessarily. Prefer
+verification and cleanup over new architecture.
+
+### Scope
+
+1. Review route-level dynamic wrappers for correctness and unnecessary
+   `ssr: false` usage.
+2. Verify that learner mutation routes invalidate the caches that power
+   dashboard, today plan, SRS due counts, and vocabulary theme progress.
+3. Triage temporary root files and decide whether they should be deleted,
+   ignored, or kept for follow-up.
+
+### Non-Goals
+
+- Do not redesign page loading states.
+- Do not change product behavior unless a bug is found.
+- Do not stage or commit until the change groups are reviewed.
+- Do not delete temporary files unless their purpose is understood from local
+  context.
+
+### Acceptance Criteria
+
+- Dynamic wrapper review finds no broken imports or documents any remaining
+  concerns.
+- Cache invalidation is exercised by tests, smoke, or direct API checks.
+- Temporary files are classified with a recommended action.
+- `pnpm --filter @fuxie/web test`, `pnpm check:quick`, and
+  `pnpm smoke:full-local` pass after any code changes in this slice.
+
+### Slice Results
+
+- No app `page.tsx` files remain direct client components.
+- `/admin/vocabulary` now follows the same dynamic-client wrapper pattern as the
+  other admin tool pages.
+- Existing mutation route tests now assert cache invalidation for vocabulary
+  practice, session completion, exam submit, listening submit, and reading submit.
+- Root debug files `temp-check-audio.js` and `temp-pg2.js` were removed after
+  confirming they were temporary Postgres audio-check scripts superseded by
+  tracked QA tooling.
+
+## Completed Execution Slice - Bundle Regression And Backlog Closure
+
+Date: 2026-04-27
+
+### Prompt
+
+Act as a release-readiness performance engineer for the current optimization
+batch. The code diff is already broad, so prioritize regression evidence,
+backlog accuracy, and commit hygiene over adding new runtime changes. Verify
+that the latest dynamic-wrapper addition has not weakened bundle budgets, then
+leave the repo in a state where the next action can be either final full check
+or logical commit grouping.
+
+### Scope
+
+1. Re-run the bundle gate after the `/admin/vocabulary` dynamic wrapper change.
+2. Restart the local web dev server with the established dev-auth, Redis, and
+   Postgres environment if the bundle gate requires stopping it.
+3. Re-run authenticated smoke after the restart to confirm learner, teacher,
+   and admin flows still respond.
+4. Update this plan with concrete gate results and any remaining backlog
+   changes.
+
+### Non-Goals
+
+- Do not introduce new performance architecture in this slice.
+- Do not stage or commit yet.
+- Do not expand content/image JSON work.
+- Do not print environment secret values.
+
+### Acceptance Criteria
+
+- `pnpm check:bundle` passes against a clean production build.
+- `pnpm smoke:full-local` passes after the local dev server is restarted.
+- Backlog status reflects the completed temp-file cleanup and current remaining
+  risks.
+- Any follow-up work is small enough to become a clearly named next slice.
+
+### Slice Results
+
+- `pnpm check:bundle` passed after stopping the web dev server and running a
+  fresh production build.
+- `/admin/vocabulary` remained under the route budget after the dynamic wrapper
+  change: `104.8kb gzip` against a `115kb` budget.
+- The web dev server was restarted on `http://localhost:3000` with the local
+  dev-auth, Redis, and Postgres environment used by smoke.
+- `pnpm smoke:full-local` passed after restart across learner, teacher, admin,
+  web DB health, and AI health checks.
+
+## Completed Execution Slice - Full Gate And Commit Grouping
+
+Date: 2026-04-27
+
+### Prompt
+
+Act as a release-prep engineer taking over a broad but verified performance
+batch. Before any further code changes, prove that the full local quality gate
+still passes with the latest wrapper, cache, script, and documentation changes.
+Then prepare the backlog for logical commit grouping so runtime performance,
+auth/smoke tooling, cache invalidation, dynamic splitting, content hygiene, and
+cleanup can be reviewed independently.
+
+### Scope
+
+1. Run the full repository gate: `pnpm check`.
+2. Inspect the resulting dirty tree by risk area without staging anything.
+3. Update this plan with the full-gate result and recommended commit groups.
+4. Leave any remaining code work as an explicit next slice.
+
+### Non-Goals
+
+- Do not stage, commit, or push.
+- Do not add new optimizations unless the full gate exposes a blocking issue.
+- Do not mix large vocabulary JSON diffs with runtime performance grouping.
+
+### Acceptance Criteria
+
+- `pnpm check` passes, or any failure is captured with a concrete fix/backlog
+  item.
+- Commit grouping recommendations are documented from the actual dirty tree.
+- The next code task, if any, has a narrow prompt and acceptance criteria.
+
+### Slice Results
+
+- `pnpm check` passed end to end:
+  - `pnpm typecheck`
+  - `pnpm test:core`
+  - `pnpm qa:content`
+  - `pnpm security:secrets`
+  - `pnpm build`
+- Content QA scanned `1188` files with `0` errors and `0` warnings.
+- Secret audit found no secret literals in tracked or untracked files.
+- The dirty tree was reviewed after the gate; no staging or commit was
+  performed.
+- The running web dev server returned a transient `500` after `pnpm check`
+  because the production build rewrote `.next` while Next dev was still
+  serving. The dev server was restarted, `/api/v1/health` returned `200`, and
+  `pnpm smoke:full-local` passed again across learner, teacher, admin, web DB
+  health, and AI health checks.
+
+### Recommended Commit Groups
+
+1. Performance process and gates:
+   `docs/performance-optimization-plan.md`, `package.json`,
+   `scripts/bundle-budget.ts`, `scripts/perf-local.ts`,
+   `scripts/smoke-full-local.ts`, `scripts/seed-dev-data.ts`.
+2. Local dev auth and smoke infrastructure:
+   `.env.example`, `docker-compose.yml`, `apps/web/src/app/api/dev-auth/*`,
+   `apps/web/src/lib/auth/dev-auth.ts`, auth middleware/server-auth changes, and
+   matching role/auth tests.
+3. Dynamic client splitting:
+   route `page.tsx` updates plus `*Dynamic.tsx` wrappers under learner, auth,
+   admin, teacher, and interactive component directories.
+4. Personalized cache and invalidation:
+   `apps/web/src/lib/cache/redis.ts`,
+   `apps/web/src/lib/progress/cache-invalidation.ts`, hot read routes, mutation
+   invalidation routes, and the related route tests.
+5. Admin, teacher, SRS, and database aggregate optimization:
+   admin/teacher API routes, SRS stats, Prisma schema/index/client changes, and
+   focused tests for classrooms/assignments/SRS due.
+6. Content and image-generation hygiene:
+   vocabulary JSON changes, `apps/web/src/lib/content/scenario-options.ts`,
+   image generation scripts, and `scripts/qa-exam-audios.ts`.
+7. AI service and service-worker/dev infra:
+   AI queue connection changes and `apps/web/public/sw.js`, if they are
+   confirmed as part of this optimization batch.
+
+### Commit Prep Notes
+
+- Group 1 was reviewed as a process/tooling group. It includes the bundle
+  budget gate, authenticated full-smoke script, local perf script, and the dev
+  seed script referenced by the new `db:seed:dev` package script.
+- Group 1 was staged as the first review unit:
+  `docs/performance-optimization-plan.md`, `package.json`,
+  `scripts/bundle-budget.ts`, `scripts/perf-local.ts`,
+  `scripts/smoke-full-local.ts`, and `scripts/seed-dev-data.ts`.
+- `git diff --cached --check` passed for the staged group.
+- `pnpm smoke:full-local` passed after staging group 1.
+- AI service dotenv loading and the generated service worker diff are not part
+  of the first stage group. They should be reviewed separately because `sw.js`
+  is generated/minified and the AI queue change affects service startup
+  behavior.
+
+## Next Execution Slice - Commit Prep Or Narrow Follow-Up
+
+Date: 2026-04-27
+
+### Prompt
+
+Act as a commit curator for the verified performance batch. Do not change code
+unless a final diff review finds a blocking defect. Separate the large working
+tree into reviewable groups, preserving the boundary between runtime
+performance changes and content/image hygiene.
+
+### Scope
+
+1. Review each recommended commit group with `git diff --stat` and focused
+   diffs.
+2. Decide whether the AI service and service-worker changes belong in this
+   batch or should be held for a separate follow-up.
+3. Stage only one logical group at a time after review.
+4. Re-run targeted tests if staging reveals an accidental cross-group
+   dependency.
+
+### Non-Goals
+
+- Do not rewrite the already-passing implementation.
+- Do not squash content JSON changes into runtime/cache commits.
+- Do not commit until the staged group is reviewed.
+
+### Acceptance Criteria
+
+- Each staged group has a clear review story and matching test evidence.
+- Any files that do not belong to the performance batch are explicitly called
+  out before staging.
+- The next code task is only opened if diff review finds a concrete defect.
+
+## Next Execution Slice - Finish Verified Commit Groups
+
+Date: 2026-04-27
+
+### Prompt
+
+Act as a careful release integrator finishing the already-verified performance
+batch. Preserve the prompt/backlog discipline, but optimize for commits that
+are reviewable and internally consistent. If two recommended groups share files
+or cannot stand alone, combine them rather than creating a commit that depends
+on unstaged work.
+
+### Scope
+
+1. Commit the already-reviewed process/tooling group.
+2. Review remaining diffs in dependency order:
+   local dev/auth infrastructure, dynamic splitting, cache/invalidation,
+   aggregate/database work, content/image hygiene, and AI/service-worker
+   follow-up.
+3. Stage and commit each coherent group only after checking its diff and
+   running at least a targeted gate or relying on the already-passing full gate
+   when the working tree is unchanged.
+4. Finish with a final status check and, if needed, a smoke check for the local
+   dev server.
+
+### Non-Goals
+
+- Do not introduce new feature or performance code unless a blocking defect is
+  found during diff review.
+- Do not split a shared file into fragile partial commits.
+- Do not hide generated/minified service worker changes inside unrelated
+  runtime commits.
+
+### Acceptance Criteria
+
+- The staged process/tooling group is committed first.
+- Remaining commits are grouped by review story and do not mix large content
+  JSON with runtime code.
+- Any files held back are explicitly listed with the reason.
+- Final `git status --short` and verification results are recorded.
+
+## Open Risks
+
+- A local perf result can be noisy because Next dev compilation affects cold
+  requests. Prefer warm median for local trend checks.
+- Short TTL cache can mask fresh mutations if invalidation is incomplete.
+- Dynamic wrappers can improve initial bundle size but may delay interactive
+  hydration on the first click.
+- Prisma index changes require migration discipline before production rollout.
+- Large vocabulary JSON rewrites should not be mixed with runtime performance
+  commits.
+- On local machines, stop or restart Next dev around production builds because
+  both can touch `.next`; always smoke after restarting dev.

@@ -20,10 +20,18 @@
     "typecheck": "turbo run typecheck",
     "format": "prettier --write \"**/*.{ts,tsx,md,json,css}\"",
     "clean": "turbo run clean && rm -rf node_modules",
-    "db:generate": "pnpm --filter=@fuxie/database prisma generate",
-    "db:push": "pnpm --filter=@fuxie/database prisma db push",
-    "db:migrate": "pnpm --filter=@fuxie/database prisma migrate dev",
-    "db:studio": "pnpm --filter=@fuxie/database prisma studio"
+    "db:generate": "pnpm --filter @fuxie/database exec prisma generate",
+    "db:push": "pnpm --filter @fuxie/database exec prisma db push",
+    "db:migrate": "pnpm --filter @fuxie/database exec prisma migrate dev",
+    "db:studio": "pnpm --filter @fuxie/database exec prisma studio",
+    "db:seed:dev": "tsx scripts/seed-dev-data.ts",
+    "smoke:full-local": "tsx scripts/smoke-full-local.ts",
+    "perf:local": "tsx scripts/perf-local.ts",
+    "perf:local:warn": "tsx scripts/perf-local.ts --warn-only",
+    "check:perf-local": "pnpm smoke:full-local && pnpm perf:local",
+    "bundle:budget": "tsx scripts/bundle-budget.ts",
+    "bundle:budget:list": "tsx scripts/bundle-budget.ts --list",
+    "check:bundle": "pnpm build && pnpm bundle:budget"
   },
   "devDependencies": {
     "@google-cloud/storage": "^7.19.0",
