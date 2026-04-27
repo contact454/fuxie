@@ -395,7 +395,7 @@ cleanup can be reviewed independently.
   is generated/minified and the AI queue change affects service startup
   behavior.
 
-## Next Execution Slice - Commit Prep Or Narrow Follow-Up
+## Completed Execution Slice - Commit Prep Or Narrow Follow-Up
 
 Date: 2026-04-27
 
@@ -429,7 +429,7 @@ performance changes and content/image hygiene.
   out before staging.
 - The next code task is only opened if diff review finds a concrete defect.
 
-## Next Execution Slice - Finish Verified Commit Groups
+## Completed Execution Slice - Finish Verified Commit Groups
 
 Date: 2026-04-27
 
@@ -470,6 +470,124 @@ on unstaged work.
 - Any files held back are explicitly listed with the reason.
 - Final `git status --short` and verification results are recorded.
 
+### Slice Results
+
+- The verified batch was split into six commits:
+  - `53ac685` `chore: add performance verification tooling`
+  - `7a5987a` `feat: add dev auth and cache invalidation`
+  - `c6a29ea` `perf: split heavy route clients dynamically`
+  - `ddc6daa` `perf: optimize aggregate routes and database indexes`
+  - `0f51052` `chore: improve vocabulary image content hygiene`
+  - `d7d12fb` `chore: align local service runtime artifacts`
+- Final gates passed after commits:
+  - `pnpm check`
+  - `pnpm bundle:budget`
+  - `pnpm smoke:full-local`
+- The web dev server was restarted after production build and health returned
+  `200`.
+
+## Next Execution Slice - Perf Baseline And Bottleneck Selection
+
+Date: 2026-04-27
+
+### Prompt
+
+Act as a performance measurement engineer after the first verified optimization
+batch. Do not start a new implementation until the current local perf baseline
+identifies a clear bottleneck. Treat local dev results as directional only:
+prefer warm medians, record noisy cold starts, and avoid broad refactors unless
+the data points to one.
+
+### Scope
+
+1. Run `pnpm perf:local:warn` against the currently running local web and AI
+   services.
+2. Compare warm medians against the configured budgets and identify the top
+   slow routes or APIs.
+3. If one small, low-risk fix is obvious, add a narrow follow-up prompt before
+   coding it.
+4. Otherwise, record the baseline and leave implementation for the next
+   explicitly scoped slice.
+
+### Non-Goals
+
+- Do not treat dev cold-start compilation as a production regression.
+- Do not alter cache TTLs or query shape without a measured target.
+- Do not run destructive DB operations.
+- Do not push commits from this local branch.
+
+### Acceptance Criteria
+
+- Perf baseline is recorded with cold, warm median, warm max, status, bytes,
+  and budget result.
+- Any next code task has a single measured target and acceptance criteria.
+- Repo returns to a clean state if only documentation is changed.
+
+### Slice Results
+
+- `pnpm perf:local:warn` passed for all measured targets.
+- `pnpm perf:local` passed in strict mode for all measured targets.
+- Strict warm medians:
+  - Learner dashboard: `236ms` / `600ms`
+  - Learner vocabulary: `297ms` / `600ms`
+  - Learner review: `288ms` / `600ms`
+  - Learner today plan API: `392ms` / `450ms`
+  - Learner SRS due API: `363ms` / `450ms`
+  - Teacher dashboard: `166ms` / `700ms`
+  - Teacher classrooms API: `338ms` / `450ms`
+  - Admin dashboard: `182ms` / `800ms`
+  - Admin ops API: `372ms` / `450ms`
+- No new implementation bottleneck was selected because every target was under
+  budget. The closest measured margins are today-plan/admin-ops/SRS/teacher
+  classrooms APIs, all still below the configured `450ms` API budget.
+
+## Next Execution Slice - Prisma Index Rollout Verification
+
+Date: 2026-04-27
+
+### Prompt
+
+Act as a database rollout reviewer for the performance batch. The local perf
+baseline is green, so do not change query behavior. Focus only on whether the
+Prisma index changes have a safe rollout path in this repository, and create
+the smallest artifact needed if the repo already uses Prisma migrations.
+
+### Scope
+
+1. Inspect the Prisma package for existing migration conventions.
+2. Verify whether the committed schema index additions are backed by migration
+   artifacts or whether this repo intentionally uses `db push`.
+3. If migrations are used, generate or add a migration for the index changes
+   without touching unrelated schema.
+4. Record the decision and run the narrow database/typecheck gate.
+
+### Non-Goals
+
+- Do not change application query behavior.
+- Do not run destructive database reset commands.
+- Do not print database secret values.
+- Do not alter content/image generation work.
+
+### Acceptance Criteria
+
+- The repo has a clear answer for Prisma index rollout: migration artifact,
+  `db push` workflow, or explicit follow-up.
+- Any generated migration contains only the intended index changes.
+- Verification includes at least `pnpm check:quick` or the relevant Prisma
+  validation/generation command.
+
+### Slice Results
+
+- The repo has a Prisma migrations directory, but migration history currently
+  contains only `20260301164154_init` while the schema has continued to evolve.
+- To avoid generating a broad historical drift migration, rollout was handled
+  with an index-only migration:
+  `packages/database/prisma/migrations/20260427091500_add_performance_indexes/migration.sql`.
+- The migration contains only the 14 performance indexes added in the schema
+  and uses `CREATE INDEX IF NOT EXISTS` for safer local/drifted environments.
+- `pnpm --filter @fuxie/database exec prisma validate` passed.
+- `pnpm check:quick` passed.
+
 ## Open Risks
 
 - A local perf result can be noisy because Next dev compilation affects cold
@@ -477,7 +595,9 @@ on unstaged work.
 - Short TTL cache can mask fresh mutations if invalidation is incomplete.
 - Dynamic wrappers can improve initial bundle size but may delay interactive
   hydration on the first click.
-- Prisma index changes require migration discipline before production rollout.
+- Prisma migration history is sparse; the performance indexes now have an
+  index-only migration, but future schema changes should avoid relying on broad
+  drift recovery.
 - Large vocabulary JSON rewrites should not be mixed with runtime performance
   commits.
 - On local machines, stop or restart Next dev around production builds because
