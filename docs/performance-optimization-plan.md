@@ -811,6 +811,92 @@ implementation.
 - Full local gate passed:
   - `pnpm check`
 
+## Execution Slice - Post-Merge Master Verification
+
+Date: 2026-04-27
+
+### Prompt
+
+Act as the post-merge release verification engineer for the performance
+optimization batch now merged into `master`. Confirm the local branch is aligned
+with the merged GitHub state, run a focused verification gate on `master`, and
+produce the deployment-readiness checklist. Preserve the prompt/backlog-first
+workflow and do not make further runtime changes unless verification exposes a
+concrete failure.
+
+### Backlog
+
+1. Confirm local `master` points at the PR merge commit and the working tree is
+   clean.
+2. Confirm PR #1 is merged and the remote branch state is healthy.
+3. Run a focused post-merge quality gate on `master`.
+4. Re-check database migration status non-destructively.
+5. Record results and the exact next deployment steps, including migration
+   caveats.
+
+### Non-Goals
+
+- Do not deploy to production.
+- Do not run destructive Prisma commands such as `migrate reset`.
+- Do not modify performance runtime code unless a verification failure requires
+  a narrow fix.
+- Do not delete branches until the release state is fully confirmed.
+
+### Acceptance Criteria
+
+- `master` is clean and aligned with the merged PR.
+- Focused post-merge verification passes, or any failure has a concrete follow-up.
+- Migration rollout guidance is explicit enough to execute safely in staging or
+  production later.
+
+### Slice Results
+
+- Local `master` points at merge commit
+  `218adcbe2f5ffe07df8054c69d53d20245bcddda`, matching PR #1's GitHub merge
+  commit.
+- PR #1 is merged:
+  `https://github.com/contact454/fuxie/pull/1`.
+- The remote-tracking ref `origin/master` was recreated locally with
+  `git fetch origin master:refs/remotes/origin/master`; it now points at the
+  same merge commit.
+- The local `origin` fetch refspec was restored and `master` now tracks
+  `origin/master`.
+- Focused verification passed on `master`:
+  - `pnpm check:quick`
+  - `pnpm --filter @fuxie/database exec prisma validate`
+  - `SMOKE_WEB_URL=http://localhost:3002 pnpm smoke:full-local`
+  - `PERF_WEB_URL=http://localhost:3002 pnpm perf:local`
+- Port `3000` was occupied by an older Next `start-server` process and returned
+  a plain HTTP `500` for `/api/v1/health`. Because the health route itself would
+  return JSON `503` on DB failure, this was treated as a stale local runtime
+  issue rather than a `master` code failure.
+- A temporary Next dev server was started on port `3002` to verify the merged
+  code, returned `/api/v1/health` `200` with DB connected, and was stopped after
+  smoke/perf verification.
+- Non-destructive migration status still reports unapplied local migration
+  history:
+  - `20260301164154_init`
+  - `20260427091500_add_performance_indexes`
+
+### Deployment Readiness Checklist
+
+1. Confirm the target environment's database URL points to the intended staging
+   or production database, not the local `fuxie_dev` database.
+2. Run `prisma migrate status` against the target environment before deploying.
+3. If the target database already has a valid `_prisma_migrations` history,
+   apply the index-only migration with `prisma migrate deploy`.
+4. If the target database was created with `db push` or manual schema changes,
+   baseline/resolve the existing schema first, then apply
+   `20260427091500_add_performance_indexes`.
+5. After deployment, verify:
+   - `/api/v1/health`
+   - learner dashboard and vocabulary pages
+   - teacher classrooms API
+   - admin ops API
+   - SRS due API
+6. Keep the performance branch until production rollout is confirmed, then
+   delete it if no rollback comparison is needed.
+
 ## Open Risks
 
 - A local perf result can be noisy because Next dev compilation affects cold
