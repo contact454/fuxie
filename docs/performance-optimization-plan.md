@@ -897,6 +897,109 @@ concrete failure.
 6. Keep the performance branch until production rollout is confirmed, then
    delete it if no rollback comparison is needed.
 
+## Execution Slice - Rollout Readiness Discovery
+
+Date: 2026-04-27
+
+### Prompt
+
+Act as the rollout readiness engineer for the merged performance optimization
+batch. Continue the prompt/backlog-first workflow. Inspect deployment
+configuration, GitHub/Vercel status, and Prisma migration wiring without
+printing secret values or touching production data. Determine the safest next
+operator step for staging or production rollout.
+
+### Backlog
+
+1. Inspect Vercel, GitHub Actions, package scripts, and Prisma migration
+   configuration.
+2. Audit production environment variable names only, with secret values redacted.
+3. Confirm whether deploy automation applies Prisma migrations automatically or
+   only builds the app.
+4. Check the latest GitHub/Vercel status for `master`.
+5. Record the recommended rollout path and any blocker that requires explicit
+   operator confirmation.
+
+### Non-Goals
+
+- Do not run `prisma migrate deploy` against any production or staging database.
+- Do not print secret values from `.env`, `.env.production`, `.env.local`, or
+  Vercel.
+- Do not delete the performance branch yet.
+- Do not change runtime code.
+
+### Acceptance Criteria
+
+- The deployment path is understood before any production action.
+- Any required manual confirmation is concrete: environment name, database URL
+  target, and migration history state.
+- The docs capture the next command sequence, but no production mutation happens
+  in this slice.
+
+### Slice Results
+
+- Vercel project link:
+  - Project: `contact-8252s-projects/fuxie-web`
+  - Local project metadata exists in `.vercel/project.json`.
+- Deployment automation:
+  - `vercel.json` runs `prisma generate` during build.
+  - No repo automation runs `prisma migrate deploy`.
+  - GitHub Actions only runs `pnpm check`.
+- GitHub/Vercel status:
+  - Latest `master` CI run for `d01ca4e` completed successfully.
+  - Latest Vercel status for `master` completed successfully.
+  - Latest production deployment listed by Vercel is ready:
+    `https://fuxie-ctemga1z5-contact-8252s-projects.vercel.app`.
+- Production environment variable names:
+  - Vercel Production has `DATABASE_URL` and `DATABASE_URL_UNPOOLED`.
+  - Vercel Production also has the expected Firebase, auth, Gemini, Google Cloud,
+    and Upstash env names. Values were not printed.
+  - The local `.env.vercel-prod` snapshot is missing `DATABASE_URL_UNPOOLED`, but
+    Vercel Production itself has it.
+- Production health:
+  - Direct curl is blocked by Vercel Authentication.
+  - `vercel curl /api/v1/health --deployment <latest-production-url>` returned
+    `{"status":"ok","db":"connected"}`.
+- Production migration status, read-only:
+  - `prisma migrate status` against Production reached database `fuxie_prod`.
+  - Both repo migrations are currently unapplied in production migration history:
+    - `20260301164154_init`
+    - `20260427091500_add_performance_indexes`
+- Production schema metadata, read-only:
+  - Public schema has 51 base tables.
+  - `_prisma_migrations` table does not exist.
+  - None of the 14 performance indexes exist yet.
+- Production schema diff, read-only:
+  - `prisma migrate diff --from-schema-datasource prisma/schema.prisma
+    --to-schema-datamodel prisma/schema.prisma --exit-code` reported only the 14
+    missing performance indexes.
+  - No table or column create/drop/alter drift was reported.
+
+### Recommended Production Migration Path
+
+Because production already has the application tables but no Prisma migration
+history, do not run `prisma migrate deploy` first. It would try to apply the
+initial migration against existing tables.
+
+Operator-confirmed sequence:
+
+1. Set Production `DATABASE_URL` and `DATABASE_URL_UNPOOLED` in the shell without
+   printing values.
+2. Baseline the existing production schema:
+   `pnpm --filter @fuxie/database exec prisma migrate resolve --applied 20260301164154_init`
+3. Apply the index-only performance migration:
+   `pnpm --filter @fuxie/database exec prisma migrate deploy`
+4. Re-run:
+   `pnpm --filter @fuxie/database exec prisma migrate status`
+5. Re-run production health:
+   `vercel curl /api/v1/health --deployment <latest-production-url>`
+6. Read-only verify that the 14 performance indexes now exist.
+
+### Rollout Blocker
+
+Explicit operator confirmation is required before steps 2-3 above because they
+mutate the production database metadata and create production indexes.
+
 ## Open Risks
 
 - A local perf result can be noisy because Next dev compilation affects cold
