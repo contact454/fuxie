@@ -643,7 +643,7 @@ can see the migration state cleanly, and keep the local app usable afterwards.
 - Local app health remained `200`.
 - `pnpm smoke:full-local` passed after the migration status check.
 
-## Next Execution Slice - Release Handoff Checklist
+## Completed Execution Slice - Release Handoff Checklist
 
 Date: 2026-04-27
 
@@ -672,6 +672,55 @@ remaining risks.
 - Handoff checklist is accurate against the current branch state.
 - Remaining risks are concrete and actionable.
 - Repo stays clean.
+
+### Slice Results
+
+- `git status --short` was clean before this documentation update.
+- Local app health endpoint returned `200`.
+- Recent performance-batch commits on `master`:
+  - `53ac685` `chore: add performance verification tooling`
+  - `7a5987a` `feat: add dev auth and cache invalidation`
+  - `c6a29ea` `perf: split heavy route clients dynamically`
+  - `ddc6daa` `perf: optimize aggregate routes and database indexes`
+  - `0f51052` `chore: improve vocabulary image content hygiene`
+  - `d7d12fb` `chore: align local service runtime artifacts`
+  - `1e73ac7` `chore: add migration for performance indexes`
+  - `763e861` `docs: record migration rollout verification`
+
+### Release Handoff Checklist
+
+- Verification already completed:
+  - `pnpm check`
+  - `pnpm bundle:budget`
+  - `pnpm smoke:full-local`
+  - `pnpm perf:local:warn`
+  - `pnpm perf:local`
+  - `pnpm --filter @fuxie/database exec prisma validate`
+  - `pnpm check:quick`
+- Bundle status:
+  - All budgeted app routes passed the `115kb` gzip budget.
+  - `/admin/vocabulary` remained at `104.8kb gzip` after dynamic splitting.
+- Perf baseline status:
+  - All measured local strict warm medians were under budget.
+  - Closest margins were today-plan/admin-ops/SRS/teacher classrooms APIs, all
+    still below the `450ms` API budget.
+- Local runtime status:
+  - Web dev server is expected on `http://localhost:3000`.
+  - After any production build, restart Next dev before browser/smoke because
+    both modes touch `.next`.
+- Migration rollout caveat:
+  - The repo now has an index-only migration for the 14 performance indexes.
+  - Local `fuxie_dev` migration history is not baselined; `migrate status`
+    reports both `init` and the new index migration as unapplied.
+  - Before production deploy, check the target `_prisma_migrations` history.
+    If production is migration-based, deploy the index-only migration normally.
+    If production was schema-pushed, baseline/resolve the existing schema first,
+    then apply the index-only migration.
+- Review/PR notes:
+  - Runtime performance work, dynamic splitting, cache invalidation, aggregate
+    query/index work, content/image hygiene, and service-runtime artifacts are
+    separated into reviewable commits.
+  - No push or PR has been created from this local branch yet.
 
 ## Open Risks
 
