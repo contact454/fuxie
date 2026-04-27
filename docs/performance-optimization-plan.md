@@ -722,6 +722,39 @@ remaining risks.
     separated into reviewable commits.
   - No push or PR has been created from this local branch yet.
 
+## Next Execution Slice - Branch Push And PR
+
+Date: 2026-04-27
+
+### Prompt
+
+Act as the release handoff operator for the verified performance batch. The
+implementation is already committed and verified, so do not change runtime
+behavior. Create the review branch, push it, and open a draft PR if the local
+tooling/auth supports it. If PR creation is unavailable locally, record the
+exact compare URL for manual PR creation.
+
+### Scope
+
+1. Create or switch to `codex/performance-optimization`.
+2. Push the branch to `origin`.
+3. Create a draft PR against `master` when possible.
+4. Record the PR URL or compare URL.
+
+### Non-Goals
+
+- Do not rewrite commits.
+- Do not force push.
+- Do not run another production build unless files change.
+- Do not deploy.
+
+### Acceptance Criteria
+
+- Branch exists locally and remotely.
+- PR URL is recorded, or a manual compare URL is provided with the reason PR
+  automation was unavailable.
+- Repo remains clean after the handoff.
+
 ## Open Risks
 
 - A local perf result can be noisy because Next dev compilation affects cold
