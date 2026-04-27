@@ -486,7 +486,7 @@ on unstaged work.
 - The web dev server was restarted after production build and health returned
   `200`.
 
-## Next Execution Slice - Perf Baseline And Bottleneck Selection
+## Completed Execution Slice - Perf Baseline And Bottleneck Selection
 
 Date: 2026-04-27
 
@@ -541,7 +541,7 @@ the data points to one.
   budget. The closest measured margins are today-plan/admin-ops/SRS/teacher
   classrooms APIs, all still below the configured `450ms` API budget.
 
-## Next Execution Slice - Prisma Index Rollout Verification
+## Completed Execution Slice - Prisma Index Rollout Verification
 
 Date: 2026-04-27
 
@@ -588,6 +588,91 @@ the smallest artifact needed if the repo already uses Prisma migrations.
 - `pnpm --filter @fuxie/database exec prisma validate` passed.
 - `pnpm check:quick` passed.
 
+## Completed Execution Slice - Local Migration Status And Smoke
+
+Date: 2026-04-27
+
+### Prompt
+
+Act as a rollout verification engineer after adding the index-only migration.
+Do not change schema or query behavior. Verify whether the local development DB
+can see the migration state cleanly, and keep the local app usable afterwards.
+
+### Scope
+
+1. Run a read-only Prisma migration status check against the configured local
+   development database.
+2. If the migration status is clean, record the result.
+3. If migration history drift is reported, do not reset the database; record the
+   exact follow-up and keep using smoke/typecheck as the local correctness gate.
+4. Confirm the dev server remains healthy and run smoke if anything was
+   restarted or DB status is ambiguous.
+
+### Non-Goals
+
+- Do not run `migrate reset`.
+- Do not run destructive SQL.
+- Do not print connection strings or secret environment values.
+- Do not add another schema migration unless status exposes a concrete missing
+  artifact.
+
+### Acceptance Criteria
+
+- Prisma migration status result is recorded.
+- Any drift or unapplied migration state has an explicit non-destructive
+  follow-up.
+- Local app health remains `200`, or `pnpm smoke:full-local` passes after a
+  restart.
+
+### Slice Results
+
+- `pnpm --filter @fuxie/database exec prisma migrate status` reached the local
+  `fuxie_dev` database on `127.0.0.1:5434` and reported two migrations not yet
+  applied in local migration history:
+  - `20260301164154_init`
+  - `20260427091500_add_performance_indexes`
+- This indicates the current local development DB was likely built with
+  `db push`/seed or another non-migration baseline. Do not run `migrate reset`
+  or attempt to force `migrate deploy` on this local DB without first creating
+  or resolving a baseline.
+- Non-destructive follow-up: before production rollout, verify the target
+  environment's `_prisma_migrations` history. If it is already migration-based,
+  deploy the index-only migration normally. If it is schema-pushed like local,
+  baseline/resolve the existing schema first, then apply the index-only
+  migration.
+- Local app health remained `200`.
+- `pnpm smoke:full-local` passed after the migration status check.
+
+## Next Execution Slice - Release Handoff Checklist
+
+Date: 2026-04-27
+
+### Prompt
+
+Act as a release handoff reviewer for the verified performance optimization
+batch. Do not change runtime behavior. Produce the checklist needed before a
+push or PR: commits included, gates passed, migration rollout caveat, and any
+remaining risks.
+
+### Scope
+
+1. Re-check `git status --short` and recent commits.
+2. Summarize the verification evidence from the completed slices.
+3. Call out the migration history caveat and required production rollout check.
+4. If asked to push or open a PR, do so only after this checklist is reviewed.
+
+### Non-Goals
+
+- Do not run another production build unless files change.
+- Do not alter schema/query/UI behavior.
+- Do not push without an explicit request.
+
+### Acceptance Criteria
+
+- Handoff checklist is accurate against the current branch state.
+- Remaining risks are concrete and actionable.
+- Repo stays clean.
+
 ## Open Risks
 
 - A local perf result can be noisy because Next dev compilation affects cold
@@ -598,6 +683,8 @@ the smallest artifact needed if the repo already uses Prisma migrations.
 - Prisma migration history is sparse; the performance indexes now have an
   index-only migration, but future schema changes should avoid relying on broad
   drift recovery.
+- Local dev DB migration history is not baselined; migration deployment should
+  be reconciled per environment before production rollout.
 - Large vocabulary JSON rewrites should not be mixed with runtime performance
   commits.
 - On local machines, stop or restart Next dev around production builds because
