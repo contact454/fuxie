@@ -7,6 +7,7 @@ const {
     transactionMock,
     handleApiErrorMock,
     recordLearningActivityMock,
+    invalidateLearnerProgressCachesMock,
 } = vi.hoisted(
     () => ({
         getServerUserMock: vi.fn(),
@@ -26,6 +27,7 @@ const {
             )
         ),
         recordLearningActivityMock: vi.fn(),
+        invalidateLearnerProgressCachesMock: vi.fn(),
     })
 )
 
@@ -49,6 +51,10 @@ vi.mock('@fuxie/database', () => ({
 vi.mock('@/lib/progress/learning-activity', () => ({
     calculateReadingXp: vi.fn((percentage: number) => (percentage >= 100 ? 20 : 10)),
     recordLearningActivity: recordLearningActivityMock,
+}))
+
+vi.mock('@/lib/progress/cache-invalidation', () => ({
+    invalidateLearnerProgressCaches: invalidateLearnerProgressCachesMock,
 }))
 
 import { POST } from './route'
@@ -95,6 +101,7 @@ describe('POST /api/v1/reading/[exerciseId]/submit', () => {
                 isNewDay: false,
             },
         })
+        invalidateLearnerProgressCachesMock.mockResolvedValue(undefined)
         transactionMock.mockImplementation(async (callback: (tx: any) => Promise<any>) =>
             callback({
                 readingAttempt: {
@@ -149,6 +156,7 @@ describe('POST /api/v1/reading/[exerciseId]/submit', () => {
                 exercisesCompleted: 1,
             })
         )
+        expect(invalidateLearnerProgressCachesMock).toHaveBeenCalledWith('user-1')
     })
 
     it('returns 401 when the user is not authenticated', async () => {

@@ -4,6 +4,8 @@ import { getTokens } from 'next-firebase-auth-edge'
 import { prisma } from '@fuxie/database'
 import type { UserRole } from '@fuxie/database'
 import { authConfig } from './config'
+import { getDevAuthUserFromCookies } from './dev-auth'
+import { cacheInvalidate, cacheWrap } from '@/lib/cache/redis'
 
 interface ServerUser {
     userId: string
@@ -12,6 +14,16 @@ interface ServerUser {
     role: UserRole
     uiLanguage: string
 }
+
+type ServerUserRecord = {
+    id: string
+    email: string
+    firebaseUid: string
+    role: UserRole
+    profile: { uiLanguage: string } | null
+}
+
+const SERVER_USER_CACHE_TTL_SECONDS = 15
 
 function isNextDynamicServerError(error: unknown): boolean {
     if (!error || typeof error !== 'object') {
@@ -40,6 +52,16 @@ function isNextDynamicServerError(error: unknown): boolean {
  */
 export const getServerUser = cache(async (): Promise<ServerUser | null> => {
     try {
+        const devUser = await getDevAuthUserFromCookies()
+        if (devUser) {
+            return getServerUserRecord(
+                devUser.firebaseUid,
+                devUser.email,
+                'Learner',
+                devUser.role,
+            )
+        }
+
         // 1. Verify Firebase token from cookies
         const cookieStore = await cookies()
         const tokens = await getTokens(cookieStore, authConfig)
@@ -52,39 +74,7 @@ export const getServerUser = cache(async (): Promise<ServerUser | null> => {
         const email = tokens.decodedToken.email ?? ''
         const displayName = tokens.decodedToken.name as string | undefined
 
-        // 2. Look up user in DB
-        let user = await prisma.user.findUnique({
-            where: { firebaseUid },
-            select: {
-                id: true,
-                email: true,
-                firebaseUid: true,
-                role: true,
-                profile: {
-                    select: {
-                        uiLanguage: true,
-                    },
-                },
-            },
-        })
-
-        // 3. Auto-provision if not found
-        if (!user) {
-            console.log(`[Fuxie] Auto-provisioning user: ${email} (${firebaseUid})`)
-            user = await provisionUser(firebaseUid, email, displayName)
-        }
-
-        if (!user) {
-            return null
-        }
-
-        return {
-            userId: user.id,
-            email: user.email,
-            firebaseUid: user.firebaseUid,
-            role: user.role,
-            uiLanguage: user.profile?.uiLanguage ?? 'vi',
-        }
+        return getServerUserRecord(firebaseUid, email, displayName)
     } catch (error) {
         if (isNextDynamicServerError(error)) {
             throw error
@@ -95,13 +85,67 @@ export const getServerUser = cache(async (): Promise<ServerUser | null> => {
     }
 })
 
+export async function invalidateServerUserCache(firebaseUid: string): Promise<void> {
+    await cacheInvalidate(authUserCacheKey(firebaseUid))
+}
+
+async function getServerUserRecord(
+    firebaseUid: string,
+    email: string,
+    displayName?: string,
+    role: UserRole = 'LEARNER',
+): Promise<ServerUser | null> {
+    return cacheWrap(
+        authUserCacheKey(firebaseUid),
+        SERVER_USER_CACHE_TTL_SECONDS,
+        async () => {
+            let user = await prisma.user.findUnique({
+                where: { firebaseUid },
+                select: {
+                    id: true,
+                    email: true,
+                    firebaseUid: true,
+                    role: true,
+                    profile: {
+                        select: {
+                            uiLanguage: true,
+                        },
+                    },
+                },
+            })
+
+            if (!user) {
+                console.log(`[Fuxie] Auto-provisioning user: ${email} (${firebaseUid})`)
+                user = await provisionUser(firebaseUid, email, displayName, role)
+            }
+
+            return user ? mapServerUser(user) : null
+        },
+    )
+}
+
+function mapServerUser(user: ServerUserRecord): ServerUser {
+    return {
+        userId: user.id,
+        email: user.email,
+        firebaseUid: user.firebaseUid,
+        role: user.role,
+        uiLanguage: user.profile?.uiLanguage ?? 'vi',
+    }
+}
+
+function authUserCacheKey(firebaseUid: string) {
+    return `auth:user:${encodeURIComponent(firebaseUid)}`
+}
+
 /**
  * Create a new user with all required relations in a single transaction.
  */
 async function provisionUser(
     firebaseUid: string,
     email: string,
-    displayName?: string
+    displayName?: string,
+    role: UserRole = 'LEARNER'
 ): Promise<{
     id: string
     email: string
@@ -115,7 +159,7 @@ async function provisionUser(
                 data: {
                     firebaseUid,
                     email,
-                    role: 'LEARNER',
+                    role,
                     emailVerified: false,
                 },
             })

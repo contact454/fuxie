@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server'
 import { getServerUser } from '@/lib/auth/server-auth'
+import { cacheWrap } from '@/lib/cache/redis'
 import { getTodayPlan } from '@/lib/personalization/today-plan'
 
 export const dynamic = 'force-dynamic'
@@ -11,7 +12,11 @@ export async function GET() {
             return NextResponse.json({ success: false, error: 'Unauthorized' }, { status: 401 })
         }
 
-        const data = await getTodayPlan(serverUser.userId)
+        const data = await cacheWrap(
+            `personalization:today:${serverUser.userId}`,
+            30,
+            () => getTodayPlan(serverUser.userId),
+        )
         return NextResponse.json({ success: true, data })
     } catch (err) {
         console.error('[Personalization] Today plan error:', err)

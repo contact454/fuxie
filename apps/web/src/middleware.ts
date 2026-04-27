@@ -5,10 +5,20 @@ import {
     redirectToLogin,
 } from 'next-firebase-auth-edge'
 import { authConfig } from '@/lib/auth/config'
+import { DEV_AUTH_COOKIE, getDevAuthUser, isDevAuthEnabled } from '@/lib/auth/dev-auth'
 
 const AUTH_PAGES = ['/', '/login', '/register']
 
 export async function middleware(request: NextRequest) {
+    const devUser = getDevAuthUser(request.cookies.get(DEV_AUTH_COOKIE)?.value)
+    if (isDevAuthEnabled() && devUser) {
+        if (AUTH_PAGES.includes(request.nextUrl.pathname)) {
+            return redirectToHome(request, { path: '/dashboard' })
+        }
+
+        return NextResponse.next()
+    }
+
     return authMiddleware(request, {
         loginPath: '/api/auth/login',
         logoutPath: '/api/auth/logout',
@@ -43,6 +53,6 @@ export async function middleware(request: NextRequest) {
 
 export const config = {
     matcher: [
-        '/((?!_next|favicon.ico|__/auth|mascot|api/v1|.*\\.).*)',
+        '/((?!_next|favicon.ico|__/auth|mascot|api/v1|api/dev-auth|.*\\.).*)',
     ],
 }

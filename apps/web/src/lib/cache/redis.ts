@@ -4,6 +4,12 @@ import { Redis } from '@upstash/redis'
 // Graceful no-op when UPSTASH_REDIS_REST_URL is not set
 let redis: Redis | null = null
 let disabled = false
+const memoryCache = new Map<string, { expiresAt: number; value: unknown }>()
+const MAX_MEMORY_CACHE_ENTRIES = 500
+
+function useMemoryFallback() {
+    return process.env.NODE_ENV !== 'production' || process.env.FUXIE_MEMORY_CACHE_ENABLED === 'true'
+}
 
 function getRedis(): Redis | null {
     if (disabled) return null
@@ -28,7 +34,7 @@ function getRedis(): Redis | null {
 export async function cacheGet<T>(key: string): Promise<T | null> {
     try {
         const client = getRedis()
-        if (!client) return null
+        if (!client) return memoryCacheGet<T>(key)
 
         const value = await client.get<T>(key)
         if (value !== null && value !== undefined) return value
@@ -43,7 +49,10 @@ export async function cacheGet<T>(key: string): Promise<T | null> {
 export async function cacheSet(key: string, value: unknown, ttlSeconds: number): Promise<void> {
     try {
         const client = getRedis()
-        if (!client) return
+        if (!client) {
+            memoryCacheSet(key, value, ttlSeconds)
+            return
+        }
 
         await client.set(key, value, { ex: ttlSeconds })
 
@@ -78,7 +87,13 @@ export async function cacheWrap<T>(
 export async function cacheInvalidate(...keys: string[]): Promise<void> {
     try {
         const client = getRedis()
-        if (!client || keys.length === 0) return
+        if (keys.length === 0) return
+        if (!client) {
+            for (const key of keys) {
+                memoryCache.delete(key)
+            }
+            return
+        }
 
         await client.del(...keys)
 
@@ -94,7 +109,14 @@ export async function cacheInvalidate(...keys: string[]): Promise<void> {
 export async function cacheInvalidatePrefix(prefix: string): Promise<void> {
     try {
         const client = getRedis()
-        if (!client) return
+        if (!client) {
+            for (const key of memoryCache.keys()) {
+                if (key.startsWith(prefix)) {
+                    memoryCache.delete(key)
+                }
+            }
+            return
+        }
 
         let cursor = 0
         do {
@@ -111,5 +133,55 @@ export async function cacheInvalidatePrefix(prefix: string): Promise<void> {
         } while (cursor !== 0)
     } catch (err) {
         console.warn(`[Cache] INVALIDATE prefix error for ${prefix}:`, err)
+    }
+}
+
+function memoryCacheGet<T>(key: string): T | null {
+    if (!useMemoryFallback()) {
+        return null
+    }
+
+    const entry = memoryCache.get(key)
+    if (!entry) {
+        return null
+    }
+
+    if (entry.expiresAt <= Date.now()) {
+        memoryCache.delete(key)
+        return null
+    }
+
+    return entry.value as T
+}
+
+function memoryCacheSet(key: string, value: unknown, ttlSeconds: number): void {
+    if (!useMemoryFallback() || ttlSeconds <= 0) {
+        return
+    }
+
+    if (memoryCache.size >= MAX_MEMORY_CACHE_ENTRIES) {
+        pruneMemoryCache()
+    }
+
+    memoryCache.set(key, {
+        value,
+        expiresAt: Date.now() + ttlSeconds * 1000,
+    })
+}
+
+function pruneMemoryCache(): void {
+    const now = Date.now()
+    for (const [key, entry] of memoryCache.entries()) {
+        if (entry.expiresAt <= now) {
+            memoryCache.delete(key)
+        }
+    }
+
+    while (memoryCache.size >= MAX_MEMORY_CACHE_ENTRIES) {
+        const oldestKey = memoryCache.keys().next().value as string | undefined
+        if (!oldestKey) {
+            return
+        }
+        memoryCache.delete(oldestKey)
     }
 }

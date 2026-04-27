@@ -5,6 +5,7 @@ import { getServerUser } from '@/lib/auth/server-auth'
 import { handleApiError } from '@/lib/api/error-handler'
 import { gradeReadingSubmission } from '@/lib/assessment/submission-grading'
 import { calculateReadingXp, recordLearningActivity } from '@/lib/progress/learning-activity'
+import { invalidateLearnerProgressCaches } from '@/lib/progress/cache-invalidation'
 
 const readingSubmitSchema = z.object({
     answers: z.record(z.string(), z.string()),   // { questionId: userAnswer }
@@ -93,6 +94,8 @@ export async function POST(
                 progress: activity,
             }
         })
+
+        invalidateLearnerProgressCaches(serverUser.userId).catch(() => {})
 
         return NextResponse.json({
             success: true,

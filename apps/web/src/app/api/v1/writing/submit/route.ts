@@ -5,6 +5,7 @@ import { getServerUser } from '@/lib/auth/server-auth'
 import { handleApiError } from '@/lib/api/error-handler'
 import { cookies } from 'next/headers'
 import { calculateWritingXp, recordLearningActivity } from '@/lib/progress/learning-activity'
+import { invalidateLearnerProgressCaches } from '@/lib/progress/cache-invalidation'
 
 const writingSubmitSchema = z.object({
     exerciseId: z.string().min(1),
@@ -111,6 +112,8 @@ export async function POST(req: NextRequest) {
                 progress,
             }
         })
+
+        invalidateLearnerProgressCaches(serverUser.userId).catch(() => {})
 
         return NextResponse.json({
             success: true,

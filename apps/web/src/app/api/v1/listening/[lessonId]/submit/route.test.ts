@@ -7,6 +7,7 @@ const {
     createAttemptMock,
     transactionMock,
     recordLearningActivityMock,
+    invalidateLearnerProgressCachesMock,
 } = vi.hoisted(() => ({
     getServerUserMock: vi.fn(),
     cookiesMock: vi.fn(),
@@ -14,6 +15,7 @@ const {
     createAttemptMock: vi.fn(),
     transactionMock: vi.fn(),
     recordLearningActivityMock: vi.fn(),
+    invalidateLearnerProgressCachesMock: vi.fn(),
 }))
 
 vi.mock('@/lib/auth/server-auth', () => ({
@@ -36,6 +38,10 @@ vi.mock('@fuxie/database', () => ({
 vi.mock('@/lib/progress/learning-activity', () => ({
     calculateListeningXp: vi.fn((percentage: number) => (percentage >= 100 ? 20 : 10)),
     recordLearningActivity: recordLearningActivityMock,
+}))
+
+vi.mock('@/lib/progress/cache-invalidation', () => ({
+    invalidateLearnerProgressCaches: invalidateLearnerProgressCachesMock,
 }))
 
 import { POST } from './route'
@@ -73,6 +79,7 @@ describe('POST /api/v1/listening/[lessonId]/submit', () => {
                 isNewDay: false,
             },
         })
+        invalidateLearnerProgressCachesMock.mockResolvedValue(undefined)
         transactionMock.mockImplementation(async (callback: (tx: any) => Promise<any>) =>
             callback({
                 listeningAttempt: {
@@ -123,6 +130,7 @@ describe('POST /api/v1/listening/[lessonId]/submit', () => {
                 exercisesCompleted: 1,
             })
         )
+        expect(invalidateLearnerProgressCachesMock).toHaveBeenCalledWith('user-1')
     })
 
     it('returns 404 when the lesson is missing', async () => {

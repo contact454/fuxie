@@ -8,6 +8,7 @@ const {
     examAttemptUpdateMock,
     transactionMock,
     recordLearningActivityMock,
+    invalidateLearnerProgressCachesMock,
 } = vi.hoisted(() => ({
     getServerUserMock: vi.fn(),
     findAttemptMock: vi.fn(),
@@ -16,6 +17,7 @@ const {
     examAttemptUpdateMock: vi.fn(),
     transactionMock: vi.fn(),
     recordLearningActivityMock: vi.fn(),
+    invalidateLearnerProgressCachesMock: vi.fn(),
 }))
 
 vi.mock('@/lib/auth/server-auth', () => ({
@@ -38,6 +40,10 @@ vi.mock('@fuxie/database', () => ({
 vi.mock('@/lib/progress/learning-activity', () => ({
     calculateExamXp: vi.fn((passed: boolean) => (passed ? 25 : 10)),
     recordLearningActivity: recordLearningActivityMock,
+}))
+
+vi.mock('@/lib/progress/cache-invalidation', () => ({
+    invalidateLearnerProgressCaches: invalidateLearnerProgressCachesMock,
 }))
 
 import { POST } from './route'
@@ -86,6 +92,7 @@ describe('POST /api/v1/exams/[examId]/submit', () => {
                 isNewDay: false,
             },
         })
+        invalidateLearnerProgressCachesMock.mockResolvedValue(undefined)
         transactionMock.mockImplementation(async (callback: (tx: any) => Promise<any>) =>
             callback({
                 examAnswer: {
@@ -154,6 +161,7 @@ describe('POST /api/v1/exams/[examId]/submit', () => {
                 exercisesCompleted: 1,
             })
         )
+        expect(invalidateLearnerProgressCachesMock).toHaveBeenCalledWith('user-1')
     })
 
     it('returns 400 when the attempt was already submitted', async () => {

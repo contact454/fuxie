@@ -9,6 +9,8 @@ const {
     srsCardCreateMock,
     grammarProgressUpdateManyMock,
     recordLearningActivityMock,
+    invalidateLearnerProgressCachesMock,
+    invalidateLearnerSrsCachesMock,
 } = vi.hoisted(() => ({
     withAuthMock: vi.fn(),
     getDbUserByFirebaseUidMock: vi.fn(),
@@ -18,6 +20,8 @@ const {
     srsCardCreateMock: vi.fn(),
     grammarProgressUpdateManyMock: vi.fn(),
     recordLearningActivityMock: vi.fn(),
+    invalidateLearnerProgressCachesMock: vi.fn(),
+    invalidateLearnerSrsCachesMock: vi.fn(),
 }))
 
 vi.mock('@/lib/auth/middleware', () => ({
@@ -30,6 +34,11 @@ vi.mock('@/lib/auth/db-user', () => ({
 
 vi.mock('@/lib/progress/learning-activity', () => ({
     recordLearningActivity: recordLearningActivityMock,
+}))
+
+vi.mock('@/lib/progress/cache-invalidation', () => ({
+    invalidateLearnerProgressCaches: invalidateLearnerProgressCachesMock,
+    invalidateLearnerSrsCaches: invalidateLearnerSrsCachesMock,
 }))
 
 vi.mock('@fuxie/database', () => ({
@@ -58,6 +67,8 @@ describe('POST /api/v1/session/complete', () => {
                 isNewDay: false,
             },
         })
+        invalidateLearnerProgressCachesMock.mockResolvedValue(undefined)
+        invalidateLearnerSrsCachesMock.mockResolvedValue(undefined)
         transactionMock.mockImplementation(async (callback: (tx: any) => Promise<any>) =>
             callback({
                 srsCard: {
@@ -113,5 +124,7 @@ describe('POST /api/v1/session/complete', () => {
                 wordsLearned: 1,
             }
         )
+        expect(invalidateLearnerSrsCachesMock).toHaveBeenCalledWith('db-user-1')
+        expect(invalidateLearnerProgressCachesMock).not.toHaveBeenCalled()
     })
 })

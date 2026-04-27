@@ -4,6 +4,7 @@ import { withAuth } from '@/lib/auth/middleware'
 import { getDbUserByFirebaseUid } from '@/lib/auth/db-user'
 import { handleApiError } from '@/lib/api/error-handler'
 import { recordLearningActivity } from '@/lib/progress/learning-activity'
+import { invalidateLearnerProgressCaches, invalidateLearnerSrsCaches } from '@/lib/progress/cache-invalidation'
 
 export async function POST(req: NextRequest) {
     try {
@@ -70,6 +71,12 @@ export async function POST(req: NextRequest) {
                 wordsLearned: newVocabs.length,
             })
         })
+
+        const touchedSrs = Array.isArray(results) && results.some((r: any) => r.type === 'VOCAB_REVIEW' || r.type === 'VOCAB_NEW')
+        const invalidation = touchedSrs
+            ? invalidateLearnerSrsCaches(user.id)
+            : invalidateLearnerProgressCaches(user.id)
+        invalidation.catch(() => {})
 
         return NextResponse.json({
             success: true,

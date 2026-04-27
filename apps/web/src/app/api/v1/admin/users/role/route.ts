@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server';
 import { prisma, UserRole } from '@fuxie/database';
 import { z } from 'zod';
-import { getServerUser } from '@/lib/auth/server-auth';
+import { getServerUser, invalidateServerUserCache } from '@/lib/auth/server-auth';
 
 const roleMutationSchema = z.object({
   email: z.string().email(),
@@ -26,7 +26,12 @@ export async function PATCH(request: Request) {
     }
 
     const user = await prisma.user.findUnique({
-      where: { email }
+      where: { email },
+      select: {
+        id: true,
+        email: true,
+        firebaseUid: true,
+      },
     });
 
     if (!user) {
@@ -43,6 +48,8 @@ export async function PATCH(request: Request) {
         updatedAt: true,
       },
     });
+
+    invalidateServerUserCache(user.firebaseUid).catch(() => {});
 
     return NextResponse.json({ success: true, user: updatedUser });
   } catch (error: unknown) {
