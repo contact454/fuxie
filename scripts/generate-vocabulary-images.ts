@@ -1,227 +1,217 @@
 /**
- * Batch Image Generation for Fuxie A1 Vocabulary
- * 
- * Generates flat illustration images for all A1 concrete nouns using
- * Google Gemini Imagen API, uploads to GCS, and updates the database.
- * 
+ * Batch Image Generation for Fuxie Vocabulary
+ *
+ * Generates flat illustration images for vocabulary words using
+ * Google Gemini Imagen API. Saves locally to apps/web/public/images/vocab/
+ * and updates the JSON files.
+ *
  * Usage:
- *   npx tsx scripts/generate-vocabulary-images.ts [--dry-run] [--limit N] [--theme SLUG]
- * 
- * Prerequisites:
- *   - GOOGLE_APPLICATION_CREDENTIALS or gcloud ADC configured
- *   - GCS bucket "fuxie-audio" exists (reusing same bucket for media)
+ *   npx tsx scripts/generate-vocabulary-images.ts [--dry-run] [--force]
  */
 
-import { PrismaClient } from '@prisma/client'
-import { Storage } from '@google-cloud/storage'
-import { GoogleGenAI, Modality } from '@google/genai'
-import { writeFileSync, mkdirSync, existsSync } from 'fs'
-import path from 'path'
+import "dotenv/config";
+import fs from "fs";
+import path from "path";
+import { GoogleGenAI, Modality } from "@google/genai";
 
 // ===== CONFIG =====
-const GCS_BUCKET = process.env.GCS_BUCKET_AUDIO || 'fuxie-audio'
-const PROJECT_ID = process.env.GOOGLE_CLOUD_PROJECT || 'dmf-elearning'
-const BATCH_SIZE = 5 // Small batch for image gen (slower than TTS)
-const DELAY_MS = 2000 // 2s between batches to avoid rate limits
+const DELAY_MS = 6000; // 6 seconds to stay under 15 RPM
+const RETRY_DELAY_MS = 60000; // 60 seconds wait on quota error
+const MAX_RETRIES = 3;
+const LEVELS = ["a1", "a2", "b1", "b2", "c1", "c2"];
 
 // ===== ARGS =====
-const args = process.argv.slice(2)
-const DRY_RUN = args.includes('--dry-run')
-const limitIdx = args.indexOf('--limit')
-const LIMIT = limitIdx !== -1 ? parseInt(args[limitIdx + 1] || '0') : 0
-const themeIdx = args.indexOf('--theme')
-const THEME_FILTER = themeIdx !== -1 ? args[themeIdx + 1] : undefined
+const args = process.argv.slice(2);
+const DRY_RUN = args.includes("--dry-run");
+const FORCE = args.includes("--force");
 
 // ===== CLIENTS =====
-const prisma = new PrismaClient()
-const storage = new Storage()
-const bucket = storage.bucket(GCS_BUCKET)
-
-// Initialize Gemini with API key from env or ADC
-const GEMINI_API_KEY = process.env.GEMINI_API_KEY || process.env.GOOGLE_API_KEY || ''
-const genai = new GoogleGenAI({ apiKey: GEMINI_API_KEY })
-
-// ===== HELPERS =====
-function slugify(text: string): string {
-    return text
-        .toLowerCase()
-        .replace(/ä/g, 'ae').replace(/ö/g, 'oe').replace(/ü/g, 'ue').replace(/ß/g, 'ss')
-        .replace(/[^a-z0-9]/g, '-')
-        .replace(/-+/g, '-')
-        .replace(/^-|-$/g, '')
-}
+const GEMINI_API_KEY =
+  process.env.GEMINI_API_KEY || process.env.GOOGLE_API_KEY || "";
+const genai = new GoogleGenAI({ apiKey: GEMINI_API_KEY });
 
 function sleep(ms: number): Promise<void> {
-    return new Promise(resolve => setTimeout(resolve, ms))
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
+function slugify(text: string): string {
+  return text
+    .toLowerCase()
+    .replace(/ä/g, "ae")
+    .replace(/ö/g, "oe")
+    .replace(/ü/g, "ue")
+    .replace(/ß/g, "ss")
+    .replace(/[^a-z0-9]/g, "-")
+    .replace(/-+/g, "-")
+    .replace(/^-|-$/g, "");
 }
 
 function buildPrompt(word: string, meaningVi: string): string {
-    return `Create a simple, cute flat design illustration of "${word}" (${meaningVi}) for a language learning flashcard. 
-Style: Clean flat vector illustration, minimal details, soft pastel colors, white/transparent background, no text, no border. 
-Similar to Duolingo illustration style. Single centered object, 256x256 scale.`
-}
-
-interface VocabWord {
-    id: string
-    word: string
-    article: string | null
-    meaningVi: string
-    imageUrl: string | null
-    theme: { slug: string; name: string } | null
+  return `Create a simple, cute flat design illustration of "${word}" (${meaningVi}) for a language learning flashcard.
+Featuring a cute light blue fox mascot named Fuxie interacting with the object or concept.
+Style: Clean flat vector illustration, cheerful, educational, soft pastel colors with blue (#5B9BD5) and orange (#FF6B35) accent tones, white/transparent background, no text, no border.
+Single centered scene, 256x256 scale.`;
 }
 
 async function generateImage(prompt: string): Promise<Buffer | null> {
+  let retries = 0;
+  while (retries <= MAX_RETRIES) {
     try {
-        const response = await genai.models.generateContent({
-            model: 'gemini-2.0-flash-exp-image-generation',
-            contents: prompt,
-            config: {
-                responseModalities: [Modality.TEXT, Modality.IMAGE],
-            },
-        })
-
-        // Extract image from response
-        if (response.candidates?.[0]?.content?.parts) {
-            for (const part of response.candidates[0].content.parts) {
-                if (part.inlineData?.mimeType?.startsWith('image/')) {
-                    return Buffer.from(part.inlineData.data!, 'base64')
-                }
-            }
-        }
-        return null
-    } catch (err) {
-        console.error(`  Image gen error: ${err instanceof Error ? err.message : err}`)
-        return null
-    }
-}
-
-async function uploadToGCS(buffer: Buffer, gcsPath: string): Promise<string> {
-    const file = bucket.file(gcsPath)
-    await file.save(buffer, {
-        metadata: {
-            contentType: 'image/png',
-            cacheControl: 'public, max-age=31536000',
+      const response = await genai.models.generateContent({
+        model: "gemini-3.1-flash-image-preview",
+        contents: prompt,
+        config: {
+          responseModalities: [Modality.TEXT, Modality.IMAGE],
         },
-    })
-    return `https://storage.googleapis.com/${GCS_BUCKET}/${gcsPath}`
+      });
+
+      if (response.candidates?.[0]?.content?.parts) {
+        for (const part of response.candidates[0].content.parts) {
+          if (part.inlineData?.mimeType?.startsWith("image/")) {
+            return Buffer.from(part.inlineData.data!, "base64");
+          }
+        }
+      }
+      return null;
+    } catch (err) {
+      const msg = err instanceof Error ? err.message : String(err);
+      console.error(`  Image gen error: ${msg}`);
+      if (
+        msg.includes("429") ||
+        msg.toLowerCase().includes("quota") ||
+        msg.toLowerCase().includes("exhausted")
+      ) {
+        console.log(`  ⏳ Quota hit, waiting ${RETRY_DELAY_MS / 1000}s...`);
+        await sleep(RETRY_DELAY_MS);
+        retries++;
+      } else {
+        return null; // Fail immediately on non-quota errors
+      }
+    }
+  }
+  return null;
 }
 
 // ===== MAIN =====
 async function main() {
-    console.log('🦊 Fuxie Vocabulary Image Generator')
-    console.log('====================================')
-    console.log(`Bucket: ${GCS_BUCKET}`)
-    console.log(`Mode: ${DRY_RUN ? '🔍 DRY RUN' : '🔴 LIVE'}`)
-    if (LIMIT) console.log(`Limit: ${LIMIT}`)
-    if (THEME_FILTER) console.log(`Theme: ${THEME_FILTER}`)
-    console.log('')
+  console.log("🦊 Fuxie Vocabulary Image Generator (Local + File-First)");
+  console.log("========================================================");
+  console.log(`Mode: ${DRY_RUN ? "🔍 DRY RUN" : "🔴 LIVE"} | Force: ${FORCE}`);
+  console.log(`Delay between requests: ${DELAY_MS}ms\n`);
 
-    // Build where clause
-    const where: Record<string, unknown> = {
-        cefrLevel: 'A1',
-        wordType: 'NOMEN',
-        imageUrl: null,
-    }
-    if (THEME_FILTER) {
-        where.theme = { slug: THEME_FILTER }
-    }
+  const tasks: Array<{
+    level: string;
+    file: string;
+    themeSlug: string;
+    wordObj: any;
+    wordIdx: number;
+    path: string;
+  }> = [];
 
-    const words = await prisma.vocabularyItem.findMany({
-        where: where as any,
-        orderBy: [{ theme: { sortOrder: 'asc' } }, { word: 'asc' }],
-        take: LIMIT || undefined,
-        select: {
-            id: true,
-            word: true,
-            article: true,
-            meaningVi: true,
-            imageUrl: true,
-            theme: { select: { slug: true, name: true } },
-        },
-    })
+  for (const level of LEVELS) {
+    const dir = path.join("content", level, "vocabulary");
+    if (!fs.existsSync(dir)) continue;
 
-    const total = words.length
-    console.log(`📊 Found ${total} nouns without images`)
+    const files = fs.readdirSync(dir).filter((f) => f.endsWith(".json"));
+    for (const file of files) {
+      const fullPath = path.join(dir, file);
+      const data = JSON.parse(fs.readFileSync(fullPath, "utf8"));
+      if (!data.words || !Array.isArray(data.words)) continue;
 
-    if (total === 0) {
-        console.log('✅ All nouns already have images!')
-        return
-    }
+      const themeSlug = data.theme?.slug || "other";
 
-    let success = 0
-    let failed = 0
-    const errors: Array<{ word: string; error: string }> = []
-
-    for (let i = 0; i < words.length; i += BATCH_SIZE) {
-        const batch = words.slice(i, i + BATCH_SIZE)
-        console.log(`\n📦 Batch ${Math.floor(i / BATCH_SIZE) + 1}/${Math.ceil(total / BATCH_SIZE)} (${batch.length} words)`)
-
-        for (const word of batch) {
-            const themeSlug = word.theme?.slug || 'other'
-            const wordSlug = slugify(word.word)
-            const gcsPath = `images/a1/${themeSlug}/${wordSlug}.png`
-            const prompt = buildPrompt(word.word, word.meaningVi)
-
-            if (DRY_RUN) {
-                console.log(`  🔍 [DRY] ${word.word} → gs://${GCS_BUCKET}/${gcsPath}`)
-                continue
-            }
-
-            try {
-                // Generate image
-                const imageBuffer = await generateImage(prompt)
-                if (!imageBuffer) {
-                    console.log(`  ⚠️ ${word.word}: No image generated (skipped)`)
-                    failed++
-                    errors.push({ word: word.word, error: 'No image in response' })
-                    continue
-                }
-
-                // Upload to GCS
-                const publicUrl = await uploadToGCS(imageBuffer, gcsPath)
-
-                // Update DB
-                await prisma.vocabularyItem.update({
-                    where: { id: word.id },
-                    data: { imageUrl: publicUrl },
-                })
-
-                console.log(`  ✅ ${word.word} → ${publicUrl}`)
-                success++
-            } catch (err) {
-                const errorMsg = err instanceof Error ? err.message : String(err)
-                console.error(`  ❌ ${word.word}: ${errorMsg}`)
-                errors.push({ word: word.word, error: errorMsg })
-                failed++
-            }
-
-            // Small delay between individual image generations
-            await sleep(500)
+      for (let i = 0; i < data.words.length; i++) {
+        const word = data.words[i];
+        if (!word.imageUrl || FORCE) {
+          tasks.push({
+            level,
+            file,
+            themeSlug,
+            wordObj: word,
+            wordIdx: i,
+            path: fullPath,
+          });
         }
+      }
+    }
+  }
 
-        // Delay between batches
-        if (i + BATCH_SIZE < words.length) {
-            await sleep(DELAY_MS)
-        }
+  console.log(`📊 Found ${tasks.length} words needing images\n`);
+
+  if (tasks.length === 0) {
+    console.log("✅ All vocabulary words already have images!");
+    return;
+  }
+
+  let success = 0;
+  let failed = 0;
+  const errors: Array<{ word: string; error: string }> = [];
+
+  for (const task of tasks) {
+    const word = task.wordObj.word;
+    const wordSlug = slugify(word);
+    const themeSlug = task.themeSlug;
+
+    const imgDir = path.join(
+      "apps",
+      "web",
+      "public",
+      "images",
+      "vocab",
+      themeSlug,
+    );
+    if (!DRY_RUN && !fs.existsSync(imgDir)) {
+      fs.mkdirSync(imgDir, { recursive: true });
     }
 
-    // Summary
-    console.log('\n====================================')
-    console.log('📊 Summary:')
-    console.log(`  Total: ${total}`)
-    if (!DRY_RUN) {
-        console.log(`  ✅ Success: ${success}`)
-        console.log(`  ❌ Failed: ${failed}`)
+    const imgPath = path.join(imgDir, `${wordSlug}.png`);
+    const relativeImgPath = `/images/vocab/${themeSlug}/${wordSlug}.png`;
+    const prompt = buildPrompt(word, task.wordObj.meaningVi);
+
+    if (DRY_RUN) {
+      console.log(`🔍 [DRY] ${word} -> ${relativeImgPath}`);
+      continue;
     }
 
-    if (errors.length > 0) {
-        console.log('\n❌ Failed words:')
-        errors.forEach(e => console.log(`  - ${e.word}: ${e.error}`))
+    console.log(`🎨 Generating: ${word} (${wordSlug})...`);
+    const imageBuffer = await generateImage(prompt);
+
+    if (!imageBuffer) {
+      console.log(`  ⚠️ ${word}: No image generated (skipped)`);
+      failed++;
+      errors.push({ word, error: "No image in response" });
+      continue;
     }
 
-    console.log('\n🦊 Done!')
+    // Save image
+    fs.writeFileSync(imgPath, imageBuffer);
+
+    // Update JSON file directly
+    const fileContent = fs.readFileSync(task.path, "utf8");
+    const data = JSON.parse(fileContent);
+    data.words[task.wordIdx].imageUrl = relativeImgPath;
+    fs.writeFileSync(task.path, JSON.stringify(data, null, 2) + "\n");
+
+    console.log(`  ✅ Saved to ${relativeImgPath}`);
+    success++;
+
+    await sleep(DELAY_MS);
+  }
+
+  console.log("\n========================================");
+  console.log("📊 Summary:");
+  console.log(`  Total: ${tasks.length}`);
+  if (!DRY_RUN) {
+    console.log(`  ✅ Success: ${success}`);
+    console.log(`  ❌ Failed: ${failed}`);
+  }
+
+  if (errors.length > 0) {
+    console.log("\n❌ Failed words:");
+    errors.forEach((e) => console.log(`  - ${e.word}: ${e.error}`));
+  }
+
+  console.log("\n🦊 Done!");
 }
 
-main()
-    .catch(console.error)
-    .finally(() => prisma.$disconnect())
+main().catch(console.error);
