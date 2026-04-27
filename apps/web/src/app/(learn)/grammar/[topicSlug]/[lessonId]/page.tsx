@@ -3,7 +3,7 @@ import { cache } from 'react'
 import { prisma } from '@fuxie/database'
 import { cookies } from 'next/headers'
 import { getServerUser } from '@/lib/auth/server-auth'
-import { LessonPlayer } from '@/components/grammar/LessonPlayer'
+import { LessonPlayerDynamic } from '@/components/grammar/LessonPlayerDynamic'
 import type { TheoryBlock, GrammarExercise } from '@/components/grammar/types'
 
 const getGrammarLesson = cache(async (lessonId: string) => {
@@ -39,7 +39,7 @@ export default async function LessonPage({ params }: { params: Promise<{ topicSl
     const locale = (await cookies()).get('NEXT_LOCALE')?.value || 'vi'
 
     return (
-        <LessonPlayer
+        <LessonPlayerDynamic
             lessonId={lesson.id}
             titleDe={lesson.titleDe}
             titleNative={(lesson.translations as any)?.[locale] || lesson.titleDe}

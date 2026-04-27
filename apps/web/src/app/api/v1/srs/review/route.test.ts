@@ -141,6 +141,12 @@ describe('POST /api/v1/srs/review', () => {
                 updateStreak: true,
             }
         )
-        expect(cacheInvalidatePrefixMock).toHaveBeenCalledTimes(4)
+        expect(cacheInvalidatePrefixMock).toHaveBeenCalledTimes(6)
+        expect(cacheInvalidatePrefixMock).toHaveBeenCalledWith('srs:due:db-user-1')
+        expect(cacheInvalidatePrefixMock).toHaveBeenCalledWith('srs:progress:db-user-1')
+        expect(cacheInvalidatePrefixMock).toHaveBeenCalledWith('dash:stats:db-user-1')
+        expect(cacheInvalidatePrefixMock).toHaveBeenCalledWith('dash:content:db-user-1')
+        expect(cacheInvalidatePrefixMock).toHaveBeenCalledWith('dash:today-plan:db-user-1')
+        expect(cacheInvalidatePrefixMock).toHaveBeenCalledWith('personalization:today:db-user-1')
     })
 })

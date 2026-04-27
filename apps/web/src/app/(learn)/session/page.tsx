@@ -1,7 +1,7 @@
 import { redirect } from 'next/navigation'
 import { getServerUser } from '@/lib/auth/server-auth'
 import { prisma } from '@fuxie/database'
-import { SessionPlayer } from '@/components/session/SessionPlayer'
+import { SessionPlayerDynamic } from '@/components/session/SessionPlayerDynamic'
 
 export const metadata = {
     title: 'Fuxie 🦊 — Tự Động Học',
@@ -21,7 +21,7 @@ export default async function SessionPage() {
 
     return (
         <div className="min-h-[100dvh] bg-gray-50 flex flex-col">
-            <SessionPlayer level={level} />
+            <SessionPlayerDynamic level={level} />
         </div>
     )
 }

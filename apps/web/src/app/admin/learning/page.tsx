@@ -1,6 +1,6 @@
 import { prisma } from '@fuxie/database'
 import { getStudentRiskProfile, summarizeClassroomAnalytics } from '@/lib/analytics/teacher-analytics'
-import LearningClient from './LearningClient'
+import { LearningClientDynamic } from './LearningClientDynamic'
 
 export const dynamic = 'force-dynamic'
 
@@ -317,7 +317,7 @@ export default async function AdminLearningPage() {
     }))
 
   return (
-    <LearningClient
+    <LearningClientDynamic
       summary={summary}
       weakSkills={weakSkills}
       bottlenecks={bottlenecks}

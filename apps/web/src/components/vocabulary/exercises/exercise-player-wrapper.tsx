@@ -2,13 +2,7 @@
 
 import { useState, useEffect, useCallback } from 'react'
 import { useRouter } from 'next/navigation'
-import { McExercise } from './mc-exercise'
-import { MatchingExercise } from './matching-exercise'
-import { SpellingExercise } from './spelling-exercise'
-import { ClozeExercise } from './cloze-exercise'
-import { ScrambleExercise } from './scramble-exercise'
-import { SpeedExercise } from './speed-exercise'
-import { MixedExercise } from './mixed-exercise'
+import dynamic from 'next/dynamic'
 import { Mascot } from '@/components/ui/mascot'
 
 interface ExercisePlayerWrapperProps {
@@ -16,6 +10,20 @@ interface ExercisePlayerWrapperProps {
     theme: string
     level: string
 }
+
+const exerciseLoading = () => (
+    <div className="min-h-[100dvh] flex items-center justify-center bg-gray-50">
+        <div className="h-12 w-12 rounded-full border-4 border-[#004E89] border-t-transparent animate-spin" />
+    </div>
+)
+
+const McExercise = dynamic(() => import('./mc-exercise').then(mod => mod.McExercise), { ssr: false, loading: exerciseLoading })
+const MatchingExercise = dynamic(() => import('./matching-exercise').then(mod => mod.MatchingExercise), { ssr: false, loading: exerciseLoading })
+const SpellingExercise = dynamic(() => import('./spelling-exercise').then(mod => mod.SpellingExercise), { ssr: false, loading: exerciseLoading })
+const ClozeExercise = dynamic(() => import('./cloze-exercise').then(mod => mod.ClozeExercise), { ssr: false, loading: exerciseLoading })
+const ScrambleExercise = dynamic(() => import('./scramble-exercise').then(mod => mod.ScrambleExercise), { ssr: false, loading: exerciseLoading })
+const SpeedExercise = dynamic(() => import('./speed-exercise').then(mod => mod.SpeedExercise), { ssr: false, loading: exerciseLoading })
+const MixedExercise = dynamic(() => import('./mixed-exercise').then(mod => mod.MixedExercise), { ssr: false, loading: exerciseLoading })
 
 export function ExercisePlayerWrapper({ type, theme, level }: ExercisePlayerWrapperProps) {
     const router = useRouter()

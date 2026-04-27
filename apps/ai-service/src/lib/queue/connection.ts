@@ -1,4 +1,9 @@
+import path from 'node:path'
+import { config } from 'dotenv'
 import Redis from 'ioredis'
+
+config({ path: path.join(process.cwd(), '..', '..', '.env') })
+config()
 
 const redisUrl = process.env.REDIS_URL || ''
 

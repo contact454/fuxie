@@ -3,6 +3,7 @@ import { z } from 'zod'
 import { prisma, Prisma } from '@fuxie/database'
 import { handleApiError } from '@/lib/api/error-handler'
 import { requireTeacher } from '@/lib/auth/teacher-guard'
+import { cacheInvalidatePrefix } from '@/lib/cache/redis'
 
 const assignmentTargetTypes = [
   'xp',
@@ -76,6 +77,8 @@ export async function POST(request: NextRequest) {
 
       return newAssignment
     })
+
+    cacheInvalidatePrefix(`teacher:classrooms:${user.userId}`).catch(() => {})
 
     return NextResponse.json({
       success: true,

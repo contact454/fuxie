@@ -1,5 +1,5 @@
 import { prisma } from '@fuxie/database';
-import FeedbackClient from './FeedbackClient';
+import { FeedbackClientDynamic } from './FeedbackClientDynamic';
 
 export const dynamic = 'force-dynamic';
 
@@ -32,5 +32,5 @@ export default async function AdminFeedbackPage() {
     user: { email: fb.user.email }
   }));
 
-  return <FeedbackClient feedbacks={feedbacks} />;
+  return <FeedbackClientDynamic feedbacks={feedbacks} />;
 }

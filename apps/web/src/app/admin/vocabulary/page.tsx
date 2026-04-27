@@ -1,5 +1,5 @@
-import VocabClient from './VocabClient';
+import VocabClientDynamic from './VocabClientDynamic';
 
 export default function AdminVocabularyPage() {
-  return <VocabClient />;
+  return <VocabClientDynamic />;
 }

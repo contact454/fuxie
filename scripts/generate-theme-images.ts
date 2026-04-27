@@ -1,167 +1,169 @@
 /**
- * Generate Theme Images for Fuxie Vocabulary Themes
- * 
+ * Generate Theme Images for Fuxie Vocabulary Themes (File-First approach)
+ *
  * Generates illustrated circular icons for each vocabulary theme using
- * Google Gemini Imagen API, uploads to GCS, and updates the database.
- * 
+ * Google Gemini Imagen API. Saves locally to apps/web/public/images/themes/
+ * and updates the JSON files. Runs DB seed when complete.
+ *
  * Usage:
- *   npx tsx scripts/generate-theme-images.ts [--dry-run]
+ *   npx tsx scripts/generate-theme-images.ts [--all]
  */
 
-import 'dotenv/config'
-import { PrismaClient } from '@prisma/client'
-import { Storage } from '@google-cloud/storage'
-import { GoogleGenAI, Modality } from '@google/genai'
+import "dotenv/config";
+import fs from "fs";
+import path from "path";
+import { execSync } from "child_process";
+import { GoogleGenAI, Modality } from "@google/genai";
 
 // ===== CONFIG =====
-const GCS_BUCKET = process.env.GCS_BUCKET_AUDIO || 'fuxie-audio'
-const DELAY_MS = 3000
+const DELAY_MS = 6000; // 6 seconds to stay under 15 RPM
+const RETRY_DELAY_MS = 60000; // 60 seconds wait on quota error
+const MAX_RETRIES = 3;
+const LEVELS = ["a1", "a2", "b1", "b2", "c1", "c2"];
 
 // ===== ARGS =====
-const DRY_RUN = process.argv.includes('--dry-run')
+const RUN_ALL = process.argv.includes("--all");
 
 // ===== CLIENTS =====
-const prisma = new PrismaClient()
-const storage = new Storage()
-const bucket = storage.bucket(GCS_BUCKET)
-const GEMINI_API_KEY = process.env.GEMINI_API_KEY || process.env.GOOGLE_API_KEY || ''
-const genai = new GoogleGenAI({ apiKey: GEMINI_API_KEY })
+const GEMINI_API_KEY =
+  process.env.GEMINI_API_KEY || process.env.GOOGLE_API_KEY || "";
+const genai = new GoogleGenAI({ apiKey: GEMINI_API_KEY });
 
 function sleep(ms: number): Promise<void> {
-    return new Promise(resolve => setTimeout(resolve, ms))
+  return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
-// Theme-specific prompts for better results
-const THEME_PROMPTS: Record<string, string> = {
-    'a1-person': 'a friendly person standing and waving, wearing casual clothes',
-    'a1-familie-freunde': 'a happy family with parents and children together, warm and cozy',
-    'a1-koerper-gesundheit': 'a healthy human body outline with a heart and medical symbols',
-    'a1-wohnen': 'a cozy house with a door, windows, and a small garden',
-    'a1-umwelt': 'nature scene with a tree, sun, and clouds',
-    'a1-essen-trinken': 'a plate of food with bread, vegetables and a glass of water',
-    'a1-einkaufen': 'a shopping cart with some items and shopping bags',
-    'a1-dienstleistungen': 'a post office or bank building with service counter',
-    'a1-ausbildung-lernen': 'a school desk with books, notebook and pencil',
-    'a1-arbeit-beruf': 'a briefcase and office desk with a computer',
-    'a1-freizeit': 'a soccer ball, music notes, and a book for leisure time',
-    'a1-kommunikation': 'a speech bubble, telephone and letter envelope',
-    'a1-reisen-verkehr': 'a train, bus and road signs for travel and transport',
-    'a1-zeitangaben': 'a clock face, calendar and hourglass for time expressions',
-}
-
-function buildThemePrompt(slug: string, name: string): string {
-    const specific = THEME_PROMPTS[slug] || name
-    return `Create a cute, simple flat design circular icon illustration for a German language learning app theme called "${name}". 
-Show: ${specific}. 
-Style: Clean flat vector illustration, Duolingo-style, soft pastel colors with blue (#5B9BD5) and orange (#FF6B35) accent tones, white/transparent background, no text, no border. 
-The illustration should be contained within a soft circle shape. 256x256 scale.`
+function buildThemePrompt(name: string): string {
+  return `Create a cute, simple flat design circular icon illustration for a German language learning app theme called "${name}".
+Featuring a cute light blue fox mascot named Fuxie interacting with the theme.
+Style: Clean flat vector illustration, cheerful, educational, soft pastel colors with blue (#5B9BD5) and orange (#FF6B35) accent tones, solid background color, no text, no border.
+The illustration should be contained within a soft circle shape. 256x256 scale.`;
 }
 
 async function generateImage(prompt: string): Promise<Buffer | null> {
+  let retries = 0;
+  while (retries <= MAX_RETRIES) {
     try {
-        const response = await genai.models.generateContent({
-            model: 'gemini-2.0-flash-exp-image-generation',
-            contents: prompt,
-            config: {
-                responseModalities: [Modality.TEXT, Modality.IMAGE],
-            },
-        })
-
-        if (response.candidates?.[0]?.content?.parts) {
-            for (const part of response.candidates[0].content.parts) {
-                if (part.inlineData?.mimeType?.startsWith('image/')) {
-                    return Buffer.from(part.inlineData.data!, 'base64')
-                }
-            }
-        }
-        return null
-    } catch (err) {
-        console.error(`  Image gen error: ${err instanceof Error ? err.message : err}`)
-        return null
-    }
-}
-
-async function uploadToGCS(buffer: Buffer, gcsPath: string): Promise<string> {
-    const file = bucket.file(gcsPath)
-    await file.save(buffer, {
-        metadata: {
-            contentType: 'image/png',
-            cacheControl: 'public, max-age=31536000',
+      const response = await genai.models.generateContent({
+        model: "gemini-3.1-flash-image-preview",
+        contents: prompt,
+        config: {
+          responseModalities: [Modality.TEXT, Modality.IMAGE],
         },
-    })
-    return `https://storage.googleapis.com/${GCS_BUCKET}/${gcsPath}`
+      });
+
+      if (response.candidates?.[0]?.content?.parts) {
+        for (const part of response.candidates[0].content.parts) {
+          if (part.inlineData?.mimeType?.startsWith("image/")) {
+            return Buffer.from(part.inlineData.data!, "base64");
+          }
+        }
+      }
+      return null;
+    } catch (err) {
+      const msg = err instanceof Error ? err.message : String(err);
+      console.error(`  Image gen error: ${msg}`);
+      if (
+        msg.includes("429") ||
+        msg.toLowerCase().includes("quota") ||
+        msg.toLowerCase().includes("exhausted")
+      ) {
+        console.log(`  ⏳ Quota hit, waiting ${RETRY_DELAY_MS / 1000}s...`);
+        await sleep(RETRY_DELAY_MS);
+        retries++;
+      } else {
+        return null; // Fail immediately on non-quota errors
+      }
+    }
+  }
+  return null;
 }
 
 // ===== MAIN =====
 async function main() {
-    console.log('🦊 Fuxie Theme Image Generator')
-    console.log('================================')
-    console.log(`Bucket: ${GCS_BUCKET}`)
-    console.log(`Mode: ${DRY_RUN ? '🔍 DRY RUN' : '🔴 LIVE'}`)
-    console.log('')
+  console.log("🦊 Fuxie Bulk Theme Image Generator (Local + File-First)");
+  console.log("======================================================");
+  console.log(`Mode: ${RUN_ALL ? "ALL LEVELS" : "A2-C2 ONLY (Skipping A1)"}`);
+  console.log(`Delay between requests: ${DELAY_MS}ms\n`);
 
-    const themes = await prisma.vocabularyTheme.findMany({
-        where: { imageUrl: null },
-        select: { id: true, name: true, slug: true, nameVi: true },
-        orderBy: { sortOrder: 'asc' },
-    })
+  const activeLevels = RUN_ALL ? LEVELS : LEVELS.filter((l) => l !== "a1");
+  const tasks: Array<{ level: string; file: string; data: any; path: string }> =
+    [];
 
-    console.log(`📊 Found ${themes.length} themes without images\n`)
+  for (const level of activeLevels) {
+    const dir = path.join("content", level, "vocabulary");
+    if (!fs.existsSync(dir)) continue;
 
-    if (themes.length === 0) {
-        console.log('✅ All themes already have images!')
-        return
+    const files = fs.readdirSync(dir).filter((f) => f.endsWith(".json"));
+    for (const file of files) {
+      const fullPath = path.join(dir, file);
+      const data = JSON.parse(fs.readFileSync(fullPath, "utf8"));
+      if (data.theme) {
+        tasks.push({ level, file, data, path: fullPath });
+      }
+    }
+  }
+
+  console.log(`📊 Found ${tasks.length} themes to process\n`);
+
+  let success = 0;
+  let failed = 0;
+
+  // Ensure output directory exists
+  const imgDir = path.join("apps", "web", "public", "images", "themes");
+  if (!fs.existsSync(imgDir)) {
+    fs.mkdirSync(imgDir, { recursive: true });
+  }
+
+  for (const task of tasks) {
+    const theme = task.data.theme;
+    const slug = theme.slug;
+    const imgPath = path.join(imgDir, `${slug}.png`);
+    const relativeImgPath = `/images/themes/${slug}.png`;
+
+    const prompt = buildThemePrompt(theme.name);
+
+    console.log(
+      `🎨 Generating [${task.level.toUpperCase()}]: ${theme.name} (${slug})...`,
+    );
+    const imageBuffer = await generateImage(prompt);
+
+    if (!imageBuffer) {
+      console.log(`  ⚠️ ${theme.name}: No image generated (skipped)`);
+      failed++;
+      continue;
     }
 
-    let success = 0
-    let failed = 0
+    // Save image
+    fs.writeFileSync(imgPath, imageBuffer);
 
-    for (const theme of themes) {
-        const gcsPath = `images/themes/${theme.slug}.png`
-        const prompt = buildThemePrompt(theme.slug, theme.name)
+    // Update JSON
+    task.data.theme.imageUrl = relativeImgPath;
+    fs.writeFileSync(task.path, JSON.stringify(task.data, null, 2) + "\n");
 
-        if (DRY_RUN) {
-            console.log(`🔍 [DRY] ${theme.name} (${theme.slug}) → gs://${GCS_BUCKET}/${gcsPath}`)
-            console.log(`   Prompt: ${prompt.substring(0, 100)}...`)
-            continue
-        }
+    console.log(`  ✅ Saved to ${relativeImgPath}`);
+    success++;
 
-        try {
-            console.log(`🎨 Generating: ${theme.name} (${theme.slug})...`)
-            const imageBuffer = await generateImage(prompt)
-            if (!imageBuffer) {
-                console.log(`  ⚠️ ${theme.name}: No image generated (skipped)`)
-                failed++
-                continue
-            }
+    await sleep(DELAY_MS);
+  }
 
-            const publicUrl = await uploadToGCS(imageBuffer, gcsPath)
+  console.log("\n================================");
+  console.log("📊 Summary:");
+  console.log(`  Total: ${tasks.length}`);
+  console.log(`  ✅ Success: ${success}`);
+  console.log(`  ❌ Failed: ${failed}`);
 
-            await prisma.vocabularyTheme.update({
-                where: { id: theme.id },
-                data: { imageUrl: publicUrl },
-            })
+  console.log("\n🌱 Running Database Seed to sync local DB...");
+  try {
+    execSync("npx tsx packages/database/prisma/seed.ts", { stdio: "inherit" });
+    console.log("✅ Database seeded successfully!");
+  } catch (e) {
+    console.log(
+      "⚠️ Failed to run pnpm db:seed automatically. Please run it manually.",
+    );
+  }
 
-            console.log(`  ✅ ${theme.name} → ${publicUrl}`)
-            success++
-        } catch (err) {
-            console.error(`  ❌ ${theme.name}: ${err instanceof Error ? err.message : err}`)
-            failed++
-        }
-
-        await sleep(DELAY_MS)
-    }
-
-    console.log('\n================================')
-    console.log('📊 Summary:')
-    console.log(`  Total: ${themes.length}`)
-    if (!DRY_RUN) {
-        console.log(`  ✅ Success: ${success}`)
-        console.log(`  ❌ Failed: ${failed}`)
-    }
-    console.log('\n🦊 Done!')
+  console.log("\n🦊 All Done!");
 }
 
-main()
-    .catch(console.error)
-    .finally(() => prisma.$disconnect())
+main().catch(console.error);

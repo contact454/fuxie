@@ -2,6 +2,7 @@ import { NextRequest } from 'next/server'
 import { getTokens } from 'next-firebase-auth-edge'
 import { prisma, type UserRole } from '@fuxie/database'
 import { authConfig } from './config'
+import { DEV_AUTH_COOKIE, getDevAuthUser } from './dev-auth'
 
 export class AuthError extends Error {
     constructor(message: string = 'Unauthorized') {
@@ -22,6 +23,17 @@ export class NotFoundError extends Error {
  * Use this in API Route Handlers.
  */
 export async function withAuth(req: NextRequest): Promise<{ userId: string; email: string }> {
+    const devUser = getDevAuthUser(
+        req.cookies.get(DEV_AUTH_COOKIE)?.value ||
+        req.headers.get('x-fuxie-dev-user')
+    )
+    if (devUser) {
+        return {
+            userId: devUser.firebaseUid,
+            email: devUser.email,
+        }
+    }
+
     const tokens = await getTokens(req.cookies, authConfig)
 
     if (!tokens) {

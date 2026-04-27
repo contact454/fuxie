@@ -2,6 +2,7 @@ import { NextResponse } from 'next/server';
 import { prisma, WordType, Gender, CefrLevel } from '@fuxie/database';
 import { z } from 'zod';
 import { getServerUser } from '@/lib/auth/server-auth';
+import { cacheInvalidatePrefix } from '@/lib/cache/redis';
 
 const vocabularySchema = z.object({
   cefrLevel: z.nativeEnum(CefrLevel),
@@ -58,6 +59,10 @@ export async function POST(request: Request) {
         createdAt: true,
       },
     });
+
+    cacheInvalidatePrefix('vocab:list').catch(() => {});
+    cacheInvalidatePrefix('vocab:themes').catch(() => {});
+    cacheInvalidatePrefix('vocab:levels').catch(() => {});
 
     return NextResponse.json({ success: true, item: result }, { status: 201 });
   } catch (error: unknown) {

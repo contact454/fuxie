@@ -7,6 +7,7 @@ import { handleApiError } from '@/lib/api/error-handler'
 import { NextRequest, NextResponse } from 'next/server'
 import { gradeVocabularySubmission } from '@/lib/assessment/submission-grading'
 import { recordLearningActivity } from '@/lib/progress/learning-activity'
+import { invalidateLearnerProgressCaches } from '@/lib/progress/cache-invalidation'
 
 const VALID_LEVELS = ['A1', 'A2', 'B1', 'B2', 'C1', 'C2'] as const
 const VALID_TYPES = ['mc', 'matching', 'spelling', 'cloze', 'scramble', 'speed'] as const
@@ -113,6 +114,8 @@ export async function POST(req: NextRequest) {
                 progress,
             }
         })
+
+        invalidateLearnerProgressCaches(user.id).catch(() => {})
 
         return NextResponse.json({
             success: true,

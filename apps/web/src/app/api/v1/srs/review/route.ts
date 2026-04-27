@@ -6,10 +6,10 @@ import { getDbUserByFirebaseUid } from '@/lib/auth/db-user'
 import { handleApiError } from '@/lib/api/error-handler'
 import { calculateReview } from '@fuxie/srs-engine'
 import { countDueSrsCards, getDueSrsCards } from '@/lib/srs/due-cards'
-import { cacheInvalidatePrefix } from '@/lib/cache/redis'
 import { XP_REWARDS } from '@fuxie/shared/constants'
 import type { SrsRating } from '@fuxie/shared/types'
 import { recordLearningActivity } from '@/lib/progress/learning-activity'
+import { invalidateLearnerSrsCaches } from '@/lib/progress/cache-invalidation'
 
 /**
  * GET /api/v1/srs/review
@@ -119,10 +119,7 @@ export async function POST(req: NextRequest) {
             })
         })
 
-        cacheInvalidatePrefix(`srs:progress:${user.id}`).catch(() => {})
-        cacheInvalidatePrefix(`srs:due:${user.id}`).catch(() => {})
-        cacheInvalidatePrefix(`dash:stats:${user.id}`).catch(() => {})
-        cacheInvalidatePrefix(`dash:content:${user.id}`).catch(() => {})
+        invalidateLearnerSrsCaches(user.id).catch(() => {})
 
         return NextResponse.json({
             success: true,

@@ -3,7 +3,7 @@ import { prisma } from '@fuxie/database'
 import { cookies } from 'next/headers'
 import { getServerUser } from '@/lib/auth/server-auth'
 import { cacheWrap } from '@/lib/cache/redis'
-import SpeakingClient from '@/components/speaking/SpeakingClient'
+import { SpeakingClientDynamic } from '@/components/speaking/SpeakingClientDynamic'
 import type { SpeakingTopicData, CefrLevel } from '@/components/speaking/types'
 
 export const metadata = {
@@ -120,7 +120,7 @@ export default async function SpeakingPage() {
   const data = await getSpeakingData(serverUser.userId, defaultLevel)
 
   return (
-    <SpeakingClient
+    <SpeakingClientDynamic
       topics={data.topics as unknown as SpeakingTopicData[]}
       availableLevels={availableLevels}
       initialLevel={defaultLevel}

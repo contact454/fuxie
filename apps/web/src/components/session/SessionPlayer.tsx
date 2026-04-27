@@ -4,13 +4,25 @@ import { useState, useEffect, useCallback } from 'react'
 import { useRouter } from 'next/navigation'
 import { useTranslations } from 'next-intl'
 import Image from 'next/image'
+import dynamic from 'next/dynamic'
 import type { SessionItem } from '@/lib/session/builder'
 import type { ExerciseResult, ExerciseData } from '@/lib/session/types'
 
-import { IntroCard } from './exercises/IntroCard'
-import { MultipleChoice } from './exercises/MultipleChoice'
-import { TypingExercise } from './exercises/TypingExercise'
-import { SessionResultScreen } from './SessionResultScreen'
+const IntroCard = dynamic(() => import('./exercises/IntroCard').then(mod => mod.IntroCard), {
+    ssr: false,
+})
+
+const MultipleChoice = dynamic(() => import('./exercises/MultipleChoice').then(mod => mod.MultipleChoice), {
+    ssr: false,
+})
+
+const TypingExercise = dynamic(() => import('./exercises/TypingExercise').then(mod => mod.TypingExercise), {
+    ssr: false,
+})
+
+const SessionResultScreen = dynamic(() => import('./SessionResultScreen').then(mod => mod.SessionResultScreen), {
+    ssr: false,
+})
 
 export function SessionPlayer({ level }: { level: string }) {
     const router = useRouter()

@@ -1,7 +1,7 @@
 import { redirect, notFound } from 'next/navigation'
 import { prisma } from '@fuxie/database'
 import { getServerUser } from '@/lib/auth/server-auth'
-import ClassroomDetailClient from './ClassroomDetailClient'
+import { ClassroomDetailClientDynamic } from './ClassroomDetailClientDynamic'
 import { getStudentRiskProfile, summarizeClassroomAnalytics } from '@/lib/analytics/teacher-analytics'
 import { getClassroomInterventionRecommendations } from '@/lib/analytics/teacher-interventions'
 
@@ -145,7 +145,7 @@ export default async function ClassroomDetailPage({ params }: { params: Promise<
   const interventionResult = await getClassroomInterventionRecommendations(classroom.id, serverUser.userId)
 
   return (
-    <ClassroomDetailClient
+    <ClassroomDetailClientDynamic
       classroom={{
         id: classroom.id,
         name: classroom.name,

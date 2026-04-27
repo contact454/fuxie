@@ -1,20 +1,35 @@
 services:
   postgres:
     image: pgvector/pgvector:pg16
-    container_name: fuxie-postgres
+    container_name: fuxie-postgres-vector
     ports:
-      - "5433:5432"
+      - "5434:5432"
     environment:
       POSTGRES_USER: fuxie
       POSTGRES_PASSWORD: fuxie_dev
       POSTGRES_DB: fuxie_dev
     volumes:
-      - postgres_data:/var/lib/postgresql/data
+      - postgres_vector_data:/var/lib/postgresql/data
     healthcheck:
       test: ["CMD-SHELL", "pg_isready -U fuxie -d fuxie_dev"]
       interval: 5s
       timeout: 5s
       retries: 5
 
+  redis:
+    image: redis:7-alpine
+    container_name: fuxie-redis
+    ports:
+      - "6380:6379"
+    command: ["redis-server", "--appendonly", "yes"]
+    volumes:
+      - redis_data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
 volumes:
-  postgres_data:
+  postgres_vector_data:
+  redis_data:

@@ -3,7 +3,6 @@
 import { useState, useEffect, useMemo } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { motion, AnimatePresence, type Variants } from 'framer-motion'
 import { BookOpen, Headphones, PenTool, MessageCircle, Clock, Trophy, CheckCircle2, XCircle, ArrowRight, Library, Sparkles } from 'lucide-react'
 
 interface ExamEntry {
@@ -49,20 +48,6 @@ const getSkillIcon = (skillName: string) => {
         case 'SPRECHEN': return <MessageCircle className="w-3.5 h-3.5" />
         default: return <Library className="w-3.5 h-3.5" />
     }
-}
-
-// Animation Variants
-const containerVariant: Variants = {
-    hidden: { opacity: 0 },
-    show: {
-        opacity: 1,
-        transition: { staggerChildren: 0.1 }
-    }
-}
-
-const itemVariant: Variants = {
-    hidden: { opacity: 0, y: 20 },
-    show: { opacity: 1, y: 0, transition: { type: 'spring', stiffness: 300, damping: 24 } }
 }
 
 export function ExamListClient() {
@@ -137,26 +122,21 @@ export function ExamListClient() {
         <div className="max-w-5xl mx-auto px-4 py-8 pb-32">
             {/* Premium Header */}
             <div className="relative mb-12 flex flex-col items-center md:flex-row md:items-start gap-6 border-b border-gray-100 pb-8">
-                <motion.div 
-                    initial={{ scale: 0.8, opacity: 0, rotate: -10 }}
-                    animate={{ scale: 1, opacity: 1, rotate: 0 }}
-                    transition={{ type: "spring", bounce: 0.5, duration: 0.8 }}
-                    className="relative w-24 h-24 drop-shadow-2xl"
-                >
+                <div className="relative w-24 h-24 drop-shadow-2xl">
                     <Image src="/mascot/learn/fuxie-learn-graduation.png" alt="Fuxie Graduation" fill className="object-contain" />
-                </motion.div>
+                </div>
                 
                 <div className="text-center md:text-left pt-2">
-                    <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} className="flex items-center justify-center md:justify-start gap-2 mb-2">
+                    <div className="flex items-center justify-center md:justify-start gap-2 mb-2">
                         <Sparkles className="w-5 h-5 text-yellow-500 fill-yellow-500/20" />
                         <span className="text-sm font-bold tracking-wider text-yellow-600 uppercase">Zertifikatszentrum</span>
-                    </motion.div>
-                    <motion.h1 initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }} className="text-4xl font-extrabold text-gray-900 mb-2 tracking-tight">
+                    </div>
+                    <h1 className="text-4xl font-extrabold text-gray-900 mb-2 tracking-tight">
                         Prüfung üben
-                    </motion.h1>
-                    <motion.p initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className="text-gray-500 max-w-lg leading-relaxed">
+                    </h1>
+                    <p className="text-gray-500 max-w-lg leading-relaxed">
                         Thi thử và rèn luyện kỹ năng giải đề chính thức chuẩn khung viện Goethe, telc và ÖSD.
-                    </motion.p>
+                    </p>
                 </div>
             </div>
 
@@ -173,10 +153,8 @@ export function ExamListClient() {
                                     ${isActive ? 'text-white shadow-md' : 'text-gray-500 hover:text-gray-700 hover:bg-gray-200/50'}`}
                             >
                                 {isActive && (
-                                    <motion.div
-                                        layoutId="activeFilter"
+                                    <div
                                         className={`absolute inset-0 rounded-xl bg-gradient-to-r ${l === 'Alle' ? 'from-gray-800 to-gray-700 shadow-gray-400/20' : LEVEL_COLORS[l] || 'from-gray-800 to-gray-700'}`}
-                                        transition={{ type: "spring", stiffness: 300, damping: 25 }}
                                     />
                                 )}
                                 <span className="relative z-10">{l}</span>
@@ -194,24 +172,19 @@ export function ExamListClient() {
                     ))}
                 </div>
             ) : exams.length === 0 ? (
-                <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} className="text-center py-24 bg-white/50 backdrop-blur-sm rounded-3xl border border-gray-100 border-dashed">
+                <div className="text-center py-24 bg-white/50 backdrop-blur-sm rounded-3xl border border-gray-100 border-dashed">
                     <div className="w-24 h-24 mx-auto mb-6 opacity-60 mix-blend-luminosity">
                         <Image src="/mascot/core/fuxie-core-happy-wave.png" alt="Empty" width={96} height={96} />
                     </div>
                     <h3 className="text-xl font-bold text-gray-800 mb-2">Chưa có đề thi nào</h3>
                     <p className="text-gray-500">Chưa có đề thi nào trong hệ thống cho cấp độ này. Vui lòng Seed data.</p>
-                </motion.div>
+                </div>
             ) : (
                 <div className="space-y-12">
-                    <AnimatePresence mode="popLayout">
+                    <div>
                         {groupedExams.map((group) => (
-                            <motion.div 
+                            <div
                                 key={group.level}
-                                layout
-                                initial={{ opacity: 0, y: 20 }}
-                                animate={{ opacity: 1, y: 0 }}
-                                exit={{ opacity: 0, scale: 0.95 }}
-                                transition={{ duration: 0.4 }}
                                 className="relative"
                             >
                                 {/* Level Section Header */}
@@ -234,18 +207,13 @@ export function ExamListClient() {
                                                 {SKILL_NAMES[sg.skill] || sg.skill}
                                             </h3>
                                             
-                                            <motion.div 
-                                                variants={containerVariant}
-                                                initial="hidden"
-                                                animate="show"
+                                            <div
                                                 className="grid grid-cols-1 lg:grid-cols-2 gap-5"
                                             >
                                                 {sg.exams.map(exam => (
-                                                    <motion.div
+                                                    <div
                                                         key={exam.id}
-                                                        variants={itemVariant}
-                                                        whileHover={{ y: -4, scale: 1.01 }}
-                                                        className="group relative bg-white rounded-3xl p-6 border border-gray-200/60 shadow-[0_4px_24px_rgba(0,0,0,0.02)] hover:shadow-[0_12px_40px_rgba(0,0,0,0.08)] transition-all duration-300"
+                                                        className="group relative bg-white rounded-3xl p-6 border border-gray-200/60 shadow-[0_4px_24px_rgba(0,0,0,0.02)] hover:-translate-y-1 hover:scale-[1.01] hover:shadow-[0_12px_40px_rgba(0,0,0,0.08)] transition-all duration-300"
                                                     >
                                                         {/* decorative gradient blob hidden behind */}
                                                         <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-gray-50/50 to-white/10 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none" />
@@ -308,15 +276,15 @@ export function ExamListClient() {
                                                                 </Link>
                                                             </div>
                                                         </div>
-                                                    </motion.div>
+                                                    </div>
                                                 ))}
-                                            </motion.div>
+                                            </div>
                                         </div>
                                     ))}
                                 </div>
-                            </motion.div>
+                            </div>
                         ))}
-                    </AnimatePresence>
+                    </div>
                 </div>
             )}
         </div>

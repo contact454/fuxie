@@ -3,6 +3,7 @@ import { prisma } from '@fuxie/database'
 import { getServerUser } from '@/lib/auth/server-auth'
 import { z } from 'zod'
 import { calculateSpeakingXp, recordLearningActivity } from '@/lib/progress/learning-activity'
+import { invalidateLearnerProgressCaches } from '@/lib/progress/cache-invalidation'
 
 const SpeakingProgressSchema = z.object({
     lessonId: z.string().min(1),
@@ -70,6 +71,8 @@ export async function POST(req: NextRequest) {
                 exercisesCompleted: firstCompletion ? 0 : 1,
             })
         })
+
+        invalidateLearnerProgressCaches(serverUser.userId).catch(() => {})
 
         return NextResponse.json({
             ok: true,

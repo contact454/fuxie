@@ -3,6 +3,7 @@ import { prisma, Prisma } from '@fuxie/database'
 import { getServerUser } from '@/lib/auth/server-auth'
 import { gradeExamTask } from '@/lib/assessment/submission-grading'
 import { calculateExamXp, recordLearningActivity } from '@/lib/progress/learning-activity'
+import { invalidateLearnerProgressCaches } from '@/lib/progress/cache-invalidation'
 
 interface SubmitBody {
     attemptId: string
@@ -157,6 +158,8 @@ export async function POST(
                 exercisesCompleted: 1,
             })
         })
+
+        invalidateLearnerProgressCaches(user.userId).catch(() => {})
 
         return NextResponse.json({
             success: true,

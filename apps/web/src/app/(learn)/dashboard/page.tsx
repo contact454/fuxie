@@ -5,7 +5,7 @@ import { getServerUser } from '@/lib/auth/server-auth'
 import { cacheWrap } from '@/lib/cache/redis'
 import { getDashboardUserContext, getTodayActivitySummary } from '@/lib/dashboard/request-data'
 import { getTodayPlan } from '@/lib/personalization/today-plan'
-import { DashboardClient } from '@/components/dashboard/dashboard-client'
+import { DashboardClientDynamic } from '@/components/dashboard/DashboardClientDynamic'
 import { StatsSkeleton, ContentSkeleton } from '@/components/dashboard/dashboard-skeletons'
 
 import type { DashboardData } from '@/components/dashboard/dashboard-client'
@@ -231,7 +231,7 @@ async function DashboardStats({ userId }: { userId: string }) {
 
     // Stats need header data for study goal calculation
     return (
-        <DashboardClient
+        <DashboardClientDynamic
             section="stats"
             data={{ ...headerData, ...statsData } as Partial<DashboardData> as DashboardData}
         />
@@ -247,7 +247,7 @@ async function DashboardContent({ userId }: { userId: string }) {
     ])
 
     return (
-        <DashboardClient
+        <DashboardClientDynamic
             section="content"
             data={{ ...headerData, ...statsData, ...contentData, todayPlan } as DashboardData}
         />
@@ -268,7 +268,7 @@ export default async function DashboardPage() {
     return (
         <>
             {/* Header renders immediately — fast single query */}
-            <DashboardClient section="header" data={headerData as Partial<DashboardData> as DashboardData} />
+            <DashboardClientDynamic section="header" data={headerData as Partial<DashboardData> as DashboardData} />
 
             {/* Stats load independently with skeleton fallback */}
             <Suspense fallback={<StatsSkeleton />}>

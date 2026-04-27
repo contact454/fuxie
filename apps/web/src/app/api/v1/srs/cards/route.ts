@@ -4,6 +4,7 @@ import { prisma } from '@fuxie/database'
 import { withAuth, NotFoundError } from '@/lib/auth/middleware'
 import { getDbUserByFirebaseUid } from '@/lib/auth/db-user'
 import { handleApiError } from '@/lib/api/error-handler'
+import { invalidateLearnerSrsCaches } from '@/lib/progress/cache-invalidation'
 
 const createCardsSchema = z.object({
     themeSlug: z.string().optional(),
@@ -93,6 +94,8 @@ export async function POST(req: NextRequest) {
             })),
             skipDuplicates: true,
         })
+
+        invalidateLearnerSrsCaches(user.id).catch(() => {})
 
         return NextResponse.json({
             success: true,

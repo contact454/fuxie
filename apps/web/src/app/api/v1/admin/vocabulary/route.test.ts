@@ -3,13 +3,19 @@ import { beforeEach, describe, expect, it, vi } from 'vitest'
 const {
     getServerUserMock,
     createVocabularyItemMock,
+    cacheInvalidatePrefixMock,
 } = vi.hoisted(() => ({
     getServerUserMock: vi.fn(),
     createVocabularyItemMock: vi.fn(),
+    cacheInvalidatePrefixMock: vi.fn(),
 }))
 
 vi.mock('@/lib/auth/server-auth', () => ({
     getServerUser: getServerUserMock,
+}))
+
+vi.mock('@/lib/cache/redis', () => ({
+    cacheInvalidatePrefix: cacheInvalidatePrefixMock,
 }))
 
 vi.mock('@fuxie/database', () => ({
@@ -53,6 +59,7 @@ describe('POST /api/v1/admin/vocabulary', () => {
             wordType: 'NOMEN',
             cefrLevel: 'A1',
         })
+        cacheInvalidatePrefixMock.mockResolvedValue(undefined)
     })
 
     it('rejects unauthorized callers', async () => {
@@ -104,6 +111,9 @@ describe('POST /api/v1/admin/vocabulary', () => {
                 createdAt: true,
             },
         })
+        expect(cacheInvalidatePrefixMock).toHaveBeenCalledWith('vocab:list')
+        expect(cacheInvalidatePrefixMock).toHaveBeenCalledWith('vocab:themes')
+        expect(cacheInvalidatePrefixMock).toHaveBeenCalledWith('vocab:levels')
     })
 })
 

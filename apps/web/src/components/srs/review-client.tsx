@@ -2,8 +2,7 @@
 
 import { useState, useCallback, useRef, useEffect } from 'react'
 import Image from 'next/image'
-import { Flashcard } from './flashcard'
-import { RatingButtons } from './rating-buttons'
+import dynamic from 'next/dynamic'
 import { Mascot } from '@/components/ui/mascot'
 import { CEFR_THEME, getCefrTheme } from '@/lib/constants/cefr'
 
@@ -57,6 +56,15 @@ interface ReviewClientProps {
 type ViewMode = 'themes' | 'study' | 'srs'
 type Rating = 'AGAIN' | 'HARD' | 'GOOD' | 'EASY'
 
+const Flashcard = dynamic(() => import('./flashcard').then(mod => mod.Flashcard), {
+    ssr: false,
+    loading: () => <div className="mx-auto h-[360px] w-full max-w-lg rounded-2xl bg-gray-100 animate-pulse" />,
+})
+
+const RatingButtons = dynamic(() => import('./rating-buttons').then(mod => mod.RatingButtons), {
+    ssr: false,
+})
+
 // ─── Constants ──────────────────────────────────────
 
 
@@ -93,9 +101,6 @@ export function ReviewClient({ themes, availableLevels, initialLevel, dueCounts,
     const workerRef = useRef<Worker | null>(null)
 
     useEffect(() => {
-        // Initialize Web Worker for instant local SM-2 calc
-        workerRef.current = new Worker(new URL('../../workers/srs.worker.ts', import.meta.url))
-        
         return () => {
             if (srsAdvanceTimeoutRef.current) clearTimeout(srsAdvanceTimeoutRef.current)
             workerRef.current?.terminate()
@@ -165,6 +170,7 @@ export function ReviewClient({ themes, availableLevels, initialLevel, dueCounts,
     // ─── SRS Review Mode ────────────────────────────
     const startSrsReview = async (level?: string) => {
         const lvl = level ?? currentLevel
+        workerRef.current ??= new Worker(new URL('../../workers/srs.worker.ts', import.meta.url))
         setIsLoadingCards(true)
         setViewMode('srs')
         setSrsIndex(0)

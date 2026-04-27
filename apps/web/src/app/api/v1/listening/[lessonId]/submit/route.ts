@@ -5,6 +5,7 @@ import { getServerUser } from '@/lib/auth/server-auth'
 import { z } from 'zod'
 import { gradeListeningSubmission } from '@/lib/assessment/submission-grading'
 import { calculateListeningXp, recordLearningActivity } from '@/lib/progress/learning-activity'
+import { invalidateLearnerProgressCaches } from '@/lib/progress/cache-invalidation'
 
 const ListeningSubmitSchema = z.object({
     answers: z.record(z.string(), z.string()),
@@ -110,6 +111,8 @@ export async function POST(
                 progress: activity,
             }
         })
+
+        invalidateLearnerProgressCaches(serverUser.userId).catch(() => {})
 
         return NextResponse.json({
             success: true,

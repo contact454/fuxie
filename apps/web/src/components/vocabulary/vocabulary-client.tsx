@@ -3,6 +3,7 @@
 import { useState, useCallback, useRef, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
 import Link from 'next/link'
+import dynamic from 'next/dynamic'
 import { useLocale } from 'next-intl'
 
 import { Mascot } from '@/components/ui/mascot'
@@ -10,8 +11,16 @@ import { getCefrTheme } from '@/lib/constants/cefr'
 import { useLevelSwitcher } from '@/hooks/use-level-switcher'
 
 import { type Theme, type VocabItem } from './vocabulary-types'
-import { ThemeSelector } from './ThemeSelector'
-import { WordCard } from './WordCard'
+
+const ThemeSelector = dynamic(() => import('./ThemeSelector').then(mod => mod.ThemeSelector), {
+    ssr: false,
+    loading: () => <div className="mb-6 h-[138px] rounded-2xl bg-gray-50 border border-gray-100 animate-pulse" />,
+})
+
+const WordCard = dynamic(() => import('./WordCard').then(mod => mod.WordCard), {
+    ssr: false,
+    loading: () => <div className="h-[132px] rounded-xl border border-gray-100 bg-gray-50 animate-pulse" />,
+})
 
 // ─── Props ──────────────────────────────────────────
 interface VocabularyClientProps {

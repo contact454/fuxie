@@ -2,16 +2,19 @@ import { beforeEach, describe, expect, it, vi } from 'vitest'
 
 const {
     getServerUserMock,
+    invalidateServerUserCacheMock,
     findUserMock,
     updateUserMock,
 } = vi.hoisted(() => ({
     getServerUserMock: vi.fn(),
+    invalidateServerUserCacheMock: vi.fn(),
     findUserMock: vi.fn(),
     updateUserMock: vi.fn(),
 }))
 
 vi.mock('@/lib/auth/server-auth', () => ({
     getServerUser: getServerUserMock,
+    invalidateServerUserCache: invalidateServerUserCacheMock,
 }))
 
 vi.mock('@fuxie/database', () => ({
@@ -38,9 +41,11 @@ describe('PATCH /api/v1/admin/users/role', () => {
             email: 'admin@fuxie.test',
             role: 'ADMIN',
         })
+        invalidateServerUserCacheMock.mockResolvedValue(undefined)
         findUserMock.mockResolvedValue({
             id: 'user-1',
             email: 'teacher@fuxie.test',
+            firebaseUid: 'firebase-teacher-1',
         })
         updateUserMock.mockResolvedValue({
             id: 'user-1',
@@ -109,6 +114,7 @@ describe('PATCH /api/v1/admin/users/role', () => {
                 updatedAt: true,
             },
         })
+        expect(invalidateServerUserCacheMock).toHaveBeenCalledWith('firebase-teacher-1')
     })
 })
 

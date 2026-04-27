@@ -1,7 +1,7 @@
 import { redirect } from 'next/navigation'
 import { prisma } from '@fuxie/database'
 import { getServerUser } from '@/lib/auth/server-auth'
-import ClassroomsClient from './ClassroomsClient'
+import { ClassroomsClientDynamic } from './ClassroomsClientDynamic'
 
 export const metadata = {
   title: 'Lớp học | Fuxie Teacher',
@@ -31,5 +31,5 @@ export default async function ClassroomsPage() {
     createdAt: c.createdAt.toISOString(),
   }))
 
-  return <ClassroomsClient initialClassrooms={formatted} />
+  return <ClassroomsClientDynamic initialClassrooms={formatted} />
 }

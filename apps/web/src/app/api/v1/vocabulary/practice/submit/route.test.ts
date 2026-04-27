@@ -8,6 +8,7 @@ const {
     createAttemptMock,
     transactionMock,
     recordLearningActivityMock,
+    invalidateLearnerProgressCachesMock,
 } = vi.hoisted(() => ({
     withAuthMock: vi.fn(),
     getDbUserByFirebaseUidMock: vi.fn(),
@@ -16,6 +17,7 @@ const {
     createAttemptMock: vi.fn(),
     transactionMock: vi.fn(),
     recordLearningActivityMock: vi.fn(),
+    invalidateLearnerProgressCachesMock: vi.fn(),
 }))
 
 vi.mock('@/lib/auth/middleware', () => ({
@@ -41,6 +43,10 @@ vi.mock('@fuxie/database', () => ({
 
 vi.mock('@/lib/progress/learning-activity', () => ({
     recordLearningActivity: recordLearningActivityMock,
+}))
+
+vi.mock('@/lib/progress/cache-invalidation', () => ({
+    invalidateLearnerProgressCaches: invalidateLearnerProgressCachesMock,
 }))
 
 import { POST } from './route'
@@ -73,6 +79,7 @@ describe('POST /api/v1/vocabulary/practice/submit', () => {
                 isNewDay: false,
             },
         })
+        invalidateLearnerProgressCachesMock.mockResolvedValue(undefined)
         transactionMock.mockImplementation(async (callback: (tx: any) => Promise<any>) =>
             callback({
                 vocabExerciseAttempt: {
@@ -134,6 +141,7 @@ describe('POST /api/v1/vocabulary/practice/submit', () => {
                 exercisesCompleted: 1,
             })
         )
+        expect(invalidateLearnerProgressCachesMock).toHaveBeenCalledWith('db-user-1')
     })
 
     it('returns a validation error for malformed payloads', async () => {
