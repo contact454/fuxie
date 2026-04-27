@@ -720,7 +720,7 @@ remaining risks.
   - Runtime performance work, dynamic splitting, cache invalidation, aggregate
     query/index work, content/image hygiene, and service-runtime artifacts are
     separated into reviewable commits.
-  - No push or PR has been created from this local branch yet.
+  - Draft PR: `https://github.com/contact454/fuxie/pull/1`.
 
 ## Completed Execution Slice - Branch Push And PR
 
@@ -759,10 +759,8 @@ exact compare URL for manual PR creation.
 
 - Created local branch `codex/performance-optimization`.
 - Pushed branch to `origin/codex/performance-optimization`.
-- PR automation was unavailable locally because `gh` is not installed and no
-  GitHub API token environment variable was present.
-- Manual PR URL:
-  `https://github.com/contact454/fuxie/pull/new/codex/performance-optimization`
+- GitHub CLI was installed and authenticated as `contact454`.
+- Created draft PR: `https://github.com/contact454/fuxie/pull/1`.
 
 ## Open Risks
 
