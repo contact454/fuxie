@@ -9,6 +9,14 @@ import {
     recordLearningActivity,
 } from './learning-activity'
 
+const FROZEN_NOW = new Date('2026-04-23T08:30:00.000Z')
+
+function startOfProcessLocalDay(date: Date) {
+    const day = new Date(date)
+    day.setHours(0, 0, 0, 0)
+    return day
+}
+
 describe('learning activity helpers', () => {
     it('uses standardized XP values per skill flow', () => {
         expect(calculateExamXp(false)).toBe(10)
@@ -27,7 +35,7 @@ describe('learning activity helpers', () => {
 describe('recordLearningActivity', () => {
     beforeEach(() => {
         vi.useFakeTimers()
-        vi.setSystemTime(new Date('2026-04-23T08:30:00.000Z'))
+        vi.setSystemTime(FROZEN_NOW)
     })
 
     afterEach(() => {
@@ -84,7 +92,7 @@ describe('recordLearningActivity', () => {
             where: {
                 userId_date: {
                     userId: 'user-1',
-                    date: new Date('2026-04-22T17:00:00.000Z'),
+                    date: startOfProcessLocalDay(FROZEN_NOW),
                 },
             },
             update: {
@@ -97,7 +105,7 @@ describe('recordLearningActivity', () => {
             },
             create: {
                 userId: 'user-1',
-                date: new Date('2026-04-22T17:00:00.000Z'),
+                date: startOfProcessLocalDay(FROZEN_NOW),
                 xpEarned: 10,
                 totalMinutes: 2,
                 lessonsCompleted: 1,
@@ -176,7 +184,7 @@ describe('recordLearningActivity', () => {
             data: {
                 currentStreak: 7,
                 longestStreak: 7,
-                lastActivityDate: new Date('2026-04-22T17:00:00.000Z'),
+                lastActivityDate: startOfProcessLocalDay(FROZEN_NOW),
             },
         })
         expect(tx.userProfile.updateMany).toHaveBeenCalledWith({

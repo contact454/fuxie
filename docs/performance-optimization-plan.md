@@ -762,6 +762,55 @@ exact compare URL for manual PR creation.
 - GitHub CLI was installed and authenticated as `contact454`.
 - Created draft PR: `https://github.com/contact454/fuxie/pull/1`.
 
+## Execution Slice - CI Timezone Test Stabilization
+
+Date: 2026-04-27
+
+### Prompt
+
+Act as the CI stabilization engineer for the already pushed performance PR.
+GitHub Actions failed in `pnpm check` because one progress helper test
+hard-coded the Asia/Saigon representation of local midnight, while the runtime
+code intentionally derives the day boundary with `Date#setHours(0, 0, 0, 0)` in
+the current process timezone. Make the test deterministic across local Windows
+and GitHub Actions UTC without changing production behavior or the performance
+implementation.
+
+### Backlog
+
+1. Confirm the failing assertions are limited to
+   `apps/web/src/lib/progress/learning-activity.test.ts`.
+2. Replace hard-coded midnight timestamps with a test-local helper that computes
+   the same process-local day boundary used by the production helper.
+3. Run the targeted web test locally.
+4. Run the relevant quality gate after the focused fix.
+5. Commit and push the CI-only test stabilization to the existing PR branch.
+
+### Non-Goals
+
+- Do not change `recordLearningActivity` runtime behavior.
+- Do not change performance indexes, cache behavior, or dynamic import work.
+- Do not mark the PR ready until GitHub Actions is green.
+
+### Acceptance Criteria
+
+- The failing progress test passes regardless of whether the process timezone is
+  UTC or Asia/Saigon.
+- The existing performance PR branch receives a narrow follow-up commit.
+- GitHub Actions is rechecked after push.
+
+### Slice Results
+
+- GitHub Actions failure was limited to two timezone-sensitive assertions in
+  `apps/web/src/lib/progress/learning-activity.test.ts`.
+- The test now computes the expected date with the same process-local midnight
+  logic as the runtime helper instead of hard-coding an Asia/Saigon timestamp.
+- Targeted verification passed:
+  - `pnpm --filter @fuxie/web test -- src/lib/progress/learning-activity.test.ts`
+  - `TZ=UTC pnpm --filter @fuxie/web test -- src/lib/progress/learning-activity.test.ts`
+- Full local gate passed:
+  - `pnpm check`
+
 ## Open Risks
 
 - A local perf result can be noisy because Next dev compilation affects cold
