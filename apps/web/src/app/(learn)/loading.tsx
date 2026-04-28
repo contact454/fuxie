@@ -10,7 +10,7 @@ export default function LearnLoading() {
                 </div>
 
                 <p className="text-gray-400 text-sm font-medium animate-pulse">
-                    Wird geladen...
+                    Đang tải...
                 </p>
             </div>
         </div>

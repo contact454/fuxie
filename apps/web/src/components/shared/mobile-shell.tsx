@@ -1,11 +1,12 @@
 'use client'
 
 import { useState, useEffect, useCallback } from 'react'
-import Link from 'next/link'
 import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 import { useTranslations } from 'next-intl'
 import { Sidebar } from './sidebar'
+import { MeasuredLink } from '@/components/performance/measured-link'
+import { LearnerNavigationTimingMarker } from '@/components/performance/learner-navigation-timing-marker'
 
 // Bottom nav items — max 5 for mobile UX
 const bottomNavItems = [
@@ -77,7 +78,7 @@ export function MobileShell({ dailyGoal: initialDailyGoal, children }: MobileShe
                     </svg>
                 </button>
 
-                <Link href="/dashboard" className="mobile-header-logo">
+                <MeasuredLink href="/dashboard" flow="nav.mobile.logo" source="dashboard" className="mobile-header-logo">
                     <Image
                         src="/mascot/core/fuxie-core-happy-wave.png"
                         alt="Fuxie"
@@ -88,7 +89,7 @@ export function MobileShell({ dailyGoal: initialDailyGoal, children }: MobileShe
                     <span className="text-lg font-bold bg-gradient-to-r from-[#FF6B35] to-[#004E89] bg-clip-text text-transparent">
                         Fuxie
                     </span>
-                </Link>
+                </MeasuredLink>
 
                 {dailyGoal && (
                     <div className="mobile-header-xp">
@@ -135,6 +136,7 @@ export function MobileShell({ dailyGoal: initialDailyGoal, children }: MobileShe
             {/* ===== MAIN CONTENT ===== */}
             <main className="mobile-main md:ml-64">
                 {children}
+                <LearnerNavigationTimingMarker />
             </main>
 
             {/* ===== BOTTOM NAV (< md) ===== */}
@@ -142,14 +144,16 @@ export function MobileShell({ dailyGoal: initialDailyGoal, children }: MobileShe
                 {bottomNavItems.map((item) => {
                     const isActive = pathname === item.href || pathname.startsWith(item.href + '/')
                     return (
-                        <Link
+                        <MeasuredLink
                             key={item.href}
                             href={item.href}
+                            flow="nav.mobile.bottom"
+                            source={item.labelKey}
                             className={`bottom-nav-item ${isActive ? 'bottom-nav-item-active' : ''}`}
                         >
                             <span className="bottom-nav-icon">{item.icon}</span>
                             <span className="bottom-nav-label">{t(item.labelKey as any)}</span>
-                        </Link>
+                        </MeasuredLink>
                     )
                 })}
             </nav>

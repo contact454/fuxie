@@ -180,7 +180,7 @@ function StimulusBox({ sourceText, sourceTextType, cefrLevel, colors }: {
             <div className="rounded-xl border border-gray-200 bg-gray-50/50 overflow-hidden">
                 <div className="flex items-center gap-2 px-3 py-2 bg-gray-100 border-b border-gray-200">
                     <span className="text-sm">📰</span>
-                    <span className="text-xs font-bold text-gray-800">Zeitungsartikel</span>
+                    <span className="text-xs font-bold text-gray-800">Bài báo</span>
                 </div>
                 <div className="px-3 py-2.5">
                     <p className="text-xs text-gray-700 leading-relaxed whitespace-pre-wrap">{sourceText}</p>
@@ -194,7 +194,7 @@ function StimulusBox({ sourceText, sourceTextType, cefrLevel, colors }: {
             <div className="rounded-xl border border-purple-200 bg-purple-50/50 overflow-hidden">
                 <div className="flex items-center gap-2 px-3 py-2 bg-purple-100/60 border-b border-purple-200">
                     <span className="text-sm">🎤</span>
-                    <span className="text-xs font-bold text-purple-800">Mündlicher Vortrag</span>
+                    <span className="text-xs font-bold text-purple-800">Bài thuyết trình</span>
                 </div>
                 <div className="px-3 py-2.5">
                     <p className="text-xs text-gray-700 leading-relaxed whitespace-pre-wrap italic">{sourceText}</p>
@@ -209,7 +209,7 @@ function StimulusBox({ sourceText, sourceTextType, cefrLevel, colors }: {
             <div className="flex items-center gap-2 px-3 py-2 border-b" style={{ backgroundColor: colors.bg, borderColor: colors.bg }}>
                 <span className="text-sm">📄</span>
                 <span className="text-xs font-bold" style={{ color: colors.text }}>
-                    {sourceTextType || 'Ausgangstext'}
+                    {sourceTextType || 'Văn bản nguồn'}
                 </span>
             </div>
             <div className="px-3 py-2.5 bg-white">
@@ -407,14 +407,14 @@ export function WritingPlayer(props: WritingPlayerProps) {
                         onClick={() => { setText(''); setFormValues({}); setTimeElapsed(0); setFeedback(null); setPhase('writing') }}
                         className="px-6 py-3 rounded-xl border-2 border-gray-200 text-gray-700 font-bold text-sm hover:bg-gray-50 transition-all"
                     >
-                        🔄 Nochmal versuchen
+                        🔄 Thử lại
                     </button>
                     <button
                         onClick={() => router.push('/writing')}
                         className="px-6 py-3 rounded-xl text-white font-bold text-sm hover:opacity-90 transition-all shadow-lg"
                         style={{ background: colors.css, boxShadow: `0 4px 16px ${colors.shadow}` }}
                     >
-                        Nächste Aufgabe →
+                        Bài tiếp theo →
                     </button>
                 </div>
             </div>
@@ -448,7 +448,7 @@ export function WritingPlayer(props: WritingPlayerProps) {
                     <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-5">
                         <div className="flex items-center gap-2 mb-3">
                             <span className="text-xl">✏️</span>
-                            <h2 className="text-lg font-bold text-gray-900">Aufgabe</h2>
+                            <h2 className="text-lg font-bold text-gray-900">Đề bài</h2>
                         </div>
 
                         {/* Text Type + Register badges */}
@@ -484,7 +484,7 @@ export function WritingPlayer(props: WritingPlayerProps) {
                             <div className="mt-3 mb-3 p-3 bg-indigo-50 rounded-xl border border-indigo-100">
                                 <div className="flex items-center gap-2 mb-2">
                                     <span className="text-sm">📊</span>
-                                    <span className="text-xs font-bold text-indigo-700">Grafik</span>
+                                    <span className="text-xs font-bold text-indigo-700">Biểu đồ</span>
                                 </div>
                                 <p className="text-xs text-indigo-600 leading-relaxed">{props.grafikDesc}</p>
                             </div>
@@ -492,7 +492,7 @@ export function WritingPlayer(props: WritingPlayerProps) {
 
                         {/* Content Points */}
                         <div className="border-t border-gray-100 pt-3">
-                            <h4 className="text-sm font-bold text-gray-700 mb-2">📋 Inhaltspunkte:</h4>
+                            <h4 className="text-sm font-bold text-gray-700 mb-2">📋 Ý cần viết:</h4>
                             <ul className="space-y-1.5">
                                 {props.contentPoints.map((point, i) => (
                                     <li key={i} className="flex items-start gap-2 text-sm text-gray-600">
@@ -509,7 +509,7 @@ export function WritingPlayer(props: WritingPlayerProps) {
                         {/* Word count + time requirements */}
                         <div className="flex gap-2 mt-4 pt-3 border-t border-gray-100">
                             <span className="text-xs font-medium px-2.5 py-1 rounded-lg bg-blue-50 text-blue-700">
-                                📏 {props.minWords}{props.maxWords ? `-${props.maxWords}` : '+'} Wörter
+                                📏 {props.minWords}{props.maxWords ? `-${props.maxWords}` : '+'} từ
                             </span>
                             <span className="text-xs font-medium px-2.5 py-1 rounded-lg bg-purple-50 text-purple-700">
                                 ⏱️ {props.timeMinutes} min
@@ -548,7 +548,7 @@ export function WritingPlayer(props: WritingPlayerProps) {
                                     ref={textareaRef}
                                     value={text}
                                     onChange={e => setText(e.target.value)}
-                                    placeholder="Schreiben Sie hier Ihren Text..."
+                                    placeholder="Viết bài của em tại đây..."
                                     className="flex-1 w-full min-h-[320px] p-4 rounded-xl border border-gray-200 text-sm text-gray-800 leading-relaxed resize-none focus:outline-none focus:ring-2 transition-all placeholder:text-gray-300"
                                     style={{ '--tw-ring-color': colors.text } as any}
                                     disabled={phase === 'submitting'}
@@ -556,7 +556,7 @@ export function WritingPlayer(props: WritingPlayerProps) {
                                 {/* Word counter */}
                                 <div className="flex justify-end mt-2">
                                     <span className={`text-sm font-medium ${getWordCountColor()}`}>
-                                        {wordCount} / {props.minWords}{props.maxWords ? `-${props.maxWords}` : '+'} Wörter
+                                        {wordCount} / {props.minWords}{props.maxWords ? `-${props.maxWords}` : '+'} từ
                                     </span>
                                 </div>
                             </div>
@@ -583,10 +583,10 @@ export function WritingPlayer(props: WritingPlayerProps) {
                                 {phase === 'submitting' ? (
                                     <>
                                         <span className="animate-spin">⏳</span>
-                                        KI bewertet...
+                                        AI đang chấm...
                                     </>
                                 ) : (
-                                    <>Abgeben →</>
+                                    <>Nộp bài →</>
                                 )}
                             </button>
                         </div>

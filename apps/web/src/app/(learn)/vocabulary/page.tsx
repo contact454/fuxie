@@ -2,11 +2,11 @@ import { redirect } from 'next/navigation'
 import { getServerUser } from '@/lib/auth/server-auth'
 import { getVocabularyLevels, getVocabularyThemes, mapVocabularyThemes, type CefrLevel } from '@/lib/content/vocabulary'
 import { getVocabularyThemeSrsProgress } from '@/lib/srs/stats'
-import { VocabularyClientDynamic } from '@/components/vocabulary/VocabularyClientDynamic'
+import { VocabularyClient } from '@/components/vocabulary/vocabulary-client'
 
 export const metadata = {
-    title: 'Fuxie 🦊 — Wortschatz',
-    description: 'Deutsche Vokabeln — Browse and learn vocabulary by CEFR level',
+    title: 'Fuxie - Từ vựng',
+    description: 'Học từ vựng tiếng Đức theo cấp độ CEFR',
 }
 
 async function getThemes(userId: string | null, cefrLevel: CefrLevel, locale: string) {
@@ -53,7 +53,7 @@ export default async function VocabularyPage() {
 
     return (
         <div className="max-w-5xl mx-auto px-4 py-8">
-            <VocabularyClientDynamic
+            <VocabularyClient
                 themes={themes}
                 totalWords={totalWords}
                 totalDue={totalDue}

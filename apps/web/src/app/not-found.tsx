@@ -9,7 +9,7 @@ export default function NotFound() {
                 <div className="mb-6">
                     <Image
                         src="/mascot/state/fuxie-state-error.png"
-                        alt="Fuxie ist verwirrt"
+                        alt="Fuxie bối rối"
                         width={120}
                         height={120}
                         className="mx-auto object-contain"
@@ -22,12 +22,12 @@ export default function NotFound() {
                 </div>
 
                 <h2 className="text-xl font-bold text-gray-900 mb-2">
-                    Seite nicht gefunden
+                    Không tìm thấy trang
                 </h2>
                 <p className="text-gray-500 text-sm mb-8 leading-relaxed">
-                    Hmm, diese Seite gibt es leider nicht.
+                    Hmm, trang này không tồn tại.
                     <br />
-                    Fuxie hilft dir, zurück zum Lernen zu finden! 🦊
+                    Fuxie đưa em quay lại học tiếp nhé.
                 </p>
 
                 <div className="flex gap-3">
@@ -35,13 +35,13 @@ export default function NotFound() {
                         href="/dashboard"
                         className="flex-1 py-3 px-4 rounded-xl bg-gradient-to-r from-fuxie-primary to-[#e55a25] text-white font-semibold text-sm hover:shadow-lg hover:shadow-orange-200 transition-all text-center"
                     >
-                        Zum Dashboard
+                        Về bảng điều khiển
                     </Link>
                     <Link
                         href="/"
                         className="flex-1 py-3 px-4 rounded-xl border-2 border-gray-200 text-gray-600 font-semibold text-sm hover:bg-gray-50 transition-all text-center"
                     >
-                        Startseite
+                        Trang chủ
                     </Link>
                 </div>
             </div>

@@ -54,7 +54,7 @@ export function MCRenderer({ content, answer, onChange }: Props) {
             <div className="lg:w-[52%] px-6 pt-4 pb-2">
                 <div className="flex items-center justify-between mb-4">
                     <h4 className="text-xs font-semibold text-gray-400 uppercase tracking-wider flex items-center gap-1.5">
-                        ✏️ Aufgaben
+                        ✏️ Câu hỏi
                     </h4>
                     <span className="text-[10px] font-medium text-gray-400 bg-gray-100 px-2 py-1 rounded-full">
                         {answeredCount}/{data.items.length}

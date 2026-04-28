@@ -1,17 +1,46 @@
 import { redirect } from 'next/navigation'
 import { prisma } from '@fuxie/database'
 import { getServerUser } from '@/lib/auth/server-auth'
-import { cacheWrap } from '@/lib/cache/redis'
-import { ReadingClientDynamic } from '@/components/reading/ReadingClientDynamic'
+import { cacheGet, cacheSet } from '@/lib/cache/redis'
+import { ReadingClient } from '@/components/reading/reading-client'
 import { getReadingExerciseList, getReadingLevels, type CefrLevel } from '@/lib/content/reading'
 
 export const metadata = {
-    title: 'Fuxie 🦊 — Leseverstehen',
-    description: 'Deutsche Leseverstehen — Practice reading comprehension by CEFR level',
+    title: 'Fuxie - Luyện đọc',
+    description: 'Luyện đọc tiếng Đức theo trình độ CEFR',
+}
+
+type ReadingExerciseList = Awaited<ReturnType<typeof getReadingExerciseList>>
+
+function getReadingWordCount(meta: any): number | null {
+    if (typeof meta?.word_count === 'number') return meta.word_count
+
+    const segmentCounts = [
+        meta?.word_count_text_a,
+        meta?.word_count_text_b,
+        meta?.word_count_text_c,
+        meta?.word_count_text_d,
+    ].filter((count): count is number => typeof count === 'number')
+
+    return segmentCounts.length > 0
+        ? segmentCounts.reduce((sum, count) => sum + count, 0)
+        : null
+}
+
+async function getCachedReadingExerciseList(cefrLevel: CefrLevel): Promise<ReadingExerciseList> {
+    const cacheKey = `reading:exercises:v3:${cefrLevel}`
+    const cached = await cacheGet<ReadingExerciseList>(cacheKey)
+    if (cached && cached.length > 0) return cached
+
+    const exercises = await getReadingExerciseList(cefrLevel)
+    if (exercises.length > 0) {
+        await cacheSet(cacheKey, exercises, 3600)
+    }
+    return exercises
 }
 
 async function getReadingData(userId: string | null, cefrLevel: CefrLevel) {
-    const exercises = await cacheWrap(`reading:exercises:${cefrLevel}`, 3600, () => getReadingExerciseList(cefrLevel))
+    const exercises = await getCachedReadingExerciseList(cefrLevel)
 
     const exerciseIds = exercises.map((exercise) => exercise.id)
     const completedExercises = userId && exerciseIds.length > 0
@@ -59,7 +88,7 @@ async function getReadingData(userId: string | null, cefrLevel: CefrLevel) {
             exerciseId: ex.exerciseId,
             topic: ex.topic,
             questionCount: ex._count.questions,
-            wordCount: meta?.word_count ?? null,
+            wordCount: getReadingWordCount(meta),
             completion: completedExercises[ex.id] ?? null,
         })
     }
@@ -81,7 +110,7 @@ export default async function ReadingPage() {
 
     return (
         <div className="max-w-5xl mx-auto px-4 py-8">
-            <ReadingClientDynamic
+            <ReadingClient
                 teile={data.teile}
                 totalExercises={data.totalExercises}
                 totalCompleted={data.totalCompleted}

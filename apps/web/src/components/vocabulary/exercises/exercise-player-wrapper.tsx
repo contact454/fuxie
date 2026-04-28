@@ -2,35 +2,29 @@
 
 import { useState, useEffect, useCallback } from 'react'
 import { useRouter } from 'next/navigation'
-import dynamic from 'next/dynamic'
 import { Mascot } from '@/components/ui/mascot'
+import { ClozeExercise } from './cloze-exercise'
+import { MatchingExercise } from './matching-exercise'
+import { McExercise } from './mc-exercise'
+import { MixedExercise } from './mixed-exercise'
+import { ScrambleExercise } from './scramble-exercise'
+import { SpeedExercise } from './speed-exercise'
+import { SpellingExercise } from './spelling-exercise'
 
 interface ExercisePlayerWrapperProps {
     type: string
     theme: string
     level: string
+    initialExerciseData?: any
+    initialError?: string | null
 }
 
-const exerciseLoading = () => (
-    <div className="min-h-[100dvh] flex items-center justify-center bg-gray-50">
-        <div className="h-12 w-12 rounded-full border-4 border-[#004E89] border-t-transparent animate-spin" />
-    </div>
-)
-
-const McExercise = dynamic(() => import('./mc-exercise').then(mod => mod.McExercise), { ssr: false, loading: exerciseLoading })
-const MatchingExercise = dynamic(() => import('./matching-exercise').then(mod => mod.MatchingExercise), { ssr: false, loading: exerciseLoading })
-const SpellingExercise = dynamic(() => import('./spelling-exercise').then(mod => mod.SpellingExercise), { ssr: false, loading: exerciseLoading })
-const ClozeExercise = dynamic(() => import('./cloze-exercise').then(mod => mod.ClozeExercise), { ssr: false, loading: exerciseLoading })
-const ScrambleExercise = dynamic(() => import('./scramble-exercise').then(mod => mod.ScrambleExercise), { ssr: false, loading: exerciseLoading })
-const SpeedExercise = dynamic(() => import('./speed-exercise').then(mod => mod.SpeedExercise), { ssr: false, loading: exerciseLoading })
-const MixedExercise = dynamic(() => import('./mixed-exercise').then(mod => mod.MixedExercise), { ssr: false, loading: exerciseLoading })
-
-export function ExercisePlayerWrapper({ type, theme, level }: ExercisePlayerWrapperProps) {
+export function ExercisePlayerWrapper({ type, theme, level, initialExerciseData, initialError = null }: ExercisePlayerWrapperProps) {
     const router = useRouter()
-    const [questions, setQuestions] = useState<any[] | null>(null)
-    const [exerciseData, setExerciseData] = useState<any>(null)
-    const [isLoading, setIsLoading] = useState(true)
-    const [error, setError] = useState<string | null>(null)
+    const [questions, setQuestions] = useState<any[] | null>(initialExerciseData?.questions ?? null)
+    const [exerciseData, setExerciseData] = useState<any>(initialExerciseData ?? null)
+    const [isLoading, setIsLoading] = useState(!initialExerciseData && !initialError)
+    const [error, setError] = useState<string | null>(initialError)
 
     const loadQuestions = useCallback(async () => {
         setIsLoading(true)
@@ -44,18 +38,26 @@ export function ExercisePlayerWrapper({ type, theme, level }: ExercisePlayerWrap
                 setQuestions(data.data.questions)
                 setExerciseData(data.data)
             } else {
-                setError(data.error || 'Failed to load exercise')
+                setError(data.error || 'Không tải được bài luyện')
             }
         } catch (err) {
-            setError('Verbindungsfehler. Bitte versuche es erneut.')
+            setError('Lỗi kết nối. Vui lòng thử lại.')
         } finally {
             setIsLoading(false)
         }
     }, [type, theme, level])
 
     useEffect(() => {
+        if (initialExerciseData || initialError) {
+            setQuestions(initialExerciseData?.questions ?? null)
+            setExerciseData(initialExerciseData ?? null)
+            setError(initialError)
+            setIsLoading(false)
+            return
+        }
+
         loadQuestions()
-    }, [loadQuestions])
+    }, [loadQuestions, initialExerciseData, initialError])
 
     const handleExit = () => {
         router.push('/vocabulary/practice')
@@ -66,7 +68,7 @@ export function ExercisePlayerWrapper({ type, theme, level }: ExercisePlayerWrap
         return (
             <div className="min-h-[100dvh] flex flex-col items-center justify-center bg-gray-50">
                 <Mascot variant="loading" size={80} />
-                <p className="mt-4 text-gray-500 font-medium">Übung wird geladen...</p>
+                <p className="mt-4 text-gray-500 font-medium">Đang tải bài luyện...</p>
             </div>
         )
     }
@@ -81,13 +83,13 @@ export function ExercisePlayerWrapper({ type, theme, level }: ExercisePlayerWrap
                     onClick={loadQuestions}
                     className="mt-4 px-6 py-2 rounded-xl bg-[#004E89] text-white font-semibold hover:opacity-90 transition"
                 >
-                    Erneut versuchen
+                    Thử lại
                 </button>
                 <button
                     onClick={handleExit}
                     className="mt-2 text-gray-500 hover:text-gray-700 text-sm"
                 >
-                    Zurück zur Übersicht
+                    Về tổng quan
                 </button>
             </div>
         )
@@ -186,13 +188,13 @@ export function ExercisePlayerWrapper({ type, theme, level }: ExercisePlayerWrap
                 <div className="min-h-[100dvh] flex flex-col items-center justify-center bg-gray-50">
                     <Mascot variant="studying" size={80} />
                     <p className="mt-4 text-gray-500 font-medium">
-                        Übungstyp &quot;{type}&quot; kommt bald!
+                        Dạng bài &quot;{type}&quot; sẽ sớm có!
                     </p>
                     <button
                         onClick={handleExit}
                         className="mt-4 px-6 py-2 rounded-xl bg-[#004E89] text-white font-semibold hover:opacity-90 transition"
                     >
-                        Zurück
+                        Quay lại
                     </button>
                 </div>
             )

@@ -2,7 +2,7 @@
 import { prisma } from '@fuxie/database'
 import { cookies } from 'next/headers'
 import { getServerUser } from '@/lib/auth/server-auth'
-import { SpeakingLessonPlayerDynamic } from '@/components/speaking/SpeakingLessonPlayerDynamic'
+import SpeakingLessonPlayer from '@/components/speaking/SpeakingLessonPlayer'
 
 
 export async function generateMetadata({ params }: { params: Promise<{ lessonId: string }> }) {
@@ -12,8 +12,8 @@ export async function generateMetadata({ params }: { params: Promise<{ lessonId:
     select: { titleDe: true, translations: true },
   })
   return {
-    title: lesson ? `Fuxie ðŸ¦Š â€” ${(lesson.translations as any)?.['vi'] || lesson.titleDe}` : 'Fuxie ðŸ¦Š â€” Sprechen',
-    description: lesson?.titleDe ?? 'German speaking exercise',
+    title: lesson ? `Fuxie - ${(lesson.translations as any)?.['vi'] || lesson.titleDe}` : 'Fuxie - Luyện nói',
+    description: lesson?.titleDe ?? 'Bài luyện nói tiếng Đức',
   }
 }
 export default async function SpeakingLessonPage({ params }: { params: Promise<{ lessonId: string }> }) {
@@ -40,7 +40,7 @@ export default async function SpeakingLessonPage({ params }: { params: Promise<{
   const locale = (await cookies()).get('NEXT_LOCALE')?.value || 'vi'
 
   return (
-    <SpeakingLessonPlayerDynamic
+    <SpeakingLessonPlayer
       lessonId={lesson.id}
       titleDe={lesson.titleDe}
       titleNative={(lesson.translations as any)?.[locale] || lesson.titleDe}

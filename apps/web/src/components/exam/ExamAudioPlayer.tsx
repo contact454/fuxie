@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useRef, useCallback, useEffect } from 'react'
+import { cancelBrowserTTS, speakWithBrowserTTS } from '@/lib/audio/browser-tts'
 
 interface ExamAudioPlayerProps {
     /** Pre-recorded audio URL */
@@ -21,13 +22,17 @@ export function ExamAudioPlayer({ src, transcript, maxPlays = 2, label }: ExamAu
     const [currentTime, setCurrentTime] = useState(0)
     const [duration, setDuration] = useState(0)
     const progressRef = useRef<HTMLDivElement>(null)
+    const isMountedRef = useRef(true)
 
-    const audioSrc = src ?? (transcript ? `/api/v1/tts?text=${encodeURIComponent(transcript.slice(0, 500))}&speed=0.9` : null)
+    const browserText = !src && transcript ? transcript.slice(0, 500) : null
+    const audioSrc = src ?? null
     const isDisabled = maxPlays > 0 && playCount >= maxPlays
 
     // Cleanup audio on unmount
     useEffect(() => {
         return () => {
+            isMountedRef.current = false
+            cancelBrowserTTS()
             if (audioRef.current) {
                 audioRef.current.pause()
                 audioRef.current = null
@@ -45,16 +50,38 @@ export function ExamAudioPlayer({ src, transcript, maxPlays = 2, label }: ExamAu
             audioRef.current.pause()
             audioRef.current = null
         }
-    }, [audioSrc])
+    }, [audioSrc, browserText])
 
     const togglePlay = useCallback(async () => {
-        if (!audioSrc || isDisabled) return
+        if ((!audioSrc && !browserText) || isDisabled) return
 
-        if (isPlaying && audioRef.current) {
-            audioRef.current.pause()
+        if (isPlaying) {
+            if (audioRef.current) {
+                audioRef.current.pause()
+            } else {
+                cancelBrowserTTS()
+            }
             setIsPlaying(false)
             return
         }
+
+        if (!audioSrc && browserText) {
+            setIsPlaying(true)
+            const started = speakWithBrowserTTS(browserText, {
+                rate: 0.9,
+                onEnd: () => {
+                    if (!isMountedRef.current) return
+                    setIsPlaying(false)
+                    setPlayCount(prev => prev + 1)
+                },
+            })
+            if (!started) {
+                setIsPlaying(false)
+            }
+            return
+        }
+
+        if (!audioSrc) return
 
         // Create new audio if needed
         if (!audioRef.current) {
@@ -86,7 +113,7 @@ export function ExamAudioPlayer({ src, transcript, maxPlays = 2, label }: ExamAu
         } catch {
             setIsPlaying(false)
         }
-    }, [audioSrc, isPlaying, isDisabled])
+    }, [audioSrc, browserText, isPlaying, isDisabled])
 
     const seekTo = useCallback((e: React.MouseEvent<HTMLDivElement>) => {
         if (!audioRef.current || !progressRef.current || isDisabled) return
@@ -102,7 +129,7 @@ export function ExamAudioPlayer({ src, transcript, maxPlays = 2, label }: ExamAu
         return `${min}:${String(sec).padStart(2, '0')}`
     }
 
-    if (!audioSrc) return null
+    if (!audioSrc && !browserText) return null
 
     const progress = duration > 0 ? (currentTime / duration) * 100 : 0
 

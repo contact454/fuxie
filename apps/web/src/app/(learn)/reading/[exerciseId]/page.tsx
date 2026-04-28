@@ -1,12 +1,12 @@
 import { notFound, redirect } from 'next/navigation'
 import { prisma } from '@fuxie/database'
 import { getServerUser } from '@/lib/auth/server-auth'
-import { ReadingPlayerDynamic } from '@/components/reading/ReadingPlayerDynamic'
+import { ReadingPlayer } from '@/components/reading/reading-player'
 
 export async function generateMetadata({ params }: { params: Promise<{ exerciseId: string }> }) {
     const { exerciseId } = await params
     return {
-        title: `Fuxie 🦊 — Lesen ${exerciseId}`,
+        title: `Fuxie - Luyện đọc ${exerciseId}`,
     }
 }
 
@@ -40,7 +40,7 @@ export default async function ReadingExercisePage({ params }: { params: Promise<
 
     return (
         <div className="max-w-5xl mx-auto px-4 py-6">
-            <ReadingPlayerDynamic
+            <ReadingPlayer
                 exerciseId={exercise.exerciseId}
                 cefrLevel={exercise.cefrLevel}
                 teil={exercise.teil}

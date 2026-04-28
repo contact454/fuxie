@@ -3,7 +3,8 @@ import { prisma } from '@fuxie/database'
 import { cookies } from 'next/headers'
 import { getServerUser } from '@/lib/auth/server-auth'
 import { getVocabularyThemeSrsProgress } from '@/lib/srs/stats'
-import { CourseClientDynamic } from '@/components/course/CourseClientDynamic'
+import { cacheWrap } from '@/lib/cache/redis'
+import { CourseClient } from '@/components/course/CourseClient'
 import { getCourseModuleMap } from '@/lib/content/course-data'
 
 export const metadata = {
@@ -56,83 +57,86 @@ const COURSE_SLUGS: Record<CefrLevel, string> = {
     C2: 'deutsch-c2-meisterstufe',
 }
 
-async function getCourseData(userId: string, level: CefrLevel) {
+const COURSE_DATA_CACHE_TTL_SECONDS = 30
+
+async function getCourseData(userId: string, level: CefrLevel, locale: string) {
+    return cacheWrap(
+        `course:data:${userId}:${level}:${locale}`,
+        COURSE_DATA_CACHE_TTL_SECONDS,
+        () => getCourseDataUncached(userId, level, locale),
+    )
+}
+
+async function getCourseDataUncached(userId: string, level: CefrLevel, locale: string) {
     const courseSlug = COURSE_SLUGS[level]
 
-    // 1. Fetch course + modules
-    const course = await prisma.course.findFirst({
-        where: { slug: courseSlug },
-        select: {
-            title: true,
-            titleDe: true,
-            description: true,
-            modules: {
-                orderBy: { sortOrder: 'asc' },
-                select: {
-                    id: true,
-                    slug: true,
-                    title: true,
-                    titleDe: true,
-                    description: true,
-                    sortOrder: true,
-                    estimatedMinutes: true,
+    const [course, vocabThemes, themeProgress, grammarTopics] = await Promise.all([
+        prisma.course.findFirst({
+            where: { slug: courseSlug },
+            select: {
+                title: true,
+                titleDe: true,
+                description: true,
+                modules: {
+                    orderBy: { sortOrder: 'asc' },
+                    select: {
+                        id: true,
+                        slug: true,
+                        title: true,
+                        titleDe: true,
+                        description: true,
+                        sortOrder: true,
+                        estimatedMinutes: true,
+                    },
                 },
             },
-        },
-    })
+        }),
+        prisma.vocabularyTheme.findMany({
+            where: { cefrLevel: level },
+            select: {
+                id: true,
+                slug: true,
+                name: true,
+                translations: true,
+                _count: { select: { items: true } },
+            },
+        }),
+        getVocabularyThemeSrsProgress(userId, level),
+        prisma.grammarTopic.findMany({
+            where: { cefrLevel: level },
+            select: {
+                id: true,
+                slug: true,
+                title: true,
+                titleDe: true,
+                translations: true,
+                lessons: {
+                    select: {
+                        id: true,
+                        topicId: true,
+                    },
+                },
+            },
+        }),
+    ])
 
     if (!course) return null
 
     // 2. Get module → vocab/grammar/skill mappings from static imports
     const moduleMap = getCourseModuleMap(level)
 
-    // 3. Fetch all vocab themes for this level
-    const vocabThemes = await prisma.vocabularyTheme.findMany({
-        where: { cefrLevel: level },
-        select: {
-            id: true,
-            slug: true,
-            name: true,
-            translations: true,
-            _count: { select: { items: true } },
-        },
-    })
     const vocabThemeMap = new Map(vocabThemes.map(t => [t.slug, t]))
-
-    // 4. Fetch user's SRS cards for vocab progress
-    const themeProgress = await getVocabularyThemeSrsProgress(userId, level)
-
-    // 5. Fetch grammar topics for this level
-    const grammarTopics = await prisma.grammarTopic.findMany({
-        where: { cefrLevel: level },
-        select: {
-            id: true,
-            slug: true,
-            title: true,
-            titleDe: true,
-            translations: true,
-        },
-    })
     const grammarTopicMap = new Map(grammarTopics.map((t) => [t.slug, t]))
 
-    // 6. Fetch grammar lessons for this level
-    const topicIds = grammarTopics.map((t) => t.id)
-    const grammarLessons = topicIds.length > 0
-        ? await prisma.grammarLesson.findMany({
-            where: { topicId: { in: topicIds } },
-            select: {
-                id: true,
-                topicId: true,
-            },
-        })
-        : []
+    // 3. Grammar lessons are selected with topics above to avoid one more round-trip.
+    const grammarLessons = grammarTopics.flatMap((topic) => topic.lessons)
     const lessonsByTopic: Record<string, any[]> = {}
     for (const l of grammarLessons) {
         if (!lessonsByTopic[l.topicId]) lessonsByTopic[l.topicId] = []
         lessonsByTopic[l.topicId]!.push(l)
     }
 
-    // 7. Fetch grammar progress
+    // 4. Fetch personalized grammar progress after lesson ids are known.
     const grammarLessonIds = grammarLessons.map((l) => l.id)
     const grammarProgress = grammarLessonIds.length > 0
         ? await prisma.grammarProgress.findMany({
@@ -149,9 +153,7 @@ async function getCourseData(userId: string, level: CefrLevel) {
         progressMap[p.lessonId] = { completed: p.completed, stars: p.stars ?? 0 }
     }
 
-    const locale = (await cookies()).get('NEXT_LOCALE')?.value || 'vi'
-
-    // 8. Build modules with progress
+    // 5. Build modules with progress
     const modules: ModuleWithProgress[] = course.modules.map((mod, idx) => {
         const mapping = moduleMap[mod.slug] ?? { vocabularyThemes: [], grammarTopics: [], skillLinks: [] }
 
@@ -240,9 +242,11 @@ export default async function CoursePage({
         level = (profile?.currentLevel ?? 'A1') as CefrLevel
     }
 
+    const locale = (await cookies()).get('NEXT_LOCALE')?.value || serverUser.uiLanguage || 'vi'
+
     let data = null
     try {
-        data = await getCourseData(serverUser.userId, level)
+        data = await getCourseData(serverUser.userId, level, locale)
     } catch (err: any) {
         console.error('[CoursePage] getCourseData error:', err)
         return (
@@ -297,7 +301,7 @@ export default async function CoursePage({
                     ))}
                 </div>
             </div>
-            <CourseClientDynamic data={data} />
+            <CourseClient data={data} />
         </div>
     )
 }

@@ -3,11 +3,11 @@ import { prisma } from '@fuxie/database'
 import { getServerUser } from '@/lib/auth/server-auth'
 import { getVocabularyLevels, getVocabularyThemes, mapVocabularyThemes, type CefrLevel } from '@/lib/content/vocabulary'
 import { getVocabularyDueCountsByLevel, getVocabularyThemeSrsProgress } from '@/lib/srs/stats'
-import { ReviewClientDynamic } from '@/components/srs/ReviewClientDynamic'
+import { ReviewClient } from '@/components/srs/review-client'
 
 export const metadata = {
-    title: 'Fuxie 🦊 — Wiederholen',
-    description: 'SRS Flashcard Review — Lerne Vokabeln mit Karteikarten',
+    title: 'Fuxie - Ôn tập SRS',
+    description: 'Ôn từ vựng bằng flashcard và lịch nhắc SRS',
 }
 
 async function getThemesForLevel(userId: string, cefrLevel: CefrLevel, locale: string) {
@@ -56,7 +56,7 @@ export default async function ReviewPage() {
 
     return (
         <div className="max-w-5xl mx-auto px-4 py-8">
-            <ReviewClientDynamic
+            <ReviewClient
                 themes={themes}
                 availableLevels={availableLevels}
                 initialLevel={userLevel}

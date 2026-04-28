@@ -81,12 +81,12 @@ export interface TodayPlan {
 const DEFAULT_SKILL_ORDER: SkillKey[] = ['WORTSCHATZ', 'GRAMMATIK', 'HOEREN', 'LESEN', 'SCHREIBEN', 'SPRECHEN']
 
 const SKILL_LABELS: Record<SkillKey, string> = {
-    HOEREN: 'Hoeren',
-    LESEN: 'Lesen',
-    SCHREIBEN: 'Schreiben',
-    SPRECHEN: 'Sprechen',
-    GRAMMATIK: 'Grammatik',
-    WORTSCHATZ: 'Wortschatz',
+    HOEREN: 'Nghe',
+    LESEN: 'Đọc',
+    SCHREIBEN: 'Viết',
+    SPRECHEN: 'Nói',
+    GRAMMATIK: 'Ngữ pháp',
+    WORTSCHATZ: 'Từ vựng',
 }
 
 export async function getTodayPlan(userId: string, now = new Date()): Promise<TodayPlan> {
@@ -196,8 +196,8 @@ export function buildTodayPlan(input: TodayPlanInput): TodayPlan {
         actions.push({
             id: 'srs-due',
             type: 'srs',
-            title: 'SRS wiederholen',
-            reason: `${input.dueSrsCount} Karten sind faellig`,
+            title: 'Ôn SRS',
+            reason: `${input.dueSrsCount} thẻ cần ôn`,
             href: '/review',
             skill: 'SRS',
             estimatedMinutes: Math.min(20, Math.max(5, Math.ceil(input.dueSrsCount / 4))),
@@ -218,7 +218,7 @@ export function buildTodayPlan(input: TodayPlanInput): TodayPlan {
             estimatedMinutes: 15,
             priority: assignmentPriority(assignment, now),
             dueDate: assignment.dueDate?.toISOString() ?? null,
-            badge: assignment.classroomName ?? 'Aufgabe',
+            badge: assignment.classroomName ?? 'Bài được giao',
         })
     }
 
@@ -229,7 +229,7 @@ export function buildTodayPlan(input: TodayPlanInput): TodayPlan {
             id: `skill-${skill}-${candidate.id}`,
             type: 'lesson',
             title: candidate.title,
-            reason: `${candidate.label}: staerkt deinen aktuellen Fokus`,
+            reason: `${candidate.label}: củng cố trọng tâm hiện tại`,
             href: candidate.href,
             skill,
             estimatedMinutes: candidate.estimatedMinutes,
@@ -243,8 +243,8 @@ export function buildTodayPlan(input: TodayPlanInput): TodayPlan {
         actions.push({
             id: 'target-exam',
             type: 'exam',
-            title: `${input.profile.targetExam} ${input.profile.targetLevel ?? input.profile.currentLevel} ueben`,
-            reason: examDaysLeft !== null ? `${examDaysLeft} Tage bis zur Pruefung` : 'Pruefungsziel ist gesetzt',
+            title: `Luyện ${input.profile.targetExam} ${input.profile.targetLevel ?? input.profile.currentLevel}`,
+            reason: examDaysLeft !== null ? `${examDaysLeft} ngày đến kỳ thi` : 'Đã đặt mục tiêu thi',
             href: '/exam',
             skill: 'EXAM',
             estimatedMinutes: 20,
@@ -261,7 +261,7 @@ export function buildTodayPlan(input: TodayPlanInput): TodayPlan {
             id: `fallback-${skill}-${candidate.id}`,
             type: 'lesson',
             title: candidate.title,
-            reason: `${candidate.label}: naechster sinnvoller Schritt`,
+            reason: `${candidate.label}: bước tiếp theo phù hợp`,
             href: candidate.href,
             skill,
             estimatedMinutes: candidate.estimatedMinutes,
@@ -361,7 +361,7 @@ async function getContentCandidates(userId: string, level: string): Promise<Part
                 title: vocabularyTheme.name,
                 href: '/vocabulary',
                 estimatedMinutes: 10,
-                label: 'Wortschatz',
+                label: 'Từ vựng',
             },
         } : {}),
         ...(grammarLesson ? {
@@ -371,7 +371,7 @@ async function getContentCandidates(userId: string, level: string): Promise<Part
                 title: grammarLesson.titleDe,
                 href: `/grammar/${grammarLesson.topic.slug}/${grammarLesson.id}`,
                 estimatedMinutes: grammarLesson.estimatedMin,
-                label: 'Grammatik',
+                label: 'Ngữ pháp',
             },
         } : {}),
         ...(listeningLesson ? {
@@ -381,7 +381,7 @@ async function getContentCandidates(userId: string, level: string): Promise<Part
                 title: listeningLesson.topic || listeningLesson.title,
                 href: `/listening/${listeningLesson.lessonId}`,
                 estimatedMinutes: Math.max(8, Math.ceil((listeningLesson.audioDuration ?? 300) / 60) + 5),
-                label: 'Hoeren',
+                label: 'Nghe',
             },
         } : {}),
         ...(readingExercise ? {
@@ -391,7 +391,7 @@ async function getContentCandidates(userId: string, level: string): Promise<Part
                 title: readingExercise.topic || readingExercise.teilName,
                 href: `/reading/${readingExercise.exerciseId}`,
                 estimatedMinutes: 12,
-                label: 'Lesen',
+                label: 'Đọc',
             },
         } : {}),
         ...(writingExercise ? {
@@ -401,7 +401,7 @@ async function getContentCandidates(userId: string, level: string): Promise<Part
                 title: `${writingExercise.textType}: ${writingExercise.topic}`,
                 href: `/writing/${writingExercise.exerciseId}`,
                 estimatedMinutes: writingExercise.timeMinutes,
-                label: 'Schreiben',
+                label: 'Viết',
             },
         } : {}),
         ...(speakingLesson ? {
@@ -411,7 +411,7 @@ async function getContentCandidates(userId: string, level: string): Promise<Part
                 title: speakingLesson.titleDe,
                 href: `/speaking/${speakingLesson.id}`,
                 estimatedMinutes: speakingLesson.estimatedMin,
-                label: 'Sprechen',
+                label: 'Nói',
             },
         } : {}),
     }
@@ -502,13 +502,13 @@ function assignmentPriority(assignment: AssignmentCandidate, now: Date) {
 }
 
 function assignmentReason(assignment: AssignmentCandidate, now: Date) {
-    if (!assignment.dueDate) return 'Aufgabe von deinem Kurs'
+    if (!assignment.dueDate) return 'Bài được giao từ lớp học'
     const daysLeft = getDaysLeft(assignment.dueDate, now)
-    if (daysLeft === null) return 'Aufgabe von deinem Kurs'
-    if (daysLeft < 0) return 'Ueberfaellige Aufgabe'
-    if (daysLeft === 0) return 'Heute faellig'
-    if (daysLeft === 1) return 'Morgen faellig'
-    return `In ${daysLeft} Tagen faellig`
+    if (daysLeft === null) return 'Bài được giao từ lớp học'
+    if (daysLeft < 0) return 'Quá hạn'
+    if (daysLeft === 0) return 'Hạn hôm nay'
+    if (daysLeft === 1) return 'Hạn ngày mai'
+    return `Còn ${daysLeft} ngày`
 }
 
 function hrefForAssignment(assignment: AssignmentCandidate) {
@@ -563,10 +563,10 @@ function getDaysLeft(date: Date | null, now: Date) {
 }
 
 function getFocusLabel(actions: TodayPlanAction[], weakSkills: SkillKey[], remainingMinutes: number) {
-    if (actions[0]?.type === 'srs') return 'Review first'
-    if (actions[0]?.type === 'assignment') return 'Class assignment'
+    if (actions[0]?.type === 'srs') return 'Ôn trước'
+    if (actions[0]?.type === 'assignment') return 'Bài được giao'
     if (weakSkills[0]) return SKILL_LABELS[weakSkills[0]]
-    return remainingMinutes > 0 ? 'Daily goal' : 'Keep momentum'
+    return remainingMinutes > 0 ? 'Mục tiêu ngày' : 'Giữ nhịp học'
 }
 
 function isObject(value: unknown): value is Record<string, unknown> {

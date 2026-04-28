@@ -143,7 +143,7 @@ export function ScrambleExercise({ questions, cefrLevel, themeName, themeSlug, o
                 <div className="max-w-2xl w-full px-6 py-8">
                     {/* Instruction */}
                     <div className="text-center mb-6">
-                        <h2 className="text-lg font-bold text-gray-800">Ordne die Wörter</h2>
+                        <h2 className="text-lg font-bold text-gray-800">Sắp xếp các từ</h2>
                         <p className="text-sm text-gray-400 mt-1">Bilde den richtigen Satz</p>
                     </div>
 
@@ -163,7 +163,7 @@ export function ScrambleExercise({ questions, cefrLevel, themeName, themeSlug, o
                                 : 'border-dashed border-gray-400 bg-gray-50/50'
                     }`}>
                         {selectedWords.length === 0 ? (
-                            <p className="text-gray-400 text-center py-2">Tippe auf die Wörter unten</p>
+                            <p className="text-gray-400 text-center py-2">Chạm vào các từ bên dưới</p>
                         ) : (
                             <div className="flex flex-wrap gap-2">
                                 {selectedWords.map((word, i) => (
@@ -186,7 +186,7 @@ export function ScrambleExercise({ questions, cefrLevel, themeName, themeSlug, o
                         {/* Feedback */}
                         {isRevealed && (
                             <div className="mt-3 pt-3 border-t border-current/10">
-                                <p className="text-sm text-[#004E89] font-semibold">Antwort gespeichert</p>
+                                <p className="text-sm text-[#004E89] font-semibold">Đã lưu câu trả lời</p>
                             </div>
                         )}
                     </div>

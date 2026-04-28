@@ -299,7 +299,7 @@ export function ReviewClient({ themes, availableLevels, initialLevel, dueCounts,
                     </button>
                     <div className="flex-1">
                         <h2 className="text-lg font-bold text-gray-900">{studyTheme?.name}</h2>
-                        <p className="text-xs text-gray-500">{studyTheme?.nameNative} • {studyCards.length} Wörter</p>
+                        <p className="text-xs text-gray-500">{studyTheme?.nameNative} • {studyCards.length} từ</p>
                     </div>
                     <span className={`px-3 py-1 rounded-full text-xs font-bold bg-gradient-to-r ${cefrColors.gradient} text-white`}>
                         {currentLevel}
@@ -342,7 +342,7 @@ export function ReviewClient({ themes, availableLevels, initialLevel, dueCounts,
                                 <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                                     <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
                                 </svg>
-                                Zurück
+                                Trước
                             </button>
 
                             {!isFlipped && (
@@ -350,7 +350,7 @@ export function ReviewClient({ themes, availableLevels, initialLevel, dueCounts,
                                     onClick={() => setIsFlipped(true)}
                                     className="px-6 py-3 rounded-xl bg-gradient-to-r from-[#004E89] to-blue-600 text-white font-semibold text-sm hover:opacity-90 transition-all shadow-lg shadow-blue-200"
                                 >
-                                    Umdrehen ↻
+                                    Lật thẻ ↻
                                 </button>
                             )}
 
@@ -363,7 +363,7 @@ export function ReviewClient({ themes, availableLevels, initialLevel, dueCounts,
                                         : `bg-gradient-to-r ${cefrColors.gradient} text-white hover:opacity-90 shadow-lg`
                                 }`}
                             >
-                                Weiter
+                                Tiếp
                                 <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                                     <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
                                 </svg>
@@ -372,12 +372,12 @@ export function ReviewClient({ themes, availableLevels, initialLevel, dueCounts,
 
                         {/* Keyboard hint */}
                         <p className="text-xs text-gray-400 text-center mt-4">
-                            Tippe auf die Karte, um sie umzudrehen
+                            Chạm vào thẻ để lật.
                         </p>
                     </>
                 ) : (
                     <div className="text-center py-12">
-                        <p className="text-gray-500">Keine Wörter in diesem Thema.</p>
+                        <p className="text-gray-500">Chủ đề này chưa có từ.</p>
                     </div>
                 )}
             </div>
@@ -399,16 +399,16 @@ export function ReviewClient({ themes, availableLevels, initialLevel, dueCounts,
                     <Mascot
                         variant={mascotVariant}
                         size={120}
-                        speechBubble={accuracy >= 80 ? 'Toll gemacht! 🎉' : accuracy >= 50 ? 'Gut gemacht! 👏' : 'Weiter üben! 💪'}
+                        speechBubble={accuracy >= 80 ? 'Làm tốt lắm! 🎉' : accuracy >= 50 ? 'Ổn rồi, tiếp tục nhé! 👏' : 'Cứ luyện tiếp nhé! 💪'}
                     />
 
                     <div className="grid grid-cols-3 gap-3 mt-8 w-full">
                         <div className="bg-white rounded-xl p-4 shadow-sm border border-emerald-100 text-center">
-                            <p className="text-xs text-gray-500 mb-1">✅ Richtig</p>
+                            <p className="text-xs text-gray-500 mb-1">✅ Đúng</p>
                             <p className="text-2xl font-bold text-emerald-600">{srsStats.correct}</p>
                         </div>
                         <div className="bg-white rounded-xl p-4 shadow-sm border border-red-100 text-center">
-                            <p className="text-xs text-gray-500 mb-1">❌ Nochmal</p>
+                            <p className="text-xs text-gray-500 mb-1">❌ Luyện lại</p>
                             <p className="text-2xl font-bold text-red-500">{srsStats.again}</p>
                         </div>
                         <div className="bg-white rounded-xl p-4 shadow-sm border border-amber-100 text-center">
@@ -419,10 +419,10 @@ export function ReviewClient({ themes, availableLevels, initialLevel, dueCounts,
 
                     <div className="flex gap-3 mt-8">
                         <button onClick={backToThemes} className="px-5 py-3 rounded-xl border-2 border-gray-200 text-gray-700 font-semibold hover:bg-gray-50 transition-colors">
-                            Übersicht
+                            Tổng quan
                         </button>
                         <button onClick={() => startSrsReview()} className="px-5 py-3 rounded-xl bg-gradient-to-r from-[#FF6B35] to-orange-500 text-white font-semibold hover:opacity-90 transition-all shadow-lg">
-                            Weiter lernen →
+                            Học tiếp →
                         </button>
                     </div>
                 </div>
@@ -442,8 +442,8 @@ export function ReviewClient({ themes, availableLevels, initialLevel, dueCounts,
                         </svg>
                     </button>
                     <div className="flex-1">
-                        <h2 className="text-lg font-bold text-gray-900">SRS Wiederholung</h2>
-                        <p className="text-xs text-gray-500">Fällige Karten wiederholen</p>
+                        <h2 className="text-lg font-bold text-gray-900">Ôn SRS</h2>
+                        <p className="text-xs text-gray-500">Ôn các thẻ đến hạn</p>
                     </div>
                     <span className="text-sm font-bold text-[#FF6B35]">+{srsStats.xpEarned} XP</span>
                 </div>
@@ -483,16 +483,16 @@ export function ReviewClient({ themes, availableLevels, initialLevel, dueCounts,
 
                         {!srsFlipped && !lastRating && (
                             <p className="text-sm text-gray-400 animate-pulse">
-                                Tippe auf die Karte, um die Antwort zu sehen
+                                Chạm vào thẻ để xem đáp án.
                             </p>
                         )}
                     </div>
                 ) : (
                     <div className="flex flex-col items-center py-12">
-                        <Mascot variant="empty" size={100} speechBubble="Keine fälligen Karten! 🎉" />
-                        <p className="text-gray-500 mt-4">Alle Karten sind gelernt — komm später zurück.</p>
+                        <Mascot variant="empty" size={100} speechBubble="Không có thẻ đến hạn! 🎉" />
+                        <p className="text-gray-500 mt-4">Tất cả thẻ đã học xong. Quay lại sau nhé.</p>
                         <button onClick={backToThemes} className="mt-6 px-5 py-3 rounded-xl bg-gradient-to-r from-[#FF6B35] to-orange-500 text-white font-semibold">
-                            Zurück
+                            Quay lại
                         </button>
                     </div>
                 )}
@@ -541,9 +541,9 @@ export function ReviewClient({ themes, availableLevels, initialLevel, dueCounts,
                 <div className="flex items-center gap-4">
                     <Mascot variant="wortschatz" size={56} />
                     <div className="flex-1">
-                        <h1 className="text-2xl font-bold text-gray-900">Karteikarten {currentLevel}</h1>
+                        <h1 className="text-2xl font-bold text-gray-900">Thẻ từ vựng {currentLevel}</h1>
                         <p className="text-sm text-gray-500 mt-0.5">
-                            Lerne Vokabeln mit Flashcards — wähle ein Thema
+                            Học từ vựng bằng flashcard. Chọn một chủ đề để bắt đầu.
                         </p>
                     </div>
 
@@ -554,7 +554,7 @@ export function ReviewClient({ themes, availableLevels, initialLevel, dueCounts,
                             className="flex items-center gap-2 px-5 py-3 rounded-xl bg-gradient-to-r from-[#FF6B35] to-orange-500 text-white font-bold text-sm hover:opacity-90 transition-all shadow-lg shadow-orange-200 whitespace-nowrap"
                         >
                             <span>🔄</span>
-                            Fällige Karten
+                            Thẻ đến hạn
                             <span className="bg-white/20 rounded-lg px-2 py-0.5 text-xs">{currentTotalDue}</span>
                         </button>
                     )}
@@ -601,10 +601,10 @@ export function ReviewClient({ themes, availableLevels, initialLevel, dueCounts,
 
                                 {/* Stats row */}
                                 <div className="flex items-center gap-2 mt-2">
-                                    <span className="text-[11px] text-gray-500 font-medium">{theme.wordCount} Wörter</span>
+                                    <span className="text-[11px] text-gray-500 font-medium">{theme.wordCount} từ</span>
                                     {theme.srsProgress.due > 0 && (
                                         <span className="text-[10px] px-1.5 py-0.5 rounded-full bg-orange-100 text-orange-600 font-bold">
-                                            {theme.srsProgress.due} fällig
+                                            {theme.srsProgress.due} cần ôn
                                         </span>
                                     )}
                                 </div>
@@ -627,8 +627,8 @@ export function ReviewClient({ themes, availableLevels, initialLevel, dueCounts,
             {/* Empty state */}
             {!isLevelLoading && currentThemes.length === 0 && (
                 <div className="flex flex-col items-center py-12">
-                    <Mascot variant="empty" size={100} speechBubble="Keine Themen für dieses Level! 📚" />
-                    <p className="text-gray-500 mt-4">Wähle ein anderes Level aus.</p>
+                    <Mascot variant="empty" size={100} speechBubble="Chưa có chủ đề cho cấp độ này! 📚" />
+                    <p className="text-gray-500 mt-4">Hãy chọn một cấp độ khác.</p>
                 </div>
             )}
         </div>

@@ -1,7 +1,7 @@
 import { redirect } from 'next/navigation'
 import { getServerUser } from '@/lib/auth/server-auth'
 import { prisma } from '@fuxie/database'
-import { ChatClientDynamic } from '@/components/chat/ChatClientDynamic'
+import { ChatClient } from '@/components/chat/ChatClient'
 import type { CefrLevel } from '@/lib/constants/cefr'
 
 export const metadata = {
@@ -23,7 +23,7 @@ export default async function ChatPage() {
     })
 
     return (
-        <ChatClientDynamic
+        <ChatClient
             initialLevel={(profile?.currentLevel as CefrLevel) ?? 'A1'}
             displayName={profile?.displayName ?? undefined}
         />

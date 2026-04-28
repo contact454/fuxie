@@ -71,92 +71,92 @@ export const CEFR_COLORS = CEFR_THEME
 
 export const TEIL_DESCRIPTIONS: Record<string, Record<number, { icon: string; strategy: string; genre: string }>> = {
     beginner: {
-        1: { icon: '📧', strategy: 'Lies den Text einmal schnell durch. Achte auf die Schlüsselwörter.', genre: 'Kurze Texte' },
-        2: { icon: '📋', strategy: 'Vergleiche die zwei Anzeigen. Achte auf die Details (Preis, Ort, Zeit).', genre: 'Anzeigen' },
-        3: { icon: '🪧', strategy: 'Lies jedes Schild aufmerksam. Achte auf Zahlen und Verbote.', genre: 'Schilder' },
-        4: { icon: '🗓️', strategy: 'Suche die wichtigen Informationen: Datum, Uhrzeit, Ort.', genre: 'Informationstexte' },
+        1: { icon: '📧', strategy: 'Đọc lướt một lần để nắm ý chính, sau đó chú ý các từ khóa.', genre: 'Văn bản ngắn' },
+        2: { icon: '📋', strategy: 'So sánh từng thông báo và để ý chi tiết như giá, địa điểm, thời gian.', genre: 'Thông báo' },
+        3: { icon: '🪧', strategy: 'Đọc từng biển báo thật kỹ, đặc biệt là số liệu và điều cấm.', genre: 'Biển báo' },
+        4: { icon: '🗓️', strategy: 'Tìm thông tin quan trọng trước: ngày, giờ, địa điểm.', genre: 'Văn bản thông tin' },
     },
     advanced: {
-        1: { icon: '📰', strategy: 'Überfliegen Sie zuerst den gesamten Text, dann lesen Sie die Fragen.', genre: 'Sachtext' },
-        2: { icon: '📝', strategy: 'Achten Sie auf Signalwörter: jedoch, dennoch, außerdem, folglich...', genre: 'Lückentext' },
-        3: { icon: '🔬', strategy: 'Unterstreichen Sie die Hauptaussage jedes Absatzes.', genre: 'Wissenschaftl. Text' },
-        4: { icon: '💬', strategy: 'Die Meinungen können ähnlich klingen — achten Sie auf Nuancen.', genre: 'Meinungen' },
-        5: { icon: '📖', strategy: 'Lesen Sie den Ratgeber abschnittsweise und beantworten Sie stückweise.', genre: 'Ratgeber' },
+        1: { icon: '📰', strategy: 'Đọc lướt toàn văn trước, rồi mới quay lại câu hỏi.', genre: 'Bài thông tin' },
+        2: { icon: '📝', strategy: 'Chú ý từ nối và tín hiệu lập luận như jedoch, dennoch, außerdem, folglich.', genre: 'Điền khuyết' },
+        3: { icon: '🔬', strategy: 'Gạch ý chính của từng đoạn trước khi trả lời.', genre: 'Văn bản học thuật' },
+        4: { icon: '💬', strategy: 'Các ý kiến có thể khá giống nhau, hãy chú ý sắc thái khác biệt.', genre: 'Ý kiến' },
+        5: { icon: '📖', strategy: 'Đọc từng đoạn ngắn rồi trả lời từng nhóm câu hỏi.', genre: 'Bài tư vấn' },
     },
 }
 
 export const DIFFICULTY: Record<string, { label: string; dots: number; color: string }> = {
-    A1: { label: 'Einfach', dots: 1, color: '#22C55E' },
-    A2: { label: 'Einfach', dots: 2, color: '#84CC16' },
-    B1: { label: 'Mittel', dots: 3, color: '#F97316' },
-    B2: { label: 'Anspruchsvoll', dots: 4, color: '#EF4444' },
-    C1: { label: 'Fortgeschritten', dots: 5, color: '#A855F7' },
-    C2: { label: 'Experte', dots: 5, color: '#7C3AED' },
+    A1: { label: 'Dễ', dots: 1, color: '#22C55E' },
+    A2: { label: 'Dễ', dots: 2, color: '#84CC16' },
+    B1: { label: 'Vừa', dots: 3, color: '#F97316' },
+    B2: { label: 'Khó', dots: 4, color: '#EF4444' },
+    C1: { label: 'Nâng cao', dots: 5, color: '#A855F7' },
+    C2: { label: 'Chuyên sâu', dots: 5, color: '#7C3AED' },
 }
 
 export const WARMUP_QUESTIONS: Record<string, string[]> = {
     A1: [
-        'Was siehst du auf dem Bild?',
-        'Welche Wörter kennst du schon zum Thema?',
-        'Was erwartest du im Text?',
+        'Em nhìn thấy gì trong hình?',
+        'Em đã biết những từ nào về chủ đề này?',
+        'Em đoán văn bản sẽ nói về điều gì?',
     ],
     A2: [
-        'Was weißt du schon über dieses Thema?',
-        'Welche Wörter fallen dir zum Thema ein?',
-        'Was möchtest du aus dem Text erfahren?',
+        'Em đã biết gì về chủ đề này?',
+        'Những từ nào xuất hiện trong đầu em khi nghĩ đến chủ đề này?',
+        'Em muốn tìm được thông tin gì trong bài?',
     ],
     B1: [
-        'Was ist Ihre Meinung zu diesem Thema?',
-        'Welche Schlüsselbegriffe erwarten Sie?',
-        'Was wissen Sie bereits darüber?',
+        'Quan điểm của em về chủ đề này là gì?',
+        'Em dự đoán sẽ gặp những từ khóa nào?',
+        'Em đã biết gì về bối cảnh này?',
     ],
     B2: [
-        'Formulieren Sie eine Hypothese zum Textinhalt.',
-        'Welche Argumente erwarten Sie?',
-        'Was ist der Kontext dieses Themas?',
+        'Hãy dự đoán luận điểm chính của bài.',
+        'Em nghĩ bài sẽ đưa ra những lập luận nào?',
+        'Bối cảnh của chủ đề này là gì?',
     ],
     C1: [
-        'Welche Position könnte der Autor vertreten?',
-        'Welche Fachbegriffe erwarten Sie?',
-        'Was macht dieses Thema aktuell relevant?',
+        'Tác giả có thể đang bảo vệ quan điểm nào?',
+        'Em dự đoán sẽ gặp thuật ngữ chuyên môn nào?',
+        'Vì sao chủ đề này đáng chú ý ở hiện tại?',
     ],
     C2: [
-        'Analysieren Sie den Titel: Welche These steckt dahinter?',
-        'Welche akademische Perspektive erwarten Sie?',
-        'Wie würden Sie das Thema einordnen?',
+        'Phân tích tiêu đề: luận đề ẩn phía sau là gì?',
+        'Em dự đoán bài dùng góc nhìn học thuật nào?',
+        'Em sẽ xếp chủ đề này vào nhóm vấn đề nào?',
     ],
 }
 
 export const POST_READING_TIPS: Record<string, string[]> = {
     A1: [
-        'Lies den Text noch einmal laut vor — das hilft beim Wortschatz!',
-        'Schreibe 3 neue Wörter auf und bilde einfache Sätze.',
-        'Versuche morgen den Text ohne Hilfe zu lesen.',
+        'Đọc lại văn bản thành tiếng để nhớ từ tốt hơn.',
+        'Ghi 3 từ mới và đặt câu đơn giản với mỗi từ.',
+        'Ngày mai thử đọc lại bài mà không cần gợi ý.',
     ],
     A2: [
-        'Markiere die wichtigsten Informationen im Text.',
-        'Erzähle den Textinhalt in eigenen Worten (2-3 Sätze).',
-        'Übe die neuen Wörter mit Karteikarten.',
+        'Đánh dấu các thông tin quan trọng nhất trong bài.',
+        'Kể lại nội dung bài bằng 2-3 câu của em.',
+        'Ôn từ mới bằng flashcard.',
     ],
     B1: [
-        'Fasse den Text in 3-4 Sätzen zusammen.',
-        'Notiere die Schlüsselargumente des Autors.',
-        'Suche einen ähnlichen Text und vergleiche die Informationen.',
+        'Tóm tắt bài bằng 3-4 câu.',
+        'Ghi lại các luận điểm chính của tác giả.',
+        'Tìm một văn bản tương tự và so sánh thông tin.',
     ],
     B2: [
-        'Analysieren Sie die Textstruktur: Einleitung, Hauptteil, Schluss.',
-        'Identifizieren Sie die stilistischen Mittel des Autors.',
-        'Schreiben Sie eine kurze Stellungnahme zum Textthema.',
+        'Phân tích cấu trúc bài: mở bài, thân bài, kết luận.',
+        'Nhận diện cách tác giả dẫn dắt và nhấn mạnh ý.',
+        'Viết một đoạn ngắn nêu quan điểm về chủ đề.',
     ],
     C1: [
-        'Bewerten Sie die Argumentation: Sind die Belege überzeugend?',
-        'Vergleichen Sie verschiedene Perspektiven zum Thema.',
-        'Formulieren Sie eigene Gegenargumente.',
+        'Đánh giá lập luận: bằng chứng có thuyết phục không?',
+        'So sánh nhiều góc nhìn khác nhau về chủ đề.',
+        'Tự viết một phản biện ngắn.',
     ],
     C2: [
-        'Analysieren Sie die diskursive Einbettung des Textes.',
-        'Identifizieren Sie implizite Annahmen und Prämissen.',
-        'Verfassen Sie eine kritische Rezension (200 Wörter).',
+        'Phân tích vị trí của văn bản trong diễn ngôn rộng hơn.',
+        'Nhận diện các giả định ngầm và tiền đề của tác giả.',
+        'Viết một bài nhận xét phê bình khoảng 200 từ.',
     ],
 }
 

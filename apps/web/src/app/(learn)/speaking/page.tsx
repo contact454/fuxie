@@ -3,11 +3,11 @@ import { prisma } from '@fuxie/database'
 import { cookies } from 'next/headers'
 import { getServerUser } from '@/lib/auth/server-auth'
 import { cacheWrap } from '@/lib/cache/redis'
-import { SpeakingClientDynamic } from '@/components/speaking/SpeakingClientDynamic'
+import SpeakingClient from '@/components/speaking/SpeakingClient'
 import type { SpeakingTopicData, CefrLevel } from '@/components/speaking/types'
 
 export const metadata = {
-  title: 'Sprechen | Fuxie',
+  title: 'Luyện nói | Fuxie',
   description: 'Luyện nói tiếng Đức — Phát âm, hội thoại, trình bày',
 }
 
@@ -47,8 +47,6 @@ async function getSpeakingData(userId: string, cefrLevel: CefrLevel) {
           titleDe: true,
           translations: true,
           exerciseType: true,
-          exercisesJson: true,
-          configJson: true,
           estimatedMin: true,
         },
       },
@@ -120,7 +118,7 @@ export default async function SpeakingPage() {
   const data = await getSpeakingData(serverUser.userId, defaultLevel)
 
   return (
-    <SpeakingClientDynamic
+    <SpeakingClient
       topics={data.topics as unknown as SpeakingTopicData[]}
       availableLevels={availableLevels}
       initialLevel={defaultLevel}

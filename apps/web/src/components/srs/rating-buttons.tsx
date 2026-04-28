@@ -8,17 +8,17 @@ interface RatingButtonsProps {
 }
 
 function formatInterval(days: number): string {
-    if (days === 0) return '< 1 Min'
-    if (days < 1) return `${Math.round(days * 24)}h`
-    if (days === 1) return '1 Tag'
-    if (days < 30) return `${Math.round(days)} Tage`
-    if (days < 365) return `${Math.round(days / 30)} Mon.`
-    return `${Math.round(days / 365)} J.`
+    if (days === 0) return '< 1 phút'
+    if (days < 1) return `${Math.round(days * 24)} giờ`
+    if (days === 1) return '1 ngày'
+    if (days < 30) return `${Math.round(days)} ngày`
+    if (days < 365) return `${Math.round(days / 30)} tháng`
+    return `${Math.round(days / 365)} năm`
 }
 
 function previewInterval(interval: number, easeFactor: number, rating: 'AGAIN' | 'HARD' | 'GOOD' | 'EASY'): string {
-    if (rating === 'AGAIN') return '< 1 Min'
-    if (interval === 0) return '1 Tag'
+    if (rating === 'AGAIN') return '< 1 phút'
+    if (interval === 0) return '1 ngày'
 
     let nextInterval: number
     if (rating === 'HARD') {
@@ -37,7 +37,7 @@ export function RatingButtons({ onRate, disabled, currentInterval, easeFactor }:
     const buttons = [
         {
             rating: 'AGAIN' as const,
-            label: 'Nochmal',
+            label: 'Làm lại',
             emoji: '🔄',
             color: 'from-red-500 to-red-600',
             hoverColor: 'hover:from-red-600 hover:to-red-700',
@@ -46,7 +46,7 @@ export function RatingButtons({ onRate, disabled, currentInterval, easeFactor }:
         },
         {
             rating: 'HARD' as const,
-            label: 'Schwer',
+            label: 'Khó',
             emoji: '😓',
             color: 'from-orange-400 to-orange-500',
             hoverColor: 'hover:from-orange-500 hover:to-orange-600',
@@ -55,7 +55,7 @@ export function RatingButtons({ onRate, disabled, currentInterval, easeFactor }:
         },
         {
             rating: 'GOOD' as const,
-            label: 'Gut',
+            label: 'Ổn',
             emoji: '👍',
             color: 'from-emerald-500 to-emerald-600',
             hoverColor: 'hover:from-emerald-600 hover:to-emerald-700',
@@ -64,7 +64,7 @@ export function RatingButtons({ onRate, disabled, currentInterval, easeFactor }:
         },
         {
             rating: 'EASY' as const,
-            label: 'Leicht',
+            label: 'Dễ',
             emoji: '🌟',
             color: 'from-blue-500 to-blue-600',
             hoverColor: 'hover:from-blue-600 hover:to-blue-700',

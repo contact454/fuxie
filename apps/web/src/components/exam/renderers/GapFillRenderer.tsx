@@ -68,7 +68,7 @@ export function GapFillRenderer({ content, answer, onChange }: Props) {
                                             value={value}
                                             onChange={e => updateBlank(item.id, e.target.value)}
                                             onKeyDown={e => { if (e.key === 'Enter') setActiveBlank(null) }}
-                                            placeholder={item.blankLabel ?? 'Antwort eingeben...'}
+                                            placeholder={item.blankLabel ?? 'Nhập câu trả lời...'}
                                             autoFocus
                                             className="w-full px-3 py-2 text-sm border border-gray-200 rounded-lg focus:outline-none focus:border-[#FF6B35] focus:ring-1 focus:ring-[#FF6B35]/30"
                                         />

@@ -46,6 +46,13 @@ const SKILL_EMOJI: Record<string, string> = {
     LESEN: '📖', HOEREN: '🎧', SCHREIBEN: '✍️', SPRECHEN: '🗣️',
 }
 
+const SKILL_LABEL: Record<string, string> = {
+    LESEN: 'Đọc',
+    HOEREN: 'Nghe',
+    SCHREIBEN: 'Viết',
+    SPRECHEN: 'Nói',
+}
+
 export function ExamSessionClient({ examId }: { examId: string }) {
     const router = useRouter()
     const [phase, setPhase] = useState<'loading' | 'ready' | 'active' | 'submitting' | 'error'>('loading')
@@ -131,7 +138,7 @@ export function ExamSessionClient({ examId }: { examId: string }) {
             <div className="flex items-center justify-center h-[60vh]">
                 <div className="text-center">
                     <div className="w-12 h-12 border-4 border-[#FF6B35]/30 border-t-[#FF6B35] rounded-full animate-spin mx-auto mb-4" />
-                    <p className="text-gray-500">Prüfung wird geladen...</p>
+                    <p className="text-gray-500">Đang tải bài thi...</p>
                 </div>
             </div>
         )
@@ -141,8 +148,8 @@ export function ExamSessionClient({ examId }: { examId: string }) {
         return (
             <div className="flex items-center justify-center h-[60vh]">
                 <div className="text-center">
-                    <p className="text-red-500 mb-2">Fehler beim Laden der Prüfung</p>
-                    <button onClick={() => router.push('/exam')} className="text-sm text-blue-500 underline">Zurück</button>
+                    <p className="text-red-500 mb-2">Không tải được bài thi</p>
+                    <button onClick={() => router.push('/exam')} className="text-sm text-blue-500 underline">Về danh sách</button>
                 </div>
             </div>
         )
@@ -202,7 +209,7 @@ export function ExamSessionClient({ examId }: { examId: string }) {
                     onClick={() => setShowSubmitModal(true)}
                     className="px-3 py-1.5 text-xs font-medium text-white bg-gradient-to-r from-[#FF6B35] to-[#2EC4B6] rounded-lg hover:shadow-md transition-all"
                 >
-                    Abgeben
+                    Nộp bài
                 </button>
             </div>
 
@@ -218,7 +225,7 @@ export function ExamSessionClient({ examId }: { examId: string }) {
                                 : 'bg-gray-50 text-gray-500 hover:bg-gray-100'
                             }`}
                     >
-                        {SKILL_EMOJI[sec.skill] ?? '📋'} {sec.title}
+                        {SKILL_EMOJI[sec.skill] ?? '📋'} {SKILL_LABEL[sec.skill] ?? sec.title}
                     </button>
                 ))}
             </div>
@@ -251,7 +258,7 @@ export function ExamSessionClient({ examId }: { examId: string }) {
                             src={task.audioUrl}
                             transcript={(task.contentJson as Record<string, unknown>).audioTranscript as string}
                             maxPlays={2}
-                            label={section?.skill === 'HOEREN' ? 'Hörtext' : undefined}
+                            label={section?.skill === 'HOEREN' ? 'Bài nghe' : undefined}
                         />
                     )}
                     <h3 className="text-sm font-semibold text-gray-600 mb-4">{task.title}</h3>
@@ -294,21 +301,21 @@ export function ExamSessionClient({ examId }: { examId: string }) {
                     disabled={currentSectionIdx === 0 && currentTaskIdx === 0}
                     className="px-4 py-2 text-sm font-medium text-gray-500 bg-gray-100 rounded-xl hover:bg-gray-200 transition-all disabled:opacity-30"
                 >
-                    ← Zurück
+                    ← Câu trước
                 </button>
                 {isLast ? (
                     <button
                         onClick={() => setShowSubmitModal(true)}
                         className="px-6 py-2 text-sm font-medium text-white bg-gradient-to-r from-[#FF6B35] to-[#2EC4B6] rounded-xl shadow-sm hover:shadow-md transition-all"
                     >
-                        Prüfung abgeben ✓
+                        Nộp bài ✓
                     </button>
                 ) : (
                     <button
                         onClick={goNext}
                         className="px-4 py-2 text-sm font-medium text-white bg-[#FF6B35] rounded-xl hover:bg-[#e55a28] transition-all"
                     >
-                        Weiter →
+                        Câu tiếp theo →
                     </button>
                 )}
             </div>
@@ -317,26 +324,26 @@ export function ExamSessionClient({ examId }: { examId: string }) {
             {showSubmitModal && (
                 <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 backdrop-blur-sm">
                     <div className="bg-white rounded-2xl p-6 max-w-sm w-full mx-4 shadow-xl">
-                        <h3 className="text-lg font-bold text-gray-800 mb-2">Prüfung abgeben?</h3>
+                        <h3 className="text-lg font-bold text-gray-800 mb-2">Nộp bài thi?</h3>
                         <p className="text-sm text-gray-500 mb-1">
-                            Beantwortet: {Object.keys(answers).length} / {totalTasks}
+                            Đã trả lời: {Object.keys(answers).length} / {totalTasks}
                         </p>
                         <p className="text-xs text-gray-400 mb-4">
-                            Verbleibende Zeit: {minutes}:{String(seconds).padStart(2, '0')}
+                            Thời gian còn lại: {minutes}:{String(seconds).padStart(2, '0')}
                         </p>
                         <div className="flex gap-3">
                             <button
                                 onClick={() => setShowSubmitModal(false)}
                                 className="flex-1 py-2 text-sm font-medium text-gray-600 bg-gray-100 rounded-xl hover:bg-gray-200"
                             >
-                                Weitermachen
+                                Tiếp tục làm
                             </button>
                             <button
                                 onClick={handleSubmit}
                                 disabled={phase === 'submitting'}
                                 className="flex-1 py-2 text-sm font-medium text-white bg-gradient-to-r from-[#FF6B35] to-[#2EC4B6] rounded-xl shadow-sm disabled:opacity-50"
                             >
-                                {phase === 'submitting' ? 'Wird geprüft...' : 'Ja, abgeben'}
+                                {phase === 'submitting' ? 'Đang chấm...' : 'Nộp bài'}
                             </button>
                         </div>
                     </div>

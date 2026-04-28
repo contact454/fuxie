@@ -55,6 +55,14 @@ const SPEED_OPTIONS = [0.5, 0.75, 1.0, 1.25, 1.5]
 
 type Phase = 'intro' | 'listening' | 'review' | 'results'
 
+const BACKGROUND_SCENE_LABELS: Record<string, string> = {
+    cafe: 'Quán cà phê',
+    station: 'Nhà ga',
+    store: 'Cửa hàng',
+    clinic: 'Phòng khám',
+    home: 'Ở nhà',
+}
+
 // ─── Lesson Player Component ────────────────────────
 export function LessonPlayer({
     lessonId, title, topic, cefrLevel, teil, teilName, taskType,
@@ -77,7 +85,7 @@ export function LessonPlayer({
         timeTaken: number; listenCount: number; questionResults: QuestionResult[]
     } | null>(null)
     const [showTranscript, setShowTranscript] = useState(false)
-    const [startTime] = useState(Date.now())
+    const [startTime, setStartTime] = useState(Date.now())
     const cefrColor = getCefrTheme(cefrLevel)
 
     // Audio event handlers
@@ -190,6 +198,34 @@ export function LessonPlayer({
     const canPlayAgain = playCount < maxPlays
     const allAnswered = questions.every(q => answers[q.id])
 
+    const resetLesson = () => {
+        const audio = audioRef.current
+        if (audio) {
+            audio.pause()
+            audio.currentTime = 0
+        }
+        if (autoPlayTimeoutRef.current) {
+            clearTimeout(autoPlayTimeoutRef.current)
+            autoPlayTimeoutRef.current = null
+        }
+        setIsPlaying(false)
+        setCurrentTime(0)
+        setPlayCount(0)
+        setCurrentQuestion(0)
+        setAnswers({})
+        setResults(null)
+        setShowTranscript(false)
+        setStartTime(Date.now())
+        setPhase('intro')
+    }
+
+    const resultMessage = (percentage: number) => {
+        if (percentage >= 90) return 'Xuất sắc!'
+        if (percentage >= 70) return 'Rất tốt!'
+        if (percentage >= 50) return 'Ổn rồi, luyện thêm chút nữa nhé!'
+        return 'Cần nghe lại thêm một vòng'
+    }
+
     // All phases share a single <audio> element at top-level to avoid
     // unmount/remount (and re-download) when changing phases.
     const audioElement = <audio ref={audioRef} src={audioUrl} preload="metadata" />
@@ -207,14 +243,14 @@ export function LessonPlayer({
                     <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                         <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
                     </svg>
-                    Zurück
+                    Về danh sách
                 </button>
 
                 {/* Lesson Info */}
                 <div className="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm text-center">
                     <Mascot variant="hoeren" size={80} className="mx-auto" />
                     <h1 className="text-xl font-bold text-gray-900 mt-4">{topic}</h1>
-                    <p className="text-sm text-gray-500 mt-1">Teil {teil} — {teilName}</p>
+                    <p className="text-sm text-gray-500 mt-1">Phần {teil} - {teilName}</p>
 
                     <div className="flex items-center justify-center gap-3 mt-4">
                         <span className={`px-3 py-1 rounded-full text-xs font-bold bg-gradient-to-r ${cefrColor.gradient} text-white`}>
@@ -223,23 +259,20 @@ export function LessonPlayer({
                         <span className="px-3 py-1 rounded-full text-xs font-semibold bg-gray-100 text-gray-600">{taskType}</span>
                         {backgroundScene && (
                             <span className="px-3 py-1 rounded-full text-xs font-semibold bg-blue-50 text-blue-600">
-                                {backgroundScene === 'cafe' ? '☕ Café' :
-                                    backgroundScene === 'station' ? '🚉 Bahnhof' :
-                                        backgroundScene === 'store' ? '🛒 Geschäft' :
-                                            backgroundScene === 'clinic' ? '🏥 Arztpraxis' :
-                                                `📍 ${backgroundScene}`}
+                                {BACKGROUND_SCENE_LABELS[backgroundScene] ?? backgroundScene}
                             </span>
                         )}
                     </div>
 
                     <div className="mt-6 p-4 bg-orange-50 rounded-xl text-sm text-gray-700">
-                        <p className="font-semibold text-[#FF6B35] mb-2">📋 Anweisungen</p>
-                        <p>Du hörst dieses Audio <strong>{maxPlays}×</strong>. Beantworte danach die <strong>{questions.length} Fragen</strong>.</p>
-                        <p className="mt-1 text-gray-500">Geschwindigkeit: {DEFAULT_SPEEDS[cefrLevel]}× • Dauer: ~{formatTime(duration || 180)}</p>
+                        <p className="font-semibold text-[#FF6B35] mb-2">Hướng dẫn</p>
+                        <p>Em sẽ nghe đoạn audio tối đa <strong>{maxPlays} lần</strong>, sau đó trả lời <strong>{questions.length} câu hỏi</strong>.</p>
+                        <p className="mt-1 text-gray-500">Tốc độ gợi ý: {DEFAULT_SPEEDS[cefrLevel]}x - Thời lượng: khoảng {formatTime(duration || 180)}</p>
                     </div>
 
                     <button
                         onClick={() => {
+                            setStartTime(Date.now())
                             setPhase('listening')
                             if (autoPlayTimeoutRef.current) {
                                 clearTimeout(autoPlayTimeoutRef.current)
@@ -250,7 +283,7 @@ export function LessonPlayer({
                         }}
                         className="mt-6 w-full py-3.5 rounded-xl bg-gradient-to-r from-[#FF6B35] to-orange-500 text-white font-bold text-base hover:opacity-90 transition-all shadow-lg shadow-orange-200"
                     >
-                        🎧 Audio abspielen
+                        Bắt đầu nghe
                     </button>
                 </div>
             </div>
@@ -274,7 +307,7 @@ export function LessonPlayer({
                         </svg>
                     </button>
                     <span className="text-sm font-semibold text-gray-700">
-                        Lektion • Teil {teil}
+                        Bài nghe - Phần {teil}
                     </span>
                     <span className={`px-2.5 py-1 rounded-lg text-xs font-bold bg-gradient-to-r ${cefrColor.gradient} text-white`}>
                         {cefrLevel}
@@ -326,7 +359,7 @@ export function LessonPlayer({
                             onClick={cycleSpeed}
                             className="px-3 py-1.5 rounded-lg bg-gray-100 text-xs font-bold text-gray-600 hover:bg-gray-200 transition-colors"
                         >
-                            {playbackSpeed}×
+                            {playbackSpeed}x
                         </button>
 
                         <button
@@ -338,7 +371,7 @@ export function LessonPlayer({
                             <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                                 <path strokeLinecap="round" strokeLinejoin="round" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
                             </svg>
-                            Replay {playCount}/{maxPlays}
+                            Nghe lại {playCount}/{maxPlays}
                         </button>
                     </div>
                 </div>
@@ -349,7 +382,7 @@ export function LessonPlayer({
                         {/* Progress dots */}
                         <div className="flex items-center gap-1.5 mb-4">
                             <span className="text-xs text-gray-500 font-semibold mr-2">
-                                Frage {currentQuestion + 1} von {questions.length}
+                                Câu {currentQuestion + 1}/{questions.length}
                             </span>
                             {questions.map((_, i) => (
                                 <div
@@ -400,7 +433,7 @@ export function LessonPlayer({
                                     onClick={() => setCurrentQuestion(c => c - 1)}
                                     className="flex-1 py-3 rounded-xl border-2 border-gray-200 text-sm font-semibold text-gray-600 hover:border-gray-300 transition-all"
                                 >
-                                    Vorherige
+                                    Câu trước
                                 </button>
                             )}
                             {currentQuestion < questions.length - 1 ? (
@@ -408,7 +441,7 @@ export function LessonPlayer({
                                     onClick={() => setCurrentQuestion(c => c + 1)}
                                     className="flex-1 py-3 rounded-xl bg-gradient-to-r from-[#FF6B35] to-orange-500 text-white font-bold text-sm hover:opacity-90 transition-all shadow-sm"
                                 >
-                                    Nächste Frage
+                                    Câu tiếp theo
                                 </button>
                             ) : (
                                 <button
@@ -419,7 +452,7 @@ export function LessonPlayer({
                                         : 'bg-gray-200 text-gray-400 cursor-not-allowed'
                                         }`}
                                 >
-                                    {isSubmitting ? 'Wird geprüft...' : `Antworten abgeben (${Object.keys(answers).length}/${questions.length})`}
+                                    {isSubmitting ? 'Đang chấm...' : `Nộp bài (${Object.keys(answers).length}/${questions.length})`}
                                 </button>
                             )}
                         </div>
@@ -434,10 +467,7 @@ export function LessonPlayer({
     // ═══════════════════════════════════════════
     if (phase === 'results' && results) {
         const { score, totalQuestions, percentage, questionResults } = results
-        const message = percentage >= 90 ? 'Ausgezeichnet! 🌟' :
-            percentage >= 70 ? 'Sehr gut! 👏' :
-                percentage >= 50 ? 'Gut gemacht! 💪' :
-                    'Weiter üben! 📚'
+        const message = resultMessage(percentage)
         const mascotVariant = percentage >= 70 ? 'celebrate' : percentage >= 50 ? 'encouragement' : 'studying'
 
         return (
@@ -470,29 +500,29 @@ export function LessonPlayer({
 
                     <h2 className="text-xl font-bold text-gray-900 mt-4">{message}</h2>
                     <p className="text-sm text-gray-500 mt-1">
-                        Du hast {score} von {totalQuestions} Fragen richtig beantwortet.
+                        Em trả lời đúng {score}/{totalQuestions} câu.
                     </p>
 
                     {/* Stats */}
                     <div className="flex justify-center gap-4 mt-5">
                         <div className="px-4 py-2 bg-gray-50 rounded-xl text-center">
                             <p className="text-lg font-bold text-gray-900">⏱️ {formatTime(results.timeTaken)}</p>
-                            <p className="text-[10px] text-gray-500">Zeit</p>
+                            <p className="text-[10px] text-gray-500">Thời gian</p>
                         </div>
                         <div className="px-4 py-2 bg-gray-50 rounded-xl text-center">
-                            <p className="text-lg font-bold text-gray-900">🔊 {results.listenCount}×</p>
-                            <p className="text-[10px] text-gray-500">Gehört</p>
+                            <p className="text-lg font-bold text-gray-900">🔊 {results.listenCount}x</p>
+                            <p className="text-[10px] text-gray-500">Lượt nghe</p>
                         </div>
                         <div className="px-4 py-2 bg-gray-50 rounded-xl text-center">
                             <p className="text-lg font-bold text-gray-900">📊 {percentage}%</p>
-                            <p className="text-[10px] text-gray-500">Ergebnis</p>
+                            <p className="text-[10px] text-gray-500">Kết quả</p>
                         </div>
                     </div>
                 </div>
 
                 {/* Answer Review */}
                 <div className="bg-white rounded-2xl p-5 border border-gray-100 shadow-sm mb-5">
-                    <h3 className="text-sm font-bold text-gray-700 mb-3">Antworten-Übersicht</h3>
+                    <h3 className="text-sm font-bold text-gray-700 mb-3">Tổng kết câu trả lời</h3>
                     <div className="space-y-2.5">
                         {questionResults.map((qr) => (
                             <div
@@ -511,10 +541,10 @@ export function LessonPlayer({
                                         ) : (
                                             <>
                                                 <p className="text-sm text-red-500 mt-1">
-                                                    Deine Antwort: {(qr.options as string[])[qr.userAnswer.charCodeAt(0) - 97] || qr.userAnswer}
+                                                    Câu em chọn: {(qr.options as string[])[qr.userAnswer.charCodeAt(0) - 97] || qr.userAnswer}
                                                 </p>
                                                 <p className="text-sm text-green-600 mt-0.5">
-                                                    Richtig: {(qr.options as string[])[qr.correctAnswer.charCodeAt(0) - 97] || qr.correctAnswer}
+                                                    Đáp án đúng: {(qr.options as string[])[qr.correctAnswer.charCodeAt(0) - 97] || qr.correctAnswer}
                                                 </p>
                                                 {qr.explanationNative && (
                                                     <p className="text-xs text-gray-500 mt-1 italic">{qr.explanationNative}</p>
@@ -535,7 +565,7 @@ export function LessonPlayer({
                             onClick={() => setShowTranscript(!showTranscript)}
                             className="w-full flex items-center justify-between p-4 hover:bg-gray-50 transition-colors"
                         >
-                            <span className="text-sm font-semibold text-gray-700">📝 Transkript anzeigen</span>
+                            <span className="text-sm font-semibold text-gray-700">{showTranscript ? 'Ẩn transcript' : 'Xem transcript'}</span>
                             <svg
                                 className={`w-4 h-4 text-gray-400 transition-transform ${showTranscript ? 'rotate-180' : ''}`}
                                 fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}
@@ -565,13 +595,13 @@ export function LessonPlayer({
                         onClick={() => router.push('/listening')}
                         className="flex-1 py-3 rounded-xl border-2 border-gray-200 text-sm font-semibold text-gray-600 hover:border-gray-300 transition-all"
                     >
-                        Übersicht
+                        Về danh sách
                     </button>
                     <button
-                        onClick={() => router.push('/listening')}
+                        onClick={resetLesson}
                         className="flex-1 py-3 rounded-xl bg-gradient-to-r from-[#FF6B35] to-orange-500 text-white font-bold text-sm hover:opacity-90 transition-all shadow-sm"
                     >
-                        Nächste Lektion →
+                        Luyện lại
                     </button>
                 </div>
             </div>

@@ -187,7 +187,7 @@ export function ClozeExercise({ questions, cefrLevel, themeName, themeSlug, onEx
                 <div className="max-w-2xl w-full px-6 py-8">
                     {/* Instruction */}
                     <div className="text-center mb-6">
-                        <p className="text-sm text-gray-400 uppercase tracking-wider font-semibold">Ergänze das fehlende Wort</p>
+                        <p className="text-sm text-gray-400 uppercase tracking-wider font-semibold">Điền từ còn thiếu</p>
                         {/* Word type badge */}
                         <span className={`inline-block mt-2 px-3 py-1 rounded-lg text-xs font-bold ${typeColor}`}>
                             {typeLabel}
@@ -209,7 +209,7 @@ export function ClozeExercise({ questions, cefrLevel, themeName, themeSlug, onEx
                     {/* Feedback */}
                     {isRevealed && (
                         <div className="mb-4 p-3 rounded-xl bg-blue-50 border border-blue-100 text-center">
-                            <span className="text-sm text-[#004E89] font-semibold">Antwort gespeichert</span>
+                            <span className="text-sm text-[#004E89] font-semibold">Đã lưu câu trả lời</span>
                         </div>
                     )}
 
@@ -222,7 +222,7 @@ export function ClozeExercise({ questions, cefrLevel, themeName, themeSlug, onEx
                             onChange={e => setUserInput(e.target.value)}
                             onKeyDown={handleKeyDown}
                             disabled={isRevealed}
-                            placeholder="Schreibe das fehlende Wort..."
+                            placeholder="Viết từ còn thiếu..."
                             autoComplete="off"
                             autoCapitalize="off"
                             spellCheck={false}

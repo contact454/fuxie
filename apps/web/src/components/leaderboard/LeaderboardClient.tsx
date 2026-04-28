@@ -70,7 +70,7 @@ export function LeaderboardClient() {
             <div className="flex gap-1.5 bg-gray-100 rounded-full p-1 mb-6">
                 {[
                     { key: 'weekly' as const, label: 'Diese Woche', emoji: '📅' },
-                    { key: 'alltime' as const, label: 'Alle Zeiten', emoji: '🌟' },
+                    { key: 'alltime' as const, label: 'Mọi thời gian', emoji: '🌟' },
                 ].map(tab => (
                     <button
                         key={tab.key}
@@ -95,7 +95,7 @@ export function LeaderboardClient() {
             ) : entries.length === 0 ? (
                 <div className="text-center py-16">
                     <Image src="/mascot/core/fuxie-core-happy-wave.png" alt="Fuxie" width={64} height={64} className="mx-auto mb-4 object-contain" />
-                    <p className="text-gray-500">Noch keine Daten!</p>
+                    <p className="text-gray-500">Chưa có dữ liệu!</p>
                     <p className="text-xs text-gray-400 mt-1">Học để lên bảng xếp hạng nhé! 🦊</p>
                 </div>
             ) : (

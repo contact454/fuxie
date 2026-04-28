@@ -1,11 +1,11 @@
 import { redirect } from 'next/navigation'
 import { getServerUser } from '@/lib/auth/server-auth'
 import { getVocabularyLevels, getVocabularyThemes, mapVocabularyThemes, type CefrLevel } from '@/lib/content/vocabulary'
-import { PracticeHubDynamic } from '@/components/vocabulary/PracticeHubDynamic'
+import { PracticeHub } from '@/components/vocabulary/practice-hub'
 
 export const metadata = {
-    title: 'Fuxie 🦊 — Wortschatz üben',
-    description: 'Vocabulary practice exercises — Multiple Choice, Matching, Spelling and more',
+    title: 'Fuxie - Luyện từ vựng',
+    description: 'Bài luyện từ vựng: trắc nghiệm, ghép cặp, chính tả và nhiều dạng khác',
 }
 
 async function getThemesForPractice(cefrLevel: CefrLevel, locale: string) {
@@ -25,7 +25,7 @@ export default async function PracticePage() {
 
     return (
         <div className="max-w-5xl mx-auto px-4 py-8">
-            <PracticeHubDynamic
+            <PracticeHub
                 themes={themes}
                 availableLevels={availableLevels}
                 initialLevel={defaultLevel}

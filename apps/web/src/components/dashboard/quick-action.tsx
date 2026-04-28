@@ -1,4 +1,4 @@
-import Link from 'next/link'
+import { MeasuredLink } from '@/components/performance/measured-link'
 
 // ─── Quick Action Link ──────────────────────────────
 interface QuickActionProps {
@@ -12,8 +12,10 @@ interface QuickActionProps {
 
 export function QuickAction({ href, icon, label, sublabel, color, badge }: QuickActionProps) {
     return (
-        <Link
+        <MeasuredLink
             href={href}
+            flow="dashboard.quick_action"
+            source={label}
             className="card-hover group relative flex items-center gap-3 rounded-xl p-3 transition-all"
             style={{
                 background: `linear-gradient(135deg, ${color}08, ${color}04)`,
@@ -46,6 +48,6 @@ export function QuickAction({ href, icon, label, sublabel, color, badge }: Quick
             >
                 <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
             </svg>
-        </Link>
+        </MeasuredLink>
     )
 }

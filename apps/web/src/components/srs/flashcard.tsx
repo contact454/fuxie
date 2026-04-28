@@ -123,7 +123,7 @@ export function Flashcard({ vocabulary, isFlipped, onFlip }: FlashcardProps) {
 
                     {/* Tap hint */}
                     <p className="text-xs text-gray-400 mt-4 animate-pulse">
-                        Antippen zum Umdrehen ↻
+                        Chạm để lật thẻ ↻
                     </p>
                 </div>
 

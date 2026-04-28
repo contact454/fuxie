@@ -123,10 +123,10 @@ export function ReviewSession({ initialCards, totalDue }: ReviewSessionProps) {
     const getMascotReaction = (): { variant: 'correct' | 'encouragement' | 'thinking'; message: string } | null => {
         if (!lastRating) return null
         switch (lastRating) {
-            case 'EASY': return { variant: 'correct', message: 'Super! 🌟' }
-            case 'GOOD': return { variant: 'correct', message: 'Gut gemacht! 👍' }
-            case 'HARD': return { variant: 'thinking', message: 'Weiter üben! 💪' }
-            case 'AGAIN': return { variant: 'encouragement', message: 'Kein Problem! 🔄' }
+            case 'EASY': return { variant: 'correct', message: 'Tuyệt lắm! 🌟' }
+            case 'GOOD': return { variant: 'correct', message: 'Làm tốt lắm! 👍' }
+            case 'HARD': return { variant: 'thinking', message: 'Cứ luyện tiếp nhé! 💪' }
+            case 'AGAIN': return { variant: 'encouragement', message: 'Không sao, làm lại nào! 🔄' }
         }
     }
 
@@ -138,10 +138,10 @@ export function ReviewSession({ initialCards, totalDue }: ReviewSessionProps) {
 
         const mascotVariant = accuracy >= 80 ? 'celebrate' : accuracy >= 50 ? 'correct' : 'encouragement'
         const celebrationMessage = accuracy >= 80
-            ? 'Toll gemacht! Du hast alle Karten geschafft! 🎉'
+            ? 'Làm tốt lắm! Em đã hoàn thành tất cả thẻ! 🎉'
             : accuracy >= 50
-                ? 'Gut gemacht! Weiter so! 👏'
-                : 'Nicht aufgeben! Übung macht den Meister! 💪'
+                ? 'Ổn rồi, tiếp tục nhé! 👏'
+                : 'Đừng bỏ cuộc, luyện thêm sẽ chắc hơn! 💪'
 
         return (
             <div className="flex flex-col items-center justify-center min-h-[500px] animate-fade-in-up">
@@ -171,15 +171,15 @@ export function ReviewSession({ initialCards, totalDue }: ReviewSessionProps) {
                     {/* Stats grid */}
                     <div className="grid grid-cols-3 gap-3 mb-6">
                         <div className="bg-white rounded-xl p-4 shadow-sm border border-emerald-100 text-center">
-                            <p className="text-xs text-gray-500 mb-1">✅ Richtig</p>
+                            <p className="text-xs text-gray-500 mb-1">✅ Đúng</p>
                             <p className="text-2xl font-bold text-emerald-600">{stats.correct}</p>
                         </div>
                         <div className="bg-white rounded-xl p-4 shadow-sm border border-red-100 text-center">
-                            <p className="text-xs text-gray-500 mb-1">❌ Falsch</p>
+                            <p className="text-xs text-gray-500 mb-1">❌ Chưa đúng</p>
                             <p className="text-2xl font-bold text-red-500">{stats.again}</p>
                         </div>
                         <div className="bg-white rounded-xl p-4 shadow-sm border border-fuxie-primary/20 text-center">
-                            <p className="text-xs text-gray-500 mb-1">⚡ Genauigkeit</p>
+                            <p className="text-xs text-gray-500 mb-1">⚡ Độ chính xác</p>
                             <p className="text-2xl font-bold text-fuxie-primary">{accuracy}%</p>
                         </div>
                     </div>
@@ -187,7 +187,7 @@ export function ReviewSession({ initialCards, totalDue }: ReviewSessionProps) {
                     {/* XP badge */}
                     <div className="flex justify-center gap-3 mb-6">
                         <span className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-amber-400 to-orange-400 text-white text-sm font-bold shadow-md">
-                            ⭐ +{stats.xpEarned} XP verdient
+                            ⭐ +{stats.xpEarned} XP nhận được
                         </span>
                     </div>
 
@@ -197,19 +197,19 @@ export function ReviewSession({ initialCards, totalDue }: ReviewSessionProps) {
                             href="/vocabulary"
                             className="px-5 py-3 rounded-xl border-2 border-gray-200 text-gray-700 font-semibold hover:bg-gray-50 transition-colors"
                         >
-                            Zurück zum Wortschatz
+                            Về từ vựng
                         </a>
                         <a
                             href="/review"
                             className="px-5 py-3 rounded-xl bg-gradient-to-r from-fuxie-primary to-orange-500 text-white font-semibold hover:opacity-90 transition-opacity shadow-lg shadow-orange-200"
                         >
-                            Weiter lernen →
+                            Học tiếp →
                         </a>
                     </div>
 
                     {/* Next review hint */}
                     <p className="text-xs text-gray-400 text-center mt-4">
-                        Nächste Wiederholung wird automatisch geplant
+                        Lần ôn tiếp theo sẽ được lên lịch tự động.
                     </p>
                 </div>
             </div>
@@ -223,15 +223,15 @@ export function ReviewSession({ initialCards, totalDue }: ReviewSessionProps) {
                 <Mascot
                     variant="empty"
                     size={120}
-                    speechBubble="Füge Vokabeln hinzu, um zu lernen! 📚"
+                    speechBubble="Thêm từ vựng để bắt đầu học nhé! 📚"
                 />
-                <h2 className="text-xl font-bold text-gray-900 mt-6 mb-2">Keine Karten zu wiederholen!</h2>
-                <p className="text-gray-500 mb-6">Entdecke neue Vokabeln und füge sie zum Lernen hinzu.</p>
+                <h2 className="text-xl font-bold text-gray-900 mt-6 mb-2">Không có thẻ cần ôn!</h2>
+                <p className="text-gray-500 mb-6">Khám phá từ mới và thêm vào danh sách học.</p>
                 <a
                     href="/vocabulary"
                     className="px-6 py-3 rounded-xl bg-gradient-to-r from-fuxie-primary to-orange-500 text-white font-semibold hover:opacity-90 transition-opacity"
                 >
-                    Vokabeln entdecken
+                    Khám phá từ vựng
                 </a>
             </div>
         )
@@ -295,7 +295,7 @@ export function ReviewSession({ initialCards, totalDue }: ReviewSessionProps) {
             {/* Flip hint when not flipped */}
             {!isFlipped && !lastRating && (
                 <p className="text-sm text-gray-400 animate-pulse">
-                    Tippe auf die Karte, um die Antwort zu sehen
+                    Chạm vào thẻ để xem đáp án.
                 </p>
             )}
         </div>

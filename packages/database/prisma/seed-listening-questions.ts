@@ -8,12 +8,10 @@
  *   DATABASE_URL="..." npx tsx prisma/seed-listening-questions.ts
  */
 
-import { PrismaClient, CefrLevel } from '@prisma/client'
+import { prisma, CefrLevel } from '../src/client'
 import * as fs from 'fs'
 import * as path from 'path'
 import { fileURLToPath } from 'url'
-
-const prisma = new PrismaClient()
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
@@ -100,28 +98,49 @@ async function main() {
           continue
         }
 
-        // Delete existing questions for this lesson (re-seed)
-        await prisma.listeningQuestion.deleteMany({
-          where: { lessonId: lesson.id },
-        })
-
-        // Insert questions
+        // Upsert questions so the seed is safe to rerun without deleting existing data.
         for (let i = 0; i < exercise.questions.length; i++) {
           const q = exercise.questions[i]!
           const questionText = q.question || q.statement || ''
           const options = formatOptions(q)
 
-          await prisma.listeningQuestion.create({
-            data: {
+          await prisma.listeningQuestion.upsert({
+            where: {
+              lessonId_questionNumber: {
+                lessonId: lesson.id,
+                questionNumber: i + 1,
+              },
+            },
+            update: {
               lessonId: lesson.id,
               questionNumber: i + 1,
               questionType: q.type,
               questionText,
-              questionTextVi: q.explanation?.vi || null,
+              translations: q.explanation?.vi ? { vi: q.explanation.vi } : null,
               options,
               correctAnswer: String(q.answer),
               explanation: q.explanation?.de || null,
-              explanationVi: q.explanation?.vi || null,
+              explanationTrans: q.explanation?.vi ? {
+                vi: q.explanation.vi,
+                key_evidence: q.explanation.key_evidence,
+                key_vocabulary: q.explanation.key_vocabulary,
+              } : null,
+              sortOrder: i + 1,
+            },
+            create: {
+              lessonId: lesson.id,
+              questionNumber: i + 1,
+              questionType: q.type,
+              questionText,
+              translations: q.explanation?.vi ? { vi: q.explanation.vi } : null,
+              options,
+              correctAnswer: String(q.answer),
+              explanation: q.explanation?.de || null,
+              explanationTrans: q.explanation?.vi ? {
+                vi: q.explanation.vi,
+                key_evidence: q.explanation.key_evidence,
+                key_vocabulary: q.explanation.key_vocabulary,
+              } : null,
               sortOrder: i + 1,
             },
           })

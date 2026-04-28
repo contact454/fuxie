@@ -2,11 +2,11 @@ import { redirect } from 'next/navigation'
 import { prisma } from '@fuxie/database'
 import { getServerUser } from '@/lib/auth/server-auth'
 import { cacheWrap } from '@/lib/cache/redis'
-import { WritingClientDynamic } from '@/components/writing/WritingClientDynamic'
+import { WritingClient } from '@/components/writing/writing-client'
 
 export const metadata = {
-    title: 'Fuxie 🦊 — Schreibtraining',
-    description: 'Deutsche Schreibtraining — Practice writing by CEFR level with AI feedback',
+    title: 'Fuxie - Luyện viết',
+    description: 'Luyện viết tiếng Đức theo cấp độ CEFR với phản hồi AI',
 }
 
 import type { CefrLevel } from '@/lib/types/cefr'
@@ -129,7 +129,7 @@ export default async function WritingPage() {
 
     return (
         <div className="max-w-5xl mx-auto px-4 py-8">
-            <WritingClientDynamic
+            <WritingClient
                 teile={data.teile}
                 totalExercises={data.totalExercises}
                 totalCompleted={data.totalCompleted}

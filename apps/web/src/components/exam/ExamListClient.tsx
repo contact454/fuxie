@@ -53,10 +53,10 @@ const getSkillIcon = (skillName: string) => {
 export function ExamListClient() {
     const [exams, setExams] = useState<ExamEntry[]>([])
     const [loading, setLoading] = useState(true)
-    const [filterLevel, setFilterLevel] = useState<string>('Alle')
+    const [filterLevel, setFilterLevel] = useState<string>('Tất cả')
 
     useEffect(() => {
-        const q = filterLevel !== 'Alle' ? `?level=${filterLevel}` : ''
+        const q = filterLevel !== 'Tất cả' ? `?level=${filterLevel}` : ''
         fetch(`/api/v1/exams${q}`)
             .then(r => r.json())
             .then(d => { if (d.success) setExams(d.data) })
@@ -107,13 +107,20 @@ export function ExamListClient() {
         })
     }, [exams])
 
-    const levels = ['Alle', 'A1', 'A2', 'B1', 'B2', 'C1', 'C2']
+    const levels = ['Tất cả', 'A1', 'A2', 'B1', 'B2', 'C1', 'C2']
     const SKILL_NAMES: Record<string, string> = {
         MIXED: 'Đề tổng hợp',
-        LESEN: 'Đọc hiểu (Lesen)',
-        HOEREN: 'Nghe hiểu (Hören)',
-        SCHREIBEN: 'Viết (Schreiben)',
-        SPRECHEN: 'Nói (Sprechen)',
+        LESEN: 'Đọc hiểu',
+        HOEREN: 'Nghe hiểu',
+        SCHREIBEN: 'Viết',
+        SPRECHEN: 'Nói',
+    }
+    const SKILL_LABELS: Record<string, string> = {
+        LESEN: 'Đọc',
+        HOEREN: 'Nghe',
+        SCHREIBEN: 'Viết',
+        SPRECHEN: 'Nói',
+        MIXED: 'Tổng hợp',
     }
 
 
@@ -129,10 +136,10 @@ export function ExamListClient() {
                 <div className="text-center md:text-left pt-2">
                     <div className="flex items-center justify-center md:justify-start gap-2 mb-2">
                         <Sparkles className="w-5 h-5 text-yellow-500 fill-yellow-500/20" />
-                        <span className="text-sm font-bold tracking-wider text-yellow-600 uppercase">Zertifikatszentrum</span>
+                        <span className="text-sm font-bold tracking-wider text-yellow-600 uppercase">Trung tâm luyện thi</span>
                     </div>
                     <h1 className="text-4xl font-extrabold text-gray-900 mb-2 tracking-tight">
-                        Prüfung üben
+                        Luyện thi thử
                     </h1>
                     <p className="text-gray-500 max-w-lg leading-relaxed">
                         Thi thử và rèn luyện kỹ năng giải đề chính thức chuẩn khung viện Goethe, telc và ÖSD.
@@ -154,7 +161,7 @@ export function ExamListClient() {
                             >
                                 {isActive && (
                                     <div
-                                        className={`absolute inset-0 rounded-xl bg-gradient-to-r ${l === 'Alle' ? 'from-gray-800 to-gray-700 shadow-gray-400/20' : LEVEL_COLORS[l] || 'from-gray-800 to-gray-700'}`}
+                                        className={`absolute inset-0 rounded-xl bg-gradient-to-r ${l === 'Tất cả' ? 'from-gray-800 to-gray-700 shadow-gray-400/20' : LEVEL_COLORS[l] || 'from-gray-800 to-gray-700'}`}
                                     />
                                 )}
                                 <span className="relative z-10">{l}</span>
@@ -225,9 +232,9 @@ export function ExamListClient() {
                                                                     {exam.examType}
                                                                 </span>
                                                                 <span className="flex items-center gap-1.5 text-[11px] font-medium text-gray-400 bg-gray-50 px-2.5 py-1 rounded-full border border-gray-100">
-                                                                    <Clock className="w-3.5 h-3.5" /> {exam.totalMinutes} Min
+                                                                    <Clock className="w-3.5 h-3.5" /> {exam.totalMinutes} phút
                                                                     <span className="mx-1 text-gray-300">|</span>
-                                                                    <Trophy className="w-3.5 h-3.5" /> {exam.totalPoints} Pkt.
+                                                                    <Trophy className="w-3.5 h-3.5" /> {exam.totalPoints} điểm
                                                                 </span>
                                                             </div>
 
@@ -242,7 +249,7 @@ export function ExamListClient() {
                                                                 {exam.sections.map((sec, i) => (
                                                                     <div key={i} className="flex items-center gap-1.5 px-2.5 py-1 bg-gray-100/60 text-gray-600 rounded-lg text-xs font-medium border border-gray-200/50">
                                                                         {getSkillIcon(sec.skill)}
-                                                                        <span className="capitalize">{sec.skill.toLowerCase()}</span>
+                                                                        <span>{SKILL_LABELS[sec.skill.toUpperCase()] ?? sec.skill}</span>
                                                                     </div>
                                                                 ))}
                                                             </div>
@@ -260,18 +267,18 @@ export function ExamListClient() {
                                                                             <span className={`text-[13px] font-bold ${exam.bestAttempt.passed ? 'text-emerald-700' : 'text-red-600'}`}>
                                                                                 {exam.bestAttempt.percentScore}%
                                                                             </span>
-                                                                            <span className="text-[10px] text-gray-400 font-medium">Bester Versuch</span>
+                                                                            <span className="text-[10px] text-gray-400 font-medium">Lần tốt nhất</span>
                                                                         </div>
                                                                     </div>
                                                                 ) : (
-                                                                    <span className="text-[13px] font-medium text-gray-400">Noch nie gemacht</span>
+                                                                    <span className="text-[13px] font-medium text-gray-400">Chưa làm lần nào</span>
                                                                 )}
                                                                 
                                                                 <Link
                                                                     href={`/exam/${exam.id}`}
                                                                     className="flex items-center gap-2 px-5 py-2.5 bg-gray-900 text-white text-sm font-semibold rounded-xl hover:bg-[#FF6B35] hover:scale-[1.02] active:scale-95 transition-all duration-200 shadow-md shadow-gray-900/10"
                                                                 >
-                                                                    {exam.bestAttempt ? 'Wiederholen' : 'Starten'}
+                                                                    {exam.bestAttempt ? 'Luyện lại' : 'Bắt đầu'}
                                                                     <ArrowRight className="w-4 h-4" />
                                                                 </Link>
                                                             </div>

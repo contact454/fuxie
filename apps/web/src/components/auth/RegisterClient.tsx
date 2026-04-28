@@ -89,7 +89,7 @@ export default function RegisterPage() {
                         />
                         <h1 className="text-4xl font-bold">Fuxie</h1>
                     </div>
-                    <p className="mt-2 text-gray-500">Dein Abenteuer beginnt hier!</p>
+                    <p className="mt-2 text-gray-500">Hành trình học bắt đầu từ đây!</p>
                 </div>
 
                 {/* Error */}
@@ -103,7 +103,7 @@ export default function RegisterPage() {
                 <form onSubmit={handleRegister} className="space-y-4">
                     <div>
                         <label htmlFor="name" className="mb-1 block text-sm font-medium text-gray-700">
-                            Tên của bạn / Dein Name
+                            Tên của bạn
                         </label>
                         <input
                             id="name"
@@ -131,7 +131,7 @@ export default function RegisterPage() {
                     </div>
                     <div>
                         <label htmlFor="password" className="mb-1 block text-sm font-medium text-gray-700">
-                            Passwort
+                            Mật khẩu
                         </label>
                         <input
                             id="password"
@@ -147,7 +147,7 @@ export default function RegisterPage() {
 
                     {/* CEFR Level badges */}
                     <div className="rounded-lg bg-gray-50 p-3">
-                        <p className="mb-2 text-xs font-medium text-gray-500">Ziel-Niveau / Mục tiêu</p>
+                        <p className="mb-2 text-xs font-medium text-gray-500">Cấp độ mục tiêu</p>
                         <div className="flex gap-2">
                             {['A1', 'A2', 'B1', 'B2', 'C1', 'C2'].map((level) => (
                                 <span
@@ -168,15 +168,15 @@ export default function RegisterPage() {
                         disabled={loading}
                         className="w-full rounded-lg bg-fuxie-primary px-4 py-2.5 font-semibold text-white transition-colors hover:bg-fuxie-primary/90 disabled:opacity-50"
                     >
-                        {loading ? 'Laden...' : 'Konto erstellen'}
+                        {loading ? 'Đang tải...' : 'Tạo tài khoản'}
                     </button>
                 </form>
 
                 {/* Login link */}
                 <p className="mt-6 text-center text-sm text-gray-500">
-                    Bereits ein Konto?{' '}
+                    Đã có tài khoản?{' '}
                     <a href="/login" className="font-medium text-fuxie-primary hover:underline">
-                        Anmelden
+                        Đăng nhập
                     </a>
                 </p>
             </div>

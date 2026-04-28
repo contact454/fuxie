@@ -2,7 +2,7 @@ import { notFound, redirect } from 'next/navigation'
 import { prisma } from '@fuxie/database'
 import { cookies } from 'next/headers'
 import { getServerUser } from '@/lib/auth/server-auth'
-import { WritingPlayerDynamic } from '@/components/writing/WritingPlayerDynamic'
+import { WritingPlayer } from '@/components/writing/writing-player'
 
 export async function generateMetadata({ params }: { params: Promise<{ exerciseId: string }> }) {
     const { exerciseId } = await params
@@ -26,7 +26,7 @@ export default async function WritingExercisePage({ params }: { params: Promise<
 
     return (
         <div className="max-w-6xl mx-auto px-4 py-6">
-            <WritingPlayerDynamic
+            <WritingPlayer
                 exerciseId={exercise.exerciseId}
                 cefrLevel={exercise.cefrLevel}
                 teil={exercise.teil}

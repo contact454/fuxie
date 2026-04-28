@@ -33,7 +33,7 @@ export function IntroSlide({ word, meaningNative, imageUrl, audioUrl, onContinue
     return (
         <div className="flex-1 flex flex-col items-center justify-center p-6 animate-fade-in-up">
             <h2 className="text-xl font-bold text-[#FF6B35] mb-8 uppercase tracking-wider text-center">
-                Neues Wort! (Từ mới)
+                Từ mới!
             </h2>
 
             <div className="bg-white rounded-3xl p-8 border-2 border-orange-100 shadow-xl shadow-orange-50 max-w-sm w-full text-center hover:scale-[1.02] transition-transform">
@@ -72,7 +72,7 @@ export function IntroSlide({ word, meaningNative, imageUrl, audioUrl, onContinue
                 onClick={onContinue}
                 className="mt-12 w-full max-w-sm py-4 rounded-2xl bg-[#004E89] text-white font-bold text-lg hover:bg-blue-800 transition-colors shadow-lg shadow-blue-200"
             >
-                Weiter (Tiếp tục)
+                Tiếp tục
             </button>
         </div>
     )

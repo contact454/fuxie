@@ -1,9 +1,9 @@
 import { redirect } from 'next/navigation'
 import { getServerUser } from '@/lib/auth/server-auth'
-import { ExamResultClientDynamic } from '@/components/exam/ExamResultClientDynamic'
+import { ExamResultClient } from '@/components/exam/ExamResultClient'
 
 export const metadata = {
-    title: 'Fuxie 🦊 — Prüfungsergebnis',
+    title: 'Fuxie - Kết quả thi thử',
     description: 'Kết quả bài thi',
 }
 
@@ -17,5 +17,5 @@ export default async function ExamResultPage({
 
     const { examId, attemptId } = await params
 
-    return <ExamResultClientDynamic examId={examId} attemptId={attemptId} />
+    return <ExamResultClient examId={examId} attemptId={attemptId} />
 }

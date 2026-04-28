@@ -16,8 +16,8 @@ type Step = 'welcome' | 'goal' | 'placement' | 'result'
 
 const EXAM_OPTIONS = [
     { value: 'GOETHE', label: 'Goethe-Zertifikat', emoji: '🏛️', desc: 'Viện Goethe' },
-    { value: 'TELC', label: 'telc-Prüfung', emoji: '📋', desc: 'Tổ chức telc' },
-    { value: 'OESD', label: 'ÖSD-Prüfung', emoji: '🇦🇹', desc: 'Chứng chỉ Áo' },
+    { value: 'TELC', label: 'telc', emoji: '📋', desc: 'Tổ chức telc' },
+    { value: 'OESD', label: 'ÖSD', emoji: '🇦🇹', desc: 'Chứng chỉ Áo' },
     { value: null, label: 'Chỉ muốn học', emoji: '🦊', desc: 'Không thi' },
 ] as const
 
@@ -382,7 +382,7 @@ function PlacementStep({
                     }`}
                 >
                     <div className="font-bold mb-1">
-                        {lastCorrect ? '✅ Richtig!' : '❌ Leider falsch'}
+                        {lastCorrect ? '✅ Đúng!' : '❌ Chưa đúng'}
                     </div>
                     <div className="text-xs opacity-80">{question.explanationNative}</div>
                 </div>
@@ -415,7 +415,7 @@ function ResultStep({
                 />
             </div>
 
-            <h2 className="text-2xl font-bold mb-1">Ergebnis / Kết quả</h2>
+            <h2 className="text-2xl font-bold mb-1">Kết quả</h2>
             <p className="text-gray-400 text-sm mb-6">
                 Trình độ ước tính của bạn:
             </p>
@@ -474,7 +474,7 @@ function ResultStep({
                 disabled={saving}
                 className="w-full py-3.5 rounded-xl bg-gradient-to-r from-[#FF6B35] to-[#e55a25] text-white font-semibold hover:shadow-lg hover:shadow-orange-200 transition-all active:scale-[0.98] disabled:opacity-50"
             >
-                {saving ? 'Wird gespeichert...' : 'Los geht\'s! 🚀'}
+                {saving ? 'Đang lưu...' : 'Bắt đầu học! 🚀'}
             </button>
         </div>
     )

@@ -1,17 +1,31 @@
 import { redirect } from 'next/navigation'
 import { prisma } from '@fuxie/database'
 import { getServerUser } from '@/lib/auth/server-auth'
-import { cacheWrap } from '@/lib/cache/redis'
-import { ListeningClientDynamic } from '@/components/listening/ListeningClientDynamic'
+import { cacheGet, cacheSet } from '@/lib/cache/redis'
+import { ListeningClient } from '@/components/listening/listening-client'
 import { getListeningLessonList, getListeningLevels, type CefrLevel } from '@/lib/content/listening'
 
 export const metadata = {
-    title: 'Fuxie 🦊 — Hörverstehen',
-    description: 'Deutsche Hörverstehen — Practice listening comprehension by CEFR level',
+    title: 'Fuxie - Luyện nghe',
+    description: 'Luyện nghe tiếng Đức theo trình độ CEFR',
+}
+
+type ListeningLessonList = Awaited<ReturnType<typeof getListeningLessonList>>
+
+async function getCachedListeningLessonList(cefrLevel: CefrLevel): Promise<ListeningLessonList> {
+    const cacheKey = `listening:lessons:v3:${cefrLevel}`
+    const cached = await cacheGet<ListeningLessonList>(cacheKey)
+    if (cached && cached.length > 0) return cached
+
+    const lessons = await getListeningLessonList(cefrLevel)
+    if (lessons.length > 0) {
+        await cacheSet(cacheKey, lessons, 3600)
+    }
+    return lessons
 }
 
 async function getListeningData(userId: string | null, cefrLevel: CefrLevel) {
-    const lessons = await cacheWrap(`listening:lessons:${cefrLevel}`, 3600, () => getListeningLessonList(cefrLevel))
+    const lessons = await getCachedListeningLessonList(cefrLevel)
 
     const lessonIds = lessons.map((lesson) => lesson.id)
     const completedLessons = userId && lessonIds.length > 0
@@ -90,7 +104,7 @@ export default async function ListeningPage() {
 
     return (
         <div className="max-w-5xl mx-auto px-4 py-8">
-            <ListeningClientDynamic
+            <ListeningClient
                 teile={data.teile}
                 totalLessons={data.totalLessons}
                 totalCompleted={data.totalCompleted}

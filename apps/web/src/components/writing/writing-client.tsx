@@ -1,10 +1,11 @@
 'use client'
 
-import { useState, useCallback } from 'react'
+import { useCallback, useEffect, useMemo, useState } from 'react'
 import { useRouter } from 'next/navigation'
+import { MeasuredLink } from '@/components/performance/measured-link'
 import { Mascot } from '@/components/ui/mascot'
 import { useLevelSwitcher } from '@/hooks/use-level-switcher'
-import { CEFR_THEME, getCefrTheme } from '@/lib/constants/cefr'
+import { getCefrTheme } from '@/lib/constants/cefr'
 
 // ─── Types ──────────────────────────────────────────
 interface WritingExerciseItem {
@@ -111,6 +112,29 @@ export function WritingClient({ teile, totalExercises, totalCompleted, available
         setExpandedTeil(expandedTeil === teil ? null : teil)
     }
 
+    const nextExercise = currentTeile.flatMap(teil => teil.exercises).find(ex => !ex.completion)
+    const nextExerciseHref = nextExercise ? `/writing/${nextExercise.exerciseId}` : null
+    const prefetchHrefs = useMemo(() => {
+        const hrefs = new Set<string>()
+        for (const teil of currentTeile) {
+            const firstUncompleted = teil.exercises.findIndex(e => !e.completion)
+            teil.exercises.forEach((ex, idx) => {
+                const isDone = ex.completion !== null
+                const isLocked = !isDone && idx > firstUncompleted && firstUncompleted !== -1
+                if (!isLocked && (isDone || idx === firstUncompleted || firstUncompleted === -1)) {
+                    hrefs.add(`/writing/${ex.exerciseId}`)
+                }
+            })
+        }
+        return Array.from(hrefs).slice(0, 6)
+    }, [currentTeile])
+
+    useEffect(() => {
+        for (const href of prefetchHrefs) {
+            router.prefetch(href)
+        }
+    }, [prefetchHrefs, router])
+
     return (
         <div className="max-w-5xl mx-auto">
 
@@ -146,29 +170,22 @@ export function WritingClient({ teile, totalExercises, totalCompleted, available
                     <div className="flex items-center gap-4">
                         <Mascot variant="schreiben" size={56} />
                         <div className="flex-1">
-                            <h1 className="text-2xl font-bold text-gray-900">Schreibtraining {currentLevel}</h1>
+                            <h1 className="text-2xl font-bold text-gray-900">Luyện viết {currentLevel}</h1>
                             <p className="text-sm text-gray-500 mt-0.5">
-                                <span className="font-semibold" style={{ color: cefrColors.text }}>{currentCompleted}</span> von {currentTotal} abgeschlossen
+                                <span className="font-semibold" style={{ color: cefrColors.text }}>{currentCompleted}</span> / {currentTotal} hoàn thành
                             </p>
                         </div>
-                        {currentTotal > 0 && (
-                            <button
-                                onClick={() => {
-                                    for (const teil of currentTeile) {
-                                        for (const ex of teil.exercises) {
-                                            if (!ex.completion) {
-                                                router.push(`/writing/${ex.exerciseId}`)
-                                                return
-                                            }
-                                        }
-                                    }
-                                }}
+                        {nextExerciseHref && (
+                            <MeasuredLink
+                                href={nextExerciseHref}
+                                flow="writing.list.next"
+                                source={nextExercise?.exerciseId}
                                 className="flex items-center gap-2 px-6 py-3 rounded-xl text-white font-bold text-sm hover:opacity-90 transition-all shadow-lg whitespace-nowrap"
                                 style={{ background: cefrColors.cssGradient, boxShadow: `0 4px 16px ${cefrColors.shadow}` }}
                             >
                                 <span>✏️</span>
-                                Weiterlernen
-                            </button>
+                                Học tiếp
+                            </MeasuredLink>
                         )}
                     </div>
                     {/* Overall progress bar */}
@@ -179,7 +196,7 @@ export function WritingClient({ teile, totalExercises, totalCompleted, available
                                 style={{ width: `${Math.max(overallProgress, 1)}%`, background: cefrColors.cssGradient }}
                             />
                         </div>
-                        <p className="text-xs text-gray-400 mt-1.5 text-right">{overallProgress}% abgeschlossen</p>
+                        <p className="text-xs text-gray-400 mt-1.5 text-right">{overallProgress}% hoàn thành</p>
                     </div>
                 </div>
             </div>
@@ -192,9 +209,9 @@ export function WritingClient({ teile, totalExercises, totalCompleted, available
             ) : currentTeile.length === 0 ? (
                 <div className="bg-white rounded-2xl p-12 border border-gray-100 shadow-sm text-center">
                     <Mascot variant="thinking" size={80} />
-                    <h2 className="text-lg font-bold text-gray-700 mt-4">Noch keine Aufgaben</h2>
+                    <h2 className="text-lg font-bold text-gray-700 mt-4">Chưa có bài viết</h2>
                     <p className="text-sm text-gray-500 mt-2">
-                        Für dieses Level gibt es noch keine Schreibaufgaben.
+                        Cấp độ này chưa có bài luyện viết.
                     </p>
                 </div>
             ) : (
@@ -224,7 +241,7 @@ export function WritingClient({ teile, totalExercises, totalCompleted, available
                                             Teil {teil.teil} — {teil.teilName}
                                         </h3>
                                         <p className="text-sm text-gray-500 mt-0.5">
-                                            {teil.exercises.length} Aufgaben • <span style={{ color: cefrColors.text, fontWeight: 600 }}>{completedInTeil}</span> abgeschlossen
+                                            {teil.exercises.length} bài • <span style={{ color: cefrColors.text, fontWeight: 600 }}>{completedInTeil}</span> hoàn thành
                                         </p>
                                     </div>
                                     <div className="relative flex items-center gap-3">
@@ -255,12 +272,17 @@ export function WritingClient({ teile, totalExercises, totalCompleted, available
                                                 const isLocked = !isDone && idx > firstUncompleted && firstUncompleted !== -1
 
                                                 return (
-                                                    <button
+                                                    <MeasuredLink
                                                         key={ex.id}
-                                                        onClick={() => {
-                                                            if (!isLocked) router.push(`/writing/${ex.exerciseId}`)
+                                                        href={isLocked ? '#' : `/writing/${ex.exerciseId}`}
+                                                        flow="writing.list.exercise"
+                                                        source={ex.exerciseId}
+                                                        prefetch={!isLocked}
+                                                        aria-disabled={isLocked}
+                                                        tabIndex={isLocked ? -1 : undefined}
+                                                        onClick={(event) => {
+                                                            if (isLocked) event.preventDefault()
                                                         }}
-                                                        disabled={isLocked}
                                                         className={`w-full flex items-center gap-3 p-3.5 rounded-xl transition-all text-left
                                                             ${isDone
                                                                 ? 'bg-green-50/50 border border-green-100 hover:shadow-sm hover:translate-x-0.5'
@@ -283,7 +305,7 @@ export function WritingClient({ teile, totalExercises, totalCompleted, available
                                                                 {ex.topic}
                                                             </p>
                                                             <p className={`text-xs mt-0.5 ${isDone ? 'text-green-600' : 'text-gray-400'}`}>
-                                                                {ex.minWords}{ex.maxWords ? `-${ex.maxWords}` : '+'} Wörter • {ex.timeMinutes} min
+                                                                {ex.minWords}{ex.maxWords ? `-${ex.maxWords}` : '+'} từ • {ex.timeMinutes} phút
                                                             </p>
                                                         </div>
                                                         <div className="shrink-0">
@@ -294,13 +316,13 @@ export function WritingClient({ teile, totalExercises, totalCompleted, available
                                                             ) : isCurrent ? (
                                                                 <span className="text-xs font-bold px-2.5 py-1 rounded-lg"
                                                                     style={{ color: cefrColors.text, backgroundColor: cefrColors.bg }}>
-                                                                    Starten
+                                                                    Bắt đầu
                                                                 </span>
                                                             ) : isLocked ? (
                                                                 <span className="text-gray-300 text-lg">🔒</span>
                                                             ) : null}
                                                         </div>
-                                                    </button>
+                                                    </MeasuredLink>
                                                 )
                                             })}
                                         </div>

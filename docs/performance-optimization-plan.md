@@ -1095,6 +1095,221 @@ where safe, and record the release closure state. Do not change runtime code.
   - Deleted local branch `codex/performance-optimization`.
   - Deleted remote branch `origin/codex/performance-optimization`.
 
+## Execution Slice - Module Click Latency Investigation
+
+Date: 2026-04-27
+
+### Prompt
+
+Act as a production performance investigator for the learner course/module flow.
+The performance batch is live, but the operator reports that clicking a Module
+still feels slow. Do not assume the index rollout fixed this path. Identify the
+specific route and layer responsible for the delay before proposing or changing
+runtime code.
+
+### Backlog
+
+1. Confirm which learner UI elements are treated as "Module" clicks and list
+   their destination routes.
+2. Compare those routes against the existing local performance gate coverage.
+3. Inspect the server data loading path for `/course` and the module destination
+   pages for serial database work, missing cache coverage, and heavy dynamic
+   clients.
+4. Measure local authenticated timings for `/course` and representative module
+   destination pages.
+5. If production can be measured without exposing credentials, compare a
+   protected production health/route signal against the local finding.
+6. Record the likely root cause and a narrow fix plan before changing runtime
+   code.
+
+### Non-Goals
+
+- Do not mutate production data.
+- Do not run destructive Prisma commands.
+- Do not change runtime code before the route/layer evidence is collected.
+- Do not widen the existing performance batch without a focused acceptance
+  criterion for the slow module path.
+
+### Acceptance Criteria
+
+- The slow path is identified as server data latency, client hydration/navigation
+  latency, missing prefetch coverage, or a specific downstream route.
+- The investigation explains why the previous performance batch did or did not
+  cover this path.
+- Any code follow-up has a measurable target route and a clear before/after gate.
+
+### Investigation Results
+
+- The module/course flow was not covered by `scripts/perf-local.ts`; that script
+  measured dashboard, vocabulary, review, selected APIs, teacher, and admin
+  routes, but not `/course` or module destination clicks.
+- The `/course` page performs several database reads sequentially before
+  rendering: course/modules, vocabulary themes/counts, SRS theme progress,
+  grammar topics, grammar lessons, and grammar progress.
+- Local authenticated route timing for `/course?level=A1` was acceptable when
+  warm (`311ms` median) but cold route access was `1213ms`; representative
+  module destinations were also not part of the gate.
+- Read-only Production DB timing for the course data path showed no single
+  runaway query, but the serial round-trips add up: about `842ms` on the first
+  pass and `437ms` on the second pass before auth/layout/serverless/client work.
+- `CourseClientDynamic` renders the entire module timeline with `ssr: false`,
+  so the user initially receives skeleton UI and waits for the course client
+  chunk/hydration before the real module cards become interactive.
+- Production logs showed a separate high-impact issue during the reported
+  interaction window: `/api/v1/tts` returned repeated `500` responses because
+  Google Text-to-Speech billing is disabled.
+- Production vocabulary rows currently have no audio URLs for all CEFR levels,
+  so vocabulary/SRS cards fall back to on-demand TTS. The shared audio hook
+  creates `new Audio(src)` on mount, which can trigger many TTS requests as soon
+  vocabulary cards render, not only after a deliberate audio click.
+
+### Likely Root Cause
+
+The slow "Module" experience is a combination of an unmeasured course/module
+path and eager audio fallback work:
+
+1. `/course` is serial and client-only at the module-card layer, so first route
+   entry can feel slow even after the index migration.
+2. Clicking module content that lands in vocabulary/SRS can trigger many failing
+   TTS requests because production vocabulary audio is missing and Google TTS is
+   currently unavailable.
+
+### Narrow Fix Plan
+
+1. Add `/course?level=A1` and representative module destinations to the local
+   perf gate.
+2. Cache/parallelize the static-ish course data path and keep user-specific
+   progress keyed by user and level.
+3. Stop `AudioPlayer` from instantiating or fetching audio until the user presses
+   play; cache failures briefly or disable TTS fallback when the provider is not
+   available.
+4. Either populate production vocabulary `audioUrl` values or fix/enable Google
+   TTS billing before relying on the fallback in production.
+
+## Execution Slice - Module Click Latency Fix
+
+Date: 2026-04-27
+
+### Prompt
+
+Act as a focused performance implementer for the learner course/module flow. The
+investigation found that the previous performance batch missed `/course` and
+module destinations, the course page performs serial production DB round-trips,
+and vocabulary audio fallback can trigger failing TTS requests eagerly. Make the
+smallest runtime changes that directly address those findings and add repeatable
+local gates for the affected routes.
+
+### Backlog
+
+1. Extend the local perf gate with `/course?level=A1` and representative module
+   destinations: grammar topic, listening, reading, writing, and speaking.
+2. Refactor `/course` data loading so independent reads run in parallel and the
+   composed per-user course response has a short user/level/locale-specific cache.
+3. Keep course cache TTL short enough that missing invalidation cannot hide
+   progress for long.
+4. Change the shared audio hook so components do not instantiate `Audio` or fetch
+   `/api/v1/tts` until the user intentionally presses play.
+5. Verify typecheck and local performance for the updated module routes.
+
+### Non-Goals
+
+- Do not mutate production data.
+- Do not generate or backfill vocabulary audio in this slice.
+- Do not change Google Cloud billing or production environment variables.
+- Do not redesign the course or vocabulary UI.
+- Do not loosen existing performance or bundle budgets.
+
+### Acceptance Criteria
+
+- `pnpm perf:local` reports course/module destination routes alongside existing
+  hot paths.
+- `/course?level=A1` warm median is under its route budget locally.
+- Audio buttons remain playable, but no network request is started merely by
+  rendering an `AudioPlayer`.
+- `pnpm check:quick` passes after the code changes.
+
+### Slice Results
+
+- `scripts/perf-local.ts` now measures:
+  - `/course?level=A1`
+  - `/grammar/a1-g01-alphabet-aussprache`
+  - `/listening?level=A1`
+  - `/reading?level=A1`
+  - `/writing?level=A1`
+  - `/speaking?level=A1`
+- `/course` now parallelizes the independent course reads and caches the composed
+  user/level/locale result for `30s`.
+- The course module timeline is server-rendered directly instead of being hidden
+  behind `ssr: false`; the HTML response no longer contains the course skeleton
+  fallback for normal module cards.
+- The shared audio hook no longer creates an `Audio` element on render or source
+  change. It waits until the user presses play, preventing vocabulary cards from
+  triggering `/api/v1/tts` simply by mounting.
+- Verification passed:
+  - `pnpm check:quick`
+  - `pnpm perf:local`
+- New local perf evidence:
+  - `Learner course modules`: cold `1944ms`, warm median `399ms`, warm max
+    `421ms`, budget `800ms`.
+  - All newly added module destination routes passed their `800ms` budgets.
+
+## Execution Slice - TTS Provider Failure Fallback
+
+Date: 2026-04-27
+
+### Prompt
+
+Act as a production reliability engineer for learner audio playback. Production
+logs show `/api/v1/tts` returning `403 BILLING_DISABLED` from Google
+Text-to-Speech, while production vocabulary rows do not yet have pre-generated
+`audioUrl` values. Prevent this provider configuration issue from breaking or
+slowing normal vocabulary/SRS pronunciation playback without mutating production
+data or changing Google Cloud billing.
+
+### Backlog
+
+1. Keep using pre-generated `audioUrl` whenever a vocabulary item has one.
+2. When `audioUrl` is missing but text is available, use the existing browser
+   `SpeechSynthesis` fallback instead of generating a `/api/v1/tts` URL.
+3. Preserve the existing audio button UX states: playing, loading, and disabled
+   on unsupported/error.
+4. Apply the same fallback rule to exam audio when only transcript text exists.
+5. Do not remove the server TTS route, because it may still be useful after
+   billing is fixed or for future pre-generation.
+6. Verify that typecheck and the module perf gate still pass.
+
+### Non-Goals
+
+- Do not enable Google Cloud billing from code.
+- Do not print or modify Google/Firebase service account secrets.
+- Do not backfill production `audioUrl` values in this slice.
+- Do not change speaking lesson playback, which already uses browser TTS when
+  lesson audio is missing.
+
+### Acceptance Criteria
+
+- Rendering vocabulary/SRS cards does not call `/api/v1/tts`.
+- Pressing an audio button with no `audioUrl` uses browser TTS rather than the
+  failing server endpoint.
+- Existing pre-generated audio URLs still play through the normal audio hook.
+- `pnpm check:quick` passes.
+
+### Slice Results
+
+- `AudioPlayer` now keeps real `audioUrl` playback on the shared audio hook, but
+  uses browser `SpeechSynthesis` when only text is available.
+- `ExamAudioPlayer` now follows the same rule for transcript-only fallback.
+- No UI component under `apps/web/src/components` now constructs a direct
+  `/api/v1/tts` fallback URL.
+- The server `/api/v1/tts` route remains in place for future provider-backed
+  generation or pre-generation after Google billing is fixed.
+- Verification passed:
+  - `pnpm check:quick`
+  - `pnpm perf:local`
+- Latest local perf evidence:
+  - `Learner course modules`: cold `418ms`, warm median `373ms`, warm max
+    `505ms`, budget `800ms`.
+
 ## Open Risks
 
 - A local perf result can be noisy because Next dev compilation affects cold

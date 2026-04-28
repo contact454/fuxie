@@ -1,12 +1,24 @@
 'use client'
 
-import { useState, useCallback } from 'react'
+import { useCallback, useEffect, useMemo, useState } from 'react'
 import { useRouter } from 'next/navigation'
+import {
+    BookOpen,
+    CalendarDays,
+    CheckCircle2,
+    ClipboardList,
+    Lock,
+    Mail,
+    Newspaper,
+    Play,
+    Signpost,
+    type LucideIcon,
+} from 'lucide-react'
+import { MeasuredLink } from '@/components/performance/measured-link'
 import { Mascot } from '@/components/ui/mascot'
 import { useLevelSwitcher } from '@/hooks/use-level-switcher'
-import { CEFR_THEME, getCefrTheme } from '@/lib/constants/cefr'
+import { getCefrTheme } from '@/lib/constants/cefr'
 
-// ─── Types ──────────────────────────────────────────
 interface ExerciseItem {
     id: string
     exerciseId: string
@@ -30,18 +42,14 @@ interface ReadingClientProps {
     initialLevel: string
 }
 
-// ─── Constants ──────────────────────────────────────
-
-
-const TEIL_ICONS: Record<number, string> = {
-    1: '📧',   // Kurze Texte / Emails
-    2: '📋',   // Anzeigen / Infotafel
-    3: '🪧',   // Schilder / Kleinanzeigen
-    4: '🗓️',   // Fahrplan / Leserbriefe
-    5: '📰',   // Infoblatt
+const TEIL_ICONS: Record<number, LucideIcon> = {
+    1: Mail,
+    2: ClipboardList,
+    3: Signpost,
+    4: CalendarDays,
+    5: Newspaper,
 }
 
-// ─── Progress Ring ──────────────────────────────────
 function ProgressRing({ progress, size = 40, strokeWidth = 3.5 }: { progress: number; size?: number; strokeWidth?: number }) {
     const radius = (size - strokeWidth) / 2
     const circumference = radius * 2 * Math.PI
@@ -50,17 +58,36 @@ function ProgressRing({ progress, size = 40, strokeWidth = 3.5 }: { progress: nu
         <svg width={size} height={size} className="transform -rotate-90">
             <circle cx={size / 2} cy={size / 2} r={radius} stroke="#E5E7EB" strokeWidth={strokeWidth} fill="none" />
             <circle
-                cx={size / 2} cy={size / 2} r={radius}
+                cx={size / 2}
+                cy={size / 2}
+                r={radius}
                 stroke={progress >= 100 ? '#10B981' : '#FF6B35'}
-                strokeWidth={strokeWidth} fill="none"
-                strokeDasharray={circumference} strokeDashoffset={offset}
-                strokeLinecap="round" className="transition-all duration-700 ease-out"
+                strokeWidth={strokeWidth}
+                fill="none"
+                strokeDasharray={circumference}
+                strokeDashoffset={offset}
+                strokeLinecap="round"
+                className="transition-all duration-700 ease-out"
             />
         </svg>
     )
 }
 
-// ─── Main Component ─────────────────────────────────
+function getReadingWordCount(meta: any): number | null {
+    if (typeof meta?.word_count === 'number') return meta.word_count
+
+    const segmentCounts = [
+        meta?.word_count_text_a,
+        meta?.word_count_text_b,
+        meta?.word_count_text_c,
+        meta?.word_count_text_d,
+    ].filter((count): count is number => typeof count === 'number')
+
+    return segmentCounts.length > 0
+        ? segmentCounts.reduce((sum, count) => sum + count, 0)
+        : null
+}
+
 export function ReadingClient({ teile, totalExercises, totalCompleted, availableLevels, initialLevel }: ReadingClientProps) {
     const router = useRouter()
     const [currentTeile, setCurrentTeile] = useState(teile)
@@ -81,7 +108,7 @@ export function ReadingClient({ teile, totalExercises, totalCompleted, available
                     exerciseId: ex.exerciseId,
                     topic: ex.topic,
                     questionCount: ex._count?.questions ?? 0,
-                    wordCount: (ex.metadataJson as any)?.word_count ?? null,
+                    wordCount: getReadingWordCount(ex.metadataJson),
                     completion: null,
                 })),
             })))
@@ -98,18 +125,37 @@ export function ReadingClient({ teile, totalExercises, totalCompleted, available
         setExpandedTeil(expandedTeil === teil ? null : teil)
     }
 
+    const nextExercise = currentTeile.flatMap(teil => teil.exercises).find(ex => !ex.completion)
+    const nextExerciseHref = nextExercise ? `/reading/${nextExercise.exerciseId}` : null
+    const prefetchHrefs = useMemo(() => {
+        const hrefs = new Set<string>()
+        for (const teil of currentTeile) {
+            const firstUncompleted = teil.exercises.findIndex(e => !e.completion)
+            teil.exercises.forEach((ex, idx) => {
+                const isDone = ex.completion !== null
+                const isLocked = !isDone && idx > firstUncompleted && firstUncompleted !== -1
+                if (!isLocked && (isDone || idx === firstUncompleted || firstUncompleted === -1)) {
+                    hrefs.add(`/reading/${ex.exerciseId}`)
+                }
+            })
+        }
+        return Array.from(hrefs).slice(0, 6)
+    }, [currentTeile])
+
+    useEffect(() => {
+        for (const href of prefetchHrefs) {
+            router.prefetch(href)
+        }
+    }, [prefetchHrefs, router])
+
     return (
         <div className="max-w-5xl mx-auto">
-
-            {/* ═══ HERO BANNER ═══ */}
             <div className="rounded-2xl border border-gray-100 shadow-sm mb-6 overflow-hidden" style={{ background: `linear-gradient(180deg, ${cefrColors.bg}22 0%, #FFFFFF 100%)` }}>
-                {/* Level color stripe */}
                 <div className="h-1" style={{ background: cefrColors.cssGradient }} />
 
                 <div className="p-6">
-                    {/* CEFR Level Tabs */}
                     {availableLevels.length > 0 && (
-                        <div className="flex gap-2 mb-5">
+                        <div className="flex gap-2 mb-5 flex-wrap">
                             {availableLevels.map(level => {
                                 const colors = getCefrTheme(level)
                                 const isActive = level === currentLevel
@@ -130,35 +176,27 @@ export function ReadingClient({ teile, totalExercises, totalCompleted, available
                             })}
                         </div>
                     )}
-                    <div className="flex items-center gap-4">
+                    <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
                         <Mascot variant="lesen" size={56} />
                         <div className="flex-1">
-                            <h1 className="text-2xl font-bold text-gray-900">Leseverstehen {currentLevel}</h1>
+                            <h1 className="text-2xl font-bold text-gray-900">Luyện đọc {currentLevel}</h1>
                             <p className="text-sm text-gray-500 mt-0.5">
-                                <span className="font-semibold" style={{ color: cefrColors.text }}>{currentCompleted}</span> von {currentTotal} abgeschlossen
+                                <span className="font-semibold" style={{ color: cefrColors.text }}>{currentCompleted}</span> / {currentTotal} bài đã xong
                             </p>
                         </div>
-                        {currentTotal > 0 && (
-                            <button
-                                onClick={() => {
-                                    for (const teil of currentTeile) {
-                                        for (const ex of teil.exercises) {
-                                            if (!ex.completion) {
-                                                router.push(`/reading/${ex.exerciseId}`)
-                                                return
-                                            }
-                                        }
-                                    }
-                                }}
-                                className="flex items-center gap-2 px-6 py-3 rounded-xl text-white font-bold text-sm hover:opacity-90 transition-all shadow-lg whitespace-nowrap"
+                        {nextExerciseHref && (
+                            <MeasuredLink
+                                href={nextExerciseHref}
+                                flow="reading.list.next"
+                                source={nextExercise?.exerciseId}
+                                className="flex items-center justify-center gap-2 px-6 py-3 rounded-xl text-white font-bold text-sm hover:opacity-90 transition-all shadow-lg whitespace-nowrap"
                                 style={{ background: cefrColors.cssGradient, boxShadow: `0 4px 16px ${cefrColors.shadow}` }}
                             >
-                                <span>📖</span>
-                                Weiterlernen
-                            </button>
+                                <BookOpen className="h-4 w-4" />
+                                Học tiếp
+                            </MeasuredLink>
                         )}
                     </div>
-                    {/* Overall progress bar — level-colored */}
                     <div className="mt-4">
                         <div className="w-full h-2.5 bg-gray-100 rounded-full overflow-hidden">
                             <div
@@ -166,12 +204,11 @@ export function ReadingClient({ teile, totalExercises, totalCompleted, available
                                 style={{ width: `${Math.max(overallProgress, 1)}%`, background: cefrColors.cssGradient }}
                             />
                         </div>
-                        <p className="text-xs text-gray-400 mt-1.5 text-right">{overallProgress}% abgeschlossen</p>
+                        <p className="text-xs text-gray-400 mt-1.5 text-right">{overallProgress}% hoàn thành</p>
                     </div>
                 </div>
             </div>
 
-            {/* ═══ TEIL CARDS ═══ */}
             {isLevelLoading ? (
                 <div className="flex items-center justify-center py-16">
                     <Mascot variant="loading" size={64} />
@@ -179,10 +216,18 @@ export function ReadingClient({ teile, totalExercises, totalCompleted, available
             ) : currentTeile.length === 0 ? (
                 <div className="bg-white rounded-2xl p-12 border border-gray-100 shadow-sm text-center">
                     <Mascot variant="thinking" size={80} />
-                    <h2 className="text-lg font-bold text-gray-700 mt-4">Noch keine Aufgaben</h2>
+                    <h2 className="text-lg font-bold text-gray-700 mt-4">Nội dung đọc đang được chuẩn bị</h2>
                     <p className="text-sm text-gray-500 mt-2">
-                        Für dieses Level gibt es noch keine Leseverstehen-Aufgaben.
+                        Hãy quay lại lộ trình chính hoặc học từ vựng trong lúc chờ bài đọc mới.
                     </p>
+                    <MeasuredLink
+                        href="/course"
+                        flow="reading.empty.course"
+                        source={currentLevel}
+                        className="mt-5 inline-flex items-center justify-center rounded-xl bg-[#FF6B35] px-5 py-2.5 text-sm font-bold text-white shadow-sm transition hover:bg-[#e55a25]"
+                    >
+                        Về khóa học
+                    </MeasuredLink>
                 </div>
             ) : (
                 <div className="space-y-4">
@@ -192,25 +237,25 @@ export function ReadingClient({ teile, totalExercises, totalCompleted, available
                             ? Math.round((completedInTeil / teil.exercises.length) * 100)
                             : 0
                         const isExpanded = expandedTeil === teil.teil
+                        const TeilIcon = TEIL_ICONS[teil.teil] ?? BookOpen
 
                         return (
                             <div key={teil.teil} className="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden transition-all hover:shadow-md">
-                                {/* Teil Header */}
                                 <button
                                     onClick={() => toggleTeil(teil.teil)}
                                     className="w-full flex items-center gap-4 p-5 hover:bg-gray-50/50 transition-colors text-left"
                                 >
-                                    <div className="w-12 h-12 rounded-xl flex items-center justify-center text-2xl"
+                                    <div className="w-12 h-12 rounded-xl flex items-center justify-center shrink-0"
                                         style={{ backgroundColor: `${cefrColors.bg}` }}
                                     >
-                                        {TEIL_ICONS[teil.teil] || '📖'}
+                                        <TeilIcon className="h-5 w-5" style={{ color: cefrColors.text }} />
                                     </div>
                                     <div className="flex-1 min-w-0">
                                         <h3 className="text-base font-bold text-gray-900">
-                                            Teil {teil.teil} — {teil.teilName}
+                                            Phần {teil.teil} - {teil.teilName}
                                         </h3>
                                         <p className="text-sm text-gray-500 mt-0.5">
-                                            {teil.exercises.length} Aufgaben • <span style={{ color: cefrColors.text, fontWeight: 600 }}>{completedInTeil}</span> abgeschlossen
+                                            {teil.exercises.length} bài đọc - <span style={{ color: cefrColors.text, fontWeight: 600 }}>{completedInTeil}</span> đã xong
                                         </p>
                                     </div>
                                     <div className="relative flex items-center gap-3">
@@ -227,69 +272,91 @@ export function ReadingClient({ teile, totalExercises, totalCompleted, available
                                     </div>
                                 </button>
 
-                                {/* Exercise List */}
                                 {isExpanded && (
                                     <div className="px-5 pb-4 animate-fade-in-up">
                                         <div className="border-t border-gray-100 pt-3 space-y-2">
-                                            {teil.exercises.map((ex, idx) => {
-                                                const isDone = ex.completion !== null
-                                                const scoreDisplay = isDone
-                                                    ? `${ex.completion!.bestScore}/${ex.completion!.totalQuestions}`
-                                                    : null
-                                                const firstUncompleted = teil.exercises.findIndex(e => !e.completion)
-                                                const isCurrent = idx === firstUncompleted
-                                                const isLocked = !isDone && idx > firstUncompleted && firstUncompleted !== -1
+                                            {teil.exercises
+                                                .filter((ex, idx) => {
+                                                    const firstUncompleted = teil.exercises.findIndex(e => !e.completion)
+                                                    return ex.completion || firstUncompleted === -1 || idx <= firstUncompleted + 2
+                                                })
+                                                .map((ex) => {
+                                                    const originalIndex = teil.exercises.findIndex(e => e.id === ex.id)
+                                                    const isDone = ex.completion !== null
+                                                    const scoreDisplay = isDone
+                                                        ? `${ex.completion!.bestScore}/${ex.completion!.totalQuestions}`
+                                                        : null
+                                                    const firstUncompleted = teil.exercises.findIndex(e => !e.completion)
+                                                    const isCurrent = originalIndex === firstUncompleted
+                                                    const isLocked = !isDone && originalIndex > firstUncompleted && firstUncompleted !== -1
 
-                                                return (
-                                                    <button
-                                                        key={ex.id}
-                                                        onClick={() => {
-                                                            if (!isLocked) router.push(`/reading/${ex.exerciseId}`)
-                                                        }}
-                                                        disabled={isLocked}
-                                                        className={`w-full flex items-center gap-3 p-3.5 rounded-xl transition-all text-left
-                                                            ${isDone
-                                                                ? 'bg-green-50/50 border border-green-100 hover:shadow-sm hover:translate-x-0.5'
-                                                                : isCurrent
-                                                                    ? 'border-2 shadow-sm'
-                                                                    : isLocked
-                                                                        ? 'bg-gray-50 border border-gray-100 opacity-50 cursor-not-allowed'
-                                                                        : 'bg-gray-50 border border-gray-100 hover:shadow-sm'
-                                                            }`}
-                                                    style={isCurrent ? { borderColor: cefrColors.text, backgroundColor: `${cefrColors.bg}33`, boxShadow: `0 2px 8px ${cefrColors.shadow}` } : undefined}
-                                                    >
-                                                        <div className={`w-8 h-8 rounded-lg flex items-center justify-center text-sm font-bold shrink-0 transition-all
-                                                            ${isDone ? 'bg-green-500 text-white' : isCurrent ? 'text-white' : 'bg-gray-200 text-gray-500'}`}
-                                                            style={isCurrent ? { background: cefrColors.cssGradient } : undefined}
+                                                    return (
+                                                        <MeasuredLink
+                                                            key={ex.id}
+                                                            href={isLocked ? '#' : `/reading/${ex.exerciseId}`}
+                                                            flow="reading.list.exercise"
+                                                            source={ex.exerciseId}
+                                                            prefetch={!isLocked}
+                                                            aria-disabled={isLocked}
+                                                            tabIndex={isLocked ? -1 : undefined}
+                                                            onClick={(event) => {
+                                                                if (isLocked) event.preventDefault()
+                                                            }}
+                                                            className={`w-full flex items-center gap-3 p-3.5 rounded-xl transition-all text-left
+                                                                ${isDone
+                                                                    ? 'bg-green-50/50 border border-green-100 hover:shadow-sm hover:translate-x-0.5'
+                                                                    : isCurrent
+                                                                        ? 'border-2 shadow-sm'
+                                                                        : isLocked
+                                                                            ? 'bg-gray-50 border border-gray-100 opacity-70 cursor-not-allowed'
+                                                                            : 'bg-gray-50 border border-gray-100 hover:shadow-sm'
+                                                                }`}
+                                                            style={isCurrent ? { borderColor: cefrColors.text, backgroundColor: `${cefrColors.bg}33`, boxShadow: `0 2px 8px ${cefrColors.shadow}` } : undefined}
                                                         >
-                                                            {isDone ? '✓' : idx + 1}
-                                                        </div>
-                                                        <div className="flex-1 min-w-0">
-                                                            <p className={`text-sm font-semibold truncate ${isDone ? 'text-green-800' : isLocked ? 'text-gray-400' : 'text-gray-900'}`}>
-                                                                {ex.topic}
-                                                            </p>
-                                                            <p className={`text-xs mt-0.5 ${isDone ? 'text-green-600' : 'text-gray-400'}`}>
-                                                                {ex.questionCount} Fragen
-                                                                {ex.wordCount && ` • ~${ex.wordCount} Wörter`}
-                                                            </p>
-                                                        </div>
-                                                        <div className="shrink-0">
-                                                            {isDone ? (
-                                                                <span className="text-sm font-bold text-green-600 bg-green-100 px-2.5 py-1 rounded-lg">
-                                                                    {scoreDisplay}
-                                                                </span>
-                                                            ) : isCurrent ? (
-                                                                <span className="text-xs font-bold px-2.5 py-1 rounded-lg"
-                                                                    style={{ color: cefrColors.text, backgroundColor: cefrColors.bg }}>
-                                                                    Starten
-                                                                </span>
-                                                            ) : isLocked ? (
-                                                                <span className="text-gray-300 text-lg">🔒</span>
-                                                            ) : null}
-                                                        </div>
-                                                    </button>
+                                                            <div className={`w-8 h-8 rounded-lg flex items-center justify-center text-sm font-bold shrink-0 transition-all
+                                                                ${isDone ? 'bg-green-500 text-white' : isCurrent ? 'text-white' : 'bg-gray-200 text-gray-500'}`}
+                                                                style={isCurrent ? { background: cefrColors.cssGradient } : undefined}
+                                                            >
+                                                                {isDone ? <CheckCircle2 className="h-4 w-4" /> : originalIndex + 1}
+                                                            </div>
+                                                            <div className="flex-1 min-w-0">
+                                                                <p className={`text-sm font-semibold truncate ${isDone ? 'text-green-800' : isLocked ? 'text-gray-400' : 'text-gray-900'}`}>
+                                                                    {ex.topic}
+                                                                </p>
+                                                                <p className={`text-xs mt-0.5 ${isDone ? 'text-green-600' : 'text-gray-400'}`}>
+                                                                    {ex.questionCount} câu hỏi
+                                                                    {ex.wordCount && ` - ~${ex.wordCount} từ`}
+                                                                </p>
+                                                            </div>
+                                                            <div className="shrink-0">
+                                                                {isDone ? (
+                                                                    <span className="text-sm font-bold text-green-600 bg-green-100 px-2.5 py-1 rounded-lg">
+                                                                        {scoreDisplay}
+                                                                    </span>
+                                                                ) : isCurrent ? (
+                                                                    <span className="inline-flex items-center gap-1 text-xs font-bold px-2.5 py-1 rounded-lg"
+                                                                        style={{ color: cefrColors.text, backgroundColor: cefrColors.bg }}>
+                                                                        <Play className="h-3 w-3" />
+                                                                        Bắt đầu
+                                                                    </span>
+                                                                ) : isLocked ? (
+                                                                    <Lock className="h-4 w-4 text-gray-300" />
+                                                                ) : null}
+                                                            </div>
+                                                        </MeasuredLink>
+                                                    )
+                                                })}
+                                            {(() => {
+                                                const firstUncompleted = teil.exercises.findIndex(e => !e.completion)
+                                                if (firstUncompleted === -1) return null
+                                                const hiddenCount = teil.exercises.filter((ex, idx) => !ex.completion && idx > firstUncompleted + 2).length
+                                                if (hiddenCount === 0) return null
+                                                return (
+                                                    <div className="rounded-xl border border-dashed border-gray-200 bg-gray-50 px-4 py-3 text-sm text-gray-500">
+                                                        Hoàn thành bài hiện tại để mở {hiddenCount} bài tiếp theo.
+                                                    </div>
                                                 )
-                                            })}
+                                            })()}
                                         </div>
                                     </div>
                                 )}

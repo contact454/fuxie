@@ -8,12 +8,10 @@
  *   DATABASE_URL="..." npx tsx prisma/seed-listening.ts
  */
 
-import { PrismaClient, CefrLevel } from '@prisma/client'
+import { prisma, CefrLevel } from '../src/client'
 import * as fs from 'fs'
 import * as path from 'path'
 import { fileURLToPath } from 'url'
-
-const prisma = new PrismaClient()
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
@@ -106,7 +104,9 @@ async function main() {
       )
 
       const audioFilename = script.output_filename || `${lessonId}.mp3`
-      const audioUrl = `/audio/listening/${level}/${audioFilename}`
+      const audioUrl = audioFilename.startsWith(`${level}/`)
+        ? `/audio/listening/${audioFilename}`
+        : `/audio/listening/${level}/${audioFilename}`
 
       await prisma.listeningLesson.upsert({
         where: { lessonId },

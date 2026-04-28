@@ -42,14 +42,14 @@ export function useReadingTranslate() {
         try {
             const res = await fetch(`/api/v1/translate?word=${encodeURIComponent(cleanWord)}`)
             const data = await res.json()
-            const translation = data.translation || 'Keine \u00dcbersetzung gefunden'
+            const translation = data.translation || 'Chưa tìm thấy bản dịch'
             setTooltip({ word: cleanWord, translation, loading: false, x, y })
             setVocabList(prev => {
                 if (prev.some(v => v.word.toLowerCase() === cleanWord.toLowerCase())) return prev
                 return [...prev, { word: cleanWord, translation, timestamp: Date.now() }]
             })
         } catch {
-            setTooltip({ word: cleanWord, translation: '\u00dcbersetzung nicht verf\u00fcgbar', loading: false, x, y })
+            setTooltip({ word: cleanWord, translation: 'Chưa có bản dịch', loading: false, x, y })
         }
     }, [vocabList])
 

@@ -64,11 +64,11 @@ export function ExerciseResults({
     onNewTheme,
 }: ExerciseResultsProps) {
     const getMessage = () => {
-        if (!graded) return { text: 'Antworten gesendet', emoji: '📡' }
-        if (accuracy >= 90) return { text: 'Ausgezeichnet! 🏆', emoji: '🎉' }
-        if (accuracy >= 70) return { text: 'Sehr gut! 🎉', emoji: '👏' }
-        if (accuracy >= 50) return { text: 'Gut gemacht! 👍', emoji: '💪' }
-        return { text: 'Weiter üben! 📖', emoji: '🔄' }
+        if (!graded) return { text: 'Đã gửi câu trả lời', emoji: '📡' }
+        if (accuracy >= 90) return { text: 'Xuất sắc! 🏆', emoji: '🎉' }
+        if (accuracy >= 70) return { text: 'Rất tốt! 🎉', emoji: '👏' }
+        if (accuracy >= 50) return { text: 'Làm tốt lắm! 👍', emoji: '💪' }
+        return { text: 'Tiếp tục luyện nhé! 📖', emoji: '🔄' }
     }
 
     const msg = getMessage()
@@ -101,7 +101,7 @@ export function ExerciseResults({
 
             {!graded && (
                 <p className="text-sm text-center text-gray-500 mb-6">
-                    Die Antworten wurden gespeichert, konnten aber ohne Serververbindung nicht bewertet werden.
+                    Câu trả lời đã được lưu, nhưng chưa thể chấm điểm vì mất kết nối máy chủ.
                 </p>
             )}
 
@@ -110,17 +110,17 @@ export function ExerciseResults({
                 {timeTaken !== undefined && (
                     <div className="flex flex-col items-center bg-gray-50 rounded-xl px-4 py-3 border border-gray-100">
                         <span className="text-lg font-bold text-gray-700">⏱ {formatTime(timeTaken)}</span>
-                        <span className="text-xs text-gray-400">Zeit</span>
+                        <span className="text-xs text-gray-400">Thời gian</span>
                     </div>
                 )}
                 <div className="flex flex-col items-center bg-orange-50 rounded-xl px-4 py-3 border border-orange-100">
                     <span className="text-lg font-bold text-[#FF6B35]">+{xpEarned} XP</span>
-                    <span className="text-xs text-gray-400">Erfahrung</span>
+                    <span className="text-xs text-gray-400">Kinh nghiệm</span>
                 </div>
                 {graded && (
                     <div className="flex flex-col items-center bg-blue-50 rounded-xl px-4 py-3 border border-blue-100">
                         <span className="text-lg font-bold text-[#004E89]">{Math.round(accuracy)}%</span>
-                        <span className="text-xs text-gray-400">Genauigkeit</span>
+                        <span className="text-xs text-gray-400">Độ chính xác</span>
                     </div>
                 )}
             </div>
@@ -133,7 +133,7 @@ export function ExerciseResults({
             {/* Answer Breakdown */}
             <div className="bg-white rounded-2xl border border-gray-100 p-4 mb-6">
                 <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-3">
-                    {graded ? `Antworten (${correctCount}/${totalQuestions})` : 'Antworten gespeichert'}
+                    {graded ? `Câu trả lời (${correctCount}/${totalQuestions})` : 'Đã lưu câu trả lời'}
                 </h3>
                 <div className="space-y-2 max-h-64 overflow-y-auto">
                     {results.map((r, i) => (
@@ -154,10 +154,10 @@ export function ExerciseResults({
                                 {i + 1}. {r.isCorrect === null ? r.userAnswer : r.correctAnswer}
                             </span>
                             {r.isCorrect === null ? (
-                                <span className="text-xs text-gray-500">Wird bewertet</span>
+                                <span className="text-xs text-gray-500">Đang chấm</span>
                             ) : !r.isCorrect ? (
                                 <span className="text-xs text-red-500">
-                                    Deine: {r.userAnswer}
+                                    Em chọn: {r.userAnswer}
                                 </span>
                             ) : null}
                         </div>
@@ -171,13 +171,13 @@ export function ExerciseResults({
                     onClick={onRetry}
                     className="flex-1 py-3 px-6 rounded-xl border-2 border-[#004E89] text-[#004E89] font-bold text-sm hover:bg-[#004E89]/5 transition-all"
                 >
-                    🔄 Nochmal üben
+                    🔄 Luyện lại
                 </button>
                 <button
                     onClick={onNewTheme}
                     className="flex-1 py-3 px-6 rounded-xl bg-gradient-to-r from-[#004E89] to-blue-600 text-white font-bold text-sm hover:opacity-90 transition-all shadow-lg shadow-blue-200"
                 >
-                    📚 Neues Thema
+                    📚 Chủ đề mới
                 </button>
             </div>
         </div>

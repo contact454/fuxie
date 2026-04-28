@@ -2,7 +2,7 @@ import { redirect, notFound } from 'next/navigation'
 import { cache } from 'react'
 import { prisma } from '@fuxie/database'
 import { getServerUser } from '@/lib/auth/server-auth'
-import { LessonPlayerDynamic } from '@/components/listening/LessonPlayerDynamic'
+import { LessonPlayer } from '@/components/listening/lesson-player'
 
 const getListeningLesson = cache(async (lessonId: string) => {
     return prisma.listeningLesson.findUnique({
@@ -28,8 +28,8 @@ export async function generateMetadata({ params }: { params: Promise<{ lessonId:
     const { lessonId } = await params
     const lesson = await getListeningLesson(lessonId)
     return {
-        title: lesson ? `Fuxie 🦊 — ${lesson.topic}` : 'Fuxie 🦊 — Hörverstehen',
-        description: lesson?.title ?? 'German listening comprehension exercise',
+        title: lesson ? `Fuxie - ${lesson.topic}` : 'Fuxie - Luyện nghe',
+        description: lesson?.title ?? 'Bài luyện nghe tiếng Đức',
     }
 }
 
@@ -49,7 +49,7 @@ export default async function ListeningLessonPage({ params }: { params: Promise<
     if (!lesson) notFound()
 
     return (
-        <LessonPlayerDynamic
+        <LessonPlayer
             lessonId={lesson.lessonId}
             title={lesson.title}
             topic={lesson.topic}

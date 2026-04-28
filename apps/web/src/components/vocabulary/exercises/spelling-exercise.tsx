@@ -186,7 +186,7 @@ export function SpellingExercise({ questions, cefrLevel, themeName, themeSlug, o
 
                         {/* Vietnamese meaning */}
                         <p className="text-2xl font-bold text-gray-800 mb-1">{question.prompt}</p>
-                        <p className="text-sm text-gray-400">Schreibe das deutsche Wort</p>
+                        <p className="text-sm text-gray-400">Viết từ tiếng Đức</p>
 
                         {/* Article badge if noun */}
                         {articleText && (
@@ -210,7 +210,7 @@ export function SpellingExercise({ questions, cefrLevel, themeName, themeSlug, o
                                 onChange={e => setUserInput(e.target.value)}
                                 onKeyDown={handleKeyDown}
                                 disabled={isRevealed}
-                                placeholder="Tippe das Wort..."
+                                placeholder="Nhập từ..."
                                 autoComplete="off"
                                 autoCapitalize="off"
                                 spellCheck={false}
@@ -218,7 +218,7 @@ export function SpellingExercise({ questions, cefrLevel, themeName, themeSlug, o
                             />
                             {isRevealed && (
                                 <div className="text-center pb-3">
-                                    <span className="text-[#004E89] font-bold text-sm">Antwort gespeichert</span>
+                                    <span className="text-[#004E89] font-bold text-sm">Đã lưu câu trả lời</span>
                                 </div>
                             )}
                         </div>

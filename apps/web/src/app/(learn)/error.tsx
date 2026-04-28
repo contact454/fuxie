@@ -27,10 +27,10 @@ export default function LearnError({
                 </div>
 
                 <h2 className="text-xl font-bold text-gray-900 mb-2">
-                    Etwas ist schiefgelaufen
+                    Có lỗi xảy ra
                 </h2>
                 <p className="text-gray-500 text-sm mb-8 leading-relaxed">
-                    Ein unerwarteter Fehler ist aufgetreten. Bitte versuche es erneut oder kehre zur Startseite zurück.
+                    Đã có lỗi bất ngờ. Em hãy thử lại hoặc quay về trang chính.
                 </p>
 
                 <div className="flex gap-3">
@@ -38,20 +38,20 @@ export default function LearnError({
                         onClick={() => router.push('/dashboard')}
                         className="flex-1 py-3 px-4 rounded-xl border-2 border-gray-200 text-gray-600 font-semibold text-sm hover:bg-gray-50 transition-all"
                     >
-                        Startseite
+                        Về trang chính
                     </button>
                     <button
                         onClick={reset}
                         className="flex-1 py-3 px-4 rounded-xl bg-gradient-to-r from-[#004E89] to-blue-600 text-white font-semibold text-sm hover:shadow-lg hover:shadow-blue-200 transition-all"
                     >
-                        Erneut versuchen
+                        Thử lại
                     </button>
                 </div>
 
                 {/* Error digest for debugging */}
                 {error.digest && (
                     <p className="mt-6 text-[10px] text-gray-300 font-mono">
-                        Fehler-ID: {error.digest}
+                        Mã lỗi: {error.digest}
                     </p>
                 )}
             </div>

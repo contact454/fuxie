@@ -53,7 +53,7 @@ export function TFRenderer({ content, answer, onChange }: Props) {
             <div className="lg:w-[52%] px-6 pt-4 pb-2">
                 <div className="flex items-center justify-between mb-4">
                     <h4 className="text-xs font-semibold text-gray-400 uppercase tracking-wider flex items-center gap-1.5">
-                        ✏️ Aufgaben
+                        ✏️ Câu hỏi
                     </h4>
                     <span className="text-[10px] font-medium text-gray-400 bg-gray-100 px-2 py-1 rounded-full">
                         {answeredCount}/{data.items.length}
@@ -92,7 +92,7 @@ export function TFRenderer({ content, answer, onChange }: Props) {
                                                 : 'bg-white ring-1 ring-gray-200 text-gray-600 hover:ring-green-300 hover:text-green-600'
                                             }`}
                                     >
-                                        <span className="text-base">✓</span> Richtig
+                                        <span className="text-base">✓</span> Đúng
                                     </button>
                                     <button
                                         onClick={() => toggle(item.id, 'FALSCH')}
@@ -102,7 +102,7 @@ export function TFRenderer({ content, answer, onChange }: Props) {
                                                 : 'bg-white ring-1 ring-gray-200 text-gray-600 hover:ring-red-300 hover:text-red-600'
                                             }`}
                                     >
-                                        <span className="text-base">✗</span> Falsch
+                                        <span className="text-base">✗</span> Sai
                                     </button>
                                 </div>
                             </div>

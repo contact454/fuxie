@@ -1,7 +1,9 @@
 import { redirect } from 'next/navigation'
 import { getServerUser } from '@/lib/auth/server-auth'
 import { prisma } from '@fuxie/database'
-import { SessionPlayerDynamic } from '@/components/session/SessionPlayerDynamic'
+import { SessionPlayer } from '@/components/session/SessionPlayer'
+import { buildDailySession } from '@/lib/session/builder'
+import type { CefrLevel } from '@fuxie/database'
 
 export const metadata = {
     title: 'Fuxie 🦊 — Tự Động Học',
@@ -17,11 +19,12 @@ export default async function SessionPage() {
         select: { currentLevel: true },
     })
 
-    const level = profile?.currentLevel || 'A1'
+    const level = (profile?.currentLevel || 'A1') as CefrLevel
+    const initialItems = await buildDailySession(serverUser.userId, level)
 
     return (
         <div className="min-h-[100dvh] bg-gray-50 flex flex-col">
-            <SessionPlayerDynamic level={level} />
+            <SessionPlayer level={level} initialItems={initialItems} />
         </div>
     )
 }

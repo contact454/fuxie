@@ -8,12 +8,10 @@
  *   DATABASE_URL="..." npx tsx prisma/seed-reading-writing.ts
  */
 
-import { PrismaClient, CefrLevel } from '@prisma/client'
+import { prisma, CefrLevel } from '../src/client'
 import * as fs from 'fs'
 import * as path from 'path'
 import { fileURLToPath } from 'url'
-
-const prisma = new PrismaClient()
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
@@ -197,7 +195,7 @@ async function seedWriting() {
           register: data.register,
           topic: data.topic,
           instruction: data.instruction,
-          instructionVi: data.instructionVi ?? null,
+          translations: data.instructionVi ? { vi: data.instructionVi } : null,
           situation: data.situation,
           contentPoints: data.contentPoints,
           sampleResponse: data.sampleResponse ?? null,
@@ -223,7 +221,7 @@ async function seedWriting() {
           register: data.register,
           topic: data.topic,
           instruction: data.instruction,
-          instructionVi: data.instructionVi ?? null,
+          translations: data.instructionVi ? { vi: data.instructionVi } : null,
           situation: data.situation,
           contentPoints: data.contentPoints,
           sampleResponse: data.sampleResponse ?? null,

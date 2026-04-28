@@ -43,7 +43,7 @@ export function ReadingPlayer({
         timeTaken: number; questionResults: QuestionResult[]
     } | null>(null)
     const [expandedResult, setExpandedResult] = useState<string | null>(null)
-    const [startTime] = useState(Date.now())
+    const [startTime, setStartTime] = useState(Date.now())
     const cefrColor = getCefrTheme(cefrLevel)
     const isBeginner = ['A1', 'A2'].includes(cefrLevel)
     const diff = DIFFICULTY[cefrLevel] ?? DIFFICULTY.A1!
@@ -150,6 +150,26 @@ export function ReadingPlayer({
         : questions.every(q => answers[q.id])
     const formatTime = (s: number) => `${Math.floor(s / 60)}:${(s % 60).toString().padStart(2, '0')}`
 
+    const resultMessage = (percentage: number) => {
+        if (percentage >= 90) return 'Xuất sắc!'
+        if (percentage >= 70) return 'Rất tốt!'
+        if (percentage >= 50) return 'Ổn rồi, luyện thêm chút nữa nhé!'
+        return 'Cần đọc lại thêm một vòng'
+    }
+
+    const resetExercise = () => {
+        setPhase('intro')
+        setWarmupStep(0)
+        setCurrentQuestion(0)
+        setAnswers({})
+        setClozeAnswers({})
+        setClozeResults(null)
+        setResults(null)
+        setExpandedResult(null)
+        setShowVocabPanel(false)
+        setStartTime(Date.now())
+    }
+
     // ═══════════════════════════════════════════
     // INTRO PHASE — Level-Adaptive Premium Design
     // ═══════════════════════════════════════════
@@ -160,7 +180,7 @@ export function ReadingPlayer({
                     <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                         <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
                     </svg>
-                    Zurück
+                    Về danh sách
                 </button>
 
                 <div
@@ -173,7 +193,7 @@ export function ReadingPlayer({
                     {/* Title */}
                     <h1 className="text-2xl font-bold text-gray-900 mt-4">{topic}</h1>
                     <p className="text-sm text-gray-500 mt-1">
-                        {teilInfo?.icon || '📖'} Teil {teil} — {teilName}
+                        {teilInfo?.icon || '📖'} Phần {teil} - {teilName}
                     </p>
 
                     {/* Hero Image — only for A1/A2 or when available */}
@@ -190,10 +210,10 @@ export function ReadingPlayer({
                             {cefrLevel}
                         </span>
                         <span className={styles.infoPill}>
-                            ❓ {isClozeExercise ? `${clozeGapCount} Lücken` : `${questions.length} Fragen`}
+                            {isClozeExercise ? `${clozeGapCount} chỗ trống` : `${questions.length} câu hỏi`}
                         </span>
                         <span className={styles.infoPill}>
-                            ⏱️ ~{estimatedMinutes} Min.
+                            ~{estimatedMinutes} phút
                         </span>
                         <span className={styles.infoPill}>
                             {Array.from({ length: 5 }, (_, i) => (
@@ -217,18 +237,21 @@ export function ReadingPlayer({
                     {/* Reading Strategy Tip */}
                     {teilInfo?.strategy && (
                         <div className={styles.strategyTip}>
-                            <p className={styles.tipIcon}>💡 Lese-Strategie</p>
+                            <p className={styles.tipIcon}>Chiến lược đọc</p>
                             <p className={styles.tipText}>{teilInfo.strategy}</p>
                         </div>
                     )}
 
                     {/* Start Button — goes to warm-up */}
                     <button
-                        onClick={() => setPhase('warmup')}
+                        onClick={() => {
+                            setStartTime(Date.now())
+                            setPhase('warmup')
+                        }}
                         className={styles.startButton}
                         style={{ '--level-gradient': cefrColor.css, '--level-shadow': cefrColor.shadow } as React.CSSProperties}
                     >
-                        📖 Aufgabe starten
+                        Bắt đầu bài đọc
                     </button>
                 </div>
             </div>
@@ -257,7 +280,7 @@ export function ReadingPlayer({
                                 style={{ width: `${warmupProgress}%`, background: cefrColor.css }} />
                         </div>
                     </div>
-                    <span className="text-xs font-semibold text-gray-500">Vorbereitung {warmupStep + 1}/{totalSteps}</span>
+                    <span className="text-xs font-semibold text-gray-500">Chuẩn bị {warmupStep + 1}/{totalSteps}</span>
                 </div>
 
                 {/* Step 0: Vocabulary Preview */}
@@ -266,12 +289,12 @@ export function ReadingPlayer({
                         style={{ '--level-gradient': cefrColor.css, '--level-shadow': cefrColor.shadow } as React.CSSProperties}>
                         <div className="text-3xl mb-3">📚</div>
                         <h2 className="text-lg font-bold text-gray-900 mb-1">
-                            {isBeginner ? 'Wörter zum Thema' : 'Schlüsselvokabeln'}
+                            {isBeginner ? 'Từ vựng theo chủ đề' : 'Từ khóa quan trọng'}
                         </h2>
                         <p className="text-sm text-gray-500 mb-4">
                             {isBeginner
-                                ? 'Kennst du diese Wörter? Sie kommen im Text vor.'
-                                : 'Diese Begriffe sind wichtig für den Text.'}
+                                ? 'Em đã biết những từ này chưa? Chúng sẽ xuất hiện trong bài.'
+                                : 'Các thuật ngữ này sẽ giúp em đọc bài dễ hơn.'}
                         </p>
 
                         {keyWords.length > 0 ? (
@@ -286,15 +309,15 @@ export function ReadingPlayer({
                         ) : (
                             <div className={styles.strategyTip}>
                                 <p className={styles.tipIcon}>💡 Tipp</p>
-                                <p className={styles.tipText}>Lies den Titel noch einmal und überlege, welche Wörter du zum Thema kennst.</p>
+                                <p className={styles.tipText}>Đọc lại tiêu đề và nghĩ nhanh các từ em đã biết về chủ đề này.</p>
                             </div>
                         )}
 
                         <div className="flex gap-3 mt-6">
                             <button onClick={() => setPhase('exercise')}
-                                className={`${styles.navButton} text-xs`}>Überspringen</button>
+                                className={`${styles.navButton} text-xs`}>Bỏ qua</button>
                             <button onClick={() => setWarmupStep(1)}
-                                className={`${styles.navButton} ${styles.primary}`}>Weiter →</button>
+                                className={`${styles.navButton} ${styles.primary}`}>Tiếp tục</button>
                         </div>
                     </div>
                 )}
@@ -305,12 +328,12 @@ export function ReadingPlayer({
                         style={{ '--level-gradient': cefrColor.css, '--level-shadow': cefrColor.shadow } as React.CSSProperties}>
                         <div className="text-3xl mb-3">🤔</div>
                         <h2 className="text-lg font-bold text-gray-900 mb-1">
-                            {isBeginner ? 'Denk nach!' : 'Vor dem Lesen'}
+                            {isBeginner ? 'Nghĩ nhanh trước khi đọc' : 'Trước khi đọc'}
                         </h2>
                         <p className="text-sm text-gray-500 mb-5">
                             {isBeginner
-                                ? `Das Thema ist: "${topic}". Beantworte diese Frage für dich.`
-                                : `Zum Thema "${topic}" — reflektieren Sie kurz:`}
+                                ? `Chủ đề là "${topic}". Em tự trả lời nhanh các câu này trong đầu.`
+                                : `Với chủ đề "${topic}", hãy suy nghĩ ngắn trước khi đọc:`}
                         </p>
 
                         <div className="space-y-3">
@@ -331,9 +354,9 @@ export function ReadingPlayer({
 
                         <div className="flex gap-3 mt-6">
                             <button onClick={() => setWarmupStep(0)}
-                                className={styles.navButton}>← Zurück</button>
+                                className={styles.navButton}>Quay lại</button>
                             <button onClick={() => setWarmupStep(2)}
-                                className={`${styles.navButton} ${styles.primary}`}>Weiter →</button>
+                                className={`${styles.navButton} ${styles.primary}`}>Tiếp tục</button>
                         </div>
                     </div>
                 )}
@@ -344,18 +367,18 @@ export function ReadingPlayer({
                         style={{ '--level-gradient': cefrColor.css, '--level-shadow': cefrColor.shadow } as React.CSSProperties}>
                         <div className="text-3xl mb-3">🎯</div>
                         <h2 className="text-lg font-bold text-gray-900 mb-1">
-                            {isBeginner ? 'Darauf musst du achten' : 'Lesefokus'}
+                            {isBeginner ? 'Điểm cần chú ý' : 'Trọng tâm khi đọc'}
                         </h2>
                         <p className="text-sm text-gray-500 mb-5">
                             {isBeginner
-                                ? 'So gehst du beim Lesen vor:'
-                                : 'Beachten Sie beim Lesen besonders:'}
+                                ? 'Đọc theo các bước này:'
+                                : 'Khi đọc, hãy đặc biệt chú ý:'}
                         </p>
 
                         {/* Strategy tip */}
                         {teilInfo?.strategy && (
                             <div className={styles.strategyTip}>
-                                <p className={styles.tipIcon}>💡 Lese-Strategie</p>
+                                <p className={styles.tipIcon}>Chiến lược đọc</p>
                                 <p className={styles.tipText}>{teilInfo.strategy}</p>
                             </div>
                         )}
@@ -365,28 +388,28 @@ export function ReadingPlayer({
                             {isBeginner ? (
                                 <>
                                     <div className={styles.warmupChecklist}>
-                                        <span>✅</span><span>Lies den Text langsam und aufmerksam.</span>
+                                        <span>✓</span><span>Đọc chậm và tập trung.</span>
                                     </div>
                                     <div className={styles.warmupChecklist}>
-                                        <span>✅</span><span>Unbekannte Wörter? Lies den Satz noch einmal.</span>
+                                        <span>✓</span><span>Gặp từ lạ thì đọc lại cả câu để đoán nghĩa.</span>
                                     </div>
                                     <div className={styles.warmupChecklist}>
-                                        <span>✅</span><span>Du hast {questions.length} Fragen — nimm dir Zeit!</span>
+                                        <span>✓</span><span>Bài có {questions.length} câu hỏi, cứ làm chậm mà chắc.</span>
                                     </div>
                                 </>
                             ) : (
                                 <>
                                     <div className={styles.warmupChecklist}>
-                                        <span>✅</span><span>Überfliegen Sie den Text zuerst (Scanning).</span>
+                                        <span>✓</span><span>Đọc lướt toàn bài trước để nắm cấu trúc.</span>
                                     </div>
                                     <div className={styles.warmupChecklist}>
-                                        <span>✅</span><span>Markieren Sie Signalwörter und Schlüsselsätze.</span>
+                                        <span>✓</span><span>Để ý từ tín hiệu và câu chứa ý chính.</span>
                                     </div>
                                     <div className={styles.warmupChecklist}>
-                                        <span>✅</span><span>Lesen Sie die Fragen, bevor Sie den Text detailliert lesen.</span>
+                                        <span>✓</span><span>Đọc câu hỏi trước khi đọc chi tiết.</span>
                                     </div>
                                     <div className={styles.warmupChecklist}>
-                                        <span>✅</span><span>{questions.length} Fragen — ca. {estimatedMinutes} Minuten empfohlen.</span>
+                                        <span>✓</span><span>{questions.length} câu hỏi, thời gian gợi ý khoảng {estimatedMinutes} phút.</span>
                                     </div>
                                 </>
                             )}
@@ -398,17 +421,20 @@ export function ReadingPlayer({
                                 style={{ background: cefrColor.css }}>
                                 {cefrLevel}
                             </span>
-                            <span className={styles.infoPill}>❓ {isClozeExercise ? `${clozeGapCount} Lücken` : `${questions.length} Fragen`}</span>
-                            <span className={styles.infoPill}>⏱️ ~{estimatedMinutes} Min.</span>
+                            <span className={styles.infoPill}>{isClozeExercise ? `${clozeGapCount} chỗ trống` : `${questions.length} câu hỏi`}</span>
+                            <span className={styles.infoPill}>~{estimatedMinutes} phút</span>
                         </div>
 
                         <div className="flex gap-3 mt-6">
                             <button onClick={() => setWarmupStep(1)}
-                                className={styles.navButton}>← Zurück</button>
-                            <button onClick={() => setPhase('exercise')}
+                                className={styles.navButton}>Quay lại</button>
+                            <button onClick={() => {
+                                setStartTime(Date.now())
+                                setPhase('exercise')
+                            }}
                                 className={styles.startButton}
                                 style={{ '--level-gradient': cefrColor.css, '--level-shadow': cefrColor.shadow } as React.CSSProperties}>
-                                📖 Jetzt lesen!
+                                Vào bài đọc
                             </button>
                         </div>
                     </div>
@@ -428,8 +454,8 @@ export function ReadingPlayer({
         // ═══════════════════════════════════════════
         if (isClozeExercise && clozeData) {
             const clozeProgress = clozeGapCount > 0 ? (Object.keys(clozeAnswers).length / clozeGapCount) * 100 : 0
-            const clozeTypeLabel = clozeData.type === 'word' ? '📝 Lückentext (Wörter)'
-                : clozeData.type === 'sentence' ? '📝 Lückentext (Sätze)' : '📝 Lückentext (Abschnitte)'
+            const clozeTypeLabel = clozeData.type === 'word' ? 'Điền từ'
+                : clozeData.type === 'sentence' ? 'Điền câu' : 'Điền đoạn'
 
             // Render word cloze: text with inline dropdown selectors
             const renderWordClozeInteractive = () => {
@@ -438,7 +464,7 @@ export function ReadingPlayer({
                 return (
                     <div className={`${styles.textCard} ${styles.fadeInUp}`}>
                         <div className={styles.textHeader}>
-                            <span className={styles.label}>{d.title || 'Lückentext'}</span>
+                            <span className={styles.label}>{d.title || 'Bài điền khuyết'}</span>
                             <span className={styles.badge}>{clozeTypeLabel}</span>
                         </div>
                         <div className={`${styles.textBody} ${styles.readingText}`} style={{ lineHeight: 2.2 }}>
@@ -480,7 +506,7 @@ export function ReadingPlayer({
                     <div className="space-y-5">
                         <div className={`${styles.textCard} ${styles.fadeInUp}`}>
                             <div className={styles.textHeader}>
-                                <span className={styles.label}>{d.title || 'Lückentext'}</span>
+                                <span className={styles.label}>{d.title || 'Bài điền khuyết'}</span>
                                 <span className={styles.badge}>{clozeTypeLabel}</span>
                             </div>
                             <div className={`${styles.textBody} ${styles.readingText}`} style={{ lineHeight: 2 }}>
@@ -502,7 +528,7 @@ export function ReadingPlayer({
                                                     <button onClick={() => selectClozeAnswer(gapNum, '')} className={styles.clozeSlotClear}>×</button>
                                                 </span>
                                             ) : (
-                                                <span className={styles.clozeSlotEmpty}>Satz wählen ▼</span>
+                                                <span className={styles.clozeSlotEmpty}>Chọn câu</span>
                                             )}
                                         </span>
                                     )
@@ -512,8 +538,8 @@ export function ReadingPlayer({
                         {/* Sentence bank */}
                         <div className={`${styles.textCard} ${styles.fadeInUp}`} style={{ animationDelay: '0.1s' }}>
                             <div className={styles.textHeader}>
-                                <span className={styles.label}>Satzbank</span>
-                                <span className={styles.badge}>📋 {d.sentences.length} Sätze</span>
+                                <span className={styles.label}>Ngân hàng câu</span>
+                                <span className={styles.badge}>{d.sentences.length} câu</span>
                             </div>
                             <div className={styles.textBody}>
                                 <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
@@ -529,7 +555,7 @@ export function ReadingPlayer({
                                                 <span className={styles.clozeBankId}>{s.id}</span>
                                                 <span className={styles.clozeBankText}>{s.text}</span>
                                                 {isUsed && assignedGap && (
-                                                    <span className={styles.clozeBankAssigned}>→ Lücke {assignedGap}</span>
+                                                    <span className={styles.clozeBankAssigned}>→ Chỗ {assignedGap}</span>
                                                 )}
                                                 {!isUsed && (
                                                     <div className={styles.clozeBankActions}>
@@ -562,7 +588,7 @@ export function ReadingPlayer({
                     <div className="space-y-5">
                         <div className={`${styles.textCard} ${styles.fadeInUp}`}>
                             <div className={styles.textHeader}>
-                                <span className={styles.label}>{d.title || 'Lückentext'}</span>
+                                <span className={styles.label}>{d.title || 'Bài điền khuyết'}</span>
                                 <span className={styles.badge}>{clozeTypeLabel}</span>
                             </div>
                             <div className={`${styles.textBody} ${styles.readingText}`} style={{ lineHeight: 1.9 }}>
@@ -584,7 +610,7 @@ export function ReadingPlayer({
                                                     <button onClick={() => selectClozeAnswer(gapNum, '')} className={styles.clozeSlotClear}>×</button>
                                                 </div>
                                             ) : (
-                                                <div className={styles.clozeSectionEmpty}>Abschnitt wählen ▼</div>
+                                                <div className={styles.clozeSectionEmpty}>Chọn đoạn</div>
                                             )}
                                         </div>
                                     )
@@ -594,8 +620,8 @@ export function ReadingPlayer({
                         {/* Section bank */}
                         <div className={`${styles.textCard} ${styles.fadeInUp}`} style={{ animationDelay: '0.1s' }}>
                             <div className={styles.textHeader}>
-                                <span className={styles.label}>Abschnittbank</span>
-                                <span className={styles.badge}>📄 {d.sections.length} Abschnitte</span>
+                                <span className={styles.label}>Ngân hàng đoạn</span>
+                                <span className={styles.badge}>{d.sections.length} đoạn</span>
                             </div>
                             <div className={styles.textBody}>
                                 <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
@@ -610,7 +636,7 @@ export function ReadingPlayer({
                                                 <span className={styles.clozeBankId}>{s.id}</span>
                                                 <span className={styles.clozeBankText} style={{ fontSize: '12px' }}>{s.text}</span>
                                                 {isUsed && assignedGap && (
-                                                    <span className={styles.clozeBankAssigned}>→ Lücke {assignedGap}</span>
+                                                    <span className={styles.clozeBankAssigned}>→ Chỗ {assignedGap}</span>
                                                 )}
                                                 {!isUsed && (
                                                     <div className={styles.clozeBankActions}>
@@ -650,7 +676,7 @@ export function ReadingPlayer({
                             </div>
                         </div>
                         <span className="text-sm font-semibold text-gray-600 shrink-0">
-                            {Object.keys(clozeAnswers).length}/{clozeGapCount} Lücken
+                            {Object.keys(clozeAnswers).length}/{clozeGapCount} chỗ
                         </span>
                         <span className="px-2.5 py-1 rounded-lg text-xs font-bold text-white shrink-0"
                             style={{ background: cefrColor.css }}>
@@ -661,7 +687,7 @@ export function ReadingPlayer({
                     {/* Timer + info */}
                     <div className="flex items-center justify-between mb-3">
                         <div className={styles.translateHint}>
-                            📝 Füllen Sie alle {clozeGapCount} Lücken aus
+                            Điền đủ {clozeGapCount} chỗ trống
                         </div>
                         <div className={styles.readingTimer}>
                             ⏱️ {formatTime(Math.round((Date.now() - startTime) / 1000))}
@@ -684,7 +710,7 @@ export function ReadingPlayer({
                             className={`${styles.navButton} ${styles.submit}`}
                             style={{ minWidth: 250, padding: '14px 32px', fontSize: '15px' }}
                         >
-                            {isSubmitting ? 'Wird geprüft...' : `✅ Abgeben (${Object.keys(clozeAnswers).length}/${clozeGapCount})`}
+                            {isSubmitting ? 'Đang chấm...' : `Nộp bài (${Object.keys(clozeAnswers).length}/${clozeGapCount})`}
                         </button>
                     </div>
                 </div>
@@ -705,7 +731,7 @@ export function ReadingPlayer({
                 {/* Progress dots */}
                 <div className={styles.progressDots}>
                     <span className="text-xs text-gray-500 font-semibold mr-2">
-                        Frage {currentQuestion + 1}
+                        Câu {currentQuestion + 1}/{questions.length}
                     </span>
                     {questions.map((_, i) => (
                         <div
@@ -736,7 +762,7 @@ export function ReadingPlayer({
                             <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
                                 <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                             </svg>
-                            Richtig
+                            Đúng
                         </button>
                         <button
                             onClick={() => selectAnswer(q.id, 'falsch')}
@@ -745,7 +771,7 @@ export function ReadingPlayer({
                             <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
                                 <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
                             </svg>
-                            Falsch
+                            Sai
                         </button>
                     </div>
 
@@ -780,9 +806,9 @@ export function ReadingPlayer({
                     /* ── Ja / Nein / Nicht im Text ── */
                     <div className="flex gap-2 flex-wrap">
                         {[
-                            { value: 'ja', label: 'Ja', icon: '✅' },
-                            { value: 'nein', label: 'Nein', icon: '❌' },
-                            { value: 'nicht_im_text', label: 'Nicht im Text', icon: '◻️' },
+                            { value: 'ja', label: 'Có', icon: '✓' },
+                            { value: 'nein', label: 'Không', icon: '×' },
+                            { value: 'nicht_im_text', label: 'Không có trong bài', icon: '-' },
                         ].map((opt) => (
                             <button
                                 key={opt.value}
@@ -824,7 +850,7 @@ export function ReadingPlayer({
                         type="text"
                         value={answers[q.id] || ''}
                         onChange={(e) => selectAnswer(q.id, e.target.value)}
-                        placeholder="Deine Antwort..."
+                        placeholder="Nhập câu trả lời..."
                         className="w-full p-3.5 rounded-xl border-2 border-gray-200 text-sm focus:border-[#FF6B35] focus:ring-2 focus:ring-[#FF6B35]/20 outline-none transition-all"
                     />
                 )}
@@ -836,7 +862,7 @@ export function ReadingPlayer({
                             onClick={() => setCurrentQuestion(c => c - 1)}
                             className={styles.navButton}
                         >
-                            ← Vorherige
+                            Câu trước
                         </button>
                     )}
                     {currentQuestion < questions.length - 1 ? (
@@ -844,7 +870,7 @@ export function ReadingPlayer({
                             onClick={() => setCurrentQuestion(c => c + 1)}
                             className={`${styles.navButton} ${styles.primary}`}
                         >
-                            Weiter →
+                            Câu tiếp theo
                         </button>
                     ) : (
                         <button
@@ -852,7 +878,7 @@ export function ReadingPlayer({
                             disabled={!allAnswered || isSubmitting}
                             className={`${styles.navButton} ${styles.submit}`}
                         >
-                            {isSubmitting ? 'Wird geprüft...' : `✅ Abgeben (${Object.keys(answers).length}/${questions.length})`}
+                            {isSubmitting ? 'Đang chấm...' : `Nộp bài (${Object.keys(answers).length}/${questions.length})`}
                         </button>
                     )}
                 </div>
@@ -888,7 +914,7 @@ export function ReadingPlayer({
                     <button
                         onClick={() => setShowVocabPanel(v => !v)}
                         className={styles.vocabToggle}
-                        title="Vokabeln"
+                        title="Từ đã tra"
                     >
                         📖 {vocabList.length > 0 && <span className={styles.vocabBadge}>{vocabList.length}</span>}
                     </button>
@@ -902,7 +928,7 @@ export function ReadingPlayer({
                 <div className="flex items-center justify-between mb-3">
                     {vocabList.length === 0 ? (
                         <div className={styles.translateHint}>
-                            💡 Klicke auf ein Wort im Text, um die Übersetzung zu sehen
+                            Bấm vào từ trong bài để xem nghĩa
                         </div>
                     ) : <div />}
                     <div className={styles.readingTimer}>
@@ -964,14 +990,14 @@ export function ReadingPlayer({
                 {showVocabPanel && (
                     <div className={styles.vocabPanel}>
                         <div className={styles.vocabPanelHeader}>
-                            <h3 className="text-sm font-bold text-gray-900">📖 Nachgeschlagene Wörter</h3>
+                            <h3 className="text-sm font-bold text-gray-900">Từ đã tra</h3>
                             <button onClick={() => setShowVocabPanel(false)} className="text-gray-400 hover:text-gray-600">
                                 ✕
                             </button>
                         </div>
                         {vocabList.length === 0 ? (
                             <p className="text-xs text-gray-400 p-4 text-center">
-                                Klicke auf Wörter im Text, um sie hier zu sammeln.
+                                Bấm vào từ trong bài để lưu nghĩa ở đây.
                             </p>
                         ) : (
                             <div className={styles.vocabPanelList}>
@@ -994,10 +1020,7 @@ export function ReadingPlayer({
     // ═══════════════════════════════════════════
     if (phase === 'results' && clozeResults) {
         const { score, total, percentage, timeTaken, gaps } = clozeResults
-        const message = percentage >= 90 ? 'Ausgezeichnet! 🌟' :
-            percentage >= 70 ? 'Sehr gut! 👏' :
-                percentage >= 50 ? 'Gut gemacht! 💪' :
-                    'Weiter üben! 📚'
+        const message = resultMessage(percentage)
         const mascotVariant = percentage >= 70 ? 'celebrate' : percentage >= 50 ? 'encouragement' : 'studying'
         const tips = POST_READING_TIPS[cefrLevel] || POST_READING_TIPS.A1!
 
@@ -1068,13 +1091,13 @@ export function ReadingPlayer({
 
                     <p className="text-xl font-bold text-gray-900 text-center mt-3">{message}</p>
                     <p className="text-sm text-gray-500 text-center mt-1">
-                        📝 Lückentext • ⏱️ {formatTime(timeTaken)}
+                        Bài điền khuyết - {formatTime(timeTaken)}
                     </p>
                 </div>
 
                 {/* Gap-by-gap feedback */}
                 <div className="mt-6 space-y-3">
-                    <h3 className="text-base font-bold text-gray-800 mb-3">📋 Lücken-Auswertung</h3>
+                    <h3 className="text-base font-bold text-gray-800 mb-3">Tổng kết chỗ trống</h3>
                     {gaps.map((gap) => {
                         const { userLabel, correctLabel } = getAnswerLabel(gap)
                         return (
@@ -1084,12 +1107,12 @@ export function ReadingPlayer({
                                 <div className={styles.clozeResultContent}>
                                     {gap.isCorrect ? (
                                         <div>
-                                            <span className="font-semibold text-green-800">✅ {userLabel}</span>
+                                            <span className="font-semibold text-green-800">Đúng: {userLabel}</span>
                                         </div>
                                     ) : (
                                         <div>
-                                            <div><span className="font-semibold text-red-700">❌ Ihre Antwort:</span> {userLabel || '(leer)'}</div>
-                                            <div className="mt-1"><span className="font-semibold text-green-700">✅ Richtig:</span> {correctLabel}</div>
+                                            <div><span className="font-semibold text-red-700">Câu em chọn:</span> {userLabel || '(trống)'}</div>
+                                            <div className="mt-1"><span className="font-semibold text-green-700">Đáp án đúng:</span> {correctLabel}</div>
                                         </div>
                                     )}
                                 </div>
@@ -1100,7 +1123,7 @@ export function ReadingPlayer({
 
                 {/* Tips */}
                 <div className={`mt-6 ${styles.introCard}`}>
-                    <h3 className="text-sm font-bold text-gray-800 mb-3">💡 Nächste Schritte</h3>
+                    <h3 className="text-sm font-bold text-gray-800 mb-3">Bước tiếp theo</h3>
                     <ul className="space-y-2">
                         {tips.map((tip, i) => (
                             <li key={i} className="text-sm text-gray-600 flex items-start gap-2">
@@ -1113,14 +1136,15 @@ export function ReadingPlayer({
                 {/* Action buttons */}
                 <div className="flex gap-3 mt-6 justify-center">
                     <button onClick={() => router.push('/reading')} className={styles.navButton}>
-                        ← Zur Übersicht
+                        Về danh sách
                     </button>
                     <button onClick={() => {
                         setClozeAnswers({})
                         setClozeResults(null)
+                        setStartTime(Date.now())
                         setPhase('exercise')
                     }} className={`${styles.navButton} ${styles.primary}`}>
-                        🔄 Nochmal üben
+                        Luyện lại
                     </button>
                 </div>
             </div>
@@ -1132,10 +1156,7 @@ export function ReadingPlayer({
     // ═══════════════════════════════════════════
     if (phase === 'results' && results) {
         const { score, totalQuestions, percentage, questionResults } = results
-        const message = percentage >= 90 ? 'Ausgezeichnet! 🌟' :
-            percentage >= 70 ? 'Sehr gut! 👏' :
-                percentage >= 50 ? 'Gut gemacht! 💪' :
-                    'Weiter üben! 📚'
+        const message = resultMessage(percentage)
         const mascotVariant = percentage >= 70 ? 'celebrate' : percentage >= 50 ? 'encouragement' : 'studying'
 
         return (
@@ -1189,7 +1210,7 @@ export function ReadingPlayer({
                     <div className="flex items-center justify-center gap-2 mt-3 flex-wrap">
                         <span className="px-3 py-1 rounded-full text-xs font-bold text-white"
                             style={{ background: cefrColor.css }}>
-                            {cefrLevel} · Lesen · Teil {teil}
+                            {cefrLevel} - Đọc - Phần {teil}
                         </span>
                         <span className="px-3 py-1 rounded-full text-xs font-semibold bg-gray-100 text-gray-600">
                             {topic}
@@ -1203,15 +1224,15 @@ export function ReadingPlayer({
                     <div className="flex justify-center gap-4 mt-5">
                         <div className="px-4 py-2.5 bg-gray-50 rounded-xl text-center">
                             <p className="text-lg font-bold text-gray-900">⏱️ {formatTime(results.timeTaken)}</p>
-                            <p className="text-[10px] text-gray-500">Zeit</p>
+                            <p className="text-[10px] text-gray-500">Thời gian</p>
                         </div>
                         <div className="px-4 py-2.5 bg-gray-50 rounded-xl text-center">
                             <p className="text-lg font-bold text-gray-900">📊 {percentage}%</p>
-                            <p className="text-[10px] text-gray-500">Ergebnis</p>
+                            <p className="text-[10px] text-gray-500">Kết quả</p>
                         </div>
                         <div className="px-4 py-2.5 bg-gray-50 rounded-xl text-center">
                             <p className="text-lg font-bold text-gray-900">✅ {score}</p>
-                            <p className="text-[10px] text-gray-500">Richtig</p>
+                            <p className="text-[10px] text-gray-500">Đúng</p>
                         </div>
                     </div>
                 </div>
@@ -1219,7 +1240,7 @@ export function ReadingPlayer({
                 {/* ── Question Breakdown ── */}
                 <div className="mt-5">
                     <div className={styles.questionPanel}>
-                        <h3 className="text-sm font-bold text-gray-700 mb-3">Antworten-Übersicht</h3>
+                        <h3 className="text-sm font-bold text-gray-700 mb-3">Tổng kết câu trả lời</h3>
                         <div className="space-y-2.5">
                             {questionResults.map((qr) => (
                                 <button
@@ -1240,10 +1261,10 @@ export function ReadingPlayer({
                                             ) : (
                                                 <>
                                                     <p className="text-xs text-red-500 mt-1">
-                                                        Deine Antwort: <span className="font-medium">{qr.userAnswer}</span>
+                                                        Câu em chọn: <span className="font-medium">{qr.userAnswer}</span>
                                                     </p>
                                                     <p className="text-xs text-green-600 mt-0.5">
-                                                        Richtig: <span className="font-medium">{qr.correctAnswer}</span>
+                                                        Đáp án đúng: <span className="font-medium">{qr.correctAnswer}</span>
                                                     </p>
                                                 </>
                                             )}
@@ -1251,12 +1272,12 @@ export function ReadingPlayer({
                                             {/* Expanded explanation */}
                                             {expandedResult === qr.questionId && qr.explanation && (
                                                 <div className={styles.explanation}>
-                                                    <p className="font-bold text-yellow-700 mb-1">💡 Erklärung</p>
+                                                    <p className="font-bold text-yellow-700 mb-1">Giải thích</p>
                                                     {typeof qr.explanation === 'object' && qr.explanation !== null ? (
                                                         <>
                                                             {(qr.explanation as ExplanationData).key_evidence && (
                                                                 <p className="mt-1">
-                                                                    <span className="font-semibold">Schlüsselstelle:</span>{' '}
+                                                                     <span className="font-semibold">Dẫn chứng chính:</span>{' '}
                                                                     <span className={styles.evidenceHighlight}>{(qr.explanation as ExplanationData).key_evidence}</span>
                                                                 </p>
                                                             )}
@@ -1265,7 +1286,7 @@ export function ReadingPlayer({
                                                             )}
                                                             {(qr.explanation as ExplanationData).vocabulary_help && (
                                                                 <div className="mt-2 pt-2 border-t border-yellow-200">
-                                                                    <p className="font-semibold text-yellow-700">📖 Vokabeln</p>
+                                                                    <p className="font-semibold text-yellow-700">Từ vựng</p>
                                                                     {Object.entries((qr.explanation as ExplanationData).vocabulary_help!).map(([word, meaning]) => (
                                                                         <p key={word} className="mt-0.5">
                                                                             <span className="font-medium">{word}</span> — {meaning}
@@ -1297,9 +1318,9 @@ export function ReadingPlayer({
                 {vocabList.length > 0 && (
                     <div className="mt-5">
                         <div className={styles.questionPanel}>
-                            <h3 className="text-sm font-bold text-gray-700 mb-3">📖 Nachgeschlagene Wörter</h3>
+                            <h3 className="text-sm font-bold text-gray-700 mb-3">Từ đã tra</h3>
                             <p className="text-xs text-gray-500 mb-3">
-                                Du hast {vocabList.length} {vocabList.length === 1 ? 'Wort' : 'Wörter'} während des Lesens nachgeschlagen. Wiederhole sie!
+                                Em đã tra {vocabList.length} từ trong lúc đọc. Hãy ôn lại để nhớ lâu hơn.
                             </p>
                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                                 {vocabList.map((v, i) => (
@@ -1316,20 +1337,20 @@ export function ReadingPlayer({
                 {/* ── Post-Reading Review: Performance Insights ── */}
                 <div className="mt-5">
                     <div className={styles.questionPanel}>
-                        <h3 className="text-sm font-bold text-gray-700 mb-3">📊 Lese-Analyse</h3>
+                        <h3 className="text-sm font-bold text-gray-700 mb-3">Phân tích bài đọc</h3>
                         <div className="space-y-3">
                             {/* Strengths */}
                             {percentage >= 60 && (
                                 <div className={styles.insightCard} style={{ borderLeftColor: '#10B981' }}>
                                     <span className="text-sm">💪</span>
                                     <div>
-                                        <p className="text-xs font-bold text-green-700">Stärke</p>
+                                        <p className="text-xs font-bold text-green-700">Điểm mạnh</p>
                                         <p className="text-xs text-gray-600">
                                             {percentage >= 90
-                                                ? 'Exzellentes Textverständnis! Du hast die Kernaussagen perfekt erfasst.'
+                                                ? 'Em nắm ý chính rất tốt.'
                                                 : percentage >= 70
-                                                    ? 'Gutes Textverständnis! Die meisten Informationen wurden korrekt erkannt.'
-                                                    : 'Grundlegendes Verständnis vorhanden. Weiter so!'}
+                                                    ? 'Em hiểu phần lớn thông tin quan trọng.'
+                                                    : 'Em đã có nền hiểu bài, tiếp tục luyện thêm nhé.'}
                                         </p>
                                     </div>
                                 </div>
@@ -1339,13 +1360,13 @@ export function ReadingPlayer({
                                 <div className={styles.insightCard} style={{ borderLeftColor: '#FF6B35' }}>
                                     <span className="text-sm">🎯</span>
                                     <div>
-                                        <p className="text-xs font-bold text-orange-700">Verbesserung</p>
+                                        <p className="text-xs font-bold text-orange-700">Cần cải thiện</p>
                                         <p className="text-xs text-gray-600">
                                             {percentage < 50
-                                                ? 'Lies den Text noch einmal langsam und achte auf die Schlüsselwörter.'
+                                                ? 'Đọc lại chậm hơn và chú ý từ khóa.'
                                                 : percentage < 70
-                                                    ? 'Achte besonders auf Details und Nebensätze im Text.'
-                                                    : 'Für die Bestnote: Prüfe auch die impliziten Informationen.'}
+                                                    ? 'Tập trung thêm vào chi tiết và mệnh đề phụ.'
+                                                    : 'Để đạt điểm cao hơn, kiểm tra cả thông tin ngụ ý.'}
                                         </p>
                                     </div>
                                 </div>
@@ -1355,11 +1376,11 @@ export function ReadingPlayer({
                                 <div className={styles.insightCard} style={{ borderLeftColor: '#6366F1' }}>
                                     <span className="text-sm">📚</span>
                                     <div>
-                                        <p className="text-xs font-bold text-indigo-700">Wortschatz</p>
+                                        <p className="text-xs font-bold text-indigo-700">Từ vựng</p>
                                         <p className="text-xs text-gray-600">
                                             {vocabList.length <= 3
-                                                ? `Du hast nur ${vocabList.length} Wörter nachgeschlagen — guter Wortschatz!`
-                                                : `${vocabList.length} Wörter nachgeschlagen. Wiederhole sie regelmäßig für besseres Verständnis.`}
+                                                ? `Em chỉ cần tra ${vocabList.length} từ, vốn từ đang ổn.`
+                                                : `Em đã tra ${vocabList.length} từ. Nên ôn lại đều để đọc nhanh hơn.`}
                                         </p>
                                     </div>
                                 </div>
@@ -1368,13 +1389,13 @@ export function ReadingPlayer({
                             <div className={styles.insightCard} style={{ borderLeftColor: '#8B5CF6' }}>
                                 <span className="text-sm">⏱️</span>
                                 <div>
-                                    <p className="text-xs font-bold text-purple-700">Tempo</p>
+                                        <p className="text-xs font-bold text-purple-700">Tốc độ</p>
                                     <p className="text-xs text-gray-600">
                                         {results.timeTaken < estimatedMinutes * 45
-                                            ? 'Sehr schnell gelesen! Nimm dir beim nächsten Mal etwas mehr Zeit für Details.'
+                                            ? 'Em đọc khá nhanh. Lần sau hãy dành thêm thời gian cho chi tiết.'
                                             : results.timeTaken < estimatedMinutes * 90
-                                                ? 'Gutes Tempo! Du hast dir genug Zeit genommen.'
-                                                : 'Du hast dir viel Zeit genommen — das ist beim Üben völlig ok!'}
+                                                ? 'Tốc độ ổn, đủ thời gian để xử lý bài.'
+                                                : 'Em dành nhiều thời gian hơn, điều này hoàn toàn ổn khi đang luyện.'}
                                     </p>
                                 </div>
                             </div>
@@ -1389,7 +1410,7 @@ export function ReadingPlayer({
                             <span className="text-2xl">💡</span>
                             <div>
                                 <p className="text-sm font-bold text-gray-900 mb-1">
-                                    {isBeginner ? 'Tipp zum Weiterlernen' : 'Empfehlung'}
+                                    {isBeginner ? 'Gợi ý học tiếp' : 'Khuyến nghị'}
                                 </p>
                                 <p className="text-sm text-gray-700">
                                     {(POST_READING_TIPS[cefrLevel] ?? POST_READING_TIPS.A1!)[Math.floor(Math.random() * 3)]}
@@ -1405,13 +1426,13 @@ export function ReadingPlayer({
                         onClick={() => router.push('/reading')}
                         className={styles.navButton}
                     >
-                        ← Zurück zur Übersicht
+                        Về danh sách
                     </button>
                     <button
-                        onClick={() => router.push('/reading')}
+                        onClick={resetExercise}
                         className={`${styles.navButton} ${styles.primary}`}
                     >
-                        Nächste Aufgabe →
+                        Luyện lại
                     </button>
                 </div>
             </div>

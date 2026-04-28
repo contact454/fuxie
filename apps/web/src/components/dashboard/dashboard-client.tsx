@@ -1,7 +1,7 @@
 'use client'
 
 import Image from 'next/image'
-import Link from 'next/link'
+import { MeasuredLink } from '@/components/performance/measured-link'
 import { CEFR_LEVELS, getCefrTheme } from '@/lib/constants/cefr'
 import { StatCard, MiniStat } from './stat-card'
 import { QuickAction } from './quick-action'
@@ -183,7 +183,7 @@ function HeaderSection({ data }: { data: DashboardData }) {
                         {data.profile.targetExam && (
                             <>
                                 <span>·</span>
-                                <span>Ziel: {data.profile.targetExam} {data.profile.targetLevel}</span>
+                                <span>Mục tiêu: {data.profile.targetExam} {data.profile.targetLevel}</span>
                             </>
                         )}
                     </div>
@@ -193,9 +193,9 @@ function HeaderSection({ data }: { data: DashboardData }) {
                         <span className="text-lg">🎯</span>
                         <div>
                             <p className="font-semibold text-gray-900">
-                                {data.profile.examDaysLeft} Tage
+                                {data.profile.examDaysLeft} ngày
                             </p>
-                            <p className="text-xs text-gray-500">bis zur Prüfung</p>
+                            <p className="text-xs text-gray-500">đến kỳ thi</p>
                         </div>
                     </div>
                 )}
@@ -208,41 +208,41 @@ function StatsSection({ data, studyGoalPercent }: { data: DashboardData; studyGo
     return (
         <div className="mb-6 grid gap-3 grid-cols-2 lg:grid-cols-4">
             <StatCard
-                label="Streak"
+                label="Chuỗi ngày"
                 value={data.streak?.currentStreak ?? 0}
                 icon="🔥"
-                suffix="Tage"
-                detail={`Rekord: ${data.streak?.longestStreak ?? 0}`}
+                suffix="ngày"
+                detail={`Kỷ lục: ${data.streak?.longestStreak ?? 0}`}
                 gradient="from-orange-500/10 to-red-500/5"
                 color="#FF6B35"
                 pulse={(data.streak?.currentStreak ?? 0) > 0}
                 index={0}
             />
             <StatCard
-                label="XP Heute"
+                label="XP hôm nay"
                 value={data.todayActivity?.xpEarned ?? 0}
                 icon="⭐"
-                detail={`Gesamt: ${data.profile.totalXp.toLocaleString()}`}
+                detail={`Tổng: ${data.profile.totalXp.toLocaleString()}`}
                 gradient="from-blue-500/10 to-indigo-500/5"
                 color="#004E89"
                 index={1}
             />
             <StatCard
-                label="SRS fällig"
+                label="SRS cần ôn"
                 value={data.srs?.dueCount ?? 0}
                 icon="📚"
-                detail={`${data.srs?.totalCards ?? 0} Karten · ${data.srs?.reviewedToday ?? 0} heute`}
+                detail={`${data.srs?.totalCards ?? 0} thẻ · ${data.srs?.reviewedToday ?? 0} hôm nay`}
                 gradient="from-teal-500/10 to-emerald-500/5"
                 color="#2EC4B6"
                 urgent={(data.srs?.dueCount ?? 0) > 20}
                 index={2}
             />
             <StatCard
-                label="Lernzeit"
+                label="Thời gian học"
                 value={data.todayActivity?.totalMinutes ?? 0}
                 icon="⏱️"
                 suffix="min"
-                detail={`Ziel: ${data.profile.studyGoalMinutes} min (${studyGoalPercent}%)`}
+                detail={`Mục tiêu: ${data.profile.studyGoalMinutes} phút (${studyGoalPercent}%)`}
                 gradient="from-purple-500/10 to-pink-500/5"
                 color="#9C27B0"
                 index={3}
@@ -262,7 +262,7 @@ function ContentSection({ data, cefrProgress, maxWeeklyXp, currentIdx }: { data:
                 {/* CEFR Roadmap */}
                 <div className="lg:col-span-3 rounded-2xl bg-white p-5 shadow-sm ring-1 ring-gray-100 animate-fade-in-up stagger-4">
                     <h2 className="mb-4 text-sm font-semibold uppercase tracking-wider text-gray-400">
-                        CEFR Fortschritt
+                        Tiến độ CEFR
                     </h2>
                     <div className="flex items-center gap-1 sm:gap-2">
                         {CEFR_LEVELS.map((level, idx) => {
@@ -289,10 +289,10 @@ function ContentSection({ data, cefrProgress, maxWeeklyXp, currentIdx }: { data:
                                         {level}
                                     </div>
                                     {isTarget && (
-                                        <span className="text-[10px] font-semibold text-fuxie-primary">🎯 Ziel</span>
+                                        <span className="text-[10px] font-semibold text-fuxie-primary">🎯 Mục tiêu</span>
                                     )}
                                     {isActive && !isTarget && (
-                                        <span className="text-[10px] font-semibold" style={{ color }}>Jetzt</span>
+                                        <span className="text-[10px] font-semibold" style={{ color }}>Hiện tại</span>
                                     )}
                                 </div>
                             )
@@ -318,11 +318,11 @@ function ContentSection({ data, cefrProgress, maxWeeklyXp, currentIdx }: { data:
 
                     {/* Mini stats row */}
                     <div className="mt-4 grid grid-cols-4 gap-3">
-                        <MiniStat value={data.profile.totalWordsLearned} label="Wörter" icon="📝" />
-                        <MiniStat value={data.profile.totalLessonsCompleted} label="Lektionen" icon="📖" />
+                        <MiniStat value={data.profile.totalWordsLearned} label="Từ" icon="📝" />
+                        <MiniStat value={data.profile.totalLessonsCompleted} label="Bài học" icon="📖" />
                         <MiniStat
                             value={`${Math.floor(data.profile.totalStudyMinutes / 60)}h`}
-                            label="Lernzeit"
+                            label="Thời gian học"
                             icon="⏱️"
                         />
                         <MiniStat
@@ -341,7 +341,7 @@ function ContentSection({ data, cefrProgress, maxWeeklyXp, currentIdx }: { data:
                 {/* Weekly Activity Chart */}
                 <div className="lg:col-span-2 rounded-2xl bg-white p-5 shadow-sm ring-1 ring-gray-100 animate-fade-in-up stagger-5">
                     <h2 className="mb-4 text-sm font-semibold uppercase tracking-wider text-gray-400">
-                        Wochenaktivität
+                        Hoạt động tuần
                     </h2>
                     <div className="flex items-end gap-1.5 h-32">
                         {(data.weeklyActivity ?? []).map((day, i) => {
@@ -374,7 +374,7 @@ function ContentSection({ data, cefrProgress, maxWeeklyXp, currentIdx }: { data:
                     </div>
                     {/* Weekly total */}
                     <div className="mt-3 flex items-center justify-between text-xs text-gray-400 border-t border-gray-50 pt-2">
-                        <span>Diese Woche</span>
+                        <span>Tuần này</span>
                         <span className="font-semibold text-gray-600">
                             {(data.weeklyActivity ?? []).reduce((s, d) => s + d.xp, 0)} XP
                         </span>
@@ -418,24 +418,24 @@ function ContentSection({ data, cefrProgress, maxWeeklyXp, currentIdx }: { data:
                 {/* Quick Actions */}
                 <div className="rounded-2xl bg-white p-5 shadow-sm ring-1 ring-gray-100 animate-fade-in-up stagger-6">
                     <h2 className="mb-4 text-sm font-semibold uppercase tracking-wider text-gray-400">
-                        Schnellstart
+                        Bắt đầu nhanh
                     </h2>
                     <div className="space-y-2">
                         <QuickAction
                             href="/review"
                             icon="🔄"
-                            label="SRS Wiederholen"
-                            sublabel={(data.srs?.dueCount ?? 0) > 0 ? `${data.srs.dueCount} Karten fällig` : 'Keine Karten fällig'}
+                            label="Ôn SRS"
+                            sublabel={(data.srs?.dueCount ?? 0) > 0 ? `${data.srs.dueCount} thẻ cần ôn` : 'Không có thẻ cần ôn'}
                             color="#2EC4B6"
                             badge={(data.srs?.dueCount ?? 0) > 0 ? data.srs.dueCount : undefined}
                         />
                         <QuickAction
                             href="/listening"
                             icon="🎧"
-                            label="Hörverstehen"
+                            label="Luyện nghe"
                             sublabel={(data.listening?.completedLessons ?? 0) > 0
-                                ? `${data.listening.completedLessons}/${data.listening.totalLessons} Lektionen`
-                                : `${data.listening?.totalLessons ?? 0} Lektionen verfügbar`
+                                ? `${data.listening.completedLessons}/${data.listening.totalLessons} bài`
+                                : `${data.listening?.totalLessons ?? 0} bài có sẵn`
                             }
                             color="#2EC4B6"
                             badge={(data.listening?.totalLessons ?? 0) - (data.listening?.completedLessons ?? 0) > 0
@@ -445,8 +445,8 @@ function ContentSection({ data, cefrProgress, maxWeeklyXp, currentIdx }: { data:
                         <QuickAction
                             href="/vocabulary"
                             icon="📚"
-                            label="Neue Wörter"
-                            sublabel="Wortschatz erweitern"
+                            label="Từ mới"
+                            sublabel="Mở rộng từ vựng"
                             color="#FF6B35"
                         />
                         <QuickAction
@@ -454,8 +454,8 @@ function ContentSection({ data, cefrProgress, maxWeeklyXp, currentIdx }: { data:
                             icon="📝"
                             label="Grammatik"
                             sublabel={(data.grammar?.completedLessons ?? 0) > 0
-                                ? `${data.grammar.completedLessons}/${data.grammar.totalLessons} Lektionen · ${data.grammar.totalStars} ⭐`
-                                : `${data.grammar?.totalTopics ?? 0} Themen verfügbar`
+                                ? `${data.grammar.completedLessons}/${data.grammar.totalLessons} bài · ${data.grammar.totalStars} ⭐`
+                                : `${data.grammar?.totalTopics ?? 0} chủ đề có sẵn`
                             }
                             color="#004E89"
                             badge={(data.grammar?.totalLessons ?? 0) - (data.grammar?.completedLessons ?? 0) > 0
@@ -465,10 +465,10 @@ function ContentSection({ data, cefrProgress, maxWeeklyXp, currentIdx }: { data:
                         <QuickAction
                             href="/exam"
                             icon="🎯"
-                            label="Prüfung üben"
+                            label="Luyện thi thử"
                             sublabel={data.profile.targetExam
                                 ? `${data.profile.targetExam} ${data.profile.targetLevel}`
-                                : 'Mock exam starten'
+                                : 'Bắt đầu thi thử'
                             }
                             color="#9C27B0"
                         />
@@ -478,7 +478,7 @@ function ContentSection({ data, cefrProgress, maxWeeklyXp, currentIdx }: { data:
                 {/* Achievements */}
                 <div className="rounded-2xl bg-white p-5 shadow-sm ring-1 ring-gray-100 animate-fade-in-up stagger-6">
                     <h2 className="mb-4 text-sm font-semibold uppercase tracking-wider text-gray-400">
-                        Erfolge
+                        Thành tựu
                     </h2>
                     {(data.achievements ?? []).length > 0 ? (
                         <div className="space-y-2.5">
@@ -495,7 +495,7 @@ function ContentSection({ data, cefrProgress, maxWeeklyXp, currentIdx }: { data:
                                             {a.titleDe ?? a.title}
                                         </p>
                                         <p className="text-[10px] text-gray-400">
-                                            {new Date(a.earnedAt).toLocaleDateString('de-DE', {
+                                            {new Date(a.earnedAt).toLocaleDateString('vi-VN', {
                                                 day: 'numeric',
                                                 month: 'short',
                                             })}
@@ -507,8 +507,8 @@ function ContentSection({ data, cefrProgress, maxWeeklyXp, currentIdx }: { data:
                     ) : (
                         <div className="flex flex-col items-center justify-center py-8 text-center">
                             <Image src="/mascot/core/fuxie-core-happy-wave.png" alt="Fuxie" width={48} height={48} className="mb-2 object-contain" />
-                            <p className="text-sm text-gray-500">Noch keine Erfolge</p>
-                            <p className="text-xs text-gray-400 mt-1">Lerne weiter, um Erfolge zu verdienen!</p>
+                            <p className="text-sm text-gray-500">Chưa có thành tựu</p>
+                            <p className="text-xs text-gray-400 mt-1">Học tiếp để mở khóa thành tựu.</p>
                         </div>
                     )}
                 </div>
@@ -524,62 +524,110 @@ function TodayPlanSection({ plan }: { plan: TodayPlan }) {
         return null
     }
 
-    return (
-        <section className="mb-6 rounded-2xl bg-white p-5 shadow-sm ring-1 ring-gray-100 animate-fade-in-up stagger-4">
-            <div className="mb-4 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-                <div>
-                    <h2 className="text-sm font-semibold uppercase tracking-wider text-gray-400">
-                        Heute lernen
-                    </h2>
-                    <p className="mt-1 text-lg font-semibold text-gray-900">
-                        Fokus: {plan.focus}
-                    </p>
-                </div>
-                <div className="grid grid-cols-3 gap-2 text-center text-xs">
-                    <div className="rounded-xl bg-gray-50 px-3 py-2">
-                        <p className="font-bold text-gray-900">{plan.currentMinutes}/{plan.goalMinutes}</p>
-                        <p className="text-gray-400">min</p>
-                    </div>
-                    <div className="rounded-xl bg-gray-50 px-3 py-2">
-                        <p className="font-bold text-gray-900">{plan.dueSrsCount}</p>
-                        <p className="text-gray-400">SRS</p>
-                    </div>
-                    <div className="rounded-xl bg-gray-50 px-3 py-2">
-                        <p className="font-bold text-gray-900">{plan.signals.pendingAssignments}</p>
-                        <p className="text-gray-400">Tasks</p>
-                    </div>
-                </div>
-            </div>
+    const primaryAction = topActions[0]!
+    const secondaryActions = topActions.slice(1)
+    const planProgress = plan.goalMinutes > 0
+        ? Math.min(100, Math.round((plan.currentMinutes / plan.goalMinutes) * 100))
+        : 0
 
-            <div className="grid gap-3 md:grid-cols-3">
-                {topActions.map((action, index) => (
-                    <Link
-                        key={action.id}
-                        href={action.href}
-                        className="card-hover group flex min-h-28 flex-col justify-between rounded-xl border border-gray-100 p-4 transition-all"
+    return (
+        <section className="mb-6 overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-gray-100 animate-fade-in-up stagger-4">
+            <div className="grid gap-0 lg:grid-cols-[1.4fr_0.8fr]">
+                <div className="p-5 sm:p-6">
+                    <div className="mb-5 flex items-start justify-between gap-4">
+                        <div>
+                            <p className="text-sm font-semibold uppercase tracking-wider text-[#FF6B35]">
+                                Hôm nay học gì?
+                            </p>
+                            <h2 className="mt-1 text-2xl font-bold text-gray-950">
+                                Kế hoạch {plan.remainingMinutes > 0 ? plan.remainingMinutes : plan.goalMinutes} phút
+                            </h2>
+                            <p className="mt-2 max-w-xl text-sm text-gray-500">
+                                Fuxie chọn một việc quan trọng nhất để bạn học tiếp mà không phải tự dò từng module.
+                            </p>
+                        </div>
+                        <Image src="/mascot/core/fuxie-core-happy-wave.png" alt="Fuxie" width={48} height={48} className="hidden shrink-0 object-contain sm:block" />
+                    </div>
+
+                    <MeasuredLink
+                        href={primaryAction.href}
+                        flow="dashboard.today_plan.primary"
+                        source={primaryAction.id}
+                        className="group block rounded-2xl border border-orange-100 bg-gradient-to-br from-orange-50 to-white p-5 transition-all hover:-translate-y-0.5 hover:shadow-lg hover:shadow-orange-100"
                     >
-                        <div className="flex items-start justify-between gap-3">
+                        <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
                             <div className="min-w-0">
                                 <p className="text-xs font-semibold uppercase tracking-wider text-gray-400">
-                                    {action.badge ?? action.skill}
+                                    {primaryAction.badge ?? primaryAction.skill}
                                 </p>
-                                <h3 className="mt-1 line-clamp-2 text-sm font-semibold text-gray-900">
-                                    {action.title}
+                                <h3 className="mt-1 text-xl font-bold text-gray-950">
+                                    {primaryAction.title}
                                 </h3>
+                                <p className="mt-2 text-sm text-gray-500">
+                                    Vì bạn đang ở {plan.currentLevel} · {primaryAction.reason}
+                                </p>
                             </div>
-                            <span
-                                className="flex h-7 w-7 shrink-0 items-center justify-center rounded-lg text-xs font-bold text-white"
-                                style={{ backgroundColor: todayPlanColor(action.type, index) }}
-                            >
-                                {index + 1}
-                            </span>
+                            <div className="flex items-center gap-3">
+                                <span className="rounded-xl bg-white px-3 py-2 text-sm font-semibold text-gray-700 shadow-sm">
+                                    {primaryAction.estimatedMinutes} min
+                                </span>
+                                <span className="rounded-xl bg-[#FF6B35] px-5 py-3 text-sm font-bold text-white shadow-sm transition group-hover:bg-[#e55a25]">
+                                    Học tiếp
+                                </span>
+                            </div>
                         </div>
-                        <div className="mt-3 flex items-center justify-between gap-2 text-xs text-gray-500">
-                            <span className="line-clamp-1">{action.reason}</span>
-                            <span className="shrink-0 font-semibold text-gray-700">{action.estimatedMinutes} min</span>
+                    </MeasuredLink>
+
+                    {secondaryActions.length > 0 && (
+                        <div className="mt-4 grid gap-2 sm:grid-cols-2">
+                            {secondaryActions.map((action, index) => (
+                                <MeasuredLink
+                                    key={action.id}
+                                    href={action.href}
+                                    flow="dashboard.today_plan.secondary"
+                                    source={action.id}
+                                    className="flex items-center justify-between gap-3 rounded-xl border border-gray-100 px-4 py-3 text-sm transition hover:border-gray-200 hover:bg-gray-50"
+                                >
+                                    <span className="min-w-0 truncate font-semibold text-gray-800">
+                                        {action.title}
+                                    </span>
+                                    <span
+                                        className="shrink-0 rounded-lg px-2.5 py-1 text-xs font-bold text-white"
+                                        style={{ backgroundColor: todayPlanColor(action.type, index) }}
+                                    >
+                                        {action.estimatedMinutes}m
+                                    </span>
+                                </MeasuredLink>
+                            ))}
                         </div>
-                    </Link>
-                ))}
+                    )}
+                </div>
+
+                <div className="border-t border-gray-100 bg-gray-50/70 p-5 sm:p-6 lg:border-l lg:border-t-0">
+                    <p className="text-sm font-semibold text-gray-900">Mục tiêu ngày</p>
+                    <div className="mt-4">
+                        <div className="flex items-end justify-between">
+                            <span className="text-3xl font-black text-gray-950">{plan.currentMinutes}</span>
+                            <span className="text-sm font-semibold text-gray-500">/ {plan.goalMinutes} phút</span>
+                        </div>
+                        <div className="mt-3 h-2.5 overflow-hidden rounded-full bg-white">
+                            <div
+                                className="h-full rounded-full bg-[#10B981] transition-all duration-700"
+                                style={{ width: `${Math.max(planProgress, 4)}%` }}
+                            />
+                        </div>
+                    </div>
+                    <div className="mt-5 grid grid-cols-2 gap-3 text-sm">
+                        <div className="rounded-xl bg-white p-3">
+                            <p className="font-bold text-gray-950">{plan.dueSrsCount}</p>
+                            <p className="mt-1 text-xs text-gray-500">SRS cần ôn</p>
+                        </div>
+                        <div className="rounded-xl bg-white p-3">
+                            <p className="font-bold text-gray-950">{plan.signals.pendingAssignments}</p>
+                            <p className="mt-1 text-xs text-gray-500">Bài được giao</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     )
@@ -591,4 +639,3 @@ function todayPlanColor(type: string, index: number) {
     if (type === 'exam') return '#9C27B0'
     return ['#004E89', '#2EC4B6', '#FF6B35'][index] ?? '#004E89'
 }
-

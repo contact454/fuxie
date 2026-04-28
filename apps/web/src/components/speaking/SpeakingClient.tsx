@@ -136,7 +136,7 @@ export default function SpeakingClient({
       {/* Header */}
       <div style={{ padding: '24px 0 16px' }}>
         <h1 style={{ fontSize: 28, fontWeight: 800, color: '#111827', margin: '0 0 4px' }}>
-          🎤 Sprechen
+          🎤 Luyện nói
         </h1>
         <p style={{ fontSize: 15, color: '#6B7280', margin: 0 }}>
           Luyện phát âm tiếng Đức theo chuẩn Goethe-Zertifikat
@@ -253,7 +253,7 @@ export default function SpeakingClient({
           <div style={{ fontWeight: 600, marginBottom: 4, color: '#6B7280' }}>
             Chưa có bài tập nào
           </div>
-          <div>Nội dung Sprechen đang được chuẩn bị...</div>
+          <div>Nội dung luyện nói đang được chuẩn bị...</div>
         </div>
       )}
     </div>

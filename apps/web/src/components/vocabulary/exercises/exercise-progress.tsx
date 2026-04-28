@@ -41,7 +41,7 @@ export function ExerciseProgress({ current, total, onClose, timer, cefrLevel }: 
 
             {/* Question counter */}
             <span className="text-sm text-gray-500 font-medium whitespace-nowrap">
-                Frage {current} von {total}
+                Câu {current} / {total}
             </span>
 
             {/* Timer */}

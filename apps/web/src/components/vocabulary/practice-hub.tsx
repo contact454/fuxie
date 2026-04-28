@@ -1,9 +1,9 @@
 'use client'
 
 import { useState, useCallback } from 'react'
-import { useRouter } from 'next/navigation'
 import Image from 'next/image'
 import { useTranslations } from 'next-intl'
+import { MeasuredLink } from '@/components/performance/measured-link'
 import { Mascot } from '@/components/ui/mascot'
 import { getCefrTheme } from '@/lib/constants/cefr'
 
@@ -27,7 +27,6 @@ interface PracticeHubProps {
 
 export function PracticeHub({ themes, availableLevels, initialLevel }: PracticeHubProps) {
     const t = useTranslations('UI')
-    const router = useRouter()
     const [currentLevel, setCurrentLevel] = useState(initialLevel)
     const [currentThemes, setCurrentThemes] = useState(themes)
     const [isLevelLoading, setIsLevelLoading] = useState(false)
@@ -59,11 +58,7 @@ export function PracticeHub({ themes, availableLevels, initialLevel }: PracticeH
         }
     }, [currentLevel])
 
-    const startMixedLesson = (themeSlug: string) => {
-        // Vào thẳng luồng Mixed Bài học có Flashcard
-        router.push(`/vocabulary/practice/mixed?theme=${themeSlug}&level=${currentLevel}`)
-    }
-
+    const getMixedLessonHref = (themeSlug: string) => `/vocabulary/practice/mixed?theme=${themeSlug}&level=${currentLevel}`
     return (
         <div className="max-w-2xl mx-auto mb-20">
             {/* ═══ Top Sticky Banner ═══ */}
@@ -119,8 +114,11 @@ export function PracticeHub({ themes, availableLevels, initialLevel }: PracticeH
                             <div className={`relative flex flex-col items-center ${alignClass} group`}>
                                 
                                 {/* Nút tròn to (Thẻ Bài học) */}
-                                <button
-                                    onClick={() => startMixedLesson(theme.slug)}
+                                <MeasuredLink
+                                    href={getMixedLessonHref(theme.slug)}
+                                    flow="vocabulary.practice.theme"
+                                    source={theme.slug}
+                                    prefetch={idx < 4}
                                     className="relative w-24 h-24 rounded-full bg-[#58cc02] 
                                                border-b-[8px] border-[#46a302] hover:-translate-y-1 
                                                hover:border-b-[10px] active:border-b-0 active:translate-y-2 
@@ -142,7 +140,7 @@ export function PracticeHub({ themes, availableLevels, initialLevel }: PracticeH
                                     
                                     {/* Mép phản quang trên nút */}
                                     <div className="absolute top-1.5 left-3 right-3 h-4 bg-white/30 rounded-full blur-[1px]"></div>
-                                </button>
+                                </MeasuredLink>
                                 
                                 {/* Khung Tooltip chứa tên chủ đề */}
                                 <div className="mt-4 bg-white px-5 py-2.5 rounded-2xl border-2 border-[#e5e5e5] 
@@ -155,7 +153,7 @@ export function PracticeHub({ themes, availableLevels, initialLevel }: PracticeH
                                         {theme.name}
                                     </span>
                                     <span className="relative z-10 block text-[#afafaf] font-medium text-[11px] leading-tight max-w-[120px]">
-                                        {theme.nameNative || (theme.wordCount + ' Wörter')}
+                                        {theme.nameNative || (theme.wordCount + ' từ')}
                                     </span>
                                 </div>
                             </div>

@@ -50,11 +50,11 @@ export function BottomFeedback({ isCorrect, correctAnswer, onContinue }: BottomF
                     </div>
                     <div>
                         <h3 className={`text-2xl font-black ${textColor}`}>
-                            {isCorrect ? 'Richtig!' : 'Falsch!'}
+                            {isCorrect ? 'Đúng!' : 'Chưa đúng!'}
                         </h3>
                         {!isCorrect && correctAnswer && (
                             <p className={`text-base font-medium ${textColor} mt-1`}>
-                                Richtige Antwort: <span className="font-bold">{correctAnswer}</span>
+                                Đáp án đúng: <span className="font-bold">{correctAnswer}</span>
                             </p>
                         )}
                     </div>
@@ -64,7 +64,7 @@ export function BottomFeedback({ isCorrect, correctAnswer, onContinue }: BottomF
                     onClick={onContinue}
                     className={`px-8 py-3.5 rounded-2xl text-white font-bold text-lg shadow-sm transition-all focus:outline-none focus:ring-4 ${btnColor} focus:ring-opacity-50 min-w-[150px]`}
                 >
-                    Weiter
+                    Tiếp tục
                 </button>
             </div>
         </div>

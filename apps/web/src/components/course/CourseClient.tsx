@@ -1,6 +1,4 @@
-'use client'
-
-import Link from 'next/link'
+import { MeasuredLink } from '@/components/performance/measured-link'
 
 interface SkillLink {
     skill: 'listening' | 'reading' | 'writing' | 'speaking'
@@ -92,11 +90,11 @@ export function CourseClient({ data }: { data: CourseData }) {
                     </div>
                     <div className="flex items-center gap-1.5 text-sm text-gray-500">
                         <span className="text-base">📝</span>
-                        <span className="font-medium text-gray-700">{totalVocabLearned}/{totalVocabItems}</span> Wörter
+                        <span className="font-medium text-gray-700">{totalVocabLearned}/{totalVocabItems}</span> từ
                     </div>
                     <div className="flex items-center gap-1.5 text-sm text-gray-500">
                         <span className="text-base">📐</span>
-                        <span className="font-medium text-gray-700">{totalGrammarCompleted}/{totalGrammarLessons}</span> Grammatik
+                        <span className="font-medium text-gray-700">{totalGrammarCompleted}/{totalGrammarLessons}</span> bài ngữ pháp
                     </div>
                 </div>
             </div>
@@ -119,6 +117,12 @@ export function CourseClient({ data }: { data: CourseData }) {
                             mod.grammarTopics.reduce((s, t) => s + t.completedCount, 0)
                         const progressPercent = totalItems > 0 ? Math.round((completedItems / totalItems) * 100) : 0
                         const isDone = progressPercent >= 100
+                        const primaryHref = mod.vocabThemes[0]
+                            ? '/vocabulary'
+                            : mod.grammarTopics[0]
+                                ? `/grammar/${mod.grammarTopics[0].slug}`
+                                : mod.skillLinks?.[0]?.href ?? '/course'
+                        const primaryLabel = isDone ? 'Ôn lại module' : 'Bắt đầu bài tiếp theo'
 
                         return (
                             <div key={mod.id} className="relative pl-14">
@@ -169,11 +173,38 @@ export function CourseClient({ data }: { data: CourseData }) {
                                             <p className="text-sm text-gray-500 mb-4">{mod.description}</p>
                                         )}
 
+                                        <div className="mb-4 flex flex-col gap-3 rounded-xl border border-orange-100 bg-orange-50/70 p-4 sm:flex-row sm:items-center sm:justify-between">
+                                            <div className="min-w-0">
+                                                <p className="text-xs font-semibold uppercase tracking-wider text-[#FF6B35]">
+                                                    Việc nên làm ngay
+                                                </p>
+                                                <p className="mt-1 text-sm font-semibold text-gray-900">
+                                                    {primaryLabel}
+                                                </p>
+                                            </div>
+                                            <MeasuredLink
+                                                href={primaryHref}
+                                                flow="course.module.primary"
+                                                source={mod.slug}
+                                                className="inline-flex shrink-0 items-center justify-center rounded-xl bg-[#FF6B35] px-4 py-2.5 text-sm font-bold text-white shadow-sm transition hover:bg-[#e55a25]"
+                                            >
+                                                Học tiếp
+                                            </MeasuredLink>
+                                        </div>
+
+                                        <details className="group rounded-xl border border-gray-100 bg-gray-50/40 p-3">
+                                            <summary className="cursor-pointer list-none text-sm font-semibold text-gray-700">
+                                                Chi tiết nội dung module
+                                                <span className="ml-2 text-xs font-normal text-gray-400 group-open:hidden">
+                                                    {mod.vocabThemes.length} từ vựng · {mod.grammarTopics.length} ngữ pháp · {mod.skillLinks?.length ?? 0} kỹ năng
+                                                </span>
+                                            </summary>
+                                            <div className="mt-4">
                                         {/* Vocab Themes */}
                                         {mod.vocabThemes.length > 0 && (
                                             <div className="mb-4">
                                                 <h3 className="text-xs font-semibold uppercase tracking-wider text-gray-400 mb-2">
-                                                    📚 Wortschatz
+                                                    📚 Từ vựng
                                                 </h3>
                                                 <div className="flex flex-wrap gap-2">
                                                     {mod.vocabThemes.map(theme => {
@@ -181,9 +212,11 @@ export function CourseClient({ data }: { data: CourseData }) {
                                                             ? Math.round((theme.learnedCount / theme.itemCount) * 100)
                                                             : 0
                                                         return (
-                                                            <Link
+                                                            <MeasuredLink
                                                                 key={theme.slug}
                                                                 href="/vocabulary"
+                                                                flow="course.module.vocabulary"
+                                                                source={`${mod.slug}:${theme.slug}`}
                                                                 className="group flex items-center gap-2 rounded-xl bg-blue-50 hover:bg-blue-100 px-3 py-2 transition-colors"
                                                             >
                                                                 <div className="flex-1 min-w-0">
@@ -206,7 +239,7 @@ export function CourseClient({ data }: { data: CourseData }) {
                                                                         {pct}%
                                                                     </span>
                                                                 </div>
-                                                            </Link>
+                                                            </MeasuredLink>
                                                         )
                                                     })}
                                                 </div>
@@ -217,7 +250,7 @@ export function CourseClient({ data }: { data: CourseData }) {
                                         {mod.grammarTopics.length > 0 && (
                                             <div>
                                                 <h3 className="text-xs font-semibold uppercase tracking-wider text-gray-400 mb-2">
-                                                    📐 Grammatik
+                                                    📐 Ngữ pháp
                                                 </h3>
                                                 <div className="flex flex-wrap gap-2">
                                                     {mod.grammarTopics.map(topic => {
@@ -225,9 +258,11 @@ export function CourseClient({ data }: { data: CourseData }) {
                                                             ? Math.round((topic.completedCount / topic.lessonCount) * 100)
                                                             : 0
                                                         return (
-                                                            <Link
+                                                            <MeasuredLink
                                                                 key={topic.slug}
                                                                 href={`/grammar/${topic.slug}`}
+                                                                flow="course.module.grammar"
+                                                                source={`${mod.slug}:${topic.slug}`}
                                                                 className="group flex items-center gap-2 rounded-xl bg-amber-50 hover:bg-amber-100 px-3 py-2 transition-colors"
                                                             >
                                                                 <div className="flex-1 min-w-0">
@@ -250,7 +285,7 @@ export function CourseClient({ data }: { data: CourseData }) {
                                                                         {pct}%
                                                                     </span>
                                                                 </div>
-                                                            </Link>
+                                                            </MeasuredLink>
                                                         )
                                                     })}
                                                 </div>
@@ -265,19 +300,23 @@ export function CourseClient({ data }: { data: CourseData }) {
                                                 </h3>
                                                 <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
                                                     {mod.skillLinks.map(skill => (
-                                                        <Link
+                                                        <MeasuredLink
                                                             key={skill.skill}
                                                             href={skill.href}
+                                                            flow="course.module.skill"
+                                                            source={`${mod.slug}:${skill.skill}`}
                                                             className="flex flex-col items-center gap-1 rounded-xl bg-gray-50 hover:bg-gray-100 px-3 py-3 transition-colors text-center"
                                                         >
                                                             <span className="text-xl">{skill.emoji}</span>
                                                             <span className="text-xs font-medium text-gray-700">{skill.label}</span>
                                                             <span className="text-[10px] text-gray-400">{skill.labelNative}</span>
-                                                        </Link>
+                                                        </MeasuredLink>
                                                     ))}
                                                 </div>
                                             </div>
                                         )}
+                                            </div>
+                                        </details>
 
                                         {/* Empty state */}
                                         {mod.vocabThemes.length === 0 && mod.grammarTopics.length === 0 && (!mod.skillLinks || mod.skillLinks.length === 0) && (

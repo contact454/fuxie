@@ -1,7 +1,8 @@
 'use client'
 
-import { useCallback } from 'react'
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { useAudioPlayer } from '@/hooks/use-audio-player'
+import { cancelBrowserTTS, speakWithBrowserTTS } from '@/lib/audio/browser-tts'
 
 interface AudioPlayerProps {
     /** Pre-existing audio URL (e.g., from database) */
@@ -25,24 +26,69 @@ const SIZE_CONFIG = {
  * Mini audio player for vocabulary pronunciation.
  * Supports two modes:
  * 1. Pre-existing audio URL (src prop)
- * 2. On-demand TTS via /api/v1/tts (text prop)
+ * 2. Browser SpeechSynthesis fallback (text prop)
  */
 export function AudioPlayer({ src, text, speed = 1.0, size = 'md', label, className = '' }: AudioPlayerProps) {
     const config = SIZE_CONFIG[size]
+    const hasAudioFile = !!src
+    const hasBrowserFallback = !src && !!text
+    const [isBrowserPlaying, setIsBrowserPlaying] = useState(false)
+    const [browserHasError, setBrowserHasError] = useState(false)
+    const isMountedRef = useRef(true)
 
-    // Determine the audio source URL
-    const audioSrc = src ?? (text ? `/api/v1/tts?text=${encodeURIComponent(text)}&speed=${speed}` : null)
+    const browserRate = useMemo(() => Math.min(2, Math.max(0.5, speed)), [speed])
 
-    // Use shared audio lifecycle hook
-    const { isPlaying, isLoading, hasError, play } = useAudioPlayer(audioSrc)
+    // Use shared audio lifecycle hook only for real audio files.
+    const audioSrc = hasAudioFile ? src : null
+    const audio = useAudioPlayer(audioSrc)
+
+    useEffect(() => {
+        return () => {
+            isMountedRef.current = false
+            cancelBrowserTTS()
+        }
+    }, [])
+
+    useEffect(() => {
+        setBrowserHasError(false)
+        setIsBrowserPlaying(false)
+    }, [text, browserRate])
+
+    const isPlaying = hasAudioFile ? audio.isPlaying : isBrowserPlaying
+    const isLoading = hasAudioFile ? audio.isLoading : false
+    const hasError = hasAudioFile ? audio.hasError : browserHasError
 
     const handlePlay = useCallback(async (e: React.MouseEvent) => {
         e.stopPropagation() // Prevent flashcard flip
-        await play()
-    }, [play])
+        if (hasAudioFile) {
+            await audio.play()
+            return
+        }
+
+        if (!text) return
+
+        if (isBrowserPlaying) {
+            cancelBrowserTTS()
+            setIsBrowserPlaying(false)
+            return
+        }
+
+        setBrowserHasError(false)
+        setIsBrowserPlaying(true)
+        const started = speakWithBrowserTTS(text, {
+            rate: browserRate,
+            onEnd: () => {
+                if (isMountedRef.current) setIsBrowserPlaying(false)
+            },
+        })
+        if (!started) {
+            setBrowserHasError(true)
+            setIsBrowserPlaying(false)
+        }
+    }, [audio, browserRate, hasAudioFile, isBrowserPlaying, text])
 
     // Show nothing if no audio source available
-    if (!audioSrc) return null
+    if (!hasAudioFile && !hasBrowserFallback) return null
 
     return (
         <button
@@ -63,7 +109,7 @@ export function AudioPlayer({ src, text, speed = 1.0, size = 'md', label, classN
                 ${label ? '' : 'items-center justify-center'}
                 ${className}
             `}
-            aria-label={hasError ? 'Audio nicht verfügbar' : isPlaying ? 'Audio stoppen' : 'Audio abspielen'}
+            aria-label={hasError ? 'Không phát được audio' : isPlaying ? 'Dừng audio' : 'Phát audio'}
         >
             {/* Speaker icon */}
             <svg

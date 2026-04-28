@@ -24,6 +24,13 @@ const SKILL_EMOJI: Record<string, string> = {
     LESEN: '📖', HOEREN: '🎧', SCHREIBEN: '✍️', SPRECHEN: '🗣️',
 }
 
+const SKILL_LABEL: Record<string, string> = {
+    LESEN: 'Đọc',
+    HOEREN: 'Nghe',
+    SCHREIBEN: 'Viết',
+    SPRECHEN: 'Nói',
+}
+
 export function ExamResultClient({ examId, attemptId }: { examId: string; attemptId: string }) {
     const [result, setResult] = useState<ResultData | null>(null)
     const [loading, setLoading] = useState(true)
@@ -46,8 +53,8 @@ export function ExamResultClient({ examId, attemptId }: { examId: string; attemp
     if (!result) {
         return (
             <div className="text-center py-16">
-                <p className="text-gray-500">Ergebnis nicht gefunden</p>
-                <Link href="/exam" className="text-sm text-blue-500 underline mt-2 block">← Zurück</Link>
+                <p className="text-gray-500">Không tìm thấy kết quả</p>
+                <Link href="/exam" className="text-sm text-blue-500 underline mt-2 block">← Về danh sách</Link>
             </div>
         )
     }
@@ -88,17 +95,17 @@ export function ExamResultClient({ examId, attemptId }: { examId: string; attemp
                     {result.passed ? (
                         <>
                             <Image src="/mascot/core/fuxie-core-happy-wave.png" alt="🎉" width={24} height={24} className="object-contain" />
-                            Bestanden! — Đậu rồi! 🎉
+                            Đã đạt! 🎉
                         </>
                     ) : (
-                        <>❌ Nicht bestanden — Chưa đậu</>
+                        <>❌ Chưa đạt</>
                     )}
                 </div>
             </div>
 
             {/* Section breakdown */}
             <div className="bg-white rounded-2xl ring-1 ring-gray-100 p-5 mb-6">
-                <h3 className="text-sm font-semibold text-gray-600 mb-4">Ergebnisse pro Modul</h3>
+                <h3 className="text-sm font-semibold text-gray-600 mb-4">Kết quả theo kỹ năng</h3>
                 <div className="space-y-3">
                     {result.sectionScores.map((sec, idx) => {
                         const pct = sec.maxScore > 0 ? Math.round((sec.score / sec.maxScore) * 100) : 0
@@ -107,7 +114,7 @@ export function ExamResultClient({ examId, attemptId }: { examId: string; attemp
                             <div key={idx} className="flex items-center gap-3">
                                 <span className="text-lg">{SKILL_EMOJI[sec.skill] ?? '📋'}</span>
                                 <span className="text-sm font-medium text-gray-700 w-24">
-                                    {sec.skill.charAt(0) + sec.skill.slice(1).toLowerCase()}
+                                    {SKILL_LABEL[sec.skill] ?? sec.skill}
                                 </span>
                                 <div className="flex-1">
                                     <div className="h-3 bg-gray-100 rounded-full overflow-hidden">
@@ -133,13 +140,13 @@ export function ExamResultClient({ examId, attemptId }: { examId: string; attemp
                     href="/exam"
                     className="flex-1 py-3 text-center text-sm font-medium text-gray-600 bg-gray-100 rounded-xl hover:bg-gray-200 transition-all"
                 >
-                    ← Zurück zur Übersicht
+                    ← Về tổng quan
                 </Link>
                 <Link
                     href={`/exam/${examId}`}
                     className="flex-1 py-3 text-center text-sm font-medium text-white bg-gradient-to-r from-[#FF6B35] to-[#2EC4B6] rounded-xl shadow-sm hover:shadow-md transition-all"
                 >
-                    Nochmal versuchen →
+                    Thử lại →
                 </Link>
             </div>
         </div>

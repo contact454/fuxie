@@ -1,5 +1,5 @@
 import { prisma } from '@fuxie/database'
-import { cacheWrap } from '@/lib/cache/redis'
+import { cacheGet, cacheSet } from '@/lib/cache/redis'
 
 export type { CefrLevel } from '@/lib/types/cefr'
 import type { CefrLevel } from '@/lib/types/cefr'
@@ -63,13 +63,19 @@ export function groupReadingExercisesByTeil(exercises: ReadingExerciseListItem[]
 }
 
 export async function getReadingLevels(): Promise<CefrLevel[]> {
-    return cacheWrap('reading:levels', 3600, async () => {
-        const levels = await prisma.readingExercise.findMany({
-            select: { cefrLevel: true },
-            distinct: ['cefrLevel'],
-            orderBy: { cefrLevel: 'asc' },
-        })
-        if (levels.length === 0) return ['A1']
-        return levels.map((level) => level.cefrLevel as CefrLevel)
+    const cacheKey = 'reading:levels:v2'
+    const cached = await cacheGet<CefrLevel[]>(cacheKey)
+    if (cached && cached.length > 0) return cached
+
+    const levels = await prisma.readingExercise.findMany({
+        select: { cefrLevel: true },
+        distinct: ['cefrLevel'],
+        orderBy: { cefrLevel: 'asc' },
     })
+
+    if (levels.length === 0) return ['A1']
+
+    const result = levels.map((level) => level.cefrLevel as CefrLevel)
+    await cacheSet(cacheKey, result, 3600)
+    return result
 }

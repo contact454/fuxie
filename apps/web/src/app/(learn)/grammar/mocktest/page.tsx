@@ -1,4 +1,4 @@
-import { GrammarMocktestClientDynamic } from '@/components/grammar/GrammarMocktestClientDynamic'
+import GrammarMocktestClient from '@/components/grammar/GrammarMocktestClient'
 
 export const metadata = {
     title: 'Fuxie - Grammar Mocktest',
@@ -6,5 +6,5 @@ export const metadata = {
 }
 
 export default function GrammarMocktestPage() {
-    return <GrammarMocktestClientDynamic />
+    return <GrammarMocktestClient />
 }

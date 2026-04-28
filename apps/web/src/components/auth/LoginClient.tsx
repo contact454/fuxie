@@ -222,7 +222,7 @@ function LoginContent() {
                         />
                         <h1 className="text-4xl font-bold">Fuxie</h1>
                     </div>
-                    <p className="mt-2 text-gray-500">Willkommen zurück!</p>
+                    <p className="mt-2 text-gray-500">Chào mừng trở lại!</p>
                 </div>
 
                 {/* Error */}
@@ -250,7 +250,7 @@ function LoginContent() {
                     </div>
                     <div>
                         <label htmlFor="password" className="mb-1 block text-sm font-medium text-gray-700">
-                            Passwort
+                            Mật khẩu
                         </label>
                         <input
                             id="password"
@@ -267,14 +267,14 @@ function LoginContent() {
                         disabled={loading}
                         className="w-full rounded-lg bg-fuxie-primary px-4 py-2.5 font-semibold text-white transition-colors hover:bg-fuxie-primary/90 disabled:opacity-50"
                     >
-                        {loading ? 'Laden...' : 'Anmelden'}
+                        {loading ? 'Đang tải...' : 'Đăng nhập'}
                     </button>
                 </form>
 
                 {/* Divider */}
                 <div className="my-6 flex items-center gap-3">
                     <div className="h-px flex-1 bg-gray-200" />
-                    <span className="text-sm text-gray-400">oder</span>
+                    <span className="text-sm text-gray-400">hoặc</span>
                     <div className="h-px flex-1 bg-gray-200" />
                 </div>
 
@@ -290,14 +290,14 @@ function LoginContent() {
                         <path d="M5.84 14.09A6.97 6.97 0 0 1 5.84 9.9V7.07H2.18A11.97 11.97 0 0 0 0 12c0 1.94.46 3.77 1.28 5.4l3.56-2.77.01-.54z" fill="#FBBC05" />
                         <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335" />
                     </svg>
-                    Mit Google anmelden
+                    Đăng nhập bằng Google
                 </button>
 
                 {/* Register link */}
                 <p className="mt-6 text-center text-sm text-gray-500">
-                    Noch kein Konto?{' '}
+                    Chưa có tài khoản?{' '}
                     <a href="/register" className="font-medium text-fuxie-primary hover:underline">
-                        Registrieren
+                        Đăng ký
                     </a>
                 </p>
             </div>

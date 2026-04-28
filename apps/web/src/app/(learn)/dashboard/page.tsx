@@ -5,10 +5,8 @@ import { getServerUser } from '@/lib/auth/server-auth'
 import { cacheWrap } from '@/lib/cache/redis'
 import { getDashboardUserContext, getTodayActivitySummary } from '@/lib/dashboard/request-data'
 import { getTodayPlan } from '@/lib/personalization/today-plan'
-import { DashboardClientDynamic } from '@/components/dashboard/DashboardClientDynamic'
+import { DashboardClient, type DashboardData } from '@/components/dashboard/dashboard-client'
 import { StatsSkeleton, ContentSkeleton } from '@/components/dashboard/dashboard-skeletons'
-
-import type { DashboardData } from '@/components/dashboard/dashboard-client'
 
 function getTimeGreeting(): string {
     const hour = new Date().getHours()
@@ -159,7 +157,7 @@ async function getContentData(userId: string) {
     ])
 
     // Build weekly data
-    const dayLabels = ['So', 'Mo', 'Di', 'Mi', 'Do', 'Fr', 'Sa']
+    const dayLabels = ['CN', 'T2', 'T3', 'T4', 'T5', 'T6', 'T7']
     const weeklyActivity: DashboardData['weeklyActivity'] = []
     for (let i = 0; i < 7; i++) {
         const date = new Date(sevenDaysAgo)
@@ -180,8 +178,8 @@ async function getContentData(userId: string) {
         skillMap[a.skill] = { score: Math.round(a.score), level: a.cefrLevel }
     }
     const skillLabels: Record<string, string> = {
-        HOEREN: 'Hören', LESEN: 'Lesen', SCHREIBEN: 'Schreiben',
-        SPRECHEN: 'Sprechen', GRAMMATIK: 'Grammatik', WORTSCHATZ: 'Wortschatz',
+        HOEREN: 'Nghe', LESEN: 'Đọc', SCHREIBEN: 'Viết',
+        SPRECHEN: 'Nói', GRAMMATIK: 'Ngữ pháp', WORTSCHATZ: 'Từ vựng',
     }
     const skills: DashboardData['skills'] = ['HOEREN', 'LESEN', 'SCHREIBEN', 'SPRECHEN', 'GRAMMATIK', 'WORTSCHATZ']
         .map((skill) => ({
@@ -231,7 +229,7 @@ async function DashboardStats({ userId }: { userId: string }) {
 
     // Stats need header data for study goal calculation
     return (
-        <DashboardClientDynamic
+        <DashboardClient
             section="stats"
             data={{ ...headerData, ...statsData } as Partial<DashboardData> as DashboardData}
         />
@@ -247,7 +245,7 @@ async function DashboardContent({ userId }: { userId: string }) {
     ])
 
     return (
-        <DashboardClientDynamic
+        <DashboardClient
             section="content"
             data={{ ...headerData, ...statsData, ...contentData, todayPlan } as DashboardData}
         />
@@ -268,7 +266,7 @@ export default async function DashboardPage() {
     return (
         <>
             {/* Header renders immediately — fast single query */}
-            <DashboardClientDynamic section="header" data={headerData as Partial<DashboardData> as DashboardData} />
+            <DashboardClient section="header" data={headerData as Partial<DashboardData> as DashboardData} />
 
             {/* Stats load independently with skeleton fallback */}
             <Suspense fallback={<StatsSkeleton />}>

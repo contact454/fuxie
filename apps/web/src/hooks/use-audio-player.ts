@@ -44,32 +44,36 @@ export function useAudioPlayer(src: string | null | undefined) {
     const [isLoading, setIsLoading] = useState(false)
     const [hasError, setHasError] = useState(false)
 
+    const cleanupAudio = useCallback(() => {
+        if (!audioRef.current) return
+        audioRef.current.pause()
+        audioRef.current.currentTime = 0
+        audioRef.current.src = ''
+        audioRef.current = null
+    }, [])
+
     useEffect(() => {
         return () => {
             isMountedRef.current = false
+            cleanupAudio()
         }
-    }, [])
+    }, [cleanupAudio])
 
-    // Create/cleanup audio element when source changes
+    // Reset state when the source changes, but do not fetch audio until play.
     useEffect(() => {
-        if (!src) {
-            if (audioRef.current) {
-                audioRef.current.pause()
-                audioRef.current.currentTime = 0
-                audioRef.current.src = ''
-                audioRef.current = null
-            }
-            setIsPlaying(false)
-            setIsLoading(false)
-            setHasError(false)
-            return
-        }
-
+        playTokenRef.current += 1
+        cleanupAudio()
         setIsPlaying(false)
-        setIsLoading(true)
+        setIsLoading(false)
         setHasError(false)
+    }, [src, cleanupAudio])
 
-        const audio = new Audio(src)
+    const createAudio = useCallback(() => {
+        if (!src) return null
+
+        const audio = new Audio()
+        audio.preload = 'none'
+        audio.src = src
         const updateIfCurrent = (fn: () => void) => {
             if (!isMountedRef.current || audioRef.current !== audio) return
             fn()
@@ -92,20 +96,11 @@ export function useAudioPlayer(src: string | null | undefined) {
         audio.addEventListener('error', onError)
         audioRef.current = audio
 
-        return () => {
-            playTokenRef.current += 1
-            audio.pause()
-            audio.removeEventListener('ended', onEnded)
-            audio.removeEventListener('pause', onPause)
-            audio.removeEventListener('canplaythrough', onCanPlay)
-            audio.removeEventListener('error', onError)
-            audio.src = '' // Release media resource
-            audioRef.current = null
-        }
+        return audio
     }, [src])
 
     const play = useCallback(async () => {
-        if (!audioRef.current || !src || hasError) return
+        if (!src || hasError) return
 
         // Debounce rapid taps (300ms) to prevent main thread blocking on mobile
         const now = Date.now()
@@ -113,13 +108,18 @@ export function useAudioPlayer(src: string | null | undefined) {
         lastPlayTimeRef.current = now
 
         if (isPlaying) {
-            audioRef.current.pause()
-            audioRef.current.currentTime = 0
+            if (audioRef.current) {
+                audioRef.current.pause()
+                audioRef.current.currentTime = 0
+            }
             setIsPlaying(false)
         } else {
-            const audio = audioRef.current
+            const audio = audioRef.current ?? createAudio()
+            if (!audio) return
+
             const playToken = playTokenRef.current + 1
             playTokenRef.current = playToken
+            setIsLoading(true)
             try {
                 await audio.play()
                 if (!isMountedRef.current || playTokenRef.current !== playToken || audioRef.current !== audio) return
@@ -128,9 +128,10 @@ export function useAudioPlayer(src: string | null | undefined) {
             } catch {
                 if (!isMountedRef.current || playTokenRef.current !== playToken || audioRef.current !== audio) return
                 setHasError(true)
+                setIsLoading(false)
             }
         }
-    }, [src, isPlaying, hasError])
+    }, [src, isPlaying, hasError, createAudio])
 
     const stop = useCallback(() => {
         if (audioRef.current) {
