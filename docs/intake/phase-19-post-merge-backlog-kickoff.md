@@ -69,7 +69,7 @@ The next cycle should improve the first meaningful learner journey:
 
 | ID | Priority | Work item | Primary owner | Support roles | Acceptance criteria |
 | --- | --- | --- | --- | --- | --- |
-| P19-C1 | P1 | AI coach product brief | Product Manager EdTech | AI / LLM Engineer, German Academic Lead | Defines tutor, writing, speaking, grading, fallback, scope boundaries, and non-goals |
+| P19-C1 | P1 | AI coach product brief | Product Manager EdTech | AI / LLM Engineer, German Academic Lead | Complete in Phase 28; defines tutor, writing, speaking, grading, fallback, scope boundaries, and non-goals |
 | P19-C2 | P1 | AI eval plan | AI / LLM Engineer | QA Automation Engineer, German Academic Lead | Defines eval cases for A1/A2/B1/B2, Vietnamese learner mistakes, cost, latency, and provider failure |
 | P19-C3 | P1 | Weekly meaningful CEFR progress metric spec | Data / Analytics Engineer | Product Manager EdTech | Defines events, learner scope, reporting window, and success threshold |
 | P19-C4 | P1 | Activation event map | Data / Analytics Engineer | Product Manager EdTech, Frontend Engineer | Complete in Phase 26; maps onboarding, first meaningful study action, dashboard CTA, and completion events |
@@ -234,3 +234,14 @@ Phase 27 completes `P19-B4`:
 3. Define automation order, test data requirements, release gate, and residual risks.
 
 Next planned step after Phase 27: Phase 28 should handle `P19-C1`, AI Coach Product Brief.
+
+## Phase 28 Status Update
+
+Phase 28 completes `P19-C1`:
+
+1. Route through Product Manager EdTech.
+2. Define AI coach surfaces for tutor chat, writing feedback, speaking feedback, grading, hints, and weak-skill guidance.
+3. Specify must-have scope, non-goals, fallback rules, academic guardrails, AI engineering guardrails, and success metrics.
+4. Set the handoff for Phase 29 AI Eval Plan.
+
+Next planned step after Phase 28: Phase 29 should handle `P19-C2`, AI Eval Plan.

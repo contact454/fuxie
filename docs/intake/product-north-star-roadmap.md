@@ -185,3 +185,14 @@ QA decisions:
 
 - Activation implementation must cover onboarding, dashboard next action, first meaningful action, visible completion feedback, and analytics privacy.
 - One full activation smoke should be added once seed data and stable selectors are available.
+
+## Phase 28 Update
+
+AI coach product brief is complete in `phase-28-ai-coach-product-brief.md`.
+
+Product decisions:
+
+- AI coach surfaces are separated into tutor chat, writing feedback, speaking feedback, grading, hints, and weak-skill guidance.
+- The coach is a feedback and retry layer, not an official exam scorer, autonomous curriculum generator, or teacher replacement.
+- Fallback rules cover provider failure, missing profile, low-confidence grading, audio permission denial, off-scope requests, and cost/rate limits.
+- Phase 29 must convert the scope into eval cases for quality, CEFR fit, Vietnamese learner mistakes, cost, latency, and provider failure.
