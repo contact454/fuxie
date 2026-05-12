@@ -25,7 +25,7 @@ Date: 2026-05-12
 | R-011 | P1 | Product direction may spread team across learner, teacher, AI, mascot, and growth simultaneously | Fuxie has many active surfaces | CEO / General Manager | Approve 90-day focus and sequencing | Roadmap has one primary growth motion |
 | R-012 | P2 | Mascot/game-feel assets may become decorative or inconsistent | 3D mascot docs define production rules | Product Designer | Create mascot use map and role rules | Mascot usage supports learning moments |
 | R-013 | P2 | Local performance budgets may be noisy in dev mode | Performance doc notes warm medians over local budgets | CTO / Tech Lead | Treat perf local as trend signal, bundle as release gate | Perf status recorded without blocking incorrectly |
-| R-014 | P2 | Vocabulary CTA API failure has limited user-facing feedback | Phase 10 code review found `/api/v1/srs/cards` failure is logged but not surfaced to the learner | Frontend Engineer | Add inline error or toast in a later polish slice | Failed practice-open attempt tells learner what happened and how to retry |
+| R-014 | P2 | Vocabulary CTA API failure has limited user-facing feedback | Phase 20 added inline learner-facing feedback for failed `/api/v1/srs/cards` attempts and `pnpm check:quick` passed | Frontend Engineer | Closed in Phase 20 post-RC polish | Failed practice-open attempt tells learner what happened and how to retry |
 
 ## Phase 1 Current Evidence
 
@@ -221,6 +221,14 @@ Collected on 2026-05-12:
 | R-011 | Post-merge backlog preserves B2C learner activation as the first product motion | Mitigated for next cycle |
 | R-014 | Vocabulary CTA feedback is selected as the first post-RC polish implementation item `P19-A1` | Open; ready for Phase 20 |
 | R-013 | GitHub Actions Node 20 deprecation warning is captured as `P19-A3` | Open as CI hygiene follow-up |
+
+## Phase 20 Current Evidence
+
+Collected on 2026-05-12:
+
+| Risk | Evidence update | Status |
+| --- | --- | --- |
+| R-014 | Vocabulary practice CTA now clears stale errors on retry/theme/level change, shows an inline learner-facing alert when `/api/v1/srs/cards` fails, and `pnpm check:quick` passed | Closed |
 
 ## Risk Review Cadence
 
