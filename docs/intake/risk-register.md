@@ -202,6 +202,16 @@ Collected on 2026-05-12:
 | R-002 | CI `verify`, Vercel, and Vercel Preview Comments all passed | Closed for merge readiness |
 | R-014 | Vocabulary CTA feedback remains a documented residual P2, not a merge blocker | Open as P2 polish |
 
+## Phase 18 Current Evidence
+
+Collected on 2026-05-12:
+
+| Risk | Evidence update | Status |
+| --- | --- | --- |
+| R-001 | PR #2 merged into `master`; local `master` is synced and clean | Closed for post-merge baseline |
+| R-002 | Master CI succeeded on merge commit `38e95e0c01e30bbbcc6101c7c320d51a2ae5a28d` | Closed for post-merge baseline |
+| R-014 | Vocabulary CTA feedback remains a P2 post-RC polish item | Open as P2 polish |
+
 ## Risk Review Cadence
 
 - Review P0 risks daily during Day 0-14.
