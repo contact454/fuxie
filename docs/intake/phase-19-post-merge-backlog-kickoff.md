@@ -54,7 +54,7 @@ The next cycle should improve the first meaningful learner journey:
 | --- | --- | --- | --- | --- | --- |
 | P19-A1 | P2 | Add learner-facing error feedback for vocabulary CTA failure | Frontend Engineer | Product Designer, QA Automation Engineer | Complete in Phase 20; if `/api/v1/srs/cards` fails, learner sees a clear retryable message; no console-only failure |
 | P19-A2 | P2 | Review dashboard mascot image priority | Frontend Engineer | Product Designer, CTO / Tech Lead | Complete in Phase 21; above-the-fold mascot LCP warning is resolved or explicitly accepted with reason |
-| P19-A3 | P2 | Add GitHub Actions Node 20 deprecation follow-up | DevOps / Cloud Engineer | CTO / Tech Lead, QA Automation Engineer | CI action versions or runner settings have an owner decision before GitHub's Node 24 default change |
+| P19-A3 | P2 | Add GitHub Actions Node 20 deprecation follow-up | DevOps / Cloud Engineer | CTO / Tech Lead, QA Automation Engineer | Complete in Phase 22; workflow updates warned action majors and opts JavaScript actions into Node 24 before GitHub's default change |
 
 ### Track B: Learner Activation Core
 
@@ -165,3 +165,15 @@ Phase 21 implements `P19-A2`:
 5. Run affected checks.
 
 Next planned step after Phase 21: Phase 22 should handle `P19-A3`, GitHub Actions Node 20 deprecation follow-up.
+
+## Phase 22 Status Update
+
+Phase 22 implements `P19-A3`:
+
+1. Route through DevOps / Cloud Engineer.
+2. Inspect GitHub Actions workflow and PR #4 CI log warning.
+3. Update warned action majors and add `FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true` at workflow level.
+4. Keep project Node runtime at Node 22.
+5. Wait for PR CI verification.
+
+Next planned step after Phase 22: Phase 23 should begin `P19-B1`, Learner Activation PRD.

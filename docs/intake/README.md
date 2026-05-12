@@ -88,6 +88,7 @@ Until the baseline is accepted:
 - `phase-19-post-merge-backlog-kickoff.md`
 - `phase-20-first-post-rc-polish-implementation.md`
 - `phase-21-dashboard-mascot-priority-review.md`
+- `phase-22-github-actions-node-deprecation-follow-up.md`
 - `baseline-acceptance-note.md`
 - `current-state-audit.md`
 - `risk-register.md`
@@ -120,6 +121,7 @@ Until the baseline is accepted:
 | Phase 19: Post-Merge Product / Engineering Backlog Kickoff | `phase-19-post-merge-backlog-kickoff.md` | Complete; next-cycle backlog and first post-RC task selected |
 | Phase 20: First Post-RC Polish Implementation | `phase-20-first-post-rc-polish-implementation.md` | Complete; `P19-A1` vocabulary CTA error feedback implemented and `pnpm check:quick` passed |
 | Phase 21: Dashboard Mascot Priority Review | `phase-21-dashboard-mascot-priority-review.md` | Complete; `P19-A2` dashboard mascot priority implemented and `pnpm check:quick` passed |
+| Phase 22: GitHub Actions Node 20 Deprecation Follow-Up | `phase-22-github-actions-node-deprecation-follow-up.md` | Complete; `P19-A3` action major updates and Node 24 opt-in passed PR CI |
 
 ## Day 30 Exit Criteria
 
