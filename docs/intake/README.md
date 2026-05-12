@@ -89,6 +89,7 @@ Until the baseline is accepted:
 - `phase-20-first-post-rc-polish-implementation.md`
 - `phase-21-dashboard-mascot-priority-review.md`
 - `phase-22-github-actions-node-deprecation-follow-up.md`
+- `phase-23-learner-activation-prd.md`
 - `baseline-acceptance-note.md`
 - `current-state-audit.md`
 - `risk-register.md`
@@ -122,6 +123,7 @@ Until the baseline is accepted:
 | Phase 20: First Post-RC Polish Implementation | `phase-20-first-post-rc-polish-implementation.md` | Complete; `P19-A1` vocabulary CTA error feedback implemented and `pnpm check:quick` passed |
 | Phase 21: Dashboard Mascot Priority Review | `phase-21-dashboard-mascot-priority-review.md` | Complete; `P19-A2` dashboard mascot priority implemented and `pnpm check:quick` passed |
 | Phase 22: GitHub Actions Node 20 Deprecation Follow-Up | `phase-22-github-actions-node-deprecation-follow-up.md` | Complete; `P19-A3` action major updates and Node 24 opt-in passed PR CI |
+| Phase 23: Learner Activation PRD | `phase-23-learner-activation-prd.md` | Complete; `P19-B1` defines target learner, first meaningful action, metric, non-goals, and edge cases |
 
 ## Day 30 Exit Criteria
 
