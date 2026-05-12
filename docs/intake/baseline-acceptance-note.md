@@ -144,6 +144,16 @@ PR #2 was merged into `master`:
 
 Post-merge master CI completed successfully on merge commit `38e95e0c01e30bbbcc6101c7c320d51a2ae5a28d`.
 
+## Phase 19 Update
+
+Post-merge backlog kickoff is complete. The next cycle prioritizes:
+
+- P2 polish: vocabulary CTA error feedback, dashboard mascot image priority, GitHub Actions Node 20 deprecation follow-up.
+- P1 activation: learner activation PRD, onboarding UX spec, dashboard next-action spec, activation test plan.
+- P1 coach and measurement: AI coach brief/eval plan, weekly meaningful CEFR progress metric, activation event map.
+
+Recommended first implementation task: `P19-A1` learner-facing error feedback for vocabulary CTA failure.
+
 ## Next Action
 
-Proceed to Phase 19 post-merge product/engineering backlog kickoff.
+Proceed to Phase 20 first post-RC polish implementation.

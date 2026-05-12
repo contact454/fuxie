@@ -85,6 +85,7 @@ Until the baseline is accepted:
 - `phase-15-push-and-pr-creation.md`
 - `phase-16-review-response-and-merge-readiness.md`
 - `phase-18-post-merge-release-verification.md`
+- `phase-19-post-merge-backlog-kickoff.md`
 - `baseline-acceptance-note.md`
 - `current-state-audit.md`
 - `risk-register.md`
@@ -114,6 +115,7 @@ Until the baseline is accepted:
 | Phase 15: Push And PR Creation | `phase-15-push-and-pr-creation.md` | Complete; branch pushed and PR #2 created |
 | Phase 16: Review Response And Merge Readiness | `phase-16-review-response-and-merge-readiness.md` | Complete; PR #2 is mergeable with CI and Vercel passing |
 | Phase 18: Post-Merge Release Verification | `phase-18-post-merge-release-verification.md` | Complete; PR #2 merged into `master` and master CI passed |
+| Phase 19: Post-Merge Product / Engineering Backlog Kickoff | `phase-19-post-merge-backlog-kickoff.md` | Complete; next-cycle backlog and first post-RC task selected |
 
 ## Day 30 Exit Criteria
 

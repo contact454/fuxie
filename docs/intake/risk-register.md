@@ -212,6 +212,16 @@ Collected on 2026-05-12:
 | R-002 | Master CI succeeded on merge commit `38e95e0c01e30bbbcc6101c7c320d51a2ae5a28d` | Closed for post-merge baseline |
 | R-014 | Vocabulary CTA feedback remains a P2 post-RC polish item | Open as P2 polish |
 
+## Phase 19 Current Evidence
+
+Collected on 2026-05-12:
+
+| Risk | Evidence update | Status |
+| --- | --- | --- |
+| R-011 | Post-merge backlog preserves B2C learner activation as the first product motion | Mitigated for next cycle |
+| R-014 | Vocabulary CTA feedback is selected as the first post-RC polish implementation item `P19-A1` | Open; ready for Phase 20 |
+| R-013 | GitHub Actions Node 20 deprecation warning is captured as `P19-A3` | Open as CI hygiene follow-up |
+
 ## Risk Review Cadence
 
 - Review P0 risks daily during Day 0-14.

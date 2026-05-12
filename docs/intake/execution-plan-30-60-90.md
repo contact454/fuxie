@@ -57,6 +57,12 @@ The implementation-ready backlog is tracked in `phase-5-implementation-ready-bac
 
 ## Days 31-60: Learning Core Upgrade
 
+Phase 19 post-merge kickoff: the baseline RC package is now on `master`, so Days 31-60 work should begin from the prioritized backlog in `phase-19-post-merge-backlog-kickoff.md`.
+
+Recommended first post-RC implementation task:
+
+- `P19-A1`: add learner-facing error feedback for vocabulary CTA failure.
+
 | Theme | Outcome | Owner | Acceptance criteria |
 | --- | --- | --- | --- |
 | Learner onboarding | Level, goal, exam target, daily time captured or inferred | Product Manager EdTech | Focused tests and learner smoke pass for the slice |
