@@ -75,6 +75,12 @@ describe('buildDashboardMissionHub', () => {
         })
         expect(mission.primaryQuest.rewardPreview.map((reward) => reward.type)).toEqual(['xp', 'streak', 'unlock'])
         expect(mission.quests).toHaveLength(3)
+        expect(mission.primaryCta).toMatchObject({
+            label: 'Bắt đầu từ vựng',
+            href: '/vocabulary',
+            source: 'fresh-start-vocabulary',
+        })
+        expect(mission.secondaryQuests.some((quest) => quest.id === mission.primaryQuest.id)).toBe(false)
     })
 
     it('keeps SRS review as the primary quest when cards are due', () => {
@@ -109,6 +115,11 @@ describe('buildDashboardMissionHub', () => {
             href: '/review',
             status: 'active',
             progress: 0,
+        })
+        expect(mission.primaryCta).toMatchObject({
+            label: 'Ôn SRS ngay',
+            href: '/review',
+            source: 'srs-due',
         })
     })
 
@@ -165,6 +176,11 @@ describe('buildDashboardMissionHub', () => {
             status: 'active',
             progress: 40,
         })
+        expect(mission.primaryCta).toMatchObject({
+            label: 'Học từ vựng',
+            href: '/vocabulary?level=A1&theme=a1-person',
+            source: 'skill-WORTSCHATZ-a1-person',
+        })
     })
 
     it('keeps exam readiness visible for target exam quests', () => {
@@ -203,6 +219,11 @@ describe('buildDashboardMissionHub', () => {
             type: 'exam',
             href: '/exam',
         })
+        expect(mission.primaryCta).toMatchObject({
+            label: 'Luyện thi ngay',
+            href: '/exam',
+            source: 'target-exam',
+        })
         expect(mission.primaryQuest.rewardPreview.some((reward) => reward.type === 'exam')).toBe(true)
     })
 
@@ -225,6 +246,34 @@ describe('buildDashboardMissionHub', () => {
             status: 'completed',
             progress: 100,
         })
+        expect(mission.primaryCta).toMatchObject({
+            label: 'Học tiếp: Luyện nghe',
+            href: '/listening/L-A1-GOETHE-001-T1',
+            source: 'skill-HOEREN-a1-listening',
+        })
         expect(mission.coachMessage).toContain('Mục tiêu ngày')
+    })
+
+    it('falls back to vocabulary when the daily goal is complete and no secondary quest exists', () => {
+        const mission = buildDashboardMissionHub(
+            plan({
+                currentMinutes: 15,
+                remainingMinutes: 0,
+                actions: [lessonAction],
+            }),
+            {
+                ...baseContext,
+                currentStreak: 5,
+                totalXp: 700,
+                totalAchievements: 4,
+            },
+        )
+
+        expect(mission.secondaryQuests).toHaveLength(0)
+        expect(mission.primaryCta).toMatchObject({
+            label: 'Mở thêm từ vựng',
+            href: '/vocabulary',
+            source: 'completed-fallback-vocabulary',
+        })
     })
 })
