@@ -7,6 +7,7 @@ const {
     createAttemptMock,
     transactionMock,
     recordLearningActivityMock,
+    awardLearningFucoinMock,
     invalidateLearnerProgressCachesMock,
 } = vi.hoisted(() => ({
     getServerUserMock: vi.fn(),
@@ -15,6 +16,7 @@ const {
     createAttemptMock: vi.fn(),
     transactionMock: vi.fn(),
     recordLearningActivityMock: vi.fn(),
+    awardLearningFucoinMock: vi.fn(),
     invalidateLearnerProgressCachesMock: vi.fn(),
 }))
 
@@ -42,6 +44,10 @@ vi.mock('@/lib/progress/learning-activity', () => ({
 
 vi.mock('@/lib/progress/cache-invalidation', () => ({
     invalidateLearnerProgressCaches: invalidateLearnerProgressCachesMock,
+}))
+
+vi.mock('@/lib/gamification/fucoin', () => ({
+    awardLearningFucoin: awardLearningFucoinMock,
 }))
 
 import { POST } from './route'
@@ -79,6 +85,16 @@ describe('POST /api/v1/listening/[lessonId]/submit', () => {
                 isNewDay: false,
             },
         })
+        awardLearningFucoinMock.mockResolvedValue({
+            fucoinEarned: 7,
+            walletBalance: 42,
+            duplicate: false,
+            intendedAmount: 7,
+            dailyCap: 60,
+            dailyEarnedBefore: 0,
+            dailyRemainingAfter: 53,
+            capReached: false,
+        })
         invalidateLearnerProgressCachesMock.mockResolvedValue(undefined)
         transactionMock.mockImplementation(async (callback: (tx: any) => Promise<any>) =>
             callback({
@@ -109,6 +125,8 @@ describe('POST /api/v1/listening/[lessonId]/submit', () => {
                 score: 1,
                 percentage: 100,
                 xpEarned: 20,
+                fucoinEarned: 7,
+                walletBalance: 42,
                 listenCount: 2,
                 questionResults: [
                     expect.objectContaining({
@@ -128,6 +146,16 @@ describe('POST /api/v1/listening/[lessonId]/submit', () => {
                 percentScore: 100,
                 xpEarned: 20,
                 exercisesCompleted: 1,
+            })
+        )
+        expect(awardLearningFucoinMock).toHaveBeenCalledWith(
+            expect.anything(),
+            expect.objectContaining({
+                userId: 'user-1',
+                kind: 'lesson',
+                sourceType: 'learning:listening',
+                sourceId: 'attempt-listening-1',
+                accuracy: 100,
             })
         )
         expect(invalidateLearnerProgressCachesMock).toHaveBeenCalledWith('user-1')

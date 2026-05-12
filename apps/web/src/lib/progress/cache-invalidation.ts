@@ -5,6 +5,7 @@ export async function invalidateLearnerProgressCaches(userId: string): Promise<v
         cacheInvalidatePrefix(`dash:stats:${userId}`),
         cacheInvalidatePrefix(`dash:content:${userId}`),
         cacheInvalidatePrefix(`dash:today-plan:${userId}`),
+        cacheInvalidatePrefix(`dash:mission-board:${userId}`),
         cacheInvalidatePrefix(`personalization:today:${userId}`),
     ])
 }

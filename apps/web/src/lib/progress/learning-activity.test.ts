@@ -49,6 +49,10 @@ describe('recordLearningActivity', () => {
                 create: vi.fn().mockResolvedValue({}),
                 update: vi.fn(),
             },
+            streakFreezeUsage: {
+                create: vi.fn(),
+                findMany: vi.fn(),
+            },
             dailyActivity: {
                 upsert: vi.fn().mockResolvedValue({}),
             },
@@ -60,7 +64,7 @@ describe('recordLearningActivity', () => {
             },
         }
 
-        const result = await recordLearningActivity(tx as any, {
+        const result = await recordLearningActivity(tx as unknown as Parameters<typeof recordLearningActivity>[0], {
             userId: 'user-1',
             lessonId: 'grammar:a1:01',
             score: 8,
@@ -78,6 +82,10 @@ describe('recordLearningActivity', () => {
             streak: {
                 currentStreak: 1,
                 isNewDay: true,
+                freezeUsed: false,
+                freezesAvailable: 1,
+                freezesUsed: 0,
+                freezeUsageId: null,
             },
         })
 
@@ -150,6 +158,10 @@ describe('recordLearningActivity', () => {
                 create: vi.fn(),
                 update: vi.fn().mockResolvedValue({}),
             },
+            streakFreezeUsage: {
+                create: vi.fn(),
+                findMany: vi.fn(),
+            },
             dailyActivity: {
                 upsert: vi.fn().mockResolvedValue({}),
             },
@@ -161,7 +173,7 @@ describe('recordLearningActivity', () => {
             },
         }
 
-        const result = await recordLearningActivity(tx as any, {
+        const result = await recordLearningActivity(tx as unknown as Parameters<typeof recordLearningActivity>[0], {
             userId: 'user-1',
             exerciseId: 'exam:a1:1',
             score: 18,
@@ -177,6 +189,10 @@ describe('recordLearningActivity', () => {
         expect(result.streak).toEqual({
             currentStreak: 7,
             isNewDay: true,
+            freezeUsed: false,
+            freezesAvailable: 1,
+            freezesUsed: 0,
+            freezeUsageId: null,
         })
 
         expect(tx.userStreak.update).toHaveBeenCalledWith({
@@ -192,6 +208,78 @@ describe('recordLearningActivity', () => {
             data: {
                 totalXp: { increment: 75 },
             },
+        })
+    })
+
+    it('uses a Streak Freeze when the learner missed one day and reports a receipt', async () => {
+        const tx = {
+            userStreak: {
+                findUnique: vi.fn().mockResolvedValue({
+                    userId: 'user-1',
+                    currentStreak: 4,
+                    longestStreak: 6,
+                    lastActivityDate: new Date('2026-04-21T00:00:00.000Z'),
+                    freezesAvailable: 2,
+                    freezesUsed: 1,
+                }),
+                create: vi.fn(),
+                update: vi.fn().mockResolvedValue({}),
+            },
+            streakFreezeUsage: {
+                create: vi.fn().mockResolvedValue({ id: 'freeze-usage-1' }),
+                findMany: vi.fn(),
+            },
+            dailyActivity: {
+                upsert: vi.fn().mockResolvedValue({}),
+            },
+            userProfile: {
+                updateMany: vi.fn().mockResolvedValue({ count: 1 }),
+            },
+            userProgress: {
+                create: vi.fn().mockResolvedValue({}),
+            },
+        }
+
+        const result = await recordLearningActivity(tx as unknown as Parameters<typeof recordLearningActivity>[0], {
+            userId: 'user-1',
+            exerciseId: 'listening:a1:01',
+            score: 4,
+            maxScore: 5,
+            percentScore: 80,
+            xpEarned: 10,
+            exercisesCompleted: 1,
+        })
+
+        expect(result.streak).toEqual({
+            currentStreak: 5,
+            isNewDay: true,
+            freezeUsed: true,
+            freezesAvailable: 1,
+            freezesUsed: 2,
+            freezeUsageId: 'freeze-usage-1',
+        })
+        expect(tx.userStreak.update).toHaveBeenCalledWith({
+            where: { userId: 'user-1' },
+            data: {
+                currentStreak: 5,
+                longestStreak: 6,
+                lastActivityDate: startOfProcessLocalDay(FROZEN_NOW),
+                freezesAvailable: { decrement: 1 },
+                freezesUsed: { increment: 1 },
+            },
+        })
+        expect(tx.streakFreezeUsage.create).toHaveBeenCalledWith({
+            data: expect.objectContaining({
+                userId: 'user-1',
+                usedAt: startOfProcessLocalDay(FROZEN_NOW),
+                protectedStreak: 5,
+                freezesRemaining: 1,
+                freezesUsedTotal: 2,
+                missedDays: 1,
+                sourceType: 'exercise',
+                sourceId: 'listening:a1:01',
+            }),
+            select: { id: true },
         })
     })
 })

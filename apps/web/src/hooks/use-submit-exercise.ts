@@ -16,6 +16,21 @@ export interface SubmitResult {
     correctCount: number
     accuracy: number
     xpEarned: number
+    fucoinEarned?: number
+    walletBalance?: number
+    fucoinDuplicate?: boolean
+    fucoinIntended?: number
+    fucoinDailyCap?: number
+    fucoinDailyEarned?: number
+    fucoinDailyRemaining?: number
+    fucoinCapReached?: boolean
+    streak?: {
+        currentStreak: number
+        isNewDay: boolean
+        freezeUsed?: boolean
+        freezesAvailable?: number
+        freezesUsed?: number
+    }
     graded?: boolean
     results: Array<{
         questionId: string
