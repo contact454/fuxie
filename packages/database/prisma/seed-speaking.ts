@@ -12,7 +12,7 @@
  *   DATABASE_URL="..." npx tsx prisma/seed-speaking.ts
  */
 
-import { PrismaClient, Prisma } from '@prisma/client'
+import { PrismaClient, Prisma } from '../../../apps/web/generated/prisma'
 import * as fs from 'fs'
 import * as path from 'path'
 import { fileURLToPath } from 'url'
@@ -215,7 +215,7 @@ async function main() {
         where: { slug: data.topicSlug },
         update: {
           titleDe: data.titleDe,
-          titleVi: data.titleVi,
+          translations: { vi: data.titleVi },
           description: icon,
           cefrLevel,
           sortOrder: globalTopicOrder,
@@ -224,7 +224,7 @@ async function main() {
         create: {
           slug: data.topicSlug,
           titleDe: data.titleDe,
-          titleVi: data.titleVi,
+          translations: { vi: data.titleVi },
           description: icon,
           cefrLevel,
           sortOrder: globalTopicOrder,
@@ -249,7 +249,7 @@ async function main() {
             lessonType: 'E',
             lessonNumber: lesson.lessonNumber,
             titleDe: lesson.titleDe,
-            titleVi: lesson.titleVi,
+            translations: { vi: lesson.titleVi },
             exerciseType: 'nachsprechen',
             exercisesJson: exercisesData,
             configJson: configData,
@@ -264,7 +264,7 @@ async function main() {
             lessonType: 'E',
             lessonNumber: lesson.lessonNumber,
             titleDe: lesson.titleDe,
-            titleVi: lesson.titleVi,
+            translations: { vi: lesson.titleVi },
             exerciseType: 'nachsprechen',
             exercisesJson: exercisesData,
             configJson: configData,
