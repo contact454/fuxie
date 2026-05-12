@@ -102,6 +102,41 @@ enum UserRole {
   CONTENT_CREATOR
 }
 
+enum FucoinLedgerType {
+  EARN
+  SPEND
+  ADJUSTMENT
+  REFUND
+}
+
+enum MissionPeriod {
+  DAILY
+  MONTHLY
+  QUARTERLY
+}
+
+enum MissionMetric {
+  STUDY_MINUTES
+  XP_EARNED
+  EXERCISES_COMPLETED
+  LESSONS_COMPLETED
+  SRS_REVIEWED
+  ACTIVE_DAYS
+  EXAM_ATTEMPTS
+}
+
+enum MissionStatus {
+  ACTIVE
+  INACTIVE
+}
+
+enum ShopRedeemRequestStatus {
+  PENDING
+  APPROVED
+  REJECTED
+  CANCELLED
+}
+
 // ===== AUTH & USERS =====
 
 model User {
@@ -123,6 +158,11 @@ model User {
   chatMemories          UserChatMemory[]
   achievements          UserAchievement[]
   streak                UserStreak?
+  streakFreezeUsages    StreakFreezeUsage[]
+  wallet                UserWallet?
+  fucoinLedger          FucoinLedger[]
+  shopRedeemRequests    ShopRedeemRequest[]
+  missionClaims         UserMissionClaim[]
   dailyActivities       DailyActivity[]
   listeningAttempts     ListeningAttempt[]
   readingAttempts       ReadingAttempt[]
@@ -802,6 +842,135 @@ model UserStreak {
   updatedAt DateTime @updatedAt
 
   @@map("user_streaks")
+}
+
+model StreakFreezeUsage {
+  id     String @id @default(uuid())
+  userId String
+  user   User   @relation(fields: [userId], references: [id])
+
+  usedAt            DateTime @default(now())
+  protectedStreak   Int
+  freezesRemaining Int
+  freezesUsedTotal Int
+  missedDays        Int
+  sourceType        String
+  sourceId          String
+  metadata          Json?
+
+  createdAt DateTime @default(now())
+
+  @@unique([userId, sourceType, sourceId])
+  @@index([userId, usedAt])
+  @@index([sourceType, sourceId])
+  @@map("streak_freeze_usages")
+}
+
+// ===== GAMIFICATION ECONOMY =====
+
+model UserWallet {
+  id     String @id @default(uuid())
+  userId String @unique
+  user   User   @relation(fields: [userId], references: [id])
+
+  balance        Int @default(0)
+  lifetimeEarned Int @default(0)
+  lifetimeSpent  Int @default(0)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("user_wallets")
+}
+
+model FucoinLedger {
+  id     String @id @default(uuid())
+  userId String
+  user   User   @relation(fields: [userId], references: [id])
+
+  amount     Int
+  type       FucoinLedgerType
+  sourceType String
+  sourceId   String
+  reason     String
+  metadata   Json?
+
+  createdAt DateTime @default(now())
+
+  @@unique([userId, sourceType, sourceId])
+  @@index([userId, createdAt])
+  @@index([sourceType, sourceId])
+  @@map("fucoin_ledger")
+}
+
+model ShopRedeemRequest {
+  id     String @id @default(uuid())
+  userId String
+  user   User   @relation(fields: [userId], references: [id])
+
+  itemId                 String
+  itemTitle              String
+  itemCategory           String
+  itemBenefit            String
+  cost                   Int
+  walletBalanceAtRequest Int
+  status                 ShopRedeemRequestStatus @default(PENDING)
+  statusReason           String?
+  itemSnapshot           Json
+
+  requestedAt DateTime  @default(now())
+  reviewedAt  DateTime?
+  fulfilledAt DateTime?
+  updatedAt   DateTime  @updatedAt
+
+  @@unique([userId, itemId, status])
+  @@index([userId, status, requestedAt])
+  @@index([status, requestedAt])
+  @@map("shop_redeem_requests")
+}
+
+model MissionDefinition {
+  id     String @id @default(uuid())
+  slug   String @unique
+  period MissionPeriod
+
+  title       String
+  description String
+  metric      MissionMetric
+  targetValue Int
+  href        String?
+
+  xpReward     Int @default(0)
+  fucoinReward Int @default(0)
+  sortOrder    Int @default(0)
+  status       MissionStatus @default(ACTIVE)
+  activeFrom   DateTime?
+  activeTo     DateTime?
+
+  claims UserMissionClaim[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([period, status])
+  @@index([status, sortOrder])
+  @@map("mission_definitions")
+}
+
+model UserMissionClaim {
+  id        String            @id @default(uuid())
+  userId    String
+  user      User              @relation(fields: [userId], references: [id])
+  missionId String
+  mission   MissionDefinition @relation(fields: [missionId], references: [id])
+
+  periodKey String
+  claimedAt DateTime @default(now())
+
+  @@unique([userId, missionId, periodKey])
+  @@index([userId, periodKey])
+  @@index([missionId])
+  @@map("user_mission_claims")
 }
 
 // ===== PROGRESS =====
