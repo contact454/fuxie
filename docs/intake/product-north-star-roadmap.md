@@ -196,3 +196,13 @@ Product decisions:
 - The coach is a feedback and retry layer, not an official exam scorer, autonomous curriculum generator, or teacher replacement.
 - Fallback rules cover provider failure, missing profile, low-confidence grading, audio permission denial, off-scope requests, and cost/rate limits.
 - Phase 29 must convert the scope into eval cases for quality, CEFR fit, Vietnamese learner mistakes, cost, latency, and provider failure.
+
+## Phase 29 Update
+
+AI eval plan is complete in `phase-29-ai-eval-plan.md`.
+
+AI quality decisions:
+
+- Eval coverage now spans tutor chat, writing feedback, speaking support, grading, hints, weak-skill guidance, fallback, and safety.
+- A1/A2/B1/B2 cases include German correctness, CEFR fit, Vietnamese learner usefulness, retry behavior, cost, latency, and provider failure.
+- Strong AI grading claims remain blocked until provider-backed evals and German Academic Lead sampled review are complete.
