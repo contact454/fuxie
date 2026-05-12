@@ -239,3 +239,12 @@ Retention decisions:
 - Mission, streak, reward, weekly progress, return session, and lifecycle events are defined with privacy-safe metadata.
 - Reward-only engagement is tracked separately to protect the North Star from vanity engagement.
 - The Phase 19 post-merge backlog is now complete and ready for a next-cycle implementation decision.
+
+## Phase 33 Update
+
+Backlog closure review is complete in `phase-33-backlog-closure-review.md`.
+
+Operating decision:
+
+- The current planning/spec phase sequence is closed.
+- The next work should be a new implementation cycle starting from learner activation, analytics instrumentation, AI eval evidence, and motivation loop implementation slices.

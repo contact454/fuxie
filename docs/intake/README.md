@@ -99,6 +99,7 @@ Until the baseline is accepted:
 - `phase-30-weekly-cefr-progress-metric.md`
 - `phase-31-motivation-loop-brief.md`
 - `phase-32-retention-event-map.md`
+- `phase-33-backlog-closure-review.md`
 - `baseline-acceptance-note.md`
 - `current-state-audit.md`
 - `risk-register.md`
@@ -142,6 +143,7 @@ Until the baseline is accepted:
 | Phase 30: Weekly Meaningful CEFR Progress Metric Spec | `phase-30-weekly-cefr-progress-metric.md` | Complete; `P19-C3` defines numerator, denominator, scope, events, AI cap, data quality, dashboard, and interpretation |
 | Phase 31: Motivation Loop Brief | `phase-31-motivation-loop-brief.md` | Complete; `P19-D1` maps missions, XP, streak, Fucoin, rewards, and mascot moments to real study actions |
 | Phase 32: Retention Event Map | `phase-32-retention-event-map.md` | Complete; `P19-D2` defines D1/D7/D30 retention, mission, streak, reward, weekly progress, lifecycle, and privacy-safe events |
+| Phase 33: Backlog Closure Review | `phase-33-backlog-closure-review.md` | Complete; all `P19-*` items have phase outputs and the open phase sequence is closed |
 
 ## Day 30 Exit Criteria
 
