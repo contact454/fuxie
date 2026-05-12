@@ -55,7 +55,14 @@ docker-compose.override.yml
 
 # AI Agent configs
 .gemini/
-.agents/
+.agents/*
+!.agents/workflows/
+.agents/workflows/*
+!.agents/workflows/company-operating-model.md
+!.agents/workflows/task-role-router.md
+!.agents/workflows/task-startup-checklist.md
+!.agents/personnel/
+!.agents/personnel/**
 
 # Local AI 3D tooling and model caches
 .ai3d/
