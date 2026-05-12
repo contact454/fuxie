@@ -61,7 +61,7 @@ The next cycle should improve the first meaningful learner journey:
 | ID | Priority | Work item | Primary owner | Support roles | Acceptance criteria |
 | --- | --- | --- | --- | --- | --- |
 | P19-B1 | P1 | Learner activation PRD | Product Manager EdTech | Product Designer, Data / Analytics Engineer | Complete in Phase 23; defines first meaningful study action, target learner, metric, non-goals, and edge cases |
-| P19-B2 | P1 | Onboarding UX spec | Product Designer | Product Manager EdTech, Frontend Engineer | Specifies level, goal, exam target, daily time, empty state, mobile behavior, and error states |
+| P19-B2 | P1 | Onboarding UX spec | Product Designer | Product Manager EdTech, Frontend Engineer | Complete in Phase 24; specifies level, goal, exam target, daily time, empty state, mobile behavior, and error states |
 | P19-B3 | P1 | Daily dashboard next-action spec | Product Designer | Product Manager EdTech, Frontend Engineer | Dashboard answers "what should I study now?" with clear progress and CTA hierarchy |
 | P19-B4 | P1 | Learner activation test plan | QA Automation Engineer | Product Manager EdTech, Frontend Engineer | Covers happy path, auth, empty state, mobile, failure, and regression risk |
 
@@ -189,3 +189,15 @@ Phase 23 completes `P19-B1`:
 5. Set dependencies for onboarding UX, dashboard next-action UX, activation event map, and activation test plan.
 
 Next planned step after Phase 23: Phase 24 should handle `P19-B2`, Onboarding UX Spec.
+
+## Phase 24 Status Update
+
+Phase 24 completes `P19-B2`:
+
+1. Route through Product Designer.
+2. Specify onboarding screens from welcome through dashboard handoff.
+3. Add daily study time and goal type as UX requirements.
+4. Define mobile, desktop, accessibility, error, and save states.
+5. Name data gaps without forcing schema changes in the spec phase.
+
+Next planned step after Phase 24: Phase 25 should handle `P19-B3`, Dashboard Next-Action UX Spec.

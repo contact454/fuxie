@@ -191,3 +191,11 @@ PR #3 closed `P19-A1`:
 - First meaningful study action is defined as one level-appropriate learning action after onboarding with visible progress/reward/feedback.
 - Activation metric is onboarding completion plus first meaningful study action within 24 hours.
 - Next dependencies are onboarding UX spec, dashboard next-action UX spec, activation event map, and activation test plan.
+
+## Phase 24 Update
+
+`P19-B2` Onboarding UX Spec is complete:
+
+- Flow covers welcome, goal, target level, daily time, placement, result, and dashboard handoff.
+- Mobile, desktop, accessibility, save, and error states are specified.
+- `goalType` and `dailyStudyMinutes` are identified as future product/data fields without forcing schema change in this phase.
