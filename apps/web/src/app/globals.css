@@ -464,7 +464,8 @@ body {
   flex: 1;
   min-width: 0;
   padding-top: 56px;
-  padding-bottom: calc(64px + env(safe-area-inset-bottom, 0px));
+  padding-bottom: calc(96px + env(safe-area-inset-bottom, 0px));
+  scroll-padding-bottom: calc(96px + env(safe-area-inset-bottom, 0px));
 }
 
 @media (max-width: 767px) {

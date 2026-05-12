@@ -123,7 +123,8 @@ export function PracticeHub({ themes, availableLevels, initialLevel }: PracticeH
                                         {theme.imageUrl ? (
                                             <Image 
                                                 src={theme.imageUrl} 
-                                                fill 
+                                                fill
+                                                sizes="96px"
                                                 className="object-cover drop-shadow-sm mix-blend-multiply" 
                                                 alt={theme.name} 
                                             />

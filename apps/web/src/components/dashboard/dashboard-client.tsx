@@ -204,7 +204,7 @@ function HeaderSection({ data }: { data: DashboardData }) {
                 <div>
                     <h1 className="text-2xl sm:text-3xl font-bold text-gray-900 flex items-center gap-2">
                         {data.greeting}, {data.profile.displayName}!
-                        <Image src={FUXIE_3D_ASSETS.happyWave} alt="Fuxie" width={36} height={36} className="inline-block object-contain" />
+                        <Image src={FUXIE_3D_ASSETS.happyWave} alt="Fuxie" width={36} height={36} priority className="inline-block object-contain" />
                     </h1>
                     <div className="mt-1 flex flex-wrap items-center gap-2 text-sm text-gray-500">
                         <span

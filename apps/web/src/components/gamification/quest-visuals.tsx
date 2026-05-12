@@ -504,7 +504,13 @@ export function QuestProgressHero({
                 <div className={`flex min-w-0 flex-col justify-between gap-4 rounded-3xl p-4 ring-1 ${config.panel}`}>
                     <div className="flex items-center gap-4">
                         <div className="relative h-24 w-24 shrink-0 rounded-3xl bg-white shadow-lg">
-                            <Image src={mascotSrc ?? config.mascot} alt="Fuxie" fill className={`object-contain p-1 ${fuxieMascotMotionClass(variant === 'exam' ? 'coach' : 'idle')}`} />
+                            <Image
+                                src={mascotSrc ?? config.mascot}
+                                alt="Fuxie"
+                                fill
+                                sizes="96px"
+                                className={`object-contain p-1 ${fuxieMascotMotionClass(variant === 'exam' ? 'coach' : 'idle')}`}
+                            />
                         </div>
                         <div className="min-w-0">
                             <p className="text-xs font-black uppercase tracking-wide text-[#3C78A8]/70">Reward preview</p>

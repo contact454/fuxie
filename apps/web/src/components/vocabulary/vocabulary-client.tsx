@@ -104,6 +104,12 @@ function VocabularyQuestWorld({
 }: VocabularyQuestWorldProps) {
     const selectedProgress = selectedTheme ? getThemeProgress(selectedTheme) : 0
     const nextTheme = themes[selectedIndex + 1] ?? themes.find(theme => getThemeProgress(theme) < 100)
+    const selectedWordCount = selectedTheme?.wordCount ?? 0
+    const practiceCtaLabel = isAdding
+        ? 'Đang mở ôn tập...'
+        : selectedTheme
+            ? `Ôn ${selectedWordCount} từ`
+            : 'Chọn chủ đề'
     const mapWidth = Math.max(720, themes.length * 132)
     const pathPercent = themes.length > 1
         ? Math.min(100, Math.round((selectedIndex / (themes.length - 1)) * 100))
@@ -159,10 +165,10 @@ function VocabularyQuestWorld({
 
                             <button
                                 onClick={onPracticeTheme}
-                                disabled={!selectedTheme || isAdding}
+                                disabled={!selectedTheme || isAdding || isLevelLoading}
                                 className={fuxieButtonClass('primary', 'lg', 'shrink-0 rounded-2xl')}
                             >
-                                {isAdding ? 'Đang tải...' : 'Luyện chủ đề'}
+                                {practiceCtaLabel}
                                 <ArrowRight className="h-4 w-4" />
                             </button>
                         </div>
@@ -288,11 +294,11 @@ function VocabularyQuestWorld({
                             <div className="mt-4 grid grid-cols-2 gap-2">
                                 <button
                                     onClick={onPracticeTheme}
-                                    disabled={!selectedTheme || isAdding}
+                                    disabled={!selectedTheme || isAdding || isLevelLoading}
                                     className={fuxieButtonClass('primary', 'md', 'rounded-xl px-3')}
                                 >
                                     <Sparkles className="h-4 w-4" />
-                                    Học ngay
+                                    {practiceCtaLabel}
                                 </button>
                                 <Link
                                     href="/review"
@@ -418,11 +424,12 @@ export function VocabularyClient({ themes, totalWords, totalDue, availableLevels
         if (!selectedTheme) return
         setIsAdding(true)
         try {
-            await fetch('/api/v1/srs/cards', {
+            const res = await fetch('/api/v1/srs/cards', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ themeSlug: selectedTheme.slug }),
             })
+            if (!res.ok) throw new Error(`Could not open review for ${selectedTheme.slug}`)
             router.push('/review')
         } catch (err) {
             console.error(err)
@@ -516,7 +523,7 @@ export function VocabularyClient({ themes, totalWords, totalDue, availableLevels
                                     className={fuxieButtonClass('primary', 'md', 'flex-1 rounded-xl py-2.5 px-4 shadow-sm')}
                                 >
                                     <span>🎯</span>
-                                    {isAdding ? 'Đang tải...' : 'Luyện chủ đề'}
+                                    {isAdding ? 'Đang mở ôn tập...' : `Ôn ${selectedTheme.wordCount} từ`}
                                 </button>
                             </div>
                         </div>
