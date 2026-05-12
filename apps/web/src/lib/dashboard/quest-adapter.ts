@@ -10,6 +10,7 @@ export interface DashboardQuest {
     title: string
     reason: string
     href: string
+    skill: TodayPlanAction['skill']
     status: QuestStatus
     progress: number
     rewardPreview: QuestReward[]
@@ -30,10 +31,18 @@ export interface DashboardMissionHub {
     quests: DashboardQuest[]
     primaryQuest: DashboardQuest
     secondaryQuests: DashboardQuest[]
+    primaryCta: DashboardMissionCta
     goalProgress: number
     isFreshStart: boolean
     coachTitle: string
     coachMessage: string
+}
+
+export interface DashboardMissionCta {
+    label: string
+    href: string
+    source: string
+    supportingCopy: string
 }
 
 export function buildDashboardMissionHub(plan: TodayPlan, context: DashboardQuestContext): DashboardMissionHub {
@@ -50,11 +59,13 @@ export function buildDashboardMissionHub(plan: TodayPlan, context: DashboardQues
 
     const primaryQuest = quests[0]!
     const secondaryQuests = quests.slice(1)
+    const primaryCta = buildPrimaryCta(primaryQuest, secondaryQuests, plan)
 
     return {
         quests,
         primaryQuest,
         secondaryQuests,
+        primaryCta,
         goalProgress,
         isFreshStart,
         coachTitle: isFreshStart ? 'Ngày 1: mở khóa bước đầu' : 'Tập trung vào một quest',
@@ -77,6 +88,7 @@ function toDashboardQuest(
         title: action.title,
         reason: action.reason,
         href: action.href,
+        skill: action.skill,
         status,
         progress,
         rewardPreview: buildRewards(action, plan, context, status),
@@ -93,6 +105,7 @@ function buildFreshStartQuest(plan: TodayPlan): DashboardQuest {
         title: 'Mở khóa quest đầu tiên',
         reason: 'Bắt đầu bằng một chủ đề từ vựng ngắn để Fuxie có đủ tín hiệu tạo lộ trình hằng ngày cho bạn',
         href: '/vocabulary',
+        skill: 'WORTSCHATZ',
         status: 'active',
         progress: getGoalProgress(plan),
         rewardPreview: [
@@ -104,6 +117,64 @@ function buildFreshStartQuest(plan: TodayPlan): DashboardQuest {
         estimatedMinutes: Math.max(5, plan.remainingMinutes || 5),
         badge: 'Fresh start',
     }
+}
+
+function buildPrimaryCta(primaryQuest: DashboardQuest, secondaryQuests: DashboardQuest[], plan: TodayPlan): DashboardMissionCta {
+    if (primaryQuest.status === 'completed') {
+        const nextQuest = secondaryQuests[0]
+        if (nextQuest) {
+            return {
+                label: `Học tiếp: ${ctaVerb(nextQuest)}`,
+                href: nextQuest.href,
+                source: nextQuest.id,
+                supportingCopy: 'Mục tiêu ngày đã xong. Nếu còn năng lượng, chọn bước tiếp theo để tăng tiến độ CEFR.',
+            }
+        }
+
+        return {
+            label: 'Mở thêm từ vựng',
+            href: '/vocabulary',
+            source: 'completed-fallback-vocabulary',
+            supportingCopy: 'Mục tiêu ngày đã xong. Bạn có thể dừng lại hoặc học nhẹ thêm một chủ đề từ vựng.',
+        }
+    }
+
+    return {
+        label: ctaVerb(primaryQuest),
+        href: primaryQuest.href,
+        source: primaryQuest.id,
+        supportingCopy: actionSupportingCopy(primaryQuest, plan),
+    }
+}
+
+function ctaVerb(quest: DashboardQuest) {
+    if (quest.type === 'fresh-start') return 'Bắt đầu từ vựng'
+    if (quest.type === 'srs') return 'Ôn SRS ngay'
+    if (quest.type === 'assignment') return 'Làm bài được giao'
+    if (quest.type === 'exam') return 'Luyện thi ngay'
+    if (quest.skill === 'WORTSCHATZ' || quest.href.startsWith('/vocabulary')) return 'Học từ vựng'
+    if (quest.skill === 'GRAMMATIK') return 'Học ngữ pháp'
+    if (quest.skill === 'HOEREN') return 'Luyện nghe'
+    if (quest.skill === 'LESEN') return 'Luyện đọc'
+    if (quest.skill === 'SCHREIBEN') return 'Luyện viết'
+    if (quest.skill === 'SPRECHEN') return 'Luyện nói'
+    return 'Bắt đầu bài học'
+}
+
+function actionSupportingCopy(quest: DashboardQuest, plan: TodayPlan) {
+    if (quest.type === 'fresh-start') {
+        return `Bắt đầu bằng một bài từ vựng ngắn ở ${plan.currentLevel} để Fuxie có tín hiệu cá nhân hóa tiếp theo.`
+    }
+    if (quest.type === 'srs') {
+        return 'Ôn các thẻ đến hạn trước để giữ trí nhớ dài hạn và bảo vệ nhịp học hôm nay.'
+    }
+    if (quest.type === 'assignment') {
+        return 'Bài được giao đang là ưu tiên học tập cao nhất trong ngày.'
+    }
+    if (quest.type === 'exam') {
+        return 'Mục tiêu thi đã được ghi nhận, nhưng vẫn giữ nhịp CEFR hằng ngày.'
+    }
+    return `Hoàn thành một hành động ${plan.currentLevel} để ghi nhận tiến độ thật trong hôm nay.`
 }
 
 function isFreshStartCandidate(plan: TodayPlan, context: DashboardQuestContext) {

@@ -1103,6 +1103,8 @@ function TodayPlanQuestSection({ plan, data }: { plan: TodayPlan; data: Dashboar
     const primaryQuest = mission.primaryQuest
     const primaryMeta = dashboardQuestMeta(primaryQuest, 0)
     const PrimaryIcon = primaryMeta.icon
+    const primaryCta = mission.primaryCta
+    const secondaryQuests = mission.secondaryQuests
     const coachRole = primaryQuest.status === 'completed'
         ? 'reward'
         : mission.isFreshStart
@@ -1158,17 +1160,17 @@ function TodayPlanQuestSection({ plan, data }: { plan: TodayPlan; data: Dashboar
 
                         <div className="mt-5 flex flex-col gap-3 sm:flex-row sm:items-center">
                             <MeasuredLink
-                                href={primaryQuest.href}
+                                href={primaryCta.href}
                                 flow="dashboard.quest.primary"
-                                source={primaryQuest.id}
+                                source={primaryCta.source}
                                 className={fuxieButtonClass('primary', 'lg', 'w-full sm:w-auto')}
                             >
-                                Bắt đầu quest
+                                {primaryCta.label}
                                 <ArrowRight className="h-4 w-4" />
                             </MeasuredLink>
                             <div className="flex min-w-0 flex-1 items-center gap-2 rounded-2xl bg-white/65 px-4 py-3 text-sm font-bold text-[#3C78A8] ring-1 ring-white/90">
                                 <span className="h-2.5 w-2.5 shrink-0 rounded-full bg-[#2EC4B6]" />
-                                <span className="truncate">{plan.currentMinutes}/{plan.goalMinutes} min hôm nay · {mission.goalProgress}% mục tiêu</span>
+                                <span className="min-w-0 leading-snug">{primaryCta.supportingCopy}</span>
                             </div>
                         </div>
                     </div>
@@ -1204,27 +1206,29 @@ function TodayPlanQuestSection({ plan, data }: { plan: TodayPlan; data: Dashboar
                     </div>
                 </div>
 
+                {secondaryQuests.length > 0 && (
                 <div className="relative border-t border-white/75 bg-white/48 px-5 py-4 sm:px-6">
                     <div className="mb-3 flex items-center justify-between gap-3">
                         <div>
-                            <p className="text-xs font-black uppercase tracking-wide text-[#3C78A8]">Quest ưu tiên</p>
-                            <p className="text-sm font-semibold text-slate-500">Làm một nhiệm vụ, nhận thưởng, rồi mở bước tiếp theo.</p>
+                            <p className="text-xs font-black uppercase tracking-wide text-[#3C78A8]">Quest tiếp theo</p>
+                            <p className="text-sm font-semibold text-slate-500">Các lựa chọn phụ nằm dưới CTA chính để bạn không bị phân tán.</p>
                         </div>
                         <FuxieBadge tone="success" className="hidden sm:inline-flex">
-                            {mission.quests.length} quest
+                            {secondaryQuests.length} quest
                         </FuxieBadge>
                     </div>
                     <div className="grid grid-cols-1 gap-3 lg:grid-cols-3">
-                        {mission.quests.map((quest, index) => (
+                        {secondaryQuests.map((quest, index) => (
                             <DashboardQuestLink
                                 key={quest.id}
                                 quest={quest}
                                 index={index}
-                                isPrimary={quest.id === primaryQuest.id}
+                                isPrimary={false}
                             />
                         ))}
                     </div>
                 </div>
+                )}
             </div>
         </section>
     )
