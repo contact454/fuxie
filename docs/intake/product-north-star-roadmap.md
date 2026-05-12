@@ -228,3 +228,14 @@ Motivation decisions:
 - Streaks advance only from real study completion and use freeze/soft restart patterns to avoid shame.
 - Reward-only engagement is explicitly tracked as a risk signal, not treated as learning progress.
 - Mascot moments support next action, feedback, recovery, and milestone celebration without competing with the study flow.
+
+## Phase 32 Update
+
+Retention event map is complete in `phase-32-retention-event-map.md`.
+
+Retention decisions:
+
+- D1/D7/D30 retention is anchored on activation and meaningful action completion, not page views.
+- Mission, streak, reward, weekly progress, return session, and lifecycle events are defined with privacy-safe metadata.
+- Reward-only engagement is tracked separately to protect the North Star from vanity engagement.
+- The Phase 19 post-merge backlog is now complete and ready for a next-cycle implementation decision.
