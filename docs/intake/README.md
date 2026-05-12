@@ -97,6 +97,7 @@ Until the baseline is accepted:
 - `phase-28-ai-coach-product-brief.md`
 - `phase-29-ai-eval-plan.md`
 - `phase-30-weekly-cefr-progress-metric.md`
+- `phase-31-motivation-loop-brief.md`
 - `baseline-acceptance-note.md`
 - `current-state-audit.md`
 - `risk-register.md`
@@ -138,6 +139,7 @@ Until the baseline is accepted:
 | Phase 28: AI Coach Product Brief | `phase-28-ai-coach-product-brief.md` | Complete; `P19-C1` defines AI coach surfaces, scope, fallback rules, non-goals, academic guardrails, and eval handoff |
 | Phase 29: AI Eval Plan | `phase-29-ai-eval-plan.md` | Complete; `P19-C2` defines A1/A2/B1/B2 eval cases, Vietnamese learner mistakes, fallback cases, rubric, cost, latency, and provider-failure gates |
 | Phase 30: Weekly Meaningful CEFR Progress Metric Spec | `phase-30-weekly-cefr-progress-metric.md` | Complete; `P19-C3` defines numerator, denominator, scope, events, AI cap, data quality, dashboard, and interpretation |
+| Phase 31: Motivation Loop Brief | `phase-31-motivation-loop-brief.md` | Complete; `P19-D1` maps missions, XP, streak, Fucoin, rewards, and mascot moments to real study actions |
 
 ## Day 30 Exit Criteria
 

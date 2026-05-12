@@ -247,3 +247,11 @@ Activation Event Map is complete:
 - Metric numerator, denominator, learner scope, rolling 7-day window, exclusions, cohort grain, and initial beta threshold are defined.
 - Meaningful action rules separate completed learning from page views, clicks, and reward-only engagement.
 - AI feedback is capped so weekly progress still depends on real learning actions.
+
+## Phase 31 Update
+
+`P19-D1` Motivation Loop Brief is complete:
+
+- Missions, XP, streak, Fucoin, rewards, and mascot moments are mapped to meaningful study actions.
+- Streak and recovery rules encourage return without shame.
+- Economy and UX guardrails prevent reward inflation, pay-to-win signals, and decorative game mechanics.
