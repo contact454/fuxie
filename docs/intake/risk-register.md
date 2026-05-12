@@ -273,6 +273,15 @@ Collected on 2026-05-12:
 | R-012 | Motivation loop brief ties mascot moments, rewards, XP, streaks, and Fucoin to meaningful study actions instead of decorative engagement | Mitigated for motivation scope |
 | R-011 | Reward-only engagement is explicitly excluded from learning progress and tracked as a risk signal | Mitigated for product focus |
 
+## Phase 32 Current Evidence
+
+Collected on 2026-05-12:
+
+| Risk | Evidence update | Status |
+| --- | --- | --- |
+| R-011 | Retention event map anchors D1/D7/D30 on meaningful action completion and separates reward-only activity from learning retention | Mitigated for retention measurement |
+| R-012 | Mission, streak, reward, and lifecycle events have quality checks to prevent decorative activity from being reported as progress | Mitigated for event scope |
+
 ## Risk Review Cadence
 
 - Review P0 risks daily during Day 0-14.

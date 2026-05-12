@@ -255,3 +255,11 @@ Activation Event Map is complete:
 - Missions, XP, streak, Fucoin, rewards, and mascot moments are mapped to meaningful study actions.
 - Streak and recovery rules encourage return without shame.
 - Economy and UX guardrails prevent reward inflation, pay-to-win signals, and decorative game mechanics.
+
+## Phase 32 Update
+
+`P19-D2` Retention Event Map is complete:
+
+- D1/D7/D30 retention uses meaningful action completion as the return signal.
+- Mission, streak, reward, weekly progress, return session, and lifecycle events are defined.
+- All Phase 19 backlog items now have complete phase outputs from Phase 20 through Phase 32.

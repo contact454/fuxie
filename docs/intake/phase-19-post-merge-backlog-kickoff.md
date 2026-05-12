@@ -79,7 +79,7 @@ The next cycle should improve the first meaningful learner journey:
 | ID | Priority | Work item | Primary owner | Support roles | Acceptance criteria |
 | --- | --- | --- | --- | --- | --- |
 | P19-D1 | P1 | Motivation loop brief | Gamification Designer | Product Manager EdTech, Product Designer | Complete in Phase 31; missions, XP, streak, Fucoin, rewards, and mascot moments map to real study actions |
-| P19-D2 | P2 | Retention event map | Data / Analytics Engineer | Growth Lead, Gamification Designer | D1/D7/D30, mission completion, streak, and reward events are defined |
+| P19-D2 | P2 | Retention event map | Data / Analytics Engineer | Growth Lead, Gamification Designer | Complete in Phase 32; D1/D7/D30, mission completion, streak, reward, and lifecycle events are defined |
 
 ## Recommended Sequencing
 
@@ -278,3 +278,23 @@ Phase 31 completes `P19-D1`:
 4. Keep rewards tied to meaningful learning actions and weekly CEFR progress.
 
 Next planned step after Phase 31: Phase 32 should handle `P19-D2`, Retention Event Map.
+
+## Phase 32 Status Update
+
+Phase 32 completes `P19-D2`:
+
+1. Route through Data / Analytics Engineer.
+2. Define D1/D7/D30 learner retention using meaningful action completion rather than page views.
+3. Map mission, streak, reward, weekly progress, return session, and lifecycle campaign events.
+4. Add dashboard outline, growth interpretation, privacy boundaries, and event quality checks.
+
+Next planned step after Phase 32: run a backlog closure review and select the next implementation cycle.
+
+## Backlog Closure Status
+
+All `P19-*` backlog items now have complete phase documents:
+
+- `P19-A1` through `P19-A3`: complete in Phases 20-22.
+- `P19-B1` through `P19-B4`: complete in Phases 23-27.
+- `P19-C1` through `P19-C4`: complete in Phases 26 and 28-30.
+- `P19-D1` through `P19-D2`: complete in Phases 31-32.
