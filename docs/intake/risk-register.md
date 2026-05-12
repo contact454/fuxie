@@ -238,6 +238,15 @@ Collected on 2026-05-12:
 | --- | --- | --- |
 | R-013 | GitHub Actions Node 20 deprecation warning from PR #4 CI was traced to `actions/checkout@v4`, `actions/setup-node@v4`, and `pnpm/action-setup@v4`; PR #5 updates those actions to v6, opts JavaScript actions into Node 24, and passes CI without the Node 20 action deprecation warning | Closed for CI deprecation warning |
 
+## Phase 28 Current Evidence
+
+Collected on 2026-05-12:
+
+| Risk | Evidence update | Status |
+| --- | --- | --- |
+| R-007 | AI coach product scope is defined with separated tutor/writing/speaking/grading/hint/weak-skill surfaces, bounded claims, fallback states, and Phase 29 eval handoff | Open; ready for eval plan |
+| R-011 | AI coach brief keeps B2C Vietnamese learner progress as the primary motion and prevents AI feature expansion from becoming an unbounded product surface | Mitigated for coach scope |
+
 ## Risk Review Cadence
 
 - Review P0 risks daily during Day 0-14.

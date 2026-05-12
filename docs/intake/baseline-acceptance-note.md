@@ -223,3 +223,11 @@ Activation Event Map is complete:
 - Happy path, auth/role boundary, onboarding edge cases, dashboard states, mobile, and analytics readiness tests are defined.
 - Automation order and test data requirements are named.
 - Release gate recommendation is ready for the activation implementation slice.
+
+## Phase 28 Update
+
+`P19-C1` AI Coach Product Brief is complete:
+
+- Tutor, writing, speaking, grading, hint, and weak-skill guidance surfaces are separated.
+- Must-have scope, non-goals, fallback states, academic guardrails, and AI engineering guardrails are defined.
+- Phase 29 can now produce the AI eval plan before stronger AI claims or runtime AI implementation.
