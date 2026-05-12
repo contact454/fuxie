@@ -72,7 +72,7 @@ The next cycle should improve the first meaningful learner journey:
 | P19-C1 | P1 | AI coach product brief | Product Manager EdTech | AI / LLM Engineer, German Academic Lead | Defines tutor, writing, speaking, grading, fallback, scope boundaries, and non-goals |
 | P19-C2 | P1 | AI eval plan | AI / LLM Engineer | QA Automation Engineer, German Academic Lead | Defines eval cases for A1/A2/B1/B2, Vietnamese learner mistakes, cost, latency, and provider failure |
 | P19-C3 | P1 | Weekly meaningful CEFR progress metric spec | Data / Analytics Engineer | Product Manager EdTech | Defines events, learner scope, reporting window, and success threshold |
-| P19-C4 | P1 | Activation event map | Data / Analytics Engineer | Product Manager EdTech, Frontend Engineer | Maps onboarding, first meaningful study action, dashboard CTA, and completion events |
+| P19-C4 | P1 | Activation event map | Data / Analytics Engineer | Product Manager EdTech, Frontend Engineer | Complete in Phase 26; maps onboarding, first meaningful study action, dashboard CTA, and completion events |
 
 ### Track D: Motivation Loop
 
@@ -213,3 +213,14 @@ Phase 25 completes `P19-B3`:
 5. Keep secondary modules subordinate to the primary action.
 
 Next planned step after Phase 25: Phase 26 should handle the activation event map dependency.
+
+## Phase 26 Status Update
+
+Phase 26 completes the activation event map dependency:
+
+1. Route through Data / Analytics Engineer.
+2. Define activation metric numerator, denominator, filters, timeframe, and cohort grain.
+3. Map onboarding, dashboard next-action, meaningful action start/completion, and activation completion events.
+4. Define privacy boundaries, data quality checks, dashboard outline, and implementation dependencies.
+
+Next planned step after Phase 26: Phase 27 should handle `P19-B4`, Learner Activation Test Plan.

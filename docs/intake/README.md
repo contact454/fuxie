@@ -92,6 +92,7 @@ Until the baseline is accepted:
 - `phase-23-learner-activation-prd.md`
 - `phase-24-onboarding-ux-spec.md`
 - `phase-25-dashboard-next-action-ux-spec.md`
+- `phase-26-activation-event-map.md`
 - `baseline-acceptance-note.md`
 - `current-state-audit.md`
 - `risk-register.md`
@@ -128,6 +129,7 @@ Until the baseline is accepted:
 | Phase 23: Learner Activation PRD | `phase-23-learner-activation-prd.md` | Complete; `P19-B1` defines target learner, first meaningful action, metric, non-goals, and edge cases |
 | Phase 24: Onboarding UX Spec | `phase-24-onboarding-ux-spec.md` | Complete; `P19-B2` specifies onboarding screens, daily time, mobile behavior, and error states |
 | Phase 25: Dashboard Next-Action UX Spec | `phase-25-dashboard-next-action-ux-spec.md` | Complete; `P19-B3` specifies primary next-action hierarchy, states, responsive behavior, and analytics handoff |
+| Phase 26: Activation Event Map | `phase-26-activation-event-map.md` | Complete; activation metric, events, properties, privacy boundaries, and data quality checks defined |
 
 ## Day 30 Exit Criteria
 

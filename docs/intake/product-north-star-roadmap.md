@@ -166,3 +166,13 @@ Design decisions:
 - Dashboard first viewport must answer "What should I study now?"
 - One primary next-action CTA should dominate secondary modules.
 - Fresh start, due review, no due review, exam focus, completed today, and data-error states are defined.
+
+## Phase 26 Update
+
+Activation event map is complete in `phase-26-activation-event-map.md`.
+
+Measurement decisions:
+
+- Activation rate is measured by onboarding completion plus one meaningful study action within 24 hours.
+- Events cover onboarding, dashboard next action, meaningful action start/completion, and derived activation completion.
+- Privacy boundaries exclude raw learner submissions, transcripts, audio, and AI chat content.
