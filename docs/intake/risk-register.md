@@ -264,6 +264,15 @@ Collected on 2026-05-12:
 | --- | --- | --- |
 | R-011 | Weekly CEFR progress metric keeps product focus on completed learning actions, caps AI contribution, and separates engagement proxies from learning outcomes | Mitigated for measurement scope |
 
+## Phase 31 Current Evidence
+
+Collected on 2026-05-12:
+
+| Risk | Evidence update | Status |
+| --- | --- | --- |
+| R-012 | Motivation loop brief ties mascot moments, rewards, XP, streaks, and Fucoin to meaningful study actions instead of decorative engagement | Mitigated for motivation scope |
+| R-011 | Reward-only engagement is explicitly excluded from learning progress and tracked as a risk signal | Mitigated for product focus |
+
 ## Risk Review Cadence
 
 - Review P0 risks daily during Day 0-14.

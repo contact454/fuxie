@@ -78,7 +78,7 @@ The next cycle should improve the first meaningful learner journey:
 
 | ID | Priority | Work item | Primary owner | Support roles | Acceptance criteria |
 | --- | --- | --- | --- | --- | --- |
-| P19-D1 | P1 | Motivation loop brief | Gamification Designer | Product Manager EdTech, Product Designer | Missions, XP, streak, Fucoin, rewards, and mascot moments map to real study actions |
+| P19-D1 | P1 | Motivation loop brief | Gamification Designer | Product Manager EdTech, Product Designer | Complete in Phase 31; missions, XP, streak, Fucoin, rewards, and mascot moments map to real study actions |
 | P19-D2 | P2 | Retention event map | Data / Analytics Engineer | Growth Lead, Gamification Designer | D1/D7/D30, mission completion, streak, and reward events are defined |
 
 ## Recommended Sequencing
@@ -267,3 +267,14 @@ Phase 30 completes `P19-C3`:
 4. Connect metric interpretation to product decisions for activation, AI coach, learning breadth, and motivation loop.
 
 Next planned step after Phase 30: Phase 31 should handle `P19-D1`, Motivation Loop Brief.
+
+## Phase 31 Status Update
+
+Phase 31 completes `P19-D1`:
+
+1. Route through Gamification Designer.
+2. Define the core motivation loop from next action to completed study, feedback, XP/Fucoin, and follow-up mission.
+3. Specify mission types, XP rules, Fucoin rules, streak recovery, reward catalog, mascot moments, anti-patterns, metrics, and event needs.
+4. Keep rewards tied to meaningful learning actions and weekly CEFR progress.
+
+Next planned step after Phase 31: Phase 32 should handle `P19-D2`, Retention Event Map.

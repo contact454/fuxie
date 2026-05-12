@@ -217,3 +217,14 @@ Measurement decisions:
 - AI feedback loops can count only when tied to German learning and are capped at 1 of the 3 required actions.
 - Companion non-AI progress rate prevents coach usage from masking weak core learning behavior.
 - Initial beta target is 25% of active onboarded learners reaching weekly progress, to be recalibrated after two beta cohorts.
+
+## Phase 31 Update
+
+Motivation loop brief is complete in `phase-31-motivation-loop-brief.md`.
+
+Motivation decisions:
+
+- Missions, XP, streak, Fucoin, rewards, and mascot moments must reinforce completed meaningful study actions.
+- Streaks advance only from real study completion and use freeze/soft restart patterns to avoid shame.
+- Reward-only engagement is explicitly tracked as a risk signal, not treated as learning progress.
+- Mascot moments support next action, feedback, recovery, and milestone celebration without competing with the study flow.
