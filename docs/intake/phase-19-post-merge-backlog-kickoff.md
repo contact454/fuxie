@@ -53,7 +53,7 @@ The next cycle should improve the first meaningful learner journey:
 | ID | Priority | Work item | Primary owner | Support roles | Acceptance criteria |
 | --- | --- | --- | --- | --- | --- |
 | P19-A1 | P2 | Add learner-facing error feedback for vocabulary CTA failure | Frontend Engineer | Product Designer, QA Automation Engineer | Complete in Phase 20; if `/api/v1/srs/cards` fails, learner sees a clear retryable message; no console-only failure |
-| P19-A2 | P2 | Review dashboard mascot image priority | Frontend Engineer | Product Designer, CTO / Tech Lead | Above-the-fold mascot LCP warning is resolved or explicitly accepted with reason |
+| P19-A2 | P2 | Review dashboard mascot image priority | Frontend Engineer | Product Designer, CTO / Tech Lead | Complete in Phase 21; above-the-fold mascot LCP warning is resolved or explicitly accepted with reason |
 | P19-A3 | P2 | Add GitHub Actions Node 20 deprecation follow-up | DevOps / Cloud Engineer | CTO / Tech Lead, QA Automation Engineer | CI action versions or runner settings have an owner decision before GitHub's Node 24 default change |
 
 ### Track B: Learner Activation Core
@@ -116,21 +116,21 @@ This cycle is done when:
 
 ## Immediate Next Task Recommendation
 
-`P19-A1` moved into Phase 20 implementation. After verification, continue with `P19-A2`: review dashboard mascot image priority.
+`P19-A1` was completed in Phase 20. Continue with `P19-A2`: review dashboard mascot image priority.
 
 Recommended routing:
 
 ```text
 Vai chinh: Frontend Engineer
-Vai phoi hop: Product Designer, QA Automation Engineer
+Vai phoi hop: Product Designer, CTO / Tech Lead
 ```
 
 Reason:
 
 - It is a known residual P2 from Phase 10.
 - It is small and localized.
-- It improves learner trust.
-- It is a good smoke test that post-RC feature work still follows Mandatory Role-Gate.
+- It addresses a focused Next.js image priority warning without changing product scope.
+- It keeps shared mascot image priority opt-in instead of broad.
 
 ## Acceptance Status
 
@@ -153,3 +153,15 @@ Phase 20 implements `P19-A1`:
 5. Run affected checks.
 
 Next planned step after Phase 20: Phase 21 should handle `P19-A2`, dashboard mascot image priority review.
+
+## Phase 21 Status Update
+
+Phase 21 implements `P19-A2`:
+
+1. Route through Frontend Engineer.
+2. Inspect dashboard mascot priority warning source.
+3. Add opt-in `priority` forwarding to `FuxieCoach`.
+4. Mark the dashboard streak-freeze coach mascot as priority when present.
+5. Run affected checks.
+
+Next planned step after Phase 21: Phase 22 should handle `P19-A3`, GitHub Actions Node 20 deprecation follow-up.

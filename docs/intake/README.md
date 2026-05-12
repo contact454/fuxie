@@ -87,6 +87,7 @@ Until the baseline is accepted:
 - `phase-18-post-merge-release-verification.md`
 - `phase-19-post-merge-backlog-kickoff.md`
 - `phase-20-first-post-rc-polish-implementation.md`
+- `phase-21-dashboard-mascot-priority-review.md`
 - `baseline-acceptance-note.md`
 - `current-state-audit.md`
 - `risk-register.md`
@@ -118,6 +119,7 @@ Until the baseline is accepted:
 | Phase 18: Post-Merge Release Verification | `phase-18-post-merge-release-verification.md` | Complete; PR #2 merged into `master` and master CI passed |
 | Phase 19: Post-Merge Product / Engineering Backlog Kickoff | `phase-19-post-merge-backlog-kickoff.md` | Complete; next-cycle backlog and first post-RC task selected |
 | Phase 20: First Post-RC Polish Implementation | `phase-20-first-post-rc-polish-implementation.md` | Complete; `P19-A1` vocabulary CTA error feedback implemented and `pnpm check:quick` passed |
+| Phase 21: Dashboard Mascot Priority Review | `phase-21-dashboard-mascot-priority-review.md` | Complete; `P19-A2` dashboard mascot priority implemented and `pnpm check:quick` passed |
 
 ## Day 30 Exit Criteria
 
