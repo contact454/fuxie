@@ -67,15 +67,20 @@ Behavior:
 | Criterion | Status | Evidence |
 | --- | --- | --- |
 | Node 20 action deprecation has owner decision | Pass | Workflow updates warned action majors and opts into Node 24 action runtime |
-| CI gate behavior remains the same | Pending PR CI | `pnpm check` command and Node 22 project runtime unchanged |
+| CI gate behavior remains the same | Pass | PR #5 `verify` passed with `pnpm check` command and Node 22 project runtime unchanged |
 | No secrets or env values exposed | Pass | Only non-secret GitHub Actions migration flag added |
 | No runtime app change | Pass | Change is confined to CI workflow and intake docs |
 
 ## Verification Plan
 
-- Open a PR and wait for GitHub Actions `verify`.
-- Confirm whether the Node 20 deprecation warning disappears or changes.
-- Keep Vercel checks observed but treat GitHub Actions `verify` as the primary gate for this task.
+| Check | Result |
+| --- | --- |
+| PR #5 GitHub Actions `verify` | Pass |
+| PR #5 Vercel | Pass |
+| PR #5 Vercel Preview Comments | Pass |
+| Node 20 action deprecation warning | Cleared after updating to `actions/checkout@v6`, `actions/setup-node@v6`, and `pnpm/action-setup@v6` |
+
+Residual non-blocking warnings observed in CI are package/tooling warnings from Prisma and dependencies, not GitHub Actions Node 20 runtime warnings.
 
 ## Next Planned Step: Phase 23 Learner Activation PRD
 

@@ -54,7 +54,7 @@ The next cycle should improve the first meaningful learner journey:
 | --- | --- | --- | --- | --- | --- |
 | P19-A1 | P2 | Add learner-facing error feedback for vocabulary CTA failure | Frontend Engineer | Product Designer, QA Automation Engineer | Complete in Phase 20; if `/api/v1/srs/cards` fails, learner sees a clear retryable message; no console-only failure |
 | P19-A2 | P2 | Review dashboard mascot image priority | Frontend Engineer | Product Designer, CTO / Tech Lead | Complete in Phase 21; above-the-fold mascot LCP warning is resolved or explicitly accepted with reason |
-| P19-A3 | P2 | Add GitHub Actions Node 20 deprecation follow-up | DevOps / Cloud Engineer | CTO / Tech Lead, QA Automation Engineer | Implemented in Phase 22 pending PR CI; workflow updates warned action majors and opts JavaScript actions into Node 24 before GitHub's default change |
+| P19-A3 | P2 | Add GitHub Actions Node 20 deprecation follow-up | DevOps / Cloud Engineer | CTO / Tech Lead, QA Automation Engineer | Complete in Phase 22; workflow updates warned action majors and opts JavaScript actions into Node 24 before GitHub's default change |
 
 ### Track B: Learner Activation Core
 

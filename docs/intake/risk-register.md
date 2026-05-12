@@ -236,7 +236,7 @@ Collected on 2026-05-12:
 
 | Risk | Evidence update | Status |
 | --- | --- | --- |
-| R-013 | GitHub Actions Node 20 deprecation warning from PR #4 CI was traced to `actions/checkout@v4`, `actions/setup-node@v4`, and `pnpm/action-setup@v4`; workflow now updates the warned action majors and opts JavaScript actions into Node 24 with `FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true` | Pending PR CI |
+| R-013 | GitHub Actions Node 20 deprecation warning from PR #4 CI was traced to `actions/checkout@v4`, `actions/setup-node@v4`, and `pnpm/action-setup@v4`; PR #5 updates those actions to v6, opts JavaScript actions into Node 24, and passes CI without the Node 20 action deprecation warning | Closed for CI deprecation warning |
 
 ## Risk Review Cadence
 
