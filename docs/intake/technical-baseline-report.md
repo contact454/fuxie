@@ -317,6 +317,18 @@ As of Phase 18:
 - Local `master` is clean and synced.
 - The next work should begin from the post-merge backlog kickoff.
 
+As of Phase 20:
+
+- `P19-A1` vocabulary CTA error feedback is implemented and merged through PR #3.
+- `pnpm check:quick` passed for the focused UI polish.
+- The next post-RC polish item is dashboard mascot image priority review.
+
+As of Phase 21:
+
+- `P19-A2` dashboard mascot priority review is implemented and `pnpm check:quick` passed.
+- `FuxieCoach` now supports opt-in image `priority`.
+- Dashboard streak-freeze safety coach marks `fuxie-3d-game-streak-freeze-saved-512.webp` as priority when that mascot is present.
+
 ## Handoff Notes For Engineers
 
 When implementing after baseline acceptance:

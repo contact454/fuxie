@@ -914,6 +914,7 @@ function StreakFreezeAwarenessSection({ data }: { data: DashboardData }) {
                 title={coachTitle}
                 message={coachMessage}
                 mascotSrc={latestUsage || hasFreezeReady ? FUXIE_3D_ASSETS.streakFreezeSaved : undefined}
+                priority={Boolean(latestUsage || hasFreezeReady)}
                 className="h-full"
             />
         </section>

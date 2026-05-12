@@ -188,6 +188,7 @@ interface FuxieCoachProps {
     message: string
     mascotSrc?: string
     motion?: FuxieMascotMotion
+    priority?: boolean
     className?: string
 }
 
@@ -221,6 +222,7 @@ export function FuxieCoach({
     message,
     mascotSrc,
     motion,
+    priority = false,
     className = '',
 }: FuxieCoachProps) {
     const config = FUXIE_ROLE_CONFIG[role]
@@ -234,7 +236,14 @@ export function FuxieCoach({
             <div className="absolute -right-10 -top-10 h-32 w-32 rounded-full bg-[#60A8E4]/15" />
             <div className="relative flex items-center gap-4">
                 <div className="relative flex h-20 w-20 shrink-0 items-center justify-center rounded-2xl bg-white shadow-sm">
-                    <Image src={mascotSrc ?? config.src} alt="Fuxie" width={76} height={76} className={`object-contain ${fuxieMascotMotionClass(mascotMotion)}`} />
+                    <Image
+                        src={mascotSrc ?? config.src}
+                        alt="Fuxie"
+                        width={76}
+                        height={76}
+                        priority={priority}
+                        className={`object-contain ${fuxieMascotMotionClass(mascotMotion)}`}
+                    />
                     <span className="absolute -right-1 -top-1 rounded-full bg-[#54A8E4] p-1.5 text-white shadow-sm">
                         <Icon className="h-3.5 w-3.5" />
                     </span>

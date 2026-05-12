@@ -156,4 +156,20 @@ Recommended first implementation task: `P19-A1` learner-facing error feedback fo
 
 ## Next Action
 
-Proceed to Phase 20 first post-RC polish implementation.
+Proceed to Phase 22 GitHub Actions Node 20 deprecation follow-up.
+
+## Phase 20 Update
+
+PR #3 closed `P19-A1`:
+
+- Vocabulary CTA failed API path now shows learner-facing feedback.
+- `pnpm check:quick` passed.
+- PR #3 was merged into `master`.
+
+## Phase 21 Update
+
+`P19-A2` dashboard mascot image priority review is complete:
+
+- `FuxieCoach` has opt-in image priority support.
+- Dashboard streak-freeze mascot passes priority when present.
+- `pnpm check:quick` passed.
