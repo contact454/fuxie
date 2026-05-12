@@ -40,11 +40,11 @@ No new branch is required because the workspace is already on a Codex release-re
 
 | Step | Scope | Files | Status |
 | --- | --- | --- | --- |
-| 1 | Governance commit | `AGENTS.md`, `.gitignore`, mandatory `.agents/personnel`, mandatory `.agents/workflows` | Planned |
-| 2 | Intake docs commit | `docs/intake/*.md` | Planned |
-| 3 | Runtime UI commit | Dashboard, gamification, leaderboard, vocabulary, global CSS runtime files | Planned |
+| 1 | Governance commit | `AGENTS.md`, `.gitignore`, mandatory `.agents/personnel`, mandatory `.agents/workflows` | Complete: `ccab57e` |
+| 2 | Intake docs commit | `docs/intake/*.md` | Complete: `043289f` |
+| 3 | Runtime UI commit | Dashboard, gamification, leaderboard, vocabulary, global CSS runtime files | Complete: `81222da` |
 | 4 | Generated `sw.js` | `apps/web/public/sw.js` | Held pending CTO/user decision |
-| 5 | Final status check | `git status --short` | Planned |
+| 5 | Final status check | `git status --short` | Complete; only `apps/web/public/sw.js` remains modified |
 
 ## Commit Messages
 
@@ -59,10 +59,28 @@ No new branch is required because the workspace is already on a Codex release-re
 | Criterion | Status |
 | --- | --- |
 | Role-Gate followed | Pass |
-| Commit groups preserve rollback boundaries | Pending execution |
-| `sw.js` remains unstaged | Pending execution |
-| Local/generated hold-outs remain unstaged | Pending execution |
-| Final git status is documented | Pending execution |
+| Commit groups preserve rollback boundaries | Pass |
+| `sw.js` remains unstaged | Pass |
+| Local/generated hold-outs remain unstaged | Pass |
+| Final git status is documented | Pass |
+
+## Execution Results
+
+Commits created:
+
+```text
+ccab57e docs: add mandatory Fuxie company role gate
+043289f docs: add Fuxie intake and RC baseline evidence
+81222da feat: polish Fuxie learner dashboard and study surfaces
+```
+
+Final uncommitted tracked file:
+
+```text
+M apps/web/public/sw.js
+```
+
+Reason: `apps/web/public/sw.js` is a generated Serwist artifact and remains held until CTO/user chooses stage, regenerate, or restore.
 
 ## Next Planned Step: Phase 13 CTO `sw.js` Decision And RC Finalization
 

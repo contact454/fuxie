@@ -142,9 +142,9 @@ Collected on 2026-05-12:
 | Check | Evidence | Status | Notes |
 | --- | --- | --- | --- |
 | Branch | `codex/fuxie-release-readiness` | Active | Existing release-readiness branch used |
-| Governance group | Separate commit planned/executed | In execution | Includes Role-Gate and personnel model |
-| Intake docs group | Separate commit planned/executed | In execution | Includes Phase 0-12 evidence |
-| Runtime UI group | Separate commit planned/executed | In execution | Includes Phase 10-signed runtime UI slice |
+| Governance group | `ccab57e` | Complete | Includes Role-Gate and personnel model |
+| Intake docs group | `043289f` | Complete | Includes Phase 0-12 evidence |
+| Runtime UI group | `81222da` | Complete | Includes Phase 10-signed runtime UI slice |
 | Generated service worker | `apps/web/public/sw.js` | Held | Pending CTO/user decision |
 
 ## Phase 2 Smoke Prerequisites
@@ -230,7 +230,7 @@ As of Phase 11:
 
 As of Phase 12:
 
-- Approved groups G1-G3 are executed as separate commits on `codex/fuxie-release-readiness`.
+- Approved groups G1-G3 were executed as separate commits on `codex/fuxie-release-readiness`.
 - `apps/web/public/sw.js` remains the only known tracked release artifact pending decision.
 - Final RC closure still needs Phase 13 artifact decision and any required final gate confirmation.
 

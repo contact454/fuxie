@@ -84,11 +84,11 @@ Pending decisions:
 
 ## Phase 12 Update
 
-Approved RC groups are being executed on branch `codex/fuxie-release-readiness` with rollback boundaries preserved:
+Approved RC groups were executed on branch `codex/fuxie-release-readiness` with rollback boundaries preserved:
 
-- Governance operating model commit.
-- Intake baseline evidence commit.
-- Runtime UI candidate commit.
+- `ccab57e` governance operating model commit.
+- `043289f` intake baseline evidence commit.
+- `81222da` runtime UI candidate commit.
 
 `apps/web/public/sw.js` remains pending and must not be included until CTO/user decision is explicit.
 

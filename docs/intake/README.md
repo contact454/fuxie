@@ -103,7 +103,7 @@ Until the baseline is accepted:
 | Phase 9: RC Packaging And Commit Grouping | `phase-9-rc-packaging-and-commit-grouping.md` | Complete; commit groups, release notes, rollback owners, and baseline acceptance note prepared |
 | Phase 10: Visual QA And Final RC Signoff | `phase-10-visual-qa-final-rc-signoff.md` | Complete; runtime UI visual signoff passed with P2 follow-ups, final `sw.js` decision remains pending |
 | Phase 11: Final Staging And RC Branch Preparation | `phase-11-final-staging-and-rc-branch-preparation.md` | Complete as staging/branch plan; no git staging performed, `sw.js` decision and git approval remain pending |
-| Phase 12: Approved Staging And Commit Execution | `phase-12-approved-staging-and-commit-execution.md` | In execution; approved groups are committed separately, `sw.js` remains pending |
+| Phase 12: Approved Staging And Commit Execution | `phase-12-approved-staging-and-commit-execution.md` | Complete; approved groups committed separately, `sw.js` remains pending |
 
 ## Day 30 Exit Criteria
 

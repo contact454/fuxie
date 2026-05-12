@@ -158,7 +158,7 @@ Collected on 2026-05-12:
 
 | Risk | Evidence update | Status |
 | --- | --- | --- |
-| R-001 | Approved commit groups G1-G3 are executed separately; generated `sw.js` remains held out | Closed for approved groups; G4 pending |
+| R-001 | Approved commit groups G1-G3 were executed separately; generated `sw.js` remains held out | Closed for approved groups; G4 pending |
 | R-002 | No new release gate has been run in Phase 12 before final artifact decision | Current Phase 8 evidence remains accepted until final RC artifact choice |
 | R-014 | Vocabulary CTA feedback remains a P2 post-RC polish item | Open as P2 polish |
 
