@@ -192,6 +192,16 @@ Collected on 2026-05-12:
 | R-002 | PR body includes gate evidence; CI/review response is the next source of truth | Pending CI/review |
 | R-014 | Vocabulary CTA feedback remains listed as residual P2 | Open as P2 polish |
 
+## Phase 16 Current Evidence
+
+Collected on 2026-05-12:
+
+| Risk | Evidence update | Status |
+| --- | --- | --- |
+| R-001 | PR #2 is mergeable and working tree is clean | Closed for merge readiness |
+| R-002 | CI `verify`, Vercel, and Vercel Preview Comments all passed | Closed for merge readiness |
+| R-014 | Vocabulary CTA feedback remains a documented residual P2, not a merge blocker | Open as P2 polish |
+
 ## Risk Review Cadence
 
 - Review P0 risks daily during Day 0-14.

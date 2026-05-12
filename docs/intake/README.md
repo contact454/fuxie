@@ -83,6 +83,7 @@ Until the baseline is accepted:
 - `phase-13-cto-swjs-decision-and-rc-finalization.md`
 - `phase-14-pr-release-handoff.md`
 - `phase-15-push-and-pr-creation.md`
+- `phase-16-review-response-and-merge-readiness.md`
 - `baseline-acceptance-note.md`
 - `current-state-audit.md`
 - `risk-register.md`
@@ -110,6 +111,7 @@ Until the baseline is accepted:
 | Phase 13: CTO `sw.js` Decision And RC Finalization | `phase-13-cto-swjs-decision-and-rc-finalization.md` | Complete; `pnpm build` passed and generated `sw.js` committed separately |
 | Phase 14: PR / Release Handoff | `phase-14-pr-release-handoff.md` | Complete; PR title/body and release handoff prepared, push/PR pending approval |
 | Phase 15: Push And PR Creation | `phase-15-push-and-pr-creation.md` | Complete; branch pushed and PR #2 created |
+| Phase 16: Review Response And Merge Readiness | `phase-16-review-response-and-merge-readiness.md` | Complete; PR #2 is mergeable with CI and Vercel passing |
 
 ## Day 30 Exit Criteria
 
