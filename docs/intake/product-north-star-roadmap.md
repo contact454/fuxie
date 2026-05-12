@@ -146,3 +146,13 @@ Activated learner = completes onboarding and completes one meaningful study acti
 ```
 
 The next product dependencies are onboarding UX spec, dashboard next-action UX spec, activation event map, and learner activation test plan.
+
+## Phase 24 Update
+
+Onboarding UX spec is complete in `phase-24-onboarding-ux-spec.md`.
+
+Design decisions:
+
+- Onboarding should capture goal, target CEFR level, optional exam path, daily study time, placement result, and dashboard handoff.
+- Save errors must be learner-facing with retry, not console-only.
+- Daily time and goal type are product/data gaps to resolve during implementation planning.
