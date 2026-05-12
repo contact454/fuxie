@@ -8,8 +8,16 @@ import { authConfig } from '@/lib/auth/config'
 import { DEV_AUTH_COOKIE, getDevAuthUser, isDevAuthEnabled } from '@/lib/auth/dev-auth'
 
 const AUTH_PAGES = ['/', '/login', '/register']
+const DEV_PUBLIC_PATHS = ['/fuxie-live-qa']
 
 export async function middleware(request: NextRequest) {
+    if (
+        process.env.NODE_ENV !== 'production' &&
+        DEV_PUBLIC_PATHS.includes(request.nextUrl.pathname)
+    ) {
+        return NextResponse.next()
+    }
+
     const devUser = getDevAuthUser(request.cookies.get(DEV_AUTH_COOKIE)?.value)
     if (isDevAuthEnabled() && devUser) {
         if (AUTH_PAGES.includes(request.nextUrl.pathname)) {

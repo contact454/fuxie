@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useCallback, useEffect, useRef } from 'react'
+import { useState, useCallback, useEffect } from 'react'
 import Image from 'next/image'
 import { playSound } from '@/hooks/use-audio-player'
 import { ExerciseProgress } from './exercise-progress'
@@ -9,6 +9,15 @@ import { BottomFeedback } from './bottom-feedback'
 import { useExerciseTimer } from '@/hooks/use-exercise-timer'
 import { useSubmitExercise } from '@/hooks/use-submit-exercise'
 import type { ExerciseAnswer } from '@/hooks/use-submit-exercise'
+import {
+    exerciseAudioButtonClass,
+    exerciseCenterStageClass,
+    exerciseInlineAudioClass,
+    exerciseOptionClass,
+    exercisePromptImageClass,
+    exerciseScreenClass,
+    exerciseStageInnerClass,
+} from './exercise-ui'
 
 // ─── Types ──────────────────────────────────────────
 interface McQuestion {
@@ -48,7 +57,7 @@ interface SubmitResult {
 
 
 // ─── Component ──────────────────────────────────────
-export function McExercise({ questions, cefrLevel, themeName, themeSlug, onExit, onComplete }: McExerciseProps) {
+export function McExercise({ questions, cefrLevel, themeName: _themeName, themeSlug, onExit, onComplete: _onComplete }: McExerciseProps) {
     const [activeQuestions, setActiveQuestions] = useState([...questions])
     const [currentIndex, setCurrentIndex] = useState(0)
     const [selectedAnswer, setSelectedAnswer] = useState<string | null>(null)
@@ -132,6 +141,15 @@ export function McExercise({ questions, cefrLevel, themeName, themeSlug, onExit,
                 correctCount={submitResult.correctCount}
                 accuracy={submitResult.accuracy}
                 xpEarned={submitResult.xpEarned}
+                fucoinEarned={submitResult.fucoinEarned}
+                walletBalance={submitResult.walletBalance}
+                fucoinDuplicate={submitResult.fucoinDuplicate}
+                fucoinIntended={submitResult.fucoinIntended}
+                fucoinDailyCap={submitResult.fucoinDailyCap}
+                fucoinDailyEarned={submitResult.fucoinDailyEarned}
+                fucoinDailyRemaining={submitResult.fucoinDailyRemaining}
+                fucoinCapReached={submitResult.fucoinCapReached}
+                streak={submitResult.streak}
                 timeTaken={timer}
                 results={submitResult.results}
                 onRetry={() => {
@@ -151,7 +169,7 @@ export function McExercise({ questions, cefrLevel, themeName, themeSlug, onExit,
 
     // ─── Playing Phase ──────────────────────────────
     return (
-        <div className="fixed inset-0 z-50 bg-gray-50 flex flex-col">
+        <div className={exerciseScreenClass}>
             {/* Progress bar */}
             <ExerciseProgress
                 current={currentIndex + 1}
@@ -162,8 +180,8 @@ export function McExercise({ questions, cefrLevel, themeName, themeSlug, onExit,
             />
 
             {/* Exercise content — vertically centered */}
-            <div className="flex-1 flex items-center justify-center overflow-y-auto">
-                <div className="max-w-2xl w-full px-6 py-8">
+            <div className={exerciseCenterStageClass}>
+                <div className={exerciseStageInnerClass}>
                     {/* Prompt area */}
                     <div className="text-center mb-8">
                         {/* Image prompt (image_to_word only) */}
@@ -174,7 +192,7 @@ export function McExercise({ questions, cefrLevel, themeName, themeSlug, onExit,
                                     alt="Vocabulary image"
                                     width={160}
                                     height={160}
-                                    className="rounded-2xl object-cover shadow-md"
+                                    className={exercisePromptImageClass()}
                                 />
                             </div>
                         )}
@@ -183,7 +201,7 @@ export function McExercise({ questions, cefrLevel, themeName, themeSlug, onExit,
                         {question.type === 'audio_to_word' && (
                             <button
                                 onClick={() => playSound(question.promptAudio)}
-                                className="mb-4 w-24 h-24 rounded-full bg-gradient-to-br from-[#004E89] to-blue-600 text-white flex items-center justify-center mx-auto shadow-lg hover:scale-105 transition-transform"
+                                className={exerciseAudioButtonClass()}
                             >
                                 <svg className="w-12 h-12" fill="currentColor" viewBox="0 0 24 24">
                                     <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z" />
@@ -194,12 +212,12 @@ export function McExercise({ questions, cefrLevel, themeName, themeSlug, onExit,
                         {/* Text prompt (de_to_native, native_to_de) */}
                         {(question.type === 'de_to_native' || question.type === 'native_to_de') && (
                             <div className="mb-4">
-                                <p className="text-3xl font-black text-gray-900">{question.prompt}</p>
+                                <p className="text-3xl font-black text-slate-950">{question.prompt}</p>
                                 {/* Audio button for de_to_native */}
                                 {question.type === 'de_to_native' && question.promptAudio && (
                                     <button
                                         onClick={() => playSound(question.promptAudio)}
-                                        className="mt-2 inline-flex items-center gap-1 text-[#004E89] hover:text-blue-700 transition-colors"
+                                        className={exerciseInlineAudioClass()}
                                     >
                                         <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                                             <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02z" />
@@ -211,30 +229,22 @@ export function McExercise({ questions, cefrLevel, themeName, themeSlug, onExit,
                         )}
 
                         {/* Question label */}
-                        <p className="text-gray-500 text-sm">{getQuestionLabel()}</p>
+                        <p className="text-sm font-semibold text-slate-500">{getQuestionLabel()}</p>
                     </div>
 
                     {/* Options — 2×2 grid */}
-                    <div className="grid grid-cols-2 gap-3">
+                    <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
                         {question.options.map((option, i) => {
                             const isSelected = selectedAnswer === option
-                            let btnClass = 'bg-white border-2 border-gray-200 text-gray-800 hover:border-[#004E89] hover:bg-blue-50 hover:shadow-md'
-
-                            if (isRevealed) {
-                                btnClass = isSelected
-                                    ? 'bg-blue-50 border-2 border-[#004E89] text-[#004E89] shadow-blue-100 shadow-md'
-                                    : 'bg-gray-50 border-2 border-gray-100 text-gray-400'
-                            }
-
                             return (
                                 <button
                                     key={i}
                                     onClick={() => handleSelect(option)}
                                     disabled={isRevealed}
-                                    className={`py-4 px-5 rounded-xl font-semibold text-base transition-all text-center ${btnClass}`}
+                                    className={exerciseOptionClass({ selected: isSelected, revealed: isRevealed })}
                                 >
                                     {isRevealed && isSelected && (
-                                        <span className="text-[#004E89] mr-1">•</span>
+                                        <span className="text-[#3C78A8] mr-1">•</span>
                                     )}
                                     <span>{option}</span>
                                 </button>
@@ -244,9 +254,9 @@ export function McExercise({ questions, cefrLevel, themeName, themeSlug, onExit,
 
                     {/* Loading indicator */}
                     {isSubmitting && (
-                        <div className="text-center mt-8 text-gray-400">
+                        <div className="mt-8 text-center text-slate-400">
                             <div className="inline-flex items-center gap-2">
-                                <div className="w-4 h-4 border-2 border-gray-300 border-t-[#004E89] rounded-full animate-spin" />
+                                <div className="h-4 w-4 animate-spin rounded-full border-2 border-[#CCE4F0] border-t-[#60A8E4]" />
                                 Wird ausgewertet...
                             </div>
                         </div>

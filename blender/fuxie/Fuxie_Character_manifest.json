@@ -1,0 +1,74 @@
+{
+  "name": "Fuxie_Character",
+  "source_note": "Stylized approximation from existing Fuxie 3D render images; not an exact 3D reconstruction.",
+  "references": [
+    "apps/web/public/mascot-3d/concept/fuxie-3d-master-style-sheet.png",
+    "apps/web/public/mascot-3d/concept/fuxie-3d-coach-pose-pack.png",
+    "apps/web/public/mascot-3d/core/fuxie-3d-core-happy-wave.png",
+    "apps/web/public/mascot-3d/core/fuxie-3d-game-fucoin-reward.png"
+  ],
+  "outputs": {
+    "blend": "blender/fuxie/Fuxie_Character.blend",
+    "glb": "assets/models/Fuxie_Character.glb",
+    "fbx": "assets/models/Fuxie_Character.fbx",
+    "preview": "blender/fuxie/Fuxie_preview.png"
+  },
+  "stats": {
+    "mesh_objects": 36,
+    "vertices_before_export_modifiers": 8384,
+    "faces_before_export_modifiers": 8794,
+    "bones": [
+      "root",
+      "hips",
+      "spine",
+      "chest",
+      "neck",
+      "head",
+      "ear.L",
+      "ear.R",
+      "upper_arm.L",
+      "forearm.L",
+      "hand.L",
+      "upper_arm.R",
+      "forearm.R",
+      "hand.R",
+      "upper_leg.L",
+      "shin.L",
+      "foot.L",
+      "upper_leg.R",
+      "shin.R",
+      "foot.R",
+      "tail.01",
+      "tail.02",
+      "tail.03"
+    ],
+    "reference_planes": [
+      "Fuxie_Reference_1_fuxie-3d-master-style-sheet",
+      "Fuxie_Reference_2_fuxie-3d-coach-pose-pack",
+      "Fuxie_Reference_3_fuxie-3d-core-happy-wave",
+      "Fuxie_Reference_4_fuxie-3d-game-fucoin-reward"
+    ],
+    "fps": 60,
+    "clips": {
+      "idle": {
+        "frames": 96,
+        "description": "60fps-friendly breathing loop with ears, tail and blink."
+      },
+      "wave": {
+        "frames": 80,
+        "description": "Simple friendly wave for runtime testing."
+      },
+      "talk": {
+        "frames": 96,
+        "description": "Mouth open/close with gentle head motion."
+      }
+    }
+  },
+  "artist_next_steps": [
+    "Sculpt final silhouette and face planes from orthographic reference.",
+    "Retopology into one skinned mesh if deforming limbs/facial animation is required.",
+    "UV unwrap and texture paint from approved Fuxie palette.",
+    "Weight paint continuous joints and add corrective shapes.",
+    "Build production animation set and runtime LODs."
+  ]
+}

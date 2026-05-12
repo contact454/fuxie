@@ -3,8 +3,7 @@
 import React from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { 
-  BarChart, 
+import {
   Users, 
   BookOpen, 
   MessageSquare, 
@@ -13,7 +12,8 @@ import {
   Search,
   LogOut,
   LayoutDashboard,
-  Cpu
+  Cpu,
+  Gift
 } from "lucide-react";
 
 const SIDEBAR_ITEMS = [
@@ -21,6 +21,7 @@ const SIDEBAR_ITEMS = [
   { name: "User Analytics", href: "/admin/users", icon: Users },
   { name: "Learning Progress", href: "/admin/learning", icon: BookOpen },
   { name: "AI Compute Costs", href: "/admin/ai-costs", icon: Cpu },
+  { name: "Reward Review", href: "/admin/rewards", icon: Gift },
   { name: "Feedback", href: "/admin/feedback", icon: MessageSquare },
   { name: "Operations", href: "/admin/ops", icon: Settings },
 ];

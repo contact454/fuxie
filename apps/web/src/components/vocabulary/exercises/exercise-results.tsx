@@ -1,6 +1,13 @@
 'use client'
 
-import { Mascot } from '@/components/ui/mascot'
+import {
+    ResultRewardLoop,
+    resultRewardIcons,
+} from '@/components/gamification/result-reward-loop'
+import {
+    FuxiePanel,
+    fx,
+} from '@/components/ui/fuxie-ui'
 
 interface ResultItem {
     questionId: string
@@ -14,6 +21,21 @@ interface ExerciseResultsProps {
     correctCount: number
     accuracy: number
     xpEarned: number
+    fucoinEarned?: number
+    walletBalance?: number
+    fucoinDuplicate?: boolean
+    fucoinIntended?: number
+    fucoinDailyCap?: number
+    fucoinDailyEarned?: number
+    fucoinDailyRemaining?: number
+    fucoinCapReached?: boolean
+    streak?: {
+        currentStreak: number
+        isNewDay: boolean
+        freezeUsed?: boolean
+        freezesAvailable?: number
+        freezesUsed?: number
+    }
     timeTaken?: number
     graded?: boolean
     results: ResultItem[]
@@ -21,117 +43,175 @@ interface ExerciseResultsProps {
     onNewTheme: () => void
 }
 
-function ScoreRing({ score, total, size = 140 }: { score: number; total: number; size?: number }) {
-    const percentage = total > 0 ? (score / total) * 100 : 0
-    const radius = (size - 12) / 2
-    const circumference = radius * 2 * Math.PI
-    const offset = circumference - (percentage / 100) * circumference
-    const color = percentage >= 80 ? '#10B981' : percentage >= 50 ? '#F59E0B' : '#EF4444'
-
-    return (
-        <div className="relative" style={{ width: size, height: size }}>
-            <svg width={size} height={size} className="transform -rotate-90">
-                <circle
-                    cx={size / 2} cy={size / 2} r={radius}
-                    stroke="#E5E7EB" strokeWidth={10} fill="none"
-                />
-                <circle
-                    cx={size / 2} cy={size / 2} r={radius}
-                    stroke={color} strokeWidth={10} fill="none"
-                    strokeDasharray={circumference}
-                    strokeDashoffset={offset}
-                    strokeLinecap="round"
-                    className="transition-all duration-1000 ease-out"
-                />
-            </svg>
-            <div className="absolute inset-0 flex flex-col items-center justify-center">
-                <span className="text-3xl font-black text-gray-900">{score}/{total}</span>
-                <span className="text-sm text-gray-500">{Math.round(percentage)}%</span>
-            </div>
-        </div>
-    )
-}
-
 export function ExerciseResults({
     totalQuestions,
     correctCount,
     accuracy,
     xpEarned,
+    fucoinEarned = 0,
+    walletBalance,
+    fucoinDuplicate = false,
+    fucoinDailyCap,
+    fucoinDailyEarned,
+    fucoinCapReached = false,
+    streak,
     timeTaken,
     graded = true,
     results,
     onRetry,
     onNewTheme,
 }: ExerciseResultsProps) {
-    const getMessage = () => {
-        if (!graded) return { text: 'Đã gửi câu trả lời', emoji: '📡' }
-        if (accuracy >= 90) return { text: 'Xuất sắc! 🏆', emoji: '🎉' }
-        if (accuracy >= 70) return { text: 'Rất tốt! 🎉', emoji: '👏' }
-        if (accuracy >= 50) return { text: 'Làm tốt lắm! 👍', emoji: '💪' }
-        return { text: 'Tiếp tục luyện nhé! 📖', emoji: '🔄' }
+    const getResultCopy = () => {
+        if (!graded) {
+            return {
+                title: 'Đã lưu lượt luyện',
+                message: 'Fuxie đã giữ câu trả lời của em. Khi máy chủ sẵn sàng, kết quả sẽ được đồng bộ lại.',
+                coachTitle: 'Tiến độ chưa bị mất',
+                coachMessage: 'Em có thể luyện tiếp chủ đề khác hoặc làm lại lượt này để giữ nhịp học trong ngày.',
+                unlockLabel: 'Chờ đồng bộ',
+                unlockDetail: 'Điểm sẽ cập nhật sau',
+            }
+        }
+
+        if (accuracy >= 90) {
+            return {
+                title: 'Xuất sắc, quest hoàn thành!',
+                message: `Em trả lời đúng ${correctCount}/${totalQuestions} câu. Đây là lượt luyện rất sạch để mở nhiệm vụ tiếp theo.`,
+                coachTitle: 'Fuxie chốt một chiến thắng đẹp',
+                coachMessage: 'Độ chính xác cao là tín hiệu tốt để chuyển sang chủ đề mới khi động lực còn mạnh.',
+                unlockLabel: 'Mở tiếp',
+                unlockDetail: 'Tăng độ khó',
+            }
+        }
+
+        if (accuracy >= 70) {
+            return {
+                title: 'Rất tốt, em đang lên nhịp',
+                message: `Em trả lời đúng ${correctCount}/${totalQuestions} câu. Chỉ cần thêm một vòng nữa là phần từ vựng này vững hơn rõ.`,
+                coachTitle: 'Fuxie đề xuất đi tiếp',
+                coachMessage: 'Kết quả đủ tốt để học chủ đề mới, nhưng luyện lại vẫn hữu ích nếu em muốn chắc hơn.',
+                unlockLabel: 'Next',
+                unlockDetail: 'Đi tiếp',
+            }
+        }
+
+        if (accuracy >= 50) {
+            return {
+                title: 'Có tiến bộ, cần thêm một vòng',
+                message: `Em đã đúng ${correctCount}/${totalQuestions} câu. Hãy luyện lại ngay để biến các từ còn lẫn thành điểm mạnh.`,
+                coachTitle: 'Fuxie giữ focus cho em',
+                coachMessage: 'Lượt này đã cho thấy điểm yếu cụ thể; luyện lại bây giờ sẽ tiết kiệm thời gian hơn để mai ôn.',
+                unlockLabel: 'Focus list',
+                unlockDetail: 'Ưu tiên từ còn sai',
+            }
+        }
+
+        return {
+            title: 'Chưa sao, mình sửa từng điểm yếu',
+            message: `Em đúng ${correctCount}/${totalQuestions} câu. Result này giúp Fuxie biết nên kéo em về phần luyện trọng tâm.`,
+            coachTitle: 'Fuxie đề xuất luyện lại',
+            coachMessage: 'Đừng đổi chủ đề vội. Một lượt luyện lại ngắn sẽ giúp não nhận ra mẫu sai nhanh hơn.',
+            unlockLabel: 'Luyện lại',
+            unlockDetail: 'Khóa điểm yếu trước',
+        }
     }
 
-    const msg = getMessage()
     const formatTime = (seconds: number) => {
         const m = Math.floor(seconds / 60)
         const s = seconds % 60
         return `${m}:${s.toString().padStart(2, '0')}`
     }
+    const copy = getResultCopy()
+    const { Clock3, Target } = resultRewardIcons
+    const fucoinLabel = !graded
+        ? 'Fucoin'
+        : fucoinEarned > 0
+            ? `+${fucoinEarned} Fucoin`
+            : fucoinDuplicate
+                ? 'Đã nhận Fucoin'
+                : fucoinCapReached
+                    ? 'Đủ Fucoin hôm nay'
+                    : '+0 Fucoin'
+    const fucoinDetail = !graded
+        ? 'Đổi quà sau'
+        : fucoinEarned > 0
+            ? walletBalance !== undefined
+                ? `${walletBalance} trong ví`
+                : 'Đã cộng vào ví'
+            : fucoinDuplicate
+                ? 'Lượt này đã thưởng trước đó'
+                : fucoinCapReached && fucoinDailyCap !== undefined
+                    ? `${fucoinDailyCap}/${fucoinDailyCap} daily cap`
+                    : fucoinDailyCap !== undefined && fucoinDailyEarned !== undefined
+                        ? `${fucoinDailyEarned}/${fucoinDailyCap} hôm nay`
+                        : 'Không có thưởng mới'
+    const attemptMeta = [
+        ...(timeTaken !== undefined
+            ? [{
+                icon: <Clock3 className="h-4 w-4" />,
+                label: 'Thời gian',
+                value: formatTime(timeTaken),
+                detail: 'Thời gian luyện',
+            }]
+            : []),
+        ...(graded
+            ? [{
+                icon: <Target className="h-4 w-4" />,
+                value: `${Math.round(accuracy)}%`,
+                label: 'Độ chính xác',
+                detail: `${correctCount}/${totalQuestions} câu đúng`,
+            }]
+            : []),
+    ]
+    const rewardPreview = [
+        {
+            type: 'xp' as const,
+            label: graded ? `+${xpEarned} XP` : 'Đang chờ XP',
+            detail: graded ? 'Kinh nghiệm lượt luyện' : 'Đồng bộ khi có điểm',
+        },
+        {
+            type: 'fucoin' as const,
+            label: fucoinLabel,
+            detail: fucoinDetail,
+        },
+        {
+            type: 'streak' as const,
+            label: streak?.freezeUsed ? 'Freeze saved' : 'Streak',
+            detail: streak?.freezeUsed ? `${streak.currentStreak} ngay` : 'Giữ nhịp',
+        },
+    ]
 
     return (
-        <div className="max-w-lg mx-auto px-4 py-8 animate-fade-in-up">
-            {/* Confetti effect */}
-            {graded && accuracy >= 70 && (
-                <div className="text-center text-4xl mb-2 animate-bounce">
-                    {msg.emoji}
-                </div>
-            )}
-
-            {/* Score Ring */}
-            {graded ? (
-                <div className="flex justify-center mb-4">
-                    <ScoreRing score={correctCount} total={totalQuestions} />
-                </div>
-            ) : (
-                <div className="flex justify-center mb-4 text-5xl">{msg.emoji}</div>
-            )}
-
-            {/* Message */}
-            <h2 className="text-2xl font-bold text-gray-900 text-center mb-6">{msg.text}</h2>
-
-            {!graded && (
-                <p className="text-sm text-center text-gray-500 mb-6">
-                    Câu trả lời đã được lưu, nhưng chưa thể chấm điểm vì mất kết nối máy chủ.
-                </p>
-            )}
-
-            {/* Stats Row */}
-            <div className="flex justify-center gap-3 mb-8">
-                {timeTaken !== undefined && (
-                    <div className="flex flex-col items-center bg-gray-50 rounded-xl px-4 py-3 border border-gray-100">
-                        <span className="text-lg font-bold text-gray-700">⏱ {formatTime(timeTaken)}</span>
-                        <span className="text-xs text-gray-400">Thời gian</span>
-                    </div>
-                )}
-                <div className="flex flex-col items-center bg-orange-50 rounded-xl px-4 py-3 border border-orange-100">
-                    <span className="text-lg font-bold text-[#FF6B35]">+{xpEarned} XP</span>
-                    <span className="text-xs text-gray-400">Kinh nghiệm</span>
-                </div>
-                {graded && (
-                    <div className="flex flex-col items-center bg-blue-50 rounded-xl px-4 py-3 border border-blue-100">
-                        <span className="text-lg font-bold text-[#004E89]">{Math.round(accuracy)}%</span>
-                        <span className="text-xs text-gray-400">Độ chính xác</span>
-                    </div>
-                )}
-            </div>
-
-            {/* Mascot */}
-            <div className="flex justify-center mb-6">
-                <Mascot variant={!graded ? 'thinking' : accuracy >= 70 ? 'celebrate' : 'encouragement'} size={64} />
-            </div>
+        <div className="mx-auto max-w-4xl px-4 py-8 animate-fade-in-up">
+            <ResultRewardLoop
+                skill="vocabulary"
+                title={copy.title}
+                message={copy.message}
+                scoreLabel={graded ? `${correctCount}/${totalQuestions}` : 'Đã lưu'}
+                scoreDetail={graded ? 'Câu đúng' : 'Chờ chấm điểm'}
+                accuracy={accuracy}
+                xpEarned={xpEarned}
+                graded={graded}
+                attemptMeta={attemptMeta}
+                rewardPreview={rewardPreview}
+                streakReceipt={streak && graded
+                    ? {
+                        freezeUsed: Boolean(streak.freezeUsed),
+                        currentStreak: streak.currentStreak,
+                        freezesAvailable: streak.freezesAvailable ?? 0,
+                        freezesUsed: streak.freezesUsed ?? 0,
+                    }
+                    : undefined}
+                primaryAction={{ label: 'Chủ đề mới', onClick: onNewTheme }}
+                secondaryAction={{ label: 'Luyện lại', onClick: onRetry }}
+                dashboardAction={{ label: 'Về Dashboard', href: '/dashboard' }}
+                coachTitle={copy.coachTitle}
+                coachMessage={copy.coachMessage}
+                className="mb-6"
+            />
 
             {/* Answer Breakdown */}
-            <div className="bg-white rounded-2xl border border-gray-100 p-4 mb-6">
+            <FuxiePanel variant="default" className="mb-6 p-4">
                 <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-3">
                     {graded ? `Câu trả lời (${correctCount}/${totalQuestions})` : 'Đã lưu câu trả lời'}
                 </h3>
@@ -139,13 +219,13 @@ export function ExerciseResults({
                     {results.map((r, i) => (
                         <div
                             key={r.questionId}
-                            className={`flex items-center gap-3 p-2.5 rounded-xl text-sm ${
+                            className={fx('flex items-center gap-3 rounded-xl p-2.5 text-sm ring-1',
                                 r.isCorrect === null
-                                    ? 'bg-gray-50 border border-gray-200'
+                                    ? 'bg-slate-50 ring-slate-200'
                                     : r.isCorrect
-                                    ? 'bg-emerald-50 border border-emerald-100'
-                                    : 'bg-red-50 border border-red-100'
-                            }`}
+                                        ? 'bg-[#EAFBF8] ring-[#2EC4B6]/25'
+                                        : 'bg-red-50 ring-red-200'
+                            )}
                         >
                             <span className="text-base">
                                 {r.isCorrect === null ? '•' : r.isCorrect ? '✅' : '❌'}
@@ -163,23 +243,7 @@ export function ExerciseResults({
                         </div>
                     ))}
                 </div>
-            </div>
-
-            {/* Action Buttons */}
-            <div className="flex gap-3">
-                <button
-                    onClick={onRetry}
-                    className="flex-1 py-3 px-6 rounded-xl border-2 border-[#004E89] text-[#004E89] font-bold text-sm hover:bg-[#004E89]/5 transition-all"
-                >
-                    🔄 Luyện lại
-                </button>
-                <button
-                    onClick={onNewTheme}
-                    className="flex-1 py-3 px-6 rounded-xl bg-gradient-to-r from-[#004E89] to-blue-600 text-white font-bold text-sm hover:opacity-90 transition-all shadow-lg shadow-blue-200"
-                >
-                    📚 Chủ đề mới
-                </button>
-            </div>
+            </FuxiePanel>
         </div>
     )
 }

@@ -135,7 +135,7 @@ export function MatchingRenderer({ content, answer, onChange }: Props) {
                                 }`}
                             >
                                 <span className={`inline-flex w-7 h-7 items-center justify-center text-xs font-bold rounded-full shrink-0 mt-0.5 ${
-                                    isAnswered ? 'bg-green-500 text-white' : 'bg-[#FF6B35]/10 text-[#FF6B35]'
+                                    isAnswered ? 'bg-green-500 text-white' : 'bg-[#60A8E4]/10 text-[#3C78A8]'
                                 }`}>
                                     {idx + 1}
                                 </span>
@@ -148,7 +148,7 @@ export function MatchingRenderer({ content, answer, onChange }: Props) {
                                         className={`w-full px-3 py-2.5 rounded-xl text-sm transition-all appearance-none cursor-pointer
                                             ${mapping[sit.id]
                                                 ? 'border-2 border-green-400 bg-green-50 text-gray-800 font-medium'
-                                                : 'border-2 border-dashed border-gray-300 bg-white text-gray-500 hover:border-[#FF6B35]/40'
+                                                : 'border-2 border-dashed border-gray-300 bg-white text-gray-500 hover:border-[#60A8E4]/40'
                                             }`}
                                     >
                                         <option value="">— Passende Anzeige wählen —</option>

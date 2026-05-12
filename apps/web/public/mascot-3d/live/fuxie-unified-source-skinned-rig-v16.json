@@ -1,0 +1,140 @@
+{
+  "name": "Fuxie_Character_v16_unified_source_skinned_rig",
+  "status": "unified_source_identity_skinned_rig_candidate",
+  "source_note": "V16 keeps the approved Fuxie 3D render as one full-body source atlas on a single subdivided skinned mesh. This removes most visible part seams from V15 while preserving real armature skinning. It is still a 2.5D source-locked approximation, not a recovered original 3D mesh.",
+  "references": [
+    "blender/fuxie/references/fuxie_ref_front_cutout.png",
+    "blender/fuxie/references/fuxie_ref_front.png",
+    "blender/fuxie/references/fuxie_ref_three_quarter.png",
+    "blender/fuxie/references/fuxie_ref_side.png",
+    "blender/fuxie/references/fuxie_ref_back.png",
+    "blender/fuxie/references/fuxie_ref_faces.png",
+    "blender/fuxie/references/fuxie_ref_tail_material.png"
+  ],
+  "outputs": {
+    "blend": "blender/fuxie/Fuxie_Character_v16_unified_source_skinned_rig.blend",
+    "glb": "assets/models/Fuxie_Character_v16_unified_source_skinned_rig.glb",
+    "fbx": "assets/models/Fuxie_Character_v16_unified_source_skinned_rig.fbx",
+    "preview": "blender/fuxie/Fuxie_preview_v16_unified_source_skinned_rig.png",
+    "public_glb": "apps/web/public/mascot-3d/live/fuxie-unified-source-skinned-rig-v16.glb",
+    "public_poster": "apps/web/public/mascot-3d/live/fuxie-unified-source-skinned-rig-v16-poster.png",
+    "public_manifest": "apps/web/public/mascot-3d/live/fuxie-unified-source-skinned-rig-v16.json"
+  },
+  "stats": {
+    "mesh_objects": 2,
+    "vertices_before_export_modifiers": 5425,
+    "faces_before_export_modifiers": 5328,
+    "bones": [
+      "root",
+      "hips",
+      "spine",
+      "chest",
+      "neck",
+      "head",
+      "jaw",
+      "ear.L.01",
+      "ear.R.01",
+      "upper_arm.L",
+      "forearm.L",
+      "hand.L",
+      "upper_arm.R",
+      "forearm.R",
+      "hand.R",
+      "upper_leg.L",
+      "shin.L",
+      "foot.L",
+      "upper_leg.R",
+      "shin.R",
+      "foot.R",
+      "tail.01",
+      "tail.02",
+      "tail.03",
+      "CTRL_root",
+      "CTRL_body",
+      "CTRL_head",
+      "CTRL_hand.L",
+      "CTRL_hand.R",
+      "CTRL_tail"
+    ],
+    "deform_bones": [
+      "root",
+      "hips",
+      "spine",
+      "chest",
+      "neck",
+      "head",
+      "jaw",
+      "ear.L.01",
+      "ear.R.01",
+      "upper_arm.L",
+      "forearm.L",
+      "hand.L",
+      "upper_arm.R",
+      "forearm.R",
+      "hand.R",
+      "upper_leg.L",
+      "shin.L",
+      "foot.L",
+      "upper_leg.R",
+      "shin.R",
+      "foot.R",
+      "tail.01",
+      "tail.02",
+      "tail.03"
+    ],
+    "control_bones": [
+      "CTRL_root",
+      "CTRL_body",
+      "CTRL_head",
+      "CTRL_hand.L",
+      "CTRL_hand.R",
+      "CTRL_tail"
+    ],
+    "grid": {
+      "cols": 54,
+      "rows": 88
+    },
+    "source_atlas": "blender/fuxie/references/fuxie_ref_front_cutout.png",
+    "cleaned_source_atlas": "blender/fuxie/generated/v16_unified_source/Fuxie_V16_UnifiedSourceClean.png",
+    "reference_planes": [
+      "Fuxie_V16_Reference_Front",
+      "Fuxie_V16_Reference_ThreeQuarter",
+      "Fuxie_V16_Reference_Faces",
+      "Fuxie_V16_Reference_Tail"
+    ],
+    "fps": 60,
+    "clips": {
+      "idle": {
+        "frames": 120,
+        "description": "60fps unified source mesh idle with breathing, ear focus, and tail sway."
+      },
+      "wave": {
+        "frames": 96,
+        "description": "60fps unified source mesh wave with weighted upper-arm/forearm/hand deformation."
+      },
+      "talk": {
+        "frames": 120,
+        "description": "60fps talk loop using jaw-weighted vertices on the same source atlas."
+      },
+      "listen": {
+        "frames": 120,
+        "description": "60fps head/chest listen tilt with ears and tail moving from the unified mesh."
+      },
+      "reward": {
+        "frames": 96,
+        "description": "60fps reward hop with squash/stretch and arm lift."
+      },
+      "tryAgain": {
+        "frames": 120,
+        "description": "60fps encouragement nod and hand cue."
+      }
+    },
+    "target_runtime": "60fps WebGL unified source mesh with skin weights"
+  },
+  "limits": [
+    "V16 removes most source-layer seams, but it remains a flat source-locked mesh rather than a full 3D sculpt.",
+    "Large rotations can still stretch the source image because hidden side surfaces do not exist.",
+    "The next quality step is manual weight-paint polish or a true generated/retopologized 3D volume with UVs painted from this source."
+  ],
+  "next_step": "Browser QA V16 against V15/V14/V6B, then tune weights if the unified no-seam identity pass is accepted."
+}

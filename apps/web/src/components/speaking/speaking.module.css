@@ -198,13 +198,13 @@
   top: 0;
 }
 .recordBtnIdle {
-  background: #FF6B35;
-  box-shadow: 0 5px 0 #E55A25;
+  background: #60A8E4;
+  box-shadow: 0 5px 0 #3078B4;
   color: #fff;
   font-size: 24px;
 }
-.recordBtnIdle:hover { top: 2px; box-shadow: 0 3px 0 #E55A25; }
-.recordBtnIdle:active { top: 4px; box-shadow: 0 1px 0 #E55A25; }
+.recordBtnIdle:hover { top: 2px; box-shadow: 0 3px 0 #3078B4; }
+.recordBtnIdle:active { top: 4px; box-shadow: 0 1px 0 #3078B4; }
 .recordBtnRecording {
   background: #EF4444;
   box-shadow: 0 5px 0 #DC2626;
@@ -478,7 +478,7 @@
   position: relative;
   top: 0;
 }
-.topicCard:hover { border-color: #FF6B35; box-shadow: 0 3px 0 #FF6B35; background: #FFF7ED; }
+.topicCard:hover { border-color: #60A8E4; box-shadow: 0 3px 0 #60A8E4; background: #F3FBFF; }
 .topicCard:active { top: 2px; box-shadow: 0 1px 0 #E5E7EB; }
 .topicIcon {
   width: 44px;
@@ -609,4 +609,3 @@
   border-radius: 999px;
   transition: width 0.5s ease;
 }
-

@@ -1,0 +1,190 @@
+{
+  "name": "fuxie_imagegen_parts_v2",
+  "source_sheet": "blender/fuxie/imagegen_parts/v2/fuxie_imagegen_parts_v2_sheet.png",
+  "source_note": "Codex image generation output based on Fuxie 3D references. These are newly generated modular body-part renders, not crops from the original Fuxie images.",
+  "usage_note": "Use this as the visual source pack for the next modular assembly and rig pass; keep V6B as runtime fallback until approved.",
+  "items": [
+    {
+      "id": "head_face",
+      "label": "head face",
+      "source_component_box": [
+        89,
+        50,
+        526,
+        456
+      ],
+      "crop_box": [
+        55,
+        16,
+        560,
+        490
+      ],
+      "workspace_path": "blender/fuxie/imagegen_parts/v2/parts/fuxie_imagegen_parts_v2_head_face.png",
+      "public_path": "apps/web/public/mascot-3d/imagegen-parts/v2/parts/fuxie_imagegen_parts_v2_head_face.png"
+    },
+    {
+      "id": "left_ear",
+      "label": "left ear",
+      "source_component_box": [
+        680,
+        98,
+        860,
+        408
+      ],
+      "crop_box": [
+        646,
+        64,
+        894,
+        442
+      ],
+      "workspace_path": "blender/fuxie/imagegen_parts/v2/parts/fuxie_imagegen_parts_v2_left_ear.png",
+      "public_path": "apps/web/public/mascot-3d/imagegen-parts/v2/parts/fuxie_imagegen_parts_v2_left_ear.png"
+    },
+    {
+      "id": "right_ear",
+      "label": "right ear",
+      "source_component_box": [
+        943,
+        100,
+        1138,
+        408
+      ],
+      "crop_box": [
+        909,
+        66,
+        1172,
+        442
+      ],
+      "workspace_path": "blender/fuxie/imagegen_parts/v2/parts/fuxie_imagegen_parts_v2_right_ear.png",
+      "public_path": "apps/web/public/mascot-3d/imagegen-parts/v2/parts/fuxie_imagegen_parts_v2_right_ear.png"
+    },
+    {
+      "id": "body_hoodie_token",
+      "label": "body hoodie token",
+      "source_component_box": [
+        81,
+        513,
+        534,
+        824
+      ],
+      "crop_box": [
+        47,
+        479,
+        568,
+        858
+      ],
+      "workspace_path": "blender/fuxie/imagegen_parts/v2/parts/fuxie_imagegen_parts_v2_body_hoodie_token.png",
+      "public_path": "apps/web/public/mascot-3d/imagegen-parts/v2/parts/fuxie_imagegen_parts_v2_body_hoodie_token.png"
+    },
+    {
+      "id": "left_arm_hand",
+      "label": "left arm hand",
+      "source_component_box": [
+        634,
+        532,
+        771,
+        807
+      ],
+      "crop_box": [
+        600,
+        498,
+        805,
+        841
+      ],
+      "workspace_path": "blender/fuxie/imagegen_parts/v2/parts/fuxie_imagegen_parts_v2_left_arm_hand.png",
+      "public_path": "apps/web/public/mascot-3d/imagegen-parts/v2/parts/fuxie_imagegen_parts_v2_left_arm_hand.png"
+    },
+    {
+      "id": "right_arm_hand",
+      "label": "right arm hand",
+      "source_component_box": [
+        1022,
+        532,
+        1158,
+        824
+      ],
+      "crop_box": [
+        988,
+        498,
+        1192,
+        858
+      ],
+      "workspace_path": "blender/fuxie/imagegen_parts/v2/parts/fuxie_imagegen_parts_v2_right_arm_hand.png",
+      "public_path": "apps/web/public/mascot-3d/imagegen-parts/v2/parts/fuxie_imagegen_parts_v2_right_arm_hand.png"
+    },
+    {
+      "id": "left_leg_shoe",
+      "label": "left leg shoe",
+      "source_component_box": [
+        55,
+        910,
+        249,
+        1150
+      ],
+      "crop_box": [
+        21,
+        876,
+        283,
+        1184
+      ],
+      "workspace_path": "blender/fuxie/imagegen_parts/v2/parts/fuxie_imagegen_parts_v2_left_leg_shoe.png",
+      "public_path": "apps/web/public/mascot-3d/imagegen-parts/v2/parts/fuxie_imagegen_parts_v2_left_leg_shoe.png"
+    },
+    {
+      "id": "right_leg_shoe",
+      "label": "right leg shoe",
+      "source_component_box": [
+        365,
+        910,
+        550,
+        1152
+      ],
+      "crop_box": [
+        331,
+        876,
+        584,
+        1186
+      ],
+      "workspace_path": "blender/fuxie/imagegen_parts/v2/parts/fuxie_imagegen_parts_v2_right_leg_shoe.png",
+      "public_path": "apps/web/public/mascot-3d/imagegen-parts/v2/parts/fuxie_imagegen_parts_v2_right_leg_shoe.png"
+    },
+    {
+      "id": "tail",
+      "label": "tail",
+      "source_component_box": [
+        624,
+        863,
+        916,
+        1133
+      ],
+      "crop_box": [
+        590,
+        829,
+        950,
+        1167
+      ],
+      "workspace_path": "blender/fuxie/imagegen_parts/v2/parts/fuxie_imagegen_parts_v2_tail.png",
+      "public_path": "apps/web/public/mascot-3d/imagegen-parts/v2/parts/fuxie_imagegen_parts_v2_tail.png"
+    },
+    {
+      "id": "bandana_token",
+      "label": "bandana token",
+      "source_component_box": [
+        979,
+        957,
+        1198,
+        1129
+      ],
+      "crop_box": [
+        945,
+        923,
+        1232,
+        1163
+      ],
+      "workspace_path": "blender/fuxie/imagegen_parts/v2/parts/fuxie_imagegen_parts_v2_bandana_token.png",
+      "public_path": "apps/web/public/mascot-3d/imagegen-parts/v2/parts/fuxie_imagegen_parts_v2_bandana_token.png"
+    }
+  ],
+  "contact_sheet": "blender/fuxie/imagegen_parts/v2/parts/fuxie_imagegen_parts_v2_contact_sheet.png",
+  "public_contact_sheet": "apps/web/public/mascot-3d/imagegen-parts/v2/parts/fuxie_imagegen_parts_v2_contact_sheet.png"
+}

@@ -2,7 +2,7 @@ import { redirect } from 'next/navigation'
 import { prisma } from '@fuxie/database'
 import { getServerUser } from '@/lib/auth/server-auth'
 import { cacheGet, cacheSet } from '@/lib/cache/redis'
-import { ReadingClient } from '@/components/reading/reading-client'
+import { ReadingClientDynamic } from '@/components/reading/ReadingClientDynamic'
 import { getReadingExerciseList, getReadingLevels, type CefrLevel } from '@/lib/content/reading'
 
 export const metadata = {
@@ -110,7 +110,7 @@ export default async function ReadingPage() {
 
     return (
         <div className="max-w-5xl mx-auto px-4 py-8">
-            <ReadingClient
+            <ReadingClientDynamic
                 teile={data.teile}
                 totalExercises={data.totalExercises}
                 totalCompleted={data.totalCompleted}

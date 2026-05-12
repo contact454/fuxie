@@ -1,7 +1,3 @@
-declare var window: any;
-declare var navigator: any;
-declare var Notification: any;
-
 // Helper to convert base64 VAPID key to Uint8Array
 function urlBase64ToUint8Array(base64String: string) {
     const padding = '='.repeat((4 - base64String.length % 4) % 4)

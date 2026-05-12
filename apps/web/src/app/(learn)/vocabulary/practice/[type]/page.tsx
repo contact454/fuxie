@@ -1,7 +1,7 @@
 import { redirect } from 'next/navigation'
 import { cookies } from 'next/headers'
 import { getServerUser } from '@/lib/auth/server-auth'
-import { ExercisePlayerWrapper } from '@/components/vocabulary/exercises/exercise-player-wrapper'
+import { ExercisePlayerWrapperDynamic } from '@/components/vocabulary/exercises/ExercisePlayerWrapperDynamic'
 import { generateVocabularyPractice, VocabPracticeError, VOCAB_PRACTICE_TYPES, type VocabPracticeType } from '@/lib/vocabulary/practice'
 
 interface PageProps {
@@ -59,7 +59,7 @@ export default async function ExerciseTypePage({ params, searchParams }: PagePro
     }
 
     return (
-        <ExercisePlayerWrapper
+        <ExercisePlayerWrapperDynamic
             type={type}
             theme={theme}
             level={level || 'A1'}

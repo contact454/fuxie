@@ -3,7 +3,7 @@ import { prisma } from '@fuxie/database'
 import { cookies } from 'next/headers'
 import { getServerUser } from '@/lib/auth/server-auth'
 import { cacheWrap } from '@/lib/cache/redis'
-import { GrammarClient } from '@/components/grammar/GrammarClient'
+import { GrammarClientDynamic } from '@/components/grammar/GrammarClientDynamic'
 
 export const metadata = {
     title: 'Fuxie 🦊 — Grammatik',
@@ -127,7 +127,7 @@ export default async function GrammarPage() {
 
     return (
         <div className="max-w-5xl mx-auto px-4 py-8">
-            <GrammarClient
+            <GrammarClientDynamic
                 topics={data.topics}
                 totalTopics={data.totalTopics}
                 totalCompleted={data.totalCompleted}

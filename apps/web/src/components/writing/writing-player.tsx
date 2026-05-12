@@ -2,7 +2,7 @@
 
 import { useState, useRef, useCallback, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
-import { Mascot } from '@/components/ui/mascot'
+import { FUXIE_3D_ASSETS, FuxieRoleMascot, SkillMotivationRail } from '@/components/gamification/quest-visuals'
 
 // ─── Types ──────────────────────────────────────────
 interface FormField {
@@ -244,6 +244,13 @@ export function WritingPlayer(props: WritingPlayerProps) {
     const isFormComplete = isFormular
         ? Object.keys(formValues).length >= (props.formFields?.length ?? 0) && Object.values(formValues).every(v => v.trim().length > 0)
         : wordCount >= props.minWords
+    const completedFormFields = isFormular
+        ? Object.values(formValues).filter(value => value.trim().length > 0).length
+        : 0
+    const writingProgress = isFormular
+        ? ((props.formFields?.length ?? 0) > 0 ? (completedFormFields / (props.formFields?.length ?? 1)) * 100 : 0)
+        : Math.min(100, (wordCount / Math.max(1, props.minWords)) * 100)
+    const writingReadiness = isFormComplete ? 'Ready' : isFormular ? 'Fill fields' : 'Build draft'
 
     // ─── Timer ──────────────────────────────────────
     useEffect(() => {
@@ -317,7 +324,7 @@ export function WritingPlayer(props: WritingPlayerProps) {
                 {/* ─── Score Header ─── */}
                 <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-8 text-center">
                     <div className="flex justify-center mb-4">
-                        <Mascot variant="celebrate" size={80} />
+                        <FuxieRoleMascot src={FUXIE_3D_ASSETS.postOffice} alt="Fuxie writing coach" size={96} motion="reward" />
                     </div>
                     <div className="flex justify-center mb-3">
                         <ScoreRing score={feedback.totalScore} maxScore={feedback.maxScore} />
@@ -442,7 +449,7 @@ export function WritingPlayer(props: WritingPlayerProps) {
             </div>
 
             {/* ─── Main Layout ─── */}
-            <div className="grid grid-cols-1 lg:grid-cols-5 gap-6">
+            <div className="grid grid-cols-1 lg:grid-cols-7 gap-6">
                 {/* LEFT: Instructions */}
                 <div className="lg:col-span-2 space-y-4">
                     <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-5">
@@ -591,6 +598,28 @@ export function WritingPlayer(props: WritingPlayerProps) {
                             </button>
                         </div>
                     </div>
+                </div>
+
+                <div className="lg:col-span-2">
+                    <SkillMotivationRail
+                        skill="writing"
+                        phaseLabel={isFormular ? 'Formular draft' : 'Writing draft'}
+                        title={isFormComplete ? 'Bài đã sẵn sàng để chấm' : 'Hoàn thiện bản nháp từng bước'}
+                        message="Layer này theo dõi số từ, thời gian và độ sẵn sàng mà không chen vào vùng viết chính."
+                        progressLabel="Draft readiness"
+                        progressPercent={writingProgress}
+                        metrics={[
+                            { label: 'Words', value: isFormular ? `${completedFormFields}/${props.formFields?.length ?? 0}` : `${wordCount}/${props.minWords}+` },
+                            { label: 'Time', value: formatTime(timeElapsed) },
+                            { label: 'Level', value: props.cefrLevel },
+                            { label: 'Status', value: writingReadiness },
+                        ]}
+                        rewards={[
+                            { type: 'xp', label: `+${Math.max(15, Math.round(props.timeMinutes / 2))} XP`, detail: 'Nộp bài viết' },
+                            { type: 'badge', label: 'Draft ready', detail: 'Đủ yêu cầu đề' },
+                            { type: 'exam', label: 'Exam skill', detail: `${props.textType} practice` },
+                        ]}
+                    />
                 </div>
             </div>
         </div>

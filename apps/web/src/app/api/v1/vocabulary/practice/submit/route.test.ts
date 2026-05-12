@@ -8,6 +8,7 @@ const {
     createAttemptMock,
     transactionMock,
     recordLearningActivityMock,
+    awardLearningFucoinMock,
     invalidateLearnerProgressCachesMock,
 } = vi.hoisted(() => ({
     withAuthMock: vi.fn(),
@@ -17,11 +18,13 @@ const {
     createAttemptMock: vi.fn(),
     transactionMock: vi.fn(),
     recordLearningActivityMock: vi.fn(),
+    awardLearningFucoinMock: vi.fn(),
     invalidateLearnerProgressCachesMock: vi.fn(),
 }))
 
 vi.mock('@/lib/auth/middleware', () => ({
     withAuth: withAuthMock,
+    AuthError: class AuthError extends Error {},
 }))
 
 vi.mock('@/lib/auth/db-user', () => ({
@@ -47,6 +50,10 @@ vi.mock('@/lib/progress/learning-activity', () => ({
 
 vi.mock('@/lib/progress/cache-invalidation', () => ({
     invalidateLearnerProgressCaches: invalidateLearnerProgressCachesMock,
+}))
+
+vi.mock('@/lib/gamification/fucoin', () => ({
+    awardLearningFucoin: awardLearningFucoinMock,
 }))
 
 import { POST } from './route'
@@ -78,6 +85,16 @@ describe('POST /api/v1/vocabulary/practice/submit', () => {
                 currentStreak: 5,
                 isNewDay: false,
             },
+        })
+        awardLearningFucoinMock.mockResolvedValue({
+            fucoinEarned: 5,
+            walletBalance: 21,
+            duplicate: false,
+            intendedAmount: 5,
+            dailyCap: 60,
+            dailyEarnedBefore: 0,
+            dailyRemainingAfter: 55,
+            capReached: false,
         })
         invalidateLearnerProgressCachesMock.mockResolvedValue(undefined)
         transactionMock.mockImplementation(async (callback: (tx: any) => Promise<any>) =>
@@ -116,6 +133,8 @@ describe('POST /api/v1/vocabulary/practice/submit', () => {
                 correctCount: 1,
                 accuracy: 100,
                 xpEarned: 25,
+                fucoinEarned: 5,
+                walletBalance: 21,
             },
         })
 
@@ -139,6 +158,16 @@ describe('POST /api/v1/vocabulary/practice/submit', () => {
                 percentScore: 100,
                 xpEarned: 25,
                 exercisesCompleted: 1,
+            })
+        )
+        expect(awardLearningFucoinMock).toHaveBeenCalledWith(
+            expect.anything(),
+            expect.objectContaining({
+                userId: 'db-user-1',
+                kind: 'activity',
+                sourceType: 'learning:vocabulary',
+                sourceId: 'attempt-1',
+                accuracy: 100,
             })
         )
         expect(invalidateLearnerProgressCachesMock).toHaveBeenCalledWith('db-user-1')

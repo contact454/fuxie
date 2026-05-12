@@ -3,6 +3,7 @@
 import { useState, useEffect, useCallback } from 'react'
 import { useRouter } from 'next/navigation'
 import { Mascot } from '@/components/ui/mascot'
+import { FuxiePanel, fuxieButtonClass } from '@/components/ui/fuxie-ui'
 import { ClozeExercise } from './cloze-exercise'
 import { MatchingExercise } from './matching-exercise'
 import { McExercise } from './mc-exercise'
@@ -66,9 +67,14 @@ export function ExercisePlayerWrapper({ type, theme, level, initialExerciseData,
     // Loading state
     if (isLoading) {
         return (
-            <div className="min-h-[100dvh] flex flex-col items-center justify-center bg-gray-50">
-                <Mascot variant="loading" size={80} />
-                <p className="mt-4 text-gray-500 font-medium">Đang tải bài luyện...</p>
+            <div className="flex min-h-[100dvh] items-center justify-center bg-[#F3FBFF] px-4">
+                <FuxiePanel variant="soft" className="flex w-full max-w-sm flex-col items-center p-8 text-center">
+                    <Mascot variant="loading" size={88} />
+                    <p className="mt-4 text-sm font-bold text-[#3C78A8]">Đang tải bài luyện...</p>
+                    <div className="mt-5 h-2 w-36 overflow-hidden rounded-full bg-[#CCE4F0]/70">
+                        <div className="h-full w-2/3 animate-pulse rounded-full bg-gradient-to-r from-[#60A8E4] to-[#2EC4B6]" />
+                    </div>
+                </FuxiePanel>
             </div>
         )
     }
@@ -76,21 +82,23 @@ export function ExercisePlayerWrapper({ type, theme, level, initialExerciseData,
     // Error state
     if (error || !questions || !exerciseData) {
         return (
-            <div className="min-h-[100dvh] flex flex-col items-center justify-center bg-gray-50">
-                <Mascot variant="encouragement" size={80} />
-                <p className="mt-4 text-red-500 font-medium">{error || 'Etwas ist schiefgelaufen'}</p>
-                <button
-                    onClick={loadQuestions}
-                    className="mt-4 px-6 py-2 rounded-xl bg-[#004E89] text-white font-semibold hover:opacity-90 transition"
-                >
-                    Thử lại
-                </button>
-                <button
-                    onClick={handleExit}
-                    className="mt-2 text-gray-500 hover:text-gray-700 text-sm"
-                >
-                    Về tổng quan
-                </button>
+            <div className="flex min-h-[100dvh] items-center justify-center bg-[#F3FBFF] px-4">
+                <FuxiePanel variant="default" className="flex w-full max-w-sm flex-col items-center p-8 text-center">
+                    <Mascot variant="encouragement" size={88} />
+                    <p className="mt-4 text-sm font-bold text-red-500">{error || 'Etwas ist schiefgelaufen'}</p>
+                    <button
+                        onClick={loadQuestions}
+                        className={fuxieButtonClass('primary', 'md', 'mt-5')}
+                    >
+                        Thử lại
+                    </button>
+                    <button
+                        onClick={handleExit}
+                        className={fuxieButtonClass('ghost', 'sm', 'mt-2')}
+                    >
+                        Về tổng quan
+                    </button>
+                </FuxiePanel>
             </div>
         )
     }
@@ -185,17 +193,19 @@ export function ExercisePlayerWrapper({ type, theme, level, initialExerciseData,
 
         default:
             return (
-                <div className="min-h-[100dvh] flex flex-col items-center justify-center bg-gray-50">
-                    <Mascot variant="studying" size={80} />
-                    <p className="mt-4 text-gray-500 font-medium">
-                        Dạng bài &quot;{type}&quot; sẽ sớm có!
-                    </p>
-                    <button
-                        onClick={handleExit}
-                        className="mt-4 px-6 py-2 rounded-xl bg-[#004E89] text-white font-semibold hover:opacity-90 transition"
-                    >
-                        Quay lại
-                    </button>
+                <div className="flex min-h-[100dvh] items-center justify-center bg-[#F3FBFF] px-4">
+                    <FuxiePanel variant="default" className="flex w-full max-w-sm flex-col items-center p-8 text-center">
+                        <Mascot variant="studying" size={88} />
+                        <p className="mt-4 text-gray-500 font-medium">
+                            Dạng bài &quot;{type}&quot; sẽ sớm có!
+                        </p>
+                        <button
+                            onClick={handleExit}
+                            className={fuxieButtonClass('primary', 'md', 'mt-4')}
+                        >
+                            Quay lại
+                        </button>
+                    </FuxiePanel>
                 </div>
             )
     }

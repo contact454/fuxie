@@ -1,7 +1,7 @@
 import { redirect } from 'next/navigation'
 import { getServerUser } from '@/lib/auth/server-auth'
 import { getVocabularyLevels, getVocabularyThemes, mapVocabularyThemes, type CefrLevel } from '@/lib/content/vocabulary'
-import { PracticeHub } from '@/components/vocabulary/practice-hub'
+import { PracticeHubDynamic } from '@/components/vocabulary/PracticeHubDynamic'
 
 export const metadata = {
     title: 'Fuxie - Luyện từ vựng',
@@ -25,7 +25,7 @@ export default async function PracticePage() {
 
     return (
         <div className="max-w-5xl mx-auto px-4 py-8">
-            <PracticeHub
+            <PracticeHubDynamic
                 themes={themes}
                 availableLevels={availableLevels}
                 initialLevel={defaultLevel}

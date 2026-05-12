@@ -1,0 +1,73 @@
+{
+  "name": "Fuxie_Character_v3_image_locked",
+  "source_note": "Image-locked Fuxie proxy using cropped approved Fuxie 3D render as the visible source of truth. This is not an exact reconstructed 3D mesh.",
+  "references": [
+    "blender/fuxie/references/fuxie_ref_front_cutout.png",
+    "blender/fuxie/references/fuxie_ref_front.png",
+    "blender/fuxie/references/fuxie_ref_three_quarter.png",
+    "blender/fuxie/references/fuxie_ref_side.png",
+    "blender/fuxie/references/fuxie_ref_back.png",
+    "blender/fuxie/references/fuxie_ref_faces.png",
+    "blender/fuxie/references/fuxie_ref_tail_material.png"
+  ],
+  "outputs": {
+    "blend": "blender/fuxie/Fuxie_Character_v3_image_locked.blend",
+    "glb": "assets/models/Fuxie_Character_v3_image_locked.glb",
+    "fbx": "assets/models/Fuxie_Character_v3_image_locked.fbx",
+    "preview": "blender/fuxie/Fuxie_preview_v3_image_locked.png"
+  },
+  "stats": {
+    "mesh_objects": 2,
+    "vertices_before_export_modifiers": 534,
+    "faces_before_export_modifiers": 577,
+    "bones": [
+      "root",
+      "hips",
+      "spine",
+      "chest",
+      "neck",
+      "head",
+      "ear.L",
+      "ear.R",
+      "upper_arm.L",
+      "forearm.L",
+      "hand.L",
+      "upper_arm.R",
+      "forearm.R",
+      "hand.R",
+      "upper_leg.L",
+      "shin.L",
+      "foot.L",
+      "upper_leg.R",
+      "shin.R",
+      "foot.R",
+      "tail.01",
+      "tail.02",
+      "tail.03"
+    ],
+    "reference_planes": [
+      "Fuxie_Reference_Front_ExactCrop",
+      "Fuxie_Reference_ThreeQuarter_ExactCrop",
+      "Fuxie_Reference_Side_ExactCrop",
+      "Fuxie_Reference_Back_ExactCrop",
+      "Fuxie_Reference_Faces_ExpressionSheet",
+      "Fuxie_Reference_Tail_Material"
+    ],
+    "fps": 60,
+    "clips": {
+      "idle": {
+        "frames": 120,
+        "description": "Image-locked 60fps breathing proxy from approved Fuxie render."
+      },
+      "wave": {
+        "frames": 90,
+        "description": "Image-locked mascot wave proxy; used only to validate runtime identity."
+      },
+      "talk": {
+        "frames": 120,
+        "description": "Image-locked talk bounce proxy; production mouth rig remains future work."
+      }
+    }
+  },
+  "next_step": "Use this image-locked proxy as the direct visual yardstick, then rebuild the true 3D sculpt/mesh by matching it instead of describing it from memory."
+}

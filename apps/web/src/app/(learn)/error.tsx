@@ -42,7 +42,7 @@ export default function LearnError({
                     </button>
                     <button
                         onClick={reset}
-                        className="flex-1 py-3 px-4 rounded-xl bg-gradient-to-r from-[#004E89] to-blue-600 text-white font-semibold text-sm hover:shadow-lg hover:shadow-blue-200 transition-all"
+                        className="flex-1 py-3 px-4 rounded-xl bg-gradient-to-r from-[#3C78A8] to-blue-600 text-white font-semibold text-sm hover:shadow-lg hover:shadow-blue-200 transition-all"
                     >
                         Thử lại
                     </button>

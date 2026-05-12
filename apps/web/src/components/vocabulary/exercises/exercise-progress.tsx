@@ -1,5 +1,7 @@
 'use client'
 
+import { FuxieBadge, FuxieProgressBar } from '@/components/ui/fuxie-ui'
+
 interface ExerciseProgressProps {
     current: number
     total: number
@@ -18,11 +20,12 @@ export function ExerciseProgress({ current, total, onClose, timer, cefrLevel }: 
     }
 
     return (
-        <div className="flex items-center gap-3 px-4 py-3 bg-white border-b border-gray-100">
+        <div className="flex items-center gap-3 border-b border-[#60A8E4]/10 bg-white/95 px-4 py-3 shadow-sm backdrop-blur">
             {/* Close button */}
             <button
                 onClick={onClose}
-                className="w-8 h-8 flex items-center justify-center rounded-lg hover:bg-gray-100 transition-colors text-gray-400 hover:text-gray-600"
+                aria-label="Close exercise"
+                className="flex h-9 w-9 items-center justify-center rounded-xl text-slate-400 transition-colors hover:bg-[#F3FBFF] hover:text-[#3C78A8] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#60A8E4]/40"
             >
                 <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
@@ -31,31 +34,26 @@ export function ExerciseProgress({ current, total, onClose, timer, cefrLevel }: 
 
             {/* Progress bar */}
             <div className="flex-1">
-                <div className="w-full h-3 bg-gray-100 rounded-full overflow-hidden">
-                    <div
-                        className="h-full bg-gradient-to-r from-emerald-400 to-emerald-500 rounded-full transition-all duration-500 ease-out"
-                        style={{ width: `${Math.max(progress, 2)}%` }}
-                    />
-                </div>
+                <FuxieProgressBar value={progress} className="h-3" />
             </div>
 
             {/* Question counter */}
-            <span className="text-sm text-gray-500 font-medium whitespace-nowrap">
+            <span className="whitespace-nowrap text-sm font-bold text-slate-500">
                 Câu {current} / {total}
             </span>
 
             {/* Timer */}
             {timer !== undefined && timer !== null && (
-                <span className="text-sm text-gray-400 font-mono whitespace-nowrap">
+                <span className="whitespace-nowrap rounded-full bg-[#F3FBFF] px-2.5 py-1 font-mono text-xs font-bold text-[#3C78A8] ring-1 ring-[#60A8E4]/15">
                     ⏱ {formatTime(timer)}
                 </span>
             )}
 
             {/* CEFR badge */}
             {cefrLevel && (
-                <span className="px-2 py-0.5 rounded-full text-xs font-bold bg-[#004E89] text-white">
+                <FuxieBadge tone="brand" className="shrink-0">
                     {cefrLevel}
-                </span>
+                </FuxieBadge>
             )}
         </div>
     )

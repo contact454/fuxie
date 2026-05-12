@@ -1,0 +1,97 @@
+{
+  "name": "fuxie_v10_coherent_layers",
+  "source": "blender/fuxie/imagegen_fullbody/v10/fuxie_imagegen_fullbody_v10_source.png",
+  "alpha_source": "blender/fuxie/generated/v10_layers/fuxie_imagegen_fullbody_v10_alpha.png",
+  "source_note": "Layers are segmented from one coherent Codex-generated full-body Fuxie render to reduce mismatched lighting/perspective seams.",
+  "items": [
+    {
+      "name": "Fuxie_V10_Tail",
+      "label": "tail",
+      "rect": [
+        650,
+        810,
+        960,
+        1258
+      ],
+      "workspace_path": "blender/fuxie/generated/v10_layers/Fuxie_V10_Tail.png"
+    },
+    {
+      "name": "Fuxie_V10_Leg_L",
+      "label": "left leg shoe",
+      "rect": [
+        230,
+        1038,
+        500,
+        1438
+      ],
+      "workspace_path": "blender/fuxie/generated/v10_layers/Fuxie_V10_Leg_L.png"
+    },
+    {
+      "name": "Fuxie_V10_Leg_R",
+      "label": "right leg shoe",
+      "rect": [
+        510,
+        1038,
+        815,
+        1445
+      ],
+      "workspace_path": "blender/fuxie/generated/v10_layers/Fuxie_V10_Leg_R.png"
+    },
+    {
+      "name": "Fuxie_V10_Body_Hoodie",
+      "label": "body hoodie",
+      "rect": [
+        175,
+        590,
+        842,
+        1145
+      ],
+      "workspace_path": "blender/fuxie/generated/v10_layers/Fuxie_V10_Body_Hoodie.png"
+    },
+    {
+      "name": "Fuxie_V10_Arm_L",
+      "label": "left arm hand",
+      "rect": [
+        150,
+        600,
+        390,
+        1125
+      ],
+      "workspace_path": "blender/fuxie/generated/v10_layers/Fuxie_V10_Arm_L.png"
+    },
+    {
+      "name": "Fuxie_V10_Arm_R",
+      "label": "right arm hand",
+      "rect": [
+        675,
+        600,
+        858,
+        1125
+      ],
+      "workspace_path": "blender/fuxie/generated/v10_layers/Fuxie_V10_Arm_R.png"
+    },
+    {
+      "name": "Fuxie_V10_Head",
+      "label": "head face",
+      "rect": [
+        130,
+        70,
+        875,
+        760
+      ],
+      "workspace_path": "blender/fuxie/generated/v10_layers/Fuxie_V10_Head.png"
+    },
+    {
+      "name": "Fuxie_V10_Mouth_Overlay",
+      "label": "mouth overlay",
+      "rect": [
+        420,
+        530,
+        610,
+        660
+      ],
+      "workspace_path": "blender/fuxie/generated/v10_layers/Fuxie_V10_Mouth_Overlay.png"
+    }
+  ],
+  "contact_sheet": "blender/fuxie/generated/v10_layers/fuxie_v10_layers_contact_sheet.png"
+}

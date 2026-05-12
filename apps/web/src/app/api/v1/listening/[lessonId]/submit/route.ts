@@ -4,6 +4,7 @@ import { cookies } from 'next/headers'
 import { getServerUser } from '@/lib/auth/server-auth'
 import { z } from 'zod'
 import { gradeListeningSubmission } from '@/lib/assessment/submission-grading'
+import { awardLearningFucoin } from '@/lib/gamification/fucoin'
 import { calculateListeningXp, recordLearningActivity } from '@/lib/progress/learning-activity'
 import { invalidateLearnerProgressCaches } from '@/lib/progress/cache-invalidation'
 
@@ -79,7 +80,7 @@ export async function POST(
         const baseXpEarned = calculateListeningXp(percentage)
 
         // Save attempt + unified learning activity
-        const { attempt, progress } = await prisma.$transaction(async (tx) => {
+        const { attempt, progress, fucoin } = await prisma.$transaction(async (tx) => {
             const newAttempt = await tx.listeningAttempt.create({
                 data: {
                     userId: serverUser.userId,
@@ -106,9 +107,26 @@ export async function POST(
                 exercisesCompleted: 1,
             })
 
+            const learningFucoin = await awardLearningFucoin(tx, {
+                userId: serverUser.userId,
+                kind: 'lesson',
+                sourceType: 'learning:listening',
+                sourceId: newAttempt.id,
+                accuracy: percentage,
+                reason: `Listening ${lesson.lessonId}`,
+                metadata: {
+                    attemptId: newAttempt.id,
+                    lessonId: lesson.lessonId,
+                    score,
+                    totalQuestions,
+                    percentage,
+                },
+            })
+
             return {
                 attempt: newAttempt,
                 progress: activity,
+                fucoin: learningFucoin,
             }
         })
 
@@ -122,6 +140,14 @@ export async function POST(
                 totalQuestions,
                 percentage,
                 xpEarned: progress.xpEarned,
+                fucoinEarned: fucoin.fucoinEarned,
+                walletBalance: fucoin.walletBalance,
+                fucoinDuplicate: fucoin.duplicate,
+                fucoinIntended: fucoin.intendedAmount,
+                fucoinDailyCap: fucoin.dailyCap,
+                fucoinDailyEarned: (fucoin.dailyEarnedBefore ?? 0) + fucoin.fucoinEarned,
+                fucoinDailyRemaining: fucoin.dailyRemainingAfter,
+                fucoinCapReached: fucoin.capReached,
                 streak: progress.streak,
                 timeTaken,
                 listenCount,

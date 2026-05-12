@@ -5,6 +5,12 @@ import { useState, useCallback, useEffect, useRef } from 'react'
 import { Flashcard } from './flashcard'
 import { RatingButtons } from './rating-buttons'
 import { Mascot } from '@/components/ui/mascot'
+import {
+    FuxiePanel,
+    FuxieProgressBar,
+    FuxieRewardList,
+    fuxieButtonClass,
+} from '@/components/ui/fuxie-ui'
 
 interface CardData {
     id: string
@@ -42,7 +48,7 @@ interface SessionStats {
     xpEarned: number
 }
 
-export function ReviewSession({ initialCards, totalDue }: ReviewSessionProps) {
+export function ReviewSession({ initialCards, totalDue: _totalDue }: ReviewSessionProps) {
     const [cards] = useState(initialCards)
     const [currentIndex, setCurrentIndex] = useState(0)
     const [isFlipped, setIsFlipped] = useState(false)
@@ -155,9 +161,7 @@ export function ReviewSession({ initialCards, totalDue }: ReviewSessionProps) {
                             +{stats.xpEarned} XP
                         </span>
                     </div>
-                    <div className="w-full h-2.5 bg-gray-200 rounded-full overflow-hidden">
-                        <div className="h-full bg-gradient-to-r from-emerald-400 to-emerald-500 rounded-full w-full" />
-                    </div>
+                    <FuxieProgressBar value={100} tone="success" />
                 </div>
 
                 {/* Mascot celebration */}
@@ -170,38 +174,44 @@ export function ReviewSession({ initialCards, totalDue }: ReviewSessionProps) {
                 <div className="mt-8 w-full max-w-md">
                     {/* Stats grid */}
                     <div className="grid grid-cols-3 gap-3 mb-6">
-                        <div className="bg-white rounded-xl p-4 shadow-sm border border-emerald-100 text-center">
+                        <FuxiePanel variant="soft" className="p-4 text-center">
                             <p className="text-xs text-gray-500 mb-1">✅ Đúng</p>
                             <p className="text-2xl font-bold text-emerald-600">{stats.correct}</p>
-                        </div>
-                        <div className="bg-white rounded-xl p-4 shadow-sm border border-red-100 text-center">
+                        </FuxiePanel>
+                        <FuxiePanel variant="default" className="p-4 text-center ring-1 ring-red-100">
                             <p className="text-xs text-gray-500 mb-1">❌ Chưa đúng</p>
                             <p className="text-2xl font-bold text-red-500">{stats.again}</p>
-                        </div>
-                        <div className="bg-white rounded-xl p-4 shadow-sm border border-fuxie-primary/20 text-center">
+                        </FuxiePanel>
+                        <FuxiePanel variant="soft" className="p-4 text-center">
                             <p className="text-xs text-gray-500 mb-1">⚡ Độ chính xác</p>
                             <p className="text-2xl font-bold text-fuxie-primary">{accuracy}%</p>
-                        </div>
+                        </FuxiePanel>
                     </div>
 
                     {/* XP badge */}
-                    <div className="flex justify-center gap-3 mb-6">
-                        <span className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-amber-400 to-orange-400 text-white text-sm font-bold shadow-md">
-                            ⭐ +{stats.xpEarned} XP nhận được
-                        </span>
-                    </div>
+                    <FuxieRewardList
+                        className="mb-6"
+                        items={[
+                            {
+                                icon: '★',
+                                label: `+${stats.xpEarned} XP`,
+                                detail: 'XP nhận được',
+                                tone: 'reward',
+                            },
+                        ]}
+                    />
 
                     {/* Actions */}
                     <div className="flex gap-3 justify-center">
                         <a
                             href="/vocabulary"
-                            className="px-5 py-3 rounded-xl border-2 border-gray-200 text-gray-700 font-semibold hover:bg-gray-50 transition-colors"
+                            className={fuxieButtonClass('ghost', 'lg')}
                         >
                             Về từ vựng
                         </a>
                         <a
                             href="/review"
-                            className="px-5 py-3 rounded-xl bg-gradient-to-r from-fuxie-primary to-orange-500 text-white font-semibold hover:opacity-90 transition-opacity shadow-lg shadow-orange-200"
+                            className={fuxieButtonClass('primary', 'lg')}
                         >
                             Học tiếp →
                         </a>
@@ -219,7 +229,7 @@ export function ReviewSession({ initialCards, totalDue }: ReviewSessionProps) {
     // ===== EMPTY STATE =====
     if (!currentCard) {
         return (
-            <div className="flex flex-col items-center justify-center min-h-[400px] text-center animate-fade-in">
+            <FuxiePanel variant="soft" className="flex min-h-[400px] flex-col items-center justify-center p-8 text-center animate-fade-in">
                 <Mascot
                     variant="empty"
                     size={120}
@@ -229,11 +239,11 @@ export function ReviewSession({ initialCards, totalDue }: ReviewSessionProps) {
                 <p className="text-gray-500 mb-6">Khám phá từ mới và thêm vào danh sách học.</p>
                 <a
                     href="/vocabulary"
-                    className="px-6 py-3 rounded-xl bg-gradient-to-r from-fuxie-primary to-orange-500 text-white font-semibold hover:opacity-90 transition-opacity"
+                    className={fuxieButtonClass('primary', 'lg')}
                 >
                     Khám phá từ vựng
                 </a>
-            </div>
+            </FuxiePanel>
         )
     }
 
@@ -252,12 +262,7 @@ export function ReviewSession({ initialCards, totalDue }: ReviewSessionProps) {
                         +{stats.xpEarned} XP
                     </span>
                 </div>
-                <div className="w-full h-2 bg-gray-200 rounded-full overflow-hidden">
-                    <div
-                        className="h-full bg-gradient-to-r from-fuxie-primary to-orange-400 rounded-full transition-all duration-500 ease-out"
-                        style={{ width: `${progress}%` }}
-                    />
-                </div>
+                <FuxieProgressBar value={progress} />
             </div>
 
             {/* Flashcard + Mascot area */}

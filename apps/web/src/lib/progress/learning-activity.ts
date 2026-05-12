@@ -41,12 +41,20 @@ export interface LearningActivityResult {
     streak: {
         currentStreak: number
         isNewDay: boolean
+        freezeUsed: boolean
+        freezesAvailable: number
+        freezesUsed: number
+        freezeUsageId: string | null
     }
 }
 
 interface StreakUpdateResult {
     currentStreak: number
     isNewDay: boolean
+    freezeUsed: boolean
+    freezesAvailable: number
+    freezesUsed: number
+    freezeUsageId: string | null
 }
 
 export function calculateExamXp(passed: boolean) {
@@ -81,8 +89,8 @@ export async function recordLearningActivity(
 ): Promise<LearningActivityResult> {
     const streak =
         input.updateStreak === false
-            ? { currentStreak: 0, isNewDay: false }
-            : await updateUserStreak(tx, input.userId)
+            ? { currentStreak: 0, isNewDay: false, freezeUsed: false, freezesAvailable: 0, freezesUsed: 0, freezeUsageId: null }
+            : await updateUserStreak(tx, input)
 
     const streakBonusXp = streak.isNewDay ? getStreakBonusXp(streak.currentStreak) : 0
     const totalXp = input.xpEarned + streakBonusXp
@@ -206,10 +214,11 @@ function startOfYesterday(today: Date) {
 
 async function updateUserStreak(
     tx: ProgressDbClient,
-    userId: string
+    input: LearningActivityInput
 ): Promise<StreakUpdateResult> {
     const today = startOfToday()
     const yesterday = startOfYesterday(today)
+    const userId = input.userId
     const streak = await tx.userStreak.findUnique({
         where: { userId },
     })
@@ -224,11 +233,18 @@ async function updateUserStreak(
             },
         })
 
-        return { currentStreak: 1, isNewDay: true }
+        return { currentStreak: 1, isNewDay: true, freezeUsed: false, freezesAvailable: 1, freezesUsed: 0, freezeUsageId: null }
     }
 
     if (streak.lastActivityDate && streak.lastActivityDate.getTime() >= today.getTime()) {
-        return { currentStreak: streak.currentStreak, isNewDay: false }
+        return {
+            currentStreak: streak.currentStreak,
+            isNewDay: false,
+            freezeUsed: false,
+            freezesAvailable: streak.freezesAvailable,
+            freezesUsed: streak.freezesUsed,
+            freezeUsageId: null,
+        }
     }
 
     if (streak.lastActivityDate && streak.lastActivityDate.getTime() >= yesterday.getTime()) {
@@ -242,7 +258,14 @@ async function updateUserStreak(
             },
         })
 
-        return { currentStreak, isNewDay: true }
+        return {
+            currentStreak,
+            isNewDay: true,
+            freezeUsed: false,
+            freezesAvailable: streak.freezesAvailable,
+            freezesUsed: streak.freezesUsed,
+            freezeUsageId: null,
+        }
     }
 
     if (streak.freezesAvailable > 0 && streak.lastActivityDate) {
@@ -252,6 +275,8 @@ async function updateUserStreak(
 
         if (daysSinceLastActivity <= 2) {
             const currentStreak = streak.currentStreak + 1
+            const freezesAvailable = Math.max(0, streak.freezesAvailable - 1)
+            const freezesUsed = streak.freezesUsed + 1
             await tx.userStreak.update({
                 where: { userId },
                 data: {
@@ -262,8 +287,27 @@ async function updateUserStreak(
                     freezesUsed: { increment: 1 },
                 },
             })
+            const usage = await tx.streakFreezeUsage.create({
+                data: {
+                    userId,
+                    usedAt: today,
+                    protectedStreak: currentStreak,
+                    freezesRemaining: freezesAvailable,
+                    freezesUsedTotal: freezesUsed,
+                    missedDays: Math.max(1, daysSinceLastActivity - 1),
+                    ...buildStreakFreezeUsageSource(input, today),
+                },
+                select: { id: true },
+            })
 
-            return { currentStreak, isNewDay: true }
+            return {
+                currentStreak,
+                isNewDay: true,
+                freezeUsed: true,
+                freezesAvailable,
+                freezesUsed,
+                freezeUsageId: usage.id,
+            }
         }
     }
 
@@ -275,7 +319,43 @@ async function updateUserStreak(
         },
     })
 
-    return { currentStreak: 1, isNewDay: true }
+    return {
+        currentStreak: 1,
+        isNewDay: true,
+        freezeUsed: false,
+        freezesAvailable: streak.freezesAvailable,
+        freezesUsed: streak.freezesUsed,
+        freezeUsageId: null,
+    }
+}
+
+function buildStreakFreezeUsageSource(input: LearningActivityInput, today: Date): {
+    sourceType: string
+    sourceId: string
+    metadata: Prisma.InputJsonValue
+} {
+    const sourceType = input.lessonId
+        ? 'lesson'
+        : input.exerciseId
+            ? 'exercise'
+            : 'learning_activity'
+    const sourceId = input.lessonId
+        ?? input.exerciseId
+        ?? today.toISOString().slice(0, 10)
+
+    return {
+        sourceType,
+        sourceId,
+        metadata: {
+            lessonId: input.lessonId ?? null,
+            exerciseId: input.exerciseId ?? null,
+            score: input.score ?? null,
+            maxScore: input.maxScore ?? null,
+            percentScore: input.percentScore ?? null,
+            xpEarned: input.xpEarned,
+            timeSpentSeconds: input.timeSpentSeconds ?? null,
+        },
+    }
 }
 
 function getStreakBonusXp(currentStreak: number) {

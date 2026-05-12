@@ -49,7 +49,7 @@ export function Sidebar({ dailyGoal }: SidebarProps) {
                     height={36}
                     className="object-contain"
                 />
-                <span className="text-xl font-bold bg-gradient-to-r from-[#FF6B35] to-[#004E89] bg-clip-text text-transparent">
+                <span className="text-xl font-bold bg-gradient-to-r from-[#60A8E4] to-[#3C78A8] bg-clip-text text-transparent">
                     Fuxie
                 </span>
             </div>
@@ -71,7 +71,7 @@ export function Sidebar({ dailyGoal }: SidebarProps) {
                                     source={item.labelKey}
                                     className={`flex items-center gap-3 rounded-xl px-4 py-2.5 text-sm font-medium transition-all duration-200
                                         ${isActive
-                                            ? 'bg-gradient-to-r from-[#FF6B35]/10 to-[#FF6B35]/5 text-[#FF6B35] shadow-sm'
+                                            ? 'bg-gradient-to-r from-[#60A8E4]/15 to-[#CCE4F0]/50 text-[#3C78A8] shadow-sm'
                                             : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900'
                                         }`}
                                 >
@@ -96,7 +96,7 @@ export function Sidebar({ dailyGoal }: SidebarProps) {
             <div className="border-t border-gray-100 px-4 py-4">
                 <div className={`rounded-xl p-3 transition-all ${goalReached
                     ? 'bg-gradient-to-r from-green-50 to-emerald-50 ring-1 ring-green-200/50'
-                    : 'bg-gradient-to-r from-[#FF6B35]/5 to-[#2EC4B6]/5'
+                    : 'bg-gradient-to-r from-[#60A8E4]/10 to-[#2EC4B6]/10'
                     }`}>
                     <div className="flex items-center justify-between mb-1.5">
                         <p className="text-xs font-semibold text-gray-600">
@@ -110,7 +110,7 @@ export function Sidebar({ dailyGoal }: SidebarProps) {
                     </div>
                     <div className="h-2 w-full rounded-full bg-gray-200/60">
                         <div
-                            className={`h-2 rounded-full transition-all duration-700 ${goalReached ? 'bg-green-500' : 'bg-gradient-to-r from-[#FF6B35] to-[#2EC4B6]'
+                            className={`h-2 rounded-full transition-all duration-700 ${goalReached ? 'bg-green-500' : 'bg-gradient-to-r from-[#60A8E4] to-[#2EC4B6]'
                                 }`}
                             style={{ width: `${goalPercent}%` }}
                         />

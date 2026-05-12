@@ -4,8 +4,11 @@ import { prisma } from '@fuxie/database'
 import { getServerUser } from '@/lib/auth/server-auth'
 import { cacheWrap } from '@/lib/cache/redis'
 import { getDashboardUserContext, getTodayActivitySummary } from '@/lib/dashboard/request-data'
+import { getMissionBoard } from '@/lib/gamification/missions'
+import { calculateFuxieXpLevel } from '@/lib/gamification/xp-level'
 import { getTodayPlan } from '@/lib/personalization/today-plan'
-import { DashboardClient, type DashboardData } from '@/components/dashboard/dashboard-client'
+import { DashboardClientDynamic } from '@/components/dashboard/DashboardClientDynamic'
+import type { DashboardData } from '@/components/dashboard/dashboard-client'
 import { StatsSkeleton, ContentSkeleton } from '@/components/dashboard/dashboard-skeletons'
 
 function getTimeGreeting(): string {
@@ -14,14 +17,6 @@ function getTimeGreeting(): string {
     if (hour < 12) return 'Guten Morgen'
     if (hour < 18) return 'Guten Tag'
     return 'Guten Abend'
-}
-
-function calculateFuxieLevel(totalXp: number): { level: number; title: string } {
-    if (totalXp >= 30000) return { level: Math.min(50, 41 + Math.floor((totalXp - 30000) / 5000)), title: 'Fuchs-Legende' }
-    if (totalXp >= 15000) return { level: 31 + Math.floor((totalXp - 15000) / 1500), title: 'Meister Fuchs' }
-    if (totalXp >= 6000) return { level: 21 + Math.floor((totalXp - 6000) / 900), title: 'Schlauer Fuchs' }
-    if (totalXp >= 2000) return { level: 11 + Math.floor((totalXp - 2000) / 400), title: 'Junger Fuchs' }
-    return { level: 1 + Math.floor(totalXp / 200), title: 'Fuchs-Baby' }
 }
 
 // ===== SPLIT FETCH FUNCTIONS =====
@@ -36,7 +31,7 @@ const getHeaderData = cache(async (userId: string) => {
     const settings = user?.settings
 
     const totalXp = profile?.totalXp ?? 0
-    const { level, title } = calculateFuxieLevel(totalXp)
+    const { level, title } = calculateFuxieXpLevel(totalXp)
 
     let examDaysLeft: number | null = null
     if (profile?.targetExamDate) {
@@ -65,6 +60,8 @@ const getHeaderData = cache(async (userId: string) => {
             currentStreak: streak?.currentStreak ?? 0,
             longestStreak: streak?.longestStreak ?? 0,
             lastActivityDate: streak?.lastActivityDate?.toISOString() ?? null,
+            freezesAvailable: streak?.freezesAvailable ?? 0,
+            freezesUsed: streak?.freezesUsed ?? 0,
         },
     }
 })
@@ -219,6 +216,28 @@ async function getContentData(userId: string) {
     }
 }
 
+async function getStreakFreezeTimeline(userId: string) {
+    const usages = await prisma.streakFreezeUsage.findMany({
+        where: { userId },
+        orderBy: { usedAt: 'desc' },
+        take: 3,
+        select: {
+            id: true,
+            usedAt: true,
+            protectedStreak: true,
+            freezesRemaining: true,
+            missedDays: true,
+            sourceType: true,
+            sourceId: true,
+        },
+    })
+
+    return usages.map((usage) => ({
+        ...usage,
+        usedAt: usage.usedAt.toISOString(),
+    }))
+}
+
 // ===== ASYNC SERVER COMPONENTS =====
 
 async function DashboardStats({ userId }: { userId: string }) {
@@ -229,7 +248,7 @@ async function DashboardStats({ userId }: { userId: string }) {
 
     // Stats need header data for study goal calculation
     return (
-        <DashboardClient
+        <DashboardClientDynamic
             section="stats"
             data={{ ...headerData, ...statsData } as Partial<DashboardData> as DashboardData}
         />
@@ -237,17 +256,19 @@ async function DashboardStats({ userId }: { userId: string }) {
 }
 
 async function DashboardContent({ userId }: { userId: string }) {
-    const [headerData, statsData, contentData, todayPlan] = await Promise.all([
+    const [headerData, statsData, contentData, todayPlan, missionBoard, streakFreezeTimeline] = await Promise.all([
         getHeaderData(userId),
         getStatsData(userId),
         cacheWrap(`dash:content:${userId}`, 60, () => getContentData(userId)),
         cacheWrap(`dash:today-plan:${userId}`, 30, () => getTodayPlan(userId)),
+        cacheWrap(`dash:mission-board:${userId}`, 30, () => getMissionBoard(userId)),
+        cacheWrap(`dash:freeze-timeline:${userId}`, 30, () => getStreakFreezeTimeline(userId)),
     ])
 
     return (
-        <DashboardClient
+        <DashboardClientDynamic
             section="content"
-            data={{ ...headerData, ...statsData, ...contentData, todayPlan } as DashboardData}
+            data={{ ...headerData, ...statsData, ...contentData, todayPlan, missionBoard, streakFreezeTimeline } as DashboardData}
         />
     )
 }
@@ -266,16 +287,16 @@ export default async function DashboardPage() {
     return (
         <>
             {/* Header renders immediately — fast single query */}
-            <DashboardClient section="header" data={headerData as Partial<DashboardData> as DashboardData} />
-
-            {/* Stats load independently with skeleton fallback */}
-            <Suspense fallback={<StatsSkeleton />}>
-                <DashboardStats userId={serverUser.userId} />
-            </Suspense>
+            <DashboardClientDynamic section="header" data={headerData as Partial<DashboardData> as DashboardData} />
 
             {/* Content loads independently with skeleton fallback */}
             <Suspense fallback={<ContentSkeleton />}>
                 <DashboardContent userId={serverUser.userId} />
+            </Suspense>
+
+            {/* Stats stay below the mission hub so the first viewport has one clear game loop */}
+            <Suspense fallback={<StatsSkeleton />}>
+                <DashboardStats userId={serverUser.userId} />
             </Suspense>
         </>
     )

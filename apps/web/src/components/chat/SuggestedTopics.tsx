@@ -17,7 +17,7 @@ export function SuggestedTopics({ topics, onSelect, variant = 'inline' }: Sugges
                     <button
                         key={i}
                         onClick={() => onSelect(topic)}
-                        className="group relative overflow-hidden rounded-xl px-3 py-3 text-left bg-white ring-1 ring-gray-100 shadow-sm hover:shadow-md hover:ring-orange-200 hover:scale-[1.02] active:scale-[0.98] transition-all duration-200 ease-out"
+                        className="group relative overflow-hidden rounded-xl px-3 py-3 text-left bg-white ring-1 ring-gray-100 shadow-sm hover:shadow-md hover:ring-[#60A8E4]/30 hover:scale-[1.02] active:scale-[0.98] transition-all duration-200 ease-out"
                         style={{ animationDelay: `${i * 60}ms` }}
                     >
                         <p className="text-xs text-gray-700 font-medium leading-snug line-clamp-2">
@@ -39,7 +39,7 @@ export function SuggestedTopics({ topics, onSelect, variant = 'inline' }: Sugges
                 <button
                     key={i}
                     onClick={() => onSelect(topic)}
-                    className="px-3 py-1.5 rounded-full text-[11px] font-medium bg-orange-50 text-orange-700 ring-1 ring-orange-200/50 hover:bg-orange-100 hover:ring-orange-300 active:scale-95 transition-all duration-150 suggested-topic-pill"
+                    className="px-3 py-1.5 rounded-full text-[11px] font-medium bg-[#F3FBFF] text-[#3C78A8] ring-1 ring-[#60A8E4]/25 hover:bg-[#CCE4F0]/45 hover:ring-[#60A8E4]/40 active:scale-95 transition-all duration-150 suggested-topic-pill"
                     style={{
                         animationDelay: `${i * 80}ms`,
                         opacity: 0,

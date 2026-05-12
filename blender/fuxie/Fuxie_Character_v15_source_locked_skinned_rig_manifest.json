@@ -1,0 +1,289 @@
+{
+  "name": "Fuxie_Character_v15_source_locked_skinned_rig",
+  "status": "source_identity_locked_skinned_rig_candidate",
+  "source_note": "V15 uses the approved Fuxie 3D render cutout as the visual source of truth, but replaces the old one-bone flat parts with subdivided skinned meshes and multi-bone vertex weights for arms, legs, body, head, and tail. It is still a 2.5D source-locked approximation, not a recovered original 3D mesh.",
+  "references": [
+    "blender/fuxie/references/fuxie_ref_front_cutout.png",
+    "blender/fuxie/references/fuxie_ref_front.png",
+    "blender/fuxie/references/fuxie_ref_three_quarter.png",
+    "blender/fuxie/references/fuxie_ref_side.png",
+    "blender/fuxie/references/fuxie_ref_back.png",
+    "blender/fuxie/references/fuxie_ref_faces.png",
+    "blender/fuxie/references/fuxie_ref_tail_material.png"
+  ],
+  "outputs": {
+    "blend": "blender/fuxie/Fuxie_Character_v15_source_locked_skinned_rig.blend",
+    "glb": "assets/models/Fuxie_Character_v15_source_locked_skinned_rig.glb",
+    "fbx": "assets/models/Fuxie_Character_v15_source_locked_skinned_rig.fbx",
+    "preview": "blender/fuxie/Fuxie_preview_v15_source_locked_skinned_rig.png",
+    "public_glb": "apps/web/public/mascot-3d/live/fuxie-source-locked-skinned-rig-v15.glb",
+    "public_poster": "apps/web/public/mascot-3d/live/fuxie-source-locked-skinned-rig-v15-poster.png",
+    "public_manifest": "apps/web/public/mascot-3d/live/fuxie-source-locked-skinned-rig-v15.json"
+  },
+  "stats": {
+    "mesh_objects": 10,
+    "vertices_before_export_modifiers": 2175,
+    "faces_before_export_modifiers": 1988,
+    "bones": [
+      "root",
+      "hips",
+      "spine",
+      "chest",
+      "neck",
+      "head",
+      "jaw",
+      "ear.L.01",
+      "ear.R.01",
+      "upper_arm.L",
+      "forearm.L",
+      "hand.L",
+      "upper_arm.R",
+      "forearm.R",
+      "hand.R",
+      "upper_leg.L",
+      "shin.L",
+      "foot.L",
+      "upper_leg.R",
+      "shin.R",
+      "foot.R",
+      "tail.01",
+      "tail.02",
+      "tail.03",
+      "CTRL_root",
+      "CTRL_body",
+      "CTRL_head",
+      "CTRL_hand.L",
+      "CTRL_hand.R",
+      "CTRL_tail"
+    ],
+    "deform_bones": [
+      "root",
+      "hips",
+      "spine",
+      "chest",
+      "neck",
+      "head",
+      "jaw",
+      "ear.L.01",
+      "ear.R.01",
+      "upper_arm.L",
+      "forearm.L",
+      "hand.L",
+      "upper_arm.R",
+      "forearm.R",
+      "hand.R",
+      "upper_leg.L",
+      "shin.L",
+      "foot.L",
+      "upper_leg.R",
+      "shin.R",
+      "foot.R",
+      "tail.01",
+      "tail.02",
+      "tail.03"
+    ],
+    "control_bones": [
+      "CTRL_root",
+      "CTRL_body",
+      "CTRL_head",
+      "CTRL_hand.L",
+      "CTRL_hand.R",
+      "CTRL_tail"
+    ],
+    "weighted_chains": {
+      "Fuxie_Arm_L": [
+        [
+          "upper_arm.L",
+          0.0
+        ],
+        [
+          "forearm.L",
+          0.45
+        ],
+        [
+          "hand.L",
+          1.0
+        ]
+      ],
+      "Fuxie_Arm_R": [
+        [
+          "upper_arm.R",
+          0.0
+        ],
+        [
+          "forearm.R",
+          0.45
+        ],
+        [
+          "hand.R",
+          1.0
+        ]
+      ],
+      "Fuxie_Leg_L": [
+        [
+          "upper_leg.L",
+          0.0
+        ],
+        [
+          "shin.L",
+          0.58
+        ],
+        [
+          "foot.L",
+          1.0
+        ]
+      ],
+      "Fuxie_Leg_R": [
+        [
+          "upper_leg.R",
+          0.0
+        ],
+        [
+          "shin.R",
+          0.58
+        ],
+        [
+          "foot.R",
+          1.0
+        ]
+      ],
+      "Fuxie_Tail": [
+        [
+          "tail.01",
+          0.0
+        ],
+        [
+          "tail.02",
+          0.5
+        ],
+        [
+          "tail.03",
+          1.0
+        ]
+      ],
+      "Fuxie_Body_Hoodie": [
+        [
+          "hips",
+          0.0
+        ],
+        [
+          "spine",
+          0.45
+        ],
+        [
+          "chest",
+          1.0
+        ]
+      ],
+      "Fuxie_Head": [
+        [
+          "neck",
+          0.0
+        ],
+        [
+          "head",
+          1.0
+        ]
+      ],
+      "Fuxie_Mouth_TalkOverlay": [
+        [
+          "jaw",
+          0.0
+        ],
+        [
+          "jaw",
+          1.0
+        ]
+      ],
+      "Fuxie_Chest_Token": [
+        [
+          "chest",
+          0.0
+        ],
+        [
+          "chest",
+          1.0
+        ]
+      ]
+    },
+    "grid_density": {
+      "Fuxie_Arm_L": [
+        8,
+        18
+      ],
+      "Fuxie_Arm_R": [
+        8,
+        18
+      ],
+      "Fuxie_Leg_L": [
+        8,
+        18
+      ],
+      "Fuxie_Leg_R": [
+        8,
+        18
+      ],
+      "Fuxie_Tail": [
+        18,
+        14
+      ],
+      "Fuxie_Body_Hoodie": [
+        14,
+        16
+      ],
+      "Fuxie_Head": [
+        18,
+        16
+      ],
+      "Fuxie_Mouth_TalkOverlay": [
+        6,
+        6
+      ],
+      "Fuxie_Chest_Token": [
+        6,
+        6
+      ]
+    },
+    "reference_planes": [
+      "Fuxie_V15_Reference_Front",
+      "Fuxie_V15_Reference_ThreeQuarter",
+      "Fuxie_V15_Reference_Faces",
+      "Fuxie_V15_Reference_Tail"
+    ],
+    "fps": 60,
+    "clips": {
+      "idle": {
+        "frames": 120,
+        "description": "60fps source-locked idle with breathing, ear focus, and tail chain sway."
+      },
+      "wave": {
+        "frames": 96,
+        "description": "60fps multi-bone skinned arm wave; upper arm, forearm, and hand are weighted separately."
+      },
+      "talk": {
+        "frames": 120,
+        "description": "60fps talk loop with jaw/mouth overlay, head nod, and small hand gesture."
+      },
+      "listen": {
+        "frames": 120,
+        "description": "60fps attentive listen with head/chest tilt, ear twitch, and tail counter motion."
+      },
+      "reward": {
+        "frames": 96,
+        "description": "60fps reward hop with squash/stretch and both arms raised."
+      },
+      "tryAgain": {
+        "frames": 120,
+        "description": "60fps encouragement loop with gentle nod and natural hand cue."
+      }
+    },
+    "generated_layers": "blender/fuxie/generated/v15_source_locked_skinned_layers",
+    "target_runtime": "60fps WebGL source-identity rig with true skin weights"
+  },
+  "limits": [
+    "V15 is much closer to the source identity than procedural mesh variants because it uses the approved render texture directly.",
+    "It is not yet a full volumetric 3D character; hidden side/back surfaces still require sculpt/retopo from a 3D generation pipeline or manual modeling.",
+    "Joint deformation is real skinning, but production quality still needs hand-painted weights, mesh cleanup around elbows/knees, and facial blendshapes."
+  ],
+  "next_step": "QA V15 against V6B and V14. If identity is approved, continue with weight-paint polish and replace flat source layers with UV-painted volume mesh."
+}

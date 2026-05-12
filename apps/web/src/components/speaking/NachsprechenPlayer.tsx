@@ -1,7 +1,7 @@
 import { useState, useRef, useCallback, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Mic, Square, Loader2, Check, AlertCircle, X, HelpCircle, Volume2, ArrowRight, RotateCcw } from 'lucide-react'
-import { MascotImage } from '../shared/mascot-image'
+import { FUXIE_3D_ASSETS, FuxieRoleMascot } from '@/components/gamification/quest-visuals'
 import styles from './speaking.module.css'
 import type { NachsprechenSentence, NachsprechenConfig, WordResult, EvaluationResult, RecordingState } from './types'
 import { speakWithBrowserTTS, cancelBrowserTTS } from '@/lib/audio/browser-tts'
@@ -391,13 +391,6 @@ export default function NachsprechenPlayer({ sentences, config, lessonTitle, les
     }
   }
 
-  const getMascotPose = (score: number) => {
-    if (score >= 90) return 'core-celebrate'
-    if (score >= 70) return 'learn-encouragement'
-    if (score >= 50) return 'learn-studying'
-    return 'learn-wrong'
-  }
-
   const getResultMessage = (score: number) => {
     if (score >= 90) return { main: 'Xuất sắc! 🎉', sub: 'Phát âm gần như hoàn hảo!' }
     if (score >= 70) return { main: 'Tốt lắm! 👍', sub: 'Chỉ cần cải thiện một chút nữa.' }
@@ -566,7 +559,12 @@ export default function NachsprechenPlayer({ sentences, config, lessonTitle, les
         >
           <div className={styles.resultHeader}>
             <div className={styles.mascotAndScore}>
-              <MascotImage pose={getMascotPose(result.accuracy)} size="sm" />
+              <FuxieRoleMascot
+                src={result.accuracy >= 90 ? FUXIE_3D_ASSETS.celebration : FUXIE_3D_ASSETS.speakingCoach}
+                alt="Fuxie speaking coach"
+                size={56}
+                motion={result.accuracy >= 70 ? 'reward' : 'speak'}
+              />
               <div className={styles.scoreCircleContainer}>
                 <svg width="72" height="72" viewBox="0 0 72 72" className={styles.scoreSvg}>
                   <circle cx="36" cy="36" r="32" fill="none" strokeWidth="6" className={styles.scoreTrack} />

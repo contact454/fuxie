@@ -1,0 +1,136 @@
+{
+  "name": "Fuxie_Character_v7b_true_mesh_polish",
+  "status": "image_guided_true_mesh_polish",
+  "source_note": "Stylized true-mesh 3D approximation built directly against the approved Fuxie 3D reference image set. This is not a 100% reconstruction of an unavailable source mesh.",
+  "identity_notes": [
+    "Head, ears, eyes, cheeks, hoodie, bandana/token, shoes, and tail proportions are matched against the Fuxie front and three-quarter references.",
+    "V7B keeps the real armature and six exported game animation clips from the V7 rig pipeline.",
+    "This version favors Fuxie identity over procedural purity while staying lightweight for real-time WebGL."
+  ],
+  "references": [
+    "blender/fuxie/references/fuxie_ref_front.png",
+    "blender/fuxie/references/fuxie_ref_three_quarter.png",
+    "blender/fuxie/references/fuxie_ref_side.png",
+    "blender/fuxie/references/fuxie_ref_back.png",
+    "blender/fuxie/references/fuxie_ref_faces.png",
+    "blender/fuxie/references/fuxie_ref_tail_material.png"
+  ],
+  "outputs": {
+    "blend": "blender/fuxie/Fuxie_Character_v7b_true_mesh_polish.blend",
+    "glb": "assets/models/Fuxie_Character_v7b_true_mesh_polish.glb",
+    "fbx": "assets/models/Fuxie_Character_v7b_true_mesh_polish.fbx",
+    "preview": "blender/fuxie/Fuxie_preview_v7b_true_mesh_polish.png",
+    "public_glb": "apps/web/public/mascot-3d/live/fuxie-true-mesh-v7b.glb",
+    "public_poster": "apps/web/public/mascot-3d/live/fuxie-true-mesh-v7b-poster.png",
+    "public_manifest": "apps/web/public/mascot-3d/live/fuxie-true-mesh-v7b.json"
+  },
+  "stats": {
+    "mesh_objects": 87,
+    "vertices_before_export_modifiers": 12272,
+    "faces_before_export_modifiers": 13117,
+    "bones": [
+      "root",
+      "hips",
+      "spine",
+      "chest",
+      "neck",
+      "head",
+      "jaw",
+      "ear.L.01",
+      "ear.R.01",
+      "upper_arm.L",
+      "forearm.L",
+      "hand.L",
+      "upper_arm.R",
+      "forearm.R",
+      "hand.R",
+      "upper_leg.L",
+      "shin.L",
+      "foot.L",
+      "upper_leg.R",
+      "shin.R",
+      "foot.R",
+      "tail.01",
+      "tail.02",
+      "tail.03",
+      "CTRL_root",
+      "CTRL_body",
+      "CTRL_head",
+      "CTRL_tail"
+    ],
+    "deform_bones": [
+      "root",
+      "hips",
+      "spine",
+      "chest",
+      "neck",
+      "head",
+      "jaw",
+      "ear.L.01",
+      "ear.R.01",
+      "upper_arm.L",
+      "forearm.L",
+      "hand.L",
+      "upper_arm.R",
+      "forearm.R",
+      "hand.R",
+      "upper_leg.L",
+      "shin.L",
+      "foot.L",
+      "upper_leg.R",
+      "shin.R",
+      "foot.R",
+      "tail.01",
+      "tail.02",
+      "tail.03"
+    ],
+    "control_bones": [
+      "CTRL_root",
+      "CTRL_body",
+      "CTRL_head",
+      "CTRL_tail"
+    ],
+    "reference_planes": [
+      "Fuxie_V7B_Reference_Front",
+      "Fuxie_V7B_Reference_ThreeQuarter",
+      "Fuxie_V7B_Reference_Side",
+      "Fuxie_V7B_Reference_Back",
+      "Fuxie_V7B_Reference_Faces",
+      "Fuxie_V7B_Reference_Tail"
+    ],
+    "fps": 60,
+    "clips": {
+      "idle": {
+        "frames": 120,
+        "description": "Smooth breathing, head bob, tail sway, and ear twitch at 60fps."
+      },
+      "wave": {
+        "frames": 96,
+        "description": "Left-hand wave with chest counter-sway and tail follow-through."
+      },
+      "talk": {
+        "frames": 120,
+        "description": "Jaw/mouth open-close, head nod, and hand gesture loop."
+      },
+      "listen": {
+        "frames": 120,
+        "description": "Attentive head tilt, ear focus, and gentle tail motion."
+      },
+      "reward": {
+        "frames": 96,
+        "description": "In-place hop with squash/stretch, arms up, and fast tail wag."
+      },
+      "tryAgain": {
+        "frames": 120,
+        "description": "Supportive nod, small hand wave, and soft posture."
+      }
+    },
+    "target_runtime": "60fps WebGL true mesh mascot rig"
+  },
+  "limits": [
+    "Approximation from render images only, not a recovered original 3D mesh.",
+    "Weights remain one-bone-per-part for stable game animation; production polish still needs blended weight paint.",
+    "Material colors are procedural and image-guided; no final painted UV atlas yet."
+  ],
+  "next_step": "Review V7B preview against the Fuxie 3D image set, then continue into UV/texture paint and blended deformation polish."
+}

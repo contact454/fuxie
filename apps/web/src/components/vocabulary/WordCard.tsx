@@ -47,7 +47,7 @@ export function WordCard({ word: w, variant }: WordCardProps) {
                 <p className="font-bold text-gray-900 text-sm leading-tight">{w.word}</p>
                 <p className="text-xs text-gray-500 mt-1 leading-tight line-clamp-1">{w.meaningNative}</p>
                 {w.meaningDe && (
-                    <p className="text-[11px] text-[#004E89] mt-0.5 leading-tight line-clamp-2">{w.meaningDe}</p>
+                    <p className="text-[11px] text-[#3C78A8] mt-0.5 leading-tight line-clamp-2">{w.meaningDe}</p>
                 )}
             </div>
         )
@@ -92,7 +92,7 @@ export function WordCard({ word: w, variant }: WordCardProps) {
                 </div>
                 <p className="text-xs text-gray-600 mt-0.5">{w.meaningNative}</p>
                 {w.meaningDe && (
-                    <p className="text-[11px] text-[#004E89] mt-0.5 font-medium">{w.meaningDe}</p>
+                    <p className="text-[11px] text-[#3C78A8] mt-0.5 font-medium">{w.meaningDe}</p>
                 )}
             </div>
 

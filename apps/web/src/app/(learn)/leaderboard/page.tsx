@@ -1,6 +1,6 @@
 import { redirect } from 'next/navigation'
 import { getServerUser } from '@/lib/auth/server-auth'
-import { LeaderboardClient } from '@/components/leaderboard/LeaderboardClient'
+import { LeaderboardClientDynamic } from '@/components/leaderboard/LeaderboardClientDynamic'
 
 export const metadata = {
     title: 'Fuxie 🦊 — Rangliste',
@@ -11,5 +11,5 @@ export default async function LeaderboardPage() {
     const user = await getServerUser()
     if (!user) redirect('/login')
 
-    return <LeaderboardClient />
+    return <LeaderboardClientDynamic />
 }

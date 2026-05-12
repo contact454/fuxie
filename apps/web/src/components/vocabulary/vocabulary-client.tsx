@@ -2,20 +2,28 @@
 
 import { useState, useCallback, useRef, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
+import Image from 'next/image'
 import Link from 'next/link'
-import dynamic from 'next/dynamic'
 import { useLocale } from 'next-intl'
+import dynamic from 'next/dynamic'
+import {
+    ArrowRight,
+    BookOpen,
+    CheckCircle2,
+    Flame,
+    LockKeyhole,
+    Map,
+    RotateCcw,
+    Sparkles,
+} from 'lucide-react'
 
+import { FuxieCoach, RewardPreview, type RewardPreviewItem } from '@/components/gamification/quest-visuals'
 import { Mascot } from '@/components/ui/mascot'
+import { FuxieBadge, FuxieLevelTabs, FuxiePanel, FuxieProgressBar, fuxieButtonClass } from '@/components/ui/fuxie-ui'
 import { getCefrTheme } from '@/lib/constants/cefr'
 import { useLevelSwitcher } from '@/hooks/use-level-switcher'
 
-import { type Theme, type VocabItem } from './vocabulary-types'
-
-const ThemeSelector = dynamic(() => import('./ThemeSelector').then(mod => mod.ThemeSelector), {
-    ssr: false,
-    loading: () => <div className="mb-6 h-[138px] rounded-2xl bg-gray-50 border border-gray-100 animate-pulse" />,
-})
+import { ProgressRing, type Theme, type VocabItem } from './vocabulary-types'
 
 const WordCard = dynamic(() => import('./WordCard').then(mod => mod.WordCard), {
     ssr: false,
@@ -29,6 +37,298 @@ interface VocabularyClientProps {
     totalDue: number
     availableLevels: string[]
     initialLevel: string
+}
+
+interface VocabularyQuestWorldProps {
+    themes: Theme[]
+    selectedSlug: string
+    selectedIndex: number
+    selectedTheme: Theme | null
+    currentLevel: string
+    availableLevels: string[]
+    totalWords: number
+    totalLearned: number
+    totalDue: number
+    overallProgress: number
+    cefrGradient: string
+    isLevelLoading: boolean
+    isAdding: boolean
+    onSelect: (slug: string) => void
+    onSwitchLevel: (level: string) => void
+    onPracticeTheme: () => void
+}
+
+const WORLD_NODE_GRADIENTS = [
+    'from-[#60A8E4] to-[#2EC4B6]',
+    'from-[#54A8E4] to-[#3C78A8]',
+    'from-[#7C3AED] to-[#60A8E4]',
+    'from-[#56B947] to-[#2EC4B6]',
+    'from-[#0EA5E9] to-[#2EC4B6]',
+    'from-[#F43F5E] to-[#FF8A3D]',
+]
+
+function getThemeProgress(theme: Theme) {
+    return theme.wordCount > 0
+        ? Math.round((theme.srsProgress.learned / theme.wordCount) * 100)
+        : 0
+}
+
+function getVocabularyRewards(selectedTheme: Theme | null, totalDue: number): RewardPreviewItem[] {
+    const dueCount = selectedTheme?.srsProgress.due ?? totalDue
+    const wordCount = selectedTheme?.wordCount ?? 0
+
+    return [
+        { type: 'xp', label: `+${Math.max(20, Math.round(wordCount / 2))} XP`, detail: 'Hoàn thành chủ đề' },
+        { type: dueCount > 0 ? 'streak' : 'unlock', label: dueCount > 0 ? `${dueCount} cần ôn` : 'SRS sạch', detail: 'Giữ nhịp nhớ từ' },
+        { type: 'unlock', label: 'Next theme', detail: 'Mở chặng tiếp theo' },
+    ]
+}
+
+function VocabularyQuestWorld({
+    themes,
+    selectedSlug,
+    selectedIndex,
+    selectedTheme,
+    currentLevel,
+    availableLevels,
+    totalWords,
+    totalLearned,
+    totalDue,
+    overallProgress,
+    cefrGradient,
+    isLevelLoading,
+    isAdding,
+    onSelect,
+    onSwitchLevel,
+    onPracticeTheme,
+}: VocabularyQuestWorldProps) {
+    const selectedProgress = selectedTheme ? getThemeProgress(selectedTheme) : 0
+    const nextTheme = themes[selectedIndex + 1] ?? themes.find(theme => getThemeProgress(theme) < 100)
+    const selectedWordCount = selectedTheme?.wordCount ?? 0
+    const practiceCtaLabel = isAdding
+        ? 'Đang mở ôn tập...'
+        : selectedTheme
+            ? `Ôn ${selectedWordCount} từ`
+            : 'Chọn chủ đề'
+    const mapWidth = Math.max(720, themes.length * 132)
+    const pathPercent = themes.length > 1
+        ? Math.min(100, Math.round((selectedIndex / (themes.length - 1)) * 100))
+        : 0
+
+    return (
+        <FuxiePanel variant="hero" className="mb-8 overflow-hidden">
+            <div className="relative">
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_12%_12%,rgba(96,168,228,0.32),transparent_30%),radial-gradient(circle_at_85%_10%,rgba(46,196,182,0.24),transparent_28%),linear-gradient(135deg,rgba(255,255,255,0.72),transparent_42%)]" />
+
+                <div className="relative grid gap-5 p-5 sm:p-6 lg:grid-cols-[minmax(0,1fr)_340px]">
+                    <div className="min-w-0">
+                        <div className="mb-4 flex flex-wrap items-center gap-2">
+                            <FuxieBadge tone="brand" className="bg-white/75">
+                                <Map className="h-3.5 w-3.5 text-[#2EC4B6]" />
+                                Word world {currentLevel}
+                            </FuxieBadge>
+                            <FuxieBadge tone="brand" className="bg-white/75">
+                                <BookOpen className="h-3.5 w-3.5 text-[#FFD166]" />
+                                {totalWords} từ
+                            </FuxieBadge>
+                            <FuxieBadge tone="reward" className="bg-white/75">
+                                <Flame className="h-3.5 w-3.5 text-[#FF8A3D]" />
+                                {totalDue} cần ôn
+                            </FuxieBadge>
+                        </div>
+
+                        {availableLevels.length > 1 && (
+                            <FuxieLevelTabs
+                                items={availableLevels}
+                                activeItem={currentLevel}
+                                onSelect={onSwitchLevel}
+                                disabled={isLevelLoading}
+                                getActiveClassName={(level) => {
+                                    const colors = getCefrTheme(level)
+                                    return `bg-gradient-to-r ${colors.gradient} text-white shadow-lg shadow-slate-950/20`
+                                }}
+                                ariaLabel="Vocabulary CEFR level filter"
+                                className="mb-5 bg-white/45"
+                            />
+                        )}
+
+                        <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+                            <div className="min-w-0">
+                                <p className="text-sm font-bold uppercase tracking-wide text-[#3C78A8]">Vocabulary world map</p>
+                                <h1 className="mt-2 text-3xl font-black leading-tight text-slate-950 sm:text-4xl">
+                                    Mở khóa từng đảo từ vựng
+                                </h1>
+                                <p className="mt-2 max-w-2xl text-sm font-medium leading-relaxed text-slate-600">
+                                    Chủ đề được biến thành hành trình có tiến độ, phần thưởng và next action rõ ràng để học viên biết nên học gì ngay.
+                                </p>
+                            </div>
+
+                            <button
+                                onClick={onPracticeTheme}
+                                disabled={!selectedTheme || isAdding || isLevelLoading}
+                                className={fuxieButtonClass('primary', 'lg', 'shrink-0 rounded-2xl')}
+                            >
+                                {practiceCtaLabel}
+                                <ArrowRight className="h-4 w-4" />
+                            </button>
+                        </div>
+
+                        <div className="mt-5 rounded-2xl bg-white/70 p-3 ring-1 ring-[#60A8E4]/20">
+                            <div className="flex items-center justify-between gap-3 text-xs font-bold text-slate-600">
+                                <span>{totalLearned}/{totalWords} từ đã học</span>
+                                <span>{overallProgress}% hoàn thành</span>
+                            </div>
+                            <FuxieProgressBar value={overallProgress} className="mt-2 h-3" />
+                        </div>
+
+                        <div className="mt-6 overflow-x-auto pb-3 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+                            <div
+                                className="relative flex items-center justify-between px-4 py-12"
+                                style={{ width: mapWidth }}
+                            >
+                                <div className="absolute left-12 right-12 top-1/2 h-3 -translate-y-1/2 rounded-full bg-[#CCE4F0]/70" />
+                                <div
+                                    className={`absolute left-12 top-1/2 h-3 -translate-y-1/2 rounded-full bg-gradient-to-r ${cefrGradient}`}
+                                    style={{ width: `calc((100% - 6rem) * ${pathPercent / 100})` }}
+                                />
+
+                                {themes.map((theme, index) => {
+                                    const isSelected = theme.slug === selectedSlug
+                                    const progress = getThemeProgress(theme)
+                                    const isDone = progress >= 100
+                                    const gradient = WORLD_NODE_GRADIENTS[index % WORLD_NODE_GRADIENTS.length]
+                                    const offsetClass = index % 2 === 0 ? 'translate-y-5' : '-translate-y-5'
+
+                                    return (
+                                        <button
+                                            key={theme.id}
+                                            onClick={() => onSelect(theme.slug)}
+                                            className={`group relative z-10 flex w-24 flex-col items-center ${offsetClass}`}
+                                            aria-label={`Chọn chủ đề ${theme.name}`}
+                                        >
+                                            <span
+                                                className={`relative flex h-16 w-16 items-center justify-center overflow-hidden rounded-2xl shadow-xl ring-4 transition group-hover:-translate-y-1 ${
+                                                    isSelected
+                                                        ? 'ring-[#FFD166]/80'
+                                                        : isDone
+                                                            ? 'ring-[#2EC4B6]/45'
+                                                            : 'ring-white/25'
+                                                } bg-gradient-to-br ${gradient}`}
+                                            >
+                                                {theme.imageUrl ? (
+                                                    <Image
+                                                        src={theme.imageUrl}
+                                                        alt=""
+                                                        fill
+                                                        sizes="64px"
+                                                        className="object-cover opacity-85"
+                                                    />
+                                                ) : null}
+                                                <span className="absolute inset-0 bg-slate-950/15" />
+                                                <span className="relative flex h-9 w-9 items-center justify-center rounded-xl bg-white/90 text-[#3C78A8] shadow-sm">
+                                                    {isDone ? (
+                                                        <CheckCircle2 className="h-5 w-5 text-[#56B947]" />
+                                                    ) : isSelected ? (
+                                                        <Sparkles className="h-5 w-5 text-[#60A8E4]" />
+                                                    ) : (
+                                                        <BookOpen className="h-5 w-5" />
+                                                    )}
+                                                </span>
+                                                <span className="absolute -bottom-1 -right-1 rounded-full bg-white p-0.5">
+                                                    <ProgressRing progress={progress} size={26} strokeWidth={3} />
+                                                </span>
+                                            </span>
+                                            <span className={`mt-3 max-w-24 truncate text-center text-[11px] font-black ${isSelected ? 'text-[#3C78A8]' : 'text-slate-500'}`}>
+                                                {theme.name}
+                                            </span>
+                                            <span className="mt-1 text-[10px] font-bold text-slate-400">{progress}%</span>
+                                        </button>
+                                    )
+                                })}
+
+                                <div className="-translate-y-7">
+                                    <span className="relative z-10 flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-[#FFD166] to-[#FF8A3D] text-white shadow-xl ring-4 ring-white/70">
+                                        <LockKeyhole className="h-7 w-7" />
+                                    </span>
+                                    <span className="mt-3 block text-center text-xs font-black text-[#FFD166]">Next reward</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="flex min-w-0 flex-col gap-4">
+                        <FuxiePanel className="overflow-hidden p-4 shadow-lg ring-1 ring-white/70">
+                            <div className="flex items-start gap-4">
+                                <div className="relative flex h-20 w-20 shrink-0 items-center justify-center overflow-hidden rounded-2xl bg-slate-100">
+                                    {selectedTheme?.imageUrl ? (
+                                        <Image
+                                            src={selectedTheme.imageUrl}
+                                            alt={selectedTheme.name}
+                                            fill
+                                            sizes="80px"
+                                            className="object-cover"
+                                        />
+                                    ) : (
+                                        <BookOpen className="h-8 w-8 text-[#3C78A8]" />
+                                    )}
+                                </div>
+                                <div className="min-w-0 flex-1">
+                                    <p className="text-xs font-black uppercase tracking-wide text-[#3C78A8]">Đang chọn</p>
+                                    <h2 className="mt-1 truncate text-xl font-black text-slate-950">
+                                        {selectedTheme?.name ?? 'Chọn chủ đề'}
+                                    </h2>
+                                    <p className="mt-1 text-sm font-semibold text-slate-500">
+                                        {selectedTheme?.nameNative ?? 'Bắt đầu bằng một đảo từ vựng'}
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div className="mt-4">
+                                <div className="flex items-center justify-between text-xs font-bold text-slate-500">
+                                    <span>Theme mastery</span>
+                                    <span>{selectedProgress}%</span>
+                                </div>
+                                <FuxieProgressBar value={selectedProgress} tone="success" className="mt-2" />
+                            </div>
+
+                            <div className="mt-4 grid grid-cols-2 gap-2">
+                                <button
+                                    onClick={onPracticeTheme}
+                                    disabled={!selectedTheme || isAdding || isLevelLoading}
+                                    className={fuxieButtonClass('primary', 'md', 'rounded-xl px-3')}
+                                >
+                                    <Sparkles className="h-4 w-4" />
+                                    {practiceCtaLabel}
+                                </button>
+                                <Link
+                                    href="/review"
+                                    className={fuxieButtonClass('secondary', 'md', 'rounded-xl px-3')}
+                                >
+                                    <RotateCcw className="h-4 w-4" />
+                                    Ôn tập
+                                </Link>
+                            </div>
+                        </FuxiePanel>
+
+                        <FuxieCoach
+                            role="coach"
+                            eyebrow="Fuxie tip"
+                            title={nextTheme ? `Tiếp theo: ${nextTheme.name}` : 'Giữ nhịp học hôm nay'}
+                            message="Map giúp học viên thấy tiến độ theo chủ đề thay vì chỉ nhìn danh sách card, nên động lực học rõ hơn ngay từ màn đầu."
+                            className="bg-white"
+                        />
+
+                        <div className="rounded-2xl bg-white/10 p-3 ring-1 ring-white/15 backdrop-blur">
+                            <RewardPreview
+                                layout="stack"
+                                rewards={getVocabularyRewards(selectedTheme, totalDue)}
+                            />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </FuxiePanel>
+    )
 }
 
 // ─── Main Component ─────────────────────────────────
@@ -77,6 +377,7 @@ export function VocabularyClient({ themes, totalWords, totalDue, availableLevels
     const selectedTheme = currentThemes.find(t => t.slug === selectedThemeSlug) ?? null
     const totalLearned = currentThemes.reduce((s, t) => s + t.srsProgress.learned, 0)
     const overallProgress = currentTotalWords > 0 ? Math.round((totalLearned / currentTotalWords) * 100) : 0
+    const selectedThemeIndex = Math.max(0, currentThemes.findIndex(t => t.slug === selectedThemeSlug))
 
     // ── Data fetching ──
     const loadWordsForLevel = useCallback(async (slug: string, level: string) => {
@@ -123,11 +424,12 @@ export function VocabularyClient({ themes, totalWords, totalDue, availableLevels
         if (!selectedTheme) return
         setIsAdding(true)
         try {
-            await fetch('/api/v1/srs/cards', {
+            const res = await fetch('/api/v1/srs/cards', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ themeSlug: selectedTheme.slug }),
             })
+            if (!res.ok) throw new Error(`Could not open review for ${selectedTheme.slug}`)
             router.push('/review')
         } catch (err) {
             console.error(err)
@@ -137,80 +439,26 @@ export function VocabularyClient({ themes, totalWords, totalDue, availableLevels
     }
 
     return (
-        <div className="max-w-5xl mx-auto px-4 py-6">
-
-            {/* ══════ SECTION 1 — Hero Banner ══════ */}
-            <div className="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm mb-6">
-                {/* CEFR Level Tabs */}
-                {availableLevels.length > 1 && (
-                    <div className="flex gap-2 mb-4">
-                        {availableLevels.map(level => {
-                            const colors = getCefrTheme(level)
-                            const isActive = level === currentLevel
-                            return (
-                                <button
-                                    key={level}
-                                    onClick={() => switchLevel(level)}
-                                    disabled={isLevelLoading}
-                                    className={`px-4 py-2 rounded-xl text-sm font-bold transition-all ${isActive
-                                        ? `bg-gradient-to-r ${colors.gradient} text-white shadow-md scale-105`
-                                        : 'bg-gray-100 text-gray-500 hover:bg-gray-200'
-                                        } ${isLevelLoading ? 'opacity-50 cursor-wait' : ''}`}
-                                >
-                                    {level}
-                                </button>
-                            )
-                        })}
-                    </div>
-                )}
-                <div className="flex items-center gap-4">
-                    <Mascot variant="wortschatz" size={56} />
-                    <div className="flex-1">
-                        <h1 className="text-2xl font-bold text-gray-900">Từ vựng {currentLevel}</h1>
-                        <p className="text-sm text-gray-500 mt-0.5">
-                            <span className="font-semibold text-gray-700">{totalLearned}</span> / {currentTotalWords} từ đã học
-                        </p>
-                    </div>
-                    <div className="flex gap-2">
-                        <Link
-                            href="/vocabulary/practice"
-                            className="flex items-center gap-2 px-5 py-3 rounded-xl border-2 border-[#004E89] text-[#004E89] font-bold text-sm hover:bg-[#004E89]/5 transition-all whitespace-nowrap"
-                        >
-                            <span>🎯</span>
-                            Luyện tập
-                        </Link>
-                        <Link
-                            href="/review"
-                            className={`flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r ${cefrColors?.gradient ?? 'from-[#FF6B35] to-orange-500'} text-white font-bold text-sm hover:opacity-90 transition-all shadow-lg whitespace-nowrap`}
-                        >
-                            <span>✨</span>
-                            Học ngay
-                            {currentTotalDue > 0 && (
-                                <span className="ml-1 bg-white/20 rounded-lg px-2 py-0.5 text-xs">{currentTotalDue}</span>
-                            )}
-                        </Link>
-                    </div>
-                </div>
-                {/* Overall progress bar */}
-                <div className="mt-4">
-                    <div className="w-full h-2 bg-gray-100 rounded-full overflow-hidden">
-                        <div
-                            className="h-full bg-gradient-to-r from-[#FF6B35] to-orange-400 rounded-full transition-all duration-700"
-                            style={{ width: `${Math.max(overallProgress, 1)}%` }}
-                        />
-                    </div>
-                    <p className="text-xs text-gray-400 mt-1.5 text-right">{overallProgress}% hoàn thành</p>
-                </div>
-            </div>
-
-            {/* ══════ SECTION 2 — Theme Selector ══════ */}
-            <ThemeSelector
+        <div className="max-w-6xl mx-auto px-4 py-6">
+            <VocabularyQuestWorld
                 themes={currentThemes}
                 selectedSlug={selectedThemeSlug}
+                selectedIndex={selectedThemeIndex}
+                selectedTheme={selectedTheme}
+                currentLevel={currentLevel}
+                availableLevels={availableLevels}
+                totalWords={currentTotalWords}
+                totalLearned={totalLearned}
+                totalDue={currentTotalDue}
+                overallProgress={overallProgress}
+                cefrGradient={cefrColors?.gradient ?? 'from-[#60A8E4] to-[#3C78A8]'}
+                isLevelLoading={isLevelLoading}
+                isAdding={isAdding}
                 onSelect={selectTheme}
+                onSwitchLevel={switchLevel}
+                onPracticeTheme={addToSrsAndPractice}
             />
 
-            {/* ══════ SECTION 3 — Theme Detail Panel ══════ */}
             {selectedTheme && (
                 <div
                     ref={detailRef}
@@ -218,14 +466,18 @@ export function VocabularyClient({ themes, totalWords, totalDue, availableLevels
                 >
                     {/* Theme Header */}
                     <div className="p-6 flex items-start gap-5">
-                        <div className="w-24 h-24 rounded-2xl bg-gray-100 flex items-center justify-center text-4xl flex-shrink-0 overflow-hidden">
+                        <div className="relative w-24 h-24 rounded-2xl bg-gray-100 flex items-center justify-center text-4xl flex-shrink-0 overflow-hidden">
                             {selectedTheme.imageUrl ? (
-                                <img
+                                <Image
                                     src={selectedTheme.imageUrl}
                                     alt={selectedTheme.name}
-                                    className="w-full h-full object-cover"
+                                    fill
+                                    sizes="96px"
+                                    className="object-cover"
                                 />
-                            ) : '📖'}
+                            ) : (
+                                <BookOpen className="h-9 w-9 text-[#3C78A8]" />
+                            )}
                         </div>
 
                         <div className="flex-1 min-w-0">
@@ -244,18 +496,12 @@ export function VocabularyClient({ themes, totalWords, totalDue, availableLevels
                                             : 0}%
                                     </span>
                                 </div>
-                                <div className="w-full h-2.5 bg-gray-100 rounded-full overflow-hidden">
-                                    <div
-                                        className="h-full bg-gradient-to-r from-emerald-400 to-emerald-500 rounded-full transition-all duration-500"
-                                        style={{
-                                            width: `${Math.max(
-                                                selectedTheme.wordCount > 0
-                                                    ? (selectedTheme.srsProgress.learned / selectedTheme.wordCount) * 100
-                                                    : 0
-                                                , 2)}%`
-                                        }}
-                                    />
-                                </div>
+                                <FuxieProgressBar
+                                    value={selectedTheme.wordCount > 0
+                                        ? (selectedTheme.srsProgress.learned / selectedTheme.wordCount) * 100
+                                        : 0}
+                                    tone="success"
+                                />
                             </div>
 
                             {/* Action Buttons */}
@@ -264,7 +510,7 @@ export function VocabularyClient({ themes, totalWords, totalDue, availableLevels
                                     onClick={() => setShowAllWords(!showAllWords)}
                                     className={`flex-1 flex items-center justify-center gap-2 py-2.5 px-4 rounded-xl text-sm font-semibold border-2 transition-all
                                         ${showAllWords
-                                            ? 'border-[#004E89] bg-[#004E89]/5 text-[#004E89]'
+                                            ? 'border-[#3C78A8] bg-[#60A8E4]/10 text-[#3C78A8]'
                                             : 'border-gray-200 bg-white text-gray-700 hover:border-gray-300'
                                         }`}
                                 >
@@ -274,10 +520,10 @@ export function VocabularyClient({ themes, totalWords, totalDue, availableLevels
                                 <button
                                     onClick={addToSrsAndPractice}
                                     disabled={isAdding}
-                                    className="flex-1 flex items-center justify-center gap-2 py-2.5 px-4 rounded-xl text-sm font-semibold bg-gradient-to-r from-[#FF6B35] to-orange-500 text-white hover:opacity-90 transition-all shadow-sm disabled:opacity-50"
+                                    className={fuxieButtonClass('primary', 'md', 'flex-1 rounded-xl py-2.5 px-4 shadow-sm')}
                                 >
                                     <span>🎯</span>
-                                    {isAdding ? 'Đang tải...' : 'Luyện chủ đề'}
+                                    {isAdding ? 'Đang mở ôn tập...' : `Ôn ${selectedTheme.wordCount} từ`}
                                 </button>
                             </div>
                         </div>
@@ -306,7 +552,7 @@ export function VocabularyClient({ themes, totalWords, totalDue, availableLevels
                                     {words.length > 0 && (
                                         <button
                                             onClick={() => setShowAllWords(true)}
-                                            className="mt-3 text-sm font-semibold text-[#FF6B35] hover:text-orange-600 transition-colors flex items-center gap-1"
+                                            className="mt-3 text-sm font-semibold text-[#3C78A8] hover:text-[#3078B4] transition-colors flex items-center gap-1"
                                         >
                                             {words.length > 12
                                                 ? `Xem tất cả ${selectedTheme.wordCount} từ`

@@ -15,7 +15,9 @@ import {
     type LucideIcon,
 } from 'lucide-react'
 import { MeasuredLink } from '@/components/performance/measured-link'
+import { FUXIE_3D_ASSETS, FuxieRoleMascot } from '@/components/gamification/quest-visuals'
 import { Mascot } from '@/components/ui/mascot'
+import { FuxieBadge, FuxiePanel, FuxieProgressBar, fuxieButtonClass } from '@/components/ui/fuxie-ui'
 import { useLevelSwitcher } from '@/hooks/use-level-switcher'
 import { getCefrTheme } from '@/lib/constants/cefr'
 
@@ -61,7 +63,7 @@ function ProgressRing({ progress, size = 40, strokeWidth = 3.5 }: { progress: nu
                 cx={size / 2}
                 cy={size / 2}
                 r={radius}
-                stroke={progress >= 100 ? '#10B981' : '#FF6B35'}
+                stroke={progress >= 100 ? '#10B981' : '#60A8E4'}
                 strokeWidth={strokeWidth}
                 fill="none"
                 strokeDasharray={circumference}
@@ -150,7 +152,7 @@ export function ReadingClient({ teile, totalExercises, totalCompleted, available
 
     return (
         <div className="max-w-5xl mx-auto">
-            <div className="rounded-2xl border border-gray-100 shadow-sm mb-6 overflow-hidden" style={{ background: `linear-gradient(180deg, ${cefrColors.bg}22 0%, #FFFFFF 100%)` }}>
+            <FuxiePanel variant="hero" className="mb-6 overflow-hidden">
                 <div className="h-1" style={{ background: cefrColors.cssGradient }} />
 
                 <div className="p-6">
@@ -177,11 +179,15 @@ export function ReadingClient({ teile, totalExercises, totalCompleted, available
                         </div>
                     )}
                     <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
-                        <Mascot variant="lesen" size={56} />
+                        <FuxieRoleMascot src={FUXIE_3D_ASSETS.librarian} alt="Fuxie reading coach" size={64} motion="coach" />
                         <div className="flex-1">
-                            <h1 className="text-2xl font-bold text-gray-900">Luyện đọc {currentLevel}</h1>
-                            <p className="text-sm text-gray-500 mt-0.5">
-                                <span className="font-semibold" style={{ color: cefrColors.text }}>{currentCompleted}</span> / {currentTotal} bài đã xong
+                            <div className="mb-2 flex flex-wrap items-center gap-2">
+                                <FuxieBadge tone="brand">Reading quest</FuxieBadge>
+                                <FuxieBadge tone={overallProgress >= 100 ? 'success' : 'neutral'}>{overallProgress}%</FuxieBadge>
+                            </div>
+                            <h1 className="text-2xl font-black text-[#173B56]">Luyện đọc {currentLevel}</h1>
+                            <p className="text-sm font-semibold text-[#3C78A8] mt-0.5">
+                                <span className="font-black">{currentCompleted}</span> / {currentTotal} bài đã xong
                             </p>
                         </div>
                         {nextExerciseHref && (
@@ -189,8 +195,7 @@ export function ReadingClient({ teile, totalExercises, totalCompleted, available
                                 href={nextExerciseHref}
                                 flow="reading.list.next"
                                 source={nextExercise?.exerciseId}
-                                className="flex items-center justify-center gap-2 px-6 py-3 rounded-xl text-white font-bold text-sm hover:opacity-90 transition-all shadow-lg whitespace-nowrap"
-                                style={{ background: cefrColors.cssGradient, boxShadow: `0 4px 16px ${cefrColors.shadow}` }}
+                                className={fuxieButtonClass('primary', 'lg', 'whitespace-nowrap')}
                             >
                                 <BookOpen className="h-4 w-4" />
                                 Học tiếp
@@ -198,37 +203,32 @@ export function ReadingClient({ teile, totalExercises, totalCompleted, available
                         )}
                     </div>
                     <div className="mt-4">
-                        <div className="w-full h-2.5 bg-gray-100 rounded-full overflow-hidden">
-                            <div
-                                className="h-full rounded-full transition-all duration-700 ease-out"
-                                style={{ width: `${Math.max(overallProgress, 1)}%`, background: cefrColors.cssGradient }}
-                            />
-                        </div>
-                        <p className="text-xs text-gray-400 mt-1.5 text-right">{overallProgress}% hoàn thành</p>
+                        <FuxieProgressBar value={overallProgress} tone={overallProgress >= 100 ? 'success' : 'brand'} />
+                        <p className="text-xs font-semibold text-[#3C78A8]/70 mt-1.5 text-right">{overallProgress}% hoàn thành</p>
                     </div>
                 </div>
-            </div>
+            </FuxiePanel>
 
             {isLevelLoading ? (
                 <div className="flex items-center justify-center py-16">
                     <Mascot variant="loading" size={64} />
                 </div>
             ) : currentTeile.length === 0 ? (
-                <div className="bg-white rounded-2xl p-12 border border-gray-100 shadow-sm text-center">
+                <FuxiePanel className="p-12 text-center">
                     <Mascot variant="thinking" size={80} />
-                    <h2 className="text-lg font-bold text-gray-700 mt-4">Nội dung đọc đang được chuẩn bị</h2>
-                    <p className="text-sm text-gray-500 mt-2">
+                    <h2 className="text-lg font-black text-[#173B56] mt-4">Nội dung đọc đang được chuẩn bị</h2>
+                    <p className="text-sm font-medium text-slate-500 mt-2">
                         Hãy quay lại lộ trình chính hoặc học từ vựng trong lúc chờ bài đọc mới.
                     </p>
                     <MeasuredLink
                         href="/course"
                         flow="reading.empty.course"
                         source={currentLevel}
-                        className="mt-5 inline-flex items-center justify-center rounded-xl bg-[#FF6B35] px-5 py-2.5 text-sm font-bold text-white shadow-sm transition hover:bg-[#e55a25]"
+                        className={fuxieButtonClass('primary', 'md', 'mt-5')}
                     >
                         Về khóa học
                     </MeasuredLink>
-                </div>
+                </FuxiePanel>
             ) : (
                 <div className="space-y-4">
                     {currentTeile.map((teil) => {
@@ -240,10 +240,10 @@ export function ReadingClient({ teile, totalExercises, totalCompleted, available
                         const TeilIcon = TEIL_ICONS[teil.teil] ?? BookOpen
 
                         return (
-                            <div key={teil.teil} className="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden transition-all hover:shadow-md">
+                            <FuxiePanel key={teil.teil} variant="interactive" className="overflow-hidden">
                                 <button
                                     onClick={() => toggleTeil(teil.teil)}
-                                    className="w-full flex items-center gap-4 p-5 hover:bg-gray-50/50 transition-colors text-left"
+                                    className="w-full flex items-center gap-4 p-5 hover:bg-[#F3FBFF]/70 transition-colors text-left"
                                 >
                                     <div className="w-12 h-12 rounded-xl flex items-center justify-center shrink-0"
                                         style={{ backgroundColor: `${cefrColors.bg}` }}
@@ -352,15 +352,15 @@ export function ReadingClient({ teile, totalExercises, totalCompleted, available
                                                 const hiddenCount = teil.exercises.filter((ex, idx) => !ex.completion && idx > firstUncompleted + 2).length
                                                 if (hiddenCount === 0) return null
                                                 return (
-                                                    <div className="rounded-xl border border-dashed border-gray-200 bg-gray-50 px-4 py-3 text-sm text-gray-500">
+                                                    <FuxiePanel variant="soft" className="border-dashed px-4 py-3 text-sm font-semibold text-[#3C78A8]">
                                                         Hoàn thành bài hiện tại để mở {hiddenCount} bài tiếp theo.
-                                                    </div>
+                                                    </FuxiePanel>
                                                 )
                                             })()}
                                         </div>
                                     </div>
                                 )}
-                            </div>
+                            </FuxiePanel>
                         )
                     })}
                 </div>

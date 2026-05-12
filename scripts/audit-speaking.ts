@@ -13,13 +13,13 @@
  * Usage: npx tsx scripts/audit-speaking.ts
  */
 
-import { PrismaClient } from '@prisma/client'
+import { PrismaClient } from '../apps/web/generated/prisma'
 import { GoogleGenerativeAI } from '@google/generative-ai'
 import * as dotenv from 'dotenv'
 import * as path from 'path'
 import * as fs from 'fs'
 
-dotenv.config({ path: path.resolve(__dirname, '../apps/web/.env') })
+dotenv.config({ path: path.resolve(__dirname, '../apps/web/.env'), override: true })
 
 const prisma = new PrismaClient({
   datasources: { db: { url: process.env.DATABASE_URL } }
@@ -80,7 +80,9 @@ function checkStructure(topic: string, sentences: Sentence[]) {
 
 // ═══ Check 2: Difficulty progression (word count should increase) ═══
 function checkProgression(topic: string, sentences: Sentence[]) {
-  const wordCounts = sentences.map(s => s.textDe.split(/\s+/).length)
+  if (sentences.length === 0) return;
+  
+  const wordCounts = sentences.map(s => (s.textDe || '').split(/\s+/).filter(w => w.length > 0).length)
   
   let regressions = 0
   for (let i = 1; i < wordCounts.length; i++) {
@@ -106,6 +108,7 @@ function checkDuplicates() {
   const seen = new Map<string, string>()
   
   for (const { topic, sentence } of allSentences) {
+    if (!sentence.textDe) continue;
     const normalized = sentence.textDe.toLowerCase().trim()
     if (seen.has(normalized)) {
       addIssue(topic, sentence, 'DUPLICATE', '🔴 CRITICAL', 
@@ -248,7 +251,13 @@ async function main() {
 
   for (const lesson of lessons) {
     const data = lesson.exercisesJson as { sentences: Sentence[] }
-    const sentences = data.sentences || []
+    const sentences = (data.sentences || []).map((s: any) => ({
+      ...s,
+      textDe: s.textDe || s.german || '',
+      textVi: s.textVi || s.vietnamese || '',
+      pronunciationNotes: s.pronunciationNotes || s.pronunciationTips || '',
+      expectedDurationSec: s.expectedDurationSec || 5
+    }))
     const topic = lesson.topic.slug
 
     console.log(`\n📋 ${topic} (${sentences.length} sentences)`)
@@ -271,8 +280,8 @@ async function main() {
   console.log('🔍 Checking Audio Factory scripts...')
   checkAudioFactoryScripts()
 
-  // Gemini deep review
-  await checkGermanQuality(topicSentences)
+  // Gemini deep review - Skipped to avoid 429 Rate Limits on 2300+ sentences
+  // await checkGermanQuality(topicSentences)
 
   // ═══ REPORT ═══
   console.log('\n' + '=' .repeat(60))

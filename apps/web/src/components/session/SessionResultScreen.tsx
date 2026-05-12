@@ -16,8 +16,8 @@ export function SessionResultScreen({ score, hearts, total, saving, onFinish }: 
             </p>
 
             <div className="flex gap-4 w-full max-w-sm mb-12">
-                <div className="flex-1 bg-white border-2 border-orange-200 rounded-2xl p-4 shadow-sm">
-                    <div className="text-sm font-bold text-orange-500 uppercase tracking-widest mb-1">XP Đạt</div>
+                <div className="flex-1 bg-white border-2 border-[#FFD166]/70 rounded-2xl p-4 shadow-sm">
+                    <div className="text-sm font-bold text-[#C67A00] uppercase tracking-widest mb-1">XP Đạt</div>
                     <div className="text-2xl font-black text-gray-800">+{score}</div>
                 </div>
                 <div className="flex-1 bg-white border-2 border-red-200 rounded-2xl p-4 shadow-sm">
@@ -29,7 +29,7 @@ export function SessionResultScreen({ score, hearts, total, saving, onFinish }: 
             <button
                 onClick={onFinish}
                 disabled={saving}
-                className="w-full max-w-sm py-4 rounded-2xl bg-gradient-to-r from-fuxie-primary to-orange-500 text-white font-bold text-lg shadow-[0_8px_0_0_rgb(221,98,40)] hover:-translate-y-1 hover:shadow-[0_10px_0_0_rgb(221,98,40)] active:translate-y-2 active:shadow-none transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+                className="w-full max-w-sm py-4 rounded-2xl bg-gradient-to-r from-fuxie-primary to-fuxie-secondary text-white font-bold text-lg shadow-[0_8px_0_0_rgb(48,120,180)] hover:-translate-y-1 hover:shadow-[0_10px_0_0_rgb(48,120,180)] active:translate-y-2 active:shadow-none transition-all disabled:opacity-50 disabled:cursor-not-allowed"
             >
                 {saving ? 'Đang lưu...' : 'Tiếp Tục'}
             </button>

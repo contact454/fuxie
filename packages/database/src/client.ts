@@ -49,6 +49,11 @@ export {
     SrsRating,
     ContentStatus,
     UserRole,
+    FucoinLedgerType,
+    MissionPeriod,
+    MissionMetric,
+    MissionStatus,
+    ShopRedeemRequestStatus,
 } from '../../../apps/web/generated/prisma'
 
 export type {
@@ -81,6 +86,12 @@ export type {
     Achievement,
     UserAchievement,
     UserStreak,
+    StreakFreezeUsage,
+    UserWallet,
+    FucoinLedger,
+    ShopRedeemRequest,
+    MissionDefinition,
+    UserMissionClaim,
     UserProgress,
     SkillAssessment,
     DailyActivity,

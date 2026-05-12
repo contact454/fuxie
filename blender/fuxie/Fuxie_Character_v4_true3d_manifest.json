@@ -1,0 +1,72 @@
+{
+  "name": "Fuxie_Character_v4_true3d",
+  "status": "rejected_by_visual_qa",
+  "rejection_reason": "The model was only visually compared beside the Fuxie image instead of being locked to the image silhouette and landmarks. It does not match Fuxie closely enough and must not be used as an approved Fuxie asset.",
+  "source_note": "Failed true 3D stylized approximation attempt. Kept for audit only; not an exact reconstruction and not approved for runtime use.",
+  "references": [
+    "blender/fuxie/references/fuxie_ref_front.png",
+    "blender/fuxie/references/fuxie_ref_side.png",
+    "blender/fuxie/references/fuxie_ref_back.png",
+    "blender/fuxie/references/fuxie_ref_faces.png",
+    "blender/fuxie/references/fuxie_ref_tail_material.png"
+  ],
+  "outputs": {
+    "blend": "blender/fuxie/Fuxie_Character_v4_true3d.blend",
+    "glb": "assets/models/Fuxie_Character_v4_true3d.glb",
+    "fbx": "assets/models/Fuxie_Character_v4_true3d.fbx",
+    "preview": "blender/fuxie/Fuxie_preview_v4_true3d.png"
+  },
+  "stats": {
+    "mesh_objects": 68,
+    "vertices_before_export_modifiers": 10142,
+    "faces_before_export_modifiers": 10594,
+    "bones": [
+      "root",
+      "hips",
+      "spine",
+      "chest",
+      "neck",
+      "head",
+      "ear.L",
+      "ear.R",
+      "upper_arm.L",
+      "forearm.L",
+      "hand.L",
+      "upper_arm.R",
+      "forearm.R",
+      "hand.R",
+      "upper_leg.L",
+      "shin.L",
+      "foot.L",
+      "upper_leg.R",
+      "shin.R",
+      "foot.R",
+      "tail.01",
+      "tail.02",
+      "tail.03"
+    ],
+    "reference_planes": [
+      "Fuxie_V4_Reference_Front",
+      "Fuxie_V4_Reference_Side",
+      "Fuxie_V4_Reference_Back",
+      "Fuxie_V4_Reference_Faces",
+      "Fuxie_V4_Reference_Tail"
+    ],
+    "fps": 60,
+    "clips": {
+      "idle": {
+        "frames": 120,
+        "description": "60fps breathing with ear and tail motion."
+      },
+      "wave": {
+        "frames": 96,
+        "description": "Simple greeting wave."
+      },
+      "talk": {
+        "frames": 120,
+        "description": "Light head motion and mouth shape key."
+      }
+    }
+  },
+  "next_step": "Do not polish this primitive build as-is. Return to V3 image-locked as the approved identity baseline, then create a new image-locked/projection-mapped asset or perform a manual Blender sculpt pass using the cropped references as locked orthographic guides."
+}

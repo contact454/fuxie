@@ -38,8 +38,8 @@ export default function ChatLoading() {
                 {/* User message */}
                 <div className="flex justify-end items-end gap-2">
                     <div className="max-w-[60%]">
-                        <div className="rounded-2xl rounded-br-md bg-orange-200/50 px-4 py-3 space-y-2">
-                            <div className="h-3 w-32 rounded-full bg-orange-300/30" />
+                        <div className="rounded-2xl rounded-br-md bg-[#CCE4F0]/50 px-4 py-3 space-y-2">
+                            <div className="h-3 w-32 rounded-full bg-[#60A8E4]/30" />
                             <div className="h-3 w-24 rounded-full bg-orange-300/30" />
                         </div>
                     </div>
@@ -69,7 +69,7 @@ export default function ChatLoading() {
                 <div className="flex items-end gap-2">
                     <div className="flex-1 h-11 rounded-2xl bg-white ring-1 ring-gray-200" />
                     <div className="w-11 h-11 rounded-full bg-gray-100" />
-                    <div className="w-11 h-11 rounded-full bg-orange-200/50" />
+                    <div className="w-11 h-11 rounded-full bg-[#CCE4F0]/50" />
                 </div>
                 <div className="h-2 w-48 rounded-full bg-gray-100 mx-auto mt-2" />
             </div>

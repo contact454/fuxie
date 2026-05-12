@@ -62,7 +62,7 @@ export function ProgressRing({ progress, size = 32, strokeWidth = 3 }: { progres
             />
             <circle
                 cx={size / 2} cy={size / 2} r={radius}
-                stroke={progress >= 100 ? '#10B981' : '#FF6B35'}
+                stroke={progress >= 100 ? '#10B981' : '#60A8E4'}
                 strokeWidth={strokeWidth} fill="none"
                 strokeDasharray={circumference}
                 strokeDashoffset={offset}

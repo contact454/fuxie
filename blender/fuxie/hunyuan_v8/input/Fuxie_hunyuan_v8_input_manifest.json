@@ -1,0 +1,63 @@
+{
+  "name": "Fuxie_hunyuan_v8_inputs",
+  "sourceNote": "Generated approximation from the approved Fuxie 3D render references, not a recovered original mesh.",
+  "inputDir": "blender/fuxie/hunyuan_v8/input",
+  "references": [
+    {
+      "group": "primary",
+      "source": "blender/fuxie/references/fuxie_ref_front.png",
+      "target": "blender/fuxie/hunyuan_v8/input/primary_fuxie_ref_front.png",
+      "status": "copied"
+    },
+    {
+      "group": "primary",
+      "source": "blender/fuxie/references/fuxie_ref_three_quarter.png",
+      "target": "blender/fuxie/hunyuan_v8/input/primary_fuxie_ref_three_quarter.png",
+      "status": "copied"
+    },
+    {
+      "group": "primary",
+      "source": "blender/fuxie/references/fuxie_ref_side.png",
+      "target": "blender/fuxie/hunyuan_v8/input/primary_fuxie_ref_side.png",
+      "status": "copied"
+    },
+    {
+      "group": "primary",
+      "source": "blender/fuxie/references/fuxie_ref_back.png",
+      "target": "blender/fuxie/hunyuan_v8/input/primary_fuxie_ref_back.png",
+      "status": "copied"
+    },
+    {
+      "group": "secondary",
+      "source": "blender/fuxie/references/fuxie_ref_faces.png",
+      "target": "blender/fuxie/hunyuan_v8/input/secondary_fuxie_ref_faces.png",
+      "status": "copied"
+    },
+    {
+      "group": "secondary",
+      "source": "blender/fuxie/references/fuxie_ref_tail_material.png",
+      "target": "blender/fuxie/hunyuan_v8/input/secondary_fuxie_ref_tail_material.png",
+      "status": "copied"
+    },
+    {
+      "group": "secondary",
+      "source": "apps/web/public/mascot-3d/concept/fuxie-3d-master-style-sheet.png",
+      "target": "blender/fuxie/hunyuan_v8/input/secondary_fuxie-3d-master-style-sheet.png",
+      "status": "copied"
+    },
+    {
+      "group": "secondary",
+      "source": "apps/web/public/mascot-3d/concept/fuxie-3d-coach-pose-pack.png",
+      "target": "blender/fuxie/hunyuan_v8/input/secondary_fuxie-3d-coach-pose-pack.png",
+      "status": "copied"
+    },
+    {
+      "group": "secondary",
+      "source": "apps/web/public/mascot-3d/concept/fuxie-3d-reward-state-pack.png",
+      "target": "blender/fuxie/hunyuan_v8/input/secondary_fuxie-3d-reward-state-pack.png",
+      "status": "copied"
+    }
+  ],
+  "primaryPrompt": "Cute stylized chibi blue fox mascot named Fuxie, large expressive amber eyes, cream muzzle and cheeks, tall fox ears with pink inner ear and white fluff, teal hoodie jacket, blue bandana with fox token emblem, navy shorts, blue sneakers, large fluffy blue tail with white tip, friendly game mascot proportions.",
+  "negativePrompt": "realistic animal, horror, angry expression, long human body, thin limbs, extra fingers, extra tails, broken face, melted hoodie, missing ears, noisy texture, low quality mesh"
+}

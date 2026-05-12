@@ -77,7 +77,7 @@ export function MCRenderer({ content, answer, onChange }: Props) {
                                     <span className={`inline-flex w-7 h-7 items-center justify-center text-xs font-bold rounded-full shrink-0 ${
                                         isAnswered
                                             ? 'bg-green-500 text-white'
-                                            : 'bg-[#FF6B35]/10 text-[#FF6B35]'
+                                            : 'bg-[#60A8E4]/10 text-[#3C78A8]'
                                     }`}>
                                         {idx + 1}
                                     </span>
@@ -90,8 +90,8 @@ export function MCRenderer({ content, answer, onChange }: Props) {
                                             onClick={() => select(item.id, opt.key)}
                                             className={`w-full text-left flex items-center gap-3 px-4 py-3 rounded-xl text-sm transition-all
                                                 ${selected[item.id] === opt.key
-                                                    ? 'bg-[#FF6B35] text-white ring-2 ring-[#FF6B35] shadow-md shadow-[#FF6B35]/20 font-medium'
-                                                    : 'bg-white ring-1 ring-gray-200 text-gray-700 hover:ring-[#FF6B35]/40 hover:bg-[#FF6B35]/5'
+                                                    ? 'bg-[#60A8E4] text-white ring-2 ring-[#60A8E4] shadow-md shadow-[#60A8E4]/20 font-medium'
+                                                    : 'bg-white ring-1 ring-gray-200 text-gray-700 hover:ring-[#60A8E4]/40 hover:bg-[#60A8E4]/5'
                                                 }`}
                                         >
                                             <span className={`w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold shrink-0

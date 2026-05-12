@@ -12,7 +12,7 @@ export function IntroCard({ item, onNext }: { item: SessionItem, onNext: () => v
                 
                 <div className="bg-white rounded-2xl shadow-sm border-2 border-gray-100 p-6 flex flex-col items-center text-center">
                     {/* Placeholder for image if unavailable */}
-                    <div className="w-32 h-32 bg-orange-50 rounded-2xl mb-6 flex items-center justify-center overflow-hidden">
+                    <div className="w-32 h-32 bg-[#F3FBFF] rounded-2xl mb-6 flex items-center justify-center overflow-hidden">
                         {imageUrl ? (
                             <img src={imageUrl} alt={term} className="w-full h-full object-cover" />
                         ) : (

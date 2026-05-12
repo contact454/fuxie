@@ -1,6 +1,7 @@
 # Dependencies
 node_modules/
 .pnpm-store/
+__pycache__/
 
 # Next.js
 .next/
@@ -54,7 +55,25 @@ docker-compose.override.yml
 
 # AI Agent configs
 .gemini/
-.agents/
+.agents/*
+!.agents/workflows/
+.agents/workflows/*
+!.agents/workflows/company-operating-model.md
+!.agents/workflows/task-role-router.md
+!.agents/workflows/task-startup-checklist.md
+!.agents/personnel/
+!.agents/personnel/**
+
+# Local AI 3D tooling and model caches
+.ai3d/
+*.ckpt
+*.safetensors
+*.pth
+*.pt
+*.onnx
+*.engine
+blender/fuxie/hunyuan_v8/tmp/
+blender/fuxie/hunyuan_v8/cache/
 
 # Large static assets (served via CDN in production)
 apps/web/public/images/
@@ -64,7 +83,7 @@ apps/web/public/audio/
 !apps/web/public/images/grammar/**
 
 # Mascot source files
-Fuxie/
+/Fuxie/
 
 # Junk files (cleaned up)
 

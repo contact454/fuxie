@@ -40,6 +40,7 @@ export function LanguageSwitcher() {
       return;
     }
     // Set the cookie that our Next-Intl request.ts reads
+    // eslint-disable-next-line react-hooks/immutability -- Locale switching requires updating the browser cookie.
     document.cookie = `NEXT_LOCALE=${newLocale}; path=/; max-age=31536000; SameSite=Lax`;
     window.location.reload();
   };
@@ -51,7 +52,7 @@ export function LanguageSwitcher() {
         className="flex items-center gap-2 rounded-xl px-3 py-2 text-sm font-medium transition-all duration-200 border border-gray-200/80 bg-white/80 hover:bg-white hover:shadow-sm text-gray-700"
         aria-label="Change language"
       >
-        <Globe className="w-4 h-4 text-[#004E89]" />
+        <Globe className="w-4 h-4 text-[#3C78A8]" />
         <span className="font-semibold tracking-wide">{activeLang?.short}</span>
         <ChevronDown 
           className={`w-3.5 h-3.5 text-gray-400 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`} 
@@ -75,7 +76,7 @@ export function LanguageSwitcher() {
                   onClick={() => handleLanguageChange(lang.code)}
                   className={`w-full flex items-center justify-between px-3 py-2.5 rounded-lg text-sm font-medium transition-colors
                     ${isActive 
-                      ? 'bg-gradient-to-r from-[#FF6B35]/10 to-[#FF6B35]/5 text-[#FF6B35]' 
+                      ? 'bg-gradient-to-r from-[#60A8E4]/15 to-[#CCE4F0]/50 text-[#3C78A8]'
                       : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900'
                     }`}
                 >

@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useCallback } from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 
 interface LeaderboardEntry {
     rank: number
@@ -31,18 +32,26 @@ export function LeaderboardClient() {
     const [entries, setEntries] = useState<LeaderboardEntry[]>([])
     const [currentUser, setCurrentUser] = useState<LeaderboardEntry | null>(null)
     const [loading, setLoading] = useState(true)
+    const [error, setError] = useState<string | null>(null)
 
     const fetchLeaderboard = useCallback(async (p: string) => {
         setLoading(true)
+        setError(null)
         try {
             const res = await fetch(`/api/v1/leaderboard?period=${p}`)
+            if (!res.ok) throw new Error(`Leaderboard request failed: ${res.status}`)
             const data = await res.json()
             if (data.success) {
-                setEntries(data.data.entries)
-                setCurrentUser(data.data.currentUser)
+                setEntries(Array.isArray(data.data?.entries) ? data.data.entries : [])
+                setCurrentUser(data.data?.currentUser ?? null)
+            } else {
+                throw new Error(data.error ?? 'Leaderboard response was not successful')
             }
         } catch (err) {
             console.error('Leaderboard error:', err)
+            setEntries([])
+            setCurrentUser(null)
+            setError('Chưa tải được bảng xếp hạng. Em thử lại sau một chút nhé.')
         } finally {
             setLoading(false)
         }
@@ -93,11 +102,7 @@ export function LeaderboardClient() {
                     ))}
                 </div>
             ) : entries.length === 0 ? (
-                <div className="text-center py-16">
-                    <Image src="/mascot/core/fuxie-core-happy-wave.png" alt="Fuxie" width={64} height={64} className="mx-auto mb-4 object-contain" />
-                    <p className="text-gray-500">Chưa có dữ liệu!</p>
-                    <p className="text-xs text-gray-400 mt-1">Học để lên bảng xếp hạng nhé! 🦊</p>
-                </div>
+                <LeaderboardEmptyState currentUser={currentUser} error={error} period={period} />
             ) : (
                 <>
                     {/* Top 3 Podium */}
@@ -199,6 +204,80 @@ export function LeaderboardClient() {
                     )}
                 </>
             )}
+        </div>
+    )
+}
+
+function LeaderboardEmptyState({
+    currentUser,
+    error,
+    period,
+}: {
+    currentUser: LeaderboardEntry | null
+    error: string | null
+    period: 'weekly' | 'alltime'
+}) {
+    const visibleXp = currentUser
+        ? period === 'weekly'
+            ? currentUser.weeklyXp
+            : currentUser.totalXp
+        : 0
+
+    return (
+        <div className="overflow-hidden rounded-3xl bg-gradient-to-br from-[#F3FBFF] via-white to-[#EAFBF8] p-5 text-center shadow-sm ring-1 ring-[#CCE4F0]">
+            <div className="mx-auto mb-4 flex h-24 w-24 items-center justify-center rounded-3xl bg-white shadow-sm ring-1 ring-[#CCE4F0]">
+                <Image
+                    src="/mascot/core/fuxie-core-happy-wave.png"
+                    alt="Fuxie"
+                    width={72}
+                    height={72}
+                    className="object-contain"
+                    priority
+                />
+            </div>
+            <p className="text-xs font-black uppercase tracking-wide text-[#3C78A8]">
+                {error ? 'Leaderboard offline' : 'First learner advantage'}
+            </p>
+            <h2 className="mt-1 text-xl font-black text-[#173B56]">
+                {error ?? 'Chưa có ai ghi XP trong bảng này'}
+            </h2>
+            <p className="mx-auto mt-2 max-w-md text-sm font-semibold leading-relaxed text-[#3C78A8]">
+                {currentUser
+                    ? `Em đang ở mốc khởi động với ${visibleXp.toLocaleString('vi-VN')} XP. Hoàn thành một quest là bảng này sẽ có tín hiệu ngay.`
+                    : 'Làm một nhiệm vụ ngắn để mở dữ liệu xếp hạng và biến màn này thành cuộc đua học tập thật.'}
+            </p>
+
+            {currentUser ? (
+                <div className="mx-auto mt-5 grid max-w-md grid-cols-3 gap-2 text-left">
+                    <LeaderboardEmptyStat label="Hạng" value={`#${currentUser.rank}`} />
+                    <LeaderboardEmptyStat label="XP" value={visibleXp.toLocaleString('vi-VN')} />
+                    <LeaderboardEmptyStat label="Streak" value={String(currentUser.streak)} />
+                </div>
+            ) : null}
+
+            <div className="mt-6 flex flex-col gap-2 sm:flex-row sm:justify-center">
+                <Link
+                    href="/dashboard"
+                    className="rounded-2xl bg-[#54A8E4] px-5 py-3 text-sm font-black text-white shadow-lg shadow-sky-900/15 transition hover:-translate-y-0.5 hover:bg-[#3C78A8]"
+                >
+                    Làm quest hôm nay
+                </Link>
+                <Link
+                    href="/review"
+                    className="rounded-2xl bg-white px-5 py-3 text-sm font-black text-[#3C78A8] ring-1 ring-[#CCE4F0] transition hover:-translate-y-0.5 hover:bg-[#F3FBFF]"
+                >
+                    Ôn SRS để lấy XP
+                </Link>
+            </div>
+        </div>
+    )
+}
+
+function LeaderboardEmptyStat({ label, value }: { label: string; value: string }) {
+    return (
+        <div className="rounded-2xl bg-white px-3 py-2 shadow-sm ring-1 ring-[#CCE4F0]/75">
+            <p className="text-[10px] font-black uppercase tracking-wide text-[#3C78A8]/70">{label}</p>
+            <p className="mt-1 truncate text-lg font-black text-[#173B56]">{value}</p>
         </div>
     )
 }

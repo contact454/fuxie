@@ -1,0 +1,143 @@
+{
+  "name": "Fuxie_Character_v13_deform_rig",
+  "status": "true_deforming_skeletal_rig_candidate",
+  "source_note": "V13 uses the Fuxie 3D render set only as visual reference. Exported limbs and tail are real skinned 3D meshes with blended vertex weights, not cutout image parts.",
+  "references": [
+    "blender/fuxie/references/fuxie_ref_front.png",
+    "blender/fuxie/references/fuxie_ref_three_quarter.png",
+    "blender/fuxie/references/fuxie_ref_side.png",
+    "blender/fuxie/references/fuxie_ref_back.png",
+    "blender/fuxie/references/fuxie_ref_faces.png",
+    "blender/fuxie/references/fuxie_ref_tail_material.png"
+  ],
+  "outputs": {
+    "blend": "blender/fuxie/Fuxie_Character_v13_deform_rig.blend",
+    "glb": "assets/models/Fuxie_Character_v13_deform_rig.glb",
+    "fbx": "assets/models/Fuxie_Character_v13_deform_rig.fbx",
+    "preview": "blender/fuxie/Fuxie_preview_v13_deform_rig.png",
+    "public_glb": "apps/web/public/mascot-3d/live/fuxie-deform-rig-v13.glb",
+    "public_poster": "apps/web/public/mascot-3d/live/fuxie-deform-rig-v13-poster.png",
+    "public_manifest": "apps/web/public/mascot-3d/live/fuxie-deform-rig-v13.json"
+  },
+  "stats": {
+    "mesh_objects": 43,
+    "deforming_multi_weight_meshes": [
+      "Fuxie_DeformArm_L",
+      "Fuxie_DeformLeg_L",
+      "Fuxie_DeformArm_R",
+      "Fuxie_DeformLeg_R",
+      "Fuxie_DeformTail"
+    ],
+    "vertices_before_export_modifiers": 7602,
+    "faces_before_export_modifiers": 7944,
+    "bones": [
+      "root",
+      "hips",
+      "spine",
+      "chest",
+      "neck",
+      "head",
+      "jaw",
+      "ear.L.01",
+      "ear.R.01",
+      "upper_arm.L",
+      "forearm.L",
+      "hand.L",
+      "upper_arm.R",
+      "forearm.R",
+      "hand.R",
+      "upper_leg.L",
+      "shin.L",
+      "foot.L",
+      "upper_leg.R",
+      "shin.R",
+      "foot.R",
+      "tail.01",
+      "tail.02",
+      "tail.03",
+      "CTRL_root",
+      "CTRL_body",
+      "CTRL_head",
+      "CTRL_tail"
+    ],
+    "deform_bones": [
+      "root",
+      "hips",
+      "spine",
+      "chest",
+      "neck",
+      "head",
+      "jaw",
+      "ear.L.01",
+      "ear.R.01",
+      "upper_arm.L",
+      "forearm.L",
+      "hand.L",
+      "upper_arm.R",
+      "forearm.R",
+      "hand.R",
+      "upper_leg.L",
+      "shin.L",
+      "foot.L",
+      "upper_leg.R",
+      "shin.R",
+      "foot.R",
+      "tail.01",
+      "tail.02",
+      "tail.03"
+    ],
+    "control_bones": [
+      "CTRL_root",
+      "CTRL_body",
+      "CTRL_head",
+      "CTRL_tail"
+    ],
+    "reference_planes": [
+      "Fuxie_V13_Reference_Front",
+      "Fuxie_V13_Reference_ThreeQuarter",
+      "Fuxie_V13_Reference_Side",
+      "Fuxie_V13_Reference_Back",
+      "Fuxie_V13_Reference_Faces",
+      "Fuxie_V13_Reference_Tail"
+    ],
+    "fps": 60,
+    "clips": {
+      "idle": {
+        "frames": 120,
+        "description": "60fps deform rig idle with breathing, head bob, ear twitch, and tail sway."
+      },
+      "wave": {
+        "frames": 96,
+        "description": "60fps deform rig wave: upper arm, forearm, wrist, and torso counter-motion."
+      },
+      "talk": {
+        "frames": 120,
+        "description": "60fps talk loop with jaw mesh motion, head nod, and natural hand cue."
+      },
+      "listen": {
+        "frames": 120,
+        "description": "60fps listen with head tilt, ear focus, and soft tail chain motion."
+      },
+      "reward": {
+        "frames": 96,
+        "description": "60fps reward hop with squash/stretch and arm-chain lift."
+      },
+      "tryAgain": {
+        "frames": 120,
+        "description": "60fps encouraging nod with subtle arm and tail chain motion."
+      }
+    },
+    "target_runtime": "60fps WebGL true deforming skeletal rig"
+  },
+  "rig_notes": [
+    "No source image cutout limbs are exported in V13.",
+    "Arms, legs, and tail are generated as continuous tube meshes with multiple edge loops.",
+    "Vertices near elbows, knees, and tail joints are weighted across adjacent bones for visible bend deformation."
+  ],
+  "limits": [
+    "This is still a generated stylized approximation, not a recovered original production mesh.",
+    "Facial topology is primitive-based; production blendshapes/eyelids still need a sculpted face mesh.",
+    "Final production quality should retopologize the body into a unified mesh and hand-paint UV textures."
+  ],
+  "next_step": "Browser QA V13 motion and compare natural joint bending against V12/V10; then polish weight envelopes and animation curves."
+}

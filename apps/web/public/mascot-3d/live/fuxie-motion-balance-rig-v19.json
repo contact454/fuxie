@@ -1,0 +1,130 @@
+{
+  "name": "Fuxie_Character_v19_motion_balance_rig",
+  "status": "motion_balanced_contour_source_skinned_candidate",
+  "source_note": "V19 keeps V18's contour source identity mesh and retunes all clips between V17's readability and V18's restraint. It adds clearer timing and secondary head/ear/tail overlap while avoiding extreme rotations that stretch the source-locked texture.",
+  "outputs": {
+    "blend": "blender/fuxie/Fuxie_Character_v19_motion_balance_rig.blend",
+    "glb": "assets/models/Fuxie_Character_v19_motion_balance_rig.glb",
+    "fbx": "assets/models/Fuxie_Character_v19_motion_balance_rig.fbx",
+    "preview": "blender/fuxie/Fuxie_preview_v19_motion_balance_rig.png",
+    "public_glb": "apps/web/public/mascot-3d/live/fuxie-motion-balance-rig-v19.glb",
+    "public_poster": "apps/web/public/mascot-3d/live/fuxie-motion-balance-rig-v19-poster.png",
+    "public_manifest": "apps/web/public/mascot-3d/live/fuxie-motion-balance-rig-v19.json"
+  },
+  "stats": {
+    "mesh_objects": 2,
+    "vertices_before_export_modifiers": 6061,
+    "faces_before_export_modifiers": 5898,
+    "bones": [
+      "root",
+      "hips",
+      "spine",
+      "chest",
+      "neck",
+      "head",
+      "jaw",
+      "ear.L.01",
+      "ear.R.01",
+      "upper_arm.L",
+      "forearm.L",
+      "hand.L",
+      "upper_arm.R",
+      "forearm.R",
+      "hand.R",
+      "upper_leg.L",
+      "shin.L",
+      "foot.L",
+      "upper_leg.R",
+      "shin.R",
+      "foot.R",
+      "tail.01",
+      "tail.02",
+      "tail.03",
+      "CTRL_root",
+      "CTRL_body",
+      "CTRL_head",
+      "CTRL_hand.L",
+      "CTRL_hand.R",
+      "CTRL_tail"
+    ],
+    "deform_bones": [
+      "root",
+      "hips",
+      "spine",
+      "chest",
+      "neck",
+      "head",
+      "jaw",
+      "ear.L.01",
+      "ear.R.01",
+      "upper_arm.L",
+      "forearm.L",
+      "hand.L",
+      "upper_arm.R",
+      "forearm.R",
+      "hand.R",
+      "upper_leg.L",
+      "shin.L",
+      "foot.L",
+      "upper_leg.R",
+      "shin.R",
+      "foot.R",
+      "tail.01",
+      "tail.02",
+      "tail.03"
+    ],
+    "control_bones": [
+      "CTRL_root",
+      "CTRL_body",
+      "CTRL_head",
+      "CTRL_hand.L",
+      "CTRL_hand.R",
+      "CTRL_tail"
+    ],
+    "grid": {
+      "cols": 66,
+      "rows": 108
+    },
+    "cleaned_source_atlas": "blender/fuxie/generated/v19_motion_balance/Fuxie_V19_MotionBalanceSourceClean.png",
+    "reference_planes": [
+      "Fuxie_V16_Reference_Front",
+      "Fuxie_V16_Reference_ThreeQuarter",
+      "Fuxie_V16_Reference_Faces",
+      "Fuxie_V16_Reference_Tail"
+    ],
+    "fps": 60,
+    "clips": {
+      "idle": {
+        "frames": 120,
+        "description": "Balanced 60fps idle: visible breathing, soft head/ear/tail overlap, stable feet."
+      },
+      "wave": {
+        "frames": 96,
+        "description": "Balanced wave: readable greeting arc with restrained deformation for source-locked texture."
+      },
+      "talk": {
+        "frames": 120,
+        "description": "Balanced talk: mouth beat, head nod, and right-hand cue without stretching the torso."
+      },
+      "listen": {
+        "frames": 120,
+        "description": "Balanced listen: clear attentive tilt with ear/tail secondary motion."
+      },
+      "reward": {
+        "frames": 96,
+        "description": "Balanced reward: joyful mascot bounce, smaller limb angles, stronger timing."
+      },
+      "tryAgain": {
+        "frames": 120,
+        "description": "Balanced encouragement: friendly nod and small hand cue."
+      }
+    },
+    "target_runtime": "60fps WebGL contour source mesh with balanced motion clips"
+  },
+  "limits": [
+    "V19 improves animation timing on the current 2.5D source-locked rig.",
+    "It still cannot achieve true volumetric limb arcs without a modeled/retopologized 3D mesh.",
+    "Tail edge cleanup still needs manual atlas painting or a better generated source."
+  ],
+  "next_step": "Browser QA V19 against V18; if it reads better, make V19 current candidate."
+}

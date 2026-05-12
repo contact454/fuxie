@@ -1,0 +1,131 @@
+{
+  "name": "Fuxie_Character_v7_true_mesh_rig",
+  "status": "true_mesh_game_rig_prototype",
+  "source_note": "Stylized true-mesh 3D approximation built against the approved Fuxie 3D reference set. This is not a 100% reconstruction of an unavailable source mesh.",
+  "references": [
+    "blender/fuxie/references/fuxie_ref_front.png",
+    "blender/fuxie/references/fuxie_ref_three_quarter.png",
+    "blender/fuxie/references/fuxie_ref_side.png",
+    "blender/fuxie/references/fuxie_ref_back.png",
+    "blender/fuxie/references/fuxie_ref_faces.png",
+    "blender/fuxie/references/fuxie_ref_tail_material.png"
+  ],
+  "outputs": {
+    "blend": "blender/fuxie/Fuxie_Character_v7_true_mesh_rig.blend",
+    "glb": "assets/models/Fuxie_Character_v7_true_mesh_rig.glb",
+    "fbx": "assets/models/Fuxie_Character_v7_true_mesh_rig.fbx",
+    "preview": "blender/fuxie/Fuxie_preview_v7_true_mesh_rig.png",
+    "public_glb": "apps/web/public/mascot-3d/live/fuxie-true-mesh-v7.glb",
+    "public_poster": "apps/web/public/mascot-3d/live/fuxie-true-mesh-v7-poster.png",
+    "public_manifest": "apps/web/public/mascot-3d/live/fuxie-true-mesh-v7.json"
+  },
+  "stats": {
+    "mesh_objects": 54,
+    "vertices_before_export_modifiers": 8626,
+    "faces_before_export_modifiers": 9168,
+    "bones": [
+      "root",
+      "hips",
+      "spine",
+      "chest",
+      "neck",
+      "head",
+      "jaw",
+      "ear.L.01",
+      "ear.R.01",
+      "upper_arm.L",
+      "forearm.L",
+      "hand.L",
+      "upper_arm.R",
+      "forearm.R",
+      "hand.R",
+      "upper_leg.L",
+      "shin.L",
+      "foot.L",
+      "upper_leg.R",
+      "shin.R",
+      "foot.R",
+      "tail.01",
+      "tail.02",
+      "tail.03",
+      "CTRL_root",
+      "CTRL_body",
+      "CTRL_head",
+      "CTRL_tail"
+    ],
+    "deform_bones": [
+      "root",
+      "hips",
+      "spine",
+      "chest",
+      "neck",
+      "head",
+      "jaw",
+      "ear.L.01",
+      "ear.R.01",
+      "upper_arm.L",
+      "forearm.L",
+      "hand.L",
+      "upper_arm.R",
+      "forearm.R",
+      "hand.R",
+      "upper_leg.L",
+      "shin.L",
+      "foot.L",
+      "upper_leg.R",
+      "shin.R",
+      "foot.R",
+      "tail.01",
+      "tail.02",
+      "tail.03"
+    ],
+    "control_bones": [
+      "CTRL_root",
+      "CTRL_body",
+      "CTRL_head",
+      "CTRL_tail"
+    ],
+    "reference_planes": [
+      "Fuxie_V7_Reference_Front",
+      "Fuxie_V7_Reference_ThreeQuarter",
+      "Fuxie_V7_Reference_Side",
+      "Fuxie_V7_Reference_Back",
+      "Fuxie_V7_Reference_Faces",
+      "Fuxie_V7_Reference_Tail"
+    ],
+    "fps": 60,
+    "clips": {
+      "idle": {
+        "frames": 120,
+        "description": "Smooth breathing, head bob, tail sway, and ear twitch at 60fps."
+      },
+      "wave": {
+        "frames": 96,
+        "description": "Left-hand wave with chest counter-sway and tail follow-through."
+      },
+      "talk": {
+        "frames": 120,
+        "description": "Jaw/mouth open-close, head nod, and hand gesture loop."
+      },
+      "listen": {
+        "frames": 120,
+        "description": "Attentive head tilt, ear focus, and gentle tail motion."
+      },
+      "reward": {
+        "frames": 96,
+        "description": "In-place hop with squash/stretch, arms up, and fast tail wag."
+      },
+      "tryAgain": {
+        "frames": 120,
+        "description": "Supportive nod, small hand wave, and soft posture."
+      }
+    },
+    "target_runtime": "60fps WebGL true mesh mascot rig"
+  },
+  "limits": [
+    "First true-mesh volume pass: visual identity should be reviewed against V5/V6B before rollout.",
+    "Weights are one-bone-per-part for predictable game animation; production deformation still needs blended weight paint.",
+    "Textures are material colors, not painted UV atlas yet."
+  ],
+  "next_step": "If V7 silhouette is approved, refine mesh proportions, add UV atlas/texture paint, then weight-paint blended joints for V7B."
+}

@@ -14,6 +14,7 @@ import {
     type LucideIcon,
 } from 'lucide-react'
 import { MeasuredLink } from '@/components/performance/measured-link'
+import { FUXIE_3D_ASSETS, FuxieRoleMascot } from '@/components/gamification/quest-visuals'
 import { Mascot } from '@/components/ui/mascot'
 import { useLevelSwitcher } from '@/hooks/use-level-switcher'
 import { getCefrTheme } from '@/lib/constants/cefr'
@@ -76,7 +77,7 @@ function ProgressRing({ progress, size = 40, strokeWidth = 3.5 }: { progress: nu
                 cx={size / 2}
                 cy={size / 2}
                 r={radius}
-                stroke={progress >= 100 ? '#10B981' : '#FF6B35'}
+                stroke={progress >= 100 ? '#10B981' : '#60A8E4'}
                 strokeWidth={strokeWidth}
                 fill="none"
                 strokeDasharray={circumference}
@@ -179,7 +180,7 @@ export function ListeningClient({ teile, totalLessons, totalCompleted, available
                         </div>
                     )}
                     <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
-                        <Mascot variant="hoeren" size={56} />
+                        <FuxieRoleMascot src={FUXIE_3D_ASSETS.radioHost} alt="Fuxie listening coach" size={64} motion="coach" />
                         <div className="flex-1">
                             <h1 className="text-2xl font-bold text-gray-900">Luyện nghe {currentLevel}</h1>
                             <p className="text-sm text-gray-500 mt-0.5">
@@ -226,7 +227,7 @@ export function ListeningClient({ teile, totalLessons, totalCompleted, available
                         href="/course"
                         flow="listening.empty.course"
                         source={currentLevel}
-                        className="mt-5 inline-flex items-center justify-center rounded-xl bg-[#FF6B35] px-5 py-2.5 text-sm font-bold text-white shadow-sm transition hover:bg-[#e55a25]"
+                        className="mt-5 inline-flex items-center justify-center rounded-xl bg-[#60A8E4] px-5 py-2.5 text-sm font-bold text-white shadow-sm transition hover:bg-[#3C78A8]"
                     >
                         Về khóa học
                     </MeasuredLink>
