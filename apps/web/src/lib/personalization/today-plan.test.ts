@@ -96,4 +96,18 @@ describe('buildTodayPlan', () => {
         expect(plan.weakSkills[0]).toBe('SCHREIBEN')
         expect(plan.actions.some((action) => action.href === '/writing/W-B1-T1-001')).toBe(true)
     })
+
+    it('uses the learner daily study goal for dashboard progress', () => {
+        const plan = buildTodayPlan({
+            ...baseInput,
+            profile: {
+                ...baseInput.profile,
+                studyGoalMinutes: 10,
+            },
+            todayMinutes: 4,
+        })
+
+        expect(plan.goalMinutes).toBe(10)
+        expect(plan.remainingMinutes).toBe(6)
+    })
 })

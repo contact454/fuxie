@@ -12,13 +12,20 @@ import {
 } from '@/lib/placement/engine'
 import type { PlacementLevel } from '@/data/placement-questions'
 
-type Step = 'welcome' | 'goal' | 'placement' | 'result'
+type Step = 'welcome' | 'goal' | 'daily-time' | 'placement' | 'result'
 
 const EXAM_OPTIONS = [
     { value: 'GOETHE', label: 'Goethe-Zertifikat', emoji: '🏛️', desc: 'Viện Goethe' },
     { value: 'TELC', label: 'telc', emoji: '📋', desc: 'Tổ chức telc' },
     { value: 'OESD', label: 'ÖSD', emoji: '🇦🇹', desc: 'Chứng chỉ Áo' },
     { value: null, label: 'Chỉ muốn học', emoji: '🦊', desc: 'Không thi' },
+] as const
+
+const DAILY_TIME_OPTIONS = [
+    { value: 5, label: '5 phút', desc: 'Một bước nhỏ mỗi ngày' },
+    { value: 10, label: '10 phút', desc: 'Nhịp học gọn và đều' },
+    { value: 20, label: '20 phút', desc: 'Tiến bộ rõ mỗi buổi' },
+    { value: 30, label: '30 phút', desc: 'Tăng tốc nếu có thời gian' },
 ] as const
 
 const LEVEL_INFO: Record<PlacementLevel, { color: string; label: string; desc: string }> = {
@@ -34,10 +41,12 @@ export function OnboardingWizard() {
     const router = useRouter()
     const [step, setStep] = useState<Step>('welcome')
     const [saving, setSaving] = useState(false)
+    const [saveError, setSaveError] = useState<string | null>(null)
 
     // Goal state
     const [targetExam, setTargetExam] = useState<string | null>(null)
     const [targetLevel, setTargetLevel] = useState<PlacementLevel>('B1')
+    const [dailyStudyMinutes, setDailyStudyMinutes] = useState<number>(10)
 
     // Placement state
     const [placementState, setPlacementState] = useState<PlacementState>(createPlacementState)
@@ -50,13 +59,13 @@ export function OnboardingWizard() {
     const [result, setResult] = useState<ReturnType<typeof calculateResult> | null>(null)
 
     const progress = useMemo(() => {
-        const steps: Step[] = ['welcome', 'goal', 'placement', 'result']
+        const steps: Step[] = ['welcome', 'goal', 'daily-time', 'placement', 'result']
         return ((steps.indexOf(step) + 1) / steps.length) * 100
     }, [step])
 
     // ===== HANDLERS =====
 
-    const handleGoalNext = useCallback(() => {
+    const handleDailyTimeNext = useCallback(() => {
         const state = createPlacementState()
         setPlacementState(state)
         setCurrentQuestion(getNextQuestion(state))
@@ -92,9 +101,10 @@ export function OnboardingWizard() {
     const handleComplete = useCallback(async () => {
         if (!result) return
         setSaving(true)
+        setSaveError(null)
 
         try {
-            await fetch('/api/v1/auth/onboarding', {
+            const response = await fetch('/api/v1/auth/onboarding', {
                 method: 'PATCH',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
@@ -102,15 +112,20 @@ export function OnboardingWizard() {
                     targetLevel,
                     targetExam,
                     targetExamDate: null,
+                    studyGoalMinutes: dailyStudyMinutes,
                 }),
             })
+            if (!response.ok) {
+                throw new Error('Failed to save onboarding')
+            }
             router.push('/dashboard')
         } catch (err) {
             console.error('[Onboarding] Save error:', err)
-            // Still redirect — non-critical
-            router.push('/dashboard')
+            setSaveError('Không lưu được lộ trình. Kiểm tra kết nối và thử lại nhé.')
+            setSaving(false)
+            return
         }
-    }, [result, targetLevel, targetExam, router])
+    }, [result, targetLevel, targetExam, dailyStudyMinutes, router])
 
     // ===== RENDER =====
 
@@ -135,7 +150,14 @@ export function OnboardingWizard() {
                         targetLevel={targetLevel}
                         onExamChange={setTargetExam}
                         onLevelChange={setTargetLevel}
-                        onNext={handleGoalNext}
+                        onNext={() => setStep('daily-time')}
+                    />
+                )}
+                {step === 'daily-time' && (
+                    <DailyTimeStep
+                        dailyStudyMinutes={dailyStudyMinutes}
+                        onDailyStudyMinutesChange={setDailyStudyMinutes}
+                        onNext={handleDailyTimeNext}
                     />
                 )}
                 {step === 'placement' && currentQuestion && (
@@ -152,7 +174,11 @@ export function OnboardingWizard() {
                 {step === 'result' && result && (
                     <ResultStep
                         result={result}
+                        targetLevel={targetLevel}
+                        targetExam={targetExam}
+                        dailyStudyMinutes={dailyStudyMinutes}
                         saving={saving}
+                        saveError={saveError}
                         onComplete={handleComplete}
                     />
                 )}
@@ -162,6 +188,51 @@ export function OnboardingWizard() {
 }
 
 // ===== STEP COMPONENTS =====
+
+function DailyTimeStep({
+    dailyStudyMinutes,
+    onDailyStudyMinutesChange,
+    onNext,
+}: {
+    dailyStudyMinutes: number
+    onDailyStudyMinutesChange: (value: number) => void
+    onNext: () => void
+}) {
+    return (
+        <div className="max-w-lg w-full animate-fade-in-up">
+            <h2 className="text-2xl font-bold text-center mb-1">Thời gian học mỗi ngày</h2>
+            <p className="text-gray-400 text-center text-sm mb-6">
+                Chọn mục tiêu linh hoạt để Fuxie gợi ý quest vừa sức.
+            </p>
+
+            <div className="grid grid-cols-1 gap-3 mb-8 sm:grid-cols-2">
+                {DAILY_TIME_OPTIONS.map((option) => (
+                    <button
+                        key={option.value}
+                        type="button"
+                        onClick={() => onDailyStudyMinutesChange(option.value)}
+                        aria-pressed={dailyStudyMinutes === option.value}
+                        className={`rounded-xl border-2 p-4 text-left transition-all ${
+                            dailyStudyMinutes === option.value
+                                ? 'border-[#60A8E4] bg-[#F3FBFF] shadow-sm'
+                                : 'border-gray-200 hover:border-gray-300'
+                        }`}
+                    >
+                        <div className="text-lg font-bold text-gray-900">{option.label}</div>
+                        <div className="mt-1 text-sm text-gray-500">{option.desc}</div>
+                    </button>
+                ))}
+            </div>
+
+            <button
+                onClick={onNext}
+                className="w-full py-3.5 rounded-xl bg-gradient-to-r from-[#60A8E4] to-[#3C78A8] text-white font-semibold hover:shadow-lg hover:shadow-sky-200 transition-all active:scale-[0.98]"
+            >
+                Tiếp theo: Kiểm tra trình độ →
+            </button>
+        </div>
+    )
+}
 
 function WelcomeStep({ onNext }: { onNext: () => void }) {
     return (
@@ -393,14 +464,25 @@ function PlacementStep({
 
 function ResultStep({
     result,
+    targetLevel,
+    targetExam,
+    dailyStudyMinutes,
     saving,
+    saveError,
     onComplete,
 }: {
     result: ReturnType<typeof calculateResult>
+    targetLevel: PlacementLevel
+    targetExam: string | null
+    dailyStudyMinutes: number
     saving: boolean
+    saveError: string | null
     onComplete: () => void
 }) {
     const levelInfo = LEVEL_INFO[result.estimatedLevel]
+    const firstAction = targetExam
+        ? `Luyện ${targetExam} ${targetLevel} sau một quest từ vựng ${result.estimatedLevel}`
+        : `Bắt đầu bằng một quest từ vựng ${result.estimatedLevel}`
 
     return (
         <div className="max-w-md w-full text-center animate-fade-in-up">
@@ -469,12 +551,31 @@ function ResultStep({
                 </div>
             </div>
 
+            <div className="bg-[#F3FBFF] rounded-xl border border-[#CCE4F0] p-4 mb-4 text-left">
+                <div className="text-xs font-bold uppercase tracking-wide text-[#3C78A8]">
+                    Bước đầu tiên
+                </div>
+                <div className="mt-1 font-semibold text-gray-900">{firstAction}</div>
+                <div className="mt-1 text-sm text-gray-500">
+                    Mục tiêu ngày: {dailyStudyMinutes} phút. Dashboard sẽ hiện một CTA chính để bắt đầu.
+                </div>
+            </div>
+
+            {saveError && (
+                <div
+                    role="alert"
+                    className="mb-4 rounded-xl border border-red-200 bg-red-50 p-3 text-left text-sm font-medium text-red-700"
+                >
+                    {saveError}
+                </div>
+            )}
+
             <button
                 onClick={onComplete}
                 disabled={saving}
                 className="w-full py-3.5 rounded-xl bg-gradient-to-r from-[#60A8E4] to-[#3C78A8] text-white font-semibold hover:shadow-lg hover:shadow-sky-200 transition-all active:scale-[0.98] disabled:opacity-50"
             >
-                {saving ? 'Đang lưu...' : 'Bắt đầu học! 🚀'}
+                {saving ? 'Đang lưu...' : saveError ? 'Thử lại' : 'Bắt đầu học!'}
             </button>
         </div>
     )

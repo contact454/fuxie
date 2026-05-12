@@ -9,6 +9,7 @@ const onboardingSchema = z.object({
     targetLevel: z.enum(['A1', 'A2', 'B1', 'B2', 'C1', 'C2']),
     targetExam: z.enum(['GOETHE', 'TELC', 'OESD']).nullable().optional(),
     targetExamDate: z.string().datetime().nullable().optional(),
+    studyGoalMinutes: z.union([z.literal(5), z.literal(10), z.literal(20), z.literal(30)]).optional(),
 })
 
 /**
@@ -32,6 +33,7 @@ export async function PATCH(req: NextRequest) {
                     targetLevel: data.targetLevel,
                     targetExam: data.targetExam ?? null,
                     targetExamDate: data.targetExamDate ? new Date(data.targetExamDate) : null,
+                    studyGoalMinutes: data.studyGoalMinutes ?? 10,
                     onboardingCompleted: true,
                 },
             }),
