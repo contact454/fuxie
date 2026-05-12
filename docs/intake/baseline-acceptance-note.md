@@ -207,3 +207,11 @@ PR #3 closed `P19-A1`:
 - First viewport hierarchy prioritizes one primary next action.
 - Fresh start, due review, no due review, exam focus, completed today, and unavailable-data states are specified.
 - Mobile, desktop, accessibility, and analytics handoff requirements are ready for Phase 26.
+
+## Phase 26 Update
+
+Activation Event Map is complete:
+
+- Activation metric numerator, denominator, timeframe, filters, and cohort grain are defined.
+- Core event map covers onboarding, dashboard next action, meaningful action start/completion, and activation completion.
+- Privacy boundaries and data quality checks are ready for implementation planning.
