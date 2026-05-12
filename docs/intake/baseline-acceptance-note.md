@@ -92,6 +92,18 @@ Approved RC groups were executed on branch `codex/fuxie-release-readiness` with 
 
 `apps/web/public/sw.js` remains pending and must not be included until CTO/user decision is explicit.
 
+## Phase 13 Update
+
+CTO decision is complete: `apps/web/public/sw.js` is accepted as a tracked generated Serwist artifact for this RC because it is already tracked and `pnpm build` regenerated it through `swDest: 'public/sw.js'`.
+
+Final generated artifact commit:
+
+```text
+04d9731 chore: update generated service worker artifact
+```
+
+`pnpm build` passed before this commit.
+
 ## Next Action
 
-Proceed to Phase 13 CTO `sw.js` decision and RC finalization after approved commits are complete.
+Proceed to Phase 14 PR / release handoff preparation.

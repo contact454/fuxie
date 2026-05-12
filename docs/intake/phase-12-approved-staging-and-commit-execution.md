@@ -91,3 +91,5 @@ Phase 13 should resolve the generated service worker artifact:
 3. If restored, record the policy and ensure build/deploy expectations remain valid.
 4. Run or confirm the required release gate after the final artifact decision.
 5. Prepare PR/release handoff.
+
+Phase 13 status update: completed in `phase-13-cto-swjs-decision-and-rc-finalization.md`. The generated `sw.js` artifact was committed separately as `04d9731` after `pnpm build` passed.

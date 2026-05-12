@@ -147,6 +147,16 @@ Collected on 2026-05-12:
 | Runtime UI group | `81222da` | Complete | Includes Phase 10-signed runtime UI slice |
 | Generated service worker | `apps/web/public/sw.js` | Held | Pending CTO/user decision |
 
+## Phase 13 Generated Artifact Results
+
+Collected on 2026-05-12:
+
+| Check | Evidence | Status | Notes |
+| --- | --- | --- | --- |
+| Serwist config | `swDest: 'public/sw.js'` in `apps/web/next.config.ts` | Confirmed | `public/sw.js` is production-build generated |
+| Production build | `pnpm build` | Pass | Serwist bundled `/sw.js`; web generated 74 static pages |
+| Generated service worker | `04d9731` | Complete | `apps/web/public/sw.js` committed separately |
+
 ## Phase 2 Smoke Prerequisites
 
 `scripts/smoke-full-local.ts` requires:
@@ -233,6 +243,12 @@ As of Phase 12:
 - Approved groups G1-G3 were executed as separate commits on `codex/fuxie-release-readiness`.
 - `apps/web/public/sw.js` remains the only known tracked release artifact pending decision.
 - Final RC closure still needs Phase 13 artifact decision and any required final gate confirmation.
+
+As of Phase 13:
+
+- The generated service worker artifact decision is closed.
+- `apps/web/public/sw.js` was committed separately after a passing production build.
+- The RC package is ready for PR/release handoff, with only P2 polish follow-ups remaining.
 
 ## Handoff Notes For Engineers
 

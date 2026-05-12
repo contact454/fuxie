@@ -80,6 +80,7 @@ Until the baseline is accepted:
 - `phase-10-visual-qa-final-rc-signoff.md`
 - `phase-11-final-staging-and-rc-branch-preparation.md`
 - `phase-12-approved-staging-and-commit-execution.md`
+- `phase-13-cto-swjs-decision-and-rc-finalization.md`
 - `baseline-acceptance-note.md`
 - `current-state-audit.md`
 - `risk-register.md`
@@ -104,6 +105,7 @@ Until the baseline is accepted:
 | Phase 10: Visual QA And Final RC Signoff | `phase-10-visual-qa-final-rc-signoff.md` | Complete; runtime UI visual signoff passed with P2 follow-ups, final `sw.js` decision remains pending |
 | Phase 11: Final Staging And RC Branch Preparation | `phase-11-final-staging-and-rc-branch-preparation.md` | Complete as staging/branch plan; no git staging performed, `sw.js` decision and git approval remain pending |
 | Phase 12: Approved Staging And Commit Execution | `phase-12-approved-staging-and-commit-execution.md` | Complete; approved groups committed separately, `sw.js` remains pending |
+| Phase 13: CTO `sw.js` Decision And RC Finalization | `phase-13-cto-swjs-decision-and-rc-finalization.md` | Complete; `pnpm build` passed and generated `sw.js` committed separately |
 
 ## Day 30 Exit Criteria
 
