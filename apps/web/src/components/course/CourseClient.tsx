@@ -1,4 +1,17 @@
+import Image from 'next/image'
 import { MeasuredLink } from '@/components/performance/measured-link'
+import { FuxieCoach, RewardPreview } from '@/components/gamification/quest-visuals'
+import { getCefrBadgeAssetSrc } from '@/components/gamification/reward-assets'
+import { FuxieBadge, FuxiePanel, fuxieButtonClass } from '@/components/ui/fuxie-ui'
+import {
+    ArrowRight,
+    BookOpen,
+    CheckCircle2,
+    Clock,
+    GraduationCap,
+    LockKeyhole,
+    Trophy,
+} from 'lucide-react'
 
 interface SkillLink {
     skill: 'listening' | 'reading' | 'writing' | 'speaking'
@@ -43,36 +56,240 @@ interface CourseData {
 }
 
 const MODULE_GRADIENTS = [
-    'from-green-500 to-emerald-600',
-    'from-blue-500 to-indigo-600',
-    'from-purple-500 to-violet-600',
-    'from-orange-500 to-amber-600',
-    'from-teal-500 to-cyan-600',
-    'from-rose-500 to-pink-600',
-    'from-sky-500 to-blue-600',
-    'from-fuchsia-500 to-purple-600',
+    'from-[#60A8E4] to-[#3C78A8]',
+    'from-[#54A8E4] to-[#2EC4B6]',
+    'from-[#6CB4D8] to-[#3078B4]',
+    'from-[#60A8D8] to-[#54A8E4]',
+    'from-[#2EC4B6] to-[#3C78A8]',
+    'from-[#9CCCE4] to-[#60A8E4]',
+    'from-[#3C78A8] to-[#60A8E4]',
+    'from-[#CCE4F0] to-[#54A8E4]',
 ]
 
 const MODULE_EMOJIS = ['👋', '👨‍👩‍👧‍👦', '🏠', '🍽️', '⏰', '🚌', '💼', '🎯']
+
+type CourseModule = CourseData['modules'][number]
+type CourseModuleSummary = {
+    mod: CourseModule
+    idx: number
+} & ReturnType<typeof getModuleProgress>
+
+function getModuleProgress(mod: CourseModule) {
+    const totalItems = mod.vocabThemes.reduce((s, t) => s + t.itemCount, 0) +
+        mod.grammarTopics.reduce((s, t) => s + t.lessonCount, 0)
+    const completedItems = mod.vocabThemes.reduce((s, t) => s + t.learnedCount, 0) +
+        mod.grammarTopics.reduce((s, t) => s + t.completedCount, 0)
+    const progressPercent = totalItems > 0 ? Math.round((completedItems / totalItems) * 100) : 0
+    const isDone = progressPercent >= 100
+    const primaryHref = mod.vocabThemes[0]
+        ? '/vocabulary'
+        : mod.grammarTopics[0]
+            ? `/grammar/${mod.grammarTopics[0].slug}`
+            : mod.skillLinks?.[0]?.href ?? '/course'
+
+    return {
+        totalItems,
+        completedItems,
+        progressPercent,
+        isDone,
+        primaryHref,
+        primaryLabel: isDone ? 'Ôn lại module' : 'Bắt đầu bài tiếp theo',
+    }
+}
+
+function CourseQuestPath({
+    level,
+    summaries,
+    activeIndex,
+    activeTitle,
+    activeHref,
+    activeMinutes,
+}: {
+    level: string
+    summaries: CourseModuleSummary[]
+    activeIndex: number
+    activeTitle: string
+    activeHref: string
+    activeMinutes: number
+}) {
+    const pathPercent = summaries.length > 1
+        ? Math.min(100, Math.round((activeIndex / (summaries.length - 1)) * 100))
+        : 0
+    const totalMinutes = summaries.reduce((sum, summary) => sum + summary.mod.estimatedMinutes, 0)
+    const levelBadgeSrc = getCefrBadgeAssetSrc(level)
+
+    return (
+        <FuxiePanel variant="hero" className="mb-8 overflow-hidden">
+            <div className="relative">
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(96,168,228,0.38),transparent_32%),radial-gradient(circle_at_top_right,rgba(255,255,255,0.86),transparent_30%)]" />
+                <div className="relative grid gap-5 p-5 sm:p-6 lg:grid-cols-[minmax(0,1fr)_340px]">
+                    <div className="min-w-0">
+                        <div className="mb-4 flex flex-wrap items-center gap-2">
+                            <FuxieBadge tone="brand" className="bg-white/75 shadow-sm ring-white/90">
+                                <Image src={levelBadgeSrc} alt="" width={18} height={18} className="h-4 w-4 object-contain" />
+                                <GraduationCap className="h-3.5 w-3.5 text-[#FFD166]" />
+                                Lộ trình {level}
+                            </FuxieBadge>
+                            <FuxieBadge tone="brand" className="bg-white/75 shadow-sm ring-white/90">
+                                <BookOpen className="h-3.5 w-3.5 text-[#54A8E4]" />
+                                {summaries.length} module
+                            </FuxieBadge>
+                            <FuxieBadge tone="reward" className="bg-white/75 shadow-sm ring-white/90">
+                                <Clock className="h-3.5 w-3.5 text-[#FF8A3D]" />
+                                ~{Math.max(1, Math.round(totalMinutes / 60))}h
+                            </FuxieBadge>
+                        </div>
+
+                        <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+                            <div className="min-w-0">
+                                <p className="text-sm font-bold uppercase tracking-wide text-[#3C78A8]">Learning path</p>
+                                <h2 className="mt-2 text-3xl font-black leading-tight text-[#173B56]">
+                                    {activeTitle}
+                                </h2>
+                                <p className="mt-2 max-w-2xl text-sm font-semibold text-[#3C78A8]">
+                                    Path mới gồm node, lock, reward preview và boss exam để học viên thấy mình đang ở đâu trong hành trình.
+                                </p>
+                            </div>
+                            <MeasuredLink
+                                href={activeHref}
+                                flow="course.path.primary"
+                                source={`module-${activeIndex + 1}`}
+                                className={fuxieButtonClass('primary', 'lg', 'shrink-0 rounded-2xl')}
+                            >
+                                Học tiếp
+                                <ArrowRight className="h-4 w-4" />
+                            </MeasuredLink>
+                        </div>
+
+                        <div className="mt-6 overflow-x-auto pb-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+                            <div className="relative flex min-w-[620px] items-center justify-between px-2 py-10">
+                                <div className="absolute left-9 right-20 top-1/2 h-3 -translate-y-1/2 rounded-full bg-white/70" />
+                                <div
+                                    className="absolute left-9 top-1/2 h-3 -translate-y-1/2 rounded-full bg-gradient-to-r from-[#54A8E4] via-[#60A8E4] to-[#2EC4B6]"
+                                    style={{ width: `calc((100% - 7.25rem) * ${pathPercent / 100})` }}
+                                />
+                                {summaries.map((summary) => {
+                                    const isActive = summary.idx === activeIndex
+                                    const isLocked = !summary.mod.isUnlocked
+                                    const node = (
+                                        <span
+                                            className={`relative z-10 flex h-14 w-14 items-center justify-center rounded-2xl text-base font-black shadow-lg ring-4 transition ${
+                                                summary.isDone
+                                                    ? 'bg-gradient-to-br from-[#56B947] to-[#2EC4B6] text-white ring-white/20'
+                                                    : isActive
+                                                        ? 'bg-[#54A8E4] text-white ring-[#CCE4F0]'
+                                                        : isLocked
+                                                            ? 'bg-white text-slate-400 ring-slate-200'
+                                                            : 'bg-white text-[#3C78A8] ring-white/80'
+                                            }`}
+                                        >
+                                            {summary.isDone ? (
+                                                <CheckCircle2 className="h-6 w-6" />
+                                            ) : isLocked ? (
+                                                <LockKeyhole className="h-5 w-5" />
+                                            ) : (
+                                                summary.mod.sortOrder
+                                            )}
+                                            {!isLocked ? (
+                                                <Image
+                                                    src={levelBadgeSrc}
+                                                    alt=""
+                                                    width={28}
+                                                    height={28}
+                                                    className={`absolute -right-2 -top-2 h-7 w-7 object-contain drop-shadow-md ${
+                                                        isActive ? 'scale-110' : summary.isDone ? '' : 'opacity-90'
+                                                    }`}
+                                                />
+                                            ) : null}
+                                        </span>
+                                    )
+
+                                    return (
+                                        <div key={summary.mod.id} className={`relative flex flex-col items-center ${summary.idx % 2 === 0 ? 'translate-y-4' : '-translate-y-4'}`}>
+                                            {isLocked ? (
+                                                node
+                                            ) : (
+                                                <MeasuredLink
+                                                    href={summary.primaryHref}
+                                                    flow="course.path.node"
+                                                    source={summary.mod.slug}
+                                                    aria-label={`Module ${summary.mod.sortOrder}: ${summary.mod.titleDe ?? summary.mod.title}`}
+                                                >
+                                                    {node}
+                                                </MeasuredLink>
+                                            )}
+                                            <span className={`mt-3 max-w-20 truncate text-[11px] font-bold ${isActive ? 'text-[#173B56]' : 'text-[#3C78A8]/70'}`}>
+                                                {summary.mod.titleDe ?? summary.mod.title}
+                                            </span>
+                                        </div>
+                                    )
+                                })}
+
+                                <div className="-translate-y-6">
+                                    <span className="relative z-10 flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-[#3C78A8] to-[#60A8E4] text-white shadow-xl ring-4 ring-white/70">
+                                        <Trophy className="h-7 w-7" />
+                                    </span>
+                                    <span className="mt-3 block text-center text-xs font-black text-[#3C78A8]">Boss exam</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="flex min-w-0 flex-col gap-4">
+                        <FuxieCoach
+                            role="locked"
+                            eyebrow="Unlock logic"
+                            title="Mỗi node có điều kiện rõ"
+                            message="Học viên thấy module đang học, module sắp mở và phần thưởng trước khi bấm vào."
+                            className="bg-white"
+                        />
+                        <FuxiePanel variant="soft" className="bg-white/70 p-3 ring-1 ring-white/90 backdrop-blur">
+                            <RewardPreview
+                                layout="stack"
+                                rewards={[
+                                    { type: 'xp', label: `+${Math.max(30, Math.round(activeMinutes / 4))} XP`, detail: 'Module reward' },
+                                    { type: 'unlock', label: 'Next node', detail: 'Mở khóa bước tiếp' },
+                                    { type: 'exam', label: 'Boss gate', detail: `${level} readiness` },
+                                ]}
+                            />
+                        </FuxiePanel>
+                    </div>
+                </div>
+            </div>
+        </FuxiePanel>
+    )
+}
 
 export function CourseClient({ data }: { data: CourseData }) {
     const totalVocabItems = data.modules.reduce((s, m) => s + m.vocabThemes.reduce((ss, t) => ss + t.itemCount, 0), 0)
     const totalVocabLearned = data.modules.reduce((s, m) => s + m.vocabThemes.reduce((ss, t) => ss + t.learnedCount, 0), 0)
     const totalGrammarLessons = data.modules.reduce((s, m) => s + m.grammarTopics.reduce((ss, t) => ss + t.lessonCount, 0), 0)
     const totalGrammarCompleted = data.modules.reduce((s, m) => s + m.grammarTopics.reduce((ss, t) => ss + t.completedCount, 0), 0)
+    const moduleSummaries = data.modules.map((mod, idx) => ({
+        mod,
+        idx,
+        ...getModuleProgress(mod),
+    }))
+    const activeModule = moduleSummaries.find((summary) => summary.mod.isUnlocked && !summary.isDone)
+        ?? moduleSummaries.find((summary) => summary.mod.isUnlocked)
+        ?? moduleSummaries[0]
 
     const level = data.cefrLevel ?? 'A1'
+    const levelBadgeSrc = getCefrBadgeAssetSrc(level)
     const levelColors: Record<string, string> = {
         A1: 'bg-green-500', A2: 'bg-teal-500', B1: 'bg-blue-500',
         B2: 'bg-indigo-500', C1: 'bg-purple-500', C2: 'bg-rose-500',
     }
 
     return (
-        <div className="max-w-4xl mx-auto px-4 py-8">
+        <div className="max-w-6xl mx-auto px-4 py-8">
             {/* Course Header */}
             <div className="mb-8">
                 <div className="flex items-center gap-3 mb-2">
-                    <span className={`px-3 py-1 rounded-full ${levelColors[level] ?? 'bg-green-500'} text-white text-sm font-bold`}>{level}</span>
+                    <span className={`inline-flex items-center gap-1.5 rounded-full py-1 pl-1.5 pr-3 ${levelColors[level] ?? 'bg-green-500'} text-sm font-bold text-white`}>
+                        <Image src={levelBadgeSrc} alt="" width={26} height={26} className="h-6 w-6 object-contain" />
+                        {level}
+                    </span>
                     <h1 className="text-2xl sm:text-3xl font-bold text-gray-900">
                         📚 {data.courseTitleDe}
                     </h1>
@@ -99,11 +316,22 @@ export function CourseClient({ data }: { data: CourseData }) {
                 </div>
             </div>
 
+            {activeModule && (
+                <CourseQuestPath
+                    level={level}
+                    summaries={moduleSummaries}
+                    activeIndex={activeModule.idx}
+                    activeTitle={activeModule.mod.titleDe ?? activeModule.mod.title}
+                    activeHref={activeModule.primaryHref}
+                    activeMinutes={activeModule.mod.estimatedMinutes}
+                />
+            )}
+
             {/* Module Timeline */}
             <div className="relative">
                 {/* Vertical timeline line */}
                 <div
-                    className="absolute left-6 top-0 bottom-0 w-0.5 bg-gradient-to-b from-green-300 via-blue-300 to-purple-300"
+                    className="absolute left-6 top-0 bottom-0 w-0.5 bg-gradient-to-b from-[#2EC4B6] via-[#60A8E4] to-[#3C78A8]"
                     aria-hidden
                 />
 
@@ -173,9 +401,9 @@ export function CourseClient({ data }: { data: CourseData }) {
                                             <p className="text-sm text-gray-500 mb-4">{mod.description}</p>
                                         )}
 
-                                        <div className="mb-4 flex flex-col gap-3 rounded-xl border border-orange-100 bg-orange-50/70 p-4 sm:flex-row sm:items-center sm:justify-between">
+                                        <FuxiePanel variant="soft" className="mb-4 flex flex-col gap-3 rounded-xl p-4 sm:flex-row sm:items-center sm:justify-between">
                                             <div className="min-w-0">
-                                                <p className="text-xs font-semibold uppercase tracking-wider text-[#FF6B35]">
+                                                <p className="text-xs font-semibold uppercase tracking-wider text-[#3C78A8]">
                                                     Việc nên làm ngay
                                                 </p>
                                                 <p className="mt-1 text-sm font-semibold text-gray-900">
@@ -186,11 +414,11 @@ export function CourseClient({ data }: { data: CourseData }) {
                                                 href={primaryHref}
                                                 flow="course.module.primary"
                                                 source={mod.slug}
-                                                className="inline-flex shrink-0 items-center justify-center rounded-xl bg-[#FF6B35] px-4 py-2.5 text-sm font-bold text-white shadow-sm transition hover:bg-[#e55a25]"
+                                                className={fuxieButtonClass('primary', 'md', 'shrink-0 rounded-xl shadow-sm')}
                                             >
                                                 Học tiếp
                                             </MeasuredLink>
-                                        </div>
+                                        </FuxiePanel>
 
                                         <details className="group rounded-xl border border-gray-100 bg-gray-50/40 p-3">
                                             <summary className="cursor-pointer list-none text-sm font-semibold text-gray-700">

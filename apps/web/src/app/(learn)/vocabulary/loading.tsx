@@ -12,14 +12,14 @@ export default function VocabularyLoading() {
                     ))}
                 </div>
                 <div className="flex items-center gap-4">
-                    <div className="w-14 h-14 rounded-xl bg-orange-100" />
+                    <div className="w-14 h-14 rounded-xl bg-[#CCE4F0]" />
                     <div className="flex-1">
                         <div className="h-6 w-36 rounded-lg bg-gray-100 mb-2" />
                         <div className="h-3 w-24 rounded bg-gray-100" />
                     </div>
                     <div className="flex gap-2">
                         <div className="h-12 w-20 rounded-xl bg-gray-100" />
-                        <div className="h-12 w-28 rounded-xl bg-orange-100" />
+                        <div className="h-12 w-28 rounded-xl bg-[#CCE4F0]" />
                     </div>
                 </div>
                 <div className="mt-4 h-2 rounded-full bg-gray-100" />
@@ -45,7 +45,7 @@ export default function VocabularyLoading() {
                         <div className="h-2.5 rounded-full bg-gray-100 mb-4" />
                         <div className="flex gap-3">
                             <div className="flex-1 h-11 rounded-xl bg-gray-100" />
-                            <div className="flex-1 h-11 rounded-xl bg-orange-100" />
+                            <div className="flex-1 h-11 rounded-xl bg-[#CCE4F0]" />
                         </div>
                     </div>
                 </div>

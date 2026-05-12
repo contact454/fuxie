@@ -1,6 +1,6 @@
 import { redirect } from 'next/navigation'
 import { getServerUser } from '@/lib/auth/server-auth'
-import { ExamSessionClient } from '@/components/exam/ExamSessionClient'
+import { ExamSessionClientDynamic } from '@/components/exam/ExamSessionClientDynamic'
 
 export const metadata = {
     title: 'Fuxie - Bài thi thử',
@@ -17,5 +17,5 @@ export default async function ExamSessionPage({
 
     const { examId } = await params
 
-    return <ExamSessionClient examId={examId} />
+    return <ExamSessionClientDynamic examId={examId} />
 }

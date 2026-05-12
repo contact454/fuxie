@@ -137,7 +137,7 @@ export function ExamSessionClient({ examId }: { examId: string }) {
         return (
             <div className="flex items-center justify-center h-[60vh]">
                 <div className="text-center">
-                    <div className="w-12 h-12 border-4 border-[#FF6B35]/30 border-t-[#FF6B35] rounded-full animate-spin mx-auto mb-4" />
+                    <div className="w-12 h-12 border-4 border-[#60A8E4]/30 border-t-[#60A8E4] rounded-full animate-spin mx-auto mb-4" />
                     <p className="text-gray-500">Đang tải bài thi...</p>
                 </div>
             </div>
@@ -207,7 +207,7 @@ export function ExamSessionClient({ examId }: { examId: string }) {
 
                 <button
                     onClick={() => setShowSubmitModal(true)}
-                    className="px-3 py-1.5 text-xs font-medium text-white bg-gradient-to-r from-[#FF6B35] to-[#2EC4B6] rounded-lg hover:shadow-md transition-all"
+                    className="px-3 py-1.5 text-xs font-medium text-white bg-gradient-to-r from-[#60A8E4] to-[#2EC4B6] rounded-lg hover:shadow-md transition-all"
                 >
                     Nộp bài
                 </button>
@@ -221,7 +221,7 @@ export function ExamSessionClient({ examId }: { examId: string }) {
                         onClick={() => { setCurrentSectionIdx(idx); setCurrentTaskIdx(0) }}
                         className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-all
                             ${idx === currentSectionIdx
-                                ? 'bg-[#FF6B35]/10 text-[#FF6B35] ring-1 ring-[#FF6B35]/30'
+                                ? 'bg-[#60A8E4]/10 text-[#3C78A8] ring-1 ring-[#60A8E4]/30'
                                 : 'bg-gray-50 text-gray-500 hover:bg-gray-100'
                             }`}
                     >
@@ -239,7 +239,7 @@ export function ExamSessionClient({ examId }: { examId: string }) {
                             onClick={() => setCurrentTaskIdx(idx)}
                             className={`w-8 h-8 rounded-lg text-xs font-medium transition-all
                                 ${idx === currentTaskIdx
-                                    ? 'bg-[#FF6B35] text-white shadow-sm'
+                                    ? 'bg-[#60A8E4] text-white shadow-sm'
                                     : answers[t.id] ? 'bg-green-100 text-green-600 ring-1 ring-green-200' : 'bg-gray-100 text-gray-500 hover:bg-gray-200'
                                 }`}
                         >
@@ -306,14 +306,14 @@ export function ExamSessionClient({ examId }: { examId: string }) {
                 {isLast ? (
                     <button
                         onClick={() => setShowSubmitModal(true)}
-                        className="px-6 py-2 text-sm font-medium text-white bg-gradient-to-r from-[#FF6B35] to-[#2EC4B6] rounded-xl shadow-sm hover:shadow-md transition-all"
+                        className="px-6 py-2 text-sm font-medium text-white bg-gradient-to-r from-[#60A8E4] to-[#2EC4B6] rounded-xl shadow-sm hover:shadow-md transition-all"
                     >
                         Nộp bài ✓
                     </button>
                 ) : (
                     <button
                         onClick={goNext}
-                        className="px-4 py-2 text-sm font-medium text-white bg-[#FF6B35] rounded-xl hover:bg-[#e55a28] transition-all"
+                        className="px-4 py-2 text-sm font-medium text-white bg-[#60A8E4] rounded-xl hover:bg-[#3C78A8] transition-all"
                     >
                         Câu tiếp theo →
                     </button>
@@ -341,7 +341,7 @@ export function ExamSessionClient({ examId }: { examId: string }) {
                             <button
                                 onClick={handleSubmit}
                                 disabled={phase === 'submitting'}
-                                className="flex-1 py-2 text-sm font-medium text-white bg-gradient-to-r from-[#FF6B35] to-[#2EC4B6] rounded-xl shadow-sm disabled:opacity-50"
+                                className="flex-1 py-2 text-sm font-medium text-white bg-gradient-to-r from-[#60A8E4] to-[#2EC4B6] rounded-xl shadow-sm disabled:opacity-50"
                             >
                                 {phase === 'submitting' ? 'Đang chấm...' : 'Nộp bài'}
                             </button>

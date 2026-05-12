@@ -543,7 +543,7 @@ export function ChatClient({ initialLevel, displayName }: ChatClientProps) {
                             onKeyDown={handleKeyDown}
                             placeholder="Schreib etwas auf Deutsch..."
                             rows={1}
-                            className="w-full rounded-2xl bg-white ring-1 ring-gray-200 focus:ring-2 focus:ring-orange-300
+                            className="w-full rounded-2xl bg-white ring-1 ring-gray-200 focus:ring-2 focus:ring-[#60A8E4]/40
                                 px-4 py-3 pr-12 text-sm resize-none outline-none transition-all
                                 placeholder:text-gray-400 max-h-32 overflow-y-auto"
                             style={{ minHeight: '44px' }}

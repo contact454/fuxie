@@ -3,6 +3,7 @@
 import { useState, useCallback, useMemo, useRef, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
 import Image from 'next/image'
+import { FUXIE_3D_ASSETS, FuxieRoleMascot, SkillMotivationRail } from '@/components/gamification/quest-visuals'
 import { Mascot } from '@/components/ui/mascot'
 import styles from './reading.module.css'
 import {
@@ -188,7 +189,7 @@ export function ReadingPlayer({
                     style={{ '--level-gradient': cefrColor.css, '--level-shadow': cefrColor.shadow } as React.CSSProperties}
                 >
                     {/* Mascot */}
-                    <Mascot variant="lesen" size={72} className="mx-auto" />
+                    <FuxieRoleMascot src={FUXIE_3D_ASSETS.librarian} alt="Fuxie reading coach" size={96} motion="coach" />
 
                     {/* Title */}
                     <h1 className="text-2xl font-bold text-gray-900 mt-4">{topic}</h1>
@@ -684,34 +685,58 @@ export function ReadingPlayer({
                         </span>
                     </div>
 
-                    {/* Timer + info */}
-                    <div className="flex items-center justify-between mb-3">
-                        <div className={styles.translateHint}>
-                            Điền đủ {clozeGapCount} chỗ trống
-                        </div>
-                        <div className={styles.readingTimer}>
-                            ⏱️ {formatTime(Math.round((Date.now() - startTime) / 1000))}
-                        </div>
-                    </div>
+                    <div className="grid gap-5 lg:grid-cols-[minmax(0,1fr)_320px]">
+                        <div className="min-w-0">
+                            {/* Timer + info */}
+                            <div className="flex items-center justify-between mb-3">
+                                <div className={styles.translateHint}>
+                                    Điền đủ {clozeGapCount} chỗ trống
+                                </div>
+                                <div className={styles.readingTimer}>
+                                    ⏱️ {formatTime(Math.round((Date.now() - startTime) / 1000))}
+                                </div>
+                            </div>
 
-                    {/* Cloze content */}
-                    <div className="space-y-5" onClick={handleTextClick} style={{ cursor: 'text' }}>
-                        {renderImages(imagesJson, cefrLevel, 'header')}
-                        {clozeData.type === 'word' && renderWordClozeInteractive()}
-                        {clozeData.type === 'sentence' && renderSentenceClozeInteractive()}
-                        {clozeData.type === 'section' && renderSectionClozeInteractive()}
-                    </div>
+                            {/* Cloze content */}
+                            <div className="space-y-5" onClick={handleTextClick} style={{ cursor: 'text' }}>
+                                {renderImages(imagesJson, cefrLevel, 'header')}
+                                {clozeData.type === 'word' && renderWordClozeInteractive()}
+                                {clozeData.type === 'sentence' && renderSentenceClozeInteractive()}
+                                {clozeData.type === 'section' && renderSectionClozeInteractive()}
+                            </div>
 
-                    {/* Submit button */}
-                    <div className="flex justify-center mt-8">
-                        <button
-                            onClick={submitCloze}
-                            disabled={!allAnswered || isSubmitting}
-                            className={`${styles.navButton} ${styles.submit}`}
-                            style={{ minWidth: 250, padding: '14px 32px', fontSize: '15px' }}
-                        >
-                            {isSubmitting ? 'Đang chấm...' : `Nộp bài (${Object.keys(clozeAnswers).length}/${clozeGapCount})`}
-                        </button>
+                            {/* Submit button */}
+                            <div className="flex justify-center mt-8">
+                                <button
+                                    onClick={submitCloze}
+                                    disabled={!allAnswered || isSubmitting}
+                                    className={`${styles.navButton} ${styles.submit}`}
+                                    style={{ minWidth: 250, padding: '14px 32px', fontSize: '15px' }}
+                                >
+                                    {isSubmitting ? 'Đang chấm...' : `Nộp bài (${Object.keys(clozeAnswers).length}/${clozeGapCount})`}
+                                </button>
+                            </div>
+                        </div>
+
+                        <SkillMotivationRail
+                            skill="reading"
+                            phaseLabel={`Điền khuyết ${cefrLevel}`}
+                            title="Giữ mắt ở manh mối chính"
+                            message="Hoàn thành từng chỗ trống theo ngữ cảnh. Fuxie chỉ nhắc nhịp, phần đọc vẫn là trung tâm."
+                            progressLabel="Cloze progress"
+                            progressPercent={clozeProgress}
+                            metrics={[
+                                { label: 'Gaps', value: `${Object.keys(clozeAnswers).length}/${clozeGapCount}` },
+                                { label: 'Time', value: formatTime(Math.round((Date.now() - startTime) / 1000)) },
+                                { label: 'Level', value: cefrLevel },
+                                { label: 'Mode', value: 'Reading' },
+                            ]}
+                            rewards={[
+                                { type: 'xp', label: `+${Math.max(10, clozeGapCount * 2)} XP`, detail: 'Hoàn thành bài đọc' },
+                                { type: 'badge', label: 'Context clue', detail: 'Đọc theo ngữ cảnh' },
+                                { type: 'unlock', label: 'Next text', detail: 'Mở bài tiếp theo' },
+                            ]}
+                        />
                     </div>
                 </div>
             )
@@ -833,7 +858,7 @@ export function ReadingPlayer({
                                     onClick={() => selectAnswer(q.id, optionKey)}
                                     className={`${styles.answerOption} ${isSelected ? styles.selected : ''}`}
                                 >
-                                    <div className={`w-7 h-7 rounded-lg border-2 shrink-0 flex items-center justify-center text-xs font-bold transition-all ${isSelected ? 'border-[#FF6B35] bg-[#FF6B35] text-white' : 'border-gray-300 text-gray-500'
+                                    <div className={`w-7 h-7 rounded-lg border-2 shrink-0 flex items-center justify-center text-xs font-bold transition-all ${isSelected ? 'border-[#60A8E4] bg-[#60A8E4] text-white' : 'border-gray-300 text-gray-500'
                                         }`}>
                                         {String.fromCharCode(65 + i)}
                                     </div>
@@ -851,7 +876,7 @@ export function ReadingPlayer({
                         value={answers[q.id] || ''}
                         onChange={(e) => selectAnswer(q.id, e.target.value)}
                         placeholder="Nhập câu trả lời..."
-                        className="w-full p-3.5 rounded-xl border-2 border-gray-200 text-sm focus:border-[#FF6B35] focus:ring-2 focus:ring-[#FF6B35]/20 outline-none transition-all"
+                        className="w-full p-3.5 rounded-xl border-2 border-gray-200 text-sm focus:border-[#60A8E4] focus:ring-2 focus:ring-[#60A8E4]/20 outline-none transition-all"
                     />
                 )}
 
@@ -924,6 +949,8 @@ export function ReadingPlayer({
                     </span>
                 </div>
 
+                <div className="grid gap-5 lg:grid-cols-[minmax(0,1fr)_320px]">
+                    <div className="min-w-0">
                 {/* Click-to-translate hint + reading timer */}
                 <div className="flex items-center justify-between mb-3">
                     {vocabList.length === 0 ? (
@@ -964,6 +991,29 @@ export function ReadingPlayer({
                             </div>
                         </div>
                     )}
+                </div>
+
+                    </div>
+
+                    <SkillMotivationRail
+                        skill="reading"
+                        phaseLabel={`Câu ${currentQuestion + 1}/${questions.length}`}
+                        title="Đọc theo manh mối, không đoán vội"
+                        message="Tập trung vào câu hỏi hiện tại, dùng dịch nhanh khi cần và giữ nhịp đọc đều đến cuối bài."
+                        progressLabel="Question progress"
+                        progressPercent={progress}
+                        metrics={[
+                            { label: 'Answered', value: `${Object.keys(answers).length}/${questions.length}` },
+                            { label: 'Time', value: formatTime(elapsed) },
+                            { label: 'Level', value: cefrLevel },
+                            { label: 'Vocab', value: `${vocabList.length}` },
+                        ]}
+                        rewards={[
+                            { type: 'xp', label: `+${Math.max(10, questions.length * 3)} XP`, detail: 'Hoàn thành bài đọc' },
+                            { type: 'badge', label: 'Focus reader', detail: 'Giữ mạch đọc' },
+                            { type: 'unlock', label: 'Next text', detail: 'Mở bài tiếp theo' },
+                        ]}
+                    />
                 </div>
 
                 {/* ── Translation Tooltip ── */}
@@ -1060,7 +1110,7 @@ export function ReadingPlayer({
                                     style={{
                                         left: `${Math.random() * 100}%`,
                                         top: `${Math.random() * 60}%`,
-                                        backgroundColor: ['#FF6B35', '#4CAF50', '#2EC4B6', '#9C27B0', '#FF9800', '#004E89'][i % 6],
+                                        backgroundColor: ['#60A8E4', '#4CAF50', '#2EC4B6', '#9C27B0', '#FFB703', '#3C78A8'][i % 6],
                                         opacity: 0.3 + Math.random() * 0.4,
                                     }}
                                 />
@@ -1075,7 +1125,7 @@ export function ReadingPlayer({
                         <svg className="w-28 h-28 transform -rotate-90" viewBox="0 0 112 112">
                             <circle cx="56" cy="56" r="48" stroke="#E5E7EB" strokeWidth="8" fill="none" />
                             <circle cx="56" cy="56" r="48"
-                                stroke={percentage >= 70 ? '#10B981' : percentage >= 50 ? '#FF6B35' : '#EF4444'}
+                                stroke={percentage >= 70 ? '#10B981' : percentage >= 50 ? '#FF8A3D' : '#EF4444'}
                                 strokeWidth="8" fill="none"
                                 strokeDasharray={`${2 * Math.PI * 48}`}
                                 strokeDashoffset={`${2 * Math.PI * 48 * (1 - percentage / 100)}`}
@@ -1173,7 +1223,7 @@ export function ReadingPlayer({
                                     style={{
                                         left: `${Math.random() * 100}%`,
                                         top: `${Math.random() * 60}%`,
-                                        backgroundColor: ['#FF6B35', '#4CAF50', '#2EC4B6', '#9C27B0', '#FF9800', '#004E89'][i % 6],
+                                        backgroundColor: ['#60A8E4', '#4CAF50', '#2EC4B6', '#9C27B0', '#FFB703', '#3C78A8'][i % 6],
                                         opacity: 0.3 + Math.random() * 0.4,
                                     }}
                                 />
@@ -1190,7 +1240,7 @@ export function ReadingPlayer({
                             <circle cx="56" cy="56" r="48" stroke="#E5E7EB" strokeWidth="8" fill="none" />
                             <circle
                                 cx="56" cy="56" r="48"
-                                stroke={percentage >= 70 ? '#10B981' : percentage >= 50 ? '#FF6B35' : '#EF4444'}
+                                stroke={percentage >= 70 ? '#10B981' : percentage >= 50 ? '#FF8A3D' : '#EF4444'}
                                 strokeWidth="8" fill="none"
                                 strokeDasharray={`${2 * Math.PI * 48}`}
                                 strokeDashoffset={`${2 * Math.PI * 48 * (1 - percentage / 100)}`}
@@ -1215,7 +1265,7 @@ export function ReadingPlayer({
                         <span className="px-3 py-1 rounded-full text-xs font-semibold bg-gray-100 text-gray-600">
                             {topic}
                         </span>
-                        <span className="px-3 py-1 rounded-full text-xs font-bold bg-orange-100 text-[#FF6B35]">
+                        <span className="px-3 py-1 rounded-full text-xs font-bold bg-[#FFF4D6] text-[#C67A00]">
                             +{Math.round(score * 4)} XP
                         </span>
                     </div>
@@ -1357,7 +1407,7 @@ export function ReadingPlayer({
                             )}
                             {/* Areas for improvement */}
                             {percentage < 90 && (
-                                <div className={styles.insightCard} style={{ borderLeftColor: '#FF6B35' }}>
+                                <div className={styles.insightCard} style={{ borderLeftColor: '#FF8A3D' }}>
                                     <span className="text-sm">🎯</span>
                                     <div>
                                         <p className="text-xs font-bold text-orange-700">Cần cải thiện</p>

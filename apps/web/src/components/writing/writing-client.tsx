@@ -3,6 +3,7 @@
 import { useCallback, useEffect, useMemo, useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { MeasuredLink } from '@/components/performance/measured-link'
+import { FUXIE_3D_ASSETS, FuxieRoleMascot } from '@/components/gamification/quest-visuals'
 import { Mascot } from '@/components/ui/mascot'
 import { useLevelSwitcher } from '@/hooks/use-level-switcher'
 import { getCefrTheme } from '@/lib/constants/cefr'
@@ -62,7 +63,7 @@ function ProgressRing({ progress, size = 40, strokeWidth = 3.5 }: { progress: nu
             <circle cx={size / 2} cy={size / 2} r={radius} stroke="#E5E7EB" strokeWidth={strokeWidth} fill="none" />
             <circle
                 cx={size / 2} cy={size / 2} r={radius}
-                stroke={progress >= 100 ? '#10B981' : '#FF6B35'}
+                stroke={progress >= 100 ? '#10B981' : '#60A8E4'}
                 strokeWidth={strokeWidth} fill="none"
                 strokeDasharray={circumference} strokeDashoffset={offset}
                 strokeLinecap="round" className="transition-all duration-700 ease-out"
@@ -168,7 +169,7 @@ export function WritingClient({ teile, totalExercises, totalCompleted, available
                         </div>
                     )}
                     <div className="flex items-center gap-4">
-                        <Mascot variant="schreiben" size={56} />
+                        <FuxieRoleMascot src={FUXIE_3D_ASSETS.postOffice} alt="Fuxie writing coach" size={64} motion="coach" />
                         <div className="flex-1">
                             <h1 className="text-2xl font-bold text-gray-900">Luyện viết {currentLevel}</h1>
                             <p className="text-sm text-gray-500 mt-0.5">

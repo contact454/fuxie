@@ -5,7 +5,7 @@ export default function LearnLoading() {
                 {/* Animated Fuxie loader */}
                 <div className="relative w-16 h-16 mx-auto mb-6">
                     <div className="absolute inset-0 rounded-full border-4 border-gray-200" />
-                    <div className="absolute inset-0 rounded-full border-4 border-transparent border-t-[#004E89] animate-spin" />
+                    <div className="absolute inset-0 rounded-full border-4 border-transparent border-t-[#3C78A8] animate-spin" />
                     <span className="absolute inset-0 flex items-center justify-center text-2xl">🦊</span>
                 </div>
 

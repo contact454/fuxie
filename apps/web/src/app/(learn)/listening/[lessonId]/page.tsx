@@ -2,7 +2,7 @@ import { redirect, notFound } from 'next/navigation'
 import { cache } from 'react'
 import { prisma } from '@fuxie/database'
 import { getServerUser } from '@/lib/auth/server-auth'
-import { LessonPlayer } from '@/components/listening/lesson-player'
+import { LessonPlayerDynamic } from '@/components/listening/LessonPlayerDynamic'
 
 const getListeningLesson = cache(async (lessonId: string) => {
     return prisma.listeningLesson.findUnique({
@@ -49,7 +49,7 @@ export default async function ListeningLessonPage({ params }: { params: Promise<
     if (!lesson) notFound()
 
     return (
-        <LessonPlayer
+        <LessonPlayerDynamic
             lessonId={lesson.lessonId}
             title={lesson.title}
             topic={lesson.topic}

@@ -1,9 +1,10 @@
 'use client'
 
 import { useState, useEffect, useMemo } from 'react'
-import Image from 'next/image'
 import Link from 'next/link'
-import { BookOpen, Headphones, PenTool, MessageCircle, Clock, Trophy, CheckCircle2, XCircle, ArrowRight, Library, Sparkles } from 'lucide-react'
+import { BookOpen, Headphones, PenTool, MessageCircle, Clock, Trophy, CheckCircle2, XCircle, ArrowRight, Library } from 'lucide-react'
+import { FUXIE_3D_ASSETS, FuxieCoach, QuestProgressHero, RewardPreview } from '@/components/gamification/quest-visuals'
+import { FuxieLevelTabs, FuxiePanel, FuxieQuestCard, fuxieButtonClass } from '@/components/ui/fuxie-ui'
 
 interface ExamEntry {
     id: string
@@ -125,50 +126,69 @@ export function ExamListClient() {
 
 
 
-    return (
-        <div className="max-w-5xl mx-auto px-4 py-8 pb-32">
-            {/* Premium Header */}
-            <div className="relative mb-12 flex flex-col items-center md:flex-row md:items-start gap-6 border-b border-gray-100 pb-8">
-                <div className="relative w-24 h-24 drop-shadow-2xl">
-                    <Image src="/mascot/learn/fuxie-learn-graduation.png" alt="Fuxie Graduation" fill className="object-contain" />
-                </div>
-                
-                <div className="text-center md:text-left pt-2">
-                    <div className="flex items-center justify-center md:justify-start gap-2 mb-2">
-                        <Sparkles className="w-5 h-5 text-yellow-500 fill-yellow-500/20" />
-                        <span className="text-sm font-bold tracking-wider text-yellow-600 uppercase">Trung tâm luyện thi</span>
-                    </div>
-                    <h1 className="text-4xl font-extrabold text-gray-900 mb-2 tracking-tight">
-                        Luyện thi thử
-                    </h1>
-                    <p className="text-gray-500 max-w-lg leading-relaxed">
-                        Thi thử và rèn luyện kỹ năng giải đề chính thức chuẩn khung viện Goethe, telc và ÖSD.
-                    </p>
-                </div>
-            </div>
+    const nextExam = exams.find(exam => !exam.bestAttempt) ?? exams[0] ?? null
+    const attemptedCount = exams.filter(exam => exam.bestAttempt).length
+    const passedCount = exams.filter(exam => exam.bestAttempt?.passed).length
+    const totalVisibleMinutes = exams.reduce((sum, exam) => sum + exam.totalMinutes, 0)
+    const selectedLevelLabel = filterLevel === 'Tất cả' ? 'mọi cấp độ' : filterLevel
 
+    return (
+        <div className="mx-auto max-w-6xl px-4 py-8 pb-32">
+            <QuestProgressHero
+                variant="exam"
+                eyebrow="Exam gate"
+                title="Thử phòng thi, mở khóa tự tin"
+                message="Chọn đề theo cấp độ, luyện với thời gian thật và theo dõi mức sẵn sàng trước khi bước vào Goethe/telc/OESD."
+                stats={[
+                    { label: 'Đề đang mở', value: String(exams.length), detail: selectedLevelLabel },
+                    { label: 'Đã thử', value: String(attemptedCount), detail: attemptedCount > 0 ? 'có dữ liệu điểm' : 'bắt đầu từ đề đầu' },
+                    { label: 'Đã đạt', value: String(passedCount), detail: `${totalVisibleMinutes} phút luyện tập` },
+                ]}
+                rewards={[
+                    { type: 'exam', label: 'Exam badge', detail: 'mốc sẵn sàng thi' },
+                    { type: 'xp', label: '+80 XP', detail: 'khi hoàn thành đề' },
+                    { type: 'unlock', label: 'Skill signal', detail: 'biết điểm yếu tiếp theo' },
+                ]}
+                mascotSrc={FUXIE_3D_ASSETS.examGuide}
+                className="mb-8"
+            >
+                <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
+                    {nextExam ? (
+                        <Link
+                            href={`/exam/${nextExam.id}`}
+                            className={fuxieButtonClass('primary', 'lg', 'rounded-2xl active:scale-[0.98]')}
+                        >
+                            {nextExam.bestAttempt ? 'Luyện lại đề tốt nhất' : 'Bắt đầu đề tiếp theo'}
+                            <ArrowRight className="h-4 w-4" />
+                        </Link>
+                    ) : (
+                        <Link
+                            href="/course"
+                            className={fuxieButtonClass('primary', 'lg', 'rounded-2xl active:scale-[0.98]')}
+                        >
+                            Vào lộ trình học
+                            <ArrowRight className="h-4 w-4" />
+                        </Link>
+                    )}
+                    <div className="flex flex-wrap gap-2 text-xs font-bold text-[#3C78A8]">
+                        {['Lesen', 'Hören', 'Schreiben', 'Sprechen'].map(skill => (
+                            <span key={skill} className="rounded-full bg-white/70 px-3 py-1.5 shadow-sm ring-1 ring-white/90">
+                                {skill}
+                            </span>
+                        ))}
+                    </div>
+                </div>
+            </QuestProgressHero>
             {/* Level Filter Ribbon */}
             <div className="flex justify-center md:justify-start mb-10 overflow-x-auto pb-4 hide-scrollbar">
-                <div className="flex gap-2 p-1.5 bg-gray-50/80 backdrop-blur-md rounded-2xl border border-gray-100/50 shadow-inner">
-                    {levels.map((l) => {
-                        const isActive = filterLevel === l
-                        return (
-                            <button
-                                key={l}
-                                onClick={() => setFilterLevel(l)}
-                                className={`relative px-5 py-2.5 rounded-xl text-sm font-semibold transition-all duration-300
-                                    ${isActive ? 'text-white shadow-md' : 'text-gray-500 hover:text-gray-700 hover:bg-gray-200/50'}`}
-                            >
-                                {isActive && (
-                                    <div
-                                        className={`absolute inset-0 rounded-xl bg-gradient-to-r ${l === 'Tất cả' ? 'from-gray-800 to-gray-700 shadow-gray-400/20' : LEVEL_COLORS[l] || 'from-gray-800 to-gray-700'}`}
-                                    />
-                                )}
-                                <span className="relative z-10">{l}</span>
-                            </button>
-                        )
-                    })}
-                </div>
+                <FuxieLevelTabs
+                    items={levels}
+                    activeItem={filterLevel}
+                    onSelect={setFilterLevel}
+                    ariaLabel="Exam level filter"
+                    className="backdrop-blur-md"
+                    buttonClassName="px-5 py-2.5"
+                />
             </div>
 
             {/* Main Content Area */}
@@ -179,12 +199,37 @@ export function ExamListClient() {
                     ))}
                 </div>
             ) : exams.length === 0 ? (
-                <div className="text-center py-24 bg-white/50 backdrop-blur-sm rounded-3xl border border-gray-100 border-dashed">
-                    <div className="w-24 h-24 mx-auto mb-6 opacity-60 mix-blend-luminosity">
-                        <Image src="/mascot/core/fuxie-core-happy-wave.png" alt="Empty" width={96} height={96} />
-                    </div>
-                    <h3 className="text-xl font-bold text-gray-800 mb-2">Chưa có đề thi nào</h3>
-                    <p className="text-gray-500">Chưa có đề thi nào trong hệ thống cho cấp độ này. Vui lòng Seed data.</p>
+                <div className="grid gap-4 lg:grid-cols-[1fr_320px]">
+                    <FuxieCoach
+                        role="locked"
+                        eyebrow="Exam gate"
+                        title="Cấp độ này chưa mở đề thi"
+                        message="Học viên vẫn cần một hành động tiếp theo rõ ràng: quay lại tất cả đề hiện có hoặc học tiếp lộ trình để mở thêm thử thách."
+                        mascotSrc={FUXIE_3D_ASSETS.examGuide}
+                        className="min-h-[220px]"
+                    />
+                    <FuxiePanel className="rounded-3xl border-dashed border-slate-200 p-5">
+                        <p className="text-xs font-black uppercase tracking-wide text-[#3C78A8]">Next best action</p>
+                        <h3 className="mt-2 text-xl font-black text-slate-950">Tiếp tục xây nền trước khi thi thử</h3>
+                        <p className="mt-2 text-sm font-medium leading-relaxed text-slate-500">
+                            Khi chưa có đề ở bộ lọc này, màn hình nên giữ động lực học thay vì báo lỗi dữ liệu.
+                        </p>
+                        <div className="mt-5 flex flex-col gap-2">
+                            <button
+                                onClick={() => setFilterLevel('Tất cả')}
+                                className={fuxieButtonClass('primary', 'lg', 'rounded-2xl')}
+                            >
+                                Xem tất cả đề
+                                <ArrowRight className="h-4 w-4" />
+                            </button>
+                            <Link
+                                href="/course"
+                                className={fuxieButtonClass('ghost', 'lg', 'rounded-2xl')}
+                            >
+                                Về lộ trình học
+                            </Link>
+                        </div>
+                    </FuxiePanel>
                 </div>
             ) : (
                 <div className="space-y-12">
@@ -218,9 +263,9 @@ export function ExamListClient() {
                                                 className="grid grid-cols-1 lg:grid-cols-2 gap-5"
                                             >
                                                 {sg.exams.map(exam => (
-                                                    <div
+                                                    <FuxieQuestCard
                                                         key={exam.id}
-                                                        className="group relative bg-white rounded-3xl p-6 border border-gray-200/60 shadow-[0_4px_24px_rgba(0,0,0,0.02)] hover:-translate-y-1 hover:scale-[1.01] hover:shadow-[0_12px_40px_rgba(0,0,0,0.08)] transition-all duration-300"
+                                                        className="rounded-3xl border-gray-200/60 p-6 shadow-[0_4px_24px_rgba(0,0,0,0.02)] hover:scale-[1.01] hover:shadow-[0_12px_40px_rgba(60,120,168,0.14)]"
                                                     >
                                                         {/* decorative gradient blob hidden behind */}
                                                         <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-gray-50/50 to-white/10 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none" />
@@ -239,7 +284,7 @@ export function ExamListClient() {
                                                             </div>
 
                                                             {/* Title */}
-                                                            <h3 className="text-xl font-bold text-gray-800 leading-tight mb-2 group-hover:text-[#FF6B35] transition-colors">{exam.title}</h3>
+                                                            <h3 className="text-xl font-bold text-gray-800 leading-tight mb-2 group-hover:text-[#3C78A8] transition-colors">{exam.title}</h3>
                                                             {exam.description && (
                                                                 <p className="text-xs text-gray-500 mb-5 line-clamp-2">{exam.description}</p>
                                                             )}
@@ -253,6 +298,19 @@ export function ExamListClient() {
                                                                     </div>
                                                                 ))}
                                                             </div>
+
+                                                            <RewardPreview
+                                                                className="mb-5"
+                                                                rewards={[
+                                                                    { type: 'exam', label: `${exam.passingScore}% mục tiêu`, detail: 'điểm đạt' },
+                                                                    { type: 'xp', label: '+80 XP', detail: `${exam.totalMinutes} phút` },
+                                                                    {
+                                                                        type: exam.bestAttempt?.passed ? 'badge' : 'unlock',
+                                                                        label: exam.bestAttempt?.passed ? 'Đã đạt' : 'Boss gate',
+                                                                        detail: exam.bestAttempt ? 'luyện để tăng điểm' : 'thử sức lần đầu',
+                                                                    },
+                                                                ]}
+                                                            />
 
                                                             <div className="flex-1" />
 
@@ -276,14 +334,14 @@ export function ExamListClient() {
                                                                 
                                                                 <Link
                                                                     href={`/exam/${exam.id}`}
-                                                                    className="flex items-center gap-2 px-5 py-2.5 bg-gray-900 text-white text-sm font-semibold rounded-xl hover:bg-[#FF6B35] hover:scale-[1.02] active:scale-95 transition-all duration-200 shadow-md shadow-gray-900/10"
+                                                                    className={fuxieButtonClass('primary', 'md', 'rounded-xl px-5 shadow-md shadow-sky-900/10 hover:scale-[1.02] active:scale-95')}
                                                                 >
                                                                     {exam.bestAttempt ? 'Luyện lại' : 'Bắt đầu'}
                                                                     <ArrowRight className="w-4 h-4" />
                                                                 </Link>
                                                             </div>
                                                         </div>
-                                                    </div>
+                                                    </FuxieQuestCard>
                                                 ))}
                                             </div>
                                         </div>

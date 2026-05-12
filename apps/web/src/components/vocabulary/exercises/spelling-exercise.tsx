@@ -7,6 +7,18 @@ import { ExerciseProgress } from './exercise-progress'
 import { ExerciseResults } from './exercise-results'
 import { useExerciseTimer } from '@/hooks/use-exercise-timer'
 import { useSubmitExercise, type ExerciseAnswer } from '@/hooks/use-submit-exercise'
+import {
+    exerciseCenterStageClass,
+    exerciseHintPanelClass,
+    exerciseInlineAudioClass,
+    exercisePrimaryActionClass,
+    exercisePromptImageClass,
+    exerciseScreenClass,
+    exerciseSecondaryActionClass,
+    exerciseSpecialCharClass,
+    exerciseStageInnerClass,
+    exerciseTextInputClass,
+} from './exercise-ui'
 
 // ─── Types ──────────────────────────────────────────
 interface SpellingQuestion {
@@ -36,7 +48,7 @@ const SPECIAL_CHARS = ['ä', 'ö', 'ü', 'ß', 'Ä', 'Ö', 'Ü']
 
 
 // ─── Component ──────────────────────────────────────
-export function SpellingExercise({ questions, cefrLevel, themeName, themeSlug, onExit, onComplete }: SpellingExerciseProps) {
+export function SpellingExercise({ questions, cefrLevel, themeName: _themeName, themeSlug, onExit, onComplete: _onComplete }: SpellingExerciseProps) {
     const [currentIndex, setCurrentIndex] = useState(0)
     const [userInput, setUserInput] = useState('')
     const [isRevealed, setIsRevealed] = useState(false)
@@ -128,6 +140,15 @@ export function SpellingExercise({ questions, cefrLevel, themeName, themeSlug, o
                 correctCount={submitResult.correctCount}
                 accuracy={submitResult.accuracy}
                 xpEarned={submitResult.xpEarned}
+                fucoinEarned={submitResult.fucoinEarned}
+                walletBalance={submitResult.walletBalance}
+                fucoinDuplicate={submitResult.fucoinDuplicate}
+                fucoinIntended={submitResult.fucoinIntended}
+                fucoinDailyCap={submitResult.fucoinDailyCap}
+                fucoinDailyEarned={submitResult.fucoinDailyEarned}
+                fucoinDailyRemaining={submitResult.fucoinDailyRemaining}
+                fucoinCapReached={submitResult.fucoinCapReached}
+                streak={submitResult.streak}
                 timeTaken={timer}
                 results={submitResult.results}
                 onRetry={() => {
@@ -145,7 +166,7 @@ export function SpellingExercise({ questions, cefrLevel, themeName, themeSlug, o
     const articleText = getArticle(question.article)
 
     return (
-        <div className="fixed inset-0 z-50 bg-gray-50 flex flex-col">
+        <div className={exerciseScreenClass}>
             <ExerciseProgress
                 current={currentIndex + 1}
                 total={questions.length}
@@ -154,8 +175,8 @@ export function SpellingExercise({ questions, cefrLevel, themeName, themeSlug, o
                 cefrLevel={cefrLevel}
             />
 
-            <div className="flex-1 flex items-center justify-center overflow-y-auto">
-                <div className="max-w-2xl w-full px-6 py-8">
+            <div className={exerciseCenterStageClass}>
+                <div className={exerciseStageInnerClass}>
                     {/* Prompt area */}
                     <div className="text-center mb-8">
                         {/* Image */}
@@ -166,7 +187,7 @@ export function SpellingExercise({ questions, cefrLevel, themeName, themeSlug, o
                                     alt="Vocabulary hint"
                                     width={176}
                                     height={176}
-                                    className="rounded-2xl object-cover shadow-md"
+                                    className={exercisePromptImageClass()}
                                 />
                             </div>
                         )}
@@ -175,7 +196,7 @@ export function SpellingExercise({ questions, cefrLevel, themeName, themeSlug, o
                         {question.promptAudio && (
                             <button
                                 onClick={() => playSound(question.promptAudio)}
-                                className="mb-3 inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-blue-50 text-[#004E89] hover:bg-blue-100 transition-colors"
+                                className={exerciseInlineAudioClass('mb-3 mt-0')}
                             >
                                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                                     <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02z" />
@@ -185,12 +206,12 @@ export function SpellingExercise({ questions, cefrLevel, themeName, themeSlug, o
                         )}
 
                         {/* Vietnamese meaning */}
-                        <p className="text-2xl font-bold text-gray-800 mb-1">{question.prompt}</p>
-                        <p className="text-sm text-gray-400">Viết từ tiếng Đức</p>
+                        <p className="mb-1 text-2xl font-black text-slate-950">{question.prompt}</p>
+                        <p className="text-sm font-semibold text-slate-500">Viết từ tiếng Đức</p>
 
                         {/* Article badge if noun */}
                         {articleText && (
-                            <span className="inline-block mt-2 px-3 py-1 rounded-lg bg-blue-100 text-[#004E89] text-sm font-bold">
+                            <span className="mt-2 inline-block rounded-full bg-[#EEF7FF] px-3 py-1 text-sm font-black text-[#3C78A8] ring-1 ring-[#60A8E4]/20">
                                 {articleText} ...
                             </span>
                         )}
@@ -198,11 +219,7 @@ export function SpellingExercise({ questions, cefrLevel, themeName, themeSlug, o
 
                     {/* Input */}
                     <div className="mb-4">
-                        <div className={`relative rounded-2xl border-2 transition-all overflow-hidden ${
-                            isRevealed
-                                ? 'border-[#004E89] bg-blue-50'
-                                : 'border-gray-200 bg-white focus-within:border-[#004E89] focus-within:shadow-lg focus-within:shadow-blue-100'
-                        }`}>
+                        <div className={exerciseTextInputClass({ revealed: isRevealed })}>
                             <input
                                 ref={inputRef}
                                 type="text"
@@ -214,24 +231,24 @@ export function SpellingExercise({ questions, cefrLevel, themeName, themeSlug, o
                                 autoComplete="off"
                                 autoCapitalize="off"
                                 spellCheck={false}
-                                className="w-full py-4 px-6 text-xl font-semibold text-center bg-transparent outline-none placeholder-gray-300"
+                                className="w-full bg-transparent px-6 py-4 text-center text-xl font-bold text-slate-950 outline-none placeholder:text-slate-300"
                             />
                             {isRevealed && (
                                 <div className="text-center pb-3">
-                                    <span className="text-[#004E89] font-bold text-sm">Đã lưu câu trả lời</span>
+                                    <span className="text-sm font-bold text-[#3C78A8]">Đã lưu câu trả lời</span>
                                 </div>
                             )}
                         </div>
                     </div>
 
                     {/* Special chars keyboard */}
-                    <div className="flex justify-center gap-2 mb-4">
+                    <div className="mb-4 flex justify-center gap-2">
                         {SPECIAL_CHARS.map(ch => (
                             <button
                                 key={ch}
                                 onClick={() => insertChar(ch)}
                                 disabled={isRevealed}
-                                className="w-10 h-10 rounded-xl border-2 border-gray-200 bg-white text-gray-700 font-bold text-base hover:border-[#004E89] hover:bg-blue-50 transition-all disabled:bg-gray-100 disabled:text-gray-300 disabled:border-gray-100 disabled:cursor-not-allowed"
+                                className={exerciseSpecialCharClass()}
                             >
                                 {ch}
                             </button>
@@ -243,18 +260,14 @@ export function SpellingExercise({ questions, cefrLevel, themeName, themeSlug, o
                         <button
                             onClick={() => setShowHint(true)}
                             disabled={isRevealed || showHint}
-                            className="px-4 py-3 rounded-xl border-2 border-gray-200 text-gray-500 text-sm font-medium hover:bg-gray-50 transition-all disabled:bg-gray-100 disabled:text-gray-300 disabled:border-gray-100 disabled:cursor-not-allowed"
+                            className={exerciseSecondaryActionClass(isRevealed || showHint, 'px-4')}
                         >
                             💡 Tipp
                         </button>
                         <button
                             onClick={checkAnswer}
                             disabled={isRevealed || !userInput.trim()}
-                            className={`flex-1 py-3 rounded-xl font-bold text-sm transition-all ${
-                                isRevealed || !userInput.trim()
-                                    ? 'bg-gray-200 text-gray-400 cursor-not-allowed'
-                                    : 'bg-gradient-to-r from-[#004E89] to-blue-600 text-white hover:shadow-lg hover:shadow-blue-200 hover:scale-[1.02] active:scale-[0.98]'
-                            }`}
+                            className={exercisePrimaryActionClass(isRevealed || !userInput.trim(), 'flex-1')}
                         >
                             Prüfen
                         </button>
@@ -262,7 +275,7 @@ export function SpellingExercise({ questions, cefrLevel, themeName, themeSlug, o
 
                     {/* Hint display */}
                     {showHint && !isRevealed && (
-                        <div className="mt-4 p-3 rounded-xl bg-amber-50 border border-amber-200 text-center">
+                        <div className={exerciseHintPanelClass('mt-4')}>
                             <span className="text-sm text-amber-700">
                                 💡 Anfang: <strong>{question.hint}...</strong>
                                 <span className="text-amber-400 ml-2">({question.answerLength} Buchstaben)</span>

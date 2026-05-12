@@ -93,7 +93,7 @@ export function VideoCallLayout({ onEndCall, level, scenarioId }: VideoCallLayou
                         <ul className="space-y-4">
                             {pronunciationErrors.map((err, idx) => (
                                 <li key={idx} className="bg-gray-700/50 p-4 rounded-lg">
-                                    <span className="font-bold text-red-400 block mb-1">"{err.word}"</span>
+                                    <span className="font-bold text-red-400 block mb-1">&quot;{err.word}&quot;</span>
                                     <span className="text-gray-300">{err.phoneme_error}</span>
                                 </li>
                             ))}

@@ -4,7 +4,7 @@ import { cookies } from 'next/headers'
 import { getServerUser } from '@/lib/auth/server-auth'
 import { getVocabularyThemeSrsProgress } from '@/lib/srs/stats'
 import { cacheWrap } from '@/lib/cache/redis'
-import { CourseClient } from '@/components/course/CourseClient'
+import { CourseClientDynamic } from '@/components/course/CourseClientDynamic'
 import { getCourseModuleMap } from '@/lib/content/course-data'
 
 export const metadata = {
@@ -284,7 +284,7 @@ export default async function CoursePage({
     return (
         <div>
             {/* Level selector */}
-            <div className="max-w-4xl mx-auto px-4 pt-6">
+            <div className="max-w-6xl mx-auto px-4 pt-6">
                 <div className="flex flex-wrap gap-2">
                     {validLevels.map(l => (
                         <a
@@ -301,7 +301,7 @@ export default async function CoursePage({
                     ))}
                 </div>
             </div>
-            <CourseClient data={data} />
+            <CourseClientDynamic data={data} />
         </div>
     )
 }

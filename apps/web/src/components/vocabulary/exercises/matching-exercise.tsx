@@ -1,11 +1,17 @@
 'use client'
 
-import { useState, useCallback, useEffect, useRef } from 'react'
+import { useState, useCallback, useEffect, useMemo, useRef } from 'react'
 import { ExerciseProgress } from './exercise-progress'
 import { ExerciseResults } from './exercise-results'
 import { useExerciseTimer } from '@/hooks/use-exercise-timer'
 import { useSubmitExercise } from '@/hooks/use-submit-exercise'
 import type { ExerciseAnswer } from '@/hooks/use-submit-exercise'
+import {
+    exerciseCenterStageClass,
+    exercisePairCardClass,
+    exerciseScreenClass,
+    exerciseStageInnerClass,
+} from './exercise-ui'
 
 // ─── Types ──────────────────────────────────────────
 interface MatchPair {
@@ -25,8 +31,24 @@ interface MatchingExerciseProps {
     onComplete: () => void
 }
 
+function stableShuffle<T extends { id: string }>(items: T[], salt: string) {
+    const hash = (value: string) => {
+        let result = 0
+        for (let i = 0; i < value.length; i++) {
+            result = (result * 31 + value.charCodeAt(i)) >>> 0
+        }
+        return result
+    }
+
+    return [...items].sort((a, b) => {
+        const scoreA = hash(`${salt}:${a.id}`)
+        const scoreB = hash(`${salt}:${b.id}`)
+        return scoreA - scoreB || a.id.localeCompare(b.id)
+    })
+}
+
 // ─── Component ──────────────────────────────────────
-export function MatchingExercise({ pairs, cefrLevel, themeName, themeSlug, onExit, onComplete }: MatchingExerciseProps) {
+export function MatchingExercise({ pairs, cefrLevel, themeName: _themeName, themeSlug, onExit, onComplete: _onComplete }: MatchingExerciseProps) {
     const [selectedWord, setSelectedWord] = useState<string | null>(null)
     const [selectedMeaning, setSelectedMeaning] = useState<string | null>(null)
     const [matchedPairs, setMatchedPairs] = useState<Set<string>>(new Set())
@@ -43,13 +65,8 @@ export function MatchingExercise({ pairs, cefrLevel, themeName, themeSlug, onExi
         xpPerCorrect: 5,
     })
 
-    // Shuffled columns
-    const [shuffledWords] = useState(() =>
-        [...pairs].sort(() => Math.random() - 0.5)
-    )
-    const [shuffledMeanings] = useState(() =>
-        [...pairs].sort(() => Math.random() - 0.5)
-    )
+    const shuffledWords = useMemo(() => stableShuffle(pairs, 'words'), [pairs])
+    const shuffledMeanings = useMemo(() => stableShuffle(pairs, 'meanings'), [pairs])
 
     useEffect(() => {
         return () => {
@@ -130,6 +147,15 @@ export function MatchingExercise({ pairs, cefrLevel, themeName, themeSlug, onExi
                 correctCount={submitResult.correctCount}
                 accuracy={submitResult.accuracy}
                 xpEarned={submitResult.xpEarned}
+                fucoinEarned={submitResult.fucoinEarned}
+                walletBalance={submitResult.walletBalance}
+                fucoinDuplicate={submitResult.fucoinDuplicate}
+                fucoinIntended={submitResult.fucoinIntended}
+                fucoinDailyCap={submitResult.fucoinDailyCap}
+                fucoinDailyEarned={submitResult.fucoinDailyEarned}
+                fucoinDailyRemaining={submitResult.fucoinDailyRemaining}
+                fucoinCapReached={submitResult.fucoinCapReached}
+                streak={submitResult.streak}
                 timeTaken={timer}
                 results={submitResult.results}
                 onRetry={() => {
@@ -148,7 +174,7 @@ export function MatchingExercise({ pairs, cefrLevel, themeName, themeSlug, onExi
 
     // ─── Playing Phase ──────────────────────────────
     return (
-        <div className="fixed inset-0 z-50 bg-gray-50 flex flex-col">
+        <div className={exerciseScreenClass}>
             {/* Progress */}
             <ExerciseProgress
                 current={matchedPairs.size}
@@ -158,12 +184,12 @@ export function MatchingExercise({ pairs, cefrLevel, themeName, themeSlug, onExi
                 cefrLevel={cefrLevel}
             />
 
-            <div className="flex-1 flex items-center justify-center overflow-y-auto">
-                <div className="max-w-2xl w-full px-6 py-8">
+            <div className={exerciseCenterStageClass}>
+                <div className={exerciseStageInnerClass}>
                     {/* Title */}
                     <div className="text-center mb-6">
-                        <h2 className="text-xl font-bold text-gray-900">Finde die Paare</h2>
-                        <p className="text-sm text-gray-500 mt-1">
+                        <h2 className="text-xl font-black text-slate-950">Finde die Paare</h2>
+                        <p className="mt-1 text-sm font-semibold text-slate-500">
                             {matchedPairs.size}/{pairs.length} gefunden
                             {mistakes > 0 && <span className="text-red-400 ml-2">• {mistakes} Fehler</span>}
                         </p>
@@ -173,23 +199,18 @@ export function MatchingExercise({ pairs, cefrLevel, themeName, themeSlug, onExi
                     <div className="grid grid-cols-2 gap-4">
                         {/* German words column */}
                         <div className="space-y-3">
-                            <p className="text-xs font-semibold text-gray-400 uppercase tracking-wider text-center mb-2">Deutsch</p>
+                            <p className="mb-2 text-center text-xs font-black uppercase tracking-wider text-[#3C78A8]">Deutsch</p>
                             {shuffledWords.map(pair => {
                                 const isMatched = matchedPairs.has(pair.id)
                                 const isSelected = selectedWord === pair.id
                                 const isWrong = wrongPair?.word === pair.id
-
-                                let cardClass = 'border-2 border-gray-200 bg-white text-gray-800 hover:border-[#004E89] hover:shadow-sm'
-                                if (isMatched) cardClass = 'border-2 border-emerald-300 bg-emerald-50 text-emerald-600 opacity-60'
-                                else if (isWrong) cardClass = 'border-2 border-red-400 bg-red-50 text-red-600 animate-shake'
-                                else if (isSelected) cardClass = 'border-2 border-[#004E89] bg-blue-50 text-[#004E89] shadow-md ring-2 ring-blue-200'
 
                                 return (
                                     <button
                                         key={`w-${pair.id}`}
                                         onClick={() => handleWordClick(pair.id)}
                                         disabled={isMatched}
-                                        className={`w-full py-3.5 px-4 rounded-xl font-semibold text-sm transition-all ${cardClass}`}
+                                        className={exercisePairCardClass({ matched: isMatched, selected: isSelected, wrong: isWrong })}
                                     >
                                         {isMatched && <span className="mr-1">✓</span>}
                                         {pair.word}
@@ -200,23 +221,18 @@ export function MatchingExercise({ pairs, cefrLevel, themeName, themeSlug, onExi
 
                         {/* Vietnamese meanings column */}
                         <div className="space-y-3">
-                            <p className="text-xs font-semibold text-gray-400 uppercase tracking-wider text-center mb-2">Tiếng Việt</p>
+                            <p className="mb-2 text-center text-xs font-black uppercase tracking-wider text-[#3C78A8]">Tiếng Việt</p>
                             {shuffledMeanings.map(pair => {
                                 const isMatched = matchedPairs.has(pair.id)
                                 const isSelected = selectedMeaning === pair.id
                                 const isWrong = wrongPair?.meaning === pair.id
-
-                                let cardClass = 'border-2 border-gray-200 bg-white text-gray-800 hover:border-[#FF6B35] hover:shadow-sm'
-                                if (isMatched) cardClass = 'border-2 border-emerald-300 bg-emerald-50 text-emerald-600 opacity-60'
-                                else if (isWrong) cardClass = 'border-2 border-red-400 bg-red-50 text-red-600 animate-shake'
-                                else if (isSelected) cardClass = 'border-2 border-[#FF6B35] bg-orange-50 text-[#FF6B35] shadow-md ring-2 ring-orange-200'
 
                                 return (
                                     <button
                                         key={`m-${pair.id}`}
                                         onClick={() => handleMeaningClick(pair.id)}
                                         disabled={isMatched}
-                                        className={`w-full py-3.5 px-4 rounded-xl font-semibold text-sm transition-all ${cardClass}`}
+                                        className={exercisePairCardClass({ matched: isMatched, selected: isSelected, wrong: isWrong })}
                                     >
                                         {isMatched && <span className="mr-1">✓</span>}
                                         {pair.meaning}

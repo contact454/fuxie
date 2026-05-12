@@ -2,6 +2,7 @@
 
 import { useState, useCallback } from 'react'
 import { useRouter } from 'next/navigation'
+import { FUXIE_3D_ASSETS, FuxieRoleMascot } from '@/components/gamification/quest-visuals'
 import styles from './speaking.module.css'
 import type { SpeakingTopicData, CefrLevel } from './types'
 
@@ -134,13 +135,22 @@ export default function SpeakingClient({
   return (
     <div className={styles.lessonPlayer} style={{ paddingBottom: 40 }}>
       {/* Header */}
-      <div style={{ padding: '24px 0 16px' }}>
+      <div style={{ padding: '24px 0 16px', display: 'flex', alignItems: 'center', gap: 16 }}>
+        <FuxieRoleMascot
+          src={FUXIE_3D_ASSETS.speakingCoach}
+          alt="Fuxie speaking coach"
+          size={76}
+          motion="speak"
+          className="rounded-2xl bg-white shadow-sm ring-1 ring-sky-100"
+        />
+        <div>
         <h1 style={{ fontSize: 28, fontWeight: 800, color: '#111827', margin: '0 0 4px' }}>
           🎤 Luyện nói
         </h1>
         <p style={{ fontSize: 15, color: '#6B7280', margin: 0 }}>
           Luyện phát âm tiếng Đức theo chuẩn Goethe-Zertifikat
         </p>
+        </div>
       </div>
 
       {/* Stats Summary */}

@@ -4,7 +4,9 @@ import { useState, useCallback, useRef, useEffect } from 'react'
 import Image from 'next/image'
 import dynamic from 'next/dynamic'
 import { Mascot } from '@/components/ui/mascot'
-import { CEFR_THEME, getCefrTheme } from '@/lib/constants/cefr'
+import { FuxieCoach, QuestProgressHero, RewardPreview } from '@/components/gamification/quest-visuals'
+import { FuxieLevelTabs, FuxiePanel, FuxieProgressBar, FuxieQuestCard, fuxieButtonClass } from '@/components/ui/fuxie-ui'
+import { getCefrTheme } from '@/lib/constants/cefr'
 
 // ─── Types ──────────────────────────────────────────
 interface Theme {
@@ -16,6 +18,10 @@ interface Theme {
     imageUrl: string | null
     wordCount: number
     srsProgress: { total: number; learned: number; due: number }
+}
+
+type ThemeApiResponse = Omit<Theme, 'srsProgress'> & {
+    srsProgress?: Theme['srsProgress']
 }
 
 interface VocabCard {
@@ -92,11 +98,16 @@ export function ReviewClient({ themes, availableLevels, initialLevel, dueCounts,
     const [lastRating, setLastRating] = useState<Rating | null>(null)
     const [srsStats, setSrsStats] = useState({ totalReviewed: 0, correct: 0, again: 0, xpEarned: 0 })
     const [srsComplete, setSrsComplete] = useState(false)
-    const [currentDueCounts, setCurrentDueCounts] = useState(dueCounts)
-    const [currentTotalDue, setCurrentTotalDue] = useState(totalDueAll)
+    const [currentDueCounts] = useState(dueCounts)
+    const [currentTotalDue] = useState(totalDueAll)
     const srsAdvanceTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null)
 
     const cefrColors = getCefrTheme(currentLevel)
+    const totalWords = currentThemes.reduce((sum, theme) => sum + theme.wordCount, 0)
+    const learnedWords = currentThemes.reduce((sum, theme) => sum + theme.srsProgress.learned, 0)
+    const dueInCurrentLevel = currentDueCounts[currentLevel] ?? 0
+    const activeThemes = currentThemes.filter(theme => theme.srsProgress.learned > 0).length
+    const memoryProgress = totalWords > 0 ? Math.round((learnedWords / totalWords) * 100) : 0
 
     const workerRef = useRef<Worker | null>(null)
 
@@ -120,7 +131,7 @@ export function ReviewClient({ themes, availableLevels, initialLevel, dueCounts,
             const data = await res.json()
             if (activeLevelRef.current !== level) return
             if (data.success) {
-                setCurrentThemes(data.data.map((t: any) => ({
+                setCurrentThemes((data.data as ThemeApiResponse[]).map((t) => ({
                     ...t,
                     srsProgress: t.srsProgress ?? { total: 0, learned: 0, due: 0 },
                 })))
@@ -311,12 +322,7 @@ export function ReviewClient({ themes, availableLevels, initialLevel, dueCounts,
                     <div className="flex items-center justify-between mb-1.5">
                         <span className="text-sm font-medium text-gray-500">{currentIndex + 1} / {studyCards.length}</span>
                     </div>
-                    <div className="w-full h-2 bg-gray-200 rounded-full overflow-hidden">
-                        <div
-                            className={`h-full bg-gradient-to-r ${cefrColors.gradient} rounded-full transition-all duration-500 ease-out`}
-                            style={{ width: `${progress}%` }}
-                        />
-                    </div>
+                    <FuxieProgressBar value={progress} barClassName={`bg-gradient-to-r ${cefrColors.gradient}`} />
                 </div>
 
                 {/* Flashcard */}
@@ -337,7 +343,7 @@ export function ReviewClient({ themes, availableLevels, initialLevel, dueCounts,
                             <button
                                 onClick={prevCard}
                                 disabled={currentIndex === 0}
-                                className="flex items-center gap-2 px-5 py-3 rounded-xl border-2 border-gray-200 text-gray-600 font-semibold text-sm hover:bg-gray-50 hover:border-gray-300 transition-all disabled:opacity-30 disabled:cursor-not-allowed"
+                                className={fuxieButtonClass('ghost', 'lg', 'rounded-xl disabled:opacity-30')}
                             >
                                 <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                                     <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
@@ -348,7 +354,7 @@ export function ReviewClient({ themes, availableLevels, initialLevel, dueCounts,
                             {!isFlipped && (
                                 <button
                                     onClick={() => setIsFlipped(true)}
-                                    className="px-6 py-3 rounded-xl bg-gradient-to-r from-[#004E89] to-blue-600 text-white font-semibold text-sm hover:opacity-90 transition-all shadow-lg shadow-blue-200"
+                                    className={fuxieButtonClass('primary', 'lg', 'rounded-xl px-6 shadow-lg shadow-sky-200')}
                                 >
                                     Lật thẻ ↻
                                 </button>
@@ -357,11 +363,7 @@ export function ReviewClient({ themes, availableLevels, initialLevel, dueCounts,
                             <button
                                 onClick={nextCard}
                                 disabled={currentIndex >= studyCards.length - 1}
-                                className={`flex items-center gap-2 px-5 py-3 rounded-xl font-semibold text-sm transition-all ${
-                                    currentIndex >= studyCards.length - 1
-                                        ? 'border-2 border-gray-200 text-gray-400 cursor-not-allowed opacity-30'
-                                        : `bg-gradient-to-r ${cefrColors.gradient} text-white hover:opacity-90 shadow-lg`
-                                }`}
+                                className={fuxieButtonClass('primary', 'lg', 'rounded-xl shadow-lg disabled:opacity-30')}
                             >
                                 Tiếp
                                 <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -402,26 +404,35 @@ export function ReviewClient({ themes, availableLevels, initialLevel, dueCounts,
                         speechBubble={accuracy >= 80 ? 'Làm tốt lắm! 🎉' : accuracy >= 50 ? 'Ổn rồi, tiếp tục nhé! 👏' : 'Cứ luyện tiếp nhé! 💪'}
                     />
 
+                    <RewardPreview
+                        className="mt-6 w-full"
+                        rewards={[
+                            { type: 'xp', label: `+${srsStats.xpEarned} XP`, detail: 'phiên ôn hôm nay' },
+                            { type: 'streak', label: 'Memory saved', detail: `${srsStats.totalReviewed} thẻ đã ôn` },
+                            { type: 'badge', label: `${accuracy}% đúng`, detail: 'độ chắc trí nhớ' },
+                        ]}
+                    />
+
                     <div className="grid grid-cols-3 gap-3 mt-8 w-full">
-                        <div className="bg-white rounded-xl p-4 shadow-sm border border-emerald-100 text-center">
+                        <FuxiePanel variant="soft" className="p-4 text-center">
                             <p className="text-xs text-gray-500 mb-1">✅ Đúng</p>
                             <p className="text-2xl font-bold text-emerald-600">{srsStats.correct}</p>
-                        </div>
-                        <div className="bg-white rounded-xl p-4 shadow-sm border border-red-100 text-center">
+                        </FuxiePanel>
+                        <FuxiePanel variant="default" className="p-4 text-center ring-1 ring-red-100">
                             <p className="text-xs text-gray-500 mb-1">❌ Luyện lại</p>
                             <p className="text-2xl font-bold text-red-500">{srsStats.again}</p>
-                        </div>
-                        <div className="bg-white rounded-xl p-4 shadow-sm border border-amber-100 text-center">
+                        </FuxiePanel>
+                        <FuxiePanel variant="default" className="p-4 text-center ring-1 ring-amber-100">
                             <p className="text-xs text-gray-500 mb-1">⭐ XP</p>
                             <p className="text-2xl font-bold text-amber-600">+{srsStats.xpEarned}</p>
-                        </div>
+                        </FuxiePanel>
                     </div>
 
                     <div className="flex gap-3 mt-8">
-                        <button onClick={backToThemes} className="px-5 py-3 rounded-xl border-2 border-gray-200 text-gray-700 font-semibold hover:bg-gray-50 transition-colors">
+                        <button onClick={backToThemes} className={fuxieButtonClass('ghost', 'lg', 'rounded-xl')}>
                             Tổng quan
                         </button>
-                        <button onClick={() => startSrsReview()} className="px-5 py-3 rounded-xl bg-gradient-to-r from-[#FF6B35] to-orange-500 text-white font-semibold hover:opacity-90 transition-all shadow-lg">
+                        <button onClick={() => startSrsReview()} className={fuxieButtonClass('primary', 'lg', 'rounded-xl shadow-lg shadow-sky-200')}>
                             Học tiếp →
                         </button>
                     </div>
@@ -445,7 +456,7 @@ export function ReviewClient({ themes, availableLevels, initialLevel, dueCounts,
                         <h2 className="text-lg font-bold text-gray-900">Ôn SRS</h2>
                         <p className="text-xs text-gray-500">Ôn các thẻ đến hạn</p>
                     </div>
-                    <span className="text-sm font-bold text-[#FF6B35]">+{srsStats.xpEarned} XP</span>
+                    <span className="text-sm font-bold text-[#3C78A8]">+{srsStats.xpEarned} XP</span>
                 </div>
 
                 {/* Progress */}
@@ -453,9 +464,7 @@ export function ReviewClient({ themes, availableLevels, initialLevel, dueCounts,
                     <div className="flex items-center justify-between mb-1.5">
                         <span className="text-sm font-medium text-gray-500">{srsIndex + 1} / {srsCards.length}</span>
                     </div>
-                    <div className="w-full h-2 bg-gray-200 rounded-full overflow-hidden">
-                        <div className="h-full bg-gradient-to-r from-[#FF6B35] to-orange-400 rounded-full transition-all duration-500" style={{ width: `${srsProgress}%` }} />
-                    </div>
+                    <FuxieProgressBar value={srsProgress} />
                 </div>
 
                 {isLoadingCards ? (
@@ -488,12 +497,26 @@ export function ReviewClient({ themes, availableLevels, initialLevel, dueCounts,
                         )}
                     </div>
                 ) : (
-                    <div className="flex flex-col items-center py-12">
-                        <Mascot variant="empty" size={100} speechBubble="Không có thẻ đến hạn! 🎉" />
-                        <p className="text-gray-500 mt-4">Tất cả thẻ đã học xong. Quay lại sau nhé.</p>
-                        <button onClick={backToThemes} className="mt-6 px-5 py-3 rounded-xl bg-gradient-to-r from-[#FF6B35] to-orange-500 text-white font-semibold">
-                            Quay lại
-                        </button>
+                    <div className="grid gap-4 py-6 lg:grid-cols-[1fr_280px]">
+                        <FuxieCoach
+                            role="reward"
+                            eyebrow="Daily review clear"
+                            title="Không có thẻ đến hạn"
+                            message="Tốt rồi, trí nhớ hôm nay đang an toàn. Bước hợp lý tiếp theo là học thêm một chủ đề nhỏ hoặc quay về tổng quan."
+                        />
+                        <FuxiePanel className="rounded-3xl p-5 ring-1 ring-slate-100">
+                            <RewardPreview
+                                layout="stack"
+                                rewards={[
+                                    { type: 'streak', label: 'Streak safe', detail: 'không nợ thẻ' },
+                                    { type: 'unlock', label: 'Next topic', detail: 'mở thêm từ mới' },
+                                    { type: 'xp', label: '+XP sau', detail: 'khi thẻ đến hạn' },
+                                ]}
+                            />
+                            <button onClick={backToThemes} className={fuxieButtonClass('primary', 'lg', 'mt-4 w-full rounded-2xl shadow-lg shadow-sky-100')}>
+                                Quay lại tổng quan
+                            </button>
+                        </FuxiePanel>
                     </div>
                 )}
             </div>
@@ -505,61 +528,68 @@ export function ReviewClient({ themes, availableLevels, initialLevel, dueCounts,
     // ═════════════════════════════════════════════════
     return (
         <div>
-            {/* Hero + CEFR Tabs */}
-            <div className="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm mb-6">
-                {/* CEFR Level Tabs */}
-                <div className="flex gap-2 mb-4 overflow-x-auto pb-1">
-                    {availableLevels.map(level => {
-                        const colors = getCefrTheme(level)
-                        const isActive = level === currentLevel
-                        const dueCount = currentDueCounts[level] || 0
-                        return (
-                            <button
-                                key={level}
-                                onClick={() => switchLevel(level)}
-                                disabled={isLevelLoading}
-                                className={`flex items-center gap-1.5 px-4 py-2 rounded-xl text-sm font-bold transition-all whitespace-nowrap ${
-                                    isActive
-                                        ? `bg-gradient-to-r ${colors.gradient} text-white shadow-md scale-105`
-                                        : 'bg-gray-100 text-gray-500 hover:bg-gray-200'
-                                } ${isLevelLoading ? 'opacity-50 cursor-wait' : ''}`}
-                            >
-                                {level}
-                                {dueCount > 0 && (
-                                    <span className={`px-1.5 py-0.5 rounded-full text-[10px] font-bold ${
-                                        isActive ? 'bg-white/20 text-white' : 'bg-orange-100 text-orange-600'
-                                    }`}>
-                                        {dueCount}
-                                    </span>
-                                )}
-                            </button>
-                        )
-                    })}
-                </div>
-
-                {/* Title row */}
-                <div className="flex items-center gap-4">
-                    <Mascot variant="wortschatz" size={56} />
-                    <div className="flex-1">
-                        <h1 className="text-2xl font-bold text-gray-900">Thẻ từ vựng {currentLevel}</h1>
-                        <p className="text-sm text-gray-500 mt-0.5">
-                            Học từ vựng bằng flashcard. Chọn một chủ đề để bắt đầu.
-                        </p>
-                    </div>
-
-                    {/* SRS Review button */}
-                    {currentTotalDue > 0 && (
+            <QuestProgressHero
+                variant="review"
+                eyebrow="Daily review ritual"
+                title={`Giữ trí nhớ ${currentLevel} luôn nóng`}
+                message="Mỗi lượt ôn là một vòng giữ từ vựng khỏi rơi khỏi trí nhớ. Fuxie ưu tiên thẻ đến hạn, rồi gợi ý chủ đề tiếp theo nếu hôm nay đã sạch nợ."
+                stats={[
+                    { label: 'Đến hạn', value: String(dueInCurrentLevel), detail: `${currentTotalDue} thẻ toàn bộ` },
+                    { label: 'Đã nhớ', value: String(learnedWords), detail: `${memoryProgress}% kho từ ${currentLevel}` },
+                    { label: 'Chủ đề có tiến độ', value: String(activeThemes), detail: `${currentThemes.length} chủ đề` },
+                ]}
+                rewards={[
+                    { type: 'streak', label: 'Streak safe', detail: 'giữ nhịp ôn ngày' },
+                    { type: 'xp', label: '+10 XP/thẻ', detail: 'khi nhớ đúng' },
+                    { type: 'badge', label: 'Memory badge', detail: 'tăng độ bền từ vựng' },
+                ]}
+                className="mb-6"
+            >
+                <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
+                    {dueInCurrentLevel > 0 ? (
                         <button
                             onClick={() => startSrsReview()}
-                            className="flex items-center gap-2 px-5 py-3 rounded-xl bg-gradient-to-r from-[#FF6B35] to-orange-500 text-white font-bold text-sm hover:opacity-90 transition-all shadow-lg shadow-orange-200 whitespace-nowrap"
+                            className={fuxieButtonClass('primary', 'lg', 'rounded-2xl active:scale-[0.98]')}
                         >
-                            <span>🔄</span>
-                            Thẻ đến hạn
-                            <span className="bg-white/20 rounded-lg px-2 py-0.5 text-xs">{currentTotalDue}</span>
+                            Ôn {dueInCurrentLevel} thẻ đến hạn
+                            <span className="rounded-lg bg-white/20 px-2 py-0.5 text-xs">+XP</span>
+                        </button>
+                    ) : currentThemes[0] ? (
+                        <button
+                            onClick={() => startStudy(currentThemes[0]!)}
+                            className={fuxieButtonClass('primary', 'lg', 'rounded-2xl active:scale-[0.98]')}
+                        >
+                            Học chủ đề tiếp theo
+                            <span className="rounded-lg bg-white/20 px-2 py-0.5 text-xs">+từ mới</span>
+                        </button>
+                    ) : (
+                        <button
+                            onClick={() => switchLevel(availableLevels[0] ?? currentLevel)}
+                            className={fuxieButtonClass('secondary', 'lg', 'rounded-2xl bg-white/75')}
+                        >
+                            Chọn cấp độ khác
                         </button>
                     )}
+                    <div className="text-xs font-bold text-[#3C78A8]">
+                        {dueInCurrentLevel > 0 ? 'Ưu tiên thẻ đang đến hạn trước khi học thêm.' : 'Hôm nay chưa có thẻ đến hạn ở cấp độ này.'}
+                    </div>
                 </div>
-            </div>
+            </QuestProgressHero>
+
+            {/* CEFR Tabs */}
+            <FuxieLevelTabs
+                items={availableLevels}
+                activeItem={currentLevel}
+                onSelect={switchLevel}
+                disabled={isLevelLoading}
+                getCount={(level) => currentDueCounts[level] || 0}
+                getActiveClassName={(level) => {
+                    const colors = getCefrTheme(level)
+                    return `bg-gradient-to-r ${colors.gradient} text-white scale-105`
+                }}
+                ariaLabel="Review CEFR level filter"
+                className="mb-6"
+            />
 
             {/* Theme Grid */}
             {isLevelLoading ? (
@@ -573,10 +603,11 @@ export function ReviewClient({ themes, availableLevels, initialLevel, dueCounts,
                             ? Math.round((theme.srsProgress.learned / theme.wordCount) * 100) : 0
 
                         return (
-                            <button
+                            <FuxieQuestCard
+                                as="button"
                                 key={theme.id}
                                 onClick={() => startStudy(theme)}
-                                className="group flex flex-col items-center p-4 rounded-2xl bg-white border-2 border-gray-100 hover:border-[#FF6B35] hover:shadow-lg hover:shadow-orange-100 transition-all duration-200"
+                                className="flex flex-col items-center p-4 text-center"
                             >
                                 {/* Image */}
                                 {theme.imageUrl ? (
@@ -594,7 +625,7 @@ export function ReviewClient({ themes, availableLevels, initialLevel, dueCounts,
                                 )}
 
                                 {/* Name */}
-                                <h3 className="text-sm font-bold text-gray-900 text-center leading-tight mb-1 group-hover:text-[#FF6B35] transition-colors line-clamp-2">
+                                <h3 className="text-sm font-bold text-gray-900 text-center leading-tight mb-1 group-hover:text-[#3C78A8] transition-colors line-clamp-2">
                                     {theme.name}
                                 </h3>
                                 <p className="text-[11px] text-gray-400 text-center line-clamp-1">{theme.nameNative}</p>
@@ -611,14 +642,9 @@ export function ReviewClient({ themes, availableLevels, initialLevel, dueCounts,
 
                                 {/* Progress bar */}
                                 {progress > 0 && (
-                                    <div className="w-full h-1.5 bg-gray-100 rounded-full mt-2 overflow-hidden">
-                                        <div
-                                            className="h-full bg-emerald-400 rounded-full transition-all"
-                                            style={{ width: `${progress}%` }}
-                                        />
-                                    </div>
+                                    <FuxieProgressBar value={progress} tone="success" className="mt-2 h-1.5 w-full" />
                                 )}
-                            </button>
+                            </FuxieQuestCard>
                         )
                     })}
                 </div>
@@ -626,9 +652,31 @@ export function ReviewClient({ themes, availableLevels, initialLevel, dueCounts,
 
             {/* Empty state */}
             {!isLevelLoading && currentThemes.length === 0 && (
-                <div className="flex flex-col items-center py-12">
-                    <Mascot variant="empty" size={100} speechBubble="Chưa có chủ đề cho cấp độ này! 📚" />
-                    <p className="text-gray-500 mt-4">Hãy chọn một cấp độ khác.</p>
+                <div className="grid gap-4 lg:grid-cols-[1fr_300px]">
+                    <FuxieCoach
+                        role="locked"
+                        eyebrow="Memory route"
+                        title="Cấp độ này chưa có chủ đề ôn"
+                        message="Thay vì để màn hình trống, Fuxie giữ học viên trong luồng: đổi cấp độ hoặc quay lại lộ trình chính."
+                    />
+                    <FuxiePanel className="rounded-3xl border-dashed border-slate-200 p-5">
+                        <p className="text-xs font-black uppercase tracking-wide text-[#3C78A8]">Next best action</p>
+                        <h3 className="mt-2 text-xl font-black text-slate-950">Chọn một cấp độ khác</h3>
+                        <p className="mt-2 text-sm font-medium leading-relaxed text-slate-500">
+                            Cấp độ có chủ đề sẽ hiện số thẻ và tiến độ SRS ngay trong tab.
+                        </p>
+                        <div className="mt-5 flex flex-wrap gap-2">
+                            {availableLevels.map(level => (
+                                <button
+                                    key={level}
+                                    onClick={() => switchLevel(level)}
+                                    className={fuxieButtonClass('secondary', 'sm', 'rounded-xl')}
+                                >
+                                    {level}
+                                </button>
+                            ))}
+                        </div>
+                    </FuxiePanel>
                 </div>
             )}
         </div>

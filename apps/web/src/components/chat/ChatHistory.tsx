@@ -151,7 +151,7 @@ export function ChatHistory({
                                     className={`w-full text-left rounded-xl px-3 py-2.5 group
                                         transition-all duration-150
                                         ${isActive
-                                            ? 'bg-orange-50 ring-1 ring-orange-200'
+                                            ? 'bg-[#F3FBFF] ring-1 ring-[#60A8E4]/30'
                                             : 'hover:bg-gray-50'
                                         }`}
                                 >

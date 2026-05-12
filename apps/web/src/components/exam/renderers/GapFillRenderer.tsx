@@ -53,8 +53,8 @@ export function GapFillRenderer({ content, answer, onChange }: Props) {
                                     onClick={() => setActiveBlank(isActive ? null : item.id)}
                                     className={`inline-flex items-center gap-1 px-3 py-1 rounded-lg text-sm font-medium transition-all border-2 border-dashed
                                         ${value
-                                            ? 'bg-[#FF6B35]/10 border-[#FF6B35]/40 text-[#FF6B35]'
-                                            : 'bg-white border-gray-300 text-gray-400 hover:border-[#FF6B35]/40'
+                                            ? 'bg-[#60A8E4]/10 border-[#60A8E4]/40 text-[#3C78A8]'
+                                            : 'bg-white border-gray-300 text-gray-400 hover:border-[#60A8E4]/40'
                                         }`}
                                 >
                                     <span className="text-[10px] font-bold text-gray-400 mr-1">{idx + 1}</span>
@@ -70,11 +70,11 @@ export function GapFillRenderer({ content, answer, onChange }: Props) {
                                             onKeyDown={e => { if (e.key === 'Enter') setActiveBlank(null) }}
                                             placeholder={item.blankLabel ?? 'Nhập câu trả lời...'}
                                             autoFocus
-                                            className="w-full px-3 py-2 text-sm border border-gray-200 rounded-lg focus:outline-none focus:border-[#FF6B35] focus:ring-1 focus:ring-[#FF6B35]/30"
+                                            className="w-full px-3 py-2 text-sm border border-gray-200 rounded-lg focus:outline-none focus:border-[#60A8E4] focus:ring-1 focus:ring-[#60A8E4]/30"
                                         />
                                         <button
                                             onClick={() => setActiveBlank(null)}
-                                            className="mt-2 w-full py-1.5 text-xs font-medium text-white bg-[#FF6B35] rounded-lg"
+                                            className="mt-2 w-full py-1.5 text-xs font-medium text-white bg-[#60A8E4] rounded-lg"
                                         >
                                             OK ✓
                                         </button>

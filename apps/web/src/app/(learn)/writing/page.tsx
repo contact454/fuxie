@@ -2,7 +2,7 @@ import { redirect } from 'next/navigation'
 import { prisma } from '@fuxie/database'
 import { getServerUser } from '@/lib/auth/server-auth'
 import { cacheWrap } from '@/lib/cache/redis'
-import { WritingClient } from '@/components/writing/writing-client'
+import { WritingClientDynamic } from '@/components/writing/WritingClientDynamic'
 
 export const metadata = {
     title: 'Fuxie - Luyện viết',
@@ -129,7 +129,7 @@ export default async function WritingPage() {
 
     return (
         <div className="max-w-5xl mx-auto px-4 py-8">
-            <WritingClient
+            <WritingClientDynamic
                 teile={data.teile}
                 totalExercises={data.totalExercises}
                 totalCompleted={data.totalCompleted}

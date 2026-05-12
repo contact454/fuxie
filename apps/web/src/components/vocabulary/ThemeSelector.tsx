@@ -51,7 +51,7 @@ export function ThemeSelector({ themes, selectedSlug, onSelect }: ThemeSelectorP
                                 onClick={() => onSelect(theme.slug)}
                                 className={`flex-shrink-0 flex flex-col items-center p-3 rounded-2xl border-2 transition-all duration-200 w-[110px]
                                     ${isSelected
-                                        ? 'border-[#FF6B35] bg-orange-50 shadow-md shadow-orange-100'
+                                        ? 'border-[#60A8E4] bg-[#F3FBFF] shadow-md shadow-sky-100'
                                         : 'border-gray-200 bg-white hover:border-gray-300 hover:shadow-sm'
                                     }`}
                             >
@@ -77,7 +77,7 @@ export function ThemeSelector({ themes, selectedSlug, onSelect }: ThemeSelectorP
                                 </div>
                                 {/* Theme name */}
                                 <span className={`text-xs font-medium text-center leading-tight line-clamp-2
-                                    ${isSelected ? 'text-[#FF6B35]' : 'text-gray-700'}`}
+                                    ${isSelected ? 'text-[#3C78A8]' : 'text-gray-700'}`}
                                 >
                                     {theme.name}
                                 </span>

@@ -2,7 +2,7 @@
 import { prisma } from '@fuxie/database'
 import { cookies } from 'next/headers'
 import { getServerUser } from '@/lib/auth/server-auth'
-import SpeakingLessonPlayer from '@/components/speaking/SpeakingLessonPlayer'
+import { SpeakingLessonPlayerDynamic } from '@/components/speaking/SpeakingLessonPlayerDynamic'
 
 
 export async function generateMetadata({ params }: { params: Promise<{ lessonId: string }> }) {
@@ -40,7 +40,7 @@ export default async function SpeakingLessonPage({ params }: { params: Promise<{
   const locale = (await cookies()).get('NEXT_LOCALE')?.value || 'vi'
 
   return (
-    <SpeakingLessonPlayer
+    <SpeakingLessonPlayerDynamic
       lessonId={lesson.id}
       titleDe={lesson.titleDe}
       titleNative={(lesson.translations as any)?.[locale] || lesson.titleDe}

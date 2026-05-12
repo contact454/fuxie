@@ -10,7 +10,7 @@ const ExercisePlayerWrapper = dynamic(() => import('./exercise-player-wrapper').
     ssr: false,
     loading: () => (
         <div className="min-h-[100dvh] flex items-center justify-center bg-gray-50">
-            <div className="h-12 w-12 rounded-full border-4 border-[#004E89] border-t-transparent animate-spin" />
+            <div className="h-12 w-12 rounded-full border-4 border-[#3C78A8] border-t-transparent animate-spin" />
         </div>
     ),
 })

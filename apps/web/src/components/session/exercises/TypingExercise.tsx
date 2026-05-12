@@ -40,7 +40,7 @@ export function TypingExercise({ item, onNext }: { item: SessionItem, onNext: (c
                 <p className="text-gray-500 mb-8">Nghĩa là: <strong>{meaning}</strong></p>
 
                 <div className="flex items-center gap-4 mb-4">
-                    <div className="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center shrink-0">
+                    <div className="w-12 h-12 bg-[#CCE4F0] rounded-full flex items-center justify-center shrink-0">
                         <span className="text-2xl">🦊</span>
                     </div>
                     <div className="flex-1 bg-white border-2 border-gray-200 rounded-2xl p-4 shadow-sm">

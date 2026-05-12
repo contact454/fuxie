@@ -115,11 +115,11 @@ export function OnboardingWizard() {
     // ===== RENDER =====
 
     return (
-        <div className="min-h-[100dvh] bg-gradient-to-br from-orange-50 via-white to-blue-50 flex flex-col">
+        <div className="min-h-[100dvh] bg-gradient-to-br from-[#F3FBFF] via-white to-blue-50 flex flex-col">
             {/* Progress Bar */}
             <div className="h-1.5 bg-gray-100">
                 <div
-                    className="h-full bg-gradient-to-r from-[#FF6B35] to-[#004E89] transition-all duration-500 ease-out"
+                    className="h-full bg-gradient-to-r from-[#60A8E4] to-[#3C78A8] transition-all duration-500 ease-out"
                     style={{ width: `${progress}%` }}
                 />
             </div>
@@ -177,7 +177,7 @@ function WelcomeStep({ onNext }: { onNext: () => void }) {
             </div>
             <h1 className="text-3xl font-bold mb-2">
                 Willkommen bei{' '}
-                <span className="bg-gradient-to-r from-[#FF6B35] to-[#004E89] bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-[#60A8E4] to-[#3C78A8] bg-clip-text text-transparent">
                     Fuxie
                 </span>
                 ! 🦊
@@ -192,7 +192,7 @@ function WelcomeStep({ onNext }: { onNext: () => void }) {
             </p>
             <button
                 onClick={onNext}
-                className="w-full max-w-xs mx-auto py-3.5 px-8 rounded-xl bg-gradient-to-r from-[#FF6B35] to-[#e55a25] text-white font-semibold text-base hover:shadow-lg hover:shadow-orange-200 transition-all active:scale-[0.98]"
+                className="w-full max-w-xs mx-auto py-3.5 px-8 rounded-xl bg-gradient-to-r from-[#60A8E4] to-[#3C78A8] text-white font-semibold text-base hover:shadow-lg hover:shadow-sky-200 transition-all active:scale-[0.98]"
             >
                 Bắt đầu nào! →
             </button>
@@ -232,7 +232,7 @@ function GoalStep({
                             onClick={() => onExamChange(opt.value)}
                             className={`flex items-center gap-3 p-3 rounded-xl border-2 transition-all text-left ${
                                 targetExam === opt.value
-                                    ? 'border-[#FF6B35] bg-orange-50 shadow-sm'
+                                    ? 'border-[#60A8E4] bg-[#F3FBFF] shadow-sm'
                                     : 'border-gray-200 hover:border-gray-300'
                             }`}
                         >
@@ -260,7 +260,7 @@ function GoalStep({
                                 onClick={() => onLevelChange(level)}
                                 className={`p-3 rounded-xl border-2 transition-all text-center ${
                                     targetLevel === level
-                                        ? 'border-[#FF6B35] bg-orange-50 shadow-sm'
+                                        ? 'border-[#60A8E4] bg-[#F3FBFF] shadow-sm'
                                         : 'border-gray-200 hover:border-gray-300'
                                 }`}
                             >
@@ -281,7 +281,7 @@ function GoalStep({
 
             <button
                 onClick={onNext}
-                className="w-full py-3.5 rounded-xl bg-gradient-to-r from-[#FF6B35] to-[#e55a25] text-white font-semibold hover:shadow-lg hover:shadow-orange-200 transition-all active:scale-[0.98]"
+                className="w-full py-3.5 rounded-xl bg-gradient-to-r from-[#60A8E4] to-[#3C78A8] text-white font-semibold hover:shadow-lg hover:shadow-sky-200 transition-all active:scale-[0.98]"
             >
                 Tiếp theo: Kiểm tra trình độ →
             </button>
@@ -329,7 +329,7 @@ function PlacementStep({
             {/* Progress */}
             <div className="h-2 bg-gray-100 rounded-full mb-6 overflow-hidden">
                 <div
-                    className="h-full bg-gradient-to-r from-[#FF6B35] to-[#004E89] rounded-full transition-all duration-300"
+                    className="h-full bg-gradient-to-r from-[#60A8E4] to-[#3C78A8] rounded-full transition-all duration-300"
                     style={{ width: `${(questionNumber / totalQuestions) * 100}%` }}
                 />
             </div>
@@ -355,7 +355,7 @@ function PlacementStep({
                                 optClass = 'border-gray-200 opacity-50'
                             }
                         } else if (idx === selectedAnswer) {
-                            optClass = 'border-[#FF6B35] bg-orange-50'
+                            optClass = 'border-[#60A8E4] bg-[#F3FBFF]'
                         }
 
                         return (
@@ -472,7 +472,7 @@ function ResultStep({
             <button
                 onClick={onComplete}
                 disabled={saving}
-                className="w-full py-3.5 rounded-xl bg-gradient-to-r from-[#FF6B35] to-[#e55a25] text-white font-semibold hover:shadow-lg hover:shadow-orange-200 transition-all active:scale-[0.98] disabled:opacity-50"
+                className="w-full py-3.5 rounded-xl bg-gradient-to-r from-[#60A8E4] to-[#3C78A8] text-white font-semibold hover:shadow-lg hover:shadow-sky-200 transition-all active:scale-[0.98] disabled:opacity-50"
             >
                 {saving ? 'Đang lưu...' : 'Bắt đầu học! 🚀'}
             </button>

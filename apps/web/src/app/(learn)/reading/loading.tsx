@@ -6,7 +6,7 @@ export default function ReadingLoading() {
         <div className="max-w-4xl mx-auto px-4 py-6 animate-pulse">
             {/* Header */}
             <div className="flex items-center gap-4 mb-6">
-                <div className="w-14 h-14 rounded-xl bg-orange-100" />
+                <div className="w-14 h-14 rounded-xl bg-[#CCE4F0]" />
                 <div>
                     <div className="h-7 w-40 rounded-lg bg-gray-100 mb-2" />
                     <div className="h-3 w-56 rounded bg-gray-100" />

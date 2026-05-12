@@ -86,7 +86,7 @@ export function MobileShell({ dailyGoal: initialDailyGoal, children }: MobileShe
                         height={28}
                         className="object-contain"
                     />
-                    <span className="text-lg font-bold bg-gradient-to-r from-[#FF6B35] to-[#004E89] bg-clip-text text-transparent">
+                    <span className="text-lg font-bold bg-gradient-to-r from-[#60A8E4] to-[#3C78A8] bg-clip-text text-transparent">
                         Fuxie
                     </span>
                 </MeasuredLink>

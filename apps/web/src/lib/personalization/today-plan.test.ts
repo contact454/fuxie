@@ -49,7 +49,7 @@ describe('buildTodayPlan', () => {
             href: '/review',
             badge: '24',
         })
-        expect(plan.focus).toBe('Review first')
+        expect(plan.focus).toBe('Ôn trước')
     })
 
     it('prioritizes urgent assignments over normal lessons', () => {
@@ -68,7 +68,7 @@ describe('buildTodayPlan', () => {
         expect(plan.actions[0]).toMatchObject({
             type: 'assignment',
             href: '/reading/B1-T1-001',
-            reason: 'Heute faellig',
+            reason: 'Hạn hôm nay',
         })
         expect(plan.signals.pendingAssignments).toBe(1)
     })

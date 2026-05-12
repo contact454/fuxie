@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
+import { FUXIE_3D_ASSETS } from '@/components/gamification/quest-visuals'
 
 interface ResultData {
     attemptId: string
@@ -45,7 +46,7 @@ export function ExamResultClient({ examId, attemptId }: { examId: string; attemp
     if (loading) {
         return (
             <div className="flex items-center justify-center h-[60vh]">
-                <div className="w-12 h-12 border-4 border-[#FF6B35]/30 border-t-[#FF6B35] rounded-full animate-spin" />
+                <div className="w-12 h-12 border-4 border-[#60A8E4]/30 border-t-[#60A8E4] rounded-full animate-spin" />
             </div>
         )
     }
@@ -94,7 +95,7 @@ export function ExamResultClient({ examId, attemptId }: { examId: string; attemp
                 >
                     {result.passed ? (
                         <>
-                            <Image src="/mascot/core/fuxie-core-happy-wave.png" alt="🎉" width={24} height={24} className="object-contain" />
+                            <Image src={FUXIE_3D_ASSETS.examGuide} alt="Fuxie exam guide" width={24} height={24} className="object-contain" />
                             Đã đạt! 🎉
                         </>
                     ) : (
@@ -144,7 +145,7 @@ export function ExamResultClient({ examId, attemptId }: { examId: string; attemp
                 </Link>
                 <Link
                     href={`/exam/${examId}`}
-                    className="flex-1 py-3 text-center text-sm font-medium text-white bg-gradient-to-r from-[#FF6B35] to-[#2EC4B6] rounded-xl shadow-sm hover:shadow-md transition-all"
+                    className="flex-1 py-3 text-center text-sm font-medium text-white bg-gradient-to-r from-[#60A8E4] to-[#2EC4B6] rounded-xl shadow-sm hover:shadow-md transition-all"
                 >
                     Thử lại →
                 </Link>

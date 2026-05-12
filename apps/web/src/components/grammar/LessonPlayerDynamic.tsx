@@ -10,7 +10,7 @@ const LessonPlayer = dynamic(() => import('./LessonPlayer').then(mod => mod.Less
     ssr: false,
     loading: () => (
         <div className="min-h-[100dvh] bg-[#F8FAFC] flex items-center justify-center">
-            <div className="w-12 h-12 border-4 border-[#004E89] border-t-transparent rounded-full animate-spin" />
+            <div className="w-12 h-12 border-4 border-[#3C78A8] border-t-transparent rounded-full animate-spin" />
         </div>
     ),
 })

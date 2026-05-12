@@ -2,7 +2,7 @@ import { redirect } from 'next/navigation'
 import { getServerUser } from '@/lib/auth/server-auth'
 import { getVocabularyLevels, getVocabularyThemes, mapVocabularyThemes, type CefrLevel } from '@/lib/content/vocabulary'
 import { getVocabularyThemeSrsProgress } from '@/lib/srs/stats'
-import { VocabularyClient } from '@/components/vocabulary/vocabulary-client'
+import { VocabularyClientDynamic } from '@/components/vocabulary/VocabularyClientDynamic'
 
 export const metadata = {
     title: 'Fuxie - Từ vựng',
@@ -53,7 +53,7 @@ export default async function VocabularyPage() {
 
     return (
         <div className="max-w-5xl mx-auto px-4 py-8">
-            <VocabularyClient
+            <VocabularyClientDynamic
                 themes={themes}
                 totalWords={totalWords}
                 totalDue={totalDue}

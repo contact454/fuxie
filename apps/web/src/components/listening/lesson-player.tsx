@@ -2,6 +2,12 @@
 
 import { useState, useRef, useEffect, useCallback } from 'react'
 import { useRouter } from 'next/navigation'
+import {
+    ResultRewardLoop,
+    resultRewardIcons,
+} from '@/components/gamification/result-reward-loop'
+import { FuxieLive3D } from '@/components/gamification/fuxie-live-3d'
+import { FUXIE_3D_ASSETS, SkillMotivationRail } from '@/components/gamification/quest-visuals'
 import { Mascot } from '@/components/ui/mascot'
 import { getCefrTheme } from '@/lib/constants/cefr'
 
@@ -28,6 +34,16 @@ interface QuestionResult {
     explanationNative: string | null
 }
 
+interface TranscriptLine {
+    speaker?: string
+    speaker_role?: string
+    text: string
+}
+
+interface TranscriptData {
+    lines?: TranscriptLine[]
+}
+
 interface LessonPlayerProps {
     lessonId: string
     title: string
@@ -40,7 +56,7 @@ interface LessonPlayerProps {
     audioDuration: number | null
     backgroundScene: string | null
     questions: Question[]
-    transcript: any | null
+    transcript: TranscriptData | null
     maxPlays: number // Goethe rule: A1/A2 = 2, B2+ = 1 or 2
 }
 
@@ -65,7 +81,7 @@ const BACKGROUND_SCENE_LABELS: Record<string, string> = {
 
 // ─── Lesson Player Component ────────────────────────
 export function LessonPlayer({
-    lessonId, title, topic, cefrLevel, teil, teilName, taskType,
+    lessonId, title: _title, topic, cefrLevel, teil, teilName, taskType,
     audioUrl, audioDuration, backgroundScene, questions, transcript, maxPlays,
 }: LessonPlayerProps) {
     const router = useRouter()
@@ -82,7 +98,7 @@ export function LessonPlayer({
     const [isSubmitting, setIsSubmitting] = useState(false)
     const [results, setResults] = useState<{
         score: number; totalQuestions: number; percentage: number;
-        timeTaken: number; listenCount: number; questionResults: QuestionResult[]
+        xpEarned: number; fucoinEarned?: number; walletBalance?: number; fucoinDuplicate?: boolean; fucoinIntended?: number; fucoinDailyCap?: number; fucoinDailyEarned?: number; fucoinDailyRemaining?: number; fucoinCapReached?: boolean; streak?: { currentStreak: number; isNewDay: boolean; freezeUsed?: boolean; freezesAvailable?: number; freezesUsed?: number }; timeTaken: number; listenCount: number; questionResults: QuestionResult[]
     } | null>(null)
     const [showTranscript, setShowTranscript] = useState(false)
     const [startTime, setStartTime] = useState(Date.now())
@@ -248,7 +264,7 @@ export function LessonPlayer({
 
                 {/* Lesson Info */}
                 <div className="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm text-center">
-                    <Mascot variant="hoeren" size={80} className="mx-auto" />
+                    <FuxieLive3D state="wave" fallbackSrc={FUXIE_3D_ASSETS.radioHost} alt="Fuxie listening coach" size={112} priority />
                     <h1 className="text-xl font-bold text-gray-900 mt-4">{topic}</h1>
                     <p className="text-sm text-gray-500 mt-1">Phần {teil} - {teilName}</p>
 
@@ -264,8 +280,8 @@ export function LessonPlayer({
                         )}
                     </div>
 
-                    <div className="mt-6 p-4 bg-orange-50 rounded-xl text-sm text-gray-700">
-                        <p className="font-semibold text-[#FF6B35] mb-2">Hướng dẫn</p>
+                    <div className="mt-6 p-4 bg-[#F3FBFF] rounded-xl text-sm text-gray-700 ring-1 ring-[#60A8E4]/15">
+                        <p className="font-semibold text-[#3C78A8] mb-2">Hướng dẫn</p>
                         <p>Em sẽ nghe đoạn audio tối đa <strong>{maxPlays} lần</strong>, sau đó trả lời <strong>{questions.length} câu hỏi</strong>.</p>
                         <p className="mt-1 text-gray-500">Tốc độ gợi ý: {DEFAULT_SPEEDS[cefrLevel]}x - Thời lượng: khoảng {formatTime(duration || 180)}</p>
                     </div>
@@ -281,7 +297,7 @@ export function LessonPlayer({
                                 audioRef.current?.play().catch(() => {})
                             }, 300)
                         }}
-                        className="mt-6 w-full py-3.5 rounded-xl bg-gradient-to-r from-[#FF6B35] to-orange-500 text-white font-bold text-base hover:opacity-90 transition-all shadow-lg shadow-orange-200"
+                        className="mt-6 w-full py-3.5 rounded-xl bg-gradient-to-r from-[#60A8E4] to-[#3C78A8] text-white font-bold text-base hover:opacity-90 transition-all shadow-lg shadow-sky-200"
                     >
                         Bắt đầu nghe
                     </button>
@@ -296,7 +312,7 @@ export function LessonPlayer({
     if (phase === 'listening') {
         const q = questions[currentQuestion]
         return (
-            <div className="max-w-lg mx-auto px-4 py-6">
+            <div className="max-w-5xl mx-auto px-4 py-6">
                 {audioElement}
 
                 {/* Top bar */}
@@ -314,6 +330,8 @@ export function LessonPlayer({
                     </span>
                 </div>
 
+                <div className="grid gap-5 lg:grid-cols-[minmax(0,1fr)_320px]">
+                    <div className="min-w-0">
                 {/* Audio Player Card */}
                 <div className="bg-white rounded-2xl p-5 border border-gray-100 shadow-sm mb-5">
                     {/* Play button + progress */}
@@ -321,8 +339,8 @@ export function LessonPlayer({
                         <button
                             onClick={togglePlay}
                             disabled={!canPlayAgain && !isPlaying}
-                            className={`w-12 h-12 rounded-full flex items-center justify-center shrink-0 transition-all ${isPlaying ? 'bg-[#FF6B35] text-white scale-105' :
-                                canPlayAgain ? 'bg-[#FF6B35] text-white hover:opacity-90' :
+                            className={`w-12 h-12 rounded-full flex items-center justify-center shrink-0 transition-all ${isPlaying ? 'bg-[#60A8E4] text-white scale-105' :
+                                canPlayAgain ? 'bg-[#60A8E4] text-white hover:opacity-90' :
                                     'bg-gray-200 text-gray-400 cursor-not-allowed'
                                 }`}
                         >
@@ -341,7 +359,7 @@ export function LessonPlayer({
                             {/* Progress bar */}
                             <div className="h-2 bg-gray-100 rounded-full cursor-pointer" onClick={seekTo}>
                                 <div
-                                    className="h-full bg-gradient-to-r from-[#FF6B35] to-orange-400 rounded-full transition-all"
+                                    className="h-full bg-gradient-to-r from-[#60A8E4] to-[#2EC4B6] rounded-full transition-all"
                                     style={{ width: `${duration > 0 ? (currentTime / duration) * 100 : 0}%` }}
                                 />
                             </div>
@@ -387,7 +405,7 @@ export function LessonPlayer({
                             {questions.map((_, i) => (
                                 <div
                                     key={i}
-                                    className={`w-2 h-2 rounded-full transition-all ${i === currentQuestion ? 'bg-[#FF6B35] scale-125' :
+                                    className={`w-2 h-2 rounded-full transition-all ${i === currentQuestion ? 'bg-[#60A8E4] scale-125' :
                                         answers[questions[i]?.id ?? ''] ? 'bg-green-400' : 'bg-gray-200'
                                         }`}
                                 />
@@ -410,13 +428,13 @@ export function LessonPlayer({
                                         key={i}
                                         onClick={() => selectAnswer(q.id, optionKey)}
                                         className={`w-full flex items-center gap-3 p-3.5 rounded-xl text-left transition-all ${isSelected
-                                            ? 'border-2 border-[#FF6B35] bg-orange-50'
+                                            ? 'border-2 border-[#60A8E4] bg-[#F3FBFF]'
                                             : 'border-2 border-gray-100 bg-white hover:border-gray-200'
                                             }`}
                                     >
-                                        <div className={`w-5 h-5 rounded-full border-2 shrink-0 flex items-center justify-center ${isSelected ? 'border-[#FF6B35]' : 'border-gray-300'
+                                        <div className={`w-5 h-5 rounded-full border-2 shrink-0 flex items-center justify-center ${isSelected ? 'border-[#60A8E4]' : 'border-gray-300'
                                             }`}>
-                                            {isSelected && <div className="w-2.5 h-2.5 rounded-full bg-[#FF6B35]" />}
+                                            {isSelected && <div className="w-2.5 h-2.5 rounded-full bg-[#60A8E4]" />}
                                         </div>
                                         <span className={`text-sm ${isSelected ? 'font-semibold text-gray-900' : 'text-gray-700'}`}>
                                             {opt}
@@ -439,7 +457,7 @@ export function LessonPlayer({
                             {currentQuestion < questions.length - 1 ? (
                                 <button
                                     onClick={() => setCurrentQuestion(c => c + 1)}
-                                    className="flex-1 py-3 rounded-xl bg-gradient-to-r from-[#FF6B35] to-orange-500 text-white font-bold text-sm hover:opacity-90 transition-all shadow-sm"
+                                    className="flex-1 py-3 rounded-xl bg-gradient-to-r from-[#60A8E4] to-[#3C78A8] text-white font-bold text-sm hover:opacity-90 transition-all shadow-sm"
                                 >
                                     Câu tiếp theo
                                 </button>
@@ -458,6 +476,28 @@ export function LessonPlayer({
                         </div>
                     </div>
                 )}
+                    </div>
+
+                    <SkillMotivationRail
+                        skill="listening"
+                        phaseLabel={`Câu ${currentQuestion + 1}/${questions.length}`}
+                        title={isPlaying ? 'Bắt tín hiệu chính trong audio' : 'Nghe lại có chiến lược'}
+                        message="Fuxie giữ phần thưởng và tiến độ ở cạnh màn hình để em tập trung vào âm thanh, câu hỏi và lựa chọn."
+                        progressLabel="Listening progress"
+                        progressPercent={questions.length > 0 ? ((currentQuestion + 1) / questions.length) * 100 : 0}
+                        metrics={[
+                            { label: 'Answered', value: `${Object.keys(answers).length}/${questions.length}` },
+                            { label: 'Plays', value: `${playCount}/${maxPlays}` },
+                            { label: 'Speed', value: `${playbackSpeed}x` },
+                            { label: 'Audio', value: `${formatTime(currentTime)}` },
+                        ]}
+                        rewards={[
+                            { type: 'xp', label: `+${Math.max(10, questions.length * 3)} XP`, detail: 'Hoàn thành bài nghe' },
+                            { type: 'badge', label: 'Good ear', detail: 'Bắt ý chính' },
+                            { type: 'streak', label: 'Daily rhythm', detail: 'Giữ nhịp nghe' },
+                        ]}
+                    />
+                </div>
             </div>
         )
     }
@@ -466,16 +506,142 @@ export function LessonPlayer({
     // RESULTS PHASE
     // ═══════════════════════════════════════════
     if (phase === 'results' && results) {
-        const { score, totalQuestions, percentage, questionResults } = results
+        const {
+            score,
+            totalQuestions,
+            percentage,
+            xpEarned,
+            fucoinEarned = 0,
+            walletBalance,
+            fucoinDuplicate = false,
+            fucoinDailyCap,
+            fucoinDailyEarned,
+            fucoinCapReached = false,
+            streak,
+            questionResults,
+        } = results
         const message = resultMessage(percentage)
         const mascotVariant = percentage >= 70 ? 'celebrate' : percentage >= 50 ? 'encouragement' : 'studying'
+        const { Clock3, Headphones: HeadphonesIcon, Target } = resultRewardIcons
+        const resultCopy = percentage >= 90
+            ? {
+                title: 'Nghe rất sắc, quest hoàn thành!',
+                coachTitle: 'Fuxie đánh dấu một lượt nghe mạnh',
+                coachMessage: 'Độ chính xác cao cho thấy em đang bắt được ý chính. Đây là lúc tốt để sang bài nghe mới.',
+                unlockLabel: 'Next',
+                unlockDetail: 'Đi tiếp',
+            }
+            : percentage >= 70
+                ? {
+                    title: 'Rất tốt, tai nghe đang vào nhịp',
+                    coachTitle: 'Fuxie đề xuất đi tiếp',
+                    coachMessage: 'Em đã nắm phần lớn tín hiệu trong audio. Có thể học tiếp hoặc nghe lại để chắc chi tiết.',
+                    unlockLabel: 'Good ear',
+                    unlockDetail: 'Đi tiếp',
+                }
+                : percentage >= 50
+                    ? {
+                        title: 'Có tín hiệu tốt, cần nghe lại',
+                        coachTitle: 'Fuxie giữ focus ở điểm yếu',
+                        coachMessage: 'Kết quả này cho biết em đã bắt được một phần nội dung. Nghe lại ngay sẽ giúp khóa các câu còn lẫn.',
+                        unlockLabel: 'Focus replay',
+                        unlockDetail: 'Câu sai',
+                    }
+                    : {
+                        title: 'Mình luyện lại từng tín hiệu',
+                        coachTitle: 'Fuxie đề xuất nghe lại',
+                        coachMessage: 'Đừng đổi bài vội. Một lượt nghe lại chậm hơn sẽ giúp em nhận ra từ khóa và nhịp câu hỏi.',
+                        unlockLabel: 'Replay quest',
+                        unlockDetail: 'Ý chính',
+                    }
+        const attemptMeta = [
+            {
+                icon: <Clock3 className="h-4 w-4" />,
+                label: 'Thời gian',
+                value: formatTime(results.timeTaken),
+                detail: 'Hoàn thành bài nghe',
+            },
+            {
+                icon: <HeadphonesIcon className="h-4 w-4" />,
+                label: 'Lượt nghe',
+                value: `${results.listenCount}x`,
+                detail: `${maxPlays} lượt tối đa`,
+            },
+            {
+                icon: <Target className="h-4 w-4" />,
+                label: 'Độ chính xác',
+                value: `${percentage}%`,
+                detail: `${score}/${totalQuestions} câu đúng`,
+            },
+        ]
+        const fucoinLabel = fucoinEarned > 0
+            ? `+${fucoinEarned} Fucoin`
+            : fucoinDuplicate
+                ? 'Đã nhận Fucoin'
+                : fucoinCapReached
+                    ? 'Đủ Fucoin hôm nay'
+                    : '+0 Fucoin'
+        const fucoinDetail = fucoinEarned > 0
+            ? walletBalance !== undefined
+                ? `${walletBalance} trong ví`
+                : 'Đã cộng vào ví'
+            : fucoinDuplicate
+                ? 'Bài này đã thưởng trước đó'
+                : fucoinCapReached && fucoinDailyCap !== undefined
+                    ? `${fucoinDailyCap}/${fucoinDailyCap} daily cap`
+                    : fucoinDailyCap !== undefined && fucoinDailyEarned !== undefined
+                        ? `${fucoinDailyEarned}/${fucoinDailyCap} hôm nay`
+                        : 'Không có thưởng mới'
+        const rewardPreview = [
+            {
+                type: 'xp' as const,
+                label: `+${xpEarned} XP`,
+                detail: 'Kinh nghiệm bài nghe',
+            },
+            {
+                type: 'fucoin' as const,
+                label: fucoinLabel,
+                detail: fucoinDetail,
+            },
+            {
+                type: 'streak' as const,
+                label: streak?.freezeUsed ? 'Freeze saved' : 'Rhythm',
+                detail: streak?.freezeUsed ? `${streak.currentStreak} ngay` : 'Giữ nhịp',
+            },
+        ]
 
         return (
-            <div className="max-w-lg mx-auto px-4 py-6">
+            <div className="max-w-4xl mx-auto px-4 py-6">
                 {audioElement}
 
+                <ResultRewardLoop
+                    skill="listening"
+                    title={resultCopy.title}
+                    message={`Em trả lời đúng ${score}/${totalQuestions} câu. ${message}`}
+                    scoreLabel={`${score}/${totalQuestions}`}
+                    scoreDetail="Câu đúng"
+                    accuracy={percentage}
+                    xpEarned={xpEarned}
+                    attemptMeta={attemptMeta}
+                    rewardPreview={rewardPreview}
+                    streakReceipt={streak
+                        ? {
+                            freezeUsed: Boolean(streak.freezeUsed),
+                            currentStreak: streak.currentStreak,
+                            freezesAvailable: streak.freezesAvailable ?? 0,
+                            freezesUsed: streak.freezesUsed ?? 0,
+                        }
+                        : undefined}
+                    primaryAction={{ label: 'Bài nghe tiếp theo', href: '/listening' }}
+                    secondaryAction={{ label: 'Nghe lại', onClick: resetLesson }}
+                    dashboardAction={{ label: 'Về Dashboard', href: '/dashboard' }}
+                    coachTitle={resultCopy.coachTitle}
+                    coachMessage={resultCopy.coachMessage}
+                    className="mb-5"
+                />
+
                 {/* Celebration */}
-                <div className="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm text-center mb-5">
+                <div className="hidden">
                     <Mascot variant={mascotVariant} size={80} className="mx-auto" />
 
                     {/* Score Ring */}
@@ -484,7 +650,7 @@ export function LessonPlayer({
                             <circle cx="56" cy="56" r="48" stroke="#E5E7EB" strokeWidth="8" fill="none" />
                             <circle
                                 cx="56" cy="56" r="48"
-                                stroke={percentage >= 70 ? '#10B981' : percentage >= 50 ? '#FF6B35' : '#EF4444'}
+                                stroke={percentage >= 70 ? '#10B981' : percentage >= 50 ? '#FF8A3D' : '#EF4444'}
                                 strokeWidth="8" fill="none"
                                 strokeDasharray={`${2 * Math.PI * 48}`}
                                 strokeDashoffset={`${2 * Math.PI * 48 * (1 - percentage / 100)}`}
@@ -575,7 +741,7 @@ export function LessonPlayer({
                         </button>
                         {showTranscript && (
                             <div className="px-4 pb-4 space-y-2 animate-fade-in-up">
-                                {(transcript.lines || []).map((line: any, i: number) => (
+                                {(transcript.lines || []).map((line: TranscriptLine, i: number) => (
                                     <div key={i} className="flex gap-2 text-sm">
                                         <span className={`font-semibold shrink-0 ${line.speaker_role === 'exam_narrator' ? 'text-purple-600' : 'text-blue-600'
                                             }`}>
@@ -599,7 +765,7 @@ export function LessonPlayer({
                     </button>
                     <button
                         onClick={resetLesson}
-                        className="flex-1 py-3 rounded-xl bg-gradient-to-r from-[#FF6B35] to-orange-500 text-white font-bold text-sm hover:opacity-90 transition-all shadow-sm"
+                        className="flex-1 py-3 rounded-xl bg-gradient-to-r from-[#60A8E4] to-[#3C78A8] text-white font-bold text-sm hover:opacity-90 transition-all shadow-sm"
                     >
                         Luyện lại
                     </button>

@@ -16,7 +16,8 @@ export const metadata: Metadata = {
         title: 'Fuxie',
     },
     icons: {
-        apple: '/mascot/core/fuxie-core-happy.png',
+        icon: '/mascot/core/fuxie-core-happy-wave.png',
+        apple: '/mascot/core/fuxie-core-happy-wave.png',
     },
     formatDetection: {
         telephone: false,
@@ -27,7 +28,7 @@ export const viewport: Viewport = {
     width: 'device-width',
     initialScale: 1,
     viewportFit: 'cover',
-    themeColor: '#FF6B35',
+    themeColor: '#60A8E4',
 }
 
 export default async function RootLayout({

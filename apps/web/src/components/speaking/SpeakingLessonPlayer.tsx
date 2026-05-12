@@ -3,7 +3,7 @@
 import { useState, useCallback } from 'react'
 import { useRouter } from 'next/navigation'
 import dynamic from 'next/dynamic'
-import { MascotImage } from '../shared/mascot-image'
+import { FUXIE_3D_ASSETS, FuxieRoleMascot } from '@/components/gamification/quest-visuals'
 import { ArrowLeft, RotateCcw, ArrowRight } from 'lucide-react'
 import styles from './speaking.module.css'
 import type { NachsprechenSentence, NachsprechenConfig } from './types'
@@ -120,12 +120,12 @@ export default function SpeakingLessonPlayer({
           {/* Mascot/Icon */}
           <div style={{
             width: 80, height: 80, margin: '32px auto 20px',
-            background: 'linear-gradient(135deg, #FF6B35, #FF8F5E)',
+            background: 'linear-gradient(135deg, #60A8E4, #FF8F5E)',
             borderRadius: 24, display: 'flex', alignItems: 'center',
             justifyContent: 'center',
             boxShadow: '0 8px 24px rgba(255, 107, 53, 0.3)',
           }}>
-            <MascotImage pose="skill-sprechen" width={56} height={56} />
+            <FuxieRoleMascot src={FUXIE_3D_ASSETS.speakingCoach} alt="Fuxie speaking coach" size={64} motion="speak" />
           </div>
 
           <h1 style={{ fontSize: 22, fontWeight: 800, color: '#111827', margin: '0 0 6px' }}>
@@ -221,13 +221,6 @@ export default function SpeakingLessonPlayer({
   }
 
   // ═══ SUMMARY PHASE ═══
-  const getResultMascot = (score: number) => {
-    if (score >= 90) return 'core-happy-wave'
-    if (score >= 70) return 'state-welcome'
-    if (score >= 50) return 'learn-studying'
-    return 'learn-wrong'
-  }
-  
   const getResultMessage = (score: number) => {
     if (score >= 90) return { main: 'Xuất sắc!', sub: 'Phát âm gần như hoàn hảo!' }
     if (score >= 70) return { main: 'Tốt lắm!', sub: 'Chỉ cần cải thiện một chút nữa.' }
@@ -242,7 +235,13 @@ export default function SpeakingLessonPlayer({
       <div style={{ padding: '40px 0 0', textAlign: 'center' }}>
         {/* Mascot animation */}
         <div style={{ marginBottom: 16, display: 'flex', justifyContent: 'center' }}>
-          <MascotImage pose={getResultMascot(finalScore) as any} size="md" className="drop-shadow-md" />
+          <FuxieRoleMascot
+            src={finalScore >= 90 ? FUXIE_3D_ASSETS.celebration : FUXIE_3D_ASSETS.speakingCoach}
+            alt="Fuxie speaking coach"
+            size={96}
+            motion={finalScore >= 70 ? 'reward' : 'speak'}
+            className="drop-shadow-md"
+          />
         </div>
         <h2 style={{ fontSize: 24, fontWeight: 800, color: '#111827', margin: '0 0 4px' }}>
           {resultInfo.main}

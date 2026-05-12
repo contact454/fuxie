@@ -33,7 +33,7 @@ export default function NotFound() {
                 <div className="flex gap-3">
                     <Link
                         href="/dashboard"
-                        className="flex-1 py-3 px-4 rounded-xl bg-gradient-to-r from-fuxie-primary to-[#e55a25] text-white font-semibold text-sm hover:shadow-lg hover:shadow-orange-200 transition-all text-center"
+                        className="flex-1 py-3 px-4 rounded-xl bg-gradient-to-r from-fuxie-primary to-[#3C78A8] text-white font-semibold text-sm hover:shadow-lg hover:shadow-sky-200 transition-all text-center"
                     >
                         Về bảng điều khiển
                     </Link>

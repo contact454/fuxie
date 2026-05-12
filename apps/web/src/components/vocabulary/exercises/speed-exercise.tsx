@@ -4,6 +4,10 @@ import { useState, useCallback, useEffect, useRef } from 'react'
 import { ExerciseResults } from './exercise-results'
 import { useExerciseTimer } from '@/hooks/use-exercise-timer'
 import { useSubmitExercise, type ExerciseAnswer } from '@/hooks/use-submit-exercise'
+import {
+    exerciseOptionClass,
+    exerciseScreenClass,
+} from './exercise-ui'
 
 // ─── Types ──────────────────────────────────────────
 interface SpeedQuestion {
@@ -30,7 +34,7 @@ interface SpeedExerciseProps {
 const COUNTDOWN_MAX = 8 // seconds per question
 
 // ─── Component ──────────────────────────────────────
-export function SpeedExercise({ questions, cefrLevel, themeName, themeSlug, onExit, onComplete }: SpeedExerciseProps) {
+export function SpeedExercise({ questions, cefrLevel, themeName: _themeName, themeSlug, onExit, onComplete: _onComplete }: SpeedExerciseProps) {
     const [currentIndex, setCurrentIndex] = useState(0)
     const [selectedAnswer, setSelectedAnswer] = useState<string | null>(null)
     const [isRevealed, setIsRevealed] = useState(false)
@@ -153,6 +157,15 @@ export function SpeedExercise({ questions, cefrLevel, themeName, themeSlug, onEx
                 correctCount={submitResult.correctCount}
                 accuracy={submitResult.accuracy}
                 xpEarned={submitResult.xpEarned}
+                fucoinEarned={submitResult.fucoinEarned}
+                walletBalance={submitResult.walletBalance}
+                fucoinDuplicate={submitResult.fucoinDuplicate}
+                fucoinIntended={submitResult.fucoinIntended}
+                fucoinDailyCap={submitResult.fucoinDailyCap}
+                fucoinDailyEarned={submitResult.fucoinDailyEarned}
+                fucoinDailyRemaining={submitResult.fucoinDailyRemaining}
+                fucoinCapReached={submitResult.fucoinCapReached}
+                streak={submitResult.streak}
                 timeTaken={timer}
                 results={submitResult.results}
                 onRetry={() => {
@@ -171,33 +184,39 @@ export function SpeedExercise({ questions, cefrLevel, themeName, themeSlug, onEx
 
     // ─── UI Calculations ────────────────────────────
     const countdownPercent = (countdown / COUNTDOWN_MAX) * 100
-    const countdownColor = countdown > 4 ? '#10B981' : countdown > 2 ? '#F59E0B' : '#EF4444'
+    const countdownColor = countdown > 4 ? '#2EC4B6' : countdown > 2 ? '#FFB703' : '#EF4444'
+    const timerTone = countdown > 4
+        ? 'bg-[#EAFBF8] text-[#0F766E] ring-[#2EC4B6]/30'
+        : countdown > 2
+            ? 'bg-[#FFF7D6] text-[#A66300] ring-[#FFD166]/60'
+            : 'bg-red-50 text-red-600 ring-red-200/70'
     return (
-        <div className="fixed inset-0 z-50 bg-gray-900 text-white flex flex-col">
+        <div className={exerciseScreenClass}>
             {/* Top bar */}
-            <div className="flex items-center gap-3 px-4 py-3 bg-gray-800 border-b border-gray-700">
+            <div className="flex items-center gap-3 border-b border-[#60A8E4]/15 bg-white/95 px-4 py-3 shadow-sm shadow-sky-900/5">
                 <button
                     onClick={onExit}
-                    className="w-8 h-8 flex items-center justify-center rounded-lg hover:bg-gray-700 transition-colors text-gray-400"
+                    aria-label="Close exercise"
+                    className="flex h-9 w-9 items-center justify-center rounded-xl bg-[#F3FBFF] text-[#3C78A8] ring-1 ring-[#60A8E4]/20 transition-colors hover:bg-[#CCE4F0]/55 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#60A8E4]/40"
                 >
-                    <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                    <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                         <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
                     </svg>
                 </button>
 
                 {/* Countdown bar */}
-                <div className="flex-1 h-2 bg-gray-700 rounded-full overflow-hidden">
+                <div className="h-2.5 flex-1 overflow-hidden rounded-full bg-[#CCE4F0]/65">
                     <div
                         className="h-full rounded-full transition-all duration-100 ease-linear"
                         style={{ width: `${countdownPercent}%`, backgroundColor: countdownColor }}
                     />
                 </div>
 
-                <span className="text-sm font-mono text-gray-400 w-10 text-right">
+                <span className={`w-14 rounded-full px-2 py-1 text-center text-xs font-black tabular-nums ring-1 ${timerTone}`}>
                     {countdown.toFixed(1)}s
                 </span>
 
-                <span className="px-2 py-0.5 rounded-full text-xs font-bold bg-blue-600">
+                <span className="rounded-full bg-[#EEF7FF] px-2.5 py-1 text-xs font-black text-[#3C78A8] ring-1 ring-[#60A8E4]/20">
                     {cefrLevel}
                 </span>
             </div>
@@ -205,38 +224,38 @@ export function SpeedExercise({ questions, cefrLevel, themeName, themeSlug, onEx
             {/* Stats row */}
             <div className="flex justify-center gap-4 px-4 py-3">
                 {/* Question counter */}
-                <span className="text-xs text-gray-500 font-mono self-center">
+                <span className="self-center rounded-full bg-white px-3 py-1 text-xs font-black text-slate-500 ring-1 ring-[#CCE4F0]">
                     {currentIndex + 1}/{questions.length}
                 </span>
             </div>
 
             {/* Question prompt */}
-            <div className="max-w-xl mx-auto px-4 py-6">
+            <div className="mx-auto w-full max-w-2xl px-5 py-6 sm:px-6">
                 <div className="text-center mb-8">
-                    <p className="text-3xl font-black text-white mb-2">{question.prompt || question.word}</p>
-                    <p className="text-sm text-gray-500">
+                    <div className="mx-auto mb-4 inline-flex rounded-full bg-[#EAFBF8] px-3 py-1 text-xs font-black uppercase tracking-wider text-[#0F766E] ring-1 ring-[#2EC4B6]/30">
+                        Speed Challenge
+                    </div>
+                    <p className="mb-2 text-3xl font-black text-slate-950">{question.prompt || question.word}</p>
+                    <p className="text-sm font-semibold text-slate-500">
                         {question.type === 'de_to_native' ? 'Was bedeutet das?' : 'Auf Deutsch?'}
                     </p>
                 </div>
 
                 {/* 2x2 grid options */}
-                <div className="grid grid-cols-2 gap-3">
+                <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
                     {question.options.map((option, i) => {
                         const isSelected = selectedAnswer === option
-
-                        let btnClass = 'bg-gray-800 border-2 border-gray-700 text-gray-200 hover:border-blue-500 hover:bg-gray-750'
-                        if (isRevealed) {
-                            btnClass = isSelected
-                                ? 'bg-blue-900/50 border-2 border-blue-500 text-blue-300'
-                                : 'bg-gray-800/50 border-2 border-gray-700 text-gray-600'
-                        }
 
                         return (
                             <button
                                 key={i}
                                 onClick={() => handleSelect(option)}
                                 disabled={isRevealed}
-                                className={`py-4 px-4 rounded-xl font-bold text-sm transition-all ${btnClass}`}
+                                className={exerciseOptionClass({
+                                    selected: isSelected,
+                                    revealed: isRevealed,
+                                    className: 'py-5 text-base',
+                                })}
                             >
                                 {option}
                             </button>

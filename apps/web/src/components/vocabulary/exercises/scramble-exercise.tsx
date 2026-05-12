@@ -5,6 +5,16 @@ import { ExerciseProgress } from './exercise-progress'
 import { ExerciseResults } from './exercise-results'
 import { useExerciseTimer } from '@/hooks/use-exercise-timer'
 import { useSubmitExercise, type ExerciseAnswer } from '@/hooks/use-submit-exercise'
+import {
+    exerciseCenterStageClass,
+    exerciseConstructionZoneClass,
+    exerciseHintPanelClass,
+    exercisePrimaryActionClass,
+    exerciseScreenClass,
+    exerciseSecondaryActionClass,
+    exerciseStageInnerClass,
+    exerciseTokenClass,
+} from './exercise-ui'
 
 // ─── Types ──────────────────────────────────────────
 interface ScrambleQuestion {
@@ -25,7 +35,7 @@ interface ScrambleExerciseProps {
 }
 
 // ─── Component ──────────────────────────────────────
-export function ScrambleExercise({ questions, cefrLevel, themeName, themeSlug, onExit, onComplete }: ScrambleExerciseProps) {
+export function ScrambleExercise({ questions, cefrLevel, themeName: _themeName, themeSlug, onExit, onComplete: _onComplete }: ScrambleExerciseProps) {
     const [currentIndex, setCurrentIndex] = useState(0)
     const [availableWords, setAvailableWords] = useState<string[]>([])
     const [selectedWords, setSelectedWords] = useState<string[]>([])
@@ -115,6 +125,15 @@ export function ScrambleExercise({ questions, cefrLevel, themeName, themeSlug, o
                 correctCount={submitResult.correctCount}
                 accuracy={submitResult.accuracy}
                 xpEarned={submitResult.xpEarned}
+                fucoinEarned={submitResult.fucoinEarned}
+                walletBalance={submitResult.walletBalance}
+                fucoinDuplicate={submitResult.fucoinDuplicate}
+                fucoinIntended={submitResult.fucoinIntended}
+                fucoinDailyCap={submitResult.fucoinDailyCap}
+                fucoinDailyEarned={submitResult.fucoinDailyEarned}
+                fucoinDailyRemaining={submitResult.fucoinDailyRemaining}
+                fucoinCapReached={submitResult.fucoinCapReached}
+                streak={submitResult.streak}
                 timeTaken={timer}
                 results={submitResult.results}
                 onRetry={() => {
@@ -130,7 +149,7 @@ export function ScrambleExercise({ questions, cefrLevel, themeName, themeSlug, o
 
     // ─── Playing ────────────────────────────────────
     return (
-        <div className="fixed inset-0 z-50 bg-gray-50 flex flex-col">
+        <div className={exerciseScreenClass}>
             <ExerciseProgress
                 current={currentIndex + 1}
                 total={questions.length}
@@ -139,31 +158,25 @@ export function ScrambleExercise({ questions, cefrLevel, themeName, themeSlug, o
                 cefrLevel={cefrLevel}
             />
 
-            <div className="flex-1 flex items-center justify-center overflow-y-auto">
-                <div className="max-w-2xl w-full px-6 py-8">
+            <div className={exerciseCenterStageClass}>
+                <div className={exerciseStageInnerClass}>
                     {/* Instruction */}
                     <div className="text-center mb-6">
-                        <h2 className="text-lg font-bold text-gray-800">Sắp xếp các từ</h2>
-                        <p className="text-sm text-gray-400 mt-1">Bilde den richtigen Satz</p>
+                        <h2 className="text-lg font-black text-slate-950">Sắp xếp các từ</h2>
+                        <p className="mt-1 text-sm font-semibold text-slate-500">Bilde den richtigen Satz</p>
                     </div>
 
                     {/* Vietnamese translation hint */}
                     {question.translation && (
-                        <div className="mb-6 p-3 rounded-xl bg-amber-50 border border-amber-200 text-center">
-                            <span className="text-sm text-amber-700">🇻🇳 {question.translation}</span>
+                        <div className={exerciseHintPanelClass('mb-6')}>
+                            <span>🇻🇳 {question.translation}</span>
                         </div>
                     )}
 
                     {/* Construction zone — selected words */}
-                    <div className={`min-h-[80px] p-4 mb-6 rounded-2xl border-2 transition-all ${
-                        isRevealed
-                            ? 'border-[#004E89] bg-blue-50'
-                            : selectedWords.length > 0
-                                ? 'border-[#004E89] bg-blue-50'
-                                : 'border-dashed border-gray-400 bg-gray-50/50'
-                    }`}>
+                    <div className={exerciseConstructionZoneClass({ active: selectedWords.length > 0, revealed: isRevealed, className: 'mb-6' })}>
                         {selectedWords.length === 0 ? (
-                            <p className="text-gray-400 text-center py-2">Chạm vào các từ bên dưới</p>
+                            <p className="py-2 text-center text-sm font-semibold text-slate-400">Chạm vào các từ bên dưới</p>
                         ) : (
                             <div className="flex flex-wrap gap-2">
                                 {selectedWords.map((word, i) => (
@@ -171,11 +184,7 @@ export function ScrambleExercise({ questions, cefrLevel, themeName, themeSlug, o
                                         key={`sel-${i}`}
                                         onClick={() => removeWord(i)}
                                         disabled={isRevealed}
-                                        className={`px-4 py-2 rounded-xl text-sm font-bold transition-all ${
-                                            isRevealed
-                                                ? 'bg-blue-200 text-[#004E89]'
-                                                : 'bg-white text-[#004E89] border-2 border-[#004E89] hover:bg-[#004E89] hover:text-white shadow-sm'
-                                        }`}
+                                        className={exerciseTokenClass({ selected: true, revealed: isRevealed })}
                                     >
                                         {word}
                                     </button>
@@ -186,19 +195,19 @@ export function ScrambleExercise({ questions, cefrLevel, themeName, themeSlug, o
                         {/* Feedback */}
                         {isRevealed && (
                             <div className="mt-3 pt-3 border-t border-current/10">
-                                <p className="text-sm text-[#004E89] font-semibold">Đã lưu câu trả lời</p>
+                                <p className="text-sm font-semibold text-[#3C78A8]">Đã lưu câu trả lời</p>
                             </div>
                         )}
                     </div>
 
                     {/* Available word tiles */}
-                    <div className="flex flex-wrap justify-center gap-2 mb-6">
+                    <div className="mb-6 flex flex-wrap justify-center gap-2">
                         {availableWords.map((word, i) => (
                             <button
                                 key={`avail-${i}-${word}`}
                                 onClick={() => addWord(word, i)}
                                 disabled={isRevealed}
-                                className="px-4 py-2.5 rounded-xl bg-white border-2 border-gray-200 text-gray-700 font-semibold text-sm hover:border-[#004E89] hover:bg-blue-50 hover:text-[#004E89] transition-all shadow-sm disabled:bg-gray-100 disabled:text-gray-300 disabled:border-gray-100 disabled:cursor-not-allowed"
+                                className={exerciseTokenClass({ selected: false })}
                             >
                                 {word}
                             </button>
@@ -213,18 +222,14 @@ export function ScrambleExercise({ questions, cefrLevel, themeName, themeSlug, o
                                 setSelectedWords([])
                             }}
                             disabled={isRevealed || selectedWords.length === 0}
-                            className="px-4 py-3 rounded-xl border-2 border-gray-200 text-gray-500 text-sm font-medium hover:bg-gray-50 transition-all disabled:bg-gray-100 disabled:text-gray-300 disabled:border-gray-100 disabled:cursor-not-allowed"
+                            className={exerciseSecondaryActionClass(isRevealed || selectedWords.length === 0, 'px-4')}
                         >
                             🔄 Reset
                         </button>
                         <button
                             onClick={checkAnswer}
                             disabled={isRevealed || selectedWords.length === 0}
-                            className={`flex-1 py-3 rounded-xl font-bold text-sm transition-all ${
-                                isRevealed || selectedWords.length === 0
-                                    ? 'bg-gray-200 text-gray-400 cursor-not-allowed'
-                                    : 'bg-gradient-to-r from-[#004E89] to-blue-600 text-white hover:shadow-lg hover:shadow-blue-200 hover:scale-[1.02] active:scale-[0.98]'
-                            }`}
+                            className={exercisePrimaryActionClass(isRevealed || selectedWords.length === 0, 'flex-1')}
                         >
                             Prüfen
                         </button>
