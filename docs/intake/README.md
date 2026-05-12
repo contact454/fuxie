@@ -91,6 +91,7 @@ Until the baseline is accepted:
 - `phase-22-github-actions-node-deprecation-follow-up.md`
 - `phase-23-learner-activation-prd.md`
 - `phase-24-onboarding-ux-spec.md`
+- `phase-25-dashboard-next-action-ux-spec.md`
 - `baseline-acceptance-note.md`
 - `current-state-audit.md`
 - `risk-register.md`
@@ -126,6 +127,7 @@ Until the baseline is accepted:
 | Phase 22: GitHub Actions Node 20 Deprecation Follow-Up | `phase-22-github-actions-node-deprecation-follow-up.md` | Complete; `P19-A3` action major updates and Node 24 opt-in passed PR CI |
 | Phase 23: Learner Activation PRD | `phase-23-learner-activation-prd.md` | Complete; `P19-B1` defines target learner, first meaningful action, metric, non-goals, and edge cases |
 | Phase 24: Onboarding UX Spec | `phase-24-onboarding-ux-spec.md` | Complete; `P19-B2` specifies onboarding screens, daily time, mobile behavior, and error states |
+| Phase 25: Dashboard Next-Action UX Spec | `phase-25-dashboard-next-action-ux-spec.md` | Complete; `P19-B3` specifies primary next-action hierarchy, states, responsive behavior, and analytics handoff |
 
 ## Day 30 Exit Criteria
 

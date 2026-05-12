@@ -156,3 +156,13 @@ Design decisions:
 - Onboarding should capture goal, target CEFR level, optional exam path, daily study time, placement result, and dashboard handoff.
 - Save errors must be learner-facing with retry, not console-only.
 - Daily time and goal type are product/data gaps to resolve during implementation planning.
+
+## Phase 25 Update
+
+Dashboard next-action UX spec is complete in `phase-25-dashboard-next-action-ux-spec.md`.
+
+Design decisions:
+
+- Dashboard first viewport must answer "What should I study now?"
+- One primary next-action CTA should dominate secondary modules.
+- Fresh start, due review, no due review, exam focus, completed today, and data-error states are defined.

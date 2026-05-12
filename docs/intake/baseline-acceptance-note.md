@@ -199,3 +199,11 @@ PR #3 closed `P19-A1`:
 - Flow covers welcome, goal, target level, daily time, placement, result, and dashboard handoff.
 - Mobile, desktop, accessibility, save, and error states are specified.
 - `goalType` and `dailyStudyMinutes` are identified as future product/data fields without forcing schema change in this phase.
+
+## Phase 25 Update
+
+`P19-B3` Dashboard Next-Action UX Spec is complete:
+
+- First viewport hierarchy prioritizes one primary next action.
+- Fresh start, due review, no due review, exam focus, completed today, and unavailable-data states are specified.
+- Mobile, desktop, accessibility, and analytics handoff requirements are ready for Phase 26.

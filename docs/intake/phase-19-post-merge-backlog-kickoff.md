@@ -62,7 +62,7 @@ The next cycle should improve the first meaningful learner journey:
 | --- | --- | --- | --- | --- | --- |
 | P19-B1 | P1 | Learner activation PRD | Product Manager EdTech | Product Designer, Data / Analytics Engineer | Complete in Phase 23; defines first meaningful study action, target learner, metric, non-goals, and edge cases |
 | P19-B2 | P1 | Onboarding UX spec | Product Designer | Product Manager EdTech, Frontend Engineer | Complete in Phase 24; specifies level, goal, exam target, daily time, empty state, mobile behavior, and error states |
-| P19-B3 | P1 | Daily dashboard next-action spec | Product Designer | Product Manager EdTech, Frontend Engineer | Dashboard answers "what should I study now?" with clear progress and CTA hierarchy |
+| P19-B3 | P1 | Daily dashboard next-action spec | Product Designer | Product Manager EdTech, Frontend Engineer | Complete in Phase 25; dashboard answers "what should I study now?" with clear progress and CTA hierarchy |
 | P19-B4 | P1 | Learner activation test plan | QA Automation Engineer | Product Manager EdTech, Frontend Engineer | Covers happy path, auth, empty state, mobile, failure, and regression risk |
 
 ### Track C: Coach And Measurement
@@ -201,3 +201,15 @@ Phase 24 completes `P19-B2`:
 5. Name data gaps without forcing schema changes in the spec phase.
 
 Next planned step after Phase 24: Phase 25 should handle `P19-B3`, Dashboard Next-Action UX Spec.
+
+## Phase 25 Status Update
+
+Phase 25 completes `P19-B3`:
+
+1. Route through Product Designer.
+2. Specify first-viewport dashboard hierarchy.
+3. Define primary next-action states for fresh start, due review, no due review, exam focus, completed today, and unavailable data.
+4. Specify mobile, desktop, accessibility, and analytics handoff requirements.
+5. Keep secondary modules subordinate to the primary action.
+
+Next planned step after Phase 25: Phase 26 should handle the activation event map dependency.
