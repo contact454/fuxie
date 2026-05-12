@@ -215,3 +215,11 @@ Activation Event Map is complete:
 - Activation metric numerator, denominator, timeframe, filters, and cohort grain are defined.
 - Core event map covers onboarding, dashboard next action, meaningful action start/completion, and activation completion.
 - Privacy boundaries and data quality checks are ready for implementation planning.
+
+## Phase 27 Update
+
+`P19-B4` Learner Activation Test Plan is complete:
+
+- Happy path, auth/role boundary, onboarding edge cases, dashboard states, mobile, and analytics readiness tests are defined.
+- Automation order and test data requirements are named.
+- Release gate recommendation is ready for the activation implementation slice.

@@ -176,3 +176,12 @@ Measurement decisions:
 - Activation rate is measured by onboarding completion plus one meaningful study action within 24 hours.
 - Events cover onboarding, dashboard next action, meaningful action start/completion, and derived activation completion.
 - Privacy boundaries exclude raw learner submissions, transcripts, audio, and AI chat content.
+
+## Phase 27 Update
+
+Learner activation test plan is complete in `phase-27-learner-activation-test-plan.md`.
+
+QA decisions:
+
+- Activation implementation must cover onboarding, dashboard next action, first meaningful action, visible completion feedback, and analytics privacy.
+- One full activation smoke should be added once seed data and stable selectors are available.

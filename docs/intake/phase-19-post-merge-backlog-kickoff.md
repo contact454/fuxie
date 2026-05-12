@@ -63,7 +63,7 @@ The next cycle should improve the first meaningful learner journey:
 | P19-B1 | P1 | Learner activation PRD | Product Manager EdTech | Product Designer, Data / Analytics Engineer | Complete in Phase 23; defines first meaningful study action, target learner, metric, non-goals, and edge cases |
 | P19-B2 | P1 | Onboarding UX spec | Product Designer | Product Manager EdTech, Frontend Engineer | Complete in Phase 24; specifies level, goal, exam target, daily time, empty state, mobile behavior, and error states |
 | P19-B3 | P1 | Daily dashboard next-action spec | Product Designer | Product Manager EdTech, Frontend Engineer | Complete in Phase 25; dashboard answers "what should I study now?" with clear progress and CTA hierarchy |
-| P19-B4 | P1 | Learner activation test plan | QA Automation Engineer | Product Manager EdTech, Frontend Engineer | Covers happy path, auth, empty state, mobile, failure, and regression risk |
+| P19-B4 | P1 | Learner activation test plan | QA Automation Engineer | Product Manager EdTech, Frontend Engineer | Complete in Phase 27; covers happy path, auth, empty state, mobile, failure, and regression risk |
 
 ### Track C: Coach And Measurement
 
@@ -224,3 +224,13 @@ Phase 26 completes the activation event map dependency:
 4. Define privacy boundaries, data quality checks, dashboard outline, and implementation dependencies.
 
 Next planned step after Phase 26: Phase 27 should handle `P19-B4`, Learner Activation Test Plan.
+
+## Phase 27 Status Update
+
+Phase 27 completes `P19-B4`:
+
+1. Route through QA Automation Engineer.
+2. Define activation happy path, auth/role boundary, onboarding edge cases, dashboard states, mobile, and analytics readiness tests.
+3. Define automation order, test data requirements, release gate, and residual risks.
+
+Next planned step after Phase 27: Phase 28 should handle `P19-C1`, AI Coach Product Brief.
