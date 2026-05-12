@@ -1,0 +1,49 @@
+﻿{
+    "name":  "fuxie-image-source-v5",
+    "source":  "approved Fuxie 3D render image-source rig",
+    "poster":  "/mascot-3d/live/fuxie-image-source-v5-poster.png",
+    "clips":  {
+                  "talk":  {
+                               "frames":  120,
+                               "description":  "Subtle speaking bounce on the approved Fuxie image source."
+                           },
+                  "idle":  {
+                               "frames":  120,
+                               "description":  "60fps breathing on the approved Fuxie image source."
+                           },
+                  "wave":  {
+                               "frames":  96,
+                               "description":  "Gentle greeting sway on the approved Fuxie image source."
+                           }
+              },
+    "model":  "/mascot-3d/live/fuxie-image-source-v5.glb",
+    "rig":  {
+                "bones":  [
+                              "root",
+                              "hips",
+                              "spine",
+                              "chest",
+                              "neck",
+                              "head",
+                              "ear.L",
+                              "ear.R",
+                              "upper_arm.L",
+                              "forearm.L",
+                              "hand.L",
+                              "upper_arm.R",
+                              "forearm.R",
+                              "hand.R",
+                              "upper_leg.L",
+                              "shin.L",
+                              "foot.L",
+                              "upper_leg.R",
+                              "shin.R",
+                              "foot.R",
+                              "tail.01",
+                              "tail.02",
+                              "tail.03"
+                          ],
+                "visibleSource":  "blender/fuxie/references/fuxie_ref_front.png",
+                "type":  "image-source-plane-armature"
+            }
+}

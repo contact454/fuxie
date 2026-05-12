@@ -1,0 +1,140 @@
+{
+  "name": "Fuxie_Character_v17_contour_source_skinned_rig",
+  "status": "contour_cut_source_identity_skinned_rig_candidate",
+  "source_note": "V17 keeps the approved Fuxie 3D render as a single source atlas, but cuts the skinned mesh to the character silhouette instead of exporting the full rectangular atlas plane. This preserves V16 identity, reduces empty alpha geometry, and is better for game-style rig QA. It is still a 2.5D approximation, not a recovered original 3D mesh.",
+  "references": [
+    "blender/fuxie/references/fuxie_ref_front_cutout.png",
+    "blender/fuxie/references/fuxie_ref_front.png",
+    "blender/fuxie/references/fuxie_ref_three_quarter.png",
+    "blender/fuxie/references/fuxie_ref_side.png",
+    "blender/fuxie/references/fuxie_ref_back.png",
+    "blender/fuxie/references/fuxie_ref_faces.png",
+    "blender/fuxie/references/fuxie_ref_tail_material.png"
+  ],
+  "outputs": {
+    "blend": "blender/fuxie/Fuxie_Character_v17_contour_source_skinned_rig.blend",
+    "glb": "assets/models/Fuxie_Character_v17_contour_source_skinned_rig.glb",
+    "fbx": "assets/models/Fuxie_Character_v17_contour_source_skinned_rig.fbx",
+    "preview": "blender/fuxie/Fuxie_preview_v17_contour_source_skinned_rig.png",
+    "public_glb": "apps/web/public/mascot-3d/live/fuxie-contour-source-skinned-rig-v17.glb",
+    "public_poster": "apps/web/public/mascot-3d/live/fuxie-contour-source-skinned-rig-v17-poster.png",
+    "public_manifest": "apps/web/public/mascot-3d/live/fuxie-contour-source-skinned-rig-v17.json"
+  },
+  "stats": {
+    "mesh_objects": 2,
+    "vertices_before_export_modifiers": 6061,
+    "faces_before_export_modifiers": 5898,
+    "bones": [
+      "root",
+      "hips",
+      "spine",
+      "chest",
+      "neck",
+      "head",
+      "jaw",
+      "ear.L.01",
+      "ear.R.01",
+      "upper_arm.L",
+      "forearm.L",
+      "hand.L",
+      "upper_arm.R",
+      "forearm.R",
+      "hand.R",
+      "upper_leg.L",
+      "shin.L",
+      "foot.L",
+      "upper_leg.R",
+      "shin.R",
+      "foot.R",
+      "tail.01",
+      "tail.02",
+      "tail.03",
+      "CTRL_root",
+      "CTRL_body",
+      "CTRL_head",
+      "CTRL_hand.L",
+      "CTRL_hand.R",
+      "CTRL_tail"
+    ],
+    "deform_bones": [
+      "root",
+      "hips",
+      "spine",
+      "chest",
+      "neck",
+      "head",
+      "jaw",
+      "ear.L.01",
+      "ear.R.01",
+      "upper_arm.L",
+      "forearm.L",
+      "hand.L",
+      "upper_arm.R",
+      "forearm.R",
+      "hand.R",
+      "upper_leg.L",
+      "shin.L",
+      "foot.L",
+      "upper_leg.R",
+      "shin.R",
+      "foot.R",
+      "tail.01",
+      "tail.02",
+      "tail.03"
+    ],
+    "control_bones": [
+      "CTRL_root",
+      "CTRL_body",
+      "CTRL_head",
+      "CTRL_hand.L",
+      "CTRL_hand.R",
+      "CTRL_tail"
+    ],
+    "grid": {
+      "cols": 66,
+      "rows": 108
+    },
+    "source_atlas": "blender/fuxie/references/fuxie_ref_front_cutout.png",
+    "cleaned_source_atlas": "blender/fuxie/generated/v17_contour_source/Fuxie_V17_ContourSourceClean.png",
+    "reference_planes": [
+      "Fuxie_V16_Reference_Front",
+      "Fuxie_V16_Reference_ThreeQuarter",
+      "Fuxie_V16_Reference_Faces",
+      "Fuxie_V16_Reference_Tail"
+    ],
+    "fps": 60,
+    "clips": {
+      "idle": {
+        "frames": 120,
+        "description": "60fps unified source mesh idle with breathing, ear focus, and tail sway."
+      },
+      "wave": {
+        "frames": 96,
+        "description": "60fps unified source mesh wave with weighted upper-arm/forearm/hand deformation."
+      },
+      "talk": {
+        "frames": 120,
+        "description": "60fps talk loop using jaw-weighted vertices on the same source atlas."
+      },
+      "listen": {
+        "frames": 120,
+        "description": "60fps head/chest listen tilt with ears and tail moving from the unified mesh."
+      },
+      "reward": {
+        "frames": 96,
+        "description": "60fps reward hop with squash/stretch and arm lift."
+      },
+      "tryAgain": {
+        "frames": 120,
+        "description": "60fps encouragement nod and hand cue."
+      }
+    },
+    "target_runtime": "60fps WebGL contour-cut source mesh with skin weights"
+  },
+  "limits": [
+    "V17 is cleaner than V16 for silhouette/empty geometry, but still only has front-source surfaces.",
+    "Strong rotations can still stretch because hidden side/back volume is not reconstructed.",
+    "Next production step remains manual/full-volume modeling or image-to-3D retopo using this approved identity as texture guide."
+  ],
+  "next_step": "Browser QA V17 against V16. If V17 reads cleaner visually and keeps 60fps, use it as the current candidate."
+}

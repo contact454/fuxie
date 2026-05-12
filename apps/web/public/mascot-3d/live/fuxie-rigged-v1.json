@@ -1,0 +1,55 @@
+{
+  "name": "fuxie-rigged-v1",
+  "model": "/mascot-3d/live/fuxie-rigged-v1.glb",
+  "poster": "/mascot-3d/live/fuxie-rigged-v1-poster.png",
+  "clips": {
+    "idle": {
+      "frames": 72,
+      "description": "Breathing, blink, soft ears and tail."
+    },
+    "wave": {
+      "frames": 64,
+      "description": "Friendly greeting wave."
+    },
+    "talk": {
+      "frames": 72,
+      "description": "Mouth phoneme loop with light head nods."
+    },
+    "listen": {
+      "frames": 64,
+      "description": "Head tilt and ear focus pose."
+    },
+    "reward": {
+      "frames": 72,
+      "description": "Celebration jump with raised hands."
+    },
+    "tryAgain": {
+      "frames": 72,
+      "description": "Gentle encouragement and reset nod."
+    }
+  },
+  "rig": {
+    "type": "segmented-armature",
+    "bones": [
+      "root",
+      "body",
+      "head",
+      "ear.L",
+      "ear.R",
+      "upper_arm.L",
+      "upper_arm.R",
+      "hand.L",
+      "hand.R",
+      "leg.L",
+      "leg.R",
+      "foot.L",
+      "foot.R",
+      "tail.1",
+      "tail.2"
+    ],
+    "shapeKeys": [
+      "blink",
+      "talkOpen"
+    ]
+  }
+}

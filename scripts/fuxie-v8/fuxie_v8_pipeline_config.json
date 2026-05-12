@@ -1,0 +1,77 @@
+{
+  "name": "Fuxie V8 Hunyuan3D UniRig Pipeline",
+  "status": "scaffolded_waiting_for_external_tool_confirmation",
+  "sourceNote": "Generated approximation from the approved Fuxie 3D render references, not a recovered original mesh.",
+  "localFirst": true,
+  "targetGpu": "NVIDIA GeForce RTX 3060 12GB",
+  "references": {
+    "primary": [
+      "blender/fuxie/references/fuxie_ref_front.png",
+      "blender/fuxie/references/fuxie_ref_three_quarter.png",
+      "blender/fuxie/references/fuxie_ref_side.png",
+      "blender/fuxie/references/fuxie_ref_back.png"
+    ],
+    "secondary": [
+      "blender/fuxie/references/fuxie_ref_faces.png",
+      "blender/fuxie/references/fuxie_ref_tail_material.png",
+      "apps/web/public/mascot-3d/concept/fuxie-3d-master-style-sheet.png",
+      "apps/web/public/mascot-3d/concept/fuxie-3d-coach-pose-pack.png",
+      "apps/web/public/mascot-3d/concept/fuxie-3d-reward-state-pack.png"
+    ]
+  },
+  "outputs": {
+    "candidateDir": "blender/fuxie/hunyuan_v8/candidates",
+    "candidateContactSheet": "blender/fuxie/hunyuan_v8/Fuxie_hunyuan_v8_candidates_contact_sheet.png",
+    "candidateManifest": "blender/fuxie/hunyuan_v8/Fuxie_hunyuan_v8_candidates_manifest.json",
+    "cleanBlend": "blender/fuxie/Fuxie_Character_v8_hunyuan_clean.blend",
+    "rigBlend": "blender/fuxie/Fuxie_Character_v8_unirig.blend",
+    "animatedBlend": "blender/fuxie/Fuxie_Character_v8_hunyuan_animated.blend",
+    "assetGlb": "assets/models/Fuxie_Character_v8_hunyuan_animated.glb",
+    "assetFbx": "assets/models/Fuxie_Character_v8_hunyuan_animated.fbx",
+    "publicGlb": "apps/web/public/mascot-3d/live/fuxie-hunyuan-v8.glb",
+    "publicPoster": "apps/web/public/mascot-3d/live/fuxie-hunyuan-v8-poster.png",
+    "publicManifest": "apps/web/public/mascot-3d/live/fuxie-hunyuan-v8.json"
+  },
+  "animationClips": [
+    "idle",
+    "wave",
+    "talk",
+    "listen",
+    "reward",
+    "tryAgain"
+  ],
+  "qualityTargets": {
+    "fps": 60,
+    "minimumFps": 58,
+    "webVertexBudget": {
+      "preferredMax": 30000,
+      "hardMax": 50000
+    },
+    "requiredBones": [
+      "root",
+      "hips",
+      "spine",
+      "chest",
+      "neck",
+      "head",
+      "jaw",
+      "ear.L",
+      "ear.R",
+      "upper_arm.L",
+      "forearm.L",
+      "hand.L",
+      "upper_arm.R",
+      "forearm.R",
+      "hand.R",
+      "upper_leg.L",
+      "shin.L",
+      "foot.L",
+      "upper_leg.R",
+      "shin.R",
+      "foot.R",
+      "tail.01",
+      "tail.02",
+      "tail.03"
+    ]
+  }
+}

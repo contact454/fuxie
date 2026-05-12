@@ -1,0 +1,81 @@
+{
+  "name": "Fuxie_Character_v8_hunyuan_animated",
+  "status": "hunyuan_unirig_pipeline_output",
+  "source_note": "Generated approximation from Fuxie 3D render references; not a recovered original source mesh.",
+  "selected_candidate": "blender/fuxie/hunyuan_v8/candidates/fuxie_hunyuan_v8_selected.glb",
+  "reference_images": [
+    "blender/fuxie/references/fuxie_ref_front.png",
+    "blender/fuxie/references/fuxie_ref_three_quarter.png",
+    "blender/fuxie/references/fuxie_ref_side.png",
+    "blender/fuxie/references/fuxie_ref_back.png",
+    "blender/fuxie/references/parts/fuxie_ref_part_front_head_face.png",
+    "blender/fuxie/references/parts/fuxie_ref_part_front_eyes_brows.png",
+    "blender/fuxie/references/parts/fuxie_ref_part_front_muzzle_mouth.png",
+    "blender/fuxie/references/parts/fuxie_ref_part_front_ears.png",
+    "blender/fuxie/references/parts/fuxie_ref_part_front_hoodie_bandana_token.png",
+    "blender/fuxie/references/parts/fuxie_ref_part_front_left_hand.png",
+    "blender/fuxie/references/parts/fuxie_ref_part_front_shoes.png",
+    "blender/fuxie/references/parts/fuxie_ref_part_three_quarter_tail.png"
+  ],
+  "outputs": {
+    "animated_blend": "blender/fuxie/Fuxie_Character_v8_hunyuan_animated.blend",
+    "glb": "assets/models/Fuxie_Character_v8_hunyuan_animated.glb",
+    "fbx": "assets/models/Fuxie_Character_v8_hunyuan_animated.fbx",
+    "preview": "blender/fuxie/Fuxie_preview_v8_hunyuan_animated.png",
+    "public_glb": "apps/web/public/mascot-3d/live/fuxie-hunyuan-v8.glb",
+    "public_poster": "apps/web/public/mascot-3d/live/fuxie-hunyuan-v8-poster.png",
+    "public_manifest": "apps/web/public/mascot-3d/live/fuxie-hunyuan-v8.json"
+  },
+  "stats": {
+    "mesh_objects": 11,
+    "vertices_before_export_modifiers": 47216,
+    "faces_before_export_modifiers": 92336,
+    "cleanup": {
+      "target_vertices": 45000,
+      "decimate_ratio": 0.2,
+      "vertices_before_cleanup": 225009,
+      "faces_before_cleanup": 450038,
+      "vertices_after_cleanup": 44992,
+      "faces_after_cleanup": 90004
+    },
+    "bones": [
+      "root",
+      "hips",
+      "spine",
+      "chest",
+      "neck",
+      "head",
+      "jaw",
+      "ear.L",
+      "ear.R",
+      "upper_arm.L",
+      "forearm.L",
+      "hand.L",
+      "upper_arm.R",
+      "forearm.R",
+      "hand.R",
+      "upper_leg.L",
+      "shin.L",
+      "foot.L",
+      "upper_leg.R",
+      "shin.R",
+      "foot.R",
+      "tail.01",
+      "tail.02",
+      "tail.03"
+    ],
+    "fps": 60,
+    "clips": {
+      "idle": 120,
+      "wave": 96,
+      "talk": 120,
+      "listen": 120,
+      "reward": 96,
+      "tryAgain": 120
+    }
+  },
+  "limits": [
+    "UniRig output may require manual weight-paint polish for production deformation.",
+    "If vertex count exceeds the web budget, create a dedicated LOD/web GLB before rollout."
+  ]
+}

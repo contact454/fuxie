@@ -1,0 +1,172 @@
+{
+  "name": "Fuxie_Character_v10_imagegen_coherent",
+  "status": "coherent_imagegen_layered_rig_candidate",
+  "source_note": "Built from one coherent Codex-generated full-body Fuxie render, then segmented into aligned layers to reduce the rough modular seam look from V9.",
+  "source_fullbody": "blender/fuxie/imagegen_fullbody/v10/fuxie_imagegen_fullbody_v10_source.png",
+  "source_layers": "blender/fuxie/generated/v10_layers",
+  "outputs": {
+    "blend": "blender/fuxie/Fuxie_Character_v10_imagegen_coherent.blend",
+    "glb": "assets/models/Fuxie_Character_v10_imagegen_coherent.glb",
+    "fbx": "assets/models/Fuxie_Character_v10_imagegen_coherent.fbx",
+    "preview": "blender/fuxie/Fuxie_preview_v10_imagegen_coherent.png",
+    "public_glb": "apps/web/public/mascot-3d/live/fuxie-imagegen-coherent-v10.glb",
+    "public_poster": "apps/web/public/mascot-3d/live/fuxie-imagegen-coherent-v10-poster.png",
+    "public_manifest": "apps/web/public/mascot-3d/live/fuxie-imagegen-coherent-v10.json"
+  },
+  "stats": {
+    "mesh_objects": 8,
+    "vertices_before_export_modifiers": 558,
+    "faces_before_export_modifiers": 583,
+    "bones": [
+      "root",
+      "hips",
+      "spine",
+      "chest",
+      "neck",
+      "head",
+      "jaw",
+      "ear.L.01",
+      "ear.R.01",
+      "upper_arm.L",
+      "forearm.L",
+      "hand.L",
+      "upper_arm.R",
+      "forearm.R",
+      "hand.R",
+      "upper_leg.L",
+      "shin.L",
+      "foot.L",
+      "upper_leg.R",
+      "shin.R",
+      "foot.R",
+      "tail.01",
+      "tail.02",
+      "tail.03"
+    ],
+    "parts": [
+      {
+        "name": "Fuxie_V10_Tail",
+        "bone": "tail.02",
+        "image": "Fuxie_V10_Tail.png",
+        "rect": [
+          650,
+          810,
+          960,
+          1258
+        ],
+        "layer": 0.056,
+        "order": 0
+      },
+      {
+        "name": "Fuxie_V10_Leg_L",
+        "bone": "shin.L",
+        "image": "Fuxie_V10_Leg_L.png",
+        "rect": [
+          230,
+          1038,
+          500,
+          1438
+        ],
+        "layer": 0.02,
+        "order": 1
+      },
+      {
+        "name": "Fuxie_V10_Leg_R",
+        "bone": "shin.R",
+        "image": "Fuxie_V10_Leg_R.png",
+        "rect": [
+          510,
+          1038,
+          815,
+          1445
+        ],
+        "layer": 0.018,
+        "order": 1
+      },
+      {
+        "name": "Fuxie_V10_Body_Hoodie",
+        "bone": "chest",
+        "image": "Fuxie_V10_Body_Hoodie.png",
+        "rect": [
+          175,
+          590,
+          842,
+          1145
+        ],
+        "layer": -0.005,
+        "order": 2
+      },
+      {
+        "name": "Fuxie_V10_Arm_L",
+        "bone": "forearm.L",
+        "image": "Fuxie_V10_Arm_L.png",
+        "rect": [
+          150,
+          600,
+          390,
+          1125
+        ],
+        "layer": -0.03,
+        "order": 3
+      },
+      {
+        "name": "Fuxie_V10_Arm_R",
+        "bone": "forearm.R",
+        "image": "Fuxie_V10_Arm_R.png",
+        "rect": [
+          675,
+          600,
+          858,
+          1125
+        ],
+        "layer": -0.032,
+        "order": 3
+      },
+      {
+        "name": "Fuxie_V10_Head",
+        "bone": "head",
+        "image": "Fuxie_V10_Head.png",
+        "rect": [
+          130,
+          70,
+          875,
+          760
+        ],
+        "layer": -0.055,
+        "order": 4
+      }
+    ],
+    "fps": 60,
+    "clips": {
+      "idle": {
+        "frames": 120,
+        "description": "Subtle 60fps breathing, head bob, and tail sway from coherent V10 layers."
+      },
+      "wave": {
+        "frames": 96,
+        "description": "Soft arm wave with body bounce while preserving coherent full-body target."
+      },
+      "talk": {
+        "frames": 120,
+        "description": "Head nod and subtle head squash for talk loop."
+      },
+      "listen": {
+        "frames": 120,
+        "description": "Head tilt, ear focus, and tail attention motion."
+      },
+      "reward": {
+        "frames": 96,
+        "description": "Happy hop with arm lift and tail wag."
+      },
+      "tryAgain": {
+        "frames": 120,
+        "description": "Gentle encouraging nod and small hand motion."
+      }
+    }
+  },
+  "limits": [
+    "Still a layered image-plane rig, not a full volumetric 3D mesh.",
+    "Motion is intentionally subtle to preserve the coherent target and avoid exposing seams.",
+    "If this identity is approved, the next production step is curved-card deformation or true mesh reconstruction from the coherent target."
+  ]
+}

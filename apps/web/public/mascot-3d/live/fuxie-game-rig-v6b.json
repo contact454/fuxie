@@ -1,0 +1,466 @@
+{
+  "name": "Fuxie_Character_v6b_game_rig_cleanup",
+  "status": "game_rig_cleanup_candidate",
+  "source_note": "Segmented image-locked game rig cleanup. Visible parts are generated transparent texture layers from the approved Fuxie 3D cutout reference, not a full 3D sculpt reconstruction.",
+  "references": [
+    "blender/fuxie/references/fuxie_ref_front_cutout.png",
+    "blender/fuxie/references/fuxie_ref_front.png",
+    "blender/fuxie/references/fuxie_ref_three_quarter.png",
+    "blender/fuxie/references/fuxie_ref_side.png",
+    "blender/fuxie/references/fuxie_ref_back.png",
+    "blender/fuxie/references/fuxie_ref_faces.png",
+    "blender/fuxie/references/fuxie_ref_tail_material.png"
+  ],
+  "outputs": {
+    "blend": "blender/fuxie/Fuxie_Character_v6b_game_rig_cleanup.blend",
+    "glb": "assets/models/Fuxie_Character_v6b_game_rig_cleanup.glb",
+    "fbx": "assets/models/Fuxie_Character_v6b_game_rig_cleanup.fbx",
+    "preview": "blender/fuxie/Fuxie_preview_v6b_game_rig_cleanup.png",
+    "public_glb": "apps/web/public/mascot-3d/live/fuxie-game-rig-v6b.glb",
+    "public_poster": "apps/web/public/mascot-3d/live/fuxie-game-rig-v6b-poster.png",
+    "public_manifest": "apps/web/public/mascot-3d/live/fuxie-game-rig-v6b.json"
+  },
+  "stats": {
+    "mesh_objects": 10,
+    "vertices_before_export_modifiers": 566,
+    "faces_before_export_modifiers": 585,
+    "bones": [
+      "root",
+      "hips",
+      "spine",
+      "chest",
+      "neck",
+      "head",
+      "jaw",
+      "ear.L.01",
+      "ear.R.01",
+      "upper_arm.L",
+      "forearm.L",
+      "hand.L",
+      "upper_arm.R",
+      "forearm.R",
+      "hand.R",
+      "upper_leg.L",
+      "shin.L",
+      "foot.L",
+      "upper_leg.R",
+      "shin.R",
+      "foot.R",
+      "tail.01",
+      "tail.02",
+      "tail.03",
+      "CTRL_root",
+      "CTRL_body",
+      "CTRL_head",
+      "CTRL_hand.L",
+      "CTRL_hand.R",
+      "CTRL_tail"
+    ],
+    "deform_bones": [
+      "root",
+      "hips",
+      "spine",
+      "chest",
+      "neck",
+      "head",
+      "jaw",
+      "ear.L.01",
+      "ear.R.01",
+      "upper_arm.L",
+      "forearm.L",
+      "hand.L",
+      "upper_arm.R",
+      "forearm.R",
+      "hand.R",
+      "upper_leg.L",
+      "shin.L",
+      "foot.L",
+      "upper_leg.R",
+      "shin.R",
+      "foot.R",
+      "tail.01",
+      "tail.02",
+      "tail.03"
+    ],
+    "control_bones": [
+      "CTRL_root",
+      "CTRL_body",
+      "CTRL_head",
+      "CTRL_hand.L",
+      "CTRL_hand.R",
+      "CTRL_tail"
+    ],
+    "parts": [
+      {
+        "name": "Fuxie_Tail",
+        "bone": "tail.02",
+        "rect": [
+          204,
+          292,
+          330,
+          452
+        ],
+        "poly": [
+          [
+            212,
+            304
+          ],
+          [
+            262,
+            302
+          ],
+          [
+            318,
+            330
+          ],
+          [
+            329,
+            372
+          ],
+          [
+            314,
+            428
+          ],
+          [
+            248,
+            456
+          ],
+          [
+            205,
+            430
+          ],
+          [
+            238,
+            382
+          ]
+        ],
+        "order": 0
+      },
+      {
+        "name": "Fuxie_Leg_L",
+        "bone": "shin.L",
+        "rect": [
+          72,
+          384,
+          154,
+          532
+        ],
+        "poly": [
+          [
+            86,
+            388
+          ],
+          [
+            152,
+            388
+          ],
+          [
+            154,
+            455
+          ],
+          [
+            145,
+            526
+          ],
+          [
+            78,
+            526
+          ],
+          [
+            88,
+            455
+          ]
+        ],
+        "order": 1
+      },
+      {
+        "name": "Fuxie_Leg_R",
+        "bone": "shin.R",
+        "rect": [
+          164,
+          384,
+          250,
+          532
+        ],
+        "poly": [
+          [
+            174,
+            388
+          ],
+          [
+            238,
+            388
+          ],
+          [
+            250,
+            526
+          ],
+          [
+            183,
+            526
+          ],
+          [
+            172,
+            455
+          ]
+        ],
+        "order": 1
+      },
+      {
+        "name": "Fuxie_Body_Hoodie",
+        "bone": "chest",
+        "rect": [
+          54,
+          226,
+          272,
+          422
+        ],
+        "poly": [
+          [
+            78,
+            228
+          ],
+          [
+            252,
+            228
+          ],
+          [
+            278,
+            330
+          ],
+          [
+            250,
+            410
+          ],
+          [
+            202,
+            416
+          ],
+          [
+            166,
+            402
+          ],
+          [
+            128,
+            416
+          ],
+          [
+            72,
+            410
+          ],
+          [
+            54,
+            336
+          ]
+        ],
+        "order": 2
+      },
+      {
+        "name": "Fuxie_Arm_L",
+        "bone": "forearm.L",
+        "rect": [
+          42,
+          265,
+          120,
+          438
+        ],
+        "poly": [
+          [
+            56,
+            268
+          ],
+          [
+            104,
+            280
+          ],
+          [
+            116,
+            392
+          ],
+          [
+            94,
+            436
+          ],
+          [
+            58,
+            420
+          ],
+          [
+            42,
+            335
+          ]
+        ],
+        "order": 3
+      },
+      {
+        "name": "Fuxie_Arm_R",
+        "bone": "forearm.R",
+        "rect": [
+          212,
+          260,
+          302,
+          420
+        ],
+        "poly": [
+          [
+            224,
+            266
+          ],
+          [
+            278,
+            292
+          ],
+          [
+            292,
+            382
+          ],
+          [
+            268,
+            418
+          ],
+          [
+            226,
+            390
+          ],
+          [
+            212,
+            320
+          ]
+        ],
+        "order": 3
+      },
+      {
+        "name": "Fuxie_Head",
+        "bone": "head",
+        "rect": [
+          16,
+          5,
+          310,
+          264
+        ],
+        "order": 4
+      },
+      {
+        "name": "Fuxie_Mouth_TalkOverlay",
+        "bone": "jaw",
+        "rect": [
+          116,
+          150,
+          211,
+          218
+        ],
+        "poly": [
+          [
+            120,
+            166
+          ],
+          [
+            140,
+            150
+          ],
+          [
+            190,
+            150
+          ],
+          [
+            210,
+            166
+          ],
+          [
+            207,
+            204
+          ],
+          [
+            190,
+            218
+          ],
+          [
+            140,
+            218
+          ],
+          [
+            120,
+            204
+          ]
+        ],
+        "order": 5
+      },
+      {
+        "name": "Fuxie_Chest_Token",
+        "bone": "chest",
+        "rect": [
+          123,
+          250,
+          197,
+          322
+        ],
+        "poly": [
+          [
+            128,
+            254
+          ],
+          [
+            188,
+            254
+          ],
+          [
+            198,
+            304
+          ],
+          [
+            165,
+            328
+          ],
+          [
+            120,
+            304
+          ]
+        ],
+        "order": 6
+      }
+    ],
+    "reference_planes": [
+      "Fuxie_V6B_Reference_Front",
+      "Fuxie_V6B_Reference_ThreeQuarter",
+      "Fuxie_V6B_Reference_Side",
+      "Fuxie_V6B_Reference_Back",
+      "Fuxie_V6B_Reference_Faces",
+      "Fuxie_V6B_Reference_Tail"
+    ],
+    "fps": 60,
+    "clips": {
+      "idle": {
+        "frames": 120,
+        "description": "Breathing, head bob, tail sway, and ear twitch at 60fps."
+      },
+      "wave": {
+        "frames": 96,
+        "description": "Right-arm greeting wave with body sway and tail counter-motion."
+      },
+      "talk": {
+        "frames": 120,
+        "description": "Head nod, jaw/mouth bounce, hand gesture, and breathing loop."
+      },
+      "listen": {
+        "frames": 120,
+        "description": "Head tilt, ear focus, soft tail sway, and attentive posture."
+      },
+      "reward": {
+        "frames": 96,
+        "description": "In-place hop, arms up, squash/stretch, and fast tail wag."
+      },
+      "tryAgain": {
+        "frames": 120,
+        "description": "Gentle encouraging nod and small hand motion."
+      }
+    },
+    "generated_layers": "blender/fuxie/generated/v6b_layers",
+    "target_runtime": "60fps WebGL game-style segmented rig cleanup"
+  },
+  "limits": [
+    "This is a source-image segmented rig, so it preserves identity better than procedural primitives but is not a final full-volume 3D sculpt.",
+    "Facial motion is a first-pass mouth overlay; production facial animation should use cleaned mouth/eyelid texture layers or a true 3D face mesh.",
+    "V6B reduces rectangle seams with generated alpha layers, but some overlap can remain where a 2D source cannot reveal hidden body parts."
+  ],
+  "next_step": "Visual approve V6B motion quality, then move to V7 true mesh sculpt and weight-paint pass if full 3D volume is required."
+}

@@ -1,0 +1,178 @@
+{
+  "name": "Fuxie_Character_v9_imagegen_modular",
+  "status": "imagegen_modular_rig_candidate",
+  "source_note": "Assembled from Codex-generated modular Fuxie body-part renders v2. This is a rigged image-plane modular asset for animation QA, not a full reconstructed volumetric 3D sculpt.",
+  "source_parts": "blender/fuxie/imagegen_parts/v2/parts",
+  "outputs": {
+    "blend": "blender/fuxie/Fuxie_Character_v9_imagegen_modular.blend",
+    "glb": "assets/models/Fuxie_Character_v9_imagegen_modular.glb",
+    "fbx": "assets/models/Fuxie_Character_v9_imagegen_modular.fbx",
+    "preview": "blender/fuxie/Fuxie_preview_v9_imagegen_modular.png",
+    "public_glb": "apps/web/public/mascot-3d/live/fuxie-imagegen-modular-v9.glb",
+    "public_poster": "apps/web/public/mascot-3d/live/fuxie-imagegen-modular-v9-poster.png",
+    "public_manifest": "apps/web/public/mascot-3d/live/fuxie-imagegen-modular-v9.json"
+  },
+  "stats": {
+    "mesh_objects": 8,
+    "vertices_before_export_modifiers": 558,
+    "faces_before_export_modifiers": 583,
+    "bones": [
+      "root",
+      "hips",
+      "spine",
+      "chest",
+      "neck",
+      "head",
+      "jaw",
+      "ear.L.01",
+      "ear.R.01",
+      "upper_arm.L",
+      "forearm.L",
+      "hand.L",
+      "upper_arm.R",
+      "forearm.R",
+      "hand.R",
+      "upper_leg.L",
+      "shin.L",
+      "foot.L",
+      "upper_leg.R",
+      "shin.R",
+      "foot.R",
+      "tail.01",
+      "tail.02",
+      "tail.03"
+    ],
+    "parts": [
+      {
+        "name": "Fuxie_V9_Tail",
+        "bone": "tail.02",
+        "image": "fuxie_imagegen_parts_v2_tail.png",
+        "height": 0.92,
+        "center": [
+          0.54,
+          0.06,
+          0.78
+        ],
+        "order": 0
+      },
+      {
+        "name": "Fuxie_V9_Leg_L",
+        "bone": "shin.L",
+        "image": "fuxie_imagegen_parts_v2_left_leg_shoe.png",
+        "height": 0.64,
+        "center": [
+          -0.24,
+          -0.012,
+          0.34
+        ],
+        "order": 1
+      },
+      {
+        "name": "Fuxie_V9_Leg_R",
+        "bone": "shin.R",
+        "image": "fuxie_imagegen_parts_v2_right_leg_shoe.png",
+        "height": 0.64,
+        "center": [
+          0.24,
+          -0.014,
+          0.34
+        ],
+        "order": 1
+      },
+      {
+        "name": "Fuxie_V9_Body_Hoodie",
+        "bone": "chest",
+        "image": "fuxie_imagegen_parts_v2_body_hoodie_token.png",
+        "height": 1.18,
+        "center": [
+          0.0,
+          -0.03,
+          1.04
+        ],
+        "order": 2
+      },
+      {
+        "name": "Fuxie_V9_Arm_L",
+        "bone": "forearm.L",
+        "image": "fuxie_imagegen_parts_v2_left_arm_hand.png",
+        "height": 0.82,
+        "center": [
+          -0.63,
+          -0.044,
+          1.02
+        ],
+        "order": 3
+      },
+      {
+        "name": "Fuxie_V9_Arm_R",
+        "bone": "forearm.R",
+        "image": "fuxie_imagegen_parts_v2_right_arm_hand.png",
+        "height": 0.82,
+        "center": [
+          0.63,
+          -0.046,
+          1.02
+        ],
+        "order": 3
+      },
+      {
+        "name": "Fuxie_V9_Head_Face",
+        "bone": "head",
+        "image": "fuxie_imagegen_parts_v2_head_face.png",
+        "height": 1.23,
+        "center": [
+          0.0,
+          -0.07,
+          1.86
+        ],
+        "order": 4
+      },
+      {
+        "name": "Fuxie_V9_Bandana_Token_SourceOnly",
+        "bone": "chest",
+        "image": "fuxie_imagegen_parts_v2_bandana_token.png",
+        "height": 0.38,
+        "center": [
+          0.0,
+          -0.092,
+          1.32
+        ],
+        "order": 5,
+        "source_only": true
+      }
+    ],
+    "fps": 60,
+    "clips": {
+      "idle": {
+        "frames": 120,
+        "description": "60fps breathing, head bob, ear focus, and tail sway."
+      },
+      "wave": {
+        "frames": 96,
+        "description": "Left hand wave with body bounce and tail counter-motion."
+      },
+      "talk": {
+        "frames": 120,
+        "description": "Head nod and jaw/body talk rhythm using the imagegen head source."
+      },
+      "listen": {
+        "frames": 120,
+        "description": "Attentive head tilt, ears forward, soft tail motion."
+      },
+      "reward": {
+        "frames": 96,
+        "description": "Happy hop, arm raise, squash/stretch, and tail wag."
+      },
+      "tryAgain": {
+        "frames": 120,
+        "description": "Gentle encouragement nod and small hand motion."
+      }
+    }
+  },
+  "limits": [
+    "The head source already includes ears, so ear bones are present for rig contract but the visible ear motion is mostly carried by the head plane in this first pass.",
+    "The model is intentionally lightweight billboard geometry for fast web QA; a later pass can convert approved parts into fuller 3D mesh pieces.",
+    "Visual identity depends on the generated part sheet; if a part is rejected, regenerate just that part and rerun this assembler."
+  ],
+  "next_step": "QA V9 identity and motion, then regenerate weak parts or proceed to a fuller mesh assembly pass."
+}

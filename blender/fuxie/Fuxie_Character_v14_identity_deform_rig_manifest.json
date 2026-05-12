@@ -1,0 +1,151 @@
+{
+  "name": "Fuxie_Character_v14_identity_deform_rig",
+  "status": "identity_restored_true_deforming_rig_candidate",
+  "source_note": "V14 keeps V13 true deforming limb/tail meshes, and restores Fuxie identity with source-image decals only on face, hoodie, chest token, and mouth. No arm, leg, hand, foot, or tail cutout image parts are exported.",
+  "references": [
+    "blender/fuxie/references/fuxie_ref_front.png",
+    "blender/fuxie/references/fuxie_ref_three_quarter.png",
+    "blender/fuxie/references/fuxie_ref_side.png",
+    "blender/fuxie/references/fuxie_ref_back.png",
+    "blender/fuxie/references/fuxie_ref_faces.png",
+    "blender/fuxie/references/fuxie_ref_tail_material.png",
+    "blender/fuxie/references/fuxie_ref_front_cutout.png",
+    "apps/web/public/mascot-3d/imagegen-fullbody/v10/fuxie_imagegen_fullbody_v10_source.png"
+  ],
+  "outputs": {
+    "blend": "blender/fuxie/Fuxie_Character_v14_identity_deform_rig.blend",
+    "glb": "assets/models/Fuxie_Character_v14_identity_deform_rig.glb",
+    "fbx": "assets/models/Fuxie_Character_v14_identity_deform_rig.fbx",
+    "preview": "blender/fuxie/Fuxie_preview_v14_identity_deform_rig.png",
+    "public_glb": "apps/web/public/mascot-3d/live/fuxie-identity-deform-rig-v14.glb",
+    "public_poster": "apps/web/public/mascot-3d/live/fuxie-identity-deform-rig-v14-poster.png",
+    "public_manifest": "apps/web/public/mascot-3d/live/fuxie-identity-deform-rig-v14.json"
+  },
+  "stats": {
+    "mesh_objects": 47,
+    "identity_decals": [
+      "Fuxie_V14_IdentityDecal_Fuxie_Body_Hoodie",
+      "Fuxie_V14_IdentityDecal_Fuxie_Head",
+      "Fuxie_V14_IdentityDecal_Fuxie_Mouth_TalkOverlay",
+      "Fuxie_V14_IdentityDecal_Fuxie_Chest_Token"
+    ],
+    "deforming_multi_weight_meshes": [
+      "Fuxie_DeformArm_L",
+      "Fuxie_DeformLeg_L",
+      "Fuxie_DeformArm_R",
+      "Fuxie_DeformLeg_R",
+      "Fuxie_DeformTail"
+    ],
+    "vertices_before_export_modifiers": 7618,
+    "faces_before_export_modifiers": 7948,
+    "bones": [
+      "root",
+      "hips",
+      "spine",
+      "chest",
+      "neck",
+      "head",
+      "jaw",
+      "ear.L.01",
+      "ear.R.01",
+      "upper_arm.L",
+      "forearm.L",
+      "hand.L",
+      "upper_arm.R",
+      "forearm.R",
+      "hand.R",
+      "upper_leg.L",
+      "shin.L",
+      "foot.L",
+      "upper_leg.R",
+      "shin.R",
+      "foot.R",
+      "tail.01",
+      "tail.02",
+      "tail.03",
+      "CTRL_root",
+      "CTRL_body",
+      "CTRL_head",
+      "CTRL_tail"
+    ],
+    "deform_bones": [
+      "root",
+      "hips",
+      "spine",
+      "chest",
+      "neck",
+      "head",
+      "jaw",
+      "ear.L.01",
+      "ear.R.01",
+      "upper_arm.L",
+      "forearm.L",
+      "hand.L",
+      "upper_arm.R",
+      "forearm.R",
+      "hand.R",
+      "upper_leg.L",
+      "shin.L",
+      "foot.L",
+      "upper_leg.R",
+      "shin.R",
+      "foot.R",
+      "tail.01",
+      "tail.02",
+      "tail.03"
+    ],
+    "control_bones": [
+      "CTRL_root",
+      "CTRL_body",
+      "CTRL_head",
+      "CTRL_tail"
+    ],
+    "reference_planes": [
+      "Fuxie_V14_Reference_Front",
+      "Fuxie_V14_Reference_V10Coherent",
+      "Fuxie_V14_Reference_Side",
+      "Fuxie_V14_Reference_Back",
+      "Fuxie_V14_Reference_Faces",
+      "Fuxie_V14_Reference_Tail"
+    ],
+    "fps": 60,
+    "clips": {
+      "idle": {
+        "frames": 120,
+        "description": "60fps deform rig idle with breathing, head bob, ear twitch, and tail sway."
+      },
+      "wave": {
+        "frames": 96,
+        "description": "60fps deform rig wave: upper arm, forearm, wrist, and torso counter-motion."
+      },
+      "talk": {
+        "frames": 120,
+        "description": "60fps talk loop with jaw mesh motion, head nod, and natural hand cue."
+      },
+      "listen": {
+        "frames": 120,
+        "description": "60fps listen with head tilt, ear focus, and soft tail chain motion."
+      },
+      "reward": {
+        "frames": 96,
+        "description": "60fps reward hop with squash/stretch and arm-chain lift."
+      },
+      "tryAgain": {
+        "frames": 120,
+        "description": "60fps encouraging nod with subtle arm and tail chain motion."
+      }
+    },
+    "target_runtime": "60fps WebGL identity-restored deforming skeletal rig"
+  },
+  "rig_notes": [
+    "Arms, legs, hands, feet, and tail remain real mesh/skinned deform rig parts.",
+    "Only face/body identity surfaces use source image decals to recover Fuxie recognition.",
+    "This is the compromise path between V10 visual identity and V13 true joint deformation."
+  ],
+  "limits": [
+    "V14 is still not a final unified production mesh.",
+    "Surface decals should eventually be replaced by UV texture painting on the full mesh.",
+    "Facial rig still needs blendshapes/eyelids after identity approval."
+  ],
+  "next_step": "Browser QA V14 against V10/V12/V13, then polish mesh proportions and replace decals with a UV atlas."
+}

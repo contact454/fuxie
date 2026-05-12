@@ -1,0 +1,101 @@
+{
+  "name": "fuxie_v6b_modular_parts",
+  "source_blend": "blender/fuxie/Fuxie_Character_v6b_game_rig_cleanup.blend",
+  "source_note": "New transparent renders of individual modular Fuxie parts from the V6B approved baseline rig. These are not crops; they are rendered part assets for modular rig assembly/reference.",
+  "items": [
+    {
+      "id": "head_face",
+      "label": "head face",
+      "objects": [
+        "Fuxie_Head",
+        "Fuxie_Mouth_TalkOverlay"
+      ],
+      "workspace_path": "blender/fuxie/modular_parts/v6b/fuxie_v6b_part_head_face.png",
+      "public_path": "apps/web/public/mascot-3d/modular-parts/v6b/fuxie_v6b_part_head_face.png",
+      "ortho_scale": 1.55
+    },
+    {
+      "id": "tail",
+      "label": "tail",
+      "objects": [
+        "Fuxie_Tail"
+      ],
+      "workspace_path": "blender/fuxie/modular_parts/v6b/fuxie_v6b_part_tail.png",
+      "public_path": "apps/web/public/mascot-3d/modular-parts/v6b/fuxie_v6b_part_tail.png",
+      "ortho_scale": 1.25
+    },
+    {
+      "id": "body_hoodie_token",
+      "label": "body hoodie token",
+      "objects": [
+        "Fuxie_Body_Hoodie",
+        "Fuxie_Chest_Token"
+      ],
+      "workspace_path": "blender/fuxie/modular_parts/v6b/fuxie_v6b_part_body_hoodie_token.png",
+      "public_path": "apps/web/public/mascot-3d/modular-parts/v6b/fuxie_v6b_part_body_hoodie_token.png",
+      "ortho_scale": 1.45
+    },
+    {
+      "id": "left_arm_hand",
+      "label": "left arm hand",
+      "objects": [
+        "Fuxie_Arm_L"
+      ],
+      "workspace_path": "blender/fuxie/modular_parts/v6b/fuxie_v6b_part_left_arm_hand.png",
+      "public_path": "apps/web/public/mascot-3d/modular-parts/v6b/fuxie_v6b_part_left_arm_hand.png",
+      "ortho_scale": 1.0
+    },
+    {
+      "id": "right_arm_hand",
+      "label": "right arm hand",
+      "objects": [
+        "Fuxie_Arm_R"
+      ],
+      "workspace_path": "blender/fuxie/modular_parts/v6b/fuxie_v6b_part_right_arm_hand.png",
+      "public_path": "apps/web/public/mascot-3d/modular-parts/v6b/fuxie_v6b_part_right_arm_hand.png",
+      "ortho_scale": 1.0
+    },
+    {
+      "id": "left_leg_shoe",
+      "label": "left leg shoe",
+      "objects": [
+        "Fuxie_Leg_L"
+      ],
+      "workspace_path": "blender/fuxie/modular_parts/v6b/fuxie_v6b_part_left_leg_shoe.png",
+      "public_path": "apps/web/public/mascot-3d/modular-parts/v6b/fuxie_v6b_part_left_leg_shoe.png",
+      "ortho_scale": 1.05
+    },
+    {
+      "id": "right_leg_shoe",
+      "label": "right leg shoe",
+      "objects": [
+        "Fuxie_Leg_R"
+      ],
+      "workspace_path": "blender/fuxie/modular_parts/v6b/fuxie_v6b_part_right_leg_shoe.png",
+      "public_path": "apps/web/public/mascot-3d/modular-parts/v6b/fuxie_v6b_part_right_leg_shoe.png",
+      "ortho_scale": 1.05
+    },
+    {
+      "id": "mouth_overlay",
+      "label": "mouth overlay",
+      "objects": [
+        "Fuxie_Mouth_TalkOverlay"
+      ],
+      "workspace_path": "blender/fuxie/modular_parts/v6b/fuxie_v6b_part_mouth_overlay.png",
+      "public_path": "apps/web/public/mascot-3d/modular-parts/v6b/fuxie_v6b_part_mouth_overlay.png",
+      "ortho_scale": 0.55
+    },
+    {
+      "id": "chest_token",
+      "label": "chest token",
+      "objects": [
+        "Fuxie_Chest_Token"
+      ],
+      "workspace_path": "blender/fuxie/modular_parts/v6b/fuxie_v6b_part_chest_token.png",
+      "public_path": "apps/web/public/mascot-3d/modular-parts/v6b/fuxie_v6b_part_chest_token.png",
+      "ortho_scale": 0.62
+    }
+  ],
+  "contact_sheet": "blender/fuxie/modular_parts/v6b/fuxie_v6b_modular_parts_contact_sheet.png",
+  "public_contact_sheet": "apps/web/public/mascot-3d/modular-parts/v6b/fuxie_v6b_modular_parts_contact_sheet.png"
+}

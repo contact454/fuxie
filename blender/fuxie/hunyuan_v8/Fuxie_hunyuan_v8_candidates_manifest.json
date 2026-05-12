@@ -1,0 +1,75 @@
+{
+  "name": "Fuxie_hunyuan_v8_candidates",
+  "source_note": "Generated approximation from Fuxie 3D render references, not a recovered original source mesh.",
+  "input_image": "blender/fuxie/hunyuan_v8/input/primary_fuxie_ref_front.png",
+  "model_path": "tencent/Hunyuan3D-2.1",
+  "subfolder": "hunyuan3d-dit-v2-1",
+  "settings": {
+    "count": 2,
+    "steps": 30,
+    "octree_resolution": 256,
+    "guidance_scale": 5.0,
+    "seed": 86101,
+    "start_index": 2,
+    "append_manifest": true,
+    "update_selected": false,
+    "device": "cuda",
+    "ram_gb_detected": null
+  },
+  "environment": {
+    "torch": "2.5.1+cu124",
+    "cuda_available": true,
+    "cuda_device": "NVIDIA GeForce RTX 3060"
+  },
+  "candidates": [
+    {
+      "index": 1,
+      "seed": 86021,
+      "status": "generated",
+      "path": "blender/fuxie/hunyuan_v8/candidates/fuxie_hunyuan_v8_c01.glb",
+      "vertices": 225009,
+      "faces": 450038,
+      "bytes": 8101384
+    },
+    {
+      "index": 2,
+      "seed": 86101,
+      "status": "generated",
+      "path": "blender/fuxie/hunyuan_v8/candidates/fuxie_hunyuan_v8_c02.glb",
+      "vertices": 267368,
+      "faces": 534764,
+      "bytes": 9626404
+    },
+    {
+      "index": 3,
+      "seed": 86102,
+      "status": "generated",
+      "path": "blender/fuxie/hunyuan_v8/candidates/fuxie_hunyuan_v8_c03.glb",
+      "vertices": 193669,
+      "faces": 387362,
+      "bytes": 6973192
+    }
+  ],
+  "selected_candidate": "blender/fuxie/hunyuan_v8/candidates/fuxie_hunyuan_v8_selected.glb",
+  "new_candidates": [
+    {
+      "index": 2,
+      "seed": 86101,
+      "status": "generated",
+      "path": "blender/fuxie/hunyuan_v8/candidates/fuxie_hunyuan_v8_c02.glb",
+      "vertices": 267368,
+      "faces": 534764,
+      "bytes": 9626404
+    },
+    {
+      "index": 3,
+      "seed": 86102,
+      "status": "generated",
+      "path": "blender/fuxie/hunyuan_v8/candidates/fuxie_hunyuan_v8_c03.glb",
+      "vertices": 193669,
+      "faces": 387362,
+      "bytes": 6973192
+    }
+  ],
+  "elapsed_seconds": 222.4
+}

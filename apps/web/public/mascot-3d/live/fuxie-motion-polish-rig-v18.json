@@ -1,0 +1,140 @@
+{
+  "name": "Fuxie_Character_v18_motion_polish_rig",
+  "status": "motion_polished_contour_source_skinned_candidate",
+  "source_note": "V18 keeps V17's contour-cut source identity mesh and retunes all animation clips for source-locked motion: smaller joint rotations, stable feet/torso, softer tail/ear/head accents, and less texture warping. It is still a 2.5D source-locked approximation, not a recovered original 3D mesh.",
+  "references": [
+    "blender/fuxie/references/fuxie_ref_front_cutout.png",
+    "blender/fuxie/references/fuxie_ref_front.png",
+    "blender/fuxie/references/fuxie_ref_three_quarter.png",
+    "blender/fuxie/references/fuxie_ref_side.png",
+    "blender/fuxie/references/fuxie_ref_back.png",
+    "blender/fuxie/references/fuxie_ref_faces.png",
+    "blender/fuxie/references/fuxie_ref_tail_material.png"
+  ],
+  "outputs": {
+    "blend": "blender/fuxie/Fuxie_Character_v18_motion_polish_rig.blend",
+    "glb": "assets/models/Fuxie_Character_v18_motion_polish_rig.glb",
+    "fbx": "assets/models/Fuxie_Character_v18_motion_polish_rig.fbx",
+    "preview": "blender/fuxie/Fuxie_preview_v18_motion_polish_rig.png",
+    "public_glb": "apps/web/public/mascot-3d/live/fuxie-motion-polish-rig-v18.glb",
+    "public_poster": "apps/web/public/mascot-3d/live/fuxie-motion-polish-rig-v18-poster.png",
+    "public_manifest": "apps/web/public/mascot-3d/live/fuxie-motion-polish-rig-v18.json"
+  },
+  "stats": {
+    "mesh_objects": 2,
+    "vertices_before_export_modifiers": 6061,
+    "faces_before_export_modifiers": 5898,
+    "bones": [
+      "root",
+      "hips",
+      "spine",
+      "chest",
+      "neck",
+      "head",
+      "jaw",
+      "ear.L.01",
+      "ear.R.01",
+      "upper_arm.L",
+      "forearm.L",
+      "hand.L",
+      "upper_arm.R",
+      "forearm.R",
+      "hand.R",
+      "upper_leg.L",
+      "shin.L",
+      "foot.L",
+      "upper_leg.R",
+      "shin.R",
+      "foot.R",
+      "tail.01",
+      "tail.02",
+      "tail.03",
+      "CTRL_root",
+      "CTRL_body",
+      "CTRL_head",
+      "CTRL_hand.L",
+      "CTRL_hand.R",
+      "CTRL_tail"
+    ],
+    "deform_bones": [
+      "root",
+      "hips",
+      "spine",
+      "chest",
+      "neck",
+      "head",
+      "jaw",
+      "ear.L.01",
+      "ear.R.01",
+      "upper_arm.L",
+      "forearm.L",
+      "hand.L",
+      "upper_arm.R",
+      "forearm.R",
+      "hand.R",
+      "upper_leg.L",
+      "shin.L",
+      "foot.L",
+      "upper_leg.R",
+      "shin.R",
+      "foot.R",
+      "tail.01",
+      "tail.02",
+      "tail.03"
+    ],
+    "control_bones": [
+      "CTRL_root",
+      "CTRL_body",
+      "CTRL_head",
+      "CTRL_hand.L",
+      "CTRL_hand.R",
+      "CTRL_tail"
+    ],
+    "grid": {
+      "cols": 66,
+      "rows": 108
+    },
+    "source_atlas": "blender/fuxie/references/fuxie_ref_front_cutout.png",
+    "cleaned_source_atlas": "blender/fuxie/generated/v18_motion_polish/Fuxie_V18_MotionPolishSourceClean.png",
+    "reference_planes": [
+      "Fuxie_V16_Reference_Front",
+      "Fuxie_V16_Reference_ThreeQuarter",
+      "Fuxie_V16_Reference_Faces",
+      "Fuxie_V16_Reference_Tail"
+    ],
+    "fps": 60,
+    "clips": {
+      "idle": {
+        "frames": 120,
+        "description": "Motion-polished 60fps idle: tiny breathing, stable torso, soft head/ear/tail accents."
+      },
+      "wave": {
+        "frames": 96,
+        "description": "Motion-polished wave: readable hand greeting without over-warping the source-locked arm."
+      },
+      "talk": {
+        "frames": 120,
+        "description": "Motion-polished talk: subtle jaw, head nod, and small hand cue."
+      },
+      "listen": {
+        "frames": 120,
+        "description": "Motion-polished listen: attentive head tilt and ear focus with stable feet."
+      },
+      "reward": {
+        "frames": 96,
+        "description": "Motion-polished reward: small game mascot bounce with contained arm/tail motion."
+      },
+      "tryAgain": {
+        "frames": 120,
+        "description": "Motion-polished encouragement: gentle nod and small hand cue, no sad slump."
+      }
+    },
+    "target_runtime": "60fps WebGL contour source mesh with motion-polished clips"
+  },
+  "limits": [
+    "V18 improves clip believability for the current source-locked rig, but does not solve missing true side/back volume.",
+    "Large production-quality limb arcs still require a full 3D mesh or manually separated/painted volume surfaces.",
+    "Tail edge cleanup remains limited by the source cutout until the atlas is manually painted."
+  ],
+  "next_step": "Browser QA V18 against V17. If motion is accepted, use V18 as current live candidate and continue tail/edge cleanup."
+}

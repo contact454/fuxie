@@ -1,0 +1,73 @@
+{
+  "name": "Fuxie_Character_v5_image_source",
+  "status": "approved_identity_baseline_candidate",
+  "source_note": "Image-source Fuxie rig: the visible character is the approved cropped Fuxie 3D render. This is an image/projection asset, not a reconstructed 3D sculpt.",
+  "references": [
+    "blender/fuxie/references/fuxie_ref_front.png",
+    "blender/fuxie/references/fuxie_ref_three_quarter.png",
+    "blender/fuxie/references/fuxie_ref_side.png",
+    "blender/fuxie/references/fuxie_ref_back.png",
+    "blender/fuxie/references/fuxie_ref_faces.png",
+    "blender/fuxie/references/fuxie_ref_tail_material.png"
+  ],
+  "outputs": {
+    "blend": "blender/fuxie/Fuxie_Character_v5_image_source.blend",
+    "glb": "assets/models/Fuxie_Character_v5_image_source.glb",
+    "fbx": "assets/models/Fuxie_Character_v5_image_source.fbx",
+    "preview": "blender/fuxie/Fuxie_preview_v5_image_source.png"
+  },
+  "stats": {
+    "mesh_objects": 2,
+    "vertices_before_export_modifiers": 534,
+    "faces_before_export_modifiers": 577,
+    "bones": [
+      "root",
+      "hips",
+      "spine",
+      "chest",
+      "neck",
+      "head",
+      "ear.L",
+      "ear.R",
+      "upper_arm.L",
+      "forearm.L",
+      "hand.L",
+      "upper_arm.R",
+      "forearm.R",
+      "hand.R",
+      "upper_leg.L",
+      "shin.L",
+      "foot.L",
+      "upper_leg.R",
+      "shin.R",
+      "foot.R",
+      "tail.01",
+      "tail.02",
+      "tail.03"
+    ],
+    "reference_planes": [
+      "Fuxie_V5_Reference_Front",
+      "Fuxie_V5_Reference_ThreeQuarter",
+      "Fuxie_V5_Reference_Side",
+      "Fuxie_V5_Reference_Back",
+      "Fuxie_V5_Reference_Faces",
+      "Fuxie_V5_Reference_Tail"
+    ],
+    "fps": 60,
+    "clips": {
+      "idle": {
+        "frames": 120,
+        "description": "60fps breathing on the approved Fuxie image source."
+      },
+      "wave": {
+        "frames": 96,
+        "description": "Gentle greeting sway on the approved Fuxie image source."
+      },
+      "talk": {
+        "frames": 120,
+        "description": "Subtle speaking bounce on the approved Fuxie image source."
+      }
+    }
+  },
+  "next_step": "Use this image-source baseline for runtime QA, then plan a separate artist sculpt pass if a full 3D mesh is still required."
+}

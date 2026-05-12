@@ -1,0 +1,139 @@
+{
+  "name": "Fuxie_Character_v12_volume_rig",
+  "status": "volume_mesh_plus_source_locked_decals_candidate",
+  "source_note": "V12 combines a stylized true-volume Fuxie mesh with source-locked Fuxie image decals for identity. It is generated from Fuxie 3D render references and is not a 100% reconstruction of an unavailable source mesh.",
+  "references": [
+    "blender/fuxie/references/fuxie_ref_front.png",
+    "blender/fuxie/references/fuxie_ref_three_quarter.png",
+    "blender/fuxie/references/fuxie_ref_side.png",
+    "blender/fuxie/references/fuxie_ref_back.png",
+    "apps/web/public/mascot-3d/reference-parts/fuxie_ref_part_front_head_face.png",
+    "apps/web/public/mascot-3d/reference-parts/fuxie_ref_part_tail_material.png",
+    "blender/fuxie/references/fuxie_ref_front_cutout.png",
+    "apps/web/public/mascot-3d/imagegen-fullbody/v10/fuxie_imagegen_fullbody_v10_source.png"
+  ],
+  "outputs": {
+    "blend": "blender/fuxie/Fuxie_Character_v12_volume_rig.blend",
+    "glb": "assets/models/Fuxie_Character_v12_volume_rig.glb",
+    "fbx": "assets/models/Fuxie_Character_v12_volume_rig.fbx",
+    "preview": "blender/fuxie/Fuxie_preview_v12_volume_rig.png",
+    "public_glb": "apps/web/public/mascot-3d/live/fuxie-volume-rig-v12.glb",
+    "public_poster": "apps/web/public/mascot-3d/live/fuxie-volume-rig-v12-poster.png",
+    "public_manifest": "apps/web/public/mascot-3d/live/fuxie-volume-rig-v12.json"
+  },
+  "stats": {
+    "mesh_objects": 63,
+    "identity_decals": 9,
+    "vertices_before_export_modifiers": 8662,
+    "faces_before_export_modifiers": 9177,
+    "bones": [
+      "root",
+      "hips",
+      "spine",
+      "chest",
+      "neck",
+      "head",
+      "jaw",
+      "ear.L.01",
+      "ear.R.01",
+      "upper_arm.L",
+      "forearm.L",
+      "hand.L",
+      "upper_arm.R",
+      "forearm.R",
+      "hand.R",
+      "upper_leg.L",
+      "shin.L",
+      "foot.L",
+      "upper_leg.R",
+      "shin.R",
+      "foot.R",
+      "tail.01",
+      "tail.02",
+      "tail.03",
+      "CTRL_root",
+      "CTRL_body",
+      "CTRL_head",
+      "CTRL_tail"
+    ],
+    "deform_bones": [
+      "root",
+      "hips",
+      "spine",
+      "chest",
+      "neck",
+      "head",
+      "jaw",
+      "ear.L.01",
+      "ear.R.01",
+      "upper_arm.L",
+      "forearm.L",
+      "hand.L",
+      "upper_arm.R",
+      "forearm.R",
+      "hand.R",
+      "upper_leg.L",
+      "shin.L",
+      "foot.L",
+      "upper_leg.R",
+      "shin.R",
+      "foot.R",
+      "tail.01",
+      "tail.02",
+      "tail.03"
+    ],
+    "control_bones": [
+      "CTRL_root",
+      "CTRL_body",
+      "CTRL_head",
+      "CTRL_tail"
+    ],
+    "reference_planes": [
+      "Fuxie_V12_Reference_Front",
+      "Fuxie_V12_Reference_V10Coherent",
+      "Fuxie_V12_Reference_Side",
+      "Fuxie_V12_Reference_Back",
+      "Fuxie_V12_Reference_Face",
+      "Fuxie_V12_Reference_Tail"
+    ],
+    "fps": 60,
+    "clips": {
+      "idle": {
+        "frames": 120,
+        "description": "60fps volume rig idle with breath, head bob, ear twitch, and tail sway."
+      },
+      "wave": {
+        "frames": 96,
+        "description": "60fps volume rig wave using arm, hand, head counter motion, and tail follow-through."
+      },
+      "talk": {
+        "frames": 120,
+        "description": "60fps volume rig talk with jaw/decal mouth pulse, head nod, and hand gesture."
+      },
+      "listen": {
+        "frames": 120,
+        "description": "60fps attentive listen pose with head tilt, focused ears, and soft tail motion."
+      },
+      "reward": {
+        "frames": 96,
+        "description": "60fps reward hop with squash/stretch, lifted arms, and fast tail wag."
+      },
+      "tryAgain": {
+        "frames": 120,
+        "description": "60fps encouraging nod with gentle hand cue and calm posture."
+      }
+    },
+    "target_runtime": "60fps WebGL volume rig candidate with V11/V10/V6B kept as baselines"
+  },
+  "rig_notes": [
+    "Armature exports with skin and 6 animation clips.",
+    "Volume body/head/limbs/tail are real mesh primitives bound to deform bones.",
+    "Fuxie source decals are bound to matching bones to preserve the approved face, hoodie, token, tail, and silhouette while the volume pass is reviewed."
+  ],
+  "limits": [
+    "V12 is still a hybrid candidate; it is closer to a game rig than V11, but production-quality deformation still needs manual retopology and blended weight paint.",
+    "The hidden side/back detail is approximated from available render references.",
+    "The next polish pass should replace front decals with painted UV texture atlas once the volume silhouette is approved."
+  ],
+  "next_step": "Browser QA V12 visibility/FPS, then compare identity against V11/V10/V6B before deciding whether to polish weight paint or rebuild topology."
+}
