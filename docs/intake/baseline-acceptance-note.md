@@ -182,3 +182,12 @@ PR #3 closed `P19-A1`:
 - `.github/workflows/ci.yml` now updates the warned action majors and opts JavaScript actions into Node 24 with `FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true`.
 - Project runtime remains Node 22.
 - PR #5 CI passed and the GitHub Actions Node 20 action deprecation warning is cleared.
+
+## Phase 23 Update
+
+`P19-B1` Learner Activation PRD is complete:
+
+- Target user is Vietnamese self-study German learner.
+- First meaningful study action is defined as one level-appropriate learning action after onboarding with visible progress/reward/feedback.
+- Activation metric is onboarding completion plus first meaningful study action within 24 hours.
+- Next dependencies are onboarding UX spec, dashboard next-action UX spec, activation event map, and activation test plan.

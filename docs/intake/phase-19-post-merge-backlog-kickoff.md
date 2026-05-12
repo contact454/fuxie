@@ -60,7 +60,7 @@ The next cycle should improve the first meaningful learner journey:
 
 | ID | Priority | Work item | Primary owner | Support roles | Acceptance criteria |
 | --- | --- | --- | --- | --- | --- |
-| P19-B1 | P1 | Learner activation PRD | Product Manager EdTech | Product Designer, Data / Analytics Engineer | Defines first meaningful study action, target learner, metric, non-goals, and edge cases |
+| P19-B1 | P1 | Learner activation PRD | Product Manager EdTech | Product Designer, Data / Analytics Engineer | Complete in Phase 23; defines first meaningful study action, target learner, metric, non-goals, and edge cases |
 | P19-B2 | P1 | Onboarding UX spec | Product Designer | Product Manager EdTech, Frontend Engineer | Specifies level, goal, exam target, daily time, empty state, mobile behavior, and error states |
 | P19-B3 | P1 | Daily dashboard next-action spec | Product Designer | Product Manager EdTech, Frontend Engineer | Dashboard answers "what should I study now?" with clear progress and CTA hierarchy |
 | P19-B4 | P1 | Learner activation test plan | QA Automation Engineer | Product Manager EdTech, Frontend Engineer | Covers happy path, auth, empty state, mobile, failure, and regression risk |
@@ -177,3 +177,15 @@ Phase 22 implements `P19-A3`:
 5. Wait for PR CI verification.
 
 Next planned step after Phase 22: Phase 23 should begin `P19-B1`, Learner Activation PRD.
+
+## Phase 23 Status Update
+
+Phase 23 completes `P19-B1`:
+
+1. Route through Product Manager EdTech.
+2. Define target learner and activation problem.
+3. Define first meaningful study action.
+4. Specify activation metric, event inputs, non-goals, and edge cases.
+5. Set dependencies for onboarding UX, dashboard next-action UX, activation event map, and activation test plan.
+
+Next planned step after Phase 23: Phase 24 should handle `P19-B2`, Onboarding UX Spec.

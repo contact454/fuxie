@@ -134,3 +134,15 @@ Success metrics:
 - P0/P1/P2 priorities are separated.
 - Learning quality is reviewed by German Academic Lead for core study surfaces.
 - AI claims are backed by evals or labeled as assumptions.
+
+## Phase 23 Update
+
+Learner Activation PRD is complete in `phase-23-learner-activation-prd.md`.
+
+Activation definition:
+
+```text
+Activated learner = completes onboarding and completes one meaningful study action within 24 hours.
+```
+
+The next product dependencies are onboarding UX spec, dashboard next-action UX spec, activation event map, and learner activation test plan.
