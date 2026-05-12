@@ -18,7 +18,7 @@ Date: 2026-05-12
 | R-004 | P0 | Auth/role guard regressions could affect learner, teacher, admin separation | Phase 7: full local smoke passed for learner, teacher, admin, AI health, and DB health | QA Automation Engineer | Keep smoke result current before release slices | Role-scoped smoke documented |
 | R-005 | P0 | Database schema/generate/migration drift could break runtime | Phase 7: `pnpm db:generate` passed after stopping the web process that locked Prisma DLL | Backend Engineer | Stop DLL-locking local web process before future generate runs if needed | `pnpm db:generate` passes with no unexpected tracked changes |
 | R-006 | P1 | Large content changes may contain semantic German/CEFR errors | `change-audit-plan.md` flags content QA as highest risk | Content QA / Linguistic Reviewer | Run content QA and spot-check A1, B2, C1, C2 | Content blockers cleared or listed |
-| R-007 | P1 | AI grading/tutor quality may be unverified with real providers | AI service queue/generation/audio/grading flagged high risk | AI / LLM Engineer | Define eval set and provider smoke | AI behavior and cost status known |
+| R-007 | P1 | AI grading/tutor quality may be unverified with real providers | Phase 29 defines eval cases, rubric, fallback cases, cost/latency gates, and provider-run requirements | AI / LLM Engineer | Run provider-backed evals and failure-mode smoke before stronger AI claims | AI behavior and cost status known |
 | R-008 | P1 | Speaking/live audio may fail in browser/provider edge cases | Chat live voice and audio are recent risk areas | Speech / Audio Engineer | Browser permission and provider smoke | Speaking status documented |
 | R-009 | P1 | Personalized cache or analytics changes may show stale learner data | Performance doc mentions cache keys/invalidation checks | Backend Engineer | Review cache keys and mutation invalidation | Stale-data smoke passes |
 | R-010 | P1 | Teacher/admin analytics may be correct in tests but unverified in UI | `change-audit-plan.md` flags authenticated UI check needed | Product Manager EdTech | Manual teacher/admin smoke | Teacher/admin workflow status known |
@@ -246,6 +246,15 @@ Collected on 2026-05-12:
 | --- | --- | --- |
 | R-007 | AI coach product scope is defined with separated tutor/writing/speaking/grading/hint/weak-skill surfaces, bounded claims, fallback states, and Phase 29 eval handoff | Open; ready for eval plan |
 | R-011 | AI coach brief keeps B2C Vietnamese learner progress as the primary motion and prevents AI feature expansion from becoming an unbounded product surface | Mitigated for coach scope |
+
+## Phase 29 Current Evidence
+
+Collected on 2026-05-12:
+
+| Risk | Evidence update | Status |
+| --- | --- | --- |
+| R-007 | Eval plan now defines A1/A2/B1/B2 cases, Vietnamese learner mistake coverage, scoring rubric, provider failure cases, cost/latency gates, and academic review requirements | Partially mitigated; provider-backed eval run still required |
+| R-008 | Speaking support eval includes audio permission denial, transcript-quality uncertainty, and text/self-check fallback expectations | Open; fallback coverage defined |
 
 ## Risk Review Cadence
 

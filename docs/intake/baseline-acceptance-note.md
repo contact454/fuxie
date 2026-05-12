@@ -231,3 +231,11 @@ Activation Event Map is complete:
 - Tutor, writing, speaking, grading, hint, and weak-skill guidance surfaces are separated.
 - Must-have scope, non-goals, fallback states, academic guardrails, and AI engineering guardrails are defined.
 - Phase 29 can now produce the AI eval plan before stronger AI claims or runtime AI implementation.
+
+## Phase 29 Update
+
+`P19-C2` AI Eval Plan is complete:
+
+- A1/A2/B1/B2 eval cases are defined across tutor, writing, speaking, grading, hint, weak-skill, fallback, and safety surfaces.
+- Vietnamese learner error patterns, provider failure cases, scoring rubric, cost gates, and latency gates are documented.
+- Runtime AI implementation and stronger AI claims should wait for provider-backed eval evidence and academic sample review.
