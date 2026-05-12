@@ -157,6 +157,16 @@ Collected on 2026-05-12:
 | Production build | `pnpm build` | Pass | Serwist bundled `/sw.js`; web generated 74 static pages |
 | Generated service worker | `04d9731` | Complete | `apps/web/public/sw.js` committed separately |
 
+## Phase 14 Release Handoff Results
+
+Collected on 2026-05-12:
+
+| Check | Evidence | Status | Notes |
+| --- | --- | --- | --- |
+| Working tree | `git status --short` | Clean | No uncommitted tracked files |
+| Branch | `codex/fuxie-release-readiness` | Ready | Push not performed in Phase 14 |
+| PR draft | `phase-14-pr-release-handoff.md` | Complete | Includes title, body, gates, residual risks, release notes, rollback plan |
+
 ## Phase 2 Smoke Prerequisites
 
 `scripts/smoke-full-local.ts` requires:
@@ -249,6 +259,12 @@ As of Phase 13:
 - The generated service worker artifact decision is closed.
 - `apps/web/public/sw.js` was committed separately after a passing production build.
 - The RC package is ready for PR/release handoff, with only P2 polish follow-ups remaining.
+
+As of Phase 14:
+
+- PR / release handoff is prepared.
+- Working tree is clean.
+- Push and PR creation remain pending explicit approval.
 
 ## Handoff Notes For Engineers
 

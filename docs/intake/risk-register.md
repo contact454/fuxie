@@ -172,6 +172,16 @@ Collected on 2026-05-12:
 | R-002 | `pnpm build` passed immediately before generated artifact commit | Closed for RC package |
 | R-014 | Vocabulary CTA feedback remains a P2 post-RC polish item | Open as P2 polish |
 
+## Phase 14 Current Evidence
+
+Collected on 2026-05-12:
+
+| Risk | Evidence update | Status |
+| --- | --- | --- |
+| R-001 | Working tree is clean and RC commit stack is documented for handoff | Closed for RC handoff |
+| R-002 | Gate evidence is included in the PR body draft | Closed for RC handoff |
+| R-014 | Vocabulary CTA feedback is included as a residual P2 follow-up in the PR body draft | Open as P2 polish |
+
 ## Risk Review Cadence
 
 - Review P0 risks daily during Day 0-14.

@@ -104,6 +104,18 @@ Final generated artifact commit:
 
 `pnpm build` passed before this commit.
 
+## Phase 14 Update
+
+PR / release handoff is prepared for branch `codex/fuxie-release-readiness`.
+
+Prepared handoff assets:
+
+- PR title: `Prepare Fuxie baseline RC package`
+- PR body with summary, scope, gate evidence, residual P2 follow-ups, release notes, rollback plan, and checklist.
+- Release handoff checklist in `phase-14-pr-release-handoff.md`.
+
+No branch push or PR creation was performed in Phase 14.
+
 ## Next Action
 
-Proceed to Phase 14 PR / release handoff preparation.
+Proceed to Phase 15 push and PR creation only after explicit approval.
