@@ -179,6 +179,6 @@ PR #3 closed `P19-A1`:
 `P19-A3` GitHub Actions Node 20 deprecation follow-up is in progress:
 
 - PR #4 CI log confirmed the deprecation warning for `actions/checkout@v4`, `actions/setup-node@v4`, and `pnpm/action-setup@v4`.
-- `.github/workflows/ci.yml` now opts JavaScript actions into Node 24 with `FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true`.
+- `.github/workflows/ci.yml` now updates the warned action majors and opts JavaScript actions into Node 24 with `FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true`.
 - Project runtime remains Node 22.
 - PR CI verification is pending.

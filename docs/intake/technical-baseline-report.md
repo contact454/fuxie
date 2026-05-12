@@ -332,7 +332,7 @@ As of Phase 21:
 As of Phase 22:
 
 - `P19-A3` GitHub Actions Node 20 deprecation follow-up is implemented pending PR CI.
-- CI JavaScript actions opt into Node 24 with `FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true`.
+- CI updates the warned action majors and opts JavaScript actions into Node 24 with `FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true`.
 - Project verification still uses Node 22 and `pnpm check`.
 
 ## Handoff Notes For Engineers

@@ -40,13 +40,13 @@ FORCE_JAVASCRIPT_ACTIONS_TO_NODE24=true
 
 ## Decision
 
-Set the workflow-level environment variable `FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true` in `.github/workflows/ci.yml`.
+Update the workflow actions to their current Node 24-compatible major versions and keep the workflow-level environment variable `FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true` in `.github/workflows/ci.yml` during verification.
 
 Rationale:
 
-- This follows the exact migration path surfaced by GitHub Actions.
-- It tests current actions against Node.js 24 before the default change.
-- It avoids speculative action major-version changes.
+- This follows the migration path surfaced by GitHub Actions and removes reliance on Node 20-targeting action majors.
+- It tests the workflow against Node.js 24 before the default change.
+- Remote tag checks confirmed newer majors exist for the three warned actions.
 - It keeps the existing CI job, Node 22 project runtime, pnpm setup, and gate command unchanged.
 
 ## Implementation Notes
@@ -57,7 +57,8 @@ Changed file:
 
 Behavior:
 
-- JavaScript actions in the CI workflow opt into the upcoming Node.js 24 action runtime.
+- `actions/checkout`, `actions/setup-node`, and `pnpm/action-setup` now use their newer major versions.
+- JavaScript actions in the CI workflow also opt into the upcoming Node.js 24 action runtime during verification.
 - Project dependency installation and verification still use `actions/setup-node` with `node-version: 22`.
 - No application runtime, package, lockfile, schema, content, or deployment config changes are included.
 
@@ -65,7 +66,7 @@ Behavior:
 
 | Criterion | Status | Evidence |
 | --- | --- | --- |
-| Node 20 action deprecation has owner decision | Pass | Workflow opts into Node 24 action runtime |
+| Node 20 action deprecation has owner decision | Pass | Workflow updates warned action majors and opts into Node 24 action runtime |
 | CI gate behavior remains the same | Pending PR CI | `pnpm check` command and Node 22 project runtime unchanged |
 | No secrets or env values exposed | Pass | Only non-secret GitHub Actions migration flag added |
 | No runtime app change | Pass | Change is confined to CI workflow and intake docs |
