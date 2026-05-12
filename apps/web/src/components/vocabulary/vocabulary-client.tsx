@@ -53,9 +53,10 @@ interface VocabularyQuestWorldProps {
     cefrGradient: string
     isLevelLoading: boolean
     isAdding: boolean
+    practiceError: string | null
     onSelect: (slug: string) => void
     onSwitchLevel: (level: string) => void
-    onPracticeTheme: () => void
+    onPracticeTheme: (surface: 'world' | 'detail') => void
 }
 
 const WORLD_NODE_GRADIENTS = [
@@ -84,6 +85,19 @@ function getVocabularyRewards(selectedTheme: Theme | null, totalDue: number): Re
     ]
 }
 
+function PracticeErrorMessage({ message, className = '' }: { message: string | null; className?: string }) {
+    if (!message) return null
+
+    return (
+        <p
+            role="alert"
+            className={`rounded-2xl bg-rose-50 px-4 py-3 text-sm font-semibold leading-relaxed text-rose-700 ring-1 ring-rose-100 ${className}`}
+        >
+            {message}
+        </p>
+    )
+}
+
 function VocabularyQuestWorld({
     themes,
     selectedSlug,
@@ -98,6 +112,7 @@ function VocabularyQuestWorld({
     cefrGradient,
     isLevelLoading,
     isAdding,
+    practiceError,
     onSelect,
     onSwitchLevel,
     onPracticeTheme,
@@ -164,7 +179,7 @@ function VocabularyQuestWorld({
                             </div>
 
                             <button
-                                onClick={onPracticeTheme}
+                                onClick={() => onPracticeTheme('world')}
                                 disabled={!selectedTheme || isAdding || isLevelLoading}
                                 className={fuxieButtonClass('primary', 'lg', 'shrink-0 rounded-2xl')}
                             >
@@ -172,6 +187,8 @@ function VocabularyQuestWorld({
                                 <ArrowRight className="h-4 w-4" />
                             </button>
                         </div>
+
+                        <PracticeErrorMessage message={practiceError} className="mt-4" />
 
                         <div className="mt-5 rounded-2xl bg-white/70 p-3 ring-1 ring-[#60A8E4]/20">
                             <div className="flex items-center justify-between gap-3 text-xs font-bold text-slate-600">
@@ -293,7 +310,7 @@ function VocabularyQuestWorld({
 
                             <div className="mt-4 grid grid-cols-2 gap-2">
                                 <button
-                                    onClick={onPracticeTheme}
+                                    onClick={() => onPracticeTheme('world')}
                                     disabled={!selectedTheme || isAdding || isLevelLoading}
                                     className={fuxieButtonClass('primary', 'md', 'rounded-xl px-3')}
                                 >
@@ -342,6 +359,8 @@ export function VocabularyClient({ themes, totalWords, totalDue, availableLevels
     const [isLoading, setIsLoading] = useState(false)
     const [showAllWords, setShowAllWords] = useState(false)
     const [isAdding, setIsAdding] = useState(false)
+    const [practiceError, setPracticeError] = useState<string | null>(null)
+    const [practiceErrorSurface, setPracticeErrorSurface] = useState<'world' | 'detail' | null>(null)
     const locale = useLocale()
     const detailRef = useRef<HTMLDivElement>(null)
     const scrollTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null)
@@ -363,6 +382,8 @@ export function VocabularyClient({ themes, totalWords, totalDue, availableLevels
             setCurrentTotalDue(newThemes.reduce((s, t) => s + (t.srsProgress?.due ?? 0), 0))
             setWords([])
             setShowAllWords(false)
+            setPracticeError(null)
+            setPracticeErrorSurface(null)
             if (newThemes[0]) {
                 setSelectedThemeSlug(newThemes[0].slug)
                 loadWordsForLevel(newThemes[0].slug, level)
@@ -413,6 +434,8 @@ export function VocabularyClient({ themes, totalWords, totalDue, availableLevels
     const selectTheme = (slug: string) => {
         setSelectedThemeSlug(slug)
         setShowAllWords(false)
+        setPracticeError(null)
+        setPracticeErrorSurface(null)
         loadWords(slug)
         if (scrollTimeoutRef.current) clearTimeout(scrollTimeoutRef.current)
         scrollTimeoutRef.current = setTimeout(() => {
@@ -420,9 +443,11 @@ export function VocabularyClient({ themes, totalWords, totalDue, availableLevels
         }, 100)
     }
 
-    const addToSrsAndPractice = async () => {
+    const addToSrsAndPractice = async (surface: 'world' | 'detail') => {
         if (!selectedTheme) return
         setIsAdding(true)
+        setPracticeError(null)
+        setPracticeErrorSurface(null)
         try {
             const res = await fetch('/api/v1/srs/cards', {
                 method: 'POST',
@@ -433,6 +458,8 @@ export function VocabularyClient({ themes, totalWords, totalDue, availableLevels
             router.push('/review')
         } catch (err) {
             console.error(err)
+            setPracticeError('Chưa mở được ôn tập. Kiểm tra kết nối rồi thử lại nhé.')
+            setPracticeErrorSurface(surface)
         } finally {
             setIsAdding(false)
         }
@@ -454,6 +481,7 @@ export function VocabularyClient({ themes, totalWords, totalDue, availableLevels
                 cefrGradient={cefrColors?.gradient ?? 'from-[#60A8E4] to-[#3C78A8]'}
                 isLevelLoading={isLevelLoading}
                 isAdding={isAdding}
+                practiceError={practiceErrorSurface === 'world' ? practiceError : null}
                 onSelect={selectTheme}
                 onSwitchLevel={switchLevel}
                 onPracticeTheme={addToSrsAndPractice}
@@ -518,7 +546,7 @@ export function VocabularyClient({ themes, totalWords, totalDue, availableLevels
                                     Xem từ
                                 </button>
                                 <button
-                                    onClick={addToSrsAndPractice}
+                                    onClick={() => addToSrsAndPractice('detail')}
                                     disabled={isAdding}
                                     className={fuxieButtonClass('primary', 'md', 'flex-1 rounded-xl py-2.5 px-4 shadow-sm')}
                                 >
@@ -526,6 +554,10 @@ export function VocabularyClient({ themes, totalWords, totalDue, availableLevels
                                     {isAdding ? 'Đang mở ôn tập...' : `Ôn ${selectedTheme.wordCount} từ`}
                                 </button>
                             </div>
+                            <PracticeErrorMessage
+                                message={practiceErrorSurface === 'detail' ? practiceError : null}
+                                className="mt-3"
+                            />
                         </div>
                     </div>
 

@@ -52,7 +52,7 @@ The next cycle should improve the first meaningful learner journey:
 
 | ID | Priority | Work item | Primary owner | Support roles | Acceptance criteria |
 | --- | --- | --- | --- | --- | --- |
-| P19-A1 | P2 | Add learner-facing error feedback for vocabulary CTA failure | Frontend Engineer | Product Designer, QA Automation Engineer | If `/api/v1/srs/cards` fails, learner sees a clear retryable message; no console-only failure |
+| P19-A1 | P2 | Add learner-facing error feedback for vocabulary CTA failure | Frontend Engineer | Product Designer, QA Automation Engineer | Complete in Phase 20; if `/api/v1/srs/cards` fails, learner sees a clear retryable message; no console-only failure |
 | P19-A2 | P2 | Review dashboard mascot image priority | Frontend Engineer | Product Designer, CTO / Tech Lead | Above-the-fold mascot LCP warning is resolved or explicitly accepted with reason |
 | P19-A3 | P2 | Add GitHub Actions Node 20 deprecation follow-up | DevOps / Cloud Engineer | CTO / Tech Lead, QA Automation Engineer | CI action versions or runner settings have an owner decision before GitHub's Node 24 default change |
 
@@ -116,7 +116,7 @@ This cycle is done when:
 
 ## Immediate Next Task Recommendation
 
-Start with `P19-A1`: add learner-facing error feedback for vocabulary CTA failure.
+`P19-A1` moved into Phase 20 implementation. After verification, continue with `P19-A2`: review dashboard mascot image priority.
 
 Recommended routing:
 
@@ -144,10 +144,12 @@ Reason:
 
 ## Next Planned Step: Phase 20 First Post-RC Polish Implementation
 
-Phase 20 should implement `P19-A1`:
+Phase 20 implements `P19-A1`:
 
 1. Route through Frontend Engineer.
 2. Inspect vocabulary CTA code.
 3. Add learner-facing error feedback for `/api/v1/srs/cards` failure.
 4. Add focused test or manual QA note.
 5. Run affected checks.
+
+Next planned step after Phase 20: Phase 21 should handle `P19-A2`, dashboard mascot image priority review.
