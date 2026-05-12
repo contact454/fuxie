@@ -182,6 +182,16 @@ Collected on 2026-05-12:
 | R-002 | Gate evidence is included in the PR body draft | Closed for RC handoff |
 | R-014 | Vocabulary CTA feedback is included as a residual P2 follow-up in the PR body draft | Open as P2 polish |
 
+## Phase 15 Current Evidence
+
+Collected on 2026-05-12:
+
+| Risk | Evidence update | Status |
+| --- | --- | --- |
+| R-001 | Branch pushed and PR #2 created for release review | Closed for PR handoff |
+| R-002 | PR body includes gate evidence; CI/review response is the next source of truth | Pending CI/review |
+| R-014 | Vocabulary CTA feedback remains listed as residual P2 | Open as P2 polish |
+
 ## Risk Review Cadence
 
 - Review P0 risks daily during Day 0-14.

@@ -82,6 +82,7 @@ Until the baseline is accepted:
 - `phase-12-approved-staging-and-commit-execution.md`
 - `phase-13-cto-swjs-decision-and-rc-finalization.md`
 - `phase-14-pr-release-handoff.md`
+- `phase-15-push-and-pr-creation.md`
 - `baseline-acceptance-note.md`
 - `current-state-audit.md`
 - `risk-register.md`
@@ -108,6 +109,7 @@ Until the baseline is accepted:
 | Phase 12: Approved Staging And Commit Execution | `phase-12-approved-staging-and-commit-execution.md` | Complete; approved groups committed separately, `sw.js` remains pending |
 | Phase 13: CTO `sw.js` Decision And RC Finalization | `phase-13-cto-swjs-decision-and-rc-finalization.md` | Complete; `pnpm build` passed and generated `sw.js` committed separately |
 | Phase 14: PR / Release Handoff | `phase-14-pr-release-handoff.md` | Complete; PR title/body and release handoff prepared, push/PR pending approval |
+| Phase 15: Push And PR Creation | `phase-15-push-and-pr-creation.md` | Complete; branch pushed and PR #2 created |
 
 ## Day 30 Exit Criteria
 
