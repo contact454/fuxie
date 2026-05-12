@@ -256,6 +256,14 @@ Collected on 2026-05-12:
 | R-007 | Eval plan now defines A1/A2/B1/B2 cases, Vietnamese learner mistake coverage, scoring rubric, provider failure cases, cost/latency gates, and academic review requirements | Partially mitigated; provider-backed eval run still required |
 | R-008 | Speaking support eval includes audio permission denial, transcript-quality uncertainty, and text/self-check fallback expectations | Open; fallback coverage defined |
 
+## Phase 30 Current Evidence
+
+Collected on 2026-05-12:
+
+| Risk | Evidence update | Status |
+| --- | --- | --- |
+| R-011 | Weekly CEFR progress metric keeps product focus on completed learning actions, caps AI contribution, and separates engagement proxies from learning outcomes | Mitigated for measurement scope |
+
 ## Risk Review Cadence
 
 - Review P0 risks daily during Day 0-14.

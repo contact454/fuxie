@@ -206,3 +206,14 @@ AI quality decisions:
 - Eval coverage now spans tutor chat, writing feedback, speaking support, grading, hints, weak-skill guidance, fallback, and safety.
 - A1/A2/B1/B2 cases include German correctness, CEFR fit, Vietnamese learner usefulness, retry behavior, cost, latency, and provider failure.
 - Strong AI grading claims remain blocked until provider-backed evals and German Academic Lead sampled review are complete.
+
+## Phase 30 Update
+
+Weekly meaningful CEFR progress metric spec is complete in `phase-30-weekly-cefr-progress-metric.md`.
+
+Measurement decisions:
+
+- Primary North Star metric is the rate of eligible B2C learners completing at least 3 meaningful CEFR progress actions in a rolling 7-day window.
+- AI feedback loops can count only when tied to German learning and are capped at 1 of the 3 required actions.
+- Companion non-AI progress rate prevents coach usage from masking weak core learning behavior.
+- Initial beta target is 25% of active onboarded learners reaching weekly progress, to be recalibrated after two beta cohorts.

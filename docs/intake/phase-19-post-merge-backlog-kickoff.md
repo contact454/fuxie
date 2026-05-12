@@ -71,7 +71,7 @@ The next cycle should improve the first meaningful learner journey:
 | --- | --- | --- | --- | --- | --- |
 | P19-C1 | P1 | AI coach product brief | Product Manager EdTech | AI / LLM Engineer, German Academic Lead | Complete in Phase 28; defines tutor, writing, speaking, grading, fallback, scope boundaries, and non-goals |
 | P19-C2 | P1 | AI eval plan | AI / LLM Engineer | QA Automation Engineer, German Academic Lead | Complete in Phase 29; defines eval cases for A1/A2/B1/B2, Vietnamese learner mistakes, cost, latency, and provider failure |
-| P19-C3 | P1 | Weekly meaningful CEFR progress metric spec | Data / Analytics Engineer | Product Manager EdTech | Defines events, learner scope, reporting window, and success threshold |
+| P19-C3 | P1 | Weekly meaningful CEFR progress metric spec | Data / Analytics Engineer | Product Manager EdTech | Complete in Phase 30; defines events, learner scope, reporting window, and success threshold |
 | P19-C4 | P1 | Activation event map | Data / Analytics Engineer | Product Manager EdTech, Frontend Engineer | Complete in Phase 26; maps onboarding, first meaningful study action, dashboard CTA, and completion events |
 
 ### Track D: Motivation Loop
@@ -256,3 +256,14 @@ Phase 29 completes `P19-C2`:
 4. Set release gate expectations for provider-backed evals, failure-mode runs, academic review, and residual risk.
 
 Next planned step after Phase 29: Phase 30 should handle `P19-C3`, Weekly Meaningful CEFR Progress Metric Spec.
+
+## Phase 30 Status Update
+
+Phase 30 completes `P19-C3`:
+
+1. Route through Data / Analytics Engineer.
+2. Define weekly meaningful CEFR progress rate with numerator, denominator, reporting window, learner scope, exclusions, and initial beta threshold.
+3. Specify meaningful action completion rules, AI feedback cap, required events, derived fields, data quality checks, privacy boundaries, and dashboard outline.
+4. Connect metric interpretation to product decisions for activation, AI coach, learning breadth, and motivation loop.
+
+Next planned step after Phase 30: Phase 31 should handle `P19-D1`, Motivation Loop Brief.
