@@ -24,7 +24,7 @@ Date: 2026-05-12
 | R-010 | P1 | Teacher/admin analytics may be correct in tests but unverified in UI | `change-audit-plan.md` flags authenticated UI check needed | Product Manager EdTech | Manual teacher/admin smoke | Teacher/admin workflow status known |
 | R-011 | P1 | Product direction may spread team across learner, teacher, AI, mascot, and growth simultaneously | Fuxie has many active surfaces | CEO / General Manager | Approve 90-day focus and sequencing | Roadmap has one primary growth motion |
 | R-012 | P2 | Mascot/game-feel assets may become decorative or inconsistent | 3D mascot docs define production rules | Product Designer | Create mascot use map and role rules | Mascot usage supports learning moments |
-| R-013 | P2 | Local performance budgets may be noisy in dev mode | Performance doc notes warm medians over local budgets | CTO / Tech Lead | Treat perf local as trend signal, bundle as release gate | Perf status recorded without blocking incorrectly |
+| R-013 | P2 | Local performance budgets and CI hygiene warnings may be noisy in dev mode | Performance doc notes warm medians over local budgets; Phase 22 addresses GitHub Actions Node 20 deprecation warning | CTO / Tech Lead | Treat perf local as trend signal, bundle as release gate; keep CI action runtime warning current | Perf status recorded without blocking incorrectly; CI deprecation warning has owner decision |
 | R-014 | P2 | Vocabulary CTA API failure has limited user-facing feedback | Phase 20 added inline learner-facing feedback for failed `/api/v1/srs/cards` attempts and `pnpm check:quick` passed | Frontend Engineer | Closed in Phase 20 post-RC polish | Failed practice-open attempt tells learner what happened and how to retry |
 
 ## Phase 1 Current Evidence
@@ -229,6 +229,14 @@ Collected on 2026-05-12:
 | Risk | Evidence update | Status |
 | --- | --- | --- |
 | R-014 | Vocabulary practice CTA now clears stale errors on retry/theme/level change, shows an inline learner-facing alert when `/api/v1/srs/cards` fails, and `pnpm check:quick` passed | Closed |
+
+## Phase 22 Current Evidence
+
+Collected on 2026-05-12:
+
+| Risk | Evidence update | Status |
+| --- | --- | --- |
+| R-013 | GitHub Actions Node 20 deprecation warning from PR #4 CI was traced to `actions/checkout@v4`, `actions/setup-node@v4`, and `pnpm/action-setup@v4`; workflow now opts JavaScript actions into Node 24 with `FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true` | Pending PR CI |
 
 ## Risk Review Cadence
 

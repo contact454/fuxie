@@ -156,7 +156,7 @@ Recommended first implementation task: `P19-A1` learner-facing error feedback fo
 
 ## Next Action
 
-Proceed to Phase 22 GitHub Actions Node 20 deprecation follow-up.
+Proceed to Phase 22 GitHub Actions Node 20 deprecation follow-up, then Phase 23 Learner Activation PRD.
 
 ## Phase 20 Update
 
@@ -173,3 +173,12 @@ PR #3 closed `P19-A1`:
 - `FuxieCoach` has opt-in image priority support.
 - Dashboard streak-freeze mascot passes priority when present.
 - `pnpm check:quick` passed.
+
+## Phase 22 Update
+
+`P19-A3` GitHub Actions Node 20 deprecation follow-up is in progress:
+
+- PR #4 CI log confirmed the deprecation warning for `actions/checkout@v4`, `actions/setup-node@v4`, and `pnpm/action-setup@v4`.
+- `.github/workflows/ci.yml` now opts JavaScript actions into Node 24 with `FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true`.
+- Project runtime remains Node 22.
+- PR CI verification is pending.
