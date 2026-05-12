@@ -239,3 +239,11 @@ Activation Event Map is complete:
 - A1/A2/B1/B2 eval cases are defined across tutor, writing, speaking, grading, hint, weak-skill, fallback, and safety surfaces.
 - Vietnamese learner error patterns, provider failure cases, scoring rubric, cost gates, and latency gates are documented.
 - Runtime AI implementation and stronger AI claims should wait for provider-backed eval evidence and academic sample review.
+
+## Phase 30 Update
+
+`P19-C3` Weekly Meaningful CEFR Progress Metric Spec is complete:
+
+- Metric numerator, denominator, learner scope, rolling 7-day window, exclusions, cohort grain, and initial beta threshold are defined.
+- Meaningful action rules separate completed learning from page views, clicks, and reward-only engagement.
+- AI feedback is capped so weekly progress still depends on real learning actions.
