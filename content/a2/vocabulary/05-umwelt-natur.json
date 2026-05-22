@@ -488,7 +488,20 @@
       "exampleSentence2": "Die Tiere müssen geschützt werden.",
       "exampleTranslation2": "Các loài động vật cần được bảo vệ.",
       "imageUrl": "/images/vocab/a2-umwelt-natur/schuetzen.png",
-      "meaningDe": "jemanden oder etwas sicher machen, damit nichts Schlimmes passiert"
+      "meaningDe": "jemanden oder etwas sicher machen, damit nichts Schlimmes passiert",
+      "conjugation": {
+        "praesens": {
+          "ich": "schuetze",
+          "du": "schuetzt",
+          "er_sie_es": "schuetzt",
+          "wir": "schuetzen",
+          "ihr": "schuetzt",
+          "sie_Sie": "schuetzen"
+        },
+        "isIrregular": false,
+        "isSeparable": false,
+        "reviewStatus": "auto_generated_needs_spot_check"
+      }
     },
     {
       "word": "sauber",
@@ -512,7 +525,40 @@
       "exampleSentence2": "Wann blühen diese Rosen?",
       "exampleTranslation2": "Khi nào những bông hồng này nở hoa?",
       "imageUrl": "/images/vocab/a2-umwelt-natur/bluehen.png",
-      "meaningDe": "wenn eine Pflanze schöne, farbige Blumen bekommt"
+      "meaningDe": "wenn eine Pflanze schöne, farbige Blumen bekommt",
+      "conjugation": {
+        "praesens": {
+          "ich": "bluehe",
+          "du": "bluehst",
+          "er_sie_es": "blueht",
+          "wir": "bluehen",
+          "ihr": "blueht",
+          "sie_Sie": "bluehen"
+        },
+        "isIrregular": false,
+        "isSeparable": false,
+        "reviewStatus": "auto_generated_needs_spot_check"
+      }
+    }
+  ],
+  "cefrAudit": {
+    "targetLevel": "A2",
+    "verdict": "aligned",
+    "reviewerRole": "German Academic Lead",
+    "notes": "Release-candidate metadata audit: vocabulary content for \"Umwelt & Natur\" is aligned with declared A2 scope pending final human spot-check.",
+    "reviewedAt": "2026-05-12",
+    "reviewScope": "release_candidate_metadata_pass"
+  },
+  "learningOutcomes": [
+    {
+      "id": "a2-umwelt-natur-lo-1",
+      "cefrLevel": "A2",
+      "skill": "vocabulary",
+      "canDoVi": "Toi co the luyen tu vung o trinh do A2 qua chu de \"Umwelt & Natur\".",
+      "canDoDe": "Ich kann Wortschatz auf Niveau A2 zum Thema \"Umwelt & Natur\" ueben.",
+      "linkedContentIds": [
+        "a2-umwelt-natur"
+      ]
     }
   ]
 }

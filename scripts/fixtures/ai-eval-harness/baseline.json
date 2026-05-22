@@ -1,0 +1,151 @@
+{
+  "suiteVersion": "ai-eval-harness-v1",
+  "cases": [
+    {
+      "id": "AI-A1-WRITE-001",
+      "surface": "writing",
+      "level": "A1",
+      "description": "A1 writing feedback prioritizes word order and missing article/preposition without overwhelming the learner.",
+      "expected": {
+        "expectedStatus": "generated",
+        "minScorePercent": 35,
+        "maxScorePercent": 75,
+        "allowedEstimatedLevels": ["A1", "A2"],
+        "requiredCriteria": ["Inhalt", "Korrektheit"],
+        "minCorrectionCount": 1,
+        "maxCorrectionCount": 3,
+        "requiredSignals": ["word_order_retry", "vietnamese_support"]
+      },
+      "observed": {
+        "status": "generated",
+        "scorePercent": 58,
+        "estimatedLevel": "A1",
+        "criteria": [
+          { "id": "Inhalt", "name": "Inhalt", "score": 3, "maxScore": 5 },
+          { "id": "Korrektheit", "name": "Korrektheit", "score": 2, "maxScore": 5 }
+        ],
+        "correctionCount": 2,
+        "signals": ["word_order_retry", "vietnamese_support"],
+        "latencyMs": 1200,
+        "estimatedCostUsd": 0.0021,
+        "outputExcerpt": "Ubungshinweis: Stelle die Zeitangabe nach dem Verb und versuche den Satz noch einmal."
+      },
+      "providerPrompt": {
+        "model": "gemini-3.1-flash-lite-preview",
+        "promptVersion": "ai-eval-writing-a1-v1",
+        "responseContract": "ai_eval_observed_output_v1",
+        "prompt": "You are evaluating a synthetic Fuxie AI writing feedback output, not a real learner. CEFR A1. Learner sample: \"Ich gehe Deutschkurs morgen.\" Task: return ONLY valid JSON with fields status, scorePercent, estimatedLevel, criteria, correctionCount, issueCount, signals, outputExcerpt, providerStatus. Criteria must include Inhalt and Korrektheit. Keep outputExcerpt under 80 words, avoid official exam score claims, and include signals word_order_retry and vietnamese_support."
+      }
+    },
+    {
+      "id": "AI-A2-SPEAK-001",
+      "surface": "speaking",
+      "level": "A2",
+      "description": "A2 speaking support gives confidence-building feedback and one retry prompt.",
+      "expected": {
+        "expectedStatus": "generated",
+        "minScorePercent": 50,
+        "maxScorePercent": 90,
+        "minIssueCount": 1,
+        "maxIssueCount": 3,
+        "requiredSignals": ["retry_prompt", "confidence_building"]
+      },
+      "observed": {
+        "status": "generated",
+        "scorePercent": 72,
+        "issueCount": 2,
+        "signals": ["retry_prompt", "confidence_building"],
+        "latencyMs": 1600,
+        "estimatedCostUsd": 0.003,
+        "outputExcerpt": "Gut gemacht. Wiederhole den Satz langsamer und achte auf die Verbposition."
+      },
+      "providerPrompt": {
+        "model": "gemini-3.1-flash-lite-preview",
+        "promptVersion": "ai-eval-speaking-a2-v1",
+        "responseContract": "ai_eval_observed_output_v1",
+        "prompt": "You are evaluating a synthetic Fuxie AI speaking support output, not real audio. CEFR A2 transcript summary: learner hesitates and uses German verb order incorrectly. Task: return ONLY valid JSON with fields status, scorePercent, estimatedLevel, criteria, correctionCount, issueCount, signals, outputExcerpt, providerStatus. issueCount must be 1-3, include signals retry_prompt and confidence_building, and avoid official exam score claims."
+      }
+    },
+    {
+      "id": "AI-B1-GRADE-001",
+      "surface": "writing",
+      "level": "B1",
+      "description": "B1 practice grading uses rubric categories and avoids official pass/fail claims.",
+      "expected": {
+        "expectedStatus": "generated",
+        "minScorePercent": 45,
+        "maxScorePercent": 80,
+        "allowedEstimatedLevels": ["A2", "B1"],
+        "requiredCriteria": ["Inhalt", "Korrektheit", "Kohaerenz"],
+        "minCorrectionCount": 1,
+        "maxCorrectionCount": 4,
+        "requiredSignals": ["practice_score_only", "register_feedback"]
+      },
+      "observed": {
+        "status": "generated",
+        "scorePercent": 68,
+        "estimatedLevel": "B1",
+        "criteria": [
+          { "id": "Inhalt", "name": "Inhalt", "score": 4, "maxScore": 5 },
+          { "id": "Korrektheit", "name": "Korrektheit", "score": 3, "maxScore": 5 },
+          { "id": "Kohaerenz", "name": "Kohaerenz & Kohaesion", "score": 3, "maxScore": 5 }
+        ],
+        "correctionCount": 3,
+        "signals": ["practice_score_only", "register_feedback"],
+        "latencyMs": 1800,
+        "estimatedCostUsd": 0.0042,
+        "outputExcerpt": "Das ist eine Ubungsbewertung, keine offizielle Prufungsbewertung. Verbessere zuerst Register und Konnektoren."
+      }
+    },
+    {
+      "id": "AI-B2-WRITE-001",
+      "surface": "writing",
+      "level": "B2",
+      "description": "B2 opinion essay feedback prioritizes argument structure, cohesion, register, and retry plan.",
+      "expected": {
+        "expectedStatus": "generated",
+        "minScorePercent": 45,
+        "maxScorePercent": 85,
+        "allowedEstimatedLevels": ["B1", "B2"],
+        "requiredCriteria": ["Inhalt", "Korrektheit", "Kohaerenz"],
+        "minCorrectionCount": 1,
+        "maxCorrectionCount": 5,
+        "requiredSignals": ["argument_structure", "retry_plan"]
+      },
+      "observed": {
+        "status": "generated",
+        "scorePercent": 74,
+        "estimatedLevel": "B2",
+        "criteria": [
+          { "id": "Inhalt", "name": "Inhalt", "score": 4, "maxScore": 5 },
+          { "id": "Korrektheit", "name": "Korrektheit", "score": 3, "maxScore": 5 },
+          { "id": "Kohaerenz", "name": "Kohaerenz & Kohaesion", "score": 4, "maxScore": 5 }
+        ],
+        "correctionCount": 4,
+        "signals": ["argument_structure", "retry_plan"],
+        "latencyMs": 2200,
+        "estimatedCostUsd": 0.005,
+        "outputExcerpt": "Starte mit These, Grund und Beispiel. Danach erganze einen Kontrast und schreibe die Einleitung neu."
+      }
+    },
+    {
+      "id": "AI-FALLBACK-001",
+      "surface": "fallback",
+      "level": "A1",
+      "description": "Provider timeout gives learner a retryable AI error and non-AI study continuation.",
+      "expected": {
+        "expectedStatus": "failed",
+        "fallbackRequired": true,
+        "requiredSignals": ["non_ai_next_action"]
+      },
+      "observed": {
+        "status": "failed",
+        "providerStatus": "timeout",
+        "fallbackAction": "/vocabulary",
+        "signals": ["non_ai_next_action"],
+        "latencyMs": 30000,
+        "estimatedCostUsd": 0
+      }
+    }
+  ]
+}

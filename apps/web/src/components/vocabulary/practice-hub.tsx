@@ -86,7 +86,7 @@ export function PracticeHub({ themes, availableLevels, initialLevel }: PracticeH
                         <FuxieBadge tone="brand" className="mb-2">
                             {currentLevel} Path
                         </FuxieBadge>
-                        <h1 className="text-xl font-black text-[#3C78A8] uppercase tracking-wide">
+                        <h1 className="text-xl font-black text-text-brand uppercase">
                             Lộ trình Từ vựng
                         </h1>
                         <p className="text-sm font-semibold text-gray-500">
@@ -144,10 +144,10 @@ export function PracticeHub({ themes, availableLevels, initialLevel }: PracticeH
                                 >
                                     {/* Mũi tên trỏ lên */}
                                     <div className="absolute -top-2 left-1/2 -ml-2 h-4 w-4 rotate-45 border-l border-t border-slate-100 bg-white transition-colors group-hover:border-[#60A8E4]/45"></div>
-                                    <span className="relative z-10 block text-[#4b4b4b] uppercase tracking-wide text-xs mb-0.5">
+                                    <span className="relative z-10 block text-text-primary uppercase text-xs mb-0.5">
                                         {theme.name}
                                     </span>
-                                    <span className="relative z-10 block text-[#afafaf] font-medium text-[11px] leading-tight max-w-[120px]">
+                                    <span className="relative z-10 block text-text-subtle font-medium text-xs leading-tight max-w-[120px]">
                                         {theme.nameNative || (theme.wordCount + ' từ')}
                                     </span>
                                 </FuxieQuestCard>

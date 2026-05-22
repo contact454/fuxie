@@ -3,7 +3,8 @@
 import { useState, useEffect } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { FUXIE_3D_ASSETS } from '@/components/gamification/quest-visuals'
+import { FUXIE_3D_ASSETS, type RewardPreviewItem } from '@/components/gamification/quest-visuals'
+import { CompletionFlow } from '@/components/gamification/completion-flow'
 
 interface ResultData {
     attemptId: string
@@ -63,8 +64,45 @@ export function ExamResultClient({ examId, attemptId }: { examId: string; attemp
     const circumference = 2 * Math.PI * 60
     const strokeDashoffset = circumference - (result.percentScore / 100) * circumference
 
+    // Req 10.5 — once the server-confirmed submission lands the
+    // ResultRewardLoop must trigger within 2s. We mount the shared
+    // CompletionFlow in `alreadySaved` mode so the FSM jumps from saving
+    // to the earned phase inside the spec [1.2s, 2.0s] window. The
+    // existing section breakdown stays below as supporting receipt detail.
+    const examRewardPreview: RewardPreviewItem[] = [
+        {
+            type: 'xp',
+            label: result.passed ? 'Đã đạt' : 'Đã lưu kết quả',
+            detail: `${result.totalScore}/${result.maxScore} điểm`,
+        },
+        {
+            type: 'badge',
+            label: `${result.percentScore}%`,
+            detail: 'Tổng điểm',
+        },
+    ]
+
     return (
         <div className="max-w-2xl mx-auto px-4 py-8">
+            <CompletionFlow
+                mode="alreadySaved"
+                skill="exam"
+                title={result.passed ? 'Bài thi đã đạt' : 'Đã lưu kết quả thi'}
+                message={result.passed
+                    ? `Bài thi hoàn thành với ${result.percentScore}% — kết quả vừa được chấm và lưu vào hồ sơ luyện thi của bạn.`
+                    : `Kết quả ${result.percentScore}% đã được lưu. Hãy xem chi tiết theo kỹ năng để biết phần cần ôn lại.`}
+                scoreLabel={`${result.totalScore}/${result.maxScore}`}
+                scoreDetail="Tổng điểm"
+                accuracy={result.percentScore}
+                xpEarned={0}
+                graded
+                rewardPreview={examRewardPreview}
+                hasNextStep={false}
+                primaryAction={{ label: 'Tiếp tục', href: '/exam' }}
+                secondaryAction={{ label: 'Thử lại', href: `/exam/${examId}` }}
+                dashboardAction={{ label: 'Về Dashboard', href: '/dashboard' }}
+                className="mb-6"
+            />
             {/* Score circle */}
             <div className="text-center mb-8">
                 <div className="relative w-40 h-40 mx-auto mb-4">

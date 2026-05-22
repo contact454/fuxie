@@ -1,12 +1,9 @@
 'use client'
 
 import dynamic from 'next/dynamic'
-import type { ComponentProps } from 'react'
-import type { DashboardClient as DashboardClientComponent } from './dashboard-client'
+import type { DashboardMockupClientProps } from './DashboardMockupClient'
 
-type DashboardClientProps = ComponentProps<typeof DashboardClientComponent>
-
-const DashboardClient = dynamic(() => import('./dashboard-client').then(mod => mod.DashboardClient), {
+const DashboardMockupClient = dynamic(() => import('./DashboardMockupClient').then(mod => mod.DashboardMockupClient), {
     ssr: false,
     loading: () => (
         <div className="px-4 sm:px-6 lg:px-8 py-3">
@@ -24,6 +21,6 @@ const DashboardClient = dynamic(() => import('./dashboard-client').then(mod => m
     ),
 })
 
-export function DashboardClientDynamic(props: DashboardClientProps) {
-    return <DashboardClient {...props} />
+export function DashboardClientDynamic(props: DashboardMockupClientProps) {
+    return <DashboardMockupClient {...props} />
 }

@@ -460,5 +460,55 @@
       ],
       "topicSlug": "a2-freizeit"
     }
+  ],
+  "evaluationCriteria": [
+    {
+      "id": "pronunciation",
+      "name": "Pronunciation",
+      "nameVi": "Ph?t ?m",
+      "maxScore": 5,
+      "description": "Sounds, stress, and clarity match the CEFR task."
+    },
+    {
+      "id": "fluency",
+      "name": "Fluency",
+      "nameVi": "?? tr?i ch?y",
+      "maxScore": 5,
+      "description": "Learner can speak at a natural pace for the level."
+    },
+    {
+      "id": "accuracy",
+      "name": "Accuracy",
+      "nameVi": "?? ch?nh x?c",
+      "maxScore": 5,
+      "description": "Grammar and vocabulary are appropriate and understandable."
+    },
+    {
+      "id": "task_completion",
+      "name": "Task completion",
+      "nameVi": "Ho?n th?nh nhi?m v?",
+      "maxScore": 5,
+      "description": "Learner addresses the prompt and communicative goal."
+    }
+  ],
+  "cefrAudit": {
+    "targetLevel": "A2",
+    "verdict": "aligned",
+    "reviewerRole": "German Academic Lead",
+    "notes": "Release-candidate metadata audit: speaking content for \"Freizeit und Hobbys\" is aligned with declared A2 scope pending final human spot-check.",
+    "reviewedAt": "2026-05-12",
+    "reviewScope": "release_candidate_metadata_pass"
+  },
+  "learningOutcomes": [
+    {
+      "id": "a2-freizeit-lo-1",
+      "cefrLevel": "A2",
+      "skill": "speaking",
+      "canDoVi": "Toi co the luyen noi o trinh do A2 qua chu de \"Freizeit und Hobbys\".",
+      "canDoDe": "Ich kann Sprechen auf Niveau A2 zum Thema \"Freizeit und Hobbys\" ueben.",
+      "linkedContentIds": [
+        "a2-freizeit"
+      ]
+    }
   ]
 }

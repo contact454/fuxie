@@ -86,12 +86,12 @@ export const TEIL_DESCRIPTIONS: Record<string, Record<number, { icon: string; st
 }
 
 export const DIFFICULTY: Record<string, { label: string; dots: number; color: string }> = {
-    A1: { label: 'Dễ', dots: 1, color: '#22C55E' },
-    A2: { label: 'Dễ', dots: 2, color: '#84CC16' },
-    B1: { label: 'Vừa', dots: 3, color: '#F97316' },
-    B2: { label: 'Khó', dots: 4, color: '#EF4444' },
-    C1: { label: 'Nâng cao', dots: 5, color: '#A855F7' },
-    C2: { label: 'Chuyên sâu', dots: 5, color: '#7C3AED' },
+    A1: { label: 'Dễ', dots: 1, color: "var(--color-text-success)" },
+    A2: { label: 'Dễ', dots: 2, color: 'var(--color-cefr-a2)' },
+    B1: { label: 'Vừa', dots: 3, color: 'var(--color-fuxie-energy)' },
+    B2: { label: 'Khó', dots: 4, color: "var(--color-text-danger)" },
+    C1: { label: 'Nâng cao', dots: 5, color: 'var(--color-cefr-c1)' },
+    C2: { label: 'Chuyên sâu', dots: 5, color: 'var(--color-cefr-c2)' },
 }
 
 export const WARMUP_QUESTIONS: Record<string, string[]> = {

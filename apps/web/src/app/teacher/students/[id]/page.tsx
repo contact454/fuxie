@@ -133,7 +133,7 @@ export default async function StudentProfilePage({ params }: { params: Promise<{
 
   return (
     <div>
-      <Link href="/teacher/classrooms" style={{ color: '#64748b', textDecoration: 'none', fontSize: '0.85rem' }}>← Quay lai</Link>
+      <Link href="/teacher/classrooms" style={{ color: "var(--color-text-muted)", textDecoration: 'none', fontSize: '0.85rem' }}>← Quay lai</Link>
 
       <div style={{
         background: '#1e293b', borderRadius: '20px', padding: '28px',
@@ -149,14 +149,14 @@ export default async function StudentProfilePage({ params }: { params: Promise<{
           {(profile?.displayName || 'L').charAt(0).toUpperCase()}
         </div>
         <div style={{ flex: 1, minWidth: '220px' }}>
-          <h1 style={{ color: '#f8fafc', fontSize: '1.4rem', fontWeight: 800, margin: '0 0 4px' }}>
+          <h1 style={{ color: 'var(--color-text-inverse)', fontSize: '1.4rem', fontWeight: 800, margin: '0 0 4px' }}>
             {profile?.displayName || student.email}
           </h1>
-          <p style={{ color: '#94a3b8', margin: '0 0 8px', fontSize: '0.85rem' }}>{student.email}</p>
+          <p style={{ color: "var(--color-text-subtle)", margin: '0 0 8px', fontSize: '0.85rem' }}>{student.email}</p>
           <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
             {student.studentEnrollments.map((enrollmentItem) => (
               <span key={enrollmentItem.id} style={{
-                background: '#334155', color: '#94a3b8', padding: '2px 10px',
+                background: '#334155', color: "var(--color-text-subtle)", padding: '2px 10px',
                 borderRadius: '6px', fontSize: '0.75rem',
               }}>
                 {enrollmentItem.classroom.name}
@@ -166,23 +166,23 @@ export default async function StudentProfilePage({ params }: { params: Promise<{
         </div>
         <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap' }}>
           <div style={{ textAlign: 'center' }}>
-            <div style={{ color: '#60a5fa', fontSize: '1.5rem', fontWeight: 800 }}>{profile?.currentLevel || 'A1'}</div>
-            <div style={{ color: '#64748b', fontSize: '0.75rem' }}>Level</div>
+            <div style={{ color: 'var(--color-fuxie-primary)', fontSize: '1.5rem', fontWeight: 800 }}>{profile?.currentLevel || 'A1'}</div>
+            <div style={{ color: "var(--color-text-muted)", fontSize: '0.75rem' }}>Level</div>
           </div>
           <div style={{ textAlign: 'center' }}>
-            <div style={{ color: '#fbbf24', fontSize: '1.5rem', fontWeight: 800 }}>{(profile?.totalXp || 0).toLocaleString()}</div>
-            <div style={{ color: '#64748b', fontSize: '0.75rem' }}>XP</div>
+            <div style={{ color: 'var(--color-fuxie-reward)', fontSize: '1.5rem', fontWeight: 800 }}>{(profile?.totalXp || 0).toLocaleString()}</div>
+            <div style={{ color: "var(--color-text-muted)", fontSize: '0.75rem' }}>XP</div>
           </div>
           <div style={{ textAlign: 'center' }}>
-            <div style={{ color: '#f97316', fontSize: '1.5rem', fontWeight: 800 }}>{streak?.currentStreak || 0}</div>
-            <div style={{ color: '#64748b', fontSize: '0.75rem' }}>Streak</div>
+            <div style={{ color: 'var(--color-fuxie-energy)', fontSize: '1.5rem', fontWeight: 800 }}>{streak?.currentStreak || 0}</div>
+            <div style={{ color: "var(--color-text-muted)", fontSize: '0.75rem' }}>Streak</div>
           </div>
         </div>
       </div>
 
       <div style={{ display: 'grid', gridTemplateColumns: 'minmax(0, 2fr) minmax(300px, 1fr)', gap: '16px', marginBottom: '24px' }}>
         <div style={{ background: '#1e293b', borderRadius: '16px', border: '1px solid #334155', padding: '20px' }}>
-          <h2 style={{ color: '#f8fafc', fontSize: '1rem', fontWeight: 700, margin: '0 0 12px' }}>Risk assessment</h2>
+          <h2 style={{ color: 'var(--color-text-inverse)', fontSize: '1rem', fontWeight: 700, margin: '0 0 12px' }}>Risk assessment</h2>
           <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '12px' }}>
             <span style={{
               padding: '6px 10px',
@@ -194,22 +194,22 @@ export default async function StudentProfilePage({ params }: { params: Promise<{
             }}>
               {risk.level.toUpperCase()}
             </span>
-            <span style={{ color: '#94a3b8', fontSize: '0.85rem' }}>
+            <span style={{ color: "var(--color-text-subtle)", fontSize: '0.85rem' }}>
               {risk.inactiveDays != null ? `${risk.inactiveDays} ngay khong hoc` : 'Chua co du lieu activity'}
             </span>
           </div>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, minmax(0, 1fr))', gap: '10px', marginBottom: '14px' }}>
             <div style={{ background: '#0f172a', borderRadius: '12px', padding: '14px' }}>
-              <div style={{ color: '#64748b', fontSize: '0.75rem' }}>7 day minutes</div>
-              <div style={{ color: '#f8fafc', fontSize: '1.2rem', fontWeight: 800 }}>{risk.recentMinutes7d}</div>
+              <div style={{ color: "var(--color-text-muted)", fontSize: '0.75rem' }}>7 day minutes</div>
+              <div style={{ color: 'var(--color-text-inverse)', fontSize: '1.2rem', fontWeight: 800 }}>{risk.recentMinutes7d}</div>
             </div>
             <div style={{ background: '#0f172a', borderRadius: '12px', padding: '14px' }}>
-              <div style={{ color: '#64748b', fontSize: '0.75rem' }}>Pending work</div>
-              <div style={{ color: '#f8fafc', fontSize: '1.2rem', fontWeight: 800 }}>{risk.pendingAssignments}</div>
+              <div style={{ color: "var(--color-text-muted)", fontSize: '0.75rem' }}>Pending work</div>
+              <div style={{ color: 'var(--color-text-inverse)', fontSize: '1.2rem', fontWeight: 800 }}>{risk.pendingAssignments}</div>
             </div>
             <div style={{ background: '#0f172a', borderRadius: '12px', padding: '14px' }}>
-              <div style={{ color: '#64748b', fontSize: '0.75rem' }}>7 day XP</div>
-              <div style={{ color: '#f8fafc', fontSize: '1.2rem', fontWeight: 800 }}>{totalXpLast7Days}</div>
+              <div style={{ color: "var(--color-text-muted)", fontSize: '0.75rem' }}>7 day XP</div>
+              <div style={{ color: 'var(--color-text-inverse)', fontSize: '1.2rem', fontWeight: 800 }}>{totalXpLast7Days}</div>
             </div>
           </div>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
@@ -218,7 +218,7 @@ export default async function StudentProfilePage({ params }: { params: Promise<{
                 background: '#0f172a',
                 borderRadius: '10px',
                 padding: '10px 12px',
-                color: '#cbd5e1',
+                color: 'var(--color-text-subtle)',
                 fontSize: '0.84rem',
                 border: '1px solid #334155',
               }}>
@@ -229,7 +229,7 @@ export default async function StudentProfilePage({ params }: { params: Promise<{
                 background: '#0f172a',
                 borderRadius: '10px',
                 padding: '10px 12px',
-                color: '#86efac',
+                color: 'var(--color-text-success)',
                 fontSize: '0.84rem',
                 border: '1px solid #334155',
               }}>
@@ -240,30 +240,30 @@ export default async function StudentProfilePage({ params }: { params: Promise<{
         </div>
 
         <div style={{ background: '#1e293b', borderRadius: '16px', border: '1px solid #334155', padding: '20px' }}>
-          <h2 style={{ color: '#f8fafc', fontSize: '1rem', fontWeight: 700, margin: '0 0 12px' }}>Skill focus</h2>
+          <h2 style={{ color: 'var(--color-text-inverse)', fontSize: '1rem', fontWeight: 700, margin: '0 0 12px' }}>Skill focus</h2>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '10px', marginBottom: '14px' }}>
             <div>
-              <div style={{ color: '#64748b', fontSize: '0.75rem', marginBottom: '6px' }}>Weakest skills</div>
+              <div style={{ color: "var(--color-text-muted)", fontSize: '0.75rem', marginBottom: '6px' }}>Weakest skills</div>
               <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
                 {risk.weakestSkills.length > 0 ? risk.weakestSkills.map((skill) => (
-                  <span key={skill} style={{ background: '#7f1d1d', color: '#fecaca', padding: '4px 10px', borderRadius: '999px', fontSize: '0.78rem', fontWeight: 600 }}>
+                  <span key={skill} style={{ background: '#7f1d1d', color: 'var(--color-text-danger)', padding: '4px 10px', borderRadius: '999px', fontSize: '0.78rem', fontWeight: 600 }}>
                     {SKILL_LABELS[skill] || skill}
                   </span>
-                )) : <span style={{ color: '#94a3b8', fontSize: '0.84rem' }}>No weak skills flagged</span>}
+                )) : <span style={{ color: "var(--color-text-subtle)", fontSize: '0.84rem' }}>No weak skills flagged</span>}
               </div>
             </div>
             <div>
-              <div style={{ color: '#64748b', fontSize: '0.75rem', marginBottom: '6px' }}>Strongest skills</div>
+              <div style={{ color: "var(--color-text-muted)", fontSize: '0.75rem', marginBottom: '6px' }}>Strongest skills</div>
               <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
                 {risk.strongestSkills.length > 0 ? risk.strongestSkills.map((skill) => (
-                  <span key={skill} style={{ background: '#14532d', color: '#bbf7d0', padding: '4px 10px', borderRadius: '999px', fontSize: '0.78rem', fontWeight: 600 }}>
+                  <span key={skill} style={{ background: '#14532d', color: 'var(--color-text-success)', padding: '4px 10px', borderRadius: '999px', fontSize: '0.78rem', fontWeight: 600 }}>
                     {SKILL_LABELS[skill] || skill}
                   </span>
-                )) : <span style={{ color: '#94a3b8', fontSize: '0.84rem' }}>Not enough assessment data</span>}
+                )) : <span style={{ color: "var(--color-text-subtle)", fontSize: '0.84rem' }}>Not enough assessment data</span>}
               </div>
             </div>
           </div>
-          <div style={{ color: '#94a3b8', fontSize: '0.84rem', lineHeight: 1.5 }}>
+          <div style={{ color: "var(--color-text-subtle)", fontSize: '0.84rem', lineHeight: 1.5 }}>
             Prioritize the weakest skill first, then use short assignment cycles to rebuild momentum.
           </div>
         </div>
@@ -271,33 +271,33 @@ export default async function StudentProfilePage({ params }: { params: Promise<{
 
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: '12px', marginBottom: '24px' }}>
         {[
-          { label: 'Minutes (7 days)', value: totalMinutesLast7Days, color: '#3b82f6' },
-          { label: 'Total study minutes', value: profile?.totalStudyMinutes || 0, color: '#10b981' },
-          { label: 'Lessons completed', value: profile?.totalLessonsCompleted || 0, color: '#8b5cf6' },
-          { label: 'Words learned', value: profile?.totalWordsLearned || 0, color: '#f59e0b' },
+          { label: 'Minutes (7 days)', value: totalMinutesLast7Days, color: "var(--color-text-brand)" },
+          { label: 'Total study minutes', value: profile?.totalStudyMinutes || 0, color: 'var(--color-text-success)' },
+          { label: 'Lessons completed', value: profile?.totalLessonsCompleted || 0, color: 'var(--color-cefr-c1)' },
+          { label: 'Words learned', value: profile?.totalWordsLearned || 0, color: 'var(--color-text-warning)' },
           { label: 'Pending assignments', value: pendingCount, color: pendingCount > 0 ? '#f87171' : '#94a3b8' },
-          { label: 'Completed assignments', value: completedCount, color: '#10b981' },
+          { label: 'Completed assignments', value: completedCount, color: 'var(--color-text-success)' },
         ].map((stat) => (
           <div key={stat.label} style={{
             background: '#1e293b', borderRadius: '14px', padding: '16px',
             border: '1px solid #334155',
           }}>
             <div style={{ fontSize: '1.5rem', fontWeight: 800, color: stat.color }}>{stat.value}</div>
-            <div style={{ fontSize: '0.8rem', color: '#94a3b8' }}>{stat.label}</div>
+            <div style={{ fontSize: '0.8rem', color: "var(--color-text-subtle)" }}>{stat.label}</div>
           </div>
         ))}
       </div>
 
       {Object.keys(latestSkillScores).length > 0 && (
         <div style={{ marginBottom: '24px' }}>
-          <h2 style={{ color: '#f8fafc', fontSize: '1.1rem', fontWeight: 700, margin: '0 0 12px' }}>Latest skill scores</h2>
+          <h2 style={{ color: 'var(--color-text-inverse)', fontSize: '1.1rem', fontWeight: 700, margin: '0 0 12px' }}>Latest skill scores</h2>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(160px, 1fr))', gap: '10px' }}>
             {Object.entries(latestSkillScores).map(([skill, score]) => (
               <div key={skill} style={{
                 background: '#1e293b', borderRadius: '12px', padding: '14px',
                 border: '1px solid #334155',
               }}>
-                <div style={{ color: '#94a3b8', fontSize: '0.8rem', marginBottom: '6px' }}>
+                <div style={{ color: "var(--color-text-subtle)", fontSize: '0.8rem', marginBottom: '6px' }}>
                   {SKILL_LABELS[skill] || skill}
                 </div>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
@@ -308,7 +308,7 @@ export default async function StudentProfilePage({ params }: { params: Promise<{
                       borderRadius: '4px',
                     }} />
                   </div>
-                  <span style={{ color: '#e2e8f0', fontWeight: 700, fontSize: '0.85rem' }}>
+                  <span style={{ color: 'var(--color-text-subtle)', fontWeight: 700, fontSize: '0.85rem' }}>
                     {Math.round(score * 100)}%
                   </span>
                 </div>
@@ -320,7 +320,7 @@ export default async function StudentProfilePage({ params }: { params: Promise<{
 
       {student.dailyActivities.length > 0 && (
         <div style={{ marginBottom: '24px' }}>
-          <h2 style={{ color: '#f8fafc', fontSize: '1.1rem', fontWeight: 700, margin: '0 0 12px' }}>30-day activity</h2>
+          <h2 style={{ color: 'var(--color-text-inverse)', fontSize: '1.1rem', fontWeight: 700, margin: '0 0 12px' }}>30-day activity</h2>
           <div style={{ display: 'flex', gap: '4px', flexWrap: 'wrap' }}>
             {student.dailyActivities.map((day) => {
               const intensity = Math.min(day.totalMinutes / 30, 1)
@@ -342,10 +342,10 @@ export default async function StudentProfilePage({ params }: { params: Promise<{
         </div>
       )}
 
-      <h2 style={{ color: '#f8fafc', fontSize: '1.1rem', fontWeight: 700, margin: '0 0 12px' }}>Assignment history</h2>
+      <h2 style={{ color: 'var(--color-text-inverse)', fontSize: '1.1rem', fontWeight: 700, margin: '0 0 12px' }}>Assignment history</h2>
       {student.studentSubmissions.length === 0 ? (
         <div style={{ background: '#1e293b', borderRadius: '14px', padding: '32px', textAlign: 'center', border: '1px solid #334155' }}>
-          <p style={{ color: '#94a3b8' }}>No submissions yet.</p>
+          <p style={{ color: "var(--color-text-subtle)" }}>No submissions yet.</p>
         </div>
       ) : (
         <div style={{ background: '#1e293b', borderRadius: '14px', border: '1px solid #334155', overflow: 'hidden' }}>
@@ -363,8 +363,8 @@ export default async function StudentProfilePage({ params }: { params: Promise<{
                 {submission.status === 'pending' ? '⏳' : submission.status === 'completed' ? '✅' : submission.status === 'late' ? '⚠️' : '📝'}
               </span>
               <div style={{ flex: 1 }}>
-                <div style={{ color: '#e2e8f0', fontWeight: 600, fontSize: '0.9rem' }}>{submission.assignment.title}</div>
-                <div style={{ color: '#64748b', fontSize: '0.8rem' }}>
+                <div style={{ color: 'var(--color-text-subtle)', fontWeight: 600, fontSize: '0.9rem' }}>{submission.assignment.title}</div>
+                <div style={{ color: "var(--color-text-muted)", fontSize: '0.8rem' }}>
                   {TARGET_TYPE_LABELS[submission.assignment.targetType] || submission.assignment.targetType}
                   {' · '}
                   {submission.assignment.classroom.name}

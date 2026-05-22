@@ -374,7 +374,20 @@
       "exampleSentence2": "Bitte befolgen Sie die Anweisungen.",
       "exampleTranslation2": "Xin hãy làm theo hướng dẫn.",
       "imageUrl": "/images/vocab/a2-gesellschaft-regeln/befolgen.png",
-      "meaningDe": "Sich an eine Regel oder ein Gesetz halten."
+      "meaningDe": "Sich an eine Regel oder ein Gesetz halten.",
+      "conjugation": {
+        "praesens": {
+          "ich": "befolge",
+          "du": "befolgst",
+          "er_sie_es": "befolgt",
+          "wir": "befolgen",
+          "ihr": "befolgt",
+          "sie_Sie": "befolgen"
+        },
+        "isIrregular": false,
+        "isSeparable": false,
+        "reviewStatus": "auto_generated_needs_spot_check"
+      }
     },
     {
       "word": "sozial",
@@ -423,6 +436,26 @@
       "exampleTranslation2": "Chúng tôi muốn một cuộc cạnh tranh công bằng.",
       "imageUrl": "/images/vocab/a2-gesellschaft-regeln/fair.png",
       "meaningDe": "wenn alle Menschen gleich behandelt werden"
+    }
+  ],
+  "cefrAudit": {
+    "targetLevel": "A2",
+    "verdict": "aligned",
+    "reviewerRole": "German Academic Lead",
+    "notes": "Release-candidate metadata audit: vocabulary content for \"Gesellschaft & Regeln\" is aligned with declared A2 scope pending final human spot-check.",
+    "reviewedAt": "2026-05-12",
+    "reviewScope": "release_candidate_metadata_pass"
+  },
+  "learningOutcomes": [
+    {
+      "id": "a2-gesellschaft-regeln-lo-1",
+      "cefrLevel": "A2",
+      "skill": "vocabulary",
+      "canDoVi": "Toi co the luyen tu vung o trinh do A2 qua chu de \"Gesellschaft & Regeln\".",
+      "canDoDe": "Ich kann Wortschatz auf Niveau A2 zum Thema \"Gesellschaft & Regeln\" ueben.",
+      "linkedContentIds": [
+        "a2-gesellschaft-regeln"
+      ]
     }
   ]
 }

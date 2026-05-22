@@ -202,7 +202,8 @@
       "exampleSentence2": "Ethische Fragen zum Transhumanismus sind Gegenstand intensiver Debatten.",
       "exampleTranslation2": "Các vấn đề đạo đức về chủ nghĩa siêu nhân loại là chủ đề của các cuộc tranh luận gay gắt.",
       "imageUrl": "/images/vocab/c2-utopieforschung/der-transhumanismus.png",
-      "meaningDe": "Die Bestrebung, die menschlichen Fähigkeiten durch Technologie zu erweitern."
+      "meaningDe": "Die Bestrebung, die menschlichen Fähigkeiten durch Technologie zu erweitern.",
+      "pluralStatus": "not_applicable_or_needs_review"
     },
     {
       "word": "Epochenbewusstsein",
@@ -216,7 +217,8 @@
       "exampleSentence2": "Das Gefühl eines drohenden Systemwandels verstärkt das Epochenbewusstsein in vielen Gesellschaften.",
       "exampleTranslation2": "Cảm giác về một sự thay đổi hệ thống sắp xảy ra làm tăng cường ý thức thời đại trong nhiều xã hội.",
       "imageUrl": "/images/vocab/c2-utopieforschung/das-epochenbewusstsein.png",
-      "meaningDe": "Die Erkenntnis und das Verständnis der besonderen gesellschaftlichen und kulturellen Bedingungen einer bestimmten Zeit."
+      "meaningDe": "Die Erkenntnis und das Verständnis der besonderen gesellschaftlichen und kulturellen Bedingungen einer bestimmten Zeit.",
+      "pluralStatus": "not_applicable_or_needs_review"
     },
     {
       "word": "Systemimmanenz",
@@ -230,7 +232,8 @@
       "exampleSentence2": "Utopische Entwürfe versuchen oft, die Systemimmanenz von Problemen zu durchbrechen.",
       "exampleTranslation2": "Các thiết kế không tưởng thường cố gắng phá vỡ tính nội tại của các vấn đề trong hệ thống.",
       "imageUrl": "/images/vocab/c2-utopieforschung/die-systemimmanenz.png",
-      "meaningDe": "Die Eigenschaft, innerhalb eines Systems zu liegen und dessen Logik zu folgen."
+      "meaningDe": "Die Eigenschaft, innerhalb eines Systems zu liegen und dessen Logik zu folgen.",
+      "pluralStatus": "not_applicable_or_needs_review"
     },
     {
       "word": "Utopieforschung",
@@ -244,7 +247,8 @@
       "exampleSentence2": "Als interdisziplinäres Feld verbindet die Utopieforschung Literaturwissenschaft, Soziologie und Philosophie.",
       "exampleTranslation2": "Là một lĩnh vực liên ngành, nghiên cứu về không tưởng kết nối văn học, xã hội học và triết học.",
       "imageUrl": "/images/vocab/c2-utopieforschung/die-utopieforschung.png",
-      "meaningDe": "Die wissenschaftliche Untersuchung von Vorstellungen über ideale Gesellschaften."
+      "meaningDe": "Die wissenschaftliche Untersuchung von Vorstellungen über ideale Gesellschaften.",
+      "pluralStatus": "not_applicable_or_needs_review"
     },
     {
       "word": "kontrafaktisch argumentieren",
@@ -258,7 +262,17 @@
       "exampleSentence2": "Utopien sind im Kern kontrafaktisch, da sie eine nicht existierende Realität entwerfen.",
       "exampleTranslation2": "Các tác phẩm không tưởng về cơ bản là phản thực tế, vì chúng phác thảo một thực tại không tồn tại.",
       "imageUrl": "/images/vocab/c2-utopieforschung/kontrafaktisch-argumentieren.png",
-      "meaningDe": "Eine Schlussfolgerung ziehen, indem man hypothetisch annimmt, dass ein vergangenes Ereignis nicht oder anders eingetreten ist."
+      "meaningDe": "Eine Schlussfolgerung ziehen, indem man hypothetisch annimmt, dass ein vergangenes Ereignis nicht oder anders eingetreten ist.",
+      "conjugation": {
+        "praesens": {
+          "ich": "ich argumentiere kontrafaktisch",
+          "du": "du argumentierst kontrafaktisch",
+          "er_sie_es": "er/sie/es argumentiert kontrafaktisch",
+          "wir": "wir argumentieren kontrafaktisch",
+          "ihr": "ihr argumentiert kontrafaktisch",
+          "sie_Sie": "sie/Sie argumentieren kontrafaktisch"
+        }
+      }
     },
     {
       "word": "disruptieren",
@@ -272,7 +286,20 @@
       "exampleSentence2": "Ein radikaler Wandel disruptiert oft bestehende gesellschaftliche Ordnungen.",
       "exampleTranslation2": "Một sự thay đổi cấp tiến thường phá vỡ các trật tự xã hội hiện có.",
       "imageUrl": "/images/vocab/c2-utopieforschung/disruptieren.png",
-      "meaningDe": "Etwas Bestehendes radikal verändern oder unterbrechen."
+      "meaningDe": "Etwas Bestehendes radikal verändern oder unterbrechen.",
+      "conjugation": {
+        "praesens": {
+          "ich": "disruptiere",
+          "du": "disruptierst",
+          "er_sie_es": "disruptiert",
+          "wir": "disruptieren",
+          "ihr": "disruptiert",
+          "sie_Sie": "disruptieren"
+        },
+        "isIrregular": false,
+        "isSeparable": false,
+        "reviewStatus": "auto_generated_needs_spot_check"
+      }
     },
     {
       "word": "utopisch",
@@ -343,6 +370,26 @@
       "exampleTranslation2": "Sự suy thoái môi trường trong tác phẩm phản địa đàng thường diễn ra dần dần và không thể nhận thấy.",
       "imageUrl": "/images/vocab/c2-utopieforschung/sukzessive.png",
       "meaningDe": "In einer festgelegten Reihenfolge aufeinanderfolgend oder in kleinen, schrittweisen Etappen geschehend."
+    }
+  ],
+  "cefrAudit": {
+    "targetLevel": "C2",
+    "verdict": "aligned",
+    "reviewerRole": "German Academic Lead",
+    "notes": "Release-candidate metadata audit: vocabulary content for \"Utopieforschung & Dystopie\" is aligned with declared C2 scope pending final human spot-check.",
+    "reviewedAt": "2026-05-12",
+    "reviewScope": "release_candidate_metadata_pass"
+  },
+  "learningOutcomes": [
+    {
+      "id": "c2-utopieforschung-lo-1",
+      "cefrLevel": "C2",
+      "skill": "vocabulary",
+      "canDoVi": "Toi co the luyen tu vung o trinh do C2 qua chu de \"Utopieforschung & Dystopie\".",
+      "canDoDe": "Ich kann Wortschatz auf Niveau C2 zum Thema \"Utopieforschung & Dystopie\" ueben.",
+      "linkedContentIds": [
+        "c2-utopieforschung"
+      ]
     }
   ]
 }

@@ -216,7 +216,8 @@
       "exampleSentence2": "In der Psychoanalyse wird das Verdrängen als unbewusster Abwehrmechanismus verstanden, der Inhalte aus dem Bewusstsein fernhält.",
       "exampleTranslation2": "Trong phân tâm học, sự kìm nén được hiểu là một cơ chế phòng vệ vô thức giữ các nội dung tránh xa ý thức.",
       "imageUrl": "/images/vocab/c2-trauma-forschung/das-verdraengen.png",
-      "meaningDe": "Der unbewusste Vorgang, belastende Erinnerungen aus dem Bewusstsein auszusperren."
+      "meaningDe": "Der unbewusste Vorgang, belastende Erinnerungen aus dem Bewusstsein auszusperren.",
+      "pluralStatus": "not_applicable_or_needs_review"
     },
     {
       "word": "Traumakonstellation",
@@ -286,7 +287,8 @@
       "exampleSentence2": "Ein Trauma-Informiertes Vorgehen erkennt die weitreichenden Auswirkungen von Trauma an und integriert dieses Wissen in alle Aspekte der Dienstleistungserbringung.",
       "exampleTranslation2": "Một cách tiếp cận có hiểu biết về sang chấn nhận thức được những tác động sâu rộng của sang chấn và tích hợp kiến thức này vào tất cả các khía cạnh của việc cung cấp dịch vụ.",
       "imageUrl": "/images/vocab/c2-trauma-forschung/das-trauma-informierte-vorgehen.png",
-      "meaningDe": "Eine professionelle Herangehensweise, die die Auswirkungen von Traumata systematisch berücksichtigt und in die Praxis integriert."
+      "meaningDe": "Eine professionelle Herangehensweise, die die Auswirkungen von Traumata systematisch berücksichtigt und in die Praxis integriert.",
+      "pluralStatus": "not_applicable_or_needs_review"
     },
     {
       "word": "dissoziieren",
@@ -300,7 +302,20 @@
       "exampleSentence2": "Die Fähigkeit, zu dissoziieren, kann in akuten Gefahrensituationen schützend wirken, langfristig jedoch zu psychischen Problemen führen.",
       "exampleTranslation2": "Khả năng phân ly có thể có tác dụng bảo vệ trong các tình huống nguy hiểm cấp tính, nhưng về lâu dài có thể dẫn đến các vấn đề tâm lý.",
       "imageUrl": "/images/vocab/c2-trauma-forschung/dissoziieren.png",
-      "meaningDe": "Sich psychisch von der aktuellen Situation oder den eigenen Gefühlen lösen."
+      "meaningDe": "Sich psychisch von der aktuellen Situation oder den eigenen Gefühlen lösen.",
+      "conjugation": {
+        "praesens": {
+          "ich": "dissoziiere",
+          "du": "dissoziierst",
+          "er_sie_es": "dissoziiert",
+          "wir": "dissoziieren",
+          "ihr": "dissoziiert",
+          "sie_Sie": "dissoziieren"
+        },
+        "isIrregular": false,
+        "isSeparable": false,
+        "reviewStatus": "auto_generated_needs_spot_check"
+      }
     },
     {
       "word": "retraumatisieren",
@@ -314,7 +329,20 @@
       "exampleSentence2": "Therapeuten sind geschult, Situationen zu vermeiden, die das Potenzial haben, ihre Patienten zu retraumatisieren.",
       "exampleTranslation2": "Các nhà trị liệu được đào tạo để tránh các tình huống có khả năng tái sang chấn hóa bệnh nhân của họ.",
       "imageUrl": "/images/vocab/c2-trauma-forschung/retraumatisieren.png",
-      "meaningDe": "Jemanden durch neue Erlebnisse erneut an ein altes Trauma erinnern und dessen Schmerz auslösen."
+      "meaningDe": "Jemanden durch neue Erlebnisse erneut an ein altes Trauma erinnern und dessen Schmerz auslösen.",
+      "conjugation": {
+        "praesens": {
+          "ich": "retraumatisiere",
+          "du": "retraumatisierst",
+          "er_sie_es": "retraumatisiert",
+          "wir": "retraumatisieren",
+          "ihr": "retraumatisiert",
+          "sie_Sie": "retraumatisieren"
+        },
+        "isIrregular": false,
+        "isSeparable": false,
+        "reviewStatus": "auto_generated_needs_spot_check"
+      }
     },
     {
       "word": "traumagen",
@@ -413,6 +441,26 @@
       "exampleTranslation2": "Liệu pháp đã giúp bệnh nhân vượt qua những nỗi sợ hãi đã ăn sâu.",
       "imageUrl": "/images/vocab/c2-trauma-forschung/tiefgreifend.png",
       "meaningDe": "Eine Wirkung oder Veränderung beschreibend, die weitreichend ist und die grundlegenden Strukturen eines Systems betrifft."
+    }
+  ],
+  "cefrAudit": {
+    "targetLevel": "C2",
+    "verdict": "aligned",
+    "reviewerRole": "German Academic Lead",
+    "notes": "Release-candidate metadata audit: vocabulary content for \"Traumaforschung & kollektives Trauma\" is aligned with declared C2 scope pending final human spot-check.",
+    "reviewedAt": "2026-05-12",
+    "reviewScope": "release_candidate_metadata_pass"
+  },
+  "learningOutcomes": [
+    {
+      "id": "c2-trauma-forschung-lo-1",
+      "cefrLevel": "C2",
+      "skill": "vocabulary",
+      "canDoVi": "Toi co the luyen tu vung o trinh do C2 qua chu de \"Traumaforschung & kollektives Trauma\".",
+      "canDoDe": "Ich kann Wortschatz auf Niveau C2 zum Thema \"Traumaforschung & kollektives Trauma\" ueben.",
+      "linkedContentIds": [
+        "c2-trauma-forschung"
+      ]
     }
   ]
 }

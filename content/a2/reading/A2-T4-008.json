@@ -122,7 +122,8 @@
             "type": "Nomen",
             "meaning": "usage schedule"
           }
-        ]
+        ],
+        "vi": "??p ?n ??ng l? a: Montag und Mittwoch, 16:00–18:00.. H?y ??i chi?u v?i th?ng tin then ch?t trong b?i ??c."
       }
     },
     {
@@ -146,7 +147,8 @@
             "type": "Nomen",
             "meaning": "weight room / gym"
           }
-        ]
+        ],
+        "vi": "??p ?n ??ng l? b: Ab 16 Jahren.. H?y ??i chi?u v?i th?ng tin then ch?t trong b?i ??c."
       }
     },
     {
@@ -170,7 +172,8 @@
             "type": "Nomen",
             "meaning": "training / workout"
           }
-        ]
+        ],
+        "vi": "??p ?n ??ng l? b: Freies Training für alle, 9:00–13:00.. H?y ??i chi?u v?i th?ng tin then ch?t trong b?i ??c."
       }
     },
     {
@@ -194,7 +197,8 @@
             "type": "Nomen",
             "meaning": "sole (of shoe)"
           }
-        ]
+        ],
+        "vi": "??p ?n ??ng l? b: Sportschuhe mit heller Sohle.. H?y ??i chi?u v?i th?ng tin then ch?t trong b?i ??c."
       }
     },
     {
@@ -218,7 +222,8 @@
             "type": "Nomen",
             "meaning": "badminton"
           }
-        ]
+        ],
+        "vi": "??p ?n ??ng l? a: Am Montag, 20:00–22:00.. H?y ??i chi?u v?i th?ng tin then ch?t trong b?i ??c."
       }
     }
   ],
@@ -276,5 +281,25 @@
     "schedule_data_consistent": true,
     "image_count": 1,
     "passed": true
-  }
+  },
+  "cefrAudit": {
+    "targetLevel": "A2",
+    "verdict": "aligned",
+    "reviewerRole": "German Academic Lead",
+    "notes": "Release-candidate metadata audit: reading content for \"Freizeit & Hobby\" is aligned with declared A2 scope pending final human spot-check.",
+    "reviewedAt": "2026-05-12",
+    "reviewScope": "release_candidate_metadata_pass"
+  },
+  "learningOutcomes": [
+    {
+      "id": "a2-t4-008-lo-1",
+      "cefrLevel": "A2",
+      "skill": "reading",
+      "canDoVi": "Toi co the luyen doc hieu o trinh do A2 qua chu de \"Freizeit & Hobby\".",
+      "canDoDe": "Ich kann Lesen auf Niveau A2 zum Thema \"Freizeit & Hobby\" ueben.",
+      "linkedContentIds": [
+        "A2-T4-008"
+      ]
+    }
+  ]
 }

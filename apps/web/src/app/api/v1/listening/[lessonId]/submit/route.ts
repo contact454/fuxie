@@ -5,6 +5,9 @@ import { getServerUser } from '@/lib/auth/server-auth'
 import { z } from 'zod'
 import { gradeListeningSubmission } from '@/lib/assessment/submission-grading'
 import { awardLearningFucoin } from '@/lib/gamification/fucoin'
+import { buildListeningQuestEpisodeReceipt } from '@/lib/gamification/listening-quest-episode'
+import { buildLearningQuestRewardPayload } from '@/lib/gamification/learning-quest-rewards'
+import { getLearningQuestMasteryPayload } from '@/lib/gamification/skill-mastery-data'
 import { calculateListeningXp, recordLearningActivity } from '@/lib/progress/learning-activity'
 import { invalidateLearnerProgressCaches } from '@/lib/progress/cache-invalidation'
 
@@ -12,6 +15,14 @@ const ListeningSubmitSchema = z.object({
     answers: z.record(z.string(), z.string()),
     timeTaken: z.number().int().min(0).optional(),
     listenCount: z.number().int().min(1).optional(),
+    questEpisode: z.object({
+        episodeId: z.string().max(180),
+        skill: z.literal('listening'),
+        sourceId: z.string().max(180),
+        cefrLevel: z.string().max(12),
+        checkpointCount: z.number().int().min(1).max(6),
+        nextEpisodeHref: z.string().max(240).optional(),
+    }).optional(),
 })
 
 // POST /api/v1/listening/:lessonId/submit — Submit listening answers
@@ -37,7 +48,7 @@ export async function POST(
                 { status: 400 }
             )
         }
-        const { answers, timeTaken, listenCount } = parsed.data
+        const { answers, timeTaken, listenCount, questEpisode } = parsed.data
 
 
         // Get lesson with correct answers
@@ -66,6 +77,11 @@ export async function POST(
                 { status: 404 }
             )
         }
+        const eligibleQuestEpisode = questEpisode
+            && questEpisode.sourceId === lesson.lessonId
+            && questEpisode.cefrLevel === lesson.cefrLevel
+            ? questEpisode
+            : null
 
         const locale = (await cookies()).get('NEXT_LOCALE')?.value || 'vi'
         const { score, totalQuestions, percentage, responseData, questionResults } =
@@ -105,6 +121,21 @@ export async function POST(
                 xpEarned: baseXpEarned,
                 timeSpentSeconds: timeTaken ?? null,
                 exercisesCompleted: 1,
+                analytics: {
+                    role: serverUser.role,
+                    actionId: lesson.lessonId,
+                    actionType: 'listening_task',
+                    level: lesson.cefrLevel,
+                    skill: 'HOEREN',
+                    source: 'listening.submit',
+                    metadata: {
+                        listen_count: listenCount ?? 1,
+                        ...(eligibleQuestEpisode ? {
+                            episode_id: eligibleQuestEpisode.episodeId,
+                            checkpoint_count: eligibleQuestEpisode.checkpointCount,
+                        } : {}),
+                    },
+                },
             })
 
             const learningFucoin = await awardLearningFucoin(tx, {
@@ -120,6 +151,10 @@ export async function POST(
                     score,
                     totalQuestions,
                     percentage,
+                    ...(eligibleQuestEpisode ? {
+                        episodeId: eligibleQuestEpisode.episodeId,
+                        checkpointCount: eligibleQuestEpisode.checkpointCount,
+                    } : {}),
                 },
             })
 
@@ -131,6 +166,27 @@ export async function POST(
         })
 
         invalidateLearnerProgressCaches(serverUser.userId).catch(() => {})
+        const mastery = await getLearningQuestMasteryPayload({
+            userId: serverUser.userId,
+            skill: 'listening',
+            currentLevel: lesson.cefrLevel,
+            sourceActionId: lesson.lessonId,
+            sourceActionType: 'listening_task',
+            source: 'listening.submit',
+            persistBadgeUnlock: true,
+        }).catch(() => ({}))
+        const questEpisodeReceipt = eligibleQuestEpisode
+            ? buildListeningQuestEpisodeReceipt({
+                episodeId: eligibleQuestEpisode.episodeId,
+                lessonId: lesson.lessonId,
+                cefrLevel: lesson.cefrLevel,
+                accuracy: percentage,
+                totalQuestions,
+                answeredQuestions: Object.keys(answers).length,
+                checkpointCount: eligibleQuestEpisode.checkpointCount,
+                nextEpisodeHref: eligibleQuestEpisode.nextEpisodeHref,
+            })
+            : null
 
         return NextResponse.json({
             success: true,
@@ -149,6 +205,17 @@ export async function POST(
                 fucoinDailyRemaining: fucoin.dailyRemainingAfter,
                 fucoinCapReached: fucoin.capReached,
                 streak: progress.streak,
+                ...(questEpisodeReceipt ? {
+                    questEpisodeReceipt,
+                    nextEpisodeHref: questEpisodeReceipt.nextEpisodeHref,
+                } : {}),
+                ...buildLearningQuestRewardPayload({
+                    skill: 'listening',
+                    xpEarned: progress.xpEarned,
+                    fucoin,
+                    streak: progress.streak,
+                    ...mastery,
+                }),
                 timeTaken,
                 listenCount,
                 questionResults,

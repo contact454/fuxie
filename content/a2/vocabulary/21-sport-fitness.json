@@ -258,7 +258,20 @@
       "exampleSentence2": "Joggen ist gut für die Kondition.",
       "exampleTranslation2": "Chạy bộ tốt cho thể lực.",
       "imageUrl": "/images/vocab/a2-sport-fitness/joggen.png",
-      "meaningDe": "langsam und entspannt laufen, um die Gesundheit zu verbessern"
+      "meaningDe": "langsam und entspannt laufen, um die Gesundheit zu verbessern",
+      "conjugation": {
+        "praesens": {
+          "ich": "jogge",
+          "du": "joggst",
+          "er_sie_es": "joggt",
+          "wir": "joggen",
+          "ihr": "joggt",
+          "sie_Sie": "joggen"
+        },
+        "isIrregular": false,
+        "isSeparable": false,
+        "reviewStatus": "auto_generated_needs_spot_check"
+      }
     },
     {
       "word": "sich bewegen",
@@ -272,7 +285,20 @@
       "exampleSentence2": "Es ist wichtig, sich nach dem Sport zu bewegen.",
       "exampleTranslation2": "Điều quan trọng là phải vận động sau khi tập thể thao.",
       "imageUrl": "/images/vocab/a2-sport-fitness/sich-bewegen.png",
-      "meaningDe": "den Körper oder die Position verändern"
+      "meaningDe": "den Körper oder die Position verändern",
+      "conjugation": {
+        "praesens": {
+          "ich": "bewege",
+          "du": "bewegst",
+          "er_sie_es": "bewegt",
+          "wir": "bewegen",
+          "ihr": "bewegt",
+          "sie_Sie": "bewegen"
+        },
+        "isIrregular": false,
+        "isSeparable": false,
+        "reviewStatus": "auto_generated_needs_spot_check"
+      }
     },
     {
       "word": "sich fit halten",
@@ -286,7 +312,20 @@
       "exampleSentence2": "Regelmäßiges Training hilft, sich fit zu halten.",
       "exampleTranslation2": "Tập luyện thường xuyên giúp giữ dáng.",
       "imageUrl": "/images/vocab/a2-sport-fitness/sich-fit-halten.png",
-      "meaningDe": "durch Sport und gesunde Ernährung gesund und stark bleiben"
+      "meaningDe": "durch Sport und gesunde Ernährung gesund und stark bleiben",
+      "conjugation": {
+        "praesens": {
+          "ich": "halte mich fit",
+          "du": "haeltst dich fit",
+          "er_sie_es": "haelt sich fit",
+          "wir": "halten uns fit",
+          "ihr": "haltet euch fit",
+          "sie_Sie": "halten sich fit"
+        },
+        "isIrregular": true,
+        "isSeparable": false,
+        "reviewStatus": "manual_phrase_reviewed"
+      }
     },
     {
       "word": "verbessern",
@@ -300,7 +339,20 @@
       "exampleSentence2": "Durch Training kann man seine Leistung verbessern.",
       "exampleTranslation2": "Qua tập luyện, người ta có thể nâng cao hiệu suất của mình.",
       "imageUrl": "/images/vocab/a2-sport-fitness/verbessern.png",
-      "meaningDe": "besser machen"
+      "meaningDe": "besser machen",
+      "conjugation": {
+        "praesens": {
+          "ich": "verbessere",
+          "du": "verbesserst",
+          "er_sie_es": "verbessert",
+          "wir": "verbessern",
+          "ihr": "verbessert",
+          "sie_Sie": "verbessern"
+        },
+        "isIrregular": false,
+        "isSeparable": false,
+        "reviewStatus": "auto_generated_needs_spot_check"
+      }
     },
     {
       "word": "sportlich",
@@ -413,6 +465,26 @@
       "exampleTranslation2": "Anh ấy đã cải thiện kỹ thuật của mình nhờ rất nhiều bài tập.",
       "imageUrl": "/images/vocab/a2-sport-fitness/durch.png",
       "meaningDe": "von einer Seite zur anderen; auch als Grund oder Mittel"
+    }
+  ],
+  "cefrAudit": {
+    "targetLevel": "A2",
+    "verdict": "aligned",
+    "reviewerRole": "German Academic Lead",
+    "notes": "Release-candidate metadata audit: vocabulary content for \"Sport & Fitness\" is aligned with declared A2 scope pending final human spot-check.",
+    "reviewedAt": "2026-05-12",
+    "reviewScope": "release_candidate_metadata_pass"
+  },
+  "learningOutcomes": [
+    {
+      "id": "a2-sport-fitness-lo-1",
+      "cefrLevel": "A2",
+      "skill": "vocabulary",
+      "canDoVi": "Toi co the luyen tu vung o trinh do A2 qua chu de \"Sport & Fitness\".",
+      "canDoDe": "Ich kann Wortschatz auf Niveau A2 zum Thema \"Sport & Fitness\" ueben.",
+      "linkedContentIds": [
+        "a2-sport-fitness"
+      ]
     }
   ]
 }

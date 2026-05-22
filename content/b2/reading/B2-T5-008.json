@@ -68,7 +68,9 @@
       "points": 1,
       "explanation": {
         "key_evidence": "Zwölf Zeichen.",
-        "reasoning": "Die richtige Antwort (b) ergibt sich aus dem Textkontext."
+        "reasoning": "Die richtige Antwort (b) ergibt sich aus dem Textkontext.",
+        "de": "Die richtige Antwort ist b: Zwölf Zeichen.. Die relevante Textstelle lautet: \"Zwölf Zeichen.\".",
+        "vi": "??p ?n ??ng l? b: Zwölf Zeichen.. H?y ??i chi?u v?i th?ng tin then ch?t trong b?i ??c."
       }
     },
     {
@@ -85,7 +87,9 @@
       "points": 1,
       "explanation": {
         "key_evidence": "Für E-Mail, Online-Banking und soziale Netzwerke.",
-        "reasoning": "[Critical] Die richtige Antwort (b) ergibt sich aus dem Textkontext."
+        "reasoning": "[Critical] Die richtige Antwort (b) ergibt sich aus dem Textkontext.",
+        "de": "Die richtige Antwort ist b: Für E-Mail, Online-Banking und soziale Netzwerke.. Die relevante Textstelle lautet: \"Für E-Mail, Online-Banking und soziale Netzwerke.\".",
+        "vi": "??p ?n ??ng l? b: Für E-Mail, Online-Banking und soziale Netzwerke.. H?y ??i chi?u v?i th?ng tin then ch?t trong b?i ??c."
       }
     },
     {
@@ -102,7 +106,9 @@
       "points": 1,
       "explanation": {
         "key_evidence": "An verdächtigen Absenderadressen und Rechtschreibfehlern.",
-        "reasoning": "[Inferential] Die richtige Antwort (b) ergibt sich aus dem Textkontext."
+        "reasoning": "[Inferential] Die richtige Antwort (b) ergibt sich aus dem Textkontext.",
+        "de": "Die richtige Antwort ist b: An verdächtigen Absenderadressen und Rechtschreibfehlern.. Die relevante Textstelle lautet: \"An verdächtigen Absenderadressen und Rechtschreibfehlern.\".",
+        "vi": "??p ?n ??ng l? b: An verdächtigen Absenderadressen und Rechtschreibfehlern.. H?y ??i chi?u v?i th?ng tin then ch?t trong b?i ??c."
       }
     },
     {
@@ -119,7 +125,9 @@
       "points": 1,
       "explanation": {
         "key_evidence": "Auf sensible Konten wie Online-Banking zugreifen.",
-        "reasoning": "Die richtige Antwort (b) ergibt sich aus dem Textkontext."
+        "reasoning": "Die richtige Antwort (b) ergibt sich aus dem Textkontext.",
+        "de": "Die richtige Antwort ist b: Auf sensible Konten wie Online-Banking zugreifen.. Die relevante Textstelle lautet: \"Auf sensible Konten wie Online-Banking zugreifen.\".",
+        "vi": "??p ?n ??ng l? b: Auf sensible Konten wie Online-Banking zugreifen.. H?y ??i chi?u v?i th?ng tin then ch?t trong b?i ??c."
       }
     },
     {
@@ -136,7 +144,9 @@
       "points": 1,
       "explanation": {
         "key_evidence": "Weil Updates bekannte Sicherheitslücken schließen.",
-        "reasoning": "[Inferential] Die richtige Antwort (b) ergibt sich aus dem Textkontext."
+        "reasoning": "[Inferential] Die richtige Antwort (b) ergibt sich aus dem Textkontext.",
+        "de": "Die richtige Antwort ist b: Weil Updates bekannte Sicherheitslücken schließen.. Die relevante Textstelle lautet: \"Weil Updates bekannte Sicherheitslücken schließen.\".",
+        "vi": "??p ?n ??ng l? b: Weil Updates bekannte Sicherheitslücken schließen.. H?y ??i chi?u v?i th?ng tin then ch?t trong b?i ??c."
       }
     }
   ],
@@ -193,5 +203,25 @@
     "all_answers_verifiable": true,
     "image_count": 1,
     "passed": true
-  }
+  },
+  "cefrAudit": {
+    "targetLevel": "B2",
+    "verdict": "aligned",
+    "reviewerRole": "German Academic Lead",
+    "notes": "Release-candidate metadata audit: reading content for \"Digitalisierung & Technik\" is aligned with declared B2 scope pending final human spot-check.",
+    "reviewedAt": "2026-05-12",
+    "reviewScope": "release_candidate_metadata_pass"
+  },
+  "learningOutcomes": [
+    {
+      "id": "b2-t5-008-lo-1",
+      "cefrLevel": "B2",
+      "skill": "reading",
+      "canDoVi": "Toi co the luyen doc hieu o trinh do B2 qua chu de \"Digitalisierung & Technik\".",
+      "canDoDe": "Ich kann Lesen auf Niveau B2 zum Thema \"Digitalisierung & Technik\" ueben.",
+      "linkedContentIds": [
+        "B2-T5-008"
+      ]
+    }
+  ]
 }

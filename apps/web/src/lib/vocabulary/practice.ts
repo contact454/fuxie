@@ -153,8 +153,18 @@ export async function generateVocabularyPractice(params: {
 
     const themeInfo = await prisma.vocabularyTheme.findUnique({
         where: { slug: theme },
-        select: { slug: true, name: true, translations: true, imageUrl: true },
+        select: { slug: true, name: true, translations: true, imageUrl: true, cefrLevel: true, sortOrder: true },
     })
+    const nextTheme = themeInfo
+        ? await prisma.vocabularyTheme.findFirst({
+            where: {
+                cefrLevel: themeInfo.cefrLevel,
+                sortOrder: { gt: themeInfo.sortOrder },
+            },
+            orderBy: { sortOrder: 'asc' },
+            select: { slug: true },
+        })
+        : null
 
     return {
         exerciseType: type,
@@ -162,6 +172,9 @@ export async function generateVocabularyPractice(params: {
         cefrLevel: level,
         totalQuestions: questions.length,
         questions,
+        nextEpisodeHref: nextTheme
+            ? `/vocabulary/practice/mixed?theme=${nextTheme.slug}&level=${level}`
+            : '/vocabulary/practice',
     }
 }
 

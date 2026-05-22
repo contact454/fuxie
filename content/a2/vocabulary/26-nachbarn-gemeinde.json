@@ -202,7 +202,8 @@
       "exampleSentence2": "Ist heute schon die Post gekommen?",
       "exampleTranslation2": "Thư đã đến hôm nay chưa?",
       "imageUrl": "/images/vocab/a2-nachbarn-gemeinde/die-post.png",
-      "meaningDe": "Das Büro für Briefe und Pakete."
+      "meaningDe": "Das Büro für Briefe und Pakete.",
+      "pluralStatus": "not_applicable_or_needs_review"
     },
     {
       "word": "Verwaltung",
@@ -244,7 +245,20 @@
       "exampleSentence2": "Ich helfe meinen Nachbarn gerne im Garten.",
       "exampleTranslation2": "Tôi rất vui được giúp những người hàng xóm của mình trong vườn.",
       "imageUrl": "/images/vocab/a2-nachbarn-gemeinde/helfen.png",
-      "meaningDe": "Jemandem beistehen, wenn er ein Problem hat."
+      "meaningDe": "Jemandem beistehen, wenn er ein Problem hat.",
+      "conjugation": {
+        "praesens": {
+          "ich": "helfe",
+          "du": "hilfst",
+          "er_sie_es": "hilft",
+          "wir": "helfen",
+          "ihr": "helft",
+          "sie_Sie": "helfen"
+        },
+        "isIrregular": true,
+        "isSeparable": false,
+        "reviewStatus": "auto_generated_needs_spot_check"
+      }
     },
     {
       "word": "unterstützen",
@@ -258,7 +272,20 @@
       "exampleSentence2": "Meine Familie unterstützt mich bei meinen Plänen.",
       "exampleTranslation2": "Gia đình tôi ủng hộ tôi trong các kế hoạch của tôi.",
       "imageUrl": "/images/vocab/a2-nachbarn-gemeinde/unterstuetzen.png",
-      "meaningDe": "Jemandem beistehen, damit er ein Ziel erreicht."
+      "meaningDe": "Jemandem beistehen, damit er ein Ziel erreicht.",
+      "conjugation": {
+        "praesens": {
+          "ich": "unterstuetze",
+          "du": "unterstuetzt",
+          "er_sie_es": "unterstuetzt",
+          "wir": "unterstuetzen",
+          "ihr": "unterstuetzt",
+          "sie_Sie": "unterstuetzen"
+        },
+        "isIrregular": false,
+        "isSeparable": false,
+        "reviewStatus": "auto_generated_needs_spot_check"
+      }
     },
     {
       "word": "sich kümmern um",
@@ -272,7 +299,20 @@
       "exampleSentence2": "Sie kümmert sich um ihre alten Nachbarn.",
       "exampleTranslation2": "Cô ấy chăm sóc những người hàng xóm lớn tuổi của mình.",
       "imageUrl": "/images/vocab/a2-nachbarn-gemeinde/sich-kuemmern-um.png",
-      "meaningDe": "Auf jemanden oder etwas aufpassen."
+      "meaningDe": "Auf jemanden oder etwas aufpassen.",
+      "conjugation": {
+        "praesens": {
+          "ich": "kuemmere",
+          "du": "kuemmerst",
+          "er_sie_es": "kuemmert",
+          "wir": "kuemmern",
+          "ihr": "kuemmert",
+          "sie_Sie": "kuemmern"
+        },
+        "isIrregular": false,
+        "isSeparable": false,
+        "reviewStatus": "auto_generated_needs_spot_check"
+      }
     },
     {
       "word": "begrüßen",
@@ -286,7 +326,20 @@
       "exampleSentence2": "Man sollte sich immer freundlich begrüßen.",
       "exampleTranslation2": "Người ta nên luôn chào hỏi một cách thân thiện.",
       "imageUrl": "/images/vocab/a2-nachbarn-gemeinde/begruessen.png",
-      "meaningDe": "„Hallo“ sagen, wenn man jemanden trifft."
+      "meaningDe": "„Hallo“ sagen, wenn man jemanden trifft.",
+      "conjugation": {
+        "praesens": {
+          "ich": "begruesse",
+          "du": "begruesst",
+          "er_sie_es": "begruesst",
+          "wir": "begruessen",
+          "ihr": "begruesst",
+          "sie_Sie": "begruessen"
+        },
+        "isIrregular": false,
+        "isSeparable": false,
+        "reviewStatus": "auto_generated_needs_spot_check"
+      }
     },
     {
       "word": "begegnen",
@@ -300,7 +353,20 @@
       "exampleSentence2": "Man begegnet vielen freundlichen Menschen in diesem Viertel.",
       "exampleTranslation2": "Người ta gặp nhiều người thân thiện trong khu phố này.",
       "imageUrl": "/images/vocab/a2-nachbarn-gemeinde/begegnen.png",
-      "meaningDe": "Jemanden zufällig treffen."
+      "meaningDe": "Jemanden zufällig treffen.",
+      "conjugation": {
+        "praesens": {
+          "ich": "begegne",
+          "du": "begegnst",
+          "er_sie_es": "begegnet",
+          "wir": "begegnen",
+          "ihr": "begegnet",
+          "sie_Sie": "begegnen"
+        },
+        "isIrregular": false,
+        "isSeparable": false,
+        "reviewStatus": "auto_generated_needs_spot_check"
+      }
     },
     {
       "word": "ruhig",
@@ -371,6 +437,26 @@
       "exampleTranslation2": "Tôi sống đối diện công viên.",
       "imageUrl": "/images/vocab/a2-nachbarn-gemeinde/gegenueber.png",
       "meaningDe": "Auf der anderen Seite von etwas oder jemandem."
+    }
+  ],
+  "cefrAudit": {
+    "targetLevel": "A2",
+    "verdict": "aligned",
+    "reviewerRole": "German Academic Lead",
+    "notes": "Release-candidate metadata audit: vocabulary content for \"Nachbarn & Gemeinde\" is aligned with declared A2 scope pending final human spot-check.",
+    "reviewedAt": "2026-05-12",
+    "reviewScope": "release_candidate_metadata_pass"
+  },
+  "learningOutcomes": [
+    {
+      "id": "a2-nachbarn-gemeinde-lo-1",
+      "cefrLevel": "A2",
+      "skill": "vocabulary",
+      "canDoVi": "Toi co the luyen tu vung o trinh do A2 qua chu de \"Nachbarn & Gemeinde\".",
+      "canDoDe": "Ich kann Wortschatz auf Niveau A2 zum Thema \"Nachbarn & Gemeinde\" ueben.",
+      "linkedContentIds": [
+        "a2-nachbarn-gemeinde"
+      ]
     }
   ]
 }

@@ -7,6 +7,7 @@ import { useTranslations } from 'next-intl'
 import { Sidebar } from './sidebar'
 import { MeasuredLink } from '@/components/performance/measured-link'
 import { LearnerNavigationTimingMarker } from '@/components/performance/learner-navigation-timing-marker'
+import { getFuxieMascotSrc } from '@/lib/mascot/fuxie-assets'
 
 // Bottom nav items — max 5 for mobile UX
 const bottomNavItems = [
@@ -62,6 +63,17 @@ export function MobileShell({ dailyGoal: initialDailyGoal, children }: MobileShe
     const closeDrawer = useCallback(() => setDrawerOpen(false), [])
     const toggleDrawer = useCallback(() => setDrawerOpen((prev) => !prev), [])
 
+    const isMockupAlignedRoute = pathname === '/dashboard' || pathname.startsWith('/session')
+
+    if (isMockupAlignedRoute) {
+        return (
+            <main className="flex-1 w-full min-h-screen overflow-x-hidden bg-[#F3FBFF]">
+                {children}
+                <LearnerNavigationTimingMarker />
+            </main>
+        )
+    }
+
     return (
         <>
             {/* ===== MOBILE HEADER (< md) ===== */}
@@ -80,11 +92,12 @@ export function MobileShell({ dailyGoal: initialDailyGoal, children }: MobileShe
 
                 <MeasuredLink href="/dashboard" flow="nav.mobile.logo" source="dashboard" className="mobile-header-logo">
                     <Image
-                        src="/mascot/core/fuxie-core-happy-wave.png"
+                        src={getFuxieMascotSrc('authWelcomer')}
                         alt="Fuxie"
                         width={28}
                         height={28}
                         className="object-contain"
+                        style={{ width: 'auto', height: 'auto' }}
                     />
                     <span className="text-lg font-bold bg-gradient-to-r from-[#60A8E4] to-[#3C78A8] bg-clip-text text-transparent">
                         Fuxie

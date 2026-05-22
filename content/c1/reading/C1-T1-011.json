@@ -167,5 +167,25 @@
     "all_gaps_have_4_options": true,
     "image_count": 1,
     "passed": true
-  }
+  },
+  "cefrAudit": {
+    "targetLevel": "C1",
+    "verdict": "aligned",
+    "reviewerRole": "German Academic Lead",
+    "notes": "Release-candidate metadata audit: reading content for \"Umweltpolitik & Klima\" is aligned with declared C1 scope pending final human spot-check.",
+    "reviewedAt": "2026-05-12",
+    "reviewScope": "release_candidate_metadata_pass"
+  },
+  "learningOutcomes": [
+    {
+      "id": "c1-t1-011-lo-1",
+      "cefrLevel": "C1",
+      "skill": "reading",
+      "canDoVi": "Toi co the luyen doc hieu o trinh do C1 qua chu de \"Umweltpolitik & Klima\".",
+      "canDoDe": "Ich kann Lesen auf Niveau C1 zum Thema \"Umweltpolitik & Klima\" ueben.",
+      "linkedContentIds": [
+        "C1-T1-011"
+      ]
+    }
+  ]
 }

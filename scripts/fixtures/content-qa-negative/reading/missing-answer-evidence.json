@@ -1,0 +1,40 @@
+{
+  "id": "FIX-READING-MISSING-EVIDENCE",
+  "level": "B1",
+  "text": "Anna sucht eine neue Wohnung. Die Wohnung soll hell und ruhig sein.",
+  "questions": [
+    {
+      "id": "Q1",
+      "question": "Was sucht Anna?",
+      "options": {
+        "a": "Eine Wohnung.",
+        "b": "Eine Schule."
+      },
+      "answer": "a",
+      "points": 1,
+      "explanation": {
+        "de": "Anna sucht eine Wohnung."
+      }
+    }
+  ],
+  "cefrAudit": {
+    "targetLevel": "B1",
+    "verdict": "aligned",
+    "reviewerRole": "German Academic Lead",
+    "notes": "Fixture with missing key evidence in answer explanation.",
+    "reviewedAt": "2026-05-12"
+  },
+  "learningOutcomes": [
+    {
+      "id": "fix-reading-lo-1",
+      "cefrLevel": "B1",
+      "skill": "reading",
+      "canDoVi": "Toi co the tim thong tin chinh trong van ban ngan.",
+      "canDoDe": "Ich kann zentrale Informationen in einem kurzen Text finden.",
+      "linkedContentIds": [
+        "FIX-READING-MISSING-EVIDENCE"
+      ]
+    }
+  ]
+}
+

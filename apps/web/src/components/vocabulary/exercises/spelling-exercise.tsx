@@ -211,7 +211,7 @@ export function SpellingExercise({ questions, cefrLevel, themeName: _themeName, 
 
                         {/* Article badge if noun */}
                         {articleText && (
-                            <span className="mt-2 inline-block rounded-full bg-[#EEF7FF] px-3 py-1 text-sm font-black text-[#3C78A8] ring-1 ring-[#60A8E4]/20">
+                            <span className="mt-2 inline-block rounded-full bg-[#EEF7FF] px-3 py-1 text-sm font-black text-text-brand ring-1 ring-[#60A8E4]/20">
                                 {articleText} ...
                             </span>
                         )}
@@ -235,7 +235,7 @@ export function SpellingExercise({ questions, cefrLevel, themeName: _themeName, 
                             />
                             {isRevealed && (
                                 <div className="text-center pb-3">
-                                    <span className="text-sm font-bold text-[#3C78A8]">Đã lưu câu trả lời</span>
+                                    <span className="text-sm font-bold text-text-brand">Đã lưu câu trả lời</span>
                                 </div>
                             )}
                         </div>

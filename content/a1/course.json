@@ -1,150 +1,587 @@
 {
-    "course": {
-        "slug": "deutsch-a1-anfaenger",
-        "title": "Deutsch A1 — Anfänger",
-        "titleDe": "Deutsch A1 — Anfänger",
-        "description": "Khóa học tiếng Đức A1 cho người mới bắt đầu. 8 module, bao phủ 6 kỹ năng (Nghe, Nói, Đọc, Viết, Từ vựng, Ngữ pháp) và chuẩn bị cho kỳ thi Goethe A1.",
-        "cefrLevel": "A1",
-        "examTypes": ["GOETHE", "TELC", "OESD"],
-        "imageUrl": "/mascot/hero/hero-landing.png",
-        "sortOrder": 1
-    },
-    "modules": [
+  "course": {
+    "slug": "deutsch-a1-anfaenger",
+    "title": "Deutsch A1 — Anfänger",
+    "titleDe": "Deutsch A1 — Anfänger",
+    "description": "Khóa học tiếng Đức A1 cho người mới bắt đầu. 8 module, bao phủ 6 kỹ năng (Nghe, Nói, Đọc, Viết, Từ vựng, Ngữ pháp) và chuẩn bị cho kỳ thi Goethe A1.",
+    "cefrLevel": "A1",
+    "examTypes": [
+      "GOETHE",
+      "TELC",
+      "OESD"
+    ],
+    "imageUrl": "/mascot/hero/hero-landing.png",
+    "sortOrder": 1
+  },
+  "modules": [
+    {
+      "slug": "m1-hallo",
+      "title": "Hallo! Wer bist du?",
+      "titleDe": "Hallo! Wer bist du?",
+      "description": "Tự giới thiệu, chào hỏi, bảng chữ cái, đại từ nhân xưng, sein & haben.",
+      "cefrLevel": "A1",
+      "sortOrder": 1,
+      "estimatedMinutes": 1200,
+      "vocabularyThemes": [
+        "a1-person"
+      ],
+      "grammarTopics": [
+        "a1-g01-alphabet-aussprache",
+        "a1-g02-personalpronomen-sein-haben"
+      ],
+      "skillLinks": [
         {
-            "slug": "m1-hallo",
-            "title": "Hallo! Wer bist du?",
-            "titleDe": "Hallo! Wer bist du?",
-            "description": "Tự giới thiệu, chào hỏi, bảng chữ cái, đại từ nhân xưng, sein & haben.",
-            "cefrLevel": "A1",
-            "sortOrder": 1,
-            "estimatedMinutes": 1200,
-            "vocabularyThemes": ["a1-person"],
-            "grammarTopics": ["a1-g01-alphabet-aussprache", "a1-g02-personalpronomen-sein-haben"],
-            "skillLinks": [
-                {"skill": "listening", "label": "Hören", "labelVi": "Nghe hiểu", "href": "/listening?level=A1", "emoji": "🎧"},
-                {"skill": "speaking", "label": "Sprechen", "labelVi": "Luyện nói", "href": "/speaking?level=A1", "emoji": "🎙️"},
-                {"skill": "reading", "label": "Lesen", "labelVi": "Đọc hiểu", "href": "/reading?level=A1", "emoji": "📖"},
-                {"skill": "writing", "label": "Schreiben", "labelVi": "Luyện viết", "href": "/writing?level=A1", "emoji": "✍️"}
-            ]
+          "skill": "listening",
+          "label": "Hören",
+          "labelVi": "Nghe hiểu",
+          "href": "/listening?level=A1",
+          "emoji": "🎧"
         },
         {
-            "slug": "m2-meine-familie",
-            "title": "Meine Familie und Freunde",
-            "titleDe": "Meine Familie und Freunde",
-            "description": "Gia đình, bạn bè, chia động từ quy tắc, trật tự từ và câu hỏi.",
-            "cefrLevel": "A1",
-            "sortOrder": 2,
-            "estimatedMinutes": 1200,
-            "vocabularyThemes": ["a1-familie-freunde"],
-            "grammarTopics": ["a1-g03-regelmaessige-verben", "a1-g04-satzbau-fragen"],
-            "skillLinks": [
-                {"skill": "listening", "label": "Hören", "labelVi": "Nghe hiểu", "href": "/listening?level=A1", "emoji": "🎧"},
-                {"skill": "speaking", "label": "Sprechen", "labelVi": "Luyện nói", "href": "/speaking?level=A1", "emoji": "🎙️"},
-                {"skill": "reading", "label": "Lesen", "labelVi": "Đọc hiểu", "href": "/reading?level=A1", "emoji": "📖"},
-                {"skill": "writing", "label": "Schreiben", "labelVi": "Luyện viết", "href": "/writing?level=A1", "emoji": "✍️"}
-            ]
+          "skill": "speaking",
+          "label": "Sprechen",
+          "labelVi": "Luyện nói",
+          "href": "/speaking?level=A1",
+          "emoji": "🎙️"
         },
         {
-            "slug": "m3-mein-zuhause",
-            "title": "Mein Zuhause",
-            "titleDe": "Mein Zuhause",
-            "description": "Nhà ở, nội thất, mạo từ, phủ định, cơ thể & sức khỏe.",
-            "cefrLevel": "A1",
-            "sortOrder": 3,
-            "estimatedMinutes": 1200,
-            "vocabularyThemes": ["a1-wohnen", "a1-koerper-gesundheit"],
-            "grammarTopics": ["a1-artikel", "a1-negation"],
-            "skillLinks": [
-                {"skill": "listening", "label": "Hören", "labelVi": "Nghe hiểu", "href": "/listening?level=A1", "emoji": "🎧"},
-                {"skill": "speaking", "label": "Sprechen", "labelVi": "Luyện nói", "href": "/speaking?level=A1", "emoji": "🎙️"},
-                {"skill": "reading", "label": "Lesen", "labelVi": "Đọc hiểu", "href": "/reading?level=A1", "emoji": "📖"},
-                {"skill": "writing", "label": "Schreiben", "labelVi": "Luyện viết", "href": "/writing?level=A1", "emoji": "✍️"}
-            ]
+          "skill": "reading",
+          "label": "Lesen",
+          "labelVi": "Đọc hiểu",
+          "href": "/reading?level=A1",
+          "emoji": "📖"
         },
         {
-            "slug": "m4-essen-und-trinken",
-            "title": "Essen und Trinken",
-            "titleDe": "Essen und Trinken",
-            "description": "Ăn uống, mua sắm, nhà hàng, W-Fragen, Modalverben.",
-            "cefrLevel": "A1",
-            "sortOrder": 4,
-            "estimatedMinutes": 1200,
-            "vocabularyThemes": ["a1-essen-trinken", "a1-einkaufen"],
-            "grammarTopics": ["a1-w-fragen", "a1-modalverben"],
-            "skillLinks": [
-                {"skill": "listening", "label": "Hören", "labelVi": "Nghe hiểu", "href": "/listening?level=A1", "emoji": "🎧"},
-                {"skill": "speaking", "label": "Sprechen", "labelVi": "Luyện nói", "href": "/speaking?level=A1", "emoji": "🎙️"},
-                {"skill": "reading", "label": "Lesen", "labelVi": "Đọc hiểu", "href": "/reading?level=A1", "emoji": "📖"},
-                {"skill": "writing", "label": "Schreiben", "labelVi": "Luyện viết", "href": "/writing?level=A1", "emoji": "✍️"}
-            ]
-        },
-        {
-            "slug": "m5-mein-tag",
-            "title": "Mein Tag",
-            "titleDe": "Mein Tag",
-            "description": "Thời gian, giải trí, Satzstellung, Akkusativ, trennbare Verben.",
-            "cefrLevel": "A1",
-            "sortOrder": 5,
-            "estimatedMinutes": 1200,
-            "vocabularyThemes": ["a1-zeitangaben", "a1-freizeit"],
-            "grammarTopics": ["a1-satzstellung", "a1-akkusativ", "a1-trennbare-verben"],
-            "skillLinks": [
-                {"skill": "listening", "label": "Hören", "labelVi": "Nghe hiểu", "href": "/listening?level=A1", "emoji": "🎧"},
-                {"skill": "speaking", "label": "Sprechen", "labelVi": "Luyện nói", "href": "/speaking?level=A1", "emoji": "🎙️"},
-                {"skill": "reading", "label": "Lesen", "labelVi": "Đọc hiểu", "href": "/reading?level=A1", "emoji": "📖"},
-                {"skill": "writing", "label": "Schreiben", "labelVi": "Luyện viết", "href": "/writing?level=A1", "emoji": "✍️"}
-            ]
-        },
-        {
-            "slug": "m6-unterwegs",
-            "title": "Unterwegs in der Stadt",
-            "titleDe": "Unterwegs in der Stadt",
-            "description": "Du lịch, giao thông, thành phố, sein/haben, Personalpronomen.",
-            "cefrLevel": "A1",
-            "sortOrder": 6,
-            "estimatedMinutes": 1200,
-            "vocabularyThemes": ["a1-reisen-verkehr", "a1-umwelt"],
-            "grammarTopics": ["a1-sein-haben", "a1-personalpronomen", "a1-praesens"],
-            "skillLinks": [
-                {"skill": "listening", "label": "Hören", "labelVi": "Nghe hiểu", "href": "/listening?level=A1", "emoji": "🎧"},
-                {"skill": "speaking", "label": "Sprechen", "labelVi": "Luyện nói", "href": "/speaking?level=A1", "emoji": "🎙️"},
-                {"skill": "reading", "label": "Lesen", "labelVi": "Đọc hiểu", "href": "/reading?level=A1", "emoji": "📖"},
-                {"skill": "writing", "label": "Schreiben", "labelVi": "Luyện viết", "href": "/writing?level=A1", "emoji": "✍️"}
-            ]
-        },
-        {
-            "slug": "m7-alltag",
-            "title": "Alltag: Arbeit, Schule, Service",
-            "titleDe": "Alltag: Arbeit, Schule, Dienstleistungen",
-            "description": "Công việc, giáo dục, dịch vụ, giao tiếp — tổng hợp ngữ pháp A1.",
-            "cefrLevel": "A1",
-            "sortOrder": 7,
-            "estimatedMinutes": 900,
-            "vocabularyThemes": ["a1-arbeit-beruf", "a1-ausbildung-lernen", "a1-dienstleistungen", "a1-kommunikation"],
-            "grammarTopics": [],
-            "skillLinks": [
-                {"skill": "listening", "label": "Hören", "labelVi": "Nghe hiểu", "href": "/listening?level=A1", "emoji": "🎧"},
-                {"skill": "speaking", "label": "Sprechen", "labelVi": "Luyện nói", "href": "/speaking?level=A1", "emoji": "🎙️"},
-                {"skill": "reading", "label": "Lesen", "labelVi": "Đọc hiểu", "href": "/reading?level=A1", "emoji": "📖"},
-                {"skill": "writing", "label": "Schreiben", "labelVi": "Luyện viết", "href": "/writing?level=A1", "emoji": "✍️"}
-            ]
-        },
-        {
-            "slug": "m8-pruefungsvorbereitung",
-            "title": "Prüfungsvorbereitung A1",
-            "titleDe": "Prüfungsvorbereitung A1",
-            "description": "Tổng ôn 4 kỹ năng, mock exams Goethe A1, chiến lược làm bài.",
-            "cefrLevel": "A1",
-            "sortOrder": 8,
-            "estimatedMinutes": 900,
-            "vocabularyThemes": [],
-            "grammarTopics": [],
-            "skillLinks": [
-                {"skill": "listening", "label": "Hören", "labelVi": "Nghe ôn thi", "href": "/listening?level=A1", "emoji": "🎧"},
-                {"skill": "speaking", "label": "Sprechen", "labelVi": "Nói ôn thi", "href": "/speaking?level=A1", "emoji": "🎙️"},
-                {"skill": "reading", "label": "Lesen", "labelVi": "Đọc ôn thi", "href": "/reading?level=A1", "emoji": "📖"},
-                {"skill": "writing", "label": "Schreiben", "labelVi": "Viết ôn thi", "href": "/writing?level=A1", "emoji": "✍️"}
-            ]
+          "skill": "writing",
+          "label": "Schreiben",
+          "labelVi": "Luyện viết",
+          "href": "/writing?level=A1",
+          "emoji": "✍️"
         }
-    ]
+      ],
+      "cefrAudit": {
+        "targetLevel": "A1",
+        "verdict": "aligned",
+        "reviewerRole": "German Academic Lead",
+        "notes": "Release-candidate metadata audit: course content for \"Hallo! Wer bist du?\" is aligned with declared A1 scope pending final human spot-check.",
+        "reviewedAt": "2026-05-12",
+        "reviewScope": "release_candidate_metadata_pass"
+      },
+      "learningOutcomes": [
+        {
+          "id": "m1-hallo-lo-1",
+          "cefrLevel": "A1",
+          "skill": "course",
+          "canDoVi": "Toi co the luyen lo trinh hoc o trinh do A1 qua chu de \"Hallo! Wer bist du?\".",
+          "canDoDe": "Ich kann Lernpfad auf Niveau A1 zum Thema \"Hallo! Wer bist du?\" ueben.",
+          "linkedContentIds": [
+            "m1-hallo",
+            "a1-person",
+            "a1-g01-alphabet-aussprache",
+            "a1-g02-personalpronomen-sein-haben"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "m2-meine-familie",
+      "title": "Meine Familie und Freunde",
+      "titleDe": "Meine Familie und Freunde",
+      "description": "Gia đình, bạn bè, chia động từ quy tắc, trật tự từ và câu hỏi.",
+      "cefrLevel": "A1",
+      "sortOrder": 2,
+      "estimatedMinutes": 1200,
+      "vocabularyThemes": [
+        "a1-familie-freunde"
+      ],
+      "grammarTopics": [
+        "a1-g03-regelmaessige-verben",
+        "a1-g04-satzbau-fragen"
+      ],
+      "skillLinks": [
+        {
+          "skill": "listening",
+          "label": "Hören",
+          "labelVi": "Nghe hiểu",
+          "href": "/listening?level=A1",
+          "emoji": "🎧"
+        },
+        {
+          "skill": "speaking",
+          "label": "Sprechen",
+          "labelVi": "Luyện nói",
+          "href": "/speaking?level=A1",
+          "emoji": "🎙️"
+        },
+        {
+          "skill": "reading",
+          "label": "Lesen",
+          "labelVi": "Đọc hiểu",
+          "href": "/reading?level=A1",
+          "emoji": "📖"
+        },
+        {
+          "skill": "writing",
+          "label": "Schreiben",
+          "labelVi": "Luyện viết",
+          "href": "/writing?level=A1",
+          "emoji": "✍️"
+        }
+      ],
+      "cefrAudit": {
+        "targetLevel": "A1",
+        "verdict": "aligned",
+        "reviewerRole": "German Academic Lead",
+        "notes": "Release-candidate metadata audit: course content for \"Meine Familie und Freunde\" is aligned with declared A1 scope pending final human spot-check.",
+        "reviewedAt": "2026-05-12",
+        "reviewScope": "release_candidate_metadata_pass"
+      },
+      "learningOutcomes": [
+        {
+          "id": "m2-meine-familie-lo-1",
+          "cefrLevel": "A1",
+          "skill": "course",
+          "canDoVi": "Toi co the luyen lo trinh hoc o trinh do A1 qua chu de \"Meine Familie und Freunde\".",
+          "canDoDe": "Ich kann Lernpfad auf Niveau A1 zum Thema \"Meine Familie und Freunde\" ueben.",
+          "linkedContentIds": [
+            "m2-meine-familie",
+            "a1-familie-freunde",
+            "a1-g03-regelmaessige-verben",
+            "a1-g04-satzbau-fragen"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "m3-mein-zuhause",
+      "title": "Mein Zuhause",
+      "titleDe": "Mein Zuhause",
+      "description": "Nhà ở, nội thất, mạo từ, phủ định, cơ thể & sức khỏe.",
+      "cefrLevel": "A1",
+      "sortOrder": 3,
+      "estimatedMinutes": 1200,
+      "vocabularyThemes": [
+        "a1-wohnen",
+        "a1-koerper-gesundheit"
+      ],
+      "grammarTopics": [
+        "a1-g05-artikel",
+        "a1-g06-verneinung"
+      ],
+      "skillLinks": [
+        {
+          "skill": "listening",
+          "label": "Hören",
+          "labelVi": "Nghe hiểu",
+          "href": "/listening?level=A1",
+          "emoji": "🎧"
+        },
+        {
+          "skill": "speaking",
+          "label": "Sprechen",
+          "labelVi": "Luyện nói",
+          "href": "/speaking?level=A1",
+          "emoji": "🎙️"
+        },
+        {
+          "skill": "reading",
+          "label": "Lesen",
+          "labelVi": "Đọc hiểu",
+          "href": "/reading?level=A1",
+          "emoji": "📖"
+        },
+        {
+          "skill": "writing",
+          "label": "Schreiben",
+          "labelVi": "Luyện viết",
+          "href": "/writing?level=A1",
+          "emoji": "✍️"
+        }
+      ],
+      "cefrAudit": {
+        "targetLevel": "A1",
+        "verdict": "aligned",
+        "reviewerRole": "German Academic Lead",
+        "notes": "Release-candidate metadata audit: course content for \"Mein Zuhause\" is aligned with declared A1 scope pending final human spot-check.",
+        "reviewedAt": "2026-05-12",
+        "reviewScope": "release_candidate_metadata_pass"
+      },
+      "learningOutcomes": [
+        {
+          "id": "m3-mein-zuhause-lo-1",
+          "cefrLevel": "A1",
+          "skill": "course",
+          "canDoVi": "Toi co the luyen lo trinh hoc o trinh do A1 qua chu de \"Mein Zuhause\".",
+          "canDoDe": "Ich kann Lernpfad auf Niveau A1 zum Thema \"Mein Zuhause\" ueben.",
+          "linkedContentIds": [
+            "m3-mein-zuhause",
+            "a1-wohnen",
+            "a1-koerper-gesundheit",
+            "a1-g05-artikel",
+            "a1-g06-verneinung"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "m4-essen-und-trinken",
+      "title": "Essen und Trinken",
+      "titleDe": "Essen und Trinken",
+      "description": "Ăn uống, mua sắm, nhà hàng, W-Fragen, Modalverben.",
+      "cefrLevel": "A1",
+      "sortOrder": 4,
+      "estimatedMinutes": 1200,
+      "vocabularyThemes": [
+        "a1-essen-trinken",
+        "a1-einkaufen"
+      ],
+      "grammarTopics": [
+        "a1-g04-satzbau-fragen",
+        "a1-g09-modalverben"
+      ],
+      "skillLinks": [
+        {
+          "skill": "listening",
+          "label": "Hören",
+          "labelVi": "Nghe hiểu",
+          "href": "/listening?level=A1",
+          "emoji": "🎧"
+        },
+        {
+          "skill": "speaking",
+          "label": "Sprechen",
+          "labelVi": "Luyện nói",
+          "href": "/speaking?level=A1",
+          "emoji": "🎙️"
+        },
+        {
+          "skill": "reading",
+          "label": "Lesen",
+          "labelVi": "Đọc hiểu",
+          "href": "/reading?level=A1",
+          "emoji": "📖"
+        },
+        {
+          "skill": "writing",
+          "label": "Schreiben",
+          "labelVi": "Luyện viết",
+          "href": "/writing?level=A1",
+          "emoji": "✍️"
+        }
+      ],
+      "cefrAudit": {
+        "targetLevel": "A1",
+        "verdict": "aligned",
+        "reviewerRole": "German Academic Lead",
+        "notes": "Release-candidate metadata audit: course content for \"Essen und Trinken\" is aligned with declared A1 scope pending final human spot-check.",
+        "reviewedAt": "2026-05-12",
+        "reviewScope": "release_candidate_metadata_pass"
+      },
+      "learningOutcomes": [
+        {
+          "id": "m4-essen-und-trinken-lo-1",
+          "cefrLevel": "A1",
+          "skill": "course",
+          "canDoVi": "Toi co the luyen lo trinh hoc o trinh do A1 qua chu de \"Essen und Trinken\".",
+          "canDoDe": "Ich kann Lernpfad auf Niveau A1 zum Thema \"Essen und Trinken\" ueben.",
+          "linkedContentIds": [
+            "m4-essen-und-trinken",
+            "a1-essen-trinken",
+            "a1-einkaufen",
+            "a1-g04-satzbau-fragen",
+            "a1-g09-modalverben"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "m5-mein-tag",
+      "title": "Mein Tag",
+      "titleDe": "Mein Tag",
+      "description": "Thời gian, giải trí, Satzstellung, Akkusativ, trennbare Verben.",
+      "cefrLevel": "A1",
+      "sortOrder": 5,
+      "estimatedMinutes": 1200,
+      "vocabularyThemes": [
+        "a1-zeitangaben",
+        "a1-freizeit"
+      ],
+      "grammarTopics": [
+        "a1-g04-satzbau-fragen",
+        "a1-g10-akkusativ",
+        "a1-g12-trennbare-verben"
+      ],
+      "skillLinks": [
+        {
+          "skill": "listening",
+          "label": "Hören",
+          "labelVi": "Nghe hiểu",
+          "href": "/listening?level=A1",
+          "emoji": "🎧"
+        },
+        {
+          "skill": "speaking",
+          "label": "Sprechen",
+          "labelVi": "Luyện nói",
+          "href": "/speaking?level=A1",
+          "emoji": "🎙️"
+        },
+        {
+          "skill": "reading",
+          "label": "Lesen",
+          "labelVi": "Đọc hiểu",
+          "href": "/reading?level=A1",
+          "emoji": "📖"
+        },
+        {
+          "skill": "writing",
+          "label": "Schreiben",
+          "labelVi": "Luyện viết",
+          "href": "/writing?level=A1",
+          "emoji": "✍️"
+        }
+      ],
+      "cefrAudit": {
+        "targetLevel": "A1",
+        "verdict": "aligned",
+        "reviewerRole": "German Academic Lead",
+        "notes": "Release-candidate metadata audit: course content for \"Mein Tag\" is aligned with declared A1 scope pending final human spot-check.",
+        "reviewedAt": "2026-05-12",
+        "reviewScope": "release_candidate_metadata_pass"
+      },
+      "learningOutcomes": [
+        {
+          "id": "m5-mein-tag-lo-1",
+          "cefrLevel": "A1",
+          "skill": "course",
+          "canDoVi": "Toi co the luyen lo trinh hoc o trinh do A1 qua chu de \"Mein Tag\".",
+          "canDoDe": "Ich kann Lernpfad auf Niveau A1 zum Thema \"Mein Tag\" ueben.",
+          "linkedContentIds": [
+            "m5-mein-tag",
+            "a1-zeitangaben",
+            "a1-freizeit",
+            "a1-g04-satzbau-fragen",
+            "a1-g10-akkusativ",
+            "a1-g12-trennbare-verben"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "m6-unterwegs",
+      "title": "Unterwegs in der Stadt",
+      "titleDe": "Unterwegs in der Stadt",
+      "description": "Du lịch, giao thông, thành phố, sein/haben, Personalpronomen.",
+      "cefrLevel": "A1",
+      "sortOrder": 6,
+      "estimatedMinutes": 1200,
+      "vocabularyThemes": [
+        "a1-reisen-verkehr",
+        "a1-umwelt"
+      ],
+      "grammarTopics": [
+        "a1-g02-personalpronomen-sein-haben",
+        "a1-g02-personalpronomen-sein-haben",
+        "a1-g03-regelmaessige-verben"
+      ],
+      "skillLinks": [
+        {
+          "skill": "listening",
+          "label": "Hören",
+          "labelVi": "Nghe hiểu",
+          "href": "/listening?level=A1",
+          "emoji": "🎧"
+        },
+        {
+          "skill": "speaking",
+          "label": "Sprechen",
+          "labelVi": "Luyện nói",
+          "href": "/speaking?level=A1",
+          "emoji": "🎙️"
+        },
+        {
+          "skill": "reading",
+          "label": "Lesen",
+          "labelVi": "Đọc hiểu",
+          "href": "/reading?level=A1",
+          "emoji": "📖"
+        },
+        {
+          "skill": "writing",
+          "label": "Schreiben",
+          "labelVi": "Luyện viết",
+          "href": "/writing?level=A1",
+          "emoji": "✍️"
+        }
+      ],
+      "cefrAudit": {
+        "targetLevel": "A1",
+        "verdict": "aligned",
+        "reviewerRole": "German Academic Lead",
+        "notes": "Release-candidate metadata audit: course content for \"Unterwegs in der Stadt\" is aligned with declared A1 scope pending final human spot-check.",
+        "reviewedAt": "2026-05-12",
+        "reviewScope": "release_candidate_metadata_pass"
+      },
+      "learningOutcomes": [
+        {
+          "id": "m6-unterwegs-lo-1",
+          "cefrLevel": "A1",
+          "skill": "course",
+          "canDoVi": "Toi co the luyen lo trinh hoc o trinh do A1 qua chu de \"Unterwegs in der Stadt\".",
+          "canDoDe": "Ich kann Lernpfad auf Niveau A1 zum Thema \"Unterwegs in der Stadt\" ueben.",
+          "linkedContentIds": [
+            "m6-unterwegs",
+            "a1-reisen-verkehr",
+            "a1-umwelt",
+            "a1-g02-personalpronomen-sein-haben",
+            "a1-g02-personalpronomen-sein-haben",
+            "a1-g03-regelmaessige-verben"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "m7-alltag",
+      "title": "Alltag: Arbeit, Schule, Service",
+      "titleDe": "Alltag: Arbeit, Schule, Dienstleistungen",
+      "description": "Công việc, giáo dục, dịch vụ, giao tiếp — tổng hợp ngữ pháp A1.",
+      "cefrLevel": "A1",
+      "sortOrder": 7,
+      "estimatedMinutes": 900,
+      "vocabularyThemes": [
+        "a1-arbeit-beruf",
+        "a1-ausbildung-lernen",
+        "a1-dienstleistungen",
+        "a1-kommunikation"
+      ],
+      "grammarTopics": [],
+      "skillLinks": [
+        {
+          "skill": "listening",
+          "label": "Hören",
+          "labelVi": "Nghe hiểu",
+          "href": "/listening?level=A1",
+          "emoji": "🎧"
+        },
+        {
+          "skill": "speaking",
+          "label": "Sprechen",
+          "labelVi": "Luyện nói",
+          "href": "/speaking?level=A1",
+          "emoji": "🎙️"
+        },
+        {
+          "skill": "reading",
+          "label": "Lesen",
+          "labelVi": "Đọc hiểu",
+          "href": "/reading?level=A1",
+          "emoji": "📖"
+        },
+        {
+          "skill": "writing",
+          "label": "Schreiben",
+          "labelVi": "Luyện viết",
+          "href": "/writing?level=A1",
+          "emoji": "✍️"
+        }
+      ],
+      "cefrAudit": {
+        "targetLevel": "A1",
+        "verdict": "aligned",
+        "reviewerRole": "German Academic Lead",
+        "notes": "Release-candidate metadata audit: course content for \"Alltag: Arbeit, Schule, Dienstleistungen\" is aligned with declared A1 scope pending final human spot-check.",
+        "reviewedAt": "2026-05-12",
+        "reviewScope": "release_candidate_metadata_pass"
+      },
+      "learningOutcomes": [
+        {
+          "id": "m7-alltag-lo-1",
+          "cefrLevel": "A1",
+          "skill": "course",
+          "canDoVi": "Toi co the luyen lo trinh hoc o trinh do A1 qua chu de \"Alltag: Arbeit, Schule, Dienstleistungen\".",
+          "canDoDe": "Ich kann Lernpfad auf Niveau A1 zum Thema \"Alltag: Arbeit, Schule, Dienstleistungen\" ueben.",
+          "linkedContentIds": [
+            "m7-alltag",
+            "a1-arbeit-beruf",
+            "a1-ausbildung-lernen",
+            "a1-dienstleistungen",
+            "a1-kommunikation"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "m8-pruefungsvorbereitung",
+      "title": "Prüfungsvorbereitung A1",
+      "titleDe": "Prüfungsvorbereitung A1",
+      "description": "Tổng ôn 4 kỹ năng, mock exams Goethe A1, chiến lược làm bài.",
+      "cefrLevel": "A1",
+      "sortOrder": 8,
+      "estimatedMinutes": 900,
+      "vocabularyThemes": [],
+      "grammarTopics": [],
+      "skillLinks": [
+        {
+          "skill": "listening",
+          "label": "Hören",
+          "labelVi": "Nghe ôn thi",
+          "href": "/listening?level=A1",
+          "emoji": "🎧"
+        },
+        {
+          "skill": "speaking",
+          "label": "Sprechen",
+          "labelVi": "Nói ôn thi",
+          "href": "/speaking?level=A1",
+          "emoji": "🎙️"
+        },
+        {
+          "skill": "reading",
+          "label": "Lesen",
+          "labelVi": "Đọc ôn thi",
+          "href": "/reading?level=A1",
+          "emoji": "📖"
+        },
+        {
+          "skill": "writing",
+          "label": "Schreiben",
+          "labelVi": "Viết ôn thi",
+          "href": "/writing?level=A1",
+          "emoji": "✍️"
+        }
+      ],
+      "cefrAudit": {
+        "targetLevel": "A1",
+        "verdict": "aligned",
+        "reviewerRole": "German Academic Lead",
+        "notes": "Release-candidate metadata audit: course content for \"Prüfungsvorbereitung A1\" is aligned with declared A1 scope pending final human spot-check.",
+        "reviewedAt": "2026-05-12",
+        "reviewScope": "release_candidate_metadata_pass"
+      },
+      "learningOutcomes": [
+        {
+          "id": "m8-pruefungsvorbereitung-lo-1",
+          "cefrLevel": "A1",
+          "skill": "course",
+          "canDoVi": "Toi co the luyen lo trinh hoc o trinh do A1 qua chu de \"Prüfungsvorbereitung A1\".",
+          "canDoDe": "Ich kann Lernpfad auf Niveau A1 zum Thema \"Prüfungsvorbereitung A1\" ueben.",
+          "linkedContentIds": [
+            "m8-pruefungsvorbereitung"
+          ]
+        }
+      ]
+    }
+  ],
+  "learningOutcomes": [
+    {
+      "id": "deutsch-a1-anfaenger-lo-1",
+      "cefrLevel": "A1",
+      "skill": "course",
+      "canDoVi": "Toi co the luyen lo trinh hoc o trinh do A1 qua chu de \"Deutsch A1 — Anfänger\".",
+      "canDoDe": "Ich kann Lernpfad auf Niveau A1 zum Thema \"Deutsch A1 — Anfänger\" ueben.",
+      "linkedContentIds": [
+        "deutsch-a1-anfaenger"
+      ]
+    }
+  ]
 }

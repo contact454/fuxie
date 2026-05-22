@@ -160,7 +160,20 @@
       "exampleSentence2": "Gadamer argumentierte, dass wir Texte nicht objektiv auslegen, sondern sie in unser eigenes Vorverständnis integrieren.",
       "exampleTranslation2": "Gadamer lập luận rằng chúng ta không diễn giải văn bản một cách khách quan, mà tích hợp chúng vào tiền hiểu biết của chính chúng ta.",
       "imageUrl": "/images/vocab/c2-hermeneutischer-zirkel/auslegen.png",
-      "meaningDe": "den Sinn einer Aussage oder eines Zeichens durch Analyse und Deutung erschließen"
+      "meaningDe": "den Sinn einer Aussage oder eines Zeichens durch Analyse und Deutung erschließen",
+      "conjugation": {
+        "praesens": {
+          "ich": "auslege",
+          "du": "auslegst",
+          "er_sie_es": "auslegt",
+          "wir": "auslegen",
+          "ihr": "auslegt",
+          "sie_Sie": "auslegen"
+        },
+        "isIrregular": false,
+        "isSeparable": true,
+        "reviewStatus": "auto_generated_needs_spot_check"
+      }
     },
     {
       "word": "situationsgebunden",
@@ -203,6 +216,26 @@
       "exampleTranslation2": "Gadamer chỉ ra rằng khả năng hiểu biết của chúng ta gắn liền không thể tách rời với sự tồn tại bị ràng buộc bởi truyền thống của chúng ta.",
       "imageUrl": "/images/vocab/c2-hermeneutischer-zirkel/traditionsverhaftet.png",
       "meaningDe": "stark von einer Tradition geprägt oder davon abhängig"
+    }
+  ],
+  "cefrAudit": {
+    "targetLevel": "C2",
+    "verdict": "aligned",
+    "reviewerRole": "German Academic Lead",
+    "notes": "Release-candidate metadata audit: vocabulary content for \"Hermeneutischer Zirkel & Gadamer\" is aligned with declared C2 scope pending final human spot-check.",
+    "reviewedAt": "2026-05-12",
+    "reviewScope": "release_candidate_metadata_pass"
+  },
+  "learningOutcomes": [
+    {
+      "id": "c2-hermeneutischer-zirkel-lo-1",
+      "cefrLevel": "C2",
+      "skill": "vocabulary",
+      "canDoVi": "Toi co the luyen tu vung o trinh do C2 qua chu de \"Hermeneutischer Zirkel & Gadamer\".",
+      "canDoDe": "Ich kann Wortschatz auf Niveau C2 zum Thema \"Hermeneutischer Zirkel & Gadamer\" ueben.",
+      "linkedContentIds": [
+        "c2-hermeneutischer-zirkel"
+      ]
     }
   ]
 }

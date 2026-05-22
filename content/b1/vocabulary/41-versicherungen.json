@@ -202,7 +202,20 @@
       "exampleSentence2": "Er hat sich bei der Stadtverwaltung umgemeldet.",
       "exampleTranslation2": "Anh ấy đã đăng ký lại địa chỉ với chính quyền thành phố.",
       "imageUrl": "/images/vocab/b1-versicherungen/melden.png",
-      "meaningDe": "Jemandem eine Information geben oder etwas offiziell sagen"
+      "meaningDe": "Jemandem eine Information geben oder etwas offiziell sagen",
+      "conjugation": {
+        "praesens": {
+          "ich": "melde",
+          "du": "meldst",
+          "er_sie_es": "meldet",
+          "wir": "melden",
+          "ihr": "meldet",
+          "sie_Sie": "melden"
+        },
+        "isIrregular": false,
+        "isSeparable": false,
+        "reviewStatus": "auto_generated_needs_spot_check"
+      }
     },
     {
       "word": "zahlen",
@@ -216,7 +229,20 @@
       "exampleSentence2": "Kann ich die Rechnung bar oder mit Karte zahlen?",
       "exampleTranslation2": "Tôi có thể thanh toán hóa đơn bằng tiền mặt hay bằng thẻ?",
       "imageUrl": "/images/vocab/b1-versicherungen/zahlen.png",
-      "meaningDe": "Geld für etwas geben"
+      "meaningDe": "Geld für etwas geben",
+      "conjugation": {
+        "praesens": {
+          "ich": "zahle",
+          "du": "zahlst",
+          "er_sie_es": "zahlt",
+          "wir": "zahlen",
+          "ihr": "zahlt",
+          "sie_Sie": "zahlen"
+        },
+        "isIrregular": false,
+        "isSeparable": false,
+        "reviewStatus": "auto_generated_needs_spot_check"
+      }
     },
     {
       "word": "ersetzen",
@@ -230,7 +256,20 @@
       "exampleSentence2": "Es ist schwer, einen guten Freund zu ersetzen.",
       "exampleTranslation2": "Thật khó để thay thế một người bạn tốt.",
       "imageUrl": "/images/vocab/b1-versicherungen/ersetzen.png",
-      "meaningDe": "Etwas Neues geben oder Geld für einen Schaden bezahlen"
+      "meaningDe": "Etwas Neues geben oder Geld für einen Schaden bezahlen",
+      "conjugation": {
+        "praesens": {
+          "ich": "ersetze",
+          "du": "ersetzt",
+          "er_sie_es": "ersetzt",
+          "wir": "ersetzen",
+          "ihr": "ersetzt",
+          "sie_Sie": "ersetzen"
+        },
+        "isIrregular": false,
+        "isSeparable": false,
+        "reviewStatus": "auto_generated_needs_spot_check"
+      }
     },
     {
       "word": "eintreten",
@@ -244,7 +283,20 @@
       "exampleSentence2": "Bitte treten Sie ein, die Tür ist offen.",
       "exampleTranslation2": "Mời vào, cửa đang mở.",
       "imageUrl": "/images/vocab/b1-versicherungen/eintreten.png",
-      "meaningDe": "Wenn ein Ereignis oder ein bestimmter Fall wirklich passiert"
+      "meaningDe": "Wenn ein Ereignis oder ein bestimmter Fall wirklich passiert",
+      "conjugation": {
+        "praesens": {
+          "ich": "eintrete",
+          "du": "eintretst",
+          "er_sie_es": "eintretet",
+          "wir": "eintreten",
+          "ihr": "eintretet",
+          "sie_Sie": "eintreten"
+        },
+        "isIrregular": false,
+        "isSeparable": true,
+        "reviewStatus": "auto_generated_needs_spot_check"
+      }
     },
     {
       "word": "regulieren",
@@ -258,7 +310,20 @@
       "exampleSentence2": "Die Regierung versucht, den Markt zu regulieren.",
       "exampleTranslation2": "Chính phủ đang cố gắng điều chỉnh thị trường.",
       "imageUrl": "/images/vocab/b1-versicherungen/regulieren.png",
-      "meaningDe": "Einen Schaden offiziell bearbeiten und bezahlen"
+      "meaningDe": "Einen Schaden offiziell bearbeiten und bezahlen",
+      "conjugation": {
+        "praesens": {
+          "ich": "reguliere",
+          "du": "regulierst",
+          "er_sie_es": "reguliert",
+          "wir": "regulieren",
+          "ihr": "reguliert",
+          "sie_Sie": "regulieren"
+        },
+        "isIrregular": false,
+        "isSeparable": false,
+        "reviewStatus": "auto_generated_needs_spot_check"
+      }
     },
     {
       "word": "decken",
@@ -272,7 +337,20 @@
       "exampleSentence2": "Bitte deck den Tisch, wir essen gleich.",
       "exampleTranslation2": "Làm ơn dọn bàn, chúng ta sẽ ăn ngay.",
       "imageUrl": "/images/vocab/b1-versicherungen/decken.png",
-      "meaningDe": "Die Kosten für etwas bezahlen"
+      "meaningDe": "Die Kosten für etwas bezahlen",
+      "conjugation": {
+        "praesens": {
+          "ich": "decke",
+          "du": "deckst",
+          "er_sie_es": "deckt",
+          "wir": "decken",
+          "ihr": "deckt",
+          "sie_Sie": "decken"
+        },
+        "isIrregular": false,
+        "isSeparable": false,
+        "reviewStatus": "auto_generated_needs_spot_check"
+      }
     },
     {
       "word": "versichert",
@@ -371,6 +449,26 @@
       "exampleTranslation2": "Trong trường hợp có bất kỳ câu hỏi nào, vui lòng liên hệ dịch vụ khách hàng của chúng tôi.",
       "imageUrl": "/images/vocab/b1-versicherungen/im-falle.png",
       "meaningDe": "falls eine bestimmte Situation eintritt"
+    }
+  ],
+  "cefrAudit": {
+    "targetLevel": "B1",
+    "verdict": "aligned",
+    "reviewerRole": "German Academic Lead",
+    "notes": "Release-candidate metadata audit: vocabulary content for \"Versicherungen\" is aligned with declared B1 scope pending final human spot-check.",
+    "reviewedAt": "2026-05-12",
+    "reviewScope": "release_candidate_metadata_pass"
+  },
+  "learningOutcomes": [
+    {
+      "id": "b1-versicherungen-lo-1",
+      "cefrLevel": "B1",
+      "skill": "vocabulary",
+      "canDoVi": "Toi co the luyen tu vung o trinh do B1 qua chu de \"Versicherungen\".",
+      "canDoDe": "Ich kann Wortschatz auf Niveau B1 zum Thema \"Versicherungen\" ueben.",
+      "linkedContentIds": [
+        "b1-versicherungen"
+      ]
     }
   ]
 }

@@ -282,4 +282,265 @@ describe('recordLearningActivity', () => {
             select: { id: true },
         })
     })
+
+    it('records a meaningful completion analytics event when metadata is supplied', async () => {
+        const tx = {
+            userStreak: {
+                findUnique: vi.fn().mockResolvedValue({
+                    userId: 'user-1',
+                    currentStreak: 1,
+                    longestStreak: 1,
+                    lastActivityDate: startOfProcessLocalDay(FROZEN_NOW),
+                    freezesAvailable: 1,
+                    freezesUsed: 0,
+                }),
+                create: vi.fn(),
+                update: vi.fn(),
+            },
+            streakFreezeUsage: {
+                create: vi.fn(),
+                findMany: vi.fn(),
+            },
+            dailyActivity: {
+                upsert: vi.fn().mockResolvedValue({}),
+            },
+            userProfile: {
+                updateMany: vi.fn().mockResolvedValue({ count: 1 }),
+            },
+            userProgress: {
+                create: vi.fn().mockResolvedValue({}),
+            },
+            analyticsEvent: {
+                findFirst: vi.fn().mockResolvedValue(null),
+                create: vi.fn().mockResolvedValue({ id: 'analytics-1' }),
+            },
+        }
+
+        await recordLearningActivity(tx as unknown as Parameters<typeof recordLearningActivity>[0], {
+            userId: 'user-1',
+            exerciseId: 'A1-T1-001',
+            score: 8,
+            maxScore: 10,
+            percentScore: 80,
+            xpEarned: 10,
+            timeSpentSeconds: 90,
+            exercisesCompleted: 1,
+            analytics: {
+                actionId: 'A1-T1-001',
+                actionType: 'reading_task',
+                level: 'A1',
+                skill: 'LESEN',
+                source: 'reading.submit',
+            },
+        })
+
+        expect(tx.analyticsEvent.create).toHaveBeenCalledWith({
+            data: expect.objectContaining({
+                userId: 'user-1',
+                role: 'LEARNER',
+                eventName: 'meaningful_action_completed',
+                actionId: 'A1-T1-001',
+                actionType: 'reading_task',
+                level: 'A1',
+                skill: 'LESEN',
+                source: 'reading.submit',
+                metadata: {
+                    xp_awarded: 10,
+                    duration_seconds: 90,
+                    score_percent: 80,
+                },
+            }),
+        })
+    })
+
+    it('records a streak advanced event for a new learning day', async () => {
+        const tx = {
+            userStreak: {
+                findUnique: vi.fn().mockResolvedValue({
+                    userId: 'user-1',
+                    currentStreak: 1,
+                    longestStreak: 1,
+                    lastActivityDate: new Date('2026-04-22T00:00:00.000Z'),
+                    freezesAvailable: 1,
+                    freezesUsed: 0,
+                }),
+                create: vi.fn(),
+                update: vi.fn().mockResolvedValue({}),
+            },
+            streakFreezeUsage: {
+                create: vi.fn(),
+                findMany: vi.fn(),
+            },
+            dailyActivity: {
+                upsert: vi.fn().mockResolvedValue({}),
+            },
+            userProfile: {
+                updateMany: vi.fn().mockResolvedValue({ count: 1 }),
+            },
+            userProgress: {
+                create: vi.fn().mockResolvedValue({}),
+            },
+            analyticsEvent: {
+                findFirst: vi.fn().mockResolvedValue(null),
+                create: vi.fn().mockResolvedValue({ id: 'analytics-1' }),
+            },
+        }
+
+        await recordLearningActivity(tx as unknown as Parameters<typeof recordLearningActivity>[0], {
+            userId: 'user-1',
+            exerciseId: 'A1-T1-001',
+            xpEarned: 10,
+            exercisesCompleted: 1,
+            analytics: {
+                actionId: 'A1-T1-001',
+                actionType: 'reading_task',
+                level: 'A1',
+                skill: 'LESEN',
+                source: 'reading.submit',
+            },
+        })
+
+        expect(tx.analyticsEvent.create).toHaveBeenCalledWith({
+            data: expect.objectContaining({
+                userId: 'user-1',
+                eventName: 'streak_advanced',
+                source: 'streak.learning_activity',
+                actionId: 'A1-T1-001',
+                actionType: 'reading_task',
+                metadata: expect.objectContaining({
+                    current_streak: 2,
+                    freezes_available: 1,
+                    action_type: 'reading_task',
+                    source: 'reading.submit',
+                }),
+            }),
+        })
+    })
+
+    it('records a streak freeze event when recovery protects the streak', async () => {
+        const tx = {
+            userStreak: {
+                findUnique: vi.fn().mockResolvedValue({
+                    userId: 'user-1',
+                    currentStreak: 4,
+                    longestStreak: 6,
+                    lastActivityDate: new Date('2026-04-21T00:00:00.000Z'),
+                    freezesAvailable: 2,
+                    freezesUsed: 1,
+                }),
+                create: vi.fn(),
+                update: vi.fn().mockResolvedValue({}),
+            },
+            streakFreezeUsage: {
+                create: vi.fn().mockResolvedValue({ id: 'freeze-usage-1' }),
+                findMany: vi.fn(),
+            },
+            dailyActivity: {
+                upsert: vi.fn().mockResolvedValue({}),
+            },
+            userProfile: {
+                updateMany: vi.fn().mockResolvedValue({ count: 1 }),
+            },
+            userProgress: {
+                create: vi.fn().mockResolvedValue({}),
+            },
+            analyticsEvent: {
+                findFirst: vi.fn().mockResolvedValue(null),
+                create: vi.fn().mockResolvedValue({ id: 'analytics-1' }),
+            },
+        }
+
+        await recordLearningActivity(tx as unknown as Parameters<typeof recordLearningActivity>[0], {
+            userId: 'user-1',
+            exerciseId: 'listening:a1:01',
+            xpEarned: 10,
+            exercisesCompleted: 1,
+            analytics: {
+                actionId: 'listening:a1:01',
+                actionType: 'listening_task',
+                level: 'A1',
+                skill: 'HOEREN',
+                source: 'listening.submit',
+            },
+        })
+
+        expect(tx.analyticsEvent.create).toHaveBeenCalledWith({
+            data: expect.objectContaining({
+                userId: 'user-1',
+                eventName: 'streak_freeze_used',
+                source: 'streak.learning_activity',
+                actionId: 'freeze-usage-1',
+                actionType: 'listening_task',
+                metadata: expect.objectContaining({
+                    current_streak: 5,
+                    freezes_available: 1,
+                    freezes_used: 2,
+                    freeze_usage_id: 'freeze-usage-1',
+                }),
+            }),
+        })
+    })
+
+    it('records a streak reset event when the learner returns after the freeze window', async () => {
+        const tx = {
+            userStreak: {
+                findUnique: vi.fn().mockResolvedValue({
+                    userId: 'user-1',
+                    currentStreak: 4,
+                    longestStreak: 6,
+                    lastActivityDate: new Date('2026-04-18T00:00:00.000Z'),
+                    freezesAvailable: 0,
+                    freezesUsed: 1,
+                }),
+                create: vi.fn(),
+                update: vi.fn().mockResolvedValue({}),
+            },
+            streakFreezeUsage: {
+                create: vi.fn(),
+                findMany: vi.fn(),
+            },
+            dailyActivity: {
+                upsert: vi.fn().mockResolvedValue({}),
+            },
+            userProfile: {
+                updateMany: vi.fn().mockResolvedValue({ count: 1 }),
+            },
+            userProgress: {
+                create: vi.fn().mockResolvedValue({}),
+            },
+            analyticsEvent: {
+                findFirst: vi.fn().mockResolvedValue(null),
+                create: vi.fn().mockResolvedValue({ id: 'analytics-1' }),
+            },
+        }
+
+        await recordLearningActivity(tx as unknown as Parameters<typeof recordLearningActivity>[0], {
+            userId: 'user-1',
+            exerciseId: 'speaking:a1:01',
+            xpEarned: 10,
+            exercisesCompleted: 1,
+            analytics: {
+                actionId: 'speaking:a1:01',
+                actionType: 'speaking_submission',
+                level: 'A1',
+                skill: 'SPRECHEN',
+                source: 'speaking.submit',
+            },
+        })
+
+        expect(tx.analyticsEvent.create).toHaveBeenCalledWith({
+            data: expect.objectContaining({
+                userId: 'user-1',
+                eventName: 'streak_reset',
+                source: 'streak.learning_activity',
+                actionId: 'speaking:a1:01',
+                actionType: 'speaking_submission',
+                metadata: expect.objectContaining({
+                    current_streak: 1,
+                    freezes_available: 0,
+                    freezes_used: 1,
+                }),
+            }),
+        })
+    })
 })

@@ -160,7 +160,8 @@
       "exampleSentence2": "Ich besuche meine Verwandten oft am Wochenende.",
       "exampleTranslation2": "Tôi thường xuyên thăm họ hàng vào cuối tuần.",
       "imageUrl": "/images/vocab/a2-feste-geburtstag/die-verwandten.png",
-      "meaningDe": "Personen aus der eigenen Familie, wie Onkel, Tanten oder Cousins"
+      "meaningDe": "Personen aus der eigenen Familie, wie Onkel, Tanten oder Cousins",
+      "pluralStatus": "not_applicable_or_needs_review"
     },
     {
       "word": "Kleid",
@@ -258,7 +259,20 @@
       "exampleSentence2": "Sie hat die Tische sehr schön dekoriert.",
       "exampleTranslation2": "Cô ấy đã trang trí bàn rất đẹp.",
       "imageUrl": "/images/vocab/a2-feste-geburtstag/dekorieren.png",
-      "meaningDe": "einen Raum oder einen Gegenstand schöner machen"
+      "meaningDe": "einen Raum oder einen Gegenstand schöner machen",
+      "conjugation": {
+        "praesens": {
+          "ich": "dekoriere",
+          "du": "dekorierst",
+          "er_sie_es": "dekoriert",
+          "wir": "dekorieren",
+          "ihr": "dekoriert",
+          "sie_Sie": "dekorieren"
+        },
+        "isIrregular": false,
+        "isSeparable": false,
+        "reviewStatus": "auto_generated_needs_spot_check"
+      }
     },
     {
       "word": "wünschen",
@@ -272,7 +286,20 @@
       "exampleSentence2": "Was wünschst du dir zum Geburtstag?",
       "exampleTranslation2": "Bạn mong ước điều gì vào ngày sinh nhật?",
       "imageUrl": "/images/vocab/a2-feste-geburtstag/wuenschen.png",
-      "meaningDe": "hoffen, dass man etwas bekommt oder dass jemandem etwas Gutes passiert"
+      "meaningDe": "hoffen, dass man etwas bekommt oder dass jemandem etwas Gutes passiert",
+      "conjugation": {
+        "praesens": {
+          "ich": "wuensche",
+          "du": "wuenschst",
+          "er_sie_es": "wuenscht",
+          "wir": "wuenschen",
+          "ihr": "wuenscht",
+          "sie_Sie": "wuenschen"
+        },
+        "isIrregular": false,
+        "isSeparable": false,
+        "reviewStatus": "auto_generated_needs_spot_check"
+      }
     },
     {
       "word": "organisieren",
@@ -286,7 +313,20 @@
       "exampleSentence2": "Wir müssen das Essen und die Getränke organisieren.",
       "exampleTranslation2": "Chúng ta phải tổ chức đồ ăn và thức uống.",
       "imageUrl": "/images/vocab/a2-feste-geburtstag/organisieren.png",
-      "meaningDe": "einen Plan machen, wie etwas abläuft"
+      "meaningDe": "einen Plan machen, wie etwas abläuft",
+      "conjugation": {
+        "praesens": {
+          "ich": "organisiere",
+          "du": "organisierst",
+          "er_sie_es": "organisiert",
+          "wir": "organisieren",
+          "ihr": "organisiert",
+          "sie_Sie": "organisieren"
+        },
+        "isIrregular": false,
+        "isSeparable": false,
+        "reviewStatus": "auto_generated_needs_spot_check"
+      }
     },
     {
       "word": "vorbereiten",
@@ -300,7 +340,20 @@
       "exampleSentence2": "Sie hat alles für die Gäste vorbereitet.",
       "exampleTranslation2": "Cô ấy đã chuẩn bị mọi thứ cho khách.",
       "imageUrl": "/images/vocab/a2-feste-geburtstag/vorbereiten.png",
-      "meaningDe": "alles nötig machen, bevor ein Ereignis beginnt"
+      "meaningDe": "alles nötig machen, bevor ein Ereignis beginnt",
+      "conjugation": {
+        "praesens": {
+          "ich": "vorbereite",
+          "du": "vorbereitst",
+          "er_sie_es": "vorbereitet",
+          "wir": "vorbereiten",
+          "ihr": "vorbereitet",
+          "sie_Sie": "vorbereiten"
+        },
+        "isIrregular": false,
+        "isSeparable": true,
+        "reviewStatus": "auto_generated_needs_spot_check"
+      }
     },
     {
       "word": "sich anziehen",
@@ -314,7 +367,20 @@
       "exampleSentence2": "Zieh dich warm an, es ist kalt draußen.",
       "exampleTranslation2": "Hãy mặc ấm vào, bên ngoài trời lạnh.",
       "imageUrl": "/images/vocab/a2-feste-geburtstag/sich-anziehen.png",
-      "meaningDe": "Kleidung an den Körper ziehen"
+      "meaningDe": "Kleidung an den Körper ziehen",
+      "conjugation": {
+        "praesens": {
+          "ich": "anziehe",
+          "du": "anziehst",
+          "er_sie_es": "anzieht",
+          "wir": "anziehen",
+          "ihr": "anzieht",
+          "sie_Sie": "anziehen"
+        },
+        "isIrregular": false,
+        "isSeparable": true,
+        "reviewStatus": "auto_generated_needs_spot_check"
+      }
     },
     {
       "word": "festlich",
@@ -371,6 +437,26 @@
       "exampleTranslation2": "Chúng tôi về nhà vào dịp Giáng sinh.",
       "imageUrl": "/images/vocab/a2-feste-geburtstag/zu.png",
       "meaningDe": "zeigt die Richtung zu einem Ort oder einer Person, oder gehört zu einem bestimmten Ereignis."
+    }
+  ],
+  "cefrAudit": {
+    "targetLevel": "A2",
+    "verdict": "aligned",
+    "reviewerRole": "German Academic Lead",
+    "notes": "Release-candidate metadata audit: vocabulary content for \"Feste & Geburtstag\" is aligned with declared A2 scope pending final human spot-check.",
+    "reviewedAt": "2026-05-12",
+    "reviewScope": "release_candidate_metadata_pass"
+  },
+  "learningOutcomes": [
+    {
+      "id": "a2-feste-geburtstag-lo-1",
+      "cefrLevel": "A2",
+      "skill": "vocabulary",
+      "canDoVi": "Toi co the luyen tu vung o trinh do A2 qua chu de \"Feste & Geburtstag\".",
+      "canDoDe": "Ich kann Wortschatz auf Niveau A2 zum Thema \"Feste & Geburtstag\" ueben.",
+      "linkedContentIds": [
+        "a2-feste-geburtstag"
+      ]
     }
   ]
 }

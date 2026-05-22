@@ -442,7 +442,20 @@
       "exampleSentence2": "Ich esse gerne Pizza.",
       "exampleTranslation2": "Tôi thích ăn pizza.",
       "imageUrl": "/images/vocab/a2-essen-restaurant/essen.png",
-      "meaningDe": "Nahrung in den Mund nehmen und schlucken"
+      "meaningDe": "Nahrung in den Mund nehmen und schlucken",
+      "conjugation": {
+        "praesens": {
+          "ich": "esse",
+          "du": "isst",
+          "er_sie_es": "isst",
+          "wir": "essen",
+          "ihr": "esst",
+          "sie_Sie": "essen"
+        },
+        "isIrregular": true,
+        "isSeparable": false,
+        "reviewStatus": "auto_generated_needs_spot_check"
+      }
     },
     {
       "word": "trinken",
@@ -454,7 +467,20 @@
       "exampleSentence2": "Ich trinke gerne Wasser.",
       "exampleTranslation2": "Tôi thích uống nước.",
       "imageUrl": "/images/vocab/a2-essen-restaurant/trinken.png",
-      "meaningDe": "man nimmt Getränke in den Mund"
+      "meaningDe": "man nimmt Getränke in den Mund",
+      "conjugation": {
+        "praesens": {
+          "ich": "trinke",
+          "du": "trinkst",
+          "er_sie_es": "trinkt",
+          "wir": "trinken",
+          "ihr": "trinkt",
+          "sie_Sie": "trinken"
+        },
+        "isIrregular": false,
+        "isSeparable": false,
+        "reviewStatus": "auto_generated_needs_spot_check"
+      }
     },
     {
       "word": "bezahlen",
@@ -466,7 +492,20 @@
       "exampleSentence2": "Wir müssen die Rechnung bezahlen.",
       "exampleTranslation2": "Chúng ta phải thanh toán hóa đơn.",
       "imageUrl": "/images/vocab/a2-essen-restaurant/bezahlen.png",
-      "meaningDe": "man gibt Geld für etwas"
+      "meaningDe": "man gibt Geld für etwas",
+      "conjugation": {
+        "praesens": {
+          "ich": "bezahle",
+          "du": "bezahlst",
+          "er_sie_es": "bezahlt",
+          "wir": "bezahlen",
+          "ihr": "bezahlt",
+          "sie_Sie": "bezahlen"
+        },
+        "isIrregular": false,
+        "isSeparable": false,
+        "reviewStatus": "auto_generated_needs_spot_check"
+      }
     },
     {
       "word": "Gast",
@@ -507,6 +546,26 @@
       "exampleTranslation2": "Bạn có đói không?",
       "imageUrl": "/images/vocab/a2-essen-restaurant/hungrig.png",
       "meaningDe": "das Gefühl, dass man etwas essen möchte"
+    }
+  ],
+  "cefrAudit": {
+    "targetLevel": "A2",
+    "verdict": "aligned",
+    "reviewerRole": "German Academic Lead",
+    "notes": "Release-candidate metadata audit: vocabulary content for \"Essen & Restaurant\" is aligned with declared A2 scope pending final human spot-check.",
+    "reviewedAt": "2026-05-12",
+    "reviewScope": "release_candidate_metadata_pass"
+  },
+  "learningOutcomes": [
+    {
+      "id": "a2-essen-restaurant-lo-1",
+      "cefrLevel": "A2",
+      "skill": "vocabulary",
+      "canDoVi": "Toi co the luyen tu vung o trinh do A2 qua chu de \"Essen & Restaurant\".",
+      "canDoDe": "Ich kann Wortschatz auf Niveau A2 zum Thema \"Essen & Restaurant\" ueben.",
+      "linkedContentIds": [
+        "a2-essen-restaurant"
+      ]
     }
   ]
 }

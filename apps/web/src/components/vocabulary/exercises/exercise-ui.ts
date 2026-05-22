@@ -20,7 +20,7 @@ export function exerciseAudioButtonClass(className = '') {
 
 export function exerciseInlineAudioClass(className = '') {
     return fx(
-        'mt-3 inline-flex items-center gap-2 rounded-full bg-[#F3FBFF] px-3 py-1.5 text-sm font-bold text-[#3C78A8] ring-1 ring-[#60A8E4]/20 transition-colors hover:bg-[#CCE4F0]/55 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#60A8E4]/40',
+        'mt-3 inline-flex items-center gap-2 rounded-full bg-[#F3FBFF] px-3 py-1.5 text-sm font-bold text-text-brand ring-1 ring-[#60A8E4]/20 transition-colors hover:bg-[#CCE4F0]/55 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#60A8E4]/40',
         className
     )
 }
@@ -38,7 +38,7 @@ export function exerciseOptionClass({
         'min-h-[64px] rounded-2xl border-2 px-4 py-4 text-center text-base font-bold transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#60A8E4]/35 disabled:cursor-default sm:px-5',
         revealed
             ? selected
-                ? 'border-[#60A8E4] bg-[#EEF7FF] text-[#3C78A8] shadow-md shadow-sky-900/10 ring-2 ring-[#60A8E4]/20'
+                ? 'border-[#60A8E4] bg-[#EEF7FF] text-text-brand shadow-md shadow-sky-900/10 ring-2 ring-[#60A8E4]/20'
                 : 'border-slate-100 bg-white/70 text-slate-400'
             : 'border-[#CCE4F0] bg-white text-slate-800 shadow-sm hover:-translate-y-0.5 hover:border-[#60A8E4] hover:bg-[#F3FBFF] hover:shadow-md hover:shadow-sky-900/10',
         className
@@ -59,11 +59,11 @@ export function exercisePairCardClass({
     return fx(
         'w-full min-h-[54px] rounded-2xl border-2 px-4 py-3.5 text-sm font-bold transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#60A8E4]/35 disabled:cursor-default',
         matched
-            ? 'border-[#2EC4B6]/45 bg-[#EAFBF8] text-[#0F766E] opacity-75'
+            ? 'border-[#2EC4B6]/45 bg-[#EAFBF8] text-text-success opacity-75'
             : wrong
                 ? 'animate-shake border-red-300 bg-red-50 text-red-600'
                 : selected
-                    ? 'border-[#60A8E4] bg-[#EEF7FF] text-[#3C78A8] shadow-md shadow-sky-900/10 ring-2 ring-[#60A8E4]/20'
+                    ? 'border-[#60A8E4] bg-[#EEF7FF] text-text-brand shadow-md shadow-sky-900/10 ring-2 ring-[#60A8E4]/20'
                     : 'border-[#CCE4F0] bg-white text-slate-800 shadow-sm hover:-translate-y-0.5 hover:border-[#60A8E4] hover:bg-[#F3FBFF] hover:shadow-md hover:shadow-sky-900/10',
         className
     )
@@ -87,7 +87,7 @@ export function exerciseTextInputClass({
 
 export function exerciseSpecialCharClass(className = '') {
     return fx(
-        'h-10 w-10 rounded-xl border-2 border-[#CCE4F0] bg-white text-base font-bold text-[#3C78A8] shadow-sm transition-all hover:-translate-y-0.5 hover:border-[#60A8E4] hover:bg-[#F3FBFF] disabled:cursor-not-allowed disabled:border-slate-100 disabled:bg-slate-100 disabled:text-slate-300 disabled:shadow-none',
+        'h-10 w-10 rounded-xl border-2 border-[#CCE4F0] bg-white text-base font-bold text-text-brand shadow-sm transition-all hover:-translate-y-0.5 hover:border-[#60A8E4] hover:bg-[#F3FBFF] disabled:cursor-not-allowed disabled:border-slate-100 disabled:bg-slate-100 disabled:text-slate-300 disabled:shadow-none',
         className
     )
 }
@@ -118,7 +118,7 @@ export function exerciseSecondaryActionClass(disabled = false, className = '') {
 
 export function exerciseHintPanelClass(className = '') {
     return fx(
-        'rounded-2xl border border-[#FFD166]/60 bg-[#FFF7D6] p-3 text-center text-sm font-semibold text-[#A66300]',
+        'rounded-2xl border border-[#FFD166]/60 bg-[#FFF7D6] p-3 text-center text-sm font-semibold text-text-warning',
         className
     )
 }
@@ -154,9 +154,9 @@ export function exerciseTokenClass({
         'rounded-xl px-4 py-2.5 text-sm font-bold transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#60A8E4]/35 disabled:cursor-not-allowed',
         selected
             ? revealed
-                ? 'bg-[#CCE4F0] text-[#3C78A8]'
-                : 'border-2 border-[#60A8E4] bg-white text-[#3C78A8] shadow-sm hover:bg-[#60A8E4] hover:text-white'
-            : 'border-2 border-[#CCE4F0] bg-white text-slate-700 shadow-sm hover:-translate-y-0.5 hover:border-[#60A8E4] hover:bg-[#F3FBFF] hover:text-[#3C78A8] disabled:border-slate-100 disabled:bg-slate-100 disabled:text-slate-300 disabled:shadow-none',
+                ? 'bg-[#CCE4F0] text-text-brand'
+                : 'border-2 border-[#60A8E4] bg-white text-text-brand shadow-sm hover:bg-[#60A8E4] hover:text-white'
+            : 'border-2 border-[#CCE4F0] bg-white text-slate-700 shadow-sm hover:-translate-y-0.5 hover:border-[#60A8E4] hover:bg-[#F3FBFF] hover:text-text-brand disabled:border-slate-100 disabled:bg-slate-100 disabled:text-slate-300 disabled:shadow-none',
         className
     )
 }

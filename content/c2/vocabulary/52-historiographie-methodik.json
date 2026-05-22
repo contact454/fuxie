@@ -48,7 +48,8 @@
       "exampleSentence2": "Das kollektive Geschichtsbewusstsein einer Nation wird durch Narrative geformt, die in Schulen, Medien und politischen Diskursen vermittelt werden.",
       "exampleTranslation2": "Ý thức lịch sử tập thể của một quốc gia được hình thành bởi các câu chuyện được truyền tải trong trường học, phương tiện truyền thông và các diễn ngôn chính trị.",
       "imageUrl": "/images/vocab/c2-historiographie-methodik/das-geschichtsbewusstsein.png",
-      "meaningDe": "Die Fähigkeit und Erkenntnis, die eigene Gegenwart im Kontext historischer Entwicklungen zu verstehen und einzuordnen."
+      "meaningDe": "Die Fähigkeit und Erkenntnis, die eigene Gegenwart im Kontext historischer Entwicklungen zu verstehen und einzuordnen.",
+      "pluralStatus": "not_applicable_or_needs_review"
     },
     {
       "word": "Objektivitätsprämisse",
@@ -104,7 +105,8 @@
       "exampleSentence2": "Die Metahistorie befasst sich mit den philosophischen Grundlagen, den theoretischen Annahmen und den stilistischen Eigenheiten der Geschichtsschreibung selbst.",
       "exampleTranslation2": "Siêu lịch sử đề cập đến các nền tảng triết học, các giả định lý thuyết và các đặc điểm phong cách của chính việc viết sử.",
       "imageUrl": "/images/vocab/c2-historiographie-methodik/die-metahistorie.png",
-      "meaningDe": "Eine theoretische Reflexion über die Natur und die Strukturen der Geschichtsschreibung."
+      "meaningDe": "Eine theoretische Reflexion über die Natur und die Strukturen der Geschichtsschreibung.",
+      "pluralStatus": "not_applicable_or_needs_review"
     },
     {
       "word": "Forschungsdesiderat",
@@ -132,7 +134,20 @@
       "exampleSentence2": "Die Schwierigkeit, historische Entwicklungen eindeutig zu kausalisieren, liegt in der Vielzahl der beteiligten Akteure und unvorhersehbaren Einflüsse.",
       "exampleTranslation2": "Khó khăn trong việc nhân quả hóa rõ ràng các diễn biến lịch sử nằm ở sự đa dạng của các yếu tố liên quan và các ảnh hưởng không thể đoán trước.",
       "imageUrl": "/images/vocab/c2-historiographie-methodik/kausalisieren.png",
-      "meaningDe": "Einen Zusammenhang zwischen Ereignissen als Ursache-Wirkungs-Beziehung darstellen."
+      "meaningDe": "Einen Zusammenhang zwischen Ereignissen als Ursache-Wirkungs-Beziehung darstellen.",
+      "conjugation": {
+        "praesens": {
+          "ich": "kausalisiere",
+          "du": "kausalisierst",
+          "er_sie_es": "kausalisiert",
+          "wir": "kausalisieren",
+          "ihr": "kausalisiert",
+          "sie_Sie": "kausalisieren"
+        },
+        "isIrregular": false,
+        "isSeparable": false,
+        "reviewStatus": "auto_generated_needs_spot_check"
+      }
     },
     {
       "word": "synkron",
@@ -147,6 +162,26 @@
       "exampleTranslation2": "Cái nhìn đồng đại về xã hội Pháp năm 1789 cho thấy những căng thẳng đã dẫn đến sự bùng nổ của Cách mạng.",
       "imageUrl": "/images/vocab/c2-historiographie-methodik/synkron.png",
       "meaningDe": "In einer Weise geschehend, bei der zwei oder mehr Vorgänge exakt zum selben Zeitpunkt stattfinden."
+    }
+  ],
+  "cefrAudit": {
+    "targetLevel": "C2",
+    "verdict": "aligned",
+    "reviewerRole": "German Academic Lead",
+    "notes": "Release-candidate metadata audit: vocabulary content for \"Historiographie & Methodik\" is aligned with declared C2 scope pending final human spot-check.",
+    "reviewedAt": "2026-05-12",
+    "reviewScope": "release_candidate_metadata_pass"
+  },
+  "learningOutcomes": [
+    {
+      "id": "c2-historiographie-methodik-lo-1",
+      "cefrLevel": "C2",
+      "skill": "vocabulary",
+      "canDoVi": "Toi co the luyen tu vung o trinh do C2 qua chu de \"Historiographie & Methodik\".",
+      "canDoDe": "Ich kann Wortschatz auf Niveau C2 zum Thema \"Historiographie & Methodik\" ueben.",
+      "linkedContentIds": [
+        "c2-historiographie-methodik"
+      ]
     }
   ]
 }

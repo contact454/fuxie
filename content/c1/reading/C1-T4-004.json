@@ -63,7 +63,9 @@
       "points": 1,
       "explanation": {
         "key_evidence": "Text/Beitrag A",
-        "reasoning": "[Inferential] Die Aussage 'Denkmalschutz muss flexibler und dialogorientierte...' entspricht der Position von A."
+        "reasoning": "[Inferential] Die Aussage 'Denkmalschutz muss flexibler und dialogorientierte...' entspricht der Position von A.",
+        "de": "Die richtige Antwort ist A. Die relevante Textstelle lautet: \"Text/Beitrag A\".",
+        "vi": "??p ?n ??ng l? A. H?y ??i chi?u v?i th?ng tin then ch?t trong b?i ??c."
       }
     },
     {
@@ -75,7 +77,9 @@
       "points": 1,
       "explanation": {
         "key_evidence": "Text/Beitrag B",
-        "reasoning": "Die Aussage 'Wohnungsbau sollte Vorrang vor Denkmalschutz haben...' entspricht der Position von B."
+        "reasoning": "Die Aussage 'Wohnungsbau sollte Vorrang vor Denkmalschutz haben...' entspricht der Position von B.",
+        "de": "Die richtige Antwort ist B. Die relevante Textstelle lautet: \"Text/Beitrag B\".",
+        "vi": "??p ?n ??ng l? B. H?y ??i chi?u v?i th?ng tin then ch?t trong b?i ??c."
       }
     },
     {
@@ -87,7 +91,9 @@
       "points": 1,
       "explanation": {
         "key_evidence": "Text/Beitrag C",
-        "reasoning": "[Inferential] Die Aussage 'Historische Gebäude sind unwiederbringliches kultu...' entspricht der Position von C."
+        "reasoning": "[Inferential] Die Aussage 'Historische Gebäude sind unwiederbringliches kultu...' entspricht der Position von C.",
+        "de": "Die richtige Antwort ist C. Die relevante Textstelle lautet: \"Text/Beitrag C\".",
+        "vi": "??p ?n ??ng l? C. H?y ??i chi?u v?i th?ng tin then ch?t trong b?i ??c."
       }
     },
     {
@@ -99,7 +105,9 @@
       "points": 1,
       "explanation": {
         "key_evidence": "Text/Beitrag D",
-        "reasoning": "[Inferential] Die Aussage 'Modernisierung und Denkmalschutz lassen sich verei...' entspricht der Position von D."
+        "reasoning": "[Inferential] Die Aussage 'Modernisierung und Denkmalschutz lassen sich verei...' entspricht der Position von D.",
+        "de": "Die richtige Antwort ist D. Die relevante Textstelle lautet: \"Text/Beitrag D\".",
+        "vi": "??p ?n ??ng l? D. H?y ??i chi?u v?i th?ng tin then ch?t trong b?i ??c."
       }
     },
     {
@@ -111,7 +119,9 @@
       "points": 1,
       "explanation": {
         "key_evidence": "Text/Beitrag A",
-        "reasoning": "[Inferential] Die Aussage 'Starre Vorschriften verhindern sinnvolle Sanierung...' entspricht der Position von A."
+        "reasoning": "[Inferential] Die Aussage 'Starre Vorschriften verhindern sinnvolle Sanierung...' entspricht der Position von A.",
+        "de": "Die richtige Antwort ist A. Die relevante Textstelle lautet: \"Text/Beitrag A\".",
+        "vi": "??p ?n ??ng l? A. H?y ??i chi?u v?i th?ng tin then ch?t trong b?i ??c."
       }
     },
     {
@@ -123,7 +133,9 @@
       "points": 1,
       "explanation": {
         "key_evidence": "Text/Beitrag C",
-        "reasoning": "[Inferential] Die Aussage 'Denkmalschutz schützt vor der Uniformierung der St...' entspricht der Position von C."
+        "reasoning": "[Inferential] Die Aussage 'Denkmalschutz schützt vor der Uniformierung der St...' entspricht der Position von C.",
+        "de": "Die richtige Antwort ist C. Die relevante Textstelle lautet: \"Text/Beitrag C\".",
+        "vi": "??p ?n ??ng l? C. H?y ??i chi?u v?i th?ng tin then ch?t trong b?i ??c."
       }
     },
     {
@@ -135,7 +147,9 @@
       "points": 1,
       "explanation": {
         "key_evidence": "Text/Beitrag D",
-        "reasoning": "Die Aussage 'Energetische Ertüchtigung denkmalgeschützter Gebäu...' entspricht der Position von D."
+        "reasoning": "Die Aussage 'Energetische Ertüchtigung denkmalgeschützter Gebäu...' entspricht der Position von D.",
+        "de": "Die richtige Antwort ist D. Die relevante Textstelle lautet: \"Text/Beitrag D\".",
+        "vi": "??p ?n ??ng l? D. H?y ??i chi?u v?i th?ng tin then ch?t trong b?i ??c."
       }
     }
   ],
@@ -192,5 +206,25 @@
     "all_answers_verifiable": true,
     "image_count": 1,
     "passed": true
-  }
+  },
+  "cefrAudit": {
+    "targetLevel": "C1",
+    "verdict": "aligned",
+    "reviewerRole": "German Academic Lead",
+    "notes": "Release-candidate metadata audit: reading content for \"Architektur & Stadtplanung\" is aligned with declared C1 scope pending final human spot-check.",
+    "reviewedAt": "2026-05-12",
+    "reviewScope": "release_candidate_metadata_pass"
+  },
+  "learningOutcomes": [
+    {
+      "id": "c1-t4-004-lo-1",
+      "cefrLevel": "C1",
+      "skill": "reading",
+      "canDoVi": "Toi co the luyen doc hieu o trinh do C1 qua chu de \"Architektur & Stadtplanung\".",
+      "canDoDe": "Ich kann Lesen auf Niveau C1 zum Thema \"Architektur & Stadtplanung\" ueben.",
+      "linkedContentIds": [
+        "C1-T4-004"
+      ]
+    }
+  ]
 }

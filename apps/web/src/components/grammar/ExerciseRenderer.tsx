@@ -43,7 +43,7 @@ export function FeedbackToast({
           className={`${s.feedbackBtn} ${isCorrect ? s.feedbackBtnCorrect : s.feedbackBtnWrong}`}
           onClick={onContinue}
         >
-          {isCorrect ? 'Câu tiếp theo →' : 'Đã hiểu, tiếp tục →'}
+          {isCorrect ? 'Thử thách tiếp theo →' : 'Đã hiểu, bước tiếp →'}
         </button>
       </div>
     </div>
@@ -190,19 +190,51 @@ function GapFillType({
   exercise, onAnswer
 }: {
   exercise: GapFillTypeExercise
-  onAnswer: (correct: boolean, answer: string) => void
+  onAnswer: (correct: boolean, answer: string, aiFeedback?: any) => void
 }) {
   const [value, setValue] = useState('')
   const [answered, setAnswered] = useState(false)
+  const [isAiGrading, setIsAiGrading] = useState(false)
 
-  const handleCheck = () => {
-    if (!value.trim() || answered) return
-    setAnswered(true)
+  const handleCheck = async () => {
+    if (!value.trim() || answered || isAiGrading) return
     const val = value.trim().toLowerCase()
-    const isCorrect =
+    const isHeuristicCorrect =
       exercise.answer.some(a => a.toLowerCase() === val) ||
       (exercise.accept_alt ?? []).some(a => a.toLowerCase() === val)
-    onAnswer(isCorrect, exercise.answer.join(' / '))
+    
+    if (isHeuristicCorrect) {
+      setAnswered(true)
+      onAnswer(true, exercise.answer.join(' / '))
+      return
+    }
+
+    setIsAiGrading(true)
+    try {
+      const res = await fetch('/api/v1/grade', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          type: 'grammar',
+          cefrLevel: 'A1',
+          exerciseContext: `Điền vào chỗ trống: ${exercise.stem}. Hint: ${exercise.hint_word || ''}`,
+          expectedAnswer: exercise.answer.join(' / '),
+          userAnswer: value
+        })
+      })
+      const data = await res.json()
+      setAnswered(true)
+      if (data.success && data.data) {
+        onAnswer(data.data.correct, exercise.answer.join(' / '), data.data)
+      } else {
+        onAnswer(false, exercise.answer.join(' / '))
+      }
+    } catch (e) {
+      setAnswered(true)
+      onAnswer(false, exercise.answer.join(' / '))
+    } finally {
+      setIsAiGrading(false)
+    }
   }
 
   return (
@@ -226,11 +258,11 @@ function GapFillType({
       />
       {!answered && (
         <button
-          style={{ marginTop: 16, width: '100%', padding: '14px', border: 'none', borderRadius: 14, fontWeight: 600, fontSize: 16, cursor: value.trim() ? 'pointer' : 'not-allowed', background: value.trim() ? 'linear-gradient(135deg, #3B82F6, #2563EB)' : '#E5E7EB', color: value.trim() ? '#fff' : '#9CA3AF' }}
-          disabled={!value.trim()}
+          style={{ marginTop: 16, width: '100%', padding: '14px', border: 'none', borderRadius: 14, fontWeight: 600, fontSize: 16, cursor: value.trim() && !isAiGrading ? 'pointer' : 'not-allowed', background: value.trim() && !isAiGrading ? 'linear-gradient(135deg, #3B82F6, #2563EB)' : '#E5E7EB', color: value.trim() && !isAiGrading ? '#fff' : '#9CA3AF' }}
+          disabled={!value.trim() || isAiGrading}
           onClick={handleCheck}
         >
-          Kiểm tra
+          {isAiGrading ? 'AI đang chấm...' : 'Kiểm tra'}
         </button>
       )}
     </div>
@@ -456,19 +488,51 @@ function Transformation({
   exercise, onAnswer
 }: {
   exercise: TransformationExercise
-  onAnswer: (correct: boolean, answer: string) => void
+  onAnswer: (correct: boolean, answer: string, aiFeedback?: any) => void
 }) {
   const [value, setValue] = useState('')
   const [answered, setAnswered] = useState(false)
+  const [isAiGrading, setIsAiGrading] = useState(false)
 
-  const handleCheck = () => {
-    if (!value.trim() || answered) return
-    setAnswered(true)
+  const handleCheck = async () => {
+    if (!value.trim() || answered || isAiGrading) return
     const val = value.trim().toLowerCase().replace(/\.$/, '')
-    const isCorrect = exercise.accepted_answers.some(
+    const isHeuristicCorrect = exercise.accepted_answers.some(
       a => a.toLowerCase().replace(/\.$/, '') === val
     )
-    onAnswer(isCorrect, exercise.accepted_answers[0]!)
+    
+    if (isHeuristicCorrect) {
+      setAnswered(true)
+      onAnswer(true, exercise.accepted_answers[0]!)
+      return
+    }
+
+    setIsAiGrading(true)
+    try {
+      const res = await fetch('/api/v1/grade', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          type: 'grammar',
+          cefrLevel: 'A1',
+          exerciseContext: `Viết lại câu sau với ngữ pháp ${exercise.target_form}. Câu gốc: ${exercise.source_sentence}`,
+          expectedAnswer: exercise.accepted_answers[0],
+          userAnswer: value
+        })
+      })
+      const data = await res.json()
+      setAnswered(true)
+      if (data.success && data.data) {
+        onAnswer(data.data.correct, exercise.accepted_answers[0]!, data.data)
+      } else {
+        onAnswer(false, exercise.accepted_answers[0]!)
+      }
+    } catch (e) {
+      setAnswered(true)
+      onAnswer(false, exercise.accepted_answers[0]!)
+    } finally {
+      setIsAiGrading(false)
+    }
   }
 
   return (
@@ -488,11 +552,11 @@ function Transformation({
       />
       {!answered && (
         <button
-          style={{ marginTop: 16, width: '100%', padding: '14px', border: 'none', borderRadius: 14, fontWeight: 600, fontSize: 16, cursor: value.trim() ? 'pointer' : 'not-allowed', background: value.trim() ? 'linear-gradient(135deg, #3B82F6, #2563EB)' : '#E5E7EB', color: value.trim() ? '#fff' : '#9CA3AF' }}
-          disabled={!value.trim()}
+          style={{ marginTop: 16, width: '100%', padding: '14px', border: 'none', borderRadius: 14, fontWeight: 600, fontSize: 16, cursor: value.trim() && !isAiGrading ? 'pointer' : 'not-allowed', background: value.trim() && !isAiGrading ? 'linear-gradient(135deg, #3B82F6, #2563EB)' : '#E5E7EB', color: value.trim() && !isAiGrading ? '#fff' : '#9CA3AF' }}
+          disabled={!value.trim() || isAiGrading}
           onClick={handleCheck}
         >
-          Kiểm tra
+          {isAiGrading ? 'AI đang chấm...' : 'Kiểm tra'}
         </button>
       )}
     </div>
@@ -570,7 +634,7 @@ export function ExerciseRenderer({
   exercise, onAnswer
 }: {
   exercise: GrammarExercise
-  onAnswer: (correct: boolean, correctAnswer: string) => void
+  onAnswer: (correct: boolean, correctAnswer: string, aiFeedback?: any) => void
 }) {
   switch (exercise.type) {
     case 'multiple_choice':   return <MultipleChoice exercise={exercise} onAnswer={onAnswer} />

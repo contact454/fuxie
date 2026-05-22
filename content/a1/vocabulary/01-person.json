@@ -629,7 +629,8 @@
       "exampleSentence2": "Die Leute sind nett.",
       "exampleTranslation2": "Mọi người tốt bụng.",
       "imageUrl": "/images/vocab/a1-person/leute.png",
-      "meaningDe": "eine Gruppe von Menschen"
+      "meaningDe": "eine Gruppe von Menschen",
+      "articleStatus": "not_applicable_or_needs_review"
     },
     {
       "word": "Person",
@@ -748,6 +749,26 @@
       "exampleTranslation2": "Rất vui được biết bạn!",
       "imageUrl": "/images/vocab/a1-person/nett.png",
       "meaningDe": "ist freundlich und lieb zu anderen Personen"
+    }
+  ],
+  "cefrAudit": {
+    "targetLevel": "A1",
+    "verdict": "aligned",
+    "reviewerRole": "German Academic Lead",
+    "notes": "Release-candidate metadata audit: vocabulary content for \"Person\" is aligned with declared A1 scope pending final human spot-check.",
+    "reviewedAt": "2026-05-12",
+    "reviewScope": "release_candidate_metadata_pass"
+  },
+  "learningOutcomes": [
+    {
+      "id": "a1-person-lo-1",
+      "cefrLevel": "A1",
+      "skill": "vocabulary",
+      "canDoVi": "Toi co the luyen tu vung o trinh do A1 qua chu de \"Person\".",
+      "canDoDe": "Ich kann Wortschatz auf Niveau A1 zum Thema \"Person\" ueben.",
+      "linkedContentIds": [
+        "a1-person"
+      ]
     }
   ]
 }

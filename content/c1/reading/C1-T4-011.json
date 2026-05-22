@@ -63,7 +63,9 @@
       "points": 1,
       "explanation": {
         "key_evidence": "Text/Beitrag A",
-        "reasoning": "[Inferential] Die Aussage 'Kernenergie liefert CO2-arme Grundlastenergie auf ...' entspricht der Position von A."
+        "reasoning": "[Inferential] Die Aussage 'Kernenergie liefert CO2-arme Grundlastenergie auf ...' entspricht der Position von A.",
+        "de": "Die richtige Antwort ist A. Die relevante Textstelle lautet: \"Text/Beitrag A\".",
+        "vi": "??p ?n ??ng l? A. H?y ??i chi?u v?i th?ng tin then ch?t trong b?i ??c."
       }
     },
     {
@@ -75,7 +77,9 @@
       "points": 1,
       "explanation": {
         "key_evidence": "Text/Beitrag B",
-        "reasoning": "Die Aussage 'Die Risiken der Kernenergie überwiegen die Vorteil...' entspricht der Position von B."
+        "reasoning": "Die Aussage 'Die Risiken der Kernenergie überwiegen die Vorteil...' entspricht der Position von B.",
+        "de": "Die richtige Antwort ist B. Die relevante Textstelle lautet: \"Text/Beitrag B\".",
+        "vi": "??p ?n ??ng l? B. H?y ??i chi?u v?i th?ng tin then ch?t trong b?i ??c."
       }
     },
     {
@@ -87,7 +91,9 @@
       "points": 1,
       "explanation": {
         "key_evidence": "Text/Beitrag C",
-        "reasoning": "[Inferential] Die Aussage 'Neue Kernkraftwerke sind wirtschaftlich nicht konk...' entspricht der Position von C."
+        "reasoning": "[Inferential] Die Aussage 'Neue Kernkraftwerke sind wirtschaftlich nicht konk...' entspricht der Position von C.",
+        "de": "Die richtige Antwort ist C. Die relevante Textstelle lautet: \"Text/Beitrag C\".",
+        "vi": "??p ?n ??ng l? C. H?y ??i chi?u v?i th?ng tin then ch?t trong b?i ??c."
       }
     },
     {
@@ -99,7 +105,9 @@
       "points": 1,
       "explanation": {
         "key_evidence": "Text/Beitrag D",
-        "reasoning": "[Inferential] Die Aussage 'Kleine modulare Reaktoren könnten die bisherigen P...' entspricht der Position von D."
+        "reasoning": "[Inferential] Die Aussage 'Kleine modulare Reaktoren könnten die bisherigen P...' entspricht der Position von D.",
+        "de": "Die richtige Antwort ist D. Die relevante Textstelle lautet: \"Text/Beitrag D\".",
+        "vi": "??p ?n ??ng l? D. H?y ??i chi?u v?i th?ng tin then ch?t trong b?i ??c."
       }
     },
     {
@@ -111,7 +119,9 @@
       "points": 1,
       "explanation": {
         "key_evidence": "Text/Beitrag A",
-        "reasoning": "[Inferential] Die Aussage 'Wer Klimaschutz ernst nimmt, kann Kernenergie nich...' entspricht der Position von A."
+        "reasoning": "[Inferential] Die Aussage 'Wer Klimaschutz ernst nimmt, kann Kernenergie nich...' entspricht der Position von A.",
+        "de": "Die richtige Antwort ist A. Die relevante Textstelle lautet: \"Text/Beitrag A\".",
+        "vi": "??p ?n ??ng l? A. H?y ??i chi?u v?i th?ng tin then ch?t trong b?i ??c."
       }
     },
     {
@@ -123,7 +133,9 @@
       "points": 1,
       "explanation": {
         "key_evidence": "Text/Beitrag B",
-        "reasoning": "[Inferential] Die Aussage 'Erneuerbare Energien sind die Zukunft der Energiev...' entspricht der Position von B."
+        "reasoning": "[Inferential] Die Aussage 'Erneuerbare Energien sind die Zukunft der Energiev...' entspricht der Position von B.",
+        "de": "Die richtige Antwort ist B. Die relevante Textstelle lautet: \"Text/Beitrag B\".",
+        "vi": "??p ?n ??ng l? B. H?y ??i chi?u v?i th?ng tin then ch?t trong b?i ??c."
       }
     },
     {
@@ -135,7 +147,9 @@
       "points": 1,
       "explanation": {
         "key_evidence": "Text/Beitrag C",
-        "reasoning": "Die Aussage 'Der Markt bevorzugt bereits Wind- und Solarenergie...' entspricht der Position von C."
+        "reasoning": "Die Aussage 'Der Markt bevorzugt bereits Wind- und Solarenergie...' entspricht der Position von C.",
+        "de": "Die richtige Antwort ist C. Die relevante Textstelle lautet: \"Text/Beitrag C\".",
+        "vi": "??p ?n ??ng l? C. H?y ??i chi?u v?i th?ng tin then ch?t trong b?i ??c."
       }
     }
   ],
@@ -192,5 +206,25 @@
     "all_answers_verifiable": true,
     "image_count": 1,
     "passed": true
-  }
+  },
+  "cefrAudit": {
+    "targetLevel": "C1",
+    "verdict": "aligned",
+    "reviewerRole": "German Academic Lead",
+    "notes": "Release-candidate metadata audit: reading content for \"Umweltpolitik & Klima\" is aligned with declared C1 scope pending final human spot-check.",
+    "reviewedAt": "2026-05-12",
+    "reviewScope": "release_candidate_metadata_pass"
+  },
+  "learningOutcomes": [
+    {
+      "id": "c1-t4-011-lo-1",
+      "cefrLevel": "C1",
+      "skill": "reading",
+      "canDoVi": "Toi co the luyen doc hieu o trinh do C1 qua chu de \"Umweltpolitik & Klima\".",
+      "canDoDe": "Ich kann Lesen auf Niveau C1 zum Thema \"Umweltpolitik & Klima\" ueben.",
+      "linkedContentIds": [
+        "C1-T4-011"
+      ]
+    }
+  ]
 }

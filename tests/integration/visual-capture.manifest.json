@@ -1,0 +1,474 @@
+[
+  {
+    "surface": "dashboard",
+    "state": "default",
+    "viewport": "mobile",
+    "route": "/dashboard",
+    "evidencePath": "screenshots/dashboard/dashboard-default-mobile.png",
+    "requiresSeed": false
+  },
+  {
+    "surface": "dashboard",
+    "state": "default",
+    "viewport": "desktop",
+    "route": "/dashboard",
+    "evidencePath": "screenshots/dashboard/dashboard-default-desktop.png",
+    "requiresSeed": false
+  },
+  {
+    "surface": "dashboard",
+    "state": "empty",
+    "viewport": "mobile",
+    "route": "/dashboard",
+    "evidencePath": "screenshots/dashboard/dashboard-empty-mobile.png",
+    "requiresSeed": false,
+    "stateDriver": {
+      "kind": "routeIntercept",
+      "pattern": "**/api/learner/dashboard",
+      "fulfill": { "status": 200, "body": { "streak": 0, "xp": 0, "quests": [] } }
+    }
+  },
+  {
+    "surface": "dashboard",
+    "state": "error",
+    "viewport": "mobile",
+    "route": "/dashboard",
+    "evidencePath": "screenshots/dashboard/dashboard-error-mobile.png",
+    "requiresSeed": false,
+    "stateDriver": {
+      "kind": "routeIntercept",
+      "pattern": "**/api/learner/dashboard",
+      "fulfill": { "status": 500 }
+    }
+  },
+  {
+    "surface": "course",
+    "state": "default",
+    "viewport": "mobile",
+    "route": "/course?level=A1",
+    "evidencePath": "screenshots/course/course-default-mobile.png",
+    "requiresSeed": false
+  },
+  {
+    "surface": "course",
+    "state": "default",
+    "viewport": "desktop",
+    "route": "/course?level=A1",
+    "evidencePath": "screenshots/course/course-default-desktop.png",
+    "requiresSeed": false
+  },
+  {
+    "surface": "course",
+    "state": "empty",
+    "viewport": "mobile",
+    "route": "/course?level=A1",
+    "evidencePath": "screenshots/course/course-empty-mobile.png",
+    "requiresSeed": false,
+    "stateDriver": {
+      "kind": "routeIntercept",
+      "pattern": "**/api/courses/A1",
+      "fulfill": { "status": 200, "body": { "units": [] } }
+    }
+  },
+  {
+    "surface": "course",
+    "state": "locked",
+    "viewport": "mobile",
+    "route": "/course?level=A1",
+    "evidencePath": "screenshots/course/course-locked-mobile.png",
+    "requiresSeed": false,
+    "stateDriver": {
+      "kind": "routeIntercept",
+      "pattern": "**/api/courses/A1",
+      "fulfill": { "status": 200, "body": { "units": [{ "id": "U1", "locked": true }, { "id": "U2", "locked": true }] } }
+    }
+  },
+  {
+    "surface": "course",
+    "state": "error",
+    "viewport": "mobile",
+    "route": "/course?level=A1",
+    "evidencePath": "screenshots/course/course-error-mobile.png",
+    "requiresSeed": false,
+    "stateDriver": {
+      "kind": "routeIntercept",
+      "pattern": "**/api/courses/A1",
+      "fulfill": { "status": 500 }
+    }
+  },
+  {
+    "surface": "vocabulary",
+    "state": "default",
+    "viewport": "mobile",
+    "route": "/vocabulary",
+    "evidencePath": "screenshots/vocabulary/vocabulary-default-mobile.png",
+    "requiresSeed": false
+  },
+  {
+    "surface": "vocabulary",
+    "state": "empty",
+    "viewport": "mobile",
+    "route": "/vocabulary",
+    "evidencePath": "screenshots/vocabulary/vocabulary-empty-mobile.png",
+    "requiresSeed": false,
+    "stateDriver": {
+      "kind": "routeIntercept",
+      "pattern": "**/api/vocabulary*",
+      "fulfill": { "status": 200, "body": { "items": [] } }
+    }
+  },
+  {
+    "surface": "vocabulary",
+    "state": "error",
+    "viewport": "mobile",
+    "route": "/vocabulary",
+    "evidencePath": "screenshots/vocabulary/vocabulary-error-mobile.png",
+    "requiresSeed": false,
+    "stateDriver": {
+      "kind": "routeIntercept",
+      "pattern": "**/api/vocabulary*",
+      "fulfill": { "status": 500 }
+    }
+  },
+  {
+    "surface": "vocabulary-practice",
+    "state": "default",
+    "viewport": "mobile",
+    "route": "/vocabulary/practice",
+    "evidencePath": "screenshots/vocabulary-practice/vocabulary-practice-default-mobile.png",
+    "requiresSeed": false
+  },
+  {
+    "surface": "vocabulary-microgames",
+    "state": "default",
+    "viewport": "mobile",
+    "route": "/vocabulary/microgames",
+    "evidencePath": "screenshots/vocabulary-microgames/vocabulary-microgames-default-mobile.png",
+    "requiresSeed": false
+  },
+  {
+    "surface": "vocabulary-microgames",
+    "state": "success",
+    "viewport": "mobile",
+    "route": "/vocabulary/microgames",
+    "evidencePath": "screenshots/vocabulary-microgames/vocabulary-microgames-success-mobile.png",
+    "requiresSeed": false,
+    "stateDriver": {
+      "kind": "routeIntercept",
+      "pattern": "**/api/vocabulary/microgames/submit",
+      "fulfill": { "status": 200, "body": { "status": "earned", "xp": 25, "fucoin": 10 } }
+    }
+  },
+  {
+    "surface": "reading",
+    "state": "default",
+    "viewport": "mobile",
+    "route": "/reading/A1-T1-001",
+    "evidencePath": "screenshots/reading/reading-default-mobile.png",
+    "requiresSeed": true
+  },
+  {
+    "surface": "reading",
+    "state": "default",
+    "viewport": "desktop",
+    "route": "/reading/A1-T1-001",
+    "evidencePath": "screenshots/reading/reading-default-desktop.png",
+    "requiresSeed": true
+  },
+  {
+    "surface": "reading",
+    "state": "empty",
+    "viewport": "mobile",
+    "route": "/reading/A1-T1-001",
+    "evidencePath": "screenshots/reading/reading-empty-mobile.png",
+    "requiresSeed": true,
+    "stateDriver": {
+      "kind": "routeIntercept",
+      "pattern": "**/api/reading/*",
+      "fulfill": { "status": 200, "body": { "items": [] } }
+    }
+  },
+  {
+    "surface": "reading",
+    "state": "error",
+    "viewport": "mobile",
+    "route": "/reading/A1-T1-001",
+    "evidencePath": "screenshots/reading/reading-error-mobile.png",
+    "requiresSeed": true,
+    "stateDriver": {
+      "kind": "routeIntercept",
+      "pattern": "**/api/reading/*",
+      "fulfill": { "status": 500 }
+    }
+  },
+  {
+    "surface": "listening",
+    "state": "default",
+    "viewport": "mobile",
+    "route": "/listening/L-A1-GOETHE-001-T1",
+    "evidencePath": "screenshots/listening/listening-default-mobile.png",
+    "requiresSeed": true
+  },
+  {
+    "surface": "listening",
+    "state": "default",
+    "viewport": "desktop",
+    "route": "/listening/L-A1-GOETHE-001-T1",
+    "evidencePath": "screenshots/listening/listening-default-desktop.png",
+    "requiresSeed": true
+  },
+  {
+    "surface": "listening",
+    "state": "empty",
+    "viewport": "mobile",
+    "route": "/listening/L-A1-GOETHE-001-T1",
+    "evidencePath": "screenshots/listening/listening-empty-mobile.png",
+    "requiresSeed": true,
+    "stateDriver": {
+      "kind": "routeIntercept",
+      "pattern": "**/api/listening/*",
+      "fulfill": { "status": 200, "body": { "items": [] } }
+    }
+  },
+  {
+    "surface": "listening",
+    "state": "error",
+    "viewport": "mobile",
+    "route": "/listening/L-A1-GOETHE-001-T1",
+    "evidencePath": "screenshots/listening/listening-error-mobile.png",
+    "requiresSeed": true,
+    "stateDriver": {
+      "kind": "routeIntercept",
+      "pattern": "**/api/listening/*",
+      "fulfill": { "status": 500 }
+    }
+  },
+  {
+    "surface": "speaking",
+    "state": "default",
+    "viewport": "mobile",
+    "route": "/speaking/dev-a1-begruessung-01",
+    "evidencePath": "screenshots/speaking/speaking-default-mobile.png",
+    "requiresSeed": true
+  },
+  {
+    "surface": "speaking",
+    "state": "default",
+    "viewport": "desktop",
+    "route": "/speaking/dev-a1-begruessung-01",
+    "evidencePath": "screenshots/speaking/speaking-default-desktop.png",
+    "requiresSeed": true
+  },
+  {
+    "surface": "speaking",
+    "state": "empty",
+    "viewport": "mobile",
+    "route": "/speaking/dev-a1-begruessung-01",
+    "evidencePath": "screenshots/speaking/speaking-empty-mobile.png",
+    "requiresSeed": true,
+    "stateDriver": {
+      "kind": "routeIntercept",
+      "pattern": "**/api/speaking/*",
+      "fulfill": { "status": 200, "body": { "items": [] } }
+    }
+  },
+  {
+    "surface": "speaking",
+    "state": "error",
+    "viewport": "mobile",
+    "route": "/speaking/dev-a1-begruessung-01",
+    "evidencePath": "screenshots/speaking/speaking-error-mobile.png",
+    "requiresSeed": true,
+    "stateDriver": {
+      "kind": "routeIntercept",
+      "pattern": "**/api/speaking/*",
+      "fulfill": { "status": 500 }
+    }
+  },
+  {
+    "surface": "speaking-roleplay",
+    "state": "default",
+    "viewport": "mobile",
+    "route": "/speaking/roleplay?scenario=self-intro&level=A1",
+    "evidencePath": "screenshots/speaking-roleplay/speaking-roleplay-default-mobile.png",
+    "requiresSeed": false
+  },
+  {
+    "surface": "speaking-roleplay",
+    "state": "default",
+    "viewport": "desktop",
+    "route": "/speaking/roleplay?scenario=self-intro&level=A1",
+    "evidencePath": "screenshots/speaking-roleplay/speaking-roleplay-default-desktop.png",
+    "requiresSeed": false
+  },
+  {
+    "surface": "speaking-roleplay",
+    "state": "error",
+    "viewport": "mobile",
+    "route": "/speaking/roleplay?scenario=self-intro&level=A1",
+    "evidencePath": "screenshots/speaking-roleplay/speaking-roleplay-error-mobile.png",
+    "requiresSeed": false,
+    "stateDriver": {
+      "kind": "routeIntercept",
+      "pattern": "**/api/speaking/roleplay/*",
+      "fulfill": { "status": 500 }
+    }
+  },
+  {
+    "surface": "writing",
+    "state": "default",
+    "viewport": "mobile",
+    "route": "/writing/W-A1-T1-001",
+    "evidencePath": "screenshots/writing/writing-default-mobile.png",
+    "requiresSeed": true
+  },
+  {
+    "surface": "writing",
+    "state": "default",
+    "viewport": "desktop",
+    "route": "/writing/W-A1-T1-001",
+    "evidencePath": "screenshots/writing/writing-default-desktop.png",
+    "requiresSeed": true
+  },
+  {
+    "surface": "writing",
+    "state": "empty",
+    "viewport": "mobile",
+    "route": "/writing/W-A1-T1-001",
+    "evidencePath": "screenshots/writing/writing-empty-mobile.png",
+    "requiresSeed": true,
+    "stateDriver": {
+      "kind": "routeIntercept",
+      "pattern": "**/api/writing/*",
+      "fulfill": { "status": 200, "body": { "items": [] } }
+    }
+  },
+  {
+    "surface": "writing",
+    "state": "error",
+    "viewport": "mobile",
+    "route": "/writing/W-A1-T1-001",
+    "evidencePath": "screenshots/writing/writing-error-mobile.png",
+    "requiresSeed": true,
+    "stateDriver": {
+      "kind": "routeIntercept",
+      "pattern": "**/api/writing/*",
+      "fulfill": { "status": 500 }
+    }
+  },
+  {
+    "surface": "review",
+    "state": "default",
+    "viewport": "mobile",
+    "route": "/review",
+    "evidencePath": "screenshots/review/review-default-mobile.png",
+    "requiresSeed": false
+  },
+  {
+    "surface": "review",
+    "state": "empty",
+    "viewport": "mobile",
+    "route": "/review",
+    "evidencePath": "screenshots/review/review-empty-mobile.png",
+    "requiresSeed": false,
+    "stateDriver": {
+      "kind": "routeIntercept",
+      "pattern": "**/api/review/next",
+      "fulfill": { "status": 200, "body": { "next": null, "due": 0, "overdue": 0 } }
+    }
+  },
+  {
+    "surface": "review",
+    "state": "error",
+    "viewport": "mobile",
+    "route": "/review",
+    "evidencePath": "screenshots/review/review-error-mobile.png",
+    "requiresSeed": false,
+    "stateDriver": {
+      "kind": "routeIntercept",
+      "pattern": "**/api/review/next",
+      "fulfill": { "status": 500 }
+    }
+  },
+  {
+    "surface": "rewards-shop",
+    "state": "default",
+    "viewport": "mobile",
+    "route": "/rewards/shop",
+    "evidencePath": "screenshots/rewards-shop/rewards-shop-default-mobile.png",
+    "requiresSeed": false
+  },
+  {
+    "surface": "rewards-shop",
+    "state": "empty",
+    "viewport": "mobile",
+    "route": "/rewards/shop",
+    "evidencePath": "screenshots/rewards-shop/rewards-shop-empty-mobile.png",
+    "requiresSeed": false,
+    "stateDriver": {
+      "kind": "routeIntercept",
+      "pattern": "**/api/rewards/shop/items",
+      "fulfill": { "status": 200, "body": { "items": [] } }
+    }
+  },
+  {
+    "surface": "rewards-shop",
+    "state": "error",
+    "viewport": "mobile",
+    "route": "/rewards/shop",
+    "evidencePath": "screenshots/rewards-shop/rewards-shop-error-mobile.png",
+    "requiresSeed": false,
+    "stateDriver": {
+      "kind": "routeIntercept",
+      "pattern": "**/api/rewards/shop/items",
+      "fulfill": { "status": 500 }
+    }
+  },
+  {
+    "surface": "rewards-shop",
+    "state": "success",
+    "viewport": "mobile",
+    "route": "/rewards/shop",
+    "evidencePath": "screenshots/rewards-shop/rewards-shop-success-mobile.png",
+    "requiresSeed": false,
+    "stateDriver": {
+      "kind": "routeIntercept",
+      "pattern": "**/api/rewards/shop/redeem",
+      "fulfill": { "status": 200, "body": { "status": "earned", "item": { "id": "RS-DEMO-01", "title": "Demo reward" } } }
+    }
+  },
+  {
+    "surface": "exam",
+    "state": "default",
+    "viewport": "mobile",
+    "route": "/exam/dev-a1-goethe-mini",
+    "evidencePath": "screenshots/exam/exam-default-mobile.png",
+    "requiresSeed": true
+  },
+  {
+    "surface": "exam",
+    "state": "error",
+    "viewport": "mobile",
+    "route": "/exam/dev-a1-goethe-mini",
+    "evidencePath": "screenshots/exam/exam-error-mobile.png",
+    "requiresSeed": true,
+    "stateDriver": {
+      "kind": "routeIntercept",
+      "pattern": "**/api/exam/*",
+      "fulfill": { "status": 500 }
+    }
+  },
+  {
+    "surface": "exam",
+    "state": "result",
+    "viewport": "mobile",
+    "route": "/exam/dev-a1-goethe-mini",
+    "evidencePath": "screenshots/exam/exam-result-mobile.png",
+    "requiresSeed": true,
+    "stateDriver": {
+      "kind": "routeIntercept",
+      "pattern": "**/api/exam/*/submit",
+      "fulfill": { "status": 200, "body": { "status": "graded", "xp": 50, "fucoin": 25, "accuracy": 0.85, "time": 600 } }
+    }
+  }
+]

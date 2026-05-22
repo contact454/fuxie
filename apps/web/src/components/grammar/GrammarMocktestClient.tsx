@@ -278,7 +278,7 @@ export default function GrammarMocktestPage() {
     setCurrentStepIdx(prev => Math.min(prev + 1, totalSteps - 1))
   }, [totalSteps])
 
-  const handleExerciseAnswer = useCallback((correct: boolean, correctAnswer: string) => {
+  const handleExerciseAnswer = useCallback((correct: boolean, correctAnswer: string, aiFeedback?: any) => {
     const step = steps[currentStepIdx]!
     if (step.type !== 'exercise') return
 
@@ -293,7 +293,7 @@ export default function GrammarMocktestPage() {
     setFeedbackState({
       isCorrect: correct,
       correctAnswer,
-      explanation: ex.explanation_vi || '',
+      explanation: aiFeedback?.tipNative || aiFeedback?.tip || ex.explanation_vi || '',
     })
   }, [currentStepIdx, steps])
 
@@ -365,7 +365,7 @@ export default function GrammarMocktestPage() {
             <p className={s.heroSubtitle}>Bài E-01 · A1</p>
             <div className={s.heroChips}>
               <span className={s.heroChip}>📝 {SAMPLE_THEORY.length} phần lý thuyết</span>
-              <span className={s.heroChip}>🎯 {totalExercises} bài tập</span>
+              <span className={s.heroChip}>🎯 {totalExercises} thử thách</span>
               <span className={s.heroChip}>⏱️ ~6 phút</span>
             </div>
           </div>
@@ -384,7 +384,7 @@ export default function GrammarMocktestPage() {
           <div className={s.stepFooter}>
             <div className={s.stepFooterInner}>
               <button className={`${s.btnPrimary} ${s.btnBlue}`} onClick={goNext}>
-                {currentStep.blockIndex === SAMPLE_THEORY.length - 1 ? '🎯 Bắt đầu luyện tập' : 'Tiếp tục →'}
+                {currentStep.blockIndex === SAMPLE_THEORY.length - 1 ? '🎯 Bắt đầu thử thách' : 'Tiếp bước →'}
               </button>
             </div>
           </div>

@@ -202,7 +202,20 @@
       "exampleSentence2": "Die intertextuelle Bezugnahme kann dazu dienen, vergessene Texte zu reaktualisieren und ihnen neue Gültigkeit zu verleihen.",
       "exampleTranslation2": "Việc tham chiếu liên văn bản có thể dùng để cập nhật lại các văn bản bị lãng quên và mang lại cho chúng giá trị mới.",
       "imageUrl": "/images/vocab/c2-intertextualitaet/reaktualisieren.png",
-      "meaningDe": "eine veraltete Information oder einen früheren Gedanken an die heutige Zeit anpassen und wieder relevant machen"
+      "meaningDe": "eine veraltete Information oder einen früheren Gedanken an die heutige Zeit anpassen und wieder relevant machen",
+      "conjugation": {
+        "praesens": {
+          "ich": "reaktualisiere",
+          "du": "reaktualisierst",
+          "er_sie_es": "reaktualisiert",
+          "wir": "reaktualisieren",
+          "ihr": "reaktualisiert",
+          "sie_Sie": "reaktualisieren"
+        },
+        "isIrregular": false,
+        "isSeparable": false,
+        "reviewStatus": "auto_generated_needs_spot_check"
+      }
     },
     {
       "word": "heteroglossisch",
@@ -245,6 +258,26 @@
       "exampleTranslation2": "Việc nghiên cứu các hiện tượng liên thể loại mở rộng sự hiểu biết về các quy ước văn học.",
       "imageUrl": "/images/vocab/c2-intertextualitaet/transgenerisch.png",
       "meaningDe": "die Eigenschaft eines Werkes, die Grenzen zwischen verschiedenen literarischen Gattungen zu überschreiten oder diese zu vermischen"
+    }
+  ],
+  "cefrAudit": {
+    "targetLevel": "C2",
+    "verdict": "aligned",
+    "reviewerRole": "German Academic Lead",
+    "notes": "Release-candidate metadata audit: vocabulary content for \"Intertextualität & Dialogizität\" is aligned with declared C2 scope pending final human spot-check.",
+    "reviewedAt": "2026-05-12",
+    "reviewScope": "release_candidate_metadata_pass"
+  },
+  "learningOutcomes": [
+    {
+      "id": "c2-intertextualitaet-lo-1",
+      "cefrLevel": "C2",
+      "skill": "vocabulary",
+      "canDoVi": "Toi co the luyen tu vung o trinh do C2 qua chu de \"Intertextualität & Dialogizität\".",
+      "canDoDe": "Ich kann Wortschatz auf Niveau C2 zum Thema \"Intertextualität & Dialogizität\" ueben.",
+      "linkedContentIds": [
+        "c2-intertextualitaet"
+      ]
     }
   ]
 }

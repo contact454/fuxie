@@ -16,8 +16,8 @@ export const metadata: Metadata = {
         title: 'Fuxie',
     },
     icons: {
-        icon: '/mascot/core/fuxie-core-happy-wave.png',
-        apple: '/mascot/core/fuxie-core-happy-wave.png',
+        icon: '/fuxie-icon.svg',
+        apple: '/fuxie-icon.svg',
     },
     formatDetection: {
         telephone: false,

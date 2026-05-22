@@ -5,6 +5,7 @@ import { ExerciseProgress } from './exercise-progress'
 import { ExerciseResults } from './exercise-results'
 import { useExerciseTimer } from '@/hooks/use-exercise-timer'
 import { useSubmitExercise, type ExerciseAnswer } from '@/hooks/use-submit-exercise'
+import { getFirstSessionNextStep } from '@/lib/gamification/lesson-gameplay-expansion'
 import {
     exerciseCenterStageClass,
     exerciseHintPanelClass,
@@ -51,12 +52,12 @@ const WORD_TYPE_LABELS: Record<string, string> = {
 }
 
 const WORD_TYPE_COLORS: Record<string, string> = {
-    NOMEN: 'bg-[#EEF7FF] text-[#3C78A8] ring-[#60A8E4]/20',
-    VERB: 'bg-[#EAFBF8] text-[#0F766E] ring-[#2EC4B6]/30',
-    ADJEKTIV: 'bg-[#F3FBFF] text-[#3C78A8] ring-[#60A8E4]/20',
-    ADVERB: 'bg-[#EAFBF8] text-[#0F766E] ring-[#2EC4B6]/30',
-    PRAEPOSITION: 'bg-[#FFF7D6] text-[#A66300] ring-[#FFD166]/60',
-    PHRASE: 'bg-[#F3FBFF] text-[#3C78A8] ring-[#60A8E4]/20',
+    NOMEN: 'bg-[#EEF7FF] text-text-brand ring-[#60A8E4]/20',
+    VERB: 'bg-[#EAFBF8] text-text-success ring-[#2EC4B6]/30',
+    ADJEKTIV: 'bg-[#F3FBFF] text-text-brand ring-[#60A8E4]/20',
+    ADVERB: 'bg-[#EAFBF8] text-text-success ring-[#2EC4B6]/30',
+    PRAEPOSITION: 'bg-[#FFF7D6] text-text-warning ring-[#FFD166]/60',
+    PHRASE: 'bg-[#F3FBFF] text-text-brand ring-[#60A8E4]/20',
 }
 
 // ─── Component ──────────────────────────────────────
@@ -134,6 +135,10 @@ export function ClozeExercise({ questions, cefrLevel, themeName: _themeName, the
 
     // ─── Results ────────────────────────────────────
     if (phase === 'results' && submitResult) {
+        const nextStep = themeSlug === 'a1-person'
+            ? getFirstSessionNextStep('cloze-streak')
+            : null
+
         return (
             <ExerciseResults
                 totalQuestions={submitResult.totalQuestions}
@@ -151,6 +156,14 @@ export function ClozeExercise({ questions, cefrLevel, themeName: _themeName, the
                 streak={submitResult.streak}
                 timeTaken={timer}
                 results={submitResult.results}
+                gameplayNextStep={nextStep
+                    ? {
+                        label: `Tiep theo: ${nextStep.title}`,
+                        href: nextStep.href.replace('level=A1', `level=${cefrLevel}`),
+                        reason: 'Cloze da luyen recall; Boss Review kiem tra mixed mastery truoc khi dua vao speaking.',
+                        stepId: nextStep.id,
+                    }
+                    : undefined}
                 onRetry={() => {
                     setCurrentIndex(0); setUserInput(''); setIsRevealed(false)
                     setAnswers([])
@@ -171,7 +184,7 @@ export function ClozeExercise({ questions, cefrLevel, themeName: _themeName, the
                     <span key={i}>
                         <span>{part}</span>
                         {i < parts.length - 1 && (
-                            <span className="mx-1 inline-block min-w-[96px] rounded-xl border-2 border-[#60A8E4] bg-[#EEF7FF] px-3 py-1 text-center font-black text-[#3C78A8] shadow-inner">
+                            <span className="mx-1 inline-block min-w-[96px] rounded-xl border-2 border-[#60A8E4] bg-[#EEF7FF] px-3 py-1 text-center font-black text-text-brand shadow-inner">
                                 {isRevealed
                                     ? userInput
                                     : userInput || '___'
@@ -201,7 +214,7 @@ export function ClozeExercise({ questions, cefrLevel, themeName: _themeName, the
                 <div className={exerciseStageInnerClass}>
                     {/* Instruction */}
                     <div className="text-center mb-6">
-                        <p className="text-sm font-black uppercase tracking-wider text-[#3C78A8]">Điền từ còn thiếu</p>
+                        <p className="text-sm font-black uppercase text-text-brand">Điền từ còn thiếu</p>
                         {/* Word type badge */}
                         <span className={`mt-2 inline-block rounded-full px-3 py-1 text-xs font-black ring-1 ${typeColor}`}>
                             {typeLabel}
@@ -222,8 +235,8 @@ export function ClozeExercise({ questions, cefrLevel, themeName: _themeName, the
 
                     {/* Feedback */}
                     {isRevealed && (
-                        <div className={exerciseHintPanelClass('mb-4 border-[#60A8E4]/25 bg-[#EEF7FF] text-[#3C78A8]')}>
-                            <span className="text-sm text-[#3C78A8] font-semibold">Đã lưu câu trả lời</span>
+                        <div className={exerciseHintPanelClass('mb-4 border-[#60A8E4]/25 bg-[#EEF7FF] text-text-brand')}>
+                            <span className="text-sm text-text-brand font-semibold">Đã lưu câu trả lời</span>
                         </div>
                     )}
 

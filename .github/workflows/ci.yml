@@ -14,7 +14,35 @@ env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
 jobs:
+  check-quick:
+    # Runs the gamified-ui-asset-rollout fast invariants on every PR.
+    # Chains: lint:asset-paths -> check:asset-integrity -> check:asset-audit
+    #         -> check:locale-parity -> test:property
+    # Block-on-failure is what the gamified-ui-asset-rollout task 2.6 requires.
+    name: Quick checks (asset registry + locale + property)
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v6
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: 22
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Quick checks
+        run: pnpm check:quick
+
   verify:
+    name: Full verify + AI eval gate
+    needs: check-quick
     runs-on: ubuntu-latest
     env:
       AUTH_COOKIE_SECRET: ci-placeholder-secret
@@ -38,3 +66,98 @@ jobs:
 
       - name: Verify
         run: pnpm check
+
+      - name: AI eval gate
+        run: |
+          pnpm check:ai-eval
+          cat tmp/ai-eval-runs/readout.md
+
+  smoke-test:
+    name: Production Hardening Smoke Test
+    needs: check-quick
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: pgvector/pgvector:pg16
+        env:
+          POSTGRES_USER: fuxie
+          POSTGRES_PASSWORD: fuxie_dev
+          POSTGRES_DB: fuxie_dev
+        ports:
+          - 5434:5432
+        options: >-
+          --health-cmd "pg_isready -U fuxie -d fuxie_dev"
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 10
+      redis:
+        image: redis:7-alpine
+        ports:
+          - 6380:6379
+        options: >-
+          --health-cmd "redis-cli ping"
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 10
+    env:
+      AUTH_COOKIE_SECRET: ci-placeholder-secret
+      DATABASE_URL: postgresql://fuxie:fuxie_dev@127.0.0.1:5434/fuxie_dev
+      DATABASE_URL_UNPOOLED: postgresql://fuxie:fuxie_dev@127.0.0.1:5434/fuxie_dev
+      DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+      FUXIE_DEV_AUTH_ENABLED: "true"
+      NEXT_PUBLIC_FIREBASE_API_KEY: ci-firebase-api-key
+      NEXT_PUBLIC_FIREBASE_PROJECT_ID: ci-firebase-project
+      PLAYWRIGHT_AUTOSTART_WEB: "1"
+      REDIS_URL: redis://127.0.0.1:6380
+      SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v6
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: 22
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Generate Prisma client
+        run: pnpm db:generate
+
+      - name: Sync smoke database schema
+        run: pnpm --filter @fuxie/database exec prisma db push --skip-generate
+
+      - name: Seed smoke database
+        run: pnpm db:seed:dev
+
+      - name: Install Playwright Browsers
+        run: pnpm test:integration:install
+
+      - name: Run Production Hardening Smoke Tests
+        run: pnpm exec playwright test tests/integration/production-hardening-smoke.pw.spec.ts --config tests/integration/playwright.config.ts --project chromium-mobile-capture
+
+      - name: Upload Playwright artifacts on failure
+        if: ${{ failure() }}
+        uses: actions/upload-artifact@v6
+        with:
+          name: production-hardening-smoke-artifacts
+          path: tmp/playwright
+          if-no-files-found: warn
+          retention-days: 7
+
+      - name: Send Slack Notification on Failure
+        if: ${{ failure() && env.SLACK_WEBHOOK_URL != '' }}
+        run: |
+          payload=$(node -e "const msg = `Fuxie CI Pipeline Fail: Production Hardening Smoke Test failed on branch ${process.env.GITHUB_REF_NAME} (commit: ${process.env.GITHUB_SHA}). View logs: ${process.env.GITHUB_SERVER_URL}/${process.env.GITHUB_REPOSITORY}/actions/runs/${process.env.GITHUB_RUN_ID}`; process.stdout.write(JSON.stringify({ text: msg }))")
+          curl -X POST -H 'Content-type: application/json' --data "$payload" "$SLACK_WEBHOOK_URL"
+
+      - name: Send Discord Notification on Failure
+        if: ${{ failure() && env.DISCORD_WEBHOOK_URL != '' }}
+        run: |
+          payload=$(node -e "const msg = `Fuxie CI Pipeline Fail: Production Hardening Smoke Test failed on branch ${process.env.GITHUB_REF_NAME} (commit: ${process.env.GITHUB_SHA}). View logs: ${process.env.GITHUB_SERVER_URL}/${process.env.GITHUB_REPOSITORY}/actions/runs/${process.env.GITHUB_RUN_ID}`; process.stdout.write(JSON.stringify({ content: msg }))")
+          curl -H "Content-Type: application/json" -X POST -d "$payload" "$DISCORD_WEBHOOK_URL"

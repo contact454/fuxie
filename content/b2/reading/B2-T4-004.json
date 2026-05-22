@@ -63,7 +63,9 @@
       "points": 1,
       "explanation": {
         "key_evidence": "Sandra Muller sieht im Homeoffice eine Chance fur die Gleichstellung.",
-        "reasoning": "Die richtige Antwort ergibt sich aus dem Text."
+        "reasoning": "Die richtige Antwort ergibt sich aus dem Text.",
+        "de": "Die richtige Antwort ist ja. Die relevante Textstelle lautet: \"Sandra Muller sieht im Homeoffice eine Chance fur die Gleichstellung.\".",
+        "vi": "??p ?n ??ng l? ja. H?y ??i chi?u v?i th?ng tin then ch?t trong b?i ??c."
       }
     },
     {
@@ -75,7 +77,9 @@
       "points": 1,
       "explanation": {
         "key_evidence": "Peter Hamann halt ein Recht auf Homeoffice in allen Branchen fur umsetzbar.",
-        "reasoning": "[Inferential] Die richtige Antwort ergibt sich aus dem Text."
+        "reasoning": "[Inferential] Die richtige Antwort ergibt sich aus dem Text.",
+        "de": "Die richtige Antwort ist nein. Die relevante Textstelle lautet: \"Peter Hamann halt ein Recht auf Homeoffice in allen Branchen fur umsetzbar.\".",
+        "vi": "??p ?n ??ng l? nein. H?y ??i chi?u v?i th?ng tin then ch?t trong b?i ??c."
       }
     },
     {
@@ -87,7 +91,9 @@
       "points": 1,
       "explanation": {
         "key_evidence": "Anna-Lena Koch berichtet von negativen Erfahrungen aus den Niederlanden.",
-        "reasoning": "Die richtige Antwort ergibt sich aus dem Text."
+        "reasoning": "Die richtige Antwort ergibt sich aus dem Text.",
+        "de": "Die richtige Antwort ist nein. Die relevante Textstelle lautet: \"Anna-Lena Koch berichtet von negativen Erfahrungen aus den Niederlanden.\".",
+        "vi": "??p ?n ??ng l? nein. H?y ??i chi?u v?i th?ng tin then ch?t trong b?i ??c."
       }
     },
     {
@@ -99,7 +105,9 @@
       "points": 1,
       "explanation": {
         "key_evidence": "Thomas Bergmann befurchtet, dass die Innovationskraft im Homeoffice leidet.",
-        "reasoning": "[Inferential] Die richtige Antwort ergibt sich aus dem Text."
+        "reasoning": "[Inferential] Die richtige Antwort ergibt sich aus dem Text.",
+        "de": "Die richtige Antwort ist ja. Die relevante Textstelle lautet: \"Thomas Bergmann befurchtet, dass die Innovationskraft im Homeoffice leidet.\".",
+        "vi": "??p ?n ??ng l? ja. H?y ??i chi?u v?i th?ng tin then ch?t trong b?i ??c."
       }
     },
     {
@@ -111,7 +119,9 @@
       "points": 1,
       "explanation": {
         "key_evidence": "Die Mehrheit der Kommentatoren befurwortet ein gesetzliches Recht auf Homeoffice",
-        "reasoning": "[Inferential] Die richtige Antwort ergibt sich aus dem Text."
+        "reasoning": "[Inferential] Die richtige Antwort ergibt sich aus dem Text.",
+        "de": "Die richtige Antwort ist nein. Die relevante Textstelle lautet: \"Die Mehrheit der Kommentatoren befurwortet ein gesetzliches Recht auf Homeoffice\".",
+        "vi": "??p ?n ??ng l? nein. H?y ??i chi?u v?i th?ng tin then ch?t trong b?i ??c."
       }
     }
   ],
@@ -168,5 +178,25 @@
     "all_answers_verifiable": true,
     "image_count": 1,
     "passed": true
-  }
+  },
+  "cefrAudit": {
+    "targetLevel": "B2",
+    "verdict": "aligned",
+    "reviewerRole": "German Academic Lead",
+    "notes": "Release-candidate metadata audit: reading content for \"Beruf & Karriere\" is aligned with declared B2 scope pending final human spot-check.",
+    "reviewedAt": "2026-05-12",
+    "reviewScope": "release_candidate_metadata_pass"
+  },
+  "learningOutcomes": [
+    {
+      "id": "b2-t4-004-lo-1",
+      "cefrLevel": "B2",
+      "skill": "reading",
+      "canDoVi": "Toi co the luyen doc hieu o trinh do B2 qua chu de \"Beruf & Karriere\".",
+      "canDoDe": "Ich kann Lesen auf Niveau B2 zum Thema \"Beruf & Karriere\" ueben.",
+      "linkedContentIds": [
+        "B2-T4-004"
+      ]
+    }
+  ]
 }

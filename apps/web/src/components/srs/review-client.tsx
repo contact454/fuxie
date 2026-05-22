@@ -2,6 +2,7 @@
 
 import { useState, useCallback, useRef, useEffect } from 'react'
 import Image from 'next/image'
+import { useTranslations } from 'next-intl'
 import dynamic from 'next/dynamic'
 import { Mascot } from '@/components/ui/mascot'
 import { FuxieCoach, QuestProgressHero, RewardPreview } from '@/components/gamification/quest-visuals'
@@ -76,6 +77,7 @@ const RatingButtons = dynamic(() => import('./rating-buttons').then(mod => mod.R
 
 // ─── Main Component ─────────────────────────────────
 export function ReviewClient({ themes, availableLevels, initialLevel, dueCounts, totalDueAll }: ReviewClientProps) {
+    const t = useTranslations('Gamification')
     // State
     const [currentLevel, setCurrentLevel] = useState(initialLevel)
     const [currentThemes, setCurrentThemes] = useState(themes)
@@ -394,14 +396,14 @@ export function ReviewClient({ themes, availableLevels, initialLevel, dueCounts,
         if (srsComplete) {
             const accuracy = srsStats.totalReviewed > 0
                 ? Math.round((srsStats.correct / srsStats.totalReviewed) * 100) : 0
-            const mascotVariant = accuracy >= 80 ? 'celebrate' : accuracy >= 50 ? 'correct' : 'encouragement'
+            const mascotVariant = accuracy >= 80 ? 'celebrate' : accuracy >= 50 ? 'correct' : 'encourage'
 
             return (
                 <div className="max-w-md mx-auto flex flex-col items-center py-8 animate-fade-in-up">
                     <Mascot
                         variant={mascotVariant}
                         size={120}
-                        speechBubble={accuracy >= 80 ? 'Làm tốt lắm! 🎉' : accuracy >= 50 ? 'Ổn rồi, tiếp tục nhé! 👏' : 'Cứ luyện tiếp nhé! 💪'}
+                        speechBubble={accuracy >= 80 ? 'Thành tích đáng nể! 🎉' : accuracy >= 50 ? 'Giữ vững phong độ! 🌟' : 'Không sao cả, thử lại lần nữa nhé! 💪'}
                     />
 
                     <RewardPreview
@@ -456,7 +458,7 @@ export function ReviewClient({ themes, availableLevels, initialLevel, dueCounts,
                         <h2 className="text-lg font-bold text-gray-900">Ôn SRS</h2>
                         <p className="text-xs text-gray-500">Ôn các thẻ đến hạn</p>
                     </div>
-                    <span className="text-sm font-bold text-[#3C78A8]">+{srsStats.xpEarned} XP</span>
+                    <span className="text-sm font-bold text-text-brand">+{srsStats.xpEarned} XP</span>
                 </div>
 
                 {/* Progress */}
@@ -570,7 +572,7 @@ export function ReviewClient({ themes, availableLevels, initialLevel, dueCounts,
                             Chọn cấp độ khác
                         </button>
                     )}
-                    <div className="text-xs font-bold text-[#3C78A8]">
+                    <div className="text-xs font-bold text-text-brand">
                         {dueInCurrentLevel > 0 ? 'Ưu tiên thẻ đang đến hạn trước khi học thêm.' : 'Hôm nay chưa có thẻ đến hạn ở cấp độ này.'}
                     </div>
                 </div>
@@ -625,16 +627,16 @@ export function ReviewClient({ themes, availableLevels, initialLevel, dueCounts,
                                 )}
 
                                 {/* Name */}
-                                <h3 className="text-sm font-bold text-gray-900 text-center leading-tight mb-1 group-hover:text-[#3C78A8] transition-colors line-clamp-2">
+                                <h3 className="text-sm font-bold text-gray-900 text-center leading-tight mb-1 group-hover:text-text-brand transition-colors line-clamp-2">
                                     {theme.name}
                                 </h3>
-                                <p className="text-[11px] text-gray-400 text-center line-clamp-1">{theme.nameNative}</p>
+                                <p className="text-xs text-gray-400 text-center line-clamp-1">{theme.nameNative}</p>
 
                                 {/* Stats row */}
                                 <div className="flex items-center gap-2 mt-2">
-                                    <span className="text-[11px] text-gray-500 font-medium">{theme.wordCount} từ</span>
+                                    <span className="text-xs text-gray-500 font-medium">{theme.wordCount} từ</span>
                                     {theme.srsProgress.due > 0 && (
-                                        <span className="text-[10px] px-1.5 py-0.5 rounded-full bg-orange-100 text-orange-600 font-bold">
+                                        <span className="text-xs px-1.5 py-0.5 rounded-full bg-orange-100 text-orange-600 font-bold">
                                             {theme.srsProgress.due} cần ôn
                                         </span>
                                     )}
@@ -657,10 +659,10 @@ export function ReviewClient({ themes, availableLevels, initialLevel, dueCounts,
                         role="locked"
                         eyebrow="Memory route"
                         title="Cấp độ này chưa có chủ đề ôn"
-                        message="Thay vì để màn hình trống, Fuxie giữ học viên trong luồng: đổi cấp độ hoặc quay lại lộ trình chính."
+                        message={t('srsEmptyTip')}
                     />
                     <FuxiePanel className="rounded-3xl border-dashed border-slate-200 p-5">
-                        <p className="text-xs font-black uppercase tracking-wide text-[#3C78A8]">Next best action</p>
+                        <p className="text-xs font-black uppercase tracking-wide text-text-brand">Next best action</p>
                         <h3 className="mt-2 text-xl font-black text-slate-950">Chọn một cấp độ khác</h3>
                         <p className="mt-2 text-sm font-medium leading-relaxed text-slate-500">
                             Cấp độ có chủ đề sẽ hiện số thẻ và tiến độ SRS ngay trong tab.

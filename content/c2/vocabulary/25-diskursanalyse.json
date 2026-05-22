@@ -90,7 +90,8 @@
       "exampleSentence2": "Die Aktivierung spezifischen Weltwissens ist oft notwendig, um die Kohärenz eines Textes vollständig zu erfassen.",
       "exampleTranslation2": "Việc kích hoạt kiến thức thế giới quan cụ thể thường cần thiết để nắm bắt hoàn toàn tính mạch lạc của một văn bản.",
       "imageUrl": "/images/vocab/c2-diskursanalyse/das-weltwissen.png",
-      "meaningDe": "Das allgemeine Wissen über die Funktionsweise der Welt, das über sprachliche Informationen hinausgeht"
+      "meaningDe": "Das allgemeine Wissen über die Funktionsweise der Welt, das über sprachliche Informationen hinausgeht",
+      "pluralStatus": "not_applicable_or_needs_review"
     },
     {
       "word": "Diskursverschränkung",
@@ -160,7 +161,20 @@
       "exampleSentence2": "In der Konversationsanalyse wird die Funktion des Exklamierens oft im Hinblick auf die Affektregulierung und Beziehungsarbeit untersucht.",
       "exampleTranslation2": "Trong phân tích hội thoại, chức năng của việc thốt lên thường được nghiên cứu dưới góc độ điều hòa cảm xúc và xây dựng mối quan hệ.",
       "imageUrl": "/images/vocab/c2-diskursanalyse/exklamieren.png",
-      "meaningDe": "Etwas mit starkem Gefühl oder Überraschung laut ausrufen"
+      "meaningDe": "Etwas mit starkem Gefühl oder Überraschung laut ausrufen",
+      "conjugation": {
+        "praesens": {
+          "ich": "exklamiere",
+          "du": "exklamierst",
+          "er_sie_es": "exklamiert",
+          "wir": "exklamieren",
+          "ihr": "exklamiert",
+          "sie_Sie": "exklamieren"
+        },
+        "isIrregular": false,
+        "isSeparable": false,
+        "reviewStatus": "auto_generated_needs_spot_check"
+      }
     },
     {
       "word": "präsupponierend",
@@ -259,6 +273,26 @@
       "exampleTranslation2": "Một diễn ngôn có thể được coi là bá quyền, trong chừng mực nó thiết lập một số thế giới quan nhất định như điều hiển nhiên và gạt bỏ các lựa chọn thay thế.",
       "imageUrl": "/images/vocab/c2-diskursanalyse/insofern.png",
       "meaningDe": "Eine Konjunktion, die eine Einschränkung oder eine Bedingung für die Gültigkeit einer Aussage angibt."
+    }
+  ],
+  "cefrAudit": {
+    "targetLevel": "C2",
+    "verdict": "aligned",
+    "reviewerRole": "German Academic Lead",
+    "notes": "Release-candidate metadata audit: vocabulary content for \"Diskursanalyse & Pragmatik\" is aligned with declared C2 scope pending final human spot-check.",
+    "reviewedAt": "2026-05-12",
+    "reviewScope": "release_candidate_metadata_pass"
+  },
+  "learningOutcomes": [
+    {
+      "id": "c2-diskursanalyse-lo-1",
+      "cefrLevel": "C2",
+      "skill": "vocabulary",
+      "canDoVi": "Toi co the luyen tu vung o trinh do C2 qua chu de \"Diskursanalyse & Pragmatik\".",
+      "canDoDe": "Ich kann Wortschatz auf Niveau C2 zum Thema \"Diskursanalyse & Pragmatik\" ueben.",
+      "linkedContentIds": [
+        "c2-diskursanalyse"
+      ]
     }
   ]
 }

@@ -6,6 +6,7 @@ import dynamic from 'next/dynamic'
 import { getCefrTheme, CEFR_LEVELS } from '@/lib/constants/cefr'
 import type { CefrLevel } from '@/lib/constants/cefr'
 import { SCENARIO_OPTIONS } from '@/lib/content/scenario-options'
+import { FUXIE_MASCOT_STATES, FUXIE_MODULE_MASCOTS, FUXIE_WORLD_PROPS } from '@/lib/mascot/fuxie-assets'
 
 // ─── Types ─────────────────────────────────────────
 interface Correction {
@@ -291,7 +292,7 @@ export function ChatClient({ initialLevel, displayName }: ChatClientProps) {
                 <div className="relative mb-6">
                     <div className="w-24 h-24 rounded-full bg-gradient-to-br from-cyan-300 to-blue-400 flex items-center justify-center shadow-lg shadow-blue-200/50 animate-bounce" style={{ animationDuration: '3s' }}>
                         <Image
-                            src="/mascot/core/fuxie-core-happy-wave.png?v=2"
+                            src={FUXIE_MODULE_MASCOTS.chat}
                             alt="Fuxie"
                             width={80}
                             height={80}
@@ -299,6 +300,14 @@ export function ChatClient({ initialLevel, displayName }: ChatClientProps) {
                         />
                     </div>
                 </div>
+
+                <Image
+                    src={FUXIE_WORLD_PROPS.chatCafe}
+                    alt=""
+                    width={116}
+                    height={116}
+                    className="mb-4 h-24 w-24 object-contain drop-shadow-sm"
+                />
 
                 <h1 className="text-2xl font-bold text-gray-800 mb-2">
                     Trò chuyện với Fuxie 🦊
@@ -325,7 +334,7 @@ export function ChatClient({ initialLevel, displayName }: ChatClientProps) {
                             >
                                 <div className="text-2xl mb-1">{scenario.icon}</div>
                                 <div className="font-bold text-sm text-gray-800 leading-tight mb-1">{scenario.title}</div>
-                                <div className="text-[10px] text-gray-500 line-clamp-2">{scenario.description}</div>
+                                <div className="text-xs text-gray-500 line-clamp-2">{scenario.description}</div>
                             </button>
                         ))}
                     </div>
@@ -363,7 +372,7 @@ export function ChatClient({ initialLevel, displayName }: ChatClientProps) {
                             >
                                 <div className="relative z-10">
                                     <div className="text-xl mb-1">{l}</div>
-                                    <div className="text-[10px] font-normal opacity-80">{LEVEL_DESC[l]}</div>
+                                    <div className="text-xs font-normal opacity-80">{LEVEL_DESC[l]}</div>
                                 </div>
                                 <div className="absolute -bottom-2 -right-2 text-5xl opacity-10">🦊</div>
                             </button>
@@ -428,7 +437,7 @@ export function ChatClient({ initialLevel, displayName }: ChatClientProps) {
                     </button>
                     <div>
                         <h2 className="font-bold text-sm">Fuxie Tutor 🦊</h2>
-                        <p className="text-[10px] opacity-80">
+                        <p className="text-xs opacity-80">
                             {isLoading ? 'Schreibt...' : 'Online • ' + LEVEL_DESC[level]}
                         </p>
                     </div>
@@ -460,7 +469,7 @@ export function ChatClient({ initialLevel, displayName }: ChatClientProps) {
                         {/* Fuxie avatar */}
                         {msg.role === 'assistant' && (
                             <div className="w-8 h-8 rounded-full bg-amber-100 flex items-center justify-center shrink-0 mb-1">
-                                <Image src="/mascot/poses/happy.png" alt="🦊" width={24} height={24} />
+                                <Image src={FUXIE_MASCOT_STATES.avatar} alt="Fuxie" width={24} height={24} />
                             </div>
                         )}
 
@@ -579,7 +588,7 @@ export function ChatClient({ initialLevel, displayName }: ChatClientProps) {
                         )}
                     </button>
                 </form>
-                <p className="text-[10px] text-gray-400 text-center mt-1.5">
+                <p className="text-xs text-gray-400 text-center mt-1.5">
                     Shift+Enter để xuống dòng · 🎤 nhập giọng nói · Fuxie có thể sai
                 </p>
             </div>

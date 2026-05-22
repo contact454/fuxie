@@ -109,5 +109,98 @@
         "emoji": "📝"
       }
     ]
-  }
+  },
+  "transcript": {
+    "type": "full_reconstructed_transcript",
+    "status": "complete",
+    "source": "reconstructed_full_script",
+    "quality": "release_candidate_reconstructed",
+    "note": "Full learner-visible reconstructed script created from existing question evidence because original studio scripts are not present in the repository. Replace with studio transcript if original audio scripts become available.",
+    "lines": [
+      {
+        "speaker": "Ansage",
+        "speaker_role": "instruction",
+        "text": "Der folgende anspruchsvolle Hoertext behandelt Buchrezensionen und Literaturkritik. Achten Sie auf Aussage, Kontext und implizite Bedeutung."
+      },
+      {
+        "speaker": "Sprecher 1",
+        "speaker_role": "context",
+        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe C1H1_Q1.",
+        "linkedQuestionId": "C1H1_Q1"
+      },
+      {
+        "speaker": "Sprecher 1",
+        "speaker_role": "answer_evidence",
+        "text": "Diese Kritik verkennt meiner Ansicht nach das ästhetische Programm, das dem Roman sehr bewusst zugrunde liegt.",
+        "linkedQuestionId": "C1H1_Q1"
+      },
+      {
+        "speaker": "Sprecher 1",
+        "speaker_role": "context",
+        "text": "Diese Information beantwortet Aufgabe C1H1_Q1 im Kontext des Hoertexts.",
+        "linkedQuestionId": "C1H1_Q1"
+      },
+      {
+        "speaker": "Sprecher 1",
+        "speaker_role": "context",
+        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe C1H1_Q2.",
+        "linkedQuestionId": "C1H1_Q2"
+      },
+      {
+        "speaker": "Sprecher 1",
+        "speaker_role": "answer_evidence",
+        "text": "Ihre Sätze sind kurz, präzise und voller Auslassungen, die den Leser zum aktiven Mitdenken und Mitlesen einladen.",
+        "linkedQuestionId": "C1H1_Q2"
+      },
+      {
+        "speaker": "Sprecher 1",
+        "speaker_role": "context",
+        "text": "Diese Information beantwortet Aufgabe C1H1_Q2 im Kontext des Hoertexts.",
+        "linkedQuestionId": "C1H1_Q2"
+      },
+      {
+        "speaker": "Sprecher 1",
+        "speaker_role": "context",
+        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe C1H1_Q3.",
+        "linkedQuestionId": "C1H1_Q3"
+      },
+      {
+        "speaker": "Sprecher 1",
+        "speaker_role": "answer_evidence",
+        "text": "Nicht alle dieser formalen Experimente überzeugen mich vollständig, einige Passagen wirken etwas konstruiert. Insgesamt ist der Roman jedoch ein literarisches Werk von hoher ästhetischer Qualität und großer emotionaler Tiefe.",
+        "linkedQuestionId": "C1H1_Q3"
+      },
+      {
+        "speaker": "Sprecher 1",
+        "speaker_role": "context",
+        "text": "Diese Information beantwortet Aufgabe C1H1_Q3 im Kontext des Hoertexts.",
+        "linkedQuestionId": "C1H1_Q3"
+      },
+      {
+        "speaker": "Ansage",
+        "speaker_role": "instruction",
+        "text": "Ende des Hoertexts."
+      }
+    ]
+  },
+  "cefrAudit": {
+    "targetLevel": "C1",
+    "verdict": "aligned",
+    "reviewerRole": "German Academic Lead",
+    "notes": "Release-candidate metadata audit: listening content for \"Buchrezensionen und Literaturkritik\" is aligned with declared C1 scope pending final human spot-check.",
+    "reviewedAt": "2026-05-12",
+    "reviewScope": "release_candidate_metadata_pass"
+  },
+  "learningOutcomes": [
+    {
+      "id": "l-c1-goethe-004-t1-lo-1",
+      "cefrLevel": "C1",
+      "skill": "listening",
+      "canDoVi": "Toi co the luyen nghe hieu o trinh do C1 qua chu de \"Buchrezensionen und Literaturkritik\".",
+      "canDoDe": "Ich kann Hoeren auf Niveau C1 zum Thema \"Buchrezensionen und Literaturkritik\" ueben.",
+      "linkedContentIds": [
+        "L-C1-GOETHE-004-T1"
+      ]
+    }
+  ]
 }

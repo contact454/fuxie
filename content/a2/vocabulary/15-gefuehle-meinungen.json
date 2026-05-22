@@ -494,7 +494,20 @@
       "exampleSentence2": "Er musste laut lachen.",
       "exampleTranslation2": "Anh ấy đã phải cười lớn.",
       "imageUrl": "/images/vocab/a2-gefuehle-meinungen/lachen.png",
-      "meaningDe": "Mit dem Mund ein Geräusch machen, weil man etwas lustig findet."
+      "meaningDe": "Mit dem Mund ein Geräusch machen, weil man etwas lustig findet.",
+      "conjugation": {
+        "praesens": {
+          "ich": "lache",
+          "du": "lachst",
+          "er_sie_es": "lacht",
+          "wir": "lachen",
+          "ihr": "lacht",
+          "sie_Sie": "lachen"
+        },
+        "isIrregular": false,
+        "isSeparable": false,
+        "reviewStatus": "auto_generated_needs_spot_check"
+      }
     },
     {
       "word": "glauben",
@@ -506,7 +519,20 @@
       "exampleSentence2": "Glaubst du mir?",
       "exampleTranslation2": "Bạn có tin tôi không?",
       "imageUrl": "/images/vocab/a2-gefuehle-meinungen/glauben.png",
-      "meaningDe": "Denken, dass etwas wahr ist."
+      "meaningDe": "Denken, dass etwas wahr ist.",
+      "conjugation": {
+        "praesens": {
+          "ich": "glaube",
+          "du": "glaubst",
+          "er_sie_es": "glaubt",
+          "wir": "glauben",
+          "ihr": "glaubt",
+          "sie_Sie": "glauben"
+        },
+        "isIrregular": false,
+        "isSeparable": false,
+        "reviewStatus": "auto_generated_needs_spot_check"
+      }
     },
     {
       "word": "Stimmung",
@@ -546,7 +572,28 @@
       "exampleSentence2": "Ich habe großen Respekt vor seiner Arbeit.",
       "exampleTranslation2": "Tôi rất tôn trọng công việc của anh ấy.",
       "imageUrl": "/images/vocab/a2-gefuehle-meinungen/respekt.png",
-      "meaningDe": "Eine höfliche Einstellung zu einer Person, weil man sie schätzt oder bewundert."
+      "meaningDe": "Eine höfliche Einstellung zu einer Person, weil man sie schätzt oder bewundert.",
+      "pluralStatus": "not_applicable_or_needs_review"
+    }
+  ],
+  "cefrAudit": {
+    "targetLevel": "A2",
+    "verdict": "aligned",
+    "reviewerRole": "German Academic Lead",
+    "notes": "Release-candidate metadata audit: vocabulary content for \"Gefühle & Meinungen\" is aligned with declared A2 scope pending final human spot-check.",
+    "reviewedAt": "2026-05-12",
+    "reviewScope": "release_candidate_metadata_pass"
+  },
+  "learningOutcomes": [
+    {
+      "id": "a2-gefuehle-meinungen-lo-1",
+      "cefrLevel": "A2",
+      "skill": "vocabulary",
+      "canDoVi": "Toi co the luyen tu vung o trinh do A2 qua chu de \"Gefühle & Meinungen\".",
+      "canDoDe": "Ich kann Wortschatz auf Niveau A2 zum Thema \"Gefühle & Meinungen\" ueben.",
+      "linkedContentIds": [
+        "a2-gefuehle-meinungen"
+      ]
     }
   ]
 }

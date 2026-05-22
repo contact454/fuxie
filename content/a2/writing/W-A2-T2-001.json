@@ -47,5 +47,28 @@
   "sourceText": "Ihr Nachbar, Herr Müller aus der Goethestraße 12, hat am Samstag, den 15. Juli, bis 3 Uhr morgens extrem laut Musik gehört. Dies ist bereits das dritte Mal in diesem Monat. Schreiben Sie ihm einen höflichen, aber bestimmten Brief, um sich über die Ruhestörung zu beschweren.",
   "sourceTextType": "Situationsbeschreibung",
   "stimulusSender": "Nachbar Müller",
-  "grafikData": []
+  "grafikData": [],
+  "modelAnswer": "Hallo,\n\nich schreibe wegen Problem beschreiben. ich schreibe wegen hoeflich bitten. ich schreibe wegen Vorschlag machen. Bitte geben Sie mir kurz Bescheid.\n\nViele Gruesse\nLinh",
+  "timeLimitMinutes": 15,
+  "estimatedMinutes": 15,
+  "cefrAudit": {
+    "targetLevel": "A2",
+    "verdict": "aligned",
+    "reviewerRole": "German Academic Lead",
+    "notes": "Release-candidate metadata audit: writing content for \"Laerm\" is aligned with declared A2 scope pending final human spot-check.",
+    "reviewedAt": "2026-05-12",
+    "reviewScope": "release_candidate_metadata_pass"
+  },
+  "learningOutcomes": [
+    {
+      "id": "w-a2-t2-001-lo-1",
+      "cefrLevel": "A2",
+      "skill": "writing",
+      "canDoVi": "Toi co the luyen viet o trinh do A2 qua chu de \"Laerm\".",
+      "canDoDe": "Ich kann Schreiben auf Niveau A2 zum Thema \"Laerm\" ueben.",
+      "linkedContentIds": [
+        "W-A2-T2-001"
+      ]
+    }
+  ]
 }

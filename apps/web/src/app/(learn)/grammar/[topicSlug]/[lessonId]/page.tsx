@@ -5,6 +5,11 @@ import { cookies } from 'next/headers'
 import { getServerUser } from '@/lib/auth/server-auth'
 import { LessonPlayerDynamic } from '@/components/grammar/LessonPlayerDynamic'
 import type { TheoryBlock, GrammarExercise } from '@/components/grammar/types'
+import {
+    isSlice2VisualQaFixture,
+    Slice2GrammarErrorFixture,
+    type Slice2VisualQaParams,
+} from '@/components/visual-fixtures/slice-2-skill-fixtures'
 
 const getGrammarLesson = cache(async (lessonId: string) => {
     return prisma.grammarLesson.findUnique({
@@ -12,7 +17,21 @@ const getGrammarLesson = cache(async (lessonId: string) => {
     })
 })
 
-export async function generateMetadata({ params }: { params: Promise<{ topicSlug: string; lessonId: string }> }) {
+export async function generateMetadata({
+    params,
+    searchParams,
+}: {
+    params: Promise<{ topicSlug: string; lessonId: string }>
+    searchParams?: Promise<Slice2VisualQaParams>
+}) {
+    const visualParams = await searchParams
+    if (isSlice2VisualQaFixture(visualParams, 'error')) {
+        return {
+            title: 'Fuxie - Grammar Visual QA',
+            description: 'Slice 2 grammar error visual fixture',
+        }
+    }
+
     const { lessonId } = await params
     const lesson = await getGrammarLesson(lessonId)
     return {
@@ -20,8 +39,20 @@ export async function generateMetadata({ params }: { params: Promise<{ topicSlug
     }
 }
 
-export default async function LessonPage({ params }: { params: Promise<{ topicSlug: string; lessonId: string }> }) {
+export default async function LessonPage({
+    params,
+    searchParams,
+}: {
+    params: Promise<{ topicSlug: string; lessonId: string }>
+    searchParams?: Promise<Slice2VisualQaParams>
+}) {
     const { topicSlug, lessonId } = await params
+    const visualParams = await searchParams
+
+    if (isSlice2VisualQaFixture(visualParams, 'error')) {
+        return <Slice2GrammarErrorFixture />
+    }
+
     const serverUser = await getServerUser()
     if (!serverUser) redirect('/login')
 

@@ -116,7 +116,12 @@ export async function GET(req: NextRequest) {
 
         // ── Check server-side cache ──────────────────
         const cacheKey = ttsCacheKey(text, speed, lang)
-        const cachedAudio = await cacheGet<string>(cacheKey)
+        let cachedAudio = null
+        try {
+            cachedAudio = await cacheGet<string>(cacheKey)
+        } catch (cacheErr) {
+            console.warn('TTS Cache Get failed (fallback to API):', cacheErr)
+        }
 
         if (cachedAudio) {
             const audioBuffer = Buffer.from(cachedAudio, 'base64')
@@ -132,33 +137,52 @@ export async function GET(req: NextRequest) {
         }
 
         // ── Cache miss — call Google Cloud TTS ───────
-        const accessToken = await getAccessToken()
-
-        const ttsRes = await fetch(
-            'https://texttospeech.googleapis.com/v1/text:synthesize',
-            {
-                method: 'POST',
-                headers: {
-                    'Authorization': `Bearer ${accessToken}`,
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({
-                    input: { text },
-                    voice: getVoiceConfig(lang),
-                    audioConfig: {
-                        audioEncoding: 'MP3',
-                        speakingRate: speed,
-                        pitch: 0,
-                    },
-                }),
+        let ttsRes: Response | null = null;
+        let lastError: any = null;
+        const maxRetries = 3;
+        
+        for (let attempt = 1; attempt <= maxRetries; attempt++) {
+            try {
+                const accessToken = await getAccessToken()
+                ttsRes = await fetch(
+                    'https://texttospeech.googleapis.com/v1/text:synthesize',
+                    {
+                        method: 'POST',
+                        headers: {
+                            'Authorization': `Bearer ${accessToken}`,
+                            'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify({
+                            input: { text },
+                            voice: getVoiceConfig(lang),
+                            audioConfig: {
+                                audioEncoding: 'MP3',
+                                speakingRate: speed,
+                                pitch: 0,
+                            },
+                        }),
+                        signal: AbortSignal.timeout(8000), // 8s timeout to prevent hanging forever
+                    }
+                )
+                
+                if (ttsRes.ok) break; // Success
+                
+                // If not ok, throw to trigger retry
+                const errText = await ttsRes.text()
+                throw new Error(`TTS API error ${ttsRes.status}: ${errText}`)
+            } catch (err) {
+                lastError = err;
+                console.warn(`TTS API attempt ${attempt} failed:`, err instanceof Error ? err.message : err);
+                if (attempt < maxRetries) {
+                    await new Promise(res => setTimeout(res, Math.pow(2, attempt) * 500)); // 1s, 2s
+                }
             }
-        )
+        }
 
-        if (!ttsRes.ok) {
-            const errText = await ttsRes.text()
-            console.error('TTS API error:', ttsRes.status, errText)
+        if (!ttsRes || !ttsRes.ok) {
+            console.error('TTS API completely failed after retries:', lastError)
             return NextResponse.json(
-                { success: false, error: 'TTS generation failed' },
+                { success: false, error: 'TTS generation failed due to timeout or API error' },
                 { status: 500 }
             )
         }

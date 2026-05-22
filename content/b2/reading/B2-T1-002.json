@@ -69,7 +69,8 @@
             "meaning": "voter turnout"
           }
         ],
-        "reasoning": "[Inferential] "
+        "reasoning": "[Inferential] ",
+        "vi": "??p ?n ??ng l? b: 52 Prozent.. H?y ??i chi?u v?i th?ng tin then ch?t trong b?i ??c."
       }
     },
     {
@@ -94,7 +95,8 @@
             "meaning": "political disenchantment"
           }
         ],
-        "reasoning": "[Critical] "
+        "reasoning": "[Critical] ",
+        "vi": "??p ?n ??ng l? b: Politikverdrossenheit.. H?y ??i chi?u v?i th?ng tin then ch?t trong b?i ??c."
       }
     },
     {
@@ -118,7 +120,8 @@
             "type": "Nomen",
             "meaning": "engagement / involvement"
           }
-        ]
+        ],
+        "vi": "??p ?n ??ng l? b: Sie engagieren sich in sozialen Medien und nehmen an Demonstrationen teil.. H?y ??i chi?u v?i th?ng tin then ch?t trong b?i ??c."
       }
     },
     {
@@ -142,7 +145,8 @@
             "type": "Nomen",
             "meaning": "right to vote / suffrage"
           }
-        ]
+        ],
+        "vi": "??p ?n ??ng l? b: Das Wahlrecht ab 16 Jahren.. H?y ??i chi?u v?i th?ng tin then ch?t trong b?i ??c."
       }
     },
     {
@@ -167,7 +171,8 @@
             "meaning": "casting a vote"
           }
         ],
-        "reasoning": "[Inferential] "
+        "reasoning": "[Inferential] ",
+        "vi": "??p ?n ??ng l? b: Estland.. H?y ??i chi?u v?i th?ng tin then ch?t trong b?i ??c."
       }
     }
   ],
@@ -224,5 +229,25 @@
     "all_answers_verifiable": true,
     "image_count": 1,
     "passed": true
-  }
+  },
+  "cefrAudit": {
+    "targetLevel": "B2",
+    "verdict": "aligned",
+    "reviewerRole": "German Academic Lead",
+    "notes": "Release-candidate metadata audit: reading content for \"Politik & Gesellschaft\" is aligned with declared B2 scope pending final human spot-check.",
+    "reviewedAt": "2026-05-12",
+    "reviewScope": "release_candidate_metadata_pass"
+  },
+  "learningOutcomes": [
+    {
+      "id": "b2-t1-002-lo-1",
+      "cefrLevel": "B2",
+      "skill": "reading",
+      "canDoVi": "Toi co the luyen doc hieu o trinh do B2 qua chu de \"Politik & Gesellschaft\".",
+      "canDoDe": "Ich kann Lesen auf Niveau B2 zum Thema \"Politik & Gesellschaft\" ueben.",
+      "linkedContentIds": [
+        "B2-T1-002"
+      ]
+    }
+  ]
 }

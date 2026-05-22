@@ -11,6 +11,7 @@ import {
     type PlacementState,
 } from '@/lib/placement/engine'
 import type { PlacementLevel } from '@/data/placement-questions'
+import { getFuxieMascotSrc } from '@/lib/mascot/fuxie-assets'
 
 type Step = 'welcome' | 'goal' | 'daily-time' | 'placement' | 'result'
 
@@ -29,12 +30,12 @@ const DAILY_TIME_OPTIONS = [
 ] as const
 
 const LEVEL_INFO: Record<PlacementLevel, { color: string; label: string; desc: string }> = {
-    A1: { color: '#10b981', label: 'A1 — Anfänger', desc: 'Chào hỏi, giới thiệu bản thân' },
-    A2: { color: '#22c55e', label: 'A2 — Grundstufe', desc: 'Giao tiếp đơn giản hàng ngày' },
-    B1: { color: '#3b82f6', label: 'B1 — Mittelstufe', desc: 'Tự tin giải quyết tình huống' },
-    B2: { color: '#6366f1', label: 'B2 — Oberstufe', desc: 'Thảo luận chủ đề phức tạp' },
-    C1: { color: '#8b5cf6', label: 'C1 — Fortgeschritten', desc: 'Sử dụng thành thạo linh hoạt' },
-    C2: { color: '#a855f7', label: 'C2 — Meisterstufe', desc: 'Gần như bản ngữ' },
+    A1: { color: 'var(--color-text-success)', label: 'A1 — Anfänger', desc: 'Chào hỏi, giới thiệu bản thân' },
+    A2: { color: "var(--color-text-success)", label: 'A2 — Grundstufe', desc: 'Giao tiếp đơn giản hàng ngày' },
+    B1: { color: "var(--color-text-brand)", label: 'B1 — Mittelstufe', desc: 'Tự tin giải quyết tình huống' },
+    B2: { color: 'var(--color-cefr-b2)', label: 'B2 — Oberstufe', desc: 'Thảo luận chủ đề phức tạp' },
+    C1: { color: 'var(--color-cefr-c1)', label: 'C1 — Fortgeschritten', desc: 'Sử dụng thành thạo linh hoạt' },
+    C2: { color: 'var(--color-cefr-c1)', label: 'C2 — Meisterstufe', desc: 'Gần như bản ngữ' },
 }
 
 export function OnboardingWizard() {
@@ -239,7 +240,7 @@ function WelcomeStep({ onNext }: { onNext: () => void }) {
         <div className="text-center max-w-md animate-fade-in-up">
             <div className="mb-6 relative">
                 <Image
-                    src="/mascot/core/fuxie-core-happy-wave.png"
+                    src={getFuxieMascotSrc('authWelcomer')}
                     alt="Fuxie"
                     width={140}
                     height={140}
@@ -341,7 +342,7 @@ function GoalStep({
                                 >
                                     {level}
                                 </div>
-                                <div className="text-[10px] text-gray-400 leading-tight mt-1">
+                                <div className="text-xs text-gray-400 leading-tight mt-1">
                                     {info.desc}
                                 </div>
                             </button>
@@ -489,7 +490,7 @@ function ResultStep({
             {/* Mascot */}
             <div className="mb-4">
                 <Image
-                    src="/mascot/core/fuxie-core-celebrate.png"
+                    src={getFuxieMascotSrc('resultCelebration')}
                     alt="Fuxie celebrates"
                     width={120}
                     height={120}
@@ -542,7 +543,7 @@ function ResultStep({
                                         }}
                                     />
                                 </div>
-                                <div className="text-[10px] text-gray-400 mt-1">
+                                <div className="text-xs text-gray-400 mt-1">
                                     {breakdown.total > 0 ? `${pct}%` : '—'}
                                 </div>
                             </div>
@@ -552,7 +553,7 @@ function ResultStep({
             </div>
 
             <div className="bg-[#F3FBFF] rounded-xl border border-[#CCE4F0] p-4 mb-4 text-left">
-                <div className="text-xs font-bold uppercase tracking-wide text-[#3C78A8]">
+                <div className="text-xs font-bold uppercase text-text-brand">
                     Bước đầu tiên
                 </div>
                 <div className="mt-1 font-semibold text-gray-900">{firstAction}</div>

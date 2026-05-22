@@ -1,4 +1,5 @@
 import { FucoinLedgerType, Prisma, prisma } from '@fuxie/database'
+import { recordAnalyticsEvent } from '@/lib/analytics/events'
 
 export type EconomyDbClient = Prisma.TransactionClient | typeof prisma
 
@@ -233,8 +234,7 @@ export async function awardLearningFucoin(
         reason: input.reason,
         metadata: input.metadata,
     })
-
-    return {
+    const enrichedResult = {
         ...result,
         intendedAmount,
         dailyCap: LEARNING_FUCOIN_DAILY_CAP,
@@ -242,6 +242,28 @@ export async function awardLearningFucoin(
         dailyRemainingAfter: Math.max(0, remainingCap - result.fucoinEarned),
         capReached: remainingCap <= intendedAmount,
     }
+
+    if (!result.duplicate && result.fucoinEarned > 0) {
+        await recordAnalyticsEvent(tx, {
+            userId: input.userId,
+            role: 'LEARNER',
+            eventName: 'fucoin_earned',
+            source: 'fucoin.learning_award',
+            actionId: input.sourceId,
+            metadata: {
+                amount: result.fucoinEarned,
+                intended_amount: intendedAmount,
+                daily_cap: LEARNING_FUCOIN_DAILY_CAP,
+                daily_earned_before: dailyEarned,
+                daily_remaining_after: enrichedResult.dailyRemainingAfter,
+                cap_reached: enrichedResult.capReached,
+                source_type: input.sourceType,
+                kind: input.kind,
+            },
+        })
+    }
+
+    return enrichedResult
 }
 
 async function getLearningFucoinEarnedToday(tx: EconomyDbClient, userId: string) {

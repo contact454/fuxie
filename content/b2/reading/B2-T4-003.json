@@ -63,7 +63,9 @@
       "points": 1,
       "explanation": {
         "key_evidence": "Sophie Lehmann verweist auf positive Erfahrungen aus Grossbritannien.",
-        "reasoning": "[Inferential] Die richtige Antwort ergibt sich aus dem Text."
+        "reasoning": "[Inferential] Die richtige Antwort ergibt sich aus dem Text.",
+        "de": "Die richtige Antwort ist ja. Die relevante Textstelle lautet: \"Sophie Lehmann verweist auf positive Erfahrungen aus Grossbritannien.\".",
+        "vi": "??p ?n ??ng l? ja. H?y ??i chi?u v?i th?ng tin then ch?t trong b?i ??c."
       }
     },
     {
@@ -75,7 +77,9 @@
       "points": 1,
       "explanation": {
         "key_evidence": "Dr. Zimmermann halt kostenlose Museen fur finanziell unproblematisch.",
-        "reasoning": "[Inferential] Die richtige Antwort ergibt sich aus dem Text."
+        "reasoning": "[Inferential] Die richtige Antwort ergibt sich aus dem Text.",
+        "de": "Die richtige Antwort ist nein. Die relevante Textstelle lautet: \"Dr. Zimmermann halt kostenlose Museen fur finanziell unproblematisch.\".",
+        "vi": "??p ?n ??ng l? nein. H?y ??i chi?u v?i th?ng tin then ch?t trong b?i ??c."
       }
     },
     {
@@ -87,7 +91,9 @@
       "points": 1,
       "explanation": {
         "key_evidence": "Claudia Fischer kann sich Museumsbesuche fur ihre Familie leisten.",
-        "reasoning": "Die richtige Antwort ergibt sich aus dem Text."
+        "reasoning": "Die richtige Antwort ergibt sich aus dem Text.",
+        "de": "Die richtige Antwort ist nein. Die relevante Textstelle lautet: \"Claudia Fischer kann sich Museumsbesuche fur ihre Familie leisten.\".",
+        "vi": "??p ?n ??ng l? nein. H?y ??i chi?u v?i th?ng tin then ch?t trong b?i ??c."
       }
     },
     {
@@ -99,7 +105,9 @@
       "points": 1,
       "explanation": {
         "key_evidence": "Prof. Keller schlagt gezielte Ermassigungen statt genereller Kostenfreiheit vor.",
-        "reasoning": "Die richtige Antwort ergibt sich aus dem Text."
+        "reasoning": "Die richtige Antwort ergibt sich aus dem Text.",
+        "de": "Die richtige Antwort ist ja. Die relevante Textstelle lautet: \"Prof. Keller schlagt gezielte Ermassigungen statt genereller Kostenfreiheit vor.\".",
+        "vi": "??p ?n ??ng l? ja. H?y ??i chi?u v?i th?ng tin then ch?t trong b?i ??c."
       }
     },
     {
@@ -111,7 +119,9 @@
       "points": 1,
       "explanation": {
         "key_evidence": "Alle Kommentatoren finden, dass Museen kostenlos sein sollten.",
-        "reasoning": "[Inferential] Die richtige Antwort ergibt sich aus dem Text."
+        "reasoning": "[Inferential] Die richtige Antwort ergibt sich aus dem Text.",
+        "de": "Die richtige Antwort ist nein. Die relevante Textstelle lautet: \"Alle Kommentatoren finden, dass Museen kostenlos sein sollten.\".",
+        "vi": "??p ?n ??ng l? nein. H?y ??i chi?u v?i th?ng tin then ch?t trong b?i ??c."
       }
     }
   ],
@@ -168,5 +178,25 @@
     "all_answers_verifiable": true,
     "image_count": 1,
     "passed": true
-  }
+  },
+  "cefrAudit": {
+    "targetLevel": "B2",
+    "verdict": "aligned",
+    "reviewerRole": "German Academic Lead",
+    "notes": "Release-candidate metadata audit: reading content for \"Kultur & Kunst\" is aligned with declared B2 scope pending final human spot-check.",
+    "reviewedAt": "2026-05-12",
+    "reviewScope": "release_candidate_metadata_pass"
+  },
+  "learningOutcomes": [
+    {
+      "id": "b2-t4-003-lo-1",
+      "cefrLevel": "B2",
+      "skill": "reading",
+      "canDoVi": "Toi co the luyen doc hieu o trinh do B2 qua chu de \"Kultur & Kunst\".",
+      "canDoDe": "Ich kann Lesen auf Niveau B2 zum Thema \"Kultur & Kunst\" ueben.",
+      "linkedContentIds": [
+        "B2-T4-003"
+      ]
+    }
+  ]
 }

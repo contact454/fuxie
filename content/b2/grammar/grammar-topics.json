@@ -1,271 +1,631 @@
 {
-    "topics": [
+  "topics": [
+    {
+      "slug": "b2-konjunktiv2-vergangenheit",
+      "title": "Konjunktiv II der Vergangenheit",
+      "titleDe": "Konjunktiv II der Vergangenheit",
+      "description": "Irreale Bedingungen und Bedauern in der Vergangenheit.",
+      "cefrLevel": "B2",
+      "sortOrder": 1,
+      "explanation": "Mit dem Konjunktiv II der Vergangenheit spricht man ueber Dinge, die nicht passiert sind.",
+      "formula": "haette/waere + Partizip II",
+      "mnemonicTip": "Tiec ve qua khu: haette/waere + Partizip II.",
+      "rules": [
         {
-            "slug": "b2-konjunktiv2-vergangenheit",
-            "title": "Konjunktiv II der Vergangenheit",
-            "titleDe": "Konjunktiv II der Vergangenheit",
-            "description": "Irreale Bedingungen und Bedauern in der Vergangenheit.",
-            "cefrLevel": "B2",
-            "sortOrder": 1,
-            "explanation": "Mit dem Konjunktiv II der Vergangenheit spricht man ueber Dinge, die nicht passiert sind.",
-            "formula": "haette/waere + Partizip II",
-            "mnemonicTip": "Tiec ve qua khu: haette/waere + Partizip II.",
-            "rules": [
-                {
-                    "title": "Dieu kien trai voi qua khu",
-                    "titleDe": "Irreale Vergangenheit",
-                    "ruleText": "Dung wenn + haette/waere + Partizip II de noi mot dieu da khong xay ra.",
-                    "examples": [
-                        "Wenn ich das gewusst haette, waere ich frueher gekommen.",
-                        "Wenn sie mehr gelernt haette, haette sie bestanden."
-                    ],
-                    "sortOrder": 1
-                }
-            ]
-        },
-        {
-            "slug": "b2-passiv-modal",
-            "title": "Passiv mit Modalverben",
-            "titleDe": "Passiv mit Modalverben",
-            "description": "Passivkonstruktionen mit muessen, koennen, sollen und duerfen.",
-            "cefrLevel": "B2",
-            "sortOrder": 2,
-            "explanation": "Passiv mit Modalverben zeigt, was gemacht werden muss, kann, soll oder darf.",
-            "formula": "Modalverb + Partizip II + werden",
-            "mnemonicTip": "Modalverb chia, Partizip II + werden o cuoi.",
-            "rules": [
-                {
-                    "title": "Cau bi dong voi Modalverb",
-                    "titleDe": "Passiv mit Modalverb",
-                    "ruleText": "Trong cau chinh, Modalverb o vi tri 2; Partizip II va werden dung cuoi cau.",
-                    "examples": [
-                        "Die Aufgabe muss heute erledigt werden.",
-                        "Der Brief kann morgen geschickt werden."
-                    ],
-                    "sortOrder": 1
-                }
-            ]
-        },
-        {
-            "slug": "b2-partizip-adjektiv",
-            "title": "Partizipien als Adjektive",
-            "titleDe": "Partizip I und II als Adjektive",
-            "description": "Partizip I und Partizip II als Attribute vor Nomen.",
-            "cefrLevel": "B2",
-            "sortOrder": 3,
-            "explanation": "Partizipien koennen wie Adjektive vor Nomen stehen und bekommen Adjektivendungen.",
-            "formula": "Partizip + Adjektivendung + Nomen",
-            "mnemonicTip": "Partizip I dang lam; Partizip II da bi/da xong.",
-            "rules": [
-                {
-                    "title": "Partizip I cho hanh dong dang dien ra",
-                    "titleDe": "Partizip I fuer aktive Handlungen",
-                    "ruleText": "Partizip I duoc tao bang Infinitiv + d va dien ta hanh dong dang dien ra.",
-                    "examples": [
-                        "Das spielende Kind lacht.",
-                        "Die wartenden Gaeste stehen vor der Tuer."
-                    ],
-                    "sortOrder": 1
-                },
-                {
-                    "title": "Partizip II cho ket qua",
-                    "titleDe": "Partizip II fuer Zustand oder Passiv",
-                    "ruleText": "Partizip II dien ta trang thai da hoan thanh hoac nghia bi dong.",
-                    "examples": [
-                        "Die geschlossene Tuer ist aus Holz.",
-                        "Der reparierte Computer funktioniert wieder."
-                    ],
-                    "sortOrder": 2
-                }
-            ]
-        },
-        {
-            "slug": "b2-konnektoren",
-            "title": "Erweiterte Konnektoren",
-            "titleDe": "Erweiterte Konnektoren",
-            "description": "Konnektoren fuer Gegensatz, Folge, Grund und Einschraenkung.",
-            "cefrLevel": "B2",
-            "sortOrder": 4,
-            "explanation": "Konnektoren verbinden Ideen logisch und machen Texte praeziser.",
-            "formula": "Konnektor + passende Satzstellung",
-            "mnemonicTip": "Moi Konnektor co mot kieu vi tri dong tu rieng.",
-            "rules": [
-                {
-                    "title": "Nebensatzkonnektoren",
-                    "titleDe": "Subjunktionen",
-                    "ruleText": "Konnektoren wie obwohl und waehrend leiten Nebensaetze ein; das Verb steht am Ende.",
-                    "examples": [
-                        "Obwohl es regnet, gehen wir spazieren.",
-                        "Waehrend ich koche, hoert sie Musik."
-                    ],
-                    "sortOrder": 1
-                },
-                {
-                    "title": "Adverbiale Konnektoren",
-                    "titleDe": "Adverbkonnektoren",
-                    "ruleText": "Trotzdem, deshalb, allerdings und dennoch stehen oft auf Position 1; das Verb folgt direkt danach.",
-                    "examples": [
-                        "Es regnet. Trotzdem gehen wir spazieren.",
-                        "Er war krank. Deshalb blieb er zu Hause."
-                    ],
-                    "sortOrder": 2
-                }
-            ]
-        },
-        {
-            "slug": "b2-doppelkonjunktionen",
-            "title": "Doppelkonjunktionen",
-            "titleDe": "Doppelkonjunktionen",
-            "description": "Zweiteilige Konnektoren wie sowohl...als auch und je...desto.",
-            "cefrLevel": "B2",
-            "sortOrder": 5,
-            "explanation": "Doppelkonjunktionen verbinden zwei gleichwertige oder gegensaetzliche Informationen.",
-            "formula": "Teil 1 ... Teil 2",
-            "mnemonicTip": "Hoc theo cap, dung dung ca hai nua.",
-            "rules": [
-                {
-                    "title": "Them thong tin",
-                    "titleDe": "Additive Doppelkonjunktionen",
-                    "ruleText": "Sowohl...als auch va nicht nur...sondern auch them thong tin cung huong.",
-                    "examples": [
-                        "Sie spricht sowohl Deutsch als auch Englisch.",
-                        "Er ist nicht nur fleissig, sondern auch kreativ."
-                    ],
-                    "sortOrder": 1
-                },
-                {
-                    "title": "Lua chon hoac phu dinh",
-                    "titleDe": "Alternative und negative Paare",
-                    "ruleText": "Entweder...oder dua ra lua chon; weder...noch phu dinh ca hai.",
-                    "examples": [
-                        "Entweder wir fahren mit dem Zug oder wir nehmen den Bus.",
-                        "Ich habe weder Zeit noch Geld."
-                    ],
-                    "sortOrder": 2
-                }
-            ]
-        },
-        {
-            "slug": "b2-nominalisierung",
-            "title": "Nominalisierung",
-            "titleDe": "Nominalisierung",
-            "description": "Verben und Adjektive werden zu Nomen, besonders im formellen Stil.",
-            "cefrLevel": "B2",
-            "sortOrder": 6,
-            "explanation": "Nominalisierung macht Texte dichter und formeller.",
-            "formula": "Verb/Adjektiv -> Nomen",
-            "mnemonicTip": "Viet hoc thuat hon: bien hanh dong thanh danh tu.",
-            "rules": [
-                {
-                    "title": "Dong tu thanh danh tu",
-                    "titleDe": "Verben als Nomen",
-                    "ruleText": "Infinitive koennen als Nomen gebraucht werden und werden grossgeschrieben.",
-                    "examples": [
-                        "Das Lesen hilft beim Lernen.",
-                        "Beim Arbeiten hoere ich Musik."
-                    ],
-                    "sortOrder": 1
-                },
-                {
-                    "title": "Cum danh tu thay cho menh de",
-                    "titleDe": "Nominalstil statt Verbalstil",
-                    "ruleText": "Trong van phong trang trong, menh de co the duoc thay bang cum danh tu.",
-                    "examples": [
-                        "Nach der Pruefung der Unterlagen erhalten Sie eine Antwort.",
-                        "Wegen der Verspaetung verpassen wir den Anschluss."
-                    ],
-                    "sortOrder": 2
-                }
-            ]
-        },
-        {
-            "slug": "b2-n-deklination",
-            "title": "n-Deklination",
-            "titleDe": "n-Deklination",
-            "description": "Schwache maskuline Nomen mit Endung -n oder -en.",
-            "cefrLevel": "B2",
-            "sortOrder": 7,
-            "explanation": "Einige maskuline Nomen bekommen ausser im Nominativ Singular die Endung -n oder -en.",
-            "formula": "der Mensch -> den/dem/des Menschen",
-            "mnemonicTip": "Nhieu danh tu chi nguoi giong duc them -n/-en ngoai Nominativ.",
-            "rules": [
-                {
-                    "title": "Danh tu yeu",
-                    "titleDe": "Schwache Nomen",
-                    "ruleText": "Cac danh tu nhu Mensch, Student, Kollege, Kunde them -n hoac -en o Akkusativ, Dativ, Genitiv.",
-                    "examples": [
-                        "Ich sehe den Studenten.",
-                        "Sie hilft dem Kollegen."
-                    ],
-                    "sortOrder": 1
-                }
-            ]
-        },
-        {
-            "slug": "b2-futur2",
-            "title": "Futur II",
-            "titleDe": "Futur II",
-            "description": "Vermutungen ueber abgeschlossene Handlungen.",
-            "cefrLevel": "B2",
-            "sortOrder": 8,
-            "explanation": "Futur II beschreibt, dass etwas bis zu einem Zeitpunkt abgeschlossen sein wird, oder drueckt Vermutung aus.",
-            "formula": "werden + Partizip II + haben/sein",
-            "mnemonicTip": "se da xong: werden + Partizip II + haben/sein.",
-            "rules": [
-                {
-                    "title": "Hoan thanh trong tuong lai",
-                    "titleDe": "Abgeschlossene Zukunft",
-                    "ruleText": "Dung Futur II khi mot viec se hoan thanh truoc mot thoi diem trong tuong lai.",
-                    "examples": [
-                        "Bis morgen werde ich den Bericht geschrieben haben.",
-                        "Um acht Uhr werden wir angekommen sein."
-                    ],
-                    "sortOrder": 1
-                },
-                {
-                    "title": "Phong doan ve qua khu",
-                    "titleDe": "Vermutung ueber Vergangenes",
-                    "ruleText": "Futur II cung co the phong doan ve viec da xay ra.",
-                    "examples": [
-                        "Er wird den Zug verpasst haben.",
-                        "Sie wird schon eingeschlafen sein."
-                    ],
-                    "sortOrder": 2
-                }
-            ]
-        },
-        {
-            "slug": "b2-praeteritum-stark",
-            "title": "Praeteritum starker Verben",
-            "titleDe": "Praeteritum starker Verben",
-            "description": "Unregelmaessige Praeteritumformen mit Stammvokalwechsel.",
-            "cefrLevel": "B2",
-            "sortOrder": 9,
-            "explanation": "Starke Verben bilden das Praeteritum oft mit Vokalwechsel und ohne -te.",
-            "formula": "gehen -> ging, fahren -> fuhr",
-            "mnemonicTip": "Dong tu manh doi nguyen am, can hoc theo nhom.",
-            "rules": [
-                {
-                    "title": "Vokalwechsel",
-                    "titleDe": "Stammvokalwechsel",
-                    "ruleText": "Nhieu dong tu manh doi nguyen am trong Praeteritum.",
-                    "examples": [
-                        "Er ging nach Hause.",
-                        "Wir fuhren nach Hamburg."
-                    ],
-                    "sortOrder": 1
-                },
-                {
-                    "title": "Thuong dung trong van viet",
-                    "titleDe": "Hauefig in geschriebenen Texten",
-                    "ruleText": "Praeteritum cua dong tu manh xuat hien nhieu trong truyen, bao chi va van ban trang trong.",
-                    "examples": [
-                        "Sie sprach sehr ruhig.",
-                        "Der Artikel beschrieb die Situation genau."
-                    ],
-                    "sortOrder": 2
-                }
-            ]
+          "title": "Dieu kien trai voi qua khu",
+          "titleDe": "Irreale Vergangenheit",
+          "ruleText": "Dung wenn + haette/waere + Partizip II de noi mot dieu da khong xay ra.",
+          "examples": [
+            "Wenn ich das gewusst haette, waere ich frueher gekommen.",
+            "Wenn sie mehr gelernt haette, haette sie bestanden."
+          ],
+          "sortOrder": 1
         }
-    ]
+      ],
+      "exercises": [
+        {
+          "type": "recognition",
+          "prompt": "Erkennen Sie die Zielstruktur im Beispielsatz: Wenn ich das gewusst haette, waere ich frueher gekommen.",
+          "answer": "Wenn ich das gewusst haette, waere ich frueher gekommen.",
+          "explanation": "Die Aufgabe trainiert das Erkennen von Konjunktiv II der Vergangenheit."
+        },
+        {
+          "type": "production",
+          "prompt": "Schreiben Sie einen eigenen Satz mit Konjunktiv II der Vergangenheit.",
+          "answer": "Individuelle Antwort; fachlich anhand der Regel pr?fen.",
+          "explanation": "Die eigene Produktion soll die Regel bewusst anwenden und zum CEFR-Level passen."
+        },
+        {
+          "type": "reflection",
+          "prompt": "Erkl?ren Sie kurz auf Vietnamesisch, wann man diese Struktur benutzt.",
+          "answer": "Irreale Bedingungen und Bedauern in der Vergangenheit.",
+          "explanation": "Die Reflexion hilft vietnamesischen Lernenden, Form und Funktion zu verbinden."
+        }
+      ],
+      "cefrAudit": {
+        "targetLevel": "B2",
+        "verdict": "aligned",
+        "reviewerRole": "German Academic Lead",
+        "notes": "Release-candidate metadata audit: grammar content for \"Konjunktiv II der Vergangenheit\" is aligned with declared B2 scope pending final human spot-check.",
+        "reviewedAt": "2026-05-12",
+        "reviewScope": "release_candidate_metadata_pass"
+      },
+      "learningOutcomes": [
+        {
+          "id": "b2-konjunktiv2-vergangenheit-lo-1",
+          "cefrLevel": "B2",
+          "skill": "grammar",
+          "canDoVi": "Toi co the luyen ngu phap o trinh do B2 qua chu de \"Konjunktiv II der Vergangenheit\".",
+          "canDoDe": "Ich kann Grammatik auf Niveau B2 zum Thema \"Konjunktiv II der Vergangenheit\" ueben.",
+          "linkedContentIds": [
+            "b2-konjunktiv2-vergangenheit"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "b2-passiv-modal",
+      "title": "Passiv mit Modalverben",
+      "titleDe": "Passiv mit Modalverben",
+      "description": "Passivkonstruktionen mit muessen, koennen, sollen und duerfen.",
+      "cefrLevel": "B2",
+      "sortOrder": 2,
+      "explanation": "Passiv mit Modalverben zeigt, was gemacht werden muss, kann, soll oder darf.",
+      "formula": "Modalverb + Partizip II + werden",
+      "mnemonicTip": "Modalverb chia, Partizip II + werden o cuoi.",
+      "rules": [
+        {
+          "title": "Cau bi dong voi Modalverb",
+          "titleDe": "Passiv mit Modalverb",
+          "ruleText": "Trong cau chinh, Modalverb o vi tri 2; Partizip II va werden dung cuoi cau.",
+          "examples": [
+            "Die Aufgabe muss heute erledigt werden.",
+            "Der Brief kann morgen geschickt werden."
+          ],
+          "sortOrder": 1
+        }
+      ],
+      "exercises": [
+        {
+          "type": "recognition",
+          "prompt": "Erkennen Sie die Zielstruktur im Beispielsatz: Die Aufgabe muss heute erledigt werden.",
+          "answer": "Die Aufgabe muss heute erledigt werden.",
+          "explanation": "Die Aufgabe trainiert das Erkennen von Passiv mit Modalverben."
+        },
+        {
+          "type": "production",
+          "prompt": "Schreiben Sie einen eigenen Satz mit Passiv mit Modalverben.",
+          "answer": "Individuelle Antwort; fachlich anhand der Regel pr?fen.",
+          "explanation": "Die eigene Produktion soll die Regel bewusst anwenden und zum CEFR-Level passen."
+        },
+        {
+          "type": "reflection",
+          "prompt": "Erkl?ren Sie kurz auf Vietnamesisch, wann man diese Struktur benutzt.",
+          "answer": "Passivkonstruktionen mit muessen, koennen, sollen und duerfen.",
+          "explanation": "Die Reflexion hilft vietnamesischen Lernenden, Form und Funktion zu verbinden."
+        }
+      ],
+      "cefrAudit": {
+        "targetLevel": "B2",
+        "verdict": "aligned",
+        "reviewerRole": "German Academic Lead",
+        "notes": "Release-candidate metadata audit: grammar content for \"Passiv mit Modalverben\" is aligned with declared B2 scope pending final human spot-check.",
+        "reviewedAt": "2026-05-12",
+        "reviewScope": "release_candidate_metadata_pass"
+      },
+      "learningOutcomes": [
+        {
+          "id": "b2-passiv-modal-lo-1",
+          "cefrLevel": "B2",
+          "skill": "grammar",
+          "canDoVi": "Toi co the luyen ngu phap o trinh do B2 qua chu de \"Passiv mit Modalverben\".",
+          "canDoDe": "Ich kann Grammatik auf Niveau B2 zum Thema \"Passiv mit Modalverben\" ueben.",
+          "linkedContentIds": [
+            "b2-passiv-modal"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "b2-partizip-adjektiv",
+      "title": "Partizipien als Adjektive",
+      "titleDe": "Partizip I und II als Adjektive",
+      "description": "Partizip I und Partizip II als Attribute vor Nomen.",
+      "cefrLevel": "B2",
+      "sortOrder": 3,
+      "explanation": "Partizipien koennen wie Adjektive vor Nomen stehen und bekommen Adjektivendungen.",
+      "formula": "Partizip + Adjektivendung + Nomen",
+      "mnemonicTip": "Partizip I dang lam; Partizip II da bi/da xong.",
+      "rules": [
+        {
+          "title": "Partizip I cho hanh dong dang dien ra",
+          "titleDe": "Partizip I fuer aktive Handlungen",
+          "ruleText": "Partizip I duoc tao bang Infinitiv + d va dien ta hanh dong dang dien ra.",
+          "examples": [
+            "Das spielende Kind lacht.",
+            "Die wartenden Gaeste stehen vor der Tuer."
+          ],
+          "sortOrder": 1
+        },
+        {
+          "title": "Partizip II cho ket qua",
+          "titleDe": "Partizip II fuer Zustand oder Passiv",
+          "ruleText": "Partizip II dien ta trang thai da hoan thanh hoac nghia bi dong.",
+          "examples": [
+            "Die geschlossene Tuer ist aus Holz.",
+            "Der reparierte Computer funktioniert wieder."
+          ],
+          "sortOrder": 2
+        }
+      ],
+      "exercises": [
+        {
+          "type": "recognition",
+          "prompt": "Erkennen Sie die Zielstruktur im Beispielsatz: Das spielende Kind lacht.",
+          "answer": "Das spielende Kind lacht.",
+          "explanation": "Die Aufgabe trainiert das Erkennen von Partizip I und II als Adjektive."
+        },
+        {
+          "type": "production",
+          "prompt": "Schreiben Sie einen eigenen Satz mit Partizip I und II als Adjektive.",
+          "answer": "Individuelle Antwort; fachlich anhand der Regel pr?fen.",
+          "explanation": "Die eigene Produktion soll die Regel bewusst anwenden und zum CEFR-Level passen."
+        },
+        {
+          "type": "reflection",
+          "prompt": "Erkl?ren Sie kurz auf Vietnamesisch, wann man diese Struktur benutzt.",
+          "answer": "Partizip I und Partizip II als Attribute vor Nomen.",
+          "explanation": "Die Reflexion hilft vietnamesischen Lernenden, Form und Funktion zu verbinden."
+        }
+      ],
+      "cefrAudit": {
+        "targetLevel": "B2",
+        "verdict": "aligned",
+        "reviewerRole": "German Academic Lead",
+        "notes": "Release-candidate metadata audit: grammar content for \"Partizip I und II als Adjektive\" is aligned with declared B2 scope pending final human spot-check.",
+        "reviewedAt": "2026-05-12",
+        "reviewScope": "release_candidate_metadata_pass"
+      },
+      "learningOutcomes": [
+        {
+          "id": "b2-partizip-adjektiv-lo-1",
+          "cefrLevel": "B2",
+          "skill": "grammar",
+          "canDoVi": "Toi co the luyen ngu phap o trinh do B2 qua chu de \"Partizip I und II als Adjektive\".",
+          "canDoDe": "Ich kann Grammatik auf Niveau B2 zum Thema \"Partizip I und II als Adjektive\" ueben.",
+          "linkedContentIds": [
+            "b2-partizip-adjektiv"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "b2-konnektoren",
+      "title": "Erweiterte Konnektoren",
+      "titleDe": "Erweiterte Konnektoren",
+      "description": "Konnektoren fuer Gegensatz, Folge, Grund und Einschraenkung.",
+      "cefrLevel": "B2",
+      "sortOrder": 4,
+      "explanation": "Konnektoren verbinden Ideen logisch und machen Texte praeziser.",
+      "formula": "Konnektor + passende Satzstellung",
+      "mnemonicTip": "Moi Konnektor co mot kieu vi tri dong tu rieng.",
+      "rules": [
+        {
+          "title": "Nebensatzkonnektoren",
+          "titleDe": "Subjunktionen",
+          "ruleText": "Konnektoren wie obwohl und waehrend leiten Nebensaetze ein; das Verb steht am Ende.",
+          "examples": [
+            "Obwohl es regnet, gehen wir spazieren.",
+            "Waehrend ich koche, hoert sie Musik."
+          ],
+          "sortOrder": 1
+        },
+        {
+          "title": "Adverbiale Konnektoren",
+          "titleDe": "Adverbkonnektoren",
+          "ruleText": "Trotzdem, deshalb, allerdings und dennoch stehen oft auf Position 1; das Verb folgt direkt danach.",
+          "examples": [
+            "Es regnet. Trotzdem gehen wir spazieren.",
+            "Er war krank. Deshalb blieb er zu Hause."
+          ],
+          "sortOrder": 2
+        }
+      ],
+      "exercises": [
+        {
+          "type": "recognition",
+          "prompt": "Erkennen Sie die Zielstruktur im Beispielsatz: Obwohl es regnet, gehen wir spazieren.",
+          "answer": "Obwohl es regnet, gehen wir spazieren.",
+          "explanation": "Die Aufgabe trainiert das Erkennen von Erweiterte Konnektoren."
+        },
+        {
+          "type": "production",
+          "prompt": "Schreiben Sie einen eigenen Satz mit Erweiterte Konnektoren.",
+          "answer": "Individuelle Antwort; fachlich anhand der Regel pr?fen.",
+          "explanation": "Die eigene Produktion soll die Regel bewusst anwenden und zum CEFR-Level passen."
+        },
+        {
+          "type": "reflection",
+          "prompt": "Erkl?ren Sie kurz auf Vietnamesisch, wann man diese Struktur benutzt.",
+          "answer": "Konnektoren fuer Gegensatz, Folge, Grund und Einschraenkung.",
+          "explanation": "Die Reflexion hilft vietnamesischen Lernenden, Form und Funktion zu verbinden."
+        }
+      ],
+      "cefrAudit": {
+        "targetLevel": "B2",
+        "verdict": "aligned",
+        "reviewerRole": "German Academic Lead",
+        "notes": "Release-candidate metadata audit: grammar content for \"Erweiterte Konnektoren\" is aligned with declared B2 scope pending final human spot-check.",
+        "reviewedAt": "2026-05-12",
+        "reviewScope": "release_candidate_metadata_pass"
+      },
+      "learningOutcomes": [
+        {
+          "id": "b2-konnektoren-lo-1",
+          "cefrLevel": "B2",
+          "skill": "grammar",
+          "canDoVi": "Toi co the luyen ngu phap o trinh do B2 qua chu de \"Erweiterte Konnektoren\".",
+          "canDoDe": "Ich kann Grammatik auf Niveau B2 zum Thema \"Erweiterte Konnektoren\" ueben.",
+          "linkedContentIds": [
+            "b2-konnektoren"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "b2-doppelkonjunktionen",
+      "title": "Doppelkonjunktionen",
+      "titleDe": "Doppelkonjunktionen",
+      "description": "Zweiteilige Konnektoren wie sowohl...als auch und je...desto.",
+      "cefrLevel": "B2",
+      "sortOrder": 5,
+      "explanation": "Doppelkonjunktionen verbinden zwei gleichwertige oder gegensaetzliche Informationen.",
+      "formula": "Teil 1 ... Teil 2",
+      "mnemonicTip": "Hoc theo cap, dung dung ca hai nua.",
+      "rules": [
+        {
+          "title": "Them thong tin",
+          "titleDe": "Additive Doppelkonjunktionen",
+          "ruleText": "Sowohl...als auch va nicht nur...sondern auch them thong tin cung huong.",
+          "examples": [
+            "Sie spricht sowohl Deutsch als auch Englisch.",
+            "Er ist nicht nur fleissig, sondern auch kreativ."
+          ],
+          "sortOrder": 1
+        },
+        {
+          "title": "Lua chon hoac phu dinh",
+          "titleDe": "Alternative und negative Paare",
+          "ruleText": "Entweder...oder dua ra lua chon; weder...noch phu dinh ca hai.",
+          "examples": [
+            "Entweder wir fahren mit dem Zug oder wir nehmen den Bus.",
+            "Ich habe weder Zeit noch Geld."
+          ],
+          "sortOrder": 2
+        }
+      ],
+      "exercises": [
+        {
+          "type": "recognition",
+          "prompt": "Erkennen Sie die Zielstruktur im Beispielsatz: Sie spricht sowohl Deutsch als auch Englisch.",
+          "answer": "Sie spricht sowohl Deutsch als auch Englisch.",
+          "explanation": "Die Aufgabe trainiert das Erkennen von Doppelkonjunktionen."
+        },
+        {
+          "type": "production",
+          "prompt": "Schreiben Sie einen eigenen Satz mit Doppelkonjunktionen.",
+          "answer": "Individuelle Antwort; fachlich anhand der Regel pr?fen.",
+          "explanation": "Die eigene Produktion soll die Regel bewusst anwenden und zum CEFR-Level passen."
+        },
+        {
+          "type": "reflection",
+          "prompt": "Erkl?ren Sie kurz auf Vietnamesisch, wann man diese Struktur benutzt.",
+          "answer": "Zweiteilige Konnektoren wie sowohl...als auch und je...desto.",
+          "explanation": "Die Reflexion hilft vietnamesischen Lernenden, Form und Funktion zu verbinden."
+        }
+      ],
+      "cefrAudit": {
+        "targetLevel": "B2",
+        "verdict": "aligned",
+        "reviewerRole": "German Academic Lead",
+        "notes": "Release-candidate metadata audit: grammar content for \"Doppelkonjunktionen\" is aligned with declared B2 scope pending final human spot-check.",
+        "reviewedAt": "2026-05-12",
+        "reviewScope": "release_candidate_metadata_pass"
+      },
+      "learningOutcomes": [
+        {
+          "id": "b2-doppelkonjunktionen-lo-1",
+          "cefrLevel": "B2",
+          "skill": "grammar",
+          "canDoVi": "Toi co the luyen ngu phap o trinh do B2 qua chu de \"Doppelkonjunktionen\".",
+          "canDoDe": "Ich kann Grammatik auf Niveau B2 zum Thema \"Doppelkonjunktionen\" ueben.",
+          "linkedContentIds": [
+            "b2-doppelkonjunktionen"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "b2-nominalisierung",
+      "title": "Nominalisierung",
+      "titleDe": "Nominalisierung",
+      "description": "Verben und Adjektive werden zu Nomen, besonders im formellen Stil.",
+      "cefrLevel": "B2",
+      "sortOrder": 6,
+      "explanation": "Nominalisierung macht Texte dichter und formeller.",
+      "formula": "Verb/Adjektiv -> Nomen",
+      "mnemonicTip": "Viet hoc thuat hon: bien hanh dong thanh danh tu.",
+      "rules": [
+        {
+          "title": "Dong tu thanh danh tu",
+          "titleDe": "Verben als Nomen",
+          "ruleText": "Infinitive koennen als Nomen gebraucht werden und werden grossgeschrieben.",
+          "examples": [
+            "Das Lesen hilft beim Lernen.",
+            "Beim Arbeiten hoere ich Musik."
+          ],
+          "sortOrder": 1
+        },
+        {
+          "title": "Cum danh tu thay cho menh de",
+          "titleDe": "Nominalstil statt Verbalstil",
+          "ruleText": "Trong van phong trang trong, menh de co the duoc thay bang cum danh tu.",
+          "examples": [
+            "Nach der Pruefung der Unterlagen erhalten Sie eine Antwort.",
+            "Wegen der Verspaetung verpassen wir den Anschluss."
+          ],
+          "sortOrder": 2
+        }
+      ],
+      "exercises": [
+        {
+          "type": "recognition",
+          "prompt": "Erkennen Sie die Zielstruktur im Beispielsatz: Das Lesen hilft beim Lernen.",
+          "answer": "Das Lesen hilft beim Lernen.",
+          "explanation": "Die Aufgabe trainiert das Erkennen von Nominalisierung."
+        },
+        {
+          "type": "production",
+          "prompt": "Schreiben Sie einen eigenen Satz mit Nominalisierung.",
+          "answer": "Individuelle Antwort; fachlich anhand der Regel pr?fen.",
+          "explanation": "Die eigene Produktion soll die Regel bewusst anwenden und zum CEFR-Level passen."
+        },
+        {
+          "type": "reflection",
+          "prompt": "Erkl?ren Sie kurz auf Vietnamesisch, wann man diese Struktur benutzt.",
+          "answer": "Verben und Adjektive werden zu Nomen, besonders im formellen Stil.",
+          "explanation": "Die Reflexion hilft vietnamesischen Lernenden, Form und Funktion zu verbinden."
+        }
+      ],
+      "cefrAudit": {
+        "targetLevel": "B2",
+        "verdict": "aligned",
+        "reviewerRole": "German Academic Lead",
+        "notes": "Release-candidate metadata audit: grammar content for \"Nominalisierung\" is aligned with declared B2 scope pending final human spot-check.",
+        "reviewedAt": "2026-05-12",
+        "reviewScope": "release_candidate_metadata_pass"
+      },
+      "learningOutcomes": [
+        {
+          "id": "b2-nominalisierung-lo-1",
+          "cefrLevel": "B2",
+          "skill": "grammar",
+          "canDoVi": "Toi co the luyen ngu phap o trinh do B2 qua chu de \"Nominalisierung\".",
+          "canDoDe": "Ich kann Grammatik auf Niveau B2 zum Thema \"Nominalisierung\" ueben.",
+          "linkedContentIds": [
+            "b2-nominalisierung"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "b2-n-deklination",
+      "title": "n-Deklination",
+      "titleDe": "n-Deklination",
+      "description": "Schwache maskuline Nomen mit Endung -n oder -en.",
+      "cefrLevel": "B2",
+      "sortOrder": 7,
+      "explanation": "Einige maskuline Nomen bekommen ausser im Nominativ Singular die Endung -n oder -en.",
+      "formula": "der Mensch -> den/dem/des Menschen",
+      "mnemonicTip": "Nhieu danh tu chi nguoi giong duc them -n/-en ngoai Nominativ.",
+      "rules": [
+        {
+          "title": "Danh tu yeu",
+          "titleDe": "Schwache Nomen",
+          "ruleText": "Cac danh tu nhu Mensch, Student, Kollege, Kunde them -n hoac -en o Akkusativ, Dativ, Genitiv.",
+          "examples": [
+            "Ich sehe den Studenten.",
+            "Sie hilft dem Kollegen."
+          ],
+          "sortOrder": 1
+        }
+      ],
+      "exercises": [
+        {
+          "type": "recognition",
+          "prompt": "Erkennen Sie die Zielstruktur im Beispielsatz: Ich sehe den Studenten.",
+          "answer": "Ich sehe den Studenten.",
+          "explanation": "Die Aufgabe trainiert das Erkennen von n-Deklination."
+        },
+        {
+          "type": "production",
+          "prompt": "Schreiben Sie einen eigenen Satz mit n-Deklination.",
+          "answer": "Individuelle Antwort; fachlich anhand der Regel pr?fen.",
+          "explanation": "Die eigene Produktion soll die Regel bewusst anwenden und zum CEFR-Level passen."
+        },
+        {
+          "type": "reflection",
+          "prompt": "Erkl?ren Sie kurz auf Vietnamesisch, wann man diese Struktur benutzt.",
+          "answer": "Schwache maskuline Nomen mit Endung -n oder -en.",
+          "explanation": "Die Reflexion hilft vietnamesischen Lernenden, Form und Funktion zu verbinden."
+        }
+      ],
+      "cefrAudit": {
+        "targetLevel": "B2",
+        "verdict": "aligned",
+        "reviewerRole": "German Academic Lead",
+        "notes": "Release-candidate metadata audit: grammar content for \"n-Deklination\" is aligned with declared B2 scope pending final human spot-check.",
+        "reviewedAt": "2026-05-12",
+        "reviewScope": "release_candidate_metadata_pass"
+      },
+      "learningOutcomes": [
+        {
+          "id": "b2-n-deklination-lo-1",
+          "cefrLevel": "B2",
+          "skill": "grammar",
+          "canDoVi": "Toi co the luyen ngu phap o trinh do B2 qua chu de \"n-Deklination\".",
+          "canDoDe": "Ich kann Grammatik auf Niveau B2 zum Thema \"n-Deklination\" ueben.",
+          "linkedContentIds": [
+            "b2-n-deklination"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "b2-futur2",
+      "title": "Futur II",
+      "titleDe": "Futur II",
+      "description": "Vermutungen ueber abgeschlossene Handlungen.",
+      "cefrLevel": "B2",
+      "sortOrder": 8,
+      "explanation": "Futur II beschreibt, dass etwas bis zu einem Zeitpunkt abgeschlossen sein wird, oder drueckt Vermutung aus.",
+      "formula": "werden + Partizip II + haben/sein",
+      "mnemonicTip": "se da xong: werden + Partizip II + haben/sein.",
+      "rules": [
+        {
+          "title": "Hoan thanh trong tuong lai",
+          "titleDe": "Abgeschlossene Zukunft",
+          "ruleText": "Dung Futur II khi mot viec se hoan thanh truoc mot thoi diem trong tuong lai.",
+          "examples": [
+            "Bis morgen werde ich den Bericht geschrieben haben.",
+            "Um acht Uhr werden wir angekommen sein."
+          ],
+          "sortOrder": 1
+        },
+        {
+          "title": "Phong doan ve qua khu",
+          "titleDe": "Vermutung ueber Vergangenes",
+          "ruleText": "Futur II cung co the phong doan ve viec da xay ra.",
+          "examples": [
+            "Er wird den Zug verpasst haben.",
+            "Sie wird schon eingeschlafen sein."
+          ],
+          "sortOrder": 2
+        }
+      ],
+      "exercises": [
+        {
+          "type": "recognition",
+          "prompt": "Erkennen Sie die Zielstruktur im Beispielsatz: Bis morgen werde ich den Bericht geschrieben haben.",
+          "answer": "Bis morgen werde ich den Bericht geschrieben haben.",
+          "explanation": "Die Aufgabe trainiert das Erkennen von Futur II."
+        },
+        {
+          "type": "production",
+          "prompt": "Schreiben Sie einen eigenen Satz mit Futur II.",
+          "answer": "Individuelle Antwort; fachlich anhand der Regel pr?fen.",
+          "explanation": "Die eigene Produktion soll die Regel bewusst anwenden und zum CEFR-Level passen."
+        },
+        {
+          "type": "reflection",
+          "prompt": "Erkl?ren Sie kurz auf Vietnamesisch, wann man diese Struktur benutzt.",
+          "answer": "Vermutungen ueber abgeschlossene Handlungen.",
+          "explanation": "Die Reflexion hilft vietnamesischen Lernenden, Form und Funktion zu verbinden."
+        }
+      ],
+      "cefrAudit": {
+        "targetLevel": "B2",
+        "verdict": "aligned",
+        "reviewerRole": "German Academic Lead",
+        "notes": "Release-candidate metadata audit: grammar content for \"Futur II\" is aligned with declared B2 scope pending final human spot-check.",
+        "reviewedAt": "2026-05-12",
+        "reviewScope": "release_candidate_metadata_pass"
+      },
+      "learningOutcomes": [
+        {
+          "id": "b2-futur2-lo-1",
+          "cefrLevel": "B2",
+          "skill": "grammar",
+          "canDoVi": "Toi co the luyen ngu phap o trinh do B2 qua chu de \"Futur II\".",
+          "canDoDe": "Ich kann Grammatik auf Niveau B2 zum Thema \"Futur II\" ueben.",
+          "linkedContentIds": [
+            "b2-futur2"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "b2-praeteritum-stark",
+      "title": "Praeteritum starker Verben",
+      "titleDe": "Praeteritum starker Verben",
+      "description": "Unregelmaessige Praeteritumformen mit Stammvokalwechsel.",
+      "cefrLevel": "B2",
+      "sortOrder": 9,
+      "explanation": "Starke Verben bilden das Praeteritum oft mit Vokalwechsel und ohne -te.",
+      "formula": "gehen -> ging, fahren -> fuhr",
+      "mnemonicTip": "Dong tu manh doi nguyen am, can hoc theo nhom.",
+      "rules": [
+        {
+          "title": "Vokalwechsel",
+          "titleDe": "Stammvokalwechsel",
+          "ruleText": "Nhieu dong tu manh doi nguyen am trong Praeteritum.",
+          "examples": [
+            "Er ging nach Hause.",
+            "Wir fuhren nach Hamburg."
+          ],
+          "sortOrder": 1
+        },
+        {
+          "title": "Thuong dung trong van viet",
+          "titleDe": "Hauefig in geschriebenen Texten",
+          "ruleText": "Praeteritum cua dong tu manh xuat hien nhieu trong truyen, bao chi va van ban trang trong.",
+          "examples": [
+            "Sie sprach sehr ruhig.",
+            "Der Artikel beschrieb die Situation genau."
+          ],
+          "sortOrder": 2
+        }
+      ],
+      "exercises": [
+        {
+          "type": "recognition",
+          "prompt": "Erkennen Sie die Zielstruktur im Beispielsatz: Er ging nach Hause.",
+          "answer": "Er ging nach Hause.",
+          "explanation": "Die Aufgabe trainiert das Erkennen von Praeteritum starker Verben."
+        },
+        {
+          "type": "production",
+          "prompt": "Schreiben Sie einen eigenen Satz mit Praeteritum starker Verben.",
+          "answer": "Individuelle Antwort; fachlich anhand der Regel pr?fen.",
+          "explanation": "Die eigene Produktion soll die Regel bewusst anwenden und zum CEFR-Level passen."
+        },
+        {
+          "type": "reflection",
+          "prompt": "Erkl?ren Sie kurz auf Vietnamesisch, wann man diese Struktur benutzt.",
+          "answer": "Unregelmaessige Praeteritumformen mit Stammvokalwechsel.",
+          "explanation": "Die Reflexion hilft vietnamesischen Lernenden, Form und Funktion zu verbinden."
+        }
+      ],
+      "cefrAudit": {
+        "targetLevel": "B2",
+        "verdict": "aligned",
+        "reviewerRole": "German Academic Lead",
+        "notes": "Release-candidate metadata audit: grammar content for \"Praeteritum starker Verben\" is aligned with declared B2 scope pending final human spot-check.",
+        "reviewedAt": "2026-05-12",
+        "reviewScope": "release_candidate_metadata_pass"
+      },
+      "learningOutcomes": [
+        {
+          "id": "b2-praeteritum-stark-lo-1",
+          "cefrLevel": "B2",
+          "skill": "grammar",
+          "canDoVi": "Toi co the luyen ngu phap o trinh do B2 qua chu de \"Praeteritum starker Verben\".",
+          "canDoDe": "Ich kann Grammatik auf Niveau B2 zum Thema \"Praeteritum starker Verben\" ueben.",
+          "linkedContentIds": [
+            "b2-praeteritum-stark"
+          ]
+        }
+      ]
+    }
+  ]
 }

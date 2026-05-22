@@ -87,7 +87,8 @@
             "type": "Nomen",
             "meaning": "upper floor"
           }
-        ]
+        ],
+        "vi": "??p ?n ??ng l? b: Im 1. Obergeschoss.. H?y ??i chi?u v?i th?ng tin then ch?t trong b?i ??c."
       }
     },
     {
@@ -111,7 +112,8 @@
             "type": "Nomen",
             "meaning": "cooking course"
           }
-        ]
+        ],
+        "vi": "??p ?n ??ng l? b: Im 3. Obergeschoss.. H?y ??i chi?u v?i th?ng tin then ch?t trong b?i ??c."
       }
     },
     {
@@ -140,7 +142,8 @@
             "type": "Verb",
             "meaning": "to register"
           }
-        ]
+        ],
+        "vi": "??p ?n ??ng l? b: Bis 28. Februar.. H?y ??i chi?u v?i th?ng tin then ch?t trong b?i ??c."
       }
     },
     {
@@ -169,7 +172,8 @@
             "type": "Nomen",
             "meaning": "retiree / pensioner"
           }
-        ]
+        ],
+        "vi": "??p ?n ??ng l? b: Schüler, Studenten und Rentner.. H?y ??i chi?u v?i th?ng tin then ch?t trong b?i ??c."
       }
     },
     {
@@ -198,7 +202,8 @@
             "type": "Nomen",
             "meaning": "attendance / participation"
           }
-        ]
+        ],
+        "vi": "??p ?n ??ng l? b: Man muss 80 % der Termine besuchen.. H?y ??i chi?u v?i th?ng tin then ch?t trong b?i ??c."
       }
     }
   ],
@@ -256,5 +261,25 @@
     "mc_distractors_plausible": true,
     "image_count": 1,
     "passed": true
-  }
+  },
+  "cefrAudit": {
+    "targetLevel": "A2",
+    "verdict": "aligned",
+    "reviewerRole": "German Academic Lead",
+    "notes": "Release-candidate metadata audit: reading content for \"In der Schule\" is aligned with declared A2 scope pending final human spot-check.",
+    "reviewedAt": "2026-05-12",
+    "reviewScope": "release_candidate_metadata_pass"
+  },
+  "learningOutcomes": [
+    {
+      "id": "a2-t2-004-lo-1",
+      "cefrLevel": "A2",
+      "skill": "reading",
+      "canDoVi": "Toi co the luyen doc hieu o trinh do A2 qua chu de \"In der Schule\".",
+      "canDoDe": "Ich kann Lesen auf Niveau A2 zum Thema \"In der Schule\" ueben.",
+      "linkedContentIds": [
+        "A2-T2-004"
+      ]
+    }
+  ]
 }

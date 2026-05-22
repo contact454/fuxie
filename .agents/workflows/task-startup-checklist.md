@@ -23,6 +23,8 @@ Vai phoi hop: <roles or none>
 
 8. Work from the primary role's mission, authority, standard deliverables, response style, and quality checklist.
 9. Before finalizing, apply the primary role's quality checklist.
+10. After completing the task, propose the next concrete step.
+11. If handing work to Antigravity or Anti, include a ready-to-use prompt for that agent.
 
 ## Reroute Rule
 
@@ -41,4 +43,4 @@ Stop and rerun the gate when:
 
 ## Compliance Smoke Test
 
-A compliant task response begins with role context and reflects the selected profile's checklist. A non-compliant response starts doing the work before selecting and reading the role profile.
+A compliant task response begins with role context, reflects the selected profile's checklist, proposes the next step after the task is complete, and includes an Antigravity/Anti prompt whenever work is assigned to that agent. A non-compliant response starts doing the work before selecting and reading the role profile, omits the closeout next step, or hands off to Antigravity/Anti without a prompt.

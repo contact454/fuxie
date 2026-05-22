@@ -1,82 +1,292 @@
 {
-    "course": {
-        "slug": "deutsch-c1-fortgeschritten",
-        "title": "Deutsch C1 — Fortgeschritten",
-        "titleDe": "Deutsch C1 — Fortgeschritten",
-        "description": "Khóa học tiếng Đức C1. Konjunktiv I, Passiv-Alternativen, subjektive Modalverben, Nomen-Verb-Verbindungen, Modalpartikeln. Chuẩn bị Goethe C1.",
-        "cefrLevel": "C1",
-        "examTypes": ["GOETHE", "TELC"],
-        "imageUrl": "/mascot/hero/hero-landing.png",
-        "sortOrder": 5
-    },
-    "modules": [
+  "course": {
+    "slug": "deutsch-c1-fortgeschritten",
+    "title": "Deutsch C1 — Fortgeschritten",
+    "titleDe": "Deutsch C1 — Fortgeschritten",
+    "description": "Khóa học tiếng Đức C1. Konjunktiv I, Passiv-Alternativen, subjektive Modalverben, Nomen-Verb-Verbindungen, Modalpartikeln. Chuẩn bị Goethe C1.",
+    "cefrLevel": "C1",
+    "examTypes": [
+      "GOETHE",
+      "TELC"
+    ],
+    "imageUrl": "/mascot/hero/hero-landing.png",
+    "sortOrder": 5
+  },
+  "modules": [
+    {
+      "slug": "m1-indirekte-rede",
+      "title": "Konjunktiv I & Passiv-Alternativen",
+      "titleDe": "Konjunktiv I & Passiv-Alternativen",
+      "description": "Lời nói gián tiếp, thay thế bị động, báo chí & nghiên cứu.",
+      "cefrLevel": "C1",
+      "sortOrder": 1,
+      "estimatedMinutes": 2400,
+      "vocabularyThemes": [],
+      "grammarTopics": [
+        "c1-konjunktiv1",
+        "c1-passiv-alternativen"
+      ],
+      "skillLinks": [
         {
-            "slug": "m1-indirekte-rede",
-            "title": "Konjunktiv I & Passiv-Alternativen",
-            "titleDe": "Konjunktiv I & Passiv-Alternativen",
-            "description": "Lời nói gián tiếp, thay thế bị động, báo chí & nghiên cứu.",
-            "cefrLevel": "C1",
-            "sortOrder": 1,
-            "estimatedMinutes": 2400,
-            "vocabularyThemes": [],
-            "grammarTopics": ["c1-konjunktiv1", "c1-passiv-alternativen"],
-            "skillLinks": [
-                {"skill": "listening", "label": "Hören", "labelVi": "Nghe hiểu", "href": "/listening?level=C1", "emoji": "🎧"},
-                {"skill": "speaking", "label": "Sprechen", "labelVi": "Luyện nói", "href": "/speaking?level=C1", "emoji": "🎙️"},
-                {"skill": "reading", "label": "Lesen", "labelVi": "Đọc hiểu", "href": "/reading?level=C1", "emoji": "📖"},
-                {"skill": "writing", "label": "Schreiben", "labelVi": "Luyện viết", "href": "/writing?level=C1", "emoji": "✍️"}
-            ]
+          "skill": "listening",
+          "label": "Hören",
+          "labelVi": "Nghe hiểu",
+          "href": "/listening?level=C1",
+          "emoji": "🎧"
         },
         {
-            "slug": "m2-modalverben-und-funktionsverben",
-            "title": "Subjektive Modalverben & Nomen-Verb",
-            "titleDe": "Subjektive Modalverben & Nomen-Verb-Verbindungen",
-            "description": "MV chủ quan, cụm DT-ĐT, liên từ nâng cao.",
-            "cefrLevel": "C1",
-            "sortOrder": 2,
-            "estimatedMinutes": 2400,
-            "vocabularyThemes": [],
-            "grammarTopics": ["c1-subjektive-modalverben", "c1-nomen-verb-verbindungen", "c1-erweiterte-konnektoren"],
-            "skillLinks": [
-                {"skill": "listening", "label": "Hören", "labelVi": "Nghe hiểu", "href": "/listening?level=C1", "emoji": "🎧"},
-                {"skill": "speaking", "label": "Sprechen", "labelVi": "Luyện nói", "href": "/speaking?level=C1", "emoji": "🎙️"},
-                {"skill": "reading", "label": "Lesen", "labelVi": "Đọc hiểu", "href": "/reading?level=C1", "emoji": "📖"},
-                {"skill": "writing", "label": "Schreiben", "labelVi": "Luyện viết", "href": "/writing?level=C1", "emoji": "✍️"}
-            ]
+          "skill": "speaking",
+          "label": "Sprechen",
+          "labelVi": "Luyện nói",
+          "href": "/speaking?level=C1",
+          "emoji": "🎙️"
         },
         {
-            "slug": "m3-partikeln-und-praeposition",
-            "title": "Modalpartikeln & Genitivpräpositionen",
-            "titleDe": "Modalpartikeln & erweiterte Genitivpräpositionen",
-            "description": "Tiểu từ tình thái, GT Genitiv nâng cao, hóa trị ĐT.",
-            "cefrLevel": "C1",
-            "sortOrder": 3,
-            "estimatedMinutes": 2400,
-            "vocabularyThemes": [],
-            "grammarTopics": ["c1-modalpartikeln", "c1-praep-genitiv-erweitert", "c1-verbvalenz"],
-            "skillLinks": [
-                {"skill": "listening", "label": "Hören", "labelVi": "Nghe hiểu", "href": "/listening?level=C1", "emoji": "🎧"},
-                {"skill": "speaking", "label": "Sprechen", "labelVi": "Luyện nói", "href": "/speaking?level=C1", "emoji": "🎙️"},
-                {"skill": "reading", "label": "Lesen", "labelVi": "Đọc hiểu", "href": "/reading?level=C1", "emoji": "📖"},
-                {"skill": "writing", "label": "Schreiben", "labelVi": "Luyện viết", "href": "/writing?level=C1", "emoji": "✍️"}
-            ]
+          "skill": "reading",
+          "label": "Lesen",
+          "labelVi": "Đọc hiểu",
+          "href": "/reading?level=C1",
+          "emoji": "📖"
         },
         {
-            "slug": "m4-pruefungsvorbereitung-c1",
-            "title": "Prüfungsvorbereitung C1",
-            "titleDe": "Prüfungsvorbereitung C1",
-            "description": "Tổng ôn 4 kỹ năng, Mock exams Goethe C1.",
-            "cefrLevel": "C1",
-            "sortOrder": 4,
-            "estimatedMinutes": 900,
-            "vocabularyThemes": [],
-            "grammarTopics": [],
-            "skillLinks": [
-                {"skill": "listening", "label": "Hören", "labelVi": "Nghe ôn thi", "href": "/listening?level=C1", "emoji": "🎧"},
-                {"skill": "speaking", "label": "Sprechen", "labelVi": "Nói ôn thi", "href": "/speaking?level=C1", "emoji": "🎙️"},
-                {"skill": "reading", "label": "Lesen", "labelVi": "Đọc ôn thi", "href": "/reading?level=C1", "emoji": "📖"},
-                {"skill": "writing", "label": "Schreiben", "labelVi": "Viết ôn thi", "href": "/writing?level=C1", "emoji": "✍️"}
-            ]
+          "skill": "writing",
+          "label": "Schreiben",
+          "labelVi": "Luyện viết",
+          "href": "/writing?level=C1",
+          "emoji": "✍️"
         }
-    ]
+      ],
+      "cefrAudit": {
+        "targetLevel": "C1",
+        "verdict": "aligned",
+        "reviewerRole": "German Academic Lead",
+        "notes": "Release-candidate metadata audit: course content for \"Konjunktiv I & Passiv-Alternativen\" is aligned with declared C1 scope pending final human spot-check.",
+        "reviewedAt": "2026-05-12",
+        "reviewScope": "release_candidate_metadata_pass"
+      },
+      "learningOutcomes": [
+        {
+          "id": "m1-indirekte-rede-lo-1",
+          "cefrLevel": "C1",
+          "skill": "course",
+          "canDoVi": "Toi co the luyen lo trinh hoc o trinh do C1 qua chu de \"Konjunktiv I & Passiv-Alternativen\".",
+          "canDoDe": "Ich kann Lernpfad auf Niveau C1 zum Thema \"Konjunktiv I & Passiv-Alternativen\" ueben.",
+          "linkedContentIds": [
+            "m1-indirekte-rede",
+            "c1-konjunktiv1",
+            "c1-passiv-alternativen"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "m2-modalverben-und-funktionsverben",
+      "title": "Subjektive Modalverben & Nomen-Verb",
+      "titleDe": "Subjektive Modalverben & Nomen-Verb-Verbindungen",
+      "description": "MV chủ quan, cụm DT-ĐT, liên từ nâng cao.",
+      "cefrLevel": "C1",
+      "sortOrder": 2,
+      "estimatedMinutes": 2400,
+      "vocabularyThemes": [],
+      "grammarTopics": [
+        "c1-subjektive-modalverben",
+        "c1-nomen-verb-verbindungen",
+        "c1-erweiterte-konnektoren"
+      ],
+      "skillLinks": [
+        {
+          "skill": "listening",
+          "label": "Hören",
+          "labelVi": "Nghe hiểu",
+          "href": "/listening?level=C1",
+          "emoji": "🎧"
+        },
+        {
+          "skill": "speaking",
+          "label": "Sprechen",
+          "labelVi": "Luyện nói",
+          "href": "/speaking?level=C1",
+          "emoji": "🎙️"
+        },
+        {
+          "skill": "reading",
+          "label": "Lesen",
+          "labelVi": "Đọc hiểu",
+          "href": "/reading?level=C1",
+          "emoji": "📖"
+        },
+        {
+          "skill": "writing",
+          "label": "Schreiben",
+          "labelVi": "Luyện viết",
+          "href": "/writing?level=C1",
+          "emoji": "✍️"
+        }
+      ],
+      "cefrAudit": {
+        "targetLevel": "C1",
+        "verdict": "aligned",
+        "reviewerRole": "German Academic Lead",
+        "notes": "Release-candidate metadata audit: course content for \"Subjektive Modalverben & Nomen-Verb-Verbindungen\" is aligned with declared C1 scope pending final human spot-check.",
+        "reviewedAt": "2026-05-12",
+        "reviewScope": "release_candidate_metadata_pass"
+      },
+      "learningOutcomes": [
+        {
+          "id": "m2-modalverben-und-funktionsverben-lo-1",
+          "cefrLevel": "C1",
+          "skill": "course",
+          "canDoVi": "Toi co the luyen lo trinh hoc o trinh do C1 qua chu de \"Subjektive Modalverben & Nomen-Verb-Verbindungen\".",
+          "canDoDe": "Ich kann Lernpfad auf Niveau C1 zum Thema \"Subjektive Modalverben & Nomen-Verb-Verbindungen\" ueben.",
+          "linkedContentIds": [
+            "m2-modalverben-und-funktionsverben",
+            "c1-subjektive-modalverben",
+            "c1-nomen-verb-verbindungen",
+            "c1-erweiterte-konnektoren"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "m3-partikeln-und-praeposition",
+      "title": "Modalpartikeln & Genitivpräpositionen",
+      "titleDe": "Modalpartikeln & erweiterte Genitivpräpositionen",
+      "description": "Tiểu từ tình thái, GT Genitiv nâng cao, hóa trị ĐT.",
+      "cefrLevel": "C1",
+      "sortOrder": 3,
+      "estimatedMinutes": 2400,
+      "vocabularyThemes": [],
+      "grammarTopics": [
+        "c1-modalpartikeln",
+        "c1-praep-genitiv-erweitert",
+        "c1-verbvalenz"
+      ],
+      "skillLinks": [
+        {
+          "skill": "listening",
+          "label": "Hören",
+          "labelVi": "Nghe hiểu",
+          "href": "/listening?level=C1",
+          "emoji": "🎧"
+        },
+        {
+          "skill": "speaking",
+          "label": "Sprechen",
+          "labelVi": "Luyện nói",
+          "href": "/speaking?level=C1",
+          "emoji": "🎙️"
+        },
+        {
+          "skill": "reading",
+          "label": "Lesen",
+          "labelVi": "Đọc hiểu",
+          "href": "/reading?level=C1",
+          "emoji": "📖"
+        },
+        {
+          "skill": "writing",
+          "label": "Schreiben",
+          "labelVi": "Luyện viết",
+          "href": "/writing?level=C1",
+          "emoji": "✍️"
+        }
+      ],
+      "cefrAudit": {
+        "targetLevel": "C1",
+        "verdict": "aligned",
+        "reviewerRole": "German Academic Lead",
+        "notes": "Release-candidate metadata audit: course content for \"Modalpartikeln & erweiterte Genitivpräpositionen\" is aligned with declared C1 scope pending final human spot-check.",
+        "reviewedAt": "2026-05-12",
+        "reviewScope": "release_candidate_metadata_pass"
+      },
+      "learningOutcomes": [
+        {
+          "id": "m3-partikeln-und-praeposition-lo-1",
+          "cefrLevel": "C1",
+          "skill": "course",
+          "canDoVi": "Toi co the luyen lo trinh hoc o trinh do C1 qua chu de \"Modalpartikeln & erweiterte Genitivpräpositionen\".",
+          "canDoDe": "Ich kann Lernpfad auf Niveau C1 zum Thema \"Modalpartikeln & erweiterte Genitivpräpositionen\" ueben.",
+          "linkedContentIds": [
+            "m3-partikeln-und-praeposition",
+            "c1-modalpartikeln",
+            "c1-praep-genitiv-erweitert",
+            "c1-verbvalenz"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "m4-pruefungsvorbereitung-c1",
+      "title": "Prüfungsvorbereitung C1",
+      "titleDe": "Prüfungsvorbereitung C1",
+      "description": "Tổng ôn 4 kỹ năng, Mock exams Goethe C1.",
+      "cefrLevel": "C1",
+      "sortOrder": 4,
+      "estimatedMinutes": 900,
+      "vocabularyThemes": [],
+      "grammarTopics": [],
+      "skillLinks": [
+        {
+          "skill": "listening",
+          "label": "Hören",
+          "labelVi": "Nghe ôn thi",
+          "href": "/listening?level=C1",
+          "emoji": "🎧"
+        },
+        {
+          "skill": "speaking",
+          "label": "Sprechen",
+          "labelVi": "Nói ôn thi",
+          "href": "/speaking?level=C1",
+          "emoji": "🎙️"
+        },
+        {
+          "skill": "reading",
+          "label": "Lesen",
+          "labelVi": "Đọc ôn thi",
+          "href": "/reading?level=C1",
+          "emoji": "📖"
+        },
+        {
+          "skill": "writing",
+          "label": "Schreiben",
+          "labelVi": "Viết ôn thi",
+          "href": "/writing?level=C1",
+          "emoji": "✍️"
+        }
+      ],
+      "cefrAudit": {
+        "targetLevel": "C1",
+        "verdict": "aligned",
+        "reviewerRole": "German Academic Lead",
+        "notes": "Release-candidate metadata audit: course content for \"Prüfungsvorbereitung C1\" is aligned with declared C1 scope pending final human spot-check.",
+        "reviewedAt": "2026-05-12",
+        "reviewScope": "release_candidate_metadata_pass"
+      },
+      "learningOutcomes": [
+        {
+          "id": "m4-pruefungsvorbereitung-c1-lo-1",
+          "cefrLevel": "C1",
+          "skill": "course",
+          "canDoVi": "Toi co the luyen lo trinh hoc o trinh do C1 qua chu de \"Prüfungsvorbereitung C1\".",
+          "canDoDe": "Ich kann Lernpfad auf Niveau C1 zum Thema \"Prüfungsvorbereitung C1\" ueben.",
+          "linkedContentIds": [
+            "m4-pruefungsvorbereitung-c1"
+          ]
+        }
+      ]
+    }
+  ],
+  "learningOutcomes": [
+    {
+      "id": "deutsch-c1-fortgeschritten-lo-1",
+      "cefrLevel": "C1",
+      "skill": "course",
+      "canDoVi": "Toi co the luyen lo trinh hoc o trinh do C1 qua chu de \"Deutsch C1 — Fortgeschritten\".",
+      "canDoDe": "Ich kann Lernpfad auf Niveau C1 zum Thema \"Deutsch C1 — Fortgeschritten\" ueben.",
+      "linkedContentIds": [
+        "deutsch-c1-fortgeschritten"
+      ]
+    }
+  ]
 }

@@ -4,7 +4,7 @@ export default function HomePage() {
             <div className="text-center">
                 <div className="flex items-center justify-center gap-3 mb-4">
                     <img
-                        src="/mascot/core/fuxie-core-happy-wave.png"
+                        src="/mascot-3d/states/global/fuxie-global-fuxie-auth-welcomer.webp"
                         alt="Fuxie"
                         width={72}
                         height={72}

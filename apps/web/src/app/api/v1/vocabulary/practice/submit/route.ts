@@ -7,6 +7,9 @@ import { handleApiError } from '@/lib/api/error-handler'
 import { NextRequest, NextResponse } from 'next/server'
 import { gradeVocabularySubmission, type VocabularyWordInfo } from '@/lib/assessment/submission-grading'
 import { awardLearningFucoin } from '@/lib/gamification/fucoin'
+import { buildLearningQuestRewardPayload } from '@/lib/gamification/learning-quest-rewards'
+import { getLearningQuestMasteryPayload } from '@/lib/gamification/skill-mastery-data'
+import { buildVocabularyQuestEpisodeReceipt } from '@/lib/gamification/vocabulary-quest-episode'
 import { recordLearningActivity } from '@/lib/progress/learning-activity'
 import { invalidateLearnerProgressCaches } from '@/lib/progress/cache-invalidation'
 
@@ -18,6 +21,13 @@ const submitSchema = z.object({
     themeSlug: z.string(),
     cefrLevel: z.enum(VALID_LEVELS),
     timeTaken: z.number().min(0).optional(),
+    questEpisode: z.object({
+        episodeId: z.string().max(180),
+        themeSlug: z.string().max(120),
+        cefrLevel: z.enum(VALID_LEVELS),
+        checkpointCount: z.number().int().min(1).max(6),
+        nextEpisodeHref: z.string().max(240).optional(),
+    }).optional(),
     answers: z.array(z.object({
         questionId: z.string(),
         answer: z.string(),
@@ -43,7 +53,13 @@ export async function POST(req: NextRequest) {
         }
 
         const body = await req.json()
-        const { exerciseType, themeSlug, cefrLevel, timeTaken, answers } = submitSchema.parse(body)
+        const { exerciseType, themeSlug, cefrLevel, timeTaken, answers, questEpisode } = submitSchema.parse(body)
+        const eligibleQuestEpisode = exerciseType === 'mixed'
+            && questEpisode
+            && questEpisode.themeSlug === themeSlug
+            && questEpisode.cefrLevel === cefrLevel
+            ? questEpisode
+            : null
 
         const wordIds = [...new Set(answers.map(a => a.wordId).filter((id): id is string => Boolean(id)))]
         const wordMap = new Map<string, VocabularyWordInfo>()
@@ -108,6 +124,21 @@ export async function POST(req: NextRequest) {
                 xpEarned,
                 timeSpentSeconds: timeTaken ?? null,
                 exercisesCompleted: 1,
+                analytics: {
+                    actionId: attempt.id,
+                    actionType: 'vocabulary_practice',
+                    level: cefrLevel,
+                    skill: 'WORTSCHATZ',
+                    source: 'vocabulary.practice.submit',
+                    metadata: {
+                        theme_slug: themeSlug,
+                        exercise_type: exerciseType,
+                        ...(eligibleQuestEpisode ? {
+                            episode_id: eligibleQuestEpisode.episodeId,
+                            checkpoint_count: eligibleQuestEpisode.checkpointCount,
+                        } : {}),
+                    },
+                },
             })
 
             const fucoin = await awardLearningFucoin(tx, {
@@ -123,6 +154,10 @@ export async function POST(req: NextRequest) {
                     themeSlug,
                     cefrLevel,
                     accuracy,
+                    ...(eligibleQuestEpisode ? {
+                        episodeId: eligibleQuestEpisode.episodeId,
+                        checkpointCount: eligibleQuestEpisode.checkpointCount,
+                    } : {}),
                 },
             })
 
@@ -134,6 +169,27 @@ export async function POST(req: NextRequest) {
         })
 
         invalidateLearnerProgressCaches(user.id).catch(() => {})
+        const mastery = await getLearningQuestMasteryPayload({
+            userId: user.id,
+            skill: 'vocabulary',
+            currentLevel: cefrLevel,
+            sourceActionId: result.attempt.id,
+            sourceActionType: 'vocabulary_practice',
+            source: 'vocabulary.practice.submit',
+            persistBadgeUnlock: true,
+        }).catch(() => ({}))
+        const questEpisodeReceipt = eligibleQuestEpisode
+            ? buildVocabularyQuestEpisodeReceipt({
+                episodeId: eligibleQuestEpisode.episodeId,
+                themeSlug,
+                cefrLevel,
+                accuracy,
+                totalQuestions: answers.length,
+                answeredQuestions: answers.length,
+                checkpointCount: eligibleQuestEpisode.checkpointCount,
+                nextEpisodeHref: eligibleQuestEpisode.nextEpisodeHref,
+            })
+            : null
 
         return NextResponse.json({
             success: true,
@@ -153,6 +209,17 @@ export async function POST(req: NextRequest) {
                 fucoinDailyRemaining: result.fucoin.dailyRemainingAfter,
                 fucoinCapReached: result.fucoin.capReached,
                 streak: result.progress.streak,
+                ...(questEpisodeReceipt ? {
+                    questEpisodeReceipt,
+                    nextEpisodeHref: questEpisodeReceipt.nextEpisodeHref,
+                } : {}),
+                ...buildLearningQuestRewardPayload({
+                    skill: 'vocabulary',
+                    xpEarned: result.progress.xpEarned,
+                    fucoin: result.fucoin,
+                    streak: result.progress.streak,
+                    ...mastery,
+                }),
                 results,
             },
         })

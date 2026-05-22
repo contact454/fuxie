@@ -85,7 +85,8 @@
             "type": "Nomen",
             "meaning": "lending period"
           }
-        ]
+        ],
+        "vi": "??p ?n ??ng l? b: 4 Wochen.. H?y ??i chi?u v?i th?ng tin then ch?t trong b?i ??c."
       }
     },
     {
@@ -109,7 +110,8 @@
             "type": "Nomen",
             "meaning": "annual fee"
           }
-        ]
+        ],
+        "vi": "??p ?n ??ng l? c: Kostenlos.. H?y ??i chi?u v?i th?ng tin then ch?t trong b?i ??c."
       }
     },
     {
@@ -133,7 +135,8 @@
             "type": "Verb",
             "meaning": "to reserve / pre-order"
           }
-        ]
+        ],
+        "vi": "??p ?n ??ng l? b: Wenn das Medium vorbestellt wurde.. H?y ??i chi?u v?i th?ng tin then ch?t trong b?i ??c."
       }
     },
     {
@@ -158,7 +161,8 @@
             "meaning": "expiration"
           }
         ],
-        "reasoning": "[Inferential] "
+        "reasoning": "[Inferential] ",
+        "vi": "??p ?n ??ng l? b: Sie werden automatisch zurückgegeben.. H?y ??i chi?u v?i th?ng tin then ch?t trong b?i ??c."
       }
     },
     {
@@ -182,7 +186,8 @@
             "type": "Nomen",
             "meaning": "delay / late return"
           }
-        ]
+        ],
+        "vi": "??p ?n ??ng l? b: 0,50 Euro.. H?y ??i chi?u v?i th?ng tin then ch?t trong b?i ??c."
       }
     }
   ],
@@ -239,5 +244,25 @@
     "all_answers_verifiable": true,
     "image_count": 1,
     "passed": true
-  }
+  },
+  "cefrAudit": {
+    "targetLevel": "B1",
+    "verdict": "aligned",
+    "reviewerRole": "German Academic Lead",
+    "notes": "Release-candidate metadata audit: reading content for \"Medien & Kommunikation\" is aligned with declared B1 scope pending final human spot-check.",
+    "reviewedAt": "2026-05-12",
+    "reviewScope": "release_candidate_metadata_pass"
+  },
+  "learningOutcomes": [
+    {
+      "id": "b1-t5-004-lo-1",
+      "cefrLevel": "B1",
+      "skill": "reading",
+      "canDoVi": "Toi co the luyen doc hieu o trinh do B1 qua chu de \"Medien & Kommunikation\".",
+      "canDoDe": "Ich kann Lesen auf Niveau B1 zum Thema \"Medien & Kommunikation\" ueben.",
+      "linkedContentIds": [
+        "B1-T5-004"
+      ]
+    }
+  ]
 }

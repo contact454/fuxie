@@ -258,7 +258,20 @@
       "exampleSentence2": "Sie möchte eine zusätzliche Qualifikation erwerben.",
       "exampleTranslation2": "Cô ấy muốn đạt được một bằng cấp bổ sung.",
       "imageUrl": "/images/vocab/b1-bewerbung-lebenslauf/erwerben.png",
-      "meaningDe": "Durch Lernen oder Bezahlen etwas Neues bekommen."
+      "meaningDe": "Durch Lernen oder Bezahlen etwas Neues bekommen.",
+      "conjugation": {
+        "praesens": {
+          "ich": "erwerbe",
+          "du": "erwerbst",
+          "er_sie_es": "erwerbt",
+          "wir": "erwerben",
+          "ihr": "erwerbt",
+          "sie_Sie": "erwerben"
+        },
+        "isIrregular": false,
+        "isSeparable": false,
+        "reviewStatus": "auto_generated_needs_spot_check"
+      }
     },
     {
       "word": "überzeugen",
@@ -272,7 +285,20 @@
       "exampleSentence2": "Sie versucht, ihren Chef von der neuen Idee zu überzeugen.",
       "exampleTranslation2": "Cô ấy đang cố gắng thuyết phục sếp về ý tưởng mới.",
       "imageUrl": "/images/vocab/b1-bewerbung-lebenslauf/ueberzeugen.png",
-      "meaningDe": "Jemanden dazu bringen, dass er eine Meinung teilt oder etwas glaubt"
+      "meaningDe": "Jemanden dazu bringen, dass er eine Meinung teilt oder etwas glaubt",
+      "conjugation": {
+        "praesens": {
+          "ich": "ueberzeuge",
+          "du": "ueberzeugst",
+          "er_sie_es": "ueberzeugt",
+          "wir": "ueberzeugen",
+          "ihr": "ueberzeugt",
+          "sie_Sie": "ueberzeugen"
+        },
+        "isIrregular": false,
+        "isSeparable": false,
+        "reviewStatus": "auto_generated_needs_spot_check"
+      }
     },
     {
       "word": "auswählen",
@@ -286,7 +312,20 @@
       "exampleSentence2": "Bitte wählen Sie die passende Antwort aus.",
       "exampleTranslation2": "Vui lòng chọn câu trả lời phù hợp.",
       "imageUrl": "/images/vocab/b1-bewerbung-lebenslauf/auswaehlen.png",
-      "meaningDe": "Aus mehreren Möglichkeiten eine Sache nehmen"
+      "meaningDe": "Aus mehreren Möglichkeiten eine Sache nehmen",
+      "conjugation": {
+        "praesens": {
+          "ich": "auswaehle",
+          "du": "auswaehlst",
+          "er_sie_es": "auswaehlt",
+          "wir": "auswaehlen",
+          "ihr": "auswaehlt",
+          "sie_Sie": "auswaehlen"
+        },
+        "isIrregular": false,
+        "isSeparable": true,
+        "reviewStatus": "auto_generated_needs_spot_check"
+      }
     },
     {
       "word": "entlassen",
@@ -300,7 +339,20 @@
       "exampleSentence2": "Er wurde wegen schlechter Leistung entlassen.",
       "exampleTranslation2": "Anh ấy bị sa thải vì hiệu suất làm việc kém.",
       "imageUrl": "/images/vocab/b1-bewerbung-lebenslauf/entlassen.png",
-      "meaningDe": "Ein Arbeitsverhältnis durch den Arbeitgeber beenden."
+      "meaningDe": "Ein Arbeitsverhältnis durch den Arbeitgeber beenden.",
+      "conjugation": {
+        "praesens": {
+          "ich": "entlasse",
+          "du": "entlasst",
+          "er_sie_es": "entlasst",
+          "wir": "entlassen",
+          "ihr": "entlasst",
+          "sie_Sie": "entlassen"
+        },
+        "isIrregular": false,
+        "isSeparable": false,
+        "reviewStatus": "auto_generated_needs_spot_check"
+      }
     },
     {
       "word": "beherrschen",
@@ -314,7 +366,20 @@
       "exampleSentence2": "Um diesen Beruf auszuüben, muss man bestimmte Techniken beherrschen.",
       "exampleTranslation2": "Để thực hiện nghề này, người ta phải thành thạo các kỹ thuật nhất định.",
       "imageUrl": "/images/vocab/b1-bewerbung-lebenslauf/beherrschen.png",
-      "meaningDe": "Eine Sprache oder eine Technik sehr gut können"
+      "meaningDe": "Eine Sprache oder eine Technik sehr gut können",
+      "conjugation": {
+        "praesens": {
+          "ich": "beherrsche",
+          "du": "beherrschst",
+          "er_sie_es": "beherrscht",
+          "wir": "beherrschen",
+          "ihr": "beherrscht",
+          "sie_Sie": "beherrschen"
+        },
+        "isIrregular": false,
+        "isSeparable": false,
+        "reviewStatus": "auto_generated_needs_spot_check"
+      }
     },
     {
       "word": "eigenverantwortlich",
@@ -371,6 +436,26 @@
       "exampleTranslation2": "Tôi có một câu hỏi liên quan đến vị trí được đăng tuyển.",
       "imageUrl": "/images/vocab/b1-bewerbung-lebenslauf/bezueglich.png",
       "meaningDe": "wenn man über ein bestimmtes Thema oder eine bestimmte Sache spricht"
+    }
+  ],
+  "cefrAudit": {
+    "targetLevel": "B1",
+    "verdict": "aligned",
+    "reviewerRole": "German Academic Lead",
+    "notes": "Release-candidate metadata audit: vocabulary content for \"Bewerbung & Lebenslauf\" is aligned with declared B1 scope pending final human spot-check.",
+    "reviewedAt": "2026-05-12",
+    "reviewScope": "release_candidate_metadata_pass"
+  },
+  "learningOutcomes": [
+    {
+      "id": "b1-bewerbung-lebenslauf-lo-1",
+      "cefrLevel": "B1",
+      "skill": "vocabulary",
+      "canDoVi": "Toi co the luyen tu vung o trinh do B1 qua chu de \"Bewerbung & Lebenslauf\".",
+      "canDoDe": "Ich kann Wortschatz auf Niveau B1 zum Thema \"Bewerbung & Lebenslauf\" ueben.",
+      "linkedContentIds": [
+        "b1-bewerbung-lebenslauf"
+      ]
     }
   ]
 }

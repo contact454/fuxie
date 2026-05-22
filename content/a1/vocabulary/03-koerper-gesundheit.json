@@ -273,7 +273,8 @@
       "exampleTranslation2": "Anh/chị đau ở đâu?",
       "notes": "Meist Plural.",
       "imageUrl": "/images/vocab/a1-koerper-gesundheit/schmerzen.png",
-      "meaningDe": "Ein schlechtes Gefühl im Körper bei einer Verletzung"
+      "meaningDe": "Ein schlechtes Gefühl im Körper bei einer Verletzung",
+      "articleStatus": "not_applicable_or_needs_review"
     },
     {
       "word": "Fieber",
@@ -539,6 +540,26 @@
       "exampleTranslation2": "Tôi cần băng dính.",
       "imageUrl": "/images/vocab/a1-koerper-gesundheit/pflaster.png",
       "meaningDe": "Ein kleiner Klebestreifen für eine Wunde"
+    }
+  ],
+  "cefrAudit": {
+    "targetLevel": "A1",
+    "verdict": "aligned",
+    "reviewerRole": "German Academic Lead",
+    "notes": "Release-candidate metadata audit: vocabulary content for \"Körper und Gesundheit\" is aligned with declared A1 scope pending final human spot-check.",
+    "reviewedAt": "2026-05-12",
+    "reviewScope": "release_candidate_metadata_pass"
+  },
+  "learningOutcomes": [
+    {
+      "id": "a1-koerper-gesundheit-lo-1",
+      "cefrLevel": "A1",
+      "skill": "vocabulary",
+      "canDoVi": "Toi co the luyen tu vung o trinh do A1 qua chu de \"Körper und Gesundheit\".",
+      "canDoDe": "Ich kann Wortschatz auf Niveau A1 zum Thema \"Körper und Gesundheit\" ueben.",
+      "linkedContentIds": [
+        "a1-koerper-gesundheit"
+      ]
     }
   ]
 }

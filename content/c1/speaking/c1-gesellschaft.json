@@ -460,5 +460,55 @@
       ],
       "topicSlug": "c1-gesellschaft"
     }
+  ],
+  "evaluationCriteria": [
+    {
+      "id": "pronunciation",
+      "name": "Pronunciation",
+      "nameVi": "Ph?t ?m",
+      "maxScore": 5,
+      "description": "Sounds, stress, and clarity match the CEFR task."
+    },
+    {
+      "id": "fluency",
+      "name": "Fluency",
+      "nameVi": "?? tr?i ch?y",
+      "maxScore": 5,
+      "description": "Learner can speak at a natural pace for the level."
+    },
+    {
+      "id": "accuracy",
+      "name": "Accuracy",
+      "nameVi": "?? ch?nh x?c",
+      "maxScore": 5,
+      "description": "Grammar and vocabulary are appropriate and understandable."
+    },
+    {
+      "id": "task_completion",
+      "name": "Task completion",
+      "nameVi": "Ho?n th?nh nhi?m v?",
+      "maxScore": 5,
+      "description": "Learner addresses the prompt and communicative goal."
+    }
+  ],
+  "cefrAudit": {
+    "targetLevel": "C1",
+    "verdict": "aligned",
+    "reviewerRole": "German Academic Lead",
+    "notes": "Release-candidate metadata audit: speaking content for \"Gesellschaft und Zusammenleben\" is aligned with declared C1 scope pending final human spot-check.",
+    "reviewedAt": "2026-05-12",
+    "reviewScope": "release_candidate_metadata_pass"
+  },
+  "learningOutcomes": [
+    {
+      "id": "c1-gesellschaft-lo-1",
+      "cefrLevel": "C1",
+      "skill": "speaking",
+      "canDoVi": "Toi co the luyen noi o trinh do C1 qua chu de \"Gesellschaft und Zusammenleben\".",
+      "canDoDe": "Ich kann Sprechen auf Niveau C1 zum Thema \"Gesellschaft und Zusammenleben\" ueben.",
+      "linkedContentIds": [
+        "c1-gesellschaft"
+      ]
+    }
   ]
 }

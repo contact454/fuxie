@@ -37,6 +37,20 @@ interface CourseModuleMapping {
     skillLinks: SkillLink[]
 }
 
+function uniqueStrings(values: string[] = []) {
+    return Array.from(new Set(values))
+}
+
+function uniqueSkillLinks(values: SkillLink[] = []) {
+    const seen = new Set<string>()
+    return values.filter((link) => {
+        const key = `${link.skill}:${link.href}:${link.label}`
+        if (seen.has(key)) return false
+        seen.add(key)
+        return true
+    })
+}
+
 const COURSE_DATA: Record<CefrLevel, { modules: CourseModuleJson[] }> = {
     A1: a1Course as unknown as { modules: CourseModuleJson[] },
     A2: a2Course as unknown as { modules: CourseModuleJson[] },
@@ -57,11 +71,10 @@ export function getCourseModuleMap(level: CefrLevel): Record<string, CourseModul
     const moduleMap: Record<string, CourseModuleMapping> = {}
     for (const mod of courseJson.modules) {
         moduleMap[mod.slug] = {
-            vocabularyThemes: mod.vocabularyThemes ?? [],
-            grammarTopics: mod.grammarTopics ?? [],
-            skillLinks: mod.skillLinks ?? [],
+            vocabularyThemes: uniqueStrings(mod.vocabularyThemes),
+            grammarTopics: uniqueStrings(mod.grammarTopics),
+            skillLinks: uniqueSkillLinks(mod.skillLinks),
         }
     }
     return moduleMap
 }
-

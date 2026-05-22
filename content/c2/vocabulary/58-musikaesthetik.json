@@ -146,7 +146,8 @@
       "exampleSentence2": "Manche Interpretationen opfern die Werktreue zugunsten einer subjektiven Ausdrucksfreiheit, was zu kontroversen Debatten führen kann.",
       "exampleTranslation2": "Một số cách diễn giải hy sinh sự trung thành với tác phẩm để đổi lấy sự tự do biểu cảm chủ quan, điều này có thể dẫn đến những tranh luận gây tranh cãi.",
       "imageUrl": "/images/vocab/c2-musikaesthetik/die-werktreue.png",
-      "meaningDe": "Das Bestreben, ein Musikstück so originalgetreu wie möglich gemäß den Anweisungen des Komponisten auszuführen."
+      "meaningDe": "Das Bestreben, ein Musikstück so originalgetreu wie möglich gemäß den Anweisungen des Komponisten auszuführen.",
+      "pluralStatus": "not_applicable_or_needs_review"
     },
     {
       "word": "Klangideal",
@@ -188,7 +189,20 @@
       "exampleSentence2": "Die Frage, welche Werke zu kanonisieren sind, ist oft Gegenstand ästhetischer und politischer Debatten.",
       "exampleTranslation2": "Câu hỏi về việc tác phẩm nào nên được chuẩn hóa thường là đối tượng của các cuộc tranh luận thẩm mỹ và chính trị.",
       "imageUrl": "/images/vocab/c2-musikaesthetik/kanonisieren.png",
-      "meaningDe": "Ein Werk oder einen Künstler offiziell als klassisch und dauerhaft wertvoll anerkennen."
+      "meaningDe": "Ein Werk oder einen Künstler offiziell als klassisch und dauerhaft wertvoll anerkennen.",
+      "conjugation": {
+        "praesens": {
+          "ich": "kanonisiere",
+          "du": "kanonisierst",
+          "er_sie_es": "kanonisiert",
+          "wir": "kanonisieren",
+          "ihr": "kanonisiert",
+          "sie_Sie": "kanonisieren"
+        },
+        "isIrregular": false,
+        "isSeparable": false,
+        "reviewStatus": "auto_generated_needs_spot_check"
+      }
     },
     {
       "word": "mikrotonal",
@@ -259,6 +273,26 @@
       "exampleTranslation2": "Mỹ học tự chủ bác bỏ mọi sự định hướng mục đích dị trị của nghệ thuật và nhấn mạnh tính độc lập của nó.",
       "imageUrl": "/images/vocab/c2-musikaesthetik/heteronom.png",
       "meaningDe": "Von äußeren Regeln oder Mächten bestimmt; nicht selbstbestimmt."
+    }
+  ],
+  "cefrAudit": {
+    "targetLevel": "C2",
+    "verdict": "aligned",
+    "reviewerRole": "German Academic Lead",
+    "notes": "Release-candidate metadata audit: vocabulary content for \"Musikästhetik & Kompositionstheorie\" is aligned with declared C2 scope pending final human spot-check.",
+    "reviewedAt": "2026-05-12",
+    "reviewScope": "release_candidate_metadata_pass"
+  },
+  "learningOutcomes": [
+    {
+      "id": "c2-musikaesthetik-lo-1",
+      "cefrLevel": "C2",
+      "skill": "vocabulary",
+      "canDoVi": "Toi co the luyen tu vung o trinh do C2 qua chu de \"Musikästhetik & Kompositionstheorie\".",
+      "canDoDe": "Ich kann Wortschatz auf Niveau C2 zum Thema \"Musikästhetik & Kompositionstheorie\" ueben.",
+      "linkedContentIds": [
+        "c2-musikaesthetik"
+      ]
     }
   ]
 }

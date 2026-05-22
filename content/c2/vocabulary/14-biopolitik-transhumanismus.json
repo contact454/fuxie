@@ -36,7 +36,8 @@
       "exampleTranslation2": "Có thể lập luận rằng việc thao túng sinh học di truyền của bộ gen người về cơ bản đặt ra câu hỏi về tính toàn vẹn tự sinh hóa của cơ thể.",
       "notes": "Fachsprachlich (Systemtheorie, Biologie, Soziologie, Philosophie). Von Humberto Maturana und Francisco Varela eingeführt. Beschreibt die Selbstreferentialität und Selbstorganisation lebender Systeme. Wird oft ohne Plural verwendet, da es ein Konzept ist.",
       "imageUrl": "/images/vocab/c2-biopolitik-transhumanismus/die-autopoiesis.png",
-      "meaningDe": "Die Fähigkeit eines Systems, sich selbst zu erschaffen und seine eigene Struktur aufrechtzuerhalten."
+      "meaningDe": "Die Fähigkeit eines Systems, sich selbst zu erschaffen und seine eigene Struktur aufrechtzuerhalten.",
+      "pluralStatus": "not_applicable_or_needs_review"
     },
     {
       "word": "Dispositiv",
@@ -126,7 +127,8 @@
       "exampleTranslation2": "Chủ quyền cá nhân đối với cơ thể của mình – như một quyền tự quyết – đang được đàm phán lại thông qua các dự đoán di truyền và chẩn đoán trước khi cấy ghép.",
       "notes": "Gehoben, fachsprachlich (Politikwissenschaft, Rechtswissenschaft, Philosophie). Bezeichnet die höchste und uneingeschränkte Herrschaftsgewalt (Staatssouveränität) oder die Selbstbestimmung eines Individuums (individuelle Souveränität). Wird oft ohne Plural verwendet, wenn es um das Konzept geht.",
       "imageUrl": "/images/vocab/c2-biopolitik-transhumanismus/die-souveraenitaet.png",
-      "meaningDe": "Die Unabhängigkeit und höchste Befugnis eines Staates oder einer Person, über sich selbst zu entscheiden."
+      "meaningDe": "Die Unabhängigkeit und höchste Befugnis eines Staates oder einer Person, über sich selbst zu entscheiden.",
+      "pluralStatus": "not_applicable_or_needs_review"
     },
     {
       "word": "Kybernetik",
@@ -141,7 +143,8 @@
       "exampleTranslation2": "Trong bối cảnh siêu nhân học, điều khiển học được sử dụng để thiết kế các hệ thống lai người-máy và để tối ưu hóa khả năng của con người.",
       "notes": "Fachsprachlich (Informatik, Biologie, Philosophie). Begründet von Norbert Wiener. Befasst sich mit der Analyse von Regelungs- und Kommunikationsprozessen in biologischen, technischen und sozialen Systemen. Wird oft ohne Plural verwendet.",
       "imageUrl": "/images/vocab/c2-biopolitik-transhumanismus/die-kybernetik.png",
-      "meaningDe": "Die Wissenschaft von der Steuerung und Regelung von Systemen, insbesondere in der Technik und Biologie."
+      "meaningDe": "Die Wissenschaft von der Steuerung und Regelung von Systemen, insbesondere in der Technik und Biologie.",
+      "pluralStatus": "not_applicable_or_needs_review"
     },
     {
       "word": "Affizierung",
@@ -167,9 +170,12 @@
       "meaningEn": "to colonize",
       "conjugation": {
         "praesens": {
-          "ich": "kolonisiere",
-          "du": "kolonisierst",
-          "er": "kolonisiert"
+          "ich": "ich kolonisiere",
+          "du": "du kolonisierst",
+          "er_sie_es": "er/sie/es kolonisiert",
+          "wir": "wir kolonisieren",
+          "ihr": "ihr kolonisiert",
+          "sie_Sie": "sie/Sie kolonisieren"
         },
         "praeteritum": {
           "ich": "kolonisierte"
@@ -183,6 +189,26 @@
       "notes": "Gehoben, fachsprachlich (Soziologie, Postkolonialismus, Philosophie). Wird hier oft metaphorisch verwendet, um die Durchdringung und Kontrolle von Lebensbereichen oder Körpern durch Machtstrukturen zu beschreiben. Ursprünglich: 'Siedlungen gründen'.",
       "imageUrl": "/images/vocab/c2-biopolitik-transhumanismus/kolonisieren.png",
       "meaningDe": "Ein fremdes Gebiet besetzen und es unter die politische Kontrolle eines anderen Staates bringen."
+    }
+  ],
+  "cefrAudit": {
+    "targetLevel": "C2",
+    "verdict": "aligned",
+    "reviewerRole": "German Academic Lead",
+    "notes": "Release-candidate metadata audit: vocabulary content for \"Biopolitik & Transhumanismus\" is aligned with declared C2 scope pending final human spot-check.",
+    "reviewedAt": "2026-05-12",
+    "reviewScope": "release_candidate_metadata_pass"
+  },
+  "learningOutcomes": [
+    {
+      "id": "c2-biopolitik-transhumanismus-lo-1",
+      "cefrLevel": "C2",
+      "skill": "vocabulary",
+      "canDoVi": "Toi co the luyen tu vung o trinh do C2 qua chu de \"Biopolitik & Transhumanismus\".",
+      "canDoDe": "Ich kann Wortschatz auf Niveau C2 zum Thema \"Biopolitik & Transhumanismus\" ueben.",
+      "linkedContentIds": [
+        "c2-biopolitik-transhumanismus"
+      ]
     }
   ]
 }

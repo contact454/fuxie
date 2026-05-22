@@ -7,6 +7,7 @@ const {
     transactionMock,
     handleApiErrorMock,
     recordLearningActivityMock,
+    awardLearningFucoinMock,
     invalidateLearnerProgressCachesMock,
 } = vi.hoisted(
     () => ({
@@ -27,6 +28,7 @@ const {
             )
         ),
         recordLearningActivityMock: vi.fn(),
+        awardLearningFucoinMock: vi.fn(),
         invalidateLearnerProgressCachesMock: vi.fn(),
     })
 )
@@ -57,15 +59,20 @@ vi.mock('@/lib/progress/cache-invalidation', () => ({
     invalidateLearnerProgressCaches: invalidateLearnerProgressCachesMock,
 }))
 
+vi.mock('@/lib/gamification/fucoin', () => ({
+    awardLearningFucoin: awardLearningFucoinMock,
+}))
+
 import { POST } from './route'
 
 describe('POST /api/v1/reading/[exerciseId]/submit', () => {
     beforeEach(() => {
         vi.clearAllMocks()
-        getServerUserMock.mockResolvedValue({ userId: 'user-1' })
+        getServerUserMock.mockResolvedValue({ userId: 'user-1', role: 'LEARNER' })
         findExerciseMock.mockResolvedValue({
             id: 'reading-db-id',
             exerciseId: 'A1-T1-001',
+            cefrLevel: 'A1',
             questions: [
                 {
                     id: 'q1',
@@ -99,7 +106,20 @@ describe('POST /api/v1/reading/[exerciseId]/submit', () => {
             streak: {
                 currentStreak: 4,
                 isNewDay: false,
+                freezeUsed: false,
+                freezesAvailable: 1,
+                freezesUsed: 0,
             },
+        })
+        awardLearningFucoinMock.mockResolvedValue({
+            fucoinEarned: 3,
+            walletBalance: 18,
+            duplicate: false,
+            intendedAmount: 3,
+            dailyCap: 60,
+            dailyEarnedBefore: 5,
+            dailyRemainingAfter: 52,
+            capReached: false,
         })
         invalidateLearnerProgressCachesMock.mockResolvedValue(undefined)
         transactionMock.mockImplementation(async (callback: (tx: any) => Promise<any>) =>
@@ -131,6 +151,23 @@ describe('POST /api/v1/reading/[exerciseId]/submit', () => {
                 totalQuestions: 2,
                 percentage: 50,
                 xpEarned: 10,
+                fucoinEarned: 3,
+                walletBalance: 18,
+                fucoinDailyCap: 60,
+                fucoinDailyEarned: 8,
+                fucoinDailyRemaining: 52,
+                nextQuestHref: '/reading',
+                rewardPreview: [
+                    expect.objectContaining({ type: 'xp', label: '+10 XP' }),
+                    expect.objectContaining({ type: 'fucoin', label: '+3 Fucoin' }),
+                    expect.objectContaining({ type: 'streak' }),
+                ],
+                streakReceipt: {
+                    freezeUsed: false,
+                    currentStreak: 4,
+                    freezesAvailable: 1,
+                    freezesUsed: 0,
+                },
             },
         })
 
@@ -154,9 +191,85 @@ describe('POST /api/v1/reading/[exerciseId]/submit', () => {
                 percentScore: 50,
                 xpEarned: 10,
                 exercisesCompleted: 1,
+                analytics: {
+                    role: 'LEARNER',
+                    actionId: 'A1-T1-001',
+                    actionType: 'reading_task',
+                    level: 'A1',
+                    skill: 'LESEN',
+                    source: 'reading.submit',
+                },
+            })
+        )
+        expect(awardLearningFucoinMock).toHaveBeenCalledWith(
+            expect.anything(),
+            expect.objectContaining({
+                userId: 'user-1',
+                kind: 'activity',
+                sourceType: 'learning:reading',
+                sourceId: 'attempt-reading-1',
+                accuracy: 50,
             })
         )
         expect(invalidateLearnerProgressCachesMock).toHaveBeenCalledWith('user-1')
+    })
+
+    it('includes an episode receipt for valid reading episode metadata', async () => {
+        const response = await POST(
+            {
+                json: async () => ({
+                    answers: { q1: 'Richtig', q2: 'a' },
+                    timeTaken: 42,
+                    questEpisode: {
+                        episodeId: 'reading-episode:A1:A1-T1-001',
+                        skill: 'reading',
+                        sourceId: 'A1-T1-001',
+                        cefrLevel: 'A1',
+                        checkpointCount: 3,
+                        nextEpisodeHref: '/reading',
+                    },
+                }),
+            } as any,
+            { params: Promise.resolve({ exerciseId: 'A1-T1-001' }) }
+        )
+
+        expect(response.status).toBe(200)
+        await expect(response.json()).resolves.toMatchObject({
+            success: true,
+            data: {
+                questEpisodeReceipt: {
+                    episodeId: 'reading-episode:A1:A1-T1-001',
+                    skill: 'reading',
+                    exerciseId: 'A1-T1-001',
+                    accuracyBand: 'practice_again',
+                    completedCheckpoints: 3,
+                    checkpointCount: 3,
+                    recommendedAction: 'retry_episode',
+                    nextEpisodeHref: '/reading',
+                },
+                nextEpisodeHref: '/reading',
+            },
+        })
+        expect(recordLearningActivityMock).toHaveBeenCalledWith(
+            expect.anything(),
+            expect.objectContaining({
+                analytics: expect.objectContaining({
+                    metadata: {
+                        episode_id: 'reading-episode:A1:A1-T1-001',
+                        checkpoint_count: 3,
+                    },
+                }),
+            })
+        )
+        expect(awardLearningFucoinMock).toHaveBeenCalledWith(
+            expect.anything(),
+            expect.objectContaining({
+                metadata: expect.objectContaining({
+                    episodeId: 'reading-episode:A1:A1-T1-001',
+                    checkpointCount: 3,
+                }),
+            })
+        )
     })
 
     it('returns 401 when the user is not authenticated', async () => {

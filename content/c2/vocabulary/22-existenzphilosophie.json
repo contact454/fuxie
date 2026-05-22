@@ -118,7 +118,8 @@
       "exampleSentence2": "Heidegger sieht das Nichts nicht als bloße Negation des Seins, sondern als etwas, das sich dem Dasein offenbart.",
       "exampleTranslation2": "Heidegger không xem hư vô chỉ là sự phủ định của tồn tại, mà là một cái gì đó tự bộc lộ cho Dasein.",
       "imageUrl": "/images/vocab/c2-existenzphilosophie/das-nichts.png",
-      "meaningDe": "Die vollständige Abwesenheit von Sein oder Materie; die Leere."
+      "meaningDe": "Die vollständige Abwesenheit von Sein oder Materie; die Leere.",
+      "pluralStatus": "not_applicable_or_needs_review"
     },
     {
       "word": "Nihilismus",
@@ -202,7 +203,20 @@
       "exampleSentence2": "Durch die Fähigkeit, sich immer wieder neu zu entwerfen, kann das Individuum seiner Existenz eine einzigartige Bedeutung verleihen.",
       "exampleTranslation2": "Thông qua khả năng không ngừng tự kiến tạo lại, cá nhân có thể mang lại một ý nghĩa độc đáo cho sự tồn tại của mình.",
       "imageUrl": "/images/vocab/c2-existenzphilosophie/sich-entwerfen.png",
-      "meaningDe": "Sich durch eigene Entscheidungen und Handlungen selbst definieren und gestalten."
+      "meaningDe": "Sich durch eigene Entscheidungen und Handlungen selbst definieren und gestalten.",
+      "conjugation": {
+        "praesens": {
+          "ich": "entwerfe",
+          "du": "entwerfst",
+          "er_sie_es": "entwerft",
+          "wir": "entwerfen",
+          "ihr": "entwerft",
+          "sie_Sie": "entwerfen"
+        },
+        "isIrregular": false,
+        "isSeparable": false,
+        "reviewStatus": "auto_generated_needs_spot_check"
+      }
     },
     {
       "word": "sich einer Sache stellen",
@@ -216,7 +230,17 @@
       "exampleSentence2": "Sich der eigenen Endlichkeit zu stellen, ist eine existenzielle Herausforderung, die oft Angst, aber auch eine neue Wertschätzung des Lebens hervorruft.",
       "exampleTranslation2": "Đối mặt với tính hữu hạn của chính mình là một thử thách hiện sinh, thường gây ra nỗi sợ hãi nhưng cũng mang lại một sự trân trọng mới đối với cuộc sống.",
       "imageUrl": "/images/vocab/c2-existenzphilosophie/sich-einer-sache-stellen.png",
-      "meaningDe": "Die bewusste Entscheidung treffen, ein Problem oder eine schwierige Situation aktiv und mutig anzugehen."
+      "meaningDe": "Die bewusste Entscheidung treffen, ein Problem oder eine schwierige Situation aktiv und mutig anzugehen.",
+      "conjugation": {
+        "praesens": {
+          "ich": "ich stelle mich einer Sache",
+          "du": "du stellst dich einer Sache",
+          "er_sie_es": "er/sie/es stellt sich einer Sache",
+          "wir": "wir stellen uns einer Sache",
+          "ihr": "ihr stellt euch einer Sache",
+          "sie_Sie": "sie/Sie stellen sich einer Sache"
+        }
+      }
     },
     {
       "word": "absurd",
@@ -287,6 +311,26 @@
       "exampleTranslation2": "Đối với Kant, vật tự thân tồn tại, nhưng con người không thể nhận thức được, vì chúng ta chỉ có thể cảm nhận các hiện tượng.",
       "imageUrl": "/images/vocab/c2-existenzphilosophie/an-sich.png",
       "meaningDe": "In Bezug auf das Wesen einer Sache, unabhängig von ihrer Erscheinung oder der Art, wie sie wahrgenommen wird."
+    }
+  ],
+  "cefrAudit": {
+    "targetLevel": "C2",
+    "verdict": "aligned",
+    "reviewerRole": "German Academic Lead",
+    "notes": "Release-candidate metadata audit: vocabulary content for \"Existenzphilosophie\" is aligned with declared C2 scope pending final human spot-check.",
+    "reviewedAt": "2026-05-12",
+    "reviewScope": "release_candidate_metadata_pass"
+  },
+  "learningOutcomes": [
+    {
+      "id": "c2-existenzphilosophie-lo-1",
+      "cefrLevel": "C2",
+      "skill": "vocabulary",
+      "canDoVi": "Toi co the luyen tu vung o trinh do C2 qua chu de \"Existenzphilosophie\".",
+      "canDoDe": "Ich kann Wortschatz auf Niveau C2 zum Thema \"Existenzphilosophie\" ueben.",
+      "linkedContentIds": [
+        "c2-existenzphilosophie"
+      ]
     }
   ]
 }

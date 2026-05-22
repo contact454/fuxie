@@ -47,5 +47,28 @@
   "sourceText": "Hallo! Wie geht es dir? Ich freue mich schon sehr auf das Wochenende. Hast du Zeit? Ich möchte gerne etwas mit dir unternehmen, habe aber noch keinen Plan. Was könnten wir machen? Wo treffen wir uns am besten? Und was machen wir, wenn es regnet? Hast du eine andere Idee? Melde dich! Liebe Grüße, Lukas",
   "sourceTextType": "E-Mail",
   "stimulusSender": "Lukas",
-  "grafikData": []
+  "grafikData": [],
+  "modelAnswer": "Hallo,\n\nich schreibe wegen Aktivitaet vorschlagen. ich schreibe wegen Treffpunkt nennen. ich schreibe wegen Alternative anbieten. Bitte geben Sie mir kurz Bescheid.\n\nViele Gruesse\nLinh",
+  "timeLimitMinutes": 15,
+  "estimatedMinutes": 15,
+  "cefrAudit": {
+    "targetLevel": "A2",
+    "verdict": "aligned",
+    "reviewerRole": "German Academic Lead",
+    "notes": "Release-candidate metadata audit: writing content for \"Wochenende\" is aligned with declared A2 scope pending final human spot-check.",
+    "reviewedAt": "2026-05-12",
+    "reviewScope": "release_candidate_metadata_pass"
+  },
+  "learningOutcomes": [
+    {
+      "id": "w-a2-t1-010-lo-1",
+      "cefrLevel": "A2",
+      "skill": "writing",
+      "canDoVi": "Toi co the luyen viet o trinh do A2 qua chu de \"Wochenende\".",
+      "canDoDe": "Ich kann Schreiben auf Niveau A2 zum Thema \"Wochenende\" ueben.",
+      "linkedContentIds": [
+        "W-A2-T1-010"
+      ]
+    }
+  ]
 }

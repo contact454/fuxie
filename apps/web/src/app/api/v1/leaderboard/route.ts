@@ -26,14 +26,31 @@ export async function GET(req: NextRequest) {
 }
 
 async function getWeeklyLeaderboard(currentUserId?: string) {
+    const userProfile = currentUserId ? await prisma.userProfile.findFirst({
+        where: { userId: currentUserId },
+        select: { currentLeague: true, displayName: true, avatarUrl: true, currentLevel: true, totalXp: true }
+    }) : null;
+
+    const currentLeague = userProfile?.currentLeague ?? 'BRONZE';
+
     // Get XP earned in the last 7 days
     const weekAgo = new Date()
     weekAgo.setDate(weekAgo.getDate() - 7)
     weekAgo.setHours(0, 0, 0, 0)
 
+    // Get users in the same league
+    const profilesInLeague = await prisma.userProfile.findMany({
+        where: { currentLeague },
+        select: { userId: true }
+    });
+    const userIdsInLeague = profilesInLeague.map(p => p.userId);
+
     const weeklyStats = await prisma.dailyActivity.groupBy({
         by: ['userId'],
-        where: { date: { gte: weekAgo } },
+        where: { 
+            date: { gte: weekAgo },
+            userId: { in: userIdsInLeague }
+        },
         _sum: { xpEarned: true },
         orderBy: { _sum: { xpEarned: 'desc' } },
         take: 50,
@@ -114,6 +131,7 @@ async function getWeeklyLeaderboard(currentUserId?: string) {
         success: true,
         data: {
             period: 'weekly',
+            currentLeague,
             entries,
             currentUser: currentUserEntry ?? entries.find(e => e.isCurrentUser) ?? null,
         },

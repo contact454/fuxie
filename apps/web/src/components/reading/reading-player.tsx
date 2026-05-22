@@ -3,8 +3,9 @@
 import { useState, useCallback, useMemo, useRef, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
 import Image from 'next/image'
-import { FUXIE_3D_ASSETS, FuxieRoleMascot, SkillMotivationRail } from '@/components/gamification/quest-visuals'
+import { FUXIE_3D_ASSETS, FuxieRoleMascot, RewardPreview, SkillMotivationRail } from '@/components/gamification/quest-visuals'
 import { Mascot } from '@/components/ui/mascot'
+import { FuxieBadge, FuxieProgressBar, fuxieButtonClass } from '@/components/ui/fuxie-ui'
 import styles from './reading.module.css'
 import {
     type Question, type ExplanationData, type QuestionResult, type ReadingPlayerProps,
@@ -13,6 +14,12 @@ import {
     extractKeyWords, getImageUrl, getHeroImage,
 } from './reading-types'
 import { getCefrTheme } from '@/lib/constants/cefr'
+import { trackClientAnalyticsEvent } from '@/lib/analytics/client-events'
+import {
+    buildReadingQuestEpisode,
+    getReadingQuestCheckpoint,
+    type ReadingQuestEpisodeReceipt,
+} from '@/lib/gamification/reading-quest-episode'
 import { renderTexts, renderSchilderCards, renderAnzeigenCards, renderImages } from './reading-text-renderers'
 import { useReadingTranslate } from './use-reading-translate'
 
@@ -21,7 +28,29 @@ import { useReadingTranslate } from './use-reading-translate'
 // - ./reading-text-renderers.tsx
 // - ./use-reading-translate.ts
 
-
+/**
+ * Decorative confetti palette for the celebration header rendered after a
+ * Reading exercise is submitted (results / cloze-results phase).
+ *
+ * Reward-amber containment (Req 6.9, 16.1, 16.2 of `gamified-ui-asset-rollout`,
+ * Property 9 in design.md §E): the celebration card lives outside the
+ * Skill_Motivation_Layer's reward-preview subtree and does NOT carry
+ * `data-reward-state="preview"`/`"earned"`/`"receipt"` or
+ * `data-reward-context="true"`. To satisfy Property 9 the palette omits the
+ * reward-amber band `rgb(255, 183, 3) ± 5%` (`#FFB703` and visual
+ * equivalents). The remaining colors are Bright Sky blue, success teal,
+ * accent purple, and a neutral light yellow (`#FFD166`, well outside the
+ * ±5% band on the green and blue channels) so the celebration still reads
+ * as joyful without leaking reward signal.
+ */
+const CELEBRATION_CONFETTI_PALETTE = [
+    '#60A8E4', // Bright Sky blue 400
+    '#4CAF50', // success green
+    '#2EC4B6', // teal
+    '#9C27B0', // accent purple
+    '#FFD166', // light yellow — outside reward-amber ±5% band
+    '#3C78A8', // deep blue
+] as const
 
 // ─── Main Component ─────────────────────────────────
 export function ReadingPlayer({
@@ -41,6 +70,8 @@ export function ReadingPlayer({
     const [isSubmitting, setIsSubmitting] = useState(false)
     const [results, setResults] = useState<{
         score: number; totalQuestions: number; percentage: number;
+        xpEarned?: number; fucoinEarned?: number; rewardPreview?: Array<{ type: 'xp' | 'fucoin' | 'streak' | 'badge' | 'unlock'; label: string; detail: string }>;
+        questEpisodeReceipt?: ReadingQuestEpisodeReceipt; nextEpisodeHref?: string;
         timeTaken: number; questionResults: QuestionResult[]
     } | null>(null)
     const [expandedResult, setExpandedResult] = useState<string | null>(null)
@@ -78,6 +109,21 @@ export function ReadingPlayer({
     }, [questions.length, isClozeExercise, clozeGapCount])
     const keyWords = useMemo(() => extractKeyWords(textsJson, cefrLevel), [textsJson, cefrLevel])
     const warmupQuestions = WARMUP_QUESTIONS[cefrLevel] ?? WARMUP_QUESTIONS.A1!
+    const questEpisode = useMemo(() => buildReadingQuestEpisode({
+        exerciseId,
+        topic,
+        cefrLevel,
+        teil,
+        questionCount: Math.max(1, questions.length),
+        nextEpisodeHref: '/reading',
+    }), [exerciseId, topic, cefrLevel, teil, questions.length])
+    const canUseQuestEpisode = !isClozeExercise && questions.length > 0
+    const activeCheckpoint = getReadingQuestCheckpoint({
+        episode: questEpisode,
+        currentIndex: currentQuestion,
+    })
+    const trackedCheckpoints = useRef<Set<string>>(new Set())
+    const completionTracked = useRef(false)
 
     // ─── Click-to-translate (extracted to hook) ─────────
     const {
@@ -86,6 +132,73 @@ export function ReadingPlayer({
         tooltipRef, handleTextClick,
     } = useReadingTranslate()
 
+    useEffect(() => {
+        if (!canUseQuestEpisode || phase !== 'exercise') return
+        if (trackedCheckpoints.current.has(activeCheckpoint.id)) return
+        trackedCheckpoints.current.add(activeCheckpoint.id)
+        trackClientAnalyticsEvent({
+            eventName: 'quest_episode_checkpoint_reached',
+            source: 'reading.quest_episode.checkpoint',
+            actionId: questEpisode.episodeId,
+            actionType: 'reading_task',
+            level: cefrLevel,
+            skill: 'reading',
+            metadata: {
+                episodeId: questEpisode.episodeId,
+                skill: 'reading',
+                exerciseId,
+                cefrLevel,
+                checkpointId: activeCheckpoint.id,
+                questionCount: questions.length,
+            },
+        })
+    }, [activeCheckpoint.id, canUseQuestEpisode, cefrLevel, exerciseId, phase, questEpisode.episodeId, questions.length])
+
+    useEffect(() => {
+        if (!canUseQuestEpisode || phase !== 'results' || !results?.questEpisodeReceipt || completionTracked.current) return
+        completionTracked.current = true
+        trackClientAnalyticsEvent({
+            eventName: 'quest_episode_completed',
+            source: 'reading.quest_episode.completed',
+            actionId: questEpisode.episodeId,
+            actionType: 'reading_task',
+            level: cefrLevel,
+            skill: 'reading',
+            metadata: {
+                episodeId: questEpisode.episodeId,
+                skill: 'reading',
+                exerciseId,
+                cefrLevel,
+                checkpointId: 'prove',
+                questionCount: results.totalQuestions,
+                accuracyBand: results.questEpisodeReceipt.accuracyBand,
+            },
+        })
+    }, [canUseQuestEpisode, cefrLevel, exerciseId, phase, questEpisode.episodeId, results])
+
+    const startReadingQuestEpisode = () => {
+        setStartTime(Date.now())
+        setPhase('warmup')
+        if (!canUseQuestEpisode) return
+        trackedCheckpoints.current = new Set()
+        completionTracked.current = false
+        trackClientAnalyticsEvent({
+            eventName: 'quest_episode_started',
+            source: 'reading.quest_episode.started',
+            actionId: questEpisode.episodeId,
+            actionType: 'reading_task',
+            level: cefrLevel,
+            skill: 'reading',
+            metadata: {
+                episodeId: questEpisode.episodeId,
+                skill: 'reading',
+                exerciseId,
+                cefrLevel,
+                checkpointId: 'scan',
+                questionCount: questions.length,
+            },
+        })
+    }
 
     const selectAnswer = (questionId: string, answer: string) => {
         setAnswers(prev => ({ ...prev, [questionId]: answer }))
@@ -98,7 +211,20 @@ export function ReadingPlayer({
             const res = await fetch(`/api/v1/reading/${exerciseId}/submit`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ answers, timeTaken }),
+                body: JSON.stringify({
+                    answers,
+                    timeTaken,
+                    ...(canUseQuestEpisode ? {
+                        questEpisode: {
+                            episodeId: questEpisode.episodeId,
+                            skill: questEpisode.skill,
+                            sourceId: questEpisode.sourceId,
+                            cefrLevel: questEpisode.cefrLevel,
+                            checkpointCount: questEpisode.checkpoints.length,
+                            nextEpisodeHref: questEpisode.nextEpisodeHref,
+                        },
+                    } : {}),
+                }),
             })
             const data = await res.json()
             if (data.success) {
@@ -110,7 +236,7 @@ export function ReadingPlayer({
         } finally {
             setIsSubmitting(false)
         }
-    }, [answers, exerciseId, startTime])
+    }, [answers, canUseQuestEpisode, exerciseId, questEpisode, startTime])
 
     // Cloze answer handler
     const selectClozeAnswer = useCallback((gapId: string, answer: string) => {
@@ -169,6 +295,8 @@ export function ReadingPlayer({
         setExpandedResult(null)
         setShowVocabPanel(false)
         setStartTime(Date.now())
+        trackedCheckpoints.current = new Set()
+        completionTracked.current = false
     }
 
     // ═══════════════════════════════════════════
@@ -191,8 +319,24 @@ export function ReadingPlayer({
                     {/* Mascot */}
                     <FuxieRoleMascot src={FUXIE_3D_ASSETS.librarian} alt="Fuxie reading coach" size={96} motion="coach" />
 
+                    {canUseQuestEpisode && (
+                        <div className="mt-4 flex flex-wrap items-center justify-center gap-2">
+                            <FuxieBadge tone="brand" className="normal-case tracking-normal">
+                                Reading Episode
+                            </FuxieBadge>
+                            <FuxieBadge tone="neutral" className="normal-case tracking-normal">
+                                {cefrLevel} · Teil {teil}
+                            </FuxieBadge>
+                        </div>
+                    )}
+
                     {/* Title */}
                     <h1 className="text-2xl font-bold text-gray-900 mt-4">{topic}</h1>
+                    {canUseQuestEpisode && (
+                        <p className="mt-2 text-xs font-black uppercase text-text-brand">
+                            Quest briefing
+                        </p>
+                    )}
                     <p className="text-sm text-gray-500 mt-1">
                         {teilInfo?.icon || '📖'} Phần {teil} - {teilName}
                     </p>
@@ -243,12 +387,33 @@ export function ReadingPlayer({
                         </div>
                     )}
 
+                    {canUseQuestEpisode && (
+                        <>
+                            <p className="mt-4 text-sm font-semibold leading-relaxed text-text-brand">
+                                {questEpisode.objective} Phần thưởng chỉ được trao khi em thực sự hoàn thành thử thách đọc.
+                            </p>
+
+                            <div className="mt-4 rounded-2xl bg-[#F3FBFF] p-4 ring-1 ring-[#CCE4F0]/70">
+                                <RewardPreview rewards={questEpisode.rewardPreview} />
+                            </div>
+
+                            <div className="mt-4 grid gap-3 sm:grid-cols-3">
+                                {questEpisode.checkpoints.map((checkpoint, index) => (
+                                    <div key={checkpoint.id} className="rounded-2xl bg-white p-4 text-left ring-1 ring-slate-100">
+                                        <div className="mb-2 flex h-8 w-8 items-center justify-center rounded-xl bg-[#EAFBF8] text-sm font-black text-text-success">
+                                            {index + 1}
+                                        </div>
+                                        <p className="text-sm font-black text-slate-950">{checkpoint.title}</p>
+                                        <p className="mt-1 text-xs font-semibold leading-relaxed text-slate-500">{checkpoint.objective}</p>
+                                    </div>
+                                ))}
+                            </div>
+                        </>
+                    )}
+
                     {/* Start Button — goes to warm-up */}
                     <button
-                        onClick={() => {
-                            setStartTime(Date.now())
-                            setPhase('warmup')
-                        }}
+                        onClick={startReadingQuestEpisode}
                         className={styles.startButton}
                         style={{ '--level-gradient': cefrColor.css, '--level-shadow': cefrColor.shadow } as React.CSSProperties}
                     >
@@ -318,7 +483,7 @@ export function ReadingPlayer({
                             <button onClick={() => setPhase('exercise')}
                                 className={`${styles.navButton} text-xs`}>Bỏ qua</button>
                             <button onClick={() => setWarmupStep(1)}
-                                className={`${styles.navButton} ${styles.primary}`}>Tiếp tục</button>
+                                className={`${styles.navButton} ${styles.primary}`}>Tiếp Bước</button>
                         </div>
                     </div>
                 )}
@@ -357,7 +522,7 @@ export function ReadingPlayer({
                             <button onClick={() => setWarmupStep(0)}
                                 className={styles.navButton}>Quay lại</button>
                             <button onClick={() => setWarmupStep(2)}
-                                className={`${styles.navButton} ${styles.primary}`}>Tiếp tục</button>
+                                className={`${styles.navButton} ${styles.primary}`}>Tiếp Bước</button>
                         </div>
                     </div>
                 )}
@@ -949,6 +1114,28 @@ export function ReadingPlayer({
                     </span>
                 </div>
 
+                {canUseQuestEpisode && (
+                    <div className="mb-5 rounded-2xl bg-[#F3FBFF] px-4 py-3 ring-1 ring-[#CCE4F0]/70">
+                        <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+                            <div className="min-w-0">
+                                <p className="text-xs font-black uppercase text-text-brand">
+                                    {activeCheckpoint.title}
+                                </p>
+                                <p className="truncate text-xs font-semibold text-slate-500">
+                                    {activeCheckpoint.objective}
+                                </p>
+                            </div>
+                            <div className="flex min-w-[180px] items-center gap-2 text-xs font-black text-text-brand">
+                                <span>{Math.max(0, questions.length - currentQuestion - 1)} con lai</span>
+                                <FuxieProgressBar
+                                    value={Math.round(((currentQuestion + 1) / Math.max(1, questions.length)) * 100)}
+                                    className="h-2 flex-1"
+                                />
+                            </div>
+                        </div>
+                    </div>
+                )}
+
                 <div className="grid gap-5 lg:grid-cols-[minmax(0,1fr)_320px]">
                     <div className="min-w-0">
                 {/* Click-to-translate hint + reading timer */}
@@ -1071,7 +1258,7 @@ export function ReadingPlayer({
     if (phase === 'results' && clozeResults) {
         const { score, total, percentage, timeTaken, gaps } = clozeResults
         const message = resultMessage(percentage)
-        const mascotVariant = percentage >= 70 ? 'celebrate' : percentage >= 50 ? 'encouragement' : 'studying'
+        const mascotVariant = percentage >= 70 ? 'celebrate' : percentage >= 50 ? 'encourage' : 'studying'
         const tips = POST_READING_TIPS[cefrLevel] || POST_READING_TIPS.A1!
 
         // Get display label for a cloze answer
@@ -1110,7 +1297,7 @@ export function ReadingPlayer({
                                     style={{
                                         left: `${Math.random() * 100}%`,
                                         top: `${Math.random() * 60}%`,
-                                        backgroundColor: ['#60A8E4', '#4CAF50', '#2EC4B6', '#9C27B0', '#FFB703', '#3C78A8'][i % 6],
+                                        backgroundColor: CELEBRATION_CONFETTI_PALETTE[i % CELEBRATION_CONFETTI_PALETTE.length],
                                         opacity: 0.3 + Math.random() * 0.4,
                                     }}
                                 />
@@ -1207,7 +1394,8 @@ export function ReadingPlayer({
     if (phase === 'results' && results) {
         const { score, totalQuestions, percentage, questionResults } = results
         const message = resultMessage(percentage)
-        const mascotVariant = percentage >= 70 ? 'celebrate' : percentage >= 50 ? 'encouragement' : 'studying'
+        const mascotVariant = percentage >= 70 ? 'celebrate' : percentage >= 50 ? 'encourage' : 'studying'
+        const episodeReceipt = results.questEpisodeReceipt
 
         return (
             <div className="max-w-3xl mx-auto">
@@ -1223,7 +1411,7 @@ export function ReadingPlayer({
                                     style={{
                                         left: `${Math.random() * 100}%`,
                                         top: `${Math.random() * 60}%`,
-                                        backgroundColor: ['#60A8E4', '#4CAF50', '#2EC4B6', '#9C27B0', '#FFB703', '#3C78A8'][i % 6],
+                                        backgroundColor: CELEBRATION_CONFETTI_PALETTE[i % CELEBRATION_CONFETTI_PALETTE.length],
                                         opacity: 0.3 + Math.random() * 0.4,
                                     }}
                                 />
@@ -1265,7 +1453,7 @@ export function ReadingPlayer({
                         <span className="px-3 py-1 rounded-full text-xs font-semibold bg-gray-100 text-gray-600">
                             {topic}
                         </span>
-                        <span className="px-3 py-1 rounded-full text-xs font-bold bg-[#FFF4D6] text-[#C67A00]">
+                        <span className="px-3 py-1 rounded-full text-xs font-bold bg-[#FFF4D6] text-text-reward">
                             +{Math.round(score * 4)} XP
                         </span>
                     </div>
@@ -1274,18 +1462,57 @@ export function ReadingPlayer({
                     <div className="flex justify-center gap-4 mt-5">
                         <div className="px-4 py-2.5 bg-gray-50 rounded-xl text-center">
                             <p className="text-lg font-bold text-gray-900">⏱️ {formatTime(results.timeTaken)}</p>
-                            <p className="text-[10px] text-gray-500">Thời gian</p>
+                            <p className="text-xs text-gray-500">Thời gian</p>
                         </div>
                         <div className="px-4 py-2.5 bg-gray-50 rounded-xl text-center">
                             <p className="text-lg font-bold text-gray-900">📊 {percentage}%</p>
-                            <p className="text-[10px] text-gray-500">Kết quả</p>
+                            <p className="text-xs text-gray-500">Kết quả</p>
                         </div>
                         <div className="px-4 py-2.5 bg-gray-50 rounded-xl text-center">
                             <p className="text-lg font-bold text-gray-900">✅ {score}</p>
-                            <p className="text-[10px] text-gray-500">Đúng</p>
+                            <p className="text-xs text-gray-500">Đúng</p>
                         </div>
                     </div>
                 </div>
+
+                {episodeReceipt ? (
+                    <div className="mt-5 rounded-2xl bg-[#F3FBFF] p-4 ring-1 ring-[#CCE4F0]/70">
+                        <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+                            <div className="min-w-0">
+                                <p className="text-xs font-black uppercase text-text-brand">
+                                    Episode receipt
+                                </p>
+                                <h3 className="mt-1 text-lg font-black text-slate-950">
+                                    {episodeReceipt.completedCheckpoints}/{episodeReceipt.checkpointCount} checkpoint · {episodeReceipt.accuracyBand.replaceAll('_', ' ')}
+                                </h3>
+                                <p className="mt-1 text-sm font-semibold leading-relaxed text-text-brand">
+                                    {episodeReceipt.masteryContribution}
+                                </p>
+                                {results.xpEarned !== undefined ? (
+                                    <p className="mt-2 text-xs font-bold text-slate-500">
+                                        +{results.xpEarned} XP{results.fucoinEarned ? ` / +${results.fucoinEarned} Fucoin` : ''}
+                                    </p>
+                                ) : null}
+                            </div>
+                            <button
+                                onClick={() => {
+                                    if (episodeReceipt.recommendedAction === 'next_episode') {
+                                        router.push(episodeReceipt.nextEpisodeHref)
+                                    } else {
+                                        resetExercise()
+                                    }
+                                }}
+                                className={fuxieButtonClass(episodeReceipt.recommendedAction === 'next_episode' ? 'primary' : 'reward', 'md', 'shrink-0')}
+                            >
+                                {episodeReceipt.recommendedAction === 'next_episode' ? 'Di tiep' : 'Doc lai'}
+                            </button>
+                        </div>
+                        <FuxieProgressBar
+                            value={Math.round((episodeReceipt.completedCheckpoints / Math.max(1, episodeReceipt.checkpointCount)) * 100)}
+                            className="mt-4"
+                        />
+                    </div>
+                ) : null}
 
                 {/* ── Question Breakdown ── */}
                 <div className="mt-5">
@@ -1391,7 +1618,7 @@ export function ReadingPlayer({
                         <div className="space-y-3">
                             {/* Strengths */}
                             {percentage >= 60 && (
-                                <div className={styles.insightCard} style={{ borderLeftColor: '#10B981' }}>
+                                <div className={styles.insightCard} style={{ borderLeftColor: 'var(--color-text-success)' }}>
                                     <span className="text-sm">💪</span>
                                     <div>
                                         <p className="text-xs font-bold text-green-700">Điểm mạnh</p>
@@ -1400,14 +1627,14 @@ export function ReadingPlayer({
                                                 ? 'Em nắm ý chính rất tốt.'
                                                 : percentage >= 70
                                                     ? 'Em hiểu phần lớn thông tin quan trọng.'
-                                                    : 'Em đã có nền hiểu bài, tiếp tục luyện thêm nhé.'}
+                                                    : 'Em đã có nền hiểu bài, cố gắng luyện thêm nhé.'}
                                         </p>
                                     </div>
                                 </div>
                             )}
                             {/* Areas for improvement */}
                             {percentage < 90 && (
-                                <div className={styles.insightCard} style={{ borderLeftColor: '#FF8A3D' }}>
+                                <div className={styles.insightCard} style={{ borderLeftColor: 'var(--color-fuxie-energy)' }}>
                                     <span className="text-sm">🎯</span>
                                     <div>
                                         <p className="text-xs font-bold text-orange-700">Cần cải thiện</p>
@@ -1423,7 +1650,7 @@ export function ReadingPlayer({
                             )}
                             {/* Vocab insight */}
                             {vocabList.length > 0 && (
-                                <div className={styles.insightCard} style={{ borderLeftColor: '#6366F1' }}>
+                                <div className={styles.insightCard} style={{ borderLeftColor: 'var(--color-cefr-b2)' }}>
                                     <span className="text-sm">📚</span>
                                     <div>
                                         <p className="text-xs font-bold text-indigo-700">Từ vựng</p>
@@ -1436,7 +1663,7 @@ export function ReadingPlayer({
                                 </div>
                             )}
                             {/* Time insight */}
-                            <div className={styles.insightCard} style={{ borderLeftColor: '#8B5CF6' }}>
+                            <div className={styles.insightCard} style={{ borderLeftColor: 'var(--color-cefr-c1)' }}>
                                 <span className="text-sm">⏱️</span>
                                 <div>
                                         <p className="text-xs font-bold text-purple-700">Tốc độ</p>

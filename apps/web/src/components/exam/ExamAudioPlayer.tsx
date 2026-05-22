@@ -176,15 +176,15 @@ export function ExamAudioPlayer({ src, transcript, maxPlays = 2, label }: ExamAu
                     />
                 </div>
                 <div className="flex items-center justify-between mt-1">
-                    <span className="text-[10px] text-blue-400 font-mono">{formatTime(currentTime)}</span>
-                    <span className="text-[10px] text-blue-400 font-mono">{duration > 0 ? formatTime(duration) : '--:--'}</span>
+                    <span className="text-xs text-blue-400 font-mono">{formatTime(currentTime)}</span>
+                    <span className="text-xs text-blue-400 font-mono">{duration > 0 ? formatTime(duration) : '--:--'}</span>
                 </div>
             </div>
 
             {/* Play count + label */}
             <div className="flex items-center gap-2 shrink-0">
                 {maxPlays > 0 && (
-                    <span className={`text-[10px] font-bold px-2 py-1 rounded-full
+                    <span className={`text-xs font-bold px-2 py-1 rounded-full
                         ${isDisabled
                             ? 'bg-gray-200 text-gray-500'
                             : 'bg-blue-100 text-blue-600'

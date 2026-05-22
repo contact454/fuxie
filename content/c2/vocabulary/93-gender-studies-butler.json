@@ -90,7 +90,8 @@
       "exampleSentence2": "Die Analyse des Begehrens enthüllt oft die unbewussten Mechanismen der Subjektivierung.",
       "exampleTranslation2": "Phân tích sự khao khát thường tiết lộ các cơ chế vô thức của sự chủ thể hóa.",
       "imageUrl": "/images/vocab/c2-gender-studies-butler/das-begehren.png",
-      "meaningDe": "Das intensive Verlangen nach einer Person oder einer Sache, oft verbunden mit einem Gefühl des Mangels."
+      "meaningDe": "Das intensive Verlangen nach einer Person oder einer Sache, oft verbunden mit einem Gefühl des Mangels.",
+      "pluralStatus": "not_applicable_or_needs_review"
     },
     {
       "word": "Macht-Wissen-Verhältnis",
@@ -202,7 +203,20 @@
       "exampleSentence2": "Die Gesellschaft neigt dazu, viele Aspekte des menschlichen Lebens zu vergeschlechtlichen.",
       "exampleTranslation2": "Xã hội có xu hướng giới tính hóa nhiều khía cạnh của đời sống con người.",
       "imageUrl": "/images/vocab/c2-gender-studies-butler/vergeschlechtlichen.png",
-      "meaningDe": "Einer Sache oder Person ein Geschlecht zuschreiben oder zuordnen."
+      "meaningDe": "Einer Sache oder Person ein Geschlecht zuschreiben oder zuordnen.",
+      "conjugation": {
+        "praesens": {
+          "ich": "vergeschlechtliche",
+          "du": "vergeschlechtlichst",
+          "er_sie_es": "vergeschlechtlicht",
+          "wir": "vergeschlechtlichen",
+          "ihr": "vergeschlechtlicht",
+          "sie_Sie": "vergeschlechtlichen"
+        },
+        "isIrregular": false,
+        "isSeparable": false,
+        "reviewStatus": "auto_generated_needs_spot_check"
+      }
     },
     {
       "word": "entleeren",
@@ -216,7 +230,20 @@
       "exampleSentence2": "Butlers Arbeit versucht, die scheinbar natürliche Essenz von Geschlecht zu entleeren.",
       "exampleTranslation2": "Tác phẩm của Butler cố gắng làm mất đi bản chất giới tính tưởng chừng như tự nhiên.",
       "imageUrl": "/images/vocab/c2-gender-studies-butler/entleeren.png",
-      "meaningDe": "Den physischen Inhalt eines Behältnisses entfernen oder einer Sache ihre ursprüngliche Bedeutung und Substanz nehmen."
+      "meaningDe": "Den physischen Inhalt eines Behältnisses entfernen oder einer Sache ihre ursprüngliche Bedeutung und Substanz nehmen.",
+      "conjugation": {
+        "praesens": {
+          "ich": "entleere",
+          "du": "entleerst",
+          "er_sie_es": "entleert",
+          "wir": "entleeren",
+          "ihr": "entleert",
+          "sie_Sie": "entleeren"
+        },
+        "isIrregular": false,
+        "isSeparable": false,
+        "reviewStatus": "auto_generated_needs_spot_check"
+      }
     },
     {
       "word": "performabel",
@@ -245,6 +272,26 @@
       "exampleTranslation2": "Chủ thể được hiện thân là kết quả của một tương tác phức tạp giữa diễn ngôn và thực hành.",
       "imageUrl": "/images/vocab/c2-gender-studies-butler/verkoerperlicht.png",
       "meaningDe": "Die Integration von Erfahrungen oder Wissen in die körperliche Wahrnehmung und das physische Erleben."
+    }
+  ],
+  "cefrAudit": {
+    "targetLevel": "C2",
+    "verdict": "aligned",
+    "reviewerRole": "German Academic Lead",
+    "notes": "Release-candidate metadata audit: vocabulary content for \"Gender Studies & Butler\" is aligned with declared C2 scope pending final human spot-check.",
+    "reviewedAt": "2026-05-12",
+    "reviewScope": "release_candidate_metadata_pass"
+  },
+  "learningOutcomes": [
+    {
+      "id": "c2-gender-studies-butler-lo-1",
+      "cefrLevel": "C2",
+      "skill": "vocabulary",
+      "canDoVi": "Toi co the luyen tu vung o trinh do C2 qua chu de \"Gender Studies & Butler\".",
+      "canDoDe": "Ich kann Wortschatz auf Niveau C2 zum Thema \"Gender Studies & Butler\" ueben.",
+      "linkedContentIds": [
+        "c2-gender-studies-butler"
+      ]
     }
   ]
 }

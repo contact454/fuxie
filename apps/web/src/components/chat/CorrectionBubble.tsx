@@ -36,7 +36,7 @@ export function CorrectionBubble({ corrections }: { corrections: Correction[] })
                             </p>
                         </div>
                         <span
-                            className={`text-gray-400 text-[10px] shrink-0 transition-transform duration-200
+                            className={`text-gray-400 text-xs shrink-0 transition-transform duration-200
                                 ${expandedIndex === i ? 'rotate-180' : ''}`}
                         >
                             ▼
@@ -49,12 +49,12 @@ export function CorrectionBubble({ corrections }: { corrections: Correction[] })
                             ${expandedIndex === i ? 'max-h-40 opacity-100' : 'max-h-0 opacity-0'}`}
                     >
                         <div className="px-3 pb-2.5 pt-0.5 border-t border-amber-200/50">
-                            <p className="text-[11px] text-gray-600 leading-relaxed">
+                            <p className="text-xs text-gray-600 leading-relaxed">
                                 {c.explanation}
                             </p>
                             {c.rule && (
                                 <span className="inline-block mt-1.5 px-2 py-0.5 rounded-full
-                                    bg-amber-200/60 text-amber-800 text-[10px] font-medium">
+                                    bg-amber-200/60 text-amber-800 text-xs font-medium">
                                     📐 {c.rule}
                                 </span>
                             )}

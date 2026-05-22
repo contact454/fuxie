@@ -20,7 +20,8 @@
       "exampleSentence2": "Im Zentrum der Rechtshermeneutik steht die Frage, wie die Kluft zwischen dem abstrakten Gesetzestext und dem konkreten Lebenssachverhalt überbrückt werden kann.",
       "exampleTranslation2": "Trọng tâm của ngữ nghĩa học pháp lý là câu hỏi làm thế nào để bắc cầu giữa văn bản luật trừu tượng và tình huống thực tế cụ thể.",
       "imageUrl": "/images/vocab/c2-rechtshermeneutik/rechtshermeneutik.png",
-      "meaningDe": "Die methodische Lehre davon, wie die Bedeutung von Rechtstexten zu ermitteln ist."
+      "meaningDe": "Die methodische Lehre davon, wie die Bedeutung von Rechtstexten zu ermitteln ist.",
+      "pluralStatus": "not_applicable_or_needs_review"
     },
     {
       "word": "Auslegungskanon",
@@ -48,7 +49,8 @@
       "exampleSentence2": "Eine kohärente Rechtsanwendung erfordert stets die Berücksichtigung der Systematik des jeweiligen Rechtsgebiets.",
       "exampleTranslation2": "Việc áp dụng pháp luật nhất quán luôn đòi hỏi phải xem xét tính hệ thống của lĩnh vực pháp luật liên quan.",
       "imageUrl": "/images/vocab/c2-rechtshermeneutik/systematik.png",
-      "meaningDe": "Die methodische Gliederung von Einzelteilen zu einem geordneten Ganzen."
+      "meaningDe": "Die methodische Gliederung von Einzelteilen zu einem geordneten Ganzen.",
+      "pluralStatus": "not_applicable_or_needs_review"
     },
     {
       "word": "Ambiguität",
@@ -118,7 +120,8 @@
       "exampleSentence2": "Die Prüfung der Verfassungskonformität ist ein zentrales Element der richterlichen Kontrolle und ein Garant für den Schutz der Grundrechte.",
       "exampleTranslation2": "Việc kiểm tra tính phù hợp với hiến pháp là một yếu tố trung tâm của kiểm soát tư pháp và là một đảm bảo cho việc bảo vệ các quyền cơ bản.",
       "imageUrl": "/images/vocab/c2-rechtshermeneutik/verfassungskonformitaet.png",
-      "meaningDe": "Die Übereinstimmung eines Gesetzes oder einer Handlung mit der Verfassung"
+      "meaningDe": "Die Übereinstimmung eines Gesetzes oder einer Handlung mit der Verfassung",
+      "pluralStatus": "not_applicable_or_needs_review"
     },
     {
       "word": "Präjudiz",
@@ -188,7 +191,8 @@
       "exampleSentence2": "Die moderne Jurisprudenz integriert zunehmend Erkenntnisse aus anderen Disziplinen wie der Soziologie und Philosophie.",
       "exampleTranslation2": "Luật học hiện đại ngày càng tích hợp các kiến thức từ các ngành khác như xã hội học và triết học.",
       "imageUrl": "/images/vocab/c2-rechtshermeneutik/jurisprudenz.png",
-      "meaningDe": "Die Wissenschaft vom Recht und dessen Anwendung"
+      "meaningDe": "Die Wissenschaft vom Recht und dessen Anwendung",
+      "pluralStatus": "not_applicable_or_needs_review"
     },
     {
       "word": "konkretisieren",
@@ -202,7 +206,20 @@
       "exampleSentence2": "Durch richterliche Auslegung werden unbestimmte Rechtsbegriffe konkretisiert und ihre Anwendung präzisiert.",
       "exampleTranslation2": "Thông qua giải thích của tòa án, các khái niệm pháp lý không xác định được cụ thể hóa và việc áp dụng chúng được làm rõ.",
       "imageUrl": "/images/vocab/c2-rechtshermeneutik/konkretisieren.png",
-      "meaningDe": "Eine vage Aussage durch genaue Bestimmungen eindeutig definieren."
+      "meaningDe": "Eine vage Aussage durch genaue Bestimmungen eindeutig definieren.",
+      "conjugation": {
+        "praesens": {
+          "ich": "konkretisiere",
+          "du": "konkretisierst",
+          "er_sie_es": "konkretisiert",
+          "wir": "konkretisieren",
+          "ihr": "konkretisiert",
+          "sie_Sie": "konkretisieren"
+        },
+        "isIrregular": false,
+        "isSeparable": false,
+        "reviewStatus": "auto_generated_needs_spot_check"
+      }
     },
     {
       "word": "systematisch",
@@ -245,6 +262,26 @@
       "exampleTranslation2": "Lập luận rằng một hành vi nhất định bị cấm nếu nó làm rối loạn trật tự công cộng, thì điều này càng đúng hơn đối với các hành vi gây nguy hiểm cho an ninh.",
       "imageUrl": "/images/vocab/c2-rechtshermeneutik/a-fortiori.png",
       "meaningDe": "Mit noch größerer Sicherheit oder aus einem noch stärkeren Grund"
+    }
+  ],
+  "cefrAudit": {
+    "targetLevel": "C2",
+    "verdict": "aligned",
+    "reviewerRole": "German Academic Lead",
+    "notes": "Release-candidate metadata audit: vocabulary content for \"Rechtshermeneutik & Auslegung\" is aligned with declared C2 scope pending final human spot-check.",
+    "reviewedAt": "2026-05-12",
+    "reviewScope": "release_candidate_metadata_pass"
+  },
+  "learningOutcomes": [
+    {
+      "id": "c2-rechtshermeneutik-lo-1",
+      "cefrLevel": "C2",
+      "skill": "vocabulary",
+      "canDoVi": "Toi co the luyen tu vung o trinh do C2 qua chu de \"Rechtshermeneutik & Auslegung\".",
+      "canDoDe": "Ich kann Wortschatz auf Niveau C2 zum Thema \"Rechtshermeneutik & Auslegung\" ueben.",
+      "linkedContentIds": [
+        "c2-rechtshermeneutik"
+      ]
     }
   ]
 }

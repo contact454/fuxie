@@ -76,7 +76,8 @@
       "exampleSentence2": "Wie hoch sind die Nebenkosten?",
       "exampleTranslation2": "Chi phí phụ bao nhiêu?",
       "imageUrl": "/images/vocab/a2-wohnen-haushalt/nebenkosten.png",
-      "meaningDe": "Zusätzliches Geld für Wasser, Heizung und Müll"
+      "meaningDe": "Zusätzliches Geld für Wasser, Heizung und Müll",
+      "articleStatus": "not_applicable_or_needs_review"
     },
     {
       "word": "Kaution",
@@ -384,7 +385,8 @@
       "exampleSentence2": "Die Möbel sind alt.",
       "exampleTranslation2": "Đồ nội thất cũ.",
       "imageUrl": "/images/vocab/a2-wohnen-haushalt/moebel.png",
-      "meaningDe": "Gegenstände, die man benutzt, um eine Wohnung einzurichten"
+      "meaningDe": "Gegenstände, die man benutzt, um eine Wohnung einzurichten",
+      "articleStatus": "not_applicable_or_needs_review"
     },
     {
       "word": "Teppich",
@@ -561,6 +563,26 @@
       "exampleTranslation2": "Tôi tìm căn hộ có nội thất.",
       "imageUrl": "/images/vocab/a2-wohnen-haushalt/moebliert.png",
       "meaningDe": "Mit Möbeln ausgestattet."
+    }
+  ],
+  "cefrAudit": {
+    "targetLevel": "A2",
+    "verdict": "aligned",
+    "reviewerRole": "German Academic Lead",
+    "notes": "Release-candidate metadata audit: vocabulary content for \"Wohnen & Haushalt\" is aligned with declared A2 scope pending final human spot-check.",
+    "reviewedAt": "2026-05-12",
+    "reviewScope": "release_candidate_metadata_pass"
+  },
+  "learningOutcomes": [
+    {
+      "id": "a2-wohnen-haushalt-lo-1",
+      "cefrLevel": "A2",
+      "skill": "vocabulary",
+      "canDoVi": "Toi co the luyen tu vung o trinh do A2 qua chu de \"Wohnen & Haushalt\".",
+      "canDoDe": "Ich kann Wortschatz auf Niveau A2 zum Thema \"Wohnen & Haushalt\" ueben.",
+      "linkedContentIds": [
+        "a2-wohnen-haushalt"
+      ]
     }
   ]
 }

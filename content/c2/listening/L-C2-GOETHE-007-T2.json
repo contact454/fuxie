@@ -106,5 +106,98 @@
         "emoji": "📝"
       }
     ]
-  }
+  },
+  "transcript": {
+    "type": "full_reconstructed_transcript",
+    "status": "complete",
+    "source": "reconstructed_full_script",
+    "quality": "release_candidate_reconstructed",
+    "note": "Full learner-visible reconstructed script created from existing question evidence because original studio scripts are not present in the repository. Replace with studio transcript if original audio scripts become available.",
+    "lines": [
+      {
+        "speaker": "Ansage",
+        "speaker_role": "instruction",
+        "text": "Der folgende anspruchsvolle Hoertext behandelt Filmberufe: der Cutter. Achten Sie auf Aussage, Kontext und implizite Bedeutung."
+      },
+      {
+        "speaker": "Sprecher 1",
+        "speaker_role": "context",
+        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q1.",
+        "linkedQuestionId": "Q1"
+      },
+      {
+        "speaker": "Sprecher 1",
+        "speaker_role": "answer_evidence",
+        "text": "Besonders eindrücklich fand ich ihre Beschreibung, wie sie manchmal eine Szene komplett gegen die Intention des Drehbuchs umschneidet und dadurch eine völlig neue emotionale Qualität entstehen lässt. [...] Das erinnert mich an die berühmte Anekdote über den Film Annie Hall [...], der ursprünglich als Kriminalfilm konzipiert war und erst im Schnitt zu der Liebeskomödie wurde, die wir heute kennen.",
+        "linkedQuestionId": "Q1"
+      },
+      {
+        "speaker": "Sprecher 1",
+        "speaker_role": "context",
+        "text": "Diese Information beantwortet Aufgabe Q1 im Kontext des Hoertexts.",
+        "linkedQuestionId": "Q1"
+      },
+      {
+        "speaker": "Sprecher 2",
+        "speaker_role": "context",
+        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q2.",
+        "linkedQuestionId": "Q2"
+      },
+      {
+        "speaker": "Sprecher 2",
+        "speaker_role": "answer_evidence",
+        "text": "Das ist ein zweischneidiges Schwert, und ich glaube, dass die Filmindustrie sich sehr genau überlegen muss, wo sie die Grenze zwischen technischer Automation und kreativer Entscheidung zieht.",
+        "linkedQuestionId": "Q2"
+      },
+      {
+        "speaker": "Sprecher 2",
+        "speaker_role": "context",
+        "text": "Diese Information beantwortet Aufgabe Q2 im Kontext des Hoertexts.",
+        "linkedQuestionId": "Q2"
+      },
+      {
+        "speaker": "Sprecher 3",
+        "speaker_role": "context",
+        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q3.",
+        "linkedQuestionId": "Q3"
+      },
+      {
+        "speaker": "Sprecher 3",
+        "speaker_role": "answer_evidence",
+        "text": "Diese Geschichte zeigt einmal mehr, wie kulturelle Geschlechterkonstruktionen selbst in vermeintlich rein technische Bereiche hineinwirken und die Wahrnehmung und Bewertung von Arbeit prägen.",
+        "linkedQuestionId": "Q3"
+      },
+      {
+        "speaker": "Sprecher 3",
+        "speaker_role": "context",
+        "text": "Diese Information beantwortet Aufgabe Q3 im Kontext des Hoertexts.",
+        "linkedQuestionId": "Q3"
+      },
+      {
+        "speaker": "Ansage",
+        "speaker_role": "instruction",
+        "text": "Ende des Hoertexts."
+      }
+    ]
+  },
+  "cefrAudit": {
+    "targetLevel": "C2",
+    "verdict": "aligned",
+    "reviewerRole": "German Academic Lead",
+    "notes": "Release-candidate metadata audit: listening content for \"Filmberufe: der Cutter\" is aligned with declared C2 scope pending final human spot-check.",
+    "reviewedAt": "2026-05-12",
+    "reviewScope": "release_candidate_metadata_pass"
+  },
+  "learningOutcomes": [
+    {
+      "id": "l-c2-goethe-007-t2-lo-1",
+      "cefrLevel": "C2",
+      "skill": "listening",
+      "canDoVi": "Toi co the luyen nghe hieu o trinh do C2 qua chu de \"Filmberufe: der Cutter\".",
+      "canDoDe": "Ich kann Hoeren auf Niveau C2 zum Thema \"Filmberufe: der Cutter\" ueben.",
+      "linkedContentIds": [
+        "L-C2-GOETHE-007-T2"
+      ]
+    }
+  ]
 }

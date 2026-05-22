@@ -3,6 +3,7 @@
 import Image from 'next/image'
 import { useEffect, useMemo, useRef, useState } from 'react'
 import type * as THREE from 'three'
+import { FUXIE_GAMIFICATION_MASCOTS, FUXIE_MASCOT_STATES, FUXIE_MODULE_MASCOTS } from '@/lib/mascot/fuxie-assets'
 
 export type FuxieLive3DState = 'idle' | 'wave' | 'talk' | 'listen' | 'reward' | 'tryAgain'
 export type FuxieLive3DQuality = 'adaptive' | 'performance' | 'static'
@@ -105,40 +106,40 @@ export const FUXIE_RIGGED_3D_ASSETS = FUXIE_RIGGED_3D_ASSET_SETS.v7b
 
 export const FUXIE_IMAGE_ANIMATION_SETS: Record<FuxieLive3DState, readonly string[]> = {
     idle: [
-        '/mascot-3d/optimized/fuxie-3d-core-happy-wave-512.webp',
-        '/mascot-3d/optimized/fuxie-3d-core-daily-mission-512.webp',
-        '/mascot-3d/optimized/fuxie-3d-role-librarian-512.webp',
-        '/mascot-3d/optimized/fuxie-3d-core-happy-wave-512.webp',
+        FUXIE_MASCOT_STATES.wave,
+        FUXIE_MODULE_MASCOTS.dashboard,
+        FUXIE_MODULE_MASCOTS.reading,
+        FUXIE_MASCOT_STATES.wave,
     ],
     wave: [
-        '/mascot-3d/optimized/fuxie-3d-core-happy-wave-512.webp',
-        '/mascot-3d/optimized/fuxie-3d-role-radio-host-512.webp',
-        '/mascot-3d/optimized/fuxie-3d-core-happy-wave-512.webp',
-        '/mascot-3d/optimized/fuxie-3d-role-speaking-coach-512.webp',
+        FUXIE_MASCOT_STATES.wave,
+        FUXIE_MODULE_MASCOTS.listening,
+        FUXIE_MASCOT_STATES.wave,
+        FUXIE_MODULE_MASCOTS.speaking,
     ],
     talk: [
-        '/mascot-3d/optimized/fuxie-3d-role-speaking-coach-512.webp',
-        '/mascot-3d/optimized/fuxie-3d-role-radio-host-512.webp',
-        '/mascot-3d/optimized/fuxie-3d-role-speaking-coach-512.webp',
-        '/mascot-3d/optimized/fuxie-3d-core-happy-wave-512.webp',
+        FUXIE_MODULE_MASCOTS.speaking,
+        FUXIE_MODULE_MASCOTS.chat,
+        FUXIE_MODULE_MASCOTS.speaking,
+        FUXIE_MASCOT_STATES.wave,
     ],
     listen: [
-        '/mascot-3d/optimized/fuxie-3d-role-radio-host-512.webp',
-        '/mascot-3d/optimized/fuxie-3d-core-daily-mission-512.webp',
-        '/mascot-3d/optimized/fuxie-3d-role-radio-host-512.webp',
-        '/mascot-3d/optimized/fuxie-3d-role-exam-guide-512.webp',
+        FUXIE_MODULE_MASCOTS.listening,
+        FUXIE_GAMIFICATION_MASCOTS['daily-goal'],
+        FUXIE_MODULE_MASCOTS.listening,
+        FUXIE_MODULE_MASCOTS.exam,
     ],
     reward: [
-        '/mascot-3d/optimized/fuxie-3d-core-celebration-512.webp',
-        '/mascot-3d/optimized/fuxie-3d-game-fucoin-reward-512.webp',
-        '/mascot-3d/optimized/fuxie-3d-core-celebration-512.webp',
-        '/mascot-3d/optimized/fuxie-3d-game-streak-freeze-saved-512.webp',
+        FUXIE_GAMIFICATION_MASCOTS['perfect-score'],
+        FUXIE_GAMIFICATION_MASCOTS.fucoin,
+        FUXIE_GAMIFICATION_MASCOTS['achievement-unlocked'],
+        FUXIE_GAMIFICATION_MASCOTS['reward-chest'],
     ],
     tryAgain: [
-        '/mascot-3d/optimized/fuxie-3d-core-daily-mission-512.webp',
-        '/mascot-3d/optimized/fuxie-3d-role-exam-guide-512.webp',
-        '/mascot-3d/optimized/fuxie-3d-core-happy-wave-512.webp',
-        '/mascot-3d/optimized/fuxie-3d-core-daily-mission-512.webp',
+        FUXIE_GAMIFICATION_MASCOTS.mission,
+        FUXIE_MODULE_MASCOTS.exam,
+        FUXIE_MASCOT_STATES.wave,
+        FUXIE_GAMIFICATION_MASCOTS['daily-goal'],
     ],
 } as const
 
@@ -224,11 +225,11 @@ const V10_LAYER_BOUNDS = {
 } as const
 
 const V10_STATE_POSE_FRAMES: Partial<Record<FuxieLive3DState, string>> = {
-    wave: '/mascot-3d/optimized/fuxie-3d-core-happy-wave-512.png',
-    talk: '/mascot-3d/optimized/fuxie-3d-role-speaking-coach-512.png',
-    listen: '/mascot-3d/optimized/fuxie-3d-role-radio-host-512.png',
-    reward: '/mascot-3d/optimized/fuxie-3d-game-fucoin-reward-512.png',
-    tryAgain: '/mascot-3d/optimized/fuxie-3d-core-daily-mission-512.png',
+    wave: FUXIE_MASCOT_STATES.wave,
+    talk: FUXIE_MODULE_MASCOTS.speaking,
+    listen: FUXIE_MODULE_MASCOTS.listening,
+    reward: FUXIE_GAMIFICATION_MASCOTS.fucoin,
+    tryAgain: FUXIE_GAMIFICATION_MASCOTS.mission,
 } as const
 
 function resolveSize(size: FuxieLive3DSize) {
@@ -441,7 +442,7 @@ export function FuxieLive3D({
 
         if (useV10LayeredCanvas) {
             const enableQaReadback = window.location.pathname.includes('fuxie-live-qa')
-            const basePath = '/mascot-3d/imagegen-fullbody/v10'
+            const basePath = '/mascot-3d/imagegen-fullbody/v10' // asset-registry-allow: dev-only debugger preview for layered imagegen-fullbody canvas, not learner-facing
             const sourceToCanvas = (x: number, y: number, scale: number, offsetX: number, offsetY: number) => ({
                 x: offsetX + x * scale,
                 y: offsetY + y * scale,

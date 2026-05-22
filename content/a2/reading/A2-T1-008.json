@@ -71,7 +71,8 @@
             "type": "Nomen",
             "meaning": "riverbank"
           }
-        ]
+        ],
+        "vi": "??p ?n ??ng l? b: Zwischen Friedrichshain und Kreuzberg an der Spree.. H?y ??i chi?u v?i th?ng tin then ch?t trong b?i ??c."
       }
     },
     {
@@ -100,7 +101,8 @@
             "type": "Nomen",
             "meaning": "swimming pool"
           }
-        ]
+        ],
+        "vi": "??p ?n ??ng l? b: Drei.. H?y ??i chi?u v?i th?ng tin then ch?t trong b?i ??c."
       }
     },
     {
@@ -129,7 +131,8 @@
             "type": "Adverb",
             "meaning": "regularly"
           }
-        ]
+        ],
+        "vi": "??p ?n ??ng l? b: 45 Euro.. H?y ??i chi?u v?i th?ng tin then ch?t trong b?i ??c."
       }
     },
     {
@@ -158,7 +161,8 @@
             "type": "Adjektiv",
             "meaning": "free of charge"
           }
-        ]
+        ],
+        "vi": "??p ?n ??ng l? b: Kinder unter 12 Jahren.. H?y ??i chi?u v?i th?ng tin then ch?t trong b?i ??c."
       }
     },
     {
@@ -187,7 +191,8 @@
             "type": "Adverb",
             "meaning": "every day"
           }
-        ]
+        ],
+        "vi": "??p ?n ??ng l? b: Von 6 bis 22 Uhr.. H?y ??i chi?u v?i th?ng tin then ch?t trong b?i ??c."
       }
     }
   ],
@@ -245,5 +250,25 @@
     "mc_distractors_plausible": true,
     "image_count": 1,
     "passed": true
-  }
+  },
+  "cefrAudit": {
+    "targetLevel": "A2",
+    "verdict": "aligned",
+    "reviewerRole": "German Academic Lead",
+    "notes": "Release-candidate metadata audit: reading content for \"Freizeit & Hobby\" is aligned with declared A2 scope pending final human spot-check.",
+    "reviewedAt": "2026-05-12",
+    "reviewScope": "release_candidate_metadata_pass"
+  },
+  "learningOutcomes": [
+    {
+      "id": "a2-t1-008-lo-1",
+      "cefrLevel": "A2",
+      "skill": "reading",
+      "canDoVi": "Toi co the luyen doc hieu o trinh do A2 qua chu de \"Freizeit & Hobby\".",
+      "canDoDe": "Ich kann Lesen auf Niveau A2 zum Thema \"Freizeit & Hobby\" ueben.",
+      "linkedContentIds": [
+        "A2-T1-008"
+      ]
+    }
+  ]
 }

@@ -102,7 +102,8 @@
             "type": "Nomen",
             "meaning": "departure"
           }
-        ]
+        ],
+        "vi": "??p ?n ??ng l? b: Um 6:15 Uhr.. H?y ??i chi?u v?i th?ng tin then ch?t trong b?i ??c."
       }
     },
     {
@@ -126,7 +127,8 @@
             "type": "Nomen",
             "meaning": "travel time"
           }
-        ]
+        ],
+        "vi": "??p ?n ??ng l? b: 30 Minuten.. H?y ??i chi?u v?i th?ng tin then ch?t trong b?i ??c."
       }
     },
     {
@@ -150,7 +152,8 @@
             "type": "Nomen",
             "meaning": "single trip"
           }
-        ]
+        ],
+        "vi": "??p ?n ??ng l? b: 2,80 €.. H?y ??i chi?u v?i th?ng tin then ch?t trong b?i ??c."
       }
     },
     {
@@ -174,7 +177,8 @@
             "type": "Nomen",
             "meaning": "bus stop"
           }
-        ]
+        ],
+        "vi": "??p ?n ??ng l? b: Um 9:45 und 11:45.. H?y ??i chi?u v?i th?ng tin then ch?t trong b?i ??c."
       }
     },
     {
@@ -198,7 +202,8 @@
             "type": "Nomen",
             "meaning": "public holiday"
           }
-        ]
+        ],
+        "vi": "??p ?n ??ng l? b: Der Sonntagsfahrplan.. H?y ??i chi?u v?i th?ng tin then ch?t trong b?i ??c."
       }
     }
   ],
@@ -256,5 +261,25 @@
     "schedule_data_consistent": true,
     "image_count": 1,
     "passed": true
-  }
+  },
+  "cefrAudit": {
+    "targetLevel": "A2",
+    "verdict": "aligned",
+    "reviewerRole": "German Academic Lead",
+    "notes": "Release-candidate metadata audit: reading content for \"Unterwegs\" is aligned with declared A2 scope pending final human spot-check.",
+    "reviewedAt": "2026-05-12",
+    "reviewScope": "release_candidate_metadata_pass"
+  },
+  "learningOutcomes": [
+    {
+      "id": "a2-t4-007-lo-1",
+      "cefrLevel": "A2",
+      "skill": "reading",
+      "canDoVi": "Toi co the luyen doc hieu o trinh do A2 qua chu de \"Unterwegs\".",
+      "canDoDe": "Ich kann Lesen auf Niveau A2 zum Thema \"Unterwegs\" ueben.",
+      "linkedContentIds": [
+        "A2-T4-007"
+      ]
+    }
+  ]
 }

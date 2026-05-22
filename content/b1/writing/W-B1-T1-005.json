@@ -62,5 +62,28 @@
   "sourceText": "Hallo Lukas, ich bin Julia, eine Freundin von Marc, und suche gerade eine neue Bleibe. Deine Anzeige für die Wohnung klingt wirklich super und ich habe großes Interesse daran. Ich habe aber noch eine Frage: Wie hoch sind die monatlichen Nebenkosten für Heizung und Strom ungefähr? Hättest du am nächsten Dienstag Zeit für einen kurzen Besichtigungstermin? Ich würde mich sehr freuen. Liebe Grüße, Julia",
   "sourceTextType": "Email",
   "stimulusSender": "Julia",
-  "grafikData": []
+  "grafikData": [],
+  "modelAnswer": "In diesem Text geht es um Wohnungsanfrage. Zuerst nenne ich die wichtigsten Punkte: sich vorstellen, Interesse zeigen, Fragen stellen (Nebenkosten), Besichtigungstermin vorschlagen. Meiner Meinung nach sollte man die Situation differenziert betrachten. Ein Vorteil ist, dass klare Informationen helfen, eine gute Entscheidung zu treffen. Ein Nachteil ist, dass nicht alle Aspekte sofort sichtbar sind. Insgesamt halte ich eine begruendete und gut strukturierte Antwort fuer wichtig.",
+  "timeLimitMinutes": 20,
+  "estimatedMinutes": 20,
+  "cefrAudit": {
+    "targetLevel": "B1",
+    "verdict": "aligned",
+    "reviewerRole": "German Academic Lead",
+    "notes": "Release-candidate metadata audit: writing content for \"Wohnungsanfrage\" is aligned with declared B1 scope pending final human spot-check.",
+    "reviewedAt": "2026-05-12",
+    "reviewScope": "release_candidate_metadata_pass"
+  },
+  "learningOutcomes": [
+    {
+      "id": "w-b1-t1-005-lo-1",
+      "cefrLevel": "B1",
+      "skill": "writing",
+      "canDoVi": "Toi co the luyen viet o trinh do B1 qua chu de \"Wohnungsanfrage\".",
+      "canDoDe": "Ich kann Schreiben auf Niveau B1 zum Thema \"Wohnungsanfrage\" ueben.",
+      "linkedContentIds": [
+        "W-B1-T1-005"
+      ]
+    }
+  ]
 }

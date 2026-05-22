@@ -1,0 +1,373 @@
+{
+  "schemaVersion": 1,
+  "strategy": "Fuxie German Village learner UI image generation",
+  "createdAt": "2026-05-14",
+  "updatedAt": "2026-05-15",
+  "styleContract": {
+    "palette": ["#60A8E4", "#3C78A8", "#2EC4B6", "#F3FBFF", "#FFB703"],
+    "medium": "polished 3D clay-like mobile game asset",
+    "world": "original cozy German-learning village",
+    "avoid": ["external game IP", "clutter", "dark fantasy", "beige brown dominance", "leaf motif", "unreadable text"]
+  },
+  "batches": [
+    {
+      "id": "batch-a-location-plates",
+      "priority": "P0",
+      "purpose": "Core village location anchors for learner surfaces.",
+      "assets": [
+        {
+          "id": "village-square-mission-board-plate",
+          "surface": "dashboard",
+          "type": "world_location",
+          "outputTarget": "docs/design/asset-generation/source/village-square-mission-board-plate-v1.png",
+          "runtimeTarget": "apps/web/public/mascot-3d/world/optimized/v2/fuxie-world-village-square-mission-board-512.webp",
+          "integrationTarget": "FUXIE_WORLD_PROPS.villageSquareMissionBoard",
+          "prompt": "Compact 3D village square mission board plate for Fuxie Dashboard, with blue sky village paving, a friendly study notice board, tiny reward hooks for XP and Fucoin, transparent background, readable at 96px."
+        },
+        {
+          "id": "course-signpost-path-plate",
+          "surface": "course",
+          "type": "world_location",
+          "outputTarget": "docs/design/asset-generation/source/course-signpost-path-plate-v1.png",
+          "runtimeTarget": "apps/web/public/mascot-3d/world/optimized/v2/fuxie-world-course-signpost-path-512.webp",
+          "integrationTarget": "FUXIE_WORLD_PROPS.courseSignpostPath",
+          "prompt": "Compact 3D German village course signpost path with CEFR direction signs A1 to B2, small path stones, sky-blue and teal accents, transparent background, made for course path UI."
+        },
+        {
+          "id": "vocabulary-collection-book-table-plate",
+          "surface": "vocabulary",
+          "type": "world_location",
+          "outputTarget": "docs/design/asset-generation/source/vocabulary-collection-book-table-plate-v1.png",
+          "runtimeTarget": "apps/web/public/mascot-3d/world/optimized/v2/fuxie-world-collection-book-table-512.webp",
+          "integrationTarget": "FUXIE_WORLD_PROPS.collectionBookTable",
+          "prompt": "3D collection book on a small German village study table with phrase stamps and postcard fragments, playful but clean, transparent background, supports vocabulary collection UI."
+        },
+        {
+          "id": "reading-library-desk-plate",
+          "surface": "reading",
+          "type": "world_location",
+          "outputTarget": "docs/design/asset-generation/source/reading-library-desk-plate-v1.png",
+          "runtimeTarget": "apps/web/public/mascot-3d/world/optimized/v2/fuxie-world-reading-library-desk-512.webp",
+          "integrationTarget": "FUXIE_WORLD_PROPS.readingLibraryDesk",
+          "prompt": "Compact 3D cozy library desk for German reading practice, with open book, blue bookmark, small lamp, clean transparent background, calm study-first feel."
+        },
+        {
+          "id": "listening-radio-booth-console-plate",
+          "surface": "listening",
+          "type": "world_location",
+          "outputTarget": "docs/design/asset-generation/source/listening-radio-booth-console-plate-v1.png",
+          "runtimeTarget": "apps/web/public/mascot-3d/world/optimized/v2/fuxie-world-radio-booth-console-512.webp",
+          "integrationTarget": "FUXIE_WORLD_PROPS.radioBoothConsole",
+          "prompt": "3D village radio booth console for listening practice, with friendly microphone, play button, sound waves, sky-blue and teal accents, transparent background."
+        },
+        {
+          "id": "speaking-stage-cafe-corner-plate",
+          "surface": "speaking",
+          "type": "world_location",
+          "outputTarget": "docs/design/asset-generation/source/speaking-stage-cafe-corner-plate-v1.png",
+          "runtimeTarget": "apps/web/public/mascot-3d/world/optimized/v2/fuxie-world-speaking-stage-cafe-512.webp",
+          "integrationTarget": "FUXIE_WORLD_PROPS.speakingStageCafe",
+          "prompt": "3D speaking stage and cafe corner for German roleplay, with small microphone stand, dialogue cards, cafe table, friendly village style, transparent background."
+        },
+        {
+          "id": "writing-post-office-counter-plate",
+          "surface": "writing",
+          "type": "world_location",
+          "outputTarget": "docs/design/asset-generation/source/writing-post-office-counter-plate-v1.png",
+          "runtimeTarget": "apps/web/public/mascot-3d/world/optimized/v2/fuxie-world-post-office-counter-512.webp",
+          "integrationTarget": "FUXIE_WORLD_PROPS.postOfficeCounter",
+          "prompt": "3D German village post office counter for writing feedback, with letters, stamp, soft blue counter, receipt slot, transparent background."
+        },
+        {
+          "id": "market-backpack-stall-plate",
+          "surface": "shop",
+          "type": "world_location",
+          "outputTarget": "docs/design/asset-generation/source/market-backpack-stall-plate-v1.png",
+          "runtimeTarget": "apps/web/public/mascot-3d/world/optimized/v2/fuxie-world-market-backpack-stall-512.webp",
+          "integrationTarget": "FUXIE_WORLD_PROPS.marketBackpackStall",
+          "prompt": "3D Fuxie market stall with learner backpack shelf, Fucoin tray, pending request tag, sky-blue village market style, transparent background."
+        }
+      ]
+    },
+    {
+      "id": "batch-b-ui-frames",
+      "priority": "P0",
+      "purpose": "Reusable village UI frames and panels.",
+      "assets": [
+        {
+          "id": "notice-board-frame",
+          "surface": "dashboard,campaign",
+          "type": "ui_frame",
+          "outputTarget": "docs/design/asset-generation/source/notice-board-frame-v1.png",
+          "runtimeTarget": "apps/web/public/mascot-3d/ui/optimized/v1/fuxie-ui-notice-board-frame-512.webp",
+          "integrationTarget": "FuxieVillageFrame.noticeBoard",
+          "prompt": "Transparent 3D notice board UI frame, soft blue wood, amber pin accents, empty center for UI text, designed for dashboard mission and campaign cards."
+        },
+        {
+          "id": "course-checkpoint-node",
+          "surface": "course",
+          "type": "ui_frame",
+          "outputTarget": "docs/design/asset-generation/source/course-checkpoint-node-v1.png",
+          "runtimeTarget": "apps/web/public/mascot-3d/ui/optimized/v1/fuxie-ui-course-checkpoint-node-512.webp",
+          "integrationTarget": "CourseQuestPath checkpoint node",
+          "prompt": "Small 3D course checkpoint node for CEFR path, circular badge holder, clear current locked completed states, transparent background."
+        },
+        {
+          "id": "collection-card-frame",
+          "surface": "vocabulary",
+          "type": "ui_frame",
+          "outputTarget": "docs/design/asset-generation/source/collection-card-frame-v1.png",
+          "runtimeTarget": "apps/web/public/mascot-3d/ui/optimized/v1/fuxie-ui-collection-card-frame-512.webp",
+          "integrationTarget": "Vocabulary collection card frame",
+          "prompt": "3D vocabulary collection card frame with book-paper edge, phrase stamp slot, postcard corner, transparent center for UI content."
+        },
+        {
+          "id": "audio-broadcast-panel",
+          "surface": "listening",
+          "type": "ui_frame",
+          "outputTarget": "docs/design/asset-generation/source/audio-broadcast-panel-v1.png",
+          "runtimeTarget": "apps/web/public/mascot-3d/ui/optimized/v1/fuxie-ui-audio-broadcast-panel-512.webp",
+          "integrationTarget": "Listening player audio panel",
+          "prompt": "3D audio broadcast panel frame with microphone badge and soft signal arcs, room for play controls and answer prompt, transparent center."
+        },
+        {
+          "id": "letter-receipt-frame",
+          "surface": "writing,result",
+          "type": "ui_frame",
+          "outputTarget": "docs/design/asset-generation/source/letter-receipt-frame-v1.png",
+          "runtimeTarget": "apps/web/public/mascot-3d/ui/optimized/v1/fuxie-ui-letter-receipt-frame-512.webp",
+          "integrationTarget": "Writing result receipt frame",
+          "prompt": "3D letter receipt UI frame for writing feedback and result screens, stamp corner, clean center, soft sky-blue envelope edge."
+        },
+        {
+          "id": "result-reveal-frame",
+          "surface": "skill-player,result",
+          "type": "ui_frame",
+          "outputTarget": "docs/design/asset-generation/source/result-reveal-frame-v1.png",
+          "runtimeTarget": "apps/web/public/mascot-3d/ui/optimized/v1/fuxie-ui-result-reveal-frame-512.webp",
+          "integrationTarget": "RewardRevealMoment frame",
+          "prompt": "3D reward reveal frame for earned and receipt states, blue-teal base, amber reward accent only at top token slot, transparent center."
+        },
+        {
+          "id": "market-shelf-frame",
+          "surface": "shop",
+          "type": "ui_frame",
+          "outputTarget": "docs/design/asset-generation/source/market-shelf-frame-v1.png",
+          "runtimeTarget": "apps/web/public/mascot-3d/ui/optimized/v1/fuxie-ui-market-shelf-frame-512.webp",
+          "integrationTarget": "Shop item shelf frame",
+          "prompt": "3D market shelf UI frame for owned pending affordable items, blue market shelf, empty slots, transparent background."
+        },
+        {
+          "id": "empty-state-signpost",
+          "surface": "all",
+          "type": "ui_state",
+          "outputTarget": "docs/design/asset-generation/source/empty-state-signpost-v1.png",
+          "runtimeTarget": "apps/web/public/mascot-3d/ui/optimized/v1/fuxie-ui-empty-state-signpost-512.webp",
+          "integrationTarget": "Village empty/error states",
+          "prompt": "Gentle 3D village signpost for empty or waiting states, calm blue sign, tiny study icon, no sad emotion, transparent background."
+        }
+      ]
+    },
+    {
+      "id": "batch-c-mascot-poses",
+      "priority": "P1",
+      "purpose": "Fuxie poses tied to learning moments.",
+      "assets": [
+        {
+          "id": "fuxie-quest-planner",
+          "surface": "dashboard,course",
+          "type": "mascot_pose",
+          "outputTarget": "docs/design/asset-generation/source/fuxie-quest-planner-v1.png",
+          "runtimeTarget": "apps/web/public/mascot-3d/states/v2/fuxie-state-quest-planner-512.webp",
+          "integrationTarget": "FUXIE_MASCOT_STATES.questPlanner",
+          "prompt": "Fuxie 3D mascot holding a small mission map and pencil, confident friendly planner pose, readable at 64px, transparent background."
+        },
+        {
+          "id": "fuxie-gentle-correction",
+          "surface": "skill-player",
+          "type": "mascot_pose",
+          "outputTarget": "docs/design/asset-generation/source/fuxie-gentle-correction-v1.png",
+          "runtimeTarget": "apps/web/public/mascot-3d/states/v2/fuxie-state-gentle-correction-512.webp",
+          "integrationTarget": "FUXIE_MASCOT_STATES.gentleCorrection",
+          "prompt": "Fuxie 3D mascot giving gentle correction with a small hint card, supportive not harsh, sky-blue outfit, transparent background."
+        },
+        {
+          "id": "fuxie-listening-focus",
+          "surface": "listening",
+          "type": "mascot_pose",
+          "outputTarget": "docs/design/asset-generation/source/fuxie-listening-focus-v1.png",
+          "runtimeTarget": "apps/web/public/mascot-3d/states/v2/fuxie-state-listening-focus-512.webp",
+          "integrationTarget": "FUXIE_MASCOT_STATES.listeningFocus",
+          "prompt": "Fuxie 3D mascot with headphones, attentive listening pose, one paw near ear, calm and focused, transparent background."
+        },
+        {
+          "id": "fuxie-speaking-record",
+          "surface": "speaking",
+          "type": "mascot_pose",
+          "outputTarget": "docs/design/asset-generation/source/fuxie-speaking-record-v1.png",
+          "runtimeTarget": "apps/web/public/mascot-3d/states/v2/fuxie-state-speaking-record-512.webp",
+          "integrationTarget": "FUXIE_MASCOT_STATES.speakingRecord",
+          "prompt": "Fuxie 3D mascot encouraging microphone recording, small mic icon, friendly stage posture, transparent background."
+        },
+        {
+          "id": "fuxie-writing-delivery",
+          "surface": "writing",
+          "type": "mascot_pose",
+          "outputTarget": "docs/design/asset-generation/source/fuxie-writing-delivery-v1.png",
+          "runtimeTarget": "apps/web/public/mascot-3d/states/v2/fuxie-state-writing-delivery-512.webp",
+          "integrationTarget": "FUXIE_MASCOT_STATES.writingDelivery",
+          "prompt": "Fuxie 3D mascot delivering a stamped letter, post office learning feedback pose, cheerful but focused, transparent background."
+        },
+        {
+          "id": "fuxie-shop-approval",
+          "surface": "shop",
+          "type": "mascot_pose",
+          "outputTarget": "docs/design/asset-generation/source/fuxie-shop-approval-v1.png",
+          "runtimeTarget": "apps/web/public/mascot-3d/states/v2/fuxie-state-shop-approval-512.webp",
+          "integrationTarget": "FUXIE_MASCOT_STATES.shopApproval",
+          "prompt": "Fuxie 3D shopkeeper mascot approving a reward request with a small stamp, safe and trustworthy, transparent background."
+        },
+        {
+          "id": "fuxie-result-celebration",
+          "surface": "result",
+          "type": "mascot_pose",
+          "outputTarget": "docs/design/asset-generation/source/fuxie-result-celebration-v1.png",
+          "runtimeTarget": "apps/web/public/mascot-3d/states/v2/fuxie-state-result-celebration-512.webp",
+          "integrationTarget": "FUXIE_MASCOT_STATES.resultCelebration",
+          "prompt": "Fuxie 3D mascot celebrating a real learning result with XP star and small confetti, restrained, not blocking UI, transparent background."
+        },
+        {
+          "id": "fuxie-calm-empty-state",
+          "surface": "all",
+          "type": "mascot_pose",
+          "outputTarget": "docs/design/asset-generation/source/fuxie-calm-empty-state-v1.png",
+          "runtimeTarget": "apps/web/public/mascot-3d/states/v2/fuxie-state-calm-empty-512.webp",
+          "integrationTarget": "FUXIE_MASCOT_STATES.calmEmpty",
+          "prompt": "Fuxie 3D mascot calmly holding a tiny village signpost for empty states, supportive expression, no sadness, transparent background, readable at 96px."
+        }
+      ]
+    },
+    {
+      "id": "batch-d-reward-objects",
+      "priority": "P1",
+      "purpose": "Village-native reward objects for the motivation loop.",
+      "assets": [
+        {
+          "id": "xp-star-village-token",
+          "surface": "all",
+          "type": "reward_object",
+          "outputTarget": "docs/design/asset-generation/source/xp-star-village-token-v1.png",
+          "runtimeTarget": "apps/web/public/reward-assets/optimized/fuxie-item-xp-star-village-512.webp",
+          "integrationTarget": "REWARD_ASSETS.xpStarVillage",
+          "prompt": "3D XP star village token, amber star with sky-blue rim, readable at 24px, transparent background."
+        },
+        {
+          "id": "fucoin-village-token",
+          "surface": "shop,dashboard",
+          "type": "reward_object",
+          "outputTarget": "docs/design/asset-generation/source/fucoin-village-token-v1.png",
+          "runtimeTarget": "apps/web/public/reward-assets/optimized/fuxie-item-fucoin-village-512.webp",
+          "integrationTarget": "REWARD_ASSETS.fucoinVillage",
+          "prompt": "3D Fucoin token with Fuxie village mark, amber coin, blue edge, clear at 24px and 48px, transparent background."
+        },
+        {
+          "id": "streak-freeze-snowglobe",
+          "surface": "dashboard,review",
+          "type": "reward_object",
+          "outputTarget": "docs/design/asset-generation/source/streak-freeze-snowglobe-v1.png",
+          "runtimeTarget": "apps/web/public/reward-assets/optimized/fuxie-item-streak-freeze-snowglobe-512.webp",
+          "integrationTarget": "REWARD_ASSETS.streakFreezeSnowglobe",
+          "prompt": "3D Streak Freeze as a tiny blue snowglobe with calendar spark, safe supportive feeling, transparent background."
+        },
+        {
+          "id": "cefr-badge-node-set",
+          "surface": "course,badges",
+          "type": "reward_object",
+          "outputTarget": "docs/design/asset-generation/source/cefr-badge-node-set-v1.png",
+          "runtimeTarget": "apps/web/public/reward-assets/optimized/fuxie-item-cefr-badge-node-set-512.webp",
+          "integrationTarget": "REWARD_ASSETS.cefrBadgeNodeSet",
+          "prompt": "3D CEFR badge node set for A1 A2 B1 B2, compact badge medallions with sky-blue village rim, transparent background."
+        },
+        {
+          "id": "hint-ticket-village-coupon",
+          "surface": "grammar,chat",
+          "type": "reward_object",
+          "outputTarget": "docs/design/asset-generation/source/hint-ticket-village-coupon-v1.png",
+          "runtimeTarget": "apps/web/public/reward-assets/optimized/fuxie-item-hint-ticket-village-512.webp",
+          "integrationTarget": "REWARD_ASSETS.hintTicketVillage",
+          "prompt": "3D hint ticket as village coupon, teal paper, small lightbulb stamp, friendly support item, transparent background."
+        },
+        {
+          "id": "unlock-key-signpost-charm",
+          "surface": "course,result",
+          "type": "reward_object",
+          "outputTarget": "docs/design/asset-generation/source/unlock-key-signpost-charm-v1.png",
+          "runtimeTarget": "apps/web/public/reward-assets/optimized/fuxie-item-unlock-key-signpost-512.webp",
+          "integrationTarget": "REWARD_ASSETS.unlockKeySignpost",
+          "prompt": "3D unlock key charm with tiny signpost tag, amber key and sky-blue ribbon, transparent background."
+        }
+      ]
+    },
+    {
+      "id": "batch-e-ui-mockups",
+      "priority": "P0",
+      "purpose": "High-fidelity UI mockups for implementation direction.",
+      "assets": [
+        {
+          "id": "dashboard-village-square-mockup",
+          "surface": "dashboard",
+          "type": "ui_mockup",
+          "outputTarget": "docs/design/visual-audit/mockups/dashboard-village-square-v1.png",
+          "runtimeTarget": null,
+          "integrationTarget": "Dashboard hierarchy reference",
+          "prompt": "High-fidelity mobile-first Fuxie Dashboard mockup as Village Square with mission board, CTA, reward preview, Fucoin wallet, Streak Freeze, and small village snapshot. Mission to action to reward must read within 3 seconds."
+        },
+        {
+          "id": "course-path-mockup",
+          "surface": "course",
+          "type": "ui_mockup",
+          "outputTarget": "docs/design/visual-audit/mockups/course-path-v1.png",
+          "runtimeTarget": null,
+          "integrationTarget": "Course path reference",
+          "prompt": "High-fidelity Course Path mockup with compact CEFR milestone nodes, signpost, locked current completed states, and continue CTA. Not a full map."
+        },
+        {
+          "id": "vocabulary-collection-book-mockup",
+          "surface": "vocabulary",
+          "type": "ui_mockup",
+          "outputTarget": "docs/design/visual-audit/mockups/vocabulary-collection-book-v1.png",
+          "runtimeTarget": null,
+          "integrationTarget": "Vocabulary collection reference",
+          "prompt": "High-fidelity Vocabulary Collection Book mockup with themed collections, cards, phrase stamps, postcard fragments, CEFR progress, and strong practice CTA."
+        },
+        {
+          "id": "skill-player-motivation-mockup",
+          "surface": "skill-player",
+          "type": "ui_mockup",
+          "outputTarget": "docs/design/visual-audit/mockups/skill-player-motivation-layer-v1.png",
+          "runtimeTarget": null,
+          "integrationTarget": "Skill player motivation reference",
+          "prompt": "High-fidelity skill player mockup for reading listening writing speaking, with main exercise dominant, compact Fuxie coach, checkpoint path, reward preview, and result receipt."
+        },
+        {
+          "id": "market-inventory-mockup",
+          "surface": "shop",
+          "type": "ui_mockup",
+          "outputTarget": "docs/design/visual-audit/mockups/market-inventory-v1.png",
+          "runtimeTarget": null,
+          "integrationTarget": "Shop and inventory reference",
+          "prompt": "High-fidelity Fuxie Market and Inventory mockup with Fucoin balance, item cards, affordability, pending request, owned items, and backpack shelf."
+        },
+        {
+          "id": "result-receipt-mockup",
+          "surface": "result",
+          "type": "ui_mockup",
+          "outputTarget": "docs/design/visual-audit/mockups/result-receipt-v1.png",
+          "runtimeTarget": null,
+          "integrationTarget": "Shared result loop reference",
+          "prompt": "High-fidelity result receipt mockup showing earned versus receipt reward states, XP, Fucoin, badge progress, next CTA, and restrained Fuxie celebration."
+        }
+      ]
+    }
+  ]
+}

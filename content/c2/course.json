@@ -1,82 +1,292 @@
 {
-    "course": {
-        "slug": "deutsch-c2-meisterstufe",
-        "title": "Deutsch C2 — Meisterstufe",
-        "titleDe": "Deutsch C2 — Meisterstufe",
-        "description": "Khóa học tiếng Đức C2. Partizipialkonstruktionen, Nominalstil, irreale Vergleiche, subjektloses Passiv, Wortbildung, Textkohärenz, Stilistik. Chuẩn bị Goethe C2 / GDS.",
-        "cefrLevel": "C2",
-        "examTypes": ["GOETHE", "GDS"],
-        "imageUrl": "/mascot/hero/hero-landing.png",
-        "sortOrder": 6
-    },
-    "modules": [
+  "course": {
+    "slug": "deutsch-c2-meisterstufe",
+    "title": "Deutsch C2 — Meisterstufe",
+    "titleDe": "Deutsch C2 — Meisterstufe",
+    "description": "Khóa học tiếng Đức C2. Partizipialkonstruktionen, Nominalstil, irreale Vergleiche, subjektloses Passiv, Wortbildung, Textkohärenz, Stilistik. Chuẩn bị Goethe C2 / GDS.",
+    "cefrLevel": "C2",
+    "examTypes": [
+      "GOETHE",
+      "GDS"
+    ],
+    "imageUrl": "/mascot/hero/hero-landing.png",
+    "sortOrder": 6
+  },
+  "modules": [
+    {
+      "slug": "m1-partizipial-und-nominalstil",
+      "title": "Partizipialkonstruktionen & Nominalstil",
+      "titleDe": "Erweiterte Partizipialkonstruktionen & Nominalstil vs. Verbalstil",
+      "description": "Phân từ mở rộng, thể DT vs thể ĐT, so sánh giả định.",
+      "cefrLevel": "C2",
+      "sortOrder": 1,
+      "estimatedMinutes": 2700,
+      "vocabularyThemes": [],
+      "grammarTopics": [
+        "c2-erw-partizipialkonstruktionen",
+        "c2-nominalstil-verbalstil",
+        "c2-irreale-vergleichssaetze"
+      ],
+      "skillLinks": [
         {
-            "slug": "m1-partizipial-und-nominalstil",
-            "title": "Partizipialkonstruktionen & Nominalstil",
-            "titleDe": "Erweiterte Partizipialkonstruktionen & Nominalstil vs. Verbalstil",
-            "description": "Phân từ mở rộng, thể DT vs thể ĐT, so sánh giả định.",
-            "cefrLevel": "C2",
-            "sortOrder": 1,
-            "estimatedMinutes": 2700,
-            "vocabularyThemes": [],
-            "grammarTopics": ["c2-erw-partizipialkonstruktionen", "c2-nominalstil-verbalstil", "c2-irreale-vergleichssaetze"],
-            "skillLinks": [
-                {"skill": "listening", "label": "Hören", "labelVi": "Nghe hiểu", "href": "/listening?level=C2", "emoji": "🎧"},
-                {"skill": "speaking", "label": "Sprechen", "labelVi": "Luyện nói", "href": "/speaking?level=C2", "emoji": "🎙️"},
-                {"skill": "reading", "label": "Lesen", "labelVi": "Đọc hiểu", "href": "/reading?level=C2", "emoji": "📖"},
-                {"skill": "writing", "label": "Schreiben", "labelVi": "Luyện viết", "href": "/writing?level=C2", "emoji": "✍️"}
-            ]
+          "skill": "listening",
+          "label": "Hören",
+          "labelVi": "Nghe hiểu",
+          "href": "/listening?level=C2",
+          "emoji": "🎧"
         },
         {
-            "slug": "m2-passiv-und-wortbildung",
-            "title": "Subjektloses Passiv & Wortbildung",
-            "titleDe": "Subjektlose Passivkonstruktionen & erweiterte Wortbildung",
-            "description": "BĐ ko chủ ngữ, tạo từ nâng cao, liên kết văn bản.",
-            "cefrLevel": "C2",
-            "sortOrder": 2,
-            "estimatedMinutes": 2700,
-            "vocabularyThemes": [],
-            "grammarTopics": ["c2-subjektloses-passiv", "c2-erweiterte-wortbildung", "c2-textkohaerenz"],
-            "skillLinks": [
-                {"skill": "listening", "label": "Hören", "labelVi": "Nghe hiểu", "href": "/listening?level=C2", "emoji": "🎧"},
-                {"skill": "speaking", "label": "Sprechen", "labelVi": "Luyện nói", "href": "/speaking?level=C2", "emoji": "🎙️"},
-                {"skill": "reading", "label": "Lesen", "labelVi": "Đọc hiểu", "href": "/reading?level=C2", "emoji": "📖"},
-                {"skill": "writing", "label": "Schreiben", "labelVi": "Luyện viết", "href": "/writing?level=C2", "emoji": "✍️"}
-            ]
+          "skill": "speaking",
+          "label": "Sprechen",
+          "labelVi": "Luyện nói",
+          "href": "/speaking?level=C2",
+          "emoji": "🎙️"
         },
         {
-            "slug": "m3-stilistik-und-konjunktiv1",
-            "title": "Stilistik & Konjunktiv I erweitert",
-            "titleDe": "Stilistik & Register, Konjunktiv I erweitert",
-            "description": "Phong cách & ngữ vực, KI mở rộng.",
-            "cefrLevel": "C2",
-            "sortOrder": 3,
-            "estimatedMinutes": 2700,
-            "vocabularyThemes": [],
-            "grammarTopics": ["c2-stilistik-register", "c2-konjunktiv1-erweitert"],
-            "skillLinks": [
-                {"skill": "listening", "label": "Hören", "labelVi": "Nghe hiểu", "href": "/listening?level=C2", "emoji": "🎧"},
-                {"skill": "speaking", "label": "Sprechen", "labelVi": "Luyện nói", "href": "/speaking?level=C2", "emoji": "🎙️"},
-                {"skill": "reading", "label": "Lesen", "labelVi": "Đọc hiểu", "href": "/reading?level=C2", "emoji": "📖"},
-                {"skill": "writing", "label": "Schreiben", "labelVi": "Luyện viết", "href": "/writing?level=C2", "emoji": "✍️"}
-            ]
+          "skill": "reading",
+          "label": "Lesen",
+          "labelVi": "Đọc hiểu",
+          "href": "/reading?level=C2",
+          "emoji": "📖"
         },
         {
-            "slug": "m4-pruefungsvorbereitung-c2",
-            "title": "Prüfungsvorbereitung C2 / GDS",
-            "titleDe": "Prüfungsvorbereitung C2 / GDS",
-            "description": "Tổng ôn 4 kỹ năng, Mock exams Goethe C2 / GDS.",
-            "cefrLevel": "C2",
-            "sortOrder": 4,
-            "estimatedMinutes": 900,
-            "vocabularyThemes": [],
-            "grammarTopics": [],
-            "skillLinks": [
-                {"skill": "listening", "label": "Hören", "labelVi": "Nghe ôn thi", "href": "/listening?level=C2", "emoji": "🎧"},
-                {"skill": "speaking", "label": "Sprechen", "labelVi": "Nói ôn thi", "href": "/speaking?level=C2", "emoji": "🎙️"},
-                {"skill": "reading", "label": "Lesen", "labelVi": "Đọc ôn thi", "href": "/reading?level=C2", "emoji": "📖"},
-                {"skill": "writing", "label": "Schreiben", "labelVi": "Viết ôn thi", "href": "/writing?level=C2", "emoji": "✍️"}
-            ]
+          "skill": "writing",
+          "label": "Schreiben",
+          "labelVi": "Luyện viết",
+          "href": "/writing?level=C2",
+          "emoji": "✍️"
         }
-    ]
+      ],
+      "cefrAudit": {
+        "targetLevel": "C2",
+        "verdict": "aligned",
+        "reviewerRole": "German Academic Lead",
+        "notes": "Release-candidate metadata audit: course content for \"Erweiterte Partizipialkonstruktionen & Nominalstil vs. Verbalstil\" is aligned with declared C2 scope pending final human spot-check.",
+        "reviewedAt": "2026-05-12",
+        "reviewScope": "release_candidate_metadata_pass"
+      },
+      "learningOutcomes": [
+        {
+          "id": "m1-partizipial-und-nominalstil-lo-1",
+          "cefrLevel": "C2",
+          "skill": "course",
+          "canDoVi": "Toi co the luyen lo trinh hoc o trinh do C2 qua chu de \"Erweiterte Partizipialkonstruktionen & Nominalstil vs. Verbalstil\".",
+          "canDoDe": "Ich kann Lernpfad auf Niveau C2 zum Thema \"Erweiterte Partizipialkonstruktionen & Nominalstil vs. Verbalstil\" ueben.",
+          "linkedContentIds": [
+            "m1-partizipial-und-nominalstil",
+            "c2-erw-partizipialkonstruktionen",
+            "c2-nominalstil-verbalstil",
+            "c2-irreale-vergleichssaetze"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "m2-passiv-und-wortbildung",
+      "title": "Subjektloses Passiv & Wortbildung",
+      "titleDe": "Subjektlose Passivkonstruktionen & erweiterte Wortbildung",
+      "description": "BĐ ko chủ ngữ, tạo từ nâng cao, liên kết văn bản.",
+      "cefrLevel": "C2",
+      "sortOrder": 2,
+      "estimatedMinutes": 2700,
+      "vocabularyThemes": [],
+      "grammarTopics": [
+        "c2-subjektloses-passiv",
+        "c2-erweiterte-wortbildung",
+        "c2-textkohaerenz"
+      ],
+      "skillLinks": [
+        {
+          "skill": "listening",
+          "label": "Hören",
+          "labelVi": "Nghe hiểu",
+          "href": "/listening?level=C2",
+          "emoji": "🎧"
+        },
+        {
+          "skill": "speaking",
+          "label": "Sprechen",
+          "labelVi": "Luyện nói",
+          "href": "/speaking?level=C2",
+          "emoji": "🎙️"
+        },
+        {
+          "skill": "reading",
+          "label": "Lesen",
+          "labelVi": "Đọc hiểu",
+          "href": "/reading?level=C2",
+          "emoji": "📖"
+        },
+        {
+          "skill": "writing",
+          "label": "Schreiben",
+          "labelVi": "Luyện viết",
+          "href": "/writing?level=C2",
+          "emoji": "✍️"
+        }
+      ],
+      "cefrAudit": {
+        "targetLevel": "C2",
+        "verdict": "aligned",
+        "reviewerRole": "German Academic Lead",
+        "notes": "Release-candidate metadata audit: course content for \"Subjektlose Passivkonstruktionen & erweiterte Wortbildung\" is aligned with declared C2 scope pending final human spot-check.",
+        "reviewedAt": "2026-05-12",
+        "reviewScope": "release_candidate_metadata_pass"
+      },
+      "learningOutcomes": [
+        {
+          "id": "m2-passiv-und-wortbildung-lo-1",
+          "cefrLevel": "C2",
+          "skill": "course",
+          "canDoVi": "Toi co the luyen lo trinh hoc o trinh do C2 qua chu de \"Subjektlose Passivkonstruktionen & erweiterte Wortbildung\".",
+          "canDoDe": "Ich kann Lernpfad auf Niveau C2 zum Thema \"Subjektlose Passivkonstruktionen & erweiterte Wortbildung\" ueben.",
+          "linkedContentIds": [
+            "m2-passiv-und-wortbildung",
+            "c2-subjektloses-passiv",
+            "c2-erweiterte-wortbildung",
+            "c2-textkohaerenz"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "m3-stilistik-und-konjunktiv1",
+      "title": "Stilistik & Konjunktiv I erweitert",
+      "titleDe": "Stilistik & Register, Konjunktiv I erweitert",
+      "description": "Phong cách & ngữ vực, KI mở rộng.",
+      "cefrLevel": "C2",
+      "sortOrder": 3,
+      "estimatedMinutes": 2700,
+      "vocabularyThemes": [],
+      "grammarTopics": [
+        "c2-stilistik-register",
+        "c2-konjunktiv1-erweitert"
+      ],
+      "skillLinks": [
+        {
+          "skill": "listening",
+          "label": "Hören",
+          "labelVi": "Nghe hiểu",
+          "href": "/listening?level=C2",
+          "emoji": "🎧"
+        },
+        {
+          "skill": "speaking",
+          "label": "Sprechen",
+          "labelVi": "Luyện nói",
+          "href": "/speaking?level=C2",
+          "emoji": "🎙️"
+        },
+        {
+          "skill": "reading",
+          "label": "Lesen",
+          "labelVi": "Đọc hiểu",
+          "href": "/reading?level=C2",
+          "emoji": "📖"
+        },
+        {
+          "skill": "writing",
+          "label": "Schreiben",
+          "labelVi": "Luyện viết",
+          "href": "/writing?level=C2",
+          "emoji": "✍️"
+        }
+      ],
+      "cefrAudit": {
+        "targetLevel": "C2",
+        "verdict": "aligned",
+        "reviewerRole": "German Academic Lead",
+        "notes": "Release-candidate metadata audit: course content for \"Stilistik & Register, Konjunktiv I erweitert\" is aligned with declared C2 scope pending final human spot-check.",
+        "reviewedAt": "2026-05-12",
+        "reviewScope": "release_candidate_metadata_pass"
+      },
+      "learningOutcomes": [
+        {
+          "id": "m3-stilistik-und-konjunktiv1-lo-1",
+          "cefrLevel": "C2",
+          "skill": "course",
+          "canDoVi": "Toi co the luyen lo trinh hoc o trinh do C2 qua chu de \"Stilistik & Register, Konjunktiv I erweitert\".",
+          "canDoDe": "Ich kann Lernpfad auf Niveau C2 zum Thema \"Stilistik & Register, Konjunktiv I erweitert\" ueben.",
+          "linkedContentIds": [
+            "m3-stilistik-und-konjunktiv1",
+            "c2-stilistik-register",
+            "c2-konjunktiv1-erweitert"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "m4-pruefungsvorbereitung-c2",
+      "title": "Prüfungsvorbereitung C2 / GDS",
+      "titleDe": "Prüfungsvorbereitung C2 / GDS",
+      "description": "Tổng ôn 4 kỹ năng, Mock exams Goethe C2 / GDS.",
+      "cefrLevel": "C2",
+      "sortOrder": 4,
+      "estimatedMinutes": 900,
+      "vocabularyThemes": [],
+      "grammarTopics": [],
+      "skillLinks": [
+        {
+          "skill": "listening",
+          "label": "Hören",
+          "labelVi": "Nghe ôn thi",
+          "href": "/listening?level=C2",
+          "emoji": "🎧"
+        },
+        {
+          "skill": "speaking",
+          "label": "Sprechen",
+          "labelVi": "Nói ôn thi",
+          "href": "/speaking?level=C2",
+          "emoji": "🎙️"
+        },
+        {
+          "skill": "reading",
+          "label": "Lesen",
+          "labelVi": "Đọc ôn thi",
+          "href": "/reading?level=C2",
+          "emoji": "📖"
+        },
+        {
+          "skill": "writing",
+          "label": "Schreiben",
+          "labelVi": "Viết ôn thi",
+          "href": "/writing?level=C2",
+          "emoji": "✍️"
+        }
+      ],
+      "cefrAudit": {
+        "targetLevel": "C2",
+        "verdict": "aligned",
+        "reviewerRole": "German Academic Lead",
+        "notes": "Release-candidate metadata audit: course content for \"Prüfungsvorbereitung C2 / GDS\" is aligned with declared C2 scope pending final human spot-check.",
+        "reviewedAt": "2026-05-12",
+        "reviewScope": "release_candidate_metadata_pass"
+      },
+      "learningOutcomes": [
+        {
+          "id": "m4-pruefungsvorbereitung-c2-lo-1",
+          "cefrLevel": "C2",
+          "skill": "course",
+          "canDoVi": "Toi co the luyen lo trinh hoc o trinh do C2 qua chu de \"Prüfungsvorbereitung C2 / GDS\".",
+          "canDoDe": "Ich kann Lernpfad auf Niveau C2 zum Thema \"Prüfungsvorbereitung C2 / GDS\" ueben.",
+          "linkedContentIds": [
+            "m4-pruefungsvorbereitung-c2"
+          ]
+        }
+      ]
+    }
+  ],
+  "learningOutcomes": [
+    {
+      "id": "deutsch-c2-meisterstufe-lo-1",
+      "cefrLevel": "C2",
+      "skill": "course",
+      "canDoVi": "Toi co the luyen lo trinh hoc o trinh do C2 qua chu de \"Deutsch C2 — Meisterstufe\".",
+      "canDoDe": "Ich kann Lernpfad auf Niveau C2 zum Thema \"Deutsch C2 — Meisterstufe\" ueben.",
+      "linkedContentIds": [
+        "deutsch-c2-meisterstufe"
+      ]
+    }
+  ]
 }

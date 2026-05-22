@@ -43,5 +43,28 @@
     ],
     "maxScore": 15
   },
-  "maxScore": 15
+  "maxScore": 15,
+  "modelAnswer": "Hallo,\n\nich schreibe wegen antworten ja/nein. ich schreibe wegen Grund nennen. ich schreibe wegen Alternative vorschlagen. Bitte geben Sie mir kurz Bescheid.\n\nViele Gruesse\nLinh",
+  "timeLimitMinutes": 10,
+  "estimatedMinutes": 10,
+  "cefrAudit": {
+    "targetLevel": "A1",
+    "verdict": "aligned",
+    "reviewerRole": "German Academic Lead",
+    "notes": "Release-candidate metadata audit: writing content for \"Schicht\" is aligned with declared A1 scope pending final human spot-check.",
+    "reviewedAt": "2026-05-12",
+    "reviewScope": "release_candidate_metadata_pass"
+  },
+  "learningOutcomes": [
+    {
+      "id": "w-a1-t2-008-lo-1",
+      "cefrLevel": "A1",
+      "skill": "writing",
+      "canDoVi": "Toi co the luyen viet o trinh do A1 qua chu de \"Schicht\".",
+      "canDoDe": "Ich kann Schreiben auf Niveau A1 zum Thema \"Schicht\" ueben.",
+      "linkedContentIds": [
+        "W-A1-T2-008"
+      ]
+    }
+  ]
 }

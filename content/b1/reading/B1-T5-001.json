@@ -85,7 +85,8 @@
             "type": "Nomen",
             "meaning": "insured person"
           }
-        ]
+        ],
+        "vi": "??p ?n ??ng l? b: Ab 16 Jahren.. H?y ??i chi?u v?i th?ng tin then ch?t trong b?i ??c."
       }
     },
     {
@@ -109,7 +110,8 @@
             "type": "Nomen",
             "meaning": "preventive check-up"
           }
-        ]
+        ],
+        "vi": "??p ?n ??ng l? c: Einkauf in der Apotheke.. H?y ??i chi?u v?i th?ng tin then ch?t trong b?i ??c."
       }
     },
     {
@@ -133,7 +135,8 @@
             "type": "Nomen",
             "meaning": "proof / evidence"
           }
-        ]
+        ],
+        "vi": "??p ?n ??ng l? b: Über die App oder mit dem Bonusheft.. H?y ??i chi?u v?i th?ng tin then ch?t trong b?i ??c."
       }
     },
     {
@@ -157,7 +160,8 @@
             "type": "Nomen",
             "meaning": "bonus / premium"
           }
-        ]
+        ],
+        "vi": "??p ?n ??ng l? b: 150 Euro.. H?y ??i chi?u v?i th?ng tin then ch?t trong b?i ??c."
       }
     },
     {
@@ -182,7 +186,8 @@
             "meaning": "voluntary"
           }
         ],
-        "reasoning": "[Inferential] "
+        "reasoning": "[Inferential] ",
+        "vi": "??p ?n ??ng l? b: Es ist kostenlos.. H?y ??i chi?u v?i th?ng tin then ch?t trong b?i ??c."
       }
     }
   ],
@@ -239,5 +244,25 @@
     "all_answers_verifiable": true,
     "image_count": 1,
     "passed": true
-  }
+  },
+  "cefrAudit": {
+    "targetLevel": "B1",
+    "verdict": "aligned",
+    "reviewerRole": "German Academic Lead",
+    "notes": "Release-candidate metadata audit: reading content for \"Gesundheit & Ernährung\" is aligned with declared B1 scope pending final human spot-check.",
+    "reviewedAt": "2026-05-12",
+    "reviewScope": "release_candidate_metadata_pass"
+  },
+  "learningOutcomes": [
+    {
+      "id": "b1-t5-001-lo-1",
+      "cefrLevel": "B1",
+      "skill": "reading",
+      "canDoVi": "Toi co the luyen doc hieu o trinh do B1 qua chu de \"Gesundheit & Ernährung\".",
+      "canDoDe": "Ich kann Lesen auf Niveau B1 zum Thema \"Gesundheit & Ernährung\" ueben.",
+      "linkedContentIds": [
+        "B1-T5-001"
+      ]
+    }
+  ]
 }

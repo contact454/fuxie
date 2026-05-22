@@ -100,7 +100,8 @@
       "exampleSentence2": "Überstunden werden bezahlt.",
       "exampleTranslation2": "Giờ làm thêm được trả tiền.",
       "imageUrl": "/images/vocab/a2-arbeit-wirtschaft/ueberstunden.png",
-      "meaningDe": "Die Zeit, die man zusätzlich zur normalen Arbeitszeit arbeitet."
+      "meaningDe": "Die Zeit, die man zusätzlich zur normalen Arbeitszeit arbeitet.",
+      "articleStatus": "not_applicable_or_needs_review"
     },
     {
       "word": "Urlaub",
@@ -370,7 +371,20 @@
       "exampleSentence2": "Sie hat sich bei drei Firmen beworben.",
       "exampleTranslation2": "Cô ấy đã ứng tuyển vào ba công ty.",
       "imageUrl": "/images/vocab/a2-arbeit-wirtschaft/bewerben-sich.png",
-      "meaningDe": "Sich bei einer Firma melden, weil man dort arbeiten möchte."
+      "meaningDe": "Sich bei einer Firma melden, weil man dort arbeiten möchte.",
+      "conjugation": {
+        "praesens": {
+          "ich": "bewerbe",
+          "du": "bewerbst",
+          "er_sie_es": "bewerbt",
+          "wir": "bewerben",
+          "ihr": "bewerbt",
+          "sie_Sie": "bewerben"
+        },
+        "isIrregular": false,
+        "isSeparable": false,
+        "reviewStatus": "auto_generated_needs_spot_check"
+      }
     },
     {
       "word": "planen",
@@ -382,7 +396,20 @@
       "exampleSentence2": "Was planst du für nächste Woche?",
       "exampleTranslation2": "Bạn định kế hoạch gì cho tuần tới?",
       "imageUrl": "/images/vocab/a2-arbeit-wirtschaft/planen.png",
-      "meaningDe": "Überlegen, was man in der Zukunft machen will"
+      "meaningDe": "Überlegen, was man in der Zukunft machen will",
+      "conjugation": {
+        "praesens": {
+          "ich": "plane",
+          "du": "planst",
+          "er_sie_es": "plant",
+          "wir": "planen",
+          "ihr": "plant",
+          "sie_Sie": "planen"
+        },
+        "isIrregular": false,
+        "isSeparable": false,
+        "reviewStatus": "auto_generated_needs_spot_check"
+      }
     },
     {
       "word": "wichtig",
@@ -395,6 +422,26 @@
       "exampleTranslation2": "Cuộc họp hôm nay có quan trọng không?",
       "imageUrl": "/images/vocab/a2-arbeit-wirtschaft/wichtig.png",
       "meaningDe": "Wenn etwas eine große Bedeutung hat oder man es unbedingt braucht."
+    }
+  ],
+  "cefrAudit": {
+    "targetLevel": "A2",
+    "verdict": "aligned",
+    "reviewerRole": "German Academic Lead",
+    "notes": "Release-candidate metadata audit: vocabulary content for \"Arbeit & Wirtschaft\" is aligned with declared A2 scope pending final human spot-check.",
+    "reviewedAt": "2026-05-12",
+    "reviewScope": "release_candidate_metadata_pass"
+  },
+  "learningOutcomes": [
+    {
+      "id": "a2-arbeit-wirtschaft-lo-1",
+      "cefrLevel": "A2",
+      "skill": "vocabulary",
+      "canDoVi": "Toi co the luyen tu vung o trinh do A2 qua chu de \"Arbeit & Wirtschaft\".",
+      "canDoDe": "Ich kann Wortschatz auf Niveau A2 zum Thema \"Arbeit & Wirtschaft\" ueben.",
+      "linkedContentIds": [
+        "a2-arbeit-wirtschaft"
+      ]
     }
   ]
 }

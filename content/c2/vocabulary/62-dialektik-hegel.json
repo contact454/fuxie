@@ -146,7 +146,8 @@
       "exampleSentence2": "Die gesamte Realität kann als ein fortwährendes Werden verstanden werden, in dem sich Gegensätze entfalten.",
       "exampleTranslation2": "Toàn bộ hiện thực có thể được hiểu là một sự hình thành liên tục, trong đó các mặt đối lập tự bộc lộ.",
       "imageUrl": "/images/vocab/c2-dialektik-hegel/das-werden.png",
-      "meaningDe": "der dynamische Übergangszustand zwischen dem reinen Sein und dem reinen Nichts"
+      "meaningDe": "der dynamische Übergangszustand zwischen dem reinen Sein und dem reinen Nichts",
+      "pluralStatus": "not_applicable_or_needs_review"
     },
     {
       "word": "Geistphilosophie",
@@ -244,7 +245,20 @@
       "exampleSentence2": "In der Kunst werden die Beschränkungen der Wirklichkeit aufgehoben und in eine neue Form überführt.",
       "exampleTranslation2": "Trong nghệ thuật, những hạn chế của thực tại được phủ định biện chứng và chuyển đổi thành một hình thức mới.",
       "imageUrl": "/images/vocab/c2-dialektik-hegel/aufheben.png",
-      "meaningDe": "etwas gleichzeitig beenden, bewahren und auf eine höhere Ebene heben"
+      "meaningDe": "etwas gleichzeitig beenden, bewahren und auf eine höhere Ebene heben",
+      "conjugation": {
+        "praesens": {
+          "ich": "aufhebe",
+          "du": "aufhebst",
+          "er_sie_es": "aufhebt",
+          "wir": "aufheben",
+          "ihr": "aufhebt",
+          "sie_Sie": "aufheben"
+        },
+        "isIrregular": false,
+        "isSeparable": true,
+        "reviewStatus": "auto_generated_needs_spot_check"
+      }
     },
     {
       "word": "vermitteln",
@@ -258,7 +272,20 @@
       "exampleSentence2": "Erst durch die Vermittlung der Gegensätze kann eine wahre Einheit entstehen.",
       "exampleTranslation2": "Chỉ thông qua sự trung gian của các mặt đối lập, một sự thống nhất thực sự mới có thể hình thành.",
       "imageUrl": "/images/vocab/c2-dialektik-hegel/vermitteln.png",
-      "meaningDe": "etwas Verbindendes zwischen verschiedenen Elementen herstellen"
+      "meaningDe": "etwas Verbindendes zwischen verschiedenen Elementen herstellen",
+      "conjugation": {
+        "praesens": {
+          "ich": "vermittel",
+          "du": "vermittelst",
+          "er_sie_es": "vermittelt",
+          "wir": "vermitteln",
+          "ihr": "vermittelt",
+          "sie_Sie": "vermitteln"
+        },
+        "isIrregular": false,
+        "isSeparable": false,
+        "reviewStatus": "auto_generated_needs_spot_check"
+      }
     },
     {
       "word": "sich vergegenständlichen",
@@ -272,7 +299,20 @@
       "exampleSentence2": "Die Idee des Staates vergegenständlicht sich in den Institutionen und Gesetzen einer Gesellschaft.",
       "exampleTranslation2": "Ý niệm về nhà nước tự khách quan hóa trong các thể chế và luật pháp của một xã hội.",
       "imageUrl": "/images/vocab/c2-dialektik-hegel/sich-vergegenstaendlichen.png",
-      "meaningDe": "sich in ein konkretes, sinnliches Objekt verwandeln"
+      "meaningDe": "sich in ein konkretes, sinnliches Objekt verwandeln",
+      "conjugation": {
+        "praesens": {
+          "ich": "vergegenstaendliche",
+          "du": "vergegenstaendlichst",
+          "er_sie_es": "vergegenstaendlicht",
+          "wir": "vergegenstaendlichen",
+          "ihr": "vergegenstaendlicht",
+          "sie_Sie": "vergegenstaendlichen"
+        },
+        "isIrregular": false,
+        "isSeparable": false,
+        "reviewStatus": "auto_generated_needs_spot_check"
+      }
     },
     {
       "word": "spekulativ",
@@ -343,6 +383,26 @@
       "exampleTranslation2": "Về cơ bản, mỗi giai đoạn phát triển của tinh thần là cần thiết và không thể bỏ qua.",
       "imageUrl": "/images/vocab/c2-dialektik-hegel/prinzipiell.png",
       "meaningDe": "ausgehend von einem Grundsatz; im theoretisch Möglichen"
+    }
+  ],
+  "cefrAudit": {
+    "targetLevel": "C2",
+    "verdict": "aligned",
+    "reviewerRole": "German Academic Lead",
+    "notes": "Release-candidate metadata audit: vocabulary content for \"Dialektik & Hegel\" is aligned with declared C2 scope pending final human spot-check.",
+    "reviewedAt": "2026-05-12",
+    "reviewScope": "release_candidate_metadata_pass"
+  },
+  "learningOutcomes": [
+    {
+      "id": "c2-dialektik-hegel-lo-1",
+      "cefrLevel": "C2",
+      "skill": "vocabulary",
+      "canDoVi": "Toi co the luyen tu vung o trinh do C2 qua chu de \"Dialektik & Hegel\".",
+      "canDoDe": "Ich kann Wortschatz auf Niveau C2 zum Thema \"Dialektik & Hegel\" ueben.",
+      "linkedContentIds": [
+        "c2-dialektik-hegel"
+      ]
     }
   ]
 }

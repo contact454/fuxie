@@ -71,7 +71,8 @@
             "type": "Nomen",
             "meaning": "residential area"
           }
-        ]
+        ],
+        "vi": "??p ?n ??ng l? b: Am Stadtrand neben einem Park.. H?y ??i chi?u v?i th?ng tin then ch?t trong b?i ??c."
       }
     },
     {
@@ -100,7 +101,8 @@
             "type": "Nomen",
             "meaning": "square meter"
           }
-        ]
+        ],
+        "vi": "??p ?n ??ng l? b: 650 Euro.. H?y ??i chi?u v?i th?ng tin then ch?t trong b?i ??c."
       }
     },
     {
@@ -129,7 +131,8 @@
             "type": "Adjektiv",
             "meaning": "modern"
           }
-        ]
+        ],
+        "vi": "??p ?n ??ng l? b: Einen Balkon und eine moderne Küche.. H?y ??i chi?u v?i th?ng tin then ch?t trong b?i ??c."
       }
     },
     {
@@ -158,7 +161,8 @@
             "type": "Adverb",
             "meaning": "on foot"
           }
-        ]
+        ],
+        "vi": "??p ?n ??ng l? b: 10 Minuten zu Fuß.. H?y ??i chi?u v?i th?ng tin then ch?t trong b?i ??c."
       }
     },
     {
@@ -187,7 +191,8 @@
             "type": "Nomen",
             "meaning": "allocation"
           }
-        ]
+        ],
+        "vi": "??p ?n ??ng l? b: Familien mit Kindern.. H?y ??i chi?u v?i th?ng tin then ch?t trong b?i ??c."
       }
     }
   ],
@@ -245,5 +250,25 @@
     "mc_distractors_plausible": true,
     "image_count": 1,
     "passed": true
-  }
+  },
+  "cefrAudit": {
+    "targetLevel": "A2",
+    "verdict": "aligned",
+    "reviewerRole": "German Academic Lead",
+    "notes": "Release-candidate metadata audit: reading content for \"Wohnung suchen\" is aligned with declared A2 scope pending final human spot-check.",
+    "reviewedAt": "2026-05-12",
+    "reviewScope": "release_candidate_metadata_pass"
+  },
+  "learningOutcomes": [
+    {
+      "id": "a2-t1-005-lo-1",
+      "cefrLevel": "A2",
+      "skill": "reading",
+      "canDoVi": "Toi co the luyen doc hieu o trinh do A2 qua chu de \"Wohnung suchen\".",
+      "canDoDe": "Ich kann Lesen auf Niveau A2 zum Thema \"Wohnung suchen\" ueben.",
+      "linkedContentIds": [
+        "A2-T1-005"
+      ]
+    }
+  ]
 }

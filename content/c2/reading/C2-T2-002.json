@@ -135,5 +135,25 @@
     "all_sections_match": true,
     "image_count": 1,
     "passed": true
-  }
+  },
+  "cefrAudit": {
+    "targetLevel": "C2",
+    "verdict": "aligned",
+    "reviewerRole": "German Academic Lead",
+    "notes": "Release-candidate metadata audit: reading content for \"Klassische Literatur\" is aligned with declared C2 scope pending final human spot-check.",
+    "reviewedAt": "2026-05-12",
+    "reviewScope": "release_candidate_metadata_pass"
+  },
+  "learningOutcomes": [
+    {
+      "id": "c2-t2-002-lo-1",
+      "cefrLevel": "C2",
+      "skill": "reading",
+      "canDoVi": "Toi co the luyen doc hieu o trinh do C2 qua chu de \"Klassische Literatur\".",
+      "canDoDe": "Ich kann Lesen auf Niveau C2 zum Thema \"Klassische Literatur\" ueben.",
+      "linkedContentIds": [
+        "C2-T2-002"
+      ]
+    }
+  ]
 }

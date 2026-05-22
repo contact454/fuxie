@@ -37,6 +37,7 @@ export async function POST(
         const exam = await prisma.examTemplate.findUnique({
             where: { id: examId },
             select: {
+                cefrLevel: true,
                 passingScore: true,
                 totalPoints: true,
                 sections: {
@@ -156,6 +157,17 @@ export async function POST(
                 xpEarned: baseXpEarned,
                 timeSpentSeconds,
                 exercisesCompleted: 1,
+                analytics: {
+                    role: user.role,
+                    actionId: examId,
+                    actionType: 'exam_practice',
+                    level: exam.cefrLevel,
+                    skill: 'EXAM',
+                    source: 'exam.submit',
+                    metadata: {
+                        passed,
+                    },
+                },
             })
         })
 

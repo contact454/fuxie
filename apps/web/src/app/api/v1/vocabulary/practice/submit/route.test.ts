@@ -158,6 +158,17 @@ describe('POST /api/v1/vocabulary/practice/submit', () => {
                 percentScore: 100,
                 xpEarned: 25,
                 exercisesCompleted: 1,
+                analytics: {
+                    actionId: 'attempt-1',
+                    actionType: 'vocabulary_practice',
+                    level: 'A1',
+                    skill: 'WORTSCHATZ',
+                    source: 'vocabulary.practice.submit',
+                    metadata: {
+                        theme_slug: 'essen',
+                        exercise_type: 'mc',
+                    },
+                },
             })
         )
         expect(awardLearningFucoinMock).toHaveBeenCalledWith(
@@ -190,5 +201,61 @@ describe('POST /api/v1/vocabulary/practice/submit', () => {
                 code: 'VALIDATION_ERROR',
             },
         })
+    })
+
+    it('returns an episode receipt for vocabulary mixed quest episodes', async () => {
+        const response = await POST({
+            json: async () => ({
+                exerciseType: 'mixed',
+                themeSlug: 'essen',
+                cefrLevel: 'A1',
+                timeTaken: 12,
+                questEpisode: {
+                    episodeId: 'vocab-episode:A1:essen',
+                    themeSlug: 'essen',
+                    cefrLevel: 'A1',
+                    checkpointCount: 3,
+                    nextEpisodeHref: '/vocabulary/practice/mixed?theme=essen&level=A1',
+                },
+                answers: [
+                    {
+                        questionId: 'q1',
+                        answer: 'quả táo',
+                        correctAnswer: '',
+                        wordId: '11111111-1111-1111-1111-111111111111',
+                        questionType: 'de_to_native',
+                    },
+                ],
+            }),
+        } as any)
+
+        expect(response.status).toBe(200)
+        await expect(response.json()).resolves.toMatchObject({
+            success: true,
+            data: {
+                questEpisodeReceipt: {
+                    episodeId: 'vocab-episode:A1:essen',
+                    themeSlug: 'essen',
+                    cefrLevel: 'A1',
+                    accuracyBand: 'mastered',
+                    completedCheckpoints: 3,
+                    checkpointCount: 3,
+                    recommendedAction: 'next_episode',
+                },
+                nextEpisodeHref: '/vocabulary/practice/mixed?theme=essen&level=A1',
+            },
+        })
+        expect(recordLearningActivityMock).toHaveBeenCalledWith(
+            expect.anything(),
+            expect.objectContaining({
+                exerciseId: 'vocab:A1:essen:mixed',
+                analytics: expect.objectContaining({
+                    metadata: expect.objectContaining({
+                        episode_id: 'vocab-episode:A1:essen',
+                        checkpoint_count: 3,
+                    }),
+                }),
+            })
+        )
     })
 })

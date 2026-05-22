@@ -3511,3 +3511,405 @@ P2:
 - Result screens no longer over-celebrate capped or already-claimed rewards.
 - Course path now feels closer to a game milestone map because each unlocked node carries the learner's CEFR badge.
 - The batch remains UI-only and does not alter reward accounting, mission claim, XP, Fucoin, or unlock rules.
+
+## 56. Production Planning Batch: Learner UI + Design Coordination
+
+### 56.1 Prompt Engineer
+
+```text
+Use case: coordinated UI/UX and Design production planning.
+Feature: implement the Fuxie Learner UI + Design Production Plan for a moderate Fuxie German Village layer.
+Scope: learner surfaces only; no teacher/admin expansion in this batch.
+Goal: create the audit matrix, village-role mapping, mockup board, active image-generation backlog, prompt pack, integration spec, and QA checklist needed before the next UI implementation slice.
+Asset rule: use existing FUXIE_3D_ASSETS, REWARD_ASSETS, and FUXIE_WORLD_PROPS as continuity references, then generate the v2 German Village assets needed for location, frame, mascot, reward, and mockup development.
+UX rule: mascot, prop, frame, or motion must support a learning CTA, feedback moment, reward receipt, or empty/error state.
+```
+
+### 56.2 Da Trien Khai Trong Batch Nay
+
+- Added the production spec at `docs/design/learner-ui-design-production-plan.md`.
+- Added a learner-surface audit matrix covering Dashboard, Course, Vocabulary, Grammar, Reading, Listening, Speaking, Writing, Exam, Review, Shop, Chat, Badges, and Campaign.
+- Added surface-to-village-role mapping, component mapping, asset mapping, motion rules, and QA acceptance criteria.
+- Added the first deterministic mockup board at `docs/design/visual-audit/learner-ui-production-mockup-board-v1.svg`.
+- Added an image production taxonomy that explicitly separates UI mockups, world/location props, mascot/state poses, reward objects, and UI frames/panels.
+- Added prompt blocks for AI-generated mockups and assets so the German Village layer can expand without losing the study-first hierarchy.
+
+### 56.3 Review Ket Qua
+
+- The next implementation slice now has a single source of truth for what to audit, what to generate, where to integrate it, and how to avoid overdecorating.
+- The plan protects the current learning-first UX by keeping the village layer moderate and job-based.
+- Browser screenshots are still required for missing learner surfaces before any broad UI replacement: Grammar, Speaking, Shop, Chat, Badges, and Campaign.
+
+## 57. Production QA Batch: Learner Visual Audit Inventory
+
+### 57.1 Prompt Engineer
+
+```text
+Use case: make Batch 1 visual audit repeatable.
+Feature: add a learner screenshot manifest, QA runbook, and inventory script for the Fuxie German Village learner UI pass.
+Goal: reviewers can see which routes need screenshots, which existing screenshots are valid evidence, whether required assets exist, and which P0 surfaces must be captured first.
+Constraint: do not change app runtime UI; this batch is audit tooling and documentation only.
+```
+
+### 57.2 Da Trien Khai Trong Batch Nay
+
+- Added `docs/design/visual-audit/learner-ui-screenshot-manifest.json` with 14 learner surfaces, desktop/mobile screenshot targets, existing evidence, asset refs, and QA focus notes.
+- Added `docs/design/learner-ui-visual-qa-runbook.md` with local dev-auth setup, screenshot naming rules, reviewer scorecard, team responsibilities, and stop rules.
+- Added `scripts/learner-ui-visual-audit.ts`, which validates manifest screenshot targets, existing screenshot evidence, and referenced public assets.
+- Updated `docs/design/learner-ui-design-production-plan.md` to link the runbook/manifest and include the inventory script in the command list.
+
+### 57.3 Inventory Ket Qua
+
+- Command: `pnpm exec tsx scripts/learner-ui-visual-audit.ts`.
+- Surfaces tracked: 14.
+- Expected village screenshots present: 0/28.
+- Existing evidence screenshots present: 18/18.
+- Asset refs present: 53/53.
+- P0 capture queue: Dashboard, Course, Vocabulary, Reading, Listening, Speaking, Writing, Shop.
+- Reports generated:
+  - `tmp/learner-ui-visual-audit.md`
+  - `tmp/learner-ui-visual-audit.json`
+
+### 57.4 Review Ket Qua
+
+- Asset readiness is good: every referenced mascot, world prop, and reward asset exists.
+- Screenshot readiness is the next blocker: the new `*-village-v1-*` desktop/mobile evidence set still needs to be captured.
+- The next practical implementation step is browser QA capture for the P0 queue so generation prompts and integration slots stay grounded in real UI surfaces.
+
+## 58. Production QA Batch: Learner Screenshot Evidence And Handoff
+
+### 58.1 Prompt Engineer
+
+```text
+Use case: execute the approved Fuxie Learner UI + Design Production Plan.
+Feature: capture the learner UI evidence set, validate asset readiness, fix QA blockers found during capture, and produce a handoff for UI/UX + Design.
+Scope: learner UI only, including P0 skill-player intro states.
+Constraint: use screenshot evidence and inventory QA to define a proactive German Village generation roadmap, not to block new asset production.
+```
+
+### 58.2 Da Trien Khai Trong Batch Nay
+
+- Seeded local QA data with content/course/dev learner state so Course, skill hubs, players, Exam, and Shop render meaningful screenshots.
+- Captured 28/28 surface screenshots for Dashboard, Course, Vocabulary, Grammar, Reading, Listening, Speaking, Writing, Exam, Review, Shop, Chat, Badges, and Campaign.
+- Captured 8/8 supplemental player screenshots for Reading, Listening, Writing, and Speaking.
+- Added final handoff doc at `docs/design/learner-ui-design-production-handoff.md`.
+- Fixed Course duplicate-render risk by deduping course module mappings before UI render.
+- Fixed dev Speaking seed shape so the Speaking player starts with 3 real dev sentences instead of a 0-sentence intro.
+- Added stable image sizing on shared mascot/reward image components used in learner chrome and gamification UI.
+
+### 58.3 Inventory Ket Qua
+
+- `pnpm exec tsx scripts/learner-ui-visual-audit.ts`: 14 surfaces, expected screenshots 28/28, existing evidence 18/18, asset refs 53/53.
+- Surface capture report: `tmp/learner-ui-screenshot-capture.md`, 28/28 OK.
+- Player capture report: `tmp/learner-ui-player-screenshot-capture.md`, 8/8 OK.
+- Image generation follow-up: create an active v2 German Village manifest for location plates, UI frames, mascot poses, reward objects, and UI mockups.
+
+### 58.4 Review Ket Qua
+
+- The UI/UX and Design teams now have a concrete evidence set and handoff instead of a speculative asset list.
+- The next implementation slice can stay P0-focused: Dashboard, Course, Vocabulary, Skill Player motivation/result loop, and Shop.
+- Local dev screenshots may show the Next dev indicator in the bottom-left; it is not part of the product UI score.
+
+## 59. Production Art Direction Batch: German Village Image Generation Roadmap
+
+### 59.1 Prompt Engineer
+
+```text
+Use case: develop Fuxie into a German-learning village through planned image generation.
+Feature: convert learner audit evidence into an active image-generation queue for UI/UX, Design System, Illustrator/3D, and Gamification.
+Scope: learner UI only; prioritize Dashboard, Course, Vocabulary, Skill Player, Result loop, and Shop.
+Goal: produce a manifest-driven generation roadmap with prompts, source targets, runtime targets, and integration targets for the v2 German Village layer.
+Constraint: generated images must support CTA, feedback, reward, progression, locked, empty, or error states; no decorative asset without a UI job.
+```
+
+### 59.2 Da Trien Khai Trong Batch Nay
+
+- Added `docs/design/fuxie-german-village-image-generation-strategy.md` as the shared art-direction and production-order document.
+- Added `docs/design/visual-audit/fuxie-german-village-image-generation-manifest.json` with 5 batches, 36 planned generated assets, and 22 P0 assets.
+- Added `scripts/fuxie-image-generation-plan.ts` to validate duplicate asset IDs, duplicate output targets, missing prompts, and report the generation queue.
+- Updated `docs/design/learner-ui-design-production-plan.md` so Batch 3 is an active German Village generation pack with manifest-backed prompts and integration targets.
+- Updated `docs/design/learner-ui-design-production-handoff.md` so UI/UX and Design receive the active generation queue alongside the screenshot evidence.
+
+### 59.3 Generation Queue
+
+- Batch A P0: 8 village location plates for Dashboard, Course, Vocabulary, Reading, Listening, Speaking, Writing, and Shop.
+- Batch B P0: 8 reusable UI frames/panels for mission, checkpoint, collection, audio, letter receipt, result reveal, market shelf, and empty-state signpost.
+- Batch C P1: 8 Fuxie learning-moment poses including quest planning, correction, listening, speaking, writing, shop approval, result celebration, and calm empty state.
+- Batch D P1: 6 reward objects for XP, Fucoin, Streak Freeze, CEFR badges, Hint Ticket, and Unlock Key.
+- Batch E P0: 6 UI mockups for Dashboard, Course, Vocabulary, Skill Player, Market/Inventory, and Result Receipt.
+
+### 59.4 Review Ket Qua
+
+- Direction is now corrected from image-generation gating to image-generation production strategy.
+- Existing assets remain the v1 continuity layer; new assets are the v2 expansion layer for the Fuxie German Village.
+- The manifest is now the source of truth for prompt order, file targets, and integration mapping before asset export.
+
+## 60. Production Asset Batch: Batch A/B German Village Runtime Assets
+
+### 60.1 Prompt Engineer
+
+```text
+Use case: produce the first runtime-ready generated assets for Fuxie German Village learner UI.
+Feature: generate Batch A location plates and Batch B UI frames from the manifest, export source PNGs and 512px runtime WebP files, then wire P0 location plates into learner UI anchors.
+Scope: learner UI P0 surfaces and generated asset maps only.
+Goal: Dashboard, Course, Vocabulary, Reading, Listening, Speaking, Writing, and Shop have v2 location plates; UI/UX and Design have reusable frame assets ready for implementation.
+Constraint: generated assets must be transparent/alpha-safe, readable at 96px, avoid external IP resemblance, and support a learning CTA, feedback state, reward state, empty state, or route identity.
+```
+
+### 60.2 Da Trien Khai Trong Batch Nay
+
+- Generated Batch A 8/8 P0 location plates as source PNGs under `docs/design/asset-generation/source/`.
+- Exported Batch A runtime WebP files under `apps/web/public/mascot-3d/world/optimized/v2/`.
+- Generated Batch B 8/8 UI frames/state panels as source PNGs under `docs/design/asset-generation/source/`.
+- Exported Batch B runtime WebP files under `apps/web/public/mascot-3d/ui/optimized/v1/`.
+- Added QA contact sheet at `docs/design/asset-generation/fuxie-german-village-batch-a-b-contact-sheet.png`.
+- Updated `FUXIE_WORLD_PROPS` with v2 generated location plate keys.
+- Added `FUXIE_UI_FRAMES` with generated frame asset keys.
+- Updated learner P0 anchor images to use v2 location plates in Dashboard, Course, Vocabulary, Reading, Listening, Speaking, Writing, and Shop.
+- Updated the generation report script so it reports generated source/runtime counts from the manifest targets.
+
+### 60.3 Inventory Ket Qua
+
+- Generated source assets: 16/36.
+- Generated runtime assets: 16/30.
+- Batch A location plates: Dashboard, Course, Vocabulary, Reading, Listening, Speaking, Writing, Shop.
+- Batch B frames/state panels: notice board, checkpoint node, collection card, audio broadcast panel, letter receipt, result reveal, market shelf, empty-state signpost.
+- Contact sheet: `docs/design/asset-generation/fuxie-german-village-batch-a-b-contact-sheet.png`.
+
+### 60.4 Review Ket Qua
+
+- The village layer now has runtime-ready visual anchors rather than only prompts.
+- The strongest integration value is on P0 route identity and reward-state framing; no learning logic or economy logic changed.
+- Next production slice should generate Batch C mascot poses and then map them to feedback/result/empty states.
+
+## 61. Production Asset Batch: Batch C Mascot State Runtime Pack
+
+### 61.1 Prompt Engineer
+
+```text
+Use case: continue developing Fuxie into a German-learning village through mascot learning states.
+Feature: produce Batch C mascot poses, export source PNGs and 512px runtime WebP files, then map them into learner feedback, skill motivation, result, and empty-state surfaces.
+Scope: learner UI P0 feedback/result loops and generated mascot asset maps.
+Goal: Fuxie has workflow-specific states for planning, correction, listening focus, speaking record, writing delivery, shop approval, result celebration, and calm empty/error moments.
+Constraint: preserve existing Fuxie identity if a native generation pass drifts away from the approved mascot language.
+```
+
+### 61.2 Da Trien Khai Trong Batch Nay
+
+- Generated Batch C 8/8 mascot learning-moment poses as source PNGs under `docs/design/asset-generation/source/`.
+- Exported Batch C runtime WebP files under `apps/web/public/mascot-3d/states/v2/`.
+- Added QA contact sheet at `docs/design/asset-generation/fuxie-german-village-batch-c-mascot-poses-contact-sheet.png`.
+- Updated `FUXIE_MASCOT_STATES` with v2 generated mascot state keys.
+- Updated `FUXIE_3D_ASSETS` so shared gamification components can use the v2 Batch C states.
+- Mapped skill motivation and result surfaces to the new state pack: quest planner, listening focus, speaking record, writing delivery, gentle correction, and result celebration.
+- Updated learner production plan, handoff, and image-generation strategy with the Batch C status.
+
+### 61.3 Inventory Ket Qua
+
+- Generated source assets: 24/36.
+- Generated runtime assets: 24/30.
+- Batch C mascot states: quest planner, gentle correction, listening focus, speaking record, writing delivery, shop approval, result celebration, calm empty state.
+- Contact sheet: `docs/design/asset-generation/fuxie-german-village-batch-c-mascot-poses-contact-sheet.png`.
+
+### 61.4 Review Ket Qua
+
+- The mascot layer now supports learning-state jobs rather than only generic mascot decoration.
+- Native image-generation attempts drifted on some mascot prompts, so this production pass uses approved v1 mascot/gamification art as the identity-preserving source layer and exports v2 runtime assets from it.
+- Next production slice should generate Batch D reward objects, then replace reward reveal token art only where the new objects improve earned/receipt/pending clarity.
+
+## 62. Production Asset Batch: Batch D Reward Object Runtime Pack
+
+### 62.1 Prompt Engineer
+
+```text
+Use case: continue developing Fuxie into a German-learning village through reward artifacts.
+Feature: generate Batch D reward objects, remove chroma-key backgrounds, export source PNGs and 512px runtime WebP files, then map them into reward preview, result reveal, shop item, and Dashboard reward states.
+Scope: learner UI reward surfaces and generated reward asset maps.
+Goal: XP, Fucoin, Streak Freeze, CEFR badge progress, Hint Ticket, and Unlock Key feel native to the village reward economy.
+Constraint: reward assets must stay readable at 24-96px, avoid reward inflation, and support earned/receipt/pending clarity.
+```
+
+### 62.2 Da Trien Khai Trong Batch Nay
+
+- Generated Batch D 6/6 reward objects as source PNGs under `docs/design/asset-generation/source/`.
+- Removed chroma-key backgrounds and exported 512px runtime WebP files under `apps/web/public/reward-assets/optimized/`.
+- Added QA contact sheet at `docs/design/asset-generation/fuxie-german-village-batch-d-reward-objects-contact-sheet.png`.
+- Updated `REWARD_ASSETS` with village-native reward object keys.
+- Mapped shared `RewardPreview` and `RewardRevealMoment` visuals to the Batch D reward objects.
+- Updated shop item asset routing for support, learning, Streak Freeze, unlock, and fallback Fucoin items.
+- Updated Dashboard Fucoin ledger/mission visuals to use the village Fucoin token.
+- Updated learner production plan, handoff, and image-generation strategy with the Batch D status.
+
+### 62.3 Inventory Ket Qua
+
+- Generated source assets: 30/36.
+- Generated runtime assets: 30/30.
+- Batch D reward objects: XP star village token, Fucoin village token, Streak Freeze snowglobe, CEFR badge node set, Hint Ticket village coupon, Unlock Key signpost charm.
+- Contact sheet: `docs/design/asset-generation/fuxie-german-village-batch-d-reward-objects-contact-sheet.png`.
+
+### 62.4 Review Ket Qua
+
+- The reward layer now has village-native runtime objects rather than relying only on the original v1 reward pack.
+- This batch improves visual consistency in the motivation loop without changing XP, Fucoin, streak, shop, or unlock accounting.
+- Next production slice should generate Batch E UI mockups for Dashboard, Course, Vocabulary, Skill Player, Market/Inventory, and Result Receipt.
+
+## 63. Production Mockup Batch: Batch E Learner UI Mockups
+
+### 63.1 Prompt Engineer
+
+```text
+Use case: finish the Fuxie German Village image-generation queue with screen-level implementation references.
+Feature: generate Batch E high-fidelity UI mockups for Dashboard, Course, Vocabulary, Skill Player, Market/Inventory, and Result Receipt.
+Scope: learner UI P0 design references only; mockups are not runtime assets.
+Goal: UI/UX, Design, and Frontend have a shared visual target for the next implementation polish slice.
+Constraint: mockups must preserve study-first hierarchy; village art supports mission, CTA, reward, progress, inventory, or result states.
+```
+
+### 63.2 Da Trien Khai Trong Batch Nay
+
+- Generated Batch E 6/6 UI mockups under `docs/design/visual-audit/mockups/`.
+- Added QA contact sheet at `docs/design/visual-audit/mockups/fuxie-german-village-batch-e-ui-mockups-contact-sheet.png`.
+- Updated learner production plan, handoff, and image-generation strategy with the Batch E status.
+- Completed the image-generation manifest queue: all 36 source targets now exist, and all 30 runtime targets exist.
+
+### 63.3 Inventory Ket Qua
+
+- Generated source assets: 36/36.
+- Generated runtime assets: 30/30.
+- Batch E mockups: Dashboard Village Square, Course Path, Vocabulary Collection Book, Skill Player Motivation Layer, Market Inventory, Result Receipt.
+- Contact sheet: `docs/design/visual-audit/mockups/fuxie-german-village-batch-e-ui-mockups-contact-sheet.png`.
+
+### 63.4 Review Ket Qua
+
+- The production team now has both runtime assets and screen-level references for the learner German Village layer.
+- Batch E should guide the next code slice; the mockup text itself is directional and should not be copied verbatim into production.
+- Next implementation work should translate the mockup patterns into existing components, starting with Dashboard, Course, Vocabulary, Skill Player, Market/Inventory, and Result Receipt.
+
+## 64. Frontend Integration Batch: Village Frames In Shared Reward And Skill Components
+
+### 64.1 Prompt Engineer
+
+```text
+Use case: translate generated German Village frames into reusable learner UI components.
+Feature: wire `FUXIE_UI_FRAMES` into shared reward reveal, checkpoint rail, and skill motivation rail components.
+Scope: shared learner gamification UI only; no reward accounting, route data, or content changes.
+Goal: Dashboard, Course, Vocabulary exercises, Speaking checkpoints, Reading/Listening/Writing players, and Result loops inherit village frame language through shared components.
+Constraint: frame art must support state clarity and not compete with the CTA or exercise content.
+```
+
+### 64.2 Da Trien Khai Trong Batch Nay
+
+- Imported `FUXIE_UI_FRAMES` into `quest-visuals.tsx`.
+- Added a small reusable `FuxieFrameAccent` helper for stable decorative frame rendering.
+- Added `resultRevealFrame` to `RewardRevealMoment` so earned/receipt/pending reward states share the generated result frame language.
+- Added `courseCheckpointNode` to `QuestCheckpointRail` header and background so checkpoint states visually match the generated path node asset.
+- Added skill-specific frame accents to `SkillMotivationRail`:
+  - Reading uses `noticeBoard`.
+  - Listening uses `audioBroadcastPanel`.
+  - Writing uses `letterReceiptFrame`.
+- Added the generated result frame behind the skill reward preview block.
+
+### 64.3 Review Ket Qua
+
+- The generated Batch B UI frames now affect real learner UI through shared components rather than one-off screen decoration.
+- This improves visual consistency across P0 result, checkpoint, and skill-player motivation surfaces without changing learner data or economy logic.
+- Next implementation slice can use the Batch E mockups for screen-specific layout polish on Dashboard, Course, Vocabulary, Market/Inventory, and Result Receipt.
+
+## 65. Frontend Integration Batch: P0 Screen Frame Anchors
+
+### 65.1 Prompt Engineer
+
+```text
+Use case: apply generated village frame assets to P0 learner screens without creating one-off decorative layouts.
+Feature: wire state-appropriate `FUXIE_UI_FRAMES` into Dashboard mission cards, Vocabulary collection panels, and Shop item cards.
+Scope: learner P0 visual anchors only; no data, economy, or content logic changes.
+Goal: Dashboard, Vocabulary, and Market/Inventory show the same frame language as the shared result, checkpoint, and skill components.
+Constraint: each frame must map to a state or surface role: notice board for mission, result frame for claimed, empty signpost for locked, collection frame for vocabulary, market shelf for shop.
+```
+
+### 65.2 Da Trien Khai Trong Batch Nay
+
+- Dashboard `MissionCard` now selects frame accents by mission state:
+  - `noticeBoard` for active/ready missions.
+  - `resultRevealFrame` for claimed missions.
+  - `emptyStateSignpost` for locked missions.
+- Vocabulary selected-theme panels now use `collectionCardFrame` as a subtle card identity anchor.
+- Shop item cards now use `marketShelfFrame` so catalog items share the generated market/inventory language.
+
+### 65.3 Review Ket Qua
+
+- The P0 learner surfaces now consume Batch B frames through both shared components and route-specific anchors.
+- The changes remain visual-only and keep CTA, progress, and reward text above the frame layer.
+- Next slice should use Batch E mockups to tune screen structure, starting with Dashboard mission/reward hierarchy and Market/Inventory density.
+
+## 66. Frontend Integration Batch: Course Path And Result Receipt Mockup Alignment
+
+### 66.1 Prompt Engineer
+
+```text
+Use case: translate Batch E Course Path and Result Receipt mockups into production UI anchors.
+Feature: add generated frame accents to Course path nodes and the shared ResultRewardLoop receipt shell.
+Scope: learner Course and shared result loop visual layer only.
+Goal: path progression and post-lesson reward receipt better match the German Village mockup direction while preserving existing UX hierarchy.
+Constraint: no learning data, scoring, XP, Fucoin, streak, or unlock logic changes.
+```
+
+### 66.2 Da Trien Khai Trong Batch Nay
+
+- Course path hero now uses `courseCheckpointNode` as a subtle background anchor.
+- Course module nodes now include the generated checkpoint frame inside each node while keeping module number, lock, and completion icons on top.
+- Shared `ResultRewardLoop` now uses `resultRevealFrame` and `letterReceiptFrame` as low-opacity receipt/reveal accents.
+- Score receipt circle now includes a subtle letter receipt frame without changing the score content or progress logic.
+
+### 66.3 Review Ket Qua
+
+- Course Path and Result Receipt now visually align better with Batch E mockups.
+- The changes stay in existing components and keep the primary CTA and score/reward content readable.
+- Next slice can continue screen-specific polish with Dashboard mission/reward hierarchy or Shop density once browser QA has DB available.
+
+## 67. Browser QA Batch: Docker DB Rerun And Player Smoke
+
+### 67.1 Prompt Engineer
+
+```text
+Use case: continue learner UI QA after Docker local DB is available.
+Feature: rerun P0 learner browser smoke for village surfaces and skill players.
+Scope: learner UI only; no teacher/admin expansion.
+Goal: confirm generated village assets, frame integration, and skill-player motivation layers render against the local Docker database.
+Constraint: use local dev auth and local Docker DB, not package-level production env files.
+```
+
+### 67.2 Da Trien Khai Trong Batch Nay
+
+- Confirmed `localhost:3005` web and `127.0.0.1:5434` Docker DB were listening.
+- Verified Prisma can connect to the local DB when `DATABASE_URL` is forced from the root `.env`.
+- Found and documented an env pitfall: `packages/database/.env` can point at a different database, so local QA commands must override `DATABASE_URL` and `DATABASE_URL_UNPOOLED` from the root `.env`.
+- Reran `pnpm db:seed:dev` against the local Docker DB.
+- Captured Chrome/CDP QA screenshots under `tmp/browser-qa/cdp/` for Reading, Listening, Writing, and Speaking player desktop/mobile states.
+- Fixed the local listening dev seed fixture in `scripts/seed-dev-data.ts` so `L-A1-DEV-001` uses an existing public MP3 instead of missing `/audio/dev/sample.mp3`.
+
+### 67.3 Browser QA Ket Qua
+
+- P0 list/browser surfaces captured by Chrome headless: Dashboard, Course, Vocabulary, Shop, Reading player, Listening player, Writing player, Speaking player.
+- Dynamic player routes confirmed with local seed IDs:
+  - Reading: `/reading/R-A1-DEV-001`.
+  - Listening: `/listening/L-A1-DEV-001`.
+  - Writing: `/writing/W-A1-DEV-001`.
+  - Speaking: `/speaking/dev-a1-begruessung-01`.
+- CDP smoke confirmed player pages moved past loading state and did not show the 404 page.
+- After the audio fixture fix, Listening player desktop/mobile had `errorCount: 0`.
+- Mobile player screenshots show the village motivation layer remains readable; install prompt may cover lower reward content during local QA and should be dismissed for final design scoring.
+
+### 67.4 Verification
+
+- `pnpm exec tsx scripts/fuxie-image-generation-plan.ts`: 36/36 generated source assets, 30/30 runtime assets.
+- `pnpm exec tsx scripts/learner-ui-visual-audit.ts`: 28/28 expected screenshots, 53/53 asset refs.
+- `pnpm qa:text-visual`: 0 errors, 761 warnings.
+- `pnpm check:quick`: passed.
+- `pnpm smoke:full-local`: web DB health, learner pages, learner APIs, teacher page/API, and admin page/API passed; AI health failed because the AI service was not running locally.
+
+### 67.5 Review Ket Qua
+
+- Docker DB unblocks browser QA for the learner German Village layer.
+- The P0 visual layer is now verified against local seed data rather than only static manifest checks.
+- The remaining QA follow-up is interaction-level result-state capture after completing one Reading, Listening, Writing, and Speaking exercise.

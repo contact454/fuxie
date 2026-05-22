@@ -2,15 +2,18 @@
 
 import Link from 'next/link'
 import type { ComponentProps, MouseEvent } from 'react'
+import type { ClientAnalyticsEventInput } from '@/lib/analytics/client-events'
+import { trackClientAnalyticsEvent } from '@/lib/analytics/client-events'
 import { startLearnerNavigationTiming } from '@/lib/performance/learner-navigation'
 
 type MeasuredLinkProps = Omit<ComponentProps<typeof Link>, 'href'> & {
     href: string
     flow: string
     source?: string
+    analytics?: ClientAnalyticsEventInput
 }
 
-export function MeasuredLink({ href, flow, source, onClick, ...props }: MeasuredLinkProps) {
+export function MeasuredLink({ href, flow, source, analytics, onClick, ...props }: MeasuredLinkProps) {
     const handleClick = (event: MouseEvent<HTMLAnchorElement>) => {
         onClick?.(event)
         if (
@@ -25,6 +28,9 @@ export function MeasuredLink({ href, flow, source, onClick, ...props }: Measured
         }
 
         startLearnerNavigationTiming({ flow, href, source })
+        if (analytics) {
+            trackClientAnalyticsEvent(analytics)
+        }
     }
 
     return <Link href={href} onClick={handleClick} {...props} />

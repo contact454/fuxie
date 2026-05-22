@@ -3,13 +3,22 @@ import { redirect } from 'next/navigation'
 import { prisma } from '@fuxie/database'
 import { getServerUser } from '@/lib/auth/server-auth'
 import { summarizeClassroomAnalytics } from '@/lib/analytics/teacher-analytics'
+import {
+  isSlice4VisualQaFixture,
+  Slice4TeacherOverdueFixture,
+} from '@/components/visual-fixtures/slice-4-staff-fixtures'
 
 export const metadata = {
   title: 'Teacher Dashboard | Fuxie',
   description: 'Bang dieu khien giao vien',
 }
 
-export default async function TeacherOverviewPage() {
+export default async function TeacherOverviewPage({ searchParams }: { searchParams: Promise<{ state?: string; fixture?: string }> }) {
+  const visualParams = await searchParams
+  if (isSlice4VisualQaFixture(visualParams, 'error')) {
+    return <Slice4TeacherOverdueFixture />
+  }
+
   const serverUser = await getServerUser()
   if (!serverUser) redirect('/login')
 
@@ -121,21 +130,21 @@ export default async function TeacherOverviewPage() {
 
   return (
     <div>
-      <h1 style={{ fontSize: '1.75rem', fontWeight: 800, color: '#f8fafc', margin: '0 0 8px' }}>
+      <h1 style={{ fontSize: '1.75rem', fontWeight: 800, color: 'var(--color-text-inverse)', margin: '0 0 8px' }}>
         Xin chao, Giao vien!
       </h1>
-      <p style={{ color: '#94a3b8', margin: '0 0 32px', fontSize: '0.95rem' }}>
-        Tong quan lop hoc, hoc vien can chu y, va bai giao qua han.
+      <p style={{ color: "var(--color-text-subtle)", margin: '0 0 32px', fontSize: '0.95rem' }}>
+        Tổng quan lớp học, học viên cần chú ý, và bài giao quá hạn.
       </p>
 
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: '16px', marginBottom: '32px' }}>
         {[
-          { label: 'Lop hoc', value: classrooms.length, icon: '🏫', color: '#3b82f6' },
-          { label: 'Hoc vien', value: totalStudents, icon: '👥', color: '#10b981' },
-          { label: 'Bai giao', value: totalAssignments, icon: '📋', color: '#f59e0b' },
+          { label: 'Lop hoc', value: classrooms.length, icon: '🏫', color: "var(--color-text-brand)" },
+          { label: 'Học viên', value: totalStudents, icon: '👥', color: 'var(--color-text-success)' },
+          { label: 'Bai giao', value: totalAssignments, icon: '📋', color: 'var(--color-text-warning)' },
           { label: 'Can chu y', value: atRiskStudents, icon: '⚠️', color: atRiskStudents > 0 ? '#f87171' : '#8b5cf6' },
           { label: 'Qua han', value: overdueAssignments, icon: '🕒', color: overdueAssignments > 0 ? '#fb7185' : '#94a3b8' },
-          { label: 'Da nop', value: recentSubmissions.length, icon: '✅', color: '#8b5cf6' },
+          { label: 'Da nop', value: recentSubmissions.length, icon: '✅', color: 'var(--color-cefr-c1)' },
         ].map((stat) => (
           <div key={stat.label} style={{
             background: '#1e293b',
@@ -145,14 +154,14 @@ export default async function TeacherOverviewPage() {
           }}>
             <div style={{ fontSize: '1.5rem', marginBottom: '4px' }}>{stat.icon}</div>
             <div style={{ fontSize: '2rem', fontWeight: 800, color: stat.color }}>{stat.value}</div>
-            <div style={{ fontSize: '0.85rem', color: '#94a3b8' }}>{stat.label}</div>
+            <div style={{ fontSize: '0.85rem', color: "var(--color-text-subtle)" }}>{stat.label}</div>
           </div>
         ))}
       </div>
 
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '16px' }}>
-        <h2 style={{ fontSize: '1.2rem', fontWeight: 700, color: '#f8fafc', margin: 0 }}>Lop hoc cua ban</h2>
-        <Link href="/teacher/classrooms" style={{ color: '#3b82f6', textDecoration: 'none', fontSize: '0.9rem' }}>
+        <h2 style={{ fontSize: '1.2rem', fontWeight: 700, color: 'var(--color-text-inverse)', margin: 0 }}>Lop hoc cua ban</h2>
+        <Link href="/teacher/classrooms" style={{ color: "var(--color-text-brand)", textDecoration: 'none', fontSize: '0.9rem' }}>
           Xem tat ca →
         </Link>
       </div>
@@ -166,7 +175,7 @@ export default async function TeacherOverviewPage() {
           border: '1px solid #334155',
         }}>
           <div style={{ fontSize: '3rem', marginBottom: '12px' }}>🏫</div>
-          <p style={{ color: '#94a3b8', marginBottom: '16px' }}>Ban chua co lop hoc nao.</p>
+          <p style={{ color: "var(--color-text-subtle)", marginBottom: '16px' }}>Ban chua co lop hoc nao.</p>
           <Link href="/teacher/classrooms" style={{
             display: 'inline-block',
             background: '#3b82f6',
@@ -193,25 +202,25 @@ export default async function TeacherOverviewPage() {
                 border: '1px solid #334155',
               }}>
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '12px' }}>
-                  <h3 style={{ fontSize: '1rem', fontWeight: 700, color: '#f8fafc', margin: 0 }}>{classroom.name}</h3>
+                  <h3 style={{ fontSize: '1rem', fontWeight: 700, color: 'var(--color-text-inverse)', margin: 0 }}>{classroom.name}</h3>
                   <span style={{
                     background: '#1e3a5f',
-                    color: '#60a5fa',
+                    color: 'var(--color-fuxie-primary)',
                     padding: '2px 8px',
                     borderRadius: '6px',
                     fontSize: '0.8rem',
                     fontWeight: 600,
                   }}>{classroom.cefrLevel}</span>
                 </div>
-                <div style={{ display: 'flex', gap: '16px', fontSize: '0.85rem', color: '#94a3b8', marginBottom: '10px' }}>
-                  <span>👥 {classroom._count.enrollments} hoc vien</span>
+                <div style={{ display: 'flex', gap: '16px', fontSize: '0.85rem', color: "var(--color-text-subtle)", marginBottom: '10px' }}>
+                  <span>👥 {classroom._count.enrollments} học viên</span>
                   <span>📋 {classroom._count.assignments} bai giao</span>
                 </div>
                 {summary && (
-                  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, minmax(0, 1fr))', gap: '8px', fontSize: '0.78rem', color: '#94a3b8' }}>
-                    <span>Active 7 ngay: <strong style={{ color: '#e2e8f0' }}>{summary.activeLast7Days}</strong></span>
+                  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, minmax(0, 1fr))', gap: '8px', fontSize: '0.78rem', color: "var(--color-text-subtle)" }}>
+                    <span>Active 7 ngay: <strong style={{ color: 'var(--color-text-subtle)' }}>{summary.activeLast7Days}</strong></span>
                     <span>Can chu y: <strong style={{ color: summary.atRiskCount > 0 ? '#fca5a5' : '#e2e8f0' }}>{summary.atRiskCount}</strong></span>
-                    <span>Avg completion: <strong style={{ color: '#e2e8f0' }}>{summary.averageCompletionRate}%</strong></span>
+                    <span>Avg completion: <strong style={{ color: 'var(--color-text-subtle)' }}>{summary.averageCompletionRate}%</strong></span>
                     <span>Qua han: <strong style={{ color: summary.overdueAssignments > 0 ? '#fda4af' : '#e2e8f0' }}>{summary.overdueAssignments}</strong></span>
                   </div>
                 )}
@@ -223,8 +232,8 @@ export default async function TeacherOverviewPage() {
 
       {studentsNeedingAttention.length > 0 && (
         <>
-          <h2 style={{ fontSize: '1.2rem', fontWeight: 700, color: '#f8fafc', margin: '0 0 16px' }}>
-            Hoc vien can chu y
+          <h2 style={{ fontSize: '1.2rem', fontWeight: 700, color: 'var(--color-text-inverse)', margin: '0 0 16px' }}>
+            Học viên cần chú ý
           </h2>
           <div style={{ background: '#1e293b', borderRadius: '16px', border: '1px solid #334155', overflow: 'hidden', marginBottom: '32px' }}>
             {studentsNeedingAttention.map((student, index) => (
@@ -248,7 +257,7 @@ export default async function TeacherOverviewPage() {
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
-                  color: '#fff',
+                  color: "var(--color-text-inverse)",
                   fontSize: '0.8rem',
                   fontWeight: 700,
                   flexShrink: 0,
@@ -256,8 +265,8 @@ export default async function TeacherOverviewPage() {
                   {student.level === 'high' ? 'H' : 'M'}
                 </span>
                 <div style={{ flex: 1 }}>
-                  <div style={{ color: '#e2e8f0', fontWeight: 600, fontSize: '0.9rem' }}>{student.displayName}</div>
-                  <div style={{ color: '#64748b', fontSize: '0.8rem' }}>
+                  <div style={{ color: 'var(--color-text-subtle)', fontWeight: 600, fontSize: '0.9rem' }}>{student.displayName}</div>
+                  <div style={{ color: "var(--color-text-muted)", fontSize: '0.8rem' }}>
                     {student.classroomName}
                     {student.inactiveDays != null ? ` · ${student.inactiveDays} ngay khong hoc` : ''}
                     {` · ${student.recentMinutes7d} phut / 7 ngay`}
@@ -274,7 +283,7 @@ export default async function TeacherOverviewPage() {
 
       {recentSubmissions.length > 0 && (
         <>
-          <h2 style={{ fontSize: '1.2rem', fontWeight: 700, color: '#f8fafc', margin: '0 0 16px' }}>
+          <h2 style={{ fontSize: '1.2rem', fontWeight: 700, color: 'var(--color-text-inverse)', margin: '0 0 16px' }}>
             Hoat dong gan day
           </h2>
           <div style={{ background: '#1e293b', borderRadius: '16px', border: '1px solid #334155', overflow: 'hidden' }}>
@@ -299,13 +308,13 @@ export default async function TeacherOverviewPage() {
                   {submission.status === 'completed' ? '✅' : '📝'}
                 </span>
                 <div style={{ flex: 1 }}>
-                  <span style={{ color: '#e2e8f0', fontWeight: 600, fontSize: '0.9rem' }}>
+                  <span style={{ color: 'var(--color-text-subtle)', fontWeight: 600, fontSize: '0.9rem' }}>
                     {submission.student.profile?.displayName || submission.student.email}
                   </span>
-                  <span style={{ color: '#64748b', fontSize: '0.85rem' }}>
-                    {' '}da hoan thanh{' '}
+                  <span style={{ color: "var(--color-text-muted)", fontSize: '0.85rem' }}>
+                    {' '}đã hoàn thành{' '}
                   </span>
-                  <span style={{ color: '#94a3b8', fontWeight: 500, fontSize: '0.9rem' }}>
+                  <span style={{ color: "var(--color-text-subtle)", fontWeight: 500, fontSize: '0.9rem' }}>
                     {submission.assignment.title}
                   </span>
                 </div>

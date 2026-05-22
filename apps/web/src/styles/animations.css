@@ -1,0 +1,179 @@
+/* =========================================================================
+ * Fuxie canonical motion class set
+ *
+ * Spec: gamified-ui-asset-rollout
+ * Task: 4.4 — Define animation class set and CSS rules constrained to
+ *              transform/opacity.
+ *
+ * Validates:
+ *   Requirement 13.1 — animate only `transform` and `opacity` (never
+ *                      top/left/right/bottom/width/height/margin/padding).
+ *   Requirement 13.2 — closed class set
+ *                      `{animate-idle, animate-coach, animate-reward,
+ *                        animate-speak}` is the canonical motion vocabulary;
+ *                      reduced-motion media query strips them.
+ *   Requirement 13.5 — every animation duration is within [120ms, 2000ms].
+ *   Requirement 13.7 — animations finite/snappable; cap at 2000ms.
+ *
+ * Notes
+ *   - Each canonical class drives ONE keyframe that touches only `transform`
+ *     and/or `opacity`. The keyframes finish well under the 2000ms upper
+ *     bound (Req 13.5/13.7) so the iteration is stable and the loop snaps
+ *     cleanly when reduced-motion or force-complete kicks in.
+ *   - Legacy `.fuxie-mascot-motion-*` aliases (used by `FuxieMascotMotion`
+ *     in `apps/web/src/components/gamification/quest-visuals.tsx`) are
+ *     mapped onto the canonical animations to keep a single source of
+ *     timing. Components should migrate to the canonical `animate-*` names
+ *     going forward.
+ *   - `animation-fill-mode: both` ensures the last frame is shown when the
+ *     animation is paused/stripped (used by reduced-motion + force-complete).
+ * ========================================================================= */
+
+/* ----- Keyframes (transform + opacity only) ----- */
+
+@keyframes fuxie-animate-idle {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(-3px) rotate(1deg);
+    opacity: 1;
+  }
+}
+
+@keyframes fuxie-animate-coach {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  35% {
+    transform: translateY(-4px) rotate(-1deg);
+    opacity: 1;
+  }
+  70% {
+    transform: translateY(-1px) rotate(1.5deg);
+    opacity: 1;
+  }
+}
+
+@keyframes fuxie-animate-reward {
+  0%,
+  100% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+  45% {
+    transform: translateY(-5px) scale(1.035);
+    opacity: 1;
+  }
+}
+
+@keyframes fuxie-animate-speak {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg) scale(1);
+    opacity: 1;
+  }
+  30% {
+    transform: translateY(-2px) rotate(-1deg) scale(1.015);
+    opacity: 1;
+  }
+  60% {
+    transform: translateY(0) rotate(1deg) scale(1.01);
+    opacity: 1;
+  }
+}
+
+/* ----- Canonical animation class set -----
+ * Closed set: { animate-idle, animate-coach, animate-reward, animate-speak }
+ * Durations are intentionally inside the [120ms, 2000ms] window so each
+ * iteration is bounded (Req 13.5, 13.7). The loop is `infinite` because the
+ * mascot is ambient; consumers that need a one-shot reveal use
+ * `ResultRewardLoop` which overrides timing per Req 7.1/7.2.
+ */
+
+.animate-idle,
+.animate-coach,
+.animate-reward,
+.animate-speak {
+  transform-origin: 50% 82%;
+  will-change: transform, opacity;
+  animation-fill-mode: both;
+}
+
+.animate-idle {
+  animation: fuxie-animate-idle 1800ms ease-in-out infinite;
+}
+
+.animate-coach {
+  animation: fuxie-animate-coach 1700ms ease-in-out infinite;
+}
+
+.animate-reward {
+  animation: fuxie-animate-reward 1400ms ease-in-out infinite;
+}
+
+.animate-speak {
+  animation: fuxie-animate-speak 1200ms ease-in-out infinite;
+}
+
+/* ----- Legacy aliases (back-compat) -----
+ * Map the existing `.fuxie-mascot-motion-*` selectors onto the canonical
+ * keyframes so the codebase only carries one set of timings. Existing
+ * consumers (e.g. `quest-visuals.tsx`) keep working until they migrate to
+ * `animate-*`.
+ */
+
+.fuxie-mascot-motion-idle {
+  animation: fuxie-animate-idle 1800ms ease-in-out infinite;
+  transform-origin: 50% 82%;
+  will-change: transform, opacity;
+  animation-fill-mode: both;
+}
+
+.fuxie-mascot-motion-coach {
+  animation: fuxie-animate-coach 1700ms ease-in-out infinite;
+  transform-origin: 50% 82%;
+  will-change: transform, opacity;
+  animation-fill-mode: both;
+}
+
+.fuxie-mascot-motion-reward {
+  animation: fuxie-animate-reward 1400ms ease-in-out infinite;
+  transform-origin: 50% 82%;
+  will-change: transform, opacity;
+  animation-fill-mode: both;
+}
+
+.fuxie-mascot-motion-speak {
+  animation: fuxie-animate-speak 1200ms ease-in-out infinite;
+  transform-origin: 50% 82%;
+  will-change: transform, opacity;
+  animation-fill-mode: both;
+}
+
+/* ----- Reduced-motion strip (Req 13.2, 13.3) -----
+ * When the OS/user requests reduced motion, drop the canonical and legacy
+ * animations and snap to the final frame (transform: none keeps the rest
+ * pose). The `useReducedMotion` hook (task 4.3) also stops re-rendering
+ * those classes, but this CSS is the belt-and-braces guarantee for any
+ * surface that hasn't been migrated yet.
+ */
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-idle,
+  .animate-coach,
+  .animate-reward,
+  .animate-speak,
+  .fuxie-mascot-motion-idle,
+  .fuxie-mascot-motion-coach,
+  .fuxie-mascot-motion-reward,
+  .fuxie-mascot-motion-speak {
+    animation: none !important;
+    transform: none !important;
+    will-change: auto;
+  }
+}

@@ -8,7 +8,7 @@ export default function NotFound() {
                 {/* Mascot */}
                 <div className="mb-6">
                     <Image
-                        src="/mascot/state/fuxie-state-error.png"
+                        src="/mascot-3d/states/global/fuxie-global-fuxie-error-repair-helper.webp"
                         alt="Fuxie bối rối"
                         width={120}
                         height={120}

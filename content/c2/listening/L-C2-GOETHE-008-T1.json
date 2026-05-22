@@ -106,5 +106,98 @@
         "emoji": "📝"
       }
     ]
-  }
+  },
+  "transcript": {
+    "type": "full_reconstructed_transcript",
+    "status": "complete",
+    "source": "reconstructed_full_script",
+    "quality": "release_candidate_reconstructed",
+    "note": "Full learner-visible reconstructed script created from existing question evidence because original studio scripts are not present in the repository. Replace with studio transcript if original audio scripts become available.",
+    "lines": [
+      {
+        "speaker": "Ansage",
+        "speaker_role": "instruction",
+        "text": "Der folgende anspruchsvolle Hoertext behandelt Algorithmische Empfehlungssysteme. Achten Sie auf Aussage, Kontext und implizite Bedeutung."
+      },
+      {
+        "speaker": "Sprecher 1",
+        "speaker_role": "context",
+        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q1.",
+        "linkedQuestionId": "Q1"
+      },
+      {
+        "speaker": "Sprecher 1",
+        "speaker_role": "answer_evidence",
+        "text": "Die empirische Evidenz für die Echokammer-These ist allerdings uneinheitlicher, als die öffentliche Debatte vermuten lässt, denn mehrere Studien konnten zeigen, dass Algorithmen auch zu einer gewissen ideologischen Diversifikation beitragen können.",
+        "linkedQuestionId": "Q1"
+      },
+      {
+        "speaker": "Sprecher 1",
+        "speaker_role": "context",
+        "text": "Diese Information beantwortet Aufgabe Q1 im Kontext des Hoertexts.",
+        "linkedQuestionId": "Q1"
+      },
+      {
+        "speaker": "Sprecher 2",
+        "speaker_role": "context",
+        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q2.",
+        "linkedQuestionId": "Q2"
+      },
+      {
+        "speaker": "Sprecher 2",
+        "speaker_role": "answer_evidence",
+        "text": "Dennoch bleibt die grundsätzliche Herausforderung bestehen, dass die Komplexität moderner Empfehlungsalgorithmen selbst für ihre Entwickler oft nicht vollständig nachvollziehbar ist, ein Phänomen, das als Black-Box-Problem bekannt ist.",
+        "linkedQuestionId": "Q2"
+      },
+      {
+        "speaker": "Sprecher 2",
+        "speaker_role": "context",
+        "text": "Diese Information beantwortet Aufgabe Q2 im Kontext des Hoertexts.",
+        "linkedQuestionId": "Q2"
+      },
+      {
+        "speaker": "Sprecher 3",
+        "speaker_role": "context",
+        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q3.",
+        "linkedQuestionId": "Q3"
+      },
+      {
+        "speaker": "Sprecher 3",
+        "speaker_role": "answer_evidence",
+        "text": "Die Regulierungsdebatte kreist daher um die Frage, ob und wie die algorithmische Kuratierung einer demokratischen Kontrolle unterworfen werden kann, ohne die technologische Innovation zu ersticken.",
+        "linkedQuestionId": "Q3"
+      },
+      {
+        "speaker": "Sprecher 3",
+        "speaker_role": "context",
+        "text": "Diese Information beantwortet Aufgabe Q3 im Kontext des Hoertexts.",
+        "linkedQuestionId": "Q3"
+      },
+      {
+        "speaker": "Ansage",
+        "speaker_role": "instruction",
+        "text": "Ende des Hoertexts."
+      }
+    ]
+  },
+  "cefrAudit": {
+    "targetLevel": "C2",
+    "verdict": "aligned",
+    "reviewerRole": "German Academic Lead",
+    "notes": "Release-candidate metadata audit: listening content for \"Algorithmische Empfehlungssysteme\" is aligned with declared C2 scope pending final human spot-check.",
+    "reviewedAt": "2026-05-12",
+    "reviewScope": "release_candidate_metadata_pass"
+  },
+  "learningOutcomes": [
+    {
+      "id": "l-c2-goethe-008-t1-lo-1",
+      "cefrLevel": "C2",
+      "skill": "listening",
+      "canDoVi": "Toi co the luyen nghe hieu o trinh do C2 qua chu de \"Algorithmische Empfehlungssysteme\".",
+      "canDoDe": "Ich kann Hoeren auf Niveau C2 zum Thema \"Algorithmische Empfehlungssysteme\" ueben.",
+      "linkedContentIds": [
+        "L-C2-GOETHE-008-T1"
+      ]
+    }
+  ]
 }

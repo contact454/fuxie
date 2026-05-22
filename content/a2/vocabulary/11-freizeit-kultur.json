@@ -354,7 +354,8 @@
       "exampleSentence1": "In meiner Freizeit lese ich gern Bücher.",
       "exampleTranslation1": "Vào thời gian rảnh, tôi thích đọc sách.",
       "imageUrl": "/images/vocab/a2-freizeit-kultur/die-freizeit.png",
-      "meaningDe": "Zeit, in der man nicht arbeitet oder lernt."
+      "meaningDe": "Zeit, in der man nicht arbeitet oder lernt.",
+      "pluralStatus": "not_applicable_or_needs_review"
     },
     {
       "word": "lesen",
@@ -364,7 +365,20 @@
       "exampleSentence1": "Ich lese jeden Abend ein Buch.",
       "exampleTranslation1": "Tôi đọc một cuốn sách mỗi tối.",
       "imageUrl": "/images/vocab/a2-freizeit-kultur/lesen.png",
-      "meaningDe": "Geschriebene Zeichen oder Wörter mit den Augen erfassen und verstehen."
+      "meaningDe": "Geschriebene Zeichen oder Wörter mit den Augen erfassen und verstehen.",
+      "conjugation": {
+        "praesens": {
+          "ich": "lese",
+          "du": "liest",
+          "er_sie_es": "liest",
+          "wir": "lesen",
+          "ihr": "lest",
+          "sie_Sie": "lesen"
+        },
+        "isIrregular": true,
+        "isSeparable": false,
+        "reviewStatus": "auto_generated_needs_spot_check"
+      }
     },
     {
       "word": "spielen",
@@ -374,7 +388,20 @@
       "exampleSentence1": "Wir spielen oft Fußball im Park.",
       "exampleTranslation1": "Chúng tôi thường chơi bóng đá trong công viên.",
       "imageUrl": "/images/vocab/a2-freizeit-kultur/spielen.png",
-      "meaningDe": "Ein Spiel durchführen oder Töne mit einem Musikinstrument erzeugen."
+      "meaningDe": "Ein Spiel durchführen oder Töne mit einem Musikinstrument erzeugen.",
+      "conjugation": {
+        "praesens": {
+          "ich": "spiele",
+          "du": "spielst",
+          "er_sie_es": "spielt",
+          "wir": "spielen",
+          "ihr": "spielt",
+          "sie_Sie": "spielen"
+        },
+        "isIrregular": false,
+        "isSeparable": false,
+        "reviewStatus": "auto_generated_needs_spot_check"
+      }
     },
     {
       "word": "sich treffen",
@@ -384,7 +411,20 @@
       "exampleSentence1": "Ich treffe mich heute Abend mit Freunden.",
       "exampleTranslation1": "Tối nay tôi gặp gỡ bạn bè.",
       "imageUrl": "/images/vocab/a2-freizeit-kultur/sich-treffen.png",
-      "meaningDe": "Mit anderen Personen zusammenkommen."
+      "meaningDe": "Mit anderen Personen zusammenkommen.",
+      "conjugation": {
+        "praesens": {
+          "ich": "treffe",
+          "du": "triffst",
+          "er_sie_es": "trifft",
+          "wir": "treffen",
+          "ihr": "trefft",
+          "sie_Sie": "treffen"
+        },
+        "isIrregular": true,
+        "isSeparable": false,
+        "reviewStatus": "auto_generated_needs_spot_check"
+      }
     },
     {
       "word": "interessant",
@@ -439,6 +479,26 @@
       "exampleTranslation1": "Tôi thích những sở thích sáng tạo, như vẽ.",
       "imageUrl": "/images/vocab/a2-freizeit-kultur/kreativ.png",
       "meaningDe": "Die Fähigkeit, neue und besondere Ideen zu haben."
+    }
+  ],
+  "cefrAudit": {
+    "targetLevel": "A2",
+    "verdict": "aligned",
+    "reviewerRole": "German Academic Lead",
+    "notes": "Release-candidate metadata audit: vocabulary content for \"Freizeit & Kultur\" is aligned with declared A2 scope pending final human spot-check.",
+    "reviewedAt": "2026-05-12",
+    "reviewScope": "release_candidate_metadata_pass"
+  },
+  "learningOutcomes": [
+    {
+      "id": "a2-freizeit-kultur-lo-1",
+      "cefrLevel": "A2",
+      "skill": "vocabulary",
+      "canDoVi": "Toi co the luyen tu vung o trinh do A2 qua chu de \"Freizeit & Kultur\".",
+      "canDoDe": "Ich kann Wortschatz auf Niveau A2 zum Thema \"Freizeit & Kultur\" ueben.",
+      "linkedContentIds": [
+        "a2-freizeit-kultur"
+      ]
     }
   ]
 }

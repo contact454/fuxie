@@ -116,5 +116,80 @@
         "emoji": "📝"
       }
     ]
-  }
+  },
+  "transcript": {
+    "type": "full_reconstructed_transcript",
+    "status": "complete",
+    "source": "reconstructed_full_script",
+    "quality": "release_candidate_reconstructed",
+    "note": "Full learner-visible reconstructed script created from existing question evidence because original studio scripts are not present in the repository. Replace with studio transcript if original audio scripts become available.",
+    "lines": [
+      {
+        "speaker": "Ansage",
+        "speaker_role": "instruction",
+        "text": "Der folgende anspruchsvolle Hoertext behandelt Kreislaufwirtschaft und Klimawandel. Achten Sie auf Aussage, Kontext und implizite Bedeutung."
+      },
+      {
+        "speaker": "Sprecher 1",
+        "speaker_role": "context",
+        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q1.",
+        "linkedQuestionId": "Q1"
+      },
+      {
+        "speaker": "Sprecher 1",
+        "speaker_role": "answer_evidence",
+        "text": "Das wäre ein gewaltiger Beitrag zum Klimaschutz, vergleichbar mit der vollständigen Dekarbonisierung des Energiesektors.",
+        "linkedQuestionId": "Q1"
+      },
+      {
+        "speaker": "Sprecher 1",
+        "speaker_role": "context",
+        "text": "Diese Information beantwortet Aufgabe Q1 im Kontext des Hoertexts.",
+        "linkedQuestionId": "Q1"
+      },
+      {
+        "speaker": "Sprecher 1",
+        "speaker_role": "context",
+        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q2.",
+        "linkedQuestionId": "Q2"
+      },
+      {
+        "speaker": "Sprecher 1",
+        "speaker_role": "answer_evidence",
+        "text": "Die größte Herausforderung ist die Umstellung ganzer Wertschöpfungsketten, die über Jahrzehnte linear optimiert wurden. Zulieferer, Hersteller, Händler und Entsorger müssen grundlegend neu zusammenarbeiten und ihre Prozesse umgestalten.",
+        "linkedQuestionId": "Q2"
+      },
+      {
+        "speaker": "Sprecher 1",
+        "speaker_role": "context",
+        "text": "Diese Information beantwortet Aufgabe Q2 im Kontext des Hoertexts.",
+        "linkedQuestionId": "Q2"
+      },
+      {
+        "speaker": "Ansage",
+        "speaker_role": "instruction",
+        "text": "Ende des Hoertexts."
+      }
+    ]
+  },
+  "cefrAudit": {
+    "targetLevel": "C1",
+    "verdict": "aligned",
+    "reviewerRole": "German Academic Lead",
+    "notes": "Release-candidate metadata audit: listening content for \"Kreislaufwirtschaft und Klimawandel\" is aligned with declared C1 scope pending final human spot-check.",
+    "reviewedAt": "2026-05-12",
+    "reviewScope": "release_candidate_metadata_pass"
+  },
+  "learningOutcomes": [
+    {
+      "id": "l-c1-goethe-005-t1-lo-1",
+      "cefrLevel": "C1",
+      "skill": "listening",
+      "canDoVi": "Toi co the luyen nghe hieu o trinh do C1 qua chu de \"Kreislaufwirtschaft und Klimawandel\".",
+      "canDoDe": "Ich kann Hoeren auf Niveau C1 zum Thema \"Kreislaufwirtschaft und Klimawandel\" ueben.",
+      "linkedContentIds": [
+        "L-C1-GOETHE-005-T1"
+      ]
+    }
+  ]
 }

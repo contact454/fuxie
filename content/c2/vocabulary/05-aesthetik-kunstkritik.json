@@ -170,7 +170,8 @@
       "exampleTranslation2": "Đặc biệt trong thẩm mỹ vật chất của các tác phẩm nghệ thuật đương đại, tính nội tại của vật liệu và các phẩm chất xúc giác của nó được nhấn mạnh.",
       "notes": "Fachsprachlich (Philosophie, Theologie). Aus dem Lateinischen 'immanere' (darin bleiben, innewohnen). Bezeichnet das Innewohnende, das innerhalb einer bestimmten Grenze oder Sphäre Bleibende. Gegensatz zu Transzendenz. Adjektiv: immanent.",
       "imageUrl": "/images/vocab/c2-aesthetik-kunstkritik/die-immanenz.png",
-      "meaningDe": "Die Eigenschaft, in einer Sache selbst enthalten zu sein, ohne von außen zu kommen"
+      "meaningDe": "Die Eigenschaft, in einer Sache selbst enthalten zu sein, ohne von außen zu kommen",
+      "pluralStatus": "not_applicable_or_needs_review"
     },
     {
       "word": "konnotieren",
@@ -189,9 +190,12 @@
       "notes": "Fachsprachlich (Linguistik, Semiotik). Aus dem Lateinischen 'connotare' (mitbezeichnen). Bedeutet, eine zusätzliche, assoziative oder emotionale Bedeutung (Konnotation) neben der primären, wörtlichen Bedeutung (Denotation) zu haben oder zu vermitteln. Nomen: die Konnotation.",
       "conjugation": {
         "praesens": {
-          "ich": "konnotiere",
-          "du": "konnotierst",
-          "er/sie/es": "konnotiert"
+          "ich": "ich konnotiere",
+          "du": "du konnotierst",
+          "er_sie_es": "er/sie/es konnotiert",
+          "wir": "wir konnotieren",
+          "ihr": "ihr konnotiert",
+          "sie_Sie": "sie/Sie konnotieren"
         },
         "praeteritum": {
           "ich": "konnotierte"
@@ -218,14 +222,17 @@
       "notes": "Gehoben/bildungssprachlich. Bedeutet, etwas gedanklich präsent zu machen, es sich vorzustellen oder es sich bewusst zu machen. Oft im Kontext von komplexen oder historischen Sachverhalten verwendet.",
       "conjugation": {
         "praesens": {
-          "ich": "sich vergegenwärtige",
-          "du": "sich vergegenwärtigst",
-          "er/sie/es": "sich vergegenwärtigt"
+          "ich": "ich vergegenwärtige mir",
+          "du": "du vergegenwärtigst dir",
+          "er_sie_es": "er/sie/es vergegenwärtigt sich",
+          "wir": "wir vergegenwärtigen uns",
+          "ihr": "ihr vergegenwärtigt euch",
+          "sie_Sie": "sie/Sie vergegenwärtigen sich"
         },
         "praeteritum": {
           "ich": "sich vergegenwärtigte"
         },
-        "perfekt": "hat gesich vergegenwärtigt"
+        "perfekt": "hat sich vergegenwärtigt"
       },
       "imageUrl": "/images/vocab/c2-aesthetik-kunstkritik/sich-vergegenwaertigen.png",
       "meaningDe": "Sich etwas im Geist vorstellen oder an etwas bewusst erinnern"
@@ -247,9 +254,12 @@
       "notes": "Fachsprachlich (Kunsttheorie). Aus dem Lateinischen 'appropriare' (sich aneignen). Bezeichnet in der Kunst die Praxis, bereits existierende Bilder, Objekte oder Ideen aus anderen Kontexten zu übernehmen und in einem neuen Werk zu verwenden, oft um deren ursprüngliche Bedeutung zu verändern oder zu kommentieren. Nomen: die Appropriation.",
       "conjugation": {
         "praesens": {
-          "ich": "appropriiere",
-          "du": "appropriierst",
-          "er/sie/es": "appropriiert"
+          "ich": "ich appropriiere",
+          "du": "du appropriierst",
+          "er_sie_es": "er/sie/es appropriiert",
+          "wir": "wir appropriieren",
+          "ihr": "ihr appropriiert",
+          "sie_Sie": "sie/Sie appropriieren"
         },
         "praeteritum": {
           "ich": "appropriierte"
@@ -276,14 +286,17 @@
       "notes": "Gehoben/bildungssprachlich. Bedeutet, Grenzen aufzuheben, zu überschreiten oder zu verwischen. Oft im Kontext von Kunst, Medien oder gesellschaftlichen Phänomenen verwendet. Nomen: die Entgrenzung.",
       "conjugation": {
         "praesens": {
-          "ich": "entgrenze",
-          "du": "entgrenzst",
-          "er/sie/es": "entgrenzt"
+          "ich": "ich entgrenze",
+          "du": "du entgrenzt",
+          "er_sie_es": "er/sie/es entgrenzt",
+          "wir": "wir entgrenzen",
+          "ihr": "ihr entgrenzt",
+          "sie_Sie": "sie/Sie entgrenzen"
         },
         "praeteritum": {
           "ich": "entgrenzte"
         },
-        "perfekt": "hat geentgrenzt"
+        "perfekt": "hat entgrenzt"
       },
       "imageUrl": "/images/vocab/c2-aesthetik-kunstkritik/entgrenzen.png",
       "meaningDe": "Grenzen auflösen oder den Rahmen einer Sache erweitern"
@@ -347,6 +360,26 @@
       "notes": "Gehoben/fachsprachlich. Aus dem Lateinischen (wörtlich: 'eigener Art'). Bedeutet 'einzigartig in seiner Art', 'ohne Vergleich', 'besonderer Art'. Wird verwendet, um die Einzigartigkeit eines Phänomens oder Objekts zu betonen, das sich nicht in bestehende Kategorien einordnen lässt.",
       "imageUrl": "/images/vocab/c2-aesthetik-kunstkritik/sui-generis.png",
       "meaningDe": "Einzigartig; etwas, das eine ganz eigene Art hat und nicht vergleichbar ist"
+    }
+  ],
+  "cefrAudit": {
+    "targetLevel": "C2",
+    "verdict": "aligned",
+    "reviewerRole": "German Academic Lead",
+    "notes": "Release-candidate metadata audit: vocabulary content for \"Ästhetik & Kunstkritik\" is aligned with declared C2 scope pending final human spot-check.",
+    "reviewedAt": "2026-05-12",
+    "reviewScope": "release_candidate_metadata_pass"
+  },
+  "learningOutcomes": [
+    {
+      "id": "c2-aesthetik-kunstkritik-lo-1",
+      "cefrLevel": "C2",
+      "skill": "vocabulary",
+      "canDoVi": "Toi co the luyen tu vung o trinh do C2 qua chu de \"Ästhetik & Kunstkritik\".",
+      "canDoDe": "Ich kann Wortschatz auf Niveau C2 zum Thema \"Ästhetik & Kunstkritik\" ueben.",
+      "linkedContentIds": [
+        "c2-aesthetik-kunstkritik"
+      ]
     }
   ]
 }

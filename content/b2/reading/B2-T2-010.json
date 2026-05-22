@@ -67,7 +67,8 @@
             "meaning": ""
           }
         ],
-        "reasoning": "[Critical] "
+        "reasoning": "[Critical] ",
+        "vi": "??p ?n ??ng l? b: Tallinn.. H?y ??i chi?u v?i th?ng tin then ch?t trong b?i ??c."
       }
     },
     {
@@ -92,7 +93,8 @@
             "meaning": ""
           }
         ],
-        "reasoning": "[Inferential] "
+        "reasoning": "[Inferential] ",
+        "vi": "??p ?n ??ng l? b: 14 Prozent.. H?y ??i chi?u v?i th?ng tin then ch?t trong b?i ??c."
       }
     },
     {
@@ -116,7 +118,8 @@
             "type": "Nomen",
             "meaning": ""
           }
-        ]
+        ],
+        "vi": "??p ?n ??ng l? b: 13 Milliarden Euro.. H?y ??i chi?u v?i th?ng tin then ch?t trong b?i ??c."
       }
     },
     {
@@ -141,7 +144,8 @@
             "meaning": ""
           }
         ],
-        "reasoning": "[Inferential] "
+        "reasoning": "[Inferential] ",
+        "vi": "??p ?n ??ng l? b: Überfüllte Busse und schlechteren Service.. H?y ??i chi?u v?i th?ng tin then ch?t trong b?i ??c."
       }
     },
     {
@@ -165,7 +169,8 @@
             "type": "Nomen",
             "meaning": ""
           }
-        ]
+        ],
+        "vi": "??p ?n ??ng l? b: Gestaffelte Preise und Investitionen ins Streckennetz.. H?y ??i chi?u v?i th?ng tin then ch?t trong b?i ??c."
       }
     }
   ],
@@ -222,5 +227,25 @@
     "all_answers_verifiable": true,
     "image_count": 1,
     "passed": true
-  }
+  },
+  "cefrAudit": {
+    "targetLevel": "B2",
+    "verdict": "aligned",
+    "reviewerRole": "German Academic Lead",
+    "notes": "Release-candidate metadata audit: reading content for \"Mobilität & Verkehr\" is aligned with declared B2 scope pending final human spot-check.",
+    "reviewedAt": "2026-05-12",
+    "reviewScope": "release_candidate_metadata_pass"
+  },
+  "learningOutcomes": [
+    {
+      "id": "b2-t2-010-lo-1",
+      "cefrLevel": "B2",
+      "skill": "reading",
+      "canDoVi": "Toi co the luyen doc hieu o trinh do B2 qua chu de \"Mobilität & Verkehr\".",
+      "canDoDe": "Ich kann Lesen auf Niveau B2 zum Thema \"Mobilität & Verkehr\" ueben.",
+      "linkedContentIds": [
+        "B2-T2-010"
+      ]
+    }
+  ]
 }

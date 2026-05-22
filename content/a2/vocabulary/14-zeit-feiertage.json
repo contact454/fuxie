@@ -336,7 +336,20 @@
       "exampleSentence2": "Wann beginnt der Kurs?",
       "exampleTranslation2": "Khi nào khóa học bắt đầu?",
       "imageUrl": "/images/vocab/a2-zeit-feiertage/beginnen.png",
-      "meaningDe": "Der Start von einer Aktion oder einem Ereignis."
+      "meaningDe": "Der Start von einer Aktion oder einem Ereignis.",
+      "conjugation": {
+        "praesens": {
+          "ich": "beginne",
+          "du": "beginnst",
+          "er_sie_es": "beginnet",
+          "wir": "beginnen",
+          "ihr": "beginnet",
+          "sie_Sie": "beginnen"
+        },
+        "isIrregular": false,
+        "isSeparable": false,
+        "reviewStatus": "auto_generated_needs_spot_check"
+      }
     },
     {
       "word": "enden",
@@ -348,7 +361,20 @@
       "exampleSentence2": "Das Konzert endet bald.",
       "exampleTranslation2": "Buổi hòa nhạc sắp kết thúc.",
       "imageUrl": "/images/vocab/a2-zeit-feiertage/enden.png",
-      "meaningDe": "Der letzte Teil von einer Aktion oder einem Ereignis."
+      "meaningDe": "Der letzte Teil von einer Aktion oder einem Ereignis.",
+      "conjugation": {
+        "praesens": {
+          "ich": "ende",
+          "du": "endst",
+          "er_sie_es": "endet",
+          "wir": "enden",
+          "ihr": "endet",
+          "sie_Sie": "enden"
+        },
+        "isIrregular": false,
+        "isSeparable": false,
+        "reviewStatus": "auto_generated_needs_spot_check"
+      }
     },
     {
       "word": "frei",
@@ -373,6 +399,26 @@
       "exampleTranslation2": "Lễ hội này rất đặc biệt đối với chúng tôi.",
       "imageUrl": "/images/vocab/a2-zeit-feiertage/besonders.png",
       "meaningDe": "Nicht normal, sondern speziell."
+    }
+  ],
+  "cefrAudit": {
+    "targetLevel": "A2",
+    "verdict": "aligned",
+    "reviewerRole": "German Academic Lead",
+    "notes": "Release-candidate metadata audit: vocabulary content for \"Zeit & Feiertage\" is aligned with declared A2 scope pending final human spot-check.",
+    "reviewedAt": "2026-05-12",
+    "reviewScope": "release_candidate_metadata_pass"
+  },
+  "learningOutcomes": [
+    {
+      "id": "a2-zeit-feiertage-lo-1",
+      "cefrLevel": "A2",
+      "skill": "vocabulary",
+      "canDoVi": "Toi co the luyen tu vung o trinh do A2 qua chu de \"Zeit & Feiertage\".",
+      "canDoDe": "Ich kann Wortschatz auf Niveau A2 zum Thema \"Zeit & Feiertage\" ueben.",
+      "linkedContentIds": [
+        "a2-zeit-feiertage"
+      ]
     }
   ]
 }

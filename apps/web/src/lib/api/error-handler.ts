@@ -37,6 +37,21 @@ export function handleApiError(error: unknown): NextResponse {
         )
     }
 
+    if (hasHttpStatus(error)) {
+        const status = Number(error.status)
+
+        return NextResponse.json(
+            {
+                success: false,
+                error: {
+                    code: status === 403 ? 'FORBIDDEN' : 'REQUEST_ERROR',
+                    message: error instanceof Error ? error.message : 'Request failed',
+                },
+            },
+            { status }
+        )
+    }
+
     // Prisma unique constraint
     if (
         error &&
@@ -56,4 +71,11 @@ export function handleApiError(error: unknown): NextResponse {
         { success: false, error: { code: 'INTERNAL_ERROR', message: 'An unexpected error occurred' } },
         { status: 500 }
     )
+}
+
+function hasHttpStatus(error: unknown): error is { status: number | string } {
+    if (!error || typeof error !== 'object' || !('status' in error)) return false
+
+    const status = Number((error as { status?: unknown }).status)
+    return Number.isInteger(status) && status >= 400 && status < 600
 }

@@ -126,13 +126,13 @@ export function ReviewSession({ initialCards, totalDue: _totalDue }: ReviewSessi
     }, [currentCard, currentIndex, cards.length, isSubmitting])
 
     // Mascot reaction based on last rating
-    const getMascotReaction = (): { variant: 'correct' | 'encouragement' | 'thinking'; message: string } | null => {
+    const getMascotReaction = (): { variant: 'correct' | 'encourage' | 'thinking'; message: string } | null => {
         if (!lastRating) return null
         switch (lastRating) {
             case 'EASY': return { variant: 'correct', message: 'Tuyệt lắm! 🌟' }
             case 'GOOD': return { variant: 'correct', message: 'Làm tốt lắm! 👍' }
             case 'HARD': return { variant: 'thinking', message: 'Cứ luyện tiếp nhé! 💪' }
-            case 'AGAIN': return { variant: 'encouragement', message: 'Không sao, làm lại nào! 🔄' }
+            case 'AGAIN': return { variant: 'encourage', message: 'Không sao, làm lại nào! 🔄' }
         }
     }
 
@@ -142,12 +142,12 @@ export function ReviewSession({ initialCards, totalDue: _totalDue }: ReviewSessi
             ? Math.round((stats.correct / stats.totalReviewed) * 100)
             : 0
 
-        const mascotVariant = accuracy >= 80 ? 'celebrate' : accuracy >= 50 ? 'correct' : 'encouragement'
+        const mascotVariant = accuracy >= 80 ? 'celebrate' : accuracy >= 50 ? 'correct' : 'encourage'
         const celebrationMessage = accuracy >= 80
-            ? 'Làm tốt lắm! Em đã hoàn thành tất cả thẻ! 🎉'
+            ? 'Thành tích đáng nể! 🎉'
             : accuracy >= 50
-                ? 'Ổn rồi, tiếp tục nhé! 👏'
-                : 'Đừng bỏ cuộc, luyện thêm sẽ chắc hơn! 💪'
+                ? 'Giữ vững phong độ! 🌟'
+                : 'Không sao cả, thử lại lần nữa nhé! 💪'
 
         return (
             <div className="flex flex-col items-center justify-center min-h-[500px] animate-fade-in-up">

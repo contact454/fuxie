@@ -1,8 +1,11 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { z } from 'zod'
 import { handleApiError } from '@/lib/api/error-handler'
-import { withAuth } from '@/lib/auth/middleware'
+import { withDbAuth } from '@/lib/auth/middleware'
 import { editDistance, alignWords } from '@/lib/ai/text-alignment'
+import { prisma } from '@fuxie/database'
+import { recordAnalyticsEvent } from '@/lib/analytics/events'
+
 
 // Increase Vercel function timeout for audio processing
 export const maxDuration = 30
@@ -14,6 +17,7 @@ const speakingSchema = z.object({
   referenceText: z.string().min(1),
   level: z.enum(VALID_LEVELS).default('A1'),
   exerciseType: z.string().default('nachsprechen'),
+  lessonId: z.string().optional(),
 })
 
 // ─── Call Gemini REST API directly (more reliable than SDK for audio) ───
@@ -111,7 +115,7 @@ async function callGeminiWithAudio(
 
 export async function POST(request: NextRequest) {
   try {
-    await withAuth(request)
+    const auth = await withDbAuth(request)
 
     const formData = await request.formData()
     const audioFile = formData.get('audio') as File | null
@@ -123,10 +127,11 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    const { referenceText, level, exerciseType } = speakingSchema.parse({
+    const { referenceText, level, exerciseType, lessonId } = speakingSchema.parse({
       referenceText: formData.get('referenceText'),
       level: formData.get('level') || 'A1',
       exerciseType: formData.get('exerciseType') || 'nachsprechen',
+      lessonId: formData.get('lessonId'),
     })
 
   
@@ -208,7 +213,35 @@ Antworte NUR als valides JSON ohne Markdown:
     // Use AI score directly
     const accuracy = usedAI ? aiScore : 0
 
+    await recordAnalyticsEvent(prisma, {
+      userId: auth.userId,
+      role: auth.role,
+      eventName: usedAI ? 'ai_feedback_generated' : 'ai_feedback_failed',
+      source: 'speaking.evaluate',
+      actionId: `${exerciseType}:${level}`,
+      actionType: 'speaking_submission',
+      level,
+      skill: 'SPRECHEN',
+      metadata: usedAI
+        ? {
+            flow: 'speaking',
+            score_percent: accuracy,
+            issue_count: overallTips.filter((tip) => tip.startsWith('- ')).length,
+            word_count: wordResults.length,
+            exercise_type: exerciseType,
+            provider_status: 'success',
+          }
+        : {
+            flow: 'speaking',
+            error_type: 'provider_or_parse_failure',
+            exercise_type: exerciseType,
+          },
+    })
+
   
+    const { signScore } = await import('@/lib/auth/score-signer')
+    const signature = lessonId && usedAI ? signScore(lessonId, accuracy) : undefined
+
     return NextResponse.json({
       transcript: usedAI ? transcript : '',
       accuracy,
@@ -216,6 +249,7 @@ Antworte NUR als valides JSON ohne Markdown:
       words: wordResults,
       overallTips,
       suggestRetry: accuracy < 70,
+      signature,
     })
 
   } catch (err) {

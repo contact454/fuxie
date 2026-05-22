@@ -33,9 +33,9 @@ export function BottomFeedback({ isCorrect, correctAnswer, onContinue }: BottomF
         ? 'border-[#2EC4B6]/30 bg-[#EAFBF8]'
         : 'border-red-200 bg-red-50'
     const iconClass = isCorrect
-        ? 'text-[#087B73] ring-[#2EC4B6]/25'
+        ? 'text-text-success ring-[#2EC4B6]/25'
         : 'text-red-600 ring-red-200'
-    const textColor = isCorrect ? 'text-[#087B73]' : 'text-red-600'
+    const textColor = isCorrect ? 'text-text-success' : 'text-red-600'
     const btnClass = isCorrect
         ? fuxieButtonClass('primary', 'lg', 'min-w-[150px]')
         : 'inline-flex min-w-[150px] items-center justify-center gap-2 rounded-xl bg-red-500 px-6 py-3 text-sm font-bold text-white shadow-lg shadow-red-900/10 transition-all hover:-translate-y-0.5 hover:bg-red-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red-300'
@@ -71,7 +71,7 @@ export function BottomFeedback({ isCorrect, correctAnswer, onContinue }: BottomF
                     onClick={onContinue}
                     className={btnClass}
                 >
-                    Tiếp tục
+                    Tiếp Bước
                 </button>
             </div>
         </div>

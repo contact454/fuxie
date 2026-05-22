@@ -115,14 +115,25 @@ describe('POST /api/v1/session/complete', () => {
         })
         expect(recordLearningActivityMock).toHaveBeenCalledWith(
             expect.anything(),
-            {
+            expect.objectContaining({
                 userId: 'db-user-1',
                 exerciseId: 'session:A1',
                 xpEarned: 40,
                 lessonsCompleted: 1,
                 srsReviewed: 1,
                 wordsLearned: 1,
-            }
+                analytics: {
+                    actionId: 'session:A1',
+                    actionType: 'lesson_session',
+                    level: 'A1',
+                    source: 'session.complete',
+                    metadata: {
+                        review_count: 1,
+                        new_vocab_count: 1,
+                        grammar_count: 1,
+                    },
+                },
+            })
         )
         expect(invalidateLearnerSrsCachesMock).toHaveBeenCalledWith('db-user-1')
         expect(invalidateLearnerProgressCachesMock).not.toHaveBeenCalled()

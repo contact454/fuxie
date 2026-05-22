@@ -25,7 +25,7 @@ export function ExerciseProgress({ current, total, onClose, timer, cefrLevel }: 
             <button
                 onClick={onClose}
                 aria-label="Close exercise"
-                className="flex h-9 w-9 items-center justify-center rounded-xl text-slate-400 transition-colors hover:bg-[#F3FBFF] hover:text-[#3C78A8] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#60A8E4]/40"
+                className="flex h-9 w-9 items-center justify-center rounded-xl text-slate-400 transition-colors hover:bg-[#F3FBFF] hover:text-text-brand focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#60A8E4]/40"
             >
                 <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
@@ -44,7 +44,7 @@ export function ExerciseProgress({ current, total, onClose, timer, cefrLevel }: 
 
             {/* Timer */}
             {timer !== undefined && timer !== null && (
-                <span className="whitespace-nowrap rounded-full bg-[#F3FBFF] px-2.5 py-1 font-mono text-xs font-bold text-[#3C78A8] ring-1 ring-[#60A8E4]/15">
+                <span className="whitespace-nowrap rounded-full bg-[#F3FBFF] px-2.5 py-1 font-mono text-xs font-bold text-text-brand ring-1 ring-[#60A8E4]/15">
                     ⏱ {formatTime(timer)}
                 </span>
             )}

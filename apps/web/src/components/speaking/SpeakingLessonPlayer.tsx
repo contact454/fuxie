@@ -1,9 +1,21 @@
 'use client'
 
-import { useState, useCallback } from 'react'
+import { useState, useCallback, useMemo } from 'react'
 import { useRouter } from 'next/navigation'
 import dynamic from 'next/dynamic'
-import { FUXIE_3D_ASSETS, FuxieRoleMascot } from '@/components/gamification/quest-visuals'
+import {
+  FUXIE_3D_ASSETS,
+  FuxieRoleMascot,
+  GameplayFeedbackMoment,
+  QuestCheckpointRail,
+  RewardPreview,
+  type RewardPreviewItem,
+} from '@/components/gamification/quest-visuals'
+import { trackClientAnalyticsEvent } from '@/lib/analytics/client-events'
+import {
+  buildSpeakingQuestEpisode,
+  type SpeakingQuestEpisodeReceipt,
+} from '@/lib/gamification/speaking-quest-episode'
 import { ArrowLeft, RotateCcw, ArrowRight } from 'lucide-react'
 import styles from './speaking.module.css'
 import type { NachsprechenSentence, NachsprechenConfig } from './types'
@@ -23,6 +35,26 @@ interface Props {
 
 type Phase = 'intro' | 'practice' | 'summary'
 
+interface SpeakingProgressResult {
+  xpEarned?: number
+  rewardPreview?: RewardPreviewItem[]
+  questEpisodeReceipt?: SpeakingQuestEpisodeReceipt
+  nextEpisodeHref?: string
+  badgeReceiptState?: 'preview' | 'newly_unlocked' | 'already_earned'
+  badgeReceipt?: {
+    title: string
+    description: string
+    progress: number
+    receiptState?: string
+  } | null
+  nextBadgePreview?: {
+    title: string
+    description: string
+    progress: number
+    receiptState?: string
+  } | null
+}
+
 const NachsprechenPlayer = dynamic(() => import('./NachsprechenPlayer'), {
   ssr: false,
   loading: () => <div className={styles.lessonPlayer}>Loading practice...</div>,
@@ -31,6 +63,11 @@ const NachsprechenPlayer = dynamic(() => import('./NachsprechenPlayer'), {
 const TurnBasedSpeakingPlayer = dynamic(() => import('./TurnBasedSpeakingPlayer'), {
   ssr: false,
   loading: () => <div className={styles.lessonPlayer}>Loading roleplay...</div>,
+})
+
+const PresentationPlayer = dynamic(() => import('./PresentationPlayer'), {
+  ssr: false,
+  loading: () => <div className={styles.lessonPlayer}>Loading presentation...</div>,
 })
 
 const DEFAULT_CONFIG: NachsprechenConfig = {
@@ -73,9 +110,47 @@ export default function SpeakingLessonPlayer({
   const [finalScore, setFinalScore] = useState(0)
   const [stars, setStars] = useState(0)
   const [isSaving, setIsSaving] = useState(false)
+  const [progressResult, setProgressResult] = useState<SpeakingProgressResult | null>(null)
 
   const config = configJson || DEFAULT_CONFIG
   const sentences = exercisesJson?.sentences || []
+  const canUseQuestEpisode = exerciseType === 'nachsprechen' && sentences.length > 0
+  const questEpisode = useMemo(() => canUseQuestEpisode
+    ? buildSpeakingQuestEpisode({
+      lessonId,
+      topicSlug,
+      title: titleNative,
+      cefrLevel,
+      sentenceCount: sentences.length,
+      exerciseType: 'nachsprechen',
+      nextEpisodeHref: '/speaking',
+    })
+    : null, [canUseQuestEpisode, cefrLevel, lessonId, sentences.length, titleNative, topicSlug])
+
+  const handleStartPractice = useCallback(() => {
+    if (questEpisode) {
+      trackClientAnalyticsEvent({
+        eventName: 'quest_episode_started',
+        source: 'speaking.quest_episode.started',
+        actionId: questEpisode.episodeId,
+        actionType: 'speaking_submission',
+        level: cefrLevel,
+        skill: 'speaking',
+        metadata: {
+          episodeId: questEpisode.episodeId,
+          skill: 'speaking',
+          lessonId,
+          topicSlug,
+          cefrLevel,
+          checkpointId: 'listen',
+          checkpointCount: questEpisode.checkpoints.length,
+          exerciseType: 'nachsprechen',
+        },
+      })
+    }
+    setProgressResult(null)
+    setPhase('practice')
+  }, [cefrLevel, lessonId, questEpisode, topicSlug])
 
   const handleComplete = useCallback(async (score: number) => {
     const earned = getStarsFromScore(score)
@@ -86,7 +161,7 @@ export default function SpeakingLessonPlayer({
     // Save progress
     setIsSaving(true)
     try {
-      await fetch('/api/v1/speaking/progress', {
+      const res = await fetch('/api/v1/speaking/progress', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -94,14 +169,29 @@ export default function SpeakingLessonPlayer({
           score,
           maxScore: 100,
           stars: earned,
+          ...(questEpisode ? {
+            questEpisode: {
+              episodeId: questEpisode.episodeId,
+              skill: questEpisode.skill,
+              sourceId: questEpisode.sourceId,
+              cefrLevel: questEpisode.cefrLevel,
+              checkpointCount: questEpisode.checkpoints.length,
+              completedCheckpoints: questEpisode.checkpoints.length,
+              nextEpisodeHref: questEpisode.nextEpisodeHref,
+              exerciseType: questEpisode.exerciseType,
+              pronunciationFeedbackState: score <= 0 ? 'failed' : score >= config.minAccuracyToPass ? 'evaluated' : 'needs_retry',
+            },
+          } : {}),
         }),
       })
+      const data = await res.json().catch(() => null)
+      if (res.ok && data) setProgressResult(data)
     } catch (err) {
       console.warn('Failed to save progress:', err)
     } finally {
       setIsSaving(false)
     }
-  }, [lessonId])
+  }, [config.minAccuracyToPass, lessonId, questEpisode])
 
   // ═══ INTRO PHASE ═══
   if (phase === 'intro') {
@@ -128,13 +218,13 @@ export default function SpeakingLessonPlayer({
             <FuxieRoleMascot src={FUXIE_3D_ASSETS.speakingCoach} alt="Fuxie speaking coach" size={64} motion="speak" />
           </div>
 
-          <h1 style={{ fontSize: 22, fontWeight: 800, color: '#111827', margin: '0 0 6px' }}>
+          <h1 style={{ fontSize: 22, fontWeight: 800, color: "var(--color-text-primary)", margin: '0 0 6px' }}>
             {titleNative}
           </h1>
-          <p style={{ fontSize: 14, color: '#6B7280', margin: '0 0 4px' }}>
+          <p style={{ fontSize: 14, color: "var(--color-text-muted)", margin: '0 0 4px' }}>
             {titleDe}
           </p>
-          <p style={{ fontSize: 13, color: '#9CA3AF', margin: '0 0 24px' }}>
+          <p style={{ fontSize: 13, color: "var(--color-text-subtle)", margin: '0 0 24px' }}>
             {topicTitleNative} · {cefrLevel}
           </p>
 
@@ -166,13 +256,39 @@ export default function SpeakingLessonPlayer({
                 <strong>Roleplay:</strong> Trò chuyện luân phiên với Fuxie bằng giọng nói. Nhấn Mic để ghi âm từng lượt trả lời!
               </>
             )}
+            {(exerciseType === 'presentation' || exerciseType === 'monologue') && (
+              <>
+                <strong>Trình bày:</strong> Dựa vào gợi ý, bạn hãy nói liên tục thành một đoạn văn ngắn để hoàn thành yêu cầu!
+              </>
+            )}
           </div>
+
+          {questEpisode && (
+            <div style={{ textAlign: 'left', marginBottom: 20 }}>
+              <GameplayFeedbackMoment
+                tone="focus"
+                title="Speaking Quest"
+                message={questEpisode.objective}
+                meta="Listen -> Record -> Refine"
+                className="mb-3"
+              />
+              <QuestCheckpointRail
+                checkpoints={questEpisode.checkpoints}
+                activeId={questEpisode.checkpoints[0]?.id ?? 'listen'}
+                label="Challenge path"
+                className="mb-3"
+              />
+              <div className={styles.pronunciationTip} style={{ textAlign: 'left' }}>
+                <RewardPreview rewards={questEpisode.rewardPreview} layout="stack" />
+              </div>
+            </div>
+          )}
 
           {/* Start button */}
           <button
             className={`${styles.btnPrimary} ${styles.btnGreen}`}
             style={{ width: '100%', fontSize: 18, padding: '18px 24px' }}
-            onClick={() => setPhase('practice')}
+            onClick={handleStartPractice}
           >
             🎤 Bắt đầu luyện tập
           </button>
@@ -190,6 +306,9 @@ export default function SpeakingLessonPlayer({
           config={config}
           lessonTitle={titleNative}
           lessonId={lessonId}
+          cefrLevel={cefrLevel}
+          topicSlug={topicSlug}
+          questEpisode={questEpisode ?? undefined}
           onComplete={handleComplete}
           onClose={() => router.push('/speaking')}
         />
@@ -208,11 +327,25 @@ export default function SpeakingLessonPlayer({
       )
     }
 
+    if (exerciseType === 'presentation' || exerciseType === 'monologue') {
+      const scenario = typeof configJson?.scenario === 'string' ? configJson.scenario : titleNative
+      return (
+        <PresentationPlayer
+          lessonId={lessonId}
+          lessonTitle={titleNative}
+          scenario={scenario}
+          cefrLevel={cefrLevel}
+          onClose={() => router.push('/speaking')}
+          onComplete={handleComplete}
+        />
+      )
+    }
+
     // Fallback for unknown exercise type
     return (
       <div className={styles.lessonPlayer} style={{ textAlign: 'center', padding: '60px 20px' }}>
         <div style={{ fontSize: 48, marginBottom: 16 }}>🚧</div>
-        <p style={{ color: '#6B7280' }}>Dạng bài <strong>{exerciseType}</strong> đang được phát triển...</p>
+        <p style={{ color: "var(--color-text-muted)" }}>Dạng bài <strong>{exerciseType}</strong> đang được phát triển...</p>
         <button className={styles.btnOutline} onClick={() => router.push('/speaking')} style={{ marginTop: 20 }}>
           <ArrowLeft size={16} /> Quay lại
         </button>
@@ -229,6 +362,9 @@ export default function SpeakingLessonPlayer({
   }
 
   const resultInfo = getResultMessage(finalScore)
+  const episodeReceipt = progressResult?.questEpisodeReceipt
+  const badgeReceipt = progressResult?.badgeReceipt ?? progressResult?.nextBadgePreview
+  const displayedXp = progressResult?.xpEarned ?? stars * 10
 
   return (
     <div className={styles.lessonPlayer}>
@@ -243,10 +379,10 @@ export default function SpeakingLessonPlayer({
             className="drop-shadow-md"
           />
         </div>
-        <h2 style={{ fontSize: 24, fontWeight: 800, color: '#111827', margin: '0 0 4px' }}>
+        <h2 style={{ fontSize: 24, fontWeight: 800, color: "var(--color-text-primary)", margin: '0 0 4px' }}>
           {resultInfo.main}
         </h2>
-        <p style={{ fontSize: 14, color: '#6B7280', margin: '0 0 24px' }}>
+        <p style={{ fontSize: 14, color: "var(--color-text-muted)", margin: '0 0 24px' }}>
           {resultInfo.sub}
         </p>
 
@@ -281,10 +417,37 @@ export default function SpeakingLessonPlayer({
           }}
         >
           <span style={{ fontSize: 16 }}>✨</span>
-          <span style={{ fontSize: 14, fontWeight: 700, color: '#92400E' }}>
-            +{stars * 10} XP {isSaving ? '(đang lưu...)' : ''}
+          <span style={{ fontSize: 14, fontWeight: 700, color: "var(--color-text-warning)" }}>
+            +{displayedXp} XP {isSaving ? '(đang lưu...)' : ''}
           </span>
         </div>
+
+        {episodeReceipt && (
+          <div style={{ textAlign: 'left', marginBottom: 20 }}>
+            <GameplayFeedbackMoment
+              tone={finalScore >= config.minAccuracyToPass ? 'success' : 'retry'}
+              title={finalScore >= config.minAccuracyToPass ? 'Speaking quest complete' : 'Speaking quest needs one more loop'}
+              message={episodeReceipt.masteryContribution}
+              meta={`${episodeReceipt.completedCheckpoints}/${episodeReceipt.checkpointCount} checkpoint - ${episodeReceipt.scoreBand.replaceAll('_', ' ')}`}
+              className="mb-3"
+            />
+            <div className={styles.pronunciationTip} style={{ textAlign: 'left' }}>
+            <div style={{ fontSize: 12, fontWeight: 800, color: 'var(--color-text-success)', marginBottom: 6 }}>Speaking Quest Receipt</div>
+            <div style={{ fontSize: 14, fontWeight: 700, color: "var(--color-text-primary)" }}>
+              {episodeReceipt.completedCheckpoints}/{episodeReceipt.checkpointCount} checkpoint - {episodeReceipt.scoreBand.replaceAll('_', ' ')}
+            </div>
+            <p style={{ fontSize: 13, color: "var(--color-text-muted)", margin: '6px 0 0' }}>{episodeReceipt.masteryContribution}</p>
+            <p style={{ fontSize: 12, color: "var(--color-text-muted)", margin: '4px 0 0' }}>
+              Pronunciation feedback: {episodeReceipt.pronunciationFeedbackState}
+            </p>
+            {badgeReceipt && (
+              <p style={{ fontSize: 12, fontWeight: 700, color: "var(--color-text-warning)", margin: '8px 0 0' }}>
+                Badge: {badgeReceipt.title} - {progressResult?.badgeReceiptState ?? badgeReceipt.receiptState ?? 'preview'}
+              </p>
+            )}
+            </div>
+          </div>
+        )}
 
         {/* Action buttons */}
         <div className={styles.btnRow}>
@@ -300,10 +463,19 @@ export default function SpeakingLessonPlayer({
               setPhase('intro')
               setFinalScore(0)
               setStars(0)
+              setProgressResult(null)
             }}
           >
             <RotateCcw size={16} /> Luyện lại
           </button>
+          {episodeReceipt && (
+            <button
+              className={`${styles.btnPrimary} ${styles.btnGreen}`}
+              onClick={() => router.push(episodeReceipt.nextEpisodeHref)}
+            >
+              Bài tiếp theo <ArrowRight size={16} />
+            </button>
+          )}
         </div>
       </div>
     </div>

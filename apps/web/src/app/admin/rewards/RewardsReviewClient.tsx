@@ -183,7 +183,7 @@ export default function RewardsReviewClient({
                     <div>
                         <p className="text-sm font-black text-amber-900">Guardrail active</p>
                         <p className="mt-1 text-sm font-medium leading-relaxed text-amber-800">
-                            Approving spends Fucoin. Marking fulfilled can grant safe in-app rewards like Streak Freeze; gifts, lessons, and unsupported unlocks remain manual-only.
+                            Approving spends Fucoin. Reject unsupported or manual-risk items with a reason; every approved request must get a fulfillment receipt before the pilot gate.
                         </p>
                     </div>
                 </div>
@@ -264,7 +264,7 @@ export default function RewardsReviewClient({
                                             [request.id]: event.target.value,
                                         }))}
                                         disabled={(!canReview && !canFulfill) || isPending}
-                                        placeholder="Optional review reason"
+                                        placeholder={canFulfill ? 'Fulfillment note for learner/admin receipt' : 'Review reason; required when rejecting unsupported or manual-risk items'}
                                         className="min-h-20 w-full resize-none rounded-xl border border-slate-200 bg-white px-3 py-2 text-sm font-medium text-slate-700 outline-none transition placeholder:text-slate-400 focus:border-sky-300 focus:ring-2 focus:ring-sky-100 disabled:bg-slate-50 disabled:text-slate-400"
                                     />
                                     {canFulfill ? (

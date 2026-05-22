@@ -55,13 +55,14 @@ import { POST } from './route'
 describe('POST /api/v1/listening/[lessonId]/submit', () => {
     beforeEach(() => {
         vi.clearAllMocks()
-        getServerUserMock.mockResolvedValue({ userId: 'user-1' })
+        getServerUserMock.mockResolvedValue({ userId: 'user-1', role: 'LEARNER' })
         cookiesMock.mockResolvedValue({
             get: vi.fn().mockReturnValue({ value: 'vi' }),
         })
         findLessonMock.mockResolvedValue({
             id: 'listening-db-id',
             lessonId: 'L-A1-GOETHE-001-T1',
+            cefrLevel: 'A1',
             questions: [
                 {
                     id: 'q1',
@@ -146,6 +147,17 @@ describe('POST /api/v1/listening/[lessonId]/submit', () => {
                 percentScore: 100,
                 xpEarned: 20,
                 exercisesCompleted: 1,
+                analytics: {
+                    role: 'LEARNER',
+                    actionId: 'L-A1-GOETHE-001-T1',
+                    actionType: 'listening_task',
+                    level: 'A1',
+                    skill: 'HOEREN',
+                    source: 'listening.submit',
+                    metadata: {
+                        listen_count: 2,
+                    },
+                },
             })
         )
         expect(awardLearningFucoinMock).toHaveBeenCalledWith(
@@ -159,6 +171,67 @@ describe('POST /api/v1/listening/[lessonId]/submit', () => {
             })
         )
         expect(invalidateLearnerProgressCachesMock).toHaveBeenCalledWith('user-1')
+    })
+
+    it('adds a listening episode receipt when valid episode metadata is submitted', async () => {
+        const response = await POST(
+            {
+                json: async () => ({
+                    answers: { q1: 'A' },
+                    timeTaken: 18,
+                    listenCount: 2,
+                    questEpisode: {
+                        episodeId: 'listening-episode:A1:L-A1-GOETHE-001-T1',
+                        skill: 'listening',
+                        sourceId: 'L-A1-GOETHE-001-T1',
+                        cefrLevel: 'A1',
+                        checkpointCount: 3,
+                        nextEpisodeHref: '/listening',
+                    },
+                }),
+            } as any,
+            { params: Promise.resolve({ lessonId: 'L-A1-GOETHE-001-T1' }) }
+        )
+
+        expect(response.status).toBe(200)
+        await expect(response.json()).resolves.toMatchObject({
+            success: true,
+            data: {
+                questEpisodeReceipt: {
+                    episodeId: 'listening-episode:A1:L-A1-GOETHE-001-T1',
+                    skill: 'listening',
+                    sourceId: 'L-A1-GOETHE-001-T1',
+                    lessonId: 'L-A1-GOETHE-001-T1',
+                    cefrLevel: 'A1',
+                    accuracyBand: 'mastered',
+                    checkpointCount: 3,
+                    recommendedAction: 'next_episode',
+                },
+                nextEpisodeHref: '/listening',
+            },
+        })
+
+        expect(recordLearningActivityMock).toHaveBeenCalledWith(
+            expect.anything(),
+            expect.objectContaining({
+                analytics: expect.objectContaining({
+                    metadata: {
+                        listen_count: 2,
+                        episode_id: 'listening-episode:A1:L-A1-GOETHE-001-T1',
+                        checkpoint_count: 3,
+                    },
+                }),
+            })
+        )
+        expect(awardLearningFucoinMock).toHaveBeenCalledWith(
+            expect.anything(),
+            expect.objectContaining({
+                metadata: expect.objectContaining({
+                    episodeId: 'listening-episode:A1:L-A1-GOETHE-001-T1',
+                    checkpointCount: 3,
+                }),
+            })
+        )
     })
 
     it('returns 404 when the lesson is missing', async () => {

@@ -152,7 +152,7 @@ export function Flashcard({ vocabulary, isFlipped, onFlip }: FlashcardProps) {
                         <p className="text-2xl font-bold text-gray-900">{displayMeaning}</p>
                         {meaningDe && (
                             <div className="mt-2 inline-block bg-[#3C78A8]/5 border border-[#3C78A8]/20 rounded-lg px-3 py-2">
-                                <p className="text-sm font-medium text-[#3C78A8]">{meaningDe}</p>
+                                <p className="text-sm font-medium text-text-brand">{meaningDe}</p>
                             </div>
                         )}
                     </div>

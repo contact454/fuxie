@@ -71,7 +71,7 @@ export default function AdminDashboardCharts({
               <YAxis axisLine={false} tickLine={false} tick={{ fill: '#64748b', fontSize: 12 }} dx={-10} allowDecimals={false} />
               <Tooltip
                 contentStyle={{ borderRadius: '8px', border: 'none', boxShadow: '0 4px 6px -1px rgb(0 0 0 / 0.1)' }}
-                itemStyle={{ color: '#4f46e5', fontWeight: 600 }}
+                itemStyle={{ color: 'var(--color-text-brand)', fontWeight: 600 }}
               />
               <Line
                 type="monotone"

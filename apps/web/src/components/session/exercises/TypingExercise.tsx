@@ -61,17 +61,15 @@ export function TypingExercise({ item, onNext }: { item: SessionItem, onNext: (c
                 </div>
             </div>
 
-            {/* Bottom Feedback Banner */}
-            <div className={`fixed bottom-0 left-0 right-0 p-4 border-t transition-all duration-300 md:static md:mt-8 md:rounded-2xl ${
-                checked ? (isCorrect ? 'bg-emerald-100 border-emerald-200' : 'bg-red-100 border-red-200') : 'bg-white border-transparent'
-            }`}>
+            {/* Bottom Button inside Card */}
+            <div className="mt-auto pt-4 border-t border-[#CCE4F0]/30">
                 {checked && (
-                    <div className="mb-4">
-                        <div className={`font-bold text-xl mb-1 ${isCorrect ? 'text-emerald-600' : 'text-red-600'}`}>
-                            {isCorrect ? 'Tuyệt vời!' : 'Sai rồi!'}
+                    <div className="mb-4 text-center">
+                        <div className={`font-black text-lg mb-1 ${isCorrect ? 'text-emerald-600' : 'text-red-600'}`}>
+                            {isCorrect ? 'Tuyệt vời!' : 'Chưa đúng rồi!'}
                         </div>
                         {!isCorrect && (
-                            <div className="text-red-700 text-sm">
+                            <div className="text-red-700 text-xs font-bold">
                                 Đáp án đúng: <strong>{term}</strong>
                             </div>
                         )}
@@ -81,13 +79,10 @@ export function TypingExercise({ item, onNext }: { item: SessionItem, onNext: (c
                 <button
                     onClick={handleCheck}
                     disabled={!input.trim() && !checked}
-                    className={`w-full py-4 rounded-2xl font-bold text-lg shadow-[0_6px_0_0_rgba(0,0,0,0.15)] active:translate-y-1 active:shadow-none transition-all disabled:opacity-50 disabled:cursor-not-allowed ${
-                        checked 
-                            ? (isCorrect ? 'bg-emerald-500 text-white shadow-emerald-700' : 'bg-red-500 text-white shadow-red-700')
-                            : (input.trim() ? 'bg-sky-500 text-white shadow-sky-700' : 'bg-gray-200 text-gray-400 shadow-transparent')
-                    }`}
+                    className="w-full py-4 bg-[#2EC4B6] hover:bg-[#25b5a7] active:bg-[#1fa093] text-white text-base font-black rounded-2xl transition-all duration-300 shadow-md shadow-[#2EC4B6]/25 hover:shadow-lg active:scale-[0.98] disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
                 >
-                    {checked ? 'Tiếp Tục' : 'Kiểm tra'}
+                    <span>{checked ? 'Weiter' : 'Kiểm tra'}</span>
+                    <span>→</span>
                 </button>
             </div>
         </div>

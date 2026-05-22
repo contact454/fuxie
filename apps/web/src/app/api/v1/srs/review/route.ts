@@ -116,6 +116,15 @@ export async function POST(req: NextRequest) {
                 xpEarned: baseXpEarned,
                 srsReviewed: 1,
                 updateStreak: true,
+                analytics: {
+                    actionId: cardId,
+                    actionType: 'srs_review',
+                    skill: 'SRS',
+                    source: 'srs.review',
+                    metadata: {
+                        response_time_ms: responseTimeMs ?? null,
+                    },
+                },
             })
         })
 

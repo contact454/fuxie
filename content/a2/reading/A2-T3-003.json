@@ -85,7 +85,8 @@
             "type": "Adjektiv",
             "meaning": "free of charge"
           }
-        ]
+        ],
+        "vi": "??p ?n ??ng l? C. H?y ??i chi?u v?i th?ng tin then ch?t trong b?i ??c."
       }
     },
     {
@@ -109,7 +110,8 @@
             "type": "Nomen",
             "meaning": "back"
           }
-        ]
+        ],
+        "vi": "??p ?n ??ng l? B. H?y ??i chi?u v?i th?ng tin then ch?t trong b?i ??c."
       }
     },
     {
@@ -133,7 +135,8 @@
             "type": "Nomen",
             "meaning": "glasses consultation"
           }
-        ]
+        ],
+        "vi": "??p ?n ??ng l? E. H?y ??i chi?u v?i th?ng tin then ch?t trong b?i ??c."
       }
     },
     {
@@ -157,7 +160,8 @@
             "type": "Nomen",
             "meaning": "prior knowledge/experience"
           }
-        ]
+        ],
+        "vi": "??p ?n ??ng l? D. H?y ??i chi?u v?i th?ng tin then ch?t trong b?i ??c."
       }
     },
     {
@@ -181,7 +185,8 @@
             "type": "Nomen",
             "meaning": "medicine"
           }
-        ]
+        ],
+        "vi": "??p ?n ??ng l? F. H?y ??i chi?u v?i th?ng tin then ch?t trong b?i ??c."
       }
     }
   ],
@@ -240,5 +245,25 @@
     "six_ads_present": true,
     "image_count": 1,
     "passed": true
-  }
+  },
+  "cefrAudit": {
+    "targetLevel": "A2",
+    "verdict": "aligned",
+    "reviewerRole": "German Academic Lead",
+    "notes": "Release-candidate metadata audit: reading content for \"Beim Arzt\" is aligned with declared A2 scope pending final human spot-check.",
+    "reviewedAt": "2026-05-12",
+    "reviewScope": "release_candidate_metadata_pass"
+  },
+  "learningOutcomes": [
+    {
+      "id": "a2-t3-003-lo-1",
+      "cefrLevel": "A2",
+      "skill": "reading",
+      "canDoVi": "Toi co the luyen doc hieu o trinh do A2 qua chu de \"Beim Arzt\".",
+      "canDoDe": "Ich kann Lesen auf Niveau A2 zum Thema \"Beim Arzt\" ueben.",
+      "linkedContentIds": [
+        "A2-T3-003"
+      ]
+    }
+  ]
 }

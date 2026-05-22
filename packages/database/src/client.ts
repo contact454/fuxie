@@ -95,6 +95,7 @@ export type {
     UserProgress,
     SkillAssessment,
     DailyActivity,
+    AnalyticsEvent,
     ListeningLesson,
     ListeningQuestion,
     ListeningAttempt,

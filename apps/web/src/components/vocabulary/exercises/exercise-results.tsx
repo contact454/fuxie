@@ -1,13 +1,13 @@
 'use client'
 
-import {
-    ResultRewardLoop,
-    resultRewardIcons,
-} from '@/components/gamification/result-reward-loop'
+import { resultRewardIcons } from '@/components/gamification/result-reward-loop'
+import { CompletionFlow } from '@/components/gamification/completion-flow'
 import {
     FuxiePanel,
+    fuxieButtonClass,
     fx,
 } from '@/components/ui/fuxie-ui'
+import { trackClientAnalyticsEvent } from '@/lib/analytics/client-events'
 
 interface ResultItem {
     questionId: string
@@ -41,6 +41,9 @@ interface ExerciseResultsProps {
     results: ResultItem[]
     onRetry: () => void
     onNewTheme: () => void
+    gameplayNextStep?: { label: string; href: string; stepId: string; reason: string }
+    questEpisodeReceipt?: any
+    nextEpisodeHref?: string
 }
 
 export function ExerciseResults({
@@ -60,6 +63,7 @@ export function ExerciseResults({
     results,
     onRetry,
     onNewTheme,
+    gameplayNextStep,
 }: ExerciseResultsProps) {
     const getResultCopy = () => {
         if (!graded) {
@@ -87,9 +91,9 @@ export function ExerciseResults({
         if (accuracy >= 70) {
             return {
                 title: 'Rất tốt, em đang lên nhịp',
-                message: `Em trả lời đúng ${correctCount}/${totalQuestions} câu. Chỉ cần thêm một vòng nữa là phần từ vựng này vững hơn rõ.`,
+                message: `Em trả lời đúng ${correctCount}/${totalQuestions} câu. Đủ ổn để đi tiếp, nhưng luyện lại vẫn hữu ích nếu em muốn chắc hơn.`,
                 coachTitle: 'Fuxie đề xuất đi tiếp',
-                coachMessage: 'Kết quả đủ tốt để học chủ đề mới, nhưng luyện lại vẫn hữu ích nếu em muốn chắc hơn.',
+                coachMessage: 'Đủ ổn để đi tiếp, nhưng luyện lại vẫn hữu ích nếu em muốn chắc hơn.',
                 unlockLabel: 'Next',
                 unlockDetail: 'Đi tiếp',
             }
@@ -98,9 +102,9 @@ export function ExerciseResults({
         if (accuracy >= 50) {
             return {
                 title: 'Có tiến bộ, cần thêm một vòng',
-                message: `Em đã đúng ${correctCount}/${totalQuestions} câu. Hãy luyện lại ngay để biến các từ còn lẫn thành điểm mạnh.`,
+                message: `Em đã đúng ${correctCount}/${totalQuestions} câu. Nên replay 1 vòng để biến các từ còn lẫn thành điểm mạnh.`,
                 coachTitle: 'Fuxie giữ focus cho em',
-                coachMessage: 'Lượt này đã cho thấy điểm yếu cụ thể; luyện lại bây giờ sẽ tiết kiệm thời gian hơn để mai ôn.',
+                coachMessage: 'Nên replay 1 vòng để biến các từ còn lẫn thành điểm mạnh.',
                 unlockLabel: 'Focus list',
                 unlockDetail: 'Ưu tiên từ còn sai',
             }
@@ -183,7 +187,8 @@ export function ExerciseResults({
 
     return (
         <div className="mx-auto max-w-4xl px-4 py-8 animate-fade-in-up">
-            <ResultRewardLoop
+            <CompletionFlow
+                mode="alreadySaved"
                 skill="vocabulary"
                 title={copy.title}
                 message={copy.message}
@@ -202,7 +207,19 @@ export function ExerciseResults({
                         freezesUsed: streak.freezesUsed ?? 0,
                     }
                     : undefined}
-                primaryAction={{ label: 'Chủ đề mới', onClick: onNewTheme }}
+                hasNextStep={Boolean(gameplayNextStep)}
+                primaryAction={gameplayNextStep ? {
+                    label: gameplayNextStep.label,
+                    href: gameplayNextStep.href,
+                    onClick: () => {
+                        trackClientAnalyticsEvent({
+                            eventName: 'quest_cta_clicked',
+                            actionType: 'first_session_path',
+                            actionId: gameplayNextStep.stepId,
+                            metadata: { reason: gameplayNextStep.reason, surface: 'exercise_result' }
+                        })
+                    }
+                } : { label: 'Chủ đề mới', onClick: onNewTheme }}
                 secondaryAction={{ label: 'Luyện lại', onClick: onRetry }}
                 dashboardAction={{ label: 'Về Dashboard', href: '/dashboard' }}
                 coachTitle={copy.coachTitle}

@@ -1,8 +1,16 @@
 'use client'
 
-import { useState, useRef, useCallback, useEffect } from 'react'
+import { useState, useRef, useCallback, useEffect, useMemo } from 'react'
 import { useRouter } from 'next/navigation'
-import { FUXIE_3D_ASSETS, FuxieRoleMascot, SkillMotivationRail } from '@/components/gamification/quest-visuals'
+import { useTranslations } from 'next-intl'
+import { FUXIE_3D_ASSETS, FuxieRoleMascot, RewardPreview, SkillMotivationRail, type RewardPreviewItem } from '@/components/gamification/quest-visuals'
+import { FuxieProgressBar } from '@/components/ui/fuxie-ui'
+import { trackClientAnalyticsEvent } from '@/lib/analytics/client-events'
+import {
+    buildWritingQuestEpisode,
+    getWritingQuestCheckpoint,
+    type WritingQuestEpisodeReceipt,
+} from '@/lib/gamification/writing-quest-episode'
 
 // ─── Types ──────────────────────────────────────────
 interface FormField {
@@ -44,6 +52,23 @@ interface AiFeedback {
         explanation: string
         explanationNative?: string
     }>
+    xpEarned?: number
+    rewardPreview?: RewardPreviewItem[]
+    questEpisodeReceipt?: WritingQuestEpisodeReceipt
+    nextEpisodeHref?: string
+    badgeReceiptState?: 'preview' | 'newly_unlocked' | 'already_earned'
+    badgeReceipt?: {
+        title: string
+        description: string
+        progress: number
+        receiptState?: string
+    } | null
+    nextBadgePreview?: {
+        title: string
+        description: string
+        progress: number
+        receiptState?: string
+    } | null
 }
 
 interface WritingPlayerProps {
@@ -224,6 +249,7 @@ function StimulusBox({ sourceText, sourceTextType, cefrLevel, colors }: {
 // ═══════════════════════════════════════════════════════
 export function WritingPlayer(props: WritingPlayerProps) {
     const router = useRouter()
+    const t = useTranslations('WritingPlayer')
     const colors = CEFR_COLORS[props.cefrLevel] ?? CEFR_COLORS.A1!
     const registerInfo = REGISTER_LABELS[props.register] ?? REGISTER_LABELS.neutral!
     const isFormular = props.textType === 'Formular' && props.formFields
@@ -239,6 +265,7 @@ export function WritingPlayer(props: WritingPlayerProps) {
     const textareaRef = useRef<HTMLTextAreaElement>(null)
     const isMountedRef = useRef(true)
     const submitAbortRef = useRef<AbortController | null>(null)
+    const trackedCheckpoints = useRef<Set<string>>(new Set())
 
     const wordCount = countWords(text)
     const isFormComplete = isFormular
@@ -251,10 +278,41 @@ export function WritingPlayer(props: WritingPlayerProps) {
         ? ((props.formFields?.length ?? 0) > 0 ? (completedFormFields / (props.formFields?.length ?? 1)) * 100 : 0)
         : Math.min(100, (wordCount / Math.max(1, props.minWords)) * 100)
     const writingReadiness = isFormComplete ? 'Ready' : isFormular ? 'Fill fields' : 'Build draft'
+    const questEpisode = useMemo(() => buildWritingQuestEpisode({
+        exerciseId: props.exerciseId,
+        topic: props.topic,
+        textType: props.textType,
+        cefrLevel: props.cefrLevel,
+        minWords: Math.max(3, props.minWords),
+        nextEpisodeHref: '/writing',
+    }), [props.cefrLevel, props.exerciseId, props.minWords, props.textType, props.topic])
+    const episodeProgressIndex = isFormular
+        ? Math.max(0, Math.round((writingProgress / 100) * Math.max(1, props.minWords - 1)))
+        : Math.max(0, Math.min(Math.max(1, props.minWords) - 1, wordCount))
+    const activeCheckpoint = getWritingQuestCheckpoint({ episode: questEpisode, currentIndex: episodeProgressIndex })
+    const completedCheckpoints = isFormComplete
+        ? questEpisode.checkpoints.length
+        : Math.max(1, questEpisode.checkpoints.findIndex((checkpoint) => checkpoint.id === activeCheckpoint.id) + 1)
 
     // ─── Timer ──────────────────────────────────────
     useEffect(() => {
         isMountedRef.current = true
+        trackClientAnalyticsEvent({
+            eventName: 'quest_episode_started',
+            source: 'writing.quest_episode.started',
+            actionId: questEpisode.episodeId,
+            actionType: 'writing_submission',
+            level: props.cefrLevel,
+            skill: 'writing',
+            metadata: {
+                episodeId: questEpisode.episodeId,
+                skill: 'writing',
+                exerciseId: props.exerciseId,
+                cefrLevel: props.cefrLevel,
+                checkpointId: 'plan',
+                checkpointCount: questEpisode.checkpoints.length,
+            },
+        })
         timerRef.current = setInterval(() => {
             setTimeElapsed(prev => prev + 1)
         }, 1000)
@@ -263,7 +321,29 @@ export function WritingPlayer(props: WritingPlayerProps) {
             submitAbortRef.current?.abort()
             if (timerRef.current) clearInterval(timerRef.current)
         }
-    }, [])
+    }, [props.cefrLevel, props.exerciseId, questEpisode.episodeId, questEpisode.checkpoints.length])
+
+    useEffect(() => {
+        if (phase !== 'writing') return
+        if (trackedCheckpoints.current.has(activeCheckpoint.id)) return
+        trackedCheckpoints.current.add(activeCheckpoint.id)
+        trackClientAnalyticsEvent({
+            eventName: 'quest_episode_checkpoint_reached',
+            source: 'writing.quest_episode.checkpoint',
+            actionId: questEpisode.episodeId,
+            actionType: 'writing_submission',
+            level: props.cefrLevel,
+            skill: 'writing',
+            metadata: {
+                episodeId: questEpisode.episodeId,
+                skill: 'writing',
+                exerciseId: props.exerciseId,
+                cefrLevel: props.cefrLevel,
+                checkpointId: activeCheckpoint.id,
+                checkpointCount: questEpisode.checkpoints.length,
+            },
+        })
+    }, [activeCheckpoint.id, phase, props.cefrLevel, props.exerciseId, questEpisode.episodeId, questEpisode.checkpoints.length])
 
     // ─── Submit ─────────────────────────────────────
     const handleSubmit = useCallback(async () => {
@@ -288,6 +368,15 @@ export function WritingPlayer(props: WritingPlayerProps) {
                     submittedText,
                     wordCount: countWords(submittedText),
                     timeSpentSeconds: timeElapsed,
+                    questEpisode: {
+                        episodeId: questEpisode.episodeId,
+                        skill: questEpisode.skill,
+                        sourceId: questEpisode.sourceId,
+                        cefrLevel: questEpisode.cefrLevel,
+                        checkpointCount: questEpisode.checkpoints.length,
+                        completedCheckpoints,
+                        nextEpisodeHref: questEpisode.nextEpisodeHref,
+                    },
                 }),
                 signal: controller.signal,
             })
@@ -307,7 +396,7 @@ export function WritingPlayer(props: WritingPlayerProps) {
             setError('Verbindungsfehler. Bitte versuche es erneut.')
             setPhase('writing')
         }
-    }, [phase, isFormular, formValues, text, props.exerciseId, timeElapsed])
+    }, [phase, isFormular, formValues, text, props.exerciseId, timeElapsed, questEpisode, completedCheckpoints])
 
     // ─── Word Count Color ───────────────────────────
     const getWordCountColor = () => {
@@ -319,6 +408,8 @@ export function WritingPlayer(props: WritingPlayerProps) {
 
     // ═══ FEEDBACK PHASE ═══
     if (phase === 'feedback' && feedback) {
+        const episodeReceipt = feedback.questEpisodeReceipt
+        const badgeReceipt = feedback.badgeReceipt ?? feedback.nextBadgePreview
         return (
             <div className="max-w-3xl mx-auto space-y-6">
                 {/* ─── Score Header ─── */}
@@ -343,6 +434,50 @@ export function WritingPlayer(props: WritingPlayerProps) {
                         <p className="text-gray-400 mt-1 text-xs italic">🇻🇳 {feedback.overallFeedbackNative}</p>
                     )}
                 </div>
+
+                {episodeReceipt && (
+                    <div className="bg-white rounded-2xl border border-emerald-100 shadow-sm p-5">
+                        <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+                            <div>
+                                <p className="text-xs font-black uppercase tracking-wide text-emerald-700">Writing Quest Receipt</p>
+                                <h3 className="mt-1 text-lg font-bold text-gray-900">
+                                    {episodeReceipt.completedCheckpoints}/{episodeReceipt.checkpointCount} checkpoints done
+                                </h3>
+                                <p className="mt-1 text-sm text-gray-600">{episodeReceipt.masteryContribution}</p>
+                                <p className="mt-1 text-xs font-semibold text-gray-500">
+                                    Feedback: {episodeReceipt.feedbackSummaryState.replaceAll('_', ' ')} - Score band: {episodeReceipt.scoreBand.replaceAll('_', ' ')}
+                                </p>
+                            </div>
+                            <button
+                                onClick={() => router.push(episodeReceipt.recommendedAction === 'next_episode' ? episodeReceipt.nextEpisodeHref : `/writing/${props.exerciseId}`)}
+                                className="px-4 py-2 rounded-xl text-white font-bold text-sm hover:opacity-90 transition-all shadow-lg"
+                                style={{ background: colors.css, boxShadow: `0 4px 16px ${colors.shadow}` }}
+                            >
+                                {episodeReceipt.recommendedAction === 'next_episode' ? 'Bai tiep theo' : 'Sua va nop lai'}
+                            </button>
+                        </div>
+                        <div className="mt-4">
+                            <FuxieProgressBar
+                                value={Math.round((episodeReceipt.completedCheckpoints / Math.max(1, episodeReceipt.checkpointCount)) * 100)}
+                                tone={episodeReceipt.recommendedAction === 'next_episode' ? 'success' : 'reward'}
+                            />
+                        </div>
+                    </div>
+                )}
+
+                {feedback.rewardPreview && feedback.rewardPreview.length > 0 && (
+                    <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-5">
+                        <p className="text-xs font-black uppercase tracking-wide text-gray-500">Reward receipt</p>
+                        <div className="mt-3">
+                            <RewardPreview rewards={feedback.rewardPreview} layout="row" />
+                        </div>
+                        {badgeReceipt && (
+                            <p className="mt-3 text-sm font-semibold text-gray-600">
+                                Badge: {badgeReceipt.title} - {feedback.badgeReceiptState ?? badgeReceipt.receiptState ?? 'preview'}
+                            </p>
+                        )}
+                    </div>
+                )}
 
                 {/* ─── Criteria Scores ─── */}
                 <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-6">
@@ -390,7 +525,7 @@ export function WritingPlayer(props: WritingPlayerProps) {
                                     <div className="flex items-start gap-2">
                                         <div className="shrink-0 flex flex-col gap-0.5">
                                             <span className="text-xs font-bold px-2 py-0.5 rounded bg-red-100 text-red-700">{c.type}</span>
-                                            {c.typeNative && <span className="text-[10px] text-gray-400 text-center">{c.typeNative}</span>}
+                                            {c.typeNative && <span className="text-xs text-gray-400 text-center">{c.typeNative}</span>}
                                         </div>
                                         <div>
                                             <p className="text-sm">
@@ -417,7 +552,7 @@ export function WritingPlayer(props: WritingPlayerProps) {
                         🔄 Thử lại
                     </button>
                     <button
-                        onClick={() => router.push('/writing')}
+                        onClick={() => router.push(feedback.nextEpisodeHref ?? '/writing')}
                         className="px-6 py-3 rounded-xl text-white font-bold text-sm hover:opacity-90 transition-all shadow-lg"
                         style={{ background: colors.css, boxShadow: `0 4px 16px ${colors.shadow}` }}
                     >
@@ -452,10 +587,41 @@ export function WritingPlayer(props: WritingPlayerProps) {
             <div className="grid grid-cols-1 lg:grid-cols-7 gap-6">
                 {/* LEFT: Instructions */}
                 <div className="lg:col-span-2 space-y-4">
+                    <div className="bg-white rounded-2xl border border-emerald-100 shadow-sm p-5">
+                        <div className="flex items-start justify-between gap-3">
+                            <div>
+                                <p className="text-xs font-black uppercase tracking-wide text-emerald-700">Writing Quest</p>
+                                <h2 className="mt-1 text-lg font-bold text-gray-900">{questEpisode.objective}</h2>
+                            </div>
+                            <span className="text-xs font-bold px-2.5 py-1 rounded-lg" style={{ color: colors.text, backgroundColor: colors.bg }}>
+                                {questEpisode.cefrLevel}
+                            </span>
+                        </div>
+                        <div className="mt-4 space-y-2">
+                            {questEpisode.checkpoints.map((checkpoint, index) => {
+                                const active = checkpoint.id === activeCheckpoint.id
+                                const done = index < completedCheckpoints - 1 || (isFormComplete && active)
+                                return (
+                                    <div key={checkpoint.id} className={`rounded-xl border px-3 py-2 ${active ? 'border-emerald-200 bg-emerald-50' : done ? 'border-slate-200 bg-slate-50' : 'border-gray-100 bg-white'}`}>
+                                        <div className="flex items-center justify-between gap-2">
+                                            <span className="text-sm font-bold text-gray-900">{checkpoint.title}</span>
+                                            <span className={`text-xs font-bold ${done ? 'text-emerald-700' : active ? 'text-amber-700' : 'text-gray-400'}`}>
+                                                {done ? 'done' : active ? 'active' : 'next'}
+                                            </span>
+                                        </div>
+                                        <p className="mt-1 text-xs leading-relaxed text-gray-500">{checkpoint.objective}</p>
+                                    </div>
+                                )
+                            })}
+                        </div>
+                        <div className="mt-4">
+                            <RewardPreview rewards={questEpisode.rewardPreview} layout="stack" />
+                        </div>
+                    </div>
                     <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-5">
                         <div className="flex items-center gap-2 mb-3">
                             <span className="text-xl">✏️</span>
-                            <h2 className="text-lg font-bold text-gray-900">Đề bài</h2>
+                            <h2 className="text-lg font-bold text-gray-900">{t('promptHeader')}</h2>
                         </div>
 
                         {/* Text Type + Register badges */}
@@ -491,7 +657,7 @@ export function WritingPlayer(props: WritingPlayerProps) {
                             <div className="mt-3 mb-3 p-3 bg-indigo-50 rounded-xl border border-indigo-100">
                                 <div className="flex items-center gap-2 mb-2">
                                     <span className="text-sm">📊</span>
-                                    <span className="text-xs font-bold text-indigo-700">Biểu đồ</span>
+                                    <span className="text-xs font-bold text-indigo-700">{t('grafikLabel')}</span>
                                 </div>
                                 <p className="text-xs text-indigo-600 leading-relaxed">{props.grafikDesc}</p>
                             </div>
@@ -499,7 +665,7 @@ export function WritingPlayer(props: WritingPlayerProps) {
 
                         {/* Content Points */}
                         <div className="border-t border-gray-100 pt-3">
-                            <h4 className="text-sm font-bold text-gray-700 mb-2">📋 Ý cần viết:</h4>
+                            <h4 className="text-sm font-bold text-gray-700 mb-2">📋 {t('contentPointsHeader')}</h4>
                             <ul className="space-y-1.5">
                                 {props.contentPoints.map((point, i) => (
                                     <li key={i} className="flex items-start gap-2 text-sm text-gray-600">
@@ -555,7 +721,7 @@ export function WritingPlayer(props: WritingPlayerProps) {
                                     ref={textareaRef}
                                     value={text}
                                     onChange={e => setText(e.target.value)}
-                                    placeholder="Viết bài của em tại đây..."
+                                    placeholder={t('draftPlaceholder')}
                                     className="flex-1 w-full min-h-[320px] p-4 rounded-xl border border-gray-200 text-sm text-gray-800 leading-relaxed resize-none focus:outline-none focus:ring-2 transition-all placeholder:text-gray-300"
                                     style={{ '--tw-ring-color': colors.text } as any}
                                     disabled={phase === 'submitting'}
@@ -593,7 +759,7 @@ export function WritingPlayer(props: WritingPlayerProps) {
                                         AI đang chấm...
                                     </>
                                 ) : (
-                                    <>Nộp bài →</>
+                                    <>{t('submitLabel')} →</>
                                 )}
                             </button>
                         </div>
@@ -604,8 +770,8 @@ export function WritingPlayer(props: WritingPlayerProps) {
                     <SkillMotivationRail
                         skill="writing"
                         phaseLabel={isFormular ? 'Formular draft' : 'Writing draft'}
-                        title={isFormComplete ? 'Bài đã sẵn sàng để chấm' : 'Hoàn thiện bản nháp từng bước'}
-                        message="Layer này theo dõi số từ, thời gian và độ sẵn sàng mà không chen vào vùng viết chính."
+                        title={isFormComplete ? 'Ready for AI feedback' : activeCheckpoint.objective}
+                        message="Plan, draft, then revise. Rewards and badge progress only happen after graded submit."
                         progressLabel="Draft readiness"
                         progressPercent={writingProgress}
                         metrics={[

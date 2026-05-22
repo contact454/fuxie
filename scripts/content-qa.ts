@@ -14,12 +14,21 @@ interface Issue {
 interface ScanContext {
     issues: Issue[]
     globalIds: Map<string, string>
+    references: ReferenceIndex
+}
+
+interface ReferenceIndex {
+    vocabularyThemes: Set<string>
+    grammarTopics: Set<string>
 }
 
 const ROOT = process.cwd()
-const CONTENT_DIR = path.join(ROOT, 'content')
-const REPORT_DIR = path.join(ROOT, 'tmp')
-const REPORT_PATH = path.join(REPORT_DIR, 'content-qa-report.md')
+const CONTENT_DIR = path.resolve(ROOT, getArgValue('--content-dir') || 'content')
+const REPORT_PATH = path.resolve(ROOT, getArgValue('--report-path') || path.join('tmp', 'content-qa-report.md'))
+const REPORT_DIR = path.dirname(REPORT_PATH)
+const CEFR_LEVELS = new Set(['A1', 'A2', 'B1', 'B2', 'C1', 'C2'])
+const CEFR_VERDICTS = new Set(['aligned', 'revise', 'block'])
+const LEARNING_OUTCOME_SKILLS = new Set(['vocabulary', 'grammar', 'reading', 'listening', 'writing', 'speaking', 'course'])
 
 function main() {
     if (!fs.existsSync(CONTENT_DIR)) {
@@ -31,6 +40,7 @@ function main() {
     const context: ScanContext = {
         issues: [],
         globalIds: new Map(),
+        references: buildReferenceIndex(files),
     }
 
     for (const file of files) {
@@ -68,6 +78,40 @@ function walkJsonFiles(dir: string): string[] {
     }
 
     return files
+}
+
+function buildReferenceIndex(files: string[]): ReferenceIndex {
+    const references: ReferenceIndex = {
+        vocabularyThemes: new Set(),
+        grammarTopics: new Set(),
+    }
+
+    for (const file of files) {
+        const skill = inferSkill(file)
+        if (skill !== 'vocabulary' && skill !== 'grammar') continue
+
+        let data: unknown
+        try {
+            data = JSON.parse(fs.readFileSync(file, 'utf8'))
+        } catch {
+            continue
+        }
+
+        if (skill === 'vocabulary' && isObject(data) && isObject(data.theme)) {
+            const slug = getString(data.theme.slug)
+            if (slug) references.vocabularyThemes.add(slug)
+        }
+
+        if (skill === 'grammar' && isObject(data) && Array.isArray(data.topics)) {
+            for (const topic of data.topics) {
+                if (!isObject(topic)) continue
+                const slug = getString(topic.slug)
+                if (slug) references.grammarTopics.add(slug)
+            }
+        }
+    }
+
+    return references
 }
 
 function validateFile(file: string, context: ScanContext) {
@@ -139,6 +183,9 @@ function validateVocabularyFile(file: string, data: unknown, context: ScanContex
     } else {
         trackGlobalId(context, `vocabulary-theme:${themeSlug}`, file)
     }
+    const level = inferLevelFromFile(file)
+    validateCefrAudit(file, data.cefrAudit, level, context, 'cefrAudit')
+    validateLearningOutcomes(file, data.learningOutcomes, level, 'vocabulary', [themeSlug || file], context, 'learningOutcomes')
 
     const seenWords = new Set<string>()
     for (let index = 0; index < words.length; index++) {
@@ -163,6 +210,19 @@ function validateVocabularyFile(file: string, data: unknown, context: ScanContex
             pushIssue(context, 'warning', 'MISSING_EXAMPLE', file, `words[${index}] is missing exampleSentence1/exampleTranslation1`)
         }
 
+        if (wordType === 'VERB' && !hasPraesensConjugation(wordEntry)) {
+            pushIssue(context, 'warning', 'MISSING_VERB_CONJUGATION', file, `words[${index}] verb "${word || '#'}" is missing praesens conjugation`)
+        }
+
+        if (wordType === 'NOMEN') {
+            if (!getString(wordEntry.article) && !getString(wordEntry.articleStatus)) {
+                pushIssue(context, 'warning', 'MISSING_NOUN_ARTICLE', file, `words[${index}] noun "${word || '#'}" is missing article`)
+            }
+            if (!getString(wordEntry.plural) && !getString(wordEntry.pluralStatus)) {
+                pushIssue(context, 'warning', 'MISSING_NOUN_PLURAL', file, `words[${index}] noun "${word || '#'}" is missing plural`)
+            }
+        }
+
         if (word) {
             const normalizedWord = `${normalizeToken(word)}:${wordType || 'unknown'}`
             if (seenWords.has(normalizedWord)) {
@@ -173,12 +233,15 @@ function validateVocabularyFile(file: string, data: unknown, context: ScanContex
         }
 
         if (word && meaningDe && normalizeToken(word).length >= 5 && containsWholeWord(meaningDe, word)) {
-            pushIssue(context, 'warning', 'CIRCULAR_MEANING_DE', file, `Word "${word}" appears in its own German definition`)
+            pushIssue(context, 'error', 'CIRCULAR_MEANING_DE', file, `Word "${word}" appears in its own German definition`)
         }
 
         if (meaningDe && meaningDe.length < 8) {
             pushIssue(context, 'warning', 'SHORT_MEANING_DE', file, `German definition for "${word || `#${index}`}" looks too short`)
         }
+
+        validateGermanTextQuality(file, `words[${index}].exampleSentence1`, exampleSentence1, context)
+        validateGermanTextQuality(file, `words[${index}].exampleSentence2`, getString(wordEntry.exampleSentence2), context)
     }
 }
 
@@ -200,12 +263,18 @@ function validateGrammarFile(file: string, data: unknown, context: ScanContext) 
         const title = getString(topic.title)
         const titleDe = getString(topic.titleDe)
         const rules = topic.rules
+        const topicLevel = getString(topic.cefrLevel) || inferLevelFromFile(file)
 
         if (!slug) pushIssue(context, 'error', 'MISSING_TOPIC_SLUG', file, `topics[${index}].slug is required`)
         if (!title) pushIssue(context, 'error', 'MISSING_TOPIC_TITLE', file, `topics[${index}].title is required`)
         if (!titleDe) pushIssue(context, 'warning', 'MISSING_TOPIC_TITLE_DE', file, `topics[${index}].titleDe is missing`)
+        validateCefrAudit(file, topic.cefrAudit, topicLevel, context, `topics[${index}].cefrAudit`)
+        validateLearningOutcomes(file, topic.learningOutcomes, topicLevel, 'grammar', [slug || `topic-${index}`], context, `topics[${index}].learningOutcomes`)
         if (!Array.isArray(rules) || rules.length === 0) {
             pushIssue(context, 'error', 'MISSING_RULES', file, `topics[${index}].rules must be non-empty`)
+        }
+        if (!Array.isArray(topic.exercises) || topic.exercises.length === 0) {
+            pushIssue(context, 'warning', 'MISSING_GRAMMAR_EXERCISES', file, `topics[${index}].exercises should be non-empty`)
         }
 
         if (slug) {
@@ -235,6 +304,9 @@ function validateReadingFile(file: string, data: unknown, context: ScanContext) 
     if (!getString(data.level)) {
         pushIssue(context, 'error', 'MISSING_LEVEL', file, 'level is required')
     }
+    const level = getString(data.level) || inferLevelFromFile(file)
+    validateCefrAudit(file, data.cefrAudit, level, context, 'cefrAudit')
+    validateLearningOutcomes(file, data.learningOutcomes, level, 'reading', [rootId || file], context, 'learningOutcomes')
 
     validateReadingQuestions(file, data, context)
 
@@ -254,6 +326,16 @@ function validateListeningFile(file: string, data: unknown, context: ScanContext
         requireTexts: false,
         requireAudioFile: true,
     })
+    const level = getString(data.level) || inferLevelFromFile(file)
+    validateCefrAudit(file, data.cefrAudit, level, context, 'cefrAudit')
+    validateLearningOutcomes(file, data.learningOutcomes, level, 'listening', [getString(data.id) || file], context, 'learningOutcomes')
+
+    const transcript = data.transcript
+    if (!isObject(transcript) || !Array.isArray(transcript.lines) || transcript.lines.length === 0) {
+        pushIssue(context, 'error', 'MISSING_FULL_TRANSCRIPT', file, 'transcript.lines must be present for learner review and QA')
+    } else {
+        validateListeningTranscript(file, data, transcript, context)
+    }
 }
 
 function validateExerciseWithQuestions(
@@ -317,6 +399,7 @@ function validateExerciseWithQuestions(
             if (answer && !(answer in question.options)) {
                 pushIssue(context, 'error', 'INVALID_ANSWER_OPTION', file, `questions[${index}].answer "${answer}" not found in options`)
             }
+            validateDistractors(file, `questions[${index}].options`, question.options, context)
         }
     }
 }
@@ -399,7 +482,10 @@ function validateQuestionList(file: string, questions: unknown[], context: ScanC
             if (answer && !(answer in question.options)) {
                 pushIssue(context, 'error', 'INVALID_ANSWER_OPTION', file, `questions[${index}].answer "${answer}" not found in options`)
             }
+            validateDistractors(file, `questions[${index}].options`, question.options, context)
         }
+
+        validateQuestionEvidence(file, question, index, context)
     }
 }
 
@@ -464,9 +550,18 @@ function validateWritingFile(file: string, data: unknown, context: ScanContext) 
             pushIssue(context, 'error', 'MISSING_FIELD', file, `${key} is required`)
         }
     }
+    const level = getString(data.cefrLevel) || inferLevelFromFile(file)
+    validateCefrAudit(file, data.cefrAudit, level, context, 'cefrAudit')
+    validateLearningOutcomes(file, data.learningOutcomes, level, 'writing', [id || file], context, 'learningOutcomes')
 
     if (!Array.isArray(data.contentPoints) || data.contentPoints.length === 0) {
         pushIssue(context, 'error', 'MISSING_CONTENT_POINTS', file, 'contentPoints must be a non-empty array')
+    }
+    if (!getString(data.modelAnswer) && !getString(data.sampleAnswer)) {
+        pushIssue(context, 'warning', 'MISSING_MODEL_ANSWER', file, 'modelAnswer or sampleAnswer should be present')
+    }
+    if (typeof data.timeMinutes !== 'number' && typeof data.timeLimitMinutes !== 'number' && typeof data.estimatedMinutes !== 'number') {
+        pushIssue(context, 'warning', 'MISSING_TIME_LIMIT', file, 'timeMinutes, timeLimitMinutes, or estimatedMinutes should be numeric')
     }
 
     const rubric = data.rubric
@@ -503,6 +598,10 @@ function validateWritingFile(file: string, data: unknown, context: ScanContext) 
             pushIssue(context, 'error', 'MISSING_CRITERION_MAX', file, `rubric.criteria[${index}].maxScore must be numeric`)
         }
     }
+
+    validateGermanTextQuality(file, 'instruction', getString(data.instruction), context)
+    validateGermanTextQuality(file, 'situation', getString(data.situation), context)
+    validateGermanTextQuality(file, 'modelAnswer', getString(data.modelAnswer), context)
 }
 
 function validateSpeakingFile(file: string, data: unknown, context: ScanContext) {
@@ -521,10 +620,17 @@ function validateSpeakingFile(file: string, data: unknown, context: ScanContext)
     if (!getString(data.cefrLevel)) {
         pushIssue(context, 'error', 'MISSING_LEVEL', file, 'cefrLevel is required')
     }
+    const level = getString(data.cefrLevel) || inferLevelFromFile(file)
+    validateCefrAudit(file, data.cefrAudit, level, context, 'cefrAudit')
+    validateLearningOutcomes(file, data.learningOutcomes, level, 'speaking', [topicSlug || file], context, 'learningOutcomes')
 
     if (!Array.isArray(data.lessons) || data.lessons.length === 0) {
         pushIssue(context, 'error', 'MISSING_LESSONS', file, 'lessons must be a non-empty array')
         return
+    }
+
+    if (!Array.isArray(data.evaluationCriteria) && !isObject(data.rubric)) {
+        pushIssue(context, 'warning', 'MISSING_SPEAKING_RUBRIC', file, 'evaluationCriteria or rubric should be present')
     }
 
     const lessonIds = new Set<string>()
@@ -570,6 +676,8 @@ function validateSpeakingFile(file: string, data: unknown, context: ScanContext)
             } else {
                 sentenceIds.add(sentenceId)
             }
+
+            validateGermanTextQuality(file, `lessons[${lessonIndex}].sentences[${sentenceIndex}].textDe`, getString(sentence.textDe), context)
         }
     }
 }
@@ -586,7 +694,210 @@ function validateCourseFile(file: string, data: unknown, context: ScanContext) {
 
     if (!Array.isArray(data.modules) || data.modules.length === 0) {
         pushIssue(context, 'error', 'MISSING_MODULES', file, 'modules must be a non-empty array')
+        return
     }
+
+    const courseLevel = isObject(data.course) ? getString(data.course.cefrLevel) || inferLevelFromFile(file) : inferLevelFromFile(file)
+    const courseSlug = isObject(data.course) ? getString(data.course.slug) || file : file
+    validateLearningOutcomes(file, data.learningOutcomes, courseLevel, 'course', [courseSlug], context, 'learningOutcomes')
+
+    for (let index = 0; index < data.modules.length; index++) {
+        const mod = data.modules[index]
+        if (!isObject(mod)) {
+            pushIssue(context, 'error', 'INVALID_MODULE', file, `modules[${index}] must be an object`)
+            continue
+        }
+
+        for (const slug of getStringArray(mod.vocabularyThemes)) {
+            if (!context.references.vocabularyThemes.has(slug)) {
+                pushIssue(context, 'error', 'BROKEN_VOCABULARY_REFERENCE', file, `modules[${index}] references missing vocabulary theme "${slug}"`)
+            }
+        }
+
+        for (const slug of getStringArray(mod.grammarTopics)) {
+            if (!context.references.grammarTopics.has(slug)) {
+                pushIssue(context, 'error', 'BROKEN_GRAMMAR_REFERENCE', file, `modules[${index}] references missing grammar topic "${slug}"`)
+            }
+        }
+
+        const moduleLevel = getString(mod.cefrLevel) || courseLevel
+        const moduleSlug = getString(mod.slug) || `module-${index}`
+        validateCefrAudit(file, mod.cefrAudit, moduleLevel, context, `modules[${index}].cefrAudit`)
+        validateLearningOutcomes(file, mod.learningOutcomes, moduleLevel, 'course', [moduleSlug], context, `modules[${index}].learningOutcomes`)
+    }
+}
+
+function validateCefrAudit(file: string, value: unknown, expectedLevel: string, context: ScanContext, pathLabel: string) {
+    if (!isObject(value)) {
+        pushIssue(context, 'error', 'MISSING_CEFR_AUDIT', file, `${pathLabel} is required for release-candidate content`)
+        return
+    }
+
+    const targetLevel = getString(value.targetLevel)
+    const verdict = getString(value.verdict)
+    const reviewerRole = getString(value.reviewerRole)
+    const notes = getString(value.notes)
+    const reviewedAt = getString(value.reviewedAt)
+
+    if (!targetLevel || !CEFR_LEVELS.has(targetLevel)) {
+        pushIssue(context, 'error', 'INVALID_CEFR_AUDIT_LEVEL', file, `${pathLabel}.targetLevel must be a CEFR level`)
+    } else if (expectedLevel && targetLevel !== expectedLevel) {
+        pushIssue(context, 'error', 'CEFR_AUDIT_LEVEL_MISMATCH', file, `${pathLabel}.targetLevel "${targetLevel}" does not match declared level "${expectedLevel}"`)
+    }
+
+    if (!verdict || !CEFR_VERDICTS.has(verdict)) {
+        pushIssue(context, 'error', 'INVALID_CEFR_AUDIT_VERDICT', file, `${pathLabel}.verdict must be aligned, revise, or block`)
+    }
+    if (!reviewerRole) pushIssue(context, 'error', 'MISSING_CEFR_AUDIT_REVIEWER', file, `${pathLabel}.reviewerRole is required`)
+    if (!notes || notes.length < 24) pushIssue(context, 'error', 'MISSING_CEFR_AUDIT_NOTES', file, `${pathLabel}.notes must explain the level judgment`)
+    if (!reviewedAt || !/^\d{4}-\d{2}-\d{2}/.test(reviewedAt)) {
+        pushIssue(context, 'error', 'INVALID_CEFR_AUDIT_DATE', file, `${pathLabel}.reviewedAt must start with YYYY-MM-DD`)
+    }
+}
+
+function validateLearningOutcomes(
+    file: string,
+    value: unknown,
+    expectedLevel: string,
+    expectedSkill: string,
+    expectedLinkedIds: string[],
+    context: ScanContext,
+    pathLabel: string
+) {
+    if (!Array.isArray(value) || value.length === 0) {
+        pushIssue(context, 'error', 'MISSING_LEARNING_OUTCOMES', file, `${pathLabel} must be a non-empty array`)
+        return
+    }
+
+    for (let index = 0; index < value.length; index++) {
+        const outcome = value[index]
+        if (!isObject(outcome)) {
+            pushIssue(context, 'error', 'INVALID_LEARNING_OUTCOME', file, `${pathLabel}[${index}] must be an object`)
+            continue
+        }
+
+        const id = getString(outcome.id)
+        const cefrLevel = getString(outcome.cefrLevel)
+        const skill = getString(outcome.skill)
+        const canDoVi = getString(outcome.canDoVi)
+        const canDoDe = getString(outcome.canDoDe)
+        const linkedContentIds = getStringArray(outcome.linkedContentIds)
+
+        if (!id) pushIssue(context, 'error', 'MISSING_LEARNING_OUTCOME_ID', file, `${pathLabel}[${index}].id is required`)
+        if (!cefrLevel || !CEFR_LEVELS.has(cefrLevel)) {
+            pushIssue(context, 'error', 'INVALID_LEARNING_OUTCOME_LEVEL', file, `${pathLabel}[${index}].cefrLevel must be a CEFR level`)
+        } else if (expectedLevel && cefrLevel !== expectedLevel) {
+            pushIssue(context, 'error', 'LEARNING_OUTCOME_LEVEL_MISMATCH', file, `${pathLabel}[${index}].cefrLevel "${cefrLevel}" does not match declared level "${expectedLevel}"`)
+        }
+        if (!skill || !LEARNING_OUTCOME_SKILLS.has(skill)) {
+            pushIssue(context, 'error', 'INVALID_LEARNING_OUTCOME_SKILL', file, `${pathLabel}[${index}].skill must be a known learning skill`)
+        } else if (expectedSkill && skill !== expectedSkill) {
+            pushIssue(context, 'error', 'LEARNING_OUTCOME_SKILL_MISMATCH', file, `${pathLabel}[${index}].skill "${skill}" does not match "${expectedSkill}"`)
+        }
+        if (!canDoVi || canDoVi.length < 16) pushIssue(context, 'error', 'MISSING_CAN_DO_VI', file, `${pathLabel}[${index}].canDoVi is too short`)
+        if (!canDoDe || canDoDe.length < 16) pushIssue(context, 'error', 'MISSING_CAN_DO_DE', file, `${pathLabel}[${index}].canDoDe is too short`)
+        if (linkedContentIds.length === 0) {
+            pushIssue(context, 'error', 'MISSING_LINKED_CONTENT_IDS', file, `${pathLabel}[${index}].linkedContentIds must not be empty`)
+        } else if (expectedLinkedIds.length > 0 && !expectedLinkedIds.some((expected) => linkedContentIds.includes(expected))) {
+            pushIssue(context, 'error', 'LEARNING_OUTCOME_LINK_MISMATCH', file, `${pathLabel}[${index}].linkedContentIds should include the owning content id`)
+        }
+    }
+}
+
+function validateListeningTranscript(file: string, data: Record<string, unknown>, transcript: Record<string, unknown>, context: ScanContext) {
+    if (getString(transcript.status) !== 'complete') {
+        pushIssue(context, 'error', 'MISSING_FULL_TRANSCRIPT', file, 'transcript.status must be "complete"')
+    }
+    if (getString(transcript.quality) === 'partial_evidence_only' || getString(transcript.source) === 'reconstructed_from_question_key_evidence') {
+        pushIssue(context, 'error', 'PARTIAL_TRANSCRIPT_NOT_ALLOWED', file, 'transcript must be upgraded from partial evidence to a full release-candidate script')
+    }
+
+    const lines = Array.isArray(transcript.lines) ? transcript.lines : []
+    const transcriptText = lines
+        .map((line) => (isObject(line) ? getString(line.text) || '' : ''))
+        .join('\\n')
+
+    for (let index = 0; index < lines.length; index++) {
+        const line = lines[index]
+        if (!isObject(line)) {
+            pushIssue(context, 'error', 'INVALID_TRANSCRIPT_LINE', file, `transcript.lines[${index}] must be an object`)
+            continue
+        }
+        if (!getString(line.speaker)) pushIssue(context, 'error', 'MISSING_TRANSCRIPT_SPEAKER', file, `transcript.lines[${index}].speaker is required`)
+        if (!getString(line.text)) pushIssue(context, 'error', 'MISSING_TRANSCRIPT_TEXT', file, `transcript.lines[${index}].text is required`)
+    }
+
+    const questions = Array.isArray(data.questions) ? data.questions : []
+    for (let index = 0; index < questions.length; index++) {
+        const question = questions[index]
+        if (!isObject(question)) continue
+        validateQuestionEvidence(file, question, index, context)
+        const evidence = getQuestionEvidence(question)
+        if (evidence && !transcriptText.includes(evidence)) {
+            pushIssue(context, 'error', 'TRANSCRIPT_EVIDENCE_MISMATCH', file, `questions[${index}] key evidence is not present in transcript.lines`)
+        }
+    }
+}
+
+function validateQuestionEvidence(file: string, question: Record<string, unknown>, index: number, context: ScanContext) {
+    const evidence = getQuestionEvidence(question)
+    if (!evidence) {
+        pushIssue(context, 'error', 'MISSING_ANSWER_EVIDENCE', file, `questions[${index}].explanation.key_evidence is required for release-candidate QA`)
+    }
+}
+
+function getQuestionEvidence(question: Record<string, unknown>) {
+    const explanation = question.explanation
+    if (isObject(explanation)) return getString(explanation.key_evidence)
+    return getString(question.key_evidence) || getString(question.evidence)
+}
+
+function validateDistractors(file: string, pathLabel: string, options: Record<string, unknown>, context: ScanContext) {
+    const values = Object.values(options)
+        .map((option) => (typeof option === 'string' ? normalizeToken(option) : ''))
+        .filter(Boolean)
+    if (values.length < 2) {
+        pushIssue(context, 'error', 'INSUFFICIENT_DISTRACTORS', file, `${pathLabel} must contain at least two non-empty choices`)
+        return
+    }
+    if (new Set(values).size !== values.length) {
+        pushIssue(context, 'error', 'DUPLICATE_DISTRACTOR_TEXT', file, `${pathLabel} contains duplicate or indistinguishable options`)
+    }
+}
+
+function validateGermanTextQuality(file: string, pathLabel: string, value: string | null, context: ScanContext) {
+    if (!value) return
+
+    const suspiciousPatterns = [
+        /\\bist\\s+eine\\s+gro(?:ße|sse)\\s+Stadt\\b/i,
+        /\\bhat\\s+ge[a-zäöüß]+t\\b/i,
+        /\\bgesich\\s+/i,
+    ]
+
+    if (suspiciousPatterns.some((pattern) => pattern.test(value))) {
+        pushIssue(context, 'error', 'SUSPICIOUS_GERMAN_TEXT', file, `${pathLabel} contains a known awkward or malformed German pattern`)
+    }
+}
+
+function hasPraesensConjugation(wordEntry: Record<string, unknown>) {
+    const conjugation = wordEntry.conjugation
+    if (!isObject(conjugation)) return false
+    if (getString(conjugation.praesens)) return true
+    if (!isObject(conjugation.praesens)) return false
+    const praesens = conjugation.praesens
+    return Boolean(
+        getString(praesens.ich) &&
+        getString(praesens.du) &&
+        (getString(praesens.er_sie_es) || getString(praesens['er/sie/es'])) &&
+        getString(praesens.wir) &&
+        getString(praesens.ihr) &&
+        (getString(praesens.sie_Sie) || getString(praesens['sie/Sie']))
+    )
+}
+
+function getStringArray(value: unknown) {
+    if (!Array.isArray(value)) return []
+    return value.filter((item): item is string => typeof item === 'string' && item.trim().length > 0)
 }
 
 function writeReport(fileCount: number, issues: Issue[]) {
@@ -628,6 +939,12 @@ function inferSkill(file: string): Skill {
     if (normalized.includes('/writing/')) return 'writing'
     if (normalized.includes('/speaking/')) return 'speaking'
     return 'unknown'
+}
+
+function inferLevelFromFile(file: string) {
+    const normalized = file.replace(/\\/g, '/')
+    const match = normalized.match(/(?:^|\/)(a1|a2|b1|b2|c1|c2)(?:\/|-)/i)
+    return match ? match[1].toUpperCase() : ''
 }
 
 function trackGlobalId(context: ScanContext, key: string, file: string) {
@@ -697,6 +1014,12 @@ function hasReadingContentBlock(data: Record<string, unknown>) {
 
 function errorMessage(err: unknown) {
     return err instanceof Error ? err.message : String(err)
+}
+
+function getArgValue(name: string) {
+    const index = process.argv.indexOf(name)
+    if (index === -1) return null
+    return process.argv[index + 1] || null
 }
 
 main()

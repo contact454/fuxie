@@ -2,11 +2,20 @@ import { prisma } from '@fuxie/database';
 import AdminClientDashboard from './AdminClientDashboard';
 import { startOfDay, subDays, format } from 'date-fns';
 import { cacheWrap } from '@/lib/cache/redis';
+import {
+  isSlice4VisualQaFixture,
+  Slice4AdminFilteredEmptyFixture,
+} from '@/components/visual-fixtures/slice-4-staff-fixtures';
 
 // Mark as dynamic since we are querying database in real-time
 export const dynamic = 'force-dynamic';
 
-export default async function AdminDashboardPage() {
+export default async function AdminDashboardPage({ searchParams }: { searchParams: Promise<{ state?: string; fixture?: string }> }) {
+  const visualParams = await searchParams;
+  if (isSlice4VisualQaFixture(visualParams, 'empty')) {
+    return <Slice4AdminFilteredEmptyFixture />;
+  }
+
   const {
     totalUsers,
     dailyActive,

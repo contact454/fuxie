@@ -16,8 +16,8 @@ const buttonBase =
 
 const buttonVariants: Record<FuxieButtonVariant, string> = {
     primary: 'bg-[#60A8E4] text-white shadow-lg shadow-sky-900/15 hover:-translate-y-0.5 hover:bg-[#3C78A8] hover:shadow-sky-900/20',
-    secondary: 'bg-[#F3FBFF] text-[#3C78A8] ring-1 ring-[#60A8E4]/20 hover:bg-[#CCE4F0]/55',
-    ghost: 'bg-white text-[#3C78A8] ring-1 ring-slate-200 hover:bg-[#F3FBFF] hover:ring-[#60A8E4]/25',
+    secondary: 'bg-[#F3FBFF] text-text-brand ring-1 ring-[#60A8E4]/20 hover:bg-[#CCE4F0]/55',
+    ghost: 'bg-white text-text-brand ring-1 ring-slate-200 hover:bg-[#F3FBFF] hover:ring-[#60A8E4]/25',
     reward: 'bg-[#FFB703] text-white shadow-lg shadow-amber-900/15 hover:-translate-y-0.5 hover:bg-[#F59E0B]',
 }
 
@@ -69,8 +69,8 @@ export function FuxiePanel({
 }
 
 const badgeTones: Record<FuxieTone, string> = {
-    brand: 'bg-white/80 text-[#3C78A8] ring-[#60A8E4]/25',
-    reward: 'bg-[#FFF4D6] text-[#C67A00] ring-[#FFD166]/50',
+    brand: 'bg-white/80 text-text-brand ring-[#60A8E4]/25',
+    reward: 'bg-[#FFF4D6] text-text-reward ring-[#FFD166]/50',
     success: 'bg-emerald-50 text-emerald-700 ring-emerald-200/70',
     danger: 'bg-red-50 text-red-600 ring-red-200/70',
     neutral: 'bg-slate-100 text-slate-600 ring-slate-200',
@@ -86,7 +86,7 @@ export function FuxieBadge({
     children: ReactNode
 }) {
     return (
-        <span className={fx('inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-xs font-black uppercase tracking-wide ring-1', badgeTones[tone], className)}>
+        <span className={fx('inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-xs font-black uppercase ring-1', badgeTones[tone], className)}>
             {children}
         </span>
     )
@@ -174,15 +174,15 @@ export function FuxieLevelTabs<T extends string>({
                             'relative inline-flex shrink-0 items-center justify-center gap-1.5 rounded-xl px-4 py-2 text-sm font-black transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#60A8E4]/40 disabled:cursor-wait disabled:opacity-60',
                             isActive
                                 ? fx('bg-[#60A8E4] text-white shadow-md shadow-sky-900/15', getActiveClassName?.(item))
-                                : fx('bg-white/60 text-[#3C78A8] ring-1 ring-[#60A8E4]/15 hover:bg-[#F3FBFF]', getInactiveClassName?.(item)),
+                                : fx('bg-white/60 text-text-brand ring-1 ring-[#60A8E4]/15 hover:bg-[#F3FBFF]', getInactiveClassName?.(item)),
                             buttonClassName
                         )}
                     >
                         <span>{getLabel ? getLabel(item) : item}</span>
                         {count ? (
                             <span className={fx(
-                                'rounded-full px-1.5 py-0.5 text-[10px] font-black',
-                                isActive ? 'bg-white/20 text-white' : 'bg-[#F3FBFF] text-[#3C78A8]'
+                                'rounded-full px-1.5 py-0.5 text-xs font-black',
+                                isActive ? 'bg-white/20 text-white' : 'bg-[#F3FBFF] text-text-brand'
                             )}>
                                 {count}
                             </span>
@@ -296,7 +296,7 @@ export function FuxieRewardList({
                         </span>
                         <div className="min-w-0">
                             <p className="truncate text-sm font-black text-slate-950">{item.label}</p>
-                            <p className="truncate text-[11px] font-semibold text-slate-500">{item.detail}</p>
+                            <p className="truncate text-xs font-semibold text-slate-500">{item.detail}</p>
                         </div>
                     </div>
                 )

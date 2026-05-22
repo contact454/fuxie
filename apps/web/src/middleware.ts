@@ -8,14 +8,49 @@ import { authConfig } from '@/lib/auth/config'
 import { DEV_AUTH_COOKIE, getDevAuthUser, isDevAuthEnabled } from '@/lib/auth/dev-auth'
 
 const AUTH_PAGES = ['/', '/login', '/register']
-const DEV_PUBLIC_PATHS = ['/fuxie-live-qa']
+const DEV_PUBLIC_PATHS = ['/fuxie-live-qa', '/fuxie-world-lab']
+const DEV_VISUAL_QA_PATHS = [
+    '/admin',
+    '/badges',
+    '/chat',
+    '/course',
+    '/dashboard',
+    '/exam',
+    '/grammar',
+    '/listening',
+    '/profile',
+    '/reading',
+    '/review',
+    '/session',
+    '/speaking',
+    '/teacher',
+    '/vocabulary',
+    '/writing',
+]
+
+function isDevVisualQaRequest(request: NextRequest) {
+    if (process.env.NODE_ENV === 'production') return false
+    if (request.nextUrl.searchParams.get('fixture') !== 'visual-qa') return false
+
+    return DEV_VISUAL_QA_PATHS.some((path) => (
+        request.nextUrl.pathname === path ||
+        request.nextUrl.pathname.startsWith(`${path}/`)
+    ))
+}
 
 export async function middleware(request: NextRequest) {
+    const requestHeaders = new Headers(request.headers)
+
     if (
         process.env.NODE_ENV !== 'production' &&
         DEV_PUBLIC_PATHS.includes(request.nextUrl.pathname)
     ) {
         return NextResponse.next()
+    }
+
+    if (isDevVisualQaRequest(request)) {
+        requestHeaders.set('x-fuxie-visual-qa', '1')
+        return NextResponse.next({ request: { headers: requestHeaders } })
     }
 
     const devUser = getDevAuthUser(request.cookies.get(DEV_AUTH_COOKIE)?.value)
