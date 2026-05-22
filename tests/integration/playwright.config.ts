@@ -145,7 +145,7 @@ export default defineConfig({
     ],
     webServer: AUTOSTART_WEB
         ? {
-              command: 'npx pnpm dev:web',
+              command: 'npx pnpm --filter @fuxie/web dev',
               url: BASE_URL,
               cwd: path.resolve(__dirname, '..', '..'),
               reuseExistingServer: !process.env.CI,
