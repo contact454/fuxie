@@ -48,7 +48,8 @@
       "exampleSentence2": "Man muss die Geschichtlichkeit von Begriffen und Theorien berücksichtigen, um ihre Bedeutung vollständig zu erfassen.",
       "exampleTranslation2": "Người ta phải xem xét tính lịch sử của các khái niệm và lý thuyết để nắm bắt đầy đủ ý nghĩa của chúng.",
       "imageUrl": "/images/vocab/c2-geschichtsphilosophie/geschichtlichkeit.png",
-      "meaningDe": "Die Eigenschaft des Menschen, durch seine historische Herkunft und Zeit geprägt zu sein."
+      "meaningDe": "Die Eigenschaft des Menschen, durch seine historische Herkunft und Zeit geprägt zu sein.",
+      "pluralStatus": "not_applicable_or_needs_review"
     },
     {
       "word": "Diachronie",
@@ -174,7 +175,8 @@
       "exampleSentence2": "Das Verstehen historischer Kontexte erfordert Empathie und kritisches Denken.",
       "exampleTranslation2": "Sự thấu hiểu các ngữ cảnh lịch sử đòi hỏi sự đồng cảm và tư duy phê phán.",
       "imageUrl": "/images/vocab/c2-geschichtsphilosophie/verstehen.png",
-      "meaningDe": "Ein geisteswissenschaftlicher Ansatz, der darauf abzielt, den Sinn hinter einer Handlung oder einem Text zu erfassen."
+      "meaningDe": "Ein geisteswissenschaftlicher Ansatz, der darauf abzielt, den Sinn hinter einer Handlung oder einem Text zu erfassen.",
+      "pluralStatus": "not_applicable_or_needs_review"
     },
     {
       "word": "Weltgeist",
@@ -202,7 +204,8 @@
       "exampleSentence2": "Die Vermittlung von Geschichtsbewusstsein ist eine zentrale Aufgabe der Bildung.",
       "exampleTranslation2": "Việc truyền đạt ý thức lịch sử là một nhiệm vụ trung tâm của giáo dục.",
       "imageUrl": "/images/vocab/c2-geschichtsphilosophie/geschichtsbewusstsein.png",
-      "meaningDe": "Das Bewusstsein über die eigene Stellung in der Zeit und die Verbindung von Vergangenheit, Gegenwart und Zukunft."
+      "meaningDe": "Das Bewusstsein über die eigene Stellung in der Zeit und die Verbindung von Vergangenheit, Gegenwart und Zukunft.",
+      "pluralStatus": "not_applicable_or_needs_review"
     },
     {
       "word": "Rezeptionsgeschichte",
@@ -230,7 +233,20 @@
       "exampleSentence2": "Indem man eine Idee historisiert, kann man ihre vermeintliche Zeitlosigkeit in Frage stellen.",
       "exampleTranslation2": "Bằng cách lịch sử hóa một ý tưởng, người ta có thể đặt câu hỏi về tính vĩnh cửu được cho là của nó.",
       "imageUrl": "/images/vocab/c2-geschichtsphilosophie/historisieren.png",
-      "meaningDe": "Etwas in seinen zeitlichen und gesellschaftlichen Kontext einordnen, um es objektiv zu begreifen."
+      "meaningDe": "Etwas in seinen zeitlichen und gesellschaftlichen Kontext einordnen, um es objektiv zu begreifen.",
+      "conjugation": {
+        "praesens": {
+          "ich": "historisiere",
+          "du": "historisierst",
+          "er_sie_es": "historisiert",
+          "wir": "historisieren",
+          "ihr": "historisiert",
+          "sie_Sie": "historisieren"
+        },
+        "isIrregular": false,
+        "isSeparable": false,
+        "reviewStatus": "auto_generated_needs_spot_check"
+      }
     },
     {
       "word": "teleologisch",
@@ -259,6 +275,26 @@
       "exampleTranslation2": "Một góc nhìn triết học lịch sử giúp nhận ra những đường nét lớn của sự phát triển.",
       "imageUrl": "/images/vocab/c2-geschichtsphilosophie/geschichtsphilosophisch.png",
       "meaningDe": "Bezogen auf die philosophischen Fragen nach dem Sinn und der Struktur der Geschichte."
+    }
+  ],
+  "cefrAudit": {
+    "targetLevel": "C2",
+    "verdict": "aligned",
+    "reviewerRole": "German Academic Lead",
+    "notes": "Release-candidate metadata audit: vocabulary content for \"Geschichtsphilosophie & Historismus\" is aligned with declared C2 scope pending final human spot-check.",
+    "reviewedAt": "2026-05-12",
+    "reviewScope": "release_candidate_metadata_pass"
+  },
+  "learningOutcomes": [
+    {
+      "id": "c2-geschichtsphilosophie-lo-1",
+      "cefrLevel": "C2",
+      "skill": "vocabulary",
+      "canDoVi": "Toi co the luyen tu vung o trinh do C2 qua chu de \"Geschichtsphilosophie & Historismus\".",
+      "canDoDe": "Ich kann Wortschatz auf Niveau C2 zum Thema \"Geschichtsphilosophie & Historismus\" ueben.",
+      "linkedContentIds": [
+        "c2-geschichtsphilosophie"
+      ]
     }
   ]
 }

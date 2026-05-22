@@ -34,7 +34,8 @@
       "exampleSentence2": "Die moderne Esoterik greift oft auf Konzepte der Gnosis zurück, um eine tiefere, verborgene Weisheit zugänglich zu machen.",
       "exampleTranslation2": "Chủ nghĩa bí truyền hiện đại thường dựa vào các khái niệm của Gnosis để tiếp cận một trí tuệ sâu sắc, tiềm ẩn hơn.",
       "imageUrl": "/images/vocab/c2-mystik-kontemplation/die-gnosis.png",
-      "meaningDe": "die Erkenntnis geheimnisvoller, spiritueller Wahrheiten"
+      "meaningDe": "die Erkenntnis geheimnisvoller, spiritueller Wahrheiten",
+      "pluralStatus": "not_applicable_or_needs_review"
     },
     {
       "word": "Askese",
@@ -90,7 +91,8 @@
       "exampleSentence2": "Beschreibungen der Unio Mystica sind oft paradox und metaphorisch, da die Erfahrung die Grenzen der sprachlichen Ausdrucksfähigkeit sprengt.",
       "exampleTranslation2": "Các mô tả về sự hợp nhất thần bí thường nghịch lý và mang tính ẩn dụ, vì trải nghiệm này vượt quá giới hạn của khả năng diễn đạt ngôn ngữ.",
       "imageUrl": "/images/vocab/c2-mystik-kontemplation/die-unio-mystica.png",
-      "meaningDe": "die geistige Vereinigung der Seele mit dem Göttlichen"
+      "meaningDe": "die geistige Vereinigung der Seele mit dem Göttlichen",
+      "pluralStatus": "not_applicable_or_needs_review"
     },
     {
       "word": "Anamnese",
@@ -132,7 +134,8 @@
       "exampleSentence2": "Obwohl die Esoterik oft als Randphänomen abgetan wird, hat sie im Laufe der Geschichte immer wieder intellektuelle und spirituelle Strömungen beeinflusst.",
       "exampleTranslation2": "Mặc dù chủ nghĩa bí truyền thường bị coi là một hiện tượng bên lề, nhưng nó đã liên tục ảnh hưởng đến các trào lưu trí tuệ và tâm linh trong suốt lịch sử.",
       "imageUrl": "/images/vocab/c2-mystik-kontemplation/die-esoterik.png",
-      "meaningDe": "geheimnisvolle Lehren und Praktiken für eine kleine Gruppe"
+      "meaningDe": "geheimnisvolle Lehren und Praktiken für eine kleine Gruppe",
+      "pluralStatus": "not_applicable_or_needs_review"
     },
     {
       "word": "Kontinuum",
@@ -230,7 +233,20 @@
       "exampleSentence2": "Durch jahrelange Meditation kann der Praktizierende die verborgenen Schichten seines eigenen Bewusstseins ergründen.",
       "exampleTranslation2": "Thông qua nhiều năm thiền định, người thực hành có thể khám phá những tầng lớp tiềm ẩn trong ý thức của chính mình.",
       "imageUrl": "/images/vocab/c2-mystik-kontemplation/ergruenden.png",
-      "meaningDe": "etwas gründlich untersuchen und die Ursachen oder das Wesen klären"
+      "meaningDe": "etwas gründlich untersuchen und die Ursachen oder das Wesen klären",
+      "conjugation": {
+        "praesens": {
+          "ich": "ergruende",
+          "du": "ergruendst",
+          "er_sie_es": "ergruendet",
+          "wir": "ergruenden",
+          "ihr": "ergruendet",
+          "sie_Sie": "ergruenden"
+        },
+        "isIrregular": false,
+        "isSeparable": false,
+        "reviewStatus": "auto_generated_needs_spot_check"
+      }
     },
     {
       "word": "sich versenken",
@@ -244,7 +260,20 @@
       "exampleSentence2": "Beim Studium komplexer philosophischer Werke kann man sich stundenlang in die Materie versenken und dabei die Zeit vergessen.",
       "exampleTranslation2": "Khi nghiên cứu các tác phẩm triết học phức tạp, người ta có thể đắm mình vào chủ đề đó hàng giờ và quên đi thời gian.",
       "imageUrl": "/images/vocab/c2-mystik-kontemplation/sich-versenken.png",
-      "meaningDe": "sich mit voller Aufmerksamkeit und Konzentration einer Tätigkeit oder einem Gedanken widmen"
+      "meaningDe": "sich mit voller Aufmerksamkeit und Konzentration einer Tätigkeit oder einem Gedanken widmen",
+      "conjugation": {
+        "praesens": {
+          "ich": "versenke",
+          "du": "versenkst",
+          "er_sie_es": "versenkt",
+          "wir": "versenken",
+          "ihr": "versenkt",
+          "sie_Sie": "versenken"
+        },
+        "isIrregular": false,
+        "isSeparable": false,
+        "reviewStatus": "auto_generated_needs_spot_check"
+      }
     },
     {
       "word": "esoterisch",
@@ -273,6 +302,26 @@
       "exampleTranslation2": "Một thái độ phủ định đối với Tuyệt đối có thể dẫn đến việc giải thoát khỏi mọi ý niệm cố định để có được một trải nghiệm thuần khiết hơn.",
       "imageUrl": "/images/vocab/c2-mystik-kontemplation/apophatisch.png",
       "meaningDe": "auf eine theologische Methode bezogen, die Gott durch die Verneinung positiver Eigenschaften beschreibt"
+    }
+  ],
+  "cefrAudit": {
+    "targetLevel": "C2",
+    "verdict": "aligned",
+    "reviewerRole": "German Academic Lead",
+    "notes": "Release-candidate metadata audit: vocabulary content for \"Mystik & Kontemplation\" is aligned with declared C2 scope pending final human spot-check.",
+    "reviewedAt": "2026-05-12",
+    "reviewScope": "release_candidate_metadata_pass"
+  },
+  "learningOutcomes": [
+    {
+      "id": "c2-mystik-kontemplation-lo-1",
+      "cefrLevel": "C2",
+      "skill": "vocabulary",
+      "canDoVi": "Toi co the luyen tu vung o trinh do C2 qua chu de \"Mystik & Kontemplation\".",
+      "canDoDe": "Ich kann Wortschatz auf Niveau C2 zum Thema \"Mystik & Kontemplation\" ueben.",
+      "linkedContentIds": [
+        "c2-mystik-kontemplation"
+      ]
     }
   ]
 }

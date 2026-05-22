@@ -2,6 +2,8 @@
 
 import { useCallback, useEffect, useMemo, useState } from 'react'
 import { useRouter } from 'next/navigation'
+import Image from 'next/image'
+import { useTranslations } from 'next-intl'
 import {
     BookOpen,
     CalendarDays,
@@ -20,6 +22,7 @@ import { Mascot } from '@/components/ui/mascot'
 import { FuxieBadge, FuxiePanel, FuxieProgressBar, fuxieButtonClass } from '@/components/ui/fuxie-ui'
 import { useLevelSwitcher } from '@/hooks/use-level-switcher'
 import { getCefrTheme } from '@/lib/constants/cefr'
+import { FUXIE_WORLD_PROPS } from '@/lib/mascot/fuxie-assets'
 
 interface ExerciseItem {
     id: string
@@ -91,6 +94,7 @@ function getReadingWordCount(meta: any): number | null {
 }
 
 export function ReadingClient({ teile, totalExercises, totalCompleted, availableLevels, initialLevel }: ReadingClientProps) {
+    const t = useTranslations('Gamification')
     const router = useRouter()
     const [currentTeile, setCurrentTeile] = useState(teile)
     const [currentTotal, setCurrentTotal] = useState(totalExercises)
@@ -185,11 +189,18 @@ export function ReadingClient({ teile, totalExercises, totalCompleted, available
                                 <FuxieBadge tone="brand">Reading quest</FuxieBadge>
                                 <FuxieBadge tone={overallProgress >= 100 ? 'success' : 'neutral'}>{overallProgress}%</FuxieBadge>
                             </div>
-                            <h1 className="text-2xl font-black text-[#173B56]">Luyện đọc {currentLevel}</h1>
-                            <p className="text-sm font-semibold text-[#3C78A8] mt-0.5">
+                            <h1 className="text-2xl font-black text-text-primary">{t('practiceSkill', { skill: 'đọc', level: currentLevel })}</h1>
+                            <p className="text-sm font-semibold text-text-brand mt-0.5">
                                 <span className="font-black">{currentCompleted}</span> / {currentTotal} bài đã xong
                             </p>
                         </div>
+                        <Image
+                            src={FUXIE_WORLD_PROPS.readingLibraryDesk}
+                            alt=""
+                            width={96}
+                            height={96}
+                            className="ml-auto hidden h-20 w-20 shrink-0 object-contain drop-shadow-sm md:block"
+                        />
                         {nextExerciseHref && (
                             <MeasuredLink
                                 href={nextExerciseHref}
@@ -198,13 +209,13 @@ export function ReadingClient({ teile, totalExercises, totalCompleted, available
                                 className={fuxieButtonClass('primary', 'lg', 'whitespace-nowrap')}
                             >
                                 <BookOpen className="h-4 w-4" />
-                                Học tiếp
+                                {t('continueLearningAction')}
                             </MeasuredLink>
                         )}
                     </div>
                     <div className="mt-4">
                         <FuxieProgressBar value={overallProgress} tone={overallProgress >= 100 ? 'success' : 'brand'} />
-                        <p className="text-xs font-semibold text-[#3C78A8]/70 mt-1.5 text-right">{overallProgress}% hoàn thành</p>
+                        <p className="text-xs font-semibold text-text-brand/70 mt-1.5 text-right">{t('percentCompleted', { percent: overallProgress })}</p>
                     </div>
                 </div>
             </FuxiePanel>
@@ -216,9 +227,9 @@ export function ReadingClient({ teile, totalExercises, totalCompleted, available
             ) : currentTeile.length === 0 ? (
                 <FuxiePanel className="p-12 text-center">
                     <Mascot variant="thinking" size={80} />
-                    <h2 className="text-lg font-black text-[#173B56] mt-4">Nội dung đọc đang được chuẩn bị</h2>
+                    <h2 className="text-lg font-black text-text-primary mt-4">{t('readingEmpty')}</h2>
                     <p className="text-sm font-medium text-slate-500 mt-2">
-                        Hãy quay lại lộ trình chính hoặc học từ vựng trong lúc chờ bài đọc mới.
+                        {t('readingEmptyDesc')}
                     </p>
                     <MeasuredLink
                         href="/course"
@@ -226,7 +237,7 @@ export function ReadingClient({ teile, totalExercises, totalCompleted, available
                         source={currentLevel}
                         className={fuxieButtonClass('primary', 'md', 'mt-5')}
                     >
-                        Về khóa học
+                        {t('backToCourse')}
                     </MeasuredLink>
                 </FuxiePanel>
             ) : (
@@ -252,10 +263,10 @@ export function ReadingClient({ teile, totalExercises, totalCompleted, available
                                     </div>
                                     <div className="flex-1 min-w-0">
                                         <h3 className="text-base font-bold text-gray-900">
-                                            Phần {teil.teil} - {teil.teilName}
+                                            {t('part', { part: teil.teil })} - {teil.teilName}
                                         </h3>
                                         <p className="text-sm text-gray-500 mt-0.5">
-                                            {teil.exercises.length} bài đọc - <span style={{ color: cefrColors.text, fontWeight: 600 }}>{completedInTeil}</span> đã xong
+                                            {t('lessonsCompleted', { total: teil.exercises.length, completed: completedInTeil })}
                                         </p>
                                     </div>
                                     <div className="relative flex items-center gap-3">
@@ -324,8 +335,8 @@ export function ReadingClient({ teile, totalExercises, totalCompleted, available
                                                                     {ex.topic}
                                                                 </p>
                                                                 <p className={`text-xs mt-0.5 ${isDone ? 'text-green-600' : 'text-gray-400'}`}>
-                                                                    {ex.questionCount} câu hỏi
-                                                                    {ex.wordCount && ` - ~${ex.wordCount} từ`}
+                                                                    {t('questionsCount', { count: ex.questionCount })}
+                                                                    {ex.wordCount && ` - ${t('wordCountApprox', { count: ex.wordCount })}`}
                                                                 </p>
                                                             </div>
                                                             <div className="shrink-0">
@@ -337,7 +348,7 @@ export function ReadingClient({ teile, totalExercises, totalCompleted, available
                                                                     <span className="inline-flex items-center gap-1 text-xs font-bold px-2.5 py-1 rounded-lg"
                                                                         style={{ color: cefrColors.text, backgroundColor: cefrColors.bg }}>
                                                                         <Play className="h-3 w-3" />
-                                                                        Bắt đầu
+                                                                        {t('startAction')}
                                                                     </span>
                                                                 ) : isLocked ? (
                                                                     <Lock className="h-4 w-4 text-gray-300" />
@@ -352,8 +363,8 @@ export function ReadingClient({ teile, totalExercises, totalCompleted, available
                                                 const hiddenCount = teil.exercises.filter((ex, idx) => !ex.completion && idx > firstUncompleted + 2).length
                                                 if (hiddenCount === 0) return null
                                                 return (
-                                                    <FuxiePanel variant="soft" className="border-dashed px-4 py-3 text-sm font-semibold text-[#3C78A8]">
-                                                        Hoàn thành bài hiện tại để mở {hiddenCount} bài tiếp theo.
+                                                    <FuxiePanel variant="soft" className="border-dashed px-4 py-3 text-sm font-semibold text-text-brand">
+                                                        {t('unlockNext', { count: hiddenCount })}
                                                     </FuxiePanel>
                                                 )
                                             })()}

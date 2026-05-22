@@ -53,11 +53,11 @@ export function GapFillRenderer({ content, answer, onChange }: Props) {
                                     onClick={() => setActiveBlank(isActive ? null : item.id)}
                                     className={`inline-flex items-center gap-1 px-3 py-1 rounded-lg text-sm font-medium transition-all border-2 border-dashed
                                         ${value
-                                            ? 'bg-[#60A8E4]/10 border-[#60A8E4]/40 text-[#3C78A8]'
+                                            ? 'bg-[#60A8E4]/10 border-[#60A8E4]/40 text-text-brand'
                                             : 'bg-white border-gray-300 text-gray-400 hover:border-[#60A8E4]/40'
                                         }`}
                                 >
-                                    <span className="text-[10px] font-bold text-gray-400 mr-1">{idx + 1}</span>
+                                    <span className="text-xs font-bold text-gray-400 mr-1">{idx + 1}</span>
                                     {value || '...'}
                                 </button>
 

@@ -139,6 +139,14 @@ enum ShopRedeemRequestStatus {
 
 // ===== AUTH & USERS =====
 
+enum LeagueLevel {
+  BRONZE
+  SILVER
+  GOLD
+  PLATINUM
+  DIAMOND
+}
+
 model User {
   id            String   @id @default(uuid())
   firebaseUid   String   @unique
@@ -171,6 +179,7 @@ model User {
   grammarProgress       GrammarProgress[]
   speakingProgress      SpeakingProgress[]
   pushSubscriptions     PushSubscription[]
+  analyticsEvents       AnalyticsEvent[]
 
   // Teacher & Classroom relations
   teacherClassrooms  Classroom[]            @relation("teacherClassrooms")
@@ -214,6 +223,7 @@ model UserProfile {
   targetExamDate   DateTime?
   studyGoalMinutes Int        @default(15)
   timezone         String     @default("Asia/Ho_Chi_Minh")
+  currentLeague    LeagueLevel @default(BRONZE)
 
   totalXp               Int @default(0)
   totalWordsLearned     Int @default(0)
@@ -245,6 +255,29 @@ model UserSettings {
   updatedAt DateTime @updatedAt
 
   @@map("user_settings")
+}
+
+model AnalyticsEvent {
+  id     String @id @default(uuid())
+  userId String
+  user   User   @relation(fields: [userId], references: [id])
+
+  role       UserRole
+  eventName  String
+  source     String?
+  sessionId  String?
+  route      String?
+  actionId   String?
+  actionType String?
+  level      String?
+  skill      String?
+  metadata   Json?
+  createdAt  DateTime @default(now())
+
+  @@index([eventName, createdAt])
+  @@index([userId, createdAt])
+  @@index([userId, eventName, createdAt])
+  @@map("analytics_events")
 }
 
 model LearningPath {

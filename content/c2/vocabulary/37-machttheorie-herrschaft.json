@@ -146,7 +146,8 @@
       "exampleSentence2": "Die Bekämpfung von Strukturgewalt erfordert nicht nur direkte Interventionen, sondern auch tiefgreifende gesellschaftliche Reformen.",
       "exampleTranslation2": "Chống lại bạo lực cấu trúc không chỉ đòi hỏi các can thiệp trực tiếp mà còn cả những cải cách xã hội sâu rộng.",
       "imageUrl": "/images/vocab/c2-machttheorie-herrschaft/die-strukturgewalt.png",
-      "meaningDe": "Eine Form der Unterdrückung, die in den sozialen und politischen Systemen einer Gesellschaft verankert ist und bestimmte Gruppen systematisch benachteiligt."
+      "meaningDe": "Eine Form der Unterdrückung, die in den sozialen und politischen Systemen einer Gesellschaft verankert ist und bestimmte Gruppen systematisch benachteiligt.",
+      "pluralStatus": "not_applicable_or_needs_review"
     },
     {
       "word": "Zwang",
@@ -202,7 +203,20 @@
       "exampleSentence2": "Erfolgreiche soziale Bewegungen laufen Gefahr, von dominanten Institutionen kooptiert zu werden, wodurch ihre ursprünglichen Ziele verwässert werden.",
       "exampleTranslation2": "Các phong trào xã hội thành công có nguy cơ bị các thể chế thống trị đồng hóa, làm pha loãng các mục tiêu ban đầu của chúng.",
       "imageUrl": "/images/vocab/c2-machttheorie-herrschaft/kooptieren.png",
-      "meaningDe": "Jemanden in eine Organisation aufnehmen, um dessen Einfluss zu kontrollieren oder die eigene Position zu stärken."
+      "meaningDe": "Jemanden in eine Organisation aufnehmen, um dessen Einfluss zu kontrollieren oder die eigene Position zu stärken.",
+      "conjugation": {
+        "praesens": {
+          "ich": "kooptiere",
+          "du": "kooptierst",
+          "er_sie_es": "kooptiert",
+          "wir": "kooptieren",
+          "ihr": "kooptiert",
+          "sie_Sie": "kooptieren"
+        },
+        "isIrregular": false,
+        "isSeparable": false,
+        "reviewStatus": "auto_generated_needs_spot_check"
+      }
     },
     {
       "word": "usurpieren",
@@ -216,7 +230,20 @@
       "exampleSentence2": "Einige Kritiker befürchten, dass internationale Organisationen die Souveränität nationaler Staaten usurpieren könnten.",
       "exampleTranslation2": "Một số nhà phê bình lo ngại rằng các tổ chức quốc tế có thể chiếm đoạt chủ quyền của các quốc gia.",
       "imageUrl": "/images/vocab/c2-machttheorie-herrschaft/usurpieren.png",
-      "meaningDe": "Sich eine Macht oder ein Recht widerrechtlich aneignen."
+      "meaningDe": "Sich eine Macht oder ein Recht widerrechtlich aneignen.",
+      "conjugation": {
+        "praesens": {
+          "ich": "usurpiere",
+          "du": "usurpierst",
+          "er_sie_es": "usurpiert",
+          "wir": "usurpieren",
+          "ihr": "usurpiert",
+          "sie_Sie": "usurpieren"
+        },
+        "isIrregular": false,
+        "isSeparable": false,
+        "reviewStatus": "auto_generated_needs_spot_check"
+      }
     },
     {
       "word": "souverän",
@@ -259,6 +286,26 @@
       "exampleTranslation2": "Các nhà phê bình cáo buộc nhà nước can thiệp một cách gia trưởng vào lối sống của công dân thông qua việc điều tiết quá mức.",
       "imageUrl": "/images/vocab/c2-machttheorie-herrschaft/paternalistisch.png",
       "meaningDe": "In einer Weise handelnd, die wie ein überfürsorglicher Vater ist und die Autonomie anderer einschränkt."
+    }
+  ],
+  "cefrAudit": {
+    "targetLevel": "C2",
+    "verdict": "aligned",
+    "reviewerRole": "German Academic Lead",
+    "notes": "Release-candidate metadata audit: vocabulary content for \"Machttheorie & Herrschaft\" is aligned with declared C2 scope pending final human spot-check.",
+    "reviewedAt": "2026-05-12",
+    "reviewScope": "release_candidate_metadata_pass"
+  },
+  "learningOutcomes": [
+    {
+      "id": "c2-machttheorie-herrschaft-lo-1",
+      "cefrLevel": "C2",
+      "skill": "vocabulary",
+      "canDoVi": "Toi co the luyen tu vung o trinh do C2 qua chu de \"Machttheorie & Herrschaft\".",
+      "canDoDe": "Ich kann Wortschatz auf Niveau C2 zum Thema \"Machttheorie & Herrschaft\" ueben.",
+      "linkedContentIds": [
+        "c2-machttheorie-herrschaft"
+      ]
     }
   ]
 }

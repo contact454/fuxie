@@ -1,4 +1,11 @@
 import { prisma } from '@fuxie/database'
+import {
+    buildRemediationLoop,
+    recommendNextLearningOutcomes,
+    type ContentQualityLevel,
+    type ContentQualitySkill,
+} from '@/lib/content-quality/learning-outcome-path'
+import { buildLearnerWeaknessProfile, type LearnerWeaknessProfile } from './learner-weakness-profile'
 
 export type SkillKey = 'HOEREN' | 'LESEN' | 'SCHREIBEN' | 'SPRECHEN' | 'GRAMMATIK' | 'WORTSCHATZ'
 
@@ -42,6 +49,7 @@ export interface TodayPlanInput {
     recentActivities: ActivitySignal[]
     weakSkills: SkillKey[]
     skillScores: Partial<Record<SkillKey, number>>
+    completedOutcomeIds?: string[]
     pendingAssignments: AssignmentCandidate[]
     candidates: Partial<Record<SkillKey, ContentCandidate>>
     now?: Date
@@ -58,6 +66,8 @@ export interface TodayPlanAction {
     priority: number
     dueDate: string | null
     badge: string | null
+    learningOutcomeId?: string | null
+    canDoVi?: string | null
 }
 
 export interface TodayPlan {
@@ -69,8 +79,19 @@ export interface TodayPlan {
     remainingMinutes: number
     focus: string
     weakSkills: SkillKey[]
+    weaknessProfile: LearnerWeaknessProfile
     dueSrsCount: number
     actions: TodayPlanAction[]
+    remediation: Array<{
+        skill: string
+        reason: string
+        outcomes: Array<{
+            id: string
+            canDoVi: string
+            ownerTitle: string
+            ownerFile: string
+        }>
+    }>
     signals: {
         recentMinutes7d: number
         pendingAssignments: number
@@ -189,15 +210,22 @@ export function buildTodayPlan(input: TodayPlanInput): TodayPlan {
     const remainingMinutes = Math.max(0, goalMinutes - input.todayMinutes)
     const recentMinutes7d = input.recentActivities.reduce((sum, activity) => sum + activity.totalMinutes, 0)
     const examDaysLeft = getDaysLeft(input.profile.targetExamDate ?? null, now)
-    const weakSkills = getWeakSkillOrder(input)
+    const weaknessProfile = buildLearnerWeaknessProfile({
+        currentLevel: input.profile.currentLevel,
+        explicitWeakSkills: input.weakSkills,
+        skillScores: input.skillScores,
+    })
+    const weakSkills = weaknessProfile.weakSkills
+    const outcomeRecommendations = getOutcomeRecommendations(input.profile.currentLevel, weakSkills, input.completedOutcomeIds)
+    const outcomeBySkill = new Map(outcomeRecommendations.map((recommendation) => [contentSkillToSkillKey(recommendation.outcome.skill), recommendation]))
     const actions: TodayPlanAction[] = []
 
     if (input.dueSrsCount > 0) {
         actions.push({
             id: 'srs-due',
             type: 'srs',
-            title: 'Ôn SRS',
-            reason: `${input.dueSrsCount} thẻ cần ôn`,
+            title: 'Hồi Sinh Ký Ức',
+            reason: `${input.dueSrsCount} bóng ma ký ức cần được đánh thức`,
             href: '/review',
             skill: 'SRS',
             estimatedMinutes: Math.min(20, Math.max(5, Math.ceil(input.dueSrsCount / 4))),
@@ -218,24 +246,27 @@ export function buildTodayPlan(input: TodayPlanInput): TodayPlan {
             estimatedMinutes: 15,
             priority: assignmentPriority(assignment, now),
             dueDate: assignment.dueDate?.toISOString() ?? null,
-            badge: assignment.classroomName ?? 'Bài được giao',
+            badge: assignment.classroomName ?? 'Quân lệnh',
         })
     }
 
     for (const skill of weakSkills) {
         const candidate = input.candidates[skill]
         if (!candidate) continue
+        const outcomeRecommendation = outcomeBySkill.get(skill)
         actions.push({
             id: `skill-${skill}-${candidate.id}`,
             type: 'lesson',
             title: candidate.title,
-            reason: `${candidate.label}: củng cố trọng tâm hiện tại`,
+            reason: outcomeRecommendation?.outcome.canDoVi ?? `${candidate.label}: củng cố trọng tâm hiện tại`,
             href: candidate.href,
             skill,
             estimatedMinutes: candidate.estimatedMinutes,
             priority: 70 - actions.filter((action) => action.type === 'lesson').length,
             dueDate: null,
             badge: SKILL_LABELS[skill],
+            learningOutcomeId: outcomeRecommendation?.outcome.id ?? null,
+            canDoVi: outcomeRecommendation?.outcome.canDoVi ?? null,
         })
     }
 
@@ -243,8 +274,8 @@ export function buildTodayPlan(input: TodayPlanInput): TodayPlan {
         actions.push({
             id: 'target-exam',
             type: 'exam',
-            title: `Luyện ${input.profile.targetExam} ${input.profile.targetLevel ?? input.profile.currentLevel}`,
-            reason: examDaysLeft !== null ? `${examDaysLeft} ngày đến kỳ thi` : 'Đã đặt mục tiêu thi',
+            title: `Chiến Dịch ${input.profile.targetExam} ${input.profile.targetLevel ?? input.profile.currentLevel}`,
+            reason: examDaysLeft !== null ? `Đồng hồ tử thần: ${examDaysLeft} ngày` : 'Mục tiêu tối thượng đã khóa',
             href: '/exam',
             skill: 'EXAM',
             estimatedMinutes: 20,
@@ -257,17 +288,20 @@ export function buildTodayPlan(input: TodayPlanInput): TodayPlan {
     for (const skill of DEFAULT_SKILL_ORDER) {
         const candidate = input.candidates[skill]
         if (!candidate) continue
+        const outcomeRecommendation = outcomeBySkill.get(skill)
         actions.push({
             id: `fallback-${skill}-${candidate.id}`,
             type: 'lesson',
             title: candidate.title,
-            reason: `${candidate.label}: bước tiếp theo phù hợp`,
+            reason: outcomeRecommendation?.outcome.canDoVi ?? `${candidate.label}: bước tiếp theo phù hợp`,
             href: candidate.href,
             skill,
             estimatedMinutes: candidate.estimatedMinutes,
             priority: 35 - DEFAULT_SKILL_ORDER.indexOf(skill),
             dueDate: null,
             badge: SKILL_LABELS[skill],
+            learningOutcomeId: outcomeRecommendation?.outcome.id ?? null,
+            canDoVi: outcomeRecommendation?.outcome.canDoVi ?? null,
         })
     }
 
@@ -284,13 +318,98 @@ export function buildTodayPlan(input: TodayPlanInput): TodayPlan {
         remainingMinutes,
         focus: getFocusLabel(uniqueActions, weakSkills, remainingMinutes),
         weakSkills,
+        weaknessProfile,
         dueSrsCount: input.dueSrsCount,
         actions: uniqueActions,
+        remediation: buildTodayPlanRemediation(input.profile.currentLevel, weakSkills, input.completedOutcomeIds),
         signals: {
             recentMinutes7d,
             pendingAssignments: input.pendingAssignments.length,
             examDaysLeft,
         },
+    }
+}
+
+function getOutcomeRecommendations(level: string, weakSkills: SkillKey[], completedOutcomeIds: string[] = []) {
+    const contentLevel = normalizeContentLevel(level)
+    if (!contentLevel) return []
+
+    return recommendNextLearningOutcomes({
+        level: contentLevel,
+        weakSkills: weakSkills.map(skillKeyToContentSkill),
+        completedOutcomeIds,
+        limit: 12,
+    })
+}
+
+function buildTodayPlanRemediation(level: string, weakSkills: SkillKey[], completedOutcomeIds: string[] = []) {
+    const contentLevel = normalizeContentLevel(level)
+    if (!contentLevel) return []
+
+    return buildRemediationLoop({
+        level: contentLevel,
+        weakSkills: weakSkills.slice(0, 2).map(skillKeyToContentSkill),
+        completedOutcomeIds,
+        limitPerWeakSkill: 3,
+    }).map((item) => ({
+        skill: item.skill,
+        reason: item.reason,
+        outcomes: item.outcomes.map((outcome) => ({
+            id: outcome.id,
+            canDoVi: outcome.canDoVi,
+            ownerTitle: outcome.ownerTitle,
+            ownerFile: outcome.ownerFile,
+        })),
+    }))
+}
+
+function normalizeContentLevel(level: string): ContentQualityLevel | null {
+    const normalized = level.toUpperCase()
+    if (
+        normalized === 'A1' ||
+        normalized === 'A2' ||
+        normalized === 'B1' ||
+        normalized === 'B2' ||
+        normalized === 'C1' ||
+        normalized === 'C2'
+    ) {
+        return normalized
+    }
+    return null
+}
+
+function skillKeyToContentSkill(skill: SkillKey): ContentQualitySkill {
+    switch (skill) {
+        case 'HOEREN':
+            return 'listening'
+        case 'LESEN':
+            return 'reading'
+        case 'SCHREIBEN':
+            return 'writing'
+        case 'SPRECHEN':
+            return 'speaking'
+        case 'GRAMMATIK':
+            return 'grammar'
+        case 'WORTSCHATZ':
+            return 'vocabulary'
+    }
+}
+
+function contentSkillToSkillKey(skill: ContentQualitySkill): SkillKey {
+    switch (skill) {
+        case 'listening':
+            return 'HOEREN'
+        case 'reading':
+            return 'LESEN'
+        case 'writing':
+            return 'SCHREIBEN'
+        case 'speaking':
+            return 'SPRECHEN'
+        case 'grammar':
+            return 'GRAMMATIK'
+        case 'vocabulary':
+        case 'course':
+            return 'WORTSCHATZ'
     }
 }
 
@@ -502,13 +621,13 @@ function assignmentPriority(assignment: AssignmentCandidate, now: Date) {
 }
 
 function assignmentReason(assignment: AssignmentCandidate, now: Date) {
-    if (!assignment.dueDate) return 'Bài được giao từ lớp học'
+    if (!assignment.dueDate) return 'Nhiệm vụ đặc biệt'
     const daysLeft = getDaysLeft(assignment.dueDate, now)
-    if (daysLeft === null) return 'Bài được giao từ lớp học'
-    if (daysLeft < 0) return 'Quá hạn'
-    if (daysLeft === 0) return 'Hạn hôm nay'
-    if (daysLeft === 1) return 'Hạn ngày mai'
-    return `Còn ${daysLeft} ngày`
+    if (daysLeft === null) return 'Nhiệm vụ đặc biệt'
+    if (daysLeft < 0) return 'Thử thách đã quá hạn'
+    if (daysLeft === 0) return 'Nhiệm vụ ưu tiên: Hoàn thành hôm nay!'
+    if (daysLeft === 1) return 'Áp chót: Chỉ còn 1 ngày'
+    return `Đếm ngược: ${daysLeft} ngày`
 }
 
 function hrefForAssignment(assignment: AssignmentCandidate) {
@@ -563,10 +682,10 @@ function getDaysLeft(date: Date | null, now: Date) {
 }
 
 function getFocusLabel(actions: TodayPlanAction[], weakSkills: SkillKey[], remainingMinutes: number) {
-    if (actions[0]?.type === 'srs') return 'Ôn trước'
-    if (actions[0]?.type === 'assignment') return 'Bài được giao'
+    if (actions[0]?.type === 'srs') return 'Đánh Thức Ký Ức'
+    if (actions[0]?.type === 'assignment') return 'Nhiệm Vụ Hàng Đầu'
     if (weakSkills[0]) return SKILL_LABELS[weakSkills[0]]
-    return remainingMinutes > 0 ? 'Mục tiêu ngày' : 'Giữ nhịp học'
+    return remainingMinutes > 0 ? 'Mục Tiêu Tối Thượng' : 'Giữ Vững Nhịp Độ'
 }
 
 function isObject(value: unknown): value is Record<string, unknown> {

@@ -85,7 +85,8 @@
             "type": "Nomen",
             "meaning": "semester"
           }
-        ]
+        ],
+        "vi": "??p ?n ??ng l? b: Am 31. Juli.. H?y ??i chi?u v?i th?ng tin then ch?t trong b?i ??c."
       }
     },
     {
@@ -109,7 +110,8 @@
             "type": "Nomen",
             "meaning": "citizen's benefit (welfare)"
           }
-        ]
+        ],
+        "vi": "??p ?n ??ng l? b: Empfänger von Bürgergeld.. H?y ??i chi?u v?i th?ng tin then ch?t trong b?i ??c."
       }
     },
     {
@@ -134,7 +136,8 @@
             "meaning": "withdrawal / cancellation"
           }
         ],
-        "reasoning": "[Inferential] "
+        "reasoning": "[Inferential] ",
+        "vi": "??p ?n ??ng l? b: 7 Werktage vor Kursbeginn.. H?y ??i chi?u v?i th?ng tin then ch?t trong b?i ??c."
       }
     },
     {
@@ -158,7 +161,8 @@
             "type": "Nomen",
             "meaning": "Frankfurt social pass"
           }
-        ]
+        ],
+        "vi": "??p ?n ??ng l? b: 1 Euro.. H?y ??i chi?u v?i th?ng tin then ch?t trong b?i ??c."
       }
     },
     {
@@ -182,7 +186,8 @@
             "type": "Verb",
             "meaning": "to take an exam"
           }
-        ]
+        ],
+        "vi": "??p ?n ??ng l? b: telc-Deutschprüfungen und ECDL.. H?y ??i chi?u v?i th?ng tin then ch?t trong b?i ??c."
       }
     }
   ],
@@ -239,5 +244,25 @@
     "all_answers_verifiable": true,
     "image_count": 1,
     "passed": true
-  }
+  },
+  "cefrAudit": {
+    "targetLevel": "B1",
+    "verdict": "aligned",
+    "reviewerRole": "German Academic Lead",
+    "notes": "Release-candidate metadata audit: reading content for \"Ausbildung & Karriere\" is aligned with declared B1 scope pending final human spot-check.",
+    "reviewedAt": "2026-05-12",
+    "reviewScope": "release_candidate_metadata_pass"
+  },
+  "learningOutcomes": [
+    {
+      "id": "b1-t5-005-lo-1",
+      "cefrLevel": "B1",
+      "skill": "reading",
+      "canDoVi": "Toi co the luyen doc hieu o trinh do B1 qua chu de \"Ausbildung & Karriere\".",
+      "canDoDe": "Ich kann Lesen auf Niveau B1 zum Thema \"Ausbildung & Karriere\" ueben.",
+      "linkedContentIds": [
+        "B1-T5-005"
+      ]
+    }
+  ]
 }

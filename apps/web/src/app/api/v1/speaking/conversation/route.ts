@@ -1,9 +1,11 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { z } from 'zod'
 import { handleApiError } from '@/lib/api/error-handler'
-import { withAuth } from '@/lib/auth/middleware'
+import { withDbAuth } from '@/lib/auth/middleware'
 import { withGeminiFallback } from '@/lib/ai/gemini-fallback'
 import { editDistance } from '@/lib/ai/text-alignment'
+import { prisma } from '@fuxie/database'
+import { recordAnalyticsEvent } from '@/lib/analytics/events'
 
 // ─── Types ───
 interface ChatMessage {
@@ -135,7 +137,7 @@ async function generateTTS(text: string): Promise<string> {
 
 export async function POST(request: NextRequest) {
   try {
-    await withAuth(request)
+    const auth = await withDbAuth(request)
     const formData = await request.formData()
     const audioFile = formData.get('audio') as File | null
     
@@ -169,6 +171,21 @@ export async function POST(request: NextRequest) {
     }
     
     if (!userTranscript.trim() && isAudioInput) {
+        await recordAnalyticsEvent(prisma, {
+            userId: auth.userId,
+            role: auth.role,
+            eventName: 'ai_feedback_failed',
+            source: 'speaking.conversation',
+            actionId: `${scenario}:${level}`,
+            actionType: 'speaking_submission',
+            level,
+            skill: 'SPRECHEN',
+            metadata: {
+                flow: 'speaking',
+                error_type: 'empty_or_failed_speech_eval',
+                scenario,
+            },
+        })
         return NextResponse.json({
             error: "Không nghe rõ. Vui lòng nói lại.",
             accuracy: 0,
@@ -183,6 +200,26 @@ export async function POST(request: NextRequest) {
 
     // 3. Synthesize Audio via Audio Factory
     const aiResponseAudioBase64 = await generateTTS(aiResponseText)
+
+    await recordAnalyticsEvent(prisma, {
+      userId: auth.userId,
+      role: auth.role,
+      eventName: 'ai_feedback_generated',
+      source: 'speaking.conversation',
+      actionId: `${scenario}:${level}`,
+      actionType: isAudioInput ? 'speaking_submission' : null,
+      level,
+      skill: isAudioInput ? 'SPRECHEN' : 'CHAT',
+      metadata: {
+        flow: 'chat',
+        mode: 'speaking_conversation',
+        score_percent: isAudioInput ? accuracy : null,
+        word_count: wordsDetail.length,
+        scenario,
+        tts_provider_status: aiResponseAudioBase64 ? 'generated' : 'fallback',
+        provider_status: 'success',
+      },
+    })
 
     return NextResponse.json({
       transcript: userTranscript,

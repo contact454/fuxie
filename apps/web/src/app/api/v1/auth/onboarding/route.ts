@@ -3,6 +3,7 @@ import { z } from 'zod'
 import { prisma } from '@fuxie/database'
 import { withDbAuth } from '@/lib/auth/middleware'
 import { handleApiError } from '@/lib/api/error-handler'
+import { recordAnalyticsEvent } from '@/lib/analytics/events'
 
 const onboardingSchema = z.object({
     estimatedLevel: z.enum(['A1', 'A2', 'B1', 'B2', 'C1', 'C2']),
@@ -46,6 +47,20 @@ export async function PATCH(req: NextRequest) {
                 },
             }),
         ])
+
+        await recordAnalyticsEvent(prisma, {
+            userId: auth.userId,
+            role: auth.role,
+            eventName: 'onboarding_completed',
+            source: 'onboarding.wizard',
+            level: data.estimatedLevel,
+            metadata: {
+                estimated_level: data.estimatedLevel,
+                target_level: data.targetLevel,
+                target_exam: data.targetExam ?? null,
+                daily_study_minutes: data.studyGoalMinutes ?? 10,
+            },
+        })
 
         return NextResponse.json({ success: true })
     } catch (error) {

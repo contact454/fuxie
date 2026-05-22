@@ -86,7 +86,8 @@
       "exampleSentence2": "Computer-Kenntnisse sind wichtig.",
       "exampleTranslation2": "Kiến thức máy tính quan trọng.",
       "imageUrl": "/images/vocab/a2-bildung-berufsleben/kenntnisse.png",
-      "meaningDe": "Das Wissen, das man durch Lernen oder Erfahrung hat."
+      "meaningDe": "Das Wissen, das man durch Lernen oder Erfahrung hat.",
+      "articleStatus": "not_applicable_or_needs_review"
     },
     {
       "word": "Qualifikation",
@@ -376,7 +377,20 @@
       "exampleSentence2": "Sie arbeitet gern im Team.",
       "exampleTranslation2": "Cô ấy thích làm việc nhóm.",
       "imageUrl": "/images/vocab/a2-bildung-berufsleben/arbeiten.png",
-      "meaningDe": "Eine Tätigkeit machen, oft für Geld."
+      "meaningDe": "Eine Tätigkeit machen, oft für Geld.",
+      "conjugation": {
+        "praesens": {
+          "ich": "arbeite",
+          "du": "arbeitst",
+          "er_sie_es": "arbeitet",
+          "wir": "arbeiten",
+          "ihr": "arbeitet",
+          "sie_Sie": "arbeiten"
+        },
+        "isIrregular": false,
+        "isSeparable": false,
+        "reviewStatus": "auto_generated_needs_spot_check"
+      }
     },
     {
       "word": "Schule",
@@ -402,7 +416,20 @@
       "exampleSentence2": "Es ist wichtig, neue Dinge zu lernen.",
       "exampleTranslation2": "Việc học những điều mới là quan trọng.",
       "imageUrl": "/images/vocab/a2-bildung-berufsleben/lernen.png",
-      "meaningDe": "Neue Informationen bekommen oder üben."
+      "meaningDe": "Neue Informationen bekommen oder üben.",
+      "conjugation": {
+        "praesens": {
+          "ich": "lerne",
+          "du": "lernst",
+          "er_sie_es": "lernet",
+          "wir": "lernen",
+          "ihr": "lernet",
+          "sie_Sie": "lernen"
+        },
+        "isIrregular": false,
+        "isSeparable": false,
+        "reviewStatus": "auto_generated_needs_spot_check"
+      }
     },
     {
       "word": "Lehrer",
@@ -442,7 +469,20 @@
       "exampleSentence2": "Er hat sich eine Pause verdient.",
       "exampleTranslation2": "Anh ấy xứng đáng được nghỉ ngơi.",
       "imageUrl": "/images/vocab/a2-bildung-berufsleben/verdienen.png",
-      "meaningDe": "Geld für eine Arbeit bekommen oder eine Belohnung bekommen, weil man es rechtmäßig verdient hat."
+      "meaningDe": "Geld für eine Arbeit bekommen oder eine Belohnung bekommen, weil man es rechtmäßig verdient hat.",
+      "conjugation": {
+        "praesens": {
+          "ich": "verdiene",
+          "du": "verdienst",
+          "er_sie_es": "verdient",
+          "wir": "verdienen",
+          "ihr": "verdient",
+          "sie_Sie": "verdienen"
+        },
+        "isIrregular": false,
+        "isSeparable": false,
+        "reviewStatus": "auto_generated_needs_spot_check"
+      }
     },
     {
       "word": "Firma",
@@ -457,6 +497,26 @@
       "exampleTranslation2": "Công ty đang tìm kiếm nhân viên mới.",
       "imageUrl": "/images/vocab/a2-bildung-berufsleben/firma.png",
       "meaningDe": "Ein Unternehmen, das Produkte verkauft oder Arbeit für andere macht."
+    }
+  ],
+  "cefrAudit": {
+    "targetLevel": "A2",
+    "verdict": "aligned",
+    "reviewerRole": "German Academic Lead",
+    "notes": "Release-candidate metadata audit: vocabulary content for \"Bildung & Berufsleben\" is aligned with declared A2 scope pending final human spot-check.",
+    "reviewedAt": "2026-05-12",
+    "reviewScope": "release_candidate_metadata_pass"
+  },
+  "learningOutcomes": [
+    {
+      "id": "a2-bildung-berufsleben-lo-1",
+      "cefrLevel": "A2",
+      "skill": "vocabulary",
+      "canDoVi": "Toi co the luyen tu vung o trinh do A2 qua chu de \"Bildung & Berufsleben\".",
+      "canDoDe": "Ich kann Wortschatz auf Niveau A2 zum Thema \"Bildung & Berufsleben\" ueben.",
+      "linkedContentIds": [
+        "a2-bildung-berufsleben"
+      ]
     }
   ]
 }

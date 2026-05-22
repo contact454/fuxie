@@ -42,12 +42,13 @@ export function IntroCard({ item, onNext }: { item: SessionItem, onNext: () => v
                 </div>
             </div>
 
-            <div className="fixed bottom-0 left-0 right-0 p-4 bg-white border-t border-gray-100 md:static md:bg-transparent md:border-none md:p-0 md:mt-8">
+            <div className="mt-auto pt-4 border-t border-[#CCE4F0]/30">
                 <button
                     onClick={onNext}
-                    className="w-full py-4 rounded-2xl bg-fuxie-primary text-white font-bold text-lg shadow-[0_6px_0_0_rgb(221,98,40)] hover:-translate-y-1 hover:shadow-[0_8px_0_0_rgb(221,98,40)] active:translate-y-2 active:shadow-none transition-all"
+                    className="w-full py-4 bg-[#2EC4B6] hover:bg-[#25b5a7] active:bg-[#1fa093] text-white text-base font-black rounded-2xl transition-all duration-300 shadow-md shadow-[#2EC4B6]/25 hover:shadow-lg active:scale-[0.98] flex items-center justify-center gap-2"
                 >
-                    Đã hiểu
+                    <span>Đã hiểu</span>
+                    <span>→</span>
                 </button>
             </div>
         </div>

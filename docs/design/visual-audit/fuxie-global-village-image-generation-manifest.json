@@ -1,0 +1,365 @@
+{
+  "schemaVersion": 1,
+  "strategy": "Fuxie German Village global image generation",
+  "createdAt": "2026-05-15",
+  "scope": "Global Fuxie visual production across learner, teacher, admin, auth, landing, live QA, reward, and state surfaces. Code integration deferred.",
+  "existingProductionAssets": {
+    "generatedLearnerAssets": 36,
+    "mascot3dPublicFiles": 326,
+    "rewardAssetFiles": 54,
+    "vocabularyContentImages": 12923,
+    "listeningAudioFiles": 268,
+    "codeVisibleMaps": {
+      "FUXIE_MASCOT_STATES": 44,
+      "FUXIE_FOUNDATION_ASSETS": 8,
+      "FUXIE_MODULE_MASCOTS": 12,
+      "FUXIE_GAMIFICATION_MASCOTS": 12,
+      "FUXIE_WORLD_PROPS": 24,
+      "FUXIE_UI_FRAMES": 8
+    }
+  },
+  "newGenerationTarget": {
+    "atlasSheets": 12,
+    "assetsPerSheet": 10,
+    "newVisualConcepts": 120,
+    "totalProductionLibraryAfterPass": 156,
+    "workspaceOutputFolder": "docs/design/asset-generation/global-atlas",
+    "cropIndex": "docs/design/asset-generation/global-crops/global-crop-index.json",
+    "sourceCropFolder": "docs/design/asset-generation/global-crops/source",
+    "preview512Folder": "docs/design/asset-generation/global-crops/preview-512",
+    "cropContactSheet": "docs/design/asset-generation/global-crops/fuxie-global-village-crops-contact-sheet.png",
+    "alphaCleanFolder": "docs/design/asset-generation/global-crops/alpha-clean-512",
+    "cleanWebpFolder": "docs/design/asset-generation/global-export/webp-clean-512",
+    "cleanWebpIndex": "docs/design/asset-generation/global-export/fuxie-global-village-webp-clean-export-index.json",
+    "cleanWebpContactSheet": "docs/design/asset-generation/global-export/fuxie-global-village-webp-clean-contact-sheet.png",
+    "cleanQaCounts": {
+      "export-candidate": 88,
+      "review-tight-crop": 4,
+      "needs-manual-trim-edge-touch": 11,
+      "needs-alpha-cleanup-matte-residue": 7,
+      "direction-board-exported": 10
+    },
+    "autoPolishFolder": "docs/design/asset-generation/global-crops/auto-polish-512",
+    "polishedWebpFolder": "docs/design/asset-generation/global-export/webp-polished-512",
+    "polishedWebpIndex": "docs/design/asset-generation/global-export/fuxie-global-village-webp-polished-export-index.json",
+    "polishedWebpContactSheet": "docs/design/asset-generation/global-export/fuxie-global-village-webp-polished-contact-sheet.png",
+    "acceptedPolishedFolder": "docs/design/asset-generation/global-export/accepted-polished-webp",
+    "polishedSplitIndex": "docs/design/asset-generation/global-export/fuxie-global-village-polished-export-split-index.json",
+    "polishedQaCounts": {
+      "export-candidate": 110,
+      "direction-board-exported": 10
+    },
+    "polishedAcceptedCount": 120,
+    "polishedManualQaCount": 0
+  },
+  "styleContract": {
+    "palette": [
+      "#60A8E4",
+      "#3C78A8",
+      "#2EC4B6",
+      "#F3FBFF",
+      "#FFB703"
+    ],
+    "medium": "polished 3D clay-like mobile game asset",
+    "world": "original cozy German-learning village",
+    "avoid": [
+      "external game IP",
+      "dark fantasy",
+      "beige brown dominance",
+      "purple-heavy gradients",
+      "leaf motif",
+      "unreadable text",
+      "clutter"
+    ]
+  },
+  "atlasBatches": [
+    {
+      "id": "atlas-a-learner-secondary-locations",
+      "count": 10,
+      "assetType": "world_location_plate",
+      "items": [
+        "Grammar Workshop Interior",
+        "Review Garden Greenhouse",
+        "Badge Museum Shelf Room",
+        "Campaign Festival Board",
+        "Leaderboard Guild Hall",
+        "Session Focus Dojo",
+        "Vocabulary Microgame Booth",
+        "Speaking Roleplay Cafe Room",
+        "Exam Result Hall",
+        "CEFR Gate Plaza"
+      ],
+      "outputFile": "docs/design/asset-generation/global-atlas/atlas-a-learner-secondary-locations.png",
+      "outputSha256": "b4d9cd94ffccc528ac648e1cf05de5d1da2091b356948e804d79a5eaf1eefc2a",
+      "outputSize": {
+        "width": 1536,
+        "bytes": 2241436,
+        "height": 1024
+      }
+    },
+    {
+      "id": "atlas-b-teacher-admin-auth-locations",
+      "count": 10,
+      "assetType": "world_location_plate",
+      "items": [
+        "Teacher Academy Exterior",
+        "Teacher Classroom Interior",
+        "Student Progress Desk",
+        "Admin Command Center",
+        "Analytics Observatory",
+        "Content Quality Lab",
+        "Operations Server Room",
+        "Rewards Approval Desk",
+        "Auth Welcome Gate",
+        "Live QA Control Booth"
+      ],
+      "outputFile": "docs/design/asset-generation/global-atlas/atlas-b-teacher-admin-auth-locations.png",
+      "outputSha256": "a1b1aaf0858cb1869539f0676f65d7f8715415e9db358c752c9ffb25471f0432",
+      "outputSize": {
+        "width": 1774,
+        "bytes": 1878182,
+        "height": 887
+      }
+    },
+    {
+      "id": "atlas-c-village-buildings",
+      "count": 10,
+      "assetType": "building_cutout",
+      "items": [
+        "Rathaus Exam Hall",
+        "Fuxie Schoolhouse",
+        "Reading Library",
+        "Writing Post Office",
+        "Fuxie Market Stall",
+        "Radio Listening Tower",
+        "Speaking Stage Cafe",
+        "Badge Museum",
+        "Review Greenhouse",
+        "Onboarding Welcome Inn"
+      ],
+      "outputFile": "docs/design/asset-generation/global-atlas/atlas-c-village-buildings.png",
+      "outputSha256": "70358951b3d62e6ea495c14f3783c8e13e09205e6a63aa8d3054e59f5dd85401",
+      "outputSize": {
+        "width": 1774,
+        "bytes": 1934247,
+        "height": 887
+      }
+    },
+    {
+      "id": "atlas-d-outdoor-props",
+      "count": 10,
+      "assetType": "prop_cutout",
+      "items": [
+        "Village Signpost Cluster",
+        "Blue Lantern Post",
+        "Cobblestone Path Tile",
+        "Fountain Reward Plinth",
+        "Wooden Bench",
+        "Notice Pins and Ribbons",
+        "Village Map Board",
+        "Bridge Checkpoint",
+        "Festival Bunting",
+        "Progress Lantern Trail"
+      ],
+      "outputFile": "docs/design/asset-generation/global-atlas/atlas-d-outdoor-props.png",
+      "outputSha256": "4820a461d0542242bdfec6125ebfd0577c414f5d18f1dc3a51ab2dbd68eefb2d",
+      "outputSize": {
+        "width": 1536,
+        "bytes": 1729783,
+        "height": 1024
+      }
+    },
+    {
+      "id": "atlas-e-learning-props",
+      "count": 10,
+      "assetType": "learning_prop_cutout",
+      "items": [
+        "Grammar Gear Scroll",
+        "Vocabulary Flashcard Box",
+        "Reading Bookmark Lamp",
+        "Listening Headphones Stand",
+        "Speaking Microphone Charm",
+        "Writing Envelope Stack",
+        "Exam Timer Bell",
+        "Review Seed Packet",
+        "Chat Phrase Cards",
+        "CEFR Compass"
+      ],
+      "outputFile": "docs/design/asset-generation/global-atlas/atlas-e-learning-props.png",
+      "outputSha256": "02249ba9eb7281891792a7f73e097b29997bb19706cf0522457b0df9e99b5a7d",
+      "outputSize": {
+        "width": 1717,
+        "bytes": 1701423,
+        "height": 916
+      }
+    },
+    {
+      "id": "atlas-f-reward-shop-items-a",
+      "count": 10,
+      "assetType": "reward_item_icon",
+      "items": [
+        "Streak Freeze Crystal",
+        "Fucoin Pouch",
+        "XP Star Bundle",
+        "Coach Hint Ticket",
+        "Mocktest Unlock Key",
+        "Speaking Feedback Pass",
+        "Fuxie Sky Outfit Token",
+        "Learning Gift Voucher",
+        "Reward Chest Small",
+        "Daily Goal Stamp"
+      ],
+      "outputFile": "docs/design/asset-generation/global-atlas/atlas-f-reward-shop-items-a.png",
+      "outputSha256": "429294d22355ffaee09d87c42901b211c4c4ecf91b0b68005607a036e94c55ad",
+      "outputSize": {
+        "width": 1774,
+        "bytes": 1623613,
+        "height": 887
+      }
+    },
+    {
+      "id": "atlas-g-reward-shop-items-b",
+      "count": 10,
+      "assetType": "reward_item_icon",
+      "items": [
+        "Pronunciation Mic Charm",
+        "Writing Stamp Seal",
+        "Review Garden Seed",
+        "Badge Polish Kit",
+        "CEFR Gate Key",
+        "Classroom Invite Card",
+        "Radio Replay Pass",
+        "Grammar Repair Token",
+        "Focus Shield",
+        "Comeback Candle"
+      ],
+      "outputFile": "docs/design/asset-generation/global-atlas/atlas-g-reward-shop-items-b.png",
+      "outputSha256": "8f43457783d95bef720a3df0623f2afbc4da9eec32e7bf24f65c4aaae3c103c3",
+      "outputSize": {
+        "width": 1774,
+        "bytes": 1789612,
+        "height": 887
+      }
+    },
+    {
+      "id": "atlas-h-mascot-poses-a",
+      "count": 10,
+      "assetType": "mascot_state",
+      "items": [
+        "Fuxie Grammar Mentor",
+        "Fuxie Review Gardener",
+        "Fuxie Badge Curator",
+        "Fuxie Campaign Host",
+        "Fuxie Leaderboard Announcer",
+        "Fuxie Session Focus Coach",
+        "Fuxie Microgame Referee",
+        "Fuxie Roleplay Waiter",
+        "Fuxie Exam Proctor",
+        "Fuxie CEFR Gate Guide"
+      ],
+      "outputFile": "docs/design/asset-generation/global-atlas/atlas-h-mascot-poses-a.png",
+      "outputSha256": "1609461241122419ad3e38d951827206feee57b34097f6ef5391bc33e7d48f43",
+      "outputSize": {
+        "width": 1748,
+        "bytes": 1843336,
+        "height": 899
+      }
+    },
+    {
+      "id": "atlas-i-mascot-poses-b",
+      "count": 10,
+      "assetType": "mascot_state",
+      "items": [
+        "Fuxie Teacher Coach",
+        "Fuxie Classroom Helper",
+        "Fuxie Admin Analyst",
+        "Fuxie Content Reviewer",
+        "Fuxie Ops Mechanic",
+        "Fuxie Reward Clerk",
+        "Fuxie Auth Welcomer",
+        "Fuxie Privacy Guardian",
+        "Fuxie QA Inspector",
+        "Fuxie Error Repair Helper"
+      ],
+      "outputFile": "docs/design/asset-generation/global-atlas/atlas-i-mascot-poses-b.png",
+      "outputSha256": "058f4b22693abc0d012ee98784665a4ce494de08ed2be9c8e2113d7fcde73145",
+      "outputSize": {
+        "width": 1536,
+        "bytes": 1844675,
+        "height": 1024
+      }
+    },
+    {
+      "id": "atlas-j-ui-frames-panels-a",
+      "count": 10,
+      "assetType": "ui_frame",
+      "items": [
+        "Village Quest Card Frame",
+        "Skill Player Motivation Frame",
+        "CEFR Path Node Frame",
+        "Result Reward Reveal Frame",
+        "Badge Receipt Frame",
+        "Shop Item Shelf Frame",
+        "Daily Goal Notice Frame",
+        "Empty State Sign Frame",
+        "Error Retry Repair Frame",
+        "Chat Bubble Village Frame"
+      ],
+      "outputFile": "docs/design/asset-generation/global-atlas/atlas-j-ui-frames-panels-a.png",
+      "outputSha256": "06567e6c43a8f66721f6b865d0a70dc39973574acf1ba17e2f312b64d6a2f1e1",
+      "outputSize": {
+        "width": 1774,
+        "bytes": 1716140,
+        "height": 887
+      }
+    },
+    {
+      "id": "atlas-k-ui-frames-panels-b",
+      "count": 10,
+      "assetType": "ui_frame",
+      "items": [
+        "Auth Welcome Panel",
+        "Onboarding Path Panel",
+        "Teacher Classroom Card",
+        "Student Progress Panel",
+        "Admin Analytics Panel",
+        "Content QA Warning Panel",
+        "Ops Health Console Panel",
+        "Reward Approval Receipt",
+        "Live QA Checklist Panel",
+        "Privacy/Safety Notice Frame"
+      ],
+      "outputFile": "docs/design/asset-generation/global-atlas/atlas-k-ui-frames-panels-b.png",
+      "outputSha256": "fb552e2624a8bdd83b0acd7f70daf9b40029fc0710b4b39f88df86dc0a67af73",
+      "outputSize": {
+        "width": 1536,
+        "bytes": 1789994,
+        "height": 1024
+      }
+    },
+    {
+      "id": "atlas-l-cinematic-mockup-boards",
+      "count": 10,
+      "assetType": "scene_direction_board",
+      "items": [
+        "Whole Fuxie German Village Map",
+        "Learner Daily Loop Scene",
+        "Course Journey Scene",
+        "Skill Practice Player Scene",
+        "Shop and Inventory Scene",
+        "Exam Hall and Result Scene",
+        "Badge Museum Progress Scene",
+        "Teacher Classroom Overview Scene",
+        "Admin Operations Overview Scene",
+        "Auth Onboarding Welcome Scene"
+      ],
+      "outputFile": "docs/design/asset-generation/global-atlas/atlas-l-cinematic-mockup-boards.png",
+      "outputSha256": "6d9bb836f9e18893aee7f1ac324c7a0266a3f75b20d22e5f2d2f58b43bcd6469",
+      "outputSize": {
+        "width": 1774,
+        "bytes": 2517586,
+        "height": 887
+      }
+    }
+  ]
+}

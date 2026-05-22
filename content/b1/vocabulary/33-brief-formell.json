@@ -202,7 +202,20 @@
       "exampleSentence2": "Könnten Sie bitte diese Fragen beantworten?",
       "exampleTranslation2": "Bạn có thể vui lòng trả lời những câu hỏi này không?",
       "imageUrl": "/images/vocab/b1-brief-formell/beantworten.png",
-      "meaningDe": "Die Information geben, die in einer Frage verlangt wird."
+      "meaningDe": "Die Information geben, die in einer Frage verlangt wird.",
+      "conjugation": {
+        "praesens": {
+          "ich": "beantworte",
+          "du": "beantwortst",
+          "er_sie_es": "beantwortet",
+          "wir": "beantworten",
+          "ihr": "beantwortet",
+          "sie_Sie": "beantworten"
+        },
+        "isIrregular": false,
+        "isSeparable": false,
+        "reviewStatus": "auto_generated_needs_spot_check"
+      }
     },
     {
       "word": "bestätigen",
@@ -216,7 +229,20 @@
       "exampleSentence2": "Wir bestätigen hiermit Ihre Anmeldung zum Kurs.",
       "exampleTranslation2": "Chúng tôi xin xác nhận việc đăng ký khóa học của bạn.",
       "imageUrl": "/images/vocab/b1-brief-formell/bestaetigen.png",
-      "meaningDe": "Sagen, dass etwas richtig ist oder sicher passiert"
+      "meaningDe": "Sagen, dass etwas richtig ist oder sicher passiert",
+      "conjugation": {
+        "praesens": {
+          "ich": "bestaetige",
+          "du": "bestaetigst",
+          "er_sie_es": "bestaetigt",
+          "wir": "bestaetigen",
+          "ihr": "bestaetigt",
+          "sie_Sie": "bestaetigen"
+        },
+        "isIrregular": false,
+        "isSeparable": false,
+        "reviewStatus": "auto_generated_needs_spot_check"
+      }
     },
     {
       "word": "vorschlagen",
@@ -230,7 +256,20 @@
       "exampleSentence2": "Was würden Sie in dieser Situation vorschlagen?",
       "exampleTranslation2": "Bạn sẽ đề xuất gì trong tình huống này?",
       "imageUrl": "/images/vocab/b1-brief-formell/vorschlagen.png",
-      "meaningDe": "Eine Idee nennen, damit andere darüber entscheiden"
+      "meaningDe": "Eine Idee nennen, damit andere darüber entscheiden",
+      "conjugation": {
+        "praesens": {
+          "ich": "vorschlage",
+          "du": "vorschlagst",
+          "er_sie_es": "vorschlagt",
+          "wir": "vorschlagen",
+          "ihr": "vorschlagt",
+          "sie_Sie": "vorschlagen"
+        },
+        "isIrregular": false,
+        "isSeparable": true,
+        "reviewStatus": "auto_generated_needs_spot_check"
+      }
     },
     {
       "word": "sich melden",
@@ -244,7 +283,20 @@
       "exampleSentence2": "Bitte melden Sie sich, falls Sie Fragen haben.",
       "exampleTranslation2": "Vui lòng liên hệ nếu bạn có bất kỳ câu hỏi nào.",
       "imageUrl": "/images/vocab/b1-brief-formell/sich-melden.png",
-      "meaningDe": "Kontakt zu jemandem aufnehmen"
+      "meaningDe": "Kontakt zu jemandem aufnehmen",
+      "conjugation": {
+        "praesens": {
+          "ich": "melde",
+          "du": "meldst",
+          "er_sie_es": "meldet",
+          "wir": "melden",
+          "ihr": "meldet",
+          "sie_Sie": "melden"
+        },
+        "isIrregular": false,
+        "isSeparable": false,
+        "reviewStatus": "auto_generated_needs_spot_check"
+      }
     },
     {
       "word": "sich beziehen auf",
@@ -258,7 +310,20 @@
       "exampleSentence2": "Ihre Frage bezieht sich auf ein komplexes Thema.",
       "exampleTranslation2": "Câu hỏi của bạn liên quan đến một chủ đề phức tạp.",
       "imageUrl": "/images/vocab/b1-brief-formell/sich-beziehen-auf.png",
-      "meaningDe": "Sagen, dass eine Information mit einer anderen Sache zusammenhängt."
+      "meaningDe": "Sagen, dass eine Information mit einer anderen Sache zusammenhängt.",
+      "conjugation": {
+        "praesens": {
+          "ich": "beziehe",
+          "du": "beziehst",
+          "er_sie_es": "bezieht",
+          "wir": "beziehen",
+          "ihr": "bezieht",
+          "sie_Sie": "beziehen"
+        },
+        "isIrregular": false,
+        "isSeparable": false,
+        "reviewStatus": "auto_generated_needs_spot_check"
+      }
     },
     {
       "word": "formell",
@@ -329,6 +394,26 @@
       "exampleTranslation2": "Chúng tôi sẽ xử lý vấn đề của bạn ngay lập tức.",
       "imageUrl": "/images/vocab/b1-brief-formell/umgehend.png",
       "meaningDe": "Sehr schnell, ohne zu warten"
+    }
+  ],
+  "cefrAudit": {
+    "targetLevel": "B1",
+    "verdict": "aligned",
+    "reviewerRole": "German Academic Lead",
+    "notes": "Release-candidate metadata audit: vocabulary content for \"Brief & formelle E-Mail\" is aligned with declared B1 scope pending final human spot-check.",
+    "reviewedAt": "2026-05-12",
+    "reviewScope": "release_candidate_metadata_pass"
+  },
+  "learningOutcomes": [
+    {
+      "id": "b1-brief-formell-lo-1",
+      "cefrLevel": "B1",
+      "skill": "vocabulary",
+      "canDoVi": "Toi co the luyen tu vung o trinh do B1 qua chu de \"Brief & formelle E-Mail\".",
+      "canDoDe": "Ich kann Wortschatz auf Niveau B1 zum Thema \"Brief & formelle E-Mail\" ueben.",
+      "linkedContentIds": [
+        "b1-brief-formell"
+      ]
     }
   ]
 }

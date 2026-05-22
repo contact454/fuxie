@@ -308,7 +308,20 @@
       "exampleSentence2": "Wann hört es auf zu regnen?",
       "exampleTranslation2": "Khi nào trời tạnh mưa?",
       "imageUrl": "/images/vocab/a2-wetter-klima/regnen.png",
-      "meaningDe": "Wenn Wasser in kleinen Tropfen vom Himmel fällt."
+      "meaningDe": "Wenn Wasser in kleinen Tropfen vom Himmel fällt.",
+      "conjugation": {
+        "praesens": {
+          "ich": "regne",
+          "du": "regnst",
+          "er_sie_es": "regnet",
+          "wir": "regnen",
+          "ihr": "regnet",
+          "sie_Sie": "regnen"
+        },
+        "isIrregular": false,
+        "isSeparable": false,
+        "reviewStatus": "auto_generated_needs_spot_check"
+      }
     },
     {
       "word": "schneien",
@@ -320,7 +333,20 @@
       "exampleSentence2": "Es hat letzte Nacht geschneit.",
       "exampleTranslation2": "Đêm qua trời đã đổ tuyết.",
       "imageUrl": "/images/vocab/a2-wetter-klima/schneien.png",
-      "meaningDe": "Wenn gefrorenes Wasser in weißen Flocken vom Himmel fällt."
+      "meaningDe": "Wenn gefrorenes Wasser in weißen Flocken vom Himmel fällt.",
+      "conjugation": {
+        "praesens": {
+          "ich": "schneie",
+          "du": "schneist",
+          "er_sie_es": "schneit",
+          "wir": "schneien",
+          "ihr": "schneit",
+          "sie_Sie": "schneien"
+        },
+        "isIrregular": false,
+        "isSeparable": false,
+        "reviewStatus": "auto_generated_needs_spot_check"
+      }
     },
     {
       "word": "warm",
@@ -370,7 +396,8 @@
       "exampleSentence2": "Wir spielen gern im Schnee.",
       "exampleTranslation2": "Chúng tôi thích chơi trong tuyết.",
       "imageUrl": "/images/vocab/a2-wetter-klima/der-schnee.png",
-      "meaningDe": "weiße Flocken"
+      "meaningDe": "weiße Flocken",
+      "pluralStatus": "not_applicable_or_needs_review"
     },
     {
       "word": "Jahreszeit",
@@ -397,6 +424,26 @@
       "exampleTranslation2": "Khi trời có sương mù, bạn phải lái xe cẩn thận.",
       "imageUrl": "/images/vocab/a2-wetter-klima/neblig.png",
       "meaningDe": "wenn man wegen des Wetters nicht weit sehen kann"
+    }
+  ],
+  "cefrAudit": {
+    "targetLevel": "A2",
+    "verdict": "aligned",
+    "reviewerRole": "German Academic Lead",
+    "notes": "Release-candidate metadata audit: vocabulary content for \"Wetter & Klima\" is aligned with declared A2 scope pending final human spot-check.",
+    "reviewedAt": "2026-05-12",
+    "reviewScope": "release_candidate_metadata_pass"
+  },
+  "learningOutcomes": [
+    {
+      "id": "a2-wetter-klima-lo-1",
+      "cefrLevel": "A2",
+      "skill": "vocabulary",
+      "canDoVi": "Toi co the luyen tu vung o trinh do A2 qua chu de \"Wetter & Klima\".",
+      "canDoDe": "Ich kann Wortschatz auf Niveau A2 zum Thema \"Wetter & Klima\" ueben.",
+      "linkedContentIds": [
+        "a2-wetter-klima"
+      ]
     }
   ]
 }

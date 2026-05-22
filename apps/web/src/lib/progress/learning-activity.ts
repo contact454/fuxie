@@ -1,4 +1,5 @@
-import { Prisma, prisma } from '@fuxie/database'
+import { prisma, type Prisma, type UserRole } from '@fuxie/database'
+import { deriveAndRecordActivation, recordAnalyticsEvent, type AnalyticsActionType } from '@/lib/analytics/events'
 
 const ACTIVITY_XP = {
     EXAM_ATTEMPT: 10,
@@ -32,6 +33,17 @@ export interface LearningActivityInput {
     srsReviewed?: number
     wordsLearned?: number
     updateStreak?: boolean
+    analytics?: LearningActivityAnalyticsInput
+}
+
+export interface LearningActivityAnalyticsInput {
+    role?: UserRole
+    actionId: string
+    actionType: AnalyticsActionType
+    level?: string | null
+    skill?: string | null
+    source?: string | null
+    metadata?: Prisma.InputJsonValue | null
 }
 
 export interface LearningActivityResult {
@@ -55,6 +67,7 @@ interface StreakUpdateResult {
     freezesAvailable: number
     freezesUsed: number
     freezeUsageId: string | null
+    eventKind: 'none' | 'advanced' | 'freeze_used' | 'reset'
 }
 
 export function calculateExamXp(passed: boolean) {
@@ -89,7 +102,7 @@ export async function recordLearningActivity(
 ): Promise<LearningActivityResult> {
     const streak =
         input.updateStreak === false
-            ? { currentStreak: 0, isNewDay: false, freezeUsed: false, freezesAvailable: 0, freezesUsed: 0, freezeUsageId: null }
+            ? { currentStreak: 0, isNewDay: false, freezeUsed: false, freezesAvailable: 0, freezesUsed: 0, freezeUsageId: null, eventKind: 'none' as const }
             : await updateUserStreak(tx, input)
 
     const streakBonusXp = streak.isNewDay ? getStreakBonusXp(streak.currentStreak) : 0
@@ -148,12 +161,107 @@ export async function recordLearningActivity(
             : Promise.resolve(null),
     ])
 
+    if (input.analytics) {
+        await recordAnalyticsEvent(tx, {
+            userId: input.userId,
+            role: input.analytics.role ?? 'LEARNER',
+            eventName: 'meaningful_action_completed',
+            source: input.analytics.source ?? null,
+            actionId: input.analytics.actionId,
+            actionType: input.analytics.actionType,
+            level: input.analytics.level ?? null,
+            skill: input.analytics.skill ?? null,
+            metadata: buildCompletionAnalyticsMetadata(input, totalXp),
+        })
+        if ((input.analytics.role ?? 'LEARNER') === 'LEARNER') {
+            await recordStreakMotivationEvent(tx, input, streak)
+            await deriveAndRecordActivation({ userId: input.userId, db: tx })
+        }
+    }
+
     return {
         xpEarned: totalXp,
         baseXpEarned: input.xpEarned,
         streakBonusXp,
-        streak,
+        streak: toPublicStreak(streak),
     }
+}
+
+function toPublicStreak(streak: StreakUpdateResult): LearningActivityResult['streak'] {
+    return {
+        currentStreak: streak.currentStreak,
+        isNewDay: streak.isNewDay,
+        freezeUsed: streak.freezeUsed,
+        freezesAvailable: streak.freezesAvailable,
+        freezesUsed: streak.freezesUsed,
+        freezeUsageId: streak.freezeUsageId,
+    }
+}
+
+async function recordStreakMotivationEvent(
+    tx: ProgressDbClient,
+    input: LearningActivityInput,
+    streak: StreakUpdateResult,
+) {
+    if (!input.analytics || !streak.isNewDay) return
+
+    const metadata = {
+        current_streak: streak.currentStreak,
+        freezes_available: streak.freezesAvailable,
+        freezes_used: streak.freezesUsed,
+        action_type: input.analytics.actionType,
+        source: input.analytics.source ?? null,
+    }
+
+    if (streak.freezeUsed) {
+        await recordAnalyticsEvent(tx, {
+            userId: input.userId,
+            role: 'LEARNER',
+            eventName: 'streak_freeze_used',
+            source: 'streak.learning_activity',
+            actionId: streak.freezeUsageId,
+            actionType: input.analytics.actionType,
+            level: input.analytics.level ?? null,
+            skill: input.analytics.skill ?? null,
+            metadata: {
+                ...metadata,
+                freeze_usage_id: streak.freezeUsageId,
+            },
+        })
+        return
+    }
+
+    if (streak.eventKind === 'none') return
+
+    await recordAnalyticsEvent(tx, {
+        userId: input.userId,
+        role: 'LEARNER',
+        eventName: streak.eventKind === 'reset' ? 'streak_reset' : 'streak_advanced',
+        source: 'streak.learning_activity',
+        actionId: input.analytics.actionId,
+        actionType: input.analytics.actionType,
+        level: input.analytics.level ?? null,
+        skill: input.analytics.skill ?? null,
+        metadata,
+    })
+}
+
+function buildCompletionAnalyticsMetadata(
+    input: LearningActivityInput,
+    totalXp: number
+): Prisma.InputJsonValue {
+    const analyticsMetadata = input.analytics?.metadata
+
+    return {
+        ...(isJsonObject(analyticsMetadata) ? analyticsMetadata : {}),
+        xp_awarded: totalXp,
+        duration_seconds: input.timeSpentSeconds ?? null,
+        score_percent: input.percentScore ?? null,
+    }
+}
+
+function isJsonObject(value: Prisma.InputJsonValue | null | undefined): value is Prisma.InputJsonObject {
+    return Boolean(value) && typeof value === 'object' && !Array.isArray(value)
 }
 
 function buildProfileUpdate(
@@ -233,7 +341,7 @@ async function updateUserStreak(
             },
         })
 
-        return { currentStreak: 1, isNewDay: true, freezeUsed: false, freezesAvailable: 1, freezesUsed: 0, freezeUsageId: null }
+        return { currentStreak: 1, isNewDay: true, freezeUsed: false, freezesAvailable: 1, freezesUsed: 0, freezeUsageId: null, eventKind: 'advanced' }
     }
 
     if (streak.lastActivityDate && streak.lastActivityDate.getTime() >= today.getTime()) {
@@ -244,6 +352,7 @@ async function updateUserStreak(
             freezesAvailable: streak.freezesAvailable,
             freezesUsed: streak.freezesUsed,
             freezeUsageId: null,
+            eventKind: 'none',
         }
     }
 
@@ -265,6 +374,7 @@ async function updateUserStreak(
             freezesAvailable: streak.freezesAvailable,
             freezesUsed: streak.freezesUsed,
             freezeUsageId: null,
+            eventKind: 'advanced',
         }
     }
 
@@ -307,6 +417,7 @@ async function updateUserStreak(
                 freezesAvailable,
                 freezesUsed,
                 freezeUsageId: usage.id,
+                eventKind: 'freeze_used',
             }
         }
     }
@@ -326,6 +437,7 @@ async function updateUserStreak(
         freezesAvailable: streak.freezesAvailable,
         freezesUsed: streak.freezesUsed,
         freezeUsageId: null,
+        eventKind: 'reset',
     }
 }
 

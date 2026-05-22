@@ -46,48 +46,48 @@
 /* ─── SVG Text Styles ─── */
 .roughTitle {
   font-family: 'Caveat', cursive;
-  font-size: 28px;
+  font-size: var(--text-3xl-size);
   font-weight: 700;
   fill: #1e293b;
 }
 .roughSubtitle {
   font-family: 'Caveat', cursive;
-  font-size: 15px;
+  font-size: var(--text-sm-size);
   fill: #94a3b8;
   font-weight: 500;
 }
 .roughBoxTitle {
   font-family: 'Caveat', cursive;
-  font-size: 26px;
+  font-size: var(--text-2xl-size);
   font-weight: 700;
 }
 .roughBoxSub {
   font-family: 'Caveat', cursive;
-  font-size: 14px;
+  font-size: var(--text-sm-size);
   fill: #94a3b8;
 }
 .roughPronoun {
   font-family: 'Caveat', cursive;
-  font-size: 18px;
+  font-size: var(--text-lg-size);
   fill: #64748b;
   font-weight: 500;
 }
 .roughForm {
   font-family: 'Caveat', cursive;
-  font-size: 22px;
+  font-size: var(--text-xl-size);
   font-weight: 700;
 }
 .roughAnnotation {
   font-family: 'Caveat', cursive;
-  font-size: 12px;
+  font-size: var(--text-xs-size);
   font-weight: 600;
 }
 .roughFuxie {
-  font-size: 28px;
+  font-size: var(--text-3xl-size);
 }
 .roughFuxieText {
   font-family: 'Caveat', cursive;
-  font-size: 14px;
+  font-size: var(--text-sm-size);
   fill: #94a3b8;
 }
 
@@ -105,22 +105,22 @@
 .conjBoxBlue { border-color: #93c5fd; background: linear-gradient(170deg, #eff6ff 0%, #fff 100%); }
 .conjBoxGreen { border-color: #86efac; background: linear-gradient(170deg, #f0fdf4 0%, #fff 100%); }
 .conjHeader { text-align: center; margin-bottom: 10px; padding-bottom: 8px; border-bottom: 2px dashed rgba(0,0,0,0.08); }
-.conjVerb { font-family: 'Caveat', cursive; font-size: 24px; font-weight: 700; display: block; }
-.conjBoxBlue .conjVerb { color: #2563eb; }
-.conjBoxGreen .conjVerb { color: #16a34a; }
-.conjMeaning { font-size: 14px; color: #94a3b8; font-family: 'Caveat', cursive; }
+.conjVerb { font-family: 'Caveat', cursive; font-size: var(--text-2xl-size); font-weight: 700; display: block; }
+.conjBoxBlue .conjVerb { color: var(--color-text-brand); }
+.conjBoxGreen .conjVerb { color: var(--color-text-success); }
+.conjMeaning { font-size: var(--text-sm-size); color: var(--color-text-subtle); font-family: 'Caveat', cursive; }
 .conjList { display: flex; flex-direction: column; gap: 4px; }
 .conjRow { display: flex; align-items: center; gap: 6px; padding: 3px 4px; border-radius: 8px; }
-.pronoun { font-family: 'Caveat', cursive; font-size: 16px; color: #64748b; min-width: 68px; text-align: right; }
-.arrow { color: #cbd5e1; font-size: 14px; }
-.form { font-family: 'Caveat', cursive; font-size: 20px; font-weight: 700; padding: 1px 8px; border-radius: 6px; }
-.formBlue { color: #1d4ed8; background: rgba(37,99,235,0.08); }
-.formGreen { color: #15803d; background: rgba(22,163,74,0.08); }
-.conjNote { margin-top: 10px; padding: 6px 10px; background: rgba(0,0,0,0.03); border-radius: 8px; font-size: 13px; color: #64748b; display: flex; align-items: center; gap: 6px; font-family: -apple-system, sans-serif; }
-.noteIcon { font-size: 14px; }
+.pronoun { font-family: 'Caveat', cursive; font-size: var(--text-base-size); color: var(--color-text-muted); min-width: 68px; text-align: right; }
+.arrow { color: var(--color-text-subtle); font-size: var(--text-sm-size); }
+.form { font-family: 'Caveat', cursive; font-size: var(--text-xl-size); font-weight: 700; padding: 1px 8px; border-radius: 6px; }
+.formBlue { color: var(--color-text-brand); background: rgba(37,99,235,0.08); }
+.formGreen { color: var(--color-text-success); background: rgba(22,163,74,0.08); }
+.conjNote { margin-top: 10px; padding: 6px 10px; background: rgba(0,0,0,0.03); border-radius: 8px; font-size: var(--text-xs-size); color: var(--color-text-muted); display: flex; align-items: center; gap: 6px; font-family: -apple-system, sans-serif; }
+.noteIcon { font-size: var(--text-sm-size); }
 .diagramTitle { text-align: center; margin-bottom: 18px; }
-.titleDe { display: block; font-family: 'Caveat', cursive; font-size: 28px; font-weight: 700; color: #1e293b; }
-.titleVi { font-family: 'Caveat', cursive; font-size: 16px; color: #94a3b8; }
+.titleDe { display: block; font-family: 'Caveat', cursive; font-size: var(--text-3xl-size); font-weight: 700; color: var(--color-text-primary); }
+.titleVi { font-family: 'Caveat', cursive; font-size: var(--text-base-size); color: var(--color-text-subtle); }
 .fuxieCorner { display: flex; align-items: center; justify-content: flex-end; gap: 8px; margin-top: 12px; opacity: 0.7; }
-.fuxieEmoji { font-size: 24px; filter: hue-rotate(180deg) saturate(1.5); }
-.fuxieBubble { font-size: 13px; color: #94a3b8; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 4px 12px; font-family: -apple-system, sans-serif; }
+.fuxieEmoji { font-size: var(--text-2xl-size); filter: hue-rotate(180deg) saturate(1.5); }
+.fuxieBubble { font-size: var(--text-xs-size); color: var(--color-text-subtle); background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 4px 12px; font-family: -apple-system, sans-serif; }

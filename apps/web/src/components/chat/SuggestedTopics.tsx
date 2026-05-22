@@ -39,7 +39,7 @@ export function SuggestedTopics({ topics, onSelect, variant = 'inline' }: Sugges
                 <button
                     key={i}
                     onClick={() => onSelect(topic)}
-                    className="px-3 py-1.5 rounded-full text-[11px] font-medium bg-[#F3FBFF] text-[#3C78A8] ring-1 ring-[#60A8E4]/25 hover:bg-[#CCE4F0]/45 hover:ring-[#60A8E4]/40 active:scale-95 transition-all duration-150 suggested-topic-pill"
+                    className="px-3 py-1.5 rounded-full text-xs font-medium bg-[#F3FBFF] text-text-brand ring-1 ring-[#60A8E4]/25 hover:bg-[#CCE4F0]/45 hover:ring-[#60A8E4]/40 active:scale-95 transition-all duration-150 suggested-topic-pill"
                     style={{
                         animationDelay: `${i * 80}ms`,
                         opacity: 0,

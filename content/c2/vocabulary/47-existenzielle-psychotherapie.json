@@ -76,7 +76,8 @@
       "exampleSentence2": "Im therapeutischen Prozess ist das Vergegenwärtigen traumatischer Erfahrungen unter geschützten Bedingungen entscheidend für deren Bewältigung und Integration.",
       "exampleTranslation2": "Trong quá trình trị liệu, việc hiện thực hóa các trải nghiệm chấn thương trong điều kiện được bảo vệ là rất quan trọng để vượt qua và hòa nhập chúng.",
       "imageUrl": "/images/vocab/c2-existenzielle-psychotherapie/das-vergegenwaertigen.png",
-      "meaningDe": "sich etwas lebhaft vorstellen oder eine vergangene Situation im Geist wieder aufrufen"
+      "meaningDe": "sich etwas lebhaft vorstellen oder eine vergangene Situation im Geist wieder aufrufen",
+      "pluralStatus": "not_applicable_or_needs_review"
     },
     {
       "word": "Selbsttäuschung",
@@ -118,7 +119,8 @@
       "exampleSentence2": "Die Fähigkeit, autotelische Aktivitäten zu kultivieren, kann ein wichtiger Faktor für psychisches Wohlbefinden sein und der Verdinglichung entgegenwirken.",
       "exampleTranslation2": "Khả năng nuôi dưỡng các hoạt động tự thân mục đích có thể là một yếu tố quan trọng đối với sức khỏe tâm lý và chống lại sự vật hóa.",
       "imageUrl": "/images/vocab/c2-existenzielle-psychotherapie/das-autotelische.png",
-      "meaningDe": "eine Tätigkeit, die ihren Zweck und ihr Ziel in sich selbst trägt und nicht durch äußere Belohnungen motiviert ist"
+      "meaningDe": "eine Tätigkeit, die ihren Zweck und ihr Ziel in sich selbst trägt und nicht durch äußere Belohnungen motiviert ist",
+      "pluralStatus": "not_applicable_or_needs_review"
     },
     {
       "word": "sich auseinandersetzen mit",
@@ -132,7 +134,20 @@
       "exampleSentence2": "Viele Klienten in der existentiellen Psychotherapie müssen lernen, sich bewusst mit ihrer Endlichkeit und dem Verlust von Lebenszielen auseinanderzusetzen.",
       "exampleTranslation2": "Nhiều thân chủ trong tâm lý trị liệu hiện sinh phải học cách đối mặt một cách có ý thức với sự hữu hạn của mình và sự mất mát các mục tiêu cuộc sống.",
       "imageUrl": "/images/vocab/c2-existenzielle-psychotherapie/sich-auseinandersetzen-mit.png",
-      "meaningDe": "sich intensiv und kritisch mit einem Thema, einem Problem oder einer Person beschäftigen, um eine Lösung oder Erkenntnis zu finden"
+      "meaningDe": "sich intensiv und kritisch mit einem Thema, einem Problem oder einer Person beschäftigen, um eine Lösung oder Erkenntnis zu finden",
+      "conjugation": {
+        "praesens": {
+          "ich": "auseinandersetze",
+          "du": "auseinandersetzt",
+          "er_sie_es": "auseinandersetzt",
+          "wir": "auseinandersetzen",
+          "ihr": "auseinandersetzt",
+          "sie_Sie": "auseinandersetzen"
+        },
+        "isIrregular": false,
+        "isSeparable": true,
+        "reviewStatus": "auto_generated_needs_spot_check"
+      }
     },
     {
       "word": "sich entfremden",
@@ -146,7 +161,20 @@
       "exampleSentence2": "Ein zunehmender Konsumismus und die Konzentration auf materielle Werte können dazu führen, dass sich Individuen von ihrer inneren Welt und ihren Mitmenschen entfremden.",
       "exampleTranslation2": "Chủ nghĩa tiêu dùng gia tăng và sự tập trung vào các giá trị vật chất có thể khiến các cá nhân tự xa lánh thế giới nội tâm và những người xung quanh.",
       "imageUrl": "/images/vocab/c2-existenzielle-psychotherapie/sich-entfremden.png",
-      "meaningDe": "das Gefühl entwickeln, keine emotionale oder geistige Verbindung mehr zu einer Person, einer Gruppe oder sich selbst zu haben"
+      "meaningDe": "das Gefühl entwickeln, keine emotionale oder geistige Verbindung mehr zu einer Person, einer Gruppe oder sich selbst zu haben",
+      "conjugation": {
+        "praesens": {
+          "ich": "entfremde",
+          "du": "entfremdst",
+          "er_sie_es": "entfremdet",
+          "wir": "entfremden",
+          "ihr": "entfremdet",
+          "sie_Sie": "entfremden"
+        },
+        "isIrregular": false,
+        "isSeparable": false,
+        "reviewStatus": "auto_generated_needs_spot_check"
+      }
     },
     {
       "word": "existentielle",
@@ -175,6 +203,26 @@
       "exampleTranslation2": "Một nhiệm vụ trị liệu có thể là giúp thân chủ phát triển những câu chuyện kiến tạo ý nghĩa mới cho cuộc đời mình.",
       "imageUrl": "/images/vocab/c2-existenzielle-psychotherapie/sinnstiftend.png",
       "meaningDe": "eine Eigenschaft von Aktivitäten oder Überzeugungen, die dem Leben einen tieferen Sinn oder eine Bedeutung verleihen"
+    }
+  ],
+  "cefrAudit": {
+    "targetLevel": "C2",
+    "verdict": "aligned",
+    "reviewerRole": "German Academic Lead",
+    "notes": "Release-candidate metadata audit: vocabulary content for \"Existenzielle Psychotherapie\" is aligned with declared C2 scope pending final human spot-check.",
+    "reviewedAt": "2026-05-12",
+    "reviewScope": "release_candidate_metadata_pass"
+  },
+  "learningOutcomes": [
+    {
+      "id": "c2-existenzielle-psychotherapie-lo-1",
+      "cefrLevel": "C2",
+      "skill": "vocabulary",
+      "canDoVi": "Toi co the luyen tu vung o trinh do C2 qua chu de \"Existenzielle Psychotherapie\".",
+      "canDoDe": "Ich kann Wortschatz auf Niveau C2 zum Thema \"Existenzielle Psychotherapie\" ueben.",
+      "linkedContentIds": [
+        "c2-existenzielle-psychotherapie"
+      ]
     }
   ]
 }

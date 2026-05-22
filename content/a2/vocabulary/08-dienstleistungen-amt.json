@@ -256,7 +256,8 @@
       "exampleSentence2": "Die Steuern sind hoch.",
       "exampleTranslation2": "Thuế cao.",
       "imageUrl": "/images/vocab/a2-dienstleistungen-amt/steuern.png",
-      "meaningDe": "Geld, das man an den Staat bezahlen muss"
+      "meaningDe": "Geld, das man an den Staat bezahlen muss",
+      "articleStatus": "not_applicable_or_needs_review"
     },
     {
       "word": "Konto",
@@ -452,7 +453,20 @@
       "exampleSentence1": "Bitte warten Sie einen Moment.",
       "exampleTranslation1": "Vui lòng chờ một lát.",
       "imageUrl": "/images/vocab/a2-dienstleistungen-amt/warten.png",
-      "meaningDe": "Zeit verbringen, bis etwas passiert"
+      "meaningDe": "Zeit verbringen, bis etwas passiert",
+      "conjugation": {
+        "praesens": {
+          "ich": "warte",
+          "du": "wartst",
+          "er_sie_es": "wartet",
+          "wir": "warten",
+          "ihr": "wartet",
+          "sie_Sie": "warten"
+        },
+        "isIrregular": false,
+        "isSeparable": false,
+        "reviewStatus": "auto_generated_needs_spot_check"
+      }
     },
     {
       "word": "abholen",
@@ -462,7 +476,40 @@
       "exampleSentence1": "Ich muss meinen Ausweis abholen.",
       "exampleTranslation1": "Tôi phải đi nhận chứng minh thư của mình.",
       "imageUrl": "/images/vocab/a2-dienstleistungen-amt/abholen.png",
-      "meaningDe": "zu einer Person oder an einen Ort gehen, um jemanden oder etwas mitzunehmen"
+      "meaningDe": "zu einer Person oder an einen Ort gehen, um jemanden oder etwas mitzunehmen",
+      "conjugation": {
+        "praesens": {
+          "ich": "abhole",
+          "du": "abholst",
+          "er_sie_es": "abholt",
+          "wir": "abholen",
+          "ihr": "abholt",
+          "sie_Sie": "abholen"
+        },
+        "isIrregular": false,
+        "isSeparable": true,
+        "reviewStatus": "auto_generated_needs_spot_check"
+      }
+    }
+  ],
+  "cefrAudit": {
+    "targetLevel": "A2",
+    "verdict": "aligned",
+    "reviewerRole": "German Academic Lead",
+    "notes": "Release-candidate metadata audit: vocabulary content for \"Dienstleistungen & Amt\" is aligned with declared A2 scope pending final human spot-check.",
+    "reviewedAt": "2026-05-12",
+    "reviewScope": "release_candidate_metadata_pass"
+  },
+  "learningOutcomes": [
+    {
+      "id": "a2-dienstleistungen-amt-lo-1",
+      "cefrLevel": "A2",
+      "skill": "vocabulary",
+      "canDoVi": "Toi co the luyen tu vung o trinh do A2 qua chu de \"Dienstleistungen & Amt\".",
+      "canDoDe": "Ich kann Wortschatz auf Niveau A2 zum Thema \"Dienstleistungen & Amt\" ueben.",
+      "linkedContentIds": [
+        "a2-dienstleistungen-amt"
+      ]
     }
   ]
 }

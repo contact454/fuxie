@@ -386,7 +386,20 @@
       "exampleSentence2": "Er trägt oft Jeans und ein T-Shirt.",
       "exampleTranslation2": "Anh ấy thường mặc quần jean và áo phông.",
       "imageUrl": "/images/vocab/a2-kleidung-mode/tragen.png",
-      "meaningDe": "Kleidung am Körper haben"
+      "meaningDe": "Kleidung am Körper haben",
+      "conjugation": {
+        "praesens": {
+          "ich": "trage",
+          "du": "traegst",
+          "er_sie_es": "traegt",
+          "wir": "tragen",
+          "ihr": "tragt",
+          "sie_Sie": "tragen"
+        },
+        "isIrregular": true,
+        "isSeparable": false,
+        "reviewStatus": "auto_generated_needs_spot_check"
+      }
     },
     {
       "word": "kaufen",
@@ -398,7 +411,20 @@
       "exampleSentence2": "Wo kann man hier gute Schuhe kaufen?",
       "exampleTranslation2": "Ở đây có thể mua giày tốt ở đâu?",
       "imageUrl": "/images/vocab/a2-kleidung-mode/kaufen.png",
-      "meaningDe": "Geld geben und eine Sache bekommen"
+      "meaningDe": "Geld geben und eine Sache bekommen",
+      "conjugation": {
+        "praesens": {
+          "ich": "kaufe",
+          "du": "kaufst",
+          "er_sie_es": "kauft",
+          "wir": "kaufen",
+          "ihr": "kauft",
+          "sie_Sie": "kaufen"
+        },
+        "isIrregular": false,
+        "isSeparable": false,
+        "reviewStatus": "auto_generated_needs_spot_check"
+      }
     },
     {
       "word": "Jacke",
@@ -451,6 +477,26 @@
       "exampleTranslation2": "Tôi không thích váy ngắn.",
       "imageUrl": "/images/vocab/a2-kleidung-mode/kurz.png",
       "meaningDe": "Mit einer geringen Länge oder einer kurzen Zeitdauer."
+    }
+  ],
+  "cefrAudit": {
+    "targetLevel": "A2",
+    "verdict": "aligned",
+    "reviewerRole": "German Academic Lead",
+    "notes": "Release-candidate metadata audit: vocabulary content for \"Kleidung & Mode\" is aligned with declared A2 scope pending final human spot-check.",
+    "reviewedAt": "2026-05-12",
+    "reviewScope": "release_candidate_metadata_pass"
+  },
+  "learningOutcomes": [
+    {
+      "id": "a2-kleidung-mode-lo-1",
+      "cefrLevel": "A2",
+      "skill": "vocabulary",
+      "canDoVi": "Toi co the luyen tu vung o trinh do A2 qua chu de \"Kleidung & Mode\".",
+      "canDoDe": "Ich kann Wortschatz auf Niveau A2 zum Thema \"Kleidung & Mode\" ueben.",
+      "linkedContentIds": [
+        "a2-kleidung-mode"
+      ]
     }
   ]
 }

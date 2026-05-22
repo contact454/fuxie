@@ -1,0 +1,891 @@
+﻿{
+    "schemaVersion":  2,
+    "generatedAt":  "2026-05-15",
+    "mode":  "draft flood-fill background removal from preview512 edge-connected pale sky background; requires manual visual QA before runtime",
+    "assetCount":  110,
+    "existingAlphaDrafts":  110,
+    "skippedSceneBoards":  10,
+    "root":  "docs/design/asset-generation/global-crops/alpha-draft-512",
+    "assets":  [
+                   {
+                       "id":  "atlas-a-learner-secondary-locations-01-grammar-workshop-interior",
+                       "batchId":  "atlas-a-learner-secondary-locations",
+                       "assetType":  "world_location_plate",
+                       "item":  "Grammar Workshop Interior",
+                       "alphaDraft":  "docs/design/asset-generation/global-crops/alpha-draft-512/atlas-a-learner-secondary-locations/01-grammar-workshop-interior.png",
+                       "exists":  true
+                   },
+                   {
+                       "id":  "atlas-a-learner-secondary-locations-02-review-garden-greenhouse",
+                       "batchId":  "atlas-a-learner-secondary-locations",
+                       "assetType":  "world_location_plate",
+                       "item":  "Review Garden Greenhouse",
+                       "alphaDraft":  "docs/design/asset-generation/global-crops/alpha-draft-512/atlas-a-learner-secondary-locations/02-review-garden-greenhouse.png",
+                       "exists":  true
+                   },
+                   {
+                       "id":  "atlas-a-learner-secondary-locations-03-badge-museum-shelf-room",
+                       "batchId":  "atlas-a-learner-secondary-locations",
+                       "assetType":  "world_location_plate",
+                       "item":  "Badge Museum Shelf Room",
+                       "alphaDraft":  "docs/design/asset-generation/global-crops/alpha-draft-512/atlas-a-learner-secondary-locations/03-badge-museum-shelf-room.png",
+                       "exists":  true
+                   },
+                   {
+                       "id":  "atlas-a-learner-secondary-locations-04-campaign-festival-board",
+                       "batchId":  "atlas-a-learner-secondary-locations",
+                       "assetType":  "world_location_plate",
+                       "item":  "Campaign Festival Board",
+                       "alphaDraft":  "docs/design/asset-generation/global-crops/alpha-draft-512/atlas-a-learner-secondary-locations/04-campaign-festival-board.png",
+                       "exists":  true
+                   },
+                   {
+                       "id":  "atlas-a-learner-secondary-locations-05-leaderboard-guild-hall",
+                       "batchId":  "atlas-a-learner-secondary-locations",
+                       "assetType":  "world_location_plate",
+                       "item":  "Leaderboard Guild Hall",
+                       "alphaDraft":  "docs/design/asset-generation/global-crops/alpha-draft-512/atlas-a-learner-secondary-locations/05-leaderboard-guild-hall.png",
+                       "exists":  true
+                   },
+                   {
+                       "id":  "atlas-a-learner-secondary-locations-06-session-focus-dojo",
+                       "batchId":  "atlas-a-learner-secondary-locations",
+                       "assetType":  "world_location_plate",
+                       "item":  "Session Focus Dojo",
+                       "alphaDraft":  "docs/design/asset-generation/global-crops/alpha-draft-512/atlas-a-learner-secondary-locations/06-session-focus-dojo.png",
+                       "exists":  true
+                   },
+                   {
+                       "id":  "atlas-a-learner-secondary-locations-07-vocabulary-microgame-booth",
+                       "batchId":  "atlas-a-learner-secondary-locations",
+                       "assetType":  "world_location_plate",
+                       "item":  "Vocabulary Microgame Booth",
+                       "alphaDraft":  "docs/design/asset-generation/global-crops/alpha-draft-512/atlas-a-learner-secondary-locations/07-vocabulary-microgame-booth.png",
+                       "exists":  true
+                   },
+                   {
+                       "id":  "atlas-a-learner-secondary-locations-08-speaking-roleplay-cafe-room",
+                       "batchId":  "atlas-a-learner-secondary-locations",
+                       "assetType":  "world_location_plate",
+                       "item":  "Speaking Roleplay Cafe Room",
+                       "alphaDraft":  "docs/design/asset-generation/global-crops/alpha-draft-512/atlas-a-learner-secondary-locations/08-speaking-roleplay-cafe-room.png",
+                       "exists":  true
+                   },
+                   {
+                       "id":  "atlas-a-learner-secondary-locations-09-exam-result-hall",
+                       "batchId":  "atlas-a-learner-secondary-locations",
+                       "assetType":  "world_location_plate",
+                       "item":  "Exam Result Hall",
+                       "alphaDraft":  "docs/design/asset-generation/global-crops/alpha-draft-512/atlas-a-learner-secondary-locations/09-exam-result-hall.png",
+                       "exists":  true
+                   },
+                   {
+                       "id":  "atlas-a-learner-secondary-locations-10-cefr-gate-plaza",
+                       "batchId":  "atlas-a-learner-secondary-locations",
+                       "assetType":  "world_location_plate",
+                       "item":  "CEFR Gate Plaza",
+                       "alphaDraft":  "docs/design/asset-generation/global-crops/alpha-draft-512/atlas-a-learner-secondary-locations/10-cefr-gate-plaza.png",
+                       "exists":  true
+                   },
+                   {
+                       "id":  "atlas-b-teacher-admin-auth-locations-01-teacher-academy-exterior",
+                       "batchId":  "atlas-b-teacher-admin-auth-locations",
+                       "assetType":  "world_location_plate",
+                       "item":  "Teacher Academy Exterior",
+                       "alphaDraft":  "docs/design/asset-generation/global-crops/alpha-draft-512/atlas-b-teacher-admin-auth-locations/01-teacher-academy-exterior.png",
+                       "exists":  true
+                   },
+                   {
+                       "id":  "atlas-b-teacher-admin-auth-locations-02-teacher-classroom-interior",
+                       "batchId":  "atlas-b-teacher-admin-auth-locations",
+                       "assetType":  "world_location_plate",
+                       "item":  "Teacher Classroom Interior",
+                       "alphaDraft":  "docs/design/asset-generation/global-crops/alpha-draft-512/atlas-b-teacher-admin-auth-locations/02-teacher-classroom-interior.png",
+                       "exists":  true
+                   },
+                   {
+                       "id":  "atlas-b-teacher-admin-auth-locations-03-student-progress-desk",
+                       "batchId":  "atlas-b-teacher-admin-auth-locations",
+                       "assetType":  "world_location_plate",
+                       "item":  "Student Progress Desk",
+                       "alphaDraft":  "docs/design/asset-generation/global-crops/alpha-draft-512/atlas-b-teacher-admin-auth-locations/03-student-progress-desk.png",
+                       "exists":  true
+                   },
+                   {
+                       "id":  "atlas-b-teacher-admin-auth-locations-04-admin-command-center",
+                       "batchId":  "atlas-b-teacher-admin-auth-locations",
+                       "assetType":  "world_location_plate",
+                       "item":  "Admin Command Center",
+                       "alphaDraft":  "docs/design/asset-generation/global-crops/alpha-draft-512/atlas-b-teacher-admin-auth-locations/04-admin-command-center.png",
+                       "exists":  true
+                   },
+                   {
+                       "id":  "atlas-b-teacher-admin-auth-locations-05-analytics-observatory",
+                       "batchId":  "atlas-b-teacher-admin-auth-locations",
+                       "assetType":  "world_location_plate",
+                       "item":  "Analytics Observatory",
+                       "alphaDraft":  "docs/design/asset-generation/global-crops/alpha-draft-512/atlas-b-teacher-admin-auth-locations/05-analytics-observatory.png",
+                       "exists":  true
+                   },
+                   {
+                       "id":  "atlas-b-teacher-admin-auth-locations-06-content-quality-lab",
+                       "batchId":  "atlas-b-teacher-admin-auth-locations",
+                       "assetType":  "world_location_plate",
+                       "item":  "Content Quality Lab",
+                       "alphaDraft":  "docs/design/asset-generation/global-crops/alpha-draft-512/atlas-b-teacher-admin-auth-locations/06-content-quality-lab.png",
+                       "exists":  true
+                   },
+                   {
+                       "id":  "atlas-b-teacher-admin-auth-locations-07-operations-server-room",
+                       "batchId":  "atlas-b-teacher-admin-auth-locations",
+                       "assetType":  "world_location_plate",
+                       "item":  "Operations Server Room",
+                       "alphaDraft":  "docs/design/asset-generation/global-crops/alpha-draft-512/atlas-b-teacher-admin-auth-locations/07-operations-server-room.png",
+                       "exists":  true
+                   },
+                   {
+                       "id":  "atlas-b-teacher-admin-auth-locations-08-rewards-approval-desk",
+                       "batchId":  "atlas-b-teacher-admin-auth-locations",
+                       "assetType":  "world_location_plate",
+                       "item":  "Rewards Approval Desk",
+                       "alphaDraft":  "docs/design/asset-generation/global-crops/alpha-draft-512/atlas-b-teacher-admin-auth-locations/08-rewards-approval-desk.png",
+                       "exists":  true
+                   },
+                   {
+                       "id":  "atlas-b-teacher-admin-auth-locations-09-auth-welcome-gate",
+                       "batchId":  "atlas-b-teacher-admin-auth-locations",
+                       "assetType":  "world_location_plate",
+                       "item":  "Auth Welcome Gate",
+                       "alphaDraft":  "docs/design/asset-generation/global-crops/alpha-draft-512/atlas-b-teacher-admin-auth-locations/09-auth-welcome-gate.png",
+                       "exists":  true
+                   },
+                   {
+                       "id":  "atlas-b-teacher-admin-auth-locations-10-live-qa-control-booth",
+                       "batchId":  "atlas-b-teacher-admin-auth-locations",
+                       "assetType":  "world_location_plate",
+                       "item":  "Live QA Control Booth",
+                       "alphaDraft":  "docs/design/asset-generation/global-crops/alpha-draft-512/atlas-b-teacher-admin-auth-locations/10-live-qa-control-booth.png",
+                       "exists":  true
+                   },
+                   {
+                       "id":  "atlas-c-village-buildings-01-rathaus-exam-hall",
+                       "batchId":  "atlas-c-village-buildings",
+                       "assetType":  "building_cutout",
+                       "item":  "Rathaus Exam Hall",
+                       "alphaDraft":  "docs/design/asset-generation/global-crops/alpha-draft-512/atlas-c-village-buildings/01-rathaus-exam-hall.png",
+                       "exists":  true
+                   },
+                   {
+                       "id":  "atlas-c-village-buildings-02-fuxie-schoolhouse",
+                       "batchId":  "atlas-c-village-buildings",
+                       "assetType":  "building_cutout",
+                       "item":  "Fuxie Schoolhouse",
+                       "alphaDraft":  "docs/design/asset-generation/global-crops/alpha-draft-512/atlas-c-village-buildings/02-fuxie-schoolhouse.png",
+                       "exists":  true
+                   },
+                   {
+                       "id":  "atlas-c-village-buildings-03-reading-library",
+                       "batchId":  "atlas-c-village-buildings",
+                       "assetType":  "building_cutout",
+                       "item":  "Reading Library",
+                       "alphaDraft":  "docs/design/asset-generation/global-crops/alpha-draft-512/atlas-c-village-buildings/03-reading-library.png",
+                       "exists":  true
+                   },
+                   {
+                       "id":  "atlas-c-village-buildings-04-writing-post-office",
+                       "batchId":  "atlas-c-village-buildings",
+                       "assetType":  "building_cutout",
+                       "item":  "Writing Post Office",
+                       "alphaDraft":  "docs/design/asset-generation/global-crops/alpha-draft-512/atlas-c-village-buildings/04-writing-post-office.png",
+                       "exists":  true
+                   },
+                   {
+                       "id":  "atlas-c-village-buildings-05-fuxie-market-stall",
+                       "batchId":  "atlas-c-village-buildings",
+                       "assetType":  "building_cutout",
+                       "item":  "Fuxie Market Stall",
+                       "alphaDraft":  "docs/design/asset-generation/global-crops/alpha-draft-512/atlas-c-village-buildings/05-fuxie-market-stall.png",
+                       "exists":  true
+                   },
+                   {
+                       "id":  "atlas-c-village-buildings-06-radio-listening-tower",
+                       "batchId":  "atlas-c-village-buildings",
+                       "assetType":  "building_cutout",
+                       "item":  "Radio Listening Tower",
+                       "alphaDraft":  "docs/design/asset-generation/global-crops/alpha-draft-512/atlas-c-village-buildings/06-radio-listening-tower.png",
+                       "exists":  true
+                   },
+                   {
+                       "id":  "atlas-c-village-buildings-07-speaking-stage-cafe",
+                       "batchId":  "atlas-c-village-buildings",
+                       "assetType":  "building_cutout",
+                       "item":  "Speaking Stage Cafe",
+                       "alphaDraft":  "docs/design/asset-generation/global-crops/alpha-draft-512/atlas-c-village-buildings/07-speaking-stage-cafe.png",
+                       "exists":  true
+                   },
+                   {
+                       "id":  "atlas-c-village-buildings-08-badge-museum",
+                       "batchId":  "atlas-c-village-buildings",
+                       "assetType":  "building_cutout",
+                       "item":  "Badge Museum",
+                       "alphaDraft":  "docs/design/asset-generation/global-crops/alpha-draft-512/atlas-c-village-buildings/08-badge-museum.png",
+                       "exists":  true
+                   },
+                   {
+                       "id":  "atlas-c-village-buildings-09-review-greenhouse",
+                       "batchId":  "atlas-c-village-buildings",
+                       "assetType":  "building_cutout",
+                       "item":  "Review Greenhouse",
+                       "alphaDraft":  "docs/design/asset-generation/global-crops/alpha-draft-512/atlas-c-village-buildings/09-review-greenhouse.png",
+                       "exists":  true
+                   },
+                   {
+                       "id":  "atlas-c-village-buildings-10-onboarding-welcome-inn",
+                       "batchId":  "atlas-c-village-buildings",
+                       "assetType":  "building_cutout",
+                       "item":  "Onboarding Welcome Inn",
+                       "alphaDraft":  "docs/design/asset-generation/global-crops/alpha-draft-512/atlas-c-village-buildings/10-onboarding-welcome-inn.png",
+                       "exists":  true
+                   },
+                   {
+                       "id":  "atlas-d-outdoor-props-01-village-signpost-cluster",
+                       "batchId":  "atlas-d-outdoor-props",
+                       "assetType":  "prop_cutout",
+                       "item":  "Village Signpost Cluster",
+                       "alphaDraft":  "docs/design/asset-generation/global-crops/alpha-draft-512/atlas-d-outdoor-props/01-village-signpost-cluster.png",
+                       "exists":  true
+                   },
+                   {
+                       "id":  "atlas-d-outdoor-props-02-blue-lantern-post",
+                       "batchId":  "atlas-d-outdoor-props",
+                       "assetType":  "prop_cutout",
+                       "item":  "Blue Lantern Post",
+                       "alphaDraft":  "docs/design/asset-generation/global-crops/alpha-draft-512/atlas-d-outdoor-props/02-blue-lantern-post.png",
+                       "exists":  true
+                   },
+                   {
+                       "id":  "atlas-d-outdoor-props-03-cobblestone-path-tile",
+                       "batchId":  "atlas-d-outdoor-props",
+                       "assetType":  "prop_cutout",
+                       "item":  "Cobblestone Path Tile",
+                       "alphaDraft":  "docs/design/asset-generation/global-crops/alpha-draft-512/atlas-d-outdoor-props/03-cobblestone-path-tile.png",
+                       "exists":  true
+                   },
+                   {
+                       "id":  "atlas-d-outdoor-props-04-fountain-reward-plinth",
+                       "batchId":  "atlas-d-outdoor-props",
+                       "assetType":  "prop_cutout",
+                       "item":  "Fountain Reward Plinth",
+                       "alphaDraft":  "docs/design/asset-generation/global-crops/alpha-draft-512/atlas-d-outdoor-props/04-fountain-reward-plinth.png",
+                       "exists":  true
+                   },
+                   {
+                       "id":  "atlas-d-outdoor-props-05-wooden-bench",
+                       "batchId":  "atlas-d-outdoor-props",
+                       "assetType":  "prop_cutout",
+                       "item":  "Wooden Bench",
+                       "alphaDraft":  "docs/design/asset-generation/global-crops/alpha-draft-512/atlas-d-outdoor-props/05-wooden-bench.png",
+                       "exists":  true
+                   },
+                   {
+                       "id":  "atlas-d-outdoor-props-06-notice-pins-and-ribbons",
+                       "batchId":  "atlas-d-outdoor-props",
+                       "assetType":  "prop_cutout",
+                       "item":  "Notice Pins and Ribbons",
+                       "alphaDraft":  "docs/design/asset-generation/global-crops/alpha-draft-512/atlas-d-outdoor-props/06-notice-pins-and-ribbons.png",
+                       "exists":  true
+                   },
+                   {
+                       "id":  "atlas-d-outdoor-props-07-village-map-board",
+                       "batchId":  "atlas-d-outdoor-props",
+                       "assetType":  "prop_cutout",
+                       "item":  "Village Map Board",
+                       "alphaDraft":  "docs/design/asset-generation/global-crops/alpha-draft-512/atlas-d-outdoor-props/07-village-map-board.png",
+                       "exists":  true
+                   },
+                   {
+                       "id":  "atlas-d-outdoor-props-08-bridge-checkpoint",
+                       "batchId":  "atlas-d-outdoor-props",
+                       "assetType":  "prop_cutout",
+                       "item":  "Bridge Checkpoint",
+                       "alphaDraft":  "docs/design/asset-generation/global-crops/alpha-draft-512/atlas-d-outdoor-props/08-bridge-checkpoint.png",
+                       "exists":  true
+                   },
+                   {
+                       "id":  "atlas-d-outdoor-props-09-festival-bunting",
+                       "batchId":  "atlas-d-outdoor-props",
+                       "assetType":  "prop_cutout",
+                       "item":  "Festival Bunting",
+                       "alphaDraft":  "docs/design/asset-generation/global-crops/alpha-draft-512/atlas-d-outdoor-props/09-festival-bunting.png",
+                       "exists":  true
+                   },
+                   {
+                       "id":  "atlas-d-outdoor-props-10-progress-lantern-trail",
+                       "batchId":  "atlas-d-outdoor-props",
+                       "assetType":  "prop_cutout",
+                       "item":  "Progress Lantern Trail",
+                       "alphaDraft":  "docs/design/asset-generation/global-crops/alpha-draft-512/atlas-d-outdoor-props/10-progress-lantern-trail.png",
+                       "exists":  true
+                   },
+                   {
+                       "id":  "atlas-e-learning-props-01-grammar-gear-scroll",
+                       "batchId":  "atlas-e-learning-props",
+                       "assetType":  "learning_prop_cutout",
+                       "item":  "Grammar Gear Scroll",
+                       "alphaDraft":  "docs/design/asset-generation/global-crops/alpha-draft-512/atlas-e-learning-props/01-grammar-gear-scroll.png",
+                       "exists":  true
+                   },
+                   {
+                       "id":  "atlas-e-learning-props-02-vocabulary-flashcard-box",
+                       "batchId":  "atlas-e-learning-props",
+                       "assetType":  "learning_prop_cutout",
+                       "item":  "Vocabulary Flashcard Box",
+                       "alphaDraft":  "docs/design/asset-generation/global-crops/alpha-draft-512/atlas-e-learning-props/02-vocabulary-flashcard-box.png",
+                       "exists":  true
+                   },
+                   {
+                       "id":  "atlas-e-learning-props-03-reading-bookmark-lamp",
+                       "batchId":  "atlas-e-learning-props",
+                       "assetType":  "learning_prop_cutout",
+                       "item":  "Reading Bookmark Lamp",
+                       "alphaDraft":  "docs/design/asset-generation/global-crops/alpha-draft-512/atlas-e-learning-props/03-reading-bookmark-lamp.png",
+                       "exists":  true
+                   },
+                   {
+                       "id":  "atlas-e-learning-props-04-listening-headphones-stand",
+                       "batchId":  "atlas-e-learning-props",
+                       "assetType":  "learning_prop_cutout",
+                       "item":  "Listening Headphones Stand",
+                       "alphaDraft":  "docs/design/asset-generation/global-crops/alpha-draft-512/atlas-e-learning-props/04-listening-headphones-stand.png",
+                       "exists":  true
+                   },
+                   {
+                       "id":  "atlas-e-learning-props-05-speaking-microphone-charm",
+                       "batchId":  "atlas-e-learning-props",
+                       "assetType":  "learning_prop_cutout",
+                       "item":  "Speaking Microphone Charm",
+                       "alphaDraft":  "docs/design/asset-generation/global-crops/alpha-draft-512/atlas-e-learning-props/05-speaking-microphone-charm.png",
+                       "exists":  true
+                   },
+                   {
+                       "id":  "atlas-e-learning-props-06-writing-envelope-stack",
+                       "batchId":  "atlas-e-learning-props",
+                       "assetType":  "learning_prop_cutout",
+                       "item":  "Writing Envelope Stack",
+                       "alphaDraft":  "docs/design/asset-generation/global-crops/alpha-draft-512/atlas-e-learning-props/06-writing-envelope-stack.png",
+                       "exists":  true
+                   },
+                   {
+                       "id":  "atlas-e-learning-props-07-exam-timer-bell",
+                       "batchId":  "atlas-e-learning-props",
+                       "assetType":  "learning_prop_cutout",
+                       "item":  "Exam Timer Bell",
+                       "alphaDraft":  "docs/design/asset-generation/global-crops/alpha-draft-512/atlas-e-learning-props/07-exam-timer-bell.png",
+                       "exists":  true
+                   },
+                   {
+                       "id":  "atlas-e-learning-props-08-review-seed-packet",
+                       "batchId":  "atlas-e-learning-props",
+                       "assetType":  "learning_prop_cutout",
+                       "item":  "Review Seed Packet",
+                       "alphaDraft":  "docs/design/asset-generation/global-crops/alpha-draft-512/atlas-e-learning-props/08-review-seed-packet.png",
+                       "exists":  true
+                   },
+                   {
+                       "id":  "atlas-e-learning-props-09-chat-phrase-cards",
+                       "batchId":  "atlas-e-learning-props",
+                       "assetType":  "learning_prop_cutout",
+                       "item":  "Chat Phrase Cards",
+                       "alphaDraft":  "docs/design/asset-generation/global-crops/alpha-draft-512/atlas-e-learning-props/09-chat-phrase-cards.png",
+                       "exists":  true
+                   },
+                   {
+                       "id":  "atlas-e-learning-props-10-cefr-compass",
+                       "batchId":  "atlas-e-learning-props",
+                       "assetType":  "learning_prop_cutout",
+                       "item":  "CEFR Compass",
+                       "alphaDraft":  "docs/design/asset-generation/global-crops/alpha-draft-512/atlas-e-learning-props/10-cefr-compass.png",
+                       "exists":  true
+                   },
+                   {
+                       "id":  "atlas-f-reward-shop-items-a-01-streak-freeze-crystal",
+                       "batchId":  "atlas-f-reward-shop-items-a",
+                       "assetType":  "reward_item_icon",
+                       "item":  "Streak Freeze Crystal",
+                       "alphaDraft":  "docs/design/asset-generation/global-crops/alpha-draft-512/atlas-f-reward-shop-items-a/01-streak-freeze-crystal.png",
+                       "exists":  true
+                   },
+                   {
+                       "id":  "atlas-f-reward-shop-items-a-02-fucoin-pouch",
+                       "batchId":  "atlas-f-reward-shop-items-a",
+                       "assetType":  "reward_item_icon",
+                       "item":  "Fucoin Pouch",
+                       "alphaDraft":  "docs/design/asset-generation/global-crops/alpha-draft-512/atlas-f-reward-shop-items-a/02-fucoin-pouch.png",
+                       "exists":  true
+                   },
+                   {
+                       "id":  "atlas-f-reward-shop-items-a-03-xp-star-bundle",
+                       "batchId":  "atlas-f-reward-shop-items-a",
+                       "assetType":  "reward_item_icon",
+                       "item":  "XP Star Bundle",
+                       "alphaDraft":  "docs/design/asset-generation/global-crops/alpha-draft-512/atlas-f-reward-shop-items-a/03-xp-star-bundle.png",
+                       "exists":  true
+                   },
+                   {
+                       "id":  "atlas-f-reward-shop-items-a-04-coach-hint-ticket",
+                       "batchId":  "atlas-f-reward-shop-items-a",
+                       "assetType":  "reward_item_icon",
+                       "item":  "Coach Hint Ticket",
+                       "alphaDraft":  "docs/design/asset-generation/global-crops/alpha-draft-512/atlas-f-reward-shop-items-a/04-coach-hint-ticket.png",
+                       "exists":  true
+                   },
+                   {
+                       "id":  "atlas-f-reward-shop-items-a-05-mocktest-unlock-key",
+                       "batchId":  "atlas-f-reward-shop-items-a",
+                       "assetType":  "reward_item_icon",
+                       "item":  "Mocktest Unlock Key",
+                       "alphaDraft":  "docs/design/asset-generation/global-crops/alpha-draft-512/atlas-f-reward-shop-items-a/05-mocktest-unlock-key.png",
+                       "exists":  true
+                   },
+                   {
+                       "id":  "atlas-f-reward-shop-items-a-06-speaking-feedback-pass",
+                       "batchId":  "atlas-f-reward-shop-items-a",
+                       "assetType":  "reward_item_icon",
+                       "item":  "Speaking Feedback Pass",
+                       "alphaDraft":  "docs/design/asset-generation/global-crops/alpha-draft-512/atlas-f-reward-shop-items-a/06-speaking-feedback-pass.png",
+                       "exists":  true
+                   },
+                   {
+                       "id":  "atlas-f-reward-shop-items-a-07-fuxie-sky-outfit-token",
+                       "batchId":  "atlas-f-reward-shop-items-a",
+                       "assetType":  "reward_item_icon",
+                       "item":  "Fuxie Sky Outfit Token",
+                       "alphaDraft":  "docs/design/asset-generation/global-crops/alpha-draft-512/atlas-f-reward-shop-items-a/07-fuxie-sky-outfit-token.png",
+                       "exists":  true
+                   },
+                   {
+                       "id":  "atlas-f-reward-shop-items-a-08-learning-gift-voucher",
+                       "batchId":  "atlas-f-reward-shop-items-a",
+                       "assetType":  "reward_item_icon",
+                       "item":  "Learning Gift Voucher",
+                       "alphaDraft":  "docs/design/asset-generation/global-crops/alpha-draft-512/atlas-f-reward-shop-items-a/08-learning-gift-voucher.png",
+                       "exists":  true
+                   },
+                   {
+                       "id":  "atlas-f-reward-shop-items-a-09-reward-chest-small",
+                       "batchId":  "atlas-f-reward-shop-items-a",
+                       "assetType":  "reward_item_icon",
+                       "item":  "Reward Chest Small",
+                       "alphaDraft":  "docs/design/asset-generation/global-crops/alpha-draft-512/atlas-f-reward-shop-items-a/09-reward-chest-small.png",
+                       "exists":  true
+                   },
+                   {
+                       "id":  "atlas-f-reward-shop-items-a-10-daily-goal-stamp",
+                       "batchId":  "atlas-f-reward-shop-items-a",
+                       "assetType":  "reward_item_icon",
+                       "item":  "Daily Goal Stamp",
+                       "alphaDraft":  "docs/design/asset-generation/global-crops/alpha-draft-512/atlas-f-reward-shop-items-a/10-daily-goal-stamp.png",
+                       "exists":  true
+                   },
+                   {
+                       "id":  "atlas-g-reward-shop-items-b-01-pronunciation-mic-charm",
+                       "batchId":  "atlas-g-reward-shop-items-b",
+                       "assetType":  "reward_item_icon",
+                       "item":  "Pronunciation Mic Charm",
+                       "alphaDraft":  "docs/design/asset-generation/global-crops/alpha-draft-512/atlas-g-reward-shop-items-b/01-pronunciation-mic-charm.png",
+                       "exists":  true
+                   },
+                   {
+                       "id":  "atlas-g-reward-shop-items-b-02-writing-stamp-seal",
+                       "batchId":  "atlas-g-reward-shop-items-b",
+                       "assetType":  "reward_item_icon",
+                       "item":  "Writing Stamp Seal",
+                       "alphaDraft":  "docs/design/asset-generation/global-crops/alpha-draft-512/atlas-g-reward-shop-items-b/02-writing-stamp-seal.png",
+                       "exists":  true
+                   },
+                   {
+                       "id":  "atlas-g-reward-shop-items-b-03-review-garden-seed",
+                       "batchId":  "atlas-g-reward-shop-items-b",
+                       "assetType":  "reward_item_icon",
+                       "item":  "Review Garden Seed",
+                       "alphaDraft":  "docs/design/asset-generation/global-crops/alpha-draft-512/atlas-g-reward-shop-items-b/03-review-garden-seed.png",
+                       "exists":  true
+                   },
+                   {
+                       "id":  "atlas-g-reward-shop-items-b-04-badge-polish-kit",
+                       "batchId":  "atlas-g-reward-shop-items-b",
+                       "assetType":  "reward_item_icon",
+                       "item":  "Badge Polish Kit",
+                       "alphaDraft":  "docs/design/asset-generation/global-crops/alpha-draft-512/atlas-g-reward-shop-items-b/04-badge-polish-kit.png",
+                       "exists":  true
+                   },
+                   {
+                       "id":  "atlas-g-reward-shop-items-b-05-cefr-gate-key",
+                       "batchId":  "atlas-g-reward-shop-items-b",
+                       "assetType":  "reward_item_icon",
+                       "item":  "CEFR Gate Key",
+                       "alphaDraft":  "docs/design/asset-generation/global-crops/alpha-draft-512/atlas-g-reward-shop-items-b/05-cefr-gate-key.png",
+                       "exists":  true
+                   },
+                   {
+                       "id":  "atlas-g-reward-shop-items-b-06-classroom-invite-card",
+                       "batchId":  "atlas-g-reward-shop-items-b",
+                       "assetType":  "reward_item_icon",
+                       "item":  "Classroom Invite Card",
+                       "alphaDraft":  "docs/design/asset-generation/global-crops/alpha-draft-512/atlas-g-reward-shop-items-b/06-classroom-invite-card.png",
+                       "exists":  true
+                   },
+                   {
+                       "id":  "atlas-g-reward-shop-items-b-07-radio-replay-pass",
+                       "batchId":  "atlas-g-reward-shop-items-b",
+                       "assetType":  "reward_item_icon",
+                       "item":  "Radio Replay Pass",
+                       "alphaDraft":  "docs/design/asset-generation/global-crops/alpha-draft-512/atlas-g-reward-shop-items-b/07-radio-replay-pass.png",
+                       "exists":  true
+                   },
+                   {
+                       "id":  "atlas-g-reward-shop-items-b-08-grammar-repair-token",
+                       "batchId":  "atlas-g-reward-shop-items-b",
+                       "assetType":  "reward_item_icon",
+                       "item":  "Grammar Repair Token",
+                       "alphaDraft":  "docs/design/asset-generation/global-crops/alpha-draft-512/atlas-g-reward-shop-items-b/08-grammar-repair-token.png",
+                       "exists":  true
+                   },
+                   {
+                       "id":  "atlas-g-reward-shop-items-b-09-focus-shield",
+                       "batchId":  "atlas-g-reward-shop-items-b",
+                       "assetType":  "reward_item_icon",
+                       "item":  "Focus Shield",
+                       "alphaDraft":  "docs/design/asset-generation/global-crops/alpha-draft-512/atlas-g-reward-shop-items-b/09-focus-shield.png",
+                       "exists":  true
+                   },
+                   {
+                       "id":  "atlas-g-reward-shop-items-b-10-comeback-candle",
+                       "batchId":  "atlas-g-reward-shop-items-b",
+                       "assetType":  "reward_item_icon",
+                       "item":  "Comeback Candle",
+                       "alphaDraft":  "docs/design/asset-generation/global-crops/alpha-draft-512/atlas-g-reward-shop-items-b/10-comeback-candle.png",
+                       "exists":  true
+                   },
+                   {
+                       "id":  "atlas-h-mascot-poses-a-01-fuxie-grammar-mentor",
+                       "batchId":  "atlas-h-mascot-poses-a",
+                       "assetType":  "mascot_state",
+                       "item":  "Fuxie Grammar Mentor",
+                       "alphaDraft":  "docs/design/asset-generation/global-crops/alpha-draft-512/atlas-h-mascot-poses-a/01-fuxie-grammar-mentor.png",
+                       "exists":  true
+                   },
+                   {
+                       "id":  "atlas-h-mascot-poses-a-02-fuxie-review-gardener",
+                       "batchId":  "atlas-h-mascot-poses-a",
+                       "assetType":  "mascot_state",
+                       "item":  "Fuxie Review Gardener",
+                       "alphaDraft":  "docs/design/asset-generation/global-crops/alpha-draft-512/atlas-h-mascot-poses-a/02-fuxie-review-gardener.png",
+                       "exists":  true
+                   },
+                   {
+                       "id":  "atlas-h-mascot-poses-a-03-fuxie-badge-curator",
+                       "batchId":  "atlas-h-mascot-poses-a",
+                       "assetType":  "mascot_state",
+                       "item":  "Fuxie Badge Curator",
+                       "alphaDraft":  "docs/design/asset-generation/global-crops/alpha-draft-512/atlas-h-mascot-poses-a/03-fuxie-badge-curator.png",
+                       "exists":  true
+                   },
+                   {
+                       "id":  "atlas-h-mascot-poses-a-04-fuxie-campaign-host",
+                       "batchId":  "atlas-h-mascot-poses-a",
+                       "assetType":  "mascot_state",
+                       "item":  "Fuxie Campaign Host",
+                       "alphaDraft":  "docs/design/asset-generation/global-crops/alpha-draft-512/atlas-h-mascot-poses-a/04-fuxie-campaign-host.png",
+                       "exists":  true
+                   },
+                   {
+                       "id":  "atlas-h-mascot-poses-a-05-fuxie-leaderboard-announcer",
+                       "batchId":  "atlas-h-mascot-poses-a",
+                       "assetType":  "mascot_state",
+                       "item":  "Fuxie Leaderboard Announcer",
+                       "alphaDraft":  "docs/design/asset-generation/global-crops/alpha-draft-512/atlas-h-mascot-poses-a/05-fuxie-leaderboard-announcer.png",
+                       "exists":  true
+                   },
+                   {
+                       "id":  "atlas-h-mascot-poses-a-06-fuxie-session-focus-coach",
+                       "batchId":  "atlas-h-mascot-poses-a",
+                       "assetType":  "mascot_state",
+                       "item":  "Fuxie Session Focus Coach",
+                       "alphaDraft":  "docs/design/asset-generation/global-crops/alpha-draft-512/atlas-h-mascot-poses-a/06-fuxie-session-focus-coach.png",
+                       "exists":  true
+                   },
+                   {
+                       "id":  "atlas-h-mascot-poses-a-07-fuxie-microgame-referee",
+                       "batchId":  "atlas-h-mascot-poses-a",
+                       "assetType":  "mascot_state",
+                       "item":  "Fuxie Microgame Referee",
+                       "alphaDraft":  "docs/design/asset-generation/global-crops/alpha-draft-512/atlas-h-mascot-poses-a/07-fuxie-microgame-referee.png",
+                       "exists":  true
+                   },
+                   {
+                       "id":  "atlas-h-mascot-poses-a-08-fuxie-roleplay-waiter",
+                       "batchId":  "atlas-h-mascot-poses-a",
+                       "assetType":  "mascot_state",
+                       "item":  "Fuxie Roleplay Waiter",
+                       "alphaDraft":  "docs/design/asset-generation/global-crops/alpha-draft-512/atlas-h-mascot-poses-a/08-fuxie-roleplay-waiter.png",
+                       "exists":  true
+                   },
+                   {
+                       "id":  "atlas-h-mascot-poses-a-09-fuxie-exam-proctor",
+                       "batchId":  "atlas-h-mascot-poses-a",
+                       "assetType":  "mascot_state",
+                       "item":  "Fuxie Exam Proctor",
+                       "alphaDraft":  "docs/design/asset-generation/global-crops/alpha-draft-512/atlas-h-mascot-poses-a/09-fuxie-exam-proctor.png",
+                       "exists":  true
+                   },
+                   {
+                       "id":  "atlas-h-mascot-poses-a-10-fuxie-cefr-gate-guide",
+                       "batchId":  "atlas-h-mascot-poses-a",
+                       "assetType":  "mascot_state",
+                       "item":  "Fuxie CEFR Gate Guide",
+                       "alphaDraft":  "docs/design/asset-generation/global-crops/alpha-draft-512/atlas-h-mascot-poses-a/10-fuxie-cefr-gate-guide.png",
+                       "exists":  true
+                   },
+                   {
+                       "id":  "atlas-i-mascot-poses-b-01-fuxie-teacher-coach",
+                       "batchId":  "atlas-i-mascot-poses-b",
+                       "assetType":  "mascot_state",
+                       "item":  "Fuxie Teacher Coach",
+                       "alphaDraft":  "docs/design/asset-generation/global-crops/alpha-draft-512/atlas-i-mascot-poses-b/01-fuxie-teacher-coach.png",
+                       "exists":  true
+                   },
+                   {
+                       "id":  "atlas-i-mascot-poses-b-02-fuxie-classroom-helper",
+                       "batchId":  "atlas-i-mascot-poses-b",
+                       "assetType":  "mascot_state",
+                       "item":  "Fuxie Classroom Helper",
+                       "alphaDraft":  "docs/design/asset-generation/global-crops/alpha-draft-512/atlas-i-mascot-poses-b/02-fuxie-classroom-helper.png",
+                       "exists":  true
+                   },
+                   {
+                       "id":  "atlas-i-mascot-poses-b-03-fuxie-admin-analyst",
+                       "batchId":  "atlas-i-mascot-poses-b",
+                       "assetType":  "mascot_state",
+                       "item":  "Fuxie Admin Analyst",
+                       "alphaDraft":  "docs/design/asset-generation/global-crops/alpha-draft-512/atlas-i-mascot-poses-b/03-fuxie-admin-analyst.png",
+                       "exists":  true
+                   },
+                   {
+                       "id":  "atlas-i-mascot-poses-b-04-fuxie-content-reviewer",
+                       "batchId":  "atlas-i-mascot-poses-b",
+                       "assetType":  "mascot_state",
+                       "item":  "Fuxie Content Reviewer",
+                       "alphaDraft":  "docs/design/asset-generation/global-crops/alpha-draft-512/atlas-i-mascot-poses-b/04-fuxie-content-reviewer.png",
+                       "exists":  true
+                   },
+                   {
+                       "id":  "atlas-i-mascot-poses-b-05-fuxie-ops-mechanic",
+                       "batchId":  "atlas-i-mascot-poses-b",
+                       "assetType":  "mascot_state",
+                       "item":  "Fuxie Ops Mechanic",
+                       "alphaDraft":  "docs/design/asset-generation/global-crops/alpha-draft-512/atlas-i-mascot-poses-b/05-fuxie-ops-mechanic.png",
+                       "exists":  true
+                   },
+                   {
+                       "id":  "atlas-i-mascot-poses-b-06-fuxie-reward-clerk",
+                       "batchId":  "atlas-i-mascot-poses-b",
+                       "assetType":  "mascot_state",
+                       "item":  "Fuxie Reward Clerk",
+                       "alphaDraft":  "docs/design/asset-generation/global-crops/alpha-draft-512/atlas-i-mascot-poses-b/06-fuxie-reward-clerk.png",
+                       "exists":  true
+                   },
+                   {
+                       "id":  "atlas-i-mascot-poses-b-07-fuxie-auth-welcomer",
+                       "batchId":  "atlas-i-mascot-poses-b",
+                       "assetType":  "mascot_state",
+                       "item":  "Fuxie Auth Welcomer",
+                       "alphaDraft":  "docs/design/asset-generation/global-crops/alpha-draft-512/atlas-i-mascot-poses-b/07-fuxie-auth-welcomer.png",
+                       "exists":  true
+                   },
+                   {
+                       "id":  "atlas-i-mascot-poses-b-08-fuxie-privacy-guardian",
+                       "batchId":  "atlas-i-mascot-poses-b",
+                       "assetType":  "mascot_state",
+                       "item":  "Fuxie Privacy Guardian",
+                       "alphaDraft":  "docs/design/asset-generation/global-crops/alpha-draft-512/atlas-i-mascot-poses-b/08-fuxie-privacy-guardian.png",
+                       "exists":  true
+                   },
+                   {
+                       "id":  "atlas-i-mascot-poses-b-09-fuxie-qa-inspector",
+                       "batchId":  "atlas-i-mascot-poses-b",
+                       "assetType":  "mascot_state",
+                       "item":  "Fuxie QA Inspector",
+                       "alphaDraft":  "docs/design/asset-generation/global-crops/alpha-draft-512/atlas-i-mascot-poses-b/09-fuxie-qa-inspector.png",
+                       "exists":  true
+                   },
+                   {
+                       "id":  "atlas-i-mascot-poses-b-10-fuxie-error-repair-helper",
+                       "batchId":  "atlas-i-mascot-poses-b",
+                       "assetType":  "mascot_state",
+                       "item":  "Fuxie Error Repair Helper",
+                       "alphaDraft":  "docs/design/asset-generation/global-crops/alpha-draft-512/atlas-i-mascot-poses-b/10-fuxie-error-repair-helper.png",
+                       "exists":  true
+                   },
+                   {
+                       "id":  "atlas-j-ui-frames-panels-a-01-village-quest-card-frame",
+                       "batchId":  "atlas-j-ui-frames-panels-a",
+                       "assetType":  "ui_frame",
+                       "item":  "Village Quest Card Frame",
+                       "alphaDraft":  "docs/design/asset-generation/global-crops/alpha-draft-512/atlas-j-ui-frames-panels-a/01-village-quest-card-frame.png",
+                       "exists":  true
+                   },
+                   {
+                       "id":  "atlas-j-ui-frames-panels-a-02-skill-player-motivation-frame",
+                       "batchId":  "atlas-j-ui-frames-panels-a",
+                       "assetType":  "ui_frame",
+                       "item":  "Skill Player Motivation Frame",
+                       "alphaDraft":  "docs/design/asset-generation/global-crops/alpha-draft-512/atlas-j-ui-frames-panels-a/02-skill-player-motivation-frame.png",
+                       "exists":  true
+                   },
+                   {
+                       "id":  "atlas-j-ui-frames-panels-a-03-cefr-path-node-frame",
+                       "batchId":  "atlas-j-ui-frames-panels-a",
+                       "assetType":  "ui_frame",
+                       "item":  "CEFR Path Node Frame",
+                       "alphaDraft":  "docs/design/asset-generation/global-crops/alpha-draft-512/atlas-j-ui-frames-panels-a/03-cefr-path-node-frame.png",
+                       "exists":  true
+                   },
+                   {
+                       "id":  "atlas-j-ui-frames-panels-a-04-result-reward-reveal-frame",
+                       "batchId":  "atlas-j-ui-frames-panels-a",
+                       "assetType":  "ui_frame",
+                       "item":  "Result Reward Reveal Frame",
+                       "alphaDraft":  "docs/design/asset-generation/global-crops/alpha-draft-512/atlas-j-ui-frames-panels-a/04-result-reward-reveal-frame.png",
+                       "exists":  true
+                   },
+                   {
+                       "id":  "atlas-j-ui-frames-panels-a-05-badge-receipt-frame",
+                       "batchId":  "atlas-j-ui-frames-panels-a",
+                       "assetType":  "ui_frame",
+                       "item":  "Badge Receipt Frame",
+                       "alphaDraft":  "docs/design/asset-generation/global-crops/alpha-draft-512/atlas-j-ui-frames-panels-a/05-badge-receipt-frame.png",
+                       "exists":  true
+                   },
+                   {
+                       "id":  "atlas-j-ui-frames-panels-a-06-shop-item-shelf-frame",
+                       "batchId":  "atlas-j-ui-frames-panels-a",
+                       "assetType":  "ui_frame",
+                       "item":  "Shop Item Shelf Frame",
+                       "alphaDraft":  "docs/design/asset-generation/global-crops/alpha-draft-512/atlas-j-ui-frames-panels-a/06-shop-item-shelf-frame.png",
+                       "exists":  true
+                   },
+                   {
+                       "id":  "atlas-j-ui-frames-panels-a-07-daily-goal-notice-frame",
+                       "batchId":  "atlas-j-ui-frames-panels-a",
+                       "assetType":  "ui_frame",
+                       "item":  "Daily Goal Notice Frame",
+                       "alphaDraft":  "docs/design/asset-generation/global-crops/alpha-draft-512/atlas-j-ui-frames-panels-a/07-daily-goal-notice-frame.png",
+                       "exists":  true
+                   },
+                   {
+                       "id":  "atlas-j-ui-frames-panels-a-08-empty-state-sign-frame",
+                       "batchId":  "atlas-j-ui-frames-panels-a",
+                       "assetType":  "ui_frame",
+                       "item":  "Empty State Sign Frame",
+                       "alphaDraft":  "docs/design/asset-generation/global-crops/alpha-draft-512/atlas-j-ui-frames-panels-a/08-empty-state-sign-frame.png",
+                       "exists":  true
+                   },
+                   {
+                       "id":  "atlas-j-ui-frames-panels-a-09-error-retry-repair-frame",
+                       "batchId":  "atlas-j-ui-frames-panels-a",
+                       "assetType":  "ui_frame",
+                       "item":  "Error Retry Repair Frame",
+                       "alphaDraft":  "docs/design/asset-generation/global-crops/alpha-draft-512/atlas-j-ui-frames-panels-a/09-error-retry-repair-frame.png",
+                       "exists":  true
+                   },
+                   {
+                       "id":  "atlas-j-ui-frames-panels-a-10-chat-bubble-village-frame",
+                       "batchId":  "atlas-j-ui-frames-panels-a",
+                       "assetType":  "ui_frame",
+                       "item":  "Chat Bubble Village Frame",
+                       "alphaDraft":  "docs/design/asset-generation/global-crops/alpha-draft-512/atlas-j-ui-frames-panels-a/10-chat-bubble-village-frame.png",
+                       "exists":  true
+                   },
+                   {
+                       "id":  "atlas-k-ui-frames-panels-b-01-auth-welcome-panel",
+                       "batchId":  "atlas-k-ui-frames-panels-b",
+                       "assetType":  "ui_frame",
+                       "item":  "Auth Welcome Panel",
+                       "alphaDraft":  "docs/design/asset-generation/global-crops/alpha-draft-512/atlas-k-ui-frames-panels-b/01-auth-welcome-panel.png",
+                       "exists":  true
+                   },
+                   {
+                       "id":  "atlas-k-ui-frames-panels-b-02-onboarding-path-panel",
+                       "batchId":  "atlas-k-ui-frames-panels-b",
+                       "assetType":  "ui_frame",
+                       "item":  "Onboarding Path Panel",
+                       "alphaDraft":  "docs/design/asset-generation/global-crops/alpha-draft-512/atlas-k-ui-frames-panels-b/02-onboarding-path-panel.png",
+                       "exists":  true
+                   },
+                   {
+                       "id":  "atlas-k-ui-frames-panels-b-03-teacher-classroom-card",
+                       "batchId":  "atlas-k-ui-frames-panels-b",
+                       "assetType":  "ui_frame",
+                       "item":  "Teacher Classroom Card",
+                       "alphaDraft":  "docs/design/asset-generation/global-crops/alpha-draft-512/atlas-k-ui-frames-panels-b/03-teacher-classroom-card.png",
+                       "exists":  true
+                   },
+                   {
+                       "id":  "atlas-k-ui-frames-panels-b-04-student-progress-panel",
+                       "batchId":  "atlas-k-ui-frames-panels-b",
+                       "assetType":  "ui_frame",
+                       "item":  "Student Progress Panel",
+                       "alphaDraft":  "docs/design/asset-generation/global-crops/alpha-draft-512/atlas-k-ui-frames-panels-b/04-student-progress-panel.png",
+                       "exists":  true
+                   },
+                   {
+                       "id":  "atlas-k-ui-frames-panels-b-05-admin-analytics-panel",
+                       "batchId":  "atlas-k-ui-frames-panels-b",
+                       "assetType":  "ui_frame",
+                       "item":  "Admin Analytics Panel",
+                       "alphaDraft":  "docs/design/asset-generation/global-crops/alpha-draft-512/atlas-k-ui-frames-panels-b/05-admin-analytics-panel.png",
+                       "exists":  true
+                   },
+                   {
+                       "id":  "atlas-k-ui-frames-panels-b-06-content-qa-warning-panel",
+                       "batchId":  "atlas-k-ui-frames-panels-b",
+                       "assetType":  "ui_frame",
+                       "item":  "Content QA Warning Panel",
+                       "alphaDraft":  "docs/design/asset-generation/global-crops/alpha-draft-512/atlas-k-ui-frames-panels-b/06-content-qa-warning-panel.png",
+                       "exists":  true
+                   },
+                   {
+                       "id":  "atlas-k-ui-frames-panels-b-07-ops-health-console-panel",
+                       "batchId":  "atlas-k-ui-frames-panels-b",
+                       "assetType":  "ui_frame",
+                       "item":  "Ops Health Console Panel",
+                       "alphaDraft":  "docs/design/asset-generation/global-crops/alpha-draft-512/atlas-k-ui-frames-panels-b/07-ops-health-console-panel.png",
+                       "exists":  true
+                   },
+                   {
+                       "id":  "atlas-k-ui-frames-panels-b-08-reward-approval-receipt",
+                       "batchId":  "atlas-k-ui-frames-panels-b",
+                       "assetType":  "ui_frame",
+                       "item":  "Reward Approval Receipt",
+                       "alphaDraft":  "docs/design/asset-generation/global-crops/alpha-draft-512/atlas-k-ui-frames-panels-b/08-reward-approval-receipt.png",
+                       "exists":  true
+                   },
+                   {
+                       "id":  "atlas-k-ui-frames-panels-b-09-live-qa-checklist-panel",
+                       "batchId":  "atlas-k-ui-frames-panels-b",
+                       "assetType":  "ui_frame",
+                       "item":  "Live QA Checklist Panel",
+                       "alphaDraft":  "docs/design/asset-generation/global-crops/alpha-draft-512/atlas-k-ui-frames-panels-b/09-live-qa-checklist-panel.png",
+                       "exists":  true
+                   },
+                   {
+                       "id":  "atlas-k-ui-frames-panels-b-10-privacy-safety-notice-frame",
+                       "batchId":  "atlas-k-ui-frames-panels-b",
+                       "assetType":  "ui_frame",
+                       "item":  "Privacy/Safety Notice Frame",
+                       "alphaDraft":  "docs/design/asset-generation/global-crops/alpha-draft-512/atlas-k-ui-frames-panels-b/10-privacy-safety-notice-frame.png",
+                       "exists":  true
+                   }
+               ]
+}

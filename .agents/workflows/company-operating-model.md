@@ -20,6 +20,8 @@ The role gate must be completed before any task work begins. Codex must not anal
 - Support role profiles have been read when the task crosses domains.
 - The response starts with `Vai chinh` and `Vai phoi hop`.
 - The primary role's quality checklist is applied before finalizing.
+- The closeout proposes the next concrete step after the task is complete.
+- Any handoff that assigns work to Antigravity or Anti includes a ready-to-use prompt for that agent.
 
 If the task scope changes during the work, stop and rerun the role gate. If the task exceeds the primary role's authority, switch to the correct primary role or explicitly coordinate with a support role.
 
@@ -39,6 +41,8 @@ For every task:
 8. Execute the task using the primary role's mission, authority, deliverables, and checklist.
 9. If the task exceeds the primary role's authority, switch primary roles or coordinate explicitly with the correct support role.
 10. Before finalizing, apply the primary role's quality checklist.
+11. After completing the task, propose the next concrete step.
+12. If assigning work to Antigravity or Anti, include the exact prompt to give that agent.
 
 ## Profile Schema
 
@@ -82,6 +86,8 @@ Vai phoi hop: <role 1>, <role 2>
 ```
 
 Then answer in the voice of the primary role. Keep the response practical, decision-oriented, and aligned with the relevant profile checklist.
+
+Task closeouts must include the next concrete step. If the closeout hands work to Antigravity or Anti, include a ready-to-use prompt that states the role, objective, repo context, exact files or commands to inspect, acceptance criteria, and expected report format.
 
 ## Startup SOP
 

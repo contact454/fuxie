@@ -1,0 +1,1705 @@
+﻿ M .env.example
+ M .github/workflows/ci.yml
+ M apps/ai-service/package.json
+ M apps/ai-service/src/index.ts
+ M apps/ai-service/src/lib/gemini.ts
+ M apps/web/messages/de.json
+ M apps/web/messages/en.json
+ M apps/web/messages/vi.json
+ M apps/web/package.json
+ M apps/web/public/manifest.json
+ D apps/web/public/mascot/core/fuxie-core-celebrate.png
+ D apps/web/public/mascot/core/fuxie-core-happy-wave.png
+ D apps/web/public/mascot/core/fuxie-core-sad-tears.png
+ D apps/web/public/mascot/core/fuxie-core-surprised.png
+ D apps/web/public/mascot/core/fuxie-core-thinking.png
+ D apps/web/public/mascot/game/fuxie-game-achievement.png
+ D apps/web/public/mascot/game/fuxie-game-daily-goal.png
+ D apps/web/public/mascot/game/fuxie-game-levelup.png
+ D apps/web/public/mascot/game/fuxie-game-perfect-score.png
+ D apps/web/public/mascot/game/fuxie-game-rankup.png
+ D apps/web/public/mascot/game/fuxie-game-streak-fire.png
+ D apps/web/public/mascot/game/fuxie-game-streak-sick.png
+ D apps/web/public/mascot/game/fuxie-game-xp-earned.png
+ D apps/web/public/mascot/hero/fuxie-hero-landing.png
+ D apps/web/public/mascot/hero/fuxie-hero-onboarding.png
+ D apps/web/public/mascot/learn/fuxie-learn-correct.png
+ D apps/web/public/mascot/learn/fuxie-learn-encouragement.png
+ D apps/web/public/mascot/learn/fuxie-learn-graduation.png
+ D apps/web/public/mascot/learn/fuxie-learn-lightbulb.png
+ D apps/web/public/mascot/learn/fuxie-learn-studying.png
+ D apps/web/public/mascot/learn/fuxie-learn-wrong.png
+ D apps/web/public/mascot/poses/base.png
+ D apps/web/public/mascot/poses/mouth_open.png
+ D apps/web/public/mascot/skill/fuxie-skill-grammatik.png
+ D apps/web/public/mascot/skill/fuxie-skill-hoeren.png
+ D apps/web/public/mascot/skill/fuxie-skill-lesen.png
+ D apps/web/public/mascot/skill/fuxie-skill-schreiben.png
+ D apps/web/public/mascot/skill/fuxie-skill-sprechen.png
+ D apps/web/public/mascot/skill/fuxie-skill-wortschatz.png
+ D apps/web/public/mascot/state/fuxie-state-empty.png
+ D apps/web/public/mascot/state/fuxie-state-error.png
+ D apps/web/public/mascot/state/fuxie-state-loading.png
+ D apps/web/public/mascot/state/fuxie-state-welcome.png
+ D apps/web/public/mascot/sticker/fuxie-sticker-angry.png
+ D apps/web/public/mascot/sticker/fuxie-sticker-cool.png
+ D apps/web/public/mascot/sticker/fuxie-sticker-love.png
+ D apps/web/public/mascot/sticker/fuxie-sticker-sleepy.png
+ M apps/web/public/offline.html
+ M apps/web/public/sw.js
+ M apps/web/src/app/(learn)/course/page.tsx
+ M apps/web/src/app/(learn)/dashboard/page.tsx
+ M apps/web/src/app/(learn)/error.tsx
+ M apps/web/src/app/(learn)/grammar/[topicSlug]/page.tsx
+ M apps/web/src/app/(learn)/listening/[lessonId]/page.tsx
+ M apps/web/src/app/(learn)/reading/[exerciseId]/page.tsx
+ M apps/web/src/app/(learn)/review/page.tsx
+ M apps/web/src/app/(learn)/rewards/shop/page.tsx
+ M apps/web/src/app/(learn)/speaking/[lessonId]/page.tsx
+ M apps/web/src/app/(learn)/vocabulary/practice/page.tsx
+ M apps/web/src/app/(learn)/writing/[exerciseId]/page.tsx
+ M apps/web/src/app/admin/AdminDashboardCharts.tsx
+ M apps/web/src/app/admin/AdminLayoutClient.tsx
+ M apps/web/src/app/admin/rewards/RewardsReviewClient.tsx
+ M apps/web/src/app/api/v1/auth/me/route.ts
+ M apps/web/src/app/api/v1/auth/onboarding/route.test.ts
+ M apps/web/src/app/api/v1/auth/onboarding/route.ts
+ M apps/web/src/app/api/v1/chat/route.ts
+ M apps/web/src/app/api/v1/exams/[examId]/submit/route.test.ts
+ M apps/web/src/app/api/v1/exams/[examId]/submit/route.ts
+ M apps/web/src/app/api/v1/grade/route.ts
+ M apps/web/src/app/api/v1/grammar/progress/route.ts
+ M apps/web/src/app/api/v1/leaderboard/route.ts
+ M apps/web/src/app/api/v1/listening/[lessonId]/submit/route.test.ts
+ M apps/web/src/app/api/v1/listening/[lessonId]/submit/route.ts
+ M apps/web/src/app/api/v1/reading/[exerciseId]/submit/route.test.ts
+ M apps/web/src/app/api/v1/reading/[exerciseId]/submit/route.ts
+ M apps/web/src/app/api/v1/session/complete/route.test.ts
+ M apps/web/src/app/api/v1/session/complete/route.ts
+ M apps/web/src/app/api/v1/speaking/conversation/route.ts
+ M apps/web/src/app/api/v1/speaking/evaluate/route.ts
+ M apps/web/src/app/api/v1/speaking/progress/route.ts
+ M apps/web/src/app/api/v1/srs/review/route.test.ts
+ M apps/web/src/app/api/v1/srs/review/route.ts
+ M apps/web/src/app/api/v1/tts/route.ts
+ M apps/web/src/app/api/v1/vocabulary/practice/submit/route.test.ts
+ M apps/web/src/app/api/v1/vocabulary/practice/submit/route.ts
+ M apps/web/src/app/api/v1/writing/submit/route.ts
+ M apps/web/src/app/fuxie-live-qa/page.tsx
+ M apps/web/src/app/globals.css
+ M apps/web/src/app/layout.tsx
+ M apps/web/src/app/not-found.tsx
+ M apps/web/src/app/page.tsx
+ M apps/web/src/app/teacher/classrooms/ClassroomsClient.tsx
+ M apps/web/src/app/teacher/classrooms/[id]/ClassroomDetailClient.tsx
+ M apps/web/src/app/teacher/layout.tsx
+ M apps/web/src/app/teacher/page.tsx
+ M apps/web/src/app/teacher/students/[id]/page.tsx
+ M apps/web/src/components/auth/LoginClient.tsx
+ M apps/web/src/components/auth/RegisterClient.tsx
+ M apps/web/src/components/chat/ChatClient.tsx
+ M apps/web/src/components/chat/ChatHistory.tsx
+ M apps/web/src/components/chat/CorrectionBubble.tsx
+ M apps/web/src/components/chat/MascotAvatar.tsx
+ M apps/web/src/components/chat/SuggestedTopics.tsx
+ M apps/web/src/components/course/CourseClient.tsx
+ M apps/web/src/components/dashboard/dashboard-client.tsx
+ M apps/web/src/components/dashboard/quick-action.tsx
+ M apps/web/src/components/dashboard/stat-card.tsx
+ M apps/web/src/components/exam/ExamAudioPlayer.tsx
+ M apps/web/src/components/exam/ExamListClient.tsx
+ M apps/web/src/components/exam/ExamResultClient.tsx
+ M apps/web/src/components/exam/ExamSessionClient.tsx
+ M apps/web/src/components/exam/renderers/GapFillRenderer.tsx
+ M apps/web/src/components/exam/renderers/MCRenderer.tsx
+ M apps/web/src/components/exam/renderers/MatchingRenderer.tsx
+ M apps/web/src/components/exam/renderers/TFRenderer.tsx
+ M apps/web/src/components/gamification/fuxie-live-3d.tsx
+ M apps/web/src/components/gamification/quest-visuals.tsx
+ M apps/web/src/components/gamification/result-reward-loop.tsx
+ M apps/web/src/components/gamification/reward-assets.ts
+ M apps/web/src/components/gamification/shop-catalog-client.tsx
+ M apps/web/src/components/grammar/ExerciseRenderer.tsx
+ M apps/web/src/components/grammar/GrammarClient.tsx
+ M apps/web/src/components/grammar/GrammarMocktestClient.tsx
+ M apps/web/src/components/grammar/LessonPlayer.tsx
+ M apps/web/src/components/grammar/diagrams/diagrams.module.css
+ M apps/web/src/components/grammar/grammar.module.css
+ M apps/web/src/components/leaderboard/LeaderboardClient.tsx
+ M apps/web/src/components/listening/lesson-player.tsx
+ M apps/web/src/components/listening/listening-client.tsx
+ M apps/web/src/components/onboarding/OnboardingWizard.tsx
+ M apps/web/src/components/performance/measured-link.tsx
+ M apps/web/src/components/reading/reading-client.tsx
+ M apps/web/src/components/reading/reading-player.tsx
+ M apps/web/src/components/reading/reading-text-renderers.tsx
+ M apps/web/src/components/reading/reading-types.ts
+ M apps/web/src/components/reading/reading.module.css
+ M apps/web/src/components/session/SessionPlayer.tsx
+ M apps/web/src/components/session/SessionResultScreen.tsx
+ M apps/web/src/components/session/exercises/MultipleChoice.tsx
+ M apps/web/src/components/session/exercises/TypingExercise.tsx
+ M apps/web/src/components/shared/InstallPrompt.tsx
+ M apps/web/src/components/shared/LanguageSwitcher.tsx
+ M apps/web/src/components/shared/error-boundary.tsx
+ M apps/web/src/components/shared/mascot-image.tsx
+ M apps/web/src/components/shared/mobile-shell.tsx
+ M apps/web/src/components/shared/sidebar.tsx
+ M apps/web/src/components/speaking/NachsprechenPlayer.tsx
+ M apps/web/src/components/speaking/SpeakingClient.tsx
+ M apps/web/src/components/speaking/SpeakingLessonPlayer.tsx
+ M apps/web/src/components/speaking/TurnBasedSpeakingPlayer.tsx
+ M apps/web/src/components/speaking/speaking.module.css
+ M apps/web/src/components/srs/flashcard.tsx
+ M apps/web/src/components/srs/review-client.tsx
+ M apps/web/src/components/srs/review-session.tsx
+ M apps/web/src/components/ui/fuxie-ui.tsx
+ M apps/web/src/components/ui/mascot.tsx
+ M apps/web/src/components/vocabulary/ThemeSelector.tsx
+ M apps/web/src/components/vocabulary/WordCard.tsx
+ M apps/web/src/components/vocabulary/exercises/bottom-feedback.tsx
+ M apps/web/src/components/vocabulary/exercises/cloze-exercise.tsx
+ M apps/web/src/components/vocabulary/exercises/exercise-player-wrapper.tsx
+ M apps/web/src/components/vocabulary/exercises/exercise-progress.tsx
+ M apps/web/src/components/vocabulary/exercises/exercise-results.tsx
+ M apps/web/src/components/vocabulary/exercises/exercise-ui.ts
+ M apps/web/src/components/vocabulary/exercises/intro-slide.tsx
+ M apps/web/src/components/vocabulary/exercises/matching-exercise.tsx
+ M apps/web/src/components/vocabulary/exercises/mc-exercise.tsx
+ M apps/web/src/components/vocabulary/exercises/mixed-exercise.tsx
+ M apps/web/src/components/vocabulary/exercises/scramble-exercise.tsx
+ M apps/web/src/components/vocabulary/exercises/speed-exercise.tsx
+ M apps/web/src/components/vocabulary/exercises/spelling-exercise.tsx
+ M apps/web/src/components/vocabulary/practice-hub.tsx
+ M apps/web/src/components/vocabulary/vocabulary-client.tsx
+ M apps/web/src/components/writing/writing-client.tsx
+ M apps/web/src/components/writing/writing-player.tsx
+ M apps/web/src/data/courses/a1.json
+ M apps/web/src/data/courses/a2.json
+ M apps/web/src/data/courses/b1.json
+ M apps/web/src/data/courses/b2.json
+ M apps/web/src/data/courses/c1.json
+ M apps/web/src/data/courses/c2.json
+ M apps/web/src/hooks/index.ts
+ M apps/web/src/hooks/use-submit-exercise.ts
+ M apps/web/src/lib/content/course-data.ts
+ M apps/web/src/lib/dashboard/quest-adapter.test.ts
+ M apps/web/src/lib/dashboard/quest-adapter.ts
+ M apps/web/src/lib/gamification/admin-redeem.test.ts
+ M apps/web/src/lib/gamification/admin-redeem.ts
+ M apps/web/src/lib/gamification/fucoin.test.ts
+ M apps/web/src/lib/gamification/fucoin.ts
+ M apps/web/src/lib/gamification/missions.test.ts
+ M apps/web/src/lib/gamification/missions.ts
+ M apps/web/src/lib/gamification/redeem.test.ts
+ M apps/web/src/lib/gamification/redeem.ts
+ M apps/web/src/lib/gamification/shop.test.ts
+ M apps/web/src/lib/gamification/shop.ts
+ M apps/web/src/lib/personalization/today-plan.test.ts
+ M apps/web/src/lib/personalization/today-plan.ts
+ M apps/web/src/lib/progress/learning-activity.test.ts
+ M apps/web/src/lib/progress/learning-activity.ts
+ M apps/web/src/lib/srs/stats.ts
+ M apps/web/src/lib/vocabulary/practice.ts
+ M apps/web/src/middleware.ts
+ M apps/web/vitest.config.ts
+ M content/a1/course.json
+ M content/a1/grammar/grammar-topics.json
+ M content/a1/listening/L-A1-GOETHE-001-T1.json
+ M content/a1/listening/L-A1-GOETHE-001-T2.json
+ M content/a1/listening/L-A1-GOETHE-001-T3.json
+ M content/a1/listening/L-A1-GOETHE-002-T1.json
+ M content/a1/listening/L-A1-GOETHE-002-T2.json
+ M content/a1/listening/L-A1-GOETHE-002-T3.json
+ M content/a1/listening/L-A1-GOETHE-003-T1.json
+ M content/a1/listening/L-A1-GOETHE-003-T2.json
+ M content/a1/listening/L-A1-GOETHE-003-T3.json
+ M content/a1/listening/L-A1-GOETHE-004-T1.json
+ M content/a1/listening/L-A1-GOETHE-004-T2.json
+ M content/a1/listening/L-A1-GOETHE-004-T3.json
+ M content/a1/listening/L-A1-GOETHE-005-T1.json
+ M content/a1/listening/L-A1-GOETHE-005-T2.json
+ M content/a1/listening/L-A1-GOETHE-005-T3.json
+ M content/a1/listening/L-A1-GOETHE-006-T1.json
+ M content/a1/listening/L-A1-GOETHE-006-T2.json
+ M content/a1/listening/L-A1-GOETHE-006-T3.json
+ M content/a1/listening/L-A1-GOETHE-007-T1.json
+ M content/a1/listening/L-A1-GOETHE-007-T2.json
+ M content/a1/listening/L-A1-GOETHE-007-T3.json
+ M content/a1/listening/L-A1-GOETHE-008-T1.json
+ M content/a1/listening/L-A1-GOETHE-008-T2.json
+ M content/a1/listening/L-A1-GOETHE-008-T3.json
+ M content/a1/listening/L-A1-GOETHE-009-T1.json
+ M content/a1/listening/L-A1-GOETHE-009-T2.json
+ M content/a1/listening/L-A1-GOETHE-009-T3.json
+ M content/a1/listening/L-A1-GOETHE-010-T1.json
+ M content/a1/listening/L-A1-GOETHE-010-T2.json
+ M content/a1/listening/L-A1-GOETHE-010-T3.json
+ M content/a1/listening/L-A1-GOETHE-011-T3.json
+ M content/a1/listening/L-A1-GOETHE-012-T3.json
+ M content/a1/reading/A1-T1-001.json
+ M content/a1/reading/A1-T1-002.json
+ M content/a1/reading/A1-T1-003.json
+ M content/a1/reading/A1-T1-004.json
+ M content/a1/reading/A1-T1-005.json
+ M content/a1/reading/A1-T1-006.json
+ M content/a1/reading/A1-T1-007.json
+ M content/a1/reading/A1-T1-008.json
+ M content/a1/reading/A1-T1-009.json
+ M content/a1/reading/A1-T1-010.json
+ M content/a1/reading/A1-T2-001.json
+ M content/a1/reading/A1-T2-002.json
+ M content/a1/reading/A1-T2-003.json
+ M content/a1/reading/A1-T2-004.json
+ M content/a1/reading/A1-T2-005.json
+ M content/a1/reading/A1-T2-006.json
+ M content/a1/reading/A1-T2-007.json
+ M content/a1/reading/A1-T2-008.json
+ M content/a1/reading/A1-T2-009.json
+ M content/a1/reading/A1-T2-010.json
+ M content/a1/reading/A1-T3-001.json
+ M content/a1/reading/A1-T3-002.json
+ M content/a1/reading/A1-T3-003.json
+ M content/a1/reading/A1-T3-004.json
+ M content/a1/reading/A1-T3-005.json
+ M content/a1/reading/A1-T3-006.json
+ M content/a1/reading/A1-T3-007.json
+ M content/a1/reading/A1-T3-008.json
+ M content/a1/reading/A1-T3-009.json
+ M content/a1/reading/A1-T3-010.json
+ M content/a1/speaking/a1-alltag.json
+ M content/a1/speaking/a1-begruessung.json
+ M content/a1/speaking/a1-einkaufen.json
+ M content/a1/speaking/a1-essen-trinken.json
+ M content/a1/speaking/a1-familie.json
+ M content/a1/speaking/a1-freizeit.json
+ M content/a1/speaking/a1-koerper-gesundheit.json
+ M content/a1/speaking/a1-wegbeschreibung.json
+ M content/a1/speaking/a1-wetter-jahreszeiten.json
+ M content/a1/speaking/a1-wohnen.json
+ M content/a1/vocabulary/01-person.json
+ M content/a1/vocabulary/02-familie-freunde.json
+ M content/a1/vocabulary/03-koerper-gesundheit.json
+ M content/a1/vocabulary/04-wohnen.json
+ M content/a1/vocabulary/05-umwelt.json
+ M content/a1/vocabulary/06-essen-trinken.json
+ M content/a1/vocabulary/07-einkaufen.json
+ M content/a1/vocabulary/08-dienstleistungen.json
+ M content/a1/vocabulary/09-ausbildung-lernen.json
+ M content/a1/vocabulary/10-arbeit-beruf.json
+ M content/a1/vocabulary/11-freizeit.json
+ M content/a1/vocabulary/12-kommunikation.json
+ M content/a1/vocabulary/13-reisen-verkehr.json
+ M content/a1/vocabulary/14-zeitangaben.json
+ M content/a1/vocabulary/15-zahlen.json
+ M content/a1/vocabulary/16-farben.json
+ M content/a1/vocabulary/17-laender-nationalitaeten.json
+ M content/a1/vocabulary/18-berufe.json
+ M content/a1/vocabulary/19-tiere.json
+ M content/a1/vocabulary/20-schule-klassenzimmer.json
+ M content/a1/vocabulary/21-hobbys-sport.json
+ M content/a1/writing/W-A1-T1-001.json
+ M content/a1/writing/W-A1-T1-002.json
+ M content/a1/writing/W-A1-T1-003.json
+ M content/a1/writing/W-A1-T1-004.json
+ M content/a1/writing/W-A1-T1-005.json
+ M content/a1/writing/W-A1-T1-006.json
+ M content/a1/writing/W-A1-T1-007.json
+ M content/a1/writing/W-A1-T1-008.json
+ M content/a1/writing/W-A1-T1-009.json
+ M content/a1/writing/W-A1-T1-010.json
+ M content/a1/writing/W-A1-T1-011.json
+ M content/a1/writing/W-A1-T1-012.json
+ M content/a1/writing/W-A1-T1-013.json
+ M content/a1/writing/W-A1-T1-014.json
+ M content/a1/writing/W-A1-T1-015.json
+ M content/a1/writing/W-A1-T2-001.json
+ M content/a1/writing/W-A1-T2-002.json
+ M content/a1/writing/W-A1-T2-003.json
+ M content/a1/writing/W-A1-T2-004.json
+ M content/a1/writing/W-A1-T2-005.json
+ M content/a1/writing/W-A1-T2-006.json
+ M content/a1/writing/W-A1-T2-007.json
+ M content/a1/writing/W-A1-T2-008.json
+ M content/a1/writing/W-A1-T2-009.json
+ M content/a1/writing/W-A1-T2-010.json
+ M content/a1/writing/W-A1-T2-011.json
+ M content/a1/writing/W-A1-T2-012.json
+ M content/a1/writing/W-A1-T2-013.json
+ M content/a1/writing/W-A1-T2-014.json
+ M content/a1/writing/W-A1-T2-015.json
+ M content/a1/writing/W-A1-T2-016.json
+ M content/a1/writing/W-A1-T2-017.json
+ M content/a1/writing/W-A1-T2-018.json
+ M content/a1/writing/W-A1-T2-019.json
+ M content/a1/writing/W-A1-T2-020.json
+ M content/a2/course.json
+ M content/a2/grammar/grammar-topics.json
+ M content/a2/listening/L-A2-GOETHE-001-T1.json
+ M content/a2/listening/L-A2-GOETHE-001-T2.json
+ M content/a2/listening/L-A2-GOETHE-001-T3.json
+ M content/a2/listening/L-A2-GOETHE-001-T4.json
+ M content/a2/listening/L-A2-GOETHE-002-T1.json
+ M content/a2/listening/L-A2-GOETHE-002-T2.json
+ M content/a2/listening/L-A2-GOETHE-002-T3.json
+ M content/a2/listening/L-A2-GOETHE-002-T4.json
+ M content/a2/listening/L-A2-GOETHE-003-T1.json
+ M content/a2/listening/L-A2-GOETHE-003-T2.json
+ M content/a2/listening/L-A2-GOETHE-003-T3.json
+ M content/a2/listening/L-A2-GOETHE-003-T4.json
+ M content/a2/listening/L-A2-GOETHE-004-T1.json
+ M content/a2/listening/L-A2-GOETHE-004-T2.json
+ M content/a2/listening/L-A2-GOETHE-004-T3.json
+ M content/a2/listening/L-A2-GOETHE-004-T4.json
+ M content/a2/listening/L-A2-GOETHE-005-T1.json
+ M content/a2/listening/L-A2-GOETHE-005-T2.json
+ M content/a2/listening/L-A2-GOETHE-005-T3.json
+ M content/a2/listening/L-A2-GOETHE-005-T4.json
+ M content/a2/listening/L-A2-GOETHE-006-T1.json
+ M content/a2/listening/L-A2-GOETHE-006-T2.json
+ M content/a2/listening/L-A2-GOETHE-006-T3.json
+ M content/a2/listening/L-A2-GOETHE-006-T4.json
+ M content/a2/listening/L-A2-GOETHE-007-T1.json
+ M content/a2/listening/L-A2-GOETHE-007-T2.json
+ M content/a2/listening/L-A2-GOETHE-007-T3.json
+ M content/a2/listening/L-A2-GOETHE-007-T4.json
+ M content/a2/listening/L-A2-GOETHE-008-T1.json
+ M content/a2/listening/L-A2-GOETHE-008-T2.json
+ M content/a2/listening/L-A2-GOETHE-008-T3.json
+ M content/a2/listening/L-A2-GOETHE-008-T4.json
+ M content/a2/listening/L-A2-GOETHE-009-T1.json
+ M content/a2/listening/L-A2-GOETHE-009-T2.json
+ M content/a2/listening/L-A2-GOETHE-009-T3.json
+ M content/a2/listening/L-A2-GOETHE-009-T4.json
+ M content/a2/listening/L-A2-GOETHE-010-T1.json
+ M content/a2/listening/L-A2-GOETHE-010-T2.json
+ M content/a2/listening/L-A2-GOETHE-010-T3.json
+ M content/a2/listening/L-A2-GOETHE-010-T4.json
+ M content/a2/reading/A2-T1-001.json
+ M content/a2/reading/A2-T1-002.json
+ M content/a2/reading/A2-T1-003.json
+ M content/a2/reading/A2-T1-004.json
+ M content/a2/reading/A2-T1-005.json
+ M content/a2/reading/A2-T1-006.json
+ M content/a2/reading/A2-T1-007.json
+ M content/a2/reading/A2-T1-008.json
+ M content/a2/reading/A2-T1-009.json
+ M content/a2/reading/A2-T1-010.json
+ M content/a2/reading/A2-T2-001.json
+ M content/a2/reading/A2-T2-002.json
+ M content/a2/reading/A2-T2-003.json
+ M content/a2/reading/A2-T2-004.json
+ M content/a2/reading/A2-T2-005.json
+ M content/a2/reading/A2-T2-006.json
+ M content/a2/reading/A2-T2-007.json
+ M content/a2/reading/A2-T2-008.json
+ M content/a2/reading/A2-T2-009.json
+ M content/a2/reading/A2-T2-010.json
+ M content/a2/reading/A2-T3-001.json
+ M content/a2/reading/A2-T3-002.json
+ M content/a2/reading/A2-T3-003.json
+ M content/a2/reading/A2-T3-004.json
+ M content/a2/reading/A2-T3-005.json
+ M content/a2/reading/A2-T3-006.json
+ M content/a2/reading/A2-T3-007.json
+ M content/a2/reading/A2-T3-008.json
+ M content/a2/reading/A2-T3-009.json
+ M content/a2/reading/A2-T3-010.json
+ M content/a2/reading/A2-T4-001.json
+ M content/a2/reading/A2-T4-002.json
+ M content/a2/reading/A2-T4-003.json
+ M content/a2/reading/A2-T4-004.json
+ M content/a2/reading/A2-T4-005.json
+ M content/a2/reading/A2-T4-006.json
+ M content/a2/reading/A2-T4-007.json
+ M content/a2/reading/A2-T4-008.json
+ M content/a2/reading/A2-T4-009.json
+ M content/a2/reading/A2-T4-010.json
+ M content/a2/speaking/a2-alltag.json
+ M content/a2/speaking/a2-arbeit.json
+ M content/a2/speaking/a2-einkaufen.json
+ M content/a2/speaking/a2-essen.json
+ M content/a2/speaking/a2-freizeit.json
+ M content/a2/speaking/a2-gesundheit.json
+ M content/a2/speaking/a2-lernen.json
+ M content/a2/speaking/a2-wohnen.json
+ M content/a2/vocabulary/01-person-identitaet.json
+ M content/a2/vocabulary/02-familie-soziales.json
+ M content/a2/vocabulary/03-gesundheit-koerperpflege.json
+ M content/a2/vocabulary/04-wohnen-haushalt.json
+ M content/a2/vocabulary/05-umwelt-natur.json
+ M content/a2/vocabulary/06-essen-restaurant.json
+ M content/a2/vocabulary/07-kleidung-mode.json
+ M content/a2/vocabulary/08-dienstleistungen-amt.json
+ M content/a2/vocabulary/09-bildung-berufsleben.json
+ M content/a2/vocabulary/10-arbeit-wirtschaft.json
+ M content/a2/vocabulary/11-freizeit-kultur.json
+ M content/a2/vocabulary/12-kommunikation-medien.json
+ M content/a2/vocabulary/13-reisen-tourismus.json
+ M content/a2/vocabulary/14-zeit-feiertage.json
+ M content/a2/vocabulary/15-gefuehle-meinungen.json
+ M content/a2/vocabulary/16-technik-alltag.json
+ M content/a2/vocabulary/17-gesellschaft-regeln.json
+ M content/a2/vocabulary/18-geld-finanzen.json
+ M content/a2/vocabulary/19-verkehr-mobilitaet.json
+ M content/a2/vocabulary/20-wetter-klima.json
+ M content/a2/vocabulary/21-sport-fitness.json
+ M content/a2/vocabulary/22-haustiere.json
+ M content/a2/vocabulary/23-feste-geburtstag.json
+ M content/a2/vocabulary/24-koerperteile-detailliert.json
+ M content/a2/vocabulary/25-schulfaecher.json
+ M content/a2/vocabulary/26-nachbarn-gemeinde.json
+ M content/a2/writing/W-A2-T1-001.json
+ M content/a2/writing/W-A2-T1-002.json
+ M content/a2/writing/W-A2-T1-003.json
+ M content/a2/writing/W-A2-T1-004.json
+ M content/a2/writing/W-A2-T1-005.json
+ M content/a2/writing/W-A2-T1-006.json
+ M content/a2/writing/W-A2-T1-007.json
+ M content/a2/writing/W-A2-T1-008.json
+ M content/a2/writing/W-A2-T1-009.json
+ M content/a2/writing/W-A2-T1-010.json
+ M content/a2/writing/W-A2-T1-011.json
+ M content/a2/writing/W-A2-T1-012.json
+ M content/a2/writing/W-A2-T1-013.json
+ M content/a2/writing/W-A2-T1-014.json
+ M content/a2/writing/W-A2-T1-015.json
+ M content/a2/writing/W-A2-T2-001.json
+ M content/a2/writing/W-A2-T2-002.json
+ M content/a2/writing/W-A2-T2-003.json
+ M content/a2/writing/W-A2-T2-004.json
+ M content/a2/writing/W-A2-T2-005.json
+ M content/a2/writing/W-A2-T2-006.json
+ M content/a2/writing/W-A2-T2-007.json
+ M content/a2/writing/W-A2-T2-008.json
+ M content/a2/writing/W-A2-T2-009.json
+ M content/a2/writing/W-A2-T2-010.json
+ M content/a2/writing/W-A2-T2-011.json
+ M content/a2/writing/W-A2-T2-012.json
+ M content/a2/writing/W-A2-T2-013.json
+ M content/a2/writing/W-A2-T2-014.json
+ M content/a2/writing/W-A2-T2-015.json
+ M content/a2/writing/W-A2-T2-016.json
+ M content/a2/writing/W-A2-T2-017.json
+ M content/a2/writing/W-A2-T2-018.json
+ M content/a2/writing/W-A2-T2-019.json
+ M content/a2/writing/W-A2-T2-020.json
+ M content/b1/course.json
+ M content/b1/grammar/grammar-topics.json
+ M content/b1/listening/L-B1-GOETHE-001-T1.json
+ M content/b1/listening/L-B1-GOETHE-001-T2.json
+ M content/b1/listening/L-B1-GOETHE-001-T3.json
+ M content/b1/listening/L-B1-GOETHE-001-T4.json
+ M content/b1/listening/L-B1-GOETHE-002-T1.json
+ M content/b1/listening/L-B1-GOETHE-002-T2.json
+ M content/b1/listening/L-B1-GOETHE-002-T3.json
+ M content/b1/listening/L-B1-GOETHE-002-T4.json
+ M content/b1/listening/L-B1-GOETHE-003-T1.json
+ M content/b1/listening/L-B1-GOETHE-003-T2.json
+ M content/b1/listening/L-B1-GOETHE-003-T3.json
+ M content/b1/listening/L-B1-GOETHE-003-T4.json
+ M content/b1/listening/L-B1-GOETHE-004-T1.json
+ M content/b1/listening/L-B1-GOETHE-004-T2.json
+ M content/b1/listening/L-B1-GOETHE-004-T3.json
+ M content/b1/listening/L-B1-GOETHE-004-T4.json
+ M content/b1/listening/L-B1-GOETHE-005-T1.json
+ M content/b1/listening/L-B1-GOETHE-005-T2.json
+ M content/b1/listening/L-B1-GOETHE-005-T3.json
+ M content/b1/listening/L-B1-GOETHE-005-T4.json
+ M content/b1/listening/L-B1-GOETHE-006-T1.json
+ M content/b1/listening/L-B1-GOETHE-006-T2.json
+ M content/b1/listening/L-B1-GOETHE-006-T3.json
+ M content/b1/listening/L-B1-GOETHE-006-T4.json
+ M content/b1/listening/L-B1-GOETHE-007-T1.json
+ M content/b1/listening/L-B1-GOETHE-007-T2.json
+ M content/b1/listening/L-B1-GOETHE-007-T3.json
+ M content/b1/listening/L-B1-GOETHE-007-T4.json
+ M content/b1/listening/L-B1-GOETHE-008-T1.json
+ M content/b1/listening/L-B1-GOETHE-008-T2.json
+ M content/b1/listening/L-B1-GOETHE-008-T3.json
+ M content/b1/listening/L-B1-GOETHE-008-T4.json
+ M content/b1/listening/L-B1-GOETHE-009-T1.json
+ M content/b1/listening/L-B1-GOETHE-009-T2.json
+ M content/b1/listening/L-B1-GOETHE-009-T3.json
+ M content/b1/listening/L-B1-GOETHE-009-T4.json
+ M content/b1/listening/L-B1-GOETHE-010-T1.json
+ M content/b1/listening/L-B1-GOETHE-010-T2.json
+ M content/b1/listening/L-B1-GOETHE-010-T3.json
+ M content/b1/listening/L-B1-GOETHE-010-T4.json
+ M content/b1/listening/L-B1-GOETHE-011-T1.json
+ M content/b1/listening/L-B1-GOETHE-011-T2.json
+ M content/b1/listening/L-B1-GOETHE-011-T3.json
+ M content/b1/listening/L-B1-GOETHE-011-T4.json
+ M content/b1/reading/B1-T1-001.json
+ M content/b1/reading/B1-T1-002.json
+ M content/b1/reading/B1-T1-003.json
+ M content/b1/reading/B1-T1-004.json
+ M content/b1/reading/B1-T1-005.json
+ M content/b1/reading/B1-T1-006.json
+ M content/b1/reading/B1-T1-007.json
+ M content/b1/reading/B1-T1-008.json
+ M content/b1/reading/B1-T1-009.json
+ M content/b1/reading/B1-T1-010.json
+ M content/b1/reading/B1-T2-001.json
+ M content/b1/reading/B1-T2-002.json
+ M content/b1/reading/B1-T2-003.json
+ M content/b1/reading/B1-T2-004.json
+ M content/b1/reading/B1-T2-005.json
+ M content/b1/reading/B1-T2-006.json
+ M content/b1/reading/B1-T2-007.json
+ M content/b1/reading/B1-T2-008.json
+ M content/b1/reading/B1-T2-009.json
+ M content/b1/reading/B1-T2-010.json
+ M content/b1/reading/B1-T3-001.json
+ M content/b1/reading/B1-T3-002.json
+ M content/b1/reading/B1-T3-003.json
+ M content/b1/reading/B1-T3-004.json
+ M content/b1/reading/B1-T3-005.json
+ M content/b1/reading/B1-T3-006.json
+ M content/b1/reading/B1-T3-007.json
+ M content/b1/reading/B1-T3-008.json
+ M content/b1/reading/B1-T3-009.json
+ M content/b1/reading/B1-T3-010.json
+ M content/b1/reading/B1-T4-001.json
+ M content/b1/reading/B1-T4-002.json
+ M content/b1/reading/B1-T4-003.json
+ M content/b1/reading/B1-T4-004.json
+ M content/b1/reading/B1-T4-005.json
+ M content/b1/reading/B1-T4-006.json
+ M content/b1/reading/B1-T4-007.json
+ M content/b1/reading/B1-T4-008.json
+ M content/b1/reading/B1-T4-009.json
+ M content/b1/reading/B1-T4-010.json
+ M content/b1/reading/B1-T5-001.json
+ M content/b1/reading/B1-T5-002.json
+ M content/b1/reading/B1-T5-003.json
+ M content/b1/reading/B1-T5-004.json
+ M content/b1/reading/B1-T5-005.json
+ M content/b1/reading/B1-T5-006.json
+ M content/b1/reading/B1-T5-007.json
+ M content/b1/reading/B1-T5-008.json
+ M content/b1/reading/B1-T5-009.json
+ M content/b1/reading/B1-T5-010.json
+ M content/b1/speaking/b1-einkaufen.json
+ M content/b1/speaking/b1-familie.json
+ M content/b1/speaking/b1-freizeit.json
+ M content/b1/speaking/b1-lernen.json
+ M content/b1/speaking/b1-reisen.json
+ M content/b1/speaking/b1-wohnen.json
+ M content/b1/vocabulary/01-persoenlichkeit-charakter.json
+ M content/b1/vocabulary/02-beziehungen-zusammenleben.json
+ M content/b1/vocabulary/03-gesundheit-ernaehrung.json
+ M content/b1/vocabulary/04-wohnen-umzug.json
+ M content/b1/vocabulary/05-natur-umweltschutz.json
+ M content/b1/vocabulary/06-ernaehrung-kochen.json
+ M content/b1/vocabulary/07-mode-konsum.json
+ M content/b1/vocabulary/08-behoerden-buerokratie.json
+ M content/b1/vocabulary/09-ausbildung-studium.json
+ M content/b1/vocabulary/10-beruf-karriere.json
+ M content/b1/vocabulary/11-kunst-unterhaltung.json
+ M content/b1/vocabulary/12-nachrichten-politik.json
+ M content/b1/vocabulary/13-reisen-abenteuer.json
+ M content/b1/vocabulary/14-feste-traditionen.json
+ M content/b1/vocabulary/15-psychologie-wohlbefinden.json
+ M content/b1/vocabulary/16-digitales-leben-internet.json
+ M content/b1/vocabulary/17-recht-gerechtigkeit.json
+ M content/b1/vocabulary/18-wirtschaft-handel.json
+ M content/b1/vocabulary/19-verkehr-infrastruktur.json
+ M content/b1/vocabulary/20-klima-nachhaltigkeit.json
+ M content/b1/vocabulary/21-medien-fernsehen.json
+ M content/b1/vocabulary/22-musik-instrumente.json
+ M content/b1/vocabulary/23-sport-wettkampf.json
+ M content/b1/vocabulary/24-haustiere-tierpflege.json
+ M content/b1/vocabulary/25-bank-versicherung.json
+ M content/b1/vocabulary/26-bewerbung-lebenslauf.json
+ M content/b1/vocabulary/27-mietvertrag-rechte.json
+ M content/b1/vocabulary/28-internet-sicherheit.json
+ M content/b1/vocabulary/29-ehrenamt-soziales.json
+ M content/b1/vocabulary/30-umgangsformen-etikette.json
+ M content/b1/vocabulary/31-landwirtschaft-ernte.json
+ M content/b1/vocabulary/32-handwerk-reparatur.json
+ M content/b1/vocabulary/33-brief-formell.json
+ M content/b1/vocabulary/34-diskussion-argumentation.json
+ M content/b1/vocabulary/35-vergleich-statistik.json
+ M content/b1/vocabulary/36-hotel-unterkunft.json
+ M content/b1/vocabulary/37-flughafen-grenze.json
+ M content/b1/vocabulary/38-notfall-erste-hilfe.json
+ M content/b1/vocabulary/39-muell-recycling.json
+ M content/b1/vocabulary/40-steuern-abgaben.json
+ M content/b1/vocabulary/41-versicherungen.json
+ M content/b1/vocabulary/42-bewertungen-beschwerden.json
+ M content/b1/writing/W-B1-T1-001.json
+ M content/b1/writing/W-B1-T1-002.json
+ M content/b1/writing/W-B1-T1-003.json
+ M content/b1/writing/W-B1-T1-004.json
+ M content/b1/writing/W-B1-T1-005.json
+ M content/b1/writing/W-B1-T1-006.json
+ M content/b1/writing/W-B1-T1-007.json
+ M content/b1/writing/W-B1-T1-008.json
+ M content/b1/writing/W-B1-T1-009.json
+ M content/b1/writing/W-B1-T1-010.json
+ M content/b1/writing/W-B1-T1-011.json
+ M content/b1/writing/W-B1-T1-012.json
+ M content/b1/writing/W-B1-T1-013.json
+ M content/b1/writing/W-B1-T1-014.json
+ M content/b1/writing/W-B1-T1-015.json
+ M content/b1/writing/W-B1-T2-001.json
+ M content/b1/writing/W-B1-T2-002.json
+ M content/b1/writing/W-B1-T2-003.json
+ M content/b1/writing/W-B1-T2-004.json
+ M content/b1/writing/W-B1-T2-005.json
+ M content/b1/writing/W-B1-T2-006.json
+ M content/b1/writing/W-B1-T2-007.json
+ M content/b1/writing/W-B1-T2-008.json
+ M content/b1/writing/W-B1-T2-009.json
+ M content/b1/writing/W-B1-T2-010.json
+ M content/b1/writing/W-B1-T2-011.json
+ M content/b1/writing/W-B1-T2-012.json
+ M content/b1/writing/W-B1-T2-013.json
+ M content/b1/writing/W-B1-T2-014.json
+ M content/b1/writing/W-B1-T2-015.json
+ M content/b1/writing/W-B1-T3-001.json
+ M content/b1/writing/W-B1-T3-002.json
+ M content/b1/writing/W-B1-T3-003.json
+ M content/b1/writing/W-B1-T3-004.json
+ M content/b1/writing/W-B1-T3-005.json
+ M content/b1/writing/W-B1-T3-006.json
+ M content/b1/writing/W-B1-T3-007.json
+ M content/b1/writing/W-B1-T3-008.json
+ M content/b1/writing/W-B1-T3-009.json
+ M content/b1/writing/W-B1-T3-010.json
+ M content/b1/writing/W-B1-T3-011.json
+ M content/b1/writing/W-B1-T3-012.json
+ M content/b1/writing/W-B1-T3-013.json
+ M content/b1/writing/W-B1-T3-014.json
+ M content/b1/writing/W-B1-T3-015.json
+ M content/b1/writing/W-B1-T3-016.json
+ M content/b1/writing/W-B1-T3-017.json
+ M content/b1/writing/W-B1-T3-018.json
+ M content/b1/writing/W-B1-T3-019.json
+ M content/b1/writing/W-B1-T3-020.json
+ M content/b2/course.json
+ M content/b2/grammar/grammar-topics.json
+ M content/b2/listening/L-B2-GOETHE-001-T1.json
+ M content/b2/listening/L-B2-GOETHE-001-T2.json
+ M content/b2/listening/L-B2-GOETHE-001-T3.json
+ M content/b2/listening/L-B2-GOETHE-001-T4.json
+ M content/b2/listening/L-B2-GOETHE-002-T1.json
+ M content/b2/listening/L-B2-GOETHE-002-T2.json
+ M content/b2/listening/L-B2-GOETHE-002-T3.json
+ M content/b2/listening/L-B2-GOETHE-002-T4.json
+ M content/b2/listening/L-B2-GOETHE-003-T1.json
+ M content/b2/listening/L-B2-GOETHE-003-T2.json
+ M content/b2/listening/L-B2-GOETHE-003-T3.json
+ M content/b2/listening/L-B2-GOETHE-003-T4.json
+ M content/b2/listening/L-B2-GOETHE-004-T1.json
+ M content/b2/listening/L-B2-GOETHE-004-T2.json
+ M content/b2/listening/L-B2-GOETHE-004-T3.json
+ M content/b2/listening/L-B2-GOETHE-004-T4.json
+ M content/b2/listening/L-B2-GOETHE-005-T1.json
+ M content/b2/listening/L-B2-GOETHE-005-T2.json
+ M content/b2/listening/L-B2-GOETHE-005-T3.json
+ M content/b2/listening/L-B2-GOETHE-005-T4.json
+ M content/b2/listening/L-B2-GOETHE-006-T1.json
+ M content/b2/listening/L-B2-GOETHE-006-T2.json
+ M content/b2/listening/L-B2-GOETHE-006-T3.json
+ M content/b2/listening/L-B2-GOETHE-006-T4.json
+ M content/b2/listening/L-B2-GOETHE-007-T1.json
+ M content/b2/listening/L-B2-GOETHE-007-T2.json
+ M content/b2/listening/L-B2-GOETHE-007-T3.json
+ M content/b2/listening/L-B2-GOETHE-007-T4.json
+ M content/b2/listening/L-B2-GOETHE-008-T1.json
+ M content/b2/listening/L-B2-GOETHE-008-T2.json
+ M content/b2/listening/L-B2-GOETHE-008-T3.json
+ M content/b2/listening/L-B2-GOETHE-008-T4.json
+ M content/b2/listening/L-B2-GOETHE-009-T1.json
+ M content/b2/listening/L-B2-GOETHE-009-T2.json
+ M content/b2/listening/L-B2-GOETHE-009-T3.json
+ M content/b2/listening/L-B2-GOETHE-009-T4.json
+ M content/b2/listening/L-B2-GOETHE-010-T1.json
+ M content/b2/listening/L-B2-GOETHE-010-T2.json
+ M content/b2/listening/L-B2-GOETHE-010-T3.json
+ M content/b2/listening/L-B2-GOETHE-010-T4.json
+ M content/b2/listening/L-B2-GOETHE-011-T1.json
+ M content/b2/listening/L-B2-GOETHE-011-T2.json
+ M content/b2/listening/L-B2-GOETHE-011-T3.json
+ M content/b2/listening/L-B2-GOETHE-011-T4.json
+ M content/b2/listening/L-B2-GOETHE-012-T1.json
+ M content/b2/listening/L-B2-GOETHE-012-T2.json
+ M content/b2/listening/L-B2-GOETHE-012-T3.json
+ M content/b2/listening/L-B2-GOETHE-012-T4.json
+ M content/b2/reading/B2-T1-001.json
+ M content/b2/reading/B2-T1-002.json
+ M content/b2/reading/B2-T1-003.json
+ M content/b2/reading/B2-T1-004.json
+ M content/b2/reading/B2-T1-005.json
+ M content/b2/reading/B2-T1-006.json
+ M content/b2/reading/B2-T1-007.json
+ M content/b2/reading/B2-T1-008.json
+ M content/b2/reading/B2-T1-009.json
+ M content/b2/reading/B2-T1-010.json
+ M content/b2/reading/B2-T2-001.json
+ M content/b2/reading/B2-T2-002.json
+ M content/b2/reading/B2-T2-003.json
+ M content/b2/reading/B2-T2-004.json
+ M content/b2/reading/B2-T2-005.json
+ M content/b2/reading/B2-T2-006.json
+ M content/b2/reading/B2-T2-007.json
+ M content/b2/reading/B2-T2-008.json
+ M content/b2/reading/B2-T2-009.json
+ M content/b2/reading/B2-T2-010.json
+ M content/b2/reading/B2-T3-001.json
+ M content/b2/reading/B2-T3-002.json
+ M content/b2/reading/B2-T3-003.json
+ M content/b2/reading/B2-T3-004.json
+ M content/b2/reading/B2-T3-005.json
+ M content/b2/reading/B2-T3-006.json
+ M content/b2/reading/B2-T3-007.json
+ M content/b2/reading/B2-T3-008.json
+ M content/b2/reading/B2-T3-009.json
+ M content/b2/reading/B2-T3-010.json
+ M content/b2/reading/B2-T4-001.json
+ M content/b2/reading/B2-T4-002.json
+ M content/b2/reading/B2-T4-003.json
+ M content/b2/reading/B2-T4-004.json
+ M content/b2/reading/B2-T4-005.json
+ M content/b2/reading/B2-T4-006.json
+ M content/b2/reading/B2-T4-007.json
+ M content/b2/reading/B2-T4-008.json
+ M content/b2/reading/B2-T4-009.json
+ M content/b2/reading/B2-T4-010.json
+ M content/b2/reading/B2-T5-001.json
+ M content/b2/reading/B2-T5-002.json
+ M content/b2/reading/B2-T5-003.json
+ M content/b2/reading/B2-T5-004.json
+ M content/b2/reading/B2-T5-005.json
+ M content/b2/reading/B2-T5-006.json
+ M content/b2/reading/B2-T5-007.json
+ M content/b2/reading/B2-T5-008.json
+ M content/b2/reading/B2-T5-009.json
+ M content/b2/reading/B2-T5-010.json
+ M content/b2/speaking/b2-arbeit.json
+ M content/b2/speaking/b2-einkaufen.json
+ M content/b2/speaking/b2-essen.json
+ M content/b2/speaking/b2-freizeit.json
+ M content/b2/speaking/b2-gesundheit.json
+ M content/b2/speaking/b2-lernen.json
+ M content/b2/speaking/b2-medien.json
+ M content/b2/speaking/b2-reisen.json
+ M content/b2/speaking/b2-umwelt.json
+ M content/b2/speaking/b2-wohnen.json
+ M content/b2/vocabulary/01-identitaet-selbstbild.json
+ M content/b2/vocabulary/02-zwischenmenschliches.json
+ M content/b2/vocabulary/03-medizin-forschung.json
+ M content/b2/vocabulary/04-architektur-stadtplanung.json
+ M content/b2/vocabulary/05-oekologie-artenvielfalt.json
+ M content/b2/vocabulary/06-ernaehrungswissenschaft.json
+ M content/b2/vocabulary/07-konsumverhalten-werbung.json
+ M content/b2/vocabulary/08-migration-integration.json
+ M content/b2/vocabulary/09-wissenschaft-hochschule.json
+ M content/b2/vocabulary/10-arbeitswelt-globalisierung.json
+ M content/b2/vocabulary/11-literatur-philosophie.json
+ M content/b2/vocabulary/12-medienlandschaft-ethik.json
+ M content/b2/vocabulary/13-tourismus-kulturerbe.json
+ M content/b2/vocabulary/14-kulturvergleich-vielfalt.json
+ M content/b2/vocabulary/15-emotionale-intelligenz.json
+ M content/b2/vocabulary/16-kuenstliche-intelligenz.json
+ M content/b2/vocabulary/17-menschenrechte-demokratie.json
+ M content/b2/vocabulary/18-finanzsystem-boerse.json
+ M content/b2/vocabulary/19-mobilitaet-zukunft.json
+ M content/b2/vocabulary/20-energiewende-innovation.json
+ M content/b2/vocabulary/21-politische-systeme.json
+ M content/b2/vocabulary/22-wahlen-demokratie.json
+ M content/b2/vocabulary/23-demographischer-wandel.json
+ M content/b2/vocabulary/24-soziale-ungleichheit.json
+ M content/b2/vocabulary/25-journalismus-recherche.json
+ M content/b2/vocabulary/26-soziale-medien-einfluss.json
+ M content/b2/vocabulary/27-werbung-marketing.json
+ M content/b2/vocabulary/28-startup-gruendung.json
+ M content/b2/vocabulary/29-aktienmarkt-investment.json
+ M content/b2/vocabulary/30-berufliche-weiterbildung.json
+ M content/b2/vocabulary/31-arbeitsrecht-gewerkschaft.json
+ M content/b2/vocabulary/32-digitale-transformation.json
+ M content/b2/vocabulary/33-datenschutz-dsgvo.json
+ M content/b2/vocabulary/34-erneuerbare-energien.json
+ M content/b2/vocabulary/35-wissenschaftsjournalismus.json
+ M content/b2/vocabulary/36-psychotherapie-behandlung.json
+ M content/b2/vocabulary/37-pflege-altenhilfe.json
+ M content/b2/vocabulary/38-gesundheitssystem.json
+ M content/b2/vocabulary/39-suchtpraevention.json
+ M content/b2/vocabulary/40-strafrecht-prozess.json
+ M content/b2/vocabulary/41-vertragsrecht.json
+ M content/b2/vocabulary/42-kulturfoerderung.json
+ M content/b2/vocabulary/43-religionen-dialog.json
+ M content/b2/vocabulary/44-bildungspolitik.json
+ M content/b2/vocabulary/45-ehrenamt-zivilgesellschaft.json
+ M content/b2/vocabulary/46-klimadiskurs.json
+ M content/b2/vocabulary/47-gentechnik-landwirtschaft.json
+ M content/b2/vocabulary/48-wohnungsmarkt.json
+ M content/b2/vocabulary/49-sport-doping.json
+ M content/b2/vocabulary/50-ernaehrungstrends.json
+ M content/b2/vocabulary/51-rhetorik-ueberzeugung.json
+ M content/b2/vocabulary/52-interkulturelle-kommunikation.json
+ M content/b2/vocabulary/53-konfliktloesung.json
+ M content/b2/vocabulary/54-robotik-automatisierung.json
+ M content/b2/vocabulary/55-raumfahrt-forschung.json
+ M content/b2/vocabulary/56-geschichtsbewusstsein.json
+ M content/b2/vocabulary/57-europaeische-integration.json
+ M content/b2/vocabulary/58-stressmanagement.json
+ M content/b2/vocabulary/59-persoenlichkeitsentwicklung.json
+ M content/b2/vocabulary/60-film-filmkritik.json
+ M content/b2/writing/W-B2-T1-001.json
+ M content/b2/writing/W-B2-T1-002.json
+ M content/b2/writing/W-B2-T1-003.json
+ M content/b2/writing/W-B2-T1-004.json
+ M content/b2/writing/W-B2-T1-005.json
+ M content/b2/writing/W-B2-T1-006.json
+ M content/b2/writing/W-B2-T1-007.json
+ M content/b2/writing/W-B2-T1-008.json
+ M content/b2/writing/W-B2-T1-009.json
+ M content/b2/writing/W-B2-T1-010.json
+ M content/b2/writing/W-B2-T1-011.json
+ M content/b2/writing/W-B2-T1-012.json
+ M content/b2/writing/W-B2-T1-013.json
+ M content/b2/writing/W-B2-T1-014.json
+ M content/b2/writing/W-B2-T1-015.json
+ M content/b2/writing/W-B2-T1-016.json
+ M content/b2/writing/W-B2-T1-017.json
+ M content/b2/writing/W-B2-T1-018.json
+ M content/b2/writing/W-B2-T1-019.json
+ M content/b2/writing/W-B2-T1-020.json
+ M content/b2/writing/W-B2-T2-001.json
+ M content/b2/writing/W-B2-T2-002.json
+ M content/b2/writing/W-B2-T2-003.json
+ M content/b2/writing/W-B2-T2-004.json
+ M content/b2/writing/W-B2-T2-005.json
+ M content/b2/writing/W-B2-T2-006.json
+ M content/b2/writing/W-B2-T2-007.json
+ M content/b2/writing/W-B2-T2-008.json
+ M content/b2/writing/W-B2-T2-009.json
+ M content/b2/writing/W-B2-T2-010.json
+ M content/b2/writing/W-B2-T2-011.json
+ M content/b2/writing/W-B2-T2-012.json
+ M content/b2/writing/W-B2-T2-013.json
+ M content/b2/writing/W-B2-T2-014.json
+ M content/b2/writing/W-B2-T2-015.json
+ M content/b2/writing/W-B2-T2-016.json
+ M content/b2/writing/W-B2-T2-017.json
+ M content/b2/writing/W-B2-T2-018.json
+ M content/b2/writing/W-B2-T2-019.json
+ M content/b2/writing/W-B2-T2-020.json
+ M content/c1/course.json
+ M content/c1/listening/L-C1-GOETHE-001-T1.json
+ M content/c1/listening/L-C1-GOETHE-001-T2.json
+ M content/c1/listening/L-C1-GOETHE-001-T3.json
+ M content/c1/listening/L-C1-GOETHE-001-T4.json
+ M content/c1/listening/L-C1-GOETHE-002-T1.json
+ M content/c1/listening/L-C1-GOETHE-002-T2.json
+ M content/c1/listening/L-C1-GOETHE-002-T3.json
+ M content/c1/listening/L-C1-GOETHE-002-T4.json
+ M content/c1/listening/L-C1-GOETHE-003-T1.json
+ M content/c1/listening/L-C1-GOETHE-003-T2.json
+ M content/c1/listening/L-C1-GOETHE-003-T3.json
+ M content/c1/listening/L-C1-GOETHE-003-T4.json
+ M content/c1/listening/L-C1-GOETHE-004-T1.json
+ M content/c1/listening/L-C1-GOETHE-004-T2.json
+ M content/c1/listening/L-C1-GOETHE-004-T3.json
+ M content/c1/listening/L-C1-GOETHE-004-T4.json
+ M content/c1/listening/L-C1-GOETHE-005-T1.json
+ M content/c1/listening/L-C1-GOETHE-005-T2.json
+ M content/c1/listening/L-C1-GOETHE-005-T3.json
+ M content/c1/listening/L-C1-GOETHE-005-T4.json
+ M content/c1/listening/L-C1-GOETHE-006-T1.json
+ M content/c1/listening/L-C1-GOETHE-006-T2.json
+ M content/c1/listening/L-C1-GOETHE-006-T3.json
+ M content/c1/listening/L-C1-GOETHE-006-T4.json
+ M content/c1/listening/L-C1-GOETHE-007-T1.json
+ M content/c1/listening/L-C1-GOETHE-007-T2.json
+ M content/c1/listening/L-C1-GOETHE-007-T3.json
+ M content/c1/listening/L-C1-GOETHE-007-T4.json
+ M content/c1/listening/L-C1-GOETHE-008-T1.json
+ M content/c1/listening/L-C1-GOETHE-008-T2.json
+ M content/c1/listening/L-C1-GOETHE-008-T3.json
+ M content/c1/listening/L-C1-GOETHE-008-T4.json
+ M content/c1/listening/L-C1-GOETHE-009-T1.json
+ M content/c1/listening/L-C1-GOETHE-009-T2.json
+ M content/c1/listening/L-C1-GOETHE-009-T3.json
+ M content/c1/listening/L-C1-GOETHE-009-T4.json
+ M content/c1/listening/L-C1-GOETHE-010-T1.json
+ M content/c1/listening/L-C1-GOETHE-010-T2.json
+ M content/c1/listening/L-C1-GOETHE-010-T3.json
+ M content/c1/listening/L-C1-GOETHE-010-T4.json
+ M content/c1/listening/L-C1-GOETHE-011-T1.json
+ M content/c1/listening/L-C1-GOETHE-011-T2.json
+ M content/c1/listening/L-C1-GOETHE-011-T3.json
+ M content/c1/listening/L-C1-GOETHE-011-T4.json
+ M content/c1/listening/L-C1-GOETHE-012-T1.json
+ M content/c1/listening/L-C1-GOETHE-012-T2.json
+ M content/c1/listening/L-C1-GOETHE-012-T3.json
+ M content/c1/listening/L-C1-GOETHE-012-T4.json
+ M content/c1/listening/L-C1-GOETHE-013-T1.json
+ M content/c1/listening/L-C1-GOETHE-013-T2.json
+ M content/c1/listening/L-C1-GOETHE-013-T3.json
+ M content/c1/listening/L-C1-GOETHE-013-T4.json
+ M content/c1/reading/C1-T1-001.json
+ M content/c1/reading/C1-T1-002.json
+ M content/c1/reading/C1-T1-003.json
+ M content/c1/reading/C1-T1-004.json
+ M content/c1/reading/C1-T1-005.json
+ M content/c1/reading/C1-T1-006.json
+ M content/c1/reading/C1-T1-007.json
+ M content/c1/reading/C1-T1-008.json
+ M content/c1/reading/C1-T1-009.json
+ M content/c1/reading/C1-T1-010.json
+ M content/c1/reading/C1-T1-011.json
+ M content/c1/reading/C1-T1-012.json
+ M content/c1/reading/C1-T2-001.json
+ M content/c1/reading/C1-T2-002.json
+ M content/c1/reading/C1-T2-003.json
+ M content/c1/reading/C1-T2-004.json
+ M content/c1/reading/C1-T2-005.json
+ M content/c1/reading/C1-T2-006.json
+ M content/c1/reading/C1-T2-007.json
+ M content/c1/reading/C1-T2-008.json
+ M content/c1/reading/C1-T2-009.json
+ M content/c1/reading/C1-T2-010.json
+ M content/c1/reading/C1-T2-011.json
+ M content/c1/reading/C1-T2-012.json
+ M content/c1/reading/C1-T3-001.json
+ M content/c1/reading/C1-T3-002.json
+ M content/c1/reading/C1-T3-003.json
+ M content/c1/reading/C1-T3-004.json
+ M content/c1/reading/C1-T3-005.json
+ M content/c1/reading/C1-T3-006.json
+ M content/c1/reading/C1-T3-007.json
+ M content/c1/reading/C1-T3-008.json
+ M content/c1/reading/C1-T3-009.json
+ M content/c1/reading/C1-T3-010.json
+ M content/c1/reading/C1-T3-011.json
+ M content/c1/reading/C1-T3-012.json
+ M content/c1/reading/C1-T4-001.json
+ M content/c1/reading/C1-T4-002.json
+ M content/c1/reading/C1-T4-003.json
+ M content/c1/reading/C1-T4-004.json
+ M content/c1/reading/C1-T4-005.json
+ M content/c1/reading/C1-T4-006.json
+ M content/c1/reading/C1-T4-007.json
+ M content/c1/reading/C1-T4-008.json
+ M content/c1/reading/C1-T4-009.json
+ M content/c1/reading/C1-T4-010.json
+ M content/c1/reading/C1-T4-011.json
+ M content/c1/reading/C1-T4-012.json
+ M content/c1/speaking/c1-arbeit.json
+ M content/c1/speaking/c1-gesellschaft.json
+ M content/c1/speaking/c1-gesundheit.json
+ M content/c1/speaking/c1-kultur.json
+ M content/c1/speaking/c1-lernen.json
+ M content/c1/speaking/c1-medien.json
+ M content/c1/speaking/c1-umwelt.json
+ M content/c1/speaking/c1-wissenschaft.json
+ M content/c1/vocabulary/01-gesellschaftskritik-diskurs.json
+ M content/c1/vocabulary/02-psychologie-verhaltensmuster.json
+ M content/c1/vocabulary/03-bioethik-gentechnik.json
+ M content/c1/vocabulary/04-urbanisierung-raumplanung.json
+ M content/c1/vocabulary/05-klimapolitik-nachhaltigkeit.json
+ M content/c1/vocabulary/06-sprachwissenschaft-linguistik.json
+ M content/c1/vocabulary/07-wirtschaftstheorie-globalisierung.json
+ M content/c1/vocabulary/08-geopolitik-diplomatie.json
+ M content/c1/vocabulary/09-forschungsmethodik-akademie.json
+ M content/c1/vocabulary/10-arbeitsrecht-sozialpartnerschaft.json
+ M content/c1/vocabulary/11-literaturkritik-textanalyse.json
+ M content/c1/vocabulary/12-medientheorie-propaganda.json
+ M content/c1/vocabulary/13-kultursoziologie-identitaet.json
+ M content/c1/vocabulary/14-philosophie-erkenntnistheorie.json
+ M content/c1/vocabulary/15-neurowissenschaft-bewusstsein.json
+ M content/c1/vocabulary/16-datenschutz-digitalethik.json
+ M content/c1/vocabulary/17-verfassungsrecht-staatstheorie.json
+ M content/c1/vocabulary/18-finanzmaerkte-regulierung.json
+ M content/c1/vocabulary/19-verkehrswende-infrastruktur.json
+ M content/c1/vocabulary/20-energiepolitik-ressourcen.json
+ M content/c1/vocabulary/21-voelkerrecht-souveraenitaet.json
+ M "content/c1/vocabulary/22-verwaltungsrecht-beh\303\266rden.json"
+ M content/c1/vocabulary/23-grundrechte-verfassung.json
+ M content/c1/vocabulary/24-justizwesen-strafvollzug.json
+ M content/c1/vocabulary/25-geldpolitik-zentralbank.json
+ M content/c1/vocabulary/26-handelsabkommen-zoll.json
+ M content/c1/vocabulary/27-konjunktur-wirtschaftskrise.json
+ M content/c1/vocabulary/28-steuerpolitik-haushalt.json
+ M content/c1/vocabulary/29-quantenphysik-grundlagen.json
+ M content/c1/vocabulary/30-genetik-evolution.json
+ M content/c1/vocabulary/31-kuenstliche-intelligenz-ml.json
+ M content/c1/vocabulary/32-klimaforschung-modellierung.json
+ M content/c1/vocabulary/33-migrationsdebatte.json
+ M content/c1/vocabulary/34-geschlechtergerechtigkeit.json
+ M content/c1/vocabulary/35-urbanisierung-smart-city.json
+ M content/c1/vocabulary/36-generationenkonflikt.json
+ M content/c1/vocabulary/37-desinformation-faktencheck.json
+ M content/c1/vocabulary/38-pressefreiheit-zensur.json
+ M content/c1/vocabulary/39-algorithmen-filterblasen.json
+ M content/c1/vocabulary/40-kognitionswissenschaft.json
+ M content/c1/vocabulary/41-entwicklungspsychologie.json
+ M content/c1/vocabulary/42-paedagogik-didaktik.json
+ M content/c1/vocabulary/43-kreislaufwirtschaft.json
+ M content/c1/vocabulary/44-biotechnologie-pharma.json
+ M content/c1/vocabulary/45-nanotechnologie.json
+ M content/c1/vocabulary/46-wirtschaftsethik.json
+ M content/c1/vocabulary/47-medizinethik-patientenrecht.json
+ M content/c1/vocabulary/48-tierethik-tierschutz.json
+ M content/c1/vocabulary/49-theaterwissenschaft.json
+ M content/c1/vocabulary/50-kunstgeschichte-epochen.json
+ M content/c1/vocabulary/51-filmtheorie-analyse.json
+ M content/c1/vocabulary/52-sicherheitspolitik-nato.json
+ M content/c1/vocabulary/53-entwicklungshilfe-ngos.json
+ M content/c1/vocabulary/54-flucht-asylrecht.json
+ M content/c1/vocabulary/55-epidemiologie-pandemie.json
+ M content/c1/vocabulary/56-psychosomatik.json
+ M content/c1/vocabulary/57-blockchain-kryptowaehrung.json
+ M content/c1/vocabulary/58-cybersicherheit-cyberkrieg.json
+ M content/c1/vocabulary/59-soziale-netzwerke-analyse.json
+ M content/c1/vocabulary/60-arbeitssoziologie-prekaritaet.json
+ M content/c1/vocabulary/61-forensik-kriminalistik.json
+ M content/c1/vocabulary/62-logistik-lieferkette.json
+ M content/c1/vocabulary/63-musiktherapie.json
+ M content/c1/vocabulary/64-sportmedizin.json
+ M content/c1/vocabulary/65-lebensmittelrecht.json
+ M content/c1/vocabulary/66-stadtmarketing-tourismus.json
+ M content/c1/vocabulary/67-wasserversorgung.json
+ M content/c1/vocabulary/68-krisenmanagement.json
+ M content/c1/vocabulary/69-patentrecht.json
+ M content/c1/vocabulary/70-energiespeicherung.json
+ M content/c1/vocabulary/71-neuroplastizitaet.json
+ M content/c1/vocabulary/72-verhaltensforschung.json
+ M content/c1/vocabulary/73-bibliothekswesen.json
+ M content/c1/vocabulary/74-qualitaetsmanagement.json
+ M content/c1/vocabulary/75-steuerberatung.json
+ M content/c1/writing/W-C1-T1-001.json
+ M content/c1/writing/W-C1-T1-002.json
+ M content/c1/writing/W-C1-T1-003.json
+ M content/c1/writing/W-C1-T1-004.json
+ M content/c1/writing/W-C1-T1-005.json
+ M content/c1/writing/W-C1-T1-006.json
+ M content/c1/writing/W-C1-T1-007.json
+ M content/c1/writing/W-C1-T1-008.json
+ M content/c1/writing/W-C1-T1-009.json
+ M content/c1/writing/W-C1-T1-010.json
+ M content/c1/writing/W-C1-T1-011.json
+ M content/c1/writing/W-C1-T1-012.json
+ M content/c1/writing/W-C1-T1-013.json
+ M content/c1/writing/W-C1-T1-014.json
+ M content/c1/writing/W-C1-T1-015.json
+ M content/c1/writing/W-C1-T2-001.json
+ M content/c1/writing/W-C1-T2-002.json
+ M content/c1/writing/W-C1-T2-003.json
+ M content/c1/writing/W-C1-T2-004.json
+ M content/c1/writing/W-C1-T2-005.json
+ M content/c1/writing/W-C1-T2-006.json
+ M content/c1/writing/W-C1-T2-007.json
+ M content/c1/writing/W-C1-T2-008.json
+ M content/c1/writing/W-C1-T2-009.json
+ M content/c1/writing/W-C1-T2-010.json
+ M content/c1/writing/W-C1-T2-011.json
+ M content/c1/writing/W-C1-T2-012.json
+ M content/c1/writing/W-C1-T2-013.json
+ M content/c1/writing/W-C1-T2-014.json
+ M content/c1/writing/W-C1-T2-015.json
+ M content/c1/writing/W-C1-T2-016.json
+ M content/c1/writing/W-C1-T2-017.json
+ M content/c1/writing/W-C1-T2-018.json
+ M content/c1/writing/W-C1-T2-019.json
+ M content/c1/writing/W-C1-T2-020.json
+ M content/c2/course.json
+ M content/c2/listening/L-C2-GOETHE-001-T1.json
+ M content/c2/listening/L-C2-GOETHE-001-T2.json
+ M content/c2/listening/L-C2-GOETHE-001-T3.json
+ M content/c2/listening/L-C2-GOETHE-002-T1.json
+ M content/c2/listening/L-C2-GOETHE-002-T2.json
+ M content/c2/listening/L-C2-GOETHE-002-T3.json
+ M content/c2/listening/L-C2-GOETHE-003-T1.json
+ M content/c2/listening/L-C2-GOETHE-003-T2.json
+ M content/c2/listening/L-C2-GOETHE-003-T3.json
+ M content/c2/listening/L-C2-GOETHE-004-T1.json
+ M content/c2/listening/L-C2-GOETHE-004-T2.json
+ M content/c2/listening/L-C2-GOETHE-004-T3.json
+ M content/c2/listening/L-C2-GOETHE-005-T1.json
+ M content/c2/listening/L-C2-GOETHE-005-T2.json
+ M content/c2/listening/L-C2-GOETHE-005-T3.json
+ M content/c2/listening/L-C2-GOETHE-006-T1.json
+ M content/c2/listening/L-C2-GOETHE-006-T2.json
+ M content/c2/listening/L-C2-GOETHE-006-T3.json
+ M content/c2/listening/L-C2-GOETHE-007-T1.json
+ M content/c2/listening/L-C2-GOETHE-007-T2.json
+ M content/c2/listening/L-C2-GOETHE-007-T3.json
+ M content/c2/listening/L-C2-GOETHE-008-T1.json
+ M content/c2/listening/L-C2-GOETHE-008-T2.json
+ M content/c2/listening/L-C2-GOETHE-008-T3.json
+ M content/c2/listening/L-C2-GOETHE-009-T1.json
+ M content/c2/listening/L-C2-GOETHE-009-T2.json
+ M content/c2/listening/L-C2-GOETHE-009-T3.json
+ M content/c2/listening/L-C2-GOETHE-010-T1.json
+ M content/c2/listening/L-C2-GOETHE-010-T2.json
+ M content/c2/listening/L-C2-GOETHE-010-T3.json
+ M content/c2/listening/L-C2-GOETHE-011-T1.json
+ M content/c2/listening/L-C2-GOETHE-011-T2.json
+ M content/c2/listening/L-C2-GOETHE-011-T3.json
+ M content/c2/listening/L-C2-GOETHE-012-T1.json
+ M content/c2/listening/L-C2-GOETHE-012-T2.json
+ M content/c2/listening/L-C2-GOETHE-012-T3.json
+ M content/c2/listening/L-C2-GOETHE-013-T1.json
+ M content/c2/listening/L-C2-GOETHE-013-T2.json
+ M content/c2/listening/L-C2-GOETHE-013-T3.json
+ M content/c2/listening/L-C2-GOETHE-014-T1.json
+ M content/c2/listening/L-C2-GOETHE-014-T2.json
+ M content/c2/listening/L-C2-GOETHE-014-T3.json
+ M content/c2/listening/L-C2-GOETHE-015-T1.json
+ M content/c2/listening/L-C2-GOETHE-015-T2.json
+ M content/c2/listening/L-C2-GOETHE-015-T3.json
+ M content/c2/listening/L-C2-GOETHE-016-T1.json
+ M content/c2/listening/L-C2-GOETHE-016-T2.json
+ M content/c2/listening/L-C2-GOETHE-016-T3.json
+ M content/c2/listening/L-C2-GOETHE-017-T1.json
+ M content/c2/listening/L-C2-GOETHE-017-T2.json
+ M content/c2/listening/L-C2-GOETHE-017-T3.json
+ M content/c2/listening/L-C2-GOETHE-018-T1.json
+ M content/c2/reading/C2-T1-001.json
+ M content/c2/reading/C2-T1-002.json
+ M content/c2/reading/C2-T1-003.json
+ M content/c2/reading/C2-T1-004.json
+ M content/c2/reading/C2-T1-005.json
+ M content/c2/reading/C2-T1-006.json
+ M content/c2/reading/C2-T1-007.json
+ M content/c2/reading/C2-T1-008.json
+ M content/c2/reading/C2-T1-009.json
+ M content/c2/reading/C2-T1-010.json
+ M content/c2/reading/C2-T1-011.json
+ M content/c2/reading/C2-T1-012.json
+ M content/c2/reading/C2-T2-001.json
+ M content/c2/reading/C2-T2-002.json
+ M content/c2/reading/C2-T2-003.json
+ M content/c2/reading/C2-T2-004.json
+ M content/c2/reading/C2-T2-005.json
+ M content/c2/reading/C2-T2-006.json
+ M content/c2/reading/C2-T2-007.json
+ M content/c2/reading/C2-T2-008.json
+ M content/c2/reading/C2-T2-009.json
+ M content/c2/reading/C2-T2-010.json
+ M content/c2/reading/C2-T2-011.json
+ M content/c2/reading/C2-T2-012.json
+ M content/c2/reading/C2-T3-001.json
+ M content/c2/reading/C2-T3-002.json
+ M content/c2/reading/C2-T3-003.json
+ M content/c2/reading/C2-T3-004.json
+ M content/c2/reading/C2-T3-005.json
+ M content/c2/reading/C2-T3-006.json
+ M content/c2/reading/C2-T3-007.json
+ M content/c2/reading/C2-T3-008.json
+ M content/c2/reading/C2-T3-009.json
+ M content/c2/reading/C2-T3-010.json
+ M content/c2/reading/C2-T3-011.json
+ M content/c2/reading/C2-T3-012.json
+ M content/c2/reading/C2-T4-001.json
+ M content/c2/reading/C2-T4-002.json
+ M content/c2/reading/C2-T4-003.json
+ M content/c2/reading/C2-T4-004.json
+ M content/c2/reading/C2-T4-005.json
+ M content/c2/reading/C2-T4-006.json
+ M content/c2/reading/C2-T4-007.json
+ M content/c2/reading/C2-T4-008.json
+ M content/c2/reading/C2-T4-009.json
+ M content/c2/reading/C2-T4-010.json
+ M content/c2/reading/C2-T4-011.json
+ M content/c2/reading/C2-T4-012.json
+ M content/c2/speaking/c2-kunst.json
+ M content/c2/speaking/c2-philosophie.json
+ M content/c2/speaking/c2-politik.json
+ M content/c2/speaking/c2-sprache.json
+ M content/c2/speaking/c2-technologie.json
+ M content/c2/speaking/c2-wirtschaft.json
+ M content/c2/vocabulary/01-epistemologie-wissenschaftstheorie.json
+ M content/c2/vocabulary/02-rechtsphilosophie-justiz.json
+ M content/c2/vocabulary/03-sozialpolitik-wohlfahrtsstaat.json
+ M content/c2/vocabulary/04-literaturwissenschaft-hermeneutik.json
+ M content/c2/vocabulary/05-aesthetik-kunstkritik.json
+ M content/c2/vocabulary/06-anthropologie-ethnografie.json
+ M content/c2/vocabulary/07-psychoanalyse-tiefenpsychologie.json
+ M content/c2/vocabulary/08-politische-rhetorik-demagogie.json
+ M content/c2/vocabulary/09-transkulturalitaet-postkolonialismus.json
+ M content/c2/vocabulary/10-oekonomische-paradigmen-kritik.json
+ M content/c2/vocabulary/100-konzeptkunst-minimalismus.json
+ M content/c2/vocabulary/101-aufklaerung-kant.json
+ M content/c2/vocabulary/102-kalter-krieg-bipolaritaet.json
+ M content/c2/vocabulary/103-kolonialgeschichte.json
+ M content/c2/vocabulary/104-interreligioeser-dialog.json
+ M content/c2/vocabulary/105-religionskritik-feuerbach.json
+ M content/c2/vocabulary/106-bauhaus-modernismus.json
+ M content/c2/vocabulary/107-dekonstruktivismus-architektur.json
+ M content/c2/vocabulary/108-atonalitaet-schoenberg.json
+ M content/c2/vocabulary/109-elektronische-musik.json
+ M content/c2/vocabulary/11-mediensemiotik-kommunikationswissenschaft.json
+ M content/c2/vocabulary/110-strukturalismus-levi-strauss.json
+ M content/c2/vocabulary/111-neuroethik.json
+ M content/c2/vocabulary/112-palliativmedizin.json
+ M content/c2/vocabulary/113-epigenetik.json
+ M content/c2/vocabulary/114-technikphilosophie.json
+ M content/c2/vocabulary/115-algorithmische-gouvernementalitaet.json
+ M content/c2/vocabulary/116-digitaler-humanismus.json
+ M "content/c2/vocabulary/117-tiefen\303\266kologie.json"
+ M content/c2/vocabulary/118-anthropozaen.json
+ M content/c2/vocabulary/119-klimagerechtigkeit.json
+ M content/c2/vocabulary/12-religionswissenschaft-saekularisierung.json
+ M content/c2/vocabulary/120-republikanismus.json
+ M content/c2/vocabulary/121-populismus-forschung.json
+ M content/c2/vocabulary/122-demokratietheorie.json
+ M content/c2/vocabulary/123-eigentumstheorie.json
+ M content/c2/vocabulary/124-arbeitswerttheorie.json
+ M content/c2/vocabulary/125-bildungsbegriff-humboldt.json
+ M content/c2/vocabulary/126-freire-paedagogik.json
+ M content/c2/vocabulary/127-konstruktivismus-lernen.json
+ M content/c2/vocabulary/128-naturrecht-rechtspositivismus.json
+ M content/c2/vocabulary/129-restorative-justice.json
+ M content/c2/vocabulary/13-geschichtswissenschaft-erinnerungskultur.json
+ M content/c2/vocabulary/130-erhabene-sublime.json
+ M content/c2/vocabulary/131-dialektik-der-aufklaerung.json
+ M content/c2/vocabulary/132-wissenssoziologie.json
+ M content/c2/vocabulary/133-symbolischer-interaktionismus.json
+ M content/c2/vocabulary/134-ethnomethodologie.json
+ M content/c2/vocabulary/135-geschichtsphilosophie.json
+ M content/c2/vocabulary/136-utopieforschung.json
+ M content/c2/vocabulary/137-musiksemiotik.json
+ M content/c2/vocabulary/138-ethnomusikologie.json
+ M content/c2/vocabulary/139-kosmologie-astrophysik.json
+ M content/c2/vocabulary/14-biopolitik-transhumanismus.json
+ M content/c2/vocabulary/140-quantenmechanik-interpretation.json
+ M content/c2/vocabulary/141-bewusstseinsforschung-ki.json
+ M content/c2/vocabulary/142-informationsarchitektur.json
+ M content/c2/vocabulary/143-lacan-lacanian.json
+ M content/c2/vocabulary/144-trauma-forschung.json
+ M content/c2/vocabulary/145-raumtheorie-lefebvre.json
+ M content/c2/vocabulary/15-sprachphilosophie-semantik.json
+ M content/c2/vocabulary/16-architekturtheorie-raumaesthetik.json
+ M content/c2/vocabulary/17-musikwissenschaft-kulturindustrie.json
+ M content/c2/vocabulary/18-umweltethik-ressourcengerechtigkeit.json
+ M content/c2/vocabulary/19-bildungstheorie-paedagogik.json
+ M content/c2/vocabulary/20-diplomatische-sprache-voelkerrecht.json
+ M content/c2/vocabulary/21-metaphysik-ontologie.json
+ M content/c2/vocabulary/22-existenzphilosophie.json
+ M content/c2/vocabulary/23-poststrukturalismus.json
+ M content/c2/vocabulary/24-kritische-theorie.json
+ M content/c2/vocabulary/25-diskursanalyse.json
+ M content/c2/vocabulary/26-soziolinguistik.json
+ M content/c2/vocabulary/27-uebersetzungswissenschaft.json
+ M content/c2/vocabulary/28-rechtshermeneutik.json
+ M content/c2/vocabulary/29-staatsphilosophie-vertieft.json
+ M content/c2/vocabulary/30-menschenrechte-voelkerrecht.json
+ M content/c2/vocabulary/31-paradigmenwechsel.json
+ M content/c2/vocabulary/32-empirismus-rationalismus.json
+ M content/c2/vocabulary/33-wissenschaftssoziologie.json
+ M content/c2/vocabulary/34-narratologie.json
+ M content/c2/vocabulary/35-lyrikanalyse-metrik.json
+ M content/c2/vocabulary/36-komparatistik.json
+ M content/c2/vocabulary/37-machttheorie-herrschaft.json
+ M content/c2/vocabulary/38-klassentheorie-ungleichheit.json
+ M content/c2/vocabulary/39-zivilisationstheorie.json
+ M content/c2/vocabulary/40-ordoliberalismus.json
+ M "content/c2/vocabulary/41-verhaltens\303\266konomie.json"
+ M content/c2/vocabulary/42-oekologische-oekonomie.json
+ M content/c2/vocabulary/43-medienphilosophie.json
+ M content/c2/vocabulary/44-filmtheorie-auteur.json
+ M content/c2/vocabulary/45-analytische-psychologie.json
+ M content/c2/vocabulary/46-gestaltpsychologie.json
+ M content/c2/vocabulary/47-existenzielle-psychotherapie.json
+ M content/c2/vocabulary/48-deontologie-konsequentialismus.json
+ M content/c2/vocabulary/49-tugendethik-aristoteles.json
+ M content/c2/vocabulary/50-kulturkritik-postmoderne.json
+ M content/c2/vocabulary/51-ritualforschung.json
+ M content/c2/vocabulary/52-historiographie-methodik.json
+ M content/c2/vocabulary/53-mentalitaetsgeschichte.json
+ M content/c2/vocabulary/54-religionsphilosophie.json
+ M content/c2/vocabulary/55-mystik-kontemplation.json
+ M content/c2/vocabulary/56-stadtsoziologie.json
+ M content/c2/vocabulary/57-denkmalschutz-kulturerbe.json
+ M content/c2/vocabulary/58-musikaesthetik.json
+ M content/c2/vocabulary/59-performativitaet.json
+ M content/c2/vocabulary/60-rezeptionsaesthetik.json
+ M content/c2/vocabulary/61-phenomenologie.json
+ M content/c2/vocabulary/62-dialektik-hegel.json
+ M content/c2/vocabulary/63-utilitarismus.json
+ M content/c2/vocabulary/64-marxismus-kapitalismuskritik.json
+ M content/c2/vocabulary/65-anarchismus-libertarismus.json
+ M content/c2/vocabulary/66-generative-grammatik.json
+ M content/c2/vocabulary/67-kognitive-linguistik.json
+ M content/c2/vocabulary/68-spracherwerbsforschung.json
+ M content/c2/vocabulary/69-korpuslinguistik.json
+ M content/c2/vocabulary/70-europaeisches-recht.json
+ M content/c2/vocabulary/71-wirtschaftsstrafrecht.json
+ M content/c2/vocabulary/72-medienrecht-urheberrecht.json
+ M content/c2/vocabulary/73-falsifikationismus-popper.json
+ M content/c2/vocabulary/74-wissenschaftliche-revolution.json
+ M content/c2/vocabulary/75-hermeneutischer-zirkel.json
+ M content/c2/vocabulary/76-intertextualitaet.json
+ M content/c2/vocabulary/77-postkoloniale-literatur.json
+ M content/c2/vocabulary/78-dramentheorie-brecht.json
+ M content/c2/vocabulary/79-literarische-gattungen.json
+ M content/c2/vocabulary/80-systemtheorie-luhmann.json
+ M content/c2/vocabulary/81-habituskonzept-bourdieu.json
+ M content/c2/vocabulary/82-risikogesellschaft-beck.json
+ M "content/c2/vocabulary/83-individualisierung-sp\303\244tmoderne.json"
+ M content/c2/vocabulary/84-netzwerkgesellschaft-castells.json
+ M content/c2/vocabulary/85-spieltheorie-nash.json
+ M content/c2/vocabulary/86-entwicklungsoekonomie.json
+ M content/c2/vocabulary/87-institutionelle-oekonomie.json
+ M content/c2/vocabulary/88-bindungstheorie-bowlby.json
+ M content/c2/vocabulary/89-positive-psychologie.json
+ M content/c2/vocabulary/90-neuropsychologie.json
+ M content/c2/vocabulary/91-kulturgedaechtnis.json
+ M content/c2/vocabulary/92-orientalismus-said.json
+ M content/c2/vocabulary/93-gender-studies-butler.json
+ M content/c2/vocabulary/94-kybernetik-informationstheorie.json
+ M content/c2/vocabulary/95-posthumanismus.json
+ M content/c2/vocabulary/96-ueberwachungsstaat.json
+ M content/c2/vocabulary/97-gerechtigkeitstheorie-rawls.json
+ M content/c2/vocabulary/98-diskursethik-habermas.json
+ M content/c2/vocabulary/99-avantgarde-dadaismus.json
+ M content/c2/writing/W-C2-T1-001.json
+ M content/c2/writing/W-C2-T1-002.json
+ M content/c2/writing/W-C2-T1-003.json
+ M content/c2/writing/W-C2-T1-004.json
+ M content/c2/writing/W-C2-T1-005.json
+ M content/c2/writing/W-C2-T1-006.json
+ M content/c2/writing/W-C2-T1-007.json
+ M content/c2/writing/W-C2-T1-008.json
+ M content/c2/writing/W-C2-T1-009.json
+ M content/c2/writing/W-C2-T1-010.json
+ M content/c2/writing/W-C2-T1-011.json
+ M content/c2/writing/W-C2-T1-012.json
+ M content/c2/writing/W-C2-T1-013.json
+ M content/c2/writing/W-C2-T1-014.json
+ M content/c2/writing/W-C2-T1-015.json
+ M content/c2/writing/W-C2-T2-001.json
+ M content/c2/writing/W-C2-T2-002.json
+ M content/c2/writing/W-C2-T2-003.json
+ M content/c2/writing/W-C2-T2-004.json
+ M content/c2/writing/W-C2-T2-005.json
+ M content/c2/writing/W-C2-T2-006.json
+ M content/c2/writing/W-C2-T2-007.json
+ M content/c2/writing/W-C2-T2-008.json
+ M content/c2/writing/W-C2-T2-009.json
+ M content/c2/writing/W-C2-T2-010.json
+ M content/c2/writing/W-C2-T2-011.json
+ M content/c2/writing/W-C2-T2-012.json
+ M content/c2/writing/W-C2-T2-013.json
+ M content/c2/writing/W-C2-T2-014.json
+ M content/c2/writing/W-C2-T2-015.json
+ M content/c2/writing/W-C2-T2-016.json
+ M content/c2/writing/W-C2-T2-017.json
+ M content/c2/writing/W-C2-T2-018.json
+ M content/c2/writing/W-C2-T2-019.json
+ M content/c2/writing/W-C2-T2-020.json
+ M docs/design/fuxie-visual-audit-gamefication.md
+ M docs/intake/README.md
+ M docs/intake/risk-register.md
+ M package.json
+ M packages/database/prisma/schema.prisma
+ M packages/database/prisma/seed-achievements.ts
+ M packages/database/prisma/seed/seed-grammar.ts
+ M packages/database/src/client.ts
+ M packages/ui/src/tokens/index.ts
+ M pnpm-lock.yaml
+ M scripts/content-qa.ts
+ M scripts/seed-dev-data.ts
+ M scripts/smoke-full-local.ts
+?? .kiro/
+?? apps/ai-service/src/lib/eval-academic-review-pack.test.ts
+?? apps/ai-service/src/lib/eval-academic-review-pack.ts
+?? apps/ai-service/src/lib/eval-academic-signoff.test.ts
+?? apps/ai-service/src/lib/eval-academic-signoff.ts
+?? apps/ai-service/src/lib/eval-artifact-readout.test.ts
+?? apps/ai-service/src/lib/eval-artifact-readout.ts
+?? apps/ai-service/src/lib/eval-controlled-fixture-patch.test.ts
+?? apps/ai-service/src/lib/eval-controlled-fixture-patch.ts
+?? apps/ai-service/src/lib/eval-fixture-expansion.test.ts
+?? apps/ai-service/src/lib/eval-fixture-expansion.ts
+?? apps/ai-service/src/lib/eval-harness.test.ts
+?? apps/ai-service/src/lib/eval-harness.ts
+?? apps/web/THIRD_PARTY_NOTICES.md
+?? apps/web/audit/
+?? apps/web/public/fuxie-global-village-runtime-draft-manifest.json
+?? apps/web/public/mascot-3d/foundation/
+?? apps/web/public/mascot-3d/gamification/
+?? apps/web/public/mascot-3d/modules/
+?? apps/web/public/mascot-3d/optimized/fuxie-placeholder-512.webp
+?? apps/web/public/mascot-3d/states/
+?? apps/web/public/mascot-3d/ui/
+?? apps/web/public/mascot-3d/world/
+?? apps/web/public/reward-assets/global/
+?? apps/web/public/reward-assets/optimized/fuxie-item-cefr-badge-node-set-512.webp
+?? apps/web/public/reward-assets/optimized/fuxie-item-fucoin-village-512.webp
+?? apps/web/public/reward-assets/optimized/fuxie-item-hint-ticket-village-512.webp
+?? apps/web/public/reward-assets/optimized/fuxie-item-streak-freeze-snowglobe-512.webp
+?? apps/web/public/reward-assets/optimized/fuxie-item-unlock-key-signpost-512.webp
+?? apps/web/public/reward-assets/optimized/fuxie-item-xp-star-village-512.webp
+?? apps/web/src/app/(learn)/badges/
+?? apps/web/src/app/(learn)/campaign/
+?? apps/web/src/app/(learn)/course/error.tsx
+?? apps/web/src/app/(learn)/dashboard/error.tsx
+?? apps/web/src/app/(learn)/exam/error.tsx
+?? apps/web/src/app/(learn)/exam/not-found.tsx
+?? apps/web/src/app/(learn)/listening/error.tsx
+?? apps/web/src/app/(learn)/listening/not-found.tsx
+?? apps/web/src/app/(learn)/reading/error.tsx
+?? apps/web/src/app/(learn)/reading/not-found.tsx
+?? apps/web/src/app/(learn)/review/error.tsx
+?? apps/web/src/app/(learn)/rewards/error.tsx
+?? apps/web/src/app/(learn)/speaking/[lessonId]/roleplay/
+?? apps/web/src/app/(learn)/speaking/error.tsx
+?? apps/web/src/app/(learn)/speaking/not-found.tsx
+?? apps/web/src/app/(learn)/speaking/roleplay/
+?? apps/web/src/app/(learn)/vocabulary/error.tsx
+?? apps/web/src/app/(learn)/vocabulary/microgames/
+?? apps/web/src/app/(learn)/vocabulary/practice/error.tsx
+?? apps/web/src/app/(learn)/writing/error.tsx
+?? apps/web/src/app/(learn)/writing/not-found.tsx
+?? apps/web/src/app/admin/content-quality/
+?? apps/web/src/app/admin/gamification/
+?? apps/web/src/app/api/v1/admin/analytics/
+?? apps/web/src/app/api/v1/admin/cron/
+?? apps/web/src/app/api/v1/analytics/
+?? apps/web/src/app/api/v1/grammar/progress/route.test.ts
+?? apps/web/src/app/api/v1/missions/[missionId]/claim/route.test.ts
+?? apps/web/src/app/api/v1/speaking/progress/route.test.ts
+?? apps/web/src/app/api/v1/stt/
+?? apps/web/src/app/api/v1/writing/submit/route.test.ts
+?? apps/web/src/app/fuxie-world-lab/
+?? apps/web/src/components/course/course-module-cluster.test.tsx
+?? apps/web/src/components/course/course-module-cluster.tsx
+?? apps/web/src/components/course/course-node.test.tsx
+?? apps/web/src/components/course/course-node.tsx
+?? apps/web/src/components/course/course-path-nodes.tsx
+?? apps/web/src/components/dashboard/dashboard-backbone-hero.test.tsx
+?? apps/web/src/components/dashboard/dashboard-backbone-hero.tsx
+?? apps/web/src/components/exam/ExamInProgressChrome.test.tsx
+?? apps/web/src/components/exam/ExamInProgressChrome.tsx
+?? apps/web/src/components/exam/ExamResultRewardLoop.test.tsx
+?? apps/web/src/components/exam/ExamResultRewardLoop.tsx
+?? apps/web/src/components/gameplay/
+?? apps/web/src/components/gamification/completion-flow.test.ts
+?? apps/web/src/components/gamification/completion-flow.tsx
+?? apps/web/src/components/gamification/mascot-role-host.test.ts
+?? apps/web/src/components/gamification/mascot-role-host.tsx
+?? apps/web/src/components/gamification/result-reward-loop-fsm.test.ts
+?? apps/web/src/components/gamification/result-reward-loop-fsm.ts
+?? apps/web/src/components/gamification/shop-backbone-client.test.tsx
+?? apps/web/src/components/gamification/shop-backbone-client.tsx
+?? apps/web/src/components/gamification/skill-motivation-layer.test.tsx
+?? apps/web/src/components/gamification/skill-motivation-layer.tsx
+?? apps/web/src/components/gamification/skill-player-shell.test.ts
+?? apps/web/src/components/gamification/skill-player-shell.tsx
+?? apps/web/src/components/gamification/state-shell.test.ts
+?? apps/web/src/components/gamification/state-shell.tsx
+?? apps/web/src/components/gamification/use-result-reward-loop.ts
+?? apps/web/src/components/learning-world/
+?? apps/web/src/components/listening/listening-skill-shell.tsx
+?? apps/web/src/components/reading/reading-skill-shell.tsx
+?? apps/web/src/components/review/
+?? apps/web/src/components/speaking/AudioRecorder.tsx
+?? apps/web/src/components/speaking/PresentationPlayer.tsx
+?? apps/web/src/components/speaking/roleplay-stage.test.tsx
+?? apps/web/src/components/speaking/roleplay-stage.tsx
+?? apps/web/src/components/ui/primary-cta.tsx
+?? apps/web/src/components/ui/scrim.tsx
+?? apps/web/src/components/vocabulary/vocabulary-card.test.tsx
+?? apps/web/src/components/vocabulary/vocabulary-card.tsx
+?? apps/web/src/components/vocabulary/vocabulary-microgames-hero.tsx
+?? apps/web/src/components/vocabulary/vocabulary-practice-hero.test.tsx
+?? apps/web/src/components/vocabulary/vocabulary-practice-hero.tsx
+?? apps/web/src/components/writing/writing-skill-shell.tsx
+?? apps/web/src/data/content-quality/
+?? apps/web/src/hooks/use-exam-progress.ts
+?? apps/web/src/hooks/use-reduced-motion.ts
+?? apps/web/src/lib/ai/openrouter.ts
+?? apps/web/src/lib/analytics/activation-readout.ts
+?? apps/web/src/lib/analytics/ai-eval-readout.test.ts
+?? apps/web/src/lib/analytics/ai-eval-readout.ts
+?? apps/web/src/lib/analytics/client-events.ts
+?? apps/web/src/lib/analytics/events.test.ts
+?? apps/web/src/lib/analytics/events.ts
+?? apps/web/src/lib/analytics/gamification-pilot-readout.test.ts
+?? apps/web/src/lib/analytics/gamification-pilot-readout.ts
+?? apps/web/src/lib/analytics/learning-progress-readout.test.ts
+?? apps/web/src/lib/analytics/learning-progress-readout.ts
+?? apps/web/src/lib/analytics/motivation-loop-readout.test.ts
+?? apps/web/src/lib/analytics/motivation-loop-readout.ts
+?? apps/web/src/lib/auth/score-signer.ts
+?? apps/web/src/lib/content-quality/
+?? apps/web/src/lib/exam/
+?? apps/web/src/lib/gamification/adaptive-quest-pacing.test.ts
+?? apps/web/src/lib/gamification/adaptive-quest-pacing.ts
+?? apps/web/src/lib/gamification/build-shop-card-inputs.test.ts
+?? apps/web/src/lib/gamification/build-shop-card-inputs.ts
+?? apps/web/src/lib/gamification/classify-shop-item.test.ts
+?? apps/web/src/lib/gamification/classify-shop-item.ts
+?? apps/web/src/lib/gamification/grammar-quest-episode.test.ts
+?? apps/web/src/lib/gamification/grammar-quest-episode.ts
+?? apps/web/src/lib/gamification/learning-quest-rewards.test.ts
+?? apps/web/src/lib/gamification/learning-quest-rewards.ts
+?? apps/web/src/lib/gamification/lesson-gameplay-expansion.test.ts
+?? apps/web/src/lib/gamification/lesson-gameplay-expansion.ts
+?? apps/web/src/lib/gamification/listening-quest-episode.test.ts
+?? apps/web/src/lib/gamification/listening-quest-episode.ts
+?? apps/web/src/lib/gamification/persistent-badges.test.ts
+?? apps/web/src/lib/gamification/persistent-badges.ts
+?? apps/web/src/lib/gamification/quest-episode-routing.test.ts
+?? apps/web/src/lib/gamification/quest-episode-routing.ts
+?? apps/web/src/lib/gamification/quest-episode.test.ts
+?? apps/web/src/lib/gamification/quest-episode.ts
+?? apps/web/src/lib/gamification/reading-quest-episode.test.ts
+?? apps/web/src/lib/gamification/reading-quest-episode.ts
+?? apps/web/src/lib/gamification/shop-cosmetic-pose.test.ts
+?? apps/web/src/lib/gamification/shop-cosmetic-pose.ts
+?? apps/web/src/lib/gamification/shop-pending-revert.test.ts
+?? apps/web/src/lib/gamification/shop-pending-revert.ts
+?? apps/web/src/lib/gamification/skill-mastery-data.ts
+?? apps/web/src/lib/gamification/skill-mastery.test.ts
+?? apps/web/src/lib/gamification/skill-mastery.ts
+?? apps/web/src/lib/gamification/speaking-quest-episode.test.ts
+?? apps/web/src/lib/gamification/speaking-quest-episode.ts
+?? apps/web/src/lib/gamification/vocabulary-quest-episode.test.ts
+?? apps/web/src/lib/gamification/vocabulary-quest-episode.ts
+?? apps/web/src/lib/gamification/writing-quest-episode.test.ts
+?? apps/web/src/lib/gamification/writing-quest-episode.ts
+?? apps/web/src/lib/learning-world/
+?? apps/web/src/lib/mascot/
+?? apps/web/src/lib/personalization/learner-weakness-profile.test.ts
+?? apps/web/src/lib/personalization/learner-weakness-profile.ts
+?? apps/web/src/styles/
+?? content/c1/grammar/
+?? content/c2/grammar/
+?? docs/beta/
+?? docs/content-quality/
+?? docs/design/asset-archive.md
+?? docs/design/asset-cleanup-baseline.md
+?? docs/design/asset-generation/
+?? docs/design/asset-orphan-classification.md
+?? docs/design/design-tokens.md
+?? docs/design/fuxie-frontend-design-style-research.md
+?? docs/design/fuxie-german-village-image-generation-strategy.md
+?? docs/design/fuxie-global-village-image-generation-plan.md
+?? docs/design/fuxie-learning-world-mykonos-tech-reuse-masterplan.md
+?? docs/design/learner-ui-design-production-handoff.md
+?? docs/design/learner-ui-design-production-plan.md
+?? docs/design/learner-ui-visual-qa-runbook.md
+?? docs/design/locale-backfill-baseline.md
+?? docs/design/release/
+?? docs/design/reward-state-contract.md
+?? docs/design/visual-audit/fuxie-german-village-image-generation-manifest.json
+?? docs/design/visual-audit/fuxie-global-village-image-generation-manifest.json
+?? docs/design/visual-audit/learner-ui-production-mockup-board-v1.svg
+?? docs/design/visual-audit/learner-ui-screenshot-manifest.json
+?? docs/design/visual-audit/mockups/
+?? docs/design/visual-audit/qa-runs/
+?? docs/design/visual-audit/screenshots/badges-village-v1-desktop.png
+?? docs/design/visual-audit/screenshots/badges-village-v1-mobile.png
+?? docs/design/visual-audit/screenshots/campaign-village-v1-desktop.png
+?? docs/design/visual-audit/screenshots/campaign-village-v1-mobile.png
+?? docs/design/visual-audit/screenshots/chat-village-v1-desktop.png
+?? docs/design/visual-audit/screenshots/chat-village-v1-mobile.png
+?? docs/design/visual-audit/screenshots/course-village-v1-desktop.png
+?? docs/design/visual-audit/screenshots/course-village-v1-mobile.png
+?? docs/design/visual-audit/screenshots/dashboard-village-v1-desktop.png
+?? docs/design/visual-audit/screenshots/dashboard-village-v1-mobile.png
+?? docs/design/visual-audit/screenshots/exam-village-v1-desktop.png
+?? docs/design/visual-audit/screenshots/exam-village-v1-mobile.png
+?? docs/design/visual-audit/screenshots/grammar-village-v1-desktop.png
+?? docs/design/visual-audit/screenshots/grammar-village-v1-mobile.png
+?? docs/design/visual-audit/screenshots/listening-player-village-v1-desktop.png
+?? docs/design/visual-audit/screenshots/listening-player-village-v1-mobile.png
+?? docs/design/visual-audit/screenshots/listening-village-v1-desktop.png
+?? docs/design/visual-audit/screenshots/listening-village-v1-mobile.png
+?? docs/design/visual-audit/screenshots/reading-player-village-v1-desktop.png
+?? docs/design/visual-audit/screenshots/reading-player-village-v1-mobile.png
+?? docs/design/visual-audit/screenshots/reading-village-v1-desktop.png
+?? docs/design/visual-audit/screenshots/reading-village-v1-mobile.png
+?? docs/design/visual-audit/screenshots/review-village-v1-desktop.png
+?? docs/design/visual-audit/screenshots/review-village-v1-mobile.png
+?? docs/design/visual-audit/screenshots/shop-village-v1-desktop.png
+?? docs/design/visual-audit/screenshots/shop-village-v1-mobile.png
+?? docs/design/visual-audit/screenshots/speaking-player-village-v1-desktop.png
+?? docs/design/visual-audit/screenshots/speaking-player-village-v1-mobile.png
+?? docs/design/visual-audit/screenshots/speaking-village-v1-desktop.png
+?? docs/design/visual-audit/screenshots/speaking-village-v1-mobile.png
+?? docs/design/visual-audit/screenshots/vocabulary-village-v1-desktop.png
+?? docs/design/visual-audit/screenshots/vocabulary-village-v1-mobile.png
+?? docs/design/visual-audit/screenshots/writing-player-village-v1-desktop.png
+?? docs/design/visual-audit/screenshots/writing-player-village-v1-mobile.png
+?? docs/design/visual-audit/screenshots/writing-village-v1-desktop.png
+?? docs/design/visual-audit/screenshots/writing-village-v1-mobile.png
+?? docs/design/visual-qa-baseline.md
+?? docs/design/visual-qa-manifest-schema-notes.md
+?? docs/design/writing-player-translation-review.md
+?? docs/gamification/
+?? docs/intake/antigravity-masterplan-open-tasks-handoff.md
+?? docs/intake/phase-34-ai-eval-ci-gate.md
+?? docs/intake/phase-35-ai-eval-academic-review-pack.md
+?? docs/intake/phase-36-ai-eval-academic-signoff-workflow.md
+?? docs/intake/phase-37-ai-eval-fixture-expansion-from-academic-feedback.md
+?? docs/intake/phase-38-ai-eval-controlled-fixture-patch.md
+?? docs/intake/phase-39-ai-module-acceptance-and-master-plan.md
+?? docs/intake/phase-40-company-wide-project-reassessment.md
+?? docs/intake/phase-41-recommended-cycles-execution-tracker.md
+?? docs/intake/phase-42-ai-eval-prompt-backlog-slice.md
+?? docs/intake/phase-43-speaking-audio-smoke-fallback-slice.md
+?? docs/intake/phase-44-content-qa-academic-signoff-sweep.md
+?? docs/intake/phase-45-teacher-admin-analytics-ui-smoke.md
+?? docs/intake/phase-46-growth-beta-cohort-readiness.md
+?? docs/intake/phase-47-operating-budget-staffing-plan.md
+?? docs/intake/phase-48-company-wide-reassessment-refresh.md
+?? docs/intake/phase-49-beta-readiness-blocker-closure-masterplan.md
+?? docs/intake/phase-50-beta-readiness-blocker-closure-sprint.md
+?? docs/intake/phase-51-controlled-beta-exclusion-closure-launch-pack.md
+?? docs/intake/phase-52-controlled-beta-cohort-operations.md
+?? docs/intake/phase-53-beta-feedback-triage-targeted-fix-backlog.md
+?? docs/intake/phase-54-controlled-beta-evidence-intake-sprint.md
+?? docs/intake/phase-55-controlled-beta-evidence-capture-system.md
+?? docs/intake/phase-56-evidence-backed-first-fix-slice-selection.md
+?? docs/intake/phase-57-controlled-beta-evidence-collection-follow-up.md
+?? docs/intake/phase-58-controlled-beta-evidence-readiness-recheck.md
+?? docs/intake/phase-59-controlled-beta-operations-blocker-closure-plan.md
+?? docs/intake/phase-60-beta-operations-escalation-review.md
+?? docs/intake/phase-61-controlled-beta-recruitment-execution-plan.md
+?? docs/intake/phase-62-beta-recruitment-blocker-escalation.md
+?? docs/intake/phase-63-controlled-beta-invite-batch-and-evidence-intake.md
+?? docs/intake/phase-64-controlled-beta-outreach-execution-tracker.md
+?? docs/intake/phase-65-controlled-beta-outreach-response-review.md
+?? docs/intake/phase-66-first-fix-selection-rerun-from-cohort-evidence.md
+?? docs/intake/phase-67-first-fix-verified.md
+?? packages/database/prisma/migrations/20260512194000_add_analytics_events/
+?? packages/database/prisma/migrations/20260512222500_add_lesson_quest_missions/
+?? replace-speaking.js
+?? scripts/ai-eval-academic-review-pack.ts
+?? scripts/ai-eval-academic-signoff.ts
+?? scripts/ai-eval-controlled-fixture-patch.ts
+?? scripts/ai-eval-fixture-expansion.ts
+?? scripts/ai-eval-harness.ts
+?? scripts/ai-eval-provider-runner.ts
+?? scripts/ai-eval-readout.ts
+?? scripts/analyze-pilot-feedback.ts
+?? scripts/apply-source-transcripts.ts
+?? scripts/asset-audit-core.ts
+?? scripts/asset-audit.ts
+?? scripts/asset-registry-integrity.ts
+?? scripts/check-gamification-pilot-fixtures.ts
+?? scripts/check-locale-parity.ts
+?? scripts/check-state-shell-coverage.ts
+?? scripts/check-visual-audit-pack.ts
+?? scripts/copy-style-audit.ts
+?? scripts/fixtures/
+?? scripts/foundation-assets.ts
+?? scripts/fuxie-image-generation-plan.ts
+?? scripts/generate-content-quality-assets.ts
+?? scripts/learner-ui-visual-audit.ts
+?? scripts/lint-asset-registry-references.ts
+?? scripts/seed-first-contact.ts
+?? scripts/verify-fuxie-global-assets-alpha.cjs
+?? scripts/verify-gamification-pilot-readout.cjs
+?? scripts/visual-capture-diff.ts
+?? tests/
+?? vitest.property.config.ts

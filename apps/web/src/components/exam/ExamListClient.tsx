@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useMemo } from 'react'
 import Link from 'next/link'
+import { useTranslations } from 'next-intl'
 import { BookOpen, Headphones, PenTool, MessageCircle, Clock, Trophy, CheckCircle2, XCircle, ArrowRight, Library } from 'lucide-react'
 import { FUXIE_3D_ASSETS, FuxieCoach, QuestProgressHero, RewardPreview } from '@/components/gamification/quest-visuals'
 import { FuxieLevelTabs, FuxiePanel, FuxieQuestCard, fuxieButtonClass } from '@/components/ui/fuxie-ui'
@@ -52,6 +53,7 @@ const getSkillIcon = (skillName: string) => {
 }
 
 export function ExamListClient() {
+    const t = useTranslations('Gamification')
     const [exams, setExams] = useState<ExamEntry[]>([])
     const [loading, setLoading] = useState(true)
     const [filterLevel, setFilterLevel] = useState<string>('Tất cả')
@@ -170,7 +172,7 @@ export function ExamListClient() {
                             <ArrowRight className="h-4 w-4" />
                         </Link>
                     )}
-                    <div className="flex flex-wrap gap-2 text-xs font-bold text-[#3C78A8]">
+                    <div className="flex flex-wrap gap-2 text-xs font-bold text-text-brand">
                         {['Lesen', 'Hören', 'Schreiben', 'Sprechen'].map(skill => (
                             <span key={skill} className="rounded-full bg-white/70 px-3 py-1.5 shadow-sm ring-1 ring-white/90">
                                 {skill}
@@ -204,13 +206,13 @@ export function ExamListClient() {
                         role="locked"
                         eyebrow="Exam gate"
                         title="Cấp độ này chưa mở đề thi"
-                        message="Học viên vẫn cần một hành động tiếp theo rõ ràng: quay lại tất cả đề hiện có hoặc học tiếp lộ trình để mở thêm thử thách."
+                        message={t('examEmptyTip')}
                         mascotSrc={FUXIE_3D_ASSETS.examGuide}
                         className="min-h-[220px]"
                     />
                     <FuxiePanel className="rounded-3xl border-dashed border-slate-200 p-5">
-                        <p className="text-xs font-black uppercase tracking-wide text-[#3C78A8]">Next best action</p>
-                        <h3 className="mt-2 text-xl font-black text-slate-950">Tiếp tục xây nền trước khi thi thử</h3>
+                        <p className="text-xs font-black uppercase tracking-wide text-text-brand">Next best action</p>
+                        <h3 className="mt-2 text-xl font-black text-slate-950">Rèn giũa kỹ năng trước khi thi cử</h3>
                         <p className="mt-2 text-sm font-medium leading-relaxed text-slate-500">
                             Khi chưa có đề ở bộ lọc này, màn hình nên giữ động lực học thay vì báo lỗi dữ liệu.
                         </p>
@@ -276,7 +278,7 @@ export function ExamListClient() {
                                                                 <span className={`px-3 py-1 rounded-full text-xs font-bold border uppercase tracking-wider ${BOARD_COLORS[exam.examType] || BOARD_COLORS.GOETHE}`}>
                                                                     {exam.examType}
                                                                 </span>
-                                                                <span className="flex items-center gap-1.5 text-[11px] font-medium text-gray-400 bg-gray-50 px-2.5 py-1 rounded-full border border-gray-100">
+                                                                <span className="flex items-center gap-1.5 text-xs font-medium text-gray-400 bg-gray-50 px-2.5 py-1 rounded-full border border-gray-100">
                                                                     <Clock className="w-3.5 h-3.5" /> {exam.totalMinutes} phút
                                                                     <span className="mx-1 text-gray-300">|</span>
                                                                     <Trophy className="w-3.5 h-3.5" /> {exam.totalPoints} điểm
@@ -284,7 +286,7 @@ export function ExamListClient() {
                                                             </div>
 
                                                             {/* Title */}
-                                                            <h3 className="text-xl font-bold text-gray-800 leading-tight mb-2 group-hover:text-[#3C78A8] transition-colors">{exam.title}</h3>
+                                                            <h3 className="text-xl font-bold text-gray-800 leading-tight mb-2 group-hover:text-text-brand transition-colors">{exam.title}</h3>
                                                             {exam.description && (
                                                                 <p className="text-xs text-gray-500 mb-5 line-clamp-2">{exam.description}</p>
                                                             )}
@@ -322,14 +324,14 @@ export function ExamListClient() {
                                                                             {exam.bestAttempt.passed ? <CheckCircle2 className="w-4 h-4" /> : <XCircle className="w-4 h-4" />}
                                                                         </div>
                                                                         <div className="flex flex-col">
-                                                                            <span className={`text-[13px] font-bold ${exam.bestAttempt.passed ? 'text-emerald-700' : 'text-red-600'}`}>
+                                                                            <span className={`text-xs font-bold ${exam.bestAttempt.passed ? 'text-emerald-700' : 'text-red-600'}`}>
                                                                                 {exam.bestAttempt.percentScore}%
                                                                             </span>
-                                                                            <span className="text-[10px] text-gray-400 font-medium">Lần tốt nhất</span>
+                                                                            <span className="text-xs text-gray-400 font-medium">Lần tốt nhất</span>
                                                                         </div>
                                                                     </div>
                                                                 ) : (
-                                                                    <span className="text-[13px] font-medium text-gray-400">Chưa làm lần nào</span>
+                                                                    <span className="text-xs font-medium text-gray-400">Chưa làm lần nào</span>
                                                                 )}
                                                                 
                                                                 <Link

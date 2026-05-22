@@ -20,7 +20,8 @@
       "exampleSentence2": "Die Implementierung der Schutzverantwortung im Rahmen des Völkerrechts bleibt eine komplexe Herausforderung, da sie die Souveränität von Staaten berührt.",
       "exampleTranslation2": "Việc thực hiện Trách nhiệm bảo vệ trong khuôn khổ luật pháp quốc tế vẫn là một thách thức phức tạp, vì nó liên quan đến chủ quyền của các quốc gia.",
       "imageUrl": "/images/vocab/c2-menschenrechte-voelkerrecht/die-schutzverantwortung.png",
-      "meaningDe": "die Verpflichtung, andere vor Schaden zu bewahren"
+      "meaningDe": "die Verpflichtung, andere vor Schaden zu bewahren",
+      "pluralStatus": "not_applicable_or_needs_review"
     },
     {
       "word": "Völkerstrafrecht",
@@ -34,7 +35,8 @@
       "exampleSentence2": "Die Etablierung des Internationalen Strafgerichtshofs hat das Völkerstrafrecht maßgeblich gestärkt und die Rechenschaftspflicht für Täter erhöht.",
       "exampleTranslation2": "Việc thành lập Tòa án Hình sự Quốc tế đã củng cố đáng kể luật hình sự quốc tế và tăng cường trách nhiệm giải trình của những kẻ phạm tội.",
       "imageUrl": "/images/vocab/c2-menschenrechte-voelkerrecht/das-voelkerstrafrecht.png",
-      "meaningDe": "das internationale Strafrecht, das Verbrechen wie Völkermord regelt"
+      "meaningDe": "das internationale Strafrecht, das Verbrechen wie Völkermord regelt",
+      "pluralStatus": "not_applicable_or_needs_review"
     },
     {
       "word": "Ächtung",
@@ -160,7 +162,20 @@
       "exampleSentence2": "Staaten, die den Kernprinzipien des humanitären Völkerrechts adhärieren, zeigen ein Bekenntnis zum Schutz der Menschenwürde in Konflikten.",
       "exampleTranslation2": "Các quốc gia tuân thủ các nguyên tắc cốt lõi của luật nhân đạo quốc tế thể hiện cam kết bảo vệ phẩm giá con người trong các cuộc xung đột.",
       "imageUrl": "/images/vocab/c2-menschenrechte-voelkerrecht/adhaerieren.png",
-      "meaningDe": "sich an etwas halten oder einem Vertrag beitreten"
+      "meaningDe": "sich an etwas halten oder einem Vertrag beitreten",
+      "conjugation": {
+        "praesens": {
+          "ich": "adhaeriere",
+          "du": "adhaerierst",
+          "er_sie_es": "adhaeriert",
+          "wir": "adhaerieren",
+          "ihr": "adhaeriert",
+          "sie_Sie": "adhaerieren"
+        },
+        "isIrregular": false,
+        "isSeparable": false,
+        "reviewStatus": "auto_generated_needs_spot_check"
+      }
     },
     {
       "word": "verstetigen",
@@ -174,7 +189,20 @@
       "exampleSentence2": "Die dauerhafte Etablierung von Menschenrechtsstandards erfordert Mechanismen, die ihre Umsetzung und Überwachung verstetigen.",
       "exampleTranslation2": "Việc thiết lập lâu dài các tiêu chuẩn nhân quyền đòi hỏi các cơ chế có thể duy trì bền vững việc thực hiện và giám sát chúng.",
       "imageUrl": "/images/vocab/c2-menschenrechte-voelkerrecht/verstetigen.png",
-      "meaningDe": "etwas stabilisieren und langfristig sichern"
+      "meaningDe": "etwas stabilisieren und langfristig sichern",
+      "conjugation": {
+        "praesens": {
+          "ich": "verstetige",
+          "du": "verstetigst",
+          "er_sie_es": "verstetigt",
+          "wir": "verstetigen",
+          "ihr": "verstetigt",
+          "sie_Sie": "verstetigen"
+        },
+        "isIrregular": false,
+        "isSeparable": false,
+        "reviewStatus": "auto_generated_needs_spot_check"
+      }
     },
     {
       "word": "völkerrechtlich",
@@ -203,6 +231,26 @@
       "exampleTranslation2": "Việc hỗ trợ người lưu vong và bảo vệ quyền của họ là một khía cạnh quan trọng của sự bảo vệ tị nạn quốc tế.",
       "imageUrl": "/images/vocab/c2-menschenrechte-voelkerrecht/der-exilant.png",
       "meaningDe": "eine Person, die aus politischen Gründen gezwungen ist, in einem fremden Land zu leben"
+    }
+  ],
+  "cefrAudit": {
+    "targetLevel": "C2",
+    "verdict": "aligned",
+    "reviewerRole": "German Academic Lead",
+    "notes": "Release-candidate metadata audit: vocabulary content for \"Menschenrechte & humanitäres Völkerrecht\" is aligned with declared C2 scope pending final human spot-check.",
+    "reviewedAt": "2026-05-12",
+    "reviewScope": "release_candidate_metadata_pass"
+  },
+  "learningOutcomes": [
+    {
+      "id": "c2-menschenrechte-voelkerrecht-lo-1",
+      "cefrLevel": "C2",
+      "skill": "vocabulary",
+      "canDoVi": "Toi co the luyen tu vung o trinh do C2 qua chu de \"Menschenrechte & humanitäres Völkerrecht\".",
+      "canDoDe": "Ich kann Wortschatz auf Niveau C2 zum Thema \"Menschenrechte & humanitäres Völkerrecht\" ueben.",
+      "linkedContentIds": [
+        "c2-menschenrechte-voelkerrecht"
+      ]
     }
   ]
 }

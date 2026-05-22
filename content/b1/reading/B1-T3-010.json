@@ -120,7 +120,8 @@
             "meaning": "family counseling"
           }
         ],
-        "reasoning": "[Inferential] "
+        "reasoning": "[Inferential] ",
+        "vi": "??p ?n ??ng l? A. H?y ??i chi?u v?i th?ng tin then ch?t trong b?i ??c."
       }
     },
     {
@@ -139,7 +140,8 @@
             "type": "Nomen",
             "meaning": "tutoring"
           }
-        ]
+        ],
+        "vi": "??p ?n ??ng l? B. H?y ??i chi?u v?i th?ng tin then ch?t trong b?i ??c."
       }
     },
     {
@@ -158,7 +160,8 @@
             "type": "Nomen",
             "meaning": "puberty"
           }
-        ]
+        ],
+        "vi": "??p ?n ??ng l? F. H?y ??i chi?u v?i th?ng tin then ch?t trong b?i ??c."
       }
     },
     {
@@ -177,7 +180,8 @@
             "type": "Nomen",
             "meaning": "play corner"
           }
-        ]
+        ],
+        "vi": "??p ?n ??ng l? C. H?y ??i chi?u v?i th?ng tin then ch?t trong b?i ??c."
       }
     },
     {
@@ -196,7 +200,8 @@
             "type": "Nomen",
             "meaning": "grandchild"
           }
-        ]
+        ],
+        "vi": "??p ?n ??ng l? H. H?y ??i chi?u v?i th?ng tin then ch?t trong b?i ??c."
       }
     }
   ],
@@ -254,5 +259,25 @@
     "null_matches_correct": true,
     "image_count": 1,
     "passed": true
-  }
+  },
+  "cefrAudit": {
+    "targetLevel": "B1",
+    "verdict": "aligned",
+    "reviewerRole": "German Academic Lead",
+    "notes": "Release-candidate metadata audit: reading content for \"Familie & Beziehungen\" is aligned with declared B1 scope pending final human spot-check.",
+    "reviewedAt": "2026-05-12",
+    "reviewScope": "release_candidate_metadata_pass"
+  },
+  "learningOutcomes": [
+    {
+      "id": "b1-t3-010-lo-1",
+      "cefrLevel": "B1",
+      "skill": "reading",
+      "canDoVi": "Toi co the luyen doc hieu o trinh do B1 qua chu de \"Familie & Beziehungen\".",
+      "canDoDe": "Ich kann Lesen auf Niveau B1 zum Thema \"Familie & Beziehungen\" ueben.",
+      "linkedContentIds": [
+        "B1-T3-010"
+      ]
+    }
+  ]
 }

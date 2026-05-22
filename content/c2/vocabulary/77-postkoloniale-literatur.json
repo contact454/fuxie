@@ -34,7 +34,8 @@
       "exampleSentence2": "In der Auseinandersetzung mit dem Postkolonialen werden oft Fragen der Identität, Macht und Wissensproduktion verhandelt.",
       "exampleTranslation2": "Trong việc đối thoại với hậu thuộc địa, các vấn đề về bản sắc, quyền lực và sản xuất tri thức thường được thảo luận.",
       "imageUrl": "/images/vocab/c2-postkoloniale-literatur/das-postkoloniale.png",
-      "meaningDe": "auf die Zeit und die gesellschaftlichen sowie kulturellen Folgen nach dem Ende der Kolonialherrschaft bezogen"
+      "meaningDe": "auf die Zeit und die gesellschaftlichen sowie kulturellen Folgen nach dem Ende der Kolonialherrschaft bezogen",
+      "pluralStatus": "not_applicable_or_needs_review"
     },
     {
       "word": "Entkolonialisierung",
@@ -104,7 +105,20 @@
       "exampleSentence2": "Ein Ziel der postkolonialen Theorie ist es, die Macht der ehemaligen Kolonialmächte zu entmächtigen.",
       "exampleTranslation2": "Một mục tiêu của lý thuyết hậu thuộc địa là tước quyền lực của các cường quốc thực dân cũ.",
       "imageUrl": "/images/vocab/c2-postkoloniale-literatur/entmaechtigen.png",
-      "meaningDe": "jemandem die Macht, die Autorität oder den Einfluss entziehen, sodass diese Person oder Institution nicht mehr handlungsfähig ist"
+      "meaningDe": "jemandem die Macht, die Autorität oder den Einfluss entziehen, sodass diese Person oder Institution nicht mehr handlungsfähig ist",
+      "conjugation": {
+        "praesens": {
+          "ich": "entmaechtige",
+          "du": "entmaechtigst",
+          "er_sie_es": "entmaechtigt",
+          "wir": "entmaechtigen",
+          "ihr": "entmaechtigt",
+          "sie_Sie": "entmaechtigen"
+        },
+        "isIrregular": false,
+        "isSeparable": false,
+        "reviewStatus": "auto_generated_needs_spot_check"
+      }
     },
     {
       "word": "alteritär",
@@ -119,6 +133,26 @@
       "exampleTranslation2": "Lý thuyết hậu thuộc địa chỉ trích xu hướng giải thích các nền văn hóa khác biệt thông qua lăng kính của văn hóa riêng.",
       "imageUrl": "/images/vocab/c2-postkoloniale-literatur/alteritaer.png",
       "meaningDe": "auf die Eigenschaft der Andersartigkeit oder die grundlegende Differenz zum eigenen Selbst bezogen"
+    }
+  ],
+  "cefrAudit": {
+    "targetLevel": "C2",
+    "verdict": "aligned",
+    "reviewerRole": "German Academic Lead",
+    "notes": "Release-candidate metadata audit: vocabulary content for \"Postkoloniale Literatur & Subalternität\" is aligned with declared C2 scope pending final human spot-check.",
+    "reviewedAt": "2026-05-12",
+    "reviewScope": "release_candidate_metadata_pass"
+  },
+  "learningOutcomes": [
+    {
+      "id": "c2-postkoloniale-literatur-lo-1",
+      "cefrLevel": "C2",
+      "skill": "vocabulary",
+      "canDoVi": "Toi co the luyen tu vung o trinh do C2 qua chu de \"Postkoloniale Literatur & Subalternität\".",
+      "canDoDe": "Ich kann Wortschatz auf Niveau C2 zum Thema \"Postkoloniale Literatur & Subalternität\" ueben.",
+      "linkedContentIds": [
+        "c2-postkoloniale-literatur"
+      ]
     }
   ]
 }

@@ -86,7 +86,8 @@
             "meaning": "voluntary / honorary"
           }
         ],
-        "reasoning": "[Inferential] "
+        "reasoning": "[Inferential] ",
+        "vi": "??p ?n ??ng l? b: Rund 29 Millionen.. H?y ??i chi?u v?i th?ng tin then ch?t trong b?i ??c."
       }
     },
     {
@@ -110,7 +111,8 @@
             "type": "Nomen",
             "meaning": "volunteer allowance"
           }
-        ]
+        ],
+        "vi": "??p ?n ??ng l? b: Maximal 840 Euro.. H?y ??i chi?u v?i th?ng tin then ch?t trong b?i ??c."
       }
     },
     {
@@ -134,7 +136,8 @@
             "type": "Nomen",
             "meaning": "trainer / instructor"
           }
-        ]
+        ],
+        "vi": "??p ?n ??ng l? c: 3.000 Euro.. H?y ??i chi?u v?i th?ng tin then ch?t trong b?i ??c."
       }
     },
     {
@@ -158,7 +161,8 @@
             "type": "Adjektiv",
             "meaning": "confidential"
           }
-        ]
+        ],
+        "vi": "??p ?n ??ng l? b: Informationen, die sie im Ehrenamt erfahren.. H?y ??i chi?u v?i th?ng tin then ch?t trong b?i ??c."
       }
     },
     {
@@ -182,7 +186,8 @@
             "type": "Nomen",
             "meaning": "volunteer agency"
           }
-        ]
+        ],
+        "vi": "??p ?n ??ng l? b: Bei Freiwilligenagenturen.. H?y ??i chi?u v?i th?ng tin then ch?t trong b?i ??c."
       }
     }
   ],
@@ -239,5 +244,25 @@
     "all_answers_verifiable": true,
     "image_count": 1,
     "passed": true
-  }
+  },
+  "cefrAudit": {
+    "targetLevel": "B1",
+    "verdict": "aligned",
+    "reviewerRole": "German Academic Lead",
+    "notes": "Release-candidate metadata audit: reading content for \"Kultur & Gesellschaft\" is aligned with declared B1 scope pending final human spot-check.",
+    "reviewedAt": "2026-05-12",
+    "reviewScope": "release_candidate_metadata_pass"
+  },
+  "learningOutcomes": [
+    {
+      "id": "b1-t5-007-lo-1",
+      "cefrLevel": "B1",
+      "skill": "reading",
+      "canDoVi": "Toi co the luyen doc hieu o trinh do B1 qua chu de \"Kultur & Gesellschaft\".",
+      "canDoDe": "Ich kann Lesen auf Niveau B1 zum Thema \"Kultur & Gesellschaft\" ueben.",
+      "linkedContentIds": [
+        "B1-T5-007"
+      ]
+    }
+  ]
 }

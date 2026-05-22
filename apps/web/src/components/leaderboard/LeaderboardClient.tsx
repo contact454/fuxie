@@ -3,6 +3,8 @@
 import { useState, useEffect, useCallback } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
+import { useTranslations } from 'next-intl'
+import { FUXIE_GAMIFICATION_MASCOTS } from '@/lib/mascot/fuxie-assets'
 
 interface LeaderboardEntry {
     rank: number
@@ -31,6 +33,7 @@ export function LeaderboardClient() {
     const [period, setPeriod] = useState<'weekly' | 'alltime'>('weekly')
     const [entries, setEntries] = useState<LeaderboardEntry[]>([])
     const [currentUser, setCurrentUser] = useState<LeaderboardEntry | null>(null)
+    const [currentLeague, setCurrentLeague] = useState<string>('BRONZE')
     const [loading, setLoading] = useState(true)
     const [error, setError] = useState<string | null>(null)
 
@@ -44,6 +47,7 @@ export function LeaderboardClient() {
             if (data.success) {
                 setEntries(Array.isArray(data.data?.entries) ? data.data.entries : [])
                 setCurrentUser(data.data?.currentUser ?? null)
+                setCurrentLeague(data.data?.currentLeague ?? 'BRONZE')
             } else {
                 throw new Error(data.error ?? 'Leaderboard response was not successful')
             }
@@ -68,11 +72,11 @@ export function LeaderboardClient() {
         <div className="max-w-2xl mx-auto px-4 py-6">
             {/* Header */}
             <div className="text-center mb-6">
-                <h1 className="text-2xl font-bold text-gray-800 flex items-center justify-center gap-2">
-                    🏆 Rangliste
-                    <Image src="/mascot/core/fuxie-core-happy-wave.png" alt="Fuxie" width={32} height={32} className="object-contain" />
+                <h1 className="text-2xl font-bold text-gray-800 flex items-center justify-center gap-2 uppercase tracking-wider">
+                    🏆 Giải đấu {currentLeague}
+                    <Image src={FUXIE_GAMIFICATION_MASCOTS['rank-up']} alt="Fuxie" width={32} height={32} className="object-contain" />
                 </h1>
-                <p className="text-sm text-gray-500 mt-1">Bảng xếp hạng · Wer lernt am meisten?</p>
+                <p className="text-sm text-gray-500 mt-1">Bảng xếp hạng tuần · Wer lernt am meisten?</p>
             </div>
 
             {/* Period Tabs */}
@@ -119,14 +123,21 @@ export function LeaderboardClient() {
 
                     {/* Remaining Entries */}
                     <div className="space-y-2">
-                        {(top3.length < 3 ? entries : rest).map(entry => (
+                        {(top3.length < 3 ? entries : rest).map((entry, idx) => {
+                            const isPromotion = period === 'weekly' && entry.rank <= 5;
+                            const isDemotion = period === 'weekly' && entry.rank >= 45 && entries.length >= 50;
+
+                            return (
                             <div
                                 key={entry.userId}
-                                className={`flex items-center gap-3 px-4 py-3 rounded-xl transition-all duration-200
+                                className={`flex items-center gap-3 px-4 py-3 rounded-xl transition-all duration-200 border-l-4
                                     ${entry.isCurrentUser
-                                        ? 'bg-gradient-to-r from-amber-50 to-orange-50 ring-2 ring-amber-200 shadow-sm'
-                                        : 'bg-white ring-1 ring-gray-100 hover:ring-gray-200'
-                                    }`}
+                                        ? 'bg-gradient-to-r from-amber-50 to-orange-50 ring-2 ring-amber-200 shadow-sm border-amber-500'
+                                        : 'bg-white ring-1 ring-gray-100 hover:ring-gray-200 border-transparent'
+                                    }
+                                    ${!entry.isCurrentUser && isPromotion ? 'border-green-400 bg-green-50/30' : ''}
+                                    ${!entry.isCurrentUser && isDemotion ? 'border-red-400 bg-red-50/30' : ''}
+                                    `}
                             >
                                 {/* Rank */}
                                 <div className="w-8 text-center">
@@ -151,13 +162,13 @@ export function LeaderboardClient() {
                                     </p>
                                     <div className="flex items-center gap-1.5 mt-0.5">
                                         <span
-                                            className="inline-block px-1.5 py-0.5 text-[9px] font-bold text-white rounded"
+                                            className="inline-block px-1.5 py-0.5 text-xs font-bold text-white rounded"
                                             style={{ backgroundColor: LEVEL_COLORS[entry.currentLevel] ?? '#9E9E9E' }}
                                         >
                                             {entry.currentLevel}
                                         </span>
                                         {entry.streak > 0 && (
-                                            <span className="text-[10px] text-gray-400">🔥 {entry.streak}</span>
+                                            <span className="text-xs text-gray-400">🔥 {entry.streak}</span>
                                         )}
                                     </div>
                                 </div>
@@ -167,10 +178,11 @@ export function LeaderboardClient() {
                                     <p className="text-sm font-bold text-gray-800">
                                         {(period === 'weekly' ? entry.weeklyXp : entry.totalXp).toLocaleString()}
                                     </p>
-                                    <p className="text-[10px] text-gray-400">XP</p>
+                                    <p className="text-xs text-gray-400">XP</p>
                                 </div>
                             </div>
-                        ))}
+                            )
+                        })}
                     </div>
 
                     {/* Current User (if not in top list) */}
@@ -187,7 +199,7 @@ export function LeaderboardClient() {
                                 <div className="flex-1">
                                     <p className="text-sm font-medium text-amber-800">{currentUser.displayName} (Du)</p>
                                     <span
-                                        className="inline-block px-1.5 py-0.5 text-[9px] font-bold text-white rounded mt-0.5"
+                                        className="inline-block px-1.5 py-0.5 text-xs font-bold text-white rounded mt-0.5"
                                         style={{ backgroundColor: LEVEL_COLORS[currentUser.currentLevel] ?? '#9E9E9E' }}
                                     >
                                         {currentUser.currentLevel}
@@ -197,7 +209,7 @@ export function LeaderboardClient() {
                                     <p className="text-sm font-bold text-gray-800">
                                         {(period === 'weekly' ? currentUser.weeklyXp : currentUser.totalXp).toLocaleString()}
                                     </p>
-                                    <p className="text-[10px] text-gray-400">XP</p>
+                                    <p className="text-xs text-gray-400">XP</p>
                                 </div>
                             </div>
                         </div>
@@ -217,6 +229,7 @@ function LeaderboardEmptyState({
     error: string | null
     period: 'weekly' | 'alltime'
 }) {
+    const t = useTranslations('Gamification')
     const visibleXp = currentUser
         ? period === 'weekly'
             ? currentUser.weeklyXp
@@ -227,7 +240,7 @@ function LeaderboardEmptyState({
         <div className="overflow-hidden rounded-3xl bg-gradient-to-br from-[#F3FBFF] via-white to-[#EAFBF8] p-5 text-center shadow-sm ring-1 ring-[#CCE4F0]">
             <div className="mx-auto mb-4 flex h-24 w-24 items-center justify-center rounded-3xl bg-white shadow-sm ring-1 ring-[#CCE4F0]">
                 <Image
-                    src="/mascot/core/fuxie-core-happy-wave.png"
+                    src={FUXIE_GAMIFICATION_MASCOTS.badge}
                     alt="Fuxie"
                     width={72}
                     height={72}
@@ -235,16 +248,16 @@ function LeaderboardEmptyState({
                     priority
                 />
             </div>
-            <p className="text-xs font-black uppercase tracking-wide text-[#3C78A8]">
+            <p className="text-xs font-black uppercase tracking-wide text-text-brand">
                 {error ? 'Leaderboard offline' : 'First learner advantage'}
             </p>
-            <h2 className="mt-1 text-xl font-black text-[#173B56]">
+            <h2 className="mt-1 text-xl font-black text-text-primary">
                 {error ?? 'Chưa có ai ghi XP trong bảng này'}
             </h2>
-            <p className="mx-auto mt-2 max-w-md text-sm font-semibold leading-relaxed text-[#3C78A8]">
+            <p className="mx-auto mt-2 max-w-md text-sm font-semibold leading-relaxed text-text-brand">
                 {currentUser
-                    ? `Em đang ở mốc khởi động với ${visibleXp.toLocaleString('vi-VN')} XP. Hoàn thành một quest là bảng này sẽ có tín hiệu ngay.`
-                    : 'Làm một nhiệm vụ ngắn để mở dữ liệu xếp hạng và biến màn này thành cuộc đua học tập thật.'}
+                    ? t('leaderboardStart', { xp: visibleXp.toLocaleString('vi-VN') })
+                    : t('leaderboardEmpty')}
             </p>
 
             {currentUser ? (
@@ -264,7 +277,7 @@ function LeaderboardEmptyState({
                 </Link>
                 <Link
                     href="/review"
-                    className="rounded-2xl bg-white px-5 py-3 text-sm font-black text-[#3C78A8] ring-1 ring-[#CCE4F0] transition hover:-translate-y-0.5 hover:bg-[#F3FBFF]"
+                    className="rounded-2xl bg-white px-5 py-3 text-sm font-black text-text-brand ring-1 ring-[#CCE4F0] transition hover:-translate-y-0.5 hover:bg-[#F3FBFF]"
                 >
                     Ôn SRS để lấy XP
                 </Link>
@@ -276,8 +289,8 @@ function LeaderboardEmptyState({
 function LeaderboardEmptyStat({ label, value }: { label: string; value: string }) {
     return (
         <div className="rounded-2xl bg-white px-3 py-2 shadow-sm ring-1 ring-[#CCE4F0]/75">
-            <p className="text-[10px] font-black uppercase tracking-wide text-[#3C78A8]/70">{label}</p>
-            <p className="mt-1 truncate text-lg font-black text-[#173B56]">{value}</p>
+            <p className="text-xs font-black uppercase tracking-wide text-text-brand/70">{label}</p>
+            <p className="mt-1 truncate text-lg font-black text-text-primary">{value}</p>
         </div>
     )
 }

@@ -1,6 +1,7 @@
 import { describe, expect, it } from 'vitest'
 import { buildDashboardMissionHub, type DashboardQuestContext } from './quest-adapter'
 import type { TodayPlan, TodayPlanAction } from '@/lib/personalization/today-plan'
+import type { LearnerWeaknessProfile } from '@/lib/personalization/learner-weakness-profile'
 
 const baseContext: DashboardQuestContext = {
     currentStreak: 0,
@@ -23,6 +24,18 @@ const lessonAction: TodayPlanAction = {
     badge: 'Từ vựng',
 }
 
+const weaknessProfile: LearnerWeaknessProfile = {
+    currentLevel: 'A1',
+    weakSkills: ['WORTSCHATZ'],
+    signals: [{
+        skill: 'WORTSCHATZ',
+        scorePercent: null,
+        severity: 'needs_practice',
+        reason: 'từ vựng được đánh dấu là kỹ năng yếu trong learning path.',
+    }],
+    summary: 'Trọng tâm tiếp theo: từ vựng.',
+}
+
 function action(overrides: Partial<TodayPlanAction>): TodayPlanAction {
     return {
         ...lessonAction,
@@ -40,6 +53,7 @@ function plan(overrides: Partial<TodayPlan> = {}): TodayPlan {
         remainingMinutes: 15,
         focus: 'Start learning',
         weakSkills: ['WORTSCHATZ'],
+        weaknessProfile,
         dueSrsCount: 0,
         actions: [
             lessonAction,
@@ -53,6 +67,7 @@ function plan(overrides: Partial<TodayPlan> = {}): TodayPlan {
                 badge: 'Nghe',
             }),
         ],
+        remediation: [],
         signals: {
             recentMinutes7d: 0,
             pendingAssignments: 0,
@@ -181,6 +196,53 @@ describe('buildDashboardMissionHub', () => {
             href: '/vocabulary?level=A1&theme=a1-person',
             source: 'skill-WORTSCHATZ-a1-person',
         })
+    })
+
+    it('uses adaptive pacing signals to move a shorter recovery quest first', () => {
+        const mission = buildDashboardMissionHub(
+            plan({
+                actions: [
+                    action({
+                        id: 'target-exam',
+                        type: 'exam',
+                        title: 'Luyện GOETHE B1',
+                        href: '/exam',
+                        skill: 'EXAM',
+                        estimatedMinutes: 20,
+                        priority: 90,
+                        badge: 'GOETHE',
+                    }),
+                    action({
+                        id: 'short-vocabulary',
+                        title: 'Mini Wortschatz',
+                        href: '/vocabulary',
+                        skill: 'WORTSCHATZ',
+                        estimatedMinutes: 6,
+                        priority: 60,
+                    }),
+                ],
+            }),
+            {
+                ...baseContext,
+                currentStreak: 0,
+                totalXp: 320,
+                adaptivePacingSignals: {
+                    meaningfulActions7d: 1,
+                    meaningfulDays7d: 1,
+                    rewardRequests7d: 0,
+                },
+            },
+        )
+
+        expect(mission.primaryQuest).toMatchObject({
+            id: 'short-vocabulary',
+            href: '/vocabulary',
+        })
+        expect(mission.pacing).toMatchObject({
+            learnerPacingState: 'streak_recovery',
+            interventionCode: 'adaptive_streak_recovery',
+        })
+        expect(mission.primaryCta.supportingCopy).toContain('Hoàn thành')
     })
 
     it('keeps exam readiness visible for target exam quests', () => {

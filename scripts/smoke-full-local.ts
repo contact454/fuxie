@@ -6,7 +6,7 @@ type SmokeResult = {
     message?: string
 }
 
-const webUrl = trimTrailingSlash(process.env.SMOKE_WEB_URL ?? 'http://localhost:3000')
+const webUrl = trimTrailingSlash(process.env.SMOKE_WEB_URL ?? 'http://localhost:3005')
 const aiUrl = trimTrailingSlash(process.env.SMOKE_AI_URL ?? process.env.AI_SERVICE_URL ?? 'http://localhost:3001')
 
 async function main() {

@@ -19,7 +19,7 @@ const getGrammarLessonsByTopicId = cache(async (topicId: string) => {
 })
 
 const TYPE_INFO: Record<string, { label: string; emoji: string; description: string }> = {
-    E: { label: 'Einführung', emoji: '📖', description: 'Giới thiệu lý thuyết + bài tập cơ bản' },
+    E: { label: 'Einführung', emoji: '📖', description: 'Giới thiệu lý thuyết + thử thách cơ sở' },
     V: { label: 'Vertiefung', emoji: '🔬', description: 'Luyện sâu & mở rộng' },
     A: { label: 'Anwendung', emoji: '🎯', description: 'Ứng dụng thực tế — không lý thuyết' },
 }
@@ -132,7 +132,7 @@ export default async function TopicDetailPage({ params }: { params: Promise<{ to
                                     <p className="text-sm text-gray-500 mt-0.5">{typeInfo.description}</p>
                                     <div className="flex items-center gap-4 mt-2 text-xs text-gray-400">
                                         <span>⏱️ ~{lesson.estimatedMin} phút</span>
-                                        <span>📝 {lesson.exerciseCount} bài tập</span>
+                                        <span>📝 {lesson.exerciseCount} thử thách</span>
                                     </div>
                                 </div>
                                 <div className="text-right shrink-0">

@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import Image from 'next/image'
+import { getFuxieMascotSrc } from "@/lib/mascot/fuxie-assets"
 
 interface BeforeInstallPromptEvent extends Event {
     readonly platforms: Array<string>
@@ -73,7 +74,7 @@ export function InstallPrompt() {
         <div className="fixed bottom-4 left-4 right-4 md:left-auto md:right-8 md:w-96 bg-white rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] p-4 z-50 animate-fade-in-up border border-gray-100 flex items-center gap-4">
             <div className="shrink-0 relative w-12 h-12 bg-blue-50 rounded-full flex items-center justify-center">
                 <Image
-                    src="/mascot/core/fuxie-core-happy-wave.png?v=2"
+                    src={getFuxieMascotSrc('authWelcomer')}
                     alt="Fuxie"
                     width={32}
                     height={32}
@@ -97,7 +98,7 @@ export function InstallPrompt() {
                 </button>
                 <button
                     onClick={handleDismiss}
-                    className="text-gray-400 text-[10px] font-medium hover:text-gray-600 transition-colors"
+                    className="text-gray-400 text-xs font-medium hover:text-gray-600 transition-colors"
                 >
                     Để sau
                 </button>

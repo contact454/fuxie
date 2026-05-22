@@ -244,7 +244,7 @@ export function McExercise({ questions, cefrLevel, themeName: _themeName, themeS
                                     className={exerciseOptionClass({ selected: isSelected, revealed: isRevealed })}
                                 >
                                     {isRevealed && isSelected && (
-                                        <span className="text-[#3C78A8] mr-1">•</span>
+                                        <span className="text-text-brand mr-1">•</span>
                                     )}
                                     <span>{option}</span>
                                 </button>

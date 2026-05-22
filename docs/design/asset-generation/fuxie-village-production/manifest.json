@@ -1,0 +1,49 @@
+{
+  "project": "Fuxie Image Production Sprint",
+  "date": "2026-05-16",
+  "root": "docs/design/asset-generation/fuxie-village-production",
+  "directories": {
+    "source": "docs/design/asset-generation/fuxie-village-production/source",
+    "alpha": "docs/design/asset-generation/fuxie-village-production/alpha",
+    "runtime": "docs/design/asset-generation/fuxie-village-production/runtime",
+    "qa": "docs/design/asset-generation/fuxie-village-production/qa"
+  },
+  "batches": [
+    {
+      "batch": 0,
+      "name": "Style Lock",
+      "status": "complete",
+      "asset_count": 6,
+      "manifest": "docs/design/asset-generation/fuxie-village-production/qa/batch-0-style-lock/batch-0-manifest.json",
+      "alpha_contact_sheet": "docs/design/asset-generation/fuxie-village-production/qa/batch-0-alpha-contact-sheet.png"
+    },
+    {
+      "batch": 1,
+      "name": "Mascot Core",
+      "status": "complete",
+      "asset_count": 32,
+      "new_imagegen_source_count": 30,
+      "reused_existing_alpha_clean_count": 2,
+      "manifest": "docs/design/asset-generation/fuxie-village-production/qa/batch-1-mascot-core/batch-1-manifest.json",
+      "alpha_contact_sheet": "docs/design/asset-generation/fuxie-village-production/qa/batch-1-mascot-core/batch-1-alpha-contact-sheet.png"
+    },
+    {
+      "batch": 2,
+      "name": "Learner Locations",
+      "status": "complete",
+      "asset_count": 18,
+      "new_imagegen_source_count": 18,
+      "manifest": "docs/design/asset-generation/fuxie-village-production/qa/batch-2-learner-locations/batch-2-manifest.json",
+      "alpha_contact_sheet": "docs/design/asset-generation/fuxie-village-production/qa/batch-2-learner-locations/batch-2-alpha-contact-sheet.png"
+    },
+    {
+      "batch": 5,
+      "name": "Rewards/Items",
+      "status": "in_progress",
+      "asset_count_target": 48,
+      "asset_count_completed": 18,
+      "manifest_checkpoint": "docs/design/asset-generation/fuxie-village-production/qa/batch-5-rewards-items/batch-5-manifest-first-18.json",
+      "alpha_contact_sheet_checkpoint": "docs/design/asset-generation/fuxie-village-production/qa/batch-5-rewards-items/batch-5-alpha-contact-sheet-first-18.png"
+    }
+  ]
+}

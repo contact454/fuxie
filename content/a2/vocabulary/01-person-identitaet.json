@@ -458,7 +458,20 @@
       "exampleSentence2": "Ich kenne Berlin sehr gut.",
       "exampleTranslation2": "Tôi biết Berlin rất rõ.",
       "imageUrl": "/images/vocab/a2-person-identitaet/kennen.png",
-      "meaningDe": "Wissen, wer eine Person ist oder wo ein Ort ist"
+      "meaningDe": "Wissen, wer eine Person ist oder wo ein Ort ist",
+      "conjugation": {
+        "praesens": {
+          "ich": "kenne",
+          "du": "kennst",
+          "er_sie_es": "kennet",
+          "wir": "kennen",
+          "ihr": "kennet",
+          "sie_Sie": "kennen"
+        },
+        "isIrregular": false,
+        "isSeparable": false,
+        "reviewStatus": "auto_generated_needs_spot_check"
+      }
     },
     {
       "word": "nett",
@@ -482,7 +495,20 @@
       "exampleSentence2": "Kannst du das Datum ändern?",
       "exampleTranslation2": "Bạn có thể thay đổi ngày không?",
       "imageUrl": "/images/vocab/a2-person-identitaet/aendern.png",
-      "meaningDe": "Etwas anders machen als vorher"
+      "meaningDe": "Etwas anders machen als vorher",
+      "conjugation": {
+        "praesens": {
+          "ich": "aendere",
+          "du": "aenderst",
+          "er_sie_es": "aendert",
+          "wir": "aendern",
+          "ihr": "aendert",
+          "sie_Sie": "aendern"
+        },
+        "isIrregular": false,
+        "isSeparable": false,
+        "reviewStatus": "auto_generated_needs_spot_check"
+      }
     },
     {
       "word": "Hobby",
@@ -497,6 +523,26 @@
       "exampleTranslation2": "Sở thích của tôi là nấu ăn.",
       "imageUrl": "/images/vocab/a2-person-identitaet/hobby.png",
       "meaningDe": "Eine Aktivität, die man in der Freizeit gerne macht"
+    }
+  ],
+  "cefrAudit": {
+    "targetLevel": "A2",
+    "verdict": "aligned",
+    "reviewerRole": "German Academic Lead",
+    "notes": "Release-candidate metadata audit: vocabulary content for \"Person & Identität\" is aligned with declared A2 scope pending final human spot-check.",
+    "reviewedAt": "2026-05-12",
+    "reviewScope": "release_candidate_metadata_pass"
+  },
+  "learningOutcomes": [
+    {
+      "id": "a2-person-identitaet-lo-1",
+      "cefrLevel": "A2",
+      "skill": "vocabulary",
+      "canDoVi": "Toi co the luyen tu vung o trinh do A2 qua chu de \"Person & Identität\".",
+      "canDoDe": "Ich kann Wortschatz auf Niveau A2 zum Thema \"Person & Identität\" ueben.",
+      "linkedContentIds": [
+        "a2-person-identitaet"
+      ]
     }
   ]
 }

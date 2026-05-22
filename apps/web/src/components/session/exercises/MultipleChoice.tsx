@@ -1,32 +1,104 @@
-import { useState } from 'react'
+import React, { useState } from 'react'
+import { Headphones } from 'lucide-react'
 import { useTranslations } from 'next-intl'
 import type { SessionItem } from '@/lib/session/builder'
 import type { VocabExerciseData, GrammarExerciseData } from '@/lib/session/types'
 
-export function MultipleChoice({ item, onNext }: { item: SessionItem, onNext: (correct: boolean) => void }) {
+export function MultipleChoice({ 
+    item, 
+    onNext,
+    stepIndex = 0,
+    totalSteps = 8
+}: { 
+    item: SessionItem, 
+    onNext: (correct: boolean) => void,
+    stepIndex?: number,
+    totalSteps?: number
+}) {
     const t = useTranslations('UI')
-    // Determine if it's Grammar or Vocab review
     const isGrammar = item.type === 'GRAMMAR'
     const grammarData = item.data as GrammarExerciseData
     const vocabData = item.data as VocabExerciseData
-    const question = isGrammar ? grammarData.questionDe : `Nghĩa của từ "${vocabData.term}" là gì?`
-    const subTitle = isGrammar ? grammarData.questionNative : t('chooseCorrectAnswer')
     
-    // For vocab review demo, generate some fake options if not provided
-    // In real prod, builder.ts would attach distractors to the SessionItem
-    let options = (isGrammar ? grammarData.options : vocabData.options) || []
-    let correctIndex = (isGrammar ? grammarData.correctIndex : vocabData.correctIndex) ?? 0
-    
-    if (!isGrammar && options.length === 0) {
-        options = [
-            vocabData.meaning,
-            'Con mèo (Fake)',
-            'Bàn chải (Fake)',
-            'Gia đình (Fake)'
+    let options: string[] = []
+    let correctIndex = 0
+
+    if (isGrammar) {
+        options = grammarData.options || []
+        correctIndex = grammarData.correctIndex ?? 0
+    } else if (vocabData.options && vocabData.options.length > 0) {
+        options = vocabData.options
+        correctIndex = vocabData.correctIndex ?? 0
+    } else {
+        // Fallback deterministic for vocabulary:
+        // correct answer = vocabData.meaning (Vietnamese meaning)
+        const correctWord = vocabData.meaning || 'học'
+
+        // Deterministic list of fallback distractors (Vietnamese translations of common items)
+        const fallbackDistractors = [
+            'quả táo', 'quả chuối', 'sữa', 'bánh mì', 
+            'nước', 'nước hoa quả', 'trà', 'cà phê', 
+            'quyển sách', 'cái bút', 'trường học', 'ngôi nhà',
+            'quả cam', 'xe đạp', 'bóng đá', 'bức tranh'
         ]
-        // Randomize
-        options.sort(() => Math.random() - 0.5)
-        correctIndex = options.indexOf(vocabData.meaning)
+
+        // Filter out correct word to avoid duplicates
+        const filtered = fallbackDistractors.filter(
+            d => d.toLowerCase() !== correctWord.toLowerCase() && 
+                 !d.toLowerCase().includes(correctWord.toLowerCase())
+        )
+
+        // Select 3 distractors deterministically based on term characters
+        const seed = vocabData.term.split('').reduce((acc, char) => acc + char.charCodeAt(0), 0)
+        
+        const selectedDistractors: string[] = []
+        let offset = 0
+        while (selectedDistractors.length < 3 && offset < filtered.length) {
+            const candidate = filtered[(seed + offset) % filtered.length]
+            if (candidate && !selectedDistractors.includes(candidate)) {
+                selectedDistractors.push(candidate)
+            }
+            offset++
+        }
+        while (selectedDistractors.length < 3) {
+            selectedDistractors.push('bánh mì')
+        }
+
+        // Determine correct index deterministically
+        correctIndex = seed % 4
+
+        options = []
+        let distractorIdx = 0
+        for (let i = 0; i < 4; i++) {
+            if (i === correctIndex) {
+                options.push(correctWord)
+            } else {
+                options.push(selectedDistractors[distractorIdx++] ?? 'bánh mì')
+            }
+        }
+    }
+
+    const [mockAudio, setMockAudio] = useState(false)
+    React.useEffect(() => {
+        if (typeof window !== 'undefined') {
+            setMockAudio(new URLSearchParams(window.location.search).get('mockAudio') === 'true')
+        }
+    }, [])
+
+    const hasAudio = !isGrammar && (!!vocabData.audioUrl || mockAudio)
+
+    let question = ''
+    let subTitle = ''
+
+    if (isGrammar) {
+        question = grammarData.questionDe
+        subTitle = grammarData.questionNative ?? ''
+    } else if (hasAudio) {
+        question = 'Höre und wähle das richtige Wort'
+        subTitle = 'Wähle das Wort, das du hörst.'
+    } else {
+        question = `Nghĩa của từ "${vocabData.term}" là gì?`
+        subTitle = t('chooseCorrectAnswer') || 'Wähle die richtige Antwort'
     }
 
     const [selected, setSelected] = useState<number | null>(null)
@@ -45,57 +117,148 @@ export function MultipleChoice({ item, onNext }: { item: SessionItem, onNext: (c
 
     return (
         <div className="flex flex-col h-full animate-fade-in-up">
-            <div className="flex-1">
-                <h2 className="text-2xl font-bold text-gray-800 mb-2">{question}</h2>
-                <p className="text-gray-500 mb-8">{subTitle}</p>
-
-                <div className="space-y-3">
-                    {options.map((opt: string, idx: number) => {
-                        let btnStyle = "border-2 border-gray-200 hover:bg-gray-50 text-gray-700"
-                        
-                        if (checked) {
-                            if (idx === correctIndex) {
-                                btnStyle = "bg-emerald-50 border-emerald-400 text-emerald-700 font-bold"
-                            } else if (idx === selected) {
-                                btnStyle = "bg-red-50 border-red-400 text-red-700"
-                            } else {
-                                btnStyle = "border-gray-200 opacity-50"
-                            }
-                        } else if (selected === idx) {
-                            btnStyle = "border-sky-400 bg-sky-50 text-sky-700 shadow-sm"
-                        }
-
-                        return (
-                            <button
-                                key={idx}
-                                disabled={checked}
-                                onClick={() => setSelected(idx)}
-                                className={`w-full p-4 rounded-2xl text-left transition-all font-medium ${btnStyle}`}
-                            >
-                                {opt}
-                            </button>
-                        )
-                    })}
-                </div>
+            {/* Header: Schritt and Badge */}
+            <div className="flex items-center justify-between mb-2">
+                <span className="text-xs font-bold text-[#3C78A8]">
+                    Schritt <span className="text-[#173b56] font-black">{stepIndex + 1}</span> von {totalSteps}
+                </span>
+                <span className="flex items-center gap-1 bg-[#2EC4B6]/15 text-[#2EC4B6] text-[10px] font-black px-2.5 py-1 rounded-full uppercase tracking-wider">
+                    <Headphones className="w-3 h-3" />
+                    HÖREN
+                </span>
             </div>
 
-            {/* Bottom Feedback Banner */}
-            <div className={`fixed bottom-0 left-0 right-0 p-4 border-t transition-all duration-300 md:static md:mt-8 md:rounded-2xl ${
-                checked ? (isCorrect ? 'bg-emerald-100 border-emerald-200' : 'bg-red-100 border-red-200') : 'bg-white border-transparent'
-            }`}>
-                {checked && (
-                    <div className="mb-4">
-                        <div className={`font-bold text-xl mb-1 ${isCorrect ? 'text-emerald-600' : 'text-red-600'}`}>
-                            {isCorrect ? 'Tuyệt vời!' : 'Sai rồi!'}
-                        </div>
-                        {isGrammar && grammarData.explanation && (
-                            <div className={`text-sm ${isCorrect ? 'text-emerald-700' : 'text-red-700'}`}>
-                                {grammarData.explanation}
-                            </div>
+            {/* Progress line nodes */}
+            <div className="flex items-center gap-2 mb-6">
+                {Array.from({ length: totalSteps }).map((_, idx) => {
+                    const step = idx + 1
+                    const isCurrent = idx === stepIndex
+                    const isCompleted = idx < stepIndex
+                    return (
+                        <React.Fragment key={step}>
+                            <div
+                                className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                                    isCurrent
+                                        ? 'bg-[#2EC4B6] ring-4 ring-[#2EC4B6]/20'
+                                        : isCompleted
+                                        ? 'bg-[#2EC4B6]'
+                                        : 'bg-[#CCE4F0]/60'
+                                }`}
+                            />
+                            {step < totalSteps && (
+                                <div
+                                    className={`flex-1 h-[2px] transition-all duration-300 ${
+                                        idx < stepIndex ? 'bg-[#2EC4B6]' : 'bg-[#CCE4F0]/30'
+                                    }`}
+                                />
+                            )}
+                        </React.Fragment>
+                    )
+                })}
+                <span className="text-xs text-[#3C78A8] ml-1">🏁</span>
+            </div>
+
+            {/* Question headings */}
+            <div className="text-center mb-6">
+                <h2 className="text-xl md:text-2xl font-black text-[#173b56] leading-tight">
+                    {question}
+                </h2>
+                <p className="text-xs md:text-sm text-[#3C78A8] font-bold mt-1">
+                    {subTitle}
+                </p>
+            </div>
+
+            {/* Big Speaker Button */}
+            {hasAudio ? (
+                <div className="flex flex-col items-center justify-center gap-4 mb-6">
+                    <button 
+                        type="button"
+                        className="w-20 h-20 rounded-full bg-[#F3FBFF] border border-[#CCE4F0]/50 shadow-md flex items-center justify-center text-[#2EC4B6] hover:scale-105 active:scale-95 transition-all duration-300 cursor-pointer"
+                    >
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="w-10 h-10">
+                            <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                            <path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+                            <path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path>
+                        </svg>
+                    </button>
+
+                    {/* Simulated Audio Waveform */}
+                    <div className="flex items-center gap-1 h-8">
+                        {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20].map((bar) => {
+                            const heights = [12, 24, 16, 8, 20, 14, 28, 18, 10, 22, 16, 26, 12, 8, 18, 14, 24, 10, 16, 12]
+                            const h = heights[bar - 1] || 12
+                            return (
+                                <div
+                                    key={bar}
+                                    className="w-[3px] bg-[#2EC4B6] rounded-full opacity-80"
+                                    style={{ height: `${h}px` }}
+                                />
+                            )
+                        })}
+                    </div>
+                </div>
+            ) : (
+                <div className="flex flex-col items-center justify-center mb-6">
+                    <div className="bg-[#F3FBFF] border border-[#CCE4F0]/60 rounded-3xl px-8 py-6 shadow-sm text-center max-w-sm w-full">
+                        <span className="text-3xl mb-2 block">🦊</span>
+                        <p className="text-[9px] font-black uppercase text-[#3C78A8] tracking-widest mb-1">DEUTSCH</p>
+                        <h3 className="text-xl md:text-2xl font-black text-[#2E7EC4]">{vocabData.term}</h3>
+                        {vocabData.partOfSpeech && (
+                            <span className="inline-block mt-2 bg-[#2E7EC4]/10 text-[#2E7EC4] text-[9px] font-bold px-2.5 py-0.5 rounded-full uppercase">
+                                {vocabData.partOfSpeech}
+                            </span>
                         )}
-                        {!isGrammar && !isCorrect && (
-                            <div className="text-red-700 text-sm">
-                                Đáp án đúng: <strong>{options[correctIndex]}</strong>
+                    </div>
+                </div>
+            )}
+
+            {/* Choices Grid - Horizontal inline row or grid */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-6">
+                {options.map((opt: string, idx: number) => {
+                    let btnStyle = "border-2 border-[#CCE4F0]/60 hover:bg-gray-50 text-[#173b56] bg-white font-bold"
+                    
+                    if (checked) {
+                        if (idx === correctIndex) {
+                            btnStyle = "bg-emerald-50 border-emerald-400 text-emerald-700 font-bold"
+                        } else if (idx === selected) {
+                            btnStyle = "bg-red-50 border-red-400 text-red-700 font-bold"
+                        } else {
+                            btnStyle = "border-[#CCE4F0]/40 opacity-40 bg-white"
+                        }
+                    } else if (selected === idx) {
+                        btnStyle = "border-[#2EC4B6] bg-[#F3FBFF] text-[#2EC4B6] shadow-sm font-extrabold"
+                    }
+
+                    return (
+                        <button
+                            key={idx}
+                            data-choice-btn
+                            disabled={checked}
+                            onClick={() => setSelected(idx)}
+                            className={`p-3 rounded-2xl text-center transition-all duration-200 text-xs md:text-sm shadow-sm cursor-pointer ${btnStyle}`}
+                        >
+                            {opt}
+                        </button>
+                    )
+                })}
+            </div>
+
+            {/* Orange warning/tip bar */}
+            <div className="flex items-center gap-1.5 justify-center text-xs text-[#FFB703] font-extrabold mb-6">
+                <span>💡</span>
+                <span>Tipp: Achte auf den Artikel!</span>
+            </div>
+
+            {/* Bottom Button inside Card */}
+            <div className="mt-auto pt-4 border-t border-[#CCE4F0]/30">
+                {checked && (
+                    <div className="mb-4 text-center">
+                        <div className={`font-black text-lg mb-1 ${isCorrect ? 'text-emerald-600' : 'text-red-600'}`}>
+                            {isCorrect ? 'Tuyệt vời!' : 'Chưa đúng rồi!'}
+                        </div>
+                        {!isCorrect && (
+                            <div className="text-red-700 text-xs font-bold">
+                                Antwort: <strong>{options[correctIndex]}</strong>
                             </div>
                         )}
                     </div>
@@ -104,15 +267,13 @@ export function MultipleChoice({ item, onNext }: { item: SessionItem, onNext: (c
                 <button
                     onClick={handleCheck}
                     disabled={selected === null && !checked}
-                    className={`w-full py-4 rounded-2xl font-bold text-lg shadow-[0_6px_0_0_rgba(0,0,0,0.15)] active:translate-y-1 active:shadow-none transition-all disabled:opacity-50 disabled:cursor-not-allowed ${
-                        checked 
-                            ? (isCorrect ? 'bg-emerald-500 text-white shadow-emerald-700' : 'bg-red-500 text-white shadow-red-700')
-                            : (selected !== null ? 'bg-sky-500 text-white shadow-sky-700' : 'bg-gray-200 text-gray-400 shadow-transparent')
-                    }`}
+                    className="w-full py-4 bg-[#2EC4B6] hover:bg-[#25b5a7] active:bg-[#1fa093] text-white text-base font-black rounded-2xl transition-all duration-300 shadow-md shadow-[#2EC4B6]/25 hover:shadow-lg active:scale-[0.98] disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
                 >
-                    {checked ? 'Tiếp Tục' : 'Kiểm tra'}
+                    <span>{checked ? 'Weiter' : 'Kiểm tra'}</span>
+                    <span>→</span>
                 </button>
             </div>
         </div>
     )
 }
+

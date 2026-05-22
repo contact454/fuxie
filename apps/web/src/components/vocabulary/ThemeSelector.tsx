@@ -77,7 +77,7 @@ export function ThemeSelector({ themes, selectedSlug, onSelect }: ThemeSelectorP
                                 </div>
                                 {/* Theme name */}
                                 <span className={`text-xs font-medium text-center leading-tight line-clamp-2
-                                    ${isSelected ? 'text-[#3C78A8]' : 'text-gray-700'}`}
+                                    ${isSelected ? 'text-text-brand' : 'text-gray-700'}`}
                                 >
                                     {theme.name}
                                 </span>

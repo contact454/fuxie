@@ -134,12 +134,21 @@ describe('POST /api/v1/srs/review', () => {
 
         expect(recordLearningActivityMock).toHaveBeenCalledWith(
             expect.anything(),
-            {
+            expect.objectContaining({
                 userId: 'db-user-1',
                 xpEarned: 5,
                 srsReviewed: 1,
                 updateStreak: true,
-            }
+                analytics: {
+                    actionId: '11111111-1111-1111-1111-111111111111',
+                    actionType: 'srs_review',
+                    skill: 'SRS',
+                    source: 'srs.review',
+                    metadata: {
+                        response_time_ms: 1200,
+                    },
+                },
+            })
         )
         expect(cacheInvalidatePrefixMock).toHaveBeenCalledTimes(7)
         expect(cacheInvalidatePrefixMock).toHaveBeenCalledWith('srs:due:db-user-1')

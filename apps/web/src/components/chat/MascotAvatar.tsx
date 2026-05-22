@@ -2,6 +2,7 @@
 
 import React, { useEffect, useRef, useState } from 'react'
 import Image from 'next/image'
+import { FUXIE_MODULE_MASCOTS } from '@/lib/mascot/fuxie-assets'
 
 interface MascotAvatarProps {
     isSpeaking: boolean
@@ -61,7 +62,7 @@ export function MascotAvatar({
             
             {/* Mascot Image */}
             <Image
-                src={mouthOpen ? "/mascot/core/fuxie-core-surprised.png?v=2" : "/mascot/core/fuxie-core-happy-wave.png?v=2"}
+                src={mouthOpen ? FUXIE_MODULE_MASCOTS.speaking : FUXIE_MODULE_MASCOTS.chat}
                 alt="Fuxie Mascot"
                 width={size * 0.8}
                 height={size * 0.8}

@@ -1,12 +1,12 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@fuxie/database'
-import { withAuth, NotFoundError } from '@/lib/auth/middleware'
-import { getDbUserByFirebaseUid } from '@/lib/auth/db-user'
+import { withDbAuth } from '@/lib/auth/middleware'
 import { handleApiError } from '@/lib/api/error-handler'
 import { enforceRateLimit, getRateLimitNumber, getRequestClientKey } from '@/lib/api/rate-limit'
 import { withGeminiFallback } from '@/lib/ai/gemini-fallback'
 import { parseGeminiJson } from '@/lib/ai/parse-json'
 import { cookies } from 'next/headers'
+import { recordAnalyticsEvent } from '@/lib/analytics/events'
 import {
     buildChatSystemPrompt,
     CHAT_GREETINGS,
@@ -103,9 +103,8 @@ function generateTitle(text: string): string {
 // ─── POST /api/v1/chat ─────────────────────────────
 export async function POST(req: NextRequest) {
     try {
-        const auth = await withAuth(req)
-        const user = await getDbUserByFirebaseUid(auth.userId)
-        if (!user) throw new NotFoundError('User not found')
+        const auth = await withDbAuth(req)
+        const user = { id: auth.userId, role: auth.role }
 
         const limited = enforceRateLimit(getRequestClientKey(req, user.id), {
             keyPrefix: 'web-chat',
@@ -229,6 +228,7 @@ export async function POST(req: NextRequest) {
         // Parse structured response
         const rawText = result.response.text()
         let parsed: ChatResponse
+        let parsedStructured = true
 
         try {
             parsed = parseGeminiJson<ChatResponse>(rawText)
@@ -244,6 +244,7 @@ export async function POST(req: NextRequest) {
                 corrections: [],
                 suggestedFollowUps: [],
             }
+            parsedStructured = false
         }
 
         // Save assistant message to DB (async, non-blocking)
@@ -265,6 +266,24 @@ export async function POST(req: NextRequest) {
                     totalMessages: { increment: 2 }, // user + assistant
                     // Update title from first user message if it was "Neues Gespräch"
                     ...(existingConvId ? {} : { title: generateTitle(message) }),
+                },
+            }),
+            recordAnalyticsEvent(prisma, {
+                userId: user.id,
+                role: user.role,
+                eventName: 'ai_feedback_generated',
+                source: 'chat.tutor',
+                actionId: convId,
+                actionType: null,
+                level: effectiveLevel,
+                skill: 'CHAT',
+                metadata: {
+                    flow: 'chat',
+                    model: modelName,
+                    correction_count: parsed.corrections.length,
+                    suggested_followup_count: parsed.suggestedFollowUps.length,
+                    parsed_structured: parsedStructured,
+                    provider_status: 'success',
                 },
             }),
         ])

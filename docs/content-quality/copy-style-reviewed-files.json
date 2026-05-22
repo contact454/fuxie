@@ -1,0 +1,818 @@
+{
+  "schemaVersion": 1,
+  "generatedFrom": "tmp/copy-style-audit.json",
+  "generatedAt": "2026-05-13",
+  "policy": "A file-level signoff suppresses HARDCODED_LEARNER_COPY warnings only while the file checksum matches. Any copy or code change invalidates the signoff and restores audit warnings.",
+  "files": [
+    {
+      "file": "apps/web/src/app/teacher/classrooms/ClassroomsClient.tsx",
+      "cluster": "Admin/Teacher",
+      "owner": "Vietnamese-German Localization Specialist",
+      "reviewDate": "2026-05-13",
+      "reason": "Route-local learner-facing copy reviewed for tone, encoding, and terminology during the five-sprint language sweep. Move to messages when reused across routes or locales.",
+      "hardcodedCopyWarningsReviewed": 14,
+      "sha256": "e39076a8262de262986aa9912a15eee66c66977f91f19d21b990a7f1ca85e6fc"
+    },
+    {
+      "file": "apps/web/src/app/teacher/classrooms/page.tsx",
+      "cluster": "Admin/Teacher",
+      "owner": "Vietnamese-German Localization Specialist",
+      "reviewDate": "2026-05-13",
+      "reason": "Route-local learner-facing copy reviewed for tone, encoding, and terminology during the five-sprint language sweep. Move to messages when reused across routes or locales.",
+      "hardcodedCopyWarningsReviewed": 2,
+      "sha256": "20e432a624e01dc5b14dc78cd3ebee90f8f90069473bdb7885fbc1533670512e"
+    },
+    {
+      "file": "apps/web/src/app/(learn)/course/page.tsx",
+      "cluster": "Dashboard/Course",
+      "owner": "Vietnamese-German Localization Specialist",
+      "reviewDate": "2026-05-13",
+      "reason": "Route-local learner-facing copy reviewed for tone, encoding, and terminology during the five-sprint language sweep. Move to messages when reused across routes or locales.",
+      "hardcodedCopyWarningsReviewed": 2,
+      "sha256": "659e663c005b2e0b328f33dfcec4fb16f2fc4d80bd537594ceff18118f605c94"
+    },
+    {
+      "file": "apps/web/src/app/(learn)/dashboard/page.tsx",
+      "cluster": "Dashboard/Course",
+      "owner": "Vietnamese-German Localization Specialist",
+      "reviewDate": "2026-05-13",
+      "reason": "Route-local learner-facing copy reviewed for tone, encoding, and terminology during the five-sprint language sweep. Move to messages when reused across routes or locales.",
+      "hardcodedCopyWarningsReviewed": 2,
+      "sha256": "842b114ad6624e53a1e8568f842c77b9f96b2d441ee31104d2e5e15ff40f4e34"
+    },
+    {
+      "file": "apps/web/src/components/course/CourseClient.tsx",
+      "cluster": "Dashboard/Course",
+      "owner": "Vietnamese-German Localization Specialist",
+      "reviewDate": "2026-05-13",
+      "reason": "Route-local learner-facing copy reviewed for tone, encoding, and terminology during the five-sprint language sweep. Move to messages when reused across routes or locales.",
+      "hardcodedCopyWarningsReviewed": 6,
+      "sha256": "629a43c84e2e485b1eb38198f318666542a6d12000587bc5a5ecfbb1713d360d"
+    },
+    {
+      "file": "apps/web/src/components/dashboard/dashboard-client.tsx",
+      "cluster": "Dashboard/Course",
+      "owner": "Vietnamese-German Localization Specialist",
+      "reviewDate": "2026-05-13",
+      "reason": "Route-local learner-facing copy reviewed for tone, encoding, and terminology during the five-sprint language sweep. Move to messages when reused across routes or locales.",
+      "hardcodedCopyWarningsReviewed": 54,
+      "sha256": "eed7fad2f244efb9806acb9ec4006145c43eedc0ac3ffd56189978da67369d11"
+    },
+    {
+      "file": "apps/web/src/app/(learn)/exam/[examId]/page.tsx",
+      "cluster": "Exam/Review",
+      "owner": "Vietnamese-German Localization Specialist",
+      "reviewDate": "2026-05-13",
+      "reason": "Route-local learner-facing copy reviewed for tone, encoding, and terminology during the five-sprint language sweep. Move to messages when reused across routes or locales.",
+      "hardcodedCopyWarningsReviewed": 2,
+      "sha256": "e89018a6db0a0cdf4edc219d84bb6ec2e9f1197bc517ddae05e495974c8f9f81"
+    },
+    {
+      "file": "apps/web/src/app/(learn)/exam/[examId]/result/[attemptId]/page.tsx",
+      "cluster": "Exam/Review",
+      "owner": "Vietnamese-German Localization Specialist",
+      "reviewDate": "2026-05-13",
+      "reason": "Route-local learner-facing copy reviewed for tone, encoding, and terminology during the five-sprint language sweep. Move to messages when reused across routes or locales.",
+      "hardcodedCopyWarningsReviewed": 2,
+      "sha256": "4a9b0a33953d807182d1f979ba2fbcdc39d9ad8d7fd8d93a1f1d41fbed8d6854"
+    },
+    {
+      "file": "apps/web/src/app/(learn)/exam/page.tsx",
+      "cluster": "Exam/Review",
+      "owner": "Vietnamese-German Localization Specialist",
+      "reviewDate": "2026-05-13",
+      "reason": "Route-local learner-facing copy reviewed for tone, encoding, and terminology during the five-sprint language sweep. Move to messages when reused across routes or locales.",
+      "hardcodedCopyWarningsReviewed": 2,
+      "sha256": "ea95b82283971a614b2d32f21967845a35260a3feaeb1e2387d0c792e344a363"
+    },
+    {
+      "file": "apps/web/src/app/(learn)/review/page.tsx",
+      "cluster": "Exam/Review",
+      "owner": "Vietnamese-German Localization Specialist",
+      "reviewDate": "2026-05-13",
+      "reason": "Route-local learner-facing copy reviewed for tone, encoding, and terminology during the five-sprint language sweep. Move to messages when reused across routes or locales.",
+      "hardcodedCopyWarningsReviewed": 2,
+      "sha256": "7c696c389d68bc15013aee91e4a817d5f93d3f0c2fd72c170742998e537b7087"
+    },
+    {
+      "file": "apps/web/src/components/exam/ExamListClient.tsx",
+      "cluster": "Exam/Review",
+      "owner": "Vietnamese-German Localization Specialist",
+      "reviewDate": "2026-05-13",
+      "reason": "Route-local learner-facing copy reviewed for tone, encoding, and terminology during the five-sprint language sweep. Move to messages when reused across routes or locales.",
+      "hardcodedCopyWarningsReviewed": 38,
+      "sha256": "ee4889dc6e636b619630b71c84c672f9754c6f5927931d6bed28d961260179ba"
+    },
+    {
+      "file": "apps/web/src/components/exam/ExamResultClient.tsx",
+      "cluster": "Exam/Review",
+      "owner": "Vietnamese-German Localization Specialist",
+      "reviewDate": "2026-05-13",
+      "reason": "Route-local learner-facing copy reviewed for tone, encoding, and terminology during the five-sprint language sweep. Move to messages when reused across routes or locales.",
+      "hardcodedCopyWarningsReviewed": 7,
+      "sha256": "7956416754ee6dca0187dd2ea2707a82298a6c7f4997ee44cf049c7d7fef703f"
+    },
+    {
+      "file": "apps/web/src/components/exam/ExamSessionClient.tsx",
+      "cluster": "Exam/Review",
+      "owner": "Vietnamese-German Localization Specialist",
+      "reviewDate": "2026-05-13",
+      "reason": "Route-local learner-facing copy reviewed for tone, encoding, and terminology during the five-sprint language sweep. Move to messages when reused across routes or locales.",
+      "hardcodedCopyWarningsReviewed": 9,
+      "sha256": "8b541136e5edd2e21b82b4d9b207d813f226abbb493bad6b5d0b075bf92b241e"
+    },
+    {
+      "file": "apps/web/src/components/exam/renderers/GapFillRenderer.tsx",
+      "cluster": "Exam/Review",
+      "owner": "Vietnamese-German Localization Specialist",
+      "reviewDate": "2026-05-13",
+      "reason": "Route-local learner-facing copy reviewed for tone, encoding, and terminology during the five-sprint language sweep. Move to messages when reused across routes or locales.",
+      "hardcodedCopyWarningsReviewed": 1,
+      "sha256": "a9f1e397d7e71f6c963743b1e67fc1751412c4dde63ebd0cb578dba4cf028f7f"
+    },
+    {
+      "file": "apps/web/src/components/exam/renderers/MatchingRenderer.tsx",
+      "cluster": "Exam/Review",
+      "owner": "Vietnamese-German Localization Specialist",
+      "reviewDate": "2026-05-13",
+      "reason": "Route-local learner-facing copy reviewed for tone, encoding, and terminology during the five-sprint language sweep. Move to messages when reused across routes or locales.",
+      "hardcodedCopyWarningsReviewed": 2,
+      "sha256": "6acf2eebfe86a8d598c46811515ed42aad5fddeb74b4e9d8ddbe44be77ac96d6"
+    },
+    {
+      "file": "apps/web/src/components/srs/review-client.tsx",
+      "cluster": "Exam/Review",
+      "owner": "Vietnamese-German Localization Specialist",
+      "reviewDate": "2026-05-13",
+      "reason": "Route-local learner-facing copy reviewed for tone, encoding, and terminology during the five-sprint language sweep. Move to messages when reused across routes or locales.",
+      "hardcodedCopyWarningsReviewed": 27,
+      "sha256": "7a6ab866ffe6b9638033055259965b2c766be34164411e926cc5c48f260b8c44"
+    },
+    {
+      "file": "apps/web/src/components/srs/review-session.tsx",
+      "cluster": "Exam/Review",
+      "owner": "Vietnamese-German Localization Specialist",
+      "reviewDate": "2026-05-13",
+      "reason": "Route-local learner-facing copy reviewed for tone, encoding, and terminology during the five-sprint language sweep. Move to messages when reused across routes or locales.",
+      "hardcodedCopyWarningsReviewed": 14,
+      "sha256": "31fcb18fab317bafd0e02987dc8b6a0efbab81264374f5c9d61ba6a75bbffcad"
+    },
+    {
+      "file": "apps/web/src/app/(auth)/onboarding/page.tsx",
+      "cluster": "Navigation/Auth",
+      "owner": "Vietnamese-German Localization Specialist",
+      "reviewDate": "2026-05-13",
+      "reason": "Route-local learner-facing copy reviewed for tone, encoding, and terminology during the five-sprint language sweep. Move to messages when reused across routes or locales.",
+      "hardcodedCopyWarningsReviewed": 1,
+      "sha256": "97a885bb5515e92e775e85b5205ae71c4366cacf9583504948b67c0962801692"
+    },
+    {
+      "file": "apps/web/src/components/auth/LoginClient.tsx",
+      "cluster": "Navigation/Auth",
+      "owner": "Vietnamese-German Localization Specialist",
+      "reviewDate": "2026-05-13",
+      "reason": "Route-local learner-facing copy reviewed for tone, encoding, and terminology during the five-sprint language sweep. Move to messages when reused across routes or locales.",
+      "hardcodedCopyWarningsReviewed": 10,
+      "sha256": "b87e8cac59098d31521e6db15760fde5aac2002491fa5a1b6e8de9ae10ddc6b4"
+    },
+    {
+      "file": "apps/web/src/components/auth/RegisterClient.tsx",
+      "cluster": "Navigation/Auth",
+      "owner": "Vietnamese-German Localization Specialist",
+      "reviewDate": "2026-05-13",
+      "reason": "Route-local learner-facing copy reviewed for tone, encoding, and terminology during the five-sprint language sweep. Move to messages when reused across routes or locales.",
+      "hardcodedCopyWarningsReviewed": 7,
+      "sha256": "1e2e0af73c76ea2aed170f4833c30d49198d040e3de5dda4e394690cd19c5694"
+    },
+    {
+      "file": "apps/web/src/components/onboarding/OnboardingWizard.tsx",
+      "cluster": "Navigation/Auth",
+      "owner": "Vietnamese-German Localization Specialist",
+      "reviewDate": "2026-05-13",
+      "reason": "Route-local learner-facing copy reviewed for tone, encoding, and terminology during the five-sprint language sweep. Move to messages when reused across routes or locales.",
+      "hardcodedCopyWarningsReviewed": 22,
+      "sha256": "8d113b256dc91515b644c2d9c1599c00465b23810b71f68916a567af26820a68"
+    },
+    {
+      "file": "apps/web/src/app/(learn)/listening/[lessonId]/page.tsx",
+      "cluster": "Reading/Listening/Writing/Speaking",
+      "owner": "Vietnamese-German Localization Specialist",
+      "reviewDate": "2026-05-13",
+      "reason": "Route-local learner-facing copy reviewed for tone, encoding, and terminology during the five-sprint language sweep. Move to messages when reused across routes or locales.",
+      "hardcodedCopyWarningsReviewed": 2,
+      "sha256": "1d29c374c22b313e12f033bf478875ca3669864e7bced75e78a2cd378647fd43"
+    },
+    {
+      "file": "apps/web/src/app/(learn)/listening/page.tsx",
+      "cluster": "Reading/Listening/Writing/Speaking",
+      "owner": "Vietnamese-German Localization Specialist",
+      "reviewDate": "2026-05-13",
+      "reason": "Route-local learner-facing copy reviewed for tone, encoding, and terminology during the five-sprint language sweep. Move to messages when reused across routes or locales.",
+      "hardcodedCopyWarningsReviewed": 2,
+      "sha256": "62d104e43df592e893e35adec87d0be79a4a587dc39783c220a31129f2cd4c3d"
+    },
+    {
+      "file": "apps/web/src/app/(learn)/reading/[exerciseId]/page.tsx",
+      "cluster": "Reading/Listening/Writing/Speaking",
+      "owner": "Vietnamese-German Localization Specialist",
+      "reviewDate": "2026-05-13",
+      "reason": "Route-local learner-facing copy reviewed for tone, encoding, and terminology during the five-sprint language sweep. Move to messages when reused across routes or locales.",
+      "hardcodedCopyWarningsReviewed": 1,
+      "sha256": "91396891f2d9731625f59dcf72b217d0fbb00d20b73c91114778175ac05712fb"
+    },
+    {
+      "file": "apps/web/src/app/(learn)/reading/page.tsx",
+      "cluster": "Reading/Listening/Writing/Speaking",
+      "owner": "Vietnamese-German Localization Specialist",
+      "reviewDate": "2026-05-13",
+      "reason": "Route-local learner-facing copy reviewed for tone, encoding, and terminology during the five-sprint language sweep. Move to messages when reused across routes or locales.",
+      "hardcodedCopyWarningsReviewed": 2,
+      "sha256": "21146516951f99f5b7b4cf19d3fab4b1238235cdde1e61cf51e9088792d1ed2a"
+    },
+    {
+      "file": "apps/web/src/app/(learn)/speaking/[lessonId]/page.tsx",
+      "cluster": "Reading/Listening/Writing/Speaking",
+      "owner": "Vietnamese-German Localization Specialist",
+      "reviewDate": "2026-05-13",
+      "reason": "Route-local learner-facing copy reviewed for tone, encoding, and terminology during the five-sprint language sweep. Move to messages when reused across routes or locales.",
+      "hardcodedCopyWarningsReviewed": 2,
+      "sha256": "2fbb85df3e1ab6847e1d1737003bf617fed73ec1d8a4539c3e1e30792c440f30"
+    },
+    {
+      "file": "apps/web/src/app/(learn)/speaking/page.tsx",
+      "cluster": "Reading/Listening/Writing/Speaking",
+      "owner": "Vietnamese-German Localization Specialist",
+      "reviewDate": "2026-05-13",
+      "reason": "Route-local learner-facing copy reviewed for tone, encoding, and terminology during the five-sprint language sweep. Move to messages when reused across routes or locales.",
+      "hardcodedCopyWarningsReviewed": 2,
+      "sha256": "eedb596f359ada7f720b85a2d9508daff4237fa7e4aa5cb7459882b4742b0410"
+    },
+    {
+      "file": "apps/web/src/app/(learn)/writing/page.tsx",
+      "cluster": "Reading/Listening/Writing/Speaking",
+      "owner": "Vietnamese-German Localization Specialist",
+      "reviewDate": "2026-05-13",
+      "reason": "Route-local learner-facing copy reviewed for tone, encoding, and terminology during the five-sprint language sweep. Move to messages when reused across routes or locales.",
+      "hardcodedCopyWarningsReviewed": 2,
+      "sha256": "6d2088d9c070a4d35637b2058199cd98d7e9aeed566dc69ccc5a939c0533a8a2"
+    },
+    {
+      "file": "apps/web/src/components/listening/lesson-player.tsx",
+      "cluster": "Reading/Listening/Writing/Speaking",
+      "owner": "Vietnamese-German Localization Specialist",
+      "reviewDate": "2026-05-13",
+      "reason": "Route-local learner-facing copy reviewed for tone, encoding, and terminology during the five-sprint language sweep. Move to messages when reused across routes or locales.",
+      "hardcodedCopyWarningsReviewed": 59,
+      "sha256": "3d91fdc2b98e30aa29ababf2c87ccd46ebafa47694d22bb3936f2209a3404f25"
+    },
+    {
+      "file": "apps/web/src/components/listening/listening-client.tsx",
+      "cluster": "Reading/Listening/Writing/Speaking",
+      "owner": "Vietnamese-German Localization Specialist",
+      "reviewDate": "2026-05-13",
+      "reason": "Route-local learner-facing copy reviewed for tone, encoding, and terminology during the five-sprint language sweep. Move to messages when reused across routes or locales.",
+      "hardcodedCopyWarningsReviewed": 2,
+      "sha256": "c1ed4bf434deb6b8509b9daed9374f54871b3fd3ec9aa87b2cacf1f4d3af14a0"
+    },
+    {
+      "file": "apps/web/src/components/reading/reading-client.tsx",
+      "cluster": "Reading/Listening/Writing/Speaking",
+      "owner": "Vietnamese-German Localization Specialist",
+      "reviewDate": "2026-05-13",
+      "reason": "Route-local learner-facing copy reviewed for tone, encoding, and terminology during the five-sprint language sweep. Move to messages when reused across routes or locales.",
+      "hardcodedCopyWarningsReviewed": 2,
+      "sha256": "0b568458860a01eaa090f1b8b959c8d859d6c08dacb3308158939398727897f3"
+    },
+    {
+      "file": "apps/web/src/components/reading/reading-player.tsx",
+      "cluster": "Reading/Listening/Writing/Speaking",
+      "owner": "Vietnamese-German Localization Specialist",
+      "reviewDate": "2026-05-13",
+      "reason": "Route-local learner-facing copy reviewed for tone, encoding, and terminology during the five-sprint language sweep. Move to messages when reused across routes or locales.",
+      "hardcodedCopyWarningsReviewed": 89,
+      "sha256": "9c8ce40796bf0d8bf4a5d3da1505282004d0f365efb0cdc8b792c327cb87e31f"
+    },
+    {
+      "file": "apps/web/src/components/reading/reading-text-renderers.tsx",
+      "cluster": "Reading/Listening/Writing/Speaking",
+      "owner": "Vietnamese-German Localization Specialist",
+      "reviewDate": "2026-05-13",
+      "reason": "Route-local learner-facing copy reviewed for tone, encoding, and terminology during the five-sprint language sweep. Move to messages when reused across routes or locales.",
+      "hardcodedCopyWarningsReviewed": 5,
+      "sha256": "55c4af1fc1b9875e05aad312307d70cb446da5ee3689b91218a37027de6295e0"
+    },
+    {
+      "file": "apps/web/src/components/reading/reading-types.ts",
+      "cluster": "Reading/Listening/Writing/Speaking",
+      "owner": "Vietnamese-German Localization Specialist",
+      "reviewDate": "2026-05-13",
+      "reason": "Route-local learner-facing copy reviewed for tone, encoding, and terminology during the five-sprint language sweep. Move to messages when reused across routes or locales.",
+      "hardcodedCopyWarningsReviewed": 51,
+      "sha256": "b1af3ee82e90b3ec92bfbbb67f5e3c36a335c00ca14dd286a3183898338ce6c0"
+    },
+    {
+      "file": "apps/web/src/components/reading/use-reading-translate.ts",
+      "cluster": "Reading/Listening/Writing/Speaking",
+      "owner": "Vietnamese-German Localization Specialist",
+      "reviewDate": "2026-05-13",
+      "reason": "Route-local learner-facing copy reviewed for tone, encoding, and terminology during the five-sprint language sweep. Move to messages when reused across routes or locales.",
+      "hardcodedCopyWarningsReviewed": 2,
+      "sha256": "fef6f8058544dbfb3f450e6beb5bf686575db81c149c22d72489ed89ead9c103"
+    },
+    {
+      "file": "apps/web/src/components/speaking/NachsprechenPlayer.tsx",
+      "cluster": "Reading/Listening/Writing/Speaking",
+      "owner": "Vietnamese-German Localization Specialist",
+      "reviewDate": "2026-05-13",
+      "reason": "Route-local learner-facing copy reviewed for tone, encoding, and terminology during the five-sprint language sweep. Move to messages when reused across routes or locales.",
+      "hardcodedCopyWarningsReviewed": 17,
+      "sha256": "ad3888933fbd9254c61daa337a54c031b269a0cf95a0bfd96a3cdbf673834b22"
+    },
+    {
+      "file": "apps/web/src/components/speaking/SpeakingClient.tsx",
+      "cluster": "Reading/Listening/Writing/Speaking",
+      "owner": "Vietnamese-German Localization Specialist",
+      "reviewDate": "2026-05-13",
+      "reason": "Route-local learner-facing copy reviewed for tone, encoding, and terminology during the five-sprint language sweep. Move to messages when reused across routes or locales.",
+      "hardcodedCopyWarningsReviewed": 7,
+      "sha256": "59263485ca0a8b77899c61d105049c9baa91cc6458a3c7a8955b861ca39f93db"
+    },
+    {
+      "file": "apps/web/src/components/speaking/SpeakingLessonPlayer.tsx",
+      "cluster": "Reading/Listening/Writing/Speaking",
+      "owner": "Vietnamese-German Localization Specialist",
+      "reviewDate": "2026-05-13",
+      "reason": "Route-local learner-facing copy reviewed for tone, encoding, and terminology during the five-sprint language sweep. Move to messages when reused across routes or locales.",
+      "hardcodedCopyWarningsReviewed": 9,
+      "sha256": "704a1f53c1b667370818274e6dd0b017888227c8bba0766b3e7392a744ecc1f9"
+    },
+    {
+      "file": "apps/web/src/components/speaking/SpeakingLessonPlayerDynamic.tsx",
+      "cluster": "Reading/Listening/Writing/Speaking",
+      "owner": "Vietnamese-German Localization Specialist",
+      "reviewDate": "2026-05-13",
+      "reason": "Route-local learner-facing copy reviewed for tone, encoding, and terminology during the five-sprint language sweep. Move to messages when reused across routes or locales.",
+      "hardcodedCopyWarningsReviewed": 1,
+      "sha256": "c07fb3951ec82a98250ced96f900567a6fa5e87ff88750c6c56d6a6bd6038a5f"
+    },
+    {
+      "file": "apps/web/src/components/speaking/TurnBasedSpeakingPlayer.tsx",
+      "cluster": "Reading/Listening/Writing/Speaking",
+      "owner": "Vietnamese-German Localization Specialist",
+      "reviewDate": "2026-05-13",
+      "reason": "Route-local learner-facing copy reviewed for tone, encoding, and terminology during the five-sprint language sweep. Move to messages when reused across routes or locales.",
+      "hardcodedCopyWarningsReviewed": 2,
+      "sha256": "1ecd90be5431a189e15dbed0b2859d04a2948a06b8af4b999d686382a42ec726"
+    },
+    {
+      "file": "apps/web/src/components/writing/writing-client.tsx",
+      "cluster": "Reading/Listening/Writing/Speaking",
+      "owner": "Vietnamese-German Localization Specialist",
+      "reviewDate": "2026-05-13",
+      "reason": "Route-local learner-facing copy reviewed for tone, encoding, and terminology during the five-sprint language sweep. Move to messages when reused across routes or locales.",
+      "hardcodedCopyWarningsReviewed": 1,
+      "sha256": "b1ca7194fb495863f6202f3432439c598b29889291adaa2aef02827ce3723e88"
+    },
+    {
+      "file": "apps/web/src/components/writing/writing-player.tsx",
+      "cluster": "Reading/Listening/Writing/Speaking",
+      "owner": "Vietnamese-German Localization Specialist",
+      "reviewDate": "2026-05-13",
+      "reason": "Route-local learner-facing copy reviewed for tone, encoding, and terminology during the five-sprint language sweep. Move to messages when reused across routes or locales.",
+      "hardcodedCopyWarningsReviewed": 12,
+      "sha256": "cc2e3a3106507100eededdfd3ea1a5357985e715512f87b91211268d5b910991"
+    },
+    {
+      "file": "apps/web/src/app/(learn)/chat/page.tsx",
+      "cluster": "Shared UI",
+      "owner": "Vietnamese-German Localization Specialist",
+      "reviewDate": "2026-05-13",
+      "reason": "Route-local learner-facing copy reviewed for tone, encoding, and terminology during the five-sprint language sweep. Move to messages when reused across routes or locales.",
+      "hardcodedCopyWarningsReviewed": 1,
+      "sha256": "3a0c7ad02d128af4599c2d9997f42fa3eb0e9f6543ec2a171f3c3ec4a2f35962"
+    },
+    {
+      "file": "apps/web/src/app/(learn)/leaderboard/page.tsx",
+      "cluster": "Shared UI",
+      "owner": "Vietnamese-German Localization Specialist",
+      "reviewDate": "2026-05-13",
+      "reason": "Route-local learner-facing copy reviewed for tone, encoding, and terminology during the five-sprint language sweep. Move to messages when reused across routes or locales.",
+      "hardcodedCopyWarningsReviewed": 1,
+      "sha256": "a323fdb8171bf951ce25b05218fcb3278463de368e4a62157a2fde6d9c8297d8"
+    },
+    {
+      "file": "apps/web/src/app/(learn)/session/page.tsx",
+      "cluster": "Shared UI",
+      "owner": "Vietnamese-German Localization Specialist",
+      "reviewDate": "2026-05-13",
+      "reason": "Route-local learner-facing copy reviewed for tone, encoding, and terminology during the five-sprint language sweep. Move to messages when reused across routes or locales.",
+      "hardcodedCopyWarningsReviewed": 2,
+      "sha256": "399b7f9e95588da780628b91e594f41daaebef2269490059ba584b32ac0d323f"
+    },
+    {
+      "file": "apps/web/src/app/layout.tsx",
+      "cluster": "Shared UI",
+      "owner": "Vietnamese-German Localization Specialist",
+      "reviewDate": "2026-05-13",
+      "reason": "Route-local learner-facing copy reviewed for tone, encoding, and terminology during the five-sprint language sweep. Move to messages when reused across routes or locales.",
+      "hardcodedCopyWarningsReviewed": 3,
+      "sha256": "83f06c4ddd913767e426ff6d3b4a2d085330abb6db10d33313684b6d31213397"
+    },
+    {
+      "file": "apps/web/src/app/not-found.tsx",
+      "cluster": "Shared UI",
+      "owner": "Vietnamese-German Localization Specialist",
+      "reviewDate": "2026-05-13",
+      "reason": "Route-local learner-facing copy reviewed for tone, encoding, and terminology during the five-sprint language sweep. Move to messages when reused across routes or locales.",
+      "hardcodedCopyWarningsReviewed": 1,
+      "sha256": "e40a553ec68cad2a9ac079b996c83b3888f616455786b7d7a923908dd219f47e"
+    },
+    {
+      "file": "apps/web/src/components/chat/ChatClient.tsx",
+      "cluster": "Shared UI",
+      "owner": "Vietnamese-German Localization Specialist",
+      "reviewDate": "2026-05-13",
+      "reason": "Route-local learner-facing copy reviewed for tone, encoding, and terminology during the five-sprint language sweep. Move to messages when reused across routes or locales.",
+      "hardcodedCopyWarningsReviewed": 14,
+      "sha256": "97abe00aa0b4c36649a8a6fa04662e8c9215c7432ce04f9e850c9cab07fbf82d"
+    },
+    {
+      "file": "apps/web/src/components/chat/ChatHistory.tsx",
+      "cluster": "Shared UI",
+      "owner": "Vietnamese-German Localization Specialist",
+      "reviewDate": "2026-05-13",
+      "reason": "Route-local learner-facing copy reviewed for tone, encoding, and terminology during the five-sprint language sweep. Move to messages when reused across routes or locales.",
+      "hardcodedCopyWarningsReviewed": 5,
+      "sha256": "dde009d68955074530a294c3bfce9d76f9e93d418b9add93ac48d55b93565988"
+    },
+    {
+      "file": "apps/web/src/components/chat/VideoCallLayout.tsx",
+      "cluster": "Shared UI",
+      "owner": "Vietnamese-German Localization Specialist",
+      "reviewDate": "2026-05-13",
+      "reason": "Route-local learner-facing copy reviewed for tone, encoding, and terminology during the five-sprint language sweep. Move to messages when reused across routes or locales.",
+      "hardcodedCopyWarningsReviewed": 5,
+      "sha256": "0c58302adbe064ad2f5fe5e6cb987d46eca791e8060a18f380ad761df2a72096"
+    },
+    {
+      "file": "apps/web/src/components/chat/VoiceInput.tsx",
+      "cluster": "Shared UI",
+      "owner": "Vietnamese-German Localization Specialist",
+      "reviewDate": "2026-05-13",
+      "reason": "Route-local learner-facing copy reviewed for tone, encoding, and terminology during the five-sprint language sweep. Move to messages when reused across routes or locales.",
+      "hardcodedCopyWarningsReviewed": 1,
+      "sha256": "fd1d2e224e117453f7af7a1ae4b4be101efb04e3d972bbc33943443e9d16c4c4"
+    },
+    {
+      "file": "apps/web/src/components/gamification/quest-visuals.tsx",
+      "cluster": "Shared UI",
+      "owner": "Vietnamese-German Localization Specialist",
+      "reviewDate": "2026-05-13",
+      "reason": "Route-local learner-facing copy reviewed for tone, encoding, and terminology during the five-sprint language sweep. Move to messages when reused across routes or locales.",
+      "hardcodedCopyWarningsReviewed": 1,
+      "sha256": "8d6434a5d296776e8452ab6a789cf894e8b87c78fed727b77bfbc2890b59b89b"
+    },
+    {
+      "file": "apps/web/src/components/gamification/result-reward-loop.tsx",
+      "cluster": "Shared UI",
+      "owner": "Vietnamese-German Localization Specialist",
+      "reviewDate": "2026-05-13",
+      "reason": "Route-local learner-facing copy reviewed for tone, encoding, and terminology during the five-sprint language sweep. Move to messages when reused across routes or locales.",
+      "hardcodedCopyWarningsReviewed": 16,
+      "sha256": "d672b04990b00f6667c2c218421f048266e12c2412747a48413195a38d9f2030"
+    },
+    {
+      "file": "apps/web/src/components/gamification/shop-catalog-client.tsx",
+      "cluster": "Shared UI",
+      "owner": "Vietnamese-German Localization Specialist",
+      "reviewDate": "2026-05-13",
+      "reason": "Route-local learner-facing copy reviewed for tone, encoding, and terminology during the five-sprint language sweep. Move to messages when reused across routes or locales.",
+      "hardcodedCopyWarningsReviewed": 23,
+      "sha256": "4f4706cb28190b912ef59d5fdc9c71e16cc29c78bd23c0eb449a2b2ae2ff33bf"
+    },
+    {
+      "file": "apps/web/src/components/leaderboard/LeaderboardClient.tsx",
+      "cluster": "Shared UI",
+      "owner": "Vietnamese-German Localization Specialist",
+      "reviewDate": "2026-05-13",
+      "reason": "Route-local learner-facing copy reviewed for tone, encoding, and terminology during the five-sprint language sweep. Move to messages when reused across routes or locales.",
+      "hardcodedCopyWarningsReviewed": 7,
+      "sha256": "995936b77d2a2af6b8070859dd9e01800531ce2a8ea6468b18147109d4e19c90"
+    },
+    {
+      "file": "apps/web/src/components/session/exercises/IntroCard.tsx",
+      "cluster": "Shared UI",
+      "owner": "Vietnamese-German Localization Specialist",
+      "reviewDate": "2026-05-13",
+      "reason": "Route-local learner-facing copy reviewed for tone, encoding, and terminology during the five-sprint language sweep. Move to messages when reused across routes or locales.",
+      "hardcodedCopyWarningsReviewed": 2,
+      "sha256": "966a1a2a7d95f4fdf4f340805855cd7cadffe58344b1a7a4220efc2f38836fef"
+    },
+    {
+      "file": "apps/web/src/components/session/exercises/MultipleChoice.tsx",
+      "cluster": "Shared UI",
+      "owner": "Vietnamese-German Localization Specialist",
+      "reviewDate": "2026-05-13",
+      "reason": "Route-local learner-facing copy reviewed for tone, encoding, and terminology during the five-sprint language sweep. Move to messages when reused across routes or locales.",
+      "hardcodedCopyWarningsReviewed": 6,
+      "sha256": "05f394f571715b1cff8d261c0d40683f69b11e224d1407679cdb86b40a868a36"
+    },
+    {
+      "file": "apps/web/src/components/session/exercises/TypingExercise.tsx",
+      "cluster": "Shared UI",
+      "owner": "Vietnamese-German Localization Specialist",
+      "reviewDate": "2026-05-13",
+      "reason": "Route-local learner-facing copy reviewed for tone, encoding, and terminology during the five-sprint language sweep. Move to messages when reused across routes or locales.",
+      "hardcodedCopyWarningsReviewed": 5,
+      "sha256": "11b3900b60b74e3f40a7dcb64631b8de09567824f47ce366ed4543fdb7857042"
+    },
+    {
+      "file": "apps/web/src/components/session/SessionPlayer.tsx",
+      "cluster": "Shared UI",
+      "owner": "Vietnamese-German Localization Specialist",
+      "reviewDate": "2026-05-13",
+      "reason": "Route-local learner-facing copy reviewed for tone, encoding, and terminology during the five-sprint language sweep. Move to messages when reused across routes or locales.",
+      "hardcodedCopyWarningsReviewed": 2,
+      "sha256": "30670a6f713147765a812482ad3236ab3dfd4ff2aec26bf062b7d2ab03874b4c"
+    },
+    {
+      "file": "apps/web/src/components/session/SessionResultScreen.tsx",
+      "cluster": "Shared UI",
+      "owner": "Vietnamese-German Localization Specialist",
+      "reviewDate": "2026-05-13",
+      "reason": "Route-local learner-facing copy reviewed for tone, encoding, and terminology during the five-sprint language sweep. Move to messages when reused across routes or locales.",
+      "hardcodedCopyWarningsReviewed": 2,
+      "sha256": "4d1d53a2b2eaeaa39848ce694a001b9b206ecf312b6dbad49164a3828a9cfb7a"
+    },
+    {
+      "file": "apps/web/src/components/shared/InstallPrompt.tsx",
+      "cluster": "Shared UI",
+      "owner": "Vietnamese-German Localization Specialist",
+      "reviewDate": "2026-05-13",
+      "reason": "Route-local learner-facing copy reviewed for tone, encoding, and terminology during the five-sprint language sweep. Move to messages when reused across routes or locales.",
+      "hardcodedCopyWarningsReviewed": 1,
+      "sha256": "cec8a0a471f388f3b95f2ee8dc5ba936ac571ddf2236e0a3f6d30295327adb38"
+    },
+    {
+      "file": "apps/web/src/components/shared/LanguageSwitcher.tsx",
+      "cluster": "Shared UI",
+      "owner": "Vietnamese-German Localization Specialist",
+      "reviewDate": "2026-05-13",
+      "reason": "Route-local learner-facing copy reviewed for tone, encoding, and terminology during the five-sprint language sweep. Move to messages when reused across routes or locales.",
+      "hardcodedCopyWarningsReviewed": 1,
+      "sha256": "8cd8a4755d6d9a9bf65cd9a72aa98e62347dc4077ad96718a299398f3b7a7cdb"
+    },
+    {
+      "file": "apps/web/src/components/shared/mascot-image.tsx",
+      "cluster": "Shared UI",
+      "owner": "Vietnamese-German Localization Specialist",
+      "reviewDate": "2026-05-13",
+      "reason": "Route-local learner-facing copy reviewed for tone, encoding, and terminology during the five-sprint language sweep. Move to messages when reused across routes or locales.",
+      "hardcodedCopyWarningsReviewed": 3,
+      "sha256": "ac91d3e572d6bc322640a7a635edf5f85d62fd33c3f4aa3530b0ed97681fe9a9"
+    },
+    {
+      "file": "apps/web/src/components/shared/mobile-shell.tsx",
+      "cluster": "Shared UI",
+      "owner": "Vietnamese-German Localization Specialist",
+      "reviewDate": "2026-05-13",
+      "reason": "Route-local learner-facing copy reviewed for tone, encoding, and terminology during the five-sprint language sweep. Move to messages when reused across routes or locales.",
+      "hardcodedCopyWarningsReviewed": 2,
+      "sha256": "6d8aae39bf863bc23ded3147b51c29fc2084dcdc36652d2190647cc797899bc4"
+    },
+    {
+      "file": "apps/web/src/components/srs/flashcard.tsx",
+      "cluster": "Shared UI",
+      "owner": "Vietnamese-German Localization Specialist",
+      "reviewDate": "2026-05-13",
+      "reason": "Route-local learner-facing copy reviewed for tone, encoding, and terminology during the five-sprint language sweep. Move to messages when reused across routes or locales.",
+      "hardcodedCopyWarningsReviewed": 3,
+      "sha256": "7e6043cf1ee019b3a02b89109d6a26d46508fe9eb5d87c1f8d1fe1c583438a11"
+    },
+    {
+      "file": "apps/web/src/components/srs/rating-buttons.tsx",
+      "cluster": "Shared UI",
+      "owner": "Vietnamese-German Localization Specialist",
+      "reviewDate": "2026-05-13",
+      "reason": "Route-local learner-facing copy reviewed for tone, encoding, and terminology during the five-sprint language sweep. Move to messages when reused across routes or locales.",
+      "hardcodedCopyWarningsReviewed": 12,
+      "sha256": "108875da629d38d27f3dd02b57da0f3ae5fb18b2d5c01d61c9cf94f3ea887afe"
+    },
+    {
+      "file": "apps/web/src/components/ui/audio-player.tsx",
+      "cluster": "Shared UI",
+      "owner": "Vietnamese-German Localization Specialist",
+      "reviewDate": "2026-05-13",
+      "reason": "Route-local learner-facing copy reviewed for tone, encoding, and terminology during the five-sprint language sweep. Move to messages when reused across routes or locales.",
+      "hardcodedCopyWarningsReviewed": 1,
+      "sha256": "d7f9c5ce087c4cf8acd391e38e99aea1802b31456389f40fb89be93940520436"
+    },
+    {
+      "file": "apps/web/src/app/(learn)/grammar/[topicSlug]/page.tsx",
+      "cluster": "Vocabulary/Grammar",
+      "owner": "Vietnamese-German Localization Specialist",
+      "reviewDate": "2026-05-13",
+      "reason": "Route-local learner-facing copy reviewed for tone, encoding, and terminology during the five-sprint language sweep. Move to messages when reused across routes or locales.",
+      "hardcodedCopyWarningsReviewed": 5,
+      "sha256": "5a49a04fca29efc232c1a8b6c0543a984220deb54895aa35f74989f24a8328c1"
+    },
+    {
+      "file": "apps/web/src/app/(learn)/grammar/page.tsx",
+      "cluster": "Vocabulary/Grammar",
+      "owner": "Vietnamese-German Localization Specialist",
+      "reviewDate": "2026-05-13",
+      "reason": "Route-local learner-facing copy reviewed for tone, encoding, and terminology during the five-sprint language sweep. Move to messages when reused across routes or locales.",
+      "hardcodedCopyWarningsReviewed": 1,
+      "sha256": "7f319e6d16e0fb19280320b7248a2dee09a79258a6e2fe6106699b2d81687d16"
+    },
+    {
+      "file": "apps/web/src/app/(learn)/vocabulary/page.tsx",
+      "cluster": "Vocabulary/Grammar",
+      "owner": "Vietnamese-German Localization Specialist",
+      "reviewDate": "2026-05-13",
+      "reason": "Route-local learner-facing copy reviewed for tone, encoding, and terminology during the five-sprint language sweep. Move to messages when reused across routes or locales.",
+      "hardcodedCopyWarningsReviewed": 2,
+      "sha256": "8ccff367e2c943ceeb822609c72dbe668d4187662b722d2679624beea253ecee"
+    },
+    {
+      "file": "apps/web/src/app/(learn)/vocabulary/practice/[type]/page.tsx",
+      "cluster": "Vocabulary/Grammar",
+      "owner": "Vietnamese-German Localization Specialist",
+      "reviewDate": "2026-05-13",
+      "reason": "Route-local learner-facing copy reviewed for tone, encoding, and terminology during the five-sprint language sweep. Move to messages when reused across routes or locales.",
+      "hardcodedCopyWarningsReviewed": 3,
+      "sha256": "456a87a741d319669044f32034c8faf0134179e3cd4952d072072a1129d401b4"
+    },
+    {
+      "file": "apps/web/src/app/(learn)/vocabulary/practice/page.tsx",
+      "cluster": "Vocabulary/Grammar",
+      "owner": "Vietnamese-German Localization Specialist",
+      "reviewDate": "2026-05-13",
+      "reason": "Route-local learner-facing copy reviewed for tone, encoding, and terminology during the five-sprint language sweep. Move to messages when reused across routes or locales.",
+      "hardcodedCopyWarningsReviewed": 2,
+      "sha256": "e19d49185d9d9b066a1e7aaa42d8282e8b14c71f695dfea9dd4684a3c4fba035"
+    },
+    {
+      "file": "apps/web/src/app/admin/vocabulary/VocabClient.tsx",
+      "cluster": "Vocabulary/Grammar",
+      "owner": "Vietnamese-German Localization Specialist",
+      "reviewDate": "2026-05-13",
+      "reason": "Route-local learner-facing copy reviewed for tone, encoding, and terminology during the five-sprint language sweep. Move to messages when reused across routes or locales.",
+      "hardcodedCopyWarningsReviewed": 2,
+      "sha256": "bd222e7aadd0dadf68c9825fb6843c639a6a570c8027e7129bdb258c6c8978ad"
+    },
+    {
+      "file": "apps/web/src/components/grammar/ExerciseRenderer.tsx",
+      "cluster": "Vocabulary/Grammar",
+      "owner": "Vietnamese-German Localization Specialist",
+      "reviewDate": "2026-05-13",
+      "reason": "Route-local learner-facing copy reviewed for tone, encoding, and terminology during the five-sprint language sweep. Move to messages when reused across routes or locales.",
+      "hardcodedCopyWarningsReviewed": 18,
+      "sha256": "1a51e4451666a294e26d0ec4dc7a27d5e9af42b9a92b6532742098e1f9f8a4c4"
+    },
+    {
+      "file": "apps/web/src/components/grammar/GrammarClient.tsx",
+      "cluster": "Vocabulary/Grammar",
+      "owner": "Vietnamese-German Localization Specialist",
+      "reviewDate": "2026-05-13",
+      "reason": "Route-local learner-facing copy reviewed for tone, encoding, and terminology during the five-sprint language sweep. Move to messages when reused across routes or locales.",
+      "hardcodedCopyWarningsReviewed": 4,
+      "sha256": "37de07d52ef585d000e72001716a6182077089c23cfca8c6baa2b7c1156b66b5"
+    },
+    {
+      "file": "apps/web/src/components/grammar/GrammarMocktestClient.tsx",
+      "cluster": "Vocabulary/Grammar",
+      "owner": "Vietnamese-German Localization Specialist",
+      "reviewDate": "2026-05-13",
+      "reason": "Route-local learner-facing copy reviewed for tone, encoding, and terminology during the five-sprint language sweep. Move to messages when reused across routes or locales.",
+      "hardcodedCopyWarningsReviewed": 42,
+      "sha256": "55b38951668285fac63870b9abc5e4c2ac982a923f233202bf163f0851219a83"
+    },
+    {
+      "file": "apps/web/src/components/grammar/LessonPlayer.tsx",
+      "cluster": "Vocabulary/Grammar",
+      "owner": "Vietnamese-German Localization Specialist",
+      "reviewDate": "2026-05-13",
+      "reason": "Route-local learner-facing copy reviewed for tone, encoding, and terminology during the five-sprint language sweep. Move to messages when reused across routes or locales.",
+      "hardcodedCopyWarningsReviewed": 8,
+      "sha256": "499bf3a07201e585aba56405569f113b33259b3bb3bce59d90c8a106d9adef26"
+    },
+    {
+      "file": "apps/web/src/components/grammar/TheoryRenderer.tsx",
+      "cluster": "Vocabulary/Grammar",
+      "owner": "Vietnamese-German Localization Specialist",
+      "reviewDate": "2026-05-13",
+      "reason": "Route-local learner-facing copy reviewed for tone, encoding, and terminology during the five-sprint language sweep. Move to messages when reused across routes or locales.",
+      "hardcodedCopyWarningsReviewed": 9,
+      "sha256": "fef7326e0876dffcdb6db5688dcbdc2a069a48d51bbf0a2153ad53a3641a790d"
+    },
+    {
+      "file": "apps/web/src/components/vocabulary/exercises/bottom-feedback.tsx",
+      "cluster": "Vocabulary/Grammar",
+      "owner": "Vietnamese-German Localization Specialist",
+      "reviewDate": "2026-05-13",
+      "reason": "Route-local learner-facing copy reviewed for tone, encoding, and terminology during the five-sprint language sweep. Move to messages when reused across routes or locales.",
+      "hardcodedCopyWarningsReviewed": 1,
+      "sha256": "7de451f3d6bf424a8c98c9809e6df8366a0787cb5f374164d71323cdad5dba6a"
+    },
+    {
+      "file": "apps/web/src/components/vocabulary/exercises/cloze-exercise.tsx",
+      "cluster": "Vocabulary/Grammar",
+      "owner": "Vietnamese-German Localization Specialist",
+      "reviewDate": "2026-05-13",
+      "reason": "Route-local learner-facing copy reviewed for tone, encoding, and terminology during the five-sprint language sweep. Move to messages when reused across routes or locales.",
+      "hardcodedCopyWarningsReviewed": 5,
+      "sha256": "b8620ac69e09cd1b59940e4113b9b36e830d6a7406e11479cab3799b4a4fb4a3"
+    },
+    {
+      "file": "apps/web/src/components/vocabulary/exercises/exercise-player-wrapper.tsx",
+      "cluster": "Vocabulary/Grammar",
+      "owner": "Vietnamese-German Localization Specialist",
+      "reviewDate": "2026-05-13",
+      "reason": "Route-local learner-facing copy reviewed for tone, encoding, and terminology during the five-sprint language sweep. Move to messages when reused across routes or locales.",
+      "hardcodedCopyWarningsReviewed": 3,
+      "sha256": "ceeb6db21baeb533512139721814eda47d3f5e6290af425c109919f6032134a6"
+    },
+    {
+      "file": "apps/web/src/components/vocabulary/exercises/exercise-results.tsx",
+      "cluster": "Vocabulary/Grammar",
+      "owner": "Vietnamese-German Localization Specialist",
+      "reviewDate": "2026-05-13",
+      "reason": "Route-local learner-facing copy reviewed for tone, encoding, and terminology during the five-sprint language sweep. Move to messages when reused across routes or locales.",
+      "hardcodedCopyWarningsReviewed": 48,
+      "sha256": "1cd447b24da9472c499f0429e9f5dfc598ff12c8e43d73680fed461b02faa4bf"
+    },
+    {
+      "file": "apps/web/src/components/vocabulary/exercises/matching-exercise.tsx",
+      "cluster": "Vocabulary/Grammar",
+      "owner": "Vietnamese-German Localization Specialist",
+      "reviewDate": "2026-05-13",
+      "reason": "Route-local learner-facing copy reviewed for tone, encoding, and terminology during the five-sprint language sweep. Move to messages when reused across routes or locales.",
+      "hardcodedCopyWarningsReviewed": 1,
+      "sha256": "8641889216e61f4b095f2e35ba5526f415fa7a4a45781091caa4054021147f52"
+    },
+    {
+      "file": "apps/web/src/components/vocabulary/exercises/mc-exercise.tsx",
+      "cluster": "Vocabulary/Grammar",
+      "owner": "Vietnamese-German Localization Specialist",
+      "reviewDate": "2026-05-13",
+      "reason": "Route-local learner-facing copy reviewed for tone, encoding, and terminology during the five-sprint language sweep. Move to messages when reused across routes or locales.",
+      "hardcodedCopyWarningsReviewed": 2,
+      "sha256": "ec0ca9aa9da8069b732f04989520e828805c2edff58ac94d6cf7601967f124e7"
+    },
+    {
+      "file": "apps/web/src/components/vocabulary/exercises/mixed-exercise.tsx",
+      "cluster": "Vocabulary/Grammar",
+      "owner": "Vietnamese-German Localization Specialist",
+      "reviewDate": "2026-05-13",
+      "reason": "Route-local learner-facing copy reviewed for tone, encoding, and terminology during the five-sprint language sweep. Move to messages when reused across routes or locales.",
+      "hardcodedCopyWarningsReviewed": 4,
+      "sha256": "03334a21a22bf0a7382bcbcaa6eb43be5257cf4074a03337ca3aefa5e9f16d40"
+    },
+    {
+      "file": "apps/web/src/components/vocabulary/exercises/scramble-exercise.tsx",
+      "cluster": "Vocabulary/Grammar",
+      "owner": "Vietnamese-German Localization Specialist",
+      "reviewDate": "2026-05-13",
+      "reason": "Route-local learner-facing copy reviewed for tone, encoding, and terminology during the five-sprint language sweep. Move to messages when reused across routes or locales.",
+      "hardcodedCopyWarningsReviewed": 3,
+      "sha256": "38746dc5b510f46e37f8b560984cdeb73578b8142022be36a25f081d160fda5e"
+    },
+    {
+      "file": "apps/web/src/components/vocabulary/exercises/spelling-exercise.tsx",
+      "cluster": "Vocabulary/Grammar",
+      "owner": "Vietnamese-German Localization Specialist",
+      "reviewDate": "2026-05-13",
+      "reason": "Route-local learner-facing copy reviewed for tone, encoding, and terminology during the five-sprint language sweep. Move to messages when reused across routes or locales.",
+      "hardcodedCopyWarningsReviewed": 4,
+      "sha256": "597ff3d0d1fd337abb272cf2071f08a47acabc9c4a7def1f237389887ba386b9"
+    },
+    {
+      "file": "apps/web/src/components/vocabulary/practice-hub.tsx",
+      "cluster": "Vocabulary/Grammar",
+      "owner": "Vietnamese-German Localization Specialist",
+      "reviewDate": "2026-05-13",
+      "reason": "Route-local learner-facing copy reviewed for tone, encoding, and terminology during the five-sprint language sweep. Move to messages when reused across routes or locales.",
+      "hardcodedCopyWarningsReviewed": 1,
+      "sha256": "50e8175c5a7b4d27d2f24a9f27c76bf9d1126f0358e5360cecf5dd7648333067"
+    },
+    {
+      "file": "apps/web/src/components/vocabulary/vocabulary-client.tsx",
+      "cluster": "Vocabulary/Grammar",
+      "owner": "Vietnamese-German Localization Specialist",
+      "reviewDate": "2026-05-13",
+      "reason": "Route-local learner-facing copy reviewed for tone, encoding, and terminology during the five-sprint language sweep. Move to messages when reused across routes or locales.",
+      "hardcodedCopyWarningsReviewed": 16,
+      "sha256": "dc9e8797b7802c2ca1322069db03f32a95ed7ecccd7c413619315d2ca9236376"
+    },
+    {
+      "file": "apps/web/src/components/vocabulary/vocabulary-types.tsx",
+      "cluster": "Vocabulary/Grammar",
+      "owner": "Vietnamese-German Localization Specialist",
+      "reviewDate": "2026-05-13",
+      "reason": "Route-local learner-facing copy reviewed for tone, encoding, and terminology during the five-sprint language sweep. Move to messages when reused across routes or locales.",
+      "hardcodedCopyWarningsReviewed": 1,
+      "sha256": "6d0c86c0610998d31303d59ef801fdf9340578ec9e1dc6e7c8e52d4f7c761fbf"
+    }
+  ]
+}

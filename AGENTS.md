@@ -20,10 +20,14 @@ For every task:
 8. Execute from the primary role's mission, authority, deliverables, and quality checklist.
 9. If the task is outside the selected role's authority, stop and reroute to the correct role or explicitly coordinate with a support role.
 10. Before finalizing, apply the primary role's quality checklist.
+11. After completing a task, propose the next concrete step.
+12. If the final handoff assigns work to Antigravity or Anti, include a ready-to-use prompt for that agent.
 
 ## Enforcement
 
 - If the primary profile has not been read, the task has not started.
 - If the task scope changes, rerun the role gate before continuing.
+- A task closeout is incomplete if it does not propose a next step.
+- A handoff to Antigravity or Anti is incomplete if it does not include the prompt to give that agent.
 - Use `.agents/workflows/task-startup-checklist.md` as the short SOP for task startup.
 - The full operating model lives in `.agents/workflows/company-operating-model.md`.

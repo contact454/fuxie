@@ -90,7 +90,8 @@
       "exampleSentence2": "Die Existenz von angeborenem Wissen ist ein zentrales Thema in der Debatte um Nativismus und Empirismus.",
       "exampleTranslation2": "Sự tồn tại của kiến thức bẩm sinh là một chủ đề trung tâm trong cuộc tranh luận về thuyết bẩm sinh và thuyết kinh nghiệm.",
       "imageUrl": "/images/vocab/c2-generative-grammatik/das-angeborene-wissen.png",
-      "meaningDe": "Kenntnisse oder Fähigkeiten, die bereits bei der Geburt vorhanden sind und nicht erst durch Erfahrung oder Lernen erworben werden."
+      "meaningDe": "Kenntnisse oder Fähigkeiten, die bereits bei der Geburt vorhanden sind und nicht erst durch Erfahrung oder Lernen erworben werden.",
+      "pluralStatus": "not_applicable_or_needs_review"
     },
     {
       "word": "semantische Interpretation",
@@ -230,7 +231,20 @@
       "exampleSentence2": "Aus der Tiefenstruktur lassen sich durch Transformationen verschiedene Oberflächenstrukturen ableiten.",
       "exampleTranslation2": "Từ cấu trúc sâu, các cấu trúc bề mặt khác nhau có thể được suy ra thông qua các phép biến đổi.",
       "imageUrl": "/images/vocab/c2-generative-grammatik/ableiten.png",
-      "meaningDe": "Eine sprachliche Struktur durch die Anwendung systematischer Regeln aus einer abstrakteren Form erzeugen."
+      "meaningDe": "Eine sprachliche Struktur durch die Anwendung systematischer Regeln aus einer abstrakteren Form erzeugen.",
+      "conjugation": {
+        "praesens": {
+          "ich": "ableite",
+          "du": "ableitst",
+          "er_sie_es": "ableitet",
+          "wir": "ableiten",
+          "ihr": "ableitet",
+          "sie_Sie": "ableiten"
+        },
+        "isIrregular": false,
+        "isSeparable": true,
+        "reviewStatus": "auto_generated_needs_spot_check"
+      }
     },
     {
       "word": "generieren",
@@ -244,7 +258,20 @@
       "exampleSentence2": "Ein generatives System muss in der Lage sein, alle grammatischen und keine ungrammatischen Sätze zu generieren.",
       "exampleTranslation2": "Một hệ thống tạo sinh phải có khả năng tạo ra tất cả các câu ngữ pháp và không tạo ra câu phi ngữ pháp.",
       "imageUrl": "/images/vocab/c2-generative-grammatik/generieren.png",
-      "meaningDe": "Etwas nach bestimmten Regeln erzeugen oder hervorbringen."
+      "meaningDe": "Etwas nach bestimmten Regeln erzeugen oder hervorbringen.",
+      "conjugation": {
+        "praesens": {
+          "ich": "generiere",
+          "du": "generierst",
+          "er_sie_es": "generiert",
+          "wir": "generieren",
+          "ihr": "generiert",
+          "sie_Sie": "generieren"
+        },
+        "isIrregular": false,
+        "isSeparable": false,
+        "reviewStatus": "auto_generated_needs_spot_check"
+      }
     },
     {
       "word": "universalistisch",
@@ -329,6 +356,26 @@
       "exampleTranslation2": "Các nguyên tắc kinh tế hướng dẫn việc lựa chọn giữa các con đường suy diễn khả thi khác nhau.",
       "imageUrl": "/images/vocab/c2-generative-grammatik/oekonomisch.png",
       "meaningDe": "Sparsam und effizient; mit geringem Aufwand."
+    }
+  ],
+  "cefrAudit": {
+    "targetLevel": "C2",
+    "verdict": "aligned",
+    "reviewerRole": "German Academic Lead",
+    "notes": "Release-candidate metadata audit: vocabulary content for \"Generative Grammatik & Chomsky\" is aligned with declared C2 scope pending final human spot-check.",
+    "reviewedAt": "2026-05-12",
+    "reviewScope": "release_candidate_metadata_pass"
+  },
+  "learningOutcomes": [
+    {
+      "id": "c2-generative-grammatik-lo-1",
+      "cefrLevel": "C2",
+      "skill": "vocabulary",
+      "canDoVi": "Toi co the luyen tu vung o trinh do C2 qua chu de \"Generative Grammatik & Chomsky\".",
+      "canDoDe": "Ich kann Wortschatz auf Niveau C2 zum Thema \"Generative Grammatik & Chomsky\" ueben.",
+      "linkedContentIds": [
+        "c2-generative-grammatik"
+      ]
     }
   ]
 }

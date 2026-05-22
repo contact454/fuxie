@@ -1,22 +1,35 @@
 import { useState, useRef, useCallback, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Mic, Square, Loader2, Check, AlertCircle, X, HelpCircle, Volume2, ArrowRight, RotateCcw } from 'lucide-react'
-import { FUXIE_3D_ASSETS, FuxieRoleMascot } from '@/components/gamification/quest-visuals'
+import {
+  FUXIE_3D_ASSETS,
+  FuxieRoleMascot,
+  GameplayFeedbackMoment,
+  QuestCheckpointRail,
+} from '@/components/gamification/quest-visuals'
 import styles from './speaking.module.css'
 import type { NachsprechenSentence, NachsprechenConfig, WordResult, EvaluationResult, RecordingState } from './types'
 import { speakWithBrowserTTS, cancelBrowserTTS } from '@/lib/audio/browser-tts'
 import { startWaveformAnimation } from '@/lib/audio/waveform'
+import { trackClientAnalyticsEvent } from '@/lib/analytics/client-events'
+import {
+  getSpeakingQuestCheckpoint,
+  type SpeakingQuestEpisode,
+} from '@/lib/gamification/speaking-quest-episode'
 
 interface Props {
   sentences: NachsprechenSentence[]
   config: NachsprechenConfig
   lessonTitle: string
   lessonId: string
+  cefrLevel?: string
+  topicSlug?: string
+  questEpisode?: SpeakingQuestEpisode
   onComplete: (score: number) => void
   onClose: () => void
 }
 
-export default function NachsprechenPlayer({ sentences, config, lessonTitle, lessonId, onComplete, onClose }: Props) {
+export default function NachsprechenPlayer({ sentences, config, lessonTitle, lessonId, cefrLevel, topicSlug, questEpisode, onComplete, onClose }: Props) {
   const [currentIdx, setCurrentIdx] = useState(0)
   const [state, setState] = useState<RecordingState>('idle')
   const [result, setResult] = useState<EvaluationResult | null>(null)
@@ -40,13 +53,50 @@ export default function NachsprechenPlayer({ sentences, config, lessonTitle, les
   const evaluateAbortRef = useRef<AbortController | null>(null)
   const sentenceRef = useRef<NachsprechenSentence | null>(null)
   const recordingTimeRef = useRef(0)
+  const trackedQuestCheckpointsRef = useRef<Set<string>>(new Set())
 
   const sentence = sentences[currentIdx]
   if (!sentence) return null
   const progress = ((currentIdx) / sentences.length) * 100
+  const activeQuestCheckpoint = questEpisode
+    ? getSpeakingQuestCheckpoint({ episode: questEpisode, currentIndex: currentIdx })
+    : null
+  const activeQuestCheckpointIndex = questEpisode && activeQuestCheckpoint
+    ? questEpisode.checkpoints.findIndex((checkpoint) => checkpoint.id === activeQuestCheckpoint.id)
+    : -1
+  const completedQuestCheckpointIds = questEpisode
+    ? questEpisode.checkpoints
+        .slice(0, Math.max(0, activeQuestCheckpointIndex))
+        .map((checkpoint) => checkpoint.id)
+    : []
 
   sentenceRef.current = sentence
   recordingTimeRef.current = recordingTime
+
+  useEffect(() => {
+    if (!questEpisode || !activeQuestCheckpoint) return
+    if (trackedQuestCheckpointsRef.current.has(activeQuestCheckpoint.id)) return
+    trackedQuestCheckpointsRef.current.add(activeQuestCheckpoint.id)
+    trackClientAnalyticsEvent({
+      eventName: 'quest_episode_checkpoint_reached',
+      source: 'speaking.quest_episode.checkpoint',
+      actionId: questEpisode.episodeId,
+      actionType: 'speaking_submission',
+      level: cefrLevel ?? questEpisode.cefrLevel,
+      skill: 'speaking',
+      metadata: {
+        episodeId: questEpisode.episodeId,
+        skill: 'speaking',
+        lessonId,
+        topicSlug: topicSlug ?? questEpisode.topicSlug,
+        cefrLevel: cefrLevel ?? questEpisode.cefrLevel,
+        checkpointId: activeQuestCheckpoint.id,
+        checkpointCount: questEpisode.checkpoints.length,
+        sentenceCount: sentences.length,
+        exerciseType: 'nachsprechen',
+      },
+    })
+  }, [activeQuestCheckpoint, cefrLevel, lessonId, questEpisode, sentences.length, topicSlug])
 
   const disposeRecordingResources = useCallback(async () => {
     if (timerRef.current) {
@@ -414,9 +464,20 @@ export default function NachsprechenPlayer({ sentences, config, lessonTitle, les
         </div>
       </div>
 
+      {questEpisode && activeQuestCheckpoint && (
+        <QuestCheckpointRail
+          checkpoints={questEpisode.checkpoints}
+          activeId={activeQuestCheckpoint.id}
+          completedIds={completedQuestCheckpointIds}
+          label="Speaking challenge"
+          compact
+          className="mt-3"
+        />
+      )}
+
       {/* Exercise Label */}
       <div style={{ padding: '8px 0 0' }}>
-        <div className={styles.exerciseLabel}>BÀI TẬP</div>
+        <div className={styles.exerciseLabel}>THỬ THÁCH</div>
         <div className={styles.exerciseInstruction}>Nghe và lặp lại câu sau</div>
       </div>
 
@@ -521,7 +582,7 @@ export default function NachsprechenPlayer({ sentences, config, lessonTitle, les
                   alignItems: 'center',
                   gap: '8px',
                   fontSize: '0.9rem',
-                  color: '#991B1B',
+                  color: "var(--color-text-danger)",
                   width: '100%',
                   maxWidth: '400px',
                 }}
@@ -530,7 +591,7 @@ export default function NachsprechenPlayer({ sentences, config, lessonTitle, les
                 <span style={{ flex: 1 }}>{micError}</span>
                 <button 
                   onClick={() => setMicError(null)} 
-                  style={{ background: 'none', border: 'none', cursor: 'pointer', color: '#991B1B', padding: '2px' }}
+                  style={{ background: 'none', border: 'none', cursor: 'pointer', color: "var(--color-text-danger)", padding: '2px' }}
                 >
                   <X size={16} />
                 </button>
@@ -588,6 +649,17 @@ export default function NachsprechenPlayer({ sentences, config, lessonTitle, les
               <div className={styles.resultSubMessage}>{getResultMessage(result.accuracy).sub}</div>
             </div>
           </div>
+
+          {/* Word Chips */}
+          <GameplayFeedbackMoment
+            tone={result.accuracy >= config.minAccuracyToPass ? 'success' : 'retry'}
+            title={result.accuracy >= config.minAccuracyToPass ? 'Refine signal: cau nay da qua' : 'Refine signal: nghe lai roi thu them'}
+            message={result.accuracy >= config.minAccuracyToPass
+              ? 'Diem phat am du tot de di tiep. Em van co the nghe tung tu de lam min hon.'
+              : 'Fuxie da chi ra tu can sua. Thu cham hon mot nhip truoc khi sang cau tiep.'}
+            meta={`${activeQuestCheckpoint?.title ?? 'Refine'} - ${result.accuracy}%`}
+            className="mb-4"
+          />
 
           {/* Word Chips */}
           <div className={styles.wordChips}>

@@ -40,11 +40,13 @@ function mockTx(
     options: {
         itemId?: string
         itemTitle?: string
+        itemCategory?: string
         fulfilledAt?: Date | null
     } = {}
 ) {
     const itemId = options.itemId ?? redeemRow.itemId
     const itemTitle = options.itemTitle ?? redeemRow.itemTitle
+    const itemCategory = options.itemCategory ?? redeemRow.itemCategory
     const fulfilledAt = options.fulfilledAt ?? null
 
     return {
@@ -75,6 +77,9 @@ function mockTx(
                 id: 'ledger-1',
             }),
         },
+        analyticsEvent: {
+            create: vi.fn().mockResolvedValue({ id: 'event-1' }),
+        },
         shopRedeemRequest: {
             findMany: vi.fn().mockResolvedValue([redeemRow]),
             findUnique: vi.fn().mockResolvedValue({
@@ -82,6 +87,7 @@ function mockTx(
                 userId: 'user-1',
                 itemId,
                 itemTitle,
+                itemCategory,
                 cost: redeemRow.cost,
                 status,
                 fulfilledAt,
@@ -159,6 +165,21 @@ describe('admin redeem review', () => {
                 statusReason: 'Approved',
             }),
         }))
+        expect(tx.analyticsEvent.create).toHaveBeenCalledWith({
+            data: expect.objectContaining({
+                userId: 'user-1',
+                role: 'LEARNER',
+                eventName: 'reward_redeem_approved',
+                actionId: 'redeem-1',
+                metadata: expect.objectContaining({
+                    item_id: 'streak-freeze',
+                    category: 'support',
+                    cost: 120,
+                    request_id: 'redeem-1',
+                    duplicate_spend: false,
+                }),
+            }),
+        })
     })
 
     it('rejects approval when learner wallet is no longer enough', async () => {
@@ -191,6 +212,14 @@ describe('admin redeem review', () => {
                 statusReason: 'Rejected',
             }),
         }))
+        expect(tx.analyticsEvent.create).toHaveBeenCalledWith({
+            data: expect.objectContaining({
+                userId: 'user-1',
+                role: 'LEARNER',
+                eventName: 'reward_redeem_rejected',
+                actionId: 'redeem-1',
+            }),
+        })
     })
 
     it('counts requests by status for admin filters', async () => {
@@ -247,6 +276,18 @@ describe('admin redeem review', () => {
                 fulfilledAt: expect.any(Date),
             }),
         }))
+        expect(tx.analyticsEvent.create).toHaveBeenCalledWith({
+            data: expect.objectContaining({
+                userId: 'user-1',
+                role: 'LEARNER',
+                eventName: 'reward_redeem_fulfilled',
+                actionId: 'redeem-1',
+                metadata: expect.objectContaining({
+                    item_id: 'streak-freeze',
+                    automatic_grant: true,
+                }),
+            }),
+        })
     })
 
     it('marks non-safe in-app rewards as fulfilled without applying automatic effects', async () => {
@@ -303,6 +344,34 @@ describe('admin redeem review', () => {
         })).rejects.toMatchObject({
             status: 409,
             code: 'not_pending',
+        } satisfies Partial<AdminRedeemReviewError>)
+    })
+
+    it('blocks approval for locked real gift requests', async () => {
+        await expect(reviewShopRedeemRequest(mockTx(ShopRedeemRequestStatus.PENDING, 150, {
+            itemId: 'fuxie-real-gift-voucher',
+            itemTitle: 'Voucher qua hoc tap',
+            itemCategory: 'real_gift',
+        }), {
+            requestId: 'redeem-1',
+            action: 'approve',
+        })).rejects.toMatchObject({
+            status: 409,
+            code: 'unsupported_reward',
+        } satisfies Partial<AdminRedeemReviewError>)
+    })
+
+    it('requires a reject reason for locked real gift requests', async () => {
+        await expect(reviewShopRedeemRequest(mockTx(ShopRedeemRequestStatus.PENDING, 150, {
+            itemId: 'fuxie-real-gift-voucher',
+            itemTitle: 'Voucher qua hoc tap',
+            itemCategory: 'real_gift',
+        }), {
+            requestId: 'redeem-1',
+            action: 'reject',
+        })).rejects.toMatchObject({
+            status: 400,
+            code: 'missing_reject_reason',
         } satisfies Partial<AdminRedeemReviewError>)
     })
 })

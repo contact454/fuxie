@@ -1,11 +1,14 @@
 import { redirect } from 'next/navigation'
 import { prisma } from '@fuxie/database'
 import { cookies } from 'next/headers'
+import { getTranslations } from 'next-intl/server'
 import { getServerUser } from '@/lib/auth/server-auth'
 import { getVocabularyThemeSrsProgress } from '@/lib/srs/stats'
 import { cacheWrap } from '@/lib/cache/redis'
 import { CourseClientDynamic } from '@/components/course/CourseClientDynamic'
+import { StateShell } from '@/components/gamification/state-shell'
 import { getCourseModuleMap } from '@/lib/content/course-data'
+import type { ReactNode } from 'react'
 
 export const metadata = {
     title: 'Fuxie 🦊 — Kurs',
@@ -58,6 +61,145 @@ const COURSE_SLUGS: Record<CefrLevel, string> = {
 }
 
 const COURSE_DATA_CACHE_TTL_SECONDS = 30
+const VALID_CEFR_LEVELS: CefrLevel[] = ['A1', 'A2', 'B1', 'B2', 'C1', 'C2']
+
+function resolveRequestedCourseLevel(level?: string): CefrLevel | null {
+    const requestedLevel = (level?.toUpperCase() ?? '') as CefrLevel
+    return VALID_CEFR_LEVELS.includes(requestedLevel) ? requestedLevel : null
+}
+
+function isCourseVisualQaFixture(params: { fixture?: string } | undefined) {
+    return process.env.NODE_ENV !== 'production' && params?.fixture === 'visual-qa'
+}
+
+function CourseRouteShell({
+    visualState,
+    children,
+}: {
+    visualState: 'default' | 'empty' | 'loading'
+    children: ReactNode
+}) {
+    return (
+        <div
+            data-route="course"
+            data-slice="slice-1"
+            data-module="02-course"
+            data-visual-state={visualState}
+        >
+            {children}
+        </div>
+    )
+}
+
+function CourseLevelSelector({ level }: { level: CefrLevel }) {
+    return (
+        <div className="max-w-6xl mx-auto px-4 pt-6" data-role="course-level-selector">
+            <div className="flex flex-wrap gap-2">
+                {VALID_CEFR_LEVELS.map(l => (
+                    <a
+                        key={l}
+                        href={`/course?level=${l}`}
+                        className={`px-4 py-2 rounded-full text-sm font-medium transition-colors
+                            ${l === level
+                                ? 'bg-blue-500 text-white shadow-md'
+                                : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+                            }`}
+                    >
+                        {l}
+                    </a>
+                ))}
+            </div>
+        </div>
+    )
+}
+
+function SkeletonBlock({ className }: { className: string }) {
+    return <div className={`animate-pulse rounded-2xl bg-white/70 ${className}`} />
+}
+
+function CourseLoadingVisualState({ level }: { level: CefrLevel }) {
+    return (
+        <section
+            className="min-h-[100dvh] bg-[#F3FBFF] pb-8"
+            data-role="course-loading-state"
+            aria-busy="true"
+            aria-live="polite"
+        >
+            <CourseLevelSelector level={level} />
+
+            <div className="max-w-6xl mx-auto grid gap-5 px-4 py-6 lg:grid-cols-[260px_minmax(0,1fr)]">
+                <aside className="rounded-3xl border border-[#CCE4F0] bg-white/80 p-4 shadow-sm">
+                    <div className="mb-4 h-5 w-28 animate-pulse rounded-full bg-[#CCE4F0]" />
+                    <div className="space-y-3">
+                        {VALID_CEFR_LEVELS.map((item) => (
+                            <div
+                                key={item}
+                                className="flex items-center gap-3 rounded-2xl border border-[#CCE4F0]/70 bg-[#F3FBFF] p-3"
+                            >
+                                <span className="grid h-9 w-9 place-items-center rounded-full bg-white text-xs font-black text-[#3C78A8]">
+                                    {item}
+                                </span>
+                                <SkeletonBlock className="h-3 flex-1" />
+                            </div>
+                        ))}
+                    </div>
+                </aside>
+
+                <div className="min-w-0 space-y-5">
+                    <div className="rounded-3xl border border-[#CCE4F0] bg-white p-5 shadow-sm">
+                        <div className="flex flex-wrap items-center gap-3">
+                            <span className="rounded-full bg-[#2EC4B6] px-3 py-1 text-xs font-black text-white">
+                                {level}
+                            </span>
+                            <SkeletonBlock className="h-5 w-48 max-w-full" />
+                        </div>
+                        <div className="mt-4 grid gap-3 sm:grid-cols-[minmax(0,1fr)_160px]">
+                            <div className="space-y-3">
+                                <SkeletonBlock className="h-8 w-full max-w-xl" />
+                                <SkeletonBlock className="h-4 w-4/5" />
+                                <SkeletonBlock className="h-4 w-2/3" />
+                            </div>
+                            <div className="hidden rounded-2xl bg-[#EAF6FF] p-4 sm:block">
+                                <SkeletonBlock className="h-24 w-full" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        className="rounded-3xl border border-[#CCE4F0] bg-white/90 p-4 shadow-sm"
+                        data-role="course-loading-path"
+                    >
+                        <div className="flex min-h-[140px] items-center gap-4 overflow-hidden">
+                            {Array.from({ length: 5 }).map((_, index) => (
+                                <div key={index} className="flex min-w-[88px] flex-col items-center gap-3">
+                                    <div className="h-14 w-14 animate-pulse rounded-2xl bg-[#CCE4F0]" />
+                                    <SkeletonBlock className="h-3 w-20" />
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+
+                    <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                        {Array.from({ length: 6 }).map((_, index) => (
+                            <div
+                                key={index}
+                                className="rounded-3xl border border-[#CCE4F0] bg-white p-4 shadow-sm"
+                                data-role="course-loading-card"
+                            >
+                                <SkeletonBlock className="h-28 w-full" />
+                                <div className="mt-4 space-y-2">
+                                    <SkeletonBlock className="h-4 w-3/4" />
+                                    <SkeletonBlock className="h-3 w-full" />
+                                    <SkeletonBlock className="h-3 w-2/3" />
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </div>
+        </section>
+    )
+}
 
 async function getCourseData(userId: string, level: CefrLevel, locale: string) {
     return cacheWrap(
@@ -221,20 +363,26 @@ async function getCourseDataUncached(userId: string, level: CefrLevel, locale: s
 export default async function CoursePage({
     searchParams,
 }: {
-    searchParams: Promise<{ level?: string }>
+    searchParams: Promise<{ level?: string; state?: string; fixture?: string }>
 }) {
+    const params = await searchParams
+    const requestedLevel = resolveRequestedCourseLevel(params.level)
+
+    // Determine level: from query param, or user's current level, or A1
+    let level: CefrLevel = requestedLevel ?? 'A1'
+
+    if (isCourseVisualQaFixture(params) && params.state === 'loading') {
+        return (
+            <CourseRouteShell visualState="loading">
+                <CourseLoadingVisualState level={level} />
+            </CourseRouteShell>
+        )
+    }
+
     const serverUser = await getServerUser()
     if (!serverUser) redirect('/login')
 
-    const params = await searchParams
-    const requestedLevel = (params.level?.toUpperCase() ?? '') as CefrLevel
-    const validLevels: CefrLevel[] = ['A1', 'A2', 'B1', 'B2', 'C1', 'C2']
-
-    // Determine level: from query param, or user's current level, or A1
-    let level: CefrLevel = 'A1'
-    if (validLevels.includes(requestedLevel)) {
-        level = requestedLevel
-    } else {
+    if (!requestedLevel) {
         const profile = await prisma.userProfile.findFirst({
             where: { userId: serverUser.userId },
             select: { currentLevel: true },
@@ -248,22 +396,44 @@ export default async function CoursePage({
     try {
         data = await getCourseData(serverUser.userId, level, locale)
     } catch (err: any) {
+        // Throw so the segment-level `error.tsx` boundary renders a
+        // `<StateShell state="error">` with mascot=guard, single
+        // Primary_CTA "Thử lại", and secondary "Về Dashboard" (Req 11.5).
+        // Wrapping with the original message preserves debugging info.
         console.error('[CoursePage] getCourseData error:', err)
-        return (
-            <div className="max-w-4xl mx-auto px-4 py-16 text-center">
-                <p className="text-lg text-red-500 mb-4">Lỗi tải dữ liệu khóa học: {err?.message ?? 'Unknown error'}</p>
-                <pre className="text-xs text-left bg-gray-100 p-4 rounded max-h-40 overflow-auto">{err?.stack ?? ''}</pre>
-            </div>
+        throw new Error(
+            `[course] failed to load level ${level}: ${err?.message ?? 'Unknown error'}`,
+            { cause: err },
         )
     }
 
     if (!data) {
+        // Empty state — no course seeded for the requested level. Per
+        // Req 11.3 the surface renders mascot=guard + a single Primary_CTA.
+        // The level selector below the StateShell stays visible so the
+        // learner can pivot to a level that does have content.
+        const t = await getTranslations('SurfaceStates')
+        const fallbackLevel: CefrLevel =
+            VALID_CEFR_LEVELS.find((candidate) => candidate !== level) ?? 'A1'
         return (
-            <div className="max-w-4xl mx-auto px-4 py-16 text-center">
-                <p className="text-lg text-gray-500 mb-4">Chưa có khóa học {level}. Vui lòng seed data trước.</p>
-                {/* Level selector */}
-                <div className="flex flex-wrap gap-2 justify-center">
-                    {validLevels.map(l => (
+            <CourseRouteShell visualState="empty">
+                <div className="max-w-4xl mx-auto px-4 py-8">
+                <StateShell
+                    surfaceId="course"
+                    state="empty"
+                    title={t('course.emptyTitle')}
+                    message={t('course.emptyMessage')}
+                    primaryCta={{
+                        label: t('course.emptyCtaLabel'),
+                        href: `/course?level=${fallbackLevel}`,
+                    }}
+                />
+
+                {/* Level pivot below the empty hero — keeps the surface
+                    actionable while still satisfying single-Primary_CTA
+                    (Property 8): the level pills are not Primary_CTAs. */}
+                <div className="mt-8 flex flex-wrap gap-2 justify-center">
+                    {VALID_CEFR_LEVELS.map(l => (
                         <a
                             key={l}
                             href={`/course?level=${l}`}
@@ -277,31 +447,15 @@ export default async function CoursePage({
                         </a>
                     ))}
                 </div>
-            </div>
+                </div>
+            </CourseRouteShell>
         )
     }
 
     return (
-        <div>
-            {/* Level selector */}
-            <div className="max-w-6xl mx-auto px-4 pt-6">
-                <div className="flex flex-wrap gap-2">
-                    {validLevels.map(l => (
-                        <a
-                            key={l}
-                            href={`/course?level=${l}`}
-                            className={`px-4 py-2 rounded-full text-sm font-medium transition-colors
-                                ${l === level
-                                    ? 'bg-blue-500 text-white shadow-md'
-                                    : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
-                                }`}
-                        >
-                            {l}
-                        </a>
-                    ))}
-                </div>
-            </div>
+        <CourseRouteShell visualState="default">
+            <CourseLevelSelector level={level} />
             <CourseClientDynamic data={data} />
-        </div>
+        </CourseRouteShell>
     )
 }

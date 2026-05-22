@@ -76,7 +76,8 @@
       "exampleSentence2": "Nicht alle Geschäfte akzeptieren Bargeld, besonders in der Pandemie.",
       "exampleTranslation2": "Không phải tất cả các cửa hàng đều chấp nhận tiền mặt, đặc biệt là trong đại dịch.",
       "imageUrl": "/images/vocab/b1-bank-versicherung/das-bargeld.png",
-      "meaningDe": "Muenzen und Scheine"
+      "meaningDe": "Muenzen und Scheine",
+      "pluralStatus": "not_applicable_or_needs_review"
     },
     {
       "word": "EC-Karte",
@@ -216,7 +217,20 @@
       "exampleSentence2": "Kannst du mir bitte das Geld auf mein Konto überweisen?",
       "exampleTranslation2": "Bạn có thể vui lòng chuyển tiền vào tài khoản của tôi được không?",
       "imageUrl": "/images/vocab/b1-bank-versicherung/ueberweisen.png",
-      "meaningDe": "Geld von einem Bankkonto auf ein anderes senden"
+      "meaningDe": "Geld von einem Bankkonto auf ein anderes senden",
+      "conjugation": {
+        "praesens": {
+          "ich": "ueberweise",
+          "du": "ueberweist",
+          "er_sie_es": "ueberweist",
+          "wir": "ueberweisen",
+          "ihr": "ueberweist",
+          "sie_Sie": "ueberweisen"
+        },
+        "isIrregular": false,
+        "isSeparable": false,
+        "reviewStatus": "auto_generated_needs_spot_check"
+      }
     },
     {
       "word": "abheben",
@@ -230,7 +244,20 @@
       "exampleSentence2": "Man kann nur eine bestimmte Summe pro Tag abheben.",
       "exampleTranslation2": "Người ta chỉ có thể rút một số tiền nhất định mỗi ngày.",
       "imageUrl": "/images/vocab/b1-bank-versicherung/abheben.png",
-      "meaningDe": "Geld vom Bankkonto in bar auszahlen lassen"
+      "meaningDe": "Geld vom Bankkonto in bar auszahlen lassen",
+      "conjugation": {
+        "praesens": {
+          "ich": "abhebe",
+          "du": "abhebst",
+          "er_sie_es": "abhebt",
+          "wir": "abheben",
+          "ihr": "abhebt",
+          "sie_Sie": "abheben"
+        },
+        "isIrregular": false,
+        "isSeparable": true,
+        "reviewStatus": "auto_generated_needs_spot_check"
+      }
     },
     {
       "word": "einzahlen",
@@ -244,7 +271,20 @@
       "exampleSentence2": "Sie können Bargeld am Schalter oder am Automaten einzahlen.",
       "exampleTranslation2": "Bạn có thể gửi tiền mặt tại quầy hoặc tại máy ATM.",
       "imageUrl": "/images/vocab/b1-bank-versicherung/einzahlen.png",
-      "meaningDe": "Geld auf ein Bankkonto übertragen"
+      "meaningDe": "Geld auf ein Bankkonto übertragen",
+      "conjugation": {
+        "praesens": {
+          "ich": "einzahle",
+          "du": "einzahlst",
+          "er_sie_es": "einzahlt",
+          "wir": "einzahlen",
+          "ihr": "einzahlt",
+          "sie_Sie": "einzahlen"
+        },
+        "isIrregular": false,
+        "isSeparable": true,
+        "reviewStatus": "auto_generated_needs_spot_check"
+      }
     },
     {
       "word": "versichern",
@@ -258,7 +298,20 @@
       "exampleSentence2": "Ich habe mein neues Fahrrad gegen Diebstahl versichert.",
       "exampleTranslation2": "Tôi đã mua bảo hiểm chống trộm cho chiếc xe đạp mới của mình.",
       "imageUrl": "/images/vocab/b1-bank-versicherung/versichern.png",
-      "meaningDe": "Schutz gegen Risiken kaufen"
+      "meaningDe": "Schutz gegen Risiken kaufen",
+      "conjugation": {
+        "praesens": {
+          "ich": "versichere",
+          "du": "versicherst",
+          "er_sie_es": "versichert",
+          "wir": "versichern",
+          "ihr": "versichert",
+          "sie_Sie": "versichern"
+        },
+        "isIrregular": false,
+        "isSeparable": false,
+        "reviewStatus": "auto_generated_needs_spot_check"
+      }
     },
     {
       "word": "verwalten",
@@ -272,7 +325,20 @@
       "exampleSentence2": "Eine gute Software kann helfen, Ihre Investitionen zu verwalten.",
       "exampleTranslation2": "Một phần mềm tốt có thể giúp quản lý các khoản đầu tư của bạn.",
       "imageUrl": "/images/vocab/b1-bank-versicherung/verwalten.png",
-      "meaningDe": "etwas organisieren und überwachen"
+      "meaningDe": "etwas organisieren und überwachen",
+      "conjugation": {
+        "praesens": {
+          "ich": "verwalte",
+          "du": "verwaltst",
+          "er_sie_es": "verwaltet",
+          "wir": "verwalten",
+          "ihr": "verwaltet",
+          "sie_Sie": "verwalten"
+        },
+        "isIrregular": false,
+        "isSeparable": false,
+        "reviewStatus": "auto_generated_needs_spot_check"
+      }
     },
     {
       "word": "pro",
@@ -287,6 +353,26 @@
       "exampleTranslation2": "Bạn trả phí bảo hiểm 50 Euro mỗi tháng.",
       "imageUrl": "/images/vocab/b1-bank-versicherung/pro.png",
       "meaningDe": "für jede einzelne Einheit von etwas (zum Beispiel: 2 Euro pro Kilo)"
+    }
+  ],
+  "cefrAudit": {
+    "targetLevel": "B1",
+    "verdict": "aligned",
+    "reviewerRole": "German Academic Lead",
+    "notes": "Release-candidate metadata audit: vocabulary content for \"Bank & Versicherung\" is aligned with declared B1 scope pending final human spot-check.",
+    "reviewedAt": "2026-05-12",
+    "reviewScope": "release_candidate_metadata_pass"
+  },
+  "learningOutcomes": [
+    {
+      "id": "b1-bank-versicherung-lo-1",
+      "cefrLevel": "B1",
+      "skill": "vocabulary",
+      "canDoVi": "Toi co the luyen tu vung o trinh do B1 qua chu de \"Bank & Versicherung\".",
+      "canDoDe": "Ich kann Wortschatz auf Niveau B1 zum Thema \"Bank & Versicherung\" ueben.",
+      "linkedContentIds": [
+        "b1-bank-versicherung"
+      ]
     }
   ]
 }

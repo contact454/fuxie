@@ -49,7 +49,7 @@ describe('buildTodayPlan', () => {
             href: '/review',
             badge: '24',
         })
-        expect(plan.focus).toBe('Ôn trước')
+        expect(plan.focus).toBe('Đánh Thức Ký Ức')
     })
 
     it('prioritizes urgent assignments over normal lessons', () => {
@@ -68,7 +68,7 @@ describe('buildTodayPlan', () => {
         expect(plan.actions[0]).toMatchObject({
             type: 'assignment',
             href: '/reading/B1-T1-001',
-            reason: 'Hạn hôm nay',
+            reason: 'Nhiệm vụ ưu tiên: Hoàn thành hôm nay!',
         })
         expect(plan.signals.pendingAssignments).toBe(1)
     })
@@ -95,6 +95,20 @@ describe('buildTodayPlan', () => {
 
         expect(plan.weakSkills[0]).toBe('SCHREIBEN')
         expect(plan.actions.some((action) => action.href === '/writing/W-B1-T1-001')).toBe(true)
+        expect(plan.weaknessProfile.weakSkills[0]).toBe('SCHREIBEN')
+    })
+
+    it('attaches learning outcomes and remediation loops to weak-skill lessons', () => {
+        const plan = buildTodayPlan({
+            ...baseInput,
+            weakSkills: ['GRAMMATIK'],
+        })
+
+        const grammarAction = plan.actions.find((action) => action.skill === 'GRAMMATIK')
+        expect(grammarAction?.learningOutcomeId).toBeTruthy()
+        expect(grammarAction?.canDoVi).toBeTruthy()
+        expect(plan.remediation.length).toBeGreaterThan(0)
+        expect(plan.remediation[0]!.outcomes.length).toBeGreaterThan(0)
     })
 
     it('uses the learner daily study goal for dashboard progress', () => {

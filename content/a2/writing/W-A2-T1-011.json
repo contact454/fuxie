@@ -45,5 +45,28 @@
     ],
     "maxScore": 15
   },
-  "maxScore": 15
+  "maxScore": 15,
+  "modelAnswer": "Hallo,\n\nich schreibe wegen Bedanken Sie sich für seine Nachricht.. ich schreibe wegen Erklären Sie, warum Sie nicht zum Konzert kommen konnten.. ich schreibe wegen Fragen Sie nach Details (Wie war die Band? Wie viele Leute waren da?).. Bitte geben Sie mir kurz Bescheid.\n\nViele Gruesse\nLinh",
+  "timeLimitMinutes": 15,
+  "estimatedMinutes": 15,
+  "cefrAudit": {
+    "targetLevel": "A2",
+    "verdict": "aligned",
+    "reviewerRole": "German Academic Lead",
+    "notes": "Release-candidate metadata audit: writing content for \"Konzert\" is aligned with declared A2 scope pending final human spot-check.",
+    "reviewedAt": "2026-05-12",
+    "reviewScope": "release_candidate_metadata_pass"
+  },
+  "learningOutcomes": [
+    {
+      "id": "w-a2-t1-011-lo-1",
+      "cefrLevel": "A2",
+      "skill": "writing",
+      "canDoVi": "Toi co the luyen viet o trinh do A2 qua chu de \"Konzert\".",
+      "canDoDe": "Ich kann Schreiben auf Niveau A2 zum Thema \"Konzert\" ueben.",
+      "linkedContentIds": [
+        "W-A2-T1-011"
+      ]
+    }
+  ]
 }

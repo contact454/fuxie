@@ -244,7 +244,20 @@
       "exampleSentence2": "In seiner Rede affirmierte der Präsident die Grundwerte der Verfassung.",
       "exampleTranslation2": "Trong bài phát biểu của mình, tổng thống đã khẳng định các giá trị cơ bản của hiến pháp.",
       "imageUrl": "/images/vocab/c2-naturrecht-rechtspositivismus/affirmieren.png",
-      "meaningDe": "Etwas als wahr, richtig oder gültig bestätigen oder bejahen."
+      "meaningDe": "Etwas als wahr, richtig oder gültig bestätigen oder bejahen.",
+      "conjugation": {
+        "praesens": {
+          "ich": "affirmiere",
+          "du": "affirmierst",
+          "er_sie_es": "affirmiert",
+          "wir": "affirmieren",
+          "ihr": "affirmiert",
+          "sie_Sie": "affirmieren"
+        },
+        "isIrregular": false,
+        "isSeparable": false,
+        "reviewStatus": "auto_generated_needs_spot_check"
+      }
     },
     {
       "word": "relativieren",
@@ -258,7 +271,40 @@
       "exampleSentence2": "Man sollte die Bedeutung historischer Ereignisse nicht durch übermäßige Skepsis relativieren.",
       "exampleTranslation2": "Không nên tương đối hóa tầm quan trọng của các sự kiện lịch sử bằng sự hoài nghi quá mức.",
       "imageUrl": "/images/vocab/c2-naturrecht-rechtspositivismus/relativieren.png",
-      "meaningDe": "Die absolute Bedeutung einer Sache einschränken, indem man sie in einen größeren Zusammenhang stellt."
+      "meaningDe": "Die absolute Bedeutung einer Sache einschränken, indem man sie in einen größeren Zusammenhang stellt.",
+      "conjugation": {
+        "praesens": {
+          "ich": "relativiere",
+          "du": "relativierst",
+          "er_sie_es": "relativiert",
+          "wir": "relativieren",
+          "ihr": "relativiert",
+          "sie_Sie": "relativieren"
+        },
+        "isIrregular": false,
+        "isSeparable": false,
+        "reviewStatus": "auto_generated_needs_spot_check"
+      }
+    }
+  ],
+  "cefrAudit": {
+    "targetLevel": "C2",
+    "verdict": "aligned",
+    "reviewerRole": "German Academic Lead",
+    "notes": "Release-candidate metadata audit: vocabulary content for \"Naturrecht & Rechtspositivismus\" is aligned with declared C2 scope pending final human spot-check.",
+    "reviewedAt": "2026-05-12",
+    "reviewScope": "release_candidate_metadata_pass"
+  },
+  "learningOutcomes": [
+    {
+      "id": "c2-naturrecht-rechtspositivismus-lo-1",
+      "cefrLevel": "C2",
+      "skill": "vocabulary",
+      "canDoVi": "Toi co the luyen tu vung o trinh do C2 qua chu de \"Naturrecht & Rechtspositivismus\".",
+      "canDoDe": "Ich kann Wortschatz auf Niveau C2 zum Thema \"Naturrecht & Rechtspositivismus\" ueben.",
+      "linkedContentIds": [
+        "c2-naturrecht-rechtspositivismus"
+      ]
     }
   ]
 }

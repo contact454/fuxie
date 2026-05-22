@@ -1,0 +1,54 @@
+{
+  "id": "FIX-LISTENING-MISSING-FULL-TRANSCRIPT",
+  "level": "A1",
+  "audio_file": "/audio/fixtures/missing-full-transcript.mp3",
+  "questions": [
+    {
+      "id": "Q1",
+      "question": "Wo wohnt Anna?",
+      "options": {
+        "a": "In Berlin.",
+        "b": "In Wien."
+      },
+      "answer": "a",
+      "points": 1,
+      "explanation": {
+        "de": "Anna sagt, dass sie in Berlin wohnt.",
+        "key_evidence": "Ich wohne in Berlin."
+      }
+    }
+  ],
+  "cefrAudit": {
+    "targetLevel": "A1",
+    "verdict": "aligned",
+    "reviewerRole": "German Academic Lead",
+    "notes": "Fixture with incomplete transcript metadata.",
+    "reviewedAt": "2026-05-12"
+  },
+  "learningOutcomes": [
+    {
+      "id": "fix-listening-lo-1",
+      "cefrLevel": "A1",
+      "skill": "listening",
+      "canDoVi": "Toi co the nghe thong tin ca nhan co ban.",
+      "canDoDe": "Ich kann einfache persoenliche Informationen verstehen.",
+      "linkedContentIds": [
+        "FIX-LISTENING-MISSING-FULL-TRANSCRIPT"
+      ]
+    }
+  ],
+  "transcript": {
+    "type": "answer_evidence_transcript",
+    "status": "partial",
+    "source": "reconstructed_from_question_key_evidence",
+    "quality": "partial_evidence_only",
+    "lines": [
+      {
+        "speaker": "Q1",
+        "text": "Ich wohne in Berlin.",
+        "linkedQuestionId": "Q1"
+      }
+    ]
+  }
+}
+

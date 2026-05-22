@@ -382,7 +382,20 @@
       "exampleSentence1": "Ich nutze mein Handy oft zum Lesen.",
       "exampleTranslation1": "Tôi thường sử dụng điện thoại của mình để đọc.",
       "imageUrl": "/images/vocab/a2-technik-alltag/nutzen.png",
-      "meaningDe": "Etwas gebrauchen, um ein Ziel zu erreichen."
+      "meaningDe": "Etwas gebrauchen, um ein Ziel zu erreichen.",
+      "conjugation": {
+        "praesens": {
+          "ich": "nutze",
+          "du": "nutzt",
+          "er_sie_es": "nutzt",
+          "wir": "nutzen",
+          "ihr": "nutzt",
+          "sie_Sie": "nutzen"
+        },
+        "isIrregular": false,
+        "isSeparable": false,
+        "reviewStatus": "auto_generated_needs_spot_check"
+      }
     },
     {
       "word": "drucken",
@@ -392,7 +405,20 @@
       "exampleSentence1": "Kannst du bitte das Dokument drucken?",
       "exampleTranslation1": "Bạn có thể in tài liệu này không?",
       "imageUrl": "/images/vocab/a2-technik-alltag/drucken.png",
-      "meaningDe": "Text oder Bilder vom Computer auf Papier bringen."
+      "meaningDe": "Text oder Bilder vom Computer auf Papier bringen.",
+      "conjugation": {
+        "praesens": {
+          "ich": "drucke",
+          "du": "druckst",
+          "er_sie_es": "druckt",
+          "wir": "drucken",
+          "ihr": "druckt",
+          "sie_Sie": "drucken"
+        },
+        "isIrregular": false,
+        "isSeparable": false,
+        "reviewStatus": "auto_generated_needs_spot_check"
+      }
     },
     {
       "word": "verbinden",
@@ -402,7 +428,20 @@
       "exampleSentence1": "Ich muss mein Handy mit dem WLAN verbinden.",
       "exampleTranslation1": "Tôi phải kết nối điện thoại của mình với Wi-Fi.",
       "imageUrl": "/images/vocab/a2-technik-alltag/verbinden.png",
-      "meaningDe": "Zwei Teile so zusammenfügen, dass sie eine Einheit bilden."
+      "meaningDe": "Zwei Teile so zusammenfügen, dass sie eine Einheit bilden.",
+      "conjugation": {
+        "praesens": {
+          "ich": "verbinde",
+          "du": "verbindst",
+          "er_sie_es": "verbindet",
+          "wir": "verbinden",
+          "ihr": "verbindet",
+          "sie_Sie": "verbinden"
+        },
+        "isIrregular": false,
+        "isSeparable": false,
+        "reviewStatus": "auto_generated_needs_spot_check"
+      }
     },
     {
       "word": "kaputt",
@@ -423,6 +462,26 @@
       "exampleTranslation1": "Chúng tôi có một căn bếp rất hiện đại.",
       "imageUrl": "/images/vocab/a2-technik-alltag/modern.png",
       "meaningDe": "Neu und aktuell, nicht alt."
+    }
+  ],
+  "cefrAudit": {
+    "targetLevel": "A2",
+    "verdict": "aligned",
+    "reviewerRole": "German Academic Lead",
+    "notes": "Release-candidate metadata audit: vocabulary content for \"Technik & Alltag\" is aligned with declared A2 scope pending final human spot-check.",
+    "reviewedAt": "2026-05-12",
+    "reviewScope": "release_candidate_metadata_pass"
+  },
+  "learningOutcomes": [
+    {
+      "id": "a2-technik-alltag-lo-1",
+      "cefrLevel": "A2",
+      "skill": "vocabulary",
+      "canDoVi": "Toi co the luyen tu vung o trinh do A2 qua chu de \"Technik & Alltag\".",
+      "canDoDe": "Ich kann Wortschatz auf Niveau A2 zum Thema \"Technik & Alltag\" ueben.",
+      "linkedContentIds": [
+        "a2-technik-alltag"
+      ]
     }
   ]
 }

@@ -9,6 +9,7 @@ import {
 import { awardFucoin, getLearningFucoinDailyProgress, getWalletSummary } from './fucoin'
 import { getFuxieShopPreview } from './shop'
 import { calculateFuxieXpLevel } from './xp-level'
+import { recordAnalyticsEvent } from '@/lib/analytics/events'
 import type {
     MissionBoardData,
     MissionBoardItem,
@@ -54,9 +55,9 @@ export class MissionClaimError extends Error {
 }
 
 const PERIOD_LABELS: Record<MissionBoardPeriod, string> = {
-    daily: 'Ngày',
-    monthly: 'Tháng',
-    quarterly: 'Quý',
+    daily: 'Thử Thách Ngày',
+    monthly: 'Hành Trình Tháng',
+    quarterly: 'Chiến Dịch Quý',
 }
 
 
@@ -305,6 +306,24 @@ export async function claimMissionReward(userId: string, missionId: string, now 
                 },
             })
         }
+
+        await recordAnalyticsEvent(tx, {
+            userId,
+            role: 'LEARNER',
+            eventName: 'mission_claimed',
+            source: 'missions.claim',
+            actionId: mission.id,
+            actionType: 'lesson_session',
+            metadata: {
+                mission_id: mission.id,
+                mission_slug: mission.slug,
+                period: mission.period,
+                period_key: mission.periodKey,
+                xp_awarded: mission.xpReward,
+                fucoin_awarded: mission.fucoinReward,
+            },
+            createdAt: now,
+        })
     })
 
     return {

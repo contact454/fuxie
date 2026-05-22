@@ -1,0 +1,48 @@
+{
+  "id": "FIX-WRITING-INVALID-CEFR-AUDIT",
+  "cefrLevel": "B2",
+  "instruction": "Schreiben Sie eine Stellungnahme.",
+  "situation": "Sie diskutieren in einem Kurs ueber Online-Lernen.",
+  "contentPoints": [
+    "Vorteile nennen",
+    "Nachteile nennen",
+    "Eigene Meinung schreiben"
+  ],
+  "modelAnswer": "Eine gute Antwort nennt Vorteile, Nachteile und eine klare Meinung.",
+  "timeLimitMinutes": 40,
+  "rubric": {
+    "maxScore": 10,
+    "criteria": [
+      {
+        "id": "inhalt",
+        "name": "Inhalt",
+        "maxScore": 5
+      },
+      {
+        "id": "sprache",
+        "name": "Sprache",
+        "maxScore": 5
+      }
+    ]
+  },
+  "cefrAudit": {
+    "targetLevel": "C1",
+    "verdict": "aligned",
+    "reviewerRole": "German Academic Lead",
+    "notes": "Fixture with target level mismatch.",
+    "reviewedAt": "not-a-date"
+  },
+  "learningOutcomes": [
+    {
+      "id": "fix-writing-lo-1",
+      "cefrLevel": "B2",
+      "skill": "writing",
+      "canDoVi": "Toi co the viet y kien ngan ve mot chu de quen thuoc.",
+      "canDoDe": "Ich kann eine kurze Stellungnahme zu einem vertrauten Thema schreiben.",
+      "linkedContentIds": [
+        "FIX-WRITING-INVALID-CEFR-AUDIT"
+      ]
+    }
+  ]
+}
+

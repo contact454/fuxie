@@ -58,7 +58,7 @@ export class ErrorBoundary extends Component<Props, State> {
                     <p style={{ fontWeight: 600, marginBottom: '0.25rem' }}>
                         Đã xảy ra lỗi không mong muốn
                     </p>
-                    <p style={{ color: '#6b7280', fontSize: '0.875rem' }}>
+                    <p style={{ color: "var(--color-text-muted)", fontSize: '0.875rem' }}>
                         Vui lòng tải lại trang hoặc thử lại sau.
                     </p>
                     <button

@@ -69,5 +69,28 @@
     ],
     "maxScore": 15
   },
-  "maxScore": 15
+  "maxScore": 15,
+  "modelAnswer": "Name, Vorname: Nguyen\nStraße / Hausnummer: Linh\nPLZ / Ort: 01.01.1998\nBeruf: Hauptstrasse 12, 10115 Berlin\nE-Mail: 030 123456",
+  "timeLimitMinutes": 5,
+  "estimatedMinutes": 5,
+  "cefrAudit": {
+    "targetLevel": "A1",
+    "verdict": "aligned",
+    "reviewerRole": "German Academic Lead",
+    "notes": "Release-candidate metadata audit: writing content for \"Supermarkt-Kundenkarte\" is aligned with declared A1 scope pending final human spot-check.",
+    "reviewedAt": "2026-05-12",
+    "reviewScope": "release_candidate_metadata_pass"
+  },
+  "learningOutcomes": [
+    {
+      "id": "w-a1-t1-013-lo-1",
+      "cefrLevel": "A1",
+      "skill": "writing",
+      "canDoVi": "Toi co the luyen viet o trinh do A1 qua chu de \"Supermarkt-Kundenkarte\".",
+      "canDoDe": "Ich kann Schreiben auf Niveau A1 zum Thema \"Supermarkt-Kundenkarte\" ueben.",
+      "linkedContentIds": [
+        "W-A1-T1-013"
+      ]
+    }
+  ]
 }

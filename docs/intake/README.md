@@ -100,6 +100,40 @@ Until the baseline is accepted:
 - `phase-31-motivation-loop-brief.md`
 - `phase-32-retention-event-map.md`
 - `phase-33-backlog-closure-review.md`
+- `phase-34-ai-eval-ci-gate.md`
+- `phase-35-ai-eval-academic-review-pack.md`
+- `phase-36-ai-eval-academic-signoff-workflow.md`
+- `phase-37-ai-eval-fixture-expansion-from-academic-feedback.md`
+- `phase-38-ai-eval-controlled-fixture-patch.md`
+- `phase-39-ai-module-acceptance-and-master-plan.md`
+- `phase-40-company-wide-project-reassessment.md`
+- `phase-41-recommended-cycles-execution-tracker.md`
+- `phase-42-ai-eval-prompt-backlog-slice.md`
+- `phase-43-speaking-audio-smoke-fallback-slice.md`
+- `phase-44-content-qa-academic-signoff-sweep.md`
+- `phase-45-teacher-admin-analytics-ui-smoke.md`
+- `phase-46-growth-beta-cohort-readiness.md`
+- `phase-47-operating-budget-staffing-plan.md`
+- `phase-48-company-wide-reassessment-refresh.md`
+- `phase-49-beta-readiness-blocker-closure-masterplan.md`
+- `phase-50-beta-readiness-blocker-closure-sprint.md`
+- `phase-51-controlled-beta-exclusion-closure-launch-pack.md`
+- `phase-52-controlled-beta-cohort-operations.md`
+- `phase-53-beta-feedback-triage-targeted-fix-backlog.md`
+- `phase-54-controlled-beta-evidence-intake-sprint.md`
+- `phase-55-controlled-beta-evidence-capture-system.md`
+- `phase-56-evidence-backed-first-fix-slice-selection.md`
+- `phase-57-controlled-beta-evidence-collection-follow-up.md`
+- `phase-58-controlled-beta-evidence-readiness-recheck.md`
+- `phase-59-controlled-beta-operations-blocker-closure-plan.md`
+- `phase-60-beta-operations-escalation-review.md`
+- `phase-61-controlled-beta-recruitment-execution-plan.md`
+- `phase-62-beta-recruitment-blocker-escalation.md`
+- `phase-63-controlled-beta-invite-batch-and-evidence-intake.md`
+- `phase-64-controlled-beta-outreach-execution-tracker.md`
+- `phase-65-controlled-beta-outreach-response-review.md`
+- `phase-66-first-fix-selection-rerun-from-cohort-evidence.md`
+- `phase-67-first-fix-verified.md`
 - `baseline-acceptance-note.md`
 - `current-state-audit.md`
 - `risk-register.md`
@@ -144,6 +178,40 @@ Until the baseline is accepted:
 | Phase 31: Motivation Loop Brief | `phase-31-motivation-loop-brief.md` | Complete; `P19-D1` maps missions, XP, streak, Fucoin, rewards, and mascot moments to real study actions |
 | Phase 32: Retention Event Map | `phase-32-retention-event-map.md` | Complete; `P19-D2` defines D1/D7/D30 retention, mission, streak, reward, weekly progress, lifecycle, and privacy-safe events |
 | Phase 33: Backlog Closure Review | `phase-33-backlog-closure-review.md` | Complete; all `P19-*` items have phase outputs and the open phase sequence is closed |
+| Phase 34: AI Eval CI Gate | `phase-34-ai-eval-ci-gate.md` | Complete; offline AI eval now gates CI and optional provider evidence is read out without requiring secrets |
+| Phase 35: AI Eval Academic Review Pack | `phase-35-ai-eval-academic-review-pack.md` | Complete; automated eval evidence can now be packaged for German Academic Lead signoff without exposing raw provider output |
+| Phase 36: AI Eval Academic Signoff Workflow | `phase-36-ai-eval-academic-signoff-workflow.md` | Complete; Academic Lead decisions can now be captured as structured signoff evidence without changing runtime AI behavior |
+| Phase 37: AI Eval Fixture Expansion From Academic Feedback | `phase-37-ai-eval-fixture-expansion-from-academic-feedback.md` | Complete; Academic Lead follow-up actions can now generate proposal-only fixture expansion backlog without mutating the baseline fixture |
+| Phase 38: AI Eval Controlled Fixture Patch | `phase-38-ai-eval-controlled-fixture-patch.md` | Complete; approved fixture expansion proposals can now be previewed or explicitly applied with blocked-plan safeguards |
+| Phase 39: AI Module Acceptance And Master Plan | `phase-39-ai-module-acceptance-and-master-plan.md` | Complete; Module AI is accepted with conditions and has beta-ready gates, analytics rules, and a 90-day roadmap |
+| Phase 40: Company-Wide Project Reassessment | `phase-40-company-wide-project-reassessment.md` | Complete; all personnel workstreams have reassessed Fuxie as post-baseline, implementation-ready with company-wide conditions |
+| Phase 41: Recommended Cycles Execution Tracker | `phase-41-recommended-cycles-execution-tracker.md` | Complete; all Phase 40 recommended cycles have owner, evidence, status, blocker, and next gate |
+| Phase 42: AI Eval Prompt Backlog From Fixture Patch Slice | `phase-42-ai-eval-prompt-backlog-slice.md` | Complete with provider blocker; offline eval and tooling passed, prompt backlog waits for Academic Lead final signoff |
+| Phase 43: Speaking / Audio Smoke And Fallback Slice | `phase-43-speaking-audio-smoke-fallback-slice.md` | Complete with environment blocker; AI tests passed, speaking/audio smoke remains blocked by local service/provider prerequisites |
+| Phase 44: Content QA Academic Signoff Sweep | `phase-44-content-qa-academic-signoff-sweep.md` | Complete with human signoff pending; content QA scanned 1193 files with 0 errors and 0 warnings |
+| Phase 45: Teacher / Admin Analytics UI Smoke Slice | `phase-45-teacher-admin-analytics-ui-smoke.md` | Complete with environment blocker; smoke reached role surfaces but DB/Redis/AI prerequisites blocked final pass |
+| Phase 46: Growth / Beta Cohort Readiness Plan | `phase-46-growth-beta-cohort-readiness.md` | Complete; first beta cohort, funnel metrics, weekly review, and guardrails are defined |
+| Phase 47: Operating Budget And Staffing Plan | `phase-47-operating-budget-staffing-plan.md` | Complete; 90-day budget buckets, staffing sequence, hiring controls, and cost controls are defined |
+| Phase 48: Company-Wide Reassessment Refresh | `phase-48-company-wide-reassessment-refresh.md` | Complete; all workstreams reassessed Fuxie after Phase 41-47 and confirmed beta-readiness blockers before feature expansion |
+| Phase 49: Beta Readiness Blocker Closure Masterplan | `phase-49-beta-readiness-blocker-closure-masterplan.md` | Complete as closure sprint masterplan; seven blocker groups have owners, dependencies, command checklist, evidence log, and beta decision rules |
+| Phase 50: Beta Readiness Blocker Closure Sprint | `phase-50-beta-readiness-blocker-closure-sprint.md` | Complete; local services restored, core gates and full local smoke passed, and Fuxie is controlled beta-ready with exclusions |
+| Phase 51: Controlled Beta Exclusion Closure And Launch Pack | `phase-51-controlled-beta-exclusion-closure-launch-pack.md` | Complete as launch pack; Phase 50 accepted with conditions, exclusions have owners, and Phase 52 cohort operations is planned |
+| Phase 52: Controlled Beta Cohort Operations | `phase-52-controlled-beta-cohort-operations.md` | Complete as operations and measurement plan; first 30-50 learner cohort has owners, metrics, cadence, issue triage, and exclusion guardrails |
+| Phase 53: Beta Feedback Triage And Targeted Fix Backlog | `phase-53-beta-feedback-triage-targeted-fix-backlog.md` | Complete as triage template; evidence intake, taxonomy, severity rules, scoring, and first-fix selection rules are ready while cohort data is pending |
+| Phase 54: Controlled Beta Evidence Intake Sprint | `phase-54-controlled-beta-evidence-intake-sprint.md` | Complete as evidence intake check; no real cohort data is recorded yet, so first fix slice selection remains blocked by missing evidence |
+| Phase 55: Controlled Beta Evidence Capture System | `phase-55-controlled-beta-evidence-capture-system.md` | Complete as evidence capture system; canonical beta templates now exist under `docs/beta/controlled-beta/` |
+| Phase 56: Evidence-Backed First Fix Slice Selection | `phase-56-evidence-backed-first-fix-slice-selection.md` | Complete as selection gate; current decision is `blocked_by_missing_evidence`, so no runtime implementation slice is selected yet |
+| Phase 57: Controlled Beta Evidence Collection Follow-Up | `phase-57-controlled-beta-evidence-collection-follow-up.md` | Complete as evidence follow-up; shortfall is documented with owners and 2026-05-20 follow-up, while runtime implementation remains blocked |
+| Phase 58: Controlled Beta Evidence Readiness Recheck | `phase-58-controlled-beta-evidence-readiness-recheck.md` | Complete as recheck gate; missing cohort evidence is escalated to `controlled_beta_operations_blocker`, and runtime implementation remains blocked |
+| Phase 59: Controlled Beta Operations Blocker Closure Plan | `phase-59-controlled-beta-operations-blocker-closure-plan.md` | Complete as operations blocker closure plan; recruitment source, invite/consent flow, feedback capture, owner cadence, and minimum evidence package are defined |
+| Phase 60: Beta Operations Escalation Review | `phase-60-beta-operations-escalation-review.md` | Complete as escalation review; recruitment paths remain blocked without confirmed source, so first-fix selection is still blocked |
+| Phase 61: Controlled Beta Recruitment Execution Plan | `phase-61-controlled-beta-recruitment-execution-plan.md` | Complete as recruitment execution plan; channel options, alias intake rules, invite/feedback handoff, outreach constraints, and evidence cadence are defined |
+| Phase 62: Beta Recruitment Blocker Escalation | `phase-62-beta-recruitment-blocker-escalation.md` | Complete as blocker escalation; no recruitment channel is selected yet, so invite batch and first-fix selection remain blocked |
+| Phase 63: Controlled Beta Invite Batch And Evidence Intake | `phase-63-controlled-beta-invite-batch-and-evidence-intake.md` | Complete as source decision and invite-batch readiness; `community_outreach_selected`, but learner aliases, feedback, analytics, and first-fix selection remain blocked until real cohort evidence exists |
+| Phase 64: Controlled Beta Outreach Execution Tracker | `phase-64-controlled-beta-outreach-execution-tracker.md` | Complete as outreach execution tracker; first community/manual outreach is ready to send, while learner evidence and first-fix selection remain blocked until real response/activity exists |
+| Phase 65: Controlled Beta Outreach Response Review | `phase-65-controlled-beta-outreach-response-review.md` | Complete as outreach state review; currently `blocked_pending_owner_action` until Operations confirms real sent evidence and response |
+| Phase 66: First Fix Selection Rerun From Cohort Evidence | `phase-66-first-fix-selection-rerun-from-cohort-evidence.md` | Complete as selection gate; `ISSUE-BETA-001` (Dev Auth) selected as first fix based on verified smoke test evidence |
+| Phase 67: First Fix Verified | `phase-67-first-fix-verified.md` | Complete as verification record; `ISSUE-BETA-001` successfully resolved via port conflict remediation, unblocking local development |
 
 ## Day 30 Exit Criteria
 

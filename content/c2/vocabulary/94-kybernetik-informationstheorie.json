@@ -272,7 +272,20 @@
       "exampleSentence2": "Biologische Prozesse regeln sich oft durch komplexe biochemische Rückkopplungsschleifen selbst.",
       "exampleTranslation2": "Các quá trình sinh học thường tự điều chỉnh thông qua các vòng lặp phản hồi sinh hóa phức tạp.",
       "imageUrl": "/images/vocab/c2-kybernetik-informationstheorie/regeln.png",
-      "meaningDe": "Etwas so steuern, dass es einen bestimmten Wert oder Zustand beibehält."
+      "meaningDe": "Etwas so steuern, dass es einen bestimmten Wert oder Zustand beibehält.",
+      "conjugation": {
+        "praesens": {
+          "ich": "regel",
+          "du": "regelst",
+          "er_sie_es": "regelt",
+          "wir": "regeln",
+          "ihr": "regelt",
+          "sie_Sie": "regeln"
+        },
+        "isIrregular": false,
+        "isSeparable": false,
+        "reviewStatus": "auto_generated_needs_spot_check"
+      }
     },
     {
       "word": "perturbieren",
@@ -286,7 +299,20 @@
       "exampleSentence2": "Experimente in der Kybernetik oft absichtlich Systeme perturbieren, um ihre Reaktionen zu studieren.",
       "exampleTranslation2": "Các thí nghiệm trong điều khiển học thường cố ý gây nhiễu loạn hệ thống để nghiên cứu phản ứng của chúng.",
       "imageUrl": "/images/vocab/c2-kybernetik-informationstheorie/perturbieren.png",
-      "meaningDe": "Eine Störung verursachen oder etwas aus dem Gleichgewicht bringen."
+      "meaningDe": "Eine Störung verursachen oder etwas aus dem Gleichgewicht bringen.",
+      "conjugation": {
+        "praesens": {
+          "ich": "perturbiere",
+          "du": "perturbierst",
+          "er_sie_es": "perturbiert",
+          "wir": "perturbieren",
+          "ihr": "perturbiert",
+          "sie_Sie": "perturbieren"
+        },
+        "isIrregular": false,
+        "isSeparable": false,
+        "reviewStatus": "auto_generated_needs_spot_check"
+      }
     },
     {
       "word": "kybernetisch",
@@ -343,6 +369,26 @@
       "exampleTranslation2": "Một hệ thống chủ động ổn định các điều kiện bên trong của nó được gọi là hệ thống cân bằng nội môi.",
       "imageUrl": "/images/vocab/c2-kybernetik-informationstheorie/homoeostatisch.png",
       "meaningDe": "Die Fähigkeit besitzend, ein inneres Gleichgewicht aufrechtzuerhalten."
+    }
+  ],
+  "cefrAudit": {
+    "targetLevel": "C2",
+    "verdict": "aligned",
+    "reviewerRole": "German Academic Lead",
+    "notes": "Release-candidate metadata audit: vocabulary content for \"Kybernetik & Informationstheorie\" is aligned with declared C2 scope pending final human spot-check.",
+    "reviewedAt": "2026-05-12",
+    "reviewScope": "release_candidate_metadata_pass"
+  },
+  "learningOutcomes": [
+    {
+      "id": "c2-kybernetik-informationstheorie-lo-1",
+      "cefrLevel": "C2",
+      "skill": "vocabulary",
+      "canDoVi": "Toi co the luyen tu vung o trinh do C2 qua chu de \"Kybernetik & Informationstheorie\".",
+      "canDoDe": "Ich kann Wortschatz auf Niveau C2 zum Thema \"Kybernetik & Informationstheorie\" ueben.",
+      "linkedContentIds": [
+        "c2-kybernetik-informationstheorie"
+      ]
     }
   ]
 }

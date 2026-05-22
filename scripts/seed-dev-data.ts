@@ -1,7 +1,112 @@
+import { readFileSync } from 'node:fs'
+import path from 'node:path'
+
 import { prisma } from '@fuxie/database'
 
 const now = new Date()
 const today = new Date(now.getFullYear(), now.getMonth(), now.getDate())
+
+const ROOT = process.cwd()
+
+/**
+ * Surface-table aliases — Capture spec & integration `surfaces.ts` reference
+ * surface-table IDs (`A1-T1-001`, `L-A1-GOETHE-001-T1`, `W-A1-T1-001`,
+ * `dev-a1-goethe-mini`). To keep existing dev workflows that point at the
+ * legacy `*-DEV-*` IDs working AND let the visual-capture spec hit the
+ * surface-table IDs without 404s, the seed script reads each fixture once
+ * and upserts the row under both IDs (legacy + surface-table).
+ *
+ * Idempotency contract: every upsert below uses the table's natural unique
+ * key (`exerciseId`, `lessonId`, `slug`, `id`, or compound `[*Id, questionNumber]`),
+ * so a second run on the same DB yields zero new rows. Children that the
+ * Prisma schema marks `onDelete: Cascade` (questions) are also upserted by
+ * compound key, never `deleteMany`-then-create — so child row counts are
+ * also stable across reruns.
+ *
+ * Source of truth:
+ *   - `content/a1/reading/A1-T1-001.json` (Goethe-grade A1 reading content).
+ *   - `content/a1/listening/L-A1-GOETHE-001-T1.json` (Goethe-grade A1 listening).
+ *   - `content/a1/writing/W-A1-T1-001.json` (Goethe-grade A1 writing).
+ *
+ * Speaking surface (`dev-a1-begruessung-01`) and exam surface
+ * (`dev-a1-goethe-mini`) already use surface-table IDs in `seedSpeaking()` /
+ * `seedExam()` below — no alias indirection needed; they are verified-only.
+ *
+ * Spec ref: `.kiro/specs/visual-qa-screenshot-capture/design.md` §Decision 3.
+ * Pattern ref: `.kiro/specs/asset-registry-cleanup` (additive alias upserts
+ * to align legacy IDs with surface-table IDs declared in
+ * `tests/integration/utils/surfaces.ts`).
+ */
+
+interface ReadingFixture {
+    id: string
+    level: string
+    teil: number
+    teil_name: string
+    topic: string
+    texts: Array<{ id: string; type: string; sender?: string; receiver?: string; content: string }>
+    images?: unknown
+    scoring?: unknown
+    metadata?: unknown
+    questions: Array<{
+        id: string
+        teil: number
+        linked_text?: string
+        type: string
+        statement?: string
+        question?: string
+        options?: unknown
+        answer?: string | number | boolean
+        points?: number
+        explanation?: unknown
+    }>
+}
+
+interface ListeningFixture {
+    id: string
+    level: string
+    teil: number
+    teil_name: string
+    topic: string
+    task_type: string
+    audio_file: string
+    metadata?: { generated_at?: string; version?: number }
+    questions: Array<{
+        id: string
+        type: string
+        question: string
+        options: Record<string, string>
+        answer: string
+        points?: number
+        explanation?: unknown
+    }>
+    transcript?: unknown
+}
+
+interface WritingFixture {
+    id: string
+    cefrLevel: string
+    teil: number
+    teilName: string
+    textType: string
+    register: string
+    topic: string
+    instruction: string
+    instructionVi?: string
+    situation: string
+    contentPoints: string[]
+    minWords: number
+    maxWords?: number
+    timeMinutes?: number
+    rubric?: unknown
+    formFields?: unknown
+    modelAnswer?: string
+}
+
+function loadFixture<T>(relativePath: string): T {
+    const absolute = path.join(ROOT, relativePath)
+    return JSON.parse(readFileSync(absolute, 'utf8')) as T
+}
 
 async function main() {
     const learner = await upsertUser('dev-learner', 'learner@fuxie.local', 'LEARNER', 'Dev Learner')
@@ -170,6 +275,44 @@ async function upsertWord(
 }
 
 async function seedGrammar() {
+    const exercisesJson = [
+        {
+            id: 'g1',
+            type: 'multiple_choice',
+            scaffolding_level: 1,
+            difficulty: 1,
+            instruction_vi: 'Chon cau dung o thi hien tai.',
+            stem: 'Cau nao dung voi "ich"?',
+            options: ['Ich lerne Deutsch.', 'Ich lernst Deutsch.', 'Ich lernt Deutsch.'],
+            correct: 0,
+            explanation_vi: 'Voi "ich", dong tu "lernen" chia thanh "lerne".',
+            tags: ['praesens', 'konjugation'],
+        },
+        {
+            id: 'g2',
+            type: 'gap_fill_type',
+            scaffolding_level: 1,
+            difficulty: 1,
+            instruction_vi: 'Dien dong tu dung.',
+            stem: 'Ich ___ Deutsch.',
+            answer: ['lerne'],
+            hint_word: 'lernen',
+            explanation_vi: 'ich + lernen -> ich lerne.',
+            tags: ['praesens', 'konjugation'],
+        },
+        {
+            id: 'g3',
+            type: 'sentence_reorder',
+            scaffolding_level: 1,
+            difficulty: 1,
+            instruction_vi: 'Sap xep thanh cau dung.',
+            words: ['Deutsch.', 'lerne', 'Ich'],
+            correct_order: ['Ich', 'lerne', 'Deutsch.'],
+            explanation_vi: 'Trong cau tran thuat, dong tu chia dung o vi tri 2.',
+            tags: ['satzbau'],
+        },
+    ]
+
     const topic = await prisma.grammarTopic.upsert({
         where: { slug: 'dev-praesens' },
         update: { title: 'Praesens', titleDe: 'Praesens', cefrLevel: 'A1', status: 'PUBLISHED', sortOrder: 1 },
@@ -181,7 +324,7 @@ async function seedGrammar() {
         update: {
             topicId: topic.id,
             titleDe: 'Verben im Praesens',
-            exercisesJson: [{ id: 'g1', prompt: 'Ich ___ Deutsch.', answer: 'lerne' }],
+            exercisesJson,
             status: 'PUBLISHED',
         },
         create: {
@@ -191,7 +334,7 @@ async function seedGrammar() {
             lessonType: 'E',
             lessonNumber: 1,
             titleDe: 'Verben im Praesens',
-            exercisesJson: [{ id: 'g1', prompt: 'Ich ___ Deutsch.', answer: 'lerne' }],
+            exercisesJson,
             estimatedMin: 8,
             tags: ['dev', 'praesens'],
             sortOrder: 1,
@@ -201,103 +344,173 @@ async function seedGrammar() {
 }
 
 async function seedListening() {
-    const lesson = await prisma.listeningLesson.upsert({
-        where: { lessonId: 'L-A1-DEV-001' },
-        update: {
-            cefrLevel: 'A1',
-            title: 'Dev Hoeren Alltag',
-            topic: 'Begruessung',
-            taskType: 'MC a/b/c',
-            audioUrl: '/audio/dev/sample.mp3',
-            sortOrder: 1,
-        },
-        create: {
-            lessonId: 'L-A1-DEV-001',
-            cefrLevel: 'A1',
-            board: 'GOETHE',
-            teil: 1,
-            teilName: 'Kurze Gespraeche',
-            title: 'Dev Hoeren Alltag',
-            topic: 'Begruessung',
-            taskType: 'MC a/b/c',
-            audioUrl: '/audio/dev/sample.mp3',
-            sortOrder: 1,
-        },
-    })
+    // Load Goethe-grade A1 listening fixture once; upsert under legacy +
+    // surface-table IDs so /listening/L-A1-GOETHE-001-T1 resolves.
+    const fixture = loadFixture<ListeningFixture>('content/a1/listening/L-A1-GOETHE-001-T1.json')
 
-    await prisma.listeningQuestion.deleteMany({ where: { lessonId: lesson.id } })
-    await prisma.listeningQuestion.create({
-        data: {
-            lessonId: lesson.id,
-            questionNumber: 1,
-            questionType: 'mc_abc',
-            questionText: 'Was sagt die Person?',
-            options: ['Hallo', 'Tschuess', 'Danke'],
-            correctAnswer: 'Hallo',
-            explanation: 'Die Person begruesst jemanden.',
-            sortOrder: 1,
-        },
-    })
+    const firstQuestion = fixture.questions[0]
+    if (!firstQuestion) {
+        throw new Error('[seed-dev] Listening fixture L-A1-GOETHE-001-T1 has no questions.')
+    }
+    // Fixture options come as { a, b, c } map; flatten into ordered array
+    // matching Prisma's `options Json` (string[]).
+    const optionsArray = Object.entries(firstQuestion.options).map(
+        ([key, label]) => `${key}) ${label}`,
+    )
+    const questionData = {
+        questionNumber: 1,
+        questionType: firstQuestion.type ?? 'mc_abc',
+        questionText: firstQuestion.question,
+        options: optionsArray as never,
+        correctAnswer: firstQuestion.answer,
+        explanation: typeof (firstQuestion.explanation as { de?: string } | undefined)?.de === 'string'
+            ? (firstQuestion.explanation as { de: string }).de
+            : null,
+        sortOrder: 1,
+    }
+
+    for (const lessonId of ['L-A1-DEV-001', fixture.id] as const) {
+        const lesson = await prisma.listeningLesson.upsert({
+            where: { lessonId },
+            update: {
+                cefrLevel: 'A1',
+                title: `Hoeren: ${fixture.topic}`,
+                topic: fixture.topic,
+                taskType: fixture.task_type === 'mc_abc' ? 'MC a/b/c' : fixture.task_type,
+                audioUrl: fixture.audio_file,
+                sortOrder: 1,
+            },
+            create: {
+                lessonId,
+                cefrLevel: 'A1',
+                board: 'GOETHE',
+                teil: fixture.teil,
+                teilName: fixture.teil_name,
+                title: `Hoeren: ${fixture.topic}`,
+                topic: fixture.topic,
+                taskType: fixture.task_type === 'mc_abc' ? 'MC a/b/c' : fixture.task_type,
+                audioUrl: fixture.audio_file,
+                sortOrder: 1,
+            },
+        })
+
+        await prisma.listeningQuestion.upsert({
+            where: {
+                lessonId_questionNumber: {
+                    lessonId: lesson.id,
+                    questionNumber: questionData.questionNumber,
+                },
+            },
+            update: questionData,
+            create: { lessonId: lesson.id, ...questionData },
+        })
+    }
 }
 
 async function seedReading() {
-    const exercise = await prisma.readingExercise.upsert({
-        where: { exerciseId: 'R-A1-DEV-001' },
-        update: {
-            cefrLevel: 'A1',
-            topic: 'Eine kurze Nachricht',
-            textsJson: [{ id: 'text-a', text: 'Hallo! Ich lerne Deutsch.' }],
-            sortOrder: 1,
-        },
-        create: {
-            exerciseId: 'R-A1-DEV-001',
-            cefrLevel: 'A1',
-            teil: 1,
-            teilName: 'Kurze Texte lesen',
-            topic: 'Eine kurze Nachricht',
-            textsJson: [{ id: 'text-a', text: 'Hallo! Ich lerne Deutsch.' }],
-            sortOrder: 1,
-        },
-    })
+    // Load Goethe-grade A1 fixture once; upsert under legacy + surface-table IDs.
+    const fixture = loadFixture<ReadingFixture>('content/a1/reading/A1-T1-001.json')
 
-    await prisma.readingQuestion.deleteMany({ where: { exerciseId: exercise.id } })
-    await prisma.readingQuestion.create({
-        data: {
-            exerciseId: exercise.id,
-            questionNumber: 1,
-            questionType: 'richtig_falsch',
-            linkedText: 'text-a',
-            statement: 'Die Person lernt Deutsch.',
-            correctAnswer: 'richtig',
-            points: 1,
-            sortOrder: 1,
-        },
-    })
+    // Map fixture questions to ReadingQuestion shape (use first question only —
+    // dev seed needs ≥1 question per exercise; keeping it minimal preserves
+    // existing seed footprint).
+    const firstQuestion = fixture.questions[0]
+    if (!firstQuestion) {
+        throw new Error('[seed-dev] Reading fixture A1-T1-001 has no questions.')
+    }
+    const questionData = {
+        questionNumber: 1,
+        questionType: firstQuestion.type ?? 'richtig_falsch',
+        linkedText: firstQuestion.linked_text ?? 'TextA',
+        statement: firstQuestion.statement ?? firstQuestion.question ?? '',
+        correctAnswer: String(firstQuestion.answer ?? 'richtig'),
+        points: firstQuestion.points ?? 1,
+        explanation: (firstQuestion.explanation ?? null) as never,
+        sortOrder: 1,
+    }
+
+    for (const exerciseId of ['R-A1-DEV-001', fixture.id] as const) {
+        const exercise = await prisma.readingExercise.upsert({
+            where: { exerciseId },
+            update: {
+                cefrLevel: 'A1',
+                teil: fixture.teil,
+                teilName: fixture.teil_name,
+                topic: fixture.topic,
+                textsJson: fixture.texts as never,
+                imagesJson: (fixture.images ?? null) as never,
+                scoringJson: (fixture.scoring ?? null) as never,
+                metadataJson: (fixture.metadata ?? null) as never,
+                sortOrder: 1,
+            },
+            create: {
+                exerciseId,
+                cefrLevel: 'A1',
+                teil: fixture.teil,
+                teilName: fixture.teil_name,
+                topic: fixture.topic,
+                textsJson: fixture.texts as never,
+                imagesJson: (fixture.images ?? null) as never,
+                scoringJson: (fixture.scoring ?? null) as never,
+                metadataJson: (fixture.metadata ?? null) as never,
+                sortOrder: 1,
+            },
+        })
+
+        // Compound natural key: idempotent across reruns.
+        await prisma.readingQuestion.upsert({
+            where: {
+                exerciseId_questionNumber: {
+                    exerciseId: exercise.id,
+                    questionNumber: questionData.questionNumber,
+                },
+            },
+            update: questionData,
+            create: { exerciseId: exercise.id, ...questionData },
+        })
+    }
 }
 
 async function seedWriting() {
-    await prisma.writingExercise.upsert({
-        where: { exerciseId: 'W-A1-DEV-001' },
-        update: { cefrLevel: 'A1', topic: 'Sich vorstellen', instruction: 'Schreiben Sie eine kurze Vorstellung.', status: 'PUBLISHED' },
-        create: {
-            exerciseId: 'W-A1-DEV-001',
-            cefrLevel: 'A1',
-            teil: 1,
-            teilName: 'Kurze E-Mail',
-            textType: 'E-Mail',
-            register: 'informell',
-            topic: 'Sich vorstellen',
-            instruction: 'Schreiben Sie eine kurze Vorstellung.',
-            situation: 'Sie schreiben an einen neuen Freund.',
-            contentPoints: ['Name', 'Herkunft', 'Hobby'],
-            minWords: 30,
-            maxWords: 60,
-            timeMinutes: 10,
-            rubricJson: { criteria: ['Inhalt', 'Korrektheit'] },
-            status: 'PUBLISHED',
-            sortOrder: 1,
-        },
-    })
+    // Load A1 writing fixture once; upsert under legacy + surface-table IDs.
+    const fixture = loadFixture<WritingFixture>('content/a1/writing/W-A1-T1-001.json')
+
+    for (const exerciseId of ['W-A1-DEV-001', fixture.id] as const) {
+        await prisma.writingExercise.upsert({
+            where: { exerciseId },
+            update: {
+                cefrLevel: 'A1',
+                topic: fixture.topic,
+                instruction: fixture.instruction,
+                situation: fixture.situation,
+                contentPoints: fixture.contentPoints as never,
+                minWords: fixture.minWords,
+                maxWords: fixture.maxWords ?? null,
+                timeMinutes: fixture.timeMinutes ?? 10,
+                rubricJson: (fixture.rubric ?? { criteria: ['Inhalt', 'Korrektheit'] }) as never,
+                status: 'PUBLISHED',
+            },
+            create: {
+                exerciseId,
+                cefrLevel: 'A1',
+                teil: fixture.teil,
+                teilName: fixture.teilName,
+                textType: fixture.textType,
+                register: fixture.register,
+                topic: fixture.topic,
+                instruction: fixture.instruction,
+                situation: fixture.situation,
+                contentPoints: fixture.contentPoints as never,
+                minWords: fixture.minWords,
+                maxWords: fixture.maxWords ?? null,
+                timeMinutes: fixture.timeMinutes ?? 10,
+                rubricJson: (fixture.rubric ?? { criteria: ['Inhalt', 'Korrektheit'] }) as never,
+                formFields: (fixture.formFields ?? null) as never,
+                status: 'PUBLISHED',
+                sortOrder: 1,
+            },
+        })
+    }
 }
 
 async function seedSpeaking() {
@@ -309,7 +522,53 @@ async function seedSpeaking() {
 
     await prisma.speakingLesson.upsert({
         where: { id: 'dev-a1-begruessung-01' },
-        update: { topicId: topic.id, titleDe: 'Hallo sagen', exercisesJson: [{ id: 's1', text: 'Hallo, ich heisse Anna.' }], status: 'PUBLISHED' },
+        update: {
+            topicId: topic.id,
+            titleDe: 'Hallo sagen',
+            exercisesJson: {
+                sentences: [
+                    {
+                        id: 's1',
+                        textDe: 'Hallo, ich heisse Anna.',
+                        textNative: 'Xin chao, toi ten la Anna.',
+                        ipa: 'ha-lo, ikh hai-se Anna',
+                        audioUrl: '/audio/dev/speaking-hallo-anna.mp3',
+                        expectedDurationSec: 4,
+                        pronunciationNotes: 'Tap trung vao am ich trong heisse.',
+                        keywords: ['Hallo', 'heisse'],
+                    },
+                    {
+                        id: 's2',
+                        textDe: 'Ich komme aus Vietnam.',
+                        textNative: 'Toi den tu Viet Nam.',
+                        ipa: 'ikh ko-me aus Viet-nam',
+                        audioUrl: '/audio/dev/speaking-vietnam.mp3',
+                        expectedDurationSec: 4,
+                        pronunciationNotes: 'Noi ro am ch trong ich.',
+                        keywords: ['komme', 'Vietnam'],
+                    },
+                    {
+                        id: 's3',
+                        textDe: 'Ich lerne Deutsch.',
+                        textNative: 'Toi hoc tieng Duc.',
+                        ipa: 'ikh ler-ne doytsh',
+                        audioUrl: '/audio/dev/speaking-lerne-deutsch.mp3',
+                        expectedDurationSec: 3,
+                        pronunciationNotes: 'Giu nguyen am ngan trong lerne.',
+                        keywords: ['lerne', 'Deutsch'],
+                    },
+                ],
+            },
+            configJson: {
+                maxRecordingSec: 10,
+                minAccuracyToPass: 60,
+                attemptsAllowed: 3,
+                showIPA: true,
+                showTranslation: true,
+                autoPlayModel: true,
+            },
+            status: 'PUBLISHED',
+        },
         create: {
             id: 'dev-a1-begruessung-01',
             topicId: topic.id,
@@ -318,7 +577,48 @@ async function seedSpeaking() {
             lessonNumber: 1,
             titleDe: 'Hallo sagen',
             exerciseType: 'nachsprechen',
-            exercisesJson: [{ id: 's1', text: 'Hallo, ich heisse Anna.' }],
+            exercisesJson: {
+                sentences: [
+                    {
+                        id: 's1',
+                        textDe: 'Hallo, ich heisse Anna.',
+                        textNative: 'Xin chao, toi ten la Anna.',
+                        ipa: 'ha-lo, ikh hai-se Anna',
+                        audioUrl: '/audio/dev/speaking-hallo-anna.mp3',
+                        expectedDurationSec: 4,
+                        pronunciationNotes: 'Tap trung vao am ich trong heisse.',
+                        keywords: ['Hallo', 'heisse'],
+                    },
+                    {
+                        id: 's2',
+                        textDe: 'Ich komme aus Vietnam.',
+                        textNative: 'Toi den tu Viet Nam.',
+                        ipa: 'ikh ko-me aus Viet-nam',
+                        audioUrl: '/audio/dev/speaking-vietnam.mp3',
+                        expectedDurationSec: 4,
+                        pronunciationNotes: 'Noi ro am ch trong ich.',
+                        keywords: ['komme', 'Vietnam'],
+                    },
+                    {
+                        id: 's3',
+                        textDe: 'Ich lerne Deutsch.',
+                        textNative: 'Toi hoc tieng Duc.',
+                        ipa: 'ikh ler-ne doytsh',
+                        audioUrl: '/audio/dev/speaking-lerne-deutsch.mp3',
+                        expectedDurationSec: 3,
+                        pronunciationNotes: 'Giu nguyen am ngan trong lerne.',
+                        keywords: ['lerne', 'Deutsch'],
+                    },
+                ],
+            },
+            configJson: {
+                maxRecordingSec: 10,
+                minAccuracyToPass: 60,
+                attemptsAllowed: 3,
+                showIPA: true,
+                showTranslation: true,
+                autoPlayModel: true,
+            },
             estimatedMin: 5,
             sortOrder: 1,
             status: 'PUBLISHED',
@@ -327,6 +627,13 @@ async function seedSpeaking() {
 }
 
 async function seedExam() {
+    // Surface-table alias: `dev-a1-goethe-mini` slug below already matches
+    // `tests/integration/utils/surfaces.ts` P0_SURFACES.exam.path. No alias
+    // indirection needed — this seed function is the verification (Decision 3
+    // in `.kiro/specs/visual-qa-screenshot-capture/design.md`). The function
+    // upserts the ExamTemplate and (re)creates ≥1 ExamSection + ≥1 ExamTask
+    // per run; row counts remain stable because sections + tasks are
+    // deleted-then-recreated as a pair on every run.
     const exam = await prisma.examTemplate.upsert({
         where: { slug: 'dev-a1-goethe-mini' },
         update: { status: 'PUBLISHED', title: 'Dev A1 Goethe Mini' },

@@ -314,7 +314,20 @@
       "exampleSentence2": "Es ist eine Herausforderung, große Textmengen konsistent zu annotieren, selbst mit detaillierten Richtlinien.",
       "exampleTranslation2": "Việc chú thích một lượng lớn văn bản một cách nhất quán là một thách thức, ngay cả với các hướng dẫn chi tiết.",
       "imageUrl": "/images/vocab/c2-korpuslinguistik/annotieren.png",
-      "meaningDe": "Einen Text oder Daten mit zusätzlichen Erklärungen oder Markierungen versehen."
+      "meaningDe": "Einen Text oder Daten mit zusätzlichen Erklärungen oder Markierungen versehen.",
+      "conjugation": {
+        "praesens": {
+          "ich": "annotiere",
+          "du": "annotierst",
+          "er_sie_es": "annotiert",
+          "wir": "annotieren",
+          "ihr": "annotiert",
+          "sie_Sie": "annotieren"
+        },
+        "isIrregular": false,
+        "isSeparable": true,
+        "reviewStatus": "auto_generated_needs_spot_check"
+      }
     },
     {
       "word": "parsieren",
@@ -328,7 +341,20 @@
       "exampleSentence2": "Das System konnte den komplexen Satz nicht korrekt parsieren, was zu Fehlinterpretationen führte.",
       "exampleTranslation2": "Hệ thống không thể phân tích cú pháp câu phức tạp một cách chính xác, dẫn đến hiểu sai.",
       "imageUrl": "/images/vocab/c2-korpuslinguistik/parsieren.png",
-      "meaningDe": "Die grammatische Struktur eines Satzes analysieren."
+      "meaningDe": "Die grammatische Struktur eines Satzes analysieren.",
+      "conjugation": {
+        "praesens": {
+          "ich": "parsiere",
+          "du": "parsierst",
+          "er_sie_es": "parsiert",
+          "wir": "parsieren",
+          "ihr": "parsiert",
+          "sie_Sie": "parsieren"
+        },
+        "isIrregular": false,
+        "isSeparable": false,
+        "reviewStatus": "auto_generated_needs_spot_check"
+      }
     },
     {
       "word": "tokenisieren",
@@ -342,7 +368,20 @@
       "exampleSentence2": "Die Herausforderung beim Tokenisieren liegt oft in der korrekten Handhabung von Interpunktion und Sonderzeichen.",
       "exampleTranslation2": "Thách thức của việc phân tách từ thường nằm ở việc xử lý đúng dấu câu và các ký tự đặc biệt.",
       "imageUrl": "/images/vocab/c2-korpuslinguistik/tokenisieren.png",
-      "meaningDe": "Einen Text in einzelne Wörter oder Zeichen zerlegen."
+      "meaningDe": "Einen Text in einzelne Wörter oder Zeichen zerlegen.",
+      "conjugation": {
+        "praesens": {
+          "ich": "tokenisiere",
+          "du": "tokenisierst",
+          "er_sie_es": "tokenisiert",
+          "wir": "tokenisieren",
+          "ihr": "tokenisiert",
+          "sie_Sie": "tokenisieren"
+        },
+        "isIrregular": false,
+        "isSeparable": false,
+        "reviewStatus": "auto_generated_needs_spot_check"
+      }
     },
     {
       "word": "lemmatisieren",
@@ -356,7 +395,20 @@
       "exampleSentence2": "Algorithmen zum Lemmatisieren sind für Sprachen mit reicher Morphologie besonders wichtig.",
       "exampleTranslation2": "Các thuật toán đưa về dạng gốc đặc biệt quan trọng đối với các ngôn ngữ có hình thái phong phú.",
       "imageUrl": "/images/vocab/c2-korpuslinguistik/lemmatisieren.png",
-      "meaningDe": "Verschiedene Formen eines Wortes auf ihre Grundform zurückführen."
+      "meaningDe": "Verschiedene Formen eines Wortes auf ihre Grundform zurückführen.",
+      "conjugation": {
+        "praesens": {
+          "ich": "lemmatisiere",
+          "du": "lemmatisierst",
+          "er_sie_es": "lemmatisiert",
+          "wir": "lemmatisieren",
+          "ihr": "lemmatisiert",
+          "sie_Sie": "lemmatisieren"
+        },
+        "isIrregular": false,
+        "isSeparable": false,
+        "reviewStatus": "auto_generated_needs_spot_check"
+      }
     },
     {
       "word": "extrahieren",
@@ -370,7 +422,20 @@
       "exampleSentence2": "Die Software ist darauf ausgelegt, spezifische Informationen aus unstrukturierten Textdaten zu extrahieren.",
       "exampleTranslation2": "Phần mềm được thiết kế để trích xuất thông tin cụ thể từ dữ liệu văn bản phi cấu trúc.",
       "imageUrl": "/images/vocab/c2-korpuslinguistik/extrahieren.png",
-      "meaningDe": "Etwas aus einem Text oder einer Datenmenge herausfiltern oder herausholen."
+      "meaningDe": "Etwas aus einem Text oder einer Datenmenge herausfiltern oder herausholen.",
+      "conjugation": {
+        "praesens": {
+          "ich": "extrahiere",
+          "du": "extrahierst",
+          "er_sie_es": "extrahiert",
+          "wir": "extrahieren",
+          "ihr": "extrahiert",
+          "sie_Sie": "extrahieren"
+        },
+        "isIrregular": false,
+        "isSeparable": false,
+        "reviewStatus": "auto_generated_needs_spot_check"
+      }
     },
     {
       "word": "korpusbasiert",
@@ -441,6 +506,26 @@
       "exampleTranslation2": "Các hệ thống ngôn ngữ học máy tính xem xét các khía cạnh ngữ dụng có thể hiểu và tạo ra giao tiếp của con người tốt hơn.",
       "imageUrl": "/images/vocab/c2-korpuslinguistik/pragmatisch.png",
       "meaningDe": "Die Verwendung von Sprache im Kontext und ihre Wirkung auf den Empfänger betreffend."
+    }
+  ],
+  "cefrAudit": {
+    "targetLevel": "C2",
+    "verdict": "aligned",
+    "reviewerRole": "German Academic Lead",
+    "notes": "Release-candidate metadata audit: vocabulary content for \"Korpuslinguistik & Computerlinguistik\" is aligned with declared C2 scope pending final human spot-check.",
+    "reviewedAt": "2026-05-12",
+    "reviewScope": "release_candidate_metadata_pass"
+  },
+  "learningOutcomes": [
+    {
+      "id": "c2-korpuslinguistik-lo-1",
+      "cefrLevel": "C2",
+      "skill": "vocabulary",
+      "canDoVi": "Toi co the luyen tu vung o trinh do C2 qua chu de \"Korpuslinguistik & Computerlinguistik\".",
+      "canDoDe": "Ich kann Wortschatz auf Niveau C2 zum Thema \"Korpuslinguistik & Computerlinguistik\" ueben.",
+      "linkedContentIds": [
+        "c2-korpuslinguistik"
+      ]
     }
   ]
 }

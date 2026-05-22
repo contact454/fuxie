@@ -5,6 +5,9 @@ import {
     type FuxieLive3DState,
 } from '@/components/gamification/fuxie-live-3d'
 import { FuxieLive3DDynamic } from '@/components/gamification/FuxieLive3DDynamic'
+import { StateShell } from '@/components/gamification/state-shell'
+import { FuxieBadge, FuxiePanel, FuxieProgressBar } from '@/components/ui/fuxie-ui'
+import { PrimaryCta } from '@/components/ui/primary-cta'
 import Image from 'next/image'
 import { notFound } from 'next/navigation'
 
@@ -132,6 +135,97 @@ const IMAGEGEN_FULLBODY_V10 = [
     { label: 'v10 extracted layers', src: '/mascot-3d/imagegen-fullbody/v10/fuxie_v10_layers_contact_sheet.png' },
 ] as const
 
+function FoundationLockFixture() {
+    return (
+        <section
+            data-role="foundation-lock-fixture"
+            className="mb-8 rounded-[28px] border border-[#60A8E4]/20 bg-[#F3FBFF] p-4 shadow-[0_18px_48px_rgba(60,120,168,0.12)] sm:p-6"
+        >
+            <div className="mb-5">
+                <p className="text-xs font-black uppercase tracking-wide text-[#3C78A8]">Slice 0 QA fixture</p>
+                <h2 className="mt-2 text-xl font-black text-slate-950">Foundation lock primitives</h2>
+                <p className="mt-2 max-w-3xl text-sm font-semibold leading-6 text-slate-600">
+                    Dev-only fixture for the production handoff gate: one scoped primary CTA, chip row,
+                    card stack, empty state, error state, and success-like state at mobile and desktop widths.
+                </p>
+            </div>
+
+            <div className="grid gap-4 lg:grid-cols-[minmax(0,1fr)_minmax(320px,0.9fr)]">
+                <FuxiePanel
+                    variant="default"
+                    data-role="foundation-default-surface"
+                    className="min-w-0 p-4 sm:p-5"
+                >
+                    <div className="flex flex-wrap items-center gap-2" data-role="foundation-chip-row">
+                        <FuxieBadge tone="brand">Bright Sky</FuxieBadge>
+                        <FuxieBadge tone="success">State safe</FuxieBadge>
+                        <FuxieBadge tone="neutral">390 px ready</FuxieBadge>
+                    </div>
+
+                    <div className="mt-5 grid gap-3 sm:grid-cols-3" data-role="foundation-card-stack">
+                        {[
+                            ['CTA', 'One dominant action per surface', 100],
+                            ['State', 'Shared empty and error chrome', 72],
+                            ['Shell', 'Desktop and mobile spacing', 84],
+                        ].map(([label, detail, progress]) => (
+                            <article key={label} className="min-w-0 rounded-2xl border border-slate-100 bg-white p-4 shadow-sm">
+                                <p className="truncate text-sm font-black text-slate-950">{label}</p>
+                                <p className="mt-1 min-h-10 text-xs font-semibold leading-5 text-slate-500">{detail}</p>
+                                <FuxieProgressBar value={Number(progress)} className="mt-3" />
+                            </article>
+                        ))}
+                    </div>
+
+                    <div className="mt-5 flex flex-col gap-3 sm:flex-row sm:items-center">
+                        <PrimaryCta data-testid="foundation-primary-cta">
+                            Start foundation QA
+                        </PrimaryCta>
+                        <PrimaryCta variant="secondary">
+                            Secondary path
+                        </PrimaryCta>
+                    </div>
+                </FuxiePanel>
+
+                <div className="grid min-w-0 gap-4">
+                    <StateShell
+                        surfaceId="dashboard"
+                        state="empty"
+                        title="No session yet"
+                        message="Choose one short task to start today's learning loop."
+                        primaryCta={{ label: 'Plan session', href: '/dashboard' }}
+                        className="min-w-0"
+                    />
+                    <StateShell
+                        surfaceId="course"
+                        state="error"
+                        title="Course data paused"
+                        message="The route should offer a retry and a safe way back without hiding learner progress."
+                        primaryCta={{ label: 'Retry loading', href: '/course' }}
+                        secondaryCta={{ label: 'Back to dashboard', href: '/dashboard' }}
+                        className="min-w-0"
+                    />
+                </div>
+            </div>
+
+            <FuxiePanel
+                variant="soft"
+                data-role="foundation-success-like-state"
+                className="mt-4 min-w-0 p-4"
+            >
+                <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+                    <div className="min-w-0">
+                        <p className="text-sm font-black text-slate-950">Success-like state</p>
+                        <p className="mt-1 text-sm font-semibold leading-6 text-slate-600">
+                            Progress saved, visual hierarchy stable, and no reward-only styling required.
+                        </p>
+                    </div>
+                    <FuxieBadge tone="success" className="self-start sm:self-center">Ready</FuxieBadge>
+                </div>
+            </FuxiePanel>
+        </section>
+    )
+}
+
 export default function FuxieLiveQaPage() {
     if (process.env.NODE_ENV === 'production') {
         notFound()
@@ -154,12 +248,13 @@ export default function FuxieLiveQaPage() {
         <main className="min-h-screen bg-white px-6 py-8">
             <section className="mx-auto max-w-5xl">
                 <div className="mb-6">
-                    <p className="text-xs font-black uppercase tracking-wide text-[#3C78A8]">Fuxie live QA</p>
+                    <p className="text-xs font-black uppercase tracking-wide text-text-brand">Fuxie live QA</p>
                     <h1 className="mt-2 text-2xl font-black text-slate-950">Fuxie identity and animation QA</h1>
                     <p className="mt-2 text-sm font-bold text-slate-500">Source references and V6B are the current visual baseline. Hunyuan V8 is experimental until it matches the source identity.</p>
                 </div>
+                <FoundationLockFixture />
                 <div className="mb-8">
-                    <h2 className="mb-3 text-base font-black text-[#173B56]">source-of-truth references</h2>
+                    <h2 className="mb-3 text-base font-black text-text-primary">source-of-truth references</h2>
                     <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
                         {SOURCE_REFERENCES.map((reference) => (
                             <article key={reference.src} className="grid place-items-center rounded-2xl border border-[#BFE8F4] bg-[#F0FCFF] p-5 shadow-sm">
@@ -170,13 +265,13 @@ export default function FuxieLiveQaPage() {
                                     height={220}
                                     className="h-[220px] w-[220px] object-contain"
                                 />
-                                <p className="mt-3 text-sm font-black text-[#173B56]">{reference.label}</p>
+                                <p className="mt-3 text-sm font-black text-text-primary">{reference.label}</p>
                             </article>
                         ))}
                     </div>
                 </div>
                 <div className="mb-8">
-                    <h2 className="mb-3 text-base font-black text-[#173B56]">codex imagegen coherent full-body v10</h2>
+                    <h2 className="mb-3 text-base font-black text-text-primary">codex imagegen coherent full-body v10</h2>
                     <div className="grid gap-5 sm:grid-cols-2">
                         {IMAGEGEN_FULLBODY_V10.map((reference) => (
                             <article key={reference.src} className="grid place-items-center rounded-2xl border border-[#BFE8F4] bg-white p-5 shadow-sm">
@@ -189,19 +284,19 @@ export default function FuxieLiveQaPage() {
                                     unoptimized
                                     className="h-[260px] w-full object-contain"
                                 />
-                                <p className="mt-3 text-sm font-black text-[#173B56]">{reference.label}</p>
+                                <p className="mt-3 text-sm font-black text-text-primary">{reference.label}</p>
                             </article>
                         ))}
                     </div>
                 </div>
                 {hasV19Model ? (
                     <div className="mb-8">
-                        <h2 className="mb-3 text-base font-black text-[#173B56]">v19 motion balance rig candidate</h2>
+                        <h2 className="mb-3 text-base font-black text-text-primary">v19 motion balance rig candidate</h2>
                         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
                             {RIG_STATES.map((state) => (
                                 <article key={`v19-${state}`} className="grid place-items-center rounded-2xl border border-[#84DCCF] bg-[#F2FFFC] p-5 shadow-sm">
                                     <FuxieLive3DDynamic state={state} source="rig" quality="performance" size={220} assetKey="v19" priority />
-                                    <p className="mt-3 text-sm font-black text-[#173B56]">v19 motion balance rig {state}</p>
+                                    <p className="mt-3 text-sm font-black text-text-primary">v19 motion balance rig {state}</p>
                                 </article>
                             ))}
                         </div>
@@ -209,12 +304,12 @@ export default function FuxieLiveQaPage() {
                 ) : null}
                 {hasV18Model ? (
                     <div className="mb-8">
-                        <h2 className="mb-3 text-base font-black text-[#173B56]">v18 motion polish rig candidate</h2>
+                        <h2 className="mb-3 text-base font-black text-text-primary">v18 motion polish rig candidate</h2>
                         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
                             {RIG_STATES.map((state) => (
                                 <article key={`v18-${state}`} className="grid place-items-center rounded-2xl border border-[#84DCCF] bg-[#F2FFFC] p-5 shadow-sm">
                                     <FuxieLive3DDynamic state={state} source="rig" quality="static" size={220} assetKey="v18" priority />
-                                    <p className="mt-3 text-sm font-black text-[#173B56]">v18 motion polish rig {state}</p>
+                                    <p className="mt-3 text-sm font-black text-text-primary">v18 motion polish rig {state}</p>
                                 </article>
                             ))}
                         </div>
@@ -222,12 +317,12 @@ export default function FuxieLiveQaPage() {
                 ) : null}
                 {hasV17Model ? (
                     <div className="mb-8">
-                        <h2 className="mb-3 text-base font-black text-[#173B56]">v17 contour source skinned rig candidate</h2>
+                        <h2 className="mb-3 text-base font-black text-text-primary">v17 contour source skinned rig candidate</h2>
                         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
                             {RIG_STATES.map((state) => (
                                 <article key={`v17-${state}`} className="grid place-items-center rounded-2xl border border-[#84DCCF] bg-[#F2FFFC] p-5 shadow-sm">
                                     <FuxieLive3DDynamic state={state} source="rig" quality="static" size={220} assetKey="v17" priority />
-                                    <p className="mt-3 text-sm font-black text-[#173B56]">v17 contour source skinned rig {state}</p>
+                                    <p className="mt-3 text-sm font-black text-text-primary">v17 contour source skinned rig {state}</p>
                                 </article>
                             ))}
                         </div>
@@ -235,12 +330,12 @@ export default function FuxieLiveQaPage() {
                 ) : null}
                 {hasV16Model ? (
                     <div className="mb-8">
-                        <h2 className="mb-3 text-base font-black text-[#173B56]">v16 unified source skinned rig candidate</h2>
+                        <h2 className="mb-3 text-base font-black text-text-primary">v16 unified source skinned rig candidate</h2>
                         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
                             {RIG_STATES.map((state) => (
                                 <article key={`v16-${state}`} className="grid place-items-center rounded-2xl border border-[#84DCCF] bg-[#F2FFFC] p-5 shadow-sm">
                                     <FuxieLive3DDynamic state={state} source="rig" quality="static" size={220} assetKey="v16" priority />
-                                    <p className="mt-3 text-sm font-black text-[#173B56]">v16 unified source skinned rig {state}</p>
+                                    <p className="mt-3 text-sm font-black text-text-primary">v16 unified source skinned rig {state}</p>
                                 </article>
                             ))}
                         </div>
@@ -248,12 +343,12 @@ export default function FuxieLiveQaPage() {
                 ) : null}
                 {hasV15Model ? (
                     <div className="mb-8">
-                        <h2 className="mb-3 text-base font-black text-[#173B56]">v15 source-locked skinned rig candidate</h2>
+                        <h2 className="mb-3 text-base font-black text-text-primary">v15 source-locked skinned rig candidate</h2>
                         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
                             {RIG_STATES.map((state) => (
                                 <article key={`v15-${state}`} className="grid place-items-center rounded-2xl border border-[#84DCCF] bg-[#F2FFFC] p-5 shadow-sm">
                                     <FuxieLive3DDynamic state={state} source="rig" quality="static" size={220} assetKey="v15" priority />
-                                    <p className="mt-3 text-sm font-black text-[#173B56]">v15 source-locked skinned rig {state}</p>
+                                    <p className="mt-3 text-sm font-black text-text-primary">v15 source-locked skinned rig {state}</p>
                                 </article>
                             ))}
                         </div>
@@ -261,12 +356,12 @@ export default function FuxieLiveQaPage() {
                 ) : null}
                 {hasV14Model ? (
                     <div className="mb-8">
-                        <h2 className="mb-3 text-base font-black text-[#173B56]">v14 identity deform skeletal rig candidate</h2>
+                        <h2 className="mb-3 text-base font-black text-text-primary">v14 identity deform skeletal rig candidate</h2>
                         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
                             {RIG_STATES.map((state) => (
                                 <article key={`v14-${state}`} className="grid place-items-center rounded-2xl border border-[#84DCCF] bg-[#F2FFFC] p-5 shadow-sm">
                                     <FuxieLive3DDynamic state={state} source="rig" quality="static" size={220} assetKey="v14" priority />
-                                    <p className="mt-3 text-sm font-black text-[#173B56]">v14 identity deform rig {state}</p>
+                                    <p className="mt-3 text-sm font-black text-text-primary">v14 identity deform rig {state}</p>
                                 </article>
                             ))}
                         </div>
@@ -274,19 +369,19 @@ export default function FuxieLiveQaPage() {
                 ) : null}
                 {hasV10Model ? (
                     <div className="mb-8">
-                        <h2 className="mb-3 text-base font-black text-[#173B56]">v10 imagegen coherent rig candidate</h2>
+                        <h2 className="mb-3 text-base font-black text-text-primary">v10 imagegen coherent rig candidate</h2>
                         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
                             {RIG_STATES.map((state) => (
                                 <article key={`v10-${state}`} className="grid place-items-center rounded-2xl border border-[#BFE8F4] bg-white p-5 shadow-sm">
                                     <FuxieLive3DDynamic state={state} source="rig" quality="static" size={220} assetKey="v10" priority />
-                                    <p className="mt-3 text-sm font-black text-[#173B56]">v10 imagegen coherent {state}</p>
+                                    <p className="mt-3 text-sm font-black text-text-primary">v10 imagegen coherent {state}</p>
                                 </article>
                             ))}
                         </div>
                     </div>
                 ) : null}
                 <div className="mb-8">
-                    <h2 className="mb-3 text-base font-black text-[#173B56]">codex imagegen modular source v2, generated parts</h2>
+                    <h2 className="mb-3 text-base font-black text-text-primary">codex imagegen modular source v2, generated parts</h2>
                     <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-5">
                         {IMAGEGEN_PARTS_V2.map((part) => (
                             <article key={part.src} className="grid place-items-center rounded-2xl border border-[#BFE8F4] bg-white p-4 shadow-sm">
@@ -299,13 +394,13 @@ export default function FuxieLiveQaPage() {
                                     unoptimized
                                     className="h-[180px] w-[180px] object-contain"
                                 />
-                                <p className="mt-3 text-center text-xs font-black text-[#173B56]">{part.label}</p>
+                                <p className="mt-3 text-center text-xs font-black text-text-primary">{part.label}</p>
                             </article>
                         ))}
                     </div>
                 </div>
                 <div className="mb-8">
-                    <h2 className="mb-3 text-base font-black text-[#173B56]">rendered modular source v1, not crops</h2>
+                    <h2 className="mb-3 text-base font-black text-text-primary">rendered modular source v1, not crops</h2>
                     <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-5">
                         {MODULAR_SOURCE_PARTS.map((part) => (
                             <article key={part.src} className="grid place-items-center rounded-2xl border border-[#BFE8F4] bg-white p-4 shadow-sm">
@@ -318,13 +413,13 @@ export default function FuxieLiveQaPage() {
                                     unoptimized
                                     className="h-[180px] w-[180px] object-contain"
                                 />
-                                <p className="mt-3 text-center text-xs font-black text-[#173B56]">{part.label}</p>
+                                <p className="mt-3 text-center text-xs font-black text-text-primary">{part.label}</p>
                             </article>
                         ))}
                     </div>
                 </div>
                 <div className="mb-8">
-                    <h2 className="mb-3 text-base font-black text-[#173B56]">identity poster comparison</h2>
+                    <h2 className="mb-3 text-base font-black text-text-primary">identity poster comparison</h2>
                     <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
                         {[
                             { assetKey: 'v6b' as const, label: 'v6b approved baseline' },
@@ -349,7 +444,7 @@ export default function FuxieLiveQaPage() {
                                     height={220}
                                     className="h-[220px] w-[220px] object-contain"
                                 />
-                                <p className="mt-3 text-sm font-black text-[#173B56]">{variant.label}</p>
+                                <p className="mt-3 text-sm font-black text-text-primary">{variant.label}</p>
                             </article>
                         ))}
                     </div>
@@ -358,7 +453,7 @@ export default function FuxieLiveQaPage() {
                     {STATES.map((state) => (
                         <article key={state} className="grid place-items-center rounded-2xl border border-slate-100 bg-[#F3FBFF] p-5 shadow-sm">
                             <FuxieLive3DDynamic state={state} size={180} quality="static" priority />
-                            <p className="mt-3 text-sm font-black text-[#173B56]">{state}</p>
+                            <p className="mt-3 text-sm font-black text-text-primary">{state}</p>
                         </article>
                     ))}
                 </div>

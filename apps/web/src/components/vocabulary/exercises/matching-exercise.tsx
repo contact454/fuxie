@@ -199,7 +199,7 @@ export function MatchingExercise({ pairs, cefrLevel, themeName: _themeName, them
                     <div className="grid grid-cols-2 gap-4">
                         {/* German words column */}
                         <div className="space-y-3">
-                            <p className="mb-2 text-center text-xs font-black uppercase tracking-wider text-[#3C78A8]">Deutsch</p>
+                            <p className="mb-2 text-center text-xs font-black uppercase text-text-brand">Deutsch</p>
                             {shuffledWords.map(pair => {
                                 const isMatched = matchedPairs.has(pair.id)
                                 const isSelected = selectedWord === pair.id
@@ -221,7 +221,7 @@ export function MatchingExercise({ pairs, cefrLevel, themeName: _themeName, them
 
                         {/* Vietnamese meanings column */}
                         <div className="space-y-3">
-                            <p className="mb-2 text-center text-xs font-black uppercase tracking-wider text-[#3C78A8]">Tiếng Việt</p>
+                            <p className="mb-2 text-center text-xs font-black uppercase text-text-brand">Tiếng Việt</p>
                             {shuffledMeanings.map(pair => {
                                 const isMatched = matchedPairs.has(pair.id)
                                 const isSelected = selectedMeaning === pair.id

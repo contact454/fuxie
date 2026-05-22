@@ -2,6 +2,8 @@
 
 import { useCallback, useEffect, useMemo, useState } from 'react'
 import { useRouter } from 'next/navigation'
+import Image from 'next/image'
+import { useTranslations } from 'next-intl'
 import {
     CheckCircle2,
     Headphones,
@@ -18,6 +20,7 @@ import { FUXIE_3D_ASSETS, FuxieRoleMascot } from '@/components/gamification/ques
 import { Mascot } from '@/components/ui/mascot'
 import { useLevelSwitcher } from '@/hooks/use-level-switcher'
 import { getCefrTheme } from '@/lib/constants/cefr'
+import { FUXIE_WORLD_PROPS } from '@/lib/mascot/fuxie-assets'
 
 interface LessonItem {
     id: string
@@ -58,11 +61,11 @@ function formatDuration(seconds: number | null): string {
     return `${m}:${s.toString().padStart(2, '0')}`
 }
 
-function formatLessonMeta(lesson: LessonItem): string {
+function formatLessonMeta(lesson: LessonItem, t: any): string {
     return [
         lesson.taskType,
         lesson.audioDuration ? formatDuration(lesson.audioDuration) : null,
-        lesson.questionCount > 0 ? `${lesson.questionCount} câu hỏi` : null,
+        lesson.questionCount > 0 ? t('questionsCount', { count: lesson.questionCount }) : null,
     ].filter(Boolean).join(' - ')
 }
 
@@ -90,6 +93,7 @@ function ProgressRing({ progress, size = 40, strokeWidth = 3.5 }: { progress: nu
 }
 
 export function ListeningClient({ teile, totalLessons, totalCompleted, availableLevels, initialLevel }: ListeningClientProps) {
+    const t = useTranslations('Gamification')
     const router = useRouter()
     const [currentTeile, setCurrentTeile] = useState(teile)
     const [currentTotal, setCurrentTotal] = useState(totalLessons)
@@ -182,11 +186,18 @@ export function ListeningClient({ teile, totalLessons, totalCompleted, available
                     <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
                         <FuxieRoleMascot src={FUXIE_3D_ASSETS.radioHost} alt="Fuxie listening coach" size={64} motion="coach" />
                         <div className="flex-1">
-                            <h1 className="text-2xl font-bold text-gray-900">Luyện nghe {currentLevel}</h1>
+                            <h1 className="text-2xl font-bold text-gray-900">{t('practiceSkill', { skill: 'nghe', level: currentLevel })}</h1>
                             <p className="text-sm text-gray-500 mt-0.5">
-                                <span className="font-semibold" style={{ color: cefrColors.text }}>{currentCompleted}</span> / {currentTotal} bài đã xong
+                                <span className="font-semibold" style={{ color: cefrColors.text }}>{currentCompleted}</span> / {currentTotal} hoàn thành
                             </p>
                         </div>
+                        <Image
+                            src={FUXIE_WORLD_PROPS.radioBoothConsole}
+                            alt=""
+                            width={96}
+                            height={96}
+                            className="ml-auto hidden h-20 w-20 shrink-0 object-contain drop-shadow-sm md:block"
+                        />
                         {nextLessonHref && (
                             <MeasuredLink
                                 href={nextLessonHref}
@@ -196,7 +207,7 @@ export function ListeningClient({ teile, totalLessons, totalCompleted, available
                                 style={{ background: cefrColors.cssGradient, boxShadow: `0 4px 16px ${cefrColors.shadow}` }}
                             >
                                 <Volume2 className="h-4 w-4" />
-                                Học tiếp
+                                {t('continueLearningAction')}
                             </MeasuredLink>
                         )}
                     </div>
@@ -207,7 +218,7 @@ export function ListeningClient({ teile, totalLessons, totalCompleted, available
                                 style={{ width: `${Math.max(overallProgress, 1)}%`, background: cefrColors.cssGradient }}
                             />
                         </div>
-                        <p className="text-xs text-gray-400 mt-1.5 text-right">{overallProgress}% hoàn thành</p>
+                        <p className="text-xs text-gray-400 mt-1.5 text-right">{t('percentCompleted', { percent: overallProgress })}</p>
                     </div>
                 </div>
             </div>
@@ -219,9 +230,9 @@ export function ListeningClient({ teile, totalLessons, totalCompleted, available
             ) : currentTeile.length === 0 ? (
                 <div className="bg-white rounded-2xl p-12 border border-gray-100 shadow-sm text-center">
                     <Mascot variant="thinking" size={80} />
-                    <h2 className="text-lg font-bold text-gray-700 mt-4">Nội dung nghe đang được chuẩn bị</h2>
+                    <h2 className="text-lg font-bold text-gray-700 mt-4">{t('listeningEmpty')}</h2>
                     <p className="text-sm text-gray-500 mt-2">
-                        Hãy quay lại lộ trình chính hoặc học từ vựng trong lúc chờ bài nghe mới.
+                        {t('listeningEmptyDesc')}
                     </p>
                     <MeasuredLink
                         href="/course"
@@ -229,7 +240,7 @@ export function ListeningClient({ teile, totalLessons, totalCompleted, available
                         source={currentLevel}
                         className="mt-5 inline-flex items-center justify-center rounded-xl bg-[#60A8E4] px-5 py-2.5 text-sm font-bold text-white shadow-sm transition hover:bg-[#3C78A8]"
                     >
-                        Về khóa học
+                        {t('backToCourse')}
                     </MeasuredLink>
                 </div>
             ) : (
@@ -255,10 +266,10 @@ export function ListeningClient({ teile, totalLessons, totalCompleted, available
                                     </div>
                                     <div className="flex-1 min-w-0">
                                         <h3 className="text-base font-bold text-gray-900">
-                                            Phần {teil.teil} - {teil.teilName}
+                                            {t('part', { part: teil.teil })} - {teil.teilName}
                                         </h3>
                                         <p className="text-sm text-gray-500 mt-0.5">
-                                            {teil.lessons.length} bài nghe - <span style={{ color: cefrColors.text, fontWeight: 600 }}>{completedInTeil}</span> đã xong
+                                            {t('lessonsCompletedListening', { total: teil.lessons.length, completed: completedInTeil })}
                                         </p>
                                     </div>
                                     <div className="relative flex items-center gap-3">
@@ -327,7 +338,7 @@ export function ListeningClient({ teile, totalLessons, totalCompleted, available
                                                                     {lesson.topic}
                                                                 </p>
                                                                 <p className={`text-xs mt-0.5 ${isDone ? 'text-green-600' : 'text-gray-400'}`}>
-                                                                    {formatLessonMeta(lesson)}
+                                                                    {formatLessonMeta(lesson, t)}
                                                                 </p>
                                                             </div>
                                                             <div className="shrink-0">
@@ -339,7 +350,7 @@ export function ListeningClient({ teile, totalLessons, totalCompleted, available
                                                                     <span className="inline-flex items-center gap-1 text-xs font-bold px-2.5 py-1 rounded-lg"
                                                                         style={{ color: cefrColors.text, backgroundColor: cefrColors.bg }}>
                                                                         <Play className="h-3 w-3" />
-                                                                        Bắt đầu
+                                                                        {t('startAction')}
                                                                     </span>
                                                                 ) : isLocked ? (
                                                                     <Lock className="h-4 w-4 text-gray-300" />
@@ -355,7 +366,7 @@ export function ListeningClient({ teile, totalLessons, totalCompleted, available
                                                 if (hiddenCount === 0) return null
                                                 return (
                                                     <div className="rounded-xl border border-dashed border-gray-200 bg-gray-50 px-4 py-3 text-sm text-gray-500">
-                                                        Hoàn thành bài hiện tại để mở {hiddenCount} bài tiếp theo.
+                                                        {t('unlockNext', { count: hiddenCount })}
                                                     </div>
                                                 )
                                             })()}

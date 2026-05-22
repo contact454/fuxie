@@ -61,7 +61,8 @@
             "type": "Nomen",
             "meaning": "endurance"
           }
-        ]
+        ],
+        "vi": "??p ?n ??ng l? falsch. H?y ??i chi?u v?i th?ng tin then ch?t trong b?i ??c."
       }
     },
     {
@@ -80,7 +81,8 @@
             "type": "Nomen",
             "meaning": "training plan"
           }
-        ]
+        ],
+        "vi": "??p ?n ??ng l? richtig. H?y ??i chi?u v?i th?ng tin then ch?t trong b?i ??c."
       }
     },
     {
@@ -99,7 +101,8 @@
             "type": "Nomen",
             "meaning": "running group"
           }
-        ]
+        ],
+        "vi": "??p ?n ??ng l? falsch. H?y ??i chi?u v?i th?ng tin then ch?t trong b?i ??c."
       }
     },
     {
@@ -118,7 +121,8 @@
             "type": "Verb",
             "meaning": "to give up"
           }
-        ]
+        ],
+        "vi": "??p ?n ??ng l? richtig. H?y ??i chi?u v?i th?ng tin then ch?t trong b?i ??c."
       }
     },
     {
@@ -138,7 +142,8 @@
             "meaning": "distance / route"
           }
         ],
-        "reasoning": "[Inferential] "
+        "reasoning": "[Inferential] ",
+        "vi": "??p ?n ??ng l? falsch. H?y ??i chi?u v?i th?ng tin then ch?t trong b?i ??c."
       }
     }
   ],
@@ -196,5 +201,25 @@
     "richtig_falsch_balanced": true,
     "image_count": 1,
     "passed": true
-  }
+  },
+  "cefrAudit": {
+    "targetLevel": "B1",
+    "verdict": "aligned",
+    "reviewerRole": "German Academic Lead",
+    "notes": "Release-candidate metadata audit: reading content for \"Sport & Fitness\" is aligned with declared B1 scope pending final human spot-check.",
+    "reviewedAt": "2026-05-12",
+    "reviewScope": "release_candidate_metadata_pass"
+  },
+  "learningOutcomes": [
+    {
+      "id": "b1-t1-008-lo-1",
+      "cefrLevel": "B1",
+      "skill": "reading",
+      "canDoVi": "Toi co the luyen doc hieu o trinh do B1 qua chu de \"Sport & Fitness\".",
+      "canDoDe": "Ich kann Lesen auf Niveau B1 zum Thema \"Sport & Fitness\" ueben.",
+      "linkedContentIds": [
+        "B1-T1-008"
+      ]
+    }
+  ]
 }

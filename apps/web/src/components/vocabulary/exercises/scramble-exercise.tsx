@@ -195,7 +195,7 @@ export function ScrambleExercise({ questions, cefrLevel, themeName: _themeName, 
                         {/* Feedback */}
                         {isRevealed && (
                             <div className="mt-3 pt-3 border-t border-current/10">
-                                <p className="text-sm font-semibold text-[#3C78A8]">Đã lưu câu trả lời</p>
+                                <p className="text-sm font-semibold text-text-brand">Đã lưu câu trả lời</p>
                             </div>
                         )}
                     </div>

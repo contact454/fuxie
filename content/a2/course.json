@@ -1,133 +1,520 @@
 {
-    "course": {
-        "slug": "deutsch-a2-grundstufe",
-        "title": "Deutsch A2 — Grundstufe",
-        "titleDe": "Deutsch A2 — Grundstufe",
-        "description": "Khóa học tiếng Đức A2. Thì quá khứ (Perfekt, Präteritum), Dativ, mệnh đề phụ, so sánh. Chuẩn bị Goethe A2 / Telc A2.",
-        "cefrLevel": "A2",
-        "examTypes": ["GOETHE", "TELC", "OESD"],
-        "imageUrl": "/mascot/hero/hero-landing.png",
-        "sortOrder": 2
-    },
-    "modules": [
+  "course": {
+    "slug": "deutsch-a2-grundstufe",
+    "title": "Deutsch A2 — Grundstufe",
+    "titleDe": "Deutsch A2 — Grundstufe",
+    "description": "Khóa học tiếng Đức A2. Thì quá khứ (Perfekt, Präteritum), Dativ, mệnh đề phụ, so sánh. Chuẩn bị Goethe A2 / Telc A2.",
+    "cefrLevel": "A2",
+    "examTypes": [
+      "GOETHE",
+      "TELC",
+      "OESD"
+    ],
+    "imageUrl": "/mascot/hero/hero-landing.png",
+    "sortOrder": 2
+  },
+  "modules": [
+    {
+      "slug": "m1-was-hast-du-gemacht",
+      "title": "Was hast du gemacht?",
+      "titleDe": "Was hast du gemacht?",
+      "description": "Kể lại sự việc, thì Perfekt với haben và sein.",
+      "cefrLevel": "A2",
+      "sortOrder": 1,
+      "estimatedMinutes": 1500,
+      "vocabularyThemes": [
+        "a2-person-identitaet",
+        "a2-familie-soziales"
+      ],
+      "grammarTopics": [
+        "a2-perfekt-haben",
+        "a2-perfekt-sein"
+      ],
+      "skillLinks": [
         {
-            "slug": "m1-was-hast-du-gemacht",
-            "title": "Was hast du gemacht?",
-            "titleDe": "Was hast du gemacht?",
-            "description": "Kể lại sự việc, thì Perfekt với haben và sein.",
-            "cefrLevel": "A2",
-            "sortOrder": 1,
-            "estimatedMinutes": 1500,
-            "vocabularyThemes": ["a2-person-identitaet", "a2-familie-soziales"],
-            "grammarTopics": ["a2-perfekt-haben", "a2-perfekt-sein"],
-            "skillLinks": [
-                {"skill": "listening", "label": "Hören", "labelVi": "Nghe hiểu", "href": "/listening?level=A2", "emoji": "🎧"},
-                {"skill": "speaking", "label": "Sprechen", "labelVi": "Luyện nói", "href": "/speaking?level=A2", "emoji": "🎙️"},
-                {"skill": "reading", "label": "Lesen", "labelVi": "Đọc hiểu", "href": "/reading?level=A2", "emoji": "📖"},
-                {"skill": "writing", "label": "Schreiben", "labelVi": "Luyện viết", "href": "/writing?level=A2", "emoji": "✍️"}
-            ]
+          "skill": "listening",
+          "label": "Hören",
+          "labelVi": "Nghe hiểu",
+          "href": "/listening?level=A2",
+          "emoji": "🎧"
         },
         {
-            "slug": "m2-gesundheit-und-wohnen",
-            "title": "Gesundheit und Wohnen",
-            "titleDe": "Gesundheit und Wohnen",
-            "description": "Sức khỏe, nhà ở, cách Dativ, động từ phản thân.",
-            "cefrLevel": "A2",
-            "sortOrder": 2,
-            "estimatedMinutes": 1500,
-            "vocabularyThemes": ["a2-gesundheit-koerperpflege", "a2-wohnen-haushalt"],
-            "grammarTopics": ["a2-dativ", "a2-reflexivverben"],
-            "skillLinks": [
-                {"skill": "listening", "label": "Hören", "labelVi": "Nghe hiểu", "href": "/listening?level=A2", "emoji": "🎧"},
-                {"skill": "speaking", "label": "Sprechen", "labelVi": "Luyện nói", "href": "/speaking?level=A2", "emoji": "🎙️"},
-                {"skill": "reading", "label": "Lesen", "labelVi": "Đọc hiểu", "href": "/reading?level=A2", "emoji": "📖"},
-                {"skill": "writing", "label": "Schreiben", "labelVi": "Luyện viết", "href": "/writing?level=A2", "emoji": "✍️"}
-            ]
+          "skill": "speaking",
+          "label": "Sprechen",
+          "labelVi": "Luyện nói",
+          "href": "/speaking?level=A2",
+          "emoji": "🎙️"
         },
         {
-            "slug": "m3-essen-und-einkaufen",
-            "title": "Essen, Kleidung und Imperativ",
-            "titleDe": "Essen, Kleidung und Imperativ",
-            "description": "Ăn uống, mua sắm, thời trang, mệnh lệnh cách, so sánh.",
-            "cefrLevel": "A2",
-            "sortOrder": 3,
-            "estimatedMinutes": 1500,
-            "vocabularyThemes": ["a2-essen-restaurant", "a2-kleidung-mode"],
-            "grammarTopics": ["a2-imperativ", "a2-komparativ"],
-            "skillLinks": [
-                {"skill": "listening", "label": "Hören", "labelVi": "Nghe hiểu", "href": "/listening?level=A2", "emoji": "🎧"},
-                {"skill": "speaking", "label": "Sprechen", "labelVi": "Luyện nói", "href": "/speaking?level=A2", "emoji": "🎙️"},
-                {"skill": "reading", "label": "Lesen", "labelVi": "Đọc hiểu", "href": "/reading?level=A2", "emoji": "📖"},
-                {"skill": "writing", "label": "Schreiben", "labelVi": "Luyện viết", "href": "/writing?level=A2", "emoji": "✍️"}
-            ]
+          "skill": "reading",
+          "label": "Lesen",
+          "labelVi": "Đọc hiểu",
+          "href": "/reading?level=A2",
+          "emoji": "📖"
         },
         {
-            "slug": "m4-alltag-und-freizeit",
-            "title": "Alltag, Freizeit und Vergangenheit",
-            "titleDe": "Alltag, Freizeit und Vergangenheit",
-            "description": "Giải trí, thể thao, thời tiết, thì Präteritum.",
-            "cefrLevel": "A2",
-            "sortOrder": 4,
-            "estimatedMinutes": 1500,
-            "vocabularyThemes": ["a2-freizeit-kultur", "a2-sport-fitness", "a2-wetter-klima"],
-            "grammarTopics": ["a2-praeteritum"],
-            "skillLinks": [
-                {"skill": "listening", "label": "Hören", "labelVi": "Nghe hiểu", "href": "/listening?level=A2", "emoji": "🎧"},
-                {"skill": "speaking", "label": "Sprechen", "labelVi": "Luyện nói", "href": "/speaking?level=A2", "emoji": "🎙️"},
-                {"skill": "reading", "label": "Lesen", "labelVi": "Đọc hiểu", "href": "/reading?level=A2", "emoji": "📖"},
-                {"skill": "writing", "label": "Schreiben", "labelVi": "Luyện viết", "href": "/writing?level=A2", "emoji": "✍️"}
-            ]
-        },
-        {
-            "slug": "m5-warum-und-dass",
-            "title": "Warum? — weil und dass",
-            "titleDe": "Warum? — weil und dass",
-            "description": "Giao tiếp, viết email, mệnh đề phụ weil và dass.",
-            "cefrLevel": "A2",
-            "sortOrder": 5,
-            "estimatedMinutes": 1500,
-            "vocabularyThemes": ["a2-kommunikation-medien", "a2-dienstleistungen-amt", "a2-technik-alltag"],
-            "grammarTopics": ["a2-nebensatz-weil", "a2-nebensatz-dass"],
-            "skillLinks": [
-                {"skill": "listening", "label": "Hören", "labelVi": "Nghe hiểu", "href": "/listening?level=A2", "emoji": "🎧"},
-                {"skill": "speaking", "label": "Sprechen", "labelVi": "Luyện nói", "href": "/speaking?level=A2", "emoji": "🎙️"},
-                {"skill": "reading", "label": "Lesen", "labelVi": "Đọc hiểu", "href": "/reading?level=A2", "emoji": "📖"},
-                {"skill": "writing", "label": "Schreiben", "labelVi": "Luyện viết", "href": "/writing?level=A2", "emoji": "✍️"}
-            ]
-        },
-        {
-            "slug": "m6-beruf-und-reisen",
-            "title": "Beruf, Reisen und Geld",
-            "titleDe": "Beruf, Reisen und Geld",
-            "description": "Nghề nghiệp, du lịch, tiền bạc — tổng ôn ngữ pháp A2.",
-            "cefrLevel": "A2",
-            "sortOrder": 6,
-            "estimatedMinutes": 1200,
-            "vocabularyThemes": ["a2-bildung-berufsleben", "a2-arbeit-wirtschaft", "a2-reisen-tourismus", "a2-geld-finanzen", "a2-verkehr-mobilitaet"],
-            "grammarTopics": [],
-            "skillLinks": [
-                {"skill": "listening", "label": "Hören", "labelVi": "Nghe hiểu", "href": "/listening?level=A2", "emoji": "🎧"},
-                {"skill": "speaking", "label": "Sprechen", "labelVi": "Luyện nói", "href": "/speaking?level=A2", "emoji": "🎙️"},
-                {"skill": "reading", "label": "Lesen", "labelVi": "Đọc hiểu", "href": "/reading?level=A2", "emoji": "📖"},
-                {"skill": "writing", "label": "Schreiben", "labelVi": "Luyện viết", "href": "/writing?level=A2", "emoji": "✍️"}
-            ]
-        },
-        {
-            "slug": "m7-pruefungsvorbereitung-a2",
-            "title": "Prüfungsvorbereitung A2",
-            "titleDe": "Prüfungsvorbereitung A2",
-            "description": "Tổng ôn 4 kỹ năng, mock exams Goethe A2.",
-            "cefrLevel": "A2",
-            "sortOrder": 7,
-            "estimatedMinutes": 900,
-            "vocabularyThemes": [],
-            "grammarTopics": [],
-            "skillLinks": [
-                {"skill": "listening", "label": "Hören", "labelVi": "Nghe ôn thi", "href": "/listening?level=A2", "emoji": "🎧"},
-                {"skill": "speaking", "label": "Sprechen", "labelVi": "Nói ôn thi", "href": "/speaking?level=A2", "emoji": "🎙️"},
-                {"skill": "reading", "label": "Lesen", "labelVi": "Đọc ôn thi", "href": "/reading?level=A2", "emoji": "📖"},
-                {"skill": "writing", "label": "Schreiben", "labelVi": "Viết ôn thi", "href": "/writing?level=A2", "emoji": "✍️"}
-            ]
+          "skill": "writing",
+          "label": "Schreiben",
+          "labelVi": "Luyện viết",
+          "href": "/writing?level=A2",
+          "emoji": "✍️"
         }
-    ]
+      ],
+      "cefrAudit": {
+        "targetLevel": "A2",
+        "verdict": "aligned",
+        "reviewerRole": "German Academic Lead",
+        "notes": "Release-candidate metadata audit: course content for \"Was hast du gemacht?\" is aligned with declared A2 scope pending final human spot-check.",
+        "reviewedAt": "2026-05-12",
+        "reviewScope": "release_candidate_metadata_pass"
+      },
+      "learningOutcomes": [
+        {
+          "id": "m1-was-hast-du-gemacht-lo-1",
+          "cefrLevel": "A2",
+          "skill": "course",
+          "canDoVi": "Toi co the luyen lo trinh hoc o trinh do A2 qua chu de \"Was hast du gemacht?\".",
+          "canDoDe": "Ich kann Lernpfad auf Niveau A2 zum Thema \"Was hast du gemacht?\" ueben.",
+          "linkedContentIds": [
+            "m1-was-hast-du-gemacht",
+            "a2-person-identitaet",
+            "a2-familie-soziales",
+            "a2-perfekt-haben",
+            "a2-perfekt-sein"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "m2-gesundheit-und-wohnen",
+      "title": "Gesundheit und Wohnen",
+      "titleDe": "Gesundheit und Wohnen",
+      "description": "Sức khỏe, nhà ở, cách Dativ, động từ phản thân.",
+      "cefrLevel": "A2",
+      "sortOrder": 2,
+      "estimatedMinutes": 1500,
+      "vocabularyThemes": [
+        "a2-gesundheit-koerperpflege",
+        "a2-wohnen-haushalt"
+      ],
+      "grammarTopics": [
+        "a2-dativ",
+        "a2-reflexivverben"
+      ],
+      "skillLinks": [
+        {
+          "skill": "listening",
+          "label": "Hören",
+          "labelVi": "Nghe hiểu",
+          "href": "/listening?level=A2",
+          "emoji": "🎧"
+        },
+        {
+          "skill": "speaking",
+          "label": "Sprechen",
+          "labelVi": "Luyện nói",
+          "href": "/speaking?level=A2",
+          "emoji": "🎙️"
+        },
+        {
+          "skill": "reading",
+          "label": "Lesen",
+          "labelVi": "Đọc hiểu",
+          "href": "/reading?level=A2",
+          "emoji": "📖"
+        },
+        {
+          "skill": "writing",
+          "label": "Schreiben",
+          "labelVi": "Luyện viết",
+          "href": "/writing?level=A2",
+          "emoji": "✍️"
+        }
+      ],
+      "cefrAudit": {
+        "targetLevel": "A2",
+        "verdict": "aligned",
+        "reviewerRole": "German Academic Lead",
+        "notes": "Release-candidate metadata audit: course content for \"Gesundheit und Wohnen\" is aligned with declared A2 scope pending final human spot-check.",
+        "reviewedAt": "2026-05-12",
+        "reviewScope": "release_candidate_metadata_pass"
+      },
+      "learningOutcomes": [
+        {
+          "id": "m2-gesundheit-und-wohnen-lo-1",
+          "cefrLevel": "A2",
+          "skill": "course",
+          "canDoVi": "Toi co the luyen lo trinh hoc o trinh do A2 qua chu de \"Gesundheit und Wohnen\".",
+          "canDoDe": "Ich kann Lernpfad auf Niveau A2 zum Thema \"Gesundheit und Wohnen\" ueben.",
+          "linkedContentIds": [
+            "m2-gesundheit-und-wohnen",
+            "a2-gesundheit-koerperpflege",
+            "a2-wohnen-haushalt",
+            "a2-dativ",
+            "a2-reflexivverben"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "m3-essen-und-einkaufen",
+      "title": "Essen, Kleidung und Imperativ",
+      "titleDe": "Essen, Kleidung und Imperativ",
+      "description": "Ăn uống, mua sắm, thời trang, mệnh lệnh cách, so sánh.",
+      "cefrLevel": "A2",
+      "sortOrder": 3,
+      "estimatedMinutes": 1500,
+      "vocabularyThemes": [
+        "a2-essen-restaurant",
+        "a2-kleidung-mode"
+      ],
+      "grammarTopics": [
+        "a2-imperativ",
+        "a2-komparativ"
+      ],
+      "skillLinks": [
+        {
+          "skill": "listening",
+          "label": "Hören",
+          "labelVi": "Nghe hiểu",
+          "href": "/listening?level=A2",
+          "emoji": "🎧"
+        },
+        {
+          "skill": "speaking",
+          "label": "Sprechen",
+          "labelVi": "Luyện nói",
+          "href": "/speaking?level=A2",
+          "emoji": "🎙️"
+        },
+        {
+          "skill": "reading",
+          "label": "Lesen",
+          "labelVi": "Đọc hiểu",
+          "href": "/reading?level=A2",
+          "emoji": "📖"
+        },
+        {
+          "skill": "writing",
+          "label": "Schreiben",
+          "labelVi": "Luyện viết",
+          "href": "/writing?level=A2",
+          "emoji": "✍️"
+        }
+      ],
+      "cefrAudit": {
+        "targetLevel": "A2",
+        "verdict": "aligned",
+        "reviewerRole": "German Academic Lead",
+        "notes": "Release-candidate metadata audit: course content for \"Essen, Kleidung und Imperativ\" is aligned with declared A2 scope pending final human spot-check.",
+        "reviewedAt": "2026-05-12",
+        "reviewScope": "release_candidate_metadata_pass"
+      },
+      "learningOutcomes": [
+        {
+          "id": "m3-essen-und-einkaufen-lo-1",
+          "cefrLevel": "A2",
+          "skill": "course",
+          "canDoVi": "Toi co the luyen lo trinh hoc o trinh do A2 qua chu de \"Essen, Kleidung und Imperativ\".",
+          "canDoDe": "Ich kann Lernpfad auf Niveau A2 zum Thema \"Essen, Kleidung und Imperativ\" ueben.",
+          "linkedContentIds": [
+            "m3-essen-und-einkaufen",
+            "a2-essen-restaurant",
+            "a2-kleidung-mode",
+            "a2-imperativ",
+            "a2-komparativ"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "m4-alltag-und-freizeit",
+      "title": "Alltag, Freizeit und Vergangenheit",
+      "titleDe": "Alltag, Freizeit und Vergangenheit",
+      "description": "Giải trí, thể thao, thời tiết, thì Präteritum.",
+      "cefrLevel": "A2",
+      "sortOrder": 4,
+      "estimatedMinutes": 1500,
+      "vocabularyThemes": [
+        "a2-freizeit-kultur",
+        "a2-sport-fitness",
+        "a2-wetter-klima"
+      ],
+      "grammarTopics": [
+        "a2-praeteritum"
+      ],
+      "skillLinks": [
+        {
+          "skill": "listening",
+          "label": "Hören",
+          "labelVi": "Nghe hiểu",
+          "href": "/listening?level=A2",
+          "emoji": "🎧"
+        },
+        {
+          "skill": "speaking",
+          "label": "Sprechen",
+          "labelVi": "Luyện nói",
+          "href": "/speaking?level=A2",
+          "emoji": "🎙️"
+        },
+        {
+          "skill": "reading",
+          "label": "Lesen",
+          "labelVi": "Đọc hiểu",
+          "href": "/reading?level=A2",
+          "emoji": "📖"
+        },
+        {
+          "skill": "writing",
+          "label": "Schreiben",
+          "labelVi": "Luyện viết",
+          "href": "/writing?level=A2",
+          "emoji": "✍️"
+        }
+      ],
+      "cefrAudit": {
+        "targetLevel": "A2",
+        "verdict": "aligned",
+        "reviewerRole": "German Academic Lead",
+        "notes": "Release-candidate metadata audit: course content for \"Alltag, Freizeit und Vergangenheit\" is aligned with declared A2 scope pending final human spot-check.",
+        "reviewedAt": "2026-05-12",
+        "reviewScope": "release_candidate_metadata_pass"
+      },
+      "learningOutcomes": [
+        {
+          "id": "m4-alltag-und-freizeit-lo-1",
+          "cefrLevel": "A2",
+          "skill": "course",
+          "canDoVi": "Toi co the luyen lo trinh hoc o trinh do A2 qua chu de \"Alltag, Freizeit und Vergangenheit\".",
+          "canDoDe": "Ich kann Lernpfad auf Niveau A2 zum Thema \"Alltag, Freizeit und Vergangenheit\" ueben.",
+          "linkedContentIds": [
+            "m4-alltag-und-freizeit",
+            "a2-freizeit-kultur",
+            "a2-sport-fitness",
+            "a2-wetter-klima",
+            "a2-praeteritum"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "m5-warum-und-dass",
+      "title": "Warum? — weil und dass",
+      "titleDe": "Warum? — weil und dass",
+      "description": "Giao tiếp, viết email, mệnh đề phụ weil và dass.",
+      "cefrLevel": "A2",
+      "sortOrder": 5,
+      "estimatedMinutes": 1500,
+      "vocabularyThemes": [
+        "a2-kommunikation-medien",
+        "a2-dienstleistungen-amt",
+        "a2-technik-alltag"
+      ],
+      "grammarTopics": [
+        "a2-nebensatz-weil",
+        "a2-nebensatz-dass"
+      ],
+      "skillLinks": [
+        {
+          "skill": "listening",
+          "label": "Hören",
+          "labelVi": "Nghe hiểu",
+          "href": "/listening?level=A2",
+          "emoji": "🎧"
+        },
+        {
+          "skill": "speaking",
+          "label": "Sprechen",
+          "labelVi": "Luyện nói",
+          "href": "/speaking?level=A2",
+          "emoji": "🎙️"
+        },
+        {
+          "skill": "reading",
+          "label": "Lesen",
+          "labelVi": "Đọc hiểu",
+          "href": "/reading?level=A2",
+          "emoji": "📖"
+        },
+        {
+          "skill": "writing",
+          "label": "Schreiben",
+          "labelVi": "Luyện viết",
+          "href": "/writing?level=A2",
+          "emoji": "✍️"
+        }
+      ],
+      "cefrAudit": {
+        "targetLevel": "A2",
+        "verdict": "aligned",
+        "reviewerRole": "German Academic Lead",
+        "notes": "Release-candidate metadata audit: course content for \"Warum? — weil und dass\" is aligned with declared A2 scope pending final human spot-check.",
+        "reviewedAt": "2026-05-12",
+        "reviewScope": "release_candidate_metadata_pass"
+      },
+      "learningOutcomes": [
+        {
+          "id": "m5-warum-und-dass-lo-1",
+          "cefrLevel": "A2",
+          "skill": "course",
+          "canDoVi": "Toi co the luyen lo trinh hoc o trinh do A2 qua chu de \"Warum? — weil und dass\".",
+          "canDoDe": "Ich kann Lernpfad auf Niveau A2 zum Thema \"Warum? — weil und dass\" ueben.",
+          "linkedContentIds": [
+            "m5-warum-und-dass",
+            "a2-kommunikation-medien",
+            "a2-dienstleistungen-amt",
+            "a2-technik-alltag",
+            "a2-nebensatz-weil",
+            "a2-nebensatz-dass"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "m6-beruf-und-reisen",
+      "title": "Beruf, Reisen und Geld",
+      "titleDe": "Beruf, Reisen und Geld",
+      "description": "Nghề nghiệp, du lịch, tiền bạc — tổng ôn ngữ pháp A2.",
+      "cefrLevel": "A2",
+      "sortOrder": 6,
+      "estimatedMinutes": 1200,
+      "vocabularyThemes": [
+        "a2-bildung-berufsleben",
+        "a2-arbeit-wirtschaft",
+        "a2-reisen-tourismus",
+        "a2-geld-finanzen",
+        "a2-verkehr-mobilitaet"
+      ],
+      "grammarTopics": [],
+      "skillLinks": [
+        {
+          "skill": "listening",
+          "label": "Hören",
+          "labelVi": "Nghe hiểu",
+          "href": "/listening?level=A2",
+          "emoji": "🎧"
+        },
+        {
+          "skill": "speaking",
+          "label": "Sprechen",
+          "labelVi": "Luyện nói",
+          "href": "/speaking?level=A2",
+          "emoji": "🎙️"
+        },
+        {
+          "skill": "reading",
+          "label": "Lesen",
+          "labelVi": "Đọc hiểu",
+          "href": "/reading?level=A2",
+          "emoji": "📖"
+        },
+        {
+          "skill": "writing",
+          "label": "Schreiben",
+          "labelVi": "Luyện viết",
+          "href": "/writing?level=A2",
+          "emoji": "✍️"
+        }
+      ],
+      "cefrAudit": {
+        "targetLevel": "A2",
+        "verdict": "aligned",
+        "reviewerRole": "German Academic Lead",
+        "notes": "Release-candidate metadata audit: course content for \"Beruf, Reisen und Geld\" is aligned with declared A2 scope pending final human spot-check.",
+        "reviewedAt": "2026-05-12",
+        "reviewScope": "release_candidate_metadata_pass"
+      },
+      "learningOutcomes": [
+        {
+          "id": "m6-beruf-und-reisen-lo-1",
+          "cefrLevel": "A2",
+          "skill": "course",
+          "canDoVi": "Toi co the luyen lo trinh hoc o trinh do A2 qua chu de \"Beruf, Reisen und Geld\".",
+          "canDoDe": "Ich kann Lernpfad auf Niveau A2 zum Thema \"Beruf, Reisen und Geld\" ueben.",
+          "linkedContentIds": [
+            "m6-beruf-und-reisen",
+            "a2-bildung-berufsleben",
+            "a2-arbeit-wirtschaft",
+            "a2-reisen-tourismus",
+            "a2-geld-finanzen",
+            "a2-verkehr-mobilitaet"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "m7-pruefungsvorbereitung-a2",
+      "title": "Prüfungsvorbereitung A2",
+      "titleDe": "Prüfungsvorbereitung A2",
+      "description": "Tổng ôn 4 kỹ năng, mock exams Goethe A2.",
+      "cefrLevel": "A2",
+      "sortOrder": 7,
+      "estimatedMinutes": 900,
+      "vocabularyThemes": [],
+      "grammarTopics": [],
+      "skillLinks": [
+        {
+          "skill": "listening",
+          "label": "Hören",
+          "labelVi": "Nghe ôn thi",
+          "href": "/listening?level=A2",
+          "emoji": "🎧"
+        },
+        {
+          "skill": "speaking",
+          "label": "Sprechen",
+          "labelVi": "Nói ôn thi",
+          "href": "/speaking?level=A2",
+          "emoji": "🎙️"
+        },
+        {
+          "skill": "reading",
+          "label": "Lesen",
+          "labelVi": "Đọc ôn thi",
+          "href": "/reading?level=A2",
+          "emoji": "📖"
+        },
+        {
+          "skill": "writing",
+          "label": "Schreiben",
+          "labelVi": "Viết ôn thi",
+          "href": "/writing?level=A2",
+          "emoji": "✍️"
+        }
+      ],
+      "cefrAudit": {
+        "targetLevel": "A2",
+        "verdict": "aligned",
+        "reviewerRole": "German Academic Lead",
+        "notes": "Release-candidate metadata audit: course content for \"Prüfungsvorbereitung A2\" is aligned with declared A2 scope pending final human spot-check.",
+        "reviewedAt": "2026-05-12",
+        "reviewScope": "release_candidate_metadata_pass"
+      },
+      "learningOutcomes": [
+        {
+          "id": "m7-pruefungsvorbereitung-a2-lo-1",
+          "cefrLevel": "A2",
+          "skill": "course",
+          "canDoVi": "Toi co the luyen lo trinh hoc o trinh do A2 qua chu de \"Prüfungsvorbereitung A2\".",
+          "canDoDe": "Ich kann Lernpfad auf Niveau A2 zum Thema \"Prüfungsvorbereitung A2\" ueben.",
+          "linkedContentIds": [
+            "m7-pruefungsvorbereitung-a2"
+          ]
+        }
+      ]
+    }
+  ],
+  "learningOutcomes": [
+    {
+      "id": "deutsch-a2-grundstufe-lo-1",
+      "cefrLevel": "A2",
+      "skill": "course",
+      "canDoVi": "Toi co the luyen lo trinh hoc o trinh do A2 qua chu de \"Deutsch A2 — Grundstufe\".",
+      "canDoDe": "Ich kann Lernpfad auf Niveau A2 zum Thema \"Deutsch A2 — Grundstufe\" ueben.",
+      "linkedContentIds": [
+        "deutsch-a2-grundstufe"
+      ]
+    }
+  ]
 }

@@ -4,6 +4,7 @@ import { useState, useCallback, useEffect, useRef } from 'react'
 import { ExerciseResults } from './exercise-results'
 import { useExerciseTimer } from '@/hooks/use-exercise-timer'
 import { useSubmitExercise, type ExerciseAnswer } from '@/hooks/use-submit-exercise'
+import { getFirstSessionNextStep } from '@/lib/gamification/lesson-gameplay-expansion'
 import {
     exerciseOptionClass,
     exerciseScreenClass,
@@ -151,6 +152,10 @@ export function SpeedExercise({ questions, cefrLevel, themeName: _themeName, the
 
     // ─── Results ────────────────────────────────────
     if (phase === 'results' && submitResult) {
+        const nextStep = themeSlug === 'a1-person'
+            ? getFirstSessionNextStep('speed-match')
+            : null
+
         return (
             <ExerciseResults
                 totalQuestions={submitResult.totalQuestions}
@@ -168,6 +173,14 @@ export function SpeedExercise({ questions, cefrLevel, themeName: _themeName, the
                 streak={submitResult.streak}
                 timeTaken={timer}
                 results={submitResult.results}
+                gameplayNextStep={nextStep
+                    ? {
+                        label: `Tiep theo: ${nextStep.title}`,
+                        href: nextStep.href.replace('level=A1', `level=${cefrLevel}`),
+                        reason: 'Speed Match giup nhan dien nhanh; Cloze Streak chuyen sang recall trong ngu canh.',
+                        stepId: nextStep.id,
+                    }
+                    : undefined}
                 onRetry={() => {
                     setCurrentIndex(0); setSelectedAnswer(null); setIsRevealed(false)
                     setCountdown(COUNTDOWN_MAX)
@@ -186,9 +199,9 @@ export function SpeedExercise({ questions, cefrLevel, themeName: _themeName, the
     const countdownPercent = (countdown / COUNTDOWN_MAX) * 100
     const countdownColor = countdown > 4 ? '#2EC4B6' : countdown > 2 ? '#FFB703' : '#EF4444'
     const timerTone = countdown > 4
-        ? 'bg-[#EAFBF8] text-[#0F766E] ring-[#2EC4B6]/30'
+        ? 'bg-[#EAFBF8] text-text-success ring-[#2EC4B6]/30'
         : countdown > 2
-            ? 'bg-[#FFF7D6] text-[#A66300] ring-[#FFD166]/60'
+            ? 'bg-[#FFF7D6] text-text-warning ring-[#FFD166]/60'
             : 'bg-red-50 text-red-600 ring-red-200/70'
     return (
         <div className={exerciseScreenClass}>
@@ -197,7 +210,7 @@ export function SpeedExercise({ questions, cefrLevel, themeName: _themeName, the
                 <button
                     onClick={onExit}
                     aria-label="Close exercise"
-                    className="flex h-9 w-9 items-center justify-center rounded-xl bg-[#F3FBFF] text-[#3C78A8] ring-1 ring-[#60A8E4]/20 transition-colors hover:bg-[#CCE4F0]/55 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#60A8E4]/40"
+                    className="flex h-9 w-9 items-center justify-center rounded-xl bg-[#F3FBFF] text-text-brand ring-1 ring-[#60A8E4]/20 transition-colors hover:bg-[#CCE4F0]/55 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#60A8E4]/40"
                 >
                     <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                         <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
@@ -216,7 +229,7 @@ export function SpeedExercise({ questions, cefrLevel, themeName: _themeName, the
                     {countdown.toFixed(1)}s
                 </span>
 
-                <span className="rounded-full bg-[#EEF7FF] px-2.5 py-1 text-xs font-black text-[#3C78A8] ring-1 ring-[#60A8E4]/20">
+                <span className="rounded-full bg-[#EEF7FF] px-2.5 py-1 text-xs font-black text-text-brand ring-1 ring-[#60A8E4]/20">
                     {cefrLevel}
                 </span>
             </div>
@@ -232,7 +245,7 @@ export function SpeedExercise({ questions, cefrLevel, themeName: _themeName, the
             {/* Question prompt */}
             <div className="mx-auto w-full max-w-2xl px-5 py-6 sm:px-6">
                 <div className="text-center mb-8">
-                    <div className="mx-auto mb-4 inline-flex rounded-full bg-[#EAFBF8] px-3 py-1 text-xs font-black uppercase tracking-wider text-[#0F766E] ring-1 ring-[#2EC4B6]/30">
+                    <div className="mx-auto mb-4 inline-flex rounded-full bg-[#EAFBF8] px-3 py-1 text-xs font-black uppercase text-text-success ring-1 ring-[#2EC4B6]/30">
                         Speed Challenge
                     </div>
                     <p className="mb-2 text-3xl font-black text-slate-950">{question.prompt || question.word}</p>

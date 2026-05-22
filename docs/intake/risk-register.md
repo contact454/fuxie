@@ -290,6 +290,240 @@ Collected on 2026-05-12:
 | --- | --- | --- |
 | R-011 | Backlog closure confirms the Phase 19 cycle is complete and future work should start as an implementation cycle rather than more parallel planning | Mitigated for cycle closure |
 
+## Phase 41-47 Current Evidence
+
+Collected on 2026-05-13:
+
+| Risk | Evidence update | Status |
+| --- | --- | --- |
+| R-006 | `pnpm qa:content` scanned 1193 files with 0 errors and 0 warnings; human academic spot-check and signoff remain required for stronger CEFR/exam claims | Partially mitigated; human signoff pending |
+| R-007 | `pnpm eval:ai` passed 5/5 offline cases and `pnpm check:ai-eval` passed with provider blocker recorded; provider-backed eval remains blocked by missing `GEMINI_API_KEY` or `GOOGLE_AI_API_KEY` | Partially mitigated; provider quality evidence still blocked |
+| R-008 | AI service tests passed 12 files / 36 tests and offline speaking eval passed 1/1; speaking/browser/provider smoke remains blocked because AI service, DB/Redis, and provider prerequisites were not available | Open with clearer blocker |
+| R-010 | `pnpm --filter @fuxie/web test` passed 47 files / 171 tests including teacher/admin analytics routes; `pnpm smoke:full-local` reached teacher/admin checks, but DB/API prerequisites failed because local Postgres/Redis were unreachable and Docker Desktop daemon was not running | Partially mitigated by tests; UI smoke remains blocked |
+| R-011 | Growth beta cohort plan now defines 30-50 learner B2C beta, activation/retention/progress metrics, and guardrails against broad B2B expansion before learner signal | Mitigated for beta planning |
+| R-013 | `pnpm env:audit` and `pnpm security:secrets` passed; service audit warns only on unavailable DB/Redis local services | Mitigated for static checks; service readiness blocked |
+
+## Phase 48 Current Evidence
+
+Collected on 2026-05-13:
+
+| Risk | Evidence update | Status |
+| --- | --- | --- |
+| R-006 | All-hands reassessment confirms automated content QA is accepted, but human Academic Lead spot-check is required before stronger CEFR/exam claims | Partially mitigated; human signoff remains beta-readiness blocker |
+| R-007 | All-hands reassessment confirms offline AI eval/tooling is accepted, but provider-backed eval and Academic Lead final signoff remain required before strong AI grading claims | Partially mitigated; provider and academic signoff blockers remain |
+| R-008 | All-hands reassessment keeps speaking/audio blocked for beta claim until browser permission, provider availability, low-confidence fallback, and privacy evidence exist | Open; next action is speaking/audio smoke after service readiness |
+| R-010 | All-hands reassessment keeps teacher/admin analytics UI conditional until DB/Redis/AI prerequisites are restored and role-scoped smoke passes | Partially mitigated by tests; live UI smoke remains blocked |
+| R-011 | Phase 48 explicitly prioritizes beta-readiness blockers before feature expansion and preserves B2C Vietnamese learners as the primary product motion | Mitigated for company focus |
+| R-013 | Phase 48 treats static env/security checks as accepted but local service readiness as the next DevOps gate before smoke or beta claims | Mitigated for static checks; service readiness gate open |
+
+## Phase 49 Current Evidence
+
+Collected on 2026-05-13:
+
+| Risk | Evidence update | Status |
+| --- | --- | --- |
+| R-006 | Phase 49 assigns Academic Lead final signoff as a required beta-readiness workstream with AI signoff JSON and A1-B2/exam-claim sample decisions as acceptance signals | Open; closure sprint planned |
+| R-007 | Phase 49 assigns provider-backed AI eval to AI / LLM Engineer and requires `pnpm check:ai-eval` provider completion or CTO + AI owner accepted blocker with conservative wording | Open; closure sprint planned |
+| R-008 | Phase 49 assigns speaking/audio smoke to Speech / Audio Engineer with permission-denied, provider-unavailable, low-confidence transcript, success path, and privacy evidence required | Open; closure sprint planned |
+| R-010 | Phase 49 assigns teacher/admin analytics UI smoke to Product Manager EdTech after DB/API readiness, with role-scoped pages and admin readouts as acceptance signals | Open; closure sprint planned |
+| R-013 | Phase 49 makes service/static checks part of the command checklist and keeps missing local services classified as blocked prerequisites rather than product failures | Open for service readiness; static checks remain mitigated |
+
+## Phase 50 Current Evidence
+
+Collected on 2026-05-13:
+
+| Risk | Evidence update | Status |
+| --- | --- | --- |
+| R-003 | Docker Desktop was started, `docker compose up -d postgres redis` restored local Postgres/Redis, AI service health returned ok on port 3001, web health returned ok on port 3012, and rerun `pnpm env:audit:services` passed | Closed for local beta evidence |
+| R-004 | `pnpm smoke:full-local` passed AI health, web DB health, learner pages/APIs, teacher page/API, and admin page/API using web port 3012 and AI port 3001 | Closed for current source state |
+| R-006 | `pnpm qa:content` scanned 1193 files with 0 errors and 0 warnings, but Academic Lead final signoff JSON still has pending reviewer, overall decision, and case decisions | Partially mitigated; human signoff pending |
+| R-007 | `pnpm check:ai-eval` passed offline eval 5/5 and generated readout evidence; provider-backed eval remains blocked because `GEMINI_API_KEY` / `GOOGLE_AI_API_KEY` is missing | Partially mitigated; provider quality evidence blocked |
+| R-008 | `/speaking` page passed full local smoke and offline speaking eval passed, but browser microphone/provider speaking smoke and pronunciation/privacy edge cases remain incomplete | Conditional/open for speaking beta claim |
+| R-010 | Full local smoke passed teacher page/API and admin page/API; deeper admin analytics readout manual verification remains a follow-up before wider beta | Partially closed for controlled beta |
+| R-013 | `pnpm check:quick`, `pnpm test:core`, `pnpm qa:content`, `pnpm security:secrets`, `pnpm env:audit`, `pnpm env:audit:services`, and `pnpm smoke:full-local` passed; provider eval blocker is explicitly classified | Closed for current beta evidence |
+
+## Phase 51 Current Evidence
+
+Collected on 2026-05-13:
+
+| Risk | Evidence update | Status |
+| --- | --- | --- |
+| R-006 | Phase 51 keeps Academic Lead final signoff as a launch exclusion: the signoff template exists, but reviewer, overall decision, and case decisions remain pending | Open; human signoff required before stronger CEFR/exam claims |
+| R-007 | Phase 51 confirms provider keys are not present in local environment, so provider-backed eval remains excluded from beta claims while offline eval evidence stays accepted | Partially mitigated; provider evidence blocked |
+| R-008 | Phase 51 keeps speaking/pronunciation claims limited to practice support until browser/provider audio smoke documents permission, fallback, success, low-confidence, and privacy paths | Conditional/open for speaking beta claim |
+| R-010 | Phase 51 separates role-smoke readiness from deeper admin analytics verification and assigns live readout checks as Phase 52 follow-up | Partially closed for controlled beta |
+| R-011 | Phase 51 narrows next execution to a 30-50 learner B2C controlled beta cohort and explicitly blocks broad teacher/admin or public marketing expansion | Mitigated for launch focus |
+| R-013 | Phase 51 defines rerun triggers for `check:quick`, focused tests, `qa:content`, `env:audit:services`, `check:ai-eval`, and `smoke:full-local` before cohort launch if source/env/provider/content changes land | Closed for launch governance |
+
+## Phase 52 Current Evidence
+
+Collected on 2026-05-13:
+
+| Risk | Evidence update | Status |
+| --- | --- | --- |
+| R-006 | Phase 52 keeps Academic Lead guardrails active during cohort operations and requires CEFR/exam claim review before any stronger learner-facing claim | Open; human academic signoff still required |
+| R-007 | Phase 52 keeps AI feedback as practice support and measures generated/failed events without claiming provider-validated AI grading quality | Partially mitigated; provider-backed eval remains blocked |
+| R-008 | Phase 52 keeps speaking/pronunciation claims excluded from precision wording until browser/provider smoke covers permission, fallback, success, low-confidence, and privacy paths | Conditional/open for speaking beta claim |
+| R-010 | Phase 52 assigns admin analytics live readout verification to cohort measurement operations, while keeping teacher/admin outside the primary beta promise | Partially closed; deeper readout verification remains follow-up |
+| R-011 | Phase 52 turns the next step into a 30-50 learner controlled B2C cohort with explicit non-goals for feature expansion, teacher/admin expansion, and public marketing | Mitigated for beta operations focus |
+| R-013 | Phase 52 defines rerun triggers for runtime/API/content/provider/service changes and keeps Phase 50 gates as current unless those triggers occur | Closed for cohort governance |
+
+## Phase 53 Current Evidence
+
+Collected on 2026-05-13:
+
+| Risk | Evidence update | Status |
+| --- | --- | --- |
+| R-006 | Phase 53 routes any content or CEFR issue into `content_academic_risk` with German Academic Lead ownership and keeps evidence required before stronger claims | Open; waiting for cohort/content evidence and human signoff |
+| R-007 | Phase 53 routes AI tutor/grading/provider issues into `ai_audio_limitation` and keeps provider-validated AI quality claims excluded until evidence closes them | Partially mitigated; waiting for cohort/provider evidence |
+| R-008 | Phase 53 routes speaking/audio issues into `ai_audio_limitation` and keeps pronunciation precision excluded until browser/provider smoke evidence exists | Conditional/open for speaking beta claim |
+| R-010 | Phase 53 creates the issue and analytics readout intake templates needed to verify admin/readout gaps without making teacher/admin the primary beta promise | Partially closed; waiting for live readout evidence |
+| R-011 | Phase 53 prevents feature expansion by requiring source evidence, severity, owner, next action, and acceptance signal before selecting one implementation slice | Mitigated for backlog discipline |
+| R-013 | Phase 53 records empty cohort evidence as `waiting_for_cohort_data` and does not require runtime gates because no runtime/schema/content/prompt changes were made | Closed for docs-only triage governance |
+
+## Phase 54 Current Evidence
+
+Collected on 2026-05-13:
+
+| Risk | Evidence update | Status |
+| --- | --- | --- |
+| R-006 | Phase 54 found no real cohort/content feedback batch in repo docs; academic/content risks remain under guardrail until learner evidence or human signoff exists | Open; waiting for cohort/content evidence and human signoff |
+| R-007 | Phase 54 found no provider-backed or learner-cohort AI quality evidence; AI remains practice-support only and provider-validated claims stay excluded | Partially mitigated; waiting for provider/cohort evidence |
+| R-008 | Phase 54 found no browser/provider speaking evidence from cohort operations; pronunciation precision remains excluded | Conditional/open for speaking beta claim |
+| R-010 | Phase 54 found no cohort analytics snapshot or admin readout evidence recorded in repo docs; readout verification remains follow-up | Partially closed; waiting for live readout evidence |
+| R-011 | Phase 54 blocks runtime fix selection because no evidence-backed P0/P1 cohort issue exists, preventing feature expansion from outrunning beta data | Mitigated for evidence discipline |
+| R-013 | Phase 54 is docs/governance only and records no runtime/schema/content/prompt changes; runtime gates are not required for this docs-only phase | Closed for docs-only evidence intake |
+
+## Phase 55 Current Evidence
+
+Collected on 2026-05-13:
+
+| Risk | Evidence update | Status |
+| --- | --- | --- |
+| R-006 | Phase 55 adds controlled beta evidence templates and guardrails that route CEFR/content concerns to Academic Lead without collecting raw learner submissions | Open; waiting for cohort/content evidence and human signoff |
+| R-007 | Phase 55 keeps AI evidence privacy-safe and blocks provider-validated AI claims until provider-backed eval or cohort evidence exists | Partially mitigated; waiting for provider/cohort evidence |
+| R-008 | Phase 55 keeps speaking/audio evidence under guardrail and blocks pronunciation precision claims until browser/provider smoke evidence exists | Conditional/open for speaking beta claim |
+| R-010 | Phase 55 adds analytics snapshot and first-fix readiness templates so cohort/admin readout gaps can be recorded before any fix selection | Partially closed; waiting for live readout evidence |
+| R-011 | Phase 55 strengthens evidence discipline by requiring controlled beta templates before selecting runtime work, preventing feature expansion without data | Mitigated for evidence capture |
+| R-013 | Phase 55 is docs/evidence infrastructure only and does not modify runtime/schema/content/prompt/provider/deploy files; runtime gates are not required | Closed for docs-only evidence system |
+
+## Phase 56 Current Evidence
+
+Collected on 2026-05-13:
+
+| Risk | Evidence update | Status |
+| --- | --- | --- |
+| R-006 | Phase 56 reviewed controlled beta evidence and found no cohort/content feedback item or academic signoff evidence; CEFR/exam guardrails remain active | Open; waiting for cohort/content evidence and human signoff |
+| R-007 | Phase 56 found no provider-backed or cohort AI quality evidence in the controlled beta evidence files; AI grading remains practice-support only | Partially mitigated; waiting for provider/cohort evidence |
+| R-008 | Phase 56 found no browser/provider speaking evidence or cohort audio issue in the controlled beta evidence files; pronunciation precision remains excluded | Conditional/open for speaking beta claim |
+| R-010 | Phase 56 found no analytics snapshot or admin readout evidence for the controlled beta cohort; readout verification remains pending | Partially closed; waiting for live readout evidence |
+| R-011 | Phase 56 blocks runtime fix selection because no complete evidence-backed P0/P1 candidate exists, preserving focus and preventing feature expansion without data | Mitigated for evidence-backed delivery discipline |
+| R-013 | Phase 56 is a docs-only selection gate and does not modify runtime/schema/content/prompt/provider/deploy files; runtime gates are not required | Closed for docs-only selection governance |
+
+## Phase 57 Current Evidence
+
+Collected on 2026-05-13:
+
+| Risk | Evidence update | Status |
+| --- | --- | --- |
+| R-006 | Phase 57 documents that no cohort/content feedback or human academic signoff evidence exists yet; follow-up owner remains Product Manager EdTech with Academic Lead escalation if content evidence appears | Open; evidence shortfall documented, follow up by 2026-05-20 |
+| R-007 | Phase 57 documents that no provider-backed or cohort AI quality evidence exists yet; AI claims remain practice-support only | Partially mitigated; evidence shortfall documented, provider/cohort evidence still needed |
+| R-008 | Phase 57 documents that no speaking/audio cohort evidence exists yet; pronunciation precision remains excluded | Conditional/open for speaking beta claim; evidence shortfall documented |
+| R-010 | Phase 57 updates analytics evidence to `recruitment_or_evidence_shortfall`, so admin/cohort readout verification remains pending until active learner data exists | Partially closed; waiting for live readout evidence |
+| R-011 | Phase 57 keeps implementation blocked, records shortfall owners, and prevents feature expansion without a complete evidence-backed P0/P1 candidate | Mitigated for evidence-backed delivery discipline |
+| R-013 | Phase 57 is docs/evidence follow-up only and does not modify runtime/schema/content/prompt/provider/deploy files; runtime gates are not required | Closed for docs-only evidence follow-up |
+
+## Phase 58 Current Evidence
+
+Collected on 2026-05-13:
+
+| Risk | Evidence update | Status |
+| --- | --- | --- |
+| R-006 | Phase 58 rechecked beta evidence and still found no cohort/content feedback or human academic signoff evidence; academic guardrails remain unchanged | Open; blocked by controlled beta operations evidence |
+| R-007 | Phase 58 found no provider-backed or cohort AI quality evidence; AI claims remain practice-support only | Partially mitigated; provider/cohort evidence still missing |
+| R-008 | Phase 58 found no speaking/audio cohort evidence; pronunciation precision remains excluded | Conditional/open for speaking beta claim; evidence still missing |
+| R-010 | Phase 58 keeps analytics readout blocked because there is no active cohort data to aggregate | Partially closed; live readout evidence blocked by cohort operations |
+| R-011 | Phase 58 escalates missing cohort evidence to `controlled_beta_operations_blocker` and keeps runtime/feature work blocked until evidence-backed P0/P1 candidate exists | Mitigated for evidence-backed delivery discipline |
+| R-013 | Phase 58 is docs/evidence recheck only and does not modify runtime/schema/content/prompt/provider/deploy files; runtime gates are not required | Closed for docs-only readiness recheck |
+
+## Phase 59 Current Evidence
+
+Collected on 2026-05-13:
+
+| Risk | Evidence update | Status |
+| --- | --- | --- |
+| R-006 | Phase 59 defines feedback and academic escalation flow, but no cohort/content feedback or human academic signoff evidence exists yet | Open; controlled beta operations blocker must close before evidence can be reviewed |
+| R-007 | Phase 59 keeps AI evidence dependent on real cohort/provider data and does not relax practice-support wording | Partially mitigated; provider/cohort evidence still missing |
+| R-008 | Phase 59 keeps speaking/audio claim guardrails active and requires real cohort/audio evidence before any pronunciation precision claim | Conditional/open for speaking beta claim; evidence still missing |
+| R-010 | Phase 59 defines the aggregate analytics readout owner and minimum evidence package, but no active cohort data exists yet | Partially closed; readout blocked by cohort operations |
+| R-011 | Phase 59 creates the operational closure plan for `controlled_beta_operations_blocker` and keeps runtime/feature work blocked until evidence-backed P0/P1 candidate exists | Mitigated for evidence-backed delivery discipline |
+| R-013 | Phase 59 is docs/operations governance only and does not modify runtime/schema/content/prompt/provider/deploy files; runtime gates are not required | Closed for docs-only operations plan |
+
+## Phase 60 Current Evidence
+
+Collected on 2026-05-13:
+
+| Risk | Evidence update | Status |
+| --- | --- | --- |
+| R-006 | Phase 60 keeps academic/content evidence blocked because no real learner cohort, feedback, or academic signoff input exists yet | Open; blocked by beta operations escalation |
+| R-007 | Phase 60 keeps AI quality evidence dependent on real cohort/provider data and confirms no AI claim guardrail is relaxed | Partially mitigated; provider/cohort evidence still missing |
+| R-008 | Phase 60 keeps speaking/audio claim guardrails active because no cohort/audio evidence exists | Conditional/open for speaking beta claim; evidence still missing |
+| R-010 | Phase 60 confirms analytics readout cannot start without learner aliases and activity | Partially closed; readout blocked by recruitment execution |
+| R-011 | Phase 60 records `operations_escalation_still_blocked` and keeps runtime/feature work blocked until recruitment produces evidence-backed P0/P1 candidate | Mitigated for evidence-backed delivery discipline |
+| R-013 | Phase 60 is docs/escalation governance only and does not modify runtime/schema/content/prompt/provider/deploy files; runtime gates are not required | Closed for docs-only escalation review |
+
+## Phase 61 Current Evidence
+
+Collected on 2026-05-13:
+
+| Risk | Evidence update | Status |
+| --- | --- | --- |
+| R-006 | Phase 61 defines feedback handoff surfaces and academic/content guardrails, but no cohort/content feedback or human signoff evidence exists yet | Open; blocked until recruitment execution produces learner evidence |
+| R-007 | Phase 61 keeps AI evidence dependent on real learner activity and provider/cohort data; outreach cannot claim provider-validated AI grading | Partially mitigated; provider/cohort evidence still missing |
+| R-008 | Phase 61 keeps speaking/audio claim guardrails in outreach and evidence capture; no pronunciation precision claim is allowed | Conditional/open for speaking beta claim; evidence still missing |
+| R-010 | Phase 61 defines analytics readout cadence after learner activity, but no active cohort data exists yet | Partially closed; readout blocked until recruitment channel is selected and learners are active |
+| R-011 | Phase 61 records `recruitment_execution_blocked` and keeps runtime/feature work blocked until recruitment creates evidence-backed P0/P1 candidate | Mitigated for evidence-backed delivery discipline |
+| R-013 | Phase 61 is docs/recruitment governance only and does not modify runtime/schema/content/prompt/provider/deploy files; runtime gates are not required | Closed for docs-only recruitment plan |
+
+## Phase 62 Current Evidence
+
+Collected on 2026-05-13:
+
+| Risk | Evidence update | Status |
+| --- | --- | --- |
+| R-006 | Phase 62 escalates missing recruitment channel, so academic/content evidence remains blocked until learner cohort evidence exists | Open; beta recruitment blocker escalated |
+| R-007 | Phase 62 keeps AI evidence blocked by missing cohort/provider evidence and preserves practice-support-only claims | Partially mitigated; provider/cohort evidence still missing |
+| R-008 | Phase 62 keeps speaking/audio evidence blocked by missing cohort evidence and preserves pronunciation claim exclusions | Conditional/open for speaking beta claim; evidence still missing |
+| R-010 | Phase 62 confirms analytics readout cannot start because no recruitment channel or learner activity exists | Partially closed; readout blocked by recruitment channel decision |
+| R-011 | Phase 62 records `beta_recruitment_blocker_escalated` and keeps runtime/feature work blocked until recruitment produces evidence-backed P0/P1 candidate | Mitigated for evidence-backed delivery discipline |
+| R-013 | Phase 62 is docs/escalation governance only and does not modify runtime/schema/content/prompt/provider/deploy files; runtime gates are not required | Closed for docs-only recruitment escalation |
+
+## Phase 63 Current Evidence
+
+Collected on 2026-05-13:
+
+| Risk | Evidence update | Status |
+| --- | --- | --- |
+| R-006 | Phase 63 selects `community_outreach_selected` as the beta recruitment path, but academic/content evidence still requires real learner feedback or human Academic Lead signoff | Open; waiting for cohort/content evidence and human signoff |
+| R-007 | Phase 63 keeps AI claims practice-support only; no provider-backed or cohort AI quality evidence is created by source selection alone | Partially mitigated; provider/cohort evidence still missing |
+| R-008 | Phase 63 keeps speaking/audio claim exclusions active; no pronunciation evidence exists until real learner activity or speaking/audio smoke evidence is captured | Conditional/open for speaking beta claim; evidence still missing |
+| R-010 | Phase 63 moves analytics from blocked by source decision to blocked by learner activity; aggregate readout can start only after real aliases and activity exist | Partially closed; readout blocked by learner activity |
+| R-011 | Phase 63 closes the recruitment source decision with `community_outreach_selected` while keeping runtime/feature work blocked until evidence-backed P0/P1 candidate exists | Mitigated for evidence-backed delivery discipline |
+| R-013 | Phase 63 is docs/invite-readiness governance only and does not modify runtime/schema/content/prompt/provider/deploy files; runtime gates are not required | Closed for docs-only invite readiness |
+
+## Phase 64 Current Evidence
+
+Collected on 2026-05-13:
+
+| Risk | Evidence update | Status |
+| --- | --- | --- |
+| R-006 | Phase 64 adds an outreach tracker, but academic/content evidence still requires real learner feedback or human Academic Lead signoff | Open; waiting for cohort/content evidence and human signoff |
+| R-007 | Phase 64 preserves practice-support-only AI wording in outreach execution; no provider-backed or cohort AI quality evidence exists yet | Partially mitigated; provider/cohort evidence still missing |
+| R-008 | Phase 64 keeps speaking/audio exclusions active during outreach execution; no pronunciation evidence exists yet | Conditional/open for speaking beta claim; evidence still missing |
+| R-010 | Phase 64 creates an outreach tracker but analytics readout remains blocked until real aliases and activity exist | Partially closed; readout blocked by learner activity |
+| R-011 | Phase 64 keeps feature/runtime work blocked and creates a concrete outreach execution path before any first-fix selection | Mitigated for evidence-backed delivery discipline |
+| R-013 | Phase 64 is docs/outreach-tracker governance only and does not modify runtime/schema/content/prompt/provider/deploy files; runtime gates are not required | Closed for docs-only outreach tracking |
+
 ## Risk Review Cadence
 
 - Review P0 risks daily during Day 0-14.

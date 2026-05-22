@@ -1,14 +1,19 @@
 'use client'
 
-import { useState, useRef, useEffect, useCallback } from 'react'
+import { useState, useRef, useEffect, useCallback, useMemo } from 'react'
 import { useRouter } from 'next/navigation'
-import {
-    ResultRewardLoop,
-    resultRewardIcons,
-} from '@/components/gamification/result-reward-loop'
+import { resultRewardIcons } from '@/components/gamification/result-reward-loop'
+import { CompletionFlow } from '@/components/gamification/completion-flow'
 import { FuxieLive3D } from '@/components/gamification/fuxie-live-3d'
-import { FUXIE_3D_ASSETS, SkillMotivationRail } from '@/components/gamification/quest-visuals'
+import { FUXIE_3D_ASSETS, FuxieCoach, RewardPreview, SkillMotivationRail, type RewardPreviewItem } from '@/components/gamification/quest-visuals'
+import { trackClientAnalyticsEvent } from '@/lib/analytics/client-events'
+import {
+    buildListeningQuestEpisode,
+    getListeningQuestCheckpoint,
+    type ListeningQuestEpisodeReceipt,
+} from '@/lib/gamification/listening-quest-episode'
 import { Mascot } from '@/components/ui/mascot'
+import { FuxieBadge, FuxieProgressBar, fuxieButtonClass } from '@/components/ui/fuxie-ui'
 import { getCefrTheme } from '@/lib/constants/cefr'
 
 // ─── Types ──────────────────────────────────────────
@@ -98,11 +103,25 @@ export function LessonPlayer({
     const [isSubmitting, setIsSubmitting] = useState(false)
     const [results, setResults] = useState<{
         score: number; totalQuestions: number; percentage: number;
-        xpEarned: number; fucoinEarned?: number; walletBalance?: number; fucoinDuplicate?: boolean; fucoinIntended?: number; fucoinDailyCap?: number; fucoinDailyEarned?: number; fucoinDailyRemaining?: number; fucoinCapReached?: boolean; streak?: { currentStreak: number; isNewDay: boolean; freezeUsed?: boolean; freezesAvailable?: number; freezesUsed?: number }; timeTaken: number; listenCount: number; questionResults: QuestionResult[]
+        xpEarned: number; fucoinEarned?: number; walletBalance?: number; fucoinDuplicate?: boolean; fucoinIntended?: number; fucoinDailyCap?: number; fucoinDailyEarned?: number; fucoinDailyRemaining?: number; fucoinCapReached?: boolean; streak?: { currentStreak: number; isNewDay: boolean; freezeUsed?: boolean; freezesAvailable?: number; freezesUsed?: number }; rewardPreview?: RewardPreviewItem[]; questEpisodeReceipt?: ListeningQuestEpisodeReceipt; nextEpisodeHref?: string; timeTaken: number; listenCount: number; questionResults: QuestionResult[]
     } | null>(null)
     const [showTranscript, setShowTranscript] = useState(false)
+    const [audioError, setAudioError] = useState(false)
     const [startTime, setStartTime] = useState(Date.now())
     const cefrColor = getCefrTheme(cefrLevel)
+    const trackedCheckpoints = useRef<Set<string>>(new Set())
+    const completionTracked = useRef(false)
+    const questEpisode = useMemo(() => buildListeningQuestEpisode({
+        lessonId,
+        topic,
+        cefrLevel,
+        questionCount: questions.length,
+        nextEpisodeHref: '/listening',
+    }), [lessonId, topic, cefrLevel, questions.length])
+    const activeCheckpoint = getListeningQuestCheckpoint({
+        episode: questEpisode,
+        currentIndex: currentQuestion,
+    })
 
     // Audio event handlers
     useEffect(() => {
@@ -114,12 +133,18 @@ export function LessonPlayer({
         const onEnded = () => { setIsPlaying(false); setPlayCount(c => c + 1) }
         const onPlay = () => setIsPlaying(true)
         const onPause = () => setIsPlaying(false)
+        const onError = () => {
+            console.error('Audio loading error:', audio.error)
+            setAudioError(true)
+            setIsPlaying(false)
+        }
 
         audio.addEventListener('timeupdate', onTime)
         audio.addEventListener('loadedmetadata', onDuration)
         audio.addEventListener('ended', onEnded)
         audio.addEventListener('play', onPlay)
         audio.addEventListener('pause', onPause)
+        audio.addEventListener('error', onError)
 
         return () => {
             audio.removeEventListener('timeupdate', onTime)
@@ -127,6 +152,7 @@ export function LessonPlayer({
             audio.removeEventListener('ended', onEnded)
             audio.removeEventListener('play', onPlay)
             audio.removeEventListener('pause', onPause)
+            audio.removeEventListener('error', onError)
         }
     }, [phase, audioUrl])
 
@@ -142,6 +168,50 @@ export function LessonPlayer({
             }
         }
     }, [])
+
+    useEffect(() => {
+        if (phase !== 'listening') return
+        if (trackedCheckpoints.current.has(activeCheckpoint.id)) return
+        trackedCheckpoints.current.add(activeCheckpoint.id)
+        trackClientAnalyticsEvent({
+            eventName: 'quest_episode_checkpoint_reached',
+            source: 'listening.quest_episode.checkpoint',
+            actionId: questEpisode.episodeId,
+            actionType: 'listening_task',
+            level: cefrLevel,
+            skill: 'listening',
+            metadata: {
+                episodeId: questEpisode.episodeId,
+                skill: 'listening',
+                lessonId,
+                cefrLevel,
+                checkpointId: activeCheckpoint.id,
+                questionCount: questions.length,
+            },
+        })
+    }, [activeCheckpoint.id, cefrLevel, lessonId, phase, questEpisode.episodeId, questions.length])
+
+    useEffect(() => {
+        if (phase !== 'results' || !results?.questEpisodeReceipt || completionTracked.current) return
+        completionTracked.current = true
+        trackClientAnalyticsEvent({
+            eventName: 'quest_episode_completed',
+            source: 'listening.quest_episode.completed',
+            actionId: questEpisode.episodeId,
+            actionType: 'listening_task',
+            level: cefrLevel,
+            skill: 'listening',
+            metadata: {
+                episodeId: questEpisode.episodeId,
+                skill: 'listening',
+                lessonId,
+                cefrLevel,
+                checkpointId: 'details',
+                questionCount: results.totalQuestions,
+                accuracyBand: results.questEpisodeReceipt.accuracyBand,
+            },
+        })
+    }, [cefrLevel, lessonId, phase, questEpisode.episodeId, results])
 
     const togglePlay = useCallback(() => {
         const audio = audioRef.current
@@ -184,17 +254,30 @@ export function LessonPlayer({
         setIsSubmitting(true)
         try {
             const timeTaken = Math.round((Date.now() - startTime) / 1000)
+            const submittedListenCount = Math.max(1, playCount)
             const res = await fetch(`/api/v1/listening/${lessonId}/submit`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ answers, timeTaken, listenCount: playCount }),
+                body: JSON.stringify({
+                    answers,
+                    timeTaken,
+                    listenCount: submittedListenCount,
+                    questEpisode: {
+                        episodeId: questEpisode.episodeId,
+                        skill: questEpisode.skill,
+                        sourceId: questEpisode.sourceId,
+                        cefrLevel: questEpisode.cefrLevel,
+                        checkpointCount: questEpisode.checkpoints.length,
+                        nextEpisodeHref: questEpisode.nextEpisodeHref,
+                    },
+                }),
             })
             const data = await res.json()
             if (data.success) {
                 setResults({
                     ...data.data,
                     timeTaken,
-                    listenCount: playCount,
+                    listenCount: submittedListenCount,
                 })
                 setPhase('results')
             }
@@ -213,6 +296,35 @@ export function LessonPlayer({
 
     const canPlayAgain = playCount < maxPlays
     const allAnswered = questions.every(q => answers[q.id])
+
+    const startEpisode = () => {
+        trackedCheckpoints.current = new Set()
+        completionTracked.current = false
+        setStartTime(Date.now())
+        setPhase('listening')
+        trackClientAnalyticsEvent({
+            eventName: 'quest_episode_started',
+            source: 'listening.quest_episode.started',
+            actionId: questEpisode.episodeId,
+            actionType: 'listening_task',
+            level: cefrLevel,
+            skill: 'listening',
+            metadata: {
+                episodeId: questEpisode.episodeId,
+                skill: 'listening',
+                lessonId,
+                cefrLevel,
+                checkpointId: 'preview',
+                questionCount: questions.length,
+            },
+        })
+        if (autoPlayTimeoutRef.current) {
+            clearTimeout(autoPlayTimeoutRef.current)
+        }
+        autoPlayTimeoutRef.current = setTimeout(() => {
+            audioRef.current?.play().catch(() => {})
+        }, 300)
+    }
 
     const resetLesson = () => {
         const audio = audioRef.current
@@ -233,6 +345,17 @@ export function LessonPlayer({
         setShowTranscript(false)
         setStartTime(Date.now())
         setPhase('intro')
+        setAudioError(false)
+        trackedCheckpoints.current = new Set()
+        completionTracked.current = false
+    }
+
+    const retryAudio = () => {
+        setAudioError(false)
+        if (audioRef.current) {
+            audioRef.current.load()
+            audioRef.current.play().catch(() => {})
+        }
     }
 
     const resultMessage = (percentage: number) => {
@@ -265,6 +388,15 @@ export function LessonPlayer({
                 {/* Lesson Info */}
                 <div className="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm text-center">
                     <FuxieLive3D state="wave" fallbackSrc={FUXIE_3D_ASSETS.radioHost} alt="Fuxie listening coach" size={112} priority />
+                    <div className="mt-4 flex flex-wrap items-center justify-center gap-2">
+                        <FuxieBadge tone="brand" className="normal-case tracking-normal">
+                            Listening Episode
+                        </FuxieBadge>
+                        <FuxieBadge tone="neutral" className="normal-case tracking-normal">
+                            {cefrLevel} · {taskType}
+                        </FuxieBadge>
+                    </div>
+                    <p className="mt-4 text-xs font-black uppercase tracking-wide text-text-brand">Quest briefing</p>
                     <h1 className="text-xl font-bold text-gray-900 mt-4">{topic}</h1>
                     <p className="text-sm text-gray-500 mt-1">Phần {teil} - {teilName}</p>
 
@@ -281,23 +413,57 @@ export function LessonPlayer({
                     </div>
 
                     <div className="mt-6 p-4 bg-[#F3FBFF] rounded-xl text-sm text-gray-700 ring-1 ring-[#60A8E4]/15">
-                        <p className="font-semibold text-[#3C78A8] mb-2">Hướng dẫn</p>
+                        <p className="font-semibold text-text-brand mb-2">Hướng dẫn</p>
                         <p>Em sẽ nghe đoạn audio tối đa <strong>{maxPlays} lần</strong>, sau đó trả lời <strong>{questions.length} câu hỏi</strong>.</p>
                         <p className="mt-1 text-gray-500">Tốc độ gợi ý: {DEFAULT_SPEEDS[cefrLevel]}x - Thời lượng: khoảng {formatTime(duration || 180)}</p>
                     </div>
 
+                    <p className="mt-4 text-sm font-semibold leading-relaxed text-text-brand">
+                        {questEpisode.objective} Phần thưởng chỉ được trao khi em thực sự hoàn thành thử thách nghe.
+                    </p>
+
+                    <div className="mt-4 rounded-2xl bg-[#F3FBFF] p-4 ring-1 ring-[#CCE4F0]/70">
+                        <RewardPreview rewards={questEpisode.rewardPreview} />
+                    </div>
+
+                    <div className="mt-4 grid gap-3 sm:grid-cols-3">
+                        {questEpisode.checkpoints.map((checkpoint, index) => (
+                            <div key={checkpoint.id} className="rounded-2xl bg-white p-4 text-left ring-1 ring-slate-100">
+                                <div className="mb-2 flex h-8 w-8 items-center justify-center rounded-xl bg-[#EAFBF8] text-sm font-black text-text-success">
+                                    {index + 1}
+                                </div>
+                                <p className="text-sm font-black text-slate-950">{checkpoint.title}</p>
+                                <p className="mt-1 text-xs font-semibold leading-relaxed text-slate-500">{checkpoint.objective}</p>
+                            </div>
+                        ))}
+                    </div>
+
+                    <FuxieCoach
+                        role="coach"
+                        eyebrow="Episode v1"
+                        title="Nghe theo tung checkpoint"
+                        message="Khong co Fucoin cho play audio hay checkpoint. XP/Fucoin chi den sau submit."
+                        className="mt-4 bg-[#F3FBFF]"
+                    />
+
+                    {audioError && (
+                        <div className="mt-4 p-4 bg-red-50 border border-red-100 rounded-xl flex items-center justify-between text-sm text-red-600">
+                            <div className="flex items-center gap-2">
+                                <svg className="w-5 h-5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                                <span>Fuxie không tải được file âm thanh. Em kiểm tra lại mạng nhé!</span>
+                            </div>
+                            <button onClick={retryAudio} className="font-bold underline hover:text-red-700">
+                                Thử lại
+                            </button>
+                        </div>
+                    )}
+
                     <button
-                        onClick={() => {
-                            setStartTime(Date.now())
-                            setPhase('listening')
-                            if (autoPlayTimeoutRef.current) {
-                                clearTimeout(autoPlayTimeoutRef.current)
-                            }
-                            autoPlayTimeoutRef.current = setTimeout(() => {
-                                audioRef.current?.play().catch(() => {})
-                            }, 300)
-                        }}
-                        className="mt-6 w-full py-3.5 rounded-xl bg-gradient-to-r from-[#60A8E4] to-[#3C78A8] text-white font-bold text-base hover:opacity-90 transition-all shadow-lg shadow-sky-200"
+                        onClick={startEpisode}
+                        disabled={audioError}
+                        className={fuxieButtonClass('primary', 'lg', `mt-6 w-full ${audioError ? 'opacity-50 cursor-not-allowed' : ''}`)}
                     >
                         Bắt đầu nghe
                     </button>
@@ -328,6 +494,26 @@ export function LessonPlayer({
                     <span className={`px-2.5 py-1 rounded-lg text-xs font-bold bg-gradient-to-r ${cefrColor.gradient} text-white`}>
                         {cefrLevel}
                     </span>
+                </div>
+
+                <div className="mb-5 rounded-2xl bg-[#F3FBFF] px-4 py-3 ring-1 ring-[#CCE4F0]/70">
+                    <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+                        <div className="min-w-0">
+                            <p className="text-xs font-black uppercase tracking-wide text-text-brand">
+                                {activeCheckpoint.title}
+                            </p>
+                            <p className="truncate text-xs font-semibold text-slate-500">
+                                {activeCheckpoint.objective}
+                            </p>
+                        </div>
+                        <div className="flex min-w-[180px] items-center gap-2 text-xs font-black text-text-brand">
+                            <span>{Math.max(0, questions.length - currentQuestion - 1)} con lai</span>
+                            <FuxieProgressBar
+                                value={Math.round(((currentQuestion + 1) / Math.max(1, questions.length)) * 100)}
+                                className="h-2 flex-1"
+                            />
+                        </div>
+                    </div>
                 </div>
 
                 <div className="grid gap-5 lg:grid-cols-[minmax(0,1fr)_320px]">
@@ -370,6 +556,13 @@ export function LessonPlayer({
                             </div>
                         </div>
                     </div>
+
+                    {audioError && (
+                        <div className="mt-4 p-3 bg-red-50 border border-red-100 rounded-xl flex items-center justify-between text-sm text-red-600">
+                            <span>Lỗi tải âm thanh.</span>
+                            <button onClick={retryAudio} className="font-bold underline">Thử tải lại</button>
+                        </div>
+                    )}
 
                     {/* Controls row */}
                     <div className="flex items-center justify-between mt-3 pt-3 border-t border-gray-50">
@@ -521,7 +714,7 @@ export function LessonPlayer({
             questionResults,
         } = results
         const message = resultMessage(percentage)
-        const mascotVariant = percentage >= 70 ? 'celebrate' : percentage >= 50 ? 'encouragement' : 'studying'
+        const mascotVariant = percentage >= 70 ? 'celebrate' : percentage >= 50 ? 'encourage' : 'studying'
         const { Clock3, Headphones: HeadphonesIcon, Target } = resultRewardIcons
         const resultCopy = percentage >= 90
             ? {
@@ -609,12 +802,17 @@ export function LessonPlayer({
                 detail: streak?.freezeUsed ? `${streak.currentStreak} ngay` : 'Giữ nhịp',
             },
         ]
+        const displayRewardPreview = results.rewardPreview && results.rewardPreview.length > 0
+            ? results.rewardPreview
+            : rewardPreview
+        const episodeReceipt = results.questEpisodeReceipt
 
         return (
             <div className="max-w-4xl mx-auto px-4 py-6">
                 {audioElement}
 
-                <ResultRewardLoop
+                <CompletionFlow
+                    mode="alreadySaved"
                     skill="listening"
                     title={resultCopy.title}
                     message={`Em trả lời đúng ${score}/${totalQuestions} câu. ${message}`}
@@ -623,7 +821,7 @@ export function LessonPlayer({
                     accuracy={percentage}
                     xpEarned={xpEarned}
                     attemptMeta={attemptMeta}
-                    rewardPreview={rewardPreview}
+                    rewardPreview={displayRewardPreview}
                     streakReceipt={streak
                         ? {
                             freezeUsed: Boolean(streak.freezeUsed),
@@ -632,6 +830,7 @@ export function LessonPlayer({
                             freezesUsed: streak.freezesUsed ?? 0,
                         }
                         : undefined}
+                    hasNextStep={Boolean(results.nextEpisodeHref ?? episodeReceipt?.nextEpisodeHref)}
                     primaryAction={{ label: 'Bài nghe tiếp theo', href: '/listening' }}
                     secondaryAction={{ label: 'Nghe lại', onClick: resetLesson }}
                     dashboardAction={{ label: 'Về Dashboard', href: '/dashboard' }}
@@ -639,6 +838,40 @@ export function LessonPlayer({
                     coachMessage={resultCopy.coachMessage}
                     className="mb-5"
                 />
+
+                {episodeReceipt ? (
+                    <div className="mb-5 rounded-2xl bg-[#F3FBFF] p-4 ring-1 ring-[#CCE4F0]/70">
+                        <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+                            <div className="min-w-0">
+                                <p className="text-xs font-black uppercase tracking-wide text-text-brand">
+                                    Episode receipt
+                                </p>
+                                <h3 className="mt-1 text-lg font-black text-slate-950">
+                                    {episodeReceipt.completedCheckpoints}/{episodeReceipt.checkpointCount} checkpoint · {episodeReceipt.accuracyBand.replaceAll('_', ' ')}
+                                </h3>
+                                <p className="mt-1 text-sm font-semibold leading-relaxed text-text-brand">
+                                    {episodeReceipt.masteryContribution}
+                                </p>
+                            </div>
+                            <a
+                                href={episodeReceipt.recommendedAction === 'next_episode' ? episodeReceipt.nextEpisodeHref : undefined}
+                                onClick={(event) => {
+                                    if (episodeReceipt.recommendedAction !== 'next_episode') {
+                                        event.preventDefault()
+                                        resetLesson()
+                                    }
+                                }}
+                                className={fuxieButtonClass(episodeReceipt.recommendedAction === 'next_episode' ? 'primary' : 'reward', 'md', 'shrink-0')}
+                            >
+                                {episodeReceipt.recommendedAction === 'next_episode' ? 'Di tiep' : 'Nghe lai'}
+                            </a>
+                        </div>
+                        <FuxieProgressBar
+                            value={Math.round((episodeReceipt.completedCheckpoints / Math.max(1, episodeReceipt.checkpointCount)) * 100)}
+                            className="mt-4"
+                        />
+                    </div>
+                ) : null}
 
                 {/* Celebration */}
                 <div className="hidden">
@@ -673,15 +906,15 @@ export function LessonPlayer({
                     <div className="flex justify-center gap-4 mt-5">
                         <div className="px-4 py-2 bg-gray-50 rounded-xl text-center">
                             <p className="text-lg font-bold text-gray-900">⏱️ {formatTime(results.timeTaken)}</p>
-                            <p className="text-[10px] text-gray-500">Thời gian</p>
+                            <p className="text-xs text-gray-500">Thời gian</p>
                         </div>
                         <div className="px-4 py-2 bg-gray-50 rounded-xl text-center">
                             <p className="text-lg font-bold text-gray-900">🔊 {results.listenCount}x</p>
-                            <p className="text-[10px] text-gray-500">Lượt nghe</p>
+                            <p className="text-xs text-gray-500">Lượt nghe</p>
                         </div>
                         <div className="px-4 py-2 bg-gray-50 rounded-xl text-center">
                             <p className="text-lg font-bold text-gray-900">📊 {percentage}%</p>
-                            <p className="text-[10px] text-gray-500">Kết quả</p>
+                            <p className="text-xs text-gray-500">Kết quả</p>
                         </div>
                     </div>
                 </div>

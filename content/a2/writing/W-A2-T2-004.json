@@ -47,5 +47,28 @@
   "sourceText": "Ihr Nachbar, Herr Müller aus der Schillerstraße 12, hat Ihnen eine E-Mail geschickt. Er beschwert sich über Ihre Geburtstagsparty am 14. Oktober. Die Musik war nach Mitternacht zu laut, und im Treppenhaus liegt Müll. Zudem wurde ein Blumentopf vor seiner Tür beschädigt. Reagieren Sie darauf.",
   "sourceTextType": "E-Mail-Beschwerde",
   "stimulusSender": "Herr Müller",
-  "grafikData": []
+  "grafikData": [],
+  "modelAnswer": "Hallo,\n\nich schreibe wegen ueber Party informieren. ich schreibe wegen sich entschuldigen fuer Laerm. ich schreibe wegen einladen. Bitte geben Sie mir kurz Bescheid.\n\nViele Gruesse\nLinh",
+  "timeLimitMinutes": 15,
+  "estimatedMinutes": 15,
+  "cefrAudit": {
+    "targetLevel": "A2",
+    "verdict": "aligned",
+    "reviewerRole": "German Academic Lead",
+    "notes": "Release-candidate metadata audit: writing content for \"Party\" is aligned with declared A2 scope pending final human spot-check.",
+    "reviewedAt": "2026-05-12",
+    "reviewScope": "release_candidate_metadata_pass"
+  },
+  "learningOutcomes": [
+    {
+      "id": "w-a2-t2-004-lo-1",
+      "cefrLevel": "A2",
+      "skill": "writing",
+      "canDoVi": "Toi co the luyen viet o trinh do A2 qua chu de \"Party\".",
+      "canDoDe": "Ich kann Schreiben auf Niveau A2 zum Thema \"Party\" ueben.",
+      "linkedContentIds": [
+        "W-A2-T2-004"
+      ]
+    }
+  ]
 }

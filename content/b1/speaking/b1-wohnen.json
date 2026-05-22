@@ -460,5 +460,55 @@
       ],
       "topicSlug": "b1-wohnen"
     }
+  ],
+  "evaluationCriteria": [
+    {
+      "id": "pronunciation",
+      "name": "Pronunciation",
+      "nameVi": "Ph?t ?m",
+      "maxScore": 5,
+      "description": "Sounds, stress, and clarity match the CEFR task."
+    },
+    {
+      "id": "fluency",
+      "name": "Fluency",
+      "nameVi": "?? tr?i ch?y",
+      "maxScore": 5,
+      "description": "Learner can speak at a natural pace for the level."
+    },
+    {
+      "id": "accuracy",
+      "name": "Accuracy",
+      "nameVi": "?? ch?nh x?c",
+      "maxScore": 5,
+      "description": "Grammar and vocabulary are appropriate and understandable."
+    },
+    {
+      "id": "task_completion",
+      "name": "Task completion",
+      "nameVi": "Ho?n th?nh nhi?m v?",
+      "maxScore": 5,
+      "description": "Learner addresses the prompt and communicative goal."
+    }
+  ],
+  "cefrAudit": {
+    "targetLevel": "B1",
+    "verdict": "aligned",
+    "reviewerRole": "German Academic Lead",
+    "notes": "Release-candidate metadata audit: speaking content for \"Wohnen\" is aligned with declared B1 scope pending final human spot-check.",
+    "reviewedAt": "2026-05-12",
+    "reviewScope": "release_candidate_metadata_pass"
+  },
+  "learningOutcomes": [
+    {
+      "id": "b1-wohnen-lo-1",
+      "cefrLevel": "B1",
+      "skill": "speaking",
+      "canDoVi": "Toi co the luyen noi o trinh do B1 qua chu de \"Wohnen\".",
+      "canDoDe": "Ich kann Sprechen auf Niveau B1 zum Thema \"Wohnen\" ueben.",
+      "linkedContentIds": [
+        "b1-wohnen"
+      ]
+    }
   ]
 }

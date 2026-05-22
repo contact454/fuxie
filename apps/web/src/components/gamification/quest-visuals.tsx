@@ -6,10 +6,13 @@ import {
     Award,
     BadgeCheck,
     BookOpen,
+    CheckCircle2,
     ClipboardCheck,
     Coins,
     Flame,
+    Flag,
     Headphones,
+    Lightbulb,
     LockKeyhole,
     PenLine,
     RotateCcw,
@@ -21,35 +24,22 @@ import {
 
 import { REWARD_ASSETS } from '@/components/gamification/reward-assets'
 import { FuxieRewardList, type FuxieRewardListItem } from '@/components/ui/fuxie-ui'
+import {
+    FUXIE_3D_ASSETS,
+    FUXIE_GAMIFICATION_MASCOTS,
+    FUXIE_LIVING_3D_ASSETS,
+    FUXIE_MASCOT_STATES,
+    FUXIE_MODULE_MASCOTS,
+    FUXIE_UI_FRAMES,
+    FUXIE_WORLD_PROPS,
+} from '@/lib/mascot/fuxie-assets'
+
+// Re-export so existing consumers can keep importing from quest-visuals.
+export { FUXIE_3D_ASSETS, FUXIE_LIVING_3D_ASSETS }
 
 type IconComponent = ComponentType<{ className?: string }>
 
 export type FuxieCoachRole = 'coach' | 'feedback' | 'reward' | 'locked'
-
-export const FUXIE_3D_ASSETS = {
-    happyWave: '/mascot-3d/optimized/fuxie-3d-core-happy-wave-512.webp',
-    dailyMission: '/mascot-3d/optimized/fuxie-3d-core-daily-mission-512.webp',
-    fucoinReward: '/mascot-3d/optimized/fuxie-3d-game-fucoin-reward-512.webp',
-    streakFreezeSaved: '/mascot-3d/optimized/fuxie-3d-game-streak-freeze-saved-512.webp',
-    shopkeeper: '/mascot-3d/optimized/fuxie-3d-role-shopkeeper-512.webp',
-    librarian: '/mascot-3d/optimized/fuxie-3d-role-librarian-512.webp',
-    radioHost: '/mascot-3d/optimized/fuxie-3d-role-radio-host-512.webp',
-    postOffice: '/mascot-3d/optimized/fuxie-3d-role-post-office-512.webp',
-    examGuide: '/mascot-3d/optimized/fuxie-3d-role-exam-guide-512.webp',
-    speakingCoach: '/mascot-3d/optimized/fuxie-3d-role-speaking-coach-512.webp',
-    celebration: '/mascot-3d/optimized/fuxie-3d-core-celebration-512.webp',
-} as const
-
-export const FUXIE_LIVING_3D_ASSETS = {
-    model: '/mascot-3d/live/fuxie-living-prototype.glb',
-    poster: '/mascot-3d/live/fuxie-living-prototype-poster.png',
-    frames: [
-        '/mascot-3d/live/fuxie-living-prototype-frame-1.webp',
-        '/mascot-3d/live/fuxie-living-prototype-frame-2.webp',
-        '/mascot-3d/live/fuxie-living-prototype-frame-3.webp',
-        '/mascot-3d/live/fuxie-living-prototype-frame-4.webp',
-    ],
-} as const
 
 export type FuxieMascotMotion = 'none' | 'idle' | 'coach' | 'reward' | 'speak'
 
@@ -63,6 +53,28 @@ const FUXIE_MASCOT_MOTION_CLASS: Record<FuxieMascotMotion, string> = {
 
 export function fuxieMascotMotionClass(motion: FuxieMascotMotion = 'idle') {
     return FUXIE_MASCOT_MOTION_CLASS[motion]
+}
+
+function FuxieFrameAccent({
+    src,
+    size = 96,
+    className = '',
+}: {
+    src: string
+    size?: number
+    className?: string
+}) {
+    return (
+        <Image
+            src={src}
+            alt=""
+            width={size}
+            height={size}
+            aria-hidden="true"
+            className={`pointer-events-none select-none object-contain ${className}`}
+            style={{ width: `${size}px`, height: `${size}px` }}
+        />
+    )
 }
 
 interface FuxieRoleMascotProps {
@@ -96,6 +108,7 @@ export function FuxieRoleMascot({
                 height={size}
                 priority={priority}
                 className={`h-full w-full object-contain ${fuxieMascotMotionClass(motion)} ${imageClassName}`}
+                style={{ width: '100%', height: '100%' }}
             />
         </span>
     )
@@ -136,6 +149,7 @@ export function FuxieMascot3D({
                     height={size}
                     priority={priority}
                     className={`fuxie-live-asset-image h-full w-full object-contain ${live ? 'fuxie-live-asset-motion' : ''} ${imageClassName}`}
+                    style={{ width: '100%', height: '100%' }}
                 />
                 {live ? (
                     <>
@@ -165,6 +179,7 @@ export function FuxieMascot3D({
                         priority={priority && index === 0}
                         aria-hidden={index === 0 ? undefined : true}
                         className={`fuxie-live-3d-frame fuxie-live-3d-frame-${index + 1} absolute inset-0 h-full w-full object-contain ${imageClassName}`}
+                        style={{ width: '100%', height: '100%' }}
                     />
                 ))
             ) : (
@@ -175,6 +190,7 @@ export function FuxieMascot3D({
                     height={size}
                     priority={priority}
                     className={`h-full w-full object-contain ${imageClassName}`}
+                    style={{ width: '100%', height: '100%' }}
                 />
             )}
         </span>
@@ -199,7 +215,7 @@ const FUXIE_ROLE_CONFIG: Record<FuxieCoachRole, { src: string; gradient: string;
         icon: Sparkles,
     },
     feedback: {
-        src: FUXIE_3D_ASSETS.happyWave,
+        src: FUXIE_3D_ASSETS.gentleCorrection,
         gradient: 'from-[#E4F0F0] via-white to-[#F3FBFF]',
         icon: Zap,
     },
@@ -209,7 +225,7 @@ const FUXIE_ROLE_CONFIG: Record<FuxieCoachRole, { src: string; gradient: string;
         icon: Trophy,
     },
     locked: {
-        src: FUXIE_3D_ASSETS.happyWave,
+        src: FUXIE_3D_ASSETS.calmEmpty,
         gradient: 'from-[#F3FBFF] via-white to-[#E4F0F0]',
         icon: LockKeyhole,
     },
@@ -243,13 +259,14 @@ export function FuxieCoach({
                         height={76}
                         priority={priority}
                         className={`object-contain ${fuxieMascotMotionClass(mascotMotion)}`}
+                        style={{ width: 'auto', height: 'auto' }}
                     />
                     <span className="absolute -right-1 -top-1 rounded-full bg-[#54A8E4] p-1.5 text-white shadow-sm">
                         <Icon className="h-3.5 w-3.5" />
                     </span>
                 </div>
                 <div className="min-w-0">
-                    <p className="text-xs font-bold uppercase tracking-wide text-[#3C78A8]">{eyebrow}</p>
+                    <p className="text-xs font-bold uppercase text-text-brand">{eyebrow}</p>
                     <h3 className="mt-1 text-base font-black text-slate-950 sm:text-lg">{title}</h3>
                     <p className="mt-1 text-sm font-medium leading-relaxed text-slate-600">{message}</p>
                 </div>
@@ -290,11 +307,11 @@ const REWARD_CONFIG: Record<RewardPreviewType, { icon: IconComponent; tone: Fuxi
 }
 
 const REWARD_TYPE_ASSETS: Partial<Record<RewardPreviewType, string>> = {
-    xp: REWARD_ASSETS.xpStar,
-    fucoin: REWARD_ASSETS.fucoin,
-    streak: REWARD_ASSETS.streakFreeze,
-    badge: REWARD_ASSETS.cefrBadges,
-    unlock: REWARD_ASSETS.unlockKey,
+    xp: REWARD_ASSETS.xpStarVillage,
+    fucoin: REWARD_ASSETS.fucoinVillage,
+    streak: REWARD_ASSETS.streakFreezeSnowglobe,
+    badge: REWARD_ASSETS.cefrBadgeNodeSet,
+    unlock: REWARD_ASSETS.unlockKeySignpost,
 }
 
 function rewardVisualForType(type: RewardPreviewType, className = 'h-8 w-8') {
@@ -310,6 +327,7 @@ function rewardVisualForType(type: RewardPreviewType, className = 'h-8 w-8') {
                 width={40}
                 height={40}
                 className={`${className} object-contain drop-shadow-sm`}
+                style={{ width: 'auto', height: 'auto' }}
             />
         )
     }
@@ -338,7 +356,7 @@ export function RewardPreview({ rewards, className = '', layout = 'row' }: Rewar
 export function RewardRevealMoment({
     rewards,
     title = 'Reward unlocked',
-    detail = 'Phan thuong da duoc ghi nhan cho nhiem vu nay.',
+    detail = 'Phần thưởng đã được ghi nhận cho nhiệm vụ này.',
     mode = 'earned',
     className = '',
 }: RewardRevealMomentProps) {
@@ -350,7 +368,7 @@ export function RewardRevealMoment({
         : mode === 'pending'
             ? 'bg-gradient-to-r from-[#F3FBFF] via-white to-[#EAFBF8] ring-[#CCE4F0]/80'
             : 'bg-gradient-to-r from-[#F3FBFF] via-white to-[#E4F0F0] ring-[#CCE4F0]/80'
-    const eyebrowClass = isEarned ? 'text-[#C67A00]' : mode === 'pending' ? 'text-[#3C78A8]' : 'text-[#148F7D]'
+    const eyebrowClass = isEarned ? 'text-text-reward' : mode === 'pending' ? 'text-text-brand' : 'text-text-success'
     const tokenClass = isEarned
         ? 'fuxie-reveal-main-token bg-white/90 ring-white'
         : 'bg-white/82 ring-[#CCE4F0]/65'
@@ -368,6 +386,11 @@ export function RewardRevealMoment({
             role="status"
             aria-live="polite"
         >
+            <FuxieFrameAccent
+                src={FUXIE_UI_FRAMES.resultRevealFrame}
+                size={118}
+                className="absolute -right-8 -top-8 opacity-20"
+            />
             {isEarned ? (
                 <div className="pointer-events-none absolute inset-0" aria-hidden="true">
                     {[0, 1, 2, 3, 4, 5].map((index) => (
@@ -388,13 +411,13 @@ export function RewardRevealMoment({
                     {rewardVisualForType(mainReward.type, 'h-12 w-12')}
                 </div>
                 <div className="min-w-0 flex-1">
-                    <p className={`text-[11px] font-black uppercase tracking-wide ${eyebrowClass}`}>
+                    <p className={`text-xs font-black uppercase ${eyebrowClass}`}>
                         {title}
                     </p>
-                    <p className="mt-0.5 line-clamp-1 text-base font-black text-[#173B56]">
+                    <p className="mt-0.5 line-clamp-1 text-base font-black text-text-primary">
                         {mainReward.label}
                     </p>
-                    <p className="mt-1 line-clamp-2 text-xs font-semibold leading-relaxed text-[#3C78A8]">
+                    <p className="mt-1 line-clamp-2 text-xs font-semibold leading-relaxed text-text-brand">
                         {detail}
                     </p>
                 </div>
@@ -409,6 +432,136 @@ export function RewardRevealMoment({
                             {rewardVisualForType(reward.type, 'h-8 w-8')}
                         </span>
                     ))}
+                </div>
+            </div>
+        </div>
+    )
+}
+
+export interface QuestCheckpointVisualStep {
+    id: string
+    title: string
+    objective: string
+}
+
+interface QuestCheckpointRailProps {
+    checkpoints: QuestCheckpointVisualStep[]
+    activeId: string
+    completedIds?: string[]
+    label?: string
+    compact?: boolean
+    className?: string
+}
+
+export function QuestCheckpointRail({
+    checkpoints,
+    activeId,
+    completedIds = [],
+    label = 'Checkpoint progress',
+    compact = false,
+    className = '',
+}: QuestCheckpointRailProps) {
+    if (checkpoints.length === 0) return null
+
+    const activeIndex = Math.max(0, checkpoints.findIndex((checkpoint) => checkpoint.id === activeId))
+    const progress = Math.round(((activeIndex + 1) / checkpoints.length) * 100)
+
+    return (
+        <div className={`relative overflow-hidden rounded-2xl bg-white/82 p-3 shadow-sm ring-1 ring-[#CCE4F0]/70 ${className}`}>
+            <FuxieFrameAccent
+                src={FUXIE_UI_FRAMES.courseCheckpointNode}
+                size={92}
+                className="absolute -right-6 -top-7 opacity-[0.15]"
+            />
+            <div className="relative mb-3 flex items-center justify-between gap-3">
+                <div className="flex min-w-0 items-center gap-2">
+                    <span className="grid h-7 w-7 shrink-0 place-items-center rounded-lg bg-[#F3FBFF] ring-1 ring-[#CCE4F0]/70">
+                        <Image
+                            src={FUXIE_UI_FRAMES.courseCheckpointNode}
+                            alt=""
+                            width={24}
+                            height={24}
+                            className="h-5 w-5 object-contain"
+                        />
+                    </span>
+                    <p className="min-w-0 truncate text-xs font-black uppercase text-text-brand">{label}</p>
+                </div>
+                <span className="rounded-full bg-[#EAFBF8] px-2.5 py-1 text-xs font-black text-text-success">
+                    {activeIndex + 1}/{checkpoints.length}
+                </span>
+            </div>
+            <div className="relative h-2 overflow-hidden rounded-full bg-[#D9EAF5]" aria-hidden="true">
+                <div
+                    className="h-full rounded-full bg-[#2EC4B6] transition-all duration-500"
+                    style={{ width: `${progress}%` }}
+                />
+            </div>
+            <div className={`relative mt-3 grid gap-2 ${compact ? '' : 'sm:grid-cols-3'}`}>
+                {checkpoints.map((checkpoint, index) => {
+                    const done = completedIds.includes(checkpoint.id) || index < activeIndex
+                    const active = checkpoint.id === activeId
+                    const Icon = done ? CheckCircle2 : active ? Flag : Lightbulb
+                    const tone = done
+                        ? 'bg-[#EAFBF8] text-text-success ring-[#BFEFE5]'
+                        : active
+                            ? 'bg-[#F3FBFF] text-text-brand ring-[#CCE4F0]'
+                            : 'bg-slate-50 text-slate-400 ring-slate-100'
+
+                    return (
+                        <div
+                            key={checkpoint.id}
+                            className={`rounded-xl p-3 ring-1 transition ${tone} ${active ? 'shadow-sm' : ''}`}
+                        >
+                            <div className="flex items-center gap-2">
+                                <span className="grid h-7 w-7 shrink-0 place-items-center rounded-lg bg-white/80">
+                                    <Icon className="h-4 w-4" />
+                                </span>
+                                <p className="min-w-0 truncate text-sm font-black">{checkpoint.title}</p>
+                            </div>
+                            {!compact ? (
+                                <p className="mt-2 text-xs font-semibold leading-relaxed text-slate-600">
+                                    {checkpoint.objective}
+                                </p>
+                            ) : null}
+                        </div>
+                    )
+                })}
+            </div>
+        </div>
+    )
+}
+
+interface GameplayFeedbackMomentProps {
+    tone?: 'success' | 'focus' | 'retry'
+    title: string
+    message: string
+    meta?: string
+    className?: string
+}
+
+export function GameplayFeedbackMoment({
+    tone = 'focus',
+    title,
+    message,
+    meta,
+    className = '',
+}: GameplayFeedbackMomentProps) {
+    const toneClass = tone === 'success'
+        ? 'from-[#EAFBF8] to-white ring-[#BFEFE5] text-text-success'
+        : tone === 'retry'
+            ? 'from-[#FFF6D6] to-white ring-[#FFE1A6] text-text-warning'
+            : 'from-[#F3FBFF] to-white ring-[#CCE4F0] text-text-brand'
+
+    return (
+        <div className={`rounded-2xl bg-gradient-to-br ${toneClass} p-3 shadow-sm ring-1 ${className}`} role="status" aria-live="polite">
+            <div className="flex items-start gap-3">
+                <span className="grid h-9 w-9 shrink-0 place-items-center rounded-xl bg-white/85">
+                    {tone === 'success' ? <CheckCircle2 className="h-5 w-5" /> : tone === 'retry' ? <RotateCcw className="h-5 w-5" /> : <Lightbulb className="h-5 w-5" />}
+                </span>
+                <div className="min-w-0">
+                    <p className="text-sm font-black text-text-primary">{title}</p>
+                    <p className="mt-1 text-xs font-semibold leading-relaxed text-slate-600">{message}</p>
+                    {meta ? <p className="mt-2 text-xs font-black uppercase text-current">{meta}</p> : null}
                 </div>
             </div>
         </div>
@@ -436,6 +589,7 @@ interface QuestProgressHeroProps {
 const QUEST_HERO_CONFIG: Record<QuestProgressHeroProps['variant'], {
     icon: IconComponent
     mascot: string
+    worldProp: string
     surface: string
     accent: string
     panel: string
@@ -444,6 +598,7 @@ const QUEST_HERO_CONFIG: Record<QuestProgressHeroProps['variant'], {
     exam: {
         icon: ClipboardCheck,
         mascot: FUXIE_3D_ASSETS.celebration,
+        worldProp: FUXIE_WORLD_PROPS.townHallExam,
         surface: 'bg-gradient-to-br from-[#F3FBFF] via-[#E4F0F0] to-[#CCE4F0]',
         accent: '#FFB703',
         panel: 'bg-white/75 ring-white/90',
@@ -452,6 +607,7 @@ const QUEST_HERO_CONFIG: Record<QuestProgressHeroProps['variant'], {
     review: {
         icon: RotateCcw,
         mascot: FUXIE_3D_ASSETS.streakFreezeSaved,
+        worldProp: FUXIE_WORLD_PROPS.reviewGarden,
         surface: 'bg-gradient-to-br from-[#F3FBFF] via-[#D8F0F0] to-[#CCE4F0]',
         accent: '#2EC4B6',
         panel: 'bg-white/75 ring-white/90',
@@ -474,23 +630,23 @@ export function QuestProgressHero({
     const Icon = config.icon
 
     return (
-        <section className={`relative overflow-hidden rounded-[28px] ${config.surface} p-5 text-[#173B56] shadow-[0_24px_70px_rgba(60,120,168,0.18)] ring-1 ring-white/80 sm:p-6 ${className}`}>
+        <section className={`relative overflow-hidden rounded-[28px] ${config.surface} p-5 text-text-primary shadow-[0_24px_70px_rgba(60,120,168,0.18)] ring-1 ring-white/80 sm:p-6 ${className}`}>
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(96,168,228,0.38),transparent_32%),radial-gradient(circle_at_top_right,rgba(255,255,255,0.9),transparent_30%)]" />
             <div className="absolute -bottom-24 right-16 h-56 w-56 rounded-full blur-3xl" style={{ backgroundColor: config.halo }} />
 
             <div className="relative grid gap-5 lg:grid-cols-[1fr_340px] lg:items-stretch">
                 <div className="flex min-w-0 flex-col justify-between gap-5">
                     <div>
-                        <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-white/75 px-3 py-1.5 text-xs font-black uppercase tracking-wide text-[#3C78A8] shadow-sm ring-1 ring-white/90">
+                        <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-white/75 px-3 py-1.5 text-xs font-black uppercase text-text-brand shadow-sm ring-1 ring-white/90">
                             <span className="flex h-6 w-6 items-center justify-center rounded-full text-white" style={{ backgroundColor: config.accent }}>
                                 <Icon className="h-3.5 w-3.5" />
                             </span>
                             {eyebrow}
                         </div>
-                        <h1 className="max-w-2xl text-3xl font-black tracking-normal text-[#173B56] sm:text-4xl">
+                        <h1 className="max-w-2xl text-3xl font-black tracking-normal text-text-primary sm:text-4xl">
                             {title}
                         </h1>
-                        <p className="mt-3 max-w-2xl text-sm font-semibold leading-relaxed text-[#3C78A8] sm:text-base">
+                        <p className="mt-3 max-w-2xl text-sm font-semibold leading-relaxed text-text-brand sm:text-base">
                             {message}
                         </p>
                     </div>
@@ -500,10 +656,10 @@ export function QuestProgressHero({
                     <div className="grid gap-2 sm:grid-cols-3">
                         {stats.map((stat) => (
                             <div key={`${stat.label}-${stat.value}`} className="rounded-2xl bg-white/70 px-4 py-3 shadow-sm ring-1 ring-white/90">
-                                <p className="text-[11px] font-black uppercase tracking-wide text-[#3C78A8]/70">{stat.label}</p>
-                                <p className="mt-1 text-2xl font-black text-[#173B56]">{stat.value}</p>
+                                <p className="text-xs font-black uppercase text-text-brand/70">{stat.label}</p>
+                                <p className="mt-1 text-2xl font-black text-text-primary">{stat.value}</p>
                                 {stat.detail && (
-                                    <p className="mt-0.5 truncate text-xs font-semibold text-[#3C78A8]/75">{stat.detail}</p>
+                                    <p className="mt-0.5 truncate text-xs font-semibold text-text-brand/75">{stat.detail}</p>
                                 )}
                             </div>
                         ))}
@@ -520,12 +676,21 @@ export function QuestProgressHero({
                                 sizes="96px"
                                 className={`object-contain p-1 ${fuxieMascotMotionClass(variant === 'exam' ? 'coach' : 'idle')}`}
                             />
+                            <span className="absolute -bottom-3 -right-3 grid h-12 w-12 place-items-center rounded-2xl bg-white/95 p-1.5 shadow-sm ring-1 ring-white">
+                                <Image
+                                    src={config.worldProp}
+                                    alt=""
+                                    width={44}
+                                    height={44}
+                                    className="h-full w-full object-contain"
+                                />
+                            </span>
                         </div>
                         <div className="min-w-0">
-                            <p className="text-xs font-black uppercase tracking-wide text-[#3C78A8]/70">Reward preview</p>
-                            <h2 className="mt-1 text-lg font-black text-[#173B56]">Hoàn thành để nhận thưởng</h2>
-                            <p className="mt-1 text-xs font-semibold leading-relaxed text-[#3C78A8]/75">
-                                Phần thưởng hiện trước khi học giúp học viên thấy rõ lý do bấm tiếp.
+                            <p className="text-xs font-black uppercase text-text-brand/70">Reward preview</p>
+                            <h2 className="mt-1 text-lg font-black text-text-primary">Hoàn thành để nhận thưởng</h2>
+                            <p className="mt-1 text-xs font-semibold leading-relaxed text-text-brand/75">
+                                Em cứ hoàn thành quest, Fuxie sẽ lo việc cộng thưởng.
                             </p>
                         </div>
                     </div>
@@ -558,24 +723,36 @@ interface SkillMotivationRailProps {
 const SKILL_MOTIVATION_CONFIG: Record<SkillMotivationKind, {
     icon: IconComponent
     label: string
+    worldProp: string
+    mascot: string
+    frame: string
     accent: string
     bg: string
 }> = {
     reading: {
         icon: BookOpen,
         label: 'Reading quest',
+        worldProp: FUXIE_WORLD_PROPS.library,
+        mascot: FUXIE_3D_ASSETS.questPlanner,
+        frame: FUXIE_UI_FRAMES.noticeBoard,
         accent: '#3C78A8',
         bg: 'from-[#F3FBFF] via-white to-[#CCE4F0]',
     },
     listening: {
         icon: Headphones,
         label: 'Listening quest',
+        worldProp: FUXIE_WORLD_PROPS.radioBooth,
+        mascot: FUXIE_3D_ASSETS.listeningFocus,
+        frame: FUXIE_UI_FRAMES.audioBroadcastPanel,
         accent: '#2EC4B6',
         bg: 'from-[#E4F0F0] via-white to-[#F3FBFF]',
     },
     writing: {
         icon: PenLine,
         label: 'Writing quest',
+        worldProp: FUXIE_WORLD_PROPS.postOffice,
+        mascot: FUXIE_3D_ASSETS.writingDelivery,
+        frame: FUXIE_UI_FRAMES.letterReceiptFrame,
         accent: '#FF8A3D',
         bg: 'from-[#F3FBFF] via-white to-[#FFE8D6]',
     },
@@ -598,8 +775,13 @@ export function SkillMotivationRail({
 
     return (
         <aside className={`flex min-w-0 flex-col gap-3 lg:sticky lg:top-6 lg:self-start ${className}`}>
-            <div className={`overflow-hidden rounded-2xl border border-white/80 bg-gradient-to-br ${config.bg} p-4 shadow-sm ring-1 ring-slate-100`}>
-                <div className="flex items-center gap-3">
+            <div className={`relative overflow-hidden rounded-2xl border border-white/80 bg-gradient-to-br ${config.bg} p-4 shadow-sm ring-1 ring-slate-100`}>
+                <FuxieFrameAccent
+                    src={config.frame}
+                    size={128}
+                    className="absolute -bottom-8 -right-8 opacity-20"
+                />
+                <div className="relative flex items-center gap-3">
                     <span
                         className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl text-white shadow-sm"
                         style={{ backgroundColor: config.accent }}
@@ -607,14 +789,21 @@ export function SkillMotivationRail({
                         <Icon className="h-5 w-5" />
                     </span>
                     <div className="min-w-0">
-                        <p className="text-xs font-black uppercase tracking-wide" style={{ color: config.accent }}>
+                        <p className="text-xs font-black uppercase" style={{ color: config.accent }}>
                             {config.label}
                         </p>
                         <h3 className="truncate text-base font-black text-slate-950">{phaseLabel}</h3>
                     </div>
+                    <Image
+                        src={config.worldProp}
+                        alt=""
+                        width={56}
+                        height={56}
+                        className="ml-auto hidden h-14 w-14 shrink-0 object-contain drop-shadow-sm sm:block"
+                    />
                 </div>
 
-                <div className="mt-4">
+                <div className="relative mt-4">
                     <div className="flex items-center justify-between gap-3 text-xs font-bold text-slate-500">
                         <span>{progressLabel}</span>
                         <span>{Math.round(progressPercent)}%</span>
@@ -627,10 +816,10 @@ export function SkillMotivationRail({
                     </div>
                 </div>
 
-                <div className="mt-4 grid grid-cols-2 gap-2">
+                <div className="relative mt-4 grid grid-cols-2 gap-2">
                     {metrics.map((metric) => (
                         <div key={`${metric.label}-${metric.value}`} className="rounded-xl bg-white/75 px-3 py-2 ring-1 ring-white">
-                            <p className="text-[11px] font-bold uppercase tracking-wide text-slate-400">{metric.label}</p>
+                            <p className="text-xs font-bold uppercase text-slate-400">{metric.label}</p>
                             <p className="mt-0.5 truncate text-sm font-black text-slate-900">{metric.value}</p>
                         </div>
                     ))}
@@ -642,11 +831,19 @@ export function SkillMotivationRail({
                 eyebrow="Focus mission"
                 title={title}
                 message={message}
+                mascotSrc={config.mascot}
                 className="bg-white"
             />
 
-            <div className="rounded-2xl bg-gradient-to-br from-[#F3FBFF] to-[#CCE4F0] p-3 shadow-sm ring-1 ring-white/80">
-                <RewardPreview layout="stack" rewards={rewards} />
+            <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-[#F3FBFF] to-[#CCE4F0] p-3 shadow-sm ring-1 ring-white/80">
+                <FuxieFrameAccent
+                    src={FUXIE_UI_FRAMES.resultRevealFrame}
+                    size={104}
+                    className="absolute -right-7 -top-8 opacity-[0.16]"
+                />
+                <div className="relative">
+                    <RewardPreview layout="stack" rewards={rewards} />
+                </div>
             </div>
         </aside>
     )

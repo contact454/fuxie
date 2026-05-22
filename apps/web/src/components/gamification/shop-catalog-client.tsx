@@ -38,6 +38,7 @@ import type {
     FuxieShopCategory,
     FuxieRewardInventory,
 } from '@/lib/gamification/shop'
+import { FUXIE_UI_FRAMES, FUXIE_WORLD_PROPS } from '@/lib/mascot/fuxie-assets'
 
 type ShopFilter = 'all' | FuxieShopCategory
 type RedeemFeedbackTone = 'success' | 'warning' | 'error'
@@ -198,27 +199,38 @@ export function ShopCatalogClient({
                             Fucoin dùng để mở phần thưởng nào?
                         </h1>
                         <p className="hidden">
-                            Khi đủ Fucoin, em có thể tạo request đổi quà để admin review. Request pending chưa trừ ví, chưa giao quà và chưa unlock bài học.
+                            Thu thập đủ Fucoin để kích hoạt các bảo vật. Việc gửi yêu cầu chưa tiêu hao kho báu — Fucoin chỉ thực sự rời đi khi admin đóng dấu xác nhận.
                         </p>
 
                         <p className="mt-3 max-w-3xl text-sm font-semibold leading-relaxed text-[#3C78A8] sm:text-base">
-                            Pending request chua tru vi. Khi admin approve, Fucoin se duoc spend qua ledger; khi fulfill, reward duoc ho tro se xuat hien trong inventory.
+                            Yêu cầu đổi thưởng đang trong trạng thái chờ. Fucoin của em vẫn được bảo toàn cho đến khi Lãnh chúa Fuxie phê duyệt và mở khóa bảo vật.
                         </p>
 
                         <div className="mt-5 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
-                            <ShopHeroStat label="Ví hiện có" value={wallet.balance.toLocaleString('vi-VN')} detail="Fucoin sẵn sàng" />
-                            <ShopHeroStat label="Có thể request" value={`${affordableCount}/${catalog.length}`} detail="Đủ Fucoin để vào hàng chờ" />
-                            <ShopHeroStat label="Hôm nay" value={`${dailyFucoin.earnedToday}/${dailyFucoin.dailyCap}`} detail="Daily learning cap" />
-                            <ShopHeroStat label="Inventory" value={String(rewardInventory.streakFreezeAvailable)} detail="Streak Freeze ready" />
+                            <ShopHeroStat label="Kho báu" value={wallet.balance.toLocaleString('vi-VN')} detail="Fucoin sẵn sàng xuất kho" />
+                            <ShopHeroStat label="Quyền trượng" value={`${affordableCount}/${catalog.length}`} detail="Đủ lực lượng để yêu cầu" />
+                            <ShopHeroStat label="Thu hoạch" value={`${dailyFucoin.earnedToday}/${dailyFucoin.dailyCap}`} detail="Giới hạn chiến lợi phẩm ngày" />
+                            <ShopHeroStat label="Hành trang" value={String(rewardInventory.streakFreezeAvailable)} detail="Khiên Streak Freeze đã trang bị" />
                         </div>
                     </div>
 
                     <FuxiePanel variant="soft" className="flex min-w-0 flex-col justify-between p-4">
                         <div>
-                            <p className="text-xs font-black uppercase tracking-wide text-[#3C78A8]/70">Next target</p>
-                            <h2 className="mt-1 text-xl font-black text-[#173B56]">{nextItem?.title ?? 'Tích Fucoin'}</h2>
+                            <div className="flex items-start justify-between gap-3">
+                                <div className="min-w-0">
+                                    <p className="text-xs font-black uppercase tracking-wide text-[#3C78A8]/70">Next target</p>
+                                    <h2 className="mt-1 text-xl font-black text-[#173B56]">{nextItem?.title ?? 'Tích lũy chiến lợi phẩm'}</h2>
+                                </div>
+                                <Image
+                                    src={FUXIE_WORLD_PROPS.marketBackpackStall}
+                                    alt=""
+                                    width={82}
+                                    height={82}
+                                    className="h-20 w-20 shrink-0 object-contain drop-shadow-sm"
+                                />
+                            </div>
                             <p className="mt-2 text-sm font-semibold leading-relaxed text-[#3C78A8]">
-                                {nextItem?.redeemPreview.nextMilestone ?? 'Catalog đã sẵn sàng cho batch redeem tiếp theo.'}
+                                {nextItem?.redeemPreview.nextMilestone ?? 'Thương trạm đã chuẩn bị sẵn sàng cho đợt săn bảo vật tiếp theo.'}
                             </p>
                         </div>
                         <div className="mt-5">
@@ -323,7 +335,7 @@ function ShopRequestCelebration({ celebration }: { celebration: ShopRequestCeleb
                             {celebration.itemTitle}
                         </h2>
                         <p className="mt-1 text-sm font-semibold text-[#3C78A8]">
-                            Fucoin chua bi tru. Admin se review request nay truoc khi xu ly reward.
+                            Fucoin chưa bị trừ. Admin sẽ review request này trước khi xử lý reward.
                         </p>
                     </div>
                 </div>
@@ -362,11 +374,11 @@ function LearnerRewardInventory({ inventory }: { inventory: LearnerRewardInvento
                         <div className="min-w-0">
                         <div className="inline-flex items-center gap-2 rounded-full bg-[#EAFBF8] px-3 py-1 text-xs font-black uppercase tracking-wide text-[#2E9F92]">
                             <ShieldCheck className="h-3.5 w-3.5" />
-                            Reward Inventory
+                            Kho Báu Cá Nhân
                         </div>
-                        <h2 className="mt-3 text-xl font-black text-[#173B56]">Phan thuong da ve tai khoan</h2>
+                        <h2 className="mt-3 text-xl font-black text-[#173B56]">Chiến lợi phẩm đã nằm gọn trong tay</h2>
                         <p className="mt-1 max-w-2xl text-sm font-semibold leading-relaxed text-[#3C78A8]">
-                            Fulfilled reward se hien o day de em biet minh dang so huu gi. Streak Freeze co the duoc dung boi he thong streak khi can bao ve chuoi hoc.
+                            Mọi vật phẩm em chinh phục thành công đều được cất giữ tại đây. Khiên Streak Freeze đã sẵn sàng kích hoạt bất cứ lúc nào bão tố ập đến.
                         </p>
                         </div>
                     </div>
@@ -396,12 +408,12 @@ function LearnerRewardInventory({ inventory }: { inventory: LearnerRewardInvento
                     <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
                         <div>
                             <p className="text-sm font-black text-[#173B56]">
-                                {lastFulfilled ? `Gan nhat: ${lastFulfilled.itemTitle}` : 'Chua co reward nao duoc fulfilled'}
+                                {lastFulfilled ? `Gần nhất: ${lastFulfilled.itemTitle}` : 'Chưa có reward nào được fulfilled'}
                             </p>
                             <p className="mt-1 text-xs font-semibold text-[#3C78A8]">
                                 {lastFulfilled
                                     ? `Fulfilled ${new Date(lastFulfilled.fulfilledAt).toLocaleString('vi-VN')}`
-                                    : 'Tao request trong shop, doi admin approve va fulfill de inventory sang len.'}
+                                    : 'Tạo request trong shop, đợi admin approve và fulfill để inventory sáng lên.'}
                             </p>
                         </div>
                         <FuxieBadge tone={inventory.streakFreezeAvailable > 0 ? 'success' : 'neutral'} className="normal-case tracking-normal">
@@ -425,9 +437,9 @@ function StreakFreezeTimeline({
         <div className="mt-4 rounded-2xl bg-white/85 p-4 ring-1 ring-[#CCE4F0]/70">
             <div className="flex items-center justify-between gap-3">
                 <div>
-                    <p className="text-sm font-black text-[#173B56]">Freeze timeline</p>
+                    <p className="text-sm font-black text-[#173B56]">Biên Niên Sử Streak Freeze</p>
                     <p className="mt-1 text-xs font-semibold text-[#3C78A8]">
-                        Recent receipts when Streak Freeze protected a learning day.
+                        Ghi chép về những lần tấm khiên này đã xả thân cứu lấy ngọn lửa học tập của em.
                     </p>
                 </div>
                 <FuxieBadge tone={timeline.length > 0 ? 'success' : 'neutral'} className="shrink-0 normal-case tracking-normal">
@@ -445,12 +457,12 @@ function StreakFreezeTimeline({
                                 </div>
                                 <div className="min-w-0">
                                     <p className="text-sm font-black text-[#173B56]">
-                                        Saved {item.protectedStreak}-day streak
+                                        Cứu sống ngọn lửa {item.protectedStreak} ngày
                                     </p>
                                     <p className="mt-1 text-xs font-semibold leading-relaxed text-[#3C78A8]">
-                                        Missed {item.missedDays} day{item.missedDays === 1 ? '' : 's'}.
+                                        Bù đắp {item.missedDays} ngày lỡ hẹn.
                                         {' '}
-                                        {item.freezesRemaining} freeze left.
+                                        Còn lại {item.freezesRemaining} khiên.
                                     </p>
                                     <p className="mt-2 truncate text-[11px] font-bold uppercase tracking-wide text-[#3C78A8]/65">
                                         {item.sourceType}: {item.sourceId}
@@ -465,7 +477,7 @@ function StreakFreezeTimeline({
                 </div>
             ) : (
                 <div className="mt-3 rounded-2xl bg-[#F7FBFD] p-3 text-sm font-semibold leading-relaxed text-[#3C78A8] ring-1 ring-[#CCE4F0]/60">
-                    No Streak Freeze has been used yet. When one protects the learner, the receipt will appear here.
+                    Biên niên sử vẫn đang trống rỗng. Lần đầu tiên khiên Streak Freeze xả thân cứu chuỗi học của em, chiến công sẽ được khắc tại đây.
                 </div>
             )}
         </div>
@@ -509,11 +521,11 @@ function LearnerRedeemHistory({ requests }: { requests: LearnerRedeemRequest[] }
                     <div>
                         <div className="inline-flex items-center gap-2 rounded-full bg-[#EAFBF8] px-3 py-1 text-xs font-black uppercase tracking-wide text-[#2E9F92]">
                             <Clock3 className="h-3.5 w-3.5" />
-                            Request history
+                            Lịch Sử Triệu Hồi
                         </div>
-                        <h2 className="mt-3 text-xl font-black text-[#173B56]">Hàng chờ đổi quà của em</h2>
+                        <h2 className="mt-3 text-xl font-black text-[#173B56]">Bản Lĩnh Đổi Thưởng</h2>
                         <p className="mt-1 max-w-2xl text-sm font-semibold leading-relaxed text-[#3C78A8]">
-                            Pending là đang chờ review. Approved là Fucoin đã được spend qua ledger và đang chờ fulfill. Fulfilled là reward đã được xử lý hoặc đưa vào inventory nếu được hỗ trợ.
+                            Nơi ghi dấu từng lần em mang chiến lợi phẩm đi triệu hồi bảo vật. Mọi khế ước đều phải trải qua vòng phán xét cuối cùng trước khi vật phẩm thực sự hiện hình.
                         </p>
                     </div>
                     <div className="rounded-2xl bg-[#F3FBFF] px-4 py-3 text-sm ring-1 ring-[#CCE4F0]/80">
@@ -531,7 +543,7 @@ function LearnerRedeemHistory({ requests }: { requests: LearnerRedeemRequest[] }
                     </div>
                 ) : (
                     <div className="mt-4 rounded-2xl bg-white/80 p-4 text-sm font-semibold leading-relaxed text-slate-600 ring-1 ring-white">
-                        Chưa có request đổi quà. Khi đủ Fucoin, em có thể tạo request pending để admin review.
+                        Biên niên sử vắng lặng. Tích lũy đủ lực lượng và tạo khế ước đầu tiên để ghi danh vào sổ vàng Fuxie.
                     </div>
                 )}
             </FuxiePanel>
@@ -633,6 +645,14 @@ function ShopItemCard({
                         : 'ring-[#CCE4F0]/70'
             )}
         >
+            <Image
+                src={FUXIE_UI_FRAMES.marketShelfFrame}
+                alt=""
+                width={128}
+                height={128}
+                aria-hidden="true"
+                className="pointer-events-none absolute -right-8 -top-8 h-28 w-28 object-contain opacity-[0.16]"
+            />
             {recentlyRequested ? (
                 <div className="pointer-events-none absolute inset-0" aria-hidden="true">
                     {[0, 1, 2, 3, 4].map((index) => (

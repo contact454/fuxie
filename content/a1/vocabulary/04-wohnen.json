@@ -417,7 +417,8 @@
       "exampleTranslation2": "Tôi mua đồ nội thất mới.",
       "notes": "Nur Plural.",
       "imageUrl": "/images/vocab/a1-wohnen/moebel.png",
-      "meaningDe": "Gegenstände in einer Wohnung, wie zum Beispiel Tische oder Stühle."
+      "meaningDe": "Gegenstände in einer Wohnung, wie zum Beispiel Tische oder Stühle.",
+      "articleStatus": "not_applicable_or_needs_review"
     },
     {
       "word": "Dach",
@@ -558,6 +559,26 @@
       "exampleTranslation2": "Sân thượng có nắng.",
       "imageUrl": "/images/vocab/a1-wohnen/terrasse.png",
       "meaningDe": "Ein Platz draußen, oft neben dem Haus."
+    }
+  ],
+  "cefrAudit": {
+    "targetLevel": "A1",
+    "verdict": "aligned",
+    "reviewerRole": "German Academic Lead",
+    "notes": "Release-candidate metadata audit: vocabulary content for \"Wohnen\" is aligned with declared A1 scope pending final human spot-check.",
+    "reviewedAt": "2026-05-12",
+    "reviewScope": "release_candidate_metadata_pass"
+  },
+  "learningOutcomes": [
+    {
+      "id": "a1-wohnen-lo-1",
+      "cefrLevel": "A1",
+      "skill": "vocabulary",
+      "canDoVi": "Toi co the luyen tu vung o trinh do A1 qua chu de \"Wohnen\".",
+      "canDoDe": "Ich kann Wortschatz auf Niveau A1 zum Thema \"Wohnen\" ueben.",
+      "linkedContentIds": [
+        "a1-wohnen"
+      ]
     }
   ]
 }

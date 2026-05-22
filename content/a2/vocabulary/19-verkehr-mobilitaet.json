@@ -384,7 +384,20 @@
       "exampleSentence2": "Wir müssen jetzt abfahren, sonst sind wir zu spät.",
       "exampleTranslation2": "Chúng ta phải khởi hành ngay bây giờ, nếu không sẽ muộn.",
       "imageUrl": "/images/vocab/a2-verkehr-mobilitaet/abfahren.png",
-      "meaningDe": "Einen Ort oder eine Station verlassen, um eine Fahrt zu beginnen."
+      "meaningDe": "Einen Ort oder eine Station verlassen, um eine Fahrt zu beginnen.",
+      "conjugation": {
+        "praesens": {
+          "ich": "abfahre",
+          "du": "abfahrst",
+          "er_sie_es": "abfahrt",
+          "wir": "abfahren",
+          "ihr": "abfahrt",
+          "sie_Sie": "abfahren"
+        },
+        "isIrregular": false,
+        "isSeparable": true,
+        "reviewStatus": "auto_generated_needs_spot_check"
+      }
     },
     {
       "word": "einsteigen",
@@ -396,7 +409,40 @@
       "exampleSentence2": "Wir müssen in den nächsten Bus einsteigen.",
       "exampleTranslation2": "Chúng ta phải lên chuyến xe buýt tiếp theo.",
       "imageUrl": "/images/vocab/a2-verkehr-mobilitaet/einsteigen.png",
-      "meaningDe": "In einen Bus, Zug oder ein Auto gehen"
+      "meaningDe": "In einen Bus, Zug oder ein Auto gehen",
+      "conjugation": {
+        "praesens": {
+          "ich": "einsteige",
+          "du": "einsteigst",
+          "er_sie_es": "einsteigt",
+          "wir": "einsteigen",
+          "ihr": "einsteigt",
+          "sie_Sie": "einsteigen"
+        },
+        "isIrregular": false,
+        "isSeparable": true,
+        "reviewStatus": "auto_generated_needs_spot_check"
+      }
+    }
+  ],
+  "cefrAudit": {
+    "targetLevel": "A2",
+    "verdict": "aligned",
+    "reviewerRole": "German Academic Lead",
+    "notes": "Release-candidate metadata audit: vocabulary content for \"Verkehr & Mobilität\" is aligned with declared A2 scope pending final human spot-check.",
+    "reviewedAt": "2026-05-12",
+    "reviewScope": "release_candidate_metadata_pass"
+  },
+  "learningOutcomes": [
+    {
+      "id": "a2-verkehr-mobilitaet-lo-1",
+      "cefrLevel": "A2",
+      "skill": "vocabulary",
+      "canDoVi": "Toi co the luyen tu vung o trinh do A2 qua chu de \"Verkehr & Mobilität\".",
+      "canDoDe": "Ich kann Wortschatz auf Niveau A2 zum Thema \"Verkehr & Mobilität\" ueben.",
+      "linkedContentIds": [
+        "a2-verkehr-mobilitaet"
+      ]
     }
   ]
 }

@@ -2,9 +2,12 @@
 
 import React, { useState, useTransition } from 'react'
 import { useRouter } from 'next/navigation'
+import Image from 'next/image'
+import { useTranslations } from 'next-intl'
 import s from './grammar.module.css'
 
 import type { CefrLevel } from '@/lib/types/cefr'
+import { FUXIE_WORLD_PROPS } from '@/lib/mascot/fuxie-assets'
 
 interface LessonSummary {
     id: string
@@ -44,10 +47,10 @@ const LEVEL_COLORS: Record<CefrLevel, { bg: string; text: string; gradient: stri
     C2: { bg: '#FCE7F3', text: '#DB2777', gradient: 'linear-gradient(135deg, #EC4899, #DB2777)' },
 }
 
-const LESSON_TYPE_LABELS: Record<string, { label: string; emoji: string }> = {
-    E: { label: 'Giới thiệu', emoji: '📖' },
-    V: { label: 'Luyện sâu', emoji: '🔬' },
-    A: { label: 'Ứng dụng', emoji: '🎯' },
+const LESSON_TYPE_LABELS: Record<string, { key: string; emoji: string }> = {
+    E: { key: 'intro', emoji: '📖' },
+    V: { key: 'deepPractice', emoji: '🔬' },
+    A: { key: 'application', emoji: '🎯' },
 }
 
 function StarDisplay({ stars, max }: { stars: number; max: number }) {
@@ -70,6 +73,7 @@ function StarDisplay({ stars, max }: { stars: number; max: number }) {
 }
 
 export function GrammarClient({ topics, totalTopics, totalCompleted, availableLevels, initialLevel }: Props) {
+    const t = useTranslations('Grammar')
     const [activeLevel, setActiveLevel] = useState<CefrLevel>(initialLevel)
     const [isPending, startTransition] = useTransition()
     const [currentTopics, setCurrentTopics] = useState(topics)
@@ -97,9 +101,16 @@ export function GrammarClient({ topics, totalTopics, totalCompleted, availableLe
                 <div>
                     <h1 className={s.grammarHomeTitle}>📚 Grammatik</h1>
                     <p className={s.grammarHomeSubtitle}>
-                        {stats.totalCompleted}/{stats.totalTopics} chủ đề hoàn thành
+                        {stats.totalCompleted}/{stats.totalTopics} {t('topicsCompleted')}
                     </p>
                 </div>
+                <Image
+                    src={FUXIE_WORLD_PROPS.grammarScroll}
+                    alt=""
+                    width={104}
+                    height={104}
+                    className="h-24 w-24 shrink-0 object-contain drop-shadow-sm"
+                />
             </div>
 
             {/* Level tabs */}
@@ -110,7 +121,7 @@ export function GrammarClient({ topics, totalTopics, totalCompleted, availableLe
                         className={`${s.levelTab} ${activeLevel === level ? s.levelTabActive : ''}`}
                         style={activeLevel === level ? {
                             background: LEVEL_COLORS[level].gradient,
-                            color: '#fff',
+                            color: "var(--color-text-inverse)",
                         } : {
                             background: LEVEL_COLORS[level].bg,
                             color: LEVEL_COLORS[level].text,
@@ -142,17 +153,17 @@ export function GrammarClient({ topics, totalTopics, totalCompleted, availableLe
                                 <div className={s.topicTitleVi}>{topic.titleNative}</div>
                                 <div className={s.topicLessonDots}>
                                     {topic.lessons.map(l => {
-                                        const typeInfo = LESSON_TYPE_LABELS[l.lessonType] || { label: l.lessonType, emoji: '📄' }
+                                        const typeInfo = LESSON_TYPE_LABELS[l.lessonType] || { key: l.lessonType, emoji: '📄' }
                                         const done = l.progress?.completed
                                         const stars = l.progress?.stars ?? 0
                                         return (
                                             <div
                                                 key={l.id}
                                                 className={`${s.lessonDot} ${done ? s.lessonDotDone : ''}`}
-                                                title={`${typeInfo.label} — ${done ? `${stars}⭐` : 'Chưa làm'}`}
+                                                title={`${typeInfo.key === l.lessonType ? l.lessonType : t(typeInfo.key as any)} — ${done ? `${stars}⭐` : t('notDone')}`}
                                             >
                                                 <span className={s.lessonDotEmoji}>{typeInfo.emoji}</span>
-                                                <span className={s.lessonDotLabel}>{typeInfo.label}</span>
+                                                <span className={s.lessonDotLabel}>{typeInfo.key === l.lessonType ? l.lessonType : t(typeInfo.key as any)}</span>
                                                 {done && (
                                                     <span className={s.lessonDotStars}>
                                                         {'⭐'.repeat(stars)}
@@ -163,7 +174,7 @@ export function GrammarClient({ topics, totalTopics, totalCompleted, availableLe
                                     })}
                                 </div>
                                 <div className={s.topicMeta}>
-                                    <span>{topic.lessons.length} bài</span>
+                                    <span>{topic.lessons.length} {t('lessons')}</span>
                                     <StarDisplay stars={topic.totalStars} max={topic.maxStars} />
                                 </div>
                             </div>
@@ -174,7 +185,7 @@ export function GrammarClient({ topics, totalTopics, totalCompleted, availableLe
 
             {currentTopics.length === 0 && (
                 <div className={s.emptyState}>
-                    <p>Chưa có chủ đề nào cho {activeLevel}.</p>
+                    <p>{t('noTopicsForLevel', { level: activeLevel })}</p>
                 </div>
             )}
         </div>

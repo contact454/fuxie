@@ -55,7 +55,7 @@ export function TFRenderer({ content, answer, onChange }: Props) {
                     <h4 className="text-xs font-semibold text-gray-400 uppercase tracking-wider flex items-center gap-1.5">
                         ✏️ Câu hỏi
                     </h4>
-                    <span className="text-[10px] font-medium text-gray-400 bg-gray-100 px-2 py-1 rounded-full">
+                    <span className="text-xs font-medium text-gray-400 bg-gray-100 px-2 py-1 rounded-full">
                         {answeredCount}/{data.items.length}
                     </span>
                 </div>
@@ -76,7 +76,7 @@ export function TFRenderer({ content, answer, onChange }: Props) {
                                     <span className={`inline-flex w-7 h-7 items-center justify-center text-xs font-bold rounded-full shrink-0 ${
                                         isAnswered
                                             ? 'bg-green-500 text-white'
-                                            : 'bg-[#60A8E4]/10 text-[#3C78A8]'
+                                            : 'bg-[#60A8E4]/10 text-text-brand'
                                     }`}>
                                         {idx + 1}
                                     </span>

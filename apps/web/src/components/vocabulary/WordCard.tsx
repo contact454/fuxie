@@ -36,7 +36,7 @@ export function WordCard({ word: w, variant }: WordCardProps) {
                 <div className="flex items-center justify-between mb-1.5">
                     {artText ? (
                         <span
-                            className="inline-block text-[10px] font-bold px-1.5 py-0.5 rounded"
+                            className="inline-block text-xs font-bold px-1.5 py-0.5 rounded"
                             style={{ color, backgroundColor: `${color}15` }}
                         >
                             {artText}
@@ -47,7 +47,7 @@ export function WordCard({ word: w, variant }: WordCardProps) {
                 <p className="font-bold text-gray-900 text-sm leading-tight">{w.word}</p>
                 <p className="text-xs text-gray-500 mt-1 leading-tight line-clamp-1">{w.meaningNative}</p>
                 {w.meaningDe && (
-                    <p className="text-[11px] text-[#3C78A8] mt-0.5 leading-tight line-clamp-2">{w.meaningDe}</p>
+                    <p className="text-xs text-text-brand mt-0.5 leading-tight line-clamp-2">{w.meaningDe}</p>
                 )}
             </div>
         )
@@ -79,7 +79,7 @@ export function WordCard({ word: w, variant }: WordCardProps) {
                 <div className="flex items-baseline gap-1.5 flex-wrap">
                     {artText && (
                         <span
-                            className="text-[10px] font-bold px-1 py-0.5 rounded"
+                            className="text-xs font-bold px-1 py-0.5 rounded"
                             style={{ color, backgroundColor: `${color}15` }}
                         >
                             {artText}
@@ -87,19 +87,19 @@ export function WordCard({ word: w, variant }: WordCardProps) {
                     )}
                     <span className="font-bold text-gray-900 text-sm">{w.word}</span>
                     {w.plural && w.plural !== '-' && (
-                        <span className="text-[11px] text-gray-400">({w.plural})</span>
+                        <span className="text-xs text-gray-400">({w.plural})</span>
                     )}
                 </div>
                 <p className="text-xs text-gray-600 mt-0.5">{w.meaningNative}</p>
                 {w.meaningDe && (
-                    <p className="text-[11px] text-[#3C78A8] mt-0.5 font-medium">{w.meaningDe}</p>
+                    <p className="text-xs text-text-brand mt-0.5 font-medium">{w.meaningDe}</p>
                 )}
             </div>
 
             {/* Type badge + audio */}
             <div className="flex flex-col items-end gap-1.5 shrink-0">
                 <span
-                    className="text-[10px] px-1.5 py-0.5 rounded font-semibold"
+                    className="text-xs px-1.5 py-0.5 rounded font-semibold"
                     style={{ background: `${color}10`, color }}
                 >
                     {WORD_TYPE_LABELS[w.wordType] ?? w.wordType}

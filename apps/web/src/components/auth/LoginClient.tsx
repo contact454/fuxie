@@ -214,7 +214,7 @@ function LoginContent() {
                 <div className="mb-8 text-center">
                     <div className="flex items-center justify-center gap-2 mb-2">
                         <Image
-                            src="/mascot/core/fuxie-core-happy-wave.png"
+                            src="/mascot-3d/states/global/fuxie-global-fuxie-auth-welcomer.webp" // asset-registry-allow
                             alt="Fuxie"
                             width={48}
                             height={48}

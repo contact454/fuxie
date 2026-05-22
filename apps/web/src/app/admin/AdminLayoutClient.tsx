@@ -13,13 +13,17 @@ import {
   LogOut,
   LayoutDashboard,
   Cpu,
-  Gift
+  Gift,
+  ShieldCheck,
+  Trophy
 } from "lucide-react";
 
 const SIDEBAR_ITEMS = [
   { name: "Overview", href: "/admin", icon: LayoutDashboard },
   { name: "User Analytics", href: "/admin/users", icon: Users },
   { name: "Learning Progress", href: "/admin/learning", icon: BookOpen },
+  { name: "Content Quality", href: "/admin/content-quality", icon: ShieldCheck },
+  { name: "Gamification Pilot", href: "/admin/gamification", icon: Trophy },
   { name: "AI Compute Costs", href: "/admin/ai-costs", icon: Cpu },
   { name: "Reward Review", href: "/admin/rewards", icon: Gift },
   { name: "Feedback", href: "/admin/feedback", icon: MessageSquare },

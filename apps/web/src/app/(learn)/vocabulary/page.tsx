@@ -3,6 +3,11 @@ import { getServerUser } from '@/lib/auth/server-auth'
 import { getVocabularyLevels, getVocabularyThemes, mapVocabularyThemes, type CefrLevel } from '@/lib/content/vocabulary'
 import { getVocabularyThemeSrsProgress } from '@/lib/srs/stats'
 import { VocabularyClientDynamic } from '@/components/vocabulary/VocabularyClientDynamic'
+import {
+    isSlice2VisualQaFixture,
+    Slice2VocabularySuccessFixture,
+    type Slice2VisualQaParams,
+} from '@/components/visual-fixtures/slice-2-skill-fixtures'
 
 export const metadata = {
     title: 'Fuxie - Từ vựng',
@@ -41,7 +46,17 @@ async function getThemes(userId: string | null, cefrLevel: CefrLevel, locale: st
     return { themes: mappedThemes, totalWords, totalDue }
 }
 
-export default async function VocabularyPage() {
+export default async function VocabularyPage({
+    searchParams,
+}: {
+    searchParams?: Promise<Slice2VisualQaParams>
+}) {
+    const visualParams = await searchParams
+
+    if (isSlice2VisualQaFixture(visualParams, 'success')) {
+        return <Slice2VocabularySuccessFixture />
+    }
+
     const serverUser = await getServerUser()
     if (!serverUser) redirect('/login')
 

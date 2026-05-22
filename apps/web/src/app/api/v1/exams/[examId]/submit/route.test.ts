@@ -51,13 +51,14 @@ import { POST } from './route'
 describe('POST /api/v1/exams/[examId]/submit', () => {
     beforeEach(() => {
         vi.clearAllMocks()
-        getServerUserMock.mockResolvedValue({ userId: 'user-1' })
+        getServerUserMock.mockResolvedValue({ userId: 'user-1', role: 'LEARNER' })
         findAttemptMock.mockResolvedValue({
             id: 'attempt-1',
             startedAt: new Date('2026-04-23T00:00:00.000Z'),
             completedAt: null,
         })
         findExamMock.mockResolvedValue({
+            cefrLevel: 'B1',
             passingScore: 60,
             totalPoints: 10,
             sections: [
@@ -159,6 +160,17 @@ describe('POST /api/v1/exams/[examId]/submit', () => {
                 percentScore: 50,
                 xpEarned: 10,
                 exercisesCompleted: 1,
+                analytics: {
+                    role: 'LEARNER',
+                    actionId: 'exam-1',
+                    actionType: 'exam_practice',
+                    level: 'B1',
+                    skill: 'EXAM',
+                    source: 'exam.submit',
+                    metadata: {
+                        passed: false,
+                    },
+                },
             })
         )
         expect(invalidateLearnerProgressCachesMock).toHaveBeenCalledWith('user-1')

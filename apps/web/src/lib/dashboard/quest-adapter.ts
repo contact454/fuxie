@@ -1,5 +1,11 @@
 import type { RewardPreviewItem } from '@/components/gamification/quest-visuals'
 import type { TodayPlan, TodayPlanAction } from '@/lib/personalization/today-plan'
+import {
+    buildAdaptiveQuestPacing,
+    sortQuestsByAdaptivePacing,
+    type AdaptiveQuestPacingResult,
+    type AdaptiveQuestPacingSignals,
+} from '@/lib/gamification/adaptive-quest-pacing'
 
 export type QuestStatus = 'active' | 'available' | 'completed' | 'locked'
 export type QuestReward = RewardPreviewItem
@@ -25,6 +31,7 @@ export interface DashboardQuestContext {
     srsReviewedToday: number
     totalXp: number
     totalAchievements: number
+    adaptivePacingSignals?: Partial<AdaptiveQuestPacingSignals> | null
 }
 
 export interface DashboardMissionHub {
@@ -36,6 +43,7 @@ export interface DashboardMissionHub {
     isFreshStart: boolean
     coachTitle: string
     coachMessage: string
+    pacing: AdaptiveQuestPacingResult
 }
 
 export interface DashboardMissionCta {
@@ -57,12 +65,19 @@ export function buildDashboardMissionHub(plan: TodayPlan, context: DashboardQues
             ? actionQuests
             : [buildFreshStartQuest(plan)]
 
-    const primaryQuest = quests[0]!
-    const secondaryQuests = quests.slice(1)
+    const pacing = buildAdaptiveQuestPacing({
+        quests,
+        plan,
+        context,
+        signals: context.adaptivePacingSignals,
+    })
+    const pacedQuests = sortQuestsByAdaptivePacing(quests, pacing)
+    const primaryQuest = pacedQuests[0]!
+    const secondaryQuests = pacedQuests.slice(1)
     const primaryCta = buildPrimaryCta(primaryQuest, secondaryQuests, plan)
 
     return {
-        quests,
+        quests: pacedQuests,
         primaryQuest,
         secondaryQuests,
         primaryCta,
@@ -70,6 +85,7 @@ export function buildDashboardMissionHub(plan: TodayPlan, context: DashboardQues
         isFreshStart,
         coachTitle: isFreshStart ? 'Ngày 1: mở khóa bước đầu' : 'Tập trung vào một quest',
         coachMessage: getCoachMessage(plan, primaryQuest, isFreshStart),
+        pacing,
     }
 }
 

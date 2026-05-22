@@ -1,6 +1,8 @@
 'use client'
 
 import { useState, useCallback } from 'react'
+import type { RewardPreviewItem } from '@/components/gamification/quest-visuals'
+import type { VocabularyQuestEpisode, VocabularyQuestEpisodeReceipt } from '@/lib/gamification/vocabulary-quest-episode'
 
 // ─── Types ──────────────────────────────────────────
 export interface ExerciseAnswer {
@@ -32,6 +34,9 @@ export interface SubmitResult {
         freezesUsed?: number
     }
     graded?: boolean
+    rewardPreview?: RewardPreviewItem[]
+    questEpisodeReceipt?: VocabularyQuestEpisodeReceipt
+    nextEpisodeHref?: string
     results: Array<{
         questionId: string
         isCorrect: boolean | null
@@ -48,6 +53,7 @@ interface UseSubmitExerciseOptions {
     xpPerCorrect?: number
     /** Custom answer comparison function (default: case-insensitive) */
     compareFn?: (answer: string, correct: string) => boolean
+    questEpisode?: VocabularyQuestEpisode | null
 }
 
 /**
@@ -64,6 +70,7 @@ export function useSubmitExercise({
     cefrLevel,
     xpPerCorrect = 5,
     compareFn,
+    questEpisode,
 }: UseSubmitExerciseOptions) {
     const [submitResult, setSubmitResult] = useState<SubmitResult | null>(null)
     const [isSubmitting, setIsSubmitting] = useState(false)
@@ -110,6 +117,15 @@ export function useSubmitExercise({
                         cefrLevel,
                         timeTaken,
                         answers,
+                        ...(questEpisode ? {
+                            questEpisode: {
+                                episodeId: questEpisode.episodeId,
+                                themeSlug: questEpisode.themeSlug,
+                                cefrLevel: questEpisode.cefrLevel,
+                                checkpointCount: questEpisode.checkpoints.length,
+                                nextEpisodeHref: questEpisode.nextEpisodeHref,
+                            },
+                        } : {}),
                     }),
                 })
                 const data = await res.json()
@@ -130,7 +146,7 @@ export function useSubmitExercise({
                 setPhase('results')
             }
         },
-        [exerciseType, themeSlug, cefrLevel, buildLocalFallback]
+        [exerciseType, themeSlug, cefrLevel, questEpisode, buildLocalFallback]
     )
 
     const resetSubmit = useCallback(() => {

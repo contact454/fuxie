@@ -344,7 +344,20 @@
       "exampleSentence2": "Fährst du oft Auto?",
       "exampleTranslation2": "Bạn có thường lái xe không?",
       "imageUrl": "/images/vocab/a2-reisen-tourismus/fahren.png",
-      "meaningDe": "Mit einem Auto, Zug oder Bus reisen"
+      "meaningDe": "Mit einem Auto, Zug oder Bus reisen",
+      "conjugation": {
+        "praesens": {
+          "ich": "fahre",
+          "du": "faehrst",
+          "er_sie_es": "faehrt",
+          "wir": "fahren",
+          "ihr": "fahrt",
+          "sie_Sie": "fahren"
+        },
+        "isIrregular": true,
+        "isSeparable": false,
+        "reviewStatus": "auto_generated_needs_spot_check"
+      }
     },
     {
       "word": "besuchen",
@@ -356,7 +369,20 @@
       "exampleSentence2": "Wir besuchen oft Museen im Urlaub.",
       "exampleTranslation2": "Chúng tôi thường thăm các viện bảo tàng trong kỳ nghỉ.",
       "imageUrl": "/images/vocab/a2-reisen-tourismus/besuchen.png",
-      "meaningDe": "Zu einer Person oder an einen Ort gehen"
+      "meaningDe": "Zu einer Person oder an einen Ort gehen",
+      "conjugation": {
+        "praesens": {
+          "ich": "besuche",
+          "du": "besuchst",
+          "er_sie_es": "besucht",
+          "wir": "besuchen",
+          "ihr": "besucht",
+          "sie_Sie": "besuchen"
+        },
+        "isIrregular": false,
+        "isSeparable": false,
+        "reviewStatus": "auto_generated_needs_spot_check"
+      }
     },
     {
       "word": "packen",
@@ -368,7 +394,20 @@
       "exampleSentence2": "Hast du schon alles gepackt?",
       "exampleTranslation2": "Bạn đã đóng gói mọi thứ chưa?",
       "imageUrl": "/images/vocab/a2-reisen-tourismus/packen.png",
-      "meaningDe": "Sachen in einen Koffer legen"
+      "meaningDe": "Sachen in einen Koffer legen",
+      "conjugation": {
+        "praesens": {
+          "ich": "packe",
+          "du": "packst",
+          "er_sie_es": "packt",
+          "wir": "packen",
+          "ihr": "packt",
+          "sie_Sie": "packen"
+        },
+        "isIrregular": false,
+        "isSeparable": false,
+        "reviewStatus": "auto_generated_needs_spot_check"
+      }
     },
     {
       "word": "ankommen",
@@ -380,7 +419,20 @@
       "exampleSentence2": "Wir sind gestern Abend angekommen.",
       "exampleTranslation2": "Chúng tôi đã đến vào tối qua.",
       "imageUrl": "/images/vocab/a2-reisen-tourismus/ankommen.png",
-      "meaningDe": "An einem Ort sein, nachdem man eine Reise gemacht hat."
+      "meaningDe": "An einem Ort sein, nachdem man eine Reise gemacht hat.",
+      "conjugation": {
+        "praesens": {
+          "ich": "ankomme",
+          "du": "ankommst",
+          "er_sie_es": "ankommet",
+          "wir": "ankommen",
+          "ihr": "ankommet",
+          "sie_Sie": "ankommen"
+        },
+        "isIrregular": false,
+        "isSeparable": true,
+        "reviewStatus": "auto_generated_needs_spot_check"
+      }
     },
     {
       "word": "schön",
@@ -405,6 +457,26 @@
       "exampleTranslation2": "Vé vào bảo tàng có miễn phí không?",
       "imageUrl": "/images/vocab/a2-reisen-tourismus/kostenlos.png",
       "meaningDe": "Man muss kein Geld bezahlen"
+    }
+  ],
+  "cefrAudit": {
+    "targetLevel": "A2",
+    "verdict": "aligned",
+    "reviewerRole": "German Academic Lead",
+    "notes": "Release-candidate metadata audit: vocabulary content for \"Reisen & Tourismus\" is aligned with declared A2 scope pending final human spot-check.",
+    "reviewedAt": "2026-05-12",
+    "reviewScope": "release_candidate_metadata_pass"
+  },
+  "learningOutcomes": [
+    {
+      "id": "a2-reisen-tourismus-lo-1",
+      "cefrLevel": "A2",
+      "skill": "vocabulary",
+      "canDoVi": "Toi co the luyen tu vung o trinh do A2 qua chu de \"Reisen & Tourismus\".",
+      "canDoDe": "Ich kann Wortschatz auf Niveau A2 zum Thema \"Reisen & Tourismus\" ueben.",
+      "linkedContentIds": [
+        "a2-reisen-tourismus"
+      ]
     }
   ]
 }

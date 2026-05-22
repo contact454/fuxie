@@ -155,14 +155,14 @@ export function renderAnzeigenCards(textsJson: ReadingTextEntry[] | ReadingTextE
                                     📋 Anzeige {label}
                                 </span>
                             </div>
-                            <div style={{ fontWeight: 600, fontSize: '14px', color: '#1F2937', marginBottom: '8px' }}>
+                            <div style={{ fontWeight: 600, fontSize: '14px', color: "var(--color-text-primary)", marginBottom: '8px' }}>
                                 {ad.title}
                             </div>
                             <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
                                 {Object.entries(details).map(([key, value]: [string, any]) => (
                                     <div key={key} style={{ display: 'flex', gap: '6px', fontSize: '13px', lineHeight: 1.5 }}>
                                         <span style={{ flexShrink: 0 }}>{detailLabels[key] || '•'}</span>
-                                        <span style={{ color: '#374151' }}>{String(value)}</span>
+                                        <span style={{ color: "var(--color-text-primary)" }}>{String(value)}</span>
                                     </div>
                                 ))}
                             </div>
@@ -192,7 +192,7 @@ function renderSchedule(data: ScheduleData, key: number) {
                                     <th key={ci} style={{
                                         padding: '8px 10px', textAlign: 'left',
                                         borderBottom: '2px solid #E5E7EB', background: '#F9FAFB',
-                                        fontWeight: 700, fontSize: '12px', color: '#374151'
+                                        fontWeight: 700, fontSize: '12px', color: "var(--color-text-primary)"
                                     }}>{col}</th>
                                 ))}
                             </tr>
@@ -212,7 +212,7 @@ function renderSchedule(data: ScheduleData, key: number) {
                     </table>
                 </div>
                 {data.footnote && (
-                    <p style={{ marginTop: '12px', fontSize: '12px', color: '#6B7280', fontStyle: 'italic', lineHeight: 1.5 }}>
+                    <p style={{ marginTop: '12px', fontSize: '12px', color: "var(--color-text-muted)", fontStyle: 'italic', lineHeight: 1.5 }}>
                         ℹ️ {data.footnote}
                     </p>
                 )}
@@ -249,7 +249,7 @@ function renderInfotafel(data: InfotafelData, key: number) {
                     </table>
                 </div>
                 {data.extra_info && (
-                    <p style={{ marginTop: '12px', fontSize: '12px', color: '#6B7280', fontStyle: 'italic' }}>
+                    <p style={{ marginTop: '12px', fontSize: '12px', color: "var(--color-text-muted)", fontStyle: 'italic' }}>
                         ℹ️ {typeof data.extra_info === 'string' ? data.extra_info : JSON.stringify(data.extra_info)}
                     </p>
                 )}
@@ -267,7 +267,7 @@ function renderDebate(data: DebateData, key: number) {
             </div>
             <div className={styles.textBody}>
                 {data.context && (
-                    <p style={{ marginBottom: '16px', color: '#4B5563', fontStyle: 'italic', fontSize: '13px', lineHeight: 1.6 }}>
+                    <p style={{ marginBottom: '16px', color: "var(--color-text-muted)", fontStyle: 'italic', fontSize: '13px', lineHeight: 1.6 }}>
                         {data.context}
                     </p>
                 )}
@@ -278,7 +278,7 @@ function renderDebate(data: DebateData, key: number) {
                             background: '#FAFAFA', borderLeft: '3px solid #D1D5DB',
                         }}>
                             <div style={{ marginBottom: '6px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                                <span style={{ fontWeight: 700, fontSize: '13px', color: '#1F2937' }}>
+                                <span style={{ fontWeight: 700, fontSize: '13px', color: "var(--color-text-primary)" }}>
                                     {letter.author || letter.name || `Leser ${li + 1}`}
                                 </span>
                                 {letter.stance && (
@@ -290,7 +290,7 @@ function renderDebate(data: DebateData, key: number) {
                                     </span>
                                 )}
                             </div>
-                            <p style={{ fontSize: '13px', color: '#374151', lineHeight: 1.6 }}>
+                            <p style={{ fontSize: '13px', color: "var(--color-text-primary)", lineHeight: 1.6 }}>
                                 {letter.text || letter.content || letter.body || ''}
                             </p>
                         </div>
@@ -317,7 +317,7 @@ function renderForum(data: ForumData, key: number) {
                             borderLeft: `3px solid ${ci % 2 === 0 ? '#86EFAC' : '#FED7AA'}`
                         }}>
                             <div style={{ marginBottom: '6px', display: 'flex', gap: '8px', alignItems: 'center' }}>
-                                <span style={{ fontWeight: 700, fontSize: '13px', color: '#1F2937' }}>
+                                <span style={{ fontWeight: 700, fontSize: '13px', color: "var(--color-text-primary)" }}>
                                     {comment.author || comment.name || comment.username || `User ${ci + 1}`}
                                 </span>
                                 {comment.stance && (
@@ -329,7 +329,7 @@ function renderForum(data: ForumData, key: number) {
                                     </span>
                                 )}
                             </div>
-                            <p style={{ fontSize: '13px', color: '#374151', lineHeight: 1.6 }}>
+                            <p style={{ fontSize: '13px', color: "var(--color-text-primary)", lineHeight: 1.6 }}>
                                 {comment.text || comment.content || comment.body || ''}
                             </p>
                         </div>
@@ -354,10 +354,10 @@ function renderOpinionTexts(data: OpinionData, key: number) {
                             padding: '12px 14px', borderRadius: '10px',
                             background: '#FAFAFA', borderLeft: '3px solid #93C5FD',
                         }}>
-                            <div style={{ marginBottom: '6px', fontWeight: 700, fontSize: '13px', color: '#1E40AF' }}>
+                            <div style={{ marginBottom: '6px', fontWeight: 700, fontSize: '13px', color: 'var(--color-text-brand)' }}>
                                 {item.author || item.name || `Person ${String.fromCharCode(65 + ti)}`}
                             </div>
-                            <p style={{ fontSize: '13px', color: '#374151', lineHeight: 1.6 }}>
+                            <p style={{ fontSize: '13px', color: "var(--color-text-primary)", lineHeight: 1.6 }}>
                                 {item.text || item.opinion || item.content || ''}
                             </p>
                         </div>
@@ -379,11 +379,11 @@ function renderSections(data: SectionsData, key: number) {
                 {data.sections?.map((section: any, si: number) => (
                     <div key={si} style={{ marginBottom: si < (data.sections?.length ?? 0) - 1 ? '14px' : 0 }}>
                         {section.heading && (
-                            <h4 style={{ fontSize: '14px', fontWeight: 700, color: '#1F2937', marginBottom: '6px' }}>
+                            <h4 style={{ fontSize: '14px', fontWeight: 700, color: "var(--color-text-primary)", marginBottom: '6px' }}>
                                 {section.heading}
                             </h4>
                         )}
-                        <p style={{ fontSize: '13px', color: '#374151', lineHeight: 1.65 }}>
+                        <p style={{ fontSize: '13px', color: "var(--color-text-primary)", lineHeight: 1.65 }}>
                             {section.text || section.content || section.body || ''}
                         </p>
                     </div>

@@ -2,11 +2,14 @@ import { Prisma, ShopRedeemRequestStatus } from '@fuxie/database'
 
 import { getWalletSummary, type EconomyDbClient, type WalletSummary } from './fucoin'
 import { getFuxieShopCatalogItem, type FuxieShopCatalogItem } from './shop'
+import { recordAnalyticsEvent } from '@/lib/analytics/events'
 
-export const FUXIE_SHOP_REDEEM_SPEND_ENABLED = false
+export const FUXIE_SHOP_REDEEM_SPEND_ENABLED = true
 
 export type ShopRedeemStatus =
+    | 'requestable'
     | 'preview_locked'
+    | 'real_gift_locked'
     | 'not_found'
     | 'insufficient_funds'
     | 'pending_created'
@@ -69,9 +72,10 @@ export async function buildShopRedeemPreviewContract(
     }
 
     const missingFucoin = Math.max(0, item.cost - wallet.balance)
+    const status: ShopRedeemStatus = item.status === 'requestable' ? 'requestable' : 'real_gift_locked'
 
     return {
-        status: 'preview_locked',
+        status,
         spendEnabled: FUXIE_SHOP_REDEEM_SPEND_ENABLED,
         confirmationRequired: true,
         canAfford: item.canAfford,
@@ -90,8 +94,10 @@ export async function buildShopRedeemPreviewContract(
             walletProgress: item.walletProgress,
         },
         guard: {
-            reason: 'preview_locked',
-            message: 'Redeem request có thể vào hàng chờ, nhưng spend/fulfillment thật vẫn đang khóa.',
+            reason: status,
+            message: item.status === 'requestable'
+                ? 'Redeem request can enter the admin queue. Pending requests do not spend Fucoin; approval spends before fulfillment.'
+                : 'Real gifts remain locked in this sprint. Safe digital rewards are piloted first.',
             policy: item.redeemPreview.policy,
         },
     }
@@ -106,6 +112,24 @@ export async function createShopRedeemRequest(
 
     if (!item) {
         throw new ShopRedeemError('Shop item not found', 404, 'not_found')
+    }
+
+    if (item.status !== 'requestable') {
+        throw new ShopRedeemError(
+            'This shop item is locked for this sprint',
+            423,
+            'real_gift_locked',
+            {
+                ...contract,
+                status: 'real_gift_locked',
+                canAfford: false,
+                guard: {
+                    ...contract.guard,
+                    reason: 'real_gift_locked',
+                    message: 'Real gifts remain locked until Fuxie has fulfillment, legal, and operations policy ready.',
+                },
+            }
+        )
     }
 
     if (!contract.canAfford) {
@@ -153,6 +177,20 @@ export async function createShopRedeemRequest(
                 itemSnapshot: buildItemSnapshot(item, contract.wallet.balance),
             },
             select: shopRedeemRequestSelect,
+        })
+        await recordAnalyticsEvent(tx, {
+            userId: input.userId,
+            role: 'LEARNER',
+            eventName: 'reward_redeem_requested',
+            source: 'rewards.shop.redeem',
+            actionId: request.id,
+            metadata: {
+                item_id: item.id,
+                category: item.category,
+                cost: item.cost,
+                wallet_balance: contract.wallet.balance,
+                request_id: request.id,
+            },
         })
 
         return withRedeemRequest(contract, request, 'pending_created')
@@ -222,12 +260,11 @@ function withRedeemRequest(
             ...contract.guard,
             reason: status,
             message: status === 'pending_created'
-                ? 'Đã tạo request đổi quà ở trạng thái pending. Fucoin chưa bị trừ.'
-                : 'Request đổi quà pending đã tồn tại. Fucoin chưa bị trừ.',
+                ? 'Redeem request created. Fucoin has not been spent yet; admin approval will spend before fulfillment.'
+                : 'A pending redeem request already exists. Fucoin has not been spent again.',
         },
     }
 }
-
 function buildItemSnapshot(item: FuxieShopCatalogItem, walletBalance: number): Prisma.InputJsonValue {
     return {
         id: item.id,

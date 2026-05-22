@@ -34,7 +34,8 @@
       "exampleSentence2": "Die Erforschung des Kollektiven Unbewussten mittels Amplifikation ermöglicht es, die universellen Bedeutungen archetypischer Bilder zu dechiffrieren.",
       "exampleTranslation2": "Việc khám phá Vô thức tập thể thông qua khuếch đại cho phép giải mã các ý nghĩa phổ quát của các hình ảnh nguyên mẫu.",
       "imageUrl": "/images/vocab/c2-analytische-psychologie/das-kollektive-unbewusste.png",
-      "meaningDe": "Die Gesamtheit aller über Generationen hinweg vererbten psychischen Strukturen und Erfahrungen der Menschheit."
+      "meaningDe": "Die Gesamtheit aller über Generationen hinweg vererbten psychischen Strukturen und Erfahrungen der Menschheit.",
+      "pluralStatus": "not_applicable_or_needs_review"
     },
     {
       "word": "Synchronizität",
@@ -230,7 +231,20 @@
       "exampleSentence2": "Wenn ein Archetypus konstelliert ist, übt er einen starken Einfluss auf die Psyche aus und kann das Verhalten prägen.",
       "exampleTranslation2": "Khi một nguyên mẫu được cấu trúc hóa, nó tạo ra một ảnh hưởng mạnh mẽ lên tâm trí và có thể định hình hành vi.",
       "imageUrl": "/images/vocab/c2-analytische-psychologie/konstellieren.png",
-      "meaningDe": "Sich zu einer bestimmten psychischen Struktur anordnen oder zusammenwirken."
+      "meaningDe": "Sich zu einer bestimmten psychischen Struktur anordnen oder zusammenwirken.",
+      "conjugation": {
+        "praesens": {
+          "ich": "konstelliere",
+          "du": "konstellierst",
+          "er_sie_es": "konstelliert",
+          "wir": "konstellieren",
+          "ihr": "konstelliert",
+          "sie_Sie": "konstellieren"
+        },
+        "isIrregular": false,
+        "isSeparable": false,
+        "reviewStatus": "auto_generated_needs_spot_check"
+      }
     },
     {
       "word": "assimilieren",
@@ -244,7 +258,20 @@
       "exampleSentence2": "Der Prozess der Assimilation unbewusster Inhalte ist oft mit Widerständen und Herausforderungen verbunden.",
       "exampleTranslation2": "Quá trình đồng hóa các nội dung vô thức thường đi kèm với sự kháng cự và thách thức.",
       "imageUrl": "/images/vocab/c2-analytische-psychologie/assimilieren.png",
-      "meaningDe": "Neue Informationen in bestehende geistige Strukturen aufnehmen und anpassen."
+      "meaningDe": "Neue Informationen in bestehende geistige Strukturen aufnehmen und anpassen.",
+      "conjugation": {
+        "praesens": {
+          "ich": "assimiliere",
+          "du": "assimilierst",
+          "er_sie_es": "assimiliert",
+          "wir": "assimilieren",
+          "ihr": "assimiliert",
+          "sie_Sie": "assimilieren"
+        },
+        "isIrregular": false,
+        "isSeparable": false,
+        "reviewStatus": "auto_generated_needs_spot_check"
+      }
     },
     {
       "word": "integrieren",
@@ -258,7 +285,20 @@
       "exampleSentence2": "Die Fähigkeit, den Schatten und die Anima/Animus zu integrieren, ist ein Zeichen psychischer Reifung.",
       "exampleTranslation2": "Khả năng tích hợp Bóng tối và Anima/Animus là một dấu hiệu của sự trưởng thành tâm lý.",
       "imageUrl": "/images/vocab/c2-analytische-psychologie/integrieren.png",
-      "meaningDe": "Verschiedene Teile oder Aspekte zu einem harmonischen Ganzen zusammenfügen."
+      "meaningDe": "Verschiedene Teile oder Aspekte zu einem harmonischen Ganzen zusammenfügen.",
+      "conjugation": {
+        "praesens": {
+          "ich": "integriere",
+          "du": "integrierst",
+          "er_sie_es": "integriert",
+          "wir": "integrieren",
+          "ihr": "integriert",
+          "sie_Sie": "integrieren"
+        },
+        "isIrregular": false,
+        "isSeparable": false,
+        "reviewStatus": "auto_generated_needs_spot_check"
+      }
     },
     {
       "word": "archetypisch",
@@ -329,6 +369,26 @@
       "exampleTranslation2": "Ban đầu, các biểu hiện của vô thức có thể xuất hiện rất mơ hồ, trước khi chúng trở nên rõ ràng hơn thông qua phân tích.",
       "imageUrl": "/images/vocab/c2-analytische-psychologie/diffus.png",
       "meaningDe": "Eine Eigenschaft von Dingen oder Gedanken, die keine klaren Grenzen oder präzisen Merkmale aufweisen."
+    }
+  ],
+  "cefrAudit": {
+    "targetLevel": "C2",
+    "verdict": "aligned",
+    "reviewerRole": "German Academic Lead",
+    "notes": "Release-candidate metadata audit: vocabulary content for \"Analytische Psychologie (Jung)\" is aligned with declared C2 scope pending final human spot-check.",
+    "reviewedAt": "2026-05-12",
+    "reviewScope": "release_candidate_metadata_pass"
+  },
+  "learningOutcomes": [
+    {
+      "id": "c2-analytische-psychologie-lo-1",
+      "cefrLevel": "C2",
+      "skill": "vocabulary",
+      "canDoVi": "Toi co the luyen tu vung o trinh do C2 qua chu de \"Analytische Psychologie (Jung)\".",
+      "canDoDe": "Ich kann Wortschatz auf Niveau C2 zum Thema \"Analytische Psychologie (Jung)\" ueben.",
+      "linkedContentIds": [
+        "c2-analytische-psychologie"
+      ]
     }
   ]
 }

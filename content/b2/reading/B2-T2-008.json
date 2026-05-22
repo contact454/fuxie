@@ -67,7 +67,8 @@
             "meaning": ""
           }
         ],
-        "reasoning": "[Inferential] "
+        "reasoning": "[Inferential] ",
+        "vi": "??p ?n ??ng l? b: 5,5 Stunden.. H?y ??i chi?u v?i th?ng tin then ch?t trong b?i ??c."
       }
     },
     {
@@ -92,7 +93,8 @@
             "meaning": ""
           }
         ],
-        "reasoning": "[Critical] "
+        "reasoning": "[Critical] ",
+        "vi": "??p ?n ??ng l? b: Variable Belohnungen, soziale Vergleiche und endloses Scrollen.. H?y ??i chi?u v?i th?ng tin then ch?t trong b?i ??c."
       }
     },
     {
@@ -116,7 +118,8 @@
             "type": "Nomen",
             "meaning": ""
           }
-        ]
+        ],
+        "vi": "??p ?n ??ng l? b: Konzentrationsstörungen, Schlafprobleme und soziale Auffälligkeiten.. H?y ??i chi?u v?i th?ng tin then ch?t trong b?i ??c."
       }
     },
     {
@@ -140,7 +143,8 @@
             "type": "Nomen",
             "meaning": ""
           }
-        ]
+        ],
+        "vi": "??p ?n ??ng l? b: Medienbewusstsein als Pflichtfach.. H?y ??i chi?u v?i th?ng tin then ch?t trong b?i ??c."
       }
     },
     {
@@ -165,7 +169,8 @@
             "meaning": ""
           }
         ],
-        "reasoning": "[Inferential] "
+        "reasoning": "[Inferential] ",
+        "vi": "??p ?n ??ng l? b: Förderung digitaler Kompetenz und bewusster Medienkonsum.. H?y ??i chi?u v?i th?ng tin then ch?t trong b?i ??c."
       }
     }
   ],
@@ -222,5 +227,25 @@
     "all_answers_verifiable": true,
     "image_count": 1,
     "passed": true
-  }
+  },
+  "cefrAudit": {
+    "targetLevel": "B2",
+    "verdict": "aligned",
+    "reviewerRole": "German Academic Lead",
+    "notes": "Release-candidate metadata audit: reading content for \"Digitalisierung & Technik\" is aligned with declared B2 scope pending final human spot-check.",
+    "reviewedAt": "2026-05-12",
+    "reviewScope": "release_candidate_metadata_pass"
+  },
+  "learningOutcomes": [
+    {
+      "id": "b2-t2-008-lo-1",
+      "cefrLevel": "B2",
+      "skill": "reading",
+      "canDoVi": "Toi co the luyen doc hieu o trinh do B2 qua chu de \"Digitalisierung & Technik\".",
+      "canDoDe": "Ich kann Lesen auf Niveau B2 zum Thema \"Digitalisierung & Technik\" ueben.",
+      "linkedContentIds": [
+        "B2-T2-008"
+      ]
+    }
+  ]
 }

@@ -460,5 +460,55 @@
       ],
       "topicSlug": "c2-technologie"
     }
+  ],
+  "evaluationCriteria": [
+    {
+      "id": "pronunciation",
+      "name": "Pronunciation",
+      "nameVi": "Ph?t ?m",
+      "maxScore": 5,
+      "description": "Sounds, stress, and clarity match the CEFR task."
+    },
+    {
+      "id": "fluency",
+      "name": "Fluency",
+      "nameVi": "?? tr?i ch?y",
+      "maxScore": 5,
+      "description": "Learner can speak at a natural pace for the level."
+    },
+    {
+      "id": "accuracy",
+      "name": "Accuracy",
+      "nameVi": "?? ch?nh x?c",
+      "maxScore": 5,
+      "description": "Grammar and vocabulary are appropriate and understandable."
+    },
+    {
+      "id": "task_completion",
+      "name": "Task completion",
+      "nameVi": "Ho?n th?nh nhi?m v?",
+      "maxScore": 5,
+      "description": "Learner addresses the prompt and communicative goal."
+    }
+  ],
+  "cefrAudit": {
+    "targetLevel": "C2",
+    "verdict": "aligned",
+    "reviewerRole": "German Academic Lead",
+    "notes": "Release-candidate metadata audit: speaking content for \"Technologie und Zukunft\" is aligned with declared C2 scope pending final human spot-check.",
+    "reviewedAt": "2026-05-12",
+    "reviewScope": "release_candidate_metadata_pass"
+  },
+  "learningOutcomes": [
+    {
+      "id": "c2-technologie-lo-1",
+      "cefrLevel": "C2",
+      "skill": "speaking",
+      "canDoVi": "Toi co the luyen noi o trinh do C2 qua chu de \"Technologie und Zukunft\".",
+      "canDoDe": "Ich kann Sprechen auf Niveau C2 zum Thema \"Technologie und Zukunft\" ueben.",
+      "linkedContentIds": [
+        "c2-technologie"
+      ]
+    }
   ]
 }

@@ -1,817 +1,837 @@
 {
-    "theme": {
-        "slug": "c1-kreislaufwirtschaft",
-        "name": "Kreislaufwirtschaft & Ressourcen",
-        "nameVi": "Kinh tế tuần hoàn & Tài nguyên",
-        "nameEn": "Circular Economy & Resources",
-        "sortOrder": 43,
-        "imageUrl": "/images/themes/c1-kreislaufwirtschaft.png"
+  "theme": {
+    "slug": "c1-kreislaufwirtschaft",
+    "name": "Kreislaufwirtschaft & Ressourcen",
+    "nameVi": "Kinh tế tuần hoàn & Tài nguyên",
+    "nameEn": "Circular Economy & Resources",
+    "sortOrder": 43,
+    "imageUrl": "/images/themes/c1-kreislaufwirtschaft.png"
+  },
+  "words": [
+    {
+      "word": "Kreislaufwirtschaft",
+      "article": "FEMININ",
+      "plural": "die Kreislaufwirtschaften",
+      "wordType": "NOMEN",
+      "meaningVi": "Kinh tế tuần hoàn",
+      "meaningEn": "Circular Economy",
+      "exampleSentence1": "Die Kreislaufwirtschaft strebt danach, Produkte und Materialien so lange wie möglich im Wirtschaftskreislauf zu halten, um Abfall zu minimieren.",
+      "exampleTranslation1": "Kinh tế tuần hoàn tìm cách giữ sản phẩm và vật liệu trong chu trình kinh tế càng lâu càng tốt để giảm thiểu chất thải.",
+      "exampleSentence2": "Die Transformation hin zu einer funktionierenden Kreislaufwirtschaft erfordert eine grundlegende Neugestaltung von Produktionsprozessen und Konsumgewohnheiten.",
+      "exampleTranslation2": "Sự chuyển đổi sang một nền kinh tế tuần hoàn hoạt động hiệu quả đòi hỏi một sự tái cấu trúc cơ bản các quy trình sản xuất và thói quen tiêu dùng.",
+      "imageUrl": "/images/vocab/c1-kreislaufwirtschaft/kreislaufwirtschaft.png",
+      "meaningDe": "Ein Wirtschaftssystem, bei dem Rohstoffe im Kreis geführt werden, um Abfall zu vermeiden."
     },
-    "words": [
-        {
-            "word": "Kreislaufwirtschaft",
-            "article": "FEMININ",
-            "plural": "die Kreislaufwirtschaften",
-            "wordType": "NOMEN",
-            "meaningVi": "Kinh tế tuần hoàn",
-            "meaningEn": "Circular Economy",
-            "exampleSentence1": "Die Kreislaufwirtschaft strebt danach, Produkte und Materialien so lange wie möglich im Wirtschaftskreislauf zu halten, um Abfall zu minimieren.",
-            "exampleTranslation1": "Kinh tế tuần hoàn tìm cách giữ sản phẩm và vật liệu trong chu trình kinh tế càng lâu càng tốt để giảm thiểu chất thải.",
-            "exampleSentence2": "Die Transformation hin zu einer funktionierenden Kreislaufwirtschaft erfordert eine grundlegende Neugestaltung von Produktionsprozessen und Konsumgewohnheiten.",
-            "exampleTranslation2": "Sự chuyển đổi sang một nền kinh tế tuần hoàn hoạt động hiệu quả đòi hỏi một sự tái cấu trúc cơ bản các quy trình sản xuất và thói quen tiêu dùng.",
-            "imageUrl": "/images/vocab/c1-kreislaufwirtschaft/kreislaufwirtschaft.png",
-            "meaningDe": "Ein Wirtschaftssystem, bei dem Rohstoffe im Kreis geführt werden, um Abfall zu vermeiden."
+    {
+      "word": "Ressourceneffizienz",
+      "article": "FEMININ",
+      "plural": "die Ressourceneffizienzen",
+      "wordType": "NOMEN",
+      "meaningVi": "Hiệu quả tài nguyên",
+      "meaningEn": "Resource Efficiency",
+      "exampleSentence1": "Die Steigerung der Ressourceneffizienz ist ein zentraler Pfeiler der Nachhaltigkeitsstrategie vieler Unternehmen.",
+      "exampleTranslation1": "Việc tăng cường hiệu quả tài nguyên là một trụ cột trung tâm trong chiến lược bền vững của nhiều doanh nghiệp.",
+      "exampleSentence2": "Durch innovative Technologien lässt sich die Ressourceneffizienz in der Produktion erheblich verbessern und somit der Verbrauch knapper Güter reduzieren.",
+      "exampleTranslation2": "Thông qua các công nghệ đổi mới, hiệu quả tài nguyên trong sản xuất có thể được cải thiện đáng kể, từ đó giảm tiêu thụ các nguồn tài nguyên khan hiếm.",
+      "imageUrl": "/images/vocab/c1-kreislaufwirtschaft/ressourceneffizienz.png",
+      "meaningDe": "Der möglichst sparsame Einsatz von natürlichen Ressourcen bei gleichbleibender Leistung."
+    },
+    {
+      "word": "Rohstoffgewinnung",
+      "article": "FEMININ",
+      "plural": "die Rohstoffgewinnungen",
+      "wordType": "NOMEN",
+      "meaningVi": "Khai thác nguyên liệu thô",
+      "meaningEn": "Raw Material Extraction",
+      "exampleSentence1": "Die umweltschonende Gestaltung der Rohstoffgewinnung stellt eine immense Herausforderung für die globale Industrie dar.",
+      "exampleTranslation1": "Việc thiết kế khai thác nguyên liệu thô thân thiện với môi trường là một thách thức lớn đối với ngành công nghiệp toàn cầu.",
+      "exampleSentence2": "Alternative Ansätze zur Rohstoffgewinnung, wie Urban Mining, gewinnen zunehmend an Bedeutung.",
+      "exampleTranslation2": "Các phương pháp thay thế cho khai thác nguyên liệu thô, như khai thác đô thị, ngày càng trở nên quan trọng.",
+      "imageUrl": "/images/vocab/c1-kreislaufwirtschaft/rohstoffgewinnung.png",
+      "meaningDe": "Die Entnahme von natürlichen Materialien aus der Erde oder dem Meer zur industriellen Nutzung."
+    },
+    {
+      "word": "Wiederverwertung",
+      "article": "FEMININ",
+      "plural": "die Wiederverwertungen",
+      "wordType": "NOMEN",
+      "meaningVi": "Tái sử dụng, tái chế",
+      "meaningEn": "Recycling, Reutilization",
+      "exampleSentence1": "Die Wiederverwertung von Baustoffen trägt maßgeblich zur Reduzierung von Abfallmengen bei.",
+      "exampleTranslation1": "Việc tái sử dụng vật liệu xây dựng đóng góp đáng kể vào việc giảm lượng chất thải.",
+      "exampleSentence2": "Für eine effektive Wiederverwertung ist die sortenreine Trennung von Materialien unerlässlich.",
+      "exampleTranslation2": "Để tái sử dụng hiệu quả, việc phân loại vật liệu theo từng loại là không thể thiếu.",
+      "imageUrl": "/images/vocab/c1-kreislaufwirtschaft/wiederverwertung.png",
+      "meaningDe": "Die Nutzung von gebrauchten Materialien für neue Produkte."
+    },
+    {
+      "word": "Wertschöpfungskette",
+      "article": "FEMININ",
+      "plural": "die Wertschöpfungsketten",
+      "wordType": "NOMEN",
+      "meaningVi": "Chuỗi giá trị",
+      "meaningEn": "Value Chain",
+      "exampleSentence1": "Eine nachhaltige Transformation erfordert die Neuausrichtung der gesamten Wertschöpfungskette, von der Beschaffung bis zur Entsorgung.",
+      "exampleTranslation1": "Một sự chuyển đổi bền vững đòi hỏi việc định hướng lại toàn bộ chuỗi giá trị, từ thu mua đến xử lý.",
+      "exampleSentence2": "Die Digitalisierung bietet Potenziale, um Transparenz in der Wertschöpfungskette zu schaffen und Optimierungsmöglichkeiten zu identifizieren.",
+      "exampleTranslation2": "Số hóa mang lại tiềm năng để tạo ra sự minh bạch trong chuỗi giá trị và xác định các cơ hội tối ưu hóa.",
+      "imageUrl": "/images/vocab/c1-kreislaufwirtschaft/wertschoepfungskette.png",
+      "meaningDe": "Die Gesamtheit aller Schritte, die ein Produkt von der Rohstoffgewinnung bis zum Kunden durchläuft."
+    },
+    {
+      "word": "Produktlebenszyklus",
+      "article": "MASKULIN",
+      "plural": "die Produktlebenszyklen",
+      "wordType": "NOMEN",
+      "meaningVi": "Vòng đời sản phẩm",
+      "meaningEn": "Product Life Cycle",
+      "exampleSentence1": "Die Analyse des Produktlebenszyklus ermöglicht es, die Umweltauswirkungen eines Produkts von der Wiege bis zur Bahre zu bewerten.",
+      "exampleTranslation1": "Phân tích vòng đời sản phẩm cho phép đánh giá tác động môi trường của một sản phẩm từ khi sản xuất đến khi loại bỏ.",
+      "exampleSentence2": "Im Sinne der Kreislaufwirtschaft sollten Produkte so konzipiert werden, dass ihr Produktlebenszyklus durch Reparatur und Wiederverwendung verlängert wird.",
+      "exampleTranslation2": "Theo tinh thần của kinh tế tuần hoàn, sản phẩm nên được thiết kế sao cho vòng đời của chúng được kéo dài thông qua sửa chữa và tái sử dụng.",
+      "imageUrl": "/images/vocab/c1-kreislaufwirtschaft/produktlebenszyklus.png",
+      "meaningDe": "Die Zeitspanne von der Entwicklung eines Produkts bis zu seiner Entsorgung."
+    },
+    {
+      "word": "Entsorgungsproblematik",
+      "article": "FEMININ",
+      "plural": "die Entsorgungsproblematiken",
+      "wordType": "NOMEN",
+      "meaningVi": "Vấn đề xử lý chất thải",
+      "meaningEn": "Disposal Problematic",
+      "exampleSentence1": "Die Entsorgungsproblematik von Sondermüll erfordert spezialisierte Lösungen und strenge gesetzliche Vorschriften.",
+      "exampleTranslation1": "Vấn đề xử lý chất thải nguy hại đòi hỏi các giải pháp chuyên biệt và quy định pháp luật nghiêm ngặt.",
+      "exampleSentence2": "Die Minimierung der Entsorgungsproblematik ist ein Hauptziel der Kreislaufwirtschaft, die auf Abfallvermeidung setzt.",
+      "exampleTranslation2": "Việc giảm thiểu vấn đề xử lý chất thải là mục tiêu chính của kinh tế tuần hoàn, vốn tập trung vào việc ngăn chặn chất thải.",
+      "imageUrl": "/images/vocab/c1-kreislaufwirtschaft/entsorgungsproblematik.png",
+      "meaningDe": "Die Schwierigkeiten, die bei der Beseitigung von Abfällen auftreten."
+    },
+    {
+      "word": "Stoffstromanalyse",
+      "article": "FEMININ",
+      "plural": "die Stoffstromanalysen",
+      "wordType": "NOMEN",
+      "meaningVi": "Phân tích dòng vật liệu",
+      "meaningEn": "Material Flow Analysis (MFA)",
+      "exampleSentence1": "Die Stoffstromanalyse liefert wichtige Daten über die Bewegung von Materialien und Energie innerhalb eines Systems.",
+      "exampleTranslation1": "Phân tích dòng vật liệu cung cấp dữ liệu quan trọng về sự di chuyển của vật liệu và năng lượng trong một hệ thống.",
+      "exampleSentence2": "Mithilfe einer Stoffstromanalyse können Engpässe und Verlustquellen in Produktionsprozessen identifiziert werden.",
+      "exampleTranslation2": "Bằng cách sử dụng phân tích dòng vật liệu, có thể xác định các nút thắt cổ chai và nguồn tổn thất trong quy trình sản xuất.",
+      "imageUrl": "/images/vocab/c1-kreislaufwirtschaft/stoffstromanalyse.png",
+      "meaningDe": "Die Untersuchung, wie Materialien durch ein System fließen und wo sie verloren gehen."
+    },
+    {
+      "word": "Nachhaltigkeitstransformation",
+      "article": "FEMININ",
+      "plural": "die Nachhaltigkeitstransformationen",
+      "wordType": "NOMEN",
+      "meaningVi": "Chuyển đổi bền vững",
+      "meaningEn": "Sustainability Transformation",
+      "exampleSentence1": "Die Nachhaltigkeitstransformation erfordert einen Paradigmenwechsel in Wirtschaft, Politik und Gesellschaft.",
+      "exampleTranslation1": "Chuyển đổi bền vững đòi hỏi một sự thay đổi mô hình trong kinh tế, chính trị và xã hội.",
+      "exampleSentence2": "Universitäten spielen eine entscheidende Rolle bei der Förderung von Forschung und Bildung für die Nachhaltigkeitstransformation.",
+      "exampleTranslation2": "Các trường đại học đóng một vai trò quyết định trong việc thúc đẩy nghiên cứu và giáo dục cho sự chuyển đổi bền vững.",
+      "imageUrl": "/images/vocab/c1-kreislaufwirtschaft/nachhaltigkeitstransformation.png",
+      "meaningDe": "Der Prozess, ein System so zu ändern, dass es langfristig ökologisch tragfähig ist."
+    },
+    {
+      "word": "Obsoleszenz",
+      "article": "FEMININ",
+      "plural": "die Obsoleszenzen",
+      "wordType": "NOMEN",
+      "meaningVi": "Sự lỗi thời (kế hoạch)",
+      "meaningEn": "Obsolescence (planned or perceived)",
+      "exampleSentence1": "Die geplante Obsoleszenz von Produkten steht im Widerspruch zu den Prinzipien der Kreislaufwirtschaft.",
+      "exampleTranslation1": "Sự lỗi thời có kế hoạch của sản phẩm mâu thuẫn với các nguyên tắc của kinh tế tuần hoàn.",
+      "exampleSentence2": "Verbraucher werden zunehmend für das Problem der Obsoleszenz sensibilisiert und fordern langlebigere Produkte.",
+      "exampleTranslation2": "Người tiêu dùng ngày càng được nâng cao nhận thức về vấn đề lỗi thời và yêu cầu các sản phẩm bền hơn.",
+      "imageUrl": "/images/vocab/c1-kreislaufwirtschaft/obsoleszenz.png",
+      "meaningDe": "Der Zustand, in dem ein Produkt nicht mehr genutzt wird, weil es technisch veraltet oder nicht mehr funktionsfähig ist."
+    },
+    {
+      "word": "Rezyklierbarkeit",
+      "article": "FEMININ",
+      "plural": "die Rezyklierbarkeiten",
+      "wordType": "NOMEN",
+      "meaningVi": "Khả năng tái chế",
+      "meaningEn": "Recyclability",
+      "exampleSentence1": "Die Rezyklierbarkeit eines Produkts sollte bereits in der Designphase berücksichtigt werden.",
+      "exampleTranslation1": "Khả năng tái chế của một sản phẩm nên được xem xét ngay từ giai đoạn thiết kế.",
+      "exampleSentence2": "Die Verbesserung der Rezyklierbarkeit von Kunststoffen ist ein wichtiger Schritt zur Reduzierung der Umweltbelastung.",
+      "exampleTranslation2": "Việc cải thiện khả năng tái chế của nhựa là một bước quan trọng để giảm thiểu tác động đến môi trường.",
+      "imageUrl": "/images/vocab/c1-kreislaufwirtschaft/rezyklierbarkeit.png",
+      "meaningDe": "Die Eigenschaft eines Materials, wiederverwertet werden zu können."
+    },
+    {
+      "word": "Sekundärrohstoff",
+      "article": "MASKULIN",
+      "plural": "die Sekundärrohstoffe",
+      "wordType": "NOMEN",
+      "meaningVi": "Nguyên liệu thứ cấp",
+      "meaningEn": "Secondary Raw Material",
+      "exampleSentence1": "Die Nutzung von Sekundärrohstoffen reduziert den Bedarf an Primärrohstoffen und schont natürliche Ressourcen.",
+      "exampleTranslation1": "Việc sử dụng nguyên liệu thứ cấp giúp giảm nhu cầu về nguyên liệu sơ cấp và bảo tồn tài nguyên thiên nhiên.",
+      "exampleSentence2": "Die Gewinnung hochwertiger Sekundärrohstoffe erfordert fortschrittliche Trenn- und Aufbereitungstechnologien.",
+      "exampleTranslation2": "Việc thu hồi nguyên liệu thứ cấp chất lượng cao đòi hỏi các công nghệ tách và xử lý tiên tiến.",
+      "imageUrl": "/images/vocab/c1-kreislaufwirtschaft/sekundaerrohstoff.png",
+      "meaningDe": "Ein Material, das aus Abfällen durch Recycling gewonnen wurde."
+    },
+    {
+      "word": "Kaskadennutzung",
+      "article": "FEMININ",
+      "plural": "die Kaskadennutzungen",
+      "wordType": "NOMEN",
+      "meaningVi": "Sử dụng theo tầng, sử dụng đa cấp",
+      "meaningEn": "Cascading Use (sequential use of resources for different purposes)",
+      "exampleSentence1": "Die Kaskadennutzung von Biomasse maximiert den Wertstofferhalt und minimiert Abfälle.",
+      "exampleTranslation1": "Sử dụng sinh khối theo tầng tối đa hóa việc bảo toàn giá trị vật liệu và giảm thiểu chất thải.",
+      "exampleSentence2": "Ein intelligentes System zur Kaskadennutzung kann die Effizienz der Ressourcennutzung in verschiedenen Industrien steigern.",
+      "exampleTranslation2": "Một hệ thống thông minh để sử dụng theo tầng có thể tăng cường hiệu quả sử dụng tài nguyên trong các ngành công nghiệp khác nhau.",
+      "imageUrl": "/images/vocab/c1-kreislaufwirtschaft/kaskadennutzung.png",
+      "meaningDe": "Die mehrstufige Nutzung eines Rohstoffs, bis er nicht mehr verwendbar ist."
+    },
+    {
+      "word": "ökologischer Fußabdruck",
+      "article": "MASKULIN",
+      "plural": "die ökologischen Fußabdrücke",
+      "wordType": "NOMEN",
+      "meaningVi": "Dấu chân sinh thái",
+      "meaningEn": "Ecological Footprint",
+      "exampleSentence1": "Die Reduzierung des ökologischen Fußabdrucks ist ein globales Ziel zur Bewältigung der Klimakrise.",
+      "exampleTranslation1": "Giảm dấu chân sinh thái là một mục tiêu toàn cầu để đối phó với khủng hoảng khí hậu.",
+      "exampleSentence2": "Unternehmen können ihren ökologischen Fußabdruck verringern, indem sie auf erneuerbare Energien und kreislauffähige Materialien umsteigen.",
+      "exampleTranslation2": "Các doanh nghiệp có thể giảm dấu chân sinh thái của mình bằng cách chuyển sang năng lượng tái tạo và vật liệu có thể tái chế.",
+      "imageUrl": "/images/vocab/c1-kreislaufwirtschaft/oekologischer-fussabdruck.png",
+      "meaningDe": "Ein Maß dafür, wie stark ein Mensch oder ein Land die Umwelt belastet."
+    },
+    {
+      "word": "Cradle-to-Cradle-Prinzip",
+      "article": "NEUTRUM",
+      "plural": "die Cradle-to-Cradle-Prinzipien",
+      "wordType": "NOMEN",
+      "meaningVi": "Nguyên tắc từ cái nôi đến cái nôi",
+      "meaningEn": "Cradle-to-Cradle Principle",
+      "exampleSentence1": "Das Cradle-to-Cradle-Prinzip fordert, Produkte so zu gestalten, dass sie in biologische oder technische Kreisläufe zurückgeführt werden können.",
+      "exampleTranslation1": "Nguyên tắc từ cái nôi đến cái nôi đòi hỏi sản phẩm phải được thiết kế sao cho chúng có thể được trả lại vào các chu trình sinh học hoặc kỹ thuật.",
+      "exampleSentence2": "Die Implementierung des Cradle-to-Cradle-Prinzips erfordert eine radikale Neudefinition von Produktdesign und Materialwirtschaft.",
+      "exampleTranslation2": "Việc thực hiện nguyên tắc từ cái nôi đến cái nôi đòi hỏi một sự định nghĩa lại triệt để về thiết kế sản phẩm và quản lý vật liệu.",
+      "imageUrl": "/images/vocab/c1-kreislaufwirtschaft/cradle-to-cradle-prinzip.png",
+      "meaningDe": "Ein Konzept, bei dem Produkte so gestaltet sind, dass alle Bestandteile vollständig in den Kreislauf zurückkehren."
+    },
+    {
+      "word": "Materialkreislauf",
+      "article": "MASKULIN",
+      "plural": "die Materialkreisläufe",
+      "wordType": "NOMEN",
+      "meaningVi": "Chu trình vật liệu",
+      "meaningEn": "Material Cycle",
+      "exampleSentence1": "Ein geschlossener Materialkreislauf verhindert den Verlust wertvoller Ressourcen und reduziert die Abfallmenge.",
+      "exampleTranslation1": "Một chu trình vật liệu khép kín ngăn chặn sự mất mát tài nguyên quý giá và giảm lượng chất thải.",
+      "exampleSentence2": "Innovationen in der Materialwissenschaft sind entscheidend für die Etablierung effizienter Materialkreisläufe.",
+      "exampleTranslation2": "Đổi mới trong khoa học vật liệu là yếu tố quyết định để thiết lập các chu trình vật liệu hiệu quả.",
+      "imageUrl": "/images/vocab/c1-kreislaufwirtschaft/materialkreislauf.png",
+      "meaningDe": "Der geschlossene Weg eines Stoffes von der Produktion über die Nutzung bis zur Wiederverwertung."
+    },
+    {
+      "word": "Ressourcenverbrauch",
+      "article": "MASKULIN",
+      "plural": "die Ressourcenverbräuche",
+      "wordType": "NOMEN",
+      "meaningVi": "Tiêu thụ tài nguyên",
+      "meaningEn": "Resource Consumption",
+      "exampleSentence1": "Der globale Ressourcenverbrauch übersteigt die Regenerationsfähigkeit der Erde bei Weitem.",
+      "exampleTranslation1": "Sự tiêu thụ tài nguyên toàn cầu vượt xa khả năng tái tạo của Trái đất.",
+      "exampleSentence2": "Politische Maßnahmen zielen darauf ab, den Ressourcenverbrauch durch Effizienzsteigerung und Kreislaufwirtschaft zu senken.",
+      "exampleTranslation2": "Các biện pháp chính sách nhằm mục đích giảm tiêu thụ tài nguyên thông qua việc tăng hiệu quả và kinh tế tuần hoàn.",
+      "imageUrl": "/images/vocab/c1-kreislaufwirtschaft/ressourcenverbrauch.png",
+      "meaningDe": "Die Menge an natürlichen Materialien, die für einen bestimmten Zweck genutzt wird."
+    },
+    {
+      "word": "Langlebigkeit",
+      "article": "FEMININ",
+      "plural": "die Langlebigkeiten",
+      "wordType": "NOMEN",
+      "meaningVi": "Độ bền, tuổi thọ cao",
+      "meaningEn": "Durability, Longevity",
+      "exampleSentence1": "Die Langlebigkeit von Produkten ist ein entscheidendes Kriterium für eine nachhaltige Konsumkultur.",
+      "exampleTranslation1": "Độ bền của sản phẩm là một tiêu chí quyết định cho một văn hóa tiêu dùng bền vững.",
+      "exampleSentence2": "Investitionen in Qualität und Langlebigkeit reduzieren langfristig den Bedarf an Neuanschaffungen und schonen somit Ressourcen.",
+      "exampleTranslation2": "Đầu tư vào chất lượng và độ bền lâu dài giúp giảm nhu cầu mua sắm mới và do đó bảo tồn tài nguyên.",
+      "imageUrl": "/images/vocab/c1-kreislaufwirtschaft/langlebigkeit.png",
+      "meaningDe": "Die Eigenschaft eines Produkts, über einen langen Zeitraum funktionsfähig zu bleiben."
+    },
+    {
+      "word": "rezyklieren",
+      "article": null,
+      "plural": null,
+      "wordType": "VERB",
+      "meaningVi": "Tái chế",
+      "meaningEn": "to recycle",
+      "exampleSentence1": "Es ist entscheidend, Kunststoffe sortenrein zu rezyklieren, um hochwertige Sekundärrohstoffe zu gewinnen.",
+      "exampleTranslation1": "Việc tái chế nhựa theo từng loại là rất quan trọng để thu hồi nguyên liệu thứ cấp chất lượng cao.",
+      "exampleSentence2": "Viele Metalle lassen sich nahezu unendlich oft rezyklieren, ohne an Qualität zu verlieren.",
+      "exampleTranslation2": "Nhiều kim loại có thể được tái chế gần như vô hạn mà không mất đi chất lượng.",
+      "imageUrl": "/images/vocab/c1-kreislaufwirtschaft/rezyklieren.png",
+      "meaningDe": "Abfälle so verarbeiten, dass daraus wieder neue Rohstoffe entstehen.",
+      "conjugation": {
+        "praesens": {
+          "ich": "ich rezykliere",
+          "du": "du rezyklierst",
+          "er/sie/es": "er/sie/es rezykliert",
+          "wir": "wir rezyklieren",
+          "ihr": "ihr rezykliert",
+          "sie/Sie": "sie/Sie rezyklieren"
         },
-        {
-            "word": "Ressourceneffizienz",
-            "article": "FEMININ",
-            "plural": "die Ressourceneffizienzen",
-            "wordType": "NOMEN",
-            "meaningVi": "Hiệu quả tài nguyên",
-            "meaningEn": "Resource Efficiency",
-            "exampleSentence1": "Die Steigerung der Ressourceneffizienz ist ein zentraler Pfeiler der Nachhaltigkeitsstrategie vieler Unternehmen.",
-            "exampleTranslation1": "Việc tăng cường hiệu quả tài nguyên là một trụ cột trung tâm trong chiến lược bền vững của nhiều doanh nghiệp.",
-            "exampleSentence2": "Durch innovative Technologien lässt sich die Ressourceneffizienz in der Produktion erheblich verbessern und somit der Verbrauch knapper Güter reduzieren.",
-            "exampleTranslation2": "Thông qua các công nghệ đổi mới, hiệu quả tài nguyên trong sản xuất có thể được cải thiện đáng kể, từ đó giảm tiêu thụ các nguồn tài nguyên khan hiếm.",
-            "imageUrl": "/images/vocab/c1-kreislaufwirtschaft/ressourceneffizienz.png",
-            "meaningDe": "Der möglichst sparsame Einsatz von natürlichen Ressourcen bei gleichbleibender Leistung."
+        "praeteritum": {
+          "ich": "ich rezyklierte",
+          "du": "du rezykliertest",
+          "er/sie/es": "er/sie/es rezyklierte",
+          "wir": "wir rezyklierten",
+          "ihr": "ihr rezykliertet",
+          "sie/Sie": "sie/Sie rezyklierten"
         },
-        {
-            "word": "Rohstoffgewinnung",
-            "article": "FEMININ",
-            "plural": "die Rohstoffgewinnungen",
-            "wordType": "NOMEN",
-            "meaningVi": "Khai thác nguyên liệu thô",
-            "meaningEn": "Raw Material Extraction",
-            "exampleSentence1": "Die umweltschonende Gestaltung der Rohstoffgewinnung stellt eine immense Herausforderung für die globale Industrie dar.",
-            "exampleTranslation1": "Việc thiết kế khai thác nguyên liệu thô thân thiện với môi trường là một thách thức lớn đối với ngành công nghiệp toàn cầu.",
-            "exampleSentence2": "Alternative Ansätze zur Rohstoffgewinnung, wie Urban Mining, gewinnen zunehmend an Bedeutung.",
-            "exampleTranslation2": "Các phương pháp thay thế cho khai thác nguyên liệu thô, như khai thác đô thị, ngày càng trở nên quan trọng.",
-            "imageUrl": "/images/vocab/c1-kreislaufwirtschaft/rohstoffgewinnung.png",
-            "meaningDe": "Die Entnahme von natürlichen Materialien aus der Erde oder dem Meer zur industriellen Nutzung."
+        "perfekt": {
+          "hilfsverb": "haben",
+          "partizip2": "rezykliert"
         },
-        {
-            "word": "Wiederverwertung",
-            "article": "FEMININ",
-            "plural": "die Wiederverwertungen",
-            "wordType": "NOMEN",
-            "meaningVi": "Tái sử dụng, tái chế",
-            "meaningEn": "Recycling, Reutilization",
-            "exampleSentence1": "Die Wiederverwertung von Baustoffen trägt maßgeblich zur Reduzierung von Abfallmengen bei.",
-            "exampleTranslation1": "Việc tái sử dụng vật liệu xây dựng đóng góp đáng kể vào việc giảm lượng chất thải.",
-            "exampleSentence2": "Für eine effektive Wiederverwertung ist die sortenreine Trennung von Materialien unerlässlich.",
-            "exampleTranslation2": "Để tái sử dụng hiệu quả, việc phân loại vật liệu theo từng loại là không thể thiếu.",
-            "imageUrl": "/images/vocab/c1-kreislaufwirtschaft/wiederverwertung.png",
-            "meaningDe": "Die Nutzung von gebrauchten Materialien für neue Produkte."
+        "konjunktiv2": {
+          "ich": "ich rezyklierte",
+          "du": "du rezykliertest",
+          "er/sie/es": "er/sie/es rezyklierte",
+          "wir": "wir rezyklierten",
+          "ihr": "ihr rezykliertet",
+          "sie/Sie": "sie/Sie rezyklierten"
         },
-        {
-            "word": "Wertschöpfungskette",
-            "article": "FEMININ",
-            "plural": "die Wertschöpfungsketten",
-            "wordType": "NOMEN",
-            "meaningVi": "Chuỗi giá trị",
-            "meaningEn": "Value Chain",
-            "exampleSentence1": "Eine nachhaltige Transformation erfordert die Neuausrichtung der gesamten Wertschöpfungskette, von der Beschaffung bis zur Entsorgung.",
-            "exampleTranslation1": "Một sự chuyển đổi bền vững đòi hỏi việc định hướng lại toàn bộ chuỗi giá trị, từ thu mua đến xử lý.",
-            "exampleSentence2": "Die Digitalisierung bietet Potenziale, um Transparenz in der Wertschöpfungskette zu schaffen und Optimierungsmöglichkeiten zu identifizieren.",
-            "exampleTranslation2": "Số hóa mang lại tiềm năng để tạo ra sự minh bạch trong chuỗi giá trị và xác định các cơ hội tối ưu hóa.",
-            "imageUrl": "/images/vocab/c1-kreislaufwirtschaft/wertschoepfungskette.png",
-            "meaningDe": "Die Gesamtheit aller Schritte, die ein Produkt von der Rohstoffgewinnung bis zum Kunden durchläuft."
-        },
-        {
-            "word": "Produktlebenszyklus",
-            "article": "MASKULIN",
-            "plural": "die Produktlebenszyklen",
-            "wordType": "NOMEN",
-            "meaningVi": "Vòng đời sản phẩm",
-            "meaningEn": "Product Life Cycle",
-            "exampleSentence1": "Die Analyse des Produktlebenszyklus ermöglicht es, die Umweltauswirkungen eines Produkts von der Wiege bis zur Bahre zu bewerten.",
-            "exampleTranslation1": "Phân tích vòng đời sản phẩm cho phép đánh giá tác động môi trường của một sản phẩm từ khi sản xuất đến khi loại bỏ.",
-            "exampleSentence2": "Im Sinne der Kreislaufwirtschaft sollten Produkte so konzipiert werden, dass ihr Produktlebenszyklus durch Reparatur und Wiederverwendung verlängert wird.",
-            "exampleTranslation2": "Theo tinh thần của kinh tế tuần hoàn, sản phẩm nên được thiết kế sao cho vòng đời của chúng được kéo dài thông qua sửa chữa và tái sử dụng.",
-            "imageUrl": "/images/vocab/c1-kreislaufwirtschaft/produktlebenszyklus.png",
-            "meaningDe": "Die Zeitspanne von der Entwicklung eines Produkts bis zu seiner Entsorgung."
-        },
-        {
-            "word": "Entsorgungsproblematik",
-            "article": "FEMININ",
-            "plural": "die Entsorgungsproblematiken",
-            "wordType": "NOMEN",
-            "meaningVi": "Vấn đề xử lý chất thải",
-            "meaningEn": "Disposal Problematic",
-            "exampleSentence1": "Die Entsorgungsproblematik von Sondermüll erfordert spezialisierte Lösungen und strenge gesetzliche Vorschriften.",
-            "exampleTranslation1": "Vấn đề xử lý chất thải nguy hại đòi hỏi các giải pháp chuyên biệt và quy định pháp luật nghiêm ngặt.",
-            "exampleSentence2": "Die Minimierung der Entsorgungsproblematik ist ein Hauptziel der Kreislaufwirtschaft, die auf Abfallvermeidung setzt.",
-            "exampleTranslation2": "Việc giảm thiểu vấn đề xử lý chất thải là mục tiêu chính của kinh tế tuần hoàn, vốn tập trung vào việc ngăn chặn chất thải.",
-            "imageUrl": "/images/vocab/c1-kreislaufwirtschaft/entsorgungsproblematik.png",
-            "meaningDe": "Die Schwierigkeiten, die bei der Beseitigung von Abfällen auftreten."
-        },
-        {
-            "word": "Stoffstromanalyse",
-            "article": "FEMININ",
-            "plural": "die Stoffstromanalysen",
-            "wordType": "NOMEN",
-            "meaningVi": "Phân tích dòng vật liệu",
-            "meaningEn": "Material Flow Analysis (MFA)",
-            "exampleSentence1": "Die Stoffstromanalyse liefert wichtige Daten über die Bewegung von Materialien und Energie innerhalb eines Systems.",
-            "exampleTranslation1": "Phân tích dòng vật liệu cung cấp dữ liệu quan trọng về sự di chuyển của vật liệu và năng lượng trong một hệ thống.",
-            "exampleSentence2": "Mithilfe einer Stoffstromanalyse können Engpässe und Verlustquellen in Produktionsprozessen identifiziert werden.",
-            "exampleTranslation2": "Bằng cách sử dụng phân tích dòng vật liệu, có thể xác định các nút thắt cổ chai và nguồn tổn thất trong quy trình sản xuất.",
-            "imageUrl": "/images/vocab/c1-kreislaufwirtschaft/stoffstromanalyse.png",
-            "meaningDe": "Die Untersuchung, wie Materialien durch ein System fließen und wo sie verloren gehen."
-        },
-        {
-            "word": "Nachhaltigkeitstransformation",
-            "article": "FEMININ",
-            "plural": "die Nachhaltigkeitstransformationen",
-            "wordType": "NOMEN",
-            "meaningVi": "Chuyển đổi bền vững",
-            "meaningEn": "Sustainability Transformation",
-            "exampleSentence1": "Die Nachhaltigkeitstransformation erfordert einen Paradigmenwechsel in Wirtschaft, Politik und Gesellschaft.",
-            "exampleTranslation1": "Chuyển đổi bền vững đòi hỏi một sự thay đổi mô hình trong kinh tế, chính trị và xã hội.",
-            "exampleSentence2": "Universitäten spielen eine entscheidende Rolle bei der Förderung von Forschung und Bildung für die Nachhaltigkeitstransformation.",
-            "exampleTranslation2": "Các trường đại học đóng một vai trò quyết định trong việc thúc đẩy nghiên cứu và giáo dục cho sự chuyển đổi bền vững.",
-            "imageUrl": "/images/vocab/c1-kreislaufwirtschaft/nachhaltigkeitstransformation.png",
-            "meaningDe": "Der Prozess, ein System so zu ändern, dass es langfristig ökologisch tragfähig ist."
-        },
-        {
-            "word": "Obsoleszenz",
-            "article": "FEMININ",
-            "plural": "die Obsoleszenzen",
-            "wordType": "NOMEN",
-            "meaningVi": "Sự lỗi thời (kế hoạch)",
-            "meaningEn": "Obsolescence (planned or perceived)",
-            "exampleSentence1": "Die geplante Obsoleszenz von Produkten steht im Widerspruch zu den Prinzipien der Kreislaufwirtschaft.",
-            "exampleTranslation1": "Sự lỗi thời có kế hoạch của sản phẩm mâu thuẫn với các nguyên tắc của kinh tế tuần hoàn.",
-            "exampleSentence2": "Verbraucher werden zunehmend für das Problem der Obsoleszenz sensibilisiert und fordern langlebigere Produkte.",
-            "exampleTranslation2": "Người tiêu dùng ngày càng được nâng cao nhận thức về vấn đề lỗi thời và yêu cầu các sản phẩm bền hơn.",
-            "imageUrl": "/images/vocab/c1-kreislaufwirtschaft/obsoleszenz.png",
-            "meaningDe": "Der Zustand, in dem ein Produkt nicht mehr genutzt wird, weil es technisch veraltet oder nicht mehr funktionsfähig ist."
-        },
-        {
-            "word": "Rezyklierbarkeit",
-            "article": "FEMININ",
-            "plural": "die Rezyklierbarkeiten",
-            "wordType": "NOMEN",
-            "meaningVi": "Khả năng tái chế",
-            "meaningEn": "Recyclability",
-            "exampleSentence1": "Die Rezyklierbarkeit eines Produkts sollte bereits in der Designphase berücksichtigt werden.",
-            "exampleTranslation1": "Khả năng tái chế của một sản phẩm nên được xem xét ngay từ giai đoạn thiết kế.",
-            "exampleSentence2": "Die Verbesserung der Rezyklierbarkeit von Kunststoffen ist ein wichtiger Schritt zur Reduzierung der Umweltbelastung.",
-            "exampleTranslation2": "Việc cải thiện khả năng tái chế của nhựa là một bước quan trọng để giảm thiểu tác động đến môi trường.",
-            "imageUrl": "/images/vocab/c1-kreislaufwirtschaft/rezyklierbarkeit.png",
-            "meaningDe": "Die Eigenschaft eines Materials, wiederverwertet werden zu können."
-        },
-        {
-            "word": "Sekundärrohstoff",
-            "article": "MASKULIN",
-            "plural": "die Sekundärrohstoffe",
-            "wordType": "NOMEN",
-            "meaningVi": "Nguyên liệu thứ cấp",
-            "meaningEn": "Secondary Raw Material",
-            "exampleSentence1": "Die Nutzung von Sekundärrohstoffen reduziert den Bedarf an Primärrohstoffen und schont natürliche Ressourcen.",
-            "exampleTranslation1": "Việc sử dụng nguyên liệu thứ cấp giúp giảm nhu cầu về nguyên liệu sơ cấp và bảo tồn tài nguyên thiên nhiên.",
-            "exampleSentence2": "Die Gewinnung hochwertiger Sekundärrohstoffe erfordert fortschrittliche Trenn- und Aufbereitungstechnologien.",
-            "exampleTranslation2": "Việc thu hồi nguyên liệu thứ cấp chất lượng cao đòi hỏi các công nghệ tách và xử lý tiên tiến.",
-            "imageUrl": "/images/vocab/c1-kreislaufwirtschaft/sekundaerrohstoff.png",
-            "meaningDe": "Ein Material, das aus Abfällen durch Recycling gewonnen wurde."
-        },
-        {
-            "word": "Kaskadennutzung",
-            "article": "FEMININ",
-            "plural": "die Kaskadennutzungen",
-            "wordType": "NOMEN",
-            "meaningVi": "Sử dụng theo tầng, sử dụng đa cấp",
-            "meaningEn": "Cascading Use (sequential use of resources for different purposes)",
-            "exampleSentence1": "Die Kaskadennutzung von Biomasse maximiert den Wertstofferhalt und minimiert Abfälle.",
-            "exampleTranslation1": "Sử dụng sinh khối theo tầng tối đa hóa việc bảo toàn giá trị vật liệu và giảm thiểu chất thải.",
-            "exampleSentence2": "Ein intelligentes System zur Kaskadennutzung kann die Effizienz der Ressourcennutzung in verschiedenen Industrien steigern.",
-            "exampleTranslation2": "Một hệ thống thông minh để sử dụng theo tầng có thể tăng cường hiệu quả sử dụng tài nguyên trong các ngành công nghiệp khác nhau.",
-            "imageUrl": "/images/vocab/c1-kreislaufwirtschaft/kaskadennutzung.png",
-            "meaningDe": "Die mehrstufige Nutzung eines Rohstoffs, bis er nicht mehr verwendbar ist."
-        },
-        {
-            "word": "ökologischer Fußabdruck",
-            "article": "MASKULIN",
-            "plural": "die ökologischen Fußabdrücke",
-            "wordType": "NOMEN",
-            "meaningVi": "Dấu chân sinh thái",
-            "meaningEn": "Ecological Footprint",
-            "exampleSentence1": "Die Reduzierung des ökologischen Fußabdrucks ist ein globales Ziel zur Bewältigung der Klimakrise.",
-            "exampleTranslation1": "Giảm dấu chân sinh thái là một mục tiêu toàn cầu để đối phó với khủng hoảng khí hậu.",
-            "exampleSentence2": "Unternehmen können ihren ökologischen Fußabdruck verringern, indem sie auf erneuerbare Energien und kreislauffähige Materialien umsteigen.",
-            "exampleTranslation2": "Các doanh nghiệp có thể giảm dấu chân sinh thái của mình bằng cách chuyển sang năng lượng tái tạo và vật liệu có thể tái chế.",
-            "imageUrl": "/images/vocab/c1-kreislaufwirtschaft/oekologischer-fussabdruck.png",
-            "meaningDe": "Ein Maß dafür, wie stark ein Mensch oder ein Land die Umwelt belastet."
-        },
-        {
-            "word": "Cradle-to-Cradle-Prinzip",
-            "article": "NEUTRUM",
-            "plural": "die Cradle-to-Cradle-Prinzipien",
-            "wordType": "NOMEN",
-            "meaningVi": "Nguyên tắc từ cái nôi đến cái nôi",
-            "meaningEn": "Cradle-to-Cradle Principle",
-            "exampleSentence1": "Das Cradle-to-Cradle-Prinzip fordert, Produkte so zu gestalten, dass sie in biologische oder technische Kreisläufe zurückgeführt werden können.",
-            "exampleTranslation1": "Nguyên tắc từ cái nôi đến cái nôi đòi hỏi sản phẩm phải được thiết kế sao cho chúng có thể được trả lại vào các chu trình sinh học hoặc kỹ thuật.",
-            "exampleSentence2": "Die Implementierung des Cradle-to-Cradle-Prinzips erfordert eine radikale Neudefinition von Produktdesign und Materialwirtschaft.",
-            "exampleTranslation2": "Việc thực hiện nguyên tắc từ cái nôi đến cái nôi đòi hỏi một sự định nghĩa lại triệt để về thiết kế sản phẩm và quản lý vật liệu.",
-            "imageUrl": "/images/vocab/c1-kreislaufwirtschaft/cradle-to-cradle-prinzip.png",
-            "meaningDe": "Ein Konzept, bei dem Produkte so gestaltet sind, dass alle Bestandteile vollständig in den Kreislauf zurückkehren."
-        },
-        {
-            "word": "Materialkreislauf",
-            "article": "MASKULIN",
-            "plural": "die Materialkreisläufe",
-            "wordType": "NOMEN",
-            "meaningVi": "Chu trình vật liệu",
-            "meaningEn": "Material Cycle",
-            "exampleSentence1": "Ein geschlossener Materialkreislauf verhindert den Verlust wertvoller Ressourcen und reduziert die Abfallmenge.",
-            "exampleTranslation1": "Một chu trình vật liệu khép kín ngăn chặn sự mất mát tài nguyên quý giá và giảm lượng chất thải.",
-            "exampleSentence2": "Innovationen in der Materialwissenschaft sind entscheidend für die Etablierung effizienter Materialkreisläufe.",
-            "exampleTranslation2": "Đổi mới trong khoa học vật liệu là yếu tố quyết định để thiết lập các chu trình vật liệu hiệu quả.",
-            "imageUrl": "/images/vocab/c1-kreislaufwirtschaft/materialkreislauf.png",
-            "meaningDe": "Der geschlossene Weg eines Stoffes von der Produktion über die Nutzung bis zur Wiederverwertung."
-        },
-        {
-            "word": "Ressourcenverbrauch",
-            "article": "MASKULIN",
-            "plural": "die Ressourcenverbräuche",
-            "wordType": "NOMEN",
-            "meaningVi": "Tiêu thụ tài nguyên",
-            "meaningEn": "Resource Consumption",
-            "exampleSentence1": "Der globale Ressourcenverbrauch übersteigt die Regenerationsfähigkeit der Erde bei Weitem.",
-            "exampleTranslation1": "Sự tiêu thụ tài nguyên toàn cầu vượt xa khả năng tái tạo của Trái đất.",
-            "exampleSentence2": "Politische Maßnahmen zielen darauf ab, den Ressourcenverbrauch durch Effizienzsteigerung und Kreislaufwirtschaft zu senken.",
-            "exampleTranslation2": "Các biện pháp chính sách nhằm mục đích giảm tiêu thụ tài nguyên thông qua việc tăng hiệu quả và kinh tế tuần hoàn.",
-            "imageUrl": "/images/vocab/c1-kreislaufwirtschaft/ressourcenverbrauch.png",
-            "meaningDe": "Die Menge an natürlichen Materialien, die für einen bestimmten Zweck genutzt wird."
-        },
-        {
-            "word": "Langlebigkeit",
-            "article": "FEMININ",
-            "plural": "die Langlebigkeiten",
-            "wordType": "NOMEN",
-            "meaningVi": "Độ bền, tuổi thọ cao",
-            "meaningEn": "Durability, Longevity",
-            "exampleSentence1": "Die Langlebigkeit von Produkten ist ein entscheidendes Kriterium für eine nachhaltige Konsumkultur.",
-            "exampleTranslation1": "Độ bền của sản phẩm là một tiêu chí quyết định cho một văn hóa tiêu dùng bền vững.",
-            "exampleSentence2": "Investitionen in Qualität und Langlebigkeit reduzieren langfristig den Bedarf an Neuanschaffungen und schonen somit Ressourcen.",
-            "exampleTranslation2": "Đầu tư vào chất lượng và độ bền lâu dài giúp giảm nhu cầu mua sắm mới và do đó bảo tồn tài nguyên.",
-            "imageUrl": "/images/vocab/c1-kreislaufwirtschaft/langlebigkeit.png",
-            "meaningDe": "Die Eigenschaft eines Produkts, über einen langen Zeitraum funktionsfähig zu bleiben."
-        },
-        {
-            "word": "rezyklieren",
-            "article": null,
-            "plural": null,
-            "wordType": "VERB",
-            "meaningVi": "Tái chế",
-            "meaningEn": "to recycle",
-            "exampleSentence1": "Es ist entscheidend, Kunststoffe sortenrein zu rezyklieren, um hochwertige Sekundärrohstoffe zu gewinnen.",
-            "exampleTranslation1": "Việc tái chế nhựa theo từng loại là rất quan trọng để thu hồi nguyên liệu thứ cấp chất lượng cao.",
-            "exampleSentence2": "Viele Metalle lassen sich nahezu unendlich oft rezyklieren, ohne an Qualität zu verlieren.",
-            "exampleTranslation2": "Nhiều kim loại có thể được tái chế gần như vô hạn mà không mất đi chất lượng.",
-            "imageUrl": "/images/vocab/c1-kreislaufwirtschaft/rezyklieren.png",
-            "meaningDe": "Abfälle so verarbeiten, dass daraus wieder neue Rohstoffe entstehen.",
-            "conjugation": {
-                "praesens": {
-                    "ich": "ich rezykliere",
-                    "du": "du rezyklierst",
-                    "er/sie/es": "er/sie/es rezykliert",
-                    "wir": "wir rezyklieren",
-                    "ihr": "ihr rezykliert",
-                    "sie/Sie": "sie/Sie rezyklieren"
-                },
-                "praeteritum": {
-                    "ich": "ich rezyklierte",
-                    "du": "du rezykliertest",
-                    "er/sie/es": "er/sie/es rezyklierte",
-                    "wir": "wir rezyklierten",
-                    "ihr": "ihr rezykliertet",
-                    "sie/Sie": "sie/Sie rezyklierten"
-                },
-                "perfekt": {
-                    "hilfsverb": "haben",
-                    "partizip2": "rezykliert"
-                },
-                "konjunktiv2": {
-                    "ich": "ich rezyklierte",
-                    "du": "du rezykliertest",
-                    "er/sie/es": "er/sie/es rezyklierte",
-                    "wir": "wir rezyklierten",
-                    "ihr": "ihr rezykliertet",
-                    "sie/Sie": "sie/Sie rezyklierten"
-                },
-                "imperativ": {
-                    "du": "rezykliere!",
-                    "ihr": "rezykliert!",
-                    "Sie": "rezyklieren Sie!"
-                }
-            }
-        },
-        {
-            "word": "demontieren",
-            "article": null,
-            "plural": null,
-            "wordType": "VERB",
-            "meaningVi": "Tháo rời, tháo dỡ",
-            "meaningEn": "to disassemble",
-            "exampleSentence1": "Produkte sollten so konstruiert sein, dass sie am Ende ihres Lebenszyklus leicht demontiert werden können.",
-            "exampleTranslation1": "Sản phẩm nên được thiết kế sao cho chúng có thể dễ dàng tháo rời vào cuối vòng đời của mình.",
-            "exampleSentence2": "Das Demontieren komplexer elektronischer Geräte erfordert spezialisiertes Fachwissen und Werkzeuge.",
-            "exampleTranslation2": "Việc tháo rời các thiết bị điện tử phức tạp đòi hỏi kiến thức chuyên môn và công cụ đặc biệt.",
-            "imageUrl": "/images/vocab/c1-kreislaufwirtschaft/demontieren.png",
-            "meaningDe": "Ein Gerät oder Bauwerk in seine Einzelteile zerlegen.",
-            "conjugation": {
-                "praesens": {
-                    "ich": "ich demontiere",
-                    "du": "du demontierst",
-                    "er/sie/es": "er/sie/es demontiert",
-                    "wir": "wir demontieren",
-                    "ihr": "ihr demontiert",
-                    "sie/Sie": "sie/Sie demontieren"
-                },
-                "praeteritum": {
-                    "ich": "ich demontierte",
-                    "du": "du demontiertest",
-                    "er/sie/es": "er/sie/es demontierte",
-                    "wir": "wir demontierten",
-                    "ihr": "ihr demontiertet",
-                    "sie/Sie": "sie/Sie demontierten"
-                },
-                "perfekt": {
-                    "hilfsverb": "haben",
-                    "partizip2": "demontiert"
-                },
-                "konjunktiv2": {
-                    "ich": "ich demontierte",
-                    "du": "du demontiertest",
-                    "er/sie/es": "er/sie/es demontierte",
-                    "wir": "wir demontierten",
-                    "ihr": "ihr demontiertet",
-                    "sie/Sie": "sie/Sie demontierten"
-                },
-                "imperativ": {
-                    "du": "demontiere!",
-                    "ihr": "demontiert!",
-                    "Sie": "demontieren Sie!"
-                }
-            }
-        },
-        {
-            "word": "regenerieren",
-            "article": null,
-            "plural": null,
-            "wordType": "VERB",
-            "meaningVi": "Tái tạo, phục hồi",
-            "meaningEn": "to regenerate, restore",
-            "exampleSentence1": "Ungenutzte Industriebrachen können durch gezielte Maßnahmen zu naturnahen Flächen regeneriert werden.",
-            "exampleTranslation1": "Các khu đất công nghiệp bỏ hoang có thể được tái tạo thành các khu vực gần gũi với thiên nhiên thông qua các biện pháp có mục tiêu.",
-            "exampleSentence2": "Ziel der biologischen Kreislaufwirtschaft ist es, Nährstoffe zu regenerieren und in den Naturkreislauf zurückzuführen.",
-            "exampleTranslation2": "Mục tiêu của kinh tế tuần hoàn sinh học là tái tạo chất dinh dưỡng và đưa chúng trở lại chu trình tự nhiên.",
-            "imageUrl": "/images/vocab/c1-kreislaufwirtschaft/regenerieren.png",
-            "meaningDe": "Einen ursprünglichen Zustand durch natürliche oder künstliche Prozesse wiederherstellen.",
-            "conjugation": {
-                "praesens": {
-                    "ich": "ich regeneriere",
-                    "du": "du regenerierst",
-                    "er/sie/es": "er/sie/es regeneriert",
-                    "wir": "wir regenerieren",
-                    "ihr": "ihr regeneriert",
-                    "sie/Sie": "sie/Sie regenerieren"
-                },
-                "praeteritum": {
-                    "ich": "ich regenerierte",
-                    "du": "du regeneriertest",
-                    "er/sie/es": "er/sie/es regenerierte",
-                    "wir": "wir regenerierten",
-                    "ihr": "ihr regeneriertet",
-                    "sie/Sie": "sie/Sie regenerierten"
-                },
-                "perfekt": {
-                    "hilfsverb": "haben",
-                    "partizip2": "regeneriert"
-                },
-                "konjunktiv2": {
-                    "ich": "ich regenerierte",
-                    "du": "du regeneriertest",
-                    "er/sie/es": "er/sie/es regenerierte",
-                    "wir": "wir regenerierten",
-                    "ihr": "ihr regeneriertet",
-                    "sie/Sie": "sie/Sie regenerierten"
-                },
-                "imperativ": {
-                    "du": "regeneriere!",
-                    "ihr": "regeneriert!",
-                    "Sie": "regenerieren Sie!"
-                }
-            }
-        },
-        {
-            "word": "optimieren",
-            "article": null,
-            "plural": null,
-            "wordType": "VERB",
-            "meaningVi": "Tối ưu hóa",
-            "meaningEn": "to optimize",
-            "exampleSentence1": "Unternehmen versuchen, ihre Logistikketten zu optimieren, um den CO2-Ausstoß zu reduzieren.",
-            "exampleTranslation1": "Các doanh nghiệp cố gắng tối ưu hóa chuỗi logistics của mình để giảm lượng khí thải CO2.",
-            "exampleSentence2": "Durch kontinuierliche Prozessverbesserungen lässt sich der Einsatz von Ressourcen in der Fertigung optimieren.",
-            "exampleTranslation2": "Thông qua việc cải tiến quy trình liên tục, việc sử dụng tài nguyên trong sản xuất có thể được tối ưu hóa.",
-            "imageUrl": "/images/vocab/c1-kreislaufwirtschaft/optimieren.png",
-            "meaningDe": "Etwas so verbessern, dass es das bestmögliche Ergebnis liefert.",
-            "conjugation": {
-                "praesens": {
-                    "ich": "ich optimiere",
-                    "du": "du optimierst",
-                    "er/sie/es": "er/sie/es optimiert",
-                    "wir": "wir optimieren",
-                    "ihr": "ihr optimiert",
-                    "sie/Sie": "sie/Sie optimieren"
-                },
-                "praeteritum": {
-                    "ich": "ich optimierte",
-                    "du": "du optimiertest",
-                    "er/sie/es": "er/sie/es optimierte",
-                    "wir": "wir optimierten",
-                    "ihr": "ihr optimiertet",
-                    "sie/Sie": "sie/Sie optimierten"
-                },
-                "perfekt": {
-                    "hilfsverb": "haben",
-                    "partizip2": "optimiert"
-                },
-                "konjunktiv2": {
-                    "ich": "ich optimierte",
-                    "du": "du optimiertest",
-                    "er/sie/es": "er/sie/es optimierte",
-                    "wir": "wir optimierten",
-                    "ihr": "ihr optimiertet",
-                    "sie/Sie": "sie/Sie optimierten"
-                },
-                "imperativ": {
-                    "du": "optimiere!",
-                    "ihr": "optimiert!",
-                    "Sie": "optimieren Sie!"
-                }
-            }
-        },
-        {
-            "word": "implementieren",
-            "article": null,
-            "plural": null,
-            "wordType": "VERB",
-            "meaningVi": "Thực hiện, triển khai",
-            "meaningEn": "to implement",
-            "exampleSentence1": "Viele Länder sind bestrebt, die Prinzipien der Kreislaufwirtschaft in ihrer Gesetzgebung zu implementieren.",
-            "exampleTranslation1": "Nhiều quốc gia đang nỗ lực thực hiện các nguyên tắc của kinh tế tuần hoàn vào luật pháp của họ.",
-            "exampleSentence2": "Die erfolgreiche Implementierung neuer Technologien erfordert oft umfangreiche Schulungen der Mitarbeiter.",
-            "exampleTranslation2": "Việc triển khai thành công các công nghệ mới thường đòi hỏi đào tạo rộng rãi cho nhân viên.",
-            "imageUrl": "/images/vocab/c1-kreislaufwirtschaft/implementieren.png",
-            "meaningDe": "Einen Plan oder ein System in die Praxis umsetzen.",
-            "conjugation": {
-                "praesens": {
-                    "ich": "ich implementiere",
-                    "du": "du implementierst",
-                    "er/sie/es": "er/sie/es implementiert",
-                    "wir": "wir implementieren",
-                    "ihr": "ihr implementiert",
-                    "sie/Sie": "sie/Sie implementieren"
-                },
-                "praeteritum": {
-                    "ich": "ich implementierte",
-                    "du": "du implementiertest",
-                    "er/sie/es": "er/sie/es implementierte",
-                    "wir": "wir implementierten",
-                    "ihr": "ihr implementiertet",
-                    "sie/Sie": "sie/Sie implementierten"
-                },
-                "perfekt": {
-                    "hilfsverb": "haben",
-                    "partizip2": "implementiert"
-                },
-                "konjunktiv2": {
-                    "ich": "ich implementierte",
-                    "du": "du implementiertest",
-                    "er/sie/es": "er/sie/es implementierte",
-                    "wir": "wir implementierten",
-                    "ihr": "ihr implementiertet",
-                    "sie/Sie": "sie/Sie implementierten"
-                },
-                "imperativ": {
-                    "du": "implementiere!",
-                    "ihr": "implementiert!",
-                    "Sie": "implementieren Sie!"
-                }
-            }
-        },
-        {
-            "word": "bilanzieren",
-            "article": null,
-            "plural": null,
-            "wordType": "VERB",
-            "meaningVi": "Cân bằng, đánh giá, lập bảng cân đối",
-            "meaningEn": "to balance, account for, assess (e.g., material flows, carbon footprint)",
-            "exampleSentence1": "Es ist notwendig, die Umweltauswirkungen neuer Produkte von der Herstellung bis zur Entsorgung präzise zu bilanzieren.",
-            "exampleTranslation1": "Cần phải đánh giá chính xác tác động môi trường của các sản phẩm mới từ sản xuất đến xử lý.",
-            "exampleSentence2": "Viele Unternehmen bilanzieren mittlerweile ihren CO2-Fußabdruck, um Transparenz zu schaffen und Minderungsstrategien zu entwickeln.",
-            "exampleTranslation2": "Nhiều doanh nghiệp hiện đang lập bảng cân đối dấu chân carbon của mình để tạo sự minh bạch và phát triển các chiến lược giảm thiểu.",
-            "imageUrl": "/images/vocab/c1-kreislaufwirtschaft/bilanzieren.png",
-            "meaningDe": "Die Einnahmen und Ausgaben oder Vor- und Nachteile gegenüberstellen und bewerten.",
-            "conjugation": {
-                "praesens": {
-                    "ich": "ich bilanziere",
-                    "du": "du bilanzierst",
-                    "er/sie/es": "er/sie/es bilanziert",
-                    "wir": "wir bilanzieren",
-                    "ihr": "ihr bilanziert",
-                    "sie/Sie": "sie/Sie bilanzieren"
-                },
-                "praeteritum": {
-                    "ich": "ich bilanzierte",
-                    "du": "du bilanziertest",
-                    "er/sie/es": "er/sie/es bilanzierte",
-                    "wir": "wir bilanzierten",
-                    "ihr": "ihr bilanziertet",
-                    "sie/Sie": "sie/Sie bilanzierten"
-                },
-                "perfekt": {
-                    "hilfsverb": "haben",
-                    "partizip2": "bilanziert"
-                },
-                "konjunktiv2": {
-                    "ich": "ich bilanzierte",
-                    "du": "du bilanziertest",
-                    "er/sie/es": "er/sie/es bilanzierte",
-                    "wir": "wir bilanzierten",
-                    "ihr": "ihr bilanziertet",
-                    "sie/Sie": "sie/Sie bilanzierten"
-                },
-                "imperativ": {
-                    "du": "bilanziere!",
-                    "ihr": "bilanziert!",
-                    "Sie": "bilanzieren Sie!"
-                }
-            }
-        },
-        {
-            "word": "evaluieren",
-            "article": null,
-            "plural": null,
-            "wordType": "VERB",
-            "meaningVi": "Đánh giá",
-            "meaningEn": "to evaluate",
-            "exampleSentence1": "Politische Maßnahmen zur Förderung der Kreislaufwirtschaft müssen regelmäßig evaluiert werden, um ihre Wirksamkeit zu überprüfen.",
-            "exampleTranslation1": "Các biện pháp chính sách nhằm thúc đẩy kinh tế tuần hoàn cần được đánh giá định kỳ để kiểm tra hiệu quả của chúng.",
-            "exampleSentence2": "Experten evaluieren die potenziellen Risiken und Chancen neuer Technologien vor ihrer Markteinführung.",
-            "exampleTranslation2": "Các chuyên gia đánh giá các rủi ro và cơ hội tiềm tàng của các công nghệ mới trước khi chúng được tung ra thị trường.",
-            "imageUrl": "/images/vocab/c1-kreislaufwirtschaft/evaluieren.png",
-            "meaningDe": "Den Wert oder die Qualität einer Sache durch eine systematische Untersuchung feststellen.",
-            "conjugation": {
-                "praesens": {
-                    "ich": "ich evaluiere",
-                    "du": "du evaluierst",
-                    "er/sie/es": "er/sie/es evaluiert",
-                    "wir": "wir evaluieren",
-                    "ihr": "ihr evaluiert",
-                    "sie/Sie": "sie/Sie evaluieren"
-                },
-                "praeteritum": {
-                    "ich": "ich evaluierte",
-                    "du": "du evaluiertest",
-                    "er/sie/es": "er/sie/es evaluierte",
-                    "wir": "wir evaluierten",
-                    "ihr": "ihr evaluiertet",
-                    "sie/Sie": "sie/Sie evaluierten"
-                },
-                "perfekt": {
-                    "hilfsverb": "haben",
-                    "partizip2": "evaluiert"
-                },
-                "konjunktiv2": {
-                    "ich": "ich evaluierte",
-                    "du": "du evaluiertest",
-                    "er/sie/es": "er/sie/es evaluierte",
-                    "wir": "wir evaluierten",
-                    "ihr": "ihr evaluiertet",
-                    "sie/Sie": "sie/Sie evaluierten"
-                },
-                "imperativ": {
-                    "du": "evaluiere!",
-                    "ihr": "evaluiert!",
-                    "Sie": "evaluieren Sie!"
-                }
-            }
-        },
-        {
-            "word": "verstromen",
-            "article": null,
-            "plural": null,
-            "wordType": "VERB",
-            "meaningVi": "Đốt để phát điện",
-            "meaningEn": "to incinerate for energy, to convert to electricity (e.g., waste)",
-            "exampleSentence1": "Die Verstromung von Abfällen ist eine Form der energetischen Verwertung, die jedoch kritisch betrachtet wird.",
-            "exampleTranslation1": "Việc đốt chất thải để phát điện là một hình thức thu hồi năng lượng, nhưng nó bị xem xét một cách phê phán.",
-            "exampleSentence2": "Holzabfälle können entweder stofflich oder energetisch verwertet werden, wobei letzteres oft die Verstromung bedeutet.",
-            "exampleTranslation2": "Chất thải gỗ có thể được tái chế vật liệu hoặc thu hồi năng lượng, trong đó phương án sau thường có nghĩa là đốt để phát điện.",
-            "imageUrl": "/images/vocab/c1-kreislaufwirtschaft/verstromen.png",
-            "meaningDe": "Energie aus einer Quelle in elektrische Energie umwandeln.",
-            "conjugation": {
-                "praesens": {
-                    "ich": "ich verstrome",
-                    "du": "du verstromst",
-                    "er/sie/es": "er/sie/es verstromt",
-                    "wir": "wir verstromen",
-                    "ihr": "ihr verstromt",
-                    "sie/Sie": "sie/Sie verstromen"
-                },
-                "praeteritum": {
-                    "ich": "ich verstromte",
-                    "du": "du verstromtest",
-                    "er/sie/es": "er/sie/es verstromte",
-                    "wir": "wir verstromten",
-                    "ihr": "ihr verstromtet",
-                    "sie/Sie": "sie/Sie verstromten"
-                },
-                "perfekt": {
-                    "hilfsverb": "haben",
-                    "partizip2": "verstromt"
-                },
-                "konjunktiv2": {
-                    "ich": "ich verstromte",
-                    "du": "du verstromtest",
-                    "er/sie/es": "er/sie/es verstromte",
-                    "wir": "wir verstromten",
-                    "ihr": "ihr verstromtet",
-                    "sie/Sie": "sie/Sie verstromten"
-                },
-                "imperativ": {
-                    "du": "verstrome!",
-                    "ihr": "verstromt!",
-                    "Sie": "verstromen Sie!"
-                }
-            }
-        },
-        {
-            "word": "entmaterialisieren",
-            "article": null,
-            "plural": null,
-            "wordType": "VERB",
-            "meaningVi": "Phi vật chất hóa, giảm lượng vật liệu",
-            "meaningEn": "to dematerialize (reduce material input)",
-            "exampleSentence1": "Digitale Produkte können dazu beitragen, den Konsum physischer Güter zu entmaterialisieren.",
-            "exampleTranslation1": "Các sản phẩm kỹ thuật số có thể giúp phi vật chất hóa việc tiêu thụ hàng hóa vật lý.",
-            "exampleSentence2": "Ein wichtiges Ziel der Kreislaufwirtschaft ist es, Produkte und Dienstleistungen zu entmaterialisieren und somit den Ressourcenverbrauch zu senken.",
-            "exampleTranslation2": "Một mục tiêu quan trọng của kinh tế tuần hoàn là phi vật chất hóa các sản phẩm và dịch vụ, từ đó giảm tiêu thụ tài nguyên.",
-            "imageUrl": "/images/vocab/c1-kreislaufwirtschaft/entmaterialisieren.png",
-            "meaningDe": "Den Bedarf an physischen Materialien durch digitale Lösungen oder Effizienz reduzieren.",
-            "conjugation": {
-                "praesens": {
-                    "ich": "ich entmaterialisiere",
-                    "du": "du entmaterialisierst",
-                    "er/sie/es": "er/sie/es entmaterialisiert",
-                    "wir": "wir entmaterialisieren",
-                    "ihr": "ihr entmaterialisiert",
-                    "sie/Sie": "sie/Sie entmaterialisieren"
-                },
-                "praeteritum": {
-                    "ich": "ich entmaterialisierte",
-                    "du": "du entmaterialisiertest",
-                    "er/sie/es": "er/sie/es entmaterialisierte",
-                    "wir": "wir entmaterialisierten",
-                    "ihr": "ihr entmaterialisiertet",
-                    "sie/Sie": "sie/Sie entmaterialisierten"
-                },
-                "perfekt": {
-                    "hilfsverb": "haben",
-                    "partizip2": "entmaterialisiert"
-                },
-                "konjunktiv2": {
-                    "ich": "ich entmaterialisierte",
-                    "du": "du entmaterialisiertest",
-                    "er/sie/es": "er/sie/es entmaterialisierte",
-                    "wir": "wir entmaterialisierten",
-                    "ihr": "ihr entmaterialisiertet",
-                    "sie/Sie": "sie/Sie entmaterialisierten"
-                },
-                "imperativ": {
-                    "du": "entmaterialisiere!",
-                    "ihr": "entmaterialisiert!",
-                    "Sie": "entmaterialisieren Sie!"
-                }
-            }
-        },
-        {
-            "word": "ressourcenschonend",
-            "article": null,
-            "plural": null,
-            "wordType": "ADJEKTIV",
-            "meaningVi": "Tiết kiệm tài nguyên",
-            "meaningEn": "resource-saving",
-            "exampleSentence1": "Die Entwicklung ressourcenschonender Technologien ist entscheidend für eine nachhaltige Zukunft.",
-            "exampleTranslation1": "Việc phát triển các công nghệ tiết kiệm tài nguyên là rất quan trọng cho một tương lai bền vững.",
-            "exampleSentence2": "Ein ressourcenschonender Lebensstil beinhaltet bewussten Konsum und die Vermeidung von Verschwendung.",
-            "exampleTranslation2": "Một lối sống tiết kiệm tài nguyên bao gồm tiêu dùng có ý thức và tránh lãng phí.",
-            "imageUrl": "/images/vocab/c1-kreislaufwirtschaft/ressourcenschonend.png",
-            "meaningDe": "So handelnd, dass möglichst wenig natürliche Rohstoffe verbraucht werden."
-        },
-        {
-            "word": "zirkulär",
-            "article": null,
-            "plural": null,
-            "wordType": "ADJEKTIV",
-            "meaningVi": "Tuần hoàn",
-            "meaningEn": "circular",
-            "exampleSentence1": "Das Konzept der zirkulären Wertschöpfungsketten gewinnt in der Industrie immer mehr an Bedeutung.",
-            "exampleTranslation1": "Khái niệm chuỗi giá trị tuần hoàn ngày càng trở nên quan trọng trong ngành công nghiệp.",
-            "exampleSentence2": "Eine zirkuläre Wirtschaft erfordert ein Umdenken in Design, Produktion und Konsum.",
-            "exampleTranslation2": "Một nền kinh tế tuần hoàn đòi hỏi sự thay đổi tư duy trong thiết kế, sản xuất và tiêu dùng.",
-            "imageUrl": "/images/vocab/c1-kreislaufwirtschaft/zirkulaer.png",
-            "meaningDe": "In einem geschlossenen Kreislauf funktionierend, sodass Ressourcen dauerhaft im System bleiben."
-        },
-        {
-            "word": "langlebig",
-            "article": null,
-            "plural": null,
-            "wordType": "ADJEKTIV",
-            "meaningVi": "Bền bỉ, có tuổi thọ cao",
-            "meaningEn": "durable, long-lasting",
-            "exampleSentence1": "Verbraucher bevorzugen zunehmend langlebige Produkte, die seltener ersetzt werden müssen.",
-            "exampleTranslation1": "Người tiêu dùng ngày càng ưu tiên các sản phẩm bền bỉ, ít phải thay thế hơn.",
-            "exampleSentence2": "Die Herstellung langlebiger Güter trägt zur Reduzierung des Ressourcenverbrauchs bei und minimiert Abfall.",
-            "exampleTranslation2": "Việc sản xuất hàng hóa bền bỉ góp phần giảm tiêu thụ tài nguyên và giảm thiểu chất thải.",
-            "imageUrl": "/images/vocab/c1-kreislaufwirtschaft/langlebig.png",
-            "meaningDe": "Über eine lange Zeit haltbar oder benutzbar."
-        },
-        {
-            "word": "rezyklierbar",
-            "article": null,
-            "plural": null,
-            "wordType": "ADJEKTIV",
-            "meaningVi": "Có thể tái chế",
-            "meaningEn": "recyclable",
-            "exampleSentence1": "Verpackungen aus einem einzigen Material sind in der Regel besser rezyklierbar als Verbundstoffe.",
-            "exampleTranslation1": "Bao bì làm từ một loại vật liệu duy nhất thường dễ tái chế hơn so với vật liệu tổng hợp.",
-            "exampleSentence2": "Um die Rezyklierbarkeit zu erhöhen, müssen Produkte von Beginn an entsprechend konzipiert werden.",
-            "exampleTranslation2": "Để tăng khả năng tái chế, sản phẩm phải được thiết kế phù hợp ngay từ đầu.",
-            "imageUrl": "/images/vocab/c1-kreislaufwirtschaft/rezyklierbar.png",
-            "meaningDe": "So beschaffen, dass es wiederverwertet werden kann."
-        },
-        {
-            "word": "biologisch abbaubar",
-            "article": null,
-            "plural": null,
-            "wordType": "ADJEKTIV",
-            "meaningVi": "Có khả năng phân hủy sinh học",
-            "meaningEn": "biodegradable",
-            "exampleSentence1": "Biologisch abbaubare Kunststoffe bieten eine umweltfreundlichere Alternative zu herkömmlichen Kunststoffen.",
-            "exampleTranslation1": "Nhựa có khả năng phân hủy sinh học mang lại một lựa chọn thân thiện với môi trường hơn so với nhựa thông thường.",
-            "exampleSentence2": "Kompostierbare Verpackungen sind so konzipiert, dass sie unter bestimmten Bedingungen biologisch abbaubar sind.",
-            "exampleTranslation2": "Bao bì có thể ủ phân được thiết kế để phân hủy sinh học trong các điều kiện nhất định.",
-            "imageUrl": "/images/vocab/c1-kreislaufwirtschaft/biologisch-abbaubar.png",
-            "meaningDe": "Durch Mikroorganismen in natürliche Bestandteile zerlegbar."
-        },
-        {
-            "word": "materialeffizient",
-            "article": null,
-            "plural": null,
-            "wordType": "ADJEKTIV",
-            "meaningVi": "Hiệu quả vật liệu",
-            "meaningEn": "material-efficient",
-            "exampleSentence1": "Ein materialeffizientes Design minimiert den Einsatz von Rohstoffen bei der Herstellung eines Produkts.",
-            "exampleTranslation1": "Một thiết kế hiệu quả vật liệu giúp giảm thiểu việc sử dụng nguyên liệu thô trong quá trình sản xuất sản phẩm.",
-            "exampleSentence2": "Moderne Fertigungstechnologien ermöglichen es, deutlich materialeffizienter zu produzieren als früher.",
-            "exampleTranslation2": "Các công nghệ sản xuất hiện đại cho phép sản xuất hiệu quả vật liệu hơn đáng kể so với trước đây.",
-            "imageUrl": "/images/vocab/c1-kreislaufwirtschaft/materialeffizient.png",
-            "meaningDe": "Mit einem geringen Materialeinsatz ein optimales Ergebnis erzielend."
-        },
-        {
-            "word": "obsolet",
-            "article": null,
-            "plural": null,
-            "wordType": "ADJEKTIV",
-            "meaningVi": "Lỗi thời, không còn dùng được",
-            "meaningEn": "obsolete",
-            "exampleSentence1": "Viele elektronische Geräte werden durch schnelle technologische Entwicklungen schnell obsolet.",
-            "exampleTranslation1": "Nhiều thiết bị điện tử nhanh chóng trở nên lỗi thời do sự phát triển công nghệ nhanh chóng.",
-            "exampleSentence2": "Die Politik sollte Anreize schaffen, um die vorzeitige Obsoleszenz von Produkten zu verhindern.",
-            "exampleTranslation2": "Chính sách nên tạo ra các ưu đãi để ngăn chặn sự lỗi thời sớm của sản phẩm.",
-            "imageUrl": "/images/vocab/c1-kreislaufwirtschaft/obsolet.png",
-            "meaningDe": "Aufgrund technischer oder gesellschaftlicher Entwicklungen überflüssig oder hinfällig geworden."
-        },
-        {
-            "word": "ganzheitlich",
-            "article": null,
-            "plural": null,
-            "wordType": "ADVERB",
-            "meaningVi": "Một cách toàn diện",
-            "meaningEn": "holistically, comprehensively",
-            "exampleSentence1": "Um die Herausforderungen der Nachhaltigkeit zu bewältigen, müssen wir Probleme ganzheitlich betrachten.",
-            "exampleTranslation1": "Để giải quyết các thách thức về bền vững, chúng ta phải xem xét các vấn đề một cách toàn diện.",
-            "exampleSentence2": "Eine ganzheitlich angelegte Strategie berücksichtigt alle relevanten Akteure und deren Wechselwirkungen.",
-            "exampleTranslation2": "Một chiến lược được thiết kế toàn diện sẽ xem xét tất cả các bên liên quan và sự tương tác của chúng.",
-            "imageUrl": "/images/vocab/c1-kreislaufwirtschaft/ganzheitlich.png",
-            "meaningDe": "Alle Aspekte eines Problems oder Systems umfassend betrachtend."
+        "imperativ": {
+          "du": "rezykliere!",
+          "ihr": "rezykliert!",
+          "Sie": "rezyklieren Sie!"
         }
-    ]
+      }
+    },
+    {
+      "word": "demontieren",
+      "article": null,
+      "plural": null,
+      "wordType": "VERB",
+      "meaningVi": "Tháo rời, tháo dỡ",
+      "meaningEn": "to disassemble",
+      "exampleSentence1": "Produkte sollten so konstruiert sein, dass sie am Ende ihres Lebenszyklus leicht demontiert werden können.",
+      "exampleTranslation1": "Sản phẩm nên được thiết kế sao cho chúng có thể dễ dàng tháo rời vào cuối vòng đời của mình.",
+      "exampleSentence2": "Das Demontieren komplexer elektronischer Geräte erfordert spezialisiertes Fachwissen und Werkzeuge.",
+      "exampleTranslation2": "Việc tháo rời các thiết bị điện tử phức tạp đòi hỏi kiến thức chuyên môn và công cụ đặc biệt.",
+      "imageUrl": "/images/vocab/c1-kreislaufwirtschaft/demontieren.png",
+      "meaningDe": "Ein Gerät oder Bauwerk in seine Einzelteile zerlegen.",
+      "conjugation": {
+        "praesens": {
+          "ich": "ich demontiere",
+          "du": "du demontierst",
+          "er/sie/es": "er/sie/es demontiert",
+          "wir": "wir demontieren",
+          "ihr": "ihr demontiert",
+          "sie/Sie": "sie/Sie demontieren"
+        },
+        "praeteritum": {
+          "ich": "ich demontierte",
+          "du": "du demontiertest",
+          "er/sie/es": "er/sie/es demontierte",
+          "wir": "wir demontierten",
+          "ihr": "ihr demontiertet",
+          "sie/Sie": "sie/Sie demontierten"
+        },
+        "perfekt": {
+          "hilfsverb": "haben",
+          "partizip2": "demontiert"
+        },
+        "konjunktiv2": {
+          "ich": "ich demontierte",
+          "du": "du demontiertest",
+          "er/sie/es": "er/sie/es demontierte",
+          "wir": "wir demontierten",
+          "ihr": "ihr demontiertet",
+          "sie/Sie": "sie/Sie demontierten"
+        },
+        "imperativ": {
+          "du": "demontiere!",
+          "ihr": "demontiert!",
+          "Sie": "demontieren Sie!"
+        }
+      }
+    },
+    {
+      "word": "regenerieren",
+      "article": null,
+      "plural": null,
+      "wordType": "VERB",
+      "meaningVi": "Tái tạo, phục hồi",
+      "meaningEn": "to regenerate, restore",
+      "exampleSentence1": "Ungenutzte Industriebrachen können durch gezielte Maßnahmen zu naturnahen Flächen regeneriert werden.",
+      "exampleTranslation1": "Các khu đất công nghiệp bỏ hoang có thể được tái tạo thành các khu vực gần gũi với thiên nhiên thông qua các biện pháp có mục tiêu.",
+      "exampleSentence2": "Ziel der biologischen Kreislaufwirtschaft ist es, Nährstoffe zu regenerieren und in den Naturkreislauf zurückzuführen.",
+      "exampleTranslation2": "Mục tiêu của kinh tế tuần hoàn sinh học là tái tạo chất dinh dưỡng và đưa chúng trở lại chu trình tự nhiên.",
+      "imageUrl": "/images/vocab/c1-kreislaufwirtschaft/regenerieren.png",
+      "meaningDe": "Einen ursprünglichen Zustand durch natürliche oder künstliche Prozesse wiederherstellen.",
+      "conjugation": {
+        "praesens": {
+          "ich": "ich regeneriere",
+          "du": "du regenerierst",
+          "er/sie/es": "er/sie/es regeneriert",
+          "wir": "wir regenerieren",
+          "ihr": "ihr regeneriert",
+          "sie/Sie": "sie/Sie regenerieren"
+        },
+        "praeteritum": {
+          "ich": "ich regenerierte",
+          "du": "du regeneriertest",
+          "er/sie/es": "er/sie/es regenerierte",
+          "wir": "wir regenerierten",
+          "ihr": "ihr regeneriertet",
+          "sie/Sie": "sie/Sie regenerierten"
+        },
+        "perfekt": {
+          "hilfsverb": "haben",
+          "partizip2": "regeneriert"
+        },
+        "konjunktiv2": {
+          "ich": "ich regenerierte",
+          "du": "du regeneriertest",
+          "er/sie/es": "er/sie/es regenerierte",
+          "wir": "wir regenerierten",
+          "ihr": "ihr regeneriertet",
+          "sie/Sie": "sie/Sie regenerierten"
+        },
+        "imperativ": {
+          "du": "regeneriere!",
+          "ihr": "regeneriert!",
+          "Sie": "regenerieren Sie!"
+        }
+      }
+    },
+    {
+      "word": "optimieren",
+      "article": null,
+      "plural": null,
+      "wordType": "VERB",
+      "meaningVi": "Tối ưu hóa",
+      "meaningEn": "to optimize",
+      "exampleSentence1": "Unternehmen versuchen, ihre Logistikketten zu optimieren, um den CO2-Ausstoß zu reduzieren.",
+      "exampleTranslation1": "Các doanh nghiệp cố gắng tối ưu hóa chuỗi logistics của mình để giảm lượng khí thải CO2.",
+      "exampleSentence2": "Durch kontinuierliche Prozessverbesserungen lässt sich der Einsatz von Ressourcen in der Fertigung optimieren.",
+      "exampleTranslation2": "Thông qua việc cải tiến quy trình liên tục, việc sử dụng tài nguyên trong sản xuất có thể được tối ưu hóa.",
+      "imageUrl": "/images/vocab/c1-kreislaufwirtschaft/optimieren.png",
+      "meaningDe": "Etwas so verbessern, dass es das bestmögliche Ergebnis liefert.",
+      "conjugation": {
+        "praesens": {
+          "ich": "ich optimiere",
+          "du": "du optimierst",
+          "er/sie/es": "er/sie/es optimiert",
+          "wir": "wir optimieren",
+          "ihr": "ihr optimiert",
+          "sie/Sie": "sie/Sie optimieren"
+        },
+        "praeteritum": {
+          "ich": "ich optimierte",
+          "du": "du optimiertest",
+          "er/sie/es": "er/sie/es optimierte",
+          "wir": "wir optimierten",
+          "ihr": "ihr optimiertet",
+          "sie/Sie": "sie/Sie optimierten"
+        },
+        "perfekt": {
+          "hilfsverb": "haben",
+          "partizip2": "optimiert"
+        },
+        "konjunktiv2": {
+          "ich": "ich optimierte",
+          "du": "du optimiertest",
+          "er/sie/es": "er/sie/es optimierte",
+          "wir": "wir optimierten",
+          "ihr": "ihr optimiertet",
+          "sie/Sie": "sie/Sie optimierten"
+        },
+        "imperativ": {
+          "du": "optimiere!",
+          "ihr": "optimiert!",
+          "Sie": "optimieren Sie!"
+        }
+      }
+    },
+    {
+      "word": "implementieren",
+      "article": null,
+      "plural": null,
+      "wordType": "VERB",
+      "meaningVi": "Thực hiện, triển khai",
+      "meaningEn": "to implement",
+      "exampleSentence1": "Viele Länder sind bestrebt, die Prinzipien der Kreislaufwirtschaft in ihrer Gesetzgebung zu implementieren.",
+      "exampleTranslation1": "Nhiều quốc gia đang nỗ lực thực hiện các nguyên tắc của kinh tế tuần hoàn vào luật pháp của họ.",
+      "exampleSentence2": "Die erfolgreiche Implementierung neuer Technologien erfordert oft umfangreiche Schulungen der Mitarbeiter.",
+      "exampleTranslation2": "Việc triển khai thành công các công nghệ mới thường đòi hỏi đào tạo rộng rãi cho nhân viên.",
+      "imageUrl": "/images/vocab/c1-kreislaufwirtschaft/implementieren.png",
+      "meaningDe": "Einen Plan oder ein System in die Praxis umsetzen.",
+      "conjugation": {
+        "praesens": {
+          "ich": "ich implementiere",
+          "du": "du implementierst",
+          "er/sie/es": "er/sie/es implementiert",
+          "wir": "wir implementieren",
+          "ihr": "ihr implementiert",
+          "sie/Sie": "sie/Sie implementieren"
+        },
+        "praeteritum": {
+          "ich": "ich implementierte",
+          "du": "du implementiertest",
+          "er/sie/es": "er/sie/es implementierte",
+          "wir": "wir implementierten",
+          "ihr": "ihr implementiertet",
+          "sie/Sie": "sie/Sie implementierten"
+        },
+        "perfekt": {
+          "hilfsverb": "haben",
+          "partizip2": "implementiert"
+        },
+        "konjunktiv2": {
+          "ich": "ich implementierte",
+          "du": "du implementiertest",
+          "er/sie/es": "er/sie/es implementierte",
+          "wir": "wir implementierten",
+          "ihr": "ihr implementiertet",
+          "sie/Sie": "sie/Sie implementierten"
+        },
+        "imperativ": {
+          "du": "implementiere!",
+          "ihr": "implementiert!",
+          "Sie": "implementieren Sie!"
+        }
+      }
+    },
+    {
+      "word": "bilanzieren",
+      "article": null,
+      "plural": null,
+      "wordType": "VERB",
+      "meaningVi": "Cân bằng, đánh giá, lập bảng cân đối",
+      "meaningEn": "to balance, account for, assess (e.g., material flows, carbon footprint)",
+      "exampleSentence1": "Es ist notwendig, die Umweltauswirkungen neuer Produkte von der Herstellung bis zur Entsorgung präzise zu bilanzieren.",
+      "exampleTranslation1": "Cần phải đánh giá chính xác tác động môi trường của các sản phẩm mới từ sản xuất đến xử lý.",
+      "exampleSentence2": "Viele Unternehmen bilanzieren mittlerweile ihren CO2-Fußabdruck, um Transparenz zu schaffen und Minderungsstrategien zu entwickeln.",
+      "exampleTranslation2": "Nhiều doanh nghiệp hiện đang lập bảng cân đối dấu chân carbon của mình để tạo sự minh bạch và phát triển các chiến lược giảm thiểu.",
+      "imageUrl": "/images/vocab/c1-kreislaufwirtschaft/bilanzieren.png",
+      "meaningDe": "Die Einnahmen und Ausgaben oder Vor- und Nachteile gegenüberstellen und bewerten.",
+      "conjugation": {
+        "praesens": {
+          "ich": "ich bilanziere",
+          "du": "du bilanzierst",
+          "er/sie/es": "er/sie/es bilanziert",
+          "wir": "wir bilanzieren",
+          "ihr": "ihr bilanziert",
+          "sie/Sie": "sie/Sie bilanzieren"
+        },
+        "praeteritum": {
+          "ich": "ich bilanzierte",
+          "du": "du bilanziertest",
+          "er/sie/es": "er/sie/es bilanzierte",
+          "wir": "wir bilanzierten",
+          "ihr": "ihr bilanziertet",
+          "sie/Sie": "sie/Sie bilanzierten"
+        },
+        "perfekt": {
+          "hilfsverb": "haben",
+          "partizip2": "bilanziert"
+        },
+        "konjunktiv2": {
+          "ich": "ich bilanzierte",
+          "du": "du bilanziertest",
+          "er/sie/es": "er/sie/es bilanzierte",
+          "wir": "wir bilanzierten",
+          "ihr": "ihr bilanziertet",
+          "sie/Sie": "sie/Sie bilanzierten"
+        },
+        "imperativ": {
+          "du": "bilanziere!",
+          "ihr": "bilanziert!",
+          "Sie": "bilanzieren Sie!"
+        }
+      }
+    },
+    {
+      "word": "evaluieren",
+      "article": null,
+      "plural": null,
+      "wordType": "VERB",
+      "meaningVi": "Đánh giá",
+      "meaningEn": "to evaluate",
+      "exampleSentence1": "Politische Maßnahmen zur Förderung der Kreislaufwirtschaft müssen regelmäßig evaluiert werden, um ihre Wirksamkeit zu überprüfen.",
+      "exampleTranslation1": "Các biện pháp chính sách nhằm thúc đẩy kinh tế tuần hoàn cần được đánh giá định kỳ để kiểm tra hiệu quả của chúng.",
+      "exampleSentence2": "Experten evaluieren die potenziellen Risiken und Chancen neuer Technologien vor ihrer Markteinführung.",
+      "exampleTranslation2": "Các chuyên gia đánh giá các rủi ro và cơ hội tiềm tàng của các công nghệ mới trước khi chúng được tung ra thị trường.",
+      "imageUrl": "/images/vocab/c1-kreislaufwirtschaft/evaluieren.png",
+      "meaningDe": "Den Wert oder die Qualität einer Sache durch eine systematische Untersuchung feststellen.",
+      "conjugation": {
+        "praesens": {
+          "ich": "ich evaluiere",
+          "du": "du evaluierst",
+          "er/sie/es": "er/sie/es evaluiert",
+          "wir": "wir evaluieren",
+          "ihr": "ihr evaluiert",
+          "sie/Sie": "sie/Sie evaluieren"
+        },
+        "praeteritum": {
+          "ich": "ich evaluierte",
+          "du": "du evaluiertest",
+          "er/sie/es": "er/sie/es evaluierte",
+          "wir": "wir evaluierten",
+          "ihr": "ihr evaluiertet",
+          "sie/Sie": "sie/Sie evaluierten"
+        },
+        "perfekt": {
+          "hilfsverb": "haben",
+          "partizip2": "evaluiert"
+        },
+        "konjunktiv2": {
+          "ich": "ich evaluierte",
+          "du": "du evaluiertest",
+          "er/sie/es": "er/sie/es evaluierte",
+          "wir": "wir evaluierten",
+          "ihr": "ihr evaluiertet",
+          "sie/Sie": "sie/Sie evaluierten"
+        },
+        "imperativ": {
+          "du": "evaluiere!",
+          "ihr": "evaluiert!",
+          "Sie": "evaluieren Sie!"
+        }
+      }
+    },
+    {
+      "word": "verstromen",
+      "article": null,
+      "plural": null,
+      "wordType": "VERB",
+      "meaningVi": "Đốt để phát điện",
+      "meaningEn": "to incinerate for energy, to convert to electricity (e.g., waste)",
+      "exampleSentence1": "Die Verstromung von Abfällen ist eine Form der energetischen Verwertung, die jedoch kritisch betrachtet wird.",
+      "exampleTranslation1": "Việc đốt chất thải để phát điện là một hình thức thu hồi năng lượng, nhưng nó bị xem xét một cách phê phán.",
+      "exampleSentence2": "Holzabfälle können entweder stofflich oder energetisch verwertet werden, wobei letzteres oft die Verstromung bedeutet.",
+      "exampleTranslation2": "Chất thải gỗ có thể được tái chế vật liệu hoặc thu hồi năng lượng, trong đó phương án sau thường có nghĩa là đốt để phát điện.",
+      "imageUrl": "/images/vocab/c1-kreislaufwirtschaft/verstromen.png",
+      "meaningDe": "Energie aus einer Quelle in elektrische Energie umwandeln.",
+      "conjugation": {
+        "praesens": {
+          "ich": "ich verstrome",
+          "du": "du verstromst",
+          "er/sie/es": "er/sie/es verstromt",
+          "wir": "wir verstromen",
+          "ihr": "ihr verstromt",
+          "sie/Sie": "sie/Sie verstromen"
+        },
+        "praeteritum": {
+          "ich": "ich verstromte",
+          "du": "du verstromtest",
+          "er/sie/es": "er/sie/es verstromte",
+          "wir": "wir verstromten",
+          "ihr": "ihr verstromtet",
+          "sie/Sie": "sie/Sie verstromten"
+        },
+        "perfekt": {
+          "hilfsverb": "haben",
+          "partizip2": "verstromt"
+        },
+        "konjunktiv2": {
+          "ich": "ich verstromte",
+          "du": "du verstromtest",
+          "er/sie/es": "er/sie/es verstromte",
+          "wir": "wir verstromten",
+          "ihr": "ihr verstromtet",
+          "sie/Sie": "sie/Sie verstromten"
+        },
+        "imperativ": {
+          "du": "verstrome!",
+          "ihr": "verstromt!",
+          "Sie": "verstromen Sie!"
+        }
+      }
+    },
+    {
+      "word": "entmaterialisieren",
+      "article": null,
+      "plural": null,
+      "wordType": "VERB",
+      "meaningVi": "Phi vật chất hóa, giảm lượng vật liệu",
+      "meaningEn": "to dematerialize (reduce material input)",
+      "exampleSentence1": "Digitale Produkte können dazu beitragen, den Konsum physischer Güter zu entmaterialisieren.",
+      "exampleTranslation1": "Các sản phẩm kỹ thuật số có thể giúp phi vật chất hóa việc tiêu thụ hàng hóa vật lý.",
+      "exampleSentence2": "Ein wichtiges Ziel der Kreislaufwirtschaft ist es, Produkte und Dienstleistungen zu entmaterialisieren und somit den Ressourcenverbrauch zu senken.",
+      "exampleTranslation2": "Một mục tiêu quan trọng của kinh tế tuần hoàn là phi vật chất hóa các sản phẩm và dịch vụ, từ đó giảm tiêu thụ tài nguyên.",
+      "imageUrl": "/images/vocab/c1-kreislaufwirtschaft/entmaterialisieren.png",
+      "meaningDe": "Den Bedarf an physischen Materialien durch digitale Lösungen oder Effizienz reduzieren.",
+      "conjugation": {
+        "praesens": {
+          "ich": "ich entmaterialisiere",
+          "du": "du entmaterialisierst",
+          "er/sie/es": "er/sie/es entmaterialisiert",
+          "wir": "wir entmaterialisieren",
+          "ihr": "ihr entmaterialisiert",
+          "sie/Sie": "sie/Sie entmaterialisieren"
+        },
+        "praeteritum": {
+          "ich": "ich entmaterialisierte",
+          "du": "du entmaterialisiertest",
+          "er/sie/es": "er/sie/es entmaterialisierte",
+          "wir": "wir entmaterialisierten",
+          "ihr": "ihr entmaterialisiertet",
+          "sie/Sie": "sie/Sie entmaterialisierten"
+        },
+        "perfekt": {
+          "hilfsverb": "haben",
+          "partizip2": "entmaterialisiert"
+        },
+        "konjunktiv2": {
+          "ich": "ich entmaterialisierte",
+          "du": "du entmaterialisiertest",
+          "er/sie/es": "er/sie/es entmaterialisierte",
+          "wir": "wir entmaterialisierten",
+          "ihr": "ihr entmaterialisiertet",
+          "sie/Sie": "sie/Sie entmaterialisierten"
+        },
+        "imperativ": {
+          "du": "entmaterialisiere!",
+          "ihr": "entmaterialisiert!",
+          "Sie": "entmaterialisieren Sie!"
+        }
+      }
+    },
+    {
+      "word": "ressourcenschonend",
+      "article": null,
+      "plural": null,
+      "wordType": "ADJEKTIV",
+      "meaningVi": "Tiết kiệm tài nguyên",
+      "meaningEn": "resource-saving",
+      "exampleSentence1": "Die Entwicklung ressourcenschonender Technologien ist entscheidend für eine nachhaltige Zukunft.",
+      "exampleTranslation1": "Việc phát triển các công nghệ tiết kiệm tài nguyên là rất quan trọng cho một tương lai bền vững.",
+      "exampleSentence2": "Ein ressourcenschonender Lebensstil beinhaltet bewussten Konsum und die Vermeidung von Verschwendung.",
+      "exampleTranslation2": "Một lối sống tiết kiệm tài nguyên bao gồm tiêu dùng có ý thức và tránh lãng phí.",
+      "imageUrl": "/images/vocab/c1-kreislaufwirtschaft/ressourcenschonend.png",
+      "meaningDe": "So handelnd, dass möglichst wenig natürliche Rohstoffe verbraucht werden."
+    },
+    {
+      "word": "zirkulär",
+      "article": null,
+      "plural": null,
+      "wordType": "ADJEKTIV",
+      "meaningVi": "Tuần hoàn",
+      "meaningEn": "circular",
+      "exampleSentence1": "Das Konzept der zirkulären Wertschöpfungsketten gewinnt in der Industrie immer mehr an Bedeutung.",
+      "exampleTranslation1": "Khái niệm chuỗi giá trị tuần hoàn ngày càng trở nên quan trọng trong ngành công nghiệp.",
+      "exampleSentence2": "Eine zirkuläre Wirtschaft erfordert ein Umdenken in Design, Produktion und Konsum.",
+      "exampleTranslation2": "Một nền kinh tế tuần hoàn đòi hỏi sự thay đổi tư duy trong thiết kế, sản xuất và tiêu dùng.",
+      "imageUrl": "/images/vocab/c1-kreislaufwirtschaft/zirkulaer.png",
+      "meaningDe": "In einem geschlossenen Kreislauf funktionierend, sodass Ressourcen dauerhaft im System bleiben."
+    },
+    {
+      "word": "langlebig",
+      "article": null,
+      "plural": null,
+      "wordType": "ADJEKTIV",
+      "meaningVi": "Bền bỉ, có tuổi thọ cao",
+      "meaningEn": "durable, long-lasting",
+      "exampleSentence1": "Verbraucher bevorzugen zunehmend langlebige Produkte, die seltener ersetzt werden müssen.",
+      "exampleTranslation1": "Người tiêu dùng ngày càng ưu tiên các sản phẩm bền bỉ, ít phải thay thế hơn.",
+      "exampleSentence2": "Die Herstellung langlebiger Güter trägt zur Reduzierung des Ressourcenverbrauchs bei und minimiert Abfall.",
+      "exampleTranslation2": "Việc sản xuất hàng hóa bền bỉ góp phần giảm tiêu thụ tài nguyên và giảm thiểu chất thải.",
+      "imageUrl": "/images/vocab/c1-kreislaufwirtschaft/langlebig.png",
+      "meaningDe": "Über eine lange Zeit haltbar oder benutzbar."
+    },
+    {
+      "word": "rezyklierbar",
+      "article": null,
+      "plural": null,
+      "wordType": "ADJEKTIV",
+      "meaningVi": "Có thể tái chế",
+      "meaningEn": "recyclable",
+      "exampleSentence1": "Verpackungen aus einem einzigen Material sind in der Regel besser rezyklierbar als Verbundstoffe.",
+      "exampleTranslation1": "Bao bì làm từ một loại vật liệu duy nhất thường dễ tái chế hơn so với vật liệu tổng hợp.",
+      "exampleSentence2": "Um die Rezyklierbarkeit zu erhöhen, müssen Produkte von Beginn an entsprechend konzipiert werden.",
+      "exampleTranslation2": "Để tăng khả năng tái chế, sản phẩm phải được thiết kế phù hợp ngay từ đầu.",
+      "imageUrl": "/images/vocab/c1-kreislaufwirtschaft/rezyklierbar.png",
+      "meaningDe": "So beschaffen, dass es wiederverwertet werden kann."
+    },
+    {
+      "word": "biologisch abbaubar",
+      "article": null,
+      "plural": null,
+      "wordType": "ADJEKTIV",
+      "meaningVi": "Có khả năng phân hủy sinh học",
+      "meaningEn": "biodegradable",
+      "exampleSentence1": "Biologisch abbaubare Kunststoffe bieten eine umweltfreundlichere Alternative zu herkömmlichen Kunststoffen.",
+      "exampleTranslation1": "Nhựa có khả năng phân hủy sinh học mang lại một lựa chọn thân thiện với môi trường hơn so với nhựa thông thường.",
+      "exampleSentence2": "Kompostierbare Verpackungen sind so konzipiert, dass sie unter bestimmten Bedingungen biologisch abbaubar sind.",
+      "exampleTranslation2": "Bao bì có thể ủ phân được thiết kế để phân hủy sinh học trong các điều kiện nhất định.",
+      "imageUrl": "/images/vocab/c1-kreislaufwirtschaft/biologisch-abbaubar.png",
+      "meaningDe": "Durch Mikroorganismen in natürliche Bestandteile zerlegbar."
+    },
+    {
+      "word": "materialeffizient",
+      "article": null,
+      "plural": null,
+      "wordType": "ADJEKTIV",
+      "meaningVi": "Hiệu quả vật liệu",
+      "meaningEn": "material-efficient",
+      "exampleSentence1": "Ein materialeffizientes Design minimiert den Einsatz von Rohstoffen bei der Herstellung eines Produkts.",
+      "exampleTranslation1": "Một thiết kế hiệu quả vật liệu giúp giảm thiểu việc sử dụng nguyên liệu thô trong quá trình sản xuất sản phẩm.",
+      "exampleSentence2": "Moderne Fertigungstechnologien ermöglichen es, deutlich materialeffizienter zu produzieren als früher.",
+      "exampleTranslation2": "Các công nghệ sản xuất hiện đại cho phép sản xuất hiệu quả vật liệu hơn đáng kể so với trước đây.",
+      "imageUrl": "/images/vocab/c1-kreislaufwirtschaft/materialeffizient.png",
+      "meaningDe": "Mit einem geringen Materialeinsatz ein optimales Ergebnis erzielend."
+    },
+    {
+      "word": "obsolet",
+      "article": null,
+      "plural": null,
+      "wordType": "ADJEKTIV",
+      "meaningVi": "Lỗi thời, không còn dùng được",
+      "meaningEn": "obsolete",
+      "exampleSentence1": "Viele elektronische Geräte werden durch schnelle technologische Entwicklungen schnell obsolet.",
+      "exampleTranslation1": "Nhiều thiết bị điện tử nhanh chóng trở nên lỗi thời do sự phát triển công nghệ nhanh chóng.",
+      "exampleSentence2": "Die Politik sollte Anreize schaffen, um die vorzeitige Obsoleszenz von Produkten zu verhindern.",
+      "exampleTranslation2": "Chính sách nên tạo ra các ưu đãi để ngăn chặn sự lỗi thời sớm của sản phẩm.",
+      "imageUrl": "/images/vocab/c1-kreislaufwirtschaft/obsolet.png",
+      "meaningDe": "Aufgrund technischer oder gesellschaftlicher Entwicklungen überflüssig oder hinfällig geworden."
+    },
+    {
+      "word": "ganzheitlich",
+      "article": null,
+      "plural": null,
+      "wordType": "ADVERB",
+      "meaningVi": "Một cách toàn diện",
+      "meaningEn": "holistically, comprehensively",
+      "exampleSentence1": "Um die Herausforderungen der Nachhaltigkeit zu bewältigen, müssen wir Probleme ganzheitlich betrachten.",
+      "exampleTranslation1": "Để giải quyết các thách thức về bền vững, chúng ta phải xem xét các vấn đề một cách toàn diện.",
+      "exampleSentence2": "Eine ganzheitlich angelegte Strategie berücksichtigt alle relevanten Akteure und deren Wechselwirkungen.",
+      "exampleTranslation2": "Một chiến lược được thiết kế toàn diện sẽ xem xét tất cả các bên liên quan và sự tương tác của chúng.",
+      "imageUrl": "/images/vocab/c1-kreislaufwirtschaft/ganzheitlich.png",
+      "meaningDe": "Alle Aspekte eines Problems oder Systems umfassend betrachtend."
+    }
+  ],
+  "cefrAudit": {
+    "targetLevel": "C1",
+    "verdict": "aligned",
+    "reviewerRole": "German Academic Lead",
+    "notes": "Release-candidate metadata audit: vocabulary content for \"Kreislaufwirtschaft & Ressourcen\" is aligned with declared C1 scope pending final human spot-check.",
+    "reviewedAt": "2026-05-12",
+    "reviewScope": "release_candidate_metadata_pass"
+  },
+  "learningOutcomes": [
+    {
+      "id": "c1-kreislaufwirtschaft-lo-1",
+      "cefrLevel": "C1",
+      "skill": "vocabulary",
+      "canDoVi": "Toi co the luyen tu vung o trinh do C1 qua chu de \"Kreislaufwirtschaft & Ressourcen\".",
+      "canDoDe": "Ich kann Wortschatz auf Niveau C1 zum Thema \"Kreislaufwirtschaft & Ressourcen\" ueben.",
+      "linkedContentIds": [
+        "c1-kreislaufwirtschaft"
+      ]
+    }
+  ]
 }

@@ -68,7 +68,8 @@
             "type": "Nomen",
             "meaning": "video consultation"
           }
-        ]
+        ],
+        "vi": "??p ?n ??ng l? b: 45 Millionen.. H?y ??i chi?u v?i th?ng tin then ch?t trong b?i ??c."
       }
     },
     {
@@ -92,7 +93,8 @@
             "type": "Nomen",
             "meaning": "consultation"
           }
-        ]
+        ],
+        "vi": "??p ?n ??ng l? b: 30 Prozent.. H?y ??i chi?u v?i th?ng tin then ch?t trong b?i ??c."
       }
     },
     {
@@ -117,7 +119,8 @@
             "meaning": "remote treatment"
           }
         ],
-        "reasoning": "[Critical] "
+        "reasoning": "[Critical] ",
+        "vi": "??p ?n ??ng l? a: Höchstens 30 Prozent.. H?y ??i chi?u v?i th?ng tin then ch?t trong b?i ??c."
       }
     },
     {
@@ -142,7 +145,8 @@
             "meaning": "data security"
           }
         ],
-        "reasoning": "[Inferential] "
+        "reasoning": "[Inferential] ",
+        "vi": "??p ?n ??ng l? b: 43 Prozent.. H?y ??i chi?u v?i th?ng tin then ch?t trong b?i ??c."
       }
     },
     {
@@ -167,7 +171,8 @@
             "meaning": "to predict / forecast"
           }
         ],
-        "reasoning": "[Inferential] "
+        "reasoning": "[Inferential] ",
+        "vi": "??p ?n ??ng l? b: Rund die Hälfte aller Erstkontakte wird digital stattfinden.. H?y ??i chi?u v?i th?ng tin then ch?t trong b?i ??c."
       }
     }
   ],
@@ -224,5 +229,25 @@
     "all_answers_verifiable": true,
     "image_count": 1,
     "passed": true
-  }
+  },
+  "cefrAudit": {
+    "targetLevel": "B2",
+    "verdict": "aligned",
+    "reviewerRole": "German Academic Lead",
+    "notes": "Release-candidate metadata audit: reading content for \"Gesundheit & Medizin\" is aligned with declared B2 scope pending final human spot-check.",
+    "reviewedAt": "2026-05-12",
+    "reviewScope": "release_candidate_metadata_pass"
+  },
+  "learningOutcomes": [
+    {
+      "id": "b2-t1-007-lo-1",
+      "cefrLevel": "B2",
+      "skill": "reading",
+      "canDoVi": "Toi co the luyen doc hieu o trinh do B2 qua chu de \"Gesundheit & Medizin\".",
+      "canDoDe": "Ich kann Lesen auf Niveau B2 zum Thema \"Gesundheit & Medizin\" ueben.",
+      "linkedContentIds": [
+        "B2-T1-007"
+      ]
+    }
+  ]
 }

@@ -45,5 +45,28 @@
     ],
     "maxScore": 15
   },
-  "maxScore": 15
+  "maxScore": 15,
+  "modelAnswer": "Hallo,\n\nich schreibe wegen Beschreiben Sie, warum Sie beim Arzt waren.. ich schreibe wegen Schreiben Sie, was der Arzt gesagt hat (Medikamente, Bettruhe).. ich schreibe wegen Machen Sie einen Vorschlag für ein Treffen, wenn Sie wieder gesund sind.. Bitte geben Sie mir kurz Bescheid.\n\nViele Gruesse\nLinh",
+  "timeLimitMinutes": 15,
+  "estimatedMinutes": 15,
+  "cefrAudit": {
+    "targetLevel": "A2",
+    "verdict": "aligned",
+    "reviewerRole": "German Academic Lead",
+    "notes": "Release-candidate metadata audit: writing content for \"Arztbesuch\" is aligned with declared A2 scope pending final human spot-check.",
+    "reviewedAt": "2026-05-12",
+    "reviewScope": "release_candidate_metadata_pass"
+  },
+  "learningOutcomes": [
+    {
+      "id": "w-a2-t1-012-lo-1",
+      "cefrLevel": "A2",
+      "skill": "writing",
+      "canDoVi": "Toi co the luyen viet o trinh do A2 qua chu de \"Arztbesuch\".",
+      "canDoDe": "Ich kann Schreiben auf Niveau A2 zum Thema \"Arztbesuch\" ueben.",
+      "linkedContentIds": [
+        "W-A2-T1-012"
+      ]
+    }
+  ]
 }

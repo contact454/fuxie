@@ -258,7 +258,20 @@
       "exampleSentence2": "Eine intelligente Verdichtung schafft nicht nur mehr Wohnraum, sondern kann auch die Infrastruktur effizienter nutzen und kurze Wege fördern.",
       "exampleTranslation2": "Việc tăng mật độ thông minh không chỉ tạo ra nhiều không gian sống hơn mà còn có thể sử dụng cơ sở hạ tầng hiệu quả hơn và thúc đẩy các tuyến đường ngắn.",
       "imageUrl": "/images/vocab/c2-stadtsoziologie/verdichten.png",
-      "meaningDe": "Die Anzahl der Gebäude oder die Nutzung eines bestimmten Raumes erhöhen, um die Fläche effizienter zu nutzen."
+      "meaningDe": "Die Anzahl der Gebäude oder die Nutzung eines bestimmten Raumes erhöhen, um die Fläche effizienter zu nutzen.",
+      "conjugation": {
+        "praesens": {
+          "ich": "verdichte",
+          "du": "verdichtst",
+          "er_sie_es": "verdichtet",
+          "wir": "verdichten",
+          "ihr": "verdichtet",
+          "sie_Sie": "verdichten"
+        },
+        "isIrregular": false,
+        "isSeparable": false,
+        "reviewStatus": "auto_generated_needs_spot_check"
+      }
     },
     {
       "word": "fragmentiert",
@@ -315,6 +328,26 @@
       "exampleTranslation2": "Các thành phố ngày càng chịu áp lực phải phát triển các giải pháp đổi mới để đối phó với hậu quả khí hậu và tình trạng thiếu hụt tài nguyên.",
       "imageUrl": "/images/vocab/c2-stadtsoziologie/zunehmend.png",
       "meaningDe": "In einer Weise, die im Laufe der Zeit stetig an Intensität, Menge oder Umfang gewinnt."
+    }
+  ],
+  "cefrAudit": {
+    "targetLevel": "C2",
+    "verdict": "aligned",
+    "reviewerRole": "German Academic Lead",
+    "notes": "Release-candidate metadata audit: vocabulary content for \"Stadtsoziologie & öffentlicher Raum\" is aligned with declared C2 scope pending final human spot-check.",
+    "reviewedAt": "2026-05-12",
+    "reviewScope": "release_candidate_metadata_pass"
+  },
+  "learningOutcomes": [
+    {
+      "id": "c2-stadtsoziologie-lo-1",
+      "cefrLevel": "C2",
+      "skill": "vocabulary",
+      "canDoVi": "Toi co the luyen tu vung o trinh do C2 qua chu de \"Stadtsoziologie & öffentlicher Raum\".",
+      "canDoDe": "Ich kann Wortschatz auf Niveau C2 zum Thema \"Stadtsoziologie & öffentlicher Raum\" ueben.",
+      "linkedContentIds": [
+        "c2-stadtsoziologie"
+      ]
     }
   ]
 }

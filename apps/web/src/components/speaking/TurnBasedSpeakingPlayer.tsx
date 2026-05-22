@@ -19,12 +19,12 @@ interface Props {
   level: string
   scenario: string
   onClose: () => void
-  onComplete: (score: number) => void
+  onComplete: (score: number, detail?: { scoredResponses: number; gradingResult?: any }) => void
 }
 
 export default function TurnBasedSpeakingPlayer({ level, scenario, onClose, onComplete }: Props) {
   const [messages, setMessages] = useState<Message[]>([])
-  const [state, setState] = useState<'idle' | 'recording' | 'processing' | 'playing'>('idle')
+  const [state, setState] = useState<'idle' | 'recording' | 'processing' | 'playing' | 'loading_grade'>('idle')
   const [micError, setMicError] = useState<string | null>(null)
 
   const mediaRecorderRef = useRef<MediaRecorder | null>(null)
@@ -37,6 +37,8 @@ export default function TurnBasedSpeakingPlayer({ level, scenario, onClose, onCo
   const aiAudioRef = useRef<HTMLAudioElement>(null)
   const isMountedRef = useRef(true)
   const stopWaveformRef = useRef<(() => void) | null>(null)
+  const scoredResponseCount = messages.filter(m => m.role === 'user' && typeof m.score === 'number').length
+  const hasScenarioPrompt = messages.some(m => m.role === 'model')
 
   // Auto-start scenario
   useEffect(() => {
@@ -190,16 +192,49 @@ export default function TurnBasedSpeakingPlayer({ level, scenario, onClose, onCo
 
   // drawWaveform is now handled by startWaveformAnimation from @/lib/audio/waveform.ts
 
-  const finishConversation = () => {
-    // Calculate average score
-    const userMessages = messages.filter(m => m.role === 'user' && typeof m.score === 'number');
+  const finishConversation = async () => {
+    const userMessages = messages.filter(m => m.role === 'user');
     if (userMessages.length === 0) {
-        onComplete(0);
+        onComplete(0, { scoredResponses: 0 });
         return;
     }
-    const sum = userMessages.reduce((acc, m) => acc + (m.score || 0), 0);
-    const avg = Math.round(sum / userMessages.length);
-    onComplete(avg);
+    
+    // Generate transcript
+    const transcript = messages.map(m => `${m.role === 'model' ? 'Fuxie' : 'Learner'}: ${m.text}`).join('\n');
+    
+    setState('loading_grade');
+    
+    try {
+        const res = await fetch('/api/v1/grade', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                type: 'speaking',
+                cefrLevel: level,
+                scenario: scenario,
+                transcript: transcript,
+                uiLanguage: 'vi' // Could come from profile context, assuming vi for now
+            })
+        });
+        const result = await res.json();
+        
+        if (result.success && result.data) {
+            onComplete(result.data.percentScore, { 
+                scoredResponses: userMessages.length,
+                gradingResult: result.data
+            });
+            return;
+        }
+    } catch (e) {
+        console.error('Failed to grade roleplay', e);
+    }
+    
+    // Fallback to simple STT average if API fails
+    const scoredMessages = userMessages.filter(m => typeof m.score === 'number');
+    const avg = scoredMessages.length > 0 
+        ? Math.round(scoredMessages.reduce((acc, m) => acc + (m.score || 0), 0) / scoredMessages.length)
+        : 0;
+    onComplete(avg, { scoredResponses: userMessages.length });
   };
 
   return (
@@ -208,18 +243,65 @@ export default function TurnBasedSpeakingPlayer({ level, scenario, onClose, onCo
       
       <div className={styles.progressBarWrap} style={{flexShrink: 0}}>
         <div className={styles.progressBarInner}>
-          <button className={styles.progressBarClose} onClick={onClose}>✕</button>
+          <button
+            className={styles.progressBarClose}
+            onClick={onClose}
+            aria-label="Dong roleplay va quay lai briefing"
+            title="Dong roleplay"
+          >
+            ✕
+          </button>
           <div className={styles.progressBarTrack}>
             <div className={styles.progressBarFill} style={{ width: `100%` }} />
           </div>
           <span className={styles.progressBarStep}>Roleplay: {scenario}</span>
           <button 
             onClick={finishConversation}
-            style={{marginLeft: 'auto', background: '#3b82f6', color: 'white', border: 'none', padding: '4px 12px', borderRadius: '8px', fontSize: '0.85rem', cursor: 'pointer', fontWeight: 600}}
+            disabled={state === 'loading_grade' || state === 'processing' || state === 'recording'}
+            aria-label="Ket thuc roleplay va xem receipt"
+            title="Ket thuc roleplay va xem receipt"
+            style={{marginLeft: 'auto', background: '#3b82f6', color: 'white', border: 'none', padding: '4px 12px', borderRadius: '8px', fontSize: '0.85rem', cursor: 'pointer', fontWeight: 600, opacity: (state === 'loading_grade' || state === 'processing' || state === 'recording') ? 0.5 : 1}}
           >
-            Kết thúc
+            {state === 'loading_grade' ? 'Đang chấm điểm...' : 'Kết thúc'}
           </button>
         </div>
+      </div>
+
+      <div
+        aria-label="Roleplay completion checklist"
+        style={{
+          flexShrink: 0,
+          display: 'grid',
+          gridTemplateColumns: 'repeat(3, minmax(0, 1fr))',
+          gap: '8px',
+          padding: '12px 16px',
+          background: '#f8fafc',
+          borderBottom: '1px solid #e2e8f0',
+        }}
+      >
+        {[
+          { label: 'Listen', done: hasScenarioPrompt, detail: 'Scenario prompt' },
+          { label: 'Record', done: scoredResponseCount > 0, detail: scoredResponseCount > 0 ? `${scoredResponseCount} scored` : 'Scored response required' },
+          { label: 'Receipt', done: false, detail: 'End roleplay' },
+        ].map((item) => (
+          <div
+            key={item.label}
+            style={{
+              minWidth: 0,
+              borderRadius: '12px',
+              background: item.done ? '#ecfdf5' : '#ffffff',
+              border: `1px solid ${item.done ? '#86efac' : '#cbd5e1'}`,
+              padding: '8px',
+            }}
+          >
+            <div style={{ fontSize: '0.72rem', fontWeight: 800, color: item.done ? '#166534' : '#1d4ed8', textTransform: 'uppercase' }}>
+              {item.done ? 'Done' : 'Next'} - {item.label}
+            </div>
+            <div style={{ marginTop: '2px', fontSize: '0.78rem', fontWeight: 700, color: '#475569', overflowWrap: 'anywhere' }}>
+              {item.detail}
+            </div>
+          </div>
+        ))}
       </div>
 
       <div style={{ flex: 1, overflowY: 'auto', padding: '24px 16px', display: 'flex', flexDirection: 'column', gap: '16px' }}>
@@ -238,7 +320,7 @@ export default function TurnBasedSpeakingPlayer({ level, scenario, onClose, onCo
               borderBottomRightRadius: m.role === 'user' ? 0 : '16px',
             }}
           >
-            {m.role === 'model' && <div style={{fontSize: '0.8rem', color: '#94a3b8', marginBottom: '4px'}}>🦊 Fuxie</div>}
+            {m.role === 'model' && <div style={{fontSize: '0.8rem', color: "var(--color-text-subtle)", marginBottom: '4px'}}>🦊 Fuxie</div>}
             
             <div style={{ lineHeight: '1.5' }}>
                {m.role === 'user' && m.words && m.words.length > 0 ? (
@@ -268,7 +350,7 @@ export default function TurnBasedSpeakingPlayer({ level, scenario, onClose, onCo
           </motion.div>
         ))}
         {state === 'processing' && (
-          <motion.div style={{ alignSelf: 'flex-start', color: '#94a3b8', display: 'flex', alignItems: 'center', gap: '8px' }}>
+          <motion.div style={{ alignSelf: 'flex-start', color: "var(--color-text-subtle)", display: 'flex', alignItems: 'center', gap: '8px' }}>
             <Loader2 className={styles.spinnerIcon} /> Fuxie đang gõ...
           </motion.div>
         )}
@@ -276,15 +358,29 @@ export default function TurnBasedSpeakingPlayer({ level, scenario, onClose, onCo
 
       <div className={styles.waveformContainer} style={{ background: '#0f172a', borderTop: '1px solid #1e293b', padding: '24px 0', flexShrink: 0 }}>
         {state === 'recording' && <canvas ref={canvasRef} width={400} height={60} style={{margin: '0 auto', display: 'block'}}/>}
-        {micError && <div style={{color: '#f87171', textAlign: 'center'}}>{micError}</div>}
+        {micError && <div style={{color: 'var(--color-text-danger)', textAlign: 'center'}}>{micError}</div>}
         
         <div className={styles.recordBtnWrap} style={{ marginTop: state === 'recording' ? '12px' : 0 }}>
           {state === 'recording' ? (
-            <motion.button whileTap={{ scale: 0.9 }} className={`${styles.recordBtn} ${styles.recordBtnRecording}`} onClick={stopRecording}>
+            <motion.button
+              whileTap={{ scale: 0.9 }}
+              className={`${styles.recordBtn} ${styles.recordBtnRecording}`}
+              onClick={stopRecording}
+              aria-label="Dung ghi am va gui cau tra loi"
+              title="Dung ghi am"
+            >
                <Square fill="currentColor" size={24} />
             </motion.button>
           ) : (
-            <motion.button whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className={`${styles.recordBtn} ${styles.recordBtnIdle}`} onClick={startRecording} disabled={state === 'processing' || state === 'playing'}>
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className={`${styles.recordBtn} ${styles.recordBtnIdle}`}
+              onClick={startRecording}
+              disabled={state === 'processing' || state === 'playing'}
+              aria-label="Bat dau ghi am cau tra loi"
+              title="Bat dau ghi am"
+            >
                <Mic size={28} />
             </motion.button>
           )}

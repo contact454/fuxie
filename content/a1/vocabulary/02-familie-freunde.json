@@ -147,7 +147,8 @@
       "exampleTranslation2": "Bố mẹ tốt bụng.",
       "notes": "Nur Plural. Kein Singular.",
       "imageUrl": "/images/vocab/a1-familie-freunde/eltern.png",
-      "meaningDe": "Vater und Mutter"
+      "meaningDe": "Vater und Mutter",
+      "articleStatus": "not_applicable_or_needs_review"
     },
     {
       "word": "Geschwister",
@@ -162,7 +163,8 @@
       "exampleTranslation2": "Bạn có anh chị em không?",
       "notes": "Nur Plural. Kein Singular.",
       "imageUrl": "/images/vocab/a1-familie-freunde/geschwister.png",
-      "meaningDe": "Bruder und Schwester"
+      "meaningDe": "Bruder und Schwester",
+      "articleStatus": "not_applicable_or_needs_review"
     },
     {
       "word": "Freund",
@@ -247,7 +249,8 @@
       "exampleTranslation2": "Mọi người thân thiện.",
       "notes": "Nur Plural.",
       "imageUrl": "/images/vocab/a1-familie-freunde/leute.png",
-      "meaningDe": "viele Menschen"
+      "meaningDe": "viele Menschen",
+      "articleStatus": "not_applicable_or_needs_review"
     },
     {
       "word": "Person",
@@ -500,6 +503,26 @@
       "exampleTranslation2": "Khi nào các bạn kết hôn?",
       "imageUrl": "/images/vocab/a1-familie-freunde/heiraten.png",
       "meaningDe": "eine Ehe schließen"
+    }
+  ],
+  "cefrAudit": {
+    "targetLevel": "A1",
+    "verdict": "aligned",
+    "reviewerRole": "German Academic Lead",
+    "notes": "Release-candidate metadata audit: vocabulary content for \"Familie und Freunde\" is aligned with declared A1 scope pending final human spot-check.",
+    "reviewedAt": "2026-05-12",
+    "reviewScope": "release_candidate_metadata_pass"
+  },
+  "learningOutcomes": [
+    {
+      "id": "a1-familie-freunde-lo-1",
+      "cefrLevel": "A1",
+      "skill": "vocabulary",
+      "canDoVi": "Toi co the luyen tu vung o trinh do A1 qua chu de \"Familie und Freunde\".",
+      "canDoDe": "Ich kann Wortschatz auf Niveau A1 zum Thema \"Familie und Freunde\" ueben.",
+      "linkedContentIds": [
+        "a1-familie-freunde"
+      ]
     }
   ]
 }

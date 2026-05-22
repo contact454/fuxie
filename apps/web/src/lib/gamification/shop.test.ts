@@ -4,7 +4,7 @@ import { ShopRedeemRequestStatus } from '@fuxie/database'
 import { buildFuxieRewardInventory, buildFuxieShopCatalog, getFuxieShopPreview } from './shop'
 
 describe('Fuxie shop catalog', () => {
-    it('builds locked preview items with affordability progress', () => {
+    it('builds requestable digital items with affordability progress', () => {
         const catalog = buildFuxieShopCatalog(150)
         const streakFreeze = catalog.find((item) => item.id === 'streak-freeze')
         const mocktest = catalog.find((item) => item.id === 'mocktest-unlock')
@@ -13,25 +13,26 @@ describe('Fuxie shop catalog', () => {
             cost: 120,
             canAfford: true,
             walletProgress: 100,
-            status: 'preview_locked',
-            statusLabel: 'Đủ Fucoin',
+            status: 'requestable',
+            statusLabel: expect.any(String),
             redeemPreview: {
-                stage: 'preview_locked',
-                ctaLabel: 'Tạo request đổi quà',
+                stage: 'requestable',
+                ctaLabel: expect.any(String),
             },
         })
         expect(mocktest).toMatchObject({
             cost: 300,
             canAfford: false,
             walletProgress: 50,
-            statusLabel: 'Đang tích',
+            status: 'requestable',
+            statusLabel: expect.any(String),
             redeemPreview: {
-                ctaLabel: 'Xem điều kiện đổi',
+                ctaLabel: expect.any(String),
             },
         })
     })
 
-    it('returns a sorted dashboard preview without exposing redeemable items', () => {
+    it('returns a sorted dashboard preview with requestable digital rewards', () => {
         const preview = getFuxieShopPreview(1000, 3)
 
         expect(preview).toHaveLength(3)
@@ -40,8 +41,23 @@ describe('Fuxie shop catalog', () => {
             'fuxie-sky-outfit',
             'coach-hint-pack',
         ])
-        expect(preview.every((item) => item.status === 'preview_locked')).toBe(true)
+        expect(preview.every((item) => item.status === 'requestable')).toBe(true)
         expect(preview.every((item) => item.redeemPreview.policy.length > 0)).toBe(true)
+    })
+
+    it('keeps real gifts locked even when the wallet can afford the preview price', () => {
+        const catalog = buildFuxieShopCatalog(1000)
+        const realGift = catalog.find((item) => item.id === 'fuxie-real-gift-voucher')
+
+        expect(realGift).toMatchObject({
+            status: 'preview_locked',
+            canAfford: false,
+            statusLabel: expect.any(String),
+            redeemPreview: {
+                stage: 'preview_locked',
+                ctaLabel: expect.any(String),
+            },
+        })
     })
 
     it('summarizes owned rewards from streak and redeem request state', () => {

@@ -1,0 +1,368 @@
+{
+  "schemaVersion": 1,
+  "baseUrl": "http://localhost:3005",
+  "auth": {
+    "role": "learner",
+    "env": "FUXIE_DEV_AUTH_ENABLED=true",
+    "loginPath": "/api/dev-auth/login?role=learner&redirect={route}"
+  },
+  "viewports": [
+    {
+      "id": "desktop",
+      "width": 1440,
+      "height": 1100
+    },
+    {
+      "id": "mobile",
+      "width": 390,
+      "height": 844
+    }
+  ],
+  "surfaces": [
+    {
+      "id": "dashboard",
+      "priority": "P0",
+      "route": "/dashboard",
+      "villageRole": "Village Square + Mission Board",
+      "primaryJob": "Know what to study next, why it matters, and which reward is near.",
+      "expectedScreenshots": {
+        "desktop": "docs/design/visual-audit/screenshots/dashboard-village-v1-desktop.png",
+        "mobile": "docs/design/visual-audit/screenshots/dashboard-village-v1-mobile.png"
+      },
+      "existingEvidence": [
+        "docs/design/visual-audit/screenshots/dashboard-quest-v1-desktop.png",
+        "docs/design/visual-audit/screenshots/dashboard-quest-v1-mobile.png",
+        "docs/design/visual-audit/screenshots/dashboard-v2.png"
+      ],
+      "assetRefs": [
+        "/mascot-3d/world/optimized/v1/fuxie-world-01-village-square-512.webp",
+        "/mascot-3d/world/optimized/v1/fuxie-world-02-mission-board-512.webp",
+        "/reward-assets/optimized/fuxie-item-fucoin-512.webp",
+        "/reward-assets/optimized/fuxie-item-xp-star-512.webp",
+        "/reward-assets/optimized/fuxie-item-streak-freeze-512.webp"
+      ],
+      "qaFocus": [
+        "Mission, CTA, reward preview are readable within 3 seconds.",
+        "Village snapshot stays secondary to the primary learning CTA.",
+        "Mascot does not push dashboard content on mobile."
+      ]
+    },
+    {
+      "id": "course",
+      "priority": "P0",
+      "route": "/course",
+      "villageRole": "Course Signpost Path",
+      "primaryJob": "Choose the next CEFR milestone and continue learning.",
+      "expectedScreenshots": {
+        "desktop": "docs/design/visual-audit/screenshots/course-village-v1-desktop.png",
+        "mobile": "docs/design/visual-audit/screenshots/course-village-v1-mobile.png"
+      },
+      "existingEvidence": [
+        "docs/design/visual-audit/screenshots/course-v2.png",
+        "docs/design/visual-audit/screenshots/course-v3.png"
+      ],
+      "assetRefs": [
+        "/mascot-3d/world/optimized/v1/fuxie-world-03-course-signpost-512.webp",
+        "/reward-assets/optimized/fuxie-item-cefr-badge-a1-512.webp",
+        "/reward-assets/optimized/fuxie-item-cefr-badge-a2-512.webp",
+        "/reward-assets/optimized/fuxie-item-cefr-badge-b1-512.webp",
+        "/reward-assets/optimized/fuxie-item-cefr-badge-b2-512.webp"
+      ],
+      "qaFocus": [
+        "Current and next milestone are obvious.",
+        "Path treatment is compact, not a full decorative world map.",
+        "Locked/current/unlocked states remain distinct."
+      ]
+    },
+    {
+      "id": "vocabulary",
+      "priority": "P0",
+      "route": "/vocabulary",
+      "villageRole": "Collection Book",
+      "primaryJob": "Pick a collection, practice, and see ownership progress.",
+      "expectedScreenshots": {
+        "desktop": "docs/design/visual-audit/screenshots/vocabulary-village-v1-desktop.png",
+        "mobile": "docs/design/visual-audit/screenshots/vocabulary-village-v1-mobile.png"
+      },
+      "existingEvidence": [
+        "docs/design/visual-audit/screenshots/vocabulary-v5.png",
+        "docs/design/visual-audit/screenshots/vocabulary-practice-mixed-v3.png",
+        "docs/design/visual-audit/screenshots/vocabulary-practice-results-v1.png"
+      ],
+      "assetRefs": [
+        "/mascot-3d/world/optimized/v1/fuxie-world-13-collection-book-512.webp",
+        "/mascot-3d/world/optimized/v1/fuxie-world-14-phrase-stamp-512.webp",
+        "/mascot-3d/world/optimized/v1/fuxie-world-15-postcard-fragment-512.webp",
+        "/reward-assets/optimized/fuxie-item-xp-star-512.webp"
+      ],
+      "qaFocus": [
+        "Practice CTA stays stronger than collectible art.",
+        "Collection progress is scannable on mobile.",
+        "Exercise result state uses the same reward language as dashboard."
+      ]
+    },
+    {
+      "id": "grammar",
+      "priority": "P1",
+      "route": "/grammar",
+      "villageRole": "Grammar Scroll Workshop",
+      "primaryJob": "Learn a rule, start practice, and avoid dense visual confusion.",
+      "expectedScreenshots": {
+        "desktop": "docs/design/visual-audit/screenshots/grammar-village-v1-desktop.png",
+        "mobile": "docs/design/visual-audit/screenshots/grammar-village-v1-mobile.png"
+      },
+      "existingEvidence": [],
+      "assetRefs": [
+        "/mascot-3d/world/optimized/v1/fuxie-world-11-grammar-scroll-512.webp",
+        "/reward-assets/optimized/fuxie-item-hint-ticket-512.webp",
+        "/reward-assets/optimized/fuxie-item-xp-star-512.webp"
+      ],
+      "qaFocus": [
+        "Rule content remains more important than props.",
+        "Hint/reward visuals explain support, not decoration.",
+        "Topic list does not become color-noisy."
+      ]
+    },
+    {
+      "id": "reading",
+      "priority": "P0",
+      "route": "/reading",
+      "villageRole": "Library",
+      "primaryJob": "Start reading practice and understand progress.",
+      "expectedScreenshots": {
+        "desktop": "docs/design/visual-audit/screenshots/reading-village-v1-desktop.png",
+        "mobile": "docs/design/visual-audit/screenshots/reading-village-v1-mobile.png"
+      },
+      "existingEvidence": [
+        "docs/design/visual-audit/screenshots/reading-v3.png",
+        "docs/design/visual-audit/screenshots/reading-player-v2.png"
+      ],
+      "assetRefs": [
+        "/mascot-3d/world/optimized/v1/fuxie-world-05-library-512.webp",
+        "/mascot-3d/modules/v1/fuxie-module-03-reading.png",
+        "/reward-assets/optimized/fuxie-item-fucoin-512.webp",
+        "/reward-assets/optimized/fuxie-item-xp-star-512.webp"
+      ],
+      "qaFocus": [
+        "Reading task area remains dominant.",
+        "Library role is visible without making the text feel childish.",
+        "Reward preview and result receipt match shared components."
+      ]
+    },
+    {
+      "id": "listening",
+      "priority": "P0",
+      "route": "/listening",
+      "villageRole": "Radio Booth",
+      "primaryJob": "Start audio practice, control playback, and see reward receipt.",
+      "expectedScreenshots": {
+        "desktop": "docs/design/visual-audit/screenshots/listening-village-v1-desktop.png",
+        "mobile": "docs/design/visual-audit/screenshots/listening-village-v1-mobile.png"
+      },
+      "existingEvidence": [
+        "docs/design/visual-audit/screenshots/listening-player-v2.png",
+        "docs/design/visual-audit/screenshots/listening.png"
+      ],
+      "assetRefs": [
+        "/mascot-3d/world/optimized/v1/fuxie-world-06-radio-booth-512.webp",
+        "/mascot-3d/modules/v1/fuxie-module-04-listening.png",
+        "/reward-assets/optimized/fuxie-item-fucoin-512.webp",
+        "/reward-assets/optimized/fuxie-item-xp-star-512.webp"
+      ],
+      "qaFocus": [
+        "Playback controls remain stable and reachable on mobile.",
+        "Radio booth styling does not crowd answer choices.",
+        "Live mascot motion respects reduced motion."
+      ]
+    },
+    {
+      "id": "speaking",
+      "priority": "P0",
+      "route": "/speaking",
+      "villageRole": "Speaking Stage + Chat Cafe",
+      "primaryJob": "Choose speaking practice and trust pronunciation feedback.",
+      "expectedScreenshots": {
+        "desktop": "docs/design/visual-audit/screenshots/speaking-village-v1-desktop.png",
+        "mobile": "docs/design/visual-audit/screenshots/speaking-village-v1-mobile.png"
+      },
+      "existingEvidence": [],
+      "assetRefs": [
+        "/mascot-3d/world/optimized/v1/fuxie-world-12-speaking-stage-512.webp",
+        "/mascot-3d/world/optimized/v1/fuxie-world-10-chat-cafe-512.webp",
+        "/mascot-3d/modules/v1/fuxie-module-06-speaking.png",
+        "/reward-assets/optimized/fuxie-item-xp-star-512.webp"
+      ],
+      "qaFocus": [
+        "Recording and feedback states are visually trustworthy.",
+        "Speaking motion is restrained and not distracting.",
+        "Roleplay and lesson routes use compatible reward language."
+      ]
+    },
+    {
+      "id": "writing",
+      "priority": "P0",
+      "route": "/writing",
+      "villageRole": "Post Office",
+      "primaryJob": "Choose writing practice and understand submitted feedback.",
+      "expectedScreenshots": {
+        "desktop": "docs/design/visual-audit/screenshots/writing-village-v1-desktop.png",
+        "mobile": "docs/design/visual-audit/screenshots/writing-village-v1-mobile.png"
+      },
+      "existingEvidence": [
+        "docs/design/visual-audit/screenshots/writing-player-v2.png",
+        "docs/design/visual-audit/screenshots/writing.png"
+      ],
+      "assetRefs": [
+        "/mascot-3d/world/optimized/v1/fuxie-world-07-post-office-512.webp",
+        "/mascot-3d/modules/v1/fuxie-module-05-writing.png",
+        "/reward-assets/optimized/fuxie-item-fucoin-512.webp",
+        "/reward-assets/optimized/fuxie-item-xp-star-512.webp"
+      ],
+      "qaFocus": [
+        "Writing feedback feels like a receipt, not a generic result.",
+        "Textarea and submit action remain visually dominant.",
+        "Reward visuals do not obscure scoring detail."
+      ]
+    },
+    {
+      "id": "exam",
+      "priority": "P1",
+      "route": "/exam",
+      "villageRole": "Town Hall Challenge",
+      "primaryJob": "Start formal exam practice and review readiness.",
+      "expectedScreenshots": {
+        "desktop": "docs/design/visual-audit/screenshots/exam-village-v1-desktop.png",
+        "mobile": "docs/design/visual-audit/screenshots/exam-village-v1-mobile.png"
+      },
+      "existingEvidence": [
+        "docs/design/visual-audit/screenshots/exam-v5.png",
+        "docs/design/visual-audit/screenshots/exam-v4.png"
+      ],
+      "assetRefs": [
+        "/mascot-3d/world/optimized/v1/fuxie-world-08-town-hall-exam-512.webp",
+        "/mascot-3d/modules/v1/fuxie-module-08-exam.png",
+        "/reward-assets/optimized/fuxie-item-cefr-badges-512.webp"
+      ],
+      "qaFocus": [
+        "Exam tone stays formal enough for readiness work.",
+        "Rewards feel like milestones, not playful noise.",
+        "Pass/fail and metadata remain clear."
+      ]
+    },
+    {
+      "id": "review",
+      "priority": "P1",
+      "route": "/review",
+      "villageRole": "Review Garden",
+      "primaryJob": "Return to spaced repetition with calm progress.",
+      "expectedScreenshots": {
+        "desktop": "docs/design/visual-audit/screenshots/review-village-v1-desktop.png",
+        "mobile": "docs/design/visual-audit/screenshots/review-village-v1-mobile.png"
+      },
+      "existingEvidence": [
+        "docs/design/visual-audit/screenshots/review-v5.png",
+        "docs/design/visual-audit/screenshots/review-session-v1.png"
+      ],
+      "assetRefs": [
+        "/mascot-3d/world/optimized/v1/fuxie-world-09-review-garden-512.webp",
+        "/mascot-3d/modules/v1/fuxie-module-09-review.png",
+        "/reward-assets/optimized/fuxie-item-streak-freeze-512.webp"
+      ],
+      "qaFocus": [
+        "Review feels low pressure.",
+        "Empty and due-card states are distinct.",
+        "Streak safety language avoids shame."
+      ]
+    },
+    {
+      "id": "shop",
+      "priority": "P0",
+      "route": "/rewards/shop",
+      "villageRole": "Fuxie Market + Backpack",
+      "primaryJob": "Understand wallet, item value, ownership, and request state.",
+      "expectedScreenshots": {
+        "desktop": "docs/design/visual-audit/screenshots/shop-village-v1-desktop.png",
+        "mobile": "docs/design/visual-audit/screenshots/shop-village-v1-mobile.png"
+      },
+      "existingEvidence": [],
+      "assetRefs": [
+        "/mascot-3d/world/optimized/v1/fuxie-world-04-market-stall-512.webp",
+        "/mascot-3d/modules/v1/fuxie-module-12-shop.png",
+        "/reward-assets/optimized/fuxie-item-inventory-market-prop-512.webp",
+        "/reward-assets/optimized/fuxie-item-fucoin-512.webp"
+      ],
+      "qaFocus": [
+        "Wallet, affordability, pending, and owned states are obvious.",
+        "Market shelf/backpack frame does not hide operational states.",
+        "Real-gift request flow remains safe and clear."
+      ]
+    },
+    {
+      "id": "chat",
+      "priority": "P2",
+      "route": "/chat",
+      "villageRole": "Chat Cafe",
+      "primaryJob": "Ask for help and practice conversation.",
+      "expectedScreenshots": {
+        "desktop": "docs/design/visual-audit/screenshots/chat-village-v1-desktop.png",
+        "mobile": "docs/design/visual-audit/screenshots/chat-village-v1-mobile.png"
+      },
+      "existingEvidence": [],
+      "assetRefs": [
+        "/mascot-3d/world/optimized/v1/fuxie-world-10-chat-cafe-512.webp",
+        "/mascot-3d/modules/v1/fuxie-module-07-chat.png",
+        "/reward-assets/optimized/fuxie-item-hint-ticket-512.webp"
+      ],
+      "qaFocus": [
+        "Chat input and response history stay primary.",
+        "Voice/video states do not overuse game visuals.",
+        "Tutor mascot supports help-seeking, not decoration."
+      ]
+    },
+    {
+      "id": "badges",
+      "priority": "P2",
+      "route": "/badges",
+      "villageRole": "Badge Shelf",
+      "primaryJob": "See earned milestones and next unlock.",
+      "expectedScreenshots": {
+        "desktop": "docs/design/visual-audit/screenshots/badges-village-v1-desktop.png",
+        "mobile": "docs/design/visual-audit/screenshots/badges-village-v1-mobile.png"
+      },
+      "existingEvidence": [],
+      "assetRefs": [
+        "/mascot-3d/world/optimized/v1/fuxie-world-16-badge-shelf-512.webp",
+        "/mascot-3d/gamification/v1/fuxie-game-03-badge.png",
+        "/reward-assets/optimized/fuxie-item-cefr-badges-512.webp"
+      ],
+      "qaFocus": [
+        "Earned, locked, and next badge states are distinct.",
+        "Badge shelf supports ownership, not clutter.",
+        "Progression copy stays learner-safe."
+      ]
+    },
+    {
+      "id": "campaign",
+      "priority": "P2",
+      "route": "/campaign",
+      "villageRole": "Village Event Board",
+      "primaryJob": "Follow a time-boxed learning journey.",
+      "expectedScreenshots": {
+        "desktop": "docs/design/visual-audit/screenshots/campaign-village-v1-desktop.png",
+        "mobile": "docs/design/visual-audit/screenshots/campaign-village-v1-mobile.png"
+      },
+      "existingEvidence": [],
+      "assetRefs": [
+        "/mascot-3d/world/optimized/v1/fuxie-world-01-village-square-512.webp",
+        "/mascot-3d/world/optimized/v1/fuxie-world-02-mission-board-512.webp",
+        "/mascot-3d/gamification/v1/fuxie-game-05-mission.png",
+        "/mascot-3d/gamification/v1/fuxie-game-07-rank-up.png"
+      ],
+      "qaFocus": [
+        "Event-board pattern matches Dashboard mission language.",
+        "Time-boxed campaign urgency avoids pressure/shame.",
+        "Rewards stay tied to real learning activity."
+      ]
+    }
+  ]
+}

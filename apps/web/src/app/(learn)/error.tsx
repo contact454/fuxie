@@ -50,7 +50,7 @@ export default function LearnError({
 
                 {/* Error digest for debugging */}
                 {error.digest && (
-                    <p className="mt-6 text-[10px] text-gray-300 font-mono">
+                    <p className="mt-6 text-xs text-gray-300 font-mono">
                         Mã lỗi: {error.digest}
                     </p>
                 )}

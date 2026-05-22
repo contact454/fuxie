@@ -159,7 +159,7 @@ export function ChatHistory({
                                         <div className="flex-1 min-w-0">
                                             <div className="flex items-center gap-1.5">
                                                 <span
-                                                    className="inline-block px-1.5 py-0.5 rounded-md text-[9px] font-bold"
+                                                    className="inline-block px-1.5 py-0.5 rounded-md text-xs font-bold"
                                                     style={{
                                                         backgroundColor: theme.bg,
                                                         color: theme.text,
@@ -171,12 +171,12 @@ export function ChatHistory({
                                                     {conv.title}
                                                 </p>
                                             </div>
-                                            <p className="text-[11px] text-gray-400 mt-0.5 truncate">
+                                            <p className="text-xs text-gray-400 mt-0.5 truncate">
                                                 {conv.lastMessage || 'Neues Gespräch'}
                                             </p>
                                         </div>
                                         <div className="flex items-center gap-1.5 shrink-0">
-                                            <span className="text-[10px] text-gray-300">
+                                            <span className="text-xs text-gray-300">
                                                 {formatDate(conv.updatedAt)}
                                             </span>
                                             <button

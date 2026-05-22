@@ -1,0 +1,942 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-05-15",
+  "purpose": "Surface-to-public-path map for Fuxie Global Village runtime draft assets. No app code integration has been performed.",
+  "surfaceCount": 26,
+  "surfaces": [
+    {
+      "group": "learner",
+      "surface": "dashboard",
+      "villageRole": "Village Square / daily loop",
+      "assets": [
+        {
+          "item": "Learner Daily Loop Scene",
+          "role": "direction board",
+          "assetType": "scene_direction_board",
+          "publicPath": null,
+          "file": "docs/design/asset-generation/global-scenes/learner-daily-loop-scene.webp",
+          "status": "design-reference-only"
+        },
+        {
+          "item": "Village Quest Card Frame",
+          "role": "primary frame",
+          "assetType": "ui_frame",
+          "publicPath": "/mascot-3d/ui/global/fuxie-global-village-quest-card-frame.webp",
+          "file": "apps/web/public/mascot-3d/ui/global/fuxie-global-village-quest-card-frame.webp",
+          "status": "runtime-draft-copied-no-code-integration"
+        },
+        {
+          "item": "Daily Goal Notice Frame",
+          "role": "daily goal",
+          "assetType": "ui_frame",
+          "publicPath": "/mascot-3d/ui/global/fuxie-global-daily-goal-notice-frame.webp",
+          "file": "apps/web/public/mascot-3d/ui/global/fuxie-global-daily-goal-notice-frame.webp",
+          "status": "runtime-draft-copied-no-code-integration"
+        },
+        {
+          "item": "Fuxie Campaign Host",
+          "role": "mascot",
+          "assetType": "mascot_state",
+          "publicPath": "/mascot-3d/states/global/fuxie-global-fuxie-campaign-host.webp",
+          "file": "apps/web/public/mascot-3d/states/global/fuxie-global-fuxie-campaign-host.webp",
+          "status": "runtime-draft-copied-no-code-integration"
+        },
+        {
+          "item": "Progress Lantern Trail",
+          "role": "progress prop",
+          "assetType": "prop_cutout",
+          "publicPath": "/mascot-3d/world/props/fuxie-global-progress-lantern-trail.webp",
+          "file": "apps/web/public/mascot-3d/world/props/fuxie-global-progress-lantern-trail.webp",
+          "status": "runtime-draft-copied-no-code-integration"
+        }
+      ]
+    },
+    {
+      "group": "learner",
+      "surface": "course",
+      "villageRole": "Journey path",
+      "assets": [
+        {
+          "item": "Course Journey Scene",
+          "role": "direction board",
+          "assetType": "scene_direction_board",
+          "publicPath": null,
+          "file": "docs/design/asset-generation/global-scenes/course-journey-scene.webp",
+          "status": "design-reference-only"
+        },
+        {
+          "item": "CEFR Gate Plaza",
+          "role": "location",
+          "assetType": "world_location_plate",
+          "publicPath": "/mascot-3d/world/global/fuxie-global-cefr-gate-plaza.webp",
+          "file": "apps/web/public/mascot-3d/world/global/fuxie-global-cefr-gate-plaza.webp",
+          "status": "runtime-draft-copied-no-code-integration"
+        },
+        {
+          "item": "CEFR Path Node Frame",
+          "role": "path frame",
+          "assetType": "ui_frame",
+          "publicPath": "/mascot-3d/ui/global/fuxie-global-cefr-path-node-frame.webp",
+          "file": "apps/web/public/mascot-3d/ui/global/fuxie-global-cefr-path-node-frame.webp",
+          "status": "runtime-draft-copied-no-code-integration"
+        },
+        {
+          "item": "Bridge Checkpoint",
+          "role": "checkpoint prop",
+          "assetType": "prop_cutout",
+          "publicPath": "/mascot-3d/world/props/fuxie-global-bridge-checkpoint.webp",
+          "file": "apps/web/public/mascot-3d/world/props/fuxie-global-bridge-checkpoint.webp",
+          "status": "runtime-draft-copied-no-code-integration"
+        },
+        {
+          "item": "Fuxie CEFR Gate Guide",
+          "role": "mascot",
+          "assetType": "mascot_state",
+          "publicPath": "/mascot-3d/states/global/fuxie-global-fuxie-cefr-gate-guide.webp",
+          "file": "apps/web/public/mascot-3d/states/global/fuxie-global-fuxie-cefr-gate-guide.webp",
+          "status": "runtime-draft-copied-no-code-integration"
+        }
+      ]
+    },
+    {
+      "group": "learner",
+      "surface": "vocabulary",
+      "villageRole": "Collection / microgame booth",
+      "assets": [
+        {
+          "item": "Vocabulary Microgame Booth",
+          "role": "location",
+          "assetType": "world_location_plate",
+          "publicPath": "/mascot-3d/world/global/fuxie-global-vocabulary-microgame-booth.webp",
+          "file": "apps/web/public/mascot-3d/world/global/fuxie-global-vocabulary-microgame-booth.webp",
+          "status": "runtime-draft-copied-no-code-integration"
+        },
+        {
+          "item": "Vocabulary Flashcard Box",
+          "role": "learning prop",
+          "assetType": "learning_prop_cutout",
+          "publicPath": "/mascot-3d/world/learning-props/fuxie-global-vocabulary-flashcard-box.webp",
+          "file": "apps/web/public/mascot-3d/world/learning-props/fuxie-global-vocabulary-flashcard-box.webp",
+          "status": "runtime-draft-copied-no-code-integration"
+        },
+        {
+          "item": "Fuxie Microgame Referee",
+          "role": "mascot",
+          "assetType": "mascot_state",
+          "publicPath": "/mascot-3d/states/global/fuxie-global-fuxie-microgame-referee.webp",
+          "file": "apps/web/public/mascot-3d/states/global/fuxie-global-fuxie-microgame-referee.webp",
+          "status": "runtime-draft-copied-no-code-integration"
+        },
+        {
+          "item": "Chat Phrase Cards",
+          "role": "phrase prop",
+          "assetType": "learning_prop_cutout",
+          "publicPath": "/mascot-3d/world/learning-props/fuxie-global-chat-phrase-cards.webp",
+          "file": "apps/web/public/mascot-3d/world/learning-props/fuxie-global-chat-phrase-cards.webp",
+          "status": "runtime-draft-copied-no-code-integration"
+        }
+      ]
+    },
+    {
+      "group": "learner",
+      "surface": "grammar",
+      "villageRole": "Workshop",
+      "assets": [
+        {
+          "item": "Grammar Workshop Interior",
+          "role": "location",
+          "assetType": "world_location_plate",
+          "publicPath": "/mascot-3d/world/global/fuxie-global-grammar-workshop-interior.webp",
+          "file": "apps/web/public/mascot-3d/world/global/fuxie-global-grammar-workshop-interior.webp",
+          "status": "runtime-draft-copied-no-code-integration"
+        },
+        {
+          "item": "Grammar Gear Scroll",
+          "role": "learning prop",
+          "assetType": "learning_prop_cutout",
+          "publicPath": "/mascot-3d/world/learning-props/fuxie-global-grammar-gear-scroll.webp",
+          "file": "apps/web/public/mascot-3d/world/learning-props/fuxie-global-grammar-gear-scroll.webp",
+          "status": "runtime-draft-copied-no-code-integration"
+        },
+        {
+          "item": "Fuxie Grammar Mentor",
+          "role": "mascot",
+          "assetType": "mascot_state",
+          "publicPath": "/mascot-3d/states/global/fuxie-global-fuxie-grammar-mentor.webp",
+          "file": "apps/web/public/mascot-3d/states/global/fuxie-global-fuxie-grammar-mentor.webp",
+          "status": "runtime-draft-copied-no-code-integration"
+        },
+        {
+          "item": "Grammar Repair Token",
+          "role": "reward item",
+          "assetType": "reward_item_icon",
+          "publicPath": "/reward-assets/global/fuxie-global-grammar-repair-token.webp",
+          "file": "apps/web/public/reward-assets/global/fuxie-global-grammar-repair-token.webp",
+          "status": "runtime-draft-copied-no-code-integration"
+        }
+      ]
+    },
+    {
+      "group": "learner",
+      "surface": "reading",
+      "villageRole": "Library",
+      "assets": [
+        {
+          "item": "Reading Library",
+          "role": "building",
+          "assetType": "building_cutout",
+          "publicPath": "/mascot-3d/world/buildings/fuxie-global-reading-library.webp",
+          "file": "apps/web/public/mascot-3d/world/buildings/fuxie-global-reading-library.webp",
+          "status": "runtime-draft-copied-no-code-integration"
+        },
+        {
+          "item": "Reading Bookmark Lamp",
+          "role": "learning prop",
+          "assetType": "learning_prop_cutout",
+          "publicPath": "/mascot-3d/world/learning-props/fuxie-global-reading-bookmark-lamp.webp",
+          "file": "apps/web/public/mascot-3d/world/learning-props/fuxie-global-reading-bookmark-lamp.webp",
+          "status": "runtime-draft-copied-no-code-integration"
+        },
+        {
+          "item": "Skill Practice Player Scene",
+          "role": "direction board",
+          "assetType": "scene_direction_board",
+          "publicPath": null,
+          "file": "docs/design/asset-generation/global-scenes/skill-practice-player-scene.webp",
+          "status": "design-reference-only"
+        }
+      ]
+    },
+    {
+      "group": "learner",
+      "surface": "listening",
+      "villageRole": "Radio booth",
+      "assets": [
+        {
+          "item": "Radio Listening Tower",
+          "role": "building",
+          "assetType": "building_cutout",
+          "publicPath": "/mascot-3d/world/buildings/fuxie-global-radio-listening-tower.webp",
+          "file": "apps/web/public/mascot-3d/world/buildings/fuxie-global-radio-listening-tower.webp",
+          "status": "runtime-draft-copied-no-code-integration"
+        },
+        {
+          "item": "Listening Headphones Stand",
+          "role": "learning prop",
+          "assetType": "learning_prop_cutout",
+          "publicPath": "/mascot-3d/world/learning-props/fuxie-global-listening-headphones-stand.webp",
+          "file": "apps/web/public/mascot-3d/world/learning-props/fuxie-global-listening-headphones-stand.webp",
+          "status": "runtime-draft-copied-no-code-integration"
+        },
+        {
+          "item": "Radio Replay Pass",
+          "role": "reward item",
+          "assetType": "reward_item_icon",
+          "publicPath": "/reward-assets/global/fuxie-global-radio-replay-pass.webp",
+          "file": "apps/web/public/reward-assets/global/fuxie-global-radio-replay-pass.webp",
+          "status": "runtime-draft-copied-no-code-integration"
+        }
+      ]
+    },
+    {
+      "group": "learner",
+      "surface": "speaking",
+      "villageRole": "Cafe / roleplay stage",
+      "assets": [
+        {
+          "item": "Speaking Stage Cafe",
+          "role": "building",
+          "assetType": "building_cutout",
+          "publicPath": "/mascot-3d/world/buildings/fuxie-global-speaking-stage-cafe.webp",
+          "file": "apps/web/public/mascot-3d/world/buildings/fuxie-global-speaking-stage-cafe.webp",
+          "status": "runtime-draft-copied-no-code-integration"
+        },
+        {
+          "item": "Speaking Roleplay Cafe Room",
+          "role": "location",
+          "assetType": "world_location_plate",
+          "publicPath": "/mascot-3d/world/global/fuxie-global-speaking-roleplay-cafe-room.webp",
+          "file": "apps/web/public/mascot-3d/world/global/fuxie-global-speaking-roleplay-cafe-room.webp",
+          "status": "runtime-draft-copied-no-code-integration"
+        },
+        {
+          "item": "Speaking Microphone Charm",
+          "role": "learning prop",
+          "assetType": "learning_prop_cutout",
+          "publicPath": "/mascot-3d/world/learning-props/fuxie-global-speaking-microphone-charm.webp",
+          "file": "apps/web/public/mascot-3d/world/learning-props/fuxie-global-speaking-microphone-charm.webp",
+          "status": "runtime-draft-copied-no-code-integration"
+        },
+        {
+          "item": "Fuxie Roleplay Waiter",
+          "role": "mascot",
+          "assetType": "mascot_state",
+          "publicPath": "/mascot-3d/states/global/fuxie-global-fuxie-roleplay-waiter.webp",
+          "file": "apps/web/public/mascot-3d/states/global/fuxie-global-fuxie-roleplay-waiter.webp",
+          "status": "runtime-draft-copied-no-code-integration"
+        },
+        {
+          "item": "Speaking Feedback Pass",
+          "role": "reward item",
+          "assetType": "reward_item_icon",
+          "publicPath": "/reward-assets/global/fuxie-global-speaking-feedback-pass.webp",
+          "file": "apps/web/public/reward-assets/global/fuxie-global-speaking-feedback-pass.webp",
+          "status": "runtime-draft-copied-no-code-integration"
+        }
+      ]
+    },
+    {
+      "group": "learner",
+      "surface": "writing",
+      "villageRole": "Post office",
+      "assets": [
+        {
+          "item": "Writing Post Office",
+          "role": "building",
+          "assetType": "building_cutout",
+          "publicPath": "/mascot-3d/world/buildings/fuxie-global-writing-post-office.webp",
+          "file": "apps/web/public/mascot-3d/world/buildings/fuxie-global-writing-post-office.webp",
+          "status": "runtime-draft-copied-no-code-integration"
+        },
+        {
+          "item": "Writing Envelope Stack",
+          "role": "learning prop",
+          "assetType": "learning_prop_cutout",
+          "publicPath": "/mascot-3d/world/learning-props/fuxie-global-writing-envelope-stack.webp",
+          "file": "apps/web/public/mascot-3d/world/learning-props/fuxie-global-writing-envelope-stack.webp",
+          "status": "runtime-draft-copied-no-code-integration"
+        },
+        {
+          "item": "Writing Stamp Seal",
+          "role": "reward item",
+          "assetType": "reward_item_icon",
+          "publicPath": "/reward-assets/global/fuxie-global-writing-stamp-seal.webp",
+          "file": "apps/web/public/reward-assets/global/fuxie-global-writing-stamp-seal.webp",
+          "status": "runtime-draft-copied-no-code-integration"
+        }
+      ]
+    },
+    {
+      "group": "learner",
+      "surface": "exam",
+      "villageRole": "Town hall",
+      "assets": [
+        {
+          "item": "Rathaus Exam Hall",
+          "role": "building",
+          "assetType": "building_cutout",
+          "publicPath": "/mascot-3d/world/buildings/fuxie-global-rathaus-exam-hall.webp",
+          "file": "apps/web/public/mascot-3d/world/buildings/fuxie-global-rathaus-exam-hall.webp",
+          "status": "runtime-draft-copied-no-code-integration"
+        },
+        {
+          "item": "Exam Result Hall",
+          "role": "location",
+          "assetType": "world_location_plate",
+          "publicPath": "/mascot-3d/world/global/fuxie-global-exam-result-hall.webp",
+          "file": "apps/web/public/mascot-3d/world/global/fuxie-global-exam-result-hall.webp",
+          "status": "runtime-draft-copied-no-code-integration"
+        },
+        {
+          "item": "Exam Timer Bell",
+          "role": "learning prop",
+          "assetType": "learning_prop_cutout",
+          "publicPath": "/mascot-3d/world/learning-props/fuxie-global-exam-timer-bell.webp",
+          "file": "apps/web/public/mascot-3d/world/learning-props/fuxie-global-exam-timer-bell.webp",
+          "status": "runtime-draft-copied-no-code-integration"
+        },
+        {
+          "item": "Fuxie Exam Proctor",
+          "role": "mascot",
+          "assetType": "mascot_state",
+          "publicPath": "/mascot-3d/states/global/fuxie-global-fuxie-exam-proctor.webp",
+          "file": "apps/web/public/mascot-3d/states/global/fuxie-global-fuxie-exam-proctor.webp",
+          "status": "runtime-draft-copied-no-code-integration"
+        },
+        {
+          "item": "Exam Hall and Result Scene",
+          "role": "direction board",
+          "assetType": "scene_direction_board",
+          "publicPath": null,
+          "file": "docs/design/asset-generation/global-scenes/exam-hall-and-result-scene.webp",
+          "status": "design-reference-only"
+        }
+      ]
+    },
+    {
+      "group": "learner",
+      "surface": "review",
+      "villageRole": "Garden",
+      "assets": [
+        {
+          "item": "Review Garden Greenhouse",
+          "role": "location",
+          "assetType": "world_location_plate",
+          "publicPath": "/mascot-3d/world/global/fuxie-global-review-garden-greenhouse.webp",
+          "file": "apps/web/public/mascot-3d/world/global/fuxie-global-review-garden-greenhouse.webp",
+          "status": "runtime-draft-copied-no-code-integration"
+        },
+        {
+          "item": "Review Greenhouse",
+          "role": "building",
+          "assetType": "building_cutout",
+          "publicPath": "/mascot-3d/world/buildings/fuxie-global-review-greenhouse.webp",
+          "file": "apps/web/public/mascot-3d/world/buildings/fuxie-global-review-greenhouse.webp",
+          "status": "runtime-draft-copied-no-code-integration"
+        },
+        {
+          "item": "Review Seed Packet",
+          "role": "learning prop",
+          "assetType": "learning_prop_cutout",
+          "publicPath": "/mascot-3d/world/learning-props/fuxie-global-review-seed-packet.webp",
+          "file": "apps/web/public/mascot-3d/world/learning-props/fuxie-global-review-seed-packet.webp",
+          "status": "runtime-draft-copied-no-code-integration"
+        },
+        {
+          "item": "Fuxie Review Gardener",
+          "role": "mascot",
+          "assetType": "mascot_state",
+          "publicPath": "/mascot-3d/states/global/fuxie-global-fuxie-review-gardener.webp",
+          "file": "apps/web/public/mascot-3d/states/global/fuxie-global-fuxie-review-gardener.webp",
+          "status": "runtime-draft-copied-no-code-integration"
+        }
+      ]
+    },
+    {
+      "group": "learner",
+      "surface": "badges",
+      "villageRole": "Museum",
+      "assets": [
+        {
+          "item": "Badge Museum Shelf Room",
+          "role": "location",
+          "assetType": "world_location_plate",
+          "publicPath": "/mascot-3d/world/global/fuxie-global-badge-museum-shelf-room.webp",
+          "file": "apps/web/public/mascot-3d/world/global/fuxie-global-badge-museum-shelf-room.webp",
+          "status": "runtime-draft-copied-no-code-integration"
+        },
+        {
+          "item": "Badge Museum",
+          "role": "building",
+          "assetType": "building_cutout",
+          "publicPath": "/mascot-3d/world/buildings/fuxie-global-badge-museum.webp",
+          "file": "apps/web/public/mascot-3d/world/buildings/fuxie-global-badge-museum.webp",
+          "status": "runtime-draft-copied-no-code-integration"
+        },
+        {
+          "item": "Badge Receipt Frame",
+          "role": "frame",
+          "assetType": "ui_frame",
+          "publicPath": "/mascot-3d/ui/global/fuxie-global-badge-receipt-frame.webp",
+          "file": "apps/web/public/mascot-3d/ui/global/fuxie-global-badge-receipt-frame.webp",
+          "status": "runtime-draft-copied-no-code-integration"
+        },
+        {
+          "item": "Fuxie Badge Curator",
+          "role": "mascot",
+          "assetType": "mascot_state",
+          "publicPath": "/mascot-3d/states/global/fuxie-global-fuxie-badge-curator.webp",
+          "file": "apps/web/public/mascot-3d/states/global/fuxie-global-fuxie-badge-curator.webp",
+          "status": "runtime-draft-copied-no-code-integration"
+        },
+        {
+          "item": "Badge Polish Kit",
+          "role": "reward item",
+          "assetType": "reward_item_icon",
+          "publicPath": "/reward-assets/global/fuxie-global-badge-polish-kit.webp",
+          "file": "apps/web/public/reward-assets/global/fuxie-global-badge-polish-kit.webp",
+          "status": "runtime-draft-copied-no-code-integration"
+        }
+      ]
+    },
+    {
+      "group": "learner",
+      "surface": "campaign",
+      "villageRole": "Festival board",
+      "assets": [
+        {
+          "item": "Campaign Festival Board",
+          "role": "location",
+          "assetType": "world_location_plate",
+          "publicPath": "/mascot-3d/world/global/fuxie-global-campaign-festival-board.webp",
+          "file": "apps/web/public/mascot-3d/world/global/fuxie-global-campaign-festival-board.webp",
+          "status": "runtime-draft-copied-no-code-integration"
+        },
+        {
+          "item": "Festival Bunting",
+          "role": "prop",
+          "assetType": "prop_cutout",
+          "publicPath": "/mascot-3d/world/props/fuxie-global-festival-bunting.webp",
+          "file": "apps/web/public/mascot-3d/world/props/fuxie-global-festival-bunting.webp",
+          "status": "runtime-draft-copied-no-code-integration"
+        },
+        {
+          "item": "Fuxie Campaign Host",
+          "role": "mascot",
+          "assetType": "mascot_state",
+          "publicPath": "/mascot-3d/states/global/fuxie-global-fuxie-campaign-host.webp",
+          "file": "apps/web/public/mascot-3d/states/global/fuxie-global-fuxie-campaign-host.webp",
+          "status": "runtime-draft-copied-no-code-integration"
+        }
+      ]
+    },
+    {
+      "group": "learner",
+      "surface": "leaderboard",
+      "villageRole": "Guild hall",
+      "assets": [
+        {
+          "item": "Leaderboard Guild Hall",
+          "role": "location",
+          "assetType": "world_location_plate",
+          "publicPath": "/mascot-3d/world/global/fuxie-global-leaderboard-guild-hall.webp",
+          "file": "apps/web/public/mascot-3d/world/global/fuxie-global-leaderboard-guild-hall.webp",
+          "status": "runtime-draft-copied-no-code-integration"
+        },
+        {
+          "item": "Fuxie Leaderboard Announcer",
+          "role": "mascot",
+          "assetType": "mascot_state",
+          "publicPath": "/mascot-3d/states/global/fuxie-global-fuxie-leaderboard-announcer.webp",
+          "file": "apps/web/public/mascot-3d/states/global/fuxie-global-fuxie-leaderboard-announcer.webp",
+          "status": "runtime-draft-copied-no-code-integration"
+        },
+        {
+          "item": "Focus Shield",
+          "role": "reward item",
+          "assetType": "reward_item_icon",
+          "publicPath": "/reward-assets/global/fuxie-global-focus-shield.webp",
+          "file": "apps/web/public/reward-assets/global/fuxie-global-focus-shield.webp",
+          "status": "runtime-draft-copied-no-code-integration"
+        }
+      ]
+    },
+    {
+      "group": "learner",
+      "surface": "session",
+      "villageRole": "Focus dojo",
+      "assets": [
+        {
+          "item": "Session Focus Dojo",
+          "role": "location",
+          "assetType": "world_location_plate",
+          "publicPath": "/mascot-3d/world/global/fuxie-global-session-focus-dojo.webp",
+          "file": "apps/web/public/mascot-3d/world/global/fuxie-global-session-focus-dojo.webp",
+          "status": "runtime-draft-copied-no-code-integration"
+        },
+        {
+          "item": "Fuxie Session Focus Coach",
+          "role": "mascot",
+          "assetType": "mascot_state",
+          "publicPath": "/mascot-3d/states/global/fuxie-global-fuxie-session-focus-coach.webp",
+          "file": "apps/web/public/mascot-3d/states/global/fuxie-global-fuxie-session-focus-coach.webp",
+          "status": "runtime-draft-copied-no-code-integration"
+        },
+        {
+          "item": "Focus Shield",
+          "role": "reward item",
+          "assetType": "reward_item_icon",
+          "publicPath": "/reward-assets/global/fuxie-global-focus-shield.webp",
+          "file": "apps/web/public/reward-assets/global/fuxie-global-focus-shield.webp",
+          "status": "runtime-draft-copied-no-code-integration"
+        }
+      ]
+    },
+    {
+      "group": "learner",
+      "surface": "chat",
+      "villageRole": "Phrase exchange",
+      "assets": [
+        {
+          "item": "Chat Bubble Village Frame",
+          "role": "frame",
+          "assetType": "ui_frame",
+          "publicPath": "/mascot-3d/ui/global/fuxie-global-chat-bubble-village-frame.webp",
+          "file": "apps/web/public/mascot-3d/ui/global/fuxie-global-chat-bubble-village-frame.webp",
+          "status": "runtime-draft-copied-no-code-integration"
+        },
+        {
+          "item": "Chat Phrase Cards",
+          "role": "prop",
+          "assetType": "learning_prop_cutout",
+          "publicPath": "/mascot-3d/world/learning-props/fuxie-global-chat-phrase-cards.webp",
+          "file": "apps/web/public/mascot-3d/world/learning-props/fuxie-global-chat-phrase-cards.webp",
+          "status": "runtime-draft-copied-no-code-integration"
+        },
+        {
+          "item": "Privacy/Safety Notice Frame",
+          "role": "safety frame",
+          "assetType": "ui_frame",
+          "publicPath": "/mascot-3d/ui/global/fuxie-global-privacy-safety-notice-frame.webp",
+          "file": "apps/web/public/mascot-3d/ui/global/fuxie-global-privacy-safety-notice-frame.webp",
+          "status": "runtime-draft-copied-no-code-integration"
+        }
+      ]
+    },
+    {
+      "group": "learner",
+      "surface": "shop",
+      "villageRole": "Market / inventory",
+      "assets": [
+        {
+          "item": "Shop and Inventory Scene",
+          "role": "direction board",
+          "assetType": "scene_direction_board",
+          "publicPath": null,
+          "file": "docs/design/asset-generation/global-scenes/shop-and-inventory-scene.webp",
+          "status": "design-reference-only"
+        },
+        {
+          "item": "Fuxie Market Stall",
+          "role": "building",
+          "assetType": "building_cutout",
+          "publicPath": "/mascot-3d/world/buildings/fuxie-global-fuxie-market-stall.webp",
+          "file": "apps/web/public/mascot-3d/world/buildings/fuxie-global-fuxie-market-stall.webp",
+          "status": "runtime-draft-copied-no-code-integration"
+        },
+        {
+          "item": "Shop Item Shelf Frame",
+          "role": "frame",
+          "assetType": "ui_frame",
+          "publicPath": "/mascot-3d/ui/global/fuxie-global-shop-item-shelf-frame.webp",
+          "file": "apps/web/public/mascot-3d/ui/global/fuxie-global-shop-item-shelf-frame.webp",
+          "status": "runtime-draft-copied-no-code-integration"
+        },
+        {
+          "item": "Fuxie Reward Clerk",
+          "role": "mascot",
+          "assetType": "mascot_state",
+          "publicPath": "/mascot-3d/states/global/fuxie-global-fuxie-reward-clerk.webp",
+          "file": "apps/web/public/mascot-3d/states/global/fuxie-global-fuxie-reward-clerk.webp",
+          "status": "runtime-draft-copied-no-code-integration"
+        },
+        {
+          "item": "Reward Chest Small",
+          "role": "reward item",
+          "assetType": "reward_item_icon",
+          "publicPath": "/reward-assets/global/fuxie-global-reward-chest-small.webp",
+          "file": "apps/web/public/reward-assets/global/fuxie-global-reward-chest-small.webp",
+          "status": "runtime-draft-copied-no-code-integration"
+        }
+      ]
+    },
+    {
+      "group": "teacher",
+      "surface": "teacher-home",
+      "villageRole": "Teacher Academy",
+      "assets": [
+        {
+          "item": "Teacher Academy Exterior",
+          "role": "location",
+          "assetType": "world_location_plate",
+          "publicPath": "/mascot-3d/world/global/fuxie-global-teacher-academy-exterior.webp",
+          "file": "apps/web/public/mascot-3d/world/global/fuxie-global-teacher-academy-exterior.webp",
+          "status": "runtime-draft-copied-no-code-integration"
+        },
+        {
+          "item": "Fuxie Teacher Coach",
+          "role": "mascot",
+          "assetType": "mascot_state",
+          "publicPath": "/mascot-3d/states/global/fuxie-global-fuxie-teacher-coach.webp",
+          "file": "apps/web/public/mascot-3d/states/global/fuxie-global-fuxie-teacher-coach.webp",
+          "status": "runtime-draft-copied-no-code-integration"
+        },
+        {
+          "item": "Teacher Classroom Card",
+          "role": "frame",
+          "assetType": "ui_frame",
+          "publicPath": "/mascot-3d/ui/global/fuxie-global-teacher-classroom-card.webp",
+          "file": "apps/web/public/mascot-3d/ui/global/fuxie-global-teacher-classroom-card.webp",
+          "status": "runtime-draft-copied-no-code-integration"
+        }
+      ]
+    },
+    {
+      "group": "teacher",
+      "surface": "classrooms",
+      "villageRole": "Classroom interior",
+      "assets": [
+        {
+          "item": "Teacher Classroom Interior",
+          "role": "location",
+          "assetType": "world_location_plate",
+          "publicPath": "/mascot-3d/world/global/fuxie-global-teacher-classroom-interior.webp",
+          "file": "apps/web/public/mascot-3d/world/global/fuxie-global-teacher-classroom-interior.webp",
+          "status": "runtime-draft-copied-no-code-integration"
+        },
+        {
+          "item": "Fuxie Classroom Helper",
+          "role": "mascot",
+          "assetType": "mascot_state",
+          "publicPath": "/mascot-3d/states/global/fuxie-global-fuxie-classroom-helper.webp",
+          "file": "apps/web/public/mascot-3d/states/global/fuxie-global-fuxie-classroom-helper.webp",
+          "status": "runtime-draft-copied-no-code-integration"
+        },
+        {
+          "item": "Classroom Invite Card",
+          "role": "reward item",
+          "assetType": "reward_item_icon",
+          "publicPath": "/reward-assets/global/fuxie-global-classroom-invite-card.webp",
+          "file": "apps/web/public/reward-assets/global/fuxie-global-classroom-invite-card.webp",
+          "status": "runtime-draft-copied-no-code-integration"
+        }
+      ]
+    },
+    {
+      "group": "teacher",
+      "surface": "student-progress",
+      "villageRole": "Progress room",
+      "assets": [
+        {
+          "item": "Student Progress Desk",
+          "role": "location",
+          "assetType": "world_location_plate",
+          "publicPath": "/mascot-3d/world/global/fuxie-global-student-progress-desk.webp",
+          "file": "apps/web/public/mascot-3d/world/global/fuxie-global-student-progress-desk.webp",
+          "status": "runtime-draft-copied-no-code-integration"
+        },
+        {
+          "item": "Student Progress Panel",
+          "role": "frame",
+          "assetType": "ui_frame",
+          "publicPath": "/mascot-3d/ui/global/fuxie-global-student-progress-panel.webp",
+          "file": "apps/web/public/mascot-3d/ui/global/fuxie-global-student-progress-panel.webp",
+          "status": "runtime-draft-copied-no-code-integration"
+        },
+        {
+          "item": "Teacher Classroom Overview Scene",
+          "role": "direction board",
+          "assetType": "scene_direction_board",
+          "publicPath": null,
+          "file": "docs/design/asset-generation/global-scenes/teacher-classroom-overview-scene.webp",
+          "status": "design-reference-only"
+        }
+      ]
+    },
+    {
+      "group": "admin",
+      "surface": "admin-dashboard",
+      "villageRole": "Command center",
+      "assets": [
+        {
+          "item": "Admin Command Center",
+          "role": "location",
+          "assetType": "world_location_plate",
+          "publicPath": "/mascot-3d/world/global/fuxie-global-admin-command-center.webp",
+          "file": "apps/web/public/mascot-3d/world/global/fuxie-global-admin-command-center.webp",
+          "status": "runtime-draft-copied-no-code-integration"
+        },
+        {
+          "item": "Fuxie Admin Analyst",
+          "role": "mascot",
+          "assetType": "mascot_state",
+          "publicPath": "/mascot-3d/states/global/fuxie-global-fuxie-admin-analyst.webp",
+          "file": "apps/web/public/mascot-3d/states/global/fuxie-global-fuxie-admin-analyst.webp",
+          "status": "runtime-draft-copied-no-code-integration"
+        },
+        {
+          "item": "Admin Analytics Panel",
+          "role": "frame",
+          "assetType": "ui_frame",
+          "publicPath": "/mascot-3d/ui/global/fuxie-global-admin-analytics-panel.webp",
+          "file": "apps/web/public/mascot-3d/ui/global/fuxie-global-admin-analytics-panel.webp",
+          "status": "runtime-draft-copied-no-code-integration"
+        },
+        {
+          "item": "Admin Operations Overview Scene",
+          "role": "direction board",
+          "assetType": "scene_direction_board",
+          "publicPath": null,
+          "file": "docs/design/asset-generation/global-scenes/admin-operations-overview-scene.webp",
+          "status": "design-reference-only"
+        }
+      ]
+    },
+    {
+      "group": "admin",
+      "surface": "content-quality",
+      "villageRole": "QA lab",
+      "assets": [
+        {
+          "item": "Content Quality Lab",
+          "role": "location",
+          "assetType": "world_location_plate",
+          "publicPath": "/mascot-3d/world/global/fuxie-global-content-quality-lab.webp",
+          "file": "apps/web/public/mascot-3d/world/global/fuxie-global-content-quality-lab.webp",
+          "status": "runtime-draft-copied-no-code-integration"
+        },
+        {
+          "item": "Fuxie Content Reviewer",
+          "role": "mascot",
+          "assetType": "mascot_state",
+          "publicPath": "/mascot-3d/states/global/fuxie-global-fuxie-content-reviewer.webp",
+          "file": "apps/web/public/mascot-3d/states/global/fuxie-global-fuxie-content-reviewer.webp",
+          "status": "runtime-draft-copied-no-code-integration"
+        },
+        {
+          "item": "Content QA Warning Panel",
+          "role": "frame",
+          "assetType": "ui_frame",
+          "publicPath": "/mascot-3d/ui/global/fuxie-global-content-qa-warning-panel.webp",
+          "file": "apps/web/public/mascot-3d/ui/global/fuxie-global-content-qa-warning-panel.webp",
+          "status": "runtime-draft-copied-no-code-integration"
+        }
+      ]
+    },
+    {
+      "group": "admin",
+      "surface": "ops",
+      "villageRole": "Server room",
+      "assets": [
+        {
+          "item": "Operations Server Room",
+          "role": "location",
+          "assetType": "world_location_plate",
+          "publicPath": "/mascot-3d/world/global/fuxie-global-operations-server-room.webp",
+          "file": "apps/web/public/mascot-3d/world/global/fuxie-global-operations-server-room.webp",
+          "status": "runtime-draft-copied-no-code-integration"
+        },
+        {
+          "item": "Fuxie Ops Mechanic",
+          "role": "mascot",
+          "assetType": "mascot_state",
+          "publicPath": "/mascot-3d/states/global/fuxie-global-fuxie-ops-mechanic.webp",
+          "file": "apps/web/public/mascot-3d/states/global/fuxie-global-fuxie-ops-mechanic.webp",
+          "status": "runtime-draft-copied-no-code-integration"
+        },
+        {
+          "item": "Ops Health Console Panel",
+          "role": "frame",
+          "assetType": "ui_frame",
+          "publicPath": "/mascot-3d/ui/global/fuxie-global-ops-health-console-panel.webp",
+          "file": "apps/web/public/mascot-3d/ui/global/fuxie-global-ops-health-console-panel.webp",
+          "status": "runtime-draft-copied-no-code-integration"
+        }
+      ]
+    },
+    {
+      "group": "admin",
+      "surface": "rewards",
+      "villageRole": "Approval desk",
+      "assets": [
+        {
+          "item": "Rewards Approval Desk",
+          "role": "location",
+          "assetType": "world_location_plate",
+          "publicPath": "/mascot-3d/world/global/fuxie-global-rewards-approval-desk.webp",
+          "file": "apps/web/public/mascot-3d/world/global/fuxie-global-rewards-approval-desk.webp",
+          "status": "runtime-draft-copied-no-code-integration"
+        },
+        {
+          "item": "Fuxie Reward Clerk",
+          "role": "mascot",
+          "assetType": "mascot_state",
+          "publicPath": "/mascot-3d/states/global/fuxie-global-fuxie-reward-clerk.webp",
+          "file": "apps/web/public/mascot-3d/states/global/fuxie-global-fuxie-reward-clerk.webp",
+          "status": "runtime-draft-copied-no-code-integration"
+        },
+        {
+          "item": "Reward Approval Receipt",
+          "role": "frame",
+          "assetType": "ui_frame",
+          "publicPath": "/mascot-3d/ui/global/fuxie-global-reward-approval-receipt.webp",
+          "file": "apps/web/public/mascot-3d/ui/global/fuxie-global-reward-approval-receipt.webp",
+          "status": "runtime-draft-copied-no-code-integration"
+        }
+      ]
+    },
+    {
+      "group": "auth",
+      "surface": "login-register",
+      "villageRole": "Welcome gate",
+      "assets": [
+        {
+          "item": "Auth Welcome Gate",
+          "role": "location",
+          "assetType": "world_location_plate",
+          "publicPath": "/mascot-3d/world/global/fuxie-global-auth-welcome-gate.webp",
+          "file": "apps/web/public/mascot-3d/world/global/fuxie-global-auth-welcome-gate.webp",
+          "status": "runtime-draft-copied-no-code-integration"
+        },
+        {
+          "item": "Auth Welcome Panel",
+          "role": "frame",
+          "assetType": "ui_frame",
+          "publicPath": "/mascot-3d/ui/global/fuxie-global-auth-welcome-panel.webp",
+          "file": "apps/web/public/mascot-3d/ui/global/fuxie-global-auth-welcome-panel.webp",
+          "status": "runtime-draft-copied-no-code-integration"
+        },
+        {
+          "item": "Fuxie Auth Welcomer",
+          "role": "mascot",
+          "assetType": "mascot_state",
+          "publicPath": "/mascot-3d/states/global/fuxie-global-fuxie-auth-welcomer.webp",
+          "file": "apps/web/public/mascot-3d/states/global/fuxie-global-fuxie-auth-welcomer.webp",
+          "status": "runtime-draft-copied-no-code-integration"
+        }
+      ]
+    },
+    {
+      "group": "auth",
+      "surface": "onboarding",
+      "villageRole": "Welcome path",
+      "assets": [
+        {
+          "item": "Onboarding Welcome Inn",
+          "role": "building",
+          "assetType": "building_cutout",
+          "publicPath": "/mascot-3d/world/buildings/fuxie-global-onboarding-welcome-inn.webp",
+          "file": "apps/web/public/mascot-3d/world/buildings/fuxie-global-onboarding-welcome-inn.webp",
+          "status": "runtime-draft-copied-no-code-integration"
+        },
+        {
+          "item": "Onboarding Path Panel",
+          "role": "frame",
+          "assetType": "ui_frame",
+          "publicPath": "/mascot-3d/ui/global/fuxie-global-onboarding-path-panel.webp",
+          "file": "apps/web/public/mascot-3d/ui/global/fuxie-global-onboarding-path-panel.webp",
+          "status": "runtime-draft-copied-no-code-integration"
+        },
+        {
+          "item": "Auth Onboarding Welcome Scene",
+          "role": "direction board",
+          "assetType": "scene_direction_board",
+          "publicPath": null,
+          "file": "docs/design/asset-generation/global-scenes/auth-onboarding-welcome-scene.webp",
+          "status": "design-reference-only"
+        }
+      ]
+    },
+    {
+      "group": "utility",
+      "surface": "live-qa",
+      "villageRole": "Control booth",
+      "assets": [
+        {
+          "item": "Live QA Control Booth",
+          "role": "location",
+          "assetType": "world_location_plate",
+          "publicPath": "/mascot-3d/world/global/fuxie-global-live-qa-control-booth.webp",
+          "file": "apps/web/public/mascot-3d/world/global/fuxie-global-live-qa-control-booth.webp",
+          "status": "runtime-draft-copied-no-code-integration"
+        },
+        {
+          "item": "Fuxie QA Inspector",
+          "role": "mascot",
+          "assetType": "mascot_state",
+          "publicPath": "/mascot-3d/states/global/fuxie-global-fuxie-qa-inspector.webp",
+          "file": "apps/web/public/mascot-3d/states/global/fuxie-global-fuxie-qa-inspector.webp",
+          "status": "runtime-draft-copied-no-code-integration"
+        },
+        {
+          "item": "Live QA Checklist Panel",
+          "role": "frame",
+          "assetType": "ui_frame",
+          "publicPath": "/mascot-3d/ui/global/fuxie-global-live-qa-checklist-panel.webp",
+          "file": "apps/web/public/mascot-3d/ui/global/fuxie-global-live-qa-checklist-panel.webp",
+          "status": "runtime-draft-copied-no-code-integration"
+        }
+      ]
+    }
+  ]
+}

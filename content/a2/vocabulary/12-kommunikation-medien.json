@@ -208,7 +208,8 @@
       "exampleSentence2": "Speichern Sie die Daten.",
       "exampleTranslation2": "Lưu dữ liệu.",
       "imageUrl": "/images/vocab/a2-kommunikation-medien/daten.png",
-      "meaningDe": "Informationen in einem Computer"
+      "meaningDe": "Informationen in einem Computer",
+      "articleStatus": "not_applicable_or_needs_review"
     },
     {
       "word": "Verbindung",
@@ -378,7 +379,20 @@
       "exampleSentence2": "Kannst du mir deine Telefonnummer schreiben?",
       "exampleTranslation2": "Bạn có thể viết số điện thoại của bạn cho tôi được không?",
       "imageUrl": "/images/vocab/a2-kommunikation-medien/schreiben.png",
-      "meaningDe": "Buchstaben oder Wörter mit einem Stift oder am Computer bilden."
+      "meaningDe": "Buchstaben oder Wörter mit einem Stift oder am Computer bilden.",
+      "conjugation": {
+        "praesens": {
+          "ich": "schreibe",
+          "du": "schreibst",
+          "er_sie_es": "schreibt",
+          "wir": "schreiben",
+          "ihr": "schreibt",
+          "sie_Sie": "schreiben"
+        },
+        "isIrregular": false,
+        "isSeparable": false,
+        "reviewStatus": "auto_generated_needs_spot_check"
+      }
     },
     {
       "word": "suchen",
@@ -390,7 +404,20 @@
       "exampleSentence2": "Was suchst du auf der Webseite?",
       "exampleTranslation2": "Bạn đang tìm gì trên trang web?",
       "imageUrl": "/images/vocab/a2-kommunikation-medien/suchen.png",
-      "meaningDe": "Versuchen, etwas zu finden"
+      "meaningDe": "Versuchen, etwas zu finden",
+      "conjugation": {
+        "praesens": {
+          "ich": "suche",
+          "du": "suchst",
+          "er_sie_es": "sucht",
+          "wir": "suchen",
+          "ihr": "sucht",
+          "sie_Sie": "suchen"
+        },
+        "isIrregular": false,
+        "isSeparable": false,
+        "reviewStatus": "auto_generated_needs_spot_check"
+      }
     },
     {
       "word": "teilen",
@@ -402,7 +429,20 @@
       "exampleSentence2": "Er teilt oft interessante Artikel in den sozialen Medien.",
       "exampleTranslation2": "Anh ấy thường chia sẻ các bài viết thú vị trên mạng xã hội.",
       "imageUrl": "/images/vocab/a2-kommunikation-medien/teilen.png",
-      "meaningDe": "Etwas mit anderen Personen zusammen nutzen"
+      "meaningDe": "Etwas mit anderen Personen zusammen nutzen",
+      "conjugation": {
+        "praesens": {
+          "ich": "teile",
+          "du": "teilst",
+          "er_sie_es": "teilt",
+          "wir": "teilen",
+          "ihr": "teilt",
+          "sie_Sie": "teilen"
+        },
+        "isIrregular": false,
+        "isSeparable": false,
+        "reviewStatus": "auto_generated_needs_spot_check"
+      }
     },
     {
       "word": "digital",
@@ -427,6 +467,26 @@
       "exampleTranslation2": "Tôi cần một câu trả lời nhanh.",
       "imageUrl": "/images/vocab/a2-kommunikation-medien/schnell.png",
       "meaningDe": "Wenn eine Bewegung oder eine Arbeit nur sehr wenig Zeit braucht."
+    }
+  ],
+  "cefrAudit": {
+    "targetLevel": "A2",
+    "verdict": "aligned",
+    "reviewerRole": "German Academic Lead",
+    "notes": "Release-candidate metadata audit: vocabulary content for \"Kommunikation & Medien\" is aligned with declared A2 scope pending final human spot-check.",
+    "reviewedAt": "2026-05-12",
+    "reviewScope": "release_candidate_metadata_pass"
+  },
+  "learningOutcomes": [
+    {
+      "id": "a2-kommunikation-medien-lo-1",
+      "cefrLevel": "A2",
+      "skill": "vocabulary",
+      "canDoVi": "Toi co the luyen tu vung o trinh do A2 qua chu de \"Kommunikation & Medien\".",
+      "canDoDe": "Ich kann Wortschatz auf Niveau A2 zum Thema \"Kommunikation & Medien\" ueben.",
+      "linkedContentIds": [
+        "a2-kommunikation-medien"
+      ]
     }
   ]
 }

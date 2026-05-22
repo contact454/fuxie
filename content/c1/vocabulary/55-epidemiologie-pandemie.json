@@ -1,817 +1,837 @@
 {
-    "theme": {
-        "slug": "c1-epidemiologie-pandemie",
-        "name": "Epidemiologie & Pandemie",
-        "nameVi": "Dịch tễ học & Đại dịch",
-        "nameEn": "Epidemiology & Pandemic",
-        "sortOrder": 55,
-        "imageUrl": "/images/themes/c1-epidemiologie-pandemie.png"
+  "theme": {
+    "slug": "c1-epidemiologie-pandemie",
+    "name": "Epidemiologie & Pandemie",
+    "nameVi": "Dịch tễ học & Đại dịch",
+    "nameEn": "Epidemiology & Pandemic",
+    "sortOrder": 55,
+    "imageUrl": "/images/themes/c1-epidemiologie-pandemie.png"
+  },
+  "words": [
+    {
+      "word": "Inzidenz",
+      "article": "FEMININ",
+      "plural": "die Inzidenzen",
+      "wordType": "NOMEN",
+      "meaningVi": "Tỷ lệ mắc mới",
+      "meaningEn": "Incidence (rate of new cases)",
+      "exampleSentence1": "Die wöchentliche Inzidenz der Neuinfektionen ist in einigen Regionen alarmierend gestiegen und erfordert sofortige Gegenmaßnahmen.",
+      "exampleTranslation1": "Tỷ lệ mắc mới hàng tuần ở một số khu vực đã tăng lên đáng báo động và đòi hỏi các biện pháp đối phó ngay lập tức.",
+      "exampleSentence2": "Epidemiologische Studien konzentrieren sich oft auf die Inzidenz bestimmter Krankheiten, um deren Ausbreitungsdynamik zu verstehen.",
+      "exampleTranslation2": "Các nghiên cứu dịch tễ học thường tập trung vào tỷ lệ mắc mới của các bệnh cụ thể để hiểu động lực lây lan của chúng.",
+      "imageUrl": "/images/vocab/c1-epidemiologie-pandemie/die-inzidenz.png",
+      "meaningDe": "Anzahl der Neuerkrankungen in einem bestimmten Zeitraum"
     },
-    "words": [
-        {
-            "word": "Inzidenz",
-            "article": "FEMININ",
-            "plural": "die Inzidenzen",
-            "wordType": "NOMEN",
-            "meaningVi": "Tỷ lệ mắc mới",
-            "meaningEn": "Incidence (rate of new cases)",
-            "exampleSentence1": "Die wöchentliche Inzidenz der Neuinfektionen ist in einigen Regionen alarmierend gestiegen und erfordert sofortige Gegenmaßnahmen.",
-            "exampleTranslation1": "Tỷ lệ mắc mới hàng tuần ở một số khu vực đã tăng lên đáng báo động và đòi hỏi các biện pháp đối phó ngay lập tức.",
-            "exampleSentence2": "Epidemiologische Studien konzentrieren sich oft auf die Inzidenz bestimmter Krankheiten, um deren Ausbreitungsdynamik zu verstehen.",
-            "exampleTranslation2": "Các nghiên cứu dịch tễ học thường tập trung vào tỷ lệ mắc mới của các bệnh cụ thể để hiểu động lực lây lan của chúng.",
-            "imageUrl": "/images/vocab/c1-epidemiologie-pandemie/die-inzidenz.png",
-            "meaningDe": "Anzahl der Neuerkrankungen in einem bestimmten Zeitraum"
+    {
+      "word": "Prävalenz",
+      "article": "FEMININ",
+      "plural": "die Prävalenzen",
+      "wordType": "NOMEN",
+      "meaningVi": "Tỷ lệ hiện mắc",
+      "meaningEn": "Prevalence (total proportion of cases in a population)",
+      "exampleSentence1": "Die Prävalenz chronischer Atemwegserkrankungen in städtischen Gebieten ist aufgrund erhöhter Luftverschmutzung signifikant höher.",
+      "exampleTranslation1": "Tỷ lệ hiện mắc các bệnh hô hấp mãn tính ở khu vực thành thị cao hơn đáng kể do ô nhiễm không khí gia tăng.",
+      "exampleSentence2": "Um die langfristigen Auswirkungen der Pandemie zu beurteilen, muss die Prävalenz von Post-COVID-Symptomen genau erfasst werden.",
+      "exampleTranslation2": "Để đánh giá tác động lâu dài của đại dịch, cần phải thu thập chính xác tỷ lệ hiện mắc các triệu chứng hậu COVID.",
+      "imageUrl": "/images/vocab/c1-epidemiologie-pandemie/die-praevalenz.png",
+      "meaningDe": "Gesamtzahl der Erkrankten zu einem bestimmten Zeitpunkt"
+    },
+    {
+      "word": "Morbidität",
+      "article": "FEMININ",
+      "plural": "die Morbiditäten",
+      "wordType": "NOMEN",
+      "meaningVi": "Tỷ lệ mắc bệnh, tình trạng bệnh tật",
+      "meaningEn": "Morbidity (rate of disease in a population)",
+      "exampleSentence1": "Die Morbidität älterer Patienten mit Vorerkrankungen ist bei einer Virusinfektion in der Regel deutlich erhöht.",
+      "exampleTranslation1": "Tỷ lệ mắc bệnh ở bệnh nhân lớn tuổi có bệnh nền thường tăng đáng kể khi bị nhiễm virus.",
+      "exampleSentence2": "Strategien zur Reduzierung der Morbidität umfassen präventive Maßnahmen und eine verbesserte Gesundheitsversorgung.",
+      "exampleTranslation2": "Các chiến lược nhằm giảm tỷ lệ mắc bệnh bao gồm các biện pháp phòng ngừa và cải thiện chăm sóc sức khỏe.",
+      "imageUrl": "/images/vocab/c1-epidemiologie-pandemie/die-morbiditaet.png",
+      "meaningDe": "Häufigkeit von Krankheiten in einer Bevölkerungsgruppe"
+    },
+    {
+      "word": "Mortalität",
+      "article": "FEMININ",
+      "plural": "die Mortalitäten",
+      "wordType": "NOMEN",
+      "meaningVi": "Tỷ lệ tử vong",
+      "meaningEn": "Mortality (death rate in a population)",
+      "exampleSentence1": "Die globale Mortalität sank nach der Einführung umfassender Impfprogramme dramatisch.",
+      "exampleTranslation1": "Tỷ lệ tử vong toàn cầu đã giảm đáng kể sau khi triển khai các chương trình tiêm chủng toàn diện.",
+      "exampleSentence2": "Die Analyse der alters- und geschlechtsspezifischen Mortalität liefert wichtige Erkenntnisse für die öffentliche Gesundheit.",
+      "exampleTranslation2": "Phân tích tỷ lệ tử vong theo độ tuổi và giới tính cung cấp những hiểu biết quan trọng cho y tế công cộng.",
+      "imageUrl": "/images/vocab/c1-epidemiologie-pandemie/die-mortalitaet.png",
+      "meaningDe": "Sterberate in einer bestimmten Gruppe oder Region"
+    },
+    {
+      "word": "Letalität",
+      "article": "FEMININ",
+      "plural": "die Letalitäten",
+      "wordType": "NOMEN",
+      "meaningVi": "Tỷ lệ tử vong trên ca bệnh",
+      "meaningEn": "Case fatality rate (proportion of deaths among diagnosed cases)",
+      "exampleSentence1": "Obwohl die Infektionszahlen hoch waren, blieb die Letalität der neuen Virusvariante vergleichsweise gering.",
+      "exampleTranslation1": "Mặc dù số ca nhiễm cao, tỷ lệ tử vong trên ca bệnh của biến thể virus mới vẫn tương đối thấp.",
+      "exampleSentence2": "Die Letalität einer Erkrankung hängt stark von der Verfügbarkeit effektiver Behandlungsmethoden ab.",
+      "exampleTranslation2": "Tỷ lệ tử vong trên ca bệnh của một bệnh phụ thuộc rất nhiều vào sự sẵn có của các phương pháp điều trị hiệu quả.",
+      "imageUrl": "/images/vocab/c1-epidemiologie-pandemie/die-letalitaet.png",
+      "meaningDe": "Anteil der Verstorbenen an der Gesamtzahl der Erkrankten"
+    },
+    {
+      "word": "Erreger",
+      "article": "MASKULIN",
+      "plural": "die Erreger",
+      "wordType": "NOMEN",
+      "meaningVi": "Tác nhân gây bệnh",
+      "meaningEn": "Pathogen (disease-causing agent)",
+      "exampleSentence1": "Wissenschaftler identifizierten einen neuartigen Erreger als Ursache der mysteriösen Lungenkrankheit.",
+      "exampleTranslation1": "Các nhà khoa học đã xác định một tác nhân gây bệnh mới là nguyên nhân của căn bệnh phổi bí ẩn.",
+      "exampleSentence2": "Die schnelle Identifizierung und Charakterisierung des Erregers ist entscheidend für die Entwicklung von Impfstoffen und Therapien.",
+      "exampleTranslation2": "Việc xác định và mô tả đặc điểm nhanh chóng tác nhân gây bệnh là rất quan trọng để phát triển vắc-xin và phương pháp điều trị.",
+      "imageUrl": "/images/vocab/c1-epidemiologie-pandemie/der-erreger.png",
+      "meaningDe": "Ein Mikroorganismus, der eine Krankheit auslöst"
+    },
+    {
+      "word": "Wirt",
+      "article": "MASKULIN",
+      "plural": "die Wirte",
+      "wordType": "NOMEN",
+      "meaningVi": "Vật chủ",
+      "meaningEn": "Host (organism that harbors a parasite, virus, etc.)",
+      "exampleSentence1": "Einige Viren können verschiedene Tierarten als Wirt nutzen, was die Übertragung auf den Menschen begünstigt.",
+      "exampleTranslation1": "Một số virus có thể sử dụng nhiều loài động vật khác nhau làm vật chủ, tạo điều kiện thuận lợi cho việc lây truyền sang người.",
+      "exampleSentence2": "Die Immunantwort des Wirtes spielt eine entscheidende Rolle bei der Abwehr und Elimination pathogener Erreger.",
+      "exampleTranslation2": "Phản ứng miễn dịch của vật chủ đóng vai trò quyết định trong việc bảo vệ và loại bỏ các tác nhân gây bệnh.",
+      "imageUrl": "/images/vocab/c1-epidemiologie-pandemie/der-wirt.png",
+      "meaningDe": "Ein Organismus, in dem ein Erreger lebt und sich vermehrt"
+    },
+    {
+      "word": "Infektionskette",
+      "article": "FEMININ",
+      "plural": "die Infektionsketten",
+      "wordType": "NOMEN",
+      "meaningVi": "Chuỗi lây nhiễm",
+      "meaningEn": "Chain of infection",
+      "exampleSentence1": "Das Nachverfolgen von Kontakten ist eine essenzielle Strategie, um die Infektionskette effektiv zu unterbrechen.",
+      "exampleTranslation1": "Truy vết tiếp xúc là một chiến lược thiết yếu để cắt đứt chuỗi lây nhiễm một cách hiệu quả.",
+      "exampleSentence2": "Die Unterbrechung der Infektionskette erfordert ein koordiniertes Vorgehen von Gesundheitsbehörden und der Bevölkerung.",
+      "exampleTranslation2": "Việc cắt đứt chuỗi lây nhiễm đòi hỏi sự phối hợp hành động giữa các cơ quan y tế và cộng đồng.",
+      "imageUrl": "/images/vocab/c1-epidemiologie-pandemie/die-infektionskette.png",
+      "meaningDe": "Der Weg, auf dem eine Krankheit von einer Person zur nächsten übertragen wird"
+    },
+    {
+      "word": "Eindämmung",
+      "article": "FEMININ",
+      "plural": "die Eindämmungen",
+      "wordType": "NOMEN",
+      "meaningVi": "Sự kiềm chế, ngăn chặn",
+      "meaningEn": "Containment (of a disease, crisis)",
+      "exampleSentence1": "Die frühzeitige Eindämmung des Ausbruchs verhinderte eine globale Pandemie.",
+      "exampleTranslation1": "Việc kiềm chế sớm sự bùng phát đã ngăn chặn một đại dịch toàn cầu.",
+      "exampleSentence2": "Internationale Reisebeschränkungen wurden als Maßnahme zur Eindämmung der Virusausbreitung verhängt.",
+      "exampleTranslation2": "Các hạn chế đi lại quốc tế đã được áp dụng như một biện pháp để ngăn chặn sự lây lan của virus.",
+      "imageUrl": "/images/vocab/c1-epidemiologie-pandemie/die-eindaemmung.png",
+      "meaningDe": "Maßnahmen, um die Ausbreitung einer Krankheit zu stoppen"
+    },
+    {
+      "word": "Seuchenbekämpfung",
+      "article": "FEMININ",
+      "plural": "die Seuchenbekämpfungen",
+      "wordType": "NOMEN",
+      "meaningVi": "Kiểm soát dịch bệnh",
+      "meaningEn": "Epidemic/Disease control",
+      "exampleSentence1": "Die Seuchenbekämpfung erfordert eine robuste Infrastruktur und gut geschultes Personal im Gesundheitswesen.",
+      "exampleTranslation1": "Kiểm soát dịch bệnh đòi hỏi một cơ sở hạ tầng vững chắc và đội ngũ nhân viên y tế được đào tạo tốt.",
+      "exampleSentence2": "Forschung und Entwicklung sind unerlässlich für eine effektive Seuchenbekämpfung, insbesondere bei neuen Pathogenen.",
+      "exampleTranslation2": "Nghiên cứu và phát triển là điều cần thiết để kiểm soát dịch bệnh hiệu quả, đặc biệt đối với các tác nhân gây bệnh mới.",
+      "imageUrl": "/images/vocab/c1-epidemiologie-pandemie/die-seuchenbekaempfung.png",
+      "meaningDe": "Systematische Maßnahmen zur Eindämmung und Beendigung einer weit verbreiteten Infektionskrankheit."
+    },
+    {
+      "word": "Immunisierung",
+      "article": "FEMININ",
+      "plural": "die Immunisierungen",
+      "wordType": "NOMEN",
+      "meaningVi": "Sự miễn dịch hóa, tiêm chủng",
+      "meaningEn": "Immunization",
+      "exampleSentence1": "Eine flächendeckende Immunisierung der Bevölkerung ist der Schlüssel zur Erreichung der Herdenimmunität.",
+      "exampleTranslation1": "Miễn dịch hóa toàn diện trong dân số là chìa khóa để đạt được miễn dịch cộng đồng.",
+      "exampleSentence2": "Neben Impfungen kann auch eine überstandene Infektion zu einer natürlichen Immunisierung führen.",
+      "exampleTranslation2": "Ngoài tiêm chủng, việc vượt qua một nhiễm trùng cũng có thể dẫn đến miễn dịch hóa tự nhiên.",
+      "imageUrl": "/images/vocab/c1-epidemiologie-pandemie/die-immunisierung.png",
+      "meaningDe": "Der Prozess, durch den der Körper gegen eine Krankheit geschützt wird"
+    },
+    {
+      "word": "Impfstoff",
+      "article": "MASKULIN",
+      "plural": "die Impfstoffe",
+      "wordType": "NOMEN",
+      "meaningVi": "Vắc-xin",
+      "meaningEn": "Vaccine",
+      "exampleSentence1": "Die rasante Entwicklung eines wirksamen Impfstoffes war ein bemerkenswerter wissenschaftlicher Erfolg.",
+      "exampleTranslation1": "Việc phát triển nhanh chóng một loại vắc-xin hiệu quả là một thành công khoa học đáng chú ý.",
+      "exampleSentence2": "Die gerechte Verteilung von Impfstoffen bleibt eine ethische und logistische Herausforderung auf globaler Ebene.",
+      "exampleTranslation2": "Việc phân phối vắc-xin công bằng vẫn là một thách thức đạo đức và hậu cần ở cấp độ toàn cầu.",
+      "imageUrl": "/images/vocab/c1-epidemiologie-pandemie/der-impfstoff.png",
+      "meaningDe": "Ein Präparat, das das Immunsystem trainiert, einen Erreger zu bekämpfen"
+    },
+    {
+      "word": "Mutationsrate",
+      "article": "FEMININ",
+      "plural": "die Mutationsraten",
+      "wordType": "NOMEN",
+      "meaningVi": "Tốc độ đột biến",
+      "meaningEn": "Mutation rate",
+      "exampleSentence1": "Viren mit einer hohen Mutationsrate stellen eine besondere Herausforderung für die Impfstoffentwicklung dar.",
+      "exampleTranslation1": "Các loại virus có tốc độ đột biến cao đặt ra một thách thức đặc biệt đối với việc phát triển vắc-xin.",
+      "exampleSentence2": "Die Untersuchung der Mutationsrate gibt Aufschluss über die evolutionäre Anpassungsfähigkeit eines Pathogens.",
+      "exampleTranslation2": "Nghiên cứu tốc độ đột biến cung cấp thông tin về khả năng thích ứng tiến hóa của một tác nhân gây bệnh.",
+      "imageUrl": "/images/vocab/c1-epidemiologie-pandemie/die-mutationsrate.png",
+      "meaningDe": "Die Geschwindigkeit, mit der sich das Erbgut eines Erregers verändert"
+    },
+    {
+      "word": "Virulenz",
+      "article": "FEMININ",
+      "plural": "die Virulenzen",
+      "wordType": "NOMEN",
+      "meaningVi": "Độc lực",
+      "meaningEn": "Virulence (pathogen's ability to cause disease)",
+      "exampleSentence1": "Die neue Virusvariante zeigte eine erhöhte Virulenz, was zu schwereren Krankheitsverläufen führte.",
+      "exampleTranslation1": "Biến thể virus mới cho thấy độc lực tăng lên, dẫn đến các trường hợp bệnh nặng hơn.",
+      "exampleSentence2": "Die Forschung zur Virulenz von Bakterien ist entscheidend, um neue Antibiotika und Therapien zu entwickeln.",
+      "exampleTranslation2": "Nghiên cứu về độc lực của vi khuẩn là rất quan trọng để phát triển các loại kháng sinh và phương pháp điều trị mới.",
+      "imageUrl": "/images/vocab/c1-epidemiologie-pandemie/die-virulenz.png",
+      "meaningDe": "Die Fähigkeit eines Erregers, schwere Krankheiten auszulösen"
+    },
+    {
+      "word": "Übertragungsrate",
+      "article": "FEMININ",
+      "plural": "die Übertragungsraten",
+      "wordType": "NOMEN",
+      "meaningVi": "Tỷ lệ lây truyền",
+      "meaningEn": "Transmission rate (rate at which a disease spreads)",
+      "exampleSentence1": "Maßnahmen wie Maskenpflicht und Abstandhaltung zielen darauf ab, die Übertragungsrate des Virus zu senken.",
+      "exampleTranslation1": "Các biện pháp như bắt buộc đeo khẩu trang và giữ khoảng cách nhằm mục đích giảm tỷ lệ lây truyền của virus.",
+      "exampleSentence2": "Eine effektive Kontaktverfolgung kann die Übertragungsrate signifikant reduzieren, indem sie Infektionsketten unterbricht.",
+      "exampleTranslation2": "Truy vết tiếp xúc hiệu quả có thể làm giảm đáng kể tỷ lệ lây truyền bằng cách cắt đứt chuỗi lây nhiễm.",
+      "imageUrl": "/images/vocab/c1-epidemiologie-pandemie/die-uebertragungsrate.png",
+      "meaningDe": "Die Geschwindigkeit, mit der eine Krankheit von Mensch zu Mensch weitergegeben wird"
+    },
+    {
+      "word": "Kohorte",
+      "article": "FEMININ",
+      "plural": "die Kohorten",
+      "wordType": "NOMEN",
+      "meaningVi": "Nhóm nghiên cứu, đoàn hệ",
+      "meaningEn": "Cohort (group of people sharing a common characteristic in a study)",
+      "exampleSentence1": "In der medizinischen Forschung werden oft spezifische Kohorten über Jahre hinweg beobachtet, um Langzeitwirkungen zu erfassen.",
+      "exampleTranslation1": "Trong nghiên cứu y học, các nhóm nghiên cứu cụ thể thường được theo dõi trong nhiều năm để ghi nhận các tác động lâu dài.",
+      "exampleSentence2": "Die Ergebnisse der Impfstoffstudie basieren auf der Analyse einer Kohorte von über 40.000 Probanden.",
+      "exampleTranslation2": "Kết quả nghiên cứu vắc-xin dựa trên phân tích một nhóm nghiên cứu gồm hơn 40.000 người tham gia.",
+      "imageUrl": "/images/vocab/c1-epidemiologie-pandemie/die-kohorte.png",
+      "meaningDe": "Eine Gruppe von Personen, die ein gemeinsames Merkmal teilen und beobachtet werden"
+    },
+    {
+      "word": "Surveillance",
+      "article": "FEMININ",
+      "plural": "die Surveillancen",
+      "wordType": "NOMEN",
+      "meaningVi": "Giám sát dịch tễ học",
+      "meaningEn": "Surveillance (epidemiological monitoring)",
+      "exampleSentence1": "Eine kontinuierliche epidemiologische Surveillance ist essenziell, um neue Krankheitsausbrüche frühzeitig zu erkennen.",
+      "exampleTranslation1": "Giám sát dịch tễ học liên tục là rất cần thiết để phát hiện sớm các đợt bùng phát dịch bệnh mới.",
+      "exampleSentence2": "Die globale Surveillance von Influenzaviren ermöglicht die jährliche Anpassung der Impfstoffe.",
+      "exampleTranslation2": "Giám sát toàn cầu các virus cúm cho phép điều chỉnh vắc-xin hàng năm.",
+      "imageUrl": "/images/vocab/c1-epidemiologie-pandemie/die-surveillance.png",
+      "meaningDe": "Die systematische Überwachung der Ausbreitung von Krankheiten"
+    },
+    {
+      "word": "Expositionsrisiko",
+      "article": "NEUTRUM",
+      "plural": "die Expositionsrisiken",
+      "wordType": "NOMEN",
+      "meaningVi": "Nguy cơ phơi nhiễm",
+      "meaningEn": "Exposure risk",
+      "exampleSentence1": "Medizinisches Personal ist aufgrund seiner Arbeit einem erhöhten Expositionsrisiko gegenüber infektiösen Erregern ausgesetzt.",
+      "exampleTranslation1": "Nhân viên y tế phải đối mặt với nguy cơ phơi nhiễm cao hơn với các tác nhân gây nhiễm trùng do tính chất công việc của họ.",
+      "exampleSentence2": "Die Minimierung des Expositionsrisikos in öffentlichen Räumen ist eine zentrale Säule der Pandemieprävention.",
+      "exampleTranslation2": "Việc giảm thiểu nguy cơ phơi nhiễm trong không gian công cộng là một trụ cột chính của phòng ngừa đại dịch.",
+      "imageUrl": "/images/vocab/c1-epidemiologie-pandemie/das-expositionsrisiko.png",
+      "meaningDe": "Die Wahrscheinlichkeit, mit einem schädlichen Stoff oder Erreger in Kontakt zu kommen"
+    },
+    {
+      "word": "eindämmen",
+      "article": null,
+      "plural": null,
+      "wordType": "VERB",
+      "meaningVi": "Kiềm chế, ngăn chặn",
+      "meaningEn": "To contain, to curb, to stem",
+      "exampleSentence1": "Ohne drastische Maßnahmen wäre es unmöglich gewesen, die rasche Ausbreitung des Virus einzudämmen.",
+      "exampleTranslation1": "Nếu không có các biện pháp quyết liệt, việc kiềm chế sự lây lan nhanh chóng của virus là điều không thể.",
+      "exampleSentence2": "Die Regierung versucht, die wirtschaftlichen Folgen der Pandemie durch gezielte Hilfspakete einzudämmen.",
+      "exampleTranslation2": "Chính phủ đang cố gắng kiềm chế những hậu quả kinh tế của đại dịch thông qua các gói hỗ trợ có mục tiêu.",
+      "imageUrl": "/images/vocab/c1-epidemiologie-pandemie/eindaemmen.png",
+      "meaningDe": "Die Ausbreitung eines unerwünschten Prozesses durch gezielte Maßnahmen begrenzen.",
+      "conjugation": {
+        "praesens": {
+          "ich": "ich dämme ein",
+          "du": "du dämmst ein",
+          "er/sie/es": "er/sie/es dämmt ein",
+          "wir": "wir dämmen ein",
+          "ihr": "ihr dämmt ein",
+          "sie/Sie": "sie/Sie dämmen ein"
         },
-        {
-            "word": "Prävalenz",
-            "article": "FEMININ",
-            "plural": "die Prävalenzen",
-            "wordType": "NOMEN",
-            "meaningVi": "Tỷ lệ hiện mắc",
-            "meaningEn": "Prevalence (total proportion of cases in a population)",
-            "exampleSentence1": "Die Prävalenz chronischer Atemwegserkrankungen in städtischen Gebieten ist aufgrund erhöhter Luftverschmutzung signifikant höher.",
-            "exampleTranslation1": "Tỷ lệ hiện mắc các bệnh hô hấp mãn tính ở khu vực thành thị cao hơn đáng kể do ô nhiễm không khí gia tăng.",
-            "exampleSentence2": "Um die langfristigen Auswirkungen der Pandemie zu beurteilen, muss die Prävalenz von Post-COVID-Symptomen genau erfasst werden.",
-            "exampleTranslation2": "Để đánh giá tác động lâu dài của đại dịch, cần phải thu thập chính xác tỷ lệ hiện mắc các triệu chứng hậu COVID.",
-            "imageUrl": "/images/vocab/c1-epidemiologie-pandemie/die-praevalenz.png",
-            "meaningDe": "Gesamtzahl der Erkrankten zu einem bestimmten Zeitpunkt"
+        "praeteritum": {
+          "ich": "ich dämmte ein",
+          "du": "du dämmtest ein",
+          "er/sie/es": "er/sie/es dämmte ein",
+          "wir": "wir dämmten ein",
+          "ihr": "ihr dämmtet ein",
+          "sie/Sie": "sie/Sie dämmten ein"
         },
-        {
-            "word": "Morbidität",
-            "article": "FEMININ",
-            "plural": "die Morbiditäten",
-            "wordType": "NOMEN",
-            "meaningVi": "Tỷ lệ mắc bệnh, tình trạng bệnh tật",
-            "meaningEn": "Morbidity (rate of disease in a population)",
-            "exampleSentence1": "Die Morbidität älterer Patienten mit Vorerkrankungen ist bei einer Virusinfektion in der Regel deutlich erhöht.",
-            "exampleTranslation1": "Tỷ lệ mắc bệnh ở bệnh nhân lớn tuổi có bệnh nền thường tăng đáng kể khi bị nhiễm virus.",
-            "exampleSentence2": "Strategien zur Reduzierung der Morbidität umfassen präventive Maßnahmen und eine verbesserte Gesundheitsversorgung.",
-            "exampleTranslation2": "Các chiến lược nhằm giảm tỷ lệ mắc bệnh bao gồm các biện pháp phòng ngừa và cải thiện chăm sóc sức khỏe.",
-            "imageUrl": "/images/vocab/c1-epidemiologie-pandemie/die-morbiditaet.png",
-            "meaningDe": "Häufigkeit von Krankheiten in einer Bevölkerungsgruppe"
+        "perfekt": {
+          "hilfsverb": "haben",
+          "partizip2": "eingedämmt"
         },
-        {
-            "word": "Mortalität",
-            "article": "FEMININ",
-            "plural": "die Mortalitäten",
-            "wordType": "NOMEN",
-            "meaningVi": "Tỷ lệ tử vong",
-            "meaningEn": "Mortality (death rate in a population)",
-            "exampleSentence1": "Die globale Mortalität sank nach der Einführung umfassender Impfprogramme dramatisch.",
-            "exampleTranslation1": "Tỷ lệ tử vong toàn cầu đã giảm đáng kể sau khi triển khai các chương trình tiêm chủng toàn diện.",
-            "exampleSentence2": "Die Analyse der alters- und geschlechtsspezifischen Mortalität liefert wichtige Erkenntnisse für die öffentliche Gesundheit.",
-            "exampleTranslation2": "Phân tích tỷ lệ tử vong theo độ tuổi và giới tính cung cấp những hiểu biết quan trọng cho y tế công cộng.",
-            "imageUrl": "/images/vocab/c1-epidemiologie-pandemie/die-mortalitaet.png",
-            "meaningDe": "Sterberate in einer bestimmten Gruppe oder Region"
+        "konjunktiv2": {
+          "ich": "ich dämmte ein",
+          "du": "du dämmtest ein",
+          "er/sie/es": "er/sie/es dämmte ein",
+          "wir": "wir dämmten ein",
+          "ihr": "ihr dämmtet ein",
+          "sie/Sie": "sie/Sie dämmten ein"
         },
-        {
-            "word": "Letalität",
-            "article": "FEMININ",
-            "plural": "die Letalitäten",
-            "wordType": "NOMEN",
-            "meaningVi": "Tỷ lệ tử vong trên ca bệnh",
-            "meaningEn": "Case fatality rate (proportion of deaths among diagnosed cases)",
-            "exampleSentence1": "Obwohl die Infektionszahlen hoch waren, blieb die Letalität der neuen Virusvariante vergleichsweise gering.",
-            "exampleTranslation1": "Mặc dù số ca nhiễm cao, tỷ lệ tử vong trên ca bệnh của biến thể virus mới vẫn tương đối thấp.",
-            "exampleSentence2": "Die Letalität einer Erkrankung hängt stark von der Verfügbarkeit effektiver Behandlungsmethoden ab.",
-            "exampleTranslation2": "Tỷ lệ tử vong trên ca bệnh của một bệnh phụ thuộc rất nhiều vào sự sẵn có của các phương pháp điều trị hiệu quả.",
-            "imageUrl": "/images/vocab/c1-epidemiologie-pandemie/die-letalitaet.png",
-            "meaningDe": "Anteil der Verstorbenen an der Gesamtzahl der Erkrankten"
-        },
-        {
-            "word": "Erreger",
-            "article": "MASKULIN",
-            "plural": "die Erreger",
-            "wordType": "NOMEN",
-            "meaningVi": "Tác nhân gây bệnh",
-            "meaningEn": "Pathogen (disease-causing agent)",
-            "exampleSentence1": "Wissenschaftler identifizierten einen neuartigen Erreger als Ursache der mysteriösen Lungenkrankheit.",
-            "exampleTranslation1": "Các nhà khoa học đã xác định một tác nhân gây bệnh mới là nguyên nhân của căn bệnh phổi bí ẩn.",
-            "exampleSentence2": "Die schnelle Identifizierung und Charakterisierung des Erregers ist entscheidend für die Entwicklung von Impfstoffen und Therapien.",
-            "exampleTranslation2": "Việc xác định và mô tả đặc điểm nhanh chóng tác nhân gây bệnh là rất quan trọng để phát triển vắc-xin và phương pháp điều trị.",
-            "imageUrl": "/images/vocab/c1-epidemiologie-pandemie/der-erreger.png",
-            "meaningDe": "Ein Mikroorganismus, der eine Krankheit auslöst"
-        },
-        {
-            "word": "Wirt",
-            "article": "MASKULIN",
-            "plural": "die Wirte",
-            "wordType": "NOMEN",
-            "meaningVi": "Vật chủ",
-            "meaningEn": "Host (organism that harbors a parasite, virus, etc.)",
-            "exampleSentence1": "Einige Viren können verschiedene Tierarten als Wirt nutzen, was die Übertragung auf den Menschen begünstigt.",
-            "exampleTranslation1": "Một số virus có thể sử dụng nhiều loài động vật khác nhau làm vật chủ, tạo điều kiện thuận lợi cho việc lây truyền sang người.",
-            "exampleSentence2": "Die Immunantwort des Wirtes spielt eine entscheidende Rolle bei der Abwehr und Elimination pathogener Erreger.",
-            "exampleTranslation2": "Phản ứng miễn dịch của vật chủ đóng vai trò quyết định trong việc bảo vệ và loại bỏ các tác nhân gây bệnh.",
-            "imageUrl": "/images/vocab/c1-epidemiologie-pandemie/der-wirt.png",
-            "meaningDe": "Ein Organismus, in dem ein Erreger lebt und sich vermehrt"
-        },
-        {
-            "word": "Infektionskette",
-            "article": "FEMININ",
-            "plural": "die Infektionsketten",
-            "wordType": "NOMEN",
-            "meaningVi": "Chuỗi lây nhiễm",
-            "meaningEn": "Chain of infection",
-            "exampleSentence1": "Das Nachverfolgen von Kontakten ist eine essenzielle Strategie, um die Infektionskette effektiv zu unterbrechen.",
-            "exampleTranslation1": "Truy vết tiếp xúc là một chiến lược thiết yếu để cắt đứt chuỗi lây nhiễm một cách hiệu quả.",
-            "exampleSentence2": "Die Unterbrechung der Infektionskette erfordert ein koordiniertes Vorgehen von Gesundheitsbehörden und der Bevölkerung.",
-            "exampleTranslation2": "Việc cắt đứt chuỗi lây nhiễm đòi hỏi sự phối hợp hành động giữa các cơ quan y tế và cộng đồng.",
-            "imageUrl": "/images/vocab/c1-epidemiologie-pandemie/die-infektionskette.png",
-            "meaningDe": "Der Weg, auf dem eine Krankheit von einer Person zur nächsten übertragen wird"
-        },
-        {
-            "word": "Eindämmung",
-            "article": "FEMININ",
-            "plural": "die Eindämmungen",
-            "wordType": "NOMEN",
-            "meaningVi": "Sự kiềm chế, ngăn chặn",
-            "meaningEn": "Containment (of a disease, crisis)",
-            "exampleSentence1": "Die frühzeitige Eindämmung des Ausbruchs verhinderte eine globale Pandemie.",
-            "exampleTranslation1": "Việc kiềm chế sớm sự bùng phát đã ngăn chặn một đại dịch toàn cầu.",
-            "exampleSentence2": "Internationale Reisebeschränkungen wurden als Maßnahme zur Eindämmung der Virusausbreitung verhängt.",
-            "exampleTranslation2": "Các hạn chế đi lại quốc tế đã được áp dụng như một biện pháp để ngăn chặn sự lây lan của virus.",
-            "imageUrl": "/images/vocab/c1-epidemiologie-pandemie/die-eindaemmung.png",
-            "meaningDe": "Maßnahmen, um die Ausbreitung einer Krankheit zu stoppen"
-        },
-        {
-            "word": "Seuchenbekämpfung",
-            "article": "FEMININ",
-            "plural": "die Seuchenbekämpfungen",
-            "wordType": "NOMEN",
-            "meaningVi": "Kiểm soát dịch bệnh",
-            "meaningEn": "Epidemic/Disease control",
-            "exampleSentence1": "Die Seuchenbekämpfung erfordert eine robuste Infrastruktur und gut geschultes Personal im Gesundheitswesen.",
-            "exampleTranslation1": "Kiểm soát dịch bệnh đòi hỏi một cơ sở hạ tầng vững chắc và đội ngũ nhân viên y tế được đào tạo tốt.",
-            "exampleSentence2": "Forschung und Entwicklung sind unerlässlich für eine effektive Seuchenbekämpfung, insbesondere bei neuen Pathogenen.",
-            "exampleTranslation2": "Nghiên cứu và phát triển là điều cần thiết để kiểm soát dịch bệnh hiệu quả, đặc biệt đối với các tác nhân gây bệnh mới.",
-            "imageUrl": "/images/vocab/c1-epidemiologie-pandemie/die-seuchenbekaempfung.png",
-            "meaningDe": "Systematische Maßnahmen zur Eindämmung und Beendigung einer weit verbreiteten Infektionskrankheit."
-        },
-        {
-            "word": "Immunisierung",
-            "article": "FEMININ",
-            "plural": "die Immunisierungen",
-            "wordType": "NOMEN",
-            "meaningVi": "Sự miễn dịch hóa, tiêm chủng",
-            "meaningEn": "Immunization",
-            "exampleSentence1": "Eine flächendeckende Immunisierung der Bevölkerung ist der Schlüssel zur Erreichung der Herdenimmunität.",
-            "exampleTranslation1": "Miễn dịch hóa toàn diện trong dân số là chìa khóa để đạt được miễn dịch cộng đồng.",
-            "exampleSentence2": "Neben Impfungen kann auch eine überstandene Infektion zu einer natürlichen Immunisierung führen.",
-            "exampleTranslation2": "Ngoài tiêm chủng, việc vượt qua một nhiễm trùng cũng có thể dẫn đến miễn dịch hóa tự nhiên.",
-            "imageUrl": "/images/vocab/c1-epidemiologie-pandemie/die-immunisierung.png",
-            "meaningDe": "Der Prozess, durch den der Körper gegen eine Krankheit geschützt wird"
-        },
-        {
-            "word": "Impfstoff",
-            "article": "MASKULIN",
-            "plural": "die Impfstoffe",
-            "wordType": "NOMEN",
-            "meaningVi": "Vắc-xin",
-            "meaningEn": "Vaccine",
-            "exampleSentence1": "Die rasante Entwicklung eines wirksamen Impfstoffes war ein bemerkenswerter wissenschaftlicher Erfolg.",
-            "exampleTranslation1": "Việc phát triển nhanh chóng một loại vắc-xin hiệu quả là một thành công khoa học đáng chú ý.",
-            "exampleSentence2": "Die gerechte Verteilung von Impfstoffen bleibt eine ethische und logistische Herausforderung auf globaler Ebene.",
-            "exampleTranslation2": "Việc phân phối vắc-xin công bằng vẫn là một thách thức đạo đức và hậu cần ở cấp độ toàn cầu.",
-            "imageUrl": "/images/vocab/c1-epidemiologie-pandemie/der-impfstoff.png",
-            "meaningDe": "Ein Präparat, das das Immunsystem trainiert, einen Erreger zu bekämpfen"
-        },
-        {
-            "word": "Mutationsrate",
-            "article": "FEMININ",
-            "plural": "die Mutationsraten",
-            "wordType": "NOMEN",
-            "meaningVi": "Tốc độ đột biến",
-            "meaningEn": "Mutation rate",
-            "exampleSentence1": "Viren mit einer hohen Mutationsrate stellen eine besondere Herausforderung für die Impfstoffentwicklung dar.",
-            "exampleTranslation1": "Các loại virus có tốc độ đột biến cao đặt ra một thách thức đặc biệt đối với việc phát triển vắc-xin.",
-            "exampleSentence2": "Die Untersuchung der Mutationsrate gibt Aufschluss über die evolutionäre Anpassungsfähigkeit eines Pathogens.",
-            "exampleTranslation2": "Nghiên cứu tốc độ đột biến cung cấp thông tin về khả năng thích ứng tiến hóa của một tác nhân gây bệnh.",
-            "imageUrl": "/images/vocab/c1-epidemiologie-pandemie/die-mutationsrate.png",
-            "meaningDe": "Die Geschwindigkeit, mit der sich das Erbgut eines Erregers verändert"
-        },
-        {
-            "word": "Virulenz",
-            "article": "FEMININ",
-            "plural": "die Virulenzen",
-            "wordType": "NOMEN",
-            "meaningVi": "Độc lực",
-            "meaningEn": "Virulence (pathogen's ability to cause disease)",
-            "exampleSentence1": "Die neue Virusvariante zeigte eine erhöhte Virulenz, was zu schwereren Krankheitsverläufen führte.",
-            "exampleTranslation1": "Biến thể virus mới cho thấy độc lực tăng lên, dẫn đến các trường hợp bệnh nặng hơn.",
-            "exampleSentence2": "Die Forschung zur Virulenz von Bakterien ist entscheidend, um neue Antibiotika und Therapien zu entwickeln.",
-            "exampleTranslation2": "Nghiên cứu về độc lực của vi khuẩn là rất quan trọng để phát triển các loại kháng sinh và phương pháp điều trị mới.",
-            "imageUrl": "/images/vocab/c1-epidemiologie-pandemie/die-virulenz.png",
-            "meaningDe": "Die Fähigkeit eines Erregers, schwere Krankheiten auszulösen"
-        },
-        {
-            "word": "Übertragungsrate",
-            "article": "FEMININ",
-            "plural": "die Übertragungsraten",
-            "wordType": "NOMEN",
-            "meaningVi": "Tỷ lệ lây truyền",
-            "meaningEn": "Transmission rate (rate at which a disease spreads)",
-            "exampleSentence1": "Maßnahmen wie Maskenpflicht und Abstandhaltung zielen darauf ab, die Übertragungsrate des Virus zu senken.",
-            "exampleTranslation1": "Các biện pháp như bắt buộc đeo khẩu trang và giữ khoảng cách nhằm mục đích giảm tỷ lệ lây truyền của virus.",
-            "exampleSentence2": "Eine effektive Kontaktverfolgung kann die Übertragungsrate signifikant reduzieren, indem sie Infektionsketten unterbricht.",
-            "exampleTranslation2": "Truy vết tiếp xúc hiệu quả có thể làm giảm đáng kể tỷ lệ lây truyền bằng cách cắt đứt chuỗi lây nhiễm.",
-            "imageUrl": "/images/vocab/c1-epidemiologie-pandemie/die-uebertragungsrate.png",
-            "meaningDe": "Die Geschwindigkeit, mit der eine Krankheit von Mensch zu Mensch weitergegeben wird"
-        },
-        {
-            "word": "Kohorte",
-            "article": "FEMININ",
-            "plural": "die Kohorten",
-            "wordType": "NOMEN",
-            "meaningVi": "Nhóm nghiên cứu, đoàn hệ",
-            "meaningEn": "Cohort (group of people sharing a common characteristic in a study)",
-            "exampleSentence1": "In der medizinischen Forschung werden oft spezifische Kohorten über Jahre hinweg beobachtet, um Langzeitwirkungen zu erfassen.",
-            "exampleTranslation1": "Trong nghiên cứu y học, các nhóm nghiên cứu cụ thể thường được theo dõi trong nhiều năm để ghi nhận các tác động lâu dài.",
-            "exampleSentence2": "Die Ergebnisse der Impfstoffstudie basieren auf der Analyse einer Kohorte von über 40.000 Probanden.",
-            "exampleTranslation2": "Kết quả nghiên cứu vắc-xin dựa trên phân tích một nhóm nghiên cứu gồm hơn 40.000 người tham gia.",
-            "imageUrl": "/images/vocab/c1-epidemiologie-pandemie/die-kohorte.png",
-            "meaningDe": "Eine Gruppe von Personen, die ein gemeinsames Merkmal teilen und beobachtet werden"
-        },
-        {
-            "word": "Surveillance",
-            "article": "FEMININ",
-            "plural": "die Surveillancen",
-            "wordType": "NOMEN",
-            "meaningVi": "Giám sát dịch tễ học",
-            "meaningEn": "Surveillance (epidemiological monitoring)",
-            "exampleSentence1": "Eine kontinuierliche epidemiologische Surveillance ist essenziell, um neue Krankheitsausbrüche frühzeitig zu erkennen.",
-            "exampleTranslation1": "Giám sát dịch tễ học liên tục là rất cần thiết để phát hiện sớm các đợt bùng phát dịch bệnh mới.",
-            "exampleSentence2": "Die globale Surveillance von Influenzaviren ermöglicht die jährliche Anpassung der Impfstoffe.",
-            "exampleTranslation2": "Giám sát toàn cầu các virus cúm cho phép điều chỉnh vắc-xin hàng năm.",
-            "imageUrl": "/images/vocab/c1-epidemiologie-pandemie/die-surveillance.png",
-            "meaningDe": "Die systematische Überwachung der Ausbreitung von Krankheiten"
-        },
-        {
-            "word": "Expositionsrisiko",
-            "article": "NEUTRUM",
-            "plural": "die Expositionsrisiken",
-            "wordType": "NOMEN",
-            "meaningVi": "Nguy cơ phơi nhiễm",
-            "meaningEn": "Exposure risk",
-            "exampleSentence1": "Medizinisches Personal ist aufgrund seiner Arbeit einem erhöhten Expositionsrisiko gegenüber infektiösen Erregern ausgesetzt.",
-            "exampleTranslation1": "Nhân viên y tế phải đối mặt với nguy cơ phơi nhiễm cao hơn với các tác nhân gây nhiễm trùng do tính chất công việc của họ.",
-            "exampleSentence2": "Die Minimierung des Expositionsrisikos in öffentlichen Räumen ist eine zentrale Säule der Pandemieprävention.",
-            "exampleTranslation2": "Việc giảm thiểu nguy cơ phơi nhiễm trong không gian công cộng là một trụ cột chính của phòng ngừa đại dịch.",
-            "imageUrl": "/images/vocab/c1-epidemiologie-pandemie/das-expositionsrisiko.png",
-            "meaningDe": "Die Wahrscheinlichkeit, mit einem schädlichen Stoff oder Erreger in Kontakt zu kommen"
-        },
-        {
-            "word": "eindämmen",
-            "article": null,
-            "plural": null,
-            "wordType": "VERB",
-            "meaningVi": "Kiềm chế, ngăn chặn",
-            "meaningEn": "To contain, to curb, to stem",
-            "exampleSentence1": "Ohne drastische Maßnahmen wäre es unmöglich gewesen, die rasche Ausbreitung des Virus einzudämmen.",
-            "exampleTranslation1": "Nếu không có các biện pháp quyết liệt, việc kiềm chế sự lây lan nhanh chóng của virus là điều không thể.",
-            "exampleSentence2": "Die Regierung versucht, die wirtschaftlichen Folgen der Pandemie durch gezielte Hilfspakete einzudämmen.",
-            "exampleTranslation2": "Chính phủ đang cố gắng kiềm chế những hậu quả kinh tế của đại dịch thông qua các gói hỗ trợ có mục tiêu.",
-            "imageUrl": "/images/vocab/c1-epidemiologie-pandemie/eindaemmen.png",
-            "meaningDe": "Die Ausbreitung eines unerwünschten Prozesses durch gezielte Maßnahmen begrenzen.",
-            "conjugation": {
-                "praesens": {
-                    "ich": "ich dämme ein",
-                    "du": "du dämmst ein",
-                    "er/sie/es": "er/sie/es dämmt ein",
-                    "wir": "wir dämmen ein",
-                    "ihr": "ihr dämmt ein",
-                    "sie/Sie": "sie/Sie dämmen ein"
-                },
-                "praeteritum": {
-                    "ich": "ich dämmte ein",
-                    "du": "du dämmtest ein",
-                    "er/sie/es": "er/sie/es dämmte ein",
-                    "wir": "wir dämmten ein",
-                    "ihr": "ihr dämmtet ein",
-                    "sie/Sie": "sie/Sie dämmten ein"
-                },
-                "perfekt": {
-                    "hilfsverb": "haben",
-                    "partizip2": "eingedämmt"
-                },
-                "konjunktiv2": {
-                    "ich": "ich dämmte ein",
-                    "du": "du dämmtest ein",
-                    "er/sie/es": "er/sie/es dämmte ein",
-                    "wir": "wir dämmten ein",
-                    "ihr": "ihr dämmtet ein",
-                    "sie/Sie": "sie/Sie dämmten ein"
-                },
-                "imperativ": {
-                    "du": "dämme ein",
-                    "ihr": "dämmt ein",
-                    "Sie": "dämmen Sie ein"
-                }
-            }
-        },
-        {
-            "word": "grassieren",
-            "article": null,
-            "plural": null,
-            "wordType": "VERB",
-            "meaningVi": "Lây lan tràn lan, hoành hành",
-            "meaningEn": "To spread rampantly, to rage (of a disease)",
-            "exampleSentence1": "In den Slums der Großstädte grassierte die Krankheit aufgrund mangelnder Hygiene und medizinischer Versorgung.",
-            "exampleTranslation1": "Trong các khu ổ chuột của các thành phố lớn, dịch bệnh hoành hành do thiếu vệ sinh và chăm sóc y tế.",
-            "exampleSentence2": "Die Grippewelle grassiert dieses Jahr besonders heftig und führt zu überfüllten Krankenhäusern.",
-            "exampleTranslation2": "Đợt cúm năm nay lây lan đặc biệt dữ dội và dẫn đến tình trạng quá tải bệnh viện.",
-            "imageUrl": "/images/vocab/c1-epidemiologie-pandemie/grassieren.png",
-            "meaningDe": "Weit verbreitet sein und viele Menschen befallen",
-            "conjugation": {
-                "praesens": {
-                    "ich": "ich grassiere",
-                    "du": "du grassierst",
-                    "er/sie/es": "er/sie/es grassiert",
-                    "wir": "wir grassieren",
-                    "ihr": "ihr grassiert",
-                    "sie/Sie": "sie/Sie grassieren"
-                },
-                "praeteritum": {
-                    "ich": "ich grassierte",
-                    "du": "du grassiertest",
-                    "er/sie/es": "er/sie/es grassierte",
-                    "wir": "wir grassierten",
-                    "ihr": "ihr grassiertet",
-                    "sie/Sie": "sie/Sie grassierten"
-                },
-                "perfekt": {
-                    "hilfsverb": "haben",
-                    "partizip2": "grassiert"
-                },
-                "konjunktiv2": {
-                    "ich": "ich grassierte",
-                    "du": "du grassiertest",
-                    "er/sie/es": "er/sie/es grassierte",
-                    "wir": "wir grassierten",
-                    "ihr": "ihr grassiertet",
-                    "sie/Sie": "sie/Sie grassierten"
-                },
-                "imperativ": {
-                    "du": "grassiere",
-                    "ihr": "grassiert",
-                    "Sie": "grassieren Sie"
-                }
-            }
-        },
-        {
-            "word": "mutieren",
-            "article": null,
-            "plural": null,
-            "wordType": "VERB",
-            "meaningVi": "Đột biến",
-            "meaningEn": "To mutate",
-            "exampleSentence1": "Es wird befürchtet, dass das Virus weiter mutieren könnte, wodurch die Wirksamkeit bestehender Impfstoffe beeinträchtigt würde.",
-            "exampleTranslation1": "Người ta lo ngại rằng virus có thể tiếp tục đột biến, làm giảm hiệu quả của các loại vắc-xin hiện có.",
-            "exampleSentence2": "Bakterien können schnell mutieren und Resistenzen gegen Antibiotika entwickeln.",
-            "exampleTranslation2": "Vi khuẩn có thể đột biến nhanh chóng và phát triển khả năng kháng kháng sinh.",
-            "imageUrl": "/images/vocab/c1-epidemiologie-pandemie/mutieren.png",
-            "meaningDe": "Eine dauerhafte Veränderung der genetischen Information in der DNA oder RNA eines Organismus erfahren.",
-            "conjugation": {
-                "praesens": {
-                    "ich": "ich mutiere",
-                    "du": "du mutierst",
-                    "er/sie/es": "er/sie/es mutiert",
-                    "wir": "wir mutieren",
-                    "ihr": "ihr mutiert",
-                    "sie/Sie": "sie/Sie mutieren"
-                },
-                "praeteritum": {
-                    "ich": "ich mutierte",
-                    "du": "du mutiertest",
-                    "er/sie/es": "er/sie/es mutierte",
-                    "wir": "wir mutierten",
-                    "ihr": "ihr mutiertet",
-                    "sie/Sie": "sie/Sie mutierten"
-                },
-                "perfekt": {
-                    "hilfsverb": "sein",
-                    "partizip2": "mutiert"
-                },
-                "konjunktiv2": {
-                    "ich": "ich mutierte",
-                    "du": "du mutiertest",
-                    "er/sie/es": "er/sie/es mutierte",
-                    "wir": "wir mutierten",
-                    "ihr": "ihr mutiertet",
-                    "sie/Sie": "sie/Sie mutierten"
-                },
-                "imperativ": {
-                    "du": "mutiere",
-                    "ihr": "mutiert",
-                    "Sie": "mutieren Sie"
-                }
-            }
-        },
-        {
-            "word": "sich replizieren",
-            "article": null,
-            "plural": null,
-            "wordType": "VERB",
-            "meaningVi": "Tự nhân lên, sao chép",
-            "meaningEn": "To replicate (e.g., of a virus)",
-            "exampleSentence1": "Das Virus nutzt die zelluläre Maschinerie des Wirtes, um sich effizient zu replizieren.",
-            "exampleTranslation1": "Virus sử dụng bộ máy tế bào của vật chủ để tự nhân lên một cách hiệu quả.",
-            "exampleSentence2": "Einige Medikamente zielen darauf ab, die Fähigkeit des Erregers, sich zu replizieren, zu hemmen.",
-            "exampleTranslation2": "Một số loại thuốc nhằm mục đích ức chế khả năng tự nhân lên của tác nhân gây bệnh.",
-            "imageUrl": "/images/vocab/c1-epidemiologie-pandemie/sich-replizieren.png",
-            "meaningDe": "Eine exakte Kopie des eigenen Erbguts oder der gesamten Zellstruktur erstellen.",
-            "conjugation": {
-                "praesens": {
-                    "ich": "ich repliziere mich",
-                    "du": "du replizierst dich",
-                    "er/sie/es": "er/sie/es repliziert sich",
-                    "wir": "wir replizieren uns",
-                    "ihr": "ihr repliziert euch",
-                    "sie/Sie": "sie/Sie replizieren sich"
-                },
-                "praeteritum": {
-                    "ich": "ich replizierte mich",
-                    "du": "du repliziertest dich",
-                    "er/sie/es": "er/sie/es replizierte sich",
-                    "wir": "wir replizierten uns",
-                    "ihr": "ihr repliziertet euch",
-                    "sie/Sie": "sie/Sie replizierten sich"
-                },
-                "perfekt": {
-                    "hilfsverb": "haben",
-                    "partizip2": "sich repliziert"
-                },
-                "konjunktiv2": {
-                    "ich": "ich replizierte mich",
-                    "du": "du repliziertest dich",
-                    "er/sie/es": "er/sie/es replizierte sich",
-                    "wir": "wir replizierten uns",
-                    "ihr": "ihr repliziertet euch",
-                    "sie/Sie": "sie/Sie replizierten sich"
-                },
-                "imperativ": {
-                    "du": "repliziere dich",
-                    "ihr": "repliziert euch",
-                    "Sie": "replizieren Sie sich"
-                }
-            }
-        },
-        {
-            "word": "evaluieren",
-            "article": null,
-            "plural": null,
-            "wordType": "VERB",
-            "meaningVi": "Đánh giá, thẩm định",
-            "meaningEn": "To evaluate, to assess",
-            "exampleSentence1": "Die Gesundheitsbehörden müssen kontinuierlich die Wirksamkeit der getroffenen Maßnahmen evaluieren und anpassen.",
-            "exampleTranslation1": "Các cơ quan y tế phải liên tục đánh giá và điều chỉnh hiệu quả của các biện pháp đã thực hiện.",
-            "exampleSentence2": "Experten evaluieren derzeit die potenziellen Risiken und Vorteile einer neuen Impfstrategie.",
-            "exampleTranslation2": "Các chuyên gia hiện đang đánh giá các rủi ro và lợi ích tiềm tàng của một chiến lược tiêm chủng mới.",
-            "imageUrl": "/images/vocab/c1-epidemiologie-pandemie/evaluieren.png",
-            "meaningDe": "Den Erfolg oder die Qualität einer Maßnahme anhand festgelegter Kriterien systematisch beurteilen.",
-            "conjugation": {
-                "praesens": {
-                    "ich": "ich evaluiere",
-                    "du": "du evaluierst",
-                    "er/sie/es": "er/sie/es evaluiert",
-                    "wir": "wir evaluieren",
-                    "ihr": "ihr evaluiert",
-                    "sie/Sie": "sie/Sie evaluieren"
-                },
-                "praeteritum": {
-                    "ich": "ich evaluierte",
-                    "du": "du evaluiertest",
-                    "er/sie/es": "er/sie/es evaluierte",
-                    "wir": "wir evaluierten",
-                    "ihr": "ihr evaluiertet",
-                    "sie/Sie": "sie/Sie evaluierten"
-                },
-                "perfekt": {
-                    "hilfsverb": "haben",
-                    "partizip2": "evaluiert"
-                },
-                "konjunktiv2": {
-                    "ich": "ich evaluierte",
-                    "du": "du evaluiertest",
-                    "er/sie/es": "er/sie/es evaluierte",
-                    "wir": "wir evaluierten",
-                    "ihr": "ihr evaluiertet",
-                    "sie/Sie": "sie/Sie evaluierten"
-                },
-                "imperativ": {
-                    "du": "evaluiere",
-                    "ihr": "evaluiert",
-                    "Sie": "evaluieren Sie"
-                }
-            }
-        },
-        {
-            "word": "sequenzieren",
-            "article": null,
-            "plural": null,
-            "wordType": "VERB",
-            "meaningVi": "Giải trình tự",
-            "meaningEn": "To sequence (e.g., DNA, RNA)",
-            "exampleSentence1": "Um neue Virusvarianten zu identifizieren, ist es unerlässlich, Proben von Infizierten regelmäßig zu sequenzieren.",
-            "exampleTranslation1": "Để xác định các biến thể virus mới, việc giải trình tự các mẫu từ người nhiễm bệnh một cách thường xuyên là rất cần thiết.",
-            "exampleSentence2": "Die Fähigkeit, das Genom eines Erregers schnell zu sequenzieren, revolutionierte die Seuchenbekämpfung.",
-            "exampleTranslation2": "Khả năng giải trình tự bộ gen của một tác nhân gây bệnh nhanh chóng đã cách mạng hóa việc kiểm soát dịch bệnh.",
-            "imageUrl": "/images/vocab/c1-epidemiologie-pandemie/sequenzieren.png",
-            "meaningDe": "Die genaue Abfolge der Bausteine in der DNA oder RNA bestimmen",
-            "conjugation": {
-                "praesens": {
-                    "ich": "ich sequenziere",
-                    "du": "du sequenzierst",
-                    "er/sie/es": "er/sie/es sequenziert",
-                    "wir": "wir sequenzieren",
-                    "ihr": "ihr sequenziert",
-                    "sie/Sie": "sie/Sie sequenzieren"
-                },
-                "praeteritum": {
-                    "ich": "ich sequenzierte",
-                    "du": "du sequenziertest",
-                    "er/sie/es": "er/sie/es sequenzierte",
-                    "wir": "wir sequenzierten",
-                    "ihr": "ihr sequenziertet",
-                    "sie/Sie": "sie/Sie sequenzierten"
-                },
-                "perfekt": {
-                    "hilfsverb": "haben",
-                    "partizip2": "sequenziert"
-                },
-                "konjunktiv2": {
-                    "ich": "ich sequenzierte",
-                    "du": "du sequenziertest",
-                    "er/sie/es": "er/sie/es sequenzierte",
-                    "wir": "wir sequenzierten",
-                    "ihr": "ihr sequenziertet",
-                    "sie/Sie": "sie/Sie sequenzierten"
-                },
-                "imperativ": {
-                    "du": "sequenziere",
-                    "ihr": "sequenziert",
-                    "Sie": "sequenzieren Sie"
-                }
-            }
-        },
-        {
-            "word": "abschwächen",
-            "article": null,
-            "plural": null,
-            "wordType": "VERB",
-            "meaningVi": "Làm suy yếu, làm giảm nhẹ",
-            "meaningEn": "To weaken, to attenuate (e.g., symptoms, virulence)",
-            "exampleSentence1": "Impfungen können den Verlauf einer Infektion erheblich abschwächen und schwere Komplikationen verhindern.",
-            "exampleTranslation1": "Tiêm chủng có thể làm suy yếu đáng kể diễn biến của một nhiễm trùng và ngăn ngừa các biến chứng nghiêm trọng.",
-            "exampleSentence2": "Ziel der Therapie ist es, die Symptome der Krankheit abzuschwächen und die Lebensqualität der Patienten zu verbessern.",
-            "exampleTranslation2": "Mục tiêu của liệu pháp là làm giảm nhẹ các triệu chứng của bệnh và cải thiện chất lượng cuộc sống của bệnh nhân.",
-            "imageUrl": "/images/vocab/c1-epidemiologie-pandemie/abschwaechen.png",
-            "meaningDe": "Die Intensität, Wirkung oder Kraft einer Sache reduzieren.",
-            "conjugation": {
-                "praesens": {
-                    "ich": "ich schwäche ab",
-                    "du": "du schwächst ab",
-                    "er/sie/es": "er/sie/es schwächt ab",
-                    "wir": "wir schwächen ab",
-                    "ihr": "ihr schwächt ab",
-                    "sie/Sie": "sie/Sie schwächen ab"
-                },
-                "praeteritum": {
-                    "ich": "ich schwächte ab",
-                    "du": "du schwächtest ab",
-                    "er/sie/es": "er/sie/es schwächte ab",
-                    "wir": "wir schwächten ab",
-                    "ihr": "ihr schwächtet ab",
-                    "sie/Sie": "sie/Sie schwächten ab"
-                },
-                "perfekt": {
-                    "hilfsverb": "haben",
-                    "partizip2": "abgeschwächt"
-                },
-                "konjunktiv2": {
-                    "ich": "ich schwächte ab",
-                    "du": "du schwächtest ab",
-                    "er/sie/es": "er/sie/es schwächte ab",
-                    "wir": "wir schwächten ab",
-                    "ihr": "ihr schwächtet ab",
-                    "sie/Sie": "sie/Sie schwächten ab"
-                },
-                "imperativ": {
-                    "du": "schwäche ab",
-                    "ihr": "schwächt ab",
-                    "Sie": "schwächen Sie ab"
-                }
-            }
-        },
-        {
-            "word": "transmittieren",
-            "article": null,
-            "plural": null,
-            "wordType": "VERB",
-            "meaningVi": "Truyền, lây truyền",
-            "meaningEn": "To transmit (e.g., a disease)",
-            "exampleSentence1": "Einige Krankheiten können auch asymptomatisch transmittiert werden, was die Eindämmung erschwert.",
-            "exampleTranslation1": "Một số bệnh cũng có thể lây truyền mà không có triệu chứng, điều này làm cho việc kiềm chế trở nên khó khăn.",
-            "exampleSentence2": "Mücken können Krankheitserreger von infizierten Tieren auf den Menschen transmittieren.",
-            "exampleTranslation2": "Muỗi có thể truyền tác nhân gây bệnh từ động vật bị nhiễm sang người.",
-            "imageUrl": "/images/vocab/c1-epidemiologie-pandemie/transmittieren.png",
-            "meaningDe": "Etwas von einem Ort oder einer Person auf eine andere übertragen",
-            "conjugation": {
-                "praesens": {
-                    "ich": "ich transmittiere",
-                    "du": "du transmittierst",
-                    "er/sie/es": "er/sie/es transmittiert",
-                    "wir": "wir transmittieren",
-                    "ihr": "ihr transmittiert",
-                    "sie/Sie": "sie/Sie transmittieren"
-                },
-                "praeteritum": {
-                    "ich": "ich transmittierte",
-                    "du": "du transmittiertest",
-                    "er/sie/es": "er/sie/es transmittierte",
-                    "wir": "wir transmittierten",
-                    "ihr": "ihr transmittiertet",
-                    "sie/Sie": "sie/Sie transmittierten"
-                },
-                "perfekt": {
-                    "hilfsverb": "haben",
-                    "partizip2": "transmittiert"
-                },
-                "konjunktiv2": {
-                    "ich": "ich transmittierte",
-                    "du": "du transmittiertest",
-                    "er/sie/es": "er/sie/es transmittierte",
-                    "wir": "wir transmittierten",
-                    "ihr": "ihr transmittiertet",
-                    "sie/Sie": "sie/Sie transmittierten"
-                },
-                "imperativ": {
-                    "du": "transmittiere",
-                    "ihr": "transmittiert",
-                    "Sie": "transmittieren Sie"
-                }
-            }
-        },
-        {
-            "word": "persistieren",
-            "article": null,
-            "plural": null,
-            "wordType": "VERB",
-            "meaningVi": "Tồn tại dai dẳng, kéo dài",
-            "meaningEn": "To persist (e.g., symptoms, virus in the body)",
-            "exampleSentence1": "Bei einigen Patienten können die Symptome von Long COVID über Monate oder sogar Jahre persistieren.",
-            "exampleTranslation1": "Ở một số bệnh nhân, các triệu chứng của COVID kéo dài có thể tồn tại dai dẳng trong nhiều tháng hoặc thậm chí nhiều năm.",
-            "exampleSentence2": "Trotz intensiver Behandlung kann der Erreger in bestimmten Geweben des Körpers persistieren.",
-            "exampleTranslation2": "Mặc dù được điều trị tích cực, tác nhân gây bệnh vẫn có thể tồn tại dai dẳng trong một số mô nhất định của cơ thể.",
-            "imageUrl": "/images/vocab/c1-epidemiologie-pandemie/persistieren.png",
-            "meaningDe": "Über einen langen Zeitraum bestehen bleiben",
-            "conjugation": {
-                "praesens": {
-                    "ich": "ich persistiere",
-                    "du": "du persistierst",
-                    "er/sie/es": "er/sie/es persistiert",
-                    "wir": "wir persistieren",
-                    "ihr": "ihr persistiert",
-                    "sie/Sie": "sie/Sie persistieren"
-                },
-                "praeteritum": {
-                    "ich": "ich persistierte",
-                    "du": "du persistiertest",
-                    "er/sie/es": "er/sie/es persistierte",
-                    "wir": "wir persistierten",
-                    "ihr": "ihr persistiertet",
-                    "sie/Sie": "sie/Sie persistierten"
-                },
-                "perfekt": {
-                    "hilfsverb": "haben",
-                    "partizip2": "persistiert"
-                },
-                "konjunktiv2": {
-                    "ich": "ich persistierte",
-                    "du": "du persistiertest",
-                    "er/sie/es": "er/sie/es persistierte",
-                    "wir": "wir persistierten",
-                    "ihr": "ihr persistiertet",
-                    "sie/Sie": "sie/Sie persistierten"
-                },
-                "imperativ": {
-                    "du": "persistiere",
-                    "ihr": "persistiert",
-                    "Sie": "persistieren Sie"
-                }
-            }
-        },
-        {
-            "word": "endemisch",
-            "article": null,
-            "plural": null,
-            "wordType": "ADJEKTIV",
-            "meaningVi": "Đặc hữu",
-            "meaningEn": "Endemic (regularly found among particular people or in a certain area)",
-            "exampleSentence1": "Malaria ist in vielen tropischen Regionen eine endemische Krankheit und stellt eine ständige Bedrohung dar.",
-            "exampleTranslation1": "Sốt rét là một bệnh đặc hữu ở nhiều vùng nhiệt đới và là mối đe dọa thường xuyên.",
-            "exampleSentence2": "Das Ziel vieler Impfkampagnen ist es, eine Krankheit von einem pandemischen in einen endemischen Zustand zu überführen.",
-            "exampleTranslation2": "Mục tiêu của nhiều chiến dịch tiêm chủng là chuyển một bệnh từ trạng thái đại dịch sang trạng thái đặc hữu.",
-            "imageUrl": "/images/vocab/c1-epidemiologie-pandemie/endemisch.png",
-            "meaningDe": "In einer bestimmten Region dauerhaft vorhanden"
-        },
-        {
-            "word": "pandemisch",
-            "article": null,
-            "plural": null,
-            "wordType": "ADJEKTIV",
-            "meaningVi": "Đại dịch",
-            "meaningEn": "Pandemic (prevalent over a whole country or the world)",
-            "exampleSentence1": "Die Weltgesundheitsorganisation erklärte die Ausbreitung des Virus offiziell zu einer pandemischen Situation.",
-            "exampleTranslation1": "Tổ chức Y tế Thế giới đã chính thức tuyên bố sự lây lan của virus là một tình huống đại dịch.",
-            "exampleSentence2": "Die Bewältigung einer pandemischen Krise erfordert eine beispiellose globale Kooperation.",
-            "exampleTranslation2": "Việc đối phó với một cuộc khủng hoảng đại dịch đòi hỏi sự hợp tác toàn cầu chưa từng có.",
-            "imageUrl": "/images/vocab/c1-epidemiologie-pandemie/pandemisch.png",
-            "meaningDe": "Auf eine große Anzahl von Menschen in vielen verschiedenen Ländern oder Kontinenten gleichzeitig zutreffend."
-        },
-        {
-            "word": "epidemisch",
-            "article": null,
-            "plural": null,
-            "wordType": "ADJEKTIV",
-            "meaningVi": "Dịch bệnh",
-            "meaningEn": "Epidemic (widespread in a community at a particular time)",
-            "exampleSentence1": "Nach den Überschwemmungen kam es zu einem epidemischen Ausbruch von Cholera in der betroffenen Region.",
-            "exampleTranslation1": "Sau lũ lụt, một đợt bùng phát dịch tả đã xảy ra ở khu vực bị ảnh hưởng.",
-            "exampleSentence2": "Die schnelle Reaktion der Behörden verhinderte, dass die lokale epidemische Situation zu einer regionalen Katastrophe eskalierte.",
-            "exampleTranslation2": "Phản ứng nhanh chóng của các cơ quan chức năng đã ngăn chặn tình hình dịch bệnh cục bộ leo thang thành thảm họa khu vực.",
-            "imageUrl": "/images/vocab/c1-epidemiologie-pandemie/epidemisch.png",
-            "meaningDe": "In einer Region schnell und weit verbreitet"
-        },
-        {
-            "word": "infektiös",
-            "article": null,
-            "plural": null,
-            "wordType": "ADJEKTIV",
-            "meaningVi": "Truyền nhiễm, lây nhiễm",
-            "meaningEn": "Infectious",
-            "exampleSentence1": "Die Dauer, für die eine Person als infektiös gilt, ist entscheidend für Quarantäneempfehlungen.",
-            "exampleTranslation1": "Thời gian một người được coi là truyền nhiễm là rất quan trọng đối với các khuyến nghị cách ly.",
-            "exampleSentence2": "Obwohl das Tier gesund aussah, war es dennoch infektiös und konnte die Krankheit weitergeben.",
-            "exampleTranslation2": "Mặc dù con vật trông khỏe mạnh, nó vẫn truyền nhiễm và có thể lây bệnh.",
-            "imageUrl": "/images/vocab/c1-epidemiologie-pandemie/infektioes.png",
-            "meaningDe": "Die Eigenschaft eines Erregers, eine Krankheit auf einen anderen Organismus zu übertragen."
-        },
-        {
-            "word": "asymptomatisch",
-            "article": null,
-            "plural": null,
-            "wordType": "ADJEKTIV",
-            "meaningVi": "Không có triệu chứng",
-            "meaningEn": "Asymptomatic",
-            "exampleSentence1": "Ein großer Teil der Infizierten verläuft asymptomatisch und trägt unwissentlich zur Verbreitung des Virus bei.",
-            "exampleTranslation1": "Một phần lớn người nhiễm bệnh không có triệu chứng và vô tình góp phần vào sự lây lan của virus.",
-            "exampleSentence2": "Die Identifizierung asymptomatischer Träger ist eine der größten Herausforderungen in der Pandemiebekämpfung.",
-            "exampleTranslation2": "Việc xác định người mang mầm bệnh không có triệu chứng là một trong những thách thức lớn nhất trong việc kiểm soát đại dịch.",
-            "imageUrl": "/images/vocab/c1-epidemiologie-pandemie/asymptomatisch.png",
-            "meaningDe": "Ohne erkennbare Symptome oder Anzeichen einer Krankheit"
-        },
-        {
-            "word": "immunogen",
-            "article": null,
-            "plural": null,
-            "wordType": "ADJEKTIV",
-            "meaningVi": "Có tính sinh miễn dịch",
-            "meaningEn": "Immunogenic (able to produce an immune response)",
-            "exampleSentence1": "Ein idealer Impfstoff sollte hoch immunogen sein, um eine starke und langanhaltende Schutzwirkung zu erzielen.",
-            "exampleTranslation1": "Một loại vắc-xin lý tưởng nên có tính sinh miễn dịch cao để đạt được hiệu quả bảo vệ mạnh mẽ và lâu dài.",
-            "exampleSentence2": "Die Entwicklung eines immunogenen Impfstoffs gegen HIV stellt aufgrund der hohen Mutationsrate des Virus eine große Herausforderung dar.",
-            "exampleTranslation2": "Việc phát triển một loại vắc-xin có tính sinh miễn dịch chống lại HIV là một thách thức lớn do tốc độ đột biến cao của virus.",
-            "imageUrl": "/images/vocab/c1-epidemiologie-pandemie/immunogen.png",
-            "meaningDe": "In der Lage, eine Immunantwort im Körper auszulösen"
-        },
-        {
-            "word": "virulent",
-            "article": null,
-            "plural": null,
-            "wordType": "ADJEKTIV",
-            "meaningVi": "Độc lực mạnh",
-            "meaningEn": "Virulent (extremely severe or harmful in its effects)",
-            "exampleSentence1": "Die Ärzte waren besorgt über die zunehmend virulenten Stämme des Bakteriums, die auf herkömmliche Antibiotika nicht mehr ansprachen.",
-            "exampleTranslation1": "Các bác sĩ lo ngại về các chủng vi khuẩn ngày càng độc lực mạnh, không còn đáp ứng với kháng sinh thông thường.",
-            "exampleSentence2": "Einige Experten argumentieren, dass das Virus mit der Zeit weniger virulent werden könnte, sich aber schneller verbreitet.",
-            "exampleTranslation2": "Một số chuyên gia cho rằng virus có thể trở nên ít độc lực hơn theo thời gian, nhưng lại lây lan nhanh hơn.",
-            "imageUrl": "/images/vocab/c1-epidemiologie-pandemie/virulent.png",
-            "meaningDe": "Die Eigenschaft eines Krankheitserregers, eine schwere Krankheit auszulösen oder sich schnell im Körper auszubreiten."
-        },
-        {
-            "word": "exponentiell",
-            "article": null,
-            "plural": null,
-            "wordType": "ADVERB",
-            "meaningVi": "Theo cấp số nhân",
-            "meaningEn": "Exponentially",
-            "exampleSentence1": "Ohne Gegenmaßnahmen kann sich ein Virus in einer anfälligen Bevölkerung exponentiell ausbreiten.",
-            "exampleTranslation1": "Nếu không có biện pháp đối phó, một loại virus có thể lây lan theo cấp số nhân trong một quần thể dễ bị tổn thương.",
-            "exampleSentence2": "Die Daten zeigen, dass die Anzahl der Hospitalisierungen exponentiell ansteigt, sobald die Reproduktionszahl einen bestimmten Wert überschreitet.",
-            "exampleTranslation2": "Dữ liệu cho thấy số ca nhập viện tăng theo cấp số nhân khi chỉ số R vượt quá một giá trị nhất định.",
-            "imageUrl": "/images/vocab/c1-epidemiologie-pandemie/exponentiell.png",
-            "meaningDe": "Sehr schnell steigend, wobei die Zunahme immer größer wird"
+        "imperativ": {
+          "du": "dämme ein",
+          "ihr": "dämmt ein",
+          "Sie": "dämmen Sie ein"
         }
-    ]
+      }
+    },
+    {
+      "word": "grassieren",
+      "article": null,
+      "plural": null,
+      "wordType": "VERB",
+      "meaningVi": "Lây lan tràn lan, hoành hành",
+      "meaningEn": "To spread rampantly, to rage (of a disease)",
+      "exampleSentence1": "In den Slums der Großstädte grassierte die Krankheit aufgrund mangelnder Hygiene und medizinischer Versorgung.",
+      "exampleTranslation1": "Trong các khu ổ chuột của các thành phố lớn, dịch bệnh hoành hành do thiếu vệ sinh và chăm sóc y tế.",
+      "exampleSentence2": "Die Grippewelle grassiert dieses Jahr besonders heftig und führt zu überfüllten Krankenhäusern.",
+      "exampleTranslation2": "Đợt cúm năm nay lây lan đặc biệt dữ dội và dẫn đến tình trạng quá tải bệnh viện.",
+      "imageUrl": "/images/vocab/c1-epidemiologie-pandemie/grassieren.png",
+      "meaningDe": "Weit verbreitet sein und viele Menschen befallen",
+      "conjugation": {
+        "praesens": {
+          "ich": "ich grassiere",
+          "du": "du grassierst",
+          "er/sie/es": "er/sie/es grassiert",
+          "wir": "wir grassieren",
+          "ihr": "ihr grassiert",
+          "sie/Sie": "sie/Sie grassieren"
+        },
+        "praeteritum": {
+          "ich": "ich grassierte",
+          "du": "du grassiertest",
+          "er/sie/es": "er/sie/es grassierte",
+          "wir": "wir grassierten",
+          "ihr": "ihr grassiertet",
+          "sie/Sie": "sie/Sie grassierten"
+        },
+        "perfekt": {
+          "hilfsverb": "haben",
+          "partizip2": "grassiert"
+        },
+        "konjunktiv2": {
+          "ich": "ich grassierte",
+          "du": "du grassiertest",
+          "er/sie/es": "er/sie/es grassierte",
+          "wir": "wir grassierten",
+          "ihr": "ihr grassiertet",
+          "sie/Sie": "sie/Sie grassierten"
+        },
+        "imperativ": {
+          "du": "grassiere",
+          "ihr": "grassiert",
+          "Sie": "grassieren Sie"
+        }
+      }
+    },
+    {
+      "word": "mutieren",
+      "article": null,
+      "plural": null,
+      "wordType": "VERB",
+      "meaningVi": "Đột biến",
+      "meaningEn": "To mutate",
+      "exampleSentence1": "Es wird befürchtet, dass das Virus weiter mutieren könnte, wodurch die Wirksamkeit bestehender Impfstoffe beeinträchtigt würde.",
+      "exampleTranslation1": "Người ta lo ngại rằng virus có thể tiếp tục đột biến, làm giảm hiệu quả của các loại vắc-xin hiện có.",
+      "exampleSentence2": "Bakterien können schnell mutieren und Resistenzen gegen Antibiotika entwickeln.",
+      "exampleTranslation2": "Vi khuẩn có thể đột biến nhanh chóng và phát triển khả năng kháng kháng sinh.",
+      "imageUrl": "/images/vocab/c1-epidemiologie-pandemie/mutieren.png",
+      "meaningDe": "Eine dauerhafte Veränderung der genetischen Information in der DNA oder RNA eines Organismus erfahren.",
+      "conjugation": {
+        "praesens": {
+          "ich": "ich mutiere",
+          "du": "du mutierst",
+          "er/sie/es": "er/sie/es mutiert",
+          "wir": "wir mutieren",
+          "ihr": "ihr mutiert",
+          "sie/Sie": "sie/Sie mutieren"
+        },
+        "praeteritum": {
+          "ich": "ich mutierte",
+          "du": "du mutiertest",
+          "er/sie/es": "er/sie/es mutierte",
+          "wir": "wir mutierten",
+          "ihr": "ihr mutiertet",
+          "sie/Sie": "sie/Sie mutierten"
+        },
+        "perfekt": {
+          "hilfsverb": "sein",
+          "partizip2": "mutiert"
+        },
+        "konjunktiv2": {
+          "ich": "ich mutierte",
+          "du": "du mutiertest",
+          "er/sie/es": "er/sie/es mutierte",
+          "wir": "wir mutierten",
+          "ihr": "ihr mutiertet",
+          "sie/Sie": "sie/Sie mutierten"
+        },
+        "imperativ": {
+          "du": "mutiere",
+          "ihr": "mutiert",
+          "Sie": "mutieren Sie"
+        }
+      }
+    },
+    {
+      "word": "sich replizieren",
+      "article": null,
+      "plural": null,
+      "wordType": "VERB",
+      "meaningVi": "Tự nhân lên, sao chép",
+      "meaningEn": "To replicate (e.g., of a virus)",
+      "exampleSentence1": "Das Virus nutzt die zelluläre Maschinerie des Wirtes, um sich effizient zu replizieren.",
+      "exampleTranslation1": "Virus sử dụng bộ máy tế bào của vật chủ để tự nhân lên một cách hiệu quả.",
+      "exampleSentence2": "Einige Medikamente zielen darauf ab, die Fähigkeit des Erregers, sich zu replizieren, zu hemmen.",
+      "exampleTranslation2": "Một số loại thuốc nhằm mục đích ức chế khả năng tự nhân lên của tác nhân gây bệnh.",
+      "imageUrl": "/images/vocab/c1-epidemiologie-pandemie/sich-replizieren.png",
+      "meaningDe": "Eine exakte Kopie des eigenen Erbguts oder der gesamten Zellstruktur erstellen.",
+      "conjugation": {
+        "praesens": {
+          "ich": "ich repliziere mich",
+          "du": "du replizierst dich",
+          "er/sie/es": "er/sie/es repliziert sich",
+          "wir": "wir replizieren uns",
+          "ihr": "ihr repliziert euch",
+          "sie/Sie": "sie/Sie replizieren sich"
+        },
+        "praeteritum": {
+          "ich": "ich replizierte mich",
+          "du": "du repliziertest dich",
+          "er/sie/es": "er/sie/es replizierte sich",
+          "wir": "wir replizierten uns",
+          "ihr": "ihr repliziertet euch",
+          "sie/Sie": "sie/Sie replizierten sich"
+        },
+        "perfekt": {
+          "hilfsverb": "haben",
+          "partizip2": "sich repliziert"
+        },
+        "konjunktiv2": {
+          "ich": "ich replizierte mich",
+          "du": "du repliziertest dich",
+          "er/sie/es": "er/sie/es replizierte sich",
+          "wir": "wir replizierten uns",
+          "ihr": "ihr repliziertet euch",
+          "sie/Sie": "sie/Sie replizierten sich"
+        },
+        "imperativ": {
+          "du": "repliziere dich",
+          "ihr": "repliziert euch",
+          "Sie": "replizieren Sie sich"
+        }
+      }
+    },
+    {
+      "word": "evaluieren",
+      "article": null,
+      "plural": null,
+      "wordType": "VERB",
+      "meaningVi": "Đánh giá, thẩm định",
+      "meaningEn": "To evaluate, to assess",
+      "exampleSentence1": "Die Gesundheitsbehörden müssen kontinuierlich die Wirksamkeit der getroffenen Maßnahmen evaluieren und anpassen.",
+      "exampleTranslation1": "Các cơ quan y tế phải liên tục đánh giá và điều chỉnh hiệu quả của các biện pháp đã thực hiện.",
+      "exampleSentence2": "Experten evaluieren derzeit die potenziellen Risiken und Vorteile einer neuen Impfstrategie.",
+      "exampleTranslation2": "Các chuyên gia hiện đang đánh giá các rủi ro và lợi ích tiềm tàng của một chiến lược tiêm chủng mới.",
+      "imageUrl": "/images/vocab/c1-epidemiologie-pandemie/evaluieren.png",
+      "meaningDe": "Den Erfolg oder die Qualität einer Maßnahme anhand festgelegter Kriterien systematisch beurteilen.",
+      "conjugation": {
+        "praesens": {
+          "ich": "ich evaluiere",
+          "du": "du evaluierst",
+          "er/sie/es": "er/sie/es evaluiert",
+          "wir": "wir evaluieren",
+          "ihr": "ihr evaluiert",
+          "sie/Sie": "sie/Sie evaluieren"
+        },
+        "praeteritum": {
+          "ich": "ich evaluierte",
+          "du": "du evaluiertest",
+          "er/sie/es": "er/sie/es evaluierte",
+          "wir": "wir evaluierten",
+          "ihr": "ihr evaluiertet",
+          "sie/Sie": "sie/Sie evaluierten"
+        },
+        "perfekt": {
+          "hilfsverb": "haben",
+          "partizip2": "evaluiert"
+        },
+        "konjunktiv2": {
+          "ich": "ich evaluierte",
+          "du": "du evaluiertest",
+          "er/sie/es": "er/sie/es evaluierte",
+          "wir": "wir evaluierten",
+          "ihr": "ihr evaluiertet",
+          "sie/Sie": "sie/Sie evaluierten"
+        },
+        "imperativ": {
+          "du": "evaluiere",
+          "ihr": "evaluiert",
+          "Sie": "evaluieren Sie"
+        }
+      }
+    },
+    {
+      "word": "sequenzieren",
+      "article": null,
+      "plural": null,
+      "wordType": "VERB",
+      "meaningVi": "Giải trình tự",
+      "meaningEn": "To sequence (e.g., DNA, RNA)",
+      "exampleSentence1": "Um neue Virusvarianten zu identifizieren, ist es unerlässlich, Proben von Infizierten regelmäßig zu sequenzieren.",
+      "exampleTranslation1": "Để xác định các biến thể virus mới, việc giải trình tự các mẫu từ người nhiễm bệnh một cách thường xuyên là rất cần thiết.",
+      "exampleSentence2": "Die Fähigkeit, das Genom eines Erregers schnell zu sequenzieren, revolutionierte die Seuchenbekämpfung.",
+      "exampleTranslation2": "Khả năng giải trình tự bộ gen của một tác nhân gây bệnh nhanh chóng đã cách mạng hóa việc kiểm soát dịch bệnh.",
+      "imageUrl": "/images/vocab/c1-epidemiologie-pandemie/sequenzieren.png",
+      "meaningDe": "Die genaue Abfolge der Bausteine in der DNA oder RNA bestimmen",
+      "conjugation": {
+        "praesens": {
+          "ich": "ich sequenziere",
+          "du": "du sequenzierst",
+          "er/sie/es": "er/sie/es sequenziert",
+          "wir": "wir sequenzieren",
+          "ihr": "ihr sequenziert",
+          "sie/Sie": "sie/Sie sequenzieren"
+        },
+        "praeteritum": {
+          "ich": "ich sequenzierte",
+          "du": "du sequenziertest",
+          "er/sie/es": "er/sie/es sequenzierte",
+          "wir": "wir sequenzierten",
+          "ihr": "ihr sequenziertet",
+          "sie/Sie": "sie/Sie sequenzierten"
+        },
+        "perfekt": {
+          "hilfsverb": "haben",
+          "partizip2": "sequenziert"
+        },
+        "konjunktiv2": {
+          "ich": "ich sequenzierte",
+          "du": "du sequenziertest",
+          "er/sie/es": "er/sie/es sequenzierte",
+          "wir": "wir sequenzierten",
+          "ihr": "ihr sequenziertet",
+          "sie/Sie": "sie/Sie sequenzierten"
+        },
+        "imperativ": {
+          "du": "sequenziere",
+          "ihr": "sequenziert",
+          "Sie": "sequenzieren Sie"
+        }
+      }
+    },
+    {
+      "word": "abschwächen",
+      "article": null,
+      "plural": null,
+      "wordType": "VERB",
+      "meaningVi": "Làm suy yếu, làm giảm nhẹ",
+      "meaningEn": "To weaken, to attenuate (e.g., symptoms, virulence)",
+      "exampleSentence1": "Impfungen können den Verlauf einer Infektion erheblich abschwächen und schwere Komplikationen verhindern.",
+      "exampleTranslation1": "Tiêm chủng có thể làm suy yếu đáng kể diễn biến của một nhiễm trùng và ngăn ngừa các biến chứng nghiêm trọng.",
+      "exampleSentence2": "Ziel der Therapie ist es, die Symptome der Krankheit abzuschwächen und die Lebensqualität der Patienten zu verbessern.",
+      "exampleTranslation2": "Mục tiêu của liệu pháp là làm giảm nhẹ các triệu chứng của bệnh và cải thiện chất lượng cuộc sống của bệnh nhân.",
+      "imageUrl": "/images/vocab/c1-epidemiologie-pandemie/abschwaechen.png",
+      "meaningDe": "Die Intensität, Wirkung oder Kraft einer Sache reduzieren.",
+      "conjugation": {
+        "praesens": {
+          "ich": "ich schwäche ab",
+          "du": "du schwächst ab",
+          "er/sie/es": "er/sie/es schwächt ab",
+          "wir": "wir schwächen ab",
+          "ihr": "ihr schwächt ab",
+          "sie/Sie": "sie/Sie schwächen ab"
+        },
+        "praeteritum": {
+          "ich": "ich schwächte ab",
+          "du": "du schwächtest ab",
+          "er/sie/es": "er/sie/es schwächte ab",
+          "wir": "wir schwächten ab",
+          "ihr": "ihr schwächtet ab",
+          "sie/Sie": "sie/Sie schwächten ab"
+        },
+        "perfekt": {
+          "hilfsverb": "haben",
+          "partizip2": "abgeschwächt"
+        },
+        "konjunktiv2": {
+          "ich": "ich schwächte ab",
+          "du": "du schwächtest ab",
+          "er/sie/es": "er/sie/es schwächte ab",
+          "wir": "wir schwächten ab",
+          "ihr": "ihr schwächtet ab",
+          "sie/Sie": "sie/Sie schwächten ab"
+        },
+        "imperativ": {
+          "du": "schwäche ab",
+          "ihr": "schwächt ab",
+          "Sie": "schwächen Sie ab"
+        }
+      }
+    },
+    {
+      "word": "transmittieren",
+      "article": null,
+      "plural": null,
+      "wordType": "VERB",
+      "meaningVi": "Truyền, lây truyền",
+      "meaningEn": "To transmit (e.g., a disease)",
+      "exampleSentence1": "Einige Krankheiten können auch asymptomatisch transmittiert werden, was die Eindämmung erschwert.",
+      "exampleTranslation1": "Một số bệnh cũng có thể lây truyền mà không có triệu chứng, điều này làm cho việc kiềm chế trở nên khó khăn.",
+      "exampleSentence2": "Mücken können Krankheitserreger von infizierten Tieren auf den Menschen transmittieren.",
+      "exampleTranslation2": "Muỗi có thể truyền tác nhân gây bệnh từ động vật bị nhiễm sang người.",
+      "imageUrl": "/images/vocab/c1-epidemiologie-pandemie/transmittieren.png",
+      "meaningDe": "Etwas von einem Ort oder einer Person auf eine andere übertragen",
+      "conjugation": {
+        "praesens": {
+          "ich": "ich transmittiere",
+          "du": "du transmittierst",
+          "er/sie/es": "er/sie/es transmittiert",
+          "wir": "wir transmittieren",
+          "ihr": "ihr transmittiert",
+          "sie/Sie": "sie/Sie transmittieren"
+        },
+        "praeteritum": {
+          "ich": "ich transmittierte",
+          "du": "du transmittiertest",
+          "er/sie/es": "er/sie/es transmittierte",
+          "wir": "wir transmittierten",
+          "ihr": "ihr transmittiertet",
+          "sie/Sie": "sie/Sie transmittierten"
+        },
+        "perfekt": {
+          "hilfsverb": "haben",
+          "partizip2": "transmittiert"
+        },
+        "konjunktiv2": {
+          "ich": "ich transmittierte",
+          "du": "du transmittiertest",
+          "er/sie/es": "er/sie/es transmittierte",
+          "wir": "wir transmittierten",
+          "ihr": "ihr transmittiertet",
+          "sie/Sie": "sie/Sie transmittierten"
+        },
+        "imperativ": {
+          "du": "transmittiere",
+          "ihr": "transmittiert",
+          "Sie": "transmittieren Sie"
+        }
+      }
+    },
+    {
+      "word": "persistieren",
+      "article": null,
+      "plural": null,
+      "wordType": "VERB",
+      "meaningVi": "Tồn tại dai dẳng, kéo dài",
+      "meaningEn": "To persist (e.g., symptoms, virus in the body)",
+      "exampleSentence1": "Bei einigen Patienten können die Symptome von Long COVID über Monate oder sogar Jahre persistieren.",
+      "exampleTranslation1": "Ở một số bệnh nhân, các triệu chứng của COVID kéo dài có thể tồn tại dai dẳng trong nhiều tháng hoặc thậm chí nhiều năm.",
+      "exampleSentence2": "Trotz intensiver Behandlung kann der Erreger in bestimmten Geweben des Körpers persistieren.",
+      "exampleTranslation2": "Mặc dù được điều trị tích cực, tác nhân gây bệnh vẫn có thể tồn tại dai dẳng trong một số mô nhất định của cơ thể.",
+      "imageUrl": "/images/vocab/c1-epidemiologie-pandemie/persistieren.png",
+      "meaningDe": "Über einen langen Zeitraum bestehen bleiben",
+      "conjugation": {
+        "praesens": {
+          "ich": "ich persistiere",
+          "du": "du persistierst",
+          "er/sie/es": "er/sie/es persistiert",
+          "wir": "wir persistieren",
+          "ihr": "ihr persistiert",
+          "sie/Sie": "sie/Sie persistieren"
+        },
+        "praeteritum": {
+          "ich": "ich persistierte",
+          "du": "du persistiertest",
+          "er/sie/es": "er/sie/es persistierte",
+          "wir": "wir persistierten",
+          "ihr": "ihr persistiertet",
+          "sie/Sie": "sie/Sie persistierten"
+        },
+        "perfekt": {
+          "hilfsverb": "haben",
+          "partizip2": "persistiert"
+        },
+        "konjunktiv2": {
+          "ich": "ich persistierte",
+          "du": "du persistiertest",
+          "er/sie/es": "er/sie/es persistierte",
+          "wir": "wir persistierten",
+          "ihr": "ihr persistiertet",
+          "sie/Sie": "sie/Sie persistierten"
+        },
+        "imperativ": {
+          "du": "persistiere",
+          "ihr": "persistiert",
+          "Sie": "persistieren Sie"
+        }
+      }
+    },
+    {
+      "word": "endemisch",
+      "article": null,
+      "plural": null,
+      "wordType": "ADJEKTIV",
+      "meaningVi": "Đặc hữu",
+      "meaningEn": "Endemic (regularly found among particular people or in a certain area)",
+      "exampleSentence1": "Malaria ist in vielen tropischen Regionen eine endemische Krankheit und stellt eine ständige Bedrohung dar.",
+      "exampleTranslation1": "Sốt rét là một bệnh đặc hữu ở nhiều vùng nhiệt đới và là mối đe dọa thường xuyên.",
+      "exampleSentence2": "Das Ziel vieler Impfkampagnen ist es, eine Krankheit von einem pandemischen in einen endemischen Zustand zu überführen.",
+      "exampleTranslation2": "Mục tiêu của nhiều chiến dịch tiêm chủng là chuyển một bệnh từ trạng thái đại dịch sang trạng thái đặc hữu.",
+      "imageUrl": "/images/vocab/c1-epidemiologie-pandemie/endemisch.png",
+      "meaningDe": "In einer bestimmten Region dauerhaft vorhanden"
+    },
+    {
+      "word": "pandemisch",
+      "article": null,
+      "plural": null,
+      "wordType": "ADJEKTIV",
+      "meaningVi": "Đại dịch",
+      "meaningEn": "Pandemic (prevalent over a whole country or the world)",
+      "exampleSentence1": "Die Weltgesundheitsorganisation erklärte die Ausbreitung des Virus offiziell zu einer pandemischen Situation.",
+      "exampleTranslation1": "Tổ chức Y tế Thế giới đã chính thức tuyên bố sự lây lan của virus là một tình huống đại dịch.",
+      "exampleSentence2": "Die Bewältigung einer pandemischen Krise erfordert eine beispiellose globale Kooperation.",
+      "exampleTranslation2": "Việc đối phó với một cuộc khủng hoảng đại dịch đòi hỏi sự hợp tác toàn cầu chưa từng có.",
+      "imageUrl": "/images/vocab/c1-epidemiologie-pandemie/pandemisch.png",
+      "meaningDe": "Auf eine große Anzahl von Menschen in vielen verschiedenen Ländern oder Kontinenten gleichzeitig zutreffend."
+    },
+    {
+      "word": "epidemisch",
+      "article": null,
+      "plural": null,
+      "wordType": "ADJEKTIV",
+      "meaningVi": "Dịch bệnh",
+      "meaningEn": "Epidemic (widespread in a community at a particular time)",
+      "exampleSentence1": "Nach den Überschwemmungen kam es zu einem epidemischen Ausbruch von Cholera in der betroffenen Region.",
+      "exampleTranslation1": "Sau lũ lụt, một đợt bùng phát dịch tả đã xảy ra ở khu vực bị ảnh hưởng.",
+      "exampleSentence2": "Die schnelle Reaktion der Behörden verhinderte, dass die lokale epidemische Situation zu einer regionalen Katastrophe eskalierte.",
+      "exampleTranslation2": "Phản ứng nhanh chóng của các cơ quan chức năng đã ngăn chặn tình hình dịch bệnh cục bộ leo thang thành thảm họa khu vực.",
+      "imageUrl": "/images/vocab/c1-epidemiologie-pandemie/epidemisch.png",
+      "meaningDe": "In einer Region schnell und weit verbreitet"
+    },
+    {
+      "word": "infektiös",
+      "article": null,
+      "plural": null,
+      "wordType": "ADJEKTIV",
+      "meaningVi": "Truyền nhiễm, lây nhiễm",
+      "meaningEn": "Infectious",
+      "exampleSentence1": "Die Dauer, für die eine Person als infektiös gilt, ist entscheidend für Quarantäneempfehlungen.",
+      "exampleTranslation1": "Thời gian một người được coi là truyền nhiễm là rất quan trọng đối với các khuyến nghị cách ly.",
+      "exampleSentence2": "Obwohl das Tier gesund aussah, war es dennoch infektiös und konnte die Krankheit weitergeben.",
+      "exampleTranslation2": "Mặc dù con vật trông khỏe mạnh, nó vẫn truyền nhiễm và có thể lây bệnh.",
+      "imageUrl": "/images/vocab/c1-epidemiologie-pandemie/infektioes.png",
+      "meaningDe": "Die Eigenschaft eines Erregers, eine Krankheit auf einen anderen Organismus zu übertragen."
+    },
+    {
+      "word": "asymptomatisch",
+      "article": null,
+      "plural": null,
+      "wordType": "ADJEKTIV",
+      "meaningVi": "Không có triệu chứng",
+      "meaningEn": "Asymptomatic",
+      "exampleSentence1": "Ein großer Teil der Infizierten verläuft asymptomatisch und trägt unwissentlich zur Verbreitung des Virus bei.",
+      "exampleTranslation1": "Một phần lớn người nhiễm bệnh không có triệu chứng và vô tình góp phần vào sự lây lan của virus.",
+      "exampleSentence2": "Die Identifizierung asymptomatischer Träger ist eine der größten Herausforderungen in der Pandemiebekämpfung.",
+      "exampleTranslation2": "Việc xác định người mang mầm bệnh không có triệu chứng là một trong những thách thức lớn nhất trong việc kiểm soát đại dịch.",
+      "imageUrl": "/images/vocab/c1-epidemiologie-pandemie/asymptomatisch.png",
+      "meaningDe": "Ohne erkennbare Symptome oder Anzeichen einer Krankheit"
+    },
+    {
+      "word": "immunogen",
+      "article": null,
+      "plural": null,
+      "wordType": "ADJEKTIV",
+      "meaningVi": "Có tính sinh miễn dịch",
+      "meaningEn": "Immunogenic (able to produce an immune response)",
+      "exampleSentence1": "Ein idealer Impfstoff sollte hoch immunogen sein, um eine starke und langanhaltende Schutzwirkung zu erzielen.",
+      "exampleTranslation1": "Một loại vắc-xin lý tưởng nên có tính sinh miễn dịch cao để đạt được hiệu quả bảo vệ mạnh mẽ và lâu dài.",
+      "exampleSentence2": "Die Entwicklung eines immunogenen Impfstoffs gegen HIV stellt aufgrund der hohen Mutationsrate des Virus eine große Herausforderung dar.",
+      "exampleTranslation2": "Việc phát triển một loại vắc-xin có tính sinh miễn dịch chống lại HIV là một thách thức lớn do tốc độ đột biến cao của virus.",
+      "imageUrl": "/images/vocab/c1-epidemiologie-pandemie/immunogen.png",
+      "meaningDe": "In der Lage, eine Immunantwort im Körper auszulösen"
+    },
+    {
+      "word": "virulent",
+      "article": null,
+      "plural": null,
+      "wordType": "ADJEKTIV",
+      "meaningVi": "Độc lực mạnh",
+      "meaningEn": "Virulent (extremely severe or harmful in its effects)",
+      "exampleSentence1": "Die Ärzte waren besorgt über die zunehmend virulenten Stämme des Bakteriums, die auf herkömmliche Antibiotika nicht mehr ansprachen.",
+      "exampleTranslation1": "Các bác sĩ lo ngại về các chủng vi khuẩn ngày càng độc lực mạnh, không còn đáp ứng với kháng sinh thông thường.",
+      "exampleSentence2": "Einige Experten argumentieren, dass das Virus mit der Zeit weniger virulent werden könnte, sich aber schneller verbreitet.",
+      "exampleTranslation2": "Một số chuyên gia cho rằng virus có thể trở nên ít độc lực hơn theo thời gian, nhưng lại lây lan nhanh hơn.",
+      "imageUrl": "/images/vocab/c1-epidemiologie-pandemie/virulent.png",
+      "meaningDe": "Die Eigenschaft eines Krankheitserregers, eine schwere Krankheit auszulösen oder sich schnell im Körper auszubreiten."
+    },
+    {
+      "word": "exponentiell",
+      "article": null,
+      "plural": null,
+      "wordType": "ADVERB",
+      "meaningVi": "Theo cấp số nhân",
+      "meaningEn": "Exponentially",
+      "exampleSentence1": "Ohne Gegenmaßnahmen kann sich ein Virus in einer anfälligen Bevölkerung exponentiell ausbreiten.",
+      "exampleTranslation1": "Nếu không có biện pháp đối phó, một loại virus có thể lây lan theo cấp số nhân trong một quần thể dễ bị tổn thương.",
+      "exampleSentence2": "Die Daten zeigen, dass die Anzahl der Hospitalisierungen exponentiell ansteigt, sobald die Reproduktionszahl einen bestimmten Wert überschreitet.",
+      "exampleTranslation2": "Dữ liệu cho thấy số ca nhập viện tăng theo cấp số nhân khi chỉ số R vượt quá một giá trị nhất định.",
+      "imageUrl": "/images/vocab/c1-epidemiologie-pandemie/exponentiell.png",
+      "meaningDe": "Sehr schnell steigend, wobei die Zunahme immer größer wird"
+    }
+  ],
+  "cefrAudit": {
+    "targetLevel": "C1",
+    "verdict": "aligned",
+    "reviewerRole": "German Academic Lead",
+    "notes": "Release-candidate metadata audit: vocabulary content for \"Epidemiologie & Pandemie\" is aligned with declared C1 scope pending final human spot-check.",
+    "reviewedAt": "2026-05-12",
+    "reviewScope": "release_candidate_metadata_pass"
+  },
+  "learningOutcomes": [
+    {
+      "id": "c1-epidemiologie-pandemie-lo-1",
+      "cefrLevel": "C1",
+      "skill": "vocabulary",
+      "canDoVi": "Toi co the luyen tu vung o trinh do C1 qua chu de \"Epidemiologie & Pandemie\".",
+      "canDoDe": "Ich kann Wortschatz auf Niveau C1 zum Thema \"Epidemiologie & Pandemie\" ueben.",
+      "linkedContentIds": [
+        "c1-epidemiologie-pandemie"
+      ]
+    }
+  ]
 }

@@ -70,7 +70,7 @@ export function ExercisePlayerWrapper({ type, theme, level, initialExerciseData,
             <div className="flex min-h-[100dvh] items-center justify-center bg-[#F3FBFF] px-4">
                 <FuxiePanel variant="soft" className="flex w-full max-w-sm flex-col items-center p-8 text-center">
                     <Mascot variant="loading" size={88} />
-                    <p className="mt-4 text-sm font-bold text-[#3C78A8]">Đang tải bài luyện...</p>
+                    <p className="mt-4 text-sm font-bold text-text-brand">Đang tải bài luyện...</p>
                     <div className="mt-5 h-2 w-36 overflow-hidden rounded-full bg-[#CCE4F0]/70">
                         <div className="h-full w-2/3 animate-pulse rounded-full bg-gradient-to-r from-[#60A8E4] to-[#2EC4B6]" />
                     </div>
@@ -84,7 +84,7 @@ export function ExercisePlayerWrapper({ type, theme, level, initialExerciseData,
         return (
             <div className="flex min-h-[100dvh] items-center justify-center bg-[#F3FBFF] px-4">
                 <FuxiePanel variant="default" className="flex w-full max-w-sm flex-col items-center p-8 text-center">
-                    <Mascot variant="encouragement" size={88} />
+                    <Mascot variant="encourage" size={88} />
                     <p className="mt-4 text-sm font-bold text-red-500">{error || 'Etwas ist schiefgelaufen'}</p>
                     <button
                         onClick={loadQuestions}
@@ -114,6 +114,7 @@ export function ExercisePlayerWrapper({ type, theme, level, initialExerciseData,
                     cefrLevel={level}
                     themeName={themeName}
                     themeSlug={theme}
+                    nextEpisodeHref={exerciseData.nextEpisodeHref}
                     onExit={handleExit}
                     onComplete={() => {}}
                 />

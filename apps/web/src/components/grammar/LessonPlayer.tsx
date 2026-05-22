@@ -4,6 +4,14 @@ import React, { useState, useCallback, useMemo, useEffect, useRef } from 'react'
 import { TheoryRenderer } from '@/components/grammar/TheoryRenderer'
 import { ExerciseRenderer, FeedbackToast } from '@/components/grammar/ExerciseRenderer'
 import type { TheoryBlock, GrammarExercise } from '@/components/grammar/types'
+import { RewardPreview, type RewardPreviewItem } from '@/components/gamification/quest-visuals'
+import { FuxieBadge, FuxieProgressBar, fuxieButtonClass } from '@/components/ui/fuxie-ui'
+import { trackClientAnalyticsEvent } from '@/lib/analytics/client-events'
+import {
+    buildGrammarQuestEpisode,
+    getGrammarQuestCheckpoint,
+    type GrammarQuestEpisodeReceipt,
+} from '@/lib/gamification/grammar-quest-episode'
 import s from '@/components/grammar/grammar.module.css'
 
 // ─── Confetti ────────────────────────────────────────
@@ -91,6 +99,18 @@ interface LessonPlayerProps {
     topicSlug: string
 }
 
+interface GrammarProgressResponse {
+    xpEarned?: number
+    fucoinEarned?: number
+    rewardPreview?: RewardPreviewItem[]
+    questEpisodeReceipt?: GrammarQuestEpisodeReceipt
+    nextEpisodeHref?: string
+    episodeRouting?: {
+        reason: string
+        routedSkill: string
+    }
+}
+
 export function LessonPlayer({
     lessonId, titleDe, titleNative, level, lessonType, estimatedMin,
     theoryBlocks, exercises, topicSlug,
@@ -113,12 +133,28 @@ export function LessonPlayer({
     const [startTime] = useState(Date.now())
     const [elapsedTime, setElapsedTime] = useState(0)
     const [progressSaved, setProgressSaved] = useState(false)
+    const [progressResult, setProgressResult] = useState<GrammarProgressResponse | null>(null)
+    const trackedCheckpoints = useRef<Set<string>>(new Set())
+    const completionTracked = useRef(false)
 
-    const currentStep = steps[currentStepIdx]
-    if (!currentStep) return null
+    const currentStep = steps[currentStepIdx] ?? steps[0]!
     const totalSteps = steps.length
     const progress = ((currentStepIdx) / (totalSteps - 1)) * 100
     const totalExercises = exercises.length
+    const questEpisode = useMemo(() => buildGrammarQuestEpisode({
+        lessonId,
+        topicSlug,
+        title: titleNative || titleDe,
+        cefrLevel: level,
+        questionCount: Math.max(1, totalExercises),
+        nextEpisodeHref: `/grammar/${topicSlug}`,
+    }), [lessonId, level, titleDe, titleNative, topicSlug, totalExercises])
+    const checkpointIndex = currentStep.type === 'exercise'
+        ? currentStep.exerciseIndex
+        : currentStep.type === 'results'
+            ? Math.max(0, totalExercises - 1)
+            : 0
+    const activeCheckpoint = getGrammarQuestCheckpoint({ episode: questEpisode, currentIndex: checkpointIndex })
 
     useEffect(() => {
         if (currentStep.type === 'results') {
@@ -140,6 +176,50 @@ export function LessonPlayer({
     const xp = correctCount * 10
 
     useEffect(() => {
+        if (currentStep.type === 'hero' || currentStep.type === 'results') return
+        if (trackedCheckpoints.current.has(activeCheckpoint.id)) return
+        trackedCheckpoints.current.add(activeCheckpoint.id)
+        trackClientAnalyticsEvent({
+            eventName: 'quest_episode_checkpoint_reached',
+            source: 'grammar.quest_episode.checkpoint',
+            actionId: questEpisode.episodeId,
+            actionType: 'lesson_session',
+            level,
+            skill: 'grammar',
+            metadata: {
+                episodeId: questEpisode.episodeId,
+                skill: 'grammar',
+                lessonId,
+                cefrLevel: level,
+                checkpointId: activeCheckpoint.id,
+                questionCount: totalExercises,
+            },
+        })
+    }, [activeCheckpoint.id, currentStep.type, lessonId, level, questEpisode.episodeId, totalExercises])
+
+    useEffect(() => {
+        if (currentStep.type !== 'results' || !progressResult?.questEpisodeReceipt || completionTracked.current) return
+        completionTracked.current = true
+        trackClientAnalyticsEvent({
+            eventName: 'quest_episode_completed',
+            source: 'grammar.quest_episode.completed',
+            actionId: questEpisode.episodeId,
+            actionType: 'lesson_session',
+            level,
+            skill: 'grammar',
+            metadata: {
+                episodeId: questEpisode.episodeId,
+                skill: 'grammar',
+                lessonId,
+                cefrLevel: level,
+                checkpointId: 'explain',
+                questionCount: totalExercises,
+                accuracyBand: progressResult.questEpisodeReceipt.accuracyBand,
+            },
+        })
+    }, [currentStep.type, lessonId, level, progressResult, questEpisode.episodeId, totalExercises])
+
+    useEffect(() => {
         if (currentStep.type === 'results' && !progressSaved && totalExercises > 0) {
             setProgressSaved(true)
             fetch('/api/v1/grammar/progress', {
@@ -150,14 +230,49 @@ export function LessonPlayer({
                     score: correctCount,
                     maxScore: totalExercises,
                     stars,
+                    questEpisode: {
+                        episodeId: questEpisode.episodeId,
+                        skill: questEpisode.skill,
+                        sourceId: questEpisode.sourceId,
+                        cefrLevel: questEpisode.cefrLevel,
+                        checkpointCount: questEpisode.checkpoints.length,
+                        nextEpisodeHref: questEpisode.nextEpisodeHref,
+                        currentEpisodeHref: `/grammar/${topicSlug}/${lessonId}`,
+                    },
                 }),
-            }).catch(console.error)
+            })
+                .then((response) => response.json())
+                .then((data) => setProgressResult(data))
+                .catch(console.error)
         }
-    }, [currentStep, progressSaved, lessonId, correctCount, totalExercises, stars])
+    }, [currentStep, progressSaved, lessonId, correctCount, totalExercises, stars, questEpisode, topicSlug])
 
     const goNext = useCallback(() => {
         setCurrentStepIdx(prev => Math.min(prev + 1, totalSteps - 1))
     }, [totalSteps])
+
+    const startGrammarQuestEpisode = useCallback(() => {
+        trackedCheckpoints.current = new Set()
+        completionTracked.current = false
+        setProgressResult(null)
+        trackClientAnalyticsEvent({
+            eventName: 'quest_episode_started',
+            source: 'grammar.quest_episode.started',
+            actionId: questEpisode.episodeId,
+            actionType: 'lesson_session',
+            level,
+            skill: 'grammar',
+            metadata: {
+                episodeId: questEpisode.episodeId,
+                skill: 'grammar',
+                lessonId,
+                cefrLevel: level,
+                checkpointId: 'notice',
+                questionCount: totalExercises,
+            },
+        })
+        goNext()
+    }, [goNext, lessonId, level, questEpisode.episodeId, totalExercises])
 
     const handleExerciseAnswer = useCallback((correct: boolean, correctAnswer: string) => {
         const step = steps[currentStepIdx]!
@@ -186,6 +301,9 @@ export function LessonPlayer({
         setAnswers([])
         setFeedbackState(null)
         setProgressSaved(false)
+        setProgressResult(null)
+        trackedCheckpoints.current = new Set()
+        completionTracked.current = false
     }, [])
 
     // Tag-based analysis
@@ -230,6 +348,16 @@ export function LessonPlayer({
                             }
                         </span>
                     </div>
+                    <div className={s.episodeProgressRail}>
+                        {questEpisode.checkpoints.map((checkpoint) => (
+                            <span
+                                key={checkpoint.id}
+                                className={`${s.episodeProgressPill} ${checkpoint.id === activeCheckpoint.id ? s.episodeProgressPillActive : ''}`}
+                            >
+                                {checkpoint.title}
+                            </span>
+                        ))}
+                    </div>
                 </div>
             )}
 
@@ -238,15 +366,35 @@ export function LessonPlayer({
                 <div className={s.heroCard}>
                     <div className={s.heroGradient}>
                         <span className={s.heroEmoji}>{lessonTypeEmoji}</span>
+                        <div className={s.episodeBadges}>
+                            <FuxieBadge tone="brand" className="normal-case tracking-normal">Grammar Episode</FuxieBadge>
+                            <FuxieBadge tone="neutral" className="normal-case tracking-normal">{level}</FuxieBadge>
+                        </div>
                         <h1 className={s.heroTitle}>{titleNative}</h1>
+                        <p className={s.episodeEyebrow}>Quest briefing</p>
                         <p className={s.heroSubtitle}>{titleDe} · {level} · {lessonTypeLabel}</p>
                         <div className={s.heroChips}>
                             {theoryBlocks.length > 0 && <span className={s.heroChip}>📝 {theoryBlocks.length} phần lý thuyết</span>}
-                            <span className={s.heroChip}>🎯 {totalExercises} bài tập</span>
+                            <span className={s.heroChip}>🎯 {totalExercises} thử thách</span>
                             <span className={s.heroChip}>⏱️ ~{estimatedMin} phút</span>
                         </div>
+                        <p className={s.episodeObjective}>
+                            {questEpisode.objective} Phần thưởng chỉ được trao khi em thực sự hoàn thành thử thách ngữ pháp.
+                        </p>
                     </div>
-                    <button className={s.heroStartBtn} onClick={goNext}>
+                    <div className={s.episodePreview}>
+                        <RewardPreview rewards={questEpisode.rewardPreview} />
+                    </div>
+                    <div className={s.episodeCheckpointGrid}>
+                        {questEpisode.checkpoints.map((checkpoint, index) => (
+                            <div key={checkpoint.id} className={s.episodeCheckpointCard}>
+                                <span className={s.episodeCheckpointNumber}>{index + 1}</span>
+                                <strong>{checkpoint.title}</strong>
+                                <span>{checkpoint.objective}</span>
+                            </div>
+                        ))}
+                    </div>
+                    <button className={s.heroStartBtn} onClick={startGrammarQuestEpisode}>
                         Bắt đầu học →
                     </button>
                 </div>
@@ -261,7 +409,7 @@ export function LessonPlayer({
                     <div className={s.stepFooter}>
                         <div className={s.stepFooterInner}>
                             <button className={`${s.btnPrimary} ${s.btnBlue}`} onClick={goNext}>
-                                {currentStep.blockIndex === theoryBlocks.length - 1 ? '🎯 Bắt đầu luyện tập' : 'Tiếp tục →'}
+                                {currentStep.blockIndex === theoryBlocks.length - 1 ? '🎯 Bắt đầu thử thách' : 'Tiếp bước →'}
                             </button>
                         </div>
                     </div>
@@ -296,6 +444,45 @@ export function LessonPlayer({
                         <span className={s.statItem}>⏱️ {formatTime(elapsedTime)}</span>
                         <span className={`${s.statItem} ${s.xpStat}`}>⚡ +{xp} XP</span>
                     </div>
+                    {progressResult?.questEpisodeReceipt && (
+                        <div className={s.episodeReceiptCard}>
+                            <div className={s.episodeReceiptHeader}>
+                                <div>
+                                    <p className={s.episodeEyebrow}>Episode receipt</p>
+                                    <h2>
+                                        {progressResult.questEpisodeReceipt.completedCheckpoints}/{progressResult.questEpisodeReceipt.checkpointCount} checkpoint · {progressResult.questEpisodeReceipt.accuracyBand.replaceAll('_', ' ')}
+                                    </h2>
+                                    <p>{progressResult.questEpisodeReceipt.masteryContribution}</p>
+                                    {progressResult.episodeRouting?.reason && (
+                                        <span className={s.episodeRoutingNote}>
+                                            Next route: {progressResult.episodeRouting.reason.replaceAll('_', ' ')}
+                                        </span>
+                                    )}
+                                </div>
+                                <button
+                                    className={fuxieButtonClass(progressResult.questEpisodeReceipt.recommendedAction === 'next_episode' ? 'primary' : 'reward', 'md', 'shrink-0')}
+                                    onClick={() => {
+                                        if (progressResult.questEpisodeReceipt?.recommendedAction === 'next_episode') {
+                                            window.location.href = progressResult.questEpisodeReceipt.nextEpisodeHref
+                                        } else {
+                                            handleRestart()
+                                        }
+                                    }}
+                                >
+                                    {progressResult.questEpisodeReceipt.recommendedAction === 'next_episode' ? 'Di tiep' : 'Luyen lai'}
+                                </button>
+                            </div>
+                            <FuxieProgressBar
+                                value={Math.round((progressResult.questEpisodeReceipt.completedCheckpoints / Math.max(1, progressResult.questEpisodeReceipt.checkpointCount)) * 100)}
+                                className="mt-4"
+                            />
+                            {progressResult.rewardPreview && progressResult.rewardPreview.length > 0 && (
+                                <div className={s.episodeReceiptRewards}>
+                                    <RewardPreview rewards={progressResult.rewardPreview} />
+                                </div>
+                            )}
+                        </div>
+                    )}
                     {strengths.length > 0 && (
                         <div className={s.strengthSection}>
                             <div className={`${s.strengthHeader} ${s.strengthGood}`}>✅ Làm tốt</div>

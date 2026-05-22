@@ -45,6 +45,9 @@ function mockTx(
             create,
             findFirstOrThrow: vi.fn().mockResolvedValue(pendingRequest),
         },
+        analyticsEvent: {
+            create: vi.fn().mockResolvedValue({ id: 'event-1' }),
+        },
     } as unknown as EconomyDbClient
 }
 
@@ -57,19 +60,19 @@ describe('Fuxie shop redeem guard', () => {
         })
 
         expect(result).toMatchObject({
-            status: 'preview_locked',
-            spendEnabled: false,
+            status: 'requestable',
+            spendEnabled: true,
             confirmationRequired: true,
             canAfford: true,
             wouldSpend: 120,
             missingFucoin: 0,
             item: {
                 id: 'streak-freeze',
-                status: 'preview_locked',
-                statusLabel: 'Đủ Fucoin',
+                status: 'requestable',
+                statusLabel: expect.any(String),
             },
             guard: {
-                reason: 'preview_locked',
+                reason: 'requestable',
             },
         })
         expect(tx.userWallet.findUnique).toHaveBeenCalledTimes(1)
@@ -84,7 +87,7 @@ describe('Fuxie shop redeem guard', () => {
 
         expect(result).toMatchObject({
             status: 'pending_created',
-            spendEnabled: false,
+            spendEnabled: true,
             canAfford: true,
             wouldSpend: 120,
             request: {
@@ -97,6 +100,22 @@ describe('Fuxie shop redeem guard', () => {
             },
         })
         expect(tx.shopRedeemRequest.create).toHaveBeenCalledTimes(1)
+        expect(tx.analyticsEvent.create).toHaveBeenCalledWith({
+            data: expect.objectContaining({
+                userId: 'user-1',
+                role: 'LEARNER',
+                eventName: 'reward_redeem_requested',
+                source: 'rewards.shop.redeem',
+                actionId: 'redeem-1',
+                metadata: expect.objectContaining({
+                    item_id: 'streak-freeze',
+                    category: 'support',
+                    cost: 120,
+                    wallet_balance: 150,
+                    request_id: 'redeem-1',
+                }),
+            }),
+        })
     })
 
     it('returns the existing pending request instead of creating a duplicate', async () => {
@@ -109,6 +128,21 @@ describe('Fuxie shop redeem guard', () => {
         expect(result.status).toBe('pending_existing')
         expect(result.request?.id).toBe('redeem-1')
         expect(tx.shopRedeemRequest.create).not.toHaveBeenCalled()
+        expect(tx.analyticsEvent.create).not.toHaveBeenCalled()
+    })
+
+    it('blocks real gift requests while keeping the wallet untouched', async () => {
+        const tx = mockTx(1000)
+
+        await expect(createShopRedeemRequest(tx, {
+            userId: 'user-1',
+            itemId: 'fuxie-real-gift-voucher',
+        })).rejects.toMatchObject({
+            status: 423,
+            code: 'real_gift_locked',
+        } satisfies Partial<ShopRedeemError>)
+        expect(tx.shopRedeemRequest.create).not.toHaveBeenCalled()
+        expect(tx.analyticsEvent.create).not.toHaveBeenCalled()
     })
 
     it('lists learner redeem request history without mutating rewards', async () => {

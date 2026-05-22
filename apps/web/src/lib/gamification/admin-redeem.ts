@@ -1,6 +1,7 @@
 import { Prisma, ShopRedeemRequestStatus, prisma } from '@fuxie/database'
 
 import { FucoinSpendError, spendFucoin } from './fucoin'
+import { recordAnalyticsEvent } from '@/lib/analytics/events'
 
 export type AdminRedeemReviewAction = 'approve' | 'reject'
 export type AdminRedeemFulfillmentState = 'awaiting' | 'fulfilled'
@@ -50,6 +51,8 @@ export class AdminRedeemReviewError extends Error {
             | 'already_fulfilled'
             | 'invalid_action'
             | 'insufficient_funds'
+            | 'unsupported_reward'
+            | 'missing_reject_reason'
     ) {
         super(message)
         this.name = 'AdminRedeemReviewError'
@@ -153,6 +156,7 @@ export async function reviewShopRedeemRequest(
             userId: true,
             itemId: true,
             itemTitle: true,
+            itemCategory: true,
             cost: true,
             status: true,
         },
@@ -166,17 +170,27 @@ export async function reviewShopRedeemRequest(
         throw new AdminRedeemReviewError('Redeem request is no longer pending', 409, 'not_pending')
     }
 
+    if (input.action === 'approve' && request.itemCategory === 'real_gift') {
+        throw new AdminRedeemReviewError('Real gifts remain locked for this pilot', 409, 'unsupported_reward')
+    }
+
+    if (input.action === 'reject' && request.itemCategory === 'real_gift' && !input.reason?.trim()) {
+        throw new AdminRedeemReviewError('Rejecting a locked real gift request requires a reason', 400, 'missing_reject_reason')
+    }
+
     const nextStatus = input.action === 'approve'
         ? ShopRedeemRequestStatus.APPROVED
         : ShopRedeemRequestStatus.REJECTED
     const statusReason = input.reason?.trim()
         || (input.action === 'approve'
-            ? 'Approved and Fucoin spent. Fulfillment remains locked for a later batch.'
+            ? 'Approved and Fucoin spent. Awaiting fulfillment.'
             : 'Rejected by admin. Fucoin has not been spent.')
+    let walletBalanceAfter: number | null = null
+    let duplicateSpend = false
 
     if (input.action === 'approve') {
         try {
-            await spendFucoin(tx, {
+            const spendReceipt = await spendFucoin(tx, {
                 userId: request.userId,
                 amount: request.cost,
                 sourceType: 'shop:redeem',
@@ -186,9 +200,11 @@ export async function reviewShopRedeemRequest(
                     requestId: request.id,
                     itemId: request.itemId,
                     itemTitle: request.itemTitle,
-                    approvalGuard: 'fulfillment_locked',
+                    approvalGuard: 'admin_approved_spend',
                 },
             })
+            walletBalanceAfter = spendReceipt.walletBalance
+            duplicateSpend = spendReceipt.duplicate
         } catch (error) {
             if (error instanceof FucoinSpendError && error.code === 'insufficient_funds') {
                 throw new AdminRedeemReviewError('Learner wallet no longer has enough Fucoin', 402, 'insufficient_funds')
@@ -198,7 +214,7 @@ export async function reviewShopRedeemRequest(
         }
     }
 
-    return tx.shopRedeemRequest.update({
+    const updated = await tx.shopRedeemRequest.update({
         where: { id: input.requestId },
         data: {
             status: nextStatus,
@@ -207,6 +223,24 @@ export async function reviewShopRedeemRequest(
         },
         select: redeemRequestSelect,
     })
+
+    await recordAnalyticsEvent(tx, {
+        userId: request.userId,
+        role: 'LEARNER',
+        eventName: input.action === 'approve' ? 'reward_redeem_approved' : 'reward_redeem_rejected',
+        source: 'admin.rewards.redeem.review',
+        actionId: request.id,
+        metadata: {
+            item_id: request.itemId,
+            category: request.itemCategory,
+            cost: request.cost,
+            request_id: request.id,
+            wallet_balance_after: walletBalanceAfter,
+            duplicate_spend: duplicateSpend,
+        },
+    })
+
+    return updated
 }
 
 export async function fulfillShopRedeemRequest(
@@ -223,6 +257,7 @@ export async function fulfillShopRedeemRequest(
             userId: true,
             itemId: true,
             itemTitle: true,
+            itemCategory: true,
             status: true,
             fulfilledAt: true,
         },
@@ -242,7 +277,7 @@ export async function fulfillShopRedeemRequest(
 
     const fulfillmentResult = await applySafeInAppFulfillment(tx, request)
 
-    return tx.shopRedeemRequest.update({
+    const updated = await tx.shopRedeemRequest.update({
         where: { id: input.requestId },
         data: {
             fulfilledAt: new Date(),
@@ -251,6 +286,22 @@ export async function fulfillShopRedeemRequest(
         },
         select: redeemRequestSelect,
     })
+
+    await recordAnalyticsEvent(tx, {
+        userId: request.userId,
+        role: 'LEARNER',
+        eventName: 'reward_redeem_fulfilled',
+        source: 'admin.rewards.redeem.fulfill',
+        actionId: request.id,
+        metadata: {
+            item_id: request.itemId,
+            category: request.itemCategory,
+            request_id: request.id,
+            automatic_grant: fulfillmentResult.automaticGrant,
+        },
+    })
+
+    return updated
 }
 
 async function applySafeInAppFulfillment(
@@ -260,10 +311,11 @@ async function applySafeInAppFulfillment(
         itemId: string
         itemTitle: string
     }
-): Promise<{ statusReason: string }> {
+): Promise<{ statusReason: string; automaticGrant: boolean }> {
     if (request.itemId !== 'streak-freeze') {
         return {
             statusReason: 'Marked fulfilled by admin. Manual delivery recorded; no automatic unlock was executed.',
+            automaticGrant: false,
         }
     }
 
@@ -280,6 +332,7 @@ async function applySafeInAppFulfillment(
 
     return {
         statusReason: `Marked fulfilled. ${request.itemTitle} granted (+1 freeze).`,
+        automaticGrant: true,
     }
 }
 

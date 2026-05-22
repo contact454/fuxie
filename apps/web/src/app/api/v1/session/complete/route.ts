@@ -69,6 +69,17 @@ export async function POST(req: NextRequest) {
                 lessonsCompleted: 1,
                 srsReviewed: reviewResults.length,
                 wordsLearned: newVocabs.length,
+                analytics: {
+                    actionId: `session:${level ?? 'unknown'}`,
+                    actionType: 'lesson_session',
+                    level: level ?? null,
+                    source: 'session.complete',
+                    metadata: {
+                        review_count: reviewResults.length,
+                        new_vocab_count: newVocabs.length,
+                        grammar_count: grammarResults.length,
+                    },
+                },
             })
         })
 

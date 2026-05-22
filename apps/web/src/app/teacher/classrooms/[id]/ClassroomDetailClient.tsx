@@ -183,24 +183,24 @@ export default function ClassroomDetailClient({ classroom }: Props) {
     <div>
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '24px', flexWrap: 'wrap', gap: '12px' }}>
         <div>
-          <Link href="/teacher/classrooms" style={{ color: '#64748b', textDecoration: 'none', fontSize: '0.85rem' }}>← Quay lai</Link>
-          <h1 style={{ fontSize: '1.5rem', fontWeight: 800, color: '#f8fafc', margin: '8px 0 4px' }}>{classroom.name}</h1>
-          {classroom.description && <p style={{ color: '#94a3b8', margin: 0, fontSize: '0.9rem' }}>{classroom.description}</p>}
+          <Link href="/teacher/classrooms" style={{ color: "var(--color-text-muted)", textDecoration: 'none', fontSize: '0.85rem' }}>← Quay lai</Link>
+          <h1 style={{ fontSize: '1.5rem', fontWeight: 800, color: 'var(--color-text-inverse)', margin: '8px 0 4px' }}>{classroom.name}</h1>
+          {classroom.description && <p style={{ color: "var(--color-text-subtle)", margin: 0, fontSize: '0.9rem' }}>{classroom.description}</p>}
         </div>
         <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
           <div style={{
             background: '#0f172a', borderRadius: '10px', padding: '8px 16px',
             display: 'flex', alignItems: 'center', gap: '8px', border: '1px solid #334155',
           }}>
-            <span style={{ color: '#64748b', fontSize: '0.85rem' }}>Ma lop:</span>
-            <span style={{ color: '#f97316', fontWeight: 700, fontFamily: 'monospace', fontSize: '1.1rem' }}>{classroom.joinCode}</span>
+            <span style={{ color: "var(--color-text-muted)", fontSize: '0.85rem' }}>Ma lop:</span>
+            <span style={{ color: 'var(--color-fuxie-energy)', fontWeight: 700, fontFamily: 'monospace', fontSize: '1.1rem' }}>{classroom.joinCode}</span>
             <button onClick={copyCode} style={{
               background: 'none', border: 'none', cursor: 'pointer',
               color: copiedCode ? '#10b981' : '#64748b', fontSize: '0.8rem',
             }}>{copiedCode ? 'OK' : 'Copy'}</button>
           </div>
           <span style={{
-            background: '#1e3a5f', color: '#60a5fa',
+            background: '#1e3a5f', color: 'var(--color-fuxie-primary)',
             padding: '6px 14px', borderRadius: '8px', fontWeight: 700, fontSize: '0.9rem',
           }}>{classroom.cefrLevel}</span>
         </div>
@@ -208,11 +208,11 @@ export default function ClassroomDetailClient({ classroom }: Props) {
 
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: '12px', marginBottom: '20px' }}>
         {[
-          { label: 'Hoc vien active 7 ngay', value: classroom.analytics.activeLast7Days, color: '#3b82f6' },
+          { label: 'Học viên hoạt động 7 ngày qua', value: classroom.analytics.activeLast7Days, color: "var(--color-text-brand)" },
           { label: 'Can chu y', value: classroom.analytics.atRiskCount, color: classroom.analytics.atRiskCount > 0 ? '#f87171' : '#94a3b8' },
           { label: 'Nguy co cao', value: classroom.analytics.highRiskCount, color: classroom.analytics.highRiskCount > 0 ? '#fb7185' : '#94a3b8' },
-          { label: 'Avg completion', value: `${classroom.analytics.averageCompletionRate}%`, color: '#10b981' },
-          { label: 'Avg XP', value: classroom.analytics.averageXp, color: '#fbbf24' },
+          { label: 'Avg completion', value: `${classroom.analytics.averageCompletionRate}%`, color: 'var(--color-text-success)' },
+          { label: 'Avg XP', value: classroom.analytics.averageXp, color: 'var(--color-fuxie-reward)' },
           { label: 'Qua han', value: classroom.analytics.overdueAssignments, color: classroom.analytics.overdueAssignments > 0 ? '#fb7185' : '#94a3b8' },
         ].map((item) => (
           <div key={item.label} style={{
@@ -222,15 +222,15 @@ export default function ClassroomDetailClient({ classroom }: Props) {
             border: '1px solid #334155',
           }}>
             <div style={{ fontSize: '1.4rem', fontWeight: 800, color: item.color }}>{item.value}</div>
-            <div style={{ fontSize: '0.8rem', color: '#94a3b8' }}>{item.label}</div>
+            <div style={{ fontSize: '0.8rem', color: "var(--color-text-subtle)" }}>{item.label}</div>
           </div>
         ))}
       </div>
 
       {classroom.analytics.topRiskStudents.length > 0 && (
         <div style={{ background: '#1e293b', borderRadius: '16px', border: '1px solid #334155', overflow: 'hidden', marginBottom: '24px' }}>
-          <div style={{ padding: '14px 18px', borderBottom: '1px solid #334155', color: '#f8fafc', fontWeight: 700 }}>
-            Hoc vien can can thiep
+          <div style={{ padding: '14px 18px', borderBottom: '1px solid #334155', color: 'var(--color-text-inverse)', fontWeight: 700 }}>
+            Học viên cần hỗ trợ
           </div>
           {classroom.analytics.topRiskStudents.map((student, index) => (
             <Link
@@ -253,7 +253,7 @@ export default function ClassroomDetailClient({ classroom }: Props) {
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
-                color: '#fff',
+                color: "var(--color-text-inverse)",
                 fontWeight: 700,
                 fontSize: '0.8rem',
                 flexShrink: 0,
@@ -261,8 +261,8 @@ export default function ClassroomDetailClient({ classroom }: Props) {
                 {student.level === 'high' ? 'H' : 'M'}
               </span>
               <div style={{ flex: 1 }}>
-                <div style={{ color: '#e2e8f0', fontWeight: 600 }}>{student.displayName}</div>
-                <div style={{ color: '#64748b', fontSize: '0.8rem' }}>
+                <div style={{ color: 'var(--color-text-subtle)', fontWeight: 600 }}>{student.displayName}</div>
+                <div style={{ color: "var(--color-text-muted)", fontSize: '0.8rem' }}>
                   {student.inactiveDays != null ? `${student.inactiveDays} ngay khong hoc` : 'Chua co activity'}
                   {` · ${student.recentMinutes7d} phut / 7 ngay`}
                 </div>
@@ -279,25 +279,25 @@ export default function ClassroomDetailClient({ classroom }: Props) {
         <div style={{ background: '#1e293b', borderRadius: '16px', border: '1px solid #334155', padding: '18px', marginBottom: '24px' }}>
           <div style={{ display: 'flex', justifyContent: 'space-between', gap: '12px', alignItems: 'center', marginBottom: '14px', flexWrap: 'wrap' }}>
             <div>
-              <h2 style={{ color: '#f8fafc', fontSize: '1rem', fontWeight: 700, margin: 0 }}>Intervention suggestions</h2>
-              <p style={{ color: '#64748b', fontSize: '0.82rem', margin: '4px 0 0' }}>Generated from risk, weak skill, assignment, and activity signals.</p>
+              <h2 style={{ color: 'var(--color-text-inverse)', fontSize: '1rem', fontWeight: 700, margin: 0 }}>Intervention suggestions</h2>
+              <p style={{ color: "var(--color-text-muted)", fontSize: '0.82rem', margin: '4px 0 0' }}>Generated from risk, weak skill, assignment, and activity signals.</p>
             </div>
-            <span style={{ color: '#94a3b8', fontSize: '0.82rem' }}>{interventions.length} suggestions</span>
+            <span style={{ color: "var(--color-text-subtle)", fontSize: '0.82rem' }}>{interventions.length} suggestions</span>
           </div>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '12px' }}>
             {interventions.slice(0, 4).map((item) => (
               <div key={item.id} style={{ background: '#0f172a', border: '1px solid #334155', borderRadius: '14px', padding: '14px' }}>
                 <div style={{ display: 'flex', justifyContent: 'space-between', gap: '10px', marginBottom: '8px' }}>
                   <div style={{ minWidth: 0 }}>
-                    <div style={{ color: '#64748b', fontSize: '0.72rem', textTransform: 'uppercase', letterSpacing: '0.04em', fontWeight: 700 }}>
+                    <div style={{ color: "var(--color-text-muted)", fontSize: '0.72rem', textTransform: 'uppercase', letterSpacing: '0.04em', fontWeight: 700 }}>
                       {TARGET_TYPE_LABELS[item.targetType] || item.targetType}
                     </div>
-                    <div style={{ color: '#f8fafc', fontSize: '0.95rem', fontWeight: 700, marginTop: '4px' }}>{item.title}</div>
+                    <div style={{ color: 'var(--color-text-inverse)', fontSize: '0.95rem', fontWeight: 700, marginTop: '4px' }}>{item.title}</div>
                   </div>
-                  <span style={{ color: '#fbbf24', fontWeight: 800, fontSize: '0.85rem' }}>{item.priority}</span>
+                  <span style={{ color: 'var(--color-fuxie-reward)', fontWeight: 800, fontSize: '0.85rem' }}>{item.priority}</span>
                 </div>
-                <p style={{ color: '#94a3b8', fontSize: '0.8rem', lineHeight: 1.45, margin: '0 0 10px' }}>{item.description}</p>
-                <div style={{ display: 'flex', justifyContent: 'space-between', gap: '8px', color: '#64748b', fontSize: '0.76rem', marginBottom: '12px' }}>
+                <p style={{ color: "var(--color-text-subtle)", fontSize: '0.8rem', lineHeight: 1.45, margin: '0 0 10px' }}>{item.description}</p>
+                <div style={{ display: 'flex', justifyContent: 'space-between', gap: '8px', color: "var(--color-text-muted)", fontSize: '0.76rem', marginBottom: '12px' }}>
                   <span>{item.reason}</span>
                   <span>{item.targetStudentIds.length} students</span>
                 </div>
@@ -333,7 +333,7 @@ export default function ClassroomDetailClient({ classroom }: Props) {
             color: tab === value ? 'white' : '#94a3b8',
             fontWeight: 600, fontSize: '0.9rem',
           }}>
-            {value === 'students' ? `Hoc vien (${classroom.students.length})` : `Bai tap (${assignments.length})`}
+            {value === 'students' ? `Học viên (${classroom.students.length})` : `Bài tập (${assignments.length})`}
           </button>
         ))}
       </div>
@@ -343,15 +343,15 @@ export default function ClassroomDetailClient({ classroom }: Props) {
           {classroom.students.length === 0 ? (
             <div style={{ background: '#1e293b', borderRadius: '16px', padding: '40px', textAlign: 'center', border: '1px solid #334155' }}>
               <div style={{ fontSize: '3rem', marginBottom: '12px' }}>👥</div>
-              <p style={{ color: '#94a3b8' }}>Chua co hoc vien nao trong lop nay.</p>
+              <p style={{ color: "var(--color-text-subtle)" }}>Chưa có học viên nào trong lớp này.</p>
             </div>
           ) : (
             <div style={{ background: '#1e293b', borderRadius: '16px', border: '1px solid #334155', overflow: 'hidden' }}>
               <div style={{
                 display: 'grid', gridTemplateColumns: '2.2fr 0.8fr 0.9fr 0.9fr 0.9fr 1.4fr',
-                padding: '12px 20px', borderBottom: '1px solid #334155', fontSize: '0.8rem', color: '#64748b', fontWeight: 600,
+                padding: '12px 20px', borderBottom: '1px solid #334155', fontSize: '0.8rem', color: "var(--color-text-muted)", fontWeight: 600,
               }}>
-                <span>Hoc vien</span>
+                <span>Học viên</span>
                 <span>Level</span>
                 <span>XP</span>
                 <span>Streak</span>
@@ -369,21 +369,21 @@ export default function ClassroomDetailClient({ classroom }: Props) {
                     <div style={{
                       width: '36px', height: '36px', borderRadius: '10px',
                       background: '#334155', display: 'flex', alignItems: 'center', justifyContent: 'center',
-                      color: '#94a3b8', fontWeight: 700, fontSize: '0.85rem',
+                      color: "var(--color-text-subtle)", fontWeight: 700, fontSize: '0.85rem',
                     }}>
                       {student.displayName.charAt(0).toUpperCase()}
                     </div>
                     <div>
-                      <div style={{ color: '#e2e8f0', fontWeight: 600, fontSize: '0.9rem' }}>{student.displayName}</div>
-                      <div style={{ color: '#64748b', fontSize: '0.75rem' }}>{student.email}</div>
+                      <div style={{ color: 'var(--color-text-subtle)', fontWeight: 600, fontSize: '0.9rem' }}>{student.displayName}</div>
+                      <div style={{ color: "var(--color-text-muted)", fontSize: '0.75rem' }}>{student.email}</div>
                     </div>
                   </div>
-                  <span style={{ color: '#60a5fa', fontWeight: 600, fontSize: '0.85rem' }}>{student.currentLevel}</span>
-                  <span style={{ color: '#fbbf24', fontWeight: 600, fontSize: '0.9rem' }}>{student.totalXp.toLocaleString()}</span>
+                  <span style={{ color: 'var(--color-fuxie-primary)', fontWeight: 600, fontSize: '0.85rem' }}>{student.currentLevel}</span>
+                  <span style={{ color: 'var(--color-fuxie-reward)', fontWeight: 600, fontSize: '0.9rem' }}>{student.totalXp.toLocaleString()}</span>
                   <span style={{ color: student.currentStreak > 0 ? '#f97316' : '#475569', fontWeight: 600, fontSize: '0.9rem' }}>
                     {student.currentStreak > 0 ? `${student.currentStreak}` : '—'}
                   </span>
-                  <span style={{ color: '#94a3b8', fontSize: '0.9rem' }}>{student.analytics.recentMinutes7d}m</span>
+                  <span style={{ color: "var(--color-text-subtle)", fontSize: '0.9rem' }}>{student.analytics.recentMinutes7d}m</span>
                   <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
                     <span style={{
                       color: student.analytics.riskLevel === 'high' ? '#fca5a5' : student.analytics.riskLevel === 'medium' ? '#fcd34d' : '#86efac',
@@ -392,7 +392,7 @@ export default function ClassroomDetailClient({ classroom }: Props) {
                     }}>
                       {student.analytics.riskLevel.toUpperCase()}
                     </span>
-                    <span style={{ color: '#64748b', fontSize: '0.72rem' }}>
+                    <span style={{ color: "var(--color-text-muted)", fontSize: '0.72rem' }}>
                       {student.analytics.riskReasons[0] || 'On track'}
                     </span>
                   </div>
@@ -415,7 +415,7 @@ export default function ClassroomDetailClient({ classroom }: Props) {
           {assignments.length === 0 ? (
             <div style={{ background: '#1e293b', borderRadius: '16px', padding: '40px', textAlign: 'center', border: '1px solid #334155' }}>
               <div style={{ fontSize: '3rem', marginBottom: '12px' }}>📋</div>
-              <p style={{ color: '#94a3b8' }}>Chua co bai tap nao duoc giao.</p>
+              <p style={{ color: "var(--color-text-subtle)" }}>Chưa có bài tập nào được giao.</p>
             </div>
           ) : (
             <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
@@ -432,8 +432,8 @@ export default function ClassroomDetailClient({ classroom }: Props) {
                   }}>
                     <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '10px' }}>
                       <div>
-                        <h3 style={{ color: '#f8fafc', fontSize: '1rem', fontWeight: 700, margin: '0 0 4px' }}>{assignment.title}</h3>
-                        <span style={{ color: '#94a3b8', fontSize: '0.8rem' }}>
+                        <h3 style={{ color: 'var(--color-text-inverse)', fontSize: '1rem', fontWeight: 700, margin: '0 0 4px' }}>{assignment.title}</h3>
+                        <span style={{ color: "var(--color-text-subtle)", fontSize: '0.8rem' }}>
                           {TARGET_TYPE_LABELS[assignment.targetType] || assignment.targetType}
                         </span>
                       </div>
@@ -455,7 +455,7 @@ export default function ClassroomDetailClient({ classroom }: Props) {
                           borderRadius: '6px',
                         }} />
                       </div>
-                      <span style={{ color: '#94a3b8', fontSize: '0.85rem', fontWeight: 600, minWidth: '84px', textAlign: 'right' }}>
+                      <span style={{ color: "var(--color-text-subtle)", fontSize: '0.85rem', fontWeight: 600, minWidth: '84px', textAlign: 'right' }}>
                         {assignment.submissionCount}/{assignment.totalStudents}
                       </span>
                     </div>
@@ -476,19 +476,19 @@ export default function ClassroomDetailClient({ classroom }: Props) {
             background: '#1e293b', borderRadius: '20px', padding: '32px',
             width: '100%', maxWidth: '520px', border: '1px solid #334155',
           }}>
-            <h2 style={{ color: '#f8fafc', fontSize: '1.2rem', fontWeight: 700, margin: '0 0 20px' }}>Giao bai tap moi</h2>
+            <h2 style={{ color: 'var(--color-text-inverse)', fontSize: '1.2rem', fontWeight: 700, margin: '0 0 20px' }}>Giao bài tập mới</h2>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
               <div>
-                <label style={{ color: '#94a3b8', fontSize: '0.85rem', display: 'block', marginBottom: '6px' }}>Tieu de *</label>
+                <label style={{ color: "var(--color-text-subtle)", fontSize: '0.85rem', display: 'block', marginBottom: '6px' }}>Tieu de *</label>
                 <input value={assignForm.title} onChange={(event) => setAssignForm((form) => ({ ...form, title: event.target.value }))}
                   style={{
                     width: '100%', padding: '10px 14px', borderRadius: '10px',
-                    background: '#0f172a', border: '1px solid #334155', color: '#f8fafc',
+                    background: '#0f172a', border: '1px solid #334155', color: 'var(--color-text-inverse)',
                     fontSize: '0.95rem', outline: 'none', boxSizing: 'border-box',
                   }} />
               </div>
               <div>
-                <label style={{ color: '#94a3b8', fontSize: '0.85rem', display: 'block', marginBottom: '6px' }}>Loai bai</label>
+                <label style={{ color: "var(--color-text-subtle)", fontSize: '0.85rem', display: 'block', marginBottom: '6px' }}>Loai bai</label>
                 <div style={{ display: 'flex', gap: '6px', flexWrap: 'wrap' }}>
                   {Object.entries(TARGET_TYPE_LABELS).map(([key, label]) => (
                     <button key={key} onClick={() => setAssignForm((form) => ({ ...form, targetType: key }))}
@@ -502,19 +502,19 @@ export default function ClassroomDetailClient({ classroom }: Props) {
                 </div>
               </div>
               <div>
-                <label style={{ color: '#94a3b8', fontSize: '0.85rem', display: 'block', marginBottom: '6px' }}>Han nop</label>
+                <label style={{ color: "var(--color-text-subtle)", fontSize: '0.85rem', display: 'block', marginBottom: '6px' }}>Han nop</label>
                 <input type="datetime-local" value={assignForm.dueDate}
                   onChange={(event) => setAssignForm((form) => ({ ...form, dueDate: event.target.value }))}
                   style={{
                     width: '100%', padding: '10px 14px', borderRadius: '10px',
-                    background: '#0f172a', border: '1px solid #334155', color: '#f8fafc',
+                    background: '#0f172a', border: '1px solid #334155', color: 'var(--color-text-inverse)',
                     fontSize: '0.95rem', outline: 'none', boxSizing: 'border-box',
                   }} />
               </div>
               <div style={{ display: 'flex', gap: '12px', justifyContent: 'flex-end', marginTop: '8px' }}>
                 <button onClick={() => setShowAssignModal(false)} style={{
                   padding: '10px 20px', borderRadius: '10px', background: '#334155',
-                  color: '#94a3b8', border: 'none', cursor: 'pointer', fontWeight: 500,
+                  color: "var(--color-text-subtle)", border: 'none', cursor: 'pointer', fontWeight: 500,
                 }}>Huy</button>
                 <button onClick={handleAssign} disabled={assigning} style={{
                   padding: '10px 20px', borderRadius: '10px', background: '#3b82f6',

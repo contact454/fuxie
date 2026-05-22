@@ -1,0 +1,1062 @@
+{
+  "project": "Fuxie Image Production Sprint",
+  "batch": 1,
+  "batch_name": "Mascot Core",
+  "date": "2026-05-15",
+  "tool_mode": "built-in image_gen source generation plus local chroma-key removal; two admin assets reused from existing global alpha-clean set as documented fallback",
+  "asset_count": 32,
+  "new_imagegen_source_count": 30,
+  "reused_existing_alpha_clean_count": 2,
+  "style_lock_reference": "docs/design/asset-generation/fuxie-village-production/qa/batch-0-style-lock/batch-0-manifest.json",
+  "directories": {
+    "source": "docs/design/asset-generation/fuxie-village-production/source/batch-1-mascot-core",
+    "alpha": "docs/design/asset-generation/fuxie-village-production/alpha/batch-1-mascot-core",
+    "runtime_png_512": "docs/design/asset-generation/fuxie-village-production/runtime/png-512/batch-1-mascot-core",
+    "runtime_png_1024": "docs/design/asset-generation/fuxie-village-production/runtime/png-1024/batch-1-mascot-core",
+    "runtime_webp_512": "docs/design/asset-generation/fuxie-village-production/runtime/webp-512/batch-1-mascot-core",
+    "runtime_webp_1024": "docs/design/asset-generation/fuxie-village-production/runtime/webp-1024/batch-1-mascot-core",
+    "qa": "docs/design/asset-generation/fuxie-village-production/qa/batch-1-mascot-core"
+  },
+  "qa_artifacts": {
+    "prompt_sheet_json": "docs/design/asset-generation/fuxie-village-production/qa/batch-1-mascot-core/batch-1-prompt-sheet.json",
+    "prompt_sheet_md": "docs/design/asset-generation/fuxie-village-production/qa/batch-1-mascot-core/batch-1-prompt-sheet.md",
+    "alpha_qa_json": "docs/design/asset-generation/fuxie-village-production/qa/batch-1-mascot-core/batch-1-alpha-qa.json",
+    "alpha_contact_sheet": "docs/design/asset-generation/fuxie-village-production/qa/batch-1-mascot-core/batch-1-alpha-contact-sheet.png",
+    "source_pass_contact_sheets": [
+      "docs/design/asset-generation/fuxie-village-production/qa/batch-1-mascot-core/batch-1-source-pass-1-contact-sheet.png",
+      "docs/design/asset-generation/fuxie-village-production/qa/batch-1-mascot-core/batch-1-source-pass-2-contact-sheet.png",
+      "docs/design/asset-generation/fuxie-village-production/qa/batch-1-mascot-core/batch-1-source-pass-3-contact-sheet.png"
+    ]
+  },
+  "notes": [
+    "All runtime cutouts have alpha and transparent corners.",
+    "No residual chroma-key-like visible pixels remain after cleanup.",
+    "Assets 31 and 32 are documented fallback imports from the existing global alpha-clean mascot set; they are alpha-clean but slightly less hoodie-consistent than the 30 newly generated Batch 1 sources."
+  ],
+  "assets": [
+    {
+      "asset_id": "b1_mascot_core_01_welcome_wave",
+      "name": "Welcome Wave",
+      "ui_role": "Welcome / first visit greeting",
+      "asset_type": "mascot_core_cutout",
+      "source_origin": "new_batch_1_imagegen_chroma_source",
+      "prompt": "Use case: stylized-concept\nAsset type: Batch 1 Mascot Core app-ready 3D Fuxie mascot cutout\nPrimary request: Create one full-body original 3D Fuxie mascot, bright sky-blue fox-like German-learning coach, teal hoodie/accessories, soft white face/chest, large warm expressive eyes, rounded ears, small paws, fluffy tail, supportive teacher-coach personality for this UI role: Welcome / first visit greeting.\nScene/backdrop: perfectly flat solid #ff00ff chroma-key background for background removal; one uniform color only, no floor, no shadow, no gradient, no texture.\nPose/prop: Fuxie is waving happily with one paw, relaxed open stance, friendly first-session greeting.\nStyle/medium: polished rounded 3D clay-like mobile game mascot, soft matte material, crisp silhouette, clean toy-like forms, production-ready EdTech UI asset.\nComposition/framing: centered full-body single pose, generous transparent padding around ears, tail, paws, and prop; no cropped body parts; square-friendly.\nLighting/mood: bright soft studio lighting baked into the subject only; cheerful, calm, credible for German learners.\nColor palette: sky blue #60A8E4, deep blue #3C78A8, teal #2EC4B6, soft white, amber #FFB703 only for reward props or tiny accents.\nText: no text, no letters, no numbers, no logo.\nConstraints: use same canonical Fuxie proportions across the set; prop must clearly support the UI role; readable at 64px and 96px; do not use #ff00ff anywhere in the subject; no watermark; original IP only.\nAvoid: realistic fur, orange fox dominance, beige/brown dominance, leaf motifs, cluttered costume, background objects, cast shadows, contact shadows, reflections, copied mascot IP, external-game resemblance, Nintendo-like or Animal Crossing-like elements.",
+      "negative_prompt": "realistic fur, orange fox dominance, beige/brown dominance, leaf motifs, cluttered costume, background objects, cast shadows, contact shadows, reflections, copied mascot IP, external-game resemblance, Nintendo-like or Animal Crossing-like elements",
+      "alpha_requirement": "flat #ff00ff chroma source, local chroma-key removal, transparent corners, no color fringe, no solid background in runtime",
+      "export_size": "source large, alpha PNG master, runtime PNG/WebP 512 and 1024 square with transparent padding",
+      "paths": {
+        "source": "docs/design/asset-generation/fuxie-village-production/source/batch-1-mascot-core/b1_mascot_core_01_welcome_wave_source.png",
+        "alpha_png": "docs/design/asset-generation/fuxie-village-production/alpha/batch-1-mascot-core/b1_mascot_core_01_welcome_wave.png",
+        "runtime_png_512": "docs/design/asset-generation/fuxie-village-production/runtime/png-512/batch-1-mascot-core/b1_mascot_core_01_welcome_wave-512.png",
+        "runtime_png_1024": "docs/design/asset-generation/fuxie-village-production/runtime/png-1024/batch-1-mascot-core/b1_mascot_core_01_welcome_wave-1024.png",
+        "runtime_webp_512": "docs/design/asset-generation/fuxie-village-production/runtime/webp-512/batch-1-mascot-core/b1_mascot_core_01_welcome_wave-512.webp",
+        "runtime_webp_1024": "docs/design/asset-generation/fuxie-village-production/runtime/webp-1024/batch-1-mascot-core/b1_mascot_core_01_welcome_wave-1024.webp"
+      },
+      "qa": {
+        "status": "pass",
+        "transparent_corners": true,
+        "residual_key_like_pixels_alpha_gt_8": 0,
+        "visible_coverage_ratio": 0.2892,
+        "partial_alpha_pixels": 4504,
+        "bbox_alpha_gt_8": [
+          211,
+          79,
+          1038,
+          1168
+        ]
+      }
+    },
+    {
+      "asset_id": "b1_mascot_core_02_welcome_point_cta",
+      "name": "Welcome Point Cta",
+      "ui_role": "CTA guide / start next quest",
+      "asset_type": "mascot_core_cutout",
+      "source_origin": "new_batch_1_imagegen_chroma_source",
+      "prompt": "Use case: stylized-concept\nAsset type: Batch 1 Mascot Core app-ready 3D Fuxie mascot cutout\nPrimary request: Create one full-body original 3D Fuxie mascot, bright sky-blue fox-like German-learning coach, teal hoodie/accessories, soft white face/chest, large warm expressive eyes, rounded ears, small paws, fluffy tail, supportive teacher-coach personality for this UI role: CTA guide / start next quest.\nScene/backdrop: perfectly flat solid #ff00ff chroma-key background for background removal; one uniform color only, no floor, no shadow, no gradient, no texture.\nPose/prop: Fuxie is pointing toward an invisible app CTA with upbeat coach energy, one paw open.\nStyle/medium: polished rounded 3D clay-like mobile game mascot, soft matte material, crisp silhouette, clean toy-like forms, production-ready EdTech UI asset.\nComposition/framing: centered full-body single pose, generous transparent padding around ears, tail, paws, and prop; no cropped body parts; square-friendly.\nLighting/mood: bright soft studio lighting baked into the subject only; cheerful, calm, credible for German learners.\nColor palette: sky blue #60A8E4, deep blue #3C78A8, teal #2EC4B6, soft white, amber #FFB703 only for reward props or tiny accents.\nText: no text, no letters, no numbers, no logo.\nConstraints: use same canonical Fuxie proportions across the set; prop must clearly support the UI role; readable at 64px and 96px; do not use #ff00ff anywhere in the subject; no watermark; original IP only.\nAvoid: realistic fur, orange fox dominance, beige/brown dominance, leaf motifs, cluttered costume, background objects, cast shadows, contact shadows, reflections, copied mascot IP, external-game resemblance, Nintendo-like or Animal Crossing-like elements.",
+      "negative_prompt": "realistic fur, orange fox dominance, beige/brown dominance, leaf motifs, cluttered costume, background objects, cast shadows, contact shadows, reflections, copied mascot IP, external-game resemblance, Nintendo-like or Animal Crossing-like elements",
+      "alpha_requirement": "flat #ff00ff chroma source, local chroma-key removal, transparent corners, no color fringe, no solid background in runtime",
+      "export_size": "source large, alpha PNG master, runtime PNG/WebP 512 and 1024 square with transparent padding",
+      "paths": {
+        "source": "docs/design/asset-generation/fuxie-village-production/source/batch-1-mascot-core/b1_mascot_core_02_welcome_point_cta_source.png",
+        "alpha_png": "docs/design/asset-generation/fuxie-village-production/alpha/batch-1-mascot-core/b1_mascot_core_02_welcome_point_cta.png",
+        "runtime_png_512": "docs/design/asset-generation/fuxie-village-production/runtime/png-512/batch-1-mascot-core/b1_mascot_core_02_welcome_point_cta-512.png",
+        "runtime_png_1024": "docs/design/asset-generation/fuxie-village-production/runtime/png-1024/batch-1-mascot-core/b1_mascot_core_02_welcome_point_cta-1024.png",
+        "runtime_webp_512": "docs/design/asset-generation/fuxie-village-production/runtime/webp-512/batch-1-mascot-core/b1_mascot_core_02_welcome_point_cta-512.webp",
+        "runtime_webp_1024": "docs/design/asset-generation/fuxie-village-production/runtime/webp-1024/batch-1-mascot-core/b1_mascot_core_02_welcome_point_cta-1024.webp"
+      },
+      "qa": {
+        "status": "pass",
+        "transparent_corners": true,
+        "residual_key_like_pixels_alpha_gt_8": 0,
+        "visible_coverage_ratio": 0.283,
+        "partial_alpha_pixels": 4068,
+        "bbox_alpha_gt_8": [
+          174,
+          77,
+          1056,
+          1180
+        ]
+      }
+    },
+    {
+      "asset_id": "b1_mascot_core_03_explain_board",
+      "name": "Explain Board",
+      "ui_role": "Lesson explanation / concept intro",
+      "asset_type": "mascot_core_cutout",
+      "source_origin": "new_batch_1_imagegen_chroma_source",
+      "prompt": "Use case: stylized-concept\nAsset type: Batch 1 Mascot Core app-ready 3D Fuxie mascot cutout\nPrimary request: Create one full-body original 3D Fuxie mascot, bright sky-blue fox-like German-learning coach, teal hoodie/accessories, soft white face/chest, large warm expressive eyes, rounded ears, small paws, fluffy tail, supportive teacher-coach personality for this UI role: Lesson explanation / concept intro.\nScene/backdrop: perfectly flat solid #ff00ff chroma-key background for background removal; one uniform color only, no floor, no shadow, no gradient, no texture.\nPose/prop: Fuxie is standing beside a small blank teal teaching board, one paw explaining, board has no text.\nStyle/medium: polished rounded 3D clay-like mobile game mascot, soft matte material, crisp silhouette, clean toy-like forms, production-ready EdTech UI asset.\nComposition/framing: centered full-body single pose, generous transparent padding around ears, tail, paws, and prop; no cropped body parts; square-friendly.\nLighting/mood: bright soft studio lighting baked into the subject only; cheerful, calm, credible for German learners.\nColor palette: sky blue #60A8E4, deep blue #3C78A8, teal #2EC4B6, soft white, amber #FFB703 only for reward props or tiny accents.\nText: no text, no letters, no numbers, no logo.\nConstraints: use same canonical Fuxie proportions across the set; prop must clearly support the UI role; readable at 64px and 96px; do not use #ff00ff anywhere in the subject; no watermark; original IP only.\nAvoid: realistic fur, orange fox dominance, beige/brown dominance, leaf motifs, cluttered costume, background objects, cast shadows, contact shadows, reflections, copied mascot IP, external-game resemblance, Nintendo-like or Animal Crossing-like elements.",
+      "negative_prompt": "realistic fur, orange fox dominance, beige/brown dominance, leaf motifs, cluttered costume, background objects, cast shadows, contact shadows, reflections, copied mascot IP, external-game resemblance, Nintendo-like or Animal Crossing-like elements",
+      "alpha_requirement": "flat #ff00ff chroma source, local chroma-key removal, transparent corners, no color fringe, no solid background in runtime",
+      "export_size": "source large, alpha PNG master, runtime PNG/WebP 512 and 1024 square with transparent padding",
+      "paths": {
+        "source": "docs/design/asset-generation/fuxie-village-production/source/batch-1-mascot-core/b1_mascot_core_03_explain_board_source.png",
+        "alpha_png": "docs/design/asset-generation/fuxie-village-production/alpha/batch-1-mascot-core/b1_mascot_core_03_explain_board.png",
+        "runtime_png_512": "docs/design/asset-generation/fuxie-village-production/runtime/png-512/batch-1-mascot-core/b1_mascot_core_03_explain_board-512.png",
+        "runtime_png_1024": "docs/design/asset-generation/fuxie-village-production/runtime/png-1024/batch-1-mascot-core/b1_mascot_core_03_explain_board-1024.png",
+        "runtime_webp_512": "docs/design/asset-generation/fuxie-village-production/runtime/webp-512/batch-1-mascot-core/b1_mascot_core_03_explain_board-512.webp",
+        "runtime_webp_1024": "docs/design/asset-generation/fuxie-village-production/runtime/webp-1024/batch-1-mascot-core/b1_mascot_core_03_explain_board-1024.webp"
+      },
+      "qa": {
+        "status": "pass",
+        "transparent_corners": true,
+        "residual_key_like_pixels_alpha_gt_8": 0,
+        "visible_coverage_ratio": 0.4219,
+        "partial_alpha_pixels": 6372,
+        "bbox_alpha_gt_8": [
+          76,
+          93,
+          1209,
+          1140
+        ]
+      }
+    },
+    {
+      "asset_id": "b1_mascot_core_04_explain_vocab_card",
+      "name": "Explain Vocab Card",
+      "ui_role": "Vocabulary explanation / example card",
+      "asset_type": "mascot_core_cutout",
+      "source_origin": "new_batch_1_imagegen_chroma_source",
+      "prompt": "Use case: stylized-concept\nAsset type: Batch 1 Mascot Core app-ready 3D Fuxie mascot cutout\nPrimary request: Create one full-body original 3D Fuxie mascot, bright sky-blue fox-like German-learning coach, teal hoodie/accessories, soft white face/chest, large warm expressive eyes, rounded ears, small paws, fluffy tail, supportive teacher-coach personality for this UI role: Vocabulary explanation / example card.\nScene/backdrop: perfectly flat solid #ff00ff chroma-key background for background removal; one uniform color only, no floor, no shadow, no gradient, no texture.\nPose/prop: Fuxie is holding a blank vocabulary card and gesturing clearly, no written words.\nStyle/medium: polished rounded 3D clay-like mobile game mascot, soft matte material, crisp silhouette, clean toy-like forms, production-ready EdTech UI asset.\nComposition/framing: centered full-body single pose, generous transparent padding around ears, tail, paws, and prop; no cropped body parts; square-friendly.\nLighting/mood: bright soft studio lighting baked into the subject only; cheerful, calm, credible for German learners.\nColor palette: sky blue #60A8E4, deep blue #3C78A8, teal #2EC4B6, soft white, amber #FFB703 only for reward props or tiny accents.\nText: no text, no letters, no numbers, no logo.\nConstraints: use same canonical Fuxie proportions across the set; prop must clearly support the UI role; readable at 64px and 96px; do not use #ff00ff anywhere in the subject; no watermark; original IP only.\nAvoid: realistic fur, orange fox dominance, beige/brown dominance, leaf motifs, cluttered costume, background objects, cast shadows, contact shadows, reflections, copied mascot IP, external-game resemblance, Nintendo-like or Animal Crossing-like elements.",
+      "negative_prompt": "realistic fur, orange fox dominance, beige/brown dominance, leaf motifs, cluttered costume, background objects, cast shadows, contact shadows, reflections, copied mascot IP, external-game resemblance, Nintendo-like or Animal Crossing-like elements",
+      "alpha_requirement": "flat #ff00ff chroma source, local chroma-key removal, transparent corners, no color fringe, no solid background in runtime",
+      "export_size": "source large, alpha PNG master, runtime PNG/WebP 512 and 1024 square with transparent padding",
+      "paths": {
+        "source": "docs/design/asset-generation/fuxie-village-production/source/batch-1-mascot-core/b1_mascot_core_04_explain_vocab_card_source.png",
+        "alpha_png": "docs/design/asset-generation/fuxie-village-production/alpha/batch-1-mascot-core/b1_mascot_core_04_explain_vocab_card.png",
+        "runtime_png_512": "docs/design/asset-generation/fuxie-village-production/runtime/png-512/batch-1-mascot-core/b1_mascot_core_04_explain_vocab_card-512.png",
+        "runtime_png_1024": "docs/design/asset-generation/fuxie-village-production/runtime/png-1024/batch-1-mascot-core/b1_mascot_core_04_explain_vocab_card-1024.png",
+        "runtime_webp_512": "docs/design/asset-generation/fuxie-village-production/runtime/webp-512/batch-1-mascot-core/b1_mascot_core_04_explain_vocab_card-512.webp",
+        "runtime_webp_1024": "docs/design/asset-generation/fuxie-village-production/runtime/webp-1024/batch-1-mascot-core/b1_mascot_core_04_explain_vocab_card-1024.webp"
+      },
+      "qa": {
+        "status": "pass",
+        "transparent_corners": true,
+        "residual_key_like_pixels_alpha_gt_8": 0,
+        "visible_coverage_ratio": 0.3455,
+        "partial_alpha_pixels": 4713,
+        "bbox_alpha_gt_8": [
+          101,
+          60,
+          1080,
+          1181
+        ]
+      }
+    },
+    {
+      "asset_id": "b1_mascot_core_05_thinking_chin",
+      "name": "Thinking Chin",
+      "ui_role": "Thinking / loading reasoning state",
+      "asset_type": "mascot_core_cutout",
+      "source_origin": "new_batch_1_imagegen_chroma_source",
+      "prompt": "Use case: stylized-concept\nAsset type: Batch 1 Mascot Core app-ready 3D Fuxie mascot cutout\nPrimary request: Create one full-body original 3D Fuxie mascot, bright sky-blue fox-like German-learning coach, teal hoodie/accessories, soft white face/chest, large warm expressive eyes, rounded ears, small paws, fluffy tail, supportive teacher-coach personality for this UI role: Thinking / loading reasoning state.\nScene/backdrop: perfectly flat solid #ff00ff chroma-key background for background removal; one uniform color only, no floor, no shadow, no gradient, no texture.\nPose/prop: Fuxie is one paw on chin, eyes thoughtful, tiny soft-blue idea bead near head, calm pose.\nStyle/medium: polished rounded 3D clay-like mobile game mascot, soft matte material, crisp silhouette, clean toy-like forms, production-ready EdTech UI asset.\nComposition/framing: centered full-body single pose, generous transparent padding around ears, tail, paws, and prop; no cropped body parts; square-friendly.\nLighting/mood: bright soft studio lighting baked into the subject only; cheerful, calm, credible for German learners.\nColor palette: sky blue #60A8E4, deep blue #3C78A8, teal #2EC4B6, soft white, amber #FFB703 only for reward props or tiny accents.\nText: no text, no letters, no numbers, no logo.\nConstraints: use same canonical Fuxie proportions across the set; prop must clearly support the UI role; readable at 64px and 96px; do not use #ff00ff anywhere in the subject; no watermark; original IP only.\nAvoid: realistic fur, orange fox dominance, beige/brown dominance, leaf motifs, cluttered costume, background objects, cast shadows, contact shadows, reflections, copied mascot IP, external-game resemblance, Nintendo-like or Animal Crossing-like elements.",
+      "negative_prompt": "realistic fur, orange fox dominance, beige/brown dominance, leaf motifs, cluttered costume, background objects, cast shadows, contact shadows, reflections, copied mascot IP, external-game resemblance, Nintendo-like or Animal Crossing-like elements",
+      "alpha_requirement": "flat #ff00ff chroma source, local chroma-key removal, transparent corners, no color fringe, no solid background in runtime",
+      "export_size": "source large, alpha PNG master, runtime PNG/WebP 512 and 1024 square with transparent padding",
+      "paths": {
+        "source": "docs/design/asset-generation/fuxie-village-production/source/batch-1-mascot-core/b1_mascot_core_05_thinking_chin_source.png",
+        "alpha_png": "docs/design/asset-generation/fuxie-village-production/alpha/batch-1-mascot-core/b1_mascot_core_05_thinking_chin.png",
+        "runtime_png_512": "docs/design/asset-generation/fuxie-village-production/runtime/png-512/batch-1-mascot-core/b1_mascot_core_05_thinking_chin-512.png",
+        "runtime_png_1024": "docs/design/asset-generation/fuxie-village-production/runtime/png-1024/batch-1-mascot-core/b1_mascot_core_05_thinking_chin-1024.png",
+        "runtime_webp_512": "docs/design/asset-generation/fuxie-village-production/runtime/webp-512/batch-1-mascot-core/b1_mascot_core_05_thinking_chin-512.webp",
+        "runtime_webp_1024": "docs/design/asset-generation/fuxie-village-production/runtime/webp-1024/batch-1-mascot-core/b1_mascot_core_05_thinking_chin-1024.webp"
+      },
+      "qa": {
+        "status": "pass",
+        "transparent_corners": true,
+        "residual_key_like_pixels_alpha_gt_8": 0,
+        "visible_coverage_ratio": 0.3032,
+        "partial_alpha_pixels": 3650,
+        "bbox_alpha_gt_8": [
+          222,
+          125,
+          935,
+          1328
+        ]
+      }
+    },
+    {
+      "asset_id": "b1_mascot_core_06_thinking_magnifier",
+      "name": "Thinking Magnifier",
+      "ui_role": "Search / review / inspect state",
+      "asset_type": "mascot_core_cutout",
+      "source_origin": "new_batch_1_imagegen_chroma_source",
+      "prompt": "Use case: stylized-concept\nAsset type: Batch 1 Mascot Core app-ready 3D Fuxie mascot cutout\nPrimary request: Create one full-body original 3D Fuxie mascot, bright sky-blue fox-like German-learning coach, teal hoodie/accessories, soft white face/chest, large warm expressive eyes, rounded ears, small paws, fluffy tail, supportive teacher-coach personality for this UI role: Search / review / inspect state.\nScene/backdrop: perfectly flat solid #ff00ff chroma-key background for background removal; one uniform color only, no floor, no shadow, no gradient, no texture.\nPose/prop: Fuxie is holding a small teal magnifier over a blank study card, curious expression.\nStyle/medium: polished rounded 3D clay-like mobile game mascot, soft matte material, crisp silhouette, clean toy-like forms, production-ready EdTech UI asset.\nComposition/framing: centered full-body single pose, generous transparent padding around ears, tail, paws, and prop; no cropped body parts; square-friendly.\nLighting/mood: bright soft studio lighting baked into the subject only; cheerful, calm, credible for German learners.\nColor palette: sky blue #60A8E4, deep blue #3C78A8, teal #2EC4B6, soft white, amber #FFB703 only for reward props or tiny accents.\nText: no text, no letters, no numbers, no logo.\nConstraints: use same canonical Fuxie proportions across the set; prop must clearly support the UI role; readable at 64px and 96px; do not use #ff00ff anywhere in the subject; no watermark; original IP only.\nAvoid: realistic fur, orange fox dominance, beige/brown dominance, leaf motifs, cluttered costume, background objects, cast shadows, contact shadows, reflections, copied mascot IP, external-game resemblance, Nintendo-like or Animal Crossing-like elements.",
+      "negative_prompt": "realistic fur, orange fox dominance, beige/brown dominance, leaf motifs, cluttered costume, background objects, cast shadows, contact shadows, reflections, copied mascot IP, external-game resemblance, Nintendo-like or Animal Crossing-like elements",
+      "alpha_requirement": "flat #ff00ff chroma source, local chroma-key removal, transparent corners, no color fringe, no solid background in runtime",
+      "export_size": "source large, alpha PNG master, runtime PNG/WebP 512 and 1024 square with transparent padding",
+      "paths": {
+        "source": "docs/design/asset-generation/fuxie-village-production/source/batch-1-mascot-core/b1_mascot_core_06_thinking_magnifier_source.png",
+        "alpha_png": "docs/design/asset-generation/fuxie-village-production/alpha/batch-1-mascot-core/b1_mascot_core_06_thinking_magnifier.png",
+        "runtime_png_512": "docs/design/asset-generation/fuxie-village-production/runtime/png-512/batch-1-mascot-core/b1_mascot_core_06_thinking_magnifier-512.png",
+        "runtime_png_1024": "docs/design/asset-generation/fuxie-village-production/runtime/png-1024/batch-1-mascot-core/b1_mascot_core_06_thinking_magnifier-1024.png",
+        "runtime_webp_512": "docs/design/asset-generation/fuxie-village-production/runtime/webp-512/batch-1-mascot-core/b1_mascot_core_06_thinking_magnifier-512.webp",
+        "runtime_webp_1024": "docs/design/asset-generation/fuxie-village-production/runtime/webp-1024/batch-1-mascot-core/b1_mascot_core_06_thinking_magnifier-1024.webp"
+      },
+      "qa": {
+        "status": "pass",
+        "transparent_corners": true,
+        "residual_key_like_pixels_alpha_gt_8": 0,
+        "visible_coverage_ratio": 0.3546,
+        "partial_alpha_pixels": 4029,
+        "bbox_alpha_gt_8": [
+          164,
+          80,
+          942,
+          1380
+        ]
+      }
+    },
+    {
+      "asset_id": "b1_mascot_core_07_correct_thumb",
+      "name": "Correct Thumb",
+      "ui_role": "Correct answer feedback",
+      "asset_type": "mascot_core_cutout",
+      "source_origin": "new_batch_1_imagegen_chroma_source",
+      "prompt": "Use case: stylized-concept\nAsset type: Batch 1 Mascot Core app-ready 3D Fuxie mascot cutout\nPrimary request: Create one full-body original 3D Fuxie mascot, bright sky-blue fox-like German-learning coach, teal hoodie/accessories, soft white face/chest, large warm expressive eyes, rounded ears, small paws, fluffy tail, supportive teacher-coach personality for this UI role: Correct answer feedback.\nScene/backdrop: perfectly flat solid #ff00ff chroma-key background for background removal; one uniform color only, no floor, no shadow, no gradient, no texture.\nPose/prop: Fuxie is smiling with thumbs up and small sky-blue check-shaped prop, no text.\nStyle/medium: polished rounded 3D clay-like mobile game mascot, soft matte material, crisp silhouette, clean toy-like forms, production-ready EdTech UI asset.\nComposition/framing: centered full-body single pose, generous transparent padding around ears, tail, paws, and prop; no cropped body parts; square-friendly.\nLighting/mood: bright soft studio lighting baked into the subject only; cheerful, calm, credible for German learners.\nColor palette: sky blue #60A8E4, deep blue #3C78A8, teal #2EC4B6, soft white, amber #FFB703 only for reward props or tiny accents.\nText: no text, no letters, no numbers, no logo.\nConstraints: use same canonical Fuxie proportions across the set; prop must clearly support the UI role; readable at 64px and 96px; do not use #ff00ff anywhere in the subject; no watermark; original IP only.\nAvoid: realistic fur, orange fox dominance, beige/brown dominance, leaf motifs, cluttered costume, background objects, cast shadows, contact shadows, reflections, copied mascot IP, external-game resemblance, Nintendo-like or Animal Crossing-like elements.",
+      "negative_prompt": "realistic fur, orange fox dominance, beige/brown dominance, leaf motifs, cluttered costume, background objects, cast shadows, contact shadows, reflections, copied mascot IP, external-game resemblance, Nintendo-like or Animal Crossing-like elements",
+      "alpha_requirement": "flat #ff00ff chroma source, local chroma-key removal, transparent corners, no color fringe, no solid background in runtime",
+      "export_size": "source large, alpha PNG master, runtime PNG/WebP 512 and 1024 square with transparent padding",
+      "paths": {
+        "source": "docs/design/asset-generation/fuxie-village-production/source/batch-1-mascot-core/b1_mascot_core_07_correct_thumb_source.png",
+        "alpha_png": "docs/design/asset-generation/fuxie-village-production/alpha/batch-1-mascot-core/b1_mascot_core_07_correct_thumb.png",
+        "runtime_png_512": "docs/design/asset-generation/fuxie-village-production/runtime/png-512/batch-1-mascot-core/b1_mascot_core_07_correct_thumb-512.png",
+        "runtime_png_1024": "docs/design/asset-generation/fuxie-village-production/runtime/png-1024/batch-1-mascot-core/b1_mascot_core_07_correct_thumb-1024.png",
+        "runtime_webp_512": "docs/design/asset-generation/fuxie-village-production/runtime/webp-512/batch-1-mascot-core/b1_mascot_core_07_correct_thumb-512.webp",
+        "runtime_webp_1024": "docs/design/asset-generation/fuxie-village-production/runtime/webp-1024/batch-1-mascot-core/b1_mascot_core_07_correct_thumb-1024.webp"
+      },
+      "qa": {
+        "status": "pass",
+        "transparent_corners": true,
+        "residual_key_like_pixels_alpha_gt_8": 0,
+        "visible_coverage_ratio": 0.3688,
+        "partial_alpha_pixels": 4575,
+        "bbox_alpha_gt_8": [
+          77,
+          121,
+          964,
+          1379
+        ]
+      }
+    },
+    {
+      "asset_id": "b1_mascot_core_08_correct_high_five",
+      "name": "Correct High Five",
+      "ui_role": "Success / encouragement feedback",
+      "asset_type": "mascot_core_cutout",
+      "source_origin": "new_batch_1_imagegen_chroma_source",
+      "prompt": "Use case: stylized-concept\nAsset type: Batch 1 Mascot Core app-ready 3D Fuxie mascot cutout\nPrimary request: Create one full-body original 3D Fuxie mascot, bright sky-blue fox-like German-learning coach, teal hoodie/accessories, soft white face/chest, large warm expressive eyes, rounded ears, small paws, fluffy tail, supportive teacher-coach personality for this UI role: Success / encouragement feedback.\nScene/backdrop: perfectly flat solid #ff00ff chroma-key background for background removal; one uniform color only, no floor, no shadow, no gradient, no texture.\nPose/prop: Fuxie is leaning forward offering a friendly high-five, bright supportive expression.\nStyle/medium: polished rounded 3D clay-like mobile game mascot, soft matte material, crisp silhouette, clean toy-like forms, production-ready EdTech UI asset.\nComposition/framing: centered full-body single pose, generous transparent padding around ears, tail, paws, and prop; no cropped body parts; square-friendly.\nLighting/mood: bright soft studio lighting baked into the subject only; cheerful, calm, credible for German learners.\nColor palette: sky blue #60A8E4, deep blue #3C78A8, teal #2EC4B6, soft white, amber #FFB703 only for reward props or tiny accents.\nText: no text, no letters, no numbers, no logo.\nConstraints: use same canonical Fuxie proportions across the set; prop must clearly support the UI role; readable at 64px and 96px; do not use #ff00ff anywhere in the subject; no watermark; original IP only.\nAvoid: realistic fur, orange fox dominance, beige/brown dominance, leaf motifs, cluttered costume, background objects, cast shadows, contact shadows, reflections, copied mascot IP, external-game resemblance, Nintendo-like or Animal Crossing-like elements.",
+      "negative_prompt": "realistic fur, orange fox dominance, beige/brown dominance, leaf motifs, cluttered costume, background objects, cast shadows, contact shadows, reflections, copied mascot IP, external-game resemblance, Nintendo-like or Animal Crossing-like elements",
+      "alpha_requirement": "flat #ff00ff chroma source, local chroma-key removal, transparent corners, no color fringe, no solid background in runtime",
+      "export_size": "source large, alpha PNG master, runtime PNG/WebP 512 and 1024 square with transparent padding",
+      "paths": {
+        "source": "docs/design/asset-generation/fuxie-village-production/source/batch-1-mascot-core/b1_mascot_core_08_correct_high_five_source.png",
+        "alpha_png": "docs/design/asset-generation/fuxie-village-production/alpha/batch-1-mascot-core/b1_mascot_core_08_correct_high_five.png",
+        "runtime_png_512": "docs/design/asset-generation/fuxie-village-production/runtime/png-512/batch-1-mascot-core/b1_mascot_core_08_correct_high_five-512.png",
+        "runtime_png_1024": "docs/design/asset-generation/fuxie-village-production/runtime/png-1024/batch-1-mascot-core/b1_mascot_core_08_correct_high_five-1024.png",
+        "runtime_webp_512": "docs/design/asset-generation/fuxie-village-production/runtime/webp-512/batch-1-mascot-core/b1_mascot_core_08_correct_high_five-512.webp",
+        "runtime_webp_1024": "docs/design/asset-generation/fuxie-village-production/runtime/webp-1024/batch-1-mascot-core/b1_mascot_core_08_correct_high_five-1024.webp"
+      },
+      "qa": {
+        "status": "pass",
+        "transparent_corners": true,
+        "residual_key_like_pixels_alpha_gt_8": 0,
+        "visible_coverage_ratio": 0.3408,
+        "partial_alpha_pixels": 4613,
+        "bbox_alpha_gt_8": [
+          178,
+          47,
+          1033,
+          1189
+        ]
+      }
+    },
+    {
+      "asset_id": "b1_mascot_core_09_wrong_gentle_correction",
+      "name": "Wrong Gentle Correction",
+      "ui_role": "Wrong answer gentle feedback",
+      "asset_type": "mascot_core_cutout",
+      "source_origin": "new_batch_1_imagegen_chroma_source",
+      "prompt": "Use case: stylized-concept\nAsset type: Batch 1 Mascot Core app-ready 3D Fuxie mascot cutout\nPrimary request: Create one full-body original 3D Fuxie mascot, bright sky-blue fox-like German-learning coach, teal hoodie/accessories, soft white face/chest, large warm expressive eyes, rounded ears, small paws, fluffy tail, supportive teacher-coach personality for this UI role: Wrong answer gentle feedback.\nScene/backdrop: perfectly flat solid #ff00ff chroma-key background for background removal; one uniform color only, no floor, no shadow, no gradient, no texture.\nPose/prop: Fuxie is soft encouraging expression holding a small blank correction card, one paw open in reassurance.\nStyle/medium: polished rounded 3D clay-like mobile game mascot, soft matte material, crisp silhouette, clean toy-like forms, production-ready EdTech UI asset.\nComposition/framing: centered full-body single pose, generous transparent padding around ears, tail, paws, and prop; no cropped body parts; square-friendly.\nLighting/mood: bright soft studio lighting baked into the subject only; cheerful, calm, credible for German learners.\nColor palette: sky blue #60A8E4, deep blue #3C78A8, teal #2EC4B6, soft white, amber #FFB703 only for reward props or tiny accents.\nText: no text, no letters, no numbers, no logo.\nConstraints: use same canonical Fuxie proportions across the set; prop must clearly support the UI role; readable at 64px and 96px; do not use #ff00ff anywhere in the subject; no watermark; original IP only.\nAvoid: realistic fur, orange fox dominance, beige/brown dominance, leaf motifs, cluttered costume, background objects, cast shadows, contact shadows, reflections, copied mascot IP, external-game resemblance, Nintendo-like or Animal Crossing-like elements.",
+      "negative_prompt": "realistic fur, orange fox dominance, beige/brown dominance, leaf motifs, cluttered costume, background objects, cast shadows, contact shadows, reflections, copied mascot IP, external-game resemblance, Nintendo-like or Animal Crossing-like elements",
+      "alpha_requirement": "flat #ff00ff chroma source, local chroma-key removal, transparent corners, no color fringe, no solid background in runtime",
+      "export_size": "source large, alpha PNG master, runtime PNG/WebP 512 and 1024 square with transparent padding",
+      "paths": {
+        "source": "docs/design/asset-generation/fuxie-village-production/source/batch-1-mascot-core/b1_mascot_core_09_wrong_gentle_correction_source.png",
+        "alpha_png": "docs/design/asset-generation/fuxie-village-production/alpha/batch-1-mascot-core/b1_mascot_core_09_wrong_gentle_correction.png",
+        "runtime_png_512": "docs/design/asset-generation/fuxie-village-production/runtime/png-512/batch-1-mascot-core/b1_mascot_core_09_wrong_gentle_correction-512.png",
+        "runtime_png_1024": "docs/design/asset-generation/fuxie-village-production/runtime/png-1024/batch-1-mascot-core/b1_mascot_core_09_wrong_gentle_correction-1024.png",
+        "runtime_webp_512": "docs/design/asset-generation/fuxie-village-production/runtime/webp-512/batch-1-mascot-core/b1_mascot_core_09_wrong_gentle_correction-512.webp",
+        "runtime_webp_1024": "docs/design/asset-generation/fuxie-village-production/runtime/webp-1024/batch-1-mascot-core/b1_mascot_core_09_wrong_gentle_correction-1024.webp"
+      },
+      "qa": {
+        "status": "pass",
+        "transparent_corners": true,
+        "residual_key_like_pixels_alpha_gt_8": 0,
+        "visible_coverage_ratio": 0.3711,
+        "partial_alpha_pixels": 4517,
+        "bbox_alpha_gt_8": [
+          60,
+          115,
+          932,
+          1374
+        ]
+      }
+    },
+    {
+      "asset_id": "b1_mascot_core_10_wrong_try_again",
+      "name": "Wrong Try Again",
+      "ui_role": "Retry feedback / low-pressure correction",
+      "asset_type": "mascot_core_cutout",
+      "source_origin": "new_batch_1_imagegen_chroma_source",
+      "prompt": "Use case: stylized-concept\nAsset type: Batch 1 Mascot Core app-ready 3D Fuxie mascot cutout\nPrimary request: Create one full-body original 3D Fuxie mascot, bright sky-blue fox-like German-learning coach, teal hoodie/accessories, soft white face/chest, large warm expressive eyes, rounded ears, small paws, fluffy tail, supportive teacher-coach personality for this UI role: Retry feedback / low-pressure correction.\nScene/backdrop: perfectly flat solid #ff00ff chroma-key background for background removal; one uniform color only, no floor, no shadow, no gradient, no texture.\nPose/prop: Fuxie is kneeling slightly with a tiny teal repair patch and calm try-again gesture, no shame.\nStyle/medium: polished rounded 3D clay-like mobile game mascot, soft matte material, crisp silhouette, clean toy-like forms, production-ready EdTech UI asset.\nComposition/framing: centered full-body single pose, generous transparent padding around ears, tail, paws, and prop; no cropped body parts; square-friendly.\nLighting/mood: bright soft studio lighting baked into the subject only; cheerful, calm, credible for German learners.\nColor palette: sky blue #60A8E4, deep blue #3C78A8, teal #2EC4B6, soft white, amber #FFB703 only for reward props or tiny accents.\nText: no text, no letters, no numbers, no logo.\nConstraints: use same canonical Fuxie proportions across the set; prop must clearly support the UI role; readable at 64px and 96px; do not use #ff00ff anywhere in the subject; no watermark; original IP only.\nAvoid: realistic fur, orange fox dominance, beige/brown dominance, leaf motifs, cluttered costume, background objects, cast shadows, contact shadows, reflections, copied mascot IP, external-game resemblance, Nintendo-like or Animal Crossing-like elements.",
+      "negative_prompt": "realistic fur, orange fox dominance, beige/brown dominance, leaf motifs, cluttered costume, background objects, cast shadows, contact shadows, reflections, copied mascot IP, external-game resemblance, Nintendo-like or Animal Crossing-like elements",
+      "alpha_requirement": "flat #ff00ff chroma source, local chroma-key removal, transparent corners, no color fringe, no solid background in runtime",
+      "export_size": "source large, alpha PNG master, runtime PNG/WebP 512 and 1024 square with transparent padding",
+      "paths": {
+        "source": "docs/design/asset-generation/fuxie-village-production/source/batch-1-mascot-core/b1_mascot_core_10_wrong_try_again_source.png",
+        "alpha_png": "docs/design/asset-generation/fuxie-village-production/alpha/batch-1-mascot-core/b1_mascot_core_10_wrong_try_again.png",
+        "runtime_png_512": "docs/design/asset-generation/fuxie-village-production/runtime/png-512/batch-1-mascot-core/b1_mascot_core_10_wrong_try_again-512.png",
+        "runtime_png_1024": "docs/design/asset-generation/fuxie-village-production/runtime/png-1024/batch-1-mascot-core/b1_mascot_core_10_wrong_try_again-1024.png",
+        "runtime_webp_512": "docs/design/asset-generation/fuxie-village-production/runtime/webp-512/batch-1-mascot-core/b1_mascot_core_10_wrong_try_again-512.webp",
+        "runtime_webp_1024": "docs/design/asset-generation/fuxie-village-production/runtime/webp-1024/batch-1-mascot-core/b1_mascot_core_10_wrong_try_again-1024.webp"
+      },
+      "qa": {
+        "status": "pass",
+        "transparent_corners": true,
+        "residual_key_like_pixels_alpha_gt_8": 0,
+        "visible_coverage_ratio": 0.3634,
+        "partial_alpha_pixels": 6132,
+        "bbox_alpha_gt_8": [
+          149,
+          85,
+          1088,
+          1188
+        ]
+      }
+    },
+    {
+      "asset_id": "b1_mascot_core_11_reward_fucoin",
+      "name": "Reward Fucoin",
+      "ui_role": "Fucoin reward moment",
+      "asset_type": "mascot_core_cutout",
+      "source_origin": "new_batch_1_imagegen_chroma_source",
+      "prompt": "Use case: stylized-concept\nAsset type: Batch 1 Mascot Core app-ready 3D Fuxie mascot cutout\nPrimary request: Create one full-body original 3D Fuxie mascot, bright sky-blue fox-like German-learning coach, teal hoodie/accessories, soft white face/chest, large warm expressive eyes, rounded ears, small paws, fluffy tail, supportive teacher-coach personality for this UI role: Fucoin reward moment.\nScene/backdrop: perfectly flat solid #ff00ff chroma-key background for background removal; one uniform color only, no floor, no shadow, no gradient, no texture.\nPose/prop: Fuxie is holding one amber Fucoin-like coin with blue rim, celebrating gently but not wildly.\nStyle/medium: polished rounded 3D clay-like mobile game mascot, soft matte material, crisp silhouette, clean toy-like forms, production-ready EdTech UI asset.\nComposition/framing: centered full-body single pose, generous transparent padding around ears, tail, paws, and prop; no cropped body parts; square-friendly.\nLighting/mood: bright soft studio lighting baked into the subject only; cheerful, calm, credible for German learners.\nColor palette: sky blue #60A8E4, deep blue #3C78A8, teal #2EC4B6, soft white, amber #FFB703 only for reward props or tiny accents.\nText: no text, no letters, no numbers, no logo.\nConstraints: use same canonical Fuxie proportions across the set; prop must clearly support the UI role; readable at 64px and 96px; do not use #ff00ff anywhere in the subject; no watermark; original IP only.\nAvoid: realistic fur, orange fox dominance, beige/brown dominance, leaf motifs, cluttered costume, background objects, cast shadows, contact shadows, reflections, copied mascot IP, external-game resemblance, Nintendo-like or Animal Crossing-like elements.",
+      "negative_prompt": "realistic fur, orange fox dominance, beige/brown dominance, leaf motifs, cluttered costume, background objects, cast shadows, contact shadows, reflections, copied mascot IP, external-game resemblance, Nintendo-like or Animal Crossing-like elements",
+      "alpha_requirement": "flat #ff00ff chroma source, local chroma-key removal, transparent corners, no color fringe, no solid background in runtime",
+      "export_size": "source large, alpha PNG master, runtime PNG/WebP 512 and 1024 square with transparent padding",
+      "paths": {
+        "source": "docs/design/asset-generation/fuxie-village-production/source/batch-1-mascot-core/b1_mascot_core_11_reward_fucoin_source.png",
+        "alpha_png": "docs/design/asset-generation/fuxie-village-production/alpha/batch-1-mascot-core/b1_mascot_core_11_reward_fucoin.png",
+        "runtime_png_512": "docs/design/asset-generation/fuxie-village-production/runtime/png-512/batch-1-mascot-core/b1_mascot_core_11_reward_fucoin-512.png",
+        "runtime_png_1024": "docs/design/asset-generation/fuxie-village-production/runtime/png-1024/batch-1-mascot-core/b1_mascot_core_11_reward_fucoin-1024.png",
+        "runtime_webp_512": "docs/design/asset-generation/fuxie-village-production/runtime/webp-512/batch-1-mascot-core/b1_mascot_core_11_reward_fucoin-512.webp",
+        "runtime_webp_1024": "docs/design/asset-generation/fuxie-village-production/runtime/webp-1024/batch-1-mascot-core/b1_mascot_core_11_reward_fucoin-1024.webp"
+      },
+      "qa": {
+        "status": "pass",
+        "transparent_corners": true,
+        "residual_key_like_pixels_alpha_gt_8": 0,
+        "visible_coverage_ratio": 0.3285,
+        "partial_alpha_pixels": 4653,
+        "bbox_alpha_gt_8": [
+          231,
+          67,
+          1102,
+          1193
+        ]
+      }
+    },
+    {
+      "asset_id": "b1_mascot_core_12_reward_xp_star",
+      "name": "Reward Xp Star",
+      "ui_role": "XP reward / level progress",
+      "asset_type": "mascot_core_cutout",
+      "source_origin": "new_batch_1_imagegen_chroma_source",
+      "prompt": "Use case: stylized-concept\nAsset type: Batch 1 Mascot Core app-ready 3D Fuxie mascot cutout\nPrimary request: Create one full-body original 3D Fuxie mascot, bright sky-blue fox-like German-learning coach, teal hoodie/accessories, soft white face/chest, large warm expressive eyes, rounded ears, small paws, fluffy tail, supportive teacher-coach personality for this UI role: XP reward / level progress.\nScene/backdrop: perfectly flat solid #ff00ff chroma-key background for background removal; one uniform color only, no floor, no shadow, no gradient, no texture.\nPose/prop: Fuxie is holding a small amber XP star bundle with sky-blue glow accents, proud coach smile.\nStyle/medium: polished rounded 3D clay-like mobile game mascot, soft matte material, crisp silhouette, clean toy-like forms, production-ready EdTech UI asset.\nComposition/framing: centered full-body single pose, generous transparent padding around ears, tail, paws, and prop; no cropped body parts; square-friendly.\nLighting/mood: bright soft studio lighting baked into the subject only; cheerful, calm, credible for German learners.\nColor palette: sky blue #60A8E4, deep blue #3C78A8, teal #2EC4B6, soft white, amber #FFB703 only for reward props or tiny accents.\nText: no text, no letters, no numbers, no logo.\nConstraints: use same canonical Fuxie proportions across the set; prop must clearly support the UI role; readable at 64px and 96px; do not use #ff00ff anywhere in the subject; no watermark; original IP only.\nAvoid: realistic fur, orange fox dominance, beige/brown dominance, leaf motifs, cluttered costume, background objects, cast shadows, contact shadows, reflections, copied mascot IP, external-game resemblance, Nintendo-like or Animal Crossing-like elements.",
+      "negative_prompt": "realistic fur, orange fox dominance, beige/brown dominance, leaf motifs, cluttered costume, background objects, cast shadows, contact shadows, reflections, copied mascot IP, external-game resemblance, Nintendo-like or Animal Crossing-like elements",
+      "alpha_requirement": "flat #ff00ff chroma source, local chroma-key removal, transparent corners, no color fringe, no solid background in runtime",
+      "export_size": "source large, alpha PNG master, runtime PNG/WebP 512 and 1024 square with transparent padding",
+      "paths": {
+        "source": "docs/design/asset-generation/fuxie-village-production/source/batch-1-mascot-core/b1_mascot_core_12_reward_xp_star_source.png",
+        "alpha_png": "docs/design/asset-generation/fuxie-village-production/alpha/batch-1-mascot-core/b1_mascot_core_12_reward_xp_star.png",
+        "runtime_png_512": "docs/design/asset-generation/fuxie-village-production/runtime/png-512/batch-1-mascot-core/b1_mascot_core_12_reward_xp_star-512.png",
+        "runtime_png_1024": "docs/design/asset-generation/fuxie-village-production/runtime/png-1024/batch-1-mascot-core/b1_mascot_core_12_reward_xp_star-1024.png",
+        "runtime_webp_512": "docs/design/asset-generation/fuxie-village-production/runtime/webp-512/batch-1-mascot-core/b1_mascot_core_12_reward_xp_star-512.webp",
+        "runtime_webp_1024": "docs/design/asset-generation/fuxie-village-production/runtime/webp-1024/batch-1-mascot-core/b1_mascot_core_12_reward_xp_star-1024.webp"
+      },
+      "qa": {
+        "status": "pass",
+        "transparent_corners": true,
+        "residual_key_like_pixels_alpha_gt_8": 0,
+        "visible_coverage_ratio": 0.3343,
+        "partial_alpha_pixels": 23455,
+        "bbox_alpha_gt_8": [
+          195,
+          123,
+          957,
+          1387
+        ]
+      }
+    },
+    {
+      "asset_id": "b1_mascot_core_13_streak_fire",
+      "name": "Streak Fire",
+      "ui_role": "Streak active / daily return ritual",
+      "asset_type": "mascot_core_cutout",
+      "source_origin": "new_batch_1_imagegen_chroma_source",
+      "prompt": "Use case: stylized-concept\nAsset type: Batch 1 Mascot Core app-ready 3D Fuxie mascot cutout\nPrimary request: Create one full-body original 3D Fuxie mascot, bright sky-blue fox-like German-learning coach, teal hoodie/accessories, soft white face/chest, large warm expressive eyes, rounded ears, small paws, fluffy tail, supportive teacher-coach personality for this UI role: Streak active / daily return ritual.\nScene/backdrop: perfectly flat solid #ff00ff chroma-key background for background removal; one uniform color only, no floor, no shadow, no gradient, no texture.\nPose/prop: Fuxie is standing beside a stylized amber-and-teal safe streak flame charm, confident but calm.\nStyle/medium: polished rounded 3D clay-like mobile game mascot, soft matte material, crisp silhouette, clean toy-like forms, production-ready EdTech UI asset.\nComposition/framing: centered full-body single pose, generous transparent padding around ears, tail, paws, and prop; no cropped body parts; square-friendly.\nLighting/mood: bright soft studio lighting baked into the subject only; cheerful, calm, credible for German learners.\nColor palette: sky blue #60A8E4, deep blue #3C78A8, teal #2EC4B6, soft white, amber #FFB703 only for reward props or tiny accents.\nText: no text, no letters, no numbers, no logo.\nConstraints: use same canonical Fuxie proportions across the set; prop must clearly support the UI role; readable at 64px and 96px; do not use #ff00ff anywhere in the subject; no watermark; original IP only.\nAvoid: realistic fur, orange fox dominance, beige/brown dominance, leaf motifs, cluttered costume, background objects, cast shadows, contact shadows, reflections, copied mascot IP, external-game resemblance, Nintendo-like or Animal Crossing-like elements.",
+      "negative_prompt": "realistic fur, orange fox dominance, beige/brown dominance, leaf motifs, cluttered costume, background objects, cast shadows, contact shadows, reflections, copied mascot IP, external-game resemblance, Nintendo-like or Animal Crossing-like elements",
+      "alpha_requirement": "flat #ff00ff chroma source, local chroma-key removal, transparent corners, no color fringe, no solid background in runtime",
+      "export_size": "source large, alpha PNG master, runtime PNG/WebP 512 and 1024 square with transparent padding",
+      "paths": {
+        "source": "docs/design/asset-generation/fuxie-village-production/source/batch-1-mascot-core/b1_mascot_core_13_streak_fire_source.png",
+        "alpha_png": "docs/design/asset-generation/fuxie-village-production/alpha/batch-1-mascot-core/b1_mascot_core_13_streak_fire.png",
+        "runtime_png_512": "docs/design/asset-generation/fuxie-village-production/runtime/png-512/batch-1-mascot-core/b1_mascot_core_13_streak_fire-512.png",
+        "runtime_png_1024": "docs/design/asset-generation/fuxie-village-production/runtime/png-1024/batch-1-mascot-core/b1_mascot_core_13_streak_fire-1024.png",
+        "runtime_webp_512": "docs/design/asset-generation/fuxie-village-production/runtime/webp-512/batch-1-mascot-core/b1_mascot_core_13_streak_fire-512.webp",
+        "runtime_webp_1024": "docs/design/asset-generation/fuxie-village-production/runtime/webp-1024/batch-1-mascot-core/b1_mascot_core_13_streak_fire-1024.webp"
+      },
+      "qa": {
+        "status": "pass",
+        "transparent_corners": true,
+        "residual_key_like_pixels_alpha_gt_8": 0,
+        "visible_coverage_ratio": 0.3406,
+        "partial_alpha_pixels": 13095,
+        "bbox_alpha_gt_8": [
+          138,
+          68,
+          1123,
+          1195
+        ]
+      }
+    },
+    {
+      "asset_id": "b1_mascot_core_14_streak_freeze_shield",
+      "name": "Streak Freeze Shield",
+      "ui_role": "Streak Freeze / motivation safety",
+      "asset_type": "mascot_core_cutout",
+      "source_origin": "new_batch_1_imagegen_chroma_source",
+      "prompt": "Use case: stylized-concept\nAsset type: Batch 1 Mascot Core app-ready 3D Fuxie mascot cutout\nPrimary request: Create one full-body original 3D Fuxie mascot, bright sky-blue fox-like German-learning coach, teal hoodie/accessories, soft white face/chest, large warm expressive eyes, rounded ears, small paws, fluffy tail, supportive teacher-coach personality for this UI role: Streak Freeze / motivation safety.\nScene/backdrop: perfectly flat solid #ff00ff chroma-key background for background removal; one uniform color only, no floor, no shadow, no gradient, no texture.\nPose/prop: Fuxie is holding a teal-blue shield snowflake charm, relieved and protective expression.\nStyle/medium: polished rounded 3D clay-like mobile game mascot, soft matte material, crisp silhouette, clean toy-like forms, production-ready EdTech UI asset.\nComposition/framing: centered full-body single pose, generous transparent padding around ears, tail, paws, and prop; no cropped body parts; square-friendly.\nLighting/mood: bright soft studio lighting baked into the subject only; cheerful, calm, credible for German learners.\nColor palette: sky blue #60A8E4, deep blue #3C78A8, teal #2EC4B6, soft white, amber #FFB703 only for reward props or tiny accents.\nText: no text, no letters, no numbers, no logo.\nConstraints: use same canonical Fuxie proportions across the set; prop must clearly support the UI role; readable at 64px and 96px; do not use #ff00ff anywhere in the subject; no watermark; original IP only.\nAvoid: realistic fur, orange fox dominance, beige/brown dominance, leaf motifs, cluttered costume, background objects, cast shadows, contact shadows, reflections, copied mascot IP, external-game resemblance, Nintendo-like or Animal Crossing-like elements.",
+      "negative_prompt": "realistic fur, orange fox dominance, beige/brown dominance, leaf motifs, cluttered costume, background objects, cast shadows, contact shadows, reflections, copied mascot IP, external-game resemblance, Nintendo-like or Animal Crossing-like elements",
+      "alpha_requirement": "flat #ff00ff chroma source, local chroma-key removal, transparent corners, no color fringe, no solid background in runtime",
+      "export_size": "source large, alpha PNG master, runtime PNG/WebP 512 and 1024 square with transparent padding",
+      "paths": {
+        "source": "docs/design/asset-generation/fuxie-village-production/source/batch-1-mascot-core/b1_mascot_core_14_streak_freeze_shield_source.png",
+        "alpha_png": "docs/design/asset-generation/fuxie-village-production/alpha/batch-1-mascot-core/b1_mascot_core_14_streak_freeze_shield.png",
+        "runtime_png_512": "docs/design/asset-generation/fuxie-village-production/runtime/png-512/batch-1-mascot-core/b1_mascot_core_14_streak_freeze_shield-512.png",
+        "runtime_png_1024": "docs/design/asset-generation/fuxie-village-production/runtime/png-1024/batch-1-mascot-core/b1_mascot_core_14_streak_freeze_shield-1024.png",
+        "runtime_webp_512": "docs/design/asset-generation/fuxie-village-production/runtime/webp-512/batch-1-mascot-core/b1_mascot_core_14_streak_freeze_shield-512.webp",
+        "runtime_webp_1024": "docs/design/asset-generation/fuxie-village-production/runtime/webp-1024/batch-1-mascot-core/b1_mascot_core_14_streak_freeze_shield-1024.webp"
+      },
+      "qa": {
+        "status": "pass",
+        "transparent_corners": true,
+        "residual_key_like_pixels_alpha_gt_8": 0,
+        "visible_coverage_ratio": 0.3642,
+        "partial_alpha_pixels": 11948,
+        "bbox_alpha_gt_8": [
+          73,
+          139,
+          961,
+          1366
+        ]
+      }
+    },
+    {
+      "asset_id": "b1_mascot_core_15_exam_proctor_clipboard",
+      "name": "Exam Proctor Clipboard",
+      "ui_role": "Exam guide / test start",
+      "asset_type": "mascot_core_cutout",
+      "source_origin": "new_batch_1_imagegen_chroma_source",
+      "prompt": "Use case: stylized-concept\nAsset type: Batch 1 Mascot Core app-ready 3D Fuxie mascot cutout\nPrimary request: Create one full-body original 3D Fuxie mascot, bright sky-blue fox-like German-learning coach, teal hoodie/accessories, soft white face/chest, large warm expressive eyes, rounded ears, small paws, fluffy tail, supportive teacher-coach personality for this UI role: Exam guide / test start.\nScene/backdrop: perfectly flat solid #ff00ff chroma-key background for background removal; one uniform color only, no floor, no shadow, no gradient, no texture.\nPose/prop: Fuxie is holding a blank clipboard and tiny timer bell, formal-friendly exam guide stance.\nStyle/medium: polished rounded 3D clay-like mobile game mascot, soft matte material, crisp silhouette, clean toy-like forms, production-ready EdTech UI asset.\nComposition/framing: centered full-body single pose, generous transparent padding around ears, tail, paws, and prop; no cropped body parts; square-friendly.\nLighting/mood: bright soft studio lighting baked into the subject only; cheerful, calm, credible for German learners.\nColor palette: sky blue #60A8E4, deep blue #3C78A8, teal #2EC4B6, soft white, amber #FFB703 only for reward props or tiny accents.\nText: no text, no letters, no numbers, no logo.\nConstraints: use same canonical Fuxie proportions across the set; prop must clearly support the UI role; readable at 64px and 96px; do not use #ff00ff anywhere in the subject; no watermark; original IP only.\nAvoid: realistic fur, orange fox dominance, beige/brown dominance, leaf motifs, cluttered costume, background objects, cast shadows, contact shadows, reflections, copied mascot IP, external-game resemblance, Nintendo-like or Animal Crossing-like elements.",
+      "negative_prompt": "realistic fur, orange fox dominance, beige/brown dominance, leaf motifs, cluttered costume, background objects, cast shadows, contact shadows, reflections, copied mascot IP, external-game resemblance, Nintendo-like or Animal Crossing-like elements",
+      "alpha_requirement": "flat #ff00ff chroma source, local chroma-key removal, transparent corners, no color fringe, no solid background in runtime",
+      "export_size": "source large, alpha PNG master, runtime PNG/WebP 512 and 1024 square with transparent padding",
+      "paths": {
+        "source": "docs/design/asset-generation/fuxie-village-production/source/batch-1-mascot-core/b1_mascot_core_15_exam_proctor_clipboard_source.png",
+        "alpha_png": "docs/design/asset-generation/fuxie-village-production/alpha/batch-1-mascot-core/b1_mascot_core_15_exam_proctor_clipboard.png",
+        "runtime_png_512": "docs/design/asset-generation/fuxie-village-production/runtime/png-512/batch-1-mascot-core/b1_mascot_core_15_exam_proctor_clipboard-512.png",
+        "runtime_png_1024": "docs/design/asset-generation/fuxie-village-production/runtime/png-1024/batch-1-mascot-core/b1_mascot_core_15_exam_proctor_clipboard-1024.png",
+        "runtime_webp_512": "docs/design/asset-generation/fuxie-village-production/runtime/webp-512/batch-1-mascot-core/b1_mascot_core_15_exam_proctor_clipboard-512.webp",
+        "runtime_webp_1024": "docs/design/asset-generation/fuxie-village-production/runtime/webp-1024/batch-1-mascot-core/b1_mascot_core_15_exam_proctor_clipboard-1024.webp"
+      },
+      "qa": {
+        "status": "pass",
+        "transparent_corners": true,
+        "residual_key_like_pixels_alpha_gt_8": 0,
+        "visible_coverage_ratio": 0.3867,
+        "partial_alpha_pixels": 14508,
+        "bbox_alpha_gt_8": [
+          57,
+          112,
+          963,
+          1377
+        ]
+      }
+    },
+    {
+      "asset_id": "b1_mascot_core_16_exam_result_pass",
+      "name": "Exam Result Pass",
+      "ui_role": "Exam passed / milestone result",
+      "asset_type": "mascot_core_cutout",
+      "source_origin": "new_batch_1_imagegen_chroma_source",
+      "prompt": "Use case: stylized-concept\nAsset type: Batch 1 Mascot Core app-ready 3D Fuxie mascot cutout\nPrimary request: Create one full-body original 3D Fuxie mascot, bright sky-blue fox-like German-learning coach, teal hoodie/accessories, soft white face/chest, large warm expressive eyes, rounded ears, small paws, fluffy tail, supportive teacher-coach personality for this UI role: Exam passed / milestone result.\nScene/backdrop: perfectly flat solid #ff00ff chroma-key background for background removal; one uniform color only, no floor, no shadow, no gradient, no texture.\nPose/prop: Fuxie is holding a small sky-blue milestone badge and giving a calm celebratory nod.\nStyle/medium: polished rounded 3D clay-like mobile game mascot, soft matte material, crisp silhouette, clean toy-like forms, production-ready EdTech UI asset.\nComposition/framing: centered full-body single pose, generous transparent padding around ears, tail, paws, and prop; no cropped body parts; square-friendly.\nLighting/mood: bright soft studio lighting baked into the subject only; cheerful, calm, credible for German learners.\nColor palette: sky blue #60A8E4, deep blue #3C78A8, teal #2EC4B6, soft white, amber #FFB703 only for reward props or tiny accents.\nText: no text, no letters, no numbers, no logo.\nConstraints: use same canonical Fuxie proportions across the set; prop must clearly support the UI role; readable at 64px and 96px; do not use #ff00ff anywhere in the subject; no watermark; original IP only.\nAvoid: realistic fur, orange fox dominance, beige/brown dominance, leaf motifs, cluttered costume, background objects, cast shadows, contact shadows, reflections, copied mascot IP, external-game resemblance, Nintendo-like or Animal Crossing-like elements.",
+      "negative_prompt": "realistic fur, orange fox dominance, beige/brown dominance, leaf motifs, cluttered costume, background objects, cast shadows, contact shadows, reflections, copied mascot IP, external-game resemblance, Nintendo-like or Animal Crossing-like elements",
+      "alpha_requirement": "flat #ff00ff chroma source, local chroma-key removal, transparent corners, no color fringe, no solid background in runtime",
+      "export_size": "source large, alpha PNG master, runtime PNG/WebP 512 and 1024 square with transparent padding",
+      "paths": {
+        "source": "docs/design/asset-generation/fuxie-village-production/source/batch-1-mascot-core/b1_mascot_core_16_exam_result_pass_source.png",
+        "alpha_png": "docs/design/asset-generation/fuxie-village-production/alpha/batch-1-mascot-core/b1_mascot_core_16_exam_result_pass.png",
+        "runtime_png_512": "docs/design/asset-generation/fuxie-village-production/runtime/png-512/batch-1-mascot-core/b1_mascot_core_16_exam_result_pass-512.png",
+        "runtime_png_1024": "docs/design/asset-generation/fuxie-village-production/runtime/png-1024/batch-1-mascot-core/b1_mascot_core_16_exam_result_pass-1024.png",
+        "runtime_webp_512": "docs/design/asset-generation/fuxie-village-production/runtime/webp-512/batch-1-mascot-core/b1_mascot_core_16_exam_result_pass-512.webp",
+        "runtime_webp_1024": "docs/design/asset-generation/fuxie-village-production/runtime/webp-1024/batch-1-mascot-core/b1_mascot_core_16_exam_result_pass-1024.webp"
+      },
+      "qa": {
+        "status": "pass",
+        "transparent_corners": true,
+        "residual_key_like_pixels_alpha_gt_8": 0,
+        "visible_coverage_ratio": 0.3798,
+        "partial_alpha_pixels": 9227,
+        "bbox_alpha_gt_8": [
+          92,
+          95,
+          954,
+          1396
+        ]
+      }
+    },
+    {
+      "asset_id": "b1_mascot_core_17_listening_headphones",
+      "name": "Listening Headphones",
+      "ui_role": "Listening practice intro",
+      "asset_type": "mascot_core_cutout",
+      "source_origin": "new_batch_1_imagegen_chroma_source",
+      "prompt": "Use case: stylized-concept\nAsset type: Batch 1 Mascot Core app-ready 3D Fuxie mascot cutout\nPrimary request: Create one full-body original 3D Fuxie mascot, bright sky-blue fox-like German-learning coach, teal hoodie/accessories, soft white face/chest, large warm expressive eyes, rounded ears, small paws, fluffy tail, supportive teacher-coach personality for this UI role: Listening practice intro.\nScene/backdrop: perfectly flat solid #ff00ff chroma-key background for background removal; one uniform color only, no floor, no shadow, no gradient, no texture.\nPose/prop: Fuxie is wearing or holding oversized teal headphones, one paw cupped near ear, focused listening expression.\nStyle/medium: polished rounded 3D clay-like mobile game mascot, soft matte material, crisp silhouette, clean toy-like forms, production-ready EdTech UI asset.\nComposition/framing: centered full-body single pose, generous transparent padding around ears, tail, paws, and prop; no cropped body parts; square-friendly.\nLighting/mood: bright soft studio lighting baked into the subject only; cheerful, calm, credible for German learners.\nColor palette: sky blue #60A8E4, deep blue #3C78A8, teal #2EC4B6, soft white, amber #FFB703 only for reward props or tiny accents.\nText: no text, no letters, no numbers, no logo.\nConstraints: use same canonical Fuxie proportions across the set; prop must clearly support the UI role; readable at 64px and 96px; do not use #ff00ff anywhere in the subject; no watermark; original IP only.\nAvoid: realistic fur, orange fox dominance, beige/brown dominance, leaf motifs, cluttered costume, background objects, cast shadows, contact shadows, reflections, copied mascot IP, external-game resemblance, Nintendo-like or Animal Crossing-like elements.",
+      "negative_prompt": "realistic fur, orange fox dominance, beige/brown dominance, leaf motifs, cluttered costume, background objects, cast shadows, contact shadows, reflections, copied mascot IP, external-game resemblance, Nintendo-like or Animal Crossing-like elements",
+      "alpha_requirement": "flat #ff00ff chroma source, local chroma-key removal, transparent corners, no color fringe, no solid background in runtime",
+      "export_size": "source large, alpha PNG master, runtime PNG/WebP 512 and 1024 square with transparent padding",
+      "paths": {
+        "source": "docs/design/asset-generation/fuxie-village-production/source/batch-1-mascot-core/b1_mascot_core_17_listening_headphones_source.png",
+        "alpha_png": "docs/design/asset-generation/fuxie-village-production/alpha/batch-1-mascot-core/b1_mascot_core_17_listening_headphones.png",
+        "runtime_png_512": "docs/design/asset-generation/fuxie-village-production/runtime/png-512/batch-1-mascot-core/b1_mascot_core_17_listening_headphones-512.png",
+        "runtime_png_1024": "docs/design/asset-generation/fuxie-village-production/runtime/png-1024/batch-1-mascot-core/b1_mascot_core_17_listening_headphones-1024.png",
+        "runtime_webp_512": "docs/design/asset-generation/fuxie-village-production/runtime/webp-512/batch-1-mascot-core/b1_mascot_core_17_listening_headphones-512.webp",
+        "runtime_webp_1024": "docs/design/asset-generation/fuxie-village-production/runtime/webp-1024/batch-1-mascot-core/b1_mascot_core_17_listening_headphones-1024.webp"
+      },
+      "qa": {
+        "status": "pass",
+        "transparent_corners": true,
+        "residual_key_like_pixels_alpha_gt_8": 0,
+        "visible_coverage_ratio": 0.3524,
+        "partial_alpha_pixels": 10365,
+        "bbox_alpha_gt_8": [
+          146,
+          133,
+          938,
+          1368
+        ]
+      }
+    },
+    {
+      "asset_id": "b1_mascot_core_18_listening_radio_host",
+      "name": "Listening Radio Host",
+      "ui_role": "Radio booth / audio lesson coach",
+      "asset_type": "mascot_core_cutout",
+      "source_origin": "new_batch_1_imagegen_chroma_source",
+      "prompt": "Use case: stylized-concept\nAsset type: Batch 1 Mascot Core app-ready 3D Fuxie mascot cutout\nPrimary request: Create one full-body original 3D Fuxie mascot, bright sky-blue fox-like German-learning coach, teal hoodie/accessories, soft white face/chest, large warm expressive eyes, rounded ears, small paws, fluffy tail, supportive teacher-coach personality for this UI role: Radio booth / audio lesson coach.\nScene/backdrop: perfectly flat solid #ff00ff chroma-key background for background removal; one uniform color only, no floor, no shadow, no gradient, no texture.\nPose/prop: Fuxie is as a friendly radio host with small rounded microphone and waveform charm, no text.\nStyle/medium: polished rounded 3D clay-like mobile game mascot, soft matte material, crisp silhouette, clean toy-like forms, production-ready EdTech UI asset.\nComposition/framing: centered full-body single pose, generous transparent padding around ears, tail, paws, and prop; no cropped body parts; square-friendly.\nLighting/mood: bright soft studio lighting baked into the subject only; cheerful, calm, credible for German learners.\nColor palette: sky blue #60A8E4, deep blue #3C78A8, teal #2EC4B6, soft white, amber #FFB703 only for reward props or tiny accents.\nText: no text, no letters, no numbers, no logo.\nConstraints: use same canonical Fuxie proportions across the set; prop must clearly support the UI role; readable at 64px and 96px; do not use #ff00ff anywhere in the subject; no watermark; original IP only.\nAvoid: realistic fur, orange fox dominance, beige/brown dominance, leaf motifs, cluttered costume, background objects, cast shadows, contact shadows, reflections, copied mascot IP, external-game resemblance, Nintendo-like or Animal Crossing-like elements.",
+      "negative_prompt": "realistic fur, orange fox dominance, beige/brown dominance, leaf motifs, cluttered costume, background objects, cast shadows, contact shadows, reflections, copied mascot IP, external-game resemblance, Nintendo-like or Animal Crossing-like elements",
+      "alpha_requirement": "flat #ff00ff chroma source, local chroma-key removal, transparent corners, no color fringe, no solid background in runtime",
+      "export_size": "source large, alpha PNG master, runtime PNG/WebP 512 and 1024 square with transparent padding",
+      "paths": {
+        "source": "docs/design/asset-generation/fuxie-village-production/source/batch-1-mascot-core/b1_mascot_core_18_listening_radio_host_source.png",
+        "alpha_png": "docs/design/asset-generation/fuxie-village-production/alpha/batch-1-mascot-core/b1_mascot_core_18_listening_radio_host.png",
+        "runtime_png_512": "docs/design/asset-generation/fuxie-village-production/runtime/png-512/batch-1-mascot-core/b1_mascot_core_18_listening_radio_host-512.png",
+        "runtime_png_1024": "docs/design/asset-generation/fuxie-village-production/runtime/png-1024/batch-1-mascot-core/b1_mascot_core_18_listening_radio_host-1024.png",
+        "runtime_webp_512": "docs/design/asset-generation/fuxie-village-production/runtime/webp-512/batch-1-mascot-core/b1_mascot_core_18_listening_radio_host-512.webp",
+        "runtime_webp_1024": "docs/design/asset-generation/fuxie-village-production/runtime/webp-1024/batch-1-mascot-core/b1_mascot_core_18_listening_radio_host-1024.webp"
+      },
+      "qa": {
+        "status": "pass",
+        "transparent_corners": true,
+        "residual_key_like_pixels_alpha_gt_8": 0,
+        "visible_coverage_ratio": 0.3854,
+        "partial_alpha_pixels": 5469,
+        "bbox_alpha_gt_8": [
+          142,
+          124,
+          945,
+          1393
+        ]
+      }
+    },
+    {
+      "asset_id": "b1_mascot_core_19_speaking_microphone",
+      "name": "Speaking Microphone",
+      "ui_role": "Speaking practice intro",
+      "asset_type": "mascot_core_cutout",
+      "source_origin": "new_batch_1_imagegen_chroma_source",
+      "prompt": "Use case: stylized-concept\nAsset type: Batch 1 Mascot Core app-ready 3D Fuxie mascot cutout\nPrimary request: Create one full-body original 3D Fuxie mascot, bright sky-blue fox-like German-learning coach, teal hoodie/accessories, soft white face/chest, large warm expressive eyes, rounded ears, small paws, fluffy tail, supportive teacher-coach personality for this UI role: Speaking practice intro.\nScene/backdrop: perfectly flat solid #ff00ff chroma-key background for background removal; one uniform color only, no floor, no shadow, no gradient, no texture.\nPose/prop: Fuxie is holding a small microphone with blank speech bubble prop, inviting pronunciation practice.\nStyle/medium: polished rounded 3D clay-like mobile game mascot, soft matte material, crisp silhouette, clean toy-like forms, production-ready EdTech UI asset.\nComposition/framing: centered full-body single pose, generous transparent padding around ears, tail, paws, and prop; no cropped body parts; square-friendly.\nLighting/mood: bright soft studio lighting baked into the subject only; cheerful, calm, credible for German learners.\nColor palette: sky blue #60A8E4, deep blue #3C78A8, teal #2EC4B6, soft white, amber #FFB703 only for reward props or tiny accents.\nText: no text, no letters, no numbers, no logo.\nConstraints: use same canonical Fuxie proportions across the set; prop must clearly support the UI role; readable at 64px and 96px; do not use #ff00ff anywhere in the subject; no watermark; original IP only.\nAvoid: realistic fur, orange fox dominance, beige/brown dominance, leaf motifs, cluttered costume, background objects, cast shadows, contact shadows, reflections, copied mascot IP, external-game resemblance, Nintendo-like or Animal Crossing-like elements.",
+      "negative_prompt": "realistic fur, orange fox dominance, beige/brown dominance, leaf motifs, cluttered costume, background objects, cast shadows, contact shadows, reflections, copied mascot IP, external-game resemblance, Nintendo-like or Animal Crossing-like elements",
+      "alpha_requirement": "flat #ff00ff chroma source, local chroma-key removal, transparent corners, no color fringe, no solid background in runtime",
+      "export_size": "source large, alpha PNG master, runtime PNG/WebP 512 and 1024 square with transparent padding",
+      "paths": {
+        "source": "docs/design/asset-generation/fuxie-village-production/source/batch-1-mascot-core/b1_mascot_core_19_speaking_microphone_source.png",
+        "alpha_png": "docs/design/asset-generation/fuxie-village-production/alpha/batch-1-mascot-core/b1_mascot_core_19_speaking_microphone.png",
+        "runtime_png_512": "docs/design/asset-generation/fuxie-village-production/runtime/png-512/batch-1-mascot-core/b1_mascot_core_19_speaking_microphone-512.png",
+        "runtime_png_1024": "docs/design/asset-generation/fuxie-village-production/runtime/png-1024/batch-1-mascot-core/b1_mascot_core_19_speaking_microphone-1024.png",
+        "runtime_webp_512": "docs/design/asset-generation/fuxie-village-production/runtime/webp-512/batch-1-mascot-core/b1_mascot_core_19_speaking_microphone-512.webp",
+        "runtime_webp_1024": "docs/design/asset-generation/fuxie-village-production/runtime/webp-1024/batch-1-mascot-core/b1_mascot_core_19_speaking_microphone-1024.webp"
+      },
+      "qa": {
+        "status": "pass",
+        "transparent_corners": true,
+        "residual_key_like_pixels_alpha_gt_8": 0,
+        "visible_coverage_ratio": 0.3715,
+        "partial_alpha_pixels": 13855,
+        "bbox_alpha_gt_8": [
+          265,
+          82,
+          1213,
+          1211
+        ]
+      }
+    },
+    {
+      "asset_id": "b1_mascot_core_20_speaking_dialogue_coach",
+      "name": "Speaking Dialogue Coach",
+      "ui_role": "Roleplay / conversation coach",
+      "asset_type": "mascot_core_cutout",
+      "source_origin": "new_batch_1_imagegen_chroma_source",
+      "prompt": "Use case: stylized-concept\nAsset type: Batch 1 Mascot Core app-ready 3D Fuxie mascot cutout\nPrimary request: Create one full-body original 3D Fuxie mascot, bright sky-blue fox-like German-learning coach, teal hoodie/accessories, soft white face/chest, large warm expressive eyes, rounded ears, small paws, fluffy tail, supportive teacher-coach personality for this UI role: Roleplay / conversation coach.\nScene/backdrop: perfectly flat solid #ff00ff chroma-key background for background removal; one uniform color only, no floor, no shadow, no gradient, no texture.\nPose/prop: Fuxie is gesturing between two blank speech bubbles, encouraging turn-taking.\nStyle/medium: polished rounded 3D clay-like mobile game mascot, soft matte material, crisp silhouette, clean toy-like forms, production-ready EdTech UI asset.\nComposition/framing: centered full-body single pose, generous transparent padding around ears, tail, paws, and prop; no cropped body parts; square-friendly.\nLighting/mood: bright soft studio lighting baked into the subject only; cheerful, calm, credible for German learners.\nColor palette: sky blue #60A8E4, deep blue #3C78A8, teal #2EC4B6, soft white, amber #FFB703 only for reward props or tiny accents.\nText: no text, no letters, no numbers, no logo.\nConstraints: use same canonical Fuxie proportions across the set; prop must clearly support the UI role; readable at 64px and 96px; do not use #ff00ff anywhere in the subject; no watermark; original IP only.\nAvoid: realistic fur, orange fox dominance, beige/brown dominance, leaf motifs, cluttered costume, background objects, cast shadows, contact shadows, reflections, copied mascot IP, external-game resemblance, Nintendo-like or Animal Crossing-like elements.",
+      "negative_prompt": "realistic fur, orange fox dominance, beige/brown dominance, leaf motifs, cluttered costume, background objects, cast shadows, contact shadows, reflections, copied mascot IP, external-game resemblance, Nintendo-like or Animal Crossing-like elements",
+      "alpha_requirement": "flat #ff00ff chroma source, local chroma-key removal, transparent corners, no color fringe, no solid background in runtime",
+      "export_size": "source large, alpha PNG master, runtime PNG/WebP 512 and 1024 square with transparent padding",
+      "paths": {
+        "source": "docs/design/asset-generation/fuxie-village-production/source/batch-1-mascot-core/b1_mascot_core_20_speaking_dialogue_coach_source.png",
+        "alpha_png": "docs/design/asset-generation/fuxie-village-production/alpha/batch-1-mascot-core/b1_mascot_core_20_speaking_dialogue_coach.png",
+        "runtime_png_512": "docs/design/asset-generation/fuxie-village-production/runtime/png-512/batch-1-mascot-core/b1_mascot_core_20_speaking_dialogue_coach-512.png",
+        "runtime_png_1024": "docs/design/asset-generation/fuxie-village-production/runtime/png-1024/batch-1-mascot-core/b1_mascot_core_20_speaking_dialogue_coach-1024.png",
+        "runtime_webp_512": "docs/design/asset-generation/fuxie-village-production/runtime/webp-512/batch-1-mascot-core/b1_mascot_core_20_speaking_dialogue_coach-512.webp",
+        "runtime_webp_1024": "docs/design/asset-generation/fuxie-village-production/runtime/webp-1024/batch-1-mascot-core/b1_mascot_core_20_speaking_dialogue_coach-1024.webp"
+      },
+      "qa": {
+        "status": "pass",
+        "transparent_corners": true,
+        "residual_key_like_pixels_alpha_gt_8": 0,
+        "visible_coverage_ratio": 0.3824,
+        "partial_alpha_pixels": 9686,
+        "bbox_alpha_gt_8": [
+          56,
+          89,
+          1188,
+          1191
+        ]
+      }
+    },
+    {
+      "asset_id": "b1_mascot_core_21_writing_postcard",
+      "name": "Writing Postcard",
+      "ui_role": "Writing practice intro",
+      "asset_type": "mascot_core_cutout",
+      "source_origin": "new_batch_1_imagegen_chroma_source",
+      "prompt": "Use case: stylized-concept\nAsset type: Batch 1 Mascot Core app-ready 3D Fuxie mascot cutout\nPrimary request: Create one full-body original 3D Fuxie mascot, bright sky-blue fox-like German-learning coach, teal hoodie/accessories, soft white face/chest, large warm expressive eyes, rounded ears, small paws, fluffy tail, supportive teacher-coach personality for this UI role: Writing practice intro.\nScene/backdrop: perfectly flat solid #ff00ff chroma-key background for background removal; one uniform color only, no floor, no shadow, no gradient, no texture.\nPose/prop: Fuxie is holding a blank postcard and rounded pencil, post-office helper energy.\nStyle/medium: polished rounded 3D clay-like mobile game mascot, soft matte material, crisp silhouette, clean toy-like forms, production-ready EdTech UI asset.\nComposition/framing: centered full-body single pose, generous transparent padding around ears, tail, paws, and prop; no cropped body parts; square-friendly.\nLighting/mood: bright soft studio lighting baked into the subject only; cheerful, calm, credible for German learners.\nColor palette: sky blue #60A8E4, deep blue #3C78A8, teal #2EC4B6, soft white, amber #FFB703 only for reward props or tiny accents.\nText: no text, no letters, no numbers, no logo.\nConstraints: use same canonical Fuxie proportions across the set; prop must clearly support the UI role; readable at 64px and 96px; do not use #ff00ff anywhere in the subject; no watermark; original IP only.\nAvoid: realistic fur, orange fox dominance, beige/brown dominance, leaf motifs, cluttered costume, background objects, cast shadows, contact shadows, reflections, copied mascot IP, external-game resemblance, Nintendo-like or Animal Crossing-like elements.",
+      "negative_prompt": "realistic fur, orange fox dominance, beige/brown dominance, leaf motifs, cluttered costume, background objects, cast shadows, contact shadows, reflections, copied mascot IP, external-game resemblance, Nintendo-like or Animal Crossing-like elements",
+      "alpha_requirement": "flat #ff00ff chroma source, local chroma-key removal, transparent corners, no color fringe, no solid background in runtime",
+      "export_size": "source large, alpha PNG master, runtime PNG/WebP 512 and 1024 square with transparent padding",
+      "paths": {
+        "source": "docs/design/asset-generation/fuxie-village-production/source/batch-1-mascot-core/b1_mascot_core_21_writing_postcard_source.png",
+        "alpha_png": "docs/design/asset-generation/fuxie-village-production/alpha/batch-1-mascot-core/b1_mascot_core_21_writing_postcard.png",
+        "runtime_png_512": "docs/design/asset-generation/fuxie-village-production/runtime/png-512/batch-1-mascot-core/b1_mascot_core_21_writing_postcard-512.png",
+        "runtime_png_1024": "docs/design/asset-generation/fuxie-village-production/runtime/png-1024/batch-1-mascot-core/b1_mascot_core_21_writing_postcard-1024.png",
+        "runtime_webp_512": "docs/design/asset-generation/fuxie-village-production/runtime/webp-512/batch-1-mascot-core/b1_mascot_core_21_writing_postcard-512.webp",
+        "runtime_webp_1024": "docs/design/asset-generation/fuxie-village-production/runtime/webp-1024/batch-1-mascot-core/b1_mascot_core_21_writing_postcard-1024.webp"
+      },
+      "qa": {
+        "status": "pass",
+        "transparent_corners": true,
+        "residual_key_like_pixels_alpha_gt_8": 0,
+        "visible_coverage_ratio": 0.363,
+        "partial_alpha_pixels": 5121,
+        "bbox_alpha_gt_8": [
+          229,
+          64,
+          1077,
+          1219
+        ]
+      }
+    },
+    {
+      "asset_id": "b1_mascot_core_22_writing_feedback_pen",
+      "name": "Writing Feedback Pen",
+      "ui_role": "Writing feedback / correction support",
+      "asset_type": "mascot_core_cutout",
+      "source_origin": "new_batch_1_imagegen_chroma_source",
+      "prompt": "Use case: stylized-concept\nAsset type: Batch 1 Mascot Core app-ready 3D Fuxie mascot cutout\nPrimary request: Create one full-body original 3D Fuxie mascot, bright sky-blue fox-like German-learning coach, teal hoodie/accessories, soft white face/chest, large warm expressive eyes, rounded ears, small paws, fluffy tail, supportive teacher-coach personality for this UI role: Writing feedback / correction support.\nScene/backdrop: perfectly flat solid #ff00ff chroma-key background for background removal; one uniform color only, no floor, no shadow, no gradient, no texture.\nPose/prop: Fuxie is holding a teal pen and small blank feedback ribbon, warm reviewer expression.\nStyle/medium: polished rounded 3D clay-like mobile game mascot, soft matte material, crisp silhouette, clean toy-like forms, production-ready EdTech UI asset.\nComposition/framing: centered full-body single pose, generous transparent padding around ears, tail, paws, and prop; no cropped body parts; square-friendly.\nLighting/mood: bright soft studio lighting baked into the subject only; cheerful, calm, credible for German learners.\nColor palette: sky blue #60A8E4, deep blue #3C78A8, teal #2EC4B6, soft white, amber #FFB703 only for reward props or tiny accents.\nText: no text, no letters, no numbers, no logo.\nConstraints: use same canonical Fuxie proportions across the set; prop must clearly support the UI role; readable at 64px and 96px; do not use #ff00ff anywhere in the subject; no watermark; original IP only.\nAvoid: realistic fur, orange fox dominance, beige/brown dominance, leaf motifs, cluttered costume, background objects, cast shadows, contact shadows, reflections, copied mascot IP, external-game resemblance, Nintendo-like or Animal Crossing-like elements.",
+      "negative_prompt": "realistic fur, orange fox dominance, beige/brown dominance, leaf motifs, cluttered costume, background objects, cast shadows, contact shadows, reflections, copied mascot IP, external-game resemblance, Nintendo-like or Animal Crossing-like elements",
+      "alpha_requirement": "flat #ff00ff chroma source, local chroma-key removal, transparent corners, no color fringe, no solid background in runtime",
+      "export_size": "source large, alpha PNG master, runtime PNG/WebP 512 and 1024 square with transparent padding",
+      "paths": {
+        "source": "docs/design/asset-generation/fuxie-village-production/source/batch-1-mascot-core/b1_mascot_core_22_writing_feedback_pen_source.png",
+        "alpha_png": "docs/design/asset-generation/fuxie-village-production/alpha/batch-1-mascot-core/b1_mascot_core_22_writing_feedback_pen.png",
+        "runtime_png_512": "docs/design/asset-generation/fuxie-village-production/runtime/png-512/batch-1-mascot-core/b1_mascot_core_22_writing_feedback_pen-512.png",
+        "runtime_png_1024": "docs/design/asset-generation/fuxie-village-production/runtime/png-1024/batch-1-mascot-core/b1_mascot_core_22_writing_feedback_pen-1024.png",
+        "runtime_webp_512": "docs/design/asset-generation/fuxie-village-production/runtime/webp-512/batch-1-mascot-core/b1_mascot_core_22_writing_feedback_pen-512.webp",
+        "runtime_webp_1024": "docs/design/asset-generation/fuxie-village-production/runtime/webp-1024/batch-1-mascot-core/b1_mascot_core_22_writing_feedback_pen-1024.webp"
+      },
+      "qa": {
+        "status": "pass",
+        "transparent_corners": true,
+        "residual_key_like_pixels_alpha_gt_8": 0,
+        "visible_coverage_ratio": 0.3426,
+        "partial_alpha_pixels": 5175,
+        "bbox_alpha_gt_8": [
+          217,
+          68,
+          1065,
+          1195
+        ]
+      }
+    },
+    {
+      "asset_id": "b1_mascot_core_23_grammar_scroll",
+      "name": "Grammar Scroll",
+      "ui_role": "Grammar lesson intro",
+      "asset_type": "mascot_core_cutout",
+      "source_origin": "new_batch_1_imagegen_chroma_source",
+      "prompt": "Use case: stylized-concept\nAsset type: Batch 1 Mascot Core app-ready 3D Fuxie mascot cutout\nPrimary request: Create one full-body original 3D Fuxie mascot, bright sky-blue fox-like German-learning coach, teal hoodie/accessories, soft white face/chest, large warm expressive eyes, rounded ears, small paws, fluffy tail, supportive teacher-coach personality for this UI role: Grammar lesson intro.\nScene/backdrop: perfectly flat solid #ff00ff chroma-key background for background removal; one uniform color only, no floor, no shadow, no gradient, no texture.\nPose/prop: Fuxie is holding a curled blank grammar scroll with small gear charm, mentor-like pose.\nStyle/medium: polished rounded 3D clay-like mobile game mascot, soft matte material, crisp silhouette, clean toy-like forms, production-ready EdTech UI asset.\nComposition/framing: centered full-body single pose, generous transparent padding around ears, tail, paws, and prop; no cropped body parts; square-friendly.\nLighting/mood: bright soft studio lighting baked into the subject only; cheerful, calm, credible for German learners.\nColor palette: sky blue #60A8E4, deep blue #3C78A8, teal #2EC4B6, soft white, amber #FFB703 only for reward props or tiny accents.\nText: no text, no letters, no numbers, no logo.\nConstraints: use same canonical Fuxie proportions across the set; prop must clearly support the UI role; readable at 64px and 96px; do not use #ff00ff anywhere in the subject; no watermark; original IP only.\nAvoid: realistic fur, orange fox dominance, beige/brown dominance, leaf motifs, cluttered costume, background objects, cast shadows, contact shadows, reflections, copied mascot IP, external-game resemblance, Nintendo-like or Animal Crossing-like elements.",
+      "negative_prompt": "realistic fur, orange fox dominance, beige/brown dominance, leaf motifs, cluttered costume, background objects, cast shadows, contact shadows, reflections, copied mascot IP, external-game resemblance, Nintendo-like or Animal Crossing-like elements",
+      "alpha_requirement": "flat #ff00ff chroma source, local chroma-key removal, transparent corners, no color fringe, no solid background in runtime",
+      "export_size": "source large, alpha PNG master, runtime PNG/WebP 512 and 1024 square with transparent padding",
+      "paths": {
+        "source": "docs/design/asset-generation/fuxie-village-production/source/batch-1-mascot-core/b1_mascot_core_23_grammar_scroll_source.png",
+        "alpha_png": "docs/design/asset-generation/fuxie-village-production/alpha/batch-1-mascot-core/b1_mascot_core_23_grammar_scroll.png",
+        "runtime_png_512": "docs/design/asset-generation/fuxie-village-production/runtime/png-512/batch-1-mascot-core/b1_mascot_core_23_grammar_scroll-512.png",
+        "runtime_png_1024": "docs/design/asset-generation/fuxie-village-production/runtime/png-1024/batch-1-mascot-core/b1_mascot_core_23_grammar_scroll-1024.png",
+        "runtime_webp_512": "docs/design/asset-generation/fuxie-village-production/runtime/webp-512/batch-1-mascot-core/b1_mascot_core_23_grammar_scroll-512.webp",
+        "runtime_webp_1024": "docs/design/asset-generation/fuxie-village-production/runtime/webp-1024/batch-1-mascot-core/b1_mascot_core_23_grammar_scroll-1024.webp"
+      },
+      "qa": {
+        "status": "pass",
+        "transparent_corners": true,
+        "residual_key_like_pixels_alpha_gt_8": 0,
+        "visible_coverage_ratio": 0.3816,
+        "partial_alpha_pixels": 28106,
+        "bbox_alpha_gt_8": [
+          142,
+          71,
+          1114,
+          1201
+        ]
+      }
+    },
+    {
+      "asset_id": "b1_mascot_core_24_grammar_repair_wrench",
+      "name": "Grammar Repair Wrench",
+      "ui_role": "Grammar correction / fix pattern",
+      "asset_type": "mascot_core_cutout",
+      "source_origin": "new_batch_1_imagegen_chroma_source",
+      "prompt": "Use case: stylized-concept\nAsset type: Batch 1 Mascot Core app-ready 3D Fuxie mascot cutout\nPrimary request: Create one full-body original 3D Fuxie mascot, bright sky-blue fox-like German-learning coach, teal hoodie/accessories, soft white face/chest, large warm expressive eyes, rounded ears, small paws, fluffy tail, supportive teacher-coach personality for this UI role: Grammar correction / fix pattern.\nScene/backdrop: perfectly flat solid #ff00ff chroma-key background for background removal; one uniform color only, no floor, no shadow, no gradient, no texture.\nPose/prop: Fuxie is holding a tiny teal grammar wrench and blank puzzle tile, friendly repair-helper pose.\nStyle/medium: polished rounded 3D clay-like mobile game mascot, soft matte material, crisp silhouette, clean toy-like forms, production-ready EdTech UI asset.\nComposition/framing: centered full-body single pose, generous transparent padding around ears, tail, paws, and prop; no cropped body parts; square-friendly.\nLighting/mood: bright soft studio lighting baked into the subject only; cheerful, calm, credible for German learners.\nColor palette: sky blue #60A8E4, deep blue #3C78A8, teal #2EC4B6, soft white, amber #FFB703 only for reward props or tiny accents.\nText: no text, no letters, no numbers, no logo.\nConstraints: use same canonical Fuxie proportions across the set; prop must clearly support the UI role; readable at 64px and 96px; do not use #ff00ff anywhere in the subject; no watermark; original IP only.\nAvoid: realistic fur, orange fox dominance, beige/brown dominance, leaf motifs, cluttered costume, background objects, cast shadows, contact shadows, reflections, copied mascot IP, external-game resemblance, Nintendo-like or Animal Crossing-like elements.",
+      "negative_prompt": "realistic fur, orange fox dominance, beige/brown dominance, leaf motifs, cluttered costume, background objects, cast shadows, contact shadows, reflections, copied mascot IP, external-game resemblance, Nintendo-like or Animal Crossing-like elements",
+      "alpha_requirement": "flat #ff00ff chroma source, local chroma-key removal, transparent corners, no color fringe, no solid background in runtime",
+      "export_size": "source large, alpha PNG master, runtime PNG/WebP 512 and 1024 square with transparent padding",
+      "paths": {
+        "source": "docs/design/asset-generation/fuxie-village-production/source/batch-1-mascot-core/b1_mascot_core_24_grammar_repair_wrench_source.png",
+        "alpha_png": "docs/design/asset-generation/fuxie-village-production/alpha/batch-1-mascot-core/b1_mascot_core_24_grammar_repair_wrench.png",
+        "runtime_png_512": "docs/design/asset-generation/fuxie-village-production/runtime/png-512/batch-1-mascot-core/b1_mascot_core_24_grammar_repair_wrench-512.png",
+        "runtime_png_1024": "docs/design/asset-generation/fuxie-village-production/runtime/png-1024/batch-1-mascot-core/b1_mascot_core_24_grammar_repair_wrench-1024.png",
+        "runtime_webp_512": "docs/design/asset-generation/fuxie-village-production/runtime/webp-512/batch-1-mascot-core/b1_mascot_core_24_grammar_repair_wrench-512.webp",
+        "runtime_webp_1024": "docs/design/asset-generation/fuxie-village-production/runtime/webp-1024/batch-1-mascot-core/b1_mascot_core_24_grammar_repair_wrench-1024.webp"
+      },
+      "qa": {
+        "status": "pass",
+        "transparent_corners": true,
+        "residual_key_like_pixels_alpha_gt_8": 0,
+        "visible_coverage_ratio": 0.3544,
+        "partial_alpha_pixels": 10411,
+        "bbox_alpha_gt_8": [
+          230,
+          66,
+          1108,
+          1205
+        ]
+      }
+    },
+    {
+      "asset_id": "b1_mascot_core_25_empty_state_sign",
+      "name": "Empty State Sign",
+      "ui_role": "Empty state / no content yet",
+      "asset_type": "mascot_core_cutout",
+      "source_origin": "new_batch_1_imagegen_chroma_source",
+      "prompt": "Use case: stylized-concept\nAsset type: Batch 1 Mascot Core app-ready 3D Fuxie mascot cutout\nPrimary request: Create one full-body original 3D Fuxie mascot, bright sky-blue fox-like German-learning coach, teal hoodie/accessories, soft white face/chest, large warm expressive eyes, rounded ears, small paws, fluffy tail, supportive teacher-coach personality for this UI role: Empty state / no content yet.\nScene/backdrop: perfectly flat solid #ff00ff chroma-key background for background removal; one uniform color only, no floor, no shadow, no gradient, no texture.\nPose/prop: Fuxie is standing beside a small blank village signpost, gentle patient smile.\nStyle/medium: polished rounded 3D clay-like mobile game mascot, soft matte material, crisp silhouette, clean toy-like forms, production-ready EdTech UI asset.\nComposition/framing: centered full-body single pose, generous transparent padding around ears, tail, paws, and prop; no cropped body parts; square-friendly.\nLighting/mood: bright soft studio lighting baked into the subject only; cheerful, calm, credible for German learners.\nColor palette: sky blue #60A8E4, deep blue #3C78A8, teal #2EC4B6, soft white, amber #FFB703 only for reward props or tiny accents.\nText: no text, no letters, no numbers, no logo.\nConstraints: use same canonical Fuxie proportions across the set; prop must clearly support the UI role; readable at 64px and 96px; do not use #ff00ff anywhere in the subject; no watermark; original IP only.\nAvoid: realistic fur, orange fox dominance, beige/brown dominance, leaf motifs, cluttered costume, background objects, cast shadows, contact shadows, reflections, copied mascot IP, external-game resemblance, Nintendo-like or Animal Crossing-like elements.",
+      "negative_prompt": "realistic fur, orange fox dominance, beige/brown dominance, leaf motifs, cluttered costume, background objects, cast shadows, contact shadows, reflections, copied mascot IP, external-game resemblance, Nintendo-like or Animal Crossing-like elements",
+      "alpha_requirement": "flat #ff00ff chroma source, local chroma-key removal, transparent corners, no color fringe, no solid background in runtime",
+      "export_size": "source large, alpha PNG master, runtime PNG/WebP 512 and 1024 square with transparent padding",
+      "paths": {
+        "source": "docs/design/asset-generation/fuxie-village-production/source/batch-1-mascot-core/b1_mascot_core_25_empty_state_sign_source.png",
+        "alpha_png": "docs/design/asset-generation/fuxie-village-production/alpha/batch-1-mascot-core/b1_mascot_core_25_empty_state_sign.png",
+        "runtime_png_512": "docs/design/asset-generation/fuxie-village-production/runtime/png-512/batch-1-mascot-core/b1_mascot_core_25_empty_state_sign-512.png",
+        "runtime_png_1024": "docs/design/asset-generation/fuxie-village-production/runtime/png-1024/batch-1-mascot-core/b1_mascot_core_25_empty_state_sign-1024.png",
+        "runtime_webp_512": "docs/design/asset-generation/fuxie-village-production/runtime/webp-512/batch-1-mascot-core/b1_mascot_core_25_empty_state_sign-512.webp",
+        "runtime_webp_1024": "docs/design/asset-generation/fuxie-village-production/runtime/webp-1024/batch-1-mascot-core/b1_mascot_core_25_empty_state_sign-1024.webp"
+      },
+      "qa": {
+        "status": "pass",
+        "transparent_corners": true,
+        "residual_key_like_pixels_alpha_gt_8": 0,
+        "visible_coverage_ratio": 0.3911,
+        "partial_alpha_pixels": 8410,
+        "bbox_alpha_gt_8": [
+          72,
+          107,
+          1201,
+          1173
+        ]
+      }
+    },
+    {
+      "asset_id": "b1_mascot_core_26_empty_state_backpack",
+      "name": "Empty State Backpack",
+      "ui_role": "Inventory empty / saved items state",
+      "asset_type": "mascot_core_cutout",
+      "source_origin": "new_batch_1_imagegen_chroma_source",
+      "prompt": "Use case: stylized-concept\nAsset type: Batch 1 Mascot Core app-ready 3D Fuxie mascot cutout\nPrimary request: Create one full-body original 3D Fuxie mascot, bright sky-blue fox-like German-learning coach, teal hoodie/accessories, soft white face/chest, large warm expressive eyes, rounded ears, small paws, fluffy tail, supportive teacher-coach personality for this UI role: Inventory empty / saved items state.\nScene/backdrop: perfectly flat solid #ff00ff chroma-key background for background removal; one uniform color only, no floor, no shadow, no gradient, no texture.\nPose/prop: Fuxie is holding an open empty sky-blue backpack, inviting but not sad.\nStyle/medium: polished rounded 3D clay-like mobile game mascot, soft matte material, crisp silhouette, clean toy-like forms, production-ready EdTech UI asset.\nComposition/framing: centered full-body single pose, generous transparent padding around ears, tail, paws, and prop; no cropped body parts; square-friendly.\nLighting/mood: bright soft studio lighting baked into the subject only; cheerful, calm, credible for German learners.\nColor palette: sky blue #60A8E4, deep blue #3C78A8, teal #2EC4B6, soft white, amber #FFB703 only for reward props or tiny accents.\nText: no text, no letters, no numbers, no logo.\nConstraints: use same canonical Fuxie proportions across the set; prop must clearly support the UI role; readable at 64px and 96px; do not use #ff00ff anywhere in the subject; no watermark; original IP only.\nAvoid: realistic fur, orange fox dominance, beige/brown dominance, leaf motifs, cluttered costume, background objects, cast shadows, contact shadows, reflections, copied mascot IP, external-game resemblance, Nintendo-like or Animal Crossing-like elements.",
+      "negative_prompt": "realistic fur, orange fox dominance, beige/brown dominance, leaf motifs, cluttered costume, background objects, cast shadows, contact shadows, reflections, copied mascot IP, external-game resemblance, Nintendo-like or Animal Crossing-like elements",
+      "alpha_requirement": "flat #ff00ff chroma source, local chroma-key removal, transparent corners, no color fringe, no solid background in runtime",
+      "export_size": "source large, alpha PNG master, runtime PNG/WebP 512 and 1024 square with transparent padding",
+      "paths": {
+        "source": "docs/design/asset-generation/fuxie-village-production/source/batch-1-mascot-core/b1_mascot_core_26_empty_state_backpack_source.png",
+        "alpha_png": "docs/design/asset-generation/fuxie-village-production/alpha/batch-1-mascot-core/b1_mascot_core_26_empty_state_backpack.png",
+        "runtime_png_512": "docs/design/asset-generation/fuxie-village-production/runtime/png-512/batch-1-mascot-core/b1_mascot_core_26_empty_state_backpack-512.png",
+        "runtime_png_1024": "docs/design/asset-generation/fuxie-village-production/runtime/png-1024/batch-1-mascot-core/b1_mascot_core_26_empty_state_backpack-1024.png",
+        "runtime_webp_512": "docs/design/asset-generation/fuxie-village-production/runtime/webp-512/batch-1-mascot-core/b1_mascot_core_26_empty_state_backpack-512.webp",
+        "runtime_webp_1024": "docs/design/asset-generation/fuxie-village-production/runtime/webp-1024/batch-1-mascot-core/b1_mascot_core_26_empty_state_backpack-1024.webp"
+      },
+      "qa": {
+        "status": "pass",
+        "transparent_corners": true,
+        "residual_key_like_pixels_alpha_gt_8": 0,
+        "visible_coverage_ratio": 0.3783,
+        "partial_alpha_pixels": 11582,
+        "bbox_alpha_gt_8": [
+          173,
+          48,
+          1101,
+          1197
+        ]
+      }
+    },
+    {
+      "asset_id": "b1_mascot_core_27_error_repair_toolbox",
+      "name": "Error Repair Toolbox",
+      "ui_role": "Error state / repair helper",
+      "asset_type": "mascot_core_cutout",
+      "source_origin": "new_batch_1_imagegen_chroma_source",
+      "prompt": "Use case: stylized-concept\nAsset type: Batch 1 Mascot Core app-ready 3D Fuxie mascot cutout\nPrimary request: Create one full-body original 3D Fuxie mascot, bright sky-blue fox-like German-learning coach, teal hoodie/accessories, soft white face/chest, large warm expressive eyes, rounded ears, small paws, fluffy tail, supportive teacher-coach personality for this UI role: Error state / repair helper.\nScene/backdrop: perfectly flat solid #ff00ff chroma-key background for background removal; one uniform color only, no floor, no shadow, no gradient, no texture.\nPose/prop: Fuxie is holding a small teal toolbox and repair patch, apologetic helpful expression.\nStyle/medium: polished rounded 3D clay-like mobile game mascot, soft matte material, crisp silhouette, clean toy-like forms, production-ready EdTech UI asset.\nComposition/framing: centered full-body single pose, generous transparent padding around ears, tail, paws, and prop; no cropped body parts; square-friendly.\nLighting/mood: bright soft studio lighting baked into the subject only; cheerful, calm, credible for German learners.\nColor palette: sky blue #60A8E4, deep blue #3C78A8, teal #2EC4B6, soft white, amber #FFB703 only for reward props or tiny accents.\nText: no text, no letters, no numbers, no logo.\nConstraints: use same canonical Fuxie proportions across the set; prop must clearly support the UI role; readable at 64px and 96px; do not use #ff00ff anywhere in the subject; no watermark; original IP only.\nAvoid: realistic fur, orange fox dominance, beige/brown dominance, leaf motifs, cluttered costume, background objects, cast shadows, contact shadows, reflections, copied mascot IP, external-game resemblance, Nintendo-like or Animal Crossing-like elements.",
+      "negative_prompt": "realistic fur, orange fox dominance, beige/brown dominance, leaf motifs, cluttered costume, background objects, cast shadows, contact shadows, reflections, copied mascot IP, external-game resemblance, Nintendo-like or Animal Crossing-like elements",
+      "alpha_requirement": "flat #ff00ff chroma source, local chroma-key removal, transparent corners, no color fringe, no solid background in runtime",
+      "export_size": "source large, alpha PNG master, runtime PNG/WebP 512 and 1024 square with transparent padding",
+      "paths": {
+        "source": "docs/design/asset-generation/fuxie-village-production/source/batch-1-mascot-core/b1_mascot_core_27_error_repair_toolbox_source.png",
+        "alpha_png": "docs/design/asset-generation/fuxie-village-production/alpha/batch-1-mascot-core/b1_mascot_core_27_error_repair_toolbox.png",
+        "runtime_png_512": "docs/design/asset-generation/fuxie-village-production/runtime/png-512/batch-1-mascot-core/b1_mascot_core_27_error_repair_toolbox-512.png",
+        "runtime_png_1024": "docs/design/asset-generation/fuxie-village-production/runtime/png-1024/batch-1-mascot-core/b1_mascot_core_27_error_repair_toolbox-1024.png",
+        "runtime_webp_512": "docs/design/asset-generation/fuxie-village-production/runtime/webp-512/batch-1-mascot-core/b1_mascot_core_27_error_repair_toolbox-512.webp",
+        "runtime_webp_1024": "docs/design/asset-generation/fuxie-village-production/runtime/webp-1024/batch-1-mascot-core/b1_mascot_core_27_error_repair_toolbox-1024.webp"
+      },
+      "qa": {
+        "status": "pass",
+        "transparent_corners": true,
+        "residual_key_like_pixels_alpha_gt_8": 0,
+        "visible_coverage_ratio": 0.3746,
+        "partial_alpha_pixels": 5044,
+        "bbox_alpha_gt_8": [
+          165,
+          61,
+          1135,
+          1213
+        ]
+      }
+    },
+    {
+      "asset_id": "b1_mascot_core_28_error_network_lantern",
+      "name": "Error Network Lantern",
+      "ui_role": "Network/offline error state",
+      "asset_type": "mascot_core_cutout",
+      "source_origin": "new_batch_1_imagegen_chroma_source",
+      "prompt": "Use case: stylized-concept\nAsset type: Batch 1 Mascot Core app-ready 3D Fuxie mascot cutout\nPrimary request: Create one full-body original 3D Fuxie mascot, bright sky-blue fox-like German-learning coach, teal hoodie/accessories, soft white face/chest, large warm expressive eyes, rounded ears, small paws, fluffy tail, supportive teacher-coach personality for this UI role: Network/offline error state.\nScene/backdrop: perfectly flat solid #ff00ff chroma-key background for background removal; one uniform color only, no floor, no shadow, no gradient, no texture.\nPose/prop: Fuxie is holding a small blue lantern and looking calmly attentive, safety helper mood.\nStyle/medium: polished rounded 3D clay-like mobile game mascot, soft matte material, crisp silhouette, clean toy-like forms, production-ready EdTech UI asset.\nComposition/framing: centered full-body single pose, generous transparent padding around ears, tail, paws, and prop; no cropped body parts; square-friendly.\nLighting/mood: bright soft studio lighting baked into the subject only; cheerful, calm, credible for German learners.\nColor palette: sky blue #60A8E4, deep blue #3C78A8, teal #2EC4B6, soft white, amber #FFB703 only for reward props or tiny accents.\nText: no text, no letters, no numbers, no logo.\nConstraints: use same canonical Fuxie proportions across the set; prop must clearly support the UI role; readable at 64px and 96px; do not use #ff00ff anywhere in the subject; no watermark; original IP only.\nAvoid: realistic fur, orange fox dominance, beige/brown dominance, leaf motifs, cluttered costume, background objects, cast shadows, contact shadows, reflections, copied mascot IP, external-game resemblance, Nintendo-like or Animal Crossing-like elements.",
+      "negative_prompt": "realistic fur, orange fox dominance, beige/brown dominance, leaf motifs, cluttered costume, background objects, cast shadows, contact shadows, reflections, copied mascot IP, external-game resemblance, Nintendo-like or Animal Crossing-like elements",
+      "alpha_requirement": "flat #ff00ff chroma source, local chroma-key removal, transparent corners, no color fringe, no solid background in runtime",
+      "export_size": "source large, alpha PNG master, runtime PNG/WebP 512 and 1024 square with transparent padding",
+      "paths": {
+        "source": "docs/design/asset-generation/fuxie-village-production/source/batch-1-mascot-core/b1_mascot_core_28_error_network_lantern_source.png",
+        "alpha_png": "docs/design/asset-generation/fuxie-village-production/alpha/batch-1-mascot-core/b1_mascot_core_28_error_network_lantern.png",
+        "runtime_png_512": "docs/design/asset-generation/fuxie-village-production/runtime/png-512/batch-1-mascot-core/b1_mascot_core_28_error_network_lantern-512.png",
+        "runtime_png_1024": "docs/design/asset-generation/fuxie-village-production/runtime/png-1024/batch-1-mascot-core/b1_mascot_core_28_error_network_lantern-1024.png",
+        "runtime_webp_512": "docs/design/asset-generation/fuxie-village-production/runtime/webp-512/batch-1-mascot-core/b1_mascot_core_28_error_network_lantern-512.webp",
+        "runtime_webp_1024": "docs/design/asset-generation/fuxie-village-production/runtime/webp-1024/batch-1-mascot-core/b1_mascot_core_28_error_network_lantern-1024.webp"
+      },
+      "qa": {
+        "status": "pass",
+        "transparent_corners": true,
+        "residual_key_like_pixels_alpha_gt_8": 0,
+        "visible_coverage_ratio": 0.3772,
+        "partial_alpha_pixels": 20620,
+        "bbox_alpha_gt_8": [
+          124,
+          58,
+          1107,
+          1207
+        ]
+      }
+    },
+    {
+      "asset_id": "b1_mascot_core_29_teacher_pointer",
+      "name": "Teacher Pointer",
+      "ui_role": "Teacher surface guide",
+      "asset_type": "mascot_core_cutout",
+      "source_origin": "new_batch_1_imagegen_chroma_source",
+      "prompt": "Use case: stylized-concept\nAsset type: Batch 1 Mascot Core app-ready 3D Fuxie mascot cutout\nPrimary request: Create one full-body original 3D Fuxie mascot, bright sky-blue fox-like German-learning coach, teal hoodie/accessories, soft white face/chest, large warm expressive eyes, rounded ears, small paws, fluffy tail, supportive teacher-coach personality for this UI role: Teacher surface guide.\nScene/backdrop: perfectly flat solid #ff00ff chroma-key background for background removal; one uniform color only, no floor, no shadow, no gradient, no texture.\nPose/prop: Fuxie is wearing a simple teal teacher scarf and pointing with a short pointer to a blank mini board.\nStyle/medium: polished rounded 3D clay-like mobile game mascot, soft matte material, crisp silhouette, clean toy-like forms, production-ready EdTech UI asset.\nComposition/framing: centered full-body single pose, generous transparent padding around ears, tail, paws, and prop; no cropped body parts; square-friendly.\nLighting/mood: bright soft studio lighting baked into the subject only; cheerful, calm, credible for German learners.\nColor palette: sky blue #60A8E4, deep blue #3C78A8, teal #2EC4B6, soft white, amber #FFB703 only for reward props or tiny accents.\nText: no text, no letters, no numbers, no logo.\nConstraints: use same canonical Fuxie proportions across the set; prop must clearly support the UI role; readable at 64px and 96px; do not use #ff00ff anywhere in the subject; no watermark; original IP only.\nAvoid: realistic fur, orange fox dominance, beige/brown dominance, leaf motifs, cluttered costume, background objects, cast shadows, contact shadows, reflections, copied mascot IP, external-game resemblance, Nintendo-like or Animal Crossing-like elements.",
+      "negative_prompt": "realistic fur, orange fox dominance, beige/brown dominance, leaf motifs, cluttered costume, background objects, cast shadows, contact shadows, reflections, copied mascot IP, external-game resemblance, Nintendo-like or Animal Crossing-like elements",
+      "alpha_requirement": "flat #ff00ff chroma source, local chroma-key removal, transparent corners, no color fringe, no solid background in runtime",
+      "export_size": "source large, alpha PNG master, runtime PNG/WebP 512 and 1024 square with transparent padding",
+      "paths": {
+        "source": "docs/design/asset-generation/fuxie-village-production/source/batch-1-mascot-core/b1_mascot_core_29_teacher_pointer_source.png",
+        "alpha_png": "docs/design/asset-generation/fuxie-village-production/alpha/batch-1-mascot-core/b1_mascot_core_29_teacher_pointer.png",
+        "runtime_png_512": "docs/design/asset-generation/fuxie-village-production/runtime/png-512/batch-1-mascot-core/b1_mascot_core_29_teacher_pointer-512.png",
+        "runtime_png_1024": "docs/design/asset-generation/fuxie-village-production/runtime/png-1024/batch-1-mascot-core/b1_mascot_core_29_teacher_pointer-1024.png",
+        "runtime_webp_512": "docs/design/asset-generation/fuxie-village-production/runtime/webp-512/batch-1-mascot-core/b1_mascot_core_29_teacher_pointer-512.webp",
+        "runtime_webp_1024": "docs/design/asset-generation/fuxie-village-production/runtime/webp-1024/batch-1-mascot-core/b1_mascot_core_29_teacher_pointer-1024.webp"
+      },
+      "qa": {
+        "status": "pass",
+        "transparent_corners": true,
+        "residual_key_like_pixels_alpha_gt_8": 0,
+        "visible_coverage_ratio": 0.4467,
+        "partial_alpha_pixels": 12177,
+        "bbox_alpha_gt_8": [
+          61,
+          88,
+          1180,
+          1181
+        ]
+      }
+    },
+    {
+      "asset_id": "b1_mascot_core_30_teacher_classroom_helper",
+      "name": "Teacher Classroom Helper",
+      "ui_role": "Teacher classroom / student support",
+      "asset_type": "mascot_core_cutout",
+      "source_origin": "new_batch_1_imagegen_chroma_source",
+      "prompt": "Use case: stylized-concept\nAsset type: Batch 1 Mascot Core app-ready 3D Fuxie mascot cutout\nPrimary request: Create one full-body original 3D Fuxie mascot, bright sky-blue fox-like German-learning coach, teal hoodie/accessories, soft white face/chest, large warm expressive eyes, rounded ears, small paws, fluffy tail, supportive teacher-coach personality for this UI role: Teacher classroom / student support.\nScene/backdrop: perfectly flat solid #ff00ff chroma-key background for background removal; one uniform color only, no floor, no shadow, no gradient, no texture.\nPose/prop: Fuxie is holding a stack of blank lesson cards, classroom helper stance.\nStyle/medium: polished rounded 3D clay-like mobile game mascot, soft matte material, crisp silhouette, clean toy-like forms, production-ready EdTech UI asset.\nComposition/framing: centered full-body single pose, generous transparent padding around ears, tail, paws, and prop; no cropped body parts; square-friendly.\nLighting/mood: bright soft studio lighting baked into the subject only; cheerful, calm, credible for German learners.\nColor palette: sky blue #60A8E4, deep blue #3C78A8, teal #2EC4B6, soft white, amber #FFB703 only for reward props or tiny accents.\nText: no text, no letters, no numbers, no logo.\nConstraints: use same canonical Fuxie proportions across the set; prop must clearly support the UI role; readable at 64px and 96px; do not use #ff00ff anywhere in the subject; no watermark; original IP only.\nAvoid: realistic fur, orange fox dominance, beige/brown dominance, leaf motifs, cluttered costume, background objects, cast shadows, contact shadows, reflections, copied mascot IP, external-game resemblance, Nintendo-like or Animal Crossing-like elements.",
+      "negative_prompt": "realistic fur, orange fox dominance, beige/brown dominance, leaf motifs, cluttered costume, background objects, cast shadows, contact shadows, reflections, copied mascot IP, external-game resemblance, Nintendo-like or Animal Crossing-like elements",
+      "alpha_requirement": "flat #ff00ff chroma source, local chroma-key removal, transparent corners, no color fringe, no solid background in runtime",
+      "export_size": "source large, alpha PNG master, runtime PNG/WebP 512 and 1024 square with transparent padding",
+      "paths": {
+        "source": "docs/design/asset-generation/fuxie-village-production/source/batch-1-mascot-core/b1_mascot_core_30_teacher_classroom_helper_source.png",
+        "alpha_png": "docs/design/asset-generation/fuxie-village-production/alpha/batch-1-mascot-core/b1_mascot_core_30_teacher_classroom_helper.png",
+        "runtime_png_512": "docs/design/asset-generation/fuxie-village-production/runtime/png-512/batch-1-mascot-core/b1_mascot_core_30_teacher_classroom_helper-512.png",
+        "runtime_png_1024": "docs/design/asset-generation/fuxie-village-production/runtime/png-1024/batch-1-mascot-core/b1_mascot_core_30_teacher_classroom_helper-1024.png",
+        "runtime_webp_512": "docs/design/asset-generation/fuxie-village-production/runtime/webp-512/batch-1-mascot-core/b1_mascot_core_30_teacher_classroom_helper-512.webp",
+        "runtime_webp_1024": "docs/design/asset-generation/fuxie-village-production/runtime/webp-1024/batch-1-mascot-core/b1_mascot_core_30_teacher_classroom_helper-1024.webp"
+      },
+      "qa": {
+        "status": "pass",
+        "transparent_corners": true,
+        "residual_key_like_pixels_alpha_gt_8": 0,
+        "visible_coverage_ratio": 0.3085,
+        "partial_alpha_pixels": 12684,
+        "bbox_alpha_gt_8": [
+          235,
+          50,
+          1050,
+          1193
+        ]
+      }
+    },
+    {
+      "asset_id": "b1_mascot_core_31_admin_analytics_tablet",
+      "name": "Admin Analytics Tablet",
+      "ui_role": "Admin analytics / dashboard helper",
+      "asset_type": "mascot_core_cutout",
+      "source_origin": "reused_existing_global_alpha_clean",
+      "prompt": "Use case: stylized-concept\nAsset type: Batch 1 Mascot Core app-ready 3D Fuxie mascot cutout\nPrimary request: Create one full-body original 3D Fuxie mascot, bright sky-blue fox-like German-learning coach, teal hoodie/accessories, soft white face/chest, large warm expressive eyes, rounded ears, small paws, fluffy tail, supportive teacher-coach personality for this UI role: Admin analytics / dashboard helper.\nScene/backdrop: perfectly flat solid #ff00ff chroma-key background for background removal; one uniform color only, no floor, no shadow, no gradient, no texture.\nPose/prop: Fuxie is holding a blank rounded tablet with simple chart-like raised bars but no numbers or text.\nStyle/medium: polished rounded 3D clay-like mobile game mascot, soft matte material, crisp silhouette, clean toy-like forms, production-ready EdTech UI asset.\nComposition/framing: centered full-body single pose, generous transparent padding around ears, tail, paws, and prop; no cropped body parts; square-friendly.\nLighting/mood: bright soft studio lighting baked into the subject only; cheerful, calm, credible for German learners.\nColor palette: sky blue #60A8E4, deep blue #3C78A8, teal #2EC4B6, soft white, amber #FFB703 only for reward props or tiny accents.\nText: no text, no letters, no numbers, no logo.\nConstraints: use same canonical Fuxie proportions across the set; prop must clearly support the UI role; readable at 64px and 96px; do not use #ff00ff anywhere in the subject; no watermark; original IP only.\nAvoid: realistic fur, orange fox dominance, beige/brown dominance, leaf motifs, cluttered costume, background objects, cast shadows, contact shadows, reflections, copied mascot IP, external-game resemblance, Nintendo-like or Animal Crossing-like elements.",
+      "negative_prompt": "realistic fur, orange fox dominance, beige/brown dominance, leaf motifs, cluttered costume, background objects, cast shadows, contact shadows, reflections, copied mascot IP, external-game resemblance, Nintendo-like or Animal Crossing-like elements",
+      "alpha_requirement": "flat #ff00ff chroma source, local chroma-key removal, transparent corners, no color fringe, no solid background in runtime",
+      "export_size": "source large, alpha PNG master, runtime PNG/WebP 512 and 1024 square with transparent padding",
+      "paths": {
+        "source": "docs/design/asset-generation/fuxie-village-production/source/batch-1-mascot-core/b1_mascot_core_31_admin_analytics_tablet_source.png",
+        "alpha_png": "docs/design/asset-generation/fuxie-village-production/alpha/batch-1-mascot-core/b1_mascot_core_31_admin_analytics_tablet.png",
+        "runtime_png_512": "docs/design/asset-generation/fuxie-village-production/runtime/png-512/batch-1-mascot-core/b1_mascot_core_31_admin_analytics_tablet-512.png",
+        "runtime_png_1024": "docs/design/asset-generation/fuxie-village-production/runtime/png-1024/batch-1-mascot-core/b1_mascot_core_31_admin_analytics_tablet-1024.png",
+        "runtime_webp_512": "docs/design/asset-generation/fuxie-village-production/runtime/webp-512/batch-1-mascot-core/b1_mascot_core_31_admin_analytics_tablet-512.webp",
+        "runtime_webp_1024": "docs/design/asset-generation/fuxie-village-production/runtime/webp-1024/batch-1-mascot-core/b1_mascot_core_31_admin_analytics_tablet-1024.webp"
+      },
+      "qa": {
+        "status": "pass",
+        "transparent_corners": true,
+        "residual_key_like_pixels_alpha_gt_8": 0,
+        "visible_coverage_ratio": 0.2108,
+        "partial_alpha_pixels": 0,
+        "bbox_alpha_gt_8": [
+          129,
+          111,
+          365,
+          484
+        ]
+      }
+    },
+    {
+      "asset_id": "b1_mascot_core_32_admin_privacy_guardian",
+      "name": "Admin Privacy Guardian",
+      "ui_role": "Admin privacy / safety state",
+      "asset_type": "mascot_core_cutout",
+      "source_origin": "reused_existing_global_alpha_clean",
+      "prompt": "Use case: stylized-concept\nAsset type: Batch 1 Mascot Core app-ready 3D Fuxie mascot cutout\nPrimary request: Create one full-body original 3D Fuxie mascot, bright sky-blue fox-like German-learning coach, teal hoodie/accessories, soft white face/chest, large warm expressive eyes, rounded ears, small paws, fluffy tail, supportive teacher-coach personality for this UI role: Admin privacy / safety state.\nScene/backdrop: perfectly flat solid #ff00ff chroma-key background for background removal; one uniform color only, no floor, no shadow, no gradient, no texture.\nPose/prop: Fuxie is holding a deep-blue shield with tiny lock-shaped relief, calm guardian expression.\nStyle/medium: polished rounded 3D clay-like mobile game mascot, soft matte material, crisp silhouette, clean toy-like forms, production-ready EdTech UI asset.\nComposition/framing: centered full-body single pose, generous transparent padding around ears, tail, paws, and prop; no cropped body parts; square-friendly.\nLighting/mood: bright soft studio lighting baked into the subject only; cheerful, calm, credible for German learners.\nColor palette: sky blue #60A8E4, deep blue #3C78A8, teal #2EC4B6, soft white, amber #FFB703 only for reward props or tiny accents.\nText: no text, no letters, no numbers, no logo.\nConstraints: use same canonical Fuxie proportions across the set; prop must clearly support the UI role; readable at 64px and 96px; do not use #ff00ff anywhere in the subject; no watermark; original IP only.\nAvoid: realistic fur, orange fox dominance, beige/brown dominance, leaf motifs, cluttered costume, background objects, cast shadows, contact shadows, reflections, copied mascot IP, external-game resemblance, Nintendo-like or Animal Crossing-like elements.",
+      "negative_prompt": "realistic fur, orange fox dominance, beige/brown dominance, leaf motifs, cluttered costume, background objects, cast shadows, contact shadows, reflections, copied mascot IP, external-game resemblance, Nintendo-like or Animal Crossing-like elements",
+      "alpha_requirement": "flat #ff00ff chroma source, local chroma-key removal, transparent corners, no color fringe, no solid background in runtime",
+      "export_size": "source large, alpha PNG master, runtime PNG/WebP 512 and 1024 square with transparent padding",
+      "paths": {
+        "source": "docs/design/asset-generation/fuxie-village-production/source/batch-1-mascot-core/b1_mascot_core_32_admin_privacy_guardian_source.png",
+        "alpha_png": "docs/design/asset-generation/fuxie-village-production/alpha/batch-1-mascot-core/b1_mascot_core_32_admin_privacy_guardian.png",
+        "runtime_png_512": "docs/design/asset-generation/fuxie-village-production/runtime/png-512/batch-1-mascot-core/b1_mascot_core_32_admin_privacy_guardian-512.png",
+        "runtime_png_1024": "docs/design/asset-generation/fuxie-village-production/runtime/png-1024/batch-1-mascot-core/b1_mascot_core_32_admin_privacy_guardian-1024.png",
+        "runtime_webp_512": "docs/design/asset-generation/fuxie-village-production/runtime/webp-512/batch-1-mascot-core/b1_mascot_core_32_admin_privacy_guardian-512.webp",
+        "runtime_webp_1024": "docs/design/asset-generation/fuxie-village-production/runtime/webp-1024/batch-1-mascot-core/b1_mascot_core_32_admin_privacy_guardian-1024.webp"
+      },
+      "qa": {
+        "status": "pass",
+        "transparent_corners": true,
+        "residual_key_like_pixels_alpha_gt_8": 0,
+        "visible_coverage_ratio": 0.2039,
+        "partial_alpha_pixels": 0,
+        "bbox_alpha_gt_8": [
+          102,
+          20,
+          338,
+          385
+        ]
+      }
+    }
+  ]
+}

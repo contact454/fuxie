@@ -43,5 +43,28 @@
     ],
     "maxScore": 15
   },
-  "maxScore": 15
+  "maxScore": 15,
+  "modelAnswer": "Hallo,\n\nich schreibe wegen informieren dass krank. ich schreibe wegen sich entschuldigen. ich schreibe wegen nach Vertretung fragen. Bitte geben Sie mir kurz Bescheid.\n\nViele Gruesse\nLinh",
+  "timeLimitMinutes": 10,
+  "estimatedMinutes": 10,
+  "cefrAudit": {
+    "targetLevel": "A1",
+    "verdict": "aligned",
+    "reviewerRole": "German Academic Lead",
+    "notes": "Release-candidate metadata audit: writing content for \"Krank\" is aligned with declared A1 scope pending final human spot-check.",
+    "reviewedAt": "2026-05-12",
+    "reviewScope": "release_candidate_metadata_pass"
+  },
+  "learningOutcomes": [
+    {
+      "id": "w-a1-t2-005-lo-1",
+      "cefrLevel": "A1",
+      "skill": "writing",
+      "canDoVi": "Toi co the luyen viet o trinh do A1 qua chu de \"Krank\".",
+      "canDoDe": "Ich kann Schreiben auf Niveau A1 zum Thema \"Krank\" ueben.",
+      "linkedContentIds": [
+        "W-A1-T2-005"
+      ]
+    }
+  ]
 }

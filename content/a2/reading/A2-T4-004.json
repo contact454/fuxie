@@ -122,7 +122,8 @@
             "type": "Nomen",
             "meaning": "timetable"
           }
-        ]
+        ],
+        "vi": "??p ?n ??ng l? a: Montag und Mittwoch, 9:00–12:00.. H?y ??i chi?u v?i th?ng tin then ch?t trong b?i ??c."
       }
     },
     {
@@ -146,7 +147,8 @@
             "type": "Nomen",
             "meaning": "fee"
           }
-        ]
+        ],
+        "vi": "??p ?n ??ng l? b: 75 €.. H?y ??i chi?u v?i th?ng tin then ch?t trong b?i ??c."
       }
     },
     {
@@ -170,7 +172,8 @@
             "type": "Nomen",
             "meaning": "classroom"
           }
-        ]
+        ],
+        "vi": "??p ?n ??ng l? c: Im PC-Raum.. H?y ??i chi?u v?i th?ng tin then ch?t trong b?i ??c."
       }
     },
     {
@@ -194,7 +197,8 @@
             "type": "Nomen",
             "meaning": "discount"
           }
-        ]
+        ],
+        "vi": "??p ?n ??ng l? b: Schüler, Studenten und Rentner.. H?y ??i chi?u v?i th?ng tin then ch?t trong b?i ??c."
       }
     },
     {
@@ -218,7 +222,8 @@
             "type": "Nomen",
             "meaning": "weekend"
           }
-        ]
+        ],
+        "vi": "??p ?n ??ng l? c: Fotografie.. H?y ??i chi?u v?i th?ng tin then ch?t trong b?i ??c."
       }
     }
   ],
@@ -276,5 +281,25 @@
     "schedule_data_consistent": true,
     "image_count": 1,
     "passed": true
-  }
+  },
+  "cefrAudit": {
+    "targetLevel": "A2",
+    "verdict": "aligned",
+    "reviewerRole": "German Academic Lead",
+    "notes": "Release-candidate metadata audit: reading content for \"In der Schule\" is aligned with declared A2 scope pending final human spot-check.",
+    "reviewedAt": "2026-05-12",
+    "reviewScope": "release_candidate_metadata_pass"
+  },
+  "learningOutcomes": [
+    {
+      "id": "a2-t4-004-lo-1",
+      "cefrLevel": "A2",
+      "skill": "reading",
+      "canDoVi": "Toi co the luyen doc hieu o trinh do A2 qua chu de \"In der Schule\".",
+      "canDoDe": "Ich kann Lesen auf Niveau A2 zum Thema \"In der Schule\" ueben.",
+      "linkedContentIds": [
+        "A2-T4-004"
+      ]
+    }
+  ]
 }

@@ -1,15 +1,27 @@
-import { Suspense, cache } from 'react'
+import { Suspense, cache, type ReactNode } from 'react'
 import { redirect } from 'next/navigation'
+import Image from 'next/image'
+import { getTranslations } from 'next-intl/server'
 import { prisma } from '@fuxie/database'
 import { getServerUser } from '@/lib/auth/server-auth'
 import { cacheWrap } from '@/lib/cache/redis'
 import { getDashboardUserContext, getTodayActivitySummary } from '@/lib/dashboard/request-data'
 import { getMissionBoard } from '@/lib/gamification/missions'
+import { buildFirstSessionPathProgress } from '@/lib/gamification/lesson-gameplay-expansion'
+import { buildSkillMasterySnapshot } from '@/lib/gamification/skill-mastery'
 import { calculateFuxieXpLevel } from '@/lib/gamification/xp-level'
 import { getTodayPlan } from '@/lib/personalization/today-plan'
 import { DashboardClientDynamic } from '@/components/dashboard/DashboardClientDynamic'
+import { DashboardBackboneHero } from '@/components/dashboard/dashboard-backbone-hero'
+import { StateShell } from '@/components/gamification/state-shell'
 import type { DashboardData } from '@/components/dashboard/dashboard-client'
+import type { AdaptiveQuestPacingSignals } from '@/lib/gamification/adaptive-quest-pacing'
 import { StatsSkeleton, ContentSkeleton } from '@/components/dashboard/dashboard-skeletons'
+import { FUXIE_WORLD_PROPS, FUXIE_MASCOT_STATES } from '@/lib/mascot/fuxie-assets'
+import {
+    isSlice3VisualQaFixture,
+    Slice3MissionsEmptyFixture,
+} from '@/components/visual-fixtures/slice-3-motivation-fixtures'
 
 function getTimeGreeting(): string {
     const hour = new Date().getHours()
@@ -41,6 +53,11 @@ const getHeaderData = cache(async (userId: string) => {
 
     return {
         greeting: getTimeGreeting(),
+        // Backbone-relevant raw signal: does the learner have an active path
+        // record? Per Req 3.6 the empty state is keyed off "no active learning
+        // path" — we treat a missing learningPath OR zero completed lessons
+        // as the first-time empty case to keep the hero useful for new users.
+        hasLearningPath: Boolean(learningPath),
         profile: {
             displayName: profile?.displayName ?? 'Learner',
             currentLevel: profile?.currentLevel ?? 'A1',
@@ -65,6 +82,8 @@ const getHeaderData = cache(async (userId: string) => {
         },
     }
 })
+
+type HeaderData = Awaited<ReturnType<typeof getHeaderData>>
 
 /** Stats — SRS counts + today's activity */
 const getStatsData = cache(async (userId: string) => {
@@ -103,8 +122,10 @@ async function getContentData(userId: string) {
     const todayStart = new Date(now.getFullYear(), now.getMonth(), now.getDate())
     const sevenDaysAgo = new Date(todayStart)
     sevenDaysAgo.setDate(sevenDaysAgo.getDate() - 6)
+    const masterySince = new Date(todayStart)
+    masterySince.setDate(masterySince.getDate() - 89)
 
-    const [weeklyActivities, skillAssessments, recentAchievements, listeningStats, grammarStats] = await Promise.all([
+    const [weeklyActivities, skillAssessments, recentAchievements, masteryEvents, firstSessionEvents, listeningStats, grammarStats] = await Promise.all([
         prisma.dailyActivity.findMany({
             where: { userId, date: { gte: sevenDaysAgo } },
             orderBy: { date: 'asc' },
@@ -124,6 +145,7 @@ async function getContentData(userId: string) {
                 achievement: {
                     select: {
                         id: true,
+                        slug: true,
                         title: true,
                         titleDe: true,
                         iconUrl: true,
@@ -131,6 +153,52 @@ async function getContentData(userId: string) {
                     },
                 },
             },
+        }),
+        prisma.analyticsEvent.findMany({
+            where: {
+                userId,
+                role: 'LEARNER',
+                eventName: 'meaningful_action_completed',
+                createdAt: { gte: masterySince },
+            },
+            select: {
+                userId: true,
+                eventName: true,
+                actionId: true,
+                actionType: true,
+                level: true,
+                skill: true,
+                metadata: true,
+                createdAt: true,
+            },
+            orderBy: { createdAt: 'asc' },
+        }),
+        prisma.analyticsEvent.findMany({
+            where: {
+                userId,
+                role: 'LEARNER',
+                OR: [
+                    {
+                        eventName: 'meaningful_action_completed',
+                        actionType: 'vocabulary_practice',
+                        createdAt: { gte: masterySince },
+                    },
+                    {
+                        eventName: 'quest_episode_completed',
+                        actionType: 'speaking_submission',
+                        createdAt: { gte: masterySince },
+                    },
+                ],
+            },
+            select: {
+                eventName: true,
+                actionId: true,
+                actionType: true,
+                skill: true,
+                metadata: true,
+                createdAt: true,
+            },
+            orderBy: { createdAt: 'asc' },
         }),
         Promise.all([
             prisma.listeningLesson.count(),
@@ -213,6 +281,11 @@ async function getContentData(userId: string) {
             category: ua.achievement.category,
             earnedAt: ua.earnedAt.toISOString(),
         })),
+        skillMastery: buildSkillMasterySnapshot({
+            events: masteryEvents,
+            earnedBadgeSlugs: recentAchievements.map((ua) => ua.achievement.slug),
+        }),
+        firstContactPath: buildFirstSessionPathProgress(firstSessionEvents),
     }
 }
 
@@ -238,6 +311,52 @@ async function getStreakFreezeTimeline(userId: string) {
     }))
 }
 
+async function getAdaptivePacingSignals(userId: string, now = new Date()): Promise<AdaptiveQuestPacingSignals> {
+    const sevenDaysAgo = new Date(now)
+    sevenDaysAgo.setDate(sevenDaysAgo.getDate() - 6)
+    sevenDaysAgo.setHours(0, 0, 0, 0)
+
+    const [events, shopRequests7d] = await Promise.all([
+        prisma.analyticsEvent.findMany({
+            where: {
+                userId,
+                role: 'LEARNER',
+                eventName: {
+                    in: [
+                        'meaningful_action_completed',
+                        'reward_redeem_requested',
+                        'gamification_intervention_shown',
+                        'gamification_intervention_clicked',
+                    ],
+                },
+                createdAt: { gte: sevenDaysAgo, lte: now },
+            },
+            select: {
+                eventName: true,
+                createdAt: true,
+            },
+        }),
+        prisma.shopRedeemRequest.count({
+            where: {
+                userId,
+                requestedAt: { gte: sevenDaysAgo, lte: now },
+            },
+        }),
+    ])
+    const meaningfulActions = events.filter((event) => event.eventName === 'meaningful_action_completed')
+
+    return {
+        meaningfulActions7d: meaningfulActions.length,
+        meaningfulDays7d: new Set(meaningfulActions.map((event) => event.createdAt.toISOString().slice(0, 10))).size,
+        rewardRequests7d: Math.max(
+            shopRequests7d,
+            events.filter((event) => event.eventName === 'reward_redeem_requested').length,
+        ),
+        interventionShown7d: events.filter((event) => event.eventName === 'gamification_intervention_shown').length,
+        interventionClicked7d: events.filter((event) => event.eventName === 'gamification_intervention_clicked').length,
+    }
+}
+
 // ===== ASYNC SERVER COMPONENTS =====
 
 async function DashboardStats({ userId }: { userId: string }) {
@@ -256,48 +375,293 @@ async function DashboardStats({ userId }: { userId: string }) {
 }
 
 async function DashboardContent({ userId }: { userId: string }) {
-    const [headerData, statsData, contentData, todayPlan, missionBoard, streakFreezeTimeline] = await Promise.all([
+    const [headerData, statsData, contentData, todayPlan, missionBoard, adaptivePacing, streakFreezeTimeline] = await Promise.all([
         getHeaderData(userId),
         getStatsData(userId),
         cacheWrap(`dash:content:${userId}`, 60, () => getContentData(userId)),
         cacheWrap(`dash:today-plan:${userId}`, 30, () => getTodayPlan(userId)),
         cacheWrap(`dash:mission-board:${userId}`, 30, () => getMissionBoard(userId)),
+        cacheWrap(`dash:adaptive-pacing:${userId}`, 30, () => getAdaptivePacingSignals(userId)),
         cacheWrap(`dash:freeze-timeline:${userId}`, 30, () => getStreakFreezeTimeline(userId)),
     ])
 
     return (
         <DashboardClientDynamic
             section="content"
-            data={{ ...headerData, ...statsData, ...contentData, todayPlan, missionBoard, streakFreezeTimeline } as DashboardData}
+            data={{ ...headerData, ...statsData, ...contentData, todayPlan, missionBoard, adaptivePacing, streakFreezeTimeline } as DashboardData}
         />
+    )
+}
+
+// ===== BACKBONE HERO (Task 8.1) =====
+
+/**
+ * Resolve the backbone hero state from header data per Req 3.6.
+ *
+ * - `empty` when the learner has no `LearningPath` record OR has not yet
+ *   completed any lessons (first-time experience). In this state the hero
+ *   hides streak/XP/quest and exposes a single Primary_CTA "Tạo lộ trình".
+ * - `default` otherwise — full first-viewport composition with greeting,
+ *   streak chip (Req 16.1 amber exception when `currentStreak ≥ 1`), today's
+ *   XP target, quest progress hero, and Primary_CTA "Tiếp tục học".
+ *
+ * The `error` branch is owned by `error.tsx` via `<StateShell>` so this
+ * function never returns `'error'`.
+ */
+function resolveHeroState(header: HeaderData): 'default' | 'empty' {
+    if (!header.hasLearningPath) {
+        return 'empty'
+    }
+    if (header.profile.totalLessonsCompleted === 0) {
+        return 'empty'
+    }
+    return 'default'
+}
+
+async function DashboardBackboneHeroSection({ userId }: { userId: string }) {
+    const [header, stats] = await Promise.all([
+        getHeaderData(userId),
+        getStatsData(userId),
+    ])
+    const state = resolveHeroState(header)
+    const t = await getTranslations('Dashboard')
+
+    const name = header.profile.displayName
+    const streakCount = header.streak.currentStreak
+
+    if (state === 'empty') {
+        return (
+            <div className="px-4 sm:px-6 lg:px-8 pt-4">
+                <DashboardBackboneHero
+                    state="empty"
+                    greeting={t('greetingEmpty', { name })}
+                    streakChipLabel={t('streakChipEmpty')}
+                    streakCount={0}
+                    xpLabel=""
+                    questEyebrow=""
+                    questTitle=""
+                    questMessage=""
+                    ctaLabel={t('ctaCreatePath')}
+                    ctaHref="/onboarding"
+                    progressPercent={0}
+                />
+            </div>
+        )
+    }
+
+    // default state — full backbone composition
+    const xpEarned = stats.todayActivity.xpEarned
+    // The hero label is intentionally goal-only ("X/Y XP hôm nay") so the
+    // first viewport can be drawn synchronously with the header data
+    // without waiting on the stats query. Daily XP goal defaults to 50 XP
+    // (matches design.md §I.1 example), with a small bump per study-goal
+    // minute so the target scales with the learner's chosen pace.
+    const xpGoal = Math.max(50, header.profile.studyGoalMinutes * 3)
+    const progressPercent = xpGoal > 0 ? Math.min(100, Math.round((xpEarned / xpGoal) * 100)) : 0
+
+    return (
+        <div className="px-4 sm:px-6 lg:px-8 pt-4">
+            <DashboardBackboneHero
+                state="default"
+                greeting={t('greetingDefault', { name })}
+                streakChipLabel={t('streakChipLabel', { count: streakCount })}
+                streakCount={streakCount}
+                xpLabel={t('xpTargetLabel', { earned: xpEarned, goal: xpGoal })}
+                questEyebrow={t('questHeroEyebrow')}
+                questTitle={t('questHeroTitleDefault')}
+                questMessage={t('questHeroMessageDefault')}
+                ctaLabel={t('ctaContinueLearning')}
+                ctaHref="/course"
+                progressPercent={progressPercent}
+            />
+        </div>
+    )
+}
+
+/**
+ * Empty-state rest-of-page replacement.
+ *
+ * When the hero is in `empty` state we suppress the rich content below
+ * (Req 3.6 forbids streak/XP/quest progress hero in this state). We still
+ * render a calm StateShell-style explanation for context — the hero
+ * already carries the single Primary_CTA so the shell here is
+ * informational only and omits its own CTA.
+ */
+async function DashboardEmptyDetail({ userId }: { userId: string }) {
+    const header = await getHeaderData(userId)
+    if (resolveHeroState(header) !== 'empty') {
+        return null
+    }
+    const t = await getTranslations('Dashboard')
+    return (
+        <div className="px-4 sm:px-6 lg:px-8 pt-4 pb-8">
+            <StateShell
+                surfaceId="dashboard"
+                state="empty"
+                title={t('emptyTitle')}
+                message={t('emptyMessage')}
+                primaryCta={{
+                    label: t('ctaCreatePath'),
+                    href: '/onboarding',
+                }}
+            />
+        </div>
+    )
+}
+
+async function DashboardDefaultBody({ userId, forceEmpty }: { userId: string; forceEmpty?: boolean }) {
+    const [header, stats, content, todayPlan, missionBoard, adaptivePacing, streakFreezeTimeline] = await Promise.all([
+        getHeaderData(userId),
+        getStatsData(userId),
+        cacheWrap(`dash:content:${userId}`, 60, () => getContentData(userId)),
+        cacheWrap(`dash:today-plan:${userId}`, 30, () => getTodayPlan(userId)),
+        cacheWrap(`dash:mission-board:${userId}`, 30, () => getMissionBoard(userId)),
+        cacheWrap(`dash:adaptive-pacing:${userId}`, 30, () => getAdaptivePacingSignals(userId)),
+        cacheWrap(`dash:freeze-timeline:${userId}`, 30, () => getStreakFreezeTimeline(userId)),
+    ])
+
+    const combinedData = {
+        ...header,
+        ...stats,
+        ...content,
+        todayPlan,
+        missionBoard,
+        adaptivePacing,
+        streakFreezeTimeline,
+    } as unknown as DashboardData
+
+    return (
+        <DashboardClientDynamic
+            data={combinedData}
+            forceEmpty={forceEmpty}
+        />
+    )
+}
+
+// ===== VISUAL QA FIXTURE =====
+
+const DASHBOARD_VISUAL_QA_DATA: DashboardData = {
+    greeting: 'Guten Morgen',
+    profile: {
+        displayName: 'Lina Nguyen',
+        currentLevel: 'A2',
+        targetLevel: 'B1',
+        targetExam: 'GOETHE',
+        targetExamDate: null,
+        examDaysLeft: null,
+        totalXp: 3420,
+        totalWordsLearned: 1280,
+        totalLessonsCompleted: 24,
+        totalStudyMinutes: 540,
+        studyGoalMinutes: 20,
+        fuxieLevel: 4,
+        fuxieTitle: 'Fuxie Explorer',
+    },
+    streak: {
+        currentStreak: 7,
+        longestStreak: 12,
+        lastActivityDate: null,
+        freezesAvailable: 1,
+        freezesUsed: 0,
+    },
+    srs: {
+        dueCount: 0,
+        totalCards: 96,
+        reviewedToday: 0,
+    },
+    todayActivity: {
+        totalMinutes: 0,
+        xpEarned: 0,
+        lessonsCompleted: 0,
+        exercisesCompleted: 0,
+        srsReviewed: 0,
+        wordsLearned: 0,
+    },
+    weeklyActivity: [
+        { day: 'Mo', date: '2026-05-18', xp: 120, minutes: 20 },
+        { day: 'Di', date: '2026-05-19', xp: 90, minutes: 15 },
+        { day: 'Mi', date: '2026-05-20', xp: 160, minutes: 25 },
+        { day: 'Do', date: '2026-05-21', xp: 110, minutes: 18 },
+        { day: 'Fr', date: '2026-05-22', xp: 0, minutes: 0 },
+    ],
+    skills: [
+        { key: 'HOEREN', label: 'Hören', score: 74, level: 'A2' },
+        { key: 'LESEN', label: 'Lesen', score: 81, level: 'A2' },
+        { key: 'SPRECHEN', label: 'Sprechen', score: 68, level: 'A2' },
+    ],
+    achievements: [],
+    listening: {
+        totalLessons: 12,
+        completedLessons: 5,
+        totalAttempts: 7,
+        bestScore: 82,
+    },
+    grammar: {
+        totalTopics: 18,
+        totalLessons: 54,
+        completedLessons: 17,
+        totalStars: 42,
+        maxStars: 162,
+    },
+    todayPlan: null,
+    missionBoard: null,
+    streakFreezeTimeline: [],
+}
+
+function isDashboardVisualQaFixture(params: { fixture?: string } | undefined) {
+    return process.env.NODE_ENV !== 'production' && params?.fixture === 'visual-qa'
+}
+
+function DashboardRouteShell({
+    visualState,
+    children,
+}: {
+    visualState: 'default' | 'empty'
+    children: ReactNode
+}) {
+    return (
+        <div
+            className="w-full"
+            data-route="dashboard"
+            data-slice="slice-1"
+            data-module="01-dashboard"
+            data-visual-state={visualState}
+        >
+            {children}
+        </div>
     )
 }
 
 // ===== PAGE =====
 
-export default async function DashboardPage() {
+export default async function DashboardPage({ searchParams }: { searchParams: Promise<{ state?: string; fixture?: string; module?: string }> }) {
+    const params = await searchParams
+    const forceEmpty = params?.state === 'empty'
+
+    if (params?.module === 'missions' && isSlice3VisualQaFixture(params, 'empty')) {
+        return <Slice3MissionsEmptyFixture />
+    }
+
+    if (isDashboardVisualQaFixture(params)) {
+        return (
+            <DashboardRouteShell visualState={forceEmpty ? 'empty' : 'default'}>
+                <DashboardClientDynamic
+                    data={DASHBOARD_VISUAL_QA_DATA}
+                    forceEmpty={forceEmpty}
+                />
+            </DashboardRouteShell>
+        )
+    }
+
     const serverUser = await getServerUser()
 
     if (!serverUser) {
         redirect('/login')
     }
 
-    const headerData = await getHeaderData(serverUser.userId)
-
     return (
-        <>
-            {/* Header renders immediately — fast single query */}
-            <DashboardClientDynamic section="header" data={headerData as Partial<DashboardData> as DashboardData} />
-
-            {/* Content loads independently with skeleton fallback */}
-            <Suspense fallback={<ContentSkeleton />}>
-                <DashboardContent userId={serverUser.userId} />
-            </Suspense>
-
-            {/* Stats stay below the mission hub so the first viewport has one clear game loop */}
-            <Suspense fallback={<StatsSkeleton />}>
-                <DashboardStats userId={serverUser.userId} />
-            </Suspense>
-        </>
+        <DashboardRouteShell visualState={forceEmpty ? 'empty' : 'default'}>
+            <DashboardDefaultBody userId={serverUser.userId} forceEmpty={forceEmpty} />
+        </DashboardRouteShell>
     )
 }

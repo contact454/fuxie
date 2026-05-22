@@ -1,51 +1,140 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
-@import 'tailwindcss';
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap");
+@import "tailwindcss";
+@import "../styles/animations.css";
+
+/* =====================================================================
+ * Bright Sky design tokens — canonical names
+ * Source of truth: design.md §F (gamified-ui-asset-rollout)
+ * Doc: docs/design/design-tokens.md
+ * Validates: Requirements 16.1, 16.3, 16.4, 16.5
+ *
+ * Naming contract (do not rename without updating §F + design-tokens.md):
+ *   --fuxie-blue-{50,100,200,400,500,600,700,900}
+ *   --fuxie-action, --fuxie-action-hover
+ *   --fuxie-success
+ *   --fuxie-energy   (≤5% surface area; never on Primary_CTA — Req 16.3)
+ *   --fuxie-reward   (Reward_State only — Req 16.1, 16.5)
+ *
+ * REWARD-AMBER CONTAINMENT RULE  (Req 16.1, 16.5; Property 9 in design.md §E)
+ * ---------------------------------------------------------------------
+ * `var(--fuxie-reward)` (#FFB703) MUST only be used inside a subtree whose
+ * root carries one of these attribute selectors:
+ *     [data-reward-state="preview"]
+ *     [data-reward-state="earned"]
+ *     [data-reward-state="receipt"]
+ *     [data-reward-context="true"]   (streak indicator exception, Req 16.1)
+ *
+ * The states `locked` and `pending` are EXPLICITLY DISALLOWED from using
+ * `--fuxie-reward` for any color/background/border/icon/text fill.
+ *
+ * Linting hooks (machine-checkable):
+ *   - Property test 17.2 scans rendered DOM for rgb(255,183,3) ±5% and
+ *     fails when no ancestor matches the allow-list above.
+ *   - Future stylelint rule should match  /var\(--fuxie-reward\b/ and
+ *     require the surrounding selector to contain `[data-reward-state]`
+ *     or `[data-reward-context]`.
+ *   - Allow-comment escape:  /* fuxie-reward-allow: <reason> *\/
+ * ===================================================================== */
+:root {
+  /* Bright Sky blues */
+  --fuxie-blue-50: #f3fbff;   /* page bg, soft */
+  --fuxie-blue-100: #e4f0f0;  /* panel tint */
+  --fuxie-blue-200: #cce4f0;  /* card tint */
+  --fuxie-blue-400: #60a8e4;  /* brand secondary */
+  --fuxie-blue-500: #54a8e4;  /* Primary_CTA / brand primary */
+  --fuxie-blue-600: #3c78a8;  /* readable text-on-light */
+  --fuxie-blue-700: #3078b4;  /* pressed */
+  --fuxie-blue-900: #173b56;  /* deep text / scrim */
+
+  /* Action surface (Primary_CTA fill on learning surfaces — Req 16.4) */
+  --fuxie-action: #54a8e4;
+  --fuxie-action-hover: #3c93d1;
+
+  /* Success / progress (CEFR-A1 green) */
+  --fuxie-success: #2ec4b6;
+
+  /* Accent ≤5% surface area (never on Primary_CTA — Req 16.3) */
+  --fuxie-energy: #ff8a3d;
+
+  /* Reward amber — Reward_State subtree ONLY (Req 16.1, 16.5).
+   * See containment rule in the comment block above. */
+  --fuxie-reward: #ffb703;
+}
 
 @theme {
   /* Brand */
-  --color-fuxie-primary: #60A8E4;
-  --color-fuxie-secondary: #3C78A8;
-  --color-fuxie-accent: #2EC4B6;
-  --color-fuxie-sky-50: #F3FBFF;
-  --color-fuxie-sky-100: #E4F0F0;
-  --color-fuxie-sky-200: #CCE4F0;
-  --color-fuxie-sky-400: #60A8E4;
-  --color-fuxie-sky-500: #54A8E4;
-  --color-fuxie-sky-600: #3C78A8;
-  --color-fuxie-sky-700: #3078B4;
-  --color-fuxie-sky-900: #173B56;
-  --color-fuxie-energy: #FF8A3D;
-  --color-fuxie-reward: #FFB703;
+  --color-fuxie-primary: #60a8e4;
+  --color-fuxie-secondary: #3c78a8;
+  --color-fuxie-accent: #2ec4b6;
+  --color-fuxie-sky-50: #f3fbff;
+  --color-fuxie-sky-100: #e4f0f0;
+  --color-fuxie-sky-200: #cce4f0;
+  --color-fuxie-sky-400: #60a8e4;
+  --color-fuxie-sky-500: #54a8e4;
+  --color-fuxie-sky-600: #3c78a8;
+  --color-fuxie-sky-700: #3078b4;
+  --color-fuxie-sky-900: #173b56;
+  --color-fuxie-energy: #ff8a3d;
+  --color-fuxie-reward: #ffb703;
 
   /* CEFR Level Colors */
-  --color-cefr-a1: #4CAF50;
-  --color-cefr-a2: #8BC34A;
-  --color-cefr-b1: #FF9800;
-  --color-cefr-b2: #FF5722;
-  --color-cefr-c1: #9C27B0;
-  --color-cefr-c2: #673AB7;
+  --color-cefr-a1: #4caf50;
+  --color-cefr-a2: #8bc34a;
+  --color-cefr-b1: #ff9800;
+  --color-cefr-b2: #ff5722;
+  --color-cefr-c1: #9c27b0;
+  --color-cefr-c2: #673ab7;
 
   /* Skill Colors */
-  --color-skill-hoeren: #2EC4B6;
-  --color-skill-lesen: #3C78A8;
-  --color-skill-schreiben: #FF8A3D;
-  --color-skill-sprechen: #9C27B0;
-  --color-skill-grammatik: #FF9800;
-  --color-skill-wortschatz: #4CAF50;
+  --color-skill-hoeren: #2ec4b6;
+  --color-skill-lesen: #3c78a8;
+  --color-skill-schreiben: #ff8a3d;
+  --color-skill-sprechen: #9c27b0;
+  --color-skill-grammatik: #ff9800;
+  --color-skill-wortschatz: #4caf50;
 
   /* Feedback */
-  --color-correct: #4CAF50;
-  --color-incorrect: #F44336;
-  --color-hint: #FFC107;
+  --color-correct: #4caf50;
+  --color-incorrect: #f44336;
+  --color-hint: #ffc107;
+
+  /* Semantic Text */
+  --color-text-primary: #173b56;
+  --color-text-secondary: #3c78a8;
+  --color-text-muted: #64748b;
+  --color-text-subtle: #94a3b8;
+  --color-text-inverse: #ffffff;
+  --color-text-brand: #3c78a8;
+  --color-text-success: #166534;
+  --color-text-warning: #92400e;
+  --color-text-danger: #991b1b;
+  --color-text-reward: #b45309;
 
   /* Font Families */
-  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
-  --font-german: 'Noto Sans', 'Inter', sans-serif;
+  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+  --font-german: "Noto Sans", "Inter", sans-serif;
+
+  /* Typography Scale */
+  --text-2xs-size: 0.6875rem;
+  --text-xs-size: 0.75rem;
+  --text-sm-size: 0.875rem;
+  --text-base-size: 1rem;
+  --text-lg-size: 1.125rem;
+  --text-xl-size: 1.25rem;
+  --text-2xl-size: 1.5rem;
+  --text-3xl-size: 1.875rem;
+  --text-4xl-size: 2.25rem;
+  --text-5xl-size: 3rem;
+  --text-6xl-size: 3.5rem;
+  --text-7xl-size: 4rem;
+  --text-8xl-size: 4.5rem;
 }
 
 /* Base styles */
 body {
   font-family: var(--font-sans);
+  color: var(--color-text-primary);
+  line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -99,7 +188,6 @@ body {
 }
 
 @keyframes pulseFire {
-
   0%,
   100% {
     transform: scale(1);
@@ -168,7 +256,12 @@ body {
 }
 
 .animate-shimmer {
-  background: linear-gradient(90deg, transparent 25%, rgba(255, 255, 255, 0.3) 50%, transparent 75%);
+  background: linear-gradient(
+    90deg,
+    transparent 25%,
+    rgba(255, 255, 255, 0.3) 50%,
+    transparent 75%
+  );
   background-size: 200% 100%;
   animation: shimmer 2s infinite;
 }
@@ -225,7 +318,9 @@ body {
 
 .card-hover:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px -5px rgba(0, 0, 0, 0.1), 0 4px 10px -5px rgba(0, 0, 0, 0.05);
+  box-shadow:
+    0 8px 25px -5px rgba(0, 0, 0, 0.1),
+    0 4px 10px -5px rgba(0, 0, 0, 0.05);
 }
 
 /* ===== CHART BAR ANIMATION ===== */
@@ -299,29 +394,28 @@ body {
 }
 
 .mascot-empty-action {
-  background: #60A8E4;
+  background: #60a8e4;
   color: white;
 }
 
 .mascot-empty-action:hover {
-  background: #3C78A8;
+  background: #3c78a8;
   transform: translateY(-1px);
   box-shadow: 0 4px 12px rgba(96, 168, 228, 0.3);
 }
 
 .mascot-error-retry {
-  background: #3C78A8;
+  background: #3c78a8;
   color: white;
 }
 
 .mascot-error-retry:hover {
-  background: #3078B4;
+  background: #3078b4;
   transform: translateY(-1px);
   box-shadow: 0 4px 12px rgba(60, 120, 168, 0.3);
 }
 
 @keyframes mascotBounce {
-
   0%,
   100% {
     transform: translateY(0);
@@ -400,7 +494,11 @@ body {
   gap: 4px;
   padding: 4px 10px;
   border-radius: 20px;
-  background: linear-gradient(135deg, rgba(96, 168, 228, 0.12), rgba(46, 196, 182, 0.08));
+  background: linear-gradient(
+    135deg,
+    rgba(96, 168, 228, 0.12),
+    rgba(46, 196, 182, 0.08)
+  );
 }
 
 /* Sidebar backdrop overlay */
@@ -533,12 +631,44 @@ body {
 }
 
 .bottom-nav-item-active .bottom-nav-label {
-  color: #3C78A8;
+  color: #3c78a8;
   font-weight: 600;
 }
 
 .bottom-nav-item:not(.bottom-nav-item-active):active {
   transform: scale(0.95);
+}
+
+/* =====================================================================
+ * Exam in-progress — suppress the (learn) gamified shell.
+ *
+ * Spec source-of-truth:
+ *   - Task 15.1 (gamified-ui-asset-rollout)
+ *   - design.md §I.8 (Exam — formal credibility)
+ *   - requirements.md Req 10.1, 10.4
+ *
+ * `ExamInProgressChrome` toggles `data-exam-in-progress="true"` on
+ * `document.body` while mounted. These rules then hide every gamified
+ * surface owned by `MobileShell` so the exam canvas has no mascot
+ * animation, no streak chip, no XP/coin badge, and no game-flavoured
+ * bottom navigation (Req 10.1). The desktop sidebar is also collapsed
+ * to keep the formal credibility of the exam canvas (Req 10.4).
+ *
+ * Validates: Requirements 10.1, 10.4
+ * ===================================================================== */
+body[data-exam-in-progress="true"] .mobile-header,
+body[data-exam-in-progress="true"] .mobile-header-xp,
+body[data-exam-in-progress="true"] .mobile-header-logo,
+body[data-exam-in-progress="true"] .bottom-nav {
+  display: none !important;
+}
+
+body[data-exam-in-progress="true"] .mobile-main {
+  /* The chrome owns its own fixed-top/fixed-bottom spacing, so the
+   * shell's safe-area padding is no longer needed. */
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  margin-left: 0 !important;
 }
 
 /* Drawer sidebar override — remove border and width constraint */
@@ -548,74 +678,16 @@ body {
   height: 100%;
 }
 
-@keyframes fuxieMascotIdle {
-  0%, 100% {
-    transform: translateY(0) rotate(0deg);
-  }
-  50% {
-    transform: translateY(-3px) rotate(1deg);
-  }
-}
-
-@keyframes fuxieMascotCoach {
-  0%, 100% {
-    transform: translateY(0) rotate(0deg);
-  }
-  35% {
-    transform: translateY(-4px) rotate(-1deg);
-  }
-  70% {
-    transform: translateY(-1px) rotate(1.5deg);
-  }
-}
-
-@keyframes fuxieMascotReward {
-  0%, 100% {
-    transform: translateY(0) scale(1);
-  }
-  45% {
-    transform: translateY(-5px) scale(1.035);
-  }
-}
-
-@keyframes fuxieMascotSpeak {
-  0%, 100% {
-    transform: translateY(0) rotate(0deg) scale(1);
-  }
-  30% {
-    transform: translateY(-2px) rotate(-1deg) scale(1.015);
-  }
-  60% {
-    transform: translateY(0) rotate(1deg) scale(1.01);
-  }
-}
-
-.fuxie-mascot-motion-idle,
-.fuxie-mascot-motion-coach,
-.fuxie-mascot-motion-reward,
-.fuxie-mascot-motion-speak {
-  transform-origin: 50% 82%;
-  will-change: transform;
-}
-
-.fuxie-mascot-motion-idle {
-  animation: fuxieMascotIdle 4.8s ease-in-out infinite;
-}
-
-.fuxie-mascot-motion-coach {
-  animation: fuxieMascotCoach 5.2s ease-in-out infinite;
-}
-
-.fuxie-mascot-motion-reward {
-  animation: fuxieMascotReward 2.8s ease-in-out infinite;
-}
-
-.fuxie-mascot-motion-speak {
-  animation: fuxieMascotSpeak 2s ease-in-out infinite;
-}
+/* Mascot ambient motion (idle/coach/reward/speak) lives in
+ * `apps/web/src/styles/animations.css` and exposes the canonical class set
+ * `{animate-idle, animate-coach, animate-reward, animate-speak}` plus the
+ * `.fuxie-mascot-motion-*` legacy aliases. See spec
+ * `gamified-ui-asset-rollout` task 4.4 / Requirement 13.
+ */
 
 @keyframes fuxieLiveAssetMotion {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0) rotate(0deg) scale(1);
     filter: drop-shadow(0 12px 18px rgba(60, 120, 168, 0.16));
   }
@@ -630,7 +702,8 @@ body {
 }
 
 @keyframes fuxieLiveAssetShadow {
-  0%, 100% {
+  0%,
+  100% {
     opacity: 0.72;
     transform: translateX(-50%) scale(1);
   }
@@ -641,7 +714,8 @@ body {
 }
 
 @keyframes fuxieLiveAssetSpark {
-  0%, 100% {
+  0%,
+  100% {
     opacity: 0;
     transform: translate3d(0, 8px, 0) scale(0.7);
   }
@@ -687,7 +761,8 @@ body {
 }
 
 @keyframes fuxieLiveRiggedIdle {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0) rotate(0deg) scale(1);
   }
   40% {
@@ -699,7 +774,8 @@ body {
 }
 
 @keyframes fuxieLiveRiggedWave {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0) rotate(0deg) scale(1);
   }
   22% {
@@ -714,7 +790,8 @@ body {
 }
 
 @keyframes fuxieLiveRiggedTalk {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0) rotate(0deg) scale(1);
   }
   25% {
@@ -729,16 +806,19 @@ body {
 }
 
 @keyframes fuxieLiveRiggedListen {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0) rotate(0deg) scale(1);
   }
-  35%, 72% {
+  35%,
+  72% {
     transform: translateY(-2px) rotate(-4deg) scale(1.01);
   }
 }
 
 @keyframes fuxieLiveRiggedReward {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0) rotate(0deg) scale(1);
   }
   24% {
@@ -753,7 +833,8 @@ body {
 }
 
 @keyframes fuxieLiveRiggedTryAgain {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0) rotate(0deg) scale(1);
   }
   28% {
@@ -812,7 +893,8 @@ body {
 }
 
 @keyframes fuxieLiveRiggedSpark {
-  0%, 100% {
+  0%,
+  100% {
     opacity: 0;
     transform: translate3d(0, 10px, 0) scale(0.72);
   }
@@ -869,37 +951,51 @@ body {
 }
 
 @keyframes fuxieLive3dFrame1 {
-  0%, 23%, 100% {
+  0%,
+  23%,
+  100% {
     opacity: 1;
   }
-  24%, 99% {
+  24%,
+  99% {
     opacity: 0;
   }
 }
 
 @keyframes fuxieLive3dFrame2 {
-  0%, 24%, 49%, 100% {
+  0%,
+  24%,
+  49%,
+  100% {
     opacity: 0;
   }
-  25%, 48% {
+  25%,
+  48% {
     opacity: 1;
   }
 }
 
 @keyframes fuxieLive3dFrame3 {
-  0%, 49%, 74%, 100% {
+  0%,
+  49%,
+  74%,
+  100% {
     opacity: 0;
   }
-  50%, 73% {
+  50%,
+  73% {
     opacity: 1;
   }
 }
 
 @keyframes fuxieLive3dFrame4 {
-  0%, 74%, 100% {
+  0%,
+  74%,
+  100% {
     opacity: 0;
   }
-  75%, 99% {
+  75%,
+  99% {
     opacity: 1;
   }
 }
@@ -971,7 +1067,8 @@ body {
 }
 
 @keyframes fuxieGiftPulse {
-  0%, 100% {
+  0%,
+  100% {
     transform: scale(1);
     box-shadow: 0 0 0 0 rgba(255, 183, 3, 0.32);
   }
@@ -999,7 +1096,8 @@ body {
 }
 
 @keyframes fuxieShopReadyGlow {
-  0%, 100% {
+  0%,
+  100% {
     box-shadow: 0 0 0 rgba(255, 183, 3, 0);
   }
   50% {
@@ -1031,7 +1129,8 @@ body {
 }
 
 @keyframes fuxieShopPendingPulse {
-  0%, 100% {
+  0%,
+  100% {
     border-color: rgba(255, 209, 102, 0.34);
   }
   50% {

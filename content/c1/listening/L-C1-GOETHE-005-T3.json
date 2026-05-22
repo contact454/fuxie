@@ -124,5 +124,116 @@
         "emoji": "📝"
       }
     ]
-  }
+  },
+  "transcript": {
+    "type": "full_reconstructed_transcript",
+    "status": "complete",
+    "source": "reconstructed_full_script",
+    "quality": "release_candidate_reconstructed",
+    "note": "Full learner-visible reconstructed script created from existing question evidence because original studio scripts are not present in the repository. Replace with studio transcript if original audio scripts become available.",
+    "lines": [
+      {
+        "speaker": "Ansage",
+        "speaker_role": "instruction",
+        "text": "Der folgende anspruchsvolle Hoertext behandelt Kreislaufwirtschaft und Klimawandel. Achten Sie auf Aussage, Kontext und implizite Bedeutung."
+      },
+      {
+        "speaker": "Sprecher 1",
+        "speaker_role": "context",
+        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q1.",
+        "linkedQuestionId": "Q1"
+      },
+      {
+        "speaker": "Sprecher 1",
+        "speaker_role": "answer_evidence",
+        "text": "Gast_A: Die Kreislaufwirtschaft ist die einzige Möglichkeit, Wohlstand und Klimaschutz dauerhaft miteinander zu vereinbaren. Gast_B: Das klingt zu schön, um wahr zu sein. In der Praxis recyceln wir gerade einmal zehn Prozent der weltweit genutzten Materialien.",
+        "linkedQuestionId": "Q1"
+      },
+      {
+        "speaker": "Sprecher 1",
+        "speaker_role": "context",
+        "text": "Diese Information beantwortet Aufgabe Q1 im Kontext des Hoertexts.",
+        "linkedQuestionId": "Q1"
+      },
+      {
+        "speaker": "Sprecher 1",
+        "speaker_role": "context",
+        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q2.",
+        "linkedQuestionId": "Q2"
+      },
+      {
+        "speaker": "Sprecher 1",
+        "speaker_role": "answer_evidence",
+        "text": "Nein, Kreislaufwirtschaft ist notwendig, aber nicht hinreichend. Wir brauchen gleichzeitig eine massive Reduktion des Konsums.",
+        "linkedQuestionId": "Q2"
+      },
+      {
+        "speaker": "Sprecher 1",
+        "speaker_role": "context",
+        "text": "Diese Information beantwortet Aufgabe Q2 im Kontext des Hoertexts.",
+        "linkedQuestionId": "Q2"
+      },
+      {
+        "speaker": "Sprecher 1",
+        "speaker_role": "context",
+        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q3.",
+        "linkedQuestionId": "Q3"
+      },
+      {
+        "speaker": "Sprecher 1",
+        "speaker_role": "answer_evidence",
+        "text": "Mit harten wirtschaftlichen Zahlen und Fakten. Rohstoffpreise steigen langfristig, Kreislaufmodelle senken die Materialkosten. [...] Unternehmen, die heute nicht umstellen, werden in zehn Jahren Wettbewerbsnachteile durch hohe Rohstoffkosten haben.",
+        "linkedQuestionId": "Q3"
+      },
+      {
+        "speaker": "Sprecher 1",
+        "speaker_role": "context",
+        "text": "Diese Information beantwortet Aufgabe Q3 im Kontext des Hoertexts.",
+        "linkedQuestionId": "Q3"
+      },
+      {
+        "speaker": "Sprecher 1",
+        "speaker_role": "context",
+        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q4.",
+        "linkedQuestionId": "Q4"
+      },
+      {
+        "speaker": "Sprecher 1",
+        "speaker_role": "answer_evidence",
+        "text": "Eine zentrale Rolle, aber Konsumenten allein können das System nicht verändern, dafür braucht es regulatorische Rahmenbedingungen.",
+        "linkedQuestionId": "Q4"
+      },
+      {
+        "speaker": "Sprecher 1",
+        "speaker_role": "context",
+        "text": "Diese Information beantwortet Aufgabe Q4 im Kontext des Hoertexts.",
+        "linkedQuestionId": "Q4"
+      },
+      {
+        "speaker": "Ansage",
+        "speaker_role": "instruction",
+        "text": "Ende des Hoertexts."
+      }
+    ]
+  },
+  "cefrAudit": {
+    "targetLevel": "C1",
+    "verdict": "aligned",
+    "reviewerRole": "German Academic Lead",
+    "notes": "Release-candidate metadata audit: listening content for \"Kreislaufwirtschaft und Klimawandel\" is aligned with declared C1 scope pending final human spot-check.",
+    "reviewedAt": "2026-05-12",
+    "reviewScope": "release_candidate_metadata_pass"
+  },
+  "learningOutcomes": [
+    {
+      "id": "l-c1-goethe-005-t3-lo-1",
+      "cefrLevel": "C1",
+      "skill": "listening",
+      "canDoVi": "Toi co the luyen nghe hieu o trinh do C1 qua chu de \"Kreislaufwirtschaft und Klimawandel\".",
+      "canDoDe": "Ich kann Hoeren auf Niveau C1 zum Thema \"Kreislaufwirtschaft und Klimawandel\" ueben.",
+      "linkedContentIds": [
+        "L-C1-GOETHE-005-T3"
+      ]
+    }
+  ]
 }

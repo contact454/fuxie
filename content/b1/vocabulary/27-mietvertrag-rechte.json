@@ -90,7 +90,8 @@
       "exampleSentence2": "Nach wochenlanger Wohnungssuche habe ich endlich etwas gefunden.",
       "exampleTranslation2": "Sau nhiều tuần tìm kiếm căn hộ, cuối cùng tôi đã tìm thấy một cái.",
       "imageUrl": "/images/vocab/b1-mietvertrag-rechte/die-wohnungssuche.png",
-      "meaningDe": "Der Prozess, bei dem man versucht, ein passendes neues Zuhause zu finden."
+      "meaningDe": "Der Prozess, bei dem man versucht, ein passendes neues Zuhause zu finden.",
+      "pluralStatus": "not_applicable_or_needs_review"
     },
     {
       "word": "Besichtigung",
@@ -244,7 +245,20 @@
       "exampleSentence2": "Er vermietet seine Ferienwohnung an Touristen.",
       "exampleTranslation2": "Anh ấy cho thuê căn hộ nghỉ dưỡng của mình cho khách du lịch.",
       "imageUrl": "/images/vocab/b1-mietvertrag-rechte/vermieten.png",
-      "meaningDe": "Eine Wohnung gegen Bezahlung an jemanden geben."
+      "meaningDe": "Eine Wohnung gegen Bezahlung an jemanden geben.",
+      "conjugation": {
+        "praesens": {
+          "ich": "vermiete",
+          "du": "vermietst",
+          "er_sie_es": "vermietet",
+          "wir": "vermieten",
+          "ihr": "vermietet",
+          "sie_Sie": "vermieten"
+        },
+        "isIrregular": false,
+        "isSeparable": false,
+        "reviewStatus": "auto_generated_needs_spot_check"
+      }
     },
     {
       "word": "beheben",
@@ -258,7 +272,20 @@
       "exampleSentence2": "Ich erwarte, dass der Vermieter die Mängel umgehend behebt.",
       "exampleTranslation2": "Tôi mong chủ nhà sẽ khắc phục các khiếm khuyết ngay lập tức.",
       "imageUrl": "/images/vocab/b1-mietvertrag-rechte/beheben.png",
-      "meaningDe": "Ein Problem oder einen Fehler korrigieren oder reparieren."
+      "meaningDe": "Ein Problem oder einen Fehler korrigieren oder reparieren.",
+      "conjugation": {
+        "praesens": {
+          "ich": "behebe",
+          "du": "behebst",
+          "er_sie_es": "behebt",
+          "wir": "beheben",
+          "ihr": "behebt",
+          "sie_Sie": "beheben"
+        },
+        "isIrregular": false,
+        "isSeparable": false,
+        "reviewStatus": "auto_generated_needs_spot_check"
+      }
     },
     {
       "word": "haften",
@@ -272,7 +299,20 @@
       "exampleSentence2": "Wer haftet bei einem Rohrbruch in der Wohnung?",
       "exampleTranslation2": "Ai chịu trách nhiệm khi đường ống nước trong căn hộ bị vỡ?",
       "imageUrl": "/images/vocab/b1-mietvertrag-rechte/haften.png",
-      "meaningDe": "Verantwortlich sein und zum Beispiel für einen Schaden bezahlen."
+      "meaningDe": "Verantwortlich sein und zum Beispiel für einen Schaden bezahlen.",
+      "conjugation": {
+        "praesens": {
+          "ich": "hafte",
+          "du": "haftst",
+          "er_sie_es": "haftet",
+          "wir": "haften",
+          "ihr": "haftet",
+          "sie_Sie": "haften"
+        },
+        "isIrregular": false,
+        "isSeparable": false,
+        "reviewStatus": "auto_generated_needs_spot_check"
+      }
     },
     {
       "word": "defekt",
@@ -343,6 +383,26 @@
       "exampleTranslation2": "Tất cả các sửa chữa sẽ được thực hiện theo thỏa thuận.",
       "imageUrl": "/images/vocab/b1-mietvertrag-rechte/gemaess.png",
       "meaningDe": "So, wie es in einer Regel oder einem Vertrag geschrieben steht."
+    }
+  ],
+  "cefrAudit": {
+    "targetLevel": "B1",
+    "verdict": "aligned",
+    "reviewerRole": "German Academic Lead",
+    "notes": "Release-candidate metadata audit: vocabulary content for \"Mietvertrag & Wohnrechte\" is aligned with declared B1 scope pending final human spot-check.",
+    "reviewedAt": "2026-05-12",
+    "reviewScope": "release_candidate_metadata_pass"
+  },
+  "learningOutcomes": [
+    {
+      "id": "b1-mietvertrag-rechte-lo-1",
+      "cefrLevel": "B1",
+      "skill": "vocabulary",
+      "canDoVi": "Toi co the luyen tu vung o trinh do B1 qua chu de \"Mietvertrag & Wohnrechte\".",
+      "canDoDe": "Ich kann Wortschatz auf Niveau B1 zum Thema \"Mietvertrag & Wohnrechte\" ueben.",
+      "linkedContentIds": [
+        "b1-mietvertrag-rechte"
+      ]
     }
   ]
 }

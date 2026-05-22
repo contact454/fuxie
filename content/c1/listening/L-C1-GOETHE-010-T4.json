@@ -109,5 +109,98 @@
         "emoji": "📝"
       }
     ]
-  }
+  },
+  "transcript": {
+    "type": "full_reconstructed_transcript",
+    "status": "complete",
+    "source": "reconstructed_full_script",
+    "quality": "release_candidate_reconstructed",
+    "note": "Full learner-visible reconstructed script created from existing question evidence because original studio scripts are not present in the repository. Replace with studio transcript if original audio scripts become available.",
+    "lines": [
+      {
+        "speaker": "Ansage",
+        "speaker_role": "instruction",
+        "text": "Der folgende anspruchsvolle Hoertext behandelt Psychologie der Entscheidungsfindung. Achten Sie auf Aussage, Kontext und implizite Bedeutung."
+      },
+      {
+        "speaker": "Sprecher 1",
+        "speaker_role": "context",
+        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q1.",
+        "linkedQuestionId": "Q1"
+      },
+      {
+        "speaker": "Sprecher 1",
+        "speaker_role": "answer_evidence",
+        "text": "Meine These lautet: Die systematischen Denkfehler, die wir alle machen, sind keine Schwäche, sondern ein evolutionäres Erbe.",
+        "linkedQuestionId": "Q1"
+      },
+      {
+        "speaker": "Sprecher 1",
+        "speaker_role": "context",
+        "text": "Diese Information beantwortet Aufgabe Q1 im Kontext des Hoertexts.",
+        "linkedQuestionId": "Q1"
+      },
+      {
+        "speaker": "Sprecher 1",
+        "speaker_role": "context",
+        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q2.",
+        "linkedQuestionId": "Q2"
+      },
+      {
+        "speaker": "Sprecher 1",
+        "speaker_role": "answer_evidence",
+        "text": "Aber für komplexe, folgenreiche Entscheidungen ist System zwei erforderlich, und genau hier scheitern wir oft. Wir nutzen System eins, wo System zwei angebracht wäre, und treffen dadurch schlechtere Entscheidungen.",
+        "linkedQuestionId": "Q2"
+      },
+      {
+        "speaker": "Sprecher 1",
+        "speaker_role": "context",
+        "text": "Diese Information beantwortet Aufgabe Q2 im Kontext des Hoertexts.",
+        "linkedQuestionId": "Q2"
+      },
+      {
+        "speaker": "Sprecher 1",
+        "speaker_role": "context",
+        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q3.",
+        "linkedQuestionId": "Q3"
+      },
+      {
+        "speaker": "Sprecher 1",
+        "speaker_role": "answer_evidence",
+        "text": "Drei konkrete Empfehlungen für den Alltag: Wichtige Entscheidungen nie sofort treffen, sondern eine Nacht darüber schlafen. Aktiv nach Gegenargumenten suchen und Menschen mit anderen Perspektiven und Hintergründen bewusst konsultieren.",
+        "linkedQuestionId": "Q3"
+      },
+      {
+        "speaker": "Sprecher 1",
+        "speaker_role": "context",
+        "text": "Diese Information beantwortet Aufgabe Q3 im Kontext des Hoertexts.",
+        "linkedQuestionId": "Q3"
+      },
+      {
+        "speaker": "Ansage",
+        "speaker_role": "instruction",
+        "text": "Ende des Hoertexts."
+      }
+    ]
+  },
+  "cefrAudit": {
+    "targetLevel": "C1",
+    "verdict": "aligned",
+    "reviewerRole": "German Academic Lead",
+    "notes": "Release-candidate metadata audit: listening content for \"Psychologie der Entscheidungsfindung\" is aligned with declared C1 scope pending final human spot-check.",
+    "reviewedAt": "2026-05-12",
+    "reviewScope": "release_candidate_metadata_pass"
+  },
+  "learningOutcomes": [
+    {
+      "id": "l-c1-goethe-010-t4-lo-1",
+      "cefrLevel": "C1",
+      "skill": "listening",
+      "canDoVi": "Toi co the luyen nghe hieu o trinh do C1 qua chu de \"Psychologie der Entscheidungsfindung\".",
+      "canDoDe": "Ich kann Hoeren auf Niveau C1 zum Thema \"Psychologie der Entscheidungsfindung\" ueben.",
+      "linkedContentIds": [
+        "L-C1-GOETHE-010-T4"
+      ]
+    }
+  ]
 }

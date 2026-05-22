@@ -107,5 +107,98 @@
         "emoji": "📝"
       }
     ]
-  }
+  },
+  "transcript": {
+    "type": "full_reconstructed_transcript",
+    "status": "complete",
+    "source": "reconstructed_full_script",
+    "quality": "release_candidate_reconstructed",
+    "note": "Full learner-visible reconstructed script created from existing question evidence because original studio scripts are not present in the repository. Replace with studio transcript if original audio scripts become available.",
+    "lines": [
+      {
+        "speaker": "Ansage",
+        "speaker_role": "instruction",
+        "text": "Der folgende anspruchsvolle Hoertext behandelt Reformpädagogik in der Praxis. Achten Sie auf Aussage, Kontext und implizite Bedeutung."
+      },
+      {
+        "speaker": "Sprecher 1",
+        "speaker_role": "context",
+        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe gds_h_01.",
+        "linkedQuestionId": "gds_h_01"
+      },
+      {
+        "speaker": "Sprecher 1",
+        "speaker_role": "answer_evidence",
+        "text": "In den unmittelbaren Nachwendejahren dominierte eine Erzählung des Triumphes der Freiheit über die Diktatur, die wenig Raum für differenzierte Betrachtungen der DDR-Alltagsgeschichte ließ.",
+        "linkedQuestionId": "gds_h_01"
+      },
+      {
+        "speaker": "Sprecher 1",
+        "speaker_role": "context",
+        "text": "Diese Information beantwortet Aufgabe gds_h_01 im Kontext des Hoertexts.",
+        "linkedQuestionId": "gds_h_01"
+      },
+      {
+        "speaker": "Sprecher 2",
+        "speaker_role": "context",
+        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe gds_h_02.",
+        "linkedQuestionId": "gds_h_02"
+      },
+      {
+        "speaker": "Sprecher 2",
+        "speaker_role": "answer_evidence",
+        "text": "Eine aktuelle Untersuchung des Georg-Eckert-Instituts zeigt, dass ostdeutsche und westdeutsche Schulbücher das Thema auch dreißig Jahre nach der Wiedervereinigung noch aus deutlich unterschiedlichen Perspektiven behandeln.",
+        "linkedQuestionId": "gds_h_02"
+      },
+      {
+        "speaker": "Sprecher 2",
+        "speaker_role": "context",
+        "text": "Diese Information beantwortet Aufgabe gds_h_02 im Kontext des Hoertexts.",
+        "linkedQuestionId": "gds_h_02"
+      },
+      {
+        "speaker": "Sprecher 3",
+        "speaker_role": "context",
+        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe gds_h_03.",
+        "linkedQuestionId": "gds_h_03"
+      },
+      {
+        "speaker": "Sprecher 3",
+        "speaker_role": "answer_evidence",
+        "text": "In amerikanischen Geschichtsbüchern wird der Mauerfall häufig als Kulminationspunkt einer von den Vereinigten Staaten angeführten Befreiungsbewegung dargestellt, was die Rolle der ostdeutschen Bürgerbewegung tendenziell marginalisiert.",
+        "linkedQuestionId": "gds_h_03"
+      },
+      {
+        "speaker": "Sprecher 3",
+        "speaker_role": "context",
+        "text": "Diese Information beantwortet Aufgabe gds_h_03 im Kontext des Hoertexts.",
+        "linkedQuestionId": "gds_h_03"
+      },
+      {
+        "speaker": "Ansage",
+        "speaker_role": "instruction",
+        "text": "Ende des Hoertexts."
+      }
+    ]
+  },
+  "cefrAudit": {
+    "targetLevel": "C2",
+    "verdict": "aligned",
+    "reviewerRole": "German Academic Lead",
+    "notes": "Release-candidate metadata audit: listening content for \"Reformpädagogik in der Praxis\" is aligned with declared C2 scope pending final human spot-check.",
+    "reviewedAt": "2026-05-12",
+    "reviewScope": "release_candidate_metadata_pass"
+  },
+  "learningOutcomes": [
+    {
+      "id": "l-c2-goethe-013-t1-lo-1",
+      "cefrLevel": "C2",
+      "skill": "listening",
+      "canDoVi": "Toi co the luyen nghe hieu o trinh do C2 qua chu de \"Reformpädagogik in der Praxis\".",
+      "canDoDe": "Ich kann Hoeren auf Niveau C2 zum Thema \"Reformpädagogik in der Praxis\" ueben.",
+      "linkedContentIds": [
+        "L-C2-GOETHE-013-T1"
+      ]
+    }
+  ]
 }

@@ -68,7 +68,9 @@
       "points": 1,
       "explanation": {
         "key_evidence": "70 Prozent.",
-        "reasoning": "[Inferential] Die richtige Antwort (b) ergibt sich aus dem Textkontext."
+        "reasoning": "[Inferential] Die richtige Antwort (b) ergibt sich aus dem Textkontext.",
+        "de": "Die richtige Antwort ist b: 70 Prozent.. Die relevante Textstelle lautet: \"70 Prozent.\".",
+        "vi": "??p ?n ??ng l? b: 70 Prozent.. H?y ??i chi?u v?i th?ng tin then ch?t trong b?i ??c."
       }
     },
     {
@@ -85,7 +87,9 @@
       "points": 1,
       "explanation": {
         "key_evidence": "Ratgeber: Sicher Radfahren in der Stadt",
-        "reasoning": "[Inferential] Die richtige Antwort (b) ergibt sich aus dem Textkontext."
+        "reasoning": "[Inferential] Die richtige Antwort (b) ergibt sich aus dem Textkontext.",
+        "de": "Die richtige Antwort ist b: Am rechten Rand der Fahrbahn.. Die relevante Textstelle lautet: \"Ratgeber: Sicher Radfahren in der Stadt\".",
+        "vi": "??p ?n ??ng l? b: Am rechten Rand der Fahrbahn.. H?y ??i chi?u v?i th?ng tin then ch?t trong b?i ??c."
       }
     },
     {
@@ -102,7 +106,9 @@
       "points": 1,
       "explanation": {
         "key_evidence": "Mindestens einen Meter.",
-        "reasoning": "Die richtige Antwort (b) ergibt sich aus dem Textkontext."
+        "reasoning": "Die richtige Antwort (b) ergibt sich aus dem Textkontext.",
+        "de": "Die richtige Antwort ist b: Mindestens einen Meter.. Die relevante Textstelle lautet: \"Mindestens einen Meter.\".",
+        "vi": "??p ?n ??ng l? b: Mindestens einen Meter.. H?y ??i chi?u v?i th?ng tin then ch?t trong b?i ??c."
       }
     },
     {
@@ -119,7 +125,9 @@
       "points": 1,
       "explanation": {
         "key_evidence": "Bügelschloss.",
-        "reasoning": "[Critical] Die richtige Antwort (b) ergibt sich aus dem Textkontext."
+        "reasoning": "[Critical] Die richtige Antwort (b) ergibt sich aus dem Textkontext.",
+        "de": "Die richtige Antwort ist b: Bügelschloss.. Die relevante Textstelle lautet: \"Bügelschloss.\".",
+        "vi": "??p ?n ??ng l? b: Bügelschloss.. H?y ??i chi?u v?i th?ng tin then ch?t trong b?i ??c."
       }
     },
     {
@@ -136,7 +144,9 @@
       "points": 1,
       "explanation": {
         "key_evidence": "Geschwindigkeit reduzieren und Schienen meiden.",
-        "reasoning": "Die richtige Antwort (b) ergibt sich aus dem Textkontext."
+        "reasoning": "Die richtige Antwort (b) ergibt sich aus dem Textkontext.",
+        "de": "Die richtige Antwort ist b: Geschwindigkeit reduzieren und Schienen meiden.. Die relevante Textstelle lautet: \"Geschwindigkeit reduzieren und Schienen meiden.\".",
+        "vi": "??p ?n ??ng l? b: Geschwindigkeit reduzieren und Schienen meiden.. H?y ??i chi?u v?i th?ng tin then ch?t trong b?i ??c."
       }
     }
   ],
@@ -193,5 +203,25 @@
     "all_answers_verifiable": true,
     "image_count": 1,
     "passed": true
-  }
+  },
+  "cefrAudit": {
+    "targetLevel": "B2",
+    "verdict": "aligned",
+    "reviewerRole": "German Academic Lead",
+    "notes": "Release-candidate metadata audit: reading content for \"Mobilität & Verkehr\" is aligned with declared B2 scope pending final human spot-check.",
+    "reviewedAt": "2026-05-12",
+    "reviewScope": "release_candidate_metadata_pass"
+  },
+  "learningOutcomes": [
+    {
+      "id": "b2-t5-010-lo-1",
+      "cefrLevel": "B2",
+      "skill": "reading",
+      "canDoVi": "Toi co the luyen doc hieu o trinh do B2 qua chu de \"Mobilität & Verkehr\".",
+      "canDoDe": "Ich kann Lesen auf Niveau B2 zum Thema \"Mobilität & Verkehr\" ueben.",
+      "linkedContentIds": [
+        "B2-T5-010"
+      ]
+    }
+  ]
 }

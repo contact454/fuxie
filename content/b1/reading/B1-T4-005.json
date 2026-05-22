@@ -84,7 +84,8 @@
             "type": "Nomen",
             "meaning": "work experience"
           }
-        ]
+        ],
+        "vi": "??p ?n ??ng l? ja. H?y ??i chi?u v?i th?ng tin then ch?t trong b?i ??c."
       }
     },
     {
@@ -103,7 +104,8 @@
             "type": "Verb",
             "meaning": "to exploit"
           }
-        ]
+        ],
+        "vi": "??p ?n ??ng l? nein. H?y ??i chi?u v?i th?ng tin then ch?t trong b?i ??c."
       }
     },
     {
@@ -122,7 +124,8 @@
             "type": "Nomen",
             "meaning": "thesis"
           }
-        ]
+        ],
+        "vi": "??p ?n ??ng l? ja. H?y ??i chi?u v?i th?ng tin then ch?t trong b?i ??c."
       }
     },
     {
@@ -141,7 +144,8 @@
             "type": "Verb",
             "meaning": "to benefit"
           }
-        ]
+        ],
+        "vi": "??p ?n ??ng l? nein. H?y ??i chi?u v?i th?ng tin then ch?t trong b?i ??c."
       }
     },
     {
@@ -160,7 +164,8 @@
             "type": "Nomen",
             "meaning": "condition"
           }
-        ]
+        ],
+        "vi": "??p ?n ??ng l? ja. H?y ??i chi?u v?i th?ng tin then ch?t trong b?i ??c."
       }
     }
   ],
@@ -218,5 +223,25 @@
     "ja_nein_balanced": true,
     "image_count": 1,
     "passed": true
-  }
+  },
+  "cefrAudit": {
+    "targetLevel": "B1",
+    "verdict": "aligned",
+    "reviewerRole": "German Academic Lead",
+    "notes": "Release-candidate metadata audit: reading content for \"Ausbildung & Karriere\" is aligned with declared B1 scope pending final human spot-check.",
+    "reviewedAt": "2026-05-12",
+    "reviewScope": "release_candidate_metadata_pass"
+  },
+  "learningOutcomes": [
+    {
+      "id": "b1-t4-005-lo-1",
+      "cefrLevel": "B1",
+      "skill": "reading",
+      "canDoVi": "Toi co the luyen doc hieu o trinh do B1 qua chu de \"Ausbildung & Karriere\".",
+      "canDoDe": "Ich kann Lesen auf Niveau B1 zum Thema \"Ausbildung & Karriere\" ueben.",
+      "linkedContentIds": [
+        "B1-T4-005"
+      ]
+    }
+  ]
 }

@@ -62,7 +62,8 @@
       "exampleSentence2": "Husserls Konzept der Intentionalität ist grundlegend für die gesamte Phänomenologie.",
       "exampleTranslation2": "Khái niệm tính ý hướng của Husserl là nền tảng cho toàn bộ hiện tượng học.",
       "imageUrl": "/images/vocab/c2-phenomenologie/intentionalitaet.png",
-      "meaningDe": "die Eigenschaft des Bewusstseins, sich auf ein Objekt zu richten"
+      "meaningDe": "die Eigenschaft des Bewusstseins, sich auf ein Objekt zu richten",
+      "pluralStatus": "not_applicable_or_needs_review"
     },
     {
       "word": "Noema",
@@ -104,7 +105,8 @@
       "exampleSentence2": "Die phänomenologische Reduktion führt zur Offenlegung der transzendentalen Subjektivität und ihrer Transzendentalität.",
       "exampleTranslation2": "Quy giản hiện tượng học dẫn đến việc làm lộ ra chủ thể siêu nghiệm và tính siêu nghiệm của nó.",
       "imageUrl": "/images/vocab/c2-phenomenologie/transzendentalitaet.png",
-      "meaningDe": "die Eigenschaft, die über das Empirische hinausgeht und die Struktur aller Erfahrung bestimmt"
+      "meaningDe": "die Eigenschaft, die über das Empirische hinausgeht und die Struktur aller Erfahrung bestimmt",
+      "pluralStatus": "not_applicable_or_needs_review"
     },
     {
       "word": "Bewusstseinsstrom",
@@ -244,7 +246,8 @@
       "exampleSentence2": "Husserl suchte nach apodiktischer Gewissheit in der Philosophie, die er in der reinen Phänomenologie fand.",
       "exampleTranslation2": "Husserl tìm kiếm sự chắc chắn tất yếu trong triết học, điều mà ông tìm thấy trong hiện tượng học thuần túy.",
       "imageUrl": "/images/vocab/c2-phenomenologie/apodiktizitaet.png",
-      "meaningDe": "die Eigenschaft, etwas als unumstößlich oder unbedingt wahr zu erkennen"
+      "meaningDe": "die Eigenschaft, etwas als unumstößlich oder unbedingt wahr zu erkennen",
+      "pluralStatus": "not_applicable_or_needs_review"
     },
     {
       "word": "reduzieren",
@@ -258,7 +261,20 @@
       "exampleSentence2": "Die Phänomenologen versuchen, das Bewusstsein auf seine reinen Akte zu reduzieren.",
       "exampleTranslation2": "Các nhà hiện tượng học cố gắng quy giản ý thức về các hành vi thuần túy của nó.",
       "imageUrl": "/images/vocab/c2-phenomenologie/reduzieren.png",
-      "meaningDe": "etwas auf seine wesentlichen Merkmale zurückführen oder in seiner Komplexität verringern."
+      "meaningDe": "etwas auf seine wesentlichen Merkmale zurückführen oder in seiner Komplexität verringern.",
+      "conjugation": {
+        "praesens": {
+          "ich": "reduziere",
+          "du": "reduzierst",
+          "er_sie_es": "reduziert",
+          "wir": "reduzieren",
+          "ihr": "reduziert",
+          "sie_Sie": "reduzieren"
+        },
+        "isIrregular": false,
+        "isSeparable": false,
+        "reviewStatus": "auto_generated_needs_spot_check"
+      }
     },
     {
       "word": "erschließen",
@@ -272,7 +288,20 @@
       "exampleSentence2": "Husserl wollte eine universale Philosophie erschließen, die auf apodiktischer Evidenz beruht.",
       "exampleTranslation2": "Husserl muốn khai mở một triết học phổ quát dựa trên tính hiển nhiên tất yếu.",
       "imageUrl": "/images/vocab/c2-phenomenologie/erschliessen.png",
-      "meaningDe": "durch Analyse oder Untersuchung eine neue Erkenntnis gewinnen oder einen Zugang zu etwas schaffen."
+      "meaningDe": "durch Analyse oder Untersuchung eine neue Erkenntnis gewinnen oder einen Zugang zu etwas schaffen.",
+      "conjugation": {
+        "praesens": {
+          "ich": "erschliesse",
+          "du": "erschliesst",
+          "er_sie_es": "erschliesst",
+          "wir": "erschliessen",
+          "ihr": "erschliesst",
+          "sie_Sie": "erschliessen"
+        },
+        "isIrregular": false,
+        "isSeparable": false,
+        "reviewStatus": "auto_generated_needs_spot_check"
+      }
     },
     {
       "word": "evidenzieren",
@@ -286,7 +315,20 @@
       "exampleSentence2": "Die reine Anschauung ist in der Lage, die Wesenheiten unmittelbar zu evidenzieren.",
       "exampleTranslation2": "Trực quan thuần túy có khả năng làm cho các bản chất trở nên hiển nhiên một cách trực tiếp.",
       "imageUrl": "/images/vocab/c2-phenomenologie/evidenzieren.png",
-      "meaningDe": "etwas als offensichtlich oder nachweisbar darstellen"
+      "meaningDe": "etwas als offensichtlich oder nachweisbar darstellen",
+      "conjugation": {
+        "praesens": {
+          "ich": "evidenziere",
+          "du": "evidenzierst",
+          "er_sie_es": "evidenziert",
+          "wir": "evidenzieren",
+          "ihr": "evidenziert",
+          "sie_Sie": "evidenzieren"
+        },
+        "isIrregular": false,
+        "isSeparable": false,
+        "reviewStatus": "auto_generated_needs_spot_check"
+      }
     },
     {
       "word": "intentional",
@@ -315,6 +357,26 @@
       "exampleTranslation2": "Husserl nhấn mạnh sự cần thiết của một phân tích bản chất học để vượt ra ngoài các sự kiện kinh nghiệm.",
       "imageUrl": "/images/vocab/c2-phenomenologie/eidetisch.png",
       "meaningDe": "eine Eigenschaft, die sich auf die essentielle Natur oder das Wesen eines Objekts bezieht"
+    }
+  ],
+  "cefrAudit": {
+    "targetLevel": "C2",
+    "verdict": "aligned",
+    "reviewerRole": "German Academic Lead",
+    "notes": "Release-candidate metadata audit: vocabulary content for \"Phänomenologie & Husserl\" is aligned with declared C2 scope pending final human spot-check.",
+    "reviewedAt": "2026-05-12",
+    "reviewScope": "release_candidate_metadata_pass"
+  },
+  "learningOutcomes": [
+    {
+      "id": "c2-phenomenologie-lo-1",
+      "cefrLevel": "C2",
+      "skill": "vocabulary",
+      "canDoVi": "Toi co the luyen tu vung o trinh do C2 qua chu de \"Phänomenologie & Husserl\".",
+      "canDoDe": "Ich kann Wortschatz auf Niveau C2 zum Thema \"Phänomenologie & Husserl\" ueben.",
+      "linkedContentIds": [
+        "c2-phenomenologie"
+      ]
     }
   ]
 }

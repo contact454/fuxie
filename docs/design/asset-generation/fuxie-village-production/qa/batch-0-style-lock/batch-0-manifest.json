@@ -1,0 +1,224 @@
+{
+  "project": "Fuxie Image Production Sprint",
+  "batch": 0,
+  "batch_name": "Style Lock",
+  "date": "2026-05-15",
+  "tool_mode": "built-in image_gen source generation plus local chroma-key removal",
+  "style_lock": {
+    "direction": "Fuxie German Village",
+    "mascot": "bright sky-blue fox-like Fuxie coach, teal hoodie/accessories, soft white face/chest, rounded 3D clay-like mobile-game style",
+    "palette": {
+      "sky_blue": "#60A8E4",
+      "deep_blue": "#3C78A8",
+      "teal": "#2EC4B6",
+      "soft_sky": "#F3FBFF",
+      "reward_amber": "#FFB703"
+    },
+    "rules": [
+      "sky blue and teal lead the brand identity",
+      "amber is reserved for reward emphasis",
+      "assets must read at small UI sizes",
+      "cutout assets must pass alpha QA before runtime handoff",
+      "no external-game/IP resemblance, no Nintendo-like or Animal Crossing-like elements"
+    ]
+  },
+  "directories": {
+    "source": "docs/design/asset-generation/fuxie-village-production/source",
+    "alpha": "docs/design/asset-generation/fuxie-village-production/alpha",
+    "runtime": "docs/design/asset-generation/fuxie-village-production/runtime",
+    "qa": "docs/design/asset-generation/fuxie-village-production/qa"
+  },
+  "qa_artifacts": {
+    "alpha_qa_json": "docs/design/asset-generation/fuxie-village-production/qa/batch-0-alpha-qa.json",
+    "alpha_contact_sheet": "docs/design/asset-generation/fuxie-village-production/qa/batch-0-alpha-contact-sheet.png"
+  },
+  "asset_count": 6,
+  "assets": [
+    {
+      "asset_id": "b0_style_mascot_reference",
+      "name": "Mascot Reference",
+      "ui_role": "Canonical Fuxie style reference for future mascot poses",
+      "asset_type": "cutout_style_lock",
+      "export_size": "source large, alpha master, runtime 512/1024",
+      "prompt": "Canonical full-body 3D Fuxie mascot reference for a German-learning mobile app: bright sky-blue fox-like learning coach, teal hoodie, soft white face/chest, large warm eyes, rounded clay-like mobile game style, centered full-body 3/4 front view on flat #ff00ff chroma-key background, no text, no watermark, original IP only.",
+      "negative_prompt": "Avoid realistic fur, orange fox dominance, beige/brown dominance, leaf motifs, external-game resemblance, Nintendo-like or Animal Crossing-like elements, clutter, background objects, cast shadows, contact shadows, reflections.",
+      "paths": {
+        "source": "docs/design/asset-generation/fuxie-village-production/source/b0_style_mascot_reference_source.png",
+        "alpha_png": "docs/design/asset-generation/fuxie-village-production/alpha/b0_style_mascot_reference.png",
+        "runtime_png_512": "docs/design/asset-generation/fuxie-village-production/runtime/png-512/b0_style_mascot_reference-512.png",
+        "runtime_png_1024": "docs/design/asset-generation/fuxie-village-production/runtime/png-1024/b0_style_mascot_reference-1024.png",
+        "runtime_webp_512": "docs/design/asset-generation/fuxie-village-production/runtime/webp-512/b0_style_mascot_reference-512.webp",
+        "runtime_webp_1024": "docs/design/asset-generation/fuxie-village-production/runtime/webp-1024/b0_style_mascot_reference-1024.webp"
+      },
+      "alpha_requirement": "transparent corners, alpha channel present, no residual chroma-key fringe in visible pixels",
+      "qa": {
+        "status": "pass",
+        "transparent_corners": true,
+        "residual_key_like_pixels_alpha_gt_8": 0,
+        "visible_coverage_ratio": 0.3467,
+        "partial_alpha_pixels": 4574,
+        "bbox_alpha_gt_8": [
+          115,
+          133,
+          899,
+          1371
+        ]
+      }
+    },
+    {
+      "asset_id": "b0_style_palette_tokens",
+      "name": "Palette Tokens",
+      "ui_role": "Palette/material color reference for Fuxie Bright Sky production assets",
+      "asset_type": "cutout_style_lock",
+      "export_size": "source large, alpha master, runtime 512/1024",
+      "prompt": "Six rounded 3D sample tokens for the Fuxie German Village palette: sky blue, deep blue, teal, soft sky-white, warm soft white, and a smaller amber reward accent token, arranged as a compact fan on flat #ff00ff chroma-key background, polished clay-like matte surfaces, no text or labels.",
+      "negative_prompt": "Avoid beige/brown dominance, dark palettes, heavy gradients, clutter, background objects, cast shadows, contact shadows, reflections, copied external-game UI/item shapes.",
+      "paths": {
+        "source": "docs/design/asset-generation/fuxie-village-production/source/b0_style_palette_tokens_source.png",
+        "alpha_png": "docs/design/asset-generation/fuxie-village-production/alpha/b0_style_palette_tokens.png",
+        "runtime_png_512": "docs/design/asset-generation/fuxie-village-production/runtime/png-512/b0_style_palette_tokens-512.png",
+        "runtime_png_1024": "docs/design/asset-generation/fuxie-village-production/runtime/png-1024/b0_style_palette_tokens-1024.png",
+        "runtime_webp_512": "docs/design/asset-generation/fuxie-village-production/runtime/webp-512/b0_style_palette_tokens-512.webp",
+        "runtime_webp_1024": "docs/design/asset-generation/fuxie-village-production/runtime/webp-1024/b0_style_palette_tokens-1024.webp"
+      },
+      "alpha_requirement": "transparent corners, alpha channel present, no residual chroma-key fringe in visible pixels",
+      "qa": {
+        "status": "pass",
+        "transparent_corners": true,
+        "residual_key_like_pixels_alpha_gt_8": 0,
+        "visible_coverage_ratio": 0.4101,
+        "partial_alpha_pixels": 4472,
+        "bbox_alpha_gt_8": [
+          102,
+          162,
+          1141,
+          1075
+        ]
+      }
+    },
+    {
+      "asset_id": "b0_style_material_surface",
+      "name": "Material Surface Test",
+      "ui_role": "Material and lighting reference for matte clay surfaces",
+      "asset_type": "cutout_style_lock",
+      "export_size": "source large, alpha master, runtime 512/1024",
+      "prompt": "Compact material test cluster showing Fuxie German Village 3D surface language: sky-blue mascot-ear sample, teal hoodie patch, deep-blue beveled UI tile, soft-white face/chest bead, and small amber reward coin accent on flat #ff00ff background, smooth matte clay-like forms, no text.",
+      "negative_prompt": "Avoid realistic fur strands, fuzzy plush texture, fabric noise, wood grain dominance, beige/brown dominance, metallic glare, glass, reflections, cast shadows, contact shadows, background props, external-game resemblance.",
+      "paths": {
+        "source": "docs/design/asset-generation/fuxie-village-production/source/b0_style_material_surface_source.png",
+        "alpha_png": "docs/design/asset-generation/fuxie-village-production/alpha/b0_style_material_surface.png",
+        "runtime_png_512": "docs/design/asset-generation/fuxie-village-production/runtime/png-512/b0_style_material_surface-512.png",
+        "runtime_png_1024": "docs/design/asset-generation/fuxie-village-production/runtime/png-1024/b0_style_material_surface-1024.png",
+        "runtime_webp_512": "docs/design/asset-generation/fuxie-village-production/runtime/webp-512/b0_style_material_surface-512.webp",
+        "runtime_webp_1024": "docs/design/asset-generation/fuxie-village-production/runtime/webp-1024/b0_style_material_surface-1024.webp"
+      },
+      "alpha_requirement": "transparent corners, alpha channel present, no residual chroma-key fringe in visible pixels",
+      "qa": {
+        "status": "pass",
+        "transparent_corners": true,
+        "residual_key_like_pixels_alpha_gt_8": 0,
+        "visible_coverage_ratio": 0.4502,
+        "partial_alpha_pixels": 3565,
+        "bbox_alpha_gt_8": [
+          121,
+          117,
+          1141,
+          1102
+        ]
+      }
+    },
+    {
+      "asset_id": "b0_style_edge_alpha_test",
+      "name": "Edge Alpha Test",
+      "ui_role": "Alpha cleanup stress test for curves, holes, and small details",
+      "asset_type": "cutout_style_lock",
+      "export_size": "source large, alpha master, runtime 512/1024",
+      "prompt": "Compact 3D cutout object designed to test chroma-key edge cleanup: sky-blue Fuxie-style tail curl, rounded ear sample, teal ribbon loop, white paw bead, and deep-blue path node as a single cluster with visible negative-space holes on flat #ff00ff background, matte clay-like style, no text.",
+      "negative_prompt": "Avoid realistic fur strands, hair, feathers, transparent glass, smoke, glow halos, cast shadows, contact shadows, reflections, background props, clutter, external-game resemblance.",
+      "paths": {
+        "source": "docs/design/asset-generation/fuxie-village-production/source/b0_style_edge_alpha_test_source.png",
+        "alpha_png": "docs/design/asset-generation/fuxie-village-production/alpha/b0_style_edge_alpha_test.png",
+        "runtime_png_512": "docs/design/asset-generation/fuxie-village-production/runtime/png-512/b0_style_edge_alpha_test-512.png",
+        "runtime_png_1024": "docs/design/asset-generation/fuxie-village-production/runtime/png-1024/b0_style_edge_alpha_test-1024.png",
+        "runtime_webp_512": "docs/design/asset-generation/fuxie-village-production/runtime/webp-512/b0_style_edge_alpha_test-512.webp",
+        "runtime_webp_1024": "docs/design/asset-generation/fuxie-village-production/runtime/webp-1024/b0_style_edge_alpha_test-1024.webp"
+      },
+      "alpha_requirement": "transparent corners, alpha channel present, no residual chroma-key fringe in visible pixels",
+      "qa": {
+        "status": "pass",
+        "transparent_corners": true,
+        "residual_key_like_pixels_alpha_gt_8": 0,
+        "visible_coverage_ratio": 0.3655,
+        "partial_alpha_pixels": 5640,
+        "bbox_alpha_gt_8": [
+          146,
+          171,
+          1069,
+          1048
+        ]
+      }
+    },
+    {
+      "asset_id": "b0_style_ui_frame_test",
+      "name": "UI Frame Test",
+      "ui_role": "Production frame style test for quest cards, result panels, and notices",
+      "asset_type": "cutout_ui_frame",
+      "export_size": "source large, alpha master, runtime 512/1024",
+      "prompt": "Reusable 3D UI frame prop for Fuxie German Village: empty rounded village notice-board frame with sky-blue and teal beveled trim, soft-white inner panel, deep-blue corner pins, tiny amber reward accent dots, centered on flat #ff00ff background, no text.",
+      "negative_prompt": "Avoid decorative clutter, wooden-brown dominance, parchment fantasy look, heavy gradients, realistic material noise, cast shadows, contact shadows, reflections, copied external-game UI, Nintendo-like or Animal Crossing-like elements.",
+      "paths": {
+        "source": "docs/design/asset-generation/fuxie-village-production/source/b0_style_ui_frame_test_source.png",
+        "alpha_png": "docs/design/asset-generation/fuxie-village-production/alpha/b0_style_ui_frame_test.png",
+        "runtime_png_512": "docs/design/asset-generation/fuxie-village-production/runtime/png-512/b0_style_ui_frame_test-512.png",
+        "runtime_png_1024": "docs/design/asset-generation/fuxie-village-production/runtime/png-1024/b0_style_ui_frame_test-1024.png",
+        "runtime_webp_512": "docs/design/asset-generation/fuxie-village-production/runtime/webp-512/b0_style_ui_frame_test-512.webp",
+        "runtime_webp_1024": "docs/design/asset-generation/fuxie-village-production/runtime/webp-1024/b0_style_ui_frame_test-1024.webp"
+      },
+      "alpha_requirement": "transparent corners, alpha channel present, no residual chroma-key fringe in visible pixels",
+      "qa": {
+        "status": "pass",
+        "transparent_corners": true,
+        "residual_key_like_pixels_alpha_gt_8": 0,
+        "visible_coverage_ratio": 0.6222,
+        "partial_alpha_pixels": 6954,
+        "bbox_alpha_gt_8": [
+          99,
+          61,
+          1429,
+          949
+        ]
+      }
+    },
+    {
+      "asset_id": "b0_style_reward_icon_test",
+      "name": "Reward Icon Test",
+      "ui_role": "Reward economy style test for Fucoin, XP, badges, and earned states",
+      "asset_type": "cutout_reward_item",
+      "export_size": "source large, alpha master, runtime 512/1024",
+      "prompt": "Original reward icon bundle for Fuxie German Village: amber coin with simple sparkle relief and sky-blue rim, two small XP stars, teal ribbon tab, and deep-blue badge backing, centered on flat #ff00ff background, celebratory but restrained, no text.",
+      "negative_prompt": "Avoid money symbols, gambling cues, loot box tropes, excessive sparkles, photoreal metal glare, cast shadows, contact shadows, reflections, background props, copied external-game item shapes, Nintendo-like or Animal Crossing-like elements.",
+      "paths": {
+        "source": "docs/design/asset-generation/fuxie-village-production/source/b0_style_reward_icon_test_source.png",
+        "alpha_png": "docs/design/asset-generation/fuxie-village-production/alpha/b0_style_reward_icon_test.png",
+        "runtime_png_512": "docs/design/asset-generation/fuxie-village-production/runtime/png-512/b0_style_reward_icon_test-512.png",
+        "runtime_png_1024": "docs/design/asset-generation/fuxie-village-production/runtime/png-1024/b0_style_reward_icon_test-1024.png",
+        "runtime_webp_512": "docs/design/asset-generation/fuxie-village-production/runtime/webp-512/b0_style_reward_icon_test-512.webp",
+        "runtime_webp_1024": "docs/design/asset-generation/fuxie-village-production/runtime/webp-1024/b0_style_reward_icon_test-1024.webp"
+      },
+      "alpha_requirement": "transparent corners, alpha channel present, no residual chroma-key fringe in visible pixels",
+      "qa": {
+        "status": "pass",
+        "transparent_corners": true,
+        "residual_key_like_pixels_alpha_gt_8": 0,
+        "visible_coverage_ratio": 0.3193,
+        "partial_alpha_pixels": 3475,
+        "bbox_alpha_gt_8": [
+          213,
+          176,
+          1043,
+          1058
+        ]
+      }
+    }
+  ]
+}

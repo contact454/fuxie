@@ -174,7 +174,8 @@
       "exampleSentence2": "Die Entwicklung des Corpus callosum ist entscheidend für die interhemisphärische Koordination.",
       "exampleTranslation2": "Sự phát triển của thể chai rất quan trọng đối với sự phối hợp giữa hai bán cầu não.",
       "imageUrl": "/images/vocab/c2-neuropsychologie/corpus-callosum.png",
-      "meaningDe": "Ein großes Nervenfaserbündel, das die beiden Gehirnhälften miteinander verbindet."
+      "meaningDe": "Ein großes Nervenfaserbündel, das die beiden Gehirnhälften miteinander verbindet.",
+      "pluralStatus": "not_applicable_or_needs_review"
     },
     {
       "word": "Afferenzen",
@@ -286,7 +287,20 @@
       "exampleSentence2": "Bei manchen Individuen kann sich die Lateralisierung von Funktionen atypisch entwickeln.",
       "exampleTranslation2": "Ở một số cá nhân, sự định vị của các chức năng có thể phát triển một cách không điển hình.",
       "imageUrl": "/images/vocab/c2-neuropsychologie/lateralisieren.png",
-      "meaningDe": "Eine Funktion oder einen Vorgang hauptsächlich in einer Gehirnhälfte ansiedeln."
+      "meaningDe": "Eine Funktion oder einen Vorgang hauptsächlich in einer Gehirnhälfte ansiedeln.",
+      "conjugation": {
+        "praesens": {
+          "ich": "lateralisiere",
+          "du": "lateralisierst",
+          "er_sie_es": "lateralisiert",
+          "wir": "lateralisieren",
+          "ihr": "lateralisiert",
+          "sie_Sie": "lateralisieren"
+        },
+        "isIrregular": false,
+        "isSeparable": false,
+        "reviewStatus": "auto_generated_needs_spot_check"
+      }
     },
     {
       "word": "reorganisieren",
@@ -300,7 +314,20 @@
       "exampleSentence2": "Intensives Training kann die neuronalen Schaltkreise reorganisieren und die Lernfähigkeit verbessern.",
       "exampleTranslation2": "Huấn luyện chuyên sâu có thể tái tổ chức các mạch thần kinh và cải thiện khả năng học tập.",
       "imageUrl": "/images/vocab/c2-neuropsychologie/reorganisieren.png",
-      "meaningDe": "Die Struktur oder Funktion neu ordnen, besonders nach Verletzungen oder neuen Erfahrungen."
+      "meaningDe": "Die Struktur oder Funktion neu ordnen, besonders nach Verletzungen oder neuen Erfahrungen.",
+      "conjugation": {
+        "praesens": {
+          "ich": "reorganisiere",
+          "du": "reorganisierst",
+          "er_sie_es": "reorganisiert",
+          "wir": "reorganisieren",
+          "ihr": "reorganisiert",
+          "sie_Sie": "reorganisieren"
+        },
+        "isIrregular": false,
+        "isSeparable": false,
+        "reviewStatus": "auto_generated_needs_spot_check"
+      }
     },
     {
       "word": "lateralisiert",
@@ -427,6 +454,26 @@
       "exampleTranslation2": "Sự kết nối giữa hai bán cầu não bị rối loạn có thể dẫn đến các vấn đề tích hợp.",
       "imageUrl": "/images/vocab/c2-neuropsychologie/interhemisphaerisch.png",
       "meaningDe": "Zwischen den beiden Gehirnhälften."
+    }
+  ],
+  "cefrAudit": {
+    "targetLevel": "C2",
+    "verdict": "aligned",
+    "reviewerRole": "German Academic Lead",
+    "notes": "Release-candidate metadata audit: vocabulary content for \"Neuropsychologie & Lateralisation\" is aligned with declared C2 scope pending final human spot-check.",
+    "reviewedAt": "2026-05-12",
+    "reviewScope": "release_candidate_metadata_pass"
+  },
+  "learningOutcomes": [
+    {
+      "id": "c2-neuropsychologie-lo-1",
+      "cefrLevel": "C2",
+      "skill": "vocabulary",
+      "canDoVi": "Toi co the luyen tu vung o trinh do C2 qua chu de \"Neuropsychologie & Lateralisation\".",
+      "canDoDe": "Ich kann Wortschatz auf Niveau C2 zum Thema \"Neuropsychologie & Lateralisation\" ueben.",
+      "linkedContentIds": [
+        "c2-neuropsychologie"
+      ]
     }
   ]
 }

@@ -1,0 +1,631 @@
+{
+  "project": "Fuxie Image Production Sprint",
+  "batch": 5,
+  "batch_name": "Rewards/Items",
+  "status": "in_progress",
+  "checkpoint": "first_18",
+  "date": "2026-05-16",
+  "tool_mode": "built-in image_gen source generation plus custom fixed-#ff00ff chroma-key removal",
+  "asset_count_target": 48,
+  "asset_count_completed": 18,
+  "style_lock_reference": "docs/design/asset-generation/fuxie-village-production/qa/batch-0-style-lock/batch-0-manifest.json",
+  "directories": {
+    "source": "docs/design/asset-generation/fuxie-village-production/source/batch-5-rewards-items",
+    "alpha": "docs/design/asset-generation/fuxie-village-production/alpha/batch-5-rewards-items",
+    "runtime_png_512": "docs/design/asset-generation/fuxie-village-production/runtime/png-512/batch-5-rewards-items",
+    "runtime_png_1024": "docs/design/asset-generation/fuxie-village-production/runtime/png-1024/batch-5-rewards-items",
+    "runtime_webp_512": "docs/design/asset-generation/fuxie-village-production/runtime/webp-512/batch-5-rewards-items",
+    "runtime_webp_1024": "docs/design/asset-generation/fuxie-village-production/runtime/webp-1024/batch-5-rewards-items",
+    "qa": "docs/design/asset-generation/fuxie-village-production/qa/batch-5-rewards-items"
+  },
+  "qa_artifacts": {
+    "prompt_sheet_json": "docs/design/asset-generation/fuxie-village-production/qa/batch-5-rewards-items/batch-5-prompt-sheet.json",
+    "prompt_sheet_md": "docs/design/asset-generation/fuxie-village-production/qa/batch-5-rewards-items/batch-5-prompt-sheet.md",
+    "source_contact_sheet_first_12": "docs/design/asset-generation/fuxie-village-production/qa/batch-5-rewards-items/batch-5-source-contact-sheet-first-12.png",
+    "source_contact_sheet_first_18": "docs/design/asset-generation/fuxie-village-production/qa/batch-5-rewards-items/batch-5-source-contact-sheet-first-18.png",
+    "alpha_qa_json_first_18": "docs/design/asset-generation/fuxie-village-production/qa/batch-5-rewards-items/batch-5-alpha-qa-first-18.json",
+    "alpha_contact_sheet_first_18": "docs/design/asset-generation/fuxie-village-production/qa/batch-5-rewards-items/batch-5-alpha-contact-sheet-first-18.png"
+  },
+  "notes": [
+    "First 18 reward/item cutouts are alpha-clean and runtime-exported.",
+    "Batch 5 remains in progress until all 48 assets are generated and QAed.",
+    "Reward icons use custom fixed-#ff00ff chroma removal because the generic helper damaged flat amber/cream interiors during visual QA.",
+    "CEFR badge assets later in this batch are intentionally blank-center so UI can overlay accurate level labels."
+  ],
+  "assets": [
+    {
+      "asset_id": "b5_reward_01_fucoin_single",
+      "name": "Fucoin Single",
+      "ui_role": "Primary soft currency icon",
+      "asset_type": "reward_item_cutout",
+      "source_origin": "new_batch_5_imagegen_chroma_source",
+      "prompt": "Use case: stylized-concept\nAsset type: Batch 5 Rewards/Items production cutout reward icon\nPrimary request: Create one original Fuxie German Village reward/item cutout for this UI role: Primary soft currency icon.\nCRITICAL BACKGROUND: the entire canvas background must be a perfectly flat, solid, pure chroma-key magenta #ff00ff from edge to edge. No white background, no gray background, no gradient, no vignette, no shadows, no floor plane outside the subject.\nSubject/item: a single thick rounded amber Fucoin coin with a tiny original Fuxie paw-like notch emblem, teal rim, glossy bevels, no text.\nStyle/medium: polished rounded 3D clay-like mobile game reward item, soft matte material, clean toy-like bevels, crisp silhouette, production-ready EdTech gamification asset.\nComposition/framing: single centered item only, generous padding around all edges, square-friendly icon silhouette, readable at 64px and 96px, no cropped parts.\nLighting/mood: bright soft studio lighting baked into the subject only; cheerful, motivating, calm learning-game reward energy.\nColor palette: Fuxie Bright Sky palette: sky blue #60A8E4, deep blue #3C78A8, teal #2EC4B6, soft sky-white #F3FBFF, amber #FFB703 for reward value accents; beige/brown only if tiny neutral detail.\nText: no text, no letters, no numbers, no logo. For CEFR badge assets, leave the badge center blank so UI can overlay accurate text later.\nConstraints: no text-like marks, no watermark, no external-game/IP resemblance; do not use #ff00ff anywhere in the subject; keep object simple enough for small UI; asset must clearly support the reward/item role.\nAvoid: readable text, alphabet letters, numbers, fake UI labels, watermark, logo, realistic photo, hard shadows, contact shadow, floor plane, white background, gray background, transparent background, clutter, copied game item, Nintendo-like or Animal Crossing-like resemblance, beige/brown dominance, leaf motifs.",
+      "negative_prompt": "readable text, alphabet letters, numbers, fake UI labels, watermark, logo, realistic photo, hard shadows, contact shadow, floor plane, white background, gray background, transparent background, clutter, copied game item, Nintendo-like or Animal Crossing-like resemblance, beige/brown dominance, leaf motifs",
+      "alpha_requirement": "flat #ff00ff chroma source, local chroma-key removal, transparent corners, no color fringe, no solid background in runtime",
+      "export_size": "source large, alpha PNG master, runtime PNG/WebP 512 and 1024 square with transparent padding",
+      "paths": {
+        "source": "docs/design/asset-generation/fuxie-village-production/source/batch-5-rewards-items/b5_reward_01_fucoin_single_source.png",
+        "alpha_png": "docs/design/asset-generation/fuxie-village-production/alpha/batch-5-rewards-items/b5_reward_01_fucoin_single.png",
+        "runtime_png_512": "docs/design/asset-generation/fuxie-village-production/runtime/png-512/batch-5-rewards-items/b5_reward_01_fucoin_single-512.png",
+        "runtime_png_1024": "docs/design/asset-generation/fuxie-village-production/runtime/png-1024/batch-5-rewards-items/b5_reward_01_fucoin_single-1024.png",
+        "runtime_webp_512": "docs/design/asset-generation/fuxie-village-production/runtime/webp-512/batch-5-rewards-items/b5_reward_01_fucoin_single-512.webp",
+        "runtime_webp_1024": "docs/design/asset-generation/fuxie-village-production/runtime/webp-1024/batch-5-rewards-items/b5_reward_01_fucoin_single-1024.webp"
+      },
+      "qa": {
+        "status": "pass",
+        "transparent_corners": true,
+        "residual_key_like_pixels_alpha_gt_8": 0,
+        "residual_magenta_fringe_pixels_alpha_gt_8": 0,
+        "visible_coverage_ratio": 0.413968,
+        "partial_alpha_pixels": 1323,
+        "bbox_alpha_gt_8": [
+          181,
+          163,
+          1071,
+          1085
+        ]
+      }
+    },
+    {
+      "asset_id": "b5_reward_02_fucoin_stack",
+      "name": "Fucoin Stack",
+      "ui_role": "Currency reward pile",
+      "asset_type": "reward_item_cutout",
+      "source_origin": "new_batch_5_imagegen_chroma_source",
+      "prompt": "Use case: stylized-concept\nAsset type: Batch 5 Rewards/Items production cutout reward icon\nPrimary request: Create one original Fuxie German Village reward/item cutout for this UI role: Currency reward pile.\nCRITICAL BACKGROUND: the entire canvas background must be a perfectly flat, solid, pure chroma-key magenta #ff00ff from edge to edge. No white background, no gray background, no gradient, no vignette, no shadows, no floor plane outside the subject.\nSubject/item: a small stack of three amber Fucoin coins with teal rims, slight stagger, tiny original paw-like notch emblem, no text.\nStyle/medium: polished rounded 3D clay-like mobile game reward item, soft matte material, clean toy-like bevels, crisp silhouette, production-ready EdTech gamification asset.\nComposition/framing: single centered item only, generous padding around all edges, square-friendly icon silhouette, readable at 64px and 96px, no cropped parts.\nLighting/mood: bright soft studio lighting baked into the subject only; cheerful, motivating, calm learning-game reward energy.\nColor palette: Fuxie Bright Sky palette: sky blue #60A8E4, deep blue #3C78A8, teal #2EC4B6, soft sky-white #F3FBFF, amber #FFB703 for reward value accents; beige/brown only if tiny neutral detail.\nText: no text, no letters, no numbers, no logo. For CEFR badge assets, leave the badge center blank so UI can overlay accurate text later.\nConstraints: no text-like marks, no watermark, no external-game/IP resemblance; do not use #ff00ff anywhere in the subject; keep object simple enough for small UI; asset must clearly support the reward/item role.\nAvoid: readable text, alphabet letters, numbers, fake UI labels, watermark, logo, realistic photo, hard shadows, contact shadow, floor plane, white background, gray background, transparent background, clutter, copied game item, Nintendo-like or Animal Crossing-like resemblance, beige/brown dominance, leaf motifs.",
+      "negative_prompt": "readable text, alphabet letters, numbers, fake UI labels, watermark, logo, realistic photo, hard shadows, contact shadow, floor plane, white background, gray background, transparent background, clutter, copied game item, Nintendo-like or Animal Crossing-like resemblance, beige/brown dominance, leaf motifs",
+      "alpha_requirement": "flat #ff00ff chroma source, local chroma-key removal, transparent corners, no color fringe, no solid background in runtime",
+      "export_size": "source large, alpha PNG master, runtime PNG/WebP 512 and 1024 square with transparent padding",
+      "paths": {
+        "source": "docs/design/asset-generation/fuxie-village-production/source/batch-5-rewards-items/b5_reward_02_fucoin_stack_source.png",
+        "alpha_png": "docs/design/asset-generation/fuxie-village-production/alpha/batch-5-rewards-items/b5_reward_02_fucoin_stack.png",
+        "runtime_png_512": "docs/design/asset-generation/fuxie-village-production/runtime/png-512/batch-5-rewards-items/b5_reward_02_fucoin_stack-512.png",
+        "runtime_png_1024": "docs/design/asset-generation/fuxie-village-production/runtime/png-1024/batch-5-rewards-items/b5_reward_02_fucoin_stack-1024.png",
+        "runtime_webp_512": "docs/design/asset-generation/fuxie-village-production/runtime/webp-512/batch-5-rewards-items/b5_reward_02_fucoin_stack-512.webp",
+        "runtime_webp_1024": "docs/design/asset-generation/fuxie-village-production/runtime/webp-1024/batch-5-rewards-items/b5_reward_02_fucoin_stack-1024.webp"
+      },
+      "qa": {
+        "status": "pass",
+        "transparent_corners": true,
+        "residual_key_like_pixels_alpha_gt_8": 0,
+        "residual_magenta_fringe_pixels_alpha_gt_8": 0,
+        "visible_coverage_ratio": 0.356478,
+        "partial_alpha_pixels": 1273,
+        "bbox_alpha_gt_8": [
+          138,
+          205,
+          1115,
+          1017
+        ]
+      }
+    },
+    {
+      "asset_id": "b5_reward_03_xp_star_single",
+      "name": "XP Star Single",
+      "ui_role": "XP gain micro reward",
+      "asset_type": "reward_item_cutout",
+      "source_origin": "new_batch_5_imagegen_chroma_source",
+      "prompt": "Use case: stylized-concept\nAsset type: Batch 5 Rewards/Items production cutout reward icon\nPrimary request: Create one original Fuxie German Village reward/item cutout for this UI role: XP gain micro reward.\nCRITICAL BACKGROUND: the entire canvas background must be a perfectly flat, solid, pure chroma-key magenta #ff00ff from edge to edge. No white background, no gray background, no gradient, no vignette, no shadows, no floor plane outside the subject.\nSubject/item: one chunky five-point amber XP star with sky-blue rim and soft white inner shine, no letters.\nStyle/medium: polished rounded 3D clay-like mobile game reward item, soft matte material, clean toy-like bevels, crisp silhouette, production-ready EdTech gamification asset.\nComposition/framing: single centered item only, generous padding around all edges, square-friendly icon silhouette, readable at 64px and 96px, no cropped parts.\nLighting/mood: bright soft studio lighting baked into the subject only; cheerful, motivating, calm learning-game reward energy.\nColor palette: Fuxie Bright Sky palette: sky blue #60A8E4, deep blue #3C78A8, teal #2EC4B6, soft sky-white #F3FBFF, amber #FFB703 for reward value accents; beige/brown only if tiny neutral detail.\nText: no text, no letters, no numbers, no logo. For CEFR badge assets, leave the badge center blank so UI can overlay accurate text later.\nConstraints: no text-like marks, no watermark, no external-game/IP resemblance; do not use #ff00ff anywhere in the subject; keep object simple enough for small UI; asset must clearly support the reward/item role.\nAvoid: readable text, alphabet letters, numbers, fake UI labels, watermark, logo, realistic photo, hard shadows, contact shadow, floor plane, white background, gray background, transparent background, clutter, copied game item, Nintendo-like or Animal Crossing-like resemblance, beige/brown dominance, leaf motifs.",
+      "negative_prompt": "readable text, alphabet letters, numbers, fake UI labels, watermark, logo, realistic photo, hard shadows, contact shadow, floor plane, white background, gray background, transparent background, clutter, copied game item, Nintendo-like or Animal Crossing-like resemblance, beige/brown dominance, leaf motifs",
+      "alpha_requirement": "flat #ff00ff chroma source, local chroma-key removal, transparent corners, no color fringe, no solid background in runtime",
+      "export_size": "source large, alpha PNG master, runtime PNG/WebP 512 and 1024 square with transparent padding",
+      "paths": {
+        "source": "docs/design/asset-generation/fuxie-village-production/source/batch-5-rewards-items/b5_reward_03_xp_star_single_source.png",
+        "alpha_png": "docs/design/asset-generation/fuxie-village-production/alpha/batch-5-rewards-items/b5_reward_03_xp_star_single.png",
+        "runtime_png_512": "docs/design/asset-generation/fuxie-village-production/runtime/png-512/batch-5-rewards-items/b5_reward_03_xp_star_single-512.png",
+        "runtime_png_1024": "docs/design/asset-generation/fuxie-village-production/runtime/png-1024/batch-5-rewards-items/b5_reward_03_xp_star_single-1024.png",
+        "runtime_webp_512": "docs/design/asset-generation/fuxie-village-production/runtime/webp-512/batch-5-rewards-items/b5_reward_03_xp_star_single-512.webp",
+        "runtime_webp_1024": "docs/design/asset-generation/fuxie-village-production/runtime/webp-1024/batch-5-rewards-items/b5_reward_03_xp_star_single-1024.webp"
+      },
+      "qa": {
+        "status": "pass",
+        "transparent_corners": true,
+        "residual_key_like_pixels_alpha_gt_8": 0,
+        "residual_magenta_fringe_pixels_alpha_gt_8": 0,
+        "visible_coverage_ratio": 0.326952,
+        "partial_alpha_pixels": 1535,
+        "bbox_alpha_gt_8": [
+          185,
+          179,
+          1067,
+          1052
+        ]
+      }
+    },
+    {
+      "asset_id": "b5_reward_04_xp_star_cluster",
+      "name": "XP Star Cluster",
+      "ui_role": "XP bundle reward",
+      "asset_type": "reward_item_cutout",
+      "source_origin": "new_batch_5_imagegen_chroma_source",
+      "prompt": "Use case: stylized-concept\nAsset type: Batch 5 Rewards/Items production cutout reward icon\nPrimary request: Create one original Fuxie German Village reward/item cutout for this UI role: XP bundle reward.\nCRITICAL BACKGROUND: the entire canvas background must be a perfectly flat, solid, pure chroma-key magenta #ff00ff from edge to edge. No white background, no gray background, no gradient, no vignette, no shadows, no floor plane outside the subject.\nSubject/item: a cluster of three chunky amber XP stars, teal sparkle chips, sky-blue rim accents, no letters.\nStyle/medium: polished rounded 3D clay-like mobile game reward item, soft matte material, clean toy-like bevels, crisp silhouette, production-ready EdTech gamification asset.\nComposition/framing: single centered item only, generous padding around all edges, square-friendly icon silhouette, readable at 64px and 96px, no cropped parts.\nLighting/mood: bright soft studio lighting baked into the subject only; cheerful, motivating, calm learning-game reward energy.\nColor palette: Fuxie Bright Sky palette: sky blue #60A8E4, deep blue #3C78A8, teal #2EC4B6, soft sky-white #F3FBFF, amber #FFB703 for reward value accents; beige/brown only if tiny neutral detail.\nText: no text, no letters, no numbers, no logo. For CEFR badge assets, leave the badge center blank so UI can overlay accurate text later.\nConstraints: no text-like marks, no watermark, no external-game/IP resemblance; do not use #ff00ff anywhere in the subject; keep object simple enough for small UI; asset must clearly support the reward/item role.\nAvoid: readable text, alphabet letters, numbers, fake UI labels, watermark, logo, realistic photo, hard shadows, contact shadow, floor plane, white background, gray background, transparent background, clutter, copied game item, Nintendo-like or Animal Crossing-like resemblance, beige/brown dominance, leaf motifs.",
+      "negative_prompt": "readable text, alphabet letters, numbers, fake UI labels, watermark, logo, realistic photo, hard shadows, contact shadow, floor plane, white background, gray background, transparent background, clutter, copied game item, Nintendo-like or Animal Crossing-like resemblance, beige/brown dominance, leaf motifs",
+      "alpha_requirement": "flat #ff00ff chroma source, local chroma-key removal, transparent corners, no color fringe, no solid background in runtime",
+      "export_size": "source large, alpha PNG master, runtime PNG/WebP 512 and 1024 square with transparent padding",
+      "paths": {
+        "source": "docs/design/asset-generation/fuxie-village-production/source/batch-5-rewards-items/b5_reward_04_xp_star_cluster_source.png",
+        "alpha_png": "docs/design/asset-generation/fuxie-village-production/alpha/batch-5-rewards-items/b5_reward_04_xp_star_cluster.png",
+        "runtime_png_512": "docs/design/asset-generation/fuxie-village-production/runtime/png-512/batch-5-rewards-items/b5_reward_04_xp_star_cluster-512.png",
+        "runtime_png_1024": "docs/design/asset-generation/fuxie-village-production/runtime/png-1024/batch-5-rewards-items/b5_reward_04_xp_star_cluster-1024.png",
+        "runtime_webp_512": "docs/design/asset-generation/fuxie-village-production/runtime/webp-512/batch-5-rewards-items/b5_reward_04_xp_star_cluster-512.webp",
+        "runtime_webp_1024": "docs/design/asset-generation/fuxie-village-production/runtime/webp-1024/batch-5-rewards-items/b5_reward_04_xp_star_cluster-1024.webp"
+      },
+      "qa": {
+        "status": "pass",
+        "transparent_corners": true,
+        "residual_key_like_pixels_alpha_gt_8": 0,
+        "residual_magenta_fringe_pixels_alpha_gt_8": 0,
+        "visible_coverage_ratio": 0.374196,
+        "partial_alpha_pixels": 3077,
+        "bbox_alpha_gt_8": [
+          90,
+          161,
+          1177,
+          1038
+        ]
+      }
+    },
+    {
+      "asset_id": "b5_reward_05_streak_flame",
+      "name": "Streak Flame",
+      "ui_role": "Daily streak reward",
+      "asset_type": "reward_item_cutout",
+      "source_origin": "new_batch_5_imagegen_chroma_source",
+      "prompt": "Use case: stylized-concept\nAsset type: Batch 5 Rewards/Items production cutout reward icon\nPrimary request: Create one original Fuxie German Village reward/item cutout for this UI role: Daily streak reward.\nCRITICAL BACKGROUND: the entire canvas background must be a perfectly flat, solid, pure chroma-key magenta #ff00ff from edge to edge. No white background, no gray background, no gradient, no vignette, no shadows, no floor plane outside the subject.\nSubject/item: a friendly rounded flame charm in amber and sky-blue with teal base ring, calm habit energy, no numbers.\nStyle/medium: polished rounded 3D clay-like mobile game reward item, soft matte material, clean toy-like bevels, crisp silhouette, production-ready EdTech gamification asset.\nComposition/framing: single centered item only, generous padding around all edges, square-friendly icon silhouette, readable at 64px and 96px, no cropped parts.\nLighting/mood: bright soft studio lighting baked into the subject only; cheerful, motivating, calm learning-game reward energy.\nColor palette: Fuxie Bright Sky palette: sky blue #60A8E4, deep blue #3C78A8, teal #2EC4B6, soft sky-white #F3FBFF, amber #FFB703 for reward value accents; beige/brown only if tiny neutral detail.\nText: no text, no letters, no numbers, no logo. For CEFR badge assets, leave the badge center blank so UI can overlay accurate text later.\nConstraints: no text-like marks, no watermark, no external-game/IP resemblance; do not use #ff00ff anywhere in the subject; keep object simple enough for small UI; asset must clearly support the reward/item role.\nAvoid: readable text, alphabet letters, numbers, fake UI labels, watermark, logo, realistic photo, hard shadows, contact shadow, floor plane, white background, gray background, transparent background, clutter, copied game item, Nintendo-like or Animal Crossing-like resemblance, beige/brown dominance, leaf motifs.",
+      "negative_prompt": "readable text, alphabet letters, numbers, fake UI labels, watermark, logo, realistic photo, hard shadows, contact shadow, floor plane, white background, gray background, transparent background, clutter, copied game item, Nintendo-like or Animal Crossing-like resemblance, beige/brown dominance, leaf motifs",
+      "alpha_requirement": "flat #ff00ff chroma source, local chroma-key removal, transparent corners, no color fringe, no solid background in runtime",
+      "export_size": "source large, alpha PNG master, runtime PNG/WebP 512 and 1024 square with transparent padding",
+      "paths": {
+        "source": "docs/design/asset-generation/fuxie-village-production/source/batch-5-rewards-items/b5_reward_05_streak_flame_source.png",
+        "alpha_png": "docs/design/asset-generation/fuxie-village-production/alpha/batch-5-rewards-items/b5_reward_05_streak_flame.png",
+        "runtime_png_512": "docs/design/asset-generation/fuxie-village-production/runtime/png-512/batch-5-rewards-items/b5_reward_05_streak_flame-512.png",
+        "runtime_png_1024": "docs/design/asset-generation/fuxie-village-production/runtime/png-1024/batch-5-rewards-items/b5_reward_05_streak_flame-1024.png",
+        "runtime_webp_512": "docs/design/asset-generation/fuxie-village-production/runtime/webp-512/batch-5-rewards-items/b5_reward_05_streak_flame-512.webp",
+        "runtime_webp_1024": "docs/design/asset-generation/fuxie-village-production/runtime/webp-1024/batch-5-rewards-items/b5_reward_05_streak_flame-1024.webp"
+      },
+      "qa": {
+        "status": "pass",
+        "transparent_corners": true,
+        "residual_key_like_pixels_alpha_gt_8": 0,
+        "residual_magenta_fringe_pixels_alpha_gt_8": 0,
+        "visible_coverage_ratio": 0.32461,
+        "partial_alpha_pixels": 1336,
+        "bbox_alpha_gt_8": [
+          198,
+          143,
+          1003,
+          1124
+        ]
+      }
+    },
+    {
+      "asset_id": "b5_reward_06_streak_freeze_crystal",
+      "name": "Streak Freeze Crystal",
+      "ui_role": "Streak protection item",
+      "asset_type": "reward_item_cutout",
+      "source_origin": "new_batch_5_imagegen_chroma_source",
+      "prompt": "Use case: stylized-concept\nAsset type: Batch 5 Rewards/Items production cutout reward icon\nPrimary request: Create one original Fuxie German Village reward/item cutout for this UI role: Streak protection item.\nCRITICAL BACKGROUND: the entire canvas background must be a perfectly flat, solid, pure chroma-key magenta #ff00ff from edge to edge. No white background, no gray background, no gradient, no vignette, no shadows, no floor plane outside the subject.\nSubject/item: a faceted icy sky-blue freeze crystal wrapped by a small teal ribbon band, tiny snow sparkle, no text.\nStyle/medium: polished rounded 3D clay-like mobile game reward item, soft matte material, clean toy-like bevels, crisp silhouette, production-ready EdTech gamification asset.\nComposition/framing: single centered item only, generous padding around all edges, square-friendly icon silhouette, readable at 64px and 96px, no cropped parts.\nLighting/mood: bright soft studio lighting baked into the subject only; cheerful, motivating, calm learning-game reward energy.\nColor palette: Fuxie Bright Sky palette: sky blue #60A8E4, deep blue #3C78A8, teal #2EC4B6, soft sky-white #F3FBFF, amber #FFB703 for reward value accents; beige/brown only if tiny neutral detail.\nText: no text, no letters, no numbers, no logo. For CEFR badge assets, leave the badge center blank so UI can overlay accurate text later.\nConstraints: no text-like marks, no watermark, no external-game/IP resemblance; do not use #ff00ff anywhere in the subject; keep object simple enough for small UI; asset must clearly support the reward/item role.\nAvoid: readable text, alphabet letters, numbers, fake UI labels, watermark, logo, realistic photo, hard shadows, contact shadow, floor plane, white background, gray background, transparent background, clutter, copied game item, Nintendo-like or Animal Crossing-like resemblance, beige/brown dominance, leaf motifs.",
+      "negative_prompt": "readable text, alphabet letters, numbers, fake UI labels, watermark, logo, realistic photo, hard shadows, contact shadow, floor plane, white background, gray background, transparent background, clutter, copied game item, Nintendo-like or Animal Crossing-like resemblance, beige/brown dominance, leaf motifs",
+      "alpha_requirement": "flat #ff00ff chroma source, local chroma-key removal, transparent corners, no color fringe, no solid background in runtime",
+      "export_size": "source large, alpha PNG master, runtime PNG/WebP 512 and 1024 square with transparent padding",
+      "paths": {
+        "source": "docs/design/asset-generation/fuxie-village-production/source/batch-5-rewards-items/b5_reward_06_streak_freeze_crystal_source.png",
+        "alpha_png": "docs/design/asset-generation/fuxie-village-production/alpha/batch-5-rewards-items/b5_reward_06_streak_freeze_crystal.png",
+        "runtime_png_512": "docs/design/asset-generation/fuxie-village-production/runtime/png-512/batch-5-rewards-items/b5_reward_06_streak_freeze_crystal-512.png",
+        "runtime_png_1024": "docs/design/asset-generation/fuxie-village-production/runtime/png-1024/batch-5-rewards-items/b5_reward_06_streak_freeze_crystal-1024.png",
+        "runtime_webp_512": "docs/design/asset-generation/fuxie-village-production/runtime/webp-512/batch-5-rewards-items/b5_reward_06_streak_freeze_crystal-512.webp",
+        "runtime_webp_1024": "docs/design/asset-generation/fuxie-village-production/runtime/webp-1024/batch-5-rewards-items/b5_reward_06_streak_freeze_crystal-1024.webp"
+      },
+      "qa": {
+        "status": "pass",
+        "transparent_corners": true,
+        "residual_key_like_pixels_alpha_gt_8": 0,
+        "residual_magenta_fringe_pixels_alpha_gt_8": 0,
+        "visible_coverage_ratio": 0.31303,
+        "partial_alpha_pixels": 1574,
+        "bbox_alpha_gt_8": [
+          264,
+          94,
+          1073,
+          1131
+        ]
+      }
+    },
+    {
+      "asset_id": "b5_reward_07_hint_ticket",
+      "name": "Hint Ticket",
+      "ui_role": "Single hint consumable",
+      "asset_type": "reward_item_cutout",
+      "source_origin": "new_batch_5_imagegen_chroma_source",
+      "prompt": "Use case: stylized-concept\nAsset type: Batch 5 Rewards/Items production cutout reward icon\nPrimary request: Create one original Fuxie German Village reward/item cutout for this UI role: Single hint consumable.\nCRITICAL BACKGROUND: the entire canvas background must be a perfectly flat, solid, pure chroma-key magenta #ff00ff from edge to edge. No white background, no gray background, no gradient, no vignette, no shadows, no floor plane outside the subject.\nSubject/item: one rounded coupon ticket with teal border, soft white center, amber question-mark-like dot motif but no actual punctuation or text.\nStyle/medium: polished rounded 3D clay-like mobile game reward item, soft matte material, clean toy-like bevels, crisp silhouette, production-ready EdTech gamification asset.\nComposition/framing: single centered item only, generous padding around all edges, square-friendly icon silhouette, readable at 64px and 96px, no cropped parts.\nLighting/mood: bright soft studio lighting baked into the subject only; cheerful, motivating, calm learning-game reward energy.\nColor palette: Fuxie Bright Sky palette: sky blue #60A8E4, deep blue #3C78A8, teal #2EC4B6, soft sky-white #F3FBFF, amber #FFB703 for reward value accents; beige/brown only if tiny neutral detail.\nText: no text, no letters, no numbers, no logo. For CEFR badge assets, leave the badge center blank so UI can overlay accurate text later.\nConstraints: no text-like marks, no watermark, no external-game/IP resemblance; do not use #ff00ff anywhere in the subject; keep object simple enough for small UI; asset must clearly support the reward/item role.\nAvoid: readable text, alphabet letters, numbers, fake UI labels, watermark, logo, realistic photo, hard shadows, contact shadow, floor plane, white background, gray background, transparent background, clutter, copied game item, Nintendo-like or Animal Crossing-like resemblance, beige/brown dominance, leaf motifs.",
+      "negative_prompt": "readable text, alphabet letters, numbers, fake UI labels, watermark, logo, realistic photo, hard shadows, contact shadow, floor plane, white background, gray background, transparent background, clutter, copied game item, Nintendo-like or Animal Crossing-like resemblance, beige/brown dominance, leaf motifs",
+      "alpha_requirement": "flat #ff00ff chroma source, local chroma-key removal, transparent corners, no color fringe, no solid background in runtime",
+      "export_size": "source large, alpha PNG master, runtime PNG/WebP 512 and 1024 square with transparent padding",
+      "paths": {
+        "source": "docs/design/asset-generation/fuxie-village-production/source/batch-5-rewards-items/b5_reward_07_hint_ticket_source.png",
+        "alpha_png": "docs/design/asset-generation/fuxie-village-production/alpha/batch-5-rewards-items/b5_reward_07_hint_ticket.png",
+        "runtime_png_512": "docs/design/asset-generation/fuxie-village-production/runtime/png-512/batch-5-rewards-items/b5_reward_07_hint_ticket-512.png",
+        "runtime_png_1024": "docs/design/asset-generation/fuxie-village-production/runtime/png-1024/batch-5-rewards-items/b5_reward_07_hint_ticket-1024.png",
+        "runtime_webp_512": "docs/design/asset-generation/fuxie-village-production/runtime/webp-512/batch-5-rewards-items/b5_reward_07_hint_ticket-512.webp",
+        "runtime_webp_1024": "docs/design/asset-generation/fuxie-village-production/runtime/webp-1024/batch-5-rewards-items/b5_reward_07_hint_ticket-1024.webp"
+      },
+      "qa": {
+        "status": "pass",
+        "transparent_corners": true,
+        "residual_key_like_pixels_alpha_gt_8": 0,
+        "residual_magenta_fringe_pixels_alpha_gt_8": 0,
+        "visible_coverage_ratio": 0.337678,
+        "partial_alpha_pixels": 1425,
+        "bbox_alpha_gt_8": [
+          143,
+          259,
+          1127,
+          978
+        ]
+      }
+    },
+    {
+      "asset_id": "b5_reward_08_hint_bundle",
+      "name": "Hint Ticket Bundle",
+      "ui_role": "Hint pack consumable",
+      "asset_type": "reward_item_cutout",
+      "source_origin": "new_batch_5_imagegen_chroma_source",
+      "prompt": "Use case: stylized-concept\nAsset type: Batch 5 Rewards/Items production cutout reward icon\nPrimary request: Create one original Fuxie German Village reward/item cutout for this UI role: Hint pack consumable.\nCRITICAL BACKGROUND: the entire canvas background must be a perfectly flat, solid, pure chroma-key magenta #ff00ff from edge to edge. No white background, no gray background, no gradient, no vignette, no shadows, no floor plane outside the subject.\nSubject/item: three stacked blank rounded hint coupons tied with a teal band, tiny amber dot motif, no symbols or text.\nStyle/medium: polished rounded 3D clay-like mobile game reward item, soft matte material, clean toy-like bevels, crisp silhouette, production-ready EdTech gamification asset.\nComposition/framing: single centered item only, generous padding around all edges, square-friendly icon silhouette, readable at 64px and 96px, no cropped parts.\nLighting/mood: bright soft studio lighting baked into the subject only; cheerful, motivating, calm learning-game reward energy.\nColor palette: Fuxie Bright Sky palette: sky blue #60A8E4, deep blue #3C78A8, teal #2EC4B6, soft sky-white #F3FBFF, amber #FFB703 for reward value accents; beige/brown only if tiny neutral detail.\nText: no text, no letters, no numbers, no logo. For CEFR badge assets, leave the badge center blank so UI can overlay accurate text later.\nConstraints: no text-like marks, no watermark, no external-game/IP resemblance; do not use #ff00ff anywhere in the subject; keep object simple enough for small UI; asset must clearly support the reward/item role.\nAvoid: readable text, alphabet letters, numbers, fake UI labels, watermark, logo, realistic photo, hard shadows, contact shadow, floor plane, white background, gray background, transparent background, clutter, copied game item, Nintendo-like or Animal Crossing-like resemblance, beige/brown dominance, leaf motifs.",
+      "negative_prompt": "readable text, alphabet letters, numbers, fake UI labels, watermark, logo, realistic photo, hard shadows, contact shadow, floor plane, white background, gray background, transparent background, clutter, copied game item, Nintendo-like or Animal Crossing-like resemblance, beige/brown dominance, leaf motifs",
+      "alpha_requirement": "flat #ff00ff chroma source, local chroma-key removal, transparent corners, no color fringe, no solid background in runtime",
+      "export_size": "source large, alpha PNG master, runtime PNG/WebP 512 and 1024 square with transparent padding",
+      "paths": {
+        "source": "docs/design/asset-generation/fuxie-village-production/source/batch-5-rewards-items/b5_reward_08_hint_bundle_source.png",
+        "alpha_png": "docs/design/asset-generation/fuxie-village-production/alpha/batch-5-rewards-items/b5_reward_08_hint_bundle.png",
+        "runtime_png_512": "docs/design/asset-generation/fuxie-village-production/runtime/png-512/batch-5-rewards-items/b5_reward_08_hint_bundle-512.png",
+        "runtime_png_1024": "docs/design/asset-generation/fuxie-village-production/runtime/png-1024/batch-5-rewards-items/b5_reward_08_hint_bundle-1024.png",
+        "runtime_webp_512": "docs/design/asset-generation/fuxie-village-production/runtime/webp-512/batch-5-rewards-items/b5_reward_08_hint_bundle-512.webp",
+        "runtime_webp_1024": "docs/design/asset-generation/fuxie-village-production/runtime/webp-1024/batch-5-rewards-items/b5_reward_08_hint_bundle-1024.webp"
+      },
+      "qa": {
+        "status": "pass",
+        "transparent_corners": true,
+        "residual_key_like_pixels_alpha_gt_8": 0,
+        "residual_magenta_fringe_pixels_alpha_gt_8": 0,
+        "visible_coverage_ratio": 0.390762,
+        "partial_alpha_pixels": 1494,
+        "bbox_alpha_gt_8": [
+          164,
+          182,
+          1102,
+          1021
+        ]
+      }
+    },
+    {
+      "asset_id": "b5_reward_09_unlock_key",
+      "name": "Unlock Key",
+      "ui_role": "Unlock lesson/item",
+      "asset_type": "reward_item_cutout",
+      "source_origin": "new_batch_5_imagegen_chroma_source",
+      "prompt": "Use case: stylized-concept\nAsset type: Batch 5 Rewards/Items production cutout reward icon\nPrimary request: Create one original Fuxie German Village reward/item cutout for this UI role: Unlock lesson/item.\nCRITICAL BACKGROUND: the entire canvas background must be a perfectly flat, solid, pure chroma-key magenta #ff00ff from edge to edge. No white background, no gray background, no gradient, no vignette, no shadows, no floor plane outside the subject.\nSubject/item: a chunky sky-blue and teal key with amber star-shaped bow, rounded teeth, no letters.\nStyle/medium: polished rounded 3D clay-like mobile game reward item, soft matte material, clean toy-like bevels, crisp silhouette, production-ready EdTech gamification asset.\nComposition/framing: single centered item only, generous padding around all edges, square-friendly icon silhouette, readable at 64px and 96px, no cropped parts.\nLighting/mood: bright soft studio lighting baked into the subject only; cheerful, motivating, calm learning-game reward energy.\nColor palette: Fuxie Bright Sky palette: sky blue #60A8E4, deep blue #3C78A8, teal #2EC4B6, soft sky-white #F3FBFF, amber #FFB703 for reward value accents; beige/brown only if tiny neutral detail.\nText: no text, no letters, no numbers, no logo. For CEFR badge assets, leave the badge center blank so UI can overlay accurate text later.\nConstraints: no text-like marks, no watermark, no external-game/IP resemblance; do not use #ff00ff anywhere in the subject; keep object simple enough for small UI; asset must clearly support the reward/item role.\nAvoid: readable text, alphabet letters, numbers, fake UI labels, watermark, logo, realistic photo, hard shadows, contact shadow, floor plane, white background, gray background, transparent background, clutter, copied game item, Nintendo-like or Animal Crossing-like resemblance, beige/brown dominance, leaf motifs.",
+      "negative_prompt": "readable text, alphabet letters, numbers, fake UI labels, watermark, logo, realistic photo, hard shadows, contact shadow, floor plane, white background, gray background, transparent background, clutter, copied game item, Nintendo-like or Animal Crossing-like resemblance, beige/brown dominance, leaf motifs",
+      "alpha_requirement": "flat #ff00ff chroma source, local chroma-key removal, transparent corners, no color fringe, no solid background in runtime",
+      "export_size": "source large, alpha PNG master, runtime PNG/WebP 512 and 1024 square with transparent padding",
+      "paths": {
+        "source": "docs/design/asset-generation/fuxie-village-production/source/batch-5-rewards-items/b5_reward_09_unlock_key_source.png",
+        "alpha_png": "docs/design/asset-generation/fuxie-village-production/alpha/batch-5-rewards-items/b5_reward_09_unlock_key.png",
+        "runtime_png_512": "docs/design/asset-generation/fuxie-village-production/runtime/png-512/batch-5-rewards-items/b5_reward_09_unlock_key-512.png",
+        "runtime_png_1024": "docs/design/asset-generation/fuxie-village-production/runtime/png-1024/batch-5-rewards-items/b5_reward_09_unlock_key-1024.png",
+        "runtime_webp_512": "docs/design/asset-generation/fuxie-village-production/runtime/webp-512/batch-5-rewards-items/b5_reward_09_unlock_key-512.webp",
+        "runtime_webp_1024": "docs/design/asset-generation/fuxie-village-production/runtime/webp-1024/batch-5-rewards-items/b5_reward_09_unlock_key-1024.webp"
+      },
+      "qa": {
+        "status": "pass",
+        "transparent_corners": true,
+        "residual_key_like_pixels_alpha_gt_8": 0,
+        "residual_magenta_fringe_pixels_alpha_gt_8": 0,
+        "visible_coverage_ratio": 0.191307,
+        "partial_alpha_pixels": 1958,
+        "bbox_alpha_gt_8": [
+          279,
+          126,
+          1001,
+          1065
+        ]
+      }
+    },
+    {
+      "asset_id": "b5_reward_10_speaking_pass",
+      "name": "Speaking Pass",
+      "ui_role": "Speaking practice entry item",
+      "asset_type": "reward_item_cutout",
+      "source_origin": "new_batch_5_imagegen_chroma_source",
+      "prompt": "Use case: stylized-concept\nAsset type: Batch 5 Rewards/Items production cutout reward icon\nPrimary request: Create one original Fuxie German Village reward/item cutout for this UI role: Speaking practice entry item.\nCRITICAL BACKGROUND: the entire canvas background must be a perfectly flat, solid, pure chroma-key magenta #ff00ff from edge to edge. No white background, no gray background, no gradient, no vignette, no shadows, no floor plane outside the subject.\nSubject/item: a blank rounded pass card with small teal microphone charm and sky-blue lanyard loop, no text.\nStyle/medium: polished rounded 3D clay-like mobile game reward item, soft matte material, clean toy-like bevels, crisp silhouette, production-ready EdTech gamification asset.\nComposition/framing: single centered item only, generous padding around all edges, square-friendly icon silhouette, readable at 64px and 96px, no cropped parts.\nLighting/mood: bright soft studio lighting baked into the subject only; cheerful, motivating, calm learning-game reward energy.\nColor palette: Fuxie Bright Sky palette: sky blue #60A8E4, deep blue #3C78A8, teal #2EC4B6, soft sky-white #F3FBFF, amber #FFB703 for reward value accents; beige/brown only if tiny neutral detail.\nText: no text, no letters, no numbers, no logo. For CEFR badge assets, leave the badge center blank so UI can overlay accurate text later.\nConstraints: no text-like marks, no watermark, no external-game/IP resemblance; do not use #ff00ff anywhere in the subject; keep object simple enough for small UI; asset must clearly support the reward/item role.\nAvoid: readable text, alphabet letters, numbers, fake UI labels, watermark, logo, realistic photo, hard shadows, contact shadow, floor plane, white background, gray background, transparent background, clutter, copied game item, Nintendo-like or Animal Crossing-like resemblance, beige/brown dominance, leaf motifs.",
+      "negative_prompt": "readable text, alphabet letters, numbers, fake UI labels, watermark, logo, realistic photo, hard shadows, contact shadow, floor plane, white background, gray background, transparent background, clutter, copied game item, Nintendo-like or Animal Crossing-like resemblance, beige/brown dominance, leaf motifs",
+      "alpha_requirement": "flat #ff00ff chroma source, local chroma-key removal, transparent corners, no color fringe, no solid background in runtime",
+      "export_size": "source large, alpha PNG master, runtime PNG/WebP 512 and 1024 square with transparent padding",
+      "paths": {
+        "source": "docs/design/asset-generation/fuxie-village-production/source/batch-5-rewards-items/b5_reward_10_speaking_pass_source.png",
+        "alpha_png": "docs/design/asset-generation/fuxie-village-production/alpha/batch-5-rewards-items/b5_reward_10_speaking_pass.png",
+        "runtime_png_512": "docs/design/asset-generation/fuxie-village-production/runtime/png-512/batch-5-rewards-items/b5_reward_10_speaking_pass-512.png",
+        "runtime_png_1024": "docs/design/asset-generation/fuxie-village-production/runtime/png-1024/batch-5-rewards-items/b5_reward_10_speaking_pass-1024.png",
+        "runtime_webp_512": "docs/design/asset-generation/fuxie-village-production/runtime/webp-512/batch-5-rewards-items/b5_reward_10_speaking_pass-512.webp",
+        "runtime_webp_1024": "docs/design/asset-generation/fuxie-village-production/runtime/webp-1024/batch-5-rewards-items/b5_reward_10_speaking_pass-1024.webp"
+      },
+      "qa": {
+        "status": "pass",
+        "transparent_corners": true,
+        "residual_key_like_pixels_alpha_gt_8": 0,
+        "residual_magenta_fringe_pixels_alpha_gt_8": 0,
+        "visible_coverage_ratio": 0.356341,
+        "partial_alpha_pixels": 2933,
+        "bbox_alpha_gt_8": [
+          193,
+          90,
+          1145,
+          1151
+        ]
+      }
+    },
+    {
+      "asset_id": "b5_reward_11_listening_token",
+      "name": "Listening Token",
+      "ui_role": "Listening practice reward",
+      "asset_type": "reward_item_cutout",
+      "source_origin": "new_batch_5_imagegen_chroma_source",
+      "prompt": "Use case: stylized-concept\nAsset type: Batch 5 Rewards/Items production cutout reward icon\nPrimary request: Create one original Fuxie German Village reward/item cutout for this UI role: Listening practice reward.\nCRITICAL BACKGROUND: the entire canvas background must be a perfectly flat, solid, pure chroma-key magenta #ff00ff from edge to edge. No white background, no gray background, no gradient, no vignette, no shadows, no floor plane outside the subject.\nSubject/item: a circular sky-blue token with raised teal headphone icon silhouette and amber accent bead, no text.\nStyle/medium: polished rounded 3D clay-like mobile game reward item, soft matte material, clean toy-like bevels, crisp silhouette, production-ready EdTech gamification asset.\nComposition/framing: single centered item only, generous padding around all edges, square-friendly icon silhouette, readable at 64px and 96px, no cropped parts.\nLighting/mood: bright soft studio lighting baked into the subject only; cheerful, motivating, calm learning-game reward energy.\nColor palette: Fuxie Bright Sky palette: sky blue #60A8E4, deep blue #3C78A8, teal #2EC4B6, soft sky-white #F3FBFF, amber #FFB703 for reward value accents; beige/brown only if tiny neutral detail.\nText: no text, no letters, no numbers, no logo. For CEFR badge assets, leave the badge center blank so UI can overlay accurate text later.\nConstraints: no text-like marks, no watermark, no external-game/IP resemblance; do not use #ff00ff anywhere in the subject; keep object simple enough for small UI; asset must clearly support the reward/item role.\nAvoid: readable text, alphabet letters, numbers, fake UI labels, watermark, logo, realistic photo, hard shadows, contact shadow, floor plane, white background, gray background, transparent background, clutter, copied game item, Nintendo-like or Animal Crossing-like resemblance, beige/brown dominance, leaf motifs.",
+      "negative_prompt": "readable text, alphabet letters, numbers, fake UI labels, watermark, logo, realistic photo, hard shadows, contact shadow, floor plane, white background, gray background, transparent background, clutter, copied game item, Nintendo-like or Animal Crossing-like resemblance, beige/brown dominance, leaf motifs",
+      "alpha_requirement": "flat #ff00ff chroma source, local chroma-key removal, transparent corners, no color fringe, no solid background in runtime",
+      "export_size": "source large, alpha PNG master, runtime PNG/WebP 512 and 1024 square with transparent padding",
+      "paths": {
+        "source": "docs/design/asset-generation/fuxie-village-production/source/batch-5-rewards-items/b5_reward_11_listening_token_source.png",
+        "alpha_png": "docs/design/asset-generation/fuxie-village-production/alpha/batch-5-rewards-items/b5_reward_11_listening_token.png",
+        "runtime_png_512": "docs/design/asset-generation/fuxie-village-production/runtime/png-512/batch-5-rewards-items/b5_reward_11_listening_token-512.png",
+        "runtime_png_1024": "docs/design/asset-generation/fuxie-village-production/runtime/png-1024/batch-5-rewards-items/b5_reward_11_listening_token-1024.png",
+        "runtime_webp_512": "docs/design/asset-generation/fuxie-village-production/runtime/webp-512/batch-5-rewards-items/b5_reward_11_listening_token-512.webp",
+        "runtime_webp_1024": "docs/design/asset-generation/fuxie-village-production/runtime/webp-1024/batch-5-rewards-items/b5_reward_11_listening_token-1024.webp"
+      },
+      "qa": {
+        "status": "pass",
+        "transparent_corners": true,
+        "residual_key_like_pixels_alpha_gt_8": 0,
+        "residual_magenta_fringe_pixels_alpha_gt_8": 0,
+        "visible_coverage_ratio": 0.439349,
+        "partial_alpha_pixels": 1692,
+        "bbox_alpha_gt_8": [
+          171,
+          149,
+          1082,
+          1111
+        ]
+      }
+    },
+    {
+      "asset_id": "b5_reward_12_writing_stamp",
+      "name": "Writing Stamp",
+      "ui_role": "Writing task reward",
+      "asset_type": "reward_item_cutout",
+      "source_origin": "new_batch_5_imagegen_chroma_source",
+      "prompt": "Use case: stylized-concept\nAsset type: Batch 5 Rewards/Items production cutout reward icon\nPrimary request: Create one original Fuxie German Village reward/item cutout for this UI role: Writing task reward.\nCRITICAL BACKGROUND: the entire canvas background must be a perfectly flat, solid, pure chroma-key magenta #ff00ff from edge to edge. No white background, no gray background, no gradient, no vignette, no shadows, no floor plane outside the subject.\nSubject/item: a cute rubber stamp prop with sky-blue handle, teal base, blank soft white stamp face, no letters.\nStyle/medium: polished rounded 3D clay-like mobile game reward item, soft matte material, clean toy-like bevels, crisp silhouette, production-ready EdTech gamification asset.\nComposition/framing: single centered item only, generous padding around all edges, square-friendly icon silhouette, readable at 64px and 96px, no cropped parts.\nLighting/mood: bright soft studio lighting baked into the subject only; cheerful, motivating, calm learning-game reward energy.\nColor palette: Fuxie Bright Sky palette: sky blue #60A8E4, deep blue #3C78A8, teal #2EC4B6, soft sky-white #F3FBFF, amber #FFB703 for reward value accents; beige/brown only if tiny neutral detail.\nText: no text, no letters, no numbers, no logo. For CEFR badge assets, leave the badge center blank so UI can overlay accurate text later.\nConstraints: no text-like marks, no watermark, no external-game/IP resemblance; do not use #ff00ff anywhere in the subject; keep object simple enough for small UI; asset must clearly support the reward/item role.\nAvoid: readable text, alphabet letters, numbers, fake UI labels, watermark, logo, realistic photo, hard shadows, contact shadow, floor plane, white background, gray background, transparent background, clutter, copied game item, Nintendo-like or Animal Crossing-like resemblance, beige/brown dominance, leaf motifs.",
+      "negative_prompt": "readable text, alphabet letters, numbers, fake UI labels, watermark, logo, realistic photo, hard shadows, contact shadow, floor plane, white background, gray background, transparent background, clutter, copied game item, Nintendo-like or Animal Crossing-like resemblance, beige/brown dominance, leaf motifs",
+      "alpha_requirement": "flat #ff00ff chroma source, local chroma-key removal, transparent corners, no color fringe, no solid background in runtime",
+      "export_size": "source large, alpha PNG master, runtime PNG/WebP 512 and 1024 square with transparent padding",
+      "paths": {
+        "source": "docs/design/asset-generation/fuxie-village-production/source/batch-5-rewards-items/b5_reward_12_writing_stamp_source.png",
+        "alpha_png": "docs/design/asset-generation/fuxie-village-production/alpha/batch-5-rewards-items/b5_reward_12_writing_stamp.png",
+        "runtime_png_512": "docs/design/asset-generation/fuxie-village-production/runtime/png-512/batch-5-rewards-items/b5_reward_12_writing_stamp-512.png",
+        "runtime_png_1024": "docs/design/asset-generation/fuxie-village-production/runtime/png-1024/batch-5-rewards-items/b5_reward_12_writing_stamp-1024.png",
+        "runtime_webp_512": "docs/design/asset-generation/fuxie-village-production/runtime/webp-512/batch-5-rewards-items/b5_reward_12_writing_stamp-512.webp",
+        "runtime_webp_1024": "docs/design/asset-generation/fuxie-village-production/runtime/webp-1024/batch-5-rewards-items/b5_reward_12_writing_stamp-1024.webp"
+      },
+      "qa": {
+        "status": "pass",
+        "transparent_corners": true,
+        "residual_key_like_pixels_alpha_gt_8": 0,
+        "residual_magenta_fringe_pixels_alpha_gt_8": 0,
+        "visible_coverage_ratio": 0.259149,
+        "partial_alpha_pixels": 1427,
+        "bbox_alpha_gt_8": [
+          247,
+          127,
+          941,
+          1087
+        ]
+      }
+    },
+    {
+      "asset_id": "b5_reward_13_grammar_gear_token",
+      "name": "Grammar Gear Token",
+      "ui_role": "Grammar skill reward",
+      "asset_type": "reward_item_cutout",
+      "source_origin": "new_batch_5_imagegen_chroma_source",
+      "prompt": "Use case: stylized-concept\nAsset type: Batch 5 Rewards/Items production cutout reward icon\nPrimary request: Create one original Fuxie German Village reward/item cutout for this UI role: Grammar skill reward.\nCRITICAL BACKGROUND: the entire canvas background must be a perfectly flat, solid, pure chroma-key magenta #ff00ff from edge to edge. No white background, no gray background, no gradient, no vignette, no shadows, no floor plane outside the subject.\nSubject/item: a teal gear coin with sky-blue center and small amber rivets, clean puzzle-like silhouette, no text.\nStyle/medium: polished rounded 3D clay-like mobile game reward item, soft matte material, clean toy-like bevels, crisp silhouette, production-ready EdTech gamification asset.\nComposition/framing: single centered item only, generous padding around all edges, square-friendly icon silhouette, readable at 64px and 96px, no cropped parts.\nLighting/mood: bright soft studio lighting baked into the subject only; cheerful, motivating, calm learning-game reward energy.\nColor palette: Fuxie Bright Sky palette: sky blue #60A8E4, deep blue #3C78A8, teal #2EC4B6, soft sky-white #F3FBFF, amber #FFB703 for reward value accents; beige/brown only if tiny neutral detail.\nText: no text, no letters, no numbers, no logo. For CEFR badge assets, leave the badge center blank so UI can overlay accurate text later.\nConstraints: no text-like marks, no watermark, no external-game/IP resemblance; do not use #ff00ff anywhere in the subject; keep object simple enough for small UI; asset must clearly support the reward/item role.\nAvoid: readable text, alphabet letters, numbers, fake UI labels, watermark, logo, realistic photo, hard shadows, contact shadow, floor plane, white background, gray background, transparent background, clutter, copied game item, Nintendo-like or Animal Crossing-like resemblance, beige/brown dominance, leaf motifs.",
+      "negative_prompt": "readable text, alphabet letters, numbers, fake UI labels, watermark, logo, realistic photo, hard shadows, contact shadow, floor plane, white background, gray background, transparent background, clutter, copied game item, Nintendo-like or Animal Crossing-like resemblance, beige/brown dominance, leaf motifs",
+      "alpha_requirement": "flat #ff00ff chroma source, local chroma-key removal, transparent corners, no color fringe, no solid background in runtime",
+      "export_size": "source large, alpha PNG master, runtime PNG/WebP 512 and 1024 square with transparent padding",
+      "paths": {
+        "source": "docs/design/asset-generation/fuxie-village-production/source/batch-5-rewards-items/b5_reward_13_grammar_gear_token_source.png",
+        "alpha_png": "docs/design/asset-generation/fuxie-village-production/alpha/batch-5-rewards-items/b5_reward_13_grammar_gear_token.png",
+        "runtime_png_512": "docs/design/asset-generation/fuxie-village-production/runtime/png-512/batch-5-rewards-items/b5_reward_13_grammar_gear_token-512.png",
+        "runtime_png_1024": "docs/design/asset-generation/fuxie-village-production/runtime/png-1024/batch-5-rewards-items/b5_reward_13_grammar_gear_token-1024.png",
+        "runtime_webp_512": "docs/design/asset-generation/fuxie-village-production/runtime/webp-512/batch-5-rewards-items/b5_reward_13_grammar_gear_token-512.webp",
+        "runtime_webp_1024": "docs/design/asset-generation/fuxie-village-production/runtime/webp-1024/batch-5-rewards-items/b5_reward_13_grammar_gear_token-1024.webp"
+      },
+      "qa": {
+        "status": "pass",
+        "transparent_corners": true,
+        "residual_key_like_pixels_alpha_gt_8": 0,
+        "residual_magenta_fringe_pixels_alpha_gt_8": 0,
+        "visible_coverage_ratio": 0.368095,
+        "partial_alpha_pixels": 1584,
+        "bbox_alpha_gt_8": [
+          163,
+          136,
+          1080,
+          1070
+        ]
+      }
+    },
+    {
+      "asset_id": "b5_reward_14_vocabulary_card_pack",
+      "name": "Vocabulary Card Pack",
+      "ui_role": "Vocabulary pack reward",
+      "asset_type": "reward_item_cutout",
+      "source_origin": "new_batch_5_imagegen_chroma_source",
+      "prompt": "Use case: stylized-concept\nAsset type: Batch 5 Rewards/Items production cutout reward icon\nPrimary request: Create one original Fuxie German Village reward/item cutout for this UI role: Vocabulary pack reward.\nCRITICAL BACKGROUND: the entire canvas background must be a perfectly flat, solid, pure chroma-key magenta #ff00ff from edge to edge. No white background, no gray background, no gradient, no vignette, no shadows, no floor plane outside the subject.\nSubject/item: a small stack of blank rounded vocabulary cards in sky-white with teal tab dividers and sky-blue strap, no words.\nStyle/medium: polished rounded 3D clay-like mobile game reward item, soft matte material, clean toy-like bevels, crisp silhouette, production-ready EdTech gamification asset.\nComposition/framing: single centered item only, generous padding around all edges, square-friendly icon silhouette, readable at 64px and 96px, no cropped parts.\nLighting/mood: bright soft studio lighting baked into the subject only; cheerful, motivating, calm learning-game reward energy.\nColor palette: Fuxie Bright Sky palette: sky blue #60A8E4, deep blue #3C78A8, teal #2EC4B6, soft sky-white #F3FBFF, amber #FFB703 for reward value accents; beige/brown only if tiny neutral detail.\nText: no text, no letters, no numbers, no logo. For CEFR badge assets, leave the badge center blank so UI can overlay accurate text later.\nConstraints: no text-like marks, no watermark, no external-game/IP resemblance; do not use #ff00ff anywhere in the subject; keep object simple enough for small UI; asset must clearly support the reward/item role.\nAvoid: readable text, alphabet letters, numbers, fake UI labels, watermark, logo, realistic photo, hard shadows, contact shadow, floor plane, white background, gray background, transparent background, clutter, copied game item, Nintendo-like or Animal Crossing-like resemblance, beige/brown dominance, leaf motifs.",
+      "negative_prompt": "readable text, alphabet letters, numbers, fake UI labels, watermark, logo, realistic photo, hard shadows, contact shadow, floor plane, white background, gray background, transparent background, clutter, copied game item, Nintendo-like or Animal Crossing-like resemblance, beige/brown dominance, leaf motifs",
+      "alpha_requirement": "flat #ff00ff chroma source, local chroma-key removal, transparent corners, no color fringe, no solid background in runtime",
+      "export_size": "source large, alpha PNG master, runtime PNG/WebP 512 and 1024 square with transparent padding",
+      "paths": {
+        "source": "docs/design/asset-generation/fuxie-village-production/source/batch-5-rewards-items/b5_reward_14_vocabulary_card_pack_source.png",
+        "alpha_png": "docs/design/asset-generation/fuxie-village-production/alpha/batch-5-rewards-items/b5_reward_14_vocabulary_card_pack.png",
+        "runtime_png_512": "docs/design/asset-generation/fuxie-village-production/runtime/png-512/batch-5-rewards-items/b5_reward_14_vocabulary_card_pack-512.png",
+        "runtime_png_1024": "docs/design/asset-generation/fuxie-village-production/runtime/png-1024/batch-5-rewards-items/b5_reward_14_vocabulary_card_pack-1024.png",
+        "runtime_webp_512": "docs/design/asset-generation/fuxie-village-production/runtime/webp-512/batch-5-rewards-items/b5_reward_14_vocabulary_card_pack-512.webp",
+        "runtime_webp_1024": "docs/design/asset-generation/fuxie-village-production/runtime/webp-1024/batch-5-rewards-items/b5_reward_14_vocabulary_card_pack-1024.webp"
+      },
+      "qa": {
+        "status": "pass",
+        "transparent_corners": true,
+        "residual_key_like_pixels_alpha_gt_8": 0,
+        "residual_magenta_fringe_pixels_alpha_gt_8": 0,
+        "visible_coverage_ratio": 0.396518,
+        "partial_alpha_pixels": 1597,
+        "bbox_alpha_gt_8": [
+          182,
+          153,
+          1058,
+          1077
+        ]
+      }
+    },
+    {
+      "asset_id": "b5_reward_15_reading_bookmark",
+      "name": "Reading Bookmark",
+      "ui_role": "Reading reward item",
+      "asset_type": "reward_item_cutout",
+      "source_origin": "new_batch_5_imagegen_chroma_source",
+      "prompt": "Use case: stylized-concept\nAsset type: Batch 5 Rewards/Items production cutout reward icon\nPrimary request: Create one original Fuxie German Village reward/item cutout for this UI role: Reading reward item.\nCRITICAL BACKGROUND: the entire canvas background must be a perfectly flat, solid, pure chroma-key magenta #ff00ff from edge to edge. No white background, no gray background, no gradient, no vignette, no shadows, no floor plane outside the subject.\nSubject/item: a soft sky-blue bookmark ribbon with teal tassel and tiny amber star charm, no letters.\nStyle/medium: polished rounded 3D clay-like mobile game reward item, soft matte material, clean toy-like bevels, crisp silhouette, production-ready EdTech gamification asset.\nComposition/framing: single centered item only, generous padding around all edges, square-friendly icon silhouette, readable at 64px and 96px, no cropped parts.\nLighting/mood: bright soft studio lighting baked into the subject only; cheerful, motivating, calm learning-game reward energy.\nColor palette: Fuxie Bright Sky palette: sky blue #60A8E4, deep blue #3C78A8, teal #2EC4B6, soft sky-white #F3FBFF, amber #FFB703 for reward value accents; beige/brown only if tiny neutral detail.\nText: no text, no letters, no numbers, no logo. For CEFR badge assets, leave the badge center blank so UI can overlay accurate text later.\nConstraints: no text-like marks, no watermark, no external-game/IP resemblance; do not use #ff00ff anywhere in the subject; keep object simple enough for small UI; asset must clearly support the reward/item role.\nAvoid: readable text, alphabet letters, numbers, fake UI labels, watermark, logo, realistic photo, hard shadows, contact shadow, floor plane, white background, gray background, transparent background, clutter, copied game item, Nintendo-like or Animal Crossing-like resemblance, beige/brown dominance, leaf motifs.",
+      "negative_prompt": "readable text, alphabet letters, numbers, fake UI labels, watermark, logo, realistic photo, hard shadows, contact shadow, floor plane, white background, gray background, transparent background, clutter, copied game item, Nintendo-like or Animal Crossing-like resemblance, beige/brown dominance, leaf motifs",
+      "alpha_requirement": "flat #ff00ff chroma source, local chroma-key removal, transparent corners, no color fringe, no solid background in runtime",
+      "export_size": "source large, alpha PNG master, runtime PNG/WebP 512 and 1024 square with transparent padding",
+      "paths": {
+        "source": "docs/design/asset-generation/fuxie-village-production/source/batch-5-rewards-items/b5_reward_15_reading_bookmark_source.png",
+        "alpha_png": "docs/design/asset-generation/fuxie-village-production/alpha/batch-5-rewards-items/b5_reward_15_reading_bookmark.png",
+        "runtime_png_512": "docs/design/asset-generation/fuxie-village-production/runtime/png-512/batch-5-rewards-items/b5_reward_15_reading_bookmark-512.png",
+        "runtime_png_1024": "docs/design/asset-generation/fuxie-village-production/runtime/png-1024/batch-5-rewards-items/b5_reward_15_reading_bookmark-1024.png",
+        "runtime_webp_512": "docs/design/asset-generation/fuxie-village-production/runtime/webp-512/batch-5-rewards-items/b5_reward_15_reading_bookmark-512.webp",
+        "runtime_webp_1024": "docs/design/asset-generation/fuxie-village-production/runtime/webp-1024/batch-5-rewards-items/b5_reward_15_reading_bookmark-1024.webp"
+      },
+      "qa": {
+        "status": "pass",
+        "transparent_corners": true,
+        "residual_key_like_pixels_alpha_gt_8": 0,
+        "residual_magenta_fringe_pixels_alpha_gt_8": 0,
+        "visible_coverage_ratio": 0.227616,
+        "partial_alpha_pixels": 2428,
+        "bbox_alpha_gt_8": [
+          396,
+          131,
+          978,
+          1070
+        ]
+      }
+    },
+    {
+      "asset_id": "b5_reward_16_outfit_token_hoodie",
+      "name": "Outfit Token Hoodie",
+      "ui_role": "Mascot outfit unlock token",
+      "asset_type": "reward_item_cutout",
+      "source_origin": "new_batch_5_imagegen_chroma_source",
+      "prompt": "Use case: stylized-concept\nAsset type: Batch 5 Rewards/Items production cutout reward icon\nPrimary request: Create one original Fuxie German Village reward/item cutout for this UI role: Mascot outfit unlock token.\nCRITICAL BACKGROUND: the entire canvas background must be a perfectly flat, solid, pure chroma-key magenta #ff00ff from edge to edge. No white background, no gray background, no gradient, no vignette, no shadows, no floor plane outside the subject.\nSubject/item: a circular token showing a tiny folded teal hoodie silhouette with sky-blue rim and amber stitch dots, no text.\nStyle/medium: polished rounded 3D clay-like mobile game reward item, soft matte material, clean toy-like bevels, crisp silhouette, production-ready EdTech gamification asset.\nComposition/framing: single centered item only, generous padding around all edges, square-friendly icon silhouette, readable at 64px and 96px, no cropped parts.\nLighting/mood: bright soft studio lighting baked into the subject only; cheerful, motivating, calm learning-game reward energy.\nColor palette: Fuxie Bright Sky palette: sky blue #60A8E4, deep blue #3C78A8, teal #2EC4B6, soft sky-white #F3FBFF, amber #FFB703 for reward value accents; beige/brown only if tiny neutral detail.\nText: no text, no letters, no numbers, no logo. For CEFR badge assets, leave the badge center blank so UI can overlay accurate text later.\nConstraints: no text-like marks, no watermark, no external-game/IP resemblance; do not use #ff00ff anywhere in the subject; keep object simple enough for small UI; asset must clearly support the reward/item role.\nAvoid: readable text, alphabet letters, numbers, fake UI labels, watermark, logo, realistic photo, hard shadows, contact shadow, floor plane, white background, gray background, transparent background, clutter, copied game item, Nintendo-like or Animal Crossing-like resemblance, beige/brown dominance, leaf motifs.",
+      "negative_prompt": "readable text, alphabet letters, numbers, fake UI labels, watermark, logo, realistic photo, hard shadows, contact shadow, floor plane, white background, gray background, transparent background, clutter, copied game item, Nintendo-like or Animal Crossing-like resemblance, beige/brown dominance, leaf motifs",
+      "alpha_requirement": "flat #ff00ff chroma source, local chroma-key removal, transparent corners, no color fringe, no solid background in runtime",
+      "export_size": "source large, alpha PNG master, runtime PNG/WebP 512 and 1024 square with transparent padding",
+      "paths": {
+        "source": "docs/design/asset-generation/fuxie-village-production/source/batch-5-rewards-items/b5_reward_16_outfit_token_hoodie_source.png",
+        "alpha_png": "docs/design/asset-generation/fuxie-village-production/alpha/batch-5-rewards-items/b5_reward_16_outfit_token_hoodie.png",
+        "runtime_png_512": "docs/design/asset-generation/fuxie-village-production/runtime/png-512/batch-5-rewards-items/b5_reward_16_outfit_token_hoodie-512.png",
+        "runtime_png_1024": "docs/design/asset-generation/fuxie-village-production/runtime/png-1024/batch-5-rewards-items/b5_reward_16_outfit_token_hoodie-1024.png",
+        "runtime_webp_512": "docs/design/asset-generation/fuxie-village-production/runtime/webp-512/batch-5-rewards-items/b5_reward_16_outfit_token_hoodie-512.webp",
+        "runtime_webp_1024": "docs/design/asset-generation/fuxie-village-production/runtime/webp-1024/batch-5-rewards-items/b5_reward_16_outfit_token_hoodie-1024.webp"
+      },
+      "qa": {
+        "status": "pass",
+        "transparent_corners": true,
+        "residual_key_like_pixels_alpha_gt_8": 0,
+        "residual_magenta_fringe_pixels_alpha_gt_8": 0,
+        "visible_coverage_ratio": 0.460025,
+        "partial_alpha_pixels": 1577,
+        "bbox_alpha_gt_8": [
+          172,
+          126,
+          1106,
+          1112
+        ]
+      }
+    },
+    {
+      "asset_id": "b5_reward_17_outfit_token_scarf",
+      "name": "Outfit Token Scarf",
+      "ui_role": "Mascot outfit unlock token",
+      "asset_type": "reward_item_cutout",
+      "source_origin": "new_batch_5_imagegen_chroma_source",
+      "prompt": "Use case: stylized-concept\nAsset type: Batch 5 Rewards/Items production cutout reward icon\nPrimary request: Create one original Fuxie German Village reward/item cutout for this UI role: Mascot outfit unlock token.\nCRITICAL BACKGROUND: the entire canvas background must be a perfectly flat, solid, pure chroma-key magenta #ff00ff from edge to edge. No white background, no gray background, no gradient, no vignette, no shadows, no floor plane outside the subject.\nSubject/item: a circular token showing a tiny sky-blue scarf swirl silhouette with teal rim and amber stitch dots, no text.\nStyle/medium: polished rounded 3D clay-like mobile game reward item, soft matte material, clean toy-like bevels, crisp silhouette, production-ready EdTech gamification asset.\nComposition/framing: single centered item only, generous padding around all edges, square-friendly icon silhouette, readable at 64px and 96px, no cropped parts.\nLighting/mood: bright soft studio lighting baked into the subject only; cheerful, motivating, calm learning-game reward energy.\nColor palette: Fuxie Bright Sky palette: sky blue #60A8E4, deep blue #3C78A8, teal #2EC4B6, soft sky-white #F3FBFF, amber #FFB703 for reward value accents; beige/brown only if tiny neutral detail.\nText: no text, no letters, no numbers, no logo. For CEFR badge assets, leave the badge center blank so UI can overlay accurate text later.\nConstraints: no text-like marks, no watermark, no external-game/IP resemblance; do not use #ff00ff anywhere in the subject; keep object simple enough for small UI; asset must clearly support the reward/item role.\nAvoid: readable text, alphabet letters, numbers, fake UI labels, watermark, logo, realistic photo, hard shadows, contact shadow, floor plane, white background, gray background, transparent background, clutter, copied game item, Nintendo-like or Animal Crossing-like resemblance, beige/brown dominance, leaf motifs.",
+      "negative_prompt": "readable text, alphabet letters, numbers, fake UI labels, watermark, logo, realistic photo, hard shadows, contact shadow, floor plane, white background, gray background, transparent background, clutter, copied game item, Nintendo-like or Animal Crossing-like resemblance, beige/brown dominance, leaf motifs",
+      "alpha_requirement": "flat #ff00ff chroma source, local chroma-key removal, transparent corners, no color fringe, no solid background in runtime",
+      "export_size": "source large, alpha PNG master, runtime PNG/WebP 512 and 1024 square with transparent padding",
+      "paths": {
+        "source": "docs/design/asset-generation/fuxie-village-production/source/batch-5-rewards-items/b5_reward_17_outfit_token_scarf_source.png",
+        "alpha_png": "docs/design/asset-generation/fuxie-village-production/alpha/batch-5-rewards-items/b5_reward_17_outfit_token_scarf.png",
+        "runtime_png_512": "docs/design/asset-generation/fuxie-village-production/runtime/png-512/batch-5-rewards-items/b5_reward_17_outfit_token_scarf-512.png",
+        "runtime_png_1024": "docs/design/asset-generation/fuxie-village-production/runtime/png-1024/batch-5-rewards-items/b5_reward_17_outfit_token_scarf-1024.png",
+        "runtime_webp_512": "docs/design/asset-generation/fuxie-village-production/runtime/webp-512/batch-5-rewards-items/b5_reward_17_outfit_token_scarf-512.webp",
+        "runtime_webp_1024": "docs/design/asset-generation/fuxie-village-production/runtime/webp-1024/batch-5-rewards-items/b5_reward_17_outfit_token_scarf-1024.webp"
+      },
+      "qa": {
+        "status": "pass",
+        "transparent_corners": true,
+        "residual_key_like_pixels_alpha_gt_8": 0,
+        "residual_magenta_fringe_pixels_alpha_gt_8": 0,
+        "visible_coverage_ratio": 0.414884,
+        "partial_alpha_pixels": 1250,
+        "bbox_alpha_gt_8": [
+          186,
+          158,
+          1068,
+          1107
+        ]
+      }
+    },
+    {
+      "asset_id": "b5_reward_18_shop_voucher",
+      "name": "Shop Voucher",
+      "ui_role": "Shop discount/redeem reward",
+      "asset_type": "reward_item_cutout",
+      "source_origin": "new_batch_5_imagegen_chroma_source",
+      "prompt": "Use case: stylized-concept\nAsset type: Batch 5 Rewards/Items production cutout reward icon\nPrimary request: Create one original Fuxie German Village reward/item cutout for this UI role: Shop discount/redeem reward.\nCRITICAL BACKGROUND: the entire canvas background must be a perfectly flat, solid, pure chroma-key magenta #ff00ff from edge to edge. No white background, no gray background, no gradient, no vignette, no shadows, no floor plane outside the subject.\nSubject/item: a blank premium voucher card with sky-blue border, teal ribbon corner, amber coin seal, no letters or numbers.\nStyle/medium: polished rounded 3D clay-like mobile game reward item, soft matte material, clean toy-like bevels, crisp silhouette, production-ready EdTech gamification asset.\nComposition/framing: single centered item only, generous padding around all edges, square-friendly icon silhouette, readable at 64px and 96px, no cropped parts.\nLighting/mood: bright soft studio lighting baked into the subject only; cheerful, motivating, calm learning-game reward energy.\nColor palette: Fuxie Bright Sky palette: sky blue #60A8E4, deep blue #3C78A8, teal #2EC4B6, soft sky-white #F3FBFF, amber #FFB703 for reward value accents; beige/brown only if tiny neutral detail.\nText: no text, no letters, no numbers, no logo. For CEFR badge assets, leave the badge center blank so UI can overlay accurate text later.\nConstraints: no text-like marks, no watermark, no external-game/IP resemblance; do not use #ff00ff anywhere in the subject; keep object simple enough for small UI; asset must clearly support the reward/item role.\nAvoid: readable text, alphabet letters, numbers, fake UI labels, watermark, logo, realistic photo, hard shadows, contact shadow, floor plane, white background, gray background, transparent background, clutter, copied game item, Nintendo-like or Animal Crossing-like resemblance, beige/brown dominance, leaf motifs.",
+      "negative_prompt": "readable text, alphabet letters, numbers, fake UI labels, watermark, logo, realistic photo, hard shadows, contact shadow, floor plane, white background, gray background, transparent background, clutter, copied game item, Nintendo-like or Animal Crossing-like resemblance, beige/brown dominance, leaf motifs",
+      "alpha_requirement": "flat #ff00ff chroma source, local chroma-key removal, transparent corners, no color fringe, no solid background in runtime",
+      "export_size": "source large, alpha PNG master, runtime PNG/WebP 512 and 1024 square with transparent padding",
+      "paths": {
+        "source": "docs/design/asset-generation/fuxie-village-production/source/batch-5-rewards-items/b5_reward_18_shop_voucher_source.png",
+        "alpha_png": "docs/design/asset-generation/fuxie-village-production/alpha/batch-5-rewards-items/b5_reward_18_shop_voucher.png",
+        "runtime_png_512": "docs/design/asset-generation/fuxie-village-production/runtime/png-512/batch-5-rewards-items/b5_reward_18_shop_voucher-512.png",
+        "runtime_png_1024": "docs/design/asset-generation/fuxie-village-production/runtime/png-1024/batch-5-rewards-items/b5_reward_18_shop_voucher-1024.png",
+        "runtime_webp_512": "docs/design/asset-generation/fuxie-village-production/runtime/webp-512/batch-5-rewards-items/b5_reward_18_shop_voucher-512.webp",
+        "runtime_webp_1024": "docs/design/asset-generation/fuxie-village-production/runtime/webp-1024/batch-5-rewards-items/b5_reward_18_shop_voucher-1024.webp"
+      },
+      "qa": {
+        "status": "pass",
+        "transparent_corners": true,
+        "residual_key_like_pixels_alpha_gt_8": 0,
+        "residual_magenta_fringe_pixels_alpha_gt_8": 0,
+        "visible_coverage_ratio": 0.365161,
+        "partial_alpha_pixels": 1589,
+        "bbox_alpha_gt_8": [
+          115,
+          263,
+          1130,
+          1003
+        ]
+      }
+    }
+  ]
+}

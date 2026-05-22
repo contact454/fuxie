@@ -108,6 +108,9 @@ describe('Fucoin economy', () => {
                 findUnique: vi.fn(),
                 upsert: vi.fn().mockResolvedValue({ balance: 101 }),
             },
+            analyticsEvent: {
+                create: vi.fn().mockResolvedValue({ id: 'event-1' }),
+            },
         }
 
         const result = await awardLearningFucoin(tx as unknown as EconomyDbClient, {
@@ -123,6 +126,55 @@ describe('Fucoin economy', () => {
         expect(tx.fucoinLedger.create).toHaveBeenCalledWith({
             data: expect.objectContaining({ amount: 1 }),
         })
+        expect(tx.analyticsEvent.create).toHaveBeenCalledWith({
+            data: expect.objectContaining({
+                userId: 'user-1',
+                role: 'LEARNER',
+                eventName: 'fucoin_earned',
+                source: 'fucoin.learning_award',
+                actionId: 'attempt-2',
+                metadata: expect.objectContaining({
+                    amount: 1,
+                    daily_cap: LEARNING_FUCOIN_DAILY_CAP,
+                    cap_reached: true,
+                    source_type: 'learning:listening',
+                }),
+            }),
+        })
+    })
+
+    it('does not record Fucoin analytics for duplicate learning awards', async () => {
+        const tx = {
+            fucoinLedger: {
+                aggregate: vi.fn().mockResolvedValue({ _sum: { amount: 0 } }),
+                create: vi.fn().mockRejectedValue(uniqueConstraintError()),
+            },
+            userWallet: {
+                findUnique: vi.fn().mockResolvedValue({
+                    balance: 44,
+                    lifetimeEarned: 44,
+                    lifetimeSpent: 0,
+                }),
+                upsert: vi.fn(),
+            },
+            analyticsEvent: {
+                create: vi.fn(),
+            },
+        }
+
+        const result = await awardLearningFucoin(tx as unknown as EconomyDbClient, {
+            userId: 'user-1',
+            kind: 'activity',
+            sourceType: 'learning:srs',
+            sourceId: 'review-1',
+            reason: 'SRS review',
+        })
+
+        expect(result).toMatchObject({
+            fucoinEarned: 0,
+            duplicate: true,
+        })
+        expect(tx.analyticsEvent.create).not.toHaveBeenCalled()
     })
 
     it('spends Fucoin through an immutable spend ledger', async () => {

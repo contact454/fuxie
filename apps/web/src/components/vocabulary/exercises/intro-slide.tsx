@@ -73,7 +73,7 @@ export function IntroSlide({ word, meaningNative, imageUrl, audioUrl, onContinue
                 onClick={onContinue}
                 className={fuxieButtonClass('primary', 'lg', 'mt-12 w-full max-w-sm rounded-2xl py-4 text-lg')}
             >
-                Tiếp tục
+                Tiếp Bước
             </button>
         </div>
     )

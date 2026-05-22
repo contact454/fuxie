@@ -69,7 +69,9 @@
       "points": 1,
       "explanation": {
         "key_evidence": "Pizzeria Roma – Italienisch essen; Pizza 8–12 €, Pasta 9–14 €, Salat 6 €; Biergarten im Sommer. Live-Musik am Freitag. Kein Mittagessen.",
-        "reasoning": "Die Situation passt zu Anzeige A, weil die genannten Anforderungen dort erfüllt werden."
+        "reasoning": "Die Situation passt zu Anzeige A, weil die genannten Anforderungen dort erfüllt werden.",
+        "de": "Die richtige Antwort ist A. Die relevante Textstelle lautet: \"Pizzeria Roma – Italienisch essen; Pizza 8–12 €, Pasta 9–14 €, Salat 6 €; Biergarten im Sommer. Live-Musik am Freitag. Kein Mittagessen.\".",
+        "vi": "??p ?n ??ng l? A. H?y ??i chi?u v?i th?ng tin then ch?t trong b?i ??c."
       }
     },
     {
@@ -81,7 +83,9 @@
       "points": 1,
       "explanation": {
         "key_evidence": "Café Sonnenschein – Frühstück & Kuchen; Frühstück 5–9 €, Kuchen 3 €, Kaffee 2,50 €",
-        "reasoning": "Die Situation passt zu Anzeige B, weil die genannten Anforderungen dort erfüllt werden."
+        "reasoning": "Die Situation passt zu Anzeige B, weil die genannten Anforderungen dort erfüllt werden.",
+        "de": "Die richtige Antwort ist B. Die relevante Textstelle lautet: \"Café Sonnenschein – Frühstück & Kuchen; Frühstück 5–9 €, Kuchen 3 €, Kaffee 2,50 €\".",
+        "vi": "??p ?n ??ng l? B. H?y ??i chi?u v?i th?ng tin then ch?t trong b?i ??c."
       }
     },
     {
@@ -93,7 +97,9 @@
       "points": 1,
       "explanation": {
         "key_evidence": "Café Sonnenschein – Frühstück & Kuchen",
-        "reasoning": "Die Situation passt zu Anzeige B, weil die genannten Anforderungen dort erfüllt werden."
+        "reasoning": "Die Situation passt zu Anzeige B, weil die genannten Anforderungen dort erfüllt werden.",
+        "de": "Die richtige Antwort ist B. Die relevante Textstelle lautet: \"Café Sonnenschein – Frühstück & Kuchen\".",
+        "vi": "??p ?n ??ng l? B. H?y ??i chi?u v?i th?ng tin then ch?t trong b?i ??c."
       }
     },
     {
@@ -105,7 +111,9 @@
       "points": 1,
       "explanation": {
         "key_evidence": "Pizzeria Roma – Italienisch essen; Biergarten im Sommer. Live-Musik am Freitag. Kein Mittagessen.",
-        "reasoning": "Die Situation passt zu Anzeige A, weil die genannten Anforderungen dort erfüllt werden."
+        "reasoning": "Die Situation passt zu Anzeige A, weil die genannten Anforderungen dort erfüllt werden.",
+        "de": "Die richtige Antwort ist A. Die relevante Textstelle lautet: \"Pizzeria Roma – Italienisch essen; Biergarten im Sommer. Live-Musik am Freitag. Kein Mittagessen.\".",
+        "vi": "??p ?n ??ng l? A. H?y ??i chi?u v?i th?ng tin then ch?t trong b?i ??c."
       }
     },
     {
@@ -117,7 +125,9 @@
       "points": 1,
       "explanation": {
         "key_evidence": "Café Sonnenschein – Frühstück & Kuchen; Spielecke für Kinder. Vegane Optionen. Wi-Fi kostenlos.",
-        "reasoning": "Die Situation passt zu Anzeige B, weil die genannten Anforderungen dort erfüllt werden."
+        "reasoning": "Die Situation passt zu Anzeige B, weil die genannten Anforderungen dort erfüllt werden.",
+        "de": "Die richtige Antwort ist B. Die relevante Textstelle lautet: \"Café Sonnenschein – Frühstück & Kuchen; Spielecke für Kinder. Vegane Optionen. Wi-Fi kostenlos.\".",
+        "vi": "??p ?n ??ng l? B. H?y ??i chi?u v?i th?ng tin then ch?t trong b?i ??c."
       }
     }
   ],
@@ -173,5 +183,25 @@
     "all_situations_unambiguous": true,
     "image_text_matches_json": false,
     "passed": false
-  }
+  },
+  "cefrAudit": {
+    "targetLevel": "A1",
+    "verdict": "aligned",
+    "reviewerRole": "German Academic Lead",
+    "notes": "Release-candidate metadata audit: reading content for \"Im Restaurant\" is aligned with declared A1 scope pending final human spot-check.",
+    "reviewedAt": "2026-05-12",
+    "reviewScope": "release_candidate_metadata_pass"
+  },
+  "learningOutcomes": [
+    {
+      "id": "a1-t2-006-lo-1",
+      "cefrLevel": "A1",
+      "skill": "reading",
+      "canDoVi": "Toi co the luyen doc hieu o trinh do A1 qua chu de \"Im Restaurant\".",
+      "canDoDe": "Ich kann Lesen auf Niveau A1 zum Thema \"Im Restaurant\" ueben.",
+      "linkedContentIds": [
+        "A1-T2-006"
+      ]
+    }
+  ]
 }

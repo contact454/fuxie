@@ -3,7 +3,7 @@ import { ShopRedeemRequestStatus, prisma } from '@fuxie/database'
 import { getLearningFucoinDailyProgress, getWalletSummary } from './fucoin'
 
 export type FuxieShopCategory = 'cosmetic' | 'learning' | 'support' | 'real_gift'
-export type FuxieShopItemStatus = 'preview_locked'
+export type FuxieShopItemStatus = 'requestable' | 'preview_locked'
 
 export interface FuxieShopRedeemPreview {
     stage: FuxieShopItemStatus
@@ -133,11 +133,11 @@ const SHOP_CATALOG: Array<Omit<FuxieShopCatalogItem, 'categoryLabel' | 'walletPr
     },
 ]
 
-const REDEEM_GUARD_POLICY = [
-    'Request pending không trừ Fucoin; ví và ledger được giữ nguyên.',
-    'Admin phải review trước khi có bước approve/reject.',
-    'Spend ledger và fulfillment thật vẫn khóa ở batch này.',
-    'Quà thật hoặc unlock nhạy cảm cần quy trình vận hành riêng.',
+const ACTIVE_REDEEM_GUARD_POLICY = [
+    'Request pending does not spend Fucoin; wallet and ledger stay unchanged.',
+    'Admin approval spends Fucoin through a SPEND ledger entry.',
+    'Fulfillment creates a learner/admin receipt; Streak Freeze grants inventory automatically.',
+    'Real gifts stay locked until legal and operations policy is ready.',
 ]
 
 export function buildFuxieRewardInventory(input: {
@@ -179,25 +179,48 @@ export function buildFuxieShopCatalog(walletBalance: number): FuxieShopCatalogIt
             const walletProgress = item.cost > 0
                 ? Math.min(100, Math.round((safeBalance / item.cost) * 100))
                 : 100
-            const canAfford = safeBalance >= item.cost
+            const isRequestable = item.category !== 'real_gift'
+            const canAfford = isRequestable && safeBalance >= item.cost
             const missingFucoin = Math.max(0, item.cost - safeBalance)
+            const status: FuxieShopItemStatus = isRequestable ? 'requestable' : 'preview_locked'
+            const stageLabel = isRequestable ? 'Đổi thưởng có kiểm duyệt' : 'Sắp có'
+            const statusLabel = !isRequestable
+                ? 'Chưa mở'
+                : canAfford
+                    ? 'Sẵn sàng yêu cầu'
+                    : 'Đang tích Fucoin'
+            const lockedReason = isRequestable
+                ? 'Admin cần duyệt trước — Fucoin chưa bị trừ cho đến khi được duyệt.'
+                : 'Quà thật chưa mở trong phiên này.'
+            const ctaLabel = !isRequestable
+                ? 'Sắp có'
+                : canAfford
+                    ? 'Gửi yêu cầu đổi thưởng'
+                    : 'Xem điều kiện'
+            const confirmationCopy = isRequestable
+                ? `${item.title} sẽ vào hàng chờ duyệt của admin. Fucoin chưa bị trừ — chỉ trừ khi được duyệt và ghi nhận phần thưởng.`
+                : `${item.title} hiện chỉ xem trước. Fuxie sẽ mở khi hệ thống quà thật được vận hành ổn định.`
+            const nextMilestone = !isRequestable
+                ? 'Em có thể xem trước — quà thật sẽ đến sau khi Fuxie hoàn thiện hệ thống.'
+                : canAfford
+                    ? 'Fucoin của em đủ để gửi yêu cầu — admin sẽ duyệt và trừ Fucoin sau.'
+                    : `Cần thêm ${missingFucoin.toLocaleString('vi-VN')} Fucoin nữa là em đủ điều kiện — tiếp tục học để tích!`
 
             return {
                 ...item,
                 categoryLabel: CATEGORY_LABELS[item.category],
                 walletProgress,
                 canAfford,
-                statusLabel: canAfford ? 'Đủ Fucoin' : 'Đang tích',
-                lockedReason: 'Redeem thật sẽ mở ở batch sau.',
+                status,
+                statusLabel,
+                lockedReason,
                 redeemPreview: {
-                    stage: 'preview_locked',
-                    stageLabel: 'Pending request v1',
-                    ctaLabel: canAfford ? 'Tạo request đổi quà' : 'Xem điều kiện đổi',
-                    confirmationCopy: `${item.title} hiện có thể được đưa vào hàng chờ review nếu ví đủ Fucoin. Request pending không trừ Fucoin cho tới khi approval/spend ledger thật được bật.`,
-                    nextMilestone: canAfford
-                        ? 'Ví đã đủ Fucoin để tạo request pending. Admin sẽ review trước khi fulfillment thật được mở.'
-                        : `${missingFucoin.toLocaleString('vi-VN')} Fucoin nữa để chạm mốc ${item.cost.toLocaleString('vi-VN')} Fu.`,
-                    policy: REDEEM_GUARD_POLICY,
+                    stage: status,
+                    stageLabel,
+                    ctaLabel,
+                    confirmationCopy,
+                    nextMilestone,
+                    policy: ACTIVE_REDEEM_GUARD_POLICY,
                 },
             }
         })

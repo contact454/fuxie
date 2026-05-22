@@ -2,11 +2,14 @@
 
 import { useCallback, useEffect, useMemo, useState } from 'react'
 import { useRouter } from 'next/navigation'
+import Image from 'next/image'
+import { useTranslations } from 'next-intl'
 import { MeasuredLink } from '@/components/performance/measured-link'
 import { FUXIE_3D_ASSETS, FuxieRoleMascot } from '@/components/gamification/quest-visuals'
 import { Mascot } from '@/components/ui/mascot'
 import { useLevelSwitcher } from '@/hooks/use-level-switcher'
 import { getCefrTheme } from '@/lib/constants/cefr'
+import { FUXIE_WORLD_PROPS } from '@/lib/mascot/fuxie-assets'
 
 // ─── Types ──────────────────────────────────────────
 interface WritingExerciseItem {
@@ -74,6 +77,7 @@ function ProgressRing({ progress, size = 40, strokeWidth = 3.5 }: { progress: nu
 
 // ─── Main Component ─────────────────────────────────
 export function WritingClient({ teile, totalExercises, totalCompleted, availableLevels, initialLevel }: WritingClientProps) {
+    const t = useTranslations('Gamification')
     const router = useRouter()
     const [currentTeile, setCurrentTeile] = useState(teile)
     const [currentTotal, setCurrentTotal] = useState(totalExercises)
@@ -171,11 +175,18 @@ export function WritingClient({ teile, totalExercises, totalCompleted, available
                     <div className="flex items-center gap-4">
                         <FuxieRoleMascot src={FUXIE_3D_ASSETS.postOffice} alt="Fuxie writing coach" size={64} motion="coach" />
                         <div className="flex-1">
-                            <h1 className="text-2xl font-bold text-gray-900">Luyện viết {currentLevel}</h1>
+                            <h1 className="text-2xl font-bold text-gray-900">{t('practiceSkill', { skill: 'viết', level: currentLevel })}</h1>
                             <p className="text-sm text-gray-500 mt-0.5">
                                 <span className="font-semibold" style={{ color: cefrColors.text }}>{currentCompleted}</span> / {currentTotal} hoàn thành
                             </p>
                         </div>
+                        <Image
+                            src={FUXIE_WORLD_PROPS.postOfficeCounter}
+                            alt=""
+                            width={96}
+                            height={96}
+                            className="ml-auto hidden h-20 w-20 shrink-0 object-contain drop-shadow-sm lg:block"
+                        />
                         {nextExerciseHref && (
                             <MeasuredLink
                                 href={nextExerciseHref}
@@ -185,7 +196,7 @@ export function WritingClient({ teile, totalExercises, totalCompleted, available
                                 style={{ background: cefrColors.cssGradient, boxShadow: `0 4px 16px ${cefrColors.shadow}` }}
                             >
                                 <span>✏️</span>
-                                Học tiếp
+                                {t('continueLearningAction')}
                             </MeasuredLink>
                         )}
                     </div>
@@ -197,7 +208,7 @@ export function WritingClient({ teile, totalExercises, totalCompleted, available
                                 style={{ width: `${Math.max(overallProgress, 1)}%`, background: cefrColors.cssGradient }}
                             />
                         </div>
-                        <p className="text-xs text-gray-400 mt-1.5 text-right">{overallProgress}% hoàn thành</p>
+                        <p className="text-xs text-gray-400 mt-1.5 text-right">{t('percentCompleted', { percent: overallProgress })}</p>
                     </div>
                 </div>
             </div>
@@ -210,9 +221,9 @@ export function WritingClient({ teile, totalExercises, totalCompleted, available
             ) : currentTeile.length === 0 ? (
                 <div className="bg-white rounded-2xl p-12 border border-gray-100 shadow-sm text-center">
                     <Mascot variant="thinking" size={80} />
-                    <h2 className="text-lg font-bold text-gray-700 mt-4">Chưa có bài viết</h2>
+                    <h2 className="text-lg font-bold text-gray-700 mt-4">{t('noLessonsYet')}</h2>
                     <p className="text-sm text-gray-500 mt-2">
-                        Cấp độ này chưa có bài luyện viết.
+                        {t('noLessonsYetDesc')}
                     </p>
                 </div>
             ) : (
@@ -242,7 +253,7 @@ export function WritingClient({ teile, totalExercises, totalCompleted, available
                                             Teil {teil.teil} — {teil.teilName}
                                         </h3>
                                         <p className="text-sm text-gray-500 mt-0.5">
-                                            {teil.exercises.length} bài • <span style={{ color: cefrColors.text, fontWeight: 600 }}>{completedInTeil}</span> hoàn thành
+                                            {t('lessonsCompleted', { total: teil.exercises.length, completed: completedInTeil })}
                                         </p>
                                     </div>
                                     <div className="relative flex items-center gap-3">
@@ -306,7 +317,7 @@ export function WritingClient({ teile, totalExercises, totalCompleted, available
                                                                 {ex.topic}
                                                             </p>
                                                             <p className={`text-xs mt-0.5 ${isDone ? 'text-green-600' : 'text-gray-400'}`}>
-                                                                {ex.minWords}{ex.maxWords ? `-${ex.maxWords}` : '+'} từ • {ex.timeMinutes} phút
+                                                                {t('wordsAndTime', { min: ex.minWords, max: ex.maxWords ? `-${ex.maxWords}` : '+', min2: ex.timeMinutes })}
                                                             </p>
                                                         </div>
                                                         <div className="shrink-0">
@@ -317,7 +328,7 @@ export function WritingClient({ teile, totalExercises, totalCompleted, available
                                                             ) : isCurrent ? (
                                                                 <span className="text-xs font-bold px-2.5 py-1 rounded-lg"
                                                                     style={{ color: cefrColors.text, backgroundColor: cefrColors.bg }}>
-                                                                    Bắt đầu
+                                                                    {t('startAction')}
                                                                 </span>
                                                             ) : isLocked ? (
                                                                 <span className="text-gray-300 text-lg">🔒</span>

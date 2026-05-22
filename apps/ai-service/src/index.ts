@@ -22,7 +22,7 @@ const app = new Hono()
 // Middleware
 app.use('*', logger())
 app.use('*', cors({
-    origin: process.env.ALLOWED_ORIGINS?.split(',') ?? ['http://localhost:3000'],
+    origin: process.env.ALLOWED_ORIGINS?.split(',') ?? ['http://localhost:3005'],
     credentials: true,
 }))
 app.use('*', observeRequest)
