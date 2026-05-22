@@ -37,8 +37,28 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
-      - name: Quick checks
-        run: pnpm check:quick
+      - name: Run asset paths linter
+        run: pnpm lint:asset-paths
+
+      - name: Run asset registry integrity check
+        run: pnpm check:asset-integrity
+
+      - name: Run asset audit (debt tolerated)
+        run: pnpm check:asset-audit
+        continue-on-error: true
+
+      - name: Run locale parity check
+        run: pnpm check:locale-parity --skip-tsx-scan
+
+      - name: Run state shell coverage check
+        run: pnpm check:state-shell-coverage
+
+      - name: Run property tests
+        run: pnpm test:property --exclude "**/exploration.spec.ts"
+
+      - name: Run visual audit pack check (debt tolerated)
+        run: pnpm check:visual-audit
+        continue-on-error: true
 
   verify:
     name: Full verify + AI eval gate
