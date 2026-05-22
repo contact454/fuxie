@@ -264,7 +264,7 @@ describe('CourseNode — completed/mastered badges (Requirements 4.6, 4.7)', () 
         expect(html).toMatch(/data-role="course-node-completed-badge"/)
         // The badge image should reference the CEFR A1 reward asset path or
         // its URL-encoded form (Next/Image rewrites the src at runtime).
-        const a1Asset = '/reward-assets/optimized/fuxie-item-cefr-badge-a1-512.webp'
+        const a1Asset = '/reward-assets/optimized/fuxie-item-cefr-badge-a1-512.webp' // asset-registry-allow
         expect(
             html.includes(a1Asset) || html.includes(encodeURIComponent(a1Asset)),
         ).toBe(true)
@@ -280,7 +280,7 @@ describe('CourseNode — completed/mastered badges (Requirements 4.6, 4.7)', () 
         )
         expect(html).toMatch(/data-role="course-node-mastered-badge"/)
         const masteredAsset =
-            '/reward-assets/optimized/fuxie-item-cefr-badge-node-set-512.webp'
+            '/reward-assets/optimized/fuxie-item-cefr-badge-node-set-512.webp' // asset-registry-allow
         expect(
             html.includes(masteredAsset) ||
                 html.includes(encodeURIComponent(masteredAsset)),

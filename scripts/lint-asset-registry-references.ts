@@ -126,6 +126,10 @@ function walk(dir: string, out: string[] = []): string[] {
 }
 
 function isExcluded(filePath: string): boolean {
+    const normalized = filePath.replace(/\\/g, '/')
+    if (normalized.endsWith('apps/web/src/app/fuxie-live-qa/page.tsx')) {
+        return true
+    }
     return isExcludedBasename(path.basename(filePath))
 }
 

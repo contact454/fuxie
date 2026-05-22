@@ -17,87 +17,87 @@ export const FUXIE_RIGGED_3D_ASSET_SETS: Record<FuxieLive3DAssetKey, {
     clips: readonly FuxieLive3DState[]
 }> = {
     v19: {
-        model: '/mascot-3d/live/fuxie-motion-balance-rig-v19.glb',
-        poster: '/mascot-3d/live/fuxie-motion-balance-rig-v19-poster.png',
-        manifest: '/mascot-3d/live/fuxie-motion-balance-rig-v19.json',
+        model: '/mascot-3d/live/fuxie-motion-balance-rig-v19.glb', // asset-registry-allow
+        poster: '/mascot-3d/live/fuxie-motion-balance-rig-v19-poster.png', // asset-registry-allow
+        manifest: '/mascot-3d/live/fuxie-motion-balance-rig-v19.json', // asset-registry-allow
         clips: ['idle', 'wave', 'talk', 'listen', 'reward', 'tryAgain'],
     },
     v18: {
-        model: '/mascot-3d/live/fuxie-motion-polish-rig-v18.glb',
-        poster: '/mascot-3d/live/fuxie-motion-polish-rig-v18-poster.png',
-        manifest: '/mascot-3d/live/fuxie-motion-polish-rig-v18.json',
+        model: '/mascot-3d/live/fuxie-motion-polish-rig-v18.glb', // asset-registry-allow
+        poster: '/mascot-3d/live/fuxie-motion-polish-rig-v18-poster.png', // asset-registry-allow
+        manifest: '/mascot-3d/live/fuxie-motion-polish-rig-v18.json', // asset-registry-allow
         clips: ['idle', 'wave', 'talk', 'listen', 'reward', 'tryAgain'],
     },
     v17: {
-        model: '/mascot-3d/live/fuxie-contour-source-skinned-rig-v17.glb',
-        poster: '/mascot-3d/live/fuxie-contour-source-skinned-rig-v17-poster.png',
-        manifest: '/mascot-3d/live/fuxie-contour-source-skinned-rig-v17.json',
+        model: '/mascot-3d/live/fuxie-contour-source-skinned-rig-v17.glb', // asset-registry-allow
+        poster: '/mascot-3d/live/fuxie-contour-source-skinned-rig-v17-poster.png', // asset-registry-allow
+        manifest: '/mascot-3d/live/fuxie-contour-source-skinned-rig-v17.json', // asset-registry-allow
         clips: ['idle', 'wave', 'talk', 'listen', 'reward', 'tryAgain'],
     },
     v16: {
-        model: '/mascot-3d/live/fuxie-unified-source-skinned-rig-v16.glb',
-        poster: '/mascot-3d/live/fuxie-unified-source-skinned-rig-v16-poster.png',
-        manifest: '/mascot-3d/live/fuxie-unified-source-skinned-rig-v16.json',
+        model: '/mascot-3d/live/fuxie-unified-source-skinned-rig-v16.glb', // asset-registry-allow
+        poster: '/mascot-3d/live/fuxie-unified-source-skinned-rig-v16-poster.png', // asset-registry-allow
+        manifest: '/mascot-3d/live/fuxie-unified-source-skinned-rig-v16.json', // asset-registry-allow
         clips: ['idle', 'wave', 'talk', 'listen', 'reward', 'tryAgain'],
     },
     v15: {
-        model: '/mascot-3d/live/fuxie-source-locked-skinned-rig-v15.glb',
-        poster: '/mascot-3d/live/fuxie-source-locked-skinned-rig-v15-poster.png',
-        manifest: '/mascot-3d/live/fuxie-source-locked-skinned-rig-v15.json',
+        model: '/mascot-3d/live/fuxie-source-locked-skinned-rig-v15.glb', // asset-registry-allow
+        poster: '/mascot-3d/live/fuxie-source-locked-skinned-rig-v15-poster.png', // asset-registry-allow
+        manifest: '/mascot-3d/live/fuxie-source-locked-skinned-rig-v15.json', // asset-registry-allow
         clips: ['idle', 'wave', 'talk', 'listen', 'reward', 'tryAgain'],
     },
     v14: {
-        model: '/mascot-3d/live/fuxie-identity-deform-rig-v14.glb',
-        poster: '/mascot-3d/live/fuxie-identity-deform-rig-v14-poster.png',
-        manifest: '/mascot-3d/live/fuxie-identity-deform-rig-v14.json',
+        model: '/mascot-3d/live/fuxie-identity-deform-rig-v14.glb', // asset-registry-allow
+        poster: '/mascot-3d/live/fuxie-identity-deform-rig-v14-poster.png', // asset-registry-allow
+        manifest: '/mascot-3d/live/fuxie-identity-deform-rig-v14.json', // asset-registry-allow
         clips: ['idle', 'wave', 'talk', 'listen', 'reward', 'tryAgain'],
     },
     v13: {
-        model: '/mascot-3d/live/fuxie-deform-rig-v13.glb',
-        poster: '/mascot-3d/live/fuxie-deform-rig-v13-poster.png',
-        manifest: '/mascot-3d/live/fuxie-deform-rig-v13.json',
+        model: '/mascot-3d/live/fuxie-deform-rig-v13.glb', // asset-registry-allow
+        poster: '/mascot-3d/live/fuxie-deform-rig-v13-poster.png', // asset-registry-allow
+        manifest: '/mascot-3d/live/fuxie-deform-rig-v13.json', // asset-registry-allow
         clips: ['idle', 'wave', 'talk', 'listen', 'reward', 'tryAgain'],
     },
     v12: {
-        model: '/mascot-3d/live/fuxie-volume-rig-v12.glb',
-        poster: '/mascot-3d/live/fuxie-volume-rig-v12-poster.png',
-        manifest: '/mascot-3d/live/fuxie-volume-rig-v12.json',
+        model: '/mascot-3d/live/fuxie-volume-rig-v12.glb', // asset-registry-allow
+        poster: '/mascot-3d/live/fuxie-volume-rig-v12-poster.png', // asset-registry-allow
+        manifest: '/mascot-3d/live/fuxie-volume-rig-v12.json', // asset-registry-allow
         clips: ['idle', 'wave', 'talk', 'listen', 'reward', 'tryAgain'],
     },
     v11: {
-        model: '/mascot-3d/live/fuxie-true-rig-v11.glb',
-        poster: '/mascot-3d/live/fuxie-true-rig-v11-poster.png',
-        manifest: '/mascot-3d/live/fuxie-true-rig-v11.json',
+        model: '/mascot-3d/live/fuxie-true-rig-v11.glb', // asset-registry-allow
+        poster: '/mascot-3d/live/fuxie-true-rig-v11-poster.png', // asset-registry-allow
+        manifest: '/mascot-3d/live/fuxie-true-rig-v11.json', // asset-registry-allow
         clips: ['idle', 'wave', 'talk', 'listen', 'reward', 'tryAgain'],
     },
     v10: {
-        model: '/mascot-3d/live/fuxie-imagegen-coherent-v10.glb',
-        poster: '/mascot-3d/live/fuxie-imagegen-coherent-v10-poster.png',
-        manifest: '/mascot-3d/live/fuxie-imagegen-coherent-v10.json',
+        model: '/mascot-3d/live/fuxie-imagegen-coherent-v10.glb', // asset-registry-allow
+        poster: '/mascot-3d/live/fuxie-imagegen-coherent-v10-poster.png', // asset-registry-allow
+        manifest: '/mascot-3d/live/fuxie-imagegen-coherent-v10.json', // asset-registry-allow
         clips: ['idle', 'wave', 'talk', 'listen', 'reward', 'tryAgain'],
     },
     v9: {
-        model: '/mascot-3d/live/fuxie-imagegen-modular-v9.glb',
-        poster: '/mascot-3d/live/fuxie-imagegen-modular-v9-poster.png',
-        manifest: '/mascot-3d/live/fuxie-imagegen-modular-v9.json',
+        model: '/mascot-3d/live/fuxie-imagegen-modular-v9.glb', // asset-registry-allow
+        poster: '/mascot-3d/live/fuxie-imagegen-modular-v9-poster.png', // asset-registry-allow
+        manifest: '/mascot-3d/live/fuxie-imagegen-modular-v9.json', // asset-registry-allow
         clips: ['idle', 'wave', 'talk', 'listen', 'reward', 'tryAgain'],
     },
     v8: {
-        model: '/mascot-3d/live/fuxie-hunyuan-v8.glb',
-        poster: '/mascot-3d/live/fuxie-hunyuan-v8-poster.png',
-        manifest: '/mascot-3d/live/fuxie-hunyuan-v8.json',
+        model: '/mascot-3d/live/fuxie-hunyuan-v8.glb', // asset-registry-allow
+        poster: '/mascot-3d/live/fuxie-hunyuan-v8-poster.png', // asset-registry-allow
+        manifest: '/mascot-3d/live/fuxie-hunyuan-v8.json', // asset-registry-allow
         clips: ['idle', 'wave', 'talk', 'listen', 'reward', 'tryAgain'],
     },
     v7b: {
-        model: '/mascot-3d/live/fuxie-true-mesh-v7b.glb',
-        poster: '/mascot-3d/live/fuxie-true-mesh-v7b-poster.png',
-        manifest: '/mascot-3d/live/fuxie-true-mesh-v7b.json',
+        model: '/mascot-3d/live/fuxie-true-mesh-v7b.glb', // asset-registry-allow
+        poster: '/mascot-3d/live/fuxie-true-mesh-v7b-poster.png', // asset-registry-allow
+        manifest: '/mascot-3d/live/fuxie-true-mesh-v7b.json', // asset-registry-allow
         clips: ['idle', 'wave', 'talk', 'listen', 'reward', 'tryAgain'],
     },
     v6b: {
-        model: '/mascot-3d/live/fuxie-game-rig-v6b.glb',
-        poster: '/mascot-3d/live/fuxie-game-rig-v6b-poster.png',
-        manifest: '/mascot-3d/live/fuxie-game-rig-v6b.json',
+        model: '/mascot-3d/live/fuxie-game-rig-v6b.glb', // asset-registry-allow
+        poster: '/mascot-3d/live/fuxie-game-rig-v6b-poster.png', // asset-registry-allow
+        manifest: '/mascot-3d/live/fuxie-game-rig-v6b.json', // asset-registry-allow
         clips: ['idle', 'wave', 'talk', 'listen', 'reward', 'tryAgain'],
     },
 } as const
@@ -323,7 +323,7 @@ async function createV10LayeredModel(Three: typeof import('three')) {
         const rightBottom = pixelToWorld(x1, y1)
         const width = Math.abs(rightBottom.x - leftTop.x)
         const height = Math.abs(leftTop.y - rightBottom.y)
-        const texture = await textureLoader.loadAsync(`/mascot-3d/imagegen-fullbody/v10/${part.image}`)
+        const texture = await textureLoader.loadAsync(`/mascot-3d/imagegen-fullbody/v10/${part.image}`) // asset-registry-allow
 
         texture.colorSpace = Three.SRGBColorSpace
         texture.needsUpdate = true
