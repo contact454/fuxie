@@ -745,18 +745,44 @@ describe('Property 2.D — Existing test suite invariance (re-run + assert ident
             const stdout = result.stdout ?? ''
             const stderr = result.stderr ?? ''
 
+            // Parse the JSON reporter output first if possible to extract rich failure info.
+            const jsonStart = stdout.indexOf('{')
+            let parsedJson: any = null
+            if (jsonStart >= 0) {
+                try {
+                    parsedJson = JSON.parse(stdout.slice(jsonStart))
+                } catch (e) {
+                    // Ignore parse error initially
+                }
+            }
+
+            if (result.status !== 0) {
+                let failureSummary = ''
+                if (parsedJson && parsedJson.testResults) {
+                    const failures: string[] = []
+                    for (const suite of parsedJson.testResults) {
+                        for (const assertion of suite.assertionResults) {
+                            if (assertion.status === 'failed') {
+                                failures.push(
+                                    `Suite: ${suite.name}\nTest: ${assertion.title}\nMessages:\n${(assertion.failureMessages || []).join('\n')}`
+                                )
+                            }
+                        }
+                    }
+                    failureSummary = `Failed tests:\n${failures.join('\n\n')}`
+                } else {
+                    failureSummary = `Could not parse JSON report. Raw stdout:\n${stdout.slice(-4000)}\nRaw stderr:\n${stderr}`
+                }
+                console.error(`[DEBUG CHILD FAILURES] Vitest child process failed with status ${result.status}.\n${failureSummary}`)
+            }
+
             // First line of defense: vitest exit code. Anything other
             // than 0 means at least one suite regressed.
             expect(
                 result.status,
-                `vitest exited with status=${result.status}\n--- stdout ---\n${stdout.slice(-4000)}\n--- stderr ---\n${stderr.slice(-2000)}`,
+                `vitest exited with status=${result.status}. Detailed failures printed to console.error above.`,
             ).toBe(0)
 
-            // Parse the JSON reporter output. vitest's JSON reporter
-            // emits a single object on stdout; in some Windows shells
-            // banner output ("RUN v…") sneaks ahead, so we slice from
-            // the first `{`.
-            const jsonStart = stdout.indexOf('{')
             expect(
                 jsonStart,
                 `vitest JSON reporter output not found in stdout:\n${stdout.slice(0, 1000)}`,
