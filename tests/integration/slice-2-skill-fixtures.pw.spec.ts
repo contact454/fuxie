@@ -166,7 +166,6 @@ test.describe('Slice 2 skill visual QA fixtures', () => {
 
                 await page.screenshot({
                     path: path.join(SCREENSHOT_DIR, `${fixture.routeName}-${fixture.visualState}-${viewport.name}.png`),
-                    fullPage: true,
                 })
             })
         }
