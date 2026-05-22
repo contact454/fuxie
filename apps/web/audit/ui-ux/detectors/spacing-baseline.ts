@@ -621,6 +621,7 @@ function collectCrossRouteFindings(
             for (let j = i + 1; j < list.length; j++) {
                 const a = list[i]
                 const b = list[j]
+                if (!a || !b) continue
                 if (a.route === b.route) continue
                 if (a.hasStateAttribute || b.hasStateAttribute) continue
 
@@ -652,6 +653,7 @@ function collectCrossRouteFindings(
                 reportedPairs.add(pairKey)
 
                 const headline = diffs[0]
+                if (!headline) continue
                 const isPrimary =
                     isPrimaryTaskSurface(a.route) ||
                     isPrimaryTaskSurface(b.route)

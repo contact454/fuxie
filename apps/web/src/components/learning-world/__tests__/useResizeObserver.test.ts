@@ -46,7 +46,12 @@ function modelCoalesce(
     }
     let bursts = 1
     for (let i = 1; i < events.length; i += 1) {
-        const gap = events[i] - events[i - 1]
+        const current = events[i]
+        const previous = events[i - 1]
+        if (current === undefined || previous === undefined) {
+            continue
+        }
+        const gap = current - previous
         if (gap > windowMs) {
             bursts += 1
         }

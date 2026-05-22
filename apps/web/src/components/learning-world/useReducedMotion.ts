@@ -27,7 +27,7 @@ export type ReducedMotionPreference = 'reduce' | 'no-preference'
  * jsdom or a browser.
  */
 export function resolveReducedMotionPreference(
-  reader: () => { matches: boolean } | null | undefined,
+  reader: () => { matches?: unknown } | null | undefined,
 ): ReducedMotionPreference {
   try {
     const result = reader()

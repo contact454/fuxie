@@ -200,12 +200,12 @@ type Command =
     | { kind: 'remove'; index: number }
 
 const arbCommand: fc.Arbitrary<Command> = fc.oneof(
-    { weight: 3, arbitrary: arbValidInput.map((input) => ({ kind: 'add', input })) },
+    { weight: 3, arbitrary: arbValidInput.map((input) => ({ kind: 'add' as const, input })) },
     {
         weight: 1,
         arbitrary: fc
             .integer({ min: 0, max: 31 })
-            .map((index) => ({ kind: 'remove', index })),
+            .map((index) => ({ kind: 'remove' as const, index })),
     },
 )
 

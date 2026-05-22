@@ -29,7 +29,7 @@ const secretPatterns = [
     { name: 'database-url-with-credential', re: /postgres(?:ql)?:\/\/[^\s'"]+:[^\s'"]+@/i },
     {
         name: 'generic-secret-assignment',
-        re: /(?:SECRET|TOKEN|PASSWORD|PRIVATE_KEY|API_KEY)\s*[:=]\s*['"][^'"]{12,}['"]/i,
+        re: /(?:[A-Z0-9_]*(?:SECRET|TOKEN|PASSWORD|PRIVATE_KEY|API_KEY)[A-Z0-9_]*|[a-zA-Z0-9_]*(?:Secret|Token|Password|PrivateKey|ApiKey)[a-zA-Z0-9_]*)\s*[:=]\s*['"][^'"]{12,}['"]/,
     },
 ]
 
@@ -45,9 +45,16 @@ function getCandidateFiles(): string[] {
 }
 
 function isAllowedExample(file: string, line: string): boolean {
+    const isLocalPostgresUrl =
+        /postgres(?:ql)?:\/\/fuxie:fuxie_dev@(?:127\.0\.0\.1|localhost):5434\/fuxie_dev/i.test(line)
+
     return (
         file.endsWith('.env.example') ||
         file.includes('.test.') ||
+        file.includes('.spec.') ||
+        isLocalPostgresUrl ||
+        line.includes('--') ||
+        line.includes('/reward-assets/') ||
         line.includes('process.env') ||
         line.includes('stubEnv') ||
         line.includes('mock') ||

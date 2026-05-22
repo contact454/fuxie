@@ -10,6 +10,7 @@ const {
     invalidateLearnerProgressCachesMock,
     recordAnalyticsEventMock,
     getLearningQuestMasteryPayloadMock,
+    gradeWritingMock,
     cookiesMock,
 } = vi.hoisted(() => ({
     getServerUserMock: vi.fn(),
@@ -32,6 +33,7 @@ const {
     invalidateLearnerProgressCachesMock: vi.fn(),
     recordAnalyticsEventMock: vi.fn(),
     getLearningQuestMasteryPayloadMock: vi.fn(),
+    gradeWritingMock: vi.fn(),
     cookiesMock: vi.fn(),
 }))
 
@@ -75,6 +77,10 @@ vi.mock('@/lib/analytics/events', async (importOriginal) => {
 
 vi.mock('@/lib/gamification/skill-mastery-data', () => ({
     getLearningQuestMasteryPayload: getLearningQuestMasteryPayloadMock,
+}))
+
+vi.mock('../../grade/route', () => ({
+    gradeWriting: gradeWritingMock,
 }))
 
 import { POST } from './route'
@@ -131,7 +137,7 @@ describe('POST /api/v1/writing/submit', () => {
         cookiesMock.mockReturnValue({
             get: vi.fn(() => ({ value: 'vi' })),
         })
-        vi.stubGlobal('fetch', vi.fn().mockResolvedValue(aiSuccessResponse()))
+        gradeWritingMock.mockResolvedValue(aiSuccessResponse())
     })
 
     it('returns a writing episode receipt and persistent badge payload after graded completion', async () => {
@@ -248,11 +254,7 @@ describe('POST /api/v1/writing/submit', () => {
     })
 
     it('does not award learning progress, badge, or completed episode when AI grading fails', async () => {
-        vi.stubGlobal('fetch', vi.fn().mockResolvedValue({
-            ok: false,
-            status: 502,
-            text: vi.fn().mockResolvedValue('bad gateway'),
-        }))
+        gradeWritingMock.mockRejectedValueOnce(new Error('bad gateway'))
 
         const response = await POST({
             json: async () => ({

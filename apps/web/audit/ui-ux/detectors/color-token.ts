@@ -590,7 +590,8 @@ function extractLiteralsFromValue(value: string): RawLiteral[] {
 function normaliseHex(raw: string): string | null {
     const m = /^#([0-9a-fA-F]{3,8})$/.exec(raw)
     if (!m) return null
-    const hex = m[1].toLowerCase()
+    const hex = m[1]?.toLowerCase()
+    if (!hex) return null
     if (hex.length === 3) {
         return `#${hex[0]}${hex[0]}${hex[1]}${hex[1]}${hex[2]}${hex[2]}`
     }
@@ -602,11 +603,15 @@ function normaliseHex(raw: string): string | null {
 function parseRgbToHex(raw: string): string | null {
     const m = /\(([^)]+)\)/.exec(raw)
     if (!m) return null
-    const parts = m[1].split(',').map((p) => p.trim())
+    const body = m[1]
+    if (!body) return null
+    const parts = body.split(',').map((p) => p.trim())
     if (parts.length < 3) return null
-    const r = parseChannel(parts[0])
-    const g = parseChannel(parts[1])
-    const b = parseChannel(parts[2])
+    const [rPart, gPart, bPart] = parts
+    if (!rPart || !gPart || !bPart) return null
+    const r = parseChannel(rPart)
+    const g = parseChannel(gPart)
+    const b = parseChannel(bPart)
     if (r === null || g === null || b === null) return null
     return `#${toHexByte(r)}${toHexByte(g)}${toHexByte(b)}`
 }
@@ -636,11 +641,15 @@ function clamp(v: number, min: number, max: number): number {
 function parseHslToHex(raw: string): string | null {
     const m = /\(([^)]+)\)/.exec(raw)
     if (!m) return null
-    const parts = m[1].split(',').map((p) => p.trim())
+    const body = m[1]
+    if (!body) return null
+    const parts = body.split(',').map((p) => p.trim())
     if (parts.length < 3) return null
-    const h = parseHue(parts[0])
-    const s = parsePercent(parts[1])
-    const l = parsePercent(parts[2])
+    const [hPart, sPart, lPart] = parts
+    if (!hPart || !sPart || !lPart) return null
+    const h = parseHue(hPart)
+    const s = parsePercent(sPart)
+    const l = parsePercent(lPart)
     if (h === null || s === null || l === null) return null
     const { r, g, b } = hslToRgb(h, s, l)
     return `#${toHexByte(r)}${toHexByte(g)}${toHexByte(b)}`
@@ -751,9 +760,11 @@ function labF(t: number): number {
 function parseHex(hex: string): { r: number; g: number; b: number } {
     const m = /^#?([0-9a-fA-F]{6})$/.exec(hex)
     if (!m) return { r: 0, g: 0, b: 0 }
-    const r = Number.parseInt(m[1].slice(0, 2), 16)
-    const g = Number.parseInt(m[1].slice(2, 4), 16)
-    const b = Number.parseInt(m[1].slice(4, 6), 16)
+    const value = m[1]
+    if (!value) return { r: 0, g: 0, b: 0 }
+    const r = Number.parseInt(value.slice(0, 2), 16)
+    const g = Number.parseInt(value.slice(2, 4), 16)
+    const b = Number.parseInt(value.slice(4, 6), 16)
     return { r, g, b }
 }
 
@@ -878,9 +889,11 @@ interface BuildLiteralFindingArgs {
 
 function buildLiteralFinding(args: BuildLiteralFindingArgs): Finding | null {
     const { node, route, literal } = args
+    const firstToken = BRIGHT_SKY_TOKENS[0]
+    if (!firstToken) return null
     const literalLab = sRgbHexToLab(literal.hex)
 
-    let nearestToken = BRIGHT_SKY_TOKENS[0]
+    let nearestToken = firstToken
     let nearestDeltaE = Number.POSITIVE_INFINITY
     for (const t of BRIGHT_SKY_TOKENS) {
         const d = ciede2000(literalLab, sRgbHexToLab(t.hex))
@@ -995,8 +1008,10 @@ function buildEnergyShareFinding(
     // `component` field references the first contributor for
     // selector locality; the `evidence.contributors` array lists
     // every node so triage can fix all of them at once.
-    const headRoute = resolveRouteForNode(nodes[0]) ?? ctx.route
-    const headComponent = describeComponent(nodes[0])
+    const headNode = nodes[0]
+    if (!headNode) return null
+    const headRoute = resolveRouteForNode(headNode) ?? ctx.route
+    const headComponent = describeComponent(headNode)
 
     const isLessonPlayer = headRoute.includes('(learn)/listening')
         || headRoute.includes('(learn)/reading')
@@ -1063,7 +1078,15 @@ function readBoundingRect(node: HTMLElement): Rect | null {
     if (dataAttr) {
         const parts = dataAttr.split(',').map((p) => Number.parseFloat(p.trim()))
         if (parts.length === 4 && parts.every((v) => Number.isFinite(v))) {
-            return { x: parts[0], y: parts[1], width: parts[2], height: parts[3] }
+            const [x, y, width, height] = parts
+            if (
+                x !== undefined &&
+                y !== undefined &&
+                width !== undefined &&
+                height !== undefined
+            ) {
+                return { x, y, width, height }
+            }
         }
     }
 
@@ -1113,6 +1136,7 @@ function computeUnionArea(rects: ReadonlyArray<Rect>): number {
     for (let i = 0; i < sortedX.length - 1; i++) {
         const xLo = sortedX[i]
         const xHi = sortedX[i + 1]
+        if (xLo === undefined || xHi === undefined) continue
         const bandW = xHi - xLo
         if (bandW <= 0) continue
         const intervals: Array<[number, number]> = []
@@ -1123,11 +1147,15 @@ function computeUnionArea(rects: ReadonlyArray<Rect>): number {
         }
         if (intervals.length === 0) continue
         intervals.sort((a, b) => a[0] - b[0])
+        const first = intervals[0]
+        if (!first) continue
         let coveredH = 0
-        let curLo = intervals[0][0]
-        let curHi = intervals[0][1]
+        let curLo = first[0]
+        let curHi = first[1]
         for (let k = 1; k < intervals.length; k++) {
-            const [lo, hi] = intervals[k]
+            const next = intervals[k]
+            if (!next) continue
+            const [lo, hi] = next
             if (lo <= curHi) {
                 if (hi > curHi) curHi = hi
             } else {

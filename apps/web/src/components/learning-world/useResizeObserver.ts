@@ -65,7 +65,12 @@ export function debounceCoalesceCount(
   }
   let bursts = 1
   for (let i = 1; i < events.length; i++) {
-    if (events[i] - events[i - 1] > windowMs) {
+    const current = events[i]
+    const previous = events[i - 1]
+    if (current === undefined || previous === undefined) {
+      continue
+    }
+    if (current - previous > windowMs) {
       bursts++
     }
   }
