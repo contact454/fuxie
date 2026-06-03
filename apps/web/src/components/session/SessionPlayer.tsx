@@ -150,13 +150,13 @@ export function SessionPlayer({
                 <div className="w-24 h-24 relative mb-4">
                     <Image src={FUXIE_MASCOT_STATES.wave} alt="Success" fill className="object-contain" />
                 </div>
-                <h3 className="text-2xl font-black text-[#173b56] mb-2">Vượt ải xuất sắc!</h3>
+                <h3 className="text-2xl font-black text-[#173b56] mb-2">{t('sessionCompleteSuccess')}</h3>
                 <p className="text-sm text-[#3C78A8] font-bold">{t('lessonsCompleted')}</p>
                 <button
                     onClick={() => router.push('/dashboard')}
                     className="mt-6 px-8 py-3 bg-[#2E7EC4] hover:bg-[#1e6bb0] text-white font-black rounded-2xl shadow-md transition-all active:scale-[0.97]"
                 >
-                    Quay lại Dashboard
+                    {t('backToDashboard')}
                 </button>
             </div>
         )
@@ -197,14 +197,14 @@ export function SessionPlayer({
                     </div>
                     <div className="hidden sm:block h-5 w-px bg-[#CCE4F0]" />
                     <div className="hidden sm:flex flex-col">
-                        <span className="text-[10px] font-black text-[#3C78A8] uppercase tracking-widest">03 · SESSION</span>
-                        <span className="text-[10px] font-semibold text-[#3C78A8]">Lernen &amp; Verstehen</span>
+                        <span className="text-[10px] font-black text-[#3C78A8] uppercase tracking-widest">{t('sessionTitle')}</span>
+                        <span className="text-[10px] font-semibold text-[#3C78A8]">{t('sessionSubtitle')}</span>
                     </div>
                 </div>
 
                 {/* Progress bar — center */}
                 <div className="hidden md:flex items-center gap-3 flex-1 max-w-xs mx-6">
-                    <span className="text-[9px] font-black text-[#3C78A8] shrink-0">Schritt {currentIndex + 1} von {items.length}</span>
+                    <span className="text-[9px] font-black text-[#3C78A8] shrink-0">{t('stepOfTotal', {current: currentIndex + 1, total: items.length})}</span>
                     <div className="flex-1 h-2.5 bg-[#CCE4F0]/40 rounded-full overflow-hidden">
                         <div
                             className="h-full bg-gradient-to-r from-[#2EC4B6] to-[#60A8E4] rounded-full transition-all duration-300"
@@ -212,7 +212,7 @@ export function SessionPlayer({
                         />
                     </div>
                     <button className="px-3 py-1.5 bg-[#2EC4B6] text-white text-[9px] font-black rounded-full shadow">
-                        🎧 HÖREN
+                        🎧 {t('hoeren')}
                     </button>
                 </div>
 
@@ -323,11 +323,11 @@ export function SessionPlayer({
                         <div className="relative z-10 m-3 mt-auto bg-white rounded-2xl p-4 shadow-xl border border-[#CCE4F0]/50">
                             {/* Triangle pointer up */}
                             <div className="absolute -top-2.5 left-8 w-0 h-0 border-l-[10px] border-l-transparent border-r-[10px] border-r-transparent border-b-[10px] border-b-white" />
-                            <p className="text-[11px] font-black text-[#173b56] mb-1">Kleine Schritte, großer Fortschritt!</p>
+                            <p className="text-[11px] font-black text-[#173b56] mb-1">{t('coachMascotTitle')}</p>
                             <p className="text-[10px] font-semibold text-[#3C78A8] leading-snug">
-                                {currentItem.format === 'INTRO' && 'Lies die Erklärung sorgfältig. Dann geht es los!'}
-                                {currentItem.format === 'MULTIPLE_CHOICE' && 'Hör genau zu und wähle das richtige Wort. Du schaffst das! 💙'}
-                                {currentItem.format === 'TYPING' && 'Tippe die Antwort. Genauigkeit stärkt dein Gedächtnis!'}
+                                {currentItem.format === 'INTRO' && t('introPoseDesc')}
+                                {currentItem.format === 'MULTIPLE_CHOICE' && t('mcPoseDesc')}
+                                {currentItem.format === 'TYPING' && t('typingPoseDesc')}
                             </p>
                         </div>
                     </div>
@@ -438,7 +438,7 @@ export function SessionPlayer({
                     <div className="absolute inset-0">
                         <Image
                             src={FUXIE_WORLD_PROPS.villageSquare}
-                            alt="Fuxie village map"
+                            alt={t('altVillageMap')}
                             fill
                             className="object-cover object-bottom"
                             priority
@@ -447,7 +447,7 @@ export function SessionPlayer({
 
                     {/* DEIN WEG card */}
                     <div className="absolute top-4 left-4 right-4 bg-white/90 backdrop-blur-md rounded-2xl px-4 py-3 shadow-xl border border-white/50 z-10">
-                        <p className="text-[9px] font-black uppercase text-[#3C78A8] tracking-widest mb-1.5">DEIN WEG</p>
+                        <p className="text-[9px] font-black uppercase text-[#3C78A8] tracking-widest mb-1.5">{t('deinWeg')}</p>
                         <div className="flex items-center gap-2">
                             <span className="w-6 h-6 rounded-full bg-[#2EC4B6] text-white text-[9px] font-black flex items-center justify-center shadow">{level}</span>
                             <div className="flex-1 flex items-center gap-1">
@@ -463,27 +463,27 @@ export function SessionPlayer({
 
                     {/* Building hotspot labels */}
                     <div className="absolute top-[20%] left-[10%] z-10 flex flex-col items-center gap-1">
-                        <div className="bg-[#2EC4B6] text-white text-[9px] font-black px-2 py-0.5 rounded-full shadow-lg border border-white">WÖRTER</div>
+                        <div className="bg-[#2EC4B6] text-white text-[9px] font-black px-2 py-0.5 rounded-full shadow-lg border border-white">{t('woerter')}</div>
                         <div className="w-3 h-3 rounded-full bg-white/40 border border-white/60 backdrop-blur-sm animate-pulse" />
                     </div>
 
                     <div className="absolute top-[18%] right-[12%] z-10 flex flex-col items-center gap-1">
-                        <div className="bg-[#2E7EC4] text-white text-[9px] font-black px-2 py-0.5 rounded-full shadow-lg border border-white">KURSE</div>
+                        <div className="bg-[#2E7EC4] text-white text-[9px] font-black px-2 py-0.5 rounded-full shadow-lg border border-white">{t('kurse')}</div>
                         <div className="w-3 h-3 rounded-full bg-white/40 border border-white/60 backdrop-blur-sm animate-pulse" />
                     </div>
 
                     {/* MISSIONEN board */}
                     <div className="absolute top-[40%] right-[2%] z-10">
                         <div className="bg-white/95 backdrop-blur-md rounded-xl p-3 shadow-xl border border-[#CCE4F0] w-40">
-                            <p className="text-[8px] font-black uppercase text-[#3C78A8] tracking-widest border-b border-[#CCE4F0]/50 pb-1 mb-1.5">SESSION DETAILS</p>
+                            <p className="text-[8px] font-black uppercase text-[#3C78A8] tracking-widest border-b border-[#CCE4F0]/50 pb-1 mb-1.5">{t('sessionDetails')}</p>
                             <ul className="flex flex-col gap-1">
                                 <li className="flex items-center gap-1.5 text-[9px] font-bold text-[#173b56]">
                                     <span className="w-3.5 h-3.5 bg-[#FFF9E6] border border-[#FFB703]/30 rounded-full flex items-center justify-center text-[7px] text-[#FFB703] shrink-0">◐</span>
-                                    <span>Übung läuft</span>
+                                    <span>{t('exerciseRunning')}</span>
                                 </li>
                                 <li className="flex items-center gap-1.5 text-[9px] font-bold text-[#173b56]">
                                     <span className="w-3.5 h-3.5 bg-[#F3FBFF] border border-[#CCE4F0] rounded-full flex items-center justify-center text-[7px] text-gray-400 shrink-0">○</span>
-                                    <span>Schritt {currentIndex + 1}/{items.length}</span>
+                                    <span>{t('step')} {currentIndex + 1}/{items.length}</span>
                                 </li>
                                 <li className="flex items-center gap-1.5 text-[9px] font-bold text-[#173b56]">
                                     <span className="w-3.5 h-3.5 bg-green-100 rounded-full text-green-600 flex items-center justify-center text-[7px] shrink-0">✓</span>
@@ -495,13 +495,13 @@ export function SessionPlayer({
 
                     {/* HÖREN hotspot (current active, glowing) */}
                     <div className="absolute bottom-[35%] left-[10%] z-10 flex flex-col items-center gap-1">
-                        <div className="bg-[#2EC4B6] text-white text-[9px] font-black px-2 py-0.5 rounded-full shadow-lg border-2 border-white ring-2 ring-[#2EC4B6]/40 ring-offset-1">HÖREN</div>
+                        <div className="bg-[#2EC4B6] text-white text-[9px] font-black px-2 py-0.5 rounded-full shadow-lg border-2 border-white ring-2 ring-[#2EC4B6]/40 ring-offset-1">{t('hoeren')}</div>
                         <div className="w-5 h-5 rounded-full bg-[#2EC4B6]/30 border-2 border-[#2EC4B6] animate-pulse" />
                     </div>
 
                     {/* BELOHNUNGEN hotspot */}
                     <div className="absolute bottom-[12%] right-[15%] z-10 flex flex-col items-center gap-1">
-                        <div className="bg-[#FFB703] text-white text-[9px] font-black px-2 py-0.5 rounded-full shadow-lg border border-white">BELOHNUNGEN</div>
+                        <div className="bg-[#FFB703] text-white text-[9px] font-black px-2 py-0.5 rounded-full shadow-lg border border-white">{t('belohnungen')}</div>
                         <div className="w-3 h-3 rounded-full bg-white/40 border border-white/60 backdrop-blur-sm" />
                     </div>
                 </div>

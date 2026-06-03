@@ -296,7 +296,7 @@ export function MultipleChoice({
             {/* Grammar Explanation after checked (replaces tip bar) */}
             {checked && isGrammar && grammarData.explanation && (
                 <div className="p-3 bg-[#F3FBFF] border border-[#CCE4F0]/50 rounded-2xl text-xs text-[#173b56] font-bold text-center mb-6 animate-fade-in-up">
-                    <span className="text-[#2E7EC4] mr-1">💡 Erklärung:</span>
+                    <span className="text-[#2E7EC4] mr-1">{t('explanationLabel')}</span>
                     {grammarData.explanation}
                 </div>
             )}
@@ -306,11 +306,11 @@ export function MultipleChoice({
                 {checked && (
                     <div className="mb-4 text-center">
                         <div className={`font-black text-lg mb-1 ${isCorrect ? 'text-emerald-600' : 'text-red-600'}`}>
-                            {isCorrect ? 'Tuyệt vời!' : 'Chưa đúng rồi!'}
+                            {isCorrect ? t('correctFeedback') : t('incorrectFeedback')}
                         </div>
                         {!isCorrect && (
                             <div className="text-red-700 text-xs font-bold">
-                                Antwort: <strong>{options[correctIndex]}</strong>
+                                {t('correctAnswerLabel')} <strong>{options[correctIndex]}</strong>
                             </div>
                         )}
                     </div>
@@ -321,7 +321,7 @@ export function MultipleChoice({
                     disabled={selected === null && !checked}
                     className="w-full py-4 bg-[#2EC4B6] hover:bg-[#25b5a7] active:bg-[#1fa093] text-white text-base font-black rounded-2xl transition-all duration-300 shadow-md shadow-[#2EC4B6]/25 hover:shadow-lg active:scale-[0.98] disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
                 >
-                    <span>{checked ? 'Weiter' : 'Kiểm tra'}</span>
+                    <span>{checked ? t('nextLabel') : t('checkLabel')}</span>
                     <span>→</span>
                 </button>
             </div>
