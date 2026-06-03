@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState } from 'react'
+import React, { useState, useTransition } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
@@ -15,10 +15,15 @@ import {
     Settings,
     Bell,
     Plus,
+    Loader2,
+    Gift,
 } from 'lucide-react'
 import type { DashboardData } from './dashboard-client'
 import { FUXIE_WORLD_PROPS, FUXIE_MASCOT_STATES } from '@/lib/mascot/fuxie-assets'
 import { PrimaryCta } from '@/components/ui/primary-cta'
+import { RewardRevealMoment } from '@/components/gamification/quest-visuals'
+import { REWARD_ASSETS } from '@/components/gamification/reward-assets'
+import type { MissionBoardData, MissionBoardItem } from '@/lib/gamification/mission-types'
 
 export interface DashboardMockupClientProps {
     section?: string
@@ -31,6 +36,41 @@ export function DashboardMockupClient({ data, forceEmpty = false }: DashboardMoc
 
     const isEmpty = forceEmpty || !data.profile.targetLevel || data.profile.totalLessonsCompleted === 0
     const [activeTab, setActiveTab] = useState('home')
+
+    const [missionBoard, setMissionBoard] = useState<MissionBoardData | null>(data.missionBoard ?? null)
+    const [claimingId, setClaimingId] = useState<string | null>(null)
+    const [claimCelebration, setClaimCelebration] = useState<{ title: string; fucoinReward: number; xpReward: number } | null>(null)
+    const [claimError, setClaimError] = useState<string | null>(null)
+    const [isPending, startTransition] = useTransition()
+
+    const claimMission = (mission: MissionBoardItem) => {
+        if (mission.status !== 'claimable' || claimingId || isPending) return
+
+        setClaimingId(mission.id)
+        setClaimError(null)
+        setClaimCelebration(null)
+        startTransition(async () => {
+            try {
+                const res = await fetch(`/api/v1/missions/${mission.id}/claim`, { method: 'POST' })
+                const json = await res.json()
+
+                if (!res.ok || !json.success) {
+                    throw new Error(json.error || 'Không nhận được thưởng mission')
+                }
+
+                setMissionBoard(json.data.missionBoard)
+                setClaimCelebration({
+                    title: mission.title,
+                    fucoinReward: mission.fucoinReward,
+                    xpReward: mission.xpReward,
+                })
+            } catch (error) {
+                setClaimError(error instanceof Error ? error.message : 'Không nhận được thưởng mission')
+            } finally {
+                setClaimingId(null)
+            }
+        })
+    }
 
     const displayName = data.profile.displayName
     const currentStreak = data.streak.currentStreak
@@ -117,6 +157,18 @@ export function DashboardMockupClient({ data, forceEmpty = false }: DashboardMoc
                             <span className="text-[#FFD700]">FU</span><span className="text-white">XiE</span>
                         </span>
                         <div className="flex items-center gap-2">
+                            {!isEmpty && missionBoard && (
+                                <div className="flex items-center gap-1.5 bg-white/90 px-3 py-1.5 rounded-full shadow text-xs font-black text-[#173b56]">
+                                    <Image
+                                        src={REWARD_ASSETS.fucoin}
+                                        alt="Fucoin"
+                                        width={16}
+                                        height={16}
+                                        className="object-contain animate-pulse"
+                                    />
+                                    <span>{missionBoard.wallet.balance.toLocaleString('de-DE')}</span>
+                                </div>
+                            )}
                             <div className="flex items-center gap-1.5 bg-white/90 px-3 py-1.5 rounded-full shadow text-xs font-black text-[#173b56]">
                                 <span>🔥</span><span>{currentStreak}</span>
                             </div>
@@ -196,6 +248,18 @@ export function DashboardMockupClient({ data, forceEmpty = false }: DashboardMoc
                             <span className="bg-[#2EC4B6] text-white text-xs font-black px-3 py-1.5 rounded-full shadow">
                                 {data.profile.currentLevel}
                             </span>
+                            {!isEmpty && missionBoard && (
+                                <div className="flex items-center gap-1.5 bg-white px-3 py-1.5 rounded-full border border-[#CCE4F0] shadow-sm text-xs font-black">
+                                    <Image
+                                        src={REWARD_ASSETS.fucoin}
+                                        alt="Fucoin"
+                                        width={16}
+                                        height={16}
+                                        className="object-contain"
+                                    />
+                                    <span>{missionBoard.wallet.balance.toLocaleString('de-DE')} Fu</span>
+                                </div>
+                            )}
                             {/* XP bar */}
                             <div className="flex flex-col gap-1 w-36">
                                 <div className="flex justify-between text-[9px] font-bold text-[#3C78A8]">
@@ -417,15 +481,17 @@ export function DashboardMockupClient({ data, forceEmpty = false }: DashboardMoc
 
                     {/* MISSIONS board */}
                     <div className="absolute top-[38%] right-[3%] z-10">
-                        <div className="bg-white/95 backdrop-blur-md rounded-2xl p-4 shadow-2xl border border-[#CCE4F0] w-52">
+                        <div className="bg-white/95 backdrop-blur-md rounded-2xl p-4 shadow-2xl border border-[#CCE4F0] w-64">
                             <p className="text-[9px] font-black uppercase text-[#3C78A8] tracking-widest border-b border-[#CCE4F0]/50 pb-1.5 mb-2">MISSIONS</p>
-                            <ul className="flex flex-col gap-1.5">
-                                {data.missionBoard?.missions && data.missionBoard.missions.length > 0 ? (
-                                    data.missionBoard.missions.slice(0, 3).map((m) => {
-                                        const isCompleted = m.status === 'claimed' || m.status === 'claimable'
+                            <ul className="flex flex-col gap-1.5 mb-2">
+                                {missionBoard?.missions && missionBoard.missions.length > 0 ? (
+                                    missionBoard.missions.slice(0, 3).map((m) => {
+                                        const isClaimed = m.status === 'claimed'
+                                        const isClaimable = m.status === 'claimable'
+                                        const isCompleted = isClaimed || isClaimable
                                         const isHalf = !isCompleted && m.currentValue > 0
                                         return (
-                                            <li key={m.id} className="flex items-center gap-2 text-[10px] font-bold text-[#173b56]">
+                                            <li key={m.id} className="flex items-center gap-2 text-[10px] font-bold text-[#173b56] min-h-[24px]">
                                                 {isCompleted ? (
                                                     <span className="w-4 h-4 rounded-full bg-green-100 text-green-600 flex items-center justify-center text-[8px] shrink-0">✓</span>
                                                 ) : isHalf ? (
@@ -434,7 +500,22 @@ export function DashboardMockupClient({ data, forceEmpty = false }: DashboardMoc
                                                     <span className="w-4 h-4 rounded-full bg-[#F3FBFF] border border-[#CCE4F0] flex items-center justify-center text-[7px] text-gray-400 shrink-0">○</span>
                                                 )}
                                                 <span className="truncate flex-1" title={m.title}>{m.title}</span>
-                                                <span className="ml-auto text-[#3C78A8] shrink-0">{m.currentValue}/{m.targetValue}</span>
+                                                {isClaimable ? (
+                                                    <button
+                                                        onClick={() => claimMission(m)}
+                                                        disabled={claimingId !== null || isPending}
+                                                        className="ml-auto flex items-center gap-1 bg-amber-500 hover:bg-amber-600 text-white text-[9px] font-black px-2 py-0.5 rounded-lg transition disabled:opacity-50 cursor-pointer"
+                                                    >
+                                                        {claimingId === m.id ? (
+                                                            <Loader2 className="w-2.5 h-2.5 animate-spin" />
+                                                        ) : (
+                                                            <Gift className="w-2.5 h-2.5" />
+                                                        )}
+                                                        <span>Claim</span>
+                                                    </button>
+                                                ) : (
+                                                    <span className="ml-auto text-[#3C78A8] shrink-0">{m.currentValue}/{m.targetValue}</span>
+                                                )}
                                             </li>
                                         )
                                     })
@@ -442,6 +523,26 @@ export function DashboardMockupClient({ data, forceEmpty = false }: DashboardMoc
                                     <li className="text-[10px] text-gray-400 font-bold text-center py-2">Noch keine Missionen</li>
                                 )}
                             </ul>
+
+                            {claimError && (
+                                <p className="mt-2 text-[9px] font-bold text-red-500 text-center animate-fade-in-up">
+                                    {claimError}
+                                </p>
+                            )}
+
+                            {claimCelebration && (
+                                <div className="mt-3 animate-fade-in-up">
+                                    <RewardRevealMoment
+                                        mode="earned"
+                                        title="Belohnung erhalten"
+                                        detail={`Nhiệm vụ: ${claimCelebration.title}`}
+                                        rewards={[
+                                            { type: 'fucoin', label: `+${claimCelebration.fucoinReward} Fucoin`, detail: 'Mission claim' },
+                                            { type: 'xp', label: `+${claimCelebration.xpReward} XP`, detail: 'Level progress' }
+                                        ]}
+                                    />
+                                </div>
+                            )}
                         </div>
                     </div>
 
