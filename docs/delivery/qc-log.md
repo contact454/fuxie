@@ -147,3 +147,12 @@ Note: Antigravity's pasted report covered only CW-2 Batch 1, but the working tre
 ### Note (committed evidence)
 CW-3 commits ~6.4 MB of capture PNGs under `docs/design/visual-audit/qa-runs/2026-05-16/screenshots/` as QA evidence (the gate verifies they exist on disk). If the repo prefers CI-generated captures, gitignore the folder and run `pnpm test:integration:capture` in CI instead.
 - **Status:** ✅ CW-1/2/3 accepted. Folded onto the PR #20 branch (CW-2 depends on the Slice A/B file versions).
+
+---
+
+## 2026-06-03 — Code review: CW-2 Batch 2 (writing + session i18n)
+
+- **Verdict:** ✅ **ACCEPTED for scope.** `writing/` (5 files) + `session/` (6 files) now report 0 locale-parity violations (scoped scans); `pnpm build` green; de/vi parity held (279 keys, +65/+65). SessionResultScreen i18n is clean string→`t()` (logic intact) and incidentally fixed its leftover hardcoded `A1` → real `level` prop (now threaded from SessionPlayer).
+- **Repo-wide locale-parity still RED: ~448 violations remain** (admin/*, teacher/*, `(learn)` routes campaign/grammar/review/vocabulary, fuxie-live-qa/world-lab, not-found, etc.). So `check:quick` still stops at `check:locale-parity`. Batch 2 is progress, not completion.
+- **Guidance for remaining batches:** most of the remainder is **non-learner** (admin/teacher operator tools, QA/lab pages, fixtures, tests) → bulk `// locale-allow` rather than translate. Translate only genuine learner-facing copy (grammar/vocabulary/review/speaking learner routes). Driving the whole repo to 0 is a large, low-B2C-value effort — consider doing it in follow-up PRs rather than blocking PR #20.
+- **Status:** ✅ Batch 2 accepted. Locale-parity remains an open multi-batch cleanup (Batch 3+).

@@ -161,6 +161,7 @@ function StimulusBox({ sourceText, sourceTextType, cefrLevel, colors }: {
     cefrLevel: string
     colors: { bg: string; text: string; css: string; shadow: string }
 }) {
+    const t = useTranslations('WritingPlayer')
     const type = (sourceTextType || '').toLowerCase()
 
     // Determine styling based on text type
@@ -205,7 +206,7 @@ function StimulusBox({ sourceText, sourceTextType, cefrLevel, colors }: {
             <div className="rounded-xl border border-gray-200 bg-gray-50/50 overflow-hidden">
                 <div className="flex items-center gap-2 px-3 py-2 bg-gray-100 border-b border-gray-200">
                     <span className="text-sm">📰</span>
-                    <span className="text-xs font-bold text-gray-800">Bài báo</span>
+                    <span className="text-xs font-bold text-gray-800">{t('articleLabel')}</span>
                 </div>
                 <div className="px-3 py-2.5">
                     <p className="text-xs text-gray-700 leading-relaxed whitespace-pre-wrap">{sourceText}</p>
@@ -219,7 +220,7 @@ function StimulusBox({ sourceText, sourceTextType, cefrLevel, colors }: {
             <div className="rounded-xl border border-purple-200 bg-purple-50/50 overflow-hidden">
                 <div className="flex items-center gap-2 px-3 py-2 bg-purple-100/60 border-b border-purple-200">
                     <span className="text-sm">🎤</span>
-                    <span className="text-xs font-bold text-purple-800">Bài thuyết trình</span>
+                    <span className="text-xs font-bold text-purple-800">{t('vortragLabel')}</span>
                 </div>
                 <div className="px-3 py-2.5">
                     <p className="text-xs text-gray-700 leading-relaxed whitespace-pre-wrap italic">{sourceText}</p>
@@ -415,14 +416,14 @@ export function WritingPlayer(props: WritingPlayerProps) {
                 {/* ─── Score Header ─── */}
                 <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-8 text-center">
                     <div className="flex justify-center mb-4">
-                        <FuxieRoleMascot src={FUXIE_3D_ASSETS.postOffice} alt="Fuxie writing coach" size={96} motion="reward" />
+                        <FuxieRoleMascot src={FUXIE_3D_ASSETS.postOffice} alt={t('altWritingCoach')} size={96} motion="reward" />
                     </div>
                     <div className="flex justify-center mb-3">
                         <ScoreRing score={feedback.totalScore} maxScore={feedback.maxScore} />
                     </div>
                     {feedback.estimatedLevel && (
                         <div className="flex items-center justify-center gap-2 mt-3">
-                            <span className="text-sm text-gray-500">Geschätztes Niveau:</span>
+                            <span className="text-sm text-gray-500">{t('estimatedLevelLabel')}</span>
                             <span className="text-sm font-bold px-2.5 py-1 rounded-lg"
                                 style={{ color: (CEFR_COLORS[feedback.estimatedLevel] ?? colors).text, backgroundColor: (CEFR_COLORS[feedback.estimatedLevel] ?? colors).bg }}>
                                 {feedback.estimatedLevel}
@@ -439,7 +440,7 @@ export function WritingPlayer(props: WritingPlayerProps) {
                     <div className="bg-white rounded-2xl border border-emerald-100 shadow-sm p-5">
                         <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
                             <div>
-                                <p className="text-xs font-black uppercase tracking-wide text-emerald-700">Writing Quest Receipt</p>
+                                <p className="text-xs font-black uppercase tracking-wide text-emerald-700">{t('receiptTitle')}</p>
                                 <h3 className="mt-1 text-lg font-bold text-gray-900">
                                     {episodeReceipt.completedCheckpoints}/{episodeReceipt.checkpointCount} checkpoints done
                                 </h3>
@@ -503,7 +504,7 @@ export function WritingPlayer(props: WritingPlayerProps) {
                                     {c.reasoningNative && <p className="text-xs text-gray-400 italic">🇻🇳 {c.reasoningNative}</p>}
                                     {c.suggestionsNative && c.suggestionsNative.length > 0 && (
                                         <div className="mt-1.5 pl-2 border-l-2 border-blue-200">
-                                            <p className="text-xs font-medium text-blue-600 mb-0.5">💡 Gợi ý cải thiện:</p>
+                                            <p className="text-xs font-medium text-blue-600 mb-0.5">{t('suggestionsLabel')}</p>
                                             {c.suggestionsNative.map((s: string, si: number) => (
                                                 <p key={si} className="text-xs text-blue-500">• {s}</p>
                                             ))}

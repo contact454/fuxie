@@ -171,6 +171,7 @@ export function SessionPlayer({
                 saving={saving}
                 onFinish={handleComplete}
                 results={results}
+                level={level}
             />
         )
     }
