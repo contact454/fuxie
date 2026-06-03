@@ -191,9 +191,8 @@ export function SkillMotivationLayer({
             // disjoint along the vertical axis (Requirement 6.2).
             className={
                 `sticky top-0 z-30 flex w-full items-center gap-3 ` +
-                `overflow-hidden border-b border-[#CCE4F0]/70 ` +
-                `bg-white/90 px-3 py-2 backdrop-blur ` +
-                `supports-[backdrop-filter]:bg-white/75 ${className}`
+                `overflow-hidden border-b border-[#8bd3ff]/30 ` +
+                `bg-[#064987]/95 px-3 py-2 backdrop-blur text-white ${className}`
             }
             style={ROOT_STYLE}
         >
@@ -233,12 +232,12 @@ export function SkillMotivationLayer({
                 <p
                     data-progress-text=""
                     aria-label={`Tiến độ: ${safeDone} trên ${safeTotal}`}
-                    className="text-base font-black tabular-nums text-[#173B56] sm:text-lg"
+                    className="text-base font-black tabular-nums text-white sm:text-lg"
                 >
                     {progressText}
                 </p>
                 {children ? (
-                    <div className="mt-1 min-w-0 text-xs font-semibold text-[#3C78A8]">
+                    <div className="mt-1 min-w-0 text-xs font-semibold text-[#8bd3ff]">
                         {children}
                     </div>
                 ) : null}
@@ -250,7 +249,7 @@ export function SkillMotivationLayer({
                 data-reward-state="preview"
                 data-reward-context="true"
                 data-reward-key={rewardKey}
-                className="relative flex h-full shrink-0 items-center gap-2 rounded-2xl bg-white/80 px-2 py-1 ring-1 ring-[#FFD166]/50"
+                className="relative flex h-full shrink-0 items-center gap-2 rounded-full bg-[#ffb703] px-3 py-1 shadow-md shadow-sky-950/20"
             >
                 <Image
                     src={rewardSrc}
@@ -258,9 +257,9 @@ export function SkillMotivationLayer({
                     aria-hidden="true"
                     width={40}
                     height={40}
-                    className="h-9 w-9 shrink-0 object-contain drop-shadow-sm"
+                    className="h-7 w-7 shrink-0 object-contain drop-shadow-sm"
                 />
-                <span className="text-xs font-black text-[#8A5A00] sm:text-sm">
+                <span className="text-xs font-black text-[#173B56] sm:text-sm">
                     {rewardLabel}
                 </span>
             </div>

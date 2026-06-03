@@ -99,18 +99,15 @@ export function MobileShell({ dailyGoal: initialDailyGoal, children }: MobileShe
                         className="object-contain"
                         style={{ width: 'auto', height: 'auto' }}
                     />
-                    <span className="text-lg font-bold bg-gradient-to-r from-[#60A8E4] to-[#3C78A8] bg-clip-text text-transparent">
+                    <span className="text-lg font-black text-white">
                         Fuxie
                     </span>
                 </MeasuredLink>
 
                 {dailyGoal && (
-                    <div className="mobile-header-xp">
-                        <span className="text-xs">⭐</span>
-                        <span className="text-xs font-semibold text-gray-600">
-                            {dailyGoal.xpEarned}
-                        </span>
-                    </div>
+                    <span className="rounded-full bg-[#ffb703] px-3 py-1 text-xs font-black text-[#173b56] shadow-md shadow-sky-950/20">
+                        {dailyGoal.xpEarned} XP
+                    </span>
                 )}
             </header>
 
@@ -162,7 +159,11 @@ export function MobileShell({ dailyGoal: initialDailyGoal, children }: MobileShe
                             href={item.href}
                             flow="nav.mobile.bottom"
                             source={item.labelKey}
-                            className={`bottom-nav-item ${isActive ? 'bottom-nav-item-active' : ''}`}
+                            className={`bottom-nav-item ${
+                                isActive 
+                                    ? 'bottom-nav-item-active bg-[#2ec4b6] text-white rounded-xl' 
+                                    : 'text-white/80 hover:bg-white/10 hover:text-white'
+                            }`}
                         >
                             <span className="bottom-nav-icon">{item.icon}</span>
                             <span className="bottom-nav-label">{t(item.labelKey as any)}</span>
