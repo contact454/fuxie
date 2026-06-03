@@ -248,7 +248,7 @@ export default function NachsprechenPlayer({ sentences, config, lessonTitle, les
       const formData = new FormData()
       formData.append('audio', wavBlob, 'recording.wav')
       formData.append('referenceText', currentSentence.textDe)
-      formData.append('level', 'A1')
+      formData.append('level', cefrLevel ?? questEpisode?.cefrLevel ?? 'A1')
       formData.append('exerciseType', 'nachsprechen')
 
       const res = await fetch('/api/v1/speaking/evaluate', {

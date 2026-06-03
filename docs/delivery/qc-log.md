@@ -106,3 +106,26 @@ Wrap `MultipleChoice.tsx:299 "💡 Erklärung:"` in `t()` (or `// locale-allow`)
 2. i18n backlog: move hardcoded DE/VN copy in `DashboardMockupClient.tsx` / `SessionPlayer.tsx` (and others) into `messages/{vi,de}.json`.
 3. Run `pnpm test:integration:capture` to regenerate the visual-audit screenshot set.
 - **Status:** ✅ A, B, A-fix, C-1 all accepted into the branch. Pre-existing gate debt logged for separate cleanup.
+
+---
+
+## 2026-06-03 — Code review: Slice D (AI CEFR level) + Slice E (submit/sync errors)
+
+- **Verdict:** ✅ **ACCEPTED** (both). Build + test:core green. No interiors beyond the named files; no new assets.
+
+### Slice D — PASS
+- Speaking `NachsprechenPlayer.tsx:251`: `level` now `cefrLevel ?? questEpisode?.cefrLevel ?? 'A1'`. ✅
+- Grammar `ExerciseRenderer.tsx`: `cefrLevel?` prop threaded to GapFillType + Transformation; both `/api/v1/grade` payloads use `cefrLevel || 'A1'` (was `'A1'`). ✅
+- Grammar `LessonPlayer.tsx`: passes `cefrLevel={level}` (real lesson level) into `ExerciseRenderer`. ✅
+- Net: B1–C2 lessons now grade with the correct model/rubric.
+
+### Slice E — PASS
+- Reading `reading-player.tsx` + Listening `lesson-player.tsx`: submit throws on `!res.ok`/`!success`; bilingual learner-facing error banner; phase stays on exercise → **answers preserved**; retry via the existing submit CTA; reset clears error. ✅
+- Grammar `LessonPlayer.tsx`: progress save refactored to async try/catch with `syncError` state + amber "Thử lại" retry banner; effect won't auto-retry after failure (no loop). ✅
+- SRS `review-client.tsx`: both sync paths (Web Worker + fallback) detect failure and push to a deduped `failedSyncs` list; `retrySync` re-POSTs and clears succeeded; non-blocking amber banner (lists affected words) + "Thử lại" in all 3 view modes; learner is not trapped and not falsely told it saved. ✅
+- Nits (non-blocking): SRS banner JSX duplicated 3× (extractable); reading/listening "retry" is the existing submit button (acceptable).
+
+### Gates (independently run by QC)
+- `pnpm build`: ✅ PASS (37.8s). `pnpm test:core`: ✅ PASS (web suite + ai-service 58/58).
+- Pre-existing gate debt unchanged (asset-audit / locale-parity / visual-audit) — see CW-1/2/3. (Slice E added bilingual error strings inline; these add to the locale-parity backlog tracked in CW-2.)
+- **Status:** ✅ D + E accepted into the branch. Remaining open: CW-1/2/3 cleanup work orders; optional Slice C quest-visuals restyle.

@@ -75,6 +75,7 @@ export function ReadingPlayer({
         timeTaken: number; questionResults: QuestionResult[]
     } | null>(null)
     const [expandedResult, setExpandedResult] = useState<string | null>(null)
+    const [error, setError] = useState<string | null>(null)
     const [startTime, setStartTime] = useState(Date.now())
     const cefrColor = getCefrTheme(cefrLevel)
     const isBeginner = ['A1', 'A2'].includes(cefrLevel)
@@ -206,6 +207,7 @@ export function ReadingPlayer({
 
     const submitAnswers = useCallback(async () => {
         setIsSubmitting(true)
+        setError(null)
         try {
             const timeTaken = Math.round((Date.now() - startTime) / 1000)
             const res = await fetch(`/api/v1/reading/${exerciseId}/submit`, {
@@ -226,13 +228,19 @@ export function ReadingPlayer({
                     } : {}),
                 }),
             })
+            if (!res.ok) {
+                throw new Error('Nộp bài không thành công / Einreichen fehlgeschlagen')
+            }
             const data = await res.json()
             if (data.success) {
                 setResults({ ...data.data, timeTaken })
                 setPhase('results')
+            } else {
+                throw new Error(data.error || 'Nộp bài không thành công / Einreichen fehlgeschlagen')
             }
-        } catch (err) {
+        } catch (err: any) {
             console.error(err)
+            setError(err.message || 'Verbindungsfehler. Bitte versuche es erneut. / Lỗi kết nối. Vui lòng thử lại.')
         } finally {
             setIsSubmitting(false)
         }
@@ -293,6 +301,7 @@ export function ReadingPlayer({
         setClozeResults(null)
         setResults(null)
         setExpandedResult(null)
+        setError(null)
         setShowVocabPanel(false)
         setStartTime(Date.now())
         trackedCheckpoints.current = new Set()
@@ -1043,6 +1052,13 @@ export function ReadingPlayer({
                         placeholder="Nhập câu trả lời..."
                         className="w-full p-3.5 rounded-xl border-2 border-gray-200 text-sm focus:border-[#60A8E4] focus:ring-2 focus:ring-[#60A8E4]/20 outline-none transition-all"
                     />
+                )}
+
+                {/* Error */}
+                {error && (
+                    <div className="mt-3 p-3 bg-red-50 border border-red-100 rounded-xl text-sm text-red-600">
+                        ⚠️ {error}
+                    </div>
                 )}
 
                 {/* Navigation */}

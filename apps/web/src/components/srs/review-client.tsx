@@ -100,6 +100,8 @@ export function ReviewClient({ themes, availableLevels, initialLevel, dueCounts,
     const [lastRating, setLastRating] = useState<Rating | null>(null)
     const [srsStats, setSrsStats] = useState({ totalReviewed: 0, correct: 0, again: 0, xpEarned: 0 })
     const [srsComplete, setSrsComplete] = useState(false)
+    const [failedSyncs, setFailedSyncs] = useState<Array<{ cardId: string; rating: Rating; word: string }>>([])
+    const [isRetryingSync, setIsRetryingSync] = useState(false)
     const [currentDueCounts] = useState(dueCounts)
     const [currentTotalDue] = useState(totalDueAll)
     const srsAdvanceTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null)
@@ -239,7 +241,23 @@ export function ReviewClient({ themes, availableLevels, initialLevel, dueCounts,
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ cardId: card.id, rating, responseTimeMs: 0 }),
-            }).catch(console.error)
+            })
+                .then(async (res) => {
+                    if (!res.ok) {
+                        throw new Error('Sync failed')
+                    }
+                    const data = await res.json()
+                    if (!data.success) {
+                        throw new Error(data.error || 'Sync failed')
+                    }
+                })
+                .catch((err) => {
+                    console.error(err)
+                    setFailedSyncs(prev => {
+                        if (prev.some(item => item.cardId === card.id)) return prev
+                        return [...prev, { cardId: card.id, rating, word: card.vocabularyItem.word }]
+                    })
+                })
         }
 
         // 1. Optimistic Fast UI with Web Worker if available
@@ -271,16 +289,62 @@ export function ReviewClient({ themes, availableLevels, initialLevel, dueCounts,
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ cardId: card.id, rating, responseTimeMs: 0 }),
         })
-            .then(res => res.json())
+            .then(res => {
+                if (!res.ok) {
+                    throw new Error('Sync failed')
+                }
+                return res.json()
+            })
             .then(data => {
-                finishReview(data.data?.xpEarned ?? 0)
+                if (data.success) {
+                    finishReview(data.data?.xpEarned ?? 0)
+                } else {
+                    throw new Error(data.error || 'Sync failed')
+                }
             })
             .catch(err => {
                 console.error(err)
+                setFailedSyncs(prev => {
+                    if (prev.some(item => item.cardId === card.id)) return prev
+                    return [...prev, { cardId: card.id, rating, word: card.vocabularyItem.word }]
+                })
+                finishReview(rating === 'AGAIN' ? 0 : 10)
+            })
+            .finally(() => {
                 setIsSubmitting(false)
             })
 
     }, [srsCards, srsIndex, isSubmitting])
+
+    const retrySync = useCallback(async () => {
+        if (failedSyncs.length === 0 || isRetryingSync) return
+        setIsRetryingSync(true)
+        const itemsToRetry = [...failedSyncs]
+        const remaining: Array<{ cardId: string; rating: Rating; word: string }> = []
+
+        for (const item of itemsToRetry) {
+            try {
+                const res = await fetch('/api/v1/srs/review', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ cardId: item.cardId, rating: item.rating, responseTimeMs: 0 }),
+                })
+                if (!res.ok) {
+                    throw new Error('Sync failed')
+                }
+                const data = await res.json()
+                if (!data.success) {
+                    throw new Error(data.error || 'Sync failed')
+                }
+            } catch (err) {
+                console.error('Failed to sync card', item.cardId, err)
+                remaining.push(item)
+            }
+        }
+
+        setFailedSyncs(remaining)
+        setIsRetryingSync(false)
+    }, [failedSyncs, isRetryingSync])
 
     // ─── Back to themes ─────────────────────────────
     const backToThemes = () => {
@@ -300,6 +364,23 @@ export function ReviewClient({ themes, availableLevels, initialLevel, dueCounts,
 
         return (
             <div className="max-w-2xl mx-auto">
+                {failedSyncs.length > 0 && (
+                    <div className="mb-4 p-4 bg-amber-50 border border-amber-200 rounded-2xl flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-left">
+                        <div className="flex-1">
+                            <h3 className="text-sm font-bold text-amber-800">⚠️ Đồng bộ tiến trình thất bại ({failedSyncs.length} từ)</h3>
+                            <p className="text-xs text-amber-600">
+                                Không thể lưu trạng thái ôn tập cho: {failedSyncs.map(f => f.word).join(', ')}.
+                            </p>
+                        </div>
+                        <button
+                            onClick={retrySync}
+                            disabled={isRetryingSync}
+                            className="px-4 py-2 rounded-xl bg-amber-500 hover:bg-amber-600 text-white font-bold text-xs transition-all shadow-sm shrink-0"
+                        >
+                            {isRetryingSync ? 'Đang lưu...' : 'Thử lại'}
+                        </button>
+                    </div>
+                )}
                 {/* Back button + theme header */}
                 <div className="flex items-center gap-3 mb-6">
                     <button
@@ -447,6 +528,23 @@ export function ReviewClient({ themes, availableLevels, initialLevel, dueCounts,
 
         return (
             <div className="max-w-2xl mx-auto">
+                {failedSyncs.length > 0 && (
+                    <div className="mb-4 p-4 bg-amber-50 border border-amber-200 rounded-2xl flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-left">
+                        <div className="flex-1">
+                            <h3 className="text-sm font-bold text-amber-800">⚠️ Đồng bộ tiến trình thất bại ({failedSyncs.length} từ)</h3>
+                            <p className="text-xs text-amber-600">
+                                Không thể lưu trạng thái ôn tập cho: {failedSyncs.map(f => f.word).join(', ')}.
+                            </p>
+                        </div>
+                        <button
+                            onClick={retrySync}
+                            disabled={isRetryingSync}
+                            className="px-4 py-2 rounded-xl bg-amber-500 hover:bg-amber-600 text-white font-bold text-xs transition-all shadow-sm shrink-0"
+                        >
+                            {isRetryingSync ? 'Đang lưu...' : 'Thử lại'}
+                        </button>
+                    </div>
+                )}
                 {/* Back + header */}
                 <div className="flex items-center gap-3 mb-6">
                     <button onClick={backToThemes} className="w-9 h-9 flex items-center justify-center rounded-xl bg-white border border-gray-200 text-gray-500 hover:text-gray-700 transition-colors">
@@ -530,6 +628,23 @@ export function ReviewClient({ themes, availableLevels, initialLevel, dueCounts,
     // ═════════════════════════════════════════════════
     return (
         <div>
+            {failedSyncs.length > 0 && (
+                <div className="mb-4 p-4 bg-amber-50 border border-amber-200 rounded-2xl flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-left">
+                    <div className="flex-1">
+                        <h3 className="text-sm font-bold text-amber-800">⚠️ Đồng bộ tiến trình thất bại ({failedSyncs.length} từ)</h3>
+                        <p className="text-xs text-amber-600">
+                            Không thể lưu trạng thái ôn tập cho: {failedSyncs.map(f => f.word).join(', ')}.
+                        </p>
+                    </div>
+                    <button
+                        onClick={retrySync}
+                        disabled={isRetryingSync}
+                        className="px-4 py-2 rounded-xl bg-amber-500 hover:bg-amber-600 text-white font-bold text-xs transition-all shadow-sm shrink-0"
+                    >
+                        {isRetryingSync ? 'Đang lưu...' : 'Thử lại'}
+                    </button>
+                </div>
+            )}
             <QuestProgressHero
                 variant="review"
                 eyebrow="Daily review ritual"

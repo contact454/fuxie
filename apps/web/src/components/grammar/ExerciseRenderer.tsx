@@ -187,10 +187,11 @@ function GapFillBank({
 
 // ─── 3. Gap Fill Type ────────────────────────────────
 function GapFillType({
-  exercise, onAnswer
+  exercise, onAnswer, cefrLevel
 }: {
   exercise: GapFillTypeExercise
   onAnswer: (correct: boolean, answer: string, aiFeedback?: any) => void
+  cefrLevel?: string
 }) {
   const [value, setValue] = useState('')
   const [answered, setAnswered] = useState(false)
@@ -216,7 +217,7 @@ function GapFillType({
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           type: 'grammar',
-          cefrLevel: 'A1',
+          cefrLevel: cefrLevel || 'A1',
           exerciseContext: `Điền vào chỗ trống: ${exercise.stem}. Hint: ${exercise.hint_word || ''}`,
           expectedAnswer: exercise.answer.join(' / '),
           userAnswer: value
@@ -485,10 +486,11 @@ function ErrorSpotting({
 
 // ─── 7. Transformation ───────────────────────────────
 function Transformation({
-  exercise, onAnswer
+  exercise, onAnswer, cefrLevel
 }: {
   exercise: TransformationExercise
   onAnswer: (correct: boolean, answer: string, aiFeedback?: any) => void
+  cefrLevel?: string
 }) {
   const [value, setValue] = useState('')
   const [answered, setAnswered] = useState(false)
@@ -514,7 +516,7 @@ function Transformation({
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           type: 'grammar',
-          cefrLevel: 'A1',
+          cefrLevel: cefrLevel || 'A1',
           exerciseContext: `Viết lại câu sau với ngữ pháp ${exercise.target_form}. Câu gốc: ${exercise.source_sentence}`,
           expectedAnswer: exercise.accepted_answers[0],
           userAnswer: value
@@ -631,19 +633,20 @@ function ClozeComponent({
 
 // ─── ExerciseRenderer Dispatcher ─────────────────────
 export function ExerciseRenderer({
-  exercise, onAnswer
+  exercise, onAnswer, cefrLevel
 }: {
   exercise: GrammarExercise
   onAnswer: (correct: boolean, correctAnswer: string, aiFeedback?: any) => void
+  cefrLevel?: string
 }) {
   switch (exercise.type) {
     case 'multiple_choice':   return <MultipleChoice exercise={exercise} onAnswer={onAnswer} />
     case 'gap_fill_bank':     return <GapFillBank exercise={exercise} onAnswer={onAnswer} />
-    case 'gap_fill_type':     return <GapFillType exercise={exercise} onAnswer={onAnswer} />
+    case 'gap_fill_type':     return <GapFillType exercise={exercise} onAnswer={onAnswer} cefrLevel={cefrLevel} />
     case 'matching':          return <Matching exercise={exercise} onAnswer={onAnswer} />
     case 'sentence_reorder':  return <SentenceReorder exercise={exercise} onAnswer={onAnswer} />
     case 'error_spotting':    return <ErrorSpotting exercise={exercise} onAnswer={onAnswer} />
-    case 'transformation':    return <Transformation exercise={exercise} onAnswer={onAnswer} />
+    case 'transformation':    return <Transformation exercise={exercise} onAnswer={onAnswer} cefrLevel={cefrLevel} />
     case 'cloze':             return <ClozeComponent exercise={exercise} onAnswer={onAnswer} />
     default:                  return <div>Unknown exercise type</div>
   }

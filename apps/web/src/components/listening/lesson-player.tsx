@@ -107,6 +107,7 @@ export function LessonPlayer({
     } | null>(null)
     const [showTranscript, setShowTranscript] = useState(false)
     const [audioError, setAudioError] = useState(false)
+    const [error, setError] = useState<string | null>(null)
     const [startTime, setStartTime] = useState(Date.now())
     const cefrColor = getCefrTheme(cefrLevel)
     const trackedCheckpoints = useRef<Set<string>>(new Set())
@@ -252,6 +253,7 @@ export function LessonPlayer({
 
     const submitAnswers = async () => {
         setIsSubmitting(true)
+        setError(null)
         try {
             const timeTaken = Math.round((Date.now() - startTime) / 1000)
             const submittedListenCount = Math.max(1, playCount)
@@ -272,6 +274,9 @@ export function LessonPlayer({
                     },
                 }),
             })
+            if (!res.ok) {
+                throw new Error('Nộp bài không thành công / Einreichen fehlgeschlagen')
+            }
             const data = await res.json()
             if (data.success) {
                 setResults({
@@ -280,9 +285,12 @@ export function LessonPlayer({
                     listenCount: submittedListenCount,
                 })
                 setPhase('results')
+            } else {
+                throw new Error(data.error || 'Nộp bài không thành công / Einreichen fehlgeschlagen')
             }
-        } catch (err) {
+        } catch (err: any) {
             console.error(err)
+            setError(err.message || 'Verbindungsfehler. Bitte versuche es erneut. / Lỗi kết nối. Vui lòng thử lại.')
         } finally {
             setIsSubmitting(false)
         }
@@ -343,6 +351,7 @@ export function LessonPlayer({
         setAnswers({})
         setResults(null)
         setShowTranscript(false)
+        setError(null)
         setStartTime(Date.now())
         setPhase('intro')
         setAudioError(false)
@@ -636,6 +645,13 @@ export function LessonPlayer({
                                 )
                             })}
                         </div>
+
+                        {/* Error */}
+                        {error && (
+                            <div className="mt-3 p-3 bg-red-50 border border-red-100 rounded-xl text-sm text-red-600">
+                                ⚠️ {error}
+                            </div>
+                        )}
 
                         {/* Navigation */}
                         <div className="flex gap-3 mt-5">
