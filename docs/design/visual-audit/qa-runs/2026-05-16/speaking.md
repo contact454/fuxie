@@ -22,25 +22,25 @@
 
 | # | Item | Spec ref | Status | Evidence |
 | --- | --- | --- | --- | --- |
-| SP1 | `Skill_Motivation_Layer` ≤ `min(20vh, 169px)`, fully inside first viewport | Req 6.1, Req 6.2 | PASS — Property 13 | `screenshots/speaking/speaking-default-mobile.png` (PENDING) |
-| SP2 | Mascot `coach`, progress text `done/total`, reward preview chip | Req 6.3 | PASS — Property 13 | `screenshots/speaking/speaking-default-mobile.png` (PENDING) |
-| SP3 | World prop resolved via `pickWorldProp(['cafe','plaza'])` → tags ⊇ `{cafe, plaza, town-square}` (e.g. `chatCafe` / `speakingStageCafe`) | Req 6.6 | PASS — Property 14 | `screenshots/speaking/speaking-default-desktop.png` (PENDING) |
-| SP4 | Mic + transcript area marked `data-role="skill-content"`, disjoint from layer | Req 6.2 | PASS — Property 13 disjoint check | `screenshots/speaking/speaking-default-mobile.png` (PENDING) |
-| SP5 | Single Primary_CTA in first viewport | Req 14.1, Req 19.3 | PASS — Property 7 | `screenshots/speaking/speaking-default-mobile.png` (PENDING) |
-| SP6 | Reward amber confined to reward preview subtree | Req 6.9, Req 19.4 | PASS — Property 9 | `screenshots/speaking/speaking-default-mobile.png` (PENDING) |
+| SP1 | `Skill_Motivation_Layer` ≤ `min(20vh, 169px)`, fully inside first viewport | Req 6.1, Req 6.2 | PASS — Property 13 | `screenshots/speaking/speaking-default-mobile.png` (PASS — captured 2026-05-16) |
+| SP2 | Mascot `coach`, progress text `done/total`, reward preview chip | Req 6.3 | PASS — Property 13 | `screenshots/speaking/speaking-default-mobile.png` (PASS — captured 2026-05-16) |
+| SP3 | World prop resolved via `pickWorldProp(['cafe','plaza'])` → tags ⊇ `{cafe, plaza, town-square}` (e.g. `chatCafe` / `speakingStageCafe`) | Req 6.6 | PASS — Property 14 | `screenshots/speaking/speaking-default-desktop.png` (PASS — captured 2026-05-16) |
+| SP4 | Mic + transcript area marked `data-role="skill-content"`, disjoint from layer | Req 6.2 | PASS — Property 13 disjoint check | `screenshots/speaking/speaking-default-mobile.png` (PASS — captured 2026-05-16) |
+| SP5 | Single Primary_CTA in first viewport | Req 14.1, Req 19.3 | PASS — Property 7 | `screenshots/speaking/speaking-default-mobile.png` (PASS — captured 2026-05-16) |
+| SP6 | Reward amber confined to reward preview subtree | Req 6.9, Req 19.4 | PASS — Property 9 | `screenshots/speaking/speaking-default-mobile.png` (PASS — captured 2026-05-16) |
 
 ## Error state checklist
 
 | # | Item | Spec ref | Status | Evidence |
 | --- | --- | --- | --- | --- |
-| SP-Er1 | Single Primary_CTA "Thử lại"; mascot `guard` | Req 6.10, Req 11.5 | PASS — `<StateShell state="error">` | `screenshots/speaking/speaking-error-mobile.png` (PENDING) |
+| SP-Er1 | Single Primary_CTA "Thử lại"; mascot `guard` | Req 6.10, Req 11.5 | PASS — `<StateShell state="error">` | `screenshots/speaking/speaking-error-mobile.png` (PASS — captured 2026-05-16) |
 | SP-Er2 | 3 retries fail → downgrade + fallback | Req 6.11 | PASS — `createRetryGuard` | n/a |
 
 ## Empty state checklist
 
 | # | Item | Spec ref | Status | Evidence |
 | --- | --- | --- | --- | --- |
-| SP-E1 | Mascot `guard`, single Primary_CTA, copy ≤ 140 chars vi/de | Req 11.3 | PASS — `<StateShell state="empty">` | `screenshots/speaking/speaking-empty-mobile.png` (PENDING) |
+| SP-E1 | Mascot `guard`, single Primary_CTA, copy ≤ 140 chars vi/de | Req 11.3 | PASS — `<StateShell state="empty">` | `screenshots/speaking/speaking-empty-mobile.png` (PASS — captured 2026-05-16) |
 
 ## Cross-cutting
 

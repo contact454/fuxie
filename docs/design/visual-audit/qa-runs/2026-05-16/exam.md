@@ -23,11 +23,11 @@
 
 | # | Item | Spec ref | Status | Evidence |
 | --- | --- | --- | --- | --- |
-| E1 | NO mascot animation, NO reward animation, NO streak indicator, NO XP/coin badge, NO game sound | Req 10.1, Req 12.7 | PASS — `SURFACE_MASCOT_CONFIG.exam.default = 'silent'` (mascot not rendered); `<MascotRoleHost>` returns null for silent | `screenshots/exam/exam-default-mobile.png` (PENDING) |
-| E2 | Timer rendered as mm:ss, updates every 1s, fixed-top | Req 10.2 | PASS — `apps/web/src/app/(learn)/exam/[examId]/` timer component test | `screenshots/exam/exam-default-mobile.png` (PENDING) |
-| E3 | Question counter `{done} / {total}` rendered fixed-top | Req 10.2 | PASS — counter component test | `screenshots/exam/exam-default-mobile.png` (PENDING) |
-| E4 | Primary_CTA "Nộp bài" fixed-bottom, always visible without scroll | Req 10.2, Req 14.1 | PASS — Property 7 | `screenshots/exam/exam-default-mobile.png` (PENDING) |
-| E5 | Palette: neutral + `--fuxie-blue-700/900` only; NO `#FFB703` (reward amber) on any UI element in `in-progress` | Req 10.4, Req 16.5, Req 19.4 | PASS — Property 9 (zero amber pixels in exam in-progress render) | `screenshots/exam/exam-default-mobile.png` (PENDING) |
+| E1 | NO mascot animation, NO reward animation, NO streak indicator, NO XP/coin badge, NO game sound | Req 10.1, Req 12.7 | PASS — `SURFACE_MASCOT_CONFIG.exam.default = 'silent'` (mascot not rendered); `<MascotRoleHost>` returns null for silent | `screenshots/exam/exam-default-mobile.png` (PASS — captured 2026-05-16) |
+| E2 | Timer rendered as mm:ss, updates every 1s, fixed-top | Req 10.2 | PASS — `apps/web/src/app/(learn)/exam/[examId]/` timer component test | `screenshots/exam/exam-default-mobile.png` (PASS — captured 2026-05-16) |
+| E3 | Question counter `{done} / {total}` rendered fixed-top | Req 10.2 | PASS — counter component test | `screenshots/exam/exam-default-mobile.png` (PASS — captured 2026-05-16) |
+| E4 | Primary_CTA "Nộp bài" fixed-bottom, always visible without scroll | Req 10.2, Req 14.1 | PASS — Property 7 | `screenshots/exam/exam-default-mobile.png` (PASS — captured 2026-05-16) |
+| E5 | Palette: neutral + `--fuxie-blue-700/900` only; NO `#FFB703` (reward amber) on any UI element in `in-progress` | Req 10.4, Req 16.5, Req 19.4 | PASS — Property 9 (zero amber pixels in exam in-progress render) | `screenshots/exam/exam-default-mobile.png` (PASS — captured 2026-05-16) |
 | E6 | Timer reaching 00:00 → auto-submit within 2s | Req 10.3 | PASS — timer auto-submit unit test | n/a |
 
 ## Disconnect / recovery checklist
@@ -42,17 +42,17 @@
 
 | # | Item | Spec ref | Status | Evidence |
 | --- | --- | --- | --- | --- |
-| E-R1 | After server-confirmed submit, `<ResultRewardLoop>` enters earned phase within 2s | Req 10.5, Req 7.1 | PASS — `completion-flow.tsx` integration test | `screenshots/exam/exam-result-mobile.png` (PENDING) |
-| E-R2 | Earned phase 1.2–2.0s; auto-transition to receipt | Req 7.1, Req 7.2 | PASS — Property 15 | `screenshots/exam/exam-result-mobile.png` (PENDING) |
-| E-R3 | Receipt shows XP, Fucoin, accuracy, time, single Primary_CTA | Req 7.3, Req 7.4 | PASS — Property 15 | `screenshots/exam/exam-result-mobile.png` (PENDING) |
+| E-R1 | After server-confirmed submit, `<ResultRewardLoop>` enters earned phase within 2s | Req 10.5, Req 7.1 | PASS — `completion-flow.tsx` integration test | `screenshots/exam/exam-result-mobile.png` (PASS — captured 2026-05-16) |
+| E-R2 | Earned phase 1.2–2.0s; auto-transition to receipt | Req 7.1, Req 7.2 | PASS — Property 15 | `screenshots/exam/exam-result-mobile.png` (PASS — captured 2026-05-16) |
+| E-R3 | Receipt shows XP, Fucoin, accuracy, time, single Primary_CTA | Req 7.3, Req 7.4 | PASS — Property 15 | `screenshots/exam/exam-result-mobile.png` (PASS — captured 2026-05-16) |
 
 ## Error state checklist
 
 | # | Item | Spec ref | Status | Evidence |
 | --- | --- | --- | --- | --- |
-| E-Er1 | Mascot `guard`, single Primary_CTA "Thử lại" + secondary "Về Dashboard" | Req 11.5 | PASS — `<StateShell state="error">` | `screenshots/exam/exam-error-mobile.png` (PENDING) |
+| E-Er1 | Mascot `guard`, single Primary_CTA "Thử lại" + secondary "Về Dashboard" | Req 11.5 | PASS — `<StateShell state="error">` | `screenshots/exam/exam-error-mobile.png` (PASS — captured 2026-05-16) |
 | E-Er2 | Retry rate-limit (>3 in 60s → disable 30s) | Req 11.6 | PASS — `createRetryGuard` | n/a |
-| E-Er3 | No reward amber | Req 10.4, Req 11.7 | PASS — Property 9 | `screenshots/exam/exam-error-mobile.png` (PENDING) |
+| E-Er3 | No reward amber | Req 10.4, Req 11.7 | PASS — Property 9 | `screenshots/exam/exam-error-mobile.png` (PASS — captured 2026-05-16) |
 
 ## Cross-cutting
 
