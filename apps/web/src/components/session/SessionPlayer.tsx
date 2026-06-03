@@ -58,6 +58,21 @@ export function SessionPlayer({
     const [score, setScore] = useState(initialScore)
     const [results, setResults] = useState<ExerciseResult[]>(initialResults)
     const [isFinished, setIsFinished] = useState(initialFinished)
+    const [elapsed, setElapsed] = useState(0)
+
+    useEffect(() => {
+        if (isFinished || loading) return
+        const interval = setInterval(() => {
+            setElapsed(e => e + 1)
+        }, 1000)
+        return () => clearInterval(interval)
+    }, [isFinished, loading])
+
+    const formatElapsed = (seconds: number) => {
+        const m = Math.floor(seconds / 60)
+        const s = seconds % 60
+        return `${String(m).padStart(2, '0')}:${String(s).padStart(2, '0')}`
+    }
 
     useEffect(() => {
         if (initialItems) {
@@ -207,7 +222,7 @@ export function SessionPlayer({
                         <div className="w-8 h-8 rounded-full overflow-hidden bg-[#F3FBFF] border-2 border-[#2EC4B6]">
                             <Image src={FUXIE_MASCOT_STATES.avatar} alt="avatar" width={32} height={32} className="object-contain" />
                         </div>
-                        <span className="bg-[#2EC4B6] text-white text-[10px] font-black px-2.5 py-1 rounded-full">A1</span>
+                        <span className="bg-[#2EC4B6] text-white text-[10px] font-black px-2.5 py-1 rounded-full">{level}</span>
                         <div className="flex flex-col w-28">
                             <div className="flex justify-between text-[8px] font-bold text-[#3C78A8]">
                                 <span>Session aktiv</span>
@@ -253,8 +268,8 @@ export function SessionPlayer({
 
                 {/* ── LEFT: VERTICAL NAV + COACH PANEL (Desktop only) ── */}
                 <div className="hidden lg:flex flex-row flex-shrink-0">
-                    {/* Vertical icon rail */}
-                    <nav className="w-[72px] bg-[#2E7EC4] flex flex-col items-center gap-1 py-4 flex-shrink-0">
+                    {/* Vertical icon rail as non-interactive scenery */}
+                    <div aria-hidden="true" className="w-[72px] bg-[#2E7EC4] flex flex-col items-center gap-1 py-4 flex-shrink-0 select-none">
                         {[
                             { icon: <Home className="w-5 h-5" />, label: 'Übersicht' },
                             { icon: <BookOpen className="w-5 h-5" />, label: 'Lernen', active: true },
@@ -264,18 +279,17 @@ export function SessionPlayer({
                             { icon: <MessageSquare className="w-5 h-5" />, label: 'Sprechen' },
                             { icon: <Trophy className="w-5 h-5" />, label: 'Belohnungen' },
                         ].map(({ icon, label, active }) => (
-                            <button
+                            <div
                                 key={label}
-                                title={label}
-                                className={`flex flex-col items-center gap-0.5 w-full py-2 px-1 transition-all ${
-                                    active ? 'bg-white/20 text-white' : 'text-white/60 hover:bg-white/10 hover:text-white'
+                                className={`flex flex-col items-center gap-0.5 w-full py-2 px-1 ${
+                                    active ? 'bg-white/20 text-white' : 'text-white/40'
                                 }`}
                             >
                                 {icon}
                                 <span className="text-[7px] font-bold">{label}</span>
-                            </button>
+                            </div>
                         ))}
-                    </nav>
+                    </div>
 
                     {/* Coach panel: full-bleed dojo background + large mascot */}
                     <div className="w-[220px] xl:w-[260px] relative overflow-hidden flex flex-col border-r border-[#CCE4F0]/30">
@@ -410,9 +424,8 @@ export function SessionPlayer({
                             <span className="text-base">⏱️</span>
                             <div className="flex flex-col">
                                 <span className="text-[9px] font-bold text-[#3C78A8]">Session-Zeit</span>
-                                <span className="text-[10px] font-black text-[#173b56]">00:00</span>
+                                <span className="text-[10px] font-black text-[#173b56]">{formatElapsed(elapsed)}</span>
                             </div>
-                            <button className="ml-1 text-[8px] font-black text-[#3C78A8] border border-[#CCE4F0] px-1.5 py-0.5 rounded">Zurücksetzen</button>
                         </div>
                     </div>
                 </div>
@@ -436,7 +449,7 @@ export function SessionPlayer({
                     <div className="absolute top-4 left-4 right-4 bg-white/90 backdrop-blur-md rounded-2xl px-4 py-3 shadow-xl border border-white/50 z-10">
                         <p className="text-[9px] font-black uppercase text-[#3C78A8] tracking-widest mb-1.5">DEIN WEG</p>
                         <div className="flex items-center gap-2">
-                            <span className="w-6 h-6 rounded-full bg-[#2EC4B6] text-white text-[9px] font-black flex items-center justify-center shadow">A1</span>
+                            <span className="w-6 h-6 rounded-full bg-[#2EC4B6] text-white text-[9px] font-black flex items-center justify-center shadow">{level}</span>
                             <div className="flex-1 flex items-center gap-1">
                                 <div className="flex-1 h-1.5 bg-[#2EC4B6]/30 rounded-full overflow-hidden">
                                     <div className="h-full bg-[#2EC4B6] w-1/2 rounded-full" />
