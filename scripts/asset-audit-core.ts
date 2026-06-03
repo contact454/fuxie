@@ -106,7 +106,11 @@ export interface CoverageResult {
 
 /**
  * Coverage = |files on disk that the registry references|
- *            / |files on disk|.
+ *            / (|files on disk| - |archived files on disk|).
+ *
+ * Recalibrated to credit/exclude archived files (listed in docs/design/asset-archive.md)
+ * from the coverage denominator so that intentional asset storage does not count
+ * against the 95% threshold: coverage = referenced / (total - archived).
  *
  * Empty input is treated as 1.0 (vacuous pass) so a fresh repo with no
  * optimized files yet does not fail the gate. This matches the live
@@ -117,14 +121,21 @@ export interface CoverageResult {
 export function computeCoverage(
     registryValues: Iterable<string>,
     optimizedFiles: ReadonlyArray<string>,
+    archiveEntries?: Iterable<string>,
 ): CoverageResult {
     const referenced = new Set(registryValues)
+    const archived = new Set(archiveEntries || [])
     let numerator = 0
+    let archivedCount = 0
     for (const f of optimizedFiles) {
-        if (referenced.has(f)) numerator += 1
+        if (referenced.has(f)) {
+            numerator += 1
+        } else if (archived.has(f)) {
+            archivedCount += 1
+        }
     }
-    const denominator = optimizedFiles.length
-    const pct = denominator === 0 ? 1 : numerator / denominator
+    const denominator = optimizedFiles.length - archivedCount
+    const pct = denominator <= 0 ? 1 : numerator / denominator
     return { denominator, numerator, pct }
 }
 
@@ -258,7 +269,7 @@ export function auditInvariant(input: {
     archiveEntries: ReadonlyArray<string>
 }): AuditVerdict {
     const registryValues = input.registryEntries.map((e) => e.value)
-    const coverage = computeCoverage(registryValues, input.optimizedFiles)
+    const coverage = computeCoverage(registryValues, input.optimizedFiles, input.archiveEntries)
     const orphans = findOrphans(input.optimizedFiles, registryValues, input.archiveEntries)
     const forbidden = findForbiddenRefs(input.registryEntries)
     const preferenceIssues = findOptimizedPreferenceIssues(
