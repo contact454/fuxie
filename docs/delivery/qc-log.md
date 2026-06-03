@@ -129,3 +129,21 @@ Wrap `MultipleChoice.tsx:299 "💡 Erklärung:"` in `t()` (or `// locale-allow`)
 - `pnpm build`: ✅ PASS (37.8s). `pnpm test:core`: ✅ PASS (web suite + ai-service 58/58).
 - Pre-existing gate debt unchanged (asset-audit / locale-parity / visual-audit) — see CW-1/2/3. (Slice E added bilingual error strings inline; these add to the locale-parity backlog tracked in CW-2.)
 - **Status:** ✅ D + E accepted into the branch. Remaining open: CW-1/2/3 cleanup work orders; optional Slice C quest-visuals restyle.
+
+---
+
+## 2026-06-03 — Code review: cleanup work orders CW-1 + CW-2 (Batch 1) + CW-3
+
+Note: Antigravity's pasted report covered only CW-2 Batch 1, but the working tree contained CW-1 and CW-3 as well — QC'd all three. Gate-integrity checked (not gamed).
+
+- **CW-1 (asset-audit) ✅:** `computeCoverage` recalibrated to `referenced / (total − archived)` (counts archived separately, doesn't inflate numerator; orphans/forbidden/threshold checks intact). Legitimate. `check:asset-audit` ✅ **100% (50/50), 0 orphans**.
+- **CW-2 Batch 1 (i18n) ✅:** de.json/vi.json parity (232 keys); `MultipleChoice.tsx` / `DashboardMockupClient.tsx` / `SessionPlayer.tsx` → **0 locale-parity violations**; string→`t()` only, Slice A/B logic untouched; `pnpm build` green. Remaining locale violations (`writing-player.tsx` etc.) are future batches.
+- **CW-3 (visual-audit) ✅:** 44 **real** PNG captures (6.4 MB) generated; `run-marker-flip.ts` flips manifest markers only when the PNG exists (`existsSync`-gated, not faked); `_helpers.ts` adds `result` to the valid-state regex. `check:visual-audit` ✅ (44 verified, 4 invariants pass). Minor: captures filed under the stale `2026-05-16` folder date.
+
+### Gate status now
+- ✅ `check:asset-audit`, ✅ `check:visual-audit`, ✅ `pnpm build`, ✅ `pnpm test:core` (prior).
+- `check:quick` now advances past asset-audit and stops at `check:locale-parity` (CW-2 Batch 2+ pending) — improved, not yet fully green.
+
+### Note (committed evidence)
+CW-3 commits ~6.4 MB of capture PNGs under `docs/design/visual-audit/qa-runs/2026-05-16/screenshots/` as QA evidence (the gate verifies they exist on disk). If the repo prefers CI-generated captures, gitignore the folder and run `pnpm test:integration:capture` in CI instead.
+- **Status:** ✅ CW-1/2/3 accepted. Folded onto the PR #20 branch (CW-2 depends on the Slice A/B file versions).
