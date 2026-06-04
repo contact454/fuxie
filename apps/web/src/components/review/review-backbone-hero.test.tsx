@@ -48,7 +48,7 @@ function renderDefault(overrides: { dueToday?: number; overdue?: number } = {}) 
             overdue={overrides.overdue ?? 3}
             dueLabel="Hôm nay đến hạn"
             overdueLabel="Quá hạn"
-            title="Giữ trí nhớ luôn nóng"
+            title="Giữ trí nhớ luôn nóng" // locale-allow
             message="Mỗi lượt ôn là một vòng giữ từ vựng khỏi rơi khỏi trí nhớ."
             ctaLabel="Ôn ngay"
             ctaHref="#review-session"
@@ -65,7 +65,7 @@ function renderEmpty() {
             overdue={0}
             dueLabel="Hôm nay đến hạn"
             overdueLabel="Quá hạn"
-            title="Hôm nay đã sạch nợ ôn"
+            title="Hôm nay đã sạch nợ ôn" // locale-allow
             message="Không có thẻ nào đến hạn. Đây là lúc tốt nhất để học thêm từ mới."
             ctaLabel="Học bài mới"
             ctaHref="/course"
@@ -82,7 +82,7 @@ function renderError() {
         <StateShell
             surfaceId="review"
             state="error"
-            title="Không tải được Ôn tập"
+            title="Không tải được Ôn tập" // locale-allow
             message="Đã có lỗi khi tải dữ liệu ôn tập. Bạn thử lại nhé."
             primaryCta={{ label: 'Thử lại', onClick: () => {} }}
         />,
@@ -102,8 +102,8 @@ describe('ReviewBackboneHero — default state', () => {
         const html = renderDefault()
         expect(countMatches(html, /data-role="primary-cta"/g)).toBe(1)
         expect(html).toContain('Ôn ngay')
-        expect(html).not.toContain('>Học bài mới<')
-        expect(html).not.toContain('>Thử lại<')
+        expect(html).not.toContain('>Học bài mới<') // locale-allow
+        expect(html).not.toContain('>Thử lại<') // locale-allow
     })
 
     it('exposes the surface state on the root for stable test selectors', () => {
@@ -182,8 +182,8 @@ describe('ReviewBackboneHero — empty state', () => {
         const html = renderEmpty()
         expect(countMatches(html, /data-role="primary-cta"/g)).toBe(1)
         expect(html).toContain('Học bài mới')
-        expect(html).not.toContain('>Ôn ngay<')
-        expect(html).not.toContain('>Thử lại<')
+        expect(html).not.toContain('>Ôn ngay<') // locale-allow
+        expect(html).not.toContain('>Thử lại<') // locale-allow
     })
 
     it('declares the empty surface state on the root', () => {
@@ -225,7 +225,7 @@ describe('Review surface — error state (StateShell)', () => {
         const html = renderError()
         expect(countMatches(html, /data-role="primary-cta"/g)).toBe(1)
         expect(html).toContain('Thử lại')
-        expect(html).not.toContain('>Ôn ngay<')
+        expect(html).not.toContain('>Ôn ngay<') // locale-allow
     })
 
     it('uses mascot=guard for the error state', () => {

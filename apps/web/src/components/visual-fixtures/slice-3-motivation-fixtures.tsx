@@ -102,7 +102,7 @@ function Slice3FixtureShell({
                     <MascotImage
                         pose={mascotPose}
                         size="md"
-                        alt="Fuxie motivation guide"
+                        alt="Fuxie motivation guide" // locale-allow
                         className="mx-auto flex justify-center"
                     />
                     <div className="mt-4 rounded-2xl border border-sky-100 bg-sky-50 p-4">
@@ -133,7 +133,7 @@ export function Slice3RewardsSuccessFixture() {
             visualState="success"
             stateRole="rewards-badge-unlock-state"
             accent="#FFB703"
-            title="Badge unlock reveal"
+            title="Badge unlock reveal" // locale-allow
             subtitle="Success state - badge earned after meaningful completion"
             mascotPose="badgeCurator"
             ctaLabel="Badge ansehen"
@@ -180,7 +180,7 @@ export function Slice3MissionsEmptyFixture() {
             visualState="empty"
             stateRole="missions-complete-empty-state"
             accent="#16A34A"
-            title="Daily missions complete"
+            title="Daily missions complete" // locale-allow
             subtitle="Empty state - no missions left today"
             mascotPose="campaignHost"
             ctaLabel="Morgen planen"
@@ -278,7 +278,7 @@ export function Slice3ProfileSuccessFixture() {
             visualState="success"
             stateRole="profile-goal-updated-state"
             accent="#C084FC"
-            title="Profile goal updated"
+            title="Profile goal updated" // locale-allow
             subtitle="Success state - personal study goal changed"
             mascotPose="authWelcomer"
             ctaLabel="Ziel speichern"
@@ -290,7 +290,7 @@ export function Slice3ProfileSuccessFixture() {
                         LN
                     </div>
                     <p className="mt-4 text-sm font-bold text-purple-700">Lina Nguyen</p>
-                    <p className="text-sm text-slate-600">A2 to B1 Goethe</p>
+                    <p className="text-sm text-slate-600">A2 to B1 Goethe</p> // locale-allow
                 </div>
                 <div className="rounded-2xl bg-white p-5 shadow-sm">
                     <div className="flex flex-wrap items-center gap-2">

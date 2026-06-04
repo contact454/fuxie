@@ -18,6 +18,7 @@
  */
 
 import { redirect } from 'next/navigation'
+import { getTranslations } from 'next-intl/server'
 
 import { getServerUser } from '@/lib/auth/server-auth'
 import {
@@ -45,6 +46,7 @@ export default async function VocabularyMicrogamesPage({
     const serverUser = await getServerUser()
     if (!serverUser) redirect('/login')
 
+    const t = await getTranslations('Vocabulary')
     const params = await searchParams
     const [availableLevels, learnerCardCount] = await Promise.all([
         getVocabularyLevels(),
@@ -61,10 +63,10 @@ export default async function VocabularyMicrogamesPage({
                 <StateShell
                     surfaceId="vocabulary"
                     state="empty"
-                    title="Bộ sưu tập của bạn còn trống"
-                    message="Hãy bắt đầu với bài học đầu tiên để mở khóa thẻ từ vựng đầu tiên cho Fuxie."
+                    title={t('emptyState.title')}
+                    message={t('emptyState.message')}
                     primaryCta={{
-                        label: 'Học từ đầu tiên',
+                        label: t('emptyState.ctaLabel'),
                         href: '/course',
                     }}
                 />
@@ -110,10 +112,10 @@ export default async function VocabularyMicrogamesPage({
         <>
             <div className="mx-auto max-w-6xl px-4 pt-8">
                 <VocabularyMicrogamesHero
-                    eyebrow={`Trò chơi từ vựng • ${initialLevel}`}
-                    title="Một ván ngắn, một phần thưởng nhỏ"
-                    message="Hoàn thành ván để Fuxie ghi nhận điểm và thẻ thưởng vào sổ sưu tập."
-                    ctaLabel="Bắt đầu"
+                    eyebrow={t('microgames.eyebrow', { level: initialLevel })}
+                    title={t('microgames.title')}
+                    message={t('microgames.message')}
+                    ctaLabel={t('microgames.ctaLabel')}
                     ctaHref={ctaHref}
                     rewardLabel="+10 Fucoin"
                 />

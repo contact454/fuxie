@@ -3,6 +3,7 @@
 import { Suspense, useState, useEffect } from 'react'
 import { useRouter, useSearchParams } from 'next/navigation'
 import Image from 'next/image'
+import { useTranslations } from 'next-intl'
 
 export default function LoginPage() {
     return (
@@ -40,6 +41,7 @@ async function loadFirebaseAuth() {
 }
 
 function LoginContent() {
+    const t = useTranslations('Auth')
     const router = useRouter()
     const searchParams = useSearchParams()
     const redirectTo = searchParams.get('redirect') || '/dashboard'
@@ -222,7 +224,7 @@ function LoginContent() {
                         />
                         <h1 className="text-4xl font-bold">Fuxie</h1>
                     </div>
-                    <p className="mt-2 text-gray-500">Chào mừng trở lại!</p>
+                    <p className="mt-2 text-gray-500">{t('login.welcomeBack')}</p>
                 </div>
 
                 {/* Error */}
@@ -274,7 +276,7 @@ function LoginContent() {
                 {/* Divider */}
                 <div className="my-6 flex items-center gap-3">
                     <div className="h-px flex-1 bg-gray-200" />
-                    <span className="text-sm text-gray-400">hoặc</span>
+                    <span className="text-sm text-gray-400">{t('login.orDivider')}</span>
                     <div className="h-px flex-1 bg-gray-200" />
                 </div>
 

@@ -1,7 +1,9 @@
 import Link from 'next/link'
 import Image from 'next/image'
+import { getTranslations } from 'next-intl/server'
 
-export default function NotFound() {
+export default async function NotFound() {
+    const t = await getTranslations('NotFound')
     return (
         <div className="min-h-[100dvh] bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center p-6">
             <div className="bg-white rounded-3xl shadow-xl p-8 max-w-md w-full text-center animate-fade-in-up">
@@ -9,7 +11,7 @@ export default function NotFound() {
                 <div className="mb-6">
                     <Image
                         src="/mascot-3d/states/global/fuxie-global-fuxie-error-repair-helper.webp" // asset-registry-allow
-                        alt="Fuxie bối rối"
+                        alt={t('altMascot')}
                         width={120}
                         height={120}
                         className="mx-auto object-contain"
@@ -22,12 +24,10 @@ export default function NotFound() {
                 </div>
 
                 <h2 className="text-xl font-bold text-gray-900 mb-2">
-                    Không tìm thấy trang
+                    {t('title')}
                 </h2>
                 <p className="text-gray-500 text-sm mb-8 leading-relaxed">
-                    Hmm, trang này không tồn tại.
-                    <br />
-                    Fuxie đưa em quay lại học tiếp nhé.
+                    {t('message')}
                 </p>
 
                 <div className="flex gap-3">
@@ -35,13 +35,13 @@ export default function NotFound() {
                         href="/dashboard"
                         className="flex-1 py-3 px-4 rounded-xl bg-gradient-to-r from-fuxie-primary to-[#3C78A8] text-white font-semibold text-sm hover:shadow-lg hover:shadow-sky-200 transition-all text-center"
                     >
-                        Về bảng điều khiển
+                        {t('ctaDashboard')}
                     </Link>
                     <Link
                         href="/"
                         className="flex-1 py-3 px-4 rounded-xl border-2 border-gray-200 text-gray-600 font-semibold text-sm hover:bg-gray-50 transition-all text-center"
                     >
-                        Trang chủ
+                        {t('ctaHome')}
                     </Link>
                 </div>
             </div>

@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useCallback, useEffect, useRef } from 'react'
+import { useTranslations } from 'next-intl'
 import Image from 'next/image'
 import { playSound } from '@/hooks/use-audio-player'
 import { ExerciseProgress } from './exercise-progress'
@@ -49,6 +50,7 @@ const SPECIAL_CHARS = ['ä', 'ö', 'ü', 'ß', 'Ä', 'Ö', 'Ü']
 
 // ─── Component ──────────────────────────────────────
 export function SpellingExercise({ questions, cefrLevel, themeName: _themeName, themeSlug, onExit, onComplete: _onComplete }: SpellingExerciseProps) {
+    const t = useTranslations('Vocabulary')
     const [currentIndex, setCurrentIndex] = useState(0)
     const [userInput, setUserInput] = useState('')
     const [isRevealed, setIsRevealed] = useState(false)
@@ -201,13 +203,13 @@ export function SpellingExercise({ questions, cefrLevel, themeName: _themeName, 
                                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                                     <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02z" />
                                 </svg>
-                                Anhören
+                                {t('listen')}
                             </button>
                         )}
 
                         {/* Vietnamese meaning */}
                         <p className="mb-1 text-2xl font-black text-slate-950">{question.prompt}</p>
-                        <p className="text-sm font-semibold text-slate-500">Viết từ tiếng Đức</p>
+                        <p className="text-sm font-semibold text-slate-500">{t('spellingTitle')}</p>
 
                         {/* Article badge if noun */}
                         {articleText && (
@@ -227,7 +229,7 @@ export function SpellingExercise({ questions, cefrLevel, themeName: _themeName, 
                                 onChange={e => setUserInput(e.target.value)}
                                 onKeyDown={handleKeyDown}
                                 disabled={isRevealed}
-                                placeholder="Nhập từ..."
+                                placeholder={t('spellingPlaceholder')}
                                 autoComplete="off"
                                 autoCapitalize="off"
                                 spellCheck={false}
@@ -235,7 +237,7 @@ export function SpellingExercise({ questions, cefrLevel, themeName: _themeName, 
                             />
                             {isRevealed && (
                                 <div className="text-center pb-3">
-                                    <span className="text-sm font-bold text-text-brand">Đã lưu câu trả lời</span>
+                                    <span className="text-sm font-bold text-text-brand">{t('savedAnswer')}</span>
                                 </div>
                             )}
                         </div>

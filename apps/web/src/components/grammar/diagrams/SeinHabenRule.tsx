@@ -1,6 +1,7 @@
 'use client'
 
 import React, { useRef, useEffect, useState } from 'react'
+import { useTranslations } from 'next-intl'
 import ds from './diagrams.module.css'
 
 /* ──────────────────────────────────────────────
@@ -19,6 +20,7 @@ const LEFT_X = 16, RIGHT_X = LEFT_X + BOX_W + GAP
 const ROW_H = 38, ROW_START = 80 // relative to box top
 
 export default function SeinHabenRule() {
+  const t = useTranslations('Grammar')
   const svgRef = useRef<SVGSVGElement>(null)
   const [paths, setPaths] = useState<string[]>([])
 
@@ -106,7 +108,7 @@ export default function SeinHabenRule() {
         ref={svgRef}
         viewBox={`0 0 ${W} ${H}`}
         className={ds.roughSvg}
-        aria-label="sein und haben Konjugation"
+        aria-label={t('seinHaben.ariaLabel')}
       >
         {/* Render rough.js paths */}
         {paths.map((p, i) => {
@@ -129,7 +131,7 @@ export default function SeinHabenRule() {
           sein &amp; haben
         </text>
         <text x={W / 2} y={55} textAnchor="middle" className={ds.roughSubtitle}>
-          là/ở &amp; có — 2 động từ quan trọng nhất!
+          {t('seinHaben.subtitle')}
         </text>
 
         {/* Left header */}
@@ -137,7 +139,7 @@ export default function SeinHabenRule() {
           sein
         </text>
         <text x={LEFT_X + BOX_W / 2} y={PAD_TOP + 50} textAnchor="middle" className={ds.roughBoxSub}>
-          (là/ở)
+          {t('seinHaben.seinSub')}
         </text>
 
         {/* Right header */}
@@ -145,7 +147,7 @@ export default function SeinHabenRule() {
           haben
         </text>
         <text x={RIGHT_X + BOX_W / 2} y={PAD_TOP + 50} textAnchor="middle" className={ds.roughBoxSub}>
-          (có)
+          {t('seinHaben.habenSub')}
         </text>
 
         {/* Conjugation rows */}
@@ -166,16 +168,16 @@ export default function SeinHabenRule() {
 
         {/* Labels for circled forms */}
         <text x={LEFT_X + BOX_W - 15} y={PAD_TOP + ROW_START + 2 * ROW_H + 4} textAnchor="end" className={ds.roughAnnotation} fill="#ef4444">
-          bất quy tắc!
+          {t('seinHaben.irregular')}
         </text>
         <text x={RIGHT_X + BOX_W - 15} y={PAD_TOP + ROW_START + 2 * ROW_H + 4} textAnchor="end" className={ds.roughAnnotation} fill="#ef4444">
-          bất quy tắc!
+          {t('seinHaben.irregular')}
         </text>
 
         {/* Fuxie at bottom */}
         <text x={W - 60} y={H - 15} className={ds.roughFuxie}>🦊</text>
         <text x={W - 95} y={H - 18} textAnchor="end" className={ds.roughFuxieText}>
-          Học thuộc nhé!
+          {t('seinHaben.fuxieTip')}
         </text>
       </svg>
     </div>

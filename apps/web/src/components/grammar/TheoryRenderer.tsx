@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react'
 import Image from 'next/image'
+import { useTranslations } from 'next-intl'
 import type {
   TheoryBlock, RuleBlock, ParadigmTableBlock, ExamplesBlock,
   KeyTakeawayBlock, MnemonicBlock, ContrastBlock,
@@ -46,11 +47,12 @@ function DiagramSlot({ topicSlug, blockType, pngSrc, alt }: {
 
 // ─── Rule Card ───────────────────────────────────────
 function RuleCard({ block, diagrams, topicSlug }: { block: RuleBlock; diagrams?: TopicDiagrams; topicSlug?: string }) {
+  const t = useTranslations('Grammar')
   return (
     <div className={s.theoryCard}>
       <div className={s.cardHeader}>
         <span className={s.cardIcon}>📋</span>
-        <span className={`${s.cardLabel} ${s.labelRule}`}>QUY TẮC</span>
+        <span className={`${s.cardLabel} ${s.labelRule}`}>{t('rule')}</span>
       </div>
       <div className={s.ruleText}>{block.text_vi}</div>
       {block.steps_vi && block.steps_vi.length > 0 && (
@@ -61,7 +63,7 @@ function RuleCard({ block, diagrams, topicSlug }: { block: RuleBlock; diagrams?:
         </ol>
       )}
       {block.formula && <div className={s.formulaBox}>{block.formula}</div>}
-      <DiagramSlot topicSlug={topicSlug} blockType="rule" pngSrc={diagrams?.rule} alt="Grammar rule diagram" />
+      <DiagramSlot topicSlug={topicSlug} blockType="rule" pngSrc={diagrams?.rule} alt={t('ruleAlt')} />
       {block.comparison_vi && (
         <div className={s.comparisonBox}>
           {block.comparison_vi.split('\n').map((line, i) => (
@@ -76,14 +78,15 @@ function RuleCard({ block, diagrams, topicSlug }: { block: RuleBlock; diagrams?:
 
 // ─── Paradigm Table ──────────────────────────────────
 function ParadigmTable({ block, diagrams, topicSlug }: { block: ParadigmTableBlock; diagrams?: TopicDiagrams; topicSlug?: string }) {
+  const t = useTranslations('Grammar')
   const hlCols = new Set(block.highlight_columns ?? [])
   return (
     <div className={s.theoryCard}>
       <div className={s.cardHeader}>
         <span className={s.cardIcon}>📊</span>
-        <span className={`${s.cardLabel} ${s.labelTable}`}>BẢNG CHIA</span>
+        <span className={`${s.cardLabel} ${s.labelTable}`}>{t('conjugation')}</span>
       </div>
-      <DiagramSlot topicSlug={topicSlug} blockType="table" pngSrc={diagrams?.table} alt="Conjugation table diagram" />
+      <DiagramSlot topicSlug={topicSlug} blockType="table" pngSrc={diagrams?.table} alt={t('conjugationAlt')} />
       <div className={s.tableWrap}>
         <table className={s.grammarTable}>
           <thead>
@@ -113,6 +116,7 @@ function ParadigmTable({ block, diagrams, topicSlug }: { block: ParadigmTableBlo
 
 // ─── Examples ────────────────────────────────────────
 function ExampleCards({ block }: { block: ExamplesBlock }) {
+  const t = useTranslations('Grammar')
   function renderDe(text: string, highlights?: string[]) {
     if (!highlights || highlights.length === 0) return text
     let result = text
@@ -129,7 +133,7 @@ function ExampleCards({ block }: { block: ExamplesBlock }) {
     <div className={s.theoryCard}>
       <div className={s.cardHeader}>
         <span className={s.cardIcon}>💡</span>
-        <span className={`${s.cardLabel} ${s.labelExample}`}>VÍ DỤ</span>
+        <span className={`${s.cardLabel} ${s.labelExample}`}>{t('example')}</span>
       </div>
       {block.items.map((ex, i) => (
         <div key={i} className={s.exampleItem}>
@@ -146,11 +150,12 @@ function ExampleCards({ block }: { block: ExamplesBlock }) {
 
 // ─── Key Takeaway ────────────────────────────────────
 function KeyTakeaway({ block }: { block: KeyTakeawayBlock }) {
+  const t = useTranslations('Grammar')
   return (
     <div className={`${s.theoryCard} ${s.takeawayCard}`}>
       <div className={s.cardHeader}>
         <span className={s.cardIcon}>⭐</span>
-        <span className={`${s.cardLabel} ${s.labelTakeaway}`}>GHI NHỚ</span>
+        <span className={`${s.cardLabel} ${s.labelTakeaway}`}>{t('remember')}</span>
       </div>
       <div className={s.takeawayText}>{block.text_vi}</div>
     </div>
@@ -159,11 +164,12 @@ function KeyTakeaway({ block }: { block: KeyTakeawayBlock }) {
 
 // ─── Mnemonic Card ───────────────────────────────────
 function MnemonicCard({ block, diagrams, topicSlug }: { block: MnemonicBlock; diagrams?: TopicDiagrams; topicSlug?: string }) {
+  const t = useTranslations('Grammar')
   return (
     <div className={`${s.theoryCard} ${s.mnemonicCard}`}>
       <div className={s.cardHeader}>
         <span className={s.cardIcon}>🧠</span>
-        <span className={`${s.cardLabel} ${s.labelMnemonic}`}>MẸO NHỚ</span>
+        <span className={`${s.cardLabel} ${s.labelMnemonic}`}>{t('tip')}</span>
       </div>
       {block.visual_emoji && (
         <div className={s.mnemonicVisual}>{block.visual_emoji}</div>
@@ -176,11 +182,12 @@ function MnemonicCard({ block, diagrams, topicSlug }: { block: MnemonicBlock; di
 
 // ─── Contrast Box ────────────────────────────────────
 function ContrastBox({ block }: { block: ContrastBlock }) {
+  const t = useTranslations('Grammar')
   return (
     <div className={s.theoryCard}>
       <div className={s.cardHeader}>
         <span className={s.cardIcon}>⚡</span>
-        <span className={`${s.cardLabel} ${s.labelContrast}`}>SO SÁNH</span>
+        <span className={`${s.cardLabel} ${s.labelContrast}`}>{t('compare')}</span>
       </div>
       <div className={s.contrastGrid}>
         <div className={`${s.contrastCol} ${s.contrastLeft}`}>
@@ -206,11 +213,12 @@ function ContrastBox({ block }: { block: ContrastBlock }) {
 
 // ─── Situation Card ──────────────────────────────────
 function SituationCard({ block }: { block: SituationBlock }) {
+  const t = useTranslations('Grammar')
   return (
     <div className={`${s.theoryCard} ${s.situationCard}`}>
       <div className={s.cardHeader}>
         <span className={s.cardIcon}>{block.scene_emoji || '🎬'}</span>
-        <span className={`${s.cardLabel} ${s.labelSituation}`}>TÌNH HUỐNG</span>
+        <span className={`${s.cardLabel} ${s.labelSituation}`}>{t('situation')}</span>
       </div>
       <div className={s.situationContext}>{block.context_vi}</div>
       <div className={s.dialogueContainer}>
@@ -229,12 +237,13 @@ function SituationCard({ block }: { block: SituationBlock }) {
 
 // ─── Discovery Card ──────────────────────────────────
 function DiscoveryCard({ block }: { block: DiscoveryBlock }) {
+  const t = useTranslations('Grammar')
   const [revealed, setRevealed] = useState(false)
   return (
     <div className={`${s.theoryCard} ${s.discoveryCard}`}>
       <div className={s.cardHeader}>
         <span className={s.cardIcon}>🔍</span>
-        <span className={`${s.cardLabel} ${s.labelDiscovery}`}>QUAN SÁT</span>
+        <span className={`${s.cardLabel} ${s.labelDiscovery}`}>{t('observe')}</span>
       </div>
       <div className={s.discoveryQuestion}>{block.question_vi}</div>
       {block.hints && block.hints.length > 0 && (
@@ -246,7 +255,7 @@ function DiscoveryCard({ block }: { block: DiscoveryBlock }) {
       )}
       {!revealed ? (
         <button className={s.discoveryRevealBtn} onClick={() => setRevealed(true)}>
-          👆 Nhấn để xem giải đáp
+          {t('revealAnswer')}
         </button>
       ) : (
         <div className={s.discoveryAnswer}>{block.reveal_text_vi}</div>

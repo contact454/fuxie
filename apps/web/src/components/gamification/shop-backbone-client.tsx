@@ -45,6 +45,7 @@
  */
 
 import Image from 'next/image'
+import { useTranslations } from 'next-intl'
 import { useCallback, useEffect, useMemo, useRef, useState, useTransition } from 'react'
 import { Coins, Loader2, LockKeyhole, ShieldCheck, Sparkles, Star } from 'lucide-react'
 
@@ -119,7 +120,7 @@ export interface ShopBackboneClientProps {
      * Equip handler for owned items. Task 13.3 will wire mascot updates;
      * 13.2 keeps the call optional and renders a non-primary CTA.
      */
-    onEquipItem?: (itemId: string) => void | Promise<void>
+    onEquipItem?: (itemId: string) => void | Promise<void> // locale-allow
 }
 
 export interface RedeemSubmitOutcome {
@@ -661,7 +662,7 @@ interface ShopItemCardProps {
     card: ClassifiedShopCard
     equippedItemId: string | null
     onRedeem: (itemId: string) => void
-    onEquip?: (itemId: string) => void | Promise<void>
+    onEquip?: (itemId: string) => void | Promise<void> // locale-allow
 }
 
 function ShopItemCard({ card, equippedItemId, onRedeem, onEquip }: ShopItemCardProps) {
@@ -846,7 +847,7 @@ function ShopItemAction({
     isEquipped: boolean
     itemId: string
     onRedeem: (itemId: string) => void
-    onEquip?: (itemId: string) => void | Promise<void>
+    onEquip?: (itemId: string) => void | Promise<void> // locale-allow
 }) {
     if (state === 'affordable') {
         return (
@@ -921,10 +922,11 @@ interface ShopTabsProps {
 }
 
 function ShopTabs({ activeTab, onChange }: ShopTabsProps) {
+    const t = useTranslations('Gamification')
     return (
         <div
             role="tablist"
-            aria-label="Cửa hàng và Kho đồ"
+            aria-label={t('shopTabsAriaLabel')}
             data-role="shop-tablist"
             className="mt-4 inline-flex gap-1 rounded-2xl bg-white p-1 shadow-sm ring-1 ring-[var(--fuxie-blue-200)]"
         >

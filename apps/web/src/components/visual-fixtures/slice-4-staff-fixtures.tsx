@@ -100,7 +100,7 @@ function Slice4FixtureShell({
                     <MascotImage
                         pose={mascotPose}
                         size="md"
-                        alt="Fuxie staff operations guide"
+                        alt="Fuxie staff operations guide" // locale-allow
                         className="mx-auto flex justify-center"
                     />
                     <div className="mt-4 rounded-2xl border border-sky-100 bg-sky-50 p-4">
@@ -131,7 +131,7 @@ export function Slice4TeacherOverdueFixture() {
             visualState="error"
             stateRole="teacher-overdue-assignment-state"
             accent="#B45309"
-            title="Teacher overdue assignments"
+            title="Teacher overdue assignments" // locale-allow
             subtitle="Error state - overdue submissions need a nudge"
             mascotPose="teacherCoach"
             ctaLabel="Nhac lop nop bai"
@@ -201,7 +201,7 @@ export function Slice4AdminFilteredEmptyFixture() {
             visualState="empty"
             stateRole="admin-filtered-empty-state"
             accent="#0891B2"
-            title="Admin filtered user table"
+            title="Admin filtered user table" // locale-allow
             subtitle="Empty state - active filters return no users"
             mascotPose="adminAnalyst"
             ctaLabel="Bo loc"

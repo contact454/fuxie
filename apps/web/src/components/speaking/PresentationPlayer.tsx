@@ -1,6 +1,7 @@
 'use client'
 
 import React, { useState } from 'react'
+import { useTranslations } from 'next-intl'
 import { ArrowRight, ArrowLeft } from 'lucide-react'
 import AudioRecorder from './AudioRecorder'
 import styles from './speaking.module.css'
@@ -16,6 +17,7 @@ interface Props {
 }
 
 export default function PresentationPlayer({ lessonId, lessonTitle, scenario, cefrLevel, onComplete, onClose }: Props) {
+  const t = useTranslations('Speaking')
   const [transcript, setTranscript] = useState<string>('')
   const [error, setError] = useState<string>('')
   const [isGrading, setIsGrading] = useState(false)
@@ -59,14 +61,14 @@ export default function PresentationPlayer({ lessonId, lessonTitle, scenario, ce
           <div className={styles.progressBarTrack}>
             <div className={styles.progressBarFill} style={{ width: result ? '100%' : '50%' }} />
           </div>
-          <span className={styles.progressBarStep}>Trình bày</span>
+          <span className={styles.progressBarStep}>{t('presentationStep')}</span>
         </div>
       </div>
 
       <div style={{ padding: '24px 20px' }}>
         <h2 style={{ fontSize: 20, fontWeight: 800, marginBottom: 12 }}>{lessonTitle}</h2>
         <div className={styles.pronunciationTip} style={{ marginBottom: 24, fontSize: 16 }}>
-          {scenario || 'Hãy trình bày quan điểm của bạn về chủ đề này.'}
+          {scenario || t('presentationDefaultScenario')}
         </div>
 
         {!result ? (
@@ -75,7 +77,7 @@ export default function PresentationPlayer({ lessonId, lessonTitle, scenario, ce
               onTranscript={handleTranscript}
               onError={setError}
               language="de"
-              buttonText="Bắt đầu ghi âm"
+              buttonText={t('startRecordingBtn')}
             />
 
             {error && (
@@ -88,16 +90,16 @@ export default function PresentationPlayer({ lessonId, lessonTitle, scenario, ce
               <div style={{ marginTop: 24, textAlign: 'center' }}>
                 <GameplayFeedbackMoment
                   tone="focus"
-                  title="Đang chấm điểm"
-                  message="Fuxie đang phân tích bài nói của bạn..."
-                  meta="Vui lòng chờ giây lát"
+                  title={t('gradingTitle')}
+                  message={t('gradingMessage')}
+                  meta={t('gradingMeta')}
                 />
               </div>
             )}
             
             {transcript && !isGrading && (
               <div style={{ marginTop: 24, padding: 16, background: '#F3F4F6', borderRadius: 12 }}>
-                <h4 style={{ fontWeight: 700, marginBottom: 8 }}>Văn bản nhận diện (Transcript):</h4>
+                <h4 style={{ fontWeight: 700, marginBottom: 8 }}>{t('transcriptHeader')}</h4>
                 <p style={{ color: '#4B5563' }}>{transcript}</p>
               </div>
             )}
@@ -109,19 +111,19 @@ export default function PresentationPlayer({ lessonId, lessonTitle, scenario, ce
                 {result.percentScore}%
               </div>
               <div style={{ fontSize: 16, color: '#6B7280' }}>
-                Điểm số ({result.totalScore}/{result.maxScore})
+                {t('scoreLabel', { score: result.totalScore, max: result.maxScore })}
               </div>
             </div>
 
             <GameplayFeedbackMoment
               tone={result.percentScore >= 60 ? 'success' : 'retry'}
-              title={result.percentScore >= 60 ? 'Tuyệt vời!' : 'Cần cố gắng hơn'}
+              title={result.percentScore >= 60 ? t('excellent') : t('tryHarder')}
               message={result.overallFeedbackNative || result.overallFeedback}
-              meta={`Cấp độ đánh giá: ${result.estimatedLevel}`}
+              meta={`${t('evaluationLevel')}: ${result.estimatedLevel}`}
               className="mb-6"
             />
 
-            <h3 style={{ fontWeight: 800, marginBottom: 12 }}>Chi tiết tiêu chí</h3>
+            <h3 style={{ fontWeight: 800, marginBottom: 12 }}>{t('criteriaDetail')}</h3>
             <div style={{ display: 'flex', flexDirection: 'column', gap: 12, marginBottom: 24 }}>
               {result.criteria.map((c: any) => (
                 <div key={c.id} style={{ padding: 16, border: '1px solid #E5E7EB', borderRadius: 12 }}>
@@ -139,7 +141,7 @@ export default function PresentationPlayer({ lessonId, lessonTitle, scenario, ce
               style={{ width: '100%' }}
               onClick={() => onComplete(result.percentScore)}
             >
-              Hoàn thành <ArrowRight size={16} />
+              {t('completeBtn')} <ArrowRight size={16} />
             </button>
           </div>
         )}

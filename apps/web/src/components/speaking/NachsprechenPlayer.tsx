@@ -1,4 +1,5 @@
 import { useState, useRef, useCallback, useEffect } from 'react'
+import { useTranslations } from 'next-intl'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Mic, Square, Loader2, Check, AlertCircle, X, HelpCircle, Volume2, ArrowRight, RotateCcw } from 'lucide-react'
 import {
@@ -30,6 +31,7 @@ interface Props {
 }
 
 export default function NachsprechenPlayer({ sentences, config, lessonTitle, lessonId, cefrLevel, topicSlug, questEpisode, onComplete, onClose }: Props) {
+  const t = useTranslations('Speaking')
   const [currentIdx, setCurrentIdx] = useState(0)
   const [state, setState] = useState<RecordingState>('idle')
   const [result, setResult] = useState<EvaluationResult | null>(null)
@@ -469,7 +471,7 @@ export default function NachsprechenPlayer({ sentences, config, lessonTitle, les
           checkpoints={questEpisode.checkpoints}
           activeId={activeQuestCheckpoint.id}
           completedIds={completedQuestCheckpointIds}
-          label="Speaking challenge"
+          label={t('challenge')}
           compact
           className="mt-3"
         />
@@ -477,8 +479,8 @@ export default function NachsprechenPlayer({ sentences, config, lessonTitle, les
 
       {/* Exercise Label */}
       <div style={{ padding: '8px 0 0' }}>
-        <div className={styles.exerciseLabel}>THỬ THÁCH</div>
-        <div className={styles.exerciseInstruction}>Nghe và lặp lại câu sau</div>
+        <div className={styles.exerciseLabel}>{t('challenge')}</div>
+        <div className={styles.exerciseInstruction}>{t('listenAndRepeat')}</div>
       </div>
 
       {/* Sentence Card */}
@@ -529,7 +531,7 @@ export default function NachsprechenPlayer({ sentences, config, lessonTitle, les
                 animate={{ opacity: [0.5, 1, 0.5] }}
                 transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
               >
-                AI đang phân tích giọng đọc của bạn...
+                {t('analyzingDetail')}
               </motion.span>
             </motion.div>
           ) : (
@@ -540,7 +542,7 @@ export default function NachsprechenPlayer({ sentences, config, lessonTitle, les
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
             >
-              <Mic size={18} style={{ marginRight: 8 }} /> Nhấn nút mic để bắt đầu
+              <Mic size={18} style={{ marginRight: 8 }} /> {t('pressMicToStart')}
             </motion.span>
           )}
         </AnimatePresence>
@@ -564,7 +566,7 @@ export default function NachsprechenPlayer({ sentences, config, lessonTitle, les
             <button className={`${styles.recordBtn} ${styles.recordBtnDisabled}`} disabled>
               <Loader2 className={styles.spinnerIcon} size={28} />
             </button>
-            <span className={styles.recordHint}>Đang phân tích...</span>
+            <span className={styles.recordHint}>{t('analyzing')}</span>
           </>
         ) : state !== 'result' ? (
           <>
@@ -605,7 +607,7 @@ export default function NachsprechenPlayer({ sentences, config, lessonTitle, les
             >
               <Mic size={28} />
             </motion.button>
-            <span className={styles.recordHint}>Nhấn để thu âm</span>
+            <span className={styles.recordHint}>{t('clickToRecordShort')}</span>
           </>
         ) : null}
       </div>
@@ -622,7 +624,7 @@ export default function NachsprechenPlayer({ sentences, config, lessonTitle, les
             <div className={styles.mascotAndScore}>
               <FuxieRoleMascot
                 src={result.accuracy >= 90 ? FUXIE_3D_ASSETS.celebration : FUXIE_3D_ASSETS.speakingCoach}
-                alt="Fuxie speaking coach"
+                alt={t('altSpeakingCoach')}
                 size={56}
                 motion={result.accuracy >= 70 ? 'reward' : 'speak'}
               />
@@ -669,7 +671,7 @@ export default function NachsprechenPlayer({ sentences, config, lessonTitle, les
                 type="button"
                 className={`${styles.wordChip} ${getChipStyle(w.status)}`}
                 style={{ animationDelay: `${i * 0.05}s` }}
-                title={w.tip || 'Nhấn để nghe phát âm'}
+                title={w.tip || t('clickToHearPronunciation')}
                 onClick={() => playWithBrowserTTSLocal(w.word)}
               >
                 {w.word}
@@ -695,7 +697,7 @@ export default function NachsprechenPlayer({ sentences, config, lessonTitle, les
           <div className={styles.btnRow}>
             {attempts < config.attemptsAllowed && result && result.accuracy < config.minAccuracyToPass && (
               <button className={styles.btnOutline} onClick={handleRetry}>
-                <RotateCcw size={16} /> Thử lại
+                <RotateCcw size={16} /> {t('retryBtn')}
               </button>
             )}
             <button
@@ -703,9 +705,9 @@ export default function NachsprechenPlayer({ sentences, config, lessonTitle, les
               onClick={handleNext}
             >
               {currentIdx < sentences.length - 1 ? (
-                <>Tiếp theo <ArrowRight size={16} /></>
+                <>{t('nextBtn')} <ArrowRight size={16} /></>
               ) : (
-                <>Hoàn thành <Check size={16} /></>
+                <>{t('completeBtn')} <Check size={16} /></>
               )}
             </button>
           </div>

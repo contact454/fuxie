@@ -3,6 +3,7 @@
 import { useState, useRef, useEffect, useCallback, type FormEvent } from 'react'
 import Image from 'next/image'
 import dynamic from 'next/dynamic'
+import { useTranslations } from 'next-intl'
 import { getCefrTheme, CEFR_LEVELS } from '@/lib/constants/cefr'
 import type { CefrLevel } from '@/lib/constants/cefr'
 import { SCENARIO_OPTIONS } from '@/lib/content/scenario-options'
@@ -77,6 +78,7 @@ function renderMarkdown(text: string): string {
 }
 
 export function ChatClient({ initialLevel, displayName }: ChatClientProps) {
+    const t = useTranslations('Chat')
     const [level, setLevel] = useState<CefrLevel>(initialLevel ?? 'A1')
     const [messages, setMessages] = useState<Message[]>([])
     const [input, setInput] = useState('')
@@ -321,7 +323,7 @@ export function ChatClient({ initialLevel, displayName }: ChatClientProps) {
 
                 {/* Scenario Selection */}
                 <div className="w-full max-w-md mb-6">
-                    <p className="text-sm font-semibold text-gray-700 mb-3">🎬 Chọn ngữ cảnh (Roleplay):</p>
+                    <p className="text-sm font-semibold text-gray-700 mb-3">{t('client.selectRoleplay')}</p>
                     <div className="flex gap-3 overflow-x-auto pb-2 snap-x hide-scrollbar">
                         {SCENARIO_OPTIONS.filter(s => s.targetLevels.includes(level)).map(scenario => (
                             <button
@@ -431,12 +433,12 @@ export function ChatClient({ initialLevel, displayName }: ChatClientProps) {
                         onClick={() => setShowHistory(true)}
                         className="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center
                             backdrop-blur-sm hover:bg-white/30 transition-colors"
-                        title="Lịch sử"
+                        title={t('client.historyTooltip')}
                     >
                         📜
                     </button>
                     <div>
-                        <h2 className="font-bold text-sm">Fuxie Tutor 🦊</h2>
+                        <h2 className="font-bold text-sm">{t('client.tutorTitle')}</h2>
                         <p className="text-xs opacity-80">
                             {isLoading ? 'Schreibt...' : 'Online • ' + LEVEL_DESC[level]}
                         </p>
@@ -452,7 +454,7 @@ export function ChatClient({ initialLevel, displayName }: ChatClientProps) {
                     <button
                         onClick={() => startConversation(level)}
                         className="px-3 py-1.5 rounded-full bg-white/20 hover:bg-white/30 text-xs transition-colors backdrop-blur-sm"
-                        title="Cuộc trò chuyện mới"
+                        title={t('client.newChatTooltip')}
                     >
                         🔄
                     </button>
@@ -529,7 +531,7 @@ export function ChatClient({ initialLevel, displayName }: ChatClientProps) {
                 {/* Suggested topics at start (when only greeting exists) */}
                 {messages.length === 1 && suggestedTopics.length > 0 && (
                     <div className="mt-4">
-                        <p className="text-xs text-gray-400 text-center mb-2">💡 Gợi ý chủ đề</p>
+                        <p className="text-xs text-gray-400 text-center mb-2">{t('client.suggestedTopics')}</p>
                         <SuggestedTopics
                             topics={suggestedTopics}
                             onSelect={handleTopicSelect}
@@ -550,7 +552,7 @@ export function ChatClient({ initialLevel, displayName }: ChatClientProps) {
                             value={input}
                             onChange={(e) => setInput(e.target.value)}
                             onKeyDown={handleKeyDown}
-                            placeholder="Schreib etwas auf Deutsch..."
+                            placeholder={t('client.placeholder')}
                             rows={1}
                             className="w-full rounded-2xl bg-white ring-1 ring-gray-200 focus:ring-2 focus:ring-[#60A8E4]/40
                                 px-4 py-3 pr-12 text-sm resize-none outline-none transition-all

@@ -35,7 +35,7 @@ describe('VocabularyPracticeHero — default state (Requirement 5.3)', () => {
         return renderToStaticMarkup(
             <VocabularyPracticeHero
                 eyebrow="Luyện từ vựng • A1"
-                title="Bắt đầu một ván luyện ngắn"
+                title="Bắt đầu một ván luyện ngắn" // locale-allow
                 message="Fuxie sẽ đi cùng em qua từng chủ đề."
                 ctaLabel="Bắt đầu"
                 ctaHref="/vocabulary/practice/mixed?theme=a1-person&level=A1"
@@ -73,7 +73,7 @@ describe('VocabularyMicrogamesHero — preview reward (Requirement 5.4)', () => 
         return renderToStaticMarkup(
             <VocabularyMicrogamesHero
                 eyebrow="Trò chơi từ vựng • A1"
-                title="Một ván ngắn, một phần thưởng nhỏ"
+                title="Một ván ngắn, một phần thưởng nhỏ" // locale-allow
                 message="Hoàn thành ván để Fuxie ghi điểm."
                 ctaLabel="Bắt đầu"
                 ctaHref="/vocabulary/practice/speed?theme=a1-person&level=A1"
@@ -132,7 +132,7 @@ describe('Vocabulary empty state — 0 cards (Requirement 5.5)', () => {
             <StateShell
                 surfaceId="vocabulary"
                 state="empty"
-                title="Bộ sưu tập của bạn còn trống"
+                title="Bộ sưu tập của bạn còn trống" // locale-allow
                 message="Hãy bắt đầu với bài học đầu tiên để mở khóa thẻ từ vựng đầu tiên cho Fuxie."
                 primaryCta={{
                     label: 'Học từ đầu tiên',

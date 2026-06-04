@@ -1,5 +1,7 @@
 import { describe, expect, it, beforeEach, afterEach, vi } from 'vitest'
 import { renderToStaticMarkup } from 'react-dom/server'
+import { NextIntlClientProvider } from 'next-intl'
+import viMessages from '../../../messages/vi.json'
 
 import { ExamResultRewardLoop } from './ExamResultRewardLoop'
 import {
@@ -64,9 +66,17 @@ const mockResult = {
     },
 }
 
+function renderWithIntl(ui: React.ReactElement): string {
+    return renderToStaticMarkup(
+        <NextIntlClientProvider locale="vi" messages={viMessages}>
+            {ui}
+        </NextIntlClientProvider>,
+    )
+}
+
 describe('ExamResultRewardLoop — mount contract (Req 10.5)', () => {
     it('mounts the FSM-driven ResultRewardLoop on submit confirm — first paint shows the saving shell, not a redirect', () => {
-        const html = renderToStaticMarkup(
+        const html = renderWithIntl(
             <ExamResultRewardLoop
                 examId="exam-1"
                 attemptId="attempt-1"
@@ -92,7 +102,7 @@ describe('ExamResultRewardLoop — mount contract (Req 10.5)', () => {
     })
 
     it('does NOT render the legacy redirect placeholder', () => {
-        const html = renderToStaticMarkup(
+        const html = renderWithIntl(
             <ExamResultRewardLoop
                 examId="exam-1"
                 attemptId="attempt-1"
@@ -116,7 +126,7 @@ describe('ExamResultRewardLoop — mount contract (Req 10.5)', () => {
 
     it('passes the supplied onContinue handler down without firing it during render', () => {
         let continueCalled = 0
-        renderToStaticMarkup(
+        renderWithIntl(
             <ExamResultRewardLoop
                 examId="exam-1"
                 attemptId="attempt-1"

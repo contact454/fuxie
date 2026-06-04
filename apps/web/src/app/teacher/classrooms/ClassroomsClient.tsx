@@ -58,7 +58,7 @@ export default function ClassroomsClient({ initialClassrooms }: Props) {
     <div>
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '24px' }}>
         <div>
-          <h1 style={{ fontSize: '1.5rem', fontWeight: 800, color: 'var(--color-text-inverse)', margin: '0 0 4px' }}>Lớp học</h1>
+          <h1 style={{ fontSize: '1.5rem', fontWeight: 800, color: 'var(--color-text-inverse)', margin: '0 0 4px' }}>{"Lớp học" /* // locale-allow */}</h1>
           <p style={{ color: "var(--color-text-subtle)", margin: 0, fontSize: '0.9rem' }}>{classrooms.length} lớp đang hoạt động</p>
         </div>
         <button
@@ -88,11 +88,11 @@ export default function ClassroomsClient({ initialClassrooms }: Props) {
             </h2>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
               <div>
-                <label style={{ color: "var(--color-text-subtle)", fontSize: '0.85rem', display: 'block', marginBottom: '6px' }}>Tên lớp *</label>
+                <label style={{ color: "var(--color-text-subtle)", fontSize: '0.85rem', display: 'block', marginBottom: '6px' }}>{"Tên lớp *" /* // locale-allow */}</label>
                 <input
                   value={form.name}
                   onChange={e => setForm(f => ({ ...f, name: e.target.value }))}
-                  placeholder="VD: Lớp A1 sáng thứ 2"
+                  placeholder={"VD: Lớp A1 sáng thứ 2" /* // locale-allow */}
                   style={{
                     width: '100%', padding: '10px 14px', borderRadius: '10px',
                     background: '#0f172a', border: '1px solid #334155', color: 'var(--color-text-inverse)',
@@ -101,11 +101,11 @@ export default function ClassroomsClient({ initialClassrooms }: Props) {
                 />
               </div>
               <div>
-                <label style={{ color: "var(--color-text-subtle)", fontSize: '0.85rem', display: 'block', marginBottom: '6px' }}>Mô tả</label>
+                <label style={{ color: "var(--color-text-subtle)", fontSize: '0.85rem', display: 'block', marginBottom: '6px' }}>{"Mô tả" /* // locale-allow */}</label>
                 <textarea
                   value={form.description}
                   onChange={e => setForm(f => ({ ...f, description: e.target.value }))}
-                  placeholder="Mô tả ngắn về lớp học..."
+                  placeholder={"Mô tả ngắn về lớp học..." /* // locale-allow */}
                   rows={2}
                   style={{
                     width: '100%', padding: '10px 14px', borderRadius: '10px',
@@ -115,7 +115,7 @@ export default function ClassroomsClient({ initialClassrooms }: Props) {
                 />
               </div>
               <div>
-                <label style={{ color: "var(--color-text-subtle)", fontSize: '0.85rem', display: 'block', marginBottom: '6px' }}>Trình độ CEFR</label>
+                <label style={{ color: "var(--color-text-subtle)", fontSize: '0.85rem', display: 'block', marginBottom: '6px' }}>{"Trình độ CEFR" /* // locale-allow */}</label>
                 <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
                   {CEFR_LEVELS.map(lv => (
                     <button key={lv} onClick={() => setForm(f => ({ ...f, cefrLevel: lv }))}
@@ -134,7 +134,7 @@ export default function ClassroomsClient({ initialClassrooms }: Props) {
                 <button onClick={() => setShowCreate(false)} style={{
                   padding: '10px 20px', borderRadius: '10px', background: '#334155',
                   color: "var(--color-text-subtle)", border: 'none', cursor: 'pointer', fontWeight: 500,
-                }}>Hủy</button>
+                }}>{"Hủy" /* // locale-allow */}</button>
                 <button onClick={handleCreate} disabled={creating} style={{
                   padding: '10px 20px', borderRadius: '10px', background: '#3b82f6',
                   color: 'white', border: 'none', cursor: 'pointer', fontWeight: 600,
@@ -159,7 +159,7 @@ export default function ClassroomsClient({ initialClassrooms }: Props) {
           <button onClick={() => setShowCreate(true)} style={{
             background: '#3b82f6', color: 'white', border: 'none',
             padding: '12px 24px', borderRadius: '12px', fontWeight: 600, fontSize: '1rem', cursor: 'pointer',
-          }}>+ Tạo lớp học mới</button>
+          }}>{"+ Tạo lớp học mới" /* // locale-allow */}</button>
         </div>
       ) : (
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(320px, 1fr))', gap: '16px' }}>
@@ -188,7 +188,7 @@ export default function ClassroomsClient({ initialClassrooms }: Props) {
                 display: 'flex', alignItems: 'center', gap: '8px',
                 background: '#0f172a', borderRadius: '8px', padding: '8px 12px',
               }}>
-                <span style={{ fontSize: '0.8rem', color: "var(--color-text-muted)" }}>Mã lớp:</span>
+                <span style={{ fontSize: '0.8rem', color: "var(--color-text-muted)" }}>{"Mã lớp:" /* // locale-allow */}</span>
                 <span style={{ fontWeight: 700, color: 'var(--color-fuxie-energy)', fontSize: '0.95rem', fontFamily: 'monospace', flex: 1 }}>{c.joinCode}</span>
                 <button
                   onClick={(e) => { e.preventDefault(); e.stopPropagation(); copyCode(c.joinCode) }}

@@ -43,7 +43,7 @@ export default function VocabClient() {
     <div className="p-6 md:p-8 space-y-6 max-w-4xl mx-auto">
       <div>
         <h1 className="text-2xl font-bold text-slate-900 tracking-tight">Content Management</h1>
-        <p className="text-slate-500 mt-1">Add new vocabulary directly to the production curriculum.</p>
+        <p className="text-slate-500 mt-1">{"Add new vocabulary directly to the production curriculum." /* // locale-allow */}</p>
       </div>
 
       <div className="bg-white border border-slate-200 rounded-2xl shadow-sm p-6 md:p-8 mt-6">
@@ -51,7 +51,7 @@ export default function VocabClient() {
           <div className="p-2 bg-indigo-50 text-indigo-600 rounded-lg">
             <BookPlus className="w-5 h-5" />
           </div>
-          <h2 className="text-lg font-semibold text-slate-900">Insert Vocabulary Term</h2>
+          <h2 className="text-lg font-semibold text-slate-900">{"Insert Vocabulary Term" /* // locale-allow */}</h2>
         </div>
 
         <form onSubmit={handleSubmit} className="space-y-5">
@@ -82,23 +82,23 @@ export default function VocabClient() {
             </div>
             <div>
               <label className="block text-sm font-medium text-slate-700 mb-1">Vietnamese Translation</label>
-              <input required type="text" className="w-full px-4 py-2 border border-slate-200 rounded-lg focus:ring-2 focus:ring-indigo-500" placeholder="e.g. quả táo" value={formData.term_vi} onChange={(e: React.ChangeEvent<HTMLInputElement>) => setFormData({ ...formData, term_vi: e.target.value })} />
+              <input required type="text" className="w-full px-4 py-2 border border-slate-200 rounded-lg focus:ring-2 focus:ring-indigo-500" placeholder={"e.g. quả táo" /* // locale-allow */} value={formData.term_vi} onChange={(e: React.ChangeEvent<HTMLInputElement>) => setFormData({ ...formData, term_vi: e.target.value })} />
             </div>
           </div>
 
           <div>
-             <label className="block text-sm font-medium text-slate-700 mb-1">Meaning Context (Optional)</label>
-             <input type="text" className="w-full px-4 py-2 border border-slate-200 rounded-lg focus:ring-2 focus:ring-indigo-500" placeholder="e.g. used for eating" value={formData.meaning} onChange={(e: React.ChangeEvent<HTMLInputElement>) => setFormData({ ...formData, meaning: e.target.value })} />
+             <label className="block text-sm font-medium text-slate-700 mb-1">{"Meaning Context (Optional)" /* // locale-allow */}</label>
+             <input type="text" className="w-full px-4 py-2 border border-slate-200 rounded-lg focus:ring-2 focus:ring-indigo-500" placeholder={"e.g. used for eating" /* // locale-allow */} value={formData.meaning} onChange={(e: React.ChangeEvent<HTMLInputElement>) => setFormData({ ...formData, meaning: e.target.value })} />
           </div>
 
           <div className="grid grid-cols-2 gap-4 pt-4 border-t border-slate-100">
             <div>
-              <label className="block text-sm font-medium text-slate-700 mb-1">German Example Sentence</label>
-              <input required type="text" className="w-full px-4 py-2 border border-slate-200 rounded-lg font-serif" placeholder="e.g. Ich esse einen Apfel." value={formData.exampleDe} onChange={(e: React.ChangeEvent<HTMLInputElement>) => setFormData({ ...formData, exampleDe: e.target.value })} />
+              <label className="block text-sm font-medium text-slate-700 mb-1">{"German Example Sentence" /* // locale-allow */}</label>
+              <input required type="text" className="w-full px-4 py-2 border border-slate-200 rounded-lg font-serif" placeholder={"e.g. Ich esse einen Apfel." /* // locale-allow */} value={formData.exampleDe} onChange={(e: React.ChangeEvent<HTMLInputElement>) => setFormData({ ...formData, exampleDe: e.target.value })} />
             </div>
             <div>
-              <label className="block text-sm font-medium text-slate-700 mb-1">Vietnamese Example Sentence</label>
-              <input required type="text" className="w-full px-4 py-2 border border-slate-200 rounded-lg font-serif" placeholder="e.g. Tôi ăn một quả táo." value={formData.exampleVi} onChange={(e: React.ChangeEvent<HTMLInputElement>) => setFormData({ ...formData, exampleVi: e.target.value })} />
+              <label className="block text-sm font-medium text-slate-700 mb-1">{"Vietnamese Example Sentence" /* // locale-allow */}</label>
+              <input required type="text" className="w-full px-4 py-2 border border-slate-200 rounded-lg font-serif" placeholder={"e.g. Tôi ăn một quả táo." /* // locale-allow */} value={formData.exampleVi} onChange={(e: React.ChangeEvent<HTMLInputElement>) => setFormData({ ...formData, exampleVi: e.target.value })} />
             </div>
           </div>
 

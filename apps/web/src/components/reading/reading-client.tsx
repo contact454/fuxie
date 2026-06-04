@@ -95,6 +95,7 @@ function getReadingWordCount(meta: any): number | null {
 
 export function ReadingClient({ teile, totalExercises, totalCompleted, availableLevels, initialLevel }: ReadingClientProps) {
     const t = useTranslations('Gamification')
+    const tUI = useTranslations('UI')
     const router = useRouter()
     const [currentTeile, setCurrentTeile] = useState(teile)
     const [currentTotal, setCurrentTotal] = useState(totalExercises)
@@ -183,7 +184,7 @@ export function ReadingClient({ teile, totalExercises, totalCompleted, available
                         </div>
                     )}
                     <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
-                        <FuxieRoleMascot src={FUXIE_3D_ASSETS.librarian} alt="Fuxie reading coach" size={64} motion="coach" />
+                        <FuxieRoleMascot src={FUXIE_3D_ASSETS.librarian} alt={tUI('altReadingCoach')} size={64} motion="coach" />
                         <div className="flex-1">
                             <div className="mb-2 flex flex-wrap items-center gap-2">
                                 <FuxieBadge tone="brand">Reading quest</FuxieBadge>

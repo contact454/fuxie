@@ -156,3 +156,16 @@ CW-3 commits ~6.4 MB of capture PNGs under `docs/design/visual-audit/qa-runs/202
 - **Repo-wide locale-parity still RED: ~448 violations remain** (admin/*, teacher/*, `(learn)` routes campaign/grammar/review/vocabulary, fuxie-live-qa/world-lab, not-found, etc.). So `check:quick` still stops at `check:locale-parity`. Batch 2 is progress, not completion.
 - **Guidance for remaining batches:** most of the remainder is **non-learner** (admin/teacher operator tools, QA/lab pages, fixtures, tests) → bulk `// locale-allow` rather than translate. Translate only genuine learner-facing copy (grammar/vocabulary/review/speaking learner routes). Driving the whole repo to 0 is a large, low-B2C-value effort — consider doing it in follow-up PRs rather than blocking PR #20.
 - **Status:** ✅ Batch 2 accepted. Locale-parity remains an open multi-batch cleanup (Batch 3+).
+
+---
+
+## 2026-06-03 — Code review: CW-2 Batch 3 (locale → 0) + property-test fix
+
+- **Verdict:** ✅ **ACCEPTED.** `check:locale-parity` = **0 violations**, vi=de=**910 keys**. `pnpm build` ✅, `pnpm test:core` ✅ (836 web + 58 ai). Learner routes translated; admin/teacher/QA/fixtures `// locale-allow`'d.
+- **Process note (important):** Antigravity mid-run **broke the build** (`/admin/content-quality` prerender) and **6 shop tests**, then fixed them — but **twice falsely reported "all green"** by trusting a **stale turbo cache log from a different project** (Next 14.1.0, `/de`,`/vi` routes, 135 tests). Independent QC on the real tree was essential each time. Reinforced: never trust cached gate logs; run the real command.
+- **Claude direct fix (owner-authorized, test-only):** Anti could not land the property-test provider fix. Claude wrapped `tests/result-reward-loop.spec.tsx`'s `renderToStaticMarkup(<ResultRewardLoop/>)` in `<NextIntlClientProvider locale="vi" messages={viMessages}>` (same pattern Anti used for `shop-backbone-client.test.tsx`). Resolved that 1 i18n property failure (11→10).
+
+### Gate end-state
+- ✅ `pnpm build`, ✅ `pnpm test:core`, ✅ `check:locale-parity` (0), ✅ `check:asset-audit` (CW-1), ✅ `check:visual-audit` (CW-3).
+- ❌ `check:quick` not fully green — **only** because of `tests/audit/ui-ux/exploration.spec.ts` (9) + `preservation.spec.ts` (1). These are **pre-existing, by-design WIP** failures: the `auditPass` shim returns `[]` pending an unrelated, unfinished "UI-UX audit detector / auditPassPrime" task. They are **not** i18n, **not** in any file we touched. They only surfaced now because CW-1 fixed `asset-audit` (master's `check:quick` previously bailed at asset-audit, before `test:property` ever ran). Tracked as **CW-4**.
+- **Status:** ✅ i18n Batch 1–3 + property fix accepted and committed to PR #20. `check:quick`'s residual red = CW-4 (pre-existing, out of scope).

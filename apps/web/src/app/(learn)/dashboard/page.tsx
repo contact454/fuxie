@@ -444,6 +444,7 @@ async function DashboardBackboneHeroSection({ userId }: { userId: string }) {
                     ctaLabel={t('ctaCreatePath')}
                     ctaHref="/onboarding"
                     progressPercent={0}
+                    todayLabel={t('today')}
                 />
             </div>
         )
@@ -473,6 +474,7 @@ async function DashboardBackboneHeroSection({ userId }: { userId: string }) {
                 ctaLabel={t('ctaContinueLearning')}
                 ctaHref="/course"
                 progressPercent={progressPercent}
+                todayLabel={t('today')}
             />
         </div>
     )

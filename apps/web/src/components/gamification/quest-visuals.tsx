@@ -1,6 +1,7 @@
 'use client'
 
 import Image from 'next/image'
+import { useTranslations } from 'next-intl'
 import type { ComponentType, ReactNode } from 'react'
 import {
     Award,
@@ -556,7 +557,7 @@ export function GameplayFeedbackMoment({
         <div className={`rounded-2xl bg-gradient-to-br ${toneClass} p-3 shadow-sm ring-1 ${className}`} role="status" aria-live="polite">
             <div className="flex items-start gap-3">
                 <span className="grid h-9 w-9 shrink-0 place-items-center rounded-xl bg-white/85">
-                    {tone === 'success' ? <CheckCircle2 className="h-5 w-5" /> : tone === 'retry' ? <RotateCcw className="h-5 w-5" /> : <Lightbulb className="h-5 w-5" />}
+                    {tone === 'success' ? <CheckCircle2 className="h-5 w-5" /> : tone === 'retry' ? <RotateCcw className="h-5 w-5" /> : <Lightbulb className="h-5 w-5" />} // locale-allow
                 </span>
                 <div className="min-w-0">
                     <p className="text-sm font-black text-text-primary">{title}</p>
@@ -626,6 +627,7 @@ export function QuestProgressHero({
     mascotSrc,
     className = '',
 }: QuestProgressHeroProps) {
+    const t = useTranslations('Gamification')
     const config = QUEST_HERO_CONFIG[variant]
     const Icon = config.icon
 
@@ -688,9 +690,9 @@ export function QuestProgressHero({
                         </div>
                         <div className="min-w-0">
                             <p className="text-xs font-black uppercase text-text-brand/70">Reward preview</p>
-                            <h2 className="mt-1 text-lg font-black text-text-primary">Hoàn thành để nhận thưởng</h2>
+                            <h2 className="mt-1 text-lg font-black text-text-primary">{t('rewardPreviewTitle')}</h2>
                             <p className="mt-1 text-xs font-semibold leading-relaxed text-text-brand/75">
-                                Em cứ hoàn thành quest, Fuxie sẽ lo việc cộng thưởng.
+                                {t('rewardPreviewDesc')}
                             </p>
                         </div>
                     </div>

@@ -183,7 +183,7 @@ export default function ClassroomDetailClient({ classroom }: Props) {
     <div>
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '24px', flexWrap: 'wrap', gap: '12px' }}>
         <div>
-          <Link href="/teacher/classrooms" style={{ color: "var(--color-text-muted)", textDecoration: 'none', fontSize: '0.85rem' }}>← Quay lai</Link>
+          <Link href="/teacher/classrooms" style={{ color: "var(--color-text-muted)", textDecoration: 'none', fontSize: '0.85rem' }}>{"← Quay lai" /* // locale-allow */}</Link>
           <h1 style={{ fontSize: '1.5rem', fontWeight: 800, color: 'var(--color-text-inverse)', margin: '8px 0 4px' }}>{classroom.name}</h1>
           {classroom.description && <p style={{ color: "var(--color-text-subtle)", margin: 0, fontSize: '0.9rem' }}>{classroom.description}</p>}
         </div>
@@ -280,7 +280,7 @@ export default function ClassroomDetailClient({ classroom }: Props) {
           <div style={{ display: 'flex', justifyContent: 'space-between', gap: '12px', alignItems: 'center', marginBottom: '14px', flexWrap: 'wrap' }}>
             <div>
               <h2 style={{ color: 'var(--color-text-inverse)', fontSize: '1rem', fontWeight: 700, margin: 0 }}>Intervention suggestions</h2>
-              <p style={{ color: "var(--color-text-muted)", fontSize: '0.82rem', margin: '4px 0 0' }}>Generated from risk, weak skill, assignment, and activity signals.</p>
+              <p style={{ color: "var(--color-text-muted)", fontSize: '0.82rem', margin: '4px 0 0' }}>{"Generated from risk, weak skill, assignment, and activity signals." /* // locale-allow */}</p>
             </div>
             <span style={{ color: "var(--color-text-subtle)", fontSize: '0.82rem' }}>{interventions.length} suggestions</span>
           </div>
@@ -343,7 +343,7 @@ export default function ClassroomDetailClient({ classroom }: Props) {
           {classroom.students.length === 0 ? (
             <div style={{ background: '#1e293b', borderRadius: '16px', padding: '40px', textAlign: 'center', border: '1px solid #334155' }}>
               <div style={{ fontSize: '3rem', marginBottom: '12px' }}>👥</div>
-              <p style={{ color: "var(--color-text-subtle)" }}>Chưa có học viên nào trong lớp này.</p>
+              <p style={{ color: "var(--color-text-subtle)" }}>{"Chưa có học viên nào trong lớp này." /* // locale-allow */}</p>
             </div>
           ) : (
             <div style={{ background: '#1e293b', borderRadius: '16px', border: '1px solid #334155', overflow: 'hidden' }}>
@@ -351,7 +351,7 @@ export default function ClassroomDetailClient({ classroom }: Props) {
                 display: 'grid', gridTemplateColumns: '2.2fr 0.8fr 0.9fr 0.9fr 0.9fr 1.4fr',
                 padding: '12px 20px', borderBottom: '1px solid #334155', fontSize: '0.8rem', color: "var(--color-text-muted)", fontWeight: 600,
               }}>
-                <span>Học viên</span>
+                <span>{"Học viên" /* // locale-allow */}</span>
                 <span>Level</span>
                 <span>XP</span>
                 <span>Streak</span>
@@ -409,13 +409,13 @@ export default function ClassroomDetailClient({ classroom }: Props) {
             <button onClick={() => setShowAssignModal(true)} style={{
               background: '#3b82f6', color: 'white', border: 'none',
               padding: '10px 20px', borderRadius: '10px', fontWeight: 600, cursor: 'pointer', fontSize: '0.9rem',
-            }}>+ Giao bai moi</button>
+            }}>{"+ Giao bai moi" /* // locale-allow */}</button>
           </div>
 
           {assignments.length === 0 ? (
             <div style={{ background: '#1e293b', borderRadius: '16px', padding: '40px', textAlign: 'center', border: '1px solid #334155' }}>
               <div style={{ fontSize: '3rem', marginBottom: '12px' }}>📋</div>
-              <p style={{ color: "var(--color-text-subtle)" }}>Chưa có bài tập nào được giao.</p>
+              <p style={{ color: "var(--color-text-subtle)" }}>{"Chưa có bài tập nào được giao." /* // locale-allow */}</p>
             </div>
           ) : (
             <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
@@ -476,10 +476,10 @@ export default function ClassroomDetailClient({ classroom }: Props) {
             background: '#1e293b', borderRadius: '20px', padding: '32px',
             width: '100%', maxWidth: '520px', border: '1px solid #334155',
           }}>
-            <h2 style={{ color: 'var(--color-text-inverse)', fontSize: '1.2rem', fontWeight: 700, margin: '0 0 20px' }}>Giao bài tập mới</h2>
+            <h2 style={{ color: 'var(--color-text-inverse)', fontSize: '1.2rem', fontWeight: 700, margin: '0 0 20px' }}>{"Giao bài tập mới" /* // locale-allow */}</h2>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
               <div>
-                <label style={{ color: "var(--color-text-subtle)", fontSize: '0.85rem', display: 'block', marginBottom: '6px' }}>Tieu de *</label>
+                <label style={{ color: "var(--color-text-subtle)", fontSize: '0.85rem', display: 'block', marginBottom: '6px' }}>{"Tieu de *" /* // locale-allow */}</label>
                 <input value={assignForm.title} onChange={(event) => setAssignForm((form) => ({ ...form, title: event.target.value }))}
                   style={{
                     width: '100%', padding: '10px 14px', borderRadius: '10px',

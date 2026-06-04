@@ -35,13 +35,13 @@ export interface HotspotItem {
     /** Stable identifier mirrored from the source `WorldObject.id`. */
     readonly id: string
     /**
-     * Accessible name applied to the rendered `<a>` or `<button>`.
+     * Accessible name applied to the rendered `<a>` or `<button>`. // locale-allow
      * Guaranteed non-empty: see `buildHotspotItems` for the fallback chain.
      */
     readonly accessibleName: string
     /**
      * Anchor target. `undefined` (preserved from the source object) means
-     * the item renders as a `<button>` instead of an `<a>`.
+     * the item renders as a `<button>` instead of an `<a>`. // locale-allow
      */
     readonly href: string | undefined
 }
@@ -63,7 +63,7 @@ export interface HotspotItem {
  *
  * `href` is preserved exactly as it appears on the source object: present
  * (string) when the object exposes a navigation target, `undefined` when
- * it does not. This lets the renderer decide between `<a>` and `<button>`
+ * it does not. This lets the renderer decide between `<a>` and `<button>` // locale-allow
  * without re-checking the source object.
  */
 export function buildHotspotItems(
@@ -200,7 +200,7 @@ const LAB_HOTSPOT_STYLE_SHEET = `
 /**
  * Semantic DOM equivalent of the canvas hotspots. One focusable,
  * keyboard-activatable item per interactive `WorldObject` (Requirement
- * 4.1). Native `<a>` and `<button>` elements both activate on Enter and
+ * 4.1). Native `<a>` and `<button>` elements both activate on Enter and // locale-allow
  * Space without any custom key handling (Requirement 4.5).
  */
 export function HotspotList(props: HotspotListProps): ReactElement {

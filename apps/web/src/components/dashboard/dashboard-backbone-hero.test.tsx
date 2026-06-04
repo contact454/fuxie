@@ -38,6 +38,7 @@ const BASE_PROPS: DashboardHeroProps = {
     questMessage: 'Còn 2 bước nữa.',
     ctaLabel: 'Tiếp tục học',
     ctaHref: '/course',
+    todayLabel: 'Heute', // locale-allow
 }
 
 function render(overrides: Partial<DashboardHeroProps> = {}) {

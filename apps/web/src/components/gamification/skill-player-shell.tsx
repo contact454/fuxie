@@ -145,7 +145,7 @@ export interface SkillPlayerShellProps {
     loadTimeoutMs?: number
     /**
      * Optional href for the bottom Primary_CTA. When provided the CTA is
-     * rendered as a `<Link>` via `asChild`; otherwise as a `<button>`.
+     * rendered as a `<Link>` via `asChild`; otherwise as a `<button>`. // locale-allow
      */
     primaryCtaHref?: string
     /** Click handler for the bottom Primary_CTA when no href is provided. */

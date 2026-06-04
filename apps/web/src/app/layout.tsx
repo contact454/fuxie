@@ -1,7 +1,6 @@
 import type { Metadata, Viewport } from 'next'
 import './globals.css'
 import { PwaRegistration } from '@/components/shared/PwaRegistration'
-import { InstallPrompt } from '@/components/shared/InstallPrompt'
 import { cookies } from 'next/headers'
 
 export const metadata: Metadata = {
@@ -44,7 +43,6 @@ export default async function RootLayout({
             <body>
                 {children}
                 <PwaRegistration />
-                <InstallPrompt />
             </body>
         </html>
     )

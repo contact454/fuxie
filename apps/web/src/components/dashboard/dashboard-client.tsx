@@ -19,6 +19,7 @@ import {
     Timer,
 } from 'lucide-react'
 import { useState, useTransition, type ComponentType } from 'react'
+import { useTranslations } from 'next-intl'
 import { MeasuredLink } from '@/components/performance/measured-link'
 import { FUXIE_3D_ASSETS, FuxieCoach, FuxieRoleMascot, RewardPreview, RewardRevealMoment, type RewardPreviewItem } from '@/components/gamification/quest-visuals'
 import { REWARD_ASSETS, getCefrBadgeAssetSrc, getShopItemAssetSrc } from '@/components/gamification/reward-assets'
@@ -196,6 +197,7 @@ export function DashboardClient({ data, section }: { data: DashboardData; sectio
 }
 
 function HeaderSection({ data }: { data: DashboardData }) {
+    const t = useTranslations('Dashboard')
     const cefrBadgeSrc = getCefrBadgeAssetSrc(data.profile.currentLevel)
 
     return (
@@ -220,11 +222,11 @@ function HeaderSection({ data }: { data: DashboardData }) {
                             />
                             {data.profile.currentLevel}
                         </span>
-                        <span>·</span>
+                        <span>·</span> {/* locale-allow */}
                         <span className="font-medium text-gray-700">
                             Lv.{data.profile.fuxieLevel} {data.profile.fuxieTitle}
                         </span>
-                        <span>Â·</span>
+                        <span>·</span> {/* locale-allow */}
                         <span className="inline-flex items-center gap-1 rounded-full bg-[#EAFBF8] px-2.5 py-0.5 text-xs font-black text-[#148F7D] ring-1 ring-[#2EC4B6]/25">
                             <ShieldCheck className="h-3 w-3" />
                             {data.streak?.freezesAvailable ?? 0} Freeze
@@ -232,7 +234,7 @@ function HeaderSection({ data }: { data: DashboardData }) {
                         {data.profile.targetExam && (
                             <>
                                 <span>·</span>
-                                <span>Mục tiêu: {data.profile.targetExam} {data.profile.targetLevel}</span>
+                                <span>{t('targetExam', { exam: data.profile.targetExam, level: data.profile.targetLevel })}</span>
                             </>
                         )}
                     </div>
@@ -244,7 +246,7 @@ function HeaderSection({ data }: { data: DashboardData }) {
                             <p className="font-semibold text-gray-900">
                                 {data.profile.examDaysLeft} ngày
                             </p>
-                            <p className="text-xs text-gray-500">đến kỳ thi</p>
+                            <p className="text-xs text-gray-500">{t('daysToExam')}</p>
                         </div>
                     </div>
                 )}
@@ -302,6 +304,7 @@ function StatsSection({ data, studyGoalPercent }: { data: DashboardData; studyGo
 }
 
 function ContentSection({ data, cefrProgress, maxWeeklyXp, currentIdx }: { data: DashboardData; cefrProgress: number; maxWeeklyXp: number; currentIdx: number }) {
+    const t = useTranslations('Dashboard')
     return (
         <>
             {data.todayPlan && <TodayPlanSection plan={data.todayPlan} data={data} />}
@@ -340,10 +343,10 @@ function ContentSection({ data, cefrProgress, maxWeeklyXp, currentIdx }: { data:
                                         {level}
                                     </div>
                                     {isTarget && (
-                                        <span className="text-[10px] font-semibold text-fuxie-primary">🎯 Mục tiêu</span>
+                                        <span className="text-[10px] font-semibold text-fuxie-primary">{t('targetTitle')}</span>
                                     )}
                                     {isActive && !isTarget && (
-                                        <span className="text-[10px] font-semibold" style={{ color }}>Hiện tại</span>
+                                        <span className="text-[10px] font-semibold" style={{ color }}>{t('current')}</span>
                                     )}
                                 </div>
                             )
@@ -425,7 +428,7 @@ function ContentSection({ data, cefrProgress, maxWeeklyXp, currentIdx }: { data:
                     </div>
                     {/* Weekly total */}
                     <div className="mt-3 flex items-center justify-between text-xs text-gray-400 border-t border-gray-50 pt-2">
-                        <span>Tuần này</span>
+                        <span>{t('thisWeek')}</span>
                         <span className="font-semibold text-gray-600">
                             {(data.weeklyActivity ?? []).reduce((s, d) => s + d.xp, 0)} XP
                         </span>
@@ -558,8 +561,8 @@ function ContentSection({ data, cefrProgress, maxWeeklyXp, currentIdx }: { data:
                     ) : (
                         <div className="flex flex-col items-center justify-center py-8 text-center">
                             <Image src={FUXIE_3D_ASSETS.happyWave} alt="Fuxie" width={48} height={48} className="mb-2 object-contain" />
-                            <p className="text-sm text-gray-500">Chưa có thành tựu</p>
-                            <p className="text-xs text-gray-400 mt-1">Học tiếp để mở khóa thành tựu.</p>
+                            <p className="text-sm text-gray-500">{t('noAchievements')}</p>
+                            <p className="text-xs text-gray-400 mt-1">{t('noAchievementsDesc')}</p>
                         </div>
                     )}
                 </div>
@@ -569,6 +572,7 @@ function ContentSection({ data, cefrProgress, maxWeeklyXp, currentIdx }: { data:
 }
 
 function MissionControlSection({ initialMissionBoard }: { initialMissionBoard: MissionBoardData }) {
+    const t = useTranslations('Dashboard')
     const [missionBoard, setMissionBoard] = useState(initialMissionBoard)
     const [activePeriod, setActivePeriod] = useState<MissionBoardPeriod>('daily')
     const [claimingMissionId, setClaimingMissionId] = useState<string | null>(null)
@@ -653,7 +657,7 @@ function MissionControlSection({ initialMissionBoard }: { initialMissionBoard: M
 
                     <div className="mt-3 rounded-2xl bg-[#FFF7D6]/65 p-4 ring-1 ring-[#FFD166]/45">
                         <div className="mb-2 flex items-center justify-between gap-3 text-xs font-black text-[#C67A00]">
-                            <span>Fucoin hôm nay</span>
+                            <span>{t('fucoinToday')}</span>
                             <span>{missionBoard.dailyFucoin.earnedToday}/{missionBoard.dailyFucoin.dailyCap}</span>
                         </div>
                         <FuxieProgressBar
@@ -716,7 +720,7 @@ function MissionControlSection({ initialMissionBoard }: { initialMissionBoard: M
                     <FuxieCoach
                         role="reward"
                         eyebrow="Shop catalog"
-                        title="Fucoin shop v1"
+                        title="Fucoin shop v1" // locale-allow
                         mascotSrc={FUXIE_3D_ASSETS.shopkeeper}
                         message="Catalog đã có giá, quyền lợi và tiến độ tích Fucoin. Redeem thật vẫn khóa để bảo toàn economy."
                     />
@@ -774,7 +778,7 @@ function MissionControlSection({ initialMissionBoard }: { initialMissionBoard: M
 
                     <div className="mt-5 rounded-2xl bg-white/70 p-4 ring-1 ring-white">
                         <div className="mb-3 flex items-center justify-between gap-2">
-                            <h3 className="text-sm font-black text-[#173B56]">Ví gần đây</h3>
+                            <h3 className="text-sm font-black text-[#173B56]">{t('walletRecent')}</h3>
                             <span className="text-xs font-bold text-[#3C78A8]">{missionBoard.wallet.balance.toLocaleString('vi-VN')} Fu</span>
                         </div>
                         <div className="space-y-2">
@@ -821,6 +825,7 @@ function formatLedgerSource(sourceType: string) {
 }
 
 function StreakFreezeAwarenessSection({ data }: { data: DashboardData }) {
+    const t = useTranslations('Dashboard')
     const timeline = data.streakFreezeTimeline ?? []
     const latestUsage = timeline[0]
     const freezesAvailable = data.streak?.freezesAvailable ?? 0
@@ -847,7 +852,7 @@ function StreakFreezeAwarenessSection({ data }: { data: DashboardData }) {
                             <ShieldCheck className="h-3.5 w-3.5" />
                             Streak safety
                         </div>
-                        <h2 className="text-xl font-black text-[#173B56]">Lich su bao ve streak</h2>
+                        <h2 className="text-xl font-black text-[#173B56]">{t('streakFreezeHistory')}</h2>
                         <p className="mt-1 max-w-2xl text-sm font-semibold leading-relaxed text-[#3C78A8]">
                             Freeze la lop bao hiem cho thoi quen hoc. Dashboard hien ca so Freeze con lai va nhung lan da cuu streak gan nhat.
                         </p>
@@ -950,7 +955,7 @@ function RewardClaimCelebration({ celebration }: { celebration: ClaimCelebration
             <div className="flex items-center gap-3">
                 <FuxieRoleMascot
                     src={FUXIE_3D_ASSETS.fucoinReward}
-                    alt="Fuxie Fucoin reward"
+                    alt="Fuxie Fucoin reward" // locale-allow
                     size={58}
                     motion="reward"
                     className="rounded-2xl bg-white/75 p-1 ring-1 ring-white"
@@ -962,7 +967,7 @@ function RewardClaimCelebration({ celebration }: { celebration: ClaimCelebration
                     </p>
                     <RewardRevealMoment
                         rewards={rewards}
-                        title="Mission reward reveal"
+                        title="Mission reward reveal" // locale-allow
                         detail="Fucoin va XP vua duoc claim, san sang day em toi phan thuong tiep theo."
                         mode="earned"
                         className="mt-2"
@@ -1027,7 +1032,7 @@ function MissionCard({
             <div className="flex h-full min-w-0 flex-col gap-3">
                 <div className="flex items-start justify-between gap-3">
                     <span className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-xl text-white ${isClaimed ? 'bg-[#2EC4B6]' : isClaimable ? 'fuxie-claim-gift-pulse bg-[#FFB703]' : 'bg-[#60A8E4]'}`}>
-                        {isClaimed ? <CheckCircle2 className="h-5 w-5" /> : isClaimable ? <Gift className="h-5 w-5" /> : <Target className="h-5 w-5" />}
+                        {isClaimed ? <CheckCircle2 className="h-5 w-5" /> : isClaimable ? <Gift className="h-5 w-5" /> : <Target className="h-5 w-5" />} // locale-allow
                     </span>
                     <FuxieBadge tone={isClaimed ? 'success' : isClaimable ? 'reward' : isLocked ? 'danger' : 'brand'} className="normal-case tracking-normal">
                         {statusLabel}
@@ -1093,6 +1098,7 @@ function TodayPlanSection({ plan, data }: { plan: TodayPlan; data: DashboardData
 }
 
 function TodayPlanQuestSection({ plan, data }: { plan: TodayPlan; data: DashboardData }) {
+    const t = useTranslations('Dashboard')
     const mission = buildDashboardMissionHub(plan, {
         currentStreak: data.streak.currentStreak,
         srsDueCount: data.srs.dueCount,
@@ -1179,7 +1185,7 @@ function TodayPlanQuestSection({ plan, data }: { plan: TodayPlan; data: Dashboar
                         <FuxieCoach
                             role={coachRole}
                             eyebrow={mission.isFreshStart ? 'Fresh start' : 'Next best action'}
-                            title={mission.coachTitle}
+                            title={t('focusQuest')}
                             message={mission.coachMessage}
                             className="bg-white"
                         />
@@ -1187,12 +1193,12 @@ function TodayPlanQuestSection({ plan, data }: { plan: TodayPlan; data: Dashboar
                         <div className="rounded-2xl bg-white p-4 shadow-sm ring-1 ring-white/90">
                             <div className="flex items-end justify-between gap-4">
                                 <div>
-                                    <p className="text-xs font-black uppercase tracking-wide text-slate-400">Mục tiêu ngày</p>
+                                    <p className="text-xs font-black uppercase tracking-wide text-slate-400">{t('todayGoal')}</p>
                                     <p className="mt-1 text-3xl font-black text-slate-950">{mission.goalProgress}%</p>
                                 </div>
                                 <div className="text-right text-sm font-bold text-slate-500">
                                     <p>{plan.currentMinutes}/{plan.goalMinutes} min</p>
-                                    <p>{plan.dueSrsCount} SRS cần ôn</p>
+                                    <p>{plan.dueSrsCount} {t('srsToReview')}</p>
                                 </div>
                             </div>
                             <FuxieProgressBar value={mission.goalProgress} className="mt-3" />
@@ -1210,8 +1216,8 @@ function TodayPlanQuestSection({ plan, data }: { plan: TodayPlan; data: Dashboar
                 <div className="relative border-t border-white/75 bg-white/48 px-5 py-4 sm:px-6">
                     <div className="mb-3 flex items-center justify-between gap-3">
                         <div>
-                            <p className="text-xs font-black uppercase tracking-wide text-[#3C78A8]">Quest tiếp theo</p>
-                            <p className="text-sm font-semibold text-slate-500">Các lựa chọn phụ nằm dưới CTA chính để bạn không bị phân tán.</p>
+                            <p className="text-xs font-black uppercase tracking-wide text-[#3C78A8]">{t('nextQuest')}</p>
+                            <p className="text-sm font-semibold text-slate-500">{t('secondaryCtaTip')}</p>
                         </div>
                         <FuxieBadge tone="success" className="hidden sm:inline-flex">
                             {secondaryQuests.length} quest
@@ -1299,16 +1305,17 @@ function DashboardQuestLink({ quest, index, isPrimary }: { quest: DashboardQuest
 }
 
 function QuestStatusPill({ status }: { status: DashboardQuest['status'] }) {
+    const t = useTranslations('Dashboard')
     if (status === 'completed') {
-        return <FuxieBadge tone="success" className="normal-case tracking-normal">Xong</FuxieBadge>
+        return <FuxieBadge tone="success" className="normal-case tracking-normal">{t('statusDone')}</FuxieBadge>
     }
     if (status === 'active') {
-        return <FuxieBadge tone="brand" className="normal-case tracking-normal">Đang mở</FuxieBadge>
+        return <FuxieBadge tone="brand" className="normal-case tracking-normal">{t('statusOpen')}</FuxieBadge>
     }
     if (status === 'locked') {
-        return <FuxieBadge tone="neutral" className="normal-case tracking-normal">Khóa</FuxieBadge>
+        return <FuxieBadge tone="neutral" className="normal-case tracking-normal">{t('statusLocked')}</FuxieBadge>
     }
-    return <FuxieBadge tone="neutral" className="normal-case tracking-normal">Tiếp theo</FuxieBadge>
+    return <FuxieBadge tone="neutral" className="normal-case tracking-normal">{t('statusNext')}</FuxieBadge>
 }
 
 function dashboardQuestMeta(quest: DashboardQuest, index: number): { icon: ComponentType<{ className?: string }>; color: string; label: string } {
@@ -1324,6 +1331,7 @@ function dashboardQuestMeta(quest: DashboardQuest, index: number): { icon: Compo
 }
 
 function _TodayPlanQuestSectionPrevious({ plan }: { plan: TodayPlan }) {
+    const t = useTranslations('Dashboard')
     const topActions = plan.actions.slice(0, 3)
 
     if (topActions.length === 0) {
@@ -1414,7 +1422,7 @@ function _TodayPlanQuestSectionPrevious({ plan }: { plan: TodayPlan }) {
                         <FuxieCoach
                             role="coach"
                             eyebrow="Next best action"
-                            title="Tập trung vào một quest"
+                            title={t('focusQuest')}
                             message={coachMessage}
                             className="bg-white"
                         />
@@ -1422,12 +1430,12 @@ function _TodayPlanQuestSectionPrevious({ plan }: { plan: TodayPlan }) {
                         <div className="rounded-2xl bg-white p-4 shadow-sm">
                             <div className="flex items-end justify-between">
                                 <div>
-                                    <p className="text-xs font-bold uppercase tracking-wide text-slate-400">Mục tiêu ngày</p>
+                                    <p className="text-xs font-bold uppercase tracking-wide text-slate-400">{t('todayGoal')}</p>
                                     <p className="mt-1 text-3xl font-black text-slate-950">{planProgress}%</p>
                                 </div>
                                 <div className="text-right text-sm font-semibold text-slate-500">
                                     <p>{plan.currentMinutes}/{plan.goalMinutes} min</p>
-                                    <p>{plan.dueSrsCount} SRS cần ôn</p>
+                                    <p>{plan.dueSrsCount} {t('srsToReview')}</p>
                                 </div>
                             </div>
                                 <div className="mt-3 h-3 overflow-hidden rounded-full bg-[#E4F0F0]">
@@ -1482,6 +1490,7 @@ function _TodayPlanQuestSectionPrevious({ plan }: { plan: TodayPlan }) {
 }
 
 function _TodayPlanSectionLegacy({ plan }: { plan: TodayPlan }) {
+    const t = useTranslations('Dashboard')
     const topActions = plan.actions.slice(0, 3)
 
     if (topActions.length === 0) {
@@ -1568,7 +1577,7 @@ function _TodayPlanSectionLegacy({ plan }: { plan: TodayPlan }) {
                 </div>
 
                 <div className="border-t border-gray-100 bg-gray-50/70 p-5 sm:p-6 lg:border-l lg:border-t-0">
-                    <p className="text-sm font-semibold text-gray-900">Mục tiêu ngày</p>
+                    <p className="text-sm font-semibold text-gray-900">{t('todayGoal')}</p>
                     <div className="mt-4">
                         <div className="flex items-end justify-between">
                             <span className="text-3xl font-black text-gray-950">{plan.currentMinutes}</span>
@@ -1584,11 +1593,11 @@ function _TodayPlanSectionLegacy({ plan }: { plan: TodayPlan }) {
                     <div className="mt-5 grid grid-cols-2 gap-3 text-sm">
                         <div className="rounded-xl bg-white p-3">
                             <p className="font-bold text-gray-950">{plan.dueSrsCount}</p>
-                            <p className="mt-1 text-xs text-gray-500">SRS cần ôn</p>
+                            <p className="mt-1 text-xs text-gray-500">{t('srsToReview')}</p>
                         </div>
                         <div className="rounded-xl bg-white p-3">
                             <p className="font-bold text-gray-950">{plan.signals.pendingAssignments}</p>
-                            <p className="mt-1 text-xs text-gray-500">Bài được giao</p>
+                            <p className="mt-1 text-xs text-gray-500">{t('assignedLessons')}</p>
                         </div>
                     </div>
                 </div>

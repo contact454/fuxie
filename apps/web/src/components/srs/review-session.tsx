@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useCallback, useEffect, useRef } from 'react'
+import { useTranslations } from 'next-intl'
 
 import { Flashcard } from './flashcard'
 import { RatingButtons } from './rating-buttons'
@@ -49,6 +50,7 @@ interface SessionStats {
 }
 
 export function ReviewSession({ initialCards, totalDue: _totalDue }: ReviewSessionProps) {
+    const t = useTranslations('SRS')
     const [cards] = useState(initialCards)
     const [currentIndex, setCurrentIndex] = useState(0)
     const [isFlipped, setIsFlipped] = useState(false)
@@ -129,10 +131,10 @@ export function ReviewSession({ initialCards, totalDue: _totalDue }: ReviewSessi
     const getMascotReaction = (): { variant: 'correct' | 'encourage' | 'thinking'; message: string } | null => {
         if (!lastRating) return null
         switch (lastRating) {
-            case 'EASY': return { variant: 'correct', message: 'Tuyệt lắm! 🌟' }
-            case 'GOOD': return { variant: 'correct', message: 'Làm tốt lắm! 👍' }
-            case 'HARD': return { variant: 'thinking', message: 'Cứ luyện tiếp nhé! 💪' }
-            case 'AGAIN': return { variant: 'encourage', message: 'Không sao, làm lại nào! 🔄' }
+            case 'EASY': return { variant: 'correct', message: t('speechBubbleEasy') }
+            case 'GOOD': return { variant: 'correct', message: t('speechBubbleGoodReaction') }
+            case 'HARD': return { variant: 'thinking', message: t('speechBubbleHard') }
+            case 'AGAIN': return { variant: 'encourage', message: t('speechBubbleAgain') }
         }
     }
 
@@ -144,10 +146,10 @@ export function ReviewSession({ initialCards, totalDue: _totalDue }: ReviewSessi
 
         const mascotVariant = accuracy >= 80 ? 'celebrate' : accuracy >= 50 ? 'correct' : 'encourage'
         const celebrationMessage = accuracy >= 80
-            ? 'Thành tích đáng nể! 🎉'
+            ? t('speechBubbleExcellent')
             : accuracy >= 50
-                ? 'Giữ vững phong độ! 🌟'
-                : 'Không sao cả, thử lại lần nữa nhé! 💪'
+                ? t('speechBubbleGood')
+                : t('speechBubbleTryAgain')
 
         return (
             <div className="flex flex-col items-center justify-center min-h-[500px] animate-fade-in-up">
@@ -175,15 +177,15 @@ export function ReviewSession({ initialCards, totalDue: _totalDue }: ReviewSessi
                     {/* Stats grid */}
                     <div className="grid grid-cols-3 gap-3 mb-6">
                         <FuxiePanel variant="soft" className="p-4 text-center">
-                            <p className="text-xs text-gray-500 mb-1">✅ Đúng</p>
+                            <p className="text-xs text-gray-500 mb-1">{t('correct')}</p>
                             <p className="text-2xl font-bold text-emerald-600">{stats.correct}</p>
                         </FuxiePanel>
                         <FuxiePanel variant="default" className="p-4 text-center ring-1 ring-red-100">
-                            <p className="text-xs text-gray-500 mb-1">❌ Chưa đúng</p>
+                            <p className="text-xs text-gray-500 mb-1">{t('notCorrect')}</p>
                             <p className="text-2xl font-bold text-red-500">{stats.again}</p>
                         </FuxiePanel>
                         <FuxiePanel variant="soft" className="p-4 text-center">
-                            <p className="text-xs text-gray-500 mb-1">⚡ Độ chính xác</p>
+                            <p className="text-xs text-gray-500 mb-1">{t('accuracy')}</p>
                             <p className="text-2xl font-bold text-fuxie-primary">{accuracy}%</p>
                         </FuxiePanel>
                     </div>
@@ -207,19 +209,19 @@ export function ReviewSession({ initialCards, totalDue: _totalDue }: ReviewSessi
                             href="/vocabulary"
                             className={fuxieButtonClass('ghost', 'lg')}
                         >
-                            Về từ vựng
+                            {t('backToVocabulary')}
                         </a>
                         <a
                             href="/review"
                             className={fuxieButtonClass('primary', 'lg')}
                         >
-                            Học tiếp →
+                            {t('nextBtn')} →
                         </a>
                     </div>
 
                     {/* Next review hint */}
                     <p className="text-xs text-gray-400 text-center mt-4">
-                        Lần ôn tiếp theo sẽ được lên lịch tự động.
+                        {t('nextReviewAutoScheduled')}
                     </p>
                 </div>
             </div>
@@ -233,15 +235,15 @@ export function ReviewSession({ initialCards, totalDue: _totalDue }: ReviewSessi
                 <Mascot
                     variant="empty"
                     size={120}
-                    speechBubble="Thêm từ vựng để bắt đầu học nhé! 📚"
+                    speechBubble={t('speechBubbleAddWords')}
                 />
-                <h2 className="text-xl font-bold text-gray-900 mt-6 mb-2">Không có thẻ cần ôn!</h2>
-                <p className="text-gray-500 mb-6">Khám phá từ mới và thêm vào danh sách học.</p>
+                <h2 className="text-xl font-bold text-gray-900 mt-6 mb-2">{t('noCardsToReview')}</h2>
+                <p className="text-gray-500 mb-6">{t('exploreAndAddWords')}</p>
                 <a
                     href="/vocabulary"
                     className={fuxieButtonClass('primary', 'lg')}
                 >
-                    Khám phá từ vựng
+                    {t('exploreVocabulary')}
                 </a>
             </FuxiePanel>
         )
@@ -300,7 +302,7 @@ export function ReviewSession({ initialCards, totalDue: _totalDue }: ReviewSessi
             {/* Flip hint when not flipped */}
             {!isFlipped && !lastRating && (
                 <p className="text-sm text-gray-400 animate-pulse">
-                    Chạm vào thẻ để xem đáp án.
+                    {t('tapToSeeAnswer')}
                 </p>
             )}
         </div>

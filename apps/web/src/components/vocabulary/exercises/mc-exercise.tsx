@@ -2,6 +2,7 @@
 
 import { useState, useCallback, useEffect } from 'react'
 import Image from 'next/image'
+import { useTranslations } from 'next-intl'
 import { playSound } from '@/hooks/use-audio-player'
 import { ExerciseProgress } from './exercise-progress'
 import { ExerciseResults } from './exercise-results'
@@ -58,6 +59,7 @@ interface SubmitResult {
 
 // ─── Component ──────────────────────────────────────
 export function McExercise({ questions, cefrLevel, themeName: _themeName, themeSlug, onExit, onComplete: _onComplete }: McExerciseProps) {
+    const t = useTranslations('UI')
     const [activeQuestions, setActiveQuestions] = useState([...questions])
     const [currentIndex, setCurrentIndex] = useState(0)
     const [selectedAnswer, setSelectedAnswer] = useState<string | null>(null)
@@ -222,7 +224,7 @@ export function McExercise({ questions, cefrLevel, themeName: _themeName, themeS
                                         <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                                             <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02z" />
                                         </svg>
-                                        <span className="text-sm font-medium">Anhören</span>
+                                        <span className="text-sm font-medium">{t('listenAudio')}</span>
                                     </button>
                                 )}
                             </div>

@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useCallback, useEffect, useMemo, useRef } from 'react'
+import { useTranslations } from 'next-intl'
 import { ExerciseProgress } from './exercise-progress'
 import { ExerciseResults } from './exercise-results'
 import { useExerciseTimer } from '@/hooks/use-exercise-timer'
@@ -49,6 +50,7 @@ function stableShuffle<T extends { id: string }>(items: T[], salt: string) {
 
 // ─── Component ──────────────────────────────────────
 export function MatchingExercise({ pairs, cefrLevel, themeName: _themeName, themeSlug, onExit, onComplete: _onComplete }: MatchingExerciseProps) {
+    const t = useTranslations('Vocabulary')
     const [selectedWord, setSelectedWord] = useState<string | null>(null)
     const [selectedMeaning, setSelectedMeaning] = useState<string | null>(null)
     const [matchedPairs, setMatchedPairs] = useState<Set<string>>(new Set())
@@ -188,10 +190,10 @@ export function MatchingExercise({ pairs, cefrLevel, themeName: _themeName, them
                 <div className={exerciseStageInnerClass}>
                     {/* Title */}
                     <div className="text-center mb-6">
-                        <h2 className="text-xl font-black text-slate-950">Finde die Paare</h2>
+                        <h2 className="text-xl font-black text-slate-950">{t('findPairs')}</h2>
                         <p className="mt-1 text-sm font-semibold text-slate-500">
-                            {matchedPairs.size}/{pairs.length} gefunden
-                            {mistakes > 0 && <span className="text-red-400 ml-2">• {mistakes} Fehler</span>}
+                            {t('foundPairsProgress', { matched: matchedPairs.size, total: pairs.length })}
+                            {mistakes > 0 && <span className="text-red-400 ml-2">• {t('mistakesCount', { count: mistakes })}</span>}
                         </p>
                     </div>
 
@@ -199,7 +201,7 @@ export function MatchingExercise({ pairs, cefrLevel, themeName: _themeName, them
                     <div className="grid grid-cols-2 gap-4">
                         {/* German words column */}
                         <div className="space-y-3">
-                            <p className="mb-2 text-center text-xs font-black uppercase text-text-brand">Deutsch</p>
+                            <p className="mb-2 text-center text-xs font-black uppercase text-text-brand">{t('deutsch')}</p>
                             {shuffledWords.map(pair => {
                                 const isMatched = matchedPairs.has(pair.id)
                                 const isSelected = selectedWord === pair.id
@@ -221,7 +223,7 @@ export function MatchingExercise({ pairs, cefrLevel, themeName: _themeName, them
 
                         {/* Vietnamese meanings column */}
                         <div className="space-y-3">
-                            <p className="mb-2 text-center text-xs font-black uppercase text-text-brand">Tiếng Việt</p>
+                            <p className="mb-2 text-center text-xs font-black uppercase text-text-brand">{t('vietnamese')}</p>
                             {shuffledMeanings.map(pair => {
                                 const isMatched = matchedPairs.has(pair.id)
                                 const isSelected = selectedMeaning === pair.id

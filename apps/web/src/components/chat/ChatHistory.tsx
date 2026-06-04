@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useState, useCallback } from 'react'
+import { useTranslations } from 'next-intl'
 import { getCefrTheme } from '@/lib/constants/cefr'
 
 interface Conversation {
@@ -27,6 +28,7 @@ export function ChatHistory({
     onNewChat,
     activeConversationId,
 }: ChatHistoryProps) {
+    const t = useTranslations('Chat')
     const [conversations, setConversations] = useState<Conversation[]>([])
     const [isLoading, setIsLoading] = useState(false)
 
@@ -95,7 +97,7 @@ export function ChatHistory({
             >
                 {/* Header */}
                 <div className="flex items-center justify-between px-4 py-4 border-b border-gray-100">
-                    <h2 className="font-bold text-gray-800">📜 Lịch sử trò chuyện</h2>
+                    <h2 className="font-bold text-gray-800">{t('history.title')}</h2>
                     <button
                         onClick={onClose}
                         className="w-8 h-8 rounded-full hover:bg-gray-100 flex items-center justify-center
@@ -117,7 +119,7 @@ export function ChatHistory({
                             hover:shadow-md hover:scale-[1.01] active:scale-[0.99]
                             transition-all duration-200"
                     >
-                        ✨ Cuộc trò chuyện mới
+                        ✨ {t('client.newChatTooltip')}
                     </button>
                 </div>
 
@@ -133,8 +135,8 @@ export function ChatHistory({
                     ) : conversations.length === 0 ? (
                         <div className="text-center py-12">
                             <div className="text-4xl mb-3 opacity-40">🦊</div>
-                            <p className="text-sm text-gray-400">Chưa có cuộc trò chuyện nào</p>
-                            <p className="text-xs text-gray-300 mt-1">Bắt đầu chat với Fuxie ngay!</p>
+                            <p className="text-sm text-gray-400">{t('history.empty')}</p>
+                            <p className="text-xs text-gray-300 mt-1">{t('history.startPrompt')}</p>
                         </div>
                     ) : (
                         conversations.map(conv => {
@@ -185,7 +187,7 @@ export function ChatHistory({
                                                     opacity-0 group-hover:opacity-100
                                                     hover:bg-red-50 text-gray-300 hover:text-red-400
                                                     transition-all duration-150"
-                                                title="Xóa"
+                                                title={t('history.deleteTooltip')}
                                             >
                                                 🗑
                                             </button>

@@ -342,7 +342,7 @@ function CourseQuestPath({
                         <FuxieCoach
                             role="locked"
                             eyebrow="Unlock logic"
-                            title="Mỗi node có điều kiện rõ"
+                            title={t('nodeUnlockTitle')}
                             message={t('coursePathTip')}
                             className="bg-white"
                         />
@@ -364,6 +364,7 @@ function CourseQuestPath({
 }
 
 export function CourseClient({ data }: { data: CourseData }) {
+    const t = useTranslations('UI')
     const totalVocabItems = data.modules.reduce((s, m) => s + m.vocabThemes.reduce((ss, t) => ss + t.itemCount, 0), 0)
     const totalVocabLearned = data.modules.reduce((s, m) => s + m.vocabThemes.reduce((ss, t) => ss + t.learnedCount, 0), 0)
     const totalGrammarLessons = data.modules.reduce((s, m) => s + m.grammarTopics.reduce((ss, t) => ss + t.lessonCount, 0), 0)
@@ -691,7 +692,7 @@ export function CourseClient({ data }: { data: CourseData }) {
                                         {/* Footer with estimated time */}
                                         <div className="mt-4 pt-3 border-t border-gray-100 flex items-center justify-between text-xs text-gray-400">
                                             <span>⏱️ ~{Math.round(mod.estimatedMinutes / 60)} giờ</span>
-                                            {isDone && <span className="text-green-600 font-medium">✅ Hoàn thành</span>}
+                                            {isDone && <span className="text-green-600 font-medium">✅ {t('completed')}</span>}
                                         </div>
                                     </div>
                                 </div>

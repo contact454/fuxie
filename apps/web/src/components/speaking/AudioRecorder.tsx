@@ -1,6 +1,7 @@
 'use client'
 
 import React, { useState, useRef, useEffect } from 'react'
+import { useTranslations } from 'next-intl'
 
 interface AudioRecorderProps {
     onTranscript: (text: string) => void
@@ -18,9 +19,11 @@ export default function AudioRecorder({
     onError, 
     onAudioReady,
     className = '', 
-    buttonText = 'Bắt đầu nói',
+    buttonText,
     language = 'de' 
 }: AudioRecorderProps) {
+    const t = useTranslations('Speaking')
+    const displayButtonText = buttonText || t('startSpeakingBtn')
     const [state, setState] = useState<RecorderState>('idle')
     const [duration, setDuration] = useState(0)
     
@@ -101,7 +104,7 @@ export default function AudioRecorder({
 
         } catch (err) {
             console.error('Error accessing microphone:', err)
-            onError('Không thể truy cập Microphone. Em vui lòng cấp quyền cho trình duyệt nhé!')
+            onError(t('micError'))
         }
     }
 
@@ -181,14 +184,14 @@ export default function AudioRecorder({
             }
 
             if (!json.data?.transcript?.trim()) {
-                throw new Error('Không nghe rõ lời nói. Bạn vui lòng nói to hơn nhé!')
+                throw new Error(t('unclearSpeech'))
             }
 
             onTranscript(json.data.transcript)
             setState('idle')
         } catch (err: any) {
             console.error('Transcription error:', err)
-            onError(err.message || 'Lỗi nhận diện giọng nói')
+            onError(err.message || t('sttError'))
             setState('idle')
         }
     }
@@ -208,13 +211,13 @@ export default function AudioRecorder({
                 )}
                 
                 {state === 'idle' && (
-                    <div className="text-gray-400 font-medium">Bấm để bắt đầu thu âm</div>
+                    <div className="text-gray-400 font-medium">{t('clickToRecord')}</div>
                 )}
 
                 {state === 'processing' && (
                     <div className="flex flex-col items-center animate-pulse text-blue-500">
                         <div className="w-6 h-6 border-4 border-blue-500 border-t-transparent rounded-full animate-spin mb-2"></div>
-                        <span className="font-semibold text-sm">Đang nhận diện giọng nói...</span>
+                        <span className="font-semibold text-sm">{t('transcribing')}</span>
                     </div>
                 )}
             </div>
@@ -228,7 +231,7 @@ export default function AudioRecorder({
                         <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
                             <path fillRule="evenodd" d="M7 4a3 3 0 016 0v4a3 3 0 11-6 0V4zm4 10.93A7.001 7.001 0 0017 8a1 1 0 10-2 0A5 5 0 015 8a1 1 0 00-2 0 7.001 7.001 0 006 6.93V17H6a1 1 0 100 2h8a1 1 0 100-2h-3v-2.07z" clipRule="evenodd" />
                         </svg>
-                        {buttonText}
+                        {displayButtonText}
                     </button>
                 )}
 
@@ -244,7 +247,7 @@ export default function AudioRecorder({
                             <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
                                 <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8 7a1 1 0 00-1 1v4a1 1 0 001 1h4a1 1 0 001-1V8a1 1 0 00-1-1H8z" clipRule="evenodd" />
                             </svg>
-                            Dừng lại
+                            {t('stopBtn')}
                         </button>
                     </>
                 )}

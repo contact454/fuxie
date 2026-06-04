@@ -151,7 +151,7 @@ describe('ExamInProgressChrome — fixed bottom Primary_CTA (Requirement 10.2)',
     it('renders exactly one data-role="primary-cta" with default label "Nộp bài"', () => {
         const html = render()
         expect(countMatches(html, /data-role="primary-cta"/g)).toBe(1)
-        expect(html).toContain('>Nộp bài<')
+        expect(html).toContain('>Nộp bài<') // locale-allow
     })
 
     it('strips data-role="primary-cta" when submitDisabled (Property 8 invariant)', () => {
@@ -160,13 +160,13 @@ describe('ExamInProgressChrome — fixed bottom Primary_CTA (Requirement 10.2)',
         const html = render({ submitDisabled: true })
         expect(countMatches(html, /data-role="primary-cta"/g)).toBe(0)
         // Fallback: the button is still rendered (with disabled attribute).
-        expect(html).toContain('>Nộp bài<')
+        expect(html).toContain('>Nộp bài<') // locale-allow
         expect(html).toMatch(/disabled(=""|>)/)
     })
 
     it('honours submitLabel override', () => {
         const html = render({ submitLabel: 'Đã xong' })
-        expect(html).toContain('>Đã xong<')
+        expect(html).toContain('>Đã xong<') // locale-allow
     })
 })
 

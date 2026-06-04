@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect, useCallback } from 'react'
+import { useTranslations } from 'next-intl'
 import { useRouter } from 'next/navigation'
 import { Mascot } from '@/components/ui/mascot'
 import { FuxiePanel, fuxieButtonClass } from '@/components/ui/fuxie-ui'
@@ -21,6 +22,7 @@ interface ExercisePlayerWrapperProps {
 }
 
 export function ExercisePlayerWrapper({ type, theme, level, initialExerciseData, initialError = null }: ExercisePlayerWrapperProps) {
+    const t = useTranslations('Vocabulary')
     const router = useRouter()
     const [questions, setQuestions] = useState<any[] | null>(initialExerciseData?.questions ?? null)
     const [exerciseData, setExerciseData] = useState<any>(initialExerciseData ?? null)
@@ -70,7 +72,7 @@ export function ExercisePlayerWrapper({ type, theme, level, initialExerciseData,
             <div className="flex min-h-[100dvh] items-center justify-center bg-[#F3FBFF] px-4">
                 <FuxiePanel variant="soft" className="flex w-full max-w-sm flex-col items-center p-8 text-center">
                     <Mascot variant="loading" size={88} />
-                    <p className="mt-4 text-sm font-bold text-text-brand">Đang tải bài luyện...</p>
+                    <p className="mt-4 text-sm font-bold text-text-brand">{t('loadingExercise')}</p>
                     <div className="mt-5 h-2 w-36 overflow-hidden rounded-full bg-[#CCE4F0]/70">
                         <div className="h-full w-2/3 animate-pulse rounded-full bg-gradient-to-r from-[#60A8E4] to-[#2EC4B6]" />
                     </div>

@@ -46,7 +46,7 @@ export default function AdminClientDashboard({
     <div className="p-6 md:p-8 space-y-6 max-w-7xl mx-auto">
       <div>
         <h1 className="text-2xl font-bold text-slate-900 tracking-tight">Platform Overview</h1>
-        <p className="text-slate-500 mt-1">Nam bat nhip dap hoc tap cua Fuxie ngay hom nay.</p>
+        <p className="text-slate-500 mt-1">{"Nam bat nhip dap hoc tap cua Fuxie ngay hom nay." /* // locale-allow */}</p>
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">

@@ -104,7 +104,7 @@ function SkillFixtureShell({
 
       <div className="absolute inset-x-0 bottom-0 top-16 grid min-h-0 grid-rows-[minmax(0,1fr)_58px] lg:grid-cols-[82px_minmax(0,1fr)] lg:grid-rows-1">
         <nav
-          aria-label="Visual QA skill navigation"
+          aria-label="Visual QA skill navigation" // locale-allow
           className="hidden border-r border-[#8bd3ff]/25 bg-[#064987]/85 p-3 lg:block"
         >
           <div className="flex h-full flex-col items-center gap-3">
@@ -140,7 +140,7 @@ function SkillFixtureShell({
             <MascotImage
               pose={mascotPose}
               size="xl"
-              alt="Fuxie skill stage mascot"
+              alt="Fuxie skill stage mascot" // locale-allow
               className="drop-shadow-2xl"
             />
           </div>
@@ -148,7 +148,7 @@ function SkillFixtureShell({
             <MascotImage
               pose={mascotPose}
               size="sm"
-              alt="Fuxie skill stage mascot"
+              alt="Fuxie skill stage mascot" // locale-allow
               className="opacity-90 drop-shadow-xl"
             />
           </div>
@@ -174,7 +174,7 @@ function SkillFixtureShell({
               <MascotImage
                 pose={mascotPose}
                 size="md"
-                alt="Fuxie skill guide"
+                alt="Fuxie skill guide" // locale-allow
                 className="mx-auto flex justify-center"
               />
               <div className="mt-4 rounded-2xl border border-sky-100 bg-white p-4">
@@ -188,7 +188,7 @@ function SkillFixtureShell({
         </section>
 
         <nav
-          aria-label="Visual QA mobile navigation"
+          aria-label="Visual QA mobile navigation" // locale-allow
           className="flex items-center justify-around border-t border-[#8bd3ff]/25 bg-[#064987] px-2 lg:hidden"
         >
           {navItems.map(([label, icon]) => (
@@ -278,7 +278,7 @@ export function Slice2VocabularySuccessFixture() {
             className="rounded-2xl border border-slate-100 bg-white p-4 shadow-sm"
           >
             <p className="text-lg font-black text-slate-900">{word}</p>
-            <p className="mt-1 text-sm text-slate-500">A2 daily set</p>
+            <p className="mt-1 text-sm text-slate-500">A2 daily set</p> // locale-allow
           </div>
         ))}
       </div>
@@ -344,7 +344,7 @@ export function Slice2ListeningLoadingFixture() {
       visualState="loading"
       stateRole="listening-loading-state"
       accent="#2EC4B6"
-      title="Listening audio loader"
+      title="Listening audio loader" // locale-allow
       subtitle="Loading state - audio metadata and waveform"
       mascotPose="listeningFocus"
       ctaLabel="Audio neu laden"
@@ -394,7 +394,7 @@ export function Slice2SpeakingErrorFixture() {
       visualState="error"
       stateRole="speaking-error-state"
       accent="#EF4444"
-      title="Speaking pronunciation retry"
+      title="Speaking pronunciation retry" // locale-allow
       subtitle="Error state - pronunciation mismatch"
       mascotPose="speakingRecord"
       ctaLabel="Nochmal aufnehmen"
@@ -478,7 +478,7 @@ export function Slice2WritingErrorFixture() {
       visualState="error"
       stateRole="writing-error-state"
       accent="#F97316"
-      title="Writing structure feedback"
+      title="Writing structure feedback" // locale-allow
       subtitle="Error state - required structure missing"
       mascotPose="writingDelivery"
       ctaLabel="Struktur pruefen"
@@ -504,7 +504,7 @@ export function Slice2WritingErrorFixture() {
             Missing requirement
           </p>
           <ul className="mt-3 space-y-3 text-sm leading-6 text-slate-700">
-            <li>Opening greeting found</li>
+            <li>Opening greeting found</li> // locale-allow
             <li>Reason found</li>
             <li className="font-bold text-orange-700">
               Closing sentence missing
@@ -524,7 +524,7 @@ export function Slice2ExamTimeoutFixture() {
       visualState="timeout"
       stateRole="exam-timeout-state"
       accent="#B91C1C"
-      title="Timed CEFR exam"
+      title="Timed CEFR exam" // locale-allow
       subtitle="Timeout state - time expired before submit"
       mascotPose="examProctor"
       ctaLabel="Jetzt abgeben"

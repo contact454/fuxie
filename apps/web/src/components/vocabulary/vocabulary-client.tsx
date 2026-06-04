@@ -171,7 +171,7 @@ function VocabularyQuestWorld({
 
                         <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
                             <div className="min-w-0">
-                                <p className="text-sm font-bold uppercase text-text-brand">Vocabulary world map</p>
+                                <p className="text-sm font-bold uppercase text-text-brand">{t('worldMapTitle')}</p>
                                 <h1 className="mt-2 text-3xl font-black leading-tight text-slate-950 sm:text-4xl">
                                     Mở khóa từng đảo từ vựng
                                 </h1>
@@ -324,12 +324,12 @@ function VocabularyQuestWorld({
                                     )}
                                 </div>
                                 <div className="min-w-0 flex-1">
-                                    <p className="text-xs font-black uppercase text-text-brand">Đang chọn</p>
+                                    <p className="text-xs font-black uppercase text-text-brand">{t('selecting')}</p>
                                     <h2 className="mt-1 truncate text-xl font-black text-slate-950">
-                                        {selectedTheme?.name ?? 'Chọn chủ đề'}
+                                        {selectedTheme?.name ?? t('selectTheme')}
                                     </h2>
                                     <p className="mt-1 text-sm font-semibold text-slate-500">
-                                        {selectedTheme?.nameNative ?? 'Bắt đầu bằng một đảo từ vựng'}
+                                        {selectedTheme?.nameNative ?? t('startWithAnIsland')}
                                     </p>
                                 </div>
                             </div>

@@ -65,6 +65,31 @@ OBJECTIVE: Resolve check:visual-audit's 166 violations: regenerate the screensho
 ACCEPTANCE: captures present; pnpm check:visual-audit passes or lists only genuine diffs to triage. REPORT: command output, what was regenerated, residual violations.
 ```
 
+## CW-4 — Finish the UI-UX audit detector (`auditPassPrime`) — PRE-EXISTING, blocks `check:quick`
+
+**Problem:** `check:quick`'s `test:property` step fails with 10 failures: `tests/audit/ui-ux/exploration.spec.ts`
+(9) and `tests/audit/ui-ux/preservation.spec.ts` (1). `exploration.spec.ts` Property 1 expects
+`auditPass(X)` to emit exactly one schema-valid Finding for each defect-class fixture (1.1–1.9), but the
+in-file shim returns `[]` (`exploration.spec.ts:312` `const auditPass: AuditPass = (_X) => []`). The file's
+own header says it is re-run after a separate task lands the real `auditPassPrime` (exported from
+`apps/web/audit/ui-ux/index.ts`). `preservation.spec.ts` Property 2.D is a meta "suite-invariance" re-run
+that fails *because* exploration fails — it clears automatically once exploration passes.
+
+**Pre-existing, not caused by the i18n/feature work.** `tests/audit/` was untouched by PR #20. These
+failures were always present; they only became *visible* after CW-1 fixed `asset-audit` (previously
+`check:quick` bailed at asset-audit before reaching `test:property`).
+
+**Decision needed (owner):**
+- (a) Implement/finish `auditPassPrime` (the 9 defect-class detectors + unified Finding schema + mobile
+  viewport pin) so `exploration.spec.ts` passes — this is a real feature task, not a cleanup; OR
+- (b) If the audit-detector feature is deferred, mark these specs `it.todo`/`describe.skip` (or exclude
+  from `test:property`) with a tracking link, so `check:quick` reflects only active gates.
+
+Do NOT fake `auditPass` to return canned Findings just to pass — that would void a real WIP test.
+
+**Acceptance:** `npx pnpm test:property` 0 failures and `npx pnpm check:quick` green end-to-end, via a real
+detector implementation or an explicit, documented skip.
+
 ## Sequencing note
 CW-1 unblocks `check:quick` (so later checks in the chain run). CW-2/CW-3 reduce the
 standing red. None block the feature slices, but all should land before any

@@ -7,7 +7,7 @@
  * `CanvasRenderingContext2D` to the structural `WorldCanvasContext` seam,
  * drives idle-cheap rendering, and renders the semantic `<HotspotList>`
  * fallback. The component is a Client Component for hydration purposes,
- * but its outer shell — the `<canvas>` element + the `<HotspotList>`
+ * but its outer shell — the `<canvas>` element + the `<HotspotList>` // locale-allow
  * child — is server-renderable so screen readers and headless screenshot
  * tools see the destination links immediately, before hydration
  * (Requirements 4.1, 4.2, 4.7).
@@ -155,7 +155,7 @@ function isDevEnvironment(): boolean {
 }
 
 /**
- * Server-renderable shell: a wrapping `<div>`, an empty `<canvas>` element
+ * Server-renderable shell: a wrapping `<div>`, an empty `<canvas>` element // locale-allow
  * carrying the scene's accessible name, an inline `role="status"` line for
  * failed-asset announcements, and a single `<HotspotList>` child. All
  * client-side behavior (context acquisition, paint, RAF, listeners) runs

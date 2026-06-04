@@ -1,6 +1,7 @@
 'use client'
 
 import React, { useState, useCallback, useMemo } from 'react'
+import { useTranslations } from 'next-intl'
 import type {
   GrammarExercise, MultipleChoiceExercise, GapFillBankExercise,
   GapFillTypeExercise, MatchingExercise, SentenceReorderExercise,
@@ -23,6 +24,7 @@ export function FeedbackToast({
   explanation?: string
   onContinue: () => void
 }) {
+  const t = useTranslations('Grammar')
   return (
     <div className={s.feedbackOverlay} onClick={onContinue}>
       <div
@@ -30,12 +32,12 @@ export function FeedbackToast({
         onClick={e => e.stopPropagation()}
       >
         <div className={`${s.feedbackTitle} ${isCorrect ? s.feedbackTitleCorrect : s.feedbackTitleWrong}`}>
-          {isCorrect ? '✅ Chính xác!' : '❌ Chưa đúng'}
+          {isCorrect ? t('feedbackCorrect') : t('feedbackIncorrect')}
           {isCorrect && <span className={s.xpBadge}>+10 XP</span>}
         </div>
         {!isCorrect && correctAnswer && (
           <div className={s.feedbackDetail}>
-            Đáp án đúng: <strong>{correctAnswer}</strong>
+            {t('correctAnswerLabel')} <strong>{correctAnswer}</strong>
           </div>
         )}
         {explanation && <div className={s.feedbackExplanation}>{explanation}</div>}
@@ -43,7 +45,7 @@ export function FeedbackToast({
           className={`${s.feedbackBtn} ${isCorrect ? s.feedbackBtnCorrect : s.feedbackBtnWrong}`}
           onClick={onContinue}
         >
-          {isCorrect ? 'Thử thách tiếp theo →' : 'Đã hiểu, bước tiếp →'}
+          {isCorrect ? t('nextChallengeBtn') : t('understoodNextBtn')}
         </button>
       </div>
     </div>
@@ -57,6 +59,7 @@ function MultipleChoice({
   exercise: MultipleChoiceExercise
   onAnswer: (correct: boolean, answer: string) => void
 }) {
+  const t = useTranslations('Grammar')
   const [selected, setSelected] = useState<number | null>(null)
   const [answered, setAnswered] = useState(false)
 
@@ -73,7 +76,7 @@ function MultipleChoice({
 
   return (
     <div className={s.exerciseContainer}>
-      <div className={s.exerciseLabel}>Trắc nghiệm</div>
+      <div className={s.exerciseLabel}>{t('multipleChoice')}</div>
       <div className={s.exerciseInstruction}>📝 {exercise.instruction_vi}</div>
       <div className={s.exerciseStem} dangerouslySetInnerHTML={{ __html: stemToHtml(exercise.stem) }} />
       <div className={s.mcOptions}>
@@ -103,7 +106,7 @@ function MultipleChoice({
           disabled={selected === null}
           onClick={handleCheck}
         >
-          Kiểm tra
+          {t('checkBtn')}
         </button>
       )}
     </div>
@@ -117,6 +120,7 @@ function GapFillBank({
   exercise: GapFillBankExercise
   onAnswer: (correct: boolean, answer: string) => void
 }) {
+  const t = useTranslations('Grammar')
   const [selections, setSelections] = useState<Record<number, string>>({})
   const [activeSlot, setActiveSlot] = useState<number>(exercise.blanks[0]?.id ?? 1)
   const [answered, setAnswered] = useState(false)
@@ -146,7 +150,7 @@ function GapFillBank({
 
   return (
     <div className={s.exerciseContainer}>
-      <div className={s.exerciseLabel}>Điền từ</div>
+      <div className={s.exerciseLabel}>{t('fillWord')}</div>
       <div className={s.exerciseInstruction}>📝 {exercise.instruction_vi}</div>
       <div className={s.exerciseStem} dangerouslySetInnerHTML={{ __html: stemToHtml(exercise.stem) }} />
       <div className={s.gapBlanks}>
@@ -160,7 +164,7 @@ function GapFillBank({
           </div>
         ))}
       </div>
-      <div className={s.hintHelper}>👆 Chọn ô phía trên, rồi chọn từ bên dưới:</div>
+      <div className={s.hintHelper}>{t('chooseAbove')}</div>
       <div className={s.wordBank}>
         {exercise.bank.map((w, i) => (
           <div
@@ -178,7 +182,7 @@ function GapFillBank({
           disabled={!allFilled}
           onClick={handleCheck}
         >
-          Kiểm tra
+          {t('checkBtn')}
         </button>
       )}
     </div>
@@ -193,6 +197,7 @@ function GapFillType({
   onAnswer: (correct: boolean, answer: string, aiFeedback?: any) => void
   cefrLevel?: string
 }) {
+  const t = useTranslations('Grammar')
   const [value, setValue] = useState('')
   const [answered, setAnswered] = useState(false)
   const [isAiGrading, setIsAiGrading] = useState(false)
@@ -240,7 +245,7 @@ function GapFillType({
 
   return (
     <div className={s.exerciseContainer}>
-      <div className={s.exerciseLabel}>Tự điền</div>
+      <div className={s.exerciseLabel}>{t('selfFill')}</div>
       <div className={s.exerciseInstruction}>📝 {exercise.instruction_vi}</div>
       <div className={s.exerciseStem} dangerouslySetInnerHTML={{ __html: stemToHtml(exercise.stem) }} />
       {exercise.hint_word && (
@@ -249,7 +254,7 @@ function GapFillType({
       <input
         className={s.textInput}
         type="text"
-        placeholder="Nhập đáp án..."
+        placeholder={t('enterAnswerPlaceholder')}
         value={value}
         onChange={e => setValue(e.target.value)}
         onKeyDown={e => e.key === 'Enter' && handleCheck()}
@@ -263,7 +268,7 @@ function GapFillType({
           disabled={!value.trim() || isAiGrading}
           onClick={handleCheck}
         >
-          {isAiGrading ? 'AI đang chấm...' : 'Kiểm tra'}
+          {isAiGrading ? t('aiGrading') : t('checkBtn')}
         </button>
       )}
     </div>
@@ -277,6 +282,7 @@ function Matching({
   exercise: MatchingExercise
   onAnswer: (correct: boolean, answer: string) => void
 }) {
+  const t = useTranslations('Grammar')
   const shuffledRight = useMemo(
     () => [...exercise.pairs].sort(() => Math.random() - 0.5),
     [exercise.pairs]
@@ -308,7 +314,7 @@ function Matching({
 
   return (
     <div className={s.exerciseContainer}>
-      <div className={s.exerciseLabel}>Nối cặp</div>
+      <div className={s.exerciseLabel}>{t('matchPairs')}</div>
       <div className={s.exerciseInstruction}>📝 {exercise.instruction_vi}</div>
       <div className={s.matchingContainer}>
         {exercise.pairs.map((p, i) => (
@@ -341,7 +347,7 @@ function Matching({
           disabled={!allMatched}
           onClick={handleCheck}
         >
-          Kiểm tra
+          {t('checkBtn')}
         </button>
       )}
     </div>
@@ -355,6 +361,7 @@ function SentenceReorder({
   exercise: SentenceReorderExercise
   onAnswer: (correct: boolean, answer: string) => void
 }) {
+  const t = useTranslations('Grammar')
   const shuffled = useMemo(
     () => [...exercise.words].sort(() => Math.random() - 0.5),
     [exercise.words]
@@ -387,15 +394,15 @@ function SentenceReorder({
 
   return (
     <div className={s.exerciseContainer}>
-      <div className={s.exerciseLabel}>Sắp xếp câu</div>
+      <div className={s.exerciseLabel}>{t('scrambleSentence')}</div>
       <div className={s.exerciseInstruction}>📝 {exercise.instruction_vi}</div>
       <div className={`${s.reorderResult} ${placed.length > 0 ? s.reorderHasWords : ''}`}>
         {placed.length === 0
-          ? <span className={s.reorderPlaceholder}>Câu trả lời sẽ hiện ở đây...</span>
+          ? <span className={s.reorderPlaceholder}>{t('scramblePlaceholder')}</span>
           : placed.map((w, i) => <span key={i} style={{ fontSize: 16, fontWeight: 500 }}>{w}</span>)
         }
       </div>
-      <div className={s.hintHelper}>👆 Tap từ để thêm vào câu:</div>
+      <div className={s.hintHelper}>{t('tapToBuild')}</div>
       <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
         {shuffled.map((w, i) => (
           <div
@@ -413,7 +420,7 @@ function SentenceReorder({
           disabled={placed.length === 0}
           onClick={handleCheck}
         >
-          Kiểm tra
+          {t('checkBtn')}
         </button>
       )}
     </div>
@@ -427,6 +434,7 @@ function ErrorSpotting({
   exercise: ErrorSpottingExercise
   onAnswer: (correct: boolean, answer: string) => void
 }) {
+  const t = useTranslations('Grammar')
   const [selectedIdx, setSelectedIdx] = useState<number | null>(null)
   const [correction, setCorrection] = useState('')
   const [answered, setAnswered] = useState(false)
@@ -442,7 +450,7 @@ function ErrorSpotting({
 
   return (
     <div className={s.exerciseContainer}>
-      <div className={s.exerciseLabel}>Tìm lỗi</div>
+      <div className={s.exerciseLabel}>{t('findError')}</div>
       <div className={s.exerciseInstruction}>📝 {exercise.instruction_vi}</div>
       <div className={s.errorSentence}>
         {exercise.sentence_words.map((w, i) => (
@@ -457,11 +465,11 @@ function ErrorSpotting({
       </div>
       {selectedIdx !== null && (
         <div className={s.errorCorrection}>
-          <div className={s.hintHelper}>✏️ Nhập từ đúng để thay thế:</div>
+          <div className={s.hintHelper}>{t('enterCorrection')}</div>
           <input
             className={s.textInput}
             type="text"
-            placeholder="Từ đúng..."
+            placeholder={t('correctWordPlaceholder')}
             value={correction}
             onChange={e => setCorrection(e.target.value)}
             onKeyDown={e => e.key === 'Enter' && handleCheck()}
@@ -477,7 +485,7 @@ function ErrorSpotting({
           disabled={selectedIdx === null || !correction.trim()}
           onClick={handleCheck}
         >
-          Kiểm tra
+          {t('checkBtn')}
         </button>
       )}
     </div>
@@ -492,6 +500,7 @@ function Transformation({
   onAnswer: (correct: boolean, answer: string, aiFeedback?: any) => void
   cefrLevel?: string
 }) {
+  const t = useTranslations('Grammar')
   const [value, setValue] = useState('')
   const [answered, setAnswered] = useState(false)
   const [isAiGrading, setIsAiGrading] = useState(false)
@@ -539,15 +548,15 @@ function Transformation({
 
   return (
     <div className={s.exerciseContainer}>
-      <div className={s.exerciseLabel}>Biến đổi câu</div>
+      <div className={s.exerciseLabel}>{t('transformSentence')}</div>
       <div className={s.exerciseInstruction}>📝 {exercise.instruction_vi}</div>
       <div className={s.sourceBox}>
-        <strong>Câu gốc:</strong> {exercise.source_sentence}
+        <strong>{t('originalSentence')}</strong> {exercise.source_sentence}
       </div>
       <div className={s.targetForm}>🎯 {exercise.target_form}</div>
       <textarea
         className={s.textArea}
-        placeholder="Viết câu mới..."
+        placeholder={t('writeNewSentencePlaceholder')}
         value={value}
         onChange={e => setValue(e.target.value)}
         disabled={answered}
@@ -558,7 +567,7 @@ function Transformation({
           disabled={!value.trim() || isAiGrading}
           onClick={handleCheck}
         >
-          {isAiGrading ? 'AI đang chấm...' : 'Kiểm tra'}
+          {isAiGrading ? t('aiGrading') : t('checkBtn')}
         </button>
       )}
     </div>
@@ -572,6 +581,7 @@ function ClozeComponent({
   exercise: ClozeExercise
   onAnswer: (correct: boolean, answer: string) => void
 }) {
+  const t = useTranslations('Grammar')
   const [values, setValues] = useState<Record<number, string>>({})
   const [answered, setAnswered] = useState(false)
 
@@ -613,7 +623,7 @@ function ClozeComponent({
 
   return (
     <div className={s.exerciseContainer}>
-      <div className={s.exerciseLabel}>Điền vào chỗ trống</div>
+      <div className={s.exerciseLabel}>{t('fillInBlanks')}</div>
       <div className={s.exerciseInstruction}>📝 {exercise.instruction_vi}</div>
       <div className={s.clozeText} style={{ whiteSpace: 'pre-wrap' }}>
         {renderClozeText()}
@@ -624,7 +634,7 @@ function ClozeComponent({
           disabled={!allFilled}
           onClick={handleCheck}
         >
-          Kiểm tra
+          {t('checkBtn')}
         </button>
       )}
     </div>
@@ -639,6 +649,7 @@ export function ExerciseRenderer({
   onAnswer: (correct: boolean, correctAnswer: string, aiFeedback?: any) => void
   cefrLevel?: string
 }) {
+  const t = useTranslations('Grammar')
   switch (exercise.type) {
     case 'multiple_choice':   return <MultipleChoice exercise={exercise} onAnswer={onAnswer} />
     case 'gap_fill_bank':     return <GapFillBank exercise={exercise} onAnswer={onAnswer} />
@@ -648,7 +659,7 @@ export function ExerciseRenderer({
     case 'error_spotting':    return <ErrorSpotting exercise={exercise} onAnswer={onAnswer} />
     case 'transformation':    return <Transformation exercise={exercise} onAnswer={onAnswer} cefrLevel={cefrLevel} />
     case 'cloze':             return <ClozeComponent exercise={exercise} onAnswer={onAnswer} />
-    default:                  return <div>Unknown exercise type</div>
+    default:                  return <div>{t('unknownType')}</div>
   }
 }
 

@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { NextIntlClientProvider } from 'next-intl'
 import { getMessages, getLocale } from 'next-intl/server'
 import { MobileShell } from '@/components/shared/mobile-shell'
+import { InstallPrompt } from '@/components/shared/InstallPrompt'
 
 export const metadata: Metadata = {
     title: 'Fuxie 🦊 — Lernen',
@@ -19,6 +20,7 @@ export default async function LearnLayout({ children }: { children: React.ReactN
                 <MobileShell>
                     {children}
                 </MobileShell>
+                <InstallPrompt />
             </NextIntlClientProvider>
         </div>
     )

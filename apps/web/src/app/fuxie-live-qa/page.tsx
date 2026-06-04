@@ -142,8 +142,8 @@ function FoundationLockFixture() {
             className="mb-8 rounded-[28px] border border-[#60A8E4]/20 bg-[#F3FBFF] p-4 shadow-[0_18px_48px_rgba(60,120,168,0.12)] sm:p-6"
         >
             <div className="mb-5">
-                <p className="text-xs font-black uppercase tracking-wide text-[#3C78A8]">Slice 0 QA fixture</p>
-                <h2 className="mt-2 text-xl font-black text-slate-950">Foundation lock primitives</h2>
+                <p className="text-xs font-black uppercase tracking-wide text-[#3C78A8]">{"Slice 0 QA fixture" /* // locale-allow */}</p>
+                <h2 className="mt-2 text-xl font-black text-slate-950">{"Foundation lock primitives" /* // locale-allow */}</h2>
                 <p className="mt-2 max-w-3xl text-sm font-semibold leading-6 text-slate-600">
                     Dev-only fixture for the production handoff gate: one scoped primary CTA, chip row,
                     card stack, empty state, error state, and success-like state at mobile and desktop widths.
@@ -159,7 +159,7 @@ function FoundationLockFixture() {
                     <div className="flex flex-wrap items-center gap-2" data-role="foundation-chip-row">
                         <FuxieBadge tone="brand">Bright Sky</FuxieBadge>
                         <FuxieBadge tone="success">State safe</FuxieBadge>
-                        <FuxieBadge tone="neutral">390 px ready</FuxieBadge>
+                        <FuxieBadge tone="neutral">{"390 px ready" /* // locale-allow */}</FuxieBadge>
                     </div>
 
                     <div className="mt-5 grid gap-3 sm:grid-cols-3" data-role="foundation-card-stack">
@@ -190,7 +190,7 @@ function FoundationLockFixture() {
                     <StateShell
                         surfaceId="dashboard"
                         state="empty"
-                        title="No session yet"
+                        title={"No session yet" /* // locale-allow */}
                         message="Choose one short task to start today's learning loop."
                         primaryCta={{ label: 'Plan session', href: '/dashboard' }}
                         className="min-w-0"
@@ -198,7 +198,7 @@ function FoundationLockFixture() {
                     <StateShell
                         surfaceId="course"
                         state="error"
-                        title="Course data paused"
+                        title={"Course data paused" /* // locale-allow */}
                         message="The route should offer a retry and a safe way back without hiding learner progress."
                         primaryCta={{ label: 'Retry loading', href: '/course' }}
                         secondaryCta={{ label: 'Back to dashboard', href: '/dashboard' }}
@@ -248,9 +248,9 @@ export default function FuxieLiveQaPage() {
         <main className="min-h-screen bg-white px-6 py-8">
             <section className="mx-auto max-w-5xl">
                 <div className="mb-6">
-                    <p className="text-xs font-black uppercase tracking-wide text-text-brand">Fuxie live QA</p>
-                    <h1 className="mt-2 text-2xl font-black text-slate-950">Fuxie identity and animation QA</h1>
-                    <p className="mt-2 text-sm font-bold text-slate-500">Source references and V6B are the current visual baseline. Hunyuan V8 is experimental until it matches the source identity.</p>
+                    <p className="text-xs font-black uppercase tracking-wide text-text-brand">{"Fuxie live QA" /* // locale-allow */}</p>
+                    <h1 className="mt-2 text-2xl font-black text-slate-950">{"Fuxie identity and animation QA" /* // locale-allow */}</h1>
+                    <p className="mt-2 text-sm font-bold text-slate-500">{"Source references and V6B are the current visual baseline. Hunyuan V8 is experimental until it matches the source identity." /* // locale-allow */}</p>
                 </div>
                 <FoundationLockFixture />
                 <div className="mb-8">
@@ -271,7 +271,7 @@ export default function FuxieLiveQaPage() {
                     </div>
                 </div>
                 <div className="mb-8">
-                    <h2 className="mb-3 text-base font-black text-text-primary">codex imagegen coherent full-body v10</h2>
+                    <h2 className="mb-3 text-base font-black text-text-primary">{"codex imagegen coherent full-body v10" /* // locale-allow */}</h2>
                     <div className="grid gap-5 sm:grid-cols-2">
                         {IMAGEGEN_FULLBODY_V10.map((reference) => (
                             <article key={reference.src} className="grid place-items-center rounded-2xl border border-[#BFE8F4] bg-white p-5 shadow-sm">
@@ -291,7 +291,7 @@ export default function FuxieLiveQaPage() {
                 </div>
                 {hasV19Model ? (
                     <div className="mb-8">
-                        <h2 className="mb-3 text-base font-black text-text-primary">v19 motion balance rig candidate</h2>
+                        <h2 className="mb-3 text-base font-black text-text-primary">{"v19 motion balance rig candidate" /* // locale-allow */}</h2>
                         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
                             {RIG_STATES.map((state) => (
                                 <article key={`v19-${state}`} className="grid place-items-center rounded-2xl border border-[#84DCCF] bg-[#F2FFFC] p-5 shadow-sm">
@@ -304,7 +304,7 @@ export default function FuxieLiveQaPage() {
                 ) : null}
                 {hasV18Model ? (
                     <div className="mb-8">
-                        <h2 className="mb-3 text-base font-black text-text-primary">v18 motion polish rig candidate</h2>
+                        <h2 className="mb-3 text-base font-black text-text-primary">{"v18 motion polish rig candidate" /* // locale-allow */}</h2>
                         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
                             {RIG_STATES.map((state) => (
                                 <article key={`v18-${state}`} className="grid place-items-center rounded-2xl border border-[#84DCCF] bg-[#F2FFFC] p-5 shadow-sm">
@@ -317,7 +317,7 @@ export default function FuxieLiveQaPage() {
                 ) : null}
                 {hasV17Model ? (
                     <div className="mb-8">
-                        <h2 className="mb-3 text-base font-black text-text-primary">v17 contour source skinned rig candidate</h2>
+                        <h2 className="mb-3 text-base font-black text-text-primary">{"v17 contour source skinned rig candidate" /* // locale-allow */}</h2>
                         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
                             {RIG_STATES.map((state) => (
                                 <article key={`v17-${state}`} className="grid place-items-center rounded-2xl border border-[#84DCCF] bg-[#F2FFFC] p-5 shadow-sm">
@@ -330,7 +330,7 @@ export default function FuxieLiveQaPage() {
                 ) : null}
                 {hasV16Model ? (
                     <div className="mb-8">
-                        <h2 className="mb-3 text-base font-black text-text-primary">v16 unified source skinned rig candidate</h2>
+                        <h2 className="mb-3 text-base font-black text-text-primary">{"v16 unified source skinned rig candidate" /* // locale-allow */}</h2>
                         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
                             {RIG_STATES.map((state) => (
                                 <article key={`v16-${state}`} className="grid place-items-center rounded-2xl border border-[#84DCCF] bg-[#F2FFFC] p-5 shadow-sm">
@@ -343,7 +343,7 @@ export default function FuxieLiveQaPage() {
                 ) : null}
                 {hasV15Model ? (
                     <div className="mb-8">
-                        <h2 className="mb-3 text-base font-black text-text-primary">v15 source-locked skinned rig candidate</h2>
+                        <h2 className="mb-3 text-base font-black text-text-primary">{"v15 source-locked skinned rig candidate" /* // locale-allow */}</h2>
                         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
                             {RIG_STATES.map((state) => (
                                 <article key={`v15-${state}`} className="grid place-items-center rounded-2xl border border-[#84DCCF] bg-[#F2FFFC] p-5 shadow-sm">
@@ -356,7 +356,7 @@ export default function FuxieLiveQaPage() {
                 ) : null}
                 {hasV14Model ? (
                     <div className="mb-8">
-                        <h2 className="mb-3 text-base font-black text-text-primary">v14 identity deform skeletal rig candidate</h2>
+                        <h2 className="mb-3 text-base font-black text-text-primary">{"v14 identity deform skeletal rig candidate" /* // locale-allow */}</h2>
                         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
                             {RIG_STATES.map((state) => (
                                 <article key={`v14-${state}`} className="grid place-items-center rounded-2xl border border-[#84DCCF] bg-[#F2FFFC] p-5 shadow-sm">
@@ -369,7 +369,7 @@ export default function FuxieLiveQaPage() {
                 ) : null}
                 {hasV10Model ? (
                     <div className="mb-8">
-                        <h2 className="mb-3 text-base font-black text-text-primary">v10 imagegen coherent rig candidate</h2>
+                        <h2 className="mb-3 text-base font-black text-text-primary">{"v10 imagegen coherent rig candidate" /* // locale-allow */}</h2>
                         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
                             {RIG_STATES.map((state) => (
                                 <article key={`v10-${state}`} className="grid place-items-center rounded-2xl border border-[#BFE8F4] bg-white p-5 shadow-sm">
@@ -381,7 +381,7 @@ export default function FuxieLiveQaPage() {
                     </div>
                 ) : null}
                 <div className="mb-8">
-                    <h2 className="mb-3 text-base font-black text-text-primary">codex imagegen modular source v2, generated parts</h2>
+                    <h2 className="mb-3 text-base font-black text-text-primary">{"codex imagegen modular source v2, generated parts" /* // locale-allow */}</h2>
                     <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-5">
                         {IMAGEGEN_PARTS_V2.map((part) => (
                             <article key={part.src} className="grid place-items-center rounded-2xl border border-[#BFE8F4] bg-white p-4 shadow-sm">
@@ -400,7 +400,7 @@ export default function FuxieLiveQaPage() {
                     </div>
                 </div>
                 <div className="mb-8">
-                    <h2 className="mb-3 text-base font-black text-text-primary">rendered modular source v1, not crops</h2>
+                    <h2 className="mb-3 text-base font-black text-text-primary">{"rendered modular source v1, not crops" /* // locale-allow */}</h2>
                     <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-5">
                         {MODULAR_SOURCE_PARTS.map((part) => (
                             <article key={part.src} className="grid place-items-center rounded-2xl border border-[#BFE8F4] bg-white p-4 shadow-sm">
@@ -419,7 +419,7 @@ export default function FuxieLiveQaPage() {
                     </div>
                 </div>
                 <div className="mb-8">
-                    <h2 className="mb-3 text-base font-black text-text-primary">identity poster comparison</h2>
+                    <h2 className="mb-3 text-base font-black text-text-primary">{"identity poster comparison" /* // locale-allow */}</h2>
                     <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
                         {[
                             { assetKey: 'v6b' as const, label: 'v6b approved baseline' },

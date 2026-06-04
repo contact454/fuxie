@@ -22,6 +22,7 @@ import {
 } from '@/lib/gamification/reading-quest-episode'
 import { renderTexts, renderSchilderCards, renderAnzeigenCards, renderImages } from './reading-text-renderers'
 import { useReadingTranslate } from './use-reading-translate'
+import { useTranslations } from 'next-intl'
 
 // Types, constants, helpers, and renderers extracted to:
 // - ./reading-types.ts
@@ -58,6 +59,7 @@ export function ReadingPlayer({
     textsJson, imagesJson, questions,
 }: ReadingPlayerProps) {
     const router = useRouter()
+    const t = useTranslations('Reading')
     const [phase, setPhase] = useState<Phase>('intro')
     const [warmupStep, setWarmupStep] = useState(0)
     const [currentQuestion, setCurrentQuestion] = useState(0)
@@ -326,7 +328,7 @@ export function ReadingPlayer({
                     style={{ '--level-gradient': cefrColor.css, '--level-shadow': cefrColor.shadow } as React.CSSProperties}
                 >
                     {/* Mascot */}
-                    <FuxieRoleMascot src={FUXIE_3D_ASSETS.librarian} alt="Fuxie reading coach" size={96} motion="coach" />
+                    <FuxieRoleMascot src={FUXIE_3D_ASSETS.librarian} alt={t('altReadingCoach')} size={96} motion="coach" />
 
                     {canUseQuestEpisode && (
                         <div className="mt-4 flex flex-wrap items-center justify-center gap-2">
@@ -391,7 +393,7 @@ export function ReadingPlayer({
                     {/* Reading Strategy Tip */}
                     {teilInfo?.strategy && (
                         <div className={styles.strategyTip}>
-                            <p className={styles.tipIcon}>Chiến lược đọc</p>
+                            <p className={styles.tipIcon}>{t('readingStrategy')}</p>
                             <p className={styles.tipText}>{teilInfo.strategy}</p>
                         </div>
                     )}
@@ -484,15 +486,15 @@ export function ReadingPlayer({
                         ) : (
                             <div className={styles.strategyTip}>
                                 <p className={styles.tipIcon}>💡 Tipp</p>
-                                <p className={styles.tipText}>Đọc lại tiêu đề và nghĩ nhanh các từ em đã biết về chủ đề này.</p>
+                                <p className={styles.tipText}>{t('warmupVocabTip')}</p>
                             </div>
                         )}
 
                         <div className="flex gap-3 mt-6">
                             <button onClick={() => setPhase('exercise')}
-                                className={`${styles.navButton} text-xs`}>Bỏ qua</button>
+                                className={`${styles.navButton} text-xs`}>{t('skip')}</button>
                             <button onClick={() => setWarmupStep(1)}
-                                className={`${styles.navButton} ${styles.primary}`}>Tiếp Bước</button>
+                                className={`${styles.navButton} ${styles.primary}`}>{t('nextStep')}</button>
                         </div>
                     </div>
                 )}
@@ -529,9 +531,9 @@ export function ReadingPlayer({
 
                         <div className="flex gap-3 mt-6">
                             <button onClick={() => setWarmupStep(0)}
-                                className={styles.navButton}>Quay lại</button>
+                                className={styles.navButton}>{t('back')}</button>
                             <button onClick={() => setWarmupStep(2)}
-                                className={`${styles.navButton} ${styles.primary}`}>Tiếp Bước</button>
+                                className={`${styles.navButton} ${styles.primary}`}>{t('nextStep')}</button>
                         </div>
                     </div>
                 )}
@@ -553,7 +555,7 @@ export function ReadingPlayer({
                         {/* Strategy tip */}
                         {teilInfo?.strategy && (
                             <div className={styles.strategyTip}>
-                                <p className={styles.tipIcon}>Chiến lược đọc</p>
+                                <p className={styles.tipIcon}>{t('readingStrategy')}</p>
                                 <p className={styles.tipText}>{teilInfo.strategy}</p>
                             </div>
                         )}
@@ -563,28 +565,28 @@ export function ReadingPlayer({
                             {isBeginner ? (
                                 <>
                                     <div className={styles.warmupChecklist}>
-                                        <span>✓</span><span>Đọc chậm và tập trung.</span>
+                                        <span>✓</span><span>{t('checklistReadSlow')}</span>
                                     </div>
                                     <div className={styles.warmupChecklist}>
-                                        <span>✓</span><span>Gặp từ lạ thì đọc lại cả câu để đoán nghĩa.</span>
+                                        <span>✓</span><span>{t('checklistUnknownWord')}</span>
                                     </div>
                                     <div className={styles.warmupChecklist}>
-                                        <span>✓</span><span>Bài có {questions.length} câu hỏi, cứ làm chậm mà chắc.</span>
+                                        <span>✓</span><span>{t('warmupFocusChecklistSentenceCount', { count: questions.length })}</span>
                                     </div>
                                 </>
                             ) : (
                                 <>
                                     <div className={styles.warmupChecklist}>
-                                        <span>✓</span><span>Đọc lướt toàn bài trước để nắm cấu trúc.</span>
+                                        <span>✓</span><span>{t('checklistReadLust')}</span>
                                     </div>
                                     <div className={styles.warmupChecklist}>
-                                        <span>✓</span><span>Để ý từ tín hiệu và câu chứa ý chính.</span>
+                                        <span>✓</span><span>{t('checklistSignalWords')}</span>
                                     </div>
                                     <div className={styles.warmupChecklist}>
-                                        <span>✓</span><span>Đọc câu hỏi trước khi đọc chi tiết.</span>
+                                        <span>✓</span><span>{t('checklistReadQuestions')}</span>
                                     </div>
                                     <div className={styles.warmupChecklist}>
-                                        <span>✓</span><span>{questions.length} câu hỏi, thời gian gợi ý khoảng {estimatedMinutes} phút.</span>
+                                        <span>✓</span><span>{t('warmupFocusChecklistSentenceCountAdvanced', { count: questions.length, minutes: estimatedMinutes })}</span>
                                     </div>
                                 </>
                             )}
@@ -602,7 +604,7 @@ export function ReadingPlayer({
 
                         <div className="flex gap-3 mt-6">
                             <button onClick={() => setWarmupStep(1)}
-                                className={styles.navButton}>Quay lại</button>
+                                className={styles.navButton}>{t('back')}</button>
                             <button onClick={() => {
                                 setStartTime(Date.now())
                                 setPhase('exercise')
@@ -703,7 +705,7 @@ export function ReadingPlayer({
                                                     <button onClick={() => selectClozeAnswer(gapNum, '')} className={styles.clozeSlotClear}>×</button>
                                                 </span>
                                             ) : (
-                                                <span className={styles.clozeSlotEmpty}>Chọn câu</span>
+                                                <span className={styles.clozeSlotEmpty}>{t('clozeSlotEmpty')}</span>
                                             )}
                                         </span>
                                     )
@@ -713,7 +715,7 @@ export function ReadingPlayer({
                         {/* Sentence bank */}
                         <div className={`${styles.textCard} ${styles.fadeInUp}`} style={{ animationDelay: '0.1s' }}>
                             <div className={styles.textHeader}>
-                                <span className={styles.label}>Ngân hàng câu</span>
+                                <span className={styles.label}>{t('sentenceBank')}</span>
                                 <span className={styles.badge}>{d.sentences.length} câu</span>
                             </div>
                             <div className={styles.textBody}>
@@ -785,7 +787,7 @@ export function ReadingPlayer({
                                                     <button onClick={() => selectClozeAnswer(gapNum, '')} className={styles.clozeSlotClear}>×</button>
                                                 </div>
                                             ) : (
-                                                <div className={styles.clozeSectionEmpty}>Chọn đoạn</div>
+                                                <div className={styles.clozeSectionEmpty}>{t('clozeSectionSlotEmpty')}</div>
                                             )}
                                         </div>
                                     )
@@ -795,7 +797,7 @@ export function ReadingPlayer({
                         {/* Section bank */}
                         <div className={`${styles.textCard} ${styles.fadeInUp}`} style={{ animationDelay: '0.1s' }}>
                             <div className={styles.textHeader}>
-                                <span className={styles.label}>Ngân hàng đoạn</span>
+                                <span className={styles.label}>{t('sectionBank')}</span>
                                 <span className={styles.badge}>{d.sections.length} đoạn</span>
                             </div>
                             <div className={styles.textBody}>
@@ -894,16 +896,16 @@ export function ReadingPlayer({
 
                         <SkillMotivationRail
                             skill="reading"
-                            phaseLabel={`Điền khuyết ${cefrLevel}`}
-                            title="Giữ mắt ở manh mối chính"
-                            message="Hoàn thành từng chỗ trống theo ngữ cảnh. Fuxie chỉ nhắc nhịp, phần đọc vẫn là trung tâm."
-                            progressLabel="Cloze progress"
+                            phaseLabel={t('clozeProgressLabel', { level: cefrLevel })}
+                            title={t('motivationClozeTitle')}
+                            message={t('motivationClozeMessage')}
+                            progressLabel={t('clozeProgress')}
                             progressPercent={clozeProgress}
                             metrics={[
-                                { label: 'Gaps', value: `${Object.keys(clozeAnswers).length}/${clozeGapCount}` },
-                                { label: 'Time', value: formatTime(Math.round((Date.now() - startTime) / 1000)) },
-                                { label: 'Level', value: cefrLevel },
-                                { label: 'Mode', value: 'Reading' },
+                                { label: t('gapsLabel'), value: `${Object.keys(clozeAnswers).length}/${clozeGapCount}` },
+                                { label: t('timeLabel'), value: formatTime(Math.round((Date.now() - startTime) / 1000)) },
+                                { label: t('levelLabel'), value: cefrLevel },
+                                { label: t('modeLabel'), value: 'Reading' },
                             ]}
                             rewards={[
                                 { type: 'xp', label: `+${Math.max(10, clozeGapCount * 2)} XP`, detail: 'Hoàn thành bài đọc' },
@@ -1049,7 +1051,7 @@ export function ReadingPlayer({
                         type="text"
                         value={answers[q.id] || ''}
                         onChange={(e) => selectAnswer(q.id, e.target.value)}
-                        placeholder="Nhập câu trả lời..."
+                        placeholder={t('inputAnswerPlaceholder')}
                         className="w-full p-3.5 rounded-xl border-2 border-gray-200 text-sm focus:border-[#60A8E4] focus:ring-2 focus:ring-[#60A8E4]/20 outline-none transition-all"
                     />
                 )}
@@ -1068,7 +1070,7 @@ export function ReadingPlayer({
                             onClick={() => setCurrentQuestion(c => c - 1)}
                             className={styles.navButton}
                         >
-                            Câu trước
+                            {t('previousQuestion')}
                         </button>
                     )}
                     {currentQuestion < questions.length - 1 ? (
@@ -1076,7 +1078,7 @@ export function ReadingPlayer({
                             onClick={() => setCurrentQuestion(c => c + 1)}
                             className={`${styles.navButton} ${styles.primary}`}
                         >
-                            Câu tiếp theo
+                            {t('nextQuestion')}
                         </button>
                     ) : (
                         <button
@@ -1084,7 +1086,7 @@ export function ReadingPlayer({
                             disabled={!allAnswered || isSubmitting}
                             className={`${styles.navButton} ${styles.submit}`}
                         >
-                            {isSubmitting ? 'Đang chấm...' : `Nộp bài (${Object.keys(answers).length}/${questions.length})`}
+                            {isSubmitting ? t('submitting') : t('submitButton', { answered: Object.keys(answers).length, total: questions.length })}
                         </button>
                     )}
                 </div>
@@ -1120,7 +1122,7 @@ export function ReadingPlayer({
                     <button
                         onClick={() => setShowVocabPanel(v => !v)}
                         className={styles.vocabToggle}
-                        title="Từ đã tra"
+                        title={t('lookedUpWords')}
                     >
                         📖 {vocabList.length > 0 && <span className={styles.vocabBadge}>{vocabList.length}</span>}
                     </button>
@@ -1201,8 +1203,8 @@ export function ReadingPlayer({
                     <SkillMotivationRail
                         skill="reading"
                         phaseLabel={`Câu ${currentQuestion + 1}/${questions.length}`}
-                        title="Đọc theo manh mối, không đoán vội"
-                        message="Tập trung vào câu hỏi hiện tại, dùng dịch nhanh khi cần và giữ nhịp đọc đều đến cuối bài."
+                        title={t('motivationExerciseTitle')}
+                        message={t('motivationReadingMessage')}
                         progressLabel="Question progress"
                         progressPercent={progress}
                         metrics={[
@@ -1232,7 +1234,7 @@ export function ReadingPlayer({
                     >
                         <div className="font-bold text-sm text-gray-900">{tooltip.word}</div>
                         {tooltip.loading ? (
-                            <div className="text-xs text-gray-400 animate-pulse">Übersetzen...</div>
+                            <div className="text-xs text-gray-400 animate-pulse">{t('translate')}</div>
                         ) : (
                             <div className="text-xs text-gray-600">{tooltip.translation}</div>
                         )}
@@ -1243,14 +1245,14 @@ export function ReadingPlayer({
                 {showVocabPanel && (
                     <div className={styles.vocabPanel}>
                         <div className={styles.vocabPanelHeader}>
-                            <h3 className="text-sm font-bold text-gray-900">Từ đã tra</h3>
+                            <h3 className="text-sm font-bold text-gray-900">{t('lookedUpWords')}</h3>
                             <button onClick={() => setShowVocabPanel(false)} className="text-gray-400 hover:text-gray-600">
                                 ✕
                             </button>
                         </div>
                         {vocabList.length === 0 ? (
                             <p className="text-xs text-gray-400 p-4 text-center">
-                                Bấm vào từ trong bài để lưu nghĩa ở đây.
+                                {t('vocabPanelEmpty')}
                             </p>
                         ) : (
                             <div className={styles.vocabPanelList}>
@@ -1350,7 +1352,7 @@ export function ReadingPlayer({
 
                 {/* Gap-by-gap feedback */}
                 <div className="mt-6 space-y-3">
-                    <h3 className="text-base font-bold text-gray-800 mb-3">Tổng kết chỗ trống</h3>
+                    <h3 className="text-base font-bold text-gray-800 mb-3">{t('summaryGaps')}</h3>
                     {gaps.map((gap) => {
                         const { userLabel, correctLabel } = getAnswerLabel(gap)
                         return (
@@ -1360,12 +1362,12 @@ export function ReadingPlayer({
                                 <div className={styles.clozeResultContent}>
                                     {gap.isCorrect ? (
                                         <div>
-                                            <span className="font-semibold text-green-800">Đúng: {userLabel}</span>
+                                            <span className="font-semibold text-green-800">{t('correct')}: {userLabel}</span>
                                         </div>
                                     ) : (
                                         <div>
-                                            <div><span className="font-semibold text-red-700">Câu em chọn:</span> {userLabel || '(trống)'}</div>
-                                            <div className="mt-1"><span className="font-semibold text-green-700">Đáp án đúng:</span> {correctLabel}</div>
+                                            <div><span className="font-semibold text-red-700">{t('yourChoice')}</span> {userLabel || t('empty')}</div>
+                                            <div className="mt-1"><span className="font-semibold text-green-700">{t('correctAnswer')}</span> {correctLabel}</div>
                                         </div>
                                     )}
                                 </div>
@@ -1376,7 +1378,7 @@ export function ReadingPlayer({
 
                 {/* Tips */}
                 <div className={`mt-6 ${styles.introCard}`}>
-                    <h3 className="text-sm font-bold text-gray-800 mb-3">Bước tiếp theo</h3>
+                    <h3 className="text-sm font-bold text-gray-800 mb-3">{t('nextAction')}</h3>
                     <ul className="space-y-2">
                         {tips.map((tip, i) => (
                             <li key={i} className="text-sm text-gray-600 flex items-start gap-2">
@@ -1389,7 +1391,7 @@ export function ReadingPlayer({
                 {/* Action buttons */}
                 <div className="flex gap-3 mt-6 justify-center">
                     <button onClick={() => router.push('/reading')} className={styles.navButton}>
-                        Về danh sách
+                        {t('backToList')}
                     </button>
                     <button onClick={() => {
                         setClozeAnswers({})
@@ -1478,15 +1480,15 @@ export function ReadingPlayer({
                     <div className="flex justify-center gap-4 mt-5">
                         <div className="px-4 py-2.5 bg-gray-50 rounded-xl text-center">
                             <p className="text-lg font-bold text-gray-900">⏱️ {formatTime(results.timeTaken)}</p>
-                            <p className="text-xs text-gray-500">Thời gian</p>
+                            <p className="text-xs text-gray-500">{t('time')}</p>
                         </div>
                         <div className="px-4 py-2.5 bg-gray-50 rounded-xl text-center">
                             <p className="text-lg font-bold text-gray-900">📊 {percentage}%</p>
-                            <p className="text-xs text-gray-500">Kết quả</p>
+                            <p className="text-xs text-gray-500">{t('result')}</p>
                         </div>
                         <div className="px-4 py-2.5 bg-gray-50 rounded-xl text-center">
                             <p className="text-lg font-bold text-gray-900">✅ {score}</p>
-                            <p className="text-xs text-gray-500">Đúng</p>
+                            <p className="text-xs text-gray-500">{t('correct')}</p>
                         </div>
                     </div>
                 </div>
@@ -1533,7 +1535,7 @@ export function ReadingPlayer({
                 {/* ── Question Breakdown ── */}
                 <div className="mt-5">
                     <div className={styles.questionPanel}>
-                        <h3 className="text-sm font-bold text-gray-700 mb-3">Tổng kết câu trả lời</h3>
+                        <h3 className="text-sm font-bold text-gray-700 mb-3">{t('summaryAnswers')}</h3>
                         <div className="space-y-2.5">
                             {questionResults.map((qr) => (
                                 <button
@@ -1554,10 +1556,10 @@ export function ReadingPlayer({
                                             ) : (
                                                 <>
                                                     <p className="text-xs text-red-500 mt-1">
-                                                        Câu em chọn: <span className="font-medium">{qr.userAnswer}</span>
+                                                        {t('yourChoice')} <span className="font-medium">{qr.userAnswer}</span>
                                                     </p>
                                                     <p className="text-xs text-green-600 mt-0.5">
-                                                        Đáp án đúng: <span className="font-medium">{qr.correctAnswer}</span>
+                                                        {t('correctAnswer')} <span className="font-medium">{qr.correctAnswer}</span>
                                                     </p>
                                                 </>
                                             )}
@@ -1565,12 +1567,12 @@ export function ReadingPlayer({
                                             {/* Expanded explanation */}
                                             {expandedResult === qr.questionId && qr.explanation && (
                                                 <div className={styles.explanation}>
-                                                    <p className="font-bold text-yellow-700 mb-1">Giải thích</p>
+                                                    <p className="font-bold text-yellow-700 mb-1">{t('explanation')}</p>
                                                     {typeof qr.explanation === 'object' && qr.explanation !== null ? (
                                                         <>
                                                             {(qr.explanation as ExplanationData).key_evidence && (
                                                                 <p className="mt-1">
-                                                                     <span className="font-semibold">Dẫn chứng chính:</span>{' '}
+                                                                     <span className="font-semibold">{t('mainEvidence')}</span>{' '}
                                                                     <span className={styles.evidenceHighlight}>{(qr.explanation as ExplanationData).key_evidence}</span>
                                                                 </p>
                                                             )}
@@ -1579,7 +1581,7 @@ export function ReadingPlayer({
                                                             )}
                                                             {(qr.explanation as ExplanationData).vocabulary_help && (
                                                                 <div className="mt-2 pt-2 border-t border-yellow-200">
-                                                                    <p className="font-semibold text-yellow-700">Từ vựng</p>
+                                                                    <p className="font-semibold text-yellow-700">{t('vocabulary')}</p>
                                                                     {Object.entries((qr.explanation as ExplanationData).vocabulary_help!).map(([word, meaning]) => (
                                                                         <p key={word} className="mt-0.5">
                                                                             <span className="font-medium">{word}</span> — {meaning}
@@ -1611,9 +1613,9 @@ export function ReadingPlayer({
                 {vocabList.length > 0 && (
                     <div className="mt-5">
                         <div className={styles.questionPanel}>
-                            <h3 className="text-sm font-bold text-gray-700 mb-3">Từ đã tra</h3>
+                            <h3 className="text-sm font-bold text-gray-700 mb-3">{t('lookedUpWords')}</h3>
                             <p className="text-xs text-gray-500 mb-3">
-                                Em đã tra {vocabList.length} từ trong lúc đọc. Hãy ôn lại để nhớ lâu hơn.
+                                {t('vocabReviewedCount', { count: vocabList.length })}
                             </p>
                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                                 {vocabList.map((v, i) => (
@@ -1630,20 +1632,20 @@ export function ReadingPlayer({
                 {/* ── Post-Reading Review: Performance Insights ── */}
                 <div className="mt-5">
                     <div className={styles.questionPanel}>
-                        <h3 className="text-sm font-bold text-gray-700 mb-3">Phân tích bài đọc</h3>
+                        <h3 className="text-sm font-bold text-gray-700 mb-3">{t('readingAnalysis')}</h3>
                         <div className="space-y-3">
                             {/* Strengths */}
                             {percentage >= 60 && (
                                 <div className={styles.insightCard} style={{ borderLeftColor: 'var(--color-text-success)' }}>
                                     <span className="text-sm">💪</span>
                                     <div>
-                                        <p className="text-xs font-bold text-green-700">Điểm mạnh</p>
+                                        <p className="text-xs font-bold text-green-700">{t('strengths')}</p>
                                         <p className="text-xs text-gray-600">
                                             {percentage >= 90
-                                                ? 'Em nắm ý chính rất tốt.'
+                                                ? t('strengthHigh')
                                                 : percentage >= 70
-                                                    ? 'Em hiểu phần lớn thông tin quan trọng.'
-                                                    : 'Em đã có nền hiểu bài, cố gắng luyện thêm nhé.'}
+                                                    ? t('strengthMedium')
+                                                    : t('strengthLow')}
                                         </p>
                                     </div>
                                 </div>
@@ -1653,13 +1655,13 @@ export function ReadingPlayer({
                                 <div className={styles.insightCard} style={{ borderLeftColor: 'var(--color-fuxie-energy)' }}>
                                     <span className="text-sm">🎯</span>
                                     <div>
-                                        <p className="text-xs font-bold text-orange-700">Cần cải thiện</p>
+                                        <p className="text-xs font-bold text-orange-700">{t('needsImprovement')}</p>
                                         <p className="text-xs text-gray-600">
                                             {percentage < 50
-                                                ? 'Đọc lại chậm hơn và chú ý từ khóa.'
+                                                ? t('improvementLow')
                                                 : percentage < 70
-                                                    ? 'Tập trung thêm vào chi tiết và mệnh đề phụ.'
-                                                    : 'Để đạt điểm cao hơn, kiểm tra cả thông tin ngụ ý.'}
+                                                    ? t('improvementMedium')
+                                                    : t('improvementHigh')}
                                         </p>
                                     </div>
                                 </div>
@@ -1669,11 +1671,11 @@ export function ReadingPlayer({
                                 <div className={styles.insightCard} style={{ borderLeftColor: 'var(--color-cefr-b2)' }}>
                                     <span className="text-sm">📚</span>
                                     <div>
-                                        <p className="text-xs font-bold text-indigo-700">Từ vựng</p>
+                                        <p className="text-xs font-bold text-indigo-700">{t('vocabulary')}</p>
                                         <p className="text-xs text-gray-600">
                                             {vocabList.length <= 3
-                                                ? `Em chỉ cần tra ${vocabList.length} từ, vốn từ đang ổn.`
-                                                : `Em đã tra ${vocabList.length} từ. Nên ôn lại đều để đọc nhanh hơn.`}
+                                                ? t('vocabInsightLow', { count: vocabList.length })
+                                                : t('vocabInsightHigh', { count: vocabList.length })}
                                         </p>
                                     </div>
                                 </div>
@@ -1682,13 +1684,13 @@ export function ReadingPlayer({
                             <div className={styles.insightCard} style={{ borderLeftColor: 'var(--color-cefr-c1)' }}>
                                 <span className="text-sm">⏱️</span>
                                 <div>
-                                        <p className="text-xs font-bold text-purple-700">Tốc độ</p>
+                                    <p className="text-xs font-bold text-purple-700">{t('speed')}</p>
                                     <p className="text-xs text-gray-600">
                                         {results.timeTaken < estimatedMinutes * 45
-                                            ? 'Em đọc khá nhanh. Lần sau hãy dành thêm thời gian cho chi tiết.'
+                                            ? t('speedInsightFast')
                                             : results.timeTaken < estimatedMinutes * 90
-                                                ? 'Tốc độ ổn, đủ thời gian để xử lý bài.'
-                                                : 'Em dành nhiều thời gian hơn, điều này hoàn toàn ổn khi đang luyện.'}
+                                                ? t('speedInsightNormal')
+                                                : t('speedInsightSlow')}
                                     </p>
                                 </div>
                             </div>
@@ -1703,7 +1705,7 @@ export function ReadingPlayer({
                             <span className="text-2xl">💡</span>
                             <div>
                                 <p className="text-sm font-bold text-gray-900 mb-1">
-                                    {isBeginner ? 'Gợi ý học tiếp' : 'Khuyến nghị'}
+                                    {isBeginner ? t('studyTipTitleBeginner') : t('studyTipTitleAdvanced')}
                                 </p>
                                 <p className="text-sm text-gray-700">
                                     {(POST_READING_TIPS[cefrLevel] ?? POST_READING_TIPS.A1!)[Math.floor(Math.random() * 3)]}
@@ -1719,13 +1721,13 @@ export function ReadingPlayer({
                         onClick={() => router.push('/reading')}
                         className={styles.navButton}
                     >
-                        Về danh sách
+                        {t('backToList')}
                     </button>
                     <button
                         onClick={resetExercise}
                         className={`${styles.navButton} ${styles.primary}`}
                     >
-                        Luyện lại
+                        {t('readAgain')}
                     </button>
                 </div>
             </div>

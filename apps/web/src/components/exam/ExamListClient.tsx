@@ -54,6 +54,7 @@ const getSkillIcon = (skillName: string) => {
 
 export function ExamListClient() {
     const t = useTranslations('Gamification')
+    const tExam = useTranslations('Exam')
     const [exams, setExams] = useState<ExamEntry[]>([])
     const [loading, setLoading] = useState(true)
     const [filterLevel, setFilterLevel] = useState<string>('Tất cả')
@@ -139,7 +140,7 @@ export function ExamListClient() {
             <QuestProgressHero
                 variant="exam"
                 eyebrow="Exam gate"
-                title="Thử phòng thi, mở khóa tự tin"
+                title={tExam('list.title')}
                 message="Chọn đề theo cấp độ, luyện với thời gian thật và theo dõi mức sẵn sàng trước khi bước vào Goethe/telc/OESD."
                 stats={[
                     { label: 'Đề đang mở', value: String(exams.length), detail: selectedLevelLabel },
@@ -205,14 +206,14 @@ export function ExamListClient() {
                     <FuxieCoach
                         role="locked"
                         eyebrow="Exam gate"
-                        title="Cấp độ này chưa mở đề thi"
+                        title={tExam('list.subtitle')}
                         message={t('examEmptyTip')}
                         mascotSrc={FUXIE_3D_ASSETS.examGuide}
                         className="min-h-[220px]"
                     />
                     <FuxiePanel className="rounded-3xl border-dashed border-slate-200 p-5">
-                        <p className="text-xs font-black uppercase tracking-wide text-text-brand">Next best action</p>
-                        <h3 className="mt-2 text-xl font-black text-slate-950">Rèn giũa kỹ năng trước khi thi cử</h3>
+                        <p className="text-xs font-black uppercase tracking-wide text-text-brand">{tExam('list.nextBestAction')}</p>
+                        <h3 className="mt-2 text-xl font-black text-slate-950">{tExam('list.focusDescription')}</h3>
                         <p className="mt-2 text-sm font-medium leading-relaxed text-slate-500">
                             Khi chưa có đề ở bộ lọc này, màn hình nên giữ động lực học thay vì báo lỗi dữ liệu.
                         </p>
@@ -327,11 +328,11 @@ export function ExamListClient() {
                                                                             <span className={`text-xs font-bold ${exam.bestAttempt.passed ? 'text-emerald-700' : 'text-red-600'}`}>
                                                                                 {exam.bestAttempt.percentScore}%
                                                                             </span>
-                                                                            <span className="text-xs text-gray-400 font-medium">Lần tốt nhất</span>
+                                                                            <span className="text-xs text-gray-400 font-medium">{tExam('list.bestAttempt')}</span>
                                                                         </div>
                                                                     </div>
                                                                 ) : (
-                                                                    <span className="text-xs font-medium text-gray-400">Chưa làm lần nào</span>
+                                                                    <span className="text-xs font-medium text-gray-400">{tExam('list.notAttempted')}</span>
                                                                 )}
                                                                 
                                                                 <Link

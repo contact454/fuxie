@@ -23,6 +23,7 @@
  */
 
 import { useEffect } from 'react'
+import { useTranslations } from 'next-intl'
 
 import { StateShell } from '@/components/gamification/state-shell'
 
@@ -32,6 +33,7 @@ interface ReviewErrorProps {
 }
 
 export default function ReviewError({ error, reset }: ReviewErrorProps) {
+    const t = useTranslations('SurfaceStates')
     useEffect(() => {
         console.error('[review] segment error:', error)
     }, [error])
@@ -41,10 +43,10 @@ export default function ReviewError({ error, reset }: ReviewErrorProps) {
             <StateShell
                 surfaceId="review"
                 state="error"
-                title="Không tải được Ôn tập"
-                message="Đã có lỗi khi tải dữ liệu ôn tập. Bạn thử lại nhé, dữ liệu trí nhớ vẫn được giữ nguyên trên máy chủ."
+                title={t('review.errorTitle')}
+                message={t('review.errorMessage')}
                 primaryCta={{
-                    label: 'Thử lại',
+                    label: t('retryLabel'),
                     onClick: reset,
                 }}
             />

@@ -120,7 +120,7 @@ describe('RoleplayStage — learner avatar placeholder', () => {
         // `role="img"` exposes the placeholder to assistive tech as a single
         // node (decorative initials instead of a real photo).
         expect(html).toMatch(
-            /data-role="roleplay-avatar"[^>]*role="img"[^>]*aria-label="Học viên: An Nguyen"/,
+            /data-role="roleplay-avatar"[^>]*role="img"[^>]*aria-label="Học viên: An Nguyen"/, // locale-allow
         )
     })
 
@@ -145,7 +145,7 @@ describe('RoleplayStage — learner avatar placeholder', () => {
 describe('RoleplayStage — center children slot', () => {
     it('renders optional centered children without breaking the row contract', () => {
         const html = render({
-            children: <span data-testid="scenario-chip">A1 cafe order</span>,
+            children: <span data-testid="scenario-chip">A1 cafe order</span>, // locale-allow
         })
         expect(html).toContain('data-testid="scenario-chip"')
         // The row container still carries the same flex/justify-between

@@ -63,7 +63,7 @@ export interface StateShellAction {
     /** Localized label, already passed through `t()` by the caller. */
     label: string
     /** Click handler. Mutually exclusive with `href`. */
-    onClick?: () => void | Promise<void>
+    onClick?: () => void | Promise<void> // locale-allow
     /** Internal navigation target. Mutually exclusive with `onClick`. */
     href?: string
 }
@@ -220,7 +220,7 @@ export function createRetryGuard(): RetryGuard {
 
     const dropExpired = (now: number) => {
         const cutoff = now - RETRY_WINDOW_MS
-        while (attempts.length > 0 && attempts[0]! < cutoff) {
+        while (attempts.length > 0 && attempts[0]! < cutoff) { // locale-allow
             attempts.shift()
         }
     }
@@ -293,7 +293,7 @@ export function createRetryGuard(): RetryGuard {
  */
 export function useRetryGuard(): {
     snapshot: RetryGuardSnapshot
-    attempt: (callback?: () => void | Promise<void>) => void
+    attempt: (callback?: () => void | Promise<void>) => void // locale-allow
 } {
     const guardRef = useRef<RetryGuard | null>(null)
     if (guardRef.current === null) {
@@ -318,7 +318,7 @@ export function useRetryGuard(): {
     }, [snapshot.unblockAt, guard])
 
     const attempt = useCallback(
-        (callback?: () => void | Promise<void>) => {
+        (callback?: () => void | Promise<void>) => { // locale-allow
             const next = guard.recordAttempt(Date.now())
             setSnapshot(next)
             if (!next.blocked && callback) {
