@@ -90,7 +90,7 @@ export function MobileShell({ dailyGoal: initialDailyGoal, children }: MobileShe
                     </svg>
                 </button>
 
-                <MeasuredLink href="/dashboard" flow="nav.mobile.logo" source="dashboard" className="mobile-header-logo">
+                <MeasuredLink href="/dashboard" flow="nav.mobile.logo" source="dashboard" className="mobile-header-logo focus-visible:outline-[var(--fuxie-blue-200)]">
                     <Image
                         src={getFuxieMascotSrc('authWelcomer')}
                         alt="Fuxie"
@@ -105,7 +105,7 @@ export function MobileShell({ dailyGoal: initialDailyGoal, children }: MobileShe
                 </MeasuredLink>
 
                 {dailyGoal && (
-                    <span className="rounded-full bg-[#ffb703] px-3 py-1 text-xs font-black text-[#173b56] shadow-md shadow-sky-950/20">
+                    <span className="rounded-full bg-[var(--fuxie-blue-500)] px-3 py-1 text-xs font-black text-white shadow-md shadow-sky-950/20">
                         {dailyGoal.xpEarned} XP
                     </span>
                 )}
@@ -159,9 +159,9 @@ export function MobileShell({ dailyGoal: initialDailyGoal, children }: MobileShe
                             href={item.href}
                             flow="nav.mobile.bottom"
                             source={item.labelKey}
-                            className={`bottom-nav-item ${
+                            className={`bottom-nav-item focus-visible:outline-[var(--fuxie-blue-200)] ${
                                 isActive 
-                                    ? 'bottom-nav-item-active bg-[#2ec4b6] text-white rounded-xl' 
+                                    ? 'bottom-nav-item-active bg-[#2ec4b6] text-[var(--fuxie-blue-900)] rounded-xl' 
                                     : 'text-white/80 hover:bg-white/10 hover:text-white'
                             }`}
                         >

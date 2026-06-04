@@ -481,6 +481,11 @@ body {
   background-color: rgba(255, 255, 255, 0.1);
 }
 
+.mobile-header-hamburger:focus-visible {
+  outline: 2px solid var(--fuxie-blue-200);
+  outline-offset: 2px;
+}
+
 .mobile-header-logo {
   display: flex;
   align-items: center;
@@ -494,7 +499,8 @@ body {
   gap: 4px;
   padding: 4px 10px;
   border-radius: 20px;
-  background: #ffb703;
+  background: var(--fuxie-blue-500);
+  color: #ffffff;
 }
 
 /* Sidebar backdrop overlay */
@@ -551,6 +557,11 @@ body {
 
 .sidebar-drawer-close:hover {
   background-color: #f3f4f6;
+}
+
+.sidebar-drawer-close:focus-visible {
+  outline: 2px solid var(--fuxie-blue-700);
+  outline-offset: 2px;
 }
 
 /* Mobile main content — top padding for header, bottom for nav */
@@ -627,7 +638,7 @@ body {
 }
 
 .bottom-nav-item-active .bottom-nav-label {
-  color: #ffffff;
+  color: currentColor;
   font-weight: 600;
 }
 

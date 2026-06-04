@@ -7,6 +7,7 @@ import { ExerciseRenderer, FeedbackToast } from '@/components/grammar/ExerciseRe
 import type { TheoryBlock, GrammarExercise } from '@/components/grammar/types'
 import { RewardPreview, type RewardPreviewItem } from '@/components/gamification/quest-visuals'
 import { FuxieBadge, FuxieProgressBar, fuxieButtonClass } from '@/components/ui/fuxie-ui'
+import { ConfirmExitDialog } from '@/components/ui/confirm-exit-dialog'
 import { trackClientAnalyticsEvent } from '@/lib/analytics/client-events'
 import {
     buildGrammarQuestEpisode,
@@ -117,6 +118,7 @@ export function LessonPlayer({
     theoryBlocks, exercises, topicSlug,
 }: LessonPlayerProps) {
     const t = useTranslations('Grammar')
+    const tUi = useTranslations('UI')
     const confettiTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null)
     const [steps] = useState<Step[]>(() => {
         const all: Step[] = [{ type: 'hero' }]
@@ -138,6 +140,7 @@ export function LessonPlayer({
     const [progressResult, setProgressResult] = useState<GrammarProgressResponse | null>(null)
     const [syncError, setSyncError] = useState(false)
     const [isSaving, setIsSaving] = useState(false)
+    const [showExitDialog, setShowExitDialog] = useState(false)
     const trackedCheckpoints = useRef<Set<string>>(new Set())
     const completionTracked = useRef(false)
 
@@ -353,16 +356,39 @@ export function LessonPlayer({
         return `${m} ${t('minutes')} ${s2 < 10 ? '0' : ''}${s2} ${t('seconds')}`
     }
 
+    const exitToTopic = useCallback(() => {
+        window.location.href = `/grammar/${topicSlug}`
+    }, [topicSlug])
+
+    const handleExitRequest = useCallback(() => {
+        if (currentStep.type !== 'hero' && currentStep.type !== 'results') {
+            setShowExitDialog(true)
+            return
+        }
+
+        exitToTopic()
+    }, [currentStep.type, exitToTopic])
+
     const lessonTypeLabel = lessonType === 'E' ? t('intro') : lessonType === 'V' ? t('deepPractice') : t('application')
     const lessonTypeEmoji = lessonType === 'E' ? '📖' : lessonType === 'V' ? '🔬' : '🎯'
 
     return (
         <div className={s.lessonPlayer} style={{ background: '#F8FAFC' }}>
+            <ConfirmExitDialog
+                open={showExitDialog}
+                title={tUi('quitSessionTitle')}
+                description={tUi('quitSessionDescription')}
+                stayLabel={tUi('stayInLesson')}
+                exitLabel={tUi('exitLesson')}
+                ariaLabel={tUi('confirmExitAria')}
+                onStay={() => setShowExitDialog(false)}
+                onExit={exitToTopic}
+            />
             {/* Progress Bar */}
             {currentStep.type !== 'hero' && currentStep.type !== 'results' && (
                 <div className={s.progressBarWrap}>
                     <div className={s.progressBarInner}>
-                        <button className={s.progressBarClose} onClick={() => window.location.href = `/grammar/${topicSlug}`}>✕</button>
+                        <button className={s.progressBarClose} onClick={handleExitRequest} title={tUi('quitSessionTitle')}>✕</button>
                         <div className={s.progressBarTrack}>
                             <div className={s.progressBarFill} style={{ width: `${progress}%` }} />
                         </div>

@@ -38,7 +38,12 @@
     "whatDoesItMean": "What does",
     "inGerman": "in German",
     "courseReviewEmpty": "General review - no new content",
-    "studyByTheme": "Choose a theme to start your vocabulary journey."
+    "studyByTheme": "Choose a theme to start your vocabulary journey.",
+    "confirmExitAria": "Confirm leaving the learning session",
+    "stayInLesson": "Stay",
+    "exitLesson": "Leave",
+    "quitSessionTitle": "Leave this session?",
+    "quitSessionDescription": "Progress, hearts, and XP from this session may not be saved yet. Stay if you still want to finish the challenge."
   },
   "Gamification": {
     "dashboardEmpty": "No Fucoin transactions yet. Conquer a challenge to light up your chest.",
@@ -108,6 +113,39 @@
     "speakingEmptyDesc": "Speaking content is being prepared...",
     "newBadge": "New"
   },
+  "WritingPlayer": {
+    "promptHeader": "Prompt",
+    "grafikLabel": "Chart",
+    "contentPointsHeader": "Points to cover:",
+    "draftPlaceholder": "Write your text here...",
+    "submitLabel": "Submit",
+    "articleLabel": "Article",
+    "vortragLabel": "Presentation",
+    "estimatedLevelLabel": "Estimated level:",
+    "receiptTitle": "Writing Quest Receipt",
+    "suggestionsLabel": "💡 Suggestions:",
+    "altWritingCoach": "Fuxie writing coach",
+    "quitTitle": "Leave this writing task?",
+    "quitDescription": "Your current draft has not been submitted. If you leave now, the text you wrote may be lost.",
+    "quitStay": "Keep writing",
+    "quitExit": "Leave writing"
+  },
+  "Chat": {
+    "videoCall": {
+      "summary": "Call Summary 📝",
+      "pronunciationFeedback": "Pronunciation feedback",
+      "noErrorsFeedback": "Great! You did not have any major pronunciation errors.",
+      "feedbackUnavailable": "Pronunciation feedback could not be generated yet. The call data was kept; please try again later.",
+      "savingMemory": "Saving memory...",
+      "complete": "Complete",
+      "connecting": "Connecting...",
+      "aiSpeaking": "Fuxie is speaking...",
+      "aiListening": "Fuxie is listening...",
+      "endCall": "End call",
+      "scenarioMissions": "Scenario missions",
+      "connectError": "Could not connect to the Live API"
+    }
+  },
   "Grammar": {
     "intro": "Introduction",
     "deepPractice": "Deep Practice",
@@ -115,6 +153,13 @@
     "topicsCompleted": "topics completed",
     "notDone": "Not started",
     "lessons": "lessons",
-    "noTopicsForLevel": "No topics available for {level}."
+    "noTopicsForLevel": "No topics available for {level}.",
+    "aiGrading": "AI is grading...",
+    "gradingUnavailableTitle": "This answer could not be graded yet",
+    "gradingUnavailableDetail": "The connection or AI grader may be slow. Your answer has not been counted wrong; please try again.",
+    "gradingRetry": "Try grading again"
+  },
+  "Listening": {
+    "speedDuration": "Recommended speed {speed}x · Duration {time}"
   }
 }

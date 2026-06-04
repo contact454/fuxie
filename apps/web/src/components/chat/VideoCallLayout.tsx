@@ -18,6 +18,7 @@ export function VideoCallLayout({ onEndCall, level, scenarioId }: VideoCallLayou
     const [showSummary, setShowSummary] = useState(false)
     const [isSummarizing, setIsSummarizing] = useState(false)
     const [pronunciationErrors, setPronunciationErrors] = useState<any[]>([])
+    const [pronunciationFeedbackStatus, setPronunciationFeedbackStatus] = useState<'pending' | 'ready' | 'unavailable'>('pending')
     
     const MAX_CALL_DURATION_SEC = 300 // 5 minutes
     const [timeLeft, setTimeLeft] = useState(MAX_CALL_DURATION_SEC)
@@ -61,14 +62,28 @@ export function VideoCallLayout({ onEndCall, level, scenarioId }: VideoCallLayou
         disconnect()
         setShowSummary(true)
         setIsSummarizing(true)
+        setPronunciationFeedbackStatus('pending')
         
         // Extract pronunciation feedback from transcript JSON blocks
         try {
             const matches = fullTranscript.match(/"pronunciation_feedback"\s*:\s*(\[.*?\])/s)
             if (matches && matches[1]) {
-                setPronunciationErrors(JSON.parse(matches[1]))
+                const parsed = JSON.parse(matches[1])
+                if (Array.isArray(parsed)) {
+                    setPronunciationErrors(parsed)
+                    setPronunciationFeedbackStatus('ready')
+                } else {
+                    setPronunciationErrors([])
+                    setPronunciationFeedbackStatus('unavailable')
+                }
+            } else {
+                setPronunciationErrors([])
+                setPronunciationFeedbackStatus('unavailable')
             }
-        } catch (e) {}
+        } catch (e) {
+            setPronunciationErrors([])
+            setPronunciationFeedbackStatus('unavailable')
+        }
 
         // Save memory
         try {
@@ -91,7 +106,9 @@ export function VideoCallLayout({ onEndCall, level, scenarioId }: VideoCallLayou
                 
                 <div className="bg-gray-800 rounded-xl p-6 w-full max-w-2xl mb-8 text-left">
                     <h3 className="text-xl font-semibold mb-4 text-blue-400">{t('videoCall.pronunciationFeedback')}</h3>
-                    {pronunciationErrors.length > 0 ? (
+                    {pronunciationFeedbackStatus === 'unavailable' ? (
+                        <p className="text-amber-200">{t('videoCall.feedbackUnavailable')}</p>
+                    ) : pronunciationErrors.length > 0 ? (
                         <ul className="space-y-4">
                             {pronunciationErrors.map((err, idx) => (
                                 <li key={idx} className="bg-gray-700/50 p-4 rounded-lg">

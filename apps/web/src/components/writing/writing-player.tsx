@@ -5,6 +5,7 @@ import { useRouter } from 'next/navigation'
 import { useTranslations } from 'next-intl'
 import { FUXIE_3D_ASSETS, FuxieRoleMascot, RewardPreview, SkillMotivationRail, type RewardPreviewItem } from '@/components/gamification/quest-visuals'
 import { FuxieProgressBar } from '@/components/ui/fuxie-ui'
+import { ConfirmExitDialog } from '@/components/ui/confirm-exit-dialog'
 import { trackClientAnalyticsEvent } from '@/lib/analytics/client-events'
 import {
     buildWritingQuestEpisode,
@@ -262,6 +263,7 @@ export function WritingPlayer(props: WritingPlayerProps) {
     const [timeElapsed, setTimeElapsed] = useState(0)
     const [feedback, setFeedback] = useState<AiFeedback | null>(null)
     const [error, setError] = useState<string | null>(null)
+    const [showExitDialog, setShowExitDialog] = useState(false)
     const timerRef = useRef<ReturnType<typeof setInterval> | null>(null)
     const textareaRef = useRef<HTMLTextAreaElement>(null)
     const isMountedRef = useRef(true)
@@ -272,6 +274,9 @@ export function WritingPlayer(props: WritingPlayerProps) {
     const isFormComplete = isFormular
         ? Object.keys(formValues).length >= (props.formFields?.length ?? 0) && Object.values(formValues).every(v => v.trim().length > 0)
         : wordCount >= props.minWords
+    const hasUnsavedDraft = isFormular
+        ? Object.values(formValues).some(value => value.trim().length > 0)
+        : text.trim().length > 0
     const completedFormFields = isFormular
         ? Object.values(formValues).filter(value => value.trim().length > 0).length
         : 0
@@ -345,6 +350,19 @@ export function WritingPlayer(props: WritingPlayerProps) {
             },
         })
     }, [activeCheckpoint.id, phase, props.cefrLevel, props.exerciseId, questEpisode.episodeId, questEpisode.checkpoints.length])
+
+    const exitToWritingList = useCallback(() => {
+        router.push('/writing')
+    }, [router])
+
+    const handleExitRequest = useCallback(() => {
+        if (phase === 'writing' && hasUnsavedDraft) {
+            setShowExitDialog(true)
+            return
+        }
+
+        exitToWritingList()
+    }, [exitToWritingList, hasUnsavedDraft, phase])
 
     // ─── Submit ─────────────────────────────────────
     const handleSubmit = useCallback(async () => {
@@ -567,9 +585,19 @@ export function WritingPlayer(props: WritingPlayerProps) {
     // ═══ WRITING PHASE ═══
     return (
         <div>
+            <ConfirmExitDialog
+                open={showExitDialog}
+                title={t('quitTitle')}
+                description={t('quitDescription')}
+                stayLabel={t('quitStay')}
+                exitLabel={t('quitExit')}
+                ariaLabel={t('quitTitle')}
+                onStay={() => setShowExitDialog(false)}
+                onExit={exitToWritingList}
+            />
             {/* ─── Top Bar ─── */}
             <div className="flex items-center gap-3 mb-6">
-                <button onClick={() => router.push('/writing')} className="w-9 h-9 rounded-xl bg-gray-100 flex items-center justify-center text-gray-500 hover:bg-gray-200 transition-colors">
+                <button onClick={handleExitRequest} className="w-9 h-9 rounded-xl bg-gray-100 flex items-center justify-center text-gray-500 hover:bg-gray-200 transition-colors" title={t('quitTitle')}>
                     ✕
                 </button>
                 <div className="flex-1 h-2.5 bg-gray-100 rounded-full overflow-hidden">

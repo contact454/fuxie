@@ -107,15 +107,16 @@ export default async function SessionPage({
     const params = await searchParams
     const fixtureLevel = (params.level?.toUpperCase() || 'A1') as CefrLevel
 
-    if (isSessionVisualQaFixture(params) && params.state === 'success') {
+    if (isSessionVisualQaFixture(params)) {
+        const isSuccess = params.state === 'success'
         return (
-            <SessionRouteShell visualState="success">
+            <SessionRouteShell visualState={isSuccess ? 'success' : 'default'}>
                 <SessionPlayerDynamic
                     level={fixtureLevel}
                     initialItems={SESSION_VISUAL_QA_ITEMS}
-                    initialFinished
-                    initialResults={SESSION_VISUAL_QA_RESULTS}
-                    initialScore={45}
+                    initialFinished={isSuccess}
+                    initialResults={isSuccess ? SESSION_VISUAL_QA_RESULTS : []}
+                    initialScore={isSuccess ? 45 : 0}
                     initialHearts={5}
                 />
             </SessionRouteShell>

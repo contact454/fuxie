@@ -35,7 +35,7 @@ export function exerciseOptionClass({
     className?: string
 }) {
     return fx(
-        'min-h-[64px] rounded-2xl border-2 px-4 py-4 text-center text-base font-bold transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#60A8E4]/35 disabled:cursor-default sm:px-5',
+        'min-h-[64px] min-w-0 whitespace-normal rounded-2xl border-2 px-4 py-4 text-center text-base font-bold transition-all [overflow-wrap:anywhere] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#60A8E4]/35 disabled:cursor-default sm:px-5',
         revealed
             ? selected
                 ? 'border-[#60A8E4] bg-[#EEF7FF] text-text-brand shadow-md shadow-sky-900/10 ring-2 ring-[#60A8E4]/20'
@@ -57,7 +57,7 @@ export function exercisePairCardClass({
     className?: string
 }) {
     return fx(
-        'w-full min-h-[54px] rounded-2xl border-2 px-4 py-3.5 text-sm font-bold transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#60A8E4]/35 disabled:cursor-default',
+        'w-full min-h-[54px] min-w-0 whitespace-normal rounded-2xl border-2 px-4 py-3.5 text-sm font-bold transition-all [overflow-wrap:anywhere] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#60A8E4]/35 disabled:cursor-default',
         matched
             ? 'border-[#2EC4B6]/45 bg-[#EAFBF8] text-text-success opacity-75'
             : wrong
@@ -151,7 +151,7 @@ export function exerciseTokenClass({
     className?: string
 }) {
     return fx(
-        'rounded-xl px-4 py-2.5 text-sm font-bold transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#60A8E4]/35 disabled:cursor-not-allowed',
+        'min-w-0 whitespace-normal rounded-xl px-4 py-2.5 text-sm font-bold transition-all [overflow-wrap:anywhere] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#60A8E4]/35 disabled:cursor-not-allowed',
         selected
             ? revealed
                 ? 'bg-[#CCE4F0] text-text-brand'

@@ -18,6 +18,7 @@ import {
 import type { SessionItem } from '@/lib/session/builder'
 import type { ExerciseResult, ExerciseData } from '@/lib/session/types'
 import { FUXIE_WORLD_PROPS, FUXIE_MASCOT_STATES } from '@/lib/mascot/fuxie-assets'
+import { ConfirmExitDialog } from '@/components/ui/confirm-exit-dialog'
 import { IntroCard } from './exercises/IntroCard'
 import { MultipleChoice } from './exercises/MultipleChoice'
 import { TypingExercise } from './exercises/TypingExercise'
@@ -59,6 +60,7 @@ export function SessionPlayer({
     const [results, setResults] = useState<ExerciseResult[]>(initialResults)
     const [isFinished, setIsFinished] = useState(initialFinished)
     const [elapsed, setElapsed] = useState(0)
+    const [showExitDialog, setShowExitDialog] = useState(false)
 
     useEffect(() => {
         if (isFinished || loading) return
@@ -136,6 +138,19 @@ export function SessionPlayer({
         }
     }, [results, score, hearts, level, router])
 
+    const exitToDashboard = useCallback(() => {
+        router.push('/dashboard')
+    }, [router])
+
+    const handleExitRequest = useCallback(() => {
+        if (!isFinished && !loading && elapsed > 0) {
+            setShowExitDialog(true)
+            return
+        }
+
+        exitToDashboard()
+    }, [elapsed, exitToDashboard, isFinished, loading])
+
     if (loading) {
         return (
             <div className="flex-1 min-h-screen bg-[#5BB8F5] flex flex-col items-center justify-center">
@@ -183,6 +198,16 @@ export function SessionPlayer({
 
     return (
         <div className="min-h-screen bg-[#5BB8F5] font-sans text-[#173b56] flex flex-col">
+            <ConfirmExitDialog
+                open={showExitDialog}
+                title={t('quitSessionTitle')}
+                description={t('quitSessionDescription')}
+                stayLabel={t('stayInLesson')}
+                exitLabel={t('exitLesson')}
+                ariaLabel={t('confirmExitAria')}
+                onStay={() => setShowExitDialog(false)}
+                onExit={exitToDashboard}
+            />
 
             {/* ═══════════════════════════════════════════════
                 TOP HEADER BAR — matches mock: FUXIE ⭐ 03·SESSION subtitle
@@ -245,9 +270,9 @@ export function SessionPlayer({
                     </div>
 
                     <button
-                        onClick={() => router.push('/dashboard')}
+                        onClick={handleExitRequest}
                         className="p-2 bg-white hover:bg-gray-50 rounded-full shadow-sm border border-[#CCE4F0]/60 text-gray-500 hover:text-gray-800 transition"
-                        title="Quit session"
+                        title={t('quitSessionTitle')}
                     >
                         <LogOut className="w-4 h-4" />
                     </button>
@@ -365,10 +390,11 @@ export function SessionPlayer({
                     <div className="flex-1 flex flex-col p-4 md:p-6 xl:p-8 max-w-2xl mx-auto w-full">
                         <div className="flex-1 flex flex-col">
                             {currentItem.format === 'INTRO' && (
-                                <IntroCard item={currentItem} onNext={() => handleNext(true)} />
+                                <IntroCard key={currentItem.id} item={currentItem} onNext={() => handleNext(true)} />
                             )}
                             {currentItem.format === 'MULTIPLE_CHOICE' && (
                                 <MultipleChoice
+                                    key={currentItem.id}
                                     item={currentItem}
                                     onNext={(correct) => handleNext(correct)}
                                     stepIndex={currentIndex}
@@ -376,7 +402,7 @@ export function SessionPlayer({
                                 />
                             )}
                             {currentItem.format === 'TYPING' && (
-                                <TypingExercise item={currentItem} onNext={(correct) => handleNext(correct)} />
+                                <TypingExercise key={currentItem.id} item={currentItem} onNext={(correct) => handleNext(correct)} />
                             )}
                         </div>
 

@@ -17,6 +17,21 @@ const getGrammarLesson = cache(async (lessonId: string) => {
     })
 })
 
+function isVisualQaFixture(visualParams: Slice2VisualQaParams | undefined) {
+    return (
+        process.env.NODE_ENV !== 'production' &&
+        visualParams?.fixture === 'visual-qa'
+    )
+}
+
+function isVisualQaGradingUnavailable(visualParams: Slice2VisualQaParams | undefined) {
+    return (
+        process.env.NODE_ENV !== 'production' &&
+        visualParams?.fixture === 'visual-qa' &&
+        visualParams?.state === 'grading-unavailable'
+    )
+}
+
 export async function generateMetadata({
     params,
     searchParams,
@@ -25,10 +40,10 @@ export async function generateMetadata({
     searchParams?: Promise<Slice2VisualQaParams>
 }) {
     const visualParams = await searchParams
-    if (isSlice2VisualQaFixture(visualParams, 'error')) {
+    if (isVisualQaFixture(visualParams)) {
         return {
             title: 'Fuxie - Grammar Visual QA',
-            description: 'Slice 2 grammar error visual fixture',
+            description: 'Grammar Visual QA Fixture',
         }
     }
 
@@ -51,6 +66,34 @@ export default async function LessonPage({
 
     if (isSlice2VisualQaFixture(visualParams, 'error')) {
         return <Slice2GrammarErrorFixture />
+    }
+
+    if (isVisualQaGradingUnavailable(visualParams)) {
+        const mockExercises: GrammarExercise[] = [
+            {
+                id: 'mock-grammar-gap-fill',
+                type: 'gap_fill_type',
+                scaffolding_level: 1,
+                difficulty: 1,
+                instruction_vi: 'Điền quán từ thích hợp vào ô trống.',
+                stem: 'Ich helfe ___ Vater (m).',
+                answer: ['dem'],
+                hints: []
+            }
+        ]
+        return (
+            <LessonPlayerDynamic
+                lessonId="mock-grammar-lesson-grading"
+                titleDe="Grammatik Dativ"
+                titleNative="Ngữ pháp cách 3"
+                level="A2"
+                lessonType="E"
+                estimatedMin={10}
+                theoryBlocks={[]}
+                exercises={mockExercises}
+                topicSlug={topicSlug}
+            />
+        )
     }
 
     const serverUser = await getServerUser()

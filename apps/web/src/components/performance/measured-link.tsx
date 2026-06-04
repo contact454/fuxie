@@ -13,7 +13,10 @@ type MeasuredLinkProps = Omit<ComponentProps<typeof Link>, 'href'> & {
     analytics?: ClientAnalyticsEventInput
 }
 
-export function MeasuredLink({ href, flow, source, analytics, onClick, ...props }: MeasuredLinkProps) {
+const measuredLinkFocusClass =
+    'outline-none focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--fuxie-blue-700)]'
+
+export function MeasuredLink({ href, flow, source, analytics, onClick, className, ...props }: MeasuredLinkProps) {
     const handleClick = (event: MouseEvent<HTMLAnchorElement>) => {
         onClick?.(event)
         if (
@@ -33,5 +36,12 @@ export function MeasuredLink({ href, flow, source, analytics, onClick, ...props 
         }
     }
 
-    return <Link href={href} onClick={handleClick} {...props} />
+    return (
+        <Link
+            href={href}
+            onClick={handleClick}
+            className={[measuredLinkFocusClass, className].filter(Boolean).join(' ')}
+            {...props}
+        />
+    )
 }

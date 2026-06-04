@@ -134,7 +134,12 @@
     "woerter": "TỪ VỰNG",
     "hoeren": "NGHE",
     "sessionTitle": "03 · BÀI HỌC",
-    "step": "Bước"
+    "step": "Bước",
+    "confirmExitAria": "Xác nhận thoát lượt học",
+    "stayInLesson": "Ở lại",
+    "exitLesson": "Thoát",
+    "quitSessionTitle": "Thoát lượt học?",
+    "quitSessionDescription": "Tiến độ, tim và XP của lượt này có thể chưa được lưu. Ở lại nếu em vẫn muốn hoàn thành thử thách."
   },
   "Gamification": {
     "nodeUnlockTitle": "Mỗi node có điều kiện rõ",
@@ -309,7 +314,11 @@
     "estimatedLevelLabel": "Trình độ ước tính:",
     "receiptTitle": "Biên nhận Thử thách Viết",
     "suggestionsLabel": "💡 Gợi ý cải thiện:",
-    "altWritingCoach": "Huấn luyện viên viết Fuxie"
+    "altWritingCoach": "Huấn luyện viên viết Fuxie",
+    "quitTitle": "Thoát bài viết?",
+    "quitDescription": "Bản nháp hiện tại chưa được nộp. Nếu thoát bây giờ, nội dung em vừa viết có thể bị mất.",
+    "quitStay": "Ở lại viết tiếp",
+    "quitExit": "Thoát bài viết"
   },
   "Session": {
     "introCard": {
@@ -549,6 +558,7 @@
       "summary": "Tổng kết Cuộc gọi 📝",
       "pronunciationFeedback": "Phát âm cần lưu ý",
       "noErrorsFeedback": "Tuyệt vời! Bạn không có lỗi phát âm nào nghiêm trọng.",
+      "feedbackUnavailable": "Chưa tạo được nhận xét phát âm. Dữ liệu cuộc gọi đã được giữ lại, hãy thử lại sau.",
       "savingMemory": "Đang lưu ký ức...",
       "complete": "Hoàn tất",
       "connecting": "Đang kết nối...",
@@ -696,6 +706,9 @@
     "understoodNextBtn": "Đã hiểu, bước tiếp →",
     "checkBtn": "Kiểm tra",
     "aiGrading": "AI đang chấm...",
+    "gradingUnavailableTitle": "Chưa chấm được bài này",
+    "gradingUnavailableDetail": "Có thể mạng hoặc AI đang chậm. Câu trả lời của em chưa bị tính sai, hãy thử lại nhé.",
+    "gradingRetry": "Thử chấm lại",
     "startLearningBtn": "Bắt đầu học →",
     "startChallengeBtn": "🎯 Bắt đầu thử thách",
     "nextStepBtn": "Tiếp bước →",
@@ -871,6 +884,7 @@
   },
   "Listening": {
     "altListeningCoach": "Huấn luyện viên nghe Fuxie",
+    "speedDuration": "Tốc độ đề xuất {speed}x · Thời lượng {time}",
     "instructions": "Hướng dẫn",
     "instructionDetail": "Em sẽ nghe đoạn audio tối đa {maxPlays} lần, sau đó trả lời {questionCount} câu hỏi.",
     "checkpointCoachTitle": "Nghe theo từng checkpoint",

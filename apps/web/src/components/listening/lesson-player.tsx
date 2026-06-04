@@ -92,6 +92,7 @@ export function LessonPlayer({
 }: LessonPlayerProps) {
     const router = useRouter()
     const t = useTranslations('Listening')
+    const defaultPlaybackSpeed = DEFAULT_SPEEDS[cefrLevel] ?? 1.0
     const audioRef = useRef<HTMLAudioElement>(null)
     const autoPlayTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null)
     const [phase, setPhase] = useState<Phase>('intro')
@@ -99,7 +100,7 @@ export function LessonPlayer({
     const [currentTime, setCurrentTime] = useState(0)
     const [duration, setDuration] = useState(audioDuration || 0)
     const [playCount, setPlayCount] = useState(0)
-    const [playbackSpeed, setPlaybackSpeed] = useState(DEFAULT_SPEEDS[cefrLevel] || 1.0)
+    const [playbackSpeed, setPlaybackSpeed] = useState(defaultPlaybackSpeed)
     const [currentQuestion, setCurrentQuestion] = useState(0)
     const [answers, setAnswers] = useState<Record<string, string>>({})
     const [isSubmitting, setIsSubmitting] = useState(false)
@@ -426,7 +427,7 @@ export function LessonPlayer({
                     <div className="mt-6 p-4 bg-[#F3FBFF] rounded-xl text-sm text-gray-700 ring-1 ring-[#60A8E4]/15">
                         <p className="font-semibold text-text-brand mb-2">{t('instructions')}</p>
                         <p>{t('instructionDetail', { maxPlays, questionCount: questions.length })}</p>
-                        <p className="mt-1 text-gray-500">{t('speedDuration', { speed: DEFAULT_SPEEDS[cefrLevel], time: formatTime(duration || 180) })}</p>
+                        <p className="mt-1 text-gray-500">{t('speedDuration', { speed: defaultPlaybackSpeed, time: formatTime(duration || 180) })}</p>
                     </div>
 
                     <p className="mt-4 text-sm font-semibold leading-relaxed text-text-brand">

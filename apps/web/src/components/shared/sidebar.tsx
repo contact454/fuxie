@@ -71,9 +71,9 @@ export function Sidebar({ dailyGoal }: SidebarProps) {
                                     href={item.href}
                                     flow="nav.sidebar"
                                     source={item.labelKey}
-                                    className={`flex items-center gap-3 rounded-xl px-4 py-2.5 text-sm transition-all duration-200
+                                    className={`flex items-center gap-3 rounded-xl px-4 py-2.5 text-sm transition-all duration-200 focus-visible:outline-[var(--fuxie-blue-200)]
                                         ${isActive
-                                            ? 'bg-[#2EC4B6] text-white shadow-sm font-semibold'
+                                            ? 'bg-[#2EC4B6] text-[var(--fuxie-blue-900)] shadow-sm font-semibold'
                                             : 'text-white/80 hover:bg-white/10 hover:text-white'
                                         }`}
                                 >
@@ -103,7 +103,7 @@ export function Sidebar({ dailyGoal }: SidebarProps) {
                             {goalReached ? '✅ ' + t('dailyGoalReached') : t('dailyGoal')}
                         </p>
                         {dailyGoal && (
-                            <p className="text-xs font-bold text-[#FFB703]">
+                            <p className="text-xs font-bold text-[#FFB703]" data-reward-context="true">
                                 +{dailyGoal.xpEarned} XP
                             </p>
                         )}

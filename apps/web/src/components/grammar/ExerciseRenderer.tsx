@@ -52,6 +52,32 @@ export function FeedbackToast({
   )
 }
 
+function GradingUnavailablePanel() {
+  const t = useTranslations('Grammar')
+
+  return (
+    <div
+      role="status"
+      aria-live="polite"
+      style={{
+        marginTop: 14,
+        borderRadius: 14,
+        border: '1px solid #CCE4F0',
+        background: '#F3FBFF',
+        padding: '12px 14px',
+        color: '#173B56',
+      }}
+    >
+      <div style={{ fontSize: 14, fontWeight: 800 }}>
+        {t('gradingUnavailableTitle')}
+      </div>
+      <p style={{ marginTop: 4, fontSize: 13, lineHeight: 1.5, color: '#3C78A8' }}>
+        {t('gradingUnavailableDetail')}
+      </p>
+    </div>
+  )
+}
+
 // ─── 1. Multiple Choice ──────────────────────────────
 function MultipleChoice({
   exercise, onAnswer
@@ -201,6 +227,7 @@ function GapFillType({
   const [value, setValue] = useState('')
   const [answered, setAnswered] = useState(false)
   const [isAiGrading, setIsAiGrading] = useState(false)
+  const [gradingError, setGradingError] = useState(false)
 
   const handleCheck = async () => {
     if (!value.trim() || answered || isAiGrading) return
@@ -216,6 +243,7 @@ function GapFillType({
     }
 
     setIsAiGrading(true)
+    setGradingError(false)
     try {
       const res = await fetch('/api/v1/grade', {
         method: 'POST',
@@ -229,15 +257,14 @@ function GapFillType({
         })
       })
       const data = await res.json()
-      setAnswered(true)
-      if (data.success && data.data) {
+      if (res.ok && data.success && data.data) {
+        setAnswered(true)
         onAnswer(data.data.correct, exercise.answer.join(' / '), data.data)
       } else {
-        onAnswer(false, exercise.answer.join(' / '))
+        setGradingError(true)
       }
     } catch (e) {
-      setAnswered(true)
-      onAnswer(false, exercise.answer.join(' / '))
+      setGradingError(true)
     } finally {
       setIsAiGrading(false)
     }
@@ -256,19 +283,23 @@ function GapFillType({
         type="text"
         placeholder={t('enterAnswerPlaceholder')}
         value={value}
-        onChange={e => setValue(e.target.value)}
+        onChange={e => {
+          setValue(e.target.value)
+          setGradingError(false)
+        }}
         onKeyDown={e => e.key === 'Enter' && handleCheck()}
         disabled={answered}
         autoComplete="off"
         spellCheck={false}
       />
+      {gradingError && <GradingUnavailablePanel />}
       {!answered && (
         <button
           style={{ marginTop: 16, width: '100%', padding: '14px', border: 'none', borderRadius: 14, fontWeight: 600, fontSize: 16, cursor: value.trim() && !isAiGrading ? 'pointer' : 'not-allowed', background: value.trim() && !isAiGrading ? 'linear-gradient(135deg, #3B82F6, #2563EB)' : '#E5E7EB', color: value.trim() && !isAiGrading ? '#fff' : '#9CA3AF' }}
           disabled={!value.trim() || isAiGrading}
           onClick={handleCheck}
         >
-          {isAiGrading ? t('aiGrading') : t('checkBtn')}
+          {isAiGrading ? t('aiGrading') : gradingError ? t('gradingRetry') : t('checkBtn')}
         </button>
       )}
     </div>
@@ -504,6 +535,7 @@ function Transformation({
   const [value, setValue] = useState('')
   const [answered, setAnswered] = useState(false)
   const [isAiGrading, setIsAiGrading] = useState(false)
+  const [gradingError, setGradingError] = useState(false)
 
   const handleCheck = async () => {
     if (!value.trim() || answered || isAiGrading) return
@@ -519,6 +551,7 @@ function Transformation({
     }
 
     setIsAiGrading(true)
+    setGradingError(false)
     try {
       const res = await fetch('/api/v1/grade', {
         method: 'POST',
@@ -532,15 +565,14 @@ function Transformation({
         })
       })
       const data = await res.json()
-      setAnswered(true)
-      if (data.success && data.data) {
+      if (res.ok && data.success && data.data) {
+        setAnswered(true)
         onAnswer(data.data.correct, exercise.accepted_answers[0]!, data.data)
       } else {
-        onAnswer(false, exercise.accepted_answers[0]!)
+        setGradingError(true)
       }
     } catch (e) {
-      setAnswered(true)
-      onAnswer(false, exercise.accepted_answers[0]!)
+      setGradingError(true)
     } finally {
       setIsAiGrading(false)
     }
@@ -558,16 +590,20 @@ function Transformation({
         className={s.textArea}
         placeholder={t('writeNewSentencePlaceholder')}
         value={value}
-        onChange={e => setValue(e.target.value)}
+        onChange={e => {
+          setValue(e.target.value)
+          setGradingError(false)
+        }}
         disabled={answered}
       />
+      {gradingError && <GradingUnavailablePanel />}
       {!answered && (
         <button
           style={{ marginTop: 16, width: '100%', padding: '14px', border: 'none', borderRadius: 14, fontWeight: 600, fontSize: 16, cursor: value.trim() && !isAiGrading ? 'pointer' : 'not-allowed', background: value.trim() && !isAiGrading ? 'linear-gradient(135deg, #3B82F6, #2563EB)' : '#E5E7EB', color: value.trim() && !isAiGrading ? '#fff' : '#9CA3AF' }}
           disabled={!value.trim() || isAiGrading}
           onClick={handleCheck}
         >
-          {isAiGrading ? t('aiGrading') : t('checkBtn')}
+          {isAiGrading ? t('aiGrading') : gradingError ? t('gradingRetry') : t('checkBtn')}
         </button>
       )}
     </div>

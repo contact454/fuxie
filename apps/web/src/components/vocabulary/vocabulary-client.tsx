@@ -325,7 +325,10 @@ function VocabularyQuestWorld({
                                 </div>
                                 <div className="min-w-0 flex-1">
                                     <p className="text-xs font-black uppercase text-text-brand">{t('selecting')}</p>
-                                    <h2 className="mt-1 truncate text-xl font-black text-slate-950">
+                                    <h2
+                                        className="mt-1 line-clamp-2 text-xl font-black leading-tight text-slate-950 [overflow-wrap:anywhere]"
+                                        title={selectedTheme?.name ?? t('selectTheme')}
+                                    >
                                         {selectedTheme?.name ?? t('selectTheme')}
                                     </h2>
                                     <p className="mt-1 text-sm font-semibold text-slate-500">

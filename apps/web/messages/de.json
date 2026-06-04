@@ -134,7 +134,12 @@
     "woerter": "WÖRTER",
     "hoeren": "HÖREN",
     "sessionTitle": "03 · SESSION",
-    "step": "Schritt"
+    "step": "Schritt",
+    "confirmExitAria": "Verlassen bestätigen",
+    "stayInLesson": "Bleiben",
+    "exitLesson": "Verlassen",
+    "quitSessionTitle": "Lerneinheit verlassen?",
+    "quitSessionDescription": "Fortschritt, Herzen und XP dieser Einheit sind möglicherweise noch nicht gespeichert. Bleib, wenn du die Herausforderung abschließen möchtest."
   },
   "Gamification": {
     "nodeUnlockTitle": "Jeder Node hat klare Bedingungen",
@@ -309,7 +314,11 @@
     "estimatedLevelLabel": "Geschätztes Niveau:",
     "receiptTitle": "Schreib-Quest Beleg",
     "suggestionsLabel": "💡 Verbesserungsvorschläge:",
-    "altWritingCoach": "Fuxie Schreib-Coach"
+    "altWritingCoach": "Fuxie Schreib-Coach",
+    "quitTitle": "Schreibaufgabe verlassen?",
+    "quitDescription": "Dein aktueller Entwurf wurde noch nicht eingereicht. Wenn du jetzt gehst, kann der Text verloren gehen.",
+    "quitStay": "Weiter schreiben",
+    "quitExit": "Aufgabe verlassen"
   },
   "Session": {
     "introCard": {
@@ -549,6 +558,7 @@
       "summary": "Zusammenfassung des Anrufs 📝",
       "pronunciationFeedback": "Auszusprechende Wörter",
       "noErrorsFeedback": "Großartig! Du hast keine nennenswerten Aussprachefehler gemacht.",
+      "feedbackUnavailable": "Aussprachefeedback konnte noch nicht erstellt werden. Die Gesprächsdaten bleiben erhalten; versuch es später erneut.",
       "savingMemory": "Erinnerung wird gespeichert...",
       "complete": "Fertig",
       "connecting": "Verbindung wird hergestellt...",
@@ -696,6 +706,9 @@
     "understoodNextBtn": "Verstanden, weiter →",
     "checkBtn": "Prüfen",
     "aiGrading": "AI bewertet...",
+    "gradingUnavailableTitle": "Diese Antwort konnte noch nicht bewertet werden",
+    "gradingUnavailableDetail": "Vielleicht ist die Verbindung oder die AI gerade langsam. Deine Antwort wird nicht als falsch gezählt; bitte versuch es erneut.",
+    "gradingRetry": "Bewertung erneut versuchen",
     "startLearningBtn": "Jetzt lernen →",
     "startChallengeBtn": "🎯 Herausforderung starten",
     "nextStepBtn": "Weiter →",
@@ -871,6 +884,7 @@
   },
   "Listening": {
     "altListeningCoach": "Fuxie Hör-Coach",
+    "speedDuration": "Empfohlenes Tempo {speed}x · Dauer {time}",
     "instructions": "Anleitung",
     "instructionDetail": "Du wirst das Audio maximal {maxPlays} Mal hören, beantworte danach {questionCount} Fragen.",
     "checkpointCoachTitle": "Nach Checkpoints hören",

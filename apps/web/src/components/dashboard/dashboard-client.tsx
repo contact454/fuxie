@@ -199,6 +199,7 @@ export function DashboardClient({ data, section }: { data: DashboardData; sectio
 function HeaderSection({ data }: { data: DashboardData }) {
     const t = useTranslations('Dashboard')
     const cefrBadgeSrc = getCefrBadgeAssetSrc(data.profile.currentLevel)
+    const cefrTheme = getCefrTheme(data.profile.currentLevel)
 
     return (
         <header className="mb-6 animate-fade-in-up">
@@ -210,8 +211,12 @@ function HeaderSection({ data }: { data: DashboardData }) {
                     </h1>
                     <div className="mt-1 flex flex-wrap items-center gap-2 text-sm text-gray-500">
                         <span
-                            className="inline-flex items-center gap-1 rounded-full px-2 py-0.5 text-xs font-bold text-white shadow-sm ring-1 ring-white/70"
-                            style={{ backgroundColor: getCefrTheme(data.profile.currentLevel).css }}
+                            className="inline-flex items-center gap-1 rounded-full border px-2 py-0.5 text-xs font-bold shadow-sm"
+                            style={{
+                                backgroundColor: cefrTheme.bg,
+                                borderColor: cefrTheme.border,
+                                color: cefrTheme.text,
+                            }}
                         >
                             <Image
                                 src={cefrBadgeSrc}
@@ -1013,7 +1018,11 @@ function MissionCard({
     const statusLabel = isClaimed ? 'Đã nhận' : isClaimable ? 'Claim' : isLocked ? 'Locked' : mission.progress > 0 ? 'Đang làm' : 'Sẵn sàng'
 
     return (
-        <FuxieQuestCard interactive={false} className={`relative overflow-hidden p-4 ring-1 ${justClaimed ? 'fuxie-claim-card-pop border-[#FFB703]/60 ring-[#FFD166]/65' : isClaimable ? 'border-[#FFB703]/45 ring-[#FFD166]/55' : isClaimed ? 'border-[#2EC4B6]/35 ring-[#2EC4B6]/30' : 'ring-slate-100'}`}>
+        <FuxieQuestCard
+            interactive={false}
+            data-reward-state={justClaimed ? 'earned' : isClaimable ? 'preview' : undefined}
+            className={`relative overflow-hidden p-4 ring-1 ${justClaimed ? 'fuxie-claim-card-pop border-[#FFB703]/60 ring-[#FFD166]/65' : isClaimable ? 'border-[#FFB703]/45 ring-[#FFD166]/55' : isClaimed ? 'border-[#2EC4B6]/35 ring-[#2EC4B6]/30' : 'ring-slate-100'}`}
+        >
             {justClaimed && (
                 <div className="pointer-events-none absolute inset-0" aria-hidden="true">
                     {[0, 1, 2, 3, 4, 5].map((index) => (
@@ -1321,7 +1330,7 @@ function QuestStatusPill({ status }: { status: DashboardQuest['status'] }) {
 function dashboardQuestMeta(quest: DashboardQuest, index: number): { icon: ComponentType<{ className?: string }>; color: string; label: string } {
     if (quest.type === 'fresh-start') return { icon: Sparkles, color: '#2EC4B6', label: 'Fresh start' }
     if (quest.type === 'srs') return { icon: RotateCcw, color: '#2EC4B6', label: 'SRS' }
-    if (quest.type === 'assignment') return { icon: BookOpen, color: '#FFB703', label: 'Assignment' }
+    if (quest.type === 'assignment') return { icon: BookOpen, color: '#54A8E4', label: 'Assignment' }
     if (quest.type === 'exam') return { icon: Target, color: '#3C78A8', label: 'Exam' }
     return [
         { icon: Brain, color: '#3C78A8', label: 'Skill' },
