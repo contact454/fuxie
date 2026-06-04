@@ -968,7 +968,7 @@ function ShopTabButton({
             data-shop-tab-active={active ? 'true' : undefined}
             onClick={() => onChange(tab)}
             className={fx(
-                'min-h-[40px] rounded-xl px-4 text-sm font-bold transition',
+                'min-h-[44px] rounded-xl px-4 text-sm font-bold transition',
                 active
                     ? 'bg-[var(--fuxie-action)] text-white shadow-sm'
                     : 'text-[var(--fuxie-blue-700)] hover:bg-[var(--fuxie-blue-50)]',

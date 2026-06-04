@@ -271,7 +271,7 @@ export function SessionPlayer({
 
                     <button
                         onClick={handleExitRequest}
-                        className="p-2 bg-white hover:bg-gray-50 rounded-full shadow-sm border border-[#CCE4F0]/60 text-gray-500 hover:text-gray-800 transition"
+                        className="w-[44px] h-[44px] flex items-center justify-center bg-white hover:bg-gray-50 rounded-full shadow-sm border border-[#CCE4F0]/60 text-gray-500 hover:text-gray-800 transition"
                         title={t('quitSessionTitle')}
                     >
                         <LogOut className="w-4 h-4" />

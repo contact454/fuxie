@@ -80,13 +80,13 @@ function SkillFixtureShell({
               Fuxie
             </div>
             <div
-              className="min-w-0 rounded-2xl border border-white/20 px-4 py-2 shadow-inner shadow-white/10"
+              className="min-w-[140px] sm:min-w-max rounded-2xl border border-white/20 px-3 py-1 sm:px-4 sm:py-2 shadow-inner shadow-white/10"
               style={{ backgroundColor: accent }}
             >
               <p className="truncate text-xs font-black uppercase tracking-normal text-white/80">
                 {module}
               </p>
-              <h1 className="truncate text-base font-black text-white sm:text-lg">
+              <h1 className="text-sm font-black text-white sm:text-lg whitespace-nowrap">
                 {title}
               </h1>
             </div>
@@ -95,7 +95,7 @@ function SkillFixtureShell({
             <span className="rounded-full bg-[#ffb703] px-3 py-1 text-xs font-black text-[#173b56]">
               320
             </span>
-            <span className="rounded-full border border-white/20 bg-white/10 px-3 py-1 text-xs font-black text-white">
+            <span className="hidden sm:inline-block rounded-full border border-white/20 bg-white/10 px-3 py-1 text-xs font-black text-white">
               {title}
             </span>
           </div>
