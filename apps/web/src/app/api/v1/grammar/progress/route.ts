@@ -160,6 +160,7 @@ export async function POST(req: NextRequest) {
             : null
 
         return NextResponse.json({
+            success: true,
             ok: true,
             saved: true,
             xpEarned: result.progress.xpEarned,

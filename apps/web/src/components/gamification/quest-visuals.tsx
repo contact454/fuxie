@@ -256,6 +256,7 @@ export function FuxieCoach({
                     <Image
                         src={mascotSrc ?? config.src}
                         alt="Fuxie"
+                        data-role="fuxie-coach-mascot"
                         width={76}
                         height={76}
                         priority={priority}

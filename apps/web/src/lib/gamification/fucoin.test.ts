@@ -29,6 +29,7 @@ describe('Fucoin economy', () => {
     it('creates a ledger entry and updates wallet balance', async () => {
         const tx = {
             fucoinLedger: {
+                findUnique: vi.fn().mockResolvedValue(null),
                 create: vi.fn().mockResolvedValue({}),
             },
             userWallet: {
@@ -70,6 +71,7 @@ describe('Fucoin economy', () => {
     it('does not award duplicate ledger sources twice', async () => {
         const tx = {
             fucoinLedger: {
+                findUnique: vi.fn().mockResolvedValue(null),
                 create: vi.fn().mockRejectedValue(uniqueConstraintError()),
             },
             userWallet: {
@@ -101,6 +103,7 @@ describe('Fucoin economy', () => {
     it('caps repeatable learning Fucoin per day', async () => {
         const tx = {
             fucoinLedger: {
+                findUnique: vi.fn().mockResolvedValue(null),
                 aggregate: vi.fn().mockResolvedValue({ _sum: { amount: LEARNING_FUCOIN_DAILY_CAP - 1 } }),
                 create: vi.fn().mockResolvedValue({}),
             },
@@ -146,6 +149,7 @@ describe('Fucoin economy', () => {
     it('does not record Fucoin analytics for duplicate learning awards', async () => {
         const tx = {
             fucoinLedger: {
+                findUnique: vi.fn().mockResolvedValue(null),
                 aggregate: vi.fn().mockResolvedValue({ _sum: { amount: 0 } }),
                 create: vi.fn().mockRejectedValue(uniqueConstraintError()),
             },
@@ -180,6 +184,7 @@ describe('Fucoin economy', () => {
     it('spends Fucoin through an immutable spend ledger', async () => {
         const tx = {
             fucoinLedger: {
+                findUnique: vi.fn().mockResolvedValue(null),
                 create: vi.fn().mockResolvedValue({}),
             },
             userWallet: {
@@ -234,6 +239,7 @@ describe('Fucoin economy', () => {
     it('blocks spend when wallet balance is too low', async () => {
         const tx = {
             fucoinLedger: {
+                findUnique: vi.fn().mockResolvedValue(null),
                 create: vi.fn(),
             },
             userWallet: {

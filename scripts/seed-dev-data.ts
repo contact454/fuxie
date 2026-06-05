@@ -379,6 +379,7 @@ async function seedListening() {
                 taskType: fixture.task_type === 'mc_abc' ? 'MC a/b/c' : fixture.task_type,
                 audioUrl: fixture.audio_file,
                 sortOrder: 1,
+                transcript: fixture.transcript as any,
             },
             create: {
                 lessonId,
@@ -391,6 +392,7 @@ async function seedListening() {
                 taskType: fixture.task_type === 'mc_abc' ? 'MC a/b/c' : fixture.task_type,
                 audioUrl: fixture.audio_file,
                 sortOrder: 1,
+                transcript: fixture.transcript as any,
             },
         })
 
@@ -472,45 +474,83 @@ async function seedReading() {
 }
 
 async function seedWriting() {
-    // Load A1 writing fixture once; upsert under legacy + surface-table IDs.
-    const fixture = loadFixture<WritingFixture>('content/a1/writing/W-A1-T1-001.json')
-
-    for (const exerciseId of ['W-A1-DEV-001', fixture.id] as const) {
+    // 1. Seed Formular exercise
+    const formularFixture = loadFixture<WritingFixture>('content/a1/writing/W-A1-T1-001.json')
+    for (const exerciseId of ['W-A1-DEV-001', formularFixture.id] as const) {
         await prisma.writingExercise.upsert({
             where: { exerciseId },
             update: {
                 cefrLevel: 'A1',
-                topic: fixture.topic,
-                instruction: fixture.instruction,
-                situation: fixture.situation,
-                contentPoints: fixture.contentPoints as never,
-                minWords: fixture.minWords,
-                maxWords: fixture.maxWords ?? null,
-                timeMinutes: fixture.timeMinutes ?? 10,
-                rubricJson: (fixture.rubric ?? { criteria: ['Inhalt', 'Korrektheit'] }) as never,
+                topic: formularFixture.topic,
+                instruction: formularFixture.instruction,
+                situation: formularFixture.situation,
+                contentPoints: formularFixture.contentPoints as never,
+                minWords: formularFixture.minWords,
+                maxWords: formularFixture.maxWords ?? null,
+                timeMinutes: formularFixture.timeMinutes ?? 10,
+                rubricJson: (formularFixture.rubric ?? { criteria: ['Inhalt', 'Korrektheit'] }) as never,
+                formFields: (formularFixture.formFields ?? null) as never,
                 status: 'PUBLISHED',
             },
             create: {
                 exerciseId,
                 cefrLevel: 'A1',
-                teil: fixture.teil,
-                teilName: fixture.teilName,
-                textType: fixture.textType,
-                register: fixture.register,
-                topic: fixture.topic,
-                instruction: fixture.instruction,
-                situation: fixture.situation,
-                contentPoints: fixture.contentPoints as never,
-                minWords: fixture.minWords,
-                maxWords: fixture.maxWords ?? null,
-                timeMinutes: fixture.timeMinutes ?? 10,
-                rubricJson: (fixture.rubric ?? { criteria: ['Inhalt', 'Korrektheit'] }) as never,
-                formFields: (fixture.formFields ?? null) as never,
+                teil: formularFixture.teil,
+                teilName: formularFixture.teilName,
+                textType: formularFixture.textType,
+                register: formularFixture.register,
+                topic: formularFixture.topic,
+                instruction: formularFixture.instruction,
+                situation: formularFixture.situation,
+                contentPoints: formularFixture.contentPoints as never,
+                minWords: formularFixture.minWords,
+                maxWords: formularFixture.maxWords ?? null,
+                timeMinutes: formularFixture.timeMinutes ?? 10,
+                rubricJson: (formularFixture.rubric ?? { criteria: ['Inhalt', 'Korrektheit'] }) as never,
+                formFields: (formularFixture.formFields ?? null) as never,
                 status: 'PUBLISHED',
                 sortOrder: 1,
             },
         })
     }
+
+    // 2. Seed E-Mail exercise (Free Text)
+    const emailFixture = loadFixture<WritingFixture>('content/a1/writing/W-A1-T2-001.json')
+    await prisma.writingExercise.upsert({
+        where: { exerciseId: emailFixture.id },
+        update: {
+            cefrLevel: 'A1',
+            topic: emailFixture.topic,
+            instruction: emailFixture.instruction,
+            situation: emailFixture.situation,
+            contentPoints: emailFixture.contentPoints as never,
+            minWords: emailFixture.minWords,
+            maxWords: emailFixture.maxWords ?? null,
+            timeMinutes: emailFixture.timeMinutes ?? 10,
+            rubricJson: (emailFixture.rubric ?? { criteria: ['Inhalt', 'Korrektheit'] }) as never,
+            formFields: null,
+            status: 'PUBLISHED',
+        },
+        create: {
+            exerciseId: emailFixture.id,
+            cefrLevel: 'A1',
+            teil: emailFixture.teil,
+            teilName: emailFixture.teilName,
+            textType: emailFixture.textType,
+            register: emailFixture.register,
+            topic: emailFixture.topic,
+            instruction: emailFixture.instruction,
+            situation: emailFixture.situation,
+            contentPoints: emailFixture.contentPoints as never,
+            minWords: emailFixture.minWords,
+            maxWords: emailFixture.maxWords ?? null,
+            timeMinutes: emailFixture.timeMinutes ?? 10,
+            rubricJson: (emailFixture.rubric ?? { criteria: ['Inhalt', 'Korrektheit'] }) as never,
+            formFields: null,
+            status: 'PUBLISHED',
+            sortOrder: 2,
+        },
+    })
 }
 
 async function seedSpeaking() {

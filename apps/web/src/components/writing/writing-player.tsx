@@ -406,13 +406,13 @@ export function WritingPlayer(props: WritingPlayerProps) {
                 setPhase('feedback')
                 if (timerRef.current) clearInterval(timerRef.current)
             } else {
-                setError(data.error || 'Fehler beim Einreichen')
+                setError(data.error || t('errorSubmit'))
                 setPhase('writing')
             }
         } catch (err) {
             if (!isMountedRef.current) return
             if (err instanceof Error && err.name === 'AbortError') return
-            setError('Verbindungsfehler. Bitte versuche es erneut.')
+            setError(t('errorConnection'))
             setPhase('writing')
         }
     }, [phase, isFormular, formValues, text, props.exerciseId, timeElapsed, questEpisode, completedCheckpoints])

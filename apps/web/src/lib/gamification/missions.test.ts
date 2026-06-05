@@ -160,6 +160,7 @@ describe('mission board builder', () => {
                 upsert: vi.fn().mockResolvedValue({}),
             },
             fucoinLedger: {
+                findUnique: vi.fn().mockResolvedValue(null),
                 create: vi.fn().mockResolvedValue({}),
             },
             userWallet: {

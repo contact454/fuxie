@@ -73,6 +73,7 @@ function mockTx(
             }),
         },
         fucoinLedger: {
+            findUnique: vi.fn().mockResolvedValue(null),
             create: vi.fn().mockResolvedValue({
                 id: 'ledger-1',
             }),

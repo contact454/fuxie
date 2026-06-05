@@ -79,7 +79,9 @@ export default defineConfig({
     reporter: process.env.CI
         ? [['list'], ['junit', { outputFile: path.join(WORKSPACE_ROOT, 'tmp', 'playwright', 'junit.xml') }]]
         : 'list',
-    outputDir: path.join(WORKSPACE_ROOT, 'tmp', 'playwright', 'output'),
+    outputDir: process.env.PLAYWRIGHT_OUTPUT_DIR
+        ? path.resolve(process.env.PLAYWRIGHT_OUTPUT_DIR)
+        : path.join(WORKSPACE_ROOT, 'tmp', 'playwright', 'output'),
     globalSetup: path.resolve(__dirname, 'global-setup.ts'),
     use: {
         baseURL: BASE_URL,

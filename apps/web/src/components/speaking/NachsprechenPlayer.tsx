@@ -142,6 +142,8 @@ export default function NachsprechenPlayer({ sentences, config, lessonTitle, les
 
   // Comprehensive cleanup on unmount — prevents mic leak, AudioContext leak, animation leak
   useEffect(() => {
+    isMountedRef.current = true
+    skipEvaluationRef.current = false
     return () => {
       isMountedRef.current = false
       skipEvaluationRef.current = true

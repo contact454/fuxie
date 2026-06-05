@@ -124,6 +124,21 @@ export async function awardFucoin(tx: EconomyDbClient, input: AwardFucoinInput):
         return { fucoinEarned: 0, walletBalance: wallet.balance, duplicate: false }
     }
 
+    // Check unique constraint beforehand to prevent aborting database transactions in PostgreSQL
+    const existing = await tx.fucoinLedger.findUnique({
+        where: {
+            userId_sourceType_sourceId: {
+                userId: input.userId,
+                sourceType: input.sourceType,
+                sourceId: input.sourceId,
+            },
+        },
+    })
+    if (existing) {
+        const wallet = await getWalletSummary(tx, input.userId)
+        return { fucoinEarned: 0, walletBalance: wallet.balance, duplicate: true }
+    }
+
     try {
         await tx.fucoinLedger.create({
             data: {
@@ -174,6 +189,21 @@ export async function spendFucoin(tx: EconomyDbClient, input: SpendFucoinInput):
     const wallet = await getWalletSummary(tx, input.userId)
     if (wallet.balance < amount) {
         throw new FucoinSpendError('Insufficient Fucoin balance', 'insufficient_funds')
+    }
+
+    // Check unique constraint beforehand to prevent aborting database transactions in PostgreSQL
+    const existing = await tx.fucoinLedger.findUnique({
+        where: {
+            userId_sourceType_sourceId: {
+                userId: input.userId,
+                sourceType: input.sourceType,
+                sourceId: input.sourceId,
+            },
+        },
+    })
+    if (existing) {
+        const currentWallet = await getWalletSummary(tx, input.userId)
+        return { fucoinSpent: 0, walletBalance: currentWallet.balance, duplicate: true }
     }
 
     try {
