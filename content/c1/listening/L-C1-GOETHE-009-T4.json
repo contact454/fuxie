@@ -138,75 +138,162 @@
     ]
   },
   "transcript": {
-    "type": "full_reconstructed_transcript",
+    "type": "studio_source_transcript",
     "status": "complete",
-    "source": "reconstructed_full_script",
-    "quality": "release_candidate_reconstructed",
-    "note": "Full learner-visible reconstructed script created from existing question evidence because original studio scripts are not present in the repository. Replace with studio transcript if original audio scripts become available.",
+    "source": "studio_source_script",
+    "quality": "source_verified",
+    "sourceScript": "data/scripts/C1/Teil4-Vortrag/L-C1-GOETHE-009-T4.json",
+    "note": "Transcript replaced from source script by scripts/apply-source-transcripts.ts.",
     "lines": [
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Der folgende anspruchsvolle Hoertext behandelt Sprachpolitik in mehrsprachigen Gesellschaften. Achten Sie auf Aussage, Kontext und implizite Bedeutung."
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sie hören einen Vortrag. Dazu gibt es sieben Aufgaben. Kreuzen Sie die richtige Antwort an. Sie hören den Vortrag einmal."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q1.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Meine Damen und Herren, willkommen zu meinem Vortrag über Sprachpolitik in mehrsprachigen Gesellschaften."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "answer_evidence",
-        "text": "Wer die offizielle Sprache eines Landes bestimmt, bestimmt auch, wer an der Gesellschaft vollständig teilhaben kann.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ich werde argumentieren, dass Sprachpolitik zu den wichtigsten, aber am meisten unterschätzten Politikfeldern gehört."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q1 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Sprache ist nicht nur ein Kommunikationsmittel, sondern ein Identitätsmarker und ein Instrument gesellschaftlicher Macht."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q2.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wer die offizielle Sprache eines Landes bestimmt, bestimmt auch, wer an der Gesellschaft vollständig teilhaben kann."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "answer_evidence",
-        "text": "Jedes Modell hat spezifische Vor- und Nachteile, die vom historischen und gesellschaftlichen Kontext abhängen.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Lassen Sie mich zunächst die verschiedenen Modelle der Sprachpolitik systematisch darstellen und vergleichen."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q2 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das monolinguistische Modell deklariert eine einzige Nationalsprache und marginalisiert alle anderen Sprachen."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q3.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Frankreich ist das klassische Beispiel: Seit der Revolution gilt 'eine Nation, eine Sprache' als Staatsdoktrin."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "answer_evidence",
-        "text": "Zweitens: Minderheitensprachen brauchen aktive Förderung, passiver Schutz allein reicht nicht für ihr Überleben.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das plurilinguistische Modell erkennt mehrere Sprachen gleichberechtigt an und fördert sie institutionell."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q3 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Schweiz mit ihren vier Landessprachen ist das erfolgreichste Modell gelebter institutioneller Mehrsprachigkeit in Europa."
       },
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Ende des Hoertexts."
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das liberale Modell, wie in den USA, überlässt die Sprachenwahl weitgehend dem Markt und verzichtet auf aktive Sprachpolitik."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Jedes Modell hat spezifische Vor- und Nachteile, die vom historischen und gesellschaftlichen Kontext abhängen."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das monolinguistische Modell fördert nationale Einheit, unterdrückt aber sprachliche Minderheiten und kulturelle Vielfalt."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das plurilinguistische Modell schützt Vielfalt, ist aber institutionell aufwendig und kann politische Konflikte verschärfen."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Lassen Sie mich nun drei Fallstudien analysieren, die die Komplexität der Sprachpolitik illustrieren."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Erstens: Katalonien, wo die Sprachfrage zum Kristallisationspunkt des Konflikts zwischen Region und Zentralstaat geworden ist."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die katalanische Regierung hat das Bildungssystem konsequent auf Katalanisch umgestellt und fördert die Sprache aktiv."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die spanische Zentralregierung kritisiert dies als Zwangskatalanisierung und fordert mehr Spanisch im Unterricht."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Zweitens: Wales, wo eine konsequente Revitalisierungspolitik die walisische Sprache vor dem Aussterben bewahrt hat."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Einrichtung walisischsprachiger Schulen und eines walisischen Fernsehsenders hat die Sprecherzahl verdoppelt."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Drittens: Südtirol, wo ein ausgeklügeltes Proporzsystem die Sprachen Deutsch, Italienisch und Ladinisch ausbalanciert."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Jede Sprachgruppe hat proportional Zugang zu öffentlichen Stellen und Ressourcen, was den Konflikt entschärft hat."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Welche Lehren können wir aus diesen Fallstudien für die Sprachpolitik ziehen?"
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Erstens: Sprachpolitik gelingt nur, wenn sie demokratisch legitimiert ist und von der Bevölkerung getragen wird."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Zweitens: Minderheitensprachen brauchen aktive Förderung, passiver Schutz allein reicht nicht für ihr Überleben."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Drittens: Mehrsprachigkeit ist kein Problem, das gelöst werden muss, sondern eine Ressource, die genutzt werden sollte."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Europäische Union hat die historische Chance, ein neues Modell der Mehrsprachigkeit zu entwickeln."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ein Modell, das sprachliche Vielfalt als Stärke begreift und gleichzeitig praktische Kommunikation ermöglicht."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Vielen Dank für Ihre Aufmerksamkeit! Denken Sie in mehreren Sprachen, denn jede Sprache eröffnet eine neue Welt."
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Ende des Hörverstehens."
       }
     ]
   },
@@ -223,7 +310,7 @@
       "id": "l-c1-goethe-009-t4-lo-1",
       "cefrLevel": "C1",
       "skill": "listening",
-      "canDoVi": "Toi co the luyen nghe hieu o trinh do C1 qua chu de \"Sprachpolitik in mehrsprachigen Gesellschaften\".",
+      "canDoVi": "Tôi có thể luyện nghe hiểu ở trình độ C1 qua chủ đề \"Sprachpolitik in mehrsprachigen Gesellschaften\".",
       "canDoDe": "Ich kann Hoeren auf Niveau C1 zum Thema \"Sprachpolitik in mehrsprachigen Gesellschaften\" ueben.",
       "linkedContentIds": [
         "L-C1-GOETHE-009-T4"

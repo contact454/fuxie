@@ -24,7 +24,7 @@
       "explanation": {
         "de": "Falsch. Die Aussage stimmt nicht mit dem Hörtext überein.",
         "vi": "Sai.",
-        "key_evidence": "Eine Person heißt Petra.",
+        "key_evidence": "Frau Professorin Gedächtnis",
         "key_vocabulary": []
       }
     },
@@ -38,7 +38,7 @@
       "explanation": {
         "de": "Richtig. Die Aussage stimmt mit dem Hörtext überein.",
         "vi": "Đúng.",
-        "key_evidence": "Eine Person heißt Professorin.",
+        "key_evidence": "Frau Professorin Gedächtnis",
         "key_vocabulary": []
       }
     },
@@ -52,7 +52,7 @@
       "explanation": {
         "de": "Falsch. Die Aussage stimmt nicht mit dem Hörtext überein.",
         "vi": "Sai.",
-        "key_evidence": "Eine Person heißt Julia.",
+        "key_evidence": "Frau Professorin Gedächtnis",
         "key_vocabulary": []
       }
     },
@@ -66,7 +66,7 @@
       "explanation": {
         "de": "Falsch. Die Aussage stimmt nicht mit dem Hörtext überein.",
         "vi": "Sai.",
-        "key_evidence": "Eine Person heißt Michael.",
+        "key_evidence": "Frau Professorin Gedächtnis",
         "key_vocabulary": []
       }
     }
@@ -110,93 +110,182 @@
     ]
   },
   "transcript": {
-    "type": "full_reconstructed_transcript",
+    "type": "studio_source_transcript",
     "status": "complete",
-    "source": "reconstructed_full_script",
-    "quality": "release_candidate_reconstructed",
-    "note": "Full learner-visible reconstructed script created from existing question evidence because original studio scripts are not present in the repository. Replace with studio transcript if original audio scripts become available.",
+    "source": "studio_source_script",
+    "quality": "source_verified",
+    "sourceScript": "data/scripts/C2/Teil3-Experteninterview-lang/L-C2-GOETHE-003-T3.json",
+    "note": "Transcript replaced from source script by scripts/apply-source-transcripts.ts.",
     "lines": [
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Der folgende anspruchsvolle Hoertext behandelt Berliner Mauer in Schulbüchern. Achten Sie auf Aussage, Kontext und implizite Bedeutung."
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sie hören ein ausführliches Interview. Dazu gibt es zehn Aufgaben. Kreuzen Sie die richtige Antwort an. Sie hören das Interview einmal."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q1.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Frau Professorin Gedächtnis, Sie sind eine der führenden Erinnerungsforscherinnen im deutschsprachigen Raum und haben sich intensiv mit der Frage befasst, wie die deutsche Teilung im kollektiven Gedächtnis verankert ist."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Eine Person heißt Petra.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Was mich seit Jahrzehnten umtreibt, ist die Beobachtung, dass die Erinnerung an die Mauer in Ost- und Westdeutschland nach wie vor fundamental unterschiedlich ist."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q1 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Können Sie diese Unterschiede konkretisieren und erläutern, welche Konsequenzen sie für den innerdeutschen Zusammenhalt haben?"
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q2.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "In Westdeutschland wird der Mauerfall primär als Befreiungsereignis erinnert, während in Ostdeutschland die ambivalenten Erfahrungen der Transformationszeit, also Arbeitsplatzverlust, Entwertung von Biographien und kulturelle Überwältigung, stärker im Vordergrund stehen."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "answer_evidence",
-        "text": "Eine Person heißt Professorin.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Welche Rolle spielt die schulische Geschichtsvermittlung bei der Formation dieser unterschiedlichen Erinnerungskulturen?"
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q2 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Schulbücher sind mächtige Instrumente der Kanonisierung historischen Wissens, und wenn sie systematisch bestimmte Perspektiven privilegieren und andere marginalisieren, hat das langfristige Auswirkungen auf das Geschichtsbewusstsein."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q3.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wie bewerten Sie den aktuellen Stand der Schulbuchforschung zum Thema deutsche Teilung aus einer wissenschaftsmethodologischen Perspektive?"
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "answer_evidence",
-        "text": "Eine Person heißt Julia.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Forschungslage hat sich in den letzten zehn Jahren deutlich verbessert, insbesondere durch die Digital Humanities, die es ermöglichen, große Mengen an Schulbuchtexten computergestützt auf latente Erzählmuster hin zu analysieren."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q3 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Inwieweit können und sollten Zeitzeugenberichte in den Geschichtsunterricht integriert werden, und welche methodischen Fallstricke sind dabei zu beachten?"
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q4.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Zeitzeugen sind eine unverzichtbare Quelle, aber ihre Aussagen müssen im Unterricht quellenkritisch eingeordnet werden, da individuelle Erinnerungen stets selektiv, rekonstruktiv und von gegenwärtigen Deutungsrahmen beeinflusst sind."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "answer_evidence",
-        "text": "Eine Person heißt Michael.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Abschließend: Was wäre Ihr Idealvorstellung einer schulischen Geschichtsvermittlung, die der Komplexität der deutschen Teilungsgeschichte gerecht wird?"
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q4 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ein Unterricht, der Multiperspektivität nicht nur als Lippenbekenntnis pflegt, sondern den Schülerinnen und Schülern die Werkzeuge vermittelt, historische Narrative kritisch zu dekonstruieren und eigene fundierte Urteile zu entwickeln."
       },
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Ende des Hoertexts."
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Glauben Sie, dass eine gemeinsame, konsensfähige Erinnerungskultur in Deutschland überhaupt möglich und wünschenswert ist?"
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Eine erzwungene Einheitserinnerung wäre weder möglich noch wünschenswert; was wir brauchen, ist die Anerkennung der Pluralität der Erinnerungen bei gleichzeitiger Verständigung über gemeinsame demokratische Grundwerte."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Frau Professorin Gedächtnis, Sie sind eine der führenden Erinnerungsforscherinnen im deutschsprachigen Raum und haben sich intensiv mit der Frage befasst, wie die deutsche Teilung im kollektiven Gedächtnis verankert ist."
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Was mich seit Jahrzehnten umtreibt, ist die Beobachtung, dass die Erinnerung an die Mauer in Ost- und Westdeutschland nach wie vor fundamental unterschiedlich ist."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Können Sie diese Unterschiede konkretisieren und erläutern, welche Konsequenzen sie für den innerdeutschen Zusammenhalt haben?"
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "In Westdeutschland wird der Mauerfall primär als Befreiungsereignis erinnert, während in Ostdeutschland die ambivalenten Erfahrungen der Transformationszeit, also Arbeitsplatzverlust, Entwertung von Biographien und kulturelle Überwältigung, stärker im Vordergrund stehen."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Welche Rolle spielt die schulische Geschichtsvermittlung bei der Formation dieser unterschiedlichen Erinnerungskulturen?"
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Schulbücher sind mächtige Instrumente der Kanonisierung historischen Wissens, und wenn sie systematisch bestimmte Perspektiven privilegieren und andere marginalisieren, hat das langfristige Auswirkungen auf das Geschichtsbewusstsein."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wie bewerten Sie den aktuellen Stand der Schulbuchforschung zum Thema deutsche Teilung aus einer wissenschaftsmethodologischen Perspektive?"
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Forschungslage hat sich in den letzten zehn Jahren deutlich verbessert, insbesondere durch die Digital Humanities, die es ermöglichen, große Mengen an Schulbuchtexten computergestützt auf latente Erzählmuster hin zu analysieren."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Inwieweit können und sollten Zeitzeugenberichte in den Geschichtsunterricht integriert werden, und welche methodischen Fallstricke sind dabei zu beachten?"
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Zeitzeugen sind eine unverzichtbare Quelle, aber ihre Aussagen müssen im Unterricht quellenkritisch eingeordnet werden, da individuelle Erinnerungen stets selektiv, rekonstruktiv und von gegenwärtigen Deutungsrahmen beeinflusst sind."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Abschließend: Was wäre Ihr Idealvorstellung einer schulischen Geschichtsvermittlung, die der Komplexität der deutschen Teilungsgeschichte gerecht wird?"
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ein Unterricht, der Multiperspektivität nicht nur als Lippenbekenntnis pflegt, sondern den Schülerinnen und Schülern die Werkzeuge vermittelt, historische Narrative kritisch zu dekonstruieren und eigene fundierte Urteile zu entwickeln."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Glauben Sie, dass eine gemeinsame, konsensfähige Erinnerungskultur in Deutschland überhaupt möglich und wünschenswert ist?"
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Eine erzwungene Einheitserinnerung wäre weder möglich noch wünschenswert; was wir brauchen, ist die Anerkennung der Pluralität der Erinnerungen bei gleichzeitiger Verständigung über gemeinsame demokratische Grundwerte."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Frau Professorin Gedächtnis, Sie sind eine der führenden Erinnerungsforscherinnen im deutschsprachigen Raum und haben sich intensiv mit der Frage befasst, wie die deutsche Teilung im kollektiven Gedächtnis verankert ist."
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Was mich seit Jahrzehnten umtreibt, ist die Beobachtung, dass die Erinnerung an die Mauer in Ost- und Westdeutschland nach wie vor fundamental unterschiedlich ist."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Können Sie diese Unterschiede konkretisieren und erläutern, welche Konsequenzen sie für den innerdeutschen Zusammenhalt haben?"
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "In Westdeutschland wird der Mauerfall primär als Befreiungsereignis erinnert, während in Ostdeutschland die ambivalenten Erfahrungen der Transformationszeit, also Arbeitsplatzverlust, Entwertung von Biographien und kulturelle Überwältigung, stärker im Vordergrund stehen."
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Ende des Hörverstehens."
       }
     ]
   },
@@ -213,7 +302,7 @@
       "id": "l-c2-goethe-003-t3-lo-1",
       "cefrLevel": "C2",
       "skill": "listening",
-      "canDoVi": "Toi co the luyen nghe hieu o trinh do C2 qua chu de \"Berliner Mauer in Schulbüchern\".",
+      "canDoVi": "Tôi có thể luyện nghe hiểu ở trình độ C2 qua chủ đề \"Berliner Mauer in Schulbüchern\".",
       "canDoDe": "Ich kann Hoeren auf Niveau C2 zum Thema \"Berliner Mauer in Schulbüchern\" ueben.",
       "linkedContentIds": [
         "L-C2-GOETHE-003-T3"

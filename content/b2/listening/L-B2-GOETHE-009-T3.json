@@ -168,129 +168,162 @@
     ]
   },
   "transcript": {
-    "type": "full_reconstructed_transcript",
+    "type": "studio_source_transcript",
     "status": "complete",
-    "source": "reconstructed_full_script",
-    "quality": "release_candidate_reconstructed",
-    "note": "Full learner-visible reconstructed script created from existing question evidence because original studio scripts are not present in the repository. Replace with studio transcript if original audio scripts become available.",
+    "source": "studio_source_script",
+    "quality": "source_verified",
+    "sourceScript": "data/scripts/B2/Teil3-Diskussion-mehrere-Personen/L-B2-GOETHE-009-T3.json",
+    "note": "Transcript replaced from source script by scripts/apply-source-transcripts.ts.",
     "lines": [
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Im folgenden Hoertext geht es um Nachhaltiger Konsum. Achten Sie auf die zentrale Information."
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sie hören eine Diskussion. Dazu gibt es sechs Aufgaben. Wer sagt was? Sie hören die Diskussion zweimal."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q1.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Willkommen zur Diskussion: Nachhaltiger Konsum, Luxusproblem oder Notwendigkeit?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Nachhaltiger Konsum ist kein Luxus, sondern eine Überlebensfrage für unseren Planeten.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Nachhaltiger Konsum ist kein Luxus, sondern eine Überlebensfrage für unseren Planeten."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q1 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das sehe ich differenzierter. Nicht jeder kann sich Bio-Lebensmittel und faire Mode leisten."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q2.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Herr Fischer, warum halten Sie nachhaltigen Konsum für unverzichtbar?"
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "answer_evidence",
-        "text": "Nicht jeder kann sich Bio-Lebensmittel und faire Mode leisten.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Weil unser aktueller Ressourcenverbrauch die Kapazitäten der Erde um das Eineinhalbfache übersteigt."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q2 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Aber die größten Umweltverschmutzer sind Industrie und Energiewirtschaft, nicht der einzelne Verbraucher."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q3.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Richtig, und genau deshalb greift das Narrativ vom individuellen Fußabdruck zu kurz."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "answer_evidence",
-        "text": "Richtig, und genau deshalb greift das Narrativ vom individuellen Fußabdruck zu kurz.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Frau Engel, Sie sind Vertreterin eines Verbraucherschutzverbandes. Was sagen Sie?"
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q3 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Nachhaltigkeit darf nicht zulasten der sozial Schwächeren gehen."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q4.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wenn Bio dreimal so teuer ist wie konventionell, ist nachhaltiger Konsum ein Privileg der Wohlhabenden."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "answer_evidence",
-        "text": "Das stimmt, aber konventionelle Lebensmittel sind nur deshalb billig, weil die Umweltkosten externalisiert werden.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das stimmt, aber konventionelle Lebensmittel sind nur deshalb billig, weil die Umweltkosten externalisiert werden."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q4 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das mag ökonomisch korrekt sein, hilft aber einer Alleinerziehenden mit tausend Euro Netto nicht weiter."
       },
       {
-        "speaker": "Sprecher 5",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q5.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Herr Fischer, wie kann nachhaltiger Konsum sozial gerechter gestaltet werden?"
       },
       {
-        "speaker": "Sprecher 5",
-        "speaker_role": "answer_evidence",
-        "text": "Nachhaltigkeit muss wirtschaftlich tragfähig und sozial gerecht sein, sonst scheitert sie!",
-        "linkedQuestionId": "Q5"
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Durch eine Reform der Mehrwertsteuer! Grundnahrungsmittel sollten steuerfrei sein, umweltschädliche Produkte höher besteuert."
       },
       {
-        "speaker": "Sprecher 5",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q5 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das ist ein interessanter Vorschlag. Frau Engel, wie bewerten Sie ihn?"
       },
       {
-        "speaker": "Sprecher 6",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q6.",
-        "linkedQuestionId": "Q6"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Im Prinzip richtig, aber die Umsetzung wäre bürokratisch komplex und politisch schwer durchsetzbar."
       },
       {
-        "speaker": "Sprecher 6",
-        "speaker_role": "answer_evidence",
-        "text": "Das ist vorbildlich. Deutschland sollte dringend nachziehen und ähnliche Gesetze einführen.",
-        "linkedQuestionId": "Q6"
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Es gibt auch positive Beispiele. Unverpackt-Läden sind manchmal sogar günstiger als Supermärkte."
       },
       {
-        "speaker": "Sprecher 6",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q6 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q6"
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das ist die Ausnahme. In den meisten Fällen zahlt man für Nachhaltigkeit einen Aufpreis."
       },
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Ende des Hoertexts."
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Dieser Aufpreis schrumpft aber, je mehr Menschen nachhaltig konsumieren."
+      },
+      {
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das ist die klassische Skalierungslogik, die aber voraussetzt, dass genug Nachfrage entsteht."
+      },
+      {
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Welche Rolle sollte die Politik bei der Förderung nachhaltigen Konsums spielen?"
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Subventionen für fossile Energie abschaffen und stattdessen in öffentlichen Nahverkehr investieren."
+      },
+      {
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Und strengere Regulierung für geplante Obsoleszenz, also das absichtliche Kaputtmachen von Produkten."
+      },
+      {
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "In Frankreich gibt es bereits einen Reparierbarkeits-Index für Elektronikgeräte."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das ist vorbildlich. Deutschland sollte dringend nachziehen und ähnliche Gesetze einführen."
+      },
+      {
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Vielen Dank für diese differenzierte Diskussion, die zeigt, wie komplex das Thema ist!"
+      },
+      {
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Nachhaltigkeit muss wirtschaftlich tragfähig und sozial gerecht sein, sonst scheitert sie!"
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Denken Sie bei Ihrem nächsten Einkauf darüber nach, was Ihre Kaufentscheidung bewirkt!"
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Ende Teil drei."
       }
     ]
   },
@@ -307,7 +340,7 @@
       "id": "l-b2-goethe-009-t3-lo-1",
       "cefrLevel": "B2",
       "skill": "listening",
-      "canDoVi": "Toi co the luyen nghe hieu o trinh do B2 qua chu de \"Nachhaltiger Konsum\".",
+      "canDoVi": "Tôi có thể luyện nghe hiểu ở trình độ B2 qua chủ đề \"Nachhaltiger Konsum\".",
       "canDoDe": "Ich kann Hoeren auf Niveau B2 zum Thema \"Nachhaltiger Konsum\" ueben.",
       "linkedContentIds": [
         "L-B2-GOETHE-009-T3"

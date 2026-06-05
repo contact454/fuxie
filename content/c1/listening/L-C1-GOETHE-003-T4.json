@@ -90,57 +90,162 @@
     ]
   },
   "transcript": {
-    "type": "full_reconstructed_transcript",
+    "type": "studio_source_transcript",
     "status": "complete",
-    "source": "reconstructed_full_script",
-    "quality": "release_candidate_reconstructed",
-    "note": "Full learner-visible reconstructed script created from existing question evidence because original studio scripts are not present in the repository. Replace with studio transcript if original audio scripts become available.",
+    "source": "studio_source_script",
+    "quality": "source_verified",
+    "sourceScript": "data/scripts/C1/Teil4-Vortrag/L-C1-GOETHE-003-T4.json",
+    "note": "Transcript replaced from source script by scripts/apply-source-transcripts.ts.",
     "lines": [
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Der folgende anspruchsvolle Hoertext behandelt EU-Familienpolitik und Gleichstellung. Achten Sie auf Aussage, Kontext und implizite Bedeutung."
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sie hören einen Vortrag. Dazu gibt es sieben Aufgaben. Kreuzen Sie die richtige Antwort an. Sie hören den Vortrag einmal."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q1.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Meine Damen und Herren, willkommen zu meinem Vortrag über Familienpolitik und Gleichstellung in der Europäischen Union."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "answer_evidence",
-        "text": "Der Schlüsselfaktor ist die Defamilialisierung: der Grad, in dem der Staat Sorgearbeit von der Familie übernimmt.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ich vertrete die These, dass die Familienpolitik der zentrale Hebel für Geschlechtergleichstellung und wirtschaftlichen Wohlstand ist."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q1 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die empirische Evidenz ist überwältigend: Länder mit progressiver Familienpolitik schneiden in fast allen Wohlstandsindikatoren besser ab."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q2.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Lassen Sie mich zunächst die verschiedenen Familienmodelle in Europa systematisch vergleichen und kategorisieren."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "answer_evidence",
-        "text": "Gleichstellung ist also nicht nur eine Frage der Gerechtigkeit, sondern eine rein ökonomische Notwendigkeit.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das nordische Modell, vertreten durch Schweden und Finnland, basiert auf universeller öffentlicher Kinderbetreuung und Individualbesteuerung."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q2 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das kontinentale Modell, typisch für Deutschland und Frankreich, kombiniert steuerliche Familienbegünstigung mit partieller Kinderbetreuung."
       },
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Ende des Hoertexts."
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das mediterrane Modell, etwa in Italien und Griechenland, verlässt sich stark auf familiäre Netzwerke statt auf staatliche Leistungen."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das angelsächsische Modell, wie in Großbritannien, setzt auf Marktlösungen und minimale staatliche Eingriffe."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Jedes dieser Modelle hat unterschiedliche Auswirkungen auf die Erwerbsbeteiligung von Frauen und die Geburtenrate."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Am erfolgreichsten ist das nordische Modell: hohe Geburtenraten, hohe Frauenerwerbsquote und geringe Kinderarmut."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Am wenigsten erfolgreich ist das mediterrane Modell: niedrige Geburtenraten, niedrige Frauenerwerbsquote und hohe Kinderarmut."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Diese Ergebnisse sind kein Zufall, sondern das direkte Resultat politischer Entscheidungen und institutioneller Rahmenbedingungen."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Der Schlüsselfaktor ist die Defamilialisierung: der Grad, in dem der Staat Sorgearbeit von der Familie übernimmt."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Je mehr der Staat Kinderbetreuung und Pflege als öffentliche Aufgabe versteht, desto gleichberechtigter sind die Geschlechter."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das klingt paradox: Gerade die Staaten, die die Familie am meisten entlasten, haben die stärksten Familien."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Lassen Sie mich nun die ökonomischen Kosten der Gleichstellungsdefizite in Europa beziffern."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die EU-Kommission schätzt, dass die Schließung des Gender Employment Gap das europäische BIP um sieben Prozent steigern würde."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das entspricht einem zusätzlichen Wohlstandsgewinn von über einer Billion Euro pro Jahr für die Europäische Union."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Gleichstellung ist also nicht nur eine Frage der Gerechtigkeit, sondern eine rein ökonomische Notwendigkeit."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Was muss die EU konkret tun, um die Gleichstellung in allen Mitgliedstaaten voranzubringen?"
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Erstens: verbindliche Mindeststandards für Elternzeit mit nicht-übertragbaren Vätermonaten in allen Mitgliedstaaten."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Zweitens: ein europaweites Investitionsprogramm für den Ausbau qualitativ hochwertiger frühkindlicher Bildung und Betreuung."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Drittens: die konsequente Umsetzung der Entgelttransparenz-Richtlinie mit wirksamen Sanktionen für Unternehmen."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Viertens: die Reform der nationalen Steuersysteme, die derzeit häufig negative Erwerbsanreize für Zweitverdienende setzen."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Diese vier Maßnahmen würden die Gleichstellung in Europa innerhalb einer Generation fundamental verändern und verbessern."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Investitionen sind erheblich, aber die Rendite in Form von Wirtschaftswachstum und sozialer Stabilität noch viel höher."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Abschließend: Gleichstellung ist kein Frauenthema, sondern ein Gesellschaftsprojekt, das allen zugute kommt und alle betrifft."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Vielen Dank für Ihre Aufmerksamkeit!"
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Ende des Hörverstehens."
       }
     ]
   },
@@ -157,7 +262,7 @@
       "id": "l-c1-goethe-003-t4-lo-1",
       "cefrLevel": "C1",
       "skill": "listening",
-      "canDoVi": "Toi co the luyen nghe hieu o trinh do C1 qua chu de \"EU-Familienpolitik und Gleichstellung\".",
+      "canDoVi": "Tôi có thể luyện nghe hiểu ở trình độ C1 qua chủ đề \"EU-Familienpolitik und Gleichstellung\".",
       "canDoDe": "Ich kann Hoeren auf Niveau C1 zum Thema \"EU-Familienpolitik und Gleichstellung\" ueben.",
       "linkedContentIds": [
         "L-C1-GOETHE-003-T4"

@@ -67,7 +67,7 @@
       "explanation": {
         "de": "Dr. Berger beschreibt die kognitive Umstrukturierung als das Verändern negativer Gedankenmuster, zum Beispiel durch positive Selbstgespräche wie 'Eine Prüfung definiert nicht meinen Wert als Mensch'.",
         "vi": "Tiến sĩ Berger mô tả tái cấu trúc nhận thức là việc thay đổi các mô hình suy nghĩ tiêu cực, ví dụ bằng cách tự nói chuyện tích cực như 'Một kỳ thi không định nghĩa giá trị của tôi với tư cách là một con người'.",
-        "key_evidence": "Die wirksamste Methode ist die kognitive Umstrukturierung, also das Verändern der negativen Gedankenmuster. Statt 'Wenn ich durchfalle, ist mein Leben ruiniert' denkt man 'Eine Prüfung definiert nicht meinen Wert als Mensch'.",
+        "key_evidence": "Die wirksamste Methode ist die kognitive Umstrukturierung, also das Verändern der negativen Gedankenmuster",
         "key_vocabulary": []
       }
     },
@@ -168,129 +168,162 @@
     ]
   },
   "transcript": {
-    "type": "full_reconstructed_transcript",
+    "type": "studio_source_transcript",
     "status": "complete",
-    "source": "reconstructed_full_script",
-    "quality": "release_candidate_reconstructed",
-    "note": "Full learner-visible reconstructed script created from existing question evidence because original studio scripts are not present in the repository. Replace with studio transcript if original audio scripts become available.",
+    "source": "studio_source_script",
+    "quality": "source_verified",
+    "sourceScript": "data/scripts/B2/Teil2-Radiointerview-mit-Experte/L-B2-GOETHE-008-T2.json",
+    "note": "Transcript replaced from source script by scripts/apply-source-transcripts.ts.",
     "lines": [
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Im folgenden Hoertext geht es um Prüfungsangst bewältigen. Achten Sie auf die zentrale Information."
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sie hören ein Interview. Dazu gibt es sechs Aufgaben. Kreuzen Sie die richtige Antwort an. Sie hören das Interview zweimal."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q1.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Guten Abend! Heute bei mir: die Psychologin Dr. Claudia Berger, Expertin für Leistungsangst."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Prüfungsangst betrifft Millionen von Menschen und wird leider oft nicht ernst genommen.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Vielen Dank. Prüfungsangst betrifft Millionen von Menschen und wird leider oft nicht ernst genommen."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q1 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Frau Dr. Berger, was genau passiert im Körper bei Prüfungsangst?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q2.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Der Körper schüttet Stresshormone aus: Adrenalin und Cortisol. Das versetzt uns in einen Kampf-oder-Flucht-Modus."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Das Arbeitsgedächtnis wird eingeschränkt, das Denken wird oberflächlich und unflexibel.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Dieser Modus war für unsere Vorfahren überlebenswichtig, ist aber in einer Prüfungssituation kontraproduktiv."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q2 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das Arbeitsgedächtnis wird eingeschränkt, das Denken wird oberflächlich und unflexibel."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q3.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das erklärt den typischen Blackout in der Prüfung. Was kann man dagegen tun?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Die wirksamste Methode ist die kognitive Umstrukturierung, also das Verändern der negativen Gedankenmuster. Statt 'Wenn ich durchfalle, ist mein Leben ruiniert' denkt man 'Eine Prüfung definiert nicht meinen Wert als Mensch'.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die wirksamste Methode ist die kognitive Umstrukturierung, also das Verändern der negativen Gedankenmuster."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q3 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Können Sie ein konkretes Beispiel für kognitive Umstrukturierung geben?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q4.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Statt 'Wenn ich durchfalle, ist mein Leben ruiniert' denkt man 'Eine Prüfung definiert nicht meinen Wert als Mensch'."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Das klingt einfach, aber in der Praxis ist es schwer, seine automatischen Gedanken zu kontrollieren.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das klingt einfach, aber in der Praxis ist es schwer, seine automatischen Gedanken zu kontrollieren."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q4 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Deshalb braucht man Übung. Regelmäßiges Training macht diese Umstrukturierung mit der Zeit automatisch."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q5.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Welche körperlichen Techniken helfen gegen akute Prüfungsangst?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Aber die Vorbereitung muss strukturiert sein. Bulimie-Lernen am Abend vorher ist kontraproduktiv.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Progressive Muskelentspannung nach Jacobson ist sehr wirksam und einfach zu lernen."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q5 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Man spannt systematisch verschiedene Muskelgruppen an und entspannt sie wieder."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q6.",
-        "linkedQuestionId": "Q6"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Auch die Bauchatmung hilft: langsam und tief in den Bauch atmen aktiviert den Parasympathikus."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Sprechen Sie über Ihre Angst! Sie ist nichts, wofür man sich schämen muss.",
-        "linkedQuestionId": "Q6"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Der Parasympathikus ist der Gegenspieler des Stresssystems und beruhigt den Körper."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q6 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q6"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Gibt es auch langfristige Strategien zur Prävention von Prüfungsangst?"
       },
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Ende des Hoertexts."
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Gute Vorbereitung ist die beste Prävention. Wer gut vorbereitet ist, hat weniger Grund zur Angst."
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Aber die Vorbereitung muss strukturiert sein. Bulimie-Lernen am Abend vorher ist kontraproduktiv."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Was meinen Sie mit Bulimie-Lernen?"
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Alles in kürzester Zeit reinpauken und nach der Prüfung sofort wieder vergessen."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Besser ist verteiltes Lernen über Wochen mit regelmäßigen Wiederholungen und Selbsttests."
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Forschung zeigt: Sich selbst abzufragen ist effektiver als reines Durchlesen des Stoffs."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Frau Dr. Berger, welchen letzten Rat geben Sie unseren Hörern?"
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Sprechen Sie über Ihre Angst! Sie ist nichts, wofür man sich schämen muss."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Viele Universitäten bieten kostenlose psychologische Beratung an. Nutzen Sie diese Angebote!"
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Vielen Dank für Ihre wertvollen Einblicke und Ratschläge, Frau Dr. Berger!"
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Ende Teil zwei."
       }
     ]
   },
@@ -307,7 +340,7 @@
       "id": "l-b2-goethe-008-t2-lo-1",
       "cefrLevel": "B2",
       "skill": "listening",
-      "canDoVi": "Toi co the luyen nghe hieu o trinh do B2 qua chu de \"Prüfungsangst bewältigen\".",
+      "canDoVi": "Tôi có thể luyện nghe hiểu ở trình độ B2 qua chủ đề \"Prüfungsangst bewältigen\".",
       "canDoDe": "Ich kann Hoeren auf Niveau B2 zum Thema \"Prüfungsangst bewältigen\" ueben.",
       "linkedContentIds": [
         "L-B2-GOETHE-008-T2"

@@ -29,7 +29,7 @@
       "explanation": {
         "de": "Der Dozent fasst zusammen, dass alle drei Konzepte den Menschen in den Mittelpunkt stellen. Option (a) paraphrasiert diesen Kerngedanken korrekt. Option (b) ist ein lexikalischer Trugschluss, da sie nur spezifische Details des Konzepts der 'produktiven Stadt' nennt, nicht aber das übergreifende Prinzip aller drei Konzepte. Option (c) ist falsch, da der Dozent Technologie als einen separaten, wenn auch wichtigen, Aspekt behandelt und das Kernprinzip der Konzepte als menschenzentriert, nicht technologiezentriert, beschreibt.",
         "vi": "Giảng viên tóm tắt rằng cả ba khái niệm đều đặt con người làm trung tâm. Lựa chọn (a) diễn giải chính xác ý tưởng cốt lõi này. Lựa chọn (b) là một cái bẫy từ vựng, vì nó chỉ đề cập đến các chi tiết cụ thể của khái niệm 'thành phố sản xuất' chứ không phải nguyên tắc bao trùm của cả ba khái niệm. Lựa chọn (c) sai vì giảng viên xem công nghệ là một khía cạnh riêng biệt, mặc dù quan trọng, và mô tả nguyên tắc cốt lõi của các khái niệm là lấy con người làm trung tâm, không phải công nghệ.",
-        "key_evidence": "Alle drei Konzepte haben eines gemeinsam: Sie stellen den Menschen und seine Bedürfnisse in den Mittelpunkt...",
+        "key_evidence": "Sie stellen den Menschen und seine Bedürfnisse in den Mittelpunkt",
         "key_vocabulary": [
           "fundamentales Prinzip = gemeinsames Merkmal",
           "Priorisierung des menschlichen Wohlbefindens = den Menschen in den Mittelpunkt stellen",
@@ -52,7 +52,7 @@
       "explanation": {
         "de": "Der Dozent betont explizit, dass Technologie allein nicht ausreicht, sondern durch kluge Planung und Bürgerbeteiligung ergänzt werden muss. Option (b) fasst diese nuancierte Haltung korrekt zusammen, indem sie Technologie als unterstützendes Werkzeug darstellt, dessen Erfolg an die Beteiligung der Bürger geknüpft ist. Option (a) ist eine direkte Widerlegung der Aussage des Dozenten ('Technologie allein macht keine gute Stadt'). Option (c) ist ebenfalls falsch, da der Dozent die Bürgerbeteiligung als 'entscheidend' für den Erfolg bezeichnet und sie nicht durch Technologie ersetzt sieht.",
         "vi": "Giảng viên nhấn mạnh rõ ràng rằng chỉ công nghệ thôi là không đủ, mà cần được bổ sung bằng quy hoạch thông minh và sự tham gia của người dân. Lựa chọn (b) tóm tắt chính xác quan điểm tinh tế này, mô tả công nghệ như một công cụ hỗ trợ mà thành công của nó phụ thuộc vào sự tham gia của người dân. Lựa chọn (a) trực tiếp mâu thuẫn với tuyên bố của giảng viên ('Chỉ công nghệ thôi không làm nên một thành phố tốt'). Lựa chọn (c) cũng sai, vì giảng viên mô tả sự tham gia của người dân là 'quyết định' cho sự thành công và không coi nó bị thay thế bởi công nghệ.",
-        "key_evidence": "Aber Technologie allein macht keine gute Stadt. Es braucht kluge Planung und demokratische Beteiligung der Bürger...",
+        "key_evidence": "Aber Technologie allein macht keine gute Stadt",
         "key_vocabulary": [
           "unterstützendes Instrument = Technologie allein macht keine gute Stadt",
           "partizipative Planungsansätze = demokratische Beteiligung der Bürger"
@@ -99,57 +99,162 @@
     ]
   },
   "transcript": {
-    "type": "full_reconstructed_transcript",
+    "type": "studio_source_transcript",
     "status": "complete",
-    "source": "reconstructed_full_script",
-    "quality": "release_candidate_reconstructed",
-    "note": "Full learner-visible reconstructed script created from existing question evidence because original studio scripts are not present in the repository. Replace with studio transcript if original audio scripts become available.",
+    "source": "studio_source_script",
+    "quality": "source_verified",
+    "sourceScript": "data/scripts/C1/Teil4-Vortrag/L-C1-GOETHE-012-T4.json",
+    "note": "Transcript replaced from source script by scripts/apply-source-transcripts.ts.",
     "lines": [
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Der folgende anspruchsvolle Hoertext behandelt Kulturfinanzierung und Sponsoring. Achten Sie auf Aussage, Kontext und implizite Bedeutung."
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sie hören einen Vortrag. Dazu gibt es sieben Aufgaben. Kreuzen Sie die richtige Antwort an. Sie hören den Vortrag einmal."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q1.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Meine Damen und Herren, willkommen zu meinem Vortrag über die Zukunft des Wohnens und der Stadtplanung, was die Notwendigkeit einer differenzierten Betrachtung deutlich unterstreicht."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "answer_evidence",
-        "text": "Alle drei Konzepte haben eines gemeinsam: Sie stellen den Menschen und seine Bedürfnisse in den Mittelpunkt...",
-        "linkedQuestionId": "Q1"
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ich werde argumentieren, dass die Wohnungsfrage die zentrale soziale Frage des einundzwanzigsten Jahrhunderts ist, und diese Entwicklung betrifft nicht nur Fachleute, sondern die gesamte Gesellschaft."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q1 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Zweitausendvierundzwanzig lebten erstmals mehr als fünfzig Prozent der Weltbevölkerung in Städten und die Urbanisierung beschleunigt sich, wobei aktuelle Studien und Expertenmeinungen ein vielfältiges Bild zeichnen."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q2.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Bis 2050 werden voraussichtlich siebzig Prozent aller Menschen in urbanen Räumen leben und arbeiten, was in der wissenschaftlichen Gemeinschaft für erhebliche Diskussionen sorgt."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "answer_evidence",
-        "text": "Aber Technologie allein macht keine gute Stadt. Es braucht kluge Planung und demokratische Beteiligung der Bürger...",
-        "linkedQuestionId": "Q2"
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Qualität des städtischen Wohnens wird damit zum entscheidenden Faktor für die Lebensqualität der Menschheit, wobei die Experten in dieser Frage nach wie vor unterschiedlicher Meinung sind."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q2 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Lassen Sie mich zunächst die drei größten Herausforderungen für das Wohnen der Zukunft identifizieren, was sowohl in der Forschung als auch in der Praxis weitreichende Konsequenzen hat."
       },
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Ende des Hoertexts."
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Erstens: die Bezahlbarkeit. In allen großen Metropolen der Welt steigen die Wohnkosten schneller als die Einkommen, und dies wirft grundlegende Fragen zur aktuellen gesellschaftlichen Entwicklung auf."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Diese Entwicklung bedroht den sozialen Zusammenhalt und verstärkt die Segregation zwischen Arm und Reich, die in den vergangenen Jahren zunehmend an Bedeutung gewonnen haben."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Zweitens: die Nachhaltigkeit. Der Gebäudesektor ist für vierzig Prozent der weltweiten CO2-Emissionen verantwortlich, was die Notwendigkeit einer differenzierten Betrachtung deutlich unterstreicht."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ohne eine radikale Transformation des Bausektors sind die Pariser Klimaziele nicht zu erreichen, und diese Entwicklung betrifft nicht nur Fachleute, sondern die gesamte Gesellschaft."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Drittens: die Lebensqualität. Städte müssen nicht nur funktional, sondern auch lebenswert und gesundheitsfördernd sein, wobei aktuelle Studien und Expertenmeinungen ein vielfältiges Bild zeichnen."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Grünflächen, saubere Luft, kurze Wege und soziale Begegnungsorte sind essentiell für das Wohlbefinden der Bewohner, was in der wissenschaftlichen Gemeinschaft für erhebliche Diskussionen sorgt."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Lassen Sie mich nun drei zukunftsweisende Stadtplanungskonzepte vorstellen und ihre Potenziale analysieren, wobei die Experten in dieser Frage nach wie vor unterschiedlicher Meinung sind."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das Konzept der Fünfzehn-Minuten-Stadt wurde vom Urbanisten Carlos Moreno an der Sorbonne entwickelt und vorgestellt, was sowohl in der Forschung als auch in der Praxis weitreichende Konsequenzen hat."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Grundidee: Alle wichtigen Alltagsfunktionen sollen innerhalb von fünfzehn Minuten zu Fuß oder mit dem Rad erreichbar sein."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "In Paris wird dieses Konzept bereits auf gesamtstädtischer Ebene umgesetzt und zeigt beeindruckende erste Ergebnisse, die in den vergangenen Jahren zunehmend an Bedeutung gewonnen haben."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das zweite Konzept ist die Schwammstadt, die Regenwasser nicht ableitet, sondern speichert und zur Kühlung nutzt, was die Notwendigkeit einer differenzierten Betrachtung deutlich unterstreicht."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Angesichts zunehmender Hitzewellen und Starkregen-Ereignisse ist die Schwammstadt ein unverzichtbares Klimaanpassungskonzept, und diese Entwicklung betrifft nicht nur Fachleute, sondern die gesamte Gesellschaft."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das dritte Konzept ist die produktive Stadt, die Landwirtschaft, Handwerk und Produktion in die Stadt zurückholt, wobei aktuelle Studien und Expertenmeinungen ein vielfältiges Bild zeichnen."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Urban Farming, vertikale Gärten und dezentrale Werkstätten machen Städte resilienter und reduzieren Transportwege, was in der wissenschaftlichen Gemeinschaft für erhebliche Diskussionen sorgt."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Alle drei Konzepte haben eines gemeinsam: Sie stellen den Menschen und seine Bedürfnisse in den Mittelpunkt, wobei die Experten in dieser Frage nach wie vor unterschiedlicher Meinung sind."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die technologische Dimension des zukünftigen Wohnens darf ebenfalls nicht vernachlässigt werden, was sowohl in der Forschung als auch in der Praxis weitreichende Konsequenzen hat."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Smart-Home-Technologien können den Energieverbrauch von Gebäuden um bis zu vierzig Prozent reduzieren, und dies wirft grundlegende Fragen zur aktuellen gesellschaftlichen Entwicklung auf."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Digitale Zwillinge ermöglichen es Stadtplanern, Veränderungen zu simulieren, bevor sie in der Realität umgesetzt werden, die in den vergangenen Jahren zunehmend an Bedeutung gewonnen haben."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Aber Technologie allein macht keine gute Stadt. Es braucht kluge Planung und demokratische Beteiligung der Bürger, was die Notwendigkeit einer differenzierten Betrachtung deutlich unterstreicht."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Bürgerbeteiligung bei Stadtplanungsprojekten ist entscheidend für die Akzeptanz und den Erfolg von Veränderungen, und diese Entwicklung betrifft nicht nur Fachleute, sondern die gesamte Gesellschaft."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Menschen, die ihre Stadt mitgestalten können, identifizieren sich stärker mit ihrem Stadtviertel und engagieren sich mehr, wobei aktuelle Studien und Expertenmeinungen ein vielfältiges Bild zeichnen."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Vielen Dank für Ihre Aufmerksamkeit! Die Stadt der Zukunft beginnt mit den Entscheidungen, die wir heute treffen, was in der wissenschaftlichen Gemeinschaft für erhebliche Diskussionen sorgt."
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Ende des Hörverstehens."
       }
     ]
   },
@@ -166,7 +271,7 @@
       "id": "l-c1-goethe-012-t4-lo-1",
       "cefrLevel": "C1",
       "skill": "listening",
-      "canDoVi": "Toi co the luyen nghe hieu o trinh do C1 qua chu de \"Kulturfinanzierung und Sponsoring\".",
+      "canDoVi": "Tôi có thể luyện nghe hiểu ở trình độ C1 qua chủ đề \"Kulturfinanzierung und Sponsoring\".",
       "canDoDe": "Ich kann Hoeren auf Niveau C1 zum Thema \"Kulturfinanzierung und Sponsoring\" ueben.",
       "linkedContentIds": [
         "L-C1-GOETHE-012-T4"

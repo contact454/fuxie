@@ -193,129 +193,202 @@
     ]
   },
   "transcript": {
-    "type": "full_reconstructed_transcript",
+    "type": "studio_source_transcript",
     "status": "complete",
-    "source": "reconstructed_full_script",
-    "quality": "release_candidate_reconstructed",
-    "note": "Full learner-visible reconstructed script created from existing question evidence because original studio scripts are not present in the repository. Replace with studio transcript if original audio scripts become available.",
+    "source": "studio_source_script",
+    "quality": "source_verified",
+    "sourceScript": "data/scripts/A1/Teil1-Kurze-Alltagsgespraeche/L-A1-GOETHE-003-T1.json",
+    "note": "Transcript replaced from source script by scripts/apply-source-transcripts.ts.",
     "lines": [
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Hoeren Sie eine kurze Information zum Thema Nach dem Weg fragen."
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sie hören sechs kurze Gespräche. Zu jedem Gespräch gibt es eine Aufgabe. Kreuzen Sie die richtige Antwort an. Sie hören jeden Text zweimal."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q1.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Gespräch 1."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Ja, es sind ungefähr zehn Minuten zu Fuß.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Sprecher1_1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Entschuldigung, wo ist der Bahnhof bitte?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q1 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Sprecher2_1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Gehen Sie geradeaus und dann links. Der Bahnhof ist auf der rechten Seite."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q2.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Sprecher1_1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ist das weit? Kann ich zu Fuß gehen?"
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "answer_evidence",
-        "text": "Drei Stationen.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Sprecher2_1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ja, es sind ungefähr zehn Minuten zu Fuß."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q2 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Sprecher1_1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Vielen Dank für Ihre Hilfe! Auf Wiedersehen!"
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q3.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Gespräch 2."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "answer_evidence",
-        "text": "Ja, die Post ist bis achtzehn Uhr geöffnet.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Sprecher1_2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Entschuldigung, ich suche das Krankenhaus. Wissen Sie, wo das ist?"
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q3 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Sprecher2_2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Nehmen Sie den Bus Linie fünf. Die Haltestelle ist dort drüben."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q4.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Sprecher1_2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wie viele Stationen sind es bis zum Krankenhaus?"
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "answer_evidence",
-        "text": "Ja, es gibt einen Supermarkt am Marktplatz.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Sprecher2_2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Drei Stationen. Steigen Sie an der Mozartstraße aus."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q4 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Sprecher1_2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das Krankenhaus ist dann direkt gegenüber der Haltestelle."
       },
       {
-        "speaker": "Sprecher 5",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q5.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Gespräch 3."
       },
       {
-        "speaker": "Sprecher 5",
-        "speaker_role": "answer_evidence",
-        "text": "Die Station heißt Alexanderplatz.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Sprecher1_3",
+        "speaker_role": "dialogue_speaker",
+        "text": "Können Sie mir bitte helfen? Ich suche die Post."
       },
       {
-        "speaker": "Sprecher 5",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q5 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Sprecher2_3",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Post ist in der Hauptstraße. Gehen Sie hier rechts."
       },
       {
-        "speaker": "Sprecher 6",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q6.",
-        "linkedQuestionId": "Q6"
+        "speaker": "Sprecher1_3",
+        "speaker_role": "dialogue_speaker",
+        "text": "Nach zweihundert Metern sehen Sie die Post auf der linken Seite."
       },
       {
-        "speaker": "Sprecher 6",
-        "speaker_role": "answer_evidence",
-        "text": "Die Fahrt dauert ungefähr acht Minuten.",
-        "linkedQuestionId": "Q6"
+        "speaker": "Sprecher2_3",
+        "speaker_role": "dialogue_speaker",
+        "text": "Hat die Post jetzt geöffnet?"
       },
       {
-        "speaker": "Sprecher 6",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q6 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q6"
+        "speaker": "Sprecher1_3",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ja, die Post ist bis achtzehn Uhr geöffnet."
       },
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Ende des Hoertexts."
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Gespräch 4."
+      },
+      {
+        "speaker": "Sprecher1_4",
+        "speaker_role": "dialogue_speaker",
+        "text": "Hallo, wissen Sie, wo hier ein Supermarkt ist?"
+      },
+      {
+        "speaker": "Sprecher2_4",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ja, es gibt einen Supermarkt am Marktplatz."
+      },
+      {
+        "speaker": "Sprecher1_4",
+        "speaker_role": "dialogue_speaker",
+        "text": "Gehen Sie diese Straße entlang und biegen Sie dann rechts ab."
+      },
+      {
+        "speaker": "Sprecher2_4",
+        "speaker_role": "dialogue_speaker",
+        "text": "Der Supermarkt ist neben der Apotheke."
+      },
+      {
+        "speaker": "Sprecher1_4",
+        "speaker_role": "dialogue_speaker",
+        "text": "Danke! Und wie lange hat der Supermarkt offen?"
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Gespräch 5."
+      },
+      {
+        "speaker": "Sprecher1_5",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wo ist bitte die nächste U-Bahn-Station?"
+      },
+      {
+        "speaker": "Sprecher2_5",
+        "speaker_role": "dialogue_speaker",
+        "text": "Gehen Sie hier geradeaus bis zur Ampel."
+      },
+      {
+        "speaker": "Sprecher1_5",
+        "speaker_role": "dialogue_speaker",
+        "text": "An der Ampel gehen Sie nach links. Dann sehen Sie den Eingang."
+      },
+      {
+        "speaker": "Sprecher2_5",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Station heißt Alexanderplatz."
+      },
+      {
+        "speaker": "Sprecher1_5",
+        "speaker_role": "dialogue_speaker",
+        "text": "Es sind nur fünf Minuten von hier. Sie können nicht falsch gehen."
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Gespräch 6."
+      },
+      {
+        "speaker": "Sprecher1_6",
+        "speaker_role": "dialogue_speaker",
+        "text": "Entschuldigung, wie komme ich zum Rathaus?"
+      },
+      {
+        "speaker": "Sprecher2_6",
+        "speaker_role": "dialogue_speaker",
+        "text": "Am besten nehmen Sie die Straßenbahn Linie drei."
+      },
+      {
+        "speaker": "Sprecher1_6",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Haltestelle ist gleich dort an der Ecke."
+      },
+      {
+        "speaker": "Sprecher2_6",
+        "speaker_role": "dialogue_speaker",
+        "text": "Steigen Sie an der dritten Haltestelle aus. Das ist der Rathausplatz."
+      },
+      {
+        "speaker": "Sprecher1_6",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Fahrt dauert ungefähr acht Minuten."
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Ende Teil eins."
       }
     ]
   },
@@ -332,7 +405,7 @@
       "id": "l-a1-goethe-003-t1-lo-1",
       "cefrLevel": "A1",
       "skill": "listening",
-      "canDoVi": "Toi co the luyen nghe hieu o trinh do A1 qua chu de \"Nach dem Weg fragen\".",
+      "canDoVi": "Tôi có thể luyện nghe hiểu ở trình độ A1 qua chủ đề \"Nach dem Weg fragen\".",
       "canDoDe": "Ich kann Hoeren auf Niveau A1 zum Thema \"Nach dem Weg fragen\" ueben.",
       "linkedContentIds": [
         "L-A1-GOETHE-003-T1"

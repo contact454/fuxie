@@ -59,7 +59,7 @@
       "explanation": {
         "de": "Der Experte stimmt zu, dass das traditionelle Feuilleton junge Leser kaum erreicht und bezeichnet dies als „ernstes Problem“. Seine Schlussfolgerung, dass die Literaturkritik „neue Formen und Kanäle finden muss“, impliziert die Notwendigkeit einer Abkehr von oder zumindest einer Ergänzung zu den rein traditionellen Formaten.",
         "vi": "Chuyên gia đồng ý rằng mục phê bình văn học truyền thống (Feuilleton) khó tiếp cận được độc giả trẻ và gọi đây là một \"vấn đề nghiêm trọng\". Kết luận của ông rằng phê bình văn học \"phải tìm ra các hình thức và kênh mới\" ngụ ý sự cần thiết phải từ bỏ hoặc ít nhất là bổ sung cho các định dạng hoàn toàn truyền thống.",
-        "key_evidence": "Das stimmt, und das ist ein ernstes Problem. Die Literaturkritik muss neue Formen und Kanäle finden.",
+        "key_evidence": "Das stimmt, und das ist ein ernstes Problem",
         "key_vocabulary": [
           "etabliert = seit Langem bestehend, anerkannt",
           "Formate aufgeben = bisherige Methoden nicht mehr verwenden"
@@ -106,75 +106,172 @@
     ]
   },
   "transcript": {
-    "type": "full_reconstructed_transcript",
+    "type": "studio_source_transcript",
     "status": "complete",
-    "source": "reconstructed_full_script",
-    "quality": "release_candidate_reconstructed",
-    "note": "Full learner-visible reconstructed script created from existing question evidence because original studio scripts are not present in the repository. Replace with studio transcript if original audio scripts become available.",
+    "source": "studio_source_script",
+    "quality": "source_verified",
+    "sourceScript": "data/scripts/C1/Teil2-Experteninterview/L-C1-GOETHE-004-T2.json",
+    "note": "Transcript replaced from source script by scripts/apply-source-transcripts.ts.",
     "lines": [
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Der folgende anspruchsvolle Hoertext behandelt Buchrezensionen und Literaturkritik. Achten Sie auf Aussage, Kontext und implizite Bedeutung."
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sie hören ein Interview. Dazu gibt es neun Aufgaben. Stimmt die Aussage, stimmt sie nicht, oder wird dazu nichts gesagt? Sie hören das Interview zweimal."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q1.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Guten Abend! Unser Gast heute ist der renommierte Literaturkritiker und Buchautor Professor Dr. Heinrich Reiser."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Demokratisierung ist grundsätzlich positiv, aber sie ersetzt keine fachliche Kompetenz und ästhetische Urteilskraft.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Vielen Dank für die Einladung. Die Literaturkritik durchlebt gerade eine fundamentale Identitätskrise, die mich zutiefst beschäftigt."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q1 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Inwiefern eine Identitätskrise? Bücher werden doch so viel gelesen und diskutiert wie nie zuvor."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q2.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Frage ist nicht, ob gelesen wird, sondern wie über Literatur geurteilt wird und wer die Maßstäbe setzt."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Bestsellerlisten messen Verkaufszahlen, nicht Qualität. Die meistverkauften Bücher sind selten die besten.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Früher bestimmten professionelle Kritiker in Feuilletons die literarische Öffentlichkeit und den Kanon."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q2 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Heute dominieren Bookflüncer auf Instagram und BookTok, die Literatur nach ganz anderen Kriterien bewerten."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q3.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das klingt elitär. Ist es nicht demokratisch, wenn mehr Menschen an der Literaturkritik teilhaben können?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Das stimmt, und das ist ein ernstes Problem. Die Literaturkritik muss neue Formen und Kanäle finden.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Demokratisierung ist grundsätzlich positiv, aber sie ersetzt keine fachliche Kompetenz und ästhetische Urteilskraft."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q3 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wenn ein Buch nur noch danach bewertet wird, ob es 'emotional berührend' ist, fehlt die analytische Tiefe."
       },
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Ende des Hoertexts."
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Was macht für Sie eine gute Buchkritik aus, die diesen analytischen Anspruch erfüllt?"
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Eine gute Kritik ordnet ein Werk in seinen literarischen und gesellschaftlichen Kontext ein und bewertet die Form."
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Sie fragt nicht nur 'Hat mir das Buch gefallen?', sondern 'Was leistet es ästhetisch und intellektüll?'."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das traditionelle Feuilleton erreicht aber kaum noch junge Leserinnen und Leser unter dreißig."
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das stimmt, und das ist ein ernstes Problem. Die Literaturkritik muss neü Formen und Kanäle finden."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Einige Literaturkritiker experimentieren bereits erfolgreich mit Podcasts und YouTube-Formaten."
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Denis Scheck ist ein gutes Beispiel: Er verbindet Expertise mit Unterhaltung und erreicht ein breites Publikum."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wie stehen Sie zum Thema Bestsellerlisten? Sind sie ein sinnvoller Indikator für literarische Qualität?"
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Bestsellerlisten messen Verkaufszahlen, nicht Qualität. Die meistverkauften Bücher sind selten die besten."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Aber sie reflektieren, was die Gesellschaft gerade beschäftigt, und das hat durchaus kulturellen Informationswert."
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Welche Trends beobachten Sie aktüll in der deutschsprachigen Literatur?"
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Autofiktionales Schreiben dominiert: Autoren und Autorinnen schöpfen immer stärker aus der eigenen Biographie."
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Annie Ernaux hat mit dem Nobelpreis diese Gattung international geadelt und ihr neü Sichtbarkeit verschafft."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Im deutschsprachigen Raum sehen wir ähnliche Tendenzen bei Autorinnen wie Kim de l'Horizon oder Terézia Mora."
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Was empfehlen Sie Leserinnen und Lesern, die literarisch anspruchsvoller lesen und urteilen lernen möchten?"
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Lesen Sie breit und systematisch. Kombinieren Sie Gegenwartsromane mit Klassikern und lesen Sie auch Literaturkritik."
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Führen Sie ein Lesetagebuch, in dem Sie über jedes Buch nachdenken und Ihre eigene Sichtweise entwickeln."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Und scheün Sie sich nicht, ein Buch auch mal als misslungen zu beurteilen, wenn Sie es begründen können."
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Was ist Ihr persönlicher Maßstab für ein wirklich großes literarisches Werk?"
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ein großes Werk verändert die Art, wie wir die Welt sehen. Es bleibt im Gedächtnis und fordert zur Auseinandersetzung auf."
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Vielen Dank, Professor Reiser, für diese inspirierenden Einblicke in die Welt der Literaturkritik!"
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Ende Teil zwei."
       }
     ]
   },
@@ -191,7 +288,7 @@
       "id": "l-c1-goethe-004-t2-lo-1",
       "cefrLevel": "C1",
       "skill": "listening",
-      "canDoVi": "Toi co the luyen nghe hieu o trinh do C1 qua chu de \"Buchrezensionen und Literaturkritik\".",
+      "canDoVi": "Tôi có thể luyện nghe hiểu ở trình độ C1 qua chủ đề \"Buchrezensionen und Literaturkritik\".",
       "canDoDe": "Ich kann Hoeren auf Niveau C1 zum Thema \"Buchrezensionen und Literaturkritik\" ueben.",
       "linkedContentIds": [
         "L-C1-GOETHE-004-T2"

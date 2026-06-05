@@ -219,201 +219,247 @@
     ]
   },
   "transcript": {
-    "type": "full_reconstructed_transcript",
+    "type": "studio_source_transcript",
     "status": "complete",
-    "source": "reconstructed_full_script",
-    "quality": "release_candidate_reconstructed",
-    "note": "Full learner-visible reconstructed script created from existing question evidence because original studio scripts are not present in the repository. Replace with studio transcript if original audio scripts become available.",
+    "source": "studio_source_script",
+    "quality": "source_verified",
+    "sourceScript": "data/scripts/B1/Teil1-Kurze-Texte/L-B1-GOETHE-011-T1.json",
+    "note": "Transcript replaced from source script by scripts/apply-source-transcripts.ts.",
     "lines": [
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Im folgenden Hoertext geht es um Digitale Medien und Jugend. Achten Sie auf die zentrale Information."
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sie hören fünf kurze Texte. Zu jedem Text gibt es zwei Aufgaben. Kreuzen Sie die richtige Antwort an. Sie hören jeden Text einmal."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q1.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Text 1."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Bitte beachten Sie, dass das Fotografieren mit Blitz in diesem Raum nicht erlaubt ist.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Sprecher_1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Liebe Besucherinnen und Besucher, willkommen im Deutschen Historischen Museum."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q1 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Sprecher_1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wir beginnen unseren Rundgang heute im Erdgeschoss mit der Ausstellung zur Weimarer Republik."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q2.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Sprecher_1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Diese Epoche von neunzehnhundertachtzehn bis neunzehnhundertdreiunddreißig war eine Zeit großer Veränderungen."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Besonders beeindruckend ist die Sammlung von Wahlplakaten der verschiedenen Parteien.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Sprecher_1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Sie sehen hier originale Dokumente, Fotografien und Alltagsgegenstände aus dieser Zeit."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q2 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Sprecher_1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Besonders beeindruckend ist die Sammlung von Wahlplakaten der verschiedenen Parteien."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q3.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Sprecher_1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Man kann daran sehr gut die politischen Spannungen dieser Zeit erkennen."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "answer_evidence",
-        "text": "Das Konzert beginnt um zwanzig Uhr und daürt etwa zwei Stunden mit einer Pause.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Sprecher_1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Bitte beachten Sie, dass das Fotografieren mit Blitz in diesem Raum nicht erlaubt ist."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q3 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Sprecher_1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Folgen Sie mir nun in den nächsten Saal, wo wir die Ausstellung zur Nachkriegszeit sehen."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q4.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Text 2."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "answer_evidence",
-        "text": "Für Schüler und Studenten gibt es eine Ermäßigung von dreißig Prozent.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Sprecher_2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Heute Abend findet im Konzertsaal ein besonderes Ereignis statt."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q4 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Sprecher_2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das Berliner Kammerorchester spielt Werke von Johann Sebastian Bach und Georg Friedrich Händel."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q5.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Sprecher_2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das Konzert beginnt um zwanzig Uhr und daürt etwa zwei Stunden mit einer Pause."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "answer_evidence",
-        "text": "Jeden ersten Sonntag im Monat bieten viele Berliner Museen freien Eintritt an.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Sprecher_2",
+        "speaker_role": "dialogue_speaker",
+        "text": "In der Pause können Sie im Foyer Getränke und kleine Snacks kaufen."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q5 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Sprecher_2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Karten sind noch an der Abendkasse erhältlich, sofern nicht ausverkauft."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q6.",
-        "linkedQuestionId": "Q6"
+        "speaker": "Sprecher_2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Der Preis liegt zwischen fünfundzwanzig und fünfundvierzig Euro, je nach Sitzplatz."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "answer_evidence",
-        "text": "Mein Rat ist, schon vor zehn Uhr zu kommen, dann sind noch nicht so viele Besucher da.",
-        "linkedQuestionId": "Q6"
+        "speaker": "Sprecher_2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Für Schüler und Studenten gibt es eine Ermäßigung von dreißig Prozent."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q6 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q6"
+        "speaker": "Sprecher_2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wir bitten Sie, Ihre Mobiltelefone während des Konzerts auf lautlos zu stellen."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q7.",
-        "linkedQuestionId": "Q7"
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Text 3."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "answer_evidence",
-        "text": "Die Ausstellung läuft vom fünfzehnten März bis zum dreißigsten Juni.",
-        "linkedQuestionId": "Q7"
+        "speaker": "Sprecher_3",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ich möchte Ihnen einen Geheimtipp für Kulturliebhaber geben."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q7 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q7"
+        "speaker": "Sprecher_3",
+        "speaker_role": "dialogue_speaker",
+        "text": "Jeden ersten Sonntag im Monat bieten viele Berliner Museen freien Eintritt an."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q8.",
-        "linkedQuestionId": "Q8"
+        "speaker": "Sprecher_3",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das betrifft unter anderem die Alte Nationalgalerie und das Bode-Museum auf der Museumsinsel."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "answer_evidence",
-        "text": "Am Donnerstagabend ist der Eintritt von achtzehn bis einundzwanzig Uhr für alle frei.",
-        "linkedQuestionId": "Q8"
+        "speaker": "Sprecher_3",
+        "speaker_role": "dialogue_speaker",
+        "text": "An diesen Tagen finden auch kostenlose Führungen in verschiedenen Sprachen statt."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q8 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q8"
+        "speaker": "Sprecher_3",
+        "speaker_role": "dialogue_speaker",
+        "text": "Besonders für Familien ist das eine tolle Gelegenheit, Kultur ohne großen Aufwand zu erleben."
       },
       {
-        "speaker": "Sprecher 5",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q9.",
-        "linkedQuestionId": "Q9"
+        "speaker": "Sprecher_3",
+        "speaker_role": "dialogue_speaker",
+        "text": "Allerdings muss man mit längeren Wartezeiten rechnen, da die Museen dann sehr voll sind."
       },
       {
-        "speaker": "Sprecher 5",
-        "speaker_role": "answer_evidence",
-        "text": "Kinder unter zwölf haben freien Eintritt, müssen aber von einem Erwachsenen begleitet werden.",
-        "linkedQuestionId": "Q9"
+        "speaker": "Sprecher_3",
+        "speaker_role": "dialogue_speaker",
+        "text": "Mein Rat ist, schon vor zehn Uhr zu kommen, dann sind noch nicht so viele Besucher da."
       },
       {
-        "speaker": "Sprecher 5",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q9 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q9"
+        "speaker": "Sprecher_3",
+        "speaker_role": "dialogue_speaker",
+        "text": "Informationen zu den Programmen finden Sie auf der Webseite der Staatlichen Museen Berlin."
       },
       {
-        "speaker": "Sprecher 5",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q10.",
-        "linkedQuestionId": "Q10"
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Text 4."
       },
       {
-        "speaker": "Sprecher 5",
-        "speaker_role": "answer_evidence",
-        "text": "Eine Eintrittskarte für achtzehn Euro gilt für alle teilnehmenden Einrichtungen und die Busse.",
-        "linkedQuestionId": "Q10"
+        "speaker": "Sprecher_4",
+        "speaker_role": "dialogue_speaker",
+        "text": "Der Kunstverein Hamburg zeigt ab nächster Woche eine neü Ausstellung zeitgenössischer Fotografie."
       },
       {
-        "speaker": "Sprecher 5",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q10 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q10"
+        "speaker": "Sprecher_4",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Ausstellung heißt 'Stadtansichten' und zeigt Fotografien von zwanzig internationalen Künstlern."
       },
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Ende des Hoertexts."
+        "speaker": "Sprecher_4",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Bilder zeigen Städte aus der ganzen Welt, von Tokio bis Bünos Aires."
+      },
+      {
+        "speaker": "Sprecher_4",
+        "speaker_role": "dialogue_speaker",
+        "text": "Es ist faszinierend zu sehen, wie unterschiedlich und doch ähnlich Großstädte überall aussehen."
+      },
+      {
+        "speaker": "Sprecher_4",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Ausstellung läuft vom fünfzehnten März bis zum dreißigsten Juni."
+      },
+      {
+        "speaker": "Sprecher_4",
+        "speaker_role": "dialogue_speaker",
+        "text": "Der Eintritt kostet zwölf Euro, ermäßigt acht Euro."
+      },
+      {
+        "speaker": "Sprecher_4",
+        "speaker_role": "dialogue_speaker",
+        "text": "Am Donnerstagabend ist der Eintritt von achtzehn bis einundzwanzig Uhr für alle frei."
+      },
+      {
+        "speaker": "Sprecher_4",
+        "speaker_role": "dialogue_speaker",
+        "text": "Es gibt auch ein Begleitprogramm mit Vorträgen und Workshops für angemeldete Teilnehmer."
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Text 5."
+      },
+      {
+        "speaker": "Sprecher_5",
+        "speaker_role": "dialogue_speaker",
+        "text": "Sie hören eine Einladung zu einer besonderen Kulturveranstaltung in Ihrer Stadt."
+      },
+      {
+        "speaker": "Sprecher_5",
+        "speaker_role": "dialogue_speaker",
+        "text": "Am kommenden Samstag findet die Lange Nacht der Museen in ganz Berlin statt."
+      },
+      {
+        "speaker": "Sprecher_5",
+        "speaker_role": "dialogue_speaker",
+        "text": "Über achtzig Museen, Galerien und Gedenkstätten haben von achtzehn bis zwei Uhr nachts geöffnet."
+      },
+      {
+        "speaker": "Sprecher_5",
+        "speaker_role": "dialogue_speaker",
+        "text": "Besondere Shuttle-Busse fahren alle zehn Minuten zwischen den wichtigsten Standorten."
+      },
+      {
+        "speaker": "Sprecher_5",
+        "speaker_role": "dialogue_speaker",
+        "text": "Eine Eintrittskarte für achtzehn Euro gilt für alle teilnehmenden Einrichtungen und die Busse."
+      },
+      {
+        "speaker": "Sprecher_5",
+        "speaker_role": "dialogue_speaker",
+        "text": "Es gibt Musik, Performances und spezielle Führungen, die es sonst nicht gibt."
+      },
+      {
+        "speaker": "Sprecher_5",
+        "speaker_role": "dialogue_speaker",
+        "text": "Kinder unter zwölf haben freien Eintritt, müssen aber von einem Erwachsenen begleitet werden."
+      },
+      {
+        "speaker": "Sprecher_5",
+        "speaker_role": "dialogue_speaker",
+        "text": "Tickets können Sie online kaufen oder an den Abendkassen der teilnehmenden Museen."
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Ende Teil eins."
       }
     ]
   },
@@ -430,7 +476,7 @@
       "id": "l-b1-goethe-011-t1-lo-1",
       "cefrLevel": "B1",
       "skill": "listening",
-      "canDoVi": "Toi co the luyen nghe hieu o trinh do B1 qua chu de \"Digitale Medien und Jugend\".",
+      "canDoVi": "Tôi có thể luyện nghe hiểu ở trình độ B1 qua chủ đề \"Digitale Medien und Jugend\".",
       "canDoDe": "Ich kann Hoeren auf Niveau B1 zum Thema \"Digitale Medien und Jugend\" ueben.",
       "linkedContentIds": [
         "L-B1-GOETHE-011-T1"

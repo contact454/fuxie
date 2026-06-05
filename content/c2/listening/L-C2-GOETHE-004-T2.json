@@ -29,7 +29,7 @@
       "explanation": {
         "de": "Man hört: \"Einkaufen und Geld\".",
         "vi": "Đoạn hội thoại 1 nói về chủ đề gì?",
-        "key_evidence": "Einkaufen und Geld",
+        "key_evidence": "einkaufen",
         "key_vocabulary": []
       }
     },
@@ -48,7 +48,7 @@
       "explanation": {
         "de": "Das Hauptthema ist \"Einkaufen\".",
         "vi": "Đoạn hội thoại 1 nói về chủ đề gì?",
-        "key_evidence": "Einkaufen",
+        "key_evidence": "einkaufen",
         "key_vocabulary": []
       }
     },
@@ -116,75 +116,192 @@
     ]
   },
   "transcript": {
-    "type": "full_reconstructed_transcript",
+    "type": "studio_source_transcript",
     "status": "complete",
-    "source": "reconstructed_full_script",
-    "quality": "release_candidate_reconstructed",
-    "note": "Full learner-visible reconstructed script created from existing question evidence because original studio scripts are not present in the repository. Replace with studio transcript if original audio scripts become available.",
+    "source": "studio_source_script",
+    "quality": "source_verified",
+    "sourceScript": "data/scripts/C2/Teil2-Spontanes-Gespraech/L-C2-GOETHE-004-T2.json",
+    "note": "Transcript replaced from source script by scripts/apply-source-transcripts.ts.",
     "lines": [
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Der folgende anspruchsvolle Hoertext behandelt Markentreue und Konsumverhalten. Achten Sie auf Aussage, Kontext und implizite Bedeutung."
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sie hören ein Gespräch. Dazu gibt es fünf Aufgaben. Wer sagt was? Sie hören das Gespräch zweimal."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q1.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Studentin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Hast du die Studie gelesen, die letzte Woche im Journal of Consumer Research veröffentlicht wurde und die belegt, dass Markentreue in der Generation Z signifikant abnimmt?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Einkaufen und Geld",
-        "linkedQuestionId": "Q1"
+        "speaker": "Student",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ja, und die Ergebnisse decken sich mit meiner eigenen Beobachtung, dass viele meiner Kommilitonen nicht mehr automatisch dieselben Marken wie ihre Eltern kaufen, sondern viel pragmatischer und preisbewusster einkaufen."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q1 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Studentin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Was mich an der Studie methodisch überzeugt hat, ist die Kombination aus quantitativen Befragungsdaten und einer qualitativen Analyse von Social-Media-Diskursen."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q2.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Student",
+        "speaker_role": "dialogue_speaker",
+        "text": "Der Ansatz ist tatsächlich innovativ, allerdings frage ich mich, ob die Selbstauskunft der Probanden über ihre Markenpräferenzen wirklich valide ist, oder ob hier soziale Erwünschtheit eine Rolle spielt."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Einkaufen",
-        "linkedQuestionId": "Q2"
+        "speaker": "Studentin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das ist ein berechtigter methodischer Einwand, denn es könnte durchaus sein, dass Menschen ihre Markentreue unterschätzen, weil Unabhängigkeit und Individualität gesellschaftlich höher bewertet werden als Konformität."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q2 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Student",
+        "speaker_role": "dialogue_speaker",
+        "text": "In meiner Seminararbeit habe ich mich mit dem Konzept des nudging im Konsumverhalten beschäftigt und war überrascht, wie subtil und wirksam die Beeinflussung durch Produktplatzierung und Regalarrangement tatsächlich ist."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q3.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Studentin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das Thema Nudging im Konsumkontext wirft auch ethische Fragen auf, denn die Grenze zwischen einer hilfreichen Entscheidungsarchitektur und manipulativer Beeinflussung ist fließend."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Konformität",
-        "linkedQuestionId": "Q3"
+        "speaker": "Student",
+        "speaker_role": "dialogue_speaker",
+        "text": "Absolut, und die libertäre Paternalismus-Debatte, die Thaler und Sunstein mit ihrem Buch Nudge angestoßen haben, ist philosophisch deutlich komplexer, als sie auf den ersten Blick erscheint."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q3 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Studentin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Was ich besonders spannend finde, ist die Frage, wie sich unser Konsumverhalten durch die Verbreitung von KI-gestützten Empfehlungssystemen verändern wird."
       },
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Ende des Hoertexts."
+        "speaker": "Student",
+        "speaker_role": "dialogue_speaker",
+        "text": "Da bin ich tatsächlich etwas besorgt, weil diese Systeme unsere Präferenzen auf der Grundlage historischer Daten extrapolieren und uns damit möglicherweise in einer sogenannten Filterbubble einschließen."
+      },
+      {
+        "speaker": "Studentin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Auf der anderen Seite können solche Algorithmen auch dazu beitragen, Produkte zu entdecken, die man ohne algorithmische Empfehlung nie gefunden hätte."
+      },
+      {
+        "speaker": "Student",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das stimmt, aber die entscheidende Frage bleibt, ob wir die Souveränität über unsere Konsumentscheidungen behalten oder ob wir sie sukzessive an intransparente algorithmische Systeme abtreten."
+      },
+      {
+        "speaker": "Studentin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Diese Frage lässt sich letztlich nur beantworten, wenn wir mehr Transparenz über die Funktionsweise der Empfehlungsalgorithmen einfordern und regulatorische Mindeststandards etablieren."
+      },
+      {
+        "speaker": "Student",
+        "speaker_role": "dialogue_speaker",
+        "text": "Da sind wir uns einig, und ich finde, das wäre auch ein hervorragendes Thema für eine Podiumsdiskussion, die wir im Rahmen unserer Fachschaft organisieren könnten."
+      },
+      {
+        "speaker": "Studentin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Hast du die Studie gelesen, die letzte Woche im Journal of Consumer Research veröffentlicht wurde und die belegt, dass Markentreue in der Generation Z signifikant abnimmt?"
+      },
+      {
+        "speaker": "Student",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ja, und die Ergebnisse decken sich mit meiner eigenen Beobachtung, dass viele meiner Kommilitonen nicht mehr automatisch dieselben Marken wie ihre Eltern kaufen, sondern viel pragmatischer und preisbewusster einkaufen."
+      },
+      {
+        "speaker": "Studentin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Was mich an der Studie methodisch überzeugt hat, ist die Kombination aus quantitativen Befragungsdaten und einer qualitativen Analyse von Social-Media-Diskursen."
+      },
+      {
+        "speaker": "Student",
+        "speaker_role": "dialogue_speaker",
+        "text": "Der Ansatz ist tatsächlich innovativ, allerdings frage ich mich, ob die Selbstauskunft der Probanden über ihre Markenpräferenzen wirklich valide ist, oder ob hier soziale Erwünschtheit eine Rolle spielt."
+      },
+      {
+        "speaker": "Studentin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das ist ein berechtigter methodischer Einwand, denn es könnte durchaus sein, dass Menschen ihre Markentreue unterschätzen, weil Unabhängigkeit und Individualität gesellschaftlich höher bewertet werden als Konformität."
+      },
+      {
+        "speaker": "Student",
+        "speaker_role": "dialogue_speaker",
+        "text": "In meiner Seminararbeit habe ich mich mit dem Konzept des nudging im Konsumverhalten beschäftigt und war überrascht, wie subtil und wirksam die Beeinflussung durch Produktplatzierung und Regalarrangement tatsächlich ist."
+      },
+      {
+        "speaker": "Studentin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das Thema Nudging im Konsumkontext wirft auch ethische Fragen auf, denn die Grenze zwischen einer hilfreichen Entscheidungsarchitektur und manipulativer Beeinflussung ist fließend."
+      },
+      {
+        "speaker": "Student",
+        "speaker_role": "dialogue_speaker",
+        "text": "Absolut, und die libertäre Paternalismus-Debatte, die Thaler und Sunstein mit ihrem Buch Nudge angestoßen haben, ist philosophisch deutlich komplexer, als sie auf den ersten Blick erscheint."
+      },
+      {
+        "speaker": "Studentin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Was ich besonders spannend finde, ist die Frage, wie sich unser Konsumverhalten durch die Verbreitung von KI-gestützten Empfehlungssystemen verändern wird."
+      },
+      {
+        "speaker": "Student",
+        "speaker_role": "dialogue_speaker",
+        "text": "Da bin ich tatsächlich etwas besorgt, weil diese Systeme unsere Präferenzen auf der Grundlage historischer Daten extrapolieren und uns damit möglicherweise in einer sogenannten Filterbubble einschließen."
+      },
+      {
+        "speaker": "Studentin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Auf der anderen Seite können solche Algorithmen auch dazu beitragen, Produkte zu entdecken, die man ohne algorithmische Empfehlung nie gefunden hätte."
+      },
+      {
+        "speaker": "Student",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das stimmt, aber die entscheidende Frage bleibt, ob wir die Souveränität über unsere Konsumentscheidungen behalten oder ob wir sie sukzessive an intransparente algorithmische Systeme abtreten."
+      },
+      {
+        "speaker": "Studentin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Diese Frage lässt sich letztlich nur beantworten, wenn wir mehr Transparenz über die Funktionsweise der Empfehlungsalgorithmen einfordern und regulatorische Mindeststandards etablieren."
+      },
+      {
+        "speaker": "Student",
+        "speaker_role": "dialogue_speaker",
+        "text": "Da sind wir uns einig, und ich finde, das wäre auch ein hervorragendes Thema für eine Podiumsdiskussion, die wir im Rahmen unserer Fachschaft organisieren könnten."
+      },
+      {
+        "speaker": "Studentin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Hast du die Studie gelesen, die letzte Woche im Journal of Consumer Research veröffentlicht wurde und die belegt, dass Markentreue in der Generation Z signifikant abnimmt?"
+      },
+      {
+        "speaker": "Student",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ja, und die Ergebnisse decken sich mit meiner eigenen Beobachtung, dass viele meiner Kommilitonen nicht mehr automatisch dieselben Marken wie ihre Eltern kaufen, sondern viel pragmatischer und preisbewusster einkaufen."
+      },
+      {
+        "speaker": "Studentin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Was mich an der Studie methodisch überzeugt hat, ist die Kombination aus quantitativen Befragungsdaten und einer qualitativen Analyse von Social-Media-Diskursen."
+      },
+      {
+        "speaker": "Student",
+        "speaker_role": "dialogue_speaker",
+        "text": "Der Ansatz ist tatsächlich innovativ, allerdings frage ich mich, ob die Selbstauskunft der Probanden über ihre Markenpräferenzen wirklich valide ist, oder ob hier soziale Erwünschtheit eine Rolle spielt."
+      },
+      {
+        "speaker": "Studentin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das ist ein berechtigter methodischer Einwand, denn es könnte durchaus sein, dass Menschen ihre Markentreue unterschätzen, weil Unabhängigkeit und Individualität gesellschaftlich höher bewertet werden als Konformität."
+      },
+      {
+        "speaker": "Student",
+        "speaker_role": "dialogue_speaker",
+        "text": "In meiner Seminararbeit habe ich mich mit dem Konzept des nudging im Konsumverhalten beschäftigt und war überrascht, wie subtil und wirksam die Beeinflussung durch Produktplatzierung und Regalarrangement tatsächlich ist."
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Ende Teil zwei."
       }
     ]
   },
@@ -201,7 +318,7 @@
       "id": "l-c2-goethe-004-t2-lo-1",
       "cefrLevel": "C2",
       "skill": "listening",
-      "canDoVi": "Toi co the luyen nghe hieu o trinh do C2 qua chu de \"Markentreue und Konsumverhalten\".",
+      "canDoVi": "Tôi có thể luyện nghe hiểu ở trình độ C2 qua chủ đề \"Markentreue und Konsumverhalten\".",
       "canDoDe": "Ich kann Hoeren auf Niveau C2 zum Thema \"Markentreue und Konsumverhalten\" ueben.",
       "linkedContentIds": [
         "L-C2-GOETHE-004-T2"

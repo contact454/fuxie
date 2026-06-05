@@ -259,201 +259,247 @@
     ]
   },
   "transcript": {
-    "type": "full_reconstructed_transcript",
+    "type": "studio_source_transcript",
     "status": "complete",
-    "source": "reconstructed_full_script",
-    "quality": "release_candidate_reconstructed",
-    "note": "Full learner-visible reconstructed script created from existing question evidence because original studio scripts are not present in the repository. Replace with studio transcript if original audio scripts become available.",
+    "source": "studio_source_script",
+    "quality": "source_verified",
+    "sourceScript": "data/scripts/B2/Teil1-Alltagsaeusserungen/L-B2-GOETHE-011-T1.json",
+    "note": "Transcript replaced from source script by scripts/apply-source-transcripts.ts.",
     "lines": [
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Im folgenden Hoertext geht es um Schlafforschung und Gesundheit. Achten Sie auf die zentrale Information."
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sie hören fünf Äußerungen aus dem Alltag. Zu jeder Äußerung gibt es zwei Aufgaben. Kreuzen Sie die richtige Antwort an. Sie hören jeden Text einmal."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q1.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Äußerung 1."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Na ja, wenn ich es nicht sehe und es gut schmeckt, wäre ich vielleicht bereit es zu probieren.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Sprecher1_1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Hast du den Artikel über Insekten als Nahrungsmittel gelesen? Das soll ja die Zukunft sein."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q1 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Sprecher2_1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Insekten? Das klingt ziemlich gewöhnungsbedürftig, ehrlich gesagt."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q2.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Sprecher1_1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Vielleicht, aber sie enthalten mehr Protein als Rindfleisch und verbrauchen viel weniger Ressourcen."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Stimmt, es ist wohl eher eine kulturelle Hürde als ein geschmackliches Problem.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Sprecher2_1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Trotzdem kann ich mir nicht vorstellen, Heuschrecken zum Frühstück zu essen."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q2 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Sprecher1_1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Es gibt sie auch als Mehl verarbeitet in Nudeln und Brot, da sieht man nichts mehr davon."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q3.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Sprecher2_1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Na ja, wenn ich es nicht sehe und es gut schmeckt, wäre ich vielleicht bereit es zu probieren."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "answer_evidence",
-        "text": "es fällt mir schwerer als gedacht.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Sprecher1_1",
+        "speaker_role": "dialogue_speaker",
+        "text": "In Thailand und Mexiko gehören Insekten seit Jahrhunderten ganz selbstverständlich zur Ernährung."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q3 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Sprecher2_1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Stimmt, es ist wohl eher eine kulturelle Hürde als ein geschmackliches Problem."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q4.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Äußerung 2."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "answer_evidence",
-        "text": "Mit der Zeit gewöhnt man sich daran. Nach drei Monaten habe ich Fleisch überhaupt nicht mehr vermisst.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Sprecher1_2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ich habe letzte Woche angefangen, mich vegetarisch zu ernähren, und es fällt mir schwerer als gedacht."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q4 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Sprecher2_2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das kann ich verstehen. Gerade am Anfang fehlt einem die Routine beim Kochen."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q5.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Sprecher1_2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Genau, ich weiß oft nicht, was ich kochen soll, wenn Fleisch als Hauptzutat wegfällt."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "answer_evidence",
-        "text": "Das finde ich beunruhigend. Fleisch aus dem Labor klingt nach Science-Fiction.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Sprecher2_2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Im Internet gibt es tausende vegetarische Rezepte, die wirklich fantastisch schmecken."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q5 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Sprecher1_2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Aber ich vermisse den Geschmack von einem richtig guten Steak, das muss ich zugeben."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q6.",
-        "linkedQuestionId": "Q6"
+        "speaker": "Sprecher2_2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Hast du die neuen pflanzlichen Fleischalternativen ausprobiert? Einige sind erstaunlich realistisch."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "answer_evidence",
-        "text": "Das Hauptproblem ist zurzeit noch der Preis. Ein Kilo Laborfleisch kostet mehrere hundert Euro.",
-        "linkedQuestionId": "Q6"
+        "speaker": "Sprecher1_2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ja, den Beyond-Burger habe ich probiert. Nicht schlecht, aber eben doch nicht das Gleiche."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q6 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q6"
+        "speaker": "Sprecher2_2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Mit der Zeit gewöhnt man sich daran. Nach drei Monaten habe ich Fleisch überhaupt nicht mehr vermisst."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q7.",
-        "linkedQuestionId": "Q7"
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Äußerung 3."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "answer_evidence",
-        "text": "Anfangs gab es viel Protest, aber inzwischen finden die meisten das Angebot sogar besser.",
-        "linkedQuestionId": "Q7"
+        "speaker": "Sprecher1_3",
+        "speaker_role": "dialogue_speaker",
+        "text": "Haben Sie gehört, dass die EU jetzt auch im Labor gezüchtetes Fleisch zulassen könnte?"
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q7 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q7"
+        "speaker": "Sprecher2_3",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ja, das sogenannte In-vitro-Fleisch. In Singapur ist es bereits seit zweitausendzwanzig erlaubt."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q8.",
-        "linkedQuestionId": "Q8"
+        "speaker": "Sprecher1_3",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das finde ich beunruhigend. Fleisch aus dem Labor klingt nach Science-Fiction."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "answer_evidence",
-        "text": "Unsere Mensa hat extra einen Koch eingestellt, der sich auf vegane Küche spezialisiert hat.",
-        "linkedQuestionId": "Q8"
+        "speaker": "Sprecher2_3",
+        "speaker_role": "dialogue_speaker",
+        "text": "Aber die Umweltbilanz ist deutlich besser: kein Tierleid, weniger Emissionen und Wasserverbrauch."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q8 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q8"
+        "speaker": "Sprecher1_3",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Frage ist natürlich, ob die Verbraucher es akzeptieren und kaufen werden."
       },
       {
-        "speaker": "Sprecher 5",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q9.",
-        "linkedQuestionId": "Q9"
+        "speaker": "Sprecher2_3",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das Hauptproblem ist zurzeit noch der Preis. Ein Kilo Laborfleisch kostet mehrere hundert Euro."
       },
       {
-        "speaker": "Sprecher 5",
-        "speaker_role": "answer_evidence",
-        "text": "Ich mache seit drei Monaten Intervallfasten und habe damit sehr gute Erfahrungen gemacht.",
-        "linkedQuestionId": "Q9"
+        "speaker": "Sprecher1_3",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wenn der Preis sinkt und es genauso schmeckt, wäre es eine echte Revolution der Ernährung."
       },
       {
-        "speaker": "Sprecher 5",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q9 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q9"
+        "speaker": "Sprecher2_3",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ich bin gespannt, wie sich das in den nächsten zehn Jahren in Deutschland entwickeln wird."
       },
       {
-        "speaker": "Sprecher 5",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q10.",
-        "linkedQuestionId": "Q10"
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Äußerung 4."
       },
       {
-        "speaker": "Sprecher 5",
-        "speaker_role": "answer_evidence",
-        "text": "Ja, mehrere Studien zeigen positive Effekte auf den Stoffwechsel, die Entzündungswerte und das Gewicht.",
-        "linkedQuestionId": "Q10"
+        "speaker": "Sprecher1_4",
+        "speaker_role": "dialogue_speaker",
+        "text": "Unsere Universität hat den Speiseplan in der Mensa komplett umgestellt zu achtzig Prozent pflanzlich."
       },
       {
-        "speaker": "Sprecher 5",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q10 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q10"
+        "speaker": "Sprecher2_4",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das ist ja eine drastische Veränderung! Wie haben die Studierenden darauf reagiert?"
       },
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Ende des Hoertexts."
+        "speaker": "Sprecher1_4",
+        "speaker_role": "dialogue_speaker",
+        "text": "Anfangs gab es viel Protest, aber inzwischen finden die meisten das Angebot sogar besser."
+      },
+      {
+        "speaker": "Sprecher2_4",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das liegt sicher auch daran, dass vegetarische Gerichte oft günstiger als Fleischgerichte sind."
+      },
+      {
+        "speaker": "Sprecher1_4",
+        "speaker_role": "dialogue_speaker",
+        "text": "Genau, ein Hauptgericht mit Fleisch kostet vier Euro fünfzig, ein vegetarisches nur zwei Euro achtzig."
+      },
+      {
+        "speaker": "Sprecher2_4",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Qualität muss aber stimmen. Labbriger Tofu überzeugt niemanden von pflanzlicher Ernährung."
+      },
+      {
+        "speaker": "Sprecher1_4",
+        "speaker_role": "dialogue_speaker",
+        "text": "Da hast du recht. Unsere Mensa hat extra einen Koch eingestellt, der sich auf vegane Küche spezialisiert hat."
+      },
+      {
+        "speaker": "Sprecher2_4",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das merkt man! Die Gemüse-Currys und die selbstgemachten Falafel sind wirklich hervorragend."
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Äußerung 5."
+      },
+      {
+        "speaker": "Sprecher1_5",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ich mache seit drei Monaten Intervallfasten und habe damit sehr gute Erfahrungen gemacht."
+      },
+      {
+        "speaker": "Sprecher2_5",
+        "speaker_role": "dialogue_speaker",
+        "text": "Was genau ist Intervallfasten? Ich habe davon gehört, aber die Details sind mir nicht klar."
+      },
+      {
+        "speaker": "Sprecher1_5",
+        "speaker_role": "dialogue_speaker",
+        "text": "Man isst nur in einem bestimmten Zeitfenster, zum Beispiel acht Stunden, und fastet dann sechzehn Stunden."
+      },
+      {
+        "speaker": "Sprecher2_5",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das klingt anstrengend! Isst du dann gar nichts bis mittags?"
+      },
+      {
+        "speaker": "Sprecher1_5",
+        "speaker_role": "dialogue_speaker",
+        "text": "Genau, meine erste Mahlzeit ist um zwölf Uhr und die letzte um zwanzig Uhr."
+      },
+      {
+        "speaker": "Sprecher2_5",
+        "speaker_role": "dialogue_speaker",
+        "text": "Und was sagt die Wissenschaft dazu? Gibt es seriöse Studien zu den gesundheitlichen Vorteilen?"
+      },
+      {
+        "speaker": "Sprecher1_5",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ja, mehrere Studien zeigen positive Effekte auf den Stoffwechsel, die Entzündungswerte und das Gewicht."
+      },
+      {
+        "speaker": "Sprecher2_5",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ich glaube, ich probiere das auch einmal aus. Hast du einen Tipp für den Anfang?"
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Ende Teil eins."
       }
     ]
   },
@@ -470,7 +516,7 @@
       "id": "l-b2-goethe-011-t1-lo-1",
       "cefrLevel": "B2",
       "skill": "listening",
-      "canDoVi": "Toi co the luyen nghe hieu o trinh do B2 qua chu de \"Schlafforschung und Gesundheit\".",
+      "canDoVi": "Tôi có thể luyện nghe hiểu ở trình độ B2 qua chủ đề \"Schlafforschung und Gesundheit\".",
       "canDoDe": "Ich kann Hoeren auf Niveau B2 zum Thema \"Schlafforschung und Gesundheit\" ueben.",
       "linkedContentIds": [
         "L-B2-GOETHE-011-T1"

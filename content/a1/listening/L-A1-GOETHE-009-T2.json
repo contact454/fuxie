@@ -110,93 +110,142 @@
     ]
   },
   "transcript": {
-    "type": "full_reconstructed_transcript",
+    "type": "studio_source_transcript",
     "status": "complete",
-    "source": "reconstructed_full_script",
-    "quality": "release_candidate_reconstructed",
-    "note": "Full learner-visible reconstructed script created from existing question evidence because original studio scripts are not present in the repository. Replace with studio transcript if original audio scripts become available.",
+    "source": "studio_source_script",
+    "quality": "source_verified",
+    "sourceScript": "data/scripts/A1/Teil2-Durchsagen-und-Ansagen/L-A1-GOETHE-009-T2.json",
+    "note": "Transcript replaced from source script by scripts/apply-source-transcripts.ts.",
     "lines": [
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Hoeren Sie eine kurze Information zum Thema Wetter und Kleidung."
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sie hören vier Ansagen. Zu jeder Ansage gibt es eine Aufgabe. Kreuzen Sie richtig oder falsch an. Sie hören jeden Text einmal."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q1.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Ansage 1."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Am Nachmittag kann es leichten Regen geben.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Ansager",
+        "speaker_role": "dialogue_speaker",
+        "text": "Und nun der Wetterbericht für heute und die kommenden Tage."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q1 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Ansager",
+        "speaker_role": "dialogue_speaker",
+        "text": "Heute bleibt es bewölkt mit Temperaturen um vierzehn Grad."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q2.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Ansager",
+        "speaker_role": "dialogue_speaker",
+        "text": "Am Nachmittag kann es leichten Regen geben. Nehmen Sie einen Schirm mit."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "answer_evidence",
-        "text": "Am Samstag und Sonntag werden starke Winde erwartet.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Ansager",
+        "speaker_role": "dialogue_speaker",
+        "text": "Am Abend lockert es auf. Die Temperatur sinkt auf zehn Grad."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q2 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Ansager",
+        "speaker_role": "dialogue_speaker",
+        "text": "Morgen wird es wieder freundlicher mit Sonnenschein."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q3.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Ansage 2."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "answer_evidence",
-        "text": "Am Samstag scheint die Sonne bei sechsundzwanzig Grad.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Ansager",
+        "speaker_role": "dialogue_speaker",
+        "text": "Achtung, Sturmwarnung für die Küstenregion."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q3 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Ansager",
+        "speaker_role": "dialogue_speaker",
+        "text": "Am Samstag und Sonntag werden starke Winde erwartet."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q4.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Ansager",
+        "speaker_role": "dialogue_speaker",
+        "text": "Bleiben Sie bitte zu Hause und vermeiden Sie Spaziergänge am Meer."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "answer_evidence",
-        "text": "Nehmen Sie warme Kleidung mit, auch wenn es im Tal warm ist.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Ansager",
+        "speaker_role": "dialogue_speaker",
+        "text": "Sichern Sie lose Gegenstände auf Balkonen und Terrassen."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q4 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Ansager",
+        "speaker_role": "dialogue_speaker",
+        "text": "Weitere Informationen finden Sie auf unserer Webseite."
       },
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Ende des Hoertexts."
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Ansage 3."
+      },
+      {
+        "speaker": "Ansager",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Wettervorhersage für das Wochenende sieht gut aus."
+      },
+      {
+        "speaker": "Ansager",
+        "speaker_role": "dialogue_speaker",
+        "text": "Am Samstag scheint die Sonne bei sechsundzwanzig Grad."
+      },
+      {
+        "speaker": "Ansager",
+        "speaker_role": "dialogue_speaker",
+        "text": "Am Sonntag wird es etwas kühler, zwanzig Grad mit Wolken."
+      },
+      {
+        "speaker": "Ansager",
+        "speaker_role": "dialogue_speaker",
+        "text": "Perfektes Wetter für einen Ausflug oder ein Picknick!"
+      },
+      {
+        "speaker": "Ansager",
+        "speaker_role": "dialogue_speaker",
+        "text": "Vergessen Sie aber den Sonnenschutz nicht!"
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Ansage 4."
+      },
+      {
+        "speaker": "Ansager",
+        "speaker_role": "dialogue_speaker",
+        "text": "Liebe Wanderfreunde, eine Information zur Wetterlage in den Bergen."
+      },
+      {
+        "speaker": "Ansager",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ab eintausendfünfhundert Meter Höhe liegt noch Schnee."
+      },
+      {
+        "speaker": "Ansager",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Wege können glatt sein. Bitte tragen Sie festes Schuhwerk."
+      },
+      {
+        "speaker": "Ansager",
+        "speaker_role": "dialogue_speaker",
+        "text": "Nehmen Sie warme Kleidung mit, auch wenn es im Tal warm ist."
+      },
+      {
+        "speaker": "Ansager",
+        "speaker_role": "dialogue_speaker",
+        "text": "In den Bergen kann es zehn Grad kälter sein als im Tal."
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Ende Teil zwei."
       }
     ]
   },
@@ -213,7 +262,7 @@
       "id": "l-a1-goethe-009-t2-lo-1",
       "cefrLevel": "A1",
       "skill": "listening",
-      "canDoVi": "Toi co the luyen nghe hieu o trinh do A1 qua chu de \"Wetter und Kleidung\".",
+      "canDoVi": "Tôi có thể luyện nghe hiểu ở trình độ A1 qua chủ đề \"Wetter und Kleidung\".",
       "canDoDe": "Ich kann Hoeren auf Niveau A1 zum Thema \"Wetter und Kleidung\" ueben.",
       "linkedContentIds": [
         "L-A1-GOETHE-009-T2"

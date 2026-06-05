@@ -235,165 +235,172 @@
     ]
   },
   "transcript": {
-    "type": "full_reconstructed_transcript",
+    "type": "studio_source_transcript",
     "status": "complete",
-    "source": "reconstructed_full_script",
-    "quality": "release_candidate_reconstructed",
-    "note": "Full learner-visible reconstructed script created from existing question evidence because original studio scripts are not present in the repository. Replace with studio transcript if original audio scripts become available.",
+    "source": "studio_source_script",
+    "quality": "source_verified",
+    "sourceScript": "data/scripts/B1/Teil4-Radiodiskussion/L-B1-GOETHE-009-T4.json",
+    "note": "Transcript replaced from source script by scripts/apply-source-transcripts.ts.",
     "lines": [
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Im folgenden Hoertext geht es um Gesundheitstipps aus dem Radio. Achten Sie auf die zentrale Information."
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sie hören eine Diskussion im Radio. Dazu gibt es acht Aufgaben. Wer sagt was? Sie hören die Diskussion zweimal."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q1.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Willkommen bei 'Gesund leben'. Heute: Wie viel Sport braucht der Mensch wirklich?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Hundertfünfzig Minuten moderate Bewegung pro Woche sind das Minimum laut WHO.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Sport ist natürlich wichtig, aber man darf es auch nicht übertreiben."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q1 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ich finde, zu wenig Sport ist ein viel größeres Problem als zu viel in unserer Gesellschaft."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q2.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Frau Dr. König, was sagt die Wissenschaft zur optimalen Sportmenge?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Ideal wären dreihundert Minuten, also fünf Stunden pro Woche, für den maximalen Gesundheitseffekt.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Hundertfünfzig Minuten moderate Bewegung pro Woche sind das Minimum laut WHO."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q2 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ideal wären dreihundert Minuten, also fünf Stunden pro Woche, für den maximalen Gesundheitseffekt."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q3.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das schaffen doch die wenigsten Menschen neben Arbeit und Familie!"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Regelmäßigkeit ist wichtiger als Intensität beim Sport.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Herr Schulz, Sie sind Fitnesstrainer. Wie erleben Sie die Realität?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q3 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Viele meiner Kunden kommen hochmotiviert, trainieren drei Wochen lang jeden Tag und hören dann auf."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q4.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Genau das ist das Problem. Regelmäßigkeit ist wichtiger als Intensität beim Sport."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Schwimmen ist ideal, weil es den ganzen Körper trainiert und die Gelenke schont.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Besser dreimal pro Woche leicht trainieren als einmal pro Woche bis zur Erschöpfung."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q4 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Frau Dr. König, welche Sportarten empfehlen Sie besonders?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q5.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Schwimmen ist ideal, weil es den ganzen Körper trainiert und die Gelenke schont."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Als Fitnesstrainer sage ich: Anfänger sollten mit diesen intensiven Programmen sehr vorsichtig sein.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Auch regelmäßiges Wandern oder zügiges Spazierengehen hat enorme gesundheitliche Vorteile."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q5 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Was halten Sie von den modernen Fitnesstrends wie CrossFit oder HIIT?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q6.",
-        "linkedQuestionId": "Q6"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Diese Trainingsformen können sehr effektiv sein, bergen aber auch ein höheres Verletzungsrisiko."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Die Mitgliedschaft ist oft sehr günstig, manchmal nur zehn bis zwanzig Euro pro Monat.",
-        "linkedQuestionId": "Q6"
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Als Fitnesstrainer sage ich: Anfänger sollten mit diesen intensiven Programmen sehr vorsichtig sein."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q6 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q6"
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Lassen Sie sich von einem qualifizierten Trainer beraten und übertreiben Sie es nicht am Anfang."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q7.",
-        "linkedQuestionId": "Q7"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ein wichtiger Aspekt ist auch die Motivation. Wie bleibt man langfristig am Ball?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Kinder sollten übrigens mindestens sechzig Minuten täglich aktiv sein und sich bewegen.",
-        "linkedQuestionId": "Q7"
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Suchen Sie sich einen Trainingspartner! Zusammen macht Sport doppelt so viel Spaß."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q7 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q7"
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Oder treten Sie einem Sportverein bei. In Deutschland gibt es über neunzigtausend Vereine."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q8.",
-        "linkedQuestionId": "Q8"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Mitgliedschaft ist oft sehr günstig, manchmal nur zehn bis zwanzig Euro pro Monat."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Das ist ein gesellschaftliches Problem, das Eltern und Schulen gemeinsam lösen müssen.",
-        "linkedQuestionId": "Q8"
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Und man lernt dort nette Leute kennen, was auch für die psychische Gesundheit gut ist."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q8 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q8"
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Kinder sollten übrigens mindestens sechzig Minuten täglich aktiv sein und sich bewegen."
       },
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Ende des Hoertexts."
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Leider verbringen viele Kinder heute zu viel Zeit vor Bildschirmen statt sich zu bewegen."
+      },
+      {
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das ist ein gesellschaftliches Problem, das Eltern und Schulen gemeinsam lösen müssen."
+      },
+      {
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Sport in der Schule muss attraktiver werden und nicht nur Leistung bewerten."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Vielen Dank an Frau Dr. König und Herrn Schulz für diese wichtigen Gesundheitstipps!"
+      },
+      {
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Finden Sie Ihre persönliche Sportart und bewegen Sie sich regelmäßig, Ihr Körper wird es danken!"
+      },
+      {
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Und denken Sie daran: Der beste Sport ist der, den man auch wirklich langfristig macht!"
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Ende des Hörverstehens."
       }
     ]
   },
@@ -410,7 +417,7 @@
       "id": "l-b1-goethe-009-t4-lo-1",
       "cefrLevel": "B1",
       "skill": "listening",
-      "canDoVi": "Toi co the luyen nghe hieu o trinh do B1 qua chu de \"Gesundheitstipps aus dem Radio\".",
+      "canDoVi": "Tôi có thể luyện nghe hiểu ở trình độ B1 qua chủ đề \"Gesundheitstipps aus dem Radio\".",
       "canDoDe": "Ich kann Hoeren auf Niveau B1 zum Thema \"Gesundheitstipps aus dem Radio\" ueben.",
       "linkedContentIds": [
         "L-B1-GOETHE-009-T4"

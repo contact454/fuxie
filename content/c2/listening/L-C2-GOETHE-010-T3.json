@@ -42,7 +42,7 @@
       "explanation": {
         "de": "Die Aussage ist falsch. Der Experte bezeichnet die beiden Ansätze explizit als 'konkurrierende Erklärungsansätze'. Das Wort 'konkurrierend' impliziert einen Widerspruch oder Wettbewerb, nicht eine Ergänzung zu einer einheitlichen Theorie. Die Aussage stellt die Beziehung der Modelle somit inkorrekt dar.",
         "vi": "Nhận định này sai. Vị chuyên gia mô tả hai cách tiếp cận một cách rõ ràng là 'các phương pháp giải thích cạnh tranh lẫn nhau'. Từ 'cạnh tranh' (konkurrierend) ngụ ý một sự mâu thuẫn hoặc đối đầu, chứ không phải là sự bổ sung cho một lý thuyết thống nhất. Do đó, nhận định này trình bày sai mối quan hệ giữa các mô hình.",
-        "key_evidence": "Es gibt im Wesentlichen zwei konkurrierende Erklärungsansätze: den nachfrageorientierten Ansatz... und den angebotsorientierten Ansatz...",
+        "key_evidence": "Es gibt im Wesentlichen zwei konkurrierende Erklärungsansätze: den nachfrageorientierten Ansatz",
         "key_vocabulary": [
           "sich ergänzen: to complement each other",
           "kohärent: coherent",
@@ -78,7 +78,7 @@
       "explanation": {
         "de": "Die Aussage ist richtig. Der Experte beschreibt die 'Finanzialisierung des Wohnungsmarktes' als ein globales Phänomen, das 'nationale Regulierungsansätze an ihre Grenzen bringt'. Die Formulierung 'untergräbt die Wirksamkeit' ist eine präzise Paraphrase für 'an ihre Grenzen bringt'. Die Aussage fasst seine Bewertung der Situation korrekt zusammen.",
         "vi": "Nhận định này đúng. Vị chuyên gia mô tả 'sự tài chính hóa thị trường nhà ở' là một hiện tượng toàn cầu 'đẩy các phương pháp điều tiết quốc gia đến giới hạn của chúng'. Cụm từ 'làm suy yếu hiệu quả' (untergräbt die Wirksamkeit) là một cách diễn giải chính xác cho 'đẩy đến giới hạn' (an ihre Grenzen bringt). Nhận định này tóm tắt chính xác đánh giá của ông về tình hình.",
-        "key_evidence": "Die Finanzialisierung des Wohnungsmarktes ist ein globales Phänomen, das nationale Regulierungsansätze an ihre Grenzen bringt...",
+        "key_evidence": "Die Finanzialisierung des Wohnungsmarktes ist ein globales Phänomen, das nationale Regulierungsansätze an ihre Grenzen bringt",
         "key_vocabulary": [
           "konstatieren: to state, to ascertain",
           "die Verflechtung: interconnection, entanglement",
@@ -126,93 +126,182 @@
     ]
   },
   "transcript": {
-    "type": "full_reconstructed_transcript",
+    "type": "studio_source_transcript",
     "status": "complete",
-    "source": "reconstructed_full_script",
-    "quality": "release_candidate_reconstructed",
-    "note": "Full learner-visible reconstructed script created from existing question evidence because original studio scripts are not present in the repository. Replace with studio transcript if original audio scripts become available.",
+    "source": "studio_source_script",
+    "quality": "source_verified",
+    "sourceScript": "data/scripts/C2/Teil3-Experteninterview-lang/L-C2-GOETHE-010-T3.json",
+    "note": "Transcript replaced from source script by scripts/apply-source-transcripts.ts.",
     "lines": [
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Der folgende anspruchsvolle Hoertext behandelt Gentrifizierung und kulturelle Verdrängung. Achten Sie auf Aussage, Kontext und implizite Bedeutung."
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sie hören ein ausführliches Interview. Dazu gibt es zehn Aufgaben. Kreuzen Sie die richtige Antwort an. Sie hören das Interview einmal."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q1.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Herr Professor Bezirk, Sie gelten als einer der profiliertesten Gentrifizierungsforscher im deutschsprachigen Raum und haben den Wandel Berliner Stadtviertel über mehr als zwei Jahrzehnte wissenschaftlich begleitet."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "In einem marktwirtschaftlichen System ist Gentrifizierung keine Naturgewalt, sondern das Ergebnis politischer Entscheidungen und Unterlassungen; eine Kommune, die aktiv gegensteuert, kann den Prozess zumindest erheblich verlangsamen.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "In den letzten zwanzig Jahren habe ich hautnah miterlebt, wie sich ganze Stadtviertel in einem atemberaubenden Tempo von preiswerten Wohnquartieren zu hochpreisigen Lifestyle-Destinationen transformiert haben."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q1 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Welche theoretischen Erklärungsmodelle bietet die Stadtsoziologie für die Ursachen und Mechanismen der Gentrifizierung?"
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q2.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Es gibt im Wesentlichen zwei konkurrierende Erklärungsansätze: den nachfrageorientierten Ansatz, der die Konsumpräferenzen einer neuen urbanen Mittelschicht betont, und den angebotsorientierten Ansatz, der die Investitionsstrategien des Immobilienkapitals in den Mittelpunkt stellt."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "answer_evidence",
-        "text": "Es gibt im Wesentlichen zwei konkurrierende Erklärungsansätze: den nachfrageorientierten Ansatz... und den angebotsorientierten Ansatz...",
-        "linkedQuestionId": "Q2"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Lässt sich Gentrifizierung überhaupt verhindern, oder handelt es sich um einen unausweichlichen Begleitprozess kapitalistischer Stadtentwicklung?"
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q2 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "In einem marktwirtschaftlichen System ist Gentrifizierung keine Naturgewalt, sondern das Ergebnis politischer Entscheidungen und Unterlassungen; eine Kommune, die aktiv gegensteuert, kann den Prozess zumindest erheblich verlangsamen."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q3.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Welche konkreten Instrumente stehen den Kommunen zur Verfügung, um Gentrifizierung zu steuern und die Verdrängung einkommensschwacher Bewohner zu verhindern?"
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "answer_evidence",
-        "text": "Das ist die alles entscheidende Frage, und die Antwort darauf wird nicht in wissenschaftlichen Seminaren, sondern in politischen Auseinandersetzungen und zivilgesellschaftlichen Bewegungen gefunden werden.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Zu den wirksamsten Instrumenten gehören Milieuschutzsatzungen, kommunale Vorkaufsrechte, die Förderung genossenschaftlichen Wohnens und eine restriktive Handhabung von Modernisierungsumlagen."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q3 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Können Sie ein Beispiel für eine kommunale Strategie nennen, die Gentrifizierung erfolgreich eingedämmt hat, ohne die positive Entwicklung eines Stadtteils zu blockieren?"
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q4.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Stadt Wien ist das beeindruckendste Beispiel, wo rund sechzig Prozent des Wohnungsbestands im kommunalen oder genossenschaftlichen Eigentum sind, was eine effektive Mietpreiskontrolle ermöglicht."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "answer_evidence",
-        "text": "Die Finanzialisierung des Wohnungsmarktes ist ein globales Phänomen, das nationale Regulierungsansätze an ihre Grenzen bringt...",
-        "linkedQuestionId": "Q4"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wie bewerten Sie die wachsende Internationalisierung der Immobilienmärkte und die Tatsache, dass zunehmend ausländisches Kapital in deutsche Wohnimmobilien fließt?"
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q4 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Finanzialisierung des Wohnungsmarktes ist ein globales Phänomen, das nationale Regulierungsansätze an ihre Grenzen bringt und eine internationale Koordination der Wohnungspolitik erforderlich macht."
       },
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Ende des Hoertexts."
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Abschließend, Herr Professor Bezirk: Ist die Stadt der Zukunft eine Stadt für alle oder nur für diejenigen, die sie sich leisten können?"
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das ist die alles entscheidende Frage, und die Antwort darauf wird nicht in wissenschaftlichen Seminaren, sondern in politischen Auseinandersetzungen und zivilgesellschaftlichen Bewegungen gefunden werden."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Herr Professor Bezirk, Sie gelten als einer der profiliertesten Gentrifizierungsforscher im deutschsprachigen Raum und haben den Wandel Berliner Stadtviertel über mehr als zwei Jahrzehnte wissenschaftlich begleitet."
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "In den letzten zwanzig Jahren habe ich hautnah miterlebt, wie sich ganze Stadtviertel in einem atemberaubenden Tempo von preiswerten Wohnquartieren zu hochpreisigen Lifestyle-Destinationen transformiert haben."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Welche theoretischen Erklärungsmodelle bietet die Stadtsoziologie für die Ursachen und Mechanismen der Gentrifizierung?"
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Es gibt im Wesentlichen zwei konkurrierende Erklärungsansätze: den nachfrageorientierten Ansatz, der die Konsumpräferenzen einer neuen urbanen Mittelschicht betont, und den angebotsorientierten Ansatz, der die Investitionsstrategien des Immobilienkapitals in den Mittelpunkt stellt."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Lässt sich Gentrifizierung überhaupt verhindern, oder handelt es sich um einen unausweichlichen Begleitprozess kapitalistischer Stadtentwicklung?"
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "In einem marktwirtschaftlichen System ist Gentrifizierung keine Naturgewalt, sondern das Ergebnis politischer Entscheidungen und Unterlassungen; eine Kommune, die aktiv gegensteuert, kann den Prozess zumindest erheblich verlangsamen."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Welche konkreten Instrumente stehen den Kommunen zur Verfügung, um Gentrifizierung zu steuern und die Verdrängung einkommensschwacher Bewohner zu verhindern?"
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Zu den wirksamsten Instrumenten gehören Milieuschutzsatzungen, kommunale Vorkaufsrechte, die Förderung genossenschaftlichen Wohnens und eine restriktive Handhabung von Modernisierungsumlagen."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Können Sie ein Beispiel für eine kommunale Strategie nennen, die Gentrifizierung erfolgreich eingedämmt hat, ohne die positive Entwicklung eines Stadtteils zu blockieren?"
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Stadt Wien ist das beeindruckendste Beispiel, wo rund sechzig Prozent des Wohnungsbestands im kommunalen oder genossenschaftlichen Eigentum sind, was eine effektive Mietpreiskontrolle ermöglicht."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wie bewerten Sie die wachsende Internationalisierung der Immobilienmärkte und die Tatsache, dass zunehmend ausländisches Kapital in deutsche Wohnimmobilien fließt?"
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Finanzialisierung des Wohnungsmarktes ist ein globales Phänomen, das nationale Regulierungsansätze an ihre Grenzen bringt und eine internationale Koordination der Wohnungspolitik erforderlich macht."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Abschließend, Herr Professor Bezirk: Ist die Stadt der Zukunft eine Stadt für alle oder nur für diejenigen, die sie sich leisten können?"
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das ist die alles entscheidende Frage, und die Antwort darauf wird nicht in wissenschaftlichen Seminaren, sondern in politischen Auseinandersetzungen und zivilgesellschaftlichen Bewegungen gefunden werden."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Herr Professor Bezirk, Sie gelten als einer der profiliertesten Gentrifizierungsforscher im deutschsprachigen Raum und haben den Wandel Berliner Stadtviertel über mehr als zwei Jahrzehnte wissenschaftlich begleitet."
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "In den letzten zwanzig Jahren habe ich hautnah miterlebt, wie sich ganze Stadtviertel in einem atemberaubenden Tempo von preiswerten Wohnquartieren zu hochpreisigen Lifestyle-Destinationen transformiert haben."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Welche theoretischen Erklärungsmodelle bietet die Stadtsoziologie für die Ursachen und Mechanismen der Gentrifizierung?"
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Es gibt im Wesentlichen zwei konkurrierende Erklärungsansätze: den nachfrageorientierten Ansatz, der die Konsumpräferenzen einer neuen urbanen Mittelschicht betont, und den angebotsorientierten Ansatz, der die Investitionsstrategien des Immobilienkapitals in den Mittelpunkt stellt."
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Ende des Hörverstehens."
       }
     ]
   },
@@ -229,7 +318,7 @@
       "id": "l-c2-goethe-010-t3-lo-1",
       "cefrLevel": "C2",
       "skill": "listening",
-      "canDoVi": "Toi co the luyen nghe hieu o trinh do C2 qua chu de \"Gentrifizierung und kulturelle Verdrängung\".",
+      "canDoVi": "Tôi có thể luyện nghe hiểu ở trình độ C2 qua chủ đề \"Gentrifizierung und kulturelle Verdrängung\".",
       "canDoDe": "Ich kann Hoeren auf Niveau C2 zum Thema \"Gentrifizierung und kulturelle Verdrängung\" ueben.",
       "linkedContentIds": [
         "L-C2-GOETHE-010-T3"

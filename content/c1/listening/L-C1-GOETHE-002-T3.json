@@ -29,7 +29,7 @@
       "explanation": {
         "de": "Die korrekte Antwort ist (b), da der Ökonom die Lage als 'regional sehr unterschiedlich' beschreibt, mit explodierenden Mieten in Metropolen und Leerstand in anderen Gebieten. Dies wird vom Moderator als 'räumliche Unwucht' zusammengefasst. Option (a) ist eine unzulässige Verallgemeinerung. Option (c) ist eine lexikalische Falle, die eine zu Beginn geäußerte Meinung eines anderen Sprechers aufgreift.",
         "vi": "Đáp án đúng là (b), vì nhà kinh tế học mô tả tình hình là 'rất khác nhau theo từng khu vực', với giá thuê tăng vọt ở các đô thị lớn và nhà trống ở các khu vực khác. Người điều hành tóm tắt điều này là 'sự mất cân bằng về không gian'. Lựa chọn (a) là một sự khái quát hóa không được phép. Lựa chọn (c) là một cái bẫy từ vựng, lấy ý kiến của một người nói khác đã được nêu ở đầu cuộc thảo luận.",
-        "key_evidence": "Der Wohnungsmarkt ist in den Ballungsräumen massiv angespannt, aber regional sehr unterschiedlich. [...] Während in München und Berlin die Mieten explodieren, stehen in vielen ostdeutschen Städten Wohnungen leer.",
+        "key_evidence": "Der Wohnungsmarkt ist in den Ballungsräumen massiv angespannt, aber regional sehr unterschiedlich",
         "key_vocabulary": []
       }
     },
@@ -130,93 +130,172 @@
     ]
   },
   "transcript": {
-    "type": "full_reconstructed_transcript",
+    "type": "studio_source_transcript",
     "status": "complete",
-    "source": "reconstructed_full_script",
-    "quality": "release_candidate_reconstructed",
-    "note": "Full learner-visible reconstructed script created from existing question evidence because original studio scripts are not present in the repository. Replace with studio transcript if original audio scripts become available.",
+    "source": "studio_source_script",
+    "quality": "source_verified",
+    "sourceScript": "data/scripts/C1/Teil3-Diskussion-in-Abschnitten/L-C1-GOETHE-002-T3.json",
+    "note": "Transcript replaced from source script by scripts/apply-source-transcripts.ts.",
     "lines": [
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Der folgende anspruchsvolle Hoertext behandelt Wohnen der Zukunft und Stadtplanung. Achten Sie auf Aussage, Kontext und implizite Bedeutung."
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sie hören eine Diskussion in vier Abschnitten. Lesen Sie jeweils die Aufgaben. Sie haben dafür 30 Sekunden Zeit. Sie hören die Diskussion zweimal."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q1.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Willkommen zur Diskussion: Wohnungskrise in Deutschland — Wer ist schuld und was muss sich ändern?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Der Wohnungsmarkt ist in den Ballungsräumen massiv angespannt, aber regional sehr unterschiedlich. [...] Während in München und Berlin die Mieten explodieren, stehen in vielen ostdeutschen Städten Wohnungen leer.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Wohnungskrise ist das Ergebnis einer verfehlten neoliberalen Politik, die Wohnen dem Markt überlassen hat."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q1 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Schuld liegt nicht bei der Politik allein, sondern auch bei den überzogenen Ansprüchen der Bürger an Wohnfläche."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q2.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Frau Lenz, Sie sind Mieterin in Berlin und von Verdrängung bedroht. Was erleben Sie?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Wir bauen zu teuer, zu langsam und zu wenig innovativ. Der deutsche Bausektor ist ein Innovationslaggard.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Mein Vermieter hat eine Modernisierungsmieterhöhung angekündigt, die meine Miete um sechzig Prozent steigern würde."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q2 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ich wohne seit fünfzehn Jahren in meiner Wohnung in Kreuzberg, aber nach der Modernisierung kann ich sie nicht mehr bezahlen."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q3.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Herr Dr. Steinbach, Sie sind Immobilienökonom. Wie bewerten Sie die Lage auf dem Mietmarkt?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Kurzfristig lindern sie den Druck, langfristig reduzieren sie aber die Investitionsbereitschaft und verschärfen den Mangel.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Der Wohnungsmarkt ist in den Ballungsräumen massiv angespannt, aber regional sehr unterschiedlich."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q3 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Während in München und Berlin die Mieten explodieren, stehen in vielen ostdeutschen Städten Wohnungen leer."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q4.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das Problem ist also nicht genereller Wohnungsmangel, sondern eine räumliche Unwucht zwischen Angebot und Nachfrage."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Dass Wohnen wieder als Grundrecht behandelt wird und nicht nur als Investitionsobjekt für Kapitalanleger.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Frau Architektin Bogdan, Sie planen innovative Wohnprojekte. Was muss sich bei der Bauweise ändern?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q4 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wir bauen zu teuer, zu langsam und zu wenig innovativ. Der deutsche Bausektor ist ein Innovationslaggard."
       },
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Ende des Hoertexts."
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Serielles und modulares Bauen kann die Bauzeit halbieren und die Kosten um dreißig Prozent senken."
+      },
+      {
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Herr Dr. Steinbach, sind Mietpreisbremse und Mietendeckel wirksame Instrumente gegen steigende Mieten?"
+      },
+      {
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Kurzfristig lindern sie den Druck, langfristig reduzieren sie aber die Investitionsbereitschaft und verschärfen den Mangel."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Mieter profitieren, aber potenzielle Neumieter finden noch weniger Wohnungen, weil weniger gebaut und investiert wird."
+      },
+      {
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Frau Lenz, wie erleben Sie die Wirkung der Mietpreisbremse in Ihrem Alltag?"
+      },
+      {
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "In meinem Fall hat sie nichts gebracht, weil Modernisierungsumlagen von der Bremse ausgenommen sind."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Der Vermieter modernisiert gezielt, um die Mietpreisbremse zu umgehen, und treibt so die Miete hoch."
+      },
+      {
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Frau Architektin Bogdan, welche Rolle spielt der Holzbau für bezahlbares und nachhaltiges Wohnen?"
+      },
+      {
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Holzbau ist ein Gamechanger: Er ist schneller, leichter und klimafreundlicher als konventioneller Massivbau."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ein Holzhaus speichert CO2, statt es freizusetzen, und die Vorfertigung im Werk ermöglicht Präzision und Geschwindigkeit."
+      },
+      {
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Herr Dr. Steinbach, was muss die Politik ändern, um den Wohnungsbau wieder anzukurbeln?"
+      },
+      {
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Schnellere Genehmigungsverfahren, niedrigere Baustandards wo möglich und steuerliche Anreize für bezahlbaren Wohnungsbau."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Und eine aktive kommunale Bodenpolitik, die der Bodenspekulation den Nährboden entzieht."
+      },
+      {
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Frau Lenz, was wünschen Sie sich als Mieterin von der Politik?"
+      },
+      {
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Dass Wohnen wieder als Grundrecht behandelt wird und nicht nur als Investitionsobjekt für Kapitalanleger."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Dass die Politik die Menschen schützt, die in ihren Wohnungen leben, und nicht nur die Interessen der Eigentümer."
+      },
+      {
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Da sind wir uns alle grundsätzlich einig: Wohnen ist ein Grundbedürfnis, das politisch geschützt werden muss."
+      },
+      {
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Vielen Dank für diese engagierte und praxisnahe Diskussion über die Zukunft des Wohnens!"
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Ende Teil drei."
       }
     ]
   },
@@ -233,7 +312,7 @@
       "id": "l-c1-goethe-002-t3-lo-1",
       "cefrLevel": "C1",
       "skill": "listening",
-      "canDoVi": "Toi co the luyen nghe hieu o trinh do C1 qua chu de \"Wohnen der Zukunft und Stadtplanung\".",
+      "canDoVi": "Tôi có thể luyện nghe hiểu ở trình độ C1 qua chủ đề \"Wohnen der Zukunft und Stadtplanung\".",
       "canDoDe": "Ich kann Hoeren auf Niveau C1 zum Thema \"Wohnen der Zukunft und Stadtplanung\" ueben.",
       "linkedContentIds": [
         "L-C1-GOETHE-002-T3"

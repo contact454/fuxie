@@ -175,7 +175,7 @@
       "explanation": {
         "de": "Der Mann nennt: 'Man hat sofort eine Gemeinschaft und muss sich nicht um Möbel oder Internet kümmern.' und 'Dafür bekommt man Service: Reinigung, schnelles Internet und manchmal sogar Frühstück inklusive.'",
         "vi": "Người đàn ông nêu ra: 'Người ta có ngay một cộng đồng và không phải lo lắng về đồ đạc hay internet.' và 'Đổi lại, bạn nhận được dịch vụ: dọn dẹp, internet nhanh và đôi khi cả bữa sáng bao gồm.'",
-        "key_evidence": "Man hat sofort eine Gemeinschaft und muss sich nicht um Möbel oder Internet kümmern. Dafür bekommt man Service: Reinigung, schnelles Internet und manchmal sogar Frühstück inklusive.",
+        "key_evidence": "Man hat sofort eine Gemeinschaft und muss sich nicht um Möbel oder Internet kümmern",
         "key_vocabulary": []
       }
     }
@@ -219,201 +219,247 @@
     ]
   },
   "transcript": {
-    "type": "full_reconstructed_transcript",
+    "type": "studio_source_transcript",
     "status": "complete",
-    "source": "reconstructed_full_script",
-    "quality": "release_candidate_reconstructed",
-    "note": "Full learner-visible reconstructed script created from existing question evidence because original studio scripts are not present in the repository. Replace with studio transcript if original audio scripts become available.",
+    "source": "studio_source_script",
+    "quality": "source_verified",
+    "sourceScript": "data/scripts/B2/Teil1-Alltagsaeusserungen/L-B2-GOETHE-012-T1.json",
+    "note": "Transcript replaced from source script by scripts/apply-source-transcripts.ts.",
     "lines": [
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Im folgenden Hoertext geht es um Künstliche Intelligenz im Alltag. Achten Sie auf die zentrale Information."
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sie hören fünf Äußerungen aus dem Alltag. Zu jeder Äußerung gibt es zwei Aufgaben. Kreuzen Sie die richtige Antwort an. Sie hören jeden Text einmal."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q1.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Äußerung 1."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Das kann doch nicht funktionieren!",
-        "linkedQuestionId": "Q1"
+        "speaker": "Sprecher1_1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Hast du gehört, dass die Müller-Familie in ein Tiny House gezogen ist? Nur fünfunddreißig Quadratmeter!"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q1 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Sprecher2_1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Fünfunddreißig Quadratmeter für eine vierköpfige Familie? Das kann doch nicht funktionieren!"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q2.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Sprecher1_1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Anscheinend doch. Sie sagen, sie haben sich von allem Überflüssigen getrennt und fühlen sich befreit."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Vielleicht sollte ich mir das mal anschauen.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Sprecher2_1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Aber wo schlafen denn die Kinder? In einem so kleinen Haus gibt es doch kaum Platz."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q2 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Sprecher1_1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die haben clevere Einbaumöbel: Hochbetten mit Stauraum und Tische, die man einklappen kann."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q3.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Sprecher2_1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Interessant. Aber die Miete ist bestimmt trotzdem nicht günstig in Berlin, oder?"
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "answer_evidence",
-        "text": "Es bekämpft Einsamkeit im Alter und den Mangel an Kinderbetreuung gleichzeitig.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Sprecher1_1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Doch, sogar sehr günstig! Achthundert Euro warm, weil die Grundfläche so klein ist."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q3 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Sprecher2_1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das ist wirklich wenig für Berlin. Vielleicht sollte ich mir das mal anschauen."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q4.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Äußerung 2."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "answer_evidence",
-        "text": "Ja, aber heute ist es bewusst gewählt und organisiert, mit separaten Wohneinheiten.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Sprecher1_2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Unsere Nachbarn haben ein Mehrgenerationenhaus gegründet. Großeltern, Eltern und Kinder unter einem Dach."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q4 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Sprecher2_2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das erinnert mich an die Wohnverhältnisse vor hundert Jahren, als die Großfamilie noch zusammenlebte."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q5.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Sprecher1_2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ja, aber heute ist es bewusst gewählt und organisiert, mit separaten Wohneinheiten."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "answer_evidence",
-        "text": "Allerdings braucht man wahrscheinlich viel Geduld für die Planungsphase.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Sprecher2_2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das klingt nach einem guten Konzept. Die Großeltern können auf die Kinder aufpassen."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q5 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Sprecher1_2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Genau, und die jüngere Generation hilft den Älteren bei Einkäufen und technischen Fragen."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q6.",
-        "linkedQuestionId": "Q6"
+        "speaker": "Sprecher2_2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Gibt es denn keine Konflikte, wenn so viele Generationen eng zusammenleben?"
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "answer_evidence",
-        "text": "Ja, etwa zwanzig Prozent günstiger, weil man die Bauträger-Marge und den Makler spart.",
-        "linkedQuestionId": "Q6"
+        "speaker": "Sprecher1_2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Natürlich gibt es manchmal Spannungen, aber sie haben regelmäßige Haustreffen für Problemlösungen."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q6 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q6"
+        "speaker": "Sprecher2_2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ich finde das Konzept sehr klug. Es bekämpft Einsamkeit im Alter und den Mangel an Kinderbetreuung gleichzeitig."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q7.",
-        "linkedQuestionId": "Q7"
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Äußerung 3."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "answer_evidence",
-        "text": "Wird ihm nicht schwindelig bei dem ganzen Geschaukel?",
-        "linkedQuestionId": "Q7"
+        "speaker": "Sprecher1_3",
+        "speaker_role": "dialogue_speaker",
+        "text": "Seit Kurzem gibt es in unserer Stadt eine Baugruppe, die gemeinsam ein ökologisches Wohnprojekt plant."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q7 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q7"
+        "speaker": "Sprecher2_3",
+        "speaker_role": "dialogue_speaker",
+        "text": "Was genau ist eine Baugruppe? Das habe ich schon öfter gehört, aber nie richtig verstanden."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q8.",
-        "linkedQuestionId": "Q8"
+        "speaker": "Sprecher1_3",
+        "speaker_role": "dialogue_speaker",
+        "text": "Eine Gruppe von Menschen tut sich zusammen, um gemeinsam ein Haus zu planen und zu bauen."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "answer_evidence",
-        "text": "Nein, mitten in Berlin auf der Spree! Er hat einen Liegeplatz in Kreuzberg mit Blick auf die Stadt.",
-        "linkedQuestionId": "Q8"
+        "speaker": "Sprecher2_3",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das klingt kompliziert. Wie einigen sich dreißig Leute auf eine Badezimmerfarbe?"
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q8 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q8"
+        "speaker": "Sprecher1_3",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das wird in einem demokratischen Prozess entschieden. Es gibt Arbeitsgruppen für verschiedene Themen."
       },
       {
-        "speaker": "Sprecher 5",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q9.",
-        "linkedQuestionId": "Q9"
+        "speaker": "Sprecher2_3",
+        "speaker_role": "dialogue_speaker",
+        "text": "Und ist das günstiger als eine normale Eigentumswohnung auf dem freien Markt?"
       },
       {
-        "speaker": "Sprecher 5",
-        "speaker_role": "answer_evidence",
-        "text": "Ich glaube, das Konzept funktioniert gut für ein bis zwei Jahre, aber langfristig braucht man seine Privatsphäre.",
-        "linkedQuestionId": "Q9"
+        "speaker": "Sprecher1_3",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ja, etwa zwanzig Prozent günstiger, weil man die Bauträger-Marge und den Makler spart."
       },
       {
-        "speaker": "Sprecher 5",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q9 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q9"
+        "speaker": "Sprecher2_3",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das ist ein großer Vorteil. Allerdings braucht man wahrscheinlich viel Geduld für die Planungsphase."
       },
       {
-        "speaker": "Sprecher 5",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q10.",
-        "linkedQuestionId": "Q10"
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Äußerung 4."
       },
       {
-        "speaker": "Sprecher 5",
-        "speaker_role": "answer_evidence",
-        "text": "Man hat sofort eine Gemeinschaft und muss sich nicht um Möbel oder Internet kümmern. Dafür bekommt man Service: Reinigung, schnelles Internet und manchmal sogar Frühstück inklusive.",
-        "linkedQuestionId": "Q10"
+        "speaker": "Sprecher1_4",
+        "speaker_role": "dialogue_speaker",
+        "text": "Mein Bruder lebt seit zwei Jahren auf einem Hausboot und ist absolut begeistert davon."
       },
       {
-        "speaker": "Sprecher 5",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q10 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q10"
+        "speaker": "Sprecher2_4",
+        "speaker_role": "dialogue_speaker",
+        "text": "Auf einem Hausboot? Wird ihm nicht schwindelig bei dem ganzen Geschaukel?"
       },
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Ende des Hoertexts."
+        "speaker": "Sprecher1_4",
+        "speaker_role": "dialogue_speaker",
+        "text": "Nein, moderne Hausboote sind sehr stabil und bewegen sich kaum. Es ist wie eine schwimmende Wohnung."
+      },
+      {
+        "speaker": "Sprecher2_4",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wo liegt sein Hausboot? Irgendwo in Brandenburg auf einem See?"
+      },
+      {
+        "speaker": "Sprecher1_4",
+        "speaker_role": "dialogue_speaker",
+        "text": "Nein, mitten in Berlin auf der Spree! Er hat einen Liegeplatz in Kreuzberg mit Blick auf die Stadt."
+      },
+      {
+        "speaker": "Sprecher2_4",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das muss wunderschön sein. Aber was kostet so ein Liegeplatz mitten in Berlin?"
+      },
+      {
+        "speaker": "Sprecher1_4",
+        "speaker_role": "dialogue_speaker",
+        "text": "Der Liegeplatz kostet fünfhundert Euro im Monat, plus Strom und Wasser extra."
+      },
+      {
+        "speaker": "Sprecher2_4",
+        "speaker_role": "dialogue_speaker",
+        "text": "Und was hat das Hausboot selbst gekostet? Das ist sicher nicht billig gewesen."
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Äußerung 5."
+      },
+      {
+        "speaker": "Sprecher1_5",
+        "speaker_role": "dialogue_speaker",
+        "text": "In unserem Büro diskutieren wir gerade über das Konzept Co-Living. Kennt ihr das?"
+      },
+      {
+        "speaker": "Sprecher2_5",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ja, das ist wie eine Studenten-WG, nur professioneller und mit mehr Service."
+      },
+      {
+        "speaker": "Sprecher1_5",
+        "speaker_role": "dialogue_speaker",
+        "text": "Genau. Man hat ein eigenes Zimmer, aber teilt sich Küche, Wohnzimmer und manchmal sogar ein Büro."
+      },
+      {
+        "speaker": "Sprecher2_5",
+        "speaker_role": "dialogue_speaker",
+        "text": "Für junge Berufstätige, die neu in eine Stadt kommen, kann das eine tolle Lösung sein."
+      },
+      {
+        "speaker": "Sprecher1_5",
+        "speaker_role": "dialogue_speaker",
+        "text": "Man hat sofort eine Gemeinschaft und muss sich nicht um Möbel oder Internet kümmern."
+      },
+      {
+        "speaker": "Sprecher2_5",
+        "speaker_role": "dialogue_speaker",
+        "text": "Aber die Preise sind oft höher als für ein einfaches WG-Zimmer auf dem freien Markt."
+      },
+      {
+        "speaker": "Sprecher1_5",
+        "speaker_role": "dialogue_speaker",
+        "text": "Dafür bekommt man Service: Reinigung, schnelles Internet und manchmal sogar Frühstück inklusive."
+      },
+      {
+        "speaker": "Sprecher2_5",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ich glaube, das Konzept funktioniert gut für ein bis zwei Jahre, aber langfristig braucht man seine Privatsphäre."
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Ende Teil eins."
       }
     ]
   },
@@ -430,7 +476,7 @@
       "id": "l-b2-goethe-012-t1-lo-1",
       "cefrLevel": "B2",
       "skill": "listening",
-      "canDoVi": "Toi co the luyen nghe hieu o trinh do B2 qua chu de \"Künstliche Intelligenz im Alltag\".",
+      "canDoVi": "Tôi có thể luyện nghe hiểu ở trình độ B2 qua chủ đề \"Künstliche Intelligenz im Alltag\".",
       "canDoDe": "Ich kann Hoeren auf Niveau B2 zum Thema \"Künstliche Intelligenz im Alltag\" ueben.",
       "linkedContentIds": [
         "L-B2-GOETHE-012-T1"

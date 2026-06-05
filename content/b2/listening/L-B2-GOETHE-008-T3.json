@@ -168,129 +168,162 @@
     ]
   },
   "transcript": {
-    "type": "full_reconstructed_transcript",
+    "type": "studio_source_transcript",
     "status": "complete",
-    "source": "reconstructed_full_script",
-    "quality": "release_candidate_reconstructed",
-    "note": "Full learner-visible reconstructed script created from existing question evidence because original studio scripts are not present in the repository. Replace with studio transcript if original audio scripts become available.",
+    "source": "studio_source_script",
+    "quality": "source_verified",
+    "sourceScript": "data/scripts/B2/Teil3-Diskussion-mehrere-Personen/L-B2-GOETHE-008-T3.json",
+    "note": "Transcript replaced from source script by scripts/apply-source-transcripts.ts.",
     "lines": [
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Im folgenden Hoertext geht es um Prüfungsangst bewältigen. Achten Sie auf die zentrale Information."
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sie hören eine Diskussion. Dazu gibt es sechs Aufgaben. Wer sagt was? Sie hören die Diskussion zweimal."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q1.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Willkommen zur Diskussion: Sind unsere Prüfungssysteme noch zeitgemäß?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Standardisierte Prüfungen messen Auswendiglernen, nicht echtes Verständnis.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Definitiv nicht! Standardisierte Prüfungen messen Auswendiglernen, nicht echtes Verständnis."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q1 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ohne Prüfungen gibt es aber keinen objektiven Maßstab für Leistung und Kompetenz."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q2.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Herr Vogel, Sie fordern alternative Prüfungsformen. Welche schweben Ihnen vor?"
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "answer_evidence",
-        "text": "Ohne Prüfungen gibt es aber keinen objektiven Maßstab für Leistung und Kompetenz.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Portfolios, Projektarbeiten, mündliche Präsentationen. Alles, was mehr kann als nur Wissen abfragen."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q2 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Aber solche Prüfungsformen sind subjektiver und schwerer vergleichbar als standardisierte Tests."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q3.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Objektivität nützt nichts, wenn wir das Falsche messen. Was bringt ein Test, der Fakten abfragt, die man googlen kann?"
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "answer_evidence",
-        "text": "Objektivität nützt nichts, wenn wir das Falsche messen.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Frau Dr. Stern, Sie sind Professorin. Wie sehen Sie die aktuelle Prüfungslandschaft?"
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q3 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ich stimme zu, dass wir zu viel Faktenwissen prüfen. Aber Fundamente aus Wissen sind notwendig."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q4.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Kreatives Denken und Problemlösung funktionieren nicht ohne solide Grundlagenkenntnisse."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "answer_evidence",
-        "text": "Das bestreite ich nicht. Aber die Art, wie wir diese Grundlagen prüfen, muss sich ändern.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das bestreite ich nicht. Aber die Art, wie wir diese Grundlagen prüfen, muss sich ändern."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q4 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Open-Book-Prüfungen, bei denen man Unterlagen nutzen darf, sind ein guter Kompromissvorschlag."
       },
       {
-        "speaker": "Sprecher 5",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q5.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das praktizieren wir bereits in einigen Fächern und die Ergebnisse sind sehr positiv."
       },
       {
-        "speaker": "Sprecher 5",
-        "speaker_role": "answer_evidence",
-        "text": "Wenn ein Arzt erst im Lehrbuch nachschlagen muss, welche Dosis er verschreiben soll, ist das problematisch.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Aber nicht alle Fächer sind dafür geeignet. In der Medizin braucht man abrufbares Faktenwissen."
       },
       {
-        "speaker": "Sprecher 5",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q5 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wenn ein Arzt erst im Lehrbuch nachschlagen muss, welche Dosis er verschreiben soll, ist das problematisch."
       },
       {
-        "speaker": "Sprecher 6",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q6.",
-        "linkedQuestionId": "Q6"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Da haben Sie recht. Die Prüfungsform muss zum Lernziel und zum Berufsfeld passen."
       },
       {
-        "speaker": "Sprecher 6",
-        "speaker_role": "answer_evidence",
-        "text": "Das verändert die Rolle der Universität fundamental, von der Wissensvermittlung zur Urteilsbildung.",
-        "linkedQuestionId": "Q6"
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Herr Vogel, was sagen Sie zum Thema Kompetenzorientierung in der Prüfung?"
       },
       {
-        "speaker": "Sprecher 6",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q6 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q6"
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wir sollten prüfen, ob jemand Probleme lösen kann, nicht ob er hundert Jahreszahlen kennt."
       },
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Ende des Hoertexts."
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "In Finnland hat man das Schulsystem komplett auf Kompetenzorientierung umgestellt."
+      },
+      {
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Und Finnland schneidet in internationalen Vergleichen regelmäßig hervorragend ab."
+      },
+      {
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das liegt aber auch an vielen anderen Faktoren wie kleinen Klassen und gut ausgebildeten Lehrern."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Frau Dr. Stern, glauben Sie, dass KI wie ChatGPT unsere Prüfungssysteme verändern wird?"
+      },
+      {
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Absolut! Wenn Studierende KI nutzen können, müssen wir völlig neu darüber nachdenken, was wir prüfen."
+      },
+      {
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Fähigkeit, KI-generierte Antworten kritisch zu bewerten, wird zu einer neuen Schlüsselkompetenz."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das verändert die Rolle der Universität fundamental, von der Wissensvermittlung zur Urteilsbildung."
+      },
+      {
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Vielen Dank für diese zukunftsweisende Diskussion!"
+      },
+      {
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Lassen Sie uns gemeinsam ein Prüfungssystem gestalten, das für das einundzwanzigste Jahrhundert taugt!"
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Bleiben Sie neugierig und hören Sie nie auf zu lernen, egal welche Prüfung vor Ihnen liegt!"
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Ende Teil drei."
       }
     ]
   },
@@ -307,7 +340,7 @@
       "id": "l-b2-goethe-008-t3-lo-1",
       "cefrLevel": "B2",
       "skill": "listening",
-      "canDoVi": "Toi co the luyen nghe hieu o trinh do B2 qua chu de \"Prüfungsangst bewältigen\".",
+      "canDoVi": "Tôi có thể luyện nghe hiểu ở trình độ B2 qua chủ đề \"Prüfungsangst bewältigen\".",
       "canDoDe": "Ich kann Hoeren auf Niveau B2 zum Thema \"Prüfungsangst bewältigen\" ueben.",
       "linkedContentIds": [
         "L-B2-GOETHE-008-T3"

@@ -102,7 +102,7 @@
       "explanation": {
         "de": "Die 'Informationsdiät' beinhaltet, 'bewusst die Menge an Informationen' zu reduzieren und E-Mails 'nur zu festgelegten Zeiten' zu prüfen. Das Ziel ist eine bewusste Steuerung des Informationskonsums, um Ablenkungen zu reduzieren.",
         "vi": "'Chế độ ăn kiêng thông tin' bao gồm việc 'cố ý giảm lượng thông tin' và kiểm tra email 'chỉ vào những thời điểm cố định.' Mục tiêu là kiểm soát có ý thức việc tiêu thụ thông tin để giảm thiểu sự xao nhãng.",
-        "key_evidence": "Reduzieren Sie bewusst die Menge an Informationen, die Sie konsumieren. Deaktivieren Sie alle Push-Benachrichtigungen und prüfen Sie E-Mails nur zu festgelegten Zeiten.",
+        "key_evidence": "Reduzieren Sie bewusst die Menge an Informationen, die Sie konsumieren",
         "key_vocabulary": [
           "Informationsdiät",
           "bewusst",
@@ -127,7 +127,7 @@
       "explanation": {
         "de": "Der Dozent betont, dass 'nicht jede Stunde des Tages gleich produktiv' ist und man 'persönliche Leistungskurven kennen' sollte, um 'anspruchsvolle kognitive Aufgaben für den Vormittag und Routinearbeiten für den Nachmittag' zu planen. Dies ist die Kernidee des Energiemanagements.",
         "vi": "Giảng viên nhấn mạnh rằng 'không phải mỗi giờ trong ngày đều có năng suất như nhau' và người ta nên 'biết các đường cong hiệu suất cá nhân' để 'lên kế hoạch cho các nhiệm vụ nhận thức đòi hỏi cao vào buổi sáng và công việc thường ngày vào buổi chiều.' Đây là ý tưởng cốt lõi của quản lý năng lượng.",
-        "key_evidence": "Nicht jede Stunde des Tages ist gleich produktiv. Lernen Sie Ihre persönlichen Leistungskurven kennen. Planen Sie anspruchsvolle kognitive Aufgaben für den Vormittag und Routinearbeiten für den Nachmittag.",
+        "key_evidence": "Nicht jede Stunde des Tages ist gleich produktiv",
         "key_vocabulary": [
           "Energiemanagement",
           "Leistungskurven",
@@ -177,7 +177,7 @@
       "explanation": {
         "de": "Das Beispiel des Unternehmens zeigt, dass die Strategien zu 'zwanzig Prozent weniger Überstunden bei gleicher Produktivität', einer Steigerung der 'Mitarbeiterzufriedenheit' und einem Rückgang der 'Krankheitstage' führten. Dies fasst die positiven Effekte zusammen.",
         "vi": "Ví dụ về công ty cho thấy các chiến lược đã dẫn đến 'giảm hai mươi phần trăm giờ làm thêm với năng suất tương đương', tăng 'sự hài lòng của nhân viên' và giảm 'số ngày nghỉ ốm.' Điều này tóm tắt các hiệu ứng tích cực.",
-        "key_evidence": "Das Ergebnis nach sechs Monaten: zwanzig Prozent weniger Überstunden bei gleicher Produktivität. Die Mitarbeiterzufriedenheit stieg um fünfunddreißig Prozent und die Krankheitstage gingen zurück.",
+        "key_evidence": "zwanzig Prozent weniger Überstunden bei gleicher Produktivität",
         "key_vocabulary": [
           "Schlussfolgerung",
           "Umsetzung",
@@ -203,7 +203,7 @@
       "explanation": {
         "de": "Der Dozent schließt seinen Vortrag mit der Definition: 'Produktivität bedeutet nicht, mehr zu arbeiten. Es bedeutet, die richtige Arbeit zur richtigen Zeit mit der richtigen Energie zu tun.' Option b spiegelt diese Aussage am besten wider.",
         "vi": "Giảng viên kết thúc bài giảng của mình với định nghĩa: 'Năng suất không có nghĩa là làm việc nhiều hơn. Nó có nghĩa là làm đúng việc vào đúng thời điểm với đúng năng lượng.' Lựa chọn b phản ánh tốt nhất tuyên bố này.",
-        "key_evidence": "Produktivität bedeutet nicht, mehr zu arbeiten. Es bedeutet, die richtige Arbeit zur richtigen Zeit mit der richtigen Energie zu tun.",
+        "key_evidence": "Produktivität bedeutet nicht, mehr zu arbeiten",
         "key_vocabulary": [
           "definiert",
           "Produktivität",
@@ -253,165 +253,147 @@
     ]
   },
   "transcript": {
-    "type": "full_reconstructed_transcript",
+    "type": "studio_source_transcript",
     "status": "complete",
-    "source": "reconstructed_full_script",
-    "quality": "release_candidate_reconstructed",
-    "note": "Full learner-visible reconstructed script created from existing question evidence because original studio scripts are not present in the repository. Replace with studio transcript if original audio scripts become available.",
+    "source": "studio_source_script",
+    "quality": "source_verified",
+    "sourceScript": "data/scripts/B2/Teil4-Vortrag/L-B2-GOETHE-003-T4.json",
+    "note": "Transcript replaced from source script by scripts/apply-source-transcripts.ts.",
     "lines": [
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Im folgenden Hoertext geht es um Arbeitstechniken und Konzentration. Achten Sie auf die zentrale Information."
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sie hören einen Vortrag. Dazu gibt es acht Aufgaben. Kreuzen Sie die richtige Antwort an. Sie hören den Vortrag zweimal."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q1.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Meine Damen und Herren, willkommen zu meinem Vortrag über Produktivität und Konzentration im modernen Arbeitsalltag."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Lassen Sie mich mit einer provokanten These beginnen: Wir arbeiten heute länger, aber weniger effektiv.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wir leben in einer Welt permanenter Ablenkung, und unsere Arbeitsweise hat sich fundamental verändert."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q1 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Lassen Sie mich mit einer provokanten These beginnen: Wir arbeiten heute länger, aber weniger effektiv."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q2.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die durchschnittliche Wochenarbeitszeit ist in den letzten dreißig Jahren kaum gesunken."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Das bedeutet: Ein erheblicher Teil unserer Arbeit ist Kommunikation über Arbeit, nicht Arbeit selbst.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Gleichzeitig verbringen wir fast dreißig Prozent unserer Arbeitszeit mit E-Mails und Meetings."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q2 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das bedeutet: Ein erheblicher Teil unserer Arbeit ist Kommunikation über Arbeit, nicht Arbeit selbst."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q3.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Der Neurowissenschaftler Daniel Levitin hat berechnet, dass wir täglich fünfmal so viele Informationen verarbeiten wie vor zwanzig Jahren."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Unser Gehirn ist für diese Informationsflut nicht ausgelegt und reagiert mit Stress und Erschöpfung.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Unser Gehirn ist für diese Informationsflut nicht ausgelegt und reagiert mit Stress und Erschöpfung."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q3 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Was können wir dagegen tun? Ich möchte Ihnen drei evidenzbasierte Strategien vorstellen."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q4.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Strategie eins: Informationsdiät. Reduzieren Sie bewusst die Menge an Informationen, die Sie konsumieren."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Reduzieren Sie bewusst die Menge an Informationen, die Sie konsumieren. Deaktivieren Sie alle Push-Benachrichtigungen und prüfen Sie E-Mails nur zu festgelegten Zeiten.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Deaktivieren Sie alle Push-Benachrichtigungen und prüfen Sie E-Mails nur zu festgelegten Zeiten."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q4 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Strategie zwei: Energiemanagement statt Zeitmanagement."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q5.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Nicht jede Stunde des Tages ist gleich produktiv. Lernen Sie Ihre persönlichen Leistungskurven kennen."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Nicht jede Stunde des Tages ist gleich produktiv. Lernen Sie Ihre persönlichen Leistungskurven kennen. Planen Sie anspruchsvolle kognitive Aufgaben für den Vormittag und Routinearbeiten für den Nachmittag.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die meisten Menschen haben ihr Leistungshoch am Vormittag und ein Tief nach dem Mittagessen."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q5 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Planen Sie anspruchsvolle kognitive Aufgaben für den Vormittag und Routinearbeiten für den Nachmittag."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q6.",
-        "linkedQuestionId": "Q6"
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Strategie drei: Bewusste Pausen als Produktivitätswerkzeug."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Ein kurzer Spaziergang an der frischen Luft ist dabei effektiver als Kaffee oder Social Media.",
-        "linkedQuestionId": "Q6"
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Studien zeigen, dass regelmäßige kurze Pausen die Gesamtproduktivität um bis zu fünfundzwanzig Prozent steigern."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q6 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q6"
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ein kurzer Spaziergang an der frischen Luft ist dabei effektiver als Kaffee oder Social Media."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q7.",
-        "linkedQuestionId": "Q7"
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Lassen Sie mich diese Strategien mit einem konkreten Beispiel aus meiner Beratungspraxis illustrieren."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Das Ergebnis nach sechs Monaten: zwanzig Prozent weniger Überstunden bei gleicher Produktivität. Die Mitarbeiterzufriedenheit stieg um fünfunddreißig Prozent und die Krankheitstage gingen zurück.",
-        "linkedQuestionId": "Q7"
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ein mittelständisches Unternehmen in Stuttgart hat alle drei Strategien gleichzeitig umgesetzt."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q7 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q7"
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das Ergebnis nach sechs Monaten: zwanzig Prozent weniger Überstunden bei gleicher Produktivität."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q8.",
-        "linkedQuestionId": "Q8"
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Mitarbeiterzufriedenheit stieg um fünfunddreißig Prozent und die Krankheitstage gingen zurück."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Produktivität bedeutet nicht, mehr zu arbeiten. Es bedeutet, die richtige Arbeit zur richtigen Zeit mit der richtigen Energie zu tun.",
-        "linkedQuestionId": "Q8"
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Abschließend möchte ich betonen: Produktivität bedeutet nicht, mehr zu arbeiten."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q8 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q8"
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Es bedeutet, die richtige Arbeit zur richtigen Zeit mit der richtigen Energie zu tun."
       },
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Ende des Hoertexts."
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Vielen Dank! Ich hoffe, Sie nehmen heute mindestens eine Idee mit, die Sie morgen umsetzen."
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Ende des Hörverstehens."
       }
     ]
   },
@@ -428,7 +410,7 @@
       "id": "l-b2-goethe-003-t4-lo-1",
       "cefrLevel": "B2",
       "skill": "listening",
-      "canDoVi": "Toi co the luyen nghe hieu o trinh do B2 qua chu de \"Arbeitstechniken und Konzentration\".",
+      "canDoVi": "Tôi có thể luyện nghe hiểu ở trình độ B2 qua chủ đề \"Arbeitstechniken und Konzentration\".",
       "canDoDe": "Ich kann Hoeren auf Niveau B2 zum Thema \"Arbeitstechniken und Konzentration\" ueben.",
       "linkedContentIds": [
         "L-B2-GOETHE-003-T4"

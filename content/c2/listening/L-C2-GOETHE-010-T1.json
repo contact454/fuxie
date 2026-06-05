@@ -60,7 +60,7 @@
       "explanation": {
         "de": "Die Aussage ist falsch. Der Schlüsselbegriff, der die Aussage widerlegt, ist 'ausschließlich'. Der Text führt neben den finanziellen Aspekten explizit weitere negative Folgen an, wie eine schlechtere Infrastruktur, mangelhafte Verkehrsanbindung und die Zerstörung sozialer Netzwerke. Die Konsequenzen sind also vielfältig und nicht nur monetär.",
         "vi": "Tuyên bố này là sai. Từ khóa bác bỏ tuyên bố này là 'chỉ' (ausschließlich). Ngoài các khía cạnh tài chính, bài nghe còn nêu rõ các hậu quả tiêu cực khác, như cơ sở hạ tầng kém hơn, kết nối giao thông công cộng thiếu thốn và sự phá hủy các mạng lưới xã hội. Do đó, hậu quả rất đa dạng chứ không chỉ về tiền bạc.",
-        "key_evidence": "Die langjährigen Bewohner ... werden in Randbezirke abgedrängt, wo die Infrastruktur schlechter, die Anbindung an den öffentlichen Nahverkehr mangelhafter und die sozialen Netzwerke zerstört sind.",
+        "key_evidence": "Die langjährigen Bewohner",
         "key_vocabulary": [
           "alteingesessen: cư dân lâu đời",
           "Peripherie: vùng ngoại ô, vùng ven",
@@ -126,93 +126,347 @@
     ]
   },
   "transcript": {
-    "type": "full_reconstructed_transcript",
+    "type": "studio_source_transcript",
     "status": "complete",
-    "source": "reconstructed_full_script",
-    "quality": "release_candidate_reconstructed",
-    "note": "Full learner-visible reconstructed script created from existing question evidence because original studio scripts are not present in the repository. Replace with studio transcript if original audio scripts become available.",
+    "source": "studio_source_script",
+    "quality": "source_verified",
+    "sourceScript": "data/scripts/C2/Teil1-Radiosendungen/L-C2-GOETHE-010-T1.json",
+    "note": "Transcript replaced from source script by scripts/apply-source-transcripts.ts.",
     "lines": [
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Der folgende anspruchsvolle Hoertext behandelt Gentrifizierung und kulturelle Verdrängung. Achten Sie auf Aussage, Kontext und implizite Bedeutung."
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sie hören fünf Radiosendungen. Zu jeder Sendung gibt es drei Aufgaben. Kreuzen Sie ja oder nein an. Sie hören jede Sendung einmal."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe GDS_H1_Q1.",
-        "linkedQuestionId": "GDS_H1_Q1"
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sendung 1."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "In der dritten und letzten Phase werden die ursprünglichen Bewohner, darunter auch die Pioniere der kulturellen Aufwertung, durch explodierende Mieten und die Umwandlung von Miet- in Eigentumswohnungen verdrängt.",
-        "linkedQuestionId": "GDS_H1_Q1"
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Der Begriff Gentrifizierung, abgeleitet vom englischen gentry und erstmals von der Soziologin Ruth Glass im Jahr neunzehnhundertvierundsechzig geprägt, beschreibt einen Prozess der sozioökonomischen Aufwertung innerstädtischer Wohnviertel."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe GDS_H1_Q1 im Kontext des Hoertexts.",
-        "linkedQuestionId": "GDS_H1_Q1"
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Dieser Prozess verläuft in der Regel nach einem typischen Muster: Zunächst siedeln sich Künstler, Studierende und junge Kreative in günstigen, oft vernachlässigten Stadtteilen an und verleihen ihnen ein kulturell attraktives Image."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe GDS_H1_Q2.",
-        "linkedQuestionId": "GDS_H1_Q2"
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "In der zweiten Phase folgen wohlhabendere Bevölkerungsgruppen, die von der kulturellen Vitalität des Viertels angezogen werden, während Immobilieninvestoren das Potenzial zur Wertsteigerung erkennen."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "answer_evidence",
-        "text": "Die wissenschaftliche Debatte über Gentrifizierung hat in den letzten Jahren eine bemerkenswerte Differenzierung erfahren, die über die einfache Gegenüberstellung von Aufwertung und Verdrängung hinausgeht.",
-        "linkedQuestionId": "GDS_H1_Q2"
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "In der dritten und letzten Phase werden die ursprünglichen Bewohner, darunter auch die Pioniere der kulturellen Aufwertung, durch explodierende Mieten und die Umwandlung von Miet- in Eigentumswohnungen verdrängt."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe GDS_H1_Q2 im Kontext des Hoertexts.",
-        "linkedQuestionId": "GDS_H1_Q2"
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die politische Brisanz der Gentrifizierung liegt im Spannungsfeld von urbanem Fortschritt einerseits und sozialer Gerechtigkeit andererseits, wobei die konkreten Bewertungen stark von der jeweiligen ideologischen Perspektive abhängen."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe GDS_H1_Q3.",
-        "linkedQuestionId": "GDS_H1_Q3"
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ein besonders exemplarischer Fall von Gentrifizierung und kultureller Verdrängung ist das Berliner Viertel Kreuzberg, das sich vom Einwandererbezirk und Alternativquartier zum begehrten Trendviertel mit internationaler Anziehungskraft entwickelt hat."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "answer_evidence",
-        "text": "Die langjährigen Bewohner ... werden in Randbezirke abgedrängt, wo die Infrastruktur schlechter, die Anbindung an den öffentlichen Nahverkehr mangelhafter und die sozialen Netzwerke zerstört sind.",
-        "linkedQuestionId": "GDS_H1_Q3"
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die kulinarische Landschaft Kreuzbergs spiegelt diesen Wandel eindrücklich wider: Döner-Imbisse und Gemüseläden weichen zunehmend veganen Cafés und Concept Stores, die sich vorwiegend an ein zahlungskräftiges internationales Publikum richten."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe GDS_H1_Q3 im Kontext des Hoertexts.",
-        "linkedQuestionId": "GDS_H1_Q3"
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die langjährigen Bewohner, überwiegend türkischstämmige Familien und Sozialhilfeempfänger, werden in Randbezirke abgedrängt, wo die Infrastruktur schlechter, die Anbindung an den öffentlichen Nahverkehr mangelhafter und die sozialen Netzwerke zerstört sind."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe GDS_H1_Q4.",
-        "linkedQuestionId": "GDS_H1_Q4"
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Widerstand gegen die Gentrifizierung artikuliert sich in Kreuzberg durch vielfältige Formen zivilgesellschaftlichen Protests, von Mieterinitiativen über Demonstrationen bis hin zu spektakulären Aktionen wie der Besetzung leer stehender Gebäude."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "answer_evidence",
-        "text": "Die Frage, wem die Stadt gehört, ist keine rein ökonomische, sondern eine zutiefst politische und kulturelle Frage, deren Beantwortung die Grundfesten unseres demokratischen Zusammenlebens berührt.",
-        "linkedQuestionId": "GDS_H1_Q4"
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Frage, ob die kulturelle Vielfalt, die Kreuzberg einst auszeichnete, unter den Bedingungen der Gentrifizierung überhaupt überlebensfähig ist, wird von einem Großteil der Stadtforschung mit zunehmendem Pessimismus beantwortet."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe GDS_H1_Q4 im Kontext des Hoertexts.",
-        "linkedQuestionId": "GDS_H1_Q4"
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die wissenschaftliche Debatte über Gentrifizierung hat in den letzten Jahren eine bemerkenswerte Differenzierung erfahren, die über die einfache Gegenüberstellung von Aufwertung und Verdrängung hinausgeht."
       },
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Ende des Hoertexts."
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Neuere Ansätze betonen die Mehrdimensionalität des Prozesses und unterscheiden zwischen verschiedenen Formen der Verdrängung: direkte ökonomische Verdrängung, kulturelle Verdrängung und die sogenannte Verdrängungsgefahr, also die Angst vor dem Verlust des vertrauten Lebensumfelds."
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sendung 2."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Besonders die kulturelle Verdrängung, also der Verlust von Orten der Gemeinschaft, identitätsstiftenden Geschäften und gewachsenen sozialen Strukturen, wird in der aktuellen Forschung als ebenso schwerwiegend wie die ökonomische Verdrängung bewertet."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Frage, wem die Stadt gehört, ist keine rein ökonomische, sondern eine zutiefst politische und kulturelle Frage, deren Beantwortung die Grundfesten unseres demokratischen Zusammenlebens berührt."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Suche nach einem Entwicklungsmodell, das die Vitalität städtischer Quartiere fördert, ohne die soziale Durchmischung zu zerstören und die vulnerable Bevölkerung zu vertreiben, bleibt eine der größten stadtgesellschaftlichen Herausforderungen unserer Zeit."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Der Begriff Gentrifizierung, abgeleitet vom englischen gentry und erstmals von der Soziologin Ruth Glass im Jahr neunzehnhundertvierundsechzig geprägt, beschreibt einen Prozess der sozioökonomischen Aufwertung innerstädtischer Wohnviertel."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Dieser Prozess verläuft in der Regel nach einem typischen Muster: Zunächst siedeln sich Künstler, Studierende und junge Kreative in günstigen, oft vernachlässigten Stadtteilen an und verleihen ihnen ein kulturell attraktives Image."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "In der zweiten Phase folgen wohlhabendere Bevölkerungsgruppen, die von der kulturellen Vitalität des Viertels angezogen werden, während Immobilieninvestoren das Potenzial zur Wertsteigerung erkennen."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "In der dritten und letzten Phase werden die ursprünglichen Bewohner, darunter auch die Pioniere der kulturellen Aufwertung, durch explodierende Mieten und die Umwandlung von Miet- in Eigentumswohnungen verdrängt."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die politische Brisanz der Gentrifizierung liegt im Spannungsfeld von urbanem Fortschritt einerseits und sozialer Gerechtigkeit andererseits, wobei die konkreten Bewertungen stark von der jeweiligen ideologischen Perspektive abhängen."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ein besonders exemplarischer Fall von Gentrifizierung und kultureller Verdrängung ist das Berliner Viertel Kreuzberg, das sich vom Einwandererbezirk und Alternativquartier zum begehrten Trendviertel mit internationaler Anziehungskraft entwickelt hat."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die kulinarische Landschaft Kreuzbergs spiegelt diesen Wandel eindrücklich wider: Döner-Imbisse und Gemüseläden weichen zunehmend veganen Cafés und Concept Stores, die sich vorwiegend an ein zahlungskräftiges internationales Publikum richten."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die langjährigen Bewohner, überwiegend türkischstämmige Familien und Sozialhilfeempfänger, werden in Randbezirke abgedrängt, wo die Infrastruktur schlechter, die Anbindung an den öffentlichen Nahverkehr mangelhafter und die sozialen Netzwerke zerstört sind."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Widerstand gegen die Gentrifizierung artikuliert sich in Kreuzberg durch vielfältige Formen zivilgesellschaftlichen Protests, von Mieterinitiativen über Demonstrationen bis hin zu spektakulären Aktionen wie der Besetzung leer stehender Gebäude."
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sendung 3."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Frage, ob die kulturelle Vielfalt, die Kreuzberg einst auszeichnete, unter den Bedingungen der Gentrifizierung überhaupt überlebensfähig ist, wird von einem Großteil der Stadtforschung mit zunehmendem Pessimismus beantwortet."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die wissenschaftliche Debatte über Gentrifizierung hat in den letzten Jahren eine bemerkenswerte Differenzierung erfahren, die über die einfache Gegenüberstellung von Aufwertung und Verdrängung hinausgeht."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Neuere Ansätze betonen die Mehrdimensionalität des Prozesses und unterscheiden zwischen verschiedenen Formen der Verdrängung: direkte ökonomische Verdrängung, kulturelle Verdrängung und die sogenannte Verdrängungsgefahr, also die Angst vor dem Verlust des vertrauten Lebensumfelds."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Besonders die kulturelle Verdrängung, also der Verlust von Orten der Gemeinschaft, identitätsstiftenden Geschäften und gewachsenen sozialen Strukturen, wird in der aktuellen Forschung als ebenso schwerwiegend wie die ökonomische Verdrängung bewertet."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Frage, wem die Stadt gehört, ist keine rein ökonomische, sondern eine zutiefst politische und kulturelle Frage, deren Beantwortung die Grundfesten unseres demokratischen Zusammenlebens berührt."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Suche nach einem Entwicklungsmodell, das die Vitalität städtischer Quartiere fördert, ohne die soziale Durchmischung zu zerstören und die vulnerable Bevölkerung zu vertreiben, bleibt eine der größten stadtgesellschaftlichen Herausforderungen unserer Zeit."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Der Begriff Gentrifizierung, abgeleitet vom englischen gentry und erstmals von der Soziologin Ruth Glass im Jahr neunzehnhundertvierundsechzig geprägt, beschreibt einen Prozess der sozioökonomischen Aufwertung innerstädtischer Wohnviertel."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Dieser Prozess verläuft in der Regel nach einem typischen Muster: Zunächst siedeln sich Künstler, Studierende und junge Kreative in günstigen, oft vernachlässigten Stadtteilen an und verleihen ihnen ein kulturell attraktives Image."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "In der zweiten Phase folgen wohlhabendere Bevölkerungsgruppen, die von der kulturellen Vitalität des Viertels angezogen werden, während Immobilieninvestoren das Potenzial zur Wertsteigerung erkennen."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "In der dritten und letzten Phase werden die ursprünglichen Bewohner, darunter auch die Pioniere der kulturellen Aufwertung, durch explodierende Mieten und die Umwandlung von Miet- in Eigentumswohnungen verdrängt."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die politische Brisanz der Gentrifizierung liegt im Spannungsfeld von urbanem Fortschritt einerseits und sozialer Gerechtigkeit andererseits, wobei die konkreten Bewertungen stark von der jeweiligen ideologischen Perspektive abhängen."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ein besonders exemplarischer Fall von Gentrifizierung und kultureller Verdrängung ist das Berliner Viertel Kreuzberg, das sich vom Einwandererbezirk und Alternativquartier zum begehrten Trendviertel mit internationaler Anziehungskraft entwickelt hat."
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sendung 4."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die kulinarische Landschaft Kreuzbergs spiegelt diesen Wandel eindrücklich wider: Döner-Imbisse und Gemüseläden weichen zunehmend veganen Cafés und Concept Stores, die sich vorwiegend an ein zahlungskräftiges internationales Publikum richten."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die langjährigen Bewohner, überwiegend türkischstämmige Familien und Sozialhilfeempfänger, werden in Randbezirke abgedrängt, wo die Infrastruktur schlechter, die Anbindung an den öffentlichen Nahverkehr mangelhafter und die sozialen Netzwerke zerstört sind."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Widerstand gegen die Gentrifizierung artikuliert sich in Kreuzberg durch vielfältige Formen zivilgesellschaftlichen Protests, von Mieterinitiativen über Demonstrationen bis hin zu spektakulären Aktionen wie der Besetzung leer stehender Gebäude."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Frage, ob die kulturelle Vielfalt, die Kreuzberg einst auszeichnete, unter den Bedingungen der Gentrifizierung überhaupt überlebensfähig ist, wird von einem Großteil der Stadtforschung mit zunehmendem Pessimismus beantwortet."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die wissenschaftliche Debatte über Gentrifizierung hat in den letzten Jahren eine bemerkenswerte Differenzierung erfahren, die über die einfache Gegenüberstellung von Aufwertung und Verdrängung hinausgeht."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Neuere Ansätze betonen die Mehrdimensionalität des Prozesses und unterscheiden zwischen verschiedenen Formen der Verdrängung: direkte ökonomische Verdrängung, kulturelle Verdrängung und die sogenannte Verdrängungsgefahr, also die Angst vor dem Verlust des vertrauten Lebensumfelds."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Besonders die kulturelle Verdrängung, also der Verlust von Orten der Gemeinschaft, identitätsstiftenden Geschäften und gewachsenen sozialen Strukturen, wird in der aktuellen Forschung als ebenso schwerwiegend wie die ökonomische Verdrängung bewertet."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Frage, wem die Stadt gehört, ist keine rein ökonomische, sondern eine zutiefst politische und kulturelle Frage, deren Beantwortung die Grundfesten unseres demokratischen Zusammenlebens berührt."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Suche nach einem Entwicklungsmodell, das die Vitalität städtischer Quartiere fördert, ohne die soziale Durchmischung zu zerstören und die vulnerable Bevölkerung zu vertreiben, bleibt eine der größten stadtgesellschaftlichen Herausforderungen unserer Zeit."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Der Begriff Gentrifizierung, abgeleitet vom englischen gentry und erstmals von der Soziologin Ruth Glass im Jahr neunzehnhundertvierundsechzig geprägt, beschreibt einen Prozess der sozioökonomischen Aufwertung innerstädtischer Wohnviertel."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Dieser Prozess verläuft in der Regel nach einem typischen Muster: Zunächst siedeln sich Künstler, Studierende und junge Kreative in günstigen, oft vernachlässigten Stadtteilen an und verleihen ihnen ein kulturell attraktives Image."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "In der zweiten Phase folgen wohlhabendere Bevölkerungsgruppen, die von der kulturellen Vitalität des Viertels angezogen werden, während Immobilieninvestoren das Potenzial zur Wertsteigerung erkennen."
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sendung 5."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "In der dritten und letzten Phase werden die ursprünglichen Bewohner, darunter auch die Pioniere der kulturellen Aufwertung, durch explodierende Mieten und die Umwandlung von Miet- in Eigentumswohnungen verdrängt."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die politische Brisanz der Gentrifizierung liegt im Spannungsfeld von urbanem Fortschritt einerseits und sozialer Gerechtigkeit andererseits, wobei die konkreten Bewertungen stark von der jeweiligen ideologischen Perspektive abhängen."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ein besonders exemplarischer Fall von Gentrifizierung und kultureller Verdrängung ist das Berliner Viertel Kreuzberg, das sich vom Einwandererbezirk und Alternativquartier zum begehrten Trendviertel mit internationaler Anziehungskraft entwickelt hat."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die kulinarische Landschaft Kreuzbergs spiegelt diesen Wandel eindrücklich wider: Döner-Imbisse und Gemüseläden weichen zunehmend veganen Cafés und Concept Stores, die sich vorwiegend an ein zahlungskräftiges internationales Publikum richten."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die langjährigen Bewohner, überwiegend türkischstämmige Familien und Sozialhilfeempfänger, werden in Randbezirke abgedrängt, wo die Infrastruktur schlechter, die Anbindung an den öffentlichen Nahverkehr mangelhafter und die sozialen Netzwerke zerstört sind."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Widerstand gegen die Gentrifizierung artikuliert sich in Kreuzberg durch vielfältige Formen zivilgesellschaftlichen Protests, von Mieterinitiativen über Demonstrationen bis hin zu spektakulären Aktionen wie der Besetzung leer stehender Gebäude."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Frage, ob die kulturelle Vielfalt, die Kreuzberg einst auszeichnete, unter den Bedingungen der Gentrifizierung überhaupt überlebensfähig ist, wird von einem Großteil der Stadtforschung mit zunehmendem Pessimismus beantwortet."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die wissenschaftliche Debatte über Gentrifizierung hat in den letzten Jahren eine bemerkenswerte Differenzierung erfahren, die über die einfache Gegenüberstellung von Aufwertung und Verdrängung hinausgeht."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Neuere Ansätze betonen die Mehrdimensionalität des Prozesses und unterscheiden zwischen verschiedenen Formen der Verdrängung: direkte ökonomische Verdrängung, kulturelle Verdrängung und die sogenannte Verdrängungsgefahr, also die Angst vor dem Verlust des vertrauten Lebensumfelds."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Besonders die kulturelle Verdrängung, also der Verlust von Orten der Gemeinschaft, identitätsstiftenden Geschäften und gewachsenen sozialen Strukturen, wird in der aktuellen Forschung als ebenso schwerwiegend wie die ökonomische Verdrängung bewertet."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Frage, wem die Stadt gehört, ist keine rein ökonomische, sondern eine zutiefst politische und kulturelle Frage, deren Beantwortung die Grundfesten unseres demokratischen Zusammenlebens berührt."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Suche nach einem Entwicklungsmodell, das die Vitalität städtischer Quartiere fördert, ohne die soziale Durchmischung zu zerstören und die vulnerable Bevölkerung zu vertreiben, bleibt eine der größten stadtgesellschaftlichen Herausforderungen unserer Zeit."
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Ende Teil eins."
       }
     ]
   },
@@ -229,7 +483,7 @@
       "id": "l-c2-goethe-010-t1-lo-1",
       "cefrLevel": "C2",
       "skill": "listening",
-      "canDoVi": "Toi co the luyen nghe hieu o trinh do C2 qua chu de \"Gentrifizierung und kulturelle Verdrängung\".",
+      "canDoVi": "Tôi có thể luyện nghe hiểu ở trình độ C2 qua chủ đề \"Gentrifizierung und kulturelle Verdrängung\".",
       "canDoDe": "Ich kann Hoeren auf Niveau C2 zum Thema \"Gentrifizierung und kulturelle Verdrängung\" ueben.",
       "linkedContentIds": [
         "L-C2-GOETHE-010-T1"

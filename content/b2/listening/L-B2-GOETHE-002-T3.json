@@ -192,129 +192,162 @@
     ]
   },
   "transcript": {
-    "type": "full_reconstructed_transcript",
+    "type": "studio_source_transcript",
     "status": "complete",
-    "source": "reconstructed_full_script",
-    "quality": "release_candidate_reconstructed",
-    "note": "Full learner-visible reconstructed script created from existing question evidence because original studio scripts are not present in the repository. Replace with studio transcript if original audio scripts become available.",
+    "source": "studio_source_script",
+    "quality": "source_verified",
+    "sourceScript": "data/scripts/B2/Teil3-Diskussion-mehrere-Personen/L-B2-GOETHE-002-T3.json",
+    "note": "Transcript replaced from source script by scripts/apply-source-transcripts.ts.",
     "lines": [
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Im folgenden Hoertext geht es um Alternative Wohnformen. Achten Sie auf die zentrale Information."
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sie hören eine Diskussion. Dazu gibt es sechs Aufgaben. Wer sagt was? Sie hören die Diskussion zweimal."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q1.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Willkommen zur Diskussion über Wohnraum in der Stadt. Brauchen wir neue Konzepte?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Die Mietpreise explodieren und für Normalverdiener wird Wohnen in der Stadt unbezahlbar.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Auf jeden Fall! Die Mietpreise explodieren und für Normalverdiener wird Wohnen in der Stadt unbezahlbar."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q1 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ich finde, wir haben vor allem ein Problem bei der Nutzung vorhandener Flächen."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q2.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Herr Schmidt, Sie leben in einem Wohnprojekt. Können Sie uns davon erzählen?"
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "answer_evidence",
-        "text": "Ich finde, wir haben vor allem ein Problem bei der Nutzung vorhandener Flächen.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ja, wir leben mit zwanzig Familien und Einzelpersonen in einer genossenschaftlichen Wohnanlage in Kreuzberg."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q2 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das klingt spannend. Was unterscheidet Ihr Modell von einer normalen Mietwohnung?"
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q3.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wir besitzen das Haus gemeinsam. Niemand kann die Miete erhöhen oder uns kündigen."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "answer_evidence",
-        "text": "Wir besitzen das Haus gemeinsam. Niemand kann die Miete erhöhen oder uns kündigen.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Frau Lehmann, Sie sind Stadtplanerin. Was halten Sie von genossenschaftlichen Wohnmodellen?"
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q3 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Es ist ein hervorragendes Konzept, aber es löst nicht das Grundproblem des fehlenden Wohnraums."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q4.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wir brauchen vor allem mehr Wohnungen, und zwar deutlich mehr als bisher pro Jahr gebaut werden."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "answer_evidence",
-        "text": "Es ist ein hervorragendes Konzept, aber es löst nicht das Grundproblem des fehlenden Wohnraums.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "In Berlin fehlen hunderttausend Wohnungen. Das kann keine Genossenschaft allein lösen."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q4 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Herr Schmidt, wie erleben Sie den Alltag in Ihrer Genossenschaft?"
       },
       {
-        "speaker": "Sprecher 5",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q5.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wir teilen uns einen großen Garten, eine Werkstatt und einen Gemeinschaftsraum für Feste und Versammlungen."
       },
       {
-        "speaker": "Sprecher 5",
-        "speaker_role": "answer_evidence",
-        "text": "Natürlich, manchmal dauert es ewig, bis Entscheidungen getroffen werden, weil alle mitreden wollen.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Gibt es auch Nachteile, wenn man so eng zusammenlebt?"
       },
       {
-        "speaker": "Sprecher 5",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q5 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Natürlich, manchmal dauert es ewig, bis Entscheidungen getroffen werden, weil alle mitreden wollen."
       },
       {
-        "speaker": "Sprecher 6",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q6.",
-        "linkedQuestionId": "Q6"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das ist der Preis der Demokratie. Aber die Bewohner identifizieren sich stärker mit ihrem Zuhause."
       },
       {
-        "speaker": "Sprecher 6",
-        "speaker_role": "answer_evidence",
-        "text": "Engagieren Sie sich für bezahlbaren Wohnraum in Ihrer Stadt! Es geht uns alle an!",
-        "linkedQuestionId": "Q6"
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Frau Lehmann, welche politischen Maßnahmen sind nötig, um die Wohnungskrise zu lösen?"
       },
       {
-        "speaker": "Sprecher 6",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q6 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q6"
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Erstens: mehr sozialer Wohnungsbau. Zweitens: strengere Regeln gegen Immobilienspekulation."
       },
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Ende des Hoertexts."
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Und drittens: Leerstand muss konsequenter bekämpft werden, es stehen zu viele Wohnungen leer."
+      },
+      {
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "In Berlin stehen schätzungsweise fünfundvierzigtausend Wohnungen dauerhaft leer."
+      },
+      {
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das ist ein Skandal, wenn gleichzeitig Menschen keine bezahlbare Wohnung finden."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Herr Schmidt, was raten Sie Menschen, die ein alternatives Wohnprojekt gründen wollen?"
+      },
+      {
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Fangt klein an, sucht Gleichgesinnte und holt euch professionelle Beratung bei Genossenschaften."
+      },
+      {
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Und seid geduldig! Unser Projekt hat von der Idee bis zum Einzug vier Jahre gedauert."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Frau Lehmann, zum Abschluss: Wie optimistisch sind Sie für die Zukunft?"
+      },
+      {
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Vorsichtig optimistisch. Das Bewusstsein für die Probleme wächst, aber die Umsetzung ist zu langsam."
+      },
+      {
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Vielen Dank an unsere Gäste für diese informative und konstruktive Diskussion!"
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Engagieren Sie sich für bezahlbaren Wohnraum in Ihrer Stadt! Es geht uns alle an!"
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Ende Teil drei."
       }
     ]
   },
@@ -331,7 +364,7 @@
       "id": "l-b2-goethe-002-t3-lo-1",
       "cefrLevel": "B2",
       "skill": "listening",
-      "canDoVi": "Toi co the luyen nghe hieu o trinh do B2 qua chu de \"Alternative Wohnformen\".",
+      "canDoVi": "Tôi có thể luyện nghe hiểu ở trình độ B2 qua chủ đề \"Alternative Wohnformen\".",
       "canDoDe": "Ich kann Hoeren auf Niveau B2 zum Thema \"Alternative Wohnformen\" ueben.",
       "linkedContentIds": [
         "L-B2-GOETHE-002-T3"

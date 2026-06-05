@@ -24,7 +24,7 @@
       "explanation": {
         "de": "Falsch. Die Aussage stimmt nicht mit dem Hörtext überein.",
         "vi": "Sai.",
-        "key_evidence": "Eine Person heißt Sabine.",
+        "key_evidence": "Herr Professor Schnitt",
         "key_vocabulary": []
       }
     },
@@ -38,7 +38,7 @@
       "explanation": {
         "de": "Richtig. Die Aussage stimmt mit dem Hörtext überein.",
         "vi": "Đúng.",
-        "key_evidence": "Eine Person heißt Professor.",
+        "key_evidence": "Herr Professor Schnitt",
         "key_vocabulary": []
       }
     },
@@ -52,7 +52,7 @@
       "explanation": {
         "de": "Falsch. Die Aussage stimmt nicht mit dem Hörtext überein.",
         "vi": "Sai.",
-        "key_evidence": "Eine Person heißt Lisa.",
+        "key_evidence": "Herr Professor Schnitt",
         "key_vocabulary": []
       }
     }
@@ -96,75 +96,182 @@
     ]
   },
   "transcript": {
-    "type": "full_reconstructed_transcript",
+    "type": "studio_source_transcript",
     "status": "complete",
-    "source": "reconstructed_full_script",
-    "quality": "release_candidate_reconstructed",
-    "note": "Full learner-visible reconstructed script created from existing question evidence because original studio scripts are not present in the repository. Replace with studio transcript if original audio scripts become available.",
+    "source": "studio_source_script",
+    "quality": "source_verified",
+    "sourceScript": "data/scripts/C2/Teil3-Experteninterview-lang/L-C2-GOETHE-007-T3.json",
+    "note": "Transcript replaced from source script by scripts/apply-source-transcripts.ts.",
     "lines": [
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Der folgende anspruchsvolle Hoertext behandelt Filmberufe: der Cutter. Achten Sie auf Aussage, Kontext und implizite Bedeutung."
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sie hören ein ausführliches Interview. Dazu gibt es zehn Aufgaben. Kreuzen Sie die richtige Antwort an. Sie hören das Interview einmal."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q1.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Herr Professor Schnitt, Sie haben eine doppelte Expertise als Filmhistoriker und als praktizierender Editor; wie hat sich das Berufsbild des Cutters in den letzten dreißig Jahren verändert?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Eine Person heißt Sabine.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Digitalisierung hat den Beruf von Grund auf transformiert: Der physische Umgang mit Filmmaterial, der eine handwerkliche Qualifikation voraussetzte, ist durch die Arbeit an computergestützten nichtlinearen Schnittsystemen ersetzt worden."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q1 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Hat diese Veränderung die kreative Dimension der Arbeit beeinflusst, oder betrifft sie primär die technische Seite des Berufs?"
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q2.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die digitale Technik hat die kreativen Möglichkeiten enorm erweitert, da der Editor heute hunderte Varianten einer Szene ausprobieren kann, während der analoge Schnitt irreversibel war und jeder Schnitt endgültig."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "answer_evidence",
-        "text": "Eine Person heißt Professor.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Können Sie uns erklären, warum der sogenannte invisible cut als höchste Form der Schnittkunst gilt und welche Techniken dabei zum Einsatz kommen?"
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q2 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Der unsichtbare Schnitt nutzt psychologische Prinzipien der menschlichen Wahrnehmung, wie das Schneiden in Bewegung, die Aufrechterhaltung der Blickrichtung und die akustische Überbrückung, um Bildwechsel als natürlich empfinden zu lassen."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q3.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wie bewerten Sie die zunehmende Geschwindigkeit der Montage in zeitgenössischen Blockbustern, in denen Schnitte im Sekundentakt aufeinanderfolgen und teilweise weniger als eine Sekunde dauern?"
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "answer_evidence",
-        "text": "Eine Person heißt Lisa.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Diese Entwicklung ist aus ästhetischer Sicht bedenklich, da sie dem Zuschauer nicht die Zeit gibt, die visuelle Information zu verarbeiten, und stattdessen eine Art visuelles Rauschen erzeugt."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q3 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Welche Ausbildung würden Sie jungen Menschen empfehlen, die den Beruf des Editors ergreifen möchten?"
       },
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Ende des Hoertexts."
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Neben einer soliden technischen Ausbildung empfehle ich ein breites kulturelles Fundament, insbesondere Musik, Literatur und bildende Kunst, denn ein guter Editor muss ein Gefühl für Rhythmus, Narrativ und visueller Komposition mitbringen."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wie sehen Sie die Zukunft des Berufs angesichts der rasanten Entwicklung generativer künstlicher Intelligenz?"
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Repetitive Aufgaben wie das Sortieren und Sichten von Material werden automatisiert, aber die kreative Kerntätigkeit, nämlich die Entscheidung darüber, welche Geschichte erzählt wird und wie sie emotional wirkt, bleibt eine zutiefst menschliche Kompetenz."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Herr Professor Schnitt, welcher Film hat Ihrer Meinung nach die innovativste Montage der gesamten Filmgeschichte?"
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Dziga Vertovs Der Mann mit der Kamera von neunzehnhundertneunundzwanzig bleibt für mich das radikalste Experiment der Filmsprache, ein Film, der die Möglichkeiten der Montage in einer Weise auslotet, die bis heute inspiriert."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Herr Professor Schnitt, Sie haben eine doppelte Expertise als Filmhistoriker und als praktizierender Editor; wie hat sich das Berufsbild des Cutters in den letzten dreißig Jahren verändert?"
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Digitalisierung hat den Beruf von Grund auf transformiert: Der physische Umgang mit Filmmaterial, der eine handwerkliche Qualifikation voraussetzte, ist durch die Arbeit an computergestützten nichtlinearen Schnittsystemen ersetzt worden."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Hat diese Veränderung die kreative Dimension der Arbeit beeinflusst, oder betrifft sie primär die technische Seite des Berufs?"
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die digitale Technik hat die kreativen Möglichkeiten enorm erweitert, da der Editor heute hunderte Varianten einer Szene ausprobieren kann, während der analoge Schnitt irreversibel war und jeder Schnitt endgültig."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Können Sie uns erklären, warum der sogenannte invisible cut als höchste Form der Schnittkunst gilt und welche Techniken dabei zum Einsatz kommen?"
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Der unsichtbare Schnitt nutzt psychologische Prinzipien der menschlichen Wahrnehmung, wie das Schneiden in Bewegung, die Aufrechterhaltung der Blickrichtung und die akustische Überbrückung, um Bildwechsel als natürlich empfinden zu lassen."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wie bewerten Sie die zunehmende Geschwindigkeit der Montage in zeitgenössischen Blockbustern, in denen Schnitte im Sekundentakt aufeinanderfolgen und teilweise weniger als eine Sekunde dauern?"
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Diese Entwicklung ist aus ästhetischer Sicht bedenklich, da sie dem Zuschauer nicht die Zeit gibt, die visuelle Information zu verarbeiten, und stattdessen eine Art visuelles Rauschen erzeugt."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Welche Ausbildung würden Sie jungen Menschen empfehlen, die den Beruf des Editors ergreifen möchten?"
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Neben einer soliden technischen Ausbildung empfehle ich ein breites kulturelles Fundament, insbesondere Musik, Literatur und bildende Kunst, denn ein guter Editor muss ein Gefühl für Rhythmus, Narrativ und visueller Komposition mitbringen."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wie sehen Sie die Zukunft des Berufs angesichts der rasanten Entwicklung generativer künstlicher Intelligenz?"
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Repetitive Aufgaben wie das Sortieren und Sichten von Material werden automatisiert, aber die kreative Kerntätigkeit, nämlich die Entscheidung darüber, welche Geschichte erzählt wird und wie sie emotional wirkt, bleibt eine zutiefst menschliche Kompetenz."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Herr Professor Schnitt, welcher Film hat Ihrer Meinung nach die innovativste Montage der gesamten Filmgeschichte?"
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Dziga Vertovs Der Mann mit der Kamera von neunzehnhundertneunundzwanzig bleibt für mich das radikalste Experiment der Filmsprache, ein Film, der die Möglichkeiten der Montage in einer Weise auslotet, die bis heute inspiriert."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Herr Professor Schnitt, Sie haben eine doppelte Expertise als Filmhistoriker und als praktizierender Editor; wie hat sich das Berufsbild des Cutters in den letzten dreißig Jahren verändert?"
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Digitalisierung hat den Beruf von Grund auf transformiert: Der physische Umgang mit Filmmaterial, der eine handwerkliche Qualifikation voraussetzte, ist durch die Arbeit an computergestützten nichtlinearen Schnittsystemen ersetzt worden."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Hat diese Veränderung die kreative Dimension der Arbeit beeinflusst, oder betrifft sie primär die technische Seite des Berufs?"
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die digitale Technik hat die kreativen Möglichkeiten enorm erweitert, da der Editor heute hunderte Varianten einer Szene ausprobieren kann, während der analoge Schnitt irreversibel war und jeder Schnitt endgültig."
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Ende des Hörverstehens."
       }
     ]
   },
@@ -181,7 +288,7 @@
       "id": "l-c2-goethe-007-t3-lo-1",
       "cefrLevel": "C2",
       "skill": "listening",
-      "canDoVi": "Toi co the luyen nghe hieu o trinh do C2 qua chu de \"Filmberufe: der Cutter\".",
+      "canDoVi": "Tôi có thể luyện nghe hiểu ở trình độ C2 qua chủ đề \"Filmberufe: der Cutter\".",
       "canDoDe": "Ich kann Hoeren auf Niveau C2 zum Thema \"Filmberufe: der Cutter\" ueben.",
       "linkedContentIds": [
         "L-C2-GOETHE-007-T3"

@@ -168,129 +168,162 @@
     ]
   },
   "transcript": {
-    "type": "full_reconstructed_transcript",
+    "type": "studio_source_transcript",
     "status": "complete",
-    "source": "reconstructed_full_script",
-    "quality": "release_candidate_reconstructed",
-    "note": "Full learner-visible reconstructed script created from existing question evidence because original studio scripts are not present in the repository. Replace with studio transcript if original audio scripts become available.",
+    "source": "studio_source_script",
+    "quality": "source_verified",
+    "sourceScript": "data/scripts/B2/Teil3-Diskussion-mehrere-Personen/L-B2-GOETHE-011-T3.json",
+    "note": "Transcript replaced from source script by scripts/apply-source-transcripts.ts.",
     "lines": [
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Im folgenden Hoertext geht es um Schlafforschung und Gesundheit. Achten Sie auf die zentrale Information."
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sie hören eine Diskussion. Dazu gibt es sechs Aufgaben. Wer sagt was? Sie hören die Diskussion zweimal."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q1.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Willkommen zur Diskussionsrunde 'Zukunft auf dem Teller'. Sollten wir alle vegan leben?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Als Ernährungswissenschaftlerin sage ich: Eine rein vegane Ernährung ist nicht für jeden geeignet.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Als Ernährungswissenschaftlerin sage ich: Eine rein vegane Ernährung ist nicht für jeden geeignet."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q1 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das sehe ich anders. Die wissenschaftlichen Belege für die Vorteile veganer Ernährung sind eindeutig."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q2.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Frau Dr. Hansen, können Sie Ihre Bedenken konkretisieren?"
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "answer_evidence",
-        "text": "Das sehe ich anders. Die wissenschaftlichen Belege für die Vorteile veganer Ernährung sind eindeutig.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Bestimmte Nährstoffe wie Vitamin B12, Eisen und Omega-drei-Fettsäuren sind aus pflanzlichen Quellen schwerer verfügbar."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q2 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das lässt sich aber problemlos durch Nahrungsergänzungsmittel ausgleichen."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q3.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Nahrungsergänzungsmittel sind kein Ersatz für eine ausgewogene, vielfältige Ernährung."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "answer_evidence",
-        "text": "Nahrungsergänzungsmittel sind kein Ersatz für eine ausgewogene, vielfältige Ernährung.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Herr Keller, was sagen die aktuellen Studien zur veganen Ernährung?"
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q3 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die größte Meta-Analyse von zweitausenddreiundzwanzig zeigt klare Vorteile bei Herz-Kreislauf-Erkrankungen."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q4.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Aber diese Studien berücksichtigen oft nicht die individuelle genetische Veranlagung."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "answer_evidence",
-        "text": "Das ist ein valider Punkt. Nicht jeder Mensch verstoffwechselt pflanzliche Proteine gleich effizient.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das ist ein valider Punkt. Nicht jeder Mensch verstoffwechselt pflanzliche Proteine gleich effizient."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q4 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Deshalb plädiere ich für einen differenzierten Ansatz statt für pauschale Empfehlungen."
       },
       {
-        "speaker": "Sprecher 5",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q5.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Lassen Sie uns über die ökologische Dimension sprechen. Wie groß ist der Unterschied?"
       },
       {
-        "speaker": "Sprecher 5",
-        "speaker_role": "answer_evidence",
-        "text": "Das ist fast so viel wie der gesamte Transportsektor weltweit mit Autos, Flugzeugen und Schiffen.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Tierhaltung verursacht vierzehn Komma fünf Prozent aller globalen Treibhausgasemissionen."
       },
       {
-        "speaker": "Sprecher 5",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q5 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das ist fast so viel wie der gesamte Transportsektor weltweit mit Autos, Flugzeugen und Schiffen."
       },
       {
-        "speaker": "Sprecher 6",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q6.",
-        "linkedQuestionId": "Q6"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Aber nachhaltige Weidehaltung kann sogar zur Kohlenstoffspeicherung im Boden beitragen."
       },
       {
-        "speaker": "Sprecher 6",
-        "speaker_role": "answer_evidence",
-        "text": "Das reicht nicht! Die Klimakrise erfordert radikale Veränderungen, nicht halbherzige Kompromisse.",
-        "linkedQuestionId": "Q6"
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "In der Theorie ja, aber in der Praxis werden über neunzig Prozent des Fleisches in Massentierhaltung produziert."
       },
       {
-        "speaker": "Sprecher 6",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q6 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q6"
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Frau Dr. Hansen, was wäre Ihr Kompromissvorschlag?"
       },
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Ende des Hoertexts."
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Flexitarismus. Also überwiegend pflanzlich essen und nur gelegentlich hochwertiges Bio-Fleisch."
+      },
+      {
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das reicht nicht! Die Klimakrise erfordert radikale Veränderungen, nicht halbherzige Kompromisse."
+      },
+      {
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ein Kommentar, der zeigt, dass diese Debatte auch sehr emotional geführt werden kann."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die ethische Dimension darf nicht vergessen werden. Industrielle Tierhaltung verursacht enormes Leid."
+      },
+      {
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Da sind wir uns einig. Die Bedingungen in der Massentierhaltung sind inakzeptabel."
+      },
+      {
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Dann stimmen wir zumindest darin überein, dass weniger Fleisch und mehr Tierwohl nötig sind."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ja, aber die Geschwindigkeit und das Ausmaß der Veränderung sind der Kern unserer Meinungsverschiedenheit."
+      },
+      {
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Vielen Dank für diese engagierte Diskussion! Es zeigt, wie komplex das Thema Ernährung ist."
+      },
+      {
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Informieren Sie sich, hinterfragen Sie Ihre Gewohnheiten und treffen Sie bewusste Entscheidungen!"
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Und bleiben Sie neugierig! Die Ernährungswissenschaft macht ständig neue Entdeckungen, die uns alle betreffen."
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Ende Teil drei."
       }
     ]
   },
@@ -307,7 +340,7 @@
       "id": "l-b2-goethe-011-t3-lo-1",
       "cefrLevel": "B2",
       "skill": "listening",
-      "canDoVi": "Toi co the luyen nghe hieu o trinh do B2 qua chu de \"Schlafforschung und Gesundheit\".",
+      "canDoVi": "Tôi có thể luyện nghe hiểu ở trình độ B2 qua chủ đề \"Schlafforschung und Gesundheit\".",
       "canDoDe": "Ich kann Hoeren auf Niveau B2 zum Thema \"Schlafforschung und Gesundheit\" ueben.",
       "linkedContentIds": [
         "L-B2-GOETHE-011-T3"

@@ -38,7 +38,7 @@
       "explanation": {
         "de": "Der Ansager sagt, dass das Schwimmbad von vierzehn bis sechzehn Uhr geschlossen ist und ab sechzehn Uhr wieder benutzt werden kann.",
         "vi": "Người thông báo nói rằng hồ bơi đóng cửa từ 14 giờ đến 16 giờ và có thể sử dụng lại từ 16 giờ.",
-        "key_evidence": "Das Schwimmbad ist heute von vierzehn bis sechzehn Uhr geschlossen. Ab sechzehn Uhr können Sie es wieder benutzen.",
+        "key_evidence": "Ab sechzehn Uhr können Sie es wieder benutzen.",
         "key_vocabulary": []
       }
     },
@@ -110,93 +110,142 @@
     ]
   },
   "transcript": {
-    "type": "full_reconstructed_transcript",
+    "type": "studio_source_transcript",
     "status": "complete",
-    "source": "reconstructed_full_script",
-    "quality": "release_candidate_reconstructed",
-    "note": "Full learner-visible reconstructed script created from existing question evidence because original studio scripts are not present in the repository. Replace with studio transcript if original audio scripts become available.",
+    "source": "studio_source_script",
+    "quality": "source_verified",
+    "sourceScript": "data/scripts/A1/Teil2-Durchsagen-und-Ansagen/L-A1-GOETHE-007-T2.json",
+    "note": "Transcript replaced from source script by scripts/apply-source-transcripts.ts.",
     "lines": [
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Hoeren Sie eine kurze Information zum Thema Hotel Check-in."
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sie hören vier Ansagen. Zu jeder Ansage gibt es eine Aufgabe. Kreuzen Sie richtig oder falsch an. Sie hören jeden Text einmal."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q1.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Ansage 1."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Bitte bringen Sie Ihre Zimmerkarte zum Frühstück mit.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Ansager",
+        "speaker_role": "dialogue_speaker",
+        "text": "Liebe Gäste, willkommen im Hotel Seeblick."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q1 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Ansager",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das Frühstück wird von sieben bis zehn Uhr im Restaurant im Erdgeschoss serviert."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q2.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Ansager",
+        "speaker_role": "dialogue_speaker",
+        "text": "Bitte bringen Sie Ihre Zimmerkarte zum Frühstück mit."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "answer_evidence",
-        "text": "Das Schwimmbad ist heute von vierzehn bis sechzehn Uhr geschlossen. Ab sechzehn Uhr können Sie es wieder benutzen.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Ansager",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das Restaurant bietet auch Abendessen von achtzehn bis einundzwanzig Uhr an."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q2 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Ansager",
+        "speaker_role": "dialogue_speaker",
+        "text": "Reservierung für das Abendessen bitte an der Rezeption."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q3.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Ansage 2."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "answer_evidence",
-        "text": "Die Führung dauert zwei Stunden und ist kostenlos.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Ansager",
+        "speaker_role": "dialogue_speaker",
+        "text": "Achtung, liebe Hotelgäste. Das Schwimmbad ist heute von vierzehn bis sechzehn Uhr geschlossen."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q3 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Ansager",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wir reinigen das Schwimmbad in dieser Zeit."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q4.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Ansager",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ab sechzehn Uhr können Sie es wieder benutzen."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "answer_evidence",
-        "text": "Der Brunch kostet fünfzehn Euro pro Person.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Ansager",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Sauna ist wie gewohnt von zehn bis zwanzig Uhr geöffnet."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q4 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Ansager",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wir bitten um Ihr Verständnis."
       },
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Ende des Hoertexts."
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Ansage 3."
+      },
+      {
+        "speaker": "Ansager",
+        "speaker_role": "dialogue_speaker",
+        "text": "Liebe Gäste, morgen findet ein Ausflug in die Altstadt statt."
+      },
+      {
+        "speaker": "Ansager",
+        "speaker_role": "dialogue_speaker",
+        "text": "Der Bus fährt um zehn Uhr vor dem Hotel ab."
+      },
+      {
+        "speaker": "Ansager",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Führung dauert zwei Stunden und ist kostenlos."
+      },
+      {
+        "speaker": "Ansager",
+        "speaker_role": "dialogue_speaker",
+        "text": "Bitte melden Sie sich an der Rezeption an."
+      },
+      {
+        "speaker": "Ansager",
+        "speaker_role": "dialogue_speaker",
+        "text": "Bitte tragen Sie bequeme Schuhe und bringen Sie einen Regenschirm mit."
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Ansage 4."
+      },
+      {
+        "speaker": "Ansager",
+        "speaker_role": "dialogue_speaker",
+        "text": "Information für unsere Gäste: Am Sonntag gibt es ein Sonderangebot."
+      },
+      {
+        "speaker": "Ansager",
+        "speaker_role": "dialogue_speaker",
+        "text": "Late Check-out bis fünfzehn Uhr für nur zehn Euro extra."
+      },
+      {
+        "speaker": "Ansager",
+        "speaker_role": "dialogue_speaker",
+        "text": "Bitte sagen Sie an der Rezeption Bescheid, wenn Sie das möchten."
+      },
+      {
+        "speaker": "Ansager",
+        "speaker_role": "dialogue_speaker",
+        "text": "Außerdem gibt es am Sonntag ein Brunch-Buffet von zehn bis vierzehn Uhr."
+      },
+      {
+        "speaker": "Ansager",
+        "speaker_role": "dialogue_speaker",
+        "text": "Der Brunch kostet fünfzehn Euro pro Person."
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Ende Teil zwei."
       }
     ]
   },
@@ -213,7 +262,7 @@
       "id": "l-a1-goethe-007-t2-lo-1",
       "cefrLevel": "A1",
       "skill": "listening",
-      "canDoVi": "Toi co the luyen nghe hieu o trinh do A1 qua chu de \"Hotel Check-in\".",
+      "canDoVi": "Tôi có thể luyện nghe hiểu ở trình độ A1 qua chủ đề \"Hotel Check-in\".",
       "canDoDe": "Ich kann Hoeren auf Niveau A1 zum Thema \"Hotel Check-in\" ueben.",
       "linkedContentIds": [
         "L-A1-GOETHE-007-T2"

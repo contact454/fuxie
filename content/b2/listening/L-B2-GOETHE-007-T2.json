@@ -196,129 +196,162 @@
     ]
   },
   "transcript": {
-    "type": "full_reconstructed_transcript",
+    "type": "studio_source_transcript",
     "status": "complete",
-    "source": "reconstructed_full_script",
-    "quality": "release_candidate_reconstructed",
-    "note": "Full learner-visible reconstructed script created from existing question evidence because original studio scripts are not present in the repository. Replace with studio transcript if original audio scripts become available.",
+    "source": "studio_source_script",
+    "quality": "source_verified",
+    "sourceScript": "data/scripts/B2/Teil2-Radiointerview-mit-Experte/L-B2-GOETHE-007-T2.json",
+    "note": "Transcript replaced from source script by scripts/apply-source-transcripts.ts.",
     "lines": [
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Im folgenden Hoertext geht es um Social Media und Gesellschaft. Achten Sie auf die zentrale Information."
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sie hören ein Interview. Dazu gibt es sechs Aufgaben. Kreuzen Sie die richtige Antwort an. Sie hören das Interview zweimal."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q1.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Guten Abend! Heute diskutieren wir mit der Sozialwissenschaftlerin Dr. Sarah Klein über Social Media."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Social Media ist das bestimmende soziale Phänomen unserer Zeit.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Vielen Dank! Social Media ist das bestimmende soziale Phänomen unserer Zeit."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q1 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Frau Dr. Klein, wie haben soziale Medien unsere Gesellschaft verändert?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q2.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Auswirkungen sind tiefgreifend und ambivalent. Social Media demokratisiert Information einerseits."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Ihr Geschäftsmodell basiert auf Aufmerksamkeit, und Kontroversen erzeugen Aufmerksamkeit.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Andererseits verstärkt es Polarisierung, Desinformation und psychische Probleme bei Jugendlichen."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q2 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Können Sie die Mechanismen der Polarisierung genauer erklären?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q3.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Algorithmen zeigen uns bevorzugt Inhalte, die unsere bestehende Meinung bestätigen."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Plattformen müssen transparenter werden über ihre Algorithmen und mehr Verantwortung übernehmen.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das führt zu sogenannten Filterblasen: Man sieht nur noch, was man sehen will."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q3 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Und extreme Positionen bekommen mehr Aufmerksamkeit als differenzierte, weil sie mehr Reaktionen erzeugen."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q4.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Was sind die Auswirkungen auf die Demokratie?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Besonders für junge Menschen, die mit Social Media als selbstverständlichem Teil ihres Lebens aufwachsen.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wenn verschiedene Gruppen in völlig unterschiedlichen Informationswelten leben, wird Dialog fast unmöglich."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q4 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das haben wir bei den Debatten über Corona-Maßnahmen und den Klimawandel deutlich gesehen."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q5.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Welche Rolle spielen Social-Media-Unternehmen selbst bei diesen Problemen?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Das ist ein hervorragender Rat in Zeiten von Desinformation und Clickbait!",
-        "linkedQuestionId": "Q5"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Eine zentrale Rolle. Ihr Geschäftsmodell basiert auf Aufmerksamkeit, und Kontroversen erzeugen Aufmerksamkeit."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q5 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Solange Engagement die wichtigste Metrik ist, werden Algorithmen spaltende Inhalte bevorzugen."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q6.",
-        "linkedQuestionId": "Q6"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Was müsste sich regulatorisch ändern?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Nutzen Sie Social Media bewusst und lassen Sie sich nicht von ihm nutzen!",
-        "linkedQuestionId": "Q6"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die EU hat mit dem Digital Services Act einen wichtigen ersten Schritt gemacht."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q6 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q6"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Plattformen müssen transparenter werden über ihre Algorithmen und mehr Verantwortung übernehmen."
       },
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Ende des Hoertexts."
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Aber Regulierung allein reicht nicht. Wir brauchen auch eine Stärkung der Medienkompetenz."
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Besonders für junge Menschen, die mit Social Media als selbstverständlichem Teil ihres Lebens aufwachsen."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Haben Sie konkrete Empfehlungen für unsere Hörer zum Umgang mit Social Media?"
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Erstens: Diversifizieren Sie Ihre Informationsquellen. Folgen Sie auch Menschen, die anders denken."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Zweitens: Reflektieren Sie Ihre eigene Nutzung. Wie viel Zeit verbringen Sie wirklich auf Social Media?"
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Drittens: Hinterfragen Sie jeden Beitrag kritisch, bevor Sie ihn teilen oder darauf reagieren."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die goldene Regel: Wenn etwas zu empörend klingt, um wahr zu sein, ist es wahrscheinlich falsch."
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das ist ein hervorragender Rat in Zeiten von Desinformation und Clickbait!"
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Frau Dr. Klein, herzlichen Dank für Ihre differenzierten Einblicke!"
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Gern geschehen! Nutzen Sie Social Media bewusst und lassen Sie sich nicht von ihm nutzen!"
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Ende Teil zwei."
       }
     ]
   },
@@ -335,7 +368,7 @@
       "id": "l-b2-goethe-007-t2-lo-1",
       "cefrLevel": "B2",
       "skill": "listening",
-      "canDoVi": "Toi co the luyen nghe hieu o trinh do B2 qua chu de \"Social Media und Gesellschaft\".",
+      "canDoVi": "Tôi có thể luyện nghe hiểu ở trình độ B2 qua chủ đề \"Social Media und Gesellschaft\".",
       "canDoDe": "Ich kann Hoeren auf Niveau B2 zum Thema \"Social Media und Gesellschaft\" ueben.",
       "linkedContentIds": [
         "L-B2-GOETHE-007-T2"

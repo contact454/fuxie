@@ -43,7 +43,7 @@
       "explanation": {
         "de": "Die zweite Sprecherin erwähnt, dass sie Designerstücke für einen Bruchteil des Preises findet und im Januar dreihundert Euro gespart hat, was die finanziellen und ökologischen Vorteile unterstreicht.",
         "vi": "Người nói thứ hai đề cập rằng cô ấy tìm thấy đồ thiết kế với giá chỉ bằng một phần nhỏ và đã tiết kiệm được ba trăm Euro vào tháng Giêng, điều này nhấn mạnh lợi ích tài chính và môi trường.",
-        "key_evidence": "Auf Vinted finde ich teilweise Designerstücke für einen Bruchteil des Originalpreises. ... Im Januar habe ich dreihundert Euro gespart im Vergleich zum Vorjahr.",
+        "key_evidence": "Auf Vinted finde ich teilweise Designerstücke für einen Bruchteil des Originalpreises",
         "key_vocabulary": []
       }
     },
@@ -109,7 +109,7 @@
       "explanation": {
         "de": "Die zweite Sprecherin fragt explizit: 'Und wenn etwas kaputt geht? Wer zahlt dann für die Reparatur oder den Ersatz?', woraufhin der erste Sprecher die Existenz einer Versicherung erklärt.",
         "vi": "Người nói thứ hai hỏi rõ ràng: 'Và nếu có gì đó hỏng hóc? Ai sẽ trả tiền sửa chữa hoặc thay thế?', sau đó người nói thứ nhất giải thích về sự tồn tại của bảo hiểm.",
-        "key_evidence": "Und wenn etwas kaputt geht? Wer zahlt dann für die Reparatur oder den Ersatz? ... Es gibt eine Versicherung, die durch einen kleinen Jahresbeitrag von zwanzig Euro finanziert wird.",
+        "key_evidence": "Und wenn etwas kaputt geht",
         "key_vocabulary": []
       }
     },
@@ -219,201 +219,247 @@
     ]
   },
   "transcript": {
-    "type": "full_reconstructed_transcript",
+    "type": "studio_source_transcript",
     "status": "complete",
-    "source": "reconstructed_full_script",
-    "quality": "release_candidate_reconstructed",
-    "note": "Full learner-visible reconstructed script created from existing question evidence because original studio scripts are not present in the repository. Replace with studio transcript if original audio scripts become available.",
+    "source": "studio_source_script",
+    "quality": "source_verified",
+    "sourceScript": "data/scripts/B2/Teil1-Alltagsaeusserungen/L-B2-GOETHE-009-T1.json",
+    "note": "Transcript replaced from source script by scripts/apply-source-transcripts.ts.",
     "lines": [
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Im folgenden Hoertext geht es um Nachhaltiger Konsum. Achten Sie auf die zentrale Information."
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sie hören fünf Äußerungen aus dem Alltag. Zu jeder Äußerung gibt es zwei Aufgaben. Kreuzen Sie die richtige Antwort an. Sie hören jeden Text einmal."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q1.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Äußerung 1."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Im Gegenteil, viele Sachen wurden kaum getragen.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Sprecher1_1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ich habe beschlossen, dieses Jahr keine neue Kleidung zu kaufen. Nur Second Hand."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q1 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Sprecher2_1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ein ganzes Jahr? Das ist wirklich radikal! Schaffst du das als jemand, der Mode liebt?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q2.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Sprecher1_1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Bisher bin ich überrascht, wie gut es funktioniert. Online-Plattformen für Second Hand sind riesig."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Auf Vinted finde ich teilweise Designerstücke für einen Bruchteil des Originalpreises. ... Im Januar habe ich dreihundert Euro gespart im Vergleich zum Vorjahr.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Sprecher2_1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Auf Vinted finde ich teilweise Designerstücke für einen Bruchteil des Originalpreises."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q2 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Sprecher1_1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das ist natürlich auch ein finanzieller Vorteil, nicht nur ein ökologischer."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q3.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Sprecher2_1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Absolut! Im Januar habe ich dreihundert Euro gespart im Vergleich zum Vorjahr."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "answer_evidence",
-        "text": "Ich nutze die App regelmäßig. Gestern habe ich Sushi im Wert von zwanzig Euro für vier Euro bekommen.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Sprecher1_1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Und die Qualität? Man hört ja, dass gebrauchte Kleidung oft schon abgetragen ist."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q3 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Sprecher2_1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Im Gegenteil, viele Sachen wurden kaum getragen. Fast Fashion wird oft nach zwei Wochen aussortiert."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q4.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Äußerung 2."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "answer_evidence",
-        "text": "In Deutschland werden jährlich elf Millionen Tonnen Lebensmittel weggeworfen. Das ist unfassbar.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Sprecher1_2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Unser Supermarkt verkauft jetzt 'gerettete Lebensmittel' zum halben Preis."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q4 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Sprecher2_2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Was genau sind gerettete Lebensmittel? Sind die abgelaufen?"
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q5.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Sprecher1_2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Sie sind nah am Mindesthaltbarkeitsdatum, aber noch vollkommen in Ordnung."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "answer_evidence",
-        "text": "Ich brauche einmal im Jahr eine Bohrmaschine. Warum sollte ich eine kaufen?",
-        "linkedQuestionId": "Q5"
+        "speaker": "Sprecher2_2",
+        "speaker_role": "dialogue_speaker",
+        "text": "In Deutschland werden jährlich elf Millionen Tonnen Lebensmittel weggeworfen. Das ist unfassbar."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q5 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Sprecher1_2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Apps wie 'Too Good To Go' helfen auch, überschüssiges Essen aus Restaurants zu retten."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q6.",
-        "linkedQuestionId": "Q6"
+        "speaker": "Sprecher2_2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ich nutze die App regelmäßig. Gestern habe ich Sushi im Wert von zwanzig Euro für vier Euro bekommen."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "answer_evidence",
-        "text": "Und wenn etwas kaputt geht? Wer zahlt dann für die Reparatur oder den Ersatz? ... Es gibt eine Versicherung, die durch einen kleinen Jahresbeitrag von zwanzig Euro finanziert wird.",
-        "linkedQuestionId": "Q6"
+        "speaker": "Sprecher1_2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das klingt nach einer Win-win-Situation: weniger Verschwendung und günstiges Essen."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q6 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q6"
+        "speaker": "Sprecher2_2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Genau, und die Restaurants werfen weniger weg und verdienen trotzdem noch etwas."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q7.",
-        "linkedQuestionId": "Q7"
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Äußerung 3."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "answer_evidence",
-        "text": "Das Konzept 'Weniger ist mehr' muss sich in unserer Konsumgesellschaft erst noch durchsetzen.",
-        "linkedQuestionId": "Q7"
+        "speaker": "Sprecher1_3",
+        "speaker_role": "dialogue_speaker",
+        "text": "Seit letztem Monat existiert in unserem Viertel eine Sharing-Community für Werkzeuge und Geräte."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q7 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q7"
+        "speaker": "Sprecher2_3",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das finde ich genial! Ich brauche einmal im Jahr eine Bohrmaschine. Warum sollte ich eine kaufen?"
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q8.",
-        "linkedQuestionId": "Q8"
+        "speaker": "Sprecher1_3",
+        "speaker_role": "dialogue_speaker",
+        "text": "Genau das ist die Idee. Man besitzt weniger, nutzt aber mehr gemeinsam."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "answer_evidence",
-        "text": "Wenn man seltener, aber besser kauft, gibt man am Ende trotzdem nicht viel mehr Geld aus.",
-        "linkedQuestionId": "Q8"
+        "speaker": "Sprecher2_3",
+        "speaker_role": "dialogue_speaker",
+        "text": "Funktioniert das auch mit anderen Dingen wie Kameras, Zelten oder Sportgeräten?"
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q8 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q8"
+        "speaker": "Sprecher1_3",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ja, in der Community werden über dreihundert verschiedene Gegenstände geteilt."
       },
       {
-        "speaker": "Sprecher 5",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q9.",
-        "linkedQuestionId": "Q9"
+        "speaker": "Sprecher2_3",
+        "speaker_role": "dialogue_speaker",
+        "text": "Und wenn etwas kaputt geht? Wer zahlt dann für die Reparatur oder den Ersatz?"
       },
       {
-        "speaker": "Sprecher 5",
-        "speaker_role": "answer_evidence",
-        "text": "Aber ist das nicht nur Greenwashing? Viele sogenannte grüne Fonds enthalten trotzdem fossile Energieunternehmen.",
-        "linkedQuestionId": "Q9"
+        "speaker": "Sprecher1_3",
+        "speaker_role": "dialogue_speaker",
+        "text": "Es gibt eine Versicherung, die durch einen kleinen Jahresbeitrag von zwanzig Euro finanziert wird."
       },
       {
-        "speaker": "Sprecher 5",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q9 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q9"
+        "speaker": "Sprecher2_3",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das Konzept der Sharing Economy wird meiner Meinung nach in Zukunft noch viel wichtiger werden."
       },
       {
-        "speaker": "Sprecher 5",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q10.",
-        "linkedQuestionId": "Q10"
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Äußerung 4."
       },
       {
-        "speaker": "Sprecher 5",
-        "speaker_role": "answer_evidence",
-        "text": "Das überrascht mich positiv! Dann gibt es ja keinen Grund, nicht nachhaltig zu investieren.",
-        "linkedQuestionId": "Q10"
+        "speaker": "Sprecher1_4",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wusstest du, dass die Herstellung eines einzigen T-Shirts zweitausendfünfhundert Liter Wasser verbraucht?"
       },
       {
-        "speaker": "Sprecher 5",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q10 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q10"
+        "speaker": "Sprecher2_4",
+        "speaker_role": "dialogue_speaker",
+        "text": "Zweitausendfünfhundert Liter? Das sind über fünfzehn volle Badewannen für ein T-Shirt!"
       },
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Ende des Hoertexts."
+        "speaker": "Sprecher1_4",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ja, und die meisten T-Shirts werden unter menschenunwürdigen Bedingungen in Asien produziert."
+      },
+      {
+        "speaker": "Sprecher2_4",
+        "speaker_role": "dialogue_speaker",
+        "text": "Deshalb wird die Fair-Fashion-Bewegung immer stärker. Aber die Preise sind deutlich höher."
+      },
+      {
+        "speaker": "Sprecher1_4",
+        "speaker_role": "dialogue_speaker",
+        "text": "Stimmt, ein fair produziertes T-Shirt kostet dreißig Euro statt fünf Euro bei Fast Fashion."
+      },
+      {
+        "speaker": "Sprecher2_4",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wenn man seltener, aber besser kauft, gibt man am Ende trotzdem nicht viel mehr Geld aus."
+      },
+      {
+        "speaker": "Sprecher1_4",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das Konzept 'Weniger ist mehr' muss sich in unserer Konsumgesellschaft erst noch durchsetzen."
+      },
+      {
+        "speaker": "Sprecher2_4",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die jüngere Generation ist da schon weiter als ihre Eltern, finde ich."
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Äußerung 5."
+      },
+      {
+        "speaker": "Sprecher1_5",
+        "speaker_role": "dialogue_speaker",
+        "text": "Grüne Geldanlagen boomen. Immer mehr Menschen wollen ihr Geld nachhaltig investieren."
+      },
+      {
+        "speaker": "Sprecher2_5",
+        "speaker_role": "dialogue_speaker",
+        "text": "Was genau bedeutet 'nachhaltig investieren'? Gibt es da klare Kriterien?"
+      },
+      {
+        "speaker": "Sprecher1_5",
+        "speaker_role": "dialogue_speaker",
+        "text": "Man investiert in Unternehmen, die ökologische und soziale Standards einhalten."
+      },
+      {
+        "speaker": "Sprecher2_5",
+        "speaker_role": "dialogue_speaker",
+        "text": "Aber ist das nicht nur Greenwashing? Viele sogenannte grüne Fonds enthalten trotzdem fossile Energieunternehmen."
+      },
+      {
+        "speaker": "Sprecher1_5",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das ist leider richtig. Die EU arbeitet an einer einheitlichen Taxonomie für nachhaltige Investments."
+      },
+      {
+        "speaker": "Sprecher2_5",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ist die Rendite bei nachhaltigen Geldanlagen schlechter als bei konventionellen?"
+      },
+      {
+        "speaker": "Sprecher1_5",
+        "speaker_role": "dialogue_speaker",
+        "text": "Studien zeigen, dass nachhaltige Fonds langfristig mindestens genauso gut abschneiden."
+      },
+      {
+        "speaker": "Sprecher2_5",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das überrascht mich positiv! Dann gibt es ja keinen Grund, nicht nachhaltig zu investieren."
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Ende Teil eins."
       }
     ]
   },
@@ -430,7 +476,7 @@
       "id": "l-b2-goethe-009-t1-lo-1",
       "cefrLevel": "B2",
       "skill": "listening",
-      "canDoVi": "Toi co the luyen nghe hieu o trinh do B2 qua chu de \"Nachhaltiger Konsum\".",
+      "canDoVi": "Tôi có thể luyện nghe hiểu ở trình độ B2 qua chủ đề \"Nachhaltiger Konsum\".",
       "canDoDe": "Ich kann Hoeren auf Niveau B2 zum Thema \"Nachhaltiger Konsum\" ueben.",
       "linkedContentIds": [
         "L-B2-GOETHE-009-T1"

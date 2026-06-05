@@ -76,7 +76,7 @@
       "explanation": {
         "de": "Die korrekte Antwort ist (b). Der Student bezeichnet explizit die „interdisziplinäre Perspektive“ als den „entscheidenden Mehrwert“ des Studiengangs. „Synergetische Verknüpfung diverser wissenschaftlicher Disziplinen“ ist eine C2-Niveau Paraphrase für diesen Gedanken. Option (a) ist eine lexikalische Falle; obwohl die Studentin von den Dozenten „beeindruckt“ ist, wird dies nicht als der entscheidende, von beiden geteilte Vorteil identifiziert. Option (c) greift eine Überlegung des Studenten auf („ob ich es als Schwerpunkt wählen oder als Ergänzungsmodul belegen soll“), was aber eine logistische Frage und nicht den inhaltlichen Hauptvorteil des Studiengangs darstellt.",
         "vi": "Đáp án đúng là (b). Nam sinh viên nói rõ rằng \"góc nhìn liên ngành\" (interdisziplinäre Perspektive) là \"giá trị gia tăng quyết định\" (entscheidenden Mehrwert) của chương trình học. Cụm từ \"sự kết nối cộng hưởng của các ngành khoa học đa dạng\" (Synergetische Verknüpfung diverser wissenschaftlicher Disziplinen) là một cách diễn giải ở trình độ C2 cho ý tưởng này. Lựa chọn (a) là một cái bẫy từ vựng; mặc dù nữ sinh viên \"ấn tượng\" với các giảng viên, điều này không được xác định là lợi thế quyết định mà cả hai cùng chia sẻ. Lựa chọn (c) đề cập đến một suy tính của nam sinh viên (\"liệu tôi nên chọn nó làm chuyên ngành chính hay học phần bổ sung\"), nhưng đây là một câu hỏi về mặt tổ chức chứ không phải là lợi thế chính về nội dung của chương trình học.",
-        "key_evidence": "Dann lass uns das zusammen belegen, denn ich glaube, dass gerade die interdisziplinäre Perspektive der entscheidende Mehrwert dieses Studiengangs ist...",
+        "key_evidence": "Dann lass uns das zusammen belegen, denn ich glaube, dass gerade die interdisziplinäre Perspektive der entscheidende Mehrwert dieses Studiengangs ist",
         "key_vocabulary": [
           "interdisziplinär - liên ngành",
           "der entscheidende Mehrwert - giá trị gia tăng quyết định",
@@ -124,75 +124,192 @@
     ]
   },
   "transcript": {
-    "type": "full_reconstructed_transcript",
+    "type": "studio_source_transcript",
     "status": "complete",
-    "source": "reconstructed_full_script",
-    "quality": "release_candidate_reconstructed",
-    "note": "Full learner-visible reconstructed script created from existing question evidence because original studio scripts are not present in the repository. Replace with studio transcript if original audio scripts become available.",
+    "source": "studio_source_script",
+    "quality": "source_verified",
+    "sourceScript": "data/scripts/C2/Teil2-Spontanes-Gespraech/L-C2-GOETHE-008-T2.json",
+    "note": "Transcript replaced from source script by scripts/apply-source-transcripts.ts.",
     "lines": [
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Der folgende anspruchsvolle Hoertext behandelt Algorithmische Empfehlungssysteme. Achten Sie auf Aussage, Kontext und implizite Bedeutung."
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sie hören ein Gespräch. Dazu gibt es fünf Aufgaben. Wer sagt was? Sie hören das Gespräch zweimal."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe gds_h_t2_q1.",
-        "linkedQuestionId": "gds_h_t2_q1"
+        "speaker": "Studentin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Mir ist heute etwas Eigenartiges aufgefallen: Nachdem ich letztes Wochenende ein paar Videos über Quantenphysik angeschaut habe, besteht mein gesamter YouTube-Feed jetzt aus pseudowissenschaftlichen Inhalten über Quantenheilung."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Ich bin mir nicht sicher, ob der Begriff Diskriminierung hier passend ist; es handelt sich zunächst einmal um eine problematische Inferenz des Algorithmus, der Interesse an Quantenphysik mit Interesse an Pseudowissenschaft gleichsetzt.",
-        "linkedQuestionId": "gds_h_t2_q1"
+        "speaker": "Student",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das ist ein klassischer Fall von dem, was die Informatikerin Safiya Noble als algorithmische Diskriminierung bezeichnet hat, nämlich die systematische Verzerrung von Informationsangeboten durch automatisierte Empfehlungssysteme."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe gds_h_t2_q1 im Kontext des Hoertexts.",
-        "linkedQuestionId": "gds_h_t2_q1"
+        "speaker": "Studentin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ich bin mir nicht sicher, ob der Begriff Diskriminierung hier passend ist; es handelt sich zunächst einmal um eine problematische Inferenz des Algorithmus, der Interesse an Quantenphysik mit Interesse an Pseudowissenschaft gleichsetzt."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe gds_h_t2_q2.",
-        "linkedQuestionId": "gds_h_t2_q2"
+        "speaker": "Student",
+        "speaker_role": "dialogue_speaker",
+        "text": "Aber genau diese Unfähigkeit des Algorithmus, zwischen seriöser Wissenschaft und Pseudowissenschaft zu unterscheiden, hat gesellschaftliche Konsequenzen, die man durchaus als diskriminierend gegenüber der Wahrheit bezeichnen könnte."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "answer_evidence",
-        "text": "Dieses Buch hat mir regelrecht die Augen geöffnet für die Tatsache, dass algorithmische Entscheidungen keineswegs neutral sind, sondern die Vorurteile und Interessen derjenigen reproduzieren, die sie programmiert haben.",
-        "linkedQuestionId": "gds_h_t2_q2"
+        "speaker": "Studentin",
+        "speaker_role": "dialogue_speaker",
+        "text": "In meinem Seminar über digitale Ethik haben wir einen Aufsatz von Cathy O'Neil gelesen, die solche Algorithmen als Weapons of Math Destruction bezeichnet und ihre sozial destruktiven Potenziale systematisch analysiert."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe gds_h_t2_q2 im Kontext des Hoertexts.",
-        "linkedQuestionId": "gds_h_t2_q2"
+        "speaker": "Student",
+        "speaker_role": "dialogue_speaker",
+        "text": "Dieses Buch hat mir regelrecht die Augen geöffnet für die Tatsache, dass algorithmische Entscheidungen keineswegs neutral sind, sondern die Vorurteile und Interessen derjenigen reproduzieren, die sie programmiert haben."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe gds_h_t2_q3.",
-        "linkedQuestionId": "gds_h_t2_q3"
+        "speaker": "Studentin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Was mich besonders beunruhigt, ist die Frage, wie Empfehlungsalgorithmen das Wahlverhalten beeinflussen können, ohne dass die Betroffenen sich dieser Beeinflussung überhaupt bewusst sind."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "answer_evidence",
-        "text": "Dann lass uns das zusammen belegen, denn ich glaube, dass gerade die interdisziplinäre Perspektive der entscheidende Mehrwert dieses Studiengangs ist...",
-        "linkedQuestionId": "gds_h_t2_q3"
+        "speaker": "Student",
+        "speaker_role": "dialogue_speaker",
+        "text": "Da gibt es mittlerweile solide empirische Forschung, unter anderem die Studien von Robert Epstein, die zeigen, dass allein die Reihenfolge von Suchergebnissen die Wahlentscheidung um bis zu zwanzig Prozent verschieben kann."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe gds_h_t2_q3 im Kontext des Hoertexts.",
-        "linkedQuestionId": "gds_h_t2_q3"
+        "speaker": "Studentin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das ist erschreckend, und es wirft die fundamentale Frage auf, ob die demokratische Willensbildung unter den Bedingungen algorithmischer Informationssteuerung überhaupt noch als frei und unmanipuliert gelten kann."
       },
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Ende des Hoertexts."
+        "speaker": "Student",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ich glaube, dass gerade wir als Studierende der Sozialwissenschaften eine besondere Verantwortung haben, diese Zusammenhänge zu erforschen und öffentlich zu kommunizieren."
+      },
+      {
+        "speaker": "Studentin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Absolut, und ich bin froh, dass unsere Universität im nächsten Semester einen interdisziplinären Studiengang für Algorithmic Governance einführt, der genau diese Schnittstelle zwischen Informatik, Ethik und Politik beleuchtet."
+      },
+      {
+        "speaker": "Student",
+        "speaker_role": "dialogue_speaker",
+        "text": "Hast du dich dafür schon angemeldet? Ich überlege noch, ob ich es als Schwerpunkt wählen oder als Ergänzungsmodul belegen soll."
+      },
+      {
+        "speaker": "Studentin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ich habe mich gestern angemeldet und bin von den Dozenten, die aus der Informatik, der Philosophie und der Politikwissenschaft kommen, wirklich beeindruckt."
+      },
+      {
+        "speaker": "Student",
+        "speaker_role": "dialogue_speaker",
+        "text": "Dann lass uns das zusammen belegen, denn ich glaube, dass gerade die interdisziplinäre Perspektive der entscheidende Mehrwert dieses Studiengangs ist und unsere jeweiligen Hintergründe sich optimal ergänzen würden."
+      },
+      {
+        "speaker": "Studentin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Mir ist heute etwas Eigenartiges aufgefallen: Nachdem ich letztes Wochenende ein paar Videos über Quantenphysik angeschaut habe, besteht mein gesamter YouTube-Feed jetzt aus pseudowissenschaftlichen Inhalten über Quantenheilung."
+      },
+      {
+        "speaker": "Student",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das ist ein klassischer Fall von dem, was die Informatikerin Safiya Noble als algorithmische Diskriminierung bezeichnet hat, nämlich die systematische Verzerrung von Informationsangeboten durch automatisierte Empfehlungssysteme."
+      },
+      {
+        "speaker": "Studentin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ich bin mir nicht sicher, ob der Begriff Diskriminierung hier passend ist; es handelt sich zunächst einmal um eine problematische Inferenz des Algorithmus, der Interesse an Quantenphysik mit Interesse an Pseudowissenschaft gleichsetzt."
+      },
+      {
+        "speaker": "Student",
+        "speaker_role": "dialogue_speaker",
+        "text": "Aber genau diese Unfähigkeit des Algorithmus, zwischen seriöser Wissenschaft und Pseudowissenschaft zu unterscheiden, hat gesellschaftliche Konsequenzen, die man durchaus als diskriminierend gegenüber der Wahrheit bezeichnen könnte."
+      },
+      {
+        "speaker": "Studentin",
+        "speaker_role": "dialogue_speaker",
+        "text": "In meinem Seminar über digitale Ethik haben wir einen Aufsatz von Cathy O'Neil gelesen, die solche Algorithmen als Weapons of Math Destruction bezeichnet und ihre sozial destruktiven Potenziale systematisch analysiert."
+      },
+      {
+        "speaker": "Student",
+        "speaker_role": "dialogue_speaker",
+        "text": "Dieses Buch hat mir regelrecht die Augen geöffnet für die Tatsache, dass algorithmische Entscheidungen keineswegs neutral sind, sondern die Vorurteile und Interessen derjenigen reproduzieren, die sie programmiert haben."
+      },
+      {
+        "speaker": "Studentin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Was mich besonders beunruhigt, ist die Frage, wie Empfehlungsalgorithmen das Wahlverhalten beeinflussen können, ohne dass die Betroffenen sich dieser Beeinflussung überhaupt bewusst sind."
+      },
+      {
+        "speaker": "Student",
+        "speaker_role": "dialogue_speaker",
+        "text": "Da gibt es mittlerweile solide empirische Forschung, unter anderem die Studien von Robert Epstein, die zeigen, dass allein die Reihenfolge von Suchergebnissen die Wahlentscheidung um bis zu zwanzig Prozent verschieben kann."
+      },
+      {
+        "speaker": "Studentin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das ist erschreckend, und es wirft die fundamentale Frage auf, ob die demokratische Willensbildung unter den Bedingungen algorithmischer Informationssteuerung überhaupt noch als frei und unmanipuliert gelten kann."
+      },
+      {
+        "speaker": "Student",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ich glaube, dass gerade wir als Studierende der Sozialwissenschaften eine besondere Verantwortung haben, diese Zusammenhänge zu erforschen und öffentlich zu kommunizieren."
+      },
+      {
+        "speaker": "Studentin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Absolut, und ich bin froh, dass unsere Universität im nächsten Semester einen interdisziplinären Studiengang für Algorithmic Governance einführt, der genau diese Schnittstelle zwischen Informatik, Ethik und Politik beleuchtet."
+      },
+      {
+        "speaker": "Student",
+        "speaker_role": "dialogue_speaker",
+        "text": "Hast du dich dafür schon angemeldet? Ich überlege noch, ob ich es als Schwerpunkt wählen oder als Ergänzungsmodul belegen soll."
+      },
+      {
+        "speaker": "Studentin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ich habe mich gestern angemeldet und bin von den Dozenten, die aus der Informatik, der Philosophie und der Politikwissenschaft kommen, wirklich beeindruckt."
+      },
+      {
+        "speaker": "Student",
+        "speaker_role": "dialogue_speaker",
+        "text": "Dann lass uns das zusammen belegen, denn ich glaube, dass gerade die interdisziplinäre Perspektive der entscheidende Mehrwert dieses Studiengangs ist und unsere jeweiligen Hintergründe sich optimal ergänzen würden."
+      },
+      {
+        "speaker": "Studentin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Mir ist heute etwas Eigenartiges aufgefallen: Nachdem ich letztes Wochenende ein paar Videos über Quantenphysik angeschaut habe, besteht mein gesamter YouTube-Feed jetzt aus pseudowissenschaftlichen Inhalten über Quantenheilung."
+      },
+      {
+        "speaker": "Student",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das ist ein klassischer Fall von dem, was die Informatikerin Safiya Noble als algorithmische Diskriminierung bezeichnet hat, nämlich die systematische Verzerrung von Informationsangeboten durch automatisierte Empfehlungssysteme."
+      },
+      {
+        "speaker": "Studentin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ich bin mir nicht sicher, ob der Begriff Diskriminierung hier passend ist; es handelt sich zunächst einmal um eine problematische Inferenz des Algorithmus, der Interesse an Quantenphysik mit Interesse an Pseudowissenschaft gleichsetzt."
+      },
+      {
+        "speaker": "Student",
+        "speaker_role": "dialogue_speaker",
+        "text": "Aber genau diese Unfähigkeit des Algorithmus, zwischen seriöser Wissenschaft und Pseudowissenschaft zu unterscheiden, hat gesellschaftliche Konsequenzen, die man durchaus als diskriminierend gegenüber der Wahrheit bezeichnen könnte."
+      },
+      {
+        "speaker": "Studentin",
+        "speaker_role": "dialogue_speaker",
+        "text": "In meinem Seminar über digitale Ethik haben wir einen Aufsatz von Cathy O'Neil gelesen, die solche Algorithmen als Weapons of Math Destruction bezeichnet und ihre sozial destruktiven Potenziale systematisch analysiert."
+      },
+      {
+        "speaker": "Student",
+        "speaker_role": "dialogue_speaker",
+        "text": "Dieses Buch hat mir regelrecht die Augen geöffnet für die Tatsache, dass algorithmische Entscheidungen keineswegs neutral sind, sondern die Vorurteile und Interessen derjenigen reproduzieren, die sie programmiert haben."
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Ende Teil zwei."
       }
     ]
   },
@@ -209,7 +326,7 @@
       "id": "l-c2-goethe-008-t2-lo-1",
       "cefrLevel": "C2",
       "skill": "listening",
-      "canDoVi": "Toi co the luyen nghe hieu o trinh do C2 qua chu de \"Algorithmische Empfehlungssysteme\".",
+      "canDoVi": "Tôi có thể luyện nghe hiểu ở trình độ C2 qua chủ đề \"Algorithmische Empfehlungssysteme\".",
       "canDoDe": "Ich kann Hoeren auf Niveau C2 zum Thema \"Algorithmische Empfehlungssysteme\" ueben.",
       "linkedContentIds": [
         "L-C2-GOETHE-008-T2"

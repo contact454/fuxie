@@ -238,165 +238,172 @@
     ]
   },
   "transcript": {
-    "type": "full_reconstructed_transcript",
+    "type": "studio_source_transcript",
     "status": "complete",
-    "source": "reconstructed_full_script",
-    "quality": "release_candidate_reconstructed",
-    "note": "Full learner-visible reconstructed script created from existing question evidence because original studio scripts are not present in the repository. Replace with studio transcript if original audio scripts become available.",
+    "source": "studio_source_script",
+    "quality": "source_verified",
+    "sourceScript": "data/scripts/B1/Teil4-Radiodiskussion/L-B1-GOETHE-006-T4.json",
+    "note": "Transcript replaced from source script by scripts/apply-source-transcripts.ts.",
     "lines": [
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Im folgenden Hoertext geht es um Reiseinformation mit Verspätung und Umsteigen. Achten Sie auf die zentrale Information."
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sie hören eine Diskussion im Radio. Dazu gibt es acht Aufgaben. Wer sagt was? Sie hören die Diskussion zweimal."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q1.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Willkommen bei 'Unterwegs'. Heute diskutieren wir: Fliegen oder Zug fahren, was ist besser?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Für mich ist klar: Der Zug ist bequemer, umweltfreundlicher und stressfreier als das Flugzeug.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Für mich ist klar: Der Zug ist bequemer, umweltfreundlicher und stressfreier als das Flugzeug."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q1 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das stimmt für kurze Strecken, aber für lange Reisen ist das Flugzeug einfach schneller."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q2.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Herr Lange, ab welcher Entfernung macht das Fliegen mehr Sinn als der Zug?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Das stimmt für kurze Strecken, aber für lange Reisen ist das Flugzeug einfach schneller.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ab etwa fünfhundert Kilometern ist das Flugzeug zeitlich im Vorteil, wenn man alles einrechnet."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q2 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Aber man muss auch die Zeit am Flughafen rechnen: Security, Boarding, Wartezeit."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q3.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Genau! Wenn man alles zusammenzählt, ist der Zeitvorteil beim Fliegen oft gar nicht so groß."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Ab etwa fünfhundert Kilometern ist das Flugzeug zeitlich im Vorteil, wenn man alles einrechnet.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Frau Berg, wie sieht es mit den Preisen aus?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q3 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Günstige Flüge gibt es schon ab neunundvierzig Euro, aber mit dem Deutschlandticket fahren Sie günstiger."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q4.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Billigflüge haben aber oft versteckte Kosten: Gepäck, Sitzplatzwahl, Snacks am Bord."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Aber man muss auch die Zeit am Flughafen rechnen: Security, Boarding, Wartezeit.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das stimmt. Am Ende ist ein Billigflug oft genauso teuer wie ein Sparpreisticket der Bahn."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q4 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das wichtigste Argument für den Zug ist aber die Umwelt. Wie sieht die Bilanz aus?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q5.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ein Flug verursacht über zehnmal so viel CO2 wie die gleiche Strecke mit dem Zug."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Ein Flug verursacht über zehnmal so viel CO2 wie die gleiche Strecke mit dem Zug.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das ist ein starkes Argument. Aber was, wenn die Bahn ständig Verspätung hat?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q5 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Deutsche Bahn ist leider nicht immer pünktlich, das ist ihr größtes Problem."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q6.",
-        "linkedQuestionId": "Q6"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Nur etwa siebzig Prozent der Fernzüge kommen pünktlich an, das ist zu wenig."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Die Deutsche Bahn ist leider nicht immer pünktlich, das ist ihr größtes Problem.",
-        "linkedQuestionId": "Q6"
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Herr Lange, was müsste sich ändern, damit mehr Menschen den Zug nehmen?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q6 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q6"
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Mehr Investitionen in die Schieneninfrastruktur und eine bessere Taktung der Züge."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q7.",
-        "linkedQuestionId": "Q7"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Und günstigere Preise! Wer früh bucht, fährt günstig, aber spontane Fahrten sind teuer."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Das Deutschlandticket für neunundvierzig Euro ist ein guter Schritt in die richtige Richtung.",
-        "linkedQuestionId": "Q7"
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das Deutschlandticket für neunundvierzig Euro ist ein guter Schritt in die richtige Richtung."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q7 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q7"
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Frau Berg, nutzen Sie das Deutschlandticket selbst?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q8.",
-        "linkedQuestionId": "Q8"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ja, seit dem ersten Tag! Ich fahre damit täglich zur Arbeit und am Wochenende in die Natur."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Und ich wünsche mir Nachtzüge zurück! Einschlafen in Berlin und aufwachen in Barcelona.",
-        "linkedQuestionId": "Q8"
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das Ticket spart mir über hundert Euro im Monat im Vergleich zu meinem alten Monatsticket."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q8 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q8"
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Zum Schluss: Was wäre Ihr Wunsch für die Zukunft des Reisens in Deutschland?"
       },
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Ende des Hoertexts."
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Schnellere Züge, bessere Verbindungen und ein Ende der Kurzstreckenflüge unter fünfhundert Kilometern."
+      },
+      {
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Und ich wünsche mir Nachtzüge zurück! Einschlafen in Berlin und aufwachen in Barcelona."
+      },
+      {
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Nachtzüge erleben gerade ein Comeback in Europa, das ist eine positive Entwicklung."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Vielen Dank an unsere Gäste für diese spannende Diskussion über die Zukunft der Mobilität!"
+      },
+      {
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Denken Sie beim nächsten Reiseplanen auch an die Umwelt und nehmen Sie, wenn möglich, den Zug!"
+      },
+      {
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Gute Reise, egal ob mit Zug, Auto oder Flugzeug! Bis zur nächsten Sendung!"
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Ende des Hörverstehens."
       }
     ]
   },
@@ -413,7 +420,7 @@
       "id": "l-b1-goethe-006-t4-lo-1",
       "cefrLevel": "B1",
       "skill": "listening",
-      "canDoVi": "Toi co the luyen nghe hieu o trinh do B1 qua chu de \"Reiseinformation mit Verspätung und Umsteigen\".",
+      "canDoVi": "Tôi có thể luyện nghe hiểu ở trình độ B1 qua chủ đề \"Reiseinformation mit Verspätung und Umsteigen\".",
       "canDoDe": "Ich kann Hoeren auf Niveau B1 zum Thema \"Reiseinformation mit Verspätung und Umsteigen\" ueben.",
       "linkedContentIds": [
         "L-B1-GOETHE-006-T4"

@@ -204,129 +204,162 @@
     ]
   },
   "transcript": {
-    "type": "full_reconstructed_transcript",
+    "type": "studio_source_transcript",
     "status": "complete",
-    "source": "reconstructed_full_script",
-    "quality": "release_candidate_reconstructed",
-    "note": "Full learner-visible reconstructed script created from existing question evidence because original studio scripts are not present in the repository. Replace with studio transcript if original audio scripts become available.",
+    "source": "studio_source_script",
+    "quality": "source_verified",
+    "sourceScript": "data/scripts/B2/Teil2-Radiointerview-mit-Experte/L-B2-GOETHE-009-T2.json",
+    "note": "Transcript replaced from source script by scripts/apply-source-transcripts.ts.",
     "lines": [
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Im folgenden Hoertext geht es um Nachhaltiger Konsum. Achten Sie auf die zentrale Information."
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sie hören ein Interview. Dazu gibt es sechs Aufgaben. Kreuzen Sie die richtige Antwort an. Sie hören das Interview zweimal."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q1.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Guten Abend! Heute bei uns: die Nachhaltigkeitsexpertin Prof. Dr. Lena Huber."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Es liegt an Bequemlichkeit, Preis und den Strukturen unserer Konsumgesellschaft.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Vielen Dank für die Einladung! Nachhaltigkeit ist das Thema, das unsere Zukunft bestimmen wird."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q1 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Frau Professorin Huber, wie nachhaltig konsumieren die Deutschen wirklich?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q2.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Es gibt eine große Diskrepanz zwischen Bewusstsein und Verhalten. Achtzig Prozent sagen, Nachhaltigkeit sei ihnen wichtig."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Drei Dinge: faire Preise, bessere Infrastruktur und konsequente politische Rahmenbedingungen.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Aber nur dreißig Prozent passen ihr Konsumverhalten tatsächlich entsprechend an."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q2 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Warum klafft diese Lücke zwischen Wissen und Handeln so weit auseinander?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q3.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Es liegt an Bequemlichkeit, Preis und den Strukturen unserer Konsumgesellschaft."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Wenn diese externen Kosten eingepreist würden, wäre Bio oft günstiger als konventionelle Produkte.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Nachhaltige Produkte sind oft teurer und schwieriger verfügbar als konventionelle Alternativen."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q3 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Was muss sich ändern, damit nachhaltiger Konsum zur Norm wird?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q4.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Drei Dinge: faire Preise, bessere Infrastruktur und konsequente politische Rahmenbedingungen."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Jede Kaufentscheidung ist eine Stimmabgabe. Verbraucher haben mehr Macht, als sie denken.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Können Sie das am Beispiel der Preise erläutern?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q4 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Konventionelle Produkte enthalten nicht die wahren Kosten: Umweltzerstörung, Gesundheitsschäden und Klimawandel."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q5.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wenn diese externen Kosten eingepreist würden, wäre Bio oft günstiger als konventionelle Produkte."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Und der Gebrauchtwarenmarkt wird immer professioneller und attraktiver für die breite Masse.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das ist eine radikale Forderung. Würde das nicht die Lebenshaltungskosten massiv erhöhen?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q5 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Kurzfristig ja, aber langfristig sparen wir die enormen Folgekosten von Umweltzerstörung."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q6.",
-        "linkedQuestionId": "Q6"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Welche Rolle spielen Konsumenten bei der nachhaltigen Transformation?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Zweitens, regional und saisonal einkaufen.",
-        "linkedQuestionId": "Q6"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Jede Kaufentscheidung ist eine Stimmabgabe. Verbraucher haben mehr Macht, als sie denken."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q6 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q6"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Aber individuelles Handeln allein reicht nicht. Der Staat muss die Rahmenbedingungen setzen."
       },
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Ende des Hoertexts."
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ein Beispiel: Das Verbot von Einwegplastik hat mehr bewirkt als Jahrzehnte an Aufklärungskampagnen."
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Welche nachhaltigen Trends sehen Sie für die kommenden Jahre voraus?"
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Sharing Economy wird weiter wachsen, Reparieren wird wichtiger als Neukaufen."
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Und der Gebrauchtwarenmarkt wird immer professioneller und attraktiver für die breite Masse."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wie können sich unsere Hörer konkret nachhaltiger verhalten, ohne ihr Leben umzukrempeln?"
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Drei einfache Schritte: Erstens, vor jedem Kauf fragen 'Brauche ich das wirklich?'"
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Zweitens, regional und saisonal einkaufen. Drittens, Dinge reparieren statt wegwerfen."
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das sind pragmatische, umsetzbare Ratschläge. Vielen Dank für das inspirierende Gespräch!"
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Frau Professorin Huber, herzlichen Dank!"
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Gern geschehen! Nachhaltigkeit beginnt mit kleinen Schritten, aber sie muss heute beginnen!"
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Ende Teil zwei."
       }
     ]
   },
@@ -343,7 +376,7 @@
       "id": "l-b2-goethe-009-t2-lo-1",
       "cefrLevel": "B2",
       "skill": "listening",
-      "canDoVi": "Toi co the luyen nghe hieu o trinh do B2 qua chu de \"Nachhaltiger Konsum\".",
+      "canDoVi": "Tôi có thể luyện nghe hiểu ở trình độ B2 qua chủ đề \"Nachhaltiger Konsum\".",
       "canDoDe": "Ich kann Hoeren auf Niveau B2 zum Thema \"Nachhaltiger Konsum\" ueben.",
       "linkedContentIds": [
         "L-B2-GOETHE-009-T2"

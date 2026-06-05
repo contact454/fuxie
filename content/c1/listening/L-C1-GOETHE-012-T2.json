@@ -122,93 +122,172 @@
     ]
   },
   "transcript": {
-    "type": "full_reconstructed_transcript",
+    "type": "studio_source_transcript",
     "status": "complete",
-    "source": "reconstructed_full_script",
-    "quality": "release_candidate_reconstructed",
-    "note": "Full learner-visible reconstructed script created from existing question evidence because original studio scripts are not present in the repository. Replace with studio transcript if original audio scripts become available.",
+    "source": "studio_source_script",
+    "quality": "source_verified",
+    "sourceScript": "data/scripts/C1/Teil2-Experteninterview/L-C1-GOETHE-012-T2.json",
+    "note": "Transcript replaced from source script by scripts/apply-source-transcripts.ts.",
     "lines": [
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Der folgende anspruchsvolle Hoertext behandelt Kulturfinanzierung und Sponsoring. Achten Sie auf Aussage, Kontext und implizite Bedeutung."
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sie hören ein Interview. Dazu gibt es neun Aufgaben. Stimmt die Aussage, stimmt sie nicht, oder wird dazu nichts gesagt? Sie hören das Interview zweimal."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q1.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Guten Tag! Unsere Gesprächspartnerin ist die Stadtplanerin und Architektin Professorin Dr. Eva Kirchner, was die Notwendigkeit einer differenzierten Betrachtung deutlich unterstreicht."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Ohne massiven Neubau wird die Mietpreisbremse die Wohnungskrise nicht überwinden können, die in den vergangenen Jahren zunehmend an Bedeutung gewonnen haben.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Vielen Dank für die Einladung! Die Wohnungsfrage ist die soziale Frage des einundzwanzigsten Jahrhunderts, und diese Entwicklung betrifft nicht nur Fachleute, sondern die gesamte Gesellschaft."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q1 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Frau Professorin Kirchner, wie bewerten Sie die aktuelle Wohnungssituation in deutschen Großstädten, wobei aktuelle Studien und Expertenmeinungen ein vielfältiges Bild zeichnen?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q2.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Situation ist in vielen Städten dramatisch und hat sich nach der Pandemie weiter verschärft, was in der wissenschaftlichen Gemeinschaft für erhebliche Diskussionen sorgt."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Zweitens: Bodenspekulation, die die Grundstückspreise in die Höhe treibt und den Bau bezahlbarer Wohnungen verhindert, die in den vergangenen Jahren zunehmend an Bedeutung gewonnen haben.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "In München kostet ein Quadratmeter Wohnfläche inzwischen über zwanzig Euro kalt, das können sich Normalverdiener nicht leisten, wobei die Experten in dieser Frage nach wie vor unterschiedlicher Meinung sind."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q2 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Was sind die wichtigsten Ursachen für die Wohnungskrise, was sowohl in der Forschung als auch in der Praxis weitreichende Konsequenzen hat?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q3.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Erstens: ein massives Angebotsdefizit, weil jahrzehntelang zu wenig gebaut wurde, besonders im geförderten Bereich, und dies wirft grundlegende Fragen zur aktuellen gesellschaftlichen Entwicklung auf."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Die Sanierungsrate liegt in Deutschland bei etwa einem Prozent pro Jahr, nötig wären mindestens drei Prozent, was in der wissenschaftlichen Gemeinschaft für erhebliche Diskussionen sorgt.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Zweitens: Bodenspekulation, die die Grundstückspreise in die Höhe treibt und den Bau bezahlbarer Wohnungen verhindert, die in den vergangenen Jahren zunehmend an Bedeutung gewonnen haben."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q3 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Drittens: gesellschaftliche Veränderungen wie der Trend zu kleineren Haushalten, der den Pro-Kopf-Flächenverbrauch steigert, was die Notwendigkeit einer differenzierten Betrachtung deutlich unterstreicht."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q4.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Was kann die Politik tun, um die Wohnungskrise konkret und wirksam zu bekämpfen, und diese Entwicklung betrifft nicht nur Fachleute, sondern die gesamte Gesellschaft?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Es ist das überzeugendste urbanistische Konzept der letzten Jahrzehnte und sollte in jeder deutschen Stadt umgesetzt werden, was sowohl in der Forschung als auch in der Praxis weitreichende Konsequenzen hat.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die wichtigste Maßnahme ist eine aktive Bodenpolitik: Kommunen müssen wieder Land erwerben und dem Markt entziehen, wobei aktuelle Studien und Expertenmeinungen ein vielfältiges Bild zeichnen."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q4 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das Wiener Modell zeigt seit hundert Jahren, dass öffentlicher Grund der Schlüssel zu bezahlbarem Wohnen ist, was in der wissenschaftlichen Gemeinschaft für erhebliche Diskussionen sorgt."
       },
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Ende des Hoertexts."
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wenn die Stadt den Boden besitzt, kann sie die Mieten langfristig kontrollieren und soziale Durchmischung garantieren, wobei die Experten in dieser Frage nach wie vor unterschiedlicher Meinung sind."
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wie stehen Sie zur Mietpreisbremse als Instrument zur Begrenzung der Mietentwicklung, was sowohl in der Forschung als auch in der Praxis weitreichende Konsequenzen hat?"
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Mietpreisbremse lindert Symptome, löst aber nicht das Grundproblem des fehlenden Angebots auf dem Wohnungsmarkt, und dies wirft grundlegende Fragen zur aktuellen gesellschaftlichen Entwicklung auf."
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ohne massiven Neubau wird die Mietpreisbremse die Wohnungskrise nicht überwinden können, die in den vergangenen Jahren zunehmend an Bedeutung gewonnen haben."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Welche Rolle spielt Nachhaltigkeit in der Stadtplanung der Zukunft, was die Notwendigkeit einer differenzierten Betrachtung deutlich unterstreicht?"
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Eine zentrale Rolle! Der Gebäudesektor muss bis 2045 klimaneutral sein, das erfordert eine radikale Transformation, und diese Entwicklung betrifft nicht nur Fachleute, sondern die gesamte Gesellschaft."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wir müssen nicht nur neue Gebäude klimaneutral bauen, sondern auch den Bestand energetisch sanieren, wobei aktuelle Studien und Expertenmeinungen ein vielfältiges Bild zeichnen."
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Sanierungsrate liegt in Deutschland bei etwa einem Prozent pro Jahr, nötig wären mindestens drei Prozent, was in der wissenschaftlichen Gemeinschaft für erhebliche Diskussionen sorgt."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Was halten Sie vom Konzept der Fünfzehn-Minuten-Stadt als zukunftsweisendes Stadtplanungsmodell, wobei die Experten in dieser Frage nach wie vor unterschiedlicher Meinung sind?"
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Es ist das überzeugendste urbanistische Konzept der letzten Jahrzehnte und sollte in jeder deutschen Stadt umgesetzt werden, was sowohl in der Forschung als auch in der Praxis weitreichende Konsequenzen hat."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Kurze Wege reduzieren Verkehr, senken Emissionen und steigern gleichzeitig die Lebensqualität der Bewohner erheblich, und dies wirft grundlegende Fragen zur aktuellen gesellschaftlichen Entwicklung auf."
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Welche innovativen Bauweisen sehen Sie als vielversprechend für die Zukunft des Wohnungsbaus, die in den vergangenen Jahren zunehmend an Bedeutung gewonnen haben?"
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Holzbau und modulares Bauen werden die Bauindustrie revolutionieren, weil sie schneller und nachhaltiger und günstiger sind, was die Notwendigkeit einer differenzierten Betrachtung deutlich unterstreicht."
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "In Schweden werden bereits Wohngebäude mit bis zu zwanzig Stockwerken vollständig aus Holz errichtet, und diese Entwicklung betrifft nicht nur Fachleute, sondern die gesamte Gesellschaft."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Was ist Ihre Vision für die Stadt der Zukunft in Deutschland, wobei aktuelle Studien und Expertenmeinungen ein vielfältiges Bild zeichnen?"
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Eine Stadt, in der jeder Mensch sich eine angemessene Wohnung leisten kann, die klimaneutral und lebenswert ist, was in der wissenschaftlichen Gemeinschaft für erhebliche Diskussionen sorgt."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Eine Stadt der kurzen Wege, der grünen Freiräume und der sozialen Durchmischung in allen Vierteln, wobei die Experten in dieser Frage nach wie vor unterschiedlicher Meinung sind."
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Vielen Dank für dieses inspirierende Gespräch über die Zukunft unserer Städte, Frau Professorin Kirchner!, was sowohl in der Forschung als auch in der Praxis weitreichende Konsequenzen hat."
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Ende Teil zwei."
       }
     ]
   },
@@ -225,7 +304,7 @@
       "id": "l-c1-goethe-012-t2-lo-1",
       "cefrLevel": "C1",
       "skill": "listening",
-      "canDoVi": "Toi co the luyen nghe hieu o trinh do C1 qua chu de \"Kulturfinanzierung und Sponsoring\".",
+      "canDoVi": "Tôi có thể luyện nghe hiểu ở trình độ C1 qua chủ đề \"Kulturfinanzierung und Sponsoring\".",
       "canDoDe": "Ich kann Hoeren auf Niveau C1 zum Thema \"Kulturfinanzierung und Sponsoring\" ueben.",
       "linkedContentIds": [
         "L-C1-GOETHE-012-T2"

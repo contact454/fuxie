@@ -152,147 +152,152 @@
     ]
   },
   "transcript": {
-    "type": "full_reconstructed_transcript",
+    "type": "studio_source_transcript",
     "status": "complete",
-    "source": "reconstructed_full_script",
-    "quality": "release_candidate_reconstructed",
-    "note": "Full learner-visible reconstructed script created from existing question evidence because original studio scripts are not present in the repository. Replace with studio transcript if original audio scripts become available.",
+    "source": "studio_source_script",
+    "quality": "source_verified",
+    "sourceScript": "data/scripts/B1/Teil3-Gespraech-zwei-Personen/L-B1-GOETHE-004-T3.json",
+    "note": "Transcript replaced from source script by scripts/apply-source-transcripts.ts.",
     "lines": [
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Im folgenden Hoertext geht es um Kinderbetreuung: Krippe versus Zuhause. Achten Sie auf die zentrale Information."
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sie hören ein Gespräch zwischen zwei Personen. Dazu gibt es sieben Aufgaben. Entscheiden Sie: richtig oder falsch? Sie hören das Gespräch zweimal."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q1.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Sprecher1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Sag mal, wie habt ihr das eigentlich mit der Kinderbetreuung gelöst?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Unsere Tochter geht seit September in die Kita.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Sprecher2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Unsere Tochter geht seit September in die Kita. Aber am Anfang war es wirklich schwierig."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q1 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Sprecher1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Was meinst du mit schwierig? War die Eingewöhnung ein Problem?"
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q2.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Sprecher2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ja, die ersten zwei Wochen hat Emma nur geweint, wenn wir sie morgens gebracht haben."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "answer_evidence",
-        "text": "Ja, die ersten zwei Wochen hat Emma nur geweint, wenn wir sie morgens gebracht haben.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Sprecher1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das kann ich mir vorstellen. Wie lang dauerte die Eingewöhnung insgesamt?"
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q2 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Sprecher2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Etwa vier Wochen. Das nennt man das Berliner Eingewöhnungsmodell."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q3.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Sprecher1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wie funktioniert das genau? Mein Sohn kommt nächstes Jahr in die Kita."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "answer_evidence",
-        "text": "Etwa vier Wochen. Das nennt man das Berliner Eingewöhnungsmodell.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Sprecher2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Am Anfang bist du die ganze Zeit dabei. Dann gehst du schrittweise für kurze Zeit raus."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q3 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Sprecher1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Und wann kann man das Kind dann den ganzen Tag dort lassen?"
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q4.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Sprecher2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Nach etwa drei bis vier Wochen, wenn das Kind sich bei den Erzieherinnen sicher fühlt."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "answer_evidence",
-        "text": "Jedes Kind hat eine feste Bezugserzieherin, die den Überblick hat.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Sprecher1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wie findest du die Kita insgesamt? Bist du zufrieden mit der Betreuung?"
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q4 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Sprecher2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Sehr zufrieden! Die Erzieherinnen sind liebevoll und das pädagogische Konzept überzeugt mich."
       },
       {
-        "speaker": "Sprecher 5",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q5.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Sprecher1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Welches Konzept hat eure Kita?"
       },
       {
-        "speaker": "Sprecher 5",
-        "speaker_role": "answer_evidence",
-        "text": "Sehr zufrieden! Die Erzieherinnen sind liebevoll und das pädagogische Konzept überzeugt mich.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Sprecher2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Es ist eine Kita mit offenem Konzept. Die Kinder können frei zwischen verschiedenen Räumen wechseln."
       },
       {
-        "speaker": "Sprecher 5",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q5 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Sprecher1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das klingt gut, aber ist das nicht chaotisch? Wissen die Erzieherinnen immer, wo die Kinder sind?"
       },
       {
-        "speaker": "Sprecher 6",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q6.",
-        "linkedQuestionId": "Q6"
+        "speaker": "Sprecher2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Jedes Kind hat eine feste Bezugserzieherin, die den Überblick hat. Es funktioniert erstaunlich gut."
       },
       {
-        "speaker": "Sprecher 6",
-        "speaker_role": "answer_evidence",
-        "text": "In Berlin ist die Kita kostenlos. Wir zahlen nur achtunddreißig Euro für das Mittagessen.",
-        "linkedQuestionId": "Q6"
+        "speaker": "Sprecher1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Und was machen die Kinder den ganzen Tag? Gibt es ein festes Programm?"
       },
       {
-        "speaker": "Sprecher 6",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q6 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q6"
+        "speaker": "Sprecher2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Es gibt einen Rahmen mit Morgenkreis, Mittagessen und Schlafenszeit. Dazwischen freies Spielen."
       },
       {
-        "speaker": "Sprecher 7",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q7.",
-        "linkedQuestionId": "Q7"
+        "speaker": "Sprecher1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Emmas Sprachentwicklung hat sich stark verbessert, seit sie in der Kita ist."
       },
       {
-        "speaker": "Sprecher 7",
-        "speaker_role": "answer_evidence",
-        "text": "Neun Monate! Wir haben uns schon vor der Geburt auf die Warteliste setzen lassen.",
-        "linkedQuestionId": "Q7"
+        "speaker": "Sprecher2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das kann ich mir vorstellen. Kinder lernen viel voneinander, auch die Sprache."
       },
       {
-        "speaker": "Sprecher 7",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q7 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q7"
+        "speaker": "Sprecher1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Und die Kosten? Wie viel zahlt ihr für die Kita?"
       },
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Ende des Hoertexts."
+        "speaker": "Sprecher2",
+        "speaker_role": "dialogue_speaker",
+        "text": "In Berlin ist die Kita kostenlos. Wir zahlen nur achtunddreißig Euro für das Mittagessen."
+      },
+      {
+        "speaker": "Sprecher1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das ist wirklich günstig! In Hamburg zahlen Freunde von mir dreihundert Euro pro Monat."
+      },
+      {
+        "speaker": "Sprecher2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ja, wir haben Glück. Aber der Platz war auch nicht einfach zu bekommen."
+      },
+      {
+        "speaker": "Sprecher1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wie lang war die Wartezeit bei euch?"
+      },
+      {
+        "speaker": "Sprecher2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Neun Monate! Wir haben uns schon vor der Geburt auf die Warteliste setzen lassen."
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Ende Teil drei."
       }
     ]
   },
@@ -309,7 +314,7 @@
       "id": "l-b1-goethe-004-t3-lo-1",
       "cefrLevel": "B1",
       "skill": "listening",
-      "canDoVi": "Toi co the luyen nghe hieu o trinh do B1 qua chu de \"Kinderbetreuung: Krippe versus Zuhause\".",
+      "canDoVi": "Tôi có thể luyện nghe hiểu ở trình độ B1 qua chủ đề \"Kinderbetreuung: Krippe versus Zuhause\".",
       "canDoDe": "Ich kann Hoeren auf Niveau B1 zum Thema \"Kinderbetreuung: Krippe versus Zuhause\" ueben.",
       "linkedContentIds": [
         "L-B1-GOETHE-004-T3"

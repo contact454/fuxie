@@ -149,111 +149,197 @@
     ]
   },
   "transcript": {
-    "type": "full_reconstructed_transcript",
+    "type": "studio_source_transcript",
     "status": "complete",
-    "source": "reconstructed_full_script",
-    "quality": "release_candidate_reconstructed",
-    "note": "Full learner-visible reconstructed script created from existing question evidence because original studio scripts are not present in the repository. Replace with studio transcript if original audio scripts become available.",
+    "source": "studio_source_script",
+    "quality": "source_verified",
+    "sourceScript": "data/scripts/A2/Teil3-Kurze-Einzelgespraeche/L-A2-GOETHE-003-T3.json",
+    "note": "Transcript replaced from source script by scripts/apply-source-transcripts.ts.",
     "lines": [
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Hoeren Sie eine kurze Information zum Thema Im Fitnessstudio anmelden."
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sie hören fünf kurze Gespräche. Zu jedem Gespräch gibt es eine Aufgabe. Welches Bild passt? Sie hören jeden Text einmal."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q1.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Gespräch 1."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Fünfunddreißig Euro im Monat mit allen Kursen.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Sprecher1_1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Hallo, gehst du auch ins Fitnessstudio?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q1 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Sprecher2_1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ja, ich gehe dreimal pro Woche. Und du?"
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q2.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Sprecher1_1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ich möchte anfangen, aber ich weiß nicht, welches Studio gut ist."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "answer_evidence",
-        "text": "Um achtzehn Uhr.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Sprecher2_1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ich kann dir meins empfehlen. Sport-Aktiv in der Hauptstraße."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q2 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Sprecher1_1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wie sind die Preise dort?"
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q3.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Sprecher2_1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Nicht schlecht. Fünfunddreißig Euro im Monat mit allen Kursen."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "answer_evidence",
-        "text": "Der Preis ist gut und die Trainer sind sehr freundlich.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Gespräch 2."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q3 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Sprecher1_2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Hast du schon mal Yoga probiert?"
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q4.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Sprecher2_2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Nein, noch nie. Ist das was für Anfänger?"
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "answer_evidence",
-        "text": "Viermal pro Woche. Montag, Mittwoch, Freitag und Samstag.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Sprecher1_2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Auf jeden Fall! Im Studio gibt es einen Anfängerkurs am Dienstag."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q4 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Sprecher2_2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Um wie viel Uhr?"
       },
       {
-        "speaker": "Sprecher 5",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q5.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Sprecher1_2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Um achtzehn Uhr. Der Kurs dauert eine Stunde."
       },
       {
-        "speaker": "Sprecher 5",
-        "speaker_role": "answer_evidence",
-        "text": "Treffen wir uns um neun Uhr am Parkeingang?",
-        "linkedQuestionId": "Q5"
+        "speaker": "Sprecher2_2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das probiere ich mal aus. Danke für den Tipp!"
       },
       {
-        "speaker": "Sprecher 5",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q5 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Gespräch 3."
       },
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Ende des Hoertexts."
+        "speaker": "Sprecher1_3",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ich habe mich gestern im Fitnessstudio angemeldet."
+      },
+      {
+        "speaker": "Sprecher2_3",
+        "speaker_role": "dialogue_speaker",
+        "text": "Super! In welchem Studio bist du jetzt?"
+      },
+      {
+        "speaker": "Sprecher1_3",
+        "speaker_role": "dialogue_speaker",
+        "text": "Bei Fit und Fun am Marktplatz. Die haben ein tolles Schwimmbad."
+      },
+      {
+        "speaker": "Sprecher2_3",
+        "speaker_role": "dialogue_speaker",
+        "text": "Und was hat dich überzeugt?"
+      },
+      {
+        "speaker": "Sprecher1_3",
+        "speaker_role": "dialogue_speaker",
+        "text": "Der Preis ist gut und die Trainer sind sehr freundlich."
+      },
+      {
+        "speaker": "Sprecher2_3",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das klingt toll. Vielleicht melde ich mich dort auch an."
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Gespräch 4."
+      },
+      {
+        "speaker": "Sprecher1_4",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ich bin total müde nach dem Training heute."
+      },
+      {
+        "speaker": "Sprecher2_4",
+        "speaker_role": "dialogue_speaker",
+        "text": "Was hast du denn gemacht?"
+      },
+      {
+        "speaker": "Sprecher1_4",
+        "speaker_role": "dialogue_speaker",
+        "text": "Spinning für fünfundvierzig Minuten und dann noch Krafttraining."
+      },
+      {
+        "speaker": "Sprecher2_4",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das ist aber viel für einen Tag! Wie oft trainierst du?"
+      },
+      {
+        "speaker": "Sprecher1_4",
+        "speaker_role": "dialogue_speaker",
+        "text": "Viermal pro Woche. Montag, Mittwoch, Freitag und Samstag."
+      },
+      {
+        "speaker": "Sprecher2_4",
+        "speaker_role": "dialogue_speaker",
+        "text": "Respekt! Ich schaffe nur zweimal. Aber das ist auch gut."
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Gespräch 5."
+      },
+      {
+        "speaker": "Sprecher1_5",
+        "speaker_role": "dialogue_speaker",
+        "text": "Weißt du, ob das Studio morgen geöffnet hat?"
+      },
+      {
+        "speaker": "Sprecher2_5",
+        "speaker_role": "dialogue_speaker",
+        "text": "Morgen ist Feiertag, da hat es zu. Aber am Mittwoch wieder."
+      },
+      {
+        "speaker": "Sprecher1_5",
+        "speaker_role": "dialogue_speaker",
+        "text": "Schade. Dann gehe ich stattdessen im Park joggen."
+      },
+      {
+        "speaker": "Sprecher2_5",
+        "speaker_role": "dialogue_speaker",
+        "text": "Gute Idee! Ich komme mit, wenn du möchtest."
+      },
+      {
+        "speaker": "Sprecher1_5",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ja, gern! Treffen wir uns um neun Uhr am Parkeingang?"
+      },
+      {
+        "speaker": "Sprecher2_5",
+        "speaker_role": "dialogue_speaker",
+        "text": "Abgemacht! Bis morgen dann!"
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Ende Teil drei."
       }
     ]
   },
@@ -270,7 +356,7 @@
       "id": "l-a2-goethe-003-t3-lo-1",
       "cefrLevel": "A2",
       "skill": "listening",
-      "canDoVi": "Toi co the luyen nghe hieu o trinh do A2 qua chu de \"Im Fitnessstudio anmelden\".",
+      "canDoVi": "Tôi có thể luyện nghe hiểu ở trình độ A2 qua chủ đề \"Im Fitnessstudio anmelden\".",
       "canDoDe": "Ich kann Hoeren auf Niveau A2 zum Thema \"Im Fitnessstudio anmelden\" ueben.",
       "linkedContentIds": [
         "L-A2-GOETHE-003-T3"

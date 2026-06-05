@@ -149,111 +149,142 @@
     ]
   },
   "transcript": {
-    "type": "full_reconstructed_transcript",
+    "type": "studio_source_transcript",
     "status": "complete",
-    "source": "reconstructed_full_script",
-    "quality": "release_candidate_reconstructed",
-    "note": "Full learner-visible reconstructed script created from existing question evidence because original studio scripts are not present in the repository. Replace with studio transcript if original audio scripts become available.",
+    "source": "studio_source_script",
+    "quality": "source_verified",
+    "sourceScript": "data/scripts/A2/Teil2-Zusammenhaengendes-Gespraech/L-A2-GOETHE-008-T2.json",
+    "note": "Transcript replaced from source script by scripts/apply-source-transcripts.ts.",
     "lines": [
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Hoeren Sie eine kurze Information zum Thema Arbeitskollegen-Gespräch."
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sie hören ein Gespräch. Zu dem Gespräch gibt es fünf Aufgaben. Ordnen Sie zu. Sie hören das Gespräch zweimal."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q1.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Sprecher1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Guten Morgen, Maria! Du bist ja heute früh im Büro."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Ja, ich muss die Präsentation für das Meeting um zehn Uhr fertig machen.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Sprecher2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ja, ich muss die Präsentation für das Meeting um zehn Uhr fertig machen."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q1 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Sprecher1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ach stimmt, das Meeting mit dem Chef. Bist du nervös?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q2.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Sprecher2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ein bisschen. Es ist mein erstes großes Meeting in der neuen Firma."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Seit drei Jahren.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Sprecher1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Du machst das schon! Deine Arbeit ist wirklich gut."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q2 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Sprecher2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Danke, Thomas! Das ist nett von dir. Wie lange arbeitest du schon hier?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q3.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Sprecher1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Seit drei Jahren. Am Anfang war ich auch nervös vor Meetings."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Ja, im Erdgeschoss.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Sprecher2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Hat sich das mit der Zeit gelegt?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q3 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Sprecher1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ja, natürlich! Und der Chef ist übrigens sehr freundlich."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q4.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Sprecher2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das ist gut zu hören. Sag mal, gibt es hier eine Kantine?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Gehen wir zusammen Mittag essen? Um halb eins?",
-        "linkedQuestionId": "Q4"
+        "speaker": "Sprecher1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ja, im Erdgeschoss. Das Essen ist gut und nicht teuer. Heute gibt es Schnitzel."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q4 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Sprecher2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Super! Gehen wir zusammen Mittag essen? Um halb eins?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q5.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Sprecher1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Gern! Ich reserviere uns einen Tisch. Du musst unbedingt den Nachtisch probieren."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "In der Personalabteilung im zweiten Stock. Frag nach Frau Weber.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Sprecher2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Und noch eine Frage: Wo ist der Drucker? Ich muss die Unterlagen für das Meeting ausdrucken."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q5 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Sprecher1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Gleich neben der Küche. Du brauchst deine Mitarbeiterkarte zum Drucken."
       },
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Ende des Hoertexts."
+        "speaker": "Sprecher2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Danke! Ich habe die Karte noch nicht. Wo bekomme ich die?"
+      },
+      {
+        "speaker": "Sprecher1",
+        "speaker_role": "dialogue_speaker",
+        "text": "In der Personalabteilung im zweiten Stock. Frag nach Frau Weber."
+      },
+      {
+        "speaker": "Sprecher2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das mache ich gleich nach dem Meeting. Du bist echt eine große Hilfe!"
+      },
+      {
+        "speaker": "Sprecher1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Kein Problem! Dafür sind Kollegen da. Sollen wir nach dem Mittagessen einen Kaffee trinken?"
+      },
+      {
+        "speaker": "Sprecher2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ja, gern! Gibt es hier guten Kaffee?"
+      },
+      {
+        "speaker": "Sprecher1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ja, die Kaffeemaschine im dritten Stock macht den besten Cappuccino."
+      },
+      {
+        "speaker": "Sprecher2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Perfekt! Dann treffen wir uns um halb eins in der Kantine."
+      },
+      {
+        "speaker": "Sprecher1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Abgemacht! Und viel Erfolg beim Meeting, Maria!"
+      },
+      {
+        "speaker": "Sprecher2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Danke, Thomas! Bis später!"
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Ende Teil zwei."
       }
     ]
   },
@@ -270,7 +301,7 @@
       "id": "l-a2-goethe-008-t2-lo-1",
       "cefrLevel": "A2",
       "skill": "listening",
-      "canDoVi": "Toi co the luyen nghe hieu o trinh do A2 qua chu de \"Arbeitskollegen-Gespräch\".",
+      "canDoVi": "Tôi có thể luyện nghe hiểu ở trình độ A2 qua chủ đề \"Arbeitskollegen-Gespräch\".",
       "canDoDe": "Ich kann Hoeren auf Niveau A2 zum Thema \"Arbeitskollegen-Gespräch\" ueben.",
       "linkedContentIds": [
         "L-A2-GOETHE-008-T2"

@@ -108,75 +108,162 @@
     ]
   },
   "transcript": {
-    "type": "full_reconstructed_transcript",
+    "type": "studio_source_transcript",
     "status": "complete",
-    "source": "reconstructed_full_script",
-    "quality": "release_candidate_reconstructed",
-    "note": "Full learner-visible reconstructed script created from existing question evidence because original studio scripts are not present in the repository. Replace with studio transcript if original audio scripts become available.",
+    "source": "studio_source_script",
+    "quality": "source_verified",
+    "sourceScript": "data/scripts/C1/Teil4-Vortrag/L-C1-GOETHE-004-T4.json",
+    "note": "Transcript replaced from source script by scripts/apply-source-transcripts.ts.",
     "lines": [
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Der folgende anspruchsvolle Hoertext behandelt Buchrezensionen und Literaturkritik. Achten Sie auf Aussage, Kontext und implizite Bedeutung."
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sie hören einen Vortrag. Dazu gibt es sieben Aufgaben. Kreuzen Sie die richtige Antwort an. Sie hören den Vortrag einmal."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q1.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Willkommen zu meinem Vortrag über die Transformation der literarischen Öffentlichkeit im digitalen Zeitalter."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "answer_evidence",
-        "text": "Das ist im Prinzip begrüßenswert, führt aber zu einer Erosion professioneller Standards und Qualitätsmaßstäbe.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ich möchte heute die These vertreten, dass wir einen fundamentalen Paradigmenwechsel in der Literaturrezeption erleben."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q1 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Dieser Wandel betrifft nicht nur die Medien der Vermittlung, sondern unser grundlegendes Verständnis von literarischem Wert."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q2.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Zunächst ein kurzer historischer Abriss: Die moderne Literaturkritik entstand im achtzehnten Jahrhundert mit der Aufklärung."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "answer_evidence",
-        "text": "Diese Macht der wenigen ist im einundzwanzigsten Jahrhundert dramatisch erodiert und hat sich dezentralisiert.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Kritiker wie Lessing und später die Brüder Schlegel etablierten die Literaturkritik als eigenständige intellektuelle Disziplin."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q2 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Im zwanzigsten Jahrhundert wurde das Feuilleton zur zentralen Institution der literarischen Öffentlichkeit."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q3.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Kritiker wie Marcel Reich-Ranicki konnten mit einer einzigen Rezension über den kommerziellen Erfolg eines Buches entscheiden."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "answer_evidence",
-        "text": "Literaturunterricht sollte nicht nur Werke vermitteln, sondern die Fähigkeit, ästhetisch zu urteilen und Texte zu analysieren.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Diese Macht der wenigen ist im einundzwanzigsten Jahrhundert dramatisch erodiert und hat sich dezentralisiert."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q3 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Drei Entwicklungen sind dafür verantwortlich: die Digitalisierung, die Demokratisierung und die Ökonomisierung der Kultur."
       },
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Ende des Hoertexts."
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Digitalisierung hat die Eintrittsbarrieren für Literaturkritik radikal gesenkt und neue Formate ermöglicht."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Jeder kann heute eine Buchrezension schreiben und im weltweiten Netz veröffentlichen, ohne jede institutionelle Legitimation."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Demokratisierung bedeutet, dass literarische Urteile nicht mehr von einer kleinen Elite monopolisiert werden."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das ist im Prinzip begrüßenswert, führt aber zu einer Erosion professioneller Standards und Qualitätsmaßstäbe."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Ökonomisierung schließlich verwandelt Literatur zunehmend in eine Ware, die nach Marktlogik bewertet wird."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Bestsellerlisten und Verkaufszahlen ersetzen ästhetische Kriterien als Maßstab für literarischen Erfolg."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Lassen Sie mich nun die Konsequenzen für den literarischen Kanon und die Kanonbildung analysieren."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Der Kanon, also die Gesamtheit der als bedeutend anerkannten Werke, war immer umstritten und veränderlich."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Aber er hatte eine stabilisierende Funktion: Er definierte einen gemeinsamen Bezugsrahmen für literarische Bildung."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Heute zerfällt der Kanon in zahlreiche Subkulturen mit eigenen Wertmaßstäben und Referenzwerken."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die BookTok-Community hat andere kanonische Werke als das germanistische Seminar einer Universität."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ob diese Pluralisierung ein Gewinn oder ein Verlust ist, hängt von der jeweiligen Perspektive ab."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Aus demokratischer Sicht ist die Vielfalt ein Fortschritt, aus kulturkonservativer ein Verlust an Orientierung."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ich plädiere für eine vermittelnde Position, die ich als 'informierte Pluralität' bezeichnen möchte."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Vielfalt ist wertvoll, aber sie braucht einen gemeinsamen Boden geteilter Werte und ästhetischer Grundkompetenzen."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Schule hat die Aufgabe, diesen gemeinsamen Boden zu legen, auf dem dann individuelle Lektürepfade entstehen können."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Literaturunterricht sollte nicht nur Werke vermitteln, sondern die Fähigkeit, ästhetisch zu urteilen und Texte zu analysieren."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wer gelernt hat, literarische Qualität zu erkennen, kann in jeder Epoche und jedem Genre die herausragenden Werke identifizieren."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Vielen Dank für Ihre Aufmerksamkeit! Ich lade Sie ein, über diese Thesen nachzudenken und kontrovers zu diskutieren."
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Ende des Hörverstehens."
       }
     ]
   },
@@ -193,7 +280,7 @@
       "id": "l-c1-goethe-004-t4-lo-1",
       "cefrLevel": "C1",
       "skill": "listening",
-      "canDoVi": "Toi co the luyen nghe hieu o trinh do C1 qua chu de \"Buchrezensionen und Literaturkritik\".",
+      "canDoVi": "Tôi có thể luyện nghe hiểu ở trình độ C1 qua chủ đề \"Buchrezensionen und Literaturkritik\".",
       "canDoDe": "Ich kann Hoeren auf Niveau C1 zum Thema \"Buchrezensionen und Literaturkritik\" ueben.",
       "linkedContentIds": [
         "L-C1-GOETHE-004-T4"

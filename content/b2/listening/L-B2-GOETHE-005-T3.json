@@ -168,129 +168,162 @@
     ]
   },
   "transcript": {
-    "type": "full_reconstructed_transcript",
+    "type": "studio_source_transcript",
     "status": "complete",
-    "source": "reconstructed_full_script",
-    "quality": "release_candidate_reconstructed",
-    "note": "Full learner-visible reconstructed script created from existing question evidence because original studio scripts are not present in the repository. Replace with studio transcript if original audio scripts become available.",
+    "source": "studio_source_script",
+    "quality": "source_verified",
+    "sourceScript": "data/scripts/B2/Teil3-Diskussion-mehrere-Personen/L-B2-GOETHE-005-T3.json",
+    "note": "Transcript replaced from source script by scripts/apply-source-transcripts.ts.",
     "lines": [
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Im folgenden Hoertext geht es um Bargeldloses Bezahlen Pro und Contra. Achten Sie auf die zentrale Information."
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sie hören eine Diskussion. Dazu gibt es sechs Aufgaben. Wer sagt was? Sie hören die Diskussion zweimal."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q1.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Willkommen zur Diskussion: Sollte Deutschland das Bargeld abschaffen?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Weil Bargeld Anonymität garantiert. Ich möchte nicht, dass jede Transaktion dokumentiert wird.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Auf keinen Fall! Bargeld ist Freiheit und muss als Zahlungsmittel erhalten bleiben."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q1 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "In einer modernen Gesellschaft brauchen wir kein Papiergeld mehr. Digital ist effizienter und sicherer."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q2.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Frau Neumann, warum sind Sie so vehement gegen die Abschaffung von Bargeld?"
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "answer_evidence",
-        "text": "Wer nichts zu verbergen hat, braucht keine Anonymität. Kriminelle nutzen Bargeld für illegale Geschäfte.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Weil Bargeld Anonymität garantiert. Ich möchte nicht, dass jede Transaktion dokumentiert wird."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q2 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wer nichts zu verbergen hat, braucht keine Anonymität. Kriminelle nutzen Bargeld für illegale Geschäfte."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q3.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das ist ein gefährliches Argument, Herr Braun. Privatsphäre ist ein Grundrecht, kein Verdachtsmoment."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "answer_evidence",
-        "text": "Das ist ein gefährliches Argument, Herr Braun. Privatsphäre ist ein Grundrecht, kein Verdachtsmoment.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Herr Braun, wie begründen Sie Ihre Position für die Abschaffung?"
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q3 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Bargeld erleichtert Schwarzarbeit, Geldwäsche und Steuerhinterziehung in Milliardenhöhe."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q4.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Studien schätzen, dass die Schattenwirtschaft in Deutschland zehn Prozent des Bruttoinlandsprodukts ausmacht."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "answer_evidence",
-        "text": "Aber die Abschaffung von Bargeld würde auch ältere und digital weniger versierte Menschen ausschließen.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Aber die Abschaffung von Bargeld würde auch ältere und digital weniger versierte Menschen ausschließen."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q4 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "In Schweden gibt es bereits Probleme, weil ältere Menschen ohne digitale Kompetenz nicht mehr bezahlen können."
       },
       {
-        "speaker": "Sprecher 5",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q5.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das ist ein wichtiger sozialer Aspekt. Was sagen Sie dazu, Herr Braun?"
       },
       {
-        "speaker": "Sprecher 5",
-        "speaker_role": "answer_evidence",
-        "text": "Das klingt gut in der Theorie, aber die Realität zeigt, dass digitale Teilhabe keine Selbstverständlichkeit ist.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Selbstverständlich muss es Übergangslösungen und Schulungsprogramme für alle Bevölkerungsgruppen geben."
       },
       {
-        "speaker": "Sprecher 5",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q5 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das klingt gut in der Theorie, aber die Realität zeigt, dass digitale Teilhabe keine Selbstverständlichkeit ist."
       },
       {
-        "speaker": "Sprecher 6",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q6.",
-        "linkedQuestionId": "Q6"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Lassen Sie uns über die technische Zuverlässigkeit sprechen."
       },
       {
-        "speaker": "Sprecher 6",
-        "speaker_role": "answer_evidence",
-        "text": "Zusicherungen der Politik und der Zentralbank sind nicht dasselbe wie gesetzliche Garantien.",
-        "linkedQuestionId": "Q6"
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Frau Neumann, Sie haben den Systemausfall in Schweden erwähnt."
       },
       {
-        "speaker": "Sprecher 6",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q6 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q6"
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Genau! Ohne Bargeld als Backup sind wir bei einem Stromausfall oder einem Cyberangriff komplett hilflos."
       },
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Ende des Hoertexts."
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Redundante Systeme und Offline-Funktionalität können dieses Risiko aber deutlich minimieren."
+      },
+      {
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Können, aber nicht eliminieren. Hundertprozentige technische Sicherheit gibt es nicht."
+      },
+      {
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Herr Braun, was halten Sie vom Konzept des digitalen Euros der EZB?"
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das ist ein vielversprechender Kompromiss. Er bietet die Vorteile digitaler Zahlung mit staatlicher Garantie."
+      },
+      {
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Aber er ersetzt nicht die Anonymität von Bargeld, wenn jede Transaktion gespeichert wird."
+      },
+      {
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die EZB hat zugesichert, dass kleine Transaktionen anonym bleiben sollen."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Zusicherungen der Politik und der Zentralbank sind nicht dasselbe wie gesetzliche Garantien."
+      },
+      {
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Da haben Sie einen wichtigen Punkt. Der rechtliche Rahmen muss klar und verbindlich sein."
+      },
+      {
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Vielen Dank für diese leidenschaftliche und wichtige Debatte!"
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Letztlich muss jeder Bürger das Recht behalten, selbst zu entscheiden, wie er bezahlen möchte."
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Ende Teil drei."
       }
     ]
   },
@@ -307,7 +340,7 @@
       "id": "l-b2-goethe-005-t3-lo-1",
       "cefrLevel": "B2",
       "skill": "listening",
-      "canDoVi": "Toi co the luyen nghe hieu o trinh do B2 qua chu de \"Bargeldloses Bezahlen Pro und Contra\".",
+      "canDoVi": "Tôi có thể luyện nghe hiểu ở trình độ B2 qua chủ đề \"Bargeldloses Bezahlen Pro und Contra\".",
       "canDoDe": "Ich kann Hoeren auf Niveau B2 zum Thema \"Bargeldloses Bezahlen Pro und Contra\" ueben.",
       "linkedContentIds": [
         "L-B2-GOETHE-005-T3"

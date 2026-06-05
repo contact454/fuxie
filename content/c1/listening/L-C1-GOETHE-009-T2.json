@@ -146,93 +146,172 @@
     ]
   },
   "transcript": {
-    "type": "full_reconstructed_transcript",
+    "type": "studio_source_transcript",
     "status": "complete",
-    "source": "reconstructed_full_script",
-    "quality": "release_candidate_reconstructed",
-    "note": "Full learner-visible reconstructed script created from existing question evidence because original studio scripts are not present in the repository. Replace with studio transcript if original audio scripts become available.",
+    "source": "studio_source_script",
+    "quality": "source_verified",
+    "sourceScript": "data/scripts/C1/Teil2-Experteninterview/L-C1-GOETHE-009-T2.json",
+    "note": "Transcript replaced from source script by scripts/apply-source-transcripts.ts.",
     "lines": [
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Der folgende anspruchsvolle Hoertext behandelt Sprachpolitik in mehrsprachigen Gesellschaften. Achten Sie auf Aussage, Kontext und implizite Bedeutung."
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sie hören ein Interview. Dazu gibt es neun Aufgaben. Stimmt die Aussage, stimmt sie nicht, oder wird dazu nichts gesagt? Sie hören das Interview zweimal."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q1.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Guten Tag! Unser Gast ist die Soziolinguistin Professorin Dr. Leonie Bauer von der Universität Freiburg."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Für die kleineren Sprachen der EU bedeutet das zunehmende Marginalisierung in den Institutionen.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Vielen Dank! Sprache ist mein Lebensthema, weil sie so viel mehr ist als nur ein Kommunikationsmittel."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q1 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Frau Professorin Bauer, was verstehen Sie unter Sprachpolitik und warum ist sie so wichtig?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q2.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Sprachpolitik umfasst alle staatlichen Maßnahmen, die den Status, den Gebrauch und das Prestige von Sprachen regulieren."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Die Forschung zeigt aber, dass gute Kenntnisse der Erstsprache den Erwerb der Zweitsprache fördern.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Sie entscheidet, welche Sprachen in der Schule unterrichtet werden, in welcher Sprache Gesetze verfasst und Gerichte verhandeln."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q2 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Sprachpolitik ist Machtpolitik, denn wer die offizielle Sprache bestimmt, kontrolliert den Zugang zu gesellschaftlicher Teilhabe."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q3.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wie bewerten Sie die aktuelle Sprachsituation in der Europäischen Union?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Einfache Sprache ist dabei kein Qualitätsverlust, sondern ein Gewinn an Klarheit und Zugänglichkeit für alle Bürger.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die EU bekennt sich zur Mehrsprachigkeit, praktiziert aber de facto einen Dreisprachigkeitsmodus aus Englisch, Französisch und Deutsch."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q3 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Für die kleineren Sprachen der EU bedeutet das zunehmende Marginalisierung in den Institutionen."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q4.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Welche Rolle spielt Migration für die sprachliche Vielfalt in europäischen Gesellschaften?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Erstens: Herkunftssprachen in der Schule als reguläres Unterrichtsfach anbieten, nicht nur als freiwillige Arbeitsgemeinschaft.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Migration hat die sprachliche Landschaft Europas dramatisch verändert und bereichert."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q4 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "In deutschen Großstädten werden heute über hundert Sprachen gesprochen, das ist ein enormer kultureller und kognitiver Reichtum."
       },
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Ende des Hoertexts."
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Aber die Politik behandelt Migrationssprachen oft als Problem statt als Ressource, die gefördert werden sollte."
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Was meinen Sie damit konkret, Frau Professorin Bauer?"
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Türkischsprachige Kinder in Deutschland werden oft aufgefordert, ihre Herkunftssprache zugunsten des Deutschen aufzugeben."
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Forschung zeigt aber, dass gute Kenntnisse der Erstsprache den Erwerb der Zweitsprache fördern."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Mehrsprachigkeit ist kein Hindernis für die Integration, sondern eine wertvolle Kompetenz, die gestärkt werden sollte."
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wie stehen Sie zur Debatte um 'einfache Sprache' und 'Leichte Sprache' in der öffentlichen Verwaltung?"
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Barrierefreie Kommunikation ist ein Grundrecht, das bedeutet, dass öffentliche Informationen für alle verständlich sein müssen."
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Einfache Sprache ist dabei kein Qualitätsverlust, sondern ein Gewinn an Klarheit und Zugänglichkeit für alle Bürger."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Viele Behördentexte sind unnötig kompliziert und schließen Menschen mit geringerer Textkompetenzen systematisch aus."
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Was empfehlen Sie der Bildungspolitik in Bezug auf Mehrsprachigkeit?"
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Erstens: Herkunftssprachen in der Schule als reguläres Unterrichtsfach anbieten, nicht nur als freiwillige Arbeitsgemeinschaft."
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Zweitens: Frühes systematisches Fremdsprachenlernen ab der ersten Klasse, weil Kinder in diesem Alter besonders leicht lernen."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Drittens: Lehrkräfte im Bereich Mehrsprachigkeitsdidaktik aus- und fortbilden, denn viele sind darauf nicht vorbereitet."
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Und viertens: Regional- und Minderheitensprachen im Bildungssystem stärken und sichtbar machen."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Was ist Ihre Vision für die sprachliche Zukunft Europas?"
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ein Europa, in dem jeder Bürger mindestens drei Sprachen spricht und sprachliche Vielfalt als Stärke verstanden wird."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ein Europa, in dem keine Sprache diskriminiert wird und Mehrsprachigkeit als kognitive Bereicherung anerkannt ist."
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Vielen Dank für dieses aufschlussreiche und vielschichtige Gespräch, Frau Professorin Bauer!"
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Ende Teil zwei."
       }
     ]
   },
@@ -249,7 +328,7 @@
       "id": "l-c1-goethe-009-t2-lo-1",
       "cefrLevel": "C1",
       "skill": "listening",
-      "canDoVi": "Toi co the luyen nghe hieu o trinh do C1 qua chu de \"Sprachpolitik in mehrsprachigen Gesellschaften\".",
+      "canDoVi": "Tôi có thể luyện nghe hiểu ở trình độ C1 qua chủ đề \"Sprachpolitik in mehrsprachigen Gesellschaften\".",
       "canDoDe": "Ich kann Hoeren auf Niveau C1 zum Thema \"Sprachpolitik in mehrsprachigen Gesellschaften\" ueben.",
       "linkedContentIds": [
         "L-C1-GOETHE-009-T2"

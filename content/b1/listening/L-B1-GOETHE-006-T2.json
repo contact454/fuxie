@@ -149,111 +149,147 @@
     ]
   },
   "transcript": {
-    "type": "full_reconstructed_transcript",
+    "type": "studio_source_transcript",
     "status": "complete",
-    "source": "reconstructed_full_script",
-    "quality": "release_candidate_reconstructed",
-    "note": "Full learner-visible reconstructed script created from existing question evidence because original studio scripts are not present in the repository. Replace with studio transcript if original audio scripts become available.",
+    "source": "studio_source_script",
+    "quality": "source_verified",
+    "sourceScript": "data/scripts/B1/Teil2-Fuehrung-oder-Monolog/L-B1-GOETHE-006-T2.json",
+    "note": "Transcript replaced from source script by scripts/apply-source-transcripts.ts.",
     "lines": [
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Im folgenden Hoertext geht es um Reiseinformation mit Verspätung und Umsteigen. Achten Sie auf die zentrale Information."
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sie hören einen Text. Dazu gibt es fünf Aufgaben. Kreuzen Sie die richtige Antwort an. Sie hören den Text zweimal."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q1.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Rednerin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Guten Tag, liebe Reisegruppe, willkommen auf unserer geführten Tour durch die Sächsische Schweiz!"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "die Tour dauert ungefähr sechs Stunden",
-        "linkedQuestionId": "Q1"
+        "speaker": "Rednerin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Mein Name ist Petra Hoffmann und ich bin seit zwölf Jahren Wanderführerin in dieser Region."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q1 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Rednerin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Sächsische Schweiz ist Teil des Elbsandsteingebirges und eines der schönsten Wandergebiete Deutschlands."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q2.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Rednerin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Heute werden wir etwa fünfzehn Kilometer wandern, die Tour dauert ungefähr sechs Stunden."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Die Basteibrücke bietet einen atemberaubenden Blick über das Elbtal in hundertneunzig Metern Höhe",
-        "linkedQuestionId": "Q2"
+        "speaker": "Rednerin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wir beginnen am Kurort Rathen und wandern durch die berühmte Bastei mit ihren spektakulären Felsformationen."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q2 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Rednerin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Basteibrücke bietet einen atemberaubenden Blick über das Elbtal in hundertneunzig Metern Höhe."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q3.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Rednerin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Bitte tragen Sie feste Wanderschuhe, denn einige Abschnitte des Weges sind steil und felsig."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Nehmen Sie genug Wasser mit, mindestens eineinhalb Liter pro Person",
-        "linkedQuestionId": "Q3"
+        "speaker": "Rednerin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Nehmen Sie genug Wasser mit, mindestens eineinhalb Liter pro Person."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q3 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Rednerin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Unsere erste Pause machen wir nach etwa einer Stunde an einem Aussichtspunkt."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q4.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Rednerin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Dort können Sie Fotos machen und den Ausblick genießen, er ist wirklich spektakulär."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Unsere erste Pause machen wir nach etwa einer Stunde an einem Aussichtspunkt",
-        "linkedQuestionId": "Q4"
+        "speaker": "Rednerin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Sächsische Schweiz ist auch ein Paradies für Kletterer aus der ganzen Welt."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q4 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Rednerin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Über tausend Kletterfelsen gibt es hier, manche bis zu dreihundert Meter hoch."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q5.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Rednerin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Aber keine Sorge, unser Wanderweg ist auch für Anfänger gut geeignet und ausgeschildert."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "der letzte Zug geht um zweiundzwanzig Uhr dreißig",
-        "linkedQuestionId": "Q5"
+        "speaker": "Rednerin",
+        "speaker_role": "dialogue_speaker",
+        "text": "In der Region leben viele seltene Tiere wie der Wanderfalke und der Schwarzstorch."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q5 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Rednerin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Bitte bleiben Sie auf den markierten Wegen, um die Natur nicht zu stören."
       },
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Ende des Hoertexts."
+        "speaker": "Rednerin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Nach etwa drei Stunden Wanderung erreichen wir eine gemütliche Berghütte."
+      },
+      {
+        "speaker": "Rednerin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Dort können Sie sächsische Spezialitäten probieren, zum Beispiel Eierschecke oder Quarkkeulchen."
+      },
+      {
+        "speaker": "Rednerin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Am Nachmittag wandern wir durch den Amselgrund zurück nach Rathen."
+      },
+      {
+        "speaker": "Rednerin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Der Amselgrund ist ein romantisches Tal mit einem kleinen Wasserfall."
+      },
+      {
+        "speaker": "Rednerin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Unterwegs kommen wir auch an der historischen Felsenbühne Rathen vorbei."
+      },
+      {
+        "speaker": "Rednerin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Dort finden im Sommer Theateraufführungen unter freiem Himmel statt, ein einzigartiges Erlebnis."
+      },
+      {
+        "speaker": "Rednerin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Rückfahrt nach Dresden ist mit der S-Bahn in vierzig Minuten möglich."
+      },
+      {
+        "speaker": "Rednerin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die S-Bahn fährt jede halbe Stunde, der letzte Zug geht um zweiundzwanzig Uhr dreißig."
+      },
+      {
+        "speaker": "Rednerin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Haben Sie noch Fragen, bevor wir starten? Dann kann es losgehen!"
+      },
+      {
+        "speaker": "Rednerin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ich wünsche uns allen einen wunderbaren Wandertag in der Sächsischen Schweiz!"
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Ende Teil zwei."
       }
     ]
   },
@@ -270,7 +306,7 @@
       "id": "l-b1-goethe-006-t2-lo-1",
       "cefrLevel": "B1",
       "skill": "listening",
-      "canDoVi": "Toi co the luyen nghe hieu o trinh do B1 qua chu de \"Reiseinformation mit Verspätung und Umsteigen\".",
+      "canDoVi": "Tôi có thể luyện nghe hiểu ở trình độ B1 qua chủ đề \"Reiseinformation mit Verspätung und Umsteigen\".",
       "canDoDe": "Ich kann Hoeren auf Niveau B1 zum Thema \"Reiseinformation mit Verspätung und Umsteigen\" ueben.",
       "linkedContentIds": [
         "L-B1-GOETHE-006-T2"

@@ -149,111 +149,147 @@
     ]
   },
   "transcript": {
-    "type": "full_reconstructed_transcript",
+    "type": "studio_source_transcript",
     "status": "complete",
-    "source": "reconstructed_full_script",
-    "quality": "release_candidate_reconstructed",
-    "note": "Full learner-visible reconstructed script created from existing question evidence because original studio scripts are not present in the repository. Replace with studio transcript if original audio scripts become available.",
+    "source": "studio_source_script",
+    "quality": "source_verified",
+    "sourceScript": "data/scripts/B1/Teil2-Fuehrung-oder-Monolog/L-B1-GOETHE-003-T2.json",
+    "note": "Transcript replaced from source script by scripts/apply-source-transcripts.ts.",
     "lines": [
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Im folgenden Hoertext geht es um Fest- oder Party-Erlebnis beschreiben. Achten Sie auf die zentrale Information."
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sie hören einen Text. Dazu gibt es fünf Aufgaben. Kreuzen Sie die richtige Antwort an. Sie hören den Text zweimal."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q1.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Rednerin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Liebe Gäste, herzlich willkommen zur Abschlussfeier des Integrationskurses am Goethe-Institut Berlin!"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Mein Name ist Sabine Grauer und ich bin die Leiterin unserer Sprachabteilung.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Rednerin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Mein Name ist Sabine Grauer und ich bin die Leiterin unserer Sprachabteilung."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q1 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Rednerin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Heute feiern wir einen besonderen Anlass: Alle Teilnehmer dieses Kurses haben die B1-Prüfung bestanden!"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q2.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Rednerin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das ist eine großartige Leistung, auf die Sie alle sehr stolz sein können."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Vor neun Monaten sind Sie in diesen Kurs gekommen, viele von Ihnen mit wenig oder keinen Deutschkenntnissen.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Rednerin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Vor neun Monaten sind Sie in diesen Kurs gekommen, viele von Ihnen mit wenig oder keinen Deutschkenntnissen."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q2 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Rednerin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Heute können Sie sich fließend auf Deutsch unterhalten, einkaufen und sogar diskutieren."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q3.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Rednerin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ich erinnere mich gut an den ersten Tag, als einige von Ihnen sehr nervös waren."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Der Deutschunterricht war sicher nicht immer einfach, besonders die Grammatik hat Ihnen Kopfzerbrechen bereitet.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Rednerin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Aber schon nach wenigen Wochen haben Sie Fortschritte gemacht, die uns alle beeindruckt haben."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q3 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Rednerin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Besonders möchte ich Ihre Lehrerinnen und Lehrer hervorheben, die Sie auf diesem Weg begleitet haben."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q4.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Rednerin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Frau Müller und Herr Schmidt haben wirklich alles gegeben, um Sie bestmöglich vorzubereiten."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Der Ausflug nach Potsdam im Oktober war ein Höhepunkt, an den sich sicher alle gern erinnern.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Rednerin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Der Deutschunterricht war sicher nicht immer einfach, besonders die Grammatik hat Ihnen Kopfzerbrechen bereitet."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q4 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Rednerin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Aber Sie haben durchgehalten und das Ergebnis spricht für sich: Alle haben bestanden!"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q5.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Rednerin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ich möchte nun einige Erinnerungen an die gemeinsame Zeit mit Ihnen teilen."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Aber vorher überreiche ich Ihnen Ihre Zertifikate. Ich rufe Sie einzeln nach vorne.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Rednerin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Der Ausflug nach Potsdam im Oktober war ein Höhepunkt, an den sich sicher alle gern erinnern."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q5 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Rednerin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Und das internationale Kochen, bei dem jeder ein Gericht aus seiner Heimat mitgebracht hat."
       },
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Ende des Hoertexts."
+        "speaker": "Rednerin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das war einer der schönsten Tage, denn Essen verbindet Menschen über alle Grenzen hinweg."
+      },
+      {
+        "speaker": "Rednerin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Heute endet ein Kapitel, aber es beginnt auch ein neues mit vielen Möglichkeiten."
+      },
+      {
+        "speaker": "Rednerin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Einige von Ihnen werden weiterstudieren und den B2-Kurs besuchen."
+      },
+      {
+        "speaker": "Rednerin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Andere haben bereits einen Arbeitsplatz gefunden oder beginnen eine Ausbildung."
+      },
+      {
+        "speaker": "Rednerin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Egal welchen Weg Sie gehen: Sprechen Sie weiter Deutsch! Übung macht den Meister."
+      },
+      {
+        "speaker": "Rednerin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Zum Abschluss haben Ihre Mitschüler eine kleine Überraschung für Sie vorbereitet."
+      },
+      {
+        "speaker": "Rednerin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Es gibt Musik, Tanz und natürlich ein internationales Buffet mit Spezialitäten aus Ihren Heimatländern."
+      },
+      {
+        "speaker": "Rednerin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Aber vorher überreiche ich Ihnen Ihre Zertifikate. Ich rufe Sie einzeln nach vorne."
+      },
+      {
+        "speaker": "Rednerin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Bitte stellen Sie sich beim Fotografieren neben mich, damit wir ein schönes Erinnerungsfoto haben."
+      },
+      {
+        "speaker": "Rednerin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Herzlichen Glückwunsch an alle Absolventinnen und Absolventen! Auf eine erfolgreiche Zukunft!"
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Ende Teil zwei."
       }
     ]
   },
@@ -270,7 +306,7 @@
       "id": "l-b1-goethe-003-t2-lo-1",
       "cefrLevel": "B1",
       "skill": "listening",
-      "canDoVi": "Toi co the luyen nghe hieu o trinh do B1 qua chu de \"Fest- oder Party-Erlebnis beschreiben\".",
+      "canDoVi": "Tôi có thể luyện nghe hiểu ở trình độ B1 qua chủ đề \"Fest- oder Party-Erlebnis beschreiben\".",
       "canDoDe": "Ich kann Hoeren auf Niveau B1 zum Thema \"Fest- oder Party-Erlebnis beschreiben\" ueben.",
       "linkedContentIds": [
         "L-B1-GOETHE-003-T2"

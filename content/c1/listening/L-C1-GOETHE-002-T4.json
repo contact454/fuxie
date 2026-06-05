@@ -90,57 +90,162 @@
     ]
   },
   "transcript": {
-    "type": "full_reconstructed_transcript",
+    "type": "studio_source_transcript",
     "status": "complete",
-    "source": "reconstructed_full_script",
-    "quality": "release_candidate_reconstructed",
-    "note": "Full learner-visible reconstructed script created from existing question evidence because original studio scripts are not present in the repository. Replace with studio transcript if original audio scripts become available.",
+    "source": "studio_source_script",
+    "quality": "source_verified",
+    "sourceScript": "data/scripts/C1/Teil4-Vortrag/L-C1-GOETHE-002-T4.json",
+    "note": "Transcript replaced from source script by scripts/apply-source-transcripts.ts.",
     "lines": [
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Der folgende anspruchsvolle Hoertext behandelt Wohnen der Zukunft und Stadtplanung. Achten Sie auf Aussage, Kontext und implizite Bedeutung."
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sie hören einen Vortrag. Dazu gibt es sieben Aufgaben. Kreuzen Sie die richtige Antwort an. Sie hören den Vortrag einmal."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q1.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Meine Damen und Herren, willkommen zu meinem Vortrag über die Zukunft des Wohnens und der Stadtplanung."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "answer_evidence",
-        "text": "Alle drei Konzepte haben eines gemeinsam: Sie stellen den Menschen und seine Bedürfnisse in den Mittelpunkt.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ich werde argumentieren, dass die Wohnungsfrage die zentrale soziale Frage des einundzwanzigsten Jahrhunderts ist."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q1 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Zweitausendvierundzwanzig lebten erstmals mehr als fünfzig Prozent der Weltbevölkerung in Städten und die Urbanisierung beschleunigt sich."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q2.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Bis 2050 werden voraussichtlich siebzig Prozent aller Menschen in urbanen Räumen leben und arbeiten."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "answer_evidence",
-        "text": "Aber Technologie allein macht keine gute Stadt. Es braucht kluge Planung und demokratische Beteiligung der Bürger.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Qualität des städtischen Wohnens wird damit zum entscheidenden Faktor für die Lebensqualität der Menschheit."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q2 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Lassen Sie mich zunächst die drei größten Herausforderungen für das Wohnen der Zukunft identifizieren."
       },
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Ende des Hoertexts."
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Erstens: die Bezahlbarkeit. In allen großen Metropolen der Welt steigen die Wohnkosten schneller als die Einkommen."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Diese Entwicklung bedroht den sozialen Zusammenhalt und verstärkt die Segregation zwischen Arm und Reich."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Zweitens: die Nachhaltigkeit. Der Gebäudesektor ist für vierzig Prozent der weltweiten CO2-Emissionen verantwortlich."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ohne eine radikale Transformation des Bausektors sind die Pariser Klimaziele nicht zu erreichen."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Drittens: die Lebensqualität. Städte müssen nicht nur funktional, sondern auch lebenswert und gesundheitsfördernd sein."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Grünflächen, saubere Luft, kurze Wege und soziale Begegnungsorte sind essentiell für das Wohlbefinden der Bewohner."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Lassen Sie mich nun drei zukunftsweisende Stadtplanungskonzepte vorstellen und ihre Potenziale analysieren."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das Konzept der Fünfzehn-Minuten-Stadt wurde vom Urbanisten Carlos Moreno an der Sorbonne entwickelt und vorgestellt."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Grundidee: Alle wichtigen Alltagsfunktionen sollen innerhalb von fünfzehn Minuten zu Fuß oder mit dem Rad erreichbar sein."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "In Paris wird dieses Konzept bereits auf gesamtstädtischer Ebene umgesetzt und zeigt beeindruckende erste Ergebnisse."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das zweite Konzept ist die Schwammstadt, die Regenwasser nicht ableitet, sondern speichert und zur Kühlung nutzt."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Angesichts zunehmender Hitzewellen und Starkregen-Ereignisse ist die Schwammstadt ein unverzichtbares Klimaanpassungskonzept."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das dritte Konzept ist die produktive Stadt, die Landwirtschaft, Handwerk und Produktion in die Stadt zurückholt."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Urban Farming, vertikale Gärten und dezentrale Werkstätten machen Städte resilienter und reduzieren Transportwege."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Alle drei Konzepte haben eines gemeinsam: Sie stellen den Menschen und seine Bedürfnisse in den Mittelpunkt."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die technologische Dimension des zukünftigen Wohnens darf ebenfalls nicht vernachlässigt werden."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Smart-Home-Technologien können den Energieverbrauch von Gebäuden um bis zu vierzig Prozent reduzieren."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Digitale Zwillinge ermöglichen es Stadtplanern, Veränderungen zu simulieren, bevor sie in der Realität umgesetzt werden."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Aber Technologie allein macht keine gute Stadt. Es braucht kluge Planung und demokratische Beteiligung der Bürger."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Bürgerbeteiligung bei Stadtplanungsprojekten ist entscheidend für die Akzeptanz und den Erfolg von Veränderungen."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Menschen, die ihre Stadt mitgestalten können, identifizieren sich stärker mit ihrem Stadtviertel und engagieren sich mehr."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Vielen Dank für Ihre Aufmerksamkeit! Die Stadt der Zukunft beginnt mit den Entscheidungen, die wir heute treffen."
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Ende des Hörverstehens."
       }
     ]
   },
@@ -157,7 +262,7 @@
       "id": "l-c1-goethe-002-t4-lo-1",
       "cefrLevel": "C1",
       "skill": "listening",
-      "canDoVi": "Toi co the luyen nghe hieu o trinh do C1 qua chu de \"Wohnen der Zukunft und Stadtplanung\".",
+      "canDoVi": "Tôi có thể luyện nghe hiểu ở trình độ C1 qua chủ đề \"Wohnen der Zukunft und Stadtplanung\".",
       "canDoDe": "Ich kann Hoeren auf Niveau C1 zum Thema \"Wohnen der Zukunft und Stadtplanung\" ueben.",
       "linkedContentIds": [
         "L-C1-GOETHE-002-T4"

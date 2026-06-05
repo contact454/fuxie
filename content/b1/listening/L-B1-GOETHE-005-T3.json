@@ -152,147 +152,152 @@
     ]
   },
   "transcript": {
-    "type": "full_reconstructed_transcript",
+    "type": "studio_source_transcript",
     "status": "complete",
-    "source": "reconstructed_full_script",
-    "quality": "release_candidate_reconstructed",
-    "note": "Full learner-visible reconstructed script created from existing question evidence because original studio scripts are not present in the repository. Replace with studio transcript if original audio scripts become available.",
+    "source": "studio_source_script",
+    "quality": "source_verified",
+    "sourceScript": "data/scripts/B1/Teil3-Gespraech-zwei-Personen/L-B1-GOETHE-005-T3.json",
+    "note": "Transcript replaced from source script by scripts/apply-source-transcripts.ts.",
     "lines": [
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Im folgenden Hoertext geht es um Bewerbungsgespräch und Praktikum. Achten Sie auf die zentrale Information."
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sie hören ein Gespräch zwischen zwei Personen. Dazu gibt es sieben Aufgaben. Entscheiden Sie: richtig oder falsch? Sie hören das Gespräch zweimal."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q1.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Sprecher1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Und, wie war dein Vorstellungsgespräch heute? Du hattest doch einen Termin bei dieser IT-Firma."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Aber ich bin mir nicht ganz sicher, ob ich den Job bekomme.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Sprecher2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Es war gut, glaube ich. Aber ich bin mir nicht ganz sicher, ob ich den Job bekomme."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q1 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Sprecher1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Warum? Was haben sie dich gefragt?"
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q2.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Sprecher2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Zuerst die üblichen Fragen: Warum möchte ich bei dieser Firma arbeiten, was sind meine Stärken."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "answer_evidence",
-        "text": "Sie fragten, ob ich auch bereit wäre, am Wochenende zu arbeiten, wenn ein Projekt dringend ist.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Sprecher1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Und das hast du gut beantwortet?"
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q2 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Sprecher2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ja, darauf war ich vorbereitet. Aber dann kam eine Frage, die mich überrascht hat."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q3.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Sprecher1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Welche Frage war das?"
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "answer_evidence",
-        "text": "Ich habe gesagt, dass ich grundsätzlich flexibel bin, aber dass eine gute Work-Life-Balance wichtig ist.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Sprecher2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Sie fragten, ob ich auch bereit wäre, am Wochenende zu arbeiten, wenn ein Projekt dringend ist."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q3 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Sprecher1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das ist eine schwierige Frage. Was hast du geantwortet?"
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q4.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Sprecher2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ich habe gesagt, dass ich grundsätzlich flexibel bin, aber dass eine gute Work-Life-Balance wichtig ist."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "answer_evidence",
-        "text": "Die Personalchefin hat gelächelt und gesagt, dass sie diese Einstellung gut finden.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Sprecher1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das klingt nach einer diplomatischen Antwort. Wie haben sie reagiert?"
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q4 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Sprecher2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Personalchefin hat gelächelt und gesagt, dass sie diese Einstellung gut finden."
       },
       {
-        "speaker": "Sprecher 5",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q5.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Sprecher1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das ist ein gutes Zeichen! Was für ein Gehalt haben sie angeboten?"
       },
       {
-        "speaker": "Sprecher 5",
-        "speaker_role": "answer_evidence",
-        "text": "Darüber haben wir noch nicht gesprochen. Das kommt erst im zweiten Gespräch.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Sprecher2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Darüber haben wir noch nicht gesprochen. Das kommt erst im zweiten Gespräch."
       },
       {
-        "speaker": "Sprecher 5",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q5 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Sprecher1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Gibt es denn ein zweites Gespräch?"
       },
       {
-        "speaker": "Sprecher 6",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q6.",
-        "linkedQuestionId": "Q6"
+        "speaker": "Sprecher2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Sie haben gesagt, sie melden sich nächste Woche. Es gibt drei Kandidaten für die Stelle."
       },
       {
-        "speaker": "Sprecher 6",
-        "speaker_role": "answer_evidence",
-        "text": "Es gibt drei Kandidaten für die Stelle.",
-        "linkedQuestionId": "Q6"
+        "speaker": "Sprecher1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Drei Kandidaten ist nicht viel. Du hast gute Chancen, wenn das Gespräch gut war."
       },
       {
-        "speaker": "Sprecher 6",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q6 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q6"
+        "speaker": "Sprecher2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Hoffentlich! Der Job wäre perfekt für mich. Gutes Gehalt und interessante Projekte."
       },
       {
-        "speaker": "Sprecher 7",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q7.",
-        "linkedQuestionId": "Q7"
+        "speaker": "Sprecher1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Und wie ist die Firma so? Hattest du einen guten Eindruck?"
       },
       {
-        "speaker": "Sprecher 7",
-        "speaker_role": "answer_evidence",
-        "text": "Modernes Büro, freundliche Leute und sie bieten zwei Tage Homeoffice pro Woche an.",
-        "linkedQuestionId": "Q7"
+        "speaker": "Sprecher2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ja, sehr! Modernes Büro, freundliche Leute und sie bieten zwei Tage Homeoffice pro Woche an."
       },
       {
-        "speaker": "Sprecher 7",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q7 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q7"
+        "speaker": "Sprecher1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das klingt wirklich gut! Drückst du dir die Daumen."
       },
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Ende des Hoertexts."
+        "speaker": "Sprecher2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Danke! Wenn ich den Job bekomme, lade ich dich zum Essen ein im besten Restaurant der Stadt!"
+      },
+      {
+        "speaker": "Sprecher1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Deal! Dann hoffe ich besonders stark, dass du den Job bekommst!"
+      },
+      {
+        "speaker": "Sprecher2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ich rufe dich sofort an, wenn ich eine Antwort habe."
+      },
+      {
+        "speaker": "Sprecher1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Mach das! Und mach dir nicht zu viele Sorgen, du hast alles richtig gemacht."
+      },
+      {
+        "speaker": "Sprecher2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Danke für die Unterstützung! Es ist gut, einen Freund zu haben, der einen aufbaut."
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Ende Teil drei."
       }
     ]
   },
@@ -309,7 +314,7 @@
       "id": "l-b1-goethe-005-t3-lo-1",
       "cefrLevel": "B1",
       "skill": "listening",
-      "canDoVi": "Toi co the luyen nghe hieu o trinh do B1 qua chu de \"Bewerbungsgespräch und Praktikum\".",
+      "canDoVi": "Tôi có thể luyện nghe hiểu ở trình độ B1 qua chủ đề \"Bewerbungsgespräch und Praktikum\".",
       "canDoDe": "Ich kann Hoeren auf Niveau B1 zum Thema \"Bewerbungsgespräch und Praktikum\" ueben.",
       "linkedContentIds": [
         "L-B1-GOETHE-005-T3"

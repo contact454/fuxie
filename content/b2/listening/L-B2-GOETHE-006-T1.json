@@ -109,7 +109,7 @@
       "explanation": {
         "de": "Der zweite Sprecher sagt: 'Seit ich ein E-Bike habe, fahre ich doppelt so viel Rad wie vorher, auch längere Strecken.' und 'Und für Berge und Gegenwind ist die Unterstützung wirklich eine riesige Erleichterung.' Dies hebt die Möglichkeit hervor, anspruchsvollere Strecken zu fahren.",
         "vi": "Người nói thứ hai nói: 'Kể từ khi có xe đạp điện, tôi đạp xe gấp đôi so với trước đây, kể cả những quãng đường dài hơn.' và 'Và đối với những đoạn đường đồi núi và ngược gió, sự hỗ trợ thực sự là một sự nhẹ nhõm rất lớn.' Điều này nhấn mạnh khả năng đi những quãng đường khó khăn hơn.",
-        "key_evidence": "Seit ich ein E-Bike habe, fahre ich doppelt so viel Rad wie vorher, auch längere Strecken. Und für Berge und Gegenwind ist die Unterstützung wirklich eine riesige Erleichterung.",
+        "key_evidence": "Seit ich ein E-Bike habe, fahre ich doppelt so viel Rad wie vorher, auch längere Strecken",
         "key_vocabulary": []
       }
     },
@@ -219,201 +219,247 @@
     ]
   },
   "transcript": {
-    "type": "full_reconstructed_transcript",
+    "type": "studio_source_transcript",
     "status": "complete",
-    "source": "reconstructed_full_script",
-    "quality": "release_candidate_reconstructed",
-    "note": "Full learner-visible reconstructed script created from existing question evidence because original studio scripts are not present in the repository. Replace with studio transcript if original audio scripts become available.",
+    "source": "studio_source_script",
+    "quality": "source_verified",
+    "sourceScript": "data/scripts/B2/Teil1-Alltagsaeusserungen/L-B2-GOETHE-006-T1.json",
+    "note": "Transcript replaced from source script by scripts/apply-source-transcripts.ts.",
     "lines": [
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Im folgenden Hoertext geht es um Radfahrer-Sicherheit in der Stadt. Achten Sie auf die zentrale Information."
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sie hören fünf Äußerungen aus dem Alltag. Zu jeder Äußerung gibt es zwei Aufgaben. Kreuzen Sie die richtige Antwort an. Sie hören jeden Text einmal."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q1.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Äußerung 1."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Ich fahre trotzdem jeden Tag Rad. Statistisch gesehen ist der gesundheitliche Nutzen größer als das Risiko.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Sprecher1_1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Gestern wäre ich fast von einem Auto angefahren worden, als ich mit dem Rad zur Uni gefahren bin."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q1 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Sprecher2_1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das ist ja furchtbar! Was ist genau passiert? Bist du unverletzt?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q2.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Sprecher1_1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ja, zum Glück. Ein Autofahrer hat beim Abbiegen nicht auf den Radweg geachtet."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Und die bestehenden Radwege müssen besser gepflegt werden. Im Winter sind sie oft nicht geräumt.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Sprecher2_1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das passiert leider ständig. Rechtsabbiegende Autos sind die häufigste Unfallursache für Radfahrer."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q2 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Sprecher1_1",
+        "speaker_role": "dialogue_speaker",
+        "text": "In Berlin gab es letztes Jahr über achttausend Fahrradunfälle. Das ist erschreckend viel."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q3.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Sprecher2_1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Stadt muss dringend mehr baulich getrennte Radwege schaffen."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "answer_evidence",
-        "text": "Hundert Kilometer pro Jahr klingt viel, aber Berlin hat insgesamt fünftausendfünfhundert Straßenkilometer.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Sprecher1_1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Und die bestehenden Radwege müssen besser gepflegt werden. Im Winter sind sie oft nicht geräumt."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q3 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Sprecher2_1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ich fahre trotzdem jeden Tag Rad. Statistisch gesehen ist der gesundheitliche Nutzen größer als das Risiko."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q4.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Äußerung 2."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "answer_evidence",
-        "text": "Konsequenz. Sie haben systematisch Autofahrspuren in Radwege umgewandelt und Radparkhäuser gebaut.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Sprecher1_2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Berlin will bis zweitausenddreißig die Zahl der Radfahrer verdoppeln. Ein ambitioniertes Ziel."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q4 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Sprecher2_2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Dafür müsste sich aber die Infrastruktur deutlich verbessern, sonst bleibt die Zahl gleich."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q5.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Sprecher1_2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Der neue Radverkehrsplan sieht hundert Kilometer neue Radwege pro Jahr vor."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "answer_evidence",
-        "text": "Aber ist das nicht Schummelei? Man tritt ja nicht richtig und bekommt trotzdem Unterstützung.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Sprecher2_2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Hundert Kilometer pro Jahr klingt viel, aber Berlin hat insgesamt fünftausendfünfhundert Straßenkilometer."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q5 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Sprecher1_2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das zeigt, wie groß der Nachholbedarf ist. Jahrzehntelang wurde nur an Autos gedacht."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q6.",
-        "linkedQuestionId": "Q6"
+        "speaker": "Sprecher2_2",
+        "speaker_role": "dialogue_speaker",
+        "text": "In Kopenhagen hat man vor zwanzig Jahren angefangen und heute fahren fünfundfünfzig Prozent aller Einwohner Rad."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "answer_evidence",
-        "text": "Seit ich ein E-Bike habe, fahre ich doppelt so viel Rad wie vorher, auch längere Strecken. Und für Berge und Gegenwind ist die Unterstützung wirklich eine riesige Erleichterung.",
-        "linkedQuestionId": "Q6"
+        "speaker": "Sprecher1_2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Beeindruckend! Was hat Kopenhagen anders gemacht als Berlin?"
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q6 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q6"
+        "speaker": "Sprecher2_2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Konsequenz. Sie haben systematisch Autofahrspuren in Radwege umgewandelt und Radparkhäuser gebaut."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q7.",
-        "linkedQuestionId": "Q7"
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Äußerung 3."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "answer_evidence",
-        "text": "Mein Arbeitgeber bietet das an und ich spare dadurch fast vierzig Prozent vom Listenpreis.",
-        "linkedQuestionId": "Q7"
+        "speaker": "Sprecher1_3",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ich überlege, mir ein E-Bike zu kaufen. Was hast du für Erfahrungen damit gemacht?"
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q7 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q7"
+        "speaker": "Sprecher2_3",
+        "speaker_role": "dialogue_speaker",
+        "text": "Seit ich ein E-Bike habe, fahre ich doppelt so viel Rad wie vorher, auch längere Strecken."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q8.",
-        "linkedQuestionId": "Q8"
+        "speaker": "Sprecher1_3",
+        "speaker_role": "dialogue_speaker",
+        "text": "Aber ist das nicht Schummelei? Man tritt ja nicht richtig und bekommt trotzdem Unterstützung."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "answer_evidence",
-        "text": "Weil der Betrag vom Brutto abgezogen wird, sparst du Steuern und Sozialabgaben.",
-        "linkedQuestionId": "Q8"
+        "speaker": "Sprecher2_3",
+        "speaker_role": "dialogue_speaker",
+        "text": "Nein, man muss schon treten! Der Motor unterstützt nur, er fährt nicht alleine."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q8 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q8"
+        "speaker": "Sprecher1_3",
+        "speaker_role": "dialogue_speaker",
+        "text": "Und für Berge und Gegenwind ist die Unterstützung wirklich eine riesige Erleichterung."
       },
       {
-        "speaker": "Sprecher 5",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q9.",
-        "linkedQuestionId": "Q9"
+        "speaker": "Sprecher2_3",
+        "speaker_role": "dialogue_speaker",
+        "text": "Was hat dein E-Bike gekostet? Die sind ja nicht gerade günstig."
       },
       {
-        "speaker": "Sprecher 5",
-        "speaker_role": "answer_evidence",
-        "text": "Das stimmt, aber Autofahrer parken auch ständig auf dem Radweg, und das wird selten kontrolliert.",
-        "linkedQuestionId": "Q9"
+        "speaker": "Sprecher1_3",
+        "speaker_role": "dialogue_speaker",
+        "text": "Zweitausendvierhundert Euro. Aber wenn man es mit einem Auto vergleicht, ist das fast nichts."
       },
       {
-        "speaker": "Sprecher 5",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q9 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q9"
+        "speaker": "Sprecher2_3",
+        "speaker_role": "dialogue_speaker",
+        "text": "Stimmt. Ein Auto kostet mit Versicherung, Sprit und Reparaturen mindestens dreihundert Euro pro Monat."
       },
       {
-        "speaker": "Sprecher 5",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q10.",
-        "linkedQuestionId": "Q10"
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Äußerung 4."
       },
       {
-        "speaker": "Sprecher 5",
-        "speaker_role": "answer_evidence",
-        "text": "Genau, und deshalb brauchen wir mehr Aufklärung und Verkehrserziehung, nicht nur für Autofahrer.",
-        "linkedQuestionId": "Q10"
+        "speaker": "Sprecher1_4",
+        "speaker_role": "dialogue_speaker",
+        "text": "Kennst du das neue Fahrrad-Leasing über den Arbeitgeber? Das nennt sich Dienstrad."
       },
       {
-        "speaker": "Sprecher 5",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q10 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q10"
+        "speaker": "Sprecher2_4",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ja, das ist wie ein Dienstwagen, nur als Fahrrad. Steuervorteil inklusive."
       },
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Ende des Hoertexts."
+        "speaker": "Sprecher1_4",
+        "speaker_role": "dialogue_speaker",
+        "text": "Mein Arbeitgeber bietet das an und ich spare dadurch fast vierzig Prozent vom Listenpreis."
+      },
+      {
+        "speaker": "Sprecher2_4",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das klingt fantastisch! Wie funktioniert das genau?"
+      },
+      {
+        "speaker": "Sprecher1_4",
+        "speaker_role": "dialogue_speaker",
+        "text": "Der Arbeitgeber least das Rad und du zahlst monatlich einen Betrag über die Gehaltsabrechnung."
+      },
+      {
+        "speaker": "Sprecher2_4",
+        "speaker_role": "dialogue_speaker",
+        "text": "Weil der Betrag vom Brutto abgezogen wird, sparst du Steuern und Sozialabgaben."
+      },
+      {
+        "speaker": "Sprecher1_4",
+        "speaker_role": "dialogue_speaker",
+        "text": "Und nach drei Jahren kannst du das Rad günstig übernehmen, meistens für zehn Prozent."
+      },
+      {
+        "speaker": "Sprecher2_4",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das muss ich unbedingt bei meinem Arbeitgeber ansprechen! Das klingt nach einem tollen Angebot."
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Äußerung 5."
+      },
+      {
+        "speaker": "Sprecher1_5",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Polizei kontrolliert wieder verstärkt Radfahrer, die bei Rot über die Ampel fahren."
+      },
+      {
+        "speaker": "Sprecher2_5",
+        "speaker_role": "dialogue_speaker",
+        "text": "Gut so! Es gibt viele Radfahrer, die sich nicht an die Verkehrsregeln halten."
+      },
+      {
+        "speaker": "Sprecher1_5",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das stimmt, aber Autofahrer parken auch ständig auf dem Radweg, und das wird selten kontrolliert."
+      },
+      {
+        "speaker": "Sprecher2_5",
+        "speaker_role": "dialogue_speaker",
+        "text": "Beides muss konsequenter geahndet werden, unabhängig vom Verkehrsmittel."
+      },
+      {
+        "speaker": "Sprecher1_5",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ein Rotlichtverstoß mit dem Fahrrad kostet zwischen sechzig und hundertachtzig Euro."
+      },
+      {
+        "speaker": "Sprecher2_5",
+        "speaker_role": "dialogue_speaker",
+        "text": "Und wenn man damit einen Unfall verursacht, verliert man als Radfahrer alle Rechte."
+      },
+      {
+        "speaker": "Sprecher1_5",
+        "speaker_role": "dialogue_speaker",
+        "text": "Viele Radfahrer wissen gar nicht, dass für sie die gleichen Verkehrsregeln gelten wie für Autos."
+      },
+      {
+        "speaker": "Sprecher2_5",
+        "speaker_role": "dialogue_speaker",
+        "text": "Genau, und deshalb brauchen wir mehr Aufklärung und Verkehrserziehung, nicht nur für Autofahrer."
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Ende Teil eins."
       }
     ]
   },
@@ -430,7 +476,7 @@
       "id": "l-b2-goethe-006-t1-lo-1",
       "cefrLevel": "B2",
       "skill": "listening",
-      "canDoVi": "Toi co the luyen nghe hieu o trinh do B2 qua chu de \"Radfahrer-Sicherheit in der Stadt\".",
+      "canDoVi": "Tôi có thể luyện nghe hiểu ở trình độ B2 qua chủ đề \"Radfahrer-Sicherheit in der Stadt\".",
       "canDoDe": "Ich kann Hoeren auf Niveau B2 zum Thema \"Radfahrer-Sicherheit in der Stadt\" ueben.",
       "linkedContentIds": [
         "L-B2-GOETHE-006-T1"

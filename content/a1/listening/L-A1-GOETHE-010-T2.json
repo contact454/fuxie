@@ -81,7 +81,7 @@
       "explanation": {
         "de": "Der Ansager sagt: 'Montag bis Freitag von acht bis fünfzehn Uhr. Donnerstags haben wir verlängerte Öffnungszeiten bis achtzehn Uhr.' Nur donnerstags ist bis 18 Uhr geöffnet.",
         "vi": "Người thông báo nói: 'Thứ Hai đến Thứ Sáu từ 8 giờ đến 15 giờ. Vào các ngày Thứ Năm, chúng tôi có giờ mở cửa kéo dài đến 18 giờ.' Chỉ vào Thứ Năm mới mở cửa đến 18 giờ.",
-        "key_evidence": "Montag bis Freitag von acht bis fünfzehn Uhr. Donnerstags haben wir verlängerte Öffnungszeiten bis achtzehn Uhr.",
+        "key_evidence": "Donnerstags haben wir verlängerte Öffnungszeiten bis achtzehn Uhr.",
         "key_vocabulary": [
           "Ausländerbehörde",
           "jeden Tag",
@@ -130,93 +130,142 @@
     ]
   },
   "transcript": {
-    "type": "full_reconstructed_transcript",
+    "type": "studio_source_transcript",
     "status": "complete",
-    "source": "reconstructed_full_script",
-    "quality": "release_candidate_reconstructed",
-    "note": "Full learner-visible reconstructed script created from existing question evidence because original studio scripts are not present in the repository. Replace with studio transcript if original audio scripts become available.",
+    "source": "studio_source_script",
+    "quality": "source_verified",
+    "sourceScript": "data/scripts/A1/Teil2-Durchsagen-und-Ansagen/L-A1-GOETHE-010-T2.json",
+    "note": "Transcript replaced from source script by scripts/apply-source-transcripts.ts.",
     "lines": [
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Hoeren Sie eine kurze Information zum Thema Persönliche Angaben."
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sie hören vier Ansagen. Zu jeder Ansage gibt es eine Aufgabe. Kreuzen Sie richtig oder falsch an. Sie hören jeden Text einmal."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q1.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Ansage 1."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Bitte bringen Sie Ihren Reisepass und den Mietvertrag mit.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Ansager",
+        "speaker_role": "dialogue_speaker",
+        "text": "Willkommen im Bürgerbüro der Stadt Berlin."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q1 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Ansager",
+        "speaker_role": "dialogue_speaker",
+        "text": "Heute können Sie sich hier anmelden und Ihren Wohnsitz registrieren."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q2.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Ansager",
+        "speaker_role": "dialogue_speaker",
+        "text": "Bitte bringen Sie Ihren Reisepass und den Mietvertrag mit."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "answer_evidence",
-        "text": "Bitte geben Sie Ihr Anmeldeformular bis Freitag um zwölf Uhr ab.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Ansager",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Wartezeit beträgt circa dreißig Minuten."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q2 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Ansager",
+        "speaker_role": "dialogue_speaker",
+        "text": "Nehmen Sie bitte eine Nummer und warten Sie im Wartebereich."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q3.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Ansage 2."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "answer_evidence",
-        "text": "Füllen Sie bitte das Formular am Infostand aus.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Ansager",
+        "speaker_role": "dialogue_speaker",
+        "text": "Achtung! Die Anmeldefrist für den Integrationskurs endet am Freitag."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q3 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Ansager",
+        "speaker_role": "dialogue_speaker",
+        "text": "Bitte geben Sie Ihr Anmeldeformular bis Freitag um zwölf Uhr ab."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q4.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Ansager",
+        "speaker_role": "dialogue_speaker",
+        "text": "Sie brauchen ein Passfoto, eine Kopie vom Ausweis und den Nachweis der Krankenversicherung."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "answer_evidence",
-        "text": "Montag bis Freitag von acht bis fünfzehn Uhr. Donnerstags haben wir verlängerte Öffnungszeiten bis achtzehn Uhr.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Ansager",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das Formularcenter ist im Erdgeschoss, Raum zwei."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q4 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Ansager",
+        "speaker_role": "dialogue_speaker",
+        "text": "Bei Fragen helfen wir Ihnen gern. Kommen Sie zum Infostand."
       },
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Ende des Hoertexts."
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Ansage 3."
+      },
+      {
+        "speaker": "Ansager",
+        "speaker_role": "dialogue_speaker",
+        "text": "Liebe Kursteilnehmer, bitte aktualisieren Sie Ihre Kontaktdaten."
+      },
+      {
+        "speaker": "Ansager",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wenn Sie umgezogen sind, geben Sie uns bitte Ihre neue Adresse."
+      },
+      {
+        "speaker": "Ansager",
+        "speaker_role": "dialogue_speaker",
+        "text": "Auch neue Telefonnummern und E-Mail-Adressen brauchen wir."
+      },
+      {
+        "speaker": "Ansager",
+        "speaker_role": "dialogue_speaker",
+        "text": "Füllen Sie bitte das Formular am Infostand aus."
+      },
+      {
+        "speaker": "Ansager",
+        "speaker_role": "dialogue_speaker",
+        "text": "Vielen Dank für Ihre Mitarbeit!"
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Ansage 4."
+      },
+      {
+        "speaker": "Ansager",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Ausländerbehörde informiert über die neuen Öffnungszeiten."
+      },
+      {
+        "speaker": "Ansager",
+        "speaker_role": "dialogue_speaker",
+        "text": "Montag bis Freitag von acht bis fünfzehn Uhr."
+      },
+      {
+        "speaker": "Ansager",
+        "speaker_role": "dialogue_speaker",
+        "text": "Donnerstags haben wir verlängerte Öffnungszeiten bis achtzehn Uhr."
+      },
+      {
+        "speaker": "Ansager",
+        "speaker_role": "dialogue_speaker",
+        "text": "Bitte vereinbaren Sie einen Termin online oder telefonisch."
+      },
+      {
+        "speaker": "Ansager",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ohne Termin ist die Wartezeit sehr lang."
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Ende Teil zwei."
       }
     ]
   },
@@ -233,7 +282,7 @@
       "id": "l-a1-goethe-010-t2-lo-1",
       "cefrLevel": "A1",
       "skill": "listening",
-      "canDoVi": "Toi co the luyen nghe hieu o trinh do A1 qua chu de \"Persönliche Angaben\".",
+      "canDoVi": "Tôi có thể luyện nghe hiểu ở trình độ A1 qua chủ đề \"Persönliche Angaben\".",
       "canDoDe": "Ich kann Hoeren auf Niveau A1 zum Thema \"Persönliche Angaben\" ueben.",
       "linkedContentIds": [
         "L-A1-GOETHE-010-T2"

@@ -206,165 +206,172 @@
     ]
   },
   "transcript": {
-    "type": "full_reconstructed_transcript",
+    "type": "studio_source_transcript",
     "status": "complete",
-    "source": "reconstructed_full_script",
-    "quality": "release_candidate_reconstructed",
-    "note": "Full learner-visible reconstructed script created from existing question evidence because original studio scripts are not present in the repository. Replace with studio transcript if original audio scripts become available.",
+    "source": "studio_source_script",
+    "quality": "source_verified",
+    "sourceScript": "data/scripts/B1/Teil4-Radiodiskussion/L-B1-GOETHE-004-T4.json",
+    "note": "Transcript replaced from source script by scripts/apply-source-transcripts.ts.",
     "lines": [
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Im folgenden Hoertext geht es um Kinderbetreuung: Krippe versus Zuhause. Achten Sie auf die zentrale Information."
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sie hören eine Diskussion im Radio. Dazu gibt es acht Aufgaben. Wer sagt was? Sie hören die Diskussion zweimal."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q1.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Willkommen zu 'Familiengespräch'. Heute diskutieren wir: Krippe oder zu Hause betreuen?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Ich bin absolut überzeugt, dass Kinder unter drei Jahren zu Hause am besten aufgehoben sind.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ich bin absolut überzeugt, dass Kinder unter drei Jahren zu Hause am besten aufgehoben sind."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q1 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Da muss ich widersprechen. Eine gute Krippe fördert die Entwicklung von Kindern enorm."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q2.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Frau Engel, warum sind Sie der Meinung, dass Kinder zu Hause bleiben sollten?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Eine gute Krippe fördert die Entwicklung von Kindern enorm.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "In den ersten drei Jahren brauchen Kinder eine feste Bindung. Die bekommt man am besten zu Hause."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q2 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Aber diese Bindung kann auch in einer guten Krippe aufgebaut werden, mit festen Bezugspersonen."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q3.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Studien zeigen, dass Kinder, die früh in die Krippe gehen, sozial kompetenter sind."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Studien zeigen, dass Kinder, die früh in die Krippe gehen, sozial kompetenter sind.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Herr Wagner, welche Studien meinen Sie genau?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q3 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die NUBBEK-Studie hat gezeigt, dass Kinder in qualitativ hochwertiger Betreuung genauso gut entwickelt sind."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q4.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Qualitativ hochwertig ist das Schlüsselwort! Viele Krippen in Deutschland sind personell unterbesetzt."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Der Fachkräftemangel in der Kinderbetreuung ist ein ernstes Problem.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das stimmt leider. Der Fachkräftemangel in der Kinderbetreuung ist ein ernstes Problem."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q4 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Und genau deshalb plädiere ich dafür, dass ein Elternteil zu Hause bleibt, bis das Kind drei ist."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q5.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Aber das kann sich finanziell nicht jede Familie leisten, Frau Engel."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Das Elterngeld sollte länger gezahlt werden, damit Familien diese Wahl tatsächlich haben.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das Elterngeld sollte länger gezahlt werden, damit Familien diese Wahl tatsächlich haben."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q5 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "In Skandinavien funktioniert beides: gute Krippen und großzügige Elternzeit."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q6.",
-        "linkedQuestionId": "Q6"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Herr Wagner, was wäre Ihr ideales Modell für Deutschland?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Investitionen in Kinder sind die besten Investitionen, die ein Staat machen kann.",
-        "linkedQuestionId": "Q6"
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Flexible Elternzeit bis zu zwei Jahren und danach garantierte Kitaplätze mit einem Schlüssel von eins zu drei."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q6 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q6"
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das wäre ideal, kostet den Staat aber enorm viel Geld. Wie soll das finanziert werden?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q7.",
-        "linkedQuestionId": "Q7"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Investitionen in Kinder sind die besten Investitionen, die ein Staat machen kann."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Für Alleinerziehende oder Familien mit geringem Einkommen ist die Krippe unverzichtbar.",
-        "linkedQuestionId": "Q7"
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Volkswirtschaftlich betrachtet bringt jeder in frühkindliche Bildung investierte Euro das Siebenfache zurück."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q7 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q7"
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Frau Engel, sehen Sie auch Vorteile einer Krippe, unabhängig von Ihrer persönlichen Präferenz?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q8.",
-        "linkedQuestionId": "Q8"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ja, natürlich. Für Alleinerziehende oder Familien mit geringem Einkommen ist die Krippe unverzichtbar."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Mehr Erzieherinnen, bessere Ausbildung und angemessene Bezahlung sind der Schlüssel.",
-        "linkedQuestionId": "Q8"
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Und auch für Kinder aus bildungsfernen Familien kann die Krippe wichtige Impulse geben."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q8 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q8"
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das ist ein sehr wichtiger Punkt. Die Krippe kann Chancengleichheit fördern."
       },
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Ende des Hoertexts."
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Aber nur, wenn die Qualität stimmt! Das muss man immer wieder betonen."
+      },
+      {
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Da sind wir uns einig. Qualität in der Kinderbetreuung muss an erster Stelle stehen."
+      },
+      {
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Mehr Erzieherinnen, bessere Ausbildung und angemessene Bezahlung sind der Schlüssel."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Vielen Dank an Frau Engel und Herrn Wagner für diese wichtige gesellschaftliche Diskussion!"
+      },
+      {
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Entscheidung zwischen Krippe und Zuhause muss jede Familie individuell treffen, ohne Druck."
+      },
+      {
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Egal wie Sie sich entscheiden: Liebe und Zuwendung sind das Wichtigste für Ihr Kind!"
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Ende des Hörverstehens."
       }
     ]
   },
@@ -381,7 +388,7 @@
       "id": "l-b1-goethe-004-t4-lo-1",
       "cefrLevel": "B1",
       "skill": "listening",
-      "canDoVi": "Toi co the luyen nghe hieu o trinh do B1 qua chu de \"Kinderbetreuung: Krippe versus Zuhause\".",
+      "canDoVi": "Tôi có thể luyện nghe hiểu ở trình độ B1 qua chủ đề \"Kinderbetreuung: Krippe versus Zuhause\".",
       "canDoDe": "Ich kann Hoeren auf Niveau B1 zum Thema \"Kinderbetreuung: Krippe versus Zuhause\" ueben.",
       "linkedContentIds": [
         "L-B1-GOETHE-004-T4"

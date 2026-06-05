@@ -65,7 +65,7 @@
       "explanation": {
         "de": "Die korrekte Antwort ist (a). Der Podcast stellt den Konflikt dar zwischen dem Ziel, 'bessere gesellschaftliche Ergebnisse' zu erzielen, und der Kritik, dass Nudging die 'Autonomie des Einzelnen untergräbt'. Dies beschreibt exakt das Spannungsfeld. Option (b) ist ein lexikalischer Fallstrick; sie ist zu spezifisch auf das Organspende-Beispiel bezogen und widerspricht der Aussage, dass die Freiheit nicht eingeschränkt wird. Option (c) ist zu absolut; der Text stellt die Manipulation als Frage ('Wann wird ... zur Manipulation?') und erwähnt nicht, dass sie ausschließlich staatlichen Interessen dient.",
         "vi": "Đáp án đúng là (a). Podcast trình bày xung đột giữa mục tiêu đạt được 'kết quả xã hội tốt hơn' và sự chỉ trích rằng việc thúc đẩy (Nudging) 'làm suy yếu quyền tự chủ của cá nhân'. Điều này mô tả chính xác sự căng thẳng. Phương án (b) là một cái bẫy từ vựng; nó quá cụ thể vào ví dụ hiến tạng và mâu thuẫn với tuyên bố rằng quyền tự do không bị hạn chế. Phương án (c) quá tuyệt đối; văn bản đặt ra sự thao túng như một câu hỏi ('Khi nào ... trở thành sự thao túng?') và không đề cập rằng nó chỉ phục vụ lợi ích của nhà nước.",
-        "key_evidence": "Allerdings wirft Nudging auch ethische Fragen auf: Wann wird sanfte Lenkung zur unwürdigen Manipulation? Kritiker argumentieren, dass Nudging die Autonomie des Einzelnen untergräbt und paternalistisch ist."
+        "key_evidence": "Wann wird sanfte Lenkung zur unwürdigen Manipulation"
       }
     }
   ],
@@ -108,75 +108,147 @@
     ]
   },
   "transcript": {
-    "type": "full_reconstructed_transcript",
+    "type": "studio_source_transcript",
     "status": "complete",
-    "source": "reconstructed_full_script",
-    "quality": "release_candidate_reconstructed",
-    "note": "Full learner-visible reconstructed script created from existing question evidence because original studio scripts are not present in the repository. Replace with studio transcript if original audio scripts become available.",
+    "source": "studio_source_script",
+    "quality": "source_verified",
+    "sourceScript": "data/scripts/C1/Teil1-Podcast-oder-Rezension/L-C1-GOETHE-010-T1.json",
+    "note": "Transcript replaced from source script by scripts/apply-source-transcripts.ts.",
     "lines": [
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Der folgende anspruchsvolle Hoertext behandelt Psychologie der Entscheidungsfindung. Achten Sie auf Aussage, Kontext und implizite Bedeutung."
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sie hören einen Podcast. Dazu gibt es sechs Aufgaben. Ordnen Sie die Aussagen den Abschnitten zu. Sie hören den Text einmal."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe q1_hoeren_c1_t1.",
-        "linkedQuestionId": "q1_hoeren_c1_t1"
+        "speaker": "Podcaster",
+        "speaker_role": "dialogue_speaker",
+        "text": "Willkommen bei 'Kopfsache', dem Podcast über die faszinierenden Mechanismen des menschlichen Denkens und Entscheidens."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Diese Heuristiken sind in vielen Alltagssituationen nützlich und effizient, führen aber manchmal zu systematischen Fehlern.",
-        "linkedQuestionId": "q1_hoeren_c1_t1"
+        "speaker": "Podcaster",
+        "speaker_role": "dialogue_speaker",
+        "text": "Heute widmen wir uns einer Frage, die jeden von uns täglich betrifft: Wie treffen wir Entscheidungen und warum so oft falsch?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe q1_hoeren_c1_t1 im Kontext des Hoertexts.",
-        "linkedQuestionId": "q1_hoeren_c1_t1"
+        "speaker": "Podcaster",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Kognitionsforschung hat in den letzten Jahrzehnten erstaunliche Erkenntnisse über systematische Denkfehler gewonnen."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe q2_hoeren_c1_t1.",
-        "linkedQuestionId": "q2_hoeren_c1_t1"
+        "speaker": "Podcaster",
+        "speaker_role": "dialogue_speaker",
+        "text": "Daniel Kahneman und Amos Tversky haben für ihre Forschung zu kognitiven Verzerrungen den Nobelpreis erhalten."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Das ist beunruhigend, weil es zeigt, dass selbst Experten unbewussten kognitiven Verzerrungen unterliegen.",
-        "linkedQuestionId": "q2_hoeren_c1_t1"
+        "speaker": "Podcaster",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ihre zentrale Erkenntnis: Menschen denken nicht rational, sondern bedienen sich mentaler Abkürzungen, sogenannter Heuristiken."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe q2_hoeren_c1_t1 im Kontext des Hoertexts.",
-        "linkedQuestionId": "q2_hoeren_c1_t1"
+        "speaker": "Podcaster",
+        "speaker_role": "dialogue_speaker",
+        "text": "Diese Heuristiken sind in vielen Alltagssituationen nützlich und effizient, führen aber manchmal zu systematischen Fehlern."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe q3_hoeren_c1_t1.",
-        "linkedQuestionId": "q3_hoeren_c1_t1"
+        "speaker": "Podcaster",
+        "speaker_role": "dialogue_speaker",
+        "text": "Der Ankereffekt ist ein besonders eindrucksvolles Beispiel für diese Art der kognitiven Verzerrung."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Allerdings wirft Nudging auch ethische Fragen auf: Wann wird sanfte Lenkung zur unwürdigen Manipulation? Kritiker argumentieren, dass Nudging die Autonomie des Einzelnen untergräbt und paternalistisch ist.",
-        "linkedQuestionId": "q3_hoeren_c1_t1"
+        "speaker": "Podcaster",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wenn Sie nach dem Gewicht eines Blauwals gefragt werden und vorher eine beliebige Zahl genannt bekommen, beeinflusst diese Ihre Schätzung."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe q3_hoeren_c1_t1 im Kontext des Hoertexts.",
-        "linkedQuestionId": "q3_hoeren_c1_t1"
+        "speaker": "Podcaster",
+        "speaker_role": "dialogue_speaker",
+        "text": "In Experiments haben Richter höhere Strafen verhängt, wenn sie zuvor eine höhere Zahl auf einem Würfel gewürfelt hatten."
       },
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Ende des Hoertexts."
+        "speaker": "Podcaster",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das ist beunruhigend, weil es zeigt, dass selbst Experten unbewussten kognitiven Verzerrungen unterliegen."
+      },
+      {
+        "speaker": "Podcaster",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ein weiteres wichtiges Phänomen ist der Bestätigungsfehler: Wir suchen bevorzugt nach Informationen, die unsere Meinung bestätigen."
+      },
+      {
+        "speaker": "Podcaster",
+        "speaker_role": "dialogue_speaker",
+        "text": "In Zeiten von Social Media verstärkt der Algorithmus diesen Bias, indem er uns bevorzugt gleichgesinnte Inhalte anzeigt."
+      },
+      {
+        "speaker": "Podcaster",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Verlustaversion ist eine dritte fundamentale Verzerrung: Verluste schmerzen uns etwa doppelt so stark wie gleich große Gewinne."
+      },
+      {
+        "speaker": "Podcaster",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das erklärt, warum Menschen an schlechten Investments festhalten, statt rechtzeitig den Verlust zu realisieren."
+      },
+      {
+        "speaker": "Podcaster",
+        "speaker_role": "dialogue_speaker",
+        "text": "Unternehmer halten an gescheiterten Projekten fest, weil sie die bereits investierten Mittel nicht verlieren wollen."
+      },
+      {
+        "speaker": "Podcaster",
+        "speaker_role": "dialogue_speaker",
+        "text": "Dieses Phänomen wird als Sunk-Cost-Fallacy bezeichnet und führt regelmäßig zu irrationalen Entscheidungen."
+      },
+      {
+        "speaker": "Podcaster",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die gute Nachricht ist: Wenn wir unsere kognitiven Verzerrungen kennen, können wir ihnen zumindest teilweise entgegenwirken."
+      },
+      {
+        "speaker": "Podcaster",
+        "speaker_role": "dialogue_speaker",
+        "text": "Nudging, also die Gestaltung von Entscheidungssituationen, nutzt diese Erkenntnisse für bessere gesellschaftliche Ergebnisse."
+      },
+      {
+        "speaker": "Podcaster",
+        "speaker_role": "dialogue_speaker",
+        "text": "In vielen Ländern werden Organspende-Register so gestaltet, dass man aktiv widersprechen muss statt aktiv zuzustimmen."
+      },
+      {
+        "speaker": "Podcaster",
+        "speaker_role": "dialogue_speaker",
+        "text": "Diese kleine Änderung der Standardoption erhöht die Spenderquote dramatisch, ohne die Entscheidungsfreiheit einzuschränken."
+      },
+      {
+        "speaker": "Podcaster",
+        "speaker_role": "dialogue_speaker",
+        "text": "Allerdings wirft Nudging auch ethische Fragen auf: Wann wird sanfte Lenkung zur unwürdigen Manipulation?"
+      },
+      {
+        "speaker": "Podcaster",
+        "speaker_role": "dialogue_speaker",
+        "text": "Kritiker argumentieren, dass Nudging die Autonomie des Einzelnen untergräbt und paternalistisch ist."
+      },
+      {
+        "speaker": "Podcaster",
+        "speaker_role": "dialogue_speaker",
+        "text": "Befürworter entgegnen, dass jede Gestaltung einer Entscheidungssituation unvermeidlich Einfluss auf die Wahl nimmt."
+      },
+      {
+        "speaker": "Podcaster",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die wichtigste Erkenntnis der Entscheidungsforschung ist vielleicht diese: Wir sind weniger rational als wir glauben."
+      },
+      {
+        "speaker": "Podcaster",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das war unser Podcast zur Psychologie der Entscheidungsfindung. Denken Sie darüber nach, aber vertrauen Sie nicht blind!"
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Ende Teil eins."
       }
     ]
   },
@@ -193,7 +265,7 @@
       "id": "l-c1-goethe-010-t1-lo-1",
       "cefrLevel": "C1",
       "skill": "listening",
-      "canDoVi": "Toi co the luyen nghe hieu o trinh do C1 qua chu de \"Psychologie der Entscheidungsfindung\".",
+      "canDoVi": "Tôi có thể luyện nghe hiểu ở trình độ C1 qua chủ đề \"Psychologie der Entscheidungsfindung\".",
       "canDoDe": "Ich kann Hoeren auf Niveau C1 zum Thema \"Psychologie der Entscheidungsfindung\" ueben.",
       "linkedContentIds": [
         "L-C1-GOETHE-010-T1"

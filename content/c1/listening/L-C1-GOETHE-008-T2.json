@@ -38,7 +38,7 @@
       "explanation": {
         "de": "Der Experte stellt klar, dass die somatische Gentherapie (die nur den Patienten betrifft) ethisch unproblematisch ist und nach denselben Prinzipien wie jede andere medizinische Behandlung bewertet wird, also keiner 'grundlegend neuen' Beurteilung bedarf.",
         "vi": "Chuyên gia làm rõ rằng liệu pháp gen soma (chỉ ảnh hưởng đến bệnh nhân) không có vấn đề về mặt đạo đức và được đánh giá theo các nguyên tắc tương tự như bất kỳ phương pháp điều trị y tế nào khác, do đó không cần một sự đánh giá 'hoàn toàn mới'.",
-        "key_evidence": "Die somatische Gentherapie, die nur den behandelten Patienten betrifft, halte ich für ethisch unproblematisch. Hier gilt das gleiche Prinzip wie bei jeder anderen medizinischen Behandlung...",
+        "key_evidence": "Die somatische Gentherapie, die nur den behandelten Patienten betrifft, halte ich für ethisch unproblematisch",
         "key_vocabulary": []
       }
     },
@@ -110,93 +110,172 @@
     ]
   },
   "transcript": {
-    "type": "full_reconstructed_transcript",
+    "type": "studio_source_transcript",
     "status": "complete",
-    "source": "reconstructed_full_script",
-    "quality": "release_candidate_reconstructed",
-    "note": "Full learner-visible reconstructed script created from existing question evidence because original studio scripts are not present in the repository. Replace with studio transcript if original audio scripts become available.",
+    "source": "studio_source_script",
+    "quality": "source_verified",
+    "sourceScript": "data/scripts/C1/Teil2-Experteninterview/L-C1-GOETHE-008-T2.json",
+    "note": "Transcript replaced from source script by scripts/apply-source-transcripts.ts.",
     "lines": [
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Der folgende anspruchsvolle Hoertext behandelt Medizinethik und Gentherapie. Achten Sie auf Aussage, Kontext und implizite Bedeutung."
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sie hören ein Interview. Dazu gibt es neun Aufgaben. Stimmt die Aussage, stimmt sie nicht, oder wird dazu nichts gesagt? Sie hören das Interview zweimal."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q1.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Herzlich willkommen! Unser Gast ist der Medizinethiker Professor Dr. Felix Kramer von der Charité Berlin."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Allerdings sind die Behandlungskosten mit Millionenbeträgen pro Patient derzeit astronomisch und ethisch problematisch.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Vielen Dank! Die Gentherapie stellt uns vor ethische Fragen, die die Menschheit noch nie beantworten musste."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q1 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Professor Kramer, wo stehen wir aktüll in der Entwicklung und Anwendung von Gentherapien?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q2.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wir stehen am Beginn einer therapeutischen Revolution: Über zweitausend klinische Studien zu Gentherapien laufen weltweit."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Die somatische Gentherapie, die nur den behandelten Patienten betrifft, halte ich für ethisch unproblematisch. Hier gilt das gleiche Prinzip wie bei jeder anderen medizinischen Behandlung...",
-        "linkedQuestionId": "Q2"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die ersten zugelassenen Therapien gegen Sichelzellenanämie und spinale Muskelatrophie zeigen bahnbrechende Ergebnisse."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q2 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Allerdings sind die Behandlungskosten mit Millionenbeträgen pro Patient derzeit astronomisch und ethisch problematisch."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q3.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wie bewerten Sie als Ethiker die aktülle Preisgestaltung von Gentherapien?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Wenn wir eine schwere genetische Erkrankung endgültig aus einer Familienlinie entfernen können, wäre es dann ethisch vertretbar, das nicht zu tun?",
-        "linkedQuestionId": "Q3"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Preise reflektieren die hohen Entwicklungskosten, aber sie schaffen eine Zweiklassenmedizin auf globaler Ebene."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q3 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wenn eine lebensrettende Therapie existiert, aber nur für Wohlhabende zugänglich ist, haben wir ein fundamentales Gerechtigkeitsproblem."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q4.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Welche Lösungsansätze gibt es für dieses Zugangsproblem?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Aber sein Fall zeigt auch, dass nationale Regulierung allein nicht ausreicht und wir internationale Standards brauchen.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ergebnisorientierte Bezahlmodelle, bei denen Pharmakonzerne nur bei Therapieerfolg die volle Summe erhalten."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q4 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Außerdem könnten internationale Fonds eingerichtet werden, die ärmeren Ländern den Zugang zu Gentherapien ermöglichen."
       },
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Ende des Hoertexts."
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ein drittes Modell ist die verpflichtende Lizenzierung an Generikahersteller nach einer begrenzten Patentlaufzeit."
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Kommen wir zur ethisch brisantesten Frage: die Keimbahntherapie. Wo ziehen Sie persönlich die Grenze?"
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die somatische Gentherapie, die nur den behandelten Patienten betrifft, halte ich für ethisch unproblematisch."
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Hier gilt das gleiche Prinzip wie bei jeder anderen medizinischen Behandlung: informierte Einwilligung und Nutzen-Risiko-Abwägung."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Keimbahntherapie hingegen betrifft alle zukünftigen Generationen und erfordert eine ganz andere ethische Bewertung."
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Was spricht denn aus ethischer Sicht für die Keimbahntherapie trotz ihrer enormen Tragweite?"
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wenn wir eine schwere genetische Erkrankung endgültig aus einer Familienlinie entfernen können, wäre es dann ethisch vertretbar, das nicht zu tun?"
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Eltern, die wissentlich eine Erbkrankheit an ihre Kinder weitergeben, obwohl eine Heilung existiert, handeln das moralisch?"
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Und was spricht dagegen, trotz dieser auf den ersten Blick überzeugenden Argumentation?"
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Unumkehrbarkeit: Ein Fehler in der Keimbahntherapie betrifft nicht einen, sondern potenziell Millionen zukünftiger Menschen."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Außerdem wissen wir nicht, welche Gene unter veränderten Umweltbedingungen vorteilhaft oder nachteilig sein könnten."
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Sichelzellmutation schützt zum Beispiel vor Malaria und ist in tropischen Regionen deshalb evolutionär vorteilhaft."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wie beurteilen Sie den Fall des chinesischen Forschers He Jiankui, der Embryonen genetisch verändert hat?"
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Als eklatanten Verstoß gegen wissenschaftliche und ethische Standards, der das Vertraün in die gesamte Genforschung beschädigt hat."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Aber sein Fall zeigt auch, dass nationale Regulierung allein nicht ausreicht und wir internationale Standards brauchen."
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Was empfehlen Sie der Gesellschaft im Umgang mit diesen neün technologischen Möglichkeiten?"
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Einen breiten gesellschaftlichen Dialog unter Einbeziehung von Patienten, Wissenschaftlern, Ethikern und der breiten Öffentlichkeit."
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Vielen Dank für dieses tiefgründige Gespräch, Professor Kramer!"
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Ende Teil zwei."
       }
     ]
   },
@@ -213,7 +292,7 @@
       "id": "l-c1-goethe-008-t2-lo-1",
       "cefrLevel": "C1",
       "skill": "listening",
-      "canDoVi": "Toi co the luyen nghe hieu o trinh do C1 qua chu de \"Medizinethik und Gentherapie\".",
+      "canDoVi": "Tôi có thể luyện nghe hiểu ở trình độ C1 qua chủ đề \"Medizinethik und Gentherapie\".",
       "canDoDe": "Ich kann Hoeren auf Niveau C1 zum Thema \"Medizinethik und Gentherapie\" ueben.",
       "linkedContentIds": [
         "L-C1-GOETHE-008-T2"

@@ -202,129 +202,162 @@
     ]
   },
   "transcript": {
-    "type": "full_reconstructed_transcript",
+    "type": "studio_source_transcript",
     "status": "complete",
-    "source": "reconstructed_full_script",
-    "quality": "release_candidate_reconstructed",
-    "note": "Full learner-visible reconstructed script created from existing question evidence because original studio scripts are not present in the repository. Replace with studio transcript if original audio scripts become available.",
+    "source": "studio_source_script",
+    "quality": "source_verified",
+    "sourceScript": "data/scripts/B2/Teil2-Radiointerview-mit-Experte/L-B2-GOETHE-012-T2.json",
+    "note": "Transcript replaced from source script by scripts/apply-source-transcripts.ts.",
     "lines": [
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Im folgenden Hoertext geht es um Künstliche Intelligenz im Alltag. Achten Sie auf die zentrale Information."
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sie hören ein Interview. Dazu gibt es sechs Aufgaben. Kreuzen Sie die richtige Antwort an. Sie hören das Interview zweimal."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q1.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Guten Abend! Unser heutiges Thema: Alternative Wohnformen. Bei uns im Studio ist die Architektin Sabine Koch."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Die Gründe sind vielfältig: steigende Mieten, der Wunsch nach Gemeinschaft und ein wachsendes Umweltbewusstsein.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Vielen Dank für die Einladung. Alternative Wohnformen sind mein Spezialgebiet seit über fünfzehn Jahren."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q1 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Frau Koch, warum suchen immer mehr Menschen nach Alternativen zur klassischen Mietwohnung?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q2.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Gründe sind vielfältig: steigende Mieten, der Wunsch nach Gemeinschaft und ein wachsendes Umweltbewusstsein."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Die Idee, dass man mit weniger glücklicher leben kann. Es ist auch eine Reaktion auf den Konsumüberfluss.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Welche alternativen Wohnformen beobachten Sie derzeit in Deutschland am häufigsten?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q2 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Baugruppen, Mehrgenerationenhäuser, Tiny Houses und zunehmend auch schwimmende Wohnformen auf Gewässern."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q3.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Tiny Houses sind ein großer Trend. Können Sie erklären, was die Faszination daran ausmacht?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Für Familien wird es allerdings schnell eng.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Idee, dass man mit weniger glücklicher leben kann. Es ist auch eine Reaktion auf den Konsumüberfluss."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q3 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Aber ist es realistisch, auf fünfunddreißig Quadratmetern komfortabel zu leben?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q4.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Für Einzelpersonen und Paare ohne Kinder durchaus. Für Familien wird es allerdings schnell eng."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Das hört sich nach einem langen und komplizierten Prozess an.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Welche baulichen Innovationen machen das Wohnen auf kleinstem Raum überhaupt möglich?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q4 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Multifunktionale Möbel, intelligente Stauraum-Lösungen und die konsequente Nutzung jedes Kubikmeters."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q5.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Lassen Sie uns über Baugruppen sprechen. Wie funktioniert dieses Modell in der Praxis?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Neben der Kostenersparnis von etwa zwanzig Prozent ist es vor allem die Mitbestimmung bei der Gestaltung.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Eine Gruppe von zwanzig bis vierzig Personen gründet eine Genossenschaft und baut gemeinsam ein Haus."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q5 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das hört sich nach einem langen und komplizierten Prozess an."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q6.",
-        "linkedQuestionId": "Q6"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "In der Tat dauert es von der Idee bis zum Einzug oft drei bis fünf Jahre."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Die Bauordnungen sind leider oft noch nicht auf diese neuen Wohnformen eingestellt.",
-        "linkedQuestionId": "Q6"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Welche Vorteile bieten Baugruppen gegenüber dem konventionellen Immobilienkauf?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q6 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q6"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Neben der Kostenersparnis von etwa zwanzig Prozent ist es vor allem die Mitbestimmung bei der Gestaltung."
       },
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Ende des Hoertexts."
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wie sieht die rechtliche Situation für alternative Wohnformen in Deutschland aus?"
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Bauordnungen sind leider oft noch nicht auf diese neuen Wohnformen eingestellt."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Können Sie ein konkretes Beispiel für rechtliche Hürden nennen?"
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Tiny Houses auf Rädern gelten rechtlich oft als Fahrzeuge und dürfen nicht dauerhaft bewohnt werden."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das klingt nach einem erheblichen bürokratischen Hindernis für die Bewohner."
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ja, viele Kommunen passen ihre Vorschriften aber gerade an die neuen Realitäten an."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ein Blick in die Zukunft: Wie werden wir in dreißig Jahren wohnen?"
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Flexibler, gemeinschaftlicher und nachhaltiger. Ich glaube, das Einfamilienhaus wird die Ausnahme werden."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Frau Koch, vielen Dank für Ihre faszinierenden Einblicke in die Zukunft des Wohnens!"
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Gerne! Und denken Sie daran: Wohnen ist nicht nur ein Dach über dem Kopf, sondern Lebensqualität."
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Ende Teil zwei."
       }
     ]
   },
@@ -341,7 +374,7 @@
       "id": "l-b2-goethe-012-t2-lo-1",
       "cefrLevel": "B2",
       "skill": "listening",
-      "canDoVi": "Toi co the luyen nghe hieu o trinh do B2 qua chu de \"Künstliche Intelligenz im Alltag\".",
+      "canDoVi": "Tôi có thể luyện nghe hiểu ở trình độ B2 qua chủ đề \"Künstliche Intelligenz im Alltag\".",
       "canDoDe": "Ich kann Hoeren auf Niveau B2 zum Thema \"Künstliche Intelligenz im Alltag\" ueben.",
       "linkedContentIds": [
         "L-B2-GOETHE-012-T2"

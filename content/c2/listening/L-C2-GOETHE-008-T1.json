@@ -108,75 +108,347 @@
     ]
   },
   "transcript": {
-    "type": "full_reconstructed_transcript",
+    "type": "studio_source_transcript",
     "status": "complete",
-    "source": "reconstructed_full_script",
-    "quality": "release_candidate_reconstructed",
-    "note": "Full learner-visible reconstructed script created from existing question evidence because original studio scripts are not present in the repository. Replace with studio transcript if original audio scripts become available.",
+    "source": "studio_source_script",
+    "quality": "source_verified",
+    "sourceScript": "data/scripts/C2/Teil1-Radiosendungen/L-C2-GOETHE-008-T1.json",
+    "note": "Transcript replaced from source script by scripts/apply-source-transcripts.ts.",
     "lines": [
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Der folgende anspruchsvolle Hoertext behandelt Algorithmische Empfehlungssysteme. Achten Sie auf Aussage, Kontext und implizite Bedeutung."
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sie hören fünf Radiosendungen. Zu jeder Sendung gibt es drei Aufgaben. Kreuzen Sie ja oder nein an. Sie hören jede Sendung einmal."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q1.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sendung 1."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Die empirische Evidenz für die Echokammer-These ist allerdings uneinheitlicher, als die öffentliche Debatte vermuten lässt, denn mehrere Studien konnten zeigen, dass Algorithmen auch zu einer gewissen ideologischen Diversifikation beitragen können.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Algorithmische Empfehlungssysteme haben sich in den letzten zwei Jahrzehnten von einer technologischen Kuriosität zu einer allgegenwärtigen Infrastruktur entwickelt, die unsere Informationsaufnahme, unser Konsumverhalten und letztlich unsere Weltwahrnehmung tiefgreifend prägt."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q1 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das Grundprinzip dieser Systeme besteht darin, aus dem vergangenen Verhalten eines Nutzers auf dessen zukünftige Präferenzen zu schließen und entsprechende Empfehlungen zu generieren, die wiederum das Verhalten beeinflussen."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q2.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "In ihrer elaboriertesten Ausprägung, wie sie etwa von Streaming-Diensten eingesetzt werden, verwenden diese Algorithmen Deep-Learning-Modelle, die Tausende von Variablen gleichzeitig verarbeiten und damit zu erstaunlich treffsicheren Vorhersagen gelangen."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "answer_evidence",
-        "text": "Dennoch bleibt die grundsätzliche Herausforderung bestehen, dass die Komplexität moderner Empfehlungsalgorithmen selbst für ihre Entwickler oft nicht vollständig nachvollziehbar ist, ein Phänomen, das als Black-Box-Problem bekannt ist.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Der wirtschaftliche Erfolg dieser Systeme ist überzeugend: Schätzungen zufolge werden achtzig Prozent der auf Netflix konsumierten Inhalte über algorithmische Empfehlungen ausgewählt, was Milliardenumsätze generiert."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q2 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die gesellschaftspolitische Kontroverse entzündet sich an der Frage, ob diese Algorithmen lediglich neutrale Werkzeuge der Informationsorganisation darstellen oder ob sie als mächtige Akteure der Kulturproduktion verstanden werden müssen."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q3.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ein besonders kritisch diskutierter Aspekt algorithmischer Empfehlungssysteme ist das Phänomen der sogenannten Echokammern, in denen Nutzer nur noch mit Inhalten konfrontiert werden, die ihre bestehenden Überzeugungen bestätigen."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "answer_evidence",
-        "text": "Die Regulierungsdebatte kreist daher um die Frage, ob und wie die algorithmische Kuratierung einer demokratischen Kontrolle unterworfen werden kann, ohne die technologische Innovation zu ersticken.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die empirische Evidenz für die Echokammer-These ist allerdings uneinheitlicher, als die öffentliche Debatte vermuten lässt, denn mehrere Studien konnten zeigen, dass Algorithmen auch zu einer gewissen ideologischen Diversifikation beitragen können."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q3 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Gleichwohl dokumentiert die Forschung ein beunruhigendes Muster: Die Algorithmen großer Plattformen tendieren dazu, emotional aufgeladene und polarisierende Inhalte zu bevorzugen, weil diese höhere Interaktionsraten generieren."
       },
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Ende des Hoertexts."
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Diese Aufmerksamkeitslogik hat insbesondere auf politischen und nachrichtenbezogenen Plattformen gravierende Konsequenzen, da sie Radikalisierungsprozesse begünstigen und populistische Inhalte systematisch amplifizieren kann."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Regulierungsdebatte kreist daher um die Frage, ob und wie die algorithmische Kuratierung einer demokratischen Kontrolle unterworfen werden kann, ohne die technologische Innovation zu ersticken."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Auf einer grundlegenderen erkenntnistheoretischen Ebene werfen algorithmische Empfehlungssysteme die Frage auf, was es für unser Selbstverständnis als autonome Subjekte bedeutet, wenn unsere Entscheidungen zunehmend von opaken technologischen Systemen beeinflusst werden."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Der Philosoph Luciano Floridi hat in diesem Zusammenhang den Begriff der Infosphäre geprägt, die als eine neue Schicht der Realität verstanden wird, in der die Grenzen zwischen Online und Offline, zwischen menschlichen und maschinellen Entscheidungen zunehmend verschwimmen."
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sendung 2."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Frage der algorithmischen Transparenz wird von zivilgesellschaftlichen Organisationen und Datenschützern mit zunehmender Dringlichkeit gestellt und hat mit dem europäischen Digital Services Act eine erste regulatorische Antwort erfahren."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Dennoch bleibt die grundsätzliche Herausforderung bestehen, dass die Komplexität moderner Empfehlungsalgorithmen selbst für ihre Entwickler oft nicht vollständig nachvollziehbar ist, ein Phänomen, das als Black-Box-Problem bekannt ist."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ob wir in der Lage sein werden, die Macht algorithmischer Systeme demokratisch einzuhegen, ohne auf die Vorteile der Personalisierung zu verzichten, gehört zu den definierenden politischen Fragen unserer Zeit."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Algorithmische Empfehlungssysteme haben sich in den letzten zwei Jahrzehnten von einer technologischen Kuriosität zu einer allgegenwärtigen Infrastruktur entwickelt, die unsere Informationsaufnahme, unser Konsumverhalten und letztlich unsere Weltwahrnehmung tiefgreifend prägt."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das Grundprinzip dieser Systeme besteht darin, aus dem vergangenen Verhalten eines Nutzers auf dessen zukünftige Präferenzen zu schließen und entsprechende Empfehlungen zu generieren, die wiederum das Verhalten beeinflussen."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "In ihrer elaboriertesten Ausprägung, wie sie etwa von Streaming-Diensten eingesetzt werden, verwenden diese Algorithmen Deep-Learning-Modelle, die Tausende von Variablen gleichzeitig verarbeiten und damit zu erstaunlich treffsicheren Vorhersagen gelangen."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Der wirtschaftliche Erfolg dieser Systeme ist überzeugend: Schätzungen zufolge werden achtzig Prozent der auf Netflix konsumierten Inhalte über algorithmische Empfehlungen ausgewählt, was Milliardenumsätze generiert."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die gesellschaftspolitische Kontroverse entzündet sich an der Frage, ob diese Algorithmen lediglich neutrale Werkzeuge der Informationsorganisation darstellen oder ob sie als mächtige Akteure der Kulturproduktion verstanden werden müssen."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ein besonders kritisch diskutierter Aspekt algorithmischer Empfehlungssysteme ist das Phänomen der sogenannten Echokammern, in denen Nutzer nur noch mit Inhalten konfrontiert werden, die ihre bestehenden Überzeugungen bestätigen."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die empirische Evidenz für die Echokammer-These ist allerdings uneinheitlicher, als die öffentliche Debatte vermuten lässt, denn mehrere Studien konnten zeigen, dass Algorithmen auch zu einer gewissen ideologischen Diversifikation beitragen können."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Gleichwohl dokumentiert die Forschung ein beunruhigendes Muster: Die Algorithmen großer Plattformen tendieren dazu, emotional aufgeladene und polarisierende Inhalte zu bevorzugen, weil diese höhere Interaktionsraten generieren."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Diese Aufmerksamkeitslogik hat insbesondere auf politischen und nachrichtenbezogenen Plattformen gravierende Konsequenzen, da sie Radikalisierungsprozesse begünstigen und populistische Inhalte systematisch amplifizieren kann."
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sendung 3."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Regulierungsdebatte kreist daher um die Frage, ob und wie die algorithmische Kuratierung einer demokratischen Kontrolle unterworfen werden kann, ohne die technologische Innovation zu ersticken."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Auf einer grundlegenderen erkenntnistheoretischen Ebene werfen algorithmische Empfehlungssysteme die Frage auf, was es für unser Selbstverständnis als autonome Subjekte bedeutet, wenn unsere Entscheidungen zunehmend von opaken technologischen Systemen beeinflusst werden."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Der Philosoph Luciano Floridi hat in diesem Zusammenhang den Begriff der Infosphäre geprägt, die als eine neue Schicht der Realität verstanden wird, in der die Grenzen zwischen Online und Offline, zwischen menschlichen und maschinellen Entscheidungen zunehmend verschwimmen."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Frage der algorithmischen Transparenz wird von zivilgesellschaftlichen Organisationen und Datenschützern mit zunehmender Dringlichkeit gestellt und hat mit dem europäischen Digital Services Act eine erste regulatorische Antwort erfahren."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Dennoch bleibt die grundsätzliche Herausforderung bestehen, dass die Komplexität moderner Empfehlungsalgorithmen selbst für ihre Entwickler oft nicht vollständig nachvollziehbar ist, ein Phänomen, das als Black-Box-Problem bekannt ist."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ob wir in der Lage sein werden, die Macht algorithmischer Systeme demokratisch einzuhegen, ohne auf die Vorteile der Personalisierung zu verzichten, gehört zu den definierenden politischen Fragen unserer Zeit."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Algorithmische Empfehlungssysteme haben sich in den letzten zwei Jahrzehnten von einer technologischen Kuriosität zu einer allgegenwärtigen Infrastruktur entwickelt, die unsere Informationsaufnahme, unser Konsumverhalten und letztlich unsere Weltwahrnehmung tiefgreifend prägt."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das Grundprinzip dieser Systeme besteht darin, aus dem vergangenen Verhalten eines Nutzers auf dessen zukünftige Präferenzen zu schließen und entsprechende Empfehlungen zu generieren, die wiederum das Verhalten beeinflussen."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "In ihrer elaboriertesten Ausprägung, wie sie etwa von Streaming-Diensten eingesetzt werden, verwenden diese Algorithmen Deep-Learning-Modelle, die Tausende von Variablen gleichzeitig verarbeiten und damit zu erstaunlich treffsicheren Vorhersagen gelangen."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Der wirtschaftliche Erfolg dieser Systeme ist überzeugend: Schätzungen zufolge werden achtzig Prozent der auf Netflix konsumierten Inhalte über algorithmische Empfehlungen ausgewählt, was Milliardenumsätze generiert."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die gesellschaftspolitische Kontroverse entzündet sich an der Frage, ob diese Algorithmen lediglich neutrale Werkzeuge der Informationsorganisation darstellen oder ob sie als mächtige Akteure der Kulturproduktion verstanden werden müssen."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ein besonders kritisch diskutierter Aspekt algorithmischer Empfehlungssysteme ist das Phänomen der sogenannten Echokammern, in denen Nutzer nur noch mit Inhalten konfrontiert werden, die ihre bestehenden Überzeugungen bestätigen."
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sendung 4."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die empirische Evidenz für die Echokammer-These ist allerdings uneinheitlicher, als die öffentliche Debatte vermuten lässt, denn mehrere Studien konnten zeigen, dass Algorithmen auch zu einer gewissen ideologischen Diversifikation beitragen können."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Gleichwohl dokumentiert die Forschung ein beunruhigendes Muster: Die Algorithmen großer Plattformen tendieren dazu, emotional aufgeladene und polarisierende Inhalte zu bevorzugen, weil diese höhere Interaktionsraten generieren."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Diese Aufmerksamkeitslogik hat insbesondere auf politischen und nachrichtenbezogenen Plattformen gravierende Konsequenzen, da sie Radikalisierungsprozesse begünstigen und populistische Inhalte systematisch amplifizieren kann."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Regulierungsdebatte kreist daher um die Frage, ob und wie die algorithmische Kuratierung einer demokratischen Kontrolle unterworfen werden kann, ohne die technologische Innovation zu ersticken."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Auf einer grundlegenderen erkenntnistheoretischen Ebene werfen algorithmische Empfehlungssysteme die Frage auf, was es für unser Selbstverständnis als autonome Subjekte bedeutet, wenn unsere Entscheidungen zunehmend von opaken technologischen Systemen beeinflusst werden."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Der Philosoph Luciano Floridi hat in diesem Zusammenhang den Begriff der Infosphäre geprägt, die als eine neue Schicht der Realität verstanden wird, in der die Grenzen zwischen Online und Offline, zwischen menschlichen und maschinellen Entscheidungen zunehmend verschwimmen."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Frage der algorithmischen Transparenz wird von zivilgesellschaftlichen Organisationen und Datenschützern mit zunehmender Dringlichkeit gestellt und hat mit dem europäischen Digital Services Act eine erste regulatorische Antwort erfahren."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Dennoch bleibt die grundsätzliche Herausforderung bestehen, dass die Komplexität moderner Empfehlungsalgorithmen selbst für ihre Entwickler oft nicht vollständig nachvollziehbar ist, ein Phänomen, das als Black-Box-Problem bekannt ist."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ob wir in der Lage sein werden, die Macht algorithmischer Systeme demokratisch einzuhegen, ohne auf die Vorteile der Personalisierung zu verzichten, gehört zu den definierenden politischen Fragen unserer Zeit."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Algorithmische Empfehlungssysteme haben sich in den letzten zwei Jahrzehnten von einer technologischen Kuriosität zu einer allgegenwärtigen Infrastruktur entwickelt, die unsere Informationsaufnahme, unser Konsumverhalten und letztlich unsere Weltwahrnehmung tiefgreifend prägt."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das Grundprinzip dieser Systeme besteht darin, aus dem vergangenen Verhalten eines Nutzers auf dessen zukünftige Präferenzen zu schließen und entsprechende Empfehlungen zu generieren, die wiederum das Verhalten beeinflussen."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "In ihrer elaboriertesten Ausprägung, wie sie etwa von Streaming-Diensten eingesetzt werden, verwenden diese Algorithmen Deep-Learning-Modelle, die Tausende von Variablen gleichzeitig verarbeiten und damit zu erstaunlich treffsicheren Vorhersagen gelangen."
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sendung 5."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Der wirtschaftliche Erfolg dieser Systeme ist überzeugend: Schätzungen zufolge werden achtzig Prozent der auf Netflix konsumierten Inhalte über algorithmische Empfehlungen ausgewählt, was Milliardenumsätze generiert."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die gesellschaftspolitische Kontroverse entzündet sich an der Frage, ob diese Algorithmen lediglich neutrale Werkzeuge der Informationsorganisation darstellen oder ob sie als mächtige Akteure der Kulturproduktion verstanden werden müssen."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ein besonders kritisch diskutierter Aspekt algorithmischer Empfehlungssysteme ist das Phänomen der sogenannten Echokammern, in denen Nutzer nur noch mit Inhalten konfrontiert werden, die ihre bestehenden Überzeugungen bestätigen."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die empirische Evidenz für die Echokammer-These ist allerdings uneinheitlicher, als die öffentliche Debatte vermuten lässt, denn mehrere Studien konnten zeigen, dass Algorithmen auch zu einer gewissen ideologischen Diversifikation beitragen können."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Gleichwohl dokumentiert die Forschung ein beunruhigendes Muster: Die Algorithmen großer Plattformen tendieren dazu, emotional aufgeladene und polarisierende Inhalte zu bevorzugen, weil diese höhere Interaktionsraten generieren."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Diese Aufmerksamkeitslogik hat insbesondere auf politischen und nachrichtenbezogenen Plattformen gravierende Konsequenzen, da sie Radikalisierungsprozesse begünstigen und populistische Inhalte systematisch amplifizieren kann."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Regulierungsdebatte kreist daher um die Frage, ob und wie die algorithmische Kuratierung einer demokratischen Kontrolle unterworfen werden kann, ohne die technologische Innovation zu ersticken."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Auf einer grundlegenderen erkenntnistheoretischen Ebene werfen algorithmische Empfehlungssysteme die Frage auf, was es für unser Selbstverständnis als autonome Subjekte bedeutet, wenn unsere Entscheidungen zunehmend von opaken technologischen Systemen beeinflusst werden."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Der Philosoph Luciano Floridi hat in diesem Zusammenhang den Begriff der Infosphäre geprägt, die als eine neue Schicht der Realität verstanden wird, in der die Grenzen zwischen Online und Offline, zwischen menschlichen und maschinellen Entscheidungen zunehmend verschwimmen."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Frage der algorithmischen Transparenz wird von zivilgesellschaftlichen Organisationen und Datenschützern mit zunehmender Dringlichkeit gestellt und hat mit dem europäischen Digital Services Act eine erste regulatorische Antwort erfahren."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Dennoch bleibt die grundsätzliche Herausforderung bestehen, dass die Komplexität moderner Empfehlungsalgorithmen selbst für ihre Entwickler oft nicht vollständig nachvollziehbar ist, ein Phänomen, das als Black-Box-Problem bekannt ist."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ob wir in der Lage sein werden, die Macht algorithmischer Systeme demokratisch einzuhegen, ohne auf die Vorteile der Personalisierung zu verzichten, gehört zu den definierenden politischen Fragen unserer Zeit."
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Ende Teil eins."
       }
     ]
   },
@@ -193,7 +465,7 @@
       "id": "l-c2-goethe-008-t1-lo-1",
       "cefrLevel": "C2",
       "skill": "listening",
-      "canDoVi": "Toi co the luyen nghe hieu o trinh do C2 qua chu de \"Algorithmische Empfehlungssysteme\".",
+      "canDoVi": "Tôi có thể luyện nghe hiểu ở trình độ C2 qua chủ đề \"Algorithmische Empfehlungssysteme\".",
       "canDoDe": "Ich kann Hoeren auf Niveau C2 zum Thema \"Algorithmische Empfehlungssysteme\" ueben.",
       "linkedContentIds": [
         "L-C2-GOETHE-008-T1"

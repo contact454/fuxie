@@ -125,93 +125,142 @@
     ]
   },
   "transcript": {
-    "type": "full_reconstructed_transcript",
+    "type": "studio_source_transcript",
     "status": "complete",
-    "source": "reconstructed_full_script",
-    "quality": "release_candidate_reconstructed",
-    "note": "Full learner-visible reconstructed script created from existing question evidence because original studio scripts are not present in the repository. Replace with studio transcript if original audio scripts become available.",
+    "source": "studio_source_script",
+    "quality": "source_verified",
+    "sourceScript": "data/scripts/A1/Teil2-Durchsagen-und-Ansagen/L-A1-GOETHE-005-T2.json",
+    "note": "Transcript replaced from source script by scripts/apply-source-transcripts.ts.",
     "lines": [
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Hoeren Sie eine kurze Information zum Thema Arzttermin machen."
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sie hören vier Ansagen. Zu jeder Ansage gibt es eine Aufgabe. Kreuzen Sie richtig oder falsch an. Sie hören jeden Text einmal."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q1.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Ansage 1."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Am Mittwochnachmittag ist die Praxis geschlossen.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Ansager",
+        "speaker_role": "dialogue_speaker",
+        "text": "Willkommen in der Praxis Dr. Müller. Unsere Sprechzeiten haben sich geändert."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q1 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Ansager",
+        "speaker_role": "dialogue_speaker",
+        "text": "Montag bis Freitag sind wir von acht bis zwölf Uhr geöffnet."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q2.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Ansager",
+        "speaker_role": "dialogue_speaker",
+        "text": "Nachmittags haben wir Sprechstunde von vierzehn bis siebzehn Uhr."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "answer_evidence",
-        "text": "Die Vertretung übernimmt Dr. Klein in der Berliner Straße zwölf.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Ansager",
+        "speaker_role": "dialogue_speaker",
+        "text": "Am Mittwochnachmittag ist die Praxis geschlossen."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q2 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Ansager",
+        "speaker_role": "dialogue_speaker",
+        "text": "Termine können Sie telefonisch oder online vereinbaren."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q3.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Ansage 2."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "answer_evidence",
-        "text": "Wenn Sie krank sind, tragen Sie bitte eine Maske.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Ansager",
+        "speaker_role": "dialogue_speaker",
+        "text": "Achtung, wichtige Information für alle Patienten."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q3 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Ansager",
+        "speaker_role": "dialogue_speaker",
+        "text": "Dr. Schneider ist vom ersten bis zum zehnten März im Urlaub."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q4.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Ansager",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Vertretung übernimmt Dr. Klein in der Berliner Straße zwölf."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "answer_evidence",
-        "text": "Die Notdienst-Apotheke ist Samstag und Sonntag von acht bis zwanzig Uhr geöffnet.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Ansager",
+        "speaker_role": "dialogue_speaker",
+        "text": "Bitte bringen Sie Ihre Versichertenkarte und Ihren Medikamentenplan mit."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q4 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Ansager",
+        "speaker_role": "dialogue_speaker",
+        "text": "Für Notfälle rufen Sie bitte die Nummer eins eins zwei an."
       },
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Ende des Hoertexts."
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Ansage 3."
+      },
+      {
+        "speaker": "Ansager",
+        "speaker_role": "dialogue_speaker",
+        "text": "Liebe Patienten, bitte beachten Sie unsere neuen Regeln."
+      },
+      {
+        "speaker": "Ansager",
+        "speaker_role": "dialogue_speaker",
+        "text": "Bitte kommen Sie pünktlich zu Ihrem Termin."
+      },
+      {
+        "speaker": "Ansager",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wenn Sie krank sind, tragen Sie bitte eine Maske."
+      },
+      {
+        "speaker": "Ansager",
+        "speaker_role": "dialogue_speaker",
+        "text": "Sagen Sie bitte vierundzwanzig Stunden vorher ab, wenn Sie nicht kommen können."
+      },
+      {
+        "speaker": "Ansager",
+        "speaker_role": "dialogue_speaker",
+        "text": "Vielen Dank für Ihr Verständnis und bleiben Sie gesund!"
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Ansage 4."
+      },
+      {
+        "speaker": "Ansager",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Apotheke am Marktplatz informiert über den Notdienst."
+      },
+      {
+        "speaker": "Ansager",
+        "speaker_role": "dialogue_speaker",
+        "text": "Am Wochenende hat die Apotheke in der Schillerstraße Notdienst."
+      },
+      {
+        "speaker": "Ansager",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Notdienst-Apotheke ist Samstag und Sonntag von acht bis zwanzig Uhr geöffnet."
+      },
+      {
+        "speaker": "Ansager",
+        "speaker_role": "dialogue_speaker",
+        "text": "Für dringende Medikamente außerhalb der Öffnungszeiten rufen Sie null eins eins fünf an."
+      },
+      {
+        "speaker": "Ansager",
+        "speaker_role": "dialogue_speaker",
+        "text": "Dort erfahren Sie, welche Apotheke Notdienst hat."
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Ende Teil zwei."
       }
     ]
   },
@@ -228,7 +277,7 @@
       "id": "l-a1-goethe-005-t2-lo-1",
       "cefrLevel": "A1",
       "skill": "listening",
-      "canDoVi": "Toi co the luyen nghe hieu o trinh do A1 qua chu de \"Arzttermin machen\".",
+      "canDoVi": "Tôi có thể luyện nghe hiểu ở trình độ A1 qua chủ đề \"Arzttermin machen\".",
       "canDoDe": "Ich kann Hoeren auf Niveau A1 zum Thema \"Arzttermin machen\" ueben.",
       "linkedContentIds": [
         "L-A1-GOETHE-005-T2"

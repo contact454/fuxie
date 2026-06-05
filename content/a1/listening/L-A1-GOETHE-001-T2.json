@@ -110,93 +110,142 @@
     ]
   },
   "transcript": {
-    "type": "full_reconstructed_transcript",
+    "type": "studio_source_transcript",
     "status": "complete",
-    "source": "reconstructed_full_script",
-    "quality": "release_candidate_reconstructed",
-    "note": "Full learner-visible reconstructed script created from existing question evidence because original studio scripts are not present in the repository. Replace with studio transcript if original audio scripts become available.",
+    "source": "studio_source_script",
+    "quality": "source_verified",
+    "sourceScript": "data/scripts/A1/Teil2-Durchsagen-und-Ansagen/L-A1-GOETHE-001-T2.json",
+    "note": "Transcript replaced from source script by scripts/apply-source-transcripts.ts.",
     "lines": [
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Hoeren Sie eine kurze Information zum Thema Sich vorstellen und begrüßen."
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sie hören vier Ansagen. Zu jeder Ansage gibt es eine Aufgabe. Kreuzen Sie richtig oder falsch an. Sie hören jeden Text einmal."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q1.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Ansage 1."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Der Kurs beginnt heute um neun Uhr.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Ansager",
+        "speaker_role": "dialogue_speaker",
+        "text": "Willkommen im Deutschkurs A1. Der Kurs beginnt heute um neun Uhr."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q1 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Ansager",
+        "speaker_role": "dialogue_speaker",
+        "text": "Bitte kommen Sie in Raum drei. Der Raum ist im ersten Stock."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q2.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Ansager",
+        "speaker_role": "dialogue_speaker",
+        "text": "Bringen Sie bitte Ihr Kursbuch mit. Sie brauchen auch einen Stift."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "answer_evidence",
-        "text": "Bitte bringen Sie Ihren Ausweis und eine Kopie Ihrer Anmeldung mit.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Ansager",
+        "speaker_role": "dialogue_speaker",
+        "text": "Der Unterricht dauert bis zwölf Uhr dreißig."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q2 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Ansager",
+        "speaker_role": "dialogue_speaker",
+        "text": "In der Pause gibt es Kaffee und Tee in der Cafeteria."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q3.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Ansage 2."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "answer_evidence",
-        "text": "Am Mittwoch beginnt der Kurs schon um acht Uhr dreißig.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Ansager",
+        "speaker_role": "dialogue_speaker",
+        "text": "Achtung bitte! Heute Nachmittag findet ein Infoabend statt."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q3 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Ansager",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wir informieren Sie über die Integrationskurse."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q4.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Ansager",
+        "speaker_role": "dialogue_speaker",
+        "text": "Der Infoabend beginnt um siebzehn Uhr in der Aula."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "answer_evidence",
-        "text": "Bitte melden Sie sich bis zum fünften Juni an.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Ansager",
+        "speaker_role": "dialogue_speaker",
+        "text": "Bitte bringen Sie Ihren Ausweis und eine Kopie Ihrer Anmeldung mit."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q4 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Ansager",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wir freuen uns auf Ihr Kommen. Vielen Dank."
       },
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Ende des Hoertexts."
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Ansage 3."
+      },
+      {
+        "speaker": "Ansager",
+        "speaker_role": "dialogue_speaker",
+        "text": "Liebe Kursteilnehmer, morgen ist kein Unterricht."
+      },
+      {
+        "speaker": "Ansager",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wir haben einen Feiertag. Der Kurs geht am Mittwoch weiter."
+      },
+      {
+        "speaker": "Ansager",
+        "speaker_role": "dialogue_speaker",
+        "text": "Am Mittwoch beginnt der Kurs schon um acht Uhr dreißig."
+      },
+      {
+        "speaker": "Ansager",
+        "speaker_role": "dialogue_speaker",
+        "text": "Bitte kommen Sie pünktlich. Wir haben viel zu lernen."
+      },
+      {
+        "speaker": "Ansager",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Hausaufgaben finden Sie auf Seite fünfzehn im Buch."
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Ansage 4."
+      },
+      {
+        "speaker": "Ansager",
+        "speaker_role": "dialogue_speaker",
+        "text": "Achtung! Die Prüfung Start Deutsch eins findet am zwanzigsten Juni statt."
+      },
+      {
+        "speaker": "Ansager",
+        "speaker_role": "dialogue_speaker",
+        "text": "Bitte melden Sie sich bis zum fünften Juni an."
+      },
+      {
+        "speaker": "Ansager",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Anmeldung ist am Empfang im Erdgeschoss."
+      },
+      {
+        "speaker": "Ansager",
+        "speaker_role": "dialogue_speaker",
+        "text": "Sie brauchen ein Passfoto und fünfzig Euro Prüfungsgebühr."
+      },
+      {
+        "speaker": "Ansager",
+        "speaker_role": "dialogue_speaker",
+        "text": "Bei Fragen wenden Sie sich bitte an Frau Müller im Sekretariat."
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Ende Teil zwei."
       }
     ]
   },
@@ -213,7 +262,7 @@
       "id": "l-a1-goethe-001-t2-lo-1",
       "cefrLevel": "A1",
       "skill": "listening",
-      "canDoVi": "Toi co the luyen nghe hieu o trinh do A1 qua chu de \"Sich vorstellen und begrüßen\".",
+      "canDoVi": "Tôi có thể luyện nghe hiểu ở trình độ A1 qua chủ đề \"Sich vorstellen und begrüßen\".",
       "canDoDe": "Ich kann Hoeren auf Niveau A1 zum Thema \"Sich vorstellen und begrüßen\" ueben.",
       "linkedContentIds": [
         "L-A1-GOETHE-001-T2"

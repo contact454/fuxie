@@ -380,7 +380,7 @@
           "ihr": "kennt",
           "sie_Sie": "kennen"
         },
-        "isIrregular": false,
+        "isIrregular": true,
         "isSeparable": false
       },
       "exampleSentence1": "Ich kenne Maria.",
@@ -439,20 +439,6 @@
       "meaningDe": "jemanden sehr mögen"
     },
     {
-      "word": "Verwandte",
-      "article": "MASKULIN",
-      "plural": "die Verwandten",
-      "wordType": "NOMEN",
-      "meaningVi": "người họ hàng",
-      "meaningEn": "relative",
-      "exampleSentence1": "Ich habe viele Verwandte.",
-      "exampleTranslation1": "Tôi có nhiều họ hàng.",
-      "exampleSentence2": "Meine Verwandten wohnen in Vietnam.",
-      "exampleTranslation2": "Họ hàng tôi sống ở Việt Nam.",
-      "imageUrl": "/images/vocab/a1-familie-freunde/verwandte.png",
-      "meaningDe": "Personen in der Familie"
-    },
-    {
       "word": "Paar",
       "article": "NEUTRUM",
       "plural": "die Paare",
@@ -465,44 +451,6 @@
       "exampleTranslation2": "Một đôi giày, xin vui lòng.",
       "imageUrl": "/images/vocab/a1-familie-freunde/paar.png",
       "meaningDe": "zwei Personen zusammen"
-    },
-    {
-      "word": "Hochzeit",
-      "article": "FEMININ",
-      "plural": "die Hochzeiten",
-      "wordType": "NOMEN",
-      "meaningVi": "đám cưới",
-      "meaningEn": "wedding",
-      "exampleSentence1": "Die Hochzeit ist im Mai.",
-      "exampleTranslation1": "Đám cưới vào tháng 5.",
-      "exampleSentence2": "Ich gehe zur Hochzeit.",
-      "exampleTranslation2": "Tôi đi dự đám cưới.",
-      "imageUrl": "/images/vocab/a1-familie-freunde/hochzeit.png",
-      "meaningDe": "das Fest zum Heiraten"
-    },
-    {
-      "word": "heiraten",
-      "wordType": "VERB",
-      "meaningVi": "kết hôn",
-      "meaningEn": "to marry",
-      "conjugation": {
-        "praesens": {
-          "ich": "heirate",
-          "du": "heiratest",
-          "er_sie_es": "heiratet",
-          "wir": "heiraten",
-          "ihr": "heiratet",
-          "sie_Sie": "heiraten"
-        },
-        "isIrregular": false,
-        "isSeparable": false
-      },
-      "exampleSentence1": "Wir heiraten nächstes Jahr.",
-      "exampleTranslation1": "Chúng tôi kết hôn năm tới.",
-      "exampleSentence2": "Wann heiratet ihr?",
-      "exampleTranslation2": "Khi nào các bạn kết hôn?",
-      "imageUrl": "/images/vocab/a1-familie-freunde/heiraten.png",
-      "meaningDe": "eine Ehe schließen"
     }
   ],
   "cefrAudit": {
@@ -518,7 +466,7 @@
       "id": "a1-familie-freunde-lo-1",
       "cefrLevel": "A1",
       "skill": "vocabulary",
-      "canDoVi": "Toi co the luyen tu vung o trinh do A1 qua chu de \"Familie und Freunde\".",
+      "canDoVi": "Tôi có thể luyện từ vựng ở trình độ A1 qua chủ đề \"Familie und Freunde\".",
       "canDoDe": "Ich kann Wortschatz auf Niveau A1 zum Thema \"Familie und Freunde\" ueben.",
       "linkedContentIds": [
         "a1-familie-freunde"

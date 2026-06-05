@@ -65,7 +65,7 @@
       "explanation": {
         "de": "Die Vorschläge des Dozenten (frühkindliche Bildung, anonymisierte Bewerbungen im öffentlichen Dienst, Diversität in Institutionen, gesellschaftlicher Narrativ) zielen auf eine umfassende Veränderung ab. Sie betreffen sowohl institutionelle Abläufe als auch die allgemeine Denkweise über Vielfalt. Option (c) fasst dieses breite Ziel korrekt zusammen. Option (a) ist ein lexikalischer Trugschluss; der öffentliche Dienst soll 'verpflichtend' handeln und als 'Vorbild für die Privatwirtschaft' dienen, diese wird aber nicht direkt verpflichtet. Option (b) ist zu eng gefasst, da die frühkindliche Bildung nur einer von vier genannten Punkten ist.",
         "vi": "Các đề xuất của giảng viên (giáo dục mầm non, quy trình ứng tuyển ẩn danh trong khu vực công, sự đa dạng trong các tổ chức, câu chuyện xã hội) nhằm mục đích thay đổi toàn diện. Chúng ảnh hưởng đến cả quy trình của các thể chế và cách suy nghĩ chung về sự đa dạng. Lựa chọn (c) tóm tắt chính xác mục tiêu rộng lớn này. Lựa chọn (a) là một cái bẫy từ vựng; khu vực công phải hành động 'bắt buộc' và đóng vai trò là 'hình mẫu cho khu vực tư nhân', nhưng khu vực tư nhân không bị bắt buộc trực tiếp. Lựa chọn (b) quá hẹp, vì giáo dục mầm non chỉ là một trong bốn điểm được đề cập.",
-        "key_evidence": "Drittens: Diversität in öffentlichen Institutionen fördern, damit sich die Zusammensetzung der Gesellschaft in ihren Institutionen widerspiegelt. Viertens: Einen gesellschaftlichen Narrativ entwickeln, der Vielfalt als Stärke und Bereicherung begreift."
+        "key_evidence": "Diversität in öffentlichen Institutionen fördern, damit sich die Zusammensetzung der Gesellschaft in ihren Institutionen widerspiegelt"
       }
     }
   ],
@@ -108,75 +108,162 @@
     ]
   },
   "transcript": {
-    "type": "full_reconstructed_transcript",
+    "type": "studio_source_transcript",
     "status": "complete",
-    "source": "reconstructed_full_script",
-    "quality": "release_candidate_reconstructed",
-    "note": "Full learner-visible reconstructed script created from existing question evidence because original studio scripts are not present in the repository. Replace with studio transcript if original audio scripts become available.",
+    "source": "studio_source_script",
+    "quality": "source_verified",
+    "sourceScript": "data/scripts/C1/Teil4-Vortrag/L-C1-GOETHE-007-T4.json",
+    "note": "Transcript replaced from source script by scripts/apply-source-transcripts.ts.",
     "lines": [
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Der folgende anspruchsvolle Hoertext behandelt Migration und Integration. Achten Sie auf Aussage, Kontext und implizite Bedeutung."
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sie hören einen Vortrag. Dazu gibt es sieben Aufgaben. Kreuzen Sie die richtige Antwort an. Sie hören den Vortrag einmal."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q1.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Meine Damen und Herren, willkommen zu meinem Vortrag über Integration als gesellschaftliche Querschnittsaufgabe."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "answer_evidence",
-        "text": "Die schlechte Nachricht: Diskriminierung bleibt hartnäckig bestehen und untergräbt die Integrationsfortschritte systematisch.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ich werde heute argumentieren, dass gelungene Integration die Voraussetzung für den gesellschaftlichen Zusammenhalt in einer diversen Gesellschaft ist."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q1 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Deutschland hat sich von einem Gastarbeiterland zu einer der vielfältigsten Gesellschaften Europas entwickelt."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q2.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Über zweiundzwanzig Millionen Menschen in Deutschland haben einen Migrationshintergrund, das sind siebenundzwanzig Prozent der Bevölkerung."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "answer_evidence",
-        "text": "Dieser Befund ist empirisch vielfach belegt und zeigt, dass nicht nur individuelle, sondern strukturelle Maßnahmen nötig sind.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Diese Vielfalt ist Realität und wird sich durch demografischen Wandel und globale Migration weiter verstärken."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q2 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Frage ist nicht ob, sondern wie wir diese Vielfalt so gestalten, dass sie den gesellschaftlichen Zusammenhalt stärkt."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q3.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Lassen Sie mich zunächst die verschiedenen Dimensionen der Integration systematisch darstellen und analysieren."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "answer_evidence",
-        "text": "Drittens: Diversität in öffentlichen Institutionen fördern, damit sich die Zusammensetzung der Gesellschaft in ihren Institutionen widerspiegelt. Viertens: Einen gesellschaftlichen Narrativ entwickeln, der Vielfalt als Stärke und Bereicherung begreift.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Strukturelle Integration umfasst den Zugang zu Bildung, Arbeitsmarkt, Wohnungsmarkt und sozialen Sicherungssystemen."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q3 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Sie ist die messbarste Dimension und zeigt sowohl Fortschritte als auch hartnäckige Defizite und Ungleichheiten."
       },
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Ende des Hoertexts."
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Kulturelle Integration betrifft Sprachkenntnisse, gesellschaftliche Werte und die Partizipation am kulturellen Leben der Gesellschaft."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Soziale Integration meint die persönlichen Beziehungen zwischen Zugewanderten und der Aufnahmegesellschaft im Alltag."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Und identifikatorische Integration fragt danach, ob Menschen sich als Teil der Gesellschaft fühlen und empfinden."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Alle vier Dimensionen sind wichtig und bedingen sich gegenseitig: Ohne strukturelle Integration keine soziale.',"
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Lassen Sie mich nun die empirische Forschungslage zur Integration in Deutschland zusammenfassen."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die gute Nachricht: Die Integration der zweiten und dritten Generation macht messbare Fortschritte."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Bildungsabschlüsse verbessern sich, die Erwerbsquote steigt und die Deutschkenntnisse der jüngeren Generationen sind hervorragend."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die schlechte Nachricht: Diskriminierung bleibt hartnäckig bestehen und untergräbt die Integrationsfortschritte systematisch."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ein besonders gravierendes Problem ist die institutionelle Diskriminierung im Bildungssystem unseres Landes."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Kinder mit Migrationshintergrund erhalten bei gleicher Leistung seltener eine Gymnasialempfehlung als Kinder ohne Migrationshintergrund."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Dieser Befund ist empirisch vielfach belegt und zeigt, dass nicht nur individuelle, sondern strukturelle Maßnahmen nötig sind."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Wohnungsmarktdiskriminierung ist ein weiteres gravierendes Problem, das die räumliche Segregation in deutschen Städten verstärkt."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Studien zeigen, dass Wohnungsbewerbungen mit fremdklingenden Namen signifikant seltener zu Besichtigungsterminen führen."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Was muss die Politik tun, um Integration systematisch zu verbessern und Diskriminierung wirksam zu bekämpfen?"
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Erstens: Frühkindliche Bildung massiv ausbauen, weil in den ersten Lebensjahren die Grundlage für späteren Erfolg gelegt wird."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Zweitens: Anonymisierte Bewerbungsverfahren im öffentlichen Dienst verpflichtend einführen und als Vorbild für die Privatwirtschaft dienen."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Drittens: Diversität in öffentlichen Institutionen fördern, damit sich die Zusammensetzung der Gesellschaft in ihren Institutionen widerspiegelt."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Viertens: Einen gesellschaftlichen Narrativ entwickeln, der Vielfalt als Stärke und Bereicherung begreift.',"
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Vielen Dank für Ihre Aufmerksamkeit! Integration ist eine Generationenaufgabe, die uns alle betrifft und von uns allen profitiert."
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Ende des Hörverstehens."
       }
     ]
   },
@@ -193,7 +280,7 @@
       "id": "l-c1-goethe-007-t4-lo-1",
       "cefrLevel": "C1",
       "skill": "listening",
-      "canDoVi": "Toi co the luyen nghe hieu o trinh do C1 qua chu de \"Migration und Integration\".",
+      "canDoVi": "Tôi có thể luyện nghe hiểu ở trình độ C1 qua chủ đề \"Migration und Integration\".",
       "canDoDe": "Ich kann Hoeren auf Niveau C1 zum Thema \"Migration und Integration\" ueben.",
       "linkedContentIds": [
         "L-C1-GOETHE-007-T4"

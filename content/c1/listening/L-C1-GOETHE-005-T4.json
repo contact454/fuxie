@@ -29,7 +29,7 @@
       "explanation": {
         "de": "Die richtige Antwort ist b, da der Dozent explizit darauf hinweist, dass die Klimapolitik die 'Materialseite der Gleichung' vernachlässigt, was er als 'gravierender blinder Fleck' bezeichnet. Option a ist eine lexikalische Falle; der Dozent sagt, die Politik 'konzentriert sich' auf die Energiewende, nicht 'ausschließlich'. Option c ist falsch, da Deponierung und Verbrennung als Teil des Problems dargestellt werden, nicht als unterschätzte Lösungen.",
         "vi": "Đáp án đúng là b, vì giảng viên chỉ ra một cách rõ ràng rằng chính sách khí hậu bỏ qua 'phía vật liệu của phương trình', điều mà ông gọi là một 'điểm mù nghiêm trọng'. Lựa chọn a là một cái bẫy từ vựng; giảng viên nói rằng chính sách 'tập trung' vào chuyển đổi năng lượng, chứ không phải 'chỉ riêng'. Lựa chọn c là sai, vì việc chôn lấp và đốt rác được trình bày là một phần của vấn đề, không phải là các giải pháp bị đánh giá thấp.",
-        "key_evidence": "Die klassische Klimapolitik konzentriert sich auf die Energiewende, vernachlässigt aber die Materialseite der Gleichung. Das ist ein gravierender blinder Fleck, den wir in unserer Klimastrategie dringend korrigieren müssen."
+        "key_evidence": "Die klassische Klimapolitik konzentriert sich auf die Energiewende, vernachlässigt aber die Materialseite der Gleichung"
       }
     },
     {
@@ -65,7 +65,7 @@
       "explanation": {
         "de": "Die richtige Antwort ist a. Der Dozent identifiziert das 'derzeitige Preissystem, das Umweltkosten externalisiert' als die 'größte Hürde'. Dies wird dadurch untermauert, dass neue Rohstoffe billiger sind, weil 'ökologische Kosten nicht eingepreist sind'. Option b ist falsch, da der Dozent eine EU-Initiative (Carbon Border Adjustment Mechanism) als 'ersten Schritt' erwähnt, was zeigt, dass es Initiativen gibt, auch wenn sie nicht ausreichen. Option c ist eine lexikalische Falle, die 'Fahrzeugbestand' aus dem Text nimmt, aber der Dozent stellt Carsharing als Potenzial dar, nicht als technologische Unmöglichkeit.",
         "vi": "Đáp án đúng là a. Giảng viên xác định 'hệ thống giá hiện tại ngoại hóa chi phí môi trường' là 'rào cản lớn nhất'. Điều này được củng cố bởi thực tế là nguyên liệu thô mới rẻ hơn vì 'chi phí sinh thái không được tính vào giá'. Lựa chọn b là sai, vì giảng viên đề cập đến một sáng kiến của EU (Cơ chế điều chỉnh biên giới carbon) là 'bước đầu tiên', cho thấy rằng có các sáng kiến, mặc dù chúng chưa đủ. Lựa chọn c là một cái bẫy từ vựng lấy từ 'lượng xe' từ văn bản, nhưng giảng viên trình bày việc chia sẻ xe hơi như một tiềm năng, không phải là một sự bất khả thi về công nghệ.",
-        "key_evidence": "Die größte Hürde für die Kreislaufwirtschaft ist das derzeitige Preissystem, das Umweltkosten externalisiert. Neue Rohstoffe sind oft billiger als Recyclingmaterialien, weil die ökologischen Kosten nicht eingepreist sind."
+        "key_evidence": "Die größte Hürde für die Kreislaufwirtschaft ist das derzeitige Preissystem, das Umweltkosten externalisiert"
       }
     }
   ],
@@ -108,75 +108,162 @@
     ]
   },
   "transcript": {
-    "type": "full_reconstructed_transcript",
+    "type": "studio_source_transcript",
     "status": "complete",
-    "source": "reconstructed_full_script",
-    "quality": "release_candidate_reconstructed",
-    "note": "Full learner-visible reconstructed script created from existing question evidence because original studio scripts are not present in the repository. Replace with studio transcript if original audio scripts become available.",
+    "source": "studio_source_script",
+    "quality": "source_verified",
+    "sourceScript": "data/scripts/C1/Teil4-Vortrag/L-C1-GOETHE-005-T4.json",
+    "note": "Transcript replaced from source script by scripts/apply-source-transcripts.ts.",
     "lines": [
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Der folgende anspruchsvolle Hoertext behandelt Kreislaufwirtschaft und Klimawandel. Achten Sie auf Aussage, Kontext und implizite Bedeutung."
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sie hören einen Vortrag. Dazu gibt es sieben Aufgaben. Kreuzen Sie die richtige Antwort an. Sie hören den Vortrag einmal."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q1.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Willkommen zu meinem Vortrag über Kreislaufwirtschaft als Strategie gegen den Klimawandel."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Die klassische Klimapolitik konzentriert sich auf die Energiewende, vernachlässigt aber die Materialseite der Gleichung. Das ist ein gravierender blinder Fleck, den wir in unserer Klimastrategie dringend korrigieren müssen.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ich werde heute argumentieren, dass die Kreislaufwirtschaft ein unverzichtbarer Baustein jeder ernsthaften Klimaschutzstrategie ist."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q1 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Zunächst einige Zahlen, die die Dringlichkeit verdeutlichen: Die Weltwirtschaft verbraucht jährlich über hundert Milliarden Tonnen Rohstoffe."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q2.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Davon werden nur neun Prozent zurückgewonnen und wieder in den Kreislauf eingespeist, der Rest wird deponiert oder verbrannt."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Downcycling, bei dem die Materialqualität sinkt, ist nur eine Übergangslösung und kein echtes Kreislaufmodell.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Rohstoffgewinnung und Materialverarbeitung verursacht sechzig Prozent der weltweiten Treibhausgasemissionen."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q2 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Selbst wenn wir den Energiesektor vollständig dekarbonisieren, können wir die Klimaziele ohne Kreislaufwirtschaft nicht erreichen."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q3.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die klassische Klimapolitik konzentriert sich auf die Energiewende, vernachlässigt aber die Materialseite der Gleichung."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Die größte Hürde für die Kreislaufwirtschaft ist das derzeitige Preissystem, das Umweltkosten externalisiert. Neue Rohstoffe sind oft billiger als Recyclingmaterialien, weil die ökologischen Kosten nicht eingepreist sind.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das ist ein gravierender blinder Fleck, den wir in unserer Klimastrategie dringend korrigieren müssen."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q3 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Lassen Sie mich nun die drei wichtigsten Strategien der Kreislaufwirtschaft für den Klimaschutz erläutern."
       },
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Ende des Hoertexts."
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Erstens: Materialeffizienz, also die Herstellung von Produkten mit weniger Rohstoff bei gleicher oder besserer Qualität."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Leichtbau in der Automobilindustrie ist ein gutes Beispiel: weniger Material bedeutet weniger Energieverbrauch beim Fahren."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Zweitens: Produktlebensdauer verlängern durch modulares Design, einfache Reparierbarkeit und konsequente Software-Updates."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ein Smartphone, das acht statt drei Jahre genutzt wird, spart über sechzig Prozent seiner Klimawirkung ein."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Drittens: Hochwertige Kreislaufführung, also das Recycling von Materialien in gleicher oder höherer Qualitätsstufe."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Downcycling, bei dem die Materialqualität sinkt, ist nur eine Übergangslösung und kein echtes Kreislaufmodell."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Lassen Sie mich nun die sektoralen Potenziale der Kreislaufwirtschaft für den Klimaschutz quantifizieren."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Im Bausektor könnte die Kreislaufwirtschaft die Emissionen um dreißig Prozent senken, vor allem durch Wiederverwendung von Baumaterialien."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Im Textilsektor wäre eine Halbierung der Emissionen möglich, wenn Kleidung doppelt so lange getragen und danach recycelt würde."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Im Elektroniksektor liegen die Potenziale bei vierzig Prozent Emissionsreduktion durch längere Nutzung und besseres Recycling."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "In der Mobilität könnte Carsharing den Fahrzeugbestand in Städten um siebzig Prozent reduzieren."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die größte Hürde für die Kreislaufwirtschaft ist das derzeitige Preissystem, das Umweltkosten externalisiert."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Neue Rohstoffe sind oft billiger als Recyclingmaterialien, weil die ökologischen Kosten nicht eingepreist sind."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Eine CO2-Steuer und eine Ressourcensteuer würden die Preise korrigieren und Kreislaufmodelle wettbewerbsfähig machen."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die EU hat mit dem Carbon Border Adjustment Mechanism einen ersten Schritt in diese Richtung unternommen."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Aber wir brauchen eine umfassendere Reform des gesamten Steuer- und Subventionssystems für die Kreislaufwirtschaft."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Abschließend: Die Kreislaufwirtschaft ist nicht die alleinige Lösung für den Klimawandel, aber ohne sie ist Klimaschutz unmöglich."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Sie verbindet ökologische Notwendigkeit mit ökonomischer Chance und hat das Potenzial, unsere Wirtschaft grundlegend zu transformieren."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Vielen Dank! Ich freue mich auf eine lebhafte Diskussion über die Zukunft unserer Wirtschaft!"
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Ende des Hörverstehens."
       }
     ]
   },
@@ -193,7 +280,7 @@
       "id": "l-c1-goethe-005-t4-lo-1",
       "cefrLevel": "C1",
       "skill": "listening",
-      "canDoVi": "Toi co the luyen nghe hieu o trinh do C1 qua chu de \"Kreislaufwirtschaft und Klimawandel\".",
+      "canDoVi": "Tôi có thể luyện nghe hiểu ở trình độ C1 qua chủ đề \"Kreislaufwirtschaft und Klimawandel\".",
       "canDoDe": "Ich kann Hoeren auf Niveau C1 zum Thema \"Kreislaufwirtschaft und Klimawandel\" ueben.",
       "linkedContentIds": [
         "L-C1-GOETHE-005-T4"

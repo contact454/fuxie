@@ -24,7 +24,7 @@
       "explanation": {
         "de": "Der zweite Sprecher fragt zunächst skeptisch: 'Und das hilft wirklich bei der Konzentration? Ich bin nach zehn Minuten immer schon abgelenkt.' Er entscheidet sich erst später, die Technik auszuprobieren.",
         "vi": "Người nói thứ hai ban đầu hỏi một cách hoài nghi: 'Và điều đó thực sự giúp tập trung sao? Tôi luôn bị phân tâm sau mười phút.' Anh ấy chỉ quyết định thử kỹ thuật này sau đó.",
-        "key_evidence": "Und das hilft wirklich bei der Konzentration? Ich bin nach zehn Minuten immer schon abgelenkt. Ich glaube, ich probiere das morgen im Büro aus.",
+        "key_evidence": "Und das hilft wirklich bei der Konzentration",
         "key_vocabulary": [
           "überzeugt",
           "Konzentration",
@@ -177,7 +177,7 @@
       "explanation": {
         "de": "Der erste Sprecher nennt 'Wichtig aber nicht dringend!' als die vernachlässigte Kategorie, und der zweite Sprecher ergänzt: 'Weil immer die dringenden Sachen reinkommen und alles andere verdrängen.'",
         "vi": "Người nói thứ nhất gọi 'Quan trọng nhưng không khẩn cấp!' là loại bị bỏ qua, và người nói thứ hai bổ sung: 'Vì những việc khẩn cấp luôn xuất hiện và đẩy lùi mọi thứ khác.'",
-        "key_evidence": "Sprecher1_4: Wichtig aber nicht dringend! Sprecher2_4: Weil immer die dringenden Sachen reinkommen und alles andere verdrängen.",
+        "key_evidence": "Wichtig aber nicht dringend",
         "key_vocabulary": [
           "vernachlässigt",
           "dringend",
@@ -197,7 +197,7 @@
       "explanation": {
         "de": "Der zweite Sprecher ist produktiver, aber der erste Sprecher sagt: 'Bei mir ist es umgekehrt. Zu Hause lenken mich der Haushalt, der Kühlschrank und die Couch ab.'",
         "vi": "Người nói thứ hai làm việc hiệu quả hơn, nhưng người nói thứ nhất nói: 'Với tôi thì ngược lại. Ở nhà, công việc nhà, tủ lạnh và ghế sofa làm tôi mất tập trung.'",
-        "key_evidence": "Sprecher2_5: Ich bin zu Hause definitiv produktiver... Sprecher1_5: Bei mir ist es umgekehrt. Zu Hause lenken mich der Haushalt, der Kühlschrank und die Couch ab.",
+        "key_evidence": "Ich bin zu Hause definitiv produktiver",
         "key_vocabulary": [
           "einig",
           "Produktivität",
@@ -273,201 +273,247 @@
     ]
   },
   "transcript": {
-    "type": "full_reconstructed_transcript",
+    "type": "studio_source_transcript",
     "status": "complete",
-    "source": "reconstructed_full_script",
-    "quality": "release_candidate_reconstructed",
-    "note": "Full learner-visible reconstructed script created from existing question evidence because original studio scripts are not present in the repository. Replace with studio transcript if original audio scripts become available.",
+    "source": "studio_source_script",
+    "quality": "source_verified",
+    "sourceScript": "data/scripts/B2/Teil1-Alltagsaeusserungen/L-B2-GOETHE-003-T1.json",
+    "note": "Transcript replaced from source script by scripts/apply-source-transcripts.ts.",
     "lines": [
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Im folgenden Hoertext geht es um Arbeitstechniken und Konzentration. Achten Sie auf die zentrale Information."
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sie hören fünf Äußerungen aus dem Alltag. Zu jeder Äußerung gibt es zwei Aufgaben. Kreuzen Sie die richtige Antwort an. Sie hören jeden Text einmal."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q1.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Äußerung 1."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Und das hilft wirklich bei der Konzentration? Ich bin nach zehn Minuten immer schon abgelenkt. Ich glaube, ich probiere das morgen im Büro aus.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Sprecher1_1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ich habe diese Woche die Pomodoro-Technik ausprobiert und bin davon total begeistert."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q1 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Sprecher2_1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Was ist das genau? Das klingt wie eine italienische Kochtechnik für Tomatensoße."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q2.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Sprecher1_1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Fast! Der Name kommt tatsächlich von einer tomatenförmigen Küchenuhr."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Ja, weil man weiß, dass die konzentrierte Phase zeitlich begrenzt ist.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Sprecher2_1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Man arbeitet fünfundzwanzig Minuten konzentriert und macht dann fünf Minuten Pause."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q2 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Sprecher1_1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Nach vier solchen Einheiten macht man eine längere Pause von fünfzehn bis dreißig Minuten."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q3.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Sprecher2_1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Und das hilft wirklich bei der Konzentration? Ich bin nach zehn Minuten immer schon abgelenkt."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "answer_evidence",
-        "text": "Aber ich brauche morgens zuerst meinen Kaffee und einen Überblick über meine E-Mails.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Sprecher1_1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ja, weil man weiß, dass die konzentrierte Phase zeitlich begrenzt ist."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q3 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Sprecher2_1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ich glaube, ich probiere das morgen im Büro aus. Hast du eine App-Empfehlung dafür?"
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q4.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Äußerung 2."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "answer_evidence",
-        "text": "Die Idee ist: Wenn du morgens den Frosch isst, wird der Rest des Tages leichter.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Sprecher1_2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Mein Chef hat mir geraten, morgens keine E-Mails zu lesen, sondern direkt mit der wichtigsten Aufgabe anzufangen."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q4 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Sprecher2_2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das nennt man 'Eat the Frog', also die unangenehme Aufgabe zuerst erledigen."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q5.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Sprecher1_2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Eat the Frog? Das klingt nicht besonders appetitlich als Arbeitsstrategie!"
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "answer_evidence",
-        "text": "Seit wir im Großraumbüro arbeiten, kann ich mich überhaupt nicht mehr konzentrieren.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Sprecher2_2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Der Name ist absichtlich abstoßend. Die Idee ist: Wenn du morgens den Frosch isst, wird der Rest des Tages leichter."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q5 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Sprecher1_2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Aber ich brauche morgens zuerst meinen Kaffee und einen Überblick über meine E-Mails."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q6.",
-        "linkedQuestionId": "Q6"
+        "speaker": "Sprecher2_2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Genau das ist die Falle! E-Mails am Morgen stehlen deine beste kognitive Energie."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "answer_evidence",
-        "text": "Bei uns im Team tragen wir Kopfhörer als Signal dafür, dass wir gerade nicht gestört werden möchten.",
-        "linkedQuestionId": "Q6"
+        "speaker": "Sprecher1_2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Studien zeigen, dass die meisten Menschen zwischen neun und elf Uhr am produktivsten sind."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q6 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q6"
+        "speaker": "Sprecher2_2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Also nutze diese goldenen Stunden für kreative und schwierige Aufgaben, nicht für Routinearbeit."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q7.",
-        "linkedQuestionId": "Q7"
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Äußerung 3."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "answer_evidence",
-        "text": "Das klingt nach der Eisenhower-Matrix. Die teilt Aufgaben in vier Kategorien ein.",
-        "linkedQuestionId": "Q7"
+        "speaker": "Sprecher1_3",
+        "speaker_role": "dialogue_speaker",
+        "text": "Seit wir im Großraumbüro arbeiten, kann ich mich überhaupt nicht mehr konzentrieren."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q7 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q7"
+        "speaker": "Sprecher2_3",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das Problem kennen viele. Lärm und ständige Unterbrechungen sind echte Produktivitätskiller."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q8.",
-        "linkedQuestionId": "Q8"
+        "speaker": "Sprecher1_3",
+        "speaker_role": "dialogue_speaker",
+        "text": "Eine Studie hat gezeigt, dass man nach einer Unterbrechung dreiundzwanzig Minuten braucht, um wieder fokussiert zu sein."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "answer_evidence",
-        "text": "Sprecher1_4: Wichtig aber nicht dringend! Sprecher2_4: Weil immer die dringenden Sachen reinkommen und alles andere verdrängen.",
-        "linkedQuestionId": "Q8"
+        "speaker": "Sprecher2_3",
+        "speaker_role": "dialogue_speaker",
+        "text": "Dreiundzwanzig Minuten! Das bedeutet, dass man bei drei Unterbrechungen pro Stunde praktisch nie richtig arbeitet."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q8 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q8"
+        "speaker": "Sprecher1_3",
+        "speaker_role": "dialogue_speaker",
+        "text": "Viele Unternehmen führen deshalb 'Fokuszeiten' ein, in denen niemand gestört werden darf."
       },
       {
-        "speaker": "Sprecher 5",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q9.",
-        "linkedQuestionId": "Q9"
+        "speaker": "Sprecher2_3",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das ist eine gute Idee. Aber hält sich da auch jeder dran im täglichen Arbeitsalltag?"
       },
       {
-        "speaker": "Sprecher 5",
-        "speaker_role": "answer_evidence",
-        "text": "Sprecher2_5: Ich bin zu Hause definitiv produktiver... Sprecher1_5: Bei mir ist es umgekehrt. Zu Hause lenken mich der Haushalt, der Kühlschrank und die Couch ab.",
-        "linkedQuestionId": "Q9"
+        "speaker": "Sprecher1_3",
+        "speaker_role": "dialogue_speaker",
+        "text": "Bei uns im Team tragen wir Kopfhörer als Signal dafür, dass wir gerade nicht gestört werden möchten."
       },
       {
-        "speaker": "Sprecher 5",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q9 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q9"
+        "speaker": "Sprecher2_3",
+        "speaker_role": "dialogue_speaker",
+        "text": "Active-Noise-Cancelling-Kopfhörer sind wirklich eine Revolution für die Produktivität im Büro."
       },
       {
-        "speaker": "Sprecher 5",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q10.",
-        "linkedQuestionId": "Q10"
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Äußerung 4."
       },
       {
-        "speaker": "Sprecher 5",
-        "speaker_role": "answer_evidence",
-        "text": "Mein größtes Problem im Homeoffice sind endlose Videokonferenzen, die meinen Tag zerstückeln.",
-        "linkedQuestionId": "Q10"
+        "speaker": "Sprecher1_4",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ich habe letzte Woche ein Seminar über effektives Zeitmanagement besucht und es hat sich gelohnt."
       },
       {
-        "speaker": "Sprecher 5",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q10 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q10"
+        "speaker": "Sprecher2_4",
+        "speaker_role": "dialogue_speaker",
+        "text": "Was waren die wichtigsten Erkenntnisse, die du aus dem Seminar mitgenommen hast?"
       },
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Ende des Hoertexts."
+        "speaker": "Sprecher1_4",
+        "speaker_role": "dialogue_speaker",
+        "text": "Erstens: Nicht alles, was dringend ist, ist auch wirklich wichtig. Das muss man unterscheiden."
+      },
+      {
+        "speaker": "Sprecher2_4",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das klingt nach der Eisenhower-Matrix. Die teilt Aufgaben in vier Kategorien ein."
+      },
+      {
+        "speaker": "Sprecher1_4",
+        "speaker_role": "dialogue_speaker",
+        "text": "Genau! Wichtig und dringend, wichtig aber nicht dringend, dringend aber nicht wichtig, und weder noch."
+      },
+      {
+        "speaker": "Sprecher2_4",
+        "speaker_role": "dialogue_speaker",
+        "text": "Und welche Kategorie vernachlässigen die meisten Menschen deiner Erfahrung nach?"
+      },
+      {
+        "speaker": "Sprecher1_4",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wichtig aber nicht dringend! Das sind strategische Aufgaben wie Weiterbildung, Netzwerken und Planung."
+      },
+      {
+        "speaker": "Sprecher2_4",
+        "speaker_role": "dialogue_speaker",
+        "text": "Weil immer die dringenden Sachen reinkommen und alles andere verdrängen."
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Äußerung 5."
+      },
+      {
+        "speaker": "Sprecher1_5",
+        "speaker_role": "dialogue_speaker",
+        "text": "Homeoffice hat Vor- und Nachteile für die Produktivität. Was sind eure Erfahrungen?"
+      },
+      {
+        "speaker": "Sprecher2_5",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ich bin zu Hause definitiv produktiver, weil niemand mich am Schreibtisch besucht."
+      },
+      {
+        "speaker": "Sprecher1_5",
+        "speaker_role": "dialogue_speaker",
+        "text": "Bei mir ist es umgekehrt. Zu Hause lenken mich der Haushalt, der Kühlschrank und die Couch ab."
+      },
+      {
+        "speaker": "Sprecher2_5",
+        "speaker_role": "dialogue_speaker",
+        "text": "Man braucht einen festen Arbeitsplatz, am besten in einem separaten Raum mit Tür."
+      },
+      {
+        "speaker": "Sprecher1_5",
+        "speaker_role": "dialogue_speaker",
+        "text": "Genau, und feste Arbeitszeiten. Sonst verschwimmen Arbeit und Privatleben komplett."
+      },
+      {
+        "speaker": "Sprecher2_5",
+        "speaker_role": "dialogue_speaker",
+        "text": "Mein größtes Problem im Homeoffice sind endlose Videokonferenzen, die meinen Tag zerstückeln."
+      },
+      {
+        "speaker": "Sprecher1_5",
+        "speaker_role": "dialogue_speaker",
+        "text": "Meeting-freie Tage sind die Lösung. Bei uns sind Mittwoche komplett ohne Meetings."
+      },
+      {
+        "speaker": "Sprecher2_5",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das ist eine fantastische Regel! Ich schlage das bei meinem Chef vor."
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Ende Teil eins."
       }
     ]
   },
@@ -484,7 +530,7 @@
       "id": "l-b2-goethe-003-t1-lo-1",
       "cefrLevel": "B2",
       "skill": "listening",
-      "canDoVi": "Toi co the luyen nghe hieu o trinh do B2 qua chu de \"Arbeitstechniken und Konzentration\".",
+      "canDoVi": "Tôi có thể luyện nghe hiểu ở trình độ B2 qua chủ đề \"Arbeitstechniken und Konzentration\".",
       "canDoDe": "Ich kann Hoeren auf Niveau B2 zum Thema \"Arbeitstechniken und Konzentration\" ueben.",
       "linkedContentIds": [
         "L-B2-GOETHE-003-T1"

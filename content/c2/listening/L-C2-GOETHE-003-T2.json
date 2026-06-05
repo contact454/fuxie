@@ -51,7 +51,7 @@
       "explanation": {
         "de": "Die korrekte Antwort (b) erfasst, dass der Student die Beobachtung seiner Kommilitonin validiert und ihre Bedeutung hervorhebt, indem er sie mit akademischen Begriffen ('epistemische Ungerechtigkeit') und gesamtgesellschaftlichen Fragen ('gesamtdeutsches Selbstverständnis') verknüpft. Option (a) ist falsch; er bezeichnet das Thema zwar als 'emotional', aber nicht, um es abzuwerten, sondern um seine Tiefe zu betonen. Option (c) ist eine raffinierte Falle: Er sagt, das Thema gehe 'weit über die Schulbuchforschung hinaus', was seine Bedeutung unterstreicht, nicht, dass es dort nicht behandelt werden sollte.",
         "vi": "Đáp án đúng (b) nắm bắt được việc nam sinh viên công nhận quan sát của bạn học và nhấn mạnh tầm quan trọng của nó bằng cách liên kết nó với các thuật ngữ học thuật ('bất công về nhận thức luận') và các vấn đề xã hội tổng thể ('sự tự nhận thức của toàn nước Đức'). Lựa chọn (a) là sai; anh ấy mô tả chủ đề là 'xúc động' (emotional), nhưng không phải để hạ thấp nó, mà để nhấn mạnh chiều sâu của nó. Lựa chọn (c) là một cái bẫy tinh vi: anh ấy nói chủ đề 'vượt xa nghiên cứu sách giáo khoa' (weit über die Schulbuchforschung hinaus), điều này nhấn mạnh tầm quan trọng của nó, chứ không phải là nó không nên được thảo luận trong lĩnh vực đó.",
-        "key_evidence": "Das ist ein berechtigter Einwand, den auch mein Professor für Zeitgeschichte in seiner letzten Vorlesung thematisiert hat, als er den Begriff der epistemischen Ungerechtigkeit verwendete. [...] Das ist ein zutiefst emotionales und gleichzeitig politisch hochbrisantes Thema, das weit über die Schulbuchforschung hinausgeht und die Grundlagen unseres gesamtdeutschen Selbstverständnisses berührt.",
+        "key_evidence": "Das ist ein berechtigter Einwand, den auch mein Professor für Zeitgeschichte in seiner letzten Vorlesung thematisiert hat, als er den Begriff der epistemischen Ungerechtigkeit verwendete",
         "key_vocabulary": [
           "untermauern - to underpin, to substantiate",
           "einbetten - to embed",
@@ -122,75 +122,192 @@
     ]
   },
   "transcript": {
-    "type": "full_reconstructed_transcript",
+    "type": "studio_source_transcript",
     "status": "complete",
-    "source": "reconstructed_full_script",
-    "quality": "release_candidate_reconstructed",
-    "note": "Full learner-visible reconstructed script created from existing question evidence because original studio scripts are not present in the repository. Replace with studio transcript if original audio scripts become available.",
+    "source": "studio_source_script",
+    "quality": "source_verified",
+    "sourceScript": "data/scripts/C2/Teil2-Spontanes-Gespraech/L-C2-GOETHE-003-T2.json",
+    "note": "Transcript replaced from source script by scripts/apply-source-transcripts.ts.",
     "lines": [
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Der folgende anspruchsvolle Hoertext behandelt Berliner Mauer in Schulbüchern. Achten Sie auf Aussage, Kontext und implizite Bedeutung."
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sie hören ein Gespräch. Dazu gibt es fünf Aufgaben. Wer sagt was? Sie hören das Gespräch zweimal."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe C2H_Q1.",
-        "linkedQuestionId": "C2H_Q1"
+        "speaker": "Studentin",
+        "speaker_role": "dialogue_speaker",
+        "text": "In meinem Geschichtsseminar haben wir letzte Woche eine Analyse aktueller Schulbücher durchgeführt, und die Ergebnisse waren wirklich aufschlussreich und teilweise ziemlich erschreckend."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Das dachte ich auch, bis ich gesehen habe, wie wenig Raum die ostdeutsche Perspektive tatsächlich einnimmt; es ist immer noch überwiegend eine westdeutsche Erzählung über den Osten.",
-        "linkedQuestionId": "C2H_Q1"
+        "speaker": "Student",
+        "speaker_role": "dialogue_speaker",
+        "text": "Inwiefern erschreckend? Ich dachte, die Darstellung der Mauer in Schulbüchern sei inzwischen ziemlich ausgewogen und differenziert."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe C2H_Q1 im Kontext des Hoertexts.",
-        "linkedQuestionId": "C2H_Q1"
+        "speaker": "Studentin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das dachte ich auch, bis ich gesehen habe, wie wenig Raum die ostdeutsche Perspektive tatsächlich einnimmt; es ist immer noch überwiegend eine westdeutsche Erzählung über den Osten."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe C2H_Q2.",
-        "linkedQuestionId": "C2H_Q2"
+        "speaker": "Student",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das ist ein berechtigter Einwand, den auch mein Professor für Zeitgeschichte in seiner letzten Vorlesung thematisiert hat, als er den Begriff der epistemischen Ungerechtigkeit verwendete."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "answer_evidence",
-        "text": "Das ist ein berechtigter Einwand, den auch mein Professor für Zeitgeschichte in seiner letzten Vorlesung thematisiert hat, als er den Begriff der epistemischen Ungerechtigkeit verwendete. [...] Das ist ein zutiefst emotionales und gleichzeitig politisch hochbrisantes Thema, das weit über die Schulbuchforschung hinausgeht und die Grundlagen unseres gesamtdeutschen Selbstverständnisses berührt.",
-        "linkedQuestionId": "C2H_Q2"
+        "speaker": "Studentin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Was mich persönlich besonders beschäftigt, ist die Frage, wie meine Großeltern, die ihr ganzes Berufsleben in der DDR verbracht haben, sich fühlen, wenn ihre Lebensleistung im Schulunterricht implizit als nicht bedeutsam behandelt wird."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe C2H_Q2 im Kontext des Hoertexts.",
-        "linkedQuestionId": "C2H_Q2"
+        "speaker": "Student",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das ist ein zutiefst emotionales und gleichzeitig politisch hochbrisantes Thema, das weit über die Schulbuchforschung hinausgeht und die Grundlagen unseres gesamtdeutschen Selbstverständnisses berührt."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe C2H_Q3.",
-        "linkedQuestionId": "C2H_Q3"
+        "speaker": "Studentin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Meine Mentorin am Institut hat eine interessante These aufgestellt, nämlich dass die unvollständige Aufarbeitung der deutschen Teilung ein wesentlicher Faktor für das Erstarken populistischer Bewegungen in Ostdeutschland ist."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "answer_evidence",
-        "text": "Das würde mich sehr interessieren, denn die Lehrpläne für den Geschichtsunterricht unterscheiden sich zwischen den Bundesländern zum Teil erheblich, was eine entsprechende Varianz in den Schulbüchern zur Folge hat.",
-        "linkedQuestionId": "C2H_Q3"
+        "speaker": "Student",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das ist eine steile These, die aber durch aktuelle soziologische Forschungsergebnisse durchaus gestützt wird, insbesondere durch die Arbeiten von Steffen Mau zur ostdeutschen Transformation."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe C2H_Q3 im Kontext des Hoertexts.",
-        "linkedQuestionId": "C2H_Q3"
+        "speaker": "Studentin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ich finde, dass wir als Geschichtsstudierende eine besondere Verantwortung tragen, solche blinden Flecken der kollektiven Erinnerung sichtbar zu machen und alternative Narrative zu entwickeln."
       },
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Ende des Hoertexts."
+        "speaker": "Student",
+        "speaker_role": "dialogue_speaker",
+        "text": "Absolut, und ich glaube, dass die Oral-History-Methode dabei eine zentrale Rolle spielen kann, weil sie den Stimmen derjenigen Gehör verschafft, die in den offiziellen Geschichtsdarstellungen oft übergangen werden."
+      },
+      {
+        "speaker": "Studentin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Hast du eigentlich schon eine Idee für deine Masterarbeit? Ich überlege, die Darstellung der Wendezeit in Schulbüchern verschiedener Bundesländer vergleichend zu analysieren."
+      },
+      {
+        "speaker": "Student",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das würde mich sehr interessieren, denn die Lehrpläne für den Geschichtsunterricht unterscheiden sich zwischen den Bundesländern zum Teil erheblich, was eine entsprechende Varianz in den Schulbüchern zur Folge hat."
+      },
+      {
+        "speaker": "Studentin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Dann könnten wir vielleicht sogar zusammenarbeiten und die Arbeit als kooperatives Forschungsprojekt anlegen, bei dem du die ostdeutschen und ich die westdeutschen Schulbücher analysiere."
+      },
+      {
+        "speaker": "Student",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das wäre fantastisch! Ich werde unsere Betreuerin fragen, ob sie ein solches Format unterstützen würde, denn die interdisziplinäre und kooperative Herangehensweise entspricht eigentlich genau ihrem methodologischen Ansatz."
+      },
+      {
+        "speaker": "Studentin",
+        "speaker_role": "dialogue_speaker",
+        "text": "In meinem Geschichtsseminar haben wir letzte Woche eine Analyse aktueller Schulbücher durchgeführt, und die Ergebnisse waren wirklich aufschlussreich und teilweise ziemlich erschreckend."
+      },
+      {
+        "speaker": "Student",
+        "speaker_role": "dialogue_speaker",
+        "text": "Inwiefern erschreckend? Ich dachte, die Darstellung der Mauer in Schulbüchern sei inzwischen ziemlich ausgewogen und differenziert."
+      },
+      {
+        "speaker": "Studentin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das dachte ich auch, bis ich gesehen habe, wie wenig Raum die ostdeutsche Perspektive tatsächlich einnimmt; es ist immer noch überwiegend eine westdeutsche Erzählung über den Osten."
+      },
+      {
+        "speaker": "Student",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das ist ein berechtigter Einwand, den auch mein Professor für Zeitgeschichte in seiner letzten Vorlesung thematisiert hat, als er den Begriff der epistemischen Ungerechtigkeit verwendete."
+      },
+      {
+        "speaker": "Studentin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Was mich persönlich besonders beschäftigt, ist die Frage, wie meine Großeltern, die ihr ganzes Berufsleben in der DDR verbracht haben, sich fühlen, wenn ihre Lebensleistung im Schulunterricht implizit als nicht bedeutsam behandelt wird."
+      },
+      {
+        "speaker": "Student",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das ist ein zutiefst emotionales und gleichzeitig politisch hochbrisantes Thema, das weit über die Schulbuchforschung hinausgeht und die Grundlagen unseres gesamtdeutschen Selbstverständnisses berührt."
+      },
+      {
+        "speaker": "Studentin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Meine Mentorin am Institut hat eine interessante These aufgestellt, nämlich dass die unvollständige Aufarbeitung der deutschen Teilung ein wesentlicher Faktor für das Erstarken populistischer Bewegungen in Ostdeutschland ist."
+      },
+      {
+        "speaker": "Student",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das ist eine steile These, die aber durch aktuelle soziologische Forschungsergebnisse durchaus gestützt wird, insbesondere durch die Arbeiten von Steffen Mau zur ostdeutschen Transformation."
+      },
+      {
+        "speaker": "Studentin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ich finde, dass wir als Geschichtsstudierende eine besondere Verantwortung tragen, solche blinden Flecken der kollektiven Erinnerung sichtbar zu machen und alternative Narrative zu entwickeln."
+      },
+      {
+        "speaker": "Student",
+        "speaker_role": "dialogue_speaker",
+        "text": "Absolut, und ich glaube, dass die Oral-History-Methode dabei eine zentrale Rolle spielen kann, weil sie den Stimmen derjenigen Gehör verschafft, die in den offiziellen Geschichtsdarstellungen oft übergangen werden."
+      },
+      {
+        "speaker": "Studentin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Hast du eigentlich schon eine Idee für deine Masterarbeit? Ich überlege, die Darstellung der Wendezeit in Schulbüchern verschiedener Bundesländer vergleichend zu analysieren."
+      },
+      {
+        "speaker": "Student",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das würde mich sehr interessieren, denn die Lehrpläne für den Geschichtsunterricht unterscheiden sich zwischen den Bundesländern zum Teil erheblich, was eine entsprechende Varianz in den Schulbüchern zur Folge hat."
+      },
+      {
+        "speaker": "Studentin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Dann könnten wir vielleicht sogar zusammenarbeiten und die Arbeit als kooperatives Forschungsprojekt anlegen, bei dem du die ostdeutschen und ich die westdeutschen Schulbücher analysiere."
+      },
+      {
+        "speaker": "Student",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das wäre fantastisch! Ich werde unsere Betreuerin fragen, ob sie ein solches Format unterstützen würde, denn die interdisziplinäre und kooperative Herangehensweise entspricht eigentlich genau ihrem methodologischen Ansatz."
+      },
+      {
+        "speaker": "Studentin",
+        "speaker_role": "dialogue_speaker",
+        "text": "In meinem Geschichtsseminar haben wir letzte Woche eine Analyse aktueller Schulbücher durchgeführt, und die Ergebnisse waren wirklich aufschlussreich und teilweise ziemlich erschreckend."
+      },
+      {
+        "speaker": "Student",
+        "speaker_role": "dialogue_speaker",
+        "text": "Inwiefern erschreckend? Ich dachte, die Darstellung der Mauer in Schulbüchern sei inzwischen ziemlich ausgewogen und differenziert."
+      },
+      {
+        "speaker": "Studentin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das dachte ich auch, bis ich gesehen habe, wie wenig Raum die ostdeutsche Perspektive tatsächlich einnimmt; es ist immer noch überwiegend eine westdeutsche Erzählung über den Osten."
+      },
+      {
+        "speaker": "Student",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das ist ein berechtigter Einwand, den auch mein Professor für Zeitgeschichte in seiner letzten Vorlesung thematisiert hat, als er den Begriff der epistemischen Ungerechtigkeit verwendete."
+      },
+      {
+        "speaker": "Studentin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Was mich persönlich besonders beschäftigt, ist die Frage, wie meine Großeltern, die ihr ganzes Berufsleben in der DDR verbracht haben, sich fühlen, wenn ihre Lebensleistung im Schulunterricht implizit als nicht bedeutsam behandelt wird."
+      },
+      {
+        "speaker": "Student",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das ist ein zutiefst emotionales und gleichzeitig politisch hochbrisantes Thema, das weit über die Schulbuchforschung hinausgeht und die Grundlagen unseres gesamtdeutschen Selbstverständnisses berührt."
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Ende Teil zwei."
       }
     ]
   },
@@ -207,7 +324,7 @@
       "id": "l-c2-goethe-003-t2-lo-1",
       "cefrLevel": "C2",
       "skill": "listening",
-      "canDoVi": "Toi co the luyen nghe hieu o trinh do C2 qua chu de \"Berliner Mauer in Schulbüchern\".",
+      "canDoVi": "Tôi có thể luyện nghe hiểu ở trình độ C2 qua chủ đề \"Berliner Mauer in Schulbüchern\".",
       "canDoDe": "Ich kann Hoeren auf Niveau C2 zum Thema \"Berliner Mauer in Schulbüchern\" ueben.",
       "linkedContentIds": [
         "L-C2-GOETHE-003-T2"

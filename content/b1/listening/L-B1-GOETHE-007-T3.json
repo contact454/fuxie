@@ -176,147 +176,152 @@
     ]
   },
   "transcript": {
-    "type": "full_reconstructed_transcript",
+    "type": "studio_source_transcript",
     "status": "complete",
-    "source": "reconstructed_full_script",
-    "quality": "release_candidate_reconstructed",
-    "note": "Full learner-visible reconstructed script created from existing question evidence because original studio scripts are not present in the repository. Replace with studio transcript if original audio scripts become available.",
+    "source": "studio_source_script",
+    "quality": "source_verified",
+    "sourceScript": "data/scripts/B1/Teil3-Gespraech-zwei-Personen/L-B1-GOETHE-007-T3.json",
+    "note": "Transcript replaced from source script by scripts/apply-source-transcripts.ts.",
     "lines": [
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Im folgenden Hoertext geht es um Nachbarschaftskonflikt. Achten Sie auf die zentrale Information."
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sie hören ein Gespräch zwischen zwei Personen. Dazu gibt es sieben Aufgaben. Entscheiden Sie: richtig oder falsch? Sie hören das Gespräch zweimal."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q1.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Sprecher1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ich muss dir etwas erzählen. Ich hatte gestern einen riesigen Streit mit meinem Nachbarn."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Ich hatte gestern einen riesigen Streit mit meinem Nachbarn.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Sprecher2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Oh nein, was ist denn passiert? Hattet ihr nicht immer ein gutes Verhältnis?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q1 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Sprecher1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ja, eigentlich schon. Aber seit er einen Hund hat, ist alles anders geworden."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q2.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Sprecher2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Was macht der Hund denn? Bellt er viel?"
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "answer_evidence",
-        "text": "Er bellt die ganze Nacht! Und tagsüber, wenn mein Nachbar arbeiten geht, heult der Hund stundenlang.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Sprecher1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Er bellt die ganze Nacht! Und tagsüber, wenn mein Nachbar arbeiten geht, heult der Hund stundenlang."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q2 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Sprecher2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das ist wirklich schlimm. Hast du schon mit deinem Nachbarn darüber gesprochen?"
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q3.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Sprecher1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ja, zweimal. Er sagt, dass er nichts dafür kann, der Hund hat Trennungsangst."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "answer_evidence",
-        "text": "Ja, zweimal.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Sprecher2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das kann ich verstehen, aber trotzdem muss eine Lösung her. Du musst ja auch schlafen können."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q3 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Sprecher1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Genau! Ich habe in den letzten zwei Wochen kaum eine Nacht richtig geschlafen."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q4.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Sprecher2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Hast du ein Lärmprotokoll geführt? Das ist wichtig, falls du dich beschweren musst."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "answer_evidence",
-        "text": "Ja, ich schreibe seit einer Woche genau auf, wann der Hund bellt und wie lange.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Sprecher1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ja, ich schreibe seit einer Woche genau auf, wann der Hund bellt und wie lange."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q4 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Sprecher2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das ist gut. Hast du auch schon mit dem Vermieter gesprochen?"
       },
       {
-        "speaker": "Sprecher 5",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q5.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Sprecher1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Noch nicht, ich wollte es erst noch einmal mit meinem Nachbarn versuchen."
       },
       {
-        "speaker": "Sprecher 5",
-        "speaker_role": "answer_evidence",
-        "text": "Noch nicht, ich wollte es erst noch einmal mit meinem Nachbarn versuchen.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Sprecher2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Vielleicht solltest du ihm vorschlagen, mit dem Hund zum Tierarzt zu gehen."
       },
       {
-        "speaker": "Sprecher 5",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q5 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Sprecher1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Es gibt Medikamente und Verhaltenstherapie gegen Trennungsangst bei Hunden."
       },
       {
-        "speaker": "Sprecher 6",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q6.",
-        "linkedQuestionId": "Q6"
+        "speaker": "Sprecher2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das ist eine gute Idee! Daran habe ich gar nicht gedacht."
       },
       {
-        "speaker": "Sprecher 6",
-        "speaker_role": "answer_evidence",
-        "text": "Circa zwanzig Euro pro Tag, also etwa vierhundert Euro im Monat.",
-        "linkedQuestionId": "Q6"
+        "speaker": "Sprecher1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Und vielleicht könnte er einen Hundesitter engagieren, wenn er tagsüber arbeitet."
       },
       {
-        "speaker": "Sprecher 6",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q6 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q6"
+        "speaker": "Sprecher2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Oder der Hund könnte tagsüber in eine Hundetagesstätte gehen, die gibt es mittlerweile."
       },
       {
-        "speaker": "Sprecher 7",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q7.",
-        "linkedQuestionId": "Q7"
+        "speaker": "Sprecher1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Hundetagesstätte? Das kenne ich gar nicht. Ist das wie eine Kita für Hunde?"
       },
       {
-        "speaker": "Sprecher 7",
-        "speaker_role": "answer_evidence",
-        "text": "Tu das! Und bleib freundlich.",
-        "linkedQuestionId": "Q7"
+        "speaker": "Sprecher2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ja, genau! Die Hunde werden dort betreut und spielen mit anderen Hunden."
       },
       {
-        "speaker": "Sprecher 7",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q7 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q7"
+        "speaker": "Sprecher1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das klingt nach einer perfekten Lösung! Aber das ist bestimmt teuer."
       },
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Ende des Hoertexts."
+        "speaker": "Sprecher2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Circa zwanzig Euro pro Tag, also etwa vierhundert Euro im Monat."
+      },
+      {
+        "speaker": "Sprecher1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das ist viel Geld, aber wenn der Nachbar den Hund behalten will, muss er eine Lösung finden."
+      },
+      {
+        "speaker": "Sprecher2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Du hast recht. Ich spreche ihn am Wochenende noch einmal an und schlage diese Optionen vor."
+      },
+      {
+        "speaker": "Sprecher1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Tu das! Und bleib freundlich. Nachbarschaftsstreit eskaliert schnell und dann wird alles schlimmer."
+      },
+      {
+        "speaker": "Sprecher2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Danke für deinen Rat! Ein ruhiger Kopf ist in solchen Situationen wirklich wichtig."
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Ende Teil drei."
       }
     ]
   },
@@ -333,7 +338,7 @@
       "id": "l-b1-goethe-007-t3-lo-1",
       "cefrLevel": "B1",
       "skill": "listening",
-      "canDoVi": "Toi co the luyen nghe hieu o trinh do B1 qua chu de \"Nachbarschaftskonflikt\".",
+      "canDoVi": "Tôi có thể luyện nghe hiểu ở trình độ B1 qua chủ đề \"Nachbarschaftskonflikt\".",
       "canDoDe": "Ich kann Hoeren auf Niveau B1 zum Thema \"Nachbarschaftskonflikt\" ueben.",
       "linkedContentIds": [
         "L-B1-GOETHE-007-T3"

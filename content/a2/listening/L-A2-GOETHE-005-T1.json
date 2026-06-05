@@ -149,111 +149,197 @@
     ]
   },
   "transcript": {
-    "type": "full_reconstructed_transcript",
+    "type": "studio_source_transcript",
     "status": "complete",
-    "source": "reconstructed_full_script",
-    "quality": "release_candidate_reconstructed",
-    "note": "Full learner-visible reconstructed script created from existing question evidence because original studio scripts are not present in the repository. Replace with studio transcript if original audio scripts become available.",
+    "source": "studio_source_script",
+    "quality": "source_verified",
+    "sourceScript": "data/scripts/A2/Teil1-Radiosendungen-und-Ansagen/L-A2-GOETHE-005-T1.json",
+    "note": "Transcript replaced from source script by scripts/apply-source-transcripts.ts.",
     "lines": [
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Hoeren Sie eine kurze Information zum Thema Beim Arzt Symptome beschreiben."
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sie hören fünf kurze Texte aus dem Radio. Zu jedem Text gibt es eine Aufgabe. Kreuzen Sie die richtige Antwort an. Sie hören jeden Text einmal."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q1.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Text 1."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Ärzte empfehlen die Grippeimpfung für alle Menschen über sechzig Jahren.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Liebe Hörer, heute sprechen wir über das Thema Gesundheit."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q1 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Grippesaison hat begonnen und viele Menschen sind krank."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q2.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die typischen Symptome sind Fieber, Husten und Schnupfen."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "answer_evidence",
-        "text": "Essen Sie viel Fisch, Eier und Milchprodukte, die enthalten Vitamin D.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ärzte empfehlen die Grippeimpfung für alle Menschen über sechzig Jahren."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q2 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Und natürlich regelmäßiges Händewaschen mit Seife."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q3.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Bleiben Sie zu Hause, wenn Sie krank sind, um andere nicht anzustecken."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "answer_evidence",
-        "text": "Sie brauchen nur Ihre Gesundheitskarte und die App der Krankenkasse.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Text 2."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q3 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Hier noch ein Gesundheitstipp für die kalte Jahreszeit."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q4.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Vitamin D ist besonders im Winter sehr wichtig für die Gesundheit."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "answer_evidence",
-        "text": "Stehen Sie alle dreißig Minuten auf und bewegen Sie sich kurz.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "In den Wintermonaten bekommen wir zu wenig Sonnenlicht."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q4 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Essen Sie viel Fisch, Eier und Milchprodukte, die enthalten Vitamin D."
       },
       {
-        "speaker": "Sprecher 5",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q5.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Oder nehmen Sie ein Vitamin-D-Präparat aus der Apotheke."
       },
       {
-        "speaker": "Sprecher 5",
-        "speaker_role": "answer_evidence",
-        "text": "Neue Patienten sollten ihre Versichertenkarte und den Impfpass mitbringen.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Sprechen Sie vorher mit Ihrem Arzt, welche Dosis richtig für Sie ist."
       },
       {
-        "speaker": "Sprecher 5",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q5 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Text 3."
       },
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Ende des Hoertexts."
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ein wichtiger Hinweis von der Kassenärztlichen Vereinigung."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ab sofort können Sie Rezepte auch digital empfangen."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ihr Arzt schickt das Rezept direkt an die Apotheke Ihrer Wahl."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Sie brauchen nur Ihre Gesundheitskarte und die App der Krankenkasse."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das spart Zeit und Sie müssen das Rezept nicht mehr persönlich abholen."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Alle Informationen finden Sie bei Ihrer Krankenkasse."
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Text 4."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Und jetzt zum Thema gesunder Rücken."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Rückenschmerzen sind die häufigste Ursache für Krankschreibungen in Deutschland."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Besonders Menschen, die viel am Schreibtisch sitzen, haben Rückenprobleme."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Stehen Sie alle dreißig Minuten auf und bewegen Sie sich kurz."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Einfache Dehnübungen für fünf Minuten am Tag können schon viel helfen."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Sprechen Sie mit Ihrem Arzt, wenn die Schmerzen länger als zwei Wochen andauern."
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Text 5."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Zum Schluss: So finden Sie den richtigen Arzt in Ihrer Nähe."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Kassenärztliche Vereinigung hat eine Suchfunktion auf ihrer Webseite."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Geben Sie Ihren Wohnort und das Fachgebiet ein und Sie finden alle Ärzte in der Nähe."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Viele Praxen bieten auch Online-Termine an, das spart Wartezeit."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Neue Patienten sollten ihre Versichertenkarte und den Impfpass mitbringen."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Bei Notfällen wählen Sie immer die Nummer eins eins zwei."
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Ende Teil eins."
       }
     ]
   },
@@ -270,7 +356,7 @@
       "id": "l-a2-goethe-005-t1-lo-1",
       "cefrLevel": "A2",
       "skill": "listening",
-      "canDoVi": "Toi co the luyen nghe hieu o trinh do A2 qua chu de \"Beim Arzt Symptome beschreiben\".",
+      "canDoVi": "Tôi có thể luyện nghe hiểu ở trình độ A2 qua chủ đề \"Beim Arzt Symptome beschreiben\".",
       "canDoDe": "Ich kann Hoeren auf Niveau A2 zum Thema \"Beim Arzt Symptome beschreiben\" ueben.",
       "linkedContentIds": [
         "L-A2-GOETHE-005-T1"

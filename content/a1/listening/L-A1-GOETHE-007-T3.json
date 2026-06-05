@@ -149,111 +149,197 @@
     ]
   },
   "transcript": {
-    "type": "full_reconstructed_transcript",
+    "type": "studio_source_transcript",
     "status": "complete",
-    "source": "reconstructed_full_script",
-    "quality": "release_candidate_reconstructed",
-    "note": "Full learner-visible reconstructed script created from existing question evidence because original studio scripts are not present in the repository. Replace with studio transcript if original audio scripts become available.",
+    "source": "studio_source_script",
+    "quality": "source_verified",
+    "sourceScript": "data/scripts/A1/Teil3-Telefonansagen/L-A1-GOETHE-007-T3.json",
+    "note": "Transcript replaced from source script by scripts/apply-source-transcripts.ts.",
     "lines": [
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Hoeren Sie eine kurze Information zum Thema Hotel Check-in."
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sie hören fünf Nachrichten am Telefon. Zu jeder Nachricht gibt es eine Aufgabe. Kreuzen Sie die richtige Antwort an. Sie hören jeden Text zweimal."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q1.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Nachricht 1."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Der Preis ist einhundertzehn Euro pro Nacht, inklusive Frühstück.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Anrufer",
+        "speaker_role": "dialogue_speaker",
+        "text": "Guten Tag, hier ist das Hotel Seeblick."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q1 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Anrufer",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wir bestätigen Ihre Reservierung für den fünfzehnten bis siebzehnten April."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q2.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Anrufer",
+        "speaker_role": "dialogue_speaker",
+        "text": "Sie haben ein Doppelzimmer mit Seeblick für zwei Nächte."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "answer_evidence",
-        "text": "Es gibt eine Stadtführung um zehn Uhr.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Anrufer",
+        "speaker_role": "dialogue_speaker",
+        "text": "Der Preis ist einhundertzehn Euro pro Nacht, inklusive Frühstück."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q2 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Anrufer",
+        "speaker_role": "dialogue_speaker",
+        "text": "Check-in ist ab fünfzehn Uhr. Check-out bis elf Uhr."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q3.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Anrufer",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wir freuen uns auf Ihren Besuch!"
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "answer_evidence",
-        "text": "Statt Montag komme ich erst am Dienstag.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Nachricht 2."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q3 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Anrufer",
+        "speaker_role": "dialogue_speaker",
+        "text": "Hallo, hier ist Anna. Ich bin gerade im Hotel angekommen."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q4.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Anrufer",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das Zimmer ist super schön! Ich habe sogar einen Balkon mit Blick auf den See."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "answer_evidence",
-        "text": "Das Hotel ist direkt am Marienplatz.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Anrufer",
+        "speaker_role": "dialogue_speaker",
+        "text": "Morgen gehe ich in die Altstadt. Kommst du mit?"
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q4 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Anrufer",
+        "speaker_role": "dialogue_speaker",
+        "text": "Es gibt eine Stadtführung um zehn Uhr. Die ist kostenlos!"
       },
       {
-        "speaker": "Sprecher 5",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q5.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Anrufer",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ruf mich an, wenn du magst. Ich bin den ganzen Tag hier."
       },
       {
-        "speaker": "Sprecher 5",
-        "speaker_role": "answer_evidence",
-        "text": "Das WLAN-Passwort ist Seeblick zwanzig vierundzwanzig.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Anrufer",
+        "speaker_role": "dialogue_speaker",
+        "text": "Bis bald! Tschüss!"
       },
       {
-        "speaker": "Sprecher 5",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q5 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Nachricht 3."
       },
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Ende des Hoertexts."
+        "speaker": "Anrufer",
+        "speaker_role": "dialogue_speaker",
+        "text": "Guten Tag, hier ist Herr Schmidt. Ich habe eine Reservierung für nächste Woche."
+      },
+      {
+        "speaker": "Anrufer",
+        "speaker_role": "dialogue_speaker",
+        "text": "Leider muss ich die Reservierung ändern. Ich komme einen Tag später."
+      },
+      {
+        "speaker": "Anrufer",
+        "speaker_role": "dialogue_speaker",
+        "text": "Statt Montag komme ich erst am Dienstag."
+      },
+      {
+        "speaker": "Anrufer",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ist das Zimmer am Dienstag noch frei?"
+      },
+      {
+        "speaker": "Anrufer",
+        "speaker_role": "dialogue_speaker",
+        "text": "Bitte rufen Sie mich zurück unter null eins sieben eins, fünf sechs sieben acht."
+      },
+      {
+        "speaker": "Anrufer",
+        "speaker_role": "dialogue_speaker",
+        "text": "Vielen Dank! Auf Wiederhören!"
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Nachricht 4."
+      },
+      {
+        "speaker": "Anrufer",
+        "speaker_role": "dialogue_speaker",
+        "text": "Hallo, hier ist die Touristeninformation München."
+      },
+      {
+        "speaker": "Anrufer",
+        "speaker_role": "dialogue_speaker",
+        "text": "Sie haben nach Hotels in der Innenstadt gefragt."
+      },
+      {
+        "speaker": "Anrufer",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wir empfehlen das Hotel Stadtmitte. Es kostet achtzig Euro pro Nacht."
+      },
+      {
+        "speaker": "Anrufer",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das Hotel ist direkt am Marienplatz. Sehr zentral und ruhig."
+      },
+      {
+        "speaker": "Anrufer",
+        "speaker_role": "dialogue_speaker",
+        "text": "Sie können online buchen oder bei uns anrufen."
+      },
+      {
+        "speaker": "Anrufer",
+        "speaker_role": "dialogue_speaker",
+        "text": "Unsere Nummer ist null acht neun, zwei drei vier fünf sechs."
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Nachricht 5."
+      },
+      {
+        "speaker": "Anrufer",
+        "speaker_role": "dialogue_speaker",
+        "text": "Hey Thomas, ich bin im Hotel und warte auf dich."
+      },
+      {
+        "speaker": "Anrufer",
+        "speaker_role": "dialogue_speaker",
+        "text": "Unser Zimmer ist dreihundertzwölf im dritten Stock."
+      },
+      {
+        "speaker": "Anrufer",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das WLAN-Passwort ist Seeblick zwanzig vierundzwanzig."
+      },
+      {
+        "speaker": "Anrufer",
+        "speaker_role": "dialogue_speaker",
+        "text": "Im Hotel gibt es auch ein tolles Restaurant. Essen wir heute Abend hier?"
+      },
+      {
+        "speaker": "Anrufer",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ich bin am Pool. Komm runter, wenn du da bist!"
+      },
+      {
+        "speaker": "Anrufer",
+        "speaker_role": "dialogue_speaker",
+        "text": "Bis gleich!"
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Ende des Hörverstehens."
       }
     ]
   },
@@ -270,7 +356,7 @@
       "id": "l-a1-goethe-007-t3-lo-1",
       "cefrLevel": "A1",
       "skill": "listening",
-      "canDoVi": "Toi co the luyen nghe hieu o trinh do A1 qua chu de \"Hotel Check-in\".",
+      "canDoVi": "Tôi có thể luyện nghe hiểu ở trình độ A1 qua chủ đề \"Hotel Check-in\".",
       "canDoDe": "Ich kann Hoeren auf Niveau A1 zum Thema \"Hotel Check-in\" ueben.",
       "linkedContentIds": [
         "L-A1-GOETHE-007-T3"

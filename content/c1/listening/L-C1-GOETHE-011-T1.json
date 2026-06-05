@@ -108,75 +108,147 @@
     ]
   },
   "transcript": {
-    "type": "full_reconstructed_transcript",
+    "type": "studio_source_transcript",
     "status": "complete",
-    "source": "reconstructed_full_script",
-    "quality": "release_candidate_reconstructed",
-    "note": "Full learner-visible reconstructed script created from existing question evidence because original studio scripts are not present in the repository. Replace with studio transcript if original audio scripts become available.",
+    "source": "studio_source_script",
+    "quality": "source_verified",
+    "sourceScript": "data/scripts/C1/Teil1-Podcast-oder-Rezension/L-C1-GOETHE-011-T1.json",
+    "note": "Transcript replaced from source script by scripts/apply-source-transcripts.ts.",
     "lines": [
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Der folgende anspruchsvolle Hoertext behandelt Datenschutz und digitale Überwachung. Achten Sie auf Aussage, Kontext und implizite Bedeutung."
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sie hören einen Podcast. Dazu gibt es sechs Aufgaben. Ordnen Sie die Aussagen den Abschnitten zu. Sie hören den Text einmal."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe q1_hoeren_c1_t1.",
-        "linkedQuestionId": "q1_hoeren_c1_t1"
+        "speaker": "Podcaster",
+        "speaker_role": "dialogue_speaker",
+        "text": "Willkommen zu unserem Podcast 'Schrift und Geist'. Heute geht es um ein Thema, das in der digitalen Ära erstaunlich kontrovers diskutiert wird."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Man kann nicht so schnell schreiben wie tippen und muss daher die Informationen komprimieren und eigenständig verarbeiten, was die Notwendigkeit einer differenzierten Betrachtung deutlich unterstreicht.",
-        "linkedQuestionId": "q1_hoeren_c1_t1"
+        "speaker": "Podcaster",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Frage lautet: Brauchen wir die Handschrift noch, oder ist sie ein Relikt einer vergangenen kulturellen Epoche, was die Notwendigkeit einer differenzierten Betrachtung deutlich unterstreicht?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe q1_hoeren_c1_t1 im Kontext des Hoertexts.",
-        "linkedQuestionId": "q1_hoeren_c1_t1"
+        "speaker": "Podcaster",
+        "speaker_role": "dialogue_speaker",
+        "text": "Finnland hat als erstes Land der Welt die Schreibschrift aus dem Lehrplan gestrichen und stattdessen Tastaturschreiben eingeführt, und diese Entwicklung betrifft nicht nur Fachleute, sondern die gesamte Gesellschaft."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe q2_hoeren_c1_t1.",
-        "linkedQuestionId": "q2_hoeren_c1_t1"
+        "speaker": "Podcaster",
+        "speaker_role": "dialogue_speaker",
+        "text": "Dieser Schritt hat weltweit heftige Debatten ausgelöst und Bildungsexperten in zwei unversöhnliche Lager gespalten, wobei aktuelle Studien und Expertenmeinungen ein vielfältiges Bild zeichnen."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Eine zeitgemäße Bildungspolitik sollte beides vermitteln und die jeweiligen Stärken gezielt einsetzen, und dies wirft grundlegende Fragen zur aktuellen gesellschaftlichen Entwicklung auf.",
-        "linkedQuestionId": "q2_hoeren_c1_t1"
+        "speaker": "Podcaster",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Befürworter der Digitalisierung argumentieren, dass Kinder ihre begrenzte Lernzeit sinnvoller nutzen sollten, was in der wissenschaftlichen Gemeinschaft für erhebliche Diskussionen sorgt."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe q2_hoeren_c1_t1 im Kontext des Hoertexts.",
-        "linkedQuestionId": "q2_hoeren_c1_t1"
+        "speaker": "Podcaster",
+        "speaker_role": "dialogue_speaker",
+        "text": "Warum sollte man stundenlang Buchstaben üben, wenn man im späteren Berufsleben ausschließlich digital kommuniziert, wobei die Experten in dieser Frage nach wie vor unterschiedlicher Meinung sind?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe q3_hoeren_c1_t1.",
-        "linkedQuestionId": "q3_hoeren_c1_t1"
+        "speaker": "Podcaster",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Gegenposition stützt sich auf beeindruckende neurowissenschaftliche Erkenntnisse der letzten Jahre, was sowohl in der Forschung als auch in der Praxis weitreichende Konsequenzen hat."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Junge Menschen entdecken die Handschrift als kreativen Gegenpol zur allgegenwärtigen digitalen Kommunikation, wobei aktuelle Studien und Expertenmeinungen ein vielfältiges Bild zeichnen.",
-        "linkedQuestionId": "q3_hoeren_c1_t1"
+        "speaker": "Podcaster",
+        "speaker_role": "dialogue_speaker",
+        "text": "Studien der Universität Princeton zeigen, dass handschriftliche Notizen zu signifikant besserem Lernen führen als getippte, und dies wirft grundlegende Fragen zur aktuellen gesellschaftlichen Entwicklung auf."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe q3_hoeren_c1_t1 im Kontext des Hoertexts.",
-        "linkedQuestionId": "q3_hoeren_c1_t1"
+        "speaker": "Podcaster",
+        "speaker_role": "dialogue_speaker",
+        "text": "Der Grund liegt in der sogenannten generativen Verarbeitung: Wer mit der Hand schreibt, formuliert automatisch um, die in den vergangenen Jahren zunehmend an Bedeutung gewonnen haben."
       },
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Ende des Hoertexts."
+        "speaker": "Podcaster",
+        "speaker_role": "dialogue_speaker",
+        "text": "Man kann nicht so schnell schreiben wie tippen und muss daher die Informationen komprimieren und eigenständig verarbeiten, was die Notwendigkeit einer differenzierten Betrachtung deutlich unterstreicht."
+      },
+      {
+        "speaker": "Podcaster",
+        "speaker_role": "dialogue_speaker",
+        "text": "Beim Tippen hingegen neigen Studierende dazu, Vorlesungsinhalte wortwörtlich mitzuschreiben ohne sie wirklich zu durchdringen, und diese Entwicklung betrifft nicht nur Fachleute, sondern die gesamte Gesellschaft."
+      },
+      {
+        "speaker": "Podcaster",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das Gehirn wird beim Tippen weniger aktiviert als beim Handschreiben, das bestätigen funktionelle MRT-Untersuchungen, wobei aktuelle Studien und Expertenmeinungen ein vielfältiges Bild zeichnen."
+      },
+      {
+        "speaker": "Podcaster",
+        "speaker_role": "dialogue_speaker",
+        "text": "Besonders interessant sind die Ergebnisse bei Grundschulkindern in der Phase des Schriftspracherwerbs, was in der wissenschaftlichen Gemeinschaft für erhebliche Diskussionen sorgt."
+      },
+      {
+        "speaker": "Podcaster",
+        "speaker_role": "dialogue_speaker",
+        "text": "Kinder, die Buchstaben per Hand schreiben, können diese danach deutlich besser wiedererkennen als Kinder am Tablet, wobei die Experten in dieser Frage nach wie vor unterschiedlicher Meinung sind."
+      },
+      {
+        "speaker": "Podcaster",
+        "speaker_role": "dialogue_speaker",
+        "text": "Der motorische Akt des Schreibens verankert die Buchstabenform tiefer im Gedächtnis als das bloße Antippen, was sowohl in der Forschung als auch in der Praxis weitreichende Konsequenzen hat."
+      },
+      {
+        "speaker": "Podcaster",
+        "speaker_role": "dialogue_speaker",
+        "text": "Dabei geht es nicht um Nostalgie oder romantische Verklärung, sondern um messbare kognitive Vorteile, und dies wirft grundlegende Fragen zur aktuellen gesellschaftlichen Entwicklung auf."
+      },
+      {
+        "speaker": "Podcaster",
+        "speaker_role": "dialogue_speaker",
+        "text": "In Japan hat die Kalligraphie traditionell einen hohen kulturellen Stellenwert, der weit über die reine Kommunikation hinausgeht, die in den vergangenen Jahren zunehmend an Bedeutung gewonnen haben."
+      },
+      {
+        "speaker": "Podcaster",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das Schreiben von Kanji-Zeichen wird als meditative Praxis und als Ausdruck der persönlichen Ästhetik verstanden, was die Notwendigkeit einer differenzierten Betrachtung deutlich unterstreicht."
+      },
+      {
+        "speaker": "Podcaster",
+        "speaker_role": "dialogue_speaker",
+        "text": "Auch in der westlichen Kultur gibt es eine Renaissance der Handschrift: Bullet Journals und Handlettering boomen, und diese Entwicklung betrifft nicht nur Fachleute, sondern die gesamte Gesellschaft."
+      },
+      {
+        "speaker": "Podcaster",
+        "speaker_role": "dialogue_speaker",
+        "text": "Junge Menschen entdecken die Handschrift als kreativen Gegenpol zur allgegenwärtigen digitalen Kommunikation, wobei aktuelle Studien und Expertenmeinungen ein vielfältiges Bild zeichnen."
+      },
+      {
+        "speaker": "Podcaster",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Frage sollte vielleicht nicht lauten 'Handschrift oder Tastatur?', sondern 'Wann welches Werkzeug?', was in der wissenschaftlichen Gemeinschaft für erhebliche Diskussionen sorgt."
+      },
+      {
+        "speaker": "Podcaster",
+        "speaker_role": "dialogue_speaker",
+        "text": "Für kreative Prozesse, persönliche Reflexion und das Lernen komplexer Inhalte bietet die Handschrift klare Vorteile, wobei die Experten in dieser Frage nach wie vor unterschiedlicher Meinung sind."
+      },
+      {
+        "speaker": "Podcaster",
+        "speaker_role": "dialogue_speaker",
+        "text": "Für schnelle Kommunikation, Recherche und kollaboratives Arbeiten ist die Tastatur überlegen, was sowohl in der Forschung als auch in der Praxis weitreichende Konsequenzen hat."
+      },
+      {
+        "speaker": "Podcaster",
+        "speaker_role": "dialogue_speaker",
+        "text": "Eine zeitgemäße Bildungspolitik sollte beides vermitteln und die jeweiligen Stärken gezielt einsetzen, und dies wirft grundlegende Fragen zur aktuellen gesellschaftlichen Entwicklung auf."
+      },
+      {
+        "speaker": "Podcaster",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das war unser Podcast zum Thema Handschrift. Schreiben Sie uns Ihre Meinung, gerne auch handschriftlich per Post!, die in den vergangenen Jahren zunehmend an Bedeutung gewonnen haben."
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Ende Teil eins."
       }
     ]
   },
@@ -193,7 +265,7 @@
       "id": "l-c1-goethe-011-t1-lo-1",
       "cefrLevel": "C1",
       "skill": "listening",
-      "canDoVi": "Toi co the luyen nghe hieu o trinh do C1 qua chu de \"Datenschutz und digitale Überwachung\".",
+      "canDoVi": "Tôi có thể luyện nghe hiểu ở trình độ C1 qua chủ đề \"Datenschutz und digitale Überwachung\".",
       "canDoDe": "Ich kann Hoeren auf Niveau C1 zum Thema \"Datenschutz und digitale Überwachung\" ueben.",
       "linkedContentIds": [
         "L-C1-GOETHE-011-T1"

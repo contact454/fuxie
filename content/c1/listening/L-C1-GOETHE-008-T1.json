@@ -29,7 +29,7 @@
       "explanation": {
         "de": "Die korrekte Antwort ist B, da der Podcaster explizit darauf hinweist, dass über 90% der Patienten in Afrika leben und keinen Zugang haben, was er als Problem der 'globalen Gesundheitsgerechtigkeit' bezeichnet. Option A ist falsch, da die Verhandlungen in Europa nur ein Aspekt sind, nicht die primäre Ursache der globalen Problematik. Option C ist eine lexikalische Falle; die Erwähnung der USA dient als Beispiel für ein System, nicht als globaler Standard, und ignoriert die Kernaussage über die Ungerechtigkeit.",
         "vi": "Đáp án đúng là B, vì người nói podcast nhấn mạnh rõ ràng rằng hơn 90% bệnh nhân sống ở Châu Phi và không có khả năng tiếp cận, điều mà ông gọi là vấn đề 'công bằng y tế toàn cầu'. Lựa chọn A sai vì các cuộc đàm phán ở châu Âu chỉ là một khía cạnh, không phải là nguyên nhân chính của vấn đề toàn cầu. Lựa chọn C là một cái bẫy từ vựng; việc đề cập đến Hoa Kỳ chỉ là một ví dụ về một hệ thống, không phải là một tiêu chuẩn toàn cầu, và bỏ qua thông điệp cốt lõi về sự bất công.",
-        "key_evidence": "Aber über neunzig Prozent aller Patienten mit Sichelzellenanämie leben in Afrika und haben keinerlei Zugang. Die globale Gesundheitsgerechtigkeit ist eines der drängendsten ethischen Probleme der modernen Gentherapie.",
+        "key_evidence": "Aber über neunzig Prozent aller Patienten mit Sichelzellenanämie leben in Afrika und haben keinerlei Zugang",
         "key_vocabulary": [
           "hervorheben",
           "Implikation",
@@ -53,7 +53,7 @@
       "explanation": {
         "de": "Die korrekte Antwort ist C. Der Sprecher warnt davor, dass sich die Forschung dorthin verlagert, 'wo die Regulierung am schwächsten ist', und nennt dies 'gefährlich'. Dies wird in Option C mit 'ethisch bedenkliche Kontexte' präzise paraphrasiert. Option A ist eine lexikalische Falle; der Sprecher erwähnt zwar 'Wettbewerb', bewertet diesen aber als 'ethisch bedenklich', also negativ, nicht als förderlich. Option B ist eine unzulässige Interpretation; der Sprecher stellt das deutsche Gesetz dar, kritisiert es aber nicht explizit als fortschrittshindernd.",
         "vi": "Đáp án đúng là C. Người nói cảnh báo rằng nghiên cứu đang chuyển đến những nơi 'có quy định lỏng lẻo nhất' và gọi điều này là 'nguy hiểm'. Điều này được diễn giải chính xác trong lựa chọn C bằng cụm từ 'bối cảnh đáng lo ngại về mặt đạo đức'. Lựa chọn A là một cái bẫy từ vựng; người nói có đề cập đến 'cạnh tranh', nhưng đánh giá nó là 'đáng lo ngại về mặt đạo đức', tức là tiêu cực, chứ không phải là thúc đẩy. Lựa chọn B là một sự suy diễn không được hỗ trợ; người nói trình bày luật pháp của Đức nhưng không chỉ trích rõ ràng rằng nó cản trở sự tiến bộ.",
-        "key_evidence": "Diese regulatorischen Unterschiede führen zu einem Wettbewerb zwischen den Ländern, der ethisch bedenklich ist. Die Forschung verlagert sich dorthin, wo die Regulierung am schwächsten ist, und das ist gefährlich.",
+        "key_evidence": "Diese regulatorischen Unterschiede führen zu einem Wettbewerb zwischen den Ländern, der ethisch bedenklich ist",
         "key_vocabulary": [
           "bewerten",
           "Konsequenzen",
@@ -102,57 +102,147 @@
     ]
   },
   "transcript": {
-    "type": "full_reconstructed_transcript",
+    "type": "studio_source_transcript",
     "status": "complete",
-    "source": "reconstructed_full_script",
-    "quality": "release_candidate_reconstructed",
-    "note": "Full learner-visible reconstructed script created from existing question evidence because original studio scripts are not present in the repository. Replace with studio transcript if original audio scripts become available.",
+    "source": "studio_source_script",
+    "quality": "source_verified",
+    "sourceScript": "data/scripts/C1/Teil1-Podcast-oder-Rezension/L-C1-GOETHE-008-T1.json",
+    "note": "Transcript replaced from source script by scripts/apply-source-transcripts.ts.",
     "lines": [
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Der folgende anspruchsvolle Hoertext behandelt Medizinethik und Gentherapie. Achten Sie auf Aussage, Kontext und implizite Bedeutung."
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sie hören einen Podcast. Dazu gibt es sechs Aufgaben. Ordnen Sie die Aussagen den Abschnitten zu. Sie hören den Text einmal."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe q1_c1_hoeren_t1.",
-        "linkedQuestionId": "q1_c1_hoeren_t1"
+        "speaker": "Podcaster",
+        "speaker_role": "dialogue_speaker",
+        "text": "Willkommen bei 'Zukunft Medizin', dem Podcast an der Schnittstelle von Wissenschaft und Ethik."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Aber über neunzig Prozent aller Patienten mit Sichelzellenanämie leben in Afrika und haben keinerlei Zugang. Die globale Gesundheitsgerechtigkeit ist eines der drängendsten ethischen Probleme der modernen Gentherapie.",
-        "linkedQuestionId": "q1_c1_hoeren_t1"
+        "speaker": "Podcaster",
+        "speaker_role": "dialogue_speaker",
+        "text": "Heute widmen wir uns einem Thema, das die Medizin revolutionieren könnte: der Gentherapie."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe q1_c1_hoeren_t1 im Kontext des Hoertexts.",
-        "linkedQuestionId": "q1_c1_hoeren_t1"
+        "speaker": "Podcaster",
+        "speaker_role": "dialogue_speaker",
+        "text": "Im November zweitausendzweiundzwanzig machte eine Nachricht Schlagzeilen: Die erste CRISPR-basierte Gentherapie wurde zugelassen."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe q2_c1_hoeren_t1.",
-        "linkedQuestionId": "q2_c1_hoeren_t1"
+        "speaker": "Podcaster",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das Medikament Casgevy kann die Sichelzellenanämie heilen, eine Erbkrankheit, die Millionen Menschen weltweit betrifft."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Diese regulatorischen Unterschiede führen zu einem Wettbewerb zwischen den Ländern, der ethisch bedenklich ist. Die Forschung verlagert sich dorthin, wo die Regulierung am schwächsten ist, und das ist gefährlich.",
-        "linkedQuestionId": "q2_c1_hoeren_t1"
+        "speaker": "Podcaster",
+        "speaker_role": "dialogue_speaker",
+        "text": "Erstmals in der Medizingeschichte können wir damit die genetische Ursache einer Krankheit direkt und dauerhaft reparieren."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe q2_c1_hoeren_t1 im Kontext des Hoertexts.",
-        "linkedQuestionId": "q2_c1_hoeren_t1"
+        "speaker": "Podcaster",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Kosten sind allerdings astronomisch: Eine Behandlung kostet über zwei Millionen Dollar pro Patient."
       },
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Ende des Hoertexts."
+        "speaker": "Podcaster",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das wirft fundamentale ethische Fragen auf: Wer hat Zugang zu diesen lebensrettenden Therapien und wer nicht?"
+      },
+      {
+        "speaker": "Podcaster",
+        "speaker_role": "dialogue_speaker",
+        "text": "In den USA entscheiden Versicherungsunternehmen über die Übernahme, in Europa verhandeln staatliche Systeme die Preise."
+      },
+      {
+        "speaker": "Podcaster",
+        "speaker_role": "dialogue_speaker",
+        "text": "Aber über neunzig Prozent aller Patienten mit Sichelzellenanämie leben in Afrika und haben keinerlei Zugang."
+      },
+      {
+        "speaker": "Podcaster",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die globale Gesundheitsgerechtigkeit ist eines der drängendsten ethischen Probleme der modernen Gentherapie."
+      },
+      {
+        "speaker": "Podcaster",
+        "speaker_role": "dialogue_speaker",
+        "text": "Neben den Kosten gibt es weitere ethische Bedenken: Wo verläuft die Grenze zwischen Therapie und Enhancement?"
+      },
+      {
+        "speaker": "Podcaster",
+        "speaker_role": "dialogue_speaker",
+        "text": "Eine Gentherapie, die Muskeldystrophie heilt, ist medizinisch eindeutig legitimiert und ethisch unumstritten."
+      },
+      {
+        "speaker": "Podcaster",
+        "speaker_role": "dialogue_speaker",
+        "text": "Aber was ist mit Genveränderungen, die die Intelligenz steigern oder das Altern verlangsamen könnten?"
+      },
+      {
+        "speaker": "Podcaster",
+        "speaker_role": "dialogue_speaker",
+        "text": "Der chinesische Wissenschaftler He Jiankui hat zweitausendachtzehn Zwillinge genetisch so verändert, dass sie gegen HIV resistent sind."
+      },
+      {
+        "speaker": "Podcaster",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Weltgemeinschaft hat das als unverantwortlich verurteilt, aber die technische Möglichkeit ist nun einmal vorhanden."
+      },
+      {
+        "speaker": "Podcaster",
+        "speaker_role": "dialogue_speaker",
+        "text": "Keimbahntherapie, also Veränderungen, die an die nächste Generation weitergegeben werden, ist besonders kontrovers."
+      },
+      {
+        "speaker": "Podcaster",
+        "speaker_role": "dialogue_speaker",
+        "text": "Haben wir das Recht, die genetische Ausstattung zukünftiger Generationen ohne deren Einwilligung zu verändern?"
+      },
+      {
+        "speaker": "Podcaster",
+        "speaker_role": "dialogue_speaker",
+        "text": "Befürworter argumentieren, dass es unethisch wäre, vermeidbare genetische Krankheiten nicht zu beseitigen."
+      },
+      {
+        "speaker": "Podcaster",
+        "speaker_role": "dialogue_speaker",
+        "text": "Kritiker warnen vor einer Eugenik durch die Hintertür und der gesellschaftlichen Normierung des 'perfekten' Menschen."
+      },
+      {
+        "speaker": "Podcaster",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Regulierung dieser Technologien ist eine der größten Herausforderungen für Wissenschaft und Gesellschaft."
+      },
+      {
+        "speaker": "Podcaster",
+        "speaker_role": "dialogue_speaker",
+        "text": "Deutschland hat sehr restriktive Gesetze: Das Embryonenschutzgesetz verbietet jede Veränderung menschlicher Keimbahnzellen."
+      },
+      {
+        "speaker": "Podcaster",
+        "speaker_role": "dialogue_speaker",
+        "text": "Großbritannien hingegen erlaubt unter strenger Aufsicht die Forschung an menschlichen Embryonen bis zum vierzehnten Tag."
+      },
+      {
+        "speaker": "Podcaster",
+        "speaker_role": "dialogue_speaker",
+        "text": "Diese regulatorischen Unterschiede führen zu einem Wettbewerb zwischen den Ländern, der ethisch bedenklich ist."
+      },
+      {
+        "speaker": "Podcaster",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Forschung verlagert sich dorthin, wo die Regulierung am schwächsten ist, und das ist gefährlich."
+      },
+      {
+        "speaker": "Podcaster",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Gentherapie hat das Potenzial, menschliches Leid zu beenden, aber dafür brauchen wir kluge Regeln und globale Zusammenarbeit."
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Ende Teil eins."
       }
     ]
   },
@@ -169,7 +259,7 @@
       "id": "l-c1-goethe-008-t1-lo-1",
       "cefrLevel": "C1",
       "skill": "listening",
-      "canDoVi": "Toi co the luyen nghe hieu o trinh do C1 qua chu de \"Medizinethik und Gentherapie\".",
+      "canDoVi": "Tôi có thể luyện nghe hiểu ở trình độ C1 qua chủ đề \"Medizinethik und Gentherapie\".",
       "canDoDe": "Ich kann Hoeren auf Niveau C1 zum Thema \"Medizinethik und Gentherapie\" ueben.",
       "linkedContentIds": [
         "L-C1-GOETHE-008-T1"

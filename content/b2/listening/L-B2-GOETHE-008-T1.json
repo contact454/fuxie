@@ -57,7 +57,7 @@
       "explanation": {
         "de": "Der zweite Sprecher erwähnt das Yerkes-Dodson-Gesetz und sagt: 'Ein mittleres Erregungsniveau ist optimal für die kognitive Leistung.' Er fügt hinzu, dass nur Panik das Denken blockiert.",
         "vi": "Người nói thứ hai đề cập đến định luật Yerkes-Dodson và nói: 'Mức độ kích thích vừa phải là tối ưu cho hiệu suất nhận thức.' Anh ấy nói thêm rằng chỉ sự hoảng loạn mới làm tắc nghẽn suy nghĩ.",
-        "key_evidence": "Ein mittleres Erregungsniveau ist optimal für die kognitive Leistung. ... Ja, solange sie nicht in Panik umschlägt. Dann blockiert sie das Denken komplett.",
+        "key_evidence": "Ein mittleres Erregungsniveau ist optimal für die kognitive Leistung",
         "key_vocabulary": []
       }
     },
@@ -76,7 +76,7 @@
       "explanation": {
         "de": "Der erste Sprecher sagt, dass die Angst 'oft durch unrealistische Erwartungen an sich selbst verstärkt' wird, und der zweite Sprecher ergänzt, dass 'Perfektionismus ein großer Risikofaktor' ist.",
         "vi": "Người nói thứ nhất nói rằng nỗi sợ 'thường được tăng cường bởi những kỳ vọng không thực tế vào bản thân', và người nói thứ hai bổ sung rằng 'chủ nghĩa hoàn hảo là một yếu tố rủi ro lớn'.",
-        "key_evidence": "Und diese Angst wird oft durch unrealistische Erwartungen an sich selbst verstärkt. Perfektionismus ist ein großer Risikofaktor für Prüfungsangst, hat mein Therapeut gesagt.",
+        "key_evidence": "Und diese Angst wird oft durch unrealistische Erwartungen an sich selbst verstärkt",
         "key_vocabulary": []
       }
     },
@@ -175,7 +175,7 @@
       "explanation": {
         "de": "Der erste Sprecher betont: 'Das zeigt, wie wichtig es ist, offen zu kommunizieren statt zu schweigen.' Der zweite Sprecher bestätigt: 'Die meisten reagieren verständnisvoll, wenn man ehrlich und offen ist.'",
         "vi": "Người nói thứ nhất nhấn mạnh: 'Điều đó cho thấy việc giao tiếp cởi mở quan trọng như thế nào thay vì im lặng.' Người nói thứ hai xác nhận: 'Hầu hết họ đều thông cảm nếu bạn trung thực và cởi mở.'",
-        "key_evidence": "Das zeigt, wie wichtig es ist, offen zu kommunizieren statt zu schweigen. Prüfer sind auch Menschen. Die meisten reagieren verständnisvoll, wenn man ehrlich und offen ist.",
+        "key_evidence": "Das zeigt, wie wichtig es ist, offen zu kommunizieren statt zu schweigen",
         "key_vocabulary": []
       }
     }
@@ -219,201 +219,247 @@
     ]
   },
   "transcript": {
-    "type": "full_reconstructed_transcript",
+    "type": "studio_source_transcript",
     "status": "complete",
-    "source": "reconstructed_full_script",
-    "quality": "release_candidate_reconstructed",
-    "note": "Full learner-visible reconstructed script created from existing question evidence because original studio scripts are not present in the repository. Replace with studio transcript if original audio scripts become available.",
+    "source": "studio_source_script",
+    "quality": "source_verified",
+    "sourceScript": "data/scripts/B2/Teil1-Alltagsaeusserungen/L-B2-GOETHE-008-T1.json",
+    "note": "Transcript replaced from source script by scripts/apply-source-transcripts.ts.",
     "lines": [
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Im folgenden Hoertext geht es um Prüfungsangst bewältigen. Achten Sie auf die zentrale Information."
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sie hören fünf Äußerungen aus dem Alltag. Zu jeder Äußerung gibt es zwei Aufgaben. Kreuzen Sie die richtige Antwort an. Sie hören jeden Text einmal."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q1.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Äußerung 1."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Oft ist die Angst vor der Prüfung schlimmer als die Prüfung selbst.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Sprecher1_1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Morgen habe ich meine Abschlussprüfung und ich kann vor Nervosität nicht schlafen."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q1 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Sprecher2_1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das kenne ich nur zu gut! Mir ging es vor meiner Bachelorprüfung genauso."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q2.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Sprecher1_1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Was hast du dagegen gemacht? Ich habe alles versucht, aber nichts hilft."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Dein Körper kann nicht gleichzeitig entspannt atmen und in Panik sein.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Sprecher2_1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Atemübungen haben mir am meisten geholfen. Vier Sekunden einatmen, sieben halten, acht ausatmen."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q2 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Sprecher1_1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das klingt einfach, aber wenn ich mit meinen Gedanken bei der Prüfung bin, funktioniert nichts."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q3.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Sprecher2_1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Versuch es trotzdem! Dein Körper kann nicht gleichzeitig entspannt atmen und in Panik sein."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "answer_evidence",
-        "text": "Ein mittleres Erregungsniveau ist optimal für die kognitive Leistung. ... Ja, solange sie nicht in Panik umschlägt. Dann blockiert sie das Denken komplett.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Sprecher1_1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Und du hast die Prüfung dann trotz der Nervosität gut geschafft?"
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q3 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Sprecher2_1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ja, sogar mit einer Eins! Oft ist die Angst vor der Prüfung schlimmer als die Prüfung selbst."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q4.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Äußerung 2."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "answer_evidence",
-        "text": "Und diese Angst wird oft durch unrealistische Erwartungen an sich selbst verstärkt. Perfektionismus ist ein großer Risikofaktor für Prüfungsangst, hat mein Therapeut gesagt.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Sprecher1_2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Mein Therapeut hat mir erklärt, dass Prüfungsangst eigentlich eine Versagensangst ist."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q4 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Sprecher2_2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das ergibt Sinn. Man hat nicht Angst vor dem Papier, sondern davor, nicht gut genug zu sein."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q5.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Sprecher1_2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Genau. Und diese Angst wird oft durch unrealistische Erwartungen an sich selbst verstärkt."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "answer_evidence",
-        "text": "Dabei ist sie eine behandelbare psychische Reaktion, keine Charakterschwäche.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Sprecher2_2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Perfektionismus ist ein großer Risikofaktor für Prüfungsangst, hat mein Therapeut gesagt."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q5 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Sprecher1_2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Studien zeigen, dass moderate Angst die Leistung sogar verbessern kann."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q6.",
-        "linkedQuestionId": "Q6"
+        "speaker": "Sprecher2_2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das sogenannte Yerkes-Dodson-Gesetz: Ein mittleres Erregungsniveau ist optimal für die kognitive Leistung."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "answer_evidence",
-        "text": "Genau das ist das Problem. Prüfungsangst wird oft als persönliches Versagen wahrgenommen.",
-        "linkedQuestionId": "Q6"
+        "speaker": "Sprecher1_2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das heißt, ein bisschen Nervosität vor der Prüfung ist sogar gut?"
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q6 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q6"
+        "speaker": "Sprecher2_2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ja, solange sie nicht in Panik umschlägt. Dann blockiert sie das Denken komplett."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q7.",
-        "linkedQuestionId": "Q7"
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Äußerung 3."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "answer_evidence",
-        "text": "Weitergehen! Wenn du bei einer Aufgabe hängen bleibst, verpasst du die nächsten Antworten.",
-        "linkedQuestionId": "Q7"
+        "speaker": "Sprecher1_3",
+        "speaker_role": "dialogue_speaker",
+        "text": "An unserer Uni gibt es jetzt eine psychologische Beratungsstelle speziell für Prüfungsangst."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q7 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q7"
+        "speaker": "Sprecher2_3",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das finde ich wichtig. Prüfungsangst ist viel verbreiteter als die meisten denken."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q8.",
-        "linkedQuestionId": "Q8"
+        "speaker": "Sprecher1_3",
+        "speaker_role": "dialogue_speaker",
+        "text": "Eine Studie zeigt, dass etwa fünfunddreißig Prozent aller Studierenden unter Prüfungsangst leiden."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "answer_evidence",
-        "text": "Ein Tipp: Lies dir vor dem Hören die Aufgaben genau durch und markiere die Schlüsselwörter.",
-        "linkedQuestionId": "Q8"
+        "speaker": "Sprecher2_3",
+        "speaker_role": "dialogue_speaker",
+        "text": "So viele? Und die meisten sprechen wahrscheinlich nicht darüber, weil sie sich schämen."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q8 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q8"
+        "speaker": "Sprecher1_3",
+        "speaker_role": "dialogue_speaker",
+        "text": "Genau das ist das Problem. Prüfungsangst wird oft als persönliches Versagen wahrgenommen."
       },
       {
-        "speaker": "Sprecher 5",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q9.",
-        "linkedQuestionId": "Q9"
+        "speaker": "Sprecher2_3",
+        "speaker_role": "dialogue_speaker",
+        "text": "Dabei ist sie eine behandelbare psychische Reaktion, keine Charakterschwäche."
       },
       {
-        "speaker": "Sprecher 5",
-        "speaker_role": "answer_evidence",
-        "text": "Er war sehr nett und hat mir eine andere Frage gestellt, um mich wieder reinzubekommen.",
-        "linkedQuestionId": "Q9"
+        "speaker": "Sprecher1_3",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Beratungsstelle bietet Workshops zur Stressbewältigung und Einzelgespräche an."
       },
       {
-        "speaker": "Sprecher 5",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q9 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q9"
+        "speaker": "Sprecher2_3",
+        "speaker_role": "dialogue_speaker",
+        "text": "Und das Beste: Alles ist kostenlos für immatrikulierte Studierende."
       },
       {
-        "speaker": "Sprecher 5",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q10.",
-        "linkedQuestionId": "Q10"
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Äußerung 4."
       },
       {
-        "speaker": "Sprecher 5",
-        "speaker_role": "answer_evidence",
-        "text": "Das zeigt, wie wichtig es ist, offen zu kommunizieren statt zu schweigen. Prüfer sind auch Menschen. Die meisten reagieren verständnisvoll, wenn man ehrlich und offen ist.",
-        "linkedQuestionId": "Q10"
+        "speaker": "Sprecher1_4",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ich bereite mich gerade auf die Goethe B2-Prüfung vor und die Hörverstehensübungen machen mir Angst."
       },
       {
-        "speaker": "Sprecher 5",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q10 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q10"
+        "speaker": "Sprecher2_4",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das Hörverstehen ist für viele Deutschlernende der schwierigste Prüfungsteil."
       },
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Ende des Hoertexts."
+        "speaker": "Sprecher1_4",
+        "speaker_role": "dialogue_speaker",
+        "text": "Man versteht die einzelnen Wörter, aber der Gesamtzusammenhang geht im Stress total verloren."
+      },
+      {
+        "speaker": "Sprecher2_4",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ein Tipp: Lies dir vor dem Hören die Aufgaben genau durch und markiere die Schlüsselwörter."
+      },
+      {
+        "speaker": "Sprecher1_4",
+        "speaker_role": "dialogue_speaker",
+        "text": "Dann weißt du schon ungefähr, worauf du beim Hören achten musst."
+      },
+      {
+        "speaker": "Sprecher2_4",
+        "speaker_role": "dialogue_speaker",
+        "text": "Und wenn ich etwas nicht verstehe? Soll ich bei der Aufgabe bleiben oder weitergehen?"
+      },
+      {
+        "speaker": "Sprecher1_4",
+        "speaker_role": "dialogue_speaker",
+        "text": "Weitergehen! Wenn du bei einer Aufgabe hängen bleibst, verpasst du die nächsten Antworten."
+      },
+      {
+        "speaker": "Sprecher2_4",
+        "speaker_role": "dialogue_speaker",
+        "text": "Guter Rat! Und wie oft sollte ich üben? Jeden Tag oder reichen ein paar Mal pro Woche?"
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Äußerung 5."
+      },
+      {
+        "speaker": "Sprecher1_5",
+        "speaker_role": "dialogue_speaker",
+        "text": "Blackout in der Prüfung: Plötzlich ist alles weg, was man gelernt hat. Wer kennt das nicht?"
+      },
+      {
+        "speaker": "Sprecher2_5",
+        "speaker_role": "dialogue_speaker",
+        "text": "Mir ist das einmal bei einer mündlichen Prüfung passiert und es war furchtbar."
+      },
+      {
+        "speaker": "Sprecher1_5",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wie hast du reagiert? Hast du einfach aufgehört zu sprechen?"
+      },
+      {
+        "speaker": "Sprecher2_5",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ich habe dem Prüfer ehrlich gesagt, dass ich gerade einen Blackout habe."
+      },
+      {
+        "speaker": "Sprecher1_5",
+        "speaker_role": "dialogue_speaker",
+        "text": "Und was hat der Prüfer gemacht? War er verständnisvoll oder hat er dich durchfallen lassen?"
+      },
+      {
+        "speaker": "Sprecher2_5",
+        "speaker_role": "dialogue_speaker",
+        "text": "Er war sehr nett und hat mir eine andere Frage gestellt, um mich wieder reinzubekommen."
+      },
+      {
+        "speaker": "Sprecher1_5",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das zeigt, wie wichtig es ist, offen zu kommunizieren statt zu schweigen."
+      },
+      {
+        "speaker": "Sprecher2_5",
+        "speaker_role": "dialogue_speaker",
+        "text": "Prüfer sind auch Menschen. Die meisten reagieren verständnisvoll, wenn man ehrlich und offen ist."
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Ende Teil eins."
       }
     ]
   },
@@ -430,7 +476,7 @@
       "id": "l-b2-goethe-008-t1-lo-1",
       "cefrLevel": "B2",
       "skill": "listening",
-      "canDoVi": "Toi co the luyen nghe hieu o trinh do B2 qua chu de \"Prüfungsangst bewältigen\".",
+      "canDoVi": "Tôi có thể luyện nghe hiểu ở trình độ B2 qua chủ đề \"Prüfungsangst bewältigen\".",
       "canDoDe": "Ich kann Hoeren auf Niveau B2 zum Thema \"Prüfungsangst bewältigen\" ueben.",
       "linkedContentIds": [
         "L-B2-GOETHE-008-T1"

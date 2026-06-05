@@ -109,75 +109,347 @@
     ]
   },
   "transcript": {
-    "type": "full_reconstructed_transcript",
+    "type": "studio_source_transcript",
     "status": "complete",
-    "source": "reconstructed_full_script",
-    "quality": "release_candidate_reconstructed",
-    "note": "Full learner-visible reconstructed script created from existing question evidence because original studio scripts are not present in the repository. Replace with studio transcript if original audio scripts become available.",
+    "source": "studio_source_script",
+    "quality": "source_verified",
+    "sourceScript": "data/scripts/C2/Teil1-Radiosendungen/L-C2-GOETHE-013-T1.json",
+    "note": "Transcript replaced from source script by scripts/apply-source-transcripts.ts.",
     "lines": [
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Der folgende anspruchsvolle Hoertext behandelt Reformpädagogik in der Praxis. Achten Sie auf Aussage, Kontext und implizite Bedeutung."
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sie hören fünf Radiosendungen. Zu jeder Sendung gibt es drei Aufgaben. Kreuzen Sie ja oder nein an. Sie hören jede Sendung einmal."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe gds_h_01.",
-        "linkedQuestionId": "gds_h_01"
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sendung 1."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "In den unmittelbaren Nachwendejahren dominierte eine Erzählung des Triumphes der Freiheit über die Diktatur, die wenig Raum für differenzierte Betrachtungen der DDR-Alltagsgeschichte ließ.",
-        "linkedQuestionId": "gds_h_01"
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Darstellung der deutschen Teilung und der Berliner Mauer in Schulbüchern hat sich seit der Wiedervereinigung mehrfach grundlegend gewandelt und spiegelt die jeweiligen erinnerungspolitischen Konjunkturen wider."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe gds_h_01 im Kontext des Hoertexts.",
-        "linkedQuestionId": "gds_h_01"
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "In den unmittelbaren Nachwendejahren dominierte eine Erzählung des Triumphes der Freiheit über die Diktatur, die wenig Raum für differenzierte Betrachtungen der DDR-Alltagsgeschichte ließ."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe gds_h_02.",
-        "linkedQuestionId": "gds_h_02"
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Seit den zweitausender Jahren ist eine Tendenz zur Historisierung erkennbar, die die DDR stärker in den Kontext des Kalten Krieges einordnet und individuelle Lebenserfahrungen berücksichtigt."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "answer_evidence",
-        "text": "Eine aktuelle Untersuchung des Georg-Eckert-Instituts zeigt, dass ostdeutsche und westdeutsche Schulbücher das Thema auch dreißig Jahre nach der Wiedervereinigung noch aus deutlich unterschiedlichen Perspektiven behandeln.",
-        "linkedQuestionId": "gds_h_02"
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Besonders kontrovers ist die Frage, inwieweit Schulbücher den Alltag in der DDR jenseits von Stasi-Überwachung und Mauertoten abbilden sollten, ohne dabei in eine verharmlosende Nostalgie zu verfallen."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe gds_h_02 im Kontext des Hoertexts.",
-        "linkedQuestionId": "gds_h_02"
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Eine aktuelle Untersuchung des Georg-Eckert-Instituts zeigt, dass ostdeutsche und westdeutsche Schulbücher das Thema auch dreißig Jahre nach der Wiedervereinigung noch aus deutlich unterschiedlichen Perspektiven behandeln."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe gds_h_03.",
-        "linkedQuestionId": "gds_h_03"
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die pädagogische Herausforderung besteht darin, Schülerinnen und Schülern, für die die Mauer ebenso weit entfernt ist wie der Erste Weltkrieg, einen Zugang zu diesem Kapitel der deutschen Geschichte zu eröffnen."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "answer_evidence",
-        "text": "In amerikanischen Geschichtsbüchern wird der Mauerfall häufig als Kulminationspunkt einer von den Vereinigten Staaten angeführten Befreiungsbewegung dargestellt, was die Rolle der ostdeutschen Bürgerbewegung tendenziell marginalisiert.",
-        "linkedQuestionId": "gds_h_03"
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Innovative Ansätze wie die Integration von Zeitzeugeninterviews, virtuellen Rundgängen durch das ehemalige Grundstück und interaktiven digitalen Materialien haben sich als besonders wirksam erwiesen."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe gds_h_03 im Kontext des Hoertexts.",
-        "linkedQuestionId": "gds_h_03"
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Frage, welche Geschichtsnarrative in Schulbüchern verbreitet werden, ist keine rein akademische Angelegenheit, sondern hat tiefgreifende Auswirkungen auf das kollektive Gedächtnis einer Gesellschaft."
       },
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Ende des Hoertexts."
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "In Ostdeutschland beklagen viele Elternverbände, dass die Darstellung ihrer Biographien in westdeutsch geprägten Schulbüchern als pathologisch oder defizitär empfunden wird."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Debatte über die angemessene Erinnerung an die Mauer ist letztlich auch eine Debatte über die Frage, inwieweit die Wiedervereinigung als ein gleichberechtigter Zusammenschluss oder als eine Übernahme zu verstehen ist."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Bemerkenswert ist auch der internationale Vergleich: Die Berliner Mauer nimmt in Schulbüchern anderer Länder eine überraschend prominente Stellung ein, die ihre symbolische Bedeutung für das Ende des Kalten Krieges widerspiegelt."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "In amerikanischen Geschichtsbüchern wird der Mauerfall häufig als Kulminationspunkt einer von den Vereinigten Staaten angeführten Befreiungsbewegung dargestellt, was die Rolle der ostdeutschen Bürgerbewegung tendenziell marginalisiert."
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sendung 2."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Französische Schulbücher betonen dagegen stärker die europäische Dimension und stellen den Mauerfall in den Kontext der europäischen Einigung und der Überwindung nationaler Grenzen."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Diese unterschiedlichen nationalen Perspektiven verdeutlichen, dass Geschichte niemals objektiv erzählt wird, sondern stets durch den Filter gegenwärtiger Interessen und Identitätskonstruktionen betrachtet wird."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Für die Geschichtsdidaktik ergibt sich daraus die zentrale Aufgabe, Multiperspektivität als methodisches Prinzip zu etablieren und Schülerinnen und Schüler zu einer kritischen Reflexion historischer Narrativen zu befähigen."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Darstellung der deutschen Teilung und der Berliner Mauer in Schulbüchern hat sich seit der Wiedervereinigung mehrfach grundlegend gewandelt und spiegelt die jeweiligen erinnerungspolitischen Konjunkturen wider."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "In den unmittelbaren Nachwendejahren dominierte eine Erzählung des Triumphes der Freiheit über die Diktatur, die wenig Raum für differenzierte Betrachtungen der DDR-Alltagsgeschichte ließ."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Seit den zweitausender Jahren ist eine Tendenz zur Historisierung erkennbar, die die DDR stärker in den Kontext des Kalten Krieges einordnet und individuelle Lebenserfahrungen berücksichtigt."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Besonders kontrovers ist die Frage, inwieweit Schulbücher den Alltag in der DDR jenseits von Stasi-Überwachung und Mauertoten abbilden sollten, ohne dabei in eine verharmlosende Nostalgie zu verfallen."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Eine aktuelle Untersuchung des Georg-Eckert-Instituts zeigt, dass ostdeutsche und westdeutsche Schulbücher das Thema auch dreißig Jahre nach der Wiedervereinigung noch aus deutlich unterschiedlichen Perspektiven behandeln."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die pädagogische Herausforderung besteht darin, Schülerinnen und Schülern, für die die Mauer ebenso weit entfernt ist wie der Erste Weltkrieg, einen Zugang zu diesem Kapitel der deutschen Geschichte zu eröffnen."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Innovative Ansätze wie die Integration von Zeitzeugeninterviews, virtuellen Rundgängen durch das ehemalige Grundstück und interaktiven digitalen Materialien haben sich als besonders wirksam erwiesen."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Frage, welche Geschichtsnarrative in Schulbüchern verbreitet werden, ist keine rein akademische Angelegenheit, sondern hat tiefgreifende Auswirkungen auf das kollektive Gedächtnis einer Gesellschaft."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "In Ostdeutschland beklagen viele Elternverbände, dass die Darstellung ihrer Biographien in westdeutsch geprägten Schulbüchern als pathologisch oder defizitär empfunden wird."
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sendung 3."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Debatte über die angemessene Erinnerung an die Mauer ist letztlich auch eine Debatte über die Frage, inwieweit die Wiedervereinigung als ein gleichberechtigter Zusammenschluss oder als eine Übernahme zu verstehen ist."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Bemerkenswert ist auch der internationale Vergleich: Die Berliner Mauer nimmt in Schulbüchern anderer Länder eine überraschend prominente Stellung ein, die ihre symbolische Bedeutung für das Ende des Kalten Krieges widerspiegelt."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "In amerikanischen Geschichtsbüchern wird der Mauerfall häufig als Kulminationspunkt einer von den Vereinigten Staaten angeführten Befreiungsbewegung dargestellt, was die Rolle der ostdeutschen Bürgerbewegung tendenziell marginalisiert."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Französische Schulbücher betonen dagegen stärker die europäische Dimension und stellen den Mauerfall in den Kontext der europäischen Einigung und der Überwindung nationaler Grenzen."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Diese unterschiedlichen nationalen Perspektiven verdeutlichen, dass Geschichte niemals objektiv erzählt wird, sondern stets durch den Filter gegenwärtiger Interessen und Identitätskonstruktionen betrachtet wird."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Für die Geschichtsdidaktik ergibt sich daraus die zentrale Aufgabe, Multiperspektivität als methodisches Prinzip zu etablieren und Schülerinnen und Schüler zu einer kritischen Reflexion historischer Narrativen zu befähigen."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Darstellung der deutschen Teilung und der Berliner Mauer in Schulbüchern hat sich seit der Wiedervereinigung mehrfach grundlegend gewandelt und spiegelt die jeweiligen erinnerungspolitischen Konjunkturen wider."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "In den unmittelbaren Nachwendejahren dominierte eine Erzählung des Triumphes der Freiheit über die Diktatur, die wenig Raum für differenzierte Betrachtungen der DDR-Alltagsgeschichte ließ."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Seit den zweitausender Jahren ist eine Tendenz zur Historisierung erkennbar, die die DDR stärker in den Kontext des Kalten Krieges einordnet und individuelle Lebenserfahrungen berücksichtigt."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Besonders kontrovers ist die Frage, inwieweit Schulbücher den Alltag in der DDR jenseits von Stasi-Überwachung und Mauertoten abbilden sollten, ohne dabei in eine verharmlosende Nostalgie zu verfallen."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Eine aktuelle Untersuchung des Georg-Eckert-Instituts zeigt, dass ostdeutsche und westdeutsche Schulbücher das Thema auch dreißig Jahre nach der Wiedervereinigung noch aus deutlich unterschiedlichen Perspektiven behandeln."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die pädagogische Herausforderung besteht darin, Schülerinnen und Schülern, für die die Mauer ebenso weit entfernt ist wie der Erste Weltkrieg, einen Zugang zu diesem Kapitel der deutschen Geschichte zu eröffnen."
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sendung 4."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Innovative Ansätze wie die Integration von Zeitzeugeninterviews, virtuellen Rundgängen durch das ehemalige Grundstück und interaktiven digitalen Materialien haben sich als besonders wirksam erwiesen."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Frage, welche Geschichtsnarrative in Schulbüchern verbreitet werden, ist keine rein akademische Angelegenheit, sondern hat tiefgreifende Auswirkungen auf das kollektive Gedächtnis einer Gesellschaft."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "In Ostdeutschland beklagen viele Elternverbände, dass die Darstellung ihrer Biographien in westdeutsch geprägten Schulbüchern als pathologisch oder defizitär empfunden wird."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Debatte über die angemessene Erinnerung an die Mauer ist letztlich auch eine Debatte über die Frage, inwieweit die Wiedervereinigung als ein gleichberechtigter Zusammenschluss oder als eine Übernahme zu verstehen ist."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Bemerkenswert ist auch der internationale Vergleich: Die Berliner Mauer nimmt in Schulbüchern anderer Länder eine überraschend prominente Stellung ein, die ihre symbolische Bedeutung für das Ende des Kalten Krieges widerspiegelt."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "In amerikanischen Geschichtsbüchern wird der Mauerfall häufig als Kulminationspunkt einer von den Vereinigten Staaten angeführten Befreiungsbewegung dargestellt, was die Rolle der ostdeutschen Bürgerbewegung tendenziell marginalisiert."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Französische Schulbücher betonen dagegen stärker die europäische Dimension und stellen den Mauerfall in den Kontext der europäischen Einigung und der Überwindung nationaler Grenzen."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Diese unterschiedlichen nationalen Perspektiven verdeutlichen, dass Geschichte niemals objektiv erzählt wird, sondern stets durch den Filter gegenwärtiger Interessen und Identitätskonstruktionen betrachtet wird."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Für die Geschichtsdidaktik ergibt sich daraus die zentrale Aufgabe, Multiperspektivität als methodisches Prinzip zu etablieren und Schülerinnen und Schüler zu einer kritischen Reflexion historischer Narrativen zu befähigen."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Darstellung der deutschen Teilung und der Berliner Mauer in Schulbüchern hat sich seit der Wiedervereinigung mehrfach grundlegend gewandelt und spiegelt die jeweiligen erinnerungspolitischen Konjunkturen wider."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "In den unmittelbaren Nachwendejahren dominierte eine Erzählung des Triumphes der Freiheit über die Diktatur, die wenig Raum für differenzierte Betrachtungen der DDR-Alltagsgeschichte ließ."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Seit den zweitausender Jahren ist eine Tendenz zur Historisierung erkennbar, die die DDR stärker in den Kontext des Kalten Krieges einordnet und individuelle Lebenserfahrungen berücksichtigt."
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sendung 5."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Besonders kontrovers ist die Frage, inwieweit Schulbücher den Alltag in der DDR jenseits von Stasi-Überwachung und Mauertoten abbilden sollten, ohne dabei in eine verharmlosende Nostalgie zu verfallen."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Eine aktuelle Untersuchung des Georg-Eckert-Instituts zeigt, dass ostdeutsche und westdeutsche Schulbücher das Thema auch dreißig Jahre nach der Wiedervereinigung noch aus deutlich unterschiedlichen Perspektiven behandeln."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die pädagogische Herausforderung besteht darin, Schülerinnen und Schülern, für die die Mauer ebenso weit entfernt ist wie der Erste Weltkrieg, einen Zugang zu diesem Kapitel der deutschen Geschichte zu eröffnen."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Innovative Ansätze wie die Integration von Zeitzeugeninterviews, virtuellen Rundgängen durch das ehemalige Grundstück und interaktiven digitalen Materialien haben sich als besonders wirksam erwiesen."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Frage, welche Geschichtsnarrative in Schulbüchern verbreitet werden, ist keine rein akademische Angelegenheit, sondern hat tiefgreifende Auswirkungen auf das kollektive Gedächtnis einer Gesellschaft."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "In Ostdeutschland beklagen viele Elternverbände, dass die Darstellung ihrer Biographien in westdeutsch geprägten Schulbüchern als pathologisch oder defizitär empfunden wird."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Debatte über die angemessene Erinnerung an die Mauer ist letztlich auch eine Debatte über die Frage, inwieweit die Wiedervereinigung als ein gleichberechtigter Zusammenschluss oder als eine Übernahme zu verstehen ist."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Bemerkenswert ist auch der internationale Vergleich: Die Berliner Mauer nimmt in Schulbüchern anderer Länder eine überraschend prominente Stellung ein, die ihre symbolische Bedeutung für das Ende des Kalten Krieges widerspiegelt."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "In amerikanischen Geschichtsbüchern wird der Mauerfall häufig als Kulminationspunkt einer von den Vereinigten Staaten angeführten Befreiungsbewegung dargestellt, was die Rolle der ostdeutschen Bürgerbewegung tendenziell marginalisiert."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Französische Schulbücher betonen dagegen stärker die europäische Dimension und stellen den Mauerfall in den Kontext der europäischen Einigung und der Überwindung nationaler Grenzen."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Diese unterschiedlichen nationalen Perspektiven verdeutlichen, dass Geschichte niemals objektiv erzählt wird, sondern stets durch den Filter gegenwärtiger Interessen und Identitätskonstruktionen betrachtet wird."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Für die Geschichtsdidaktik ergibt sich daraus die zentrale Aufgabe, Multiperspektivität als methodisches Prinzip zu etablieren und Schülerinnen und Schüler zu einer kritischen Reflexion historischer Narrativen zu befähigen."
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Ende Teil eins."
       }
     ]
   },
@@ -194,7 +466,7 @@
       "id": "l-c2-goethe-013-t1-lo-1",
       "cefrLevel": "C2",
       "skill": "listening",
-      "canDoVi": "Toi co the luyen nghe hieu o trinh do C2 qua chu de \"Reformpädagogik in der Praxis\".",
+      "canDoVi": "Tôi có thể luyện nghe hiểu ở trình độ C2 qua chủ đề \"Reformpädagogik in der Praxis\".",
       "canDoDe": "Ich kann Hoeren auf Niveau C2 zum Thema \"Reformpädagogik in der Praxis\" ueben.",
       "linkedContentIds": [
         "L-C2-GOETHE-013-T1"

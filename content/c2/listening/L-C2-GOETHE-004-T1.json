@@ -24,7 +24,7 @@
       "explanation": {
         "de": "Nein. Die Aussage stimmt nicht mit dem Hörtext überein.",
         "vi": "Sai.",
-        "key_evidence": "Die Person kommt aus Dresden.",
+        "key_evidence": "Markentreue",
         "key_vocabulary": []
       }
     },
@@ -38,7 +38,7 @@
       "explanation": {
         "de": "Ja. Blindverkostungen wird genannt.",
         "vi": "Đúng.",
-        "key_evidence": "Richtig. Blindverkostungen wird genannt.",
+        "key_evidence": "Blindverkostungen",
         "key_vocabulary": []
       }
     },
@@ -52,7 +52,7 @@
       "explanation": {
         "de": "Nein. Die Aussage stimmt nicht mit dem Hörtext überein.",
         "vi": "Sai.",
-        "key_evidence": "Die Person kommt aus Dubai.",
+        "key_evidence": "Markentreue",
         "key_vocabulary": []
       }
     }
@@ -96,75 +96,347 @@
     ]
   },
   "transcript": {
-    "type": "full_reconstructed_transcript",
+    "type": "studio_source_transcript",
     "status": "complete",
-    "source": "reconstructed_full_script",
-    "quality": "release_candidate_reconstructed",
-    "note": "Full learner-visible reconstructed script created from existing question evidence because original studio scripts are not present in the repository. Replace with studio transcript if original audio scripts become available.",
+    "source": "studio_source_script",
+    "quality": "source_verified",
+    "sourceScript": "data/scripts/C2/Teil1-Radiosendungen/L-C2-GOETHE-004-T1.json",
+    "note": "Transcript replaced from source script by scripts/apply-source-transcripts.ts.",
     "lines": [
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Der folgende anspruchsvolle Hoertext behandelt Markentreue und Konsumverhalten. Achten Sie auf Aussage, Kontext und implizite Bedeutung."
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sie hören fünf Radiosendungen. Zu jeder Sendung gibt es drei Aufgaben. Kreuzen Sie ja oder nein an. Sie hören jede Sendung einmal."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q1.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sendung 1."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Die Person kommt aus Dresden.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das Phänomen der Markentreue ist ein zentraler Forschungsgegenstand der Konsumpsychologie und hat weitreichende Implikationen für das Verständnis menschlichen Entscheidungsverhaltens."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q1 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Studien zeigen, dass Verbraucher in hochentwickelten Konsumgesellschaften täglich mit mehreren tausend Werbebotschaften konfrontiert werden und deshalb auf kognitive Abkürzungsstrategien wie die Markenpräferenz zurückgreifen."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q2.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Bindung an eine bestimmte Marke ist dabei keineswegs ein rein rationaler Prozess, sondern wird maßgeblich von emotionalen, sozialen und identitätsbezogenen Faktoren geprägt."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "answer_evidence",
-        "text": "Richtig. Blindverkostungen wird genannt.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Besonders aufschlussreich sind experimentelle Befunde, die zeigen, dass Probanden in Blindverkostungen ihre angeblich bevorzugte Marke nicht zuverlässig von Konkurrenzprodukten unterscheiden können."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q2 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Diese Ergebnisse stellen die Annahme einer rational begründeten Markenpräferenz fundamental infrage und lenken den Blick auf die symbolische Dimension des Konsums."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q3.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "In den letzten Jahren hat sich das Phänomen der Anti-Markenbewegung herausgebildet, bei der Verbraucher bewusst auf Markenkauf verzichten und stattdessen generische oder lokale Produkte bevorzugen."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "answer_evidence",
-        "text": "Die Person kommt aus Dubai.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Diese Gegenbewegung speist sich aus einer wachsenden Kritik an den ökologischen und sozialen Praktiken multinationaler Konzerne und korrespondiert mit dem Trend zum bewussten Konsum."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q3 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Interessanterweise kann der betonte Verzicht auf Markenprodukte selbst zur Konstruktion einer distinktiven sozialen Identität beitragen und hat insofern eine paradoxe Strukturanalogie zum Markenkonsum."
       },
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Ende des Hoertexts."
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Der französische Soziologe Pierre Bourdieu würde dieses Phänomen als eine Form der Distinktion beschreiben, bei der kulturelles Kapital durch demonstrativen Konsumverzicht signalisiert wird."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Frage, ob nachhaltiger Konsum tatsächlich die Spielregeln der Konsumgesellschaft verändert oder lediglich eine weitere Nische im allein Spektrum der Konsummöglichkeiten eröffnet, bleibt empirisch umstritten."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ein besonders dynamisches Feld der Markenforschung ist die Untersuchung sogenannter Brand Communities, also virtueller und realer Gemeinschaften, die sich um eine bestimmte Marke herum konstituieren."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das Paradebeispiel ist die Harley-Davidson-Community, deren Mitglieder ihre Zugehörigkeit zu dieser Marke mit einer quasi-religiösen Inbrunst pflegen, die weit über das funktionale Interesse am Produkt hinausgeht."
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sendung 2."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Im digitalen Zeitalter haben sich solche Markengemeinschaften auf Social-Media-Plattformen verlagert, wo sie durch Influencer-Marketing und nutzergenerierte Inhalte eine beispiellose Reichweite entfalten."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Schattenseite dieser Entwicklung ist das Phänomen der toxischen Markengemeinschaften, in denen abweichende Meinungen systematisch unterdrückt und Markenkritiker massiv angefeindet werden."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Aus soziologischer und psychologischer Perspektive offenbart das Phänomen der Brand Communities fundamentale menschliche Bedürfnisse nach Zugehörigkeit und Identität, die in einer zunehmend fragmentierten Gesellschaft anderweitig schwer zu befriedigen sind."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das Phänomen der Markentreue ist ein zentraler Forschungsgegenstand der Konsumpsychologie und hat weitreichende Implikationen für das Verständnis menschlichen Entscheidungsverhaltens."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Studien zeigen, dass Verbraucher in hochentwickelten Konsumgesellschaften täglich mit mehreren tausend Werbebotschaften konfrontiert werden und deshalb auf kognitive Abkürzungsstrategien wie die Markenpräferenz zurückgreifen."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Bindung an eine bestimmte Marke ist dabei keineswegs ein rein rationaler Prozess, sondern wird maßgeblich von emotionalen, sozialen und identitätsbezogenen Faktoren geprägt."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Besonders aufschlussreich sind experimentelle Befunde, die zeigen, dass Probanden in Blindverkostungen ihre angeblich bevorzugte Marke nicht zuverlässig von Konkurrenzprodukten unterscheiden können."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Diese Ergebnisse stellen die Annahme einer rational begründeten Markenpräferenz fundamental infrage und lenken den Blick auf die symbolische Dimension des Konsums."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "In den letzten Jahren hat sich das Phänomen der Anti-Markenbewegung herausgebildet, bei der Verbraucher bewusst auf Markenkauf verzichten und stattdessen generische oder lokale Produkte bevorzugen."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Diese Gegenbewegung speist sich aus einer wachsenden Kritik an den ökologischen und sozialen Praktiken multinationaler Konzerne und korrespondiert mit dem Trend zum bewussten Konsum."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Interessanterweise kann der betonte Verzicht auf Markenprodukte selbst zur Konstruktion einer distinktiven sozialen Identität beitragen und hat insofern eine paradoxe Strukturanalogie zum Markenkonsum."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Der französische Soziologe Pierre Bourdieu würde dieses Phänomen als eine Form der Distinktion beschreiben, bei der kulturelles Kapital durch demonstrativen Konsumverzicht signalisiert wird."
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sendung 3."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Frage, ob nachhaltiger Konsum tatsächlich die Spielregeln der Konsumgesellschaft verändert oder lediglich eine weitere Nische im allein Spektrum der Konsummöglichkeiten eröffnet, bleibt empirisch umstritten."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ein besonders dynamisches Feld der Markenforschung ist die Untersuchung sogenannter Brand Communities, also virtueller und realer Gemeinschaften, die sich um eine bestimmte Marke herum konstituieren."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das Paradebeispiel ist die Harley-Davidson-Community, deren Mitglieder ihre Zugehörigkeit zu dieser Marke mit einer quasi-religiösen Inbrunst pflegen, die weit über das funktionale Interesse am Produkt hinausgeht."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Im digitalen Zeitalter haben sich solche Markengemeinschaften auf Social-Media-Plattformen verlagert, wo sie durch Influencer-Marketing und nutzergenerierte Inhalte eine beispiellose Reichweite entfalten."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Schattenseite dieser Entwicklung ist das Phänomen der toxischen Markengemeinschaften, in denen abweichende Meinungen systematisch unterdrückt und Markenkritiker massiv angefeindet werden."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Aus soziologischer und psychologischer Perspektive offenbart das Phänomen der Brand Communities fundamentale menschliche Bedürfnisse nach Zugehörigkeit und Identität, die in einer zunehmend fragmentierten Gesellschaft anderweitig schwer zu befriedigen sind."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das Phänomen der Markentreue ist ein zentraler Forschungsgegenstand der Konsumpsychologie und hat weitreichende Implikationen für das Verständnis menschlichen Entscheidungsverhaltens."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Studien zeigen, dass Verbraucher in hochentwickelten Konsumgesellschaften täglich mit mehreren tausend Werbebotschaften konfrontiert werden und deshalb auf kognitive Abkürzungsstrategien wie die Markenpräferenz zurückgreifen."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Bindung an eine bestimmte Marke ist dabei keineswegs ein rein rationaler Prozess, sondern wird maßgeblich von emotionalen, sozialen und identitätsbezogenen Faktoren geprägt."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Besonders aufschlussreich sind experimentelle Befunde, die zeigen, dass Probanden in Blindverkostungen ihre angeblich bevorzugte Marke nicht zuverlässig von Konkurrenzprodukten unterscheiden können."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Diese Ergebnisse stellen die Annahme einer rational begründeten Markenpräferenz fundamental infrage und lenken den Blick auf die symbolische Dimension des Konsums."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "In den letzten Jahren hat sich das Phänomen der Anti-Markenbewegung herausgebildet, bei der Verbraucher bewusst auf Markenkauf verzichten und stattdessen generische oder lokale Produkte bevorzugen."
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sendung 4."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Diese Gegenbewegung speist sich aus einer wachsenden Kritik an den ökologischen und sozialen Praktiken multinationaler Konzerne und korrespondiert mit dem Trend zum bewussten Konsum."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Interessanterweise kann der betonte Verzicht auf Markenprodukte selbst zur Konstruktion einer distinktiven sozialen Identität beitragen und hat insofern eine paradoxe Strukturanalogie zum Markenkonsum."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Der französische Soziologe Pierre Bourdieu würde dieses Phänomen als eine Form der Distinktion beschreiben, bei der kulturelles Kapital durch demonstrativen Konsumverzicht signalisiert wird."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Frage, ob nachhaltiger Konsum tatsächlich die Spielregeln der Konsumgesellschaft verändert oder lediglich eine weitere Nische im allein Spektrum der Konsummöglichkeiten eröffnet, bleibt empirisch umstritten."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ein besonders dynamisches Feld der Markenforschung ist die Untersuchung sogenannter Brand Communities, also virtueller und realer Gemeinschaften, die sich um eine bestimmte Marke herum konstituieren."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das Paradebeispiel ist die Harley-Davidson-Community, deren Mitglieder ihre Zugehörigkeit zu dieser Marke mit einer quasi-religiösen Inbrunst pflegen, die weit über das funktionale Interesse am Produkt hinausgeht."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Im digitalen Zeitalter haben sich solche Markengemeinschaften auf Social-Media-Plattformen verlagert, wo sie durch Influencer-Marketing und nutzergenerierte Inhalte eine beispiellose Reichweite entfalten."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Schattenseite dieser Entwicklung ist das Phänomen der toxischen Markengemeinschaften, in denen abweichende Meinungen systematisch unterdrückt und Markenkritiker massiv angefeindet werden."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Aus soziologischer und psychologischer Perspektive offenbart das Phänomen der Brand Communities fundamentale menschliche Bedürfnisse nach Zugehörigkeit und Identität, die in einer zunehmend fragmentierten Gesellschaft anderweitig schwer zu befriedigen sind."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das Phänomen der Markentreue ist ein zentraler Forschungsgegenstand der Konsumpsychologie und hat weitreichende Implikationen für das Verständnis menschlichen Entscheidungsverhaltens."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Studien zeigen, dass Verbraucher in hochentwickelten Konsumgesellschaften täglich mit mehreren tausend Werbebotschaften konfrontiert werden und deshalb auf kognitive Abkürzungsstrategien wie die Markenpräferenz zurückgreifen."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Bindung an eine bestimmte Marke ist dabei keineswegs ein rein rationaler Prozess, sondern wird maßgeblich von emotionalen, sozialen und identitätsbezogenen Faktoren geprägt."
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sendung 5."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Besonders aufschlussreich sind experimentelle Befunde, die zeigen, dass Probanden in Blindverkostungen ihre angeblich bevorzugte Marke nicht zuverlässig von Konkurrenzprodukten unterscheiden können."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Diese Ergebnisse stellen die Annahme einer rational begründeten Markenpräferenz fundamental infrage und lenken den Blick auf die symbolische Dimension des Konsums."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "In den letzten Jahren hat sich das Phänomen der Anti-Markenbewegung herausgebildet, bei der Verbraucher bewusst auf Markenkauf verzichten und stattdessen generische oder lokale Produkte bevorzugen."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Diese Gegenbewegung speist sich aus einer wachsenden Kritik an den ökologischen und sozialen Praktiken multinationaler Konzerne und korrespondiert mit dem Trend zum bewussten Konsum."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Interessanterweise kann der betonte Verzicht auf Markenprodukte selbst zur Konstruktion einer distinktiven sozialen Identität beitragen und hat insofern eine paradoxe Strukturanalogie zum Markenkonsum."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Der französische Soziologe Pierre Bourdieu würde dieses Phänomen als eine Form der Distinktion beschreiben, bei der kulturelles Kapital durch demonstrativen Konsumverzicht signalisiert wird."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Frage, ob nachhaltiger Konsum tatsächlich die Spielregeln der Konsumgesellschaft verändert oder lediglich eine weitere Nische im allein Spektrum der Konsummöglichkeiten eröffnet, bleibt empirisch umstritten."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ein besonders dynamisches Feld der Markenforschung ist die Untersuchung sogenannter Brand Communities, also virtueller und realer Gemeinschaften, die sich um eine bestimmte Marke herum konstituieren."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das Paradebeispiel ist die Harley-Davidson-Community, deren Mitglieder ihre Zugehörigkeit zu dieser Marke mit einer quasi-religiösen Inbrunst pflegen, die weit über das funktionale Interesse am Produkt hinausgeht."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Im digitalen Zeitalter haben sich solche Markengemeinschaften auf Social-Media-Plattformen verlagert, wo sie durch Influencer-Marketing und nutzergenerierte Inhalte eine beispiellose Reichweite entfalten."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Schattenseite dieser Entwicklung ist das Phänomen der toxischen Markengemeinschaften, in denen abweichende Meinungen systematisch unterdrückt und Markenkritiker massiv angefeindet werden."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Aus soziologischer und psychologischer Perspektive offenbart das Phänomen der Brand Communities fundamentale menschliche Bedürfnisse nach Zugehörigkeit und Identität, die in einer zunehmend fragmentierten Gesellschaft anderweitig schwer zu befriedigen sind."
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Ende Teil eins."
       }
     ]
   },
@@ -181,7 +453,7 @@
       "id": "l-c2-goethe-004-t1-lo-1",
       "cefrLevel": "C2",
       "skill": "listening",
-      "canDoVi": "Toi co the luyen nghe hieu o trinh do C2 qua chu de \"Markentreue und Konsumverhalten\".",
+      "canDoVi": "Tôi có thể luyện nghe hiểu ở trình độ C2 qua chủ đề \"Markentreue und Konsumverhalten\".",
       "canDoDe": "Ich kann Hoeren auf Niveau C2 zum Thema \"Markentreue und Konsumverhalten\" ueben.",
       "linkedContentIds": [
         "L-C2-GOETHE-004-T1"

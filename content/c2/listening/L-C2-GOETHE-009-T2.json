@@ -29,7 +29,7 @@
       "explanation": {
         "de": "Man hört: \"Arbeit und Beruf\".",
         "vi": "Đoạn hội thoại 1 nói về chủ đề gì?",
-        "key_evidence": "Arbeit und Beruf",
+        "key_evidence": "Anglizismen",
         "key_vocabulary": []
       }
     },
@@ -48,7 +48,7 @@
       "explanation": {
         "de": "Das Hauptthema ist \"Arbeit und Beruf\".",
         "vi": "Đoạn hội thoại 1 nói về chủ đề gì?",
-        "key_evidence": "Arbeit und Beruf",
+        "key_evidence": "Anglizismen",
         "key_vocabulary": []
       }
     },
@@ -116,75 +116,192 @@
     ]
   },
   "transcript": {
-    "type": "full_reconstructed_transcript",
+    "type": "studio_source_transcript",
     "status": "complete",
-    "source": "reconstructed_full_script",
-    "quality": "release_candidate_reconstructed",
-    "note": "Full learner-visible reconstructed script created from existing question evidence because original studio scripts are not present in the repository. Replace with studio transcript if original audio scripts become available.",
+    "source": "studio_source_script",
+    "quality": "source_verified",
+    "sourceScript": "data/scripts/C2/Teil2-Spontanes-Gespraech/L-C2-GOETHE-009-T2.json",
+    "note": "Transcript replaced from source script by scripts/apply-source-transcripts.ts.",
     "lines": [
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Der folgende anspruchsvolle Hoertext behandelt Sprachverfall oder Sprachwandel?. Achten Sie auf Aussage, Kontext und implizite Bedeutung."
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sie hören ein Gespräch. Dazu gibt es fünf Aufgaben. Wer sagt was? Sie hören das Gespräch zweimal."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q1.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Studentin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Hast du den Artikel im Spiegel gelesen, in dem sich der Vorsitzende des Vereins Deutsche Sprache darüber empört, dass Anglizismen die deutsche Sprache zerstören würden?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Arbeit und Beruf",
-        "linkedQuestionId": "Q1"
+        "speaker": "Student",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ja, und ich fand die Argumentation linguistisch nicht sonderlich überzeugend, denn Sprachkontakt und der damit verbundene Lehnwortschatz waren schon immer ein Motor der Sprachentwicklung."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q1 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Studentin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Meine Professorin für historische Linguistik pflegt in diesem Zusammenhang darauf hinzuweisen, dass das Deutsche im Mittelalter massiv vom Französischen und Lateinischen beeinflusst wurde und dass niemand dies heute als Verfall der Sprache bezeichnen würde."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q2.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Student",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das ist ein starkes Argument, das die Historizität der Sprachverfallsklage bloßlegt und zeigt, dass das, was heute als Fremdkörper empfunden wird, morgen als selbstverständlicher Bestandteil des Wortschatzes gilt."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Arbeit und Beruf",
-        "linkedQuestionId": "Q2"
+        "speaker": "Studentin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Allerdings gibt es einen Unterschied zwischen der graduellen Übernahme einzelner Lehnwörter und der massenhaften Ersetzung ganzer Wortfelder durch englische Begriffe, wie sie etwa in der Unternehmenssprache zu beobachten ist."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q2 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Student",
+        "speaker_role": "dialogue_speaker",
+        "text": "Da hast du nicht Unrecht; wenn eine Firma ihre Meetings durch Townhalls ersetzt und ihre Mitarbeiter zu Stakeholdern erklärt, dann geht es weniger um sprachlichen Wandel als um ein bewusstes Prestige-Signalling."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q3.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Studentin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Genau, und diese soziolinguistische Dimension, also die Frage, wer aus welchen Gründen welche sprachlichen Formen verwendet, wird in der öffentlichen Debatte leider meist ausgeblendet."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Verfall",
-        "linkedQuestionId": "Q3"
+        "speaker": "Student",
+        "speaker_role": "dialogue_speaker",
+        "text": "In unserem Seminar haben wir uns auch mit dem Phänomen des Code-Switching beschäftigt, also dem spielerischen Wechsel zwischen verschiedenen Sprachen und Sprachregistern innerhalb eines Gesprächs."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q3 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Studentin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das ist ein faszinierendes Phänomen, das in mehrsprachigen Gemeinschaften alltäglich ist und keineswegs auf sprachliche Inkompetenz hindeutet, sondern im Gegenteil ein Ausdruck besonderer kommunikativer Kompetenz ist."
       },
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Ende des Hoertexts."
+        "speaker": "Student",
+        "speaker_role": "dialogue_speaker",
+        "text": "Was mich an der ganzen Debatte am meisten stört, ist der konservative Gestus, der implizit davon ausgeht, dass es einen zeitlosen, unveränderlichen Zustand der Sprache gebe, den es zu bewahren gilt."
+      },
+      {
+        "speaker": "Studentin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Dieser essenzialistische Sprachbegriff widerspricht fundamental all dem, was wir über die historische Entwicklung natürlicher Sprachen wissen."
+      },
+      {
+        "speaker": "Student",
+        "speaker_role": "dialogue_speaker",
+        "text": "Dazu kommt, dass die Verteidiger der sprachlichen Reinheit oft selbst einen Sprachgebrauch pflegen, der voll von historischen Fremdwörtern ist, ohne dass ihnen dieser Widerspruch auffällt."
+      },
+      {
+        "speaker": "Studentin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Am Ende bleibt die philosophische Grundfrage, ob Sprache ein zu schützendes kulturelles Erbe oder ein dynamisches, selbstorganisierendes System ist, das sich jeder Kontrolle von außen entzieht."
+      },
+      {
+        "speaker": "Student",
+        "speaker_role": "dialogue_speaker",
+        "text": "Vielleicht ist die klügste Antwort, dass sie beides ist und dass die Spannung zwischen Bewahrung und Wandel das Wesen der Sprache ausmacht."
+      },
+      {
+        "speaker": "Studentin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Hast du den Artikel im Spiegel gelesen, in dem sich der Vorsitzende des Vereins Deutsche Sprache darüber empört, dass Anglizismen die deutsche Sprache zerstören würden?"
+      },
+      {
+        "speaker": "Student",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ja, und ich fand die Argumentation linguistisch nicht sonderlich überzeugend, denn Sprachkontakt und der damit verbundene Lehnwortschatz waren schon immer ein Motor der Sprachentwicklung."
+      },
+      {
+        "speaker": "Studentin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Meine Professorin für historische Linguistik pflegt in diesem Zusammenhang darauf hinzuweisen, dass das Deutsche im Mittelalter massiv vom Französischen und Lateinischen beeinflusst wurde und dass niemand dies heute als Verfall der Sprache bezeichnen würde."
+      },
+      {
+        "speaker": "Student",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das ist ein starkes Argument, das die Historizität der Sprachverfallsklage bloßlegt und zeigt, dass das, was heute als Fremdkörper empfunden wird, morgen als selbstverständlicher Bestandteil des Wortschatzes gilt."
+      },
+      {
+        "speaker": "Studentin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Allerdings gibt es einen Unterschied zwischen der graduellen Übernahme einzelner Lehnwörter und der massenhaften Ersetzung ganzer Wortfelder durch englische Begriffe, wie sie etwa in der Unternehmenssprache zu beobachten ist."
+      },
+      {
+        "speaker": "Student",
+        "speaker_role": "dialogue_speaker",
+        "text": "Da hast du nicht Unrecht; wenn eine Firma ihre Meetings durch Townhalls ersetzt und ihre Mitarbeiter zu Stakeholdern erklärt, dann geht es weniger um sprachlichen Wandel als um ein bewusstes Prestige-Signalling."
+      },
+      {
+        "speaker": "Studentin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Genau, und diese soziolinguistische Dimension, also die Frage, wer aus welchen Gründen welche sprachlichen Formen verwendet, wird in der öffentlichen Debatte leider meist ausgeblendet."
+      },
+      {
+        "speaker": "Student",
+        "speaker_role": "dialogue_speaker",
+        "text": "In unserem Seminar haben wir uns auch mit dem Phänomen des Code-Switching beschäftigt, also dem spielerischen Wechsel zwischen verschiedenen Sprachen und Sprachregistern innerhalb eines Gesprächs."
+      },
+      {
+        "speaker": "Studentin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das ist ein faszinierendes Phänomen, das in mehrsprachigen Gemeinschaften alltäglich ist und keineswegs auf sprachliche Inkompetenz hindeutet, sondern im Gegenteil ein Ausdruck besonderer kommunikativer Kompetenz ist."
+      },
+      {
+        "speaker": "Student",
+        "speaker_role": "dialogue_speaker",
+        "text": "Was mich an der ganzen Debatte am meisten stört, ist der konservative Gestus, der implizit davon ausgeht, dass es einen zeitlosen, unveränderlichen Zustand der Sprache gebe, den es zu bewahren gilt."
+      },
+      {
+        "speaker": "Studentin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Dieser essenzialistische Sprachbegriff widerspricht fundamental all dem, was wir über die historische Entwicklung natürlicher Sprachen wissen."
+      },
+      {
+        "speaker": "Student",
+        "speaker_role": "dialogue_speaker",
+        "text": "Dazu kommt, dass die Verteidiger der sprachlichen Reinheit oft selbst einen Sprachgebrauch pflegen, der voll von historischen Fremdwörtern ist, ohne dass ihnen dieser Widerspruch auffällt."
+      },
+      {
+        "speaker": "Studentin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Am Ende bleibt die philosophische Grundfrage, ob Sprache ein zu schützendes kulturelles Erbe oder ein dynamisches, selbstorganisierendes System ist, das sich jeder Kontrolle von außen entzieht."
+      },
+      {
+        "speaker": "Student",
+        "speaker_role": "dialogue_speaker",
+        "text": "Vielleicht ist die klügste Antwort, dass sie beides ist und dass die Spannung zwischen Bewahrung und Wandel das Wesen der Sprache ausmacht."
+      },
+      {
+        "speaker": "Studentin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Hast du den Artikel im Spiegel gelesen, in dem sich der Vorsitzende des Vereins Deutsche Sprache darüber empört, dass Anglizismen die deutsche Sprache zerstören würden?"
+      },
+      {
+        "speaker": "Student",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ja, und ich fand die Argumentation linguistisch nicht sonderlich überzeugend, denn Sprachkontakt und der damit verbundene Lehnwortschatz waren schon immer ein Motor der Sprachentwicklung."
+      },
+      {
+        "speaker": "Studentin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Meine Professorin für historische Linguistik pflegt in diesem Zusammenhang darauf hinzuweisen, dass das Deutsche im Mittelalter massiv vom Französischen und Lateinischen beeinflusst wurde und dass niemand dies heute als Verfall der Sprache bezeichnen würde."
+      },
+      {
+        "speaker": "Student",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das ist ein starkes Argument, das die Historizität der Sprachverfallsklage bloßlegt und zeigt, dass das, was heute als Fremdkörper empfunden wird, morgen als selbstverständlicher Bestandteil des Wortschatzes gilt."
+      },
+      {
+        "speaker": "Studentin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Allerdings gibt es einen Unterschied zwischen der graduellen Übernahme einzelner Lehnwörter und der massenhaften Ersetzung ganzer Wortfelder durch englische Begriffe, wie sie etwa in der Unternehmenssprache zu beobachten ist."
+      },
+      {
+        "speaker": "Student",
+        "speaker_role": "dialogue_speaker",
+        "text": "Da hast du nicht Unrecht; wenn eine Firma ihre Meetings durch Townhalls ersetzt und ihre Mitarbeiter zu Stakeholdern erklärt, dann geht es weniger um sprachlichen Wandel als um ein bewusstes Prestige-Signalling."
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Ende Teil zwei."
       }
     ]
   },
@@ -201,7 +318,7 @@
       "id": "l-c2-goethe-009-t2-lo-1",
       "cefrLevel": "C2",
       "skill": "listening",
-      "canDoVi": "Toi co the luyen nghe hieu o trinh do C2 qua chu de \"Sprachverfall oder Sprachwandel?\".",
+      "canDoVi": "Tôi có thể luyện nghe hiểu ở trình độ C2 qua chủ đề \"Sprachverfall oder Sprachwandel?\".",
       "canDoDe": "Ich kann Hoeren auf Niveau C2 zum Thema \"Sprachverfall oder Sprachwandel?\" ueben.",
       "linkedContentIds": [
         "L-C2-GOETHE-009-T2"

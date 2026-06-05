@@ -48,7 +48,7 @@
       "explanation": {
         "de": "Der Dozent legt dar, dass das Problem entsteht, wenn das schnelle, intuitive System eins für komplexe Entscheidungen genutzt wird, die eigentlich das langsame, analytische System zwei erfordern. Option (a) ist falsch; der Dozent sagt, dass System eins in den meisten Alltagssituationen dominiert. Option (c) ist eine unzulässige Verallgemeinerung; System eins ist zwar effizient, aber nicht für komplexe, folgenreiche Entscheidungen geeignet.",
         "vi": "Giảng viên trình bày rằng vấn đề phát sinh khi hệ thống một, nhanh và trực quan, được sử dụng cho các quyết định phức tạp mà thực sự đòi hỏi hệ thống hai, chậm và phân tích. Lựa chọn (a) sai; giảng viên nói rằng hệ thống một chiếm ưu thế trong hầu hết các tình huống hàng ngày. Lựa chọn (c) là một sự khái quát hóa không hợp lệ; hệ thống một tuy hiệu quả nhưng không phù hợp cho các quyết định phức tạp và có hậu quả lớn.",
-        "key_evidence": "Aber für komplexe, folgenreiche Entscheidungen ist System zwei erforderlich, und genau hier scheitern wir oft. Wir nutzen System eins, wo System zwei angebracht wäre, und treffen dadurch schlechtere Entscheidungen.",
+        "key_evidence": "Aber für komplexe, folgenreiche Entscheidungen ist System zwei erforderlich, und genau hier scheitern wir oft",
         "key_vocabulary": []
       }
     },
@@ -67,7 +67,7 @@
       "explanation": {
         "de": "Die Empfehlungen ('eine Nacht darüber schlafen', 'Gegenargumente suchen', 'andere Perspektiven konsultieren') zielen darauf ab, den schnellen, automatischen Denkprozess zu unterbrechen und durch Reflexion und externe Meinungen zu ergänzen. Option (b) ist eine lexikalische Falle; Checklisten werden zwar erwähnt, aber explizit im Kontext der Wirtschaft, nicht für das persönliche Leben. Option (a) ist eine Übertreibung und wird nicht vorgeschlagen.",
         "vi": "Các khuyến nghị ('ngủ một đêm rồi quyết định', 'tìm kiếm các lập luận phản biện', 'tham khảo các quan điểm khác') nhằm mục đích làm gián đoạn quá trình tư duy nhanh, tự động và bổ sung bằng sự suy ngẫm và ý kiến bên ngoài. Lựa chọn (b) là một cái bẫy từ vựng; danh sách kiểm tra (Checklisten) có được đề cập, nhưng rõ ràng là trong bối cảnh kinh tế, không phải cho cuộc sống cá nhân. Lựa chọn (a) là một sự cường điệu hóa và không được đề xuất.",
-        "key_evidence": "Drei konkrete Empfehlungen für den Alltag: Wichtige Entscheidungen nie sofort treffen, sondern eine Nacht darüber schlafen. Aktiv nach Gegenargumenten suchen und Menschen mit anderen Perspektiven und Hintergründen bewusst konsultieren.",
+        "key_evidence": "Drei konkrete Empfehlungen für den Alltag: Wichtige Entscheidungen nie sofort treffen, sondern eine Nacht darüber schlafen",
         "key_vocabulary": []
       }
     }
@@ -111,75 +111,162 @@
     ]
   },
   "transcript": {
-    "type": "full_reconstructed_transcript",
+    "type": "studio_source_transcript",
     "status": "complete",
-    "source": "reconstructed_full_script",
-    "quality": "release_candidate_reconstructed",
-    "note": "Full learner-visible reconstructed script created from existing question evidence because original studio scripts are not present in the repository. Replace with studio transcript if original audio scripts become available.",
+    "source": "studio_source_script",
+    "quality": "source_verified",
+    "sourceScript": "data/scripts/C1/Teil4-Vortrag/L-C1-GOETHE-010-T4.json",
+    "note": "Transcript replaced from source script by scripts/apply-source-transcripts.ts.",
     "lines": [
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Der folgende anspruchsvolle Hoertext behandelt Psychologie der Entscheidungsfindung. Achten Sie auf Aussage, Kontext und implizite Bedeutung."
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sie hören einen Vortrag. Dazu gibt es sieben Aufgaben. Kreuzen Sie die richtige Antwort an. Sie hören den Vortrag einmal."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q1.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Willkommen zu meinem Vortrag über die Psychologie der Entscheidungsfindung und ihre Bedeutung für die Gesellschaft."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Meine These lautet: Die systematischen Denkfehler, die wir alle machen, sind keine Schwäche, sondern ein evolutionäres Erbe.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Als Kognitionswissenschaftler beschäftige ich mich mit der fundamentalen Frage, warum Menschen sich oft irrational verhalten."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q1 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Meine These lautet: Die systematischen Denkfehler, die wir alle machen, sind keine Schwäche, sondern ein evolutionäres Erbe."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q2.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Lassen Sie mich mit einem berühmten Experiment von Daniel Kahneman und Amos Tversky aus den siebziger Jahren beginnen."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Aber für komplexe, folgenreiche Entscheidungen ist System zwei erforderlich, und genau hier scheitern wir oft. Wir nutzen System eins, wo System zwei angebracht wäre, und treffen dadurch schlechtere Entscheidungen.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Probanden sollten schätzen, wie viel Prozent der UN-Mitgliedstaaten aus Afrika stammen."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q2 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Vorher wurde ein Glücksrad gedreht, das zufällig auf einer Zahl landete und den Probanden als Referenzpunkt präsentiert wurde."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q3.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das erstaunliche Ergebnis: Die zufällige Zahl beeinflusste die Schätzung der Probanden massiv und systematisch."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Drei konkrete Empfehlungen für den Alltag: Wichtige Entscheidungen nie sofort treffen, sondern eine Nacht darüber schlafen. Aktiv nach Gegenargumenten suchen und Menschen mit anderen Perspektiven und Hintergründen bewusst konsultieren.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wer eine hohe Zahl gesehen hatte, schätzte deutlich höher als jemand mit einer niedrigen Referenzzahl."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q3 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Dieser Ankereffekt ist einer der robustesten Befunde der gesamten Kognitionspsychologie."
       },
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Ende des Hoertexts."
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Er zeigt, dass unser Gehirn keine reine Rechenmaschine ist, sondern kontextabhängig und beeinflussbar arbeitet."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Zwei-Prozess-Theorie von Kahneman unterscheidet zwischen System eins und System zwei des menschlichen Denkens."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "System eins arbeitet schnell, automatisch und mühelos: Es ist unser intuitives, emotionales Entscheidungssystem."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "System zwei ist langsam, bewusst und anstrengend: Es ist unser analytisches, rationales Denksystem im Gehirn."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "In den meisten Alltagssituationen dominiert System eins, weil es energieeffizient ist und meist gute Ergebnisse liefert."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Aber für komplexe, folgenreiche Entscheidungen ist System zwei erforderlich, und genau hier scheitern wir oft."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wir nutzen System eins, wo System zwei angebracht wäre, und treffen dadurch schlechtere Entscheidungen."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Lassen Sie mich nun die wichtigsten kognitiven Verzerrungen und ihre gesellschaftlichen Auswirkungen darstellen."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Der Bestätigungsfehler führt dazu, dass politische Meinungen sich verhärten und der gesellschaftliche Dialog verarmt."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Verfügbarkeitsheuristik führt dazu, dass medial präsente Risiken wie Terrorismus systematisch überschätzt werden."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Gruppendenk-Verzerrung kann in Organisationen zu katastrophalen Fehlentscheidungen führen, wenn der Widerspruch unterdrückt wird."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das Challenger-Unglück von neunzehnhundertsechsundachtzig ist ein tragisches Beispiel für die tödlichen Folgen von Gruppendenken."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Welche praktischen Konsequenzen hat die Entscheidungsforschung für Wirtschaft, Politik und das persönliche Leben?"
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "In der Wirtschaft: Strukturierte Entscheidungsprozesse, Checklisten und diverse Teams reduzieren kognitive Verzerrungen nachweislich."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "In der Politik: Evidenzbasierte Politikgestaltung und Nudging können gesellschaftliche Ergebnisse verbessern."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Im persönlichen Leben: Das Wissen um eigene Denkfehler ist der erste Schritt zu besseren Entscheidungen."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Drei konkrete Empfehlungen für den Alltag: Wichtige Entscheidungen nie sofort treffen, sondern eine Nacht darüber schlafen."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Aktiv nach Gegenargumenten suchen und Menschen mit anderen Perspektiven und Hintergründen bewusst konsultieren."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Vielen Dank für Ihre Aufmerksamkeit! Entscheiden Sie sich weise, aber wissen Sie, dass Sie es nicht immer tun werden."
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Ende des Hörverstehens."
       }
     ]
   },
@@ -196,7 +283,7 @@
       "id": "l-c1-goethe-010-t4-lo-1",
       "cefrLevel": "C1",
       "skill": "listening",
-      "canDoVi": "Toi co the luyen nghe hieu o trinh do C1 qua chu de \"Psychologie der Entscheidungsfindung\".",
+      "canDoVi": "Tôi có thể luyện nghe hiểu ở trình độ C1 qua chủ đề \"Psychologie der Entscheidungsfindung\".",
       "canDoDe": "Ich kann Hoeren auf Niveau C1 zum Thema \"Psychologie der Entscheidungsfindung\" ueben.",
       "linkedContentIds": [
         "L-C1-GOETHE-010-T4"

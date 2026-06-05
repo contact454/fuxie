@@ -24,7 +24,7 @@
       "explanation": {
         "de": "Falsch. Die Aussage stimmt nicht mit dem Hörtext überein.",
         "vi": "Sai.",
-        "key_evidence": "Eine Person heißt Jörg.",
+        "key_evidence": "Herr Professor Wohnraum",
         "key_vocabulary": []
       }
     },
@@ -38,7 +38,7 @@
       "explanation": {
         "de": "Richtig. Die Aussage stimmt mit dem Hörtext überein.",
         "vi": "Đúng.",
-        "key_evidence": "Eine Person heißt Professor.",
+        "key_evidence": "Herr Professor Wohnraum",
         "key_vocabulary": []
       }
     },
@@ -52,7 +52,7 @@
       "explanation": {
         "de": "Falsch. Die Aussage stimmt nicht mit dem Hörtext überein.",
         "vi": "Sai.",
-        "key_evidence": "Eine Person heißt Michael.",
+        "key_evidence": "Herr Professor Wohnraum",
         "key_vocabulary": []
       }
     },
@@ -66,7 +66,7 @@
       "explanation": {
         "de": "Falsch. Die Aussage stimmt nicht mit dem Hörtext überein.",
         "vi": "Sai.",
-        "key_evidence": "Eine Person heißt Katja.",
+        "key_evidence": "Herr Professor Wohnraum",
         "key_vocabulary": []
       }
     }
@@ -110,93 +110,182 @@
     ]
   },
   "transcript": {
-    "type": "full_reconstructed_transcript",
+    "type": "studio_source_transcript",
     "status": "complete",
-    "source": "reconstructed_full_script",
-    "quality": "release_candidate_reconstructed",
-    "note": "Full learner-visible reconstructed script created from existing question evidence because original studio scripts are not present in the repository. Replace with studio transcript if original audio scripts become available.",
+    "source": "studio_source_script",
+    "quality": "source_verified",
+    "sourceScript": "data/scripts/C2/Teil3-Experteninterview-lang/L-C2-GOETHE-002-T3.json",
+    "note": "Transcript replaced from source script by scripts/apply-source-transcripts.ts.",
     "lines": [
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Der folgende anspruchsvolle Hoertext behandelt Studentenwohnungsnot. Achten Sie auf Aussage, Kontext und implizite Bedeutung."
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sie hören ein ausführliches Interview. Dazu gibt es zehn Aufgaben. Kreuzen Sie die richtige Antwort an. Sie hören das Interview einmal."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q1.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Herr Professor Wohnraum, Sie haben den Nationalen Wohnraumreport mitverantwortlich erstellt und beraten die Bundesregierung in wohnungspolitischen Fragen."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Eine Person heißt Jörg.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "In unserem Report haben wir einen bundesweiten Fehlbestand von rund siebenhunderttausend Wohnungen errechnet, wobei die Situation in Universitätsstädten besonders dramatisch ist."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q1 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Welche strukturellen Ursachen liegen dieser Entwicklung zugrunde, und warum hat die Politik über Jahrzehnte hinweg versäumt, ausreichend bezahlbaren Wohnraum zu schaffen?"
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q2.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die zentrale Ursache ist der massive Rückzug der öffentlichen Hand aus dem sozialen Wohnungsbau seit Mitte der neunziger Jahre, verbunden mit einer Deregulierung des Mietrechts und der Privatisierung kommunaler Wohnungsbestände."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "answer_evidence",
-        "text": "Eine Person heißt Professor.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Sind die aktuellen politischen Maßnahmen wie die Mietpreisbremse und der Wohngeldausbau ausreichend, um die Krise zu bewältigen, oder handelt es sich um reine Symptombekämpfung?"
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q2 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Mietpreisbremse ist ein gut gemeintes, aber strukturell unzureichendes Instrument, da sie das fundamentale Problem der mangelnden Neubautätigkeit nicht adressiert."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q3.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Welche Rolle spielen internationale Kapitalströme und die Finanzialisierung des Wohnungsmarktes für die aktuelle Situation in deutschen Großstädten?"
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "answer_evidence",
-        "text": "Eine Person heißt Michael.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Seit der Finanzkrise sind Immobilien zu einer bevorzugten Anlageklasse institutioneller Investoren geworden, was die Preise in den Metropolen massiv nach oben getrieben hat."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q3 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Können Sie konkrete politische Maßnahmen benennen, die innerhalb der nächsten Legislaturperiode einen spürbaren Effekt auf die Wohnungssituation Studierender haben könnten?"
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q4.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Erstens eine Verdoppelung der Investitionen in studentische Wohnheime, zweitens eine reformierte Bodenpolitik, die Spekulationsgewinne konsequent abschöpft, und drittens eine Stärkung des Genossenschaftsmodells."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "answer_evidence",
-        "text": "Eine Person heißt Katja.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wie bewerten Sie internationale Modelle wie das Wiener Wohnungsbeaumodell, bei dem die Stadt selbst als größter Vermieter auftritt und damit den Markt reguliert?"
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q4 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das Wiener Modell zeigt eindrucksvoll, dass eine aktive kommunale Wohnungspolitik die Mieten auf einem bezahlbaren Niveau halten kann, und sollte als Vorbild für deutsche Städte dienen."
       },
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Ende des Hoertexts."
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Abschließend, Herr Professor Wohnraum: Ist das Menschenrecht auf angemessenes Wohnen in Deutschland derzeit faktisch gewährleistet?"
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Für bestimmte Bevölkerungsgruppen, darunter Studierende, Geflüchtete und Geringverdienende, ist dieses Recht in vielen Städten de facto nicht mehr gewährleistet, was einen politischen Skandal darstellt."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Herr Professor Wohnraum, Sie haben den Nationalen Wohnraumreport mitverantwortlich erstellt und beraten die Bundesregierung in wohnungspolitischen Fragen."
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "In unserem Report haben wir einen bundesweiten Fehlbestand von rund siebenhunderttausend Wohnungen errechnet, wobei die Situation in Universitätsstädten besonders dramatisch ist."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Welche strukturellen Ursachen liegen dieser Entwicklung zugrunde, und warum hat die Politik über Jahrzehnte hinweg versäumt, ausreichend bezahlbaren Wohnraum zu schaffen?"
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die zentrale Ursache ist der massive Rückzug der öffentlichen Hand aus dem sozialen Wohnungsbau seit Mitte der neunziger Jahre, verbunden mit einer Deregulierung des Mietrechts und der Privatisierung kommunaler Wohnungsbestände."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Sind die aktuellen politischen Maßnahmen wie die Mietpreisbremse und der Wohngeldausbau ausreichend, um die Krise zu bewältigen, oder handelt es sich um reine Symptombekämpfung?"
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Mietpreisbremse ist ein gut gemeintes, aber strukturell unzureichendes Instrument, da sie das fundamentale Problem der mangelnden Neubautätigkeit nicht adressiert."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Welche Rolle spielen internationale Kapitalströme und die Finanzialisierung des Wohnungsmarktes für die aktuelle Situation in deutschen Großstädten?"
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Seit der Finanzkrise sind Immobilien zu einer bevorzugten Anlageklasse institutioneller Investoren geworden, was die Preise in den Metropolen massiv nach oben getrieben hat."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Können Sie konkrete politische Maßnahmen benennen, die innerhalb der nächsten Legislaturperiode einen spürbaren Effekt auf die Wohnungssituation Studierender haben könnten?"
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Erstens eine Verdoppelung der Investitionen in studentische Wohnheime, zweitens eine reformierte Bodenpolitik, die Spekulationsgewinne konsequent abschöpft, und drittens eine Stärkung des Genossenschaftsmodells."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wie bewerten Sie internationale Modelle wie das Wiener Wohnungsbeaumodell, bei dem die Stadt selbst als größter Vermieter auftritt und damit den Markt reguliert?"
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das Wiener Modell zeigt eindrucksvoll, dass eine aktive kommunale Wohnungspolitik die Mieten auf einem bezahlbaren Niveau halten kann, und sollte als Vorbild für deutsche Städte dienen."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Abschließend, Herr Professor Wohnraum: Ist das Menschenrecht auf angemessenes Wohnen in Deutschland derzeit faktisch gewährleistet?"
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Für bestimmte Bevölkerungsgruppen, darunter Studierende, Geflüchtete und Geringverdienende, ist dieses Recht in vielen Städten de facto nicht mehr gewährleistet, was einen politischen Skandal darstellt."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Herr Professor Wohnraum, Sie haben den Nationalen Wohnraumreport mitverantwortlich erstellt und beraten die Bundesregierung in wohnungspolitischen Fragen."
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "In unserem Report haben wir einen bundesweiten Fehlbestand von rund siebenhunderttausend Wohnungen errechnet, wobei die Situation in Universitätsstädten besonders dramatisch ist."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Welche strukturellen Ursachen liegen dieser Entwicklung zugrunde, und warum hat die Politik über Jahrzehnte hinweg versäumt, ausreichend bezahlbaren Wohnraum zu schaffen?"
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die zentrale Ursache ist der massive Rückzug der öffentlichen Hand aus dem sozialen Wohnungsbau seit Mitte der neunziger Jahre, verbunden mit einer Deregulierung des Mietrechts und der Privatisierung kommunaler Wohnungsbestände."
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Ende des Hörverstehens."
       }
     ]
   },
@@ -213,7 +302,7 @@
       "id": "l-c2-goethe-002-t3-lo-1",
       "cefrLevel": "C2",
       "skill": "listening",
-      "canDoVi": "Toi co the luyen nghe hieu o trinh do C2 qua chu de \"Studentenwohnungsnot\".",
+      "canDoVi": "Tôi có thể luyện nghe hiểu ở trình độ C2 qua chủ đề \"Studentenwohnungsnot\".",
       "canDoDe": "Ich kann Hoeren auf Niveau C2 zum Thema \"Studentenwohnungsnot\" ueben.",
       "linkedContentIds": [
         "L-C2-GOETHE-002-T3"

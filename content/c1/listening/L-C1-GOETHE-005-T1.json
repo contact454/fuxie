@@ -61,7 +61,7 @@
       "explanation": {
         "de": "Der Sprecher identifiziert die 'Umstellung ganzer Wertschöpfungsketten' als die 'größte Herausforderung'. Dies erfordert eine grundlegend neue Zusammenarbeit aller Beteiligten, was in Option (b) korrekt paraphrasiert wird. Option (a) ist eine lexikalische Falle; die EU-Regularien werden als bereits geschaffener Rahmen erwähnt, nicht als die größte noch zu bewältigende Hürde. Option (c) nennt ein positives Beispiel (Frankreich), aber nicht die übergreifende, fundamentale Herausforderung für das gesamte System.",
         "vi": "Diễn giả xác định 'sự chuyển đổi của toàn bộ chuỗi giá trị' là 'thách thức lớn nhất'. Điều này đòi hỏi một sự hợp tác hoàn toàn mới giữa tất cả các bên liên quan, được diễn giải chính xác trong lựa chọn (b). Lựa chọn (a) là một cái bẫy từ vựng; các quy định của EU được đề cập như một khuôn khổ đã được tạo ra, chứ không phải là rào cản lớn nhất cần phải vượt qua. Lựa chọn (c) nêu một ví dụ tích cực (Pháp), nhưng không phải là thách thức cơ bản, bao trùm cho toàn bộ hệ thống.",
-        "key_evidence": "Die größte Herausforderung ist die Umstellung ganzer Wertschöpfungsketten, die über Jahrzehnte linear optimiert wurden. Zulieferer, Hersteller, Händler und Entsorger müssen grundlegend neu zusammenarbeiten und ihre Prozesse umgestalten.",
+        "key_evidence": "Die größte Herausforderung ist die Umstellung ganzer Wertschöpfungsketten, die über Jahrzehnte linear optimiert wurden",
         "key_vocabulary": [
           {
             "word": "systemische Neuausrichtung",
@@ -118,57 +118,147 @@
     ]
   },
   "transcript": {
-    "type": "full_reconstructed_transcript",
+    "type": "studio_source_transcript",
     "status": "complete",
-    "source": "reconstructed_full_script",
-    "quality": "release_candidate_reconstructed",
-    "note": "Full learner-visible reconstructed script created from existing question evidence because original studio scripts are not present in the repository. Replace with studio transcript if original audio scripts become available.",
+    "source": "studio_source_script",
+    "quality": "source_verified",
+    "sourceScript": "data/scripts/C1/Teil1-Podcast-oder-Rezension/L-C1-GOETHE-005-T1.json",
+    "note": "Transcript replaced from source script by scripts/apply-source-transcripts.ts.",
     "lines": [
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Der folgende anspruchsvolle Hoertext behandelt Kreislaufwirtschaft und Klimawandel. Achten Sie auf Aussage, Kontext und implizite Bedeutung."
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sie hören einen Podcast. Dazu gibt es sechs Aufgaben. Ordnen Sie die Aussagen den Abschnitten zu. Sie hören den Text einmal."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q1.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Podcaster",
+        "speaker_role": "dialogue_speaker",
+        "text": "Willkommen bei 'Zukunft jetzt', dem Podcast für nachhaltige Wirtschaft und Klimaschutz."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Das wäre ein gewaltiger Beitrag zum Klimaschutz, vergleichbar mit der vollständigen Dekarbonisierung des Energiesektors.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Podcaster",
+        "speaker_role": "dialogue_speaker",
+        "text": "Heute geht es um ein Konzept, das unser gesamtes Wirtschaftssystem revolutionieren könnte: die Kreislaufwirtschaft."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q1 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Podcaster",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die lineare Wirtschaft, die wir seit der Industrialisierung betreiben, folgt dem Muster 'nehmen, machen, wegwerfen'."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q2.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Podcaster",
+        "speaker_role": "dialogue_speaker",
+        "text": "Dieses Modell ist nicht nachhaltig, weil es endliche Ressourcen verschwendet und enorme Mengen an Müll produziert."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Die größte Herausforderung ist die Umstellung ganzer Wertschöpfungsketten, die über Jahrzehnte linear optimiert wurden. Zulieferer, Hersteller, Händler und Entsorger müssen grundlegend neu zusammenarbeiten und ihre Prozesse umgestalten.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Podcaster",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Kreislaufwirtschaft dreht diese Logik um: Produkte werden so gestaltet, dass sie repariert und recycelt werden können."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q2 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Podcaster",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das Ideal ist ein geschlossener Kreislauf, in dem es keinen Abfall gibt, sondern nur Rohstoffe für neue Produkte."
       },
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Ende des Hoertexts."
+        "speaker": "Podcaster",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Ellen MacArthur Foundation schätzt, dass eine vollständige Kreislaufwirtschaft die globalen Treibhausgasemissionen um fünfundvierzig Prozent senken könnte."
+      },
+      {
+        "speaker": "Podcaster",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das wäre ein gewaltiger Beitrag zum Klimaschutz, vergleichbar mit der vollständigen Dekarbonisierung des Energiesektors."
+      },
+      {
+        "speaker": "Podcaster",
+        "speaker_role": "dialogue_speaker",
+        "text": "Aber wie realistisch ist dieses Konzept in einer Weltwirtschaft, die auf Wachstum und schnellem Konsum basiert?"
+      },
+      {
+        "speaker": "Podcaster",
+        "speaker_role": "dialogue_speaker",
+        "text": "Es gibt bereits beeindruckende Beispiele: Fairphone produziert Smartphones, die modular aufgebaut und einfach reparierbar sind."
+      },
+      {
+        "speaker": "Podcaster",
+        "speaker_role": "dialogue_speaker",
+        "text": "Patagonia nimmt gebrauchte Kleidung zurück und verkauft sie aufbereitet weiter, wodurch neue Ressourcen eingespart werden."
+      },
+      {
+        "speaker": "Podcaster",
+        "speaker_role": "dialogue_speaker",
+        "text": "Interface, ein Teppichbodenhersteller, recycelt inzwischen hundert Prozent seiner alten Produkte und produziert nahezu abfallfrei."
+      },
+      {
+        "speaker": "Podcaster",
+        "speaker_role": "dialogue_speaker",
+        "text": "Diese Unternehmen zeigen, dass Kreislaufwirtschaft nicht nur ökologisch sinnvoll, sondern auch wirtschaftlich profitabel sein kann."
+      },
+      {
+        "speaker": "Podcaster",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die EU hat mit dem Green Deal und dem Aktionsplan Kreislaufwirtschaft ambitionierte regulatorische Rahmenbedingungen geschaffen."
+      },
+      {
+        "speaker": "Podcaster",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ab zweitausendsiebenundzwanzig müssen elektronische Geräte in der EU austauschbare Batterien und reparierbare Komponenten haben."
+      },
+      {
+        "speaker": "Podcaster",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das Recht auf Reparatur wird damit erstmals gesetzlich verankert und könnte ganze Industriezweige transformieren."
+      },
+      {
+        "speaker": "Podcaster",
+        "speaker_role": "dialogue_speaker",
+        "text": "Frankreich ist Vorreiter: Dort gibt es bereits einen verpflichtenden Reparierbarkeits-Index für alle elektronischen Geräte."
+      },
+      {
+        "speaker": "Podcaster",
+        "speaker_role": "dialogue_speaker",
+        "text": "Konsumenten können vor dem Kauf sehen, wie reparierbar ein Produkt ist, und die Nachfrage ändert sich entsprechend."
+      },
+      {
+        "speaker": "Podcaster",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die größte Herausforderung ist die Umstellung ganzer Wertschöpfungsketten, die über Jahrzehnte linear optimiert wurden."
+      },
+      {
+        "speaker": "Podcaster",
+        "speaker_role": "dialogue_speaker",
+        "text": "Zulieferer, Hersteller, Händler und Entsorger müssen grundlegend neu zusammenarbeiten und ihre Prozesse umgestalten."
+      },
+      {
+        "speaker": "Podcaster",
+        "speaker_role": "dialogue_speaker",
+        "text": "Auch die Konsumenten müssen umdenken: Vom Besitzen zum Nutzen, vom Wegwerfen zum Reparieren."
+      },
+      {
+        "speaker": "Podcaster",
+        "speaker_role": "dialogue_speaker",
+        "text": "Sharing-Modelle für Werkzeuge, Autos und sogar Kleidung gewinnen in urbanen Räumen bereits an Bedeutung."
+      },
+      {
+        "speaker": "Podcaster",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Kreislaufwirtschaft ist keine romantische Utopie, sondern eine ökonomische und ökologische Notwendigkeit."
+      },
+      {
+        "speaker": "Podcaster",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wer die Rohstoffe der Zukunft sichern und das Klima schützen will, muss in Kreisläufen denken und handeln."
+      },
+      {
+        "speaker": "Podcaster",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das war unser Podcast zur Kreislaufwirtschaft. Reparieren Sie beim nächsten Mal, statt neu zu kaufen!"
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Ende Teil eins."
       }
     ]
   },
@@ -185,7 +275,7 @@
       "id": "l-c1-goethe-005-t1-lo-1",
       "cefrLevel": "C1",
       "skill": "listening",
-      "canDoVi": "Toi co the luyen nghe hieu o trinh do C1 qua chu de \"Kreislaufwirtschaft und Klimawandel\".",
+      "canDoVi": "Tôi có thể luyện nghe hiểu ở trình độ C1 qua chủ đề \"Kreislaufwirtschaft und Klimawandel\".",
       "canDoDe": "Ich kann Hoeren auf Niveau C1 zum Thema \"Kreislaufwirtschaft und Klimawandel\" ueben.",
       "linkedContentIds": [
         "L-C1-GOETHE-005-T1"

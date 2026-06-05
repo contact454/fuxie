@@ -149,111 +149,197 @@
     ]
   },
   "transcript": {
-    "type": "full_reconstructed_transcript",
+    "type": "studio_source_transcript",
     "status": "complete",
-    "source": "reconstructed_full_script",
-    "quality": "release_candidate_reconstructed",
-    "note": "Full learner-visible reconstructed script created from existing question evidence because original studio scripts are not present in the repository. Replace with studio transcript if original audio scripts become available.",
+    "source": "studio_source_script",
+    "quality": "source_verified",
+    "sourceScript": "data/scripts/A1/Teil3-Telefonansagen/L-A1-GOETHE-002-T3.json",
+    "note": "Transcript replaced from source script by scripts/apply-source-transcripts.ts.",
     "lines": [
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Hoeren Sie eine kurze Information zum Thema Im Restaurant bestellen."
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sie hören fünf Nachrichten am Telefon. Zu jeder Nachricht gibt es eine Aufgabe. Kreuzen Sie die richtige Antwort an. Sie hören jeden Text zweimal."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q1.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Nachricht 1."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Samstag, neunzehn Uhr.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Anrufer",
+        "speaker_role": "dialogue_speaker",
+        "text": "Hallo, hier ist das Restaurant Zum goldenen Löwen."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q1 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Anrufer",
+        "speaker_role": "dialogue_speaker",
+        "text": "Sie haben einen Tisch für vier Personen am Samstag reserviert."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q2.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Anrufer",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wir möchten die Reservierung bestätigen. Samstag, neunzehn Uhr."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "answer_evidence",
-        "text": "Treffen wir uns um sieben Uhr vor dem Restaurant?",
-        "linkedQuestionId": "Q2"
+        "speaker": "Anrufer",
+        "speaker_role": "dialogue_speaker",
+        "text": "Bitte rufen Sie uns an, wenn Sie den Termin ändern möchten."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q2 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Anrufer",
+        "speaker_role": "dialogue_speaker",
+        "text": "Unsere Nummer ist null drei null, vier drei zwei eins null."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q3.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Anrufer",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wir freuen uns auf Ihren Besuch!"
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "answer_evidence",
-        "text": "Wir haben an diesem Tag eine geschlossene Gesellschaft.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Nachricht 2."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q3 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Anrufer",
+        "speaker_role": "dialogue_speaker",
+        "text": "Hallo Thomas, hier ist Pedro. Ich habe eine Idee."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q4.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Anrufer",
+        "speaker_role": "dialogue_speaker",
+        "text": "Gehen wir heute Abend essen? Ich kenne ein tolles Restaurant."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "answer_evidence",
-        "text": "Komm doch um fünf Uhr vorbei!",
-        "linkedQuestionId": "Q4"
+        "speaker": "Anrufer",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das Restaurant Italia in der Hauptstraße hat gute Pizza."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q4 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Anrufer",
+        "speaker_role": "dialogue_speaker",
+        "text": "Treffen wir uns um sieben Uhr vor dem Restaurant?"
       },
       {
-        "speaker": "Sprecher 5",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q5.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Anrufer",
+        "speaker_role": "dialogue_speaker",
+        "text": "Sag mir bitte Bescheid. Du kannst mich anrufen oder eine Nachricht schreiben."
       },
       {
-        "speaker": "Sprecher 5",
-        "speaker_role": "answer_evidence",
-        "text": "Es ist ein Tisch für drei Personen",
-        "linkedQuestionId": "Q5"
+        "speaker": "Anrufer",
+        "speaker_role": "dialogue_speaker",
+        "text": "Bis heute Abend! Ciao!"
       },
       {
-        "speaker": "Sprecher 5",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q5 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Nachricht 3."
       },
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Ende des Hoertexts."
+        "speaker": "Anrufer",
+        "speaker_role": "dialogue_speaker",
+        "text": "Guten Tag, hier spricht die Reservierung vom Restaurant Seeblick."
+      },
+      {
+        "speaker": "Anrufer",
+        "speaker_role": "dialogue_speaker",
+        "text": "Leider müssen wir Ihren Tisch für Freitag absagen."
+      },
+      {
+        "speaker": "Anrufer",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wir haben an diesem Tag eine geschlossene Gesellschaft."
+      },
+      {
+        "speaker": "Anrufer",
+        "speaker_role": "dialogue_speaker",
+        "text": "Können wir Ihnen einen Tisch am Donnerstag anbieten?"
+      },
+      {
+        "speaker": "Anrufer",
+        "speaker_role": "dialogue_speaker",
+        "text": "Bitte rufen Sie uns zurück unter null vier null, fünf sechs sieben acht."
+      },
+      {
+        "speaker": "Anrufer",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wir entschuldigen uns für die Unannehmlichkeiten."
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Nachricht 4."
+      },
+      {
+        "speaker": "Anrufer",
+        "speaker_role": "dialogue_speaker",
+        "text": "Hey Anna, hier ist Maria! Hast du heute Abend Zeit?"
+      },
+      {
+        "speaker": "Anrufer",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ich möchte in das neue Café in der Mozartstraße gehen."
+      },
+      {
+        "speaker": "Anrufer",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die haben super Kuchen und leckeren Kaffee."
+      },
+      {
+        "speaker": "Anrufer",
+        "speaker_role": "dialogue_speaker",
+        "text": "Es ist ab vierzehn Uhr geöffnet und nicht teuer."
+      },
+      {
+        "speaker": "Anrufer",
+        "speaker_role": "dialogue_speaker",
+        "text": "Komm doch um fünf Uhr vorbei! Ich warte dort auf dich."
+      },
+      {
+        "speaker": "Anrufer",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ruf mich an, wenn du nicht kannst. Tschüss!"
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Nachricht 5."
+      },
+      {
+        "speaker": "Anrufer",
+        "speaker_role": "dialogue_speaker",
+        "text": "Hallo, Sie haben bei uns online einen Tisch reserviert."
+      },
+      {
+        "speaker": "Anrufer",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ihre Reservierung ist für Sonntag, den zehnten März, um achtzehn Uhr."
+      },
+      {
+        "speaker": "Anrufer",
+        "speaker_role": "dialogue_speaker",
+        "text": "Es ist ein Tisch für drei Personen im Nichtraucherbereich."
+      },
+      {
+        "speaker": "Anrufer",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wenn Sie Allergien oder besondere Wünsche haben, sagen Sie uns Bescheid."
+      },
+      {
+        "speaker": "Anrufer",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wir sind telefonisch erreichbar von zehn bis achtzehn Uhr."
+      },
+      {
+        "speaker": "Anrufer",
+        "speaker_role": "dialogue_speaker",
+        "text": "Vielen Dank und bis Sonntag!"
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Ende des Hörverstehens."
       }
     ]
   },
@@ -270,7 +356,7 @@
       "id": "l-a1-goethe-002-t3-lo-1",
       "cefrLevel": "A1",
       "skill": "listening",
-      "canDoVi": "Toi co the luyen nghe hieu o trinh do A1 qua chu de \"Im Restaurant bestellen\".",
+      "canDoVi": "Tôi có thể luyện nghe hiểu ở trình độ A1 qua chủ đề \"Im Restaurant bestellen\".",
       "canDoDe": "Ich kann Hoeren auf Niveau A1 zum Thema \"Im Restaurant bestellen\" ueben.",
       "linkedContentIds": [
         "L-A1-GOETHE-002-T3"

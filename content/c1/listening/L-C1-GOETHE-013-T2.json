@@ -24,7 +24,7 @@
       "explanation": {
         "de": "Die Aussage ist falsch. Frau Bergström bezeichnet Europa zwar als den \"gleichberechtigtsten Kontinent\", relativiert diese Aussage aber sofort, indem sie betont, dass man \"noch weit von echter Parität entfernt\" sei. Dies widerspricht der Behauptung, es gäbe \"keine wesentlichen Defizite\".",
         "vi": "Tuyên bố này sai. Mặc dù bà Bergström mô tả châu Âu là \"lục địa bình đẳng nhất\", bà ngay lập tức làm rõ tuyên bố này bằng cách nhấn mạnh rằng châu Âu \"vẫn còn xa mới đạt được sự bình đẳng thực sự\". Điều này mâu thuẫn với khẳng định rằng \"không còn thiếu sót đáng kể nào\".",
-        "key_evidence": "Europa ist der gleichberechtigtste Kontinent der Welt, aber wir sind noch weit von echter Parität entfernt...",
+        "key_evidence": "Europa ist der gleichberechtigtste Kontinent der Welt, aber wir sind noch weit von echter Parität entfernt",
         "key_vocabulary": []
       }
     },
@@ -38,7 +38,7 @@
       "explanation": {
         "de": "Die Aussage ist falsch. Obwohl die Expertin die Richtlinie als \"Meilenstein\" bezeichnet, stellt sie klar, dass Transparenz allein nicht ausreicht. Sie fordert zusätzlich \"wirksame Sanktionen\", was belegt, dass sie die Richtlinie nicht für ein \"hinreichendes Instrument\" hält.",
         "vi": "Tuyên bố này sai. Mặc dù chuyên gia gọi chỉ thị này là một \"cột mốc quan trọng\", bà làm rõ rằng chỉ riêng sự minh bạch là không đủ. Bà yêu cầu thêm \"các biện pháp trừng phạt hiệu quả\", điều này chứng tỏ bà không coi chỉ thị này là một \"công cụ đầy đủ\".",
-        "key_evidence": "Transparenz allein schließt aber keine Lohnlücke. Es braucht wirksame Sanktionen für Unternehmen, die diskriminieren...",
+        "key_evidence": "Transparenz allein schließt aber keine Lohnlücke",
         "key_vocabulary": []
       }
     },
@@ -52,7 +52,7 @@
       "explanation": {
         "de": "Die Aussage ist richtig. Die Expertin erklärt den Erfolg des schwedischen Modells explizit damit, dass die Familie \"Elternzeitansprüche verliert\", wenn der Vater seine Zeit nicht nutzt. Dies entspricht der Umschreibung \"finanzielle Ansprüche gehen verloren\".",
         "vi": "Tuyên bố này đúng. Chuyên gia giải thích rõ ràng sự thành công của mô hình Thụy Điển là do gia đình \"mất quyền hưởng chế độ nghỉ phép của cha mẹ\" nếu người cha không sử dụng thời gian của mình. Điều này tương ứng với cách diễn đạt \"mất các quyền lợi tài chính\".",
-        "key_evidence": "Der Unterschied liegt im System: In Schweden verliert die Familie Elternzeitansprüche, die der Vater nicht nutzt...",
+        "key_evidence": "In Schweden verliert die Familie Elternzeitansprüche, die der Vater nicht nutzt",
         "key_vocabulary": []
       }
     },
@@ -66,7 +66,7 @@
       "explanation": {
         "de": "Die Aussage ist falsch. Die Expertin stellt klar, dass es zwar einen \"Rechtsanspruch\" gibt, diesem aber in der Realität nicht nachgekommen wird, da \"in vielen Regionen die tatsächlichen Plätze fehlen\". Die Versorgung ist also nicht \"flächendeckend\" und \"adäquat\".",
         "vi": "Tuyên bố này sai. Chuyên gia làm rõ rằng mặc dù có \"quyền hợp pháp\" đối với một chỗ trong nhà trẻ, nhưng trên thực tế điều này không được đáp ứng vì \"ở nhiều vùng vẫn thiếu các chỗ thực tế\". Do đó, việc cung cấp không phải là \"trên toàn quốc\" và \"đầy đủ\".",
-        "key_evidence": "Deutschland hat zwar den Rechtsanspruch auf einen Krippenplatz, aber in vielen Regionen fehlen die tatsächlichen Plätze...",
+        "key_evidence": "Deutschland hat zwar den Rechtsanspruch auf einen Krippenplatz, aber in vielen Regionen fehlen die tatsächlichen Plätze",
         "key_vocabulary": []
       }
     }
@@ -110,93 +110,172 @@
     ]
   },
   "transcript": {
-    "type": "full_reconstructed_transcript",
+    "type": "studio_source_transcript",
     "status": "complete",
-    "source": "reconstructed_full_script",
-    "quality": "release_candidate_reconstructed",
-    "note": "Full learner-visible reconstructed script created from existing question evidence because original studio scripts are not present in the repository. Replace with studio transcript if original audio scripts become available.",
+    "source": "studio_source_script",
+    "quality": "source_verified",
+    "sourceScript": "data/scripts/C1/Teil2-Experteninterview/L-C1-GOETHE-013-T2.json",
+    "note": "Transcript replaced from source script by scripts/apply-source-transcripts.ts.",
     "lines": [
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Der folgende anspruchsvolle Hoertext behandelt Algorithmen und Bias in der Wissenschaft. Achten Sie auf Aussage, Kontext und implizite Bedeutung."
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sie hören ein Interview. Dazu gibt es neun Aufgaben. Stimmt die Aussage, stimmt sie nicht, oder wird dazu nichts gesagt? Sie hören das Interview zweimal."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q1.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Herzlich willkommen! Unsere Gesprächspartnerin ist die Europaabgeordnete und Gleichstellungsexpertin Dr. Clara Bergström, und diese Entwicklung betrifft nicht nur Fachleute, sondern die gesamte Gesellschaft."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Europa ist der gleichberechtigtste Kontinent der Welt, aber wir sind noch weit von echter Parität entfernt...",
-        "linkedQuestionId": "Q1"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Vielen Dank für die Einladung. Gleichstellung ist für mich nicht nur ein politisches Ziel, sondern eine wirtschaftliche Notwendigkeit."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q1 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Frau Bergström, wo steht die Europäische Union heute in Sachen Geschlechtergleichstellung im internationalen Vergleich, was in der wissenschaftlichen Gemeinschaft für erhebliche Diskussionen sorgt?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q2.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Europa ist der gleichberechtigtste Kontinent der Welt, aber wir sind noch weit von echter Parität entfernt, wobei die Experten in dieser Frage nach wie vor unterschiedlicher Meinung sind."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Transparenz allein schließt aber keine Lohnlücke. Es braucht wirksame Sanktionen für Unternehmen, die diskriminieren...",
-        "linkedQuestionId": "Q2"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "In keinem einzigen EU-Mitgliedstaat verdienen Frauen im Durchschnitt genau so viel wie Männer in vergleichbaren Positionen, was sowohl in der Forschung als auch in der Praxis weitreichende Konsequenzen hat."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q2 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Was sind die Hauptursachen für die anhaltende Lohnungleichheit zwischen den Geschlechtern in der Europäischen Union, und dies wirft grundlegende Fragen zur aktuellen gesellschaftlichen Entwicklung auf?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q3.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Drei Faktoren sind entscheidend: die berufliche Segregation, die ungleiche Verteilung von Sorgearbeit und direkte Diskriminierung, die in den vergangenen Jahren zunehmend an Bedeutung gewonnen haben."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Der Unterschied liegt im System: In Schweden verliert die Familie Elternzeitansprüche, die der Vater nicht nutzt...",
-        "linkedQuestionId": "Q3"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Frauen arbeiten überproportional in schlechter bezahlten Branchen wie Pflege, Erziehung und Sozialarbeit, was die Notwendigkeit einer differenzierten Betrachtung deutlich unterstreicht."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q3 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Und selbst innerhalb der gleichen Branche verdienen Frauen oft weniger als ihre männlichen Kollegen auf vergleichbaren Positionen, und diese Entwicklung betrifft nicht nur Fachleute, sondern die gesamte Gesellschaft."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q4.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die EU hat kürzlich eine Entgelttransparenz-Richtlinie verabschiedet. Was erwarten Sie sich davon in der praktischen Umsetzung, wobei aktuelle Studien und Expertenmeinungen ein vielfältiges Bild zeichnen?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Deutschland hat zwar den Rechtsanspruch auf einen Krippenplatz, aber in vielen Regionen fehlen die tatsächlichen Plätze...",
-        "linkedQuestionId": "Q4"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Richtlinie ist ein Meilenstein, weil sie erstmals Unternehmen verpflichtet, geschlechtsspezifische Gehaltsunterschiede offenzulegen, was in der wissenschaftlichen Gemeinschaft für erhebliche Diskussionen sorgt."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q4 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Transparenz allein schließt aber keine Lohnlücke. Es braucht wirksame Sanktionen für Unternehmen, die diskriminieren, wobei die Experten in dieser Frage nach wie vor unterschiedlicher Meinung sind."
       },
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Ende des Hoertexts."
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wie bewerten Sie die verschiedenen Elternzeitmodelle in den EU-Mitgliedstaaten, was sowohl in der Forschung als auch in der Praxis weitreichende Konsequenzen hat?"
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das schwedische Modell mit reservierten Vätermonaten hat nachweislich die Beteiligung der Väter deutlich erhöht, und dies wirft grundlegende Fragen zur aktuellen gesellschaftlichen Entwicklung auf."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Dort nehmen über neunzig Prozent der Väter Elternzeit, in Deutschland sind es nur etwa vierzig Prozent, die in den vergangenen Jahren zunehmend an Bedeutung gewonnen haben."
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Der Unterschied liegt im System: In Schweden verliert die Familie Elternzeitansprüche, die der Vater nicht nutzt, was die Notwendigkeit einer differenzierten Betrachtung deutlich unterstreicht."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Sollte Deutschland das schwedische Modell übernehmen und mehr Vätermonate einführen, und diese Entwicklung betrifft nicht nur Fachleute, sondern die gesamte Gesellschaft?"
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Unbedingt! Deutschland hat zwar die Partnermonate eingeführt, aber zwei Monate sind zu wenig für echten Kulturwandel, wobei aktuelle Studien und Expertenmeinungen ein vielfältiges Bild zeichnen."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Mindestens vier reservierte Vätermonate bei Lohnersatzleistung würden die Gleichstellung substanziell voranbringen, was in der wissenschaftlichen Gemeinschaft für erhebliche Diskussionen sorgt."
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Welche Rolle spielt die öffentliche Kinderbetreuung für die Erwerbsbeteiligung von Frauen, wobei die Experten in dieser Frage nach wie vor unterschiedlicher Meinung sind?"
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Eine absolut zentrale Rolle! Länder mit umfassender Kinderbetreuung haben durchweg höhere Frauenerwerbsquoten, was sowohl in der Forschung als auch in der Praxis weitreichende Konsequenzen hat."
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Deutschland hat zwar den Rechtsanspruch auf einen Krippenplatz, aber in vielen Regionen fehlen die tatsächlichen Plätze, und dies wirft grundlegende Fragen zur aktuellen gesellschaftlichen Entwicklung auf."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Was muss die EU tun, um die Gleichstellung in allen Mitgliedstaaten voranzutreiben, die in den vergangenen Jahren zunehmend an Bedeutung gewonnen haben?"
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Bindende Mindeststandards für Elternzeit, Kinderbetreuung und Entgeltgleichheit, die in allen Ländern gelten, was die Notwendigkeit einer differenzierten Betrachtung deutlich unterstreicht."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Und finanzielle Unterstützung für ärmere Mitgliedstaaten, damit Gleichstellung nicht am fehlenden Geld scheitert, und diese Entwicklung betrifft nicht nur Fachleute, sondern die gesamte Gesellschaft."
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Frau Bergström, Sie selbst sind Mutter von zwei Kindern. Wie vereinbaren Sie Familie und politische Karriere, wobei aktuelle Studien und Expertenmeinungen ein vielfältiges Bild zeichnen?"
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Nicht ohne Kompromisse und ein großes Unterstützungsnetzwerk. Mein Partner ist Teilzeit-Professor und teilt die Sorgearbeit paritätisch, was in der wissenschaftlichen Gemeinschaft für erhebliche Diskussionen sorgt."
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das ist in der Politik leider immer noch die Ausnahme, nicht die Regel, und das muss sich ändern."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Was ist Ihre Vision für die Gleichstellung in Europa in den nächsten zwanzig Jahren, was sowohl in der Forschung als auch in der Praxis weitreichende Konsequenzen hat?"
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Eine Union, in der das Geschlecht weder Einkommen noch Karrierechancen noch Lebensqualität bestimmt. Dafür kämpfe ich täglich, und dies wirft grundlegende Fragen zur aktuellen gesellschaftlichen Entwicklung auf."
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Ende Teil zwei."
       }
     ]
   },
@@ -213,7 +292,7 @@
       "id": "l-c1-goethe-013-t2-lo-1",
       "cefrLevel": "C1",
       "skill": "listening",
-      "canDoVi": "Toi co the luyen nghe hieu o trinh do C1 qua chu de \"Algorithmen und Bias in der Wissenschaft\".",
+      "canDoVi": "Tôi có thể luyện nghe hiểu ở trình độ C1 qua chủ đề \"Algorithmen und Bias in der Wissenschaft\".",
       "canDoDe": "Ich kann Hoeren auf Niveau C1 zum Thema \"Algorithmen und Bias in der Wissenschaft\" ueben.",
       "linkedContentIds": [
         "L-C1-GOETHE-013-T2"

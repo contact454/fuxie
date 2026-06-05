@@ -149,111 +149,142 @@
     ]
   },
   "transcript": {
-    "type": "full_reconstructed_transcript",
+    "type": "studio_source_transcript",
     "status": "complete",
-    "source": "reconstructed_full_script",
-    "quality": "release_candidate_reconstructed",
-    "note": "Full learner-visible reconstructed script created from existing question evidence because original studio scripts are not present in the repository. Replace with studio transcript if original audio scripts become available.",
+    "source": "studio_source_script",
+    "quality": "source_verified",
+    "sourceScript": "data/scripts/A2/Teil2-Zusammenhaengendes-Gespraech/L-A2-GOETHE-002-T2.json",
+    "note": "Transcript replaced from source script by scripts/apply-source-transcripts.ts.",
     "lines": [
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Hoeren Sie eine kurze Information zum Thema Wohnung suchen und Mietgespräch."
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sie hören ein Gespräch. Zu dem Gespräch gibt es fünf Aufgaben. Ordnen Sie zu. Sie hören das Gespräch zweimal."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q1.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Sprecher1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Guten Tag! Wir haben uns wegen der Wohnung in der Gartenstraße gemeldet."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Fünfundsechzig Quadratmeter.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Sprecher2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ja, kommen Sie herein! Ich zeige Ihnen die Wohnung."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q1 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Sprecher1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wie groß ist die Wohnung genau?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q2.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Sprecher2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Fünfundsechzig Quadratmeter. Zwei Zimmer, Küche, Bad und Balkon."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Im dritten Stock.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Sprecher1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das ist eine gute Größe für uns zwei. In welchem Stock ist sie?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q2 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Sprecher2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Im dritten Stock. Es gibt leider keinen Aufzug."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q3.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Sprecher1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das ist kein Problem. Wir sind jung und fit. Wie hoch ist die Miete?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Ein Stellplatz kostet fünfzig Euro im Monat.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Sprecher2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Siebenhundertfünfzig Euro kalt. Dazu kommen etwa zweihundert Euro Nebenkosten."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q3 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Sprecher1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Also fast tausend Euro insgesamt. Sind Parkplätze vorhanden?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q4.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Sprecher2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ja, es gibt Parkplätze im Hof. Ein Stellplatz kostet fünfzig Euro im Monat."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Die Wohnung ist ab dem ersten März frei.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Sprecher1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Und wie ist die Lage hier? Sind Geschäfte und Schulen in der Nähe?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q4 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Sprecher2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ja, der Supermarkt ist gleich um die Ecke und eine Grundschule ist fünf Minuten zu Fuß."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q5.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Sprecher1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das ist gut. Wann könnten wir einziehen?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Drei Monatsmieten kalt",
-        "linkedQuestionId": "Q5"
+        "speaker": "Sprecher2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Wohnung ist ab dem ersten März frei. Sie müssten eine Kaution zahlen."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q5 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Sprecher1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wie hoch ist die Kaution?"
       },
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Ende des Hoertexts."
+        "speaker": "Sprecher2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Drei Monatsmieten kalt, also zweitausendzweihundertfünfzig Euro."
+      },
+      {
+        "speaker": "Sprecher1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Können wir die Kaution in Raten zahlen?"
+      },
+      {
+        "speaker": "Sprecher2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ja, drei Monatsraten sind möglich. Die erste Rate bei Einzug."
+      },
+      {
+        "speaker": "Sprecher1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Sind Haustiere erlaubt? Wir haben eine kleine Katze."
+      },
+      {
+        "speaker": "Sprecher2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Kleine Haustiere sind erlaubt, solange sie die Nachbarn nicht stören."
+      },
+      {
+        "speaker": "Sprecher1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wunderbar! Wir sind sehr interessiert an der Wohnung."
+      },
+      {
+        "speaker": "Sprecher2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Dann sende ich Ihnen die Unterlagen per E-Mail. Ich brauche Ihre Gehaltsabrechnungen."
+      },
+      {
+        "speaker": "Sprecher1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die schicken wir Ihnen sofort. Vielen Dank für die Besichtigung!"
+      },
+      {
+        "speaker": "Sprecher2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Gern geschehen! Ich melde mich in den nächsten Tagen bei Ihnen."
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Ende Teil zwei."
       }
     ]
   },
@@ -270,7 +301,7 @@
       "id": "l-a2-goethe-002-t2-lo-1",
       "cefrLevel": "A2",
       "skill": "listening",
-      "canDoVi": "Toi co the luyen nghe hieu o trinh do A2 qua chu de \"Wohnung suchen und Mietgespräch\".",
+      "canDoVi": "Tôi có thể luyện nghe hiểu ở trình độ A2 qua chủ đề \"Wohnung suchen und Mietgespräch\".",
       "canDoDe": "Ich kann Hoeren auf Niveau A2 zum Thema \"Wohnung suchen und Mietgespräch\" ueben.",
       "linkedContentIds": [
         "L-A2-GOETHE-002-T2"

@@ -24,7 +24,7 @@
       "explanation": {
         "de": "Der Mann sagt, er habe den Laptop letzte Woche gekauft und erst vor fünf Tagen im Elektronikmarkt erworben.",
         "vi": "Người đàn ông nói rằng anh ấy đã mua chiếc laptop vào tuần trước và mới mua nó ở cửa hàng điện tử cách đây năm ngày.",
-        "key_evidence": "Ich habe letzte Woche einen neuen Laptop gekauft und der funktioniert schon nicht mehr richtig. ... Ich habe den Laptop erst vor fünf Tagen im Elektronikmarkt gekauft.",
+        "key_evidence": "Ich habe letzte Woche einen neuen Laptop gekauft und der funktioniert schon nicht mehr richtig.",
         "key_vocabulary": []
       }
     },
@@ -80,7 +80,7 @@
       "explanation": {
         "de": "Die Frau erklärt: 'Wenn zwei Reparaturversuche fehlschlagen, kannst du vom Kaufvertrag zurücktreten.' Der Mann fragt dann, ob er sein Geld zurückbekommt, und die Frau bestätigt dies.",
         "vi": "Người phụ nữ giải thích: 'Nếu hai lần sửa chữa không thành công, bạn có thể rút khỏi hợp đồng mua bán.' Người đàn ông sau đó hỏi liệu anh ấy có nhận lại tiền không, và người phụ nữ xác nhận điều đó.",
-        "key_evidence": "Wenn zwei Reparaturversuche fehlschlagen, kannst du vom Kaufvertrag zurücktreten. ... Dann bekomme ich mein Geld zurück? Ja, abzüglich eines kleinen Betrags für die bisherige Nutzung.",
+        "key_evidence": "Wenn zwei Reparaturversuche fehlschlagen, kannst du vom Kaufvertrag zurücktreten.",
         "key_vocabulary": []
       }
     },
@@ -152,147 +152,152 @@
     ]
   },
   "transcript": {
-    "type": "full_reconstructed_transcript",
+    "type": "studio_source_transcript",
     "status": "complete",
-    "source": "reconstructed_full_script",
-    "quality": "release_candidate_reconstructed",
-    "note": "Full learner-visible reconstructed script created from existing question evidence because original studio scripts are not present in the repository. Replace with studio transcript if original audio scripts become available.",
+    "source": "studio_source_script",
+    "quality": "source_verified",
+    "sourceScript": "data/scripts/B1/Teil3-Gespraech-zwei-Personen/L-B1-GOETHE-008-T3.json",
+    "note": "Transcript replaced from source script by scripts/apply-source-transcripts.ts.",
     "lines": [
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Im folgenden Hoertext geht es um Einkaufen und Reklamation. Achten Sie auf die zentrale Information."
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sie hören ein Gespräch zwischen zwei Personen. Dazu gibt es sieben Aufgaben. Entscheiden Sie: richtig oder falsch? Sie hören das Gespräch zweimal."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q1.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Sprecher1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ich habe letzte Woche einen neuen Laptop gekauft und der funktioniert schon nicht mehr richtig."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Ich habe letzte Woche einen neuen Laptop gekauft und der funktioniert schon nicht mehr richtig. ... Ich habe den Laptop erst vor fünf Tagen im Elektronikmarkt gekauft.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Sprecher2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Was ist denn das Problem genau?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q1 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Sprecher1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Der Bildschirm flackert ständig und manchmal schaltet er sich einfach aus."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q2.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Sprecher2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das klingt nach einem Produktfehler. Hast du den Kassenbon noch?"
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "answer_evidence",
-        "text": "Der Bildschirm flackert ständig und manchmal schaltet er sich einfach aus.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Sprecher1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ja, natürlich. Ich habe den Laptop erst vor fünf Tagen im Elektronikmarkt gekauft."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q2 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Sprecher2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Dann geh sofort zurück und verlange einen Umtausch oder eine Reparatur."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q3.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Sprecher1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Meinst du, die machen das einfach so? Ich habe schlechte Erfahrungen mit Reklamationen."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "answer_evidence",
-        "text": "In den ersten zwölf Monaten muss der Händler beweisen, dass du schuld bist.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Sprecher2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Du hast zwei Jahre Gewährleistung. In den ersten zwölf Monaten muss der Händler beweisen, dass du schuld bist."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q3 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Sprecher1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Also kann er nicht einfach sagen, ich hätte den Laptop kaputt gemacht?"
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q4.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Sprecher2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Nein, in den ersten zwölf Monaten liegt die Beweislast beim Verkäufer, nicht bei dir."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "answer_evidence",
-        "text": "Mehr als zwei Wochen sind normalerweise nicht akzeptabel bei einem neuen Gerät.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Sprecher1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Gut zu wissen! Und wenn sie sagen, sie müssen den Laptop erst einschicken?"
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q4 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Sprecher2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das dürfen sie. Aber die Reparatur darf nicht unangemessen lange dauern."
       },
       {
-        "speaker": "Sprecher 5",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q5.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Sprecher1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Was heißt unangemessen lange?"
       },
       {
-        "speaker": "Sprecher 5",
-        "speaker_role": "answer_evidence",
-        "text": "Wenn zwei Reparaturversuche fehlschlagen, kannst du vom Kaufvertrag zurücktreten. ... Dann bekomme ich mein Geld zurück? Ja, abzüglich eines kleinen Betrags für die bisherige Nutzung.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Sprecher2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Mehr als zwei Wochen sind normalerweise nicht akzeptabel bei einem neuen Gerät."
       },
       {
-        "speaker": "Sprecher 5",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q5 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Sprecher1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Und wenn die Reparatur nicht klappt?"
       },
       {
-        "speaker": "Sprecher 6",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q6.",
-        "linkedQuestionId": "Q6"
+        "speaker": "Sprecher2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wenn zwei Reparaturversuche fehlschlagen, kannst du vom Kaufvertrag zurücktreten."
       },
       {
-        "speaker": "Sprecher 6",
-        "speaker_role": "answer_evidence",
-        "text": "Nur fünf Euro für eine persönliche Beratung.",
-        "linkedQuestionId": "Q6"
+        "speaker": "Sprecher1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Dann bekomme ich mein Geld zurück?"
       },
       {
-        "speaker": "Sprecher 6",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q6 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q6"
+        "speaker": "Sprecher2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ja, abzüglich eines kleinen Betrags für die bisherige Nutzung."
       },
       {
-        "speaker": "Sprecher 7",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q7.",
-        "linkedQuestionId": "Q7"
+        "speaker": "Sprecher1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Und was ist, wenn der Laden sich weigert?"
       },
       {
-        "speaker": "Sprecher 7",
-        "speaker_role": "answer_evidence",
-        "text": "Und nimm den Kassenbon und die Verpackung mit.",
-        "linkedQuestionId": "Q7"
+        "speaker": "Sprecher2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Dann wendest du dich an die Verbraucherzentrale. Die beraten dich und können auch Briefe schreiben."
       },
       {
-        "speaker": "Sprecher 7",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q7 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q7"
+        "speaker": "Sprecher1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Kostet die Beratung etwas bei der Verbraucherzentrale?"
       },
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Ende des Hoertexts."
+        "speaker": "Sprecher2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Nur fünf Euro für eine persönliche Beratung. Das lohnt sich auf jeden Fall."
+      },
+      {
+        "speaker": "Sprecher1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Okay, ich gehe morgen gleich als Erstes in den Laden. Danke für die Tipps!"
+      },
+      {
+        "speaker": "Sprecher2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Lass dich nicht abwimmeln! Du hast das Recht auf ein funktionierendes Produkt."
+      },
+      {
+        "speaker": "Sprecher1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Du hast recht! Ich war beim letzten Mal viel zu nett und habe mich abspeisen lassen."
+      },
+      {
+        "speaker": "Sprecher2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Bleib freundlich, aber bestimmt. Und nimm den Kassenbon und die Verpackung mit."
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Ende Teil drei."
       }
     ]
   },
@@ -309,7 +314,7 @@
       "id": "l-b1-goethe-008-t3-lo-1",
       "cefrLevel": "B1",
       "skill": "listening",
-      "canDoVi": "Toi co the luyen nghe hieu o trinh do B1 qua chu de \"Einkaufen und Reklamation\".",
+      "canDoVi": "Tôi có thể luyện nghe hiểu ở trình độ B1 qua chủ đề \"Einkaufen und Reklamation\".",
       "canDoDe": "Ich kann Hoeren auf Niveau B1 zum Thema \"Einkaufen und Reklamation\" ueben.",
       "linkedContentIds": [
         "L-B1-GOETHE-008-T3"

@@ -29,7 +29,7 @@
       "explanation": {
         "de": "Der Dozent differenziert klar zwischen den Therapieformen: Die somatische ist 'weitgehend unproblematisch', die Keimbahntherapie wirft 'fundamentale ethische Fragen auf' und das Enhancement ist 'am umstrittensten'. Option (a) fasst diese Abstufung korrekt zusammen. Option (b) ist eine lexikalische Falle; der Dozent sagt 'weitgehend unproblematisch', nicht 'gänzlich', was einen feinen, aber wichtigen Unterschied darstellt. Option (c) ist falsch, da sie die vom Dozenten vorgenommene Differenzierung ignoriert und den Begriff 'fundamentale ethische Fragen' fälschlicherweise auf alle Kategorien anwendet.",
         "vi": "Giảng viên phân biệt rõ ràng giữa các hình thức trị liệu: liệu pháp soma 'phần lớn không có vấn đề', liệu pháp dòng mầm đặt ra 'những câu hỏi đạo đức cơ bản' và liệu pháp cải tiến gen là 'gây tranh cãi nhất'. Lựa chọn (a) tóm tắt chính xác sự phân cấp này. Lựa chọn (b) là một cái bẫy từ vựng; giảng viên nói 'phần lớn không có vấn đề' (weitgehend unproblematisch), không phải 'hoàn toàn' (gänzlich), đây là một sự khác biệt nhỏ nhưng quan trọng. Lựa chọn (c) sai vì nó bỏ qua sự phân biệt mà giảng viên đã thực hiện và áp dụng sai thuật ngữ 'những câu hỏi đạo đức cơ bản' cho tất cả các loại.",
-        "key_evidence": "Sie ist ethisch weitgehend unproblematisch... Die Keimbahntherapie hingegen... wirft fundamentale ethische Fragen auf... Diese Kategorie [Enhancement] ist ethisch am umstrittensten..."
+        "key_evidence": "Sie ist ethisch weitgehend unproblematisch"
       }
     },
     {
@@ -90,57 +90,162 @@
     ]
   },
   "transcript": {
-    "type": "full_reconstructed_transcript",
+    "type": "studio_source_transcript",
     "status": "complete",
-    "source": "reconstructed_full_script",
-    "quality": "release_candidate_reconstructed",
-    "note": "Full learner-visible reconstructed script created from existing question evidence because original studio scripts are not present in the repository. Replace with studio transcript if original audio scripts become available.",
+    "source": "studio_source_script",
+    "quality": "source_verified",
+    "sourceScript": "data/scripts/C1/Teil4-Vortrag/L-C1-GOETHE-008-T4.json",
+    "note": "Transcript replaced from source script by scripts/apply-source-transcripts.ts.",
     "lines": [
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Der folgende anspruchsvolle Hoertext behandelt Medizinethik und Gentherapie. Achten Sie auf Aussage, Kontext und implizite Bedeutung."
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sie hören einen Vortrag. Dazu gibt es sieben Aufgaben. Kreuzen Sie die richtige Antwort an. Sie hören den Vortrag einmal."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q1.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Meine Damen und Herren, willkommen zu meinem Vortrag über Medizinethik im Zeitalter der Gentherapie."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "answer_evidence",
-        "text": "Sie ist ethisch weitgehend unproblematisch... Die Keimbahntherapie hingegen... wirft fundamentale ethische Fragen auf... Diese Kategorie [Enhancement] ist ethisch am umstrittensten...",
-        "linkedQuestionId": "Q1"
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ich werde argumentieren, dass die Gentherapie einen Paradigmenwechsel in der Medizin darstellt, der neue ethische Rahmenbedingungen erfordert."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q1 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die traditionelle Medizin behandelt Symptome und bestenfalls Ursachen von Krankheiten auf der zellulären Ebene."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q2.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Gentherapie greift eine Stufe tiefer ein: Sie verändert die genetische Information selbst und korrigiert fehlerhafte Gene."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "answer_evidence",
-        "text": "Diese vier Prinzipien stehen in einem Spannungsverhältnis, das in jedem Einzelfall neu ausbalanciert werden muss.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das ist konzeptionell so revolutionär wie der Übergang von der symptomorientierten zur ursachenorientierten Medizin im neunzehnten Jahrhundert."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q2 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Lassen Sie mich zunächst die verschiedenen Arten der Gentherapie und ihre ethische Relevanz klassifizieren."
       },
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Ende des Hoertexts."
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die somatische Gentherapie verändert nur die Zellen des behandelten Patienten, die Veränderungen werden nicht weitervererbt."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Sie ist ethisch weitgehend unproblematisch und unterliegt den gleichen Prinzipien wie jede andere medizinische Behandlung."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Keimbahntherapie hingegen verändert die Gene in Ei- und Samenzellen und betrifft damit alle zukünftigen Generationen."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Sie wirft fundamentale ethische Fragen auf und ist in den meisten Ländern verboten oder streng reguliert."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die dritte Kategorie ist das genetische Enhancement: die Verbesserung normaler menschlicher Eigenschaften über das medizinisch Notwendige hinaus."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Diese Kategorie ist ethisch am umstrittensten und berührt grundlegende Fragen unseres Menschenbildes."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ich möchte nun vier ethische Prinzipien vorstellen, die uns bei der Bewertung der Gentherapie leiten sollten."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das erste Prinzip ist die Autonomie: Jeder Mensch hat das Recht, über seinen eigenen Körper zu entscheiden."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Bei der Keimbahntherapie ist dieses Prinzip verletzt, weil zukünftige Generationen nicht einwilligen können."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das zweite Prinzip ist die Gerechtigkeit: Medizinische Innovationen dürfen nicht nur den Wohlhabenden zugute kommen."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Eine Gentherapie, die Millionen kostet, schafft eine genetische Klassengesellschaft, die ethisch nicht akzeptabel ist."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das dritte Prinzip ist die Nicht-Schädigung: Medizinische Eingriffe dürfen keinen unverhältnismäßigen Schaden verursachen."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Bei der Gentherapie sind die Langzeitrisiken noch weitgehend unbekannt, und Fehler können irreversibel sein."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das vierte Prinzip ist die Fürsorge: Die Medizin hat die Pflicht, verfügbare Heilmittel allen Bedürftigen zugänglich zu machen."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wenn eine Gentherapie existiert, die eine tödliche Erbkrankheit heilen kann, darf sie niemand vorenthalten."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Diese vier Prinzipien stehen in einem Spannungsverhältnis, das in jedem Einzelfall neu ausbalanciert werden muss."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Lassen Sie mich nun regulatorische Empfehlungen formulieren, die sich aus diesen ethischen Prinzipien ableiten."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Erstens: Ein internationales Moratorium für Keimbahntherapie, bis die wissenschaftlichen und ethischen Fragen beantwortet sind."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Zweitens: Die Einrichtung nationaler Ethikkommissionen, die jeden Gentherapie-Antrag einzeln und sorgfältig prüfen."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Drittens: Internationale Preisverhandlungen, die den Zugang zu zugelassenen Gentherapien weltweit sicherstellen."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Viertens: Eine breite öffentliche Debatte über die Grenzen der genetischen Veränderung des Menschen."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Vielen Dank für Ihre Aufmerksamkeit! Die Zukunft der Medizin liegt in unseren Händen und Genen."
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Ende des Hörverstehens."
       }
     ]
   },
@@ -157,7 +262,7 @@
       "id": "l-c1-goethe-008-t4-lo-1",
       "cefrLevel": "C1",
       "skill": "listening",
-      "canDoVi": "Toi co the luyen nghe hieu o trinh do C1 qua chu de \"Medizinethik und Gentherapie\".",
+      "canDoVi": "Tôi có thể luyện nghe hiểu ở trình độ C1 qua chủ đề \"Medizinethik und Gentherapie\".",
       "canDoDe": "Ich kann Hoeren auf Niveau C1 zum Thema \"Medizinethik und Gentherapie\" ueben.",
       "linkedContentIds": [
         "L-C1-GOETHE-008-T4"

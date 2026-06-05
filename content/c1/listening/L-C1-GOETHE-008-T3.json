@@ -29,7 +29,7 @@
       "explanation": {
         "de": "Die korrekte Antwort ist (b), da der Theologe seine Skepsis explizit auf die 'Manipulation der menschlichen Natur' und die 'fließende Grenze zwischen Heilung und Optimierung' bezieht. Option (a) ist ein lexikalischer Trugschluss; er sagt ausdrücklich: 'Ich habe keine Bedenken gegen die Heilung von Kranken.' Option (c) ist sachlich falsch und wird im Text nicht als Sorge des Theologen erwähnt.",
         "vi": "Đáp án đúng là (b), vì nhà thần học bày tỏ sự hoài nghi của mình một cách rõ ràng về 'sự thao túng bản chất con người' và 'ranh giới mong manh giữa chữa bệnh và tối ưu hóa'. Lựa chọn (a) là một cái bẫy từ vựng; ông nói rõ: 'Tôi không có lo ngại gì về việc chữa bệnh cho người bệnh.' Lựa chọn (c) sai về mặt nội dung và không được đề cập trong văn bản như là một mối quan tâm của nhà thần học.",
-        "key_evidence": "Meine Skepsis richtet sich gegen die Manipulation der menschlichen Natur. Die Grenze zwischen Heilung und Optimierung ist fließend und gesellschaftlich noch nicht definiert.",
+        "key_evidence": "Meine Skepsis richtet sich gegen die Manipulation der menschlichen Natur",
         "key_vocabulary": []
       }
     },
@@ -86,7 +86,7 @@
       "explanation": {
         "de": "Antwort (a) fasst den am Ende erzielten Konsens korrekt zusammen, der 'strenge Regulierung' und die Einbeziehung der Gesellschaft ('nicht nur Experten') fordert. Antwort (b) ist zu absolut; es wird ein 'internationales Moratorium' gefordert, was eine vorübergehende Aussetzung und kein grundsätzliches Verbot ist. Antwort (c) ist ein Trugschluss, da explizit gefordert wird, dass 'die Gesellschaft in die Entscheidungsfindung einbezogen werden' muss und nicht nur Experten.",
         "vi": "Đáp án (a) tóm tắt chính xác sự đồng thuận đạt được vào cuối cuộc thảo luận, yêu cầu 'quy định nghiêm ngặt' và sự tham gia của xã hội ('không chỉ các chuyên gia'). Đáp án (b) quá tuyệt đối; một 'lệnh cấm tạm thời quốc tế' được yêu cầu, đây là sự đình chỉ tạm thời chứ không phải là một lệnh cấm cơ bản. Đáp án (c) là một sự ngụy biện, vì có yêu cầu rõ ràng rằng 'xã hội phải được tham gia vào quá trình ra quyết định' chứ không chỉ các chuyên gia.",
-        "key_evidence": "Durch strenge Regulierung, internationale Zusammenarbeit und einen transparenten gesellschaftlichen Diskurs. [...] Und fünftens: Die Gesellschaft muss in die Entscheidungsfindung einbezogen werden, nicht nur Experten.",
+        "key_evidence": "Durch strenge Regulierung, internationale Zusammenarbeit und einen transparenten gesellschaftlichen Diskurs",
         "key_vocabulary": []
       }
     }
@@ -130,93 +130,172 @@
     ]
   },
   "transcript": {
-    "type": "full_reconstructed_transcript",
+    "type": "studio_source_transcript",
     "status": "complete",
-    "source": "reconstructed_full_script",
-    "quality": "release_candidate_reconstructed",
-    "note": "Full learner-visible reconstructed script created from existing question evidence because original studio scripts are not present in the repository. Replace with studio transcript if original audio scripts become available.",
+    "source": "studio_source_script",
+    "quality": "source_verified",
+    "sourceScript": "data/scripts/C1/Teil3-Diskussion-in-Abschnitten/L-C1-GOETHE-008-T3.json",
+    "note": "Transcript replaced from source script by scripts/apply-source-transcripts.ts.",
     "lines": [
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Der folgende anspruchsvolle Hoertext behandelt Medizinethik und Gentherapie. Achten Sie auf Aussage, Kontext und implizite Bedeutung."
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sie hören eine Diskussion in vier Abschnitten. Lesen Sie jeweils die Aufgaben. Sie haben dafür 30 Sekunden Zeit. Sie hören die Diskussion zweimal."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q1.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Willkommen zu unserer Podiumsdiskussion: Gentherapie — Wie weit darf die Medizin gehen?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Meine Skepsis richtet sich gegen die Manipulation der menschlichen Natur. Die Grenze zwischen Heilung und Optimierung ist fließend und gesellschaftlich noch nicht definiert.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Als Genetikerin sage ich: Die Gentherapie wird in zwanzig Jahren so selbstverständlich sein wie Antibiotika heute."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q1 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Als Theologin sage ich: Nicht alles, was technisch möglich ist, ist ethisch wünschenswert oder moralisch verantwortbar."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q2.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Frau Professorin Weber, Sie forschen an Gentherapien gegen Krebs. Wo stehen wir wissenschaftlich?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Das sagt sich leicht, aber in der Praxis ist die Grenzziehung extrem schwierig und kulturell bedingt.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die CAR-T-Zelltherapie hat die Behandlung von Blutkrebs revolutioniert und bisher unheilbare Patienten geheilt."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q2 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wir arbeiten daran, diesen Ansatz auf solide Tumore auszuweiten, was noch eine große wissenschaftliche Herausforderung ist."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q3.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Herr Pfarrer Schröder, warum haben Sie ethische Bedenken gegen diese vielversprechenden medizinischen Entwicklungen?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Ja, und die Geschichte mahnt uns. Die Eugenik des zwanzigsten Jahrhunderts begann mit dem Versprechen, Erbkrankheiten zu heilen.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ich habe keine Bedenken gegen die Heilung von Kranken. Meine Skepsis richtet sich gegen die Manipulation der menschlichen Natur."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q3 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Grenze zwischen Heilung und Optimierung ist fließend und gesellschaftlich noch nicht definiert."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q4.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Was passiert, wenn Eltern ihre Kinder genetisch 'verbessern' können und dies zu einer neuen sozialen Spaltung führt?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Durch strenge Regulierung, internationale Zusammenarbeit und einen transparenten gesellschaftlichen Diskurs. [...] Und fünftens: Die Gesellschaft muss in die Entscheidungsfindung einbezogen werden, nicht nur Experten.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Frau Professorin Weber, wie reagieren Sie auf diese Bedenken bezüglich der genetischen Optimierung?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q4 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Bedenken sind berechtigt, aber sie sollten die therapeutische Forschung nicht blockieren und behindern."
       },
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Ende des Hoertexts."
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wir können zwischen medizinischer Indikation und Enhancement klar unterscheiden und entsprechende Grenzen ziehen."
+      },
+      {
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das sagt sich leicht, aber in der Praxis ist die Grenzziehung extrem schwierig und kulturell bedingt."
+      },
+      {
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ist Kleinwüchsigkeit eine behandelbare Krankheit oder eine Variante der menschlichen Normalität?"
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ist Taubheit eine Behinderung, die geheilt werden muss, oder eine kulturelle Identität, die geschützt werden sollte?"
+      },
+      {
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Herr Pfarrer Schröder, teilen Sie die Sorge vor einer 'Eugenik durch die Hintertür'?"
+      },
+      {
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ja, und die Geschichte mahnt uns. Die Eugenik des zwanzigsten Jahrhunderts begann mit dem Versprechen, Erbkrankheiten zu heilen."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Heute haben wir ungleich mächtigere Werkzeuge, und die Versuchung, sie missbräuchlich einzusetzen, ist real."
+      },
+      {
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Frau Professorin Weber, wie können wir Missbrauch verhindern, ohne den therapeutischen Fortschritt zu gefährden?"
+      },
+      {
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Durch strenge Regulierung, internationale Zusammenarbeit und einen transparenten gesellschaftlichen Diskurs."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Wissenschaft darf nicht im Elfenbeinturm entscheiden, was mit der menschlichen Genetik und dem Genom geschehen soll."
+      },
+      {
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Können wir uns auf gemeinsame ethische Grundsätze für die Gentherapie einigen?"
+      },
+      {
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Erstens: Somatische Gentherapie bei schweren Erkrankungen ist ethisch legitim und sollte gefördert werden."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Zweitens: Keimbahntherapie erfordert ein internationales Moratorium, bis wir die Risiken besser verstehen."
+      },
+      {
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Drittens: Genetisches Enhancement ohne medizinische Indikation sollte grundsätzlich verboten werden."
+      },
+      {
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Viertens: Der Zugang zu zugelassenen Gentherapien muss global gerecht und erschwinglich gestaltet werden."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Diese vier Grundsätze bilden einen vernünftigen Rahmen, dem beide Seiten zustimmen könnten."
+      },
+      {
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Und fünftens: Die Gesellschaft muss in die Entscheidungsfindung einbezogen werden, nicht nur Experten."
+      },
+      {
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Vielen Dank für diese wichtige und nachdenkliche Diskussion über die Grenzen und Chancen der Medizin!"
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Ende Teil drei."
       }
     ]
   },
@@ -233,7 +312,7 @@
       "id": "l-c1-goethe-008-t3-lo-1",
       "cefrLevel": "C1",
       "skill": "listening",
-      "canDoVi": "Toi co the luyen nghe hieu o trinh do C1 qua chu de \"Medizinethik und Gentherapie\".",
+      "canDoVi": "Tôi có thể luyện nghe hiểu ở trình độ C1 qua chủ đề \"Medizinethik und Gentherapie\".",
       "canDoDe": "Ich kann Hoeren auf Niveau C1 zum Thema \"Medizinethik und Gentherapie\" ueben.",
       "linkedContentIds": [
         "L-C1-GOETHE-008-T3"

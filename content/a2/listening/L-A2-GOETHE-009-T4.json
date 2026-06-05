@@ -142,111 +142,132 @@
     ]
   },
   "transcript": {
-    "type": "full_reconstructed_transcript",
+    "type": "studio_source_transcript",
     "status": "complete",
-    "source": "reconstructed_full_script",
-    "quality": "release_candidate_reconstructed",
-    "note": "Full learner-visible reconstructed script created from existing question evidence because original studio scripts are not present in the repository. Replace with studio transcript if original audio scripts become available.",
+    "source": "studio_source_script",
+    "quality": "source_verified",
+    "sourceScript": "data/scripts/A2/Teil4-Radiointerview/L-A2-GOETHE-009-T4.json",
+    "note": "Transcript replaced from source script by scripts/apply-source-transcripts.ts.",
     "lines": [
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Hoeren Sie eine kurze Information zum Thema Schule und Elternsprechtag."
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sie hören ein Interview im Radio. Zu dem Interview gibt es fünf Aufgaben. Kreuzen Sie ja oder nein an. Sie hören das Interview zweimal."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q1.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Heute sprechen wir mit Herrn Neumann, Schulleiter einer Grundschule in Berlin."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Ich bin seit zehn Jahren Schulleiter",
-        "linkedQuestionId": "Q1"
+        "speaker": "Gast",
+        "speaker_role": "dialogue_speaker",
+        "text": "Guten Tag! Ich bin seit zehn Jahren Schulleiter und liebe meinen Beruf."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q1 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Herr Neumann, was ist das Wichtigste an einer guten Grundschule?"
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q2.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Gast",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Kinder sollen gern in die Schule gehen. Spaß am Lernen ist das A und O."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "answer_evidence",
-        "text": "Wir nutzen mehr digitale Medien",
-        "linkedQuestionId": "Q2"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wie hat sich die Schule in den letzten Jahren verändert?"
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q2 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Gast",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wir nutzen mehr digitale Medien und der Unterricht ist vielfältiger geworden."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q3.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Was raten Sie Eltern, deren Kinder bald eingeschult werden?"
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "answer_evidence",
-        "text": "Lesen Sie viel mit Ihren Kindern vor.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Gast",
+        "speaker_role": "dialogue_speaker",
+        "text": "Lesen Sie viel mit Ihren Kindern vor. Das ist die beste Vorbereitung auf die Schule."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q3 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wie gehen Sie mit Kindern um, die noch kein Deutsch sprechen?"
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q4.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Gast",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wir haben Willkommensklassen und spezielle Sprachförderung für diese Kinder."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "answer_evidence",
-        "text": "Leider nicht immer.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Funktioniert die Integration gut?"
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q4 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Gast",
+        "speaker_role": "dialogue_speaker",
+        "text": "Meistens ja! Kinder lernen Sprachen sehr schnell, besonders wenn sie mit anderen spielen."
       },
       {
-        "speaker": "Sprecher 5",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q5.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Was können Eltern tun, um die Schule zu unterstützen?"
       },
       {
-        "speaker": "Sprecher 5",
-        "speaker_role": "answer_evidence",
-        "text": "Kleinere Klassen und mehr individuelle Förderung für jedes einzelne Kind.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Gast",
+        "speaker_role": "dialogue_speaker",
+        "text": "Kommen Sie zu den Elternabenden und helfen Sie bei Schulveranstaltungen mit."
       },
       {
-        "speaker": "Sprecher 5",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q5 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Gibt es genug Lehrer an Ihrer Schule?"
       },
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Ende des Hoertexts."
+        "speaker": "Gast",
+        "speaker_role": "dialogue_speaker",
+        "text": "Leider nicht immer. Der Lehrermangel ist ein großes Problem in ganz Deutschland."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Was wünschen Sie sich für die Zukunft der Schule?"
+      },
+      {
+        "speaker": "Gast",
+        "speaker_role": "dialogue_speaker",
+        "text": "Kleinere Klassen und mehr individuelle Förderung für jedes einzelne Kind."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Haben Sie noch eine Botschaft an die Eltern?"
+      },
+      {
+        "speaker": "Gast",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ihr Kind ist einzigartig! Vergleichen Sie es nicht mit anderen und haben Sie Geduld."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Vielen Dank, Herr Neumann!"
+      },
+      {
+        "speaker": "Gast",
+        "speaker_role": "dialogue_speaker",
+        "text": "Danke! Die Bildung unserer Kinder ist die wichtigste Investition in die Zukunft."
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Ende des Hörverstehens."
       }
     ]
   },
@@ -263,7 +284,7 @@
       "id": "l-a2-goethe-009-t4-lo-1",
       "cefrLevel": "A2",
       "skill": "listening",
-      "canDoVi": "Toi co the luyen nghe hieu o trinh do A2 qua chu de \"Schule und Elternsprechtag\".",
+      "canDoVi": "Tôi có thể luyện nghe hiểu ở trình độ A2 qua chủ đề \"Schule und Elternsprechtag\".",
       "canDoDe": "Ich kann Hoeren auf Niveau A2 zum Thema \"Schule und Elternsprechtag\" ueben.",
       "linkedContentIds": [
         "L-A2-GOETHE-009-T4"

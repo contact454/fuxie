@@ -235,165 +235,172 @@
     ]
   },
   "transcript": {
-    "type": "full_reconstructed_transcript",
+    "type": "studio_source_transcript",
     "status": "complete",
-    "source": "reconstructed_full_script",
-    "quality": "release_candidate_reconstructed",
-    "note": "Full learner-visible reconstructed script created from existing question evidence because original studio scripts are not present in the repository. Replace with studio transcript if original audio scripts become available.",
+    "source": "studio_source_script",
+    "quality": "source_verified",
+    "sourceScript": "data/scripts/B1/Teil4-Radiodiskussion/L-B1-GOETHE-010-T4.json",
+    "note": "Transcript replaced from source script by scripts/apply-source-transcripts.ts.",
     "lines": [
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Im folgenden Hoertext geht es um Umwelt und Recycling. Achten Sie auf die zentrale Information."
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sie hören eine Diskussion im Radio. Dazu gibt es acht Aufgaben. Wer sagt was? Sie hören die Diskussion zweimal."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q1.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Willkommen bei 'Grün gedacht'. Heute: Wie nachhaltig ist Deutschland wirklich?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Deutschland hat einen guten Ruf beim Umweltschutz, aber es gibt noch viel zu tun.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Deutschland hat einen guten Ruf beim Umweltschutz, aber es gibt noch viel zu tun."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q1 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ich finde, wir machen schon viel mehr als die meisten anderen Länder auf der Welt."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q2.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Frau Dr. Sommer, wie steht Deutschland im internationalen Vergleich beim Klimaschutz?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Beim Recycling sind wir Weltspitze, aber beim CO2-Ausstoß pro Kopf liegen wir im oberen Drittel.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Beim Recycling sind wir Weltspitze, aber beim CO2-Ausstoß pro Kopf liegen wir im oberen Drittel."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q2 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das liegt an unserer starken Industrie und daran, dass wir noch zu viel Kohle verbrennen."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q3.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Aber der Ausstieg aus der Kohle ist doch beschlossen. Bis zweitausenddreißig soll Schluss sein."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Nein, wir müssen schneller sein. Jedes Jahr Kohleverbrennung schadet dem Klima unwiderruflich.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Herr Zimmermann, reicht das aus Ihrer Sicht?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q3 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Nein, wir müssen schneller sein. Jedes Jahr Kohleverbrennung schadet dem Klima unwiderruflich."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q4.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Erneuerbare Energien müssen viel schneller ausgebaut werden als bisher."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Aber Windräder und Solarparks brauchen Platz und stoßen oft auf Widerstand in der Bevölkerung.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Aber Windräder und Solarparks brauchen Platz und stoßen oft auf Widerstand in der Bevölkerung."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q4 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Frau Dr. Sommer, wie kann man die Akzeptanz für erneuerbare Energien erhöhen?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q5.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Indem man die lokale Bevölkerung finanziell beteiligt. Bürgerwindparks sind ein Erfolgsmodell."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Indem man die lokale Bevölkerung finanziell beteiligt. Bürgerwindparks sind ein Erfolgsmodell.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wenn Sie an einem Windpark verdienen, akzeptieren Sie ihn eher in Ihrer Nähe."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q5 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das ist ein guter Punkt. Aber was kann der einzelne Bürger konkret tun?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q6.",
-        "linkedQuestionId": "Q6"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das Wichtigste: weniger konsumieren, weniger fliegen und mehr regionale Produkte kaufen."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "In Berlin gibt es viele Initiativen für Urban Gardening und Nachbarschaftsgärten.",
-        "linkedQuestionId": "Q6"
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Und politisch aktiv werden! Wählen gehen und sich in Umweltinitiativen engagieren."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q6 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q6"
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "In Berlin gibt es viele Initiativen für Urban Gardening und Nachbarschaftsgärten."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q7.",
-        "linkedQuestionId": "Q7"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Urban Gardening ist mehr als ein Trend, es verbindet Menschen und schafft grüne Oasen."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Zum Beispiel fliegen viele junge Menschen trotzdem für dreißig Euro nach Barcelona am Wochenende.",
-        "linkedQuestionId": "Q7"
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Herr Zimmermann, wie sehen Sie die Rolle der jungen Generation beim Umweltschutz?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q7 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q7"
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Fridays-for-Future-Bewegung hat unglaublich viel bewegt und den Druck auf die Politik erhöht."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q8.",
-        "linkedQuestionId": "Q8"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das stimmt, aber Demonstrieren allein reicht nicht. Es muss im Alltag gelebt werden."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Das nennt sich CO2-Steuer und wird in Deutschland schrittweise eingeführt.",
-        "linkedQuestionId": "Q8"
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Zum Beispiel fliegen viele junge Menschen trotzdem für dreißig Euro nach Barcelona am Wochenende."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q8 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q8"
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das stimmt, und das ist ein Widerspruch, den die Gesellschaft insgesamt lösen muss."
       },
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Ende des Hoertexts."
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Billigflüge müssen teurer werden, damit die Umweltkosten eingepreist werden."
+      },
+      {
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das Prinzip ist richtig: Wer die Umwelt belastet, muss dafür zahlen."
+      },
+      {
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das nennt sich CO2-Steuer und wird in Deutschland schrittweise eingeführt."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Vielen Dank an Frau Dr. Sommer und Herrn Zimmermann für diese wichtige Diskussion!"
+      },
+      {
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Umweltschutz beginnt bei jedem Einzelnen. Fangen Sie heute an mit kleinen Veränderungen!"
+      },
+      {
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "In der nächsten Sendung: Nachhaltige Mode und was hinter den Labels steckt. Bis dann!"
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Ende des Hörverstehens."
       }
     ]
   },
@@ -410,7 +417,7 @@
       "id": "l-b1-goethe-010-t4-lo-1",
       "cefrLevel": "B1",
       "skill": "listening",
-      "canDoVi": "Toi co the luyen nghe hieu o trinh do B1 qua chu de \"Umwelt und Recycling\".",
+      "canDoVi": "Tôi có thể luyện nghe hiểu ở trình độ B1 qua chủ đề \"Umwelt und Recycling\".",
       "canDoDe": "Ich kann Hoeren auf Niveau B1 zum Thema \"Umwelt und Recycling\" ueben.",
       "linkedContentIds": [
         "L-B1-GOETHE-010-T4"

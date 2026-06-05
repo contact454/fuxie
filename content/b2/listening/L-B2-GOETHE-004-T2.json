@@ -29,7 +29,7 @@
       "explanation": {
         "de": "Dr. Peters erklärt, dass Praktika zu einer deutlich schnelleren Jobfindung und einem höheren Einstiegsgehalt führen.",
         "vi": "Tiến sĩ Peters giải thích rằng thực tập giúp tìm việc nhanh hơn đáng kể và có mức lương khởi điểm cao hơn.",
-        "key_evidence": "Unsere Daten zeigen, dass Absolventinnen mit mindestens zwei Praktika deutlich schneller eine Stelle finden. Und das Einstiegsgehalt liegt fünf bis zehn Prozent höher.",
+        "key_evidence": "Unsere Daten zeigen, dass Absolventinnen mit mindestens zwei Praktika deutlich schneller eine Stelle finden",
         "key_vocabulary": [
           "hervorheben",
           "Vorteil",
@@ -196,129 +196,162 @@
     ]
   },
   "transcript": {
-    "type": "full_reconstructed_transcript",
+    "type": "studio_source_transcript",
     "status": "complete",
-    "source": "reconstructed_full_script",
-    "quality": "release_candidate_reconstructed",
-    "note": "Full learner-visible reconstructed script created from existing question evidence because original studio scripts are not present in the repository. Replace with studio transcript if original audio scripts become available.",
+    "source": "studio_source_script",
+    "quality": "source_verified",
+    "sourceScript": "data/scripts/B2/Teil2-Radiointerview-mit-Experte/L-B2-GOETHE-004-T2.json",
+    "note": "Transcript replaced from source script by scripts/apply-source-transcripts.ts.",
     "lines": [
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Im folgenden Hoertext geht es um Praktikumserfahrungen im Studium. Achten Sie auf die zentrale Information."
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sie hören ein Interview. Dazu gibt es sechs Aufgaben. Kreuzen Sie die richtige Antwort an. Sie hören das Interview zweimal."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q1.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Willkommen bei 'Studium und Beruf'. Heute bei mir: die Karriereberaterin Dr. Nicole Peters."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Unsere Daten zeigen, dass Absolventinnen mit mindestens zwei Praktika deutlich schneller eine Stelle finden. Und das Einstiegsgehalt liegt fünf bis zehn Prozent höher.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Guten Abend. Ich berate seit zwölf Jahren Studierende beim Berufseinstieg."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q1 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Frau Dr. Peters, wie wichtig sind Praktika wirklich für den späteren Berufseinstieg?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q2.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Enorm wichtig. Unsere Daten zeigen, dass Absolventinnen mit mindestens zwei Praktika deutlich schneller eine Stelle finden."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Idealerweise nach dem vierten Semester, wenn man fachliches Grundwissen hat, aber noch flexibel ist.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wie viel schneller? Können Sie das in Zahlen fassen?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q2 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Im Durchschnitt drei Monate schneller. Und das Einstiegsgehalt liegt fünf bis zehn Prozent höher."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q3.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das sind überzeugende Zahlen. Aber wann ist der beste Zeitpunkt für ein Praktikum?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Viele bewerben sich ausschließlich bei den großen, bekannten Unternehmen und übersehen den Mittelstand.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Idealerweise nach dem vierten Semester, wenn man fachliches Grundwissen hat, aber noch flexibel ist."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q3 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Viele Studierende klagen über schlechte Praktikumserfahrungen. Was macht ein gutes Praktikum aus?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q4.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ein klarer Arbeitsplan, eine feste Betreuungsperson und die Einbindung in reale Projekte."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Sehr wichtig! Bestehen Sie auf einem qualifizierten Zeugnis, das Ihre Aufgaben und Leistungen beschreibt.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Was sind die häufigsten Fehler, die Studierende bei der Praktikumssuche machen?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q4 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Viele bewerben sich ausschließlich bei den großen, bekannten Unternehmen und übersehen den Mittelstand."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q5.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Der deutsche Mittelstand bietet oft die besseren Praktika, weil man dort mehr Verantwortung bekommt."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Das sind aber extrem kompetitive Programme mit Tausenden von Bewerbungen.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wie wichtig ist ein Praktikumszeugnis für spätere Bewerbungen?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q5 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Sehr wichtig! Bestehen Sie auf einem qualifizierten Zeugnis, das Ihre Aufgaben und Leistungen beschreibt."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q6.",
-        "linkedQuestionId": "Q6"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Was ist der Unterschied zwischen einem einfachen und einem qualifizierten Zeugnis?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Jedes Praktikum, auch ein schlechtes, lehrt Sie etwas Wichtiges über sich selbst.",
-        "linkedQuestionId": "Q6"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ein einfaches Zeugnis bestätigt nur die Dauer, ein qualifiziertes bewertet auch Ihre Leistung."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q6 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q6"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wie stehen Sie zum Thema internationale Praktika?"
       },
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Ende des Hoertexts."
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Auslandserfahrung ist ein enormer Pluspunkt. Es zeigt Mobilität, Anpassungsfähigkeit und Sprachkompetenz."
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Besonders gefragt sind Praktika in den EU-Institutionen und bei den Vereinten Nationen."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das sind aber extrem kompetitive Programme mit Tausenden von Bewerbungen."
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ja, aber es gibt auch weniger bekannte Programme, zum Beispiel das Carlo-Schmid-Programm."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Zum Schluss: Ihr wichtigster Rat für Studierende auf der Suche nach einem guten Praktikum?"
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Fangen Sie früh an zu suchen, nutzen Sie Ihr Netzwerk und seien Sie offen für Unerwartetes."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das beste Praktikum ist oft nicht beim größten Unternehmen, sondern dort, wo man am meisten lernt."
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Vielen Dank für diese wertvollen Ratschläge, Frau Dr. Peters!"
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Viel Erfolg bei der Suche nach dem perfekten Praktikum! Investieren Sie in Ihre berufliche Zukunft."
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Und vergessen Sie nicht: Jedes Praktikum, auch ein schlechtes, lehrt Sie etwas Wichtiges über sich selbst."
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Ende Teil zwei."
       }
     ]
   },
@@ -335,7 +368,7 @@
       "id": "l-b2-goethe-004-t2-lo-1",
       "cefrLevel": "B2",
       "skill": "listening",
-      "canDoVi": "Toi co the luyen nghe hieu o trinh do B2 qua chu de \"Praktikumserfahrungen im Studium\".",
+      "canDoVi": "Tôi có thể luyện nghe hiểu ở trình độ B2 qua chủ đề \"Praktikumserfahrungen im Studium\".",
       "canDoDe": "Ich kann Hoeren auf Niveau B2 zum Thema \"Praktikumserfahrungen im Studium\" ueben.",
       "linkedContentIds": [
         "L-B2-GOETHE-004-T2"

@@ -206,165 +206,172 @@
     ]
   },
   "transcript": {
-    "type": "full_reconstructed_transcript",
+    "type": "studio_source_transcript",
     "status": "complete",
-    "source": "reconstructed_full_script",
-    "quality": "release_candidate_reconstructed",
-    "note": "Full learner-visible reconstructed script created from existing question evidence because original studio scripts are not present in the repository. Replace with studio transcript if original audio scripts become available.",
+    "source": "studio_source_script",
+    "quality": "source_verified",
+    "sourceScript": "data/scripts/B1/Teil4-Radiodiskussion/L-B1-GOETHE-011-T4.json",
+    "note": "Transcript replaced from source script by scripts/apply-source-transcripts.ts.",
     "lines": [
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Im folgenden Hoertext geht es um Digitale Medien und Jugend. Achten Sie auf die zentrale Information."
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sie hören eine Diskussion im Radio. Dazu gibt es acht Aufgaben. Wer sagt was? Sie hören die Diskussion zweimal."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q1.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Willkommen zu unserer Diskussionsrunde 'Kultur für alle'. Heute fragen wir: Brauchen wir mehr Museen?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Museen sind wichtige Orte der Bildung und verfügbar für alle Gesellschaftsschichten.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ich denke ja! Museen sind wichtige Orte der Bildung und verfügbar für alle Gesellschaftsschichten."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q1 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Da bin ich anderer Meinung. Wir haben genug Museen, sie müssen nur besser werden und moderner."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q2.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Frau Klein, was meinen Sie genau mit besseren Museen?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Wir haben genug Museen, sie müssen nur besser werden und moderner.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Viele Museen sind altmodisch. Sie stellen einfach Objekte hinter Glas und das war es dann."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q2 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Aber genau das macht doch den Charme eines Museums aus! Die Originalwerke direkt vor sich zu haben."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q3.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das stimmt natürlich, aber jüngere Besucher erwarten mehr Interaktion und digitale Angebote."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Viele Museen sind altmodisch. Sie stellen einfach Objekte hinter Glas und das war es dann.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Herr Fischer, wie sehen Sie die Rolle der Digitalisierung in Museen?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q3 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Digitale Angebote sind eine Ergänzung, aber kein Ersatz für das originale Kunsterlebnis."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q4.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ich finde, Virtual Reality und Augmented Reality können das Museumserlebnis enorm bereichern."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "jüngere Besucher erwarten mehr Interaktion und digitale Angebote.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Stellen Sie sich vor, Sie stehen vor einem Gemälde und können auf Ihrem Tablet die Entstehung sehen."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q4 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das klingt faszinierend, aber es besteht die Gefahr, dass die Technik vom Kunstwerk ablenkt."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q5.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ein wichtiger Punkt. Wie sieht es mit dem Thema Finanzierung aus? Museen sind teuer."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Digitale Angebote sind eine Ergänzung, aber kein Ersatz für das originale Kunsterlebnis.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Museen sollten mehr staatliche Förderung bekommen, denn sie erfüllen einen Bildungsauftrag."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q5 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Oder sie könnten sich durch kreative Veranstaltungen selbst besser finanzieren."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q6.",
-        "linkedQuestionId": "Q6"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das machen viele Museen bereits. Konzerte, Workshops und Events bringen zusätzliche Einnahmen."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Museen sollten mehr staatliche Förderung bekommen, denn sie erfüllen einen Bildungsauftrag.",
-        "linkedQuestionId": "Q6"
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Aber dann werden Museen zu Eventhallen. Das ist nicht ihre eigentliche Aufgabe."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q6 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q6"
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Warum nicht beides? Ein Museum kann tagsüber Bildung anbieten und abends kulturelle Events."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q7.",
-        "linkedQuestionId": "Q7"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Frau Klein, was denken Sie zum Thema freier Eintritt in allen Museen?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Oder sie könnten sich durch kreative Veranstaltungen selbst besser finanzieren.",
-        "linkedQuestionId": "Q7"
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Freier Eintritt wäre ideal, aber dann brauchen Museen deutlich mehr öffentliche Gelder."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q7 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q7"
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "In einigen Ländern wie Großbritannien funktioniert das sehr gut mit dem freien Eintritt."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q8.",
-        "linkedQuestionId": "Q8"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ja, aber dort gibt es eine andere Tradition der privaten Kulturförderung durch Spenden."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Und ich wünsche mir, dass Museen stärker auf Familien und Kinder eingehen.",
-        "linkedQuestionId": "Q8"
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Herr Fischer, was wünschen Sie sich für die Zukunft der Museen in Deutschland?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q8 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q8"
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Mehr Mut zu experimentellen Ausstellungen und mehr Zusammenarbeit zwischen den Museen."
       },
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Ende des Hoertexts."
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Und ich wünsche mir, dass Museen stärker auf Familien und Kinder eingehen."
+      },
+      {
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Kinderfreundliche Programme sind wirklich wichtig. Das Museum muss ein Ort sein, an dem Kinder Spaß haben."
+      },
+      {
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Einige Museen bieten bereits sehr gute Kinderprogramme an, etwa das Deutsche Museum in München."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das stimmt, aber es gibt noch viel Potenzial. Nicht jedes Museum hat die Ressourcen dafür."
+      },
+      {
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Vielen Dank, Frau Klein und Herr Fischer, für diese anregende Diskussion!"
+      },
+      {
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Es war mir ein Vergnügen! Gehen Sie ins Museum, es lohnt sich immer!"
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Ende des Hörverstehens."
       }
     ]
   },
@@ -381,7 +388,7 @@
       "id": "l-b1-goethe-011-t4-lo-1",
       "cefrLevel": "B1",
       "skill": "listening",
-      "canDoVi": "Toi co the luyen nghe hieu o trinh do B1 qua chu de \"Digitale Medien und Jugend\".",
+      "canDoVi": "Tôi có thể luyện nghe hiểu ở trình độ B1 qua chủ đề \"Digitale Medien und Jugend\".",
       "canDoDe": "Ich kann Hoeren auf Niveau B1 zum Thema \"Digitale Medien und Jugend\" ueben.",
       "linkedContentIds": [
         "L-B1-GOETHE-011-T4"

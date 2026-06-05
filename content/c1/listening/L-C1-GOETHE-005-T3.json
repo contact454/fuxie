@@ -29,7 +29,7 @@
       "explanation": {
         "de": "Die korrekte Antwort ist (a), da die Diskussion mit einer optimistischen Vision („einzige Möglichkeit“) beginnt, der sofort die ernüchternde Realität („gerade einmal zehn Prozent“) gegenübergestellt wird. Dies zeigt eine unterschiedliche Bewertung der aktuellen Lage. Option (b) ist eine lexikalische Falle; beide Experten scheinen sich einig zu sein, dass eine 100%-ige Kreislaufwirtschaft „physikalisch unmöglich“ ist, es ist also kein Punkt der Meinungsverschiedenheit. Option (c) ist falsch, da der erste Experte explizit sagt, dass beides vereinbar ist, und der zweite dem nicht widerspricht.",
         "vi": "Đáp án đúng là (a), vì cuộc thảo luận bắt đầu bằng một tầm nhìn lạc quan (\"khả năng duy nhất\") ngay lập tức bị đối chiếu với thực tế phũ phàng (\"chỉ vỏn vẹn mười phần trăm\"). Điều này cho thấy sự khác biệt trong việc đánh giá tình hình hiện tại. Lựa chọn (b) là một cái bẫy từ vựng; cả hai chuyên gia dường như đồng ý rằng nền kinh tế tuần hoàn 100% là \"không thể về mặt vật lý\", vì vậy đây không phải là điểm bất đồng. Lựa chọn (c) sai, vì chuyên gia đầu tiên nói rõ rằng cả hai có thể tương thích và chuyên gia thứ hai không phản đối điều này.",
-        "key_evidence": "Gast_A: Die Kreislaufwirtschaft ist die einzige Möglichkeit, Wohlstand und Klimaschutz dauerhaft miteinander zu vereinbaren. Gast_B: Das klingt zu schön, um wahr zu sein. In der Praxis recyceln wir gerade einmal zehn Prozent der weltweit genutzten Materialien."
+        "key_evidence": "Die Kreislaufwirtschaft ist die einzige Möglichkeit, Wohlstand und Klimaschutz dauerhaft miteinander zu vereinbaren"
       }
     },
     {
@@ -65,7 +65,7 @@
       "explanation": {
         "de": "Die korrekte Antwort ist (c), da im Gespräch betont wird, dass „harte wirtschaftliche Zahlen und Fakten“ sowie die Vermeidung von „Wettbewerbsnachteilen durch hohe Rohstoffkosten“ die überzeugendsten Argumente sind. Dies wird mit „ökonomische Vorteile“ gut zusammengefasst. Option (a) ist eine Falle; die Bauindustrie wird als Sektor mit hohem Potenzial genannt, aber nicht als das primäre Überzeugungsmittel für alle Unternehmen. Option (b) ist falsch, da moralische oder soziale Appelle in diesem Kontext nicht als Hauptmotivator erwähnt werden.",
         "vi": "Đáp án đúng là (c), vì trong cuộc trò chuyện, người ta nhấn mạnh rằng \"các con số và dữ kiện kinh tế cứng\" cũng như việc tránh \"bất lợi cạnh tranh do chi phí nguyên liệu thô cao\" là những lập luận thuyết phục nhất. Điều này được tóm tắt tốt bằng cụm từ \"lợi ích kinh tế\". Lựa chọn (a) là một cái bẫy; ngành xây dựng được đề cập đến như một lĩnh vực có tiềm năng cao, nhưng không phải là phương tiện thuyết phục chính cho tất cả các công ty. Lựa chọn (b) sai, vì những lời kêu gọi về đạo đức hoặc xã hội không được đề cập đến như động lực chính trong bối cảnh này.",
-        "key_evidence": "Mit harten wirtschaftlichen Zahlen und Fakten. Rohstoffpreise steigen langfristig, Kreislaufmodelle senken die Materialkosten. [...] Unternehmen, die heute nicht umstellen, werden in zehn Jahren Wettbewerbsnachteile durch hohe Rohstoffkosten haben."
+        "key_evidence": "Mit harten wirtschaftlichen Zahlen und Fakten"
       }
     },
     {
@@ -126,93 +126,172 @@
     ]
   },
   "transcript": {
-    "type": "full_reconstructed_transcript",
+    "type": "studio_source_transcript",
     "status": "complete",
-    "source": "reconstructed_full_script",
-    "quality": "release_candidate_reconstructed",
-    "note": "Full learner-visible reconstructed script created from existing question evidence because original studio scripts are not present in the repository. Replace with studio transcript if original audio scripts become available.",
+    "source": "studio_source_script",
+    "quality": "source_verified",
+    "sourceScript": "data/scripts/C1/Teil3-Diskussion-in-Abschnitten/L-C1-GOETHE-005-T3.json",
+    "note": "Transcript replaced from source script by scripts/apply-source-transcripts.ts.",
     "lines": [
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Der folgende anspruchsvolle Hoertext behandelt Kreislaufwirtschaft und Klimawandel. Achten Sie auf Aussage, Kontext und implizite Bedeutung."
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sie hören eine Diskussion in vier Abschnitten. Lesen Sie jeweils die Aufgaben. Sie haben dafür 30 Sekunden Zeit. Sie hören die Diskussion zweimal."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q1.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Willkommen zu unserer Diskussion: Kreislaufwirtschaft — Rettung für das Klima oder Greenwashing der Industrie?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Gast_A: Die Kreislaufwirtschaft ist die einzige Möglichkeit, Wohlstand und Klimaschutz dauerhaft miteinander zu vereinbaren. Gast_B: Das klingt zu schön, um wahr zu sein. In der Praxis recyceln wir gerade einmal zehn Prozent der weltweit genutzten Materialien.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Kreislaufwirtschaft ist die einzige Möglichkeit, Wohlstand und Klimaschutz dauerhaft miteinander zu vereinbaren."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q1 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das klingt zu schön, um wahr zu sein. In der Praxis recyceln wir gerade einmal zehn Prozent der weltweit genutzten Materialien."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q2.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Herr Lindner, Sie sind Geschäftsführer eines Unternehmens, das auf Kreislaufwirtschaft spezialisiert ist. Was ist realistisch?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Nein, Kreislaufwirtschaft ist notwendig, aber nicht hinreichend. Wir brauchen gleichzeitig eine massive Reduktion des Konsums.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Eine hundertprozentige Kreislaufwirtschaft ist physikalisch unmöglich, weil bei jedem Recyclingprozess Material und Energie verloren gehen."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q2 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Aber wir können den Anteil recycelter Materialien auf siebzig bis achtzig Prozent steigern, und das wäre revolutionär."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q3.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Frau Dr. Vogel, Sie sind Umweltwissenschaftlerin. Reicht Kreislaufwirtschaft allein für den Klimaschutz aus?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Mit harten wirtschaftlichen Zahlen und Fakten. Rohstoffpreise steigen langfristig, Kreislaufmodelle senken die Materialkosten. [...] Unternehmen, die heute nicht umstellen, werden in zehn Jahren Wettbewerbsnachteile durch hohe Rohstoffkosten haben.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Nein, Kreislaufwirtschaft ist notwendig, aber nicht hinreichend. Wir brauchen gleichzeitig eine massive Reduktion des Konsums."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q3 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die beste Verpackung ist die, die gar nicht erst hergestellt wird, und das gilt für viele andere Produkte ebenso."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q4.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Herr Lindner, wie reagieren Sie auf den Vorwurf, dass Kreislaufwirtschaft nur Greenwashing der konsumistischen Wirtschaft ist?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Eine zentrale Rolle, aber Konsumenten allein können das System nicht verändern, dafür braucht es regulatorische Rahmenbedingungen.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Der Vorwurf ist berechtigt, wenn Kreislaufwirtschaft als Alibi dient, um weiter maßlos zu konsumieren."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q4 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Aber ernst gemeinte Kreislaufwirtschaft verändert das gesamte Geschäftsmodell und stellt den Besitz von Produkten infrage."
       },
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Ende des Hoertexts."
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Product-as-a-Service-Modelle, bei denen man Licht statt Lampen kauft, sind radikaler als sie klingen."
+      },
+      {
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Frau Dr. Vogel, welche Sektoren müssen sich am dringendsten verändern?"
+      },
+      {
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Bauindustrie ist für vierzig Prozent des europäischen Abfallaufkommens verantwortlich und hat enormes Kreislaufpotenzial."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Gebäude könnten als Materialbanken konzipiert werden, deren Bestandteile am Ende vollständig wiederverwendet werden."
+      },
+      {
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das Konzept heißt Urban Mining und behandelt bestehende Gebäude als Rohstofflagerstätten für zukünftige Bauprojekte."
+      },
+      {
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Herr Lindner, wie überzeugen Sie traditionelle Unternehmen, auf Kreislaufwirtschaft umzusteigen?"
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Mit harten wirtschaftlichen Zahlen und Fakten. Rohstoffpreise steigen langfristig, Kreislaufmodelle senken die Materialkosten."
+      },
+      {
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Unternehmen, die heute nicht umstellen, werden in zehn Jahren Wettbewerbsnachteile durch hohe Rohstoffkosten haben."
+      },
+      {
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Frau Dr. Vogel, welche Rolle spielen die Konsumenten bei der Transformation zur Kreislaufwirtschaft?"
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Eine zentrale Rolle, aber Konsumenten allein können das System nicht verändern, dafür braucht es regulatorische Rahmenbedingungen."
+      },
+      {
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das Recht auf Reparatur ist ein gutes Beispiel: Erst wenn Hersteller zur Reparierbarkeit verpflichtet werden, ändert sich etwas."
+      },
+      {
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Können wir uns auf eine gemeinsame Position einigen, die Klimaschutz und wirtschaftliche Realität verbindet?"
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Kreislaufwirtschaft als gesamtwirtschaftliche Strategie plus absolute Reduktionsziele für den Ressourcenverbrauch."
+      },
+      {
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das eine ohne das andere reicht nicht. Effizienz ohne Suffizienz führt nur zu mehr Konsum, dem Rebound-Effekt."
+      },
+      {
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Einverstanden. Die Transformation muss umfassend sein und darf nicht an den Grenzen einzelner Unternehmen aufhören."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Und sie muss sozial gerecht gestaltet werden, damit die Kosten des Wandels nicht die Ärmsten treffen."
+      },
+      {
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ja, die gerechte Verteilung der Transformationskosten ist eine der größten politischen Herausforderungen unserer Zeit."
+      },
+      {
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Vielen Dank für diese fundierte und zukunftsweisende Diskussion!"
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Ende Teil drei."
       }
     ]
   },
@@ -229,7 +308,7 @@
       "id": "l-c1-goethe-005-t3-lo-1",
       "cefrLevel": "C1",
       "skill": "listening",
-      "canDoVi": "Toi co the luyen nghe hieu o trinh do C1 qua chu de \"Kreislaufwirtschaft und Klimawandel\".",
+      "canDoVi": "Tôi có thể luyện nghe hiểu ở trình độ C1 qua chủ đề \"Kreislaufwirtschaft und Klimawandel\".",
       "canDoDe": "Ich kann Hoeren auf Niveau C1 zum Thema \"Kreislaufwirtschaft und Klimawandel\" ueben.",
       "linkedContentIds": [
         "L-C1-GOETHE-005-T3"

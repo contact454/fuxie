@@ -124,111 +124,132 @@
     ]
   },
   "transcript": {
-    "type": "full_reconstructed_transcript",
+    "type": "studio_source_transcript",
     "status": "complete",
-    "source": "reconstructed_full_script",
-    "quality": "release_candidate_reconstructed",
-    "note": "Full learner-visible reconstructed script created from existing question evidence because original studio scripts are not present in the repository. Replace with studio transcript if original audio scripts become available.",
+    "source": "studio_source_script",
+    "quality": "source_verified",
+    "sourceScript": "data/scripts/A2/Teil4-Radiointerview/L-A2-GOETHE-006-T4.json",
+    "note": "Transcript replaced from source script by scripts/apply-source-transcripts.ts.",
     "lines": [
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Hoeren Sie eine kurze Information zum Thema Radiogewinnspiel und Mediensendung."
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sie hören ein Interview im Radio. Zu dem Interview gibt es fünf Aufgaben. Kreuzen Sie ja oder nein an. Sie hören das Interview zweimal."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q1.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "In unserer Sendung Medien und Trends sprechen wir heute mit Frau Keller vom Stadtmagazin."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "ich bin Chefredakteurin des Berliner Stadtmagazins seit fünf Jahren.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Gast",
+        "speaker_role": "dialogue_speaker",
+        "text": "Hallo! Ja, ich bin Chefredakteurin des Berliner Stadtmagazins seit fünf Jahren."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q1 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Frau Keller, wie hat sich die Medienlandschaft in den letzten Jahren verändert?"
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q2.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Gast",
+        "speaker_role": "dialogue_speaker",
+        "text": "Sehr stark! Immer mehr Menschen lesen Nachrichten auf dem Handy statt in der Zeitung."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "answer_evidence",
-        "text": "Nein, das glaube ich nicht. Viele Leser möchten ihre Zeitung am Morgen zum Frühstück.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ist die gedruckte Zeitung dann bald am Ende?"
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q2 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Gast",
+        "speaker_role": "dialogue_speaker",
+        "text": "Nein, das glaube ich nicht. Viele Leser möchten ihre Zeitung am Morgen zum Frühstück."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q3.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Und was ist mit dem Radio? Haben Podcasts das Radio ersetzt?"
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "answer_evidence",
-        "text": "Podcasts sind sehr beliebt, aber das Radio hat immer noch viele Hörer, besonders im Auto.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Gast",
+        "speaker_role": "dialogue_speaker",
+        "text": "Podcasts sind sehr beliebt, aber das Radio hat immer noch viele Hörer, besonders im Auto."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q3 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Welche Themen interessieren die Berliner am meisten?"
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q4.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Gast",
+        "speaker_role": "dialogue_speaker",
+        "text": "Lokale Nachrichten, Kultur und natürlich die Restauranttipps sind am beliebtsten."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "answer_evidence",
-        "text": "Wir haben jeden Monat über zweihunderttausend Leser auf unserer Webseite.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Sie haben auch eine Online-Ausgabe. Wie läuft die?"
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q4 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Gast",
+        "speaker_role": "dialogue_speaker",
+        "text": "Sehr gut! Wir haben jeden Monat über zweihunderttausend Leser auf unserer Webseite."
       },
       {
-        "speaker": "Sprecher 5",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q5.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das ist beeindruckend! Und in den sozialen Medien?"
       },
       {
-        "speaker": "Sprecher 5",
-        "speaker_role": "answer_evidence",
-        "text": "Ja! Ab März gibt es eine Seite in einfachem Deutsch für Sprachlerner.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Gast",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wir sind auf Instagram und haben dort über fünfzigtausend Follower."
       },
       {
-        "speaker": "Sprecher 5",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q5 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Was planen Sie für die Zukunft des Magazins?"
       },
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Ende des Hoertexts."
+        "speaker": "Gast",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wir wollen mehr Videos machen und einen eigenen Podcast starten."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Haben Sie auch etwas für Deutschlerner geplant?"
+      },
+      {
+        "speaker": "Gast",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ja! Ab März gibt es eine Seite in einfachem Deutsch für Sprachlerner."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das klingt toll! Wo kann man Ihr Magazin kaufen?"
+      },
+      {
+        "speaker": "Gast",
+        "speaker_role": "dialogue_speaker",
+        "text": "An allen Kiosken in Berlin und natürlich auf unserer Webseite."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Vielen Dank, Frau Keller, für das interessante Gespräch!"
+      },
+      {
+        "speaker": "Gast",
+        "speaker_role": "dialogue_speaker",
+        "text": "Vielen Dank! Und lesen Sie unser Magazin, es lohnt sich!"
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Ende des Hörverstehens."
       }
     ]
   },
@@ -245,7 +266,7 @@
       "id": "l-a2-goethe-006-t4-lo-1",
       "cefrLevel": "A2",
       "skill": "listening",
-      "canDoVi": "Toi co the luyen nghe hieu o trinh do A2 qua chu de \"Radiogewinnspiel und Mediensendung\".",
+      "canDoVi": "Tôi có thể luyện nghe hiểu ở trình độ A2 qua chủ đề \"Radiogewinnspiel und Mediensendung\".",
       "canDoDe": "Ich kann Hoeren auf Niveau A2 zum Thema \"Radiogewinnspiel und Mediensendung\" ueben.",
       "linkedContentIds": [
         "L-A2-GOETHE-006-T4"

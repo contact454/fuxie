@@ -80,7 +80,7 @@
       "explanation": {
         "de": "Die Frau sagt, dass die Nachbarn sich nicht beschwert haben, weil Alex sie zur Party eingeladen hatte.",
         "vi": "Người phụ nữ nói rằng hàng xóm không phàn nàn vì Alex đã mời họ đến bữa tiệc.",
-        "key_evidence": "Die Nachbarn haben sich aber nicht beschwert. Er hat vorher bei allen Nachbarn geklingelt und sie zur Party eingeladen.",
+        "key_evidence": "Die Nachbarn haben sich aber nicht beschwert.",
         "key_vocabulary": []
       }
     },
@@ -152,147 +152,152 @@
     ]
   },
   "transcript": {
-    "type": "full_reconstructed_transcript",
+    "type": "studio_source_transcript",
     "status": "complete",
-    "source": "reconstructed_full_script",
-    "quality": "release_candidate_reconstructed",
-    "note": "Full learner-visible reconstructed script created from existing question evidence because original studio scripts are not present in the repository. Replace with studio transcript if original audio scripts become available.",
+    "source": "studio_source_script",
+    "quality": "source_verified",
+    "sourceScript": "data/scripts/B1/Teil3-Gespraech-zwei-Personen/L-B1-GOETHE-003-T3.json",
+    "note": "Transcript replaced from source script by scripts/apply-source-transcripts.ts.",
     "lines": [
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Im folgenden Hoertext geht es um Fest- oder Party-Erlebnis beschreiben. Achten Sie auf die zentrale Information."
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sie hören ein Gespräch zwischen zwei Personen. Dazu gibt es sieben Aufgaben. Entscheiden Sie: richtig oder falsch? Sie hören das Gespräch zweimal."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q1.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Sprecher1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Hey, wie war die Party bei Alex am Samstag? Ich konnte ja leider nicht kommen."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Alex hat seinen neuen Job gefeiert. Er arbeitet jetzt bei einer großen IT-Firma in Berlin-Mitte.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Sprecher2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die war super! Schade, dass du nicht dabei warst. Es war wirklich eine tolle Feier."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q1 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Sprecher1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wie viele Leute waren denn da?"
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q2.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Sprecher2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ungefähr dreißig Personen. Die Wohnung war ziemlich voll, aber es war gemütlich."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "answer_evidence",
-        "text": "Ungefähr dreißig Personen. Die Wohnung war ziemlich voll, aber es war gemütlich.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Sprecher1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Gab es einen besonderen Anlass oder war es einfach so eine Party?"
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q2 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Sprecher2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Alex hat seinen neuen Job gefeiert. Er arbeitet jetzt bei einer großen IT-Firma in Berlin-Mitte."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q3.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Sprecher1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das ist ja toll! Dann hat er wohl gut verdient. Was gab es zu essen und trinken?"
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "answer_evidence",
-        "text": "Alex hat selbst gekocht! Er hat ein riesiges Buffet gemacht mit indischem Essen.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Sprecher2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Alex hat selbst gekocht! Er hat ein riesiges Buffet gemacht mit indischem Essen."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q3 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Sprecher1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Indisches Essen? Ich wusste gar nicht, dass er indisch kochen kann!"
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q4.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Sprecher2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ja, das war auch für mich eine Überraschung. Das Curry und die Samosas waren fantastisch."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "answer_evidence",
-        "text": "Ja klar! Ab elf Uhr hat fast jeder getanzt.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Sprecher1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Und was habt ihr so gemacht den ganzen Abend?"
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q4 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Sprecher2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Zuerst haben wir gegessen und geredet, dann hat Alex seine Anlage aufgebaut und Musik aufgelegt."
       },
       {
-        "speaker": "Sprecher 5",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q5.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Sprecher1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Hat jemand getanzt? Auf Alex' Partys wird doch immer bis spät getanzt."
       },
       {
-        "speaker": "Sprecher 5",
-        "speaker_role": "answer_evidence",
-        "text": "Die Nachbarn haben sich aber nicht beschwert. Er hat vorher bei allen Nachbarn geklingelt und sie zur Party eingeladen.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Sprecher2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ja klar! Ab elf Uhr hat fast jeder getanzt. Die Nachbarn haben sich aber nicht beschwert."
       },
       {
-        "speaker": "Sprecher 5",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q5 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Sprecher1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wie hat er das geschafft? Normalerweise gibt es doch immer Probleme mit den Nachbarn."
       },
       {
-        "speaker": "Sprecher 6",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q6.",
-        "linkedQuestionId": "Q6"
+        "speaker": "Sprecher2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Er hat vorher bei allen Nachbarn geklingelt und sie zur Party eingeladen. Clevere Strategie!"
       },
       {
-        "speaker": "Sprecher 6",
-        "speaker_role": "answer_evidence",
-        "text": "Die letzten Gäste sind um drei Uhr morgens gegangen. Ich bin um halb zwei nach Hause.",
-        "linkedQuestionId": "Q6"
+        "speaker": "Sprecher1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ha, das ist schlau! Waren die Nachbarn dann auch wirklich da?"
       },
       {
-        "speaker": "Sprecher 6",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q6 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q6"
+        "speaker": "Sprecher2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Einige sogar! Das ältere Ehepaar von nebenan war bis Mitternacht da und hat mitgefeiert."
       },
       {
-        "speaker": "Sprecher 7",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q7.",
-        "linkedQuestionId": "Q7"
+        "speaker": "Sprecher1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das klingt wirklich nach einer tollen Party. Und wie lange ging die Feier?"
       },
       {
-        "speaker": "Sprecher 7",
-        "speaker_role": "answer_evidence",
-        "text": "Alex hat seine Einweihungsparty im April angekündigt, wenn seine neue Wohnung fertig ist.",
-        "linkedQuestionId": "Q7"
+        "speaker": "Sprecher2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die letzten Gäste sind um drei Uhr morgens gegangen. Ich bin um halb zwei nach Hause."
       },
       {
-        "speaker": "Sprecher 7",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q7 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q7"
+        "speaker": "Sprecher1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das nächste Mal bin ich auf jeden Fall dabei! Ist bald wieder eine Party geplant?"
       },
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Ende des Hoertexts."
+        "speaker": "Sprecher2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Alex hat seine Einweihungsparty im April angekündigt, wenn seine neue Wohnung fertig ist."
+      },
+      {
+        "speaker": "Sprecher1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Super! Dann kann ich hoffentlich kommen. Weißt du schon, wann genau?"
+      },
+      {
+        "speaker": "Sprecher2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Noch nicht genau, wahrscheinlich am letzten Wochenende im April. Ich sage dir Bescheid."
+      },
+      {
+        "speaker": "Sprecher1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Perfekt! Danke für die Informationen. Ich freue mich jetzt schon darauf!"
+      },
+      {
+        "speaker": "Sprecher2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ich auch! Und dieses Mal bringe ich meine berühmte Tiramisu mit."
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Ende Teil drei."
       }
     ]
   },
@@ -309,7 +314,7 @@
       "id": "l-b1-goethe-003-t3-lo-1",
       "cefrLevel": "B1",
       "skill": "listening",
-      "canDoVi": "Toi co the luyen nghe hieu o trinh do B1 qua chu de \"Fest- oder Party-Erlebnis beschreiben\".",
+      "canDoVi": "Tôi có thể luyện nghe hiểu ở trình độ B1 qua chủ đề \"Fest- oder Party-Erlebnis beschreiben\".",
       "canDoDe": "Ich kann Hoeren auf Niveau B1 zum Thema \"Fest- oder Party-Erlebnis beschreiben\" ueben.",
       "linkedContentIds": [
         "L-B1-GOETHE-003-T3"

@@ -87,7 +87,7 @@
       "explanation": {
         "de": "Die korrekte Antwort ist (b). Der empfohlene Kompromiss besteht darin, Druckschrift beizubehalten, Schreibschrift optional anzubieten und digitale Kompetenzen parallel aufzubauen. Dies soll auf wissenschaftlicher Evidenz basieren. Option (a) ist eine lexikalische Falle, die 'ideologische Grabenkämpfe' aufgreift, aber den Konsens falsch darstellt, der keine einseitige Priorisierung vorsieht. Option (c) ist falsch, da die Schreibschrift nur 'optional' angeboten werden soll, nicht als obligatorisches Kernelement.",
         "vi": "Đáp án đúng là (b). Giải pháp thỏa hiệp được đề xuất là duy trì chữ in, cung cấp chữ viết tay như một lựa chọn tùy chọn và xây dựng năng lực kỹ thuật số song song. Điều này phải dựa trên bằng chứng khoa học. Lựa chọn (a) là một cái bẫy từ vựng, sử dụng cụm từ 'ideologische Grabenkämpfe' (những cuộc chiến ý thức hệ) nhưng trình bày sai sự đồng thuận, vốn không ưu tiên một phía. Lựa chọn (c) sai, vì chữ viết tay chỉ nên được cung cấp 'tùy chọn' (optional), không phải là một yếu tố cốt lõi bắt buộc.",
-        "key_evidence": "Druckschrift beibehalten, Schreibschrift optional anbieten und digitale Kompetenz parallel aufbauen. ... Die Entscheidung sollte auf wissenschaftlicher Evidenz basieren, nicht auf ideologischen Grabenkämpfen."
+        "key_evidence": "Druckschrift beibehalten, Schreibschrift optional anbieten und digitale Kompetenz parallel aufbauen"
       }
     }
   ],
@@ -130,93 +130,172 @@
     ]
   },
   "transcript": {
-    "type": "full_reconstructed_transcript",
+    "type": "studio_source_transcript",
     "status": "complete",
-    "source": "reconstructed_full_script",
-    "quality": "release_candidate_reconstructed",
-    "note": "Full learner-visible reconstructed script created from existing question evidence because original studio scripts are not present in the repository. Replace with studio transcript if original audio scripts become available.",
+    "source": "studio_source_script",
+    "quality": "source_verified",
+    "sourceScript": "data/scripts/C1/Teil3-Diskussion-in-Abschnitten/L-C1-GOETHE-001-T3.json",
+    "note": "Transcript replaced from source script by scripts/apply-source-transcripts.ts.",
     "lines": [
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Der folgende anspruchsvolle Hoertext behandelt Handschrift versus digitales Schreiben. Achten Sie auf Aussage, Kontext und implizite Bedeutung."
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sie hören eine Diskussion in vier Abschnitten. Lesen Sie jeweils die Aufgaben. Sie haben dafür 30 Sekunden Zeit. Sie hören die Diskussion zweimal."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q1.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Herzlich willkommen zur Podiumsdiskussion 'Zukunft der Schrift' mit unseren drei Expertinnen und Experten."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "answer_evidence",
-        "text": "Das sehe ich fundamental anders. Die Handschrift ist kein Transportmittel, sondern ein kognitives Werkzeug.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ich beginne mit einer provokanten These: Die Handschrift ist im einundzwanzigsten Jahrhundert so überflüssig wie die Kutsche."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q1 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das sehe ich fundamental anders. Die Handschrift ist kein Transportmittel, sondern ein kognitives Werkzeug."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q2.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Herr Dr. Berger, Sie vertreten die Position der konsequenten Digitalisierung. Warum?"
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "answer_evidence",
-        "text": "Aber Korrelation ist nicht Kausalität. Vielleicht schreiben leistungsstärkere Schüler einfach lieber mit der Hand.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Weil wir Kinder auf eine Welt vorbereiten müssen, in der digitale Kompetenz überlebenswichtig ist."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q2 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Jede Stunde, die ein Kind mit Schönschrift verbringt, fehlt für das Erlernen von Programmierung und Medienkompetenz."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q3.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das ist ein falsches Entweder-oder. Schreibmotorik und digitale Kompetenz schließen sich überhaupt nicht aus."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "answer_evidence",
-        "text": "Das stimmt, aber Motivation entsteht durch guten Unterricht, nicht durch das Medium allein.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Frau Professorin Kluge, Sie haben die neurowissenschaftliche Perspektive. Was sagt die Forschung dazu?"
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q3 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Datenlage ist eindeutig: Handschreiben aktiviert deutlich mehr Hirnareale als Tippen und fördert das Lernen."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q4.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Eine Meta-Analyse von zweitausendvierundzwanzig über vierzig Studien bestätigt den kognitiven Vorteil der Handschrift."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "answer_evidence",
-        "text": "Druckschrift beibehalten, Schreibschrift optional anbieten und digitale Kompetenz parallel aufbauen. ... Die Entscheidung sollte auf wissenschaftlicher Evidenz basieren, nicht auf ideologischen Grabenkämpfen.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Aber Korrelation ist nicht Kausalität. Vielleicht schreiben leistungsstärkere Schüler einfach lieber mit der Hand."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q4 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Nein, es handelt sich um randomisierte kontrollierte Studien. Die Probanden wurden zufällig den Gruppen zugeteilt."
       },
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Ende des Hoertexts."
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Herr Meyer, Sie sind Lehrer. Wie erleben Sie die Debatte im Schulalltag?"
+      },
+      {
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "In meinem Unterricht nutze ich bewusst beides: analoge Phasen für Vertiefung und digitale Phasen für Recherche."
+      },
+      {
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Schüler profitieren von diesem Wechsel, weil er unterschiedliche kognitive Prozesse anspricht."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Aber viele Ihrer Kollegen klagen über mangelnde Motivation bei den Schülern, wenn sie mit der Hand schreiben sollen."
+      },
+      {
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das stimmt, aber Motivation entsteht durch guten Unterricht, nicht durch das Medium allein."
+      },
+      {
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ein schlecht gestaltetes Tablet-Arbeitsblatt ist nicht motivierender als ein gut gestaltetes Arbeitsheft."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Frau Professorin Kluge, wie bewerten Sie den finnischen Weg, die Schreibschrift komplett abzuschaffen?"
+      },
+      {
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Als wissenschaftlich fragwürdig und bildungspolitisch voreilig, obwohl ich Finnlands Innovationsbereitschaft respektiere."
+      },
+      {
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die finnischen Bildungsforscher selbst bewerten die Reform mittlerweile differenzierter als zu Beginn."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Es gibt erste Hinweise darauf, dass die feinmotorische Entwicklung und die Lerntiefe gelitten haben."
+      },
+      {
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Was empfehlen Sie als Kompromiss, der alle Positionen berücksichtigt und praktikabel ist?"
+      },
+      {
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Druckschrift beibehalten, Schreibschrift optional anbieten und digitale Kompetenz parallel aufbauen."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "So nutzt man die kognitiven Vorteile der Handschrift, ohne die digitale Bildung zu vernachlässigen."
+      },
+      {
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Und vor allem: Die Entscheidung sollte auf wissenschaftlicher Evidenz basieren, nicht auf ideologischen Grabenkämpfen."
+      },
+      {
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Gibt es noch einen letzten Gedanken, den Sie dem Publikum mitgeben möchten?"
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ja: Die wichtigste Kompetenz der Zukunft ist nicht das Schreiben oder Tippen, sondern das Denken."
+      },
+      {
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Und jedes Werkzeug, das das Denken fördert, ob Stift oder Tastatur, hat seinen berechtigten Platz."
+      },
+      {
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Vielen Dank für diese differenzierte und anregende Diskussion!"
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Ende Teil drei."
       }
     ]
   },
@@ -233,7 +312,7 @@
       "id": "l-c1-goethe-001-t3-lo-1",
       "cefrLevel": "C1",
       "skill": "listening",
-      "canDoVi": "Toi co the luyen nghe hieu o trinh do C1 qua chu de \"Handschrift versus digitales Schreiben\".",
+      "canDoVi": "Tôi có thể luyện nghe hiểu ở trình độ C1 qua chủ đề \"Handschrift versus digitales Schreiben\".",
       "canDoDe": "Ich kann Hoeren auf Niveau C1 zum Thema \"Handschrift versus digitales Schreiben\" ueben.",
       "linkedContentIds": [
         "L-C1-GOETHE-001-T3"

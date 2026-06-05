@@ -29,7 +29,7 @@
       "explanation": {
         "de": "Der Student unterbricht seine Kommilitonin mit den Worten 'Lass mich raten', was impliziert, dass er mit dem Thema bereits bestens vertraut ist. Er benennt sofort die Kernaspekte (Temperaturunterschiede, Sozialstruktur) und liefert den Fachbegriff 'Umweltungerechtigkeit'. Dies zeigt, dass er das Thema sofort in einen ihm bekannten wissenschaftlichen Rahmen einordnet. Option (a) ist falsch, da er die Korrelation nicht in Frage stellt, sondern sie als 'klassisches Beispiel' bestätigt. Option (c) ist eine lexikalische Falle; er erwähnt zwar Infrarotbilder, aber nicht, um eine Erklärung zu erbitten, sondern um sein Vorwissen zu demonstrieren.",
         "vi": "Nam sinh viên ngắt lời bạn học của mình bằng câu 'Để tôi đoán nhé', điều này ngụ ý rằng anh ấy đã rất quen thuộc với chủ đề này. Anh ấy ngay lập tức nêu ra các khía cạnh cốt lõi (sự khác biệt nhiệt độ, cấu trúc xã hội) và đưa ra thuật ngữ chuyên ngành 'bất công môi trường'. Điều này cho thấy anh ấy ngay lập tức đặt chủ đề vào một khuôn khổ khoa học mà anh ấy đã biết. Lựa chọn (a) sai, vì anh ấy không nghi ngờ mối tương quan mà còn xác nhận nó là một 'ví dụ kinh điển'. Lựa chọn (c) là một cái bẫy từ vựng; anh ấy có đề cập đến hình ảnh hồng ngoại, nhưng không phải để yêu cầu giải thích, mà để thể hiện kiến thức nền của mình.",
-        "key_evidence": "Lass mich raten, es ging um die auf Infrarotbildern sichtbaren Temperaturunterschiede zwischen verschiedenen Stadtvierteln und die Korrelation mit der Sozialstruktur der Bevölkerung? [...] Das ist ein klassisches Beispiel für das Konzept der Umweltungerechtigkeit...",
+        "key_evidence": "Lass mich raten, es ging um die auf Infrarotbildern sichtbaren Temperaturunterschiede zwischen verschiedenen Stadtvierteln und die Korrelation mit der Sozialstruktur der Bevölkerung",
         "key_vocabulary": [
           "einordnen",
           "akademischer Diskurs",
@@ -123,75 +123,192 @@
     ]
   },
   "transcript": {
-    "type": "full_reconstructed_transcript",
+    "type": "studio_source_transcript",
     "status": "complete",
-    "source": "reconstructed_full_script",
-    "quality": "release_candidate_reconstructed",
-    "note": "Full learner-visible reconstructed script created from existing question evidence because original studio scripts are not present in the repository. Replace with studio transcript if original audio scripts become available.",
+    "source": "studio_source_script",
+    "quality": "source_verified",
+    "sourceScript": "data/scripts/C2/Teil2-Spontanes-Gespraech/L-C2-GOETHE-015-T2.json",
+    "note": "Transcript replaced from source script by scripts/apply-source-transcripts.ts.",
     "lines": [
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Der folgende anspruchsvolle Hoertext behandelt Architektur und kollektives Gedächtnis. Achten Sie auf Aussage, Kontext und implizite Bedeutung."
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sie hören ein Gespräch. Dazu gibt es fünf Aufgaben. Wer sagt was? Sie hören das Gespräch zweimal."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q1.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Studentin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ich muss dir unbedingt von dem Vortrag erzählen, den ich gestern Abend in der Geografischen Gesellschaft gehört habe und der mir wirklich die Augen geöffnet hat für die Dimension des Wärmeinselproblems."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Lass mich raten, es ging um die auf Infrarotbildern sichtbaren Temperaturunterschiede zwischen verschiedenen Stadtvierteln und die Korrelation mit der Sozialstruktur der Bevölkerung? [...] Das ist ein klassisches Beispiel für das Konzept der Umweltungerechtigkeit...",
-        "linkedQuestionId": "Q1"
+        "speaker": "Student",
+        "speaker_role": "dialogue_speaker",
+        "text": "Lass mich raten, es ging um die auf Infrarotbildern sichtbaren Temperaturunterschiede zwischen verschiedenen Stadtvierteln und die Korrelation mit der Sozialstruktur der Bevölkerung?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q1 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Studentin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Genau das war einer der Kernpunkte: Die ärmeren Stadtviertel sind systematisch stärker von Hitze betroffen, weil sie weniger Grünflächen haben und die Wohnungen schlechter isoliert sind."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q2.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Student",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das ist ein klassisches Beispiel für das Konzept der Umweltungerechtigkeit, das in der angelsächsischen Forschung unter dem Begriff environmental justice seit Jahrzehnten diskutiert wird."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "answer_evidence",
-        "text": "Mich hat besonders beeindruckt, dass der Referent nicht nur das Problem beschrieben, sondern auch konkrete architektonische und städtebauliche Lösungsansätze vorgestellt hat.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Studentin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Der Referent hat auch darauf hingewiesen, dass die Auswirkungen der urbanen Überhitzung auf die Arbeitsproduktivität enorm sind und die volkswirtschaftlichen Kosten in die Milliarden gehen."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q2 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Student",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das überrascht mich nicht, denn es gibt zahlreiche Studien, die belegen, dass die kognitive Leistungsfähigkeit bereits bei Temperaturen über sechsundzwanzig Grad Celsius signifikant abnimmt."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q3.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Studentin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Mich hat besonders beeindruckt, dass der Referent nicht nur das Problem beschrieben, sondern auch konkrete architektonische und städtebauliche Lösungsansätze vorgestellt hat."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "answer_evidence",
-        "text": "Das ist ein schönes Beispiel für das, was man als bidirektionalen Wissenstransfer bezeichnet: Die Industrieländer haben nicht nur Wissen zu exportieren, sondern können auch von den klimatologischen Erfahrungen anderer Zivilisationen profitieren.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Student",
+        "speaker_role": "dialogue_speaker",
+        "text": "Welche Ansätze hat er denn als besonders vielversprechend hervorgehoben?"
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q3 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Studentin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Vor allem die konsequente Integration von Wasser in den urbanen Raum, also Brunnen, offene Wasserläufe und Verdunstungskühlung, die in mediterranen Städten bereits seit Jahrhunderten praktiziert wird."
       },
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Ende des Hoertexts."
+        "speaker": "Student",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das erinnert mich an die persischen Windtürme, die man als Badgir bezeichnet und die ohne jeglichen Energieaufwand allein durch physikalische Prinzipien für eine Kühlung der Innenräume sorgen."
+      },
+      {
+        "speaker": "Studentin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Solche traditionellen Kühlungstechnologien, die über Jahrtausende hinweg entwickelt wurden, könnten in der modernen Architektur eine Renaissance erleben, wenn wir bereit sind, von anderen Kulturen zu lernen."
+      },
+      {
+        "speaker": "Student",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das ist ein schönes Beispiel für das, was man als bidirektionalen Wissenstransfer bezeichnet: Die Industrieländer haben nicht nur Wissen zu exportieren, sondern können auch von den klimatologischen Erfahrungen anderer Zivilisationen profitieren."
+      },
+      {
+        "speaker": "Studentin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ich glaube, dass dieser interdisziplinäre und interkulturelle Ansatz der Schlüssel zu einer erfolgreichen klimatischen Anpassung der Stadtplanung ist."
+      },
+      {
+        "speaker": "Student",
+        "speaker_role": "dialogue_speaker",
+        "text": "Da stimme ich dir vollkommen zu, und ich werde das Thema in meiner Seminararbeit unter dem Aspekt des transkulturellen Wissenstransfers in der Stadtplanung aufgreifen."
+      },
+      {
+        "speaker": "Studentin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ich muss dir unbedingt von dem Vortrag erzählen, den ich gestern Abend in der Geografischen Gesellschaft gehört habe und der mir wirklich die Augen geöffnet hat für die Dimension des Wärmeinselproblems."
+      },
+      {
+        "speaker": "Student",
+        "speaker_role": "dialogue_speaker",
+        "text": "Lass mich raten, es ging um die auf Infrarotbildern sichtbaren Temperaturunterschiede zwischen verschiedenen Stadtvierteln und die Korrelation mit der Sozialstruktur der Bevölkerung?"
+      },
+      {
+        "speaker": "Studentin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Genau das war einer der Kernpunkte: Die ärmeren Stadtviertel sind systematisch stärker von Hitze betroffen, weil sie weniger Grünflächen haben und die Wohnungen schlechter isoliert sind."
+      },
+      {
+        "speaker": "Student",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das ist ein klassisches Beispiel für das Konzept der Umweltungerechtigkeit, das in der angelsächsischen Forschung unter dem Begriff environmental justice seit Jahrzehnten diskutiert wird."
+      },
+      {
+        "speaker": "Studentin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Der Referent hat auch darauf hingewiesen, dass die Auswirkungen der urbanen Überhitzung auf die Arbeitsproduktivität enorm sind und die volkswirtschaftlichen Kosten in die Milliarden gehen."
+      },
+      {
+        "speaker": "Student",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das überrascht mich nicht, denn es gibt zahlreiche Studien, die belegen, dass die kognitive Leistungsfähigkeit bereits bei Temperaturen über sechsundzwanzig Grad Celsius signifikant abnimmt."
+      },
+      {
+        "speaker": "Studentin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Mich hat besonders beeindruckt, dass der Referent nicht nur das Problem beschrieben, sondern auch konkrete architektonische und städtebauliche Lösungsansätze vorgestellt hat."
+      },
+      {
+        "speaker": "Student",
+        "speaker_role": "dialogue_speaker",
+        "text": "Welche Ansätze hat er denn als besonders vielversprechend hervorgehoben?"
+      },
+      {
+        "speaker": "Studentin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Vor allem die konsequente Integration von Wasser in den urbanen Raum, also Brunnen, offene Wasserläufe und Verdunstungskühlung, die in mediterranen Städten bereits seit Jahrhunderten praktiziert wird."
+      },
+      {
+        "speaker": "Student",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das erinnert mich an die persischen Windtürme, die man als Badgir bezeichnet und die ohne jeglichen Energieaufwand allein durch physikalische Prinzipien für eine Kühlung der Innenräume sorgen."
+      },
+      {
+        "speaker": "Studentin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Solche traditionellen Kühlungstechnologien, die über Jahrtausende hinweg entwickelt wurden, könnten in der modernen Architektur eine Renaissance erleben, wenn wir bereit sind, von anderen Kulturen zu lernen."
+      },
+      {
+        "speaker": "Student",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das ist ein schönes Beispiel für das, was man als bidirektionalen Wissenstransfer bezeichnet: Die Industrieländer haben nicht nur Wissen zu exportieren, sondern können auch von den klimatologischen Erfahrungen anderer Zivilisationen profitieren."
+      },
+      {
+        "speaker": "Studentin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ich glaube, dass dieser interdisziplinäre und interkulturelle Ansatz der Schlüssel zu einer erfolgreichen klimatischen Anpassung der Stadtplanung ist."
+      },
+      {
+        "speaker": "Student",
+        "speaker_role": "dialogue_speaker",
+        "text": "Da stimme ich dir vollkommen zu, und ich werde das Thema in meiner Seminararbeit unter dem Aspekt des transkulturellen Wissenstransfers in der Stadtplanung aufgreifen."
+      },
+      {
+        "speaker": "Studentin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ich muss dir unbedingt von dem Vortrag erzählen, den ich gestern Abend in der Geografischen Gesellschaft gehört habe und der mir wirklich die Augen geöffnet hat für die Dimension des Wärmeinselproblems."
+      },
+      {
+        "speaker": "Student",
+        "speaker_role": "dialogue_speaker",
+        "text": "Lass mich raten, es ging um die auf Infrarotbildern sichtbaren Temperaturunterschiede zwischen verschiedenen Stadtvierteln und die Korrelation mit der Sozialstruktur der Bevölkerung?"
+      },
+      {
+        "speaker": "Studentin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Genau das war einer der Kernpunkte: Die ärmeren Stadtviertel sind systematisch stärker von Hitze betroffen, weil sie weniger Grünflächen haben und die Wohnungen schlechter isoliert sind."
+      },
+      {
+        "speaker": "Student",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das ist ein klassisches Beispiel für das Konzept der Umweltungerechtigkeit, das in der angelsächsischen Forschung unter dem Begriff environmental justice seit Jahrzehnten diskutiert wird."
+      },
+      {
+        "speaker": "Studentin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Der Referent hat auch darauf hingewiesen, dass die Auswirkungen der urbanen Überhitzung auf die Arbeitsproduktivität enorm sind und die volkswirtschaftlichen Kosten in die Milliarden gehen."
+      },
+      {
+        "speaker": "Student",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das überrascht mich nicht, denn es gibt zahlreiche Studien, die belegen, dass die kognitive Leistungsfähigkeit bereits bei Temperaturen über sechsundzwanzig Grad Celsius signifikant abnimmt."
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Ende Teil zwei."
       }
     ]
   },
@@ -208,7 +325,7 @@
       "id": "l-c2-goethe-015-t2-lo-1",
       "cefrLevel": "C2",
       "skill": "listening",
-      "canDoVi": "Toi co the luyen nghe hieu o trinh do C2 qua chu de \"Architektur und kollektives Gedächtnis\".",
+      "canDoVi": "Tôi có thể luyện nghe hiểu ở trình độ C2 qua chủ đề \"Architektur und kollektives Gedächtnis\".",
       "canDoDe": "Ich kann Hoeren auf Niveau C2 zum Thema \"Architektur und kollektives Gedächtnis\" ueben.",
       "linkedContentIds": [
         "L-C2-GOETHE-015-T2"

@@ -29,7 +29,7 @@
       "explanation": {
         "de": "Der Moderator eröffnet die Diskussion und stellt das Thema vor.",
         "vi": "Người điều hành mở đầu cuộc thảo luận và giới thiệu chủ đề.",
-        "key_evidence": "Moderator: Willkommen zu 'Zusammenleben'. Heute diskutieren wir über das Thema Partys und Feiern in der Stadt.",
+        "key_evidence": "Willkommen zu 'Zusammenleben'. Heute diskutieren wir über das Thema Partys und Feiern in der Stadt.",
         "key_vocabulary": []
       }
     },
@@ -48,7 +48,7 @@
       "explanation": {
         "de": "Herr Ludwig beschreibt seine persönliche Situation mit Lärmbelästigung.",
         "vi": "Ông Ludwig mô tả tình hình cá nhân của mình về việc bị làm phiền bởi tiếng ồn.",
-        "key_evidence": "Gast_A: In meinem Haus gibt es ständig Partys und der Lärm stört mich sehr.",
+        "key_evidence": "In meinem Haus gibt es ständig Partys und der Lärm stört mich sehr.",
         "key_vocabulary": []
       }
     },
@@ -67,7 +67,7 @@
       "explanation": {
         "de": "Frau Petersen äußert Verständnis für Partys als Teil des Lebens in der Stadt.",
         "vi": "Bà Petersen bày tỏ sự thông cảm với việc tiệc tùng là một phần của cuộc sống ở thành phố.",
-        "key_evidence": "Gast_B: Ich kann das verstehen, aber Feiern gehört zum Leben dazu, besonders in einer Großstadt.",
+        "key_evidence": "Ich kann das verstehen, aber Feiern gehört zum Leben dazu, besonders in einer Großstadt.",
         "key_vocabulary": []
       }
     },
@@ -86,7 +86,7 @@
       "explanation": {
         "de": "Herr Ludwig gibt an, wie lange der Lärm in seinem Haus normalerweise dauert.",
         "vi": "Ông Ludwig cho biết tiếng ồn trong nhà ông ấy thường kéo dài đến mấy giờ.",
-        "key_evidence": "Gast_A: Oft bis zwei oder drei Uhr nachts! Und ich muss am nächsten Tag um sechs Uhr aufstehen.",
+        "key_evidence": "Oft bis zwei oder drei Uhr nachts! Und ich muss am nächsten Tag um sechs Uhr aufstehen.",
         "key_vocabulary": []
       }
     },
@@ -105,7 +105,7 @@
       "explanation": {
         "de": "Frau Petersen weist auf die gesetzliche Regelung der Nachtruhe hin.",
         "vi": "Bà Petersen chỉ ra quy định pháp luật về giờ nghỉ đêm.",
-        "key_evidence": "Gast_B: Das ist natürlich problematisch. Ab zweiundzwanzig Uhr gilt in Deutschland die Nachtruhe.",
+        "key_evidence": "Das ist natürlich problematisch. Ab zweiundzwanzig Uhr gilt in Deutschland die Nachtruhe.",
         "key_vocabulary": []
       }
     },
@@ -124,7 +124,7 @@
       "explanation": {
         "de": "Herr Ludwig erklärt die rechtliche Einordnung von Ruhestörung nach 22 Uhr.",
         "vi": "Ông Ludwig giải thích phân loại pháp lý về việc gây rối trật tự sau 22 giờ.",
-        "key_evidence": "Gast_A: Nach dem Gesetz ist Ruhestörung nach zweiundzwanzig Uhr eine Ordnungswidrigkeit.",
+        "key_evidence": "Nach dem Gesetz ist Ruhestörung nach zweiundzwanzig Uhr eine Ordnungswidrigkeit.",
         "key_vocabulary": []
       }
     },
@@ -143,7 +143,7 @@
       "explanation": {
         "de": "Frau Petersen schlägt eine friedliche Lösung durch gemeinsame Regeln vor.",
         "vi": "Bà Petersen đề xuất một giải pháp hòa bình thông qua các quy tắc chung.",
-        "key_evidence": "Gast_B: Man könnte auch gemeinsame Regeln im Haus aufstellen, die für alle gelten.",
+        "key_evidence": "Man könnte auch gemeinsame Regeln im Haus aufstellen, die für alle gelten.",
         "key_vocabulary": []
       }
     },
@@ -162,7 +162,7 @@
       "explanation": {
         "de": "Der Moderator fasst am Ende zusammen, dass Gespräche die beste Lösung sind.",
         "vi": "Người điều hành tổng kết rằng đối thoại là giải pháp tốt nhất.",
-        "key_evidence": "Moderator: Das finde ich auch. Die meisten Konflikte lassen sich durch ein Gespräch lösen.",
+        "key_evidence": "Das finde ich auch. Die meisten Konflikte lassen sich durch ein Gespräch lösen.",
         "key_vocabulary": []
       }
     }
@@ -206,165 +206,172 @@
     ]
   },
   "transcript": {
-    "type": "full_reconstructed_transcript",
+    "type": "studio_source_transcript",
     "status": "complete",
-    "source": "reconstructed_full_script",
-    "quality": "release_candidate_reconstructed",
-    "note": "Full learner-visible reconstructed script created from existing question evidence because original studio scripts are not present in the repository. Replace with studio transcript if original audio scripts become available.",
+    "source": "studio_source_script",
+    "quality": "source_verified",
+    "sourceScript": "data/scripts/B1/Teil4-Radiodiskussion/L-B1-GOETHE-003-T4.json",
+    "note": "Transcript replaced from source script by scripts/apply-source-transcripts.ts.",
     "lines": [
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Im folgenden Hoertext geht es um Fest- oder Party-Erlebnis beschreiben. Achten Sie auf die zentrale Information."
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sie hören eine Diskussion im Radio. Dazu gibt es acht Aufgaben. Wer sagt was? Sie hören die Diskussion zweimal."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q1.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Willkommen zu 'Zusammenleben'. Heute diskutieren wir über das Thema Partys und Feiern in der Stadt."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Moderator: Willkommen zu 'Zusammenleben'. Heute diskutieren wir über das Thema Partys und Feiern in der Stadt.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "In meinem Haus gibt es ständig Partys und der Lärm stört mich sehr."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q1 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ich kann das verstehen, aber Feiern gehört zum Leben dazu, besonders in einer Großstadt."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q2.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Herr Ludwig, bis wie viel Uhr geht der Lärm bei Ihnen normalerweise?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Gast_A: In meinem Haus gibt es ständig Partys und der Lärm stört mich sehr.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Oft bis zwei oder drei Uhr nachts! Und ich muss am nächsten Tag um sechs Uhr aufstehen."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q2 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das ist natürlich problematisch. Ab zweiundzwanzig Uhr gilt in Deutschland die Nachtruhe."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q3.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Genau! Und trotzdem halten sich viele Leute nicht daran und machen weiter Lärm."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Gast_B: Ich kann das verstehen, aber Feiern gehört zum Leben dazu, besonders in einer Großstadt.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Haben Sie schon mit Ihren Nachbarn gesprochen?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q3 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ja, mehrmals. Aber es ändert sich nichts. Nach zwei Wochen ist es wieder genauso laut."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q4.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Frau Petersen, wie sehen Sie die rechtliche Situation bei Lärmbelästigung?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Gast_A: Oft bis zwei oder drei Uhr nachts! Und ich muss am nächsten Tag um sechs Uhr aufstehen.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Nach dem Gesetz ist Ruhestörung nach zweiundzwanzig Uhr eine Ordnungswidrigkeit."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q4 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Man kann die Polizei rufen oder sich beim Vermieter beschweren, der dann abmahnen muss."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q5.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das klingt hart. Gibt es nicht eine friedlichere Lösung?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Gast_B: Das ist natürlich problematisch. Ab zweiundzwanzig Uhr gilt in Deutschland die Nachtruhe.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Kommunikation ist der Schlüssel. Oft wissen die Feiernden gar nicht, wie laut sie sind."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q5 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Man könnte auch gemeinsame Regeln im Haus aufstellen, die für alle gelten."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q6.",
-        "linkedQuestionId": "Q6"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das haben wir versucht. Aber nicht jeder hält sich an die vereinbarten Regeln."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Gast_A: Nach dem Gesetz ist Ruhestörung nach zweiundzwanzig Uhr eine Ordnungswidrigkeit.",
-        "linkedQuestionId": "Q6"
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "In meiner WG haben wir eine Regel: Bis zweiundzwanzig Uhr darf es laut sein, dann Zimmerlautstärke."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q6 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q6"
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das funktioniert gut, weil alle einverstanden sind und sich respektvoll verhalten."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q7.",
-        "linkedQuestionId": "Q7"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Aber was ist mit spontanen Feiern? Mal passiert es einfach, dass es später wird."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Gast_B: Man könnte auch gemeinsame Regeln im Haus aufstellen, die für alle gelten.",
-        "linkedQuestionId": "Q7"
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Dann sollte man vorher die Nachbarn informieren. Eine kurze Nachricht reicht schon."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q7 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q7"
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das stimmt. Wenn man Bescheid weiß, ist man viel toleranter gegenüber dem Lärm."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q8.",
-        "linkedQuestionId": "Q8"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "In großen Mietshäusern in Berlin ist das aber praktisch unmöglich, alle zu informieren."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Moderator: Das finde ich auch. Die meisten Konflikte lassen sich durch ein Gespräch lösen.",
-        "linkedQuestionId": "Q8"
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Herr Ludwig, was würden Sie sich von Ihren Nachbarn wünschen?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q8 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q8"
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Einfach mehr Rücksicht! Ab zweiundzwanzig Uhr die Lautstärke runterdrehen und die Fenster schließen."
       },
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Ende des Hoertexts."
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Und Frau Petersen, was ist Ihr Fazit?"
+      },
+      {
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Respekt und Kommunikation sind der Schlüssel. Und wenn nichts hilft, gibt es rechtliche Mittel."
+      },
+      {
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Aber bitte erst den Dialog suchen, bevor man zur Polizei oder zum Anwalt geht."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das finde ich auch. Die meisten Konflikte lassen sich durch ein Gespräch lösen."
+      },
+      {
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Vielen Dank an unsere Gäste für diese wichtige Diskussion!"
+      },
+      {
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Feiern und Ruhebedürfnis müssen sich nicht ausschließen. Mit gegenseitigem Respekt geht beides!"
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Ende des Hörverstehens."
       }
     ]
   },
@@ -381,7 +388,7 @@
       "id": "l-b1-goethe-003-t4-lo-1",
       "cefrLevel": "B1",
       "skill": "listening",
-      "canDoVi": "Toi co the luyen nghe hieu o trinh do B1 qua chu de \"Fest- oder Party-Erlebnis beschreiben\".",
+      "canDoVi": "Tôi có thể luyện nghe hiểu ở trình độ B1 qua chủ đề \"Fest- oder Party-Erlebnis beschreiben\".",
       "canDoDe": "Ich kann Hoeren auf Niveau B1 zum Thema \"Fest- oder Party-Erlebnis beschreiben\" ueben.",
       "linkedContentIds": [
         "L-B1-GOETHE-003-T4"

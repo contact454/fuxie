@@ -168,111 +168,147 @@
     ]
   },
   "transcript": {
-    "type": "full_reconstructed_transcript",
+    "type": "studio_source_transcript",
     "status": "complete",
-    "source": "reconstructed_full_script",
-    "quality": "release_candidate_reconstructed",
-    "note": "Full learner-visible reconstructed script created from existing question evidence because original studio scripts are not present in the repository. Replace with studio transcript if original audio scripts become available.",
+    "source": "studio_source_script",
+    "quality": "source_verified",
+    "sourceScript": "data/scripts/B1/Teil2-Fuehrung-oder-Monolog/L-B1-GOETHE-004-T2.json",
+    "note": "Transcript replaced from source script by scripts/apply-source-transcripts.ts.",
     "lines": [
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Im folgenden Hoertext geht es um Kinderbetreuung: Krippe versus Zuhause. Achten Sie auf die zentrale Information."
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sie hören einen Text. Dazu gibt es fünf Aufgaben. Kreuzen Sie die richtige Antwort an. Sie hören den Text zweimal."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q1.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Rednerin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Liebe Eltern, herzlich willkommen zu unserem Informationsabend über die verschiedenen Betreuungsmodelle."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Mein Name ist Marion Schuster, ich bin Erzieherin mit fünfundzwanzig Jahren Berufserfahrung.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Rednerin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Mein Name ist Marion Schuster, ich bin Erzieherin mit fünfundzwanzig Jahren Berufserfahrung."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q1 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Rednerin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Heute möchte ich Ihnen einen Überblick über die verschiedenen Möglichkeiten der Kinderbetreuung geben."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q2.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Rednerin",
+        "speaker_role": "dialogue_speaker",
+        "text": "In Deutschland gibt es drei Hauptformen: die Kindertagesstätte, die Tagespflege und die Großtagespflege."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Bei der Tagespflege werden maximal fünf Kinder von einer qualifizierten Tagesmutter betreut.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Rednerin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Kindertagesstätte, also die Kita, ist die häufigste Form der Betreuung für Kinder bis sechs Jahre."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q2 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Rednerin",
+        "speaker_role": "dialogue_speaker",
+        "text": "In einer Kita gibt es verschiedene Gruppen, meist nach Alter sortiert, mit festen Erzieherinnen."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q3.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Rednerin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Gruppengrößen variieren zwischen zwölf und fünfundzwanzig Kindern, je nach Alter."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "In Berlin sollte dieser Schlüssel bei Kindern unter drei Jahren bei eins zu vier liegen.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Rednerin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die pädagogischen Konzepte sind vielfältig: von Montessori über Waldorf bis hin zur offenen Arbeit."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q3 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Rednerin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Bei der Tagespflege werden maximal fünf Kinder von einer qualifizierten Tagesmutter betreut."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q4.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Rednerin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Der Vorteil liegt in der individuellen Betreuung und den flexiblen Betreuungszeiten."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "In Berlin ist die Kita seit zweitausendeundzwanzig beitragsfrei.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Rednerin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Großtagespflege ist noch relativ neu: zwei Tagesmütter betreuen gemeinsam bis zu zehn Kinder."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q4 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Rednerin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Bei der Wahl des richtigen Betreuungsmodells sollten Sie mehrere Faktoren berücksichtigen."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q5.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Rednerin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Erstens: Wie alt ist Ihr Kind? Für Kinder unter zwei Jahren ist die Tagespflege oft besser geeignet."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Vergessen Sie nicht, rechtzeitig einen Platz zu beantragen, am besten ein Jahr im Voraus.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Rednerin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Zweitens: Wie sind Ihre Arbeitszeiten? Brauchen Sie eine flexible oder eine feste Betreuungszeit?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q5 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Rednerin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Drittens: Welches pädagogische Konzept entspricht Ihren Vorstellungen von Erziehung?"
       },
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Ende des Hoertexts."
+        "speaker": "Rednerin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ich empfehle Ihnen, verschiedene Einrichtungen zu besichtigen und mit den Erzieherinnen zu sprechen."
+      },
+      {
+        "speaker": "Rednerin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Achten Sie dabei auf die Atmosphäre, den Umgang mit den Kindern und die Sauberkeit."
+      },
+      {
+        "speaker": "Rednerin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ein guter Schlüssel zur Qualität ist der Betreuungsschlüssel: Wie viele Kinder kommen auf eine Erzieherin?"
+      },
+      {
+        "speaker": "Rednerin",
+        "speaker_role": "dialogue_speaker",
+        "text": "In Berlin sollte dieser Schlüssel bei Kindern unter drei Jahren bei eins zu vier liegen."
+      },
+      {
+        "speaker": "Rednerin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Bei Kindern über drei Jahren liegt der empfohlene Schlüssel bei eins zu neun."
+      },
+      {
+        "speaker": "Rednerin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Kosten für die Betreuung variieren stark. In Berlin ist die Kita seit zweitausendeundzwanzig beitragsfrei."
+      },
+      {
+        "speaker": "Rednerin",
+        "speaker_role": "dialogue_speaker",
+        "text": "In anderen Bundesländern zahlen Eltern zwischen null und vierhundert Euro monatlich."
+      },
+      {
+        "speaker": "Rednerin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Vergessen Sie nicht, rechtzeitig einen Platz zu beantragen, am besten ein Jahr im Voraus."
+      },
+      {
+        "speaker": "Rednerin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Im Anschluss stehe ich Ihnen für Fragen zur Verfügung und verteile Informationsmaterial."
+      },
+      {
+        "speaker": "Rednerin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Vielen Dank für Ihre Aufmerksamkeit! Die Betreuung Ihres Kindes ist eine wichtige Entscheidung."
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Ende Teil zwei."
       }
     ]
   },
@@ -289,7 +325,7 @@
       "id": "l-b1-goethe-004-t2-lo-1",
       "cefrLevel": "B1",
       "skill": "listening",
-      "canDoVi": "Toi co the luyen nghe hieu o trinh do B1 qua chu de \"Kinderbetreuung: Krippe versus Zuhause\".",
+      "canDoVi": "Tôi có thể luyện nghe hiểu ở trình độ B1 qua chủ đề \"Kinderbetreuung: Krippe versus Zuhause\".",
       "canDoDe": "Ich kann Hoeren auf Niveau B1 zum Thema \"Kinderbetreuung: Krippe versus Zuhause\" ueben.",
       "linkedContentIds": [
         "L-B1-GOETHE-004-T2"

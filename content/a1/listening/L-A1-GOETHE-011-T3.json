@@ -149,111 +149,197 @@
     ]
   },
   "transcript": {
-    "type": "full_reconstructed_transcript",
+    "type": "studio_source_transcript",
     "status": "complete",
-    "source": "reconstructed_full_script",
-    "quality": "release_candidate_reconstructed",
-    "note": "Full learner-visible reconstructed script created from existing question evidence because original studio scripts are not present in the repository. Replace with studio transcript if original audio scripts become available.",
+    "source": "studio_source_script",
+    "quality": "source_verified",
+    "sourceScript": "data/scripts/A1/Teil3-Telefonansagen/L-A1-GOETHE-011-T3.json",
+    "note": "Transcript replaced from source script by scripts/apply-source-transcripts.ts.",
     "lines": [
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Hoeren Sie eine kurze Information zum Thema Geburtstag feiern und einladen."
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sie hören fünf Nachrichten am Telefon. Zu jeder Nachricht gibt es eine Aufgabe. Kreuzen Sie die richtige Antwort an. Sie hören jeden Text zweimal."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q1.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Nachricht 1."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Ich werde fünfundzwanzig!",
-        "linkedQuestionId": "Q1"
+        "speaker": "Anrufer",
+        "speaker_role": "dialogue_speaker",
+        "text": "Hallo Fatima, hier ist Maria! Ich habe tolle Neuigkeiten!"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q1 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Anrufer",
+        "speaker_role": "dialogue_speaker",
+        "text": "Am Samstag feiere ich meinen Geburtstag. Ich werde fünfundzwanzig!"
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q2.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Anrufer",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Party ist bei mir zu Hause, Gartenstraße zwölf."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "answer_evidence",
-        "text": "Der Tisch ist für zehn Personen im Hinterraum.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Anrufer",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wir fangen um siebzehn Uhr an. Es gibt Kuchen und Musik."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q2 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Anrufer",
+        "speaker_role": "dialogue_speaker",
+        "text": "Kannst du kommen? Ich freue mich sehr!"
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q3.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Anrufer",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ruf mich bitte an oder schreib mir eine Nachricht. Tschüss!"
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "answer_evidence",
-        "text": "Die Party ist im Café Milano in der Hauptstraße um neunzehn Uhr.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Nachricht 2."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q3 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Anrufer",
+        "speaker_role": "dialogue_speaker",
+        "text": "Guten Tag, hier ist das Restaurant Sonnenschein."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q4.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Anrufer",
+        "speaker_role": "dialogue_speaker",
+        "text": "Sie haben einen Tisch für Ihre Geburtstagsfeier reserviert."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "answer_evidence",
-        "text": "Die Torte kostet fünfundzwanzig Euro.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Anrufer",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Reservierung ist am Samstag, den fünfzehnten März, um achtzehn Uhr."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q4 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Anrufer",
+        "speaker_role": "dialogue_speaker",
+        "text": "Der Tisch ist für zehn Personen im Hinterraum."
       },
       {
-        "speaker": "Sprecher 5",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q5.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Anrufer",
+        "speaker_role": "dialogue_speaker",
+        "text": "Möchten Sie das Geburtstags-Menü für fünfzehn Euro pro Person?"
       },
       {
-        "speaker": "Sprecher 5",
-        "speaker_role": "answer_evidence",
-        "text": "Schick mir bitte die Hausnummer als Nachricht.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Anrufer",
+        "speaker_role": "dialogue_speaker",
+        "text": "Bitte rufen Sie uns an unter null drei null, sieben acht sechs fünf vier drei."
       },
       {
-        "speaker": "Sprecher 5",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q5 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Nachricht 3."
       },
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Ende des Hoertexts."
+        "speaker": "Anrufer",
+        "speaker_role": "dialogue_speaker",
+        "text": "Hey Thomas, hier ist Ali! Hast du am Freitag Abend Zeit?"
+      },
+      {
+        "speaker": "Anrufer",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wir machen eine Überraschungsparty für Pedro. Er wird dreißig!"
+      },
+      {
+        "speaker": "Anrufer",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Party ist im Café Milano in der Hauptstraße um neunzehn Uhr."
+      },
+      {
+        "speaker": "Anrufer",
+        "speaker_role": "dialogue_speaker",
+        "text": "Bitte sag Pedro nichts! Es ist eine Überraschung!"
+      },
+      {
+        "speaker": "Anrufer",
+        "speaker_role": "dialogue_speaker",
+        "text": "Kannst du einen Kuchen mitbringen? Anna bringt die Getränke."
+      },
+      {
+        "speaker": "Anrufer",
+        "speaker_role": "dialogue_speaker",
+        "text": "Schreib mir bitte bis morgen Bescheid. Ciao!"
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Nachricht 4."
+      },
+      {
+        "speaker": "Anrufer",
+        "speaker_role": "dialogue_speaker",
+        "text": "Hallo, hier ist die Bäckerei Schmidt am Marktplatz."
+      },
+      {
+        "speaker": "Anrufer",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ihre Geburtstagstorte ist fertig und bereit zur Abholung."
+      },
+      {
+        "speaker": "Anrufer",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Torte ist eine Schokoladentorte mit dem Namen Anna."
+      },
+      {
+        "speaker": "Anrufer",
+        "speaker_role": "dialogue_speaker",
+        "text": "Sie können sie heute bis achtzehn Uhr oder morgen ab sieben Uhr abholen."
+      },
+      {
+        "speaker": "Anrufer",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Torte kostet fünfundzwanzig Euro. Sie können bar oder mit Karte zahlen."
+      },
+      {
+        "speaker": "Anrufer",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wir wünschen Ihnen ein schönes Geburtstagsfest!"
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Nachricht 5."
+      },
+      {
+        "speaker": "Anrufer",
+        "speaker_role": "dialogue_speaker",
+        "text": "Hallo Yuki, hier ist Lena! Ich rufe wegen der Party am Samstag an."
+      },
+      {
+        "speaker": "Anrufer",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ich komme ein bisschen später, weil ich bis sechzehn Uhr arbeite."
+      },
+      {
+        "speaker": "Anrufer",
+        "speaker_role": "dialogue_speaker",
+        "text": "Soll ich etwas mitbringen? Vielleicht Chips oder Orangensaft?"
+      },
+      {
+        "speaker": "Anrufer",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ich brauche auch noch die Adresse. Ist es in der Mozartstraße?"
+      },
+      {
+        "speaker": "Anrufer",
+        "speaker_role": "dialogue_speaker",
+        "text": "Schick mir bitte die Hausnummer als Nachricht."
+      },
+      {
+        "speaker": "Anrufer",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ich freue mich auf die Party! Bis Samstag!"
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Ende des Hörverstehens."
       }
     ]
   },
@@ -270,7 +356,7 @@
       "id": "l-a1-goethe-011-t3-lo-1",
       "cefrLevel": "A1",
       "skill": "listening",
-      "canDoVi": "Toi co the luyen nghe hieu o trinh do A1 qua chu de \"Geburtstag feiern und einladen\".",
+      "canDoVi": "Tôi có thể luyện nghe hiểu ở trình độ A1 qua chủ đề \"Geburtstag feiern und einladen\".",
       "canDoDe": "Ich kann Hoeren auf Niveau A1 zum Thema \"Geburtstag feiern und einladen\" ueben.",
       "linkedContentIds": [
         "L-A1-GOETHE-011-T3"

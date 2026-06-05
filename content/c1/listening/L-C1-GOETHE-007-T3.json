@@ -70,7 +70,7 @@
       "explanation": {
         "de": "KORREKT: Die Kritik ist zweigeteilt: Es fehlen 'massenweise Kursplätze und qualifizierte Lehrkräfte' (quantitatives Problem) und die Formate sind nicht auf die 'unterschiedlichen Bildungshintergründe' zugeschnitten (qualitatives Problem). Option (a) fasst beide Aspekte korrekt zusammen. FALSCH: Die Optionen (b) und (c) sind lexikalische Fallen, die jeweils nur einen Teilaspekt der Kritik isolieren und fälschlicherweise als das einzige Problem darstellen.",
         "vi": "ĐÚNG: Lời chỉ trích có hai phần: thiếu 'hàng loạt suất học và giáo viên có trình độ' (vấn đề về số lượng) và các hình thức khóa học không được điều chỉnh cho phù hợp với 'nền tảng giáo dục khác nhau' của người tham gia (vấn đề về chất lượng). Lựa chọn (a) tóm tắt chính xác cả hai khía cạnh. SAI: Lựa chọn (b) và (c) là những cái bẫy từ vựng, mỗi lựa chọn chỉ tách riêng một phần của lời chỉ trích và trình bày sai lệch rằng đó là vấn đề duy nhất.",
-        "key_evidence": "Es fehlen massenweise Kursplätze und qualifizierte Lehrkräfte. [...] Und die Kursformate sind oft nicht auf die unterschiedlichen Bildungshintergründe der Teilnehmenden zugeschnitten.",
+        "key_evidence": "Es fehlen massenweise Kursplätze und qualifizierte Lehrkräfte",
         "key_vocabulary": []
       }
     },
@@ -90,7 +90,7 @@
       "explanation": {
         "de": "KORREKT: Der Konsens am Ende ist, dass Integration nur gelingt, wenn 'beide Seiten aufeinander zugehen' (gegenseitige Annäherung), die 'Aufnahmegesellschaft sich ebenfalls verändert' (gesellschaftliche Offenheit) und die 'Politik die notwendigen strukturellen Rahmenbedingungen schafft'. Option (c) fasst diese drei Säulen umfassend zusammen. FALSCH: Option (a) widerspricht der Idee der Gegenseitigkeit. Option (b) ist eine lexikalische Falle, die den Aspekt der 'Investition' aufgreift, aber die ebenso wichtigen sozialen und politischen Komponenten ignoriert.",
         "vi": "ĐÚNG: Sự đồng thuận cuối cùng là hội nhập chỉ thành công khi 'cả hai bên cùng tiến đến với nhau' (sự xích lại gần nhau), 'xã hội tiếp nhận cũng phải thay đổi' (sự cởi mở của xã hội) và 'chính trị tạo ra các điều kiện khung cấu trúc cần thiết'. Lựa chọn (c) tóm tắt toàn diện ba trụ cột này. SAI: Lựa chọn (a) mâu thuẫn với ý tưởng về sự tương hỗ. Lựa chọn (b) là một cái bẫy từ vựng, đề cập đến khía cạnh 'đầu tư' nhưng bỏ qua các thành phần xã hội và chính trị cũng quan trọng không kém.",
-        "key_evidence": "Integration gelingt nur, wenn beide Seiten aufeinander zugehen und voneinander lernen wollen. [...] Und wenn die Politik die notwendigen strukturellen Rahmenbedingungen schafft...",
+        "key_evidence": "Integration gelingt nur, wenn beide Seiten aufeinander zugehen und voneinander lernen wollen",
         "key_vocabulary": []
       }
     }
@@ -134,93 +134,172 @@
     ]
   },
   "transcript": {
-    "type": "full_reconstructed_transcript",
+    "type": "studio_source_transcript",
     "status": "complete",
-    "source": "reconstructed_full_script",
-    "quality": "release_candidate_reconstructed",
-    "note": "Full learner-visible reconstructed script created from existing question evidence because original studio scripts are not present in the repository. Replace with studio transcript if original audio scripts become available.",
+    "source": "studio_source_script",
+    "quality": "source_verified",
+    "sourceScript": "data/scripts/C1/Teil3-Diskussion-in-Abschnitten/L-C1-GOETHE-007-T3.json",
+    "note": "Transcript replaced from source script by scripts/apply-source-transcripts.ts.",
     "lines": [
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Der folgende anspruchsvolle Hoertext behandelt Migration und Integration. Achten Sie auf Aussage, Kontext und implizite Bedeutung."
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sie hören eine Diskussion in vier Abschnitten. Lesen Sie jeweils die Aufgaben. Sie haben dafür 30 Sekunden Zeit. Sie hören die Diskussion zweimal."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q1.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Willkommen zur Podiumsdiskussion: Integration in Deutschland — Was funktioniert und was muss sich ändern?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Diese räumliche Segregation verhindert soziale Durchmischung und erschwert die sprachliche Integration erheblich.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Deutschland braucht jährlich vierhunderttausend qualifizierte Zuwanderer, um den Fachkräftemangel auszugleichen."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q1 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Zuwanderung ja, aber nur wenn die Integration gelingt. Und da haben wir erhebliche Defizite."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q2.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Herr Nguyen, Sie sind als Kind vietnamesischer Vertragsarbeiter in Ostdeutschland aufgewachsen. Was ist Ihre Perspektive?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Das Hauptproblem ist die Bürokratie: Arbeitserlaubnisse, Aufenthaltsstatus und Anerkennungsverfahren kosten enorm viel Zeit.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Meine Familie hat sich erfolgreich integriert, aber der Weg war steinig und von Diskriminierungserfahrungen geprägt."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q2 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "In den neunziger Jahren wurden wir in unserer Heimatstadt angefeindet. Heute leite ich ein Softwareunternehmen mit hundert Mitarbeitern."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q3.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Frau al-Hashimi, Sie sind Integrationsbeauftragte einer deutschen Großstadt. Was sind die drängendsten Problemfelder?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Es fehlen massenweise Kursplätze und qualifizierte Lehrkräfte. [...] Und die Kursformate sind oft nicht auf die unterschiedlichen Bildungshintergründe der Teilnehmenden zugeschnitten.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Wohnungssituation ist katastrophal: Zugewanderte konzentrieren sich in bestimmten Stadtvierteln, weil sie anderswo keine Wohnung finden."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q3 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Diese räumliche Segregation verhindert soziale Durchmischung und erschwert die sprachliche Integration erheblich."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q4.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Herr Müller, Sie sind Unternehmer und stellen gezielt geflüchtete Menschen ein. Wie sind Ihre Erfahrungen?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Integration gelingt nur, wenn beide Seiten aufeinander zugehen und voneinander lernen wollen. [...] Und wenn die Politik die notwendigen strukturellen Rahmenbedingungen schafft...",
-        "linkedQuestionId": "Q4"
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Durchweg positiv! Meine Mitarbeiter aus Syrien und Afghanistan sind hochmotiviert und bringen wertvolle Perspektiven ein."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q4 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das Hauptproblem ist die Bürokratie: Arbeitserlaubnisse, Aufenthaltsstatus und Anerkennungsverfahren kosten enorm viel Zeit."
       },
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Ende des Hoertexts."
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Frau al-Hashimi, wie bewerten Sie den Zustand der Integrationskurse in Ihrer Stadt?"
+      },
+      {
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Es fehlen massenweise Kursplätze und qualifizierte Lehrkräfte. Die Wartezeiten betragen teilweise sechs Monate."
+      },
+      {
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Und die Kursformate sind oft nicht auf die unterschiedlichen Bildungshintergründe der Teilnehmenden zugeschnitten."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Herr Nguyen, welche Rolle spielt Bildung für die Integration aus Ihrer persönlichen Erfahrung?"
+      },
+      {
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Bildung ist der absolut entscheidende Faktor. Meine Eltern konnten kaum Deutsch, aber sie haben alles für unsere Bildung getan."
+      },
+      {
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das deutsche Bildungssystem muss Kinder aus Einwandererfamilien besser fördern, besonders in den ersten Schuljahren."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Herr Müller, was erwarten Sie von der Politik, damit Arbeitsmarktintegration besser gelingt?"
+      },
+      {
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Schnellere Verfahren bei Arbeitserlaubnissen und pragmatischere Anerkennung von Berufsqualifikationen."
+      },
+      {
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ein syrischer Bäcker sollte innerhalb von Wochen eine Arbeitsgenehmigung bekommen, nicht nach monatelangen Antragsverfahren."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Frau al-Hashimi, brauchen wir ein neues Integrationsgesetz für Deutschland?"
+      },
+      {
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ja, ein umfassendes Bundesintegrationsgesetz, das Rechte und Pflichten klar definiert und die Kommunen finanziell entlastet."
+      },
+      {
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Können wir uns auf eine gemeinsame Forderung an die Politik einigen?"
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Integration muss als Investition verstanden werden, nicht als Kostenfaktor. Jeder Euro in Integration spart drei Euro Sozialkosten."
+      },
+      {
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Und die Aufnahmegesellschaft muss sich ebenfalls verändern und interkulturelle Kompetenz als Qualifikation wertschätzen."
+      },
+      {
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Einverstanden. Integration gelingt nur, wenn beide Seiten aufeinander zugehen und voneinander lernen wollen."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Und wenn die Politik die notwendigen strukturellen Rahmenbedingungen schafft, statt die Verantwortung den Einzelnen aufzubürden."
+      },
+      {
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Potenziale der Einwanderung sind enorm, wir müssen sie nur konsequent und klug nutzen."
+      },
+      {
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Vielen Dank für diese differenzierte und konstruktive Diskussion!"
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Ende Teil drei."
       }
     ]
   },
@@ -237,7 +316,7 @@
       "id": "l-c1-goethe-007-t3-lo-1",
       "cefrLevel": "C1",
       "skill": "listening",
-      "canDoVi": "Toi co the luyen nghe hieu o trinh do C1 qua chu de \"Migration und Integration\".",
+      "canDoVi": "Tôi có thể luyện nghe hiểu ở trình độ C1 qua chủ đề \"Migration und Integration\".",
       "canDoDe": "Ich kann Hoeren auf Niveau C1 zum Thema \"Migration und Integration\" ueben.",
       "linkedContentIds": [
         "L-C1-GOETHE-007-T3"

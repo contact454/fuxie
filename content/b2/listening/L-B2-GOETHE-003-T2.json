@@ -101,7 +101,7 @@
       "explanation": {
         "de": "Der Experte erklärt, dass Multitasking lediglich ein schnelles Hin-und-Herwechseln ist, das Energie kostet und zu mehr Fehlern führt als fokussierte Arbeit.",
         "vi": "Chuyên gia giải thích rằng đa nhiệm chỉ là việc chuyển đổi nhanh chóng giữa các nhiệm vụ, điều này tiêu tốn năng lượng và dẫn đến nhiều lỗi hơn so với làm việc tập trung.",
-        "key_evidence": "Was wir Multitasking nennen, ist in Wirklichkeit schnelles Hin-und-Herwechseln zwischen Aufgaben. Und bei jedem Wechsel verlieren wir Energie und machen mehr Fehler als bei fokussierter Arbeit.",
+        "key_evidence": "Was wir Multitasking nennen, ist in Wirklichkeit schnelles Hin-und-Herwechseln zwischen Aufgaben",
         "key_vocabulary": [
           "Erkenntnis",
           "Multitasking",
@@ -199,129 +199,162 @@
     ]
   },
   "transcript": {
-    "type": "full_reconstructed_transcript",
+    "type": "studio_source_transcript",
     "status": "complete",
-    "source": "reconstructed_full_script",
-    "quality": "release_candidate_reconstructed",
-    "note": "Full learner-visible reconstructed script created from existing question evidence because original studio scripts are not present in the repository. Replace with studio transcript if original audio scripts become available.",
+    "source": "studio_source_script",
+    "quality": "source_verified",
+    "sourceScript": "data/scripts/B2/Teil2-Radiointerview-mit-Experte/L-B2-GOETHE-003-T2.json",
+    "note": "Transcript replaced from source script by scripts/apply-source-transcripts.ts.",
     "lines": [
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Im folgenden Hoertext geht es um Arbeitstechniken und Konzentration. Achten Sie auf die zentrale Information."
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sie hören ein Interview. Dazu gibt es sechs Aufgaben. Kreuzen Sie die richtige Antwort an. Sie hören das Interview zweimal."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q1.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Guten Abend! Wir sprechen heute mit dem Psychologen Dr. Felix Winter über Konzentration im digitalen Zeitalter."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Acht Sekunden! Das ist weniger als die eines Goldfisches.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Vielen Dank, dass Sie mich eingeladen haben. Konzentration ist ein Thema, das mich seit Jahren fasziniert."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q1 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Herr Dr. Winter, haben Smartphones unsere Fähigkeit zur Konzentration tatsächlich verschlechtert?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q2.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Forschung zeigt eindeutig: Ja. Die durchschnittliche Aufmerksamkeitsspanne ist in zwanzig Jahren von zwölf auf acht Sekunden gesunken."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Unser Gehirn hat sich an ständige Reize gewöhnt. Notifications, Social Media, News im Sekundentakt.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Acht Sekunden! Das ist weniger als die eines Goldfisches. Wie ist das zu erklären?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q2 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Unser Gehirn hat sich an ständige Reize gewöhnt. Notifications, Social Media, News im Sekundentakt."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q3.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ist das ein irreversibler Prozess oder können wir unsere Konzentrationsfähigkeit wieder trainieren?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Die gute Nachricht: Das Gehirn ist plastisch. Mit dem richtigen Training kann man die Konzentration deutlich verbessern.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die gute Nachricht: Das Gehirn ist plastisch. Mit dem richtigen Training kann man die Konzentration deutlich verbessern."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q3 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Welche Methoden empfehlen Sie konkret?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q4.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Meditation ist wissenschaftlich die am besten belegte Methode zur Verbesserung der Aufmerksamkeit."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Was wir Multitasking nennen, ist in Wirklichkeit schnelles Hin-und-Herwechseln zwischen Aufgaben. Und bei jedem Wechsel verlieren wir Energie und machen mehr Fehler als bei fokussierter Arbeit.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Schon zehn Minuten tägliche Meditation zeigen nach acht Wochen messbare Veränderungen im Gehirn."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q4 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Gibt es auch Methoden, die weniger esoterisch klingen für Skeptiker?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q5.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ja, zum Beispiel die bewusste Mono-Tasking-Praxis: Eine Aufgabe vollständig abschließen, bevor man die nächste beginnt."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Weniger Meetings, weniger E-Mails und mehr ungestörte Arbeitszeit für tiefgreifende Aufgaben.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Multitasking ist also wirklich ein Mythos und keine Stärke?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q5 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Absolut. Was wir Multitasking nennen, ist in Wirklichkeit schnelles Hin-und-Herwechseln zwischen Aufgaben."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q6.",
-        "linkedQuestionId": "Q6"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Und bei jedem Wechsel verlieren wir Energie und machen mehr Fehler als bei fokussierter Arbeit."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Das überrascht mich. Aber wenn diese Stunden hochproduktiv sind, ist das vielleicht genug.",
-        "linkedQuestionId": "Q6"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Was raten Sie Arbeitgebern, um die Konzentration ihrer Mitarbeiter zu fördern?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q6 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q6"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Weniger Meetings, weniger E-Mails und mehr ungestörte Arbeitszeit für tiefgreifende Aufgaben."
       },
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Ende des Hoertexts."
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das Konzept 'Deep Work' von Cal Newport hat in vielen Unternehmen zu einem Umdenken geführt."
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Können Sie 'Deep Work' kurz erklären?"
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Es bedeutet, sich über einen längeren Zeitraum ohne jede Ablenkung einer kognitiv anspruchsvollen Aufgabe zu widmen."
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "In der Praxis heißt das: Handy in die Schublade, E-Mail schließen, Tür zu."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wie viele Stunden 'Deep Work' sind pro Tag realistisch?"
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die meisten Experten schaffen drei bis vier Stunden echtes 'Deep Work' am Tag. Mehr ist selten möglich."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das überrascht mich. Aber wenn diese Stunden hochproduktiv sind, ist das vielleicht genug."
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Genau! Vier Stunden fokussierte Arbeit bringen mehr Ergebnisse als acht Stunden mit ständigen Unterbrechungen."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Herr Dr. Winter, vielen Dank für diese wertvollen Einblicke in die Psychologie der Konzentration!"
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Gern geschehen! Fangen Sie heute an, Ihre Konzentration bewusst zu schützen. Es ist Ihre wertvollste Ressource."
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Ende Teil zwei."
       }
     ]
   },
@@ -338,7 +371,7 @@
       "id": "l-b2-goethe-003-t2-lo-1",
       "cefrLevel": "B2",
       "skill": "listening",
-      "canDoVi": "Toi co the luyen nghe hieu o trinh do B2 qua chu de \"Arbeitstechniken und Konzentration\".",
+      "canDoVi": "Tôi có thể luyện nghe hiểu ở trình độ B2 qua chủ đề \"Arbeitstechniken und Konzentration\".",
       "canDoDe": "Ich kann Hoeren auf Niveau B2 zum Thema \"Arbeitstechniken und Konzentration\" ueben.",
       "linkedContentIds": [
         "L-B2-GOETHE-003-T2"

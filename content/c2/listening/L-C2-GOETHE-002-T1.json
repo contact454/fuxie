@@ -105,75 +105,347 @@
     ]
   },
   "transcript": {
-    "type": "full_reconstructed_transcript",
+    "type": "studio_source_transcript",
     "status": "complete",
-    "source": "reconstructed_full_script",
-    "quality": "release_candidate_reconstructed",
-    "note": "Full learner-visible reconstructed script created from existing question evidence because original studio scripts are not present in the repository. Replace with studio transcript if original audio scripts become available.",
+    "source": "studio_source_script",
+    "quality": "source_verified",
+    "sourceScript": "data/scripts/C2/Teil1-Radiosendungen/L-C2-GOETHE-002-T1.json",
+    "note": "Transcript replaced from source script by scripts/apply-source-transcripts.ts.",
     "lines": [
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Der folgende anspruchsvolle Hoertext behandelt Studentenwohnungsnot. Achten Sie auf Aussage, Kontext und implizite Bedeutung."
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sie hören fünf Radiosendungen. Zu jeder Sendung gibt es drei Aufgaben. Kreuzen Sie ja oder nein an. Sie hören jede Sendung einmal."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe GDS_H_01.",
-        "linkedQuestionId": "GDS_H_01"
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sendung 1."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Kritiker bemängeln allerdings, dass solche Leuchtturmprojekte das strukturelle Problem nicht lösen und die Politik davon ablenken, eine konsequente Wohnungsbaupolitik zu betreiben.",
-        "linkedQuestionId": "GDS_H_01"
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Wohnungsnot unter Studierenden hat in deutschen Universitätsstädten ein historisches Ausmaß erreicht und stellt eine kaum mehr zu ignorierende sozialpolitische Herausforderung dar."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe GDS_H_01 im Kontext des Hoertexts.",
-        "linkedQuestionId": "GDS_H_01"
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "In München beträgt die durchschnittliche Warmmiete für ein WG-Zimmer inzwischen über siebenhundert Euro, was für viele Studierende, die auf BAföG oder elterliche Unterstützung angewiesen sind, schlicht unbezahlbar ist."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe GDS_H_02.",
-        "linkedQuestionId": "GDS_H_02"
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Studentenwerke verfügen bundesweit über nur etwa zweihundertfünfundvierzigtausend Wohnheimplätze, während es fast drei Millionen Studierende gibt, was einem Versorgungsgrad von weniger als zehn Prozent entspricht."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "answer_evidence",
-        "text": "Wenn Studierende ein heruntergekommenes Viertel durch ihre Anwesenheit kulturell beleben, steigen die Immobilienpreise, sodass weder die ursprünglichen Bewohner noch die Studierenden selbst sich die Mieten auf Dauer leisten können.",
-        "linkedQuestionId": "GDS_H_02"
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Besonders betroffen sind internationale Studierende, die ohne lokale Netzwerke und ohne die Möglichkeit einer Elternbürgschaft auf dem freien Wohnungsmarkt erhebliche Schwierigkeiten haben."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe GDS_H_02 im Kontext des Hoertexts.",
-        "linkedQuestionId": "GDS_H_02"
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Einige Städte experimentieren mit innovativen Konzepten wie dem temporären Wohnen in umgebauten Containern oder der Zwischennutzung leer stehender Gewerbeimmobilien als studentische Wohnräume."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe GDS_H_03.",
-        "linkedQuestionId": "GDS_H_03"
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ein besonders ambitioniertes Projekt zur Linderung der Wohnungsnot wurde kürzlich in Heidelberg realisiert, wo eine ehemalige Kaserne zu einem interdisziplinären Studierenden-Campus umgebaut wurde."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "answer_evidence",
-        "text": "Die Herausforderung besteht darin, solche erfolgreichen Einzelprojekte in eine systematische, skalierbare Strategie zu überführen, die der Dimension des Problems gerecht wird.",
-        "linkedQuestionId": "GDS_H_03"
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das Konzept verbindet bezahlbares Wohnen mit gemeinschaftlichen Arbeits- und Freizeiträumen und hat bereits mehrere Architekturpreise für soziale Innovation gewonnen."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe GDS_H_03 im Kontext des Hoertexts.",
-        "linkedQuestionId": "GDS_H_03"
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die monatliche Miete liegt bei dreihundertfünfzig Euro inklusive Nebenkosten, was auf dem angespannten Heidelberger Wohnungsmarkt einem kleinen Wunder gleichkommt."
       },
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Ende des Hoertexts."
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Kritiker bemängeln allerdings, dass solche Leuchtturmprojekte das strukturelle Problem nicht lösen und die Politik davon ablenken, eine konsequente Wohnungsbaupolitik zu betreiben."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Herausforderung besteht darin, solche erfolgreichen Einzelprojekte in eine systematische, skalierbare Strategie zu überführen, die der Dimension des Problems gerecht wird."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Eine zunehmend kontrovers diskutierte Frage ist die der Gentrifizierung von Universitätsvierteln, die paradoxerweise auch durch die Studierenden selbst vorangetrieben werden kann."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Der Soziologe Andrej Holm hat in seinen Forschungsarbeiten überzeugend dargelegt, wie die kulturelle Aufwertung durch studentische Subkulturen den Boden für spätere kommerzielle Verwertungsprozesse bereitet."
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sendung 2."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wenn Studierende ein heruntergekommenes Viertel durch ihre Anwesenheit kulturell beleben, steigen die Immobilienpreise, sodass weder die ursprünglichen Bewohner noch die Studierenden selbst sich die Mieten auf Dauer leisten können."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Dieses Phänomen, das in der angelsächsischen Literatur als studentification bezeichnet wird, ist in deutschen Universitätsstädten wie Freiburg, Marburg und Göttingen besonders stark ausgeprägt."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Lösung kann nur in einer kohärenten Stadtentwicklungspolitik liegen, die bezahlbaren Wohnraum schützt, bevor die Marktdynamik unumkehrbare Fakten geschaffen hat."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Wohnungsnot unter Studierenden hat in deutschen Universitätsstädten ein historisches Ausmaß erreicht und stellt eine kaum mehr zu ignorierende sozialpolitische Herausforderung dar."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "In München beträgt die durchschnittliche Warmmiete für ein WG-Zimmer inzwischen über siebenhundert Euro, was für viele Studierende, die auf BAföG oder elterliche Unterstützung angewiesen sind, schlicht unbezahlbar ist."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Studentenwerke verfügen bundesweit über nur etwa zweihundertfünfundvierzigtausend Wohnheimplätze, während es fast drei Millionen Studierende gibt, was einem Versorgungsgrad von weniger als zehn Prozent entspricht."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Besonders betroffen sind internationale Studierende, die ohne lokale Netzwerke und ohne die Möglichkeit einer Elternbürgschaft auf dem freien Wohnungsmarkt erhebliche Schwierigkeiten haben."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Einige Städte experimentieren mit innovativen Konzepten wie dem temporären Wohnen in umgebauten Containern oder der Zwischennutzung leer stehender Gewerbeimmobilien als studentische Wohnräume."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ein besonders ambitioniertes Projekt zur Linderung der Wohnungsnot wurde kürzlich in Heidelberg realisiert, wo eine ehemalige Kaserne zu einem interdisziplinären Studierenden-Campus umgebaut wurde."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das Konzept verbindet bezahlbares Wohnen mit gemeinschaftlichen Arbeits- und Freizeiträumen und hat bereits mehrere Architekturpreise für soziale Innovation gewonnen."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die monatliche Miete liegt bei dreihundertfünfzig Euro inklusive Nebenkosten, was auf dem angespannten Heidelberger Wohnungsmarkt einem kleinen Wunder gleichkommt."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Kritiker bemängeln allerdings, dass solche Leuchtturmprojekte das strukturelle Problem nicht lösen und die Politik davon ablenken, eine konsequente Wohnungsbaupolitik zu betreiben."
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sendung 3."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Herausforderung besteht darin, solche erfolgreichen Einzelprojekte in eine systematische, skalierbare Strategie zu überführen, die der Dimension des Problems gerecht wird."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Eine zunehmend kontrovers diskutierte Frage ist die der Gentrifizierung von Universitätsvierteln, die paradoxerweise auch durch die Studierenden selbst vorangetrieben werden kann."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Der Soziologe Andrej Holm hat in seinen Forschungsarbeiten überzeugend dargelegt, wie die kulturelle Aufwertung durch studentische Subkulturen den Boden für spätere kommerzielle Verwertungsprozesse bereitet."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wenn Studierende ein heruntergekommenes Viertel durch ihre Anwesenheit kulturell beleben, steigen die Immobilienpreise, sodass weder die ursprünglichen Bewohner noch die Studierenden selbst sich die Mieten auf Dauer leisten können."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Dieses Phänomen, das in der angelsächsischen Literatur als studentification bezeichnet wird, ist in deutschen Universitätsstädten wie Freiburg, Marburg und Göttingen besonders stark ausgeprägt."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Lösung kann nur in einer kohärenten Stadtentwicklungspolitik liegen, die bezahlbaren Wohnraum schützt, bevor die Marktdynamik unumkehrbare Fakten geschaffen hat."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Wohnungsnot unter Studierenden hat in deutschen Universitätsstädten ein historisches Ausmaß erreicht und stellt eine kaum mehr zu ignorierende sozialpolitische Herausforderung dar."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "In München beträgt die durchschnittliche Warmmiete für ein WG-Zimmer inzwischen über siebenhundert Euro, was für viele Studierende, die auf BAföG oder elterliche Unterstützung angewiesen sind, schlicht unbezahlbar ist."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Studentenwerke verfügen bundesweit über nur etwa zweihundertfünfundvierzigtausend Wohnheimplätze, während es fast drei Millionen Studierende gibt, was einem Versorgungsgrad von weniger als zehn Prozent entspricht."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Besonders betroffen sind internationale Studierende, die ohne lokale Netzwerke und ohne die Möglichkeit einer Elternbürgschaft auf dem freien Wohnungsmarkt erhebliche Schwierigkeiten haben."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Einige Städte experimentieren mit innovativen Konzepten wie dem temporären Wohnen in umgebauten Containern oder der Zwischennutzung leer stehender Gewerbeimmobilien als studentische Wohnräume."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ein besonders ambitioniertes Projekt zur Linderung der Wohnungsnot wurde kürzlich in Heidelberg realisiert, wo eine ehemalige Kaserne zu einem interdisziplinären Studierenden-Campus umgebaut wurde."
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sendung 4."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das Konzept verbindet bezahlbares Wohnen mit gemeinschaftlichen Arbeits- und Freizeiträumen und hat bereits mehrere Architekturpreise für soziale Innovation gewonnen."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die monatliche Miete liegt bei dreihundertfünfzig Euro inklusive Nebenkosten, was auf dem angespannten Heidelberger Wohnungsmarkt einem kleinen Wunder gleichkommt."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Kritiker bemängeln allerdings, dass solche Leuchtturmprojekte das strukturelle Problem nicht lösen und die Politik davon ablenken, eine konsequente Wohnungsbaupolitik zu betreiben."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Herausforderung besteht darin, solche erfolgreichen Einzelprojekte in eine systematische, skalierbare Strategie zu überführen, die der Dimension des Problems gerecht wird."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Eine zunehmend kontrovers diskutierte Frage ist die der Gentrifizierung von Universitätsvierteln, die paradoxerweise auch durch die Studierenden selbst vorangetrieben werden kann."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Der Soziologe Andrej Holm hat in seinen Forschungsarbeiten überzeugend dargelegt, wie die kulturelle Aufwertung durch studentische Subkulturen den Boden für spätere kommerzielle Verwertungsprozesse bereitet."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wenn Studierende ein heruntergekommenes Viertel durch ihre Anwesenheit kulturell beleben, steigen die Immobilienpreise, sodass weder die ursprünglichen Bewohner noch die Studierenden selbst sich die Mieten auf Dauer leisten können."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Dieses Phänomen, das in der angelsächsischen Literatur als studentification bezeichnet wird, ist in deutschen Universitätsstädten wie Freiburg, Marburg und Göttingen besonders stark ausgeprägt."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Lösung kann nur in einer kohärenten Stadtentwicklungspolitik liegen, die bezahlbaren Wohnraum schützt, bevor die Marktdynamik unumkehrbare Fakten geschaffen hat."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Wohnungsnot unter Studierenden hat in deutschen Universitätsstädten ein historisches Ausmaß erreicht und stellt eine kaum mehr zu ignorierende sozialpolitische Herausforderung dar."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "In München beträgt die durchschnittliche Warmmiete für ein WG-Zimmer inzwischen über siebenhundert Euro, was für viele Studierende, die auf BAföG oder elterliche Unterstützung angewiesen sind, schlicht unbezahlbar ist."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Studentenwerke verfügen bundesweit über nur etwa zweihundertfünfundvierzigtausend Wohnheimplätze, während es fast drei Millionen Studierende gibt, was einem Versorgungsgrad von weniger als zehn Prozent entspricht."
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sendung 5."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Besonders betroffen sind internationale Studierende, die ohne lokale Netzwerke und ohne die Möglichkeit einer Elternbürgschaft auf dem freien Wohnungsmarkt erhebliche Schwierigkeiten haben."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Einige Städte experimentieren mit innovativen Konzepten wie dem temporären Wohnen in umgebauten Containern oder der Zwischennutzung leer stehender Gewerbeimmobilien als studentische Wohnräume."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ein besonders ambitioniertes Projekt zur Linderung der Wohnungsnot wurde kürzlich in Heidelberg realisiert, wo eine ehemalige Kaserne zu einem interdisziplinären Studierenden-Campus umgebaut wurde."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das Konzept verbindet bezahlbares Wohnen mit gemeinschaftlichen Arbeits- und Freizeiträumen und hat bereits mehrere Architekturpreise für soziale Innovation gewonnen."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die monatliche Miete liegt bei dreihundertfünfzig Euro inklusive Nebenkosten, was auf dem angespannten Heidelberger Wohnungsmarkt einem kleinen Wunder gleichkommt."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Kritiker bemängeln allerdings, dass solche Leuchtturmprojekte das strukturelle Problem nicht lösen und die Politik davon ablenken, eine konsequente Wohnungsbaupolitik zu betreiben."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Herausforderung besteht darin, solche erfolgreichen Einzelprojekte in eine systematische, skalierbare Strategie zu überführen, die der Dimension des Problems gerecht wird."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Eine zunehmend kontrovers diskutierte Frage ist die der Gentrifizierung von Universitätsvierteln, die paradoxerweise auch durch die Studierenden selbst vorangetrieben werden kann."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Der Soziologe Andrej Holm hat in seinen Forschungsarbeiten überzeugend dargelegt, wie die kulturelle Aufwertung durch studentische Subkulturen den Boden für spätere kommerzielle Verwertungsprozesse bereitet."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wenn Studierende ein heruntergekommenes Viertel durch ihre Anwesenheit kulturell beleben, steigen die Immobilienpreise, sodass weder die ursprünglichen Bewohner noch die Studierenden selbst sich die Mieten auf Dauer leisten können."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Dieses Phänomen, das in der angelsächsischen Literatur als studentification bezeichnet wird, ist in deutschen Universitätsstädten wie Freiburg, Marburg und Göttingen besonders stark ausgeprägt."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Lösung kann nur in einer kohärenten Stadtentwicklungspolitik liegen, die bezahlbaren Wohnraum schützt, bevor die Marktdynamik unumkehrbare Fakten geschaffen hat."
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Ende Teil eins."
       }
     ]
   },
@@ -190,7 +462,7 @@
       "id": "l-c2-goethe-002-t1-lo-1",
       "cefrLevel": "C2",
       "skill": "listening",
-      "canDoVi": "Toi co the luyen nghe hieu o trinh do C2 qua chu de \"Studentenwohnungsnot\".",
+      "canDoVi": "Tôi có thể luyện nghe hiểu ở trình độ C2 qua chủ đề \"Studentenwohnungsnot\".",
       "canDoDe": "Ich kann Hoeren auf Niveau C2 zum Thema \"Studentenwohnungsnot\" ueben.",
       "linkedContentIds": [
         "L-C2-GOETHE-002-T1"

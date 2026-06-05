@@ -29,7 +29,7 @@
       "explanation": {
         "de": "Die korrekte Antwort ist (a), da die Diskussion den Gegensatz zwischen dem pragmatischen Bedarf an einer gemeinsamen Sprache ('Verkehrssprache') und dem Schutz des 'kulturellen Reichtums' durch Sprachenvielfalt thematisiert. Option (b) ist eine lexikalische Falle; sie greift den Begriff 'Verkehrssprache' auf, stellt aber nur eine Seite des Konflikts als die zentrale Frage dar. Option (c) ist falsch, da finanzielle Aspekte nicht erwähnt werden.",
         "vi": "Đáp án đúng là (a), vì cuộc thảo luận nêu bật sự đối lập giữa nhu cầu thực tế về một ngôn ngữ chung ('Verkehrssprache') và việc bảo vệ 'sự giàu có về văn hóa' thông qua đa dạng ngôn ngữ. Lựa chọn (b) là một cái bẫy từ vựng; nó sử dụng thuật ngữ 'Verkehrssprache' nhưng chỉ trình bày một phía của xung đột như là câu hỏi trung tâm. Lựa chọn (c) sai vì các khía cạnh tài chính không được đề cập.",
-        "key_evidence": "Gast_A: Europa braucht eine gemeinsame Verkehrssprache... Gast_B: Eine Einheitssprache würde den kulturellen Reichtum Europas zerstören..."
+        "key_evidence": "Europa braucht eine gemeinsame Verkehrssprache"
       }
     },
     {
@@ -83,7 +83,7 @@
       "explanation": {
         "de": "Antwort (a) fasst die nuancierte Position korrekt zusammen: Maschinelle Übersetzung ist praktisch, aber unzureichend für kulturelles Verständnis. Option (b) ist eine Übertreibung, die der im Text betonten Wichtigkeit des Sprachenlernens widerspricht. Option (c) ist eine lexikalische Falle, die 'Kommunikationsbarrieren überwinden' negativ darstellt, obwohl der Text sagt, dass die Technologie dies leisten kann.",
         "vi": "Đáp án (a) tóm tắt chính xác quan điểm đa chiều: dịch máy là công cụ thực tế nhưng không đủ để hiểu biết văn hóa sâu sắc. Lựa chọn (b) là một sự phóng đại, trái ngược với tầm quan trọng của việc học ngôn ngữ được nhấn mạnh trong văn bản. Lựa chọn (c) là một cái bẫy từ vựng, trình bày 'vượt qua rào cản giao tiếp' một cách tiêu cực, mặc dù văn bản nói rằng công nghệ có thể làm được điều này.",
-        "key_evidence": "Maschinelle Übersetzung wird immer besser und kann viele praktische Kommunikationsbarrieren überwinden. Aber sie ersetzt nicht das kulturelle Verständnis, das mit dem Erlernen einer Sprache einhergeht."
+        "key_evidence": "Maschinelle Übersetzung wird immer besser und kann viele praktische Kommunikationsbarrieren überwinden"
       }
     }
   ],
@@ -126,93 +126,172 @@
     ]
   },
   "transcript": {
-    "type": "full_reconstructed_transcript",
+    "type": "studio_source_transcript",
     "status": "complete",
-    "source": "reconstructed_full_script",
-    "quality": "release_candidate_reconstructed",
-    "note": "Full learner-visible reconstructed script created from existing question evidence because original studio scripts are not present in the repository. Replace with studio transcript if original audio scripts become available.",
+    "source": "studio_source_script",
+    "quality": "source_verified",
+    "sourceScript": "data/scripts/C1/Teil3-Diskussion-in-Abschnitten/L-C1-GOETHE-009-T3.json",
+    "note": "Transcript replaced from source script by scripts/apply-source-transcripts.ts.",
     "lines": [
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Der folgende anspruchsvolle Hoertext behandelt Sprachpolitik in mehrsprachigen Gesellschaften. Achten Sie auf Aussage, Kontext und implizite Bedeutung."
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sie hören eine Diskussion in vier Abschnitten. Lesen Sie jeweils die Aufgaben. Sie haben dafür 30 Sekunden Zeit. Sie hören die Diskussion zweimal."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q1.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Willkommen zur Podiumsdiskussion: Braucht Europa eine gemeinsame Sprache oder mehr Sprachenvielfalt?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Gast_A: Europa braucht eine gemeinsame Verkehrssprache... Gast_B: Eine Einheitssprache würde den kulturellen Reichtum Europas zerstören...",
-        "linkedQuestionId": "Q1"
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Europa braucht eine gemeinsame Verkehrssprache, und das ist de facto Englisch, ob wir es mögen oder nicht."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q1 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Eine Einheitssprache würde den kulturellen Reichtum Europas zerstören und kleine Sprachgemeinschaften marginalisieren."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q2.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Herr Professor Kraus, Sie forschen zur europäischen Mehrsprachigkeit. Was ist Ihre Position?"
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "answer_evidence",
-        "text": "Die englische Dominanz ist das Ergebnis amerikanischer Wirtschaftsmacht und britischer Kolonialpolitik, nicht linguistischer Überlegenheit.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Mehrsprachigkeit ist ein Kernwert der europäischen Identität und muss institutionell geschützt und gefördert werden."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q2 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Aber wir brauchen pragmatische Lösungen, denn vierundzwanzig Amtssprachen in allen Institutionen sind logistisch kaum handhabbar."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q3.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Frau Mäkelä, Sie sind Finnin und sprechen fünf Sprachen fließend. Was ist Ihre Erfahrung?"
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "answer_evidence",
-        "text": "Ein Rotationsmodell, bei dem die drei Arbeitssprachen der EU-Institutionen regelmäßig wechseln und um weitere ergänzt werden.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "In Finnland lernt jedes Kind neben Finnisch auch Schwedisch und Englisch, oft noch eine weitere Sprache."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q3 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das funktioniert ausgezeichnet und zeigt, dass Mehrsprachigkeit keine Überforderung ist, sondern eine lernbare Kompetenz."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q4.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Herr Dupont, Sie vertreten die Frankophonie. Fühlen Sie sich von der englischen Dominanz bedroht?"
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "answer_evidence",
-        "text": "Maschinelle Übersetzung wird immer besser und kann viele praktische Kommunikationsbarrieren überwinden. Aber sie ersetzt nicht das kulturelle Verständnis, das mit dem Erlernen einer Sprache einhergeht.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Bedroht ist vielleicht zu stark, aber besorgt bin ich über den schleichenden Bedeutungsverlust des Französischen in der EU."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q4 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Nach dem Brexit sollte Englisch eigentlich an Gewicht verlieren, aber das Gegenteil ist eingetreten und das ist problematisch."
       },
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Ende des Hoertexts."
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ist das nicht ein natürlicher Prozess? Sprachen kommen und gehen mit der Macht ihrer Sprecher und Sprecherinnen."
+      },
+      {
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Sprachen sind kein natürliches Phänomen wie das Wetter. Sie werden durch politische Entscheidungen gefördert oder unterdrückt."
+      },
+      {
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die englische Dominanz ist das Ergebnis amerikanischer Wirtschaftsmacht und britischer Kolonialpolitik, nicht linguistischer Überlegenheit."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Professor Kraus, wie könnte Europa seine Mehrsprachigkeit besser institutionell organisieren?"
+      },
+      {
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ein Rotationsmodell, bei dem die drei Arbeitssprachen der EU-Institutionen regelmäßig wechseln und um weitere ergänzt werden."
+      },
+      {
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Außerdem sollte jeder EU-Bürger neben seiner Muttersprache mindestens zwei weitere EU-Sprachen auf kommunikativem Niveau beherrschen."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das ist das offizielle Ziel der EU-Kommission, aber die Realität sieht in den meisten Mitgliedstaaten anders aus."
+      },
+      {
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Frau Mäkelä, welche Rolle spielt die Technologie für die Überwindung von Sprachbarrieren?"
+      },
+      {
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Maschinelle Übersetzung wird immer besser und kann viele praktische Kommunikationsbarrieren überwinden."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Aber sie ersetzt nicht das kulturelle Verständnis, das mit dem Erlernen einer Sprache einhergeht."
+      },
+      {
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Eine Sprache zu lernen heißt, eine andere Denkweise kennenzulernen und eine Brücke zu einer anderen Kultur zu bauen."
+      },
+      {
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Können wir uns auf eine gemeinsame Vision für die sprachliche Zukunft Europas einigen?"
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Mehrsprachigkeit fördern, kleine Sprachen schützen und pragmatische Kommunikationslösungen für den Alltag entwickeln."
+      },
+      {
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Maschinelle Übersetzung als Werkzeug nutzen, aber menschliche Sprachkompetenz als Wert weiterhin pflegen."
+      },
+      {
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Und den Sprachunterricht in allen EU-Ländern massiv ausbauen, damit die Bürger sich wirklich verständigen können."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Sprachen lernen ist das beste Mittel gegen Fremdenfeindlichkeit und die stärkste Brücke zwischen den Kulturen."
+      },
+      {
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Da sind wir uns alle einig! Mehr Sprachen bedeutet mehr Verständnis und ein stärkeres Europa."
+      },
+      {
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Vielen Dank für diese vielsprachige und inspirierende Diskussion!"
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Ende Teil drei."
       }
     ]
   },
@@ -229,7 +308,7 @@
       "id": "l-c1-goethe-009-t3-lo-1",
       "cefrLevel": "C1",
       "skill": "listening",
-      "canDoVi": "Toi co the luyen nghe hieu o trinh do C1 qua chu de \"Sprachpolitik in mehrsprachigen Gesellschaften\".",
+      "canDoVi": "Tôi có thể luyện nghe hiểu ở trình độ C1 qua chủ đề \"Sprachpolitik in mehrsprachigen Gesellschaften\".",
       "canDoDe": "Ich kann Hoeren auf Niveau C1 zum Thema \"Sprachpolitik in mehrsprachigen Gesellschaften\" ueben.",
       "linkedContentIds": [
         "L-C1-GOETHE-009-T3"

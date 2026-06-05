@@ -29,7 +29,7 @@
       "explanation": {
         "de": "Die korrekte Antwort ist 'a', da der Podcast explizit das 'Ehegattensplitting' erwähnt, das Paare mit einem Hauptverdiener steuerlich begünstigt und somit 'starke Anreize gegen gleichberechtigte Erwerbstätigkeit' setzt. Dies ist eine Umschreibung für finanzielle Fehlanreize. Option 'b' ist eine lexikalische Falle; sie nennt zwar eine korrekte Statistik aus dem Text, beschreibt aber eine Folge und nicht die zugrundeliegende systemische Ursache, nach der gefragt wird. Option 'c' ist falsch, da die EU-Richtlinie als ein Schritt 'nach vorn' und somit als Gegenmaßnahme zum traditionellen Modell dargestellt wird.",
         "vi": "Đáp án đúng là 'a', vì podcast đề cập rõ ràng đến 'Ehegattensplitting' (chế độ thuế chung cho vợ chồng), ưu đãi về thuế cho các cặp vợ chồng có một người kiếm tiền chính và do đó tạo ra 'những động lực mạnh mẽ chống lại việc làm bình đẳng'. Đây là cách diễn giải khác của việc tạo ra các khuyến khích tài chính sai lầm. Lựa chọn 'b' là một cái bẫy từ vựng; nó trích dẫn một số liệu thống kê đúng từ văn bản, nhưng mô tả một hệ quả chứ không phải nguyên nhân hệ thống cơ bản được hỏi đến. Lựa chọn 'c' là sai, vì chỉ thị của EU được trình bày như một bước 'tiến bộ' và do đó là một biện pháp đối phó với mô hình truyền thống.",
-        "key_evidence": "Das Ehegattensplitting, das Ehepaare mit einem Hauptverdiener steuerlich bevorzugt, setzt starke Anreize gegen gleichberechtigte Erwerbstätigkeit...",
+        "key_evidence": "Das Ehegattensplitting, das Ehepaare mit einem Hauptverdiener steuerlich bevorzugt, setzt starke Anreize gegen gleichberechtigte Erwerbstätigkeit",
         "key_vocabulary": [
           "Fehlanreize",
           "paritätisch",
@@ -52,7 +52,7 @@
       "explanation": {
         "de": "Die korrekte Antwort ist 'a'. Der Text stellt einen direkten Zusammenhang her: Frankreich hat eine flächendeckende, kostenlose Kinderbetreuung und infolgedessen eine hohe Geburten- und Frauenerwerbsquote. Italien hingegen leidet unter fehlenden Betreuungsangeboten, was zu einer der niedrigsten Geburtenraten führt. Daraus lässt sich schlussfolgern, dass die Betreuungsinfrastruktur entscheidend ist. Option 'b' ist eine lexikalische Falle, die den Begriff 'erzwungene Wahl' auf beide Länder verallgemeinert, obwohl er im Text explizit nur für Italien verwendet wird. Option 'c' ist falsch, da der Text besagt, dass Experten bezüglich des französischen Modells 'nach wie vor unterschiedlicher Meinung sind'.",
         "vi": "Đáp án đúng là 'a'. Văn bản thiết lập một mối liên hệ trực tiếp: Pháp có hệ thống chăm sóc trẻ em miễn phí và rộng khắp, và kết quả là có tỷ lệ sinh và tỷ lệ phụ nữ đi làm cao. Ngược lại, Ý thiếu các cơ sở chăm sóc trẻ em, dẫn đến một trong những tỷ lệ sinh thấp nhất. Từ đó có thể kết luận rằng cơ sở hạ tầng chăm sóc trẻ em là yếu tố quyết định. Lựa chọn 'b' là một cái bẫy từ vựng, khái quát hóa thuật ngữ 'lựa chọn bắt buộc' cho cả hai quốc gia, mặc dù trong văn bản nó chỉ được sử dụng rõ ràng cho Ý. Lựa chọn 'c' là sai, vì văn bản nói rằng các chuyên gia 'vẫn còn nhiều ý kiến khác nhau' về mô hình của Pháp.",
-        "key_evidence": "Frankreich hat ein besonders interessantes Modell: Die Kinderbetreuung ist ab drei Jahren kostenlos und flächendeckend gewährleistet... Das französische Modell erklärt, warum Frankreich eine der höchsten Geburtenraten in Europa bei gleichzeitig hoher Frauenerwerbsquote hat... In Italien dagegen führen fehlende Betreuungsangebote... zu einer der niedrigsten Geburtenraten weltweit.",
+        "key_evidence": "Die Kinderbetreuung ist ab drei Jahren kostenlos und flächendeckend gewährleistet",
         "key_vocabulary": [
           "Schlussfolgerung",
           "Infrastruktur",
@@ -123,75 +123,147 @@
     ]
   },
   "transcript": {
-    "type": "full_reconstructed_transcript",
+    "type": "studio_source_transcript",
     "status": "complete",
-    "source": "reconstructed_full_script",
-    "quality": "release_candidate_reconstructed",
-    "note": "Full learner-visible reconstructed script created from existing question evidence because original studio scripts are not present in the repository. Replace with studio transcript if original audio scripts become available.",
+    "source": "studio_source_script",
+    "quality": "source_verified",
+    "sourceScript": "data/scripts/C1/Teil1-Podcast-oder-Rezension/L-C1-GOETHE-013-T1.json",
+    "note": "Transcript replaced from source script by scripts/apply-source-transcripts.ts.",
     "lines": [
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Der folgende anspruchsvolle Hoertext behandelt Algorithmen und Bias in der Wissenschaft. Achten Sie auf Aussage, Kontext und implizite Bedeutung."
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sie hören einen Podcast. Dazu gibt es sechs Aufgaben. Ordnen Sie die Aussagen den Abschnitten zu. Sie hören den Text einmal."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe q1.",
-        "linkedQuestionId": "q1"
+        "speaker": "Podcaster",
+        "speaker_role": "dialogue_speaker",
+        "text": "Willkommen bei unserem europapolitischen Podcast 'Europa verstehen'. Heute sprechen wir über Familienpolitik und Gleichstellung, und diese Entwicklung betrifft nicht nur Fachleute, sondern die gesamte Gesellschaft."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Das Ehegattensplitting, das Ehepaare mit einem Hauptverdiener steuerlich bevorzugt, setzt starke Anreize gegen gleichberechtigte Erwerbstätigkeit...",
-        "linkedQuestionId": "q1"
+        "speaker": "Podcaster",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Europäische Union verfolgt seit Jahrzehnten das Ziel der Geschlechtergleichstellung, doch die Fortschritte sind ungleichmäßig verteilt, wobei aktuelle Studien und Expertenmeinungen ein vielfältiges Bild zeichnen."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe q1 im Kontext des Hoertexts.",
-        "linkedQuestionId": "q1"
+        "speaker": "Podcaster",
+        "speaker_role": "dialogue_speaker",
+        "text": "Schweden gilt als Vorbild: Dort haben Väter Anspruch auf dreizehn Monate Elternzeit bei nahezu vollem Lohnausgleich, was in der wissenschaftlichen Gemeinschaft für erhebliche Diskussionen sorgt."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe q2.",
-        "linkedQuestionId": "q2"
+        "speaker": "Podcaster",
+        "speaker_role": "dialogue_speaker",
+        "text": "In Deutschland hingegen nehmen nur etwa vierzig Prozent der Väter überhaupt Elternzeit, und die meisten nur zwei Monate."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Frankreich hat ein besonders interessantes Modell: Die Kinderbetreuung ist ab drei Jahren kostenlos und flächendeckend gewährleistet... Das französische Modell erklärt, warum Frankreich eine der höchsten Geburtenraten in Europa bei gleichzeitig hoher Frauenerwerbsquote hat... In Italien dagegen führen fehlende Betreuungsangebote... zu einer der niedrigsten Geburtenraten weltweit.",
-        "linkedQuestionId": "q2"
+        "speaker": "Podcaster",
+        "speaker_role": "dialogue_speaker",
+        "text": "Diese Diskrepanz spiegelt unterschiedliche Gesellschaftsmodelle wider, die tief in der Geschichte und Kultur verwurzelt sind, was sowohl in der Forschung als auch in der Praxis weitreichende Konsequenzen hat."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe q2 im Kontext des Hoertexts.",
-        "linkedQuestionId": "q2"
+        "speaker": "Podcaster",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das konservative Familienmodell mit dem männlichen Alleinverdiener prägt den deutschen Sozialstaat bis heute nachhaltig, und dies wirft grundlegende Fragen zur aktuellen gesellschaftlichen Entwicklung auf."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe q3.",
-        "linkedQuestionId": "q3"
+        "speaker": "Podcaster",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das Ehegattensplitting, das Ehepaare mit einem Hauptverdiener steuerlich bevorzugt, setzt starke Anreize gegen gleichberechtigte Erwerbstätigkeit, die in den vergangenen Jahren zunehmend an Bedeutung gewonnen haben."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Länder mit besserer Vereinbarkeit von Familie und Beruf haben höhere Geburtenraten und gleichzeitig höheres Wirtschaftswachstum, was die Notwendigkeit einer differenzierten Betrachtung deutlich unterstreicht.",
-        "linkedQuestionId": "q3"
+        "speaker": "Podcaster",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die EU-Richtlinie zur Vereinbarkeit von Beruf und Privatleben von zweitausendneunzehn war ein wichtiger Schritt nach vorn, was die Notwendigkeit einer differenzierten Betrachtung deutlich unterstreicht."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe q3 im Kontext des Hoertexts.",
-        "linkedQuestionId": "q3"
+        "speaker": "Podcaster",
+        "speaker_role": "dialogue_speaker",
+        "text": "Sie garantiert Mindeststandards für Vaterschaftsurlaub, Elternzeit und Pflegefreistellung in allen Mitgliedstaaten der Union, und diese Entwicklung betrifft nicht nur Fachleute, sondern die gesamte Gesellschaft."
       },
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Ende des Hoertexts."
+        "speaker": "Podcaster",
+        "speaker_role": "dialogue_speaker",
+        "text": "Allerdings setzen die Mitgliedstaaten diese Richtlinie sehr unterschiedlich um, je nach nationaler Tradition und politischem Willen, wobei aktuelle Studien und Expertenmeinungen ein vielfältiges Bild zeichnen."
+      },
+      {
+        "speaker": "Podcaster",
+        "speaker_role": "dialogue_speaker",
+        "text": "Frankreich hat ein besonders interessantes Modell: Die Kinderbetreuung ist ab drei Jahren kostenlos und flächendeckend gewährleistet, was in der wissenschaftlichen Gemeinschaft für erhebliche Diskussionen sorgt."
+      },
+      {
+        "speaker": "Podcaster",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das französische Modell erklärt, warum Frankreich eine der höchsten Geburtenraten in Europa bei gleichzeitig hoher Frauenerwerbsquote hat, wobei die Experten in dieser Frage nach wie vor unterschiedlicher Meinung sind."
+      },
+      {
+        "speaker": "Podcaster",
+        "speaker_role": "dialogue_speaker",
+        "text": "In Italien dagegen führen fehlende Betreuungsangebote und prekäre Arbeitsverhältnisse zu einer der niedrigsten Geburtenraten weltweit, was sowohl in der Forschung als auch in der Praxis weitreichende Konsequenzen hat."
+      },
+      {
+        "speaker": "Podcaster",
+        "speaker_role": "dialogue_speaker",
+        "text": "Junge Italienerinnen stehen vor der erzwungenen Wahl zwischen Karriere und Familie, eine Wahl, die Männer so nicht kennen."
+      },
+      {
+        "speaker": "Podcaster",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die ökonomischen Folgen dieser ungleichen Familienpolitik sind erheblich und betreffen die gesamte Volkswirtschaft der Europäischen Union, die in den vergangenen Jahren zunehmend an Bedeutung gewonnen haben."
+      },
+      {
+        "speaker": "Podcaster",
+        "speaker_role": "dialogue_speaker",
+        "text": "Länder mit besserer Vereinbarkeit von Familie und Beruf haben höhere Geburtenraten und gleichzeitig höheres Wirtschaftswachstum, was die Notwendigkeit einer differenzierten Betrachtung deutlich unterstreicht."
+      },
+      {
+        "speaker": "Podcaster",
+        "speaker_role": "dialogue_speaker",
+        "text": "Es ist also kein Zufall, dass die nordischen Länder sowohl die meisten Kinder als auch die stärksten Volkswirtschaften haben."
+      },
+      {
+        "speaker": "Podcaster",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ein Schlüsselthema ist die gerechte Verteilung von unbezahlter Sorgearbeit zwischen Frauen und Männern, wobei aktuelle Studien und Expertenmeinungen ein vielfältiges Bild zeichnen."
+      },
+      {
+        "speaker": "Podcaster",
+        "speaker_role": "dialogue_speaker",
+        "text": "Frauen leisten in Deutschland durchschnittlich fünfzig Prozent mehr unbezahlte Haushalts- und Pflegearbeit als ihre männlichen Partner, was in der wissenschaftlichen Gemeinschaft für erhebliche Diskussionen sorgt."
+      },
+      {
+        "speaker": "Podcaster",
+        "speaker_role": "dialogue_speaker",
+        "text": "Diese ungleiche Verteilung hat direkte Auswirkungen auf Einkommen, Karrierechancen und die Altersversorgung von Frauen, wobei die Experten in dieser Frage nach wie vor unterschiedlicher Meinung sind."
+      },
+      {
+        "speaker": "Podcaster",
+        "speaker_role": "dialogue_speaker",
+        "text": "Der Gender Pay Gap in der Europäischen Union liegt durchschnittlich bei dreizehn Prozent und hat sich kaum verringert."
+      },
+      {
+        "speaker": "Podcaster",
+        "speaker_role": "dialogue_speaker",
+        "text": "In Deutschland ist er mit achtzehn Prozent besonders hoch und gehört zu den größten in der gesamten Europäischen Union."
+      },
+      {
+        "speaker": "Podcaster",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die EU-Kommission hat deshalb eine Entgelttransparenz-Richtlinie vorgeschlagen, die Unternehmen zur Offenlegung von Gehaltsdaten verpflichtet, die in den vergangenen Jahren zunehmend an Bedeutung gewonnen haben."
+      },
+      {
+        "speaker": "Podcaster",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ob diese Richtlinie die strukturelle Lohnungleichheit tatsächlich beseitigen kann, bleibt abzuwarten, was die Notwendigkeit einer differenzierten Betrachtung deutlich unterstreicht."
+      },
+      {
+        "speaker": "Podcaster",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das war unser Podcast zur europäischen Familienpolitik. Schreiben Sie uns Ihre Gedanken und persönlichen Erfahrungen!, und diese Entwicklung betrifft nicht nur Fachleute, sondern die gesamte Gesellschaft."
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Ende Teil eins."
       }
     ]
   },
@@ -208,7 +280,7 @@
       "id": "l-c1-goethe-013-t1-lo-1",
       "cefrLevel": "C1",
       "skill": "listening",
-      "canDoVi": "Toi co the luyen nghe hieu o trinh do C1 qua chu de \"Algorithmen und Bias in der Wissenschaft\".",
+      "canDoVi": "Tôi có thể luyện nghe hiểu ở trình độ C1 qua chủ đề \"Algorithmen und Bias in der Wissenschaft\".",
       "canDoDe": "Ich kann Hoeren auf Niveau C1 zum Thema \"Algorithmen und Bias in der Wissenschaft\" ueben.",
       "linkedContentIds": [
         "L-C1-GOETHE-013-T1"

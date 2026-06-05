@@ -219,201 +219,247 @@
     ]
   },
   "transcript": {
-    "type": "full_reconstructed_transcript",
+    "type": "studio_source_transcript",
     "status": "complete",
-    "source": "reconstructed_full_script",
-    "quality": "release_candidate_reconstructed",
-    "note": "Full learner-visible reconstructed script created from existing question evidence because original studio scripts are not present in the repository. Replace with studio transcript if original audio scripts become available.",
+    "source": "studio_source_script",
+    "quality": "source_verified",
+    "sourceScript": "data/scripts/B1/Teil1-Kurze-Texte/L-B1-GOETHE-010-T1.json",
+    "note": "Transcript replaced from source script by scripts/apply-source-transcripts.ts.",
     "lines": [
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Im folgenden Hoertext geht es um Umwelt und Recycling. Achten Sie auf die zentrale Information."
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sie hören fünf kurze Texte. Zu jedem Text gibt es zwei Aufgaben. Kreuzen Sie die richtige Antwort an. Sie hören jeden Text einmal."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q1.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Text 1."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Deutschland ist Weltmeister im Recycling: über sechzig Prozent des gesamten Mülls werden recycelt.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Sprecher_1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Liebe Hörer, heute geht es um ein Thema, das uns alle betrifft: Mülltrennung und Recycling."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q1 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Sprecher_1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Deutschland ist Weltmeister im Recycling: über sechzig Prozent des gesamten Mülls werden recycelt."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q2.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Sprecher_1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das funktioniert aber nur, wenn wir zu Hause den Müll richtig trennen."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "In die gelbe Tonne kommen Verpackungen aus Plastik, Metall und Verbundstoff.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Sprecher_1",
+        "speaker_role": "dialogue_speaker",
+        "text": "In die gelbe Tonne kommen Verpackungen aus Plastik, Metall und Verbundstoff."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q2 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Sprecher_1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Papier und Karton kommen in die blaue Tonne oder zum Altpapiercontainer."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q3.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Sprecher_1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Bioabfälle wie Obstreste und Gemüseschalen gehören in die braune oder grüne Biotonne."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "answer_evidence",
-        "text": "In Deutschland sind die Durchschnittstemperaturen in den letzten hundert Jahren um ein Grad gestiegen.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Sprecher_1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Glas wird nach Farben getrennt in die entsprechenden Altglascontainer geworfen."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q3 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Sprecher_1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Alles andere kommt in den Restmüll, der nicht recycelt, sondern verbrannt wird."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q4.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Text 2."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "answer_evidence",
-        "text": "Die Bundesregierung hat sich das Ziel gesetzt, bis zweitausendfünfundvierzig klimaneutral zu sein.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Sprecher_2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Der Klimawandel ist die größte Herausforderung unserer Zeit für die gesamte Menschheit."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q4 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Sprecher_2",
+        "speaker_role": "dialogue_speaker",
+        "text": "In Deutschland sind die Durchschnittstemperaturen in den letzten hundert Jahren um ein Grad gestiegen."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q5.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Sprecher_2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das klingt wenig, hat aber dramatische Auswirkungen auf Natur und Landwirtschaft."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "answer_evidence",
-        "text": "Meeresschildkröten verwechseln Plastiktüten mit Quallen und sterben daran.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Sprecher_2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Mehr Hitzetage im Sommer, stärkere Regenfälle und längere Trockenperioden sind die Folgen."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q5 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Sprecher_2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Bundesregierung hat sich das Ziel gesetzt, bis zweitausendfünfundvierzig klimaneutral zu sein."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q6.",
-        "linkedQuestionId": "Q6"
+        "speaker": "Sprecher_2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Dafür müssen erneuerbare Energien wie Windkraft und Solarenergie massiv ausgebaut werden."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "answer_evidence",
-        "text": "In Deutschland gibt es seit zweitausendzweiundzwanzig ein Verbot von Plastiktüten im Einzelhandel.",
-        "linkedQuestionId": "Q6"
+        "speaker": "Sprecher_2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Jeder Einzelne kann zum Klimaschutz beitragen durch bewussten Konsum und Energiesparen."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q6 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q6"
+        "speaker": "Sprecher_2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Kleine Schritte wie Fahrradfahren statt Autofahren oder das Licht ausschalten helfen schon viel."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q7.",
-        "linkedQuestionId": "Q7"
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Text 3."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "answer_evidence",
-        "text": "Der größte Energieverbraucher im Haushalt ist die Heizung mit über siebzig Prozent.",
-        "linkedQuestionId": "Q7"
+        "speaker": "Sprecher_3",
+        "speaker_role": "dialogue_speaker",
+        "text": "Plastik in den Ozeanen ist ein weltweites Umweltproblem von katastrophalem Ausmaß."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q7 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q7"
+        "speaker": "Sprecher_3",
+        "speaker_role": "dialogue_speaker",
+        "text": "Jedes Jahr gelangen Millionen Tonnen Plastikmüll in die Meere und gefährden die Tierwelt."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q8.",
-        "linkedQuestionId": "Q8"
+        "speaker": "Sprecher_3",
+        "speaker_role": "dialogue_speaker",
+        "text": "Meeresschildkröten verwechseln Plastiktüten mit Quallen und sterben daran."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "answer_evidence",
-        "text": "Senken Sie die Raumtemperatur um nur ein Grad, das spart bereits sechs Prozent Heizkosten.",
-        "linkedQuestionId": "Q8"
+        "speaker": "Sprecher_3",
+        "speaker_role": "dialogue_speaker",
+        "text": "Mikroplastik, winzige Plastikpartikel, findet man mittlerweile sogar in unserem Trinkwasser."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q8 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q8"
+        "speaker": "Sprecher_3",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die EU hat Einwegplastik wie Strohhalme, Plastikbesteck und Wattestäbchen verboten."
       },
       {
-        "speaker": "Sprecher 5",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q9.",
-        "linkedQuestionId": "Q9"
+        "speaker": "Sprecher_3",
+        "speaker_role": "dialogue_speaker",
+        "text": "In Deutschland gibt es seit zweitausendzweiundzwanzig ein Verbot von Plastiktüten im Einzelhandel."
       },
       {
-        "speaker": "Sprecher 5",
-        "speaker_role": "answer_evidence",
-        "text": "Ein Zug verbraucht pro Passagier nur ein Zehntel der Energie eines Autos.",
-        "linkedQuestionId": "Q9"
+        "speaker": "Sprecher_3",
+        "speaker_role": "dialogue_speaker",
+        "text": "Verwenden Sie wiederverwendbare Einkaufstaschen und Trinkflaschen statt Einwegprodukten."
       },
       {
-        "speaker": "Sprecher 5",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q9 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q9"
+        "speaker": "Sprecher_3",
+        "speaker_role": "dialogue_speaker",
+        "text": "Jedes Stück Plastik, das wir vermeiden, ist ein Gewinn für unsere Umwelt und die Meere."
       },
       {
-        "speaker": "Sprecher 5",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q10.",
-        "linkedQuestionId": "Q10"
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Text 4."
       },
       {
-        "speaker": "Sprecher 5",
-        "speaker_role": "answer_evidence",
-        "text": "Wo Autos verschwinden, verbessert sich die Lebensqualität deutlich.",
-        "linkedQuestionId": "Q10"
+        "speaker": "Sprecher_4",
+        "speaker_role": "dialogue_speaker",
+        "text": "Energiesparen im Haushalt schont nicht nur die Umwelt, sondern auch Ihren Geldbeutel."
       },
       {
-        "speaker": "Sprecher 5",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q10 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q10"
+        "speaker": "Sprecher_4",
+        "speaker_role": "dialogue_speaker",
+        "text": "Der größte Energieverbraucher im Haushalt ist die Heizung mit über siebzig Prozent."
       },
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Ende des Hoertexts."
+        "speaker": "Sprecher_4",
+        "speaker_role": "dialogue_speaker",
+        "text": "Senken Sie die Raumtemperatur um nur ein Grad, das spart bereits sechs Prozent Heizkosten."
+      },
+      {
+        "speaker": "Sprecher_4",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die ideale Raumtemperatur liegt bei zwanzig Grad im Wohnzimmer und siebzehn Grad im Schlafzimmer."
+      },
+      {
+        "speaker": "Sprecher_4",
+        "speaker_role": "dialogue_speaker",
+        "text": "Beim Kochen verbrauchen Sie weniger Energie, wenn Sie den Topf mit einem Deckel zudecken."
+      },
+      {
+        "speaker": "Sprecher_4",
+        "speaker_role": "dialogue_speaker",
+        "text": "LED-Lampen verbrauchen bis zu achtzig Prozent weniger Strom als herkömmliche Glühbirnen."
+      },
+      {
+        "speaker": "Sprecher_4",
+        "speaker_role": "dialogue_speaker",
+        "text": "Standby-Verbrauch ist ein oft unterschätzter Energiefresser im modernen Haushalt."
+      },
+      {
+        "speaker": "Sprecher_4",
+        "speaker_role": "dialogue_speaker",
+        "text": "Schalten Sie Geräte komplett aus statt sie im Standby zu lassen, das spart bis zu hundert Euro im Jahr."
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Text 5."
+      },
+      {
+        "speaker": "Sprecher_5",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Deutsche Bahn wird manchmal kritisiert, aber sie ist eine der umweltfreundlichsten Verkehrsmittel."
+      },
+      {
+        "speaker": "Sprecher_5",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ein Zug verbraucht pro Passagier nur ein Zehntel der Energie eines Autos."
+      },
+      {
+        "speaker": "Sprecher_5",
+        "speaker_role": "dialogue_speaker",
+        "text": "Trotzdem fahren noch immer siebzig Prozent der Deutschen regelmäßig mit dem eigenen Auto."
+      },
+      {
+        "speaker": "Sprecher_5",
+        "speaker_role": "dialogue_speaker",
+        "text": "E-Autos werden immer beliebter, aber sie lösen nicht das Problem der verstopften Straßen in den Städten."
+      },
+      {
+        "speaker": "Sprecher_5",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wirkliche Veränderung braucht einen Mix aus besserem ÖPNV, Radwegen und Carsharing."
+      },
+      {
+        "speaker": "Sprecher_5",
+        "speaker_role": "dialogue_speaker",
+        "text": "In vielen deutschen Städten gibt es bereits autofreie Bereiche und verkehrsberuhigte Zonen."
+      },
+      {
+        "speaker": "Sprecher_5",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Erfahrung zeigt: Wo Autos verschwinden, verbessert sich die Lebensqualität deutlich."
+      },
+      {
+        "speaker": "Sprecher_5",
+        "speaker_role": "dialogue_speaker",
+        "text": "Weniger Lärm, sauberere Luft und mehr Platz für Menschen statt für Maschinen."
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Ende Teil eins."
       }
     ]
   },
@@ -430,7 +476,7 @@
       "id": "l-b1-goethe-010-t1-lo-1",
       "cefrLevel": "B1",
       "skill": "listening",
-      "canDoVi": "Toi co the luyen nghe hieu o trinh do B1 qua chu de \"Umwelt und Recycling\".",
+      "canDoVi": "Tôi có thể luyện nghe hiểu ở trình độ B1 qua chủ đề \"Umwelt und Recycling\".",
       "canDoDe": "Ich kann Hoeren auf Niveau B1 zum Thema \"Umwelt und Recycling\" ueben.",
       "linkedContentIds": [
         "L-B1-GOETHE-010-T1"

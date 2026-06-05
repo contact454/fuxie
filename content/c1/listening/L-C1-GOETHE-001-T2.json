@@ -110,93 +110,172 @@
     ]
   },
   "transcript": {
-    "type": "full_reconstructed_transcript",
+    "type": "studio_source_transcript",
     "status": "complete",
-    "source": "reconstructed_full_script",
-    "quality": "release_candidate_reconstructed",
-    "note": "Full learner-visible reconstructed script created from existing question evidence because original studio scripts are not present in the repository. Replace with studio transcript if original audio scripts become available.",
+    "source": "studio_source_script",
+    "quality": "source_verified",
+    "sourceScript": "data/scripts/C1/Teil2-Experteninterview/L-C1-GOETHE-001-T2.json",
+    "note": "Transcript replaced from source script by scripts/apply-source-transcripts.ts.",
     "lines": [
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Der folgende anspruchsvolle Hoertext behandelt Handschrift versus digitales Schreiben. Achten Sie auf Aussage, Kontext und implizite Bedeutung."
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sie hören ein Interview. Dazu gibt es neun Aufgaben. Stimmt die Aussage, stimmt sie nicht, oder wird dazu nichts gesagt? Sie hören das Interview zweimal."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q1.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Guten Tag, Frau Professorin Neumann. Sie forschen seit fünfzehn Jahren zur Motorik des Schreibens an der Universität Heidelberg."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Der Effekt zeigt sich in allen Altersgruppen und Kontexten, von der Grundschule bis zur Erwachsenenbildung.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Vielen Dank für die Einladung. Die Handschrift ist ein faszinierender Forschungsgegenstand an der Schnittstelle von Motorik und Kognition."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q1 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Was passiert neurologisch gesehen beim Handschreiben, das beim Tippen auf einer Tastatur nicht stattfindet?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q2.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Beim Handschreiben werden gleichzeitig motorische, visülle und kognitive Hirnareale aktiviert und miteinander vernetzt."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Das liegt an einem Missverständnis: Digitalisierung wird mit Fortschritt gleichgesetzt und Handschrift mit Rückständigkeit.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Diese multimodale Aktivierung erzeugt deutlich tiefere und langlebigere Gedächtnisspuren als das Tippen."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q2 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Können Sie das an einem konkreten Beispiel aus Ihrer Forschungspraxis veranschaulichen?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q3.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "In einer unserer Studien haben wir Studierende gebeten, Vorlesungsinhalte entweder per Hand oder mit dem Laptop mitzuschreiben."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Das hat auch Auswirkungen über das Schreiben hinaus, beispielsweise auf das Schneiden mit der Schere oder das Binden von Schuhbändern.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Handschreiber schnitten in konzeptüllen Verständnisfragen eine Woche später signifikant besser ab als die Laptop-Gruppe."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q3 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das ist beeindruckend. Gilt dieses Ergebnis nur für das universitäre Lernen oder auch für andere Kontexte?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q4.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Der Effekt zeigt sich in allen Altersgruppen und Kontexten, von der Grundschule bis zur Erwachsenenbildung."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Die Handschrift wird sich transformieren, aber sie wird nicht verschwinden, weil sie ein fundamentaler Teil unserer kognitiven Architektur ist.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Besonders ausgeprägt ist der Vorteil beim Lernen komplexer, abstrakter Zusammenhänge und neür Fachbegriffe."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q4 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wie erklären Sie sich, dass trotz dieser Evidenz immer mehr Schulen vollständig auf digitale Medien umstellen?"
       },
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Ende des Hoertexts."
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das liegt an einem Missverständnis: Digitalisierung wird mit Fortschritt gleichgesetzt und Handschrift mit Rückständigkeit."
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Dabei zeigt die Forschung eindeutig, dass der kluge Einsatz beider Werkzeuge die besten Lernergebnisse erzielt."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wie steht es um die Schreibmotorik der heutigen Kinder im Vergleich zu früheren Generationen?"
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wir beobachten eine deutliche Verschlechterung der feinmotorischen Fähigkeiten bei Schulanfängern in den letzten zehn Jahren."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Kinder verbringen mehr Zeit mit Touchscreens, die nur Wisch- und Tippbewegungen erfordern, aber keine Stifthaltung."
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das hat auch Auswirkungen über das Schreiben hinaus, beispielsweise auf das Schneiden mit der Schere oder das Binden von Schuhbändern."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Welche konkreten Empfehlungen geben Sie an Lehrkräfte und Bildungspolitiker weiter?"
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Erstens: Die Schreibschrift nicht aus dem Lehrplan streichen, sondern als kognitive Ressource bewusst einsetzen."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Zweitens: Digitale Medien ab der dritten Klasse ergänzend einführen, nicht als Ersatz für das Handschreiben."
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Drittens: Die Lehrerausbildung muss neurowissenschaftliche Erkenntnisse zur Handschrift systematisch integrieren."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Was sagen Sie zu Eltern, die sich fragen, ob Handschreibübungen noch zeitgemäß sind?"
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Handschreiben ist ein Geschenk an das Gehirn Ihres Kindes. Es fördert Konzentration, Kreativität und tiefes Verständnis."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Lassen Sie Ihr Kind täglich zehn Minuten mit der Hand schreiben, ob Geschichten, Tagebuch oder Briefe an Großeltern."
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Investition in diese kurze tägliche Praxis zahlt sich nachweislich in allen schulischen Fächern aus."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Was erhoffen Sie sich für die Zukunft der Handschrift in einer zunehmend digitalisierten Gesellschaft?"
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ich wünsche mir eine Bildungspolitik, die auf Evidenz statt auf Modetrends basiert und die Stärken beider Schreibformen nutzt."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Handschrift wird sich transformieren, aber sie wird nicht verschwinden, weil sie ein fundamentaler Teil unserer kognitiven Architektur ist."
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Vielen Dank für dieses aufschlussreiche Gespräch, Frau Professorin Neumann!"
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Ende Teil zwei."
       }
     ]
   },
@@ -213,7 +292,7 @@
       "id": "l-c1-goethe-001-t2-lo-1",
       "cefrLevel": "C1",
       "skill": "listening",
-      "canDoVi": "Toi co the luyen nghe hieu o trinh do C1 qua chu de \"Handschrift versus digitales Schreiben\".",
+      "canDoVi": "Tôi có thể luyện nghe hiểu ở trình độ C1 qua chủ đề \"Handschrift versus digitales Schreiben\".",
       "canDoDe": "Ich kann Hoeren auf Niveau C1 zum Thema \"Handschrift versus digitales Schreiben\" ueben.",
       "linkedContentIds": [
         "L-C1-GOETHE-001-T2"

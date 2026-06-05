@@ -169,111 +169,197 @@
     ]
   },
   "transcript": {
-    "type": "full_reconstructed_transcript",
+    "type": "studio_source_transcript",
     "status": "complete",
-    "source": "reconstructed_full_script",
-    "quality": "release_candidate_reconstructed",
-    "note": "Full learner-visible reconstructed script created from existing question evidence because original studio scripts are not present in the repository. Replace with studio transcript if original audio scripts become available.",
+    "source": "studio_source_script",
+    "quality": "source_verified",
+    "sourceScript": "data/scripts/A1/Teil3-Telefonansagen/L-A1-GOETHE-008-T3.json",
+    "note": "Transcript replaced from source script by scripts/apply-source-transcripts.ts.",
     "lines": [
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Hoeren Sie eine kurze Information zum Thema Wochenendplan besprechen."
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sie hören fünf Nachrichten am Telefon. Zu jeder Nachricht gibt es eine Aufgabe. Kreuzen Sie die richtige Antwort an. Sie hören jeden Text zweimal."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q1.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Nachricht 1."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Treffen wir uns um elf Uhr an der U-Bahn-Station?",
-        "linkedQuestionId": "Q1"
+        "speaker": "Anrufer",
+        "speaker_role": "dialogue_speaker",
+        "text": "Hallo Fatima, hier ist Lena! Was machst du am Wochenende?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q1 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Anrufer",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wollen wir am Samstag zusammen in die Stadt gehen?"
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q2.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Anrufer",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wir können shoppen und dann Kaffee trinken."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "answer_evidence",
-        "text": "Die Party beginnt um fünfzehn Uhr.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Anrufer",
+        "speaker_role": "dialogue_speaker",
+        "text": "Treffen wir uns um elf Uhr an der U-Bahn-Station?"
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q2 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Anrufer",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ruf mich an oder schreib mir eine Nachricht!"
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q3.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Anrufer",
+        "speaker_role": "dialogue_speaker",
+        "text": "Bis Samstag! Ich freu mich!"
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "answer_evidence",
-        "text": "Der Eintritt ist frei!",
-        "linkedQuestionId": "Q3"
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Nachricht 2."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q3 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Anrufer",
+        "speaker_role": "dialogue_speaker",
+        "text": "Hey Leute, ich mache am Sonntag eine kleine Party bei mir."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q4.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Anrufer",
+        "speaker_role": "dialogue_speaker",
+        "text": "Es gibt Grillen im Garten. Bringt gute Laune mit!"
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "answer_evidence",
-        "text": "Von zehn bis zwölf Uhr liest ein Autor aus seinem neuen Kinderbuch vor.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Anrufer",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Party beginnt um fünfzehn Uhr."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q4 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Anrufer",
+        "speaker_role": "dialogue_speaker",
+        "text": "Meine Adresse ist Parkstraße zwölf, zweiter Stock."
       },
       {
-        "speaker": "Sprecher 5",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q5.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Anrufer",
+        "speaker_role": "dialogue_speaker",
+        "text": "Sagt bitte Bescheid, ob ihr kommt, damit ich genug einkaufe."
       },
       {
-        "speaker": "Sprecher 5",
-        "speaker_role": "answer_evidence",
-        "text": "Am Samstag fahren wir alle zusammen zum See!",
-        "linkedQuestionId": "Q5"
+        "speaker": "Anrufer",
+        "speaker_role": "dialogue_speaker",
+        "text": "Bis Sonntag! Ali."
       },
       {
-        "speaker": "Sprecher 5",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q5 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Nachricht 3."
       },
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Ende des Hoertexts."
+        "speaker": "Anrufer",
+        "speaker_role": "dialogue_speaker",
+        "text": "Hallo Maria, hier ist Pedro. Ich habe eine tolle Idee für Sonntag."
+      },
+      {
+        "speaker": "Anrufer",
+        "speaker_role": "dialogue_speaker",
+        "text": "Es gibt ein Open-Air-Konzert im Stadtpark. Der Eintritt ist frei!"
+      },
+      {
+        "speaker": "Anrufer",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das Konzert beginnt um sechzehn Uhr und dauert bis zwanzig Uhr."
+      },
+      {
+        "speaker": "Anrufer",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wir können vorher ein Picknick machen."
+      },
+      {
+        "speaker": "Anrufer",
+        "speaker_role": "dialogue_speaker",
+        "text": "Was meinst du? Hast du Lust? Schreib mir!"
+      },
+      {
+        "speaker": "Anrufer",
+        "speaker_role": "dialogue_speaker",
+        "text": "Tschüss und hoffentlich bis Sonntag!"
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Nachricht 4."
+      },
+      {
+        "speaker": "Anrufer",
+        "speaker_role": "dialogue_speaker",
+        "text": "Hallo, hier ist die Bibliothek in der Hauptstraße."
+      },
+      {
+        "speaker": "Anrufer",
+        "speaker_role": "dialogue_speaker",
+        "text": "Am Samstag haben wir eine besondere Veranstaltung für Kinder."
+      },
+      {
+        "speaker": "Anrufer",
+        "speaker_role": "dialogue_speaker",
+        "text": "Von zehn bis zwölf Uhr liest ein Autor aus seinem neuen Kinderbuch vor."
+      },
+      {
+        "speaker": "Anrufer",
+        "speaker_role": "dialogue_speaker",
+        "text": "Der Eintritt ist frei. Bitte kommen Sie pünktlich."
+      },
+      {
+        "speaker": "Anrufer",
+        "speaker_role": "dialogue_speaker",
+        "text": "Am Sonntag ist die Bibliothek wie gewohnt geschlossen."
+      },
+      {
+        "speaker": "Anrufer",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wir freuen uns auf Ihren Besuch!"
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Nachricht 5."
+      },
+      {
+        "speaker": "Anrufer",
+        "speaker_role": "dialogue_speaker",
+        "text": "Hey, hier ist Thomas. Am Samstag fahren wir alle zusammen zum See!"
+      },
+      {
+        "speaker": "Anrufer",
+        "speaker_role": "dialogue_speaker",
+        "text": "Treffpunkt ist um neun Uhr am Bahnhof. Wir fahren mit dem Zug."
+      },
+      {
+        "speaker": "Anrufer",
+        "speaker_role": "dialogue_speaker",
+        "text": "Bringt Badesachen und etwas zu essen mit."
+      },
+      {
+        "speaker": "Anrufer",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das Wetter soll sonnig und warm werden, bis achtundzwanzig Grad!"
+      },
+      {
+        "speaker": "Anrufer",
+        "speaker_role": "dialogue_speaker",
+        "text": "Yuki, Anna und Pedro kommen auch mit."
+      },
+      {
+        "speaker": "Anrufer",
+        "speaker_role": "dialogue_speaker",
+        "text": "Sag Bescheid, ob du dabei bist! Bis Samstag!"
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Ende des Hörverstehens."
       }
     ]
   },
@@ -290,7 +376,7 @@
       "id": "l-a1-goethe-008-t3-lo-1",
       "cefrLevel": "A1",
       "skill": "listening",
-      "canDoVi": "Toi co the luyen nghe hieu o trinh do A1 qua chu de \"Wochenendplan besprechen\".",
+      "canDoVi": "Tôi có thể luyện nghe hiểu ở trình độ A1 qua chủ đề \"Wochenendplan besprechen\".",
       "canDoDe": "Ich kann Hoeren auf Niveau A1 zum Thema \"Wochenendplan besprechen\" ueben.",
       "linkedContentIds": [
         "L-A1-GOETHE-008-T3"

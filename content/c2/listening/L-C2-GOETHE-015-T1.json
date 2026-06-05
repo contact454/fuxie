@@ -66,7 +66,7 @@
       "explanation": {
         "de": "Die Aussage ist falsch. Obwohl die Position in Athen (Europa) eingeführt wurde, stellt der Bericht explizit klar, dass das Konzept 'aus dem amerikanischen Krisenmanagement übernommen wurde'. Es handelt sich also nicht um eine originär europäische, sondern um eine adaptierte amerikanische Idee.",
         "vi": "Nhận định này sai. Mặc dù chức vụ này được giới thiệu ở Athens (Châu Âu), bài báo cáo nêu rõ rằng khái niệm này 'được tiếp thu từ quản lý khủng hoảng của Mỹ'. Do đó, đây không phải là một sáng kiến thuần túy của châu Âu, mà là một ý tưởng được điều chỉnh từ Mỹ.",
-        "key_evidence": "Dieses Konzept, das aus dem amerikanischen Krisenmanagement übernommen wurde, könnte auch für deutsche Großstädte ein sinnvolles Modell darstellen...",
+        "key_evidence": "Dieses Konzept, das aus dem amerikanischen Krisenmanagement übernommen wurde, könnte auch für deutsche Großstädte ein sinnvolles Modell darstellen",
         "key_vocabulary": []
       }
     }
@@ -110,93 +110,347 @@
     ]
   },
   "transcript": {
-    "type": "full_reconstructed_transcript",
+    "type": "studio_source_transcript",
     "status": "complete",
-    "source": "reconstructed_full_script",
-    "quality": "release_candidate_reconstructed",
-    "note": "Full learner-visible reconstructed script created from existing question evidence because original studio scripts are not present in the repository. Replace with studio transcript if original audio scripts become available.",
+    "source": "studio_source_script",
+    "quality": "source_verified",
+    "sourceScript": "data/scripts/C2/Teil1-Radiosendungen/L-C2-GOETHE-015-T1.json",
+    "note": "Transcript replaced from source script by scripts/apply-source-transcripts.ts.",
     "lines": [
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Der folgende anspruchsvolle Hoertext behandelt Architektur und kollektives Gedächtnis. Achten Sie auf Aussage, Kontext und implizite Bedeutung."
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sie hören fünf Radiosendungen. Zu jeder Sendung gibt es drei Aufgaben. Kreuzen Sie ja oder nein an. Sie hören jede Sendung einmal."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q1.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sendung 1."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Diese Kaltluftkorridore werden durch strenge Bebauungsvorschriften geschützt, die eine Verdichtung entlang dieser sensiblen Schneisen verbieten, was immer wieder zu Konflikten mit der Stadtentwicklung und dem Wohnungsbau führt.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Der städtische Wärmeinseleffekt, ein Phänomen, das bereits im neunzehnten Jahrhundert erstmals wissenschaftlich dokumentiert wurde, gewinnt im Kontext des fortschreitenden Klimawandels eine bedrohliche neue Dimension."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q1 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "In den Sommermonaten kann die Temperatur in deutschen Innenstädten bis zu zehn Grad Celsius höher liegen als im ländlichen Umland, was erhebliche gesundheitliche Risiken insbesondere für ältere Menschen und Kleinkinder mit sich bringt."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q2.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Ursachen sind vielfältig: versiegelte Flächen absorbieren und speichern die Sonnenwärme, während der fehlende Pflanzenbewuchs die kühlende Verdunstung reduziert und die Abwärme von Verkehr und Gebäuden das Problem verstärkt."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "answer_evidence",
-        "text": "Dass eine Großstadt den Klimawandel nicht allein aufhalten kann, sondern sich an seine Folgen anpassen muss, hat Stuttgart früher als die meisten anderen Kommunen in Deutschland erkannt und in politisches Handeln umgesetzt.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Hitzewellen der letzten Jahre haben in Deutschland zu einem signifikanten Anstieg der Mortalität geführt, wobei die Übersterblichkeit vorwiegend in stark verdichteten urbanen Gebieten zu verzeichnen war."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q2 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Stadtplaner und Klimaforscher arbeiten deshalb intensiv an Konzepten zur Reduktion des Wärmeinseleffekts, die von großflächiger Dachbegrünung über Frischluftschneisen bis hin zur Entsiegelung von Verkehrsflächen reichen."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q3.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Besonders innovative Ansätze zur Bekämpfung der urbanen Überhitzung verfolgt die Stadt Stuttgart, die aufgrund ihrer Kessellage seit Jahrzehnten mit extremer sommerlicher Hitzebelastung zu kämpfen hat."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "answer_evidence",
-        "text": "Die konsequente Umsetzung stadtklimatologischer Erkenntnisse in die Bauleitplanung ist deshalb keine Frage des politischen Willens mehr, sondern eine zwingende Notwendigkeit zum Schutz menschlichen Lebens.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Stuttgarts Klimaanpassungsstrategie umfasst die Einrichtung sogenannter Kaltluftkorridore, die kühle Luft von den umliegenden Hängen in die überhitzte Innenstadt leiten und dort für Abkühlung sorgen."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q3 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Diese Kaltluftkorridore werden durch strenge Bebauungsvorschriften geschützt, die eine Verdichtung entlang dieser sensiblen Schneisen verbieten, was immer wieder zu Konflikten mit der Stadtentwicklung und dem Wohnungsbau führt."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q4.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ein weiteres Element der Stuttgarter Strategie ist die konsequente Begrünung von Dächern und Fassaden, die nicht nur die Temperatur senkt, sondern auch die Luftqualität verbessert und die Biodiversität in der Stadt fördert."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "answer_evidence",
-        "text": "Dieses Konzept, das aus dem amerikanischen Krisenmanagement übernommen wurde, könnte auch für deutsche Großstädte ein sinnvolles Modell darstellen...",
-        "linkedQuestionId": "Q4"
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Dass eine Großstadt den Klimawandel nicht allein aufhalten kann, sondern sich an seine Folgen anpassen muss, hat Stuttgart früher als die meisten anderen Kommunen in Deutschland erkannt und in politisches Handeln umgesetzt."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q4 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Auf internationaler Ebene hat die Debatte über Hitzeresilienz urbaner Räume durch die extremen Hitzewellen in Südeuropa und dem Nahen Osten in den letzten Jahren an Dringlichkeit gewonnen."
       },
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Ende des Hoertexts."
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "In Athen wurde erstmals eine sogenannte Chief Heat Officer ernannt, deren Aufgabe es ist, die Hitzeschutzstrategie der Stadt zu koordinieren und die Bevölkerung in Hitzeperioden zu informieren und zu schützen."
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sendung 2."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Dieses Konzept, das aus dem amerikanischen Krisenmanagement übernommen wurde, könnte auch für deutsche Großstädte ein sinnvolles Modell darstellen, da die bisherigen Hitzeaktionspläne vielerorts als unzureichend gelten."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Weltgesundheitsorganisation hat hitzebedingte Gesundheitsrisiken als eine der gravierendsten Bedrohungen der öffentlichen Gesundheit im einundzwanzigsten Jahrhundert klassifiziert."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die konsequente Umsetzung stadtklimatologischer Erkenntnisse in die Bauleitplanung ist deshalb keine Frage des politischen Willens mehr, sondern eine zwingende Notwendigkeit zum Schutz menschlichen Lebens."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Der städtische Wärmeinseleffekt, ein Phänomen, das bereits im neunzehnten Jahrhundert erstmals wissenschaftlich dokumentiert wurde, gewinnt im Kontext des fortschreitenden Klimawandels eine bedrohliche neue Dimension."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "In den Sommermonaten kann die Temperatur in deutschen Innenstädten bis zu zehn Grad Celsius höher liegen als im ländlichen Umland, was erhebliche gesundheitliche Risiken insbesondere für ältere Menschen und Kleinkinder mit sich bringt."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Ursachen sind vielfältig: versiegelte Flächen absorbieren und speichern die Sonnenwärme, während der fehlende Pflanzenbewuchs die kühlende Verdunstung reduziert und die Abwärme von Verkehr und Gebäuden das Problem verstärkt."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Hitzewellen der letzten Jahre haben in Deutschland zu einem signifikanten Anstieg der Mortalität geführt, wobei die Übersterblichkeit vorwiegend in stark verdichteten urbanen Gebieten zu verzeichnen war."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Stadtplaner und Klimaforscher arbeiten deshalb intensiv an Konzepten zur Reduktion des Wärmeinseleffekts, die von großflächiger Dachbegrünung über Frischluftschneisen bis hin zur Entsiegelung von Verkehrsflächen reichen."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Besonders innovative Ansätze zur Bekämpfung der urbanen Überhitzung verfolgt die Stadt Stuttgart, die aufgrund ihrer Kessellage seit Jahrzehnten mit extremer sommerlicher Hitzebelastung zu kämpfen hat."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Stuttgarts Klimaanpassungsstrategie umfasst die Einrichtung sogenannter Kaltluftkorridore, die kühle Luft von den umliegenden Hängen in die überhitzte Innenstadt leiten und dort für Abkühlung sorgen."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Diese Kaltluftkorridore werden durch strenge Bebauungsvorschriften geschützt, die eine Verdichtung entlang dieser sensiblen Schneisen verbieten, was immer wieder zu Konflikten mit der Stadtentwicklung und dem Wohnungsbau führt."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ein weiteres Element der Stuttgarter Strategie ist die konsequente Begrünung von Dächern und Fassaden, die nicht nur die Temperatur senkt, sondern auch die Luftqualität verbessert und die Biodiversität in der Stadt fördert."
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sendung 3."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Dass eine Großstadt den Klimawandel nicht allein aufhalten kann, sondern sich an seine Folgen anpassen muss, hat Stuttgart früher als die meisten anderen Kommunen in Deutschland erkannt und in politisches Handeln umgesetzt."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Auf internationaler Ebene hat die Debatte über Hitzeresilienz urbaner Räume durch die extremen Hitzewellen in Südeuropa und dem Nahen Osten in den letzten Jahren an Dringlichkeit gewonnen."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "In Athen wurde erstmals eine sogenannte Chief Heat Officer ernannt, deren Aufgabe es ist, die Hitzeschutzstrategie der Stadt zu koordinieren und die Bevölkerung in Hitzeperioden zu informieren und zu schützen."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Dieses Konzept, das aus dem amerikanischen Krisenmanagement übernommen wurde, könnte auch für deutsche Großstädte ein sinnvolles Modell darstellen, da die bisherigen Hitzeaktionspläne vielerorts als unzureichend gelten."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Weltgesundheitsorganisation hat hitzebedingte Gesundheitsrisiken als eine der gravierendsten Bedrohungen der öffentlichen Gesundheit im einundzwanzigsten Jahrhundert klassifiziert."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die konsequente Umsetzung stadtklimatologischer Erkenntnisse in die Bauleitplanung ist deshalb keine Frage des politischen Willens mehr, sondern eine zwingende Notwendigkeit zum Schutz menschlichen Lebens."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Der städtische Wärmeinseleffekt, ein Phänomen, das bereits im neunzehnten Jahrhundert erstmals wissenschaftlich dokumentiert wurde, gewinnt im Kontext des fortschreitenden Klimawandels eine bedrohliche neue Dimension."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "In den Sommermonaten kann die Temperatur in deutschen Innenstädten bis zu zehn Grad Celsius höher liegen als im ländlichen Umland, was erhebliche gesundheitliche Risiken insbesondere für ältere Menschen und Kleinkinder mit sich bringt."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Ursachen sind vielfältig: versiegelte Flächen absorbieren und speichern die Sonnenwärme, während der fehlende Pflanzenbewuchs die kühlende Verdunstung reduziert und die Abwärme von Verkehr und Gebäuden das Problem verstärkt."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Hitzewellen der letzten Jahre haben in Deutschland zu einem signifikanten Anstieg der Mortalität geführt, wobei die Übersterblichkeit vorwiegend in stark verdichteten urbanen Gebieten zu verzeichnen war."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Stadtplaner und Klimaforscher arbeiten deshalb intensiv an Konzepten zur Reduktion des Wärmeinseleffekts, die von großflächiger Dachbegrünung über Frischluftschneisen bis hin zur Entsiegelung von Verkehrsflächen reichen."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Besonders innovative Ansätze zur Bekämpfung der urbanen Überhitzung verfolgt die Stadt Stuttgart, die aufgrund ihrer Kessellage seit Jahrzehnten mit extremer sommerlicher Hitzebelastung zu kämpfen hat."
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sendung 4."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Stuttgarts Klimaanpassungsstrategie umfasst die Einrichtung sogenannter Kaltluftkorridore, die kühle Luft von den umliegenden Hängen in die überhitzte Innenstadt leiten und dort für Abkühlung sorgen."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Diese Kaltluftkorridore werden durch strenge Bebauungsvorschriften geschützt, die eine Verdichtung entlang dieser sensiblen Schneisen verbieten, was immer wieder zu Konflikten mit der Stadtentwicklung und dem Wohnungsbau führt."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ein weiteres Element der Stuttgarter Strategie ist die konsequente Begrünung von Dächern und Fassaden, die nicht nur die Temperatur senkt, sondern auch die Luftqualität verbessert und die Biodiversität in der Stadt fördert."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Dass eine Großstadt den Klimawandel nicht allein aufhalten kann, sondern sich an seine Folgen anpassen muss, hat Stuttgart früher als die meisten anderen Kommunen in Deutschland erkannt und in politisches Handeln umgesetzt."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Auf internationaler Ebene hat die Debatte über Hitzeresilienz urbaner Räume durch die extremen Hitzewellen in Südeuropa und dem Nahen Osten in den letzten Jahren an Dringlichkeit gewonnen."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "In Athen wurde erstmals eine sogenannte Chief Heat Officer ernannt, deren Aufgabe es ist, die Hitzeschutzstrategie der Stadt zu koordinieren und die Bevölkerung in Hitzeperioden zu informieren und zu schützen."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Dieses Konzept, das aus dem amerikanischen Krisenmanagement übernommen wurde, könnte auch für deutsche Großstädte ein sinnvolles Modell darstellen, da die bisherigen Hitzeaktionspläne vielerorts als unzureichend gelten."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Weltgesundheitsorganisation hat hitzebedingte Gesundheitsrisiken als eine der gravierendsten Bedrohungen der öffentlichen Gesundheit im einundzwanzigsten Jahrhundert klassifiziert."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die konsequente Umsetzung stadtklimatologischer Erkenntnisse in die Bauleitplanung ist deshalb keine Frage des politischen Willens mehr, sondern eine zwingende Notwendigkeit zum Schutz menschlichen Lebens."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Der städtische Wärmeinseleffekt, ein Phänomen, das bereits im neunzehnten Jahrhundert erstmals wissenschaftlich dokumentiert wurde, gewinnt im Kontext des fortschreitenden Klimawandels eine bedrohliche neue Dimension."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "In den Sommermonaten kann die Temperatur in deutschen Innenstädten bis zu zehn Grad Celsius höher liegen als im ländlichen Umland, was erhebliche gesundheitliche Risiken insbesondere für ältere Menschen und Kleinkinder mit sich bringt."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Ursachen sind vielfältig: versiegelte Flächen absorbieren und speichern die Sonnenwärme, während der fehlende Pflanzenbewuchs die kühlende Verdunstung reduziert und die Abwärme von Verkehr und Gebäuden das Problem verstärkt."
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sendung 5."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Hitzewellen der letzten Jahre haben in Deutschland zu einem signifikanten Anstieg der Mortalität geführt, wobei die Übersterblichkeit vorwiegend in stark verdichteten urbanen Gebieten zu verzeichnen war."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Stadtplaner und Klimaforscher arbeiten deshalb intensiv an Konzepten zur Reduktion des Wärmeinseleffekts, die von großflächiger Dachbegrünung über Frischluftschneisen bis hin zur Entsiegelung von Verkehrsflächen reichen."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Besonders innovative Ansätze zur Bekämpfung der urbanen Überhitzung verfolgt die Stadt Stuttgart, die aufgrund ihrer Kessellage seit Jahrzehnten mit extremer sommerlicher Hitzebelastung zu kämpfen hat."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Stuttgarts Klimaanpassungsstrategie umfasst die Einrichtung sogenannter Kaltluftkorridore, die kühle Luft von den umliegenden Hängen in die überhitzte Innenstadt leiten und dort für Abkühlung sorgen."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Diese Kaltluftkorridore werden durch strenge Bebauungsvorschriften geschützt, die eine Verdichtung entlang dieser sensiblen Schneisen verbieten, was immer wieder zu Konflikten mit der Stadtentwicklung und dem Wohnungsbau führt."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ein weiteres Element der Stuttgarter Strategie ist die konsequente Begrünung von Dächern und Fassaden, die nicht nur die Temperatur senkt, sondern auch die Luftqualität verbessert und die Biodiversität in der Stadt fördert."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Dass eine Großstadt den Klimawandel nicht allein aufhalten kann, sondern sich an seine Folgen anpassen muss, hat Stuttgart früher als die meisten anderen Kommunen in Deutschland erkannt und in politisches Handeln umgesetzt."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Auf internationaler Ebene hat die Debatte über Hitzeresilienz urbaner Räume durch die extremen Hitzewellen in Südeuropa und dem Nahen Osten in den letzten Jahren an Dringlichkeit gewonnen."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "In Athen wurde erstmals eine sogenannte Chief Heat Officer ernannt, deren Aufgabe es ist, die Hitzeschutzstrategie der Stadt zu koordinieren und die Bevölkerung in Hitzeperioden zu informieren und zu schützen."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Dieses Konzept, das aus dem amerikanischen Krisenmanagement übernommen wurde, könnte auch für deutsche Großstädte ein sinnvolles Modell darstellen, da die bisherigen Hitzeaktionspläne vielerorts als unzureichend gelten."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Weltgesundheitsorganisation hat hitzebedingte Gesundheitsrisiken als eine der gravierendsten Bedrohungen der öffentlichen Gesundheit im einundzwanzigsten Jahrhundert klassifiziert."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die konsequente Umsetzung stadtklimatologischer Erkenntnisse in die Bauleitplanung ist deshalb keine Frage des politischen Willens mehr, sondern eine zwingende Notwendigkeit zum Schutz menschlichen Lebens."
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Ende Teil eins."
       }
     ]
   },
@@ -213,7 +467,7 @@
       "id": "l-c2-goethe-015-t1-lo-1",
       "cefrLevel": "C2",
       "skill": "listening",
-      "canDoVi": "Toi co the luyen nghe hieu o trinh do C2 qua chu de \"Architektur und kollektives Gedächtnis\".",
+      "canDoVi": "Tôi có thể luyện nghe hiểu ở trình độ C2 qua chủ đề \"Architektur und kollektives Gedächtnis\".",
       "canDoDe": "Ich kann Hoeren auf Niveau C2 zum Thema \"Architektur und kollektives Gedächtnis\" ueben.",
       "linkedContentIds": [
         "L-C2-GOETHE-015-T1"
