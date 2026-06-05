@@ -236,6 +236,7 @@ function ExamActiveSession({
         Record<string, Record<string, unknown>>
     >({})
     const [showSubmitModal, setShowSubmitModal] = useState(false)
+    const [submitError, setSubmitError] = useState<string | null>(null)
 
     const totalMs = exam.totalMinutes * 60 * 1000
     const totalTasks = exam.sections.reduce((s, sec) => s + sec.tasks.length, 0)
@@ -262,6 +263,7 @@ function ExamActiveSession({
         submitInFlightRef.current = true
         onSubmitStart()
         progressApiRef.current?.markSubmitting()
+        setSubmitError(null)
 
         try {
             const allTasks = exam.sections.flatMap(s => s.tasks)
@@ -275,6 +277,9 @@ function ExamActiveSession({
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ attemptId, answers: answerPayload }),
             })
+            if (!res.ok) {
+                throw new Error('Nộp bài không thành công / Einreichen fehlgeschlagen')
+            }
             const data = await res.json()
             if (data.success) {
                 progressApiRef.current?.clear()
@@ -284,11 +289,12 @@ function ExamActiveSession({
                 // documented in `app/api/v1/exams/[examId]/submit/route.ts`.
                 onSubmitSuccess(data.data as ExamSubmitResult)
             } else {
-                throw new Error(data.error ?? 'Submit failed')
+                throw new Error(data.error ?? 'Nộp bài không thành công / Einreichen fehlgeschlagen')
             }
-        } catch (err) {
+        } catch (err: any) {
             console.error('Submit error:', err)
             submitInFlightRef.current = false
+            setSubmitError(err?.message || 'Lỗi kết nối. Vui lòng thử lại. / Verbindungsfehler. Bitte versuche es erneut.')
             onSubmitFail()
         }
     }, [attemptId, exam, examId, onSubmitFail, onSubmitStart, onSubmitSuccess])
@@ -370,6 +376,14 @@ function ExamActiveSession({
                 isSubmitting || showSubmitModal || progress.isPaused
             }
         >
+            {submitError && (
+                <div
+                    data-role="exam-submit-error"
+                    className="mb-4 rounded-xl border border-red-200 bg-red-50 p-4 text-sm font-semibold text-red-700"
+                >
+                    ⚠️ {submitError}
+                </div>
+            )}
             {/* Section tabs — neutral surface, deep blue active state. */}
             <div
                 data-role="exam-section-tabs"
