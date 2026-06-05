@@ -149,111 +149,197 @@
     ]
   },
   "transcript": {
-    "type": "full_reconstructed_transcript",
+    "type": "studio_source_transcript",
     "status": "complete",
-    "source": "reconstructed_full_script",
-    "quality": "release_candidate_reconstructed",
-    "note": "Full learner-visible reconstructed script created from existing question evidence because original studio scripts are not present in the repository. Replace with studio transcript if original audio scripts become available.",
+    "source": "studio_source_script",
+    "quality": "source_verified",
+    "sourceScript": "data/scripts/A1/Teil3-Telefonansagen/L-A1-GOETHE-004-T3.json",
+    "note": "Transcript replaced from source script by scripts/apply-source-transcripts.ts.",
     "lines": [
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Hoeren Sie eine kurze Information zum Thema Einkaufen im Supermarkt."
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sie hören fünf Nachrichten am Telefon. Zu jeder Nachricht gibt es eine Aufgabe. Kreuzen Sie die richtige Antwort an. Sie hören jeden Text zweimal."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q1.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Nachricht 1."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Wir haben kein Brot und keine Butter mehr zu Hause.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Anrufer",
+        "speaker_role": "dialogue_speaker",
+        "text": "Hallo Anna, hier ist Maria. Ich bin gerade im Supermarkt."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q1 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Anrufer",
+        "speaker_role": "dialogue_speaker",
+        "text": "Was brauchen wir noch für das Abendessen?"
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q2.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Anrufer",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wir haben kein Brot und keine Butter mehr zu Hause."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "answer_evidence",
-        "text": "Die Lieferung kostet drei Euro neunzig.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Anrufer",
+        "speaker_role": "dialogue_speaker",
+        "text": "Soll ich auch Milch und Eier mitbringen?"
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q2 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Anrufer",
+        "speaker_role": "dialogue_speaker",
+        "text": "Schick mir bitte eine Nachricht mit der Einkaufsliste."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q3.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Anrufer",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ich warte hier. Tschüss!"
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "answer_evidence",
-        "text": "Ich kaufe Tomaten, Kartoffeln und Zwiebeln.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Nachricht 2."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q3 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Anrufer",
+        "speaker_role": "dialogue_speaker",
+        "text": "Guten Tag, hier ist der Lieferservice vom Supermarkt Frisch."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q4.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Anrufer",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ihre Bestellung ist fertig und kommt heute zwischen vierzehn und sechzehn Uhr."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "answer_evidence",
-        "text": "Mit der Kundenkarte bekommen Sie zehn Prozent Rabatt auf alles.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Anrufer",
+        "speaker_role": "dialogue_speaker",
+        "text": "Bitte stellen Sie sicher, dass jemand zu Hause ist."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q4 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Anrufer",
+        "speaker_role": "dialogue_speaker",
+        "text": "Der Fahrer ruft Sie fünf Minuten vorher an."
       },
       {
-        "speaker": "Sprecher 5",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q5.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Anrufer",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Lieferung kostet drei Euro neunzig."
       },
       {
-        "speaker": "Sprecher 5",
-        "speaker_role": "answer_evidence",
-        "text": "Es gibt einen neuen Bioladen in der Schillerstraße.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Anrufer",
+        "speaker_role": "dialogue_speaker",
+        "text": "Vielen Dank für Ihre Bestellung!"
       },
       {
-        "speaker": "Sprecher 5",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q5 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Nachricht 3."
       },
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Ende des Hoertexts."
+        "speaker": "Anrufer",
+        "speaker_role": "dialogue_speaker",
+        "text": "Hey Thomas, hier ist Pedro. Ich war gerade auf dem Markt."
+      },
+      {
+        "speaker": "Anrufer",
+        "speaker_role": "dialogue_speaker",
+        "text": "Der Markt am Samstag hat tolles Gemüse und frischen Fisch."
+      },
+      {
+        "speaker": "Anrufer",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ich kaufe Tomaten, Kartoffeln und Zwiebeln."
+      },
+      {
+        "speaker": "Anrufer",
+        "speaker_role": "dialogue_speaker",
+        "text": "Möchtest du auch etwas? Ich kann dir etwas mitbringen."
+      },
+      {
+        "speaker": "Anrufer",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ruf mich an oder schreib mir eine Nachricht."
+      },
+      {
+        "speaker": "Anrufer",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ich bin noch eine Stunde auf dem Markt. Tschüss!"
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Nachricht 4."
+      },
+      {
+        "speaker": "Anrufer",
+        "speaker_role": "dialogue_speaker",
+        "text": "Hallo, hier ist die Kundenkarte-Hotline."
+      },
+      {
+        "speaker": "Anrufer",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ihre neue Kundenkarte ist da. Sie können sie an der Information abholen."
+      },
+      {
+        "speaker": "Anrufer",
+        "speaker_role": "dialogue_speaker",
+        "text": "Bringen Sie bitte Ihren Ausweis mit."
+      },
+      {
+        "speaker": "Anrufer",
+        "speaker_role": "dialogue_speaker",
+        "text": "Mit der Kundenkarte bekommen Sie zehn Prozent Rabatt auf alles."
+      },
+      {
+        "speaker": "Anrufer",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Information ist geöffnet von neun bis achtzehn Uhr."
+      },
+      {
+        "speaker": "Anrufer",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wir freuen uns auf Ihren Besuch!"
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Nachricht 5."
+      },
+      {
+        "speaker": "Anrufer",
+        "speaker_role": "dialogue_speaker",
+        "text": "Hallo Yuki, ich gehe morgen einkaufen. Kommst du mit?"
+      },
+      {
+        "speaker": "Anrufer",
+        "speaker_role": "dialogue_speaker",
+        "text": "Es gibt einen neuen Bioladen in der Schillerstraße."
+      },
+      {
+        "speaker": "Anrufer",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die haben Bio-Gemüse, Obst und frisches Brot."
+      },
+      {
+        "speaker": "Anrufer",
+        "speaker_role": "dialogue_speaker",
+        "text": "Der Laden ist von Montag bis Samstag von acht bis zwanzig Uhr offen."
+      },
+      {
+        "speaker": "Anrufer",
+        "speaker_role": "dialogue_speaker",
+        "text": "Treffen wir uns um zehn Uhr an der U-Bahn-Station?"
+      },
+      {
+        "speaker": "Anrufer",
+        "speaker_role": "dialogue_speaker",
+        "text": "Schreib mir, ob du Zeit hast! Bis dann!"
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Ende des Hörverstehens."
       }
     ]
   },
@@ -270,7 +356,7 @@
       "id": "l-a1-goethe-004-t3-lo-1",
       "cefrLevel": "A1",
       "skill": "listening",
-      "canDoVi": "Toi co the luyen nghe hieu o trinh do A1 qua chu de \"Einkaufen im Supermarkt\".",
+      "canDoVi": "Tôi có thể luyện nghe hiểu ở trình độ A1 qua chủ đề \"Einkaufen im Supermarkt\".",
       "canDoDe": "Ich kann Hoeren auf Niveau A1 zum Thema \"Einkaufen im Supermarkt\" ueben.",
       "linkedContentIds": [
         "L-A1-GOETHE-004-T3"

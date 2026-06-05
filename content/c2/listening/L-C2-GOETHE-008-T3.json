@@ -110,93 +110,182 @@
     ]
   },
   "transcript": {
-    "type": "full_reconstructed_transcript",
+    "type": "studio_source_transcript",
     "status": "complete",
-    "source": "reconstructed_full_script",
-    "quality": "release_candidate_reconstructed",
-    "note": "Full learner-visible reconstructed script created from existing question evidence because original studio scripts are not present in the repository. Replace with studio transcript if original audio scripts become available.",
+    "source": "studio_source_script",
+    "quality": "source_verified",
+    "sourceScript": "data/scripts/C2/Teil3-Experteninterview-lang/L-C2-GOETHE-008-T3.json",
+    "note": "Transcript replaced from source script by scripts/apply-source-transcripts.ts.",
     "lines": [
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Der folgende anspruchsvolle Hoertext behandelt Algorithmische Empfehlungssysteme. Achten Sie auf Aussage, Kontext und implizite Bedeutung."
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sie hören ein ausführliches Interview. Dazu gibt es zehn Aufgaben. Kreuzen Sie die richtige Antwort an. Sie hören das Interview einmal."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q1.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Frau Professorin Algorithmus, Sie gehören zu den weltweit führenden Forscherinnen im Bereich der algorithmischen Fairness und beraten sowohl die Europäische Kommission als auch das Bundesministerium für Digitales."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Die technischen Möglichkeiten existieren, etwa durch die Einführung von Diversitätsmetriken in die Optimierungsfunktion, aber die ökonomischen Anreize der Plattformen stehen einer solchen Implementierung diametral entgegen.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Mein Forschungsinteresse gilt der fundamentalen Frage, wie wir sicherstellen können, dass algorithmische Entscheidungssysteme die Grundwerte demokratischer Gesellschaften respektieren und nicht untergraben."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q1 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Können Sie uns die technischen Grundlagen erläutern, die ein Empfehlungssystem wie das von YouTube oder TikTok besonders anfällig für die Verbreitung extremistischer Inhalte machen?"
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q2.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Diese Systeme optimieren auf Engagement, also auf die maximale Verweildauer der Nutzenden, und da emotionalisierende und polarisierende Inhalte höhere Engagement-Raten erzielen, werden sie vom Algorithmus systematisch bevorzugt."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "answer_evidence",
-        "text": "Der DSA ist das weltweit ambitionierteste Regulierungswerk für digitale Plattformen und hat Vorbildcharakter, allerdings wird seine Wirksamkeit von der konsequenten Durchsetzung abhängen, die derzeit noch unzureichend gewährleistet ist.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ist es technisch möglich, Algorithmen so zu gestalten, dass sie inhaltliche Vielfalt und demokratischen Diskurs fördern, ohne dabei das Geschäftsmodell der Plattformen grundlegend infrage zu stellen?"
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q2 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die technischen Möglichkeiten existieren, etwa durch die Einführung von Diversitätsmetriken in die Optimierungsfunktion, aber die ökonomischen Anreize der Plattformen stehen einer solchen Implementierung diametral entgegen."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q3.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Welche regulatorischen Instrumente hält die Forschung für besonders geeignet, um die Macht algorithmischer Systeme demokratisch einzuhegen?"
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "answer_evidence",
-        "text": "Medienkompetenz ist notwendig, aber nicht hinreichend; es wäre zynisch, die Verantwortung für systemische Probleme an die einzelnen Nutzer zu delegieren, anstatt die strukturellen Ursachen zu adressieren.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wir empfehlen eine Kombination aus Transparenzpflichten, unabhängigen Algorithmen-Audits und der Einrichtung öffentlicher Aufsichtsbehörden, die mit den notwendigen technischen Kompetenzen und Befugnissen ausgestattet sind."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q3 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wie bewerten Sie den europäischen Digital Services Act im internationalen Vergleich?"
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q4.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Der DSA ist das weltweit ambitionierteste Regulierungswerk für digitale Plattformen und hat Vorbildcharakter, allerdings wird seine Wirksamkeit von der konsequenten Durchsetzung abhängen, die derzeit noch unzureichend gewährleistet ist."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "answer_evidence",
-        "text": "Diese Systeme optimieren auf Engagement, also auf die maximale Verweildauer der Nutzenden, und da emotionalisierende und polarisierende Inhalte höhere Engagement-Raten erzielen, werden sie vom Algorithmus systematisch bevorzugt.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Welche Rolle spielt die Medienkompetenz der Bürgerinnen und Bürger für den verantwortungsvollen Umgang mit algorithmisch kuratierten Informationsumgebungen?"
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q4 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Medienkompetenz ist notwendig, aber nicht hinreichend; es wäre zynisch, die Verantwortung für systemische Probleme an die einzelnen Nutzer zu delegieren, anstatt die strukturellen Ursachen zu adressieren."
       },
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Ende des Hoertexts."
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Frau Professorin Algorithmus, wenn Sie einen einzigen Satz formulieren müssten, der die zentrale ethische Herausforderung algorithmischer Empfehlungssysteme auf den Punkt bringt, wie würde er lauten?"
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die zentrale Frage lautet, ob wir als Gesellschaft bereit sind, die algorithmische Kuratierung unserer Informationsumgebung als eine Frage der öffentlichen Daseinsvorsorge zu behandeln und entsprechend zu regulieren."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Frau Professorin Algorithmus, Sie gehören zu den weltweit führenden Forscherinnen im Bereich der algorithmischen Fairness und beraten sowohl die Europäische Kommission als auch das Bundesministerium für Digitales."
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Mein Forschungsinteresse gilt der fundamentalen Frage, wie wir sicherstellen können, dass algorithmische Entscheidungssysteme die Grundwerte demokratischer Gesellschaften respektieren und nicht untergraben."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Können Sie uns die technischen Grundlagen erläutern, die ein Empfehlungssystem wie das von YouTube oder TikTok besonders anfällig für die Verbreitung extremistischer Inhalte machen?"
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Diese Systeme optimieren auf Engagement, also auf die maximale Verweildauer der Nutzenden, und da emotionalisierende und polarisierende Inhalte höhere Engagement-Raten erzielen, werden sie vom Algorithmus systematisch bevorzugt."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ist es technisch möglich, Algorithmen so zu gestalten, dass sie inhaltliche Vielfalt und demokratischen Diskurs fördern, ohne dabei das Geschäftsmodell der Plattformen grundlegend infrage zu stellen?"
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die technischen Möglichkeiten existieren, etwa durch die Einführung von Diversitätsmetriken in die Optimierungsfunktion, aber die ökonomischen Anreize der Plattformen stehen einer solchen Implementierung diametral entgegen."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Welche regulatorischen Instrumente hält die Forschung für besonders geeignet, um die Macht algorithmischer Systeme demokratisch einzuhegen?"
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wir empfehlen eine Kombination aus Transparenzpflichten, unabhängigen Algorithmen-Audits und der Einrichtung öffentlicher Aufsichtsbehörden, die mit den notwendigen technischen Kompetenzen und Befugnissen ausgestattet sind."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wie bewerten Sie den europäischen Digital Services Act im internationalen Vergleich?"
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Der DSA ist das weltweit ambitionierteste Regulierungswerk für digitale Plattformen und hat Vorbildcharakter, allerdings wird seine Wirksamkeit von der konsequenten Durchsetzung abhängen, die derzeit noch unzureichend gewährleistet ist."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Welche Rolle spielt die Medienkompetenz der Bürgerinnen und Bürger für den verantwortungsvollen Umgang mit algorithmisch kuratierten Informationsumgebungen?"
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Medienkompetenz ist notwendig, aber nicht hinreichend; es wäre zynisch, die Verantwortung für systemische Probleme an die einzelnen Nutzer zu delegieren, anstatt die strukturellen Ursachen zu adressieren."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Frau Professorin Algorithmus, wenn Sie einen einzigen Satz formulieren müssten, der die zentrale ethische Herausforderung algorithmischer Empfehlungssysteme auf den Punkt bringt, wie würde er lauten?"
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die zentrale Frage lautet, ob wir als Gesellschaft bereit sind, die algorithmische Kuratierung unserer Informationsumgebung als eine Frage der öffentlichen Daseinsvorsorge zu behandeln und entsprechend zu regulieren."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Frau Professorin Algorithmus, Sie gehören zu den weltweit führenden Forscherinnen im Bereich der algorithmischen Fairness und beraten sowohl die Europäische Kommission als auch das Bundesministerium für Digitales."
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Mein Forschungsinteresse gilt der fundamentalen Frage, wie wir sicherstellen können, dass algorithmische Entscheidungssysteme die Grundwerte demokratischer Gesellschaften respektieren und nicht untergraben."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Können Sie uns die technischen Grundlagen erläutern, die ein Empfehlungssystem wie das von YouTube oder TikTok besonders anfällig für die Verbreitung extremistischer Inhalte machen?"
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Diese Systeme optimieren auf Engagement, also auf die maximale Verweildauer der Nutzenden, und da emotionalisierende und polarisierende Inhalte höhere Engagement-Raten erzielen, werden sie vom Algorithmus systematisch bevorzugt."
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Ende des Hörverstehens."
       }
     ]
   },
@@ -213,7 +302,7 @@
       "id": "l-c2-goethe-008-t3-lo-1",
       "cefrLevel": "C2",
       "skill": "listening",
-      "canDoVi": "Toi co the luyen nghe hieu o trinh do C2 qua chu de \"Algorithmische Empfehlungssysteme\".",
+      "canDoVi": "Tôi có thể luyện nghe hiểu ở trình độ C2 qua chủ đề \"Algorithmische Empfehlungssysteme\".",
       "canDoDe": "Ich kann Hoeren auf Niveau C2 zum Thema \"Algorithmische Empfehlungssysteme\" ueben.",
       "linkedContentIds": [
         "L-C2-GOETHE-008-T3"

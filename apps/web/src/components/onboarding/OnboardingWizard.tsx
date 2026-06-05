@@ -2,6 +2,7 @@
 
 import { useState, useCallback, useMemo } from 'react'
 import { useRouter } from 'next/navigation'
+import { useTranslations } from 'next-intl'
 import Image from 'next/image'
 import {
     createPlacementState,
@@ -16,26 +17,26 @@ import { getFuxieMascotSrc } from '@/lib/mascot/fuxie-assets'
 type Step = 'welcome' | 'goal' | 'daily-time' | 'placement' | 'result'
 
 const EXAM_OPTIONS = [
-    { value: 'GOETHE', label: 'Goethe-Zertifikat', emoji: '🏛️', desc: 'Viện Goethe' },
-    { value: 'TELC', label: 'telc', emoji: '📋', desc: 'Tổ chức telc' },
-    { value: 'OESD', label: 'ÖSD', emoji: '🇦🇹', desc: 'Chứng chỉ Áo' },
-    { value: null, label: 'Chỉ muốn học', emoji: '🦊', desc: 'Không thi' },
+    { value: 'GOETHE', label: 'Goethe-Zertifikat', emoji: '🏛️', descKey: 'examDescGoethe' },
+    { value: 'TELC', label: 'telc', emoji: '📋', descKey: 'examDescTelc' },
+    { value: 'OESD', label: 'ÖSD', emoji: '🇦🇹', descKey: 'examDescOesd' },
+    { value: null, emoji: '🦊', descKey: 'examDescNone' },
 ] as const
 
 const DAILY_TIME_OPTIONS = [
-    { value: 5, label: '5 phút', desc: 'Một bước nhỏ mỗi ngày' },
-    { value: 10, label: '10 phút', desc: 'Nhịp học gọn và đều' },
-    { value: 20, label: '20 phút', desc: 'Tiến bộ rõ mỗi buổi' },
-    { value: 30, label: '30 phút', desc: 'Tăng tốc nếu có thời gian' },
+    { value: 5, descKey: 'dailyTimeOption1' },
+    { value: 10, descKey: 'dailyTimeOption2' },
+    { value: 20, descKey: 'dailyTimeOption3' },
+    { value: 30, descKey: 'dailyTimeOption4' },
 ] as const
 
-const LEVEL_INFO: Record<PlacementLevel, { color: string; label: string; desc: string }> = {
-    A1: { color: 'var(--color-text-success)', label: 'A1 — Anfänger', desc: 'Chào hỏi, giới thiệu bản thân' },
-    A2: { color: "var(--color-text-success)", label: 'A2 — Grundstufe', desc: 'Giao tiếp đơn giản hàng ngày' },
-    B1: { color: "var(--color-text-brand)", label: 'B1 — Mittelstufe', desc: 'Tự tin giải quyết tình huống' },
-    B2: { color: 'var(--color-cefr-b2)', label: 'B2 — Oberstufe', desc: 'Thảo luận chủ đề phức tạp' },
-    C1: { color: 'var(--color-cefr-c1)', label: 'C1 — Fortgeschritten', desc: 'Sử dụng thành thạo linh hoạt' },
-    C2: { color: 'var(--color-cefr-c1)', label: 'C2 — Meisterstufe', desc: 'Gần như bản ngữ' },
+const LEVEL_INFO: Record<PlacementLevel, { color: string; label: string; descKey: string }> = {
+    A1: { color: 'var(--color-text-success)', label: 'A1 — Anfänger', descKey: 'levelDescA1' },
+    A2: { color: 'var(--color-text-success)', label: 'A2 — Grundstufe', descKey: 'levelDescA2' },
+    B1: { color: 'var(--color-text-brand)', label: 'B1 — Mittelstufe', descKey: 'levelDescB1' },
+    B2: { color: 'var(--color-cefr-b2)', label: 'B2 — Oberstufe', descKey: 'levelDescB2' },
+    C1: { color: 'var(--color-cefr-c1)', label: 'C1 — Fortgeschritten', descKey: 'levelDescC1' },
+    C2: { color: 'var(--color-cefr-c1)', label: 'C2 — Meisterstufe', descKey: 'levelDescC2' },
 }
 
 export function OnboardingWizard() {
@@ -199,11 +200,12 @@ function DailyTimeStep({
     onDailyStudyMinutesChange: (value: number) => void
     onNext: () => void
 }) {
+    const t = useTranslations('Onboarding')
     return (
         <div className="max-w-lg w-full animate-fade-in-up">
-            <h2 className="text-2xl font-bold text-center mb-1">Thời gian học mỗi ngày</h2>
+            <h2 className="text-2xl font-bold text-center mb-1">{t('dailyTimeTitle')}</h2>
             <p className="text-gray-400 text-center text-sm mb-6">
-                Chọn mục tiêu linh hoạt để Fuxie gợi ý quest vừa sức.
+                {t('dailyTimeDesc')}
             </p>
 
             <div className="grid grid-cols-1 gap-3 mb-8 sm:grid-cols-2">
@@ -219,8 +221,8 @@ function DailyTimeStep({
                                 : 'border-gray-200 hover:border-gray-300'
                         }`}
                     >
-                        <div className="text-lg font-bold text-gray-900">{option.label}</div>
-                        <div className="mt-1 text-sm text-gray-500">{option.desc}</div>
+                        <div className="text-lg font-bold text-gray-900">{t('minutesLabel', { count: option.value })}</div>
+                        <div className="mt-1 text-sm text-gray-500">{t(option.descKey)}</div>
                     </button>
                 ))}
             </div>
@@ -229,13 +231,14 @@ function DailyTimeStep({
                 onClick={onNext}
                 className="w-full py-3.5 rounded-xl bg-gradient-to-r from-[#60A8E4] to-[#3C78A8] text-white font-semibold hover:shadow-lg hover:shadow-sky-200 transition-all active:scale-[0.98]"
             >
-                Tiếp theo: Kiểm tra trình độ →
+                {t('placementNextBtn')}
             </button>
         </div>
     )
 }
 
 function WelcomeStep({ onNext }: { onNext: () => void }) {
+    const t = useTranslations('Onboarding')
     return (
         <div className="text-center max-w-md animate-fade-in-up">
             <div className="mb-6 relative">
@@ -255,18 +258,18 @@ function WelcomeStep({ onNext }: { onNext: () => void }) {
                 ! 🦊
             </h1>
             <p className="text-gray-500 mb-2 text-lg">
-                Chào mừng bạn đến với hành trình học tiếng Đức!
+                {t('welcomeTitle')}
             </p>
             <p className="text-gray-400 text-sm mb-8 leading-relaxed">
-                Em là Fuxie — trợ lý AI giúp bạn học tiếng Đức theo chuẩn CEFR.
+                {t('welcomeDesc1')}
                 <br />
-                Hãy để em tìm hiểu trình độ của bạn nhé!
+                {t('welcomeDesc2')}
             </p>
             <button
                 onClick={onNext}
                 className="w-full max-w-xs mx-auto py-3.5 px-8 rounded-xl bg-gradient-to-r from-[#60A8E4] to-[#3C78A8] text-white font-semibold text-base hover:shadow-lg hover:shadow-sky-200 transition-all active:scale-[0.98]"
             >
-                Bắt đầu nào! →
+                {t('startBtn')}
             </button>
         </div>
     )
@@ -285,22 +288,23 @@ function GoalStep({
     onLevelChange: (v: PlacementLevel) => void
     onNext: () => void
 }) {
+    const t = useTranslations('Onboarding')
     return (
         <div className="max-w-lg w-full animate-fade-in-up">
-            <h2 className="text-2xl font-bold text-center mb-1">🎯 Mục tiêu của bạn</h2>
+            <h2 className="text-2xl font-bold text-center mb-1">{t('goalTitle')}</h2>
             <p className="text-gray-400 text-center text-sm mb-6">
-                Chọn kỳ thi và trình độ mong muốn
+                {t('targetExamDesc')}
             </p>
 
             {/* Exam Type */}
             <div className="mb-6">
                 <label className="block text-sm font-semibold text-gray-600 mb-2">
-                    Bạn muốn thi gì?
+                    {t('targetExamLabel')}
                 </label>
                 <div className="grid grid-cols-1 gap-2">
                     {EXAM_OPTIONS.map((opt) => (
                         <button
-                            key={opt.label}
+                            key={opt.descKey}
                             onClick={() => onExamChange(opt.value)}
                             className={`flex items-center gap-3 p-3 rounded-xl border-2 transition-all text-left ${
                                 targetExam === opt.value
@@ -310,8 +314,10 @@ function GoalStep({
                         >
                             <span className="text-2xl">{opt.emoji}</span>
                             <div>
-                                <div className="font-semibold text-sm text-gray-800">{opt.label}</div>
-                                <div className="text-xs text-gray-400">{opt.desc}</div>
+                                <div className="font-semibold text-sm text-gray-800">
+                                    {opt.value === null ? t('examOptionNone') : opt.label}
+                                </div>
+                                <div className="text-xs text-gray-400">{t(opt.descKey)}</div>
                             </div>
                         </button>
                     ))}
@@ -321,7 +327,7 @@ function GoalStep({
             {/* Target Level */}
             <div className="mb-8">
                 <label className="block text-sm font-semibold text-gray-600 mb-2">
-                    Trình độ mục tiêu
+                    {t('targetLevelLabel')}
                 </label>
                 <div className="grid grid-cols-3 gap-2">
                     {(Object.keys(LEVEL_INFO) as PlacementLevel[]).map((level) => {
@@ -343,7 +349,7 @@ function GoalStep({
                                     {level}
                                 </div>
                                 <div className="text-xs text-gray-400 leading-tight mt-1">
-                                    {info.desc}
+                                    {t(info.descKey)}
                                 </div>
                             </button>
                         )
@@ -355,7 +361,7 @@ function GoalStep({
                 onClick={onNext}
                 className="w-full py-3.5 rounded-xl bg-gradient-to-r from-[#60A8E4] to-[#3C78A8] text-white font-semibold hover:shadow-lg hover:shadow-sky-200 transition-all active:scale-[0.98]"
             >
-                Tiếp theo: Kiểm tra trình độ →
+                {t('placementNextBtn')}
             </button>
         </div>
     )
@@ -378,6 +384,7 @@ function PlacementStep({
     lastCorrect: boolean
     onAnswer: (index: number) => void
 }) {
+    const t = useTranslations('Onboarding')
     if (!question) return null
 
     return (
@@ -385,7 +392,7 @@ function PlacementStep({
             {/* Header */}
             <div className="flex items-center justify-between mb-4">
                 <span className="text-sm font-medium text-gray-400">
-                    Câu {questionNumber} / {totalQuestions}
+                    {t('questionCount', { num: questionNumber, total: totalQuestions })}
                 </span>
                 <span
                     className="text-xs font-bold px-2 py-1 rounded-full"
@@ -454,7 +461,7 @@ function PlacementStep({
                     }`}
                 >
                     <div className="font-bold mb-1">
-                        {lastCorrect ? '✅ Đúng!' : '❌ Chưa đúng'}
+                        {lastCorrect ? t('correct') : t('incorrect')}
                     </div>
                     <div className="text-xs opacity-80">{question.explanationNative}</div>
                 </div>
@@ -480,10 +487,11 @@ function ResultStep({
     saveError: string | null
     onComplete: () => void
 }) {
+    const t = useTranslations('Onboarding')
     const levelInfo = LEVEL_INFO[result.estimatedLevel]
     const firstAction = targetExam
-        ? `Luyện ${targetExam} ${targetLevel} sau một quest từ vựng ${result.estimatedLevel}`
-        : `Bắt đầu bằng một quest từ vựng ${result.estimatedLevel}`
+        ? t('firstActionWithExam', { exam: targetExam, level: targetLevel, estimatedLevel: result.estimatedLevel })
+        : t('firstActionNoExam', { estimatedLevel: result.estimatedLevel })
 
     return (
         <div className="max-w-md w-full text-center animate-fade-in-up">
@@ -498,9 +506,9 @@ function ResultStep({
                 />
             </div>
 
-            <h2 className="text-2xl font-bold mb-1">Kết quả</h2>
+            <h2 className="text-2xl font-bold mb-1">{t('resultTitle')}</h2>
             <p className="text-gray-400 text-sm mb-6">
-                Trình độ ước tính của bạn:
+                {t('resultDesc')}
             </p>
 
             {/* Level Badge - Large */}
@@ -513,7 +521,7 @@ function ResultStep({
                 </span>
                 <div className="text-left">
                     <div className="font-bold text-gray-800 text-sm">{levelInfo.label}</div>
-                    <div className="text-xs text-gray-500">{levelInfo.desc}</div>
+                    <div className="text-xs text-gray-500">{t(levelInfo.descKey)}</div>
                 </div>
             </div>
 
@@ -554,11 +562,11 @@ function ResultStep({
 
             <div className="bg-[#F3FBFF] rounded-xl border border-[#CCE4F0] p-4 mb-4 text-left">
                 <div className="text-xs font-bold uppercase text-text-brand">
-                    Bước đầu tiên
+                    {t('firstStepLabel')}
                 </div>
                 <div className="mt-1 font-semibold text-gray-900">{firstAction}</div>
                 <div className="mt-1 text-sm text-gray-500">
-                    Mục tiêu ngày: {dailyStudyMinutes} phút. Dashboard sẽ hiện một CTA chính để bắt đầu.
+                    {t('dailyGoalHint', { minutes: dailyStudyMinutes })}
                 </div>
             </div>
 
@@ -567,7 +575,7 @@ function ResultStep({
                     role="alert"
                     className="mb-4 rounded-xl border border-red-200 bg-red-50 p-3 text-left text-sm font-medium text-red-700"
                 >
-                    {saveError}
+                    {t('saveError')}
                 </div>
             )}
 
@@ -576,7 +584,7 @@ function ResultStep({
                 disabled={saving}
                 className="w-full py-3.5 rounded-xl bg-gradient-to-r from-[#60A8E4] to-[#3C78A8] text-white font-semibold hover:shadow-lg hover:shadow-sky-200 transition-all active:scale-[0.98] disabled:opacity-50"
             >
-                {saving ? 'Đang lưu...' : saveError ? 'Thử lại' : 'Bắt đầu học!'}
+                {saving ? t('saving') : saveError ? t('retry') : t('startLearningBtn')}
             </button>
         </div>
     )

@@ -147,7 +147,7 @@
       "explanation": {
         "de": "Der Sprecher sagt: 'dort repariert man kaputte Geräte ehrenamtlich. Das spart Geld und schont die Umwelt'.",
         "vi": "Người nói nói: 'ở đó người ta sửa chữa các thiết bị hỏng một cách tự nguyện. Điều đó tiết kiệm tiền và bảo vệ môi trường'.",
-        "key_evidence": "Auch Repair-Cafés werden immer beliebter, dort repariert man kaputte Geräte ehrenamtlich. Das spart Geld und schont die Umwelt.",
+        "key_evidence": "Auch Repair-Cafés werden immer beliebter, dort repariert man kaputte Geräte ehrenamtlich.",
         "key_vocabulary": [
           "reparieren",
           "spart Geld",
@@ -259,201 +259,247 @@
     ]
   },
   "transcript": {
-    "type": "full_reconstructed_transcript",
+    "type": "studio_source_transcript",
     "status": "complete",
-    "source": "reconstructed_full_script",
-    "quality": "release_candidate_reconstructed",
-    "note": "Full learner-visible reconstructed script created from existing question evidence because original studio scripts are not present in the repository. Replace with studio transcript if original audio scripts become available.",
+    "source": "studio_source_script",
+    "quality": "source_verified",
+    "sourceScript": "data/scripts/B1/Teil1-Kurze-Texte/L-B1-GOETHE-008-T1.json",
+    "note": "Transcript replaced from source script by scripts/apply-source-transcripts.ts.",
     "lines": [
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Im folgenden Hoertext geht es um Einkaufen und Reklamation. Achten Sie auf die zentrale Information."
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sie hören fünf kurze Texte. Zu jedem Text gibt es zwei Aufgaben. Kreuzen Sie die richtige Antwort an. Sie hören jeden Text einmal."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q1.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Text 1."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "reduzierte Ware ist oft vom Umtausch ausgeschlossen.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Sprecher_1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Liebe Hörer, aufgepasst! Das große Sommerschlussverkauf-Event beginnt morgen in den Berliner Einkaufszentren."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q1 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Sprecher_1",
+        "speaker_role": "dialogue_speaker",
+        "text": "In vielen Geschäften gibt es Rabatte von bis zu siebzig Prozent auf Sommerkleidung."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q2.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Sprecher_1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Besonders gute Angebote gibt es bei Schuhen, Taschen und leichter Sommermode."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Die besten Angebote gibt es erfahrungsgemäß am ersten und am letzten Tag des Schlussverkaufs.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Sprecher_1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Aber Vorsicht: Nicht jedes Schnäppchen ist wirklich eines. Vergleichen Sie die Preise."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q2 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Sprecher_1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Manche Geschäfte erhöhen vorher die Preise und setzen sie dann wieder auf den Normalpreis."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q3.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Sprecher_1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Prüfen Sie die Qualität der Ware sorgfältig, denn reduzierte Ware ist oft vom Umtausch ausgeschlossen."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "answer_evidence",
-        "text": "Das bedeutet, Sie können die Ware ohne Angabe von Gründen zurückschicken.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Sprecher_1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die besten Angebote gibt es erfahrungsgemäß am ersten und am letzten Tag des Schlussverkaufs."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q3 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Sprecher_1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Der Sommerschlussverkauf dauert zwei Wochen, von Montag dem fünfzehnten bis Sonntag dem achtundzwanzigsten."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q4.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Text 2."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "answer_evidence",
-        "text": "Die Widerrufsfrist beginnt an dem Tag, an dem Sie die Ware erhalten haben.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Sprecher_2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Haben Sie schon einmal ein Produkt online bestellt und waren enttäuscht von der Qualität?"
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q4 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Sprecher_2",
+        "speaker_role": "dialogue_speaker",
+        "text": "In Deutschland haben Sie bei Online-Bestellungen ein vierzehntägiges Widerrufsrecht."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q5.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Sprecher_2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das bedeutet, Sie können die Ware ohne Angabe von Gründen zurückschicken."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "answer_evidence",
-        "text": "Nach zwölf Monaten kehrt sich die Beweislast um und Sie müssen den Mangel nachweisen.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Sprecher_2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Widerrufsfrist beginnt an dem Tag, an dem Sie die Ware erhalten haben."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q5 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Sprecher_2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Bei vielen Online-Shops ist die Rücksendung kostenlos, bei anderen müssen Sie das Porto zahlen."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q6.",
-        "linkedQuestionId": "Q6"
+        "speaker": "Sprecher_2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Lesen Sie vor der Bestellung immer die Rückgabebedingungen im Kleingedruckten."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "answer_evidence",
-        "text": "Bewahren Sie immer den Kassenbon auf, er ist Ihr wichtigstes Beweismittel.",
-        "linkedQuestionId": "Q6"
+        "speaker": "Sprecher_2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Bewahren Sie die Originalverpackung auf, falls Sie die Ware zurückschicken möchten."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q6 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q6"
+        "speaker": "Sprecher_2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Und machen Sie Fotos von beschädigter Ware als Beweis für eine spätere Reklamation."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q7.",
-        "linkedQuestionId": "Q7"
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Text 3."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "answer_evidence",
-        "text": "Auch Repair-Cafés werden immer beliebter, dort repariert man kaputte Geräte ehrenamtlich. Das spart Geld und schont die Umwelt.",
-        "linkedQuestionId": "Q7"
+        "speaker": "Sprecher_3",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ein Hörer fragt: Was tun, wenn die neue Waschmaschine schon nach drei Monaten kaputt geht?"
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q7 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q7"
+        "speaker": "Sprecher_3",
+        "speaker_role": "dialogue_speaker",
+        "text": "In Deutschland gilt eine gesetzliche Gewährleistungspflicht von zwei Jahren ab Kaufdatum."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q8.",
-        "linkedQuestionId": "Q8"
+        "speaker": "Sprecher_3",
+        "speaker_role": "dialogue_speaker",
+        "text": "In den ersten zwölf Monaten muss der Verkäufer beweisen, dass der Mangel nicht von Anfang an bestand."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "answer_evidence",
-        "text": "Und man lernt dabei noch etwas über Technik.",
-        "linkedQuestionId": "Q8"
+        "speaker": "Sprecher_3",
+        "speaker_role": "dialogue_speaker",
+        "text": "Nach zwölf Monaten kehrt sich die Beweislast um und Sie müssen den Mangel nachweisen."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q8 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q8"
+        "speaker": "Sprecher_3",
+        "speaker_role": "dialogue_speaker",
+        "text": "Sie haben das Recht auf Reparatur oder Ersatz, nicht nur auf eine Gutschrift."
       },
       {
-        "speaker": "Sprecher 5",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q9.",
-        "linkedQuestionId": "Q9"
+        "speaker": "Sprecher_3",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wenn die Reparatur zweimal fehlschlägt, können Sie vom Kaufvertrag zurücktreten."
       },
       {
-        "speaker": "Sprecher 5",
-        "speaker_role": "answer_evidence",
-        "text": "Wenn Sie einen verdächtigen Anruf erhalten, legen Sie sofort auf und informieren die Polizei.",
-        "linkedQuestionId": "Q9"
+        "speaker": "Sprecher_3",
+        "speaker_role": "dialogue_speaker",
+        "text": "Bewahren Sie immer den Kassenbon auf, er ist Ihr wichtigstes Beweismittel."
       },
       {
-        "speaker": "Sprecher 5",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q9 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q9"
+        "speaker": "Sprecher_3",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ohne Kaufbeleg wird eine Reklamation in den meisten Fällen deutlich schwieriger."
       },
       {
-        "speaker": "Sprecher 5",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q10.",
-        "linkedQuestionId": "Q10"
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Text 4."
       },
       {
-        "speaker": "Sprecher 5",
-        "speaker_role": "answer_evidence",
-        "text": "Geben Sie niemals Kontodaten oder persönliche Informationen am Telefon an Fremde.",
-        "linkedQuestionId": "Q10"
+        "speaker": "Sprecher_4",
+        "speaker_role": "dialogue_speaker",
+        "text": "Nachhaltiger Einkaufen liegt im Trend, aber was bedeutet das eigentlich genau?"
       },
       {
-        "speaker": "Sprecher 5",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q10 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q10"
+        "speaker": "Sprecher_4",
+        "speaker_role": "dialogue_speaker",
+        "text": "Immer mehr Deutsche achten beim Einkaufen auf Qualität statt auf Quantität."
       },
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Ende des Hoertexts."
+        "speaker": "Sprecher_4",
+        "speaker_role": "dialogue_speaker",
+        "text": "Second-Hand-Läden und Online-Plattformen für gebrauchte Waren boomen geradezu."
+      },
+      {
+        "speaker": "Sprecher_4",
+        "speaker_role": "dialogue_speaker",
+        "text": "Auf Plattformen wie Vinted oder eBay Kleinanzeigen kann man gut erhaltene Kleidung günstig kaufen."
+      },
+      {
+        "speaker": "Sprecher_4",
+        "speaker_role": "dialogue_speaker",
+        "text": "Auch Repair-Cafés werden immer beliebter, dort repariert man kaputte Geräte ehrenamtlich."
+      },
+      {
+        "speaker": "Sprecher_4",
+        "speaker_role": "dialogue_speaker",
+        "text": "Statt einen neuen Toaster zu kaufen, bringt man den alten einfach ins Repair-Café."
+      },
+      {
+        "speaker": "Sprecher_4",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das spart Geld und schont die Umwelt. Und man lernt dabei noch etwas über Technik."
+      },
+      {
+        "speaker": "Sprecher_4",
+        "speaker_role": "dialogue_speaker",
+        "text": "Informationen zu Repair-Cafés in Ihrer Nähe finden Sie auf der Webseite repaircafe punkt org."
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Text 5."
+      },
+      {
+        "speaker": "Sprecher_5",
+        "speaker_role": "dialogue_speaker",
+        "text": "Eine Warnung der Verbraucherzentrale Brandenburg vor betrügerischen Anrufen."
+      },
+      {
+        "speaker": "Sprecher_5",
+        "speaker_role": "dialogue_speaker",
+        "text": "Kriminelle rufen an und behaupten, Sie hätten einen Preis gewonnen oder ein Paket wartet auf Sie."
+      },
+      {
+        "speaker": "Sprecher_5",
+        "speaker_role": "dialogue_speaker",
+        "text": "Sie werden aufgefordert, persönliche Daten preiszugeben oder eine Gebühr zu zahlen."
+      },
+      {
+        "speaker": "Sprecher_5",
+        "speaker_role": "dialogue_speaker",
+        "text": "Geben Sie niemals Kontodaten oder persönliche Informationen am Telefon an Fremde."
+      },
+      {
+        "speaker": "Sprecher_5",
+        "speaker_role": "dialogue_speaker",
+        "text": "Seriöse Unternehmen würden Sie niemals am Telefon nach Ihrer Bankverbindung fragen."
+      },
+      {
+        "speaker": "Sprecher_5",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wenn Sie einen verdächtigen Anruf erhalten, legen Sie sofort auf und informieren die Polizei."
+      },
+      {
+        "speaker": "Sprecher_5",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Verbraucherzentrale bietet kostenlose Beratung bei Verdacht auf Betrug."
+      },
+      {
+        "speaker": "Sprecher_5",
+        "speaker_role": "dialogue_speaker",
+        "text": "Melden Sie verdächtige Anrufe und E-Mails auf der Webseite der Verbraucherzentrale."
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Ende Teil eins."
       }
     ]
   },
@@ -470,7 +516,7 @@
       "id": "l-b1-goethe-008-t1-lo-1",
       "cefrLevel": "B1",
       "skill": "listening",
-      "canDoVi": "Toi co the luyen nghe hieu o trinh do B1 qua chu de \"Einkaufen und Reklamation\".",
+      "canDoVi": "Tôi có thể luyện nghe hiểu ở trình độ B1 qua chủ đề \"Einkaufen und Reklamation\".",
       "canDoDe": "Ich kann Hoeren auf Niveau B1 zum Thema \"Einkaufen und Reklamation\" ueben.",
       "linkedContentIds": [
         "L-B1-GOETHE-008-T1"

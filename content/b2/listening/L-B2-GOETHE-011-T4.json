@@ -257,165 +257,147 @@
     ]
   },
   "transcript": {
-    "type": "full_reconstructed_transcript",
+    "type": "studio_source_transcript",
     "status": "complete",
-    "source": "reconstructed_full_script",
-    "quality": "release_candidate_reconstructed",
-    "note": "Full learner-visible reconstructed script created from existing question evidence because original studio scripts are not present in the repository. Replace with studio transcript if original audio scripts become available.",
+    "source": "studio_source_script",
+    "quality": "source_verified",
+    "sourceScript": "data/scripts/B2/Teil4-Vortrag/L-B2-GOETHE-011-T4.json",
+    "note": "Transcript replaced from source script by scripts/apply-source-transcripts.ts.",
     "lines": [
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Im folgenden Hoertext geht es um Schlafforschung und Gesundheit. Achten Sie auf die zentrale Information."
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sie hören einen Vortrag. Dazu gibt es acht Aufgaben. Kreuzen Sie die richtige Antwort an. Sie hören den Vortrag zweimal."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q1.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Guten Morgen, meine Damen und Herren, willkommen zu meinem Vortrag über die Zukunft der Ernährung."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Ich möchte heute drei zentrale Trends beleuchten, die unsere Ernährung grundlegend verändern werden.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ich möchte heute drei zentrale Trends beleuchten, die unsere Ernährung grundlegend verändern werden."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q1 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Der erste Trend ist die Personalisierung. In Zukunft wird Ernährung auf individuelle Bedürfnisse zugeschnitten."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q2.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "DNA-Tests und Mikrobiom-Analysen werden es ermöglichen, für jeden Menschen den optimalen Speiseplan zu erstellen."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Was für den einen gesund ist, kann für den anderen weniger vorteilhaft oder sogar nachteilig sein.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Was für den einen gesund ist, kann für den anderen weniger vorteilhaft oder sogar nachteilig sein."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q2 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Der zweite Trend betrifft die Technologisierung der Lebensmittelproduktion."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q3.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Indoor-Farming, also Landwirtschaft in geschlossenen Gebäuden, wird an Bedeutung gewinnen."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Diese Farmen verbrauchen neunzig Prozent weniger Wasser und benötigen keine Pestizide.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "In Japan und Singapur produzieren vertikale Farmen bereits Salate und Kräuter mitten in der Stadt."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q3 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Diese Farmen verbrauchen neunzig Prozent weniger Wasser und benötigen keine Pestizide."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q4.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Gleichzeitig können sie ganzjährig produzieren, unabhängig von Wetter und Jahreszeiten."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Interessanterweise greifen moderne Technologien auf uraltes Wissen zurück und optimieren es.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Der dritte Trend ist die Neuerfindung traditioneller Lebensmittel durch innovative Fermentation."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q4 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Fermentierte Lebensmittel wie Kimchi, Kombucha und Tempeh sind nicht nur trendig, sondern auch wissenschaftlich validiert."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q5.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Sie unterstützen die Darmgesundheit und können chronische Entzündungen im Körper reduzieren."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Allerdings muss die Politik die regulatorischen Rahmenbedingungen schneller an die neuen Technologien anpassen.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Interessanterweise greifen moderne Technologien auf uraltes Wissen zurück und optimieren es."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q5 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Lassen Sie mich nun auf die wirtschaftlichen Dimensionen dieser Transformation eingehen."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q6.",
-        "linkedQuestionId": "Q6"
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Der globale Markt für alternative Proteine wird bis zweitausenddreißig auf über dreihundert Milliarden Euro geschätzt."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Die Zulassung neuer Lebensmittel in der EU dauert durchschnittlich achtzehn Monate, das ist zu lang.",
-        "linkedQuestionId": "Q6"
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Investoren und Start-ups drängen massiv in diesen Sektor und treiben die Innovation voran."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q6 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q6"
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Deutschland hat mit seiner starken Lebensmittelindustrie eine ausgezeichnete Ausgangsposition."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q7.",
-        "linkedQuestionId": "Q7"
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Allerdings muss die Politik die regulatorischen Rahmenbedingungen schneller an die neuen Technologien anpassen."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Wir brauchen auch einen kulturellen Wandel in unserem Verhältnis zum Essen.",
-        "linkedQuestionId": "Q7"
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Zulassung neuer Lebensmittel in der EU dauert durchschnittlich achtzehn Monate, das ist zu lang."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q7 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q7"
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Abschließend möchte ich betonen, dass technologische Innovation allein nicht ausreicht."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q8.",
-        "linkedQuestionId": "Q8"
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wir brauchen auch einen kulturellen Wandel in unserem Verhältnis zum Essen."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Die Herausforderung besteht darin, Innovation und Tradition in Einklang zu bringen.",
-        "linkedQuestionId": "Q8"
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Essen ist mehr als Nahrungsaufnahme: Es ist Kultur, Identität und soziales Erlebnis."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q8 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q8"
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Herausforderung besteht darin, Innovation und Tradition in Einklang zu bringen."
       },
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Ende des Hoertexts."
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Vielen Dank für Ihre Aufmerksamkeit! Ich stehe für Fragen zur Verfügung."
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Ende des Hörverstehens."
       }
     ]
   },
@@ -432,7 +414,7 @@
       "id": "l-b2-goethe-011-t4-lo-1",
       "cefrLevel": "B2",
       "skill": "listening",
-      "canDoVi": "Toi co the luyen nghe hieu o trinh do B2 qua chu de \"Schlafforschung und Gesundheit\".",
+      "canDoVi": "Tôi có thể luyện nghe hiểu ở trình độ B2 qua chủ đề \"Schlafforschung und Gesundheit\".",
       "canDoDe": "Ich kann Hoeren auf Niveau B2 zum Thema \"Schlafforschung und Gesundheit\" ueben.",
       "linkedContentIds": [
         "L-B2-GOETHE-011-T4"

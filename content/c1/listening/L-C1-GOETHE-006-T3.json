@@ -134,93 +134,172 @@
     ]
   },
   "transcript": {
-    "type": "full_reconstructed_transcript",
+    "type": "studio_source_transcript",
     "status": "complete",
-    "source": "reconstructed_full_script",
-    "quality": "release_candidate_reconstructed",
-    "note": "Full learner-visible reconstructed script created from existing question evidence because original studio scripts are not present in the repository. Replace with studio transcript if original audio scripts become available.",
+    "source": "studio_source_script",
+    "quality": "source_verified",
+    "sourceScript": "data/scripts/C1/Teil3-Diskussion-in-Abschnitten/L-C1-GOETHE-006-T3.json",
+    "note": "Transcript replaced from source script by scripts/apply-source-transcripts.ts.",
     "lines": [
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Der folgende anspruchsvolle Hoertext behandelt Digitalisierung im Bildungswesen. Achten Sie auf Aussage, Kontext und implizite Bedeutung."
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sie hören eine Diskussion in vier Abschnitten. Lesen Sie jeweils die Aufgaben. Sie haben dafür 30 Sekunden Zeit. Sie hören die Diskussion zweimal."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q1.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Willkommen zu unserer Podiumsdiskussion: Wie digital soll die Schule der Zukunft sein?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Die Infrastruktur-Forderung unterstütze ich vollkommen, aber bei den Standards bin ich skeptisch und habe Bedenken.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ich bin überzeugt, dass wir die Schule radikal digitalisieren müssen, um international nicht den Anschluss zu verlieren."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q1 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Radikale Digitalisierung? Das klingt nach Tablets statt Bücher. Die Forschung zeigt, dass das keine guten Ergebnisse liefert."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q2.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Herr Wegner, Sie sind Chief Digital Officer eines großen Bildungsverlags. Was fordern Sie konkret?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Kein Patient akzeptiert, dass sein Arzt keine digitale Diagnostik beherrscht. Warum akzeptieren wir das bei Lehrern?",
-        "linkedQuestionId": "Q2"
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Erstens: flächendeckende Ausstattung aller Schulen mit Glasfaser und modernen Endgeräten bis spätestens zweitausendachtundzwanzig."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q2 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Zweitens: verbindliche digitale Mindeststandards für alle Lehrkräfte, die regelmäßig überprüft und aktualisiert werden."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q3.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Drittens: ein einheitliches digitales Ökosystem für alle sechzehn Bundesländer statt der aktuellen Kleinstaaterei."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Bildschirmzeit ist nicht gleich Bildschirmzeit. Passive Mediennutzung und aktives digitales Lernen unterscheiden sich fundamental.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Frau Dr. Kohl, Sie sind Grundschullehrerin und Bildungsforscherin. Wie sehen Sie diese Forderungen?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q3 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Infrastruktur-Forderung unterstütze ich vollkommen, aber bei den Standards bin ich skeptisch und habe Bedenken."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q4.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Lehrkräfte brauchen pädagogische Freiheit, um Technologie an die individuellen Bedürfnisse ihrer Klassen anzupassen."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Da sind wir uns einig! Pädagogik muss bei jeder digitalen Innovation an erster Stelle stehen.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Einheitliche digitale Mindeststandards klingen nach weiterer Bürokratisierung, die den Schulalltag noch mehr belasten würde."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q4 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Herr Wegner, wie reagieren Sie auf den Einwand der mangelnden pädagogischen Freiheit?"
       },
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Ende des Hoertexts."
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Standards bedeuten nicht, dass jeder Unterricht gleich aussehen muss, sondern dass eine Grundkompetenz garantiert wird."
+      },
+      {
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Kein Patient akzeptiert, dass sein Arzt keine digitale Diagnostik beherrscht. Warum akzeptieren wir das bei Lehrern?"
+      },
+      {
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Der Vergleich hinkt, weil Medizin und Pädagogik fundamental verschiedene professionelle Kontexte sind."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Frau Dr. Kohl, welche Erfahrungen haben Sie persönlich mit digitalem Unterricht in der Grundschule gemacht?"
+      },
+      {
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Gemischte Erfahrungen. Für bestimmte Übungsformate sind Lernapps hervorragend geeignet und individualisierbar."
+      },
+      {
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Aber für kreative Prozesse, soziales Lernen und die Entwicklung von Empathie brauchen Kinder analoge Interaktion."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wie gehen Sie mit dem Thema Bildschirmzeit bei Grundschulkindern um?"
+      },
+      {
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Sehr bewusst und restriktiv. Die WHO empfiehlt für Kinder unter zwölf maximal zwei Stunden Bildschirmzeit täglich."
+      },
+      {
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wenn die Schule davon eine Stunde beansprucht, bleibt für private Nutzung kaum noch Spielraum."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Herr Wegner, sehen Sie da keinen Widerspruch zwischen totaler Digitalisierung und Gesundheitsempfehlungen?"
+      },
+      {
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Bildschirmzeit ist nicht gleich Bildschirmzeit. Passive Mediennutzung und aktives digitales Lernen unterscheiden sich fundamental."
+      },
+      {
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ein Kind, das lernt zu programmieren, schädigt sein Gehirn nicht, sondern entwickelt wichtige kognitive Fähigkeiten."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Da stimme ich zu, aber die Realität zeigt, dass viele digitale Unterrichtsformate doch passiver Konsum bleiben."
+      },
+      {
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Interaktive Übungen am Tablet, bei denen nur Multiple-Choice-Antworten angetippt werden, sind kein aktives Lernen."
+      },
+      {
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Einverstanden. Qualitativ hochwertiger digitaler Unterricht erfordert sorgfältige didaktische Planung und Investition."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Frage ist nicht ob, sondern wie wir digitalisieren. Und darüber sollten Pädagogen mitentscheiden, nicht IT-Manager."
+      },
+      {
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Da sind wir uns einig! Pädagogik muss bei jeder digitalen Innovation an erster Stelle stehen."
+      },
+      {
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Vielen Dank für diese differenzierte Diskussion, die zeigt, wie komplex das Thema wirklich ist!"
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Ende Teil drei."
       }
     ]
   },
@@ -237,7 +316,7 @@
       "id": "l-c1-goethe-006-t3-lo-1",
       "cefrLevel": "C1",
       "skill": "listening",
-      "canDoVi": "Toi co the luyen nghe hieu o trinh do C1 qua chu de \"Digitalisierung im Bildungswesen\".",
+      "canDoVi": "Tôi có thể luyện nghe hiểu ở trình độ C1 qua chủ đề \"Digitalisierung im Bildungswesen\".",
       "canDoDe": "Ich kann Hoeren auf Niveau C1 zum Thema \"Digitalisierung im Bildungswesen\" ueben.",
       "linkedContentIds": [
         "L-C1-GOETHE-006-T3"

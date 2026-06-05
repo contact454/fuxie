@@ -149,111 +149,147 @@
     ]
   },
   "transcript": {
-    "type": "full_reconstructed_transcript",
+    "type": "studio_source_transcript",
     "status": "complete",
-    "source": "reconstructed_full_script",
-    "quality": "release_candidate_reconstructed",
-    "note": "Full learner-visible reconstructed script created from existing question evidence because original studio scripts are not present in the repository. Replace with studio transcript if original audio scripts become available.",
+    "source": "studio_source_script",
+    "quality": "source_verified",
+    "sourceScript": "data/scripts/B1/Teil2-Fuehrung-oder-Monolog/L-B1-GOETHE-010-T2.json",
+    "note": "Transcript replaced from source script by scripts/apply-source-transcripts.ts.",
     "lines": [
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Im folgenden Hoertext geht es um Umwelt und Recycling. Achten Sie auf die zentrale Information."
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sie hören einen Text. Dazu gibt es fünf Aufgaben. Kreuzen Sie die richtige Antwort an. Sie hören den Text zweimal."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q1.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Rednerin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Guten Abend, willkommen zu unserem Vortrag über nachhaltiges Leben im Alltag."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Mein Name ist Lisa Berger, ich bin Umweltwissenschaftlerin an der Technischen Universität Berlin.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Rednerin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Mein Name ist Lisa Berger, ich bin Umweltwissenschaftlerin an der Technischen Universität Berlin."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q1 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Rednerin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Nachhaltigkeit ist kein Trend, sondern eine Notwendigkeit für die Zukunft unseres Planeten."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q2.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Rednerin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Aber was bedeutet nachhaltiges Leben konkret? Und wie können wir unseren Alltag verändern?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Die Lebensmittelproduktion verursacht etwa ein Drittel aller Treibhausemissionen.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Rednerin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Fangen wir beim Essen an: Die Lebensmittelproduktion verursacht etwa ein Drittel aller Treibhausemissionen."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q2 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Rednerin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Besonders die Fleischproduktion belastet das Klima enorm, vor allem Rindfleisch."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q3.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Rednerin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Weniger Fleisch zu essen ist einer der effektivsten Beiträge, den jeder Einzelne leisten kann."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Die Textilindustrie ist der zweitgrößte Umweltverschmutzer weltweit nach der Ölindustrie.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Rednerin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das heißt nicht, dass Sie sofort vegan leben müssen, aber jeder fleischfreie Tag hilft."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q3 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Rednerin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Kaufen Sie saisonale und regionale Lebensmittel. Erdbeeren im Winter haben einen hohen CO2-Fußabdruck."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q4.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Rednerin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Auf dem Wochenmarkt bekommen Sie frische, regionale Produkte oft günstiger als im Supermarkt."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "In Deutschland verbraucht jeder Mensch durchschnittlich hundertachtundzwanzig Liter Wasser am Tag.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Rednerin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ein weiterer wichtiger Bereich ist die Mode. Fast Fashion ist ein großes Umweltproblem."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q4 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Rednerin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Textilindustrie ist der zweitgrößte Umweltverschmutzer weltweit nach der Ölindustrie."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q5.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Rednerin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Kaufen Sie weniger, aber dafür bessere Qualität, die länger hält."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Essig und Natron sind preiswerte und umweltfreundliche Alternativen für viele Reinigungsarbeiten.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Rednerin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Second-Hand-Mode ist nicht nur nachhaltig, sondern auch individuell und einzigartig."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q5 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Rednerin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Lassen Sie mich auch über das Thema Wasser sprechen."
       },
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Ende des Hoertexts."
+        "speaker": "Rednerin",
+        "speaker_role": "dialogue_speaker",
+        "text": "In Deutschland verbraucht jeder Mensch durchschnittlich hundertachtundzwanzig Liter Wasser am Tag."
+      },
+      {
+        "speaker": "Rednerin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Davon werden allein dreißig Liter für die tägliche Dusche verwendet."
+      },
+      {
+        "speaker": "Rednerin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Kürzere Duschen und wassersparende Duschköpfe können den Verbrauch deutlich senken."
+      },
+      {
+        "speaker": "Rednerin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Im Haushalt können wir auch bei der Reinigung nachhaltige Produkte verwenden."
+      },
+      {
+        "speaker": "Rednerin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Viele chemische Reinigungsmittel belasten das Abwasser und damit unsere Gewässer."
+      },
+      {
+        "speaker": "Rednerin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Essig und Natron sind preiswerte und umweltfreundliche Alternativen für viele Reinigungsarbeiten."
+      },
+      {
+        "speaker": "Rednerin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Zum Schluss: Nachhaltigkeit muss nicht teuer sein, im Gegenteil oft spart sie sogar Geld."
+      },
+      {
+        "speaker": "Rednerin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Weniger konsumieren, reparieren statt wegwerfen und bewusst einkaufen sind die Schlüssel."
+      },
+      {
+        "speaker": "Rednerin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Jeder noch so kleine Schritt in Richtung Nachhaltigkeit zählt und macht einen Unterschied."
+      },
+      {
+        "speaker": "Rednerin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Vielen Dank! Ich stehe Ihnen nun für Fragen zur Verfügung."
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Ende Teil zwei."
       }
     ]
   },
@@ -270,7 +306,7 @@
       "id": "l-b1-goethe-010-t2-lo-1",
       "cefrLevel": "B1",
       "skill": "listening",
-      "canDoVi": "Toi co the luyen nghe hieu o trinh do B1 qua chu de \"Umwelt und Recycling\".",
+      "canDoVi": "Tôi có thể luyện nghe hiểu ở trình độ B1 qua chủ đề \"Umwelt und Recycling\".",
       "canDoDe": "Ich kann Hoeren auf Niveau B1 zum Thema \"Umwelt und Recycling\" ueben.",
       "linkedContentIds": [
         "L-B1-GOETHE-010-T2"

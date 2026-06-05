@@ -98,7 +98,6 @@ test.describe('Slice 4 staff visual QA fixtures', () => {
 
                 await page.screenshot({
                     path: path.join(SCREENSHOT_DIR, `${fixture.module}-${fixture.visualState}-${viewport.name}.png`),
-                    fullPage: true,
                 })
             })
         }

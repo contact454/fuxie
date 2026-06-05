@@ -60,7 +60,7 @@
       "explanation": {
         "de": "Die Aussage ist falsch. Der Experte bewertet diese Entwicklungen explizit positiv. Er sieht sie nicht als Bedrohung oder 'Erosion', sondern als eine 'Bereicherung' und 'Erweiterung' der kommunikativen Möglichkeiten. Die negative Konnotation der Aussage steht im direkten Widerspruch zu seiner optimistischen Haltung.",
         "vi": "Nhận định này sai. Vị chuyên gia đánh giá những phát triển này một cách rõ ràng là tích cực. Ông không coi chúng là một mối đe dọa hay 'sự xói mòn', mà là một sự 'làm phong phú thêm' và 'mở rộng' các khả năng giao tiếp. Hàm ý tiêu cực của nhận định này hoàn toàn trái ngược với thái độ lạc quan của ông.",
-        "key_evidence": "...die die Sprache nicht verarmen, sondern bereichern und den kommunikativen Handlungsspielraum erweitern. [...] ...die die deutsche Sprache nicht bedrohen, sondern um neue Ausdrucksmöglichkeiten erweitern.",
+        "key_evidence": "die die Sprache nicht verarmen, sondern bereichern und den kommunikativen Handlungsspielraum erweitern",
         "key_vocabulary": [
           "Neologismus: từ mới",
           "Erosion der sprachlichen Substanz: sự xói mòn bản chất ngôn ngữ",
@@ -108,75 +108,182 @@
     ]
   },
   "transcript": {
-    "type": "full_reconstructed_transcript",
+    "type": "studio_source_transcript",
     "status": "complete",
-    "source": "reconstructed_full_script",
-    "quality": "release_candidate_reconstructed",
-    "note": "Full learner-visible reconstructed script created from existing question evidence because original studio scripts are not present in the repository. Replace with studio transcript if original audio scripts become available.",
+    "source": "studio_source_script",
+    "quality": "source_verified",
+    "sourceScript": "data/scripts/C2/Teil3-Experteninterview-lang/L-C2-GOETHE-009-T3.json",
+    "note": "Transcript replaced from source script by scripts/apply-source-transcripts.ts.",
     "lines": [
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Der folgende anspruchsvolle Hoertext behandelt Sprachverfall oder Sprachwandel?. Achten Sie auf Aussage, Kontext und implizite Bedeutung."
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sie hören ein ausführliches Interview. Dazu gibt es zehn Aufgaben. Kreuzen Sie die richtige Antwort an. Sie hören das Interview einmal."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q1.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Herr Professor Wandel, als Ordinarius für germanistische Linguistik und Mitglied des Rates für deutsche Rechtschreibung haben Sie einen einzigartigen Einblick in die aktuelle Sprachentwicklung des Deutschen."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Sprachverfallsklagen erfüllen eine wichtige soziale Funktion: Sie erlauben es einer bestimmten sozialen Gruppe, sich als Hüterin kultureller Standards zu positionieren und sprachliche Normen als Distinktionsmerkmal einzusetzen.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Meine Position lässt sich in einem Satz zusammenfassen: Sprachwandel ist der Normalfall, Sprachverfall ist ein Mythos, der allerdings soziologisch und kulturwissenschaftlich hochinteressant ist."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q1 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wie erklären Sie sich die bemerkenswerte Persistenz der Sprachverfallsklage über die Jahrhunderte hinweg?"
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q2.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Sprachverfallsklagen erfüllen eine wichtige soziale Funktion: Sie erlauben es einer bestimmten sozialen Gruppe, sich als Hüterin kultureller Standards zu positionieren und sprachliche Normen als Distinktionsmerkmal einzusetzen."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "answer_evidence",
-        "text": "Besorgniserregend finde ich nicht den Sprachwandel selbst, sondern die abnehmende Fähigkeit vieler Sprecherinnen und Sprecher, zwischen verschiedenen Registern zu wechseln und ihre Sprache situationsangemessen einzusetzen.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Gibt es dennoch Entwicklungen im gegenwärtigen Deutschen, die Sie als Linguist mit einer gewissen Besorgnis beobachten?"
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q2 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Besorgniserregend finde ich nicht den Sprachwandel selbst, sondern die abnehmende Fähigkeit vieler Sprecherinnen und Sprecher, zwischen verschiedenen Registern zu wechseln und ihre Sprache situationsangemessen einzusetzen."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q3.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wie bewerten Sie die Auswirkungen der digitalen Kommunikation auf die deutsche Sprache, insbesondere die Verbreitung von Emojis, Abkürzungen und neuen Wortschöpfungen?"
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "answer_evidence",
-        "text": "...die die Sprache nicht verarmen, sondern bereichern und den kommunikativen Handlungsspielraum erweitern. [...] ...die die deutsche Sprache nicht bedrohen, sondern um neue Ausdrucksmöglichkeiten erweitern.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die digitale Kommunikation hat die Schriftlichkeit revolutioniert und eine Fülle neuer Ausdrucksformen hervorgebracht, die die Sprache nicht verarmen, sondern bereichern und den kommunikativen Handlungsspielraum erweitern."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q3 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Zum Abschluss: Welchen Rat geben Sie denjenigen, die sich ernsthaft um die Zukunft der deutschen Sprache sorgen?"
       },
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Ende des Hoertexts."
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Lesen Sie viel, schreiben Sie bewusst, genießen Sie die Vielfalt der Sprache und akzeptieren Sie, dass jede Generation die Sprache auf ihre Weise gestalten und verändern wird."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Und die Anglizismen? Sollte man sie tolerieren oder bekämpfen?"
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Weder noch; man sollte sie als das betrachten, was sie sind: Zeichen einer globalisierten Lebenswelt, die die deutsche Sprache nicht bedrohen, sondern um neue Ausdrucksmöglichkeiten erweitern."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Herr Professor Wandel, vielen Dank für dieses Gespräch, das hoffentlich dazu beiträgt, die oft hitzig geführte Debatte um unsere Sprache zu versachlichen."
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wenn mein Beitrag dazu führt, dass ein einziger Mensch weniger reflexhaft klagt und stattdessen neugierig auf die faszinierenden Wandlungsprozesse unserer Sprache blickt, dann hat sich dieses Gespräch gelohnt."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Herr Professor Wandel, als Ordinarius für germanistische Linguistik und Mitglied des Rates für deutsche Rechtschreibung haben Sie einen einzigartigen Einblick in die aktuelle Sprachentwicklung des Deutschen."
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Meine Position lässt sich in einem Satz zusammenfassen: Sprachwandel ist der Normalfall, Sprachverfall ist ein Mythos, der allerdings soziologisch und kulturwissenschaftlich hochinteressant ist."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wie erklären Sie sich die bemerkenswerte Persistenz der Sprachverfallsklage über die Jahrhunderte hinweg?"
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Sprachverfallsklagen erfüllen eine wichtige soziale Funktion: Sie erlauben es einer bestimmten sozialen Gruppe, sich als Hüterin kultureller Standards zu positionieren und sprachliche Normen als Distinktionsmerkmal einzusetzen."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Gibt es dennoch Entwicklungen im gegenwärtigen Deutschen, die Sie als Linguist mit einer gewissen Besorgnis beobachten?"
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Besorgniserregend finde ich nicht den Sprachwandel selbst, sondern die abnehmende Fähigkeit vieler Sprecherinnen und Sprecher, zwischen verschiedenen Registern zu wechseln und ihre Sprache situationsangemessen einzusetzen."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wie bewerten Sie die Auswirkungen der digitalen Kommunikation auf die deutsche Sprache, insbesondere die Verbreitung von Emojis, Abkürzungen und neuen Wortschöpfungen?"
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die digitale Kommunikation hat die Schriftlichkeit revolutioniert und eine Fülle neuer Ausdrucksformen hervorgebracht, die die Sprache nicht verarmen, sondern bereichern und den kommunikativen Handlungsspielraum erweitern."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Zum Abschluss: Welchen Rat geben Sie denjenigen, die sich ernsthaft um die Zukunft der deutschen Sprache sorgen?"
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Lesen Sie viel, schreiben Sie bewusst, genießen Sie die Vielfalt der Sprache und akzeptieren Sie, dass jede Generation die Sprache auf ihre Weise gestalten und verändern wird."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Und die Anglizismen? Sollte man sie tolerieren oder bekämpfen?"
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Weder noch; man sollte sie als das betrachten, was sie sind: Zeichen einer globalisierten Lebenswelt, die die deutsche Sprache nicht bedrohen, sondern um neue Ausdrucksmöglichkeiten erweitern."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Herr Professor Wandel, vielen Dank für dieses Gespräch, das hoffentlich dazu beiträgt, die oft hitzig geführte Debatte um unsere Sprache zu versachlichen."
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wenn mein Beitrag dazu führt, dass ein einziger Mensch weniger reflexhaft klagt und stattdessen neugierig auf die faszinierenden Wandlungsprozesse unserer Sprache blickt, dann hat sich dieses Gespräch gelohnt."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Herr Professor Wandel, als Ordinarius für germanistische Linguistik und Mitglied des Rates für deutsche Rechtschreibung haben Sie einen einzigartigen Einblick in die aktuelle Sprachentwicklung des Deutschen."
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Meine Position lässt sich in einem Satz zusammenfassen: Sprachwandel ist der Normalfall, Sprachverfall ist ein Mythos, der allerdings soziologisch und kulturwissenschaftlich hochinteressant ist."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wie erklären Sie sich die bemerkenswerte Persistenz der Sprachverfallsklage über die Jahrhunderte hinweg?"
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Sprachverfallsklagen erfüllen eine wichtige soziale Funktion: Sie erlauben es einer bestimmten sozialen Gruppe, sich als Hüterin kultureller Standards zu positionieren und sprachliche Normen als Distinktionsmerkmal einzusetzen."
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Ende des Hörverstehens."
       }
     ]
   },
@@ -193,7 +300,7 @@
       "id": "l-c2-goethe-009-t3-lo-1",
       "cefrLevel": "C2",
       "skill": "listening",
-      "canDoVi": "Toi co the luyen nghe hieu o trinh do C2 qua chu de \"Sprachverfall oder Sprachwandel?\".",
+      "canDoVi": "Tôi có thể luyện nghe hiểu ở trình độ C2 qua chủ đề \"Sprachverfall oder Sprachwandel?\".",
       "canDoDe": "Ich kann Hoeren auf Niveau C2 zum Thema \"Sprachverfall oder Sprachwandel?\" ueben.",
       "linkedContentIds": [
         "L-C2-GOETHE-009-T3"

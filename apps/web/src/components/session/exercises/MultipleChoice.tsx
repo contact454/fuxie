@@ -78,14 +78,30 @@ export function MultipleChoice({
         }
     }
 
-    const [mockAudio, setMockAudio] = useState(false)
-    React.useEffect(() => {
-        if (typeof window !== 'undefined') {
-            setMockAudio(new URLSearchParams(window.location.search).get('mockAudio') === 'true')
-        }
-    }, [])
+    const hasAudio = !isGrammar && !!vocabData.audioUrl
 
-    const hasAudio = !isGrammar && (!!vocabData.audioUrl || mockAudio)
+    const audioRef = React.useRef<HTMLAudioElement>(null)
+    const [isPlaying, setIsPlaying] = useState(false)
+
+    // Autoplay audio on mount or when the item id / audio source changes
+    React.useEffect(() => {
+        if (hasAudio && audioRef.current) {
+            audioRef.current.currentTime = 0
+            setIsPlaying(false)
+            
+            const playPromise = audioRef.current.play()
+            if (playPromise !== undefined) {
+                playPromise
+                    .then(() => {
+                        setIsPlaying(true)
+                    })
+                    .catch(error => {
+                        console.log("Autoplay was prevented or failed:", error)
+                        setIsPlaying(false)
+                    })
+            }
+        }
+    }, [item.id, vocabData.audioUrl, hasAudio])
 
     let question = ''
     let subTitle = ''
@@ -115,6 +131,16 @@ export function MultipleChoice({
         }
     }
 
+    // Dynamic badge text and icon
+    let badgeText = 'WORTSCHATZ'
+    let badgeIcon: React.ReactNode = null
+    if (isGrammar) {
+        badgeText = 'GRAMMATIK'
+    } else if (hasAudio) {
+        badgeText = 'HÖREN'
+        badgeIcon = <Headphones className="w-3 h-3" />
+    }
+
     return (
         <div className="flex flex-col h-full animate-fade-in-up">
             {/* Header: Schritt and Badge */}
@@ -123,8 +149,8 @@ export function MultipleChoice({
                     Schritt <span className="text-[#173b56] font-black">{stepIndex + 1}</span> von {totalSteps}
                 </span>
                 <span className="flex items-center gap-1 bg-[#2EC4B6]/15 text-[#2EC4B6] text-[10px] font-black px-2.5 py-1 rounded-full uppercase tracking-wider">
-                    <Headphones className="w-3 h-3" />
-                    HÖREN
+                    {badgeIcon}
+                    {badgeText}
                 </span>
             </div>
 
@@ -171,8 +197,27 @@ export function MultipleChoice({
             {/* Big Speaker Button */}
             {hasAudio ? (
                 <div className="flex flex-col items-center justify-center gap-4 mb-6">
+                    <audio
+                        ref={audioRef}
+                        src={vocabData.audioUrl ?? undefined}
+                        preload="auto"
+                        onPlay={() => setIsPlaying(true)}
+                        onPause={() => setIsPlaying(false)}
+                        onEnded={() => setIsPlaying(false)}
+                    />
                     <button 
                         type="button"
+                        onClick={() => {
+                            if (audioRef.current) {
+                                if (isPlaying) {
+                                    audioRef.current.pause()
+                                } else {
+                                    audioRef.current.play().catch(error => {
+                                        console.log("Speaker click play failed:", error)
+                                    })
+                                }
+                            }
+                        }}
                         className="w-20 h-20 rounded-full bg-[#F3FBFF] border border-[#CCE4F0]/50 shadow-md flex items-center justify-center text-[#2EC4B6] hover:scale-105 active:scale-95 transition-all duration-300 cursor-pointer"
                     >
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="w-10 h-10">
@@ -190,8 +235,13 @@ export function MultipleChoice({
                             return (
                                 <div
                                     key={bar}
-                                    className="w-[3px] bg-[#2EC4B6] rounded-full opacity-80"
-                                    style={{ height: `${h}px` }}
+                                    className={`w-[3px] bg-[#2EC4B6] rounded-full transition-all duration-300 ${
+                                        isPlaying ? 'animate-pulse' : 'opacity-40'
+                                    }`}
+                                    style={{ 
+                                        height: `${h}px`,
+                                        animationDelay: isPlaying ? `${bar * 50}ms` : undefined 
+                                    }}
                                 />
                             )
                         })}
@@ -243,22 +293,24 @@ export function MultipleChoice({
                 })}
             </div>
 
-            {/* Orange warning/tip bar */}
-            <div className="flex items-center gap-1.5 justify-center text-xs text-[#FFB703] font-extrabold mb-6">
-                <span>💡</span>
-                <span>Tipp: Achte auf den Artikel!</span>
-            </div>
+            {/* Grammar Explanation after checked (replaces tip bar) */}
+            {checked && isGrammar && grammarData.explanation && (
+                <div className="p-3 bg-[#F3FBFF] border border-[#CCE4F0]/50 rounded-2xl text-xs text-[#173b56] font-bold text-center mb-6 animate-fade-in-up">
+                    <span className="text-[#2E7EC4] mr-1">{t('explanationLabel')}</span>
+                    {grammarData.explanation}
+                </div>
+            )}
 
             {/* Bottom Button inside Card */}
             <div className="mt-auto pt-4 border-t border-[#CCE4F0]/30">
                 {checked && (
                     <div className="mb-4 text-center">
                         <div className={`font-black text-lg mb-1 ${isCorrect ? 'text-emerald-600' : 'text-red-600'}`}>
-                            {isCorrect ? 'Tuyệt vời!' : 'Chưa đúng rồi!'}
+                            {isCorrect ? t('correctFeedback') : t('incorrectFeedback')}
                         </div>
                         {!isCorrect && (
                             <div className="text-red-700 text-xs font-bold">
-                                Antwort: <strong>{options[correctIndex]}</strong>
+                                {t('correctAnswerLabel')} <strong>{options[correctIndex]}</strong>
                             </div>
                         )}
                     </div>
@@ -269,7 +321,7 @@ export function MultipleChoice({
                     disabled={selected === null && !checked}
                     className="w-full py-4 bg-[#2EC4B6] hover:bg-[#25b5a7] active:bg-[#1fa093] text-white text-base font-black rounded-2xl transition-all duration-300 shadow-md shadow-[#2EC4B6]/25 hover:shadow-lg active:scale-[0.98] disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
                 >
-                    <span>{checked ? 'Weiter' : 'Kiểm tra'}</span>
+                    <span>{checked ? t('nextLabel') : t('checkLabel')}</span>
                     <span>→</span>
                 </button>
             </div>

@@ -219,201 +219,247 @@
     ]
   },
   "transcript": {
-    "type": "full_reconstructed_transcript",
+    "type": "studio_source_transcript",
     "status": "complete",
-    "source": "reconstructed_full_script",
-    "quality": "release_candidate_reconstructed",
-    "note": "Full learner-visible reconstructed script created from existing question evidence because original studio scripts are not present in the repository. Replace with studio transcript if original audio scripts become available.",
+    "source": "studio_source_script",
+    "quality": "source_verified",
+    "sourceScript": "data/scripts/B1/Teil1-Kurze-Texte/L-B1-GOETHE-006-T1.json",
+    "note": "Transcript replaced from source script by scripts/apply-source-transcripts.ts.",
     "lines": [
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Im folgenden Hoertext geht es um Reiseinformation mit Verspätung und Umsteigen. Achten Sie auf die zentrale Information."
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sie hören fünf kurze Texte. Zu jedem Text gibt es zwei Aufgaben. Kreuzen Sie die richtige Antwort an. Sie hören jeden Text einmal."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q1.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Text 1."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Ihr Anschlusszug in München wartet nicht",
-        "linkedQuestionId": "Q1"
+        "speaker": "Sprecher_1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Liebe Fahrgäste, wir informieren Sie über Änderungen im Fahrplan auf der Strecke Berlin-München."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q1 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Sprecher_1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Der ICE siebenhundertvierunddreißig um dreizehn Uhr fünfundvierzig hat heute eine Verspätung von dreißig Minuten."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q2.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Sprecher_1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Grund ist eine technische Störung an der Strecke in der Nähe von Leipzig."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Der ICE siebenhundertvierunddreißig um dreizehn Uhr fünfundvierzig hat heute eine Verspätung von dreißig Minuten.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Sprecher_1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ihr Anschlusszug in München wartet nicht, aber Sie können den nächsten ICE um sechzehn Uhr nehmen."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q2 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Sprecher_1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Reisende nach Innsbruck oder Verona können auch den IC um sechzehn dreißig ab München nutzen."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q3.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Sprecher_1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Fahrgäste mit Sparpreistickets können diese trotz Zugbindung flexibel für den nächsten Zug nutzen."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "answer_evidence",
-        "text": "Buchen Sie Ihrer Tickets mindestens drei Monate im Voraus, dann sind sie am günstigsten.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Sprecher_1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wir entschuldigen uns für die Unannehmlichkeiten und halten Sie über die Entwicklung auf dem Laufenden."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q3 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Sprecher_1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Aktuelle Informationen finden Sie auch in der DB Navigator App und am Servicepunkt im Bahnhof."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q4.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Text 2."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "answer_evidence",
-        "text": "Die Fahrt dauert insgesamt zwischen zwölf und vierzehn Stunden, je nach Verbindung.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Sprecher_2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Sie planen eine Reise nach Italien? Hier sind unsere besten Tipps für die Fahrt mit dem Zug."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q4 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Sprecher_2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Von Berlin nach Rom gibt es mehrere Verbindungen täglich mit Umstieg in München oder Zürich."
       },
       {
-        "speaker": "Sprecher 5",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q5.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Sprecher_2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Fahrt dauert insgesamt zwischen zwölf und vierzehn Stunden, je nach Verbindung."
       },
       {
-        "speaker": "Sprecher 5",
-        "speaker_role": "answer_evidence",
-        "text": "Für die Einreise nach Japan brauchen deutsche Staatsbürger kein Visum für Aufenthalte bis neunzig Tage.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Sprecher_2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Nachtzüge sind eine bequeme Alternative, Sie schlafen im Zug und kommen morgens am Ziel an."
       },
       {
-        "speaker": "Sprecher 5",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q5 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Sprecher_2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Preise für einen Liegewagen beginnen bei neunundfünfzig Euro pro Person und Strecke."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q6.",
-        "linkedQuestionId": "Q6"
+        "speaker": "Sprecher_2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Buchen Sie Ihrer Tickets mindestens drei Monate im Voraus, dann sind sie am günstigsten."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "answer_evidence",
-        "text": "Die Fluggesellschaft bietet dreimal wöchentlich Direktflüge an, dienstags, donnerstags und samstags.",
-        "linkedQuestionId": "Q6"
+        "speaker": "Sprecher_2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Vergessen Sie nicht Ihren Personalausweis oder Reisepass, Fahrkartenkontrolleure prüfen die Identität."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q6 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q6"
+        "speaker": "Sprecher_2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Und nehmen Sie genug Proviant mit, die Bordgastronomie im Fernverkehr ist nicht gerade günstig."
       },
       {
-        "speaker": "Sprecher 7",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q7.",
-        "linkedQuestionId": "Q7"
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Text 3."
       },
       {
-        "speaker": "Sprecher 7",
-        "speaker_role": "answer_evidence",
-        "text": "Bei einer Verspätung von mehr als drei Stunden haben Sie Anspruch auf Verpflegungsgutscheine.",
-        "linkedQuestionId": "Q7"
+        "speaker": "Sprecher_3",
+        "speaker_role": "dialogue_speaker",
+        "text": "Reisende aufgepasst! Ab nächstem Monat gibt es eine neue direkte Flugverbindung von Berlin nach Tokio."
       },
       {
-        "speaker": "Sprecher 7",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q7 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q7"
+        "speaker": "Sprecher_3",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Fluggesellschaft bietet dreimal wöchentlich Direktflüge an, dienstags, donnerstags und samstags."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q8.",
-        "linkedQuestionId": "Q8"
+        "speaker": "Sprecher_3",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Flugzeit beträgt etwa elf Stunden, deutlich kürzer als mit einem Umstieg."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "answer_evidence",
-        "text": "Aufgrund eines Streiks des Bodenpersonals kommt es heute zu erheblichen Verzögerungen.",
-        "linkedQuestionId": "Q8"
+        "speaker": "Sprecher_3",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Preise starten bei vierhundertneunundneunzig Euro für die Economy-Klasse und Hin- und Rückflug."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q8 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q8"
+        "speaker": "Sprecher_3",
+        "speaker_role": "dialogue_speaker",
+        "text": "Gepäck bis dreiundzwanzig Kilogramm ist im Preis inklusive, Handgepäck bis acht Kilogramm."
       },
       {
-        "speaker": "Sprecher 9",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q9.",
-        "linkedQuestionId": "Q9"
+        "speaker": "Sprecher_3",
+        "speaker_role": "dialogue_speaker",
+        "text": "Für die Einreise nach Japan brauchen deutsche Staatsbürger kein Visum für Aufenthalte bis neunzig Tage."
       },
       {
-        "speaker": "Sprecher 9",
-        "speaker_role": "answer_evidence",
-        "text": "An der Ostsee locken weiße Sandstrände, historische Seebäder und mildes Seeklima.",
-        "linkedQuestionId": "Q9"
+        "speaker": "Sprecher_3",
+        "speaker_role": "dialogue_speaker",
+        "text": "Aktuelle Reisehinweise finden Sie auf der Webseite des Auswärtigen Amtes."
       },
       {
-        "speaker": "Sprecher 9",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q9 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q9"
+        "speaker": "Sprecher_3",
+        "speaker_role": "dialogue_speaker",
+        "text": "Buchen Sie früh, dann bekommen Sie die besten Preise und die bevorzugten Sitzplätze."
       },
       {
-        "speaker": "Sprecher 5",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q10.",
-        "linkedQuestionId": "Q10"
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Text 4."
       },
       {
-        "speaker": "Sprecher 5",
-        "speaker_role": "answer_evidence",
-        "text": "Frühes Buchen lohnt sich also, idealerweise schon im Januar oder Februar.",
-        "linkedQuestionId": "Q10"
+        "speaker": "Sprecher_4",
+        "speaker_role": "dialogue_speaker",
+        "text": "Achtung, eine wichtige Durchsage für alle Reisenden am Flughafen Berlin Brandenburg."
       },
       {
-        "speaker": "Sprecher 5",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q10 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q10"
+        "speaker": "Sprecher_4",
+        "speaker_role": "dialogue_speaker",
+        "text": "Aufgrund eines Streiks des Bodenpersonals kommt es heute zu erheblichen Verzögerungen."
       },
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Ende des Hoertexts."
+        "speaker": "Sprecher_4",
+        "speaker_role": "dialogue_speaker",
+        "text": "Mehrere Flüge nach London, Paris und Mailand wurden gestrichen."
+      },
+      {
+        "speaker": "Sprecher_4",
+        "speaker_role": "dialogue_speaker",
+        "text": "Betroffene Passagiere werden gebeten, sich am Informationsschalter in Terminal eins zu melden."
+      },
+      {
+        "speaker": "Sprecher_4",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Fluggesellschaften sind verpflichtet, Ihnen eine Alternativverbindung oder Erstattung anzubieten."
+      },
+      {
+        "speaker": "Sprecher_4",
+        "speaker_role": "dialogue_speaker",
+        "text": "Bei einer Verspätung von mehr als drei Stunden haben Sie Anspruch auf Verpflegungsgutscheine."
+      },
+      {
+        "speaker": "Sprecher_4",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ab fünf Stunden Verspätung können Sie vom Flug zurücktreten und eine vollständige Erstattung verlangen."
+      },
+      {
+        "speaker": "Sprecher_4",
+        "speaker_role": "dialogue_speaker",
+        "text": "Informieren Sie sich über Ihre Rechte als Fluggast auf der Webseite der EU-Fluggastrechteverordnung."
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Text 5."
+      },
+      {
+        "speaker": "Sprecher_5",
+        "speaker_role": "dialogue_speaker",
+        "text": "Sommerurlaub in Deutschland wird immer beliebter, besonders die Nord- und Ostseeküste."
+      },
+      {
+        "speaker": "Sprecher_5",
+        "speaker_role": "dialogue_speaker",
+        "text": "An der Ostsee locken weiße Sandstrände, historische Seebäder und mildes Seeklima."
+      },
+      {
+        "speaker": "Sprecher_5",
+        "speaker_role": "dialogue_speaker",
+        "text": "Besonders empfehlenswert sind die Inseln Rügen und Usedom mit ihren langen Sandstränden."
+      },
+      {
+        "speaker": "Sprecher_5",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Nordsee bietet mit dem Wattenmeer ein einzigartiges Naturerlebnis und UNESCO-Weltnaturerbe."
+      },
+      {
+        "speaker": "Sprecher_5",
+        "speaker_role": "dialogue_speaker",
+        "text": "Für einen einwöchigen Urlaub an der Ostsee sollten Sie mit Kosten ab siebenhundert Euro pro Person rechnen."
+      },
+      {
+        "speaker": "Sprecher_5",
+        "speaker_role": "dialogue_speaker",
+        "text": "In der Hauptsaison im Juli und August sind die Unterkünfte oft frühzeitig ausgebucht."
+      },
+      {
+        "speaker": "Sprecher_5",
+        "speaker_role": "dialogue_speaker",
+        "text": "Frühes Buchen lohnt sich also, idealerweise schon im Januar oder Februar."
+      },
+      {
+        "speaker": "Sprecher_5",
+        "speaker_role": "dialogue_speaker",
+        "text": "Alternativ fahren Sie in der Nebensaison, dann sind die Preise niedriger und die Strände leerer."
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Ende Teil eins."
       }
     ]
   },
@@ -430,7 +476,7 @@
       "id": "l-b1-goethe-006-t1-lo-1",
       "cefrLevel": "B1",
       "skill": "listening",
-      "canDoVi": "Toi co the luyen nghe hieu o trinh do B1 qua chu de \"Reiseinformation mit Verspätung und Umsteigen\".",
+      "canDoVi": "Tôi có thể luyện nghe hiểu ở trình độ B1 qua chủ đề \"Reiseinformation mit Verspätung und Umsteigen\".",
       "canDoDe": "Ich kann Hoeren auf Niveau B1 zum Thema \"Reiseinformation mit Verspätung und Umsteigen\" ueben.",
       "linkedContentIds": [
         "L-B1-GOETHE-006-T1"

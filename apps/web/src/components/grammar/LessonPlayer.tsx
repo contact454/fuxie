@@ -1,11 +1,13 @@
 'use client'
 
 import React, { useState, useCallback, useMemo, useEffect, useRef } from 'react'
+import { useTranslations } from 'next-intl'
 import { TheoryRenderer } from '@/components/grammar/TheoryRenderer'
 import { ExerciseRenderer, FeedbackToast } from '@/components/grammar/ExerciseRenderer'
 import type { TheoryBlock, GrammarExercise } from '@/components/grammar/types'
 import { RewardPreview, type RewardPreviewItem } from '@/components/gamification/quest-visuals'
 import { FuxieBadge, FuxieProgressBar, fuxieButtonClass } from '@/components/ui/fuxie-ui'
+import { ConfirmExitDialog } from '@/components/ui/confirm-exit-dialog'
 import { trackClientAnalyticsEvent } from '@/lib/analytics/client-events'
 import {
     buildGrammarQuestEpisode,
@@ -115,6 +117,8 @@ export function LessonPlayer({
     lessonId, titleDe, titleNative, level, lessonType, estimatedMin,
     theoryBlocks, exercises, topicSlug,
 }: LessonPlayerProps) {
+    const t = useTranslations('Grammar')
+    const tUi = useTranslations('UI')
     const confettiTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null)
     const [steps] = useState<Step[]>(() => {
         const all: Step[] = [{ type: 'hero' }]
@@ -134,6 +138,9 @@ export function LessonPlayer({
     const [elapsedTime, setElapsedTime] = useState(0)
     const [progressSaved, setProgressSaved] = useState(false)
     const [progressResult, setProgressResult] = useState<GrammarProgressResponse | null>(null)
+    const [syncError, setSyncError] = useState(false)
+    const [isSaving, setIsSaving] = useState(false)
+    const [showExitDialog, setShowExitDialog] = useState(false)
     const trackedCheckpoints = useRef<Set<string>>(new Set())
     const completionTracked = useRef(false)
 
@@ -219,10 +226,11 @@ export function LessonPlayer({
         })
     }, [currentStep.type, lessonId, level, progressResult, questEpisode.episodeId, totalExercises])
 
-    useEffect(() => {
-        if (currentStep.type === 'results' && !progressSaved && totalExercises > 0) {
-            setProgressSaved(true)
-            fetch('/api/v1/grammar/progress', {
+    const saveProgress = useCallback(async () => {
+        setIsSaving(true)
+        setSyncError(false)
+        try {
+            const response = await fetch('/api/v1/grammar/progress', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
@@ -241,11 +249,30 @@ export function LessonPlayer({
                     },
                 }),
             })
-                .then((response) => response.json())
-                .then((data) => setProgressResult(data))
-                .catch(console.error)
+            if (!response.ok) {
+                throw new Error('Sync failed')
+            }
+            const data = await response.json()
+            if (data.success) {
+                setProgressResult(data)
+                setProgressSaved(true)
+            } else {
+                throw new Error(data.error || 'Sync failed')
+            }
+        } catch (err) {
+            console.error(err)
+            setSyncError(true)
+            setProgressSaved(false)
+        } finally {
+            setIsSaving(false)
         }
-    }, [currentStep, progressSaved, lessonId, correctCount, totalExercises, stars, questEpisode, topicSlug])
+    }, [lessonId, correctCount, totalExercises, stars, questEpisode, topicSlug])
+
+    useEffect(() => {
+        if (currentStep.type === 'results' && !progressSaved && !isSaving && !syncError && totalExercises > 0) {
+            saveProgress()
+        }
+    }, [currentStep, progressSaved, isSaving, syncError, totalExercises, saveProgress])
 
     const goNext = useCallback(() => {
         setCurrentStepIdx(prev => Math.min(prev + 1, totalSteps - 1))
@@ -302,6 +329,7 @@ export function LessonPlayer({
         setFeedbackState(null)
         setProgressSaved(false)
         setProgressResult(null)
+        setSyncError(false)
         trackedCheckpoints.current = new Set()
         completionTracked.current = false
     }, [])
@@ -325,19 +353,42 @@ export function LessonPlayer({
     const formatTime = (secs: number) => {
         const m = Math.floor(secs / 60)
         const s2 = secs % 60
-        return `${m} phút ${s2 < 10 ? '0' : ''}${s2} giây`
+        return `${m} ${t('minutes')} ${s2 < 10 ? '0' : ''}${s2} ${t('seconds')}`
     }
 
-    const lessonTypeLabel = lessonType === 'E' ? 'Giới thiệu' : lessonType === 'V' ? 'Luyện sâu' : 'Ứng dụng'
+    const exitToTopic = useCallback(() => {
+        window.location.href = `/grammar/${topicSlug}`
+    }, [topicSlug])
+
+    const handleExitRequest = useCallback(() => {
+        if (currentStep.type !== 'hero' && currentStep.type !== 'results') {
+            setShowExitDialog(true)
+            return
+        }
+
+        exitToTopic()
+    }, [currentStep.type, exitToTopic])
+
+    const lessonTypeLabel = lessonType === 'E' ? t('intro') : lessonType === 'V' ? t('deepPractice') : t('application')
     const lessonTypeEmoji = lessonType === 'E' ? '📖' : lessonType === 'V' ? '🔬' : '🎯'
 
     return (
         <div className={s.lessonPlayer} style={{ background: '#F8FAFC' }}>
+            <ConfirmExitDialog
+                open={showExitDialog}
+                title={tUi('quitSessionTitle')}
+                description={tUi('quitSessionDescription')}
+                stayLabel={tUi('stayInLesson')}
+                exitLabel={tUi('exitLesson')}
+                ariaLabel={tUi('confirmExitAria')}
+                onStay={() => setShowExitDialog(false)}
+                onExit={exitToTopic}
+            />
             {/* Progress Bar */}
             {currentStep.type !== 'hero' && currentStep.type !== 'results' && (
                 <div className={s.progressBarWrap}>
                     <div className={s.progressBarInner}>
-                        <button className={s.progressBarClose} onClick={() => window.location.href = `/grammar/${topicSlug}`}>✕</button>
+                        <button className={s.progressBarClose} onClick={handleExitRequest} title={tUi('quitSessionTitle')}>✕</button>
                         <div className={s.progressBarTrack}>
                             <div className={s.progressBarFill} style={{ width: `${progress}%` }} />
                         </div>
@@ -367,19 +418,19 @@ export function LessonPlayer({
                     <div className={s.heroGradient}>
                         <span className={s.heroEmoji}>{lessonTypeEmoji}</span>
                         <div className={s.episodeBadges}>
-                            <FuxieBadge tone="brand" className="normal-case tracking-normal">Grammar Episode</FuxieBadge>
+                            <FuxieBadge tone="brand" className="normal-case tracking-normal">{t('grammarEpisode')}</FuxieBadge>
                             <FuxieBadge tone="neutral" className="normal-case tracking-normal">{level}</FuxieBadge>
                         </div>
                         <h1 className={s.heroTitle}>{titleNative}</h1>
-                        <p className={s.episodeEyebrow}>Quest briefing</p>
+                        <p className={s.episodeEyebrow}>{t('questBriefing')}</p>
                         <p className={s.heroSubtitle}>{titleDe} · {level} · {lessonTypeLabel}</p>
                         <div className={s.heroChips}>
-                            {theoryBlocks.length > 0 && <span className={s.heroChip}>📝 {theoryBlocks.length} phần lý thuyết</span>}
-                            <span className={s.heroChip}>🎯 {totalExercises} thử thách</span>
-                            <span className={s.heroChip}>⏱️ ~{estimatedMin} phút</span>
+                            {theoryBlocks.length > 0 && <span className={s.heroChip}>📝 {t('theoryCount', { count: theoryBlocks.length })}</span>}
+                            <span className={s.heroChip}>🎯 {t('challengeCount', { count: totalExercises })}</span>
+                            <span className={s.heroChip}>⏱️ {t('durationCount', { count: estimatedMin })}</span>
                         </div>
                         <p className={s.episodeObjective}>
-                            {questEpisode.objective} Phần thưởng chỉ được trao khi em thực sự hoàn thành thử thách ngữ pháp.
+                            {questEpisode.objective} {t('rewardCondition')}
                         </p>
                     </div>
                     <div className={s.episodePreview}>
@@ -395,7 +446,7 @@ export function LessonPlayer({
                         ))}
                     </div>
                     <button className={s.heroStartBtn} onClick={startGrammarQuestEpisode}>
-                        Bắt đầu học →
+                        {t('startLearningBtn')}
                     </button>
                 </div>
             )}
@@ -409,7 +460,7 @@ export function LessonPlayer({
                     <div className={s.stepFooter}>
                         <div className={s.stepFooterInner}>
                             <button className={`${s.btnPrimary} ${s.btnBlue}`} onClick={goNext}>
-                                {currentStep.blockIndex === theoryBlocks.length - 1 ? '🎯 Bắt đầu thử thách' : 'Tiếp bước →'}
+                                {currentStep.blockIndex === theoryBlocks.length - 1 ? t('startChallengeBtn') : t('nextStepBtn')}
                             </button>
                         </div>
                     </div>
@@ -423,6 +474,7 @@ export function LessonPlayer({
                         <ExerciseRenderer
                             exercise={exercises[currentStep.exerciseIndex]!}
                             onAnswer={handleExerciseAnswer}
+                            cefrLevel={level}
                         />
                     </div>
                 </div>
@@ -431,7 +483,7 @@ export function LessonPlayer({
             {/* RESULTS */}
             {currentStep.type === 'results' && (
                 <div className={s.resultsScreen}>
-                    <h1 className={s.resultsTitle}>🎉 Hoàn thành!</h1>
+                    <h1 className={s.resultsTitle}>{t('completed')}</h1>
                     <ScoreRing correct={correctCount} total={totalExercises} />
                     <div className={s.starsRow}>
                         {[1, 2, 3].map(i => (
@@ -444,6 +496,21 @@ export function LessonPlayer({
                         <span className={s.statItem}>⏱️ {formatTime(elapsedTime)}</span>
                         <span className={`${s.statItem} ${s.xpStat}`}>⚡ +{xp} XP</span>
                     </div>
+                    {syncError && (
+                        <div className="my-4 p-4 bg-amber-50 border border-amber-200 rounded-2xl flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-left">
+                            <div className="flex-1">
+                                <h3 className="text-sm font-bold text-amber-800">{t('syncFailedTitle')}</h3>
+                                <p className="text-xs text-amber-600">{t('syncFailedDetail')}</p>
+                            </div>
+                            <button
+                                onClick={saveProgress}
+                                disabled={isSaving}
+                                className="px-4 py-2 rounded-xl bg-amber-500 hover:bg-amber-600 text-white font-bold text-xs transition-all shadow-sm shrink-0"
+                            >
+                                {isSaving ? 'Đang lưu...' : 'Thử lại'}
+                            </button>
+                        </div>
+                    )}
                     {progressResult?.questEpisodeReceipt && (
                         <div className={s.episodeReceiptCard}>
                             <div className={s.episodeReceiptHeader}>
@@ -485,21 +552,21 @@ export function LessonPlayer({
                     )}
                     {strengths.length > 0 && (
                         <div className={s.strengthSection}>
-                            <div className={`${s.strengthHeader} ${s.strengthGood}`}>✅ Làm tốt</div>
-                            {strengths.map(t => <div key={t} className={s.strengthItem}>{t}</div>)}
+                            <div className={`${s.strengthHeader} ${s.strengthGood}`}>{t('goodJob')}</div>
+                            {strengths.map(tag => <div key={tag} className={s.strengthItem}>{tag}</div>)}
                         </div>
                     )}
                     {weaknesses.length > 0 && (
                         <div className={s.strengthSection}>
-                            <div className={`${s.strengthHeader} ${s.strengthWeak}`}>⚠️ Cần ôn</div>
-                            {weaknesses.map(t => <div key={t} className={s.strengthItem}>{t}</div>)}
+                            <div className={`${s.strengthHeader} ${s.strengthWeak}`}>{t('needReview')}</div>
+                            {weaknesses.map(tag => <div key={tag} className={s.strengthItem}>{tag}</div>)}
                         </div>
                     )}
                     <div className={s.resultsBtns}>
-                        <button className={`${s.btnPrimary} ${s.btnBlue}`} onClick={handleRestart}>🔄 Làm lại</button>
+                        <button className={`${s.btnPrimary} ${s.btnBlue}`} onClick={handleRestart}>{t('retryBtn')}</button>
                         <button className={`${s.btnPrimary} ${s.btnOutline}`}
                             onClick={() => window.location.href = `/grammar/${topicSlug}`}>
-                            → Quay lại
+                            {t('backBtn')}
                         </button>
                     </div>
                 </div>

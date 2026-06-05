@@ -124,111 +124,132 @@
     ]
   },
   "transcript": {
-    "type": "full_reconstructed_transcript",
+    "type": "studio_source_transcript",
     "status": "complete",
-    "source": "reconstructed_full_script",
-    "quality": "release_candidate_reconstructed",
-    "note": "Full learner-visible reconstructed script created from existing question evidence because original studio scripts are not present in the repository. Replace with studio transcript if original audio scripts become available.",
+    "source": "studio_source_script",
+    "quality": "source_verified",
+    "sourceScript": "data/scripts/A2/Teil4-Radiointerview/L-A2-GOETHE-005-T4.json",
+    "note": "Transcript replaced from source script by scripts/apply-source-transcripts.ts.",
     "lines": [
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Hoeren Sie eine kurze Information zum Thema Beim Arzt Symptome beschreiben."
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sie hören ein Interview im Radio. Zu dem Interview gibt es fünf Aufgaben. Kreuzen Sie ja oder nein an. Sie hören das Interview zweimal."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q1.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Heute sprechen wir mit Frau Dr. Yildiz über die häufigsten Gesundheitsprobleme."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Als Allgemeinmedizinerin sehe ich täglich viele verschiedene Patienten.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Gast",
+        "speaker_role": "dialogue_speaker",
+        "text": "Hallo! Als Allgemeinmedizinerin sehe ich täglich viele verschiedene Patienten."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q1 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Frau Dr. Yildiz, was sind die häufigsten Gründe für einen Arztbesuch?"
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q2.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Gast",
+        "speaker_role": "dialogue_speaker",
+        "text": "Erkältungen stehen an erster Stelle, gefolgt von Rückenschmerzen und Kopfschmerzen."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "answer_evidence",
-        "text": "Erkältungen stehen an erster Stelle, gefolgt von Rückenschmerzen und Kopfschmerzen.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wie sollte man sich auf einen Arztbesuch vorbereiten?"
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q2 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Gast",
+        "speaker_role": "dialogue_speaker",
+        "text": "Notieren Sie vorher Ihre Symptome: Was tut weh, seit wann und wie stark?"
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q3.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Viele Patienten haben Angst vor dem Arzt. Was raten Sie diesen Menschen?"
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "answer_evidence",
-        "text": "Notieren Sie vorher Ihre Symptome: Was tut weh, seit wann und wie stark?",
-        "linkedQuestionId": "Q3"
+        "speaker": "Gast",
+        "speaker_role": "dialogue_speaker",
+        "text": "Sprechen Sie offen mit Ihrem Arzt darüber. Wir sind dazu ausgebildet, Ihnen zu helfen."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q3 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wie wichtig ist es, die Symptome genau zu beschreiben?"
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q4.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Gast",
+        "speaker_role": "dialogue_speaker",
+        "text": "Sehr wichtig! Je genauer die Beschreibung, desto besser können wir Ihnen helfen."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "answer_evidence",
-        "text": "In den Städten ja, aber auf dem Land fehlen oft Hausärzte.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Was sollten Patienten zum Arzt mitbringen?"
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q4 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Gast",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Versichertenkarte, eine Liste aller Medikamente und am besten den Impfpass."
       },
       {
-        "speaker": "Sprecher 5",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q5.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Gibt es in Deutschland genug Ärzte?"
       },
       {
-        "speaker": "Sprecher 5",
-        "speaker_role": "answer_evidence",
-        "text": "Ab fünfunddreißig Jahren zahlt die Kasse alle drei Jahre einen umfassenden Check-up.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Gast",
+        "speaker_role": "dialogue_speaker",
+        "text": "In den Städten ja, aber auf dem Land fehlen oft Hausärzte."
       },
       {
-        "speaker": "Sprecher 5",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q5 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Was können Menschen ohne Krankenversicherung tun?"
       },
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Ende des Hoertexts."
+        "speaker": "Gast",
+        "speaker_role": "dialogue_speaker",
+        "text": "Es gibt Anlaufstellen wie die Malteser Medizin für Menschen ohne Versicherungsschutz."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Zum Schluss: Was ist Ihr wichtigster Gesundheitstipp?"
+      },
+      {
+        "speaker": "Gast",
+        "speaker_role": "dialogue_speaker",
+        "text": "Vorsorge ist besser als Nachsorge! Gehen Sie regelmäßig zum Check-up."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ab welchem Alter sollte man einen Gesundheitscheck machen?"
+      },
+      {
+        "speaker": "Gast",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ab fünfunddreißig Jahren zahlt die Kasse alle drei Jahre einen umfassenden Check-up."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Vielen Dank, Frau Dr. Yildiz!"
+      },
+      {
+        "speaker": "Gast",
+        "speaker_role": "dialogue_speaker",
+        "text": "Gerne! Und vergessen Sie nicht: Ihre Gesundheit ist Ihr wichtigstes Gut."
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Ende des Hörverstehens."
       }
     ]
   },
@@ -245,7 +266,7 @@
       "id": "l-a2-goethe-005-t4-lo-1",
       "cefrLevel": "A2",
       "skill": "listening",
-      "canDoVi": "Toi co the luyen nghe hieu o trinh do A2 qua chu de \"Beim Arzt Symptome beschreiben\".",
+      "canDoVi": "Tôi có thể luyện nghe hiểu ở trình độ A2 qua chủ đề \"Beim Arzt Symptome beschreiben\".",
       "canDoDe": "Ich kann Hoeren auf Niveau A2 zum Thema \"Beim Arzt Symptome beschreiben\" ueben.",
       "linkedContentIds": [
         "L-A2-GOETHE-005-T4"

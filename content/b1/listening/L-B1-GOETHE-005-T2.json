@@ -149,111 +149,147 @@
     ]
   },
   "transcript": {
-    "type": "full_reconstructed_transcript",
+    "type": "studio_source_transcript",
     "status": "complete",
-    "source": "reconstructed_full_script",
-    "quality": "release_candidate_reconstructed",
-    "note": "Full learner-visible reconstructed script created from existing question evidence because original studio scripts are not present in the repository. Replace with studio transcript if original audio scripts become available.",
+    "source": "studio_source_script",
+    "quality": "source_verified",
+    "sourceScript": "data/scripts/B1/Teil2-Fuehrung-oder-Monolog/L-B1-GOETHE-005-T2.json",
+    "note": "Transcript replaced from source script by scripts/apply-source-transcripts.ts.",
     "lines": [
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Im folgenden Hoertext geht es um Bewerbungsgespräch und Praktikum. Achten Sie auf die zentrale Information."
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sie hören einen Text. Dazu gibt es fünf Aufgaben. Kreuzen Sie die richtige Antwort an. Sie hören den Text zweimal."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q1.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Rednerin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Liebe Teilnehmerinnen und Teilnehmer, willkommen zu unserem Workshop 'Erfolgreich bewerben in Deutschland'."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Mein Name ist Stefan Krause, ich bin Personalberater und helfe seit fünfzehn Jahren Menschen bei der Jobsuche.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Rednerin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Mein Name ist Stefan Krause, ich bin Personalberater und helfe seit fünfzehn Jahren Menschen bei der Jobsuche."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q1 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Rednerin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Im heutigen Workshop zeige ich Ihnen Schritt für Schritt, wie eine erfolgreiche Bewerbung aussehen muss."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q2.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Rednerin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Der erste Schritt ist die Analyse der Stellenanzeige. Lesen Sie jede Anzeige sehr genau durch."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Der erste Schritt ist die Analyse der Stellenanzeige. Lesen Sie jede Anzeige sehr genau durch.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Rednerin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Markieren Sie die Schlüsselwörter und Anforderungen, die das Unternehmen nennt."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q2 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Rednerin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Diese Schlüsselwörter sollten dann auch in Ihrem Anschreiben und Lebenslauf vorkommen."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q3.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Rednerin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das Anschreiben ist Ihre Chance, Ihre Motivation und Eignung persönlich darzustellen."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Beginnen Sie nie mit dem Satz 'Hiermit bewerbe ich mich'. Das ist langweilig und veraltet.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Rednerin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Beginnen Sie nie mit dem Satz 'Hiermit bewerbe ich mich'. Das ist langweilig und veraltet."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q3 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Rednerin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Starten Sie stattdessen mit einem Satz, der Ihre Begeisterung für die Stelle zeigt."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q4.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Rednerin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Zum Beispiel: 'Als erfahrener Projektmanager mit Leidenschaft für erneuerbare Energien bewerbe ich mich.'"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Die Probezeit in Deutschland beträgt normalerweise sechs Monate.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Rednerin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Der Lebenslauf muss klar strukturiert sein: persönliche Daten, Berufserfahrung, Ausbildung und Kenntnisse."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q4 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Rednerin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Für jede berufliche Station nennen Sie Ihre wichtigsten Aufgaben und Erfolge in Stichpunkten."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q5.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Rednerin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Vergessen Sie nicht Ihre Sprachkenntnisse! In Deutschland wird das nach dem europäischen Referenzrahmen bewertet."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Die Jobsuche dauert im Durchschnitt drei bis sechs Monate.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Rednerin",
+        "speaker_role": "dialogue_speaker",
+        "text": "A1 und A2 steht für grundlegende Kenntnisse, B1 und B2 für selbständige Sprachverwendung."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q5 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Rednerin",
+        "speaker_role": "dialogue_speaker",
+        "text": "C1 und C2 bedeutet, dass Sie die Sprache fachkundig und nahezu muttersprachlich beherrschen."
       },
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Ende des Hoertexts."
+        "speaker": "Rednerin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wenn Sie zum Vorstellungsgespräch eingeladen werden, bereiten Sie sich sorgfältig vor."
+      },
+      {
+        "speaker": "Rednerin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Recherchieren Sie das Unternehmen: Was macht es? Wie groß ist es? Was sind aktuelle Projekte?"
+      },
+      {
+        "speaker": "Rednerin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Bereiten Sie Antworten auf die häufigsten Fragen vor, aber lernen Sie sie nicht auswendig."
+      },
+      {
+        "speaker": "Rednerin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Am Ende des Gesprächs werden Sie gefragt, ob Sie noch Fragen haben. Antworten Sie nie mit Nein."
+      },
+      {
+        "speaker": "Rednerin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Stellen Sie kluge Fragen zum Team, zur Unternehmenskultur oder zu Weiterbildungsmöglichkeiten."
+      },
+      {
+        "speaker": "Rednerin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Nach dem Gespräch schicken Sie eine kurze Dankes-E-Mail, das macht einen guten Eindruck."
+      },
+      {
+        "speaker": "Rednerin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Probezeit in Deutschland beträgt normalerweise sechs Monate. In dieser Zeit können beide Seiten kündigen."
+      },
+      {
+        "speaker": "Rednerin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Nutzen Sie die Probezeit, um zu beweisen, dass Sie die richtige Wahl waren."
+      },
+      {
+        "speaker": "Rednerin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Zum Abschluss: Haben Sie Geduld! Die Jobsuche dauert im Durchschnitt drei bis sechs Monate."
+      },
+      {
+        "speaker": "Rednerin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Bleiben Sie motiviert und lassen Sie sich von Absagen nicht entmutigen! Viel Erfolg!"
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Ende Teil zwei."
       }
     ]
   },
@@ -270,7 +306,7 @@
       "id": "l-b1-goethe-005-t2-lo-1",
       "cefrLevel": "B1",
       "skill": "listening",
-      "canDoVi": "Toi co the luyen nghe hieu o trinh do B1 qua chu de \"Bewerbungsgespräch und Praktikum\".",
+      "canDoVi": "Tôi có thể luyện nghe hiểu ở trình độ B1 qua chủ đề \"Bewerbungsgespräch und Praktikum\".",
       "canDoDe": "Ich kann Hoeren auf Niveau B1 zum Thema \"Bewerbungsgespräch und Praktikum\" ueben.",
       "linkedContentIds": [
         "L-B1-GOETHE-005-T2"

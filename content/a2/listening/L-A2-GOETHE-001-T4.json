@@ -124,111 +124,132 @@
     ]
   },
   "transcript": {
-    "type": "full_reconstructed_transcript",
+    "type": "studio_source_transcript",
     "status": "complete",
-    "source": "reconstructed_full_script",
-    "quality": "release_candidate_reconstructed",
-    "note": "Full learner-visible reconstructed script created from existing question evidence because original studio scripts are not present in the repository. Replace with studio transcript if original audio scripts become available.",
+    "source": "studio_source_script",
+    "quality": "source_verified",
+    "sourceScript": "data/scripts/A2/Teil4-Radiointerview/L-A2-GOETHE-001-T4.json",
+    "note": "Transcript replaced from source script by scripts/apply-source-transcripts.ts.",
     "lines": [
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Hoeren Sie eine kurze Information zum Thema Wetter und Freizeitplanung."
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sie hören ein Interview im Radio. Zu dem Interview gibt es fünf Aufgaben. Kreuzen Sie ja oder nein an. Sie hören das Interview zweimal."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q1.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Bei uns ist heute Herr Klein, Meteorologe vom Deutschen Wetterdienst. Willkommen!"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Bei uns ist heute Herr Klein, Meteorologe vom Deutschen Wetterdienst.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Gast",
+        "speaker_role": "dialogue_speaker",
+        "text": "Hallo! Es freut mich, hier über das Wetter sprechen zu können."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q1 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Herr Klein, wie entsteht eigentlich die Wettervorhersage?"
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q2.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Gast",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wir nutzen Satellitendaten, Wetterballons und Computersimulationen für die Vorhersage."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "answer_evidence",
-        "text": "Für die nächsten drei Tage ist sie ziemlich genau, danach wird es unsicherer.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wie zuverlässig ist die Vorhersage?"
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q2 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Gast",
+        "speaker_role": "dialogue_speaker",
+        "text": "Für die nächsten drei Tage ist sie ziemlich genau, danach wird es unsicherer."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q3.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Verändert sich das Wetter in Deutschland durch den Klimawandel?"
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "answer_evidence",
-        "text": "Ja, wir beobachten mehr Extremwetter: Hitzewellen im Sommer, Starkregen und Stürme.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Gast",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ja, wir beobachten mehr Extremwetter: Hitzewellen im Sommer, Starkregen und Stürme."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q3 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Was bedeutet das für die Freizeitplanung der Menschen?"
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q4.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Gast",
+        "speaker_role": "dialogue_speaker",
+        "text": "Man sollte flexibler planen und immer die Wetterapp im Blick haben."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "answer_evidence",
-        "text": "Der Frühling und der Herbst. Nicht zu heiß, nicht zu kalt, perfekt zum Wandern.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Welche Jahreszeit ist die beste für Outdoor-Aktivitäten in Deutschland?"
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q4 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Gast",
+        "speaker_role": "dialogue_speaker",
+        "text": "Der Frühling und der Herbst. Nicht zu heiß, nicht zu kalt, perfekt zum Wandern."
       },
       {
-        "speaker": "Sprecher 5",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q5.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Und welche Region hat das beste Wetter?"
       },
       {
-        "speaker": "Sprecher 5",
-        "speaker_role": "answer_evidence",
-        "text": "Wandern in den Alpen! Da kann ich mein Wetterwissen praktisch anwenden.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Gast",
+        "speaker_role": "dialogue_speaker",
+        "text": "Der Südwesten, also Baden-Württemberg, hat die meisten Sonnenstunden in Deutschland."
       },
       {
-        "speaker": "Sprecher 5",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q5 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Was raten Sie Menschen, die ihre Freizeit wetterabhängig planen?"
       },
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Ende des Hoertexts."
+        "speaker": "Gast",
+        "speaker_role": "dialogue_speaker",
+        "text": "Haben Sie immer einen Plan B! Wenn es regnet, gibt es tolle Indoor-Aktivitäten."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Was machen Sie selbst gern in Ihrer Freizeit?"
+      },
+      {
+        "speaker": "Gast",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wandern in den Alpen! Da kann ich mein Wetterwissen praktisch anwenden."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Zum Schluss: Wie wird der Sommer dieses Jahr?"
+      },
+      {
+        "speaker": "Gast",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Trends deuten auf einen warmen Sommer hin, aber mit mehr Gewittern als üblich."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Vielen Dank, Herr Klein!"
+      },
+      {
+        "speaker": "Gast",
+        "speaker_role": "dialogue_speaker",
+        "text": "Gerne! Und vergessen Sie nicht: Es gibt kein schlechtes Wetter, nur falsche Kleidung!"
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Ende des Hörverstehens."
       }
     ]
   },
@@ -245,7 +266,7 @@
       "id": "l-a2-goethe-001-t4-lo-1",
       "cefrLevel": "A2",
       "skill": "listening",
-      "canDoVi": "Toi co the luyen nghe hieu o trinh do A2 qua chu de \"Wetter und Freizeitplanung\".",
+      "canDoVi": "Tôi có thể luyện nghe hiểu ở trình độ A2 qua chủ đề \"Wetter und Freizeitplanung\".",
       "canDoDe": "Ich kann Hoeren auf Niveau A2 zum Thema \"Wetter und Freizeitplanung\" ueben.",
       "linkedContentIds": [
         "L-A2-GOETHE-001-T4"

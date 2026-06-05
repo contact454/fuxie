@@ -124,111 +124,132 @@
     ]
   },
   "transcript": {
-    "type": "full_reconstructed_transcript",
+    "type": "studio_source_transcript",
     "status": "complete",
-    "source": "reconstructed_full_script",
-    "quality": "release_candidate_reconstructed",
-    "note": "Full learner-visible reconstructed script created from existing question evidence because original studio scripts are not present in the repository. Replace with studio transcript if original audio scripts become available.",
+    "source": "studio_source_script",
+    "quality": "source_verified",
+    "sourceScript": "data/scripts/A2/Teil4-Radiointerview/L-A2-GOETHE-002-T4.json",
+    "note": "Transcript replaced from source script by scripts/apply-source-transcripts.ts.",
     "lines": [
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Hoeren Sie eine kurze Information zum Thema Wohnung suchen und Mietgespräch."
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sie hören ein Interview im Radio. Zu dem Interview gibt es fünf Aufgaben. Kreuzen Sie ja oder nein an. Sie hören das Interview zweimal."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q1.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Unser heutiger Gast ist Herr Braun vom Berliner Mieterverein. Herzlich willkommen!"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Angespannt. Es gibt viel mehr Nachfrage als Angebot",
-        "linkedQuestionId": "Q1"
+        "speaker": "Gast",
+        "speaker_role": "dialogue_speaker",
+        "text": "Danke! Der Wohnungsmarkt ist ein Thema, das alle Menschen betrifft."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q1 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Herr Braun, wie ist die aktuelle Situation auf dem Berliner Wohnungsmarkt?"
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q2.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Gast",
+        "speaker_role": "dialogue_speaker",
+        "text": "Angespannt. Es gibt viel mehr Nachfrage als Angebot, besonders bei kleinen Wohnungen."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "answer_evidence",
-        "text": "Nein, nur achtzig Euro pro Jahr.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Was können Wohnungssuchende tun, um schneller eine Wohnung zu finden?"
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q2 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Gast",
+        "speaker_role": "dialogue_speaker",
+        "text": "Bereiten Sie vollständige Unterlagen vor: Schufa-Auskunft, Gehaltsabrechnungen, Ausweis."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q3.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wie hoch sind die durchschnittlichen Mieten in Berlin?"
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "answer_evidence",
-        "text": "Die Miete sollte nicht mehr als dreißig Prozent des Einkommens ausmachen.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Gast",
+        "speaker_role": "dialogue_speaker",
+        "text": "Für eine Zweizimmerwohnung zahlt man im Durchschnitt achthundert bis tausend Euro."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q3 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das ist für viele Menschen schon grenzwertig."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q4.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Gast",
+        "speaker_role": "dialogue_speaker",
+        "text": "Richtig. Die Miete sollte nicht mehr als dreißig Prozent des Einkommens ausmachen."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "answer_evidence",
-        "text": "Ja, es gibt spezielle Beratungsstellen und Programme der Stadt Berlin.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Welche Rechte haben Mieter in Deutschland?"
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q4 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Gast",
+        "speaker_role": "dialogue_speaker",
+        "text": "Viele! Die Kündigungsfrist beträgt mindestens drei Monate und man hat ein Recht auf Privatsphäre."
       },
       {
-        "speaker": "Sprecher 5",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q5.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Was raten Sie bei Problemen mit dem Vermieter?"
       },
       {
-        "speaker": "Sprecher 5",
-        "speaker_role": "answer_evidence",
-        "text": "Die Kündigungsfrist beträgt mindestens drei Monate",
-        "linkedQuestionId": "Q5"
+        "speaker": "Gast",
+        "speaker_role": "dialogue_speaker",
+        "text": "Kommen Sie zu uns in die Beratung. Wir helfen bei Mieterhöhungen und Mängeln."
       },
       {
-        "speaker": "Sprecher 5",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q5 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Kostet die Mitgliedschaft im Mieterverein viel?"
       },
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Ende des Hoertexts."
+        "speaker": "Gast",
+        "speaker_role": "dialogue_speaker",
+        "text": "Nein, nur achtzig Euro pro Jahr. Dafür bekommen Sie umfassende Beratung und rechtlichen Beistand."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ein Wort an die Zugewanderten, die eine Wohnung suchen?"
+      },
+      {
+        "speaker": "Gast",
+        "speaker_role": "dialogue_speaker",
+        "text": "Lassen Sie sich nicht entmutigen! Und nutzen Sie die Hilfsangebote der Stadt und der Vereine."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Gibt es auch Hilfe bei der Wohnungssuche für Geflüchtete?"
+      },
+      {
+        "speaker": "Gast",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ja, es gibt spezielle Beratungsstellen und Programme der Stadt Berlin."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Vielen Dank, Herr Braun, für die wertvollen Informationen!"
+      },
+      {
+        "speaker": "Gast",
+        "speaker_role": "dialogue_speaker",
+        "text": "Gerne! Und vergessen Sie nicht: Ihre Rechte als Mieter sind gesetzlich geschützt."
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Ende des Hörverstehens."
       }
     ]
   },
@@ -245,7 +266,7 @@
       "id": "l-a2-goethe-002-t4-lo-1",
       "cefrLevel": "A2",
       "skill": "listening",
-      "canDoVi": "Toi co the luyen nghe hieu o trinh do A2 qua chu de \"Wohnung suchen und Mietgespräch\".",
+      "canDoVi": "Tôi có thể luyện nghe hiểu ở trình độ A2 qua chủ đề \"Wohnung suchen und Mietgespräch\".",
       "canDoDe": "Ich kann Hoeren auf Niveau A2 zum Thema \"Wohnung suchen und Mietgespräch\" ueben.",
       "linkedContentIds": [
         "L-A2-GOETHE-002-T4"

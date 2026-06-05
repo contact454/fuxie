@@ -24,7 +24,7 @@
       "explanation": {
         "de": "Die Aussage ist falsch. Die Expertin etabliert explizit eine Hierarchie, indem sie die 'strukturelle Verantwortung der Politik und der Industrie für entscheidender' als das individuelle Konsumverhalten einstuft. Die Behauptung einer Äquivalenz (Gleichwertigkeit) ist somit ein direkter Widerspruch zu ihrer Aussage.",
         "vi": "Phát biểu này sai. Nữ chuyên gia đã thiết lập một cách rõ ràng một hệ thống phân cấp, trong đó bà đánh giá 'trách nhiệm mang tính cấu trúc của giới chính trị và ngành công nghiệp là quyết định hơn' so với hành vi tiêu dùng cá nhân. Do đó, khẳng định về sự tương đương (Äquivalenz) là một sự mâu thuẫn trực tiếp với phát biểu của bà.",
-        "key_evidence": "...wobei ich die strukturelle Verantwortung der Politik und der Industrie für entscheidender halte als das individuelle Konsumverhalten."
+        "key_evidence": "wobei ich die strukturelle Verantwortung der Politik und der Industrie für entscheidender halte als das individuelle Konsumverhalten."
       }
     },
     {
@@ -50,7 +50,7 @@
       "explanation": {
         "de": "Die Aussage ist richtig. Die Beschreibung des Transformationsprozesses als 'schmerzhaft und langwierig' korreliert direkt mit der Vorstellung von 'erheblichen Friktionen und Widerständen'. Ihr vorsichtiger Optimismus deutet darauf hin, dass sie den Wandel für unumgänglich hält, aber nicht für reibungslos.",
         "vi": "Phát biểu này đúng. Việc mô tả quá trình chuyển đổi là 'đau đớn và kéo dài' (schmerzhaft und langwierig) tương quan trực tiếp với ý tưởng về 'những xung đột và kháng cự đáng kể' (erheblichen Friktionen und Widerständen). Sự lạc quan thận trọng của bà cho thấy bà tin rằng sự thay đổi là không thể tránh khỏi, nhưng sẽ không diễn ra suôn sẻ.",
-        "key_evidence": "...aber der Transformationsprozess wird schmerzhaft und langwierig sein."
+        "key_evidence": "aber der Transformationsprozess wird schmerzhaft und langwierig sein."
       }
     },
     {
@@ -63,7 +63,7 @@
       "explanation": {
         "de": "Die Aussage ist richtig. Die Expertin stellt fest, dass die Qualität bei mechanischen Verfahren 'mit jedem Durchlauf abnimmt'. Dieser inhärente Qualitätsverlust (prozessimmanente Materialdegradation) macht das Verfahren 'nur begrenzt wirksam' und somit als alleinige, langfristige Lösung für eine echte Kreislaufwirtschaft ungeeignet.",
         "vi": "Phát biểu này đúng. Nữ chuyên gia nhận định rằng chất lượng trong các quy trình cơ học 'giảm đi sau mỗi chu trình' (mit jedem Durchlauf abnimmt). Sự suy giảm chất lượng vốn có này (prozessimmanente Materialdegradation) làm cho phương pháp này 'chỉ có hiệu quả hạn chế' (nur begrenzt wirksam) và do đó không phù hợp để trở thành một giải pháp duy nhất, lâu dài cho một nền kinh tế tuần hoàn thực sự.",
-        "key_evidence": "...die gängigen mechanischen Recyclingverfahren für Mischfasern nur begrenzt wirksam sind, da die Qualität des recycelten Materials mit jedem Durchlauf abnimmt."
+        "key_evidence": "die gängigen mechanischen Recyclingverfahren für Mischfasern nur begrenzt wirksam sind, da die Qualität des recycelten Materials mit jedem Durchlauf abnimmt."
       }
     }
   ],
@@ -106,93 +106,182 @@
     ]
   },
   "transcript": {
-    "type": "full_reconstructed_transcript",
+    "type": "studio_source_transcript",
     "status": "complete",
-    "source": "reconstructed_full_script",
-    "quality": "release_candidate_reconstructed",
-    "note": "Full learner-visible reconstructed script created from existing question evidence because original studio scripts are not present in the repository. Replace with studio transcript if original audio scripts become available.",
+    "source": "studio_source_script",
+    "quality": "source_verified",
+    "sourceScript": "data/scripts/C2/Teil3-Experteninterview-lang/L-C2-GOETHE-011-T3.json",
+    "note": "Transcript replaced from source script by scripts/apply-source-transcripts.ts.",
     "lines": [
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Der folgende anspruchsvolle Hoertext behandelt Künstlerische Authentizität und Kommerz. Achten Sie auf Aussage, Kontext und implizite Bedeutung."
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sie hören ein ausführliches Interview. Dazu gibt es zehn Aufgaben. Kreuzen Sie die richtige Antwort an. Sie hören das Interview einmal."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q1.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Frau Professorin Faser, Sie leiten das Institut für nachhaltige Textilwissenschaft und haben kürzlich eine wegweisende Studie über die Umweltbilanz verschiedener Recyclingverfahren veröffentlicht."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "...wobei ich die strukturelle Verantwortung der Politik und der Industrie für entscheidender halte als das individuelle Konsumverhalten.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das stimmt, und unsere Ergebnisse zeigen, dass die gängigen mechanischen Recyclingverfahren für Mischfasern nur begrenzt wirksam sind, da die Qualität des recycelten Materials mit jedem Durchlauf abnimmt."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q1 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Welche technologischen Durchbrüche sind Ihrer Einschätzung nach notwendig, um das Textilrecycling auf ein industrielles Niveau zu heben, das den Anforderungen einer echten Kreislaufwirtschaft gerecht wird?"
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q2.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Der Schlüssel liegt im enzymatischen Recycling, bei dem Biokatalysatoren die verschiedenen Fasern eines Mischgewebes voneinander trennen, ohne die Materialqualität zu beeinträchtigen."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "answer_evidence",
-        "text": "Regulierung ist unverzichtbar, weil die Textilindustrie von sich aus nicht bereit ist, die kurzfristigen Gewinne des Fast-Fashion-Modells zugunsten langfristiger Nachhaltigkeit aufzugeben.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Inwieweit tragen gesetzliche Regulierungen wie die geplante EU-Textilstrategie dazu bei, die notwendigen Veränderungen in der Branche voranzutreiben?"
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q2 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Regulierung ist unverzichtbar, weil die Textilindustrie von sich aus nicht bereit ist, die kurzfristigen Gewinne des Fast-Fashion-Modells zugunsten langfristiger Nachhaltigkeit aufzugeben."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q3.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wie bewerten Sie die Rolle der Verbraucherinnen und Verbraucher: Liegt die Verantwortung primär bei der Industrie, bei der Politik oder bei den Konsumenten selbst?"
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "answer_evidence",
-        "text": "...aber der Transformationsprozess wird schmerzhaft und langwierig sein.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Verantwortung muss auf allen drei Ebenen gleichzeitig wahrgenommen werden, wobei ich die strukturelle Verantwortung der Politik und der Industrie für entscheidender halte als das individuelle Konsumverhalten."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q3 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Können Sie uns erläutern, warum der sogenannte ökologische Fußabdruck eines Baumwoll-T-Shirts so überraschend groß ist?"
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q4.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Der Anbau der Baumwolle, das Färben, der Transport und die Entsorgung erfordern insgesamt etwa zweitausend Liter Wasser und verursachen Emissionen, die dem Energieverbrauch eines Kühlschranks über mehrere Monate entsprechen."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "answer_evidence",
-        "text": "...die gängigen mechanischen Recyclingverfahren für Mischfasern nur begrenzt wirksam sind, da die Qualität des recycelten Materials mit jedem Durchlauf abnimmt.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Welche konkreten Empfehlungen würden Sie unseren Hörerinnen und Hörern geben, die ihren textilen Fußabdruck reduzieren möchten, ohne auf modische Kleidung verzichten zu müssen?"
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q4 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Kaufen Sie weniger, dafür besser, pflegen Sie Ihre Kleidung sorgfältig, reparieren Sie beschädigte Stücke und betrachten Sie Qualität und Langlebigkeit als die wahre Definition von Luxus."
       },
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Ende des Hoertexts."
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Frau Professorin Faser, glauben Sie, dass die Textilindustrie in zwanzig Jahren grundlegend anders aussehen wird als heute?"
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ich bin vorsichtig optimistisch, denn der Druck durch Regulierung, Verbraucherbewusstsein und technologische Innovation wächst, aber der Transformationsprozess wird schmerzhaft und langwierig sein."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Frau Professorin Faser, Sie leiten das Institut für nachhaltige Textilwissenschaft und haben kürzlich eine wegweisende Studie über die Umweltbilanz verschiedener Recyclingverfahren veröffentlicht."
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das stimmt, und unsere Ergebnisse zeigen, dass die gängigen mechanischen Recyclingverfahren für Mischfasern nur begrenzt wirksam sind, da die Qualität des recycelten Materials mit jedem Durchlauf abnimmt."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Welche technologischen Durchbrüche sind Ihrer Einschätzung nach notwendig, um das Textilrecycling auf ein industrielles Niveau zu heben, das den Anforderungen einer echten Kreislaufwirtschaft gerecht wird?"
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Der Schlüssel liegt im enzymatischen Recycling, bei dem Biokatalysatoren die verschiedenen Fasern eines Mischgewebes voneinander trennen, ohne die Materialqualität zu beeinträchtigen."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Inwieweit tragen gesetzliche Regulierungen wie die geplante EU-Textilstrategie dazu bei, die notwendigen Veränderungen in der Branche voranzutreiben?"
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Regulierung ist unverzichtbar, weil die Textilindustrie von sich aus nicht bereit ist, die kurzfristigen Gewinne des Fast-Fashion-Modells zugunsten langfristiger Nachhaltigkeit aufzugeben."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wie bewerten Sie die Rolle der Verbraucherinnen und Verbraucher: Liegt die Verantwortung primär bei der Industrie, bei der Politik oder bei den Konsumenten selbst?"
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Verantwortung muss auf allen drei Ebenen gleichzeitig wahrgenommen werden, wobei ich die strukturelle Verantwortung der Politik und der Industrie für entscheidender halte als das individuelle Konsumverhalten."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Können Sie uns erläutern, warum der sogenannte ökologische Fußabdruck eines Baumwoll-T-Shirts so überraschend groß ist?"
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Der Anbau der Baumwolle, das Färben, der Transport und die Entsorgung erfordern insgesamt etwa zweitausend Liter Wasser und verursachen Emissionen, die dem Energieverbrauch eines Kühlschranks über mehrere Monate entsprechen."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Welche konkreten Empfehlungen würden Sie unseren Hörerinnen und Hörern geben, die ihren textilen Fußabdruck reduzieren möchten, ohne auf modische Kleidung verzichten zu müssen?"
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Kaufen Sie weniger, dafür besser, pflegen Sie Ihre Kleidung sorgfältig, reparieren Sie beschädigte Stücke und betrachten Sie Qualität und Langlebigkeit als die wahre Definition von Luxus."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Frau Professorin Faser, glauben Sie, dass die Textilindustrie in zwanzig Jahren grundlegend anders aussehen wird als heute?"
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ich bin vorsichtig optimistisch, denn der Druck durch Regulierung, Verbraucherbewusstsein und technologische Innovation wächst, aber der Transformationsprozess wird schmerzhaft und langwierig sein."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Frau Professorin Faser, Sie leiten das Institut für nachhaltige Textilwissenschaft und haben kürzlich eine wegweisende Studie über die Umweltbilanz verschiedener Recyclingverfahren veröffentlicht."
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das stimmt, und unsere Ergebnisse zeigen, dass die gängigen mechanischen Recyclingverfahren für Mischfasern nur begrenzt wirksam sind, da die Qualität des recycelten Materials mit jedem Durchlauf abnimmt."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Welche technologischen Durchbrüche sind Ihrer Einschätzung nach notwendig, um das Textilrecycling auf ein industrielles Niveau zu heben, das den Anforderungen einer echten Kreislaufwirtschaft gerecht wird?"
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Der Schlüssel liegt im enzymatischen Recycling, bei dem Biokatalysatoren die verschiedenen Fasern eines Mischgewebes voneinander trennen, ohne die Materialqualität zu beeinträchtigen."
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Ende des Hörverstehens."
       }
     ]
   },
@@ -209,7 +298,7 @@
       "id": "l-c2-goethe-011-t3-lo-1",
       "cefrLevel": "C2",
       "skill": "listening",
-      "canDoVi": "Toi co the luyen nghe hieu o trinh do C2 qua chu de \"Künstlerische Authentizität und Kommerz\".",
+      "canDoVi": "Tôi có thể luyện nghe hiểu ở trình độ C2 qua chủ đề \"Künstlerische Authentizität und Kommerz\".",
       "canDoDe": "Ich kann Hoeren auf Niveau C2 zum Thema \"Künstlerische Authentizität und Kommerz\" ueben.",
       "linkedContentIds": [
         "L-C2-GOETHE-011-T3"

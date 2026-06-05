@@ -38,7 +38,7 @@
       "explanation": {
         "de": "Der Ansager sagt: 'Am Samstag ist unser Restaurant wegen einer privaten Feier geschlossen.' Am Sonntag öffnet es wieder.",
         "vi": "Người thông báo nói: 'Thứ Bảy nhà hàng của chúng tôi đóng cửa vì một buổi tiệc riêng.' Chủ Nhật nhà hàng mở cửa lại.",
-        "key_evidence": "Am Samstag ist unser Restaurant wegen einer privaten Feier geschlossen. Am Sonntag öffnen wir wieder wie gewohnt um elf Uhr.",
+        "key_evidence": "Am Samstag ist unser Restaurant wegen einer privaten Feier geschlossen.",
         "key_vocabulary": []
       }
     },
@@ -66,7 +66,7 @@
       "explanation": {
         "de": "Der Ansager sagt: 'Das kleine Frühstück kostet vier Euro fünfzig.' Das große Frühstück kostet sieben Euro fünfzig.",
         "vi": "Người thông báo nói: 'Bữa sáng nhỏ giá bốn Euro năm mươi xu.' Bữa sáng lớn giá bảy Euro năm mươi xu.",
-        "key_evidence": "Das kleine Frühstück kostet vier Euro fünfzig. Das große Frühstück mit Ei und Müsli kostet sieben Euro fünfzig.",
+        "key_evidence": "Das kleine Frühstück kostet vier Euro fünfzig.",
         "key_vocabulary": []
       }
     }
@@ -110,93 +110,142 @@
     ]
   },
   "transcript": {
-    "type": "full_reconstructed_transcript",
+    "type": "studio_source_transcript",
     "status": "complete",
-    "source": "reconstructed_full_script",
-    "quality": "release_candidate_reconstructed",
-    "note": "Full learner-visible reconstructed script created from existing question evidence because original studio scripts are not present in the repository. Replace with studio transcript if original audio scripts become available.",
+    "source": "studio_source_script",
+    "quality": "source_verified",
+    "sourceScript": "data/scripts/A1/Teil2-Durchsagen-und-Ansagen/L-A1-GOETHE-002-T2.json",
+    "note": "Transcript replaced from source script by scripts/apply-source-transcripts.ts.",
     "lines": [
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Hoeren Sie eine kurze Information zum Thema Im Restaurant bestellen."
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sie hören vier Ansagen. Zu jeder Ansage gibt es eine Aufgabe. Kreuzen Sie richtig oder falsch an. Sie hören jeden Text einmal."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q1.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Ansage 1."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Unsere Küche ist heute von elf Uhr dreißig bis zweiundzwanzig Uhr geöffnet.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Ansager",
+        "speaker_role": "dialogue_speaker",
+        "text": "Liebe Gäste, willkommen im Restaurant Sonnenschein."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q1 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Ansager",
+        "speaker_role": "dialogue_speaker",
+        "text": "Unsere Küche ist heute von elf Uhr dreißig bis zweiundzwanzig Uhr geöffnet."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q2.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Ansager",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das Tagesgericht ist Rinderbraten mit Gemüse für neun Euro neunzig."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "answer_evidence",
-        "text": "Am Samstag ist unser Restaurant wegen einer privaten Feier geschlossen. Am Sonntag öffnen wir wieder wie gewohnt um elf Uhr.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Ansager",
+        "speaker_role": "dialogue_speaker",
+        "text": "Bitte reservieren Sie für Gruppen ab sechs Personen."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q2 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Ansager",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wir wünschen Ihnen einen guten Appetit!"
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q3.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Ansage 2."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "answer_evidence",
-        "text": "Bezahlung nur bar. Kein Kartenzahlung möglich.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Ansager",
+        "speaker_role": "dialogue_speaker",
+        "text": "Achtung, wichtige Information für unsere Gäste."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q3 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Ansager",
+        "speaker_role": "dialogue_speaker",
+        "text": "Am Samstag ist unser Restaurant wegen einer privaten Feier geschlossen."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q4.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Ansager",
+        "speaker_role": "dialogue_speaker",
+        "text": "Am Sonntag öffnen wir wieder wie gewohnt um elf Uhr."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "answer_evidence",
-        "text": "Das kleine Frühstück kostet vier Euro fünfzig. Das große Frühstück mit Ei und Müsli kostet sieben Euro fünfzig.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Ansager",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wir bitten um Ihr Verständnis. Vielen Dank."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q4 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Ansager",
+        "speaker_role": "dialogue_speaker",
+        "text": "Reservierungen nehmen wir unter null drei null, acht sieben sechs fünf an."
       },
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Ende des Hoertexts."
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Ansage 3."
+      },
+      {
+        "speaker": "Ansager",
+        "speaker_role": "dialogue_speaker",
+        "text": "Willkommen in der Cafeteria der Volkshochschule."
+      },
+      {
+        "speaker": "Ansager",
+        "speaker_role": "dialogue_speaker",
+        "text": "Heute gibt es Mittagessen von zwölf bis vierzehn Uhr."
+      },
+      {
+        "speaker": "Ansager",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wir haben Nudelsuppe, Salat und belegte Brötchen."
+      },
+      {
+        "speaker": "Ansager",
+        "speaker_role": "dialogue_speaker",
+        "text": "Kaffee und Kuchen gibt es ab vierzehn Uhr dreißig."
+      },
+      {
+        "speaker": "Ansager",
+        "speaker_role": "dialogue_speaker",
+        "text": "Bezahlung nur bar. Kein Kartenzahlung möglich."
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Ansage 4."
+      },
+      {
+        "speaker": "Ansager",
+        "speaker_role": "dialogue_speaker",
+        "text": "Liebe Gäste, unser neues Frühstücksangebot ist da!"
+      },
+      {
+        "speaker": "Ansager",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ab sofort bieten wir Frühstück von sieben bis zehn Uhr dreißig."
+      },
+      {
+        "speaker": "Ansager",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das kleine Frühstück kostet vier Euro fünfzig."
+      },
+      {
+        "speaker": "Ansager",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das große Frühstück mit Ei und Müsli kostet sieben Euro fünfzig."
+      },
+      {
+        "speaker": "Ansager",
+        "speaker_role": "dialogue_speaker",
+        "text": "Kommen Sie vorbei und probieren Sie es!"
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Ende Teil zwei."
       }
     ]
   },
@@ -213,7 +262,7 @@
       "id": "l-a1-goethe-002-t2-lo-1",
       "cefrLevel": "A1",
       "skill": "listening",
-      "canDoVi": "Toi co the luyen nghe hieu o trinh do A1 qua chu de \"Im Restaurant bestellen\".",
+      "canDoVi": "Tôi có thể luyện nghe hiểu ở trình độ A1 qua chủ đề \"Im Restaurant bestellen\".",
       "canDoDe": "Ich kann Hoeren auf Niveau A1 zum Thema \"Im Restaurant bestellen\" ueben.",
       "linkedContentIds": [
         "L-A1-GOETHE-002-T2"

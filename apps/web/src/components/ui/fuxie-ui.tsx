@@ -171,7 +171,7 @@ export function FuxieLevelTabs<T extends string>({
                         disabled={itemDisabled}
                         onClick={() => onSelect(item)}
                         className={fx(
-                            'relative inline-flex shrink-0 items-center justify-center gap-1.5 rounded-xl px-4 py-2 text-sm font-black transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#60A8E4]/40 disabled:cursor-wait disabled:opacity-60',
+                            'relative inline-flex shrink-0 items-center justify-center gap-1.5 rounded-xl px-4 py-2 text-sm font-black min-h-[44px] transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#60A8E4]/40 disabled:cursor-wait disabled:opacity-60',
                             isActive
                                 ? fx('bg-[#60A8E4] text-white shadow-md shadow-sky-900/15', getActiveClassName?.(item))
                                 : fx('bg-white/60 text-text-brand ring-1 ring-[#60A8E4]/15 hover:bg-[#F3FBFF]', getInactiveClassName?.(item)),

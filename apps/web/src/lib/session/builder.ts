@@ -29,11 +29,115 @@ export async function buildDailySession(userId: string, level: CefrLevel): Promi
         orderBy: { nextReviewAt: 'asc' }
     })
 
-    for (const card of srsDue) {
-        if (!card.vocabularyItem) continue
-        
-        // Build review exercise (either MC or typing depending on interval/ease)
-        const format: ExerciseFormat = card.interval > 1 ? 'TYPING' : 'MULTIPLE_CHOICE'
+    // Prepare card structures and formats
+    const preparedCards = srsDue
+        .filter(card => !!card.vocabularyItem)
+        .map(card => {
+            const vocabularyItem = card.vocabularyItem!
+            let correctWord = (vocabularyItem.translations as any)?.vi || ''
+            if (!correctWord) {
+                correctWord = vocabularyItem.word || ''
+            }
+            
+            let format: ExerciseFormat = card.interval > 1 ? 'TYPING' : 'MULTIPLE_CHOICE'
+            if (format === 'MULTIPLE_CHOICE' && !correctWord) {
+                format = 'TYPING'
+            }
+            
+            return {
+                card,
+                correctWord,
+                format
+            }
+        })
+
+    const themeIds = preparedCards
+        .filter(c => c.format === 'MULTIPLE_CHOICE' && c.card.vocabularyItem?.themeId)
+        .map(c => c.card.vocabularyItem!.themeId!)
+    
+    // De-duplicate theme IDs
+    const uniqueThemeIds = Array.from(new Set(themeIds))
+
+    const hasMCOption = preparedCards.some(c => c.format === 'MULTIPLE_CHOICE')
+    
+    const themeCandidates = (hasMCOption && uniqueThemeIds.length > 0)
+        ? await prisma.vocabularyItem.findMany({
+            where: {
+                themeId: { in: uniqueThemeIds }
+            },
+            select: {
+                id: true,
+                themeId: true,
+                translations: true
+            }
+        })
+        : []
+
+    const cefrCandidates = hasMCOption
+        ? await prisma.vocabularyItem.findMany({
+            where: {
+                cefrLevel: level
+            },
+            select: {
+                id: true,
+                themeId: true,
+                translations: true
+            },
+            take: 50
+        })
+        : []
+
+    for (const prepared of preparedCards) {
+        const { card, correctWord, format } = prepared
+        const vocabItem = card.vocabularyItem!
+
+        let options: string[] = []
+        let correctIndex = 0
+
+        if (format === 'MULTIPLE_CHOICE') {
+            // Find theme-level distractors from the pre-fetched list
+            const themeDistractors = themeCandidates
+                .filter(item => item.themeId === vocabItem.themeId && item.id !== vocabItem.id)
+                .map(item => (item.translations as any)?.vi || '')
+                .filter(Boolean)
+                .filter(text => text.toLowerCase() !== correctWord.toLowerCase())
+            
+            // Unique theme distractors
+            let distractors = Array.from(new Set(themeDistractors))
+
+            // If not enough theme distractors, add from the pre-fetched CEFR candidates
+            if (distractors.length < 3) {
+                const cefrDistractors = cefrCandidates
+                    .filter(item => item.id !== vocabItem.id && item.themeId !== vocabItem.themeId)
+                    .map(item => (item.translations as any)?.vi || '')
+                    .filter(Boolean)
+                    .filter(text => text.toLowerCase() !== correctWord.toLowerCase() && !distractors.includes(text))
+                
+                const uniqueCefr = Array.from(new Set(cefrDistractors))
+                distractors = distractors.concat(uniqueCefr).slice(0, 3)
+            }
+
+            // Fallback to default hardcoded distractors if still not enough
+            const defaultFallbacks = ['quả táo', 'quả chuối', 'sữa', 'bánh mì', 'nước', 'trà', 'cà phê']
+            let idx = 0
+            while (distractors.length < 3 && idx < defaultFallbacks.length) {
+                const f = defaultFallbacks[idx++] || 'bánh mì'
+                if (f.toLowerCase() !== correctWord.toLowerCase() && !distractors.includes(f)) {
+                    distractors.push(f)
+                }
+            }
+
+            // Absolute fallback to ensure we never have fewer than 3 distractors
+            while (distractors.length < 3) {
+                distractors.push('bánh mì')
+            }
+
+            // Pick a random index for the correct word (0 to 3)
+            correctIndex = Math.floor(Math.random() * 4)
+            options = [...distractors.slice(0, 3)]
+            options.splice(correctIndex, 0, correctWord)
+        }
+
         items.push({
             id: `srs-${card.id}`,
             type: 'VOCAB_REVIEW',
@@ -41,12 +145,14 @@ export async function buildDailySession(userId: string, level: CefrLevel): Promi
             points: 10,
             data: {
                 cardId: card.id,
-                term: card.vocabularyItem.word,
-                meaning: (card.vocabularyItem.translations as any)?.vi || '',
-                partOfSpeech: card.vocabularyItem.wordType,
-                article: card.vocabularyItem.article,
-                exampleSentence: card.vocabularyItem.exampleSentence1,
-                audioUrl: card.vocabularyItem.audioUrl,
+                term: vocabItem.word,
+                meaning: correctWord,
+                partOfSpeech: vocabItem.wordType,
+                article: vocabItem.article,
+                exampleSentence: vocabItem.exampleSentence1,
+                audioUrl: vocabItem.audioUrl,
+                options: format === 'MULTIPLE_CHOICE' ? options : undefined,
+                correctIndex: format === 'MULTIPLE_CHOICE' ? correctIndex : undefined
             }
         })
     }

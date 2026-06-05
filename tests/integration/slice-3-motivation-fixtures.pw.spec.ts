@@ -121,7 +121,6 @@ test.describe('Slice 3 motivation visual QA fixtures', () => {
 
                 await page.screenshot({
                     path: path.join(SCREENSHOT_DIR, `${fixture.module}-${fixture.visualState}-${viewport.name}.png`),
-                    fullPage: true,
                 })
             })
         }

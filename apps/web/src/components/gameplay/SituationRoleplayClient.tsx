@@ -4,6 +4,7 @@ import { useState } from 'react'
 import dynamic from 'next/dynamic'
 import { ArrowLeft, ArrowRight, MessageCircle, ShieldCheck } from 'lucide-react'
 import { useRouter } from 'next/navigation'
+import { useTranslations } from 'next-intl'
 
 import { FuxieCoach, RewardPreview } from '@/components/gamification/quest-visuals'
 import { MeasuredLink } from '@/components/performance/measured-link'
@@ -28,6 +29,7 @@ type Phase = 'briefing' | 'play' | 'receipt'
 type RoleplayReceiptState = 'practice_note' | 'completed_scored'
 
 export function SituationRoleplayClient({ scenario, level }: SituationRoleplayClientProps) {
+    const t = useTranslations('SituationRoleplay')
     const router = useRouter()
     const [phase, setPhase] = useState<Phase>('briefing')
     const [score, setScore] = useState(0)
@@ -151,7 +153,7 @@ export function SituationRoleplayClient({ scenario, level }: SituationRoleplayCl
                         <div className="mt-8 space-y-6">
                             {/* Overall Feedback */}
                             <div className="rounded-2xl bg-white p-5 ring-1 ring-slate-200">
-                                <h3 className="text-xs font-black uppercase tracking-wider text-slate-500">Nhận xét chung</h3>
+                                <h3 className="text-xs font-black uppercase tracking-wider text-slate-500">{t('overallFeedbackTitle')}</h3>
                                 <p className="mt-2 text-base font-medium text-slate-800">{gradingResult.overallFeedbackNative}</p>
                             </div>
                             
@@ -171,7 +173,7 @@ export function SituationRoleplayClient({ scenario, level }: SituationRoleplayCl
                             {/* Corrections */}
                             {gradingResult.corrections && gradingResult.corrections.length > 0 && (
                                 <div>
-                                    <h3 className="mb-3 text-xs font-black uppercase tracking-wider text-slate-500">Lỗi cần sửa</h3>
+                                    <h3 className="mb-3 text-xs font-black uppercase tracking-wider text-slate-500">{t('errorsToFixTitle')}</h3>
                                     <div className="space-y-3">
                                         {gradingResult.corrections.map((corr: any, idx: number) => (
                                             <div key={idx} className="rounded-2xl bg-red-50 p-4 ring-1 ring-red-100">
@@ -254,8 +256,8 @@ export function SituationRoleplayClient({ scenario, level }: SituationRoleplayCl
                             Completion receipt chi hien sau khi em ket thuc mot luot co diem.
                         </p>
                         <div className="mt-4 rounded-2xl bg-white/80 p-4 text-sm font-bold text-slate-700 ring-1 ring-white">
-                            <p className="text-xs font-black uppercase tracking-[0.08em] text-text-brand">Roleplay completion checklist</p>
-                            <p className="mt-2">Listen to the situation - record one response - end roleplay to view receipt.</p>
+                            <p className="text-xs font-black uppercase tracking-[0.08em] text-text-brand">{t('roleplayChecklistTitle')}</p>
+                            <p className="mt-2">{t('roleplayChecklistDetail')}</p>
                         </div>
 
                         <div className="mt-5 grid gap-3 sm:grid-cols-3">
@@ -286,7 +288,7 @@ export function SituationRoleplayClient({ scenario, level }: SituationRoleplayCl
                         <FuxieCoach
                             role="coach"
                             eyebrow="Safe AI loop"
-                            title="No raw speech in analytics"
+                            title={t('noRawSpeechTitle')}
                             message="Scenario v1 chi track scenario id, score band va completion. Audio/transcript khong duoc dua vao metadata."
                             className="bg-white"
                         />
@@ -309,7 +311,7 @@ export function SituationRoleplayClient({ scenario, level }: SituationRoleplayCl
             </FuxiePanel>
 
             <FuxiePanel className="p-5">
-                <h2 className="text-lg font-black text-text-primary">Tinh huong khac</h2>
+                <h2 className="text-lg font-black text-text-primary">{t('otherSituationsTitle')}</h2>
                 <div className="mt-3 grid gap-3 sm:grid-cols-2">
                     {GERMAN_ROLEPLAY_SCENARIOS.map((item) => (
                         <MeasuredLink

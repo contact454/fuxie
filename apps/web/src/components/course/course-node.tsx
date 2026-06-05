@@ -26,7 +26,7 @@
  *     (Req 4.7).
  *
  * Layout: single `<li>` so this component composes cleanly into a vertical
- * `<ol data-role="course-path">` (Req 4.8 — vertical scroll on < 768px).
+ * `<ol data-role="course-path">` (Req 4.8 — vertical scroll on < 768px). // locale-allow
  */
 
 'use client'

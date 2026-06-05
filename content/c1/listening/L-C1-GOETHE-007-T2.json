@@ -38,7 +38,7 @@
       "explanation": {
         "de": "Die Aussage ist richtig. Die Expertin betont, dass selbst gut ausgebildete Kinder der zweiten und dritten Generation Diskriminierung erfahren und dass der fehlende Zugang zu Netzwerken massive Nachteile schafft. Dies legt nahe, dass soziale Barrieren ein größeres Problem sind als ein Mangel an Qualifikationen.",
         "vi": "Tuyên bố này là đúng. Chuyên gia nhấn mạnh rằng ngay cả con cái thế hệ thứ hai và thứ ba được giáo dục tốt vẫn phải đối mặt với sự phân biệt đối xử và việc thiếu khả năng tiếp cận các mạng lưới quan hệ tạo ra những bất lợi lớn. Điều này cho thấy rằng các rào cản xã hội là một vấn đề lớn hơn so với việc thiếu trình độ chuyên môn.",
-        "key_evidence": "Aber sie erleben weiterhin Diskriminierung auf dem Arbeits- und Wohnungsmarkt... Und der fehlende Zugang zu sozialen Netzwerken erschwert den beruflichen Aufstieg von Menschen mit Migrationserfahrung.",
+        "key_evidence": "Aber sie erleben weiterhin Diskriminierung auf dem Arbeits- und Wohnungsmarkt",
         "key_vocabulary": []
       }
     },
@@ -96,75 +96,172 @@
     ]
   },
   "transcript": {
-    "type": "full_reconstructed_transcript",
+    "type": "studio_source_transcript",
     "status": "complete",
-    "source": "reconstructed_full_script",
-    "quality": "release_candidate_reconstructed",
-    "note": "Full learner-visible reconstructed script created from existing question evidence because original studio scripts are not present in the repository. Replace with studio transcript if original audio scripts become available.",
+    "source": "studio_source_script",
+    "quality": "source_verified",
+    "sourceScript": "data/scripts/C1/Teil2-Experteninterview/L-C1-GOETHE-007-T2.json",
+    "note": "Transcript replaced from source script by scripts/apply-source-transcripts.ts.",
     "lines": [
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Der folgende anspruchsvolle Hoertext behandelt Migration und Integration. Achten Sie auf Aussage, Kontext und implizite Bedeutung."
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sie hören ein Interview. Dazu gibt es neun Aufgaben. Stimmt die Aussage, stimmt sie nicht, oder wird dazu nichts gesagt? Sie hören das Interview zweimal."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q1.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Guten Tag! Unser Gast ist die Migrationsforscherin Professorin Dr. Ayşe Yılmaz von der Universität Osnabrück."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Die Bilanz ist gemischt: Es gibt beeindruckende Erfolgsgeschichten und gleichzeitig hartnäckige strukturelle Probleme.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Vielen Dank! Als Kind türkischer Gastarbeiter kenne ich das Thema Integration sowohl persönlich als auch wissenschaftlich."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q1 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Frau Professorin Yılmaz, wie bewerten Sie den aktuellen Stand der Integration in Deutschland?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q2.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Bilanz ist gemischt: Es gibt beeindruckende Erfolgsgeschichten und gleichzeitig hartnäckige strukturelle Probleme."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Aber sie erleben weiterhin Diskriminierung auf dem Arbeits- und Wohnungsmarkt... Und der fehlende Zugang zu sozialen Netzwerken erschwert den beruflichen Aufstieg von Menschen mit Migrationserfahrung.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Kinder der zweiten und dritten Generation sind besser gebildet und beruflich erfolgreicher als ihre Eltern."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q2 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Aber sie erleben weiterhin Diskriminierung auf dem Arbeits- und Wohnungsmarkt, das zeigen zahlreiche Studien."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q3.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Was sind die größten Hindernisse für eine erfolgreiche Integration?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Zweitens: Ein Antidiskriminierungsgesetz mit echten Sanktionen und einer schlagkräftigen Durchsetzungsbehörde.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das deutsche Bildungssystem reproduziert soziale Ungleichheit und benachteiligt Kinder aus Einwandererfamilien systematisch."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q3 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die frühe Selektion nach der vierten Klasse wirkt sich besonders negativ auf Kinder mit Migrationshintergrund aus."
       },
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Ende des Hoertexts."
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Und der fehlende Zugang zu sozialen Netzwerken erschwert den beruflichen Aufstieg von Menschen mit Migrationserfahrung."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Was meinen Sie mit 'fehlender Zugang zu sozialen Netzwerken'?"
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Deutsche Karrierewege funktionieren stark über informelle Netzwerke: den richtigen Kontakt, das richtige Praktikum, die richtige Empfehlung."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wer diese Netzwerke nicht hat, weil die Familie erst vor einer Generation eingewandert ist, hat massive Nachteile."
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wie bewerten Sie das neue Fachkräfteeinwanderungsgesetz der Bundesregierung?"
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Es ist ein wichtiger Fortschritt, aber es löst das grundlegendere Anerkennungsproblem nicht vollständig."
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wir brauchen schnellere und unbürokratischere Verfahren zur Anerkennung ausländischer Qualifikationen in allen Bundesländern."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Und wir müssen auch Kompetenzen anerkennen, die nicht durch formale Zeugnisse belegt sind, sondern durch Berufserfahrung."
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wie steht es um die sprachliche Integration? Reichen die Integrationskurse aus?"
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Kurse sind ein guter Ansatz, aber sie müssen flexibler, häufiger und qualitativ hochwertiger angeboten werden."
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Viele Geflüchtete warten monatelang auf einen Kursplatz und verlieren in dieser Zeit wertvolle Lernmotivation."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Besonders Frauen mit Kinderbetreuungspflichten haben oft keinen Zugang zu Sprachkursen, weil gleichzeitige Kinderbetreuung fehlt."
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Welche Rolle spielt die Aufnahmegesellschaft für das Gelingen der Integration?"
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Eine entscheidende Rolle! Integration kann nicht gelingen, wenn die Aufnahmegesellschaft Zugewanderte strukturell ausschließt."
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Diskriminierung auf dem Wohnungsmarkt, bei Bewerbungen und im Alltag untergräbt jeden Integrationsfortschritt systematisch."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Studien zeigen, dass Bewerbungen mit türkischen oder arabischen Namen signifikant seltener zu Vorstellungsgesprächen führen."
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Was empfehlen Sie der Politik, um Integration nachhaltig zu verbessern?"
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Erstens: Massive Investitionen in frühkindliche Bildung, weil dort die Weichen für den späteren Erfolg gestellt werden."
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Zweitens: Ein Antidiskriminierungsgesetz mit echten Sanktionen und einer schlagkräftigen Durchsetzungsbehörde."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Drittens: Die interkulturelle Öffnung aller öffentlichen Institutionen von der Polizei bis zur Verwaltung."
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Vielen Dank für dieses aufschlussreiche Gespräch, Frau Professorin Yılmaz!"
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Ende Teil zwei."
       }
     ]
   },
@@ -181,7 +278,7 @@
       "id": "l-c1-goethe-007-t2-lo-1",
       "cefrLevel": "C1",
       "skill": "listening",
-      "canDoVi": "Toi co the luyen nghe hieu o trinh do C1 qua chu de \"Migration und Integration\".",
+      "canDoVi": "Tôi có thể luyện nghe hiểu ở trình độ C1 qua chủ đề \"Migration und Integration\".",
       "canDoDe": "Ich kann Hoeren auf Niveau C1 zum Thema \"Migration und Integration\" ueben.",
       "linkedContentIds": [
         "L-C1-GOETHE-007-T2"

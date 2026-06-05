@@ -42,7 +42,7 @@
       "explanation": {
         "de": "Die Aussage ist falsch. Der Beitrag betont die kreative Macht des Schnitts, indem er auf Filme verweist, bei denen die 'ursprüngliche Vision des Regisseurs ... teilweise bis zur Unkenntlichkeit verändert wurde'. Das Beispiel 'Blade Runner' verdeutlicht, dass der Schnitt die Intention des Regisseurs fundamental verändern kann, anstatt sie zwangsläufig zu bewahren.",
         "vi": "Tuyên bố này là sai. Bài nói nhấn mạnh sức mạnh sáng tạo của việc dựng phim bằng cách đề cập đến những bộ phim mà 'tầm nhìn ban đầu của đạo diễn... đôi khi bị thay đổi đến mức không thể nhận ra'. Ví dụ về 'Blade Runner' cho thấy việc dựng phim có thể thay đổi cơ bản ý đồ của đạo diễn, thay vì nhất thiết phải bảo tồn nó.",
-        "key_evidence": "...deren ursprüngliche Vision des Regisseurs dabei teilweise bis zur Unkenntlichkeit verändert wurde.",
+        "key_evidence": "deren ursprüngliche Vision des Regisseurs dabei teilweise bis zur Unkenntlichkeit verändert wurde.",
         "key_vocabulary": [
           "primäre Obliegenheit: primary obligation",
           "unverfälscht: unadulterated, pure",
@@ -60,7 +60,7 @@
       "explanation": {
         "de": "Die Aussage ist falsch. Der Text stellt klar, dass jeder Schnitt eine Selektion und somit 'unweigerlich eine Interpretation der Wirklichkeit' ist. Dies widerspricht der Vorstellung, eine objektive und wertfreie Darstellung erreichen zu können. Die ethische Dimension wird gerade deshalb diskutiert, weil Objektivität unerreichbar ist.",
         "vi": "Tuyên bố này là sai. Văn bản nêu rõ rằng mỗi lát cắt là một sự lựa chọn và do đó 'không thể tránh khỏi là một sự diễn giải thực tại'. Điều này mâu thuẫn với ý tưởng có thể đạt được một sự miêu tả khách quan và không mang tính phán xét. Khía cạnh đạo đức được thảo luận chính xác bởi vì tính khách quan là không thể đạt được.",
-        "key_evidence": "...jeder Schnitt ist eine Selektion und damit unweigerlich eine Interpretation der Wirklichkeit.",
+        "key_evidence": "jeder Schnitt ist eine Selektion und damit unweigerlich eine Interpretation der Wirklichkeit.",
         "key_vocabulary": [
           "postulieren: to postulate",
           "wertfrei: value-free",
@@ -78,7 +78,7 @@
       "explanation": {
         "de": "Die Aussage ist falsch. Der Text besagt, dass die aktuelle Forschung Eisensteins theoretischen Ansatz 'ergänzt', nicht widerlegt. Das Wort 'ergänzt' impliziert eine Erweiterung oder Hinzufügung, was das Gegenteil von 'widerlegt' oder 'als überholt betrachten' ist. Die modernen Erkenntnisse bauen auf seiner Theorie auf.",
         "vi": "Tuyên bố này là sai. Văn bản nói rằng nghiên cứu hiện tại 'bổ sung' ('ergänzt') cho cách tiếp cận lý thuyết của Eisenstein, chứ không phải bác bỏ nó. Từ 'bổ sung' ngụ ý một sự mở rộng hoặc thêm vào, điều này trái ngược với 'bác bỏ' hoặc 'coi là lỗi thời'. Các phát hiện hiện đại được xây dựng dựa trên lý thuyết của ông.",
-        "key_evidence": "Die aktuelle Forschung ergänzt Eisensteins theoretischen Ansatz durch neurowissenschaftliche Erkenntnisse...",
+        "key_evidence": "Die aktuelle Forschung ergänzt Eisensteins theoretischen Ansatz durch neurowissenschaftliche Erkenntnisse",
         "key_vocabulary": [
           "darlegen: to explain, to state",
           "überholt: outdated",
@@ -126,93 +126,347 @@
     ]
   },
   "transcript": {
-    "type": "full_reconstructed_transcript",
+    "type": "studio_source_transcript",
     "status": "complete",
-    "source": "reconstructed_full_script",
-    "quality": "release_candidate_reconstructed",
-    "note": "Full learner-visible reconstructed script created from existing question evidence because original studio scripts are not present in the repository. Replace with studio transcript if original audio scripts become available.",
+    "source": "studio_source_script",
+    "quality": "source_verified",
+    "sourceScript": "data/scripts/C2/Teil1-Radiosendungen/L-C2-GOETHE-007-T1.json",
+    "note": "Transcript replaced from source script by scripts/apply-source-transcripts.ts.",
     "lines": [
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Der folgende anspruchsvolle Hoertext behandelt Filmberufe: der Cutter. Achten Sie auf Aussage, Kontext und implizite Bedeutung."
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sie hören fünf Radiosendungen. Zu jeder Sendung gibt es drei Aufgaben. Kreuzen Sie ja oder nein an. Sie hören jede Sendung einmal."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q1.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sendung 1."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Walter Murch, einer der bedeutendsten Filmeditoren der Kinogeschichte, hat die Montage einmal als unsichtbare Kunst bezeichnet, deren größte Leistung darin besteht, dass sie vom Publikum nicht wahrgenommen wird.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Unter den zahlreichen Berufsbildern der Filmbranche ist der des Cutters oder der Cutterin eines der am wenigsten beachteten und zugleich einflussreichsten, denn die Montage entscheidet maßgeblich über die Wirkung eines Films."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q1 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Walter Murch, einer der bedeutendsten Filmeditoren der Kinogeschichte, hat die Montage einmal als unsichtbare Kunst bezeichnet, deren größte Leistung darin besteht, dass sie vom Publikum nicht wahrgenommen wird."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q2.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Aufgabe des Cutters ist nicht das bloße Zusammenfügen von Bildmaterial, sondern eine eigenständige kreative Leistung, die Rhythm, Timing, Erzähltempo und die emotionale Wirkung einer Szene gestaltet."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "answer_evidence",
-        "text": "...deren ursprüngliche Vision des Regisseurs dabei teilweise bis zur Unkenntlichkeit verändert wurde.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "In der deutschen Filmindustrie ist der Beruf des Cutters formell als Ausbildungsberuf anerkannt, daneben existieren Studiengänge an Filmhochschulen, die den akademischen Weg in dieses Berufsfeld eröffnen."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q2 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Digitalisierung hat den Arbeitsalltag in den Schneideräumen grundlegend verändert: Während früher Filmmaterial physisch geschnitten und geklebt wurde, arbeiten Editoren heute ausschließlich an computergestützten Schnittsystemen."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q3.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Besonders aufschlussreich für das Verständnis der Rolle des Cutters ist die Analyse von Filmen, die im Schnitt grundlegend umgestaltet wurden und deren ursprüngliche Vision des Regisseurs dabei teilweise bis zur Unkenntlichkeit verändert wurde."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "answer_evidence",
-        "text": "...jeder Schnitt ist eine Selektion und damit unweigerlich eine Interpretation der Wirklichkeit.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ein legendäres Beispiel ist Ridley Scotts Blade Runner, von dem insgesamt sieben verschiedene Schnittfassungen existieren, die sich in ihrer Erzählstruktur und Gesamtwirkung dramatisch voneinander unterscheiden."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q3 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Tatsache, dass derselbe Regisseur mit demselben Rohmaterial durch unterschiedliche Montageentscheidungen fundamental verschiedene Filme erschaffen kann, verdeutlicht die kreative Macht des Schnitts."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q4.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Im Dokumentarfilm ist die Bedeutung des Schnitts noch eklatanter, da dort aus häufig Hunderten Stunden Rohmaterial eine kohärente Erzählung konstruiert werden muss, die den Anspruch der Authentizität wahrt."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "answer_evidence",
-        "text": "Die aktuelle Forschung ergänzt Eisensteins theoretischen Ansatz durch neurowissenschaftliche Erkenntnisse...",
-        "linkedQuestionId": "Q4"
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die ethische Dimension der Dokumentarfilmmontage ist ein intensiv diskutiertes Thema, denn jeder Schnitt ist eine Selektion und damit unweigerlich eine Interpretation der Wirklichkeit."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q4 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "In der psychologischen Filmwissenschaft hat sich eine faszinierende Forschungsrichtung herausgebildet, die untersucht, wie die menschliche Wahrnehmung Schnitte verarbeitet und warum das Gehirn eine inhärent diskontinuierliche Bildfolge als kohärente Erzählung wahrnimmt."
       },
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Ende des Hoertexts."
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Eye-Tracking-Studien haben gezeigt, dass erfahrene Editoren intuitiv an genau den Stellen schneiden, an denen die Zuschauer ihre Augen bewegen, wodurch der Schnitt vom Gehirn als natürlicher Blickwechsel interpretiert wird."
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sendung 2."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die sowjetische Montagetheorie Eisensteins postulierte bereits in den zwanziger Jahren des letzten Jahrhunderts, dass die Kollision zweier aufeinanderfolgender Bilder eine dritte Bedeutung erzeugt, die in keinem der Einzelbilder enthalten ist."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Dieses dialektische Prinzip der Montage, das Eisenstein in direkter Analogie zur philosophischen Dialektik von These, Antithese und Synthese entwickelte, hat die gesamte Filmtheorie des zwanzigsten Jahrhunderts nachhaltig geprägt."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die aktuelle Forschung ergänzt Eisensteins theoretischen Ansatz durch neurowissenschaftliche Erkenntnisse und untersucht, welche neuronalen Prozesse dem Erleben von filmischer Kontinuität zugrunde liegen."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Unter den zahlreichen Berufsbildern der Filmbranche ist der des Cutters oder der Cutterin eines der am wenigsten beachteten und zugleich einflussreichsten, denn die Montage entscheidet maßgeblich über die Wirkung eines Films."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Walter Murch, einer der bedeutendsten Filmeditoren der Kinogeschichte, hat die Montage einmal als unsichtbare Kunst bezeichnet, deren größte Leistung darin besteht, dass sie vom Publikum nicht wahrgenommen wird."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Aufgabe des Cutters ist nicht das bloße Zusammenfügen von Bildmaterial, sondern eine eigenständige kreative Leistung, die Rhythm, Timing, Erzähltempo und die emotionale Wirkung einer Szene gestaltet."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "In der deutschen Filmindustrie ist der Beruf des Cutters formell als Ausbildungsberuf anerkannt, daneben existieren Studiengänge an Filmhochschulen, die den akademischen Weg in dieses Berufsfeld eröffnen."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Digitalisierung hat den Arbeitsalltag in den Schneideräumen grundlegend verändert: Während früher Filmmaterial physisch geschnitten und geklebt wurde, arbeiten Editoren heute ausschließlich an computergestützten Schnittsystemen."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Besonders aufschlussreich für das Verständnis der Rolle des Cutters ist die Analyse von Filmen, die im Schnitt grundlegend umgestaltet wurden und deren ursprüngliche Vision des Regisseurs dabei teilweise bis zur Unkenntlichkeit verändert wurde."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ein legendäres Beispiel ist Ridley Scotts Blade Runner, von dem insgesamt sieben verschiedene Schnittfassungen existieren, die sich in ihrer Erzählstruktur und Gesamtwirkung dramatisch voneinander unterscheiden."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Tatsache, dass derselbe Regisseur mit demselben Rohmaterial durch unterschiedliche Montageentscheidungen fundamental verschiedene Filme erschaffen kann, verdeutlicht die kreative Macht des Schnitts."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Im Dokumentarfilm ist die Bedeutung des Schnitts noch eklatanter, da dort aus häufig Hunderten Stunden Rohmaterial eine kohärente Erzählung konstruiert werden muss, die den Anspruch der Authentizität wahrt."
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sendung 3."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die ethische Dimension der Dokumentarfilmmontage ist ein intensiv diskutiertes Thema, denn jeder Schnitt ist eine Selektion und damit unweigerlich eine Interpretation der Wirklichkeit."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "In der psychologischen Filmwissenschaft hat sich eine faszinierende Forschungsrichtung herausgebildet, die untersucht, wie die menschliche Wahrnehmung Schnitte verarbeitet und warum das Gehirn eine inhärent diskontinuierliche Bildfolge als kohärente Erzählung wahrnimmt."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Eye-Tracking-Studien haben gezeigt, dass erfahrene Editoren intuitiv an genau den Stellen schneiden, an denen die Zuschauer ihre Augen bewegen, wodurch der Schnitt vom Gehirn als natürlicher Blickwechsel interpretiert wird."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die sowjetische Montagetheorie Eisensteins postulierte bereits in den zwanziger Jahren des letzten Jahrhunderts, dass die Kollision zweier aufeinanderfolgender Bilder eine dritte Bedeutung erzeugt, die in keinem der Einzelbilder enthalten ist."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Dieses dialektische Prinzip der Montage, das Eisenstein in direkter Analogie zur philosophischen Dialektik von These, Antithese und Synthese entwickelte, hat die gesamte Filmtheorie des zwanzigsten Jahrhunderts nachhaltig geprägt."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die aktuelle Forschung ergänzt Eisensteins theoretischen Ansatz durch neurowissenschaftliche Erkenntnisse und untersucht, welche neuronalen Prozesse dem Erleben von filmischer Kontinuität zugrunde liegen."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Unter den zahlreichen Berufsbildern der Filmbranche ist der des Cutters oder der Cutterin eines der am wenigsten beachteten und zugleich einflussreichsten, denn die Montage entscheidet maßgeblich über die Wirkung eines Films."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Walter Murch, einer der bedeutendsten Filmeditoren der Kinogeschichte, hat die Montage einmal als unsichtbare Kunst bezeichnet, deren größte Leistung darin besteht, dass sie vom Publikum nicht wahrgenommen wird."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Aufgabe des Cutters ist nicht das bloße Zusammenfügen von Bildmaterial, sondern eine eigenständige kreative Leistung, die Rhythm, Timing, Erzähltempo und die emotionale Wirkung einer Szene gestaltet."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "In der deutschen Filmindustrie ist der Beruf des Cutters formell als Ausbildungsberuf anerkannt, daneben existieren Studiengänge an Filmhochschulen, die den akademischen Weg in dieses Berufsfeld eröffnen."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Digitalisierung hat den Arbeitsalltag in den Schneideräumen grundlegend verändert: Während früher Filmmaterial physisch geschnitten und geklebt wurde, arbeiten Editoren heute ausschließlich an computergestützten Schnittsystemen."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Besonders aufschlussreich für das Verständnis der Rolle des Cutters ist die Analyse von Filmen, die im Schnitt grundlegend umgestaltet wurden und deren ursprüngliche Vision des Regisseurs dabei teilweise bis zur Unkenntlichkeit verändert wurde."
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sendung 4."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ein legendäres Beispiel ist Ridley Scotts Blade Runner, von dem insgesamt sieben verschiedene Schnittfassungen existieren, die sich in ihrer Erzählstruktur und Gesamtwirkung dramatisch voneinander unterscheiden."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Tatsache, dass derselbe Regisseur mit demselben Rohmaterial durch unterschiedliche Montageentscheidungen fundamental verschiedene Filme erschaffen kann, verdeutlicht die kreative Macht des Schnitts."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Im Dokumentarfilm ist die Bedeutung des Schnitts noch eklatanter, da dort aus häufig Hunderten Stunden Rohmaterial eine kohärente Erzählung konstruiert werden muss, die den Anspruch der Authentizität wahrt."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die ethische Dimension der Dokumentarfilmmontage ist ein intensiv diskutiertes Thema, denn jeder Schnitt ist eine Selektion und damit unweigerlich eine Interpretation der Wirklichkeit."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "In der psychologischen Filmwissenschaft hat sich eine faszinierende Forschungsrichtung herausgebildet, die untersucht, wie die menschliche Wahrnehmung Schnitte verarbeitet und warum das Gehirn eine inhärent diskontinuierliche Bildfolge als kohärente Erzählung wahrnimmt."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Eye-Tracking-Studien haben gezeigt, dass erfahrene Editoren intuitiv an genau den Stellen schneiden, an denen die Zuschauer ihre Augen bewegen, wodurch der Schnitt vom Gehirn als natürlicher Blickwechsel interpretiert wird."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die sowjetische Montagetheorie Eisensteins postulierte bereits in den zwanziger Jahren des letzten Jahrhunderts, dass die Kollision zweier aufeinanderfolgender Bilder eine dritte Bedeutung erzeugt, die in keinem der Einzelbilder enthalten ist."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Dieses dialektische Prinzip der Montage, das Eisenstein in direkter Analogie zur philosophischen Dialektik von These, Antithese und Synthese entwickelte, hat die gesamte Filmtheorie des zwanzigsten Jahrhunderts nachhaltig geprägt."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die aktuelle Forschung ergänzt Eisensteins theoretischen Ansatz durch neurowissenschaftliche Erkenntnisse und untersucht, welche neuronalen Prozesse dem Erleben von filmischer Kontinuität zugrunde liegen."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Unter den zahlreichen Berufsbildern der Filmbranche ist der des Cutters oder der Cutterin eines der am wenigsten beachteten und zugleich einflussreichsten, denn die Montage entscheidet maßgeblich über die Wirkung eines Films."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Walter Murch, einer der bedeutendsten Filmeditoren der Kinogeschichte, hat die Montage einmal als unsichtbare Kunst bezeichnet, deren größte Leistung darin besteht, dass sie vom Publikum nicht wahrgenommen wird."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Aufgabe des Cutters ist nicht das bloße Zusammenfügen von Bildmaterial, sondern eine eigenständige kreative Leistung, die Rhythm, Timing, Erzähltempo und die emotionale Wirkung einer Szene gestaltet."
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sendung 5."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "In der deutschen Filmindustrie ist der Beruf des Cutters formell als Ausbildungsberuf anerkannt, daneben existieren Studiengänge an Filmhochschulen, die den akademischen Weg in dieses Berufsfeld eröffnen."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Digitalisierung hat den Arbeitsalltag in den Schneideräumen grundlegend verändert: Während früher Filmmaterial physisch geschnitten und geklebt wurde, arbeiten Editoren heute ausschließlich an computergestützten Schnittsystemen."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Besonders aufschlussreich für das Verständnis der Rolle des Cutters ist die Analyse von Filmen, die im Schnitt grundlegend umgestaltet wurden und deren ursprüngliche Vision des Regisseurs dabei teilweise bis zur Unkenntlichkeit verändert wurde."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ein legendäres Beispiel ist Ridley Scotts Blade Runner, von dem insgesamt sieben verschiedene Schnittfassungen existieren, die sich in ihrer Erzählstruktur und Gesamtwirkung dramatisch voneinander unterscheiden."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Tatsache, dass derselbe Regisseur mit demselben Rohmaterial durch unterschiedliche Montageentscheidungen fundamental verschiedene Filme erschaffen kann, verdeutlicht die kreative Macht des Schnitts."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Im Dokumentarfilm ist die Bedeutung des Schnitts noch eklatanter, da dort aus häufig Hunderten Stunden Rohmaterial eine kohärente Erzählung konstruiert werden muss, die den Anspruch der Authentizität wahrt."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die ethische Dimension der Dokumentarfilmmontage ist ein intensiv diskutiertes Thema, denn jeder Schnitt ist eine Selektion und damit unweigerlich eine Interpretation der Wirklichkeit."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "In der psychologischen Filmwissenschaft hat sich eine faszinierende Forschungsrichtung herausgebildet, die untersucht, wie die menschliche Wahrnehmung Schnitte verarbeitet und warum das Gehirn eine inhärent diskontinuierliche Bildfolge als kohärente Erzählung wahrnimmt."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Eye-Tracking-Studien haben gezeigt, dass erfahrene Editoren intuitiv an genau den Stellen schneiden, an denen die Zuschauer ihre Augen bewegen, wodurch der Schnitt vom Gehirn als natürlicher Blickwechsel interpretiert wird."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die sowjetische Montagetheorie Eisensteins postulierte bereits in den zwanziger Jahren des letzten Jahrhunderts, dass die Kollision zweier aufeinanderfolgender Bilder eine dritte Bedeutung erzeugt, die in keinem der Einzelbilder enthalten ist."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Dieses dialektische Prinzip der Montage, das Eisenstein in direkter Analogie zur philosophischen Dialektik von These, Antithese und Synthese entwickelte, hat die gesamte Filmtheorie des zwanzigsten Jahrhunderts nachhaltig geprägt."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die aktuelle Forschung ergänzt Eisensteins theoretischen Ansatz durch neurowissenschaftliche Erkenntnisse und untersucht, welche neuronalen Prozesse dem Erleben von filmischer Kontinuität zugrunde liegen."
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Ende Teil eins."
       }
     ]
   },
@@ -229,7 +483,7 @@
       "id": "l-c2-goethe-007-t1-lo-1",
       "cefrLevel": "C2",
       "skill": "listening",
-      "canDoVi": "Toi co the luyen nghe hieu o trinh do C2 qua chu de \"Filmberufe: der Cutter\".",
+      "canDoVi": "Tôi có thể luyện nghe hiểu ở trình độ C2 qua chủ đề \"Filmberufe: der Cutter\".",
       "canDoDe": "Ich kann Hoeren auf Niveau C2 zum Thema \"Filmberufe: der Cutter\" ueben.",
       "linkedContentIds": [
         "L-C2-GOETHE-007-T1"

@@ -29,7 +29,7 @@
       "explanation": {
         "de": "Die korrekte Antwort ist (a), da Herr Ramos explizit die kulturelle Prägung, die historischen Wurzeln und die demokratische Selbstbestimmung als Kern seiner Argumentation anführt. Option (b) ist ein lexikalischer Köder; der Moderator erwähnt 'Geographie', aber Herr Ramos widerspricht dieser Prämisse direkt. Option (c) ist zu eng gefasst; die 'historischen Wurzeln' sind nur ein Teil seiner umfassenderen Argumentation für die Souveränität der Mitgliedstaaten.",
         "vi": "Đáp án đúng là (a), vì ông Ramos nêu rõ các yếu tố văn hóa, nguồn gốc lịch sử và quyền tự quyết dân chủ là trọng tâm trong lập luận của mình. Lựa chọn (b) là một cái bẫy từ vựng; người điều hành có đề cập đến 'địa lý', nhưng ông Ramos trực tiếp phản đối tiền đề này. Lựa chọn (c) quá hẹp; 'nguồn gốc lịch sử' chỉ là một phần trong lập luận bao quát hơn của ông về chủ quyền của các quốc gia thành viên.",
-        "key_evidence": "Es geht nicht um Geographie, sondern um demokratische Selbstbestimmung der Mitgliedstaaten."
+        "key_evidence": "Es geht nicht um Geographie, sondern um demokratische Selbstbestimmung der Mitgliedstaaten, und dies wirft grundlegende Fragen zur aktuellen gesellschaftlichen Entwicklung auf."
       }
     },
     {
@@ -126,93 +126,172 @@
     ]
   },
   "transcript": {
-    "type": "full_reconstructed_transcript",
+    "type": "studio_source_transcript",
     "status": "complete",
-    "source": "reconstructed_full_script",
-    "quality": "release_candidate_reconstructed",
-    "note": "Full learner-visible reconstructed script created from existing question evidence because original studio scripts are not present in the repository. Replace with studio transcript if original audio scripts become available.",
+    "source": "studio_source_script",
+    "quality": "source_verified",
+    "sourceScript": "data/scripts/C1/Teil3-Diskussion-in-Abschnitten/L-C1-GOETHE-013-T3.json",
+    "note": "Transcript replaced from source script by scripts/apply-source-transcripts.ts.",
     "lines": [
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Der folgende anspruchsvolle Hoertext behandelt Algorithmen und Bias in der Wissenschaft. Achten Sie auf Aussage, Kontext und implizite Bedeutung."
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sie hören eine Diskussion in vier Abschnitten. Lesen Sie jeweils die Aufgaben. Sie haben dafür 30 Sekunden Zeit. Sie hören die Diskussion zweimal."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe q1_hoeren_c1_t3.",
-        "linkedQuestionId": "q1_hoeren_c1_t3"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Willkommen zur Podiumsdiskussion: Brauchen wir in der Europäischen Union eine einheitliche Familienpolitik, und diese Entwicklung betrifft nicht nur Fachleute, sondern die gesamte Gesellschaft?"
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "answer_evidence",
-        "text": "Es geht nicht um Geographie, sondern um demokratische Selbstbestimmung der Mitgliedstaaten.",
-        "linkedQuestionId": "q1_hoeren_c1_t3"
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ja, absolut! Die nationalen Unterschiede in der Familienpolitik verursachen massive soziale Ungleichheiten innerhalb der Union, wobei aktuelle Studien und Expertenmeinungen ein vielfältiges Bild zeichnen."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe q1_hoeren_c1_t3 im Kontext des Hoertexts.",
-        "linkedQuestionId": "q1_hoeren_c1_t3"
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Familienpolitik ist Sache der Nationalstaaten, daran sollte die EU nicht rütteln, was in der wissenschaftlichen Gemeinschaft für erhebliche Diskussionen sorgt."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe q2_hoeren_c1_t3.",
-        "linkedQuestionId": "q2_hoeren_c1_t3"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Herr Professor Stein, Sie sind Experte für europäisches Sozialrecht. Was ist die rechtliche Grundlage, wobei die Experten in dieser Frage nach wie vor unterschiedlicher Meinung sind?"
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "answer_evidence",
-        "text": "Nein, sie sind ein Anfang, aber der nicht-übertragbare Anteil müsste mindestens verdoppelt werden, was sowohl in der Forschung als auch in der Praxis weitreichende Konsequenzen hat.",
-        "linkedQuestionId": "q2_hoeren_c1_t3"
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die EU hat begrenzte Kompetenzen in der Sozialpolitik und kann nur Mindeststandards setzen, was sowohl in der Forschung als auch in der Praxis weitreichende Konsequenzen hat."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe q2_hoeren_c1_t3 im Kontext des Hoertexts.",
-        "linkedQuestionId": "q2_hoeren_c1_t3"
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Aber diese Mindeststandards können einen enormen Unterschied machen, wie die Arbeitszeitrichtlinie gezeigt hat, und dies wirft grundlegende Fragen zur aktuellen gesellschaftlichen Entwicklung auf."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe q3_hoeren_c1_t3.",
-        "linkedQuestionId": "q3_hoeren_c1_t3"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Frau Özdemir, Sie vertreten die Position einer stärkeren europäischen Familienpolitik. Warum, die in den vergangenen Jahren zunehmend an Bedeutung gewonnen haben?"
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "answer_evidence",
-        "text": "Nur wenn Väter spürbare Konsequenzen haben, wenn sie keine Elternzeit nehmen, ändert sich das Verhalten, und dies wirft grundlegende Fragen zur aktuellen gesellschaftlichen Entwicklung auf.",
-        "linkedQuestionId": "q3_hoeren_c1_t3"
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Weil die derzeitigen Unterschiede absurd sind: In Schweden hat ein Vater hundertachtzig Tage bezahlte Elternzeit, was die Notwendigkeit einer differenzierten Betrachtung deutlich unterstreicht."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe q3_hoeren_c1_t3 im Kontext des Hoertexts.",
-        "linkedQuestionId": "q3_hoeren_c1_t3"
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "In der Slowakei sind es gerade einmal zehn Tage. Das kann in einer Union der Gleichheit nicht sein."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe q4_hoeren_c1_t3.",
-        "linkedQuestionId": "q4_hoeren_c1_t3"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Herr Ramos, Sie sind gegen eine Harmonisierung. Was ist Ihr stärkstes Argument dagegen, wobei aktuelle Studien und Expertenmeinungen ein vielfältiges Bild zeichnen?"
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "answer_evidence",
-        "text": "Höhere EU-Mindeststandards ja, aber mit flexiblen Umsetzungsfristen für wirtschaftlich schwächere Mitgliedstaaten, wobei die Experten in dieser Frage nach wie vor unterschiedlicher Meinung sind.",
-        "linkedQuestionId": "q4_hoeren_c1_t3"
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Familienmodelle sind kulturell geprägt und haben tiefe historische Wurzeln in jedem einzelnen Mitgliedstaat, was in der wissenschaftlichen Gemeinschaft für erhebliche Diskussionen sorgt."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe q4_hoeren_c1_t3 im Kontext des Hoertexts.",
-        "linkedQuestionId": "q4_hoeren_c1_t3"
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Eine griechische Familie hat andere Bedürfnisse als eine dänische Familie, und die Politik muss das respektieren, wobei die Experten in dieser Frage nach wie vor unterschiedlicher Meinung sind."
       },
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Ende des Hoertexts."
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Aber sollte die Geographie über die Rechte von Frauen und Kindern entscheiden, was sowohl in der Forschung als auch in der Praxis weitreichende Konsequenzen hat?"
+      },
+      {
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Es geht nicht um Geographie, sondern um demokratische Selbstbestimmung der Mitgliedstaaten, und dies wirft grundlegende Fragen zur aktuellen gesellschaftlichen Entwicklung auf."
+      },
+      {
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Jedes Land sollte selbst entscheiden, wie es Familienunterstützung gestaltet, solange Grundrechte gewahrt bleiben, die in den vergangenen Jahren zunehmend an Bedeutung gewonnen haben."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Professor Stein, ist die EU-Vereinbarkeitsrichtlinie von zweitausendneunzehn ein gutes Modell für europäische Mindeststandards, was die Notwendigkeit einer differenzierten Betrachtung deutlich unterstreicht?"
+      },
+      {
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ja, weil sie einen Rahmen setzt und gleichzeitig den nationalen Spielraum erhält, und diese Entwicklung betrifft nicht nur Fachleute, sondern die gesamte Gesellschaft."
+      },
+      {
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Sie garantiert zehn Arbeitstage Vaterschaftsurlaub und vier Monate Elternzeit, davon zwei nicht übertragbare Monate, wobei aktuelle Studien und Expertenmeinungen ein vielfältiges Bild zeichnen."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das sind moderate Mindeststandards, die selbst die skeptischsten Mitgliedstaaten akzeptieren konnten, was in der wissenschaftlichen Gemeinschaft für erhebliche Diskussionen sorgt."
+      },
+      {
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Frau Özdemir, gehen Ihnen diese Standards weit genug, wobei die Experten in dieser Frage nach wie vor unterschiedlicher Meinung sind?"
+      },
+      {
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Nein, sie sind ein Anfang, aber der nicht-übertragbare Anteil müsste mindestens verdoppelt werden, was sowohl in der Forschung als auch in der Praxis weitreichende Konsequenzen hat."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Nur wenn Väter spürbare Konsequenzen haben, wenn sie keine Elternzeit nehmen, ändert sich das Verhalten, und dies wirft grundlegende Fragen zur aktuellen gesellschaftlichen Entwicklung auf."
+      },
+      {
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Herr Ramos, wie erklären Sie, dass die Geburtenrate gerade in konservativen Familienmodellen am niedrigsten ist, die in den vergangenen Jahren zunehmend an Bedeutung gewonnen haben?"
+      },
+      {
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das ist ein komplexes Phänomen, das nicht allein auf die Familienpolitik zurückzuführen ist, was die Notwendigkeit einer differenzierten Betrachtung deutlich unterstreicht."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wirtschaftliche Unsicherheit, hohe Wohnkosten und veränderte Lebensentwürfe spielen eine mindestens ebenso große Rolle, und diese Entwicklung betrifft nicht nur Fachleute, sondern die gesamte Gesellschaft."
+      },
+      {
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Aber die Forschung zeigt klar: Großzügige Familienpolitik führt zu höheren Geburtenraten und mehr Gleichstellung, wobei aktuelle Studien und Expertenmeinungen ein vielfältiges Bild zeichnen."
+      },
+      {
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Können wir uns auf einen Kompromiss einigen, der alle Positionen berücksichtigt, was in der wissenschaftlichen Gemeinschaft für erhebliche Diskussionen sorgt?"
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Höhere EU-Mindeststandards ja, aber mit flexiblen Umsetzungsfristen für wirtschaftlich schwächere Mitgliedstaaten, wobei die Experten in dieser Frage nach wie vor unterschiedlicher Meinung sind."
+      },
+      {
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das klingt nach einem pragmatischen und realisierbaren Kompromiss, den alle Seiten mittragen könnten, was sowohl in der Forschung als auch in der Praxis weitreichende Konsequenzen hat."
+      },
+      {
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Vielen Dank für diese konstruktive europapolitische Diskussion!, und dies wirft grundlegende Fragen zur aktuellen gesellschaftlichen Entwicklung auf."
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Ende Teil drei."
       }
     ]
   },
@@ -229,7 +308,7 @@
       "id": "l-c1-goethe-013-t3-lo-1",
       "cefrLevel": "C1",
       "skill": "listening",
-      "canDoVi": "Toi co the luyen nghe hieu o trinh do C1 qua chu de \"Algorithmen und Bias in der Wissenschaft\".",
+      "canDoVi": "Tôi có thể luyện nghe hiểu ở trình độ C1 qua chủ đề \"Algorithmen und Bias in der Wissenschaft\".",
       "canDoDe": "Ich kann Hoeren auf Niveau C1 zum Thema \"Algorithmen und Bias in der Wissenschaft\" ueben.",
       "linkedContentIds": [
         "L-C1-GOETHE-013-T3"

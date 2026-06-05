@@ -16,6 +16,7 @@
  */
 
 import { redirect } from 'next/navigation'
+import { getTranslations } from 'next-intl/server'
 
 import { getServerUser } from '@/lib/auth/server-auth'
 import {
@@ -45,6 +46,7 @@ export default async function PracticePage() {
     const serverUser = await getServerUser()
     if (!serverUser) redirect('/login')
 
+    const t = await getTranslations('Vocabulary')
     const [availableLevels, learnerCardCount] = await Promise.all([
         getVocabularyLevels(),
         getLearnerVocabularyCardCount(serverUser.userId),
@@ -60,10 +62,10 @@ export default async function PracticePage() {
                 <StateShell
                     surfaceId="vocabulary"
                     state="empty"
-                    title="Bộ sưu tập của bạn còn trống"
-                    message="Hãy bắt đầu với bài học đầu tiên để mở khóa thẻ từ vựng đầu tiên cho Fuxie."
+                    title={t('emptyState.title')}
+                    message={t('emptyState.message')}
                     primaryCta={{
-                        label: 'Học từ đầu tiên',
+                        label: t('emptyState.ctaLabel'),
                         href: '/course',
                     }}
                 />
@@ -87,10 +89,10 @@ export default async function PracticePage() {
     return (
         <div className="mx-auto max-w-5xl space-y-6 px-4 py-8">
             <VocabularyPracticeHero
-                eyebrow={`Luyện từ vựng • ${defaultLevel}`}
-                title="Bắt đầu một ván luyện ngắn"
-                message="Fuxie sẽ đi cùng em qua từng chủ đề và ghi điểm khi em hoàn thành."
-                ctaLabel="Bắt đầu"
+                eyebrow={t('practice.eyebrow', { level: defaultLevel })}
+                title={t('practice.title')}
+                message={t('practice.message')}
+                ctaLabel={t('practice.ctaLabel')}
                 ctaHref={ctaHref}
             />
 

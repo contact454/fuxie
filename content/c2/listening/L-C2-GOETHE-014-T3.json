@@ -43,7 +43,7 @@
       "explanation": {
         "de": "Die Aussage ist falsch. Der Experte lehnt die dichotome Einordnung in „rational“ und „irrational“ explizit als „irreführend“ ab. Er klassifiziert Markentreue nicht als irrational, sondern deutet sie als eine pragmatische Strategie zur „Komplexitätsreduktion“ in einer reizüberfluteten Welt.",
         "vi": "Nhận định này sai. Chuyên gia rõ ràng từ chối việc phân loại theo cặp đối lập “lý trí” và “phi lý trí” là “gây hiểu lầm”. Ông không xếp lòng trung thành với thương hiệu là phi lý trí, mà diễn giải nó như một chiến lược thực dụng để “giảm thiểu sự phức tạp” trong một thế giới quá tải lựa chọn.",
-        "key_evidence": "Die Unterscheidung zwischen rational und irrational ist in diesem Kontext irreführend; Markentreue ist vielmehr eine psychologisch nachvollziehbare Strategie zur Komplexitätsreduktion...",
+        "key_evidence": "Die Unterscheidung zwischen rational und irrational ist in diesem Kontext irreführend; Markentreue ist vielmehr eine psychologisch nachvollziehbare Strategie zur Komplexitätsreduktion",
         "key_vocabulary": [
           "irreführend - gây hiểu lầm",
           "die Komplexitätsreduktion - sự giảm thiểu phức tạp",
@@ -61,7 +61,7 @@
       "explanation": {
         "de": "Die Aussage ist falsch. Der Experte stellt das Gegenteil dar: Durch digitale Medien werden Konsumenten zu „aktiven Mitgestaltern“, was zu einem Kontrollverlust für die Unternehmen führt. Der Prozess ist laut ihm „nicht vollständig kontrollierbar“, was der Idee einer souveräneren Steuerung direkt widerspricht.",
         "vi": "Nhận định này sai. Chuyên gia trình bày điều ngược lại: thông qua các phương tiện kỹ thuật số, người tiêu dùng trở thành “người đồng sáng tạo tích cực”, điều này dẫn đến việc các công ty mất đi quyền kiểm soát. Theo ông, quá trình này “không thể kiểm soát hoàn toàn”, điều này trực tiếp mâu thuẫn với ý tưởng về việc điều khiển một cách chủ quyền hơn.",
-        "key_evidence": "...indem sie Konsumenten vom passiven Empfänger zum aktiven Mitgestalter der Markenidentität machen, wobei dieser Prozess von den Unternehmen nicht vollständig kontrollierbar ist.",
+        "key_evidence": "indem sie Konsumenten vom passiven Empfänger zum aktiven Mitgestalter der Markenidentität machen, wobei dieser Prozess von den Unternehmen nicht vollständig kontrollierbar ist.",
         "key_vocabulary": [
           "souverän - có chủ quyền, tự chủ",
           "der Mitgestalter - người đồng sáng tạo",
@@ -79,7 +79,7 @@
       "explanation": {
         "de": "Die Aussage ist falsch. Der Experte prognostiziert keine „unweigerliche Eskalation“. Er betont, dass die Gesellschaft an einem „Scheideweg“ steht, was zwei mögliche, gegensätzliche Entwicklungen impliziert: entweder eine Vertiefung des Konsumismus oder eine „grundlegende Neuausrichtung“. Die Zukunft ist also offen und nicht deterministisch.",
         "vi": "Nhận định này sai. Chuyên gia không dự báo một “sự leo thang không thể tránh khỏi”. Ông nhấn mạnh rằng xã hội đang đứng ở một “ngã rẽ”, điều này bao hàm hai hướng phát triển có thể xảy ra, đối lập nhau: hoặc là sự đào sâu của chủ nghĩa tiêu dùng hoặc là một “sự định hướng lại cơ bản”. Do đó, tương lai là bỏ ngỏ và không được định trước.",
-        "key_evidence": "Wir stehen an einem Scheideweg zwischen einer Vertiefung des konsumistischen Paradigmas und einer grundlegenden Neuausrichtung...",
+        "key_evidence": "Wir stehen an einem Scheideweg zwischen einer Vertiefung des konsumistischen Paradigmas und einer grundlegenden Neuausrichtung",
         "key_vocabulary": [
           "unweigerlich - không thể tránh khỏi",
           "die Eskalation - sự leo thang",
@@ -127,93 +127,182 @@
     ]
   },
   "transcript": {
-    "type": "full_reconstructed_transcript",
+    "type": "studio_source_transcript",
     "status": "complete",
-    "source": "reconstructed_full_script",
-    "quality": "release_candidate_reconstructed",
-    "note": "Full learner-visible reconstructed script created from existing question evidence because original studio scripts are not present in the repository. Replace with studio transcript if original audio scripts become available.",
+    "source": "studio_source_script",
+    "quality": "source_verified",
+    "sourceScript": "data/scripts/C2/Teil3-Experteninterview-lang/L-C2-GOETHE-014-T3.json",
+    "note": "Transcript replaced from source script by scripts/apply-source-transcripts.ts.",
     "lines": [
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Der folgende anspruchsvolle Hoertext behandelt Philosophie des Minimalismus. Achten Sie auf Aussage, Kontext und implizite Bedeutung."
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sie hören ein ausführliches Interview. Dazu gibt es zehn Aufgaben. Kreuzen Sie die richtige Antwort an. Sie hören das Interview einmal."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q1.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Herr Professor Konsum, Sie haben in Ihrer vielbeachteten Monografie das Konzept der emotionalen Ökonomie entwickelt; können Sie diesen Begriff für uns erläutern?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Es steht in einem produktiven Widerspruch dazu, denn die klassische Ökonomie hat die affektive Dimension des Konsums systematisch ausgeblendet und damit einen blinden Fleck in der Wirtschaftstheorie hinterlassen.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Emotionale Ökonomie beschreibt den Umstand, dass Konsum in spätmodernen Gesellschaften primär nicht der Bedarfsdeckung, sondern der Regulation von Emotionen und der Konstruktion sozialer Identität dient."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q1 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Inwieweit lässt sich dieses Konzept mit den klassischen ökonomischen Annahmen rationaler Nutzenmaximierung vereinbaren?"
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q2.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Es steht in einem produktiven Widerspruch dazu, denn die klassische Ökonomie hat die affektive Dimension des Konsums systematisch ausgeblendet und damit einen blinden Fleck in der Wirtschaftstheorie hinterlassen."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "answer_evidence",
-        "text": "Die Unterscheidung zwischen rational und irrational ist in diesem Kontext irreführend; Markentreue ist vielmehr eine psychologisch nachvollziehbare Strategie zur Komplexitätsreduktion...",
-        "linkedQuestionId": "Q2"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Welche empirischen Methoden verwenden Sie, um die emotionalen Dimensionen des Konsumverhaltens zu erforschen?"
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q2 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wir setzen eine Methodenkombination aus biometrischen Messungen, Tiefeninterviews und ethnografischer Feldforschung ein, die es uns ermöglicht, sowohl physiologische als auch bewusste emotionale Reaktionen auf Konsumerlebnisse zu erfassen."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q3.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ist Markentreue Ihrer Analyse zufolge ein rationales oder ein irrationales Phänomen?"
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "answer_evidence",
-        "text": "...indem sie Konsumenten vom passiven Empfänger zum aktiven Mitgestalter der Markenidentität machen, wobei dieser Prozess von den Unternehmen nicht vollständig kontrollierbar ist.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Unterscheidung zwischen rational und irrational ist in diesem Kontext irreführend; Markentreue ist vielmehr eine psychologisch nachvollziehbare Strategie zur Komplexitätsreduktion in einer mit Auswahlmöglichkeiten überfluteten Konsumwelt."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q3 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wie verändern digitale Plattformen und soziale Medien die Beziehung zwischen Konsumenten und Marken fundamental?"
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q4.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Sie demokratisieren die Markenkommunikation, indem sie Konsumenten vom passiven Empfänger zum aktiven Mitgestalter der Markenidentität machen, wobei dieser Prozess von den Unternehmen nicht vollständig kontrollierbar ist."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "answer_evidence",
-        "text": "Wir stehen an einem Scheideweg zwischen einer Vertiefung des konsumistischen Paradigmas und einer grundlegenden Neuausrichtung...",
-        "linkedQuestionId": "Q4"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Welche gesellschaftlichen Implikationen hat es, wenn Markenidentitäten zunehmend an die Stelle traditioneller Identitätsanker wie Religion, Nation oder soziale Klasse treten?"
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q4 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Es ist ein Symptom einer tiefgreifenden kulturellen Transformation, in der die Konsumgesellschaft Sinnstiftungsangebote macht, die früher anderen Institutionen vorbehalten waren."
       },
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Ende des Hoertexts."
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Herr Professor Konsum, wie sehen Sie die Zukunft des Konsums in einer Welt, die zunehmend von ökologischen Krisen und sozialer Ungleichheit geprägt ist?"
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wir stehen an einem Scheideweg zwischen einer Vertiefung des konsumistischen Paradigmas und einer grundlegenden Neuausrichtung, bei der Lebensqualität nicht mehr über materiellen Besitz definiert wird."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Herr Professor Konsum, Sie haben in Ihrer vielbeachteten Monografie das Konzept der emotionalen Ökonomie entwickelt; können Sie diesen Begriff für uns erläutern?"
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Emotionale Ökonomie beschreibt den Umstand, dass Konsum in spätmodernen Gesellschaften primär nicht der Bedarfsdeckung, sondern der Regulation von Emotionen und der Konstruktion sozialer Identität dient."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Inwieweit lässt sich dieses Konzept mit den klassischen ökonomischen Annahmen rationaler Nutzenmaximierung vereinbaren?"
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Es steht in einem produktiven Widerspruch dazu, denn die klassische Ökonomie hat die affektive Dimension des Konsums systematisch ausgeblendet und damit einen blinden Fleck in der Wirtschaftstheorie hinterlassen."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Welche empirischen Methoden verwenden Sie, um die emotionalen Dimensionen des Konsumverhaltens zu erforschen?"
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wir setzen eine Methodenkombination aus biometrischen Messungen, Tiefeninterviews und ethnografischer Feldforschung ein, die es uns ermöglicht, sowohl physiologische als auch bewusste emotionale Reaktionen auf Konsumerlebnisse zu erfassen."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ist Markentreue Ihrer Analyse zufolge ein rationales oder ein irrationales Phänomen?"
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Unterscheidung zwischen rational und irrational ist in diesem Kontext irreführend; Markentreue ist vielmehr eine psychologisch nachvollziehbare Strategie zur Komplexitätsreduktion in einer mit Auswahlmöglichkeiten überfluteten Konsumwelt."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wie verändern digitale Plattformen und soziale Medien die Beziehung zwischen Konsumenten und Marken fundamental?"
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Sie demokratisieren die Markenkommunikation, indem sie Konsumenten vom passiven Empfänger zum aktiven Mitgestalter der Markenidentität machen, wobei dieser Prozess von den Unternehmen nicht vollständig kontrollierbar ist."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Welche gesellschaftlichen Implikationen hat es, wenn Markenidentitäten zunehmend an die Stelle traditioneller Identitätsanker wie Religion, Nation oder soziale Klasse treten?"
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Es ist ein Symptom einer tiefgreifenden kulturellen Transformation, in der die Konsumgesellschaft Sinnstiftungsangebote macht, die früher anderen Institutionen vorbehalten waren."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Herr Professor Konsum, wie sehen Sie die Zukunft des Konsums in einer Welt, die zunehmend von ökologischen Krisen und sozialer Ungleichheit geprägt ist?"
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wir stehen an einem Scheideweg zwischen einer Vertiefung des konsumistischen Paradigmas und einer grundlegenden Neuausrichtung, bei der Lebensqualität nicht mehr über materiellen Besitz definiert wird."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Herr Professor Konsum, Sie haben in Ihrer vielbeachteten Monografie das Konzept der emotionalen Ökonomie entwickelt; können Sie diesen Begriff für uns erläutern?"
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Emotionale Ökonomie beschreibt den Umstand, dass Konsum in spätmodernen Gesellschaften primär nicht der Bedarfsdeckung, sondern der Regulation von Emotionen und der Konstruktion sozialer Identität dient."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Inwieweit lässt sich dieses Konzept mit den klassischen ökonomischen Annahmen rationaler Nutzenmaximierung vereinbaren?"
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Es steht in einem produktiven Widerspruch dazu, denn die klassische Ökonomie hat die affektive Dimension des Konsums systematisch ausgeblendet und damit einen blinden Fleck in der Wirtschaftstheorie hinterlassen."
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Ende des Hörverstehens."
       }
     ]
   },
@@ -230,7 +319,7 @@
       "id": "l-c2-goethe-014-t3-lo-1",
       "cefrLevel": "C2",
       "skill": "listening",
-      "canDoVi": "Toi co the luyen nghe hieu o trinh do C2 qua chu de \"Philosophie des Minimalismus\".",
+      "canDoVi": "Tôi có thể luyện nghe hiểu ở trình độ C2 qua chủ đề \"Philosophie des Minimalismus\".",
       "canDoDe": "Ich kann Hoeren auf Niveau C2 zum Thema \"Philosophie des Minimalismus\" ueben.",
       "linkedContentIds": [
         "L-C2-GOETHE-014-T3"

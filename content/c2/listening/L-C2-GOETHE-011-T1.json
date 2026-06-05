@@ -38,7 +38,7 @@
       "explanation": {
         "de": "Die Aussage ist korrekt. Der Text stellt die Wahrnehmung als 'gemeinnützige Kleidersammlung' der Realität eines 'milliardenschweren Geschäfts' gegenüber. Dies impliziert, dass die gängige, wohltätige Vorstellung ('landläufige Auffassung als karitativer Akt') bei genauerer Betrachtung ('kritischer Prüfung') nicht haltbar ist.",
         "vi": "Nhận định này đúng. Bài báo đối chiếu nhận thức về 'việc thu gom quần áo từ thiện' với thực tế là một 'ngành kinh doanh tỷ đô'. Điều này ngụ ý rằng quan niệm phổ biến, từ thiện ('landläufige Auffassung als karitativer Akt') không đứng vững khi xem xét kỹ hơn ('kritischer Prüfung').",
-        "key_evidence": "Was in Deutschland als gemeinnützige Kleidersammlung wahrgenommen wird, ist in Wirklichkeit ein milliardenschweres Geschäft...",
+        "key_evidence": "Was in Deutschland als gemeinnützige Kleidersammlung wahrgenommen wird, ist in Wirklichkeit ein milliardenschweres Geschäft",
         "key_vocabulary": []
       }
     },
@@ -66,7 +66,7 @@
       "explanation": {
         "de": "Die Aussage ist falsch. Der Text beschreibt den exakten gegenteiligen Effekt: Der Import setzt die lokale Industrie unter 'erheblichen Wettbewerbsdruck' und zwingt Hersteller, ihre Produktion 'drastisch einzuschränken oder ganz aufzugeben'. 'Revitalisierung und Stärkung' ist das Antonym des im Text beschriebenen Sachverhalts.",
         "vi": "Nhận định này sai. Bài báo mô tả hiệu ứng hoàn toàn ngược lại: việc nhập khẩu đặt ngành công nghiệp địa phương dưới 'áp lực cạnh tranh đáng kể' và buộc các nhà sản xuất phải 'cắt giảm mạnh sản xuất hoặc từ bỏ hoàn toàn'. 'Sự hồi sinh và củng cố' là từ trái nghĩa với tình hình được mô tả trong bài báo.",
-        "key_evidence": "...das die lokale Textilindustrie in den Empfängerländern unter erheblichen Wettbewerbsdruck setzt. [...] ...dass einheimische Textilhersteller ihre Produktion drastisch einschränken oder ganz aufgeben mussten.",
+        "key_evidence": "das die lokale Textilindustrie in den Empfängerländern unter erheblichen Wettbewerbsdruck setzt",
         "key_vocabulary": []
       }
     }
@@ -110,93 +110,347 @@
     ]
   },
   "transcript": {
-    "type": "full_reconstructed_transcript",
+    "type": "studio_source_transcript",
     "status": "complete",
-    "source": "reconstructed_full_script",
-    "quality": "release_candidate_reconstructed",
-    "note": "Full learner-visible reconstructed script created from existing question evidence because original studio scripts are not present in the repository. Replace with studio transcript if original audio scripts become available.",
+    "source": "studio_source_script",
+    "quality": "source_verified",
+    "sourceScript": "data/scripts/C2/Teil1-Radiosendungen/L-C2-GOETHE-011-T1.json",
+    "note": "Transcript replaced from source script by scripts/apply-source-transcripts.ts.",
     "lines": [
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Der folgende anspruchsvolle Hoertext behandelt Künstlerische Authentizität und Kommerz. Achten Sie auf Aussage, Kontext und implizite Bedeutung."
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sie hören fünf Radiosendungen. Zu jeder Sendung gibt es drei Aufgaben. Kreuzen Sie ja oder nein an. Sie hören jede Sendung einmal."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q1.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sendung 1."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Die Wahrheit liegt vermutlich in der Mitte: Kleiderbibliotheken sind ein sinnvoller Baustein einer nachhaltigen Modeindustrie, können aber allein die Systemfrage nicht beantworten.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die globale Textilindustrie steht vor einem fundamentalen Umbruch, denn die bisherige Praxis, Kleidung nach wenigen Tragezyklen zu entsorgen, erweist sich ökologisch als nicht mehr tragbar."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q1 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Allein in Deutschland fallen jährlich über eine Million Tonnen Altkleider an, von denen nur ein Bruchteil tatsächlich stofflich recycelt wird, während der Rest verbrannt oder auf Deponien in Entwicklungsländern entsorgt wird."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q2.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die sogenannte Fast Fashion hat die Konsumgewohnheiten derart verändert, dass ein Kleidungsstück im Durchschnitt nur noch siebenmal getragen wird, bevor es im Müll landet."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "answer_evidence",
-        "text": "Was in Deutschland als gemeinnützige Kleidersammlung wahrgenommen wird, ist in Wirklichkeit ein milliardenschweres Geschäft...",
-        "linkedQuestionId": "Q2"
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Technologische Innovationen wie das chemische Recycling von Mischfasern könnten die Verwertungsquote erheblich steigern, befinden sich jedoch noch in einem frühen Entwicklungsstadium."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q2 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die entscheidende Frage lautet, ob die Textilindustrie bereit ist, vom linearen Modell des Herstellens, Tragens und Wegwerfens zu einer echten Kreislaufwirtschaft überzugehen."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q3.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "In zahlreichen deutschen Städten haben sich in den letzten Jahren sogenannte Kleiderbibliotheken etabliert, in denen man Kleidungsstücke für einen begrenzten Zeitraum ausleihen kann."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "answer_evidence",
-        "text": "Technologische Innovationen wie das chemische Recycling von Mischfasern könnten die Verwertungsquote erheblich steigern, befinden sich jedoch noch in einem frühen Entwicklungsstadium.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das Konzept verbindet ökologisches Bewusstsein mit dem Wunsch nach modischer Abwechslung und spricht vor allem eine junge, urbane und umweltbewusste Zielgruppe an."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q3 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Kritiker wenden ein, dass solche Modelle die grundlegende Problematik des Überkonsums nicht lösen, sondern lediglich den Zugang zu Kleidung erleichtern, ohne das Konsumverhalten selbst zu verändern."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q4.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Befürworter entgegnen, dass jedes geteilte Kleidungsstück die Nachfrage nach Neuware reduziert und damit einen messbaren ökologischen Beitrag leistet."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "answer_evidence",
-        "text": "...das die lokale Textilindustrie in den Empfängerländern unter erheblichen Wettbewerbsdruck setzt. [...] ...dass einheimische Textilhersteller ihre Produktion drastisch einschränken oder ganz aufgeben mussten.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Wahrheit liegt vermutlich in der Mitte: Kleiderbibliotheken sind ein sinnvoller Baustein einer nachhaltigen Modeindustrie, können aber allein die Systemfrage nicht beantworten."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q4 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ein besonders kontroverses Thema im Bereich des Textilrecyclings ist der Export von Altkleidern in Länder des globalen Südens, insbesondere nach Subsahara-Afrika."
       },
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Ende des Hoertexts."
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Was in Deutschland als gemeinnützige Kleidersammlung wahrgenommen wird, ist in Wirklichkeit ein milliardenschweres Geschäft, das die lokale Textilindustrie in den Empfängerländern unter erheblichen Wettbewerbsdruck setzt."
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sendung 2."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "In Ländern wie Ghana und Kenia hat der Zustrom billiger Secondhand-Kleidung aus Europa dazu beigetragen, dass einheimische Textilhersteller ihre Produktion drastisch einschränken oder ganz aufgeben mussten."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Gleichzeitig werden Altkleider, die aufgrund ihres schlechten Zustands unverkäuflich sind, auf offenen Deponien entsorgt und belasten dort die Umwelt und das Grundwasser."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Europäische Union plant deshalb eine Verordnung, die Hersteller zur Rücknahme und zum Recycling ihrer Produkte verpflichten soll, um das Problem an der Wurzel zu packen."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die globale Textilindustrie steht vor einem fundamentalen Umbruch, denn die bisherige Praxis, Kleidung nach wenigen Tragezyklen zu entsorgen, erweist sich ökologisch als nicht mehr tragbar."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Allein in Deutschland fallen jährlich über eine Million Tonnen Altkleider an, von denen nur ein Bruchteil tatsächlich stofflich recycelt wird, während der Rest verbrannt oder auf Deponien in Entwicklungsländern entsorgt wird."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die sogenannte Fast Fashion hat die Konsumgewohnheiten derart verändert, dass ein Kleidungsstück im Durchschnitt nur noch siebenmal getragen wird, bevor es im Müll landet."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Technologische Innovationen wie das chemische Recycling von Mischfasern könnten die Verwertungsquote erheblich steigern, befinden sich jedoch noch in einem frühen Entwicklungsstadium."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die entscheidende Frage lautet, ob die Textilindustrie bereit ist, vom linearen Modell des Herstellens, Tragens und Wegwerfens zu einer echten Kreislaufwirtschaft überzugehen."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "In zahlreichen deutschen Städten haben sich in den letzten Jahren sogenannte Kleiderbibliotheken etabliert, in denen man Kleidungsstücke für einen begrenzten Zeitraum ausleihen kann."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das Konzept verbindet ökologisches Bewusstsein mit dem Wunsch nach modischer Abwechslung und spricht vor allem eine junge, urbane und umweltbewusste Zielgruppe an."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Kritiker wenden ein, dass solche Modelle die grundlegende Problematik des Überkonsums nicht lösen, sondern lediglich den Zugang zu Kleidung erleichtern, ohne das Konsumverhalten selbst zu verändern."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Befürworter entgegnen, dass jedes geteilte Kleidungsstück die Nachfrage nach Neuware reduziert und damit einen messbaren ökologischen Beitrag leistet."
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sendung 3."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Wahrheit liegt vermutlich in der Mitte: Kleiderbibliotheken sind ein sinnvoller Baustein einer nachhaltigen Modeindustrie, können aber allein die Systemfrage nicht beantworten."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ein besonders kontroverses Thema im Bereich des Textilrecyclings ist der Export von Altkleidern in Länder des globalen Südens, insbesondere nach Subsahara-Afrika."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Was in Deutschland als gemeinnützige Kleidersammlung wahrgenommen wird, ist in Wirklichkeit ein milliardenschweres Geschäft, das die lokale Textilindustrie in den Empfängerländern unter erheblichen Wettbewerbsdruck setzt."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "In Ländern wie Ghana und Kenia hat der Zustrom billiger Secondhand-Kleidung aus Europa dazu beigetragen, dass einheimische Textilhersteller ihre Produktion drastisch einschränken oder ganz aufgeben mussten."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Gleichzeitig werden Altkleider, die aufgrund ihres schlechten Zustands unverkäuflich sind, auf offenen Deponien entsorgt und belasten dort die Umwelt und das Grundwasser."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Europäische Union plant deshalb eine Verordnung, die Hersteller zur Rücknahme und zum Recycling ihrer Produkte verpflichten soll, um das Problem an der Wurzel zu packen."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die globale Textilindustrie steht vor einem fundamentalen Umbruch, denn die bisherige Praxis, Kleidung nach wenigen Tragezyklen zu entsorgen, erweist sich ökologisch als nicht mehr tragbar."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Allein in Deutschland fallen jährlich über eine Million Tonnen Altkleider an, von denen nur ein Bruchteil tatsächlich stofflich recycelt wird, während der Rest verbrannt oder auf Deponien in Entwicklungsländern entsorgt wird."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die sogenannte Fast Fashion hat die Konsumgewohnheiten derart verändert, dass ein Kleidungsstück im Durchschnitt nur noch siebenmal getragen wird, bevor es im Müll landet."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Technologische Innovationen wie das chemische Recycling von Mischfasern könnten die Verwertungsquote erheblich steigern, befinden sich jedoch noch in einem frühen Entwicklungsstadium."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die entscheidende Frage lautet, ob die Textilindustrie bereit ist, vom linearen Modell des Herstellens, Tragens und Wegwerfens zu einer echten Kreislaufwirtschaft überzugehen."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "In zahlreichen deutschen Städten haben sich in den letzten Jahren sogenannte Kleiderbibliotheken etabliert, in denen man Kleidungsstücke für einen begrenzten Zeitraum ausleihen kann."
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sendung 4."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das Konzept verbindet ökologisches Bewusstsein mit dem Wunsch nach modischer Abwechslung und spricht vor allem eine junge, urbane und umweltbewusste Zielgruppe an."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Kritiker wenden ein, dass solche Modelle die grundlegende Problematik des Überkonsums nicht lösen, sondern lediglich den Zugang zu Kleidung erleichtern, ohne das Konsumverhalten selbst zu verändern."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Befürworter entgegnen, dass jedes geteilte Kleidungsstück die Nachfrage nach Neuware reduziert und damit einen messbaren ökologischen Beitrag leistet."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Wahrheit liegt vermutlich in der Mitte: Kleiderbibliotheken sind ein sinnvoller Baustein einer nachhaltigen Modeindustrie, können aber allein die Systemfrage nicht beantworten."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ein besonders kontroverses Thema im Bereich des Textilrecyclings ist der Export von Altkleidern in Länder des globalen Südens, insbesondere nach Subsahara-Afrika."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Was in Deutschland als gemeinnützige Kleidersammlung wahrgenommen wird, ist in Wirklichkeit ein milliardenschweres Geschäft, das die lokale Textilindustrie in den Empfängerländern unter erheblichen Wettbewerbsdruck setzt."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "In Ländern wie Ghana und Kenia hat der Zustrom billiger Secondhand-Kleidung aus Europa dazu beigetragen, dass einheimische Textilhersteller ihre Produktion drastisch einschränken oder ganz aufgeben mussten."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Gleichzeitig werden Altkleider, die aufgrund ihres schlechten Zustands unverkäuflich sind, auf offenen Deponien entsorgt und belasten dort die Umwelt und das Grundwasser."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Europäische Union plant deshalb eine Verordnung, die Hersteller zur Rücknahme und zum Recycling ihrer Produkte verpflichten soll, um das Problem an der Wurzel zu packen."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die globale Textilindustrie steht vor einem fundamentalen Umbruch, denn die bisherige Praxis, Kleidung nach wenigen Tragezyklen zu entsorgen, erweist sich ökologisch als nicht mehr tragbar."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Allein in Deutschland fallen jährlich über eine Million Tonnen Altkleider an, von denen nur ein Bruchteil tatsächlich stofflich recycelt wird, während der Rest verbrannt oder auf Deponien in Entwicklungsländern entsorgt wird."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die sogenannte Fast Fashion hat die Konsumgewohnheiten derart verändert, dass ein Kleidungsstück im Durchschnitt nur noch siebenmal getragen wird, bevor es im Müll landet."
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sendung 5."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Technologische Innovationen wie das chemische Recycling von Mischfasern könnten die Verwertungsquote erheblich steigern, befinden sich jedoch noch in einem frühen Entwicklungsstadium."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die entscheidende Frage lautet, ob die Textilindustrie bereit ist, vom linearen Modell des Herstellens, Tragens und Wegwerfens zu einer echten Kreislaufwirtschaft überzugehen."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "In zahlreichen deutschen Städten haben sich in den letzten Jahren sogenannte Kleiderbibliotheken etabliert, in denen man Kleidungsstücke für einen begrenzten Zeitraum ausleihen kann."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das Konzept verbindet ökologisches Bewusstsein mit dem Wunsch nach modischer Abwechslung und spricht vor allem eine junge, urbane und umweltbewusste Zielgruppe an."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Kritiker wenden ein, dass solche Modelle die grundlegende Problematik des Überkonsums nicht lösen, sondern lediglich den Zugang zu Kleidung erleichtern, ohne das Konsumverhalten selbst zu verändern."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Befürworter entgegnen, dass jedes geteilte Kleidungsstück die Nachfrage nach Neuware reduziert und damit einen messbaren ökologischen Beitrag leistet."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Wahrheit liegt vermutlich in der Mitte: Kleiderbibliotheken sind ein sinnvoller Baustein einer nachhaltigen Modeindustrie, können aber allein die Systemfrage nicht beantworten."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ein besonders kontroverses Thema im Bereich des Textilrecyclings ist der Export von Altkleidern in Länder des globalen Südens, insbesondere nach Subsahara-Afrika."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Was in Deutschland als gemeinnützige Kleidersammlung wahrgenommen wird, ist in Wirklichkeit ein milliardenschweres Geschäft, das die lokale Textilindustrie in den Empfängerländern unter erheblichen Wettbewerbsdruck setzt."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "In Ländern wie Ghana und Kenia hat der Zustrom billiger Secondhand-Kleidung aus Europa dazu beigetragen, dass einheimische Textilhersteller ihre Produktion drastisch einschränken oder ganz aufgeben mussten."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Gleichzeitig werden Altkleider, die aufgrund ihres schlechten Zustands unverkäuflich sind, auf offenen Deponien entsorgt und belasten dort die Umwelt und das Grundwasser."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Europäische Union plant deshalb eine Verordnung, die Hersteller zur Rücknahme und zum Recycling ihrer Produkte verpflichten soll, um das Problem an der Wurzel zu packen."
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Ende Teil eins."
       }
     ]
   },
@@ -213,7 +467,7 @@
       "id": "l-c2-goethe-011-t1-lo-1",
       "cefrLevel": "C2",
       "skill": "listening",
-      "canDoVi": "Toi co the luyen nghe hieu o trinh do C2 qua chu de \"Künstlerische Authentizität und Kommerz\".",
+      "canDoVi": "Tôi có thể luyện nghe hiểu ở trình độ C2 qua chủ đề \"Künstlerische Authentizität und Kommerz\".",
       "canDoDe": "Ich kann Hoeren auf Niveau C2 zum Thema \"Künstlerische Authentizität und Kommerz\" ueben.",
       "linkedContentIds": [
         "L-C2-GOETHE-011-T1"

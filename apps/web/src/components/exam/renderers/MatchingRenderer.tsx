@@ -1,6 +1,7 @@
 'use client'
 
 import Image from 'next/image'
+import { useTranslations } from 'next-intl'
 
 const AD_ICONS: Record<string, string> = {
     'Sprachschule': '🎓', 'Familienpark': '🎪', 'Büro': '💼', 'Zimmer': '🏠', 'WG': '🏠',
@@ -41,6 +42,7 @@ function getIcon(title: string): string {
 }
 
 export function MatchingRenderer({ content, answer, onChange }: Props) {
+    const tExam = useTranslations('Exam')
     const data = content as unknown as MatchingContent
     const mapping = (answer.mapping as Record<string, string>) ?? {}
 
@@ -132,7 +134,7 @@ export function MatchingRenderer({ content, answer, onChange }: Props) {
                                     isAnswered
                                         ? 'bg-white ring-2 ring-green-200 shadow-sm'
                                         : 'bg-gray-50 ring-1 ring-gray-100 hover:ring-gray-200'
-                                }`}
+                                    }`}
                             >
                                 <span className={`inline-flex w-7 h-7 items-center justify-center text-xs font-bold rounded-full shrink-0 mt-0.5 ${
                                     isAnswered ? 'bg-green-500 text-white' : 'bg-[#60A8E4]/10 text-text-brand'
@@ -151,7 +153,7 @@ export function MatchingRenderer({ content, answer, onChange }: Props) {
                                                 : 'border-2 border-dashed border-gray-300 bg-white text-gray-500 hover:border-[#60A8E4]/40'
                                             }`}
                                     >
-                                        <option value="">— Passende Anzeige wählen —</option>
+                                        <option value="">{tExam('matching.selectPlaceholder')}</option>
                                         {data.options.map(opt => (
                                             <option
                                                 key={opt.key}

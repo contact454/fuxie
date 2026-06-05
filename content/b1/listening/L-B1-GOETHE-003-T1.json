@@ -219,201 +219,247 @@
     ]
   },
   "transcript": {
-    "type": "full_reconstructed_transcript",
+    "type": "studio_source_transcript",
     "status": "complete",
-    "source": "reconstructed_full_script",
-    "quality": "release_candidate_reconstructed",
-    "note": "Full learner-visible reconstructed script created from existing question evidence because original studio scripts are not present in the repository. Replace with studio transcript if original audio scripts become available.",
+    "source": "studio_source_script",
+    "quality": "source_verified",
+    "sourceScript": "data/scripts/B1/Teil1-Kurze-Texte/L-B1-GOETHE-003-T1.json",
+    "note": "Transcript replaced from source script by scripts/apply-source-transcripts.ts.",
     "lines": [
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Im folgenden Hoertext geht es um Fest- oder Party-Erlebnis beschreiben. Achten Sie auf die zentrale Information."
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sie hören fünf kurze Texte. Zu jedem Text gibt es zwei Aufgaben. Kreuzen Sie die richtige Antwort an. Sie hören jeden Text einmal."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q1.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Text 1."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Zusammen mit zwei Freunden bin ich um achtzehn Uhr zum Brandenburger Tor gefahren.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Sprecher_1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Heute berichte ich von einem unvergesslichen Abend beim Berliner Lichterfest letztes Wochenende."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q1 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Sprecher_1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Zusammen mit zwei Freunden bin ich um achtzehn Uhr zum Brandenburger Tor gefahren."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q2.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Sprecher_1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Dort waren schon Tausende Menschen versammelt und die Stimmung war fantastisch."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Besonders beeindruckend war die Laser-Show am Berliner Dom um einundzwanzig Uhr.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Sprecher_1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die historischen Gebäude waren mit farbigen Lichtern und kunstvollen Projektionen beleuchtet."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q2 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Sprecher_1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Besonders beeindruckend war die Laser-Show am Berliner Dom um einundzwanzig Uhr."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q3.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Sprecher_1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wir haben an den Ständen leckeres Essen aus verschiedenen Ländern probiert."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "answer_evidence",
-        "text": "Die Party fand in einem gemieteten Saal in einem Restaurant in Kreuzberg statt.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Sprecher_1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die brasilianische Band auf der Hauptbühne hat für eine tolle Atmosphäre gesorgt."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q3 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Sprecher_1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wir sind erst um Mitternacht nach Hause gekommen, müde aber sehr glücklich."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q4.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Text 2."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "answer_evidence",
-        "text": "Sie ist fünfzig geworden und hat das richtig groß gefeiert, mit achtzig Gästen.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Sprecher_2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Am Samstag war ich auf einer großen Geburtstagsfeier bei meiner Kollegin Maria eingeladen."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q4 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Sprecher_2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Sie ist fünfzig geworden und hat das richtig groß gefeiert, mit achtzig Gästen."
       },
       {
-        "speaker": "Sprecher 5",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q5.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Sprecher_2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Party fand in einem gemieteten Saal in einem Restaurant in Kreuzberg statt."
       },
       {
-        "speaker": "Sprecher 5",
-        "speaker_role": "answer_evidence",
-        "text": "Das Fest dauert in der Regel sechzehn Tage und beginnt im September.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Sprecher_2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Dekoration war wunderschön, überall Blumen und Lichterketten in goldenen und weißen Farben."
       },
       {
-        "speaker": "Sprecher 5",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q5 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Sprecher_2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Es gab ein kaltes und warmes Buffet mit internationalen Spezialitäten."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q6.",
-        "linkedQuestionId": "Q6"
+        "speaker": "Sprecher_2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Eine Liveband hat den ganzen Abend gespielt, und fast alle Gäste haben getanzt."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "answer_evidence",
-        "text": "Ein Maß Bier, also ein Liter, kostet mittlerweile zwischen vierzehn und sechzehn Euro.",
-        "linkedQuestionId": "Q6"
+        "speaker": "Sprecher_2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Besonders lustig war die Überraschung ihrer Kinder: ein Dia-Vortrag mit Fotos aus Marias Kindheit."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q6 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q6"
+        "speaker": "Sprecher_2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Es war eine der schönsten Feiern, auf denen ich je gewesen bin."
       },
       {
-        "speaker": "Sprecher 7",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q7.",
-        "linkedQuestionId": "Q7"
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Text 3."
       },
       {
-        "speaker": "Sprecher 7",
-        "speaker_role": "answer_evidence",
-        "text": "Um Mitternacht gibt es dann das berühmte Feuerwerk, das etwa fünfzehn Minuten dauert.",
-        "linkedQuestionId": "Q7"
+        "speaker": "Sprecher_3",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das Oktoberfest in München ist das berühmteste Volksfest der Welt."
       },
       {
-        "speaker": "Sprecher 7",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q7 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q7"
+        "speaker": "Sprecher_3",
+        "speaker_role": "dialogue_speaker",
+        "text": "Jedes Jahr kommen über sechs Millionen Besucher aus aller Welt auf die Theresienwiese."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q8.",
-        "linkedQuestionId": "Q8"
+        "speaker": "Sprecher_3",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das Fest dauert in der Regel sechzehn Tage und beginnt im September."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "answer_evidence",
-        "text": "Die Veranstaltung beginnt um neunzehn Uhr mit einem Bühnenprogramm und Live-Musik.",
-        "linkedQuestionId": "Q8"
+        "speaker": "Sprecher_3",
+        "speaker_role": "dialogue_speaker",
+        "text": "Neben Bier gibt es natürlich auch traditionelles bayerisches Essen wie Brezen und Weißwurst."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q8 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q8"
+        "speaker": "Sprecher_3",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ein Maß Bier, also ein Liter, kostet mittlerweile zwischen vierzehn und sechzehn Euro."
       },
       {
-        "speaker": "Sprecher 9",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q9.",
-        "linkedQuestionId": "Q9"
+        "speaker": "Sprecher_3",
+        "speaker_role": "dialogue_speaker",
+        "text": "Neben den großen Bierzelten gibt es auch viele Fahrgeschäfte und Karussells."
       },
       {
-        "speaker": "Sprecher 9",
-        "speaker_role": "answer_evidence",
-        "text": "Kinder konnten auf einer Hüpfburg spielen und sich das Gesicht bemalen lassen.",
-        "linkedQuestionId": "Q9"
+        "speaker": "Sprecher_3",
+        "speaker_role": "dialogue_speaker",
+        "text": "Besonders beliebt bei Touristen ist der Trachtenumzug am ersten Sonntag des Festes."
       },
       {
-        "speaker": "Sprecher 9",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q9 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q9"
+        "speaker": "Sprecher_3",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wenn Sie das Oktoberfest besuchen möchten, reservieren Sie rechtzeitig Ihren Tisch im Bierzelt."
       },
       {
-        "speaker": "Sprecher 5",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q10.",
-        "linkedQuestionId": "Q10"
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Text 4."
       },
       {
-        "speaker": "Sprecher 5",
-        "speaker_role": "answer_evidence",
-        "text": "Letzte Woche war ich auf einem Straßenfest in meinem Kiez in Berlin-Neukölln.",
-        "linkedQuestionId": "Q10"
+        "speaker": "Sprecher_4",
+        "speaker_role": "dialogue_speaker",
+        "text": "Silvester in Berlin ist ein ganz besonderes Erlebnis für Einheimische und Touristen."
       },
       {
-        "speaker": "Sprecher 5",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q10 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q10"
+        "speaker": "Sprecher_4",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die größte Party findet am Brandenburger Tor statt mit Musik und einem großen Feuerwerk."
       },
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Ende des Hoertexts."
+        "speaker": "Sprecher_4",
+        "speaker_role": "dialogue_speaker",
+        "text": "Über eine Million Menschen feiern dort jedes Jahr den Jahreswechsel zusammen."
+      },
+      {
+        "speaker": "Sprecher_4",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Veranstaltung beginnt um neunzehn Uhr mit einem Bühnenprogramm und Live-Musik."
+      },
+      {
+        "speaker": "Sprecher_4",
+        "speaker_role": "dialogue_speaker",
+        "text": "Um Mitternacht gibt es dann das berühmte Feuerwerk, das etwa fünfzehn Minuten dauert."
+      },
+      {
+        "speaker": "Sprecher_4",
+        "speaker_role": "dialogue_speaker",
+        "text": "Viele Berliner feiern auch privat mit Raclette oder Fondue bei Freunden zu Hause."
+      },
+      {
+        "speaker": "Sprecher_4",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ein typisch deutscher Brauch an Silvester ist das Bleigießen, um die Zukunft vorherzusagen."
+      },
+      {
+        "speaker": "Sprecher_4",
+        "speaker_role": "dialogue_speaker",
+        "text": "Man trinkt Sekt um Mitternacht und wünscht sich gegenseitig ein gutes neues Jahr."
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Text 5."
+      },
+      {
+        "speaker": "Sprecher_5",
+        "speaker_role": "dialogue_speaker",
+        "text": "Letzte Woche war ich auf einem Straßenfest in meinem Kiez in Berlin-Neukölln."
+      },
+      {
+        "speaker": "Sprecher_5",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die ganze Straße war gesperrt und es gab Stände mit Essen, Trinken und Kunsthandwerk."
+      },
+      {
+        "speaker": "Sprecher_5",
+        "speaker_role": "dialogue_speaker",
+        "text": "Kinder konnten auf einer Hüpfburg spielen und sich das Gesicht bemalen lassen."
+      },
+      {
+        "speaker": "Sprecher_5",
+        "speaker_role": "dialogue_speaker",
+        "text": "Eine lokale Rockband hat auf einer kleinen Bühne gespielt, und die Leute haben mitgesungen."
+      },
+      {
+        "speaker": "Sprecher_5",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ich habe meine neuen Nachbarn kennengelernt, was in einer Großstadt nicht so einfach ist."
+      },
+      {
+        "speaker": "Sprecher_5",
+        "speaker_role": "dialogue_speaker",
+        "text": "Bei einem Glas Wein haben wir uns über das Leben im Kiez und unsere Herkunftsländer unterhalten."
+      },
+      {
+        "speaker": "Sprecher_5",
+        "speaker_role": "dialogue_speaker",
+        "text": "Es ist schön, wenn verschiedene Kulturen friedlich zusammenkommen und gemeinsam feiern."
+      },
+      {
+        "speaker": "Sprecher_5",
+        "speaker_role": "dialogue_speaker",
+        "text": "Solche Feste stärken das Gemeinschaftsgefühl und machen die Nachbarschaft lebendiger."
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Ende Teil eins."
       }
     ]
   },
@@ -430,7 +476,7 @@
       "id": "l-b1-goethe-003-t1-lo-1",
       "cefrLevel": "B1",
       "skill": "listening",
-      "canDoVi": "Toi co the luyen nghe hieu o trinh do B1 qua chu de \"Fest- oder Party-Erlebnis beschreiben\".",
+      "canDoVi": "Tôi có thể luyện nghe hiểu ở trình độ B1 qua chủ đề \"Fest- oder Party-Erlebnis beschreiben\".",
       "canDoDe": "Ich kann Hoeren auf Niveau B1 zum Thema \"Fest- oder Party-Erlebnis beschreiben\" ueben.",
       "linkedContentIds": [
         "L-B1-GOETHE-003-T1"

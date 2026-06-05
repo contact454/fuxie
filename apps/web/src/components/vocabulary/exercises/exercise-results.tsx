@@ -1,5 +1,6 @@
 'use client'
 
+import { useTranslations } from 'next-intl'
 import { resultRewardIcons } from '@/components/gamification/result-reward-loop'
 import { CompletionFlow } from '@/components/gamification/completion-flow'
 import {
@@ -65,58 +66,59 @@ export function ExerciseResults({
     onNewTheme,
     gameplayNextStep,
 }: ExerciseResultsProps) {
+    const t = useTranslations('Vocabulary')
     const getResultCopy = () => {
         if (!graded) {
             return {
-                title: 'Đã lưu lượt luyện',
-                message: 'Fuxie đã giữ câu trả lời của em. Khi máy chủ sẵn sàng, kết quả sẽ được đồng bộ lại.',
-                coachTitle: 'Tiến độ chưa bị mất',
-                coachMessage: 'Em có thể luyện tiếp chủ đề khác hoặc làm lại lượt này để giữ nhịp học trong ngày.',
-                unlockLabel: 'Chờ đồng bộ',
-                unlockDetail: 'Điểm sẽ cập nhật sau',
+                title: t('results.ungraded.title'),
+                message: t('results.ungraded.message'),
+                coachTitle: t('results.ungraded.coachTitle'),
+                coachMessage: t('results.ungraded.coachMessage'),
+                unlockLabel: t('results.ungraded.unlockLabel'),
+                unlockDetail: t('results.ungraded.unlockDetail'),
             }
         }
 
         if (accuracy >= 90) {
             return {
-                title: 'Xuất sắc, quest hoàn thành!',
-                message: `Em trả lời đúng ${correctCount}/${totalQuestions} câu. Đây là lượt luyện rất sạch để mở nhiệm vụ tiếp theo.`,
-                coachTitle: 'Fuxie chốt một chiến thắng đẹp',
-                coachMessage: 'Độ chính xác cao là tín hiệu tốt để chuyển sang chủ đề mới khi động lực còn mạnh.',
-                unlockLabel: 'Mở tiếp',
-                unlockDetail: 'Tăng độ khó',
+                title: t('results.excellent.title'),
+                message: t('results.excellent.message', { correct: correctCount, total: totalQuestions }),
+                coachTitle: t('results.excellent.coachTitle'),
+                coachMessage: t('results.excellent.coachMessage'),
+                unlockLabel: t('results.excellent.unlockLabel'),
+                unlockDetail: t('results.excellent.unlockDetail'),
             }
         }
 
         if (accuracy >= 70) {
             return {
-                title: 'Rất tốt, em đang lên nhịp',
-                message: `Em trả lời đúng ${correctCount}/${totalQuestions} câu. Đủ ổn để đi tiếp, nhưng luyện lại vẫn hữu ích nếu em muốn chắc hơn.`,
-                coachTitle: 'Fuxie đề xuất đi tiếp',
-                coachMessage: 'Đủ ổn để đi tiếp, nhưng luyện lại vẫn hữu ích nếu em muốn chắc hơn.',
-                unlockLabel: 'Next',
-                unlockDetail: 'Đi tiếp',
+                title: t('results.good.title'),
+                message: t('results.good.message', { correct: correctCount, total: totalQuestions }),
+                coachTitle: t('results.good.coachTitle'),
+                coachMessage: t('results.good.coachMessage'),
+                unlockLabel: t('results.good.unlockLabel'),
+                unlockDetail: t('results.good.unlockDetail'),
             }
         }
 
         if (accuracy >= 50) {
             return {
-                title: 'Có tiến bộ, cần thêm một vòng',
-                message: `Em đã đúng ${correctCount}/${totalQuestions} câu. Nên replay 1 vòng để biến các từ còn lẫn thành điểm mạnh.`,
-                coachTitle: 'Fuxie giữ focus cho em',
-                coachMessage: 'Nên replay 1 vòng để biến các từ còn lẫn thành điểm mạnh.',
-                unlockLabel: 'Focus list',
-                unlockDetail: 'Ưu tiên từ còn sai',
+                title: t('results.improving.title'),
+                message: t('results.improving.message', { correct: correctCount, total: totalQuestions }),
+                coachTitle: t('results.improving.coachTitle'),
+                coachMessage: t('results.improving.coachMessage'),
+                unlockLabel: t('results.improving.unlockLabel'),
+                unlockDetail: t('results.improving.unlockDetail'),
             }
         }
 
         return {
-            title: 'Chưa sao, mình sửa từng điểm yếu',
-            message: `Em đúng ${correctCount}/${totalQuestions} câu. Result này giúp Fuxie biết nên kéo em về phần luyện trọng tâm.`,
-            coachTitle: 'Fuxie đề xuất luyện lại',
-            coachMessage: 'Đừng đổi chủ đề vội. Một lượt luyện lại ngắn sẽ giúp não nhận ra mẫu sai nhanh hơn.',
-            unlockLabel: 'Luyện lại',
-            unlockDetail: 'Khóa điểm yếu trước',
+            title: t('results.tryAgain.title'),
+            message: t('results.tryAgain.message', { correct: correctCount, total: totalQuestions }),
+            coachTitle: t('results.tryAgain.coachTitle'),
+            coachMessage: t('results.tryAgain.coachMessage'),
+            unlockLabel: t('results.tryAgain.unlockLabel'),
+            unlockDetail: t('results.tryAgain.unlockDetail'),
         }
     }
 
@@ -128,50 +130,50 @@ export function ExerciseResults({
     const copy = getResultCopy()
     const { Clock3, Target } = resultRewardIcons
     const fucoinLabel = !graded
-        ? 'Fucoin'
+        ? t('results.fucoinLabel.pending')
         : fucoinEarned > 0
-            ? `+${fucoinEarned} Fucoin`
+            ? t('results.fucoinLabel.earned', { count: fucoinEarned })
             : fucoinDuplicate
-                ? 'Đã nhận Fucoin'
+                ? t('results.fucoinLabel.duplicate')
                 : fucoinCapReached
-                    ? 'Đủ Fucoin hôm nay'
-                    : '+0 Fucoin'
+                    ? t('results.fucoinLabel.capReached')
+                    : t('results.fucoinLabel.zero')
     const fucoinDetail = !graded
-        ? 'Đổi quà sau'
+        ? t('results.fucoinDetail.pending')
         : fucoinEarned > 0
             ? walletBalance !== undefined
-                ? `${walletBalance} trong ví`
-                : 'Đã cộng vào ví'
+                ? t('results.fucoinDetail.earnedWallet', { balance: walletBalance })
+                : t('results.fucoinDetail.earnedAdded')
             : fucoinDuplicate
-                ? 'Lượt này đã thưởng trước đó'
+                ? t('results.fucoinDetail.duplicate')
                 : fucoinCapReached && fucoinDailyCap !== undefined
-                    ? `${fucoinDailyCap}/${fucoinDailyCap} daily cap`
+                    ? t('results.fucoinDetail.capDaily', { earned: fucoinDailyCap, cap: fucoinDailyCap })
                     : fucoinDailyCap !== undefined && fucoinDailyEarned !== undefined
-                        ? `${fucoinDailyEarned}/${fucoinDailyCap} hôm nay`
-                        : 'Không có thưởng mới'
+                        ? t('results.fucoinDetail.today', { earned: fucoinDailyEarned, cap: fucoinDailyCap })
+                        : t('results.fucoinDetail.noReward')
     const attemptMeta = [
         ...(timeTaken !== undefined
             ? [{
                 icon: <Clock3 className="h-4 w-4" />,
-                label: 'Thời gian',
+                label: t('results.attemptMeta.timeLabel'),
                 value: formatTime(timeTaken),
-                detail: 'Thời gian luyện',
+                detail: t('results.attemptMeta.timeDetail'),
             }]
             : []),
         ...(graded
             ? [{
                 icon: <Target className="h-4 w-4" />,
                 value: `${Math.round(accuracy)}%`,
-                label: 'Độ chính xác',
-                detail: `${correctCount}/${totalQuestions} câu đúng`,
+                label: t('results.attemptMeta.accuracyLabel'),
+                detail: t('results.attemptMeta.accuracyDetail', { correct: correctCount, total: totalQuestions }),
             }]
             : []),
     ]
     const rewardPreview = [
         {
             type: 'xp' as const,
-            label: graded ? `+${xpEarned} XP` : 'Đang chờ XP',
-            detail: graded ? 'Kinh nghiệm lượt luyện' : 'Đồng bộ khi có điểm',
+            label: graded ? `+${xpEarned} XP` : t('results.attemptMeta.scorePending'),
+            detail: graded ? t('results.attemptMeta.scoreDetail') : t('results.attemptMeta.scorePendingDetail'),
         },
         {
             type: 'fucoin' as const,
@@ -180,8 +182,8 @@ export function ExerciseResults({
         },
         {
             type: 'streak' as const,
-            label: streak?.freezeUsed ? 'Freeze saved' : 'Streak',
-            detail: streak?.freezeUsed ? `${streak.currentStreak} ngay` : 'Giữ nhịp',
+            label: streak?.freezeUsed ? t('results.streakLabel.freezeSaved') : 'Streak',
+            detail: streak?.freezeUsed ? t('results.streakLabel.days', { count: streak.currentStreak }) : t('results.streakLabel.keepPace'),
         },
     ]
 
@@ -192,8 +194,8 @@ export function ExerciseResults({
                 skill="vocabulary"
                 title={copy.title}
                 message={copy.message}
-                scoreLabel={graded ? `${correctCount}/${totalQuestions}` : 'Đã lưu'}
-                scoreDetail={graded ? 'Câu đúng' : 'Chờ chấm điểm'}
+                scoreLabel={graded ? `${correctCount}/${totalQuestions}` : t('results.actions.saved')}
+                scoreDetail={graded ? t('results.actions.completed') : t('results.actions.pendingGrading')}
                 accuracy={accuracy}
                 xpEarned={xpEarned}
                 graded={graded}
@@ -219,9 +221,9 @@ export function ExerciseResults({
                             metadata: { reason: gameplayNextStep.reason, surface: 'exercise_result' }
                         })
                     }
-                } : { label: 'Chủ đề mới', onClick: onNewTheme }}
-                secondaryAction={{ label: 'Luyện lại', onClick: onRetry }}
-                dashboardAction={{ label: 'Về Dashboard', href: '/dashboard' }}
+                } : { label: t('results.actions.newTheme'), onClick: onNewTheme }}
+                secondaryAction={{ label: t('results.actions.retry'), onClick: onRetry }}
+                dashboardAction={{ label: t('results.actions.backToDashboard'), href: '/dashboard' }}
                 coachTitle={copy.coachTitle}
                 coachMessage={copy.coachMessage}
                 className="mb-6"
@@ -230,7 +232,7 @@ export function ExerciseResults({
             {/* Answer Breakdown */}
             <FuxiePanel variant="default" className="mb-6 p-4">
                 <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-3">
-                    {graded ? `Câu trả lời (${correctCount}/${totalQuestions})` : 'Đã lưu câu trả lời'}
+                    {graded ? t('results.breakdown.answersCount', { correct: correctCount, total: totalQuestions }) : t('results.breakdown.savedAnswers')}
                 </h3>
                 <div className="space-y-2 max-h-64 overflow-y-auto">
                     {results.map((r, i) => (
@@ -251,10 +253,10 @@ export function ExerciseResults({
                                 {i + 1}. {r.isCorrect === null ? r.userAnswer : r.correctAnswer}
                             </span>
                             {r.isCorrect === null ? (
-                                <span className="text-xs text-gray-500">Đang chấm</span>
+                                <span className="text-xs text-gray-500">{t('grading')}</span>
                             ) : !r.isCorrect ? (
                                 <span className="text-xs text-red-500">
-                                    Em chọn: {r.userAnswer}
+                                    {t('results.breakdown.userChoice', { choice: r.userAnswer })}
                                 </span>
                             ) : null}
                         </div>

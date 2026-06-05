@@ -50,7 +50,7 @@
       "explanation": {
         "de": "Die Aussage ist korrekt. Die Expertin sagt klar, dass man KI nicht verbieten könne, sondern sie integrieren müsse. Als direkte Konsequenz daraus fordert sie, dass sich Prüfungsformate 'fundamental ändern müssen', da reine Wissensabfragen obsolet werden.",
         "vi": "Nhận định này đúng. Chuyên gia nói rõ rằng không thể cấm AI mà phải tích hợp nó. Như một hệ quả trực tiếp, bà yêu cầu các hình thức kiểm tra phải 'thay đổi một cách cơ bản', vì việc kiểm tra kiến thức đơn thuần sẽ trở nên lỗi thời.",
-        "key_evidence": "Wir können KI nicht verbieten, wir müssen sie in den Unterricht integrieren und den kritischen Umgang damit lehren. Das bedeutet konkret, dass Prüfungsformate sich fundamental ändern müssen, weil Wissensabfragen obsolet werden."
+        "key_evidence": "Wir können KI nicht verbieten, wir müssen sie in den Unterricht integrieren und den kritischen Umgang damit lehren"
       }
     },
     {
@@ -106,93 +106,172 @@
     ]
   },
   "transcript": {
-    "type": "full_reconstructed_transcript",
+    "type": "studio_source_transcript",
     "status": "complete",
-    "source": "reconstructed_full_script",
-    "quality": "release_candidate_reconstructed",
-    "note": "Full learner-visible reconstructed script created from existing question evidence because original studio scripts are not present in the repository. Replace with studio transcript if original audio scripts become available.",
+    "source": "studio_source_script",
+    "quality": "source_verified",
+    "sourceScript": "data/scripts/C1/Teil2-Experteninterview/L-C1-GOETHE-006-T2.json",
+    "note": "Transcript replaced from source script by scripts/apply-source-transcripts.ts.",
     "lines": [
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Der folgende anspruchsvolle Hoertext behandelt Digitalisierung im Bildungswesen. Achten Sie auf Aussage, Kontext und implizite Bedeutung."
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sie hören ein Interview. Dazu gibt es neun Aufgaben. Stimmt die Aussage, stimmt sie nicht, oder wird dazu nichts gesagt? Sie hören das Interview zweimal."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q1.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Guten Tag! Bei uns ist heute die Bildungsforscherin Professorin Dr. Maria Leitner von der Humboldt-Universität Berlin."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Wir befinden uns in einer paradoxen Situation: Die Ausstattung hat sich verbessert, die Nutzung hinkt aber deutlich hinterher.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Vielen Dank! Ich forsche seit zehn Jahren zu der Frage, wie Technologie das Lernen verändern kann und sollte."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q1 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Frau Professorin Leitner, was ist der aktuelle Stand der Digitalisierung an deutschen Schulen?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q2.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wir befinden uns in einer paradoxen Situation: Die Ausstattung hat sich verbessert, die Nutzung hinkt aber deutlich hinterher."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Digital Natives ist ein irreführender Mythos. Jugendliche können Smartphones bedienen, aber keine Quellen kritisch bewerten.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Achtzig Prozent der Schulen haben mittlerweile WLAN und digitale Endgeräte, aber nur dreißig Prozent nutzen sie regelmäßig."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q2 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Was hindert Lehrkräfte daran, die vorhandene Technologie systematisch in ihren Unterricht zu integrieren?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q3.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Drei Hauptfaktoren: mangelnde Fortbildung, fehlende pädagogische Konzepte und Angst vor technischem Versagen im Unterricht."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Wir können KI nicht verbieten, wir müssen sie in den Unterricht integrieren und den kritischen Umgang damit lehren. Das bedeutet konkret, dass Prüfungsformate sich fundamental ändern müssen, weil Wissensabfragen obsolet werden.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Viele Lehrkräfte haben das Gefühl, ihre Schüler seien digital kompetenter als sie selbst, was verunsichernd wirkt."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q3 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Dabei ist die sogenannte 'digitale Kompetenz' der Jugendlichen oft oberflächlich und auf Social Media beschränkt."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q4.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Was meinen Sie damit? Jugendliche gelten doch als Digital Natives, die intuitiv mit Technologie umgehen können."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Eine Bildungspolitik, die Technologie nicht als Selbstzweck begreift, sondern als Werkzeug für besseres und gerechteres Lernen.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Digital Natives ist ein irreführender Mythos. Jugendliche können Smartphones bedienen, aber keine Quellen kritisch bewerten."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q4 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Fähigkeit, einen TikTok-Filter zu nutzen, ist nicht gleichbedeutend mit reflexiver digitaler Medienkompetenz."
       },
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Ende des Hoertexts."
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Welche digitalen Kompetenzen sollte die Schule prioritär vermitteln?"
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Informationskompetenz, also die Fähigkeit, Quellen zu bewerten, Fake News zu erkennen und evidenzbasiert zu argumentieren."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Außerdem grundlegende Programmier- und Algorithmuskenntnisse, nicht um Informatiker auszubilden, sondern zum Verständnis der digitalen Welt."
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Und schließlich kollaboratives digitales Arbeiten, das in der modernen Berufswelt eine Schlüsselkompetenz darstellt."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wie bewerten Sie den Einsatz von Künstlicher Intelligenz wie ChatGPT im schulischen Kontext?"
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "KI ist die größte Herausforderung und zugleich die größte Chance für das Bildungssystem seit dem Taschenrechner."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wir können KI nicht verbieten, wir müssen sie in den Unterricht integrieren und den kritischen Umgang damit lehren."
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das bedeutet konkret, dass Prüfungsformate sich fundamental ändern müssen, weil Wissensabfragen obsolet werden."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Was muss sich in der Lehrerausbildung ändern, um Lehrkräfte besser auf die digitale Schule vorzubereiten?"
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Digitale Didaktik muss ein Pflichtfach im Lehramtsstudium werden, mit hohem Praxisanteil und regelmäßiger Aktualisierung."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Und Fortbildungen müssen verpflichtend, regelmäßig und in den Schulalltag integriert sein, nicht als Zusatzbelastung am Wochenende."
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Welche internationalen Vorbilder gibt es, von denen Deutschland bei der digitalen Bildung lernen könnte?"
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Estland mit seiner durchgängigen digitalen Infrastruktur und Singapur mit seinem exzellenten MINT-Unterricht."
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Aber auch Dänemark, wo digitale Bildung als integraler Bestandteil aller Fächer verstanden und umgesetzt wird."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Was erhoffen Sie sich für die Zukunft der digitalen Bildung in Deutschland?"
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Eine Bildungspolitik, die Technologie nicht als Selbstzweck begreift, sondern als Werkzeug für besseres und gerechteres Lernen."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Denn das Versprechen der Digitalisierung ist nicht mehr Technik, sondern mehr Chancengleichheit und individuelles Lernen."
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Vielen Dank für dieses aufschlussreiche Gespräch, Frau Professorin Leitner!"
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Ende Teil zwei."
       }
     ]
   },
@@ -209,7 +288,7 @@
       "id": "l-c1-goethe-006-t2-lo-1",
       "cefrLevel": "C1",
       "skill": "listening",
-      "canDoVi": "Toi co the luyen nghe hieu o trinh do C1 qua chu de \"Digitalisierung im Bildungswesen\".",
+      "canDoVi": "Tôi có thể luyện nghe hiểu ở trình độ C1 qua chủ đề \"Digitalisierung im Bildungswesen\".",
       "canDoDe": "Ich kann Hoeren auf Niveau C1 zum Thema \"Digitalisierung im Bildungswesen\" ueben.",
       "linkedContentIds": [
         "L-C1-GOETHE-006-T2"

@@ -144,7 +144,7 @@ export default function SpeakingClient({
       <div style={{ padding: '24px 0 16px', display: 'flex', alignItems: 'center', gap: 16 }}>
         <FuxieRoleMascot
           src={FUXIE_3D_ASSETS.speakingCoach}
-          alt="Fuxie speaking coach"
+          alt={t('altSpeakingCoach')}
           size={76}
           motion="speak"
           className="rounded-2xl bg-white shadow-sm ring-1 ring-sky-100"
@@ -280,7 +280,7 @@ export default function SpeakingClient({
                       />
                     </div>
                   ) : (
-                    <span className={`${styles.topicBadge} ${styles.badgeNew}`}>Mới</span>
+                    <span className={`${styles.topicBadge} ${styles.badgeNew}`}>{t('newBadge')}</span>
                   )}
                 </div>
               )

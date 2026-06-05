@@ -456,10 +456,10 @@ body {
     justify-content: space-between;
     height: 56px;
     padding: 0 16px;
-    background: rgba(255, 255, 255, 0.92);
+    background: rgba(6, 73, 135, 0.95);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+    border-bottom: 1px solid rgba(139, 211, 255, 0.3);
   }
 }
 
@@ -467,10 +467,10 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 36px;
-  height: 36px;
+  width: 44px;
+  height: 44px;
   border-radius: 10px;
-  color: #374151;
+  color: #ffffff;
   transition: background-color 0.15s;
   border: none;
   background: none;
@@ -478,7 +478,12 @@ body {
 }
 
 .mobile-header-hamburger:hover {
-  background-color: #f3f4f6;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.mobile-header-hamburger:focus-visible {
+  outline: 2px solid var(--fuxie-blue-200);
+  outline-offset: 2px;
 }
 
 .mobile-header-logo {
@@ -494,11 +499,8 @@ body {
   gap: 4px;
   padding: 4px 10px;
   border-radius: 20px;
-  background: linear-gradient(
-    135deg,
-    rgba(96, 168, 228, 0.12),
-    rgba(46, 196, 182, 0.08)
-  );
+  background: var(--fuxie-blue-500);
+  color: #ffffff;
 }
 
 /* Sidebar backdrop overlay */
@@ -557,6 +559,11 @@ body {
   background-color: #f3f4f6;
 }
 
+.sidebar-drawer-close:focus-visible {
+  outline: 2px solid var(--fuxie-blue-700);
+  outline-offset: 2px;
+}
+
 /* Mobile main content — top padding for header, bottom for nav */
 .mobile-main {
   flex: 1;
@@ -594,10 +601,10 @@ body {
     justify-content: space-around;
     height: calc(64px + env(safe-area-inset-bottom, 0px));
     padding-bottom: env(safe-area-inset-bottom, 0px);
-    background: rgba(255, 255, 255, 0.95);
+    background: rgba(6, 73, 135, 0.95);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-    border-top: 1px solid rgba(0, 0, 0, 0.06);
+    border-top: 1px solid rgba(139, 211, 255, 0.3);
   }
 }
 
@@ -605,12 +612,14 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   gap: 2px;
   padding: 6px 12px;
   border-radius: 12px;
   text-decoration: none;
   transition: all 0.2s ease-out;
   min-width: 56px;
+  min-height: 44px;
 }
 
 .bottom-nav-icon {
@@ -622,7 +631,7 @@ body {
 .bottom-nav-label {
   font-size: 10px;
   font-weight: 500;
-  color: #9ca3af;
+  color: rgba(255, 255, 255, 0.7);
   white-space: nowrap;
 }
 
@@ -631,7 +640,7 @@ body {
 }
 
 .bottom-nav-item-active .bottom-nav-label {
-  color: #3c78a8;
+  color: currentColor;
   font-weight: 600;
 }
 

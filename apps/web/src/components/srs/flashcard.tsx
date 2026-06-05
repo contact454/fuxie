@@ -1,6 +1,6 @@
 'use client'
 
-import { useLocale } from 'next-intl'
+import { useLocale, useTranslations } from 'next-intl'
 import { GENDER_ARTICLES } from '@fuxie/shared/types'
 import Image from 'next/image'
 
@@ -41,6 +41,7 @@ const WORD_TYPE_LABELS: Record<string, string> = {
 
 export function Flashcard({ vocabulary, isFlipped, onFlip }: FlashcardProps) {
     const locale = useLocale();
+    const t = useTranslations('SRS');
     const {
         word, article, plural, wordType, translations,
         exampleSentence1, exampleTranslation1, exampleSentence2, exampleTranslation2,
@@ -123,7 +124,7 @@ export function Flashcard({ vocabulary, isFlipped, onFlip }: FlashcardProps) {
 
                     {/* Tap hint */}
                     <p className="text-xs text-gray-400 mt-4 animate-pulse">
-                        Chạm để lật thẻ ↻
+                        {t('tapToFlip')}
                     </p>
                 </div>
 
@@ -163,9 +164,9 @@ export function Flashcard({ vocabulary, isFlipped, onFlip }: FlashcardProps) {
                     {/* Conjugation table for verbs */}
                     {conjugation && !!(conjugation as Record<string, unknown>).praesens && (
                         <div className="mb-3 bg-white/80 rounded-xl p-3">
-                            <p className="text-xs font-semibold text-gray-500 uppercase mb-2">Konjugation (Präsens)</p>
+                            <p className="text-xs font-semibold text-gray-500 uppercase mb-2">{t('conjugation')}</p>
                             <div className="grid grid-cols-2 gap-x-4 gap-y-1 text-sm">
-                                {Object.entries((conjugation as Record<string, unknown>).praesens as Record<string, string>).map(([pronoun, form]) => (
+                                {Object.entries((conjugation as Record<string, unknown>).praesens as Record<string, string>).map(([pronoun, form]) => ( // locale-allow
                                     <div key={pronoun} className="flex gap-2">
                                         <span className="text-gray-400 w-16 text-right">{pronoun.replace('er_sie_es', 'er/sie/es').replace('sie_Sie', 'sie/Sie')}</span>
                                         <span className="font-medium text-gray-800">{String(form)}</span>
@@ -178,7 +179,7 @@ export function Flashcard({ vocabulary, isFlipped, onFlip }: FlashcardProps) {
                     {/* Examples */}
                     {exampleSentence1 && (
                         <div className="mb-2">
-                            <p className="text-xs font-semibold text-gray-500 uppercase mb-1">Beispiele</p>
+                            <p className="text-xs font-semibold text-gray-500 uppercase mb-1">{t('examples')}</p>
                             <p className="text-sm font-medium text-gray-800 italic">„{exampleSentence1}&rdquo;</p>
                             <p className="text-xs text-gray-500">{exampleTranslation1}</p>
                         </div>

@@ -30,6 +30,7 @@ const PODIUM_STYLES = [
 ]
 
 export function LeaderboardClient() {
+    const t = useTranslations('Gamification')
     const [period, setPeriod] = useState<'weekly' | 'alltime'>('weekly')
     const [entries, setEntries] = useState<LeaderboardEntry[]>([])
     const [currentUser, setCurrentUser] = useState<LeaderboardEntry | null>(null)
@@ -76,7 +77,7 @@ export function LeaderboardClient() {
                     🏆 Giải đấu {currentLeague}
                     <Image src={FUXIE_GAMIFICATION_MASCOTS['rank-up']} alt="Fuxie" width={32} height={32} className="object-contain" />
                 </h1>
-                <p className="text-sm text-gray-500 mt-1">Bảng xếp hạng tuần · Wer lernt am meisten?</p>
+                <p className="text-sm text-gray-500 mt-1">{t('leaderboardSubhead')}</p>
             </div>
 
             {/* Period Tabs */}

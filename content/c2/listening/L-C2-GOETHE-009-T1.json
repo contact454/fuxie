@@ -24,7 +24,7 @@
       "explanation": {
         "de": "Die Aussage ist korrekt. Der Sprecher beschreibt die Haltung der Sprachwissenschaft als 'gelassene Distanz', was eine treffende Umschreibung für 'stoische Gleichgültigkeit' im akademischen Kontext ist. Die Linguistik sieht den Prozess als wertfreien 'Sprachwandel', nicht als Katastrophe.",
         "vi": "Tuyên bố này là đúng. Người nói mô tả thái độ của ngành ngôn ngữ học là 'gelassene Distanz' (sự xa cách điềm tĩnh), đây là một cách diễn đạt lại phù hợp cho 'stoische Gleichgültigkeit' (sự bình thản khắc kỷ) trong bối cảnh học thuật. Ngành ngôn ngữ học coi quá trình này là một 'Sprachwandel' (sự biến đổi ngôn ngữ) trung tính, không phải là một thảm họa.",
-        "key_evidence": "Die Sprachwissenschaft betrachtet diese Phänomene mit einer gewissen gelassenen Distanz und spricht statt von Sprachverfall von Sprachwandel, einem natürlichen und an sich wertfreien Prozess...",
+        "key_evidence": "Die Sprachwissenschaft betrachtet diese Phänomene mit einer gewissen gelassenen Distanz und spricht statt von Sprachverfall von Sprachwandel, einem natürlichen und an sich wertfreien Prozess",
         "key_vocabulary": [
           "stoische Gleichgültigkeit - sự bình thản khắc kỷ",
           "gelassene Distanz - sự xa cách điềm tĩnh"
@@ -41,7 +41,7 @@
       "explanation": {
         "de": "Die Aussage ist falsch. Der Text stellt explizit fest, dass die Studienergebnisse 'differenziert' sind und 'weder die Alarmisten noch die Entwarner vollständig bestätigen'. Ein 'genereller Niedergang' wird also nicht belegt; die Leistungen haben sich in manchen Bereichen sogar verbessert. Die Aussage ist eine lexikalische Falle, da sie Wörter wie 'empirische' und 'Alarmisten' aus dem Text verwendet, aber die Schlussfolgerung ins Gegenteil verkehrt.",
         "vi": "Tuyên bố này là sai. Bài nghe nêu rõ rằng kết quả nghiên cứu là 'differenziert' (đa chiều/khác biệt) và 'weder die Alarmisten noch die Entwarner vollständig bestätigen' (không hoàn toàn xác nhận cho cả những người bi quan lẫn những người lạc quan). Do đó, không có bằng chứng cho một 'sự suy giảm chung'; thành tích chính tả thậm chí còn cải thiện ở một số lĩnh vực. Tuyên bố này là một cái bẫy từ vựng, vì nó sử dụng các từ như 'empirische' (thực nghiệm) và 'Alarmisten' (những người bi quan) từ bài nghe, nhưng lại đảo ngược kết luận.",
-        "key_evidence": "Empirische Studien... kommen zu differenzierten Ergebnissen, die weder die Alarmisten noch die Entwarner vollständig bestätigen.",
+        "key_evidence": "Empirische Studien",
         "key_vocabulary": [
           "untermauern - củng cố",
           "vollumfänglich - hoàn toàn, toàn diện",
@@ -59,7 +59,7 @@
       "explanation": {
         "de": "Die Aussage ist korrekt. Der Text führt aus, dass sich hinter den Klagen über Sprachverfall oft 'die Angst vor sozialem Abstieg und kultureller Marginalisierung verbirgt'. Die Formulierung 'Symptom für tiefgreifendere soziokulturelle Abstiegsängste' ist eine präzise und hochsprachliche Paraphrase dieser Kernaussage.",
         "vi": "Tuyên bố này là đúng. Bài nghe giải thích rằng đằng sau những lời phàn nàn về sự suy tàn ngôn ngữ thường ẩn chứa 'nỗi sợ hãi về sự xuống dốc xã hội và bị gạt ra ngoài lề văn hóa' ('die Angst vor sozialem Abstieg und kultureller Marginalisierung verbirgt'). Cách diễn đạt 'triệu chứng của những nỗi sợ hãi sâu sắc hơn về sự xuống dốc văn hóa xã hội' là một cách diễn giải lại chính xác và ở trình độ cao của ý chính này.",
-        "key_evidence": "Der Literaturwissenschaftler Karl-Heinz Göttert hat... gezeigt, dass sich hinter Sprachverfallsklagen häufig die Angst vor sozialem Abstieg und kultureller Marginalisierung verbirgt.",
+        "key_evidence": "Der Literaturwissenschaftler Karl-Heinz Göttert hat",
         "key_vocabulary": [
           "tiefgreifend - sâu sắc",
           "soziokulturelle Abstiegsängste - nỗi sợ hãi về sự xuống dốc văn hóa xã hội"
@@ -124,93 +124,347 @@
     ]
   },
   "transcript": {
-    "type": "full_reconstructed_transcript",
+    "type": "studio_source_transcript",
     "status": "complete",
-    "source": "reconstructed_full_script",
-    "quality": "release_candidate_reconstructed",
-    "note": "Full learner-visible reconstructed script created from existing question evidence because original studio scripts are not present in the repository. Replace with studio transcript if original audio scripts become available.",
+    "source": "studio_source_script",
+    "quality": "source_verified",
+    "sourceScript": "data/scripts/C2/Teil1-Radiosendungen/L-C2-GOETHE-009-T1.json",
+    "note": "Transcript replaced from source script by scripts/apply-source-transcripts.ts.",
     "lines": [
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Der folgende anspruchsvolle Hoertext behandelt Sprachverfall oder Sprachwandel?. Achten Sie auf Aussage, Kontext und implizite Bedeutung."
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sie hören fünf Radiosendungen. Zu jeder Sendung gibt es drei Aufgaben. Kreuzen Sie ja oder nein an. Sie hören jede Sendung einmal."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q1.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sendung 1."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Die Sprachwissenschaft betrachtet diese Phänomene mit einer gewissen gelassenen Distanz und spricht statt von Sprachverfall von Sprachwandel, einem natürlichen und an sich wertfreien Prozess...",
-        "linkedQuestionId": "Q1"
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Klage über den Verfall der Sprache ist vermutlich so alt wie die Sprache selbst und lässt sich in schriftlichen Quellen bis in die Antike zurückverfolgen, ohne dass die prognostizierte Katastrophe jemals eingetreten wäre."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q1 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "In der aktuellen Debatte manifestiert sich die Sprachverfallsklage vor allem in der Kritik an Anglizismen, an der Verwendung sogenannter Jugendsprache und an den vermeintlich sprachzerstörerischen Auswirkungen digitaler Kommunikationsformen."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q2.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Sprachwissenschaft betrachtet diese Phänomene mit einer gewissen gelassenen Distanz und spricht statt von Sprachverfall von Sprachwandel, einem natürlichen und an sich wertfreien Prozess, der jede lebendige Sprache kennzeichnet."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "answer_evidence",
-        "text": "Empirische Studien... kommen zu differenzierten Ergebnissen, die weder die Alarmisten noch die Entwarner vollständig bestätigen.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die historische Perspektive zeigt, dass Phänomene, die von einer Generation als Verfall beklagt werden, von der nächsten als selbstverständlicher Bestandteil der Standardsprache empfunden werden."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q2 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Gleichwohl lässt sich argumentieren, dass bestimmte Formen des Sprachwandels mit einem Verlust an Ausdrucksmöglichkeiten einhergehen können und dass die Pflege sprachlicher Vielfalt und Differenziertheit durchaus ein sinnvolles kulturelles Anliegen darstellt."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q3.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ein besonders emotional diskutiertes Teilgebiet der Sprachverfallsdebatte betrifft die Frage der Rechtschreibung und die angeblich nachlassende orthografische Kompetenz jüngerer Generationen."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "answer_evidence",
-        "text": "Der Literaturwissenschaftler Karl-Heinz Göttert hat... gezeigt, dass sich hinter Sprachverfallsklagen häufig die Angst vor sozialem Abstieg und kultureller Marginalisierung verbirgt.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Empirische Studien, die über mehrere Jahrzehnte hinweg die Rechtschreibfähigkeit von Schülerinnen und Schülern vergleichen, kommen zu differenzierten Ergebnissen, die weder die Alarmisten noch die Entwarner vollständig bestätigen."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q3 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Rechtschreibleistungen haben sich in bestimmten Bereichen tatsächlich verschlechtert, in anderen hingegen stabil gehalten oder sogar verbessert, was eine pauschale Verfallsdiagnose nicht rechtfertigt."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q4.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Digitalisierung hat dabei paradoxe Effekte: Einerseits wird mehr geschrieben als je zuvor, andererseits findet ein großer Teil dieser Schreibaktivität in informellen Kontexten statt, in denen orthografische Normen eine untergeordnete Rolle spielen."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "answer_evidence",
-        "text": "Die Digitalisierung hat dabei paradoxe Effekte: Einerseits wird mehr geschrieben als je zuvor, andererseits findet ein großer Teil dieser Schreibaktivität in informellen Kontexten statt, in denen orthografische Normen eine untergeordnete Rolle spielen.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die sprachwissenschaftliche Forschung empfiehlt deshalb, die Fähigkeit zum Register-Wechsel zu stärken, also die Kompetenz, in verschiedenen kommunikativen Situationen das jeweils angemessene sprachliche Register zu verwenden."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q4 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Auf einer tieferen kulturtheoretischen Ebene verweist die Sprachverfallsdebatte auf grundlegende gesellschaftliche Verunsicherungen und Ängste vor dem Verlust kultureller Identität in einer zunehmend globalisierten und digitalisierten Welt."
       },
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Ende des Hoertexts."
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Der Literaturwissenschaftler Karl-Heinz Göttert hat in seiner monumentalen Sprachgeschichte des Deutschen gezeigt, dass sich hinter Sprachverfallsklagen häufig die Angst vor sozialem Abstieg und kultureller Marginalisierung verbirgt."
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sendung 2."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "In diesem Sinne ist die Verteidigung der sogenannten reinen Sprache oft weniger eine linguistische als vielmehr eine politische und identitätspolitische Angelegenheit."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Herausforderung besteht darin, eine reflexive Haltung zur Sprache zu entwickeln, die sowohl die Dynamik des Sprachwandels als natürlichen Prozess akzeptiert als auch den Wert sprachlicher Kultivierung als Bildungsideal hochhält."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Es geht letztlich um die Frage, wie viel Kontrolle eine Gesellschaft über den Wandel ihrer Sprache ausüben kann und sollte, eine Frage, die so alt ist wie die Sprachphilosophie selbst."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Klage über den Verfall der Sprache ist vermutlich so alt wie die Sprache selbst und lässt sich in schriftlichen Quellen bis in die Antike zurückverfolgen, ohne dass die prognostizierte Katastrophe jemals eingetreten wäre."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "In der aktuellen Debatte manifestiert sich die Sprachverfallsklage vor allem in der Kritik an Anglizismen, an der Verwendung sogenannter Jugendsprache und an den vermeintlich sprachzerstörerischen Auswirkungen digitaler Kommunikationsformen."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Sprachwissenschaft betrachtet diese Phänomene mit einer gewissen gelassenen Distanz und spricht statt von Sprachverfall von Sprachwandel, einem natürlichen und an sich wertfreien Prozess, der jede lebendige Sprache kennzeichnet."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die historische Perspektive zeigt, dass Phänomene, die von einer Generation als Verfall beklagt werden, von der nächsten als selbstverständlicher Bestandteil der Standardsprache empfunden werden."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Gleichwohl lässt sich argumentieren, dass bestimmte Formen des Sprachwandels mit einem Verlust an Ausdrucksmöglichkeiten einhergehen können und dass die Pflege sprachlicher Vielfalt und Differenziertheit durchaus ein sinnvolles kulturelles Anliegen darstellt."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ein besonders emotional diskutiertes Teilgebiet der Sprachverfallsdebatte betrifft die Frage der Rechtschreibung und die angeblich nachlassende orthografische Kompetenz jüngerer Generationen."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Empirische Studien, die über mehrere Jahrzehnte hinweg die Rechtschreibfähigkeit von Schülerinnen und Schülern vergleichen, kommen zu differenzierten Ergebnissen, die weder die Alarmisten noch die Entwarner vollständig bestätigen."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Rechtschreibleistungen haben sich in bestimmten Bereichen tatsächlich verschlechtert, in anderen hingegen stabil gehalten oder sogar verbessert, was eine pauschale Verfallsdiagnose nicht rechtfertigt."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Digitalisierung hat dabei paradoxe Effekte: Einerseits wird mehr geschrieben als je zuvor, andererseits findet ein großer Teil dieser Schreibaktivität in informellen Kontexten statt, in denen orthografische Normen eine untergeordnete Rolle spielen."
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sendung 3."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die sprachwissenschaftliche Forschung empfiehlt deshalb, die Fähigkeit zum Register-Wechsel zu stärken, also die Kompetenz, in verschiedenen kommunikativen Situationen das jeweils angemessene sprachliche Register zu verwenden."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Auf einer tieferen kulturtheoretischen Ebene verweist die Sprachverfallsdebatte auf grundlegende gesellschaftliche Verunsicherungen und Ängste vor dem Verlust kultureller Identität in einer zunehmend globalisierten und digitalisierten Welt."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Der Literaturwissenschaftler Karl-Heinz Göttert hat in seiner monumentalen Sprachgeschichte des Deutschen gezeigt, dass sich hinter Sprachverfallsklagen häufig die Angst vor sozialem Abstieg und kultureller Marginalisierung verbirgt."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "In diesem Sinne ist die Verteidigung der sogenannten reinen Sprache oft weniger eine linguistische als vielmehr eine politische und identitätspolitische Angelegenheit."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Herausforderung besteht darin, eine reflexive Haltung zur Sprache zu entwickeln, die sowohl die Dynamik des Sprachwandels als natürlichen Prozess akzeptiert als auch den Wert sprachlicher Kultivierung als Bildungsideal hochhält."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Es geht letztlich um die Frage, wie viel Kontrolle eine Gesellschaft über den Wandel ihrer Sprache ausüben kann und sollte, eine Frage, die so alt ist wie die Sprachphilosophie selbst."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Klage über den Verfall der Sprache ist vermutlich so alt wie die Sprache selbst und lässt sich in schriftlichen Quellen bis in die Antike zurückverfolgen, ohne dass die prognostizierte Katastrophe jemals eingetreten wäre."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "In der aktuellen Debatte manifestiert sich die Sprachverfallsklage vor allem in der Kritik an Anglizismen, an der Verwendung sogenannter Jugendsprache und an den vermeintlich sprachzerstörerischen Auswirkungen digitaler Kommunikationsformen."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Sprachwissenschaft betrachtet diese Phänomene mit einer gewissen gelassenen Distanz und spricht statt von Sprachverfall von Sprachwandel, einem natürlichen und an sich wertfreien Prozess, der jede lebendige Sprache kennzeichnet."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die historische Perspektive zeigt, dass Phänomene, die von einer Generation als Verfall beklagt werden, von der nächsten als selbstverständlicher Bestandteil der Standardsprache empfunden werden."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Gleichwohl lässt sich argumentieren, dass bestimmte Formen des Sprachwandels mit einem Verlust an Ausdrucksmöglichkeiten einhergehen können und dass die Pflege sprachlicher Vielfalt und Differenziertheit durchaus ein sinnvolles kulturelles Anliegen darstellt."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ein besonders emotional diskutiertes Teilgebiet der Sprachverfallsdebatte betrifft die Frage der Rechtschreibung und die angeblich nachlassende orthografische Kompetenz jüngerer Generationen."
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sendung 4."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Empirische Studien, die über mehrere Jahrzehnte hinweg die Rechtschreibfähigkeit von Schülerinnen und Schülern vergleichen, kommen zu differenzierten Ergebnissen, die weder die Alarmisten noch die Entwarner vollständig bestätigen."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Rechtschreibleistungen haben sich in bestimmten Bereichen tatsächlich verschlechtert, in anderen hingegen stabil gehalten oder sogar verbessert, was eine pauschale Verfallsdiagnose nicht rechtfertigt."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Digitalisierung hat dabei paradoxe Effekte: Einerseits wird mehr geschrieben als je zuvor, andererseits findet ein großer Teil dieser Schreibaktivität in informellen Kontexten statt, in denen orthografische Normen eine untergeordnete Rolle spielen."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die sprachwissenschaftliche Forschung empfiehlt deshalb, die Fähigkeit zum Register-Wechsel zu stärken, also die Kompetenz, in verschiedenen kommunikativen Situationen das jeweils angemessene sprachliche Register zu verwenden."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Auf einer tieferen kulturtheoretischen Ebene verweist die Sprachverfallsdebatte auf grundlegende gesellschaftliche Verunsicherungen und Ängste vor dem Verlust kultureller Identität in einer zunehmend globalisierten und digitalisierten Welt."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Der Literaturwissenschaftler Karl-Heinz Göttert hat in seiner monumentalen Sprachgeschichte des Deutschen gezeigt, dass sich hinter Sprachverfallsklagen häufig die Angst vor sozialem Abstieg und kultureller Marginalisierung verbirgt."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "In diesem Sinne ist die Verteidigung der sogenannten reinen Sprache oft weniger eine linguistische als vielmehr eine politische und identitätspolitische Angelegenheit."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Herausforderung besteht darin, eine reflexive Haltung zur Sprache zu entwickeln, die sowohl die Dynamik des Sprachwandels als natürlichen Prozess akzeptiert als auch den Wert sprachlicher Kultivierung als Bildungsideal hochhält."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Es geht letztlich um die Frage, wie viel Kontrolle eine Gesellschaft über den Wandel ihrer Sprache ausüben kann und sollte, eine Frage, die so alt ist wie die Sprachphilosophie selbst."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Klage über den Verfall der Sprache ist vermutlich so alt wie die Sprache selbst und lässt sich in schriftlichen Quellen bis in die Antike zurückverfolgen, ohne dass die prognostizierte Katastrophe jemals eingetreten wäre."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "In der aktuellen Debatte manifestiert sich die Sprachverfallsklage vor allem in der Kritik an Anglizismen, an der Verwendung sogenannter Jugendsprache und an den vermeintlich sprachzerstörerischen Auswirkungen digitaler Kommunikationsformen."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Sprachwissenschaft betrachtet diese Phänomene mit einer gewissen gelassenen Distanz und spricht statt von Sprachverfall von Sprachwandel, einem natürlichen und an sich wertfreien Prozess, der jede lebendige Sprache kennzeichnet."
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sendung 5."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die historische Perspektive zeigt, dass Phänomene, die von einer Generation als Verfall beklagt werden, von der nächsten als selbstverständlicher Bestandteil der Standardsprache empfunden werden."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Gleichwohl lässt sich argumentieren, dass bestimmte Formen des Sprachwandels mit einem Verlust an Ausdrucksmöglichkeiten einhergehen können und dass die Pflege sprachlicher Vielfalt und Differenziertheit durchaus ein sinnvolles kulturelles Anliegen darstellt."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ein besonders emotional diskutiertes Teilgebiet der Sprachverfallsdebatte betrifft die Frage der Rechtschreibung und die angeblich nachlassende orthografische Kompetenz jüngerer Generationen."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Empirische Studien, die über mehrere Jahrzehnte hinweg die Rechtschreibfähigkeit von Schülerinnen und Schülern vergleichen, kommen zu differenzierten Ergebnissen, die weder die Alarmisten noch die Entwarner vollständig bestätigen."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Rechtschreibleistungen haben sich in bestimmten Bereichen tatsächlich verschlechtert, in anderen hingegen stabil gehalten oder sogar verbessert, was eine pauschale Verfallsdiagnose nicht rechtfertigt."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Digitalisierung hat dabei paradoxe Effekte: Einerseits wird mehr geschrieben als je zuvor, andererseits findet ein großer Teil dieser Schreibaktivität in informellen Kontexten statt, in denen orthografische Normen eine untergeordnete Rolle spielen."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die sprachwissenschaftliche Forschung empfiehlt deshalb, die Fähigkeit zum Register-Wechsel zu stärken, also die Kompetenz, in verschiedenen kommunikativen Situationen das jeweils angemessene sprachliche Register zu verwenden."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Auf einer tieferen kulturtheoretischen Ebene verweist die Sprachverfallsdebatte auf grundlegende gesellschaftliche Verunsicherungen und Ängste vor dem Verlust kultureller Identität in einer zunehmend globalisierten und digitalisierten Welt."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Der Literaturwissenschaftler Karl-Heinz Göttert hat in seiner monumentalen Sprachgeschichte des Deutschen gezeigt, dass sich hinter Sprachverfallsklagen häufig die Angst vor sozialem Abstieg und kultureller Marginalisierung verbirgt."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "In diesem Sinne ist die Verteidigung der sogenannten reinen Sprache oft weniger eine linguistische als vielmehr eine politische und identitätspolitische Angelegenheit."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Herausforderung besteht darin, eine reflexive Haltung zur Sprache zu entwickeln, die sowohl die Dynamik des Sprachwandels als natürlichen Prozess akzeptiert als auch den Wert sprachlicher Kultivierung als Bildungsideal hochhält."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Es geht letztlich um die Frage, wie viel Kontrolle eine Gesellschaft über den Wandel ihrer Sprache ausüben kann und sollte, eine Frage, die so alt ist wie die Sprachphilosophie selbst."
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Ende Teil eins."
       }
     ]
   },
@@ -227,7 +481,7 @@
       "id": "l-c2-goethe-009-t1-lo-1",
       "cefrLevel": "C2",
       "skill": "listening",
-      "canDoVi": "Toi co the luyen nghe hieu o trinh do C2 qua chu de \"Sprachverfall oder Sprachwandel?\".",
+      "canDoVi": "Tôi có thể luyện nghe hiểu ở trình độ C2 qua chủ đề \"Sprachverfall oder Sprachwandel?\".",
       "canDoDe": "Ich kann Hoeren auf Niveau C2 zum Thema \"Sprachverfall oder Sprachwandel?\" ueben.",
       "linkedContentIds": [
         "L-C2-GOETHE-009-T1"

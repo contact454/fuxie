@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import Image from 'next/image'
+import { useTranslations } from 'next-intl'
 import { getFuxieMascotSrc } from "@/lib/mascot/fuxie-assets"
 
 interface BeforeInstallPromptEvent extends Event {
@@ -14,6 +15,7 @@ interface BeforeInstallPromptEvent extends Event {
 }
 
 export function InstallPrompt() {
+    const t = useTranslations('UI')
     const [deferredPrompt, setDeferredPrompt] = useState<BeforeInstallPromptEvent | null>(null)
     const [showBanner, setShowBanner] = useState(false)
 
@@ -83,9 +85,9 @@ export function InstallPrompt() {
             </div>
             
             <div className="flex-1 min-w-0">
-                <h3 className="font-bold text-gray-900 text-sm mb-0.5">Cài đặt Fuxie APP!</h3>
+                <h3 className="font-bold text-gray-900 text-sm mb-0.5">{t('installPrompt.title')}</h3>
                 <p className="text-xs text-gray-500 line-clamp-2 leading-snug">
-                    Học tiếng Đức mượt mà hơn, không bị gián đoạn và nhận nhắc nhở học tập mỗi ngày.
+                    {t('installPrompt.description')}
                 </p>
             </div>
 
@@ -94,13 +96,13 @@ export function InstallPrompt() {
                     onClick={handleInstall}
                     className="bg-blue-600 text-white text-xs font-bold px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
                 >
-                    Cài đặt
+                    {t('installPrompt.installCta')}
                 </button>
                 <button
                     onClick={handleDismiss}
                     className="text-gray-400 text-xs font-medium hover:text-gray-600 transition-colors"
                 >
-                    Để sau
+                    {t('installPrompt.dismissCta')}
                 </button>
             </div>
         </div>

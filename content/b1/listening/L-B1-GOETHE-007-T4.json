@@ -29,7 +29,7 @@
       "explanation": {
         "de": "Der Moderator eröffnet die Sendung mit der Vorstellung des Themas.",
         "vi": "Người điều hành mở đầu chương trình bằng cách giới thiệu chủ đề.",
-        "key_evidence": "Moderator: Unser Thema heute: Wie gelingt gute Nachbarschaft?",
+        "key_evidence": "Unser Thema heute: Wie gelingt gute Nachbarschaft?",
         "key_vocabulary": []
       }
     },
@@ -48,7 +48,7 @@
       "explanation": {
         "de": "Frau Hartmann äußert diese Meinung gleich zu Beginn der Diskussion.",
         "vi": "Bà Hartmann bày tỏ ý kiến này ngay từ đầu cuộc thảo luận.",
-        "key_evidence": "Gast_A: Gute Nachbarschaft ist in einer Großstadt wie Berlin besonders wichtig und gleichzeitig schwierig.",
+        "key_evidence": "Gute Nachbarschaft ist in einer Großstadt wie Berlin besonders wichtig und gleichzeitig schwierig.",
         "key_vocabulary": []
       }
     },
@@ -67,7 +67,7 @@
       "explanation": {
         "de": "Herr Vogt vergleicht seine Erfahrung auf dem Land mit der Situation in der Stadt.",
         "vi": "Ông Vogt so sánh kinh nghiệm sống ở nông thôn với tình hình ở thành phố.",
-        "key_evidence": "Gast_B: Ich lebe auf dem Land und da kennt man seine Nachbarn. In der Stadt ist das ganz anders.",
+        "key_evidence": "Ich lebe auf dem Land und da kennt man seine Nachbarn. In der Stadt ist das ganz anders.",
         "key_vocabulary": []
       }
     },
@@ -86,7 +86,7 @@
       "explanation": {
         "de": "Der Moderator beschreibt die Hilfsbereitschaft auf dem Land als selbstverständlich.",
         "vi": "Người điều hành mô tả sự sẵn lòng giúp đỡ ở nông thôn là điều hiển nhiên.",
-        "key_evidence": "Moderator: Auf dem Land hilft man sich gegenseitig, das gehört einfach dazu und ist selbstverständlich.",
+        "key_evidence": "Auf dem Land hilft man sich gegenseitig, das gehört einfach dazu und ist selbstverständlich.",
         "key_vocabulary": []
       }
     },
@@ -105,7 +105,7 @@
       "explanation": {
         "de": "Frau Hartmann nennt die häufigsten Nachbarschaftskonflikte aus ihrer Erfahrung.",
         "vi": "Bà Hartmann nêu ra những xung đột hàng xóm phổ biến nhất từ kinh nghiệm của mình.",
-        "key_evidence": "Gast_A: Lärm ist das Hauptproblem, dann kommen Haustiere und das Thema Sauberkeit im Haus.",
+        "key_evidence": "Lärm ist das Hauptproblem, dann kommen Haustiere und das Thema Sauberkeit im Haus.",
         "key_vocabulary": []
       }
     },
@@ -124,7 +124,7 @@
       "explanation": {
         "de": "Herr Vogt gibt diesen Ratschlag für Menschen, die neu in ein Viertel ziehen.",
         "vi": "Ông Vogt đưa ra lời khuyên này cho những người mới chuyển đến một khu phố.",
-        "key_evidence": "Gast_B: Stellen Sie sich bei Ihren direkten Nachbarn vor. Ein kleines Geschenk wie Schokolade wirkt Wunder.",
+        "key_evidence": "Stellen Sie sich bei Ihren direkten Nachbarn vor. Ein kleines Geschenk wie Schokolade wirkt Wunder.",
         "key_vocabulary": []
       }
     },
@@ -143,7 +143,7 @@
       "explanation": {
         "de": "Der Moderator fasst die Bedeutung der Kommunikation für ein gutes Zusammenleben zusammen.",
         "vi": "Người điều hành tóm tắt tầm quan trọng của giao tiếp để có một cuộc sống chung tốt đẹp.",
-        "key_evidence": "Moderator: Kommunikation ist wirklich das wichtigste Werkzeug für ein gutes Zusammenleben.",
+        "key_evidence": "Kommunikation ist wirklich das wichtigste Werkzeug für ein gutes Zusammenleben.",
         "key_vocabulary": []
       }
     },
@@ -162,7 +162,7 @@
       "explanation": {
         "de": "Frau Hartmann gibt diesen abschließenden Tipp am Ende der Diskussion.",
         "vi": "Bà Hartmann đưa ra lời khuyên cuối cùng này vào cuối cuộc thảo luận.",
-        "key_evidence": "Gast_A: Seien Sie freundlich zu Ihren Nachbarn, denn gute Nachbarn sind Gold wert!",
+        "key_evidence": "Seien Sie freundlich zu Ihren Nachbarn, denn gute Nachbarn sind Gold wert!",
         "key_vocabulary": []
       }
     }
@@ -206,165 +206,172 @@
     ]
   },
   "transcript": {
-    "type": "full_reconstructed_transcript",
+    "type": "studio_source_transcript",
     "status": "complete",
-    "source": "reconstructed_full_script",
-    "quality": "release_candidate_reconstructed",
-    "note": "Full learner-visible reconstructed script created from existing question evidence because original studio scripts are not present in the repository. Replace with studio transcript if original audio scripts become available.",
+    "source": "studio_source_script",
+    "quality": "source_verified",
+    "sourceScript": "data/scripts/B1/Teil4-Radiodiskussion/L-B1-GOETHE-007-T4.json",
+    "note": "Transcript replaced from source script by scripts/apply-source-transcripts.ts.",
     "lines": [
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Im folgenden Hoertext geht es um Nachbarschaftskonflikt. Achten Sie auf die zentrale Information."
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sie hören eine Diskussion im Radio. Dazu gibt es acht Aufgaben. Wer sagt was? Sie hören die Diskussion zweimal."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q1.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Willkommen bei 'Zusammenleben'. Unser Thema heute: Wie gelingt gute Nachbarschaft?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Moderator: Unser Thema heute: Wie gelingt gute Nachbarschaft?",
-        "linkedQuestionId": "Q1"
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Gute Nachbarschaft ist in einer Großstadt wie Berlin besonders wichtig und gleichzeitig schwierig."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q1 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ich lebe auf dem Land und da kennt man seine Nachbarn. In der Stadt ist das ganz anders."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q2.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Frau Hartmann, Sie leben in einem großen Mietshaus. Kennen Sie Ihre Nachbarn?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Gast_A: Gute Nachbarschaft ist in einer Großstadt wie Berlin besonders wichtig und gleichzeitig schwierig.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ehrlich gesagt, nur die direkt neben und über mir. Die anderen kenne ich nur vom Sehen."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q2 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das ist typisch für Großstädte. Die Anonymität kann Vorteile haben, aber auch einsam machen."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q3.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Auf dem Land hilft man sich gegenseitig, das gehört einfach dazu und ist selbstverständlich."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Gast_B: Ich lebe auf dem Land und da kennt man seine Nachbarn. In der Stadt ist das ganz anders.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Herr Vogt, gibt es solche Hilfsbereitschaft auch in der Stadt?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q3 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ja, aber man muss sie aktiv suchen. Nachbarschaftsinitiativen und Online-Plattformen helfen dabei."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q4.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Nebenan punkt de zum Beispiel vernetzt Nachbarn und ermöglicht es, Hilfe anzubieten."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Moderator: Auf dem Land hilft man sich gegenseitig, das gehört einfach dazu und ist selbstverständlich.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ich finde, dass viele Konflikte entstehen, weil die Menschen nicht miteinander reden."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q4 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Genau! Ein einfaches 'Hallo' im Treppenhaus kann den Unterschied machen."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q5.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Welche Nachbarschaftskonflikte erleben Sie in Ihrer täglichen Arbeit am häufigsten?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Gast_A: Lärm ist das Hauptproblem, dann kommen Haustiere und das Thema Sauberkeit im Haus.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Lärm ist das Hauptproblem, dann kommen Haustiere und das Thema Sauberkeit im Haus."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q5 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Auf dem Land gibt es diese Probleme auch nur seltener, weil die Häuser weiter auseinander stehen."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q6.",
-        "linkedQuestionId": "Q6"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Frau Hartmann, haben Sie Erfahrung mit einem Nachbarschaftsstreit gemacht?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Gast_B: Stellen Sie sich bei Ihren direkten Nachbarn vor. Ein kleines Geschenk wie Schokolade wirkt Wunder.",
-        "linkedQuestionId": "Q6"
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ja, mein Nachbar über mir hatte eine laute Waschmaschine, die nachts gelaufen ist."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q6 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q6"
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das haben wir aber durch ein Gespräch gelöst. Er wusste nicht, dass man es so laut hört."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q7.",
-        "linkedQuestionId": "Q7"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Kommunikation ist wirklich das wichtigste Werkzeug für ein gutes Zusammenleben."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Moderator: Kommunikation ist wirklich das wichtigste Werkzeug für ein gutes Zusammenleben.",
-        "linkedQuestionId": "Q7"
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Herr Vogt, was raten Sie Menschen, die neu in ein Viertel ziehen?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q7 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q7"
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Stellen Sie sich bei Ihren direkten Nachbarn vor. Ein kleines Geschenk wie Schokolade wirkt Wunder."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q8.",
-        "linkedQuestionId": "Q8"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Also auf dem Land bringt man selbstgebackenen Kuchen mit, wenn man sich vorstellt."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Gast_A: Seien Sie freundlich zu Ihren Nachbarn, denn gute Nachbarn sind Gold wert!",
-        "linkedQuestionId": "Q8"
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Kuchen oder Schokolade, beides funktioniert! Der erste Eindruck ist entscheidend für die Nachbarschaft."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q8 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q8"
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Und wenn es doch zu Konflikten kommt, suchen Sie das Gespräch, bevor die Situation eskaliert."
       },
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Ende des Hoertexts."
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "In vielen Städten gibt es auch kostenlose Mediationsdienste für Nachbarschaftsprobleme."
+      },
+      {
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das ist ein wichtiger Hinweis! Mediation ist oft schneller und günstiger als ein Rechtsstreit."
+      },
+      {
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Und vor allem ist das Ergebnis nachhaltiger, weil beide Seiten aktiv an der Lösung beteiligt sind."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Vielen Dank an Frau Hartmann und Herrn Vogt für diese hilfreichen Tipps zum Nachbarschaftsleben!"
+      },
+      {
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Seien Sie freundlich zu Ihren Nachbarn, denn gute Nachbarn sind Gold wert!"
+      },
+      {
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "In der nächsten Sendung sprechen wir über Wohnen in der Gemeinschaft. Bis dann!"
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Ende des Hörverstehens."
       }
     ]
   },
@@ -381,7 +388,7 @@
       "id": "l-b1-goethe-007-t4-lo-1",
       "cefrLevel": "B1",
       "skill": "listening",
-      "canDoVi": "Toi co the luyen nghe hieu o trinh do B1 qua chu de \"Nachbarschaftskonflikt\".",
+      "canDoVi": "Tôi có thể luyện nghe hiểu ở trình độ B1 qua chủ đề \"Nachbarschaftskonflikt\".",
       "canDoDe": "Ich kann Hoeren auf Niveau B1 zum Thema \"Nachbarschaftskonflikt\" ueben.",
       "linkedContentIds": [
         "L-B1-GOETHE-007-T4"

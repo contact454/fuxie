@@ -130,93 +130,172 @@
     ]
   },
   "transcript": {
-    "type": "full_reconstructed_transcript",
+    "type": "studio_source_transcript",
     "status": "complete",
-    "source": "reconstructed_full_script",
-    "quality": "release_candidate_reconstructed",
-    "note": "Full learner-visible reconstructed script created from existing question evidence because original studio scripts are not present in the repository. Replace with studio transcript if original audio scripts become available.",
+    "source": "studio_source_script",
+    "quality": "source_verified",
+    "sourceScript": "data/scripts/C1/Teil3-Diskussion-in-Abschnitten/L-C1-GOETHE-010-T3.json",
+    "note": "Transcript replaced from source script by scripts/apply-source-transcripts.ts.",
     "lines": [
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Der folgende anspruchsvolle Hoertext behandelt Psychologie der Entscheidungsfindung. Achten Sie auf Aussage, Kontext und implizite Bedeutung."
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sie hören eine Diskussion in vier Abschnitten. Lesen Sie jeweils die Aufgaben. Sie haben dafür 30 Sekunden Zeit. Sie hören die Diskussion zweimal."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q1.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Willkommen zu unserer Podiumsdiskussion: Nudging — Sanfte Lenkung oder verdeckte Manipulation?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Nudging umgeht die bewusste Entscheidungsfindung und nutzt genau die kognitiven Schwächen, die es zu korrigieren vorgibt.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Als Verhaltensökonomin sage ich: Nudging ist das mächtigste Werkzeug der modernen Politikgestaltung für bessere Ergebnisse."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q1 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Als Philosophin sage ich: Nudging untergräbt die Autonomie des Menschen und ist eine Form des weichen Paternalismus."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q2.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Frau Professorin Wendt, Sie forschen zu Nudging in der Gesundheitspolitik. Was überzeugt Sie an diesem Ansatz?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Der Staat gestaltet ohnehin jede Entscheidungssituation, ob bewusst oder unbewusst, das ist unvermeidbar.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "In Großbritannien hat die Umstellung auf Widerspruchslösung bei der Organspende die Spenderquote um sechzig Prozent erhöht."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q2 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Tausende Menschen leben dadurch, dass die Standardoption klug gewählt und die Entscheidungsarchitektur optimiert wurde."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q3.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Herr Dr. Hoffmann, Sie sind Ethiker und kritisieren Nudging. Was ist Ihr Haupteinwand?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Das ist ein nobles Ideal, aber die Forschung zeigt, dass Aufklärung allein menschliches Verhalten kaum verändert.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Nudging umgeht die bewusste Entscheidungsfindung und nutzt genau die kognitiven Schwächen, die es zu korrigieren vorgibt."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q3 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das ist manipulativ, auch wenn die Absicht gut ist, weil es die Rationalität der Bürger nicht fördert."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q4.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Frau Professorin Wendt, ist es nicht paternalistisch, wenn der Staat entscheidet, was 'gute' Entscheidungen sind?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Wichtig ist, dass Nudging Aufklärung ergänzt, aber niemals ersetzt, denn mündige Bürger bleiben das eigentliche Ziel.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Der Staat gestaltet ohnehin jede Entscheidungssituation, ob bewusst oder unbewusst, das ist unvermeidbar."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q4 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Frage ist nicht ob, sondern wie er sie gestaltet und ob die Gestaltung transparent und nachvollziehbar kommuniziert wird."
       },
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Ende des Hoertexts."
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ein Standardformular zur Organspende muss entweder auf Zustimmung oder auf Widerspruch voreingestellt sein."
+      },
+      {
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Es gibt keine neutrale Position, und dann ist es doch besser, die evidenzbasierte und lebenrettende Variante zu wählen."
+      },
+      {
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Herr Dr. Hoffmann, wie bewerten Sie dieses Argument der unvermeidlichen Entscheidungsarchitektur?"
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ich akzeptiere, dass Entscheidungsarchitekturen unvermeidlich sind, aber die Lösung ist Aufklärung, nicht Manipulation."
+      },
+      {
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Statt Menschen sanft zu stupsen, sollten wir ihre Entscheidungskompetenz durch Bildung und Transparenz stärken."
+      },
+      {
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das ist ein nobles Ideal, aber die Forschung zeigt, dass Aufklärung allein menschliches Verhalten kaum verändert."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Neunzig Prozent der Raucher wissen, dass Rauchen tödlich ist, und rauchen trotzdem weiter."
+      },
+      {
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das zeigt, dass Information allein nicht ausreicht, und genau hier setzt Nudging wirksam und respektvoll an."
+      },
+      {
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Können wir uns auf ethische Mindeststandards für den Einsatz von Nudging in der Politik einigen?"
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Erstens: Vollständige Transparenz über alle eingesetzten Nudges, damit Bürger wissen, wie sie beeinflusst werden."
+      },
+      {
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Zweitens: Einfache Möglichkeit zum Opt-out, damit niemand gegen seinen Willen in eine Entscheidung gedrängt wird."
+      },
+      {
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Drittens: Demokratische Kontrolle durch gewählte Parlamente, die über den Einsatz von Nudges entscheiden müssen."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Viertens: Regelmäßige Evaluation der Wirksamkeit und der eventuellen Nebenwirkungen eingesetzter Nudges."
+      },
+      {
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das klingt nach einem vernünftigen Rahmen, dem ich weitgehend zustimmen kann."
+      },
+      {
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Unter diesen Bedingungen kann Nudging ein sinnvolles Instrument der Politikgestaltung sein."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wichtig ist, dass Nudging Aufklärung ergänzt, aber niemals ersetzt, denn mündige Bürger bleiben das eigentliche Ziel."
+      },
+      {
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ein Sowohl-als-auch: Nudging für kurzfristige Verhaltensänderung und Bildung für langfristige Entscheidungskompetenz."
+      },
+      {
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Vielen Dank für diese philosophisch fundierte und praxisnahe Diskussion!"
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Ende Teil drei."
       }
     ]
   },
@@ -233,7 +312,7 @@
       "id": "l-c1-goethe-010-t3-lo-1",
       "cefrLevel": "C1",
       "skill": "listening",
-      "canDoVi": "Toi co the luyen nghe hieu o trinh do C1 qua chu de \"Psychologie der Entscheidungsfindung\".",
+      "canDoVi": "Tôi có thể luyện nghe hiểu ở trình độ C1 qua chủ đề \"Psychologie der Entscheidungsfindung\".",
       "canDoDe": "Ich kann Hoeren auf Niveau C1 zum Thema \"Psychologie der Entscheidungsfindung\" ueben.",
       "linkedContentIds": [
         "L-C1-GOETHE-010-T3"

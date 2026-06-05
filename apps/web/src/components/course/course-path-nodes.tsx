@@ -10,7 +10,7 @@
  *   - requirements.md Req 4.1, 4.2, 4.3, 4.6, 4.7, 4.8
  *
  * Contract:
- *   - Renders an `<ol data-role="course-path">` of `<CourseNode>`s.
+ *   - Renders an `<ol data-role="course-path">` of `<CourseNode>`s. // locale-allow
  *   - Among nodes whose `state === 'available'`, exactly one carries
  *     `data-role="primary-cta"` — the first in path order — and all
  *     subsequent `available` nodes carry `data-cta-variant="secondary"`

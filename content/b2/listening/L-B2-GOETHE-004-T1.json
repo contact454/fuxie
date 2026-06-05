@@ -24,7 +24,7 @@
       "explanation": {
         "de": "Der erste Sprecher äußert sich positiv über sein Praktikum, da er direkt in ein Projekt eingebunden ist und seine Betreuerin ihn zu Kundengesprächen mitnimmt und nach seiner Meinung fragt. Dies deutet auf wertvolle Einblicke hin.",
         "vi": "Người nói thứ nhất bày tỏ sự tích cực về kỳ thực tập của mình, vì anh ấy được tham gia trực tiếp vào một dự án và người hướng dẫn đưa anh ấy đi họp khách hàng và hỏi ý kiến của anh ấy. Điều này cho thấy những hiểu biết có giá trị về nghề nghiệp.",
-        "key_evidence": "Überraschenderweise bin ich direkt in ein echtes Projekt eingebunden worden. Meine Betreuerin nimmt mich mit zu Kundengesprächen und fragt nach meiner Meinung.",
+        "key_evidence": "Überraschenderweise bin ich direkt in ein echtes Projekt eingebunden worden",
         "key_vocabulary": [
           "wertvolle Einblicke",
           "eingebunden",
@@ -65,7 +65,7 @@
       "explanation": {
         "de": "Der zweite Sprecher findet die Praktikumspflicht zwar 'im Prinzip gut', betont aber, dass 'das Timing schwierig ist' und es zu Problemen mit Prüfungen kommen kann. Er sieht also durchaus Probleme.",
         "vi": "Người nói thứ hai tuy thấy việc thực tập bắt buộc là 'về nguyên tắc là tốt' nhưng lại nhấn mạnh rằng 'thời gian rất khó khăn' và có thể xảy ra vấn đề với các kỳ thi. Vì vậy, anh ấy chắc chắn thấy có vấn đề.",
-        "key_evidence": "Ich finde das im Prinzip gut, aber das Timing ist schwierig. Und wenn es sich mit Prüfungen überschneidet, hat man ein echtes Problem.",
+        "key_evidence": "Ich finde das im Prinzip gut, aber das Timing ist schwierig",
         "key_vocabulary": [
           "Praktikumspflicht",
           "grundsätzlich",
@@ -89,7 +89,7 @@
       "explanation": {
         "de": "Der zweite Sprecher erwähnt, dass das 'Timing schwierig' ist und sich Praktika mit Prüfungen überschneiden können, was die Koordination von Praktikum und Studium erschwert.",
         "vi": "Người nói thứ hai đề cập rằng 'thời gian khó khăn' và các kỳ thực tập có thể trùng với các kỳ thi, điều này làm cho việc phối hợp giữa thực tập và học tập trở nên khó khăn.",
-        "key_evidence": "Ich finde das im Prinzip gut, aber das Timing ist schwierig. Und wenn es sich mit Prüfungen überschneidet, hat man ein echtes Problem.",
+        "key_evidence": "Ich finde das im Prinzip gut, aber das Timing ist schwierig",
         "key_vocabulary": [
           "Herausforderung",
           "koordinieren",
@@ -215,7 +215,7 @@
       "explanation": {
         "de": "Der zweite Sprecher rät, dass sich 'langfristig ein fachbezogenes Praktikum mehr' lohnt, auch wenn der kurzfristige Verdienst geringer ist. Er schlägt auch ein bezahltes Praktikum vor.",
         "vi": "Người nói thứ hai khuyên rằng 'về lâu dài, một kỳ thực tập chuyên ngành sẽ có lợi hơn', ngay cả khi thu nhập ngắn hạn thấp hơn. Anh ấy cũng đề xuất một kỳ thực tập có lương.",
-        "key_evidence": "Langfristig lohnt sich ein fachbezogenes Praktikum mehr, auch wenn du kurzfristig weniger verdienst. Oder du suchst ein bezahltes Praktikum.",
+        "key_evidence": "Langfristig lohnt sich ein fachbezogenes Praktikum mehr, auch wenn du kurzfristig weniger verdienst",
         "key_vocabulary": [
           "Rat",
           "vorlesungsfreie Zeit",
@@ -265,201 +265,247 @@
     ]
   },
   "transcript": {
-    "type": "full_reconstructed_transcript",
+    "type": "studio_source_transcript",
     "status": "complete",
-    "source": "reconstructed_full_script",
-    "quality": "release_candidate_reconstructed",
-    "note": "Full learner-visible reconstructed script created from existing question evidence because original studio scripts are not present in the repository. Replace with studio transcript if original audio scripts become available.",
+    "source": "studio_source_script",
+    "quality": "source_verified",
+    "sourceScript": "data/scripts/B2/Teil1-Alltagsaeusserungen/L-B2-GOETHE-004-T1.json",
+    "note": "Transcript replaced from source script by scripts/apply-source-transcripts.ts.",
     "lines": [
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Im folgenden Hoertext geht es um Praktikumserfahrungen im Studium. Achten Sie auf die zentrale Information."
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sie hören fünf Äußerungen aus dem Alltag. Zu jeder Äußerung gibt es zwei Aufgaben. Kreuzen Sie die richtige Antwort an. Sie hören jeden Text einmal."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q1.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Äußerung 1."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Überraschenderweise bin ich direkt in ein echtes Projekt eingebunden worden. Meine Betreuerin nimmt mich mit zu Kundengesprächen und fragt nach meiner Meinung.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Sprecher1_1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ich habe gerade mein Pflichtpraktikum bei einer großen Werbeagentur angefangen."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q1 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Sprecher2_1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Spannend! Wie ist es so? Lernst du viel oder bist du nur der klassische Kaffeeholer?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q2.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Sprecher1_1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Überraschenderweise bin ich direkt in ein echtes Projekt eingebunden worden."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Bei der Bewerbung zählt Praxiserfahrung oft mehr als die reine Abschlussnote.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Sprecher2_1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das ist ja toll! Bei meinem Praktikum habe ich die erste Woche nur Kopien gemacht."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q2 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Sprecher1_1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ja, ich habe Glück. Meine Betreuerin nimmt mich mit zu Kundengesprächen und fragt nach meiner Meinung."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q3.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Sprecher2_1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das bringt dich wirklich weiter. Wie lange geht dein Praktikum insgesamt?"
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "answer_evidence",
-        "text": "Ich finde das im Prinzip gut, aber das Timing ist schwierig. Und wenn es sich mit Prüfungen überschneidet, hat man ein echtes Problem.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Sprecher1_1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Sechs Monate. Danach habe ich gute Chancen auf eine Werkstudentenstelle hier."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q3 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Sprecher2_1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Sehr gut! Bei der Bewerbung zählt Praxiserfahrung oft mehr als die reine Abschlussnote."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q4.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Äußerung 2."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "answer_evidence",
-        "text": "Ich finde das im Prinzip gut, aber das Timing ist schwierig. Und wenn es sich mit Prüfungen überschneidet, hat man ein echtes Problem.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Sprecher1_2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Universität verlangt ein dreimonatiges Praktikum, bevor man die Bachelorarbeit schreiben darf."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q4 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Sprecher2_2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ja, bei uns auch. Ich finde das im Prinzip gut, aber das Timing ist schwierig."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q5.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Sprecher1_2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Was meinst du mit dem Timing? Man hat doch genug Semester dafür."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "answer_evidence",
-        "text": "Genau das ist der Punkt. Unbezahlte Praktika verschärfen die soziale Ungleichheit.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Sprecher2_2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Theoretisch schon, aber viele interessante Praktika gibt es nur zu festen Startzeiten."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q5 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Sprecher1_2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Da hast du recht. Und wenn es sich mit Prüfungen überschneidet, hat man ein echtes Problem."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q6.",
-        "linkedQuestionId": "Q6"
+        "speaker": "Sprecher2_2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ich habe deshalb ein Praktikum in den Semesterferien gemacht. Kein Urlaub, aber dafür viel gelernt."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "answer_evidence",
-        "text": "Deutschland liegt da im europäischen Vergleich leider deutlich hinter den Standards anderer Länder.",
-        "linkedQuestionId": "Q6"
+        "speaker": "Sprecher1_2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Weißt du, ob man sich ein Praktikum im Ausland anrechnen lassen kann?"
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q6 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q6"
+        "speaker": "Sprecher2_2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ja, das geht! Viele machen über den DAAD oder Erasmus Plus ein Praktikum im europäischen Ausland."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q7.",
-        "linkedQuestionId": "Q7"
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Äußerung 3."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "answer_evidence",
-        "text": "Fünfzig-Stunden-Wochen waren eher die Regel als die Ausnahme.",
-        "linkedQuestionId": "Q7"
+        "speaker": "Sprecher1_3",
+        "speaker_role": "dialogue_speaker",
+        "text": "Meine Schwester macht gerade ein unbezahltes Praktikum bei einer kleinen Non-Profit-Organisation."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q7 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q7"
+        "speaker": "Sprecher2_3",
+        "speaker_role": "dialogue_speaker",
+        "text": "Unbezahlt? Ist das überhaupt legal? Es gibt doch den Mindestlohn."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q8.",
-        "linkedQuestionId": "Q8"
+        "speaker": "Sprecher1_3",
+        "speaker_role": "dialogue_speaker",
+        "text": "Pflichtpraktika im Rahmen des Studiums sind leider vom Mindestlohn ausgenommen."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "answer_evidence",
-        "text": "Aber die Kontakte und die Erfahrung waren das Geld und die lange Arbeitszeit wert.",
-        "linkedQuestionId": "Q8"
+        "speaker": "Sprecher2_3",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das finde ich ungerecht. Gerade Studierende aus einkommensschwachen Familien können sich das nicht leisten."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q8 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q8"
+        "speaker": "Sprecher1_3",
+        "speaker_role": "dialogue_speaker",
+        "text": "Genau das ist der Punkt. Unbezahlte Praktika verschärfen die soziale Ungleichheit."
       },
       {
-        "speaker": "Sprecher 5",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q9.",
-        "linkedQuestionId": "Q9"
+        "speaker": "Sprecher2_3",
+        "speaker_role": "dialogue_speaker",
+        "text": "Es gibt Stimmen in der Politik, die eine Mindestpraktikumsvergütung von sechshundert Euro fordern."
       },
       {
-        "speaker": "Sprecher 5",
-        "speaker_role": "answer_evidence",
-        "text": "Das stimmt, aber ich brauche das Geld dringend für meine Miete und Lebenshaltungskosten.",
-        "linkedQuestionId": "Q9"
+        "speaker": "Sprecher1_3",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das wäre ein guter erster Schritt. In Frankreich müssen Praktikanten schon jetzt bezahlt werden."
       },
       {
-        "speaker": "Sprecher 5",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q9 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q9"
+        "speaker": "Sprecher2_3",
+        "speaker_role": "dialogue_speaker",
+        "text": "Deutschland liegt da im europäischen Vergleich leider deutlich hinter den Standards anderer Länder."
       },
       {
-        "speaker": "Sprecher 5",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q10.",
-        "linkedQuestionId": "Q10"
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Äußerung 4."
       },
       {
-        "speaker": "Sprecher 5",
-        "speaker_role": "answer_evidence",
-        "text": "Langfristig lohnt sich ein fachbezogenes Praktikum mehr, auch wenn du kurzfristig weniger verdienst. Oder du suchst ein bezahltes Praktikum.",
-        "linkedQuestionId": "Q10"
+        "speaker": "Sprecher1_4",
+        "speaker_role": "dialogue_speaker",
+        "text": "Nach meinem Informatik-Studium habe ich zwei Praktika bei Start-ups gemacht."
       },
       {
-        "speaker": "Sprecher 5",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q10 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q10"
+        "speaker": "Sprecher2_4",
+        "speaker_role": "dialogue_speaker",
+        "text": "Und wie war die Erfahrung? Start-ups haben ja den Ruf, dass man viel lernt, aber auch viel arbeitet."
       },
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Ende des Hoertexts."
+        "speaker": "Sprecher1_4",
+        "speaker_role": "dialogue_speaker",
+        "text": "Beides stimmt. Ich habe in sechs Monaten mehr gelernt als in zwei Jahren Studium."
+      },
+      {
+        "speaker": "Sprecher2_4",
+        "speaker_role": "dialogue_speaker",
+        "text": "Aber die Work-Life-Balance war wahrscheinlich nicht gerade ausgewogen."
+      },
+      {
+        "speaker": "Sprecher1_4",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das kann man so sagen. Fünfzig-Stunden-Wochen waren eher die Regel als die Ausnahme."
+      },
+      {
+        "speaker": "Sprecher2_4",
+        "speaker_role": "dialogue_speaker",
+        "text": "Und wie sah es mit der Bezahlung aus? Start-ups zahlen Praktikanten oft wenig."
+      },
+      {
+        "speaker": "Sprecher1_4",
+        "speaker_role": "dialogue_speaker",
+        "text": "Tausend Euro brutto im Monat. Für Berlin ist das nicht viel Geld, um ehrlich zu sein."
+      },
+      {
+        "speaker": "Sprecher2_4",
+        "speaker_role": "dialogue_speaker",
+        "text": "Aber die Kontakte und die Erfahrung waren das Geld und die lange Arbeitszeit wert."
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Äußerung 5."
+      },
+      {
+        "speaker": "Sprecher1_5",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ich überlege, ob ich in der vorlesungsfreien Zeit ein Praktikum machen soll oder lieber jobben."
+      },
+      {
+        "speaker": "Sprecher2_5",
+        "speaker_role": "dialogue_speaker",
+        "text": "Was meinst du mit jobben? Einen Kellnerjob oder etwas Fachbezogenes?"
+      },
+      {
+        "speaker": "Sprecher1_5",
+        "speaker_role": "dialogue_speaker",
+        "text": "Kellnern. Das bringt sofort Geld, aber natürlich keinen Karrierevorteil."
+      },
+      {
+        "speaker": "Sprecher2_5",
+        "speaker_role": "dialogue_speaker",
+        "text": "Langfristig lohnt sich ein fachbezogenes Praktikum mehr, auch wenn du kurzfristig weniger verdienst."
+      },
+      {
+        "speaker": "Sprecher1_5",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das stimmt, aber ich brauche das Geld dringend für meine Miete und Lebenshaltungskosten."
+      },
+      {
+        "speaker": "Sprecher2_5",
+        "speaker_role": "dialogue_speaker",
+        "text": "Gibt es nicht Möglichkeiten, beides zu kombinieren? Vormittags Praktikum, abends Kellnern?"
+      },
+      {
+        "speaker": "Sprecher1_5",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das wäre sehr anstrengend, aber einige Studierende machen das tatsächlich so."
+      },
+      {
+        "speaker": "Sprecher2_5",
+        "speaker_role": "dialogue_speaker",
+        "text": "Oder du suchst ein bezahltes Praktikum. In der IT-Branche werden Praktikanten fast immer bezahlt."
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Ende Teil eins."
       }
     ]
   },
@@ -476,7 +522,7 @@
       "id": "l-b2-goethe-004-t1-lo-1",
       "cefrLevel": "B2",
       "skill": "listening",
-      "canDoVi": "Toi co the luyen nghe hieu o trinh do B2 qua chu de \"Praktikumserfahrungen im Studium\".",
+      "canDoVi": "Tôi có thể luyện nghe hiểu ở trình độ B2 qua chủ đề \"Praktikumserfahrungen im Studium\".",
       "canDoDe": "Ich kann Hoeren auf Niveau B2 zum Thema \"Praktikumserfahrungen im Studium\" ueben.",
       "linkedContentIds": [
         "L-B2-GOETHE-004-T1"

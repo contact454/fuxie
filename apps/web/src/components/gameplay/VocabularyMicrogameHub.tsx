@@ -2,6 +2,7 @@
 
 import { useMemo, useState } from 'react'
 import { ArrowRight, Gauge, Layers3, Swords } from 'lucide-react'
+import { useTranslations } from 'next-intl'
 
 import { MeasuredLink } from '@/components/performance/measured-link'
 import { FuxieBadge, FuxieLevelTabs, FuxiePanel, FuxieQuestCard, fuxieButtonClass } from '@/components/ui/fuxie-ui'
@@ -35,6 +36,7 @@ export function VocabularyMicrogameHub({
     initialLevel,
     initialTheme,
 }: VocabularyMicrogameHubProps) {
+    const t = useTranslations('VocabularyMicrogame')
     const [level, setLevel] = useState(initialLevel)
     const levelThemes = useMemo(
         () => themes.filter((theme) => theme.cefrLevel === level),
@@ -59,8 +61,8 @@ export function VocabularyMicrogameHub({
                 <div className="flex flex-col gap-5 lg:flex-row lg:items-end lg:justify-between">
                     <div className="min-w-0">
                         <div className="flex flex-wrap items-center gap-2">
-                            <FuxieBadge tone="brand" className="normal-case tracking-normal">Vocabulary Microgame Pack</FuxieBadge>
-                            <FuxieBadge tone="reward" className="normal-case tracking-normal">Reward only on completion</FuxieBadge>
+                            <FuxieBadge tone="brand" className="normal-case tracking-normal">{t('packTitle')}</FuxieBadge>
+                            <FuxieBadge tone="reward" className="normal-case tracking-normal">{t('rewardOnCompletion')}</FuxieBadge>
                         </div>
                         <h1 className="mt-3 text-3xl font-black leading-tight text-text-primary sm:text-4xl">
                             Chọn một ván từ vựng ngắn
@@ -152,7 +154,7 @@ export function VocabularyMicrogameHub({
                                             {game.completionRule}
                                         </div>
                                         <div className="rounded-xl bg-[#F3FBFF] p-2">
-                                            <span className="block text-[11px] uppercase tracking-[0.08em] text-text-brand">Receipt after submit</span>
+                                            <span className="block text-[11px] uppercase tracking-[0.08em] text-text-brand">{t('receiptAfterSubmit')}</span>
                                             {game.receiptExpectation}
                                         </div>
                                     </div>
@@ -161,7 +163,7 @@ export function VocabularyMicrogameHub({
                                     Badge hook: {game.badgeHint}. Không có thưởng cho click, chỉ có receipt sau submit.
                                 </div>
                                 <div className="mt-4 rounded-2xl bg-[#F3FBFF] px-3 py-2 text-xs font-black text-text-brand ring-1 ring-[#CCE4F0]/70">
-                                    <span className="block text-[11px] uppercase tracking-[0.08em] text-text-brand/70">Sau khi xong round</span>
+                                    <span className="block text-[11px] uppercase tracking-[0.08em] text-text-brand/70">{t('afterRoundLabel')}</span>
                                     {game.nextActionLabel}
                                 </div>
                                 <MeasuredLink

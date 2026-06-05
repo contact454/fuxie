@@ -67,6 +67,8 @@
 import { describe, expect, it } from 'vitest'
 import * as fc from 'fast-check'
 import { renderToStaticMarkup } from 'react-dom/server'
+import { NextIntlClientProvider } from 'next-intl'
+import viMessages from '../apps/web/messages/vi.json'
 
 import {
     ResultRewardLoop,
@@ -201,6 +203,7 @@ function renderReceipt(input: ReceiptRenderInput): string {
     }
 
     return renderToStaticMarkup(
+        <NextIntlClientProvider locale="vi" messages={viMessages}>
         <ResultRewardLoop
             skill={input.skill}
             title="Hoàn thành"
@@ -217,7 +220,8 @@ function renderReceipt(input: ReceiptRenderInput): string {
             rewardPreview={rewardPreview}
             primaryAction={primaryAction}
             secondaryAction={secondaryAction}
-        />,
+        />
+        </NextIntlClientProvider>,
     )
 }
 

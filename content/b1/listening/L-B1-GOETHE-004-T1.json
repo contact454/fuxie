@@ -24,7 +24,7 @@
       "explanation": {
         "de": "Der Sprecher sagt, dass öffentliche Kitas in Berlin seit 2020 nichts mehr kosten, aber das Mittagessen müssen die Eltern noch bezahlen.",
         "vi": "Người nói cho biết các nhà trẻ công lập ở Berlin từ năm 2020 không còn thu phí, nhưng phụ huynh vẫn phải trả tiền ăn trưa.",
-        "key_evidence": "In Berlin kosten öffentliche Kitas seit zweitausendeundzwanzig nichts mehr für die Eltern. Nur das Mittagessen müssen die Eltern noch bezahlen, etwa dreiundzwanzig Euro pro Monat.",
+        "key_evidence": "In Berlin kosten öffentliche Kitas seit zweitausendeundzwanzig nichts mehr für die Eltern.",
         "key_vocabulary": [
           "kostenlos",
           "bezahlen",
@@ -261,201 +261,247 @@
     ]
   },
   "transcript": {
-    "type": "full_reconstructed_transcript",
+    "type": "studio_source_transcript",
     "status": "complete",
-    "source": "reconstructed_full_script",
-    "quality": "release_candidate_reconstructed",
-    "note": "Full learner-visible reconstructed script created from existing question evidence because original studio scripts are not present in the repository. Replace with studio transcript if original audio scripts become available.",
+    "source": "studio_source_script",
+    "quality": "source_verified",
+    "sourceScript": "data/scripts/B1/Teil1-Kurze-Texte/L-B1-GOETHE-004-T1.json",
+    "note": "Transcript replaced from source script by scripts/apply-source-transcripts.ts.",
     "lines": [
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Im folgenden Hoertext geht es um Kinderbetreuung: Krippe versus Zuhause. Achten Sie auf die zentrale Information."
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sie hören fünf kurze Texte. Zu jedem Text gibt es zwei Aufgaben. Kreuzen Sie die richtige Antwort an. Sie hören jeden Text einmal."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q1.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Text 1."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "In Berlin kosten öffentliche Kitas seit zweitausendeundzwanzig nichts mehr für die Eltern. Nur das Mittagessen müssen die Eltern noch bezahlen, etwa dreiundzwanzig Euro pro Monat.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Sprecher_1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Heute sprechen wir über ein Thema, das viele junge Eltern beschäftigt: die Kinderbetreuung."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q1 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Sprecher_1",
+        "speaker_role": "dialogue_speaker",
+        "text": "In Deutschland haben Kinder ab einem Jahr einen gesetzlichen Anspruch auf einen Betreuungsplatz."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q2.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Sprecher_1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Trotzdem fehlen in vielen Städten Kita-Plätze, besonders in den Großstädten."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Nur das Mittagessen müssen die Eltern noch bezahlen, etwa dreiundzwanzig Euro pro Monat.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Sprecher_1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Wartelisten sind oft lang und Eltern müssen sich schon in der Schwangerschaft anmelden."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q2 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Sprecher_1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Private Kitas bieten manchmal schneller einen Platz, aber die Kosten sind deutlich höher."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q3.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Sprecher_1",
+        "speaker_role": "dialogue_speaker",
+        "text": "In Berlin kosten öffentliche Kitas seit zweitausendeundzwanzig nichts mehr für die Eltern."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "answer_evidence",
-        "text": "Sie betreuen kleine Gruppen von maximal fünf Kindern in ihrer eigenen Wohnung.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Sprecher_1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Nur das Mittagessen müssen die Eltern noch bezahlen, etwa dreiundzwanzig Euro pro Monat."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q3 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Sprecher_1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Informationen zur Anmeldung finden Sie beim Jugendamt Ihres Bezirks."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q4.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Text 2."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "answer_evidence",
-        "text": "Tagesmütter müssen eine spezielle Ausbildung von mindestens hundertdreißig Stunden absolvieren.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Sprecher_2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Tagesmütter und Tagesväter sind eine beliebte Alternative zur Kinderbetreuung in der Kita."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q4 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Sprecher_2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Sie betreuen kleine Gruppen von maximal fünf Kindern in ihrer eigenen Wohnung."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q5.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Sprecher_2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Der Vorteil ist die persönliche Atmosphäre und die flexible Betreuungszeit."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "answer_evidence",
-        "text": "Trotzdem tragen Mütter nach wie vor den größeren Teil der Erziehungsarbeit im Haushalt.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Sprecher_2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Tagesmütter müssen eine spezielle Ausbildung von mindestens hundertdreißig Stunden absolvieren."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q5 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Sprecher_2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Kosten werden teilweise vom Jugendamt übernommen, je nach Einkommen der Eltern."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q6.",
-        "linkedQuestionId": "Q6"
+        "speaker": "Sprecher_2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Eltern können selbst eine Tagesmutter suchen oder sich vom Jugendamt eine vermitteln lassen."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "answer_evidence",
-        "text": "Experten raten, klare Strukturen und feste Arbeitszeiten im Homeoffice einzuhalten.",
-        "linkedQuestionId": "Q6"
+        "speaker": "Sprecher_2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Betreuung bei einer Tagesmutter eignet sich besonders für Kinder unter drei Jahren."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q6 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q6"
+        "speaker": "Sprecher_2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Viele Eltern schätzen die familiäre Atmosphäre und die kleine Gruppengröße."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q7.",
-        "linkedQuestionId": "Q7"
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Text 3."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "answer_evidence",
-        "text": "Davon sind neunzig Tage für den Vater reserviert, die nicht übertragbar sind.",
-        "linkedQuestionId": "Q7"
+        "speaker": "Sprecher_3",
+        "speaker_role": "dialogue_speaker",
+        "text": "Seit der Corona-Pandemie arbeiten viele Eltern von zu Hause aus und betreuen gleichzeitig ihre Kinder."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q7 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q7"
+        "speaker": "Sprecher_3",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das ist für alle Beteiligten eine große Herausforderung, sowohl für die Eltern als auch für die Kinder."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q8.",
-        "linkedQuestionId": "Q8"
+        "speaker": "Sprecher_3",
+        "speaker_role": "dialogue_speaker",
+        "text": "Experten raten, klare Strukturen und feste Arbeitszeiten im Homeoffice einzuhalten."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "answer_evidence",
-        "text": "In Deutschland beträgt die Elternzeit maximal vierzehn Monate mit einem Elterngeld von fünfundsechzig Prozent.",
-        "linkedQuestionId": "Q8"
+        "speaker": "Sprecher_3",
+        "speaker_role": "dialogue_speaker",
+        "text": "Kinder brauchen Routinen, also feste Zeiten zum Spielen, Lernen und für gemeinsame Mahlzeiten."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q8 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q8"
+        "speaker": "Sprecher_3",
+        "speaker_role": "dialogue_speaker",
+        "text": "Es ist wichtig, dass beide Elternteile sich die Kinderbetreuung gleichmäßig aufteilen."
       },
       {
-        "speaker": "Sprecher 5",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q9.",
-        "linkedQuestionId": "Q9"
+        "speaker": "Sprecher_3",
+        "speaker_role": "dialogue_speaker",
+        "text": "Studien zeigen, dass Väter während der Pandemie mehr Betreuungsarbeit übernommen haben als vorher."
       },
       {
-        "speaker": "Sprecher 5",
-        "speaker_role": "answer_evidence",
-        "text": "Experten empfehlen, Kindern ab dem ersten Lebensjahr täglich mindestens fünfzehn Minuten vorzulesen.",
-        "linkedQuestionId": "Q9"
+        "speaker": "Sprecher_3",
+        "speaker_role": "dialogue_speaker",
+        "text": "Trotzdem tragen Mütter nach wie vor den größeren Teil der Erziehungsarbeit im Haushalt."
       },
       {
-        "speaker": "Sprecher 5",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q9 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q9"
+        "speaker": "Sprecher_3",
+        "speaker_role": "dialogue_speaker",
+        "text": "Flexible Arbeitszeitmodelle können helfen, Beruf und Familie besser zu vereinbaren."
       },
       {
-        "speaker": "Sprecher 5",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q10.",
-        "linkedQuestionId": "Q10"
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Text 4."
       },
       {
-        "speaker": "Sprecher 5",
-        "speaker_role": "answer_evidence",
-        "text": "Die Stiftung Lesen bietet kostenlose Vorlesepakete für Familien mit kleinen Kindern an.",
-        "linkedQuestionId": "Q10"
+        "speaker": "Sprecher_4",
+        "speaker_role": "dialogue_speaker",
+        "text": "In Skandinavien gilt die Kinderbetreuung als besonders vorbildlich und familienfreundlich."
       },
       {
-        "speaker": "Sprecher 5",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q10 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q10"
+        "speaker": "Sprecher_4",
+        "speaker_role": "dialogue_speaker",
+        "text": "In Schweden haben Eltern insgesamt vierhundertachtzig Tage Elternzeit, die sie sich aufteilen können."
       },
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Ende des Hoertexts."
+        "speaker": "Sprecher_4",
+        "speaker_role": "dialogue_speaker",
+        "text": "Davon sind neunzig Tage für den Vater reserviert, die nicht übertragbar sind."
+      },
+      {
+        "speaker": "Sprecher_4",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das führt dazu, dass schwedische Väter deutlich mehr Zeit mit ihren Kindern verbringen."
+      },
+      {
+        "speaker": "Sprecher_4",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Kitas in Skandinavien sind staatlich finanziert und für die Eltern sehr günstig."
+      },
+      {
+        "speaker": "Sprecher_4",
+        "speaker_role": "dialogue_speaker",
+        "text": "In Deutschland beträgt die Elternzeit maximal vierzehn Monate mit einem Elterngeld von fünfundsechzig Prozent."
+      },
+      {
+        "speaker": "Sprecher_4",
+        "speaker_role": "dialogue_speaker",
+        "text": "Viele Experten fordern, dass Deutschland sich stärker am skandinavischen Modell orientieren sollte."
+      },
+      {
+        "speaker": "Sprecher_4",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ein erster Schritt wäre die Einführung einer verbindlichen Väterzeit, wie es Schweden vormacht."
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Text 5."
+      },
+      {
+        "speaker": "Sprecher_5",
+        "speaker_role": "dialogue_speaker",
+        "text": "Zum Schluss möchte ich über das Thema Sprachförderung bei Kindern sprechen."
+      },
+      {
+        "speaker": "Sprecher_5",
+        "speaker_role": "dialogue_speaker",
+        "text": "Kinder mehrsprachiger Familien profitieren enorm von einer frühen Sprachförderung."
+      },
+      {
+        "speaker": "Sprecher_5",
+        "speaker_role": "dialogue_speaker",
+        "text": "In vielen Kitas gibt es spezielle Programme für Kinder, die Deutsch als Zweitsprache lernen."
+      },
+      {
+        "speaker": "Sprecher_5",
+        "speaker_role": "dialogue_speaker",
+        "text": "Vorlesen ist eine der besten Methoden, um die Sprachentwicklung von Kindern zu fördern."
+      },
+      {
+        "speaker": "Sprecher_5",
+        "speaker_role": "dialogue_speaker",
+        "text": "Experten empfehlen, Kindern ab dem ersten Lebensjahr täglich mindestens fünfzehn Minuten vorzulesen."
+      },
+      {
+        "speaker": "Sprecher_5",
+        "speaker_role": "dialogue_speaker",
+        "text": "Auch Singen, Reimen und gemeinsames Spielen helfen bei der Sprachentwicklung."
+      },
+      {
+        "speaker": "Sprecher_5",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Stiftung Lesen bietet kostenlose Vorlesepakete für Familien mit kleinen Kindern an."
+      },
+      {
+        "speaker": "Sprecher_5",
+        "speaker_role": "dialogue_speaker",
+        "text": "Sprechen Sie in der Sprache, die Sie am besten können, denn die Qualität der Sprache ist wichtiger als welche."
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Ende Teil eins."
       }
     ]
   },
@@ -472,7 +518,7 @@
       "id": "l-b1-goethe-004-t1-lo-1",
       "cefrLevel": "B1",
       "skill": "listening",
-      "canDoVi": "Toi co the luyen nghe hieu o trinh do B1 qua chu de \"Kinderbetreuung: Krippe versus Zuhause\".",
+      "canDoVi": "Tôi có thể luyện nghe hiểu ở trình độ B1 qua chủ đề \"Kinderbetreuung: Krippe versus Zuhause\".",
       "canDoDe": "Ich kann Hoeren auf Niveau B1 zum Thema \"Kinderbetreuung: Krippe versus Zuhause\" ueben.",
       "linkedContentIds": [
         "L-B1-GOETHE-004-T1"

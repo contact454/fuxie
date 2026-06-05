@@ -57,7 +57,7 @@
       "explanation": {
         "de": "Der Sprecher erwähnt, dass der Mindestlohn für Praktikanten seit 2015 gilt, aber 'allerdings mit Ausnahmen', wie Pflichtpraktika oder Praktika unter drei Monaten.",
         "vi": "Người nói đề cập rằng mức lương tối thiểu áp dụng cho thực tập sinh từ năm 2015, nhưng 'có những trường hợp ngoại lệ', như thực tập bắt buộc hoặc thực tập dưới ba tháng.",
-        "key_evidence": "Seit zweitausendfünfzehn gilt der Mindestlohn auch für Praktikanten, allerdings mit Ausnahmen. Pflichtpraktika im Rahmen des Studiums und Praktika unter drei Monaten sind vom Mindestlohn ausgenommen.",
+        "key_evidence": "Seit zweitausendfünfzehn gilt der Mindestlohn auch für Praktikanten, allerdings mit Ausnahmen.",
         "key_vocabulary": []
       }
     },
@@ -219,201 +219,247 @@
     ]
   },
   "transcript": {
-    "type": "full_reconstructed_transcript",
+    "type": "studio_source_transcript",
     "status": "complete",
-    "source": "reconstructed_full_script",
-    "quality": "release_candidate_reconstructed",
-    "note": "Full learner-visible reconstructed script created from existing question evidence because original studio scripts are not present in the repository. Replace with studio transcript if original audio scripts become available.",
+    "source": "studio_source_script",
+    "quality": "source_verified",
+    "sourceScript": "data/scripts/B1/Teil1-Kurze-Texte/L-B1-GOETHE-005-T1.json",
+    "note": "Transcript replaced from source script by scripts/apply-source-transcripts.ts.",
     "lines": [
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Im folgenden Hoertext geht es um Bewerbungsgespräch und Praktikum. Achten Sie auf die zentrale Information."
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sie hören fünf kurze Texte. Zu jedem Text gibt es zwei Aufgaben. Kreuzen Sie die richtige Antwort an. Sie hören jeden Text einmal."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q1.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Text 1."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Kommen Sie pünktlich, am besten zehn Minuten vor dem vereinbarten Termin.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Sprecher_1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Heute gibt es Tipps für Ihr nächstes Bewerbungsgespräch von unserer Karriereexpertin."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q1 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Sprecher_1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Vorbereitung ist das A und O. Informieren Sie sich gründlich über das Unternehmen."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q2.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Sprecher_1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Lesen Sie die Stellenanzeige mehrmals und überlegen Sie, welche Ihrer Erfahrungen passen."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "answer_evidence",
-        "text": "Bringen Sie Ihre Bewerbungsunterlagen, einen Notizblock und einen Stift mit.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Sprecher_1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Üben Sie typische Fragen wie 'Was sind Ihre Stärken?' oder 'Wo sehen Sie sich in fünf Jahren?'"
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q2 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Sprecher_1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Kleiden Sie sich dem Anlass entsprechend, lieber etwas formeller als zu leger."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q3.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Sprecher_1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Kommen Sie pünktlich, am besten zehn Minuten vor dem vereinbarten Termin."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "answer_evidence",
-        "text": "Seit zweitausendfünfzehn gilt der Mindestlohn auch für Praktikanten, allerdings mit Ausnahmen. Pflichtpraktika im Rahmen des Studiums und Praktika unter drei Monaten sind vom Mindestlohn ausgenommen.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Sprecher_1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Bringen Sie Ihre Bewerbungsunterlagen, einen Notizblock und einen Stift mit."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q3 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Sprecher_1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Und vergessen Sie nicht: Authentizität ist wichtiger als Perfektion bei Ihren Antworten."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q4.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Text 2."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "answer_evidence",
-        "text": "Wichtiger ist, ob man im Praktikum wirklich etwas lernt und ins Team integriert wird.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Sprecher_2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Eine aktülle Studie zeigt, dass Praktika für den Berufseinstieg immer wichtiger werden."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q4 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Sprecher_2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Über sechzig Prozent aller Absolventinnen und Absolventen machen vor dem ersten Job ein Praktikum."
       },
       {
-        "speaker": "Sprecher 5",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q5.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Sprecher_2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Dabei ist die Bezahlung oft ein Problem: viele Praktika werden gar nicht oder schlecht bezahlt."
       },
       {
-        "speaker": "Sprecher 5",
-        "speaker_role": "answer_evidence",
-        "text": "Er sollte übersichtlich, vollständig und nicht länger als zwei Seiten sein.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Sprecher_2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Seit zweitausendfünfzehn gilt der Mindestlohn auch für Praktikanten, allerdings mit Ausnahmen."
       },
       {
-        "speaker": "Sprecher 5",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q5 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Sprecher_2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Pflichtpraktika im Rahmen des Studiums und Praktika unter drei Monaten sind vom Mindestlohn ausgenommen."
       },
       {
-        "speaker": "Sprecher 6",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q6.",
-        "linkedQuestionId": "Q6"
+        "speaker": "Sprecher_2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Trotzdem sollte man bei der Wahl des Praktikums nicht nur aufs Geld schaün."
       },
       {
-        "speaker": "Sprecher 6",
-        "speaker_role": "answer_evidence",
-        "text": "In Deutschland ist es üblich, ein professionelles Foto oben rechts auf dem Lebenslauf zu haben.",
-        "linkedQuestionId": "Q6"
+        "speaker": "Sprecher_2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wichtiger ist, ob man im Praktikum wirklich etwas lernt und ins Team integriert wird."
       },
       {
-        "speaker": "Sprecher 6",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q6 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q6"
+        "speaker": "Sprecher_2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ein gutes Praktikumszeugnis öffnet oft die Tür für eine spätere Anstellung im selben Unternehmen."
       },
       {
-        "speaker": "Sprecher 7",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q7.",
-        "linkedQuestionId": "Q7"
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Text 3."
       },
       {
-        "speaker": "Sprecher 7",
-        "speaker_role": "answer_evidence",
-        "text": "Fassen Sie alle Dokumente in einer einzigen PDF-Datei zusammen, nicht in mehreren Anhängen.",
-        "linkedQuestionId": "Q7"
+        "speaker": "Sprecher_3",
+        "speaker_role": "dialogue_speaker",
+        "text": "Der Lebenslauf ist das wichtigste Dokument in jeder Bewerbung in Deutschland."
       },
       {
-        "speaker": "Sprecher 7",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q7 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q7"
+        "speaker": "Sprecher_3",
+        "speaker_role": "dialogue_speaker",
+        "text": "Er sollte übersichtlich, vollständig und nicht länger als zwei Seiten sein."
       },
       {
-        "speaker": "Sprecher 8",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q8.",
-        "linkedQuestionId": "Q8"
+        "speaker": "Sprecher_3",
+        "speaker_role": "dialogue_speaker",
+        "text": "In Deutschland ist es üblich, ein professionelles Foto oben rechts auf dem Lebenslauf zu haben."
       },
       {
-        "speaker": "Sprecher 8",
-        "speaker_role": "answer_evidence",
-        "text": "Die Dateigröße sollte fünf Megabyte nicht überschreiten.",
-        "linkedQuestionId": "Q8"
+        "speaker": "Sprecher_3",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ordnen Sie Ihre beruflichen Stationen antichronologisch, also das Neüste zürst."
       },
       {
-        "speaker": "Sprecher 8",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q8 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q8"
+        "speaker": "Sprecher_3",
+        "speaker_role": "dialogue_speaker",
+        "text": "Lücken im Lebenslauf sollten Sie ehrlich erklären, zum Beispiel Elternzeit oder Sprachkurse."
       },
       {
-        "speaker": "Sprecher 9",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q9.",
-        "linkedQuestionId": "Q9"
+        "speaker": "Sprecher_3",
+        "speaker_role": "dialogue_speaker",
+        "text": "Passen Sie den Lebenslauf immer an die jeweilige Stelle an und heben Sie relevantes hervor."
       },
       {
-        "speaker": "Sprecher 9",
-        "speaker_role": "answer_evidence",
-        "text": "Ziehen Sie sich vollständig professionell an, nicht nur am Oberkörper.",
-        "linkedQuestionId": "Q9"
+        "speaker": "Sprecher_3",
+        "speaker_role": "dialogue_speaker",
+        "text": "Rechtschreibfehler sind ein absolutes No-Go und führen oft direkt zur Ablehnung."
       },
       {
-        "speaker": "Sprecher 9",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q9 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q9"
+        "speaker": "Sprecher_3",
+        "speaker_role": "dialogue_speaker",
+        "text": "Lassen Sie Ihren Lebenslauf vor dem Absenden von einer zweiten Person Korrektur lesen."
       },
       {
-        "speaker": "Sprecher 10",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q10.",
-        "linkedQuestionId": "Q10"
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Text 4."
       },
       {
-        "speaker": "Sprecher 10",
-        "speaker_role": "answer_evidence",
-        "text": "Schaün Sie in die Kamera, nicht auf den Bildschirm, das wirkt wie direkter Blickkontakt.",
-        "linkedQuestionId": "Q10"
+        "speaker": "Sprecher_4",
+        "speaker_role": "dialogue_speaker",
+        "text": "Digitale Bewerbungen sind heute in den meisten Branchen der Standard geworden."
       },
       {
-        "speaker": "Sprecher 10",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q10 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q10"
+        "speaker": "Sprecher_4",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die meisten Unternehmen erwarten Bewerbungen per E-Mail oder über ein Online-Bewerbungsportal."
       },
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Ende des Hoertexts."
+        "speaker": "Sprecher_4",
+        "speaker_role": "dialogue_speaker",
+        "text": "Achten Sie darauf, dass Ihre E-Mail-Adresse professionell klingt."
+      },
+      {
+        "speaker": "Sprecher_4",
+        "speaker_role": "dialogue_speaker",
+        "text": "Eine Adresse wie 'partykönig@email' macht keinen guten Eindruck auf potenzielle Arbeitgeber."
+      },
+      {
+        "speaker": "Sprecher_4",
+        "speaker_role": "dialogue_speaker",
+        "text": "Fassen Sie alle Dokumente in einer einzigen PDF-Datei zusammen, nicht in mehreren Anhängen."
+      },
+      {
+        "speaker": "Sprecher_4",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Dateigröße sollte fünf Megabyte nicht überschreiten."
+      },
+      {
+        "speaker": "Sprecher_4",
+        "speaker_role": "dialogue_speaker",
+        "text": "Schreiben Sie eine kurze, professionelle E-Mail als Anschreiben, nicht nur 'Siehe Anhang'."
+      },
+      {
+        "speaker": "Sprecher_4",
+        "speaker_role": "dialogue_speaker",
+        "text": "Und vergessen Sie nicht, die richtige Ansprechperson in der Betreffzeile zu nennen."
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Text 5."
+      },
+      {
+        "speaker": "Sprecher_5",
+        "speaker_role": "dialogue_speaker",
+        "text": "Immer mehr Unternehmen führen Bewerbungsgespräche per Video durch, nicht persönlich."
+      },
+      {
+        "speaker": "Sprecher_5",
+        "speaker_role": "dialogue_speaker",
+        "text": "Bei einem Video-Interview gelten grundsätzlich die gleichen Regeln wie beim persönlichen Gespräch."
+      },
+      {
+        "speaker": "Sprecher_5",
+        "speaker_role": "dialogue_speaker",
+        "text": "Achten Sie auf einen aufgeräumten Hintergrund und gute Beleuchtung im Raum."
+      },
+      {
+        "speaker": "Sprecher_5",
+        "speaker_role": "dialogue_speaker",
+        "text": "Testen Sie vorher die Technik: Kamera, Mikrofon und Internetverbindung müssen funktionieren."
+      },
+      {
+        "speaker": "Sprecher_5",
+        "speaker_role": "dialogue_speaker",
+        "text": "Schaün Sie in die Kamera, nicht auf den Bildschirm, das wirkt wie direkter Blickkontakt."
+      },
+      {
+        "speaker": "Sprecher_5",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ziehen Sie sich vollständig professionell an, nicht nur am Oberkörper."
+      },
+      {
+        "speaker": "Sprecher_5",
+        "speaker_role": "dialogue_speaker",
+        "text": "Sorgen Sie dafür, dass Sie während des Gesprächs nicht gestört werden."
+      },
+      {
+        "speaker": "Sprecher_5",
+        "speaker_role": "dialogue_speaker",
+        "text": "Und halten Sie ein Glas Wasser bereit, falls Sie nervös werden und Ihr Mund trocken wird."
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Ende Teil eins."
       }
     ]
   },
@@ -430,7 +476,7 @@
       "id": "l-b1-goethe-005-t1-lo-1",
       "cefrLevel": "B1",
       "skill": "listening",
-      "canDoVi": "Toi co the luyen nghe hieu o trinh do B1 qua chu de \"Bewerbungsgespräch und Praktikum\".",
+      "canDoVi": "Tôi có thể luyện nghe hiểu ở trình độ B1 qua chủ đề \"Bewerbungsgespräch und Praktikum\".",
       "canDoDe": "Ich kann Hoeren auf Niveau B1 zum Thema \"Bewerbungsgespräch und Praktikum\" ueben.",
       "linkedContentIds": [
         "L-B1-GOETHE-005-T1"

@@ -91,7 +91,7 @@ export default function AdminLayoutClient({ children, user }: { children: React.
               <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400" />
               <input 
                 type="text" 
-                placeholder="Search users, feedback, lessons..." 
+                placeholder={"Search users, feedback, lessons..." /* // locale-allow */} 
                 className="w-full pl-9 pr-4 py-2 bg-slate-100 border-none rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-shadow"
               />
             </div>

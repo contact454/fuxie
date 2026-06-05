@@ -12,6 +12,7 @@ import {
     getVocabularyReviewBucketCounts,
     getVocabularyThemeSrsProgress,
 } from '@/lib/srs/stats'
+import { getTranslations } from 'next-intl/server'
 import { ReviewClientDynamic } from '@/components/srs/ReviewClientDynamic'
 import { ReviewBackboneHero } from '@/components/review/review-backbone-hero'
 import type { ReactNode } from 'react'
@@ -117,6 +118,7 @@ export default async function ReviewPage({
 }: {
     searchParams: Promise<{ state?: string; fixture?: string }>
 }) {
+    const t = await getTranslations('Review')
     const params = await searchParams
 
     if (isReviewVisualQaFixture(params) && params.state === 'empty') {
@@ -127,11 +129,11 @@ export default async function ReviewPage({
                         state="empty"
                         dueToday={0}
                         overdue={0}
-                        dueLabel="Heute fällig"
-                        overdueLabel="Überfällig"
-                        title="Heute ist dein Review-Fach leer"
-                        message="Keine Karten sind fällig. Du kannst entspannt neue Wörter lernen oder morgen wiederkommen."
-                        ctaLabel="Neue Wörter lernen"
+                        dueLabel={t('qaEmpty.dueLabel')}
+                        overdueLabel={t('qaEmpty.overdueLabel')}
+                        title={t('qaEmpty.title')}
+                        message={t('qaEmpty.message')}
+                        ctaLabel={t('qaEmpty.ctaLabel')}
                         ctaHref="/course"
                     />
                 </div>
@@ -185,24 +187,24 @@ export default async function ReviewPage({
                         state="default"
                         dueToday={bucketCounts.dueToday}
                         overdue={bucketCounts.overdue}
-                        dueLabel="Hôm nay đến hạn"
-                        overdueLabel="Quá hạn"
-                        title="Giữ trí nhớ luôn nóng"
-                        message="Mỗi lượt ôn là một vòng giữ từ vựng khỏi rơi khỏi trí nhớ. Fuxie ưu tiên thẻ đến hạn trước, rồi mới tới quá hạn."
-                        ctaLabel="Ôn ngay"
+                        dueLabel={t('defaultState.dueLabel')}
+                        overdueLabel={t('defaultState.overdueLabel')}
+                        title={t('defaultState.title')}
+                        message={t('defaultState.message')}
+                        ctaLabel={t('defaultState.ctaLabel')}
                         ctaHref="#review-session"
-                        rewardPreviewLabel="chưa nhận"
+                        rewardPreviewLabel={t('defaultState.rewardPreviewLabel')}
                     />
                 ) : (
                     <ReviewBackboneHero
                         state="empty"
                         dueToday={0}
                         overdue={0}
-                        dueLabel="Hôm nay đến hạn"
-                        overdueLabel="Quá hạn"
-                        title="Hôm nay đã sạch nợ ôn"
-                        message="Không có thẻ nào đến hạn. Đây là lúc tốt nhất để học thêm từ mới và mở rộng kho từ của bạn."
-                        ctaLabel="Học bài mới"
+                        dueLabel={t('emptyState.dueLabel')}
+                        overdueLabel={t('emptyState.overdueLabel')}
+                        title={t('emptyState.title')}
+                        message={t('emptyState.message')}
+                        ctaLabel={t('emptyState.ctaLabel')}
                         ctaHref="/course"
                     />
                 )}

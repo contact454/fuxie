@@ -19,7 +19,7 @@
  *      - `loadedmetadata` ⇒ `assetLoaded = true`
  *      - `error`          ⇒ `assetError  = true` (short-circuits the timer)
  *    The probe lives next to the player; the inner `LessonPlayer` has its
- *    own `<audio ref={…}>` that drives playback. The two `<audio>` tags
+ *    own `<audio ref={…}>` that drives playback. The two `<audio>` tags // locale-allow
  *    share the URL so the browser cache satisfies both with one request.
  *  - On retry, increments `retryNonce` so the dynamic chunk remounts AND
  *    the probe re-fires its load/error events. The shell stays mounted

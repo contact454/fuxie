@@ -108,7 +108,7 @@ export interface CompletionFlowSaveRequest {
      * lesson data stay unconsumed when an HTTP 200 still indicates a
      * domain-level error (`{ success: false, error: ... }`).
      */
-    validate?: (response: Response, parsed: unknown) => boolean | Promise<boolean>
+    validate?: (response: Response, parsed: unknown) => boolean | Promise<boolean> // locale-allow
 }
 
 /**

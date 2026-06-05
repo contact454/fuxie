@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
+import { useTranslations } from 'next-intl'
 import { FUXIE_3D_ASSETS, type RewardPreviewItem } from '@/components/gamification/quest-visuals'
 import { CompletionFlow } from '@/components/gamification/completion-flow'
 
@@ -26,14 +27,8 @@ const SKILL_EMOJI: Record<string, string> = {
     LESEN: '📖', HOEREN: '🎧', SCHREIBEN: '✍️', SPRECHEN: '🗣️',
 }
 
-const SKILL_LABEL: Record<string, string> = {
-    LESEN: 'Đọc',
-    HOEREN: 'Nghe',
-    SCHREIBEN: 'Viết',
-    SPRECHEN: 'Nói',
-}
-
 export function ExamResultClient({ examId, attemptId }: { examId: string; attemptId: string }) {
+    const tExam = useTranslations('Exam')
     const [result, setResult] = useState<ResultData | null>(null)
     const [loading, setLoading] = useState(true)
 
@@ -55,8 +50,8 @@ export function ExamResultClient({ examId, attemptId }: { examId: string; attemp
     if (!result) {
         return (
             <div className="text-center py-16">
-                <p className="text-gray-500">Không tìm thấy kết quả</p>
-                <Link href="/exam" className="text-sm text-blue-500 underline mt-2 block">← Về danh sách</Link>
+                <p className="text-gray-500">{tExam('result.notFound')}</p>
+                <Link href="/exam" className="text-sm text-blue-500 underline mt-2 block">{tExam('result.backToList')}</Link>
             </div>
         )
     }
@@ -72,13 +67,13 @@ export function ExamResultClient({ examId, attemptId }: { examId: string; attemp
     const examRewardPreview: RewardPreviewItem[] = [
         {
             type: 'xp',
-            label: result.passed ? 'Đã đạt' : 'Đã lưu kết quả',
-            detail: `${result.totalScore}/${result.maxScore} điểm`,
+            label: result.passed ? tExam('result.passedLabel') : tExam('result.savedLabel'),
+            detail: tExam('result.pointsDetail', { score: result.totalScore, max: result.maxScore }),
         },
         {
             type: 'badge',
             label: `${result.percentScore}%`,
-            detail: 'Tổng điểm',
+            detail: tExam('result.totalScoreDetail'),
         },
     ]
 
@@ -87,20 +82,20 @@ export function ExamResultClient({ examId, attemptId }: { examId: string; attemp
             <CompletionFlow
                 mode="alreadySaved"
                 skill="exam"
-                title={result.passed ? 'Bài thi đã đạt' : 'Đã lưu kết quả thi'}
+                title={result.passed ? tExam('result.passedTitle') : tExam('result.savedTitle')}
                 message={result.passed
-                    ? `Bài thi hoàn thành với ${result.percentScore}% — kết quả vừa được chấm và lưu vào hồ sơ luyện thi của bạn.`
-                    : `Kết quả ${result.percentScore}% đã được lưu. Hãy xem chi tiết theo kỹ năng để biết phần cần ôn lại.`}
+                    ? tExam('result.passedMsg', { percent: result.percentScore })
+                    : tExam('result.savedMsg', { percent: result.percentScore })}
                 scoreLabel={`${result.totalScore}/${result.maxScore}`}
-                scoreDetail="Tổng điểm"
+                scoreDetail={tExam('result.totalScoreDetail')}
                 accuracy={result.percentScore}
                 xpEarned={0}
                 graded
                 rewardPreview={examRewardPreview}
                 hasNextStep={false}
-                primaryAction={{ label: 'Tiếp tục', href: '/exam' }}
-                secondaryAction={{ label: 'Thử lại', href: `/exam/${examId}` }}
-                dashboardAction={{ label: 'Về Dashboard', href: '/dashboard' }}
+                primaryAction={{ label: tExam('result.continueBtn'), href: '/exam' }}
+                secondaryAction={{ label: tExam('result.retryBtn'), href: `/exam/${examId}` }}
+                dashboardAction={{ label: tExam('result.backToDashboardBtn'), href: '/dashboard' }}
                 className="mb-6"
             />
             {/* Score circle */}
@@ -133,18 +128,18 @@ export function ExamResultClient({ examId, attemptId }: { examId: string; attemp
                 >
                     {result.passed ? (
                         <>
-                            <Image src={FUXIE_3D_ASSETS.examGuide} alt="Fuxie exam guide" width={24} height={24} className="object-contain" />
-                            Đã đạt! 🎉
+                            <Image src={FUXIE_3D_ASSETS.examGuide} alt={tExam('result.altGuide')} width={24} height={24} className="object-contain" />
+                            {tExam('result.passed')}
                         </>
                     ) : (
-                        <>❌ Chưa đạt</>
+                        <>❌ {tExam('result.failed')}</>
                     )}
                 </div>
             </div>
 
             {/* Section breakdown */}
             <div className="bg-white rounded-2xl ring-1 ring-gray-100 p-5 mb-6">
-                <h3 className="text-sm font-semibold text-gray-600 mb-4">Kết quả theo kỹ năng</h3>
+                <h3 className="text-sm font-semibold text-gray-600 mb-4">{tExam('result.breakdown')}</h3>
                 <div className="space-y-3">
                     {result.sectionScores.map((sec, idx) => {
                         const pct = sec.maxScore > 0 ? Math.round((sec.score / sec.maxScore) * 100) : 0
@@ -153,7 +148,7 @@ export function ExamResultClient({ examId, attemptId }: { examId: string; attemp
                             <div key={idx} className="flex items-center gap-3">
                                 <span className="text-lg">{SKILL_EMOJI[sec.skill] ?? '📋'}</span>
                                 <span className="text-sm font-medium text-gray-700 w-24">
-                                    {SKILL_LABEL[sec.skill] ?? sec.skill}
+                                    {tExam(`result.skillLabel.${sec.skill}` as any) ?? sec.skill}
                                 </span>
                                 <div className="flex-1">
                                     <div className="h-3 bg-gray-100 rounded-full overflow-hidden">

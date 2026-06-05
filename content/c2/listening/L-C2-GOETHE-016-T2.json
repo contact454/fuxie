@@ -61,7 +61,7 @@
       "explanation": {
         "de": "Die korrekte Antwort ist (a). Im Gespräch wird explizit die Unterscheidung zwischen einem 'Minimalismus des Überflusses' (ein Luxus, der aus materiellem Reichtum entsteht) und einem 'Minimalismus der Überzeugung' (der aus einer philosophischen oder spirituellen Motivation herrührt) als entscheidend hervorgehoben. Option (b) ist eine Falle, die zwar im Text erwähnte Begriffe ('akademische Kreise', 'Kulturen') aufgreift, aber die eigentliche Kernunterscheidung, nämlich die Motivation, verfehlt. Option (c) ist falsch, da sie zwei Aspekte der Wohnungsumgestaltung des Studenten vermischt, die aber nicht als allgemeine Dichotomie des Minimalismus diskutiert werden.",
         "vi": "Đáp án đúng là (a). Cuộc trò chuyện nhấn mạnh sự phân biệt giữa 'chủ nghĩa tối giản của sự thừa thãi' (một sự xa xỉ nảy sinh từ của cải vật chất) và 'chủ nghĩa tối giản của niềm tin' (xuất phát từ động cơ triết học hoặc tâm linh) là yếu tố quyết định. Lựa chọn (b) là một cái bẫy, mặc dù nó sử dụng các thuật ngữ được đề cập trong văn bản ('giới học thuật', 'các nền văn hóa'), nhưng nó lại bỏ qua sự khác biệt cốt lõi, đó là động cơ. Lựa chọn (c) sai vì nó trộn lẫn hai khía cạnh trong việc sửa sang lại căn hộ của nam sinh viên, nhưng chúng không được thảo luận như một sự phân đôi chung của chủ nghĩa tối giản.",
-        "key_evidence": "...und die Differenzierung zwischen einem Minimalismus des Überflusses und einem Minimalismus der Überzeugung ist analytisch äußerst wichtig...",
+        "key_evidence": "und die Differenzierung zwischen einem Minimalismus des Überflusses und einem Minimalismus der Überzeugung ist analytisch äußerst wichtig",
         "key_vocabulary": [
           {
             "word": "Dichotomie",
@@ -118,57 +118,192 @@
     ]
   },
   "transcript": {
-    "type": "full_reconstructed_transcript",
+    "type": "studio_source_transcript",
     "status": "complete",
-    "source": "reconstructed_full_script",
-    "quality": "release_candidate_reconstructed",
-    "note": "Full learner-visible reconstructed script created from existing question evidence because original studio scripts are not present in the repository. Replace with studio transcript if original audio scripts become available.",
+    "source": "studio_source_script",
+    "quality": "source_verified",
+    "sourceScript": "data/scripts/C2/Teil2-Spontanes-Gespraech/L-C2-GOETHE-016-T2.json",
+    "note": "Transcript replaced from source script by scripts/apply-source-transcripts.ts.",
     "lines": [
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Der folgende anspruchsvolle Hoertext behandelt Digitale Souveränität Europas. Achten Sie auf Aussage, Kontext und implizite Bedeutung."
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sie hören ein Gespräch. Dazu gibt es fünf Aufgaben. Wer sagt was? Sie hören das Gespräch zweimal."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q1.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Studentin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Mir ist aufgefallen, dass du deine Wohnung in den letzten Monaten komplett umgestaltet hast; war das eine bewusste ästhetische Entscheidung oder eher ein gradueller Prozess?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Den Widerspruch sehe ich nicht unbedingt, denn das Bewusstsein über die sozialen Determinanten des Geschmacks kann ja gerade dazu befähigen, reflektiertere Entscheidungen zu treffen.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Student",
+        "speaker_role": "dialogue_speaker",
+        "text": "Es war tatsächlich ein sehr bewusster Prozess, der durch ein Seminar über materielle Kulturtheorie ausgelöst wurde, in dem wir über die diskursive Konstruktion von Geschmack diskutiert haben."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q1 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Studentin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das klingt nach einem interessanten performativen Widerspruch: Du hast deine Einrichtung verändert, nachdem du gelernt hast, dass Einrichtungsentscheidungen sozial konstruiert und nicht frei gewählt sind."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q2.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Student",
+        "speaker_role": "dialogue_speaker",
+        "text": "Den Widerspruch sehe ich nicht unbedingt, denn das Bewusstsein über die sozialen Determinanten des Geschmacks kann ja gerade dazu befähigen, reflektiertere Entscheidungen zu treffen."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "answer_evidence",
-        "text": "...und die Differenzierung zwischen einem Minimalismus des Überflusses und einem Minimalismus der Überzeugung ist analytisch äußerst wichtig...",
-        "linkedQuestionId": "Q2"
+        "speaker": "Studentin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Was hat sich konkret verändert, und wie hat sich die neue Einrichtung auf dein alltägliches Wohlbefinden und deine Arbeitsproduktivität ausgewirkt?"
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q2 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Student",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ich habe mich von überflüssigem Dekor getrennt, mehr Pflanzen integriert und meinen Arbeitsbereich ergonomisch optimiert, was tatsächlich einen spürbaren Einfluss auf meine Konzentrationsfähigkeit hatte."
       },
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Ende des Hoertexts."
+        "speaker": "Studentin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das bestätigt die Erkenntnisse der Umweltpsychologie, die einen signifikanten Zusammenhang zwischen der Gestaltung von Innenräumen und dem psychischen Wohlbefinden der Bewohner nachweisen konnte."
+      },
+      {
+        "speaker": "Student",
+        "speaker_role": "dialogue_speaker",
+        "text": "Mich beschäftigt in diesem Zusammenhang die Frage, ob die minimalistische Ästhetik, die derzeit in akademischen Kreisen so beliebt ist, nicht selbst ein Ausdruck sozialer Distinktion darstellt."
+      },
+      {
+        "speaker": "Studentin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Natürlich ist sie das; Minimalismus ist ein Luxus, den sich nur diejenigen leisten können, die bereits über einen materiellen Überfluss verfügen und es sich erlauben können, bewusst darauf zu verzichten."
+      },
+      {
+        "speaker": "Student",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das erinnert mich an den provokativen Aufsatz von Kyle Chayka, der den Minimalismus als ästhetische Ideologie der privilegierten Klasse beschreibt und seine vermeintliche Universalität dekonstruiert."
+      },
+      {
+        "speaker": "Studentin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Gleichzeitig gibt es aber auch in vielen Kulturen eine lange Tradition der freiwilligen Einfachheit, die nicht aus dem Überfluss, sondern aus einer völlig anderen philosophischen oder spirituellen Motivation heraus entsteht."
+      },
+      {
+        "speaker": "Student",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das stimmt, und die Differenzierung zwischen einem Minimalismus des Überflusses und einem Minimalismus der Überzeugung ist analytisch äußerst wichtig und wird in der aktuellen Debatte oft vernachlässigt."
+      },
+      {
+        "speaker": "Studentin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Vielleicht sollten wir ein Seminar organisieren, das sich mit der Politisierung der Alltagsästhetik befasst, von der Wohnungseinrichtung über die Kleidung bis zur Gestaltung öffentlicher Räume."
+      },
+      {
+        "speaker": "Student",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das ist eine brillante Idee, und ich bin sicher, dass unsere Professorin sich dafür begeistern ließe, zumal sie selbst gerade an einem Buch über die Ästhetik des Politischen arbeitet."
+      },
+      {
+        "speaker": "Studentin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Mir ist aufgefallen, dass du deine Wohnung in den letzten Monaten komplett umgestaltet hast; war das eine bewusste ästhetische Entscheidung oder eher ein gradueller Prozess?"
+      },
+      {
+        "speaker": "Student",
+        "speaker_role": "dialogue_speaker",
+        "text": "Es war tatsächlich ein sehr bewusster Prozess, der durch ein Seminar über materielle Kulturtheorie ausgelöst wurde, in dem wir über die diskursive Konstruktion von Geschmack diskutiert haben."
+      },
+      {
+        "speaker": "Studentin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das klingt nach einem interessanten performativen Widerspruch: Du hast deine Einrichtung verändert, nachdem du gelernt hast, dass Einrichtungsentscheidungen sozial konstruiert und nicht frei gewählt sind."
+      },
+      {
+        "speaker": "Student",
+        "speaker_role": "dialogue_speaker",
+        "text": "Den Widerspruch sehe ich nicht unbedingt, denn das Bewusstsein über die sozialen Determinanten des Geschmacks kann ja gerade dazu befähigen, reflektiertere Entscheidungen zu treffen."
+      },
+      {
+        "speaker": "Studentin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Was hat sich konkret verändert, und wie hat sich die neue Einrichtung auf dein alltägliches Wohlbefinden und deine Arbeitsproduktivität ausgewirkt?"
+      },
+      {
+        "speaker": "Student",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ich habe mich von überflüssigem Dekor getrennt, mehr Pflanzen integriert und meinen Arbeitsbereich ergonomisch optimiert, was tatsächlich einen spürbaren Einfluss auf meine Konzentrationsfähigkeit hatte."
+      },
+      {
+        "speaker": "Studentin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das bestätigt die Erkenntnisse der Umweltpsychologie, die einen signifikanten Zusammenhang zwischen der Gestaltung von Innenräumen und dem psychischen Wohlbefinden der Bewohner nachweisen konnte."
+      },
+      {
+        "speaker": "Student",
+        "speaker_role": "dialogue_speaker",
+        "text": "Mich beschäftigt in diesem Zusammenhang die Frage, ob die minimalistische Ästhetik, die derzeit in akademischen Kreisen so beliebt ist, nicht selbst ein Ausdruck sozialer Distinktion darstellt."
+      },
+      {
+        "speaker": "Studentin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Natürlich ist sie das; Minimalismus ist ein Luxus, den sich nur diejenigen leisten können, die bereits über einen materiellen Überfluss verfügen und es sich erlauben können, bewusst darauf zu verzichten."
+      },
+      {
+        "speaker": "Student",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das erinnert mich an den provokativen Aufsatz von Kyle Chayka, der den Minimalismus als ästhetische Ideologie der privilegierten Klasse beschreibt und seine vermeintliche Universalität dekonstruiert."
+      },
+      {
+        "speaker": "Studentin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Gleichzeitig gibt es aber auch in vielen Kulturen eine lange Tradition der freiwilligen Einfachheit, die nicht aus dem Überfluss, sondern aus einer völlig anderen philosophischen oder spirituellen Motivation heraus entsteht."
+      },
+      {
+        "speaker": "Student",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das stimmt, und die Differenzierung zwischen einem Minimalismus des Überflusses und einem Minimalismus der Überzeugung ist analytisch äußerst wichtig und wird in der aktuellen Debatte oft vernachlässigt."
+      },
+      {
+        "speaker": "Studentin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Vielleicht sollten wir ein Seminar organisieren, das sich mit der Politisierung der Alltagsästhetik befasst, von der Wohnungseinrichtung über die Kleidung bis zur Gestaltung öffentlicher Räume."
+      },
+      {
+        "speaker": "Student",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das ist eine brillante Idee, und ich bin sicher, dass unsere Professorin sich dafür begeistern ließe, zumal sie selbst gerade an einem Buch über die Ästhetik des Politischen arbeitet."
+      },
+      {
+        "speaker": "Studentin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Mir ist aufgefallen, dass du deine Wohnung in den letzten Monaten komplett umgestaltet hast; war das eine bewusste ästhetische Entscheidung oder eher ein gradueller Prozess?"
+      },
+      {
+        "speaker": "Student",
+        "speaker_role": "dialogue_speaker",
+        "text": "Es war tatsächlich ein sehr bewusster Prozess, der durch ein Seminar über materielle Kulturtheorie ausgelöst wurde, in dem wir über die diskursive Konstruktion von Geschmack diskutiert haben."
+      },
+      {
+        "speaker": "Studentin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das klingt nach einem interessanten performativen Widerspruch: Du hast deine Einrichtung verändert, nachdem du gelernt hast, dass Einrichtungsentscheidungen sozial konstruiert und nicht frei gewählt sind."
+      },
+      {
+        "speaker": "Student",
+        "speaker_role": "dialogue_speaker",
+        "text": "Den Widerspruch sehe ich nicht unbedingt, denn das Bewusstsein über die sozialen Determinanten des Geschmacks kann ja gerade dazu befähigen, reflektiertere Entscheidungen zu treffen."
+      },
+      {
+        "speaker": "Studentin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Was hat sich konkret verändert, und wie hat sich die neue Einrichtung auf dein alltägliches Wohlbefinden und deine Arbeitsproduktivität ausgewirkt?"
+      },
+      {
+        "speaker": "Student",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ich habe mich von überflüssigem Dekor getrennt, mehr Pflanzen integriert und meinen Arbeitsbereich ergonomisch optimiert, was tatsächlich einen spürbaren Einfluss auf meine Konzentrationsfähigkeit hatte."
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Ende Teil zwei."
       }
     ]
   },
@@ -185,7 +320,7 @@
       "id": "l-c2-goethe-016-t2-lo-1",
       "cefrLevel": "C2",
       "skill": "listening",
-      "canDoVi": "Toi co the luyen nghe hieu o trinh do C2 qua chu de \"Digitale Souveränität Europas\".",
+      "canDoVi": "Tôi có thể luyện nghe hiểu ở trình độ C2 qua chủ đề \"Digitale Souveränität Europas\".",
       "canDoDe": "Ich kann Hoeren auf Niveau C2 zum Thema \"Digitale Souveränität Europas\" ueben.",
       "linkedContentIds": [
         "L-C2-GOETHE-016-T2"

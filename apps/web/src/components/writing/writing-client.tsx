@@ -173,7 +173,7 @@ export function WritingClient({ teile, totalExercises, totalCompleted, available
                         </div>
                     )}
                     <div className="flex items-center gap-4">
-                        <FuxieRoleMascot src={FUXIE_3D_ASSETS.postOffice} alt="Fuxie writing coach" size={64} motion="coach" />
+                        <FuxieRoleMascot src={FUXIE_3D_ASSETS.postOffice} alt={t('altWritingCoach')} size={64} motion="coach" />
                         <div className="flex-1">
                             <h1 className="text-2xl font-bold text-gray-900">{t('practiceSkill', { skill: 'viết', level: currentLevel })}</h1>
                             <p className="text-sm text-gray-500 mt-0.5">

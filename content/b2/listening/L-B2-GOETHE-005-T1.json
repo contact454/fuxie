@@ -65,7 +65,7 @@
       "explanation": {
         "de": "Der zweite Sprecher fragt: 'Was ist, wenn die Technik mal ausfällt?' und fügt hinzu: 'Siehst du! Deshalb brauchen wir Bargeld als Backup.'",
         "vi": "Người nói thứ hai hỏi: 'Điều gì sẽ xảy ra nếu công nghệ bị lỗi?' và nói thêm: 'Thấy chưa! Đó là lý do tại sao chúng ta cần tiền mặt làm dự phòng.'",
-        "key_evidence": "Was ist, wenn die Technik mal ausfällt? ... Siehst du! Deshalb brauchen wir Bargeld als Backup.",
+        "key_evidence": "Was ist, wenn die Technik mal ausfällt",
         "key_vocabulary": [
           "bargeldloses System",
           "Gefahr",
@@ -173,7 +173,7 @@
       "explanation": {
         "de": "Der erste Sprecher erwähnt: 'Kritiker befürchten allerdings, dass der Staat damit noch mehr Kontrolle über unser Geld bekommt.' Der zweite Sprecher antwortet darauf: 'Das ist ein berechtigter Einwand.'",
         "vi": "Người nói thứ nhất đề cập: 'Tuy nhiên, các nhà phê bình lo ngại rằng nhà nước sẽ kiểm soát tiền của chúng ta nhiều hơn.' Người nói thứ hai trả lời: 'Đó là một phản đối chính đáng.'",
-        "key_evidence": "Kritiker befürchten allerdings, dass der Staat damit noch mehr Kontrolle über unser Geld bekommt. ... Das ist ein berechtigter Einwand.",
+        "key_evidence": "Kritiker befürchten allerdings, dass der Staat damit noch mehr Kontrolle über unser Geld bekommt",
         "key_vocabulary": [
           "Hauptsorge",
           "Kritiker",
@@ -265,201 +265,247 @@
     ]
   },
   "transcript": {
-    "type": "full_reconstructed_transcript",
+    "type": "studio_source_transcript",
     "status": "complete",
-    "source": "reconstructed_full_script",
-    "quality": "release_candidate_reconstructed",
-    "note": "Full learner-visible reconstructed script created from existing question evidence because original studio scripts are not present in the repository. Replace with studio transcript if original audio scripts become available.",
+    "source": "studio_source_script",
+    "quality": "source_verified",
+    "sourceScript": "data/scripts/B2/Teil1-Alltagsaeusserungen/L-B2-GOETHE-005-T1.json",
+    "note": "Transcript replaced from source script by scripts/apply-source-transcripts.ts.",
     "lines": [
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Im folgenden Hoertext geht es um Bargeldloses Bezahlen Pro und Contra. Achten Sie auf die zentrale Information."
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sie hören fünf Äußerungen aus dem Alltag. Zu jeder Äußerung gibt es zwei Aufgaben. Kreuzen Sie die richtige Antwort an. Sie hören jeden Text einmal."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q1.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Äußerung 1."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Ich finde es einfacher, den Überblick über meine Ausgaben zu behalten, wenn ich Bargeld verwende.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Sprecher1_1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ist dir aufgefallen, dass immer mehr Geschäfte in Berlin nur noch Kartenzahlung akzeptieren?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q1 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Sprecher2_1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ja, das nervt mich furchtbar! Ich bezahle am liebsten mit Bargeld."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q2.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Sprecher1_1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Warum denn? Kartenzahlung ist doch viel bequemer und hygienischer."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Kontaktloses Bezahlen verleitet definitiv zum Mehr-Ausgeben.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Sprecher2_1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ich finde es einfacher, den Überblick über meine Ausgaben zu behalten, wenn ich Bargeld verwende."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q2 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Sprecher1_1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Dafür gibt es doch Banking-Apps, die dir jeden Cent genau anzeigen."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q3.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Sprecher2_1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Trotzdem. Wenn ich hundert Euro aus dem Automaten ziehe, sehe ich, wie schnell das Geld weggeht."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "answer_evidence",
-        "text": "Was ist, wenn die Technik mal ausfällt? ... Siehst du! Deshalb brauchen wir Bargeld als Backup.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Sprecher1_1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Da hast du vielleicht recht. Kontaktloses Bezahlen verleitet definitiv zum Mehr-Ausgeben."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q3 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Sprecher2_1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Genau! Und ich möchte nicht, dass meine Bank weiß, wo ich jeden Kaffee kaufe."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q4.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Äußerung 2."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "answer_evidence",
-        "text": "Das liegt auch an der deutschen Geschichte. Zwei Währungsreformen haben tiefes Misstrauen hinterlassen.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Sprecher1_2",
+        "speaker_role": "dialogue_speaker",
+        "text": "In Schweden kann man schon fast nirgends mehr mit Bargeld bezahlen. Sogar Kirchen nehmen Kartengeld."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q4 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Sprecher2_2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das klingt nach einem Albtraum für mich. Was ist, wenn die Technik mal ausfällt?"
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q5.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Sprecher1_2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Genau das ist letztes Jahr in Schweden passiert. Ein Systemausfall hat das halbe Land lahmgelegt."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "answer_evidence",
-        "text": "Es war erstaunlich schwierig! Viele Online-Dienste und Abo-Services konnte ich nicht nutzen.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Sprecher2_2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Siehst du! Deshalb brauchen wir Bargeld als Backup. Man sollte immer etwas Bares dabeihaben."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q5 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Sprecher1_2",
+        "speaker_role": "dialogue_speaker",
+        "text": "In Deutschland hängen die Menschen stärker am Bargeld als in fast jedem anderen EU-Land."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q6.",
-        "linkedQuestionId": "Q6"
+        "speaker": "Sprecher2_2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das liegt auch an der deutschen Geschichte. Zwei Währungsreformen haben tiefes Misstrauen hinterlassen."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "answer_evidence",
-        "text": "Nein, das hatte ich noch nie eingerichtet. Jetzt habe ich es aber sofort nach dem Vorfall getan.",
-        "linkedQuestionId": "Q6"
+        "speaker": "Sprecher1_2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Interessant, ich hätte das eher mit der Angst vor Überwachung und Datenschutz erklärt."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q6 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q6"
+        "speaker": "Sprecher2_2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das spielt sicher auch eine Rolle. Deutsche sind beim Thema Datenschutz besonders sensibel."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q7.",
-        "linkedQuestionId": "Q7"
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Äußerung 3."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "answer_evidence",
-        "text": "Und er soll auch offline funktionieren, also ohne Internetverbindung verwendbar sein.",
-        "linkedQuestionId": "Q7"
+        "speaker": "Sprecher1_3",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ich habe letzte Woche mein Portemonnaie verloren und war eine Woche lang auf Bargeld angewiesen."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q7 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q7"
+        "speaker": "Sprecher2_3",
+        "speaker_role": "dialogue_speaker",
+        "text": "Oh nein! Und? Konntest du überall bezahlen oder gab es Probleme?"
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q8.",
-        "linkedQuestionId": "Q8"
+        "speaker": "Sprecher1_3",
+        "speaker_role": "dialogue_speaker",
+        "text": "Es war erstaunlich schwierig! Viele Online-Dienste und Abo-Services konnte ich nicht nutzen."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "answer_evidence",
-        "text": "Kritiker befürchten allerdings, dass der Staat damit noch mehr Kontrolle über unser Geld bekommt. ... Das ist ein berechtigter Einwand.",
-        "linkedQuestionId": "Q8"
+        "speaker": "Sprecher2_3",
+        "speaker_role": "dialogue_speaker",
+        "text": "Aber in normalen Geschäften und Restaurants hast du doch bar bezahlt?"
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q8 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q8"
+        "speaker": "Sprecher1_3",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ja, aber ich musste erst zur Bank und dort lange warten, um Geld am Schalter abzuheben."
       },
       {
-        "speaker": "Sprecher 5",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q9.",
-        "linkedQuestionId": "Q9"
+        "speaker": "Sprecher2_3",
+        "speaker_role": "dialogue_speaker",
+        "text": "Hast du denn kein Smartphone-Payment wie Apple Pay oder Google Pay genutzt?"
       },
       {
-        "speaker": "Sprecher 5",
-        "speaker_role": "answer_evidence",
-        "text": "Endlich! Ich habe immer extra Bargeld mitgenommen, weil die Stände keine Karten nahmen.",
-        "linkedQuestionId": "Q9"
+        "speaker": "Sprecher1_3",
+        "speaker_role": "dialogue_speaker",
+        "text": "Nein, das hatte ich noch nie eingerichtet. Jetzt habe ich es aber sofort nach dem Vorfall getan."
       },
       {
-        "speaker": "Sprecher 5",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q9 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q9"
+        "speaker": "Sprecher2_3",
+        "speaker_role": "dialogue_speaker",
+        "text": "Siehst du, digitales Bezahlen hat auch Vorteile. Redundanz ist der Schlüssel!"
       },
       {
-        "speaker": "Sprecher 5",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q10.",
-        "linkedQuestionId": "Q10"
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Äußerung 4."
       },
       {
-        "speaker": "Sprecher 5",
-        "speaker_role": "answer_evidence",
-        "text": "Andererseits fallen Gebühren an. Pro Kartenzahlung zahlt der Händler zwischen ein und vier Prozent.",
-        "linkedQuestionId": "Q10"
+        "speaker": "Sprecher1_4",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Europäische Zentralbank plant einen digitalen Euro. Hast du davon schon gehört?"
       },
       {
-        "speaker": "Sprecher 5",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q10 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q10"
+        "speaker": "Sprecher2_4",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ja, aber ich verstehe nicht genau, was der Unterschied zu meiner normalen Banking-App ist."
       },
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Ende des Hoertexts."
+        "speaker": "Sprecher1_4",
+        "speaker_role": "dialogue_speaker",
+        "text": "Der digitale Euro wäre von der EZB garantiert, nicht von einer privaten Bank."
+      },
+      {
+        "speaker": "Sprecher2_4",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das heißt, er wäre genauso sicher wie Bargeld, nur eben digital auf dem Smartphone?"
+      },
+      {
+        "speaker": "Sprecher1_4",
+        "speaker_role": "dialogue_speaker",
+        "text": "Genau. Und er soll auch offline funktionieren, also ohne Internetverbindung verwendbar sein."
+      },
+      {
+        "speaker": "Sprecher2_4",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das finde ich schon interessanter. Dann wäre er wirklich eine digitale Version von Bargeld."
+      },
+      {
+        "speaker": "Sprecher1_4",
+        "speaker_role": "dialogue_speaker",
+        "text": "Kritiker befürchten allerdings, dass der Staat damit noch mehr Kontrolle über unser Geld bekommt."
+      },
+      {
+        "speaker": "Sprecher2_4",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das ist ein berechtigter Einwand. Datenschutz muss bei der Einführung höchste Priorität haben."
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Äußerung 5."
+      },
+      {
+        "speaker": "Sprecher1_5",
+        "speaker_role": "dialogue_speaker",
+        "text": "Auf dem Wochenmarkt in meinem Kiez akzeptiert jetzt auch der letzte Stand Kartenzahlung."
+      },
+      {
+        "speaker": "Sprecher2_5",
+        "speaker_role": "dialogue_speaker",
+        "text": "Endlich! Ich habe immer extra Bargeld mitgenommen, weil die Stände keine Karten nahmen."
+      },
+      {
+        "speaker": "Sprecher1_5",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die kleinen Kartenlesegeräte kosten nur noch dreißig Euro. Das kann sich jeder Händler leisten."
+      },
+      {
+        "speaker": "Sprecher2_5",
+        "speaker_role": "dialogue_speaker",
+        "text": "Für die Händler ist es auch praktischer, weil sie abends kein Bargeld zur Bank bringen müssen."
+      },
+      {
+        "speaker": "Sprecher1_5",
+        "speaker_role": "dialogue_speaker",
+        "text": "Andererseits fallen Gebühren an. Pro Kartenzahlung zahlt der Händler zwischen ein und vier Prozent."
+      },
+      {
+        "speaker": "Sprecher2_5",
+        "speaker_role": "dialogue_speaker",
+        "text": "Bei kleinen Beträgen wie einem Bund Petersilie für neunundneunzig Cent ist das unverhältnismäßig."
+      },
+      {
+        "speaker": "Sprecher1_5",
+        "speaker_role": "dialogue_speaker",
+        "text": "Deshalb gibt es bei vielen Händlern einen Mindestbetrag für Kartenzahlung, oft fünf Euro."
+      },
+      {
+        "speaker": "Sprecher2_5",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ja, das finde ich auch fair. Für den Kaffee zum Mitnehmen reicht mir Bargeld."
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Ende Teil eins."
       }
     ]
   },
@@ -476,7 +522,7 @@
       "id": "l-b2-goethe-005-t1-lo-1",
       "cefrLevel": "B2",
       "skill": "listening",
-      "canDoVi": "Toi co the luyen nghe hieu o trinh do B2 qua chu de \"Bargeldloses Bezahlen Pro und Contra\".",
+      "canDoVi": "Tôi có thể luyện nghe hiểu ở trình độ B2 qua chủ đề \"Bargeldloses Bezahlen Pro und Contra\".",
       "canDoDe": "Ich kann Hoeren auf Niveau B2 zum Thema \"Bargeldloses Bezahlen Pro und Contra\" ueben.",
       "linkedContentIds": [
         "L-B2-GOETHE-005-T1"

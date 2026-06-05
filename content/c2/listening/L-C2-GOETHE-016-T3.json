@@ -24,7 +24,7 @@
       "explanation": {
         "de": "Die Aussage ist falsch. Die Expertin erklärt, dass ihre interdisziplinäre Perspektive es ihr ermöglicht, Raum 'nicht nur als physisches Gebilde, sondern als soziales Konstrukt' zu verstehen. Sie negiert also nicht die physische Dimension, sondern erweitert die Betrachtung um die soziale. Das Wort 'obsolet' stellt eine unzulässige Zuspitzung dar.",
         "vi": "Nhận định này sai. Chuyên gia giải thích rằng góc nhìn liên ngành của bà cho phép bà hiểu không gian 'không chỉ như một cấu trúc vật lý, mà còn như một cấu trúc xã hội'. Do đó, bà không phủ nhận chiều kích vật lý mà mở rộng góc nhìn sang chiều kích xã hội. Từ 'lỗi thời' (obsolet) là một sự diễn giải quá mức không được phép.",
-        "key_evidence": "Die Verschränkung beider Disziplinen hat mir ermöglicht, Raum nicht nur als physisches Gebilde, sondern als soziales Konstrukt zu verstehen...",
+        "key_evidence": "Die Verschränkung beider Disziplinen hat mir ermöglicht, Raum nicht nur als physisches Gebilde, sondern als soziales Konstrukt zu verstehen",
         "key_vocabulary": [
           "postulieren: fordern, als wahr hinstellen",
           "obsolet: veraltet, überflüssig"
@@ -41,7 +41,7 @@
       "explanation": {
         "de": "Die Aussage ist falsch. Die Expertin kritisiert, dass diese Plattformen lokale Wohnkulturen 'verdrängen'. Das Verb 'verdrängen' impliziert einen Verdrängungswettbewerb und nicht einen 'fruchtbaren interkulturellen Dialog'. Sie sieht die Entwicklung als eine Homogenisierung, nicht als eine Bereicherung.",
         "vi": "Nhận định này sai. Chuyên gia chỉ trích rằng các nền tảng này 'lấn át' (verdrängen) các văn hóa sống địa phương. Động từ 'lấn át' ngụ ý một sự cạnh tranh loại trừ chứ không phải là một 'cuộc đối thoại liên văn hóa hiệu quả'. Bà coi sự phát triển này là một sự đồng nhất hóa, không phải là một sự làm giàu văn hóa.",
-        "key_evidence": "...die lokale Wohnkulturen zugunsten einer international anschlussfähigen Designsprache verdrängt.",
+        "key_evidence": "die lokale Wohnkulturen zugunsten einer international anschlussfähigen Designsprache verdrängt.",
         "key_vocabulary": [
           "Auffassung vertreten: eine Meinung haben",
           "fruchtbar: ertragreich, produktiv"
@@ -58,7 +58,7 @@
       "explanation": {
         "de": "Die Aussage ist falsch. Die Expertin betont, dass beide Tendenzen – echtes ökologisches Bewusstsein und Greenwashing – 'parallel existieren'. Sie spricht von einer 'wachsenden Minderheit' mit genuinem Bewusstsein, was impliziert, dass diese Bewegung nicht wirkungslos oder komplett marginalisiert ist. Sie stellt keine Kausalität her, bei der die eine Tendenz die andere aufhebt.",
         "vi": "Nhận định này sai. Chuyên gia nhấn mạnh rằng cả hai xu hướng – ý thức sinh thái thực sự và tẩy xanh (Greenwashing) – 'tồn tại song song'. Bà nói về một 'thiểu số ngày càng tăng' có ý thức thực sự, điều này ngụ ý rằng phong trào này không phải là không có tác dụng hay bị gạt ra ngoài lề hoàn toàn. Bà không thiết lập mối quan hệ nhân quả trong đó xu hướng này triệt tiêu xu hướng kia.",
-        "key_evidence": "Beide Tendenzen existieren parallel; es gibt eine wachsende Minderheit, die ein genuines ökologisches Bewusstsein in ihre Einrichtungsentscheidungen einfließen lässt...",
+        "key_evidence": "Beide Tendenzen existieren parallel; es gibt eine wachsende Minderheit, die ein genuines ökologisches Bewusstsein in ihre Einrichtungsentscheidungen einfließen lässt",
         "key_vocabulary": [
           "Vereinnahmung: Instrumentalisierung für eigene Zwecke",
           "marginalisieren: an den Rand drängen",
@@ -123,93 +123,182 @@
     ]
   },
   "transcript": {
-    "type": "full_reconstructed_transcript",
+    "type": "studio_source_transcript",
     "status": "complete",
-    "source": "reconstructed_full_script",
-    "quality": "release_candidate_reconstructed",
-    "note": "Full learner-visible reconstructed script created from existing question evidence because original studio scripts are not present in the repository. Replace with studio transcript if original audio scripts become available.",
+    "source": "studio_source_script",
+    "quality": "source_verified",
+    "sourceScript": "data/scripts/C2/Teil3-Experteninterview-lang/L-C2-GOETHE-016-T3.json",
+    "note": "Transcript replaced from source script by scripts/apply-source-transcripts.ts.",
     "lines": [
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Der folgende anspruchsvolle Hoertext behandelt Digitale Souveränität Europas. Achten Sie auf Aussage, Kontext und implizite Bedeutung."
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sie hören ein ausführliches Interview. Dazu gibt es zehn Aufgaben. Kreuzen Sie die richtige Antwort an. Sie hören das Interview einmal."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q1.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Frau Professorin Raum, als Architekturtheoretikerin und Kultursoziologin haben Sie eine faszinierende Doppelperspektive auf die Beziehung zwischen Menschen und ihren Wohnräumen."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Die Verschränkung beider Disziplinen hat mir ermöglicht, Raum nicht nur als physisches Gebilde, sondern als soziales Konstrukt zu verstehen...",
-        "linkedQuestionId": "Q1"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Verschränkung beider Disziplinen hat mir ermöglicht, Raum nicht nur als physisches Gebilde, sondern als soziales Konstrukt zu verstehen, das von Machtverhältnissen, kulturellen Normen und ökonomischen Bedingungen geformt wird."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q1 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Können Sie an einem konkreten Beispiel erläutern, wie sich gesellschaftliche Machtverhältnisse in der Gestaltung von Wohnräumen materialisieren?"
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q2.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ein eindrucksvolles Beispiel ist die geschlechtsspezifische Raumaufteilung in bürgerlichen Wohnungen des neunzehnten Jahrhunderts, wo die Zuweisung bestimmter Räume an Männer und Frauen die patriarchale Ordnung architektonisch zementierte."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "answer_evidence",
-        "text": "...die lokale Wohnkulturen zugunsten einer international anschlussfähigen Designsprache verdrängt.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Inwiefern hat die Digitalisierung und insbesondere die Verbreitung von Wohnplattformen wie Airbnb die Beziehung zwischen Wohnen und Identität verändert?"
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q2 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Airbnb hat zur Entstehung einer globalen Einheitsästhetik beigetragen, die ich als Algorithmic Interior bezeichne und die lokale Wohnkulturen zugunsten einer international anschlussfähigen Designsprache verdrängt."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q3.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Welche Rolle spielen soziale Medien bei der Standardisierung von Einrichtungsgeschmack und der Homogenisierung ästhetischer Vorstellungen über kulturelle Grenzen hinweg?"
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "answer_evidence",
-        "text": "Beide Tendenzen existieren parallel; es gibt eine wachsende Minderheit, die ein genuines ökologisches Bewusstsein in ihre Einrichtungsentscheidungen einfließen lässt...",
-        "linkedQuestionId": "Q3"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Instagram hat die Visualisierung des Wohnens demokratisiert, aber gleichzeitig eine normative Ästhetik etabliert, die Abweichungen vom visuell optimierten Standard implizit als geschmacklos diskreditiert."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q3 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wie bewerten Sie den aktuellen Trend zur Nachhaltigkeit im Wohnbereich: Handelt es sich um eine echte Transformation des Konsumverhaltens oder um eine neue Form des Greenwashing?"
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q4.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Beide Tendenzen existieren parallel; es gibt eine wachsende Minderheit, die ein genuines ökologisches Bewusstsein in ihre Einrichtungsentscheidungen einfließen lässt, aber auch eine massive Instrumentalisierung des Nachhaltigkeitsdiskurses durch die Möbelindustrie."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "answer_evidence",
-        "text": "Die Grundbedürfnisse nach Geborgenheit, Rückzug und einem Ort der Selbstvergewisserung scheinen tatsächlich kulturübergreifend zu sein, während die konkreten Formen, in denen sie sich materialisieren, unendlich vielfältig sind.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Frau Professorin Raum, wenn Sie ein einziges Buch empfehlen müssten, das die Verbindung von Wohnen und Kultur am überzeugendsten darstellt, welches wäre es?"
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q4 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Gaston Bachelards Poetik des Raumes, ein philosophisches Meisterwerk, das zeigt, wie tiefgreifend unsere frühesten Raumerfahrungen unser gesamtes Erleben und Denken prägen."
       },
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Ende des Hoertexts."
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Abschließend: Glauben Sie, dass es so etwas wie eine universelle menschliche Sehnsucht nach einem bestimmten Raumerleben gibt, jenseits aller kulturellen Unterschiede?"
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Grundbedürfnisse nach Geborgenheit, Rückzug und einem Ort der Selbstvergewisserung scheinen tatsächlich kulturübergreifend zu sein, während die konkreten Formen, in denen sie sich materialisieren, unendlich vielfältig sind."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Frau Professorin Raum, als Architekturtheoretikerin und Kultursoziologin haben Sie eine faszinierende Doppelperspektive auf die Beziehung zwischen Menschen und ihren Wohnräumen."
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Verschränkung beider Disziplinen hat mir ermöglicht, Raum nicht nur als physisches Gebilde, sondern als soziales Konstrukt zu verstehen, das von Machtverhältnissen, kulturellen Normen und ökonomischen Bedingungen geformt wird."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Können Sie an einem konkreten Beispiel erläutern, wie sich gesellschaftliche Machtverhältnisse in der Gestaltung von Wohnräumen materialisieren?"
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ein eindrucksvolles Beispiel ist die geschlechtsspezifische Raumaufteilung in bürgerlichen Wohnungen des neunzehnten Jahrhunderts, wo die Zuweisung bestimmter Räume an Männer und Frauen die patriarchale Ordnung architektonisch zementierte."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Inwiefern hat die Digitalisierung und insbesondere die Verbreitung von Wohnplattformen wie Airbnb die Beziehung zwischen Wohnen und Identität verändert?"
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Airbnb hat zur Entstehung einer globalen Einheitsästhetik beigetragen, die ich als Algorithmic Interior bezeichne und die lokale Wohnkulturen zugunsten einer international anschlussfähigen Designsprache verdrängt."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Welche Rolle spielen soziale Medien bei der Standardisierung von Einrichtungsgeschmack und der Homogenisierung ästhetischer Vorstellungen über kulturelle Grenzen hinweg?"
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Instagram hat die Visualisierung des Wohnens demokratisiert, aber gleichzeitig eine normative Ästhetik etabliert, die Abweichungen vom visuell optimierten Standard implizit als geschmacklos diskreditiert."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wie bewerten Sie den aktuellen Trend zur Nachhaltigkeit im Wohnbereich: Handelt es sich um eine echte Transformation des Konsumverhaltens oder um eine neue Form des Greenwashing?"
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Beide Tendenzen existieren parallel; es gibt eine wachsende Minderheit, die ein genuines ökologisches Bewusstsein in ihre Einrichtungsentscheidungen einfließen lässt, aber auch eine massive Instrumentalisierung des Nachhaltigkeitsdiskurses durch die Möbelindustrie."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Frau Professorin Raum, wenn Sie ein einziges Buch empfehlen müssten, das die Verbindung von Wohnen und Kultur am überzeugendsten darstellt, welches wäre es?"
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Gaston Bachelards Poetik des Raumes, ein philosophisches Meisterwerk, das zeigt, wie tiefgreifend unsere frühesten Raumerfahrungen unser gesamtes Erleben und Denken prägen."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Abschließend: Glauben Sie, dass es so etwas wie eine universelle menschliche Sehnsucht nach einem bestimmten Raumerleben gibt, jenseits aller kulturellen Unterschiede?"
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Grundbedürfnisse nach Geborgenheit, Rückzug und einem Ort der Selbstvergewisserung scheinen tatsächlich kulturübergreifend zu sein, während die konkreten Formen, in denen sie sich materialisieren, unendlich vielfältig sind."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Frau Professorin Raum, als Architekturtheoretikerin und Kultursoziologin haben Sie eine faszinierende Doppelperspektive auf die Beziehung zwischen Menschen und ihren Wohnräumen."
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Verschränkung beider Disziplinen hat mir ermöglicht, Raum nicht nur als physisches Gebilde, sondern als soziales Konstrukt zu verstehen, das von Machtverhältnissen, kulturellen Normen und ökonomischen Bedingungen geformt wird."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Können Sie an einem konkreten Beispiel erläutern, wie sich gesellschaftliche Machtverhältnisse in der Gestaltung von Wohnräumen materialisieren?"
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ein eindrucksvolles Beispiel ist die geschlechtsspezifische Raumaufteilung in bürgerlichen Wohnungen des neunzehnten Jahrhunderts, wo die Zuweisung bestimmter Räume an Männer und Frauen die patriarchale Ordnung architektonisch zementierte."
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Ende des Hörverstehens."
       }
     ]
   },
@@ -226,7 +315,7 @@
       "id": "l-c2-goethe-016-t3-lo-1",
       "cefrLevel": "C2",
       "skill": "listening",
-      "canDoVi": "Toi co the luyen nghe hieu o trinh do C2 qua chu de \"Digitale Souveränität Europas\".",
+      "canDoVi": "Tôi có thể luyện nghe hiểu ở trình độ C2 qua chủ đề \"Digitale Souveränität Europas\".",
       "canDoDe": "Ich kann Hoeren auf Niveau C2 zum Thema \"Digitale Souveränität Europas\" ueben.",
       "linkedContentIds": [
         "L-C2-GOETHE-016-T3"

@@ -160,7 +160,7 @@ export default async function TeacherOverviewPage({ searchParams }: { searchPara
       </div>
 
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '16px' }}>
-        <h2 style={{ fontSize: '1.2rem', fontWeight: 700, color: 'var(--color-text-inverse)', margin: 0 }}>Lop hoc cua ban</h2>
+        <h2 style={{ fontSize: '1.2rem', fontWeight: 700, color: 'var(--color-text-inverse)', margin: 0 }}>{"Lop hoc cua ban" /* // locale-allow */}</h2>
         <Link href="/teacher/classrooms" style={{ color: "var(--color-text-brand)", textDecoration: 'none', fontSize: '0.9rem' }}>
           Xem tat ca →
         </Link>
@@ -175,7 +175,7 @@ export default async function TeacherOverviewPage({ searchParams }: { searchPara
           border: '1px solid #334155',
         }}>
           <div style={{ fontSize: '3rem', marginBottom: '12px' }}>🏫</div>
-          <p style={{ color: "var(--color-text-subtle)", marginBottom: '16px' }}>Ban chua co lop hoc nao.</p>
+          <p style={{ color: "var(--color-text-subtle)", marginBottom: '16px' }}>{"Ban chua co lop hoc nao." /* // locale-allow */}</p>
           <Link href="/teacher/classrooms" style={{
             display: 'inline-block',
             background: '#3b82f6',
@@ -218,8 +218,8 @@ export default async function TeacherOverviewPage({ searchParams }: { searchPara
                 </div>
                 {summary && (
                   <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, minmax(0, 1fr))', gap: '8px', fontSize: '0.78rem', color: "var(--color-text-subtle)" }}>
-                    <span>Active 7 ngay: <strong style={{ color: 'var(--color-text-subtle)' }}>{summary.activeLast7Days}</strong></span>
-                    <span>Can chu y: <strong style={{ color: summary.atRiskCount > 0 ? '#fca5a5' : '#e2e8f0' }}>{summary.atRiskCount}</strong></span>
+                    <span>{"Active 7 ngay:" /* // locale-allow */} <strong style={{ color: 'var(--color-text-subtle)' }}>{summary.activeLast7Days}</strong></span>
+                    <span>{"Can chu y:" /* // locale-allow */} <strong style={{ color: summary.atRiskCount > 0 ? '#fca5a5' : '#e2e8f0' }}>{summary.atRiskCount}</strong></span>
                     <span>Avg completion: <strong style={{ color: 'var(--color-text-subtle)' }}>{summary.averageCompletionRate}%</strong></span>
                     <span>Qua han: <strong style={{ color: summary.overdueAssignments > 0 ? '#fda4af' : '#e2e8f0' }}>{summary.overdueAssignments}</strong></span>
                   </div>

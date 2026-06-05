@@ -29,7 +29,7 @@
       "explanation": {
         "de": "Professor Richter erklärt, dass Deutsche ein starkes Bedürfnis nach Kontrolle haben und Bargeld ihnen das Gefühl gibt, die Finanzen buchstäblich in der Hand zu haben.",
         "vi": "Giáo sư Richter giải thích rằng người Đức có nhu cầu kiểm soát mạnh mẽ và tiền mặt mang lại cho họ cảm giác thực sự nắm giữ tài chính của mình.",
-        "key_evidence": "Deutsche haben ein starkes Bedürfnis nach Kontrolle. Bargeld gibt einem das Gefühl, die eigenen Finanzen buchstäblich in der Hand zu haben.",
+        "key_evidence": "Deutsche haben ein starkes Bedürfnis nach Kontrolle",
         "key_vocabulary": []
       }
     },
@@ -105,7 +105,7 @@
       "explanation": {
         "de": "Die Expertin bestätigt, dass die Sorge um den Datenschutz 'absolut berechtigt' ist und betont die Wichtigkeit einer strengen gesetzlichen Regulierung.",
         "vi": "Chuyên gia xác nhận rằng mối lo ngại về bảo vệ dữ liệu là 'hoàn toàn chính đáng' và nhấn mạnh tầm quan trọng của việc quy định pháp luật chặt chẽ.",
-        "key_evidence": "Die Sorge ist absolut berechtigt. Digitale Zahlungen erzeugen Datenspuren. Deshalb ist es wichtig, dass der gesetzliche Rahmen den Datenschutz bei Zahlungen streng reguliert.",
+        "key_evidence": "Die Sorge ist absolut berechtigt",
         "key_vocabulary": []
       }
     },
@@ -124,7 +124,7 @@
       "explanation": {
         "de": "Professor Richter glaubt nicht, dass Bargeld ganz verschwinden wird, aber es wird zur Ausnahme werden. Sie betont, dass das Recht auf Bargeld gesetzlich verankert werden muss.",
         "vi": "Giáo sư Richter không tin rằng tiền mặt sẽ biến mất hoàn toàn, nhưng nó sẽ trở thành ngoại lệ. Bà nhấn mạnh rằng quyền sử dụng tiền mặt phải được quy định trong luật pháp.",
-        "key_evidence": "Nein, ich glaube nicht. Aber es wird zur Ausnahme werden statt die Regel zu sein. Das Recht auf Bargeld muss aber gesetzlich verankert werden, damit niemand ausgeschlossen wird.",
+        "key_evidence": "Nein, ich glaube nicht",
         "key_vocabulary": []
       }
     }
@@ -168,129 +168,162 @@
     ]
   },
   "transcript": {
-    "type": "full_reconstructed_transcript",
+    "type": "studio_source_transcript",
     "status": "complete",
-    "source": "reconstructed_full_script",
-    "quality": "release_candidate_reconstructed",
-    "note": "Full learner-visible reconstructed script created from existing question evidence because original studio scripts are not present in the repository. Replace with studio transcript if original audio scripts become available.",
+    "source": "studio_source_script",
+    "quality": "source_verified",
+    "sourceScript": "data/scripts/B2/Teil2-Radiointerview-mit-Experte/L-B2-GOETHE-005-T2.json",
+    "note": "Transcript replaced from source script by scripts/apply-source-transcripts.ts.",
     "lines": [
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Im folgenden Hoertext geht es um Bargeldloses Bezahlen Pro und Contra. Achten Sie auf die zentrale Information."
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sie hören ein Interview. Dazu gibt es sechs Aufgaben. Kreuzen Sie die richtige Antwort an. Sie hören das Interview zweimal."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q1.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Guten Abend! Heute bei uns: Professor Dr. Eva Richter, Expertin für digitale Finanzsysteme."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Deutsche haben ein starkes Bedürfnis nach Kontrolle. Bargeld gibt einem das Gefühl, die eigenen Finanzen buchstäblich in der Hand zu haben.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Guten Abend. Das Thema bargeldloses Bezahlen bewegt die Menschen in Deutschland wie kaum ein anderes."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q1 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Frau Professor Richter, Deutschland gilt als besonders bargeldaffin. Warum ist das so?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q2.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das hat historische, kulturelle und psychologische Gründe. Deutsche haben ein starkes Bedürfnis nach Kontrolle."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Zehn Milliarden Euro! Das ist eine erstaunlich hohe Summe für Münzen und Scheine.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Was meinen Sie mit Kontrolle im Zusammenhang mit Bargeld?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q2 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Bargeld gibt einem das Gefühl, die eigenen Finanzen buchstäblich in der Hand zu haben."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q3.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Studien zeigen, dass Menschen beim Bezahlen mit Bargeld bewusster konsumieren und weniger ausgeben."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Und bei digitalen Zahlungen fallen diese Kosten weitgehend weg, was die Wirtschaft effizienter macht.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das klingt nach einem Argument für Bargeld. Gibt es auch Gegenargumente?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q3 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Natürlich. Bargeld verursacht hohe Kosten: Druck, Transport, Sicherheit, Automaten-Infrastruktur."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q4.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Bundesbank schätzt die Gesamtkosten des Bargeldverkehrs in Deutschland auf über zehn Milliarden jährlich."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Die Gewöhnung an das 'Dranhalten' der Karte oder des Smartphones wirkt nachhaltig.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Zehn Milliarden Euro! Das ist eine erstaunlich hohe Summe für Münzen und Scheine."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q4 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Und bei digitalen Zahlungen fallen diese Kosten weitgehend weg, was die Wirtschaft effizienter macht."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q5.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wie sieht der aktuelle Stand der bargeldlosen Zahlung in Deutschland aus?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Die Sorge ist absolut berechtigt. Digitale Zahlungen erzeugen Datenspuren. Deshalb ist es wichtig, dass der gesetzliche Rahmen den Datenschutz bei Zahlungen streng reguliert.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Im Jahr zweitausenddreiundzwanzig wurden erstmals mehr Transaktionen digital als bar getätigt."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q5 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das ist ein historischer Wendepunkt, der zeigt, dass sich das Verhalten rapide verändert."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q6.",
-        "linkedQuestionId": "Q6"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Welche Rolle spielt das kontaktlose Bezahlen bei diesem Wandel?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Nein, ich glaube nicht. Aber es wird zur Ausnahme werden statt die Regel zu sein. Das Recht auf Bargeld muss aber gesetzlich verankert werden, damit niemand ausgeschlossen wird.",
-        "linkedQuestionId": "Q6"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Eine zentrale Rolle. Seit der Pandemie hat sich kontaktloses Bezahlen in Deutschland verdreifacht."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q6 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q6"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Gewöhnung an das 'Dranhalten' der Karte oder des Smartphones wirkt nachhaltig."
       },
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Ende des Hoertexts."
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Was sagen Sie zum Thema Datenschutz? Das ist ein Hauptargument der Bargeld-Befürworter."
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Sorge ist absolut berechtigt. Digitale Zahlungen erzeugen Datenspuren."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Diese Daten können für Werbezwecke genutzt oder im schlimmsten Fall missbraucht werden."
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Deshalb ist es wichtig, dass der gesetzliche Rahmen den Datenschutz bei Zahlungen streng reguliert."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wird Bargeld in Deutschland jemals ganz verschwinden?"
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Nein, ich glaube nicht. Aber es wird zur Ausnahme werden statt die Regel zu sein."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "In zehn bis fünfzehn Jahren werden vermutlich achtzig Prozent aller Zahlungen digital erfolgen."
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das Recht auf Bargeld muss aber gesetzlich verankert werden, damit niemand ausgeschlossen wird."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Frau Professor Richter, herzlichen Dank für Ihre differenzierten Einschätzungen!"
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Gern geschehen! Behalten Sie die Kontrolle über Ihre Finanzen, egal ob bar oder digital."
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Ende Teil zwei."
       }
     ]
   },
@@ -307,7 +340,7 @@
       "id": "l-b2-goethe-005-t2-lo-1",
       "cefrLevel": "B2",
       "skill": "listening",
-      "canDoVi": "Toi co the luyen nghe hieu o trinh do B2 qua chu de \"Bargeldloses Bezahlen Pro und Contra\".",
+      "canDoVi": "Tôi có thể luyện nghe hiểu ở trình độ B2 qua chủ đề \"Bargeldloses Bezahlen Pro und Contra\".",
       "canDoDe": "Ich kann Hoeren auf Niveau B2 zum Thema \"Bargeldloses Bezahlen Pro und Contra\" ueben.",
       "linkedContentIds": [
         "L-B2-GOETHE-005-T2"

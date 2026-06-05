@@ -78,6 +78,7 @@ const RatingButtons = dynamic(() => import('./rating-buttons').then(mod => mod.R
 // ─── Main Component ─────────────────────────────────
 export function ReviewClient({ themes, availableLevels, initialLevel, dueCounts, totalDueAll }: ReviewClientProps) {
     const t = useTranslations('Gamification')
+    const tSrs = useTranslations('SRS')
     // State
     const [currentLevel, setCurrentLevel] = useState(initialLevel)
     const [currentThemes, setCurrentThemes] = useState(themes)
@@ -100,6 +101,8 @@ export function ReviewClient({ themes, availableLevels, initialLevel, dueCounts,
     const [lastRating, setLastRating] = useState<Rating | null>(null)
     const [srsStats, setSrsStats] = useState({ totalReviewed: 0, correct: 0, again: 0, xpEarned: 0 })
     const [srsComplete, setSrsComplete] = useState(false)
+    const [failedSyncs, setFailedSyncs] = useState<Array<{ cardId: string; rating: Rating; word: string }>>([])
+    const [isRetryingSync, setIsRetryingSync] = useState(false)
     const [currentDueCounts] = useState(dueCounts)
     const [currentTotalDue] = useState(totalDueAll)
     const srsAdvanceTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null)
@@ -239,7 +242,23 @@ export function ReviewClient({ themes, availableLevels, initialLevel, dueCounts,
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ cardId: card.id, rating, responseTimeMs: 0 }),
-            }).catch(console.error)
+            })
+                .then(async (res) => {
+                    if (!res.ok) {
+                        throw new Error('Sync failed')
+                    }
+                    const data = await res.json()
+                    if (!data.success) {
+                        throw new Error(data.error || 'Sync failed')
+                    }
+                })
+                .catch((err) => {
+                    console.error(err)
+                    setFailedSyncs(prev => {
+                        if (prev.some(item => item.cardId === card.id)) return prev
+                        return [...prev, { cardId: card.id, rating, word: card.vocabularyItem.word }]
+                    })
+                })
         }
 
         // 1. Optimistic Fast UI with Web Worker if available
@@ -271,16 +290,62 @@ export function ReviewClient({ themes, availableLevels, initialLevel, dueCounts,
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ cardId: card.id, rating, responseTimeMs: 0 }),
         })
-            .then(res => res.json())
+            .then(res => {
+                if (!res.ok) {
+                    throw new Error('Sync failed')
+                }
+                return res.json()
+            })
             .then(data => {
-                finishReview(data.data?.xpEarned ?? 0)
+                if (data.success) {
+                    finishReview(data.data?.xpEarned ?? 0)
+                } else {
+                    throw new Error(data.error || 'Sync failed')
+                }
             })
             .catch(err => {
                 console.error(err)
+                setFailedSyncs(prev => {
+                    if (prev.some(item => item.cardId === card.id)) return prev
+                    return [...prev, { cardId: card.id, rating, word: card.vocabularyItem.word }]
+                })
+                finishReview(rating === 'AGAIN' ? 0 : 10)
+            })
+            .finally(() => {
                 setIsSubmitting(false)
             })
 
     }, [srsCards, srsIndex, isSubmitting])
+
+    const retrySync = useCallback(async () => {
+        if (failedSyncs.length === 0 || isRetryingSync) return
+        setIsRetryingSync(true)
+        const itemsToRetry = [...failedSyncs]
+        const remaining: Array<{ cardId: string; rating: Rating; word: string }> = []
+
+        for (const item of itemsToRetry) {
+            try {
+                const res = await fetch('/api/v1/srs/review', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ cardId: item.cardId, rating: item.rating, responseTimeMs: 0 }),
+                })
+                if (!res.ok) {
+                    throw new Error('Sync failed')
+                }
+                const data = await res.json()
+                if (!data.success) {
+                    throw new Error(data.error || 'Sync failed')
+                }
+            } catch (err) {
+                console.error('Failed to sync card', item.cardId, err)
+                remaining.push(item)
+            }
+        }
+
+        setFailedSyncs(remaining)
+        setIsRetryingSync(false)
+    }, [failedSyncs, isRetryingSync])
 
     // ─── Back to themes ─────────────────────────────
     const backToThemes = () => {
@@ -300,6 +365,23 @@ export function ReviewClient({ themes, availableLevels, initialLevel, dueCounts,
 
         return (
             <div className="max-w-2xl mx-auto">
+                {failedSyncs.length > 0 && (
+                    <div className="mb-4 p-4 bg-amber-50 border border-amber-200 rounded-2xl flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-left">
+                        <div className="flex-1">
+                            <h3 className="text-sm font-bold text-amber-800">⚠️ Đồng bộ tiến trình thất bại ({failedSyncs.length} từ)</h3>
+                            <p className="text-xs text-amber-600">
+                                Không thể lưu trạng thái ôn tập cho: {failedSyncs.map(f => f.word).join(', ')}.
+                            </p>
+                        </div>
+                        <button
+                            onClick={retrySync}
+                            disabled={isRetryingSync}
+                            className="px-4 py-2 rounded-xl bg-amber-500 hover:bg-amber-600 text-white font-bold text-xs transition-all shadow-sm shrink-0"
+                        >
+                            {isRetryingSync ? 'Đang lưu...' : 'Thử lại'}
+                        </button>
+                    </div>
+                )}
                 {/* Back button + theme header */}
                 <div className="flex items-center gap-3 mb-6">
                     <button
@@ -350,7 +432,7 @@ export function ReviewClient({ themes, availableLevels, initialLevel, dueCounts,
                                 <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                                     <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
                                 </svg>
-                                Trước
+                                {tSrs('prevBtn')}
                             </button>
 
                             {!isFlipped && (
@@ -358,7 +440,7 @@ export function ReviewClient({ themes, availableLevels, initialLevel, dueCounts,
                                     onClick={() => setIsFlipped(true)}
                                     className={fuxieButtonClass('primary', 'lg', 'rounded-xl px-6 shadow-lg shadow-sky-200')}
                                 >
-                                    Lật thẻ ↻
+                                    {tSrs('flipCard')}
                                 </button>
                             )}
 
@@ -367,7 +449,7 @@ export function ReviewClient({ themes, availableLevels, initialLevel, dueCounts,
                                 disabled={currentIndex >= studyCards.length - 1}
                                 className={fuxieButtonClass('primary', 'lg', 'rounded-xl shadow-lg disabled:opacity-30')}
                             >
-                                Tiếp
+                                {tSrs('nextBtn')}
                                 <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                                     <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
                                 </svg>
@@ -376,12 +458,12 @@ export function ReviewClient({ themes, availableLevels, initialLevel, dueCounts,
 
                         {/* Keyboard hint */}
                         <p className="text-xs text-gray-400 text-center mt-4">
-                            Chạm vào thẻ để lật.
+                            {tSrs('tapToFlipDetail')}
                         </p>
                     </>
                 ) : (
                     <div className="text-center py-12">
-                        <p className="text-gray-500">Chủ đề này chưa có từ.</p>
+                        <p className="text-gray-500">{tSrs('noWordsInTopic')}</p>
                     </div>
                 )}
             </div>
@@ -403,7 +485,7 @@ export function ReviewClient({ themes, availableLevels, initialLevel, dueCounts,
                     <Mascot
                         variant={mascotVariant}
                         size={120}
-                        speechBubble={accuracy >= 80 ? 'Thành tích đáng nể! 🎉' : accuracy >= 50 ? 'Giữ vững phong độ! 🌟' : 'Không sao cả, thử lại lần nữa nhé! 💪'}
+                        speechBubble={accuracy >= 80 ? tSrs('speechBubbleExcellent') : accuracy >= 50 ? tSrs('speechBubbleGood') : tSrs('speechBubbleTryAgain')}
                     />
 
                     <RewardPreview
@@ -417,11 +499,11 @@ export function ReviewClient({ themes, availableLevels, initialLevel, dueCounts,
 
                     <div className="grid grid-cols-3 gap-3 mt-8 w-full">
                         <FuxiePanel variant="soft" className="p-4 text-center">
-                            <p className="text-xs text-gray-500 mb-1">✅ Đúng</p>
+                            <p className="text-xs text-gray-500 mb-1">{tSrs('correct')}</p>
                             <p className="text-2xl font-bold text-emerald-600">{srsStats.correct}</p>
                         </FuxiePanel>
                         <FuxiePanel variant="default" className="p-4 text-center ring-1 ring-red-100">
-                            <p className="text-xs text-gray-500 mb-1">❌ Luyện lại</p>
+                            <p className="text-xs text-gray-500 mb-1">{tSrs('practiceAgain')}</p>
                             <p className="text-2xl font-bold text-red-500">{srsStats.again}</p>
                         </FuxiePanel>
                         <FuxiePanel variant="default" className="p-4 text-center ring-1 ring-amber-100">
@@ -447,6 +529,23 @@ export function ReviewClient({ themes, availableLevels, initialLevel, dueCounts,
 
         return (
             <div className="max-w-2xl mx-auto">
+                {failedSyncs.length > 0 && (
+                    <div className="mb-4 p-4 bg-amber-50 border border-amber-200 rounded-2xl flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-left">
+                        <div className="flex-1">
+                            <h3 className="text-sm font-bold text-amber-800">⚠️ Đồng bộ tiến trình thất bại ({failedSyncs.length} từ)</h3>
+                            <p className="text-xs text-amber-600">
+                                Không thể lưu trạng thái ôn tập cho: {failedSyncs.map(f => f.word).join(', ')}.
+                            </p>
+                        </div>
+                        <button
+                            onClick={retrySync}
+                            disabled={isRetryingSync}
+                            className="px-4 py-2 rounded-xl bg-amber-500 hover:bg-amber-600 text-white font-bold text-xs transition-all shadow-sm shrink-0"
+                        >
+                            {isRetryingSync ? 'Đang lưu...' : 'Thử lại'}
+                        </button>
+                    </div>
+                )}
                 {/* Back + header */}
                 <div className="flex items-center gap-3 mb-6">
                     <button onClick={backToThemes} className="w-9 h-9 flex items-center justify-center rounded-xl bg-white border border-gray-200 text-gray-500 hover:text-gray-700 transition-colors">
@@ -455,8 +554,8 @@ export function ReviewClient({ themes, availableLevels, initialLevel, dueCounts,
                         </svg>
                     </button>
                     <div className="flex-1">
-                        <h2 className="text-lg font-bold text-gray-900">Ôn SRS</h2>
-                        <p className="text-xs text-gray-500">Ôn các thẻ đến hạn</p>
+                        <h2 className="text-lg font-bold text-gray-900">{tSrs('srsReviewTitle')}</h2>
+                        <p className="text-xs text-gray-500">{tSrs('srsReviewSubtitle')}</p>
                     </div>
                     <span className="text-sm font-bold text-text-brand">+{srsStats.xpEarned} XP</span>
                 </div>
@@ -494,7 +593,7 @@ export function ReviewClient({ themes, availableLevels, initialLevel, dueCounts,
 
                         {!srsFlipped && !lastRating && (
                             <p className="text-sm text-gray-400 animate-pulse">
-                                Chạm vào thẻ để xem đáp án.
+                                {tSrs('tapToSeeAnswer')}
                             </p>
                         )}
                     </div>
@@ -503,7 +602,7 @@ export function ReviewClient({ themes, availableLevels, initialLevel, dueCounts,
                         <FuxieCoach
                             role="reward"
                             eyebrow="Daily review clear"
-                            title="Không có thẻ đến hạn"
+                            title={tSrs('noDueCards')}
                             message="Tốt rồi, trí nhớ hôm nay đang an toàn. Bước hợp lý tiếp theo là học thêm một chủ đề nhỏ hoặc quay về tổng quan."
                         />
                         <FuxiePanel className="rounded-3xl p-5 ring-1 ring-slate-100">
@@ -530,6 +629,23 @@ export function ReviewClient({ themes, availableLevels, initialLevel, dueCounts,
     // ═════════════════════════════════════════════════
     return (
         <div>
+            {failedSyncs.length > 0 && (
+                <div className="mb-4 p-4 bg-amber-50 border border-amber-200 rounded-2xl flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-left">
+                    <div className="flex-1">
+                        <h3 className="text-sm font-bold text-amber-800">⚠️ Đồng bộ tiến trình thất bại ({failedSyncs.length} từ)</h3>
+                        <p className="text-xs text-amber-600">
+                            Không thể lưu trạng thái ôn tập cho: {failedSyncs.map(f => f.word).join(', ')}.
+                        </p>
+                    </div>
+                    <button
+                        onClick={retrySync}
+                        disabled={isRetryingSync}
+                        className="px-4 py-2 rounded-xl bg-amber-500 hover:bg-amber-600 text-white font-bold text-xs transition-all shadow-sm shrink-0"
+                    >
+                        {isRetryingSync ? 'Đang lưu...' : 'Thử lại'}
+                    </button>
+                </div>
+            )}
             <QuestProgressHero
                 variant="review"
                 eyebrow="Daily review ritual"
@@ -553,7 +669,7 @@ export function ReviewClient({ themes, availableLevels, initialLevel, dueCounts,
                             onClick={() => startSrsReview()}
                             className={fuxieButtonClass('primary', 'lg', 'rounded-2xl active:scale-[0.98]')}
                         >
-                            Ôn {dueInCurrentLevel} thẻ đến hạn
+                            {tSrs('reviewDueCardsBtn', { count: dueInCurrentLevel })}
                             <span className="rounded-lg bg-white/20 px-2 py-0.5 text-xs">+XP</span>
                         </button>
                     ) : currentThemes[0] ? (
@@ -561,15 +677,15 @@ export function ReviewClient({ themes, availableLevels, initialLevel, dueCounts,
                             onClick={() => startStudy(currentThemes[0]!)}
                             className={fuxieButtonClass('primary', 'lg', 'rounded-2xl active:scale-[0.98]')}
                         >
-                            Học chủ đề tiếp theo
-                            <span className="rounded-lg bg-white/20 px-2 py-0.5 text-xs">+từ mới</span>
+                            {tSrs('studyNextTopicBtn')}
+                            <span className="rounded-lg bg-white/20 px-2 py-0.5 text-xs">+{tSrs('addWord')}</span>
                         </button>
                     ) : (
                         <button
                             onClick={() => switchLevel(availableLevels[0] ?? currentLevel)}
                             className={fuxieButtonClass('secondary', 'lg', 'rounded-2xl bg-white/75')}
                         >
-                            Chọn cấp độ khác
+                            {tSrs('selectDifferentLevel')}
                         </button>
                     )}
                     <div className="text-xs font-bold text-text-brand">
@@ -658,12 +774,12 @@ export function ReviewClient({ themes, availableLevels, initialLevel, dueCounts,
                     <FuxieCoach
                         role="locked"
                         eyebrow="Memory route"
-                        title="Cấp độ này chưa có chủ đề ôn"
+                        title={tSrs('noTopicsInLevel')}
                         message={t('srsEmptyTip')}
                     />
                     <FuxiePanel className="rounded-3xl border-dashed border-slate-200 p-5">
-                        <p className="text-xs font-black uppercase tracking-wide text-text-brand">Next best action</p>
-                        <h3 className="mt-2 text-xl font-black text-slate-950">Chọn một cấp độ khác</h3>
+                        <p className="text-xs font-black uppercase tracking-wide text-text-brand">{tSrs('nextBestAction')}</p>
+                        <h3 className="mt-2 text-xl font-black text-slate-950">{tSrs('selectDifferentLevel')}</h3>
                         <p className="mt-2 text-sm font-medium leading-relaxed text-slate-500">
                             Cấp độ có chủ đề sẽ hiện số thẻ và tiến độ SRS ngay trong tab.
                         </p>

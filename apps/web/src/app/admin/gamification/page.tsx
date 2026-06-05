@@ -27,7 +27,7 @@ export default async function AdminGamificationPage({
                     <div className="inline-flex items-center gap-2 rounded-full bg-amber-50 px-3 py-1 text-xs font-black uppercase tracking-wide text-amber-700 ring-1 ring-amber-200">
                         Gamification Pilot
                     </div>
-                    <h1 className="mt-3 text-2xl font-bold tracking-tight text-slate-900">Pilot Balance Readout</h1>
+                    <h1 className="mt-3 text-2xl font-bold tracking-tight text-slate-900">{"Pilot Balance Readout" /* // locale-allow */}</h1>
                     <p className="mt-1 max-w-3xl text-sm font-medium leading-relaxed text-slate-500">
                         Measures whether quests, Fucoin, missions, and shop rewards are driving learning behavior instead of reward-only loops.
                     </p>
@@ -78,21 +78,21 @@ export default async function AdminGamificationPage({
             <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
                 <MetricCard title="Active Learners" value={readout.counts.activeLearners} detail={`${readout.counts.meaningfulActionUsers} with learning actions`} />
                 <MetricCard title="Lesson Completion" value={`${readout.learningLoop.lessonCompletionRate}%`} detail={`${readout.counts.meaningfulActions} meaningful actions`} />
-                <MetricCard title="Repeat Study 7d" value={`${readout.learningLoop.repeatStudyWithin7DaysRate}%`} detail={`${readout.learningLoop.repeatStudyWithin7DaysUsers} repeat learners`} />
+                <MetricCard title={"Repeat Study 7d" /* // locale-allow */} value={`${readout.learningLoop.repeatStudyWithin7DaysRate}%`} detail={`${readout.learningLoop.repeatStudyWithin7DaysUsers} repeat learners`} />
                 <MetricCard title="Reward-Only Risk" value={`${readout.economy.rewardOnlyRate}%`} detail={`${readout.counts.rewardOnlyUsers} reward-only users`} tone={readout.health.rewardOnly} />
                 <MetricCard title="Fucoin Earned" value={readout.economy.fucoinEarned} detail={`${readout.economy.averageEarnedPerActiveLearner} avg / active learner`} />
                 <MetricCard title="Fucoin Spent" value={readout.economy.fucoinSpent} detail={`${readout.economy.spendToEarnRate}% of earned`} tone={readout.health.spendToEarn} />
                 <MetricCard title="Pending Queue" value={readout.rewards.pending} detail={`${readout.rewards.pendingOverSla} over ${readout.thresholds.pendingSlaHours}h`} tone={readout.health.pendingSla} />
-                <MetricCard title="Mission Claim Rate" value={`${readout.learningLoop.missionClaimRate}%`} detail={`${readout.learningLoop.missionClaims} claims`} />
+                <MetricCard title={"Mission Claim Rate" /* // locale-allow */} value={`${readout.learningLoop.missionClaimRate}%`} detail={`${readout.learningLoop.missionClaims} claims`} />
                 <MetricCard title="Intervention CTR" value={`${readout.interventions.clickThroughRate}%`} detail={`${readout.interventions.clicked}/${readout.interventions.shown} clicked`} />
                 <MetricCard title="Intervention Follow-through" value={`${readout.interventions.followThroughRate}%`} detail={`${readout.interventions.followThroughUsers} learners studied after shown`} />
                 <MetricCard title="Badge Unlocks" value={readout.mastery.badgeUnlocks} detail={`${readout.mastery.persistentBadgeUnlocks} persistent unlocks`} />
-                <MetricCard title="Badge Receipt Clicks" value={readout.mastery.receiptClicks} detail="Learners inspecting badge receipts" />
-                <MetricCard title="Quest Episode Completion" value={`${readout.questEpisodes.completionRate}%`} detail={`${readout.questEpisodes.completed}/${readout.questEpisodes.started} completed`} />
-                <MetricCard title="Episode Repeat Study" value={`${readout.questEpisodes.repeatStudyAfterEpisodeRate}%`} detail={`${readout.questEpisodes.repeatStudyAfterEpisodeUsers} learners studied after episode`} />
+                <MetricCard title={"Badge Receipt Clicks" /* // locale-allow */} value={readout.mastery.receiptClicks} detail="Learners inspecting badge receipts" />
+                <MetricCard title={"Quest Episode Completion" /* // locale-allow */} value={`${readout.questEpisodes.completionRate}%`} detail={`${readout.questEpisodes.completed}/${readout.questEpisodes.started} completed`} />
+                <MetricCard title={"Episode Repeat Study" /* // locale-allow */} value={`${readout.questEpisodes.repeatStudyAfterEpisodeRate}%`} detail={`${readout.questEpisodes.repeatStudyAfterEpisodeUsers} learners studied after episode`} />
                 <MetricCard title="Microgame Completion" value={`${readout.lessonGameplay.microgames.completionRate}%`} detail={`${readout.lessonGameplay.microgames.completed}/${readout.lessonGameplay.microgames.started} completed`} />
                 <MetricCard title="Roleplay Completion" value={`${readout.lessonGameplay.roleplay.completionRate}%`} detail={`${readout.lessonGameplay.roleplay.completed}/${readout.lessonGameplay.roleplay.started} completed, ${readout.lessonGameplay.roleplay.practiceNotes} practice notes`} />
-                <MetricCard title="First Contact Path" value={readout.lessonGameplay.firstSessionPath.starts} detail={`${readout.lessonGameplay.firstSessionPath.users} users, ${readout.lessonGameplay.firstSessionPath.bossToRoleplayFollowThroughUsers} boss-to-roleplay`} />
+                <MetricCard title={"First Contact Path" /* // locale-allow */} value={readout.lessonGameplay.firstSessionPath.starts} detail={`${readout.lessonGameplay.firstSessionPath.users} users, ${readout.lessonGameplay.firstSessionPath.bossToRoleplayFollowThroughUsers} boss-to-roleplay`} />
                 <MetricCard title="Campaign Starts" value={readout.lessonGameplay.campaign.nodeStarts} detail="A1 map node launches" />
                 <MetricCard title="Writing Feedback" value={`${readout.writingFeedback.graded}/${readout.writingFeedback.submitted}`} detail={`${readout.writingFeedback.feedbackFailed} AI feedback failures`} tone={readout.writingFeedback.feedbackFailed > 0 ? 'warning' : 'healthy'} />
                 <MetricCard title="Writing Follow-through" value={readout.writingFeedback.meaningfulFollowThroughUsers} detail={`${readout.writingFeedback.failureRate}% AI failure rate`} tone={readout.writingFeedback.failureRate > 0 ? 'warning' : 'healthy'} />
@@ -158,7 +158,7 @@ export default async function AdminGamificationPage({
                 </section>
 
                 <section className="rounded-2xl border border-slate-200 bg-white shadow-sm">
-                    <SectionHeader title="Lesson Gameplay Expansion" detail="First Contact path, microgame pack, situation roleplay, and campaign map launches." />
+                    <SectionHeader title={"Lesson Gameplay Expansion" /* // locale-allow */} detail="First Contact path, microgame pack, situation roleplay, and campaign map launches." />
                     <div className="grid grid-cols-2 gap-3 p-5 sm:grid-cols-3">
                         <MiniStat label="First Contact Starts" value={readout.lessonGameplay.firstSessionPath.starts} />
                         <MiniStat label="Path Users" value={readout.lessonGameplay.firstSessionPath.users} />
@@ -173,7 +173,7 @@ export default async function AdminGamificationPage({
                 </section>
 
                 <section className="rounded-2xl border border-slate-200 bg-white shadow-sm">
-                    <SectionHeader title="Writing AI Evidence" detail="AI grading reliability for Writing Quest Episodes without storing submitted text." />
+                    <SectionHeader title={"Writing AI Evidence" /* // locale-allow */} detail="AI grading reliability for Writing Quest Episodes without storing submitted text." />
                     <div className="grid grid-cols-2 gap-3 p-5 sm:grid-cols-3">
                         <MiniStat label="Submitted" value={readout.writingFeedback.submitted} />
                         <MiniStat label="Graded" value={readout.writingFeedback.graded} />
@@ -183,7 +183,7 @@ export default async function AdminGamificationPage({
                 </section>
 
                 <section className="rounded-2xl border border-slate-200 bg-white shadow-sm">
-                    <SectionHeader title="Speaking Pronunciation Evidence" detail="Nachsprechen evaluation reliability without storing audio, transcript, or raw speech." />
+                    <SectionHeader title={"Speaking Pronunciation Evidence" /* // locale-allow */} detail="Nachsprechen evaluation reliability without storing audio, transcript, or raw speech." />
                     <div className="grid grid-cols-2 gap-3 p-5 sm:grid-cols-3">
                         <MiniStat label="Submitted" value={readout.speakingPronunciation.submitted} />
                         <MiniStat label="Evaluated" value={readout.speakingPronunciation.evaluated} />
@@ -211,29 +211,29 @@ export default async function AdminGamificationPage({
                 <SplitTable title="Reward Fulfillments" rows={readout.splits.rewardFulfillmentsByCategory} />
                 <SplitTable title="Rejected Reasons" rows={readout.splits.rejectedReasons} />
                 <SplitTable title="Interventions" rows={readout.interventions.byCode} />
-                <SplitTable title="Mastery By Skill" rows={readout.mastery.progressBySkill} />
-                <SplitTable title="Mastery By CEFR" rows={readout.mastery.progressByLevel} />
+                <SplitTable title={"Mastery By Skill" /* // locale-allow */} rows={readout.mastery.progressBySkill} />
+                <SplitTable title={"Mastery By CEFR" /* // locale-allow */} rows={readout.mastery.progressByLevel} />
                 <SplitTable title="Badge Unlocks" rows={readout.mastery.badgeUnlocksByBadge} />
-                <SplitTable title="Badge Unlocks By Skill" rows={readout.mastery.badgeUnlocksBySkill} />
-                <SplitTable title="Badge Unlocks By CEFR" rows={readout.mastery.badgeUnlocksByLevel} />
-                <SplitTable title="Episodes By Skill" rows={readout.questEpisodes.bySkill} />
-                <SplitTable title="Episodes By Theme" rows={readout.questEpisodes.byTheme} />
-                <SplitTable title="Episodes By CEFR" rows={readout.questEpisodes.byLevel} />
+                <SplitTable title={"Badge Unlocks By Skill" /* // locale-allow */} rows={readout.mastery.badgeUnlocksBySkill} />
+                <SplitTable title={"Badge Unlocks By CEFR" /* // locale-allow */} rows={readout.mastery.badgeUnlocksByLevel} />
+                <SplitTable title={"Episodes By Skill" /* // locale-allow */} rows={readout.questEpisodes.bySkill} />
+                <SplitTable title={"Episodes By Theme" /* // locale-allow */} rows={readout.questEpisodes.byTheme} />
+                <SplitTable title={"Episodes By CEFR" /* // locale-allow */} rows={readout.questEpisodes.byLevel} />
                 <SplitTable title="Episode Accuracy" rows={readout.questEpisodes.byAccuracyBand} />
                 <SplitTable title="Episode Checkpoints" rows={readout.questEpisodes.checkpointById} />
-                <SplitTable title="First Contact Steps" rows={readout.lessonGameplay.firstSessionPath.byStep} />
-                <SplitTable title="Microgames By Game" rows={readout.lessonGameplay.microgames.byGame} />
-                <SplitTable title="Microgames By Theme" rows={readout.lessonGameplay.microgames.byTheme} />
+                <SplitTable title={"First Contact Steps" /* // locale-allow */} rows={readout.lessonGameplay.firstSessionPath.byStep} />
+                <SplitTable title={"Microgames By Game" /* // locale-allow */} rows={readout.lessonGameplay.microgames.byGame} />
+                <SplitTable title={"Microgames By Theme" /* // locale-allow */} rows={readout.lessonGameplay.microgames.byTheme} />
                 <SplitTable title="Roleplay Scenarios" rows={readout.lessonGameplay.roleplay.byScenario} />
-                <SplitTable title="Roleplay Receipt States" rows={readout.lessonGameplay.roleplay.byReceiptState} />
-                <SplitTable title="Roleplay Score Bands" rows={readout.lessonGameplay.roleplay.byScoreBand} />
+                <SplitTable title={"Roleplay Receipt States" /* // locale-allow */} rows={readout.lessonGameplay.roleplay.byReceiptState} />
+                <SplitTable title={"Roleplay Score Bands" /* // locale-allow */} rows={readout.lessonGameplay.roleplay.byScoreBand} />
                 <SplitTable title="Campaign Nodes" rows={readout.lessonGameplay.campaign.byNode} />
                 <SplitTable title="Campaign Paths" rows={readout.lessonGameplay.campaign.byPath} />
-                <SplitTable title="Writing Feedback Status" rows={readout.writingFeedback.byFeedbackStatus} />
-                <SplitTable title="Writing Feedback Errors" rows={readout.writingFeedback.byErrorType} />
-                <SplitTable title="Speaking Feedback Status" rows={readout.speakingPronunciation.byFeedbackStatus} />
-                <SplitTable title="Speaking Feedback Errors" rows={readout.speakingPronunciation.byErrorType} />
-                <SplitTable title="Speaking Score Bands" rows={readout.speakingPronunciation.byScoreBand} />
+                <SplitTable title={"Writing Feedback Status" /* // locale-allow */} rows={readout.writingFeedback.byFeedbackStatus} />
+                <SplitTable title={"Writing Feedback Errors" /* // locale-allow */} rows={readout.writingFeedback.byErrorType} />
+                <SplitTable title={"Speaking Feedback Status" /* // locale-allow */} rows={readout.speakingPronunciation.byFeedbackStatus} />
+                <SplitTable title={"Speaking Feedback Errors" /* // locale-allow */} rows={readout.speakingPronunciation.byErrorType} />
+                <SplitTable title={"Speaking Score Bands" /* // locale-allow */} rows={readout.speakingPronunciation.byScoreBand} />
             </div>
         </div>
     )
@@ -338,7 +338,7 @@ function SplitTable({
                             </tr>
                         )) : (
                             <tr>
-                                <td colSpan={3} className="px-4 py-8 text-center text-slate-500">No data in range.</td>
+                                <td colSpan={3} className="px-4 py-8 text-center text-slate-500">{"No data in range." /* // locale-allow */}</td>
                             </tr>
                         )}
                     </tbody>

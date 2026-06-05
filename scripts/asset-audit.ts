@@ -317,9 +317,10 @@ function main(): void {
     const allOptimizedFiles = OPTIMIZED_ROOTS.flatMap((root) => listImagesRecursively(root))
     const entries = collectRegistryEntries()
     const registryValues = entries.map((e) => e.value)
+    const archive = parseArchiveEntries()
 
     // Coverage: how many optimized files on disk are referenced by the registry.
-    const coverage = computeCoverage(registryValues, allOptimizedFiles)
+    const coverage = computeCoverage(registryValues, allOptimizedFiles, archive.entries)
 
     // Referenced-but-missing-on-disk: useful diagnostic only.
     const referencedNotOnDisk: string[] = []
@@ -335,7 +336,6 @@ function main(): void {
     }
 
     // Orphans: optimized files on disk, not referenced, not archived.
-    const archive = parseArchiveEntries()
     const orphans = findOrphans(allOptimizedFiles, registryValues, archive.entries)
 
     // Forbidden folder references.

@@ -47,7 +47,7 @@
       "explanation": {
         "de": "Die Aussage ist richtig. Die Expertin bestätigt, dass viele Verzerrungen 'universal' und 'evolutionär tief verankert' sind (fundamentale Existenz). Der Moderator ergänzt, dass jedoch die 'Ausprägung variiert' (Manifestation ist kulturell geprägt), was die Expertin durch Beispiele untermauert.",
         "vi": "Phát biểu này đúng. Chuyên gia xác nhận rằng nhiều thiên kiến là 'phổ quát' và 'bám rễ sâu trong quá trình tiến hóa' (sự tồn tại cơ bản). Người điều hành bổ sung rằng tuy nhiên 'mức độ biểu hiện thì khác nhau' (sự biểu hiện bị ảnh hưởng bởi văn hóa), điều này được chuyên gia củng cố bằng các ví dụ.",
-        "key_evidence": "Viele Verzerrungen sind tatsächlich universal, weil sie evolutionär tief verankert sind im menschlichen Gehirn. [...] Aber die Ausprägung variiert: In kollektivistischen Kulturen ist der Gruppendenk-Bias stärker als in individualistischen.",
+        "key_evidence": "Viele Verzerrungen sind tatsächlich universal, weil sie evolutionär tief verankert sind im menschlichen Gehirn",
         "key_vocabulary": [
           {
             "word": "postulieren",
@@ -146,93 +146,172 @@
     ]
   },
   "transcript": {
-    "type": "full_reconstructed_transcript",
+    "type": "studio_source_transcript",
     "status": "complete",
-    "source": "reconstructed_full_script",
-    "quality": "release_candidate_reconstructed",
-    "note": "Full learner-visible reconstructed script created from existing question evidence because original studio scripts are not present in the repository. Replace with studio transcript if original audio scripts become available.",
+    "source": "studio_source_script",
+    "quality": "source_verified",
+    "sourceScript": "data/scripts/C1/Teil2-Experteninterview/L-C1-GOETHE-010-T2.json",
+    "note": "Transcript replaced from source script by scripts/apply-source-transcripts.ts.",
     "lines": [
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Der folgende anspruchsvolle Hoertext behandelt Psychologie der Entscheidungsfindung. Achten Sie auf Aussage, Kontext und implizite Bedeutung."
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sie hören ein Interview. Dazu gibt es neun Aufgaben. Stimmt die Aussage, stimmt sie nicht, oder wird dazu nichts gesagt? Sie hören das Interview zweimal."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q1.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Willkommen! Unsere Gesprächspartnerin ist die Verhaltensökonomin Professorin Dr. Christine Kaufmann von der Universität Zürich."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Die vollkommen rationale Entscheidung ist ein theoretisches Ideal, dem echte Menschen systematisch nicht entsprechen.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Vielen Dank! Die Entscheidungsforschung hat in den letzten zwanzig Jahren unser Verständnis menschlichen Handelns revolutioniert."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q1 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Frau Professorin Kaufmann, was verstehen Sie unter 'rationaler Entscheidung' und gibt es sie überhaupt?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q2.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die vollkommen rationale Entscheidung ist ein theoretisches Ideal, dem echte Menschen systematisch nicht entsprechen."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Viele Verzerrungen sind tatsächlich universal, weil sie evolutionär tief verankert sind im menschlichen Gehirn. [...] Aber die Ausprägung variiert: In kollektivistischen Kulturen ist der Gruppendenk-Bias stärker als in individualistischen.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wir haben begrenzte kognitive Kapazitäten, begrenzte Informationen und begrenzte Zeit für unsere täglichen Entscheidungen."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q2 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Herbert Simon hat dafür den Begriff 'bounded rationality', also begrenzte Rationalität, geprägt."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q3.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wie wirken sich kognitive Verzerrungen im Alltag konkret aus?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Das institutionalisiert den Widerspruch und verhindert Gruppendenken, das zu katastrophalen Fehlentscheidungen führen kann.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "In fast jeder wichtigen Lebensentscheidung: Partnerwahl, Berufswahl, Geldanlage und sogar Gesundheitsverhalten."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q3 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Der Optimismus-Bias lässt uns systematisch glauben, dass negative Ereignisse eher anderen als uns selbst zustoßen werden."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q4.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Deshalb unterschätzen wir Risiken wie Rauchen oder riskantes Autofahren und überschätzen unsere eigenen Fähigkeiten."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Ja, Transparenz ist entscheidend: Menschen müssen wissen, dass und wie sie gelenkt werden, und leicht widersprechen können.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Gibt es kulturelle Unterschiede bei kognitiven Verzerrungen oder sind sie universal?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q4 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Viele Verzerrungen sind tatsächlich universal, weil sie evolutionär tief verankert sind im menschlichen Gehirn."
       },
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Ende des Hoertexts."
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Aber die Ausprägung variiert: In kollektivistischen Kulturen ist der Gruppendenk-Bias stärker als in individualistischen."
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Westliche Gesellschaften neigen eher zum Overconfidence-Bias, also zur systematischen Überschätzung eigener Fähigkeiten."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wie können Organisationen bessere Entscheidungen treffen und kognitive Verzerrungen systematisch reduzieren?"
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Durch strukturierte Entscheidungsprozesse, diverse Teams und das bewusste Einholen von Gegenmeinungen."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Amazon hat die Regel eingeführt, dass bei jeder wichtigen Entscheidung jemand die Rolle des Advocatus Diaboli übernehmen muss."
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das institutionalisiert den Widerspruch und verhindert Gruppendenken, das zu katastrophalen Fehlentscheidungen führen kann."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Was ist Nudging und wie wird es in der Praxis bereits eingesetzt?"
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Nudging bezeichnet die Gestaltung von Entscheidungsarchitekturen, die Menschen zu besseren Entscheidungen 'stupsen'."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ein klassisches Beispiel: In Kantinen isst man gesünder, wenn das Obst auf Augenhöhe und die Süßigkeiten unten stehen."
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "In Großbritannien hat die 'Behavioural Insights Team'-Einheit der Regierung Nudging systematisch in der Politik eingesetzt."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das Ergebnis: höhere Steuertreue, mehr Organspenden und bessere Altersvorsorge, alles ohne Zwang und neue Gesetze."
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Gibt es ethische Grenzen des Nudging, die nicht überschritten werden sollten?"
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ja, Transparenz ist entscheidend: Menschen müssen wissen, dass und wie sie gelenkt werden, und leicht widersprechen können."
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Außerdem darf Nudging nicht gegen die wohlverstandenen eigenen Interessen der Menschen eingesetzt werden."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wie können wir als Individuen unsere eigenen Entscheidungen verbessern?"
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Erstens: Wichtige Entscheidungen nie unter Zeitdruck treffen. Zeitdruck aktiviert automatisches Denken und verstärkt Verzerrungen."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Zweitens: Aktiv nach Informationen suchen, die der eigenen Meinung widersprechen, um den Bestätigungsfehler zu reduzieren."
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Vielen Dank für dieses faszinierende Gespräch, Frau Professorin Kaufmann!"
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Ende Teil zwei."
       }
     ]
   },
@@ -249,7 +328,7 @@
       "id": "l-c1-goethe-010-t2-lo-1",
       "cefrLevel": "C1",
       "skill": "listening",
-      "canDoVi": "Toi co the luyen nghe hieu o trinh do C1 qua chu de \"Psychologie der Entscheidungsfindung\".",
+      "canDoVi": "Tôi có thể luyện nghe hiểu ở trình độ C1 qua chủ đề \"Psychologie der Entscheidungsfindung\".",
       "canDoDe": "Ich kann Hoeren auf Niveau C1 zum Thema \"Psychologie der Entscheidungsfindung\" ueben.",
       "linkedContentIds": [
         "L-C1-GOETHE-010-T2"

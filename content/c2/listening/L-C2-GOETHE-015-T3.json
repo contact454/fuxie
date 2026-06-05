@@ -58,7 +58,7 @@
       "explanation": {
         "de": "Die Aussage ist falsch. Der Experte stellt die offiziellen Zahlen vor, fügt aber explizit hinzu, dass die 'Dunkelziffer vermutlich noch höher liegt'. Das bedeutet, er geht davon aus, dass die offiziellen Statistiken die Realität unterrepräsentieren und somit nicht akkurat sind.",
         "vi": "Phát biểu này là sai. Vị chuyên gia trình bày các con số chính thức, nhưng nói rõ thêm rằng 'số ca không được báo cáo có lẽ còn cao hơn'. Điều này có nghĩa là ông cho rằng các thống kê chính thức không phản ánh đầy đủ thực tế và do đó không chính xác.",
-        "key_evidence": "...wobei die Dunkelziffer vermutlich noch höher liegt.",
+        "key_evidence": "wobei die Dunkelziffer vermutlich noch höher liegt.",
         "key_vocabulary": [
           "Dunkelziffer = nicht erfasste Fälle",
           "akkurat widerspiegeln = genau abbilden"
@@ -75,7 +75,7 @@
       "explanation": {
         "de": "Die Aussage ist richtig. Der Experte sagt, technologische Lösungen können 'Symptome lindern' (eine palliative Funktion), aber die 'grundlegende Antwort' (die kausale Lösung) müsse in der Umgestaltung der Städte liegen. Er differenziert also klar zwischen symptomatischer Behandlung und kausaler Problemlösung.",
         "vi": "Phát biểu này là đúng. Vị chuyên gia nói rằng các giải pháp công nghệ có thể 'làm giảm triệu chứng' (chức năng chăm sóc giảm nhẹ), nhưng 'câu trả lời cơ bản' (giải pháp tận gốc) phải nằm ở việc tái cấu trúc các thành phố. Do đó, ông phân biệt rõ ràng giữa việc điều trị triệu chứng và giải quyết nguyên nhân gốc rễ của vấn đề.",
-        "key_evidence": "Technologische Lösungen können Symptome lindern, aber die grundlegende Antwort muss in einer klimagerechten Umgestaltung unserer Städte liegen...",
+        "key_evidence": "Technologische Lösungen können Symptome lindern, aber die grundlegende Antwort muss in einer klimagerechten Umgestaltung unserer Städte liegen",
         "key_vocabulary": [
           "palliative Funktion = Symptome lindern",
           "kausale Ursache adressieren = die grundlegende Antwort"
@@ -122,93 +122,182 @@
     ]
   },
   "transcript": {
-    "type": "full_reconstructed_transcript",
+    "type": "studio_source_transcript",
     "status": "complete",
-    "source": "reconstructed_full_script",
-    "quality": "release_candidate_reconstructed",
-    "note": "Full learner-visible reconstructed script created from existing question evidence because original studio scripts are not present in the repository. Replace with studio transcript if original audio scripts become available.",
+    "source": "studio_source_script",
+    "quality": "source_verified",
+    "sourceScript": "data/scripts/C2/Teil3-Experteninterview-lang/L-C2-GOETHE-015-T3.json",
+    "note": "Transcript replaced from source script by scripts/apply-source-transcripts.ts.",
     "lines": [
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Der folgende anspruchsvolle Hoertext behandelt Architektur und kollektives Gedächtnis. Achten Sie auf Aussage, Kontext und implizite Bedeutung."
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sie hören ein ausführliches Interview. Dazu gibt es zehn Aufgaben. Kreuzen Sie die richtige Antwort an. Sie hören das Interview einmal."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q1.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Herr Professor Urban, Sie sind einer der renommiertesten Stadtklimatologien Europas und haben die Klimaanpassungsstrategie mehrerer deutscher Großstädte wissenschaftlich begleitet."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "In den letzten zwei Jahrzehnten hat sich mein Forschungsschwerpunkt von der deskriptiven Stadtklimatologie hin zu einer angewandten Transformationsforschung verlagert.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "In den letzten zwei Jahrzehnten hat sich mein Forschungsschwerpunkt von der deskriptiven Stadtklimatologie hin zu einer angewandten Transformationsforschung verlagert."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q1 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Welche stadtklimatologischen Parameter sind aus Ihrer Sicht entscheidend für die Lebensqualität in einer zunehmend von Hitzeperioden betroffenen Stadt?"
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q2.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Neben der Lufttemperatur sind die Strahlungstemperatur, die Luftfeuchtigkeit und die Windgeschwindigkeit maßgeblich für das thermische Wohlbefinden, wobei die gefühlte Temperatur von der meteorologisch gemessenen erheblich abweichen kann."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "answer_evidence",
-        "text": "Die Integration gelingt am besten, wenn Stadtklimatologien von Anfang an in die Bebauungsplanverfahren einbezogen werden und nicht erst als Gutachter hinzugezogen werden, wenn die wesentlichen Entscheidungen bereits gefallen sind.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Inwieweit lassen sich die Methoden und Werkzeuge der Stadtklimatologie in die praktische Stadtplanung integrieren, und welche institutionellen Voraussetzungen müssen dafür geschaffen werden?"
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q2 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Integration gelingt am besten, wenn Stadtklimatologien von Anfang an in die Bebauungsplanverfahren einbezogen werden und nicht erst als Gutachter hinzugezogen werden, wenn die wesentlichen Entscheidungen bereits gefallen sind."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q3.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Können Sie eine quantitative Abschätzung geben, wie stark die Mortalität während der Hitzesommer der letzten Jahre im Vergleich zu den Durchschnittsjahren zugenommen hat?"
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "answer_evidence",
-        "text": "...wobei die Dunkelziffer vermutlich noch höher liegt.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "In den Hitzesommern zweitausendachtzehn bis zweitausendzweiundzwanzig verzeichneten wir in Deutschland jeweils zwischen achttausend und fünfundzwanzigtausend hitzebedingte Zusatztodesfälle, wobei die Dunkelziffer vermutlich noch höher liegt."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q3 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Welche konkreten Maßnahmen empfehlen Sie Privatpersonen, um sich und ihre Familien vor den gesundheitlichen Folgen extremer Hitze in der Stadt zu schützen?"
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q4.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Verdunklungssysteme an Fenstern, Querlüftung in den frühen Morgenstunden, ausreichende Flüssigkeitszufuhr und das Aufsuchen klimatisierter öffentlicher Gebäude sind die wichtigsten individuellen Anpassungsmaßnahmen."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "answer_evidence",
-        "text": "Technologische Lösungen können Symptome lindern, aber die grundlegende Antwort muss in einer klimagerechten Umgestaltung unserer Städte liegen...",
-        "linkedQuestionId": "Q4"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wie bewerten Sie die Rolle von Technologien wie Geoengineering oder großflächiger Klimatisierung als Antwort auf die urbane Überhitzung?"
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q4 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Technologische Lösungen können Symptome lindern, aber die grundlegende Antwort muss in einer klimagerechten Umgestaltung unserer Städte liegen, die sowohl präventiv als auch adaptiv wirkt."
       },
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Ende des Hoertexts."
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Herr Professor Urban, wenn Sie eine einzige Maßnahme für alle deutschen Städte verbindlich vorschreiben könnten, welche wäre es?"
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ein verbindlicher Mindestanteil von dreißig Prozent Grünfläche in jedem Neubauquartier, denn Vegetation ist die wirksamste, kostengünstigste und zugleich ästhetisch ansprechendste Maßnahme gegen urbane Überhitzung."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Herr Professor Urban, Sie sind einer der renommiertesten Stadtklimatologien Europas und haben die Klimaanpassungsstrategie mehrerer deutscher Großstädte wissenschaftlich begleitet."
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "In den letzten zwei Jahrzehnten hat sich mein Forschungsschwerpunkt von der deskriptiven Stadtklimatologie hin zu einer angewandten Transformationsforschung verlagert."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Welche stadtklimatologischen Parameter sind aus Ihrer Sicht entscheidend für die Lebensqualität in einer zunehmend von Hitzeperioden betroffenen Stadt?"
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Neben der Lufttemperatur sind die Strahlungstemperatur, die Luftfeuchtigkeit und die Windgeschwindigkeit maßgeblich für das thermische Wohlbefinden, wobei die gefühlte Temperatur von der meteorologisch gemessenen erheblich abweichen kann."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Inwieweit lassen sich die Methoden und Werkzeuge der Stadtklimatologie in die praktische Stadtplanung integrieren, und welche institutionellen Voraussetzungen müssen dafür geschaffen werden?"
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Integration gelingt am besten, wenn Stadtklimatologien von Anfang an in die Bebauungsplanverfahren einbezogen werden und nicht erst als Gutachter hinzugezogen werden, wenn die wesentlichen Entscheidungen bereits gefallen sind."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Können Sie eine quantitative Abschätzung geben, wie stark die Mortalität während der Hitzesommer der letzten Jahre im Vergleich zu den Durchschnittsjahren zugenommen hat?"
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "In den Hitzesommern zweitausendachtzehn bis zweitausendzweiundzwanzig verzeichneten wir in Deutschland jeweils zwischen achttausend und fünfundzwanzigtausend hitzebedingte Zusatztodesfälle, wobei die Dunkelziffer vermutlich noch höher liegt."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Welche konkreten Maßnahmen empfehlen Sie Privatpersonen, um sich und ihre Familien vor den gesundheitlichen Folgen extremer Hitze in der Stadt zu schützen?"
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Verdunklungssysteme an Fenstern, Querlüftung in den frühen Morgenstunden, ausreichende Flüssigkeitszufuhr und das Aufsuchen klimatisierter öffentlicher Gebäude sind die wichtigsten individuellen Anpassungsmaßnahmen."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wie bewerten Sie die Rolle von Technologien wie Geoengineering oder großflächiger Klimatisierung als Antwort auf die urbane Überhitzung?"
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Technologische Lösungen können Symptome lindern, aber die grundlegende Antwort muss in einer klimagerechten Umgestaltung unserer Städte liegen, die sowohl präventiv als auch adaptiv wirkt."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Herr Professor Urban, wenn Sie eine einzige Maßnahme für alle deutschen Städte verbindlich vorschreiben könnten, welche wäre es?"
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ein verbindlicher Mindestanteil von dreißig Prozent Grünfläche in jedem Neubauquartier, denn Vegetation ist die wirksamste, kostengünstigste und zugleich ästhetisch ansprechendste Maßnahme gegen urbane Überhitzung."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Herr Professor Urban, Sie sind einer der renommiertesten Stadtklimatologien Europas und haben die Klimaanpassungsstrategie mehrerer deutscher Großstädte wissenschaftlich begleitet."
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "In den letzten zwei Jahrzehnten hat sich mein Forschungsschwerpunkt von der deskriptiven Stadtklimatologie hin zu einer angewandten Transformationsforschung verlagert."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Welche stadtklimatologischen Parameter sind aus Ihrer Sicht entscheidend für die Lebensqualität in einer zunehmend von Hitzeperioden betroffenen Stadt?"
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Neben der Lufttemperatur sind die Strahlungstemperatur, die Luftfeuchtigkeit und die Windgeschwindigkeit maßgeblich für das thermische Wohlbefinden, wobei die gefühlte Temperatur von der meteorologisch gemessenen erheblich abweichen kann."
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Ende des Hörverstehens."
       }
     ]
   },
@@ -225,7 +314,7 @@
       "id": "l-c2-goethe-015-t3-lo-1",
       "cefrLevel": "C2",
       "skill": "listening",
-      "canDoVi": "Toi co the luyen nghe hieu o trinh do C2 qua chu de \"Architektur und kollektives Gedächtnis\".",
+      "canDoVi": "Tôi có thể luyện nghe hiểu ở trình độ C2 qua chủ đề \"Architektur und kollektives Gedächtnis\".",
       "canDoDe": "Ich kann Hoeren auf Niveau C2 zum Thema \"Architektur und kollektives Gedächtnis\" ueben.",
       "linkedContentIds": [
         "L-C2-GOETHE-015-T3"

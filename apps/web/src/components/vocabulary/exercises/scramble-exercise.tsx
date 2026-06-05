@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useCallback, useEffect, useRef } from 'react'
+import { useTranslations } from 'next-intl'
 import { ExerciseProgress } from './exercise-progress'
 import { ExerciseResults } from './exercise-results'
 import { useExerciseTimer } from '@/hooks/use-exercise-timer'
@@ -36,6 +37,7 @@ interface ScrambleExerciseProps {
 
 // ─── Component ──────────────────────────────────────
 export function ScrambleExercise({ questions, cefrLevel, themeName: _themeName, themeSlug, onExit, onComplete: _onComplete }: ScrambleExerciseProps) {
+    const t = useTranslations('Vocabulary')
     const [currentIndex, setCurrentIndex] = useState(0)
     const [availableWords, setAvailableWords] = useState<string[]>([])
     const [selectedWords, setSelectedWords] = useState<string[]>([])
@@ -162,8 +164,8 @@ export function ScrambleExercise({ questions, cefrLevel, themeName: _themeName, 
                 <div className={exerciseStageInnerClass}>
                     {/* Instruction */}
                     <div className="text-center mb-6">
-                        <h2 className="text-lg font-black text-slate-950">Sắp xếp các từ</h2>
-                        <p className="mt-1 text-sm font-semibold text-slate-500">Bilde den richtigen Satz</p>
+                        <h2 className="text-lg font-black text-slate-950">{t('scrambleTitle')}</h2>
+                        <p className="mt-1 text-sm font-semibold text-slate-500">{t('scrambleInstruction')}</p>
                     </div>
 
                     {/* Vietnamese translation hint */}
@@ -176,7 +178,7 @@ export function ScrambleExercise({ questions, cefrLevel, themeName: _themeName, 
                     {/* Construction zone — selected words */}
                     <div className={exerciseConstructionZoneClass({ active: selectedWords.length > 0, revealed: isRevealed, className: 'mb-6' })}>
                         {selectedWords.length === 0 ? (
-                            <p className="py-2 text-center text-sm font-semibold text-slate-400">Chạm vào các từ bên dưới</p>
+                            <p className="py-2 text-center text-sm font-semibold text-slate-400">{t('scrambleHint')}</p>
                         ) : (
                             <div className="flex flex-wrap gap-2">
                                 {selectedWords.map((word, i) => (
@@ -195,7 +197,7 @@ export function ScrambleExercise({ questions, cefrLevel, themeName: _themeName, 
                         {/* Feedback */}
                         {isRevealed && (
                             <div className="mt-3 pt-3 border-t border-current/10">
-                                <p className="text-sm font-semibold text-text-brand">Đã lưu câu trả lời</p>
+                                <p className="text-sm font-semibold text-text-brand">{t('savedAnswer')}</p>
                             </div>
                         )}
                     </div>

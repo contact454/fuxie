@@ -1,6 +1,7 @@
 'use client'
 
 import React, { useState, useCallback, useMemo, useEffect } from 'react'
+import { useTranslations } from 'next-intl'
 import dynamic from 'next/dynamic'
 import type { TheoryBlock, GrammarExercise } from '@/components/grammar/types'
 import s from '@/components/grammar/grammar.module.css'
@@ -243,6 +244,7 @@ type Step =
 
 // ─── Main Mocktest Page ──────────────────────────────
 export default function GrammarMocktestPage() {
+  const t = useTranslations('Grammar')
   const [steps] = useState<Step[]>(() => {
     const all: Step[] = [{ type: 'hero' }]
     SAMPLE_THEORY.forEach((_, i) => all.push({ type: 'theory', blockIndex: i }))
@@ -333,7 +335,7 @@ export default function GrammarMocktestPage() {
   const formatTime = (secs: number) => {
     const m = Math.floor(secs / 60)
     const s2 = secs % 60
-    return `${m} phút ${s2 < 10 ? '0' : ''}${s2} giây`
+    return `${m} ${t('minutes')} ${s2 < 10 ? '0' : ''}${s2} ${t('seconds')}`
   }
 
   return (
@@ -361,16 +363,16 @@ export default function GrammarMocktestPage() {
         <div className={s.heroCard}>
           <div className={s.heroGradient}>
             <span className={s.heroEmoji}>📖</span>
-            <h1 className={s.heroTitle}>Thì hiện tại — Präsens</h1>
-            <p className={s.heroSubtitle}>Bài E-01 · A1</p>
+            <h1 className={s.heroTitle}>{t('presentTense')}</h1>
+            <p className={s.heroSubtitle}>{t('lessonMeta')}</p>
             <div className={s.heroChips}>
-              <span className={s.heroChip}>📝 {SAMPLE_THEORY.length} phần lý thuyết</span>
-              <span className={s.heroChip}>🎯 {totalExercises} thử thách</span>
-              <span className={s.heroChip}>⏱️ ~6 phút</span>
+              <span className={s.heroChip}>📝 {t('theoryCount', { count: SAMPLE_THEORY.length })}</span>
+              <span className={s.heroChip}>🎯 {t('challengeCount', { count: totalExercises })}</span>
+              <span className={s.heroChip}>{t('estTime')}</span>
             </div>
           </div>
           <button className={s.heroStartBtn} onClick={goNext}>
-            Bắt đầu học →
+            {t('startLearningBtn')}
           </button>
         </div>
       )}
@@ -384,7 +386,7 @@ export default function GrammarMocktestPage() {
           <div className={s.stepFooter}>
             <div className={s.stepFooterInner}>
               <button className={`${s.btnPrimary} ${s.btnBlue}`} onClick={goNext}>
-                {currentStep.blockIndex === SAMPLE_THEORY.length - 1 ? '🎯 Bắt đầu thử thách' : 'Tiếp bước →'}
+                {currentStep.blockIndex === SAMPLE_THEORY.length - 1 ? t('startChallengeBtn') : t('nextStepBtn')}
               </button>
             </div>
           </div>
@@ -406,7 +408,7 @@ export default function GrammarMocktestPage() {
       {/* ═══ RESULTS SCREEN ═══ */}
       {currentStep.type === 'results' && (
         <div className={s.resultsScreen}>
-          <h1 className={s.resultsTitle}>🎉 Hoàn thành!</h1>
+          <h1 className={s.resultsTitle}>{t('completed')}</h1>
           <ScoreRing correct={correctCount} total={totalExercises} />
           <div className={s.starsRow}>
             {[1, 2, 3].map(i => (
@@ -425,22 +427,22 @@ export default function GrammarMocktestPage() {
           </div>
           {strengths.length > 0 && (
             <div className={s.strengthSection}>
-              <div className={`${s.strengthHeader} ${s.strengthGood}`}>✅ Làm tốt</div>
-              {strengths.map(t => <div key={t} className={s.strengthItem}>{t}</div>)}
+              <div className={`${s.strengthHeader} ${s.strengthGood}`}>{t('goodJob')}</div>
+              {strengths.map(tag => <div key={tag} className={s.strengthItem}>{tag}</div>)}
             </div>
           )}
           {weaknesses.length > 0 && (
             <div className={s.strengthSection}>
-              <div className={`${s.strengthHeader} ${s.strengthWeak}`}>⚠️ Cần ôn</div>
-              {weaknesses.map(t => <div key={t} className={s.strengthItem}>{t}</div>)}
+              <div className={`${s.strengthHeader} ${s.strengthWeak}`}>{t('needReview')}</div>
+              {weaknesses.map(tag => <div key={tag} className={s.strengthItem}>{tag}</div>)}
             </div>
           )}
           <div className={s.resultsBtns}>
             <button className={`${s.btnPrimary} ${s.btnBlue}`} onClick={handleRestart}>
-              🔄 Làm lại
+              {t('retryBtn')}
             </button>
             <button className={`${s.btnPrimary} ${s.btnOutline}`} onClick={() => window.history.back()}>
-              → Quay lại
+              {t('backBtn')}
             </button>
           </div>
         </div>

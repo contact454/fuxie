@@ -100,57 +100,162 @@
     ]
   },
   "transcript": {
-    "type": "full_reconstructed_transcript",
+    "type": "studio_source_transcript",
     "status": "complete",
-    "source": "reconstructed_full_script",
-    "quality": "release_candidate_reconstructed",
-    "note": "Full learner-visible reconstructed script created from existing question evidence because original studio scripts are not present in the repository. Replace with studio transcript if original audio scripts become available.",
+    "source": "studio_source_script",
+    "quality": "source_verified",
+    "sourceScript": "data/scripts/C1/Teil4-Vortrag/L-C1-GOETHE-006-T4.json",
+    "note": "Transcript replaced from source script by scripts/apply-source-transcripts.ts.",
     "lines": [
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Der folgende anspruchsvolle Hoertext behandelt Digitalisierung im Bildungswesen. Achten Sie auf Aussage, Kontext und implizite Bedeutung."
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sie hören einen Vortrag. Dazu gibt es sieben Aufgaben. Kreuzen Sie die richtige Antwort an. Sie hören den Vortrag einmal."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe C1H4_Q1.",
-        "linkedQuestionId": "C1H4_Q1"
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Meine Damen und Herren, herzlich willkommen zu meinem Vortrag über die Zukunft des Lernens im digitalen Zeitalter."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "KI-Tutoren werden niemals die menschliche Lehrkraft ersetzen, aber sie können sie bei Routineaufgaben entlasten.",
-        "linkedQuestionId": "C1H4_Q1"
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ich vertrete die These, dass wir am Beginn einer fundamentalen Transformation des Bildungssystems stehen."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe C1H4_Q1 im Kontext des Hoertexts.",
-        "linkedQuestionId": "C1H4_Q1"
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Digitalisierung wird das Lernen so grundlegend verändern wie die Erfindung des Buchdrucks vor sechshundert Jahren."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe C1H4_Q2.",
-        "linkedQuestionId": "C1H4_Q2"
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Lassen Sie mich zunächst die vier großen Trends identifizieren, die diese Transformation antreiben."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Die größte Herausforderung ist die digitale Ungleichheit, die das bestehende Bildungsgefälle zu verschärfen droht.",
-        "linkedQuestionId": "C1H4_Q2"
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Erstens: Personalisiertes Lernen durch adaptive Systeme, die den Unterricht an den individuellen Lernstand anpassen."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe C1H4_Q2 im Kontext des Hoertexts.",
-        "linkedQuestionId": "C1H4_Q2"
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Intelligente Lernsoftware kann bereits heute erkennen, wo ein Schüler Schwierigkeiten hat und gezielt Übungen anbieten."
       },
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Ende des Hoertexts."
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das ist eine Revolution, denn im traditionellen Unterricht muss eine einzelne Lehrkraft dreißig verschiedene Lernniveaus bedienen."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Zweitens: Immersives Lernen durch Virtual und Augmented Reality, das abstrakte Konzepte erfahrbar und greifbar macht."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Stellen Sie sich vor, Schüler könnten durch eine mittelalterliche Stadt spazieren statt nur darüber zu lesen."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Oder sie könnten chemische Reaktionen in einem virtuellen Labor beobachten, das beliebig oft genutzt werden kann."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Drittens: Kollaboratives Lernen über digitale Plattformen, das örtliche und zeitliche Grenzen des Klassenzimmers aufhebt."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Schüler aus verschiedenen Ländern können gemeinsam an Projekten arbeiten und voneinander lernen."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Viertens: Künstliche Intelligenz als persönlicher Tutor, der rund um die Uhr verfügbar und unendlich geduldig ist."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "KI-Tutoren werden niemals die menschliche Lehrkraft ersetzen, aber sie können sie bei Routineaufgaben entlasten."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Lassen Sie mich nun auf die Herausforderungen eingehen, die mit diesen vielversprechenden Trends verbunden sind."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die größte Herausforderung ist die digitale Ungleichheit, die das bestehende Bildungsgefälle zu verschärfen droht."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Kinder aus einkommensschwachen Familien haben oft keinen Zugang zu schnellem Internet und modernen Endgeräten."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wenn Bildung zunehmend digital wird, werden diese Kinder systematisch benachteiligt und ausgeschlossen."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Hier muss der Staat intervenieren und digitale Infrastruktur als Teil der öffentlichen Daseinsvorsorge bereitstellen."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die zweite Herausforderung betrifft den Datenschutz und die ethische Nutzung von Schülerdaten."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Adaptive Lernsysteme sammeln enorme Mengen sensibler Daten über das Lernverhalten und die Schwächen von Kindern."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wer hat Zugang zu diesen Daten, wie werden sie geschützt und wer profitiert von ihrer Analyse?"
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die dritte Herausforderung ist die Ausbildung und Weiterqualifizierung der Lehrkräfte für die digitale Schule."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ein Technologiewandel ohne qualifiziertes Personal ist zum Scheitern verurteilt und verschwendet öffentliche Mittel."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wir brauchen massive Investitionen in die Fort- und Weiterbildung und eine Reform der Lehrerausbildung."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Abschließend möchte ich betonen: Die Technologie allein wird die Bildung nicht verbessern."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Es sind immer die Menschen, die Lehrkräfte, die den Unterschied machen, ob Technologie das Lernen bereichert."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Vielen Dank! Investieren wir in Menschen und Maschinen gleichermaßen, dann wird die digitale Bildung gelingen."
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Ende des Hörverstehens."
       }
     ]
   },
@@ -167,7 +272,7 @@
       "id": "l-c1-goethe-006-t4-lo-1",
       "cefrLevel": "C1",
       "skill": "listening",
-      "canDoVi": "Toi co the luyen nghe hieu o trinh do C1 qua chu de \"Digitalisierung im Bildungswesen\".",
+      "canDoVi": "Tôi có thể luyện nghe hiểu ở trình độ C1 qua chủ đề \"Digitalisierung im Bildungswesen\".",
       "canDoDe": "Ich kann Hoeren auf Niveau C1 zum Thema \"Digitalisierung im Bildungswesen\" ueben.",
       "linkedContentIds": [
         "L-C1-GOETHE-006-T4"

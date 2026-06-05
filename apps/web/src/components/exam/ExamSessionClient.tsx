@@ -50,6 +50,7 @@
 
 import { useCallback, useEffect, useRef, useState } from 'react'
 import { useRouter } from 'next/navigation'
+import { useTranslations } from 'next-intl'
 
 import { ExamInProgressChrome } from './ExamInProgressChrome'
 import { ExamResultRewardLoop, type ExamSubmitResult } from './ExamResultRewardLoop'
@@ -228,6 +229,7 @@ function ExamActiveSession({
     onSubmitFail,
     onSubmitSuccess,
 }: ExamActiveSessionProps) {
+    const tExam = useTranslations('Exam')
     const [currentSectionIdx, setCurrentSectionIdx] = useState(0)
     const [currentTaskIdx, setCurrentTaskIdx] = useState(0)
     const [answers, setAnswers] = useState<
@@ -519,7 +521,7 @@ function ExamActiveSession({
                 <div
                     role="dialog"
                     aria-modal="true"
-                    aria-label="Xác nhận nộp bài"
+                    aria-label={tExam('session.submitConfirmAria')}
                     className="fixed inset-0 z-50 flex items-center justify-center bg-[color:rgba(23,59,86,0.45)] px-4"
                 >
                     <div className="w-full max-w-sm rounded-2xl border border-[var(--fuxie-blue-200)] bg-white p-6 shadow-xl">
@@ -574,7 +576,7 @@ function ExamActiveSession({
                     role="alertdialog"
                     aria-modal="false"
                     aria-live="polite"
-                    aria-label="Mất kết nối"
+                    aria-label={tExam('session.disconnectAria')}
                     data-role="exam-offline-overlay"
                     className="fixed inset-x-0 bottom-24 z-40 mx-auto w-[min(420px,calc(100%-2rem))] rounded-2xl border border-[var(--fuxie-blue-200)] bg-white px-4 py-3 shadow-lg"
                 >

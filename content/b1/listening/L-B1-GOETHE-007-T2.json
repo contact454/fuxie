@@ -105,7 +105,7 @@
       "explanation": {
         "de": "Jeder Bewohner ist eingeladen, einen Salat oder Kuchen mitzubringen. Getränke und ein Grill werden von der Hausgemeinschaft gestellt.",
         "vi": "Mỗi cư dân được mời mang theo một món salad hoặc bánh ngọt. Đồ uống và đồ nướng sẽ do cộng đồng dân cư cung cấp.",
-        "key_evidence": "Jeder Bewohner ist eingeladen, einen Salat oder Kuchen mitzubringen. Für Getränke und einen Grill sorgt die Hausgemeinschaft aus der gemeinsamen Kasse.",
+        "key_evidence": "Jeder Bewohner ist eingeladen, einen Salat oder Kuchen mitzubringen.",
         "key_vocabulary": []
       }
     }
@@ -149,111 +149,147 @@
     ]
   },
   "transcript": {
-    "type": "full_reconstructed_transcript",
+    "type": "studio_source_transcript",
     "status": "complete",
-    "source": "reconstructed_full_script",
-    "quality": "release_candidate_reconstructed",
-    "note": "Full learner-visible reconstructed script created from existing question evidence because original studio scripts are not present in the repository. Replace with studio transcript if original audio scripts become available.",
+    "source": "studio_source_script",
+    "quality": "source_verified",
+    "sourceScript": "data/scripts/B1/Teil2-Fuehrung-oder-Monolog/L-B1-GOETHE-007-T2.json",
+    "note": "Transcript replaced from source script by scripts/apply-source-transcripts.ts.",
     "lines": [
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Im folgenden Hoertext geht es um Nachbarschaftskonflikt. Achten Sie auf die zentrale Information."
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sie hören einen Text. Dazu gibt es fünf Aufgaben. Kreuzen Sie die richtige Antwort an. Sie hören den Text zweimal."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q1.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Rednerin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Guten Abend, ich begrüße Sie zur heutigen Mieterversammlung in unserem Wohnhaus."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Mein Name ist Klaus Werner und ich bin seit fünf Jahren Ihr Hausverwaltungs-Sprecher.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Rednerin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Mein Name ist Klaus Werner und ich bin seit fünf Jahren Ihr Hausverwaltungs-Sprecher."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q1 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Rednerin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wir haben heute einige wichtige Punkte auf der Tagesordnung zu besprechen."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q2.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Rednerin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Zunächst zum Thema Treppenhausreinigung: Die bisherige Regelung funktioniert leider nicht gut."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Die monatlichen Kosten würden etwa zwanzig Euro pro Wohnung betragen.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Rednerin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Mehrere Mieter haben sich beschwert, dass das Treppenhaus oft nicht sauber ist."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q2 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Rednerin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ich schlage vor, dass wir eine professionelle Reinigungsfirma beauftragen."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q3.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Rednerin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die monatlichen Kosten würden etwa zwanzig Euro pro Wohnung betragen."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Wir haben vier Tonnen: Restmüll, Biomüll, Papier und die gelbe Tonne für Verpackungen.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Rednerin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Der zweite Punkt betrifft die Müllentsorgung und die Situation im Hinterhof."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q3 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Rednerin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Es kommt leider immer wieder vor, dass Müll nicht richtig getrennt oder neben die Tonnen gestellt wird."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q4.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Rednerin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ich möchte alle Bewohner daran erinnern, dass Mülltrennung in Deutschland Pflicht ist."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Die Hausverwaltung plant, das Treppenhaus im Frühjahr zu streichen und neue Lampen zu installieren.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Rednerin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wir haben vier Tonnen: Restmüll, Biomüll, Papier und die gelbe Tonne für Verpackungen."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q4 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Rednerin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Sperrmüll darf nicht einfach abgestellt werden, er muss bei der Stadtreinigung angemeldet werden."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q5.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Rednerin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Der dritte Punkt auf unserer Agenda ist die geplante Renovierung des Treppenhauses."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Jeder Bewohner ist eingeladen, einen Salat oder Kuchen mitzubringen. Für Getränke und einen Grill sorgt die Hausgemeinschaft aus der gemeinsamen Kasse.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Rednerin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Hausverwaltung plant, das Treppenhaus im Frühjahr zu streichen und neue Lampen zu installieren."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q5 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Rednerin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Während der Renovierung wird es einige Tage laut und staubig sein."
       },
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Ende des Hoertexts."
+        "speaker": "Rednerin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wir werden Sie rechtzeitig über den genauen Zeitplan informieren."
+      },
+      {
+        "speaker": "Rednerin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Zum Thema Sicherheit: In den letzten Monaten gab es mehrere Einbrüche in der Nachbarschaft."
+      },
+      {
+        "speaker": "Rednerin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Bitte achten Sie darauf, die Haustür immer zu schließen und keine Fremden ins Haus zu lassen."
+      },
+      {
+        "speaker": "Rednerin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wenn Sie verdächtige Personen bemerken, informieren Sie die Polizei unter der Nummer eins eins null."
+      },
+      {
+        "speaker": "Rednerin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Schließlich noch ein erfreuliches Thema: Im Sommer planen wir ein Hoffest für alle Bewohner."
+      },
+      {
+        "speaker": "Rednerin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das Fest soll am ersten Samstag im Juli stattfinden, von vierzehn bis zweiundzwanzig Uhr."
+      },
+      {
+        "speaker": "Rednerin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Jeder Bewohner ist eingeladen, einen Salat oder Kuchen mitzubringen."
+      },
+      {
+        "speaker": "Rednerin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Für Getränke und einen Grill sorgt die Hausgemeinschaft aus der gemeinsamen Kasse."
+      },
+      {
+        "speaker": "Rednerin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wir suchen noch Freiwillige, die bei der Organisation und dem Aufbau helfen möchten."
+      },
+      {
+        "speaker": "Rednerin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Gibt es noch Fragen oder Anmerkungen zu den besprochenen Themen?"
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Ende Teil zwei."
       }
     ]
   },
@@ -270,7 +306,7 @@
       "id": "l-b1-goethe-007-t2-lo-1",
       "cefrLevel": "B1",
       "skill": "listening",
-      "canDoVi": "Toi co the luyen nghe hieu o trinh do B1 qua chu de \"Nachbarschaftskonflikt\".",
+      "canDoVi": "Tôi có thể luyện nghe hiểu ở trình độ B1 qua chủ đề \"Nachbarschaftskonflikt\".",
       "canDoDe": "Ich kann Hoeren auf Niveau B1 zum Thema \"Nachbarschaftskonflikt\" ueben.",
       "linkedContentIds": [
         "L-B1-GOETHE-007-T2"

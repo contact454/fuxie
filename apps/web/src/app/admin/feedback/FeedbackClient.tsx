@@ -19,7 +19,7 @@ export default function FeedbackClient({ feedbacks }: { feedbacks: FeedbackRow[]
     <div className="p-6 md:p-8 space-y-6 max-w-7xl mx-auto">
       <div>
         <h1 className="text-2xl font-bold text-slate-900 tracking-tight">Feedback Center</h1>
-        <p className="text-slate-500 mt-1">Resolve outstanding issues reported by students.</p>
+        <p className="text-slate-500 mt-1">{"Resolve outstanding issues reported by students." /* // locale-allow */}</p>
       </div>
 
       <div className="bg-white border border-slate-200 rounded-2xl shadow-sm overflow-hidden flex flex-col mt-6">

@@ -1,5 +1,7 @@
 import { describe, expect, it } from 'vitest'
 import { renderToStaticMarkup } from 'react-dom/server'
+import { NextIntlClientProvider } from 'next-intl'
+import viMessages from '../../../messages/vi.json'
 
 import {
     INVENTORY_TAB_MAX_ITEMS,
@@ -82,12 +84,14 @@ const SAMPLE_CATALOG: FuxieShopCatalogItem[] = [
 
 function render(props: Partial<ShopBackboneClientProps> = {}): string {
     return renderToStaticMarkup(
-        <ShopBackboneClient
-            wallet={{ fucoin: 5_000, xp: 1_200 }}
-            inventory={{ ownedItemIds: [], equippedItemId: null }}
-            catalog={SAMPLE_CATALOG}
-            {...props}
-        />,
+        <NextIntlClientProvider locale="vi" messages={viMessages}>
+            <ShopBackboneClient
+                wallet={{ fucoin: 5_000, xp: 1_200 }}
+                inventory={{ ownedItemIds: [], equippedItemId: null }}
+                catalog={SAMPLE_CATALOG}
+                {...props}
+            />
+        </NextIntlClientProvider>,
     )
 }
 

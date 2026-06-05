@@ -98,7 +98,7 @@ invariants Req 20.1 / 20.4 require regardless of route:
 | Role | Name | Date | Notes |
 | --- | --- | --- | --- |
 | PM (this task) | _PM agent_ | 2026-05-16 | Initial pass — checklist files committed; PENDING items await screenshot capture (FE/QA). |
-| FE | _capture pass_ | _pending_ | Playwright screenshot capture against seeded local DB. |
+| FE | _capture pass_ | 2026-05-16 | Visual QA screenshots generated per visual-qa-screenshot-capture. |
 | GD | _loop review_ | _pending_ | Reward pacing & loop polish review per surface. |
 | DSD | _palette review_ | _pending_ | Bright Sky token + scrim contrast review per surface. |
 

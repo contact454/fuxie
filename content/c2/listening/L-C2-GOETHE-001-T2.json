@@ -29,7 +29,7 @@
       "explanation": {
         "de": "Die korrekte Antwort ist eine Paraphrase der Kernaussage, dass die 'externen Kosten', also die ökologischen und sozialen Folgekosten, bei der Preisbildung ignoriert werden. Die Perfidie liegt darin, dass der Preis die wahren Kosten nicht abbildet. Option (b) ist eine lexikalische Falle, die die Aussage des Studenten ins Gegenteil verkehrt ('Es ist billiger, Neuware zu produzieren und zu vernichten, als sie zu lagern oder zu recyceln'). Option (c) ist irreführend; es wird nicht behauptet, dass die Vernichtung die Preise erhöht, sondern dass sie eine wirtschaftlich rationale, wenn auch absurde, Konsequenz des Systems ist.",
         "vi": "Đáp án đúng là một cách diễn giải lại ý chính rằng 'chi phí ngoại biên', tức là các chi phí hậu quả về mặt sinh thái và xã hội, bị bỏ qua trong quá trình định giá sản phẩm. Sự tráo trở nằm ở chỗ giá cả không phản ánh chi phí thực sự. Lựa chọn (b) là một cái bẫy từ vựng, đảo ngược hoàn toàn lời nói của sinh viên nam ('Sản xuất và tiêu hủy hàng mới thì rẻ hơn là lưu kho hoặc tái chế'). Lựa chọn (c) gây hiểu lầm; đoạn hội thoại không nói rằng việc tiêu hủy làm tăng giá bán, mà chỉ ra rằng đó là một hệ quả hợp lý về mặt kinh tế, dù vô lý, của hệ thống.",
-        "key_evidence": "Meine Professorin für Umweltwissenschaften hat letzte Woche in der Vorlesung darüber gesprochen und den Begriff der externen Kosten erläutert, die bei der Preiskalkulation systematisch außen vor gelassen werden. [...] Das ist ein grundlegendes Problem des gegenwärtigen Wirtschaftssystems, dass die ökologischen und sozialen Folgekosten der Produktion nicht im Verkaufspreis abgebildet werden.",
+        "key_evidence": "Meine Professorin für Umweltwissenschaften hat letzte Woche in der Vorlesung darüber gesprochen und den Begriff der externen Kosten erläutert, die bei der Preiskalkulation systematisch außen vor gelassen werden",
         "key_vocabulary": [
           "Perfidie - treachery, perfidy",
           "Ausklammerung - exclusion",
@@ -53,7 +53,7 @@
       "explanation": {
         "de": "Die korrekte Antwort fasst die psychologische Schlussfolgerung zusammen, dass weniger Auswahl paradoxerweise zu mehr Zufriedenheit und einem weniger komplexen Leben führt. Option (a) ist eine lexikalische Falle, die die Aussage ins Gegenteil verkehrt; die Studentin spricht von 'weniger Entscheidungsstress'. Option (b) widerspricht direkt der Erfahrung der Freundin des Studenten, die ihr Konsumverhalten 'grundlegend verändert' hat. Die korrekte Antwort abstrahiert von den konkreten Beispielen zu einer allgemeinen Aussage über Lebensqualität.",
         "vi": "Đáp án đúng tóm tắt kết luận tâm lý học rằng việc có ít lựa chọn hơn một cách nghịch lý lại dẫn đến sự hài lòng cao hơn và một cuộc sống ít phức tạp hơn. Lựa chọn (a) là một cái bẫy từ vựng, đảo ngược ý của câu nói; nữ sinh viên nói về việc 'ít căng thẳng khi phải đưa ra quyết định hơn'. Lựa chọn (b) trực tiếp mâu thuẫn với kinh nghiệm của bạn của nam sinh viên, người đã 'thay đổi hoàn toàn hành vi tiêu dùng' của mình. Đáp án đúng đã trừu tượng hóa từ các ví dụ cụ thể thành một nhận định chung về chất lượng cuộc sống.",
-        "key_evidence": "Was ich interessant finde, ist die psychologische Dimension: Weniger Auswahl führt offenbar zu weniger Entscheidungsstress und paradoxerweise zu einer höheren Zufriedenheit mit der eigenen Garderobe. [...] Wenn man das konsequent zu Ende denkt, dann ist nachhaltiger Konsum nicht nur ökologisch vernünftig, sondern möglicherweise auch der Schlüssel zu einem zufriedeneren und weniger komplexen Leben.",
+        "key_evidence": "Was ich interessant finde, ist die psychologische Dimension: Weniger Auswahl führt offenbar zu weniger Entscheidungsstress und paradoxerweise zu einer höheren Zufriedenheit mit der eigenen Garderobe",
         "key_vocabulary": [
           "paradoxe Erkenntnis - paradoxical insight",
           "Lebensführung - conduct of life",
@@ -102,57 +102,192 @@
     ]
   },
   "transcript": {
-    "type": "full_reconstructed_transcript",
+    "type": "studio_source_transcript",
     "status": "complete",
-    "source": "reconstructed_full_script",
-    "quality": "release_candidate_reconstructed",
-    "note": "Full learner-visible reconstructed script created from existing question evidence because original studio scripts are not present in the repository. Replace with studio transcript if original audio scripts become available.",
+    "source": "studio_source_script",
+    "quality": "source_verified",
+    "sourceScript": "data/scripts/C2/Teil2-Spontanes-Gespraech/L-C2-GOETHE-001-T2.json",
+    "note": "Transcript replaced from source script by scripts/apply-source-transcripts.ts.",
     "lines": [
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Der folgende anspruchsvolle Hoertext behandelt Textilrecycling und Altkleider. Achten Sie auf Aussage, Kontext und implizite Bedeutung."
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sie hören ein Gespräch. Dazu gibt es fünf Aufgaben. Wer sagt was? Sie hören das Gespräch zweimal."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q1.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Studentin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Hast du den Beitrag in der Arte-Mediathek über die Modeindustrie gesehen, der gestern Abend lief und der ziemlich schockierende Aufnahmen von Textildeponien in der Atacama-Wüste zeigte?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Meine Professorin für Umweltwissenschaften hat letzte Woche in der Vorlesung darüber gesprochen und den Begriff der externen Kosten erläutert, die bei der Preiskalkulation systematisch außen vor gelassen werden. [...] Das ist ein grundlegendes Problem des gegenwärtigen Wirtschaftssystems, dass die ökologischen und sozialen Folgekosten der Produktion nicht im Verkaufspreis abgebildet werden.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Student",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ja, den habe ich auch gesehen, und ich muss sagen, ich war zutiefst erschüttert von den Bildern dieser riesigen Berge aus weggeworfener Kleidung mitten in einer der trockensten Regionen der Welt."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q1 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Studentin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Was mich besonders nachdenklich gestimmt hat, war die Tatsache, dass ein Großteil dieser Kleidung nie getragen wurde und direkt vom Lager auf der Deponie gelandet ist."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q2.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Student",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das zeigt doch exemplarisch, wie absurd unser Wirtschaftssystem in bestimmten Bereichen funktioniert: Es ist billiger, Neuware zu produzieren und zu vernichten, als sie zu lagern oder zu recyceln."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "answer_evidence",
-        "text": "Was ich interessant finde, ist die psychologische Dimension: Weniger Auswahl führt offenbar zu weniger Entscheidungsstress und paradoxerweise zu einer höheren Zufriedenheit mit der eigenen Garderobe. [...] Wenn man das konsequent zu Ende denkt, dann ist nachhaltiger Konsum nicht nur ökologisch vernünftig, sondern möglicherweise auch der Schlüssel zu einem zufriedeneren und weniger komplexen Leben.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Studentin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Meine Professorin für Umweltwissenschaften hat letzte Woche in der Vorlesung darüber gesprochen und den Begriff der externen Kosten erläutert, die bei der Preiskalkulation systematisch außen vor gelassen werden."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q2 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Student",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das ist ein grundlegendes Problem des gegenwärtigen Wirtschaftssystems, dass die ökologischen und sozialen Folgekosten der Produktion nicht im Verkaufspreis abgebildet werden."
       },
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Ende des Hoertexts."
+        "speaker": "Studentin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ich habe daraufhin angefangen, meine Garderobe zu inventarisieren, und festgestellt, dass ich Kleidungsstücke besitze, die ich seit über zwei Jahren nicht ein einziges Mal getragen habe."
+      },
+      {
+        "speaker": "Student",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das geht mir genauso, und ich habe mir vorgenommen, im nächsten Semester nur noch Secondhand zu kaufen, wobei ich zugeben muss, dass das bei bestimmten Basics wie Unterwäsche schwierig wird."
+      },
+      {
+        "speaker": "Studentin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Hast du schon mal von dem Konzept der Capsule Wardrobe gehört, bei der man mit einer minimalen Anzahl sorgfältig ausgewählter Kleidungsstücke auskommt, die alle miteinander kombinierbar sind?"
+      },
+      {
+        "speaker": "Student",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ja, eine Freundin von mir macht das seit einem Jahr, und sie sagt, es hat nicht nur ihren Kleiderschrank, sondern ihr ganzes Konsumverhalten grundlegend verändert."
+      },
+      {
+        "speaker": "Studentin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Was ich interessant finde, ist die psychologische Dimension: Weniger Auswahl führt offenbar zu weniger Entscheidungsstress und paradoxerweise zu einer höheren Zufriedenheit mit der eigenen Garderobe."
+      },
+      {
+        "speaker": "Student",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das erinnert mich an das Paradox of Choice von Barry Schwartz, der in seinem Buch überzeugend argumentiert, dass eine Überfluss an Auswahlmöglichkeiten uns nicht glücklicher, sondern unglücklicher macht."
+      },
+      {
+        "speaker": "Studentin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wenn man das konsequent zu Ende denkt, dann ist nachhaltiger Konsum nicht nur ökologisch vernünftig, sondern möglicherweise auch der Schlüssel zu einem zufriedeneren und weniger komplexen Leben."
+      },
+      {
+        "speaker": "Student",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das klingt fast zu schön, um wahr zu sein, aber ich denke, da ist tatsächlich etwas dran, und ich bin gespannt, ob sich dieses Bewusstsein in unserer Generation durchsetzen wird."
+      },
+      {
+        "speaker": "Studentin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Hast du den Beitrag in der Arte-Mediathek über die Modeindustrie gesehen, der gestern Abend lief und der ziemlich schockierende Aufnahmen von Textildeponien in der Atacama-Wüste zeigte?"
+      },
+      {
+        "speaker": "Student",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ja, den habe ich auch gesehen, und ich muss sagen, ich war zutiefst erschüttert von den Bildern dieser riesigen Berge aus weggeworfener Kleidung mitten in einer der trockensten Regionen der Welt."
+      },
+      {
+        "speaker": "Studentin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Was mich besonders nachdenklich gestimmt hat, war die Tatsache, dass ein Großteil dieser Kleidung nie getragen wurde und direkt vom Lager auf der Deponie gelandet ist."
+      },
+      {
+        "speaker": "Student",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das zeigt doch exemplarisch, wie absurd unser Wirtschaftssystem in bestimmten Bereichen funktioniert: Es ist billiger, Neuware zu produzieren und zu vernichten, als sie zu lagern oder zu recyceln."
+      },
+      {
+        "speaker": "Studentin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Meine Professorin für Umweltwissenschaften hat letzte Woche in der Vorlesung darüber gesprochen und den Begriff der externen Kosten erläutert, die bei der Preiskalkulation systematisch außen vor gelassen werden."
+      },
+      {
+        "speaker": "Student",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das ist ein grundlegendes Problem des gegenwärtigen Wirtschaftssystems, dass die ökologischen und sozialen Folgekosten der Produktion nicht im Verkaufspreis abgebildet werden."
+      },
+      {
+        "speaker": "Studentin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ich habe daraufhin angefangen, meine Garderobe zu inventarisieren, und festgestellt, dass ich Kleidungsstücke besitze, die ich seit über zwei Jahren nicht ein einziges Mal getragen habe."
+      },
+      {
+        "speaker": "Student",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das geht mir genauso, und ich habe mir vorgenommen, im nächsten Semester nur noch Secondhand zu kaufen, wobei ich zugeben muss, dass das bei bestimmten Basics wie Unterwäsche schwierig wird."
+      },
+      {
+        "speaker": "Studentin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Hast du schon mal von dem Konzept der Capsule Wardrobe gehört, bei der man mit einer minimalen Anzahl sorgfältig ausgewählter Kleidungsstücke auskommt, die alle miteinander kombinierbar sind?"
+      },
+      {
+        "speaker": "Student",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ja, eine Freundin von mir macht das seit einem Jahr, und sie sagt, es hat nicht nur ihren Kleiderschrank, sondern ihr ganzes Konsumverhalten grundlegend verändert."
+      },
+      {
+        "speaker": "Studentin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Was ich interessant finde, ist die psychologische Dimension: Weniger Auswahl führt offenbar zu weniger Entscheidungsstress und paradoxerweise zu einer höheren Zufriedenheit mit der eigenen Garderobe."
+      },
+      {
+        "speaker": "Student",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das erinnert mich an das Paradox of Choice von Barry Schwartz, der in seinem Buch überzeugend argumentiert, dass eine Überfluss an Auswahlmöglichkeiten uns nicht glücklicher, sondern unglücklicher macht."
+      },
+      {
+        "speaker": "Studentin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wenn man das konsequent zu Ende denkt, dann ist nachhaltiger Konsum nicht nur ökologisch vernünftig, sondern möglicherweise auch der Schlüssel zu einem zufriedeneren und weniger komplexen Leben."
+      },
+      {
+        "speaker": "Student",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das klingt fast zu schön, um wahr zu sein, aber ich denke, da ist tatsächlich etwas dran, und ich bin gespannt, ob sich dieses Bewusstsein in unserer Generation durchsetzen wird."
+      },
+      {
+        "speaker": "Studentin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Hast du den Beitrag in der Arte-Mediathek über die Modeindustrie gesehen, der gestern Abend lief und der ziemlich schockierende Aufnahmen von Textildeponien in der Atacama-Wüste zeigte?"
+      },
+      {
+        "speaker": "Student",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ja, den habe ich auch gesehen, und ich muss sagen, ich war zutiefst erschüttert von den Bildern dieser riesigen Berge aus weggeworfener Kleidung mitten in einer der trockensten Regionen der Welt."
+      },
+      {
+        "speaker": "Studentin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Was mich besonders nachdenklich gestimmt hat, war die Tatsache, dass ein Großteil dieser Kleidung nie getragen wurde und direkt vom Lager auf der Deponie gelandet ist."
+      },
+      {
+        "speaker": "Student",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das zeigt doch exemplarisch, wie absurd unser Wirtschaftssystem in bestimmten Bereichen funktioniert: Es ist billiger, Neuware zu produzieren und zu vernichten, als sie zu lagern oder zu recyceln."
+      },
+      {
+        "speaker": "Studentin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Meine Professorin für Umweltwissenschaften hat letzte Woche in der Vorlesung darüber gesprochen und den Begriff der externen Kosten erläutert, die bei der Preiskalkulation systematisch außen vor gelassen werden."
+      },
+      {
+        "speaker": "Student",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das ist ein grundlegendes Problem des gegenwärtigen Wirtschaftssystems, dass die ökologischen und sozialen Folgekosten der Produktion nicht im Verkaufspreis abgebildet werden."
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Ende Teil zwei."
       }
     ]
   },
@@ -169,7 +304,7 @@
       "id": "l-c2-goethe-001-t2-lo-1",
       "cefrLevel": "C2",
       "skill": "listening",
-      "canDoVi": "Toi co the luyen nghe hieu o trinh do C2 qua chu de \"Textilrecycling und Altkleider\".",
+      "canDoVi": "Tôi có thể luyện nghe hiểu ở trình độ C2 qua chủ đề \"Textilrecycling und Altkleider\".",
       "canDoDe": "Ich kann Hoeren auf Niveau C2 zum Thema \"Textilrecycling und Altkleider\" ueben.",
       "linkedContentIds": [
         "L-C2-GOETHE-001-T2"

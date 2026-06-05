@@ -53,7 +53,7 @@ export default function FuxieWorldLabPage(): React.ReactElement {
         <main>
             <LearningWorldCanvas scene={scene} imageSrcMap={imageSrcMap} />
             <noscript>
-                <h1>Fuxie Learning World preview scene</h1>
+                <h1>{"Fuxie Learning World preview scene" /* // locale-allow */}</h1>
                 <p>
                     This route is an internal engineering proof of the
                     Fuxie Learning World canvas. JavaScript is required

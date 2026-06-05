@@ -2,6 +2,7 @@
 
 import { useState, useRef, useEffect, useCallback, useMemo } from 'react'
 import { useRouter } from 'next/navigation'
+import { useTranslations } from 'next-intl'
 import { resultRewardIcons } from '@/components/gamification/result-reward-loop'
 import { CompletionFlow } from '@/components/gamification/completion-flow'
 import { FuxieLive3D } from '@/components/gamification/fuxie-live-3d'
@@ -90,6 +91,8 @@ export function LessonPlayer({
     audioUrl, audioDuration, backgroundScene, questions, transcript, maxPlays,
 }: LessonPlayerProps) {
     const router = useRouter()
+    const t = useTranslations('Listening')
+    const defaultPlaybackSpeed = DEFAULT_SPEEDS[cefrLevel] ?? 1.0
     const audioRef = useRef<HTMLAudioElement>(null)
     const autoPlayTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null)
     const [phase, setPhase] = useState<Phase>('intro')
@@ -97,7 +100,7 @@ export function LessonPlayer({
     const [currentTime, setCurrentTime] = useState(0)
     const [duration, setDuration] = useState(audioDuration || 0)
     const [playCount, setPlayCount] = useState(0)
-    const [playbackSpeed, setPlaybackSpeed] = useState(DEFAULT_SPEEDS[cefrLevel] || 1.0)
+    const [playbackSpeed, setPlaybackSpeed] = useState(defaultPlaybackSpeed)
     const [currentQuestion, setCurrentQuestion] = useState(0)
     const [answers, setAnswers] = useState<Record<string, string>>({})
     const [isSubmitting, setIsSubmitting] = useState(false)
@@ -107,6 +110,7 @@ export function LessonPlayer({
     } | null>(null)
     const [showTranscript, setShowTranscript] = useState(false)
     const [audioError, setAudioError] = useState(false)
+    const [error, setError] = useState<string | null>(null)
     const [startTime, setStartTime] = useState(Date.now())
     const cefrColor = getCefrTheme(cefrLevel)
     const trackedCheckpoints = useRef<Set<string>>(new Set())
@@ -252,6 +256,7 @@ export function LessonPlayer({
 
     const submitAnswers = async () => {
         setIsSubmitting(true)
+        setError(null)
         try {
             const timeTaken = Math.round((Date.now() - startTime) / 1000)
             const submittedListenCount = Math.max(1, playCount)
@@ -272,6 +277,9 @@ export function LessonPlayer({
                     },
                 }),
             })
+            if (!res.ok) {
+                throw new Error(t('errorSubmit'))
+            }
             const data = await res.json()
             if (data.success) {
                 setResults({
@@ -280,9 +288,12 @@ export function LessonPlayer({
                     listenCount: submittedListenCount,
                 })
                 setPhase('results')
+            } else {
+                throw new Error(data.error || t('errorSubmit'))
             }
-        } catch (err) {
+        } catch (err: any) {
             console.error(err)
+            setError(err.message || t('errorConnection'))
         } finally {
             setIsSubmitting(false)
         }
@@ -343,6 +354,7 @@ export function LessonPlayer({
         setAnswers({})
         setResults(null)
         setShowTranscript(false)
+        setError(null)
         setStartTime(Date.now())
         setPhase('intro')
         setAudioError(false)
@@ -359,10 +371,10 @@ export function LessonPlayer({
     }
 
     const resultMessage = (percentage: number) => {
-        if (percentage >= 90) return 'Xuất sắc!'
-        if (percentage >= 70) return 'Rất tốt!'
-        if (percentage >= 50) return 'Ổn rồi, luyện thêm chút nữa nhé!'
-        return 'Cần nghe lại thêm một vòng'
+        if (percentage >= 90) return t('excellent')
+        if (percentage >= 70) return t('veryGood')
+        if (percentage >= 50) return t('goodEffort')
+        return t('needReplay')
     }
 
     // All phases share a single <audio> element at top-level to avoid
@@ -382,23 +394,23 @@ export function LessonPlayer({
                     <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                         <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
                     </svg>
-                    Về danh sách
+                    {t('backToList')}
                 </button>
 
                 {/* Lesson Info */}
                 <div className="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm text-center">
-                    <FuxieLive3D state="wave" fallbackSrc={FUXIE_3D_ASSETS.radioHost} alt="Fuxie listening coach" size={112} priority />
+                    <FuxieLive3D state="wave" fallbackSrc={FUXIE_3D_ASSETS.radioHost} alt={t('altListeningCoach')} size={112} priority />
                     <div className="mt-4 flex flex-wrap items-center justify-center gap-2">
                         <FuxieBadge tone="brand" className="normal-case tracking-normal">
-                            Listening Episode
+                            {t('listeningEpisode')}
                         </FuxieBadge>
                         <FuxieBadge tone="neutral" className="normal-case tracking-normal">
                             {cefrLevel} · {taskType}
                         </FuxieBadge>
                     </div>
-                    <p className="mt-4 text-xs font-black uppercase tracking-wide text-text-brand">Quest briefing</p>
+                    <p className="mt-4 text-xs font-black uppercase tracking-wide text-text-brand">{t('questBriefing')}</p>
                     <h1 className="text-xl font-bold text-gray-900 mt-4">{topic}</h1>
-                    <p className="text-sm text-gray-500 mt-1">Phần {teil} - {teilName}</p>
+                    <p className="text-sm text-gray-500 mt-1">{t('part', { num: teil, name: teilName })}</p>
 
                     <div className="flex items-center justify-center gap-3 mt-4">
                         <span className={`px-3 py-1 rounded-full text-xs font-bold bg-gradient-to-r ${cefrColor.gradient} text-white`}>
@@ -413,13 +425,13 @@ export function LessonPlayer({
                     </div>
 
                     <div className="mt-6 p-4 bg-[#F3FBFF] rounded-xl text-sm text-gray-700 ring-1 ring-[#60A8E4]/15">
-                        <p className="font-semibold text-text-brand mb-2">Hướng dẫn</p>
-                        <p>Em sẽ nghe đoạn audio tối đa <strong>{maxPlays} lần</strong>, sau đó trả lời <strong>{questions.length} câu hỏi</strong>.</p>
-                        <p className="mt-1 text-gray-500">Tốc độ gợi ý: {DEFAULT_SPEEDS[cefrLevel]}x - Thời lượng: khoảng {formatTime(duration || 180)}</p>
+                        <p className="font-semibold text-text-brand mb-2">{t('instructions')}</p>
+                        <p>{t('instructionDetail', { maxPlays, questionCount: questions.length })}</p>
+                        <p className="mt-1 text-gray-500">{t('speedDuration', { speed: defaultPlaybackSpeed, time: formatTime(duration || 180) })}</p>
                     </div>
 
                     <p className="mt-4 text-sm font-semibold leading-relaxed text-text-brand">
-                        {questEpisode.objective} Phần thưởng chỉ được trao khi em thực sự hoàn thành thử thách nghe.
+                        {questEpisode.objective} {t('rewardNote')}
                     </p>
 
                     <div className="mt-4 rounded-2xl bg-[#F3FBFF] p-4 ring-1 ring-[#CCE4F0]/70">
@@ -441,8 +453,8 @@ export function LessonPlayer({
                     <FuxieCoach
                         role="coach"
                         eyebrow="Episode v1"
-                        title="Nghe theo tung checkpoint"
-                        message="Khong co Fucoin cho play audio hay checkpoint. XP/Fucoin chi den sau submit."
+                        title={t('checkpointCoachTitle')}
+                        message={t('coachNoFucoinMessage')}
                         className="mt-4 bg-[#F3FBFF]"
                     />
 
@@ -452,10 +464,10 @@ export function LessonPlayer({
                                 <svg className="w-5 h-5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                                 </svg>
-                                <span>Fuxie không tải được file âm thanh. Em kiểm tra lại mạng nhé!</span>
+                                <span>{t('audioLoadError')}</span>
                             </div>
                             <button onClick={retryAudio} className="font-bold underline hover:text-red-700">
-                                Thử lại
+                                {t('tryAgain')}
                             </button>
                         </div>
                     )}
@@ -465,7 +477,7 @@ export function LessonPlayer({
                         disabled={audioError}
                         className={fuxieButtonClass('primary', 'lg', `mt-6 w-full ${audioError ? 'opacity-50 cursor-not-allowed' : ''}`)}
                     >
-                        Bắt đầu nghe
+                        {t('startListening')}
                     </button>
                 </div>
             </div>
@@ -489,7 +501,7 @@ export function LessonPlayer({
                         </svg>
                     </button>
                     <span className="text-sm font-semibold text-gray-700">
-                        Bài nghe - Phần {teil}
+                        {t('listeningPart', { num: teil })}
                     </span>
                     <span className={`px-2.5 py-1 rounded-lg text-xs font-bold bg-gradient-to-r ${cefrColor.gradient} text-white`}>
                         {cefrLevel}
@@ -507,7 +519,7 @@ export function LessonPlayer({
                             </p>
                         </div>
                         <div className="flex min-w-[180px] items-center gap-2 text-xs font-black text-text-brand">
-                            <span>{Math.max(0, questions.length - currentQuestion - 1)} con lai</span>
+                            <span>{t('remaining', { count: Math.max(0, questions.length - currentQuestion - 1) })}</span>
                             <FuxieProgressBar
                                 value={Math.round(((currentQuestion + 1) / Math.max(1, questions.length)) * 100)}
                                 className="h-2 flex-1"
@@ -559,8 +571,8 @@ export function LessonPlayer({
 
                     {audioError && (
                         <div className="mt-4 p-3 bg-red-50 border border-red-100 rounded-xl flex items-center justify-between text-sm text-red-600">
-                            <span>Lỗi tải âm thanh.</span>
-                            <button onClick={retryAudio} className="font-bold underline">Thử tải lại</button>
+                            <span>{t('audioErrorShort')}</span>
+                            <button onClick={retryAudio} className="font-bold underline">{t('tryAgain')}</button>
                         </div>
                     )}
 
@@ -582,7 +594,7 @@ export function LessonPlayer({
                             <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                                 <path strokeLinecap="round" strokeLinejoin="round" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
                             </svg>
-                            Nghe lại {playCount}/{maxPlays}
+                            {t('listenAgain', { count: playCount, max: maxPlays })}
                         </button>
                     </div>
                 </div>
@@ -593,7 +605,7 @@ export function LessonPlayer({
                         {/* Progress dots */}
                         <div className="flex items-center gap-1.5 mb-4">
                             <span className="text-xs text-gray-500 font-semibold mr-2">
-                                Câu {currentQuestion + 1}/{questions.length}
+                                {t('questionProgress', { current: currentQuestion + 1, total: questions.length })}
                             </span>
                             {questions.map((_, i) => (
                                 <div
@@ -637,6 +649,13 @@ export function LessonPlayer({
                             })}
                         </div>
 
+                        {/* Error */}
+                        {error && (
+                            <div className="mt-3 p-3 bg-red-50 border border-red-100 rounded-xl text-sm text-red-600">
+                                ⚠️ {error}
+                            </div>
+                        )}
+
                         {/* Navigation */}
                         <div className="flex gap-3 mt-5">
                             {currentQuestion > 0 && (
@@ -644,7 +663,7 @@ export function LessonPlayer({
                                     onClick={() => setCurrentQuestion(c => c - 1)}
                                     className="flex-1 py-3 rounded-xl border-2 border-gray-200 text-sm font-semibold text-gray-600 hover:border-gray-300 transition-all"
                                 >
-                                    Câu trước
+                                    {t('prevQuestion')}
                                 </button>
                             )}
                             {currentQuestion < questions.length - 1 ? (
@@ -652,7 +671,7 @@ export function LessonPlayer({
                                     onClick={() => setCurrentQuestion(c => c + 1)}
                                     className="flex-1 py-3 rounded-xl bg-gradient-to-r from-[#60A8E4] to-[#3C78A8] text-white font-bold text-sm hover:opacity-90 transition-all shadow-sm"
                                 >
-                                    Câu tiếp theo
+                                    {t('nextQuestion')}
                                 </button>
                             ) : (
                                 <button
@@ -663,7 +682,7 @@ export function LessonPlayer({
                                         : 'bg-gray-200 text-gray-400 cursor-not-allowed'
                                         }`}
                                 >
-                                    {isSubmitting ? 'Đang chấm...' : `Nộp bài (${Object.keys(answers).length}/${questions.length})`}
+                                    {isSubmitting ? t('submitting') : t('submitBtn', { current: Object.keys(answers).length, total: questions.length })}
                                 </button>
                             )}
                         </div>
@@ -673,14 +692,12 @@ export function LessonPlayer({
 
                     <SkillMotivationRail
                         skill="listening"
-                        phaseLabel={`Câu ${currentQuestion + 1}/${questions.length}`}
-                        title={isPlaying ? 'Bắt tín hiệu chính trong audio' : 'Nghe lại có chiến lược'}
-                        message="Fuxie giữ phần thưởng và tiến độ ở cạnh màn hình để em tập trung vào âm thanh, câu hỏi và lựa chọn."
-                        progressLabel="Listening progress"
+                        phaseLabel={t('phaseLabel', { current: currentQuestion + 1, total: questions.length })}
+                        title={isPlaying ? t('motivationListening') : t('motivationReplay')}
+                        message={t('motivationMessage')}
+                        progressLabel={t('progressLabel')}
                         progressPercent={questions.length > 0 ? ((currentQuestion + 1) / questions.length) * 100 : 0}
                         metrics={[
-                            { label: 'Answered', value: `${Object.keys(answers).length}/${questions.length}` },
-                            { label: 'Plays', value: `${playCount}/${maxPlays}` },
                             { label: 'Speed', value: `${playbackSpeed}x` },
                             { label: 'Audio', value: `${formatTime(currentTime)}` },
                         ]}
@@ -718,53 +735,53 @@ export function LessonPlayer({
         const { Clock3, Headphones: HeadphonesIcon, Target } = resultRewardIcons
         const resultCopy = percentage >= 90
             ? {
-                title: 'Nghe rất sắc, quest hoàn thành!',
-                coachTitle: 'Fuxie đánh dấu một lượt nghe mạnh',
-                coachMessage: 'Độ chính xác cao cho thấy em đang bắt được ý chính. Đây là lúc tốt để sang bài nghe mới.',
-                unlockLabel: 'Next',
-                unlockDetail: 'Đi tiếp',
+                title: t('res90Title'),
+                coachTitle: t('res90CoachTitle'),
+                coachMessage: t('res90CoachMsg'),
+                unlockLabel: t('unlockLabelNext'),
+                unlockDetail: t('unlockDetailGo'),
             }
             : percentage >= 70
                 ? {
-                    title: 'Rất tốt, tai nghe đang vào nhịp',
-                    coachTitle: 'Fuxie đề xuất đi tiếp',
-                    coachMessage: 'Em đã nắm phần lớn tín hiệu trong audio. Có thể học tiếp hoặc nghe lại để chắc chi tiết.',
-                    unlockLabel: 'Good ear',
-                    unlockDetail: 'Đi tiếp',
+                    title: t('res70Title'),
+                    coachTitle: t('res70CoachTitle'),
+                    coachMessage: t('res70CoachMsg'),
+                    unlockLabel: t('unlockLabelGood'),
+                    unlockDetail: t('unlockDetailGo'),
                 }
                 : percentage >= 50
                     ? {
-                        title: 'Có tín hiệu tốt, cần nghe lại',
-                        coachTitle: 'Fuxie giữ focus ở điểm yếu',
-                        coachMessage: 'Kết quả này cho biết em đã bắt được một phần nội dung. Nghe lại ngay sẽ giúp khóa các câu còn lẫn.',
-                        unlockLabel: 'Focus replay',
-                        unlockDetail: 'Câu sai',
+                        title: t('res50Title'),
+                        coachTitle: t('res50CoachTitle'),
+                        coachMessage: t('res50CoachMsg'),
+                        unlockLabel: t('unlockLabelFocus'),
+                        unlockDetail: t('unlockDetailWrong'),
                     }
                     : {
-                        title: 'Mình luyện lại từng tín hiệu',
-                        coachTitle: 'Fuxie đề xuất nghe lại',
-                        coachMessage: 'Đừng đổi bài vội. Một lượt nghe lại chậm hơn sẽ giúp em nhận ra từ khóa và nhịp câu hỏi.',
-                        unlockLabel: 'Replay quest',
-                        unlockDetail: 'Ý chính',
+                        title: t('res0Title'),
+                        coachTitle: t('res0CoachTitle'),
+                        coachMessage: t('res0CoachMsg'),
+                        unlockLabel: t('unlockLabelReplay'),
+                        unlockDetail: t('unlockDetailMain'),
                     }
         const attemptMeta = [
             {
                 icon: <Clock3 className="h-4 w-4" />,
-                label: 'Thời gian',
+                label: t('time'),
                 value: formatTime(results.timeTaken),
-                detail: 'Hoàn thành bài nghe',
+                detail: t('timeDetail'),
             },
             {
                 icon: <HeadphonesIcon className="h-4 w-4" />,
-                label: 'Lượt nghe',
+                label: t('plays'),
                 value: `${results.listenCount}x`,
-                detail: `${maxPlays} lượt tối đa`,
+                detail: t('playsDetail', { max: maxPlays }),
             },
             {
                 icon: <Target className="h-4 w-4" />,
-                label: 'Độ chính xác',
+                label: t('result'),
                 value: `${percentage}%`,
-                detail: `${score}/${totalQuestions} câu đúng`,
+                detail: t('resultDetail', { score, total: totalQuestions }),
             },
         ]
         const fucoinLabel = fucoinEarned > 0
@@ -815,9 +832,9 @@ export function LessonPlayer({
                     mode="alreadySaved"
                     skill="listening"
                     title={resultCopy.title}
-                    message={`Em trả lời đúng ${score}/${totalQuestions} câu. ${message}`}
+                    message={t('resultSummaryText', { score, total: totalQuestions, msg: message })}
                     scoreLabel={`${score}/${totalQuestions}`}
-                    scoreDetail="Câu đúng"
+                    scoreDetail={t('correctAnswerDetail')}
                     accuracy={percentage}
                     xpEarned={xpEarned}
                     attemptMeta={attemptMeta}
@@ -831,9 +848,9 @@ export function LessonPlayer({
                         }
                         : undefined}
                     hasNextStep={Boolean(results.nextEpisodeHref ?? episodeReceipt?.nextEpisodeHref)}
-                    primaryAction={{ label: 'Bài nghe tiếp theo', href: '/listening' }}
-                    secondaryAction={{ label: 'Nghe lại', onClick: resetLesson }}
-                    dashboardAction={{ label: 'Về Dashboard', href: '/dashboard' }}
+                    primaryAction={{ label: t('nextEpisode'), href: '/listening' }}
+                    secondaryAction={{ label: t('replay'), onClick: resetLesson }}
+                    dashboardAction={{ label: t('backToDashboard'), href: '/dashboard' }}
                     coachTitle={resultCopy.coachTitle}
                     coachMessage={resultCopy.coachMessage}
                     className="mb-5"
@@ -847,7 +864,7 @@ export function LessonPlayer({
                                     Episode receipt
                                 </p>
                                 <h3 className="mt-1 text-lg font-black text-slate-950">
-                                    {episodeReceipt.completedCheckpoints}/{episodeReceipt.checkpointCount} checkpoint · {episodeReceipt.accuracyBand.replaceAll('_', ' ')}
+                                    {t('completedCheckpoints', { completed: episodeReceipt.completedCheckpoints, total: episodeReceipt.checkpointCount, band: episodeReceipt.accuracyBand.replaceAll('_', ' ') })}
                                 </h3>
                                 <p className="mt-1 text-sm font-semibold leading-relaxed text-text-brand">
                                     {episodeReceipt.masteryContribution}
@@ -863,7 +880,7 @@ export function LessonPlayer({
                                 }}
                                 className={fuxieButtonClass(episodeReceipt.recommendedAction === 'next_episode' ? 'primary' : 'reward', 'md', 'shrink-0')}
                             >
-                                {episodeReceipt.recommendedAction === 'next_episode' ? 'Di tiep' : 'Nghe lai'}
+                                {episodeReceipt.recommendedAction === 'next_episode' ? t('diTiep') : t('ngheLai')}
                             </a>
                         </div>
                         <FuxieProgressBar
@@ -906,22 +923,22 @@ export function LessonPlayer({
                     <div className="flex justify-center gap-4 mt-5">
                         <div className="px-4 py-2 bg-gray-50 rounded-xl text-center">
                             <p className="text-lg font-bold text-gray-900">⏱️ {formatTime(results.timeTaken)}</p>
-                            <p className="text-xs text-gray-500">Thời gian</p>
+                            <p className="text-xs text-gray-500">{t('time')}</p>
                         </div>
                         <div className="px-4 py-2 bg-gray-50 rounded-xl text-center">
                             <p className="text-lg font-bold text-gray-900">🔊 {results.listenCount}x</p>
-                            <p className="text-xs text-gray-500">Lượt nghe</p>
+                            <p className="text-xs text-gray-500">{t('plays')}</p>
                         </div>
                         <div className="px-4 py-2 bg-gray-50 rounded-xl text-center">
                             <p className="text-lg font-bold text-gray-900">📊 {percentage}%</p>
-                            <p className="text-xs text-gray-500">Kết quả</p>
+                            <p className="text-xs text-gray-500">{t('result')}</p>
                         </div>
                     </div>
                 </div>
 
                 {/* Answer Review */}
                 <div className="bg-white rounded-2xl p-5 border border-gray-100 shadow-sm mb-5">
-                    <h3 className="text-sm font-bold text-gray-700 mb-3">Tổng kết câu trả lời</h3>
+                    <h3 className="text-sm font-bold text-gray-700 mb-3">{t('summary')}</h3>
                     <div className="space-y-2.5">
                         {questionResults.map((qr) => (
                             <div
@@ -940,10 +957,10 @@ export function LessonPlayer({
                                         ) : (
                                             <>
                                                 <p className="text-sm text-red-500 mt-1">
-                                                    Câu em chọn: {(qr.options as string[])[qr.userAnswer.charCodeAt(0) - 97] || qr.userAnswer}
+                                                    {t('yourChoice')} {(qr.options as string[])[qr.userAnswer.charCodeAt(0) - 97] || qr.userAnswer}
                                                 </p>
                                                 <p className="text-sm text-green-600 mt-0.5">
-                                                    Đáp án đúng: {(qr.options as string[])[qr.correctAnswer.charCodeAt(0) - 97] || qr.correctAnswer}
+                                                    {t('correctAnswer')} {(qr.options as string[])[qr.correctAnswer.charCodeAt(0) - 97] || qr.correctAnswer}
                                                 </p>
                                                 {qr.explanationNative && (
                                                     <p className="text-xs text-gray-500 mt-1 italic">{qr.explanationNative}</p>
@@ -964,7 +981,7 @@ export function LessonPlayer({
                             onClick={() => setShowTranscript(!showTranscript)}
                             className="w-full flex items-center justify-between p-4 hover:bg-gray-50 transition-colors"
                         >
-                            <span className="text-sm font-semibold text-gray-700">{showTranscript ? 'Ẩn transcript' : 'Xem transcript'}</span>
+                            <span className="text-sm font-semibold text-gray-700">{showTranscript ? t('hideTranscript') : t('showTranscript')}</span>
                             <svg
                                 className={`w-4 h-4 text-gray-400 transition-transform ${showTranscript ? 'rotate-180' : ''}`}
                                 fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}
@@ -994,13 +1011,13 @@ export function LessonPlayer({
                         onClick={() => router.push('/listening')}
                         className="flex-1 py-3 rounded-xl border-2 border-gray-200 text-sm font-semibold text-gray-600 hover:border-gray-300 transition-all"
                     >
-                        Về danh sách
+                        {t('backToList')}
                     </button>
                     <button
                         onClick={resetLesson}
                         className="flex-1 py-3 rounded-xl bg-gradient-to-r from-[#60A8E4] to-[#3C78A8] text-white font-bold text-sm hover:opacity-90 transition-all shadow-sm"
                     >
-                        Luyện lại
+                        {t('replay')}
                     </button>
                 </div>
             </div>

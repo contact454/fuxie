@@ -124,75 +124,147 @@
     ]
   },
   "transcript": {
-    "type": "full_reconstructed_transcript",
+    "type": "studio_source_transcript",
     "status": "complete",
-    "source": "reconstructed_full_script",
-    "quality": "release_candidate_reconstructed",
-    "note": "Full learner-visible reconstructed script created from existing question evidence because original studio scripts are not present in the repository. Replace with studio transcript if original audio scripts become available.",
+    "source": "studio_source_script",
+    "quality": "source_verified",
+    "sourceScript": "data/scripts/C1/Teil1-Podcast-oder-Rezension/L-C1-GOETHE-003-T1.json",
+    "note": "Transcript replaced from source script by scripts/apply-source-transcripts.ts.",
     "lines": [
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Der folgende anspruchsvolle Hoertext behandelt EU-Familienpolitik und Gleichstellung. Achten Sie auf Aussage, Kontext und implizite Bedeutung."
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sie hören einen Podcast. Dazu gibt es sechs Aufgaben. Ordnen Sie die Aussagen den Abschnitten zu. Sie hören den Text einmal."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe q1_hoeren_c1_t1.",
-        "linkedQuestionId": "q1_hoeren_c1_t1"
+        "speaker": "Podcaster",
+        "speaker_role": "dialogue_speaker",
+        "text": "Willkommen bei unserem europapolitischen Podcast 'Europa verstehen'. Heute sprechen wir über Familienpolitik und Gleichstellung."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Das Ehegattensplitting, das Ehepaare mit einem Hauptverdiener steuerlich bevorzugt, setzt starke Anreize gegen gleichberechtigte Erwerbstätigkeit.",
-        "linkedQuestionId": "q1_hoeren_c1_t1"
+        "speaker": "Podcaster",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Europäische Union verfolgt seit Jahrzehnten das Ziel der Geschlechtergleichstellung, doch die Fortschritte sind ungleichmäßig verteilt."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe q1_hoeren_c1_t1 im Kontext des Hoertexts.",
-        "linkedQuestionId": "q1_hoeren_c1_t1"
+        "speaker": "Podcaster",
+        "speaker_role": "dialogue_speaker",
+        "text": "Schweden gilt als Vorbild: Dort haben Väter Anspruch auf dreizehn Monate Elternzeit bei nahezu vollem Lohnausgleich."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe q2_hoeren_c1_t1.",
-        "linkedQuestionId": "q2_hoeren_c1_t1"
+        "speaker": "Podcaster",
+        "speaker_role": "dialogue_speaker",
+        "text": "In Deutschland hingegen nehmen nur etwa vierzig Prozent der Väter überhaupt Elternzeit, und die meisten nur zwei Monate."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Das französische Modell erklärt, warum Frankreich eine der höchsten Geburtenraten in Europa bei gleichzeitig hoher Frauenerwerbsquote hat.",
-        "linkedQuestionId": "q2_hoeren_c1_t1"
+        "speaker": "Podcaster",
+        "speaker_role": "dialogue_speaker",
+        "text": "Diese Diskrepanz spiegelt unterschiedliche Gesellschaftsmodelle wider, die tief in der Geschichte und Kultur verwurzelt sind."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe q2_hoeren_c1_t1 im Kontext des Hoertexts.",
-        "linkedQuestionId": "q2_hoeren_c1_t1"
+        "speaker": "Podcaster",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das konservative Familienmodell mit dem männlichen Alleinverdiener prägt den deutschen Sozialstaat bis heute nachhaltig."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe q3_hoeren_c1_t1.",
-        "linkedQuestionId": "q3_hoeren_c1_t1"
+        "speaker": "Podcaster",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das Ehegattensplitting, das Ehepaare mit einem Hauptverdiener steuerlich bevorzugt, setzt starke Anreize gegen gleichberechtigte Erwerbstätigkeit."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Länder mit besserer Vereinbarkeit von Familie und Beruf haben höhere Geburtenraten und gleichzeitig höheres Wirtschaftswachstum.",
-        "linkedQuestionId": "q3_hoeren_c1_t1"
+        "speaker": "Podcaster",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die EU-Richtlinie zur Vereinbarkeit von Beruf und Privatleben von zweitausendneunzehn war ein wichtiger Schritt nach vorn."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe q3_hoeren_c1_t1 im Kontext des Hoertexts.",
-        "linkedQuestionId": "q3_hoeren_c1_t1"
+        "speaker": "Podcaster",
+        "speaker_role": "dialogue_speaker",
+        "text": "Sie garantiert Mindeststandards für Vaterschaftsurlaub, Elternzeit und Pflegefreistellung in allen Mitgliedstaaten der Union."
       },
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Ende des Hoertexts."
+        "speaker": "Podcaster",
+        "speaker_role": "dialogue_speaker",
+        "text": "Allerdings setzen die Mitgliedstaaten diese Richtlinie sehr unterschiedlich um, je nach nationaler Tradition und politischem Willen."
+      },
+      {
+        "speaker": "Podcaster",
+        "speaker_role": "dialogue_speaker",
+        "text": "Frankreich hat ein besonders interessantes Modell: Die Kinderbetreuung ist ab drei Jahren kostenlos und flächendeckend gewährleistet."
+      },
+      {
+        "speaker": "Podcaster",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das französische Modell erklärt, warum Frankreich eine der höchsten Geburtenraten in Europa bei gleichzeitig hoher Frauenerwerbsquote hat."
+      },
+      {
+        "speaker": "Podcaster",
+        "speaker_role": "dialogue_speaker",
+        "text": "In Italien dagegen führen fehlende Betreuungsangebote und prekäre Arbeitsverhältnisse zu einer der niedrigsten Geburtenraten weltweit."
+      },
+      {
+        "speaker": "Podcaster",
+        "speaker_role": "dialogue_speaker",
+        "text": "Junge Italienerinnen stehen vor der erzwungenen Wahl zwischen Karriere und Familie, eine Wahl, die Männer so nicht kennen."
+      },
+      {
+        "speaker": "Podcaster",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die ökonomischen Folgen dieser ungleichen Familienpolitik sind erheblich und betreffen die gesamte Volkswirtschaft der Europäischen Union."
+      },
+      {
+        "speaker": "Podcaster",
+        "speaker_role": "dialogue_speaker",
+        "text": "Länder mit besserer Vereinbarkeit von Familie und Beruf haben höhere Geburtenraten und gleichzeitig höheres Wirtschaftswachstum."
+      },
+      {
+        "speaker": "Podcaster",
+        "speaker_role": "dialogue_speaker",
+        "text": "Es ist also kein Zufall, dass die nordischen Länder sowohl die meisten Kinder als auch die stärksten Volkswirtschaften haben."
+      },
+      {
+        "speaker": "Podcaster",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ein Schlüsselthema ist die gerechte Verteilung von unbezahlter Sorgearbeit zwischen Frauen und Männern."
+      },
+      {
+        "speaker": "Podcaster",
+        "speaker_role": "dialogue_speaker",
+        "text": "Frauen leisten in Deutschland durchschnittlich fünfzig Prozent mehr unbezahlte Haushalts- und Pflegearbeit als ihre männlichen Partner."
+      },
+      {
+        "speaker": "Podcaster",
+        "speaker_role": "dialogue_speaker",
+        "text": "Diese ungleiche Verteilung hat direkte Auswirkungen auf Einkommen, Karrierechancen und die Altersversorgung von Frauen."
+      },
+      {
+        "speaker": "Podcaster",
+        "speaker_role": "dialogue_speaker",
+        "text": "Der Gender Pay Gap in der Europäischen Union liegt durchschnittlich bei dreizehn Prozent und hat sich kaum verringert."
+      },
+      {
+        "speaker": "Podcaster",
+        "speaker_role": "dialogue_speaker",
+        "text": "In Deutschland ist er mit achtzehn Prozent besonders hoch und gehört zu den größten in der gesamten Europäischen Union."
+      },
+      {
+        "speaker": "Podcaster",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die EU-Kommission hat deshalb eine Entgelttransparenz-Richtlinie vorgeschlagen, die Unternehmen zur Offenlegung von Gehaltsdaten verpflichtet."
+      },
+      {
+        "speaker": "Podcaster",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ob diese Richtlinie die strukturelle Lohnungleichheit tatsächlich beseitigen kann, bleibt abzuwarten."
+      },
+      {
+        "speaker": "Podcaster",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das war unser Podcast zur europäischen Familienpolitik. Schreiben Sie uns Ihre Gedanken und persönlichen Erfahrungen!"
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Ende Teil eins."
       }
     ]
   },
@@ -209,7 +281,7 @@
       "id": "l-c1-goethe-003-t1-lo-1",
       "cefrLevel": "C1",
       "skill": "listening",
-      "canDoVi": "Toi co the luyen nghe hieu o trinh do C1 qua chu de \"EU-Familienpolitik und Gleichstellung\".",
+      "canDoVi": "Tôi có thể luyện nghe hiểu ở trình độ C1 qua chủ đề \"EU-Familienpolitik und Gleichstellung\".",
       "canDoDe": "Ich kann Hoeren auf Niveau C1 zum Thema \"EU-Familienpolitik und Gleichstellung\" ueben.",
       "linkedContentIds": [
         "L-C1-GOETHE-003-T1"

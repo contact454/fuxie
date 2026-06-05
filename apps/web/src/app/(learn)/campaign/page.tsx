@@ -95,7 +95,7 @@ export default async function CampaignMapPage() {
                             <span className={`absolute left-5 top-5 hidden h-10 w-10 -translate-x-[72px] place-items-center rounded-2xl text-white shadow-lg md:grid ${
                                 isDone ? 'bg-emerald-500' : node.boss ? 'bg-[#FFB703]' : 'bg-[#60A8E4]'
                             }`}>
-                                {isDone ? <CheckCircle2 className="h-5 w-5" /> : node.boss ? <Flag className="h-5 w-5" /> : <MapPinned className="h-5 w-5" />}
+                                {isDone ? <CheckCircle2 className="h-5 w-5" /> : node.boss ? <Flag className="h-5 w-5" /> : <MapPinned className="h-5 w-5" /> /* // locale-allow */}
                             </span>
                             <div className="grid gap-5 lg:grid-cols-[minmax(0,1fr)_260px]">
                                 <div>

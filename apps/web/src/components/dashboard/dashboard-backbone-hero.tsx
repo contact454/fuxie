@@ -77,6 +77,8 @@ export interface DashboardHeroProps {
     ctaLabel: string
     /** Internal href the Primary_CTA navigates to. */
     ctaHref: string
+    /** Localized today label (e.g. "Hôm nay"). */
+    todayLabel: string
     /** Daily progress percentage (0-100). */
     progressPercent?: number
 }
@@ -98,6 +100,7 @@ export function DashboardBackboneHero({
     questMessage,
     ctaLabel,
     ctaHref,
+    todayLabel,
     progressPercent,
 }: DashboardHeroProps) {
     const isDefault = state === 'default'
@@ -220,7 +223,7 @@ export function DashboardBackboneHero({
                     {isDefault && progressPercent !== undefined && (
                         <div className="flex flex-col items-center gap-1 shrink-0 bg-white/80 backdrop-blur-sm p-2.5 rounded-2xl ring-1 ring-[var(--fuxie-blue-200)]/40 shadow-sm">
                             <ProgressRing progress={progressPercent} size={64} strokeWidth={6} />
-                            <span className="text-[10px] font-black text-[var(--fuxie-blue-700)]">Hôm nay</span>
+                            <span className="text-[10px] font-black text-[var(--fuxie-blue-700)]">{todayLabel}</span>
                         </div>
                     )}
                 </div>

@@ -2,6 +2,7 @@
 
 import { useState, useCallback, useMemo } from 'react'
 import { useRouter } from 'next/navigation'
+import { useTranslations } from 'next-intl'
 import dynamic from 'next/dynamic'
 import {
   FUXIE_3D_ASSETS,
@@ -106,6 +107,7 @@ export default function SpeakingLessonPlayer({
   estimatedMin,
 }: Props) {
   const router = useRouter()
+  const t = useTranslations('Speaking')
   const [phase, setPhase] = useState<Phase>('intro')
   const [finalScore, setFinalScore] = useState(0)
   const [stars, setStars] = useState(0)
@@ -215,7 +217,7 @@ export default function SpeakingLessonPlayer({
             justifyContent: 'center',
             boxShadow: '0 8px 24px rgba(255, 107, 53, 0.3)',
           }}>
-            <FuxieRoleMascot src={FUXIE_3D_ASSETS.speakingCoach} alt="Fuxie speaking coach" size={64} motion="speak" />
+            <FuxieRoleMascot src={FUXIE_3D_ASSETS.speakingCoach} alt={t('altSpeakingCoach')} size={64} motion="speak" />
           </div>
 
           <h1 style={{ fontSize: 22, fontWeight: 800, color: "var(--color-text-primary)", margin: '0 0 6px' }}>
@@ -232,15 +234,15 @@ export default function SpeakingLessonPlayer({
           <div style={{ display: 'flex', gap: 12, marginBottom: 24 }}>
             <div className={styles.statItem} style={{ flex: 1 }}>
               <span className={styles.statValue}>{sentences.length}</span>
-              <span className={styles.statLabel}>Câu</span>
+              <span className={styles.statLabel}>{t('sentencesCountLabel')}</span>
             </div>
             <div className={styles.statItem} style={{ flex: 1 }}>
               <span className={styles.statValue}>~{estimatedMin}</span>
-              <span className={styles.statLabel}>Phút</span>
+              <span className={styles.statLabel}>{t('minutesCountLabel')}</span>
             </div>
             <div className={styles.statItem} style={{ flex: 1 }}>
               <span className={styles.statValue}>3⭐</span>
-              <span className={styles.statLabel}>Mục tiêu</span>
+              <span className={styles.statLabel}>{t('targetLabel')}</span>
             </div>
           </div>
 
@@ -248,17 +250,17 @@ export default function SpeakingLessonPlayer({
           <div className={styles.pronunciationTip} style={{ textAlign: 'left' }}>
             {exerciseType === 'nachsprechen' && (
               <>
-                <strong>Nachsprechen:</strong> Nghe mẫu → nhấn mic → lặp lại câu. Cố gắng phát âm giống mẫu nhất có thể!
+                {t('nachsprechenHelp')}
               </>
             )}
             {exerciseType === 'roleplay' && (
               <>
-                <strong>Roleplay:</strong> Trò chuyện luân phiên với Fuxie bằng giọng nói. Nhấn Mic để ghi âm từng lượt trả lời!
+                {t('roleplayHelp')}
               </>
             )}
             {(exerciseType === 'presentation' || exerciseType === 'monologue') && (
               <>
-                <strong>Trình bày:</strong> Dựa vào gợi ý, bạn hãy nói liên tục thành một đoạn văn ngắn để hoàn thành yêu cầu!
+                {t('presentationHelp')}
               </>
             )}
           </div>
@@ -275,7 +277,7 @@ export default function SpeakingLessonPlayer({
               <QuestCheckpointRail
                 checkpoints={questEpisode.checkpoints}
                 activeId={questEpisode.checkpoints[0]?.id ?? 'listen'}
-                label="Challenge path"
+                label={t('challenge')}
                 className="mb-3"
               />
               <div className={styles.pronunciationTip} style={{ textAlign: 'left' }}>
@@ -290,7 +292,7 @@ export default function SpeakingLessonPlayer({
             style={{ width: '100%', fontSize: 18, padding: '18px 24px' }}
             onClick={handleStartPractice}
           >
-            🎤 Bắt đầu luyện tập
+            🎤 {t('startPracticeBtn')}
           </button>
         </div>
       </div>
@@ -345,9 +347,9 @@ export default function SpeakingLessonPlayer({
     return (
       <div className={styles.lessonPlayer} style={{ textAlign: 'center', padding: '60px 20px' }}>
         <div style={{ fontSize: 48, marginBottom: 16 }}>🚧</div>
-        <p style={{ color: "var(--color-text-muted)" }}>Dạng bài <strong>{exerciseType}</strong> đang được phát triển...</p>
+        <p style={{ color: "var(--color-text-muted)" }}>{t('exerciseUnderDevelopment', { type: exerciseType })}</p>
         <button className={styles.btnOutline} onClick={() => router.push('/speaking')} style={{ marginTop: 20 }}>
-          <ArrowLeft size={16} /> Quay lại
+          <ArrowLeft size={16} /> {t('backBtn')}
         </button>
       </div>
     )
@@ -373,7 +375,7 @@ export default function SpeakingLessonPlayer({
         <div style={{ marginBottom: 16, display: 'flex', justifyContent: 'center' }}>
           <FuxieRoleMascot
             src={finalScore >= 90 ? FUXIE_3D_ASSETS.celebration : FUXIE_3D_ASSETS.speakingCoach}
-            alt="Fuxie speaking coach"
+            alt={t('altSpeakingCoach')}
             size={96}
             motion={finalScore >= 70 ? 'reward' : 'speak'}
             className="drop-shadow-md"
@@ -418,7 +420,7 @@ export default function SpeakingLessonPlayer({
         >
           <span style={{ fontSize: 16 }}>✨</span>
           <span style={{ fontSize: 14, fontWeight: 700, color: "var(--color-text-warning)" }}>
-            +{displayedXp} XP {isSaving ? '(đang lưu...)' : ''}
+            +{displayedXp} XP {isSaving ? `(${t('savingProgress')})` : ''}
           </span>
         </div>
 
@@ -432,7 +434,7 @@ export default function SpeakingLessonPlayer({
               className="mb-3"
             />
             <div className={styles.pronunciationTip} style={{ textAlign: 'left' }}>
-            <div style={{ fontSize: 12, fontWeight: 800, color: 'var(--color-text-success)', marginBottom: 6 }}>Speaking Quest Receipt</div>
+            <div style={{ fontSize: 12, fontWeight: 800, color: 'var(--color-text-success)', marginBottom: 6 }}>{t('speakingQuestReceipt')}</div>
             <div style={{ fontSize: 14, fontWeight: 700, color: "var(--color-text-primary)" }}>
               {episodeReceipt.completedCheckpoints}/{episodeReceipt.checkpointCount} checkpoint - {episodeReceipt.scoreBand.replaceAll('_', ' ')}
             </div>
@@ -455,7 +457,7 @@ export default function SpeakingLessonPlayer({
             className={styles.btnOutline}
             onClick={() => router.push('/speaking')}
           >
-            <ArrowLeft size={16} /> Quay lại
+            <ArrowLeft size={16} /> {t('backBtn')}
           </button>
           <button
             className={`${styles.btnPrimary} ${styles.btnGreen}`}
@@ -466,14 +468,14 @@ export default function SpeakingLessonPlayer({
               setProgressResult(null)
             }}
           >
-            <RotateCcw size={16} /> Luyện lại
+            <RotateCcw size={16} /> {t('retryBtn')}
           </button>
           {episodeReceipt && (
             <button
               className={`${styles.btnPrimary} ${styles.btnGreen}`}
               onClick={() => router.push(episodeReceipt.nextEpisodeHref)}
             >
-              Bài tiếp theo <ArrowRight size={16} />
+              {t('nextLessonBtn')} <ArrowRight size={16} />
             </button>
           )}
         </div>

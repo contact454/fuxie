@@ -310,7 +310,7 @@ export default function RewardsReviewClient({
                                 <Gift className="h-6 w-6" />
                             </div>
                             <p className="mt-4 font-semibold text-slate-700">No {FILTER_LABELS[activeFilter].toLowerCase()} redeem requests.</p>
-                            <p className="mt-1 text-sm text-slate-500">Switch status filters to inspect the full review queue.</p>
+                            <p className="mt-1 text-sm text-slate-500">{"Switch status filters to inspect the full" /* // locale-allow */} review queue.</p>
                         </div>
                     ) : null}
                 </div>

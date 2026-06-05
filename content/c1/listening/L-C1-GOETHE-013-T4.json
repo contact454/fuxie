@@ -48,7 +48,7 @@
       "explanation": {
         "de": "Die korrekte Antwort ist 'b'. Der Dozent betont, dass Gleichstellung nicht nur eine Frage der Gerechtigkeit, sondern eine 'rein ökonomische Notwendigkeit' ist, und untermauert dies mit dem potenziellen Anstieg des BIP. Antwort 'a' ist zwar ein valider Aspekt, wird vom Dozenten aber als sekundär gegenüber dem ökonomischen Argument dargestellt. Antwort 'c' ist eine klassische lexikalische Falle, da sie eine der vier vorgeschlagenen Maßnahmen ('Entgelttransparenz-Richtlinie') als primäre Begründung darstellt, obwohl es sich nur um ein Instrument zur Erreichung des Ziels handelt.",
         "vi": "Đáp án đúng là 'b'. Giảng viên nhấn mạnh rằng bình đẳng không chỉ là vấn đề công bằng mà còn là một 'sự cần thiết hoàn toàn về mặt kinh tế', và củng cố điều này bằng sự gia tăng tiềm năng của GDP. Đáp án 'a' tuy là một khía cạnh hợp lệ, nhưng được giảng viên trình bày là thứ yếu so với lập luận kinh tế. Đáp án 'c' là một cái bẫy từ vựng kinh điển, vì nó trình bày một trong bốn biện pháp được đề xuất ('Chỉ thị về minh bạch tiền lương') như là lý do chính, trong khi đó chỉ là một công cụ để đạt được mục tiêu.",
-        "key_evidence": "Gleichstellung ist also nicht nur eine Frage der Gerechtigkeit, sondern eine rein ökonomische Notwendigkeit.",
+        "key_evidence": "Gleichstellung ist also nicht nur eine Frage der Gerechtigkeit, sondern eine rein ökonomische Notwendigkeit, was in der wissenschaftlichen Gemeinschaft für erhebliche Diskussionen sorgt.",
         "key_vocabulary": []
       }
     }
@@ -92,57 +92,162 @@
     ]
   },
   "transcript": {
-    "type": "full_reconstructed_transcript",
+    "type": "studio_source_transcript",
     "status": "complete",
-    "source": "reconstructed_full_script",
-    "quality": "release_candidate_reconstructed",
-    "note": "Full learner-visible reconstructed script created from existing question evidence because original studio scripts are not present in the repository. Replace with studio transcript if original audio scripts become available.",
+    "source": "studio_source_script",
+    "quality": "source_verified",
+    "sourceScript": "data/scripts/C1/Teil4-Vortrag/L-C1-GOETHE-013-T4.json",
+    "note": "Transcript replaced from source script by scripts/apply-source-transcripts.ts.",
     "lines": [
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Der folgende anspruchsvolle Hoertext behandelt Algorithmen und Bias in der Wissenschaft. Achten Sie auf Aussage, Kontext und implizite Bedeutung."
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sie hören einen Vortrag. Dazu gibt es sieben Aufgaben. Kreuzen Sie die richtige Antwort an. Sie hören den Vortrag einmal."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q1.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Meine Damen und Herren, willkommen zu meinem Vortrag über Familienpolitik und Gleichstellung in der Europäischen Union, und diese Entwicklung betrifft nicht nur Fachleute, sondern die gesamte Gesellschaft."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "answer_evidence",
-        "text": "Das klingt paradox: Gerade die Staaten, die die Familie am meisten entlasten, haben die stärksten Familien, die in den vergangenen Jahren zunehmend an Bedeutung gewonnen haben.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ich vertrete die These, dass die Familienpolitik der zentrale Hebel für Geschlechtergleichstellung und wirtschaftlichen Wohlstand ist, wobei aktuelle Studien und Expertenmeinungen ein vielfältiges Bild zeichnen."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q1 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die empirische Evidenz ist überwältigend: Länder mit progressiver Familienpolitik schneiden in fast allen Wohlstandsindikatoren besser ab, was in der wissenschaftlichen Gemeinschaft für erhebliche Diskussionen sorgt."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q2.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Lassen Sie mich zunächst die verschiedenen Familienmodelle in Europa systematisch vergleichen und kategorisieren, wobei die Experten in dieser Frage nach wie vor unterschiedlicher Meinung sind."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "answer_evidence",
-        "text": "Gleichstellung ist also nicht nur eine Frage der Gerechtigkeit, sondern eine rein ökonomische Notwendigkeit.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das nordische Modell, vertreten durch Schweden und Finnland, basiert auf universeller öffentlicher Kinderbetreuung und Individualbesteuerung, was sowohl in der Forschung als auch in der Praxis weitreichende Konsequenzen hat."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q2 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das kontinentale Modell, typisch für Deutschland und Frankreich, kombiniert steuerliche Familienbegünstigung mit partieller Kinderbetreuung, und dies wirft grundlegende Fragen zur aktuellen gesellschaftlichen Entwicklung auf."
       },
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Ende des Hoertexts."
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das mediterrane Modell, etwa in Italien und Griechenland, verlässt sich stark auf familiäre Netzwerke statt auf staatliche Leistungen."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das angelsächsische Modell, wie in Großbritannien, setzt auf Marktlösungen und minimale staatliche Eingriffe, was die Notwendigkeit einer differenzierten Betrachtung deutlich unterstreicht."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Jedes dieser Modelle hat unterschiedliche Auswirkungen auf die Erwerbsbeteiligung von Frauen und die Geburtenrate, und diese Entwicklung betrifft nicht nur Fachleute, sondern die gesamte Gesellschaft."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Am erfolgreichsten ist das nordische Modell: hohe Geburtenraten, hohe Frauenerwerbsquote und geringe Kinderarmut, wobei aktuelle Studien und Expertenmeinungen ein vielfältiges Bild zeichnen."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Am wenigsten erfolgreich ist das mediterrane Modell: niedrige Geburtenraten, niedrige Frauenerwerbsquote und hohe Kinderarmut, was in der wissenschaftlichen Gemeinschaft für erhebliche Diskussionen sorgt."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Diese Ergebnisse sind kein Zufall, sondern das direkte Resultat politischer Entscheidungen und institutioneller Rahmenbedingungen, wobei die Experten in dieser Frage nach wie vor unterschiedlicher Meinung sind."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Der Schlüsselfaktor ist die Defamilialisierung: der Grad, in dem der Staat Sorgearbeit von der Familie übernimmt, was sowohl in der Forschung als auch in der Praxis weitreichende Konsequenzen hat."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Je mehr der Staat Kinderbetreuung und Pflege als öffentliche Aufgabe versteht, desto gleichberechtigter sind die Geschlechter, und dies wirft grundlegende Fragen zur aktuellen gesellschaftlichen Entwicklung auf."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das klingt paradox: Gerade die Staaten, die die Familie am meisten entlasten, haben die stärksten Familien, die in den vergangenen Jahren zunehmend an Bedeutung gewonnen haben."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Lassen Sie mich nun die ökonomischen Kosten der Gleichstellungsdefizite in Europa beziffern, was die Notwendigkeit einer differenzierten Betrachtung deutlich unterstreicht."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die EU-Kommission schätzt, dass die Schließung des Gender Employment Gap das europäische BIP um sieben Prozent steigern würde."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das entspricht einem zusätzlichen Wohlstandsgewinn von über einer Billion Euro pro Jahr für die Europäische Union, wobei aktuelle Studien und Expertenmeinungen ein vielfältiges Bild zeichnen."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Gleichstellung ist also nicht nur eine Frage der Gerechtigkeit, sondern eine rein ökonomische Notwendigkeit, was in der wissenschaftlichen Gemeinschaft für erhebliche Diskussionen sorgt."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Was muss die EU konkret tun, um die Gleichstellung in allen Mitgliedstaaten voranzubringen, wobei die Experten in dieser Frage nach wie vor unterschiedlicher Meinung sind?"
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Erstens: verbindliche Mindeststandards für Elternzeit mit nicht-übertragbaren Vätermonaten in allen Mitgliedstaaten, was sowohl in der Forschung als auch in der Praxis weitreichende Konsequenzen hat."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Zweitens: ein europaweites Investitionsprogramm für den Ausbau qualitativ hochwertiger frühkindlicher Bildung und Betreuung, und dies wirft grundlegende Fragen zur aktuellen gesellschaftlichen Entwicklung auf."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Drittens: die konsequente Umsetzung der Entgelttransparenz-Richtlinie mit wirksamen Sanktionen für Unternehmen, die in den vergangenen Jahren zunehmend an Bedeutung gewonnen haben."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Viertens: die Reform der nationalen Steuersysteme, die derzeit häufig negative Erwerbsanreize für Zweitverdienende setzen, was die Notwendigkeit einer differenzierten Betrachtung deutlich unterstreicht."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Diese vier Maßnahmen würden die Gleichstellung in Europa innerhalb einer Generation fundamental verändern und verbessern, und diese Entwicklung betrifft nicht nur Fachleute, sondern die gesamte Gesellschaft."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Investitionen sind erheblich, aber die Rendite in Form von Wirtschaftswachstum und sozialer Stabilität noch viel höher, wobei aktuelle Studien und Expertenmeinungen ein vielfältiges Bild zeichnen."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Abschließend: Gleichstellung ist kein Frauenthema, sondern ein Gesellschaftsprojekt, das allen zugute kommt und alle betrifft, was in der wissenschaftlichen Gemeinschaft für erhebliche Diskussionen sorgt."
+      },
+      {
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Vielen Dank für Ihre Aufmerksamkeit!, wobei die Experten in dieser Frage nach wie vor unterschiedlicher Meinung sind."
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Ende des Hörverstehens."
       }
     ]
   },
@@ -159,7 +264,7 @@
       "id": "l-c1-goethe-013-t4-lo-1",
       "cefrLevel": "C1",
       "skill": "listening",
-      "canDoVi": "Toi co the luyen nghe hieu o trinh do C1 qua chu de \"Algorithmen und Bias in der Wissenschaft\".",
+      "canDoVi": "Tôi có thể luyện nghe hiểu ở trình độ C1 qua chủ đề \"Algorithmen und Bias in der Wissenschaft\".",
       "canDoDe": "Ich kann Hoeren auf Niveau C1 zum Thema \"Algorithmen und Bias in der Wissenschaft\" ueben.",
       "linkedContentIds": [
         "L-C1-GOETHE-013-T4"

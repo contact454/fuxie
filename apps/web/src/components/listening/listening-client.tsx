@@ -94,6 +94,7 @@ function ProgressRing({ progress, size = 40, strokeWidth = 3.5 }: { progress: nu
 
 export function ListeningClient({ teile, totalLessons, totalCompleted, availableLevels, initialLevel }: ListeningClientProps) {
     const t = useTranslations('Gamification')
+    const tUI = useTranslations('UI')
     const router = useRouter()
     const [currentTeile, setCurrentTeile] = useState(teile)
     const [currentTotal, setCurrentTotal] = useState(totalLessons)
@@ -184,7 +185,7 @@ export function ListeningClient({ teile, totalLessons, totalCompleted, available
                         </div>
                     )}
                     <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
-                        <FuxieRoleMascot src={FUXIE_3D_ASSETS.radioHost} alt="Fuxie listening coach" size={64} motion="coach" />
+                        <FuxieRoleMascot src={FUXIE_3D_ASSETS.radioHost} alt={tUI('altListeningCoach')} size={64} motion="coach" />
                         <div className="flex-1">
                             <h1 className="text-2xl font-bold text-gray-900">{t('practiceSkill', { skill: 'nghe', level: currentLevel })}</h1>
                             <p className="text-sm text-gray-500 mt-0.5">

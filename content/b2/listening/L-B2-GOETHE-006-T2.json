@@ -126,7 +126,7 @@
       "explanation": {
         "de": "Das Phänomen beschreibt, dass eine Zunahme des Radverkehrsanteils die Sicherheit für jeden einzelnen Radfahrer erhöht, da die Unfallrate pro Radfahrer sinkt.",
         "vi": "Hiện tượng này mô tả rằng việc tăng tỷ lệ người đi xe đạp sẽ nâng cao an toàn cho mỗi người đi xe đạp, vì tỷ lệ tai nạn trên mỗi người đi xe đạp giảm.",
-        "key_evidence": "Das sogenannte 'Safety in Numbers'-Phänomen: Je mehr Radfahrer, desto sicherer wird es für alle. Die Unfallrate pro Radfahrer sinkt, wenn der Radverkehrsanteil steigt.",
+        "key_evidence": "Das sogenannte 'Safety in Numbers'-Phänomen: Je mehr Radfahrer, desto sicherer wird es für alle",
         "key_vocabulary": [
           "Phänomen",
           "Unfallrate",
@@ -150,7 +150,7 @@
       "explanation": {
         "de": "Der Moderator gibt konkrete Ratschläge wie selbstbewusstes Fahren, helle Kleidung und Beleuchtung, um die eigene Sichtbarkeit und damit die Sicherheit zu erhöhen.",
         "vi": "Người điều hành chương trình đưa ra những lời khuyên cụ thể như lái xe tự tin, mặc quần áo sáng màu và sử dụng đèn chiếu sáng để tăng khả năng hiển thị và do đó tăng an toàn cá nhân.",
-        "key_evidence": "Fahren Sie selbstbewusst und sichtbar. Tragen Sie helle Kleidung und nutzen Sie immer Beleuchtung. Und meiden Sie den toten Winkel von Lkws.",
+        "key_evidence": "Fahren Sie selbstbewusst und sichtbar",
         "key_vocabulary": [
           "selbstbewusst",
           "sichtbar",
@@ -200,129 +200,162 @@
     ]
   },
   "transcript": {
-    "type": "full_reconstructed_transcript",
+    "type": "studio_source_transcript",
     "status": "complete",
-    "source": "reconstructed_full_script",
-    "quality": "release_candidate_reconstructed",
-    "note": "Full learner-visible reconstructed script created from existing question evidence because original studio scripts are not present in the repository. Replace with studio transcript if original audio scripts become available.",
+    "source": "studio_source_script",
+    "quality": "source_verified",
+    "sourceScript": "data/scripts/B2/Teil2-Radiointerview-mit-Experte/L-B2-GOETHE-006-T2.json",
+    "note": "Transcript replaced from source script by scripts/apply-source-transcripts.ts.",
     "lines": [
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Im folgenden Hoertext geht es um Radfahrer-Sicherheit in der Stadt. Achten Sie auf die zentrale Information."
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sie hören ein Interview. Dazu gibt es sechs Aufgaben. Kreuzen Sie die richtige Antwort an. Sie hören das Interview zweimal."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q1.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Guten Abend! Heute sprechen wir mit dem Verkehrspsychologen Dr. Michäl Lang über Radfahrsicherheit."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Objektivgesehen ist Radfahren sicherer als viele denken.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Danke für die Einladung! Das Fahrrad erlebt eine Renaissance in deutschen Städten."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q1 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Herr Dr. Lang, wie sicher ist Radfahren in deutschen Großstädten wirklich?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q2.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Objektivgesehen ist Radfahren sicherer als viele denken. Das Risiko, verletzt zu werden, sinkt mit besserer Infrastruktur."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Die häufigste Unfallursache sind Konflikte zwischen rechtsabbiegenden Autos und geradeaus fahrenden Radfahrern.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Trotzdem gibt es jedes Jahr über siebzigtausend Fahrradunfälle in Deutschland. Was sind die Hauptursachen?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q2 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die häufigste Unfallursache sind Konflikte zwischen rechtsabbiegenden Autos und geradeaus fahrenden Radfahrern."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q3.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wie kann man diese gefährliche Situation entschärfen?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Der Umbau bestehender Kreuzungen ist teür und erfordert politischen Willen gegen die Auto-Lobby.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Durch baulich getrennte Radwege, geschützte Kreuzungen und den Einsatz von Abbiegeassistenten bei Lkws."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q3 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "In den Niederlanden gibt es sogenannte geschützte Kreuzungen. Können Sie erklären, wie die funktionieren?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q4.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Radwege werden an Kreuzungen vorgezogen und durch physische Barrieren vom Autoverkehr getrennt."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Das ist kontraproduktiv, weil weniger Radfahrer auch weniger Sichtbarkeit und schlechtere Infrastruktur bedeuten.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Autofahrer sehen die Radfahrer dadurch besser und der Konfliktpunkt wird räumlich entzerrt."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q4 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Klingt nach einer einfachen Lösung. Warum wird das nicht überall in Deutschland umgesetzt?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q5.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Der Umbau bestehender Kreuzungen ist teür und erfordert politischen Willen gegen die Auto-Lobby."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Das sogenannte 'Safety in Numbers'-Phänomen: Je mehr Radfahrer, desto sicherer wird es für alle. Die Unfallrate pro Radfahrer sinkt, wenn der Radverkehrsanteil steigt.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Welche Rolle spielt der Fahrradhelm bei der Sicherheit?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q5 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Der Helm reduziert das Risiko schwerer Kopfverletzungen um etwa siebzig Prozent."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q6.",
-        "linkedQuestionId": "Q6"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Trotzdem tragen in Deutschland nur etwa dreißig Prozent der Erwachsenen einen Helm."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Fahren Sie selbstbewusst und sichtbar. Tragen Sie helle Kleidung und nutzen Sie immer Beleuchtung. Und meiden Sie den toten Winkel von Lkws.",
-        "linkedQuestionId": "Q6"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Sollte eine Helmpflicht eingeführt werden wie in Australien?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q6 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q6"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Erfahrungen aus Australien zeigen, dass eine Helmpflicht die Zahl der Radfahrer drastisch reduziert."
       },
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Ende des Hoertexts."
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das ist kontraproduktiv, weil weniger Radfahrer auch weniger Sichtbarkeit und schlechtere Infrastruktur bedeuten."
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das sogenannte 'Safety in Numbers'-Phänomen: Je mehr Radfahrer, desto sicherer wird es für alle."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Genau! Die Unfallrate pro Radfahrer sinkt, wenn der Radverkehrsanteil steigt."
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Was raten Sie unseren Hörern, die sicherer Rad fahren möchten?"
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Fahren Sie selbstbewusst und sichtbar. Tragen Sie helle Kleidung und nutzen Sie immer Beleuchtung."
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Blickkontakt mit Autofahrern ist entscheidend, besonders an Kreuzungen."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Und meiden Sie den toten Winkel von Lkws. Stellen Sie sich im Zweifel hinter den Lkw, nie daneben."
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Herr Dr. Lang, vielen Dank für diese lebensrettenden Tipps!"
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Gern geschehen! Fahren Sie sicher und setzen Sie sich für bessere Radinfrastruktur ein!"
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Jeder Kilometer auf dem Rad ist gut für Ihre Gesundheit und die Umwelt!"
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Ende Teil zwei."
       }
     ]
   },
@@ -339,7 +372,7 @@
       "id": "l-b2-goethe-006-t2-lo-1",
       "cefrLevel": "B2",
       "skill": "listening",
-      "canDoVi": "Toi co the luyen nghe hieu o trinh do B2 qua chu de \"Radfahrer-Sicherheit in der Stadt\".",
+      "canDoVi": "Tôi có thể luyện nghe hiểu ở trình độ B2 qua chủ đề \"Radfahrer-Sicherheit in der Stadt\".",
       "canDoDe": "Ich kann Hoeren auf Niveau B2 zum Thema \"Radfahrer-Sicherheit in der Stadt\" ueben.",
       "linkedContentIds": [
         "L-B2-GOETHE-006-T2"

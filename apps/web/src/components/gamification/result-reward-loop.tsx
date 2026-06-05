@@ -3,6 +3,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { useEffect, useRef, type ReactNode } from 'react'
+import { useTranslations } from 'next-intl'
 import {
     ArrowRight,
     BookOpenCheck,
@@ -343,6 +344,7 @@ export function ResultRewardLoop(props: ResultRewardLoopProps) {
 function ResultRewardLoopFSM(
     props: ResultRewardLoopProps & { fsm: ResultRewardLoopFSMOptions },
 ) {
+    const t = useTranslations('ResultRewardLoop')
     const { fsm: fsmOptions, primaryAction, secondaryAction, dashboardAction } = props
 
     const { state, phase, remainingRetries, retry } = useResultRewardLoop({
@@ -375,7 +377,7 @@ function ResultRewardLoopFSM(
                     props.className,
                 )}
             >
-                <p className="text-sm font-bold text-[#3C78A8]">Đang lưu kết quả…</p>
+                <p className="text-sm font-bold text-[#3C78A8]">{t('savingResult')}</p>
             </section>
         )
     }
@@ -479,6 +481,7 @@ function ResultRewardLoopLegacy({
     coachMessage = 'Ngọn lửa trong em đã cháy thêm một ngày — đó mới là điều thiêng liêng nhất. Thu thập chiến lợi phẩm và vung kiếm bước vào chiến dịch tiếp theo khi nhiệt huyết còn đang sục sôi.',
     className = '',
 }: ResultRewardLoopProps) {
+    const t = useTranslations('ResultRewardLoop')
     const config = SKILL_CONFIG[skill]
     const Icon = config.icon
     const safeAccuracy = Math.max(0, Math.min(100, accuracy))
@@ -583,7 +586,7 @@ function ResultRewardLoopLegacy({
 
                             <div className="mt-4">
                                 <div className="mb-2 flex items-center justify-between gap-3 text-xs font-bold text-[#3C78A8]">
-                                    <span>Tiến độ nhiệm vụ</span>
+                                    <span>{t('questProgress')}</span>
                                     <span>{graded ? `${Math.round(safeAccuracy)}%` : 'Đã lưu'}</span>
                                 </div>
                                 <FuxieProgressBar value={graded ? safeAccuracy : 100} tone={progressTone} />
@@ -679,7 +682,7 @@ function ResultRewardLoopLegacy({
                         <div className="rounded-2xl bg-white/75 p-3 ring-1 ring-white/90">
                             <div className="flex items-center gap-2 text-[#3C78A8]">
                                 <Gauge className="h-4 w-4" />
-                                <span className="text-xs font-black">Chỉ Đạo Tiếp Theo</span>
+                                <span className="text-xs font-black">{t('nextInstruction')}</span>
                             </div>
                             <p className="mt-1 text-sm font-black text-slate-950">
                                 {graded && safeAccuracy < 70 ? 'Luyện lại một vòng' : 'Tiếp đà hành trình'}

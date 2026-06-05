@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useCallback, useEffect, useMemo, useRef } from 'react'
+import { useTranslations } from 'next-intl'
 import Image from 'next/image'
 import { playSound } from '@/hooks/use-audio-player'
 import { ExerciseProgress } from './exercise-progress'
@@ -64,6 +65,7 @@ interface MixedExerciseProps {
 }
 
 export function MixedExercise({ questions, cefrLevel, themeName: _themeName, themeSlug, nextEpisodeHref, onExit, onComplete: _onComplete }: MixedExerciseProps) {
+    const t = useTranslations('Vocabulary')
     const [activeQuestions, setActiveQuestions] = useState([...questions])
     const [currentIndex, setCurrentIndex] = useState(0)
     const [selectedAnswer, setSelectedAnswer] = useState<string | null>(null)
@@ -293,7 +295,7 @@ export function MixedExercise({ questions, cefrLevel, themeName: _themeName, the
                             <FuxieCoach
                                 role="coach"
                                 eyebrow="Episode v1"
-                                title="Hoc theo tung checkpoint"
+                                title={t('checkpointTitle')}
                                 message="Phần thưởng chỉ được trao khi em thực sự hoàn thành thử thách."
                                 className="bg-white"
                             />
@@ -315,14 +317,14 @@ export function MixedExercise({ questions, cefrLevel, themeName: _themeName, the
         return (
             <div className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-[#F7FBFD] p-6 text-center animate-fade-in">
                 <Mascot variant="encourage" size={120} className="mb-6 grayscale mix-blend-multiply" />
-                <h1 className="mb-2 text-4xl font-black text-slate-950">Hết Mạng (Game Over)</h1>
-                <p className="mb-10 text-lg font-semibold text-slate-500">Đừng bỏ cuộc, hãy làm lại thật cẩn thận nhé!</p>
+                <h1 className="mb-2 text-4xl font-black text-slate-950">{t('gameOver')}</h1>
+                <p className="mb-10 text-lg font-semibold text-slate-500">{t('gameOverDetail')}</p>
                 <div className="flex gap-4 w-full max-w-sm flex-col">
                     <button onClick={handleRetry} className={exercisePrimaryActionClass(false, 'text-base uppercase')}>
-                        Thử lại ngay
+                        {t('retryNow')}
                     </button>
                     <button onClick={onExit} className={exerciseSecondaryActionClass(false, 'text-base uppercase')}>
-                        Về trang chủ
+                        {t('backToHome')}
                     </button>
                 </div>
             </div>
@@ -448,7 +450,7 @@ export function MixedExercise({ questions, cefrLevel, themeName: _themeName, the
                             <div className="mb-4">
                                 <p className="text-4xl font-black leading-tight text-slate-950">{question.prompt}</p>
                                 {question.type === 'de_to_native' && question.promptAudio && (
-                                    <button onClick={() => playSound(question.promptAudio)} className={exerciseInlineAudioClass()}>🔊 Anhören</button>
+                                    <button onClick={() => playSound(question.promptAudio)} className={exerciseInlineAudioClass()}>🔊 {t('listen')}</button>
                                 )}
                             </div>
                         )}

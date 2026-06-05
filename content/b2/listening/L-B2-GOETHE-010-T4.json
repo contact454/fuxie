@@ -127,7 +127,7 @@
       "explanation": {
         "de": "Der Dozent kritisiert, dass der Staat nur einen Bruchteil der Summe investiert, die er durch das Ehrenamt spart, und nennt dies ein 'Missverhältnis'.",
         "vi": "Giảng viên chỉ trích rằng nhà nước chỉ đầu tư một phần nhỏ số tiền mà họ tiết kiệm được nhờ công tác tình nguyện, và gọi đây là 'sự mất cân đối'.",
-        "key_evidence": "Gleichzeitig investiert der Staat nur einen Bruchteil dieser Summe in die Unterstützung des Ehrenamts. Dieses Missverhältnis muss sich ändern, wenn das Ehrenamt zukunftsfähig bleiben soll.",
+        "key_evidence": "Gleichzeitig investiert der Staat nur einen Bruchteil dieser Summe in die Unterstützung des Ehrenamts",
         "key_vocabulary": [
           "Kritik äußert",
           "staatliche Unterstützung",
@@ -256,165 +256,147 @@
     ]
   },
   "transcript": {
-    "type": "full_reconstructed_transcript",
+    "type": "studio_source_transcript",
     "status": "complete",
-    "source": "reconstructed_full_script",
-    "quality": "release_candidate_reconstructed",
-    "note": "Full learner-visible reconstructed script created from existing question evidence because original studio scripts are not present in the repository. Replace with studio transcript if original audio scripts become available.",
+    "source": "studio_source_script",
+    "quality": "source_verified",
+    "sourceScript": "data/scripts/B2/Teil4-Vortrag/L-B2-GOETHE-010-T4.json",
+    "note": "Transcript replaced from source script by scripts/apply-source-transcripts.ts.",
     "lines": [
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Im folgenden Hoertext geht es um Ehrenamt und Engagement. Achten Sie auf die zentrale Information."
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sie hören einen Vortrag. Dazu gibt es acht Aufgaben. Kreuzen Sie die richtige Antwort an. Sie hören den Vortrag zweimal."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q1.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Liebe Studierende, willkommen zu meinem Vortrag über zivilgesellschaftliches Engagement in Deutschland."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Heute möchte ich die historische Entwicklung, den aktüllen Stand und die Zukunft des Ehrenamts beleuchten.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das Ehrenamt hat in Deutschland eine lange Tradition und ist ein wesentlicher Pfeiler unserer Demokratie."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q1 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Heute möchte ich die historische Entwicklung, den aktüllen Stand und die Zukunft des Ehrenamts beleuchten."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q2.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Wurzeln des organisierten Ehrenamts reichen bis ins neunzehnte Jahrhundert zurück."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Nach dem Zweiten Weltkrieg wurde das Vereinswesen zum Kitt einer gespaltenen Gesellschaft.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Turnvereine, Gesangsvereine und Wohltätigkeitsorganisationen prägten die bürgerliche Gesellschaft."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q2 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Nach dem Zweiten Weltkrieg wurde das Vereinswesen zum Kitt einer gespaltenen Gesellschaft."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q3.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Heute gibt es in Deutschland über sechshunderttausend eingetragene Vereine mit insgesamt über sechzig Millionen Mitgliedschaften."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Das wirft die Frage auf, ob ehrenamtliches Engagement soziale Ungleichheit verstärkt statt sie zu verringern.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das ist weltweit einzigartig und ein Ausdruck der deutschen Vereinskultur."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q3 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Engagementquote liegt aktüll bei knapp vierzig Prozent der erwachsenen Bevölkerung."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q4.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Interessanterweise engagieren sich Akademiker deutlich häufiger als Nicht-Akademiker."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Die Politik muss daher gezielt Zugangshürden für unterrepräsentierte Gruppen abbaün.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das wirft die Frage auf, ob ehrenamtliches Engagement soziale Ungleichheit verstärkt statt sie zu verringern."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q4 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wer sich engagiert, erweitert sein Netzwerk, erwirbt Kompetenzen und verbessert seine beruflichen Chancen."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q5.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wer es nicht tut, verpasst diese Möglichkeiten, ein klassischer Matthäus-Effekt."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Gleichzeitig investiert der Staat nur einen Bruchteil dieser Summe in die Unterstützung des Ehrenamts. Dieses Missverhältnis muss sich ändern, wenn das Ehrenamt zukunftsfähig bleiben soll.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Politik muss daher gezielt Zugangshürden für unterrepräsentierte Gruppen abbaün."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q5 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Lassen Sie mich den ökonomischen Wert des Ehrenamts beziffern."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q6.",
-        "linkedQuestionId": "Q6"
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wenn alle ehrenamtlichen Stunden zum Mindestlohn bezahlt würden, ergäbe sich ein Wert von über achtzig Milliarden Euro jährlich."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Dieses Missverhältnis muss sich ändern, wenn das Ehrenamt zukunftsfähig bleiben soll.",
-        "linkedQuestionId": "Q6"
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Der Staat spart also enorme Summen durch die freiwillige Arbeit seiner Bürgerinnen und Bürger."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q6 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q6"
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Gleichzeitig investiert der Staat nur einen Bruchteil dieser Summe in die Unterstützung des Ehrenamts."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q7.",
-        "linkedQuestionId": "Q7"
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Dieses Missverhältnis muss sich ändern, wenn das Ehrenamt zukunftsfähig bleiben soll."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Gleichzeitig geht der persönliche Kontakt verloren, der für viele die Hauptmotivation des Ehrenamts ist.",
-        "linkedQuestionId": "Q7"
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Digitalisierung eröffnet völlig neü Möglichkeiten für ehrenamtliches Engagement."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q7 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q7"
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Online-Mentoring, virtülle Beratungsdienste und digitale Koordination senken die Hürden erheblich."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q8.",
-        "linkedQuestionId": "Q8"
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Gleichzeitig geht der persönliche Kontakt verloren, der für viele die Hauptmotivation des Ehrenamts ist."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Die Zukunft des Ehrenamts liegt vermutlich in einer hybriden Form aus Präsenz und digitalem Engagement.",
-        "linkedQuestionId": "Q8"
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Zukunft des Ehrenamts liegt vermutlich in einer hybriden Form aus Präsenz und digitalem Engagement."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q8 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q8"
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Abschließend: Das Ehrenamt braucht gesellschaftliche Anerkennung, politische Unterstützung und strukturelle Reform."
       },
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Ende des Hoertexts."
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Vielen Dank! Engagieren Sie sich und tragen Sie bei zu einer solidarischen Gesellschaft!"
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Ende des Hörverstehens."
       }
     ]
   },
@@ -431,7 +413,7 @@
       "id": "l-b2-goethe-010-t4-lo-1",
       "cefrLevel": "B2",
       "skill": "listening",
-      "canDoVi": "Toi co the luyen nghe hieu o trinh do B2 qua chu de \"Ehrenamt und Engagement\".",
+      "canDoVi": "Tôi có thể luyện nghe hiểu ở trình độ B2 qua chủ đề \"Ehrenamt und Engagement\".",
       "canDoDe": "Ich kann Hoeren auf Niveau B2 zum Thema \"Ehrenamt und Engagement\" ueben.",
       "linkedContentIds": [
         "L-B2-GOETHE-010-T4"

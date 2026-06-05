@@ -41,7 +41,7 @@
       "explanation": {
         "de": "Die Aussage ist korrekt. Der Beitrag zitiert Pierre Bourdieu, der darlegt, dass Geschmack nicht individuell, sondern durch die Klassenzugehörigkeit bestimmt wird. Die Wohnungseinrichtung wird als ein Mechanismus zur 'Reproduktion sozialer Klassen' beschrieben, was die Idee der 'Verfestigung gesellschaftlicher Strukturen' stützt.",
         "vi": "Tuyên bố này là đúng. Bài nói trích dẫn Pierre Bourdieu, người cho rằng sở thích không phải là cá nhân mà được quyết định bởi tầng lớp xã hội. Việc trang trí nhà cửa được mô tả như một cơ chế để 'tái sản xuất các tầng lớp xã hội', điều này ủng hộ ý tưởng 'củng cố các cấu trúc xã hội'.",
-        "key_evidence": "Pierre Bourdieu hat in seinem Werk Die feinen Unterschiede überzeugend dargelegt, dass der Geschmack in Wohnungsfragen keineswegs individuell ist, sondern systematisch mit der sozialen Klassenzugehörigkeit korreliert. Die Reproduktion sozialer Klassen vollzieht sich über den vermeintlich harmlosen Akt der Wohnungseinrichtung...",
+        "key_evidence": "Pierre Bourdieu hat in seinem Werk Die feinen Unterschiede überzeugend dargelegt, dass der Geschmack in Wohnungsfragen keineswegs individuell ist, sondern systematisch mit der sozialen Klassenzugehörigkeit korreliert",
         "key_vocabulary": [
           "sozioökonomische Zwänge: gesellschaftliche und wirtschaftliche Notwendigkeiten/Einschränkungen",
           "Verfestigung: Stabilisierung, Konsolidierung"
@@ -122,93 +122,347 @@
     ]
   },
   "transcript": {
-    "type": "full_reconstructed_transcript",
+    "type": "studio_source_transcript",
     "status": "complete",
-    "source": "reconstructed_full_script",
-    "quality": "release_candidate_reconstructed",
-    "note": "Full learner-visible reconstructed script created from existing question evidence because original studio scripts are not present in the repository. Replace with studio transcript if original audio scripts become available.",
+    "source": "studio_source_script",
+    "quality": "source_verified",
+    "sourceScript": "data/scripts/C2/Teil1-Radiosendungen/L-C2-GOETHE-016-T1.json",
+    "note": "Transcript replaced from source script by scripts/apply-source-transcripts.ts.",
     "lines": [
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Der folgende anspruchsvolle Hoertext behandelt Digitale Souveränität Europas. Achten Sie auf Aussage, Kontext und implizite Bedeutung."
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sie hören fünf Radiosendungen. Zu jeder Sendung gibt es drei Aufgaben. Kreuzen Sie ja oder nein an. Sie hören jede Sendung einmal."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q1.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sendung 1."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Kritiker wenden ein, dass solche interkulturellen Stilmischungen Gefahr laufen, die kulturellen Ursprünge oberflächlich zu ästhetisieren und in einen kommerzialisierten Lifestyle-Kontext zu entkontextualisieren.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Art und Weise, wie Menschen ihre Wohnräume gestalten, verrät mehr über ihre kulturelle Prägung, ihre Wertvorstellungen und ihre Position in der sozialen Hierarchie als jede andere alltägliche Praktik."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q1 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "In der skandinavischen Designtradition beispielsweise spiegelt die Vorliebe für klare Linien, natürliche Materialien und funktionale Eleganz ein tiefverwurzeltes demokratisches Ideal und die Überzeugung wider, dass gutes Design allen zugänglich sein sollte."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q2.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Der japanische Wabi-Sabi-Stil hingegen zelebriert die Schönheit des Unvollkommenen und Vergänglichen und drückt damit eine philosophische Haltung aus, die dem westlichen Streben nach Perfektion diametral entgegensteht."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "answer_evidence",
-        "text": "Pierre Bourdieu hat in seinem Werk Die feinen Unterschiede überzeugend dargelegt, dass der Geschmack in Wohnungsfragen keineswegs individuell ist, sondern systematisch mit der sozialen Klassenzugehörigkeit korreliert. Die Reproduktion sozialer Klassen vollzieht sich über den vermeintlich harmlosen Akt der Wohnungseinrichtung...",
-        "linkedQuestionId": "Q2"
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "In Deutschland hat das Bauhaus eine Designtradition begründet, die Funktionalität und Ästhetik zu einer untrennbaren Einheit verschmilzt und bis heute das Innendesign weltweit tiefgreifend beeinflusst."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q2 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Frage, ob Einrichtungsstile lediglich ästhetische Vorlieben widerspiegeln oder ob sie als kulturelle Zeichensysteme gelesen werden können, beschäftigt die Kulturwissenschaft seit den bahnbrechenden Arbeiten Roland Barthes'."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q3.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Der gegenwärtige Trend zum sogenannten Japandi-Stil, einer Synthese aus japanischer und skandinavischer Ästhetik, illustriert in bemerkenswerter Weise die zunehmende Hybridisierung kultureller Ausdrucksformen in einer globalisierten Welt."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "answer_evidence",
-        "text": "Der japanische Wabi-Sabi-Stil hingegen zelebriert die Schönheit des Unvollkommenen und Vergänglichen und drückt damit eine philosophische Haltung aus, die dem westlichen Streben nach Perfektion diametral entgegensteht.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Kritiker wenden ein, dass solche interkulturellen Stilmischungen Gefahr laufen, die kulturellen Ursprünge oberflächlich zu ästhetisieren und in einen kommerzialisierten Lifestyle-Kontext zu entkontextualisieren."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q3 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Für die Kultursoziologie stellt sich die Frage, inwieweit die globale Verbreitung bestimmter Einrichtungsstile als Ausdruck kultureller Hegemonie oder als Zeichen echter interkultureller Verständigung zu interpretieren ist."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q4.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Pierre Bourdieu hat in seinem Werk Die feinen Unterschiede überzeugend dargelegt, dass der Geschmack in Wohnungsfragen keineswegs individuell ist, sondern systematisch mit der sozialen Klassenzugehörigkeit korreliert."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "answer_evidence",
-        "text": "Die massenhafte Verlagerung des Arbeitsplatzes in den privaten Wohnraum hat dazu geführt, dass die funktionale Gestaltung des Heimbüros zum neuen Statussymbol und zum Ausdruck beruflicher Identität avanciert ist.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Reproduktion sozialer Klassen vollzieht sich über den vermeintlich harmlosen Akt der Wohnungseinrichtung ebenso wirksam wie über das Bildungssystem oder den Arbeitsmarkt."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q4 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ein aktuelles Phänomen, das die Wechselwirkung zwischen Einrichtungsstil und gesellschaftlichem Wandel besonders deutlich illustriert, ist die zunehmende Popularität sogenannter Home-Office-Ästhetik."
       },
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Ende des Hoertexts."
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die massenhafte Verlagerung des Arbeitsplatzes in den privaten Wohnraum hat dazu geführt, dass die funktionale Gestaltung des Heimbüros zum neuen Statussymbol und zum Ausdruck beruflicher Identität avanciert ist."
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sendung 2."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Social-Media-Plattformen wie Instagram und Pinterest haben diesen Trend massiv verstärkt, indem sie ästhetisierte Bilder von Arbeitsplätzen verbreiten, die sowohl Produktivität als auch Lebensqualität signalisieren."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die materielle Kulturforscherin Judy Attfield hat argumentiert, dass Möbel und Einrichtungsgegenstände keine passiven Objekte sind, sondern aktiv an der Konstruktion sozialer Beziehungen und persönlicher Identitäten mitwirken."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Zusammenfassend lässt sich sagen, dass jede Epoche, jede Kultur und jede soziale Schicht einen spezifischen Einrichtungshabitus hervorbringt, der als materialisierter Ausdruck kollektiver Weltanschauungen und individueller Positionierungsstrategien lesbar ist."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Art und Weise, wie Menschen ihre Wohnräume gestalten, verrät mehr über ihre kulturelle Prägung, ihre Wertvorstellungen und ihre Position in der sozialen Hierarchie als jede andere alltägliche Praktik."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "In der skandinavischen Designtradition beispielsweise spiegelt die Vorliebe für klare Linien, natürliche Materialien und funktionale Eleganz ein tiefverwurzeltes demokratisches Ideal und die Überzeugung wider, dass gutes Design allen zugänglich sein sollte."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Der japanische Wabi-Sabi-Stil hingegen zelebriert die Schönheit des Unvollkommenen und Vergänglichen und drückt damit eine philosophische Haltung aus, die dem westlichen Streben nach Perfektion diametral entgegensteht."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "In Deutschland hat das Bauhaus eine Designtradition begründet, die Funktionalität und Ästhetik zu einer untrennbaren Einheit verschmilzt und bis heute das Innendesign weltweit tiefgreifend beeinflusst."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Frage, ob Einrichtungsstile lediglich ästhetische Vorlieben widerspiegeln oder ob sie als kulturelle Zeichensysteme gelesen werden können, beschäftigt die Kulturwissenschaft seit den bahnbrechenden Arbeiten Roland Barthes'."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Der gegenwärtige Trend zum sogenannten Japandi-Stil, einer Synthese aus japanischer und skandinavischer Ästhetik, illustriert in bemerkenswerter Weise die zunehmende Hybridisierung kultureller Ausdrucksformen in einer globalisierten Welt."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Kritiker wenden ein, dass solche interkulturellen Stilmischungen Gefahr laufen, die kulturellen Ursprünge oberflächlich zu ästhetisieren und in einen kommerzialisierten Lifestyle-Kontext zu entkontextualisieren."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Für die Kultursoziologie stellt sich die Frage, inwieweit die globale Verbreitung bestimmter Einrichtungsstile als Ausdruck kultureller Hegemonie oder als Zeichen echter interkultureller Verständigung zu interpretieren ist."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Pierre Bourdieu hat in seinem Werk Die feinen Unterschiede überzeugend dargelegt, dass der Geschmack in Wohnungsfragen keineswegs individuell ist, sondern systematisch mit der sozialen Klassenzugehörigkeit korreliert."
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sendung 3."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Reproduktion sozialer Klassen vollzieht sich über den vermeintlich harmlosen Akt der Wohnungseinrichtung ebenso wirksam wie über das Bildungssystem oder den Arbeitsmarkt."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ein aktuelles Phänomen, das die Wechselwirkung zwischen Einrichtungsstil und gesellschaftlichem Wandel besonders deutlich illustriert, ist die zunehmende Popularität sogenannter Home-Office-Ästhetik."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die massenhafte Verlagerung des Arbeitsplatzes in den privaten Wohnraum hat dazu geführt, dass die funktionale Gestaltung des Heimbüros zum neuen Statussymbol und zum Ausdruck beruflicher Identität avanciert ist."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Social-Media-Plattformen wie Instagram und Pinterest haben diesen Trend massiv verstärkt, indem sie ästhetisierte Bilder von Arbeitsplätzen verbreiten, die sowohl Produktivität als auch Lebensqualität signalisieren."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die materielle Kulturforscherin Judy Attfield hat argumentiert, dass Möbel und Einrichtungsgegenstände keine passiven Objekte sind, sondern aktiv an der Konstruktion sozialer Beziehungen und persönlicher Identitäten mitwirken."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Zusammenfassend lässt sich sagen, dass jede Epoche, jede Kultur und jede soziale Schicht einen spezifischen Einrichtungshabitus hervorbringt, der als materialisierter Ausdruck kollektiver Weltanschauungen und individueller Positionierungsstrategien lesbar ist."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Art und Weise, wie Menschen ihre Wohnräume gestalten, verrät mehr über ihre kulturelle Prägung, ihre Wertvorstellungen und ihre Position in der sozialen Hierarchie als jede andere alltägliche Praktik."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "In der skandinavischen Designtradition beispielsweise spiegelt die Vorliebe für klare Linien, natürliche Materialien und funktionale Eleganz ein tiefverwurzeltes demokratisches Ideal und die Überzeugung wider, dass gutes Design allen zugänglich sein sollte."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Der japanische Wabi-Sabi-Stil hingegen zelebriert die Schönheit des Unvollkommenen und Vergänglichen und drückt damit eine philosophische Haltung aus, die dem westlichen Streben nach Perfektion diametral entgegensteht."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "In Deutschland hat das Bauhaus eine Designtradition begründet, die Funktionalität und Ästhetik zu einer untrennbaren Einheit verschmilzt und bis heute das Innendesign weltweit tiefgreifend beeinflusst."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Frage, ob Einrichtungsstile lediglich ästhetische Vorlieben widerspiegeln oder ob sie als kulturelle Zeichensysteme gelesen werden können, beschäftigt die Kulturwissenschaft seit den bahnbrechenden Arbeiten Roland Barthes'."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Der gegenwärtige Trend zum sogenannten Japandi-Stil, einer Synthese aus japanischer und skandinavischer Ästhetik, illustriert in bemerkenswerter Weise die zunehmende Hybridisierung kultureller Ausdrucksformen in einer globalisierten Welt."
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sendung 4."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Kritiker wenden ein, dass solche interkulturellen Stilmischungen Gefahr laufen, die kulturellen Ursprünge oberflächlich zu ästhetisieren und in einen kommerzialisierten Lifestyle-Kontext zu entkontextualisieren."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Für die Kultursoziologie stellt sich die Frage, inwieweit die globale Verbreitung bestimmter Einrichtungsstile als Ausdruck kultureller Hegemonie oder als Zeichen echter interkultureller Verständigung zu interpretieren ist."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Pierre Bourdieu hat in seinem Werk Die feinen Unterschiede überzeugend dargelegt, dass der Geschmack in Wohnungsfragen keineswegs individuell ist, sondern systematisch mit der sozialen Klassenzugehörigkeit korreliert."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Reproduktion sozialer Klassen vollzieht sich über den vermeintlich harmlosen Akt der Wohnungseinrichtung ebenso wirksam wie über das Bildungssystem oder den Arbeitsmarkt."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ein aktuelles Phänomen, das die Wechselwirkung zwischen Einrichtungsstil und gesellschaftlichem Wandel besonders deutlich illustriert, ist die zunehmende Popularität sogenannter Home-Office-Ästhetik."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die massenhafte Verlagerung des Arbeitsplatzes in den privaten Wohnraum hat dazu geführt, dass die funktionale Gestaltung des Heimbüros zum neuen Statussymbol und zum Ausdruck beruflicher Identität avanciert ist."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Social-Media-Plattformen wie Instagram und Pinterest haben diesen Trend massiv verstärkt, indem sie ästhetisierte Bilder von Arbeitsplätzen verbreiten, die sowohl Produktivität als auch Lebensqualität signalisieren."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die materielle Kulturforscherin Judy Attfield hat argumentiert, dass Möbel und Einrichtungsgegenstände keine passiven Objekte sind, sondern aktiv an der Konstruktion sozialer Beziehungen und persönlicher Identitäten mitwirken."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Zusammenfassend lässt sich sagen, dass jede Epoche, jede Kultur und jede soziale Schicht einen spezifischen Einrichtungshabitus hervorbringt, der als materialisierter Ausdruck kollektiver Weltanschauungen und individueller Positionierungsstrategien lesbar ist."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Art und Weise, wie Menschen ihre Wohnräume gestalten, verrät mehr über ihre kulturelle Prägung, ihre Wertvorstellungen und ihre Position in der sozialen Hierarchie als jede andere alltägliche Praktik."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "In der skandinavischen Designtradition beispielsweise spiegelt die Vorliebe für klare Linien, natürliche Materialien und funktionale Eleganz ein tiefverwurzeltes demokratisches Ideal und die Überzeugung wider, dass gutes Design allen zugänglich sein sollte."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Der japanische Wabi-Sabi-Stil hingegen zelebriert die Schönheit des Unvollkommenen und Vergänglichen und drückt damit eine philosophische Haltung aus, die dem westlichen Streben nach Perfektion diametral entgegensteht."
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sendung 5."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "In Deutschland hat das Bauhaus eine Designtradition begründet, die Funktionalität und Ästhetik zu einer untrennbaren Einheit verschmilzt und bis heute das Innendesign weltweit tiefgreifend beeinflusst."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Frage, ob Einrichtungsstile lediglich ästhetische Vorlieben widerspiegeln oder ob sie als kulturelle Zeichensysteme gelesen werden können, beschäftigt die Kulturwissenschaft seit den bahnbrechenden Arbeiten Roland Barthes'."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Der gegenwärtige Trend zum sogenannten Japandi-Stil, einer Synthese aus japanischer und skandinavischer Ästhetik, illustriert in bemerkenswerter Weise die zunehmende Hybridisierung kultureller Ausdrucksformen in einer globalisierten Welt."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Kritiker wenden ein, dass solche interkulturellen Stilmischungen Gefahr laufen, die kulturellen Ursprünge oberflächlich zu ästhetisieren und in einen kommerzialisierten Lifestyle-Kontext zu entkontextualisieren."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Für die Kultursoziologie stellt sich die Frage, inwieweit die globale Verbreitung bestimmter Einrichtungsstile als Ausdruck kultureller Hegemonie oder als Zeichen echter interkultureller Verständigung zu interpretieren ist."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Pierre Bourdieu hat in seinem Werk Die feinen Unterschiede überzeugend dargelegt, dass der Geschmack in Wohnungsfragen keineswegs individuell ist, sondern systematisch mit der sozialen Klassenzugehörigkeit korreliert."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Reproduktion sozialer Klassen vollzieht sich über den vermeintlich harmlosen Akt der Wohnungseinrichtung ebenso wirksam wie über das Bildungssystem oder den Arbeitsmarkt."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ein aktuelles Phänomen, das die Wechselwirkung zwischen Einrichtungsstil und gesellschaftlichem Wandel besonders deutlich illustriert, ist die zunehmende Popularität sogenannter Home-Office-Ästhetik."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die massenhafte Verlagerung des Arbeitsplatzes in den privaten Wohnraum hat dazu geführt, dass die funktionale Gestaltung des Heimbüros zum neuen Statussymbol und zum Ausdruck beruflicher Identität avanciert ist."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Social-Media-Plattformen wie Instagram und Pinterest haben diesen Trend massiv verstärkt, indem sie ästhetisierte Bilder von Arbeitsplätzen verbreiten, die sowohl Produktivität als auch Lebensqualität signalisieren."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die materielle Kulturforscherin Judy Attfield hat argumentiert, dass Möbel und Einrichtungsgegenstände keine passiven Objekte sind, sondern aktiv an der Konstruktion sozialer Beziehungen und persönlicher Identitäten mitwirken."
+      },
+      {
+        "speaker": "Journalist",
+        "speaker_role": "dialogue_speaker",
+        "text": "Zusammenfassend lässt sich sagen, dass jede Epoche, jede Kultur und jede soziale Schicht einen spezifischen Einrichtungshabitus hervorbringt, der als materialisierter Ausdruck kollektiver Weltanschauungen und individueller Positionierungsstrategien lesbar ist."
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Ende Teil eins."
       }
     ]
   },
@@ -225,7 +479,7 @@
       "id": "l-c2-goethe-016-t1-lo-1",
       "cefrLevel": "C2",
       "skill": "listening",
-      "canDoVi": "Toi co the luyen nghe hieu o trinh do C2 qua chu de \"Digitale Souveränität Europas\".",
+      "canDoVi": "Tôi có thể luyện nghe hiểu ở trình độ C2 qua chủ đề \"Digitale Souveränität Europas\".",
       "canDoDe": "Ich kann Hoeren auf Niveau C2 zum Thema \"Digitale Souveränität Europas\" ueben.",
       "linkedContentIds": [
         "L-C2-GOETHE-016-T1"

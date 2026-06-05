@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useCallback, useEffect, useRef } from 'react'
+import { useTranslations } from 'next-intl'
 import { ExerciseProgress } from './exercise-progress'
 import { ExerciseResults } from './exercise-results'
 import { useExerciseTimer } from '@/hooks/use-exercise-timer'
@@ -62,6 +63,7 @@ const WORD_TYPE_COLORS: Record<string, string> = {
 
 // ─── Component ──────────────────────────────────────
 export function ClozeExercise({ questions, cefrLevel, themeName: _themeName, themeSlug, onExit, onComplete: _onComplete }: ClozeExerciseProps) {
+    const t = useTranslations('Vocabulary')
     const [currentIndex, setCurrentIndex] = useState(0)
     const [userInput, setUserInput] = useState('')
     const [isRevealed, setIsRevealed] = useState(false)
@@ -214,7 +216,7 @@ export function ClozeExercise({ questions, cefrLevel, themeName: _themeName, the
                 <div className={exerciseStageInnerClass}>
                     {/* Instruction */}
                     <div className="text-center mb-6">
-                        <p className="text-sm font-black uppercase text-text-brand">Điền từ còn thiếu</p>
+                        <p className="text-sm font-black uppercase text-text-brand">{t('fillInMissingWord')}</p>
                         {/* Word type badge */}
                         <span className={`mt-2 inline-block rounded-full px-3 py-1 text-xs font-black ring-1 ${typeColor}`}>
                             {typeLabel}
@@ -236,7 +238,7 @@ export function ClozeExercise({ questions, cefrLevel, themeName: _themeName, the
                     {/* Feedback */}
                     {isRevealed && (
                         <div className={exerciseHintPanelClass('mb-4 border-[#60A8E4]/25 bg-[#EEF7FF] text-text-brand')}>
-                            <span className="text-sm text-text-brand font-semibold">Đã lưu câu trả lời</span>
+                            <span className="text-sm text-text-brand font-semibold">{t('savedAnswer')}</span>
                         </div>
                     )}
 
@@ -249,7 +251,7 @@ export function ClozeExercise({ questions, cefrLevel, themeName: _themeName, the
                             onChange={e => setUserInput(e.target.value)}
                             onKeyDown={handleKeyDown}
                             disabled={isRevealed}
-                            placeholder="Viết từ còn thiếu..."
+                            placeholder={t('clozePlaceholder')}
                             autoComplete="off"
                             autoCapitalize="off"
                             spellCheck={false}

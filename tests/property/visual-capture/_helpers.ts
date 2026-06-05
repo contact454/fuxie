@@ -298,7 +298,7 @@ export function flipLine(
     pngExistsByEvidencePath: (evidencePath: string) => boolean,
 ): string {
     if (line.includes('n/a (')) return line
-    const evidenceMatch = line.match(/screenshots\/[a-z0-9-]+\/[a-z0-9-]+-(?:default|empty|locked|error|success)-(?:mobile|desktop)\.png/)
+    const evidenceMatch = line.match(/screenshots\/[a-z0-9-]+\/[a-z0-9-]+-(?:default|empty|locked|error|success|result)-(?:mobile|desktop)\.png/)
     if (!evidenceMatch) return line
     const evidencePath = evidenceMatch[0]
     if (!pngExistsByEvidencePath(evidencePath)) return line

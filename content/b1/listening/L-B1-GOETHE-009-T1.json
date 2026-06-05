@@ -57,7 +57,7 @@
       "explanation": {
         "de": "Der Sprecher sagt, dass die Weltgesundheitsorganisation mindestens 150 Minuten Training pro Woche empfiehlt, was etwa 30 Minuten an fünf Tagen sind, nicht 30 Minuten pro Woche.",
         "vi": "Người nói cho biết Tổ chức Y tế Thế giới khuyến nghị ít nhất 150 phút tập luyện mỗi tuần, tương đương khoảng 30 phút mỗi ngày trong 5 ngày, chứ không phải 30 phút mỗi tuần.",
-        "key_evidence": "Die Weltgesundheitsorganisation empfiehlt mindestens hundertfünfzig Minuten moderates Training pro Woche. Das sind nur etwa dreißig Minuten an fünf Tagen...",
+        "key_evidence": "Die Weltgesundheitsorganisation empfiehlt mindestens hundertfünfzig Minuten moderates Training pro Woche.",
         "key_vocabulary": []
       }
     },
@@ -156,7 +156,7 @@
       "explanation": {
         "de": "Der Sprecher sagt, dass die gesetzliche Krankenkasse den Gesundheitscheck ab fünfunddreißig Jahren übernimmt, nicht ab 30 Jahren.",
         "vi": "Người nói cho biết quỹ bảo hiểm y tế công chi trả cho việc kiểm tra sức khỏe từ 35 tuổi trở lên, chứ không phải từ 30 tuổi.",
-        "key_evidence": "Eine wichtige Nachricht für alle Hörer ab fünfunddreißig Jahren. Ab diesem Alter übernimmt die gesetzliche Krankenkasse alle drei Jahre einen Gesundheitscheck.",
+        "key_evidence": "Eine wichtige Nachricht für alle Hörer ab fünfunddreißig Jahren.",
         "key_vocabulary": []
       }
     },
@@ -219,201 +219,247 @@
     ]
   },
   "transcript": {
-    "type": "full_reconstructed_transcript",
+    "type": "studio_source_transcript",
     "status": "complete",
-    "source": "reconstructed_full_script",
-    "quality": "release_candidate_reconstructed",
-    "note": "Full learner-visible reconstructed script created from existing question evidence because original studio scripts are not present in the repository. Replace with studio transcript if original audio scripts become available.",
+    "source": "studio_source_script",
+    "quality": "source_verified",
+    "sourceScript": "data/scripts/B1/Teil1-Kurze-Texte/L-B1-GOETHE-009-T1.json",
+    "note": "Transcript replaced from source script by scripts/apply-source-transcripts.ts.",
     "lines": [
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Im folgenden Hoertext geht es um Gesundheitstipps aus dem Radio. Achten Sie auf die zentrale Information."
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sie hören fünf kurze Texte. Zu jedem Text gibt es zwei Aufgaben. Kreuzen Sie die richtige Antwort an. Sie hören jeden Text einmal."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q1.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Text 1."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Zu wenig Schlaf erhöht das Risiko für Herzkrankheiten, Diabetes und Depressionen.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Sprecher_1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Guten Morgen, liebe Hörerinnen und Hörer, hier ist Ihre tägliche Gesundheitssendung auf Radio Fit."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q1 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Sprecher_1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Heute sprechen wir über die Bedeutung von ausreichend Schlaf für unsere Gesundheit."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q2.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Sprecher_1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Erwachsene sollten jede Nacht zwischen sieben und neun Stunden schlafen."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Ein dunkles, kühles Schlafzimmer mit einer Temperatur um achtzehn Grad ist ideal.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Sprecher_1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Zu wenig Schlaf erhöht das Risiko für Herzkrankheiten, Diabetes und Depressionen."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q2 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Sprecher_1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Auch das Immunsystem leidet unter Schlafmangel, man wird häufiger krank."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q3.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Sprecher_1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Vermeiden Sie Koffein und Bildschirme mindestens eine Stunde vor dem Schlafengehen."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "answer_evidence",
-        "text": "Die Weltgesundheitsorganisation empfiehlt mindestens hundertfünfzig Minuten moderates Training pro Woche. Das sind nur etwa dreißig Minuten an fünf Tagen...",
-        "linkedQuestionId": "Q3"
+        "speaker": "Sprecher_1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ein dunkles, kühles Schlafzimmer mit einer Temperatur um achtzehn Grad ist ideal."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q3 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Sprecher_1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wenn Sie regelmäßig Schlafprobleme haben, sprechen Sie mit Ihrem Hausarzt darüber."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q4.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Text 2."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "answer_evidence",
-        "text": "Auch Krafttraining wird empfohlen, mindestens zweimal pro Woche alle großen Muskelgruppen.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Sprecher_2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Bewegung ist einer der wichtigsten Faktoren für ein langes und gesundes Leben."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q4 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Sprecher_2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Weltgesundheitsorganisation empfiehlt mindestens hundertfünfzig Minuten moderates Training pro Woche."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q5.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Sprecher_2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das sind nur etwa dreißig Minuten an fünf Tagen, das schafft wirklich jeder."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "answer_evidence",
-        "text": "Kaffee und Tee zählen übrigens nicht als Wasserersatz, obwohl sie Flüssigkeit enthalten.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Sprecher_2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Schon regelmäßiges Spazierengehen hat positive Auswirkungen auf Herz und Kreislauf."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q5 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Sprecher_2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wer es intensiver mag, kann Joggen, Radfahren oder Schwimmen ausprobieren."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q6.",
-        "linkedQuestionId": "Q6"
+        "speaker": "Sprecher_2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Auch Krafttraining wird empfohlen, mindestens zweimal pro Woche alle großen Muskelgruppen."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "answer_evidence",
-        "text": "Die Deutsche Gesellschaft für Ernährung empfiehlt fünf Portionen Obst und Gemüse am Tag.",
-        "linkedQuestionId": "Q6"
+        "speaker": "Sprecher_2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Sport hilft nicht nur dem Körper, sondern auch der Psyche gegen Stress und Depressionen."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q6 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q6"
+        "speaker": "Sprecher_2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Finden Sie eine Sportart, die Ihnen Spaß macht, dann bleiben Sie auch langfristig dabei."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q7.",
-        "linkedQuestionId": "Q7"
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Text 3."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "answer_evidence",
-        "text": "Schon zehn Minuten tägliche Meditation können den Stresspegel deutlich senken.",
-        "linkedQuestionId": "Q7"
+        "speaker": "Sprecher_3",
+        "speaker_role": "dialogue_speaker",
+        "text": "Eine ausgewogene Ernährung ist die Grundlage für ein gesundes Leben."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q7 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q7"
+        "speaker": "Sprecher_3",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Deutsche Gesellschaft für Ernährung empfiehlt fünf Portionen Obst und Gemüse am Tag."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q8.",
-        "linkedQuestionId": "Q8"
+        "speaker": "Sprecher_3",
+        "speaker_role": "dialogue_speaker",
+        "text": "Vollkornprodukte sollten Weißmehlprodukte ersetzen, sie liefern mehr Ballaststoffe und Vitamine."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "answer_evidence",
-        "text": "Meditation, Yoga und progressive Muskelentspannung sind wissenschaftlich erprobte Methoden.",
-        "linkedQuestionId": "Q8"
+        "speaker": "Sprecher_3",
+        "speaker_role": "dialogue_speaker",
+        "text": "Fisch sollte mindestens einmal pro Woche auf dem Speiseplan stehen wegen der Omega-drei-Fettsäuren."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q8 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q8"
+        "speaker": "Sprecher_3",
+        "speaker_role": "dialogue_speaker",
+        "text": "Zucker und stark verarbeitete Lebensmittel sollte man so weit wie möglich reduzieren."
       },
       {
-        "speaker": "Sprecher 5",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q9.",
-        "linkedQuestionId": "Q9"
+        "speaker": "Sprecher_3",
+        "speaker_role": "dialogue_speaker",
+        "text": "Genug Wasser trinken ist ebenfalls sehr wichtig, mindestens eineinhalb Liter am Tag."
       },
       {
-        "speaker": "Sprecher 5",
-        "speaker_role": "answer_evidence",
-        "text": "Eine wichtige Nachricht für alle Hörer ab fünfunddreißig Jahren. Ab diesem Alter übernimmt die gesetzliche Krankenkasse alle drei Jahre einen Gesundheitscheck.",
-        "linkedQuestionId": "Q9"
+        "speaker": "Sprecher_3",
+        "speaker_role": "dialogue_speaker",
+        "text": "Kaffee und Tee zählen übrigens nicht als Wasserersatz, obwohl sie Flüssigkeit enthalten."
       },
       {
-        "speaker": "Sprecher 5",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q9 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q9"
+        "speaker": "Sprecher_3",
+        "speaker_role": "dialogue_speaker",
+        "text": "Und ganz wichtig: Nehmen Sie sich Zeit zum Essen und genießen Sie Ihre Mahlzeiten!"
       },
       {
-        "speaker": "Sprecher 5",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q10.",
-        "linkedQuestionId": "Q10"
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Text 4."
       },
       {
-        "speaker": "Sprecher 5",
-        "speaker_role": "answer_evidence",
-        "text": "Der Check-up umfasst eine Blutuntersuchung, Blutdruckmessung und eine körperliche Untersuchung.",
-        "linkedQuestionId": "Q10"
+        "speaker": "Sprecher_4",
+        "speaker_role": "dialogue_speaker",
+        "text": "Stress ist heutzutage eine der größten Gesundheitsgefahren in unserer Gesellschaft."
       },
       {
-        "speaker": "Sprecher 5",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q10 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q10"
+        "speaker": "Sprecher_4",
+        "speaker_role": "dialogue_speaker",
+        "text": "Dauerhafter Stress kann zu Burnout, Herzproblemen und psychischen Erkrankungen führen."
       },
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Ende des Hoertexts."
+        "speaker": "Sprecher_4",
+        "speaker_role": "dialogue_speaker",
+        "text": "Learning sich zu entspannen ist deshalb keine Zeitverschwendung, sondern lebenswichtig."
+      },
+      {
+        "speaker": "Sprecher_4",
+        "speaker_role": "dialogue_speaker",
+        "text": "Meditation, Yoga und progressive Muskelentspannung sind wissenschaftlich erprobte Methoden."
+      },
+      {
+        "speaker": "Sprecher_4",
+        "speaker_role": "dialogue_speaker",
+        "text": "Schon zehn Minuten tägliche Meditation können den Stresspegel deutlich senken."
+      },
+      {
+        "speaker": "Sprecher_4",
+        "speaker_role": "dialogue_speaker",
+        "text": "Auch Zeit in der Natur verbringen hilft nachweislich gegen Stresssymptome."
+      },
+      {
+        "speaker": "Sprecher_4",
+        "speaker_role": "dialogue_speaker",
+        "text": "Sprechen Sie offen mit Freunden oder einem Therapeuten über Ihren Stress."
+      },
+      {
+        "speaker": "Sprecher_4",
+        "speaker_role": "dialogue_speaker",
+        "text": "In Deutschland haben alle gesetzlich Versicherten Anspruch auf Psychotherapie bei Bedarf."
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Text 5."
+      },
+      {
+        "speaker": "Sprecher_5",
+        "speaker_role": "dialogue_speaker",
+        "text": "Eine wichtige Nachricht für alle Hörer ab fünfunddreißig Jahren."
+      },
+      {
+        "speaker": "Sprecher_5",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ab diesem Alter übernimmt die gesetzliche Krankenkasse alle drei Jahre einen Gesundheitscheck."
+      },
+      {
+        "speaker": "Sprecher_5",
+        "speaker_role": "dialogue_speaker",
+        "text": "Der Check-up umfasst eine Blutuntersuchung, Blutdruckmessung und eine körperliche Untersuchung."
+      },
+      {
+        "speaker": "Sprecher_5",
+        "speaker_role": "dialogue_speaker",
+        "text": "Früherkennung rettet Leben! Viele Krankheiten lassen sich im Frühstadium gut behandeln."
+      },
+      {
+        "speaker": "Sprecher_5",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ab fünfzig Jahren kommt die Darmkrebsvorsorge hinzu, die ebenfalls von der Kasse bezahlt wird."
+      },
+      {
+        "speaker": "Sprecher_5",
+        "speaker_role": "dialogue_speaker",
+        "text": "Frauen ab dreißig und Männer ab fünfundvierzig haben zusätzlich Anspruch auf Krebsvorsorge."
+      },
+      {
+        "speaker": "Sprecher_5",
+        "speaker_role": "dialogue_speaker",
+        "text": "Sprechen Sie mit Ihrem Hausarzt, welche Vorsorgeuntersuchungen für Sie sinnvoll sind."
+      },
+      {
+        "speaker": "Sprecher_5",
+        "speaker_role": "dialogue_speaker",
+        "text": "Und vergessen Sie nicht: Vorsorge ist immer besser und billiger als Behandlung!"
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Ende Teil eins."
       }
     ]
   },
@@ -430,7 +476,7 @@
       "id": "l-b1-goethe-009-t1-lo-1",
       "cefrLevel": "B1",
       "skill": "listening",
-      "canDoVi": "Toi co the luyen nghe hieu o trinh do B1 qua chu de \"Gesundheitstipps aus dem Radio\".",
+      "canDoVi": "Tôi có thể luyện nghe hiểu ở trình độ B1 qua chủ đề \"Gesundheitstipps aus dem Radio\".",
       "canDoDe": "Ich kann Hoeren auf Niveau B1 zum Thema \"Gesundheitstipps aus dem Radio\" ueben.",
       "linkedContentIds": [
         "L-B1-GOETHE-009-T1"

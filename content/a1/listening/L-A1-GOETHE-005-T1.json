@@ -29,7 +29,7 @@
       "explanation": {
         "de": "Die Person sagt: 'Donnerstag passt gut', nachdem 'Am Donnerstag um elf Uhr dreißig' angeboten wurde.",
         "vi": "Người đó nói: 'Thứ Năm thì được', sau khi được đề nghị 'Thứ Năm lúc 11 giờ 30 phút'.",
-        "key_evidence": "Am Donnerstag um elf Uhr dreißig hätte ich noch einen Termin. Ja, Donnerstag passt gut.",
+        "key_evidence": "Am Donnerstag um elf Uhr dreißig hätte ich noch einen Termin.",
         "key_vocabulary": [
           "Termin",
           "Mittwoch",
@@ -78,7 +78,7 @@
       "explanation": {
         "de": "Die Sprechstundenhilfe fragt: 'Haben Sie Ihre Versichertenkarte dabei?' und Frau Schmidt antwortet: 'Ja, hier bitte'.",
         "vi": "Trợ lý phòng khám hỏi: 'Bạn có mang theo thẻ bảo hiểm không?' và bà Schmidt trả lời: 'Vâng, đây ạ'.",
-        "key_evidence": "Haben Sie Ihre Versichertenkarte dabei? Ja, hier bitte.",
+        "key_evidence": "Ja, Frau Schmidt. Haben Sie Ihre Versichertenkarte dabei?",
         "key_vocabulary": [
           "Versichertenkarte",
           "Termin",
@@ -197,129 +197,202 @@
     ]
   },
   "transcript": {
-    "type": "full_reconstructed_transcript",
+    "type": "studio_source_transcript",
     "status": "complete",
-    "source": "reconstructed_full_script",
-    "quality": "release_candidate_reconstructed",
-    "note": "Full learner-visible reconstructed script created from existing question evidence because original studio scripts are not present in the repository. Replace with studio transcript if original audio scripts become available.",
+    "source": "studio_source_script",
+    "quality": "source_verified",
+    "sourceScript": "data/scripts/A1/Teil1-Kurze-Alltagsgespraeche/L-A1-GOETHE-005-T1.json",
+    "note": "Transcript replaced from source script by scripts/apply-source-transcripts.ts.",
     "lines": [
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Hoeren Sie eine kurze Information zum Thema Arzttermin machen."
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sie hören sechs kurze Gespräche. Zu jedem Gespräch gibt es eine Aufgabe. Kreuzen Sie die richtige Antwort an. Sie hören jeden Text zweimal."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q1.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Gespräch 1."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Am Donnerstag um elf Uhr dreißig hätte ich noch einen Termin. Ja, Donnerstag passt gut.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Sprecher1_1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Guten Tag! Ich möchte bitte einen Termin machen."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q1 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Sprecher2_1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Haben Sie am Mittwoch um zehn Uhr Zeit?"
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q2.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Sprecher1_1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Mittwoch geht leider nicht. Haben Sie am Donnerstag etwas frei?"
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "answer_evidence",
-        "text": "Ich habe seit drei Tagen Kopfschmerzen und Fieber.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Sprecher2_1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Am Donnerstag um elf Uhr dreißig hätte ich noch einen Termin."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q2 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Sprecher1_1",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ja, Donnerstag passt gut. Vielen Dank!"
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q3.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Gespräch 2."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "answer_evidence",
-        "text": "Haben Sie Ihre Versichertenkarte dabei? Ja, hier bitte.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Sprecher1_2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Was haben Sie für Beschwerden?"
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q3 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Sprecher2_2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ich habe seit drei Tagen Kopfschmerzen und Fieber."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q4.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Sprecher1_2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Haben Sie auch Husten oder Schnupfen?"
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "answer_evidence",
-        "text": "Ich nehme Tabletten gegen Bluthochdruck.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Sprecher2_2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ja, ein bisschen Husten. Und ich bin sehr müde."
       },
       {
-        "speaker": "Sprecher 4",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q4 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Sprecher1_2",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ich schreibe Ihnen ein Rezept. Gehen Sie bitte zur Apotheke."
       },
       {
-        "speaker": "Sprecher 5",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q5.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Gespräch 3."
       },
       {
-        "speaker": "Sprecher 5",
-        "speaker_role": "answer_evidence",
-        "text": "Mein Rücken tut sehr weh.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Sprecher1_3",
+        "speaker_role": "dialogue_speaker",
+        "text": "Guten Morgen! Ich bin Frau Schmidt. Ich habe einen Termin um neun Uhr."
       },
       {
-        "speaker": "Sprecher 5",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q5 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Sprecher2_3",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ja, Frau Schmidt. Haben Sie Ihre Versichertenkarte dabei?"
       },
       {
-        "speaker": "Sprecher 6",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q6.",
-        "linkedQuestionId": "Q6"
+        "speaker": "Sprecher1_3",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ja, hier bitte. Muss ich lange warten?"
       },
       {
-        "speaker": "Sprecher 6",
-        "speaker_role": "answer_evidence",
-        "text": "Schreiben Sie Ihren Namen, Ihre Adresse und Ihre Telefonnummer.",
-        "linkedQuestionId": "Q6"
+        "speaker": "Sprecher2_3",
+        "speaker_role": "dialogue_speaker",
+        "text": "Der Arzt ist gleich für Sie da. Bitte nehmen Sie Platz."
       },
       {
-        "speaker": "Sprecher 6",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q6 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q6"
+        "speaker": "Sprecher1_3",
+        "speaker_role": "dialogue_speaker",
+        "text": "Möchten Sie ein Glas Wasser? Die Wartezeit ist kurz."
       },
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Ende des Hoertexts."
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Gespräch 4."
+      },
+      {
+        "speaker": "Sprecher1_4",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ich brauche ein neues Rezept für meine Medizin."
+      },
+      {
+        "speaker": "Sprecher2_4",
+        "speaker_role": "dialogue_speaker",
+        "text": "Welches Medikament nehmen Sie? Wie heißt es?"
+      },
+      {
+        "speaker": "Sprecher1_4",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ich nehme Tabletten gegen Bluthochdruck. Seit einem Jahr."
+      },
+      {
+        "speaker": "Sprecher2_4",
+        "speaker_role": "dialogue_speaker",
+        "text": "Kein Problem, ich schreibe Ihnen das Rezept."
+      },
+      {
+        "speaker": "Sprecher1_4",
+        "speaker_role": "dialogue_speaker",
+        "text": "Hier bitte. Gehen Sie damit zur Apotheke in der Hauptstraße."
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Gespräch 5."
+      },
+      {
+        "speaker": "Sprecher1_5",
+        "speaker_role": "dialogue_speaker",
+        "text": "Guten Tag, Herr Müller! Wie geht es Ihnen heute?"
+      },
+      {
+        "speaker": "Sprecher2_5",
+        "speaker_role": "dialogue_speaker",
+        "text": "Nicht so gut, Herr Doktor. Mein Rücken tut sehr weh."
+      },
+      {
+        "speaker": "Sprecher1_5",
+        "speaker_role": "dialogue_speaker",
+        "text": "Seit wann haben Sie die Schmerzen?"
+      },
+      {
+        "speaker": "Sprecher2_5",
+        "speaker_role": "dialogue_speaker",
+        "text": "Seit ungefähr einer Woche. Es wird immer schlimmer."
+      },
+      {
+        "speaker": "Sprecher1_5",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ich untersuche Sie jetzt. Bitte legen Sie sich auf die Liege."
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Gespräch 6."
+      },
+      {
+        "speaker": "Sprecher1_6",
+        "speaker_role": "dialogue_speaker",
+        "text": "Frau Weber, der Doktor kommt in fünf Minuten."
+      },
+      {
+        "speaker": "Sprecher2_6",
+        "speaker_role": "dialogue_speaker",
+        "text": "Können Sie bitte dieses Formular ausfüllen?"
+      },
+      {
+        "speaker": "Sprecher1_6",
+        "speaker_role": "dialogue_speaker",
+        "text": "Schreiben Sie Ihren Namen, Ihre Adresse und Ihre Telefonnummer."
+      },
+      {
+        "speaker": "Sprecher2_6",
+        "speaker_role": "dialogue_speaker",
+        "text": "Haben Sie Allergien? Bitte tragen Sie das hier ein."
+      },
+      {
+        "speaker": "Sprecher1_6",
+        "speaker_role": "dialogue_speaker",
+        "text": "Geben Sie das Formular dann bitte am Empfang ab."
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Ende Teil eins."
       }
     ]
   },
@@ -336,7 +409,7 @@
       "id": "l-a1-goethe-005-t1-lo-1",
       "cefrLevel": "A1",
       "skill": "listening",
-      "canDoVi": "Toi co the luyen nghe hieu o trinh do A1 qua chu de \"Arzttermin machen\".",
+      "canDoVi": "Tôi có thể luyện nghe hiểu ở trình độ A1 qua chủ đề \"Arzttermin machen\".",
       "canDoDe": "Ich kann Hoeren auf Niveau A1 zum Thema \"Arzttermin machen\" ueben.",
       "linkedContentIds": [
         "L-A1-GOETHE-005-T1"

@@ -4,6 +4,7 @@ import { cache } from 'react'
 import { prisma } from '@fuxie/database'
 import { cookies } from 'next/headers'
 import { getServerUser } from '@/lib/auth/server-auth'
+import { getTranslations } from 'next-intl/server'
 
 const getGrammarTopic = cache(async (topicSlug: string) => {
     return prisma.grammarTopic.findUnique({
@@ -38,6 +39,7 @@ export default async function TopicDetailPage({ params }: { params: Promise<{ to
     const serverUser = await getServerUser()
     if (!serverUser) redirect('/login')
 
+    const t = await getTranslations('Grammar')
     const topic = await getGrammarTopic(topicSlug)
 
     if (!topic) notFound()
@@ -139,10 +141,10 @@ export default async function TopicDetailPage({ params }: { params: Promise<{ to
                                     {done ? (
                                         <div>
                                             <div className="text-lg">{'⭐'.repeat(stars)}{'☆'.repeat(3 - stars)}</div>
-                                            <div className="text-xs text-green-600 font-medium">Đã hoàn thành</div>
+                                            <div className="text-xs text-green-600 font-medium">{t('completed')}</div>
                                         </div>
                                     ) : lesson.locked ? (
-                                        <div className="text-sm text-gray-400">Khóa</div>
+                                        <div className="text-sm text-gray-400">{t('locked')}</div>
                                     ) : (
                                         <div className="px-3 py-1.5 rounded-xl bg-blue-500 text-white text-sm font-medium">
                                             Học →

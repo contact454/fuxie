@@ -29,7 +29,7 @@
       "explanation": {
         "de": "Die korrekte Antwort ist (a), da beide Gesprächspartner darin übereinstimmen, dass der Schnitt die ursprüngliche Idee eines Films (z.B. Kriminalfilm) komplett verändern kann (z.B. in eine Liebeskomödie). Dies wird als 'dritte Niederschrift' des Films beschrieben, was eine grundlegende Revision und neue Bedeutungsebene impliziert. Option (b) ist ein lexikalischer Fallstrick; sie greift die Begriffe 'kreative Symbiose' und 'volles Potenzial' auf, fokussiert aber fälschlicherweise auf die Entfaltung des Drehbuchs, während der Kernpunkt die Möglichkeit der Abweichung davon ist. Option (c) ist das genaue Gegenteil der Aussage, da die Studentin explizit bewundert, wie eine Szene 'komplett gegen die Intention des Drehbuchs' umgeschnitten werden kann.",
         "vi": "Đáp án đúng là (a), vì cả hai người đối thoại đều đồng ý rằng việc dựng phim có thể thay đổi hoàn toàn ý tưởng ban đầu của một tác phẩm (ví dụ: từ phim hình sự thành phim hài lãng mạn). Điều này được mô tả như là 'viết kịch bản lần thứ ba', ngụ ý một sự sửa đổi cơ bản và tạo ra một tầng ý nghĩa mới. Lựa chọn (b) là một cái bẫy từ vựng; nó sử dụng các thuật ngữ 'cộng sinh sáng tạo' và 'tiềm năng tối đa', nhưng lại tập trung sai vào việc phát huy kịch bản, trong khi điểm mấu chốt là khả năng đi chệch hướng khỏi nó. Lựa chọn (c) hoàn toàn trái ngược với những gì được nói, vì nữ sinh viên đặc biệt ngưỡng mộ việc một cảnh có thể được dựng lại 'hoàn toàn trái với ý đồ của kịch bản'.",
-        "key_evidence": "Besonders eindrücklich fand ich ihre Beschreibung, wie sie manchmal eine Szene komplett gegen die Intention des Drehbuchs umschneidet und dadurch eine völlig neue emotionale Qualität entstehen lässt. [...] Das erinnert mich an die berühmte Anekdote über den Film Annie Hall [...], der ursprünglich als Kriminalfilm konzipiert war und erst im Schnitt zu der Liebeskomödie wurde, die wir heute kennen."
+        "key_evidence": "Besonders eindrücklich fand ich ihre Beschreibung, wie sie manchmal eine Szene komplett gegen die Intention des Drehbuchs umschneidet und dadurch eine völlig neue emotionale Qualität entstehen lässt"
       }
     },
     {
@@ -108,75 +108,192 @@
     ]
   },
   "transcript": {
-    "type": "full_reconstructed_transcript",
+    "type": "studio_source_transcript",
     "status": "complete",
-    "source": "reconstructed_full_script",
-    "quality": "release_candidate_reconstructed",
-    "note": "Full learner-visible reconstructed script created from existing question evidence because original studio scripts are not present in the repository. Replace with studio transcript if original audio scripts become available.",
+    "source": "studio_source_script",
+    "quality": "source_verified",
+    "sourceScript": "data/scripts/C2/Teil2-Spontanes-Gespraech/L-C2-GOETHE-007-T2.json",
+    "note": "Transcript replaced from source script by scripts/apply-source-transcripts.ts.",
     "lines": [
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Der folgende anspruchsvolle Hoertext behandelt Filmberufe: der Cutter. Achten Sie auf Aussage, Kontext und implizite Bedeutung."
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sie hören ein Gespräch. Dazu gibt es fünf Aufgaben. Wer sagt was? Sie hören das Gespräch zweimal."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q1.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Studentin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ich war gestern bei einem Werkstattgespräch mit einer preisgekrönten Cutterin, die unter anderem den letzten Berlinale-Gewinner geschnitten hat, und ihre Ausführungen waren absolut fesselnd."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Besonders eindrücklich fand ich ihre Beschreibung, wie sie manchmal eine Szene komplett gegen die Intention des Drehbuchs umschneidet und dadurch eine völlig neue emotionale Qualität entstehen lässt. [...] Das erinnert mich an die berühmte Anekdote über den Film Annie Hall [...], der ursprünglich als Kriminalfilm konzipiert war und erst im Schnitt zu der Liebeskomödie wurde, die wir heute kennen.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Student",
+        "speaker_role": "dialogue_speaker",
+        "text": "Was hat sie über den kreativen Prozess gesagt? Ich stelle mir die Arbeit im Schneideraum immer als eine Mischung aus technischer Präzision und künstlerischer Intuition vor."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q1 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Studentin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Sie hat betont, dass der Schnitt eines Spielfilms ein monatelanger, extrem intensiver Prozess ist und dass die Beziehung zwischen Cutterin und Regisseur eine Art kreative Symbiose darstellt."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q2.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Student",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das bestätigt, was ich in meinem Filmseminar über die besondere Vertrauensbeziehung gelernt habe, die zwischen diesen beiden Rollen bestehen muss, damit ein Film sein volles Potenzial entfalten kann."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "answer_evidence",
-        "text": "Das ist ein zweischneidiges Schwert, und ich glaube, dass die Filmindustrie sich sehr genau überlegen muss, wo sie die Grenze zwischen technischer Automation und kreativer Entscheidung zieht.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Studentin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Besonders eindrücklich fand ich ihre Beschreibung, wie sie manchmal eine Szene komplett gegen die Intention des Drehbuchs umschneidet und dadurch eine völlig neue emotionale Qualität entstehen lässt."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q2 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Student",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das erinnert mich an die berühmte Anekdote über den Film Annie Hall von Woody Allen, der ursprünglich als Kriminalfilm konzipiert war und erst im Schnitt zu der Liebeskomödie wurde, die wir heute kennen."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q3.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Studentin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Es gibt zahlreiche solcher Beispiele, und sie verdeutlichen, dass ein Film im Schneideraum gewissermaßen zum dritten Mal geschrieben wird: nach dem Drehbuch und den Dreharbeiten."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "answer_evidence",
-        "text": "Diese Geschichte zeigt einmal mehr, wie kulturelle Geschlechterkonstruktionen selbst in vermeintlich rein technische Bereiche hineinwirken und die Wahrnehmung und Bewertung von Arbeit prägen.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Student",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Cutterin hat auch über die zunehmende Bedeutung von künstlicher Intelligenz im Schnittprozess gesprochen und davor gewarnt, dass automatisierte Schnittsoftware die handwerkliche Qualität bedrohen könnte."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q3 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Studentin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Andererseits könnten KI-gestützte Werkzeuge die technische Routinearbeit übernehmen und den Editoren mehr Zeit für die kreative Arbeit verschaffen, die ja der eigentliche Kern ihres Berufs ist."
       },
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Ende des Hoertexts."
+        "speaker": "Student",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das ist ein zweischneidiges Schwert, und ich glaube, dass die Filmindustrie sich sehr genau überlegen muss, wo sie die Grenze zwischen technischer Automation und kreativer Entscheidung zieht."
+      },
+      {
+        "speaker": "Studentin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Was mich auch beschäftigt, ist die Frage der Anerkennung: In der öffentlichen Wahrnehmung wird der Schnitt fast ausschließlich dem Regisseur zugeschrieben, während der Cutter oder die Cutterin unsichtbar bleibt."
+      },
+      {
+        "speaker": "Student",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das ist ein strukturelles Problem der Filmbranche, das sich auch in der historischen Geschlechterverteilung widerspiegelt: Der Schnitt war einer der wenigen Bereiche, in dem Frauen von Anfang an maßgeblich vertreten waren."
+      },
+      {
+        "speaker": "Studentin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Interessanterweise wird das oft damit erklärt, dass der Schnitt als eine Art Handarbeit oder Näharbeit am Film betrachtet wurde, was ihn in der geschlechtsspezifischen Arbeitsteilung des frühen Kinos als weibliche Tätigkeit markierte."
+      },
+      {
+        "speaker": "Student",
+        "speaker_role": "dialogue_speaker",
+        "text": "Diese Geschichte zeigt einmal mehr, wie kulturelle Geschlechterkonstruktionen selbst in vermeintlich rein technische Bereiche hineinwirken und die Wahrnehmung und Bewertung von Arbeit prägen."
+      },
+      {
+        "speaker": "Studentin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ich war gestern bei einem Werkstattgespräch mit einer preisgekrönten Cutterin, die unter anderem den letzten Berlinale-Gewinner geschnitten hat, und ihre Ausführungen waren absolut fesselnd."
+      },
+      {
+        "speaker": "Student",
+        "speaker_role": "dialogue_speaker",
+        "text": "Was hat sie über den kreativen Prozess gesagt? Ich stelle mir die Arbeit im Schneideraum immer als eine Mischung aus technischer Präzision und künstlerischer Intuition vor."
+      },
+      {
+        "speaker": "Studentin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Sie hat betont, dass der Schnitt eines Spielfilms ein monatelanger, extrem intensiver Prozess ist und dass die Beziehung zwischen Cutterin und Regisseur eine Art kreative Symbiose darstellt."
+      },
+      {
+        "speaker": "Student",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das bestätigt, was ich in meinem Filmseminar über die besondere Vertrauensbeziehung gelernt habe, die zwischen diesen beiden Rollen bestehen muss, damit ein Film sein volles Potenzial entfalten kann."
+      },
+      {
+        "speaker": "Studentin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Besonders eindrücklich fand ich ihre Beschreibung, wie sie manchmal eine Szene komplett gegen die Intention des Drehbuchs umschneidet und dadurch eine völlig neue emotionale Qualität entstehen lässt."
+      },
+      {
+        "speaker": "Student",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das erinnert mich an die berühmte Anekdote über den Film Annie Hall von Woody Allen, der ursprünglich als Kriminalfilm konzipiert war und erst im Schnitt zu der Liebeskomödie wurde, die wir heute kennen."
+      },
+      {
+        "speaker": "Studentin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Es gibt zahlreiche solcher Beispiele, und sie verdeutlichen, dass ein Film im Schneideraum gewissermaßen zum dritten Mal geschrieben wird: nach dem Drehbuch und den Dreharbeiten."
+      },
+      {
+        "speaker": "Student",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Cutterin hat auch über die zunehmende Bedeutung von künstlicher Intelligenz im Schnittprozess gesprochen und davor gewarnt, dass automatisierte Schnittsoftware die handwerkliche Qualität bedrohen könnte."
+      },
+      {
+        "speaker": "Studentin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Andererseits könnten KI-gestützte Werkzeuge die technische Routinearbeit übernehmen und den Editoren mehr Zeit für die kreative Arbeit verschaffen, die ja der eigentliche Kern ihres Berufs ist."
+      },
+      {
+        "speaker": "Student",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das ist ein zweischneidiges Schwert, und ich glaube, dass die Filmindustrie sich sehr genau überlegen muss, wo sie die Grenze zwischen technischer Automation und kreativer Entscheidung zieht."
+      },
+      {
+        "speaker": "Studentin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Was mich auch beschäftigt, ist die Frage der Anerkennung: In der öffentlichen Wahrnehmung wird der Schnitt fast ausschließlich dem Regisseur zugeschrieben, während der Cutter oder die Cutterin unsichtbar bleibt."
+      },
+      {
+        "speaker": "Student",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das ist ein strukturelles Problem der Filmbranche, das sich auch in der historischen Geschlechterverteilung widerspiegelt: Der Schnitt war einer der wenigen Bereiche, in dem Frauen von Anfang an maßgeblich vertreten waren."
+      },
+      {
+        "speaker": "Studentin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Interessanterweise wird das oft damit erklärt, dass der Schnitt als eine Art Handarbeit oder Näharbeit am Film betrachtet wurde, was ihn in der geschlechtsspezifischen Arbeitsteilung des frühen Kinos als weibliche Tätigkeit markierte."
+      },
+      {
+        "speaker": "Student",
+        "speaker_role": "dialogue_speaker",
+        "text": "Diese Geschichte zeigt einmal mehr, wie kulturelle Geschlechterkonstruktionen selbst in vermeintlich rein technische Bereiche hineinwirken und die Wahrnehmung und Bewertung von Arbeit prägen."
+      },
+      {
+        "speaker": "Studentin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ich war gestern bei einem Werkstattgespräch mit einer preisgekrönten Cutterin, die unter anderem den letzten Berlinale-Gewinner geschnitten hat, und ihre Ausführungen waren absolut fesselnd."
+      },
+      {
+        "speaker": "Student",
+        "speaker_role": "dialogue_speaker",
+        "text": "Was hat sie über den kreativen Prozess gesagt? Ich stelle mir die Arbeit im Schneideraum immer als eine Mischung aus technischer Präzision und künstlerischer Intuition vor."
+      },
+      {
+        "speaker": "Studentin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Sie hat betont, dass der Schnitt eines Spielfilms ein monatelanger, extrem intensiver Prozess ist und dass die Beziehung zwischen Cutterin und Regisseur eine Art kreative Symbiose darstellt."
+      },
+      {
+        "speaker": "Student",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das bestätigt, was ich in meinem Filmseminar über die besondere Vertrauensbeziehung gelernt habe, die zwischen diesen beiden Rollen bestehen muss, damit ein Film sein volles Potenzial entfalten kann."
+      },
+      {
+        "speaker": "Studentin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Besonders eindrücklich fand ich ihre Beschreibung, wie sie manchmal eine Szene komplett gegen die Intention des Drehbuchs umschneidet und dadurch eine völlig neue emotionale Qualität entstehen lässt."
+      },
+      {
+        "speaker": "Student",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das erinnert mich an die berühmte Anekdote über den Film Annie Hall von Woody Allen, der ursprünglich als Kriminalfilm konzipiert war und erst im Schnitt zu der Liebeskomödie wurde, die wir heute kennen."
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Ende Teil zwei."
       }
     ]
   },
@@ -193,7 +310,7 @@
       "id": "l-c2-goethe-007-t2-lo-1",
       "cefrLevel": "C2",
       "skill": "listening",
-      "canDoVi": "Toi co the luyen nghe hieu o trinh do C2 qua chu de \"Filmberufe: der Cutter\".",
+      "canDoVi": "Tôi có thể luyện nghe hiểu ở trình độ C2 qua chủ đề \"Filmberufe: der Cutter\".",
       "canDoDe": "Ich kann Hoeren auf Niveau C2 zum Thema \"Filmberufe: der Cutter\" ueben.",
       "linkedContentIds": [
         "L-C2-GOETHE-007-T2"

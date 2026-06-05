@@ -1,6 +1,7 @@
 'use client'
 
 import React, { useState, useEffect, useRef } from 'react'
+import { useTranslations } from 'next-intl'
 import { MascotAvatar } from './MascotAvatar'
 import { useLiveAPI } from '@/hooks/useLiveAPI'
 import { SCENARIOS } from '@/lib/content/scenarios'
@@ -12,10 +13,12 @@ interface VideoCallLayoutProps {
 }
 
 export function VideoCallLayout({ onEndCall, level, scenarioId }: VideoCallLayoutProps) {
+    const t = useTranslations('Chat')
     const [isMuted, setIsMuted] = useState(false)
     const [showSummary, setShowSummary] = useState(false)
     const [isSummarizing, setIsSummarizing] = useState(false)
     const [pronunciationErrors, setPronunciationErrors] = useState<any[]>([])
+    const [pronunciationFeedbackStatus, setPronunciationFeedbackStatus] = useState<'pending' | 'ready' | 'unavailable'>('pending')
     
     const MAX_CALL_DURATION_SEC = 300 // 5 minutes
     const [timeLeft, setTimeLeft] = useState(MAX_CALL_DURATION_SEC)
@@ -59,14 +62,28 @@ export function VideoCallLayout({ onEndCall, level, scenarioId }: VideoCallLayou
         disconnect()
         setShowSummary(true)
         setIsSummarizing(true)
+        setPronunciationFeedbackStatus('pending')
         
         // Extract pronunciation feedback from transcript JSON blocks
         try {
             const matches = fullTranscript.match(/"pronunciation_feedback"\s*:\s*(\[.*?\])/s)
             if (matches && matches[1]) {
-                setPronunciationErrors(JSON.parse(matches[1]))
+                const parsed = JSON.parse(matches[1])
+                if (Array.isArray(parsed)) {
+                    setPronunciationErrors(parsed)
+                    setPronunciationFeedbackStatus('ready')
+                } else {
+                    setPronunciationErrors([])
+                    setPronunciationFeedbackStatus('unavailable')
+                }
+            } else {
+                setPronunciationErrors([])
+                setPronunciationFeedbackStatus('unavailable')
             }
-        } catch (e) {}
+        } catch (e) {
+            setPronunciationErrors([])
+            setPronunciationFeedbackStatus('unavailable')
+        }
 
         // Save memory
         try {
@@ -85,11 +102,13 @@ export function VideoCallLayout({ onEndCall, level, scenarioId }: VideoCallLayou
     if (showSummary) {
         return (
             <div className="flex flex-col h-[calc(100vh-120px)] w-full max-w-4xl mx-auto bg-gray-900 rounded-3xl overflow-hidden p-8 shadow-2xl items-center justify-center text-white">
-                <h2 className="text-3xl font-bold mb-6">Tổng kết Cuộc gọi 📝</h2>
+                <h2 className="text-3xl font-bold mb-6">{t('videoCall.summary')}</h2>
                 
                 <div className="bg-gray-800 rounded-xl p-6 w-full max-w-2xl mb-8 text-left">
-                    <h3 className="text-xl font-semibold mb-4 text-blue-400">Phát âm cần lưu ý</h3>
-                    {pronunciationErrors.length > 0 ? (
+                    <h3 className="text-xl font-semibold mb-4 text-blue-400">{t('videoCall.pronunciationFeedback')}</h3>
+                    {pronunciationFeedbackStatus === 'unavailable' ? (
+                        <p className="text-amber-200">{t('videoCall.feedbackUnavailable')}</p>
+                    ) : pronunciationErrors.length > 0 ? (
                         <ul className="space-y-4">
                             {pronunciationErrors.map((err, idx) => (
                                 <li key={idx} className="bg-gray-700/50 p-4 rounded-lg">
@@ -99,7 +118,7 @@ export function VideoCallLayout({ onEndCall, level, scenarioId }: VideoCallLayou
                             ))}
                         </ul>
                     ) : (
-                        <p className="text-gray-400">Tuyệt vời! Bạn không có lỗi phát âm nào nghiêm trọng.</p>
+                        <p className="text-gray-400">{t('videoCall.noErrorsFeedback')}</p>
                     )}
                 </div>
 
@@ -109,7 +128,7 @@ export function VideoCallLayout({ onEndCall, level, scenarioId }: VideoCallLayou
                         disabled={isSummarizing}
                         className="px-8 py-3 rounded-full bg-blue-600 hover:bg-blue-700 text-white font-medium transition-colors disabled:opacity-50"
                     >
-                        {isSummarizing ? 'Đang lưu ký ức...' : 'Hoàn tất'}
+                        {isSummarizing ? t('videoCall.savingMemory') : t('videoCall.complete')}
                     </button>
                 </div>
             </div>
@@ -130,7 +149,7 @@ export function VideoCallLayout({ onEndCall, level, scenarioId }: VideoCallLayou
                 {scenario.missions.length > 0 && (
                     <div className="absolute top-6 left-6 w-64 bg-black/40 backdrop-blur-md text-white rounded-2xl p-4 shadow-xl border border-white/10 z-20 hidden md:block">
                         <h3 className="font-bold text-sm mb-3 flex items-center gap-2 text-blue-300">
-                            <span>🎯</span> Nhiệm vụ kịch bản
+                            <span>🎯</span> {t('videoCall.scenarioMissions')}
                         </h3>
                         <ul className="space-y-3">
                             {scenario.missions.map((m: any) => (
@@ -165,7 +184,7 @@ export function VideoCallLayout({ onEndCall, level, scenarioId }: VideoCallLayou
                     {/* Status Badge */}
                     <div className="mt-8 px-4 py-1.5 rounded-full bg-black/40 backdrop-blur-md text-white text-sm font-medium flex items-center gap-2">
                         <div className={`w-2 h-2 rounded-full ${connectionError ? 'bg-red-400' : !isConnected ? 'bg-yellow-400' : isSpeaking ? 'bg-green-400 animate-pulse' : 'bg-gray-400'}`} />
-                        {connectionError ? 'Khong the ket noi Live API' : !isConnected ? 'Đang kết nối...' : isSpeaking ? 'Fuxie đang nói...' : 'Fuxie đang nghe...'}
+                        {connectionError ? t('videoCall.connectError') : !isConnected ? t('videoCall.connecting') : isSpeaking ? t('videoCall.aiSpeaking') : t('videoCall.aiListening')}
                     </div>
                     {connectionError && (
                         <div className="mt-3 max-w-md text-center text-xs text-red-200 bg-red-950/60 border border-red-500/30 rounded-xl px-4 py-2">
@@ -221,7 +240,7 @@ export function VideoCallLayout({ onEndCall, level, scenarioId }: VideoCallLayou
                     <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 8l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2M5 3a2 2 0 00-2 2v1c0 8.284 6.716 15 15 15h1a2 2 0 002-2v-3.28a1 1 0 00-.684-.948l-4.493-1.498a1 1 0 00-1.21.502l-1.13 2.257a11.042 11.042 0 01-5.516-5.517l2.257-1.128a1 1 0 00.502-1.21L9.228 3.683A1 1 0 008.279 3H5z" />
                     </svg>
-                    Kết thúc
+                    {t('videoCall.endCall')}
                 </button>
             </div>
         </div>

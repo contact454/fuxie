@@ -81,7 +81,7 @@ export function MobileShell({ dailyGoal: initialDailyGoal, children }: MobileShe
                 <button
                     onClick={toggleDrawer}
                     className="mobile-header-hamburger"
-                    aria-label="Menü öffnen"
+                    aria-label={t('openMenu')}
                 >
                     <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
                         <line x1="3" y1="6" x2="21" y2="6" />
@@ -90,7 +90,7 @@ export function MobileShell({ dailyGoal: initialDailyGoal, children }: MobileShe
                     </svg>
                 </button>
 
-                <MeasuredLink href="/dashboard" flow="nav.mobile.logo" source="dashboard" className="mobile-header-logo">
+                <MeasuredLink href="/dashboard" flow="nav.mobile.logo" source="dashboard" className="mobile-header-logo focus-visible:outline-[var(--fuxie-blue-200)]">
                     <Image
                         src={getFuxieMascotSrc('authWelcomer')}
                         alt="Fuxie"
@@ -99,18 +99,15 @@ export function MobileShell({ dailyGoal: initialDailyGoal, children }: MobileShe
                         className="object-contain"
                         style={{ width: 'auto', height: 'auto' }}
                     />
-                    <span className="text-lg font-bold bg-gradient-to-r from-[#60A8E4] to-[#3C78A8] bg-clip-text text-transparent">
+                    <span className="text-lg font-black text-white">
                         Fuxie
                     </span>
                 </MeasuredLink>
 
                 {dailyGoal && (
-                    <div className="mobile-header-xp">
-                        <span className="text-xs">⭐</span>
-                        <span className="text-xs font-semibold text-gray-600">
-                            {dailyGoal.xpEarned}
-                        </span>
-                    </div>
+                    <span className="rounded-full bg-[var(--fuxie-blue-500)] px-3 py-1 text-xs font-black text-white shadow-md shadow-sky-950/20">
+                        {dailyGoal.xpEarned} XP
+                    </span>
                 )}
             </header>
 
@@ -135,7 +132,7 @@ export function MobileShell({ dailyGoal: initialDailyGoal, children }: MobileShe
                     <button
                         onClick={closeDrawer}
                         className="sidebar-drawer-close"
-                        aria-label="Menü schließen"
+                        aria-label={t('closeMenu')}
                     >
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
                             <line x1="18" y1="6" x2="6" y2="18" />
@@ -162,7 +159,11 @@ export function MobileShell({ dailyGoal: initialDailyGoal, children }: MobileShe
                             href={item.href}
                             flow="nav.mobile.bottom"
                             source={item.labelKey}
-                            className={`bottom-nav-item ${isActive ? 'bottom-nav-item-active' : ''}`}
+                            className={`bottom-nav-item focus-visible:outline-[var(--fuxie-blue-200)] ${
+                                isActive 
+                                    ? 'bottom-nav-item-active bg-[#2ec4b6] text-[var(--fuxie-blue-900)] rounded-xl' 
+                                    : 'text-white/80 hover:bg-white/10 hover:text-white'
+                            }`}
                         >
                             <span className="bottom-nav-icon">{item.icon}</span>
                             <span className="bottom-nav-label">{t(item.labelKey as any)}</span>

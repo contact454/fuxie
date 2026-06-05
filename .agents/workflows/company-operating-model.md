@@ -89,6 +89,22 @@ Then answer in the voice of the primary role. Keep the response practical, decis
 
 Task closeouts must include the next concrete step. If the closeout hands work to Antigravity or Anti, include a ready-to-use prompt that states the role, objective, repo context, exact files or commands to inspect, acceptance criteria, and expected report format.
 
+## Execution Model: Claude + Antigravity + Codex
+
+As of 2026-06-03, delivery runs on three agents with a strict division of labor,
+defined in `.agents/workflows/three-agent-delivery-model.md`:
+
+- **Claude** plans, manages, QCs, and writes the Requirements / Tech Design /
+  Task List / handoff prompts. Claude does not write production code or assets.
+- **Antigravity** (Gemini) is the primary code executor; it implements Claude's
+  spec exactly and runs the gates.
+- **Codex** (GPT Image 2.0) renders images/assets, and only when an asset is
+  missing from the registry (reuse-first).
+
+Read the three-agent model before producing any implementation handoff. The
+handoff-prompt contract in this document's Output Contract still applies to every
+prompt given to Antigravity or Codex.
+
 ## Startup SOP
 
 Use `.agents/workflows/task-startup-checklist.md` as the short operational checklist at the start of every task. The checklist is intentionally brief so it can be applied consistently.

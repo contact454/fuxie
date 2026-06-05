@@ -47,7 +47,7 @@
       "explanation": {
         "de": "Die korrekte Antwort ist (b). Der Sprecher präsentiert Wien als positives Beispiel, wo Wohnungsbau als 'öffentliche Aufgabe' verstanden wird und die Stadt 'selbst aktiv' baut, was zu 'deutlich niedrigeren Mieten' führt. Dies beschreibt eine proaktive und erfolgreiche Politik. Option (a) ist falsch, da Wien als 'eine der lebenswertesten Städte weltweit' mit 'vergleichbarer Lebensqualität' zu München beschrieben wird. Option (c) ist eine lexikalische Falle und ungenau; der Bestand wurde nicht nur stagniert, sondern 'um mehr als die Hälfte reduziert', was ein stärkeres negatives Urteil ist als nur Stagnation.",
         "vi": "Đáp án đúng là (b). Người nói trình bày Vienna như một ví dụ tích cực, nơi xây dựng nhà ở được hiểu là 'nhiệm vụ công' và thành phố 'tự mình tích cực xây dựng', dẫn đến 'giá thuê thấp hơn đáng kể'. Điều này mô tả một chính sách chủ động và thành công. Lựa chọn (a) sai, vì Vienna được mô tả là 'một trong những thành phố đáng sống nhất thế giới' với 'chất lượng sống tương đương' với Munich. Lựa chọn (c) là một cái bẫy từ vựng và không chính xác; số lượng nhà ở xã hội không chỉ trì trệ mà còn 'giảm hơn một nửa', đây là một nhận định tiêu cực mạnh mẽ hơn là chỉ trì trệ.",
-        "key_evidence": "In Wien, einer der lebenswertesten Städte weltweit, wird sozialer Wohnungsbau seit hundert Jahren als öffentliche Aufgabe verstanden. ... Das Ergebnis: Wien hat deutlich niedrigere Mieten als München oder Zürich bei vergleichbarer Lebensqualität."
+        "key_evidence": "In Wien, einer der lebenswertesten Städte weltweit, wird sozialer Wohnungsbau seit hundert Jahren als öffentliche Aufgabe verstanden"
       }
     },
     {
@@ -108,75 +108,147 @@
     ]
   },
   "transcript": {
-    "type": "full_reconstructed_transcript",
+    "type": "studio_source_transcript",
     "status": "complete",
-    "source": "reconstructed_full_script",
-    "quality": "release_candidate_reconstructed",
-    "note": "Full learner-visible reconstructed script created from existing question evidence because original studio scripts are not present in the repository. Replace with studio transcript if original audio scripts become available.",
+    "source": "studio_source_script",
+    "quality": "source_verified",
+    "sourceScript": "data/scripts/C1/Teil1-Podcast-oder-Rezension/L-C1-GOETHE-002-T1.json",
+    "note": "Transcript replaced from source script by scripts/apply-source-transcripts.ts.",
     "lines": [
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Der folgende anspruchsvolle Hoertext behandelt Wohnen der Zukunft und Stadtplanung. Achten Sie auf Aussage, Kontext und implizite Bedeutung."
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sie hören einen Podcast. Dazu gibt es sechs Aufgaben. Ordnen Sie die Aussagen den Abschnitten zu. Sie hören den Text einmal."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe q1_c1_h1.",
-        "linkedQuestionId": "q1_c1_h1"
+        "speaker": "Podcaster",
+        "speaker_role": "dialogue_speaker",
+        "text": "Willkommen bei 'Stadt der Zukunft', dem Podcast über urbane Transformation und nachhaltiges Wohnen."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Diese Lücke zwischen Bedarf und Bau wird mit jedem Jahr größer und verschärft die soziale Ungleichheit.",
-        "linkedQuestionId": "q1_c1_h1"
+        "speaker": "Podcaster",
+        "speaker_role": "dialogue_speaker",
+        "text": "Heute sprechen wir über die Frage, die Millionen Menschen in deutschen Großstädten beschäftigt: Wie wollen wir in Zukunft wohnen?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe q1_c1_h1 im Kontext des Hoertexts.",
-        "linkedQuestionId": "q1_c1_h1"
+        "speaker": "Podcaster",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Wohnungskrise in deutschen Metropolen hat sich in den letzten zehn Jahren dramatisch verschärft."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe q2_c1_h1.",
-        "linkedQuestionId": "q2_c1_h1"
+        "speaker": "Podcaster",
+        "speaker_role": "dialogue_speaker",
+        "text": "In München, Berlin und Hamburg sind die Mieten um fünfzig bis siebzig Prozent gestiegen, während die Einkommen stagniert haben."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "In Wien, einer der lebenswertesten Städte weltweit, wird sozialer Wohnungsbau seit hundert Jahren als öffentliche Aufgabe verstanden. ... Das Ergebnis: Wien hat deutlich niedrigere Mieten als München oder Zürich bei vergleichbarer Lebensqualität.",
-        "linkedQuestionId": "q2_c1_h1"
+        "speaker": "Podcaster",
+        "speaker_role": "dialogue_speaker",
+        "text": "Für viele Menschen, besonders Familien und Geringverdiener, wird das Wohnen in der Stadt zunehmend unbezahlbar."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe q2_c1_h1 im Kontext des Hoertexts.",
-        "linkedQuestionId": "q2_c1_h1"
+        "speaker": "Podcaster",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Ursachen sind komplex: zu wenig Neubau, Bodenspekulation, steigende Baukosten und eine verfehlte Wohnungspolitik."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe q3_c1_h1.",
-        "linkedQuestionId": "q3_c1_h1"
+        "speaker": "Podcaster",
+        "speaker_role": "dialogue_speaker",
+        "text": "Deutschland baut seit Jahren weniger Wohnungen als die Regierung es als Ziel formuliert hat."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Auch in Deutschland gibt es Pilotprojekte, aber regulatorische Hürden bremsen den Holzbau noch erheblich.",
-        "linkedQuestionId": "q3_c1_h1"
+        "speaker": "Podcaster",
+        "speaker_role": "dialogue_speaker",
+        "text": "Statt der angestrebten vierhunderttausend neuen Wohnungen jährlich werden nur etwa zweihundertfünfundneunzigtausend fertiggestellt."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe q3_c1_h1 im Kontext des Hoertexts.",
-        "linkedQuestionId": "q3_c1_h1"
+        "speaker": "Podcaster",
+        "speaker_role": "dialogue_speaker",
+        "text": "Diese Lücke zwischen Bedarf und Bau wird mit jedem Jahr größer und verschärft die soziale Ungleichheit."
       },
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Ende des Hoertexts."
+        "speaker": "Podcaster",
+        "speaker_role": "dialogue_speaker",
+        "text": "Gleichzeitig verbraucht der Gebäudesektor über dreißig Prozent der deutschen Endenergie und ist ein großer CO2-Emittent."
+      },
+      {
+        "speaker": "Podcaster",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Stadt der Zukunft muss also nicht nur bezahlbar, sondern auch klimaneutral und lebenswert sein."
+      },
+      {
+        "speaker": "Podcaster",
+        "speaker_role": "dialogue_speaker",
+        "text": "Innovative Konzepte wie die Fünfzehn-Minuten-Stadt versprechen, Wohnen, Arbeiten und Freizeit in fußläufiger Nähe zu vereinen."
+      },
+      {
+        "speaker": "Podcaster",
+        "speaker_role": "dialogue_speaker",
+        "text": "In Paris wird dieses Konzept unter Bürgermeisterin Anne Hidalgo bereits konsequent umgesetzt und zeigt erste Erfolge."
+      },
+      {
+        "speaker": "Podcaster",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das Ziel: Jeder Pariser soll alle wichtigen Einrichtungen des täglichen Bedarfs innerhalb von fünfzehn Minuten erreichen können."
+      },
+      {
+        "speaker": "Podcaster",
+        "speaker_role": "dialogue_speaker",
+        "text": "In Wien, einer der lebenswertesten Städte weltweit, wird sozialer Wohnungsbau seit hundert Jahren als öffentliche Aufgabe verstanden."
+      },
+      {
+        "speaker": "Podcaster",
+        "speaker_role": "dialogue_speaker",
+        "text": "Sechzig Prozent der Wienerinnen und Wiener leben in geförderten Wohnungen, und die Stadt baut selbst aktiv neue Sozialwohnungen."
+      },
+      {
+        "speaker": "Podcaster",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das Ergebnis: Wien hat deutlich niedrigere Mieten als München oder Zürich bei vergleichbarer Lebensqualität."
+      },
+      {
+        "speaker": "Podcaster",
+        "speaker_role": "dialogue_speaker",
+        "text": "In Deutschland hingegen wurde der soziale Wohnungsbestand seit der Wiedervereinigung um mehr als die Hälfte reduziert."
+      },
+      {
+        "speaker": "Podcaster",
+        "speaker_role": "dialogue_speaker",
+        "text": "Jährlich fallen mehr Sozialwohnungen aus der Bindung als neue gebaut werden, ein strukturelles Versagen der Wohnungspolitik."
+      },
+      {
+        "speaker": "Podcaster",
+        "speaker_role": "dialogue_speaker",
+        "text": "Holzbau gewinnt als nachhaltige Alternative zum energieintensiven Betonbau an Bedeutung in der Bauindustrie."
+      },
+      {
+        "speaker": "Podcaster",
+        "speaker_role": "dialogue_speaker",
+        "text": "In Skandinavien werden bereits Hochhäuser aus Holz gebaut, die deutlich klimafreundlicher sind als konventionelle Bauten."
+      },
+      {
+        "speaker": "Podcaster",
+        "speaker_role": "dialogue_speaker",
+        "text": "Auch in Deutschland gibt es Pilotprojekte, aber regulatorische Hürden bremsen den Holzbau noch erheblich."
+      },
+      {
+        "speaker": "Podcaster",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ein weiterer Zukunftstrend ist das modulare Bauen, bei dem Gebäude aus vorgefertigten Elementen zusammengesetzt werden."
+      },
+      {
+        "speaker": "Podcaster",
+        "speaker_role": "dialogue_speaker",
+        "text": "Diese Bauweise spart bis zu fünfzig Prozent der Bauzeit und senkt die Kosten um zwanzig bis dreißig Prozent."
+      },
+      {
+        "speaker": "Podcaster",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das war unser Podcast zur Zukunft des Wohnens. Wie möchten Sie in zehn Jahren wohnen?"
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Ende Teil eins."
       }
     ]
   },
@@ -193,7 +265,7 @@
       "id": "l-c1-goethe-002-t1-lo-1",
       "cefrLevel": "C1",
       "skill": "listening",
-      "canDoVi": "Toi co the luyen nghe hieu o trinh do C1 qua chu de \"Wohnen der Zukunft und Stadtplanung\".",
+      "canDoVi": "Tôi có thể luyện nghe hiểu ở trình độ C1 qua chủ đề \"Wohnen der Zukunft und Stadtplanung\".",
       "canDoDe": "Ich kann Hoeren auf Niveau C1 zum Thema \"Wohnen der Zukunft und Stadtplanung\" ueben.",
       "linkedContentIds": [
         "L-C1-GOETHE-002-T1"

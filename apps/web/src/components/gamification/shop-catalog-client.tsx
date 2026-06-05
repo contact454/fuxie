@@ -2,6 +2,7 @@
 
 import Image from 'next/image'
 import { useMemo, useState, useTransition } from 'react'
+import { useTranslations } from 'next-intl'
 import {
     ArrowRight,
     BookOpenCheck,
@@ -147,6 +148,7 @@ export function ShopCatalogClient({
     catalog,
     recentRequests,
 }: ShopCatalogClientProps) {
+    const tShop = useTranslations('Shop')
     const [activeFilter, setActiveFilter] = useState<ShopFilter>('all')
     const [previewItem, setPreviewItem] = useState<FuxieShopCatalogItem | null>(null)
     const [redeemFeedbackByItem, setRedeemFeedbackByItem] = useState<Record<string, RedeemFeedback>>({})
@@ -191,8 +193,8 @@ export function ShopCatalogClient({
                                 <Coins className="h-3.5 w-3.5" />
                                 {wallet.balance.toLocaleString('vi-VN')} Fucoin
                             </FuxieBadge>
-                            <FuxieBadge tone="brand">Shop Catalog v1</FuxieBadge>
-                            <FuxieBadge tone="neutral">Pending Request v1</FuxieBadge>
+                            <FuxieBadge tone="brand">{tShop('catalogVersion')}</FuxieBadge>
+                            <FuxieBadge tone="neutral">{tShop('pendingRequestVersion')}</FuxieBadge>
                         </div>
 
                         <h1 className="max-w-3xl text-3xl font-black tracking-normal text-[#173B56] sm:text-4xl">
@@ -235,7 +237,7 @@ export function ShopCatalogClient({
                         </div>
                         <div className="mt-5">
                             <div className="mb-2 flex items-center justify-between text-xs font-black text-[#C67A00]">
-                                <span>Fucoin hôm nay</span>
+                                <span>{tShop('fucoinToday')}</span>
                                 <span>{dailyFucoin.remaining} còn lại</span>
                             </div>
                             <FuxieProgressBar
@@ -307,6 +309,7 @@ function ShopHeroStat({
 }
 
 function ShopRequestCelebration({ celebration }: { celebration: ShopRequestCelebrationData }) {
+    const tShop = useTranslations('Shop')
     return (
         <section className="fuxie-shop-request-panel mt-6 overflow-hidden rounded-[28px] bg-gradient-to-r from-[#EAFBF8] via-white to-[#FFF7D6] p-4 shadow-sm ring-1 ring-[#2EC4B6]/25 sm:p-5">
             <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
@@ -330,7 +333,7 @@ function ShopRequestCelebration({ celebration }: { celebration: ShopRequestCeleb
                         </span>
                     </div>
                     <div className="min-w-0">
-                        <p className="text-xs font-black uppercase tracking-wide text-[#148F7D]">Request added to queue</p>
+                        <p className="text-xs font-black uppercase tracking-wide text-[#148F7D]">{tShop('requestAddedToQueue')}</p>
                         <h2 className="mt-1 line-clamp-2 text-xl font-black text-[#173B56]">
                             {celebration.itemTitle}
                         </h2>
@@ -355,6 +358,7 @@ function ShopRequestCelebration({ celebration }: { celebration: ShopRequestCeleb
 }
 
 function LearnerRewardInventory({ inventory }: { inventory: LearnerRewardInventoryData }) {
+    const tShop = useTranslations('Shop')
     const lastFulfilled = inventory.lastFulfilledReward
 
     return (
@@ -376,7 +380,7 @@ function LearnerRewardInventory({ inventory }: { inventory: LearnerRewardInvento
                             <ShieldCheck className="h-3.5 w-3.5" />
                             Kho Báu Cá Nhân
                         </div>
-                        <h2 className="mt-3 text-xl font-black text-[#173B56]">Chiến lợi phẩm đã nằm gọn trong tay</h2>
+                        <h2 className="mt-3 text-xl font-black text-[#173B56]">{tShop('inventoryTitle')}</h2>
                         <p className="mt-1 max-w-2xl text-sm font-semibold leading-relaxed text-[#3C78A8]">
                             Mọi vật phẩm em chinh phục thành công đều được cất giữ tại đây. Khiên Streak Freeze đã sẵn sàng kích hoạt bất cứ lúc nào bão tố ập đến.
                         </p>
@@ -433,11 +437,12 @@ function StreakFreezeTimeline({
 }: {
     timeline: LearnerRewardInventoryData['streakFreezeTimeline']
 }) {
+    const tShop = useTranslations('Shop')
     return (
         <div className="mt-4 rounded-2xl bg-white/85 p-4 ring-1 ring-[#CCE4F0]/70">
             <div className="flex items-center justify-between gap-3">
                 <div>
-                    <p className="text-sm font-black text-[#173B56]">Biên Niên Sử Streak Freeze</p>
+                    <p className="text-sm font-black text-[#173B56]">{tShop('streakFreezeTimelineTitle')}</p>
                     <p className="mt-1 text-xs font-semibold text-[#3C78A8]">
                         Ghi chép về những lần tấm khiên này đã xả thân cứu lấy ngọn lửa học tập của em.
                     </p>
@@ -511,6 +516,7 @@ function InventoryStat({
 }
 
 function LearnerRedeemHistory({ requests }: { requests: LearnerRedeemRequest[] }) {
+    const tShop = useTranslations('Shop')
     const pendingCount = requests.filter((request) => request.status === 'PENDING').length
     const awaitingCount = requests.filter((request) => request.status === 'APPROVED' && !request.fulfilledAt).length
 
@@ -523,7 +529,7 @@ function LearnerRedeemHistory({ requests }: { requests: LearnerRedeemRequest[] }
                             <Clock3 className="h-3.5 w-3.5" />
                             Lịch Sử Triệu Hồi
                         </div>
-                        <h2 className="mt-3 text-xl font-black text-[#173B56]">Bản Lĩnh Đổi Thưởng</h2>
+                        <h2 className="mt-3 text-xl font-black text-[#173B56]">{tShop('redeemHistoryTitle')}</h2>
                         <p className="mt-1 max-w-2xl text-sm font-semibold leading-relaxed text-[#3C78A8]">
                             Nơi ghi dấu từng lần em mang chiến lợi phẩm đi triệu hồi bảo vật. Mọi khế ước đều phải trải qua vòng phán xét cuối cùng trước khi vật phẩm thực sự hiện hình.
                         </p>
@@ -531,7 +537,7 @@ function LearnerRedeemHistory({ requests }: { requests: LearnerRedeemRequest[] }
                     <div className="rounded-2xl bg-[#F3FBFF] px-4 py-3 text-sm ring-1 ring-[#CCE4F0]/80">
                         <p className="text-2xl font-black text-[#173B56]">{pendingCount}</p>
                         <p className="text-xs font-black text-[#2E9F92]">{awaitingCount} awaiting</p>
-                        <p className="font-semibold text-[#3C78A8]">đang pending</p>
+                        <p className="font-semibold text-[#3C78A8]">{tShop('pendingStatus')}</p>
                     </div>
                 </div>
 
@@ -629,6 +635,7 @@ function ShopItemCard({
     recentlyRequested: boolean
     onPreview: () => void
 }) {
+    const tShop = useTranslations('Shop')
     const meta = CATEGORY_META[item.category]
     const remaining = Math.max(0, item.cost - walletBalance)
     const assetSrc = getShopItemAssetSrc(item.id, item.category)
@@ -702,7 +709,7 @@ function ShopItemCard({
                 <div className="mt-auto rounded-2xl bg-white/75 p-3 ring-1 ring-white/90">
                     <div className="mb-2 flex items-center justify-between gap-3">
                         <div>
-                            <p className="text-xs font-black uppercase tracking-wide text-[#C67A00]">Giá</p>
+                            <p className="text-xs font-black uppercase tracking-wide text-[#C67A00]">{tShop('priceLabel')}</p>
                             <p className="text-xl font-black text-[#173B56]">{item.cost.toLocaleString('vi-VN')} Fu</p>
                         </div>
                         <div className="text-right">
@@ -746,6 +753,7 @@ function RedeemPreviewModal({
     onRequestUpsert: (request: LearnerRedeemRequest) => void
     onClose: () => void
 }) {
+    const tShop = useTranslations('Shop')
     const [isPending, startTransition] = useTransition()
 
     if (!item) return null
@@ -825,7 +833,7 @@ function RedeemPreviewModal({
                     <button
                         type="button"
                         onClick={onClose}
-                        aria-label="Đóng preview đổi quà"
+                        aria-label={tShop('closePreviewAria')}
                         className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#F3FBFF] text-[#3C78A8] ring-1 ring-[#CCE4F0]/80 transition hover:bg-white"
                     >
                         <X className="h-5 w-5" />
@@ -865,7 +873,7 @@ function RedeemPreviewModal({
                             <Info className="h-5 w-5" />
                         </span>
                         <div className="min-w-0">
-                            <p className="text-sm font-black text-[#8A5A00]">Request pending chưa phải redeem hoàn tất</p>
+                            <p className="text-sm font-black text-[#8A5A00]">{tShop('requestPendingWarning')}</p>
                             <p className="mt-1 text-sm font-semibold leading-relaxed text-[#8A5A00]/80">
                                 Tạo request chỉ đưa item vào hàng chờ admin review. Fucoin chưa bị trừ, chưa giao quà và chưa unlock nội dung.
                             </p>

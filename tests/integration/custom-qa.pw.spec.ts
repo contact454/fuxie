@@ -146,9 +146,9 @@ test.describe('Visual QA Custom Screenshot Capture', () => {
         // Navigate past intro cards until we reach the multiple choice exercise
         console.log('Navigating to multiple-choice exercise...')
         for (let i = 0; i < 10; i++) {
-            const heading = page.getByRole('heading', { name: /Höre und wähle das richtige Wort/i })
+            const heading = page.locator('h1, h2, h3').filter({ hasText: /Höre und wähle das richtige Wort|Nghĩa của từ/i })
             const choiceBtnCount = await page.locator('button[data-choice-btn]').count()
-            if (await heading.isVisible() && choiceBtnCount >= 4) {
+            if (choiceBtnCount >= 4) {
                 console.log(`Reached multiple-choice exercise at step ${i}`)
                 break
             }
@@ -163,7 +163,7 @@ test.describe('Visual QA Custom Screenshot Capture', () => {
         }
 
         // Assert we are actually on the multiple choice exercise before taking screenshot
-        await expect(page.getByRole('heading', { name: /Höre und wähle das richtige Wort/i })).toBeVisible()
+        await expect(page.locator('h1, h2, h3').filter({ hasText: /Höre und wähle das richtige Wort|Nghĩa của từ/i }).first()).toBeVisible()
         await expect(page.locator('button[data-choice-btn]')).toHaveCount(4)
 
         // Capture session desktop (active listening multiple-choice exercise)
@@ -181,7 +181,7 @@ test.describe('Visual QA Custom Screenshot Capture', () => {
         console.log('Starting session clickthrough loop...')
         for (let i = 0; i < 20; i++) {
             // Check if we are on success screen
-            const resultHeader = page.locator('h2:has-text("Lektion geschafft!")').first()
+            const resultHeader = page.locator('h1, h2, h3').filter({ hasText: /Lektion geschafft!|Hoàn thành bài học!|Lesson completed!/i }).first()
             if (await resultHeader.isVisible()) {
                 console.log(`Success screen detected at loop step ${i}!`)
                 isSuccessVisible = true
@@ -210,7 +210,7 @@ test.describe('Visual QA Custom Screenshot Capture', () => {
                     await page.waitForTimeout(300)
                 }
 
-                const continueBtn = page.locator('button:has-text("Weiter"), button:has-text("Tiếp Bước")')
+                const continueBtn = page.locator('button:has-text("Weiter"), button:has-text("Tiếp Bước"), button:has-text("Học tiếp")')
                 if (await continueBtn.isVisible()) {
                     await continueBtn.click()
                     await page.waitForTimeout(500)
@@ -231,7 +231,7 @@ test.describe('Visual QA Custom Screenshot Capture', () => {
                     await page.waitForTimeout(300)
                 }
 
-                const continueBtn = page.locator('button:has-text("Weiter"), button:has-text("Tiếp Bước")')
+                const continueBtn = page.locator('button:has-text("Weiter"), button:has-text("Tiếp Bước"), button:has-text("Học tiếp")')
                 if (await continueBtn.isVisible()) {
                     await continueBtn.click()
                     await page.waitForTimeout(500)
@@ -279,9 +279,9 @@ test.describe('Visual QA Custom Screenshot Capture', () => {
         // Navigate past intro cards until we reach the multiple choice exercise
         console.log('Navigating to multiple-choice exercise (mobile)...')
         for (let i = 0; i < 10; i++) {
-            const heading = page.getByRole('heading', { name: /Höre und wähle das richtige Wort/i })
+            const heading = page.locator('h1, h2, h3').filter({ hasText: /Höre und wähle das richtige Wort|Nghĩa của từ/i })
             const choiceBtnCount = await page.locator('button[data-choice-btn]').count()
-            if (await heading.isVisible() && choiceBtnCount >= 4) {
+            if (choiceBtnCount >= 4) {
                 console.log(`Reached multiple-choice exercise at step ${i} (mobile)`)
                 break
             }
@@ -296,7 +296,7 @@ test.describe('Visual QA Custom Screenshot Capture', () => {
         }
 
         // Assert we are actually on the multiple choice exercise before taking screenshot
-        await expect(page.getByRole('heading', { name: /Höre und wähle das richtige Wort/i })).toBeVisible()
+        await expect(page.locator('h1, h2, h3').filter({ hasText: /Höre und wähle das richtige Wort|Nghĩa của từ/i }).first()).toBeVisible()
         await expect(page.locator('button[data-choice-btn]')).toHaveCount(4)
 
         await hideDevOverlay(page)

@@ -1,5 +1,6 @@
 'use client'
 import { useState, useRef, useCallback, useEffect } from 'react'
+import { useTranslations } from 'next-intl'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Mic, Square, Loader2, Send } from 'lucide-react'
 import styles from './speaking.module.css'
@@ -23,6 +24,7 @@ interface Props {
 }
 
 export default function TurnBasedSpeakingPlayer({ level, scenario, onClose, onComplete }: Props) {
+  const t = useTranslations('Speaking')
   const [messages, setMessages] = useState<Message[]>([])
   const [state, setState] = useState<'idle' | 'recording' | 'processing' | 'playing' | 'loading_grade'>('idle')
   const [micError, setMicError] = useState<string | null>(null)
@@ -148,7 +150,7 @@ export default function TurnBasedSpeakingPlayer({ level, scenario, onClose, onCo
       recorder.start()
       setState('recording')
     } catch (err) {
-      setMicError('Không thể truy cập Microphone.')
+      setMicError(t('micError'))
       setState('idle')
     }
   }
@@ -181,7 +183,7 @@ export default function TurnBasedSpeakingPlayer({ level, scenario, onClose, onCo
         setMessages(prev => [...prev, { role: 'user', text: data.transcript, score: data.accuracy, words: data.words }])
         addAiMessage(data.aiResponseText, data.aiResponseAudioBase64)
       } else {
-        setMicError(data.error || 'Lỗi nhận diện giọng nói')
+        setMicError(data.error || t('sttError'))
         setState('idle')
       }
     } catch (err) {
@@ -246,8 +248,8 @@ export default function TurnBasedSpeakingPlayer({ level, scenario, onClose, onCo
           <button
             className={styles.progressBarClose}
             onClick={onClose}
-            aria-label="Dong roleplay va quay lai briefing"
-            title="Dong roleplay"
+            aria-label={t('closeRoleplay')}
+            title={t('closeRoleplay')}
           >
             ✕
           </button>
@@ -258,17 +260,17 @@ export default function TurnBasedSpeakingPlayer({ level, scenario, onClose, onCo
           <button 
             onClick={finishConversation}
             disabled={state === 'loading_grade' || state === 'processing' || state === 'recording'}
-            aria-label="Ket thuc roleplay va xem receipt"
-            title="Ket thuc roleplay va xem receipt"
+            aria-label={t('finishRoleplay')}
+            title={t('finishRoleplay')}
             style={{marginLeft: 'auto', background: '#3b82f6', color: 'white', border: 'none', padding: '4px 12px', borderRadius: '8px', fontSize: '0.85rem', cursor: 'pointer', fontWeight: 600, opacity: (state === 'loading_grade' || state === 'processing' || state === 'recording') ? 0.5 : 1}}
           >
-            {state === 'loading_grade' ? 'Đang chấm điểm...' : 'Kết thúc'}
+            {state === 'loading_grade' ? t('gradingTitle') : t('finishBtn')}
           </button>
         </div>
       </div>
 
       <div
-        aria-label="Roleplay completion checklist"
+        aria-label={t('completionChecklist')}
         style={{
           flexShrink: 0,
           display: 'grid',
@@ -280,9 +282,9 @@ export default function TurnBasedSpeakingPlayer({ level, scenario, onClose, onCo
         }}
       >
         {[
-          { label: 'Listen', done: hasScenarioPrompt, detail: 'Scenario prompt' },
-          { label: 'Record', done: scoredResponseCount > 0, detail: scoredResponseCount > 0 ? `${scoredResponseCount} scored` : 'Scored response required' },
-          { label: 'Receipt', done: false, detail: 'End roleplay' },
+          { label: t('checklistListen'), done: hasScenarioPrompt, detail: t('scenarioPrompt') },
+          { label: t('checklistRecord'), done: scoredResponseCount > 0, detail: scoredResponseCount > 0 ? `${scoredResponseCount} ${t('checklistRecord').toLowerCase()}` : t('scoredResponseRequired') },
+          { label: t('checklistReceipt'), done: false, detail: t('endRoleplayDetail') },
         ].map((item) => (
           <div
             key={item.label}
@@ -295,7 +297,7 @@ export default function TurnBasedSpeakingPlayer({ level, scenario, onClose, onCo
             }}
           >
             <div style={{ fontSize: '0.72rem', fontWeight: 800, color: item.done ? '#166534' : '#1d4ed8', textTransform: 'uppercase' }}>
-              {item.done ? 'Done' : 'Next'} - {item.label}
+              {item.done ? t('doneStatus') : t('nextStatus')} - {item.label}
             </div>
             <div style={{ marginTop: '2px', fontSize: '0.78rem', fontWeight: 700, color: '#475569', overflowWrap: 'anywhere' }}>
               {item.detail}
@@ -344,14 +346,14 @@ export default function TurnBasedSpeakingPlayer({ level, scenario, onClose, onCo
 
             {m.score !== undefined && (
                <div style={{fontSize: '0.9rem', marginTop: '8px', color: m.score >= 80 ? '#86efac' : '#fca5a5', fontWeight: 600}}>
-                 Phát âm: {m.score}%
+                 {t('pronunciationScore', { score: m.score })}
                </div>
             )}
           </motion.div>
         ))}
         {state === 'processing' && (
           <motion.div style={{ alignSelf: 'flex-start', color: "var(--color-text-subtle)", display: 'flex', alignItems: 'center', gap: '8px' }}>
-            <Loader2 className={styles.spinnerIcon} /> Fuxie đang gõ...
+            <Loader2 className={styles.spinnerIcon} /> {t('fuxieTyping')}
           </motion.div>
         )}
       </div>
@@ -366,8 +368,8 @@ export default function TurnBasedSpeakingPlayer({ level, scenario, onClose, onCo
               whileTap={{ scale: 0.9 }}
               className={`${styles.recordBtn} ${styles.recordBtnRecording}`}
               onClick={stopRecording}
-              aria-label="Dung ghi am va gui cau tra loi"
-              title="Dung ghi am"
+              aria-label={t('stopRecordingAria')}
+              title={t('stopBtn')}
             >
                <Square fill="currentColor" size={24} />
             </motion.button>
@@ -378,8 +380,8 @@ export default function TurnBasedSpeakingPlayer({ level, scenario, onClose, onCo
               className={`${styles.recordBtn} ${styles.recordBtnIdle}`}
               onClick={startRecording}
               disabled={state === 'processing' || state === 'playing'}
-              aria-label="Bat dau ghi am cau tra loi"
-              title="Bat dau ghi am"
+              aria-label={t('startRecordingAria')}
+              title={t('startRecordingBtn')}
             >
                <Mic size={28} />
             </motion.button>

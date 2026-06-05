@@ -111,75 +111,172 @@
     ]
   },
   "transcript": {
-    "type": "full_reconstructed_transcript",
+    "type": "studio_source_transcript",
     "status": "complete",
-    "source": "reconstructed_full_script",
-    "quality": "release_candidate_reconstructed",
-    "note": "Full learner-visible reconstructed script created from existing question evidence because original studio scripts are not present in the repository. Replace with studio transcript if original audio scripts become available.",
+    "source": "studio_source_script",
+    "quality": "source_verified",
+    "sourceScript": "data/scripts/C1/Teil3-Diskussion-in-Abschnitten/L-C1-GOETHE-003-T3.json",
+    "note": "Transcript replaced from source script by scripts/apply-source-transcripts.ts.",
     "lines": [
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Der folgende anspruchsvolle Hoertext behandelt EU-Familienpolitik und Gleichstellung. Achten Sie auf Aussage, Kontext und implizite Bedeutung."
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sie hören eine Diskussion in vier Abschnitten. Lesen Sie jeweils die Aufgaben. Sie haben dafür 30 Sekunden Zeit. Sie hören die Diskussion zweimal."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q1.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Willkommen zur Podiumsdiskussion: Brauchen wir in der Europäischen Union eine einheitliche Familienpolitik?"
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "answer_evidence",
-        "text": "Es geht nicht um Geographie, sondern um demokratische Selbstbestimmung der Mitgliedstaaten.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ja, absolut! Die nationalen Unterschiede in der Familienpolitik verursachen massive soziale Ungleichheiten innerhalb der Union."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q1 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Familienpolitik ist Sache der Nationalstaaten, daran sollte die EU nicht rütteln."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q2.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Herr Professor Stein, Sie sind Experte für europäisches Sozialrecht. Was ist die rechtliche Grundlage?"
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "answer_evidence",
-        "text": "Nein, sie sind ein Anfang, aber der nicht-übertragbare Anteil müsste mindestens verdoppelt werden.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die EU hat begrenzte Kompetenzen in der Sozialpolitik und kann nur Mindeststandards setzen."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q2 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Aber diese Mindeststandards können einen enormen Unterschied machen, wie die Arbeitszeitrichtlinie gezeigt hat."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q3.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Frau Özdemir, Sie vertreten die Position einer stärkeren europäischen Familienpolitik. Warum?"
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "answer_evidence",
-        "text": "Das ist ein komplexes Phänomen, das nicht allein auf die Familienpolitik zurückzuführen ist.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Weil die derzeitigen Unterschiede absurd sind: In Schweden hat ein Vater hundertachtzig Tage bezahlte Elternzeit."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q3 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "In der Slowakei sind es gerade einmal zehn Tage. Das kann in einer Union der Gleichheit nicht sein."
       },
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Ende des Hoertexts."
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Herr Ramos, Sie sind gegen eine Harmonisierung. Was ist Ihr stärkstes Argument dagegen?"
+      },
+      {
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Familienmodelle sind kulturell geprägt und haben tiefe historische Wurzeln in jedem einzelnen Mitgliedstaat."
+      },
+      {
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Eine griechische Familie hat andere Bedürfnisse als eine dänische Familie, und die Politik muss das respektieren."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Aber sollte die Geographie über die Rechte von Frauen und Kindern entscheiden?"
+      },
+      {
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Es geht nicht um Geographie, sondern um demokratische Selbstbestimmung der Mitgliedstaaten."
+      },
+      {
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Jedes Land sollte selbst entscheiden, wie es Familienunterstützung gestaltet, solange Grundrechte gewahrt bleiben."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Professor Stein, ist die EU-Vereinbarkeitsrichtlinie von zweitausendneunzehn ein gutes Modell für europäische Mindeststandards?"
+      },
+      {
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ja, weil sie einen Rahmen setzt und gleichzeitig den nationalen Spielraum erhält."
+      },
+      {
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Sie garantiert zehn Arbeitstage Vaterschaftsurlaub und vier Monate Elternzeit, davon zwei nicht übertragbare Monate."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das sind moderate Mindeststandards, die selbst die skeptischsten Mitgliedstaaten akzeptieren konnten."
+      },
+      {
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Frau Özdemir, gehen Ihnen diese Standards weit genug?"
+      },
+      {
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Nein, sie sind ein Anfang, aber der nicht-übertragbare Anteil müsste mindestens verdoppelt werden."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Nur wenn Väter spürbare Konsequenzen haben, wenn sie keine Elternzeit nehmen, ändert sich das Verhalten."
+      },
+      {
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Herr Ramos, wie erklären Sie, dass die Geburtenrate gerade in konservativen Familienmodellen am niedrigsten ist?"
+      },
+      {
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das ist ein komplexes Phänomen, das nicht allein auf die Familienpolitik zurückzuführen ist."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wirtschaftliche Unsicherheit, hohe Wohnkosten und veränderte Lebensentwürfe spielen eine mindestens ebenso große Rolle."
+      },
+      {
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Aber die Forschung zeigt klar: Großzügige Familienpolitik führt zu höheren Geburtenraten und mehr Gleichstellung."
+      },
+      {
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Können wir uns auf einen Kompromiss einigen, der alle Positionen berücksichtigt?"
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Höhere EU-Mindeststandards ja, aber mit flexiblen Umsetzungsfristen für wirtschaftlich schwächere Mitgliedstaaten."
+      },
+      {
+        "speaker": "Gast_A",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das klingt nach einem pragmatischen und realisierbaren Kompromiss, den alle Seiten mittragen könnten."
+      },
+      {
+        "speaker": "Gast_B",
+        "speaker_role": "dialogue_speaker",
+        "text": "Vielen Dank für diese konstruktive europapolitische Diskussion!"
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Ende Teil drei."
       }
     ]
   },
@@ -196,7 +293,7 @@
       "id": "l-c1-goethe-003-t3-lo-1",
       "cefrLevel": "C1",
       "skill": "listening",
-      "canDoVi": "Toi co the luyen nghe hieu o trinh do C1 qua chu de \"EU-Familienpolitik und Gleichstellung\".",
+      "canDoVi": "Tôi có thể luyện nghe hiểu ở trình độ C1 qua chủ đề \"EU-Familienpolitik und Gleichstellung\".",
       "canDoDe": "Ich kann Hoeren auf Niveau C1 zum Thema \"EU-Familienpolitik und Gleichstellung\" ueben.",
       "linkedContentIds": [
         "L-C1-GOETHE-003-T3"

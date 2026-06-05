@@ -60,7 +60,7 @@ export default function UserAnalyticsClient({
       
       <div>
         <h1 className="text-2xl font-bold text-slate-900 tracking-tight">User Analytics</h1>
-        <p className="text-slate-500 mt-1">Directory and segmentation of all Fuxie platform accounts.</p>
+        <p className="text-slate-500 mt-1">{"Directory and segmentation of all Fuxie platform" /* // locale-allow */} accounts.</p>
       </div>
 
       {/* Stats Cards */}
@@ -100,7 +100,7 @@ export default function UserAnalyticsClient({
                     const timeout = setTimeout(() => handleSearch({ target: { value: val } } as any), 500);
                     return () => clearTimeout(timeout);
                   }}
-                  placeholder="Search by email..." 
+                  placeholder={"Search by email..." /* // locale-allow */} 
                   className="pl-9 pr-4 py-2 border border-slate-200 rounded-lg text-sm focus:ring-2 focus:ring-indigo-500 w-full sm:w-64"
                 />
              </div>

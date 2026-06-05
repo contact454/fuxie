@@ -48,7 +48,7 @@
       "explanation": {
         "de": "Der Dozent erklärt, dass Studierende oft idealisierte Vorstellungen haben, die erst durch die Realität des Arbeitsalltags im Praktikum überprüft werden können.",
         "vi": "Giảng viên giải thích rằng sinh viên thường có những hình dung lý tưởng, mà chỉ có thể được kiểm chứng qua thực tế công việc hàng ngày trong kỳ thực tập.",
-        "key_evidence": "Viele Studierende haben eine idealisierte Vorstellung von ihrem Wunschberuf. Erst im Praktikum erleben sie den tatsächlichen Arbeitsalltag mit all seinen Routinen und Herausforderungen.",
+        "key_evidence": "Viele Studierende haben eine idealisierte Vorstellung von ihrem Wunschberuf",
         "key_vocabulary": []
       }
     },
@@ -67,7 +67,7 @@
       "explanation": {
         "de": "Der Dozent betont, dass Praktika in verschiedenen Bereichen dazu dienen, unterschiedliche Unternehmenskulturen und Arbeitsweisen zu erleben, was die spätere Berufsentscheidung fundierter macht.",
         "vi": "Giảng viên nhấn mạnh rằng việc thực tập ở các lĩnh vực khác nhau nhằm mục đích trải nghiệm các văn hóa công ty và cách làm việc khác nhau, điều này giúp đưa ra quyết định nghề nghiệp sau này có cơ sở hơn.",
-        "key_evidence": "Ich rate Ihnen, mindestens zwei Praktika in unterschiedlichen Bereichen zu absolvieren. So lernen Sie verschiedene Unternehmenskulturen und Arbeitsweisen kennen. ... und die Erfahrung hilft Ihnen bei der Entscheidung.",
+        "key_evidence": "Ich rate Ihnen, mindestens zwei Praktika in unterschiedlichen Bereichen zu absolvieren",
         "key_vocabulary": []
       }
     },
@@ -105,7 +105,7 @@
       "explanation": {
         "de": "Um Passivität zu vermeiden, rät der Dozent Praktikanten, Eigeninitiative zu zeigen, aktiv nach weiteren Aufgaben zu fragen und eigene Vorschläge einzubringen.",
         "vi": "Để tránh sự thụ động, giảng viên khuyên thực tập sinh nên chủ động, tích cực hỏi thêm nhiệm vụ và đưa ra ý tưởng của riêng mình.",
-        "key_evidence": "Wer nur wartet, bis ihm Aufgaben zugeteilt werden, lernt wenig. Zeigen Sie Eigeninitiative! Fragen Sie nach zusätzlichen Aufgaben und schlagen Sie eigene Ideen vor.",
+        "key_evidence": "Wer nur wartet, bis ihm Aufgaben zugeteilt werden, lernt wenig",
         "key_vocabulary": []
       }
     },
@@ -206,165 +206,147 @@
     ]
   },
   "transcript": {
-    "type": "full_reconstructed_transcript",
+    "type": "studio_source_transcript",
     "status": "complete",
-    "source": "reconstructed_full_script",
-    "quality": "release_candidate_reconstructed",
-    "note": "Full learner-visible reconstructed script created from existing question evidence because original studio scripts are not present in the repository. Replace with studio transcript if original audio scripts become available.",
+    "source": "studio_source_script",
+    "quality": "source_verified",
+    "sourceScript": "data/scripts/B2/Teil4-Vortrag/L-B2-GOETHE-004-T4.json",
+    "note": "Transcript replaced from source script by scripts/apply-source-transcripts.ts.",
     "lines": [
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Im folgenden Hoertext geht es um Praktikumserfahrungen im Studium. Achten Sie auf die zentrale Information."
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sie hören einen Vortrag. Dazu gibt es acht Aufgaben. Kreuzen Sie die richtige Antwort an. Sie hören den Vortrag zweimal."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q1.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Liebe Studierende, willkommen zu meinem Seminar über den erfolgreichen Übergang vom Studium in den Beruf."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Als ehemaliger Personalchef eines DAX-Unternehmens kenne ich beide Seiten der Bewerbung.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Als ehemaliger Personalchef eines DAX-Unternehmens kenne ich beide Seiten der Bewerbung."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q1 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Heute spreche ich über die Rolle von Praktika bei der beruflichen Orientierung."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q2.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ein Praktikum ist mehr als ein Eintrag im Lebenslauf. Es ist ein Realitätscheck für Ihre Berufsvorstellungen."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Viele Studierende haben eine idealisierte Vorstellung von ihrem Wunschberuf. Erst im Praktikum erleben sie den tatsächlichen Arbeitsalltag mit all seinen Routinen und Herausforderungen.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Viele Studierende haben eine idealisierte Vorstellung von ihrem Wunschberuf."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q2 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Erst im Praktikum erleben sie den tatsächlichen Arbeitsalltag mit all seinen Routinen und Herausforderungen."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q3.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ich rate Ihnen, mindestens zwei Praktika in unterschiedlichen Bereichen zu absolvieren."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Ich rate Ihnen, mindestens zwei Praktika in unterschiedlichen Bereichen zu absolvieren. So lernen Sie verschiedene Unternehmenskulturen und Arbeitsweisen kennen. ... und die Erfahrung hilft Ihnen bei der Entscheidung.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "So lernen Sie verschiedene Unternehmenskulturen und Arbeitsweisen kennen."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q3 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ein Praktikum in einem Konzern unterscheidet sich fundamental von einem in einem Start-up."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q4.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Im Konzern lernen Sie strukturierte Prozesse und Hierarchien kennen."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Im Start-up übernehmen Sie von Anfang an Verantwortung und arbeiten an vielfältigen Aufgaben.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Im Start-up übernehmen Sie von Anfang an Verantwortung und arbeiten an vielfältigen Aufgaben."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q4 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Beides hat Vor- und Nachteile, und die Erfahrung hilft Ihnen bei der Entscheidung."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q5.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Lassen Sie mich über die drei häufigsten Fehler sprechen, die Praktikanten machen."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Wer nur wartet, bis ihm Aufgaben zugeteilt werden, lernt wenig. Zeigen Sie Eigeninitiative! Fragen Sie nach zusätzlichen Aufgaben und schlagen Sie eigene Ideen vor.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Erstens: Passivität. Wer nur wartet, bis ihm Aufgaben zugeteilt werden, lernt wenig."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q5 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Zeigen Sie Eigeninitiative! Fragen Sie nach zusätzlichen Aufgaben und schlagen Sie eigene Ideen vor."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q6.",
-        "linkedQuestionId": "Q6"
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Zweitens: Fehlende Dokumentation. Schreiben Sie auf, was Sie täglich lernen und erleben."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Diese Aufzeichnungen helfen Ihnen später beim Praktikumsbericht und bei Bewerbungsgesprächen.",
-        "linkedQuestionId": "Q6"
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Diese Aufzeichnungen helfen Ihnen später beim Praktikumsbericht und bei Bewerbungsgesprächen."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q6 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q6"
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Drittens: Netzwerken vergessen. Ein Praktikum ist eine einzigartige Gelegenheit, Kontakte zu knüpfen."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q7.",
-        "linkedQuestionId": "Q7"
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Verbinden Sie sich auf professionellen Netzwerken mit Ihren Kollegen und pflegen Sie diese Kontakte."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Sechzig Prozent aller Stellen werden über persönliche Kontakte vergeben, nicht über Stellenanzeigen.",
-        "linkedQuestionId": "Q7"
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Sechzig Prozent aller Stellen werden über persönliche Kontakte vergeben, nicht über Stellenanzeigen."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q7 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q7"
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Zum Schluss noch ein Hinweis zu Ihren Rechten als Praktikant."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q8.",
-        "linkedQuestionId": "Q8"
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Sie haben Anspruch auf ein Praktikumszeugnis, auf Einhaltung des Arbeitszeitgesetzes und auf eine sichere Arbeitsumgebung."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Lassen Sie sich nicht alles gefallen! Wenn Ihr Praktikum nur aus Kaffeekochen besteht, reklamieren Sie.",
-        "linkedQuestionId": "Q8"
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Lassen Sie sich nicht alles gefallen! Wenn Ihr Praktikum nur aus Kaffeekochen besteht, reklamieren Sie."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q8 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q8"
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ein gutes Praktikum fordert und fördert Sie gleichzeitig."
       },
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Ende des Hoertexts."
+        "speaker": "Dozent",
+        "speaker_role": "dialogue_speaker",
+        "text": "Vielen Dank und viel Erfolg bei Ihren zukünftigen Praktika! Nutzen Sie jede Chance, die sich bietet!"
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Ende des Hörverstehens."
       }
     ]
   },
@@ -381,7 +363,7 @@
       "id": "l-b2-goethe-004-t4-lo-1",
       "cefrLevel": "B2",
       "skill": "listening",
-      "canDoVi": "Toi co the luyen nghe hieu o trinh do B2 qua chu de \"Praktikumserfahrungen im Studium\".",
+      "canDoVi": "Tôi có thể luyện nghe hiểu ở trình độ B2 qua chủ đề \"Praktikumserfahrungen im Studium\".",
       "canDoDe": "Ich kann Hoeren auf Niveau B2 zum Thema \"Praktikumserfahrungen im Studium\" ueben.",
       "linkedContentIds": [
         "L-B2-GOETHE-004-T4"

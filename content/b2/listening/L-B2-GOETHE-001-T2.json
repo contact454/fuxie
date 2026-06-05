@@ -67,7 +67,7 @@
       "explanation": {
         "de": "Professor Dr. Martin Keller nennt kulturelle Gewohnheiten als einen der drei Hauptfaktoren und erläutert, dass Fleisch tief in der Esskultur verankert ist.",
         "vi": "Giáo sư Dr. Martin Keller nêu thói quen văn hóa là một trong ba yếu tố chính và giải thích rằng thịt đã ăn sâu vào văn hóa ẩm thực.",
-        "key_evidence": "Drei Faktoren: kulturelle Gewohnheiten, wirtschaftliche Interessen und mangelndes Wissen der Verbraucher. In Deutschland ist Fleisch tief in der Esskultur verankert.",
+        "key_evidence": "kulturelle Gewohnheiten, wirtschaftliche Interessen und mangelndes Wissen der Verbraucher",
         "key_vocabulary": []
       }
     },
@@ -124,7 +124,7 @@
       "explanation": {
         "de": "Der Experte erklärt, dass der Superfood-Trend größtenteils Marketing ist und heimische Lebensmittel genauso nahrhaft sind, aber die Industrie mit dem Exotischen mehr Profit machen kann.",
         "vi": "Chuyên gia giải thích rằng xu hướng siêu thực phẩm chủ yếu là tiếp thị và các thực phẩm địa phương cũng bổ dưỡng không kém, nhưng ngành công nghiệp có thể kiếm nhiều lợi nhuận hơn từ những sản phẩm ngoại lai.",
-        "key_evidence": "Das ist größtenteils Marketing. Heimische Lebensmittel wie Leinsamen und Hirse sind genauso nahrhaft. Weil die Lebensmittelindustrie mit dem Exotischen mehr Profit machen kann als mit Leinsamen.",
+        "key_evidence": "Das ist größtenteils Marketing",
         "key_vocabulary": []
       }
     }
@@ -168,129 +168,162 @@
     ]
   },
   "transcript": {
-    "type": "full_reconstructed_transcript",
+    "type": "studio_source_transcript",
     "status": "complete",
-    "source": "reconstructed_full_script",
-    "quality": "release_candidate_reconstructed",
-    "note": "Full learner-visible reconstructed script created from existing question evidence because original studio scripts are not present in the repository. Replace with studio transcript if original audio scripts become available.",
+    "source": "studio_source_script",
+    "quality": "source_verified",
+    "sourceScript": "data/scripts/B2/Teil2-Radiointerview-mit-Experte/L-B2-GOETHE-001-T2.json",
+    "note": "Transcript replaced from source script by scripts/apply-source-transcripts.ts.",
     "lines": [
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Im folgenden Hoertext geht es um Ernährung der Zukunft. Achten Sie auf die zentrale Information."
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sie hören ein Interview. Dazu gibt es sechs Aufgaben. Kreuzen Sie die richtige Antwort an. Sie hören das Interview zweimal."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q1.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Guten Abend, liebe Hörerinnen und Hörer. Heute bei uns im Studio: Professor Dr. Martin Keller vom Institut für Ernährungswissenschaften."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Die traditionelle Fleischindustrie wird an Bedeutung verlieren.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Guten Abend. Vielen Dank für die Einladung, ich freue mich auf unser Gespräch."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q1 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Herr Professor Keller, wie wird sich unsere Ernährung in den nächsten zwanzig Jahren verändern?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q2.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wir stehen vor einem fundamentalen Wandel. Die traditionelle Fleischindustrie wird an Bedeutung verlieren."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Blinde Verkostungen zeigen, dass viele Testpersonen keinen Unterschied schmecken.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Was wird stattdessen auf unseren Tellern landen?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q2 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Pflanzliche Proteinquellen, Algen, fermentierte Lebensmittel und möglicherweise auch In-vitro-Fleisch."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q3.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Sie haben In-vitro-Fleisch erwähnt. Können Sie erklären, wie es hergestellt wird?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Drei Faktoren: kulturelle Gewohnheiten, wirtschaftliche Interessen und mangelndes Wissen der Verbraucher. In Deutschland ist Fleisch tief in der Esskultur verankert.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Vereinfacht gesagt: Man entnimmt Stammzellen eines Tieres und lässt sie in einem Bioreaktor zu Muskelgewebe heranwachsen."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q3 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das klingt sehr technisch. Kann das wirklich so schmecken wie echtes Fleisch?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q4.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Fortschritte sind beeindruckend. Blinde Verkostungen zeigen, dass viele Testpersonen keinen Unterschied schmecken."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Durch positive Anreize statt Verbote. Wenn pflanzliche Alternativen günstiger und leckerer werden, steigen viele freiwillig um.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Was sind die größten Herausforderungen bei der Umstellung auf nachhaltige Ernährung?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q4 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Drei Faktoren: kulturelle Gewohnheiten, wirtschaftliche Interessen und mangelndes Wissen der Verbraucher."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q5.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Können Sie das am Beispiel der kulturellen Gewohnheiten erläutern?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Eine enorme Rolle! Sie bestimmen, was im Regal steht und wie es platziert wird.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "In Deutschland ist Fleisch tief in der Esskultur verankert. Wurst, Schnitzel, Braten gehören zur Identität."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q5 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q5"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wie kann man diese tief verwurzelten Gewohnheiten verändern, ohne die Menschen zu bevormunden?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q6.",
-        "linkedQuestionId": "Q6"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Durch positive Anreize statt Verbote. Wenn pflanzliche Alternativen günstiger und leckerer werden, steigen viele freiwillig um."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Das ist größtenteils Marketing. Heimische Lebensmittel wie Leinsamen und Hirse sind genauso nahrhaft. Weil die Lebensmittelindustrie mit dem Exotischen mehr Profit machen kann als mit Leinsamen.",
-        "linkedQuestionId": "Q6"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Welche Rolle spielen die Supermärkte bei dieser Transformation der Ernährungsgewohnheiten?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q6 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q6"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Eine enorme Rolle! Sie bestimmen, was im Regal steht und wie es platziert wird."
       },
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Ende des Hoertexts."
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Und was sagen Sie zum Trend der sogenannten Superfoods wie Chiasamen und Quinoa?"
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das ist größtenteils Marketing. Heimische Lebensmittel wie Leinsamen und Hirse sind genauso nahrhaft."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das überrascht mich. Warum sind exotische Superfoods dann so beliebt geworden?"
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Weil die Lebensmittelindustrie mit dem Exotischen mehr Profit machen kann als mit Leinsamen."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Zum Schluss: Was können unsere Hörer konkret tun, um sich nachhaltiger zu ernähren?"
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Drei einfache Schritte: Erstens, den Fleischkonsum halbieren. Zweitens, saisonale regionale Produkte bevorzugen."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Und der dritte Schritt?"
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Lebensmittelverschwendung reduzieren. Jeder Deutsche wirft pro Jahr achtzig Kilo Lebensmittel weg."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das ist erschreckend viel. Professor Keller, herzlichen Dank für dieses aufschlussreiche Gespräch!"
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Gern geschehen! Denken Sie daran: Jede Mahlzeit ist eine Entscheidung für oder gegen unsere Zukunft."
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Ende Teil zwei."
       }
     ]
   },
@@ -307,7 +340,7 @@
       "id": "l-b2-goethe-001-t2-lo-1",
       "cefrLevel": "B2",
       "skill": "listening",
-      "canDoVi": "Toi co the luyen nghe hieu o trinh do B2 qua chu de \"Ernährung der Zukunft\".",
+      "canDoVi": "Tôi có thể luyện nghe hiểu ở trình độ B2 qua chủ đề \"Ernährung der Zukunft\".",
       "canDoDe": "Ich kann Hoeren auf Niveau B2 zum Thema \"Ernährung der Zukunft\" ueben.",
       "linkedContentIds": [
         "L-B2-GOETHE-001-T2"

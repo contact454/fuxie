@@ -122,93 +122,172 @@
     ]
   },
   "transcript": {
-    "type": "full_reconstructed_transcript",
+    "type": "studio_source_transcript",
     "status": "complete",
-    "source": "reconstructed_full_script",
-    "quality": "release_candidate_reconstructed",
-    "note": "Full learner-visible reconstructed script created from existing question evidence because original studio scripts are not present in the repository. Replace with studio transcript if original audio scripts become available.",
+    "source": "studio_source_script",
+    "quality": "source_verified",
+    "sourceScript": "data/scripts/C1/Teil2-Experteninterview/L-C1-GOETHE-005-T2.json",
+    "note": "Transcript replaced from source script by scripts/apply-source-transcripts.ts.",
     "lines": [
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Der folgende anspruchsvolle Hoertext behandelt Kreislaufwirtschaft und Klimawandel. Achten Sie auf Aussage, Kontext und implizite Bedeutung."
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sie hören ein Interview. Dazu gibt es neun Aufgaben. Stimmt die Aussage, stimmt sie nicht, oder wird dazu nichts gesagt? Sie hören das Interview zweimal."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q1.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Guten Abend! Unser Gast ist die Nachhaltigkeitsökonomin Professorin Dr. Sabine Hartwig von der TU Berlin."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Deutschland ist Europameister im Recycling, aber Kreislaufwirtschaft ist viel mehr als nur Mülltrennung und Wiederverwertung.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Vielen Dank! Die Kreislaufwirtschaft ist die vielleicht wichtigste Wirtschaftsinnovation seit der industriellen Revolution."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q1 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Frau Professorin Hartwig, wie weit ist die deutsche Wirtschaft auf dem Weg zur Kreislaufwirtschaft?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q2.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Deutschland ist Europameister im Recycling, aber Kreislaufwirtschaft ist viel mehr als nur Mülltrennung und Wiederverwertung."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Kurzfristig sind die Umstellungskosten hoch, langfristig ist Kreislaufwirtschaft deutlich profitabler als lineare Wirtschaft.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wir recyceln zwar viel, aber wir designen unsere Produkte immer noch primär für den einmaligen Gebrauch."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q2 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Was ist der Unterschied zwischen Recycling und einer echten Kreislaufwirtschaft in der industriellen Praxis?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q3.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Recycling ist das Ende des linearen Prozesses: Wir machen ein Produkt, nutzen es und verwerten dann den Abfall."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Die Besteuerung muss umgestellt werden: Rohstoffverbrauch höher besteuern und Reparaturleistungen steuerlich begünstigen.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Kreislaufwirtschaft beginnt beim Design: Produkte werden von Anfang an so konzipiert, dass sie reparierbar und recycelbar sind."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q3 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das Ziel ist, dass ein Produkt niemals zum Abfall wird, sondern immer als Rohstoff für den nächsten Zyklus dient."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q4.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Können Sie ein konkretes Beispiel für gelungenes zirkuläres Produktdesign aus der deutschen Industrie nennen?"
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Eine entscheidende Rolle! Digitale Produktpässe können die gesamte Materialhistorie eines Produkts dokumentieren.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das Unternehmen Gebrüder Weiss hat seine gesamte Verpackungslogistik auf Mehrwegsysteme aus recyceltem Kunststoff umgestellt."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q4 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q4"
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Sie sparen damit jährlich tausend Tonnen Einwegverpackung ein und reduzieren die CO2-Emissionen um vierzig Prozent."
       },
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Ende des Hoertexts."
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Welche Rolle spielt die Digitalisierung für die Kreislaufwirtschaft?"
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Eine entscheidende Rolle! Digitale Produktpässe können die gesamte Materialhistorie eines Produkts dokumentieren."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wenn ein Auto verschrottet wird, weiß man genau, welche Materialien verbaut sind und wo sie recycelt werden können."
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die EU plant ab zweitausendachtundzwanzig digitale Produktpässe für Textilien, Batterien und Elektronik einzuführen."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wie steht es um die wirtschaftliche Bilanz der Kreislaufwirtschaft? Rechnet sich das für Unternehmen?"
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Kurzfristig sind die Umstellungskosten hoch, langfristig ist Kreislaufwirtschaft deutlich profitabler als lineare Wirtschaft."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Unternehmen, die in zirkuläre Geschäftsmodelle investieren, sind weniger abhängig von volatilen Rohstoffpreisen."
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Boston Consulting Group schätzt das globale Marktpotenzial der Kreislaufwirtschaft auf viereinhalb Billionen Dollar bis 2030."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Was muss die Politik tun, um den Übergang zur Kreislaufwirtschaft zu beschleunigen?"
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Die Besteuerung muss umgestellt werden: Rohstoffverbrauch höher besteuern und Reparaturleistungen steuerlich begünstigen."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Frankreich hat die Mehrwertsteuer auf Reparaturen bereits gesenkt. Deutschland sollte diesem Beispiel dringend folgen."
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Außerdem brauchen wir verbindliche Mindestquoten für den Einsatz von Rezyklaten in neuen Produkten."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Welche Branchen werden von der Kreislaufwirtschaft am stärksten profitieren?"
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Bau, Textil, Elektronik und Mobilität. Diese vier Sektoren sind für achtzig Prozent des Ressourcenverbrauchs verantwortlich."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Was kann jeder Einzelne tun, um die Kreislaufwirtschaft zu unterstützen?"
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Reparieren statt wegwerfen, teilen statt besitzen, Qualität statt Quantität kaufen."
+      },
+      {
+        "speaker": "Moderator",
+        "speaker_role": "dialogue_speaker",
+        "text": "Und bei jedem Kauf fragen: Kann ich dieses Produkt reparieren lassen, wenn es kaputtgeht?"
+      },
+      {
+        "speaker": "Experte",
+        "speaker_role": "dialogue_speaker",
+        "text": "Vielen Dank, Frau Professorin Hartwig, für dieses inspirierende Gespräch über die Zukunft unserer Wirtschaft!"
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Ende Teil zwei."
       }
     ]
   },
@@ -225,7 +304,7 @@
       "id": "l-c1-goethe-005-t2-lo-1",
       "cefrLevel": "C1",
       "skill": "listening",
-      "canDoVi": "Toi co the luyen nghe hieu o trinh do C1 qua chu de \"Kreislaufwirtschaft und Klimawandel\".",
+      "canDoVi": "Tôi có thể luyện nghe hiểu ở trình độ C1 qua chủ đề \"Kreislaufwirtschaft und Klimawandel\".",
       "canDoDe": "Ich kann Hoeren auf Niveau C1 zum Thema \"Kreislaufwirtschaft und Klimawandel\" ueben.",
       "linkedContentIds": [
         "L-C1-GOETHE-005-T2"

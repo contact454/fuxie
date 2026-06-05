@@ -123,75 +123,192 @@
     ]
   },
   "transcript": {
-    "type": "full_reconstructed_transcript",
+    "type": "studio_source_transcript",
     "status": "complete",
-    "source": "reconstructed_full_script",
-    "quality": "release_candidate_reconstructed",
-    "note": "Full learner-visible reconstructed script created from existing question evidence because original studio scripts are not present in the repository. Replace with studio transcript if original audio scripts become available.",
+    "source": "studio_source_script",
+    "quality": "source_verified",
+    "sourceScript": "data/scripts/C2/Teil2-Spontanes-Gespraech/L-C2-GOETHE-002-T2.json",
+    "note": "Transcript replaced from source script by scripts/apply-source-transcripts.ts.",
     "lines": [
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Der folgende anspruchsvolle Hoertext behandelt Studentenwohnungsnot. Achten Sie auf Aussage, Kontext und implizite Bedeutung."
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Sie hören ein Gespräch. Dazu gibt es fünf Aufgaben. Wer sagt was? Sie hören das Gespräch zweimal."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q1.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Studentin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Du wirst es nicht glauben, aber ich habe gestern die fünfundzwanzigste Absage für eine Wohnungsbewerbung bekommen, und langsam weiß ich wirklich nicht mehr weiter."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "answer_evidence",
-        "text": "Eigenbedarfskündigungen werden leider oft missbräuchlich eingesetzt, aber dagegen juristisch vorzugehen, bedeutet einen langwierigen und kostspieligen Rechtsstreit, den sich die wenigsten Studierenden leisten können.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Student",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das kenne ich nur zu gut; als ich letztes Semester nach München gewechselt habe, war ich drei Monate lang quasi obdachlos und habe bei verschiedenen Bekannten auf der Couch übernachtet."
       },
       {
-        "speaker": "Sprecher 1",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q1 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q1"
+        "speaker": "Studentin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Was mich am meisten frustriert, ist die Asymmetrie des Marktes: Auf eine einigermaßen bezahlbare Wohnung kommen manchmal über dreihundert Bewerbungen, und als Studentin ohne festes Einkommen ist man chancenlos."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q2.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Student",
+        "speaker_role": "dialogue_speaker",
+        "text": "Mein Vermieter hat mir letzte Woche eröffnet, dass er die Wohnung wegen Eigenbedarfs kündigen wird, und ich frage mich, ob das in einem Land mit einem derart ausgeprägten Mieterschutz überhaupt rechtmäßig ist."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "answer_evidence",
-        "text": "Das ist ein extrem wichtiger Punkt, denn wenn sich nur noch Studierende aus wohlhabenden Verhältnissen die Mieten in Universitätsstädten leisten können, wird Bildung wieder zum Privileg der Oberschicht.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Studentin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Eigenbedarfskündigungen werden leider oft missbräuchlich eingesetzt, aber dagegen juristisch vorzugehen, bedeutet einen langwierigen und kostspieligen Rechtsstreit, den sich die wenigsten Studierenden leisten können."
       },
       {
-        "speaker": "Sprecher 2",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q2 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q2"
+        "speaker": "Student",
+        "speaker_role": "dialogue_speaker",
+        "text": "Was mich wirklich besorgt, ist die Frage, welche langfristigen Auswirkungen diese Wohnungskrise auf die Chancengleichheit im Bildungssystem hat."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Wir hoeren jetzt den relevanten Ausschnitt fuer Aufgabe Q3.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Studentin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das ist ein extrem wichtiger Punkt, denn wenn sich nur noch Studierende aus wohlhabenden Verhältnissen die Mieten in Universitätsstädten leisten können, wird Bildung wieder zum Privileg der Oberschicht."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "answer_evidence",
-        "text": "Ja, und ich werde auf jeden Fall hingehen, weil ich glaube, dass politischer Druck der einzige Weg ist, um zumindest mittelfristig Veränderungen zu bewirken.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Student",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ich kenne mehrere Kommilitonen, die ihr Studium abgebrochen oder den Studienort gewechselt haben, weil sie keine bezahlbare Wohnung gefunden haben."
       },
       {
-        "speaker": "Sprecher 3",
-        "speaker_role": "context",
-        "text": "Diese Information beantwortet Aufgabe Q3 im Kontext des Hoertexts.",
-        "linkedQuestionId": "Q3"
+        "speaker": "Studentin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das ist nicht nur ein individuelles Schicksal, sondern ein gesellschaftliches Problem, das die Wissenschaftspolitik bisher sträflich vernachlässigt hat."
       },
       {
-        "speaker": "Ansage",
-        "speaker_role": "instruction",
-        "text": "Ende des Hoertexts."
+        "speaker": "Student",
+        "speaker_role": "dialogue_speaker",
+        "text": "Mein Professor für Soziologie hat in einer Vorlesung den provokanten Satz geäußert, dass die Wohnungsfrage die soziale Frage des einundzwanzigsten Jahrhunderts sei."
+      },
+      {
+        "speaker": "Studentin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Dem kann ich nur zustimmen, und ich finde, dass die Studierendenvertretungen dieses Thema viel offensiver auf die politische Agenda setzen müssten."
+      },
+      {
+        "speaker": "Student",
+        "speaker_role": "dialogue_speaker",
+        "text": "Hast du gehört, dass der AStA eine Demonstration gegen die Wohnungsmisere plant und bereits über zweitausend Unterschriften für eine Petition an den Stadtrat gesammelt hat?"
+      },
+      {
+        "speaker": "Studentin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ja, und ich werde auf jeden Fall hingehen, weil ich glaube, dass politischer Druck der einzige Weg ist, um zumindest mittelfristig Veränderungen zu bewirken."
+      },
+      {
+        "speaker": "Student",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wenn wir uns nicht wehren, wird sich nichts ändern, und die nächste Studierendengeneration wird mit denselben oder noch schlimmeren Bedingungen konfrontiert sein als wir."
+      },
+      {
+        "speaker": "Studentin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Du wirst es nicht glauben, aber ich habe gestern die fünfundzwanzigste Absage für eine Wohnungsbewerbung bekommen, und langsam weiß ich wirklich nicht mehr weiter."
+      },
+      {
+        "speaker": "Student",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das kenne ich nur zu gut; als ich letztes Semester nach München gewechselt habe, war ich drei Monate lang quasi obdachlos und habe bei verschiedenen Bekannten auf der Couch übernachtet."
+      },
+      {
+        "speaker": "Studentin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Was mich am meisten frustriert, ist die Asymmetrie des Marktes: Auf eine einigermaßen bezahlbare Wohnung kommen manchmal über dreihundert Bewerbungen, und als Studentin ohne festes Einkommen ist man chancenlos."
+      },
+      {
+        "speaker": "Student",
+        "speaker_role": "dialogue_speaker",
+        "text": "Mein Vermieter hat mir letzte Woche eröffnet, dass er die Wohnung wegen Eigenbedarfs kündigen wird, und ich frage mich, ob das in einem Land mit einem derart ausgeprägten Mieterschutz überhaupt rechtmäßig ist."
+      },
+      {
+        "speaker": "Studentin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Eigenbedarfskündigungen werden leider oft missbräuchlich eingesetzt, aber dagegen juristisch vorzugehen, bedeutet einen langwierigen und kostspieligen Rechtsstreit, den sich die wenigsten Studierenden leisten können."
+      },
+      {
+        "speaker": "Student",
+        "speaker_role": "dialogue_speaker",
+        "text": "Was mich wirklich besorgt, ist die Frage, welche langfristigen Auswirkungen diese Wohnungskrise auf die Chancengleichheit im Bildungssystem hat."
+      },
+      {
+        "speaker": "Studentin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das ist ein extrem wichtiger Punkt, denn wenn sich nur noch Studierende aus wohlhabenden Verhältnissen die Mieten in Universitätsstädten leisten können, wird Bildung wieder zum Privileg der Oberschicht."
+      },
+      {
+        "speaker": "Student",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ich kenne mehrere Kommilitonen, die ihr Studium abgebrochen oder den Studienort gewechselt haben, weil sie keine bezahlbare Wohnung gefunden haben."
+      },
+      {
+        "speaker": "Studentin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das ist nicht nur ein individuelles Schicksal, sondern ein gesellschaftliches Problem, das die Wissenschaftspolitik bisher sträflich vernachlässigt hat."
+      },
+      {
+        "speaker": "Student",
+        "speaker_role": "dialogue_speaker",
+        "text": "Mein Professor für Soziologie hat in einer Vorlesung den provokanten Satz geäußert, dass die Wohnungsfrage die soziale Frage des einundzwanzigsten Jahrhunderts sei."
+      },
+      {
+        "speaker": "Studentin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Dem kann ich nur zustimmen, und ich finde, dass die Studierendenvertretungen dieses Thema viel offensiver auf die politische Agenda setzen müssten."
+      },
+      {
+        "speaker": "Student",
+        "speaker_role": "dialogue_speaker",
+        "text": "Hast du gehört, dass der AStA eine Demonstration gegen die Wohnungsmisere plant und bereits über zweitausend Unterschriften für eine Petition an den Stadtrat gesammelt hat?"
+      },
+      {
+        "speaker": "Studentin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Ja, und ich werde auf jeden Fall hingehen, weil ich glaube, dass politischer Druck der einzige Weg ist, um zumindest mittelfristig Veränderungen zu bewirken."
+      },
+      {
+        "speaker": "Student",
+        "speaker_role": "dialogue_speaker",
+        "text": "Wenn wir uns nicht wehren, wird sich nichts ändern, und die nächste Studierendengeneration wird mit denselben oder noch schlimmeren Bedingungen konfrontiert sein als wir."
+      },
+      {
+        "speaker": "Studentin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Du wirst es nicht glauben, aber ich habe gestern die fünfundzwanzigste Absage für eine Wohnungsbewerbung bekommen, und langsam weiß ich wirklich nicht mehr weiter."
+      },
+      {
+        "speaker": "Student",
+        "speaker_role": "dialogue_speaker",
+        "text": "Das kenne ich nur zu gut; als ich letztes Semester nach München gewechselt habe, war ich drei Monate lang quasi obdachlos und habe bei verschiedenen Bekannten auf der Couch übernachtet."
+      },
+      {
+        "speaker": "Studentin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Was mich am meisten frustriert, ist die Asymmetrie des Marktes: Auf eine einigermaßen bezahlbare Wohnung kommen manchmal über dreihundert Bewerbungen, und als Studentin ohne festes Einkommen ist man chancenlos."
+      },
+      {
+        "speaker": "Student",
+        "speaker_role": "dialogue_speaker",
+        "text": "Mein Vermieter hat mir letzte Woche eröffnet, dass er die Wohnung wegen Eigenbedarfs kündigen wird, und ich frage mich, ob das in einem Land mit einem derart ausgeprägten Mieterschutz überhaupt rechtmäßig ist."
+      },
+      {
+        "speaker": "Studentin",
+        "speaker_role": "dialogue_speaker",
+        "text": "Eigenbedarfskündigungen werden leider oft missbräuchlich eingesetzt, aber dagegen juristisch vorzugehen, bedeutet einen langwierigen und kostspieligen Rechtsstreit, den sich die wenigsten Studierenden leisten können."
+      },
+      {
+        "speaker": "Student",
+        "speaker_role": "dialogue_speaker",
+        "text": "Was mich wirklich besorgt, ist die Frage, welche langfristigen Auswirkungen diese Wohnungskrise auf die Chancengleichheit im Bildungssystem hat."
+      },
+      {
+        "speaker": "Narrator",
+        "speaker_role": "exam_narrator",
+        "text": "Ende Teil zwei."
       }
     ]
   },
@@ -208,7 +325,7 @@
       "id": "l-c2-goethe-002-t2-lo-1",
       "cefrLevel": "C2",
       "skill": "listening",
-      "canDoVi": "Toi co the luyen nghe hieu o trinh do C2 qua chu de \"Studentenwohnungsnot\".",
+      "canDoVi": "Tôi có thể luyện nghe hiểu ở trình độ C2 qua chủ đề \"Studentenwohnungsnot\".",
       "canDoDe": "Ich kann Hoeren auf Niveau C2 zum Thema \"Studentenwohnungsnot\" ueben.",
       "linkedContentIds": [
         "L-C2-GOETHE-002-T2"
