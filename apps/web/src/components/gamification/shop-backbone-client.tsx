@@ -121,6 +121,8 @@ export interface ShopBackboneClientProps {
      * 13.2 keeps the call optional and renders a non-primary CTA.
      */
     onEquipItem?: (itemId: string) => void | Promise<void> // locale-allow
+    /** Optional initial error message for visual QA / testing. */
+    initialErrorMessage?: string | null
 }
 
 export interface RedeemSubmitOutcome {
@@ -283,6 +285,7 @@ export function ShopBackboneClient({
     initialPendingItemIds,
     onRedeemRequest,
     onEquipItem,
+    initialErrorMessage,
 }: ShopBackboneClientProps) {
     // Saturate wallet display values (Req 8.1).
     const displayFucoin = clampWalletForDisplay(wallet.fucoin)
@@ -316,7 +319,7 @@ export function ShopBackboneClient({
     const pendingItemIds = listPendingItemIds(pendingStore)
 
     const [, startRedeemTransition] = useTransition()
-    const [errorMessage, setErrorMessage] = useState<string | null>(null)
+    const [errorMessage, setErrorMessage] = useState<string | null>(initialErrorMessage ?? null)
 
     const [activeTab, setActiveTab] = useState<ShopTab>('shop')
     const [equippedItemId, setEquippedItemId] = useState<string | null>(

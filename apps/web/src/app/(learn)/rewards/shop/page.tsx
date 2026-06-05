@@ -21,7 +21,51 @@ import { calculateFuxieXpLevel } from '@/lib/gamification/xp-level'
  *
  * Validates: Requirements 8.1, 8.3, 8.4, 8.5, 8.6, 8.10
  */
-export default async function RewardsShopPage() {
+export default async function RewardsShopPage({
+    searchParams,
+}: {
+    searchParams: Promise<{ fixture?: string; state?: string }>
+}) {
+    const params = await searchParams
+    const isVisualQa = process.env.NODE_ENV !== 'production' && params.fixture === 'visual-qa'
+
+    if (isVisualQa && params.state === 'empty') {
+        return (
+            <div className="min-h-[100dvh] bg-[var(--fuxie-blue-50)]">
+                <ShopBackboneClient
+                    wallet={{
+                        fucoin: 200,
+                        xp: 320,
+                    }}
+                    inventory={{
+                        ownedItemIds: [],
+                        equippedItemId: null,
+                    }}
+                    catalog={[]}
+                />
+            </div>
+        )
+    }
+
+    if (isVisualQa && params.state === 'error') {
+        return (
+            <div className="min-h-[100dvh] bg-[var(--fuxie-blue-50)]">
+                <ShopBackboneClient
+                    wallet={{
+                        fucoin: 200,
+                        xp: 320,
+                    }}
+                    inventory={{
+                        ownedItemIds: [],
+                        equippedItemId: null,
+                    }}
+                    catalog={[]}
+                    initialErrorMessage="Shop tạm thời không phản hồi"
+                />
+            </div>
+        )
+    }
+
     const serverUser = await getServerUser()
 
     if (!serverUser) {
