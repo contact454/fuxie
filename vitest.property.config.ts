@@ -78,6 +78,7 @@ export default defineConfig({
             // run via this config.
             react: path.resolve(__dirname, 'apps/web/node_modules/react'),
             'react-dom': path.resolve(__dirname, 'apps/web/node_modules/react-dom'),
+            'next-intl': path.resolve(__dirname, 'apps/web/node_modules/next-intl'),
         },
     },
 })

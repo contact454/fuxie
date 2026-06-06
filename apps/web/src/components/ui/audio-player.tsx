@@ -109,7 +109,7 @@ export function AudioPlayer({ src, text, speed = 1.0, size = 'md', label, classN
                 ${label ? '' : 'items-center justify-center'}
                 ${className}
             `}
-            aria-label={hasError ? 'Không phát được audio' : isPlaying ? 'Dừng audio' : 'Phát audio'}
+            aria-label={hasError ? 'Không phát được audio / Audio-Wiedergabe fehlgeschlagen' : isPlaying ? 'Dừng audio / Audio stoppen' : 'Phát audio / Audio abspielen'}
         >
             {/* Speaker icon */}
             <svg

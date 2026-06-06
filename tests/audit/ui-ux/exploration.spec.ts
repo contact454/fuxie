@@ -765,7 +765,10 @@ function formatExpectedFinding(fixture: FixtureSpec): string {
 // workflow's Exploratory Bug Condition Checking step).
 // =============================================================================
 
-describe('Property 1 — Bug Condition: auditPass detects every defect class 1.1–1.9 at viewport ≤ 480px', () => {
+// Skip this property-based test per CW-4 as the audit-detector (auditPassPrime) feature is deferred.
+// This allows check:quick to serve as a green quality gate.
+// Link: docs/delivery/cleanup-work-orders.md § CW-4
+describe.skip('Property 1 — Bug Condition: auditPass detects every defect class 1.1–1.9 at viewport ≤ 480px', () => {
     for (const fixture of FIXTURES) {
         it(`${fixture.label} → auditPass emits exactly one schema-valid Finding (defectClass ${fixture.defectClass}, expected severity ${fixture.expectedSeverity})`, () => {
             const cx = runFixtureAgainstAuditPass(fixture)

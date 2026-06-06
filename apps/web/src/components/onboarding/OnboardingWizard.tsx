@@ -13,6 +13,7 @@ import {
 } from '@/lib/placement/engine'
 import type { PlacementLevel } from '@/data/placement-questions'
 import { getFuxieMascotSrc } from '@/lib/mascot/fuxie-assets'
+import { PrimaryCta } from '@/components/ui/primary-cta'
 
 type Step = 'welcome' | 'goal' | 'daily-time' | 'placement' | 'result'
 
@@ -242,7 +243,7 @@ function DailyTimeStep({
                         type="button"
                         onClick={() => onDailyStudyMinutesChange(option.value)}
                         aria-pressed={dailyStudyMinutes === option.value}
-                        className={`rounded-xl border-2 p-4 text-left transition-all ${
+                        className={`rounded-xl border-2 p-4 text-left transition-all outline-none focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--fuxie-blue-700)] ${
                             dailyStudyMinutes === option.value
                                 ? 'border-[#60A8E4] bg-[#F3FBFF] shadow-sm'
                                 : 'border-gray-200 hover:border-gray-300'
@@ -254,12 +255,12 @@ function DailyTimeStep({
                 ))}
             </div>
 
-            <button
+            <PrimaryCta
                 onClick={onNext}
-                className="w-full py-3.5 rounded-xl bg-gradient-to-r from-[#60A8E4] to-[#3C78A8] text-white font-semibold hover:shadow-lg hover:shadow-sky-200 transition-all active:scale-[0.98]"
+                className="w-full"
             >
                 {t('placementNextBtn')}
-            </button>
+            </PrimaryCta>
         </div>
     )
 }
@@ -292,12 +293,12 @@ function WelcomeStep({ onNext }: { onNext: () => void }) {
                 <br />
                 {t('welcomeDesc2')}
             </p>
-            <button
+            <PrimaryCta
                 onClick={onNext}
-                className="w-full max-w-xs mx-auto py-3.5 px-8 rounded-xl bg-gradient-to-r from-[#60A8E4] to-[#3C78A8] text-white font-semibold text-base hover:shadow-lg hover:shadow-sky-200 transition-all active:scale-[0.98]"
+                className="w-full max-w-xs mx-auto"
             >
                 {t('startBtn')}
-            </button>
+            </PrimaryCta>
         </div>
     )
 }
@@ -333,7 +334,7 @@ function GoalStep({
                         <button
                             key={opt.descKey}
                             onClick={() => onExamChange(opt.value)}
-                            className={`flex items-center gap-3 p-3 rounded-xl border-2 transition-all text-left ${
+                            className={`flex items-center gap-3 p-3 rounded-xl border-2 transition-all text-left outline-none focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--fuxie-blue-700)] ${
                                 targetExam === opt.value
                                     ? 'border-[#60A8E4] bg-[#F3FBFF] shadow-sm'
                                     : 'border-gray-200 hover:border-gray-300'
@@ -363,7 +364,7 @@ function GoalStep({
                             <button
                                 key={level}
                                 onClick={() => onLevelChange(level)}
-                                className={`p-3 rounded-xl border-2 transition-all text-center ${
+                                className={`p-3 rounded-xl border-2 transition-all text-center outline-none focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--fuxie-blue-700)] ${
                                     targetLevel === level
                                         ? 'border-[#60A8E4] bg-[#F3FBFF] shadow-sm'
                                         : 'border-gray-200 hover:border-gray-300'
@@ -384,12 +385,12 @@ function GoalStep({
                 </div>
             </div>
 
-            <button
+            <PrimaryCta
                 onClick={onNext}
-                className="w-full py-3.5 rounded-xl bg-gradient-to-r from-[#60A8E4] to-[#3C78A8] text-white font-semibold hover:shadow-lg hover:shadow-sky-200 transition-all active:scale-[0.98]"
+                className="w-full"
             >
                 {t('placementNextBtn')}
-            </button>
+            </PrimaryCta>
         </div>
     )
 }
@@ -469,7 +470,7 @@ function PlacementStep({
                                 key={idx}
                                 onClick={() => onAnswer(idx)}
                                 disabled={showFeedback}
-                                className={`w-full text-left p-4 rounded-xl border-2 transition-all ${optClass}`}
+                                className={`w-full text-left p-4 rounded-xl border-2 transition-all outline-none focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--fuxie-blue-700)] ${optClass}`}
                             >
                                 <span className="font-medium text-gray-800">{option}</span>
                             </button>
@@ -606,13 +607,13 @@ function ResultStep({
                 </div>
             )}
 
-            <button
+            <PrimaryCta
                 onClick={onComplete}
                 disabled={saving}
-                className="w-full py-3.5 rounded-xl bg-gradient-to-r from-[#60A8E4] to-[#3C78A8] text-white font-semibold hover:shadow-lg hover:shadow-sky-200 transition-all active:scale-[0.98] disabled:opacity-50"
+                className="w-full"
             >
                 {saving ? t('saving') : saveError ? t('retry') : t('startLearningBtn')}
-            </button>
+            </PrimaryCta>
         </div>
     )
 }
