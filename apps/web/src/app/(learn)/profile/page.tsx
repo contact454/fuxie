@@ -21,21 +21,36 @@ export default async function ProfilePage({ searchParams }: { searchParams: Prom
         return <Slice3ProfileSuccessFixture />
     }
 
-    const user = await getServerUser()
-    if (!user) redirect('/login')
+    const isVisualQa = visualParams.fixture === 'visual-qa'
+    let profile = null
 
-    const profile = await prisma.userProfile.findUnique({
-        where: { userId: user.userId },
-        select: {
-            displayName: true,
-            currentLevel: true,
-            targetLevel: true,
-            targetExam: true,
-            studyGoalMinutes: true,
-            totalXp: true,
-            totalWordsLearned: true,
-        },
-    })
+    if (isVisualQa) {
+        profile = {
+            displayName: 'Lina Nguyen',
+            currentLevel: 'A2',
+            targetLevel: 'B1',
+            targetExam: 'GOETHE',
+            studyGoalMinutes: 20,
+            totalXp: 3420,
+            totalWordsLearned: 1280,
+        }
+    } else {
+        const user = await getServerUser()
+        if (!user) redirect('/login')
+
+        profile = await prisma.userProfile.findUnique({
+            where: { userId: user.userId },
+            select: {
+                displayName: true,
+                currentLevel: true,
+                targetLevel: true,
+                targetExam: true,
+                studyGoalMinutes: true,
+                totalXp: true,
+                totalWordsLearned: true,
+            },
+        })
+    }
 
     const displayName = profile?.displayName ?? 'Learner'
     const currentLevel = profile?.currentLevel ?? 'A1'
@@ -91,10 +106,10 @@ export default async function ProfilePage({ searchParams }: { searchParams: Prom
                         </div>
                         <div className="mt-5 flex flex-wrap gap-3">
                             <PrimaryCta asChild>
-                                <Link href="/onboarding">Ziel bearbeiten</Link>
+                                <Link href={isVisualQa ? "/onboarding?fixture=visual-qa" : "/onboarding"}>Ziel bearbeiten</Link>
                             </PrimaryCta>
                             <PrimaryCta asChild variant="secondary">
-                                <Link href="/dashboard">Dashboard</Link>
+                                <Link href={isVisualQa ? "/dashboard?fixture=visual-qa" : "/dashboard"}>Dashboard</Link>
                             </PrimaryCta>
                         </div>
                     </section>

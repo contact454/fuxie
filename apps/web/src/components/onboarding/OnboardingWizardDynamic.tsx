@@ -21,6 +21,6 @@ const OnboardingWizard = dynamic(() => import('./OnboardingWizard').then(mod => 
     ),
 })
 
-export function OnboardingWizardDynamic() {
-    return <OnboardingWizard />
+export function OnboardingWizardDynamic({ fixture, state }: { fixture?: string; state?: string }) {
+    return <OnboardingWizard fixture={fixture} state={state} />
 }

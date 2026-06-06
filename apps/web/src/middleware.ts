@@ -19,6 +19,7 @@ const DEV_VISUAL_QA_PATHS = [
     '/exam',
     '/grammar',
     '/listening',
+    '/onboarding',
     '/profile',
     '/reading',
     '/review',

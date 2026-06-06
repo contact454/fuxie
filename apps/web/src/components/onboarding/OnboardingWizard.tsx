@@ -39,9 +39,15 @@ const LEVEL_INFO: Record<PlacementLevel, { color: string; label: string; descKey
     C2: { color: 'var(--color-cefr-c1)', label: 'C2 — Meisterstufe', descKey: 'levelDescC2' },
 }
 
-export function OnboardingWizard() {
+export function OnboardingWizard({ fixture, state }: { fixture?: string; state?: string }) {
     const router = useRouter()
-    const [step, setStep] = useState<Step>('welcome')
+    const isVisualQa = fixture === 'visual-qa'
+
+    const initialStep = (isVisualQa && state && ['welcome', 'goal', 'daily-time', 'placement', 'result'].includes(state))
+        ? (state as Step)
+        : 'welcome'
+
+    const [step, setStep] = useState<Step>(initialStep)
     const [saving, setSaving] = useState(false)
     const [saveError, setSaveError] = useState<string | null>(null)
 
@@ -58,7 +64,23 @@ export function OnboardingWizard() {
     const [lastCorrect, setLastCorrect] = useState(false)
 
     // Result
-    const [result, setResult] = useState<ReturnType<typeof calculateResult> | null>(null)
+    const [result, setResult] = useState<ReturnType<typeof calculateResult> | null>(() => {
+        if (isVisualQa && state === 'result') {
+            return {
+                estimatedLevel: 'A2',
+                confidence: 0.85,
+                levelBreakdown: {
+                    A1: { correct: 3, total: 3, pct: 100 },
+                    A2: { correct: 3, total: 4, pct: 75 },
+                    B1: { correct: 1, total: 3, pct: 33 },
+                    B2: { correct: 0, total: 2, pct: 0 },
+                    C1: { correct: 0, total: 0, pct: 0 },
+                    C2: { correct: 0, total: 0, pct: 0 },
+                }
+            }
+        }
+        return null
+    })
 
     const progress = useMemo(() => {
         const steps: Step[] = ['welcome', 'goal', 'daily-time', 'placement', 'result']
@@ -105,6 +127,11 @@ export function OnboardingWizard() {
         setSaving(true)
         setSaveError(null)
 
+        if (isVisualQa) {
+            router.push('/dashboard?fixture=visual-qa')
+            return
+        }
+
         try {
             const response = await fetch('/api/v1/auth/onboarding', {
                 method: 'PATCH',
@@ -127,7 +154,7 @@ export function OnboardingWizard() {
             setSaving(false)
             return
         }
-    }, [result, targetLevel, targetExam, dailyStudyMinutes, router])
+    }, [result, targetLevel, targetExam, dailyStudyMinutes, router, isVisualQa])
 
     // ===== RENDER =====
 
