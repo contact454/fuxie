@@ -7,9 +7,19 @@ export const metadata = {
     description: 'Bảng xếp hạng · Wer lernt am meisten?',
 }
 
-export default async function LeaderboardPage() {
+export default async function LeaderboardPage({
+    searchParams,
+}: {
+    searchParams: Promise<{ fixture?: string; state?: string }>
+}) {
+    const params = await searchParams
     const user = await getServerUser()
     if (!user) redirect('/login')
 
-    return <LeaderboardClientDynamic />
+    return (
+        <LeaderboardClientDynamic
+            fixture={params.fixture}
+            state={params.state}
+        />
+    )
 }

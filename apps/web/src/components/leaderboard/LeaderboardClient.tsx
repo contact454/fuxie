@@ -29,7 +29,13 @@ const PODIUM_STYLES = [
     { bg: 'from-orange-400 to-orange-600', size: 'w-12 h-12', crown: '🥉', textSize: 'text-lg' },
 ]
 
-export function LeaderboardClient() {
+export function LeaderboardClient({
+    fixture,
+    state,
+}: {
+    fixture?: string
+    state?: string
+}) {
     const t = useTranslations('Gamification')
     const [period, setPeriod] = useState<'weekly' | 'alltime'>('weekly')
     const [entries, setEntries] = useState<LeaderboardEntry[]>([])
@@ -41,6 +47,32 @@ export function LeaderboardClient() {
     const fetchLeaderboard = useCallback(async (p: string) => {
         setLoading(true)
         setError(null)
+
+        if (fixture === 'visual-qa') {
+            setLoading(false)
+            if (state === 'error') {
+                setEntries([])
+                setCurrentUser(null)
+                setError('Chưa tải được bảng xếp hạng. Em thử lại sau một chút nhé.')
+            } else if (state === 'empty') {
+                setEntries([])
+                setCurrentUser({
+                    rank: 12,
+                    userId: 'dev-learner-id',
+                    displayName: 'Lina Nguyen',
+                    avatarUrl: null,
+                    currentLevel: 'A2',
+                    weeklyXp: 0,
+                    totalXp: 0,
+                    streak: 3,
+                    isCurrentUser: true,
+                    rankChange: 'none'
+                } as any)
+                setCurrentLeague('BRONZE')
+            }
+            return
+        }
+
         try {
             const res = await fetch(`/api/v1/leaderboard?period=${p}`)
             if (!res.ok) throw new Error(`Leaderboard request failed: ${res.status}`)
@@ -60,7 +92,7 @@ export function LeaderboardClient() {
         } finally {
             setLoading(false)
         }
-    }, [])
+    }, [fixture, state])
 
     useEffect(() => {
         fetchLeaderboard(period)

@@ -16,6 +16,12 @@ const LeaderboardClient = dynamic(() => import('./LeaderboardClient').then(mod =
     ),
 })
 
-export function LeaderboardClientDynamic() {
-    return <LeaderboardClient />
+export function LeaderboardClientDynamic({
+    fixture,
+    state,
+}: {
+    fixture?: string
+    state?: string
+}) {
+    return <LeaderboardClient fixture={fixture} state={state} />
 }
