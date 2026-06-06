@@ -645,12 +645,37 @@ export default async function DashboardPage({ searchParams }: { searchParams: Pr
     }
 
     if (isDashboardVisualQaFixture(params)) {
+        const t = await getTranslations('Dashboard')
+        const name = DASHBOARD_VISUAL_QA_DATA.profile.displayName
+        const streakCount = DASHBOARD_VISUAL_QA_DATA.streak.currentStreak
+        const xpEarned = DASHBOARD_VISUAL_QA_DATA.todayActivity?.xpEarned ?? 0
+        const xpGoal = Math.max(50, DASHBOARD_VISUAL_QA_DATA.profile.studyGoalMinutes * 3)
+        const progressPercent = forceEmpty ? 0 : Math.min(100, Math.round((xpEarned / xpGoal) * 100))
+
         return (
             <DashboardRouteShell visualState={forceEmpty ? 'empty' : 'default'}>
-                <DashboardClientDynamic
-                    data={DASHBOARD_VISUAL_QA_DATA}
-                    forceEmpty={forceEmpty}
-                />
+                <div className="space-y-6">
+                    <div className="px-4 sm:px-6 lg:px-8 pt-4">
+                        <DashboardBackboneHero
+                            state={forceEmpty ? 'empty' : 'default'}
+                            greeting={forceEmpty ? t('greetingEmpty', { name: 'Learner' }) : t('greetingDefault', { name })}
+                            streakChipLabel={forceEmpty ? t('streakChipEmpty') : t('streakChipLabel', { count: streakCount })}
+                            streakCount={forceEmpty ? 0 : streakCount}
+                            xpLabel={forceEmpty ? '' : t('xpTargetLabel', { earned: xpEarned, goal: xpGoal })}
+                            questEyebrow={forceEmpty ? '' : t('questHeroEyebrow')}
+                            questTitle={forceEmpty ? '' : t('questHeroTitleDefault')}
+                            questMessage={forceEmpty ? '' : t('questHeroMessageDefault')}
+                            ctaLabel={forceEmpty ? t('ctaCreatePath') : t('ctaContinueLearning')}
+                            ctaHref={forceEmpty ? '/onboarding' : '/course'}
+                            progressPercent={progressPercent}
+                            todayLabel={t('today')}
+                        />
+                    </div>
+                    <DashboardClientDynamic
+                        data={DASHBOARD_VISUAL_QA_DATA}
+                        forceEmpty={forceEmpty}
+                    />
+                </div>
             </DashboardRouteShell>
         )
     }

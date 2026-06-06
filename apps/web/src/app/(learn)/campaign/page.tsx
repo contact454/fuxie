@@ -16,33 +16,102 @@ export const metadata = {
     description: 'A1 starter campaign map for vocabulary, roleplay, listening, reading, and writing quests.',
 }
 
-export default async function CampaignMapPage() {
+export default async function CampaignMapPage({
+    searchParams,
+}: {
+    searchParams: Promise<{ fixture?: string; state?: string }>
+}) {
+    const params = await searchParams
+    const fixture = params?.fixture
+    const state = params?.state
+    const isVisualQa = fixture === 'visual-qa'
+
     const user = await getServerUser()
-    if (!user) redirect('/login')
+    if (!user && !isVisualQa) redirect('/login')
 
-    const since = new Date()
-    since.setDate(since.getDate() - 89)
-    const events = await prisma.analyticsEvent.findMany({
-        where: {
-            userId: user.userId,
-            role: 'LEARNER',
-            eventName: 'meaningful_action_completed',
-            createdAt: { gte: since },
-        },
-        select: {
-            userId: true,
-            eventName: true,
-            actionId: true,
-            actionType: true,
-            level: true,
-            skill: true,
-            metadata: true,
-            createdAt: true,
-        },
-    })
+    let progressByNode
+    if (isVisualQa) {
+        if (state === 'completed') {
+            progressByNode = A1_CAMPAIGN_NODES.map((node) => ({
+                nodeId: node.id,
+                progress: 100,
+                completed: true,
+                evidenceCount: 3,
+                state: 'cleared' as const,
+                stateLabel: 'Cleared',
+                stateReason: 'Enough learning evidence found for this node.',
+            }))
+        } else if (state === 'in-progress') {
+            progressByNode = A1_CAMPAIGN_NODES.map((node, index) => {
+                if (index === 0 || index === 1) {
+                    return {
+                        nodeId: node.id,
+                        progress: 100,
+                        completed: true,
+                        evidenceCount: 3,
+                        state: 'cleared' as const,
+                        stateLabel: 'Cleared',
+                        stateReason: 'Enough learning evidence found for this node.',
+                    }
+                } else if (index === 2) {
+                    return {
+                        nodeId: node.id,
+                        progress: 45,
+                        completed: false,
+                        evidenceCount: 1,
+                        state: 'in_progress' as const,
+                        stateLabel: 'In progress',
+                        stateReason: 'Some learning evidence exists; one more activity will push the node forward.',
+                    }
+                } else {
+                    return {
+                        nodeId: node.id,
+                        progress: 0,
+                        completed: false,
+                        evidenceCount: 0,
+                        state: 'available' as const,
+                        stateLabel: 'Available',
+                        stateReason: 'No evidence yet. Start one meaningful activity to light up this node.',
+                    }
+                }
+            })
+        } else {
+            // default
+            progressByNode = A1_CAMPAIGN_NODES.map((node) => ({
+                nodeId: node.id,
+                progress: 0,
+                completed: false,
+                evidenceCount: 0,
+                state: 'available' as const,
+                stateLabel: 'Available',
+                stateReason: 'No evidence yet. Start one meaningful activity to light up this node.',
+            }))
+        }
+    } else {
+        const since = new Date()
+        since.setDate(since.getDate() - 89)
+        const events = await prisma.analyticsEvent.findMany({
+            where: {
+                userId: user!.userId,
+                role: 'LEARNER',
+                eventName: 'meaningful_action_completed',
+                createdAt: { gte: since },
+            },
+            select: {
+                userId: true,
+                eventName: true,
+                actionId: true,
+                actionType: true,
+                level: true,
+                skill: true,
+                metadata: true,
+                createdAt: true,
+            },
+        })
 
-    const meaningfulEvents = events as MasteryEvent[]
-    const progressByNode = A1_CAMPAIGN_NODES.map((node) => buildCampaignNodeProgress({ node, meaningfulEvents }))
+        const meaningfulEvents = events as MasteryEvent[]
+        progressByNode = A1_CAMPAIGN_NODES.map((node) => buildCampaignNodeProgress({ node, meaningfulEvents }))
+    }
     const completedCount = progressByNode.filter((node) => node.completed).length
     const overall = Math.round(progressByNode.reduce((sum, node) => sum + node.progress, 0) / Math.max(1, progressByNode.length))
 

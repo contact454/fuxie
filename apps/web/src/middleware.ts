@@ -12,6 +12,7 @@ const DEV_PUBLIC_PATHS = ['/fuxie-live-qa', '/fuxie-world-lab']
 const DEV_VISUAL_QA_PATHS = [
     '/admin',
     '/badges',
+    '/campaign',
     '/chat',
     '/course',
     '/dashboard',
