@@ -29,6 +29,8 @@ interface Message {
 interface ChatClientProps {
     initialLevel?: CefrLevel
     displayName?: string
+    fixture?: string
+    state?: string
 }
 
 const LEVEL_DESC: Record<CefrLevel, string> = {
@@ -77,7 +79,7 @@ function renderMarkdown(text: string): string {
         .replace(/\n/g, '<br/>')
 }
 
-export function ChatClient({ initialLevel, displayName }: ChatClientProps) {
+export function ChatClient({ initialLevel, displayName, fixture, state }: ChatClientProps) {
     const t = useTranslations('Chat')
     const [level, setLevel] = useState<CefrLevel>(initialLevel ?? 'A1')
     const [messages, setMessages] = useState<Message[]>([])
@@ -93,6 +95,60 @@ export function ChatClient({ initialLevel, displayName }: ChatClientProps) {
 
     const messagesEndRef = useRef<HTMLDivElement>(null)
     const inputRef = useRef<HTMLTextAreaElement>(null)
+
+    // Visual QA Mock State Handling
+    useEffect(() => {
+        if (fixture === 'visual-qa') {
+            if (state === 'intro') {
+                setHasStarted(false)
+                setShowLevelPicker(true)
+            } else if (state === 'chat') {
+                setHasStarted(true)
+                setChatMode('text')
+                setMessages([
+                    {
+                        id: 'msg-1',
+                        role: 'assistant',
+                        text: 'Hallo! Ich bin Fuxie, dein KI-Sprachtutor. Wie geht es dir heute? Hast du ein bestimmtes Thema, über das du sprechen möchtest?',
+                        timestamp: new Date(),
+                    },
+                    {
+                        id: 'msg-2',
+                        role: 'user',
+                        text: 'Mir geht es gut, danke. Ich habe ein Problem mit Deutsch Grammatik.',
+                        timestamp: new Date(),
+                    },
+                    {
+                        id: 'msg-3',
+                        role: 'assistant',
+                        text: 'Kein Problem! Deutschgrammatik kann knifflig sein, aber wir können das zusammen üben. Sag mal, worum genau geht es? Dativ oder Akkusativ? Oder etwas anderes?',
+                        corrections: [
+                            {
+                                original: 'Deutsch Grammatik',
+                                corrected: 'der deutschen Grammatik / deutsche Grammatik',
+                                explanation: 'In German, compounds are either written as one word (Deutschgrammatik) or using a genitive construction (Grammatik des Deutschen). Alternatively, with an adjective: "deutsche Grammatik".',
+                                rule: 'Nomen-Nomen Komposita',
+                            }
+                        ],
+                        suggestedFollowUps: [
+                            'Ich möchte Akkusativ vs Dativ üben.',
+                            'Kannst du mir die Adjektivdeklination erklären?',
+                            'Lass uns einfach frei sprechen.'
+                        ],
+                        timestamp: new Date(),
+                    }
+                ])
+                setSuggestedTopics([
+                    'Ich möchte Akkusativ vs Dativ üben.',
+                    'Kannst du mir die Adjektivdeklination erklären?',
+                    'Lass uns einfach frei sprechen.'
+                ])
+            } else if (state && state.startsWith('video-')) {
+                setHasStarted(true)
+                setChatMode('video')
+            }
+        }
+    }, [fixture, state])
 
     // Auto-scroll to bottom
     const scrollToBottom = useCallback(() => {
@@ -112,6 +168,25 @@ export function ChatClient({ initialLevel, displayName }: ChatClientProps) {
         setMessages([])
         setConversationId(null)
         setSuggestedTopics([])
+
+        if (fixture === 'visual-qa') {
+            setConversationId('mock-conv-id')
+            if (mode === 'text') {
+                setMessages([
+                    {
+                        id: 'msg-start',
+                        role: 'assistant',
+                        text: 'Guten Tag! Lass uns Deutsch sprechen. Wie kann ich dir heute helfen?',
+                        timestamp: new Date(),
+                    }
+                ])
+                setSuggestedTopics([
+                    'Ich möchte ein Thema wählen.',
+                    'Wie geht es dir?'
+                ])
+            }
+            return
+        }
 
         if (mode === 'video') return // Bypass text init for Video Call
 
@@ -144,6 +219,29 @@ export function ChatClient({ initialLevel, displayName }: ChatClientProps) {
         e?.preventDefault()
         const text = input.trim()
         if (!text || isLoading) return
+
+        if (fixture === 'visual-qa') {
+            const userMsg: Message = {
+                id: crypto.randomUUID(),
+                role: 'user',
+                text,
+                timestamp: new Date(),
+            }
+            setMessages(prev => [...prev, userMsg])
+            setInput('')
+            setIsLoading(true)
+            
+            setTimeout(() => {
+                setMessages(prev => [...prev, {
+                    id: crypto.randomUUID(),
+                    role: 'assistant',
+                    text: 'Das ist eine interessante Antwort! Lass uns weiter über dieses Thema sprechen.',
+                    timestamp: new Date()
+                }])
+                setIsLoading(false)
+            }, 500)
+            return
+        }
 
         const userMsg: Message = {
             id: crypto.randomUUID(),
@@ -411,6 +509,8 @@ export function ChatClient({ initialLevel, displayName }: ChatClientProps) {
             <VideoCallLayout 
                 level={level} 
                 scenarioId={selectedScenarioId}
+                fixture={fixture}
+                state={state}
                 onEndCall={() => {
                     setHasStarted(false)
                     setShowLevelPicker(true)

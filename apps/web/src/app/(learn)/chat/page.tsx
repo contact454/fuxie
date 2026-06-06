@@ -19,22 +19,34 @@ export default async function ChatPage({ searchParams }: { searchParams: Promise
         return <Slice3ChatLoadingFixture />
     }
 
-    const serverUser = await getServerUser()
-    if (!serverUser) redirect('/login')
+    const isVisualQa = visualParams.fixture === 'visual-qa'
+    let initialLevel: CefrLevel = 'A1'
+    let displayName = 'Lina Nguyen'
 
-    // Fetch user profile for initial level and display name
-    const profile = await prisma.userProfile.findUnique({
-        where: { userId: serverUser.userId },
-        select: {
-            currentLevel: true,
-            displayName: true,
-        },
-    })
+    if (!isVisualQa) {
+        const serverUser = await getServerUser()
+        if (!serverUser) redirect('/login')
+
+        // Fetch user profile for initial level and display name
+        const profile = await prisma.userProfile.findUnique({
+            where: { userId: serverUser.userId },
+            select: {
+                currentLevel: true,
+                displayName: true,
+            },
+        })
+        if (profile) {
+            initialLevel = (profile.currentLevel as CefrLevel) ?? 'A1'
+            displayName = profile.displayName ?? 'Learner'
+        }
+    }
 
     return (
         <ChatClientDynamic
-            initialLevel={(profile?.currentLevel as CefrLevel) ?? 'A1'}
-            displayName={profile?.displayName ?? undefined}
+            initialLevel={initialLevel}
+            displayName={displayName}
+            fixture={visualParams.fixture}
+            state={visualParams.state}
         />
     )
 }

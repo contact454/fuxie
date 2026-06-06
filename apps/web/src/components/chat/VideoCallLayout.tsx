@@ -10,9 +10,11 @@ interface VideoCallLayoutProps {
     onEndCall: () => void
     level: string
     scenarioId: string
+    fixture?: string
+    state?: string
 }
 
-export function VideoCallLayout({ onEndCall, level, scenarioId }: VideoCallLayoutProps) {
+export function VideoCallLayout({ onEndCall, level, scenarioId, fixture, state }: VideoCallLayoutProps) {
     const t = useTranslations('Chat')
     const [isMuted, setIsMuted] = useState(false)
     const [showSummary, setShowSummary] = useState(false)
@@ -25,17 +27,45 @@ export function VideoCallLayout({ onEndCall, level, scenarioId }: VideoCallLayou
     
     const audioAnalyserRef = useRef<AnalyserNode | null>(null)
     
-    const { connect, disconnect, isConnected, isSpeaking, transcript, fullTranscript, connectionError } = useLiveAPI()
+    const liveApi = useLiveAPI()
+    const isMock = fixture === 'visual-qa'
+    const isConnected = isMock ? true : liveApi.isConnected
+    const isSpeaking = isMock ? (state === 'video-speaking') : liveApi.isSpeaking
+    const connectionError = isMock ? null : liveApi.connectionError
+    const transcript = isMock 
+        ? (state === 'video-speaking' ? 'Hallo! Ich bin Fuxie, dein KI-Sprachtutor. Wie geht es dir heute?' : 'Ich lerne Deutsch mit Fuxie.')
+        : liveApi.transcript
+    const fullTranscript = isMock ? '' : liveApi.fullTranscript
+
     const scenario = SCENARIOS.find(s => s.id === scenarioId) || SCENARIOS[0]!
 
     // Connect on mount
     useEffect(() => {
-        connect(scenarioId)
-        return () => disconnect()
-    }, [connect, disconnect, scenarioId])
+        if (!isMock) {
+            liveApi.connect(scenarioId)
+        }
+        return () => {
+            if (!isMock) {
+                liveApi.disconnect()
+            }
+        }
+    }, [liveApi.connect, liveApi.disconnect, scenarioId, isMock])
 
     // Countdown Timer Logic
     useEffect(() => {
+        if (isMock) {
+            setTimeLeft(285)
+            if (state === 'video-summary') {
+                setShowSummary(true)
+                setPronunciationFeedbackStatus('ready')
+                setPronunciationErrors([
+                    { word: 'Deutsch', phoneme_error: 'Phát âm âm "ch" chưa rõ, cần đẩy hơi mạnh hơn ở vòm họng sau.' },
+                    { word: 'ich', phoneme_error: 'Âm "ch" trong "ich" nên phát âm mềm hơn (ich-Laut), tránh nhầm sang "sch".' }
+                ])
+            }
+            return
+        }
+
         if (!isConnected || showSummary) return
 
         const timer = setInterval(() => {
@@ -50,7 +80,7 @@ export function VideoCallLayout({ onEndCall, level, scenarioId }: VideoCallLayou
         }, 1000)
 
         return () => clearInterval(timer)
-    }, [isConnected, showSummary])
+    }, [isConnected, showSummary, isMock, state])
 
     const formatTime = (seconds: number) => {
         const m = Math.floor(seconds / 60).toString().padStart(2, '0')
@@ -59,7 +89,17 @@ export function VideoCallLayout({ onEndCall, level, scenarioId }: VideoCallLayou
     }
 
     const handleEndCall = async () => {
-        disconnect()
+        if (isMock) {
+            setShowSummary(true)
+            setPronunciationFeedbackStatus('ready')
+            setPronunciationErrors([
+                { word: 'Deutsch', phoneme_error: 'Phát âm âm "ch" chưa rõ, cần đẩy hơi mạnh hơn ở vòm họng sau.' },
+                { word: 'ich', phoneme_error: 'Âm "ch" trong "ich" nên phát âm mềm hơn (ich-Laut), tránh nhầm sang "sch".' }
+            ])
+            return
+        }
+
+        liveApi.disconnect()
         setShowSummary(true)
         setIsSummarizing(true)
         setPronunciationFeedbackStatus('pending')

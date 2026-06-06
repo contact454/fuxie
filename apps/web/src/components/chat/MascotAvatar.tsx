@@ -22,10 +22,18 @@ export function MascotAvatar({
 
     // Simple Lip-sync based on Audio Analyser volume
     useEffect(() => {
-        if (!isSpeaking || !audioAnalyser) {
+        if (!isSpeaking) {
             setMouthOpen(false)
             if (requestRef.current !== null) cancelAnimationFrame(requestRef.current)
             return
+        }
+
+        if (!audioAnalyser) {
+            // Simulated mouth toggle for mock/visual-qa
+            const interval = setInterval(() => {
+                setMouthOpen(prev => !prev)
+            }, 180)
+            return () => clearInterval(interval)
         }
 
         const dataArray = new Uint8Array(audioAnalyser.frequencyBinCount)
