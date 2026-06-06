@@ -91,23 +91,40 @@ function CourseRouteShell({
     )
 }
 
-function CourseLevelSelector({ level }: { level: CefrLevel }) {
+function CourseLevelSelector({
+    level,
+    isVisualQa,
+    visualState,
+}: {
+    level: CefrLevel
+    isVisualQa?: boolean
+    visualState?: string
+}) {
     return (
         <div className="max-w-6xl mx-auto px-4 pt-6" data-role="course-level-selector">
             <div className="flex flex-wrap gap-2">
-                {VALID_CEFR_LEVELS.map(l => (
-                    <a
-                        key={l}
-                        href={`/course?level=${l}`}
-                        className={`px-4 py-2 rounded-full text-sm font-medium transition-colors
-                            ${l === level
-                                ? 'bg-blue-500 text-white shadow-md'
-                                : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
-                            }`}
-                    >
-                        {l}
-                    </a>
-                ))}
+                {VALID_CEFR_LEVELS.map(l => {
+                    let href = `/course?level=${l}`
+                    if (isVisualQa) {
+                        href += `&fixture=visual-qa`
+                        if (visualState) {
+                            href += `&state=${visualState}`
+                        }
+                    }
+                    return (
+                        <a
+                            key={l}
+                            href={href}
+                            className={`px-4 py-2 rounded-full text-sm font-medium transition-colors
+                                ${l === level
+                                    ? 'bg-blue-500 text-white shadow-md'
+                                    : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+                                }`}
+                        >
+                            {l}
+                        </a>
+                    )
+                })}
             </div>
         </div>
     )
@@ -117,7 +134,15 @@ function SkeletonBlock({ className }: { className: string }) {
     return <div className={`animate-pulse rounded-2xl bg-white/70 ${className}`} />
 }
 
-function CourseLoadingVisualState({ level }: { level: CefrLevel }) {
+function CourseLoadingVisualState({
+    level,
+    isVisualQa,
+    visualState,
+}: {
+    level: CefrLevel
+    isVisualQa?: boolean
+    visualState?: string
+}) {
     return (
         <section
             className="min-h-[100dvh] bg-[#F3FBFF] pb-8"
@@ -125,7 +150,7 @@ function CourseLoadingVisualState({ level }: { level: CefrLevel }) {
             aria-busy="true"
             aria-live="polite"
         >
-            <CourseLevelSelector level={level} />
+            <CourseLevelSelector level={level} isVisualQa={isVisualQa} visualState={visualState} />
 
             <div className="max-w-6xl mx-auto grid gap-5 px-4 py-6 lg:grid-cols-[260px_minmax(0,1fr)]">
                 <aside className="rounded-3xl border border-[#CCE4F0] bg-white/80 p-4 shadow-sm">
@@ -360,6 +385,112 @@ async function getCourseDataUncached(userId: string, level: CefrLevel, locale: s
     }
 }
 
+const MOCK_COURSE_DATA_FOR_LEVEL = (level: CefrLevel) => ({
+    courseTitle: `Deutsch ${level} Kurs`,
+    courseTitleDe: `Deutsch ${level} Kurs`,
+    courseDescription: `Lộ trình học tiếng Đức chuẩn CEFR cấp độ ${level}. Học các chủ đề từ vựng, ngữ pháp và rèn luyện 4 kỹ năng tương ứng.`,
+    cefrLevel: level,
+    modules: [
+        {
+            id: `mod-${level}-1`,
+            slug: `module-${level.toLowerCase()}-1`,
+            title: `Chủ đề học tập 1 (${level})`,
+            titleDe: `Thema 1 (${level})`,
+            description: `Học các kiến thức từ vựng và cấu trúc ngữ pháp cơ bản của chủ đề 1 cấp độ ${level}.`,
+            sortOrder: 1,
+            estimatedMinutes: 50,
+            vocabThemes: [
+                {
+                    slug: `vocab-${level.toLowerCase()}-1`,
+                    name: `Wortschatz Thema 1`,
+                    nameNative: `Từ vựng chủ đề 1`,
+                    itemCount: 18,
+                    learnedCount: 12,
+                },
+                {
+                    slug: `vocab-${level.toLowerCase()}-2`,
+                    name: `Wortschatz Thema 2`,
+                    nameNative: `Từ vựng chủ đề 2`,
+                    itemCount: 15,
+                    learnedCount: 0,
+                }
+            ],
+            grammarTopics: [
+                {
+                    slug: `grammar-${level.toLowerCase()}-1`,
+                    titleDe: `Grammatik Thema 1`,
+                    titleNative: `Ngữ pháp chủ đề 1`,
+                    lessonCount: 3,
+                    completedCount: 2,
+                    totalStars: 5,
+                }
+            ],
+            skillLinks: [
+                {
+                    skill: 'listening' as const,
+                    label: 'Hörverstehen',
+                    labelNative: 'Luyện nghe chủ đề 1',
+                    href: '/session?fixture=visual-qa&type=listening',
+                    emoji: '🎧',
+                },
+                {
+                    skill: 'reading' as const,
+                    label: 'Leseverstehen',
+                    labelNative: 'Luyện đọc chủ đề 1',
+                    href: '/session?fixture=visual-qa&type=reading',
+                    emoji: '📖',
+                }
+            ],
+            isUnlocked: true,
+        },
+        {
+            id: `mod-${level}-2`,
+            slug: `module-${level.toLowerCase()}-2`,
+            title: `Chủ đề học tập 2 (${level})`,
+            titleDe: `Thema 2 (${level})`,
+            description: `Mở rộng vốn từ và nâng cao kỹ năng viết, nói cho chủ đề 2 cấp độ ${level}.`,
+            sortOrder: 2,
+            estimatedMinutes: 60,
+            vocabThemes: [
+                {
+                    slug: `vocab-${level.toLowerCase()}-3`,
+                    name: `Wortschatz Thema 3`,
+                    nameNative: `Từ vựng chủ đề 3`,
+                    itemCount: 22,
+                    learnedCount: 0,
+                }
+            ],
+            grammarTopics: [
+                {
+                    slug: `grammar-${level.toLowerCase()}-2`,
+                    titleDe: `Grammatik Thema 2`,
+                    titleNative: `Ngữ pháp chủ đề 2`,
+                    lessonCount: 4,
+                    completedCount: 0,
+                    totalStars: 0,
+                }
+            ],
+            skillLinks: [
+                {
+                    skill: 'writing' as const,
+                    label: 'Schreiben',
+                    labelNative: 'Luyện viết chủ đề 2',
+                    href: '/session?fixture=visual-qa&type=writing',
+                    emoji: '✍️',
+                },
+                {
+                    skill: 'speaking' as const,
+                    label: 'Sprechen',
+                    labelNative: 'Luyện nói chủ đề 2',
+                    href: '/session?fixture=visual-qa&type=speaking',
+                    emoji: '🗣️',
+                }
+            ],
+            isUnlocked: true,
+        }
+    ]
+})
+
 export default async function CoursePage({
     searchParams,
 }: {
@@ -371,10 +502,49 @@ export default async function CoursePage({
     // Determine level: from query param, or user's current level, or A1
     let level: CefrLevel = requestedLevel ?? 'A1'
 
-    if (isCourseVisualQaFixture(params) && params.state === 'loading') {
+    const isVisualQa = isCourseVisualQaFixture(params)
+    const visualState = params.state || 'default'
+
+    if (isVisualQa) {
+        if (visualState === 'loading') {
+            return (
+                <CourseRouteShell visualState="loading">
+                    <CourseLoadingVisualState level={level} isVisualQa={isVisualQa} visualState={visualState} />
+                </CourseRouteShell>
+            )
+        }
+        if (visualState === 'empty') {
+            const t = await getTranslations('SurfaceStates')
+            const fallbackLevel: CefrLevel =
+                VALID_CEFR_LEVELS.find((candidate) => candidate !== level) ?? 'A1'
+            const fallbackHref = `/course?level=${fallbackLevel}&fixture=visual-qa&state=empty`
+            return (
+                <CourseRouteShell visualState="empty">
+                    <div className="max-w-4xl mx-auto px-4 py-8">
+                        <StateShell
+                            surfaceId="course"
+                            state="empty"
+                            title={t('course.emptyTitle')}
+                            message={t('course.emptyMessage')}
+                            primaryCta={{
+                                label: t('course.emptyCtaLabel'),
+                                href: fallbackHref,
+                            }}
+                        />
+                        <div className="mt-8 flex justify-center">
+                            <CourseLevelSelector level={level} isVisualQa={isVisualQa} visualState={visualState} />
+                        </div>
+                    </div>
+                </CourseRouteShell>
+            )
+        }
+
+        // Default visual qa state
+        const data = MOCK_COURSE_DATA_FOR_LEVEL(level)
         return (
-            <CourseRouteShell visualState="loading">
-                <CourseLoadingVisualState level={level} />
+            <CourseRouteShell visualState="default">
+                <CourseLevelSelector level={level} isVisualQa={isVisualQa} visualState={visualState} />
+                <CourseClientDynamic data={data} />
             </CourseRouteShell>
         )
     }
@@ -418,35 +588,35 @@ export default async function CoursePage({
         return (
             <CourseRouteShell visualState="empty">
                 <div className="max-w-4xl mx-auto px-4 py-8">
-                <StateShell
-                    surfaceId="course"
-                    state="empty"
-                    title={t('course.emptyTitle')}
-                    message={t('course.emptyMessage')}
-                    primaryCta={{
-                        label: t('course.emptyCtaLabel'),
-                        href: `/course?level=${fallbackLevel}`,
-                    }}
-                />
+                    <StateShell
+                        surfaceId="course"
+                        state="empty"
+                        title={t('course.emptyTitle')}
+                        message={t('course.emptyMessage')}
+                        primaryCta={{
+                            label: t('course.emptyCtaLabel'),
+                            href: `/course?level=${fallbackLevel}`,
+                        }}
+                    />
 
-                {/* Level pivot below the empty hero — keeps the surface
-                    actionable while still satisfying single-Primary_CTA
-                    (Property 8): the level pills are not Primary_CTAs. */}
-                <div className="mt-8 flex flex-wrap gap-2 justify-center">
-                    {VALID_CEFR_LEVELS.map(l => (
-                        <a
-                            key={l}
-                            href={`/course?level=${l}`}
-                            className={`px-4 py-2 rounded-full text-sm font-medium transition-colors
-                                ${l === level
-                                    ? 'bg-blue-500 text-white'
-                                    : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
-                                }`}
-                        >
-                            {l}
-                        </a>
-                    ))}
-                </div>
+                    {/* Level pivot below the empty hero — keeps the surface
+                        actionable while still satisfying single-Primary_CTA
+                        (Property 8): the level pills are not Primary_CTAs. */}
+                    <div className="mt-8 flex flex-wrap gap-2 justify-center">
+                        {VALID_CEFR_LEVELS.map(l => (
+                            <a
+                                key={l}
+                                href={`/course?level=${l}`}
+                                className={`px-4 py-2 rounded-full text-sm font-medium transition-colors
+                                    ${l === level
+                                        ? 'bg-blue-500 text-white'
+                                        : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+                                    }`}
+                            >
+                                {l}
+                            </a>
+                        ))}
+                    </div>
                 </div>
             </CourseRouteShell>
         )
