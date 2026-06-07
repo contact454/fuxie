@@ -8,7 +8,8 @@
         "./constants": "./src/constants/index.ts",
         "./env": "./src/env/index.ts",
         "./validators": "./src/validators/index.ts",
-        "./utils": "./src/utils/index.ts"
+        "./utils": "./src/utils/index.ts",
+        "./content-schema": "./src/content-schema/index.ts"
     },
     "scripts": {
         "typecheck": "tsc --noEmit",
