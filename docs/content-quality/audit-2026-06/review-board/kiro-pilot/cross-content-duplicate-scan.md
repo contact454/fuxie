@@ -31,6 +31,14 @@ So khớp **toàn bộ** transcript 52 file c2/listening (không chỉ 80 ký t�
 
 > Lưu ý phương pháp: overlap đo bằng prefix-substring xấp xỉ, KHÔNG phải diff chuẩn. Là tín hiệu sàng lọc, không phải kết luận. Đây là việc đọc-hiểu cần con người.
 
+### ✅ Đã đọc trực tiếp (Kiro-agent) — XÁC NHẬN P0/P1 thật
+Đọc cặp `003-T1 ↔ 013-T1`:
+- **L-C2-GOETHE-013-T1 — P0 SAI CHỦ ĐỀ:** `topic`/`title`/`audio_file`/`learningOutcomes` khai báo **"Reformpädagogik in der Praxis"**, nhưng `transcript` là **y nguyên đoạn về "Berliner Mauer in Schulbüchern" của 003-T1** (copy). Câu hỏi của 013 (gds_h_01..03) lại đúng về Mauer → khớp transcript nhưng KHÔNG khớp topic của chính file. Cùng họ defect placeholder như C2 reading.
+- **L-C2-GOETHE-003-T1 — P1 cấu trúc + câu hỏi lạc đề:** transcript khai "Sie hören fünf Radiosendungen" + nhãn "Sendung 1–5" nhưng thực chất là **một đoạn monolog Mauer lặp vòng** (không phải 5 bản tin khác nhau). Câu hỏi Q1/Q3/Q4 hỏi "Die Person kommt aus Köln/Frankreich/Konstanz" — **hoàn toàn lạc đề** với monolog học thuật về sách giáo khoa; `key_evidence` = "Die Berliner Mauer" (filler). Q2 "Schulbüchern wird erwähnt" tầm thường.
+
+→ **Kết luận:** bộ c2/listening có **3 lớp defect**: (a) transcript nhân bản giữa các ID (block N+10 copy block N), (b) topic/title không khớp transcript, (c) câu hỏi lạc đề + cấu trúc "5 Sendungen" giả. Đây là defect nội dung thật, mức **P0/P1**, cần **spec regenerate listening riêng** (tương tự `content-c2-placeholder-regeneration`), KHÔNG vá nhanh được. Quy mô thật cần quét toàn bộ 52 file c2/listening (và có thể các level khác).
+
+
 ## Phân tích bổ sung (các skill khác)
 
 - **c2/listening (44 file): NGHI VẤN CAO.** Các cặp như `L-C2-GOETHE-007 ≡ 017`, `008 ≡ 018` chia sẻ **nguyên đoạn transcript** (vd về "algorithmische Empfehlungssysteme", "unsichtbarer Schnitt"). Giống mẫu nhân bản lesson (block 001–010 bị copy thành 011–020?). Nếu đúng → học viên gặp lại y nguyên bài nghe ở 2 ID khác nhau. **Mức nghi P1.**
