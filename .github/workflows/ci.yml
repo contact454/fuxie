@@ -21,6 +21,27 @@ jobs:
     # Block-on-failure is what the gamified-ui-asset-rollout task 2.6 requires.
     name: Quick checks (asset registry + locale + property)
     runs-on: ubuntu-latest
+    # fuxie-content-review-board task 3.1: the Tier-1 German gate
+    # (pnpm qa:german-lint --diff, added below) is deterministic + free, but it
+    # needs a real LanguageTool server. By design the gate exits 2 (infraError,
+    # never a false PASS) when LanguageTool is unreachable (Req 1.9), so a
+    # BLOCKING step without this service would fail on EVERY run. We therefore
+    # run LanguageTool as a service container and point the gate at it via
+    # LANGUAGETOOL_URL. The single-service-in-check-quick approach is chosen over
+    # splitting into verify because the gate is diff-scoped (usually 0 content
+    # files on a PR) and so stays fast. hunspell is intentionally NOT installed:
+    # it is a best-effort sub-check that self-skips (records a note) when absent,
+    # so the gate still passes without it.
+    services:
+      # erikvl87/languagetool serves on container port 8010 (pinned to a real
+      # LanguageTool release tag for amd64 / ubuntu-latest).
+      languagetool:
+        image: erikvl87/languagetool:6.7
+        ports:
+          - 8010:8010
+    env:
+      # Point the gate at the service container above (its default is :8081).
+      LANGUAGETOOL_URL: http://localhost:8010
     steps:
       - name: Checkout
         uses: actions/checkout@v6
@@ -49,6 +70,25 @@ jobs:
 
       - name: Run locale parity check
         run: pnpm check:locale-parity --skip-tsx-scan
+
+      - name: Wait for LanguageTool to be ready
+        # Brief readiness poll avoids flakiness on a cold service container.
+        # The gate's own pingLanguageTool would also catch a not-ready server.
+        run: |
+          for i in $(seq 1 30); do
+            if curl -fsS http://localhost:8010/v2/languages > /dev/null; then
+              echo "LanguageTool is ready"; exit 0
+            fi
+            echo "Waiting for LanguageTool ($i/30)..."; sleep 2
+          done
+          echo "LanguageTool did not become ready in time" >&2; exit 1
+
+      - name: Run German language gate (Tier-1, blocking)
+        # fuxie-content-review-board task 3.1 (Req 1.7, 7.5). block-on-error:
+        # NO continue-on-error, so objective German errors block the PR. Backed
+        # by the LanguageTool service container so the gate actually runs
+        # instead of exiting 2 (infraError). Diff-scoped to changed content.
+        run: pnpm qa:german-lint --diff
 
       - name: Run state shell coverage check
         run: pnpm check:state-shell-coverage

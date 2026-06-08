@@ -10,6 +10,7 @@
     "test:property": "vitest run --config vitest.property.config.ts --passWithNoTests",
     "check:ai-eval": "pnpm eval:ai && pnpm eval:ai -- --provider --allow-provider-blocked && pnpm eval:ai:readout -- --report-path tmp/ai-eval-runs/readout.md",
     "qa:content": "tsx scripts/content-qa.ts",
+    "qa:german-lint": "tsx scripts/content-german-lint.ts",
     "qa:fuxie-assets": "node scripts/verify-fuxie-global-assets-alpha.cjs",
     "qa:copy-style": "node --experimental-strip-types --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/copy-style-audit.ts",
     "qa:copy-style:fix": "node --experimental-strip-types --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/copy-style-audit.ts --fix-mojibake",
