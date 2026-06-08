@@ -53,3 +53,43 @@ So khớp **toàn bộ** transcript 52 file c2/listening (không chỉ 80 ký t�
 3. Cắm scanner vào quy trình QA định kỳ; mở rộng `GENERIC_OPENERS` khi phát hiện khuôn mới.
 
 > READ-ONLY: scan không sửa content. Đây là danh sách ứng viên cần người rành tiếng Đức xác nhận, KHÔNG phải defect đã chốt. Generator gốc xem ticket `TICKET-content-generator-filler-rootcause.md`.
+
+## Quét sâu TOÀN BỘ content (1.187 file) — overlap thật theo skill/level
+
+Phương pháp nâng cấp: thay vì khớp 80 ký tự prefix, đo **overlap transcript/article thật** (cửa sổ 60 ký tự chuẩn hoá, bỏ nhãn narrator ở listening) + dupRatio nội bộ. Quét 1.187 file content.
+
+### Bảng tổng (chỉ nhóm có defect)
+
+| skill/level | files | cặp dup (≥0.5) | cặp ~exact (≥0.95) | file dính | idup nội bộ ≥0.3 |
+| --- | --- | --- | --- | --- | --- |
+| **c2/listening** | 52 | 22 | **22** | 44 | **52** |
+| **c2/reading** | 48 | 87 | **11** | 19 | 0 |
+| **b2/listening** | 48 | 8 | **8** | 16 | 0 |
+| **c1/listening** | 52 | 8 | 0 | 16 | 0 |
+| a1/writing | 35 | 45 | 0 | 10 | 0 |
+| **b1/listening** | 44 | 4 | **4** | 8 | 0 |
+
+(Các nhóm còn lại: 0 cặp — reading A1/A2/B1/B2/C1, writing A2/B1/B2/C1/C2, vocabulary, grammar, speaking đều sạch theo phép đo này.)
+
+### Đặc tả cặp ~exact (đã in từng cặp)
+
+- **c2/reading — 11 cặp ~0.95, TẤT CẢ ở Teil 2** (hội tụ về `C2-T2-012`, thêm `C2-T2-007↔009`). → **Teil 2 reading CHƯA từng remediate** (đợt trước chỉ làm C2-T1-005..012 + C2-T3-001..012). Đây là **cụm filler thật còn sót ở Teil 2**, cùng họ defect placeholder. **Mức P0** (cần xác minh đọc trực tiếp như đã làm T1/T3).
+- **b2/listening — 8 cặp overlap = 1.00:** `L-B2-GOETHE-001-T{1,2,3,4} ≡ 011-T{1,2,3,4}` và `002 ≡ 012` (cả 4 Teil). Mẫu **N↔N+10 copy verbatim** y như c2/listening. **Mức P0.**
+- **b1/listening — 4 cặp overlap = 1.00:** `L-B1-GOETHE-001-T{1,2,3,4} ≡ 011-T{1,2,3,4}`. Cùng bug. **Mức P0** (quy mô có thể lớn hơn 4 cặp đo được; cần quét đủ block).
+- **c1/listening — 8 cặp 0.5–0.95 (0 exact):** overlap một phần, **mức P1/P2**, cần đọc xác minh.
+- **a1/writing — 45 cặp, 0 exact:** nhiều khả năng **false positive** (đề/khung Schreiben A1 dùng chung hợp lệ). Cần đọc field cụ thể trước khi kết luận; tạm **không phải defect**.
+
+### Kết luận quy mô thật (cập nhật)
+
+Bug generator "transcript nhân bản N↔N+10" **KHÔNG chỉ ở C2** — lan **B1, B2, C1, C2 listening**. Và **C2 reading Teil 2** có cụm filler riêng chưa xử lý. Tổng ước tính cần remediate (đã trừ false-positive writing):
+
+| Hạng mục | Mức | Quy mô ước tính |
+| --- | --- | --- |
+| c2/listening (3 lớp lỗi) | P0/P1 | 52 file — đã mở spec `content-c2-listening-regeneration` |
+| c2/reading Teil 2 filler | P0 | ~12+ file (C2-T2-*) — CHƯA có spec |
+| b2/listening N↔N+10 | P0 | ≥16 file (block 011–020 copy 001–010?) — CHƯA có spec |
+| b1/listening N↔N+10 | P0 | ≥8 file — CHƯA có spec |
+| c1/listening partial overlap | P1/P2 | ~16 file — cần xác minh |
+| a1/writing | (false-pos?) | 10 file — cần đọc xác nhận, có thể không sửa |
+
+> READ-ONLY: số liệu từ phép đo overlap xấp xỉ, là tín hiệu sàng lọc. Cặp ~exact (≥0.95) là bằng chứng mạnh; cặp 0.5–0.95 cần người đọc xác nhận. Chưa người rành tiếng Đức duyệt. Generator gốc xem ticket `TICKET-content-generator-filler-rootcause.md`.
