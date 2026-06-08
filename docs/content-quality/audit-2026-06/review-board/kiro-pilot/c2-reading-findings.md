@@ -37,6 +37,8 @@ Vai chinh: Content QA / Linguistic Reviewer · Vai phoi hop: German Academic Lea
 
 ## ⚠️ P1-A — Câu hỏi (stem) hỏng do bug ghép template (learner-facing, sai ngữ pháp Đức)
 
+> **✅ ĐÃ XỬ LÝ (RESOLVED) — spec `content-cefr-stem-regeneration`.** Toàn bộ broken-stem ở B2/C1/C2 reading đã được viết lại thành câu hỏi đúng ngữ pháp, khớp đáp án có sẵn (answer/options bất biến — tool assert). Sửa **vượt** phạm vi marker: mọi stem hỏng trong từng file đụng tới (b2: 21 file/77 stem, c1: 9 file/44 stem, c2: 16 file/~95 stem). Kèm 2 fix Evidence_Mismatch (C1-T2-005 Q7, C1-T2-012 Q4 + C2-T1-001 Q3) và textFix lỗi từ Đức (C2-T1-002 "intellectual"→"intellektuellen", C2-T3-012 "rationais"→"rationales"). Cổng đóng: **scan Broken_Stem b2/c1/c2 = 0**; `qa:content` exit 0; `tests/content-audit` 253/253 xanh. Generator gốc → ticket `TICKET-content-generator-filler-rootcause.md`.
+
 Nhiều `stem` là **chuỗi template generic + mảnh câu hỏi thật bị nối ẩu** → vừa sai ngữ pháp vừa lệch ý so với đáp án. Ví dụ:
 
 - `C2-T1-001` Q4: *"Welche epistemologische Position vertritt der Autor bezüglich **fordert Hart bezüglich** Recht und Moral?"* — hai động từ "vertritt…fordert" dính nhau, vô nghĩa.

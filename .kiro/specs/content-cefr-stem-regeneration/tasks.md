@@ -31,22 +31,22 @@ Hard ordering: batch tuần tự b2→c1→c2 để rút kinh nghiệm review t�
   - Thêm `tests/content-audit/cefr-stem.spec.ts`: Property 1 (0 broken stem trên Worklist sau sửa), Property 2 (answer/options snapshot bất biến).
   - _Requirements: 1.5, 3.1, 4.3_
 
-- [ ] 2. Regenerate theo batch level
+- [x] 2. Regenerate theo batch level
 
-  - [ ] 2.1 Batch b2 (11 câu)
+  - [x] 2.1 Batch b2 (11 câu)
     - Với mỗi câu Worklist b2: đọc stem + answer + key_evidence + đoạn text; viết Clean_Stem khớp đáp án (German Content Writer); sửa Evidence_Mismatch/lỗi từ nếu có; Academic_Signoff.
     - Apply `--level b2` (dry-run → áp); `qa:content` + `qa:german-lint` + `tests/content-audit/*` xanh.
     - _Requirements: 1.1, 1.2, 1.3, 1.4, 2.1, 2.2, 2.3, 3.1, 3.4, 3.5, 4.1, 4.2_
 
-  - [ ] 2.2 Batch c1 (12 câu)
+  - [x] 2.2 Batch c1 (12 câu)
     - Như 2.1 cho c1.
     - _Requirements: 1.1, 1.2, 1.3, 1.4, 2.1, 2.2, 2.3, 3.1, 4.1, 4.2_
 
-  - [ ] 2.3 Batch c2 (70 câu)
+  - [x] 2.3 Batch c2 (70 câu)
     - Như 2.1 cho c2 (gồm C2-T1-001 Q3 Evidence_Mismatch + C2-T1-002 "intellectual"→"intellektuellen").
     - _Requirements: 1.1, 1.2, 1.3, 1.4, 2.1, 2.2, 2.3, 3.1, 4.1, 4.2_
 
-- [ ] 3. Verify toàn cục + đóng finding
+- [x] 3. Verify toàn cục + đóng finding
   - Verifier: 0 câu Worklist còn Broken_Stem (Property 1).
   - Property 2: `answer`/`options` trước/sau bất biến toàn reading.
   - `qa:content` exit 0; `qa:german-lint` 0 lỗi mới; `tests/content-audit/*` xanh.
