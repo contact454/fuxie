@@ -23,6 +23,16 @@ Công cụ: `scripts/scan-content-placeholders.ts` (tái dùng được, READ-ON
 
 ## Phân tích sơ bộ (chưa xác nhận — cần người duyệt)
 
+### Cập nhật: xác minh chi tiết c2/listening (so transcript đầy đủ)
+So khớp **toàn bộ** transcript 52 file c2/listening (không chỉ 80 ký tự đầu):
+- **Trùng 100% (identical): 0 cặp.** → KHÔNG có file nghe bị nhân bản y hệt.
+- **Trùng đoạn lớn (54–81% verbatim overlap): nhiều cặp theo mẫu lesson N ↔ N+10** — vd `003-T1 ↔ 013-T1` (~81%), `004-T1 ↔ 014-T1` (~78%), `006-T1 ↔ 016-T1` (~78%), `005-T3 ↔ 015-T3` (~63%), `002-T3 ↔ 012-T3` (~62%), `007-T3 ↔ 017-T3` (~54%)…
+- **Diễn giải:** block GOETHE-011…020 chia sẻ phần lớn transcript với 001…010 (cùng chủ đề + nhiều câu verbatim) nhưng đã được sửa đổi một phần. Mức **nghi P2–P1** tuỳ độ giống: học viên có thể gặp lại phần lớn nội dung nghe ở 2 ID. **Cần người rành tiếng Đức đọc từng cặp** để quyết: (a) đủ khác biệt → giữ; (b) gần trùng → regenerate bộ 011–020.
+
+> Lưu ý phương pháp: overlap đo bằng prefix-substring xấp xỉ, KHÔNG phải diff chuẩn. Là tín hiệu sàng lọc, không phải kết luận. Đây là việc đọc-hiểu cần con người.
+
+## Phân tích bổ sung (các skill khác)
+
 - **c2/listening (44 file): NGHI VẤN CAO.** Các cặp như `L-C2-GOETHE-007 ≡ 017`, `008 ≡ 018` chia sẻ **nguyên đoạn transcript** (vd về "algorithmische Empfehlungssysteme", "unsichtbarer Schnitt"). Giống mẫu nhân bản lesson (block 001–010 bị copy thành 011–020?). Nếu đúng → học viên gặp lại y nguyên bài nghe ở 2 ID khác nhau. **Mức nghi P1.**
 - **c1/writing + c2/writing (70 file): CẦN KIỂM TRA.** Có thể là **false positive** — đề bài Schreiben (Aufgabenstellung/Anweisung) thường dùng chung khung dài giống nhau hợp lệ. Phải đọc field cụ thể (instruction vs Musterlösung) trước khi kết luận.
 - **b2/reading (14), a2/reading (2):** rải rác; b2-reading có thể là phần đề bài/khung lặp; cần soi từng cặp.
