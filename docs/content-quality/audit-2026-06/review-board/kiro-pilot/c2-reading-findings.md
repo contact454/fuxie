@@ -4,6 +4,10 @@ Spec: `fuxie-content-review-board` · Follow-up · Kiro-agent (German Linguist +
 
 Vai chinh: Content QA / Linguistic Reviewer · Vai phoi hop: German Academic Lead, AI / LLM Engineer
 
+## 🔴 P0b — 12 bài đọc C2 Teil 3 cũng là FILLER TRÙNG LẶP
+
+> **✅ ĐÃ XỬ LÝ (RESOLVED) — spec `content-c2-teil3-regeneration`.** 12 file C2-T3-001…012 ("Wissenschaftlicher Text") dùng CHUNG một bài filler ("Der wissenschaftliche Diskurs um das Thema …", 6 đoạn y hệt) lệch tiêu đề. Đã **viết lại toàn bộ** 12 bài đọc C2 thật đúng chủ đề (Algorithmische Rechtsprechung, Narratologie, Emergenz, Dekonstruktion, Cyber-Diplomatie, DNA-Entdeckung, Identitätspolitik, Degrowth, Enhancement/Therapie, Computational Creativity, Religion & Bioethik, Kognitive Verzerrungen) + 6 câu MC mới/bài. Cổng đóng: **GENERIC_OPENER (mở rộng) = 0** trên 12 file, broken-stem c2 = 0, answer∈options + key_evidence⊂article.text; `qa:content` exit 0; `tests/content-audit` 254/254 xanh. AI-authored (Kiro-agent), pending optional human German sign-off. Generator gốc → ticket `TICKET-content-generator-filler-rootcause.md`.
+
 ## 🔴 P0 — 8 bài đọc C2 là NỘI DUNG PLACEHOLDER TRÙNG LẶP (sai chủ đề hoàn toàn)
 
 > **✅ ĐÃ XỬ LÝ (RESOLVED) — spec `content-c2-placeholder-regeneration`.** Cả 8 file C2-T1-005…012 đã được **viết lại hoàn toàn** bằng bài đọc C2 thật, đúng tiêu đề/chủ đề (Multilateralismus, kopernikanische Wende, Adorno-Kulturindustrie, Rawls, CRISPR-Medizinethik, Distant Reading, Säkularisierung, Hard Problem of Consciousness) + 10 câu MC mới/bài. Cổng đóng đã verify: **generic-opener = 0**, **broken-stem = 0** trên 8 file; mọi câu có `answer ∈ options` + `key_evidence` là chuỗi con verbatim của `article.text`; `qa:content` exit 0; `tests/content-audit` 253/253 xanh. C2-T1-001..004 + skill khác **không đổi**. Nội dung do AI (Kiro-agent) soạn — vẫn để ngỏ **human German sign-off** tuỳ chọn. Generator gốc (nhét filler) cần ticket riêng cho AI/LLM Engineer + CTO. Xem `tasks.md` (2.1–2.8 + 3 = [x]).

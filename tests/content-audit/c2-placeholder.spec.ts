@@ -32,6 +32,18 @@ const REGENERATED = [
   'C2-T1-009', 'C2-T1-010', 'C2-T1-011', 'C2-T1-012',
 ]
 
+// Spec content-c2-teil3-regeneration: 12 Teil-3 files share the same filler
+// ("Der wissenschaftliche Diskurs um das Thema ...").
+const WORKLIST_T3 = [
+  'C2-T3-001', 'C2-T3-002', 'C2-T3-003', 'C2-T3-004', 'C2-T3-005', 'C2-T3-006',
+  'C2-T3-007', 'C2-T3-008', 'C2-T3-009', 'C2-T3-010', 'C2-T3-011', 'C2-T3-012',
+]
+// Extend as each Teil-3 wave lands; closing gate = equals WORKLIST_T3, opener -> 0.
+const REGENERATED_T3: string[] = [
+  'C2-T3-001', 'C2-T3-002', 'C2-T3-003', 'C2-T3-004', 'C2-T3-005', 'C2-T3-006',
+  'C2-T3-007', 'C2-T3-008', 'C2-T3-009', 'C2-T3-010', 'C2-T3-011', 'C2-T3-012',
+]
+
 const goodPatch = (): ArticleRegenPatch => ({
   title: 'Rawls’ Theorie der Gerechtigkeit',
   text:
@@ -84,6 +96,25 @@ describe('Property 1: generic-filler opener', () => {
     expect(regeneratedClean.sort()).toEqual([...REGENERATED].sort())
     // Remaining placeholders == worklist minus regenerated (documents P0 until all done).
     expect(stillPlaceholder.length).toBe(WORKLIST.length - REGENERATED.length)
+  })
+
+  it('tracks Teil-3 filler regeneration: regenerated files are clean, the rest still carry the filler opener', () => {
+    const stillPlaceholder: string[] = []
+    const regeneratedClean: string[] = []
+    for (const id of WORKLIST_T3) {
+      const fp = path.join(ROOT, 'content', 'c2', 'reading', `${id}.json`)
+      if (!fs.existsSync(fp)) continue
+      const j = JSON.parse(fs.readFileSync(fp, 'utf8'))
+      const opener = hasGenericOpener(j?.article?.text ?? '')
+      if (REGENERATED_T3.includes(id)) {
+        expect(opener, `${id} was regenerated but still has the filler opener`).toBe(false)
+        if (!opener) regeneratedClean.push(id)
+      } else if (opener) {
+        stillPlaceholder.push(id)
+      }
+    }
+    expect(regeneratedClean.sort()).toEqual([...REGENERATED_T3].sort())
+    expect(stillPlaceholder.length).toBe(WORKLIST_T3.length - REGENERATED_T3.length)
   })
 })
 

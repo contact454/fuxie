@@ -21,7 +21,7 @@
   "article": {
     "title": "Algorithmische Rechtsprechung",
     "source": "Fachzeitschrift",
-    "text": "Der wissenschaftliche Diskurs um das Thema 'Algorithmische Rechtsprechung' hat in den vergangenen Jahren eine bemerkenswerte Vertiefung erfahren, die sowohl die theoretischen Grundlagen als auch die methodischen Zugänge betrifft. Die vorliegende Analyse konzentriert sich auf drei zentrale Aspekte, die in der aktuellen Forschungsliteratur kontrovers diskutiert werden.\n\nErstens stellt sich die Frage nach der epistemologischen Grundlegung. Die positivistische Tradition, die auf der strikten Trennung von Tatsachenaussagen und Werturteilen beharrt, sieht sich zunehmender Kritik ausgesetzt. Konstruktivistische und hermeneutische Ansätze betonen demgegenüber die Untrennbarkeit von Beobachtung und Interpretation und fordern eine explizite Reflexion der vorausgegangenen Verständnishorizonte des Forschers.\n\nZweitens ergibt sich die Herausforderung der interdisziplinären Integration. Die zunehmende Spezialisierung wissenschaftlicher Disziplinen hat zwar zu erheblichen Erkenntnisfortschritten in Teilbereichen geführt, erschwert jedoch die Zusammenführung unterschiedlicher Perspektiven zu einem kohärenten Gesamtbild. Transdisziplinäre Forschungsansätze versuchen, diese fragmentierte Wissenslandschaft durch die Entwicklung integrativer Rahmenkonzepte zu überwinden.\n\nDrittens wirft die anwendungsbezogene Dimension fundamentale Fragen auf. Die Transformation wissenschaftlicher Erkenntnisse in gesellschaftlich relevante Handlungsempfehlungen ist ein vielschichtiger Prozess, der die Grenzen zwischen Wissenschaft und Politik, zwischen Expertise und demokratischer Willensbildung berührt. Die Wissenschaft kann Entscheidungsgrundlagen liefern, die normative Bewertung jedoch nicht ersetzen.\n\nDie Konvergenz dieser drei Problemkomplexe verdeutlicht, dass eine isolierte Betrachtung einzelner Forschungsfragen dem Gegenstand nicht gerecht wird. Vielmehr bedarf es einer integrativen Perspektive, die die wechselseitigen Bezüge zwischen Epistemologie, Methodologie und Praxisrelevanz systematisch in den Blick nimmt.\n\nAbschließend sei auf die bemerkenswerte Parallele hingewiesen, die sich zwischen den innerhalb der Rechtsphilosophie geführten Debatten und den grundsätzlichen wissenschaftstheoretischen Diskursen ergibt. Die spezifischen Herausforderungen des Fachgebiets erweisen sich bei näherer Betrachtung als Ausdruck allgemeiner erkenntnistheoretischer Problemlagen, deren Reflexion für die Weiterentwicklung des Forschungsfeldes unverzichtbar ist."
+    "text": "Der Einsatz algorithmischer Systeme in der Rechtsprechung verspricht Effizienz und Objektivität, wirft jedoch grundlegende rechtsphilosophische Fragen auf. In mehreren Ländern werden bereits Programme eingesetzt, die Richter bei der Einschätzung der Rückfallwahrscheinlichkeit von Angeklagten unterstützen. Ihre Befürworter erhoffen sich eine Entlastung der Justiz und eine Verringerung menschlicher Willkür.\n\nKritiker warnen jedoch vor einer trügerischen Objektivität. Da algorithmische Systeme aus historischen Daten lernen, übernehmen sie die in diesen Daten enthaltenen gesellschaftlichen Verzerrungen. Wenn bestimmte Bevölkerungsgruppen in der Vergangenheit häufiger verurteilt wurden, reproduziert der Algorithmus diese Ungleichbehandlung und verleiht ihr zugleich den Anschein mathematischer Neutralität.\n\nEin weiteres Problem betrifft die Nachvollziehbarkeit. Komplexe Modelle des maschinellen Lernens funktionieren als Blackbox, deren Entscheidungswege selbst für ihre Entwickler nicht vollständig durchschaubar sind. Dies steht in einem Spannungsverhältnis zum rechtsstaatlichen Gebot der Begründungspflicht, das verlangt, dass jede Entscheidung eines Gerichts nachvollziehbar gerechtfertigt wird.\n\nBesonders umstritten ist die Frage der Verantwortung. Wenn ein algorithmisches System zu einer fehlerhaften Einschätzung führt, lässt sich die Verantwortung weder eindeutig dem Programmierer noch dem anwendenden Richter zuschreiben. Diese diffuse Verantwortungslage untergräbt ein Kernprinzip des Rechts, wonach Entscheidungen einem zurechenbaren Subjekt zugeordnet werden müssen.\n\nDie überwiegende Auffassung in der Rechtswissenschaft plädiert daher dafür, algorithmische Systeme allenfalls als unterstützendes Hilfsmittel zuzulassen, die letzte Entscheidung jedoch stets einem menschlichen Richter vorzubehalten, der die Empfehlung kritisch prüfen und überstimmen kann."
   },
   "images": [
     {
@@ -37,116 +37,104 @@
   "questions": [
     {
       "id": "Q1",
-      "teil": 3,
       "type": "multiple_choice",
-      "stem": "Was kritisieren konstruktivistische und hermeneutische Ansätze an der positivistischen Tradition?",
+      "stem": "Was erhoffen sich Befürworter algorithmischer Systeme in der Rechtsprechung?",
       "options": {
-        "a": "Sie sei zu modern.",
-        "b": "Sie verkenne die Untrennbarkeit von Beobachtung und Interpretation.",
-        "c": "Sie sei zu interdisziplinär."
+        "a": "Härtere Strafen",
+        "b": "Eine Entlastung der Justiz und eine Verringerung menschlicher Willkür",
+        "c": "Die Abschaffung der Gerichte"
       },
       "answer": "b",
       "points": 1,
       "explanation": {
-        "key_evidence": "Die positivistische Tradition, die auf der strikten Trennung von Tatsachenaussagen und Werturteilen beharrt, sieht sich zunehmender Kritik ausgesetzt.",
-        "reasoning": "[Inferential] Die richtige Antwort (b) ergibt sich aus dem Textkontext.",
-        "de": "Die Textstelle „Die positivistische Tradition, die auf der strikten Trennung von Tatsachenaussagen und Werturteilen beharrt, sieht sich zunehmender Kritik ausgesetzt.“ belegt die richtige Antwort (b).",
-        "vi": " Câu hỏi: „Welche epistemologische Position vertritt der Autor bezüglich epistemologischen Kritik sieht sich die positivistische Tr…“. Phương án đúng (b): „Sie verkenne die Untrennbarkeit von Beobachtung und Interpretation.“. Bằng chứng trong bài: „Die positivistische Tradition, die auf der strikten Trennung von Tatsachenaussagen und Werturteilen beharrt, sieht sich zunehmender Kritik ausgesetzt.“. Các phương án còn lại không khớp với thông tin trong bài."
+        "key_evidence": "Ihre Befürworter erhoffen sich eine Entlastung der Justiz und eine Verringerung menschlicher Willkür",
+        "de": "Befürworter erhoffen sich „eine Entlastung der Justiz und eine Verringerung menschlicher Willkür“.",
+        "vi": "Đáp án (b): kỳ vọng giảm tải cho tư pháp và bớt tuỳ tiện của con người."
       }
     },
     {
       "id": "Q2",
-      "teil": 3,
       "type": "multiple_choice",
-      "stem": "Was erschwert die interdisziplinäre Integration?",
+      "stem": "Wovor warnen Kritiker beim Einsatz solcher Systeme?",
       "options": {
-        "a": "Mangelndes Interesse.",
-        "b": "Die zunehmende Spezialisierung wissenschaftlicher Disziplinen.",
-        "c": "Fehlende Finanzierung."
+        "a": "Vor zu hohen Kosten",
+        "b": "Vor einer trügerischen Objektivität",
+        "c": "Vor zu langsamen Verfahren"
       },
       "answer": "b",
       "points": 1,
       "explanation": {
-        "key_evidence": "Die zunehmende Spezialisierung wissenschaftlicher Disziplinen hat zwar zu erheblichen Erkenntnisfortschritten in Teilbereichen geführt, erschwert j...",
-        "reasoning": "[Inferential] Die richtige Antwort (b) ergibt sich aus dem Textkontext.",
-        "de": "Die Textstelle „Die zunehmende Spezialisierung wissenschaftlicher Disziplinen hat zwar zu erheblichen Erkenntnisfortschritten in Teilbereichen geführt, erschwert j...“ belegt die richtige Antwort (b).",
-        "vi": " Câu hỏi: „Welche epistemologische Position vertritt der Autor bezüglich erschwert die interdisziplinäre Integration?“. Phương án đúng (b): „Die zunehmende Spezialisierung wissenschaftlicher Disziplinen.“. Bằng chứng trong bài: „Die zunehmende Spezialisierung wissenschaftlicher Disziplinen hat zwar zu erheblichen Erkenntnisfortschritten in Teilbereichen geführt, erschwert j...“. Các phương án còn lại không khớp với thông tin trong bài."
+        "key_evidence": "Kritiker warnen jedoch vor einer trügerischen Objektivität",
+        "de": "„Kritiker warnen jedoch vor einer trügerischen Objektivität.“",
+        "vi": "Đáp án (b): cảnh báo về tính khách quan giả tạo."
       }
     },
     {
       "id": "Q3",
-      "teil": 3,
       "type": "multiple_choice",
-      "stem": "Was können transdisziplinäre Forschungsansätze leisten?",
+      "stem": "Warum reproduzieren algorithmische Systeme gesellschaftliche Verzerrungen?",
       "options": {
-        "a": "Einzeldisziplinen ersetzen.",
-        "b": "Die fragmentierte Wissenslandschaft durch integrative Rahmenkonzepte überwinden.",
-        "c": "Forschung überflüssig machen."
+        "a": "Weil sie zu langsam rechnen",
+        "b": "Weil sie aus historischen Daten lernen, die Verzerrungen enthalten",
+        "c": "Weil Richter sie falsch bedienen"
       },
       "answer": "b",
       "points": 1,
       "explanation": {
-        "key_evidence": "Transdisziplinäre Forschungsansätze versuchen, diese fragmentierte Wissenslandschaft durch die Entwicklung integrativer Rahmenkonzepte zu überwinden.",
-        "reasoning": "[Critical] Die richtige Antwort (b) ergibt sich aus dem Textkontext.",
-        "de": "Die Textstelle „Transdisziplinäre Forschungsansätze versuchen, diese fragmentierte Wissenslandschaft durch die Entwicklung integrativer Rahmenkonzepte zu überwinden.“ belegt die richtige Antwort (b).",
-        "vi": " Câu hỏi: „Welcher epistemologische Einwand lässt sich gegen die Analyse von können transdisziplinäre Forschungsansätze leisten erh…“. Phương án đúng (b): „Die fragmentierte Wissenslandschaft durch integrative Rahmenkonzepte überwinden.“. Bằng chứng trong bài: „Transdisziplinäre Forschungsansätze versuchen, diese fragmentierte Wissenslandschaft durch die Entwicklung integrativer Rahmenkonzepte zu überwinden.“. Các phương án còn lại không khớp với thông tin trong bài."
+        "key_evidence": "Da algorithmische Systeme aus historischen Daten lernen, übernehmen sie die in diesen Daten enthaltenen gesellschaftlichen Verzerrungen",
+        "de": "„Da algorithmische Systeme aus historischen Daten lernen, übernehmen sie die … gesellschaftlichen Verzerrungen.“",
+        "vi": "Đáp án (b): vì học từ dữ liệu lịch sử vốn chứa thiên kiến."
       }
     },
     {
       "id": "Q4",
-      "teil": 3,
       "type": "multiple_choice",
-      "stem": "Was kann die Wissenschaft laut dem Text nicht ersetzen?",
+      "stem": "Was kennzeichnet das Blackbox-Problem komplexer Modelle?",
       "options": {
-        "a": "Empirische Forschung.",
-        "b": "Die normative Bewertung.",
-        "c": "Methodische Strenge."
+        "a": "Sie sind zu einfach",
+        "b": "Ihre Entscheidungswege sind selbst für Entwickler nicht vollständig durchschaubar",
+        "c": "Sie benötigen keine Daten"
       },
       "answer": "b",
       "points": 1,
       "explanation": {
-        "key_evidence": "Die Wissenschaft kann Entscheidungsgrundlagen liefern, die normative Bewertung jedoch nicht ersetzen.",
-        "reasoning": "Die richtige Antwort (b) ergibt sich aus dem Textkontext.",
-        "de": "Die Textstelle „Die Wissenschaft kann Entscheidungsgrundlagen liefern, die normative Bewertung jedoch nicht ersetzen.“ belegt die richtige Antwort (b).",
-        "vi": " Câu hỏi: „Was kann die Wissenschaft laut dem Text nicht ersetzen?“. Phương án đúng (b): „Die normative Bewertung.“. Bằng chứng trong bài: „Die Wissenschaft kann Entscheidungsgrundlagen liefern, die normative Bewertung jedoch nicht ersetzen.“. Các phương án còn lại không khớp với thông tin trong bài."
+        "key_evidence": "Komplexe Modelle des maschinellen Lernens funktionieren als Blackbox, deren Entscheidungswege selbst für ihre Entwickler nicht vollständig durchschaubar sind",
+        "de": "Sie funktionieren „als Blackbox, deren Entscheidungswege selbst für ihre Entwickler nicht vollständig durchschaubar sind“.",
+        "vi": "Đáp án (b): lối ra quyết định ngay cả nhà phát triển cũng không hiểu hết."
       }
     },
     {
       "id": "Q5",
-      "teil": 3,
       "type": "multiple_choice",
-      "stem": "Was erfordert der Gegenstand laut dem Text?",
+      "stem": "Welches Kernprinzip des Rechts untergräbt die diffuse Verantwortungslage?",
       "options": {
-        "a": "Eine isolierte Betrachtung.",
-        "b": "Eine integrative Perspektive.",
-        "c": "Eine historische Analyse."
+        "a": "Die Öffentlichkeit von Verfahren",
+        "b": "Dass Entscheidungen einem zurechenbaren Subjekt zugeordnet werden müssen",
+        "c": "Die Unschuldsvermutung"
       },
       "answer": "b",
       "points": 1,
       "explanation": {
-        "key_evidence": "Vielmehr bedarf es einer integrativen Perspektive, die die wechselseitigen Bezüge zwischen Epistemologie, Methodologie und Praxisrelevanz systemati...",
-        "reasoning": "[Critical] Die richtige Antwort (b) ergibt sich aus dem Textkontext.",
-        "de": "Die Textstelle „Vielmehr bedarf es einer integrativen Perspektive, die die wechselseitigen Bezüge zwischen Epistemologie, Methodologie und Praxisrelevanz systemati...“ belegt die richtige Antwort (b).",
-        "vi": " Câu hỏi: „Bewerten Sie die argumentative Konsistenz der Darstellung von erfordert der Gegenstand laut dem Text.“. Phương án đúng (b): „Eine integrative Perspektive.“. Bằng chứng trong bài: „Vielmehr bedarf es einer integrativen Perspektive, die die wechselseitigen Bezüge zwischen Epistemologie, Methodologie und Praxisrelevanz systemati...“. Các phương án còn lại không khớp với thông tin trong bài."
+        "key_evidence": "wonach Entscheidungen einem zurechenbaren Subjekt zugeordnet werden müssen",
+        "de": "Untergraben wird das Prinzip, „wonach Entscheidungen einem zurechenbaren Subjekt zugeordnet werden müssen“.",
+        "vi": "Đáp án (b): nguyên tắc quyết định phải quy về một chủ thể chịu trách nhiệm."
       }
     },
     {
       "id": "Q6",
-      "teil": 3,
       "type": "multiple_choice",
-      "stem": "Als was erweisen sich die spezifischen Fachherausforderungen bei näherer Betrachtung?",
+      "stem": "Wofür plädiert die überwiegende Auffassung in der Rechtswissenschaft?",
       "options": {
-        "a": "Als trivial.",
-        "b": "Als Ausdruck allgemeiner erkenntnistheoretischer Problemlagen.",
-        "c": "Als unlösbar."
+        "a": "Für die vollständige Automatisierung der Urteile",
+        "b": "Für Algorithmen nur als Hilfsmittel, mit der letzten Entscheidung beim menschlichen Richter",
+        "c": "Für ein Verbot jeder Technik vor Gericht"
       },
       "answer": "b",
       "points": 1,
       "explanation": {
-        "key_evidence": "Die spezifischen Herausforderungen des Fachgebiets erweisen sich bei näherer Betrachtung als Ausdruck allgemeiner erkenntnistheoretischer Problemla...",
-        "reasoning": "[Critical] Die richtige Antwort (b) ergibt sich aus dem Textkontext.",
-        "de": "Die Textstelle „Die spezifischen Herausforderungen des Fachgebiets erweisen sich bei näherer Betrachtung als Ausdruck allgemeiner erkenntnistheoretischer Problemla...“ belegt die richtige Antwort (b).",
-        "vi": " Câu hỏi: „Welche fundamentale Prämisse der Argumentation zu erweisen sich die spezifischen Fachherausforderungen bei näherer Betra…“. Phương án đúng (b): „Als Ausdruck allgemeiner erkenntnistheoretischer Problemlagen.“. Bằng chứng trong bài: „Die spezifischen Herausforderungen des Fachgebiets erweisen sich bei näherer Betrachtung als Ausdruck allgemeiner erkenntnistheoretischer Problemla...“. Các phương án còn lại không khớp với thông tin trong bài."
+        "key_evidence": "algorithmische Systeme allenfalls als unterstützendes Hilfsmittel zuzulassen, die letzte Entscheidung jedoch stets einem menschlichen Richter vorzubehalten",
+        "de": "Empfohlen wird, „algorithmische Systeme allenfalls als unterstützendes Hilfsmittel zuzulassen, die letzte Entscheidung jedoch stets einem menschlichen Richter vorzubehalten“.",
+        "vi": "Đáp án (b): thuật toán chỉ là công cụ hỗ trợ; quyết định cuối thuộc về thẩm phán."
       }
     }
   ],

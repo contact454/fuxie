@@ -21,7 +21,7 @@ import { fileURLToPath } from 'node:url'
 import { isBrokenStem } from './lib/cefr-stem-markers'
 
 /** Generic templated opener that signals placeholder/off-topic filler. */
-export const GENERIC_OPENER = /Der vorliegende (Kommentar|Text|Artikel) widmet sich dem Thema/i
+export const GENERIC_OPENER = /Der vorliegende (Kommentar|Text|Artikel) widmet sich dem Thema|Der wissenschaftliche Diskurs um das Thema/i
 
 export function hasGenericOpener(text: string): boolean {
   return GENERIC_OPENER.test(text ?? '')
