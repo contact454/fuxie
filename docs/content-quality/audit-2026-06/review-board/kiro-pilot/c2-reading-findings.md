@@ -4,6 +4,35 @@ Spec: `fuxie-content-review-board` · Follow-up · Kiro-agent (German Linguist +
 
 Vai chinh: Content QA / Linguistic Reviewer · Vai phoi hop: German Academic Lead, AI / LLM Engineer
 
+## 🔴 P0 — 8 bài đọc C2 là NỘI DUNG PLACEHOLDER TRÙNG LẶP (sai chủ đề hoàn toàn)
+
+> **✅ ĐÃ XỬ LÝ (RESOLVED) — spec `content-c2-placeholder-regeneration`.** Cả 8 file C2-T1-005…012 đã được **viết lại hoàn toàn** bằng bài đọc C2 thật, đúng tiêu đề/chủ đề (Multilateralismus, kopernikanische Wende, Adorno-Kulturindustrie, Rawls, CRISPR-Medizinethik, Distant Reading, Säkularisierung, Hard Problem of Consciousness) + 10 câu MC mới/bài. Cổng đóng đã verify: **generic-opener = 0**, **broken-stem = 0** trên 8 file; mọi câu có `answer ∈ options` + `key_evidence` là chuỗi con verbatim của `article.text`; `qa:content` exit 0; `tests/content-audit` 253/253 xanh. C2-T1-001..004 + skill khác **không đổi**. Nội dung do AI (Kiro-agent) soạn — vẫn để ngỏ **human German sign-off** tuỳ chọn. Generator gốc (nhét filler) cần ticket riêng cho AI/LLM Engineer + CTO. Xem `tasks.md` (2.1–2.8 + 3 = [x]).
+
+**C2-T1-005 … C2-T1-012** (8 file) có 8 tiêu đề/chủ đề KHÁC nhau nhưng **dùng CHUNG một bài đọc filler** về "triết học khoa học / Thomas Kuhn / thuyết tương đối nhận thức". Bằng chứng: cả 8 `article.text` đều chứa "Thomas Kuhn" + "erkenntnistheoretische" và dài ~2.26–2.30k ký tự gần y hệt; đều mở đầu bằng khuôn *"Der vorliegende Kommentar widmet sich dem Thema … aus einer kritisch-analytischen Perspektive"*.
+
+| File | title | topic | Bài đọc thực tế |
+| --- | --- | --- | --- |
+| C2-T1-005 | Der Multilateralismus in der Krise | Internationale Beziehungen | filler Kuhn ❌ |
+| C2-T1-006 | Die kopernikanische Wende | Wissenschaftsgeschichte | filler Kuhn (tạm gần) ⚠️ |
+| C2-T1-007 | Adornos Kulturindustrie-These | Kulturtheorie | filler Kuhn ❌ |
+| C2-T1-008 | Rawls' Theorie der Gerechtigkeit | Wirtschaftsethik | filler Kuhn ❌ |
+| C2-T1-009 | CRISPR und die Grenzen des Menschenmöglichen | Medizinethik | filler Kuhn ❌ |
+| C2-T1-010 | Distant Reading als Forschungsmethode | Digitale Geisteswissenschaften | filler Kuhn ❌ |
+| C2-T1-011 | Säkularisierung und die Rückkehr des Religiösen | Religionswissenschaft | filler Kuhn ❌ |
+| C2-T1-012 | Das Hard Problem des Bewusstseins | Kognitionswissenschaft | filler Kuhn ❌ |
+
+→ **Mức P0**: 8 bài học C2 (80 câu hỏi) là nội dung placeholder, KHÔNG dạy đúng chủ đề ghi trên tiêu đề/ảnh. Không thể ship. Khác với C2-T1-001..004 (Rechtsphilosophie/Thomas Mann/Quantenmechanik/Wittgenstein) — 4 bài này là **nội dung thật, riêng biệt, tiếng Đức tốt**. Có vẻ generator sinh 4 bài thật rồi nhét filler cho phần còn lại.
+
+→ **Cần spec riêng (regenerate nội dung 8 bài C2, có thể lan sang teil/level khác)** — quét `article.text` trùng lặp + khuôn opener generic để xác định toàn bộ phạm vi. Đây là lỗi nội dung, không phải lỗi stem.
+
+## ✅ Batch C2-T1-003 / 004 / 005 (Kiro-agent, 30 câu) — đã đánh giá kĩ
+
+- **Đáp án: 30/30 đúng** (red-team tự giải mù, khớp).
+- **Tiếng Đức:** C2-T1-003 (Quantenmechanik) + C2-T1-004 (Wittgenstein) viết **tốt, đúng C2, học thuật, không lỗi**. C2-T1-005 ngữ pháp ổn nhưng là **filler sai chủ đề** (xem P0 trên).
+- **Stem hỏng:** lan rộng (đa số câu mỗi file) — đã nằm trong worklist.
+
+
+
 > Chấm 2 file đầu C2 reading (`C2-T1-001` Rechtsphilosophie, `C2-T1-002` Klassische Literatur — 20 câu MC). **Đáp án 20/20 đúng** (red-team tự giải mù, khớp). NHƯNG phát hiện **lỗi P1 hệ thống** ở câu hỏi + lời giải — `qa:content` và `cefrAudit: aligned/passed` KHÔNG bắt được. → **ESCALATE, KHÔNG advisory-pass.**
 
 ## ⚠️ P1-A — Câu hỏi (stem) hỏng do bug ghép template (learner-facing, sai ngữ pháp Đức)
