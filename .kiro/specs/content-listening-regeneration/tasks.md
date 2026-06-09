@@ -37,8 +37,9 @@ Hard ordering: foundation trước; mỗi level xác minh đọc trước khi s�
   - _Requirements: 1.1, 1.4, 2.1, 3.2, 4.2, 5.1, 5.2_
 
 - [ ] 2. B2 listening (P0, gọn)
-  - [ ] 2.1 Xác minh đọc + chốt Defective_File (B2)
+  - [x] 2.1 Xác minh đọc + chốt Defective_File (B2)
     - Đọc trực tiếp cặp ~exact (`001≡011`, `002≡012`, 4 Teil) + 11 file topic-mismatch; chốt danh sách sửa.
+    - **Kết quả:** đọc trực tiếp `001-T1≡011-T1` (transcript giống hệt, 011 khai sai topic "Schlafforschung"). Chốt **20 file Defective_File** → `b2-defective-files.md`. Còn chờ German Academic Lead xác nhận đủ (Req 7.2).
     - _Requirements: 7.1, 7.2_
   - [ ] 2.2 Regenerate B2 + Academic_Signoff + gate
     - Viết Real_Transcript đúng chủ đề + câu hỏi mới từng file lỗi; đoạn khác nhau thật; Academic_Signoff; apply (dry-run→ghi); Audio_Restubbing; qa:content + PBT xanh.
