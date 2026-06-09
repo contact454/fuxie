@@ -93,3 +93,28 @@ Bug generator "transcript nhân bản N↔N+10" **KHÔNG chỉ ở C2** — lan 
 | a1/writing | (false-pos?) | 10 file — cần đọc xác nhận, có thể không sửa |
 
 > READ-ONLY: số liệu từ phép đo overlap xấp xỉ, là tín hiệu sàng lọc. Cặp ~exact (≥0.95) là bằng chứng mạnh; cặp 0.5–0.95 cần người đọc xác nhận. Chưa người rành tiếng Đức duyệt. Generator gốc xem ticket `TICKET-content-generator-filler-rootcause.md`.
+
+## Xác minh đọc các cụm Status_Board mới lộ (2026-06)
+
+Status_Board (`status-board.md`) chạy cổng máy D1–D5 trên 36 cell lộ 11 cell defect. Đọc trực tiếp để phân loại true/false positive:
+
+| Cell / item | Cổng báo | Đọc trực tiếp | Kết luận |
+| --- | --- | --- | --- |
+| `reading/C1` C1-T2-005 | D3 topic-mismatch | bài THẬT "Die Psychologie des Prokrastinierens"; topic danh mục "Psychologie & Gesellschaft" + biến tố (Psychologen/Psychologe) | **FALSE POSITIVE** |
+| `listening/A1` L-A1-GOETHE-001-T1 | D3 topic-mismatch | transcript đúng chủ đề (chào hỏi/giới thiệu); topic chức năng "Sich vorstellen und begrüßen" không xuất hiện verbatim | **FALSE POSITIVE** |
+| `listening/A2` (tương tự) | D3 | nghi cùng dạng false-positive topic chức năng | **nghi FALSE POSITIVE** (cần đọc thêm) |
+| `reading/B1` B1-T5-001 | D5 broken-stem | Q0 "Was impliziert der Text über Schlussfolgerung über Ab welchem Alter kann man am legt der Text nahe?" + Q4 lỗi nối template | **TRUE POSITIVE** |
+| `listening/B1,B2,C1,C2` | D2 duplicate | đã đọc 001-T1≡011-T1 (B2) verbatim trước đó | **TRUE POSITIVE** |
+| `reading/C2` C2-T2 | D1 opener | đã xác minh cụm filler cloze trước đó | **TRUE POSITIVE** |
+| `writing/A1` | D2 duplicate | nghi khung đề dùng chung hợp lệ | **nghi FALSE POSITIVE** (cần đọc field) |
+
+### Hệ quả cho cổng QA (cần tinh chỉnh trước khi tin số D3)
+
+- **D3 topic-match quá chặt:** so khớp substring verbatim → báo nhầm khi (a) topic là **danh mục/chức năng** ("Psychologie & Gesellschaft", "Sich vorstellen und begrüßen") không phải từ khoá nội dung, (b) tiếng Đức **biến tố** (Psychologie ↔ Psychologen). Cần: stemming/prefix-match + bỏ qua topic dạng danh mục, hoặc hạ D3 xuống mức cảnh báo (warn) thay vì fail cứng.
+- **D2 duplicate (listening N↔N+10) + D1 opener + D5 broken-stem:** đáng tin (đã đọc xác minh true positive).
+- **Phát hiện scope mới THẬT:** broken-stem **lan xuống B1** (B1-T5-001 ít nhất) — spec stem cũ chỉ b2/c1/c2; cần mở rộng quét + sửa B1.
+
+### Cập nhật scope thật sau xác minh
+- **Thêm vào remediation:** B1 reading broken-stem (quét đủ B1 để đếm chính xác).
+- **Hạ ưu tiên / loại:** C1-T2 (false-pos), listening A1/A2 D3 (false-pos topic chức năng) — KHÔNG phải defect nội dung; là nhiễu của cổng D3.
+- **Hành động cổng:** tinh chỉnh D3 (Task 1 umbrella spec) để giảm false-positive trước khi đưa vào CI fail-cứng.
