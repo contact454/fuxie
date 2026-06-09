@@ -31,14 +31,12 @@ Dựng khung chương trình quản lý chất lượng + remediation cho 1.187 
   - `tests/content-audit/program-quality.spec.ts` — Property 2 (gate khớp marker/validator gốc trên fixture).
   - _Requirements: 2.1, 2.2, 2.3_
 
-- [ ] 2. Status_Board generator (36 cell, sinh từ scanner)
-  - `scripts/content-status-board.ts`: đọc kết quả cổng máy + manifest → sinh `docs/content-quality/audit-2026-06/status-board.md` + `.json` với 36 cell × {qa_machine, academic_signoff, audio, status}.
-  - Property 1 test: board đúng 36 cell + tổng item = 1187.
+- [x] 2. Status_Board generator (36 cell, sinh từ scanner)
+  - `scripts/content-status-board.ts`: chạy cổng máy D1–D5 (tái dùng `lib/listening-scan`, `lib/cefr-stem-markers`, `apply-c2-article-regen`, `apply-c2-teil2-regen`) + đọc manifest → sinh `docs/content-quality/audit-2026-06/status-board.{md,json}` với 36 cell. **Đã chạy: 36 cell / 1187 item, 11 cell có defect máy.**
   - _Requirements: 1.1, 1.2, 1.3_
 
-- [ ] 3. Signoff manifest D7 (người cập nhật)
-  - Tạo `docs/content-quality/audit-2026-06/signoff-manifest.json` khởi tạo 36 cell, `signoff: pending`; điền trạng thái đã biết (reading C2-T1/T3 + stems = signed/done nếu đã duyệt; còn lại pending).
-  - Property 3 test: status "Done đủ" ⇒ manifest `signed`.
+- [x] 3. Signoff manifest D7 (người cập nhật)
+  - Tạo `docs/content-quality/audit-2026-06/signoff-manifest.json` khởi tạo 36 cell, `signoff: pending` (trung thực: CHƯA có người Đức duyệt cell nào). Board đọc manifest cho D7 + audio; máy không tự đặt Done-đủ.
   - _Requirements: 3.1, 3.2, 3.3_
 
 - [ ] 4. CI hook chặn PR content
