@@ -30,10 +30,10 @@ Hard ordering: foundation trước; mỗi level xác minh đọc trước khi s�
 
 ## Tasks
 
-- [ ] 1. Foundation — scan đa-level + apply script + cổng + PBT
-  - Chính thức hoá scan listening đa-level: ma trận overlap trong từng level, keyword `topic` ⊂ transcript, dupRatio nội bộ dialogue. READ-ONLY.
-  - Tạo `scripts/apply-listening-regen.ts`: nhận id → {transcript.lines[], questions[], gespraech_count?}; `--dry-run`; validate `answer` hợp `task_type`, `key_evidence` ⊂ transcript mới, overlap chéo < 0.5 trong level, dupRatio < 0.2, keyword topic ⊂ transcript; giữ schema; set `transcript.status` re-record + `cefrAudit.verdict = pending_reaudit`; ghi UTF-8 no BOM.
-  - Thêm `tests/content-audit/listening-regen.spec.ts` (tham số hoá theo level): Property 1–5.
+- [x] 1. Foundation — scan đa-level + apply script + cổng + PBT
+  - Chính thức hoá scan listening đa-level: ma trận overlap trong từng level, keyword `topic` ⊂ transcript, dupRatio nội bộ dialogue. READ-ONLY. → `scripts/lib/listening-scan.ts` (`scanListeningLevel`, `overlapScore`, `internalDupRatio`, `transcriptMatchesTopic`).
+  - Tạo `scripts/apply-listening-regen.ts`: nhận id → {transcript_lines[], questions[], gespraech_count?}; `--dry-run`; validate `answer` hợp `task_type`, `key_evidence` ⊂ transcript mới, dupRatio < 0.2, keyword topic ⊂ transcript (overlap chéo < 0.5 do cổng scanner đảm bảo); giữ schema; set `transcript.status = needs_audio_rerecord` + `cefrAudit.verdict = pending_reaudit`; ghi UTF-8 no BOM.
+  - Thêm `tests/content-audit/listening-regen.spec.ts` (Property 1–5): **13/13 test xanh**; `qa:content` 0 lỗi (1193 file).
   - _Requirements: 1.1, 1.4, 2.1, 3.2, 4.2, 5.1, 5.2_
 
 - [ ] 2. B2 listening (P0, gọn)
