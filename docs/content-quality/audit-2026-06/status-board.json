@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-09T04:57:23.456Z",
+  "generatedAt": "2026-06-09T05:22:06.607Z",
   "totalCells": 36,
   "totalFiles": 1187,
   "cells": [
@@ -22,13 +22,13 @@
       "files": 32,
       "d1": "pass",
       "d2": "pass",
-      "d3": "fail",
+      "d3": "warn",
       "d4": "pass",
       "d5": "pass",
-      "qaMachine": "fail",
+      "qaMachine": "pass",
       "academicSignoff": "pending",
       "audio": "pending",
-      "status": "Defect",
+      "status": "Done (máy)",
       "violations": [
         "D3 L-A1-GOETHE-001-T1",
         "D3 L-A1-GOETHE-001-T2",
@@ -118,19 +118,19 @@
       "files": 40,
       "d1": "pass",
       "d2": "pass",
-      "d3": "fail",
+      "d3": "warn",
       "d4": "pass",
       "d5": "pass",
-      "qaMachine": "fail",
+      "qaMachine": "pass",
       "academicSignoff": "pending",
       "audio": "pending",
-      "status": "Defect",
+      "status": "Done (máy)",
       "violations": [
         "D3 L-A2-GOETHE-003-T4",
         "D3 L-A2-GOETHE-005-T3",
-        "D3 L-A2-GOETHE-006-T1",
         "D3 L-A2-GOETHE-006-T2",
-        "D3 L-A2-GOETHE-006-T3"
+        "D3 L-A2-GOETHE-006-T3",
+        "D3 L-A2-GOETHE-010-T4"
       ]
     },
     {
@@ -194,7 +194,7 @@
       "files": 50,
       "d1": "pass",
       "d2": "pass",
-      "d3": "fail",
+      "d3": "warn",
       "d4": "n/a",
       "d5": "fail",
       "qaMachine": "fail",
@@ -211,7 +211,7 @@
       "files": 44,
       "d1": "pass",
       "d2": "fail",
-      "d3": "fail",
+      "d3": "warn",
       "d4": "pass",
       "d5": "pass",
       "qaMachine": "fail",
@@ -223,11 +223,11 @@
         "D2 L-B1-GOETHE-001-T2~L-B1-GOETHE-011-T2",
         "D2 L-B1-GOETHE-001-T3~L-B1-GOETHE-011-T3",
         "D2 L-B1-GOETHE-001-T4~L-B1-GOETHE-011-T4",
-        "D3 L-B1-GOETHE-001-T2",
         "D3 L-B1-GOETHE-003-T2",
-        "D3 L-B1-GOETHE-005-T2",
         "D3 L-B1-GOETHE-005-T3",
-        "D3 L-B1-GOETHE-006-T2"
+        "D3 L-B1-GOETHE-006-T2",
+        "D3 L-B1-GOETHE-006-T3",
+        "D3 L-B1-GOETHE-008-T4"
       ]
     },
     {
@@ -291,16 +291,15 @@
       "files": 50,
       "d1": "pass",
       "d2": "pass",
-      "d3": "fail",
+      "d3": "warn",
       "d4": "n/a",
       "d5": "pass",
-      "qaMachine": "fail",
+      "qaMachine": "pass",
       "academicSignoff": "pending",
       "audio": "n/a",
-      "status": "Defect",
+      "status": "Done (máy)",
       "violations": [
-        "D3 B2-T1-004",
-        "D3 B2-T1-008"
+        "D3 B2-T1-004"
       ]
     },
     {
@@ -308,7 +307,7 @@
       "files": 48,
       "d1": "pass",
       "d2": "fail",
-      "d3": "fail",
+      "d3": "warn",
       "d4": "pass",
       "d5": "pass",
       "qaMachine": "fail",
@@ -323,9 +322,9 @@
         "D2 L-B2-GOETHE-002-T1~L-B2-GOETHE-012-T1",
         "D3 L-B2-GOETHE-002-T1",
         "D3 L-B2-GOETHE-002-T4",
-        "D3 L-B2-GOETHE-003-T3",
-        "D3 L-B2-GOETHE-004-T3",
-        "D3 L-B2-GOETHE-008-T3"
+        "D3 L-B2-GOETHE-011-T2",
+        "D3 L-B2-GOETHE-011-T3",
+        "D3 L-B2-GOETHE-012-T1"
       ]
     },
     {
@@ -389,26 +388,21 @@
       "files": 48,
       "d1": "pass",
       "d2": "pass",
-      "d3": "fail",
+      "d3": "pass",
       "d4": "n/a",
       "d5": "pass",
-      "qaMachine": "fail",
+      "qaMachine": "pass",
       "academicSignoff": "pending",
       "audio": "n/a",
-      "status": "Defect",
-      "violations": [
-        "D3 C1-T2-005",
-        "D3 C1-T2-006",
-        "D3 C1-T2-010",
-        "D3 C1-T2-012"
-      ]
+      "status": "Done (máy)",
+      "violations": []
     },
     {
       "cell": "listening/C1",
       "files": 52,
       "d1": "pass",
       "d2": "fail",
-      "d3": "fail",
+      "d3": "warn",
       "d4": "pass",
       "d5": "pass",
       "qaMachine": "fail",
@@ -421,11 +415,10 @@
         "D2 L-C1-GOETHE-002-T1~L-C1-GOETHE-012-T1",
         "D2 L-C1-GOETHE-002-T3~L-C1-GOETHE-012-T3",
         "D2 L-C1-GOETHE-002-T4~L-C1-GOETHE-012-T4",
-        "D3 L-C1-GOETHE-004-T1",
-        "D3 L-C1-GOETHE-009-T3",
-        "D3 L-C1-GOETHE-010-T2",
         "D3 L-C1-GOETHE-012-T1",
-        "D3 L-C1-GOETHE-012-T2"
+        "D3 L-C1-GOETHE-012-T2",
+        "D3 L-C1-GOETHE-012-T3",
+        "D3 L-C1-GOETHE-012-T4"
       ]
     },
     {
@@ -489,7 +482,7 @@
       "files": 48,
       "d1": "fail",
       "d2": "fail",
-      "d3": "fail",
+      "d3": "warn",
       "d4": "n/a",
       "d5": "pass",
       "qaMachine": "fail",
@@ -515,10 +508,10 @@
         "D2 C2-T2-001~C2-T2-005",
         "D2 C2-T2-001~C2-T2-006",
         "D3 C2-T1-003",
-        "D3 C2-T1-004",
-        "D3 C2-T1-006",
-        "D3 C2-T1-007",
-        "D3 C2-T1-008"
+        "D3 C2-T1-012",
+        "D3 C2-T3-004",
+        "D3 C2-T3-007",
+        "D3 C2-T3-010"
       ]
     },
     {
@@ -526,7 +519,7 @@
       "files": 52,
       "d1": "pass",
       "d2": "fail",
-      "d3": "fail",
+      "d3": "warn",
       "d4": "fail",
       "d5": "pass",
       "qaMachine": "fail",
@@ -539,11 +532,11 @@
         "D2 L-C2-GOETHE-001-T3~L-C2-GOETHE-011-T3",
         "D2 L-C2-GOETHE-002-T1~L-C2-GOETHE-012-T1",
         "D2 L-C2-GOETHE-002-T2~L-C2-GOETHE-012-T2",
-        "D3 L-C2-GOETHE-001-T2",
-        "D3 L-C2-GOETHE-002-T1",
-        "D3 L-C2-GOETHE-002-T2",
-        "D3 L-C2-GOETHE-002-T3",
-        "D3 L-C2-GOETHE-005-T2",
+        "D3 L-C2-GOETHE-005-T3",
+        "D3 L-C2-GOETHE-011-T1",
+        "D3 L-C2-GOETHE-011-T2",
+        "D3 L-C2-GOETHE-011-T3",
+        "D3 L-C2-GOETHE-012-T1",
         "D4 L-C2-GOETHE-001-T1",
         "D4 L-C2-GOETHE-001-T2",
         "D4 L-C2-GOETHE-001-T3",

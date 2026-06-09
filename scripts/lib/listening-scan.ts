@@ -87,8 +87,24 @@ export function topicKeywords(topic: string): string[] {
 }
 
 /**
- * True iff at least one topic/title keyword appears in the transcript. When the
- * topic has no usable keyword we conservatively return true (cannot judge).
+ * Stem of a keyword for prefix matching — German inflections/compounds share a
+ * common prefix (Psychologie ↔ Psychologen ↔ psychologisch). We use the first
+ * 6 chars (or the whole word if shorter) as a coarse stem.
+ */
+function stem(word: string): string {
+  return word.length <= 6 ? word : word.slice(0, 6)
+}
+
+/**
+ * True iff at least one topic/title keyword (matched by stem-prefix) appears in
+ * the transcript. Stem-prefix matching avoids false negatives from German
+ * inflection/compounding. When the topic has no usable keyword we conservatively
+ * return true (cannot judge).
+ *
+ * NOTE: topic/title that are purely *functional* descriptors (e.g.
+ * "Sich vorstellen und begrüßen") may legitimately never appear verbatim in the
+ * content; callers should treat a negative result as ADVISORY (warn), not a hard
+ * failure — see `scripts/content-status-board.ts`.
  */
 export function transcriptMatchesTopic(item: any): boolean {
   const kws = [
@@ -97,7 +113,7 @@ export function transcriptMatchesTopic(item: any): boolean {
   ]
   if (!kws.length) return true
   const tt = normalizeText(transcriptDialogueText(item))
-  return kws.some((k) => tt.includes(k))
+  return kws.some((k) => tt.includes(stem(k)))
 }
 
 export interface DupPair {

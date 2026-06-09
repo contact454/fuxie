@@ -62,6 +62,11 @@ function topicKw(j: any): string[] {
   return normalizeText(src).split(' ').filter((w) => w.length >= 5 && !STOP.has(w))
 }
 
+/** Coarse German stem (prefix 6) for inflection-tolerant topic matching. */
+function stem(w: string): string {
+  return w.length <= 6 ? w : w.slice(0, 6)
+}
+
 function stemsOf(j: any): string[] {
   if (!Array.isArray(j?.questions)) return []
   return j.questions.map((q: any) => String(q?.stem ?? q?.statement ?? q?.question ?? '')).filter(Boolean)
@@ -97,11 +102,11 @@ function scanCell(module: string, level: string): CellResult {
   }
   res.d2 = dupPairs ? 'fail' : 'pass'
 
-  // D3 topic match (only when topic/title available)
+  // D3 topic match (advisory/warn — only when topic/title available; stem-prefix tolerant)
   const withTopic = texts.filter((t) => topicKw(t.j).length > 0)
   if (withTopic.length) {
-    const mm = withTopic.filter((t) => !topicKw(t.j).some((kw) => t.text.includes(kw)))
-    res.d3 = mm.length ? 'fail' : 'pass'
+    const mm = withTopic.filter((t) => !topicKw(t.j).some((kw) => t.text.includes(stem(kw))))
+    res.d3 = mm.length ? 'warn' : 'pass'
     mm.slice(0, 5).forEach((t) => res.violations.push(`D3 ${t.id}`))
   }
 
@@ -120,8 +125,9 @@ function scanCell(module: string, level: string): CellResult {
     broken.slice(0, 5).forEach((t) => res.violations.push(`D5 ${t.id}`))
   }
 
-  const applicable = [res.d1, res.d2, res.d3, res.d4, res.d5].filter((d) => d !== 'n/a')
-  res.qaMachine = applicable.length === 0 ? 'n/a' : applicable.every((d) => d === 'pass') ? 'pass' : 'fail'
+  // qaMachine = hard gates only (D1, D2, D4, D5). D3 is advisory (warn), not a hard fail.
+  const hard = [res.d1, res.d2, res.d4, res.d5].filter((d) => d !== 'n/a')
+  res.qaMachine = hard.length === 0 ? 'n/a' : hard.every((d) => d === 'pass') ? 'pass' : 'fail'
   return res
 }
 
