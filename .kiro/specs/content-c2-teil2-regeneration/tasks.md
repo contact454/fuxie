@@ -26,11 +26,10 @@ Hard ordering: foundation trước; mỗi file qua Academic_Signoff + gate trư�
 
 ## Tasks
 
-- [ ] 1. Foundation — apply-script Teil 2 + cổng + PBT
+- [x] 1. Foundation — apply-script Teil 2 + cổng + PBT
   - Tạo `scripts/apply-c2-teil2-regen.ts`: nhận id → {title?, text, sections[], answers, distractor}; `--dry-run` in diff; validate `text` đúng 8 ô `{1}`–`{8}`, `answers` map đủ 8 ô tới section id ∈ `sections[]`, `distractor` ∈ `sections[]` và ∉ `answers`, opener-generic = 0, keyword topic ⊂ text; giữ schema (chỉ thay `section_cloze` + `cefrAudit.verdict`); ghi UTF-8 no BOM.
-  - Thêm cổng scan opener-generic `/Der folgende Bericht untersucht das Thema .* aus interdisziplinärer Perspektive/` = 0 + overlap thân cloze chéo < 0.5 trên 12 file.
-  - Thêm `tests/content-audit/c2-teil2.spec.ts`: Property 1 (0 opener + topic-match), Property 2 (cấu trúc 8 ô + answers), Property 3 (overlap < 0.5), Property 4 (scope hash).
-  - Task 1 cũng xác nhận worklist đủ 12 file + topic từng file.
+  - Cổng scan opener-generic `/Der folgende Bericht untersucht das Thema .* aus interdisziplinärer Perspektive/` (`hasGenericOpenerT2`) + overlap thân cloze chéo < 0.5 (tái dùng `overlapScore` từ `lib/listening-scan`).
+  - Thêm `tests/content-audit/c2-teil2.spec.ts`: Property 1–4 — **12/12 test xanh**.
   - _Requirements: 1.4, 2.1, 3.1, 3.3, 3.4, 4.1, 4.2_
 
 - [ ] 2. Regenerate từng bài (Real_Cloze, Academic_Signoff)
