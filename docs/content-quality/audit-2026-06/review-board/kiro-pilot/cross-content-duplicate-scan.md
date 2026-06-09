@@ -118,3 +118,22 @@ Status_Board (`status-board.md`) chạy cổng máy D1–D5 trên 36 cell lộ 1
 - **Thêm vào remediation:** B1 reading broken-stem (quét đủ B1 để đếm chính xác).
 - **Hạ ưu tiên / loại:** C1-T2 (false-pos), listening A1/A2 D3 (false-pos topic chức năng) — KHÔNG phải defect nội dung; là nhiễu của cổng D3.
 - **Hành động cổng:** tinh chỉnh D3 (Task 1 umbrella spec) để giảm false-positive trước khi đưa vào CI fail-cứng.
+
+## Xác minh 2 cell nghi còn lại (2026-06)
+
+- **writing/A1 (D2 duplicate) = TRUE POSITIVE (thật):** W-A1-T1-001 (topic "Deutschkurs") và W-A1-T1-002 (topic "Bibliothek") có **`modelAnswer` giống hệt** ("Familienname: Nguyen, Vorname: Linh, Geburtsdatum: 01.01.1998, Adresse: Hauptstrasse 12…"). Teil-1 A1 là điền Formular; dù khung form giống nhau hợp lệ, **Musterlösung dùng chung một bộ dữ liệu giả qua các topic khác nhau** là defect (học viên thấy cùng đáp án mẫu cho "đăng ký khoá học" lẫn "thẻ thư viện"). → KHÔNG phải false-positive; cần German Academic Lead quyết mức (P2?) + viết modelAnswer riêng theo topic.
+- **B1 reading broken-stem = scope nhỏ:** quét đủ 50 file b1/reading → **chỉ 1 file dính: B1-T5-001** (Q0 + Q4 lỗi nối template). Khép gọn: broken-stem B1 = 1 file.
+
+### Bảng defect THẬT cuối cùng (sau lọc nhiễu D3 + xác minh)
+
+| Cell | Defect hard | Quy mô | Spec |
+| --- | --- | --- | --- |
+| reading/C2 | D1 filler cloze (T2) | 12 file | `content-c2-teil2-regeneration` (foundation+nháp) |
+| listening/B1 | D2 nhân bản (011≡001) | ~8 file | `content-listening-regeneration` |
+| listening/B2 | D2 nhân bản (011≡001,012≡002) | 20 file | `content-listening-regeneration` (Task 2.1 done) |
+| listening/C1 | D2 partial overlap | ~16 file | `content-listening-regeneration` |
+| listening/C2 | D2 nhân bản + D4 cấu trúc giả | 44+ file | `content-listening-regeneration` |
+| reading/B1 | D5 broken-stem | **1 file** (B1-T5-001) | chưa có spec (gộp vào stem hoặc fix lẻ) |
+| writing/A1 | D2 modelAnswer dùng chung | ~10 file (Teil-1) | chưa có spec (`content-writing-audit`) |
+
+> D3 (topic-match) còn ở mức advisory/warn — KHÔNG tính defect hard. A1/A2 listening + C1-T2 reading đã xác nhận là false-positive D3, KHÔNG cần sửa nội dung.
