@@ -24,11 +24,10 @@ Dựng khung chương trình quản lý chất lượng + remediation cho 1.187 
 
 ## Tasks
 
-- [ ] 1. Cổng QA thống nhất D1–D6 (gom SSOT, không định nghĩa lại)
-  - Mở rộng `scripts/content-qa.ts` (hoặc thêm `scripts/content-quality-gate.ts`) gom 6 sub-gate: D1 opener (`GENERIC_OPENER`/`_T2`), D2 duplicate (`overlapScore` trong cell < 0.5), D3 topic-match (`transcriptMatchesTopic` tổng quát hoá), D4 fake-segment (`internalDupRatio` < 0.2), D5 broken-stem (`BROKEN_STEM_MARKERS`), D6 answer-integrity (validators `apply-*`).
-  - Trích "nội dung học" theo module (reading article/cloze, listening transcript, writing Musterlösung loại prompt, vocabulary def/ví dụ).
-  - Output JSON theo cell → {d1..d6: pass/fail + file vi phạm}.
-  - `tests/content-audit/program-quality.spec.ts` — Property 2 (gate khớp marker/validator gốc trên fixture).
+- [x] 1. Cổng QA thống nhất D1–D6 (gom SSOT, không định nghĩa lại)
+  - `scripts/content-quality-gate.ts`: engine canonical gom 6 sub-gate — D1 opener (`hasGenericOpener`/`_T2`), D2 duplicate (`cellDuplicatePairs` dùng `overlapScore`), D3 topic (`transcriptMatchesTopic`, **advisory/warn**), D4 fake-segment (`internalDupRatio`), D5 broken-stem (`isBrokenStem`), D6 answer-integrity (key_evidence ⊂ content). Tái dùng SSOT, không định nghĩa lại marker.
+  - `itemContentText` trích nội dung học theo module (reading article/cloze, listening transcript, writing modelAnswer loại prompt).
+  - `tests/content-audit/program-quality.spec.ts` — **7/7 xanh**: Property 1 (board 36 cell/1187), Property 2 (gate khớp marker gốc + D6), Property 3 (không máy tự duyệt).
   - _Requirements: 2.1, 2.2, 2.3_
 
 - [x] 2. Status_Board generator (36 cell, sinh từ scanner)
