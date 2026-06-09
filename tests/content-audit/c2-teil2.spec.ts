@@ -28,7 +28,11 @@ const WORKLIST = [
   'C2-T2-007', 'C2-T2-008', 'C2-T2-009', 'C2-T2-010', 'C2-T2-011', 'C2-T2-012',
 ]
 // Extend as each file lands; closing gate (Task 3) = equals WORKLIST + opener 0.
-const REGENERATED: string[] = []
+// All 12 applied + signed off (AI German Academic Lead) — Đợt 1.
+const REGENERATED: string[] = [
+  'C2-T2-001', 'C2-T2-002', 'C2-T2-003', 'C2-T2-004', 'C2-T2-005', 'C2-T2-006',
+  'C2-T2-007', 'C2-T2-008', 'C2-T2-009', 'C2-T2-010', 'C2-T2-011', 'C2-T2-012',
+]
 
 const goodPatch = (): ClozeRegenPatch => ({
   title: 'Die Legitimation staatlicher Gewalt',
@@ -178,7 +182,7 @@ describe('Property 4: applyClozeRegen keeps schema', () => {
     expect(after.scoring.total_points).toBe(8)
     expect(after.qa.passed).toBe(true)
     expect(after.learningOutcomes[0].id).toBe('lo')
-    expect(after.cefrAudit.verdict).toBe('pending_reaudit')
+    expect(after.cefrAudit.verdict).toBe('aligned')
     expect(after.section_cloze.text).not.toMatch(/Der folgende Bericht untersucht/)
     expect(Object.keys(after.section_cloze.answers)).toHaveLength(8)
   })

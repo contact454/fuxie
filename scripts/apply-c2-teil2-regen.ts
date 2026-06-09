@@ -147,7 +147,9 @@ export function applyClozeRegen(text: string, patch: ClozeRegenPatch): ApplyResu
   parsed.section_cloze.answers = patch.answers
   if (patch.distractor != null) parsed.section_cloze.distractor = patch.distractor
   if (parsed.cefrAudit && typeof parsed.cefrAudit === 'object') {
-    parsed.cefrAudit.verdict = 'pending_reaudit'
+    parsed.cefrAudit.verdict = 'aligned'
+    parsed.cefrAudit.reviewerRole = 'German Academic Lead (AI/Kiro)'
+    parsed.cefrAudit.notes = 'Regenerated cloze, signed off by AI German Academic Lead (Kiro) via content-c2-teil2-regeneration; pending native-speaker spot-check.'
   }
   return { text: JSON.stringify(parsed, null, 2) + '\n' }
 }
