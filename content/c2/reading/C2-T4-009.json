@@ -19,27 +19,27 @@
     "version": 1
   },
   "opinion_texts": {
-    "question": "Informed Consent und Patientenautonomie",
+    "question": "Grenzen der modernen Medizin",
     "texts": [
       {
-        "name": "Befürworter/in A",
+        "name": "Intensivmedizinerin A",
         "label": "A",
-        "text": "Die Analyse des Themas 'Informed Consent und Patientenautonomie' zeigt, dass ein paradigmatischer Wandel unausweichlich ist. Die bestehenden Strukturen und Denkmodelle reichen nicht mehr aus, um den Herausforderungen gerecht zu werden. Es bedarf eines grundlegenden Neuansatzes, der traditionelle Grenzen überwindet."
+        "text": "Der medizinische Fortschritt verleitet dazu, alles technisch Mögliche auch zu tun. Doch nicht jede lebensverlängernde Maßnahme dient dem Patienten; manchmal verlängert sie nur das Leiden und missachtet seinen Willen."
       },
       {
-        "name": "Kritiker/in B",
+        "name": "Gesundheitsökonom B",
         "label": "B",
-        "text": "Die Forderung nach radikaler Erneuerung im Bereich 'Informed Consent und Patientenautonomie' überschätzt die Notwendigkeit eines Bruchs. Bewährte Ansätze und Institutionen bieten nach wie vor tragfähige Grundlagen, die durch behutsame Reform an neue Gegebenheiten angepasst werden können."
+        "text": "Die eigentliche Grenze ist die der Ressourcen. Da die Mittel begrenzt sind, muss offen über Verteilung gesprochen werden, statt so zu tun, als sei jede Behandlung für jeden jederzeit finanzierbar."
       },
       {
-        "name": "Vermittler/in C",
+        "name": "Medizinethikerin C",
         "label": "C",
-        "text": "Eine differenzierte Betrachtung des Themas ergibt, dass weder radikale Erneuerung noch bloße Bewahrung dem Gegenstand gerecht werden. Die produktivsten Entwicklungen ergeben sich aus der kritischen Aneignung und Weiterentwicklung bestehender Traditionen im Lichte neuer Erkenntnisse."
+        "text": "Im Zentrum muss die Selbstbestimmung des Patienten stehen. Eine Behandlung ist nur dann gerechtfertigt, wenn sie dem aufgeklärten Willen des Betroffenen entspricht, nicht allein dem ärztlichen Machbarkeitsdenken."
       },
       {
-        "name": "Praktiker/in D",
+        "name": "Hausarzt D",
         "label": "D",
-        "text": "Die akademische Debatte um 'Informed Consent und Patientenautonomie' vernachlässigt häufig die praktischen Implikationen. Die Umsetzung theoretischer Konzepte in konkrete Handlungsstrategien erfordert einen pragmatischen Zugang, der die Kluft zwischen Theorie und Praxis überbrückt."
+        "text": "Im Alltag zeigt sich, dass den Kranken oft Zuwendung und ehrliche Gespräche wichtiger sind als immer neue Apparatemedizin. Gute Begleitung ist manchmal die bessere Medizin."
       }
     ]
   },
@@ -59,84 +59,84 @@
       "id": "Q1",
       "teil": 4,
       "type": "matching",
-      "stem": "Ein paradigmatischer Wandel ist unausweichlich.",
+      "stem": "Wer warnt davor, alles technisch Machbare unkritisch umzusetzen?",
       "answer": "A",
       "points": 1,
       "explanation": {
-        "key_evidence": "Text/Beitrag A",
-        "reasoning": "Die Aussage 'Ein paradigmatischer Wandel ist unausweichlich....' entspricht der Position von A.",
-        "de": "Die Textstelle „Text/Beitrag A“ belegt die richtige Antwort (A).",
-        "vi": "Tình huống này khớp với mục A. Bằng chứng trong bài: „Text/Beitrag A“. Yêu cầu trong tình huống được đáp ứng đúng ở mục này."
+        "key_evidence": "nicht jede lebensverlängernde Maßnahme dient dem Patienten",
+        "reasoning": "[Inferential] A kritisiert den technischen Machbarkeitsdrang.",
+        "de": "A warnt vor blinder Apparatemedizin.",
+        "vi": "A cảnh báo việc làm mọi thứ kỹ thuật cho phép."
       }
     },
     {
       "id": "Q2",
       "teil": 4,
       "type": "matching",
-      "stem": "Die methodologische Annahme, dass bewährte Ansätze bieten nach wie vor tragfähige Grundlagen, prägt die Analyse von:",
+      "stem": "Wer betont die Knappheit der Mittel als entscheidende Grenze?",
       "answer": "B",
       "points": 1,
       "explanation": {
-        "key_evidence": "Text/Beitrag B",
-        "reasoning": "[Inferential] Die Aussage 'Bewährte Ansätze bieten nach wie vor tragfähige Gr...' entspricht der Position von B.",
-        "de": "Die Textstelle „Text/Beitrag B“ belegt die richtige Antwort (B).",
-        "vi": "Tình huống này khớp với mục B. Bằng chứng trong bài: „Text/Beitrag B“. Yêu cầu trong tình huống được đáp ứng đúng ở mục này."
+        "key_evidence": "Die eigentliche Grenze ist die der Ressourcen",
+        "reasoning": "[Detail] B nennt die Ressourcengrenze.",
+        "de": "B sieht die Ressourcen als Grenze.",
+        "vi": "B nhấn mạnh giới hạn nguồn lực."
       }
     },
     {
       "id": "Q3",
       "teil": 4,
       "type": "matching",
-      "stem": "Die methodologische Annahme, dass weder radikale Erneuerung noch bloße Bewahrung genügen, prägt die Analyse von:",
+      "stem": "Wer stellt den aufgeklärten Willen des Patienten in den Mittelpunkt?",
       "answer": "C",
       "points": 1,
       "explanation": {
-        "key_evidence": "Text/Beitrag C",
-        "reasoning": "[Inferential] Die Aussage 'Weder radikale Erneuerung noch bloße Bewahrung gen...' entspricht der Position von C.",
-        "de": "Die Textstelle „Text/Beitrag C“ belegt die richtige Antwort (C).",
-        "vi": "Tình huống này khớp với mục C. Bằng chứng trong bài: „Text/Beitrag C“. Yêu cầu trong tình huống được đáp ứng đúng ở mục này."
+        "key_evidence": "wenn sie dem aufgeklärten Willen des Betroffenen entspricht",
+        "reasoning": "[Inferential] C betont Selbstbestimmung.",
+        "de": "C stellt die Patientenautonomie ins Zentrum.",
+        "vi": "C đặt ý chí bệnh nhân làm trung tâm."
       }
     },
     {
       "id": "Q4",
       "teil": 4,
       "type": "matching",
-      "stem": "Die methodologische Annahme, dass Die akademische Debatte vernachlässigt die praktischen Implikationen, prägt die Analyse von:",
+      "stem": "Wer hält menschliche Zuwendung oft für wichtiger als Technik?",
       "answer": "D",
       "points": 1,
       "explanation": {
-        "key_evidence": "Text/Beitrag D",
-        "reasoning": "[Inferential] Die Aussage 'Die akademische Debatte vernachlässigt die praktis...' entspricht der Position von D.",
-        "de": "Die Textstelle „Text/Beitrag D“ belegt die richtige Antwort (D).",
-        "vi": "Tình huống này khớp với mục D. Bằng chứng trong bài: „Text/Beitrag D“. Yêu cầu trong tình huống được đáp ứng đúng ở mục này."
+        "key_evidence": "Zuwendung und ehrliche Gespräche wichtiger sind als immer neue Apparatemedizin",
+        "reasoning": "[Inferential] D betont Zuwendung.",
+        "de": "D hält Zuwendung für wichtiger als Technik.",
+        "vi": "D xem sự quan tâm quan trọng hơn máy móc."
       }
     },
     {
       "id": "Q5",
       "teil": 4,
       "type": "matching",
-      "stem": "Die methodologische Annahme, dass bestehende Strukturen reichen nicht mehr aus, prägt die Analyse von:",
-      "answer": "A",
+      "stem": "Wer fordert eine offene Debatte über die Verteilung von Leistungen?",
+      "answer": "B",
       "points": 1,
       "explanation": {
-        "key_evidence": "Text/Beitrag A",
-        "reasoning": "[Inferential] Die Aussage 'Bestehende Strukturen reichen nicht mehr aus....' entspricht der Position von A.",
-        "de": "Die Textstelle „Text/Beitrag A“ belegt die richtige Antwort (A).",
-        "vi": "Tình huống này khớp với mục A. Bằng chứng trong bài: „Text/Beitrag A“. Yêu cầu trong tình huống được đáp ứng đúng ở mục này."
+        "key_evidence": "muss offen über Verteilung gesprochen werden",
+        "reasoning": "[Inferential] B fordert Verteilungsdebatte.",
+        "de": "B will offen über Verteilung sprechen.",
+        "vi": "B đòi thảo luận công khai về phân bổ."
       }
     },
     {
       "id": "Q6",
       "teil": 4,
       "type": "matching",
-      "stem": "Die methodologische Annahme, dass Die produktivsten Entwicklungen verbinden Tradition und neue Erkenntnisse, prägt die Analyse von:",
-      "answer": "C",
+      "stem": "Wer verbindet die Grenzfrage ausdrücklich mit dem Leiden des Patienten?",
+      "answer": "A",
       "points": 1,
       "explanation": {
-        "key_evidence": "Text/Beitrag C",
-        "reasoning": "[Inferential] Die Aussage 'Die produktivsten Entwicklungen verbinden Traditio...' entspricht der Position von C.",
-        "de": "Die Textstelle „Text/Beitrag C“ belegt die richtige Antwort (C).",
-        "vi": "Tình huống này khớp với mục C. Bằng chứng trong bài: „Text/Beitrag C“. Yêu cầu trong tình huống được đáp ứng đúng ở mục này."
+        "key_evidence": "verlängert sie nur das Leiden und missachtet seinen Willen",
+        "reasoning": "[Inferential] A nennt das Leiden als Maßstab.",
+        "de": "A verweist auf die Leidensverlängerung.",
+        "vi": "A gắn giới hạn với việc kéo dài đau đớn."
       }
     }
   ],
@@ -197,8 +197,8 @@
   "cefrAudit": {
     "targetLevel": "C2",
     "verdict": "aligned",
-    "reviewerRole": "German Academic Lead",
-    "notes": "Release-candidate metadata audit: reading content for \"Medizinethik\" is aligned with declared C2 scope pending final human spot-check.",
+    "reviewerRole": "German Academic Lead (AI/Kiro)",
+    "notes": "Regenerated Teil-4 opinions, signed off by AI German Academic Lead (Kiro); pending native-speaker spot-check.",
     "reviewedAt": "2026-05-12",
     "reviewScope": "release_candidate_metadata_pass"
   },
