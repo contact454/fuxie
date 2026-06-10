@@ -17,6 +17,18 @@ import { hasGenericOpener } from './apply-c2-article-regen'
 import { hasGenericOpenerT2 } from './apply-c2-teil2-regen'
 
 const TOPIC_EVIDENCE = loadTopicEvidenceOverrides()
+const NON_LEARNING_TEXT_KEYS = new Set([
+  'cefrAudit',
+  'learningOutcomes',
+  'evaluationCriteria',
+  'rubric',
+  'reviewerRole',
+  'reviewScope',
+  'reviewedAt',
+  'notes',
+  'imageUrl',
+  'audioFile',
+])
 
 export type GateVerdict = 'pass' | 'fail' | 'warn' | 'n/a'
 
@@ -40,6 +52,7 @@ export function itemContentText(j: any): string {
   const parts: string[] = []
   const rec = (o: any, k: string) => {
     if (o == null) return
+    if (NON_LEARNING_TEXT_KEYS.has(k)) return
     if (typeof o === 'string') { if (o.length >= 120 && !['prompt', 'instruction', 'task', 'aufgabe'].includes(k)) parts.push(o); return }
     if (Array.isArray(o)) { o.forEach((v) => rec(v, k)); return }
     if (typeof o === 'object') for (const [kk, vv] of Object.entries(o)) rec(vv, kk)

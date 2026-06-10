@@ -1,6 +1,6 @@
 # Fuxie Content — Status_Board (36 cells)
 
-Sinh tự động bởi `scripts/content-status-board.ts` (READ-ONLY) · 2026-06-10T08:32:57.886Z
+Sinh tự động bởi `scripts/content-status-board.ts` (READ-ONLY) · 2026-06-10T13:42:17.117Z
 Tổng cell: 36 · Tổng item: 1187
 
 | Cell | files | D1 | D2 | D3 | D4 | D5 | qa_machine | academic | audio | status |
@@ -42,5 +42,5 @@ Tổng cell: 36 · Tổng item: 1187
 | vocabulary/C2 | 145 | pass | pass | n/a | n/a | n/a | pass | pending | n/a | Done (máy) |
 | grammar/C2 | 1 | pass | pass | n/a | n/a | n/a | pass | pending | n/a | Done (máy) |
 
-> D1 opener · D2 duplicate(<0.5) · D3 topic-match · D4 fake-segment · D5 broken-stem. D6/D7 (answer-integrity sâu + chất lượng học thuật) ngoài board máy: D7 lấy từ `signoff-manifest.json`. "n/a" = cổng không áp dụng cho module.
+> D1 opener · D2 duplicate (reading/listening <0.5; structured modules near-exact <0.95) · D3 topic-match · D4 fake-segment · D5 broken-stem. D6/D7 (answer-integrity sâu + chất lượng học thuật) ngoài board máy: D7 lấy từ `signoff-manifest.json`. "n/a" = cổng không áp dụng cho module.
 > D3 semantic evidence overrides: 16 item(s), audited in `topic-evidence-overrides.json`; these do not count as D7/native signoff.

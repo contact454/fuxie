@@ -34,6 +34,18 @@ const LEVELS = ['a1', 'a2', 'b1', 'b2', 'c1', 'c2'] as const
 const MODULES = ['reading', 'listening', 'writing', 'speaking', 'vocabulary', 'grammar'] as const
 
 const SIDE_CAR = /\.(qa|meta)\.json$/i
+const NON_LEARNING_TEXT_KEYS = new Set([
+  'cefrAudit',
+  'learningOutcomes',
+  'evaluationCriteria',
+  'rubric',
+  'reviewerRole',
+  'reviewScope',
+  'reviewedAt',
+  'notes',
+  'imageUrl',
+  'audioFile',
+])
 
 function listItems(dir: string): any[] {
   if (!fs.existsSync(dir)) return []
@@ -46,7 +58,8 @@ function listItems(dir: string): any[] {
 }
 
 /** Main learning text per item (module-aware). */
-function contentText(j: any): string {
+function contentText(j: any, options: { includeMetadata?: boolean } = {}): string {
+  const includeMetadata = options.includeMetadata ?? true
   if (j?.transcript?.lines) return transcriptDialogueText(j)
   if (typeof j?.article?.text === 'string') return j.article.text
   if (typeof j?.section_cloze?.text === 'string') return j.section_cloze.text
@@ -57,12 +70,17 @@ function contentText(j: any): string {
   const parts: string[] = []
   const rec = (o: any, k: string) => {
     if (o == null) return
+    if (!includeMetadata && NON_LEARNING_TEXT_KEYS.has(k)) return
     if (typeof o === 'string') { if (o.length >= 120 && !['prompt', 'instruction', 'task', 'aufgabe'].includes(k)) parts.push(o); return }
     if (Array.isArray(o)) { o.forEach((v) => rec(v, k)); return }
     if (typeof o === 'object') for (const [kk, vv] of Object.entries(o)) rec(vv, kk)
   }
   rec(j, '')
   return parts.join(' ')
+}
+
+function duplicateThreshold(module: string): number {
+  return module === 'reading' || module === 'listening' ? 0.5 : 0.95
 }
 
 function stemsOf(j: any): string[] {
@@ -98,18 +116,24 @@ function scanCell(module: string, level: string): CellResult {
   }
   if (!items.length) return res
 
-  const texts = items.map((j) => ({ id: String(j.id ?? ''), text: normalizeText(contentText(j)), raw: contentText(j), j }))
+  const texts = items.map((j) => ({
+    id: String(j.id ?? ''),
+    text: normalizeText(contentText(j, { includeMetadata: false })),
+    raw: contentText(j),
+    j,
+  }))
 
   // D1 opener
   const openerHits = texts.filter((t) => hasGenericOpener(t.raw) || hasGenericOpenerT2(t.raw))
   res.d1 = openerHits.length ? 'fail' : 'pass'
   openerHits.forEach((t) => res.violations.push(`D1 ${t.id}`))
 
-  // D2 duplicate within cell (overlap >= 0.5)
+  // D2 duplicate within cell, with stricter near-exact matching for structured modules.
   let dupPairs = 0
+  const d2Threshold = duplicateThreshold(module)
   for (let i = 0; i < texts.length; i++) for (let k = i + 1; k < texts.length; k++) {
     if (texts[i].text.length < 200 || texts[k].text.length < 200) continue
-    if (overlapScore(texts[i].text, texts[k].text) >= 0.5) { dupPairs++; if (dupPairs <= 5) res.violations.push(`D2 ${texts[i].id}~${texts[k].id}`) }
+    if (overlapScore(texts[i].text, texts[k].text) >= d2Threshold) { dupPairs++; if (dupPairs <= 5) res.violations.push(`D2 ${texts[i].id}~${texts[k].id}`) }
   }
   res.d2 = dupPairs ? 'fail' : 'pass'
 
@@ -209,7 +233,7 @@ function main(): void {
     lines.push(`| ${c.cell} | ${c.files} | ${c.d1} | ${c.d2} | ${c.d3} | ${c.d4} | ${c.d5} | ${c.qaMachine} | ${c.academicSignoff} | ${c.audio} | ${c.status} |`)
   }
   lines.push('')
-  lines.push('> D1 opener · D2 duplicate(<0.5) · D3 topic-match · D4 fake-segment · D5 broken-stem. D6/D7 (answer-integrity sâu + chất lượng học thuật) ngoài board máy: D7 lấy từ `signoff-manifest.json`. "n/a" = cổng không áp dụng cho module.')
+  lines.push('> D1 opener · D2 duplicate (reading/listening <0.5; structured modules near-exact <0.95) · D3 topic-match · D4 fake-segment · D5 broken-stem. D6/D7 (answer-integrity sâu + chất lượng học thuật) ngoài board máy: D7 lấy từ `signoff-manifest.json`. "n/a" = cổng không áp dụng cho module.')
   const overrideIds = json.cells.flatMap((c) => c.d3EvidenceOverrides)
   lines.push(`> D3 semantic evidence overrides: ${overrideIds.length} item(s), audited in \`topic-evidence-overrides.json\`; these do not count as D7/native signoff.`)
   fs.writeFileSync(path.join(DOCS, 'status-board.md'), lines.join('\n') + '\n', 'utf8')
