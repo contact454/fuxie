@@ -23,16 +23,18 @@ Audit va remediate 369 file vocabulary, 10.461 entry tren 6 level. Workstream na
   - Ghi `docs/content-quality/audit-2026-06/vocabulary-d7-advisory-review.md`.
 
 - [ ] 4. Native review va Academic_Signoff
-  - Duyet 139 bang chia hiem con `auto_generated_needs_spot_check`.
+  - Duyet 2 bang chia hiem con `auto_generated_needs_spot_check`: `silencen`, `entbergen`.
   - Duyet plural morphology, genus, nghia, vi du, dich Viet va CEFR fit theo cell.
   - Chi cap nhat `signoff-manifest.json` sau khi reviewer co tham quyen ky tung cell.
 
 ## Advisory Progress - 2026-06-10
 
 - [x] 369/369 file va 10.461/10.461 entry da duoc scanner bao phu.
-- [x] 221 file da duoc remediation cho blocker khach quan.
+- [x] 239 file co D7 remediation note cho blocker khach quan.
 - [x] 1.113 conjugation duoc lexicon-align va 3 conjugation duoc corpus-canonicalize.
-- [ ] 139 conjugation hiem va final native review van pending.
+- [x] 137 conjugation con lai duoc can chinh bang regular-rule present tense va gan `regular_rule_needs_native_signoff`.
+- [x] Phase regular-rule cham 95 file, giam auto-review tu 139 xuong 2.
+- [ ] 2 conjugation hiem (`silencen`, `entbergen`) va final native review van pending.
 
 ## Notes
 

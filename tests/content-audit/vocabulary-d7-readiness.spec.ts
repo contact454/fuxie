@@ -167,7 +167,8 @@ describe('vocabulary D7 readiness', () => {
 
     expect(statuses.lexicon_aligned_needs_native_signoff).toBe(1113)
     expect(statuses.corpus_canonicalized_needs_native_signoff).toBe(3)
-    expect(statuses.auto_generated_needs_spot_check).toBe(139)
+    expect(statuses.regular_rule_needs_native_signoff).toBe(137)
+    expect(statuses.auto_generated_needs_spot_check).toBe(2)
   })
 
   it('locks the confirmed lexical, semantic, and conjugation corrections', () => {
@@ -206,6 +207,28 @@ describe('vocabulary D7 readiness', () => {
       wir: 'ansprechen',
       ihr: 'sprecht an',
       sie_Sie: 'ansprechen',
+    })
+    expect(
+      findWord('content/b1/vocabulary/14-feste-traditionen.json', 'zusammenkommen').conjugation
+        ?.praesens,
+    ).toEqual({
+      ich: 'komme zusammen',
+      du: 'kommst zusammen',
+      er_sie_es: 'kommt zusammen',
+      wir: 'kommen zusammen',
+      ihr: 'kommt zusammen',
+      sie_Sie: 'kommen zusammen',
+    })
+    expect(
+      findWord('content/b1/vocabulary/10-beruf-karriere.json', 'sich weiterbilden').conjugation
+        ?.praesens,
+    ).toEqual({
+      ich: 'bilde mich weiter',
+      du: 'bildest dich weiter',
+      er_sie_es: 'bildet sich weiter',
+      wir: 'bilden uns weiter',
+      ihr: 'bildet euch weiter',
+      sie_Sie: 'bilden sich weiter',
     })
   })
 

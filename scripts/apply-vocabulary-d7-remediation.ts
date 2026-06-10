@@ -7,6 +7,29 @@ const LEVELS = ['a1', 'a2', 'b1', 'b2', 'c1', 'c2'] as const
 const AUTO_REVIEW = 'auto_generated_needs_spot_check'
 const LEXICON_REVIEW = 'lexicon_aligned_needs_native_signoff'
 const CORPUS_REVIEW = 'corpus_canonicalized_needs_native_signoff'
+const REGULAR_RULE_REVIEW = 'regular_rule_needs_native_signoff'
+const UNSAFE_REGULAR_BASES = new Set(['entbergen', 'silencen'])
+const SEPARABLE_PREFIXES = [
+  'auseinander',
+  'zusammen',
+  'herunter',
+  'hinunter',
+  'heraus',
+  'hinein',
+  'hinauf',
+  'weiter',
+  'zurueck',
+  'zurück',
+  'voran',
+  'wieder',
+  'hoch',
+  'nach',
+  'ein',
+  'aus',
+  'auf',
+  'vor',
+  'zu',
+]
 
 type PresentForms = {
   ich: string
@@ -176,6 +199,111 @@ function presentForms(row: LexiconRow, reflexive: boolean): PresentForms {
   }
 }
 
+function splitSeparableVerb(infinitive: string): { particle: string; base: string } | null {
+  for (const particle of SEPARABLE_PREFIXES) {
+    if (infinitive.startsWith(particle) && infinitive.length > particle.length + 2) {
+      const base = infinitive.slice(particle.length)
+      if (/(en|eln|ern)$/u.test(base)) return { particle, base }
+    }
+  }
+  return null
+}
+
+function weakPresentForms(infinitive: string): PresentForms | null {
+  if (UNSAFE_REGULAR_BASES.has(infinitive)) return null
+  if (infinitive.endsWith('ieren')) {
+    const stem = infinitive.slice(0, -2)
+    return {
+      ich: `${stem}e`,
+      du: `${stem}st`,
+      er_sie_es: `${stem}t`,
+      wir: infinitive,
+      ihr: `${stem}t`,
+      sie_Sie: infinitive,
+    }
+  }
+  if (infinitive.endsWith('eln')) {
+    const root = infinitive.slice(0, -3)
+    return {
+      ich: `${root}le`,
+      du: `${root}elst`,
+      er_sie_es: `${root}elt`,
+      wir: infinitive,
+      ihr: `${root}elt`,
+      sie_Sie: infinitive,
+    }
+  }
+  if (infinitive.endsWith('ern')) {
+    const stem = infinitive.slice(0, -1)
+    return {
+      ich: `${stem}e`,
+      du: `${stem}st`,
+      er_sie_es: `${stem}t`,
+      wir: infinitive,
+      ihr: `${stem}t`,
+      sie_Sie: infinitive,
+    }
+  }
+  if (!infinitive.endsWith('en')) return null
+
+  const stem = infinitive.slice(0, -2)
+  const needsLinkingE =
+    /[dt]$/u.test(stem) ||
+    (!/(mm|nn)$/iu.test(stem) && (/[^aeiouäöüßlr]m$/iu.test(stem) || /[^aeiouäöüßlr]n$/iu.test(stem)))
+  const sibilantStem = /[sßxz]$/iu.test(stem)
+  const du = needsLinkingE ? `${stem}est` : sibilantStem ? `${stem}t` : `${stem}st`
+  const third = needsLinkingE ? `${stem}et` : `${stem}t`
+  return {
+    ich: `${stem}e`,
+    du,
+    er_sie_es: third,
+    wir: infinitive,
+    ihr: third,
+    sie_Sie: infinitive,
+  }
+}
+
+function appendParticle(form: string, particle: string): string {
+  return `${form} ${particle}`.trim()
+}
+
+function addReflexiveAndParticle(form: string, pronoun: string | null, particle: string | null): string {
+  const parts = [form, pronoun, particle].filter(Boolean)
+  return parts.join(' ')
+}
+
+function regularRulePresentForms(
+  infinitive: string,
+  separable: boolean,
+  reflexive: boolean,
+): PresentForms | null {
+  const split = separable ? splitSeparableVerb(infinitive) : null
+  const base = split?.base ?? infinitive
+  const baseForms = weakPresentForms(base)
+  if (!baseForms) return null
+  const particle = split?.particle ?? null
+  const forms: PresentForms = particle
+    ? {
+        ich: appendParticle(baseForms.ich, particle),
+        du: appendParticle(baseForms.du, particle),
+        er_sie_es: appendParticle(baseForms.er_sie_es, particle),
+        wir: appendParticle(baseForms.wir, particle),
+        ihr: appendParticle(baseForms.ihr, particle),
+        sie_Sie: appendParticle(baseForms.sie_Sie, particle),
+      }
+    : baseForms
+
+  if (!reflexive) return forms
+  return {
+    ich: addReflexiveAndParticle(particle ? baseForms.ich : forms.ich, 'mich', particle),
+    du: addReflexiveAndParticle(particle ? baseForms.du : forms.du, 'dich', particle),
+    er_sie_es: addReflexiveAndParticle(particle ? baseForms.er_sie_es : forms.er_sie_es, 'sich', particle),
+    wir: addReflexiveAndParticle(particle ? baseForms.wir : forms.wir, 'uns', particle),
+    ihr: addReflexiveAndParticle(particle ? baseForms.ihr : forms.ihr, 'euch', particle),
+    sie_Sie: addReflexiveAndParticle(particle ? baseForms.sie_Sie : forms.sie_Sie, 'sich', particle),
+  }
+}
+
 function buildCanonicalMap(records: RecordItem[]): Map<string, Conjugation> {
   const canonical = new Map<string, Conjugation>()
   for (const record of records) {
@@ -303,11 +431,16 @@ function main() {
       }
       if (applyKnownFixes(record.file, word, reasons)) changed = true
 
-      if (word.wordType === 'VERB' && word.conjugation?.reviewStatus === AUTO_REVIEW) {
+      if (
+        word.wordType === 'VERB' &&
+        (word.conjugation?.reviewStatus === AUTO_REVIEW ||
+          word.conjugation?.reviewStatus === REGULAR_RULE_REVIEW)
+      ) {
+        const isAutoReview = word.conjugation.reviewStatus === AUTO_REVIEW
         const base = normalizeVerbLabel(word.word)
         const row = lexicon.get(base)
         const canonicalConjugation = canonical.get(word.word.toLocaleLowerCase('de-DE'))
-        if (row) {
+        if (row && isAutoReview) {
           const reflexive = /(^|\s)sich(\s|$)|\(sich\)/iu.test(word.word)
           word.conjugation = {
             ...word.conjugation,
@@ -317,13 +450,30 @@ function main() {
           }
           reasons['lexicon-conjugation'] = (reasons['lexicon-conjugation'] ?? 0) + 1
           changed = true
-        } else if (canonicalConjugation) {
+        } else if (canonicalConjugation && isAutoReview) {
           word.conjugation = {
             ...structuredClone(canonicalConjugation),
             reviewStatus: CORPUS_REVIEW,
           }
           reasons['corpus-conjugation'] = (reasons['corpus-conjugation'] ?? 0) + 1
           changed = true
+        } else {
+          const reflexive = /(^|\s)sich(\s|$)|\(sich\)/iu.test(word.word)
+          const regularForms = regularRulePresentForms(base, word.conjugation.isSeparable === true, reflexive)
+          if (regularForms) {
+            const needsRegularUpdate =
+              word.conjugation.reviewStatus !== REGULAR_RULE_REVIEW ||
+              JSON.stringify(word.conjugation.praesens) !== JSON.stringify(regularForms)
+            if (needsRegularUpdate) {
+              word.conjugation = {
+                ...word.conjugation,
+                praesens: regularForms,
+                reviewStatus: REGULAR_RULE_REVIEW,
+              }
+              reasons['regular-rule-conjugation'] = (reasons['regular-rule-conjugation'] ?? 0) + 1
+              changed = true
+            }
+          }
         }
       }
 
