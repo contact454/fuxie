@@ -1,6 +1,6 @@
 # Fuxie Content — Status_Board (36 cells)
 
-Sinh tự động bởi `scripts/content-status-board.ts` (READ-ONLY) · 2026-06-10T02:31:27.706Z
+Sinh tự động bởi `scripts/content-status-board.ts` (READ-ONLY) · 2026-06-10T02:43:46.885Z
 Tổng cell: 36 · Tổng item: 1187
 
 | Cell | files | D1 | D2 | D3 | D4 | D5 | qa_machine | academic | audio | status |
@@ -24,7 +24,7 @@ Tổng cell: 36 · Tổng item: 1187
 | vocabulary/B1 | 42 | pass | pass | n/a | n/a | n/a | pass | pending | n/a | Done (máy) |
 | grammar/B1 | 1 | pass | pass | n/a | n/a | n/a | pass | pending | n/a | Done (máy) |
 | reading/B2 | 50 | pass | pass | warn | n/a | pass | pass | pending | n/a | Done (máy) |
-| listening/B2 | 48 | pass | fail | warn | pass | pass | fail | pending | pending | Defect |
+| listening/B2 | 48 | pass | pass | warn | pass | pass | pass | pending | pending | Done (máy) |
 | writing/B2 | 40 | pass | pass | pass | n/a | n/a | pass | pending | n/a | Done (máy) |
 | speaking/B2 | 10 | pass | pass | n/a | n/a | n/a | pass | pending | n/a | Done (máy) |
 | vocabulary/B2 | 60 | pass | pass | n/a | n/a | n/a | pass | pending | n/a | Done (máy) |

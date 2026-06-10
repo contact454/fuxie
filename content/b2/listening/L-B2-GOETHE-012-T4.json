@@ -9,7 +9,7 @@
   "metadata": {
     "generated_at": "2026-03-19T10:04:11.238223",
     "version": 6,
-    "gespraech_count": 5,
+    "gespraech_count": 8,
     "source_script": "data/scripts/B2/Teil4-Vortrag/L-B2-GOETHE-012-T4.json",
     "regenerated_at": "2026-03-20T07:53:59.202Z"
   },
@@ -18,152 +18,184 @@
       "id": "Q1",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Was möchte der Dozent mit seinem Vortrag hauptsächlich vermitteln?",
+      "question": "Welches Ziel verfolgt die Dozentin hauptsächlich?",
       "options": {
-        "a": "Er möchte die historischen Entwicklungen des Städtebaus detailliert darstellen.",
-        "b": "Er möchte auf die dringenden Herausforderungen des städtischen Wohnens hinweisen und Lösungsansätze aufzeigen.",
-        "c": "Er möchte die Erfolge deutscher Städte bei der Umsetzung neuer Wohnkonzepte hervorheben."
+        "a": "Sie erklärt ein Verfahren zur kritischen Prüfung von KI-Ergebnissen.",
+        "b": "Sie vergleicht die Verkaufszahlen verschiedener KI-Produkte.",
+        "c": "Sie zeigt, wie man ohne Fachwissen ein KI-Modell programmiert."
       },
-      "answer": "b",
+      "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Der Dozent spricht über die dreifache Herausforderung für Städte und stellt verschiedene Konzepte und Trends vor, um diesen Herausforderungen zu begegnen. Sein Ziel ist es, Lösungsansätze für die Zukunft des städtischen Wohnens aufzuzeigen.",
-        "vi": "Giảng viên nói về ba thách thức đối với các thành phố và giới thiệu các khái niệm và xu hướng khác nhau để đối phó với những thách thức này. Mục tiêu của ông là chỉ ra các giải pháp cho tương lai của nhà ở đô thị.",
-        "key_evidence": "Unsere Städte stehen vor einer dreifachen Herausforderung: Wachstum, Klimawandel und soziale Gerechtigkeit",
-        "key_vocabulary": []
+        "de": "Der Vortrag führt fünf Schritte ein, mit denen KI-Ergebnisse vor ihrer Nutzung beurteilt werden.",
+        "vi": "Bài giảng giới thiệu năm bước để đánh giá kết quả AI trước khi sử dụng.",
+        "key_evidence": "Wie beurteilen wir ein KI-Ergebnis, bevor wir ihm folgen?",
+        "key_vocabulary": [
+          "beurteilen",
+          "Prüfschritt",
+          "KI-Ergebnis"
+        ]
       }
     },
     {
       "id": "Q2",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Was impliziert der Dozent, wenn er von einer „dreifachen Herausforderung“ für Städte spricht?",
+      "question": "Warum soll zuerst der Zweck eines Systems geklärt werden?",
       "options": {
-        "a": "Die Städte müssen sich nur auf das Bevölkerungswachstum konzentrieren.",
-        "b": "Es gibt komplexe, miteinander verbundene Probleme, die umfassende Lösungen erfordern.",
-        "c": "Die aktuellen Probleme sind hauptsächlich auf den Klimawandel zurückzuführen."
+        "a": "Weil jede KI nur für Unterhaltungszwecke entwickelt wird.",
+        "b": "Weil ein Werkzeug nicht automatisch für jeden Anwendungskontext geeignet ist.",
+        "c": "Weil der Zweck die Eingabe persönlicher Daten grundsätzlich erlaubt."
       },
       "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Der Dozent nennt Wachstum, Klimawandel und soziale Gerechtigkeit als Herausforderungen, die alle zusammenwirken und neue, umfassende Konzepte erfordern, was auf die Komplexität und Vernetzung der Probleme hindeutet.",
-        "vi": "Giảng viên nêu ra tăng trưởng, biến đổi khí hậu và công bằng xã hội là những thách thức tương tác với nhau và đòi hỏi các khái niệm mới, toàn diện, cho thấy sự phức tạp và liên kết của các vấn đề.",
-        "key_evidence": "Unsere Städte stehen vor einer dreifachen Herausforderung: Wachstum, Klimawandel und soziale Gerechtigkeit",
-        "key_vocabulary": []
+        "de": "Die Eignung hängt vom konkreten Kontext ab; ein kreatives Werkzeug ist nicht automatisch für fachliche Auskünfte geeignet.",
+        "vi": "Mức độ phù hợp phụ thuộc vào bối cảnh; công cụ sáng tạo không tự động phù hợp cho tư vấn chuyên môn.",
+        "key_evidence": "passt dieser Zweck überhaupt zu meiner Aufgabe?",
+        "key_vocabulary": [
+          "Zweck",
+          "Anwendungskontext",
+          "geeignet"
+        ]
       }
     },
     {
       "id": "Q3",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Welche Haltung nimmt der Dozent gegenüber dem Konzept der Fünfzehn-Minuten-Stadt ein?",
+      "question": "Welche zwei Anforderungen stellt die Dozentin an die Eingabe?",
       "options": {
-        "a": "Er betrachtet es als eine vielversprechende, bereits erfolgreich umgesetzte Lösung.",
-        "b": "Er sieht es als eine interessante, aber in Deutschland noch nicht praktikable Idee.",
-        "c": "Er hält es für zu idealistisch und schwer realisierbar in bestehenden Großstädten."
+        "a": "Sie soll vollständig genug sein und sensible Daten schützen.",
+        "b": "Sie soll möglichst lang sein und alle verfügbaren Daten enthalten.",
+        "c": "Sie soll nur aus technischen Fachbegriffen bestehen."
       },
       "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Der Dozent erwähnt, dass das Konzept weltweit an Bedeutung gewinnt und bereits in Paris und Barcelona mit bemerkenswerten Ergebnissen umgesetzt wird, was seine positive Einschätzung unterstreicht.",
-        "vi": "Giảng viên đề cập rằng khái niệm này đang ngày càng trở nên quan trọng trên toàn thế giới và đã được triển khai thành công ở Paris và Barcelona với những kết quả đáng chú ý, điều này nhấn mạnh sự đánh giá tích cực của ông.",
-        "key_evidence": "Das Konzept der fünfzehn-Minuten-Stadt gewinnt weltweit an Bedeutung",
-        "key_vocabulary": []
+        "de": "Wichtiger Kontext darf nicht fehlen, zugleich gehören persönliche und vertrauliche Daten nicht unbedacht in das System.",
+        "vi": "Không nên thiếu bối cảnh quan trọng, đồng thời phải bảo vệ dữ liệu cá nhân và bí mật.",
+        "key_evidence": "Persönliche und vertrauliche Daten müssen geschützt werden.",
+        "key_vocabulary": [
+          "Eingabe",
+          "vertraulich",
+          "Grundlage"
+        ]
       }
     },
     {
       "id": "Q4",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Welchen wesentlichen Vorteil der „Nachverdichtung“ betont der Dozent?",
+      "question": "Was empfiehlt die Dozentin zur sachlichen Kontrolle einer Antwort?",
       "options": {
-        "a": "Sie ermöglicht den Bau von mehr Grünflächen in der Stadt.",
-        "b": "Sie nutzt vorhandene Strukturen und vermeidet die Zersiedelung neuer Flächen.",
-        "c": "Sie führt zu einer schnelleren und kostengünstigeren Realisierung von Bauprojekten."
+        "a": "Einen selbstbewussten Ton als Qualitätsbeweis zu akzeptieren.",
+        "b": "Überprüfbare Aussagen mit verlässlichen Quellen zu vergleichen.",
+        "c": "Nur auf Rechtschreibung und Länge zu achten."
       },
       "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Der Dozent erklärt, dass bei der Nachverdichtung bestehende Gebäude aufgestockt und Brachflächen genutzt werden, anstatt auf der grünen Wiese zu bauen. Dies bedeutet, dass vorhandene Flächen effizienter genutzt und neue Flächen nicht beansprucht werden.",
-        "vi": "Giảng viên giải thích rằng việc tái phát triển đô thị sử dụng các tòa nhà hiện có và các khu đất bỏ hoang thay vì xây dựng trên các khu đất xanh. Điều này có nghĩa là các khu vực hiện có được sử dụng hiệu quả hơn và không chiếm dụng các khu vực mới.",
-        "key_evidence": "Statt auf der grünen Wiese zu bauen, werden bestehende Gebäude aufgestockt und Brachflächen genutzt.",
-        "key_vocabulary": []
+        "de": "Nach der Prüfung auf Widersprüche sollen überprüfbare Behauptungen anhand verlässlicher Quellen kontrolliert werden.",
+        "vi": "Sau khi kiểm tra mâu thuẫn, các khẳng định có thể kiểm chứng nên được đối chiếu với nguồn đáng tin cậy.",
+        "key_evidence": "vergleichen Sie überprüfbare Aussagen mit verlässlichen Quellen",
+        "key_vocabulary": [
+          "überprüfbar",
+          "Quelle",
+          "Beleg"
+        ]
       }
     },
     {
       "id": "Q5",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Warum hebt der Dozent Holz als Baumaterial besonders hervor?",
+      "question": "Welche Haltung nimmt die Dozentin zur Erkennung künstlich erzeugter Medien ein?",
       "options": {
-        "a": "Es ist das einzige Material, das im mehrgeschossigen Wohnungsbau sicher ist.",
-        "b": "Es trägt aktiv zum Klimaschutz bei, indem es CO2 bindet.",
-        "c": "Es ist aufgrund seiner Verfügbarkeit die kostengünstigste Option für Neubauten."
+        "a": "Ein einziges ungewöhnliches Detail liefert immer einen sicheren Beweis.",
+        "b": "Realistisch wirkende Inhalte sind grundsätzlich echt.",
+        "c": "Weder ein einzelner Hinweis noch ein realistischer Eindruck reicht allein aus."
       },
-      "answer": "b",
+      "answer": "c",
       "points": 1,
       "explanation": {
-        "de": "Der Dozent betont den großen Vorteil von Holz, dass es CO2 speichert, anstatt es freizusetzen, was einen direkten Beitrag zum Klimaschutz darstellt.",
-        "vi": "Giảng viên nhấn mạnh lợi thế lớn của gỗ là nó lưu trữ CO2 thay vì thải ra, điều này đóng góp trực tiếp vào việc bảo vệ khí hậu.",
-        "key_evidence": "Holz als Baumaterial hat den großen Vorteil, dass es CO2 speichert statt es freizusetzen.",
-        "key_vocabulary": []
+        "de": "Die Beurteilung künstlicher Medien darf sich nicht auf nur einen optischen Eindruck stützen.",
+        "vi": "Việc đánh giá nội dung nhân tạo không nên chỉ dựa vào một dấu hiệu hình ảnh.",
+        "key_evidence": "Ein einzelnes auffälliges Detail beweist eine Manipulation jedoch ebenso wenig wie ein realistischer Eindruck die Echtheit beweist.",
+        "key_vocabulary": [
+          "Manipulation",
+          "Echtheit",
+          "auffällig"
+        ]
       }
     },
     {
       "id": "Q6",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Was ist die größte Sorge des Dozenten bezüglich der sozialen Dimension des Wohnens?",
+      "question": "Wovon soll die Intensität der Prüfung abhängen?",
       "options": {
-        "a": "Die mangelnde Vielfalt an Wohnformen für verschiedene Lebensstile.",
-        "b": "Der drastische Rückgang des sozialen Wohnungsbaus in Deutschland.",
-        "c": "Die unzureichende Energieeffizienz von Bestandsgebäuden."
+        "a": "Von der Farbe der Benutzeroberfläche.",
+        "b": "Von den möglichen Folgen eines Fehlers.",
+        "c": "Ausschließlich von der Geschwindigkeit des Systems."
       },
       "answer": "b",
       "points": 1,
       "explanation": {
-        "de": "Der Dozent bezeichnet den Rückgang des sozialen Wohnungsbaus von dreißig auf unter fünf Prozent als „alarmierende Entwicklung“, die dringend umgekehrt werden muss, was seine größte Sorge in diesem Bereich verdeutlicht.",
-        "vi": "Giảng viên gọi sự sụt giảm nhà ở xã hội từ ba mươi xuống dưới năm phần trăm là một “diễn biến đáng báo động” cần phải đảo ngược khẩn cấp, điều này làm rõ mối lo ngại lớn nhất của ông trong lĩnh vực này.",
-        "key_evidence": "Der Anteil des sozialen Wohnungsbaus ist in Deutschland von dreißig Prozent auf unter fünf Prozent gesunken",
-        "key_vocabulary": []
+        "de": "Bei Anwendungen mit größeren möglichen Schäden sind gründlichere Prüfung und menschliche Freigabe nötig.",
+        "vi": "Với ứng dụng có thể gây hậu quả lớn, cần kiểm tra kỹ hơn và có phê duyệt của con người.",
+        "key_evidence": "Je höher das Risiko, desto gründlicher müssen Prüfung, fachliche Beratung und menschliche Freigabe sein.",
+        "key_vocabulary": [
+          "Risiko",
+          "Folge",
+          "Freigabe"
+        ]
       }
     },
     {
       "id": "Q7",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Welche Maßnahme schlägt der Dozent vor, um die soziale Gerechtigkeit im Wohnbereich zu verbessern?",
+      "question": "Wie kann eine Verzerrung im KI-System entstehen?",
       "options": {
-        "a": "Eine stärkere Förderung von Luxuswohnungen zur Belebung des Marktes.",
-        "b": "Die Stärkung von genossenschaftlichen und gemeinwohlorientierten Wohnmodellen.",
-        "c": "Eine Reduzierung der Bauvorschriften, um schneller mehr Wohnraum zu schaffen."
+        "a": "Wenn Trainingsdaten bestimmte Gruppen oder Situationen unzureichend abbilden.",
+        "b": "Wenn alle Gruppen in den Daten gleich gut vertreten sind.",
+        "c": "Wenn das Ergebnis zusätzlich von einem Menschen geprüft wird."
       },
-      "answer": "b",
+      "answer": "a",
       "points": 1,
       "explanation": {
-        "de": "Der Dozent fordert explizit, dass genossenschaftliche und gemeinwohlorientierte Modelle gestärkt werden müssen, um Wohnen als Grundrecht zu sichern.",
-        "vi": "Giảng viên đặc biệt kêu gọi phải tăng cường các mô hình nhà ở hợp tác xã và định hướng vì lợi ích cộng đồng để đảm bảo quyền được ở nhà.",
-        "key_evidence": "Genossenschaftliche und gemeinwohlorientierte Modelle müssen gestärkt werden.",
-        "key_vocabulary": []
+        "de": "Unvollständige Repräsentation in den Trainingsdaten kann zu ungleicher Zuverlässigkeit führen.",
+        "vi": "Việc đại diện không đầy đủ trong dữ liệu huấn luyện có thể dẫn đến độ tin cậy không đồng đều.",
+        "key_evidence": "Wenn Trainingsdaten bestimmte Gruppen oder Situationen nur unzureichend abbilden",
+        "key_vocabulary": [
+          "Verzerrung",
+          "Trainingsdaten",
+          "abbilden"
+        ]
       }
     },
     {
       "id": "Q8",
       "gespraech": 1,
       "type": "mc_abc",
-      "question": "Was ist laut Dozent entscheidend für die Schaffung lebendiger und widerstandsfähiger Stadtteile in der Zukunft?",
+      "question": "Welchen Nutzen hat die Dokumentation wichtiger KI-Anwendungen?",
       "options": {
-        "a": "Eine strikte Trennung von Wohn- und Arbeitsbereichen.",
-        "b": "Die Konzentration auf eine homogene Bevölkerungsgruppe, um Konflikte zu vermeiden.",
-        "c": "Die Förderung von gemischten Quartieren mit vielfältigen Altersgruppen und Lebensstilen."
+        "a": "Sie verhindert automatisch jeden zukünftigen Fehler.",
+        "b": "Sie ersetzt die Verantwortung der entscheidenden Person.",
+        "c": "Sie erleichtert spätere Kontrolle und Verbesserung."
       },
       "answer": "c",
       "points": 1,
       "explanation": {
-        "de": "Der Dozent betont, dass die Zukunft in gemischten Quartieren liegt, die verschiedene Altersgruppen, Einkommensniveaus und Lebensstile vereinen, um lebendige und resiliente Stadtteile zu schaffen.",
-        "vi": "Giảng viên nhấn mạnh rằng tương lai nằm ở các khu dân cư hỗn hợp, kết hợp các nhóm tuổi, mức thu nhập và lối sống khác nhau để tạo ra các khu phố sôi động và kiên cường.",
-        "key_evidence": "verschiedene Altersgruppen, Einkommensniveaus und Lebensstile",
-        "key_vocabulary": []
+        "de": "Dokumentation schafft Nachvollziehbarkeit, auch wenn sie Fehler nicht vollständig verhindert.",
+        "vi": "Việc ghi chép tạo khả năng truy vết dù không thể ngăn mọi sai sót.",
+        "key_evidence": "Dokumentation macht Fehler nicht unmöglich, erleichtert aber spätere Kontrolle und Verbesserung.",
+        "key_vocabulary": [
+          "Dokumentation",
+          "nachvollziehbar",
+          "Verbesserung"
+        ]
       }
     }
   ],
@@ -211,7 +243,7 @@
     "source": "studio_source_script",
     "quality": "source_verified",
     "sourceScript": "data/scripts/B2/Teil4-Vortrag/L-B2-GOETHE-012-T4.json",
-    "note": "Transcript replaced from source script by scripts/apply-source-transcripts.ts.",
+    "note": "Transcript regenerated by content-listening-regeneration (release-candidate script); MP3 pending re-record (Audio_Restubbing).",
     "lines": [
       {
         "speaker": "Narrator",
@@ -219,142 +251,143 @@
         "text": "Sie hören einen Vortrag. Dazu gibt es acht Aufgaben. Kreuzen Sie die richtige Antwort an. Sie hören den Vortrag zweimal."
       },
       {
-        "speaker": "Dozent",
+        "speaker": "Dozentin",
         "speaker_role": "dialogue_speaker",
-        "text": "Guten Tag, willkommen zu meinem Vortrag über die Zukunft des städtischen Wohnens."
+        "text": "Guten Tag. In meinem Vortrag über Künstliche Intelligenz im Alltag geht es um eine praktische Frage: Wie beurteilen wir ein KI-Ergebnis, bevor wir ihm folgen?"
       },
       {
-        "speaker": "Dozent",
+        "speaker": "Dozentin",
         "speaker_role": "dialogue_speaker",
-        "text": "Als Stadtplaner mit dreißig Jahren Berufserfahrung habe ich die Veränderungen hautnah miterlebt."
+        "text": "Ich stelle Ihnen dafür fünf Prüfschritte vor: Zweck klären, Eingabe prüfen, Ergebnis kontrollieren, Folgen einschätzen und die Entscheidung dokumentieren."
       },
       {
-        "speaker": "Dozent",
+        "speaker": "Dozentin",
         "speaker_role": "dialogue_speaker",
-        "text": "Unsere Städte stehen vor einer dreifachen Herausforderung: Wachstum, Klimawandel und soziale Gerechtigkeit."
+        "text": "Der erste Schritt lautet: Welchen Zweck hat das System, und passt dieser Zweck überhaupt zu meiner Aufgabe?"
       },
       {
-        "speaker": "Dozent",
+        "speaker": "Dozentin",
         "speaker_role": "dialogue_speaker",
-        "text": "In Deutschland ziehen jedes Jahr etwa hunderttausend Menschen mehr in die Großstädte als aus ihnen weg."
+        "text": "Ein Werkzeug, das unterhaltsame Bildideen erzeugt, muss nicht für medizinische oder rechtliche Auskünfte geeignet sein."
       },
       {
-        "speaker": "Dozent",
+        "speaker": "Dozentin",
         "speaker_role": "dialogue_speaker",
-        "text": "Diese Urbanisierung erfordert völlig neue Konzepte für Wohnen, Mobilität und Infrastruktur."
+        "text": "Die technische Bezeichnung allein sagt also wenig darüber aus, in welchem Kontext ein System zuverlässig eingesetzt werden kann."
       },
       {
-        "speaker": "Dozent",
+        "speaker": "Dozentin",
         "speaker_role": "dialogue_speaker",
-        "text": "Das Konzept der fünfzehn-Minuten-Stadt gewinnt weltweit an Bedeutung."
+        "text": "Im zweiten Schritt betrachten wir die Eingabe. Fehlen wichtige Informationen, kann auch ein leistungsfähiges System nur mit einer unvollständigen Grundlage arbeiten."
       },
       {
-        "speaker": "Dozent",
+        "speaker": "Dozentin",
         "speaker_role": "dialogue_speaker",
-        "text": "Die Idee: Alle wichtigen Einrichtungen des täglichen Lebens sollen in fünfzehn Minuten zu Fuß erreichbar sein."
+        "text": "Gleichzeitig gilt: Nicht jede verfügbare Information gehört in das System. Persönliche und vertrauliche Daten müssen geschützt werden."
       },
       {
-        "speaker": "Dozent",
+        "speaker": "Dozentin",
         "speaker_role": "dialogue_speaker",
-        "text": "Paris und Barcelona setzen dieses Konzept bereits um, mit bemerkenswerten Ergebnissen."
+        "text": "Der dritte Schritt ist die Kontrolle des Ergebnisses."
       },
       {
-        "speaker": "Dozent",
+        "speaker": "Dozentin",
         "speaker_role": "dialogue_speaker",
-        "text": "In Deutschland experimentieren Hamburg und München mit ähnlichen Ansätzen."
+        "text": "Prüfen Sie zunächst, ob die Antwort die gestellte Aufgabe wirklich erfüllt und ob sie innere Widersprüche enthält."
       },
       {
-        "speaker": "Dozent",
+        "speaker": "Dozentin",
         "speaker_role": "dialogue_speaker",
-        "text": "Ein weiterer wichtiger Trend ist die Nachverdichtung bestehender Stadtquartiere."
+        "text": "Danach vergleichen Sie überprüfbare Aussagen mit verlässlichen Quellen. Ein selbstbewusster Ton ersetzt keinen Beleg."
       },
       {
-        "speaker": "Dozent",
+        "speaker": "Dozentin",
         "speaker_role": "dialogue_speaker",
-        "text": "Statt auf der grünen Wiese zu bauen, werden bestehende Gebäude aufgestockt und Brachflächen genutzt."
+        "text": "Bei Bildern, Audio und Video sollten Sie außerdem bedenken, dass überzeugende Inhalte künstlich erzeugt oder verändert sein können."
       },
       {
-        "speaker": "Dozent",
+        "speaker": "Dozentin",
         "speaker_role": "dialogue_speaker",
-        "text": "In München hat ein innovatives Projekt ein Parkhaus zu einem gemischt genutzten Wohn- und Bürogebäude umgebaut."
+        "text": "Ein einzelnes auffälliges Detail beweist eine Manipulation jedoch ebenso wenig wie ein realistischer Eindruck die Echtheit beweist."
       },
       {
-        "speaker": "Dozent",
+        "speaker": "Dozentin",
         "speaker_role": "dialogue_speaker",
-        "text": "Die Energieeffizienz neuer Gebäude hat sich in den letzten zwanzig Jahren dramatisch verbessert."
+        "text": "Viertens müssen wir die möglichen Folgen eines Fehlers einschätzen."
       },
       {
-        "speaker": "Dozent",
+        "speaker": "Dozentin",
         "speaker_role": "dialogue_speaker",
-        "text": "Passivhäuser verbrauchen neunzig Prozent weniger Heizenergie als konventionelle Gebäude."
+        "text": "Bei einer Empfehlung für einen Film ist ein Fehler meist harmlos. Bei Gesundheit, Finanzen, Bewerbung oder Sicherheit kann dieselbe Nachlässigkeit erhebliche Folgen haben."
       },
       {
-        "speaker": "Dozent",
+        "speaker": "Dozentin",
         "speaker_role": "dialogue_speaker",
-        "text": "Innovative Materialien wie Holz erleben eine Renaissance im mehrgeschossigen Wohnungsbau."
+        "text": "Je höher das Risiko, desto gründlicher müssen Prüfung, fachliche Beratung und menschliche Freigabe sein."
       },
       {
-        "speaker": "Dozent",
+        "speaker": "Dozentin",
         "speaker_role": "dialogue_speaker",
-        "text": "In Skandinavien gibt es bereits Holzgebäude mit achtzehn Stockwerken, die vollkommen sicher sind."
+        "text": "Ein weiterer Punkt ist mögliche Verzerrung."
       },
       {
-        "speaker": "Dozent",
+        "speaker": "Dozentin",
         "speaker_role": "dialogue_speaker",
-        "text": "Holz als Baumaterial hat den großen Vorteil, dass es CO2 speichert statt es freizusetzen."
+        "text": "Wenn Trainingsdaten bestimmte Gruppen oder Situationen nur unzureichend abbilden, kann ein Modell bei ihnen schlechter funktionieren."
       },
       {
-        "speaker": "Dozent",
+        "speaker": "Dozentin",
         "speaker_role": "dialogue_speaker",
-        "text": "Lassen Sie mich abschließend über die soziale Dimension des Wohnens sprechen."
+        "text": "Deshalb genügt es nicht, nur den durchschnittlichen Erfolg zu betrachten. Man sollte prüfen, für wen ein System weniger zuverlässig ist."
       },
       {
-        "speaker": "Dozent",
+        "speaker": "Dozentin",
         "speaker_role": "dialogue_speaker",
-        "text": "Wohnen ist ein Grundrecht, kein Luxusgut. Das vergessen wir in der aktuellen Marktsituation oft."
+        "text": "Der fünfte Schritt ist die Dokumentation bei wichtigen Anwendungen."
       },
       {
-        "speaker": "Dozent",
+        "speaker": "Dozentin",
         "speaker_role": "dialogue_speaker",
-        "text": "Genossenschaftliche und gemeinwohlorientierte Modelle müssen gestärkt werden."
+        "text": "Notieren Sie, welches Werkzeug verwendet wurde, welche Informationen eingeflossen sind, was geprüft wurde und wer die Entscheidung getroffen hat."
       },
       {
-        "speaker": "Dozent",
+        "speaker": "Dozentin",
         "speaker_role": "dialogue_speaker",
-        "text": "Der Anteil des sozialen Wohnungsbaus ist in Deutschland von dreißig Prozent auf unter fünf Prozent gesunken."
+        "text": "Dokumentation macht Fehler nicht unmöglich, erleichtert aber spätere Kontrolle und Verbesserung."
       },
       {
-        "speaker": "Dozent",
+        "speaker": "Dozentin",
         "speaker_role": "dialogue_speaker",
-        "text": "Das ist eine alarmierende Entwicklung, die dringend umgekehrt werden muss."
+        "text": "Diese fünf Schritte sollen KI nicht unnötig kompliziert machen."
       },
       {
-        "speaker": "Dozent",
+        "speaker": "Dozentin",
         "speaker_role": "dialogue_speaker",
-        "text": "Die Zukunft liegt in gemischten Quartieren: verschiedene Altersgruppen, Einkommensniveaus und Lebensstile."
+        "text": "Sie helfen vielmehr, den Prüfaufwand an den jeweiligen Zweck und das konkrete Risiko anzupassen."
       },
       {
-        "speaker": "Dozent",
+        "speaker": "Dozentin",
         "speaker_role": "dialogue_speaker",
-        "text": "Nur so können wir lebendige und resiliente Stadtteile schaffen, in denen sich alle wohl fühlen."
+        "text": "Die entscheidende Frage lautet also nicht nur: Kann das System etwas? Sondern auch: Passt es hier, und habe ich das Ergebnis ausreichend geprüft?"
       },
       {
-        "speaker": "Dozent",
+        "speaker": "Dozentin",
         "speaker_role": "dialogue_speaker",
-        "text": "Vielen Dank für Ihre Aufmerksamkeit! Die Stadt der Zukunft gestalten wir gemeinsam."
+        "text": "Vielen Dank für Ihre Aufmerksamkeit."
       },
       {
         "speaker": "Narrator",
         "speaker_role": "exam_narrator",
         "text": "Ende des Hörverstehens."
       }
-    ]
+    ],
+    "audio_restub": "pending"
   },
   "cefrAudit": {
     "targetLevel": "B2",
     "verdict": "aligned",
-    "reviewerRole": "German Academic Lead",
-    "notes": "Release-candidate metadata audit: listening content for \"Künstliche Intelligenz im Alltag\" is aligned with declared B2 scope pending final human spot-check.",
+    "reviewerRole": "German Academic Lead (AI/Kiro)",
+    "notes": "Regenerated listening transcript + questions, signed off by AI German Academic Lead (Kiro); MP3 pending re-record (Audio_Restubbing); pending native-speaker spot-check.",
     "reviewedAt": "2026-05-12",
     "reviewScope": "release_candidate_metadata_pass"
   },
